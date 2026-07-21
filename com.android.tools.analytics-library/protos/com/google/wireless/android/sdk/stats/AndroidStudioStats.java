@@ -9495,15 +9495,17 @@ public final class AndroidStudioStats {
       "E_SNOOZE\020\001\022\n\n\006DIALOG\020\002\022\020\n\014NOTIFICATION\020\003" +
       "\"n\n\nUserAction\022\027\n\023UNKNOWN_USER_ACTION\020\000\022" +
       "\010\n\004NONE\020\001\022\n\n\006CLOSED\020\002\022\n\n\006SNOOZE\020\003\022\024\n\020ENA" +
-      "BLE_AUTO_SYNC\020\004\022\017\n\013SINGLE_SYNC\020\005\"\326\003\n\031Res" +
+      "BLE_AUTO_SYNC\020\004\022\017\n\013SINGLE_SYNC\020\005\"\246\004\n\031Res" +
       "izeComposePreviewEvent\022G\n\nevent_type\030\001 \001" +
       "(\01623.android_studio.ResizeComposePreview" +
       "Event.EventType\022I\n\013resize_mode\030\002 \001(\01624.a" +
       "ndroid_studio.ResizeComposePreviewEvent." +
-      "ResizeMode\022\034\n\024stopped_device_width\030\003 \001(\005" +
-      "\022\035\n\025stopped_device_height\030\004 \001(\005\022\032\n\022saved" +
-      "_device_width\030\005 \001(\005\022\033\n\023saved_device_heig" +
-      "ht\030\006 \001(\005\"^\n\tEventType\022\026\n\022UNKNOWN_EVENT_T" +
+      "ResizeMode\022 \n\024stopped_device_width\030\003 \001(\005" +
+      "B\002\030\001\022!\n\025stopped_device_height\030\004 \001(\005B\002\030\001\022" +
+      "\036\n\022saved_device_width\030\005 \001(\005B\002\030\001\022\037\n\023saved" +
+      "_device_height\030\006 \001(\005B\002\030\001\022\027\n\017device_width" +
+      "_dp\030\007 \001(\005\022\030\n\020device_height_dp\030\010 \001(\005\022\013\n\003d" +
+      "pi\030\t \001(\005\"^\n\tEventType\022\026\n\022UNKNOWN_EVENT_T" +
       "YPE\020\000\022\022\n\016RESIZE_STOPPED\020\001\022\020\n\014RESIZE_SAVE" +
       "D\020\002\022\023\n\017RESIZE_REVERTED\020\003\"O\n\nResizeMode\022\027" +
       "\n\023UNKNOWN_RESIZE_MODE\020\000\022\021\n\rDEVICE_RESIZE" +
@@ -9565,9 +9567,9 @@ public final class AndroidStudioStats {
       "OR_SNAPSHOT_FAILURE_REASON_NO_SNAPSHOT_I" +
       "N_IMAGE\020\221N\022E\n@EMULATOR_SNAPSHOT_FAILURE_" +
       "REASON_CONFIG_MISMATCH_HOST_HYPERVISOR\020\222" +
-      "N\022>\n9EMULATOR_SNAPSHOT_FAILURE_REASON_CO" +
+      "N\022>\n9EMULATOR_SNAPSHOT_FAILURE_REASON_CO",
       "NFIG_MISMATCH_HOST_GPU\020\223N\022>\n9EMULATOR_SN" +
-      "APSHOT_FAILURE_REASON_CONFIG_MISMATCH_RE",
+      "APSHOT_FAILURE_REASON_CONFIG_MISMATCH_RE" +
       "NDERER\020\224N\022>\n9EMULATOR_SNAPSHOT_FAILURE_R" +
       "EASON_CONFIG_MISMATCH_FEATURES\020\225N\0229\n4EMU" +
       "LATOR_SNAPSHOT_FAILURE_REASON_CONFIG_MIS" +
@@ -12892,7 +12894,7 @@ public final class AndroidStudioStats {
     internal_static_android_studio_ResizeComposePreviewEvent_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_android_studio_ResizeComposePreviewEvent_descriptor,
-        new java.lang.String[] { "EventType", "ResizeMode", "StoppedDeviceWidth", "StoppedDeviceHeight", "SavedDeviceWidth", "SavedDeviceHeight", });
+        new java.lang.String[] { "EventType", "ResizeMode", "StoppedDeviceWidth", "StoppedDeviceHeight", "SavedDeviceWidth", "SavedDeviceHeight", "DeviceWidthDp", "DeviceHeightDp", "Dpi", });
     internal_static_android_studio_DevServiceDeprecationInfo_descriptor =
       getDescriptor().getMessageTypes().get(352);
     internal_static_android_studio_DevServiceDeprecationInfo_fieldAccessorTable = new
