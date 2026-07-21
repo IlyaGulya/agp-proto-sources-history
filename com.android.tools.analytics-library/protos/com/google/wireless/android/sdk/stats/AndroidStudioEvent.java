@@ -63,6 +63,7 @@ private static final long serialVersionUID = 0L;
     int mutable_bitField1_ = 0;
     int mutable_bitField2_ = 0;
     int mutable_bitField3_ = 0;
+    int mutable_bitField4_ = 0;
     com.google.protobuf.UnknownFieldSet.Builder unknownFields =
         com.google.protobuf.UnknownFieldSet.newBuilder();
     try {
@@ -1662,6 +1663,19 @@ private static final long serialVersionUID = 0L;
               runFinishData_ = subBuilder.buildPartial();
             }
             bitField3_ |= 0x08000000;
+            break;
+          }
+          case 1034: {
+            com.google.wireless.android.sdk.stats.DeviceManagerEvent.Builder subBuilder = null;
+            if (((bitField3_ & 0x10000000) != 0)) {
+              subBuilder = deviceManagerEvent_.toBuilder();
+            }
+            deviceManagerEvent_ = input.readMessage(com.google.wireless.android.sdk.stats.DeviceManagerEvent.PARSER, extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(deviceManagerEvent_);
+              deviceManagerEvent_ = subBuilder.buildPartial();
+            }
+            bitField3_ |= 0x10000000;
             break;
           }
           default: {
@@ -4007,6 +4021,15 @@ private static final long serialVersionUID = 0L;
      * <code>RUN_FINISH_DATA = 236;</code>
      */
     RUN_FINISH_DATA(236),
+    /**
+     * <pre>
+     * Event related to the device manager tool window, the replacement for the
+     * AVD manager
+     * </pre>
+     *
+     * <code>DEVICE_MANAGER = 237;</code>
+     */
+    DEVICE_MANAGER(237),
     ;
 
     /**
@@ -5729,6 +5752,15 @@ private static final long serialVersionUID = 0L;
      * <code>RUN_FINISH_DATA = 236;</code>
      */
     public static final int RUN_FINISH_DATA_VALUE = 236;
+    /**
+     * <pre>
+     * Event related to the device manager tool window, the replacement for the
+     * AVD manager
+     * </pre>
+     *
+     * <code>DEVICE_MANAGER = 237;</code>
+     */
+    public static final int DEVICE_MANAGER_VALUE = 237;
 
 
     public final int getNumber() {
@@ -5983,6 +6015,7 @@ private static final long serialVersionUID = 0L;
         case 234: return KOTLIN_PROJECT_CONFIGURATION;
         case 235: return RUN_START_DATA;
         case 236: return RUN_FINISH_DATA;
+        case 237: return DEVICE_MANAGER;
         default: return null;
       }
     }
@@ -19084,6 +19117,41 @@ private static final long serialVersionUID = 0L;
     return runFinishData_ == null ? com.google.wireless.android.sdk.stats.RunFinishData.getDefaultInstance() : runFinishData_;
   }
 
+  public static final int DEVICE_MANAGER_EVENT_FIELD_NUMBER = 129;
+  private com.google.wireless.android.sdk.stats.DeviceManagerEvent deviceManagerEvent_;
+  /**
+   * <pre>
+   * set when kind = DEVICE_MANAGER
+   * </pre>
+   *
+   * <code>optional .android_studio.DeviceManagerEvent device_manager_event = 129;</code>
+   * @return Whether the deviceManagerEvent field is set.
+   */
+  public boolean hasDeviceManagerEvent() {
+    return ((bitField3_ & 0x10000000) != 0);
+  }
+  /**
+   * <pre>
+   * set when kind = DEVICE_MANAGER
+   * </pre>
+   *
+   * <code>optional .android_studio.DeviceManagerEvent device_manager_event = 129;</code>
+   * @return The deviceManagerEvent.
+   */
+  public com.google.wireless.android.sdk.stats.DeviceManagerEvent getDeviceManagerEvent() {
+    return deviceManagerEvent_ == null ? com.google.wireless.android.sdk.stats.DeviceManagerEvent.getDefaultInstance() : deviceManagerEvent_;
+  }
+  /**
+   * <pre>
+   * set when kind = DEVICE_MANAGER
+   * </pre>
+   *
+   * <code>optional .android_studio.DeviceManagerEvent device_manager_event = 129;</code>
+   */
+  public com.google.wireless.android.sdk.stats.DeviceManagerEventOrBuilder getDeviceManagerEventOrBuilder() {
+    return deviceManagerEvent_ == null ? com.google.wireless.android.sdk.stats.DeviceManagerEvent.getDefaultInstance() : deviceManagerEvent_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -19481,6 +19549,9 @@ private static final long serialVersionUID = 0L;
     }
     if (((bitField3_ & 0x08000000) != 0)) {
       output.writeMessage(128, getRunFinishData());
+    }
+    if (((bitField3_ & 0x10000000) != 0)) {
+      output.writeMessage(129, getDeviceManagerEvent());
     }
     unknownFields.writeTo(output);
   }
@@ -20000,6 +20071,10 @@ private static final long serialVersionUID = 0L;
     if (((bitField3_ & 0x08000000) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(128, getRunFinishData());
+    }
+    if (((bitField3_ & 0x10000000) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(129, getDeviceManagerEvent());
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -20633,6 +20708,11 @@ private static final long serialVersionUID = 0L;
       if (!getRunFinishData()
           .equals(other.getRunFinishData())) return false;
     }
+    if (hasDeviceManagerEvent() != other.hasDeviceManagerEvent()) return false;
+    if (hasDeviceManagerEvent()) {
+      if (!getDeviceManagerEvent()
+          .equals(other.getDeviceManagerEvent())) return false;
+    }
     if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
@@ -21158,6 +21238,10 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + RUN_FINISH_DATA_FIELD_NUMBER;
       hash = (53 * hash) + getRunFinishData().hashCode();
     }
+    if (hasDeviceManagerEvent()) {
+      hash = (37 * hash) + DEVICE_MANAGER_EVENT_FIELD_NUMBER;
+      hash = (53 * hash) + getDeviceManagerEvent().hashCode();
+    }
     hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -21393,6 +21477,7 @@ private static final long serialVersionUID = 0L;
         getKotlinProjectConfigurationFieldBuilder();
         getRunStartDataFieldBuilder();
         getRunFinishDataFieldBuilder();
+        getDeviceManagerEventFieldBuilder();
       }
     }
     @java.lang.Override
@@ -22082,6 +22167,12 @@ private static final long serialVersionUID = 0L;
         runFinishDataBuilder_.clear();
       }
       bitField3_ = (bitField3_ & ~0x80000000);
+      if (deviceManagerEventBuilder_ == null) {
+        deviceManagerEvent_ = null;
+      } else {
+        deviceManagerEventBuilder_.clear();
+      }
+      bitField4_ = (bitField4_ & ~0x00000001);
       return this;
     }
 
@@ -22112,6 +22203,7 @@ private static final long serialVersionUID = 0L;
       int from_bitField1_ = bitField1_;
       int from_bitField2_ = bitField2_;
       int from_bitField3_ = bitField3_;
+      int from_bitField4_ = bitField4_;
       int to_bitField0_ = 0;
       int to_bitField1_ = 0;
       int to_bitField2_ = 0;
@@ -23060,6 +23152,14 @@ private static final long serialVersionUID = 0L;
         }
         to_bitField3_ |= 0x08000000;
       }
+      if (((from_bitField4_ & 0x00000001) != 0)) {
+        if (deviceManagerEventBuilder_ == null) {
+          result.deviceManagerEvent_ = deviceManagerEvent_;
+        } else {
+          result.deviceManagerEvent_ = deviceManagerEventBuilder_.build();
+        }
+        to_bitField3_ |= 0x10000000;
+      }
       result.bitField0_ = to_bitField0_;
       result.bitField1_ = to_bitField1_;
       result.bitField2_ = to_bitField2_;
@@ -23586,6 +23686,9 @@ private static final long serialVersionUID = 0L;
       if (other.hasRunFinishData()) {
         mergeRunFinishData(other.getRunFinishData());
       }
+      if (other.hasDeviceManagerEvent()) {
+        mergeDeviceManagerEvent(other.getDeviceManagerEvent());
+      }
       this.mergeUnknownFields(other.unknownFields);
       onChanged();
       return this;
@@ -23618,6 +23721,7 @@ private static final long serialVersionUID = 0L;
     private int bitField1_;
     private int bitField2_;
     private int bitField3_;
+    private int bitField4_;
 
     private int category_ = 0;
     /**
@@ -42769,6 +42873,162 @@ private static final long serialVersionUID = 0L;
         runFinishData_ = null;
       }
       return runFinishDataBuilder_;
+    }
+
+    private com.google.wireless.android.sdk.stats.DeviceManagerEvent deviceManagerEvent_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.DeviceManagerEvent, com.google.wireless.android.sdk.stats.DeviceManagerEvent.Builder, com.google.wireless.android.sdk.stats.DeviceManagerEventOrBuilder> deviceManagerEventBuilder_;
+    /**
+     * <pre>
+     * set when kind = DEVICE_MANAGER
+     * </pre>
+     *
+     * <code>optional .android_studio.DeviceManagerEvent device_manager_event = 129;</code>
+     * @return Whether the deviceManagerEvent field is set.
+     */
+    public boolean hasDeviceManagerEvent() {
+      return ((bitField4_ & 0x00000001) != 0);
+    }
+    /**
+     * <pre>
+     * set when kind = DEVICE_MANAGER
+     * </pre>
+     *
+     * <code>optional .android_studio.DeviceManagerEvent device_manager_event = 129;</code>
+     * @return The deviceManagerEvent.
+     */
+    public com.google.wireless.android.sdk.stats.DeviceManagerEvent getDeviceManagerEvent() {
+      if (deviceManagerEventBuilder_ == null) {
+        return deviceManagerEvent_ == null ? com.google.wireless.android.sdk.stats.DeviceManagerEvent.getDefaultInstance() : deviceManagerEvent_;
+      } else {
+        return deviceManagerEventBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * set when kind = DEVICE_MANAGER
+     * </pre>
+     *
+     * <code>optional .android_studio.DeviceManagerEvent device_manager_event = 129;</code>
+     */
+    public Builder setDeviceManagerEvent(com.google.wireless.android.sdk.stats.DeviceManagerEvent value) {
+      if (deviceManagerEventBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        deviceManagerEvent_ = value;
+        onChanged();
+      } else {
+        deviceManagerEventBuilder_.setMessage(value);
+      }
+      bitField4_ |= 0x00000001;
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = DEVICE_MANAGER
+     * </pre>
+     *
+     * <code>optional .android_studio.DeviceManagerEvent device_manager_event = 129;</code>
+     */
+    public Builder setDeviceManagerEvent(
+        com.google.wireless.android.sdk.stats.DeviceManagerEvent.Builder builderForValue) {
+      if (deviceManagerEventBuilder_ == null) {
+        deviceManagerEvent_ = builderForValue.build();
+        onChanged();
+      } else {
+        deviceManagerEventBuilder_.setMessage(builderForValue.build());
+      }
+      bitField4_ |= 0x00000001;
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = DEVICE_MANAGER
+     * </pre>
+     *
+     * <code>optional .android_studio.DeviceManagerEvent device_manager_event = 129;</code>
+     */
+    public Builder mergeDeviceManagerEvent(com.google.wireless.android.sdk.stats.DeviceManagerEvent value) {
+      if (deviceManagerEventBuilder_ == null) {
+        if (((bitField4_ & 0x00000001) != 0) &&
+            deviceManagerEvent_ != null &&
+            deviceManagerEvent_ != com.google.wireless.android.sdk.stats.DeviceManagerEvent.getDefaultInstance()) {
+          deviceManagerEvent_ =
+            com.google.wireless.android.sdk.stats.DeviceManagerEvent.newBuilder(deviceManagerEvent_).mergeFrom(value).buildPartial();
+        } else {
+          deviceManagerEvent_ = value;
+        }
+        onChanged();
+      } else {
+        deviceManagerEventBuilder_.mergeFrom(value);
+      }
+      bitField4_ |= 0x00000001;
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = DEVICE_MANAGER
+     * </pre>
+     *
+     * <code>optional .android_studio.DeviceManagerEvent device_manager_event = 129;</code>
+     */
+    public Builder clearDeviceManagerEvent() {
+      if (deviceManagerEventBuilder_ == null) {
+        deviceManagerEvent_ = null;
+        onChanged();
+      } else {
+        deviceManagerEventBuilder_.clear();
+      }
+      bitField4_ = (bitField4_ & ~0x00000001);
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = DEVICE_MANAGER
+     * </pre>
+     *
+     * <code>optional .android_studio.DeviceManagerEvent device_manager_event = 129;</code>
+     */
+    public com.google.wireless.android.sdk.stats.DeviceManagerEvent.Builder getDeviceManagerEventBuilder() {
+      bitField4_ |= 0x00000001;
+      onChanged();
+      return getDeviceManagerEventFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * set when kind = DEVICE_MANAGER
+     * </pre>
+     *
+     * <code>optional .android_studio.DeviceManagerEvent device_manager_event = 129;</code>
+     */
+    public com.google.wireless.android.sdk.stats.DeviceManagerEventOrBuilder getDeviceManagerEventOrBuilder() {
+      if (deviceManagerEventBuilder_ != null) {
+        return deviceManagerEventBuilder_.getMessageOrBuilder();
+      } else {
+        return deviceManagerEvent_ == null ?
+            com.google.wireless.android.sdk.stats.DeviceManagerEvent.getDefaultInstance() : deviceManagerEvent_;
+      }
+    }
+    /**
+     * <pre>
+     * set when kind = DEVICE_MANAGER
+     * </pre>
+     *
+     * <code>optional .android_studio.DeviceManagerEvent device_manager_event = 129;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.DeviceManagerEvent, com.google.wireless.android.sdk.stats.DeviceManagerEvent.Builder, com.google.wireless.android.sdk.stats.DeviceManagerEventOrBuilder> 
+        getDeviceManagerEventFieldBuilder() {
+      if (deviceManagerEventBuilder_ == null) {
+        deviceManagerEventBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.wireless.android.sdk.stats.DeviceManagerEvent, com.google.wireless.android.sdk.stats.DeviceManagerEvent.Builder, com.google.wireless.android.sdk.stats.DeviceManagerEventOrBuilder>(
+                getDeviceManagerEvent(),
+                getParentForChildren(),
+                isClean());
+        deviceManagerEvent_ = null;
+      }
+      return deviceManagerEventBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(
