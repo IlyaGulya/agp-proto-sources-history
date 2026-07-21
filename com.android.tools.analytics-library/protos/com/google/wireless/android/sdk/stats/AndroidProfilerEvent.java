@@ -663,6 +663,10 @@ private static final long serialVersionUID = 0L;
      * <code>NATIVE_HEAP = 6;</code>
      */
     NATIVE_HEAP(6),
+    /**
+     * <code>ALL_HEAP = 7;</code>
+     */
+    ALL_HEAP(7),
     ;
 
     /**
@@ -693,6 +697,10 @@ private static final long serialVersionUID = 0L;
      * <code>NATIVE_HEAP = 6;</code>
      */
     public static final int NATIVE_HEAP_VALUE = 6;
+    /**
+     * <code>ALL_HEAP = 7;</code>
+     */
+    public static final int ALL_HEAP_VALUE = 7;
 
 
     public final int getNumber() {
@@ -722,6 +730,7 @@ private static final long serialVersionUID = 0L;
         case 4: return APP_HEAP;
         case 5: return JNI_HEAP;
         case 6: return NATIVE_HEAP;
+        case 7: return ALL_HEAP;
         default: return null;
       }
     }

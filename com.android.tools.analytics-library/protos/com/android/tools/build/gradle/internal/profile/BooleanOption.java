@@ -723,6 +723,10 @@ public enum BooleanOption
    * <code>LINT_USE_K2_UAST = 175;</code>
    */
   LINT_USE_K2_UAST(175),
+  /**
+   * <code>USE_FULL_CLASSPATH_FOR_DEXING_TRANSFORM = 176;</code>
+   */
+  USE_FULL_CLASSPATH_FOR_DEXING_TRANSFORM(176),
   UNRECOGNIZED(-1),
   ;
 
@@ -1430,6 +1434,10 @@ public enum BooleanOption
    * <code>LINT_USE_K2_UAST = 175;</code>
    */
   public static final int LINT_USE_K2_UAST_VALUE = 175;
+  /**
+   * <code>USE_FULL_CLASSPATH_FOR_DEXING_TRANSFORM = 176;</code>
+   */
+  public static final int USE_FULL_CLASSPATH_FOR_DEXING_TRANSFORM_VALUE = 176;
 
 
   public final int getNumber() {
@@ -1632,6 +1640,7 @@ public enum BooleanOption
       case 173: return ENABLE_VCS_INFO;
       case 174: return LINT_BASELINE_OMIT_LINE_NUMBERS;
       case 175: return LINT_USE_K2_UAST;
+      case 176: return USE_FULL_CLASSPATH_FOR_DEXING_TRANSFORM;
       default: return null;
     }
   }

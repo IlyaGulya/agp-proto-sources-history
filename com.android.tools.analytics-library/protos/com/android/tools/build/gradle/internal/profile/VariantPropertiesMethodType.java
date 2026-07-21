@@ -605,6 +605,10 @@ public enum VariantPropertiesMethodType
    * <code>DEBUGGABLE = 137;</code>
    */
   DEBUGGABLE(137),
+  /**
+   * <code>TESTED_APKS = 138;</code>
+   */
+  TESTED_APKS(138),
   UNRECOGNIZED(-1),
   ;
 
@@ -1204,6 +1208,10 @@ public enum VariantPropertiesMethodType
    * <code>DEBUGGABLE = 137;</code>
    */
   public static final int DEBUGGABLE_VALUE = 137;
+  /**
+   * <code>TESTED_APKS = 138;</code>
+   */
+  public static final int TESTED_APKS_VALUE = 138;
 
 
   public final int getNumber() {
@@ -1368,6 +1376,7 @@ public enum VariantPropertiesMethodType
       case 135: return INSTRUMENTATION_RUNNER_ARGUMENTS;
       case 136: return MISSING_DIMENSION_STRATEGY;
       case 137: return DEBUGGABLE;
+      case 138: return TESTED_APKS;
       default: return null;
     }
   }
