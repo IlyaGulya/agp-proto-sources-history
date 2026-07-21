@@ -328,6 +328,10 @@ private static final long serialVersionUID = 0L;
      * <code>UNEXPECTED_ERROR = 10;</code>
      */
     UNEXPECTED_ERROR(10),
+    /**
+     * <code>PLAY_STORE_NOT_INSTALLED = 11;</code>
+     */
+    PLAY_STORE_NOT_INSTALLED(11),
     ;
 
     /**
@@ -374,6 +378,10 @@ private static final long serialVersionUID = 0L;
      * <code>UNEXPECTED_ERROR = 10;</code>
      */
     public static final int UNEXPECTED_ERROR_VALUE = 10;
+    /**
+     * <code>PLAY_STORE_NOT_INSTALLED = 11;</code>
+     */
+    public static final int PLAY_STORE_NOT_INSTALLED_VALUE = 11;
 
 
     public final int getNumber() {
@@ -407,6 +415,7 @@ private static final long serialVersionUID = 0L;
         case 8: return RESTORE_FAILED;
         case 9: return INVALID_BACKUP_FILE;
         case 10: return UNEXPECTED_ERROR;
+        case 11: return PLAY_STORE_NOT_INSTALLED;
         default: return null;
       }
     }
