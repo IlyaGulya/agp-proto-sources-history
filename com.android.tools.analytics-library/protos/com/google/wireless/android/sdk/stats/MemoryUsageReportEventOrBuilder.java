@@ -8,89 +8,89 @@ public interface MemoryUsageReportEventOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>repeated .android_studio.MemoryUsageReportEvent.ComponentMemoryUsage component_stats = 1;</code>
+   * <code>repeated .android_studio.MemoryUsageReportEvent.ClusterMemoryUsage component_stats = 1;</code>
    */
-  java.util.List<com.google.wireless.android.sdk.stats.MemoryUsageReportEvent.ComponentMemoryUsage> 
+  java.util.List<com.google.wireless.android.sdk.stats.MemoryUsageReportEvent.ClusterMemoryUsage> 
       getComponentStatsList();
   /**
-   * <code>repeated .android_studio.MemoryUsageReportEvent.ComponentMemoryUsage component_stats = 1;</code>
+   * <code>repeated .android_studio.MemoryUsageReportEvent.ClusterMemoryUsage component_stats = 1;</code>
    */
-  com.google.wireless.android.sdk.stats.MemoryUsageReportEvent.ComponentMemoryUsage getComponentStats(int index);
+  com.google.wireless.android.sdk.stats.MemoryUsageReportEvent.ClusterMemoryUsage getComponentStats(int index);
   /**
-   * <code>repeated .android_studio.MemoryUsageReportEvent.ComponentMemoryUsage component_stats = 1;</code>
+   * <code>repeated .android_studio.MemoryUsageReportEvent.ClusterMemoryUsage component_stats = 1;</code>
    */
   int getComponentStatsCount();
   /**
-   * <code>repeated .android_studio.MemoryUsageReportEvent.ComponentMemoryUsage component_stats = 1;</code>
+   * <code>repeated .android_studio.MemoryUsageReportEvent.ClusterMemoryUsage component_stats = 1;</code>
    */
-  java.util.List<? extends com.google.wireless.android.sdk.stats.MemoryUsageReportEvent.ComponentMemoryUsageOrBuilder> 
+  java.util.List<? extends com.google.wireless.android.sdk.stats.MemoryUsageReportEvent.ClusterMemoryUsageOrBuilder> 
       getComponentStatsOrBuilderList();
   /**
-   * <code>repeated .android_studio.MemoryUsageReportEvent.ComponentMemoryUsage component_stats = 1;</code>
+   * <code>repeated .android_studio.MemoryUsageReportEvent.ClusterMemoryUsage component_stats = 1;</code>
    */
-  com.google.wireless.android.sdk.stats.MemoryUsageReportEvent.ComponentMemoryUsageOrBuilder getComponentStatsOrBuilder(
+  com.google.wireless.android.sdk.stats.MemoryUsageReportEvent.ClusterMemoryUsageOrBuilder getComponentStatsOrBuilder(
       int index);
 
   /**
-   * <code>repeated .android_studio.MemoryUsageReportEvent.SharedClusterMemoryUsage shared_stats = 2;</code>
+   * <code>repeated .android_studio.MemoryUsageReportEvent.SharedClusterMemoryUsage shared_component_stats = 2;</code>
    */
   java.util.List<com.google.wireless.android.sdk.stats.MemoryUsageReportEvent.SharedClusterMemoryUsage> 
-      getSharedStatsList();
+      getSharedComponentStatsList();
   /**
-   * <code>repeated .android_studio.MemoryUsageReportEvent.SharedClusterMemoryUsage shared_stats = 2;</code>
+   * <code>repeated .android_studio.MemoryUsageReportEvent.SharedClusterMemoryUsage shared_component_stats = 2;</code>
    */
-  com.google.wireless.android.sdk.stats.MemoryUsageReportEvent.SharedClusterMemoryUsage getSharedStats(int index);
+  com.google.wireless.android.sdk.stats.MemoryUsageReportEvent.SharedClusterMemoryUsage getSharedComponentStats(int index);
   /**
-   * <code>repeated .android_studio.MemoryUsageReportEvent.SharedClusterMemoryUsage shared_stats = 2;</code>
+   * <code>repeated .android_studio.MemoryUsageReportEvent.SharedClusterMemoryUsage shared_component_stats = 2;</code>
    */
-  int getSharedStatsCount();
+  int getSharedComponentStatsCount();
   /**
-   * <code>repeated .android_studio.MemoryUsageReportEvent.SharedClusterMemoryUsage shared_stats = 2;</code>
+   * <code>repeated .android_studio.MemoryUsageReportEvent.SharedClusterMemoryUsage shared_component_stats = 2;</code>
    */
   java.util.List<? extends com.google.wireless.android.sdk.stats.MemoryUsageReportEvent.SharedClusterMemoryUsageOrBuilder> 
-      getSharedStatsOrBuilderList();
+      getSharedComponentStatsOrBuilderList();
   /**
-   * <code>repeated .android_studio.MemoryUsageReportEvent.SharedClusterMemoryUsage shared_stats = 2;</code>
+   * <code>repeated .android_studio.MemoryUsageReportEvent.SharedClusterMemoryUsage shared_component_stats = 2;</code>
    */
-  com.google.wireless.android.sdk.stats.MemoryUsageReportEvent.SharedClusterMemoryUsageOrBuilder getSharedStatsOrBuilder(
+  com.google.wireless.android.sdk.stats.MemoryUsageReportEvent.SharedClusterMemoryUsageOrBuilder getSharedComponentStatsOrBuilder(
       int index);
 
   /**
-   * <code>repeated .android_studio.MemoryUsageReportEvent.ComponentCategoryMemoryUsage component_category_stats = 3;</code>
+   * <code>repeated .android_studio.MemoryUsageReportEvent.ClusterMemoryUsage component_category_stats = 4;</code>
    */
-  java.util.List<com.google.wireless.android.sdk.stats.MemoryUsageReportEvent.ComponentCategoryMemoryUsage> 
+  java.util.List<com.google.wireless.android.sdk.stats.MemoryUsageReportEvent.ClusterMemoryUsage> 
       getComponentCategoryStatsList();
   /**
-   * <code>repeated .android_studio.MemoryUsageReportEvent.ComponentCategoryMemoryUsage component_category_stats = 3;</code>
+   * <code>repeated .android_studio.MemoryUsageReportEvent.ClusterMemoryUsage component_category_stats = 4;</code>
    */
-  com.google.wireless.android.sdk.stats.MemoryUsageReportEvent.ComponentCategoryMemoryUsage getComponentCategoryStats(int index);
+  com.google.wireless.android.sdk.stats.MemoryUsageReportEvent.ClusterMemoryUsage getComponentCategoryStats(int index);
   /**
-   * <code>repeated .android_studio.MemoryUsageReportEvent.ComponentCategoryMemoryUsage component_category_stats = 3;</code>
+   * <code>repeated .android_studio.MemoryUsageReportEvent.ClusterMemoryUsage component_category_stats = 4;</code>
    */
   int getComponentCategoryStatsCount();
   /**
-   * <code>repeated .android_studio.MemoryUsageReportEvent.ComponentCategoryMemoryUsage component_category_stats = 3;</code>
+   * <code>repeated .android_studio.MemoryUsageReportEvent.ClusterMemoryUsage component_category_stats = 4;</code>
    */
-  java.util.List<? extends com.google.wireless.android.sdk.stats.MemoryUsageReportEvent.ComponentCategoryMemoryUsageOrBuilder> 
+  java.util.List<? extends com.google.wireless.android.sdk.stats.MemoryUsageReportEvent.ClusterMemoryUsageOrBuilder> 
       getComponentCategoryStatsOrBuilderList();
   /**
-   * <code>repeated .android_studio.MemoryUsageReportEvent.ComponentCategoryMemoryUsage component_category_stats = 3;</code>
+   * <code>repeated .android_studio.MemoryUsageReportEvent.ClusterMemoryUsage component_category_stats = 4;</code>
    */
-  com.google.wireless.android.sdk.stats.MemoryUsageReportEvent.ComponentCategoryMemoryUsageOrBuilder getComponentCategoryStatsOrBuilder(
+  com.google.wireless.android.sdk.stats.MemoryUsageReportEvent.ClusterMemoryUsageOrBuilder getComponentCategoryStatsOrBuilder(
       int index);
 
   /**
-   * <code>optional .android_studio.MemoryUsageReportEvent.MemoryUsageCollectionMetadata metadata = 4;</code>
+   * <code>optional .android_studio.MemoryUsageReportEvent.MemoryUsageCollectionMetadata metadata = 6;</code>
    * @return Whether the metadata field is set.
    */
   boolean hasMetadata();
   /**
-   * <code>optional .android_studio.MemoryUsageReportEvent.MemoryUsageCollectionMetadata metadata = 4;</code>
+   * <code>optional .android_studio.MemoryUsageReportEvent.MemoryUsageCollectionMetadata metadata = 6;</code>
    * @return The metadata.
    */
   com.google.wireless.android.sdk.stats.MemoryUsageReportEvent.MemoryUsageCollectionMetadata getMetadata();
   /**
-   * <code>optional .android_studio.MemoryUsageReportEvent.MemoryUsageCollectionMetadata metadata = 4;</code>
+   * <code>optional .android_studio.MemoryUsageReportEvent.MemoryUsageCollectionMetadata metadata = 6;</code>
    */
   com.google.wireless.android.sdk.stats.MemoryUsageReportEvent.MemoryUsageCollectionMetadataOrBuilder getMetadataOrBuilder();
 }

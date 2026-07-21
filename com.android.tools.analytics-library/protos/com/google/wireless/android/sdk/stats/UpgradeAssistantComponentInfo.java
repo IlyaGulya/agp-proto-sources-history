@@ -218,6 +218,22 @@ private static final long serialVersionUID = 0L;
      * <code>R8_FULL_MODE_DEFAULT = 21;</code>
      */
     R8_FULL_MODE_DEFAULT(21),
+    /**
+     * <code>RENDER_SCRIPT_DEFAULT = 22;</code>
+     */
+    RENDER_SCRIPT_DEFAULT(22),
+    /**
+     * <code>NON_TRANSITIVE_R_CLASS_DEFAULT = 23;</code>
+     */
+    NON_TRANSITIVE_R_CLASS_DEFAULT(23),
+    /**
+     * <code>AIDL_DEFAULT = 24;</code>
+     */
+    AIDL_DEFAULT(24),
+    /**
+     * <code>BUILD_CONFIG_DEFAULT = 25;</code>
+     */
+    BUILD_CONFIG_DEFAULT(25),
     ;
 
     /**
@@ -308,6 +324,22 @@ private static final long serialVersionUID = 0L;
      * <code>R8_FULL_MODE_DEFAULT = 21;</code>
      */
     public static final int R8_FULL_MODE_DEFAULT_VALUE = 21;
+    /**
+     * <code>RENDER_SCRIPT_DEFAULT = 22;</code>
+     */
+    public static final int RENDER_SCRIPT_DEFAULT_VALUE = 22;
+    /**
+     * <code>NON_TRANSITIVE_R_CLASS_DEFAULT = 23;</code>
+     */
+    public static final int NON_TRANSITIVE_R_CLASS_DEFAULT_VALUE = 23;
+    /**
+     * <code>AIDL_DEFAULT = 24;</code>
+     */
+    public static final int AIDL_DEFAULT_VALUE = 24;
+    /**
+     * <code>BUILD_CONFIG_DEFAULT = 25;</code>
+     */
+    public static final int BUILD_CONFIG_DEFAULT_VALUE = 25;
 
 
     public final int getNumber() {
@@ -352,6 +384,10 @@ private static final long serialVersionUID = 0L;
         case 19: return REDUNDANT_PROPERTIES;
         case 20: return ANDROID_MANIFEST_PACKAGE;
         case 21: return R8_FULL_MODE_DEFAULT;
+        case 22: return RENDER_SCRIPT_DEFAULT;
+        case 23: return NON_TRANSITIVE_R_CLASS_DEFAULT;
+        case 24: return AIDL_DEFAULT;
+        case 25: return BUILD_CONFIG_DEFAULT;
         default: return null;
       }
     }

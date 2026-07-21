@@ -7908,6 +7908,10 @@ private static final long serialVersionUID = 0L;
      * <code>WEAR_OS_COMPOSE_ACTIVITY = 66;</code>
      */
     WEAR_OS_COMPOSE_ACTIVITY(66),
+    /**
+     * <code>GOOGLE_WALLET_ACTIVITY = 67;</code>
+     */
+    GOOGLE_WALLET_ACTIVITY(67),
     ;
 
     /**
@@ -8182,6 +8186,10 @@ private static final long serialVersionUID = 0L;
      * <code>WEAR_OS_COMPOSE_ACTIVITY = 66;</code>
      */
     public static final int WEAR_OS_COMPOSE_ACTIVITY_VALUE = 66;
+    /**
+     * <code>GOOGLE_WALLET_ACTIVITY = 67;</code>
+     */
+    public static final int GOOGLE_WALLET_ACTIVITY_VALUE = 67;
 
 
     public final int getNumber() {
@@ -8271,6 +8279,7 @@ private static final long serialVersionUID = 0L;
         case 64: return MACROBENCHMARK_LIBRARY_MODULE;
         case 65: return GOOGLE_PAY_ACTIVITY;
         case 66: return WEAR_OS_COMPOSE_ACTIVITY;
+        case 67: return GOOGLE_WALLET_ACTIVITY;
         default: return null;
       }
     }
@@ -9300,6 +9309,16 @@ private static final long serialVersionUID = 0L;
      * <code>TYPE_APPLICATION_ID_MUST_NOT_BE_DYNAMIC = 59;</code>
      */
     TYPE_APPLICATION_ID_MUST_NOT_BE_DYNAMIC(59),
+    /**
+     * <pre>
+     * Using the removed API. The support for the API was removed
+     * but API and associated types were left intact to not fail sync with
+     * ClassNotFoundException which would be confusing to users.
+     * </pre>
+     *
+     * <code>TYPE_REMOVED_API = 60;</code>
+     */
+    TYPE_REMOVED_API(60),
     ;
 
     /**
@@ -9721,6 +9740,16 @@ private static final long serialVersionUID = 0L;
      * <code>TYPE_APPLICATION_ID_MUST_NOT_BE_DYNAMIC = 59;</code>
      */
     public static final int TYPE_APPLICATION_ID_MUST_NOT_BE_DYNAMIC_VALUE = 59;
+    /**
+     * <pre>
+     * Using the removed API. The support for the API was removed
+     * but API and associated types were left intact to not fail sync with
+     * ClassNotFoundException which would be confusing to users.
+     * </pre>
+     *
+     * <code>TYPE_REMOVED_API = 60;</code>
+     */
+    public static final int TYPE_REMOVED_API_VALUE = 60;
 
 
     public final int getNumber() {
@@ -9803,6 +9832,7 @@ private static final long serialVersionUID = 0L;
         case 57: return TYPE_COMPILE_SDK_VERSION_TOO_LOW;
         case 58: return TYPE_ACCESSING_DISABLED_FEATURE_VARIANT_API;
         case 59: return TYPE_APPLICATION_ID_MUST_NOT_BE_DYNAMIC;
+        case 60: return TYPE_REMOVED_API;
         default: return null;
       }
     }
@@ -10904,6 +10934,10 @@ private static final long serialVersionUID = 0L;
          */
         CPP_GAME_ACTIVITY(60),
         /**
+         * <code>GOOGLE_WALLET_ACTIVITY = 61;</code>
+         */
+        GOOGLE_WALLET_ACTIVITY(61),
+        /**
          * <code>FRAGMENT_LIST = 23;</code>
          */
         FRAGMENT_LIST(23),
@@ -11151,6 +11185,10 @@ private static final long serialVersionUID = 0L;
          */
         public static final int CPP_GAME_ACTIVITY_VALUE = 60;
         /**
+         * <code>GOOGLE_WALLET_ACTIVITY = 61;</code>
+         */
+        public static final int GOOGLE_WALLET_ACTIVITY_VALUE = 61;
+        /**
          * <code>FRAGMENT_LIST = 23;</code>
          */
         public static final int FRAGMENT_LIST_VALUE = 23;
@@ -11338,6 +11376,7 @@ private static final long serialVersionUID = 0L;
             case 57: return RESPONSIVE_ACTIVITY;
             case 58: return GOOGLE_PAY_ACTIVITY;
             case 60: return CPP_GAME_ACTIVITY;
+            case 61: return GOOGLE_WALLET_ACTIVITY;
             case 23: return FRAGMENT_LIST;
             case 24: return FRAGMENT_BLANK;
             case 25: return FRAGMENT_FULLSCREEN;
