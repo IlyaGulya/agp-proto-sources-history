@@ -884,6 +884,10 @@ public enum BooleanOption
    * <code>DISALLOW_USES_SDK_IN_MANIFEST = 215;</code>
    */
   DISALLOW_USES_SDK_IN_MANIFEST(215),
+  /**
+   * <code>CUSTOM_SHADER_PATH_REQUIRED = 216;</code>
+   */
+  CUSTOM_SHADER_PATH_REQUIRED(216),
   UNRECOGNIZED(-1),
   ;
 
@@ -1751,6 +1755,10 @@ public enum BooleanOption
    * <code>DISALLOW_USES_SDK_IN_MANIFEST = 215;</code>
    */
   public static final int DISALLOW_USES_SDK_IN_MANIFEST_VALUE = 215;
+  /**
+   * <code>CUSTOM_SHADER_PATH_REQUIRED = 216;</code>
+   */
+  public static final int CUSTOM_SHADER_PATH_REQUIRED_VALUE = 216;
 
 
   public final int getNumber() {
@@ -1993,6 +2001,7 @@ public enum BooleanOption
       case 213: return R8_GRADUAL_API;
       case 214: return ENABLE_LEGACY_VARIANT_API;
       case 215: return DISALLOW_USES_SDK_IN_MANIFEST;
+      case 216: return CUSTOM_SHADER_PATH_REQUIRED;
       default: return null;
     }
   }

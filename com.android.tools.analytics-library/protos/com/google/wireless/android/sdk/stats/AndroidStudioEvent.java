@@ -3354,6 +3354,14 @@ private static final long serialVersionUID = 0L;
      * <code>PLAY_POLICY_INSIGHTS_USAGE_EVENT = 355;</code>
      */
     PLAY_POLICY_INSIGHTS_USAGE_EVENT(355),
+    /**
+     * <pre>
+     * Event related to Model Providers
+     * </pre>
+     *
+     * <code>MODEL_PROVIDER_EVENT = 356;</code>
+     */
+    MODEL_PROVIDER_EVENT(356),
     ;
 
     /**
@@ -6017,6 +6025,14 @@ private static final long serialVersionUID = 0L;
      * <code>PLAY_POLICY_INSIGHTS_USAGE_EVENT = 355;</code>
      */
     public static final int PLAY_POLICY_INSIGHTS_USAGE_EVENT_VALUE = 355;
+    /**
+     * <pre>
+     * Event related to Model Providers
+     * </pre>
+     *
+     * <code>MODEL_PROVIDER_EVENT = 356;</code>
+     */
+    public static final int MODEL_PROVIDER_EVENT_VALUE = 356;
 
 
     public final int getNumber() {
@@ -6390,6 +6406,7 @@ private static final long serialVersionUID = 0L;
         case 353: return PROJECT_VIEW_DEFAULT_VIEW_EVENT;
         case 354: return ANDROID_VIEW_SHOW_BUILD_FILES_IN_MODULE_EVENT;
         case 355: return PLAY_POLICY_INSIGHTS_USAGE_EVENT;
+        case 356: return MODEL_PROVIDER_EVENT;
         default: return null;
       }
     }
@@ -12159,7 +12176,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional uint32 min_sdk = 2 [deprecated = true];</code>
        * @deprecated android_studio.AndroidStudioEvent.TemplatesUsage.TemplateModule.min_sdk is deprecated.
-       *     See studio_stats.proto;l=2076
+       *     See studio_stats.proto;l=2082
        * @return Whether the minSdk field is set.
        */
       @java.lang.Deprecated boolean hasMinSdk();
@@ -12170,7 +12187,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional uint32 min_sdk = 2 [deprecated = true];</code>
        * @deprecated android_studio.AndroidStudioEvent.TemplatesUsage.TemplateModule.min_sdk is deprecated.
-       *     See studio_stats.proto;l=2076
+       *     See studio_stats.proto;l=2082
        * @return The minSdk.
        */
       @java.lang.Deprecated int getMinSdk();
@@ -12701,7 +12718,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional uint32 min_sdk = 2 [deprecated = true];</code>
        * @deprecated android_studio.AndroidStudioEvent.TemplatesUsage.TemplateModule.min_sdk is deprecated.
-       *     See studio_stats.proto;l=2076
+       *     See studio_stats.proto;l=2082
        * @return Whether the minSdk field is set.
        */
       @java.lang.Override
@@ -12715,7 +12732,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional uint32 min_sdk = 2 [deprecated = true];</code>
        * @deprecated android_studio.AndroidStudioEvent.TemplatesUsage.TemplateModule.min_sdk is deprecated.
-       *     See studio_stats.proto;l=2076
+       *     See studio_stats.proto;l=2082
        * @return The minSdk.
        */
       @java.lang.Override
@@ -13353,7 +13370,7 @@ private static final long serialVersionUID = 0L;
          *
          * <code>optional uint32 min_sdk = 2 [deprecated = true];</code>
          * @deprecated android_studio.AndroidStudioEvent.TemplatesUsage.TemplateModule.min_sdk is deprecated.
-         *     See studio_stats.proto;l=2076
+         *     See studio_stats.proto;l=2082
          * @return Whether the minSdk field is set.
          */
         @java.lang.Override
@@ -13367,7 +13384,7 @@ private static final long serialVersionUID = 0L;
          *
          * <code>optional uint32 min_sdk = 2 [deprecated = true];</code>
          * @deprecated android_studio.AndroidStudioEvent.TemplatesUsage.TemplateModule.min_sdk is deprecated.
-         *     See studio_stats.proto;l=2076
+         *     See studio_stats.proto;l=2082
          * @return The minSdk.
          */
         @java.lang.Override
@@ -13381,7 +13398,7 @@ private static final long serialVersionUID = 0L;
          *
          * <code>optional uint32 min_sdk = 2 [deprecated = true];</code>
          * @deprecated android_studio.AndroidStudioEvent.TemplatesUsage.TemplateModule.min_sdk is deprecated.
-         *     See studio_stats.proto;l=2076
+         *     See studio_stats.proto;l=2082
          * @param value The minSdk to set.
          * @return This builder for chaining.
          */
@@ -13399,7 +13416,7 @@ private static final long serialVersionUID = 0L;
          *
          * <code>optional uint32 min_sdk = 2 [deprecated = true];</code>
          * @deprecated android_studio.AndroidStudioEvent.TemplatesUsage.TemplateModule.min_sdk is deprecated.
-         *     See studio_stats.proto;l=2076
+         *     See studio_stats.proto;l=2082
          * @return This builder for chaining.
          */
         @java.lang.Deprecated public Builder clearMinSdk() {
@@ -25071,6 +25088,44 @@ private static final long serialVersionUID = 0L;
     return playPolicyInsightsUsageEvent_ == null ? com.google.wireless.android.sdk.stats.PlayPolicyInsightsUsageEvent.getDefaultInstance() : playPolicyInsightsUsageEvent_;
   }
 
+  public static final int MODEL_PROVIDER_EVENT_FIELD_NUMBER = 237;
+  private com.google.wireless.android.sdk.stats.ModelProviderEvent modelProviderEvent_;
+  /**
+   * <pre>
+   * set when kind = MODEL_PROVIDER_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.ModelProviderEvent model_provider_event = 237 [lazy = true];</code>
+   * @return Whether the modelProviderEvent field is set.
+   */
+  @java.lang.Override
+  public boolean hasModelProviderEvent() {
+    return ((bitField7_ & 0x00000040) != 0);
+  }
+  /**
+   * <pre>
+   * set when kind = MODEL_PROVIDER_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.ModelProviderEvent model_provider_event = 237 [lazy = true];</code>
+   * @return The modelProviderEvent.
+   */
+  @java.lang.Override
+  public com.google.wireless.android.sdk.stats.ModelProviderEvent getModelProviderEvent() {
+    return modelProviderEvent_ == null ? com.google.wireless.android.sdk.stats.ModelProviderEvent.getDefaultInstance() : modelProviderEvent_;
+  }
+  /**
+   * <pre>
+   * set when kind = MODEL_PROVIDER_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.ModelProviderEvent model_provider_event = 237 [lazy = true];</code>
+   */
+  @java.lang.Override
+  public com.google.wireless.android.sdk.stats.ModelProviderEventOrBuilder getModelProviderEventOrBuilder() {
+    return modelProviderEvent_ == null ? com.google.wireless.android.sdk.stats.ModelProviderEvent.getDefaultInstance() : modelProviderEvent_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -25792,6 +25847,9 @@ private static final long serialVersionUID = 0L;
     }
     if (((bitField7_ & 0x00000020) != 0)) {
       output.writeMessage(236, getPlayPolicyInsightsUsageEvent());
+    }
+    if (((bitField7_ & 0x00000040) != 0)) {
+      output.writeMessage(237, getModelProviderEvent());
     }
     getUnknownFields().writeTo(output);
   }
@@ -26751,6 +26809,10 @@ private static final long serialVersionUID = 0L;
     if (((bitField7_ & 0x00000020) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(236, getPlayPolicyInsightsUsageEvent());
+    }
+    if (((bitField7_ & 0x00000040) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(237, getModelProviderEvent());
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -27918,6 +27980,11 @@ private static final long serialVersionUID = 0L;
       if (!getPlayPolicyInsightsUsageEvent()
           .equals(other.getPlayPolicyInsightsUsageEvent())) return false;
     }
+    if (hasModelProviderEvent() != other.hasModelProviderEvent()) return false;
+    if (hasModelProviderEvent()) {
+      if (!getModelProviderEvent()
+          .equals(other.getModelProviderEvent())) return false;
+    }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -28875,6 +28942,10 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + PLAY_POLICY_INSIGHTS_USAGE_EVENT_FIELD_NUMBER;
       hash = (53 * hash) + getPlayPolicyInsightsUsageEvent().hashCode();
     }
+    if (hasModelProviderEvent()) {
+      hash = (37 * hash) + MODEL_PROVIDER_EVENT_FIELD_NUMBER;
+      hash = (53 * hash) + getModelProviderEvent().hashCode();
+    }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -29216,6 +29287,7 @@ private static final long serialVersionUID = 0L;
         getAndroidViewShowBuildFilesInModuleEventFieldBuilder();
         getProjectViewDefaultViewEventFieldBuilder();
         getPlayPolicyInsightsUsageEventFieldBuilder();
+        getModelProviderEventFieldBuilder();
       }
     }
     @java.lang.Override
@@ -30325,6 +30397,11 @@ private static final long serialVersionUID = 0L;
       if (playPolicyInsightsUsageEventBuilder_ != null) {
         playPolicyInsightsUsageEventBuilder_.dispose();
         playPolicyInsightsUsageEventBuilder_ = null;
+      }
+      modelProviderEvent_ = null;
+      if (modelProviderEventBuilder_ != null) {
+        modelProviderEventBuilder_.dispose();
+        modelProviderEventBuilder_ = null;
       }
       return this;
     }
@@ -31802,6 +31879,12 @@ private static final long serialVersionUID = 0L;
             : playPolicyInsightsUsageEventBuilder_.build();
         to_bitField7_ |= 0x00000020;
       }
+      if (((from_bitField7_ & 0x00001000) != 0)) {
+        result.modelProviderEvent_ = modelProviderEventBuilder_ == null
+            ? modelProviderEvent_
+            : modelProviderEventBuilder_.build();
+        to_bitField7_ |= 0x00000040;
+      }
       result.bitField6_ |= to_bitField6_;
       result.bitField7_ |= to_bitField7_;
     }
@@ -32629,6 +32712,9 @@ private static final long serialVersionUID = 0L;
       }
       if (other.hasPlayPolicyInsightsUsageEvent()) {
         mergePlayPolicyInsightsUsageEvent(other.getPlayPolicyInsightsUsageEvent());
+      }
+      if (other.hasModelProviderEvent()) {
+        mergeModelProviderEvent(other.getModelProviderEvent());
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -34376,6 +34462,13 @@ private static final long serialVersionUID = 0L;
               bitField7_ |= 0x00000800;
               break;
             } // case 1890
+            case 1898: {
+              input.readMessage(
+                  getModelProviderEventFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField7_ |= 0x00001000;
+              break;
+            } // case 1898
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -70316,6 +70409,161 @@ private static final long serialVersionUID = 0L;
         playPolicyInsightsUsageEvent_ = null;
       }
       return playPolicyInsightsUsageEventBuilder_;
+    }
+
+    private com.google.wireless.android.sdk.stats.ModelProviderEvent modelProviderEvent_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.ModelProviderEvent, com.google.wireless.android.sdk.stats.ModelProviderEvent.Builder, com.google.wireless.android.sdk.stats.ModelProviderEventOrBuilder> modelProviderEventBuilder_;
+    /**
+     * <pre>
+     * set when kind = MODEL_PROVIDER_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.ModelProviderEvent model_provider_event = 237 [lazy = true];</code>
+     * @return Whether the modelProviderEvent field is set.
+     */
+    public boolean hasModelProviderEvent() {
+      return ((bitField7_ & 0x00001000) != 0);
+    }
+    /**
+     * <pre>
+     * set when kind = MODEL_PROVIDER_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.ModelProviderEvent model_provider_event = 237 [lazy = true];</code>
+     * @return The modelProviderEvent.
+     */
+    public com.google.wireless.android.sdk.stats.ModelProviderEvent getModelProviderEvent() {
+      if (modelProviderEventBuilder_ == null) {
+        return modelProviderEvent_ == null ? com.google.wireless.android.sdk.stats.ModelProviderEvent.getDefaultInstance() : modelProviderEvent_;
+      } else {
+        return modelProviderEventBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * set when kind = MODEL_PROVIDER_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.ModelProviderEvent model_provider_event = 237 [lazy = true];</code>
+     */
+    public Builder setModelProviderEvent(com.google.wireless.android.sdk.stats.ModelProviderEvent value) {
+      if (modelProviderEventBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        modelProviderEvent_ = value;
+      } else {
+        modelProviderEventBuilder_.setMessage(value);
+      }
+      bitField7_ |= 0x00001000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = MODEL_PROVIDER_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.ModelProviderEvent model_provider_event = 237 [lazy = true];</code>
+     */
+    public Builder setModelProviderEvent(
+        com.google.wireless.android.sdk.stats.ModelProviderEvent.Builder builderForValue) {
+      if (modelProviderEventBuilder_ == null) {
+        modelProviderEvent_ = builderForValue.build();
+      } else {
+        modelProviderEventBuilder_.setMessage(builderForValue.build());
+      }
+      bitField7_ |= 0x00001000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = MODEL_PROVIDER_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.ModelProviderEvent model_provider_event = 237 [lazy = true];</code>
+     */
+    public Builder mergeModelProviderEvent(com.google.wireless.android.sdk.stats.ModelProviderEvent value) {
+      if (modelProviderEventBuilder_ == null) {
+        if (((bitField7_ & 0x00001000) != 0) &&
+          modelProviderEvent_ != null &&
+          modelProviderEvent_ != com.google.wireless.android.sdk.stats.ModelProviderEvent.getDefaultInstance()) {
+          getModelProviderEventBuilder().mergeFrom(value);
+        } else {
+          modelProviderEvent_ = value;
+        }
+      } else {
+        modelProviderEventBuilder_.mergeFrom(value);
+      }
+      bitField7_ |= 0x00001000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = MODEL_PROVIDER_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.ModelProviderEvent model_provider_event = 237 [lazy = true];</code>
+     */
+    public Builder clearModelProviderEvent() {
+      bitField7_ = (bitField7_ & ~0x00001000);
+      modelProviderEvent_ = null;
+      if (modelProviderEventBuilder_ != null) {
+        modelProviderEventBuilder_.dispose();
+        modelProviderEventBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = MODEL_PROVIDER_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.ModelProviderEvent model_provider_event = 237 [lazy = true];</code>
+     */
+    public com.google.wireless.android.sdk.stats.ModelProviderEvent.Builder getModelProviderEventBuilder() {
+      bitField7_ |= 0x00001000;
+      onChanged();
+      return getModelProviderEventFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * set when kind = MODEL_PROVIDER_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.ModelProviderEvent model_provider_event = 237 [lazy = true];</code>
+     */
+    public com.google.wireless.android.sdk.stats.ModelProviderEventOrBuilder getModelProviderEventOrBuilder() {
+      if (modelProviderEventBuilder_ != null) {
+        return modelProviderEventBuilder_.getMessageOrBuilder();
+      } else {
+        return modelProviderEvent_ == null ?
+            com.google.wireless.android.sdk.stats.ModelProviderEvent.getDefaultInstance() : modelProviderEvent_;
+      }
+    }
+    /**
+     * <pre>
+     * set when kind = MODEL_PROVIDER_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.ModelProviderEvent model_provider_event = 237 [lazy = true];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.ModelProviderEvent, com.google.wireless.android.sdk.stats.ModelProviderEvent.Builder, com.google.wireless.android.sdk.stats.ModelProviderEventOrBuilder> 
+        getModelProviderEventFieldBuilder() {
+      if (modelProviderEventBuilder_ == null) {
+        modelProviderEventBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.wireless.android.sdk.stats.ModelProviderEvent, com.google.wireless.android.sdk.stats.ModelProviderEvent.Builder, com.google.wireless.android.sdk.stats.ModelProviderEventOrBuilder>(
+                getModelProviderEvent(),
+                getParentForChildren(),
+                isClean());
+        modelProviderEvent_ = null;
+      }
+      return modelProviderEventBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

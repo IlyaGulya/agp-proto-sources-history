@@ -270,6 +270,22 @@ private static final long serialVersionUID = 0L;
      * <code>ONLY_ENABLE_UNIT_TEST_BY_DEFAULT_FOR_THE_TESTED_BUILD_TYPE = 55;</code>
      */
     ONLY_ENABLE_UNIT_TEST_BY_DEFAULT_FOR_THE_TESTED_BUILD_TYPE(55),
+    /**
+     * <code>BLOCK_DISALLOW_USES_SDK_IN_MANIFEST_PRESENT = 56;</code>
+     */
+    BLOCK_DISALLOW_USES_SDK_IN_MANIFEST_PRESENT(56),
+    /**
+     * <code>JCENTER_TO_MAVEN_CENTRAL = 57;</code>
+     */
+    JCENTER_TO_MAVEN_CENTRAL(57),
+    /**
+     * <code>REMOVE_DEPRECATED_LIBRARY_TARGET_SDK = 58;</code>
+     */
+    REMOVE_DEPRECATED_LIBRARY_TARGET_SDK(58),
+    /**
+     * <code>UNIQUE_PACKAGE_NAMES = 59;</code>
+     */
+    UNIQUE_PACKAGE_NAMES(59),
     ;
 
     /**
@@ -496,6 +512,22 @@ private static final long serialVersionUID = 0L;
      * <code>ONLY_ENABLE_UNIT_TEST_BY_DEFAULT_FOR_THE_TESTED_BUILD_TYPE = 55;</code>
      */
     public static final int ONLY_ENABLE_UNIT_TEST_BY_DEFAULT_FOR_THE_TESTED_BUILD_TYPE_VALUE = 55;
+    /**
+     * <code>BLOCK_DISALLOW_USES_SDK_IN_MANIFEST_PRESENT = 56;</code>
+     */
+    public static final int BLOCK_DISALLOW_USES_SDK_IN_MANIFEST_PRESENT_VALUE = 56;
+    /**
+     * <code>JCENTER_TO_MAVEN_CENTRAL = 57;</code>
+     */
+    public static final int JCENTER_TO_MAVEN_CENTRAL_VALUE = 57;
+    /**
+     * <code>REMOVE_DEPRECATED_LIBRARY_TARGET_SDK = 58;</code>
+     */
+    public static final int REMOVE_DEPRECATED_LIBRARY_TARGET_SDK_VALUE = 58;
+    /**
+     * <code>UNIQUE_PACKAGE_NAMES = 59;</code>
+     */
+    public static final int UNIQUE_PACKAGE_NAMES_VALUE = 59;
 
 
     public final int getNumber() {
@@ -574,6 +606,10 @@ private static final long serialVersionUID = 0L;
         case 53: return USES_SDK_IN_MANIFEST_DISALLOWED_DEFAULT;
         case 54: return BLOCK_BUILD_FEATURE_BUILD_CONFIG_PRESENT;
         case 55: return ONLY_ENABLE_UNIT_TEST_BY_DEFAULT_FOR_THE_TESTED_BUILD_TYPE;
+        case 56: return BLOCK_DISALLOW_USES_SDK_IN_MANIFEST_PRESENT;
+        case 57: return JCENTER_TO_MAVEN_CENTRAL;
+        case 58: return REMOVE_DEPRECATED_LIBRARY_TARGET_SDK;
+        case 59: return UNIQUE_PACKAGE_NAMES;
         default: return null;
       }
     }
