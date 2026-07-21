@@ -152,7 +152,7 @@ public final class ResourcesInternal {
 
     /**
      * <pre>
-     * The status of the flag the file is behind if any
+     * The status of the read only flag the file is behind if any
      * </pre>
      *
      * <code>uint32 flag_status = 6;</code>
@@ -177,6 +177,16 @@ public final class ResourcesInternal {
      */
     com.google.protobuf.ByteString
         getFlagNameBytes();
+
+    /**
+     * <pre>
+     * Whether the file uses read/write feature flags
+     * </pre>
+     *
+     * <code>bool uses_readwrite_feature_flags = 9;</code>
+     * @return The usesReadwriteFeatureFlags.
+     */
+    boolean getUsesReadwriteFeatureFlags();
   }
   /**
    * <pre>
@@ -1258,7 +1268,7 @@ public final class ResourcesInternal {
     private int flagStatus_ = 0;
     /**
      * <pre>
-     * The status of the flag the file is behind if any
+     * The status of the read only flag the file is behind if any
      * </pre>
      *
      * <code>uint32 flag_status = 6;</code>
@@ -1319,6 +1329,21 @@ public final class ResourcesInternal {
       }
     }
 
+    public static final int USES_READWRITE_FEATURE_FLAGS_FIELD_NUMBER = 9;
+    private boolean usesReadwriteFeatureFlags_ = false;
+    /**
+     * <pre>
+     * Whether the file uses read/write feature flags
+     * </pre>
+     *
+     * <code>bool uses_readwrite_feature_flags = 9;</code>
+     * @return The usesReadwriteFeatureFlags.
+     */
+    @java.lang.Override
+    public boolean getUsesReadwriteFeatureFlags() {
+      return usesReadwriteFeatureFlags_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -1356,6 +1381,9 @@ public final class ResourcesInternal {
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(flagName_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 8, flagName_);
+      }
+      if (usesReadwriteFeatureFlags_ != false) {
+        output.writeBool(9, usesReadwriteFeatureFlags_);
       }
       getUnknownFields().writeTo(output);
     }
@@ -1395,6 +1423,10 @@ public final class ResourcesInternal {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(flagName_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(8, flagName_);
       }
+      if (usesReadwriteFeatureFlags_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(9, usesReadwriteFeatureFlags_);
+      }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
@@ -1428,6 +1460,8 @@ public final class ResourcesInternal {
           != other.getFlagNegated()) return false;
       if (!getFlagName()
           .equals(other.getFlagName())) return false;
+      if (getUsesReadwriteFeatureFlags()
+          != other.getUsesReadwriteFeatureFlags()) return false;
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -1460,6 +1494,9 @@ public final class ResourcesInternal {
           getFlagNegated());
       hash = (37 * hash) + FLAG_NAME_FIELD_NUMBER;
       hash = (53 * hash) + getFlagName().hashCode();
+      hash = (37 * hash) + USES_READWRITE_FEATURE_FLAGS_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getUsesReadwriteFeatureFlags());
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -1612,6 +1649,7 @@ public final class ResourcesInternal {
         flagStatus_ = 0;
         flagNegated_ = false;
         flagName_ = "";
+        usesReadwriteFeatureFlags_ = false;
         return this;
       }
 
@@ -1681,6 +1719,9 @@ public final class ResourcesInternal {
         if (((from_bitField0_ & 0x00000080) != 0)) {
           result.flagName_ = flagName_;
         }
+        if (((from_bitField0_ & 0x00000100) != 0)) {
+          result.usesReadwriteFeatureFlags_ = usesReadwriteFeatureFlags_;
+        }
       }
 
       @java.lang.Override
@@ -1747,6 +1788,9 @@ public final class ResourcesInternal {
           flagName_ = other.flagName_;
           bitField0_ |= 0x00000080;
           onChanged();
+        }
+        if (other.getUsesReadwriteFeatureFlags() != false) {
+          setUsesReadwriteFeatureFlags(other.getUsesReadwriteFeatureFlags());
         }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
@@ -1824,6 +1868,11 @@ public final class ResourcesInternal {
                 bitField0_ |= 0x00000080;
                 break;
               } // case 66
+              case 72: {
+                usesReadwriteFeatureFlags_ = input.readBool();
+                bitField0_ |= 0x00000100;
+                break;
+              } // case 72
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -2573,7 +2622,7 @@ public final class ResourcesInternal {
       private int flagStatus_ ;
       /**
        * <pre>
-       * The status of the flag the file is behind if any
+       * The status of the read only flag the file is behind if any
        * </pre>
        *
        * <code>uint32 flag_status = 6;</code>
@@ -2585,7 +2634,7 @@ public final class ResourcesInternal {
       }
       /**
        * <pre>
-       * The status of the flag the file is behind if any
+       * The status of the read only flag the file is behind if any
        * </pre>
        *
        * <code>uint32 flag_status = 6;</code>
@@ -2601,7 +2650,7 @@ public final class ResourcesInternal {
       }
       /**
        * <pre>
-       * The status of the flag the file is behind if any
+       * The status of the read only flag the file is behind if any
        * </pre>
        *
        * <code>uint32 flag_status = 6;</code>
@@ -2717,6 +2766,50 @@ public final class ResourcesInternal {
         onChanged();
         return this;
       }
+
+      private boolean usesReadwriteFeatureFlags_ ;
+      /**
+       * <pre>
+       * Whether the file uses read/write feature flags
+       * </pre>
+       *
+       * <code>bool uses_readwrite_feature_flags = 9;</code>
+       * @return The usesReadwriteFeatureFlags.
+       */
+      @java.lang.Override
+      public boolean getUsesReadwriteFeatureFlags() {
+        return usesReadwriteFeatureFlags_;
+      }
+      /**
+       * <pre>
+       * Whether the file uses read/write feature flags
+       * </pre>
+       *
+       * <code>bool uses_readwrite_feature_flags = 9;</code>
+       * @param value The usesReadwriteFeatureFlags to set.
+       * @return This builder for chaining.
+       */
+      public Builder setUsesReadwriteFeatureFlags(boolean value) {
+
+        usesReadwriteFeatureFlags_ = value;
+        bitField0_ |= 0x00000100;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Whether the file uses read/write feature flags
+       * </pre>
+       *
+       * <code>bool uses_readwrite_feature_flags = 9;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearUsesReadwriteFeatureFlags() {
+        bitField0_ = (bitField0_ & ~0x00000100);
+        usesReadwriteFeatureFlags_ = false;
+        onChanged();
+        return this;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -2802,16 +2895,17 @@ public final class ResourcesInternal {
     java.lang.String[] descriptorData = {
       "\n\027ResourcesInternal.proto\022\020aapt.pb.inter" +
       "nal\032\023Configuration.proto\032\017Resources.prot" +
-      "o\"\325\002\n\014CompiledFile\022\025\n\rresource_name\030\001 \001(" +
+      "o\"\373\002\n\014CompiledFile\022\025\n\rresource_name\030\001 \001(" +
       "\t\022&\n\006config\030\002 \001(\0132\026.aapt.pb.Configuratio" +
       "n\022)\n\004type\030\003 \001(\0162\033.aapt.pb.FileReference." +
       "Type\022\023\n\013source_path\030\004 \001(\t\022>\n\017exported_sy" +
       "mbol\030\005 \003(\0132%.aapt.pb.internal.CompiledFi" +
       "le.Symbol\022\023\n\013flag_status\030\006 \001(\r\022\024\n\014flag_n" +
-      "egated\030\007 \001(\010\022\021\n\tflag_name\030\010 \001(\t\032H\n\006Symbo" +
-      "l\022\025\n\rresource_name\030\001 \001(\t\022\'\n\006source\030\002 \001(\013" +
-      "2\027.aapt.pb.SourcePositionB\032\n\030android.aap" +
-      "t.pb.internalb\006proto3"
+      "egated\030\007 \001(\010\022\021\n\tflag_name\030\010 \001(\t\022$\n\034uses_" +
+      "readwrite_feature_flags\030\t \001(\010\032H\n\006Symbol\022" +
+      "\025\n\rresource_name\030\001 \001(\t\022\'\n\006source\030\002 \001(\0132\027" +
+      ".aapt.pb.SourcePositionB\032\n\030android.aapt." +
+      "pb.internalb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -2824,7 +2918,7 @@ public final class ResourcesInternal {
     internal_static_aapt_pb_internal_CompiledFile_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_aapt_pb_internal_CompiledFile_descriptor,
-        new java.lang.String[] { "ResourceName", "Config", "Type", "SourcePath", "ExportedSymbol", "FlagStatus", "FlagNegated", "FlagName", });
+        new java.lang.String[] { "ResourceName", "Config", "Type", "SourcePath", "ExportedSymbol", "FlagStatus", "FlagNegated", "FlagName", "UsesReadwriteFeatureFlags", });
     internal_static_aapt_pb_internal_CompiledFile_Symbol_descriptor =
       internal_static_aapt_pb_internal_CompiledFile_descriptor.getNestedTypes().get(0);
     internal_static_aapt_pb_internal_CompiledFile_Symbol_fieldAccessorTable = new

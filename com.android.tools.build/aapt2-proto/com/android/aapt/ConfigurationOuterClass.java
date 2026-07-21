@@ -390,13 +390,23 @@ public final class ConfigurationOuterClass {
 
     /**
      * <pre>
-     * The minimum SDK version of the device.
+     * The SDK version of the device.
      * </pre>
      *
      * <code>uint32 sdk_version = 24;</code>
      * @return The sdkVersion.
      */
     int getSdkVersion();
+
+    /**
+     * <pre>
+     * The SDK minor version of the device.
+     * </pre>
+     *
+     * <code>uint32 sdk_version_minor = 27;</code>
+     * @return The sdkVersionMinor.
+     */
+    int getSdkVersionMinor();
 
     /**
      * <pre>
@@ -2906,7 +2916,7 @@ public final class ConfigurationOuterClass {
     private int sdkVersion_ = 0;
     /**
      * <pre>
-     * The minimum SDK version of the device.
+     * The SDK version of the device.
      * </pre>
      *
      * <code>uint32 sdk_version = 24;</code>
@@ -2915,6 +2925,21 @@ public final class ConfigurationOuterClass {
     @java.lang.Override
     public int getSdkVersion() {
       return sdkVersion_;
+    }
+
+    public static final int SDK_VERSION_MINOR_FIELD_NUMBER = 27;
+    private int sdkVersionMinor_ = 0;
+    /**
+     * <pre>
+     * The SDK minor version of the device.
+     * </pre>
+     *
+     * <code>uint32 sdk_version_minor = 27;</code>
+     * @return The sdkVersionMinor.
+     */
+    @java.lang.Override
+    public int getSdkVersionMinor() {
+      return sdkVersionMinor_;
     }
 
     public static final int GRAMMATICAL_GENDER_FIELD_NUMBER = 26;
@@ -3074,6 +3099,9 @@ public final class ConfigurationOuterClass {
       if (grammaticalGender_ != com.android.aapt.ConfigurationOuterClass.Configuration.GrammaticalGender.GRAM_GENDER_USET.getNumber()) {
         output.writeEnum(26, grammaticalGender_);
       }
+      if (sdkVersionMinor_ != 0) {
+        output.writeUInt32(27, sdkVersionMinor_);
+      }
       getUnknownFields().writeTo(output);
     }
 
@@ -3185,6 +3213,10 @@ public final class ConfigurationOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(26, grammaticalGender_);
       }
+      if (sdkVersionMinor_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(27, sdkVersionMinor_);
+      }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
@@ -3234,6 +3266,8 @@ public final class ConfigurationOuterClass {
       if (navigation_ != other.navigation_) return false;
       if (getSdkVersion()
           != other.getSdkVersion()) return false;
+      if (getSdkVersionMinor()
+          != other.getSdkVersionMinor()) return false;
       if (grammaticalGender_ != other.grammaticalGender_) return false;
       if (!getProduct()
           .equals(other.getProduct())) return false;
@@ -3296,6 +3330,8 @@ public final class ConfigurationOuterClass {
       hash = (53 * hash) + navigation_;
       hash = (37 * hash) + SDK_VERSION_FIELD_NUMBER;
       hash = (53 * hash) + getSdkVersion();
+      hash = (37 * hash) + SDK_VERSION_MINOR_FIELD_NUMBER;
+      hash = (53 * hash) + getSdkVersionMinor();
       hash = (37 * hash) + GRAMMATICAL_GENDER_FIELD_NUMBER;
       hash = (53 * hash) + grammaticalGender_;
       hash = (37 * hash) + PRODUCT_FIELD_NUMBER;
@@ -3458,6 +3494,7 @@ public final class ConfigurationOuterClass {
         navHidden_ = 0;
         navigation_ = 0;
         sdkVersion_ = 0;
+        sdkVersionMinor_ = 0;
         grammaticalGender_ = 0;
         product_ = "";
         return this;
@@ -3566,9 +3603,12 @@ public final class ConfigurationOuterClass {
           result.sdkVersion_ = sdkVersion_;
         }
         if (((from_bitField0_ & 0x01000000) != 0)) {
-          result.grammaticalGender_ = grammaticalGender_;
+          result.sdkVersionMinor_ = sdkVersionMinor_;
         }
         if (((from_bitField0_ & 0x02000000) != 0)) {
+          result.grammaticalGender_ = grammaticalGender_;
+        }
+        if (((from_bitField0_ & 0x04000000) != 0)) {
           result.product_ = product_;
         }
       }
@@ -3659,12 +3699,15 @@ public final class ConfigurationOuterClass {
         if (other.getSdkVersion() != 0) {
           setSdkVersion(other.getSdkVersion());
         }
+        if (other.getSdkVersionMinor() != 0) {
+          setSdkVersionMinor(other.getSdkVersionMinor());
+        }
         if (other.grammaticalGender_ != 0) {
           setGrammaticalGenderValue(other.getGrammaticalGenderValue());
         }
         if (!other.getProduct().isEmpty()) {
           product_ = other.product_;
-          bitField0_ |= 0x02000000;
+          bitField0_ |= 0x04000000;
           onChanged();
         }
         this.mergeUnknownFields(other.getUnknownFields());
@@ -3815,14 +3858,19 @@ public final class ConfigurationOuterClass {
               } // case 192
               case 202: {
                 product_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x02000000;
+                bitField0_ |= 0x04000000;
                 break;
               } // case 202
               case 208: {
                 grammaticalGender_ = input.readEnum();
-                bitField0_ |= 0x01000000;
+                bitField0_ |= 0x02000000;
                 break;
               } // case 208
+              case 216: {
+                sdkVersionMinor_ = input.readUInt32();
+                bitField0_ |= 0x01000000;
+                break;
+              } // case 216
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -5319,7 +5367,7 @@ public final class ConfigurationOuterClass {
       private int sdkVersion_ ;
       /**
        * <pre>
-       * The minimum SDK version of the device.
+       * The SDK version of the device.
        * </pre>
        *
        * <code>uint32 sdk_version = 24;</code>
@@ -5331,7 +5379,7 @@ public final class ConfigurationOuterClass {
       }
       /**
        * <pre>
-       * The minimum SDK version of the device.
+       * The SDK version of the device.
        * </pre>
        *
        * <code>uint32 sdk_version = 24;</code>
@@ -5347,7 +5395,7 @@ public final class ConfigurationOuterClass {
       }
       /**
        * <pre>
-       * The minimum SDK version of the device.
+       * The SDK version of the device.
        * </pre>
        *
        * <code>uint32 sdk_version = 24;</code>
@@ -5356,6 +5404,50 @@ public final class ConfigurationOuterClass {
       public Builder clearSdkVersion() {
         bitField0_ = (bitField0_ & ~0x00800000);
         sdkVersion_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int sdkVersionMinor_ ;
+      /**
+       * <pre>
+       * The SDK minor version of the device.
+       * </pre>
+       *
+       * <code>uint32 sdk_version_minor = 27;</code>
+       * @return The sdkVersionMinor.
+       */
+      @java.lang.Override
+      public int getSdkVersionMinor() {
+        return sdkVersionMinor_;
+      }
+      /**
+       * <pre>
+       * The SDK minor version of the device.
+       * </pre>
+       *
+       * <code>uint32 sdk_version_minor = 27;</code>
+       * @param value The sdkVersionMinor to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSdkVersionMinor(int value) {
+
+        sdkVersionMinor_ = value;
+        bitField0_ |= 0x01000000;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The SDK minor version of the device.
+       * </pre>
+       *
+       * <code>uint32 sdk_version_minor = 27;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSdkVersionMinor() {
+        bitField0_ = (bitField0_ & ~0x01000000);
+        sdkVersionMinor_ = 0;
         onChanged();
         return this;
       }
@@ -5383,7 +5475,7 @@ public final class ConfigurationOuterClass {
        */
       public Builder setGrammaticalGenderValue(int value) {
         grammaticalGender_ = value;
-        bitField0_ |= 0x01000000;
+        bitField0_ |= 0x02000000;
         onChanged();
         return this;
       }
@@ -5413,7 +5505,7 @@ public final class ConfigurationOuterClass {
         if (value == null) {
           throw new NullPointerException();
         }
-        bitField0_ |= 0x01000000;
+        bitField0_ |= 0x02000000;
         grammaticalGender_ = value.getNumber();
         onChanged();
         return this;
@@ -5427,7 +5519,7 @@ public final class ConfigurationOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearGrammaticalGender() {
-        bitField0_ = (bitField0_ & ~0x01000000);
+        bitField0_ = (bitField0_ & ~0x02000000);
         grammaticalGender_ = 0;
         onChanged();
         return this;
@@ -5476,7 +5568,7 @@ public final class ConfigurationOuterClass {
           java.lang.String value) {
         if (value == null) { throw new NullPointerException(); }
         product_ = value;
-        bitField0_ |= 0x02000000;
+        bitField0_ |= 0x04000000;
         onChanged();
         return this;
       }
@@ -5486,7 +5578,7 @@ public final class ConfigurationOuterClass {
        */
       public Builder clearProduct() {
         product_ = getDefaultInstance().getProduct();
-        bitField0_ = (bitField0_ & ~0x02000000);
+        bitField0_ = (bitField0_ & ~0x04000000);
         onChanged();
         return this;
       }
@@ -5500,7 +5592,7 @@ public final class ConfigurationOuterClass {
         if (value == null) { throw new NullPointerException(); }
         checkByteStringIsUtf8(value);
         product_ = value;
-        bitField0_ |= 0x02000000;
+        bitField0_ |= 0x04000000;
         onChanged();
         return this;
       }
@@ -5582,7 +5674,7 @@ public final class ConfigurationOuterClass {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\023Configuration.proto\022\007aapt.pb\"\227\026\n\rConfi" +
+      "\n\023Configuration.proto\022\007aapt.pb\"\274\026\n\rConfi" +
       "guration\022\013\n\003mcc\030\001 \001(\r\022\013\n\003mnc\030\002 \001(\r\022\016\n\006lo" +
       "cale\030\003 \001(\t\022@\n\020layout_direction\030\004 \001(\0162&.a" +
       "apt.pb.Configuration.LayoutDirection\022\024\n\014" +
@@ -5608,53 +5700,54 @@ public final class ConfigurationOuterClass {
       "Configuration.Keyboard\0224\n\nnav_hidden\030\026 \001" +
       "(\0162 .aapt.pb.Configuration.NavHidden\0225\n\n" +
       "navigation\030\027 \001(\0162!.aapt.pb.Configuration" +
-      ".Navigation\022\023\n\013sdk_version\030\030 \001(\r\022D\n\022gram" +
-      "matical_gender\030\032 \001(\0162(.aapt.pb.Configura" +
-      "tion.GrammaticalGender\022\017\n\007product\030\031 \001(\t\"" +
-      "a\n\017LayoutDirection\022\032\n\026LAYOUT_DIRECTION_U" +
-      "NSET\020\000\022\030\n\024LAYOUT_DIRECTION_LTR\020\001\022\030\n\024LAYO" +
-      "UT_DIRECTION_RTL\020\002\"\252\001\n\020ScreenLayoutSize\022" +
-      "\034\n\030SCREEN_LAYOUT_SIZE_UNSET\020\000\022\034\n\030SCREEN_" +
-      "LAYOUT_SIZE_SMALL\020\001\022\035\n\031SCREEN_LAYOUT_SIZ" +
-      "E_NORMAL\020\002\022\034\n\030SCREEN_LAYOUT_SIZE_LARGE\020\003" +
-      "\022\035\n\031SCREEN_LAYOUT_SIZE_XLARGE\020\004\"m\n\020Scree" +
-      "nLayoutLong\022\034\n\030SCREEN_LAYOUT_LONG_UNSET\020" +
-      "\000\022\033\n\027SCREEN_LAYOUT_LONG_LONG\020\001\022\036\n\032SCREEN" +
-      "_LAYOUT_LONG_NOTLONG\020\002\"X\n\013ScreenRound\022\026\n" +
-      "\022SCREEN_ROUND_UNSET\020\000\022\026\n\022SCREEN_ROUND_RO" +
-      "UND\020\001\022\031\n\025SCREEN_ROUND_NOTROUND\020\002\"h\n\016Wide" +
-      "ColorGamut\022\032\n\026WIDE_COLOR_GAMUT_UNSET\020\000\022\033" +
-      "\n\027WIDE_COLOR_GAMUT_WIDECG\020\001\022\035\n\031WIDE_COLO" +
-      "R_GAMUT_NOWIDECG\020\002\"3\n\003Hdr\022\r\n\tHDR_UNSET\020\000" +
-      "\022\016\n\nHDR_HIGHDR\020\001\022\r\n\tHDR_LOWDR\020\002\"h\n\013Orien" +
-      "tation\022\025\n\021ORIENTATION_UNSET\020\000\022\024\n\020ORIENTA" +
-      "TION_PORT\020\001\022\024\n\020ORIENTATION_LAND\020\002\022\026\n\022ORI" +
-      "ENTATION_SQUARE\020\003\"\327\001\n\nUiModeType\022\026\n\022UI_M" +
-      "ODE_TYPE_UNSET\020\000\022\027\n\023UI_MODE_TYPE_NORMAL\020" +
-      "\001\022\025\n\021UI_MODE_TYPE_DESK\020\002\022\024\n\020UI_MODE_TYPE" +
-      "_CAR\020\003\022\033\n\027UI_MODE_TYPE_TELEVISION\020\004\022\032\n\026U" +
-      "I_MODE_TYPE_APPLIANCE\020\005\022\026\n\022UI_MODE_TYPE_" +
-      "WATCH\020\006\022\032\n\026UI_MODE_TYPE_VRHEADSET\020\007\"[\n\013U" +
-      "iModeNight\022\027\n\023UI_MODE_NIGHT_UNSET\020\000\022\027\n\023U" +
-      "I_MODE_NIGHT_NIGHT\020\001\022\032\n\026UI_MODE_NIGHT_NO" +
-      "TNIGHT\020\002\"m\n\013Touchscreen\022\025\n\021TOUCHSCREEN_U" +
-      "NSET\020\000\022\027\n\023TOUCHSCREEN_NOTOUCH\020\001\022\026\n\022TOUCH" +
-      "SCREEN_STYLUS\020\002\022\026\n\022TOUCHSCREEN_FINGER\020\003\"" +
-      "v\n\nKeysHidden\022\025\n\021KEYS_HIDDEN_UNSET\020\000\022\033\n\027" +
-      "KEYS_HIDDEN_KEYSEXPOSED\020\001\022\032\n\026KEYS_HIDDEN" +
-      "_KEYSHIDDEN\020\002\022\030\n\024KEYS_HIDDEN_KEYSSOFT\020\003\"" +
-      "`\n\010Keyboard\022\022\n\016KEYBOARD_UNSET\020\000\022\023\n\017KEYBO" +
-      "ARD_NOKEYS\020\001\022\023\n\017KEYBOARD_QWERTY\020\002\022\026\n\022KEY" +
-      "BOARD_TWELVEKEY\020\003\"V\n\tNavHidden\022\024\n\020NAV_HI" +
-      "DDEN_UNSET\020\000\022\031\n\025NAV_HIDDEN_NAVEXPOSED\020\001\022" +
-      "\030\n\024NAV_HIDDEN_NAVHIDDEN\020\002\"}\n\nNavigation\022" +
-      "\024\n\020NAVIGATION_UNSET\020\000\022\024\n\020NAVIGATION_NONA" +
-      "V\020\001\022\023\n\017NAVIGATION_DPAD\020\002\022\030\n\024NAVIGATION_T" +
-      "RACKBALL\020\003\022\024\n\020NAVIGATION_WHEEL\020\004\"v\n\021Gram" +
-      "maticalGender\022\024\n\020GRAM_GENDER_USET\020\000\022\026\n\022G" +
-      "RAM_GENDER_NEUTER\020\001\022\030\n\024GRAM_GENDER_FEMIN" +
-      "INE\020\002\022\031\n\025GRAM_GENDER_MASCULINE\020\003B\022\n\020com." +
-      "android.aaptb\006proto3"
+      ".Navigation\022\023\n\013sdk_version\030\030 \001(\r\022\031\n\021sdk_" +
+      "version_minor\030\033 \001(\r\022D\n\022grammatical_gende" +
+      "r\030\032 \001(\0162(.aapt.pb.Configuration.Grammati" +
+      "calGender\022\017\n\007product\030\031 \001(\t\"a\n\017LayoutDire" +
+      "ction\022\032\n\026LAYOUT_DIRECTION_UNSET\020\000\022\030\n\024LAY" +
+      "OUT_DIRECTION_LTR\020\001\022\030\n\024LAYOUT_DIRECTION_" +
+      "RTL\020\002\"\252\001\n\020ScreenLayoutSize\022\034\n\030SCREEN_LAY" +
+      "OUT_SIZE_UNSET\020\000\022\034\n\030SCREEN_LAYOUT_SIZE_S" +
+      "MALL\020\001\022\035\n\031SCREEN_LAYOUT_SIZE_NORMAL\020\002\022\034\n" +
+      "\030SCREEN_LAYOUT_SIZE_LARGE\020\003\022\035\n\031SCREEN_LA" +
+      "YOUT_SIZE_XLARGE\020\004\"m\n\020ScreenLayoutLong\022\034" +
+      "\n\030SCREEN_LAYOUT_LONG_UNSET\020\000\022\033\n\027SCREEN_L" +
+      "AYOUT_LONG_LONG\020\001\022\036\n\032SCREEN_LAYOUT_LONG_" +
+      "NOTLONG\020\002\"X\n\013ScreenRound\022\026\n\022SCREEN_ROUND" +
+      "_UNSET\020\000\022\026\n\022SCREEN_ROUND_ROUND\020\001\022\031\n\025SCRE" +
+      "EN_ROUND_NOTROUND\020\002\"h\n\016WideColorGamut\022\032\n" +
+      "\026WIDE_COLOR_GAMUT_UNSET\020\000\022\033\n\027WIDE_COLOR_" +
+      "GAMUT_WIDECG\020\001\022\035\n\031WIDE_COLOR_GAMUT_NOWID" +
+      "ECG\020\002\"3\n\003Hdr\022\r\n\tHDR_UNSET\020\000\022\016\n\nHDR_HIGHD" +
+      "R\020\001\022\r\n\tHDR_LOWDR\020\002\"h\n\013Orientation\022\025\n\021ORI" +
+      "ENTATION_UNSET\020\000\022\024\n\020ORIENTATION_PORT\020\001\022\024" +
+      "\n\020ORIENTATION_LAND\020\002\022\026\n\022ORIENTATION_SQUA" +
+      "RE\020\003\"\327\001\n\nUiModeType\022\026\n\022UI_MODE_TYPE_UNSE" +
+      "T\020\000\022\027\n\023UI_MODE_TYPE_NORMAL\020\001\022\025\n\021UI_MODE_" +
+      "TYPE_DESK\020\002\022\024\n\020UI_MODE_TYPE_CAR\020\003\022\033\n\027UI_" +
+      "MODE_TYPE_TELEVISION\020\004\022\032\n\026UI_MODE_TYPE_A" +
+      "PPLIANCE\020\005\022\026\n\022UI_MODE_TYPE_WATCH\020\006\022\032\n\026UI" +
+      "_MODE_TYPE_VRHEADSET\020\007\"[\n\013UiModeNight\022\027\n" +
+      "\023UI_MODE_NIGHT_UNSET\020\000\022\027\n\023UI_MODE_NIGHT_" +
+      "NIGHT\020\001\022\032\n\026UI_MODE_NIGHT_NOTNIGHT\020\002\"m\n\013T" +
+      "ouchscreen\022\025\n\021TOUCHSCREEN_UNSET\020\000\022\027\n\023TOU" +
+      "CHSCREEN_NOTOUCH\020\001\022\026\n\022TOUCHSCREEN_STYLUS" +
+      "\020\002\022\026\n\022TOUCHSCREEN_FINGER\020\003\"v\n\nKeysHidden" +
+      "\022\025\n\021KEYS_HIDDEN_UNSET\020\000\022\033\n\027KEYS_HIDDEN_K" +
+      "EYSEXPOSED\020\001\022\032\n\026KEYS_HIDDEN_KEYSHIDDEN\020\002" +
+      "\022\030\n\024KEYS_HIDDEN_KEYSSOFT\020\003\"`\n\010Keyboard\022\022" +
+      "\n\016KEYBOARD_UNSET\020\000\022\023\n\017KEYBOARD_NOKEYS\020\001\022" +
+      "\023\n\017KEYBOARD_QWERTY\020\002\022\026\n\022KEYBOARD_TWELVEK" +
+      "EY\020\003\"V\n\tNavHidden\022\024\n\020NAV_HIDDEN_UNSET\020\000\022" +
+      "\031\n\025NAV_HIDDEN_NAVEXPOSED\020\001\022\030\n\024NAV_HIDDEN" +
+      "_NAVHIDDEN\020\002\"}\n\nNavigation\022\024\n\020NAVIGATION" +
+      "_UNSET\020\000\022\024\n\020NAVIGATION_NONAV\020\001\022\023\n\017NAVIGA" +
+      "TION_DPAD\020\002\022\030\n\024NAVIGATION_TRACKBALL\020\003\022\024\n" +
+      "\020NAVIGATION_WHEEL\020\004\"v\n\021GrammaticalGender" +
+      "\022\024\n\020GRAM_GENDER_USET\020\000\022\026\n\022GRAM_GENDER_NE" +
+      "UTER\020\001\022\030\n\024GRAM_GENDER_FEMININE\020\002\022\031\n\025GRAM" +
+      "_GENDER_MASCULINE\020\003J\010\010\034\020\200\200\200\200\002B\022\n\020com.and" +
+      "roid.aaptb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -5665,7 +5758,7 @@ public final class ConfigurationOuterClass {
     internal_static_aapt_pb_Configuration_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_aapt_pb_Configuration_descriptor,
-        new java.lang.String[] { "Mcc", "Mnc", "Locale", "LayoutDirection", "ScreenWidth", "ScreenHeight", "ScreenWidthDp", "ScreenHeightDp", "SmallestScreenWidthDp", "ScreenLayoutSize", "ScreenLayoutLong", "ScreenRound", "WideColorGamut", "Hdr", "Orientation", "UiModeType", "UiModeNight", "Density", "Touchscreen", "KeysHidden", "Keyboard", "NavHidden", "Navigation", "SdkVersion", "GrammaticalGender", "Product", });
+        new java.lang.String[] { "Mcc", "Mnc", "Locale", "LayoutDirection", "ScreenWidth", "ScreenHeight", "ScreenWidthDp", "ScreenHeightDp", "SmallestScreenWidthDp", "ScreenLayoutSize", "ScreenLayoutLong", "ScreenRound", "WideColorGamut", "Hdr", "Orientation", "UiModeType", "UiModeNight", "Density", "Touchscreen", "KeysHidden", "Keyboard", "NavHidden", "Navigation", "SdkVersion", "SdkVersionMinor", "GrammaticalGender", "Product", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)

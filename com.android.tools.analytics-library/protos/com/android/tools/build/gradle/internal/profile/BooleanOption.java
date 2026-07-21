@@ -856,6 +856,14 @@ public enum BooleanOption
    * <code>R8_OPTIMIZED_RESOURCE_SHRINKING = 208;</code>
    */
   R8_OPTIMIZED_RESOURCE_SHRINKING(208),
+  /**
+   * <code>R8_MAIN_DEX_LIST_DISALLOWED = 209;</code>
+   */
+  R8_MAIN_DEX_LIST_DISALLOWED(209),
+  /**
+   * <code>BUILT_IN_KOTLIN = 210;</code>
+   */
+  BUILT_IN_KOTLIN(210),
   UNRECOGNIZED(-1),
   ;
 
@@ -1695,6 +1703,14 @@ public enum BooleanOption
    * <code>R8_OPTIMIZED_RESOURCE_SHRINKING = 208;</code>
    */
   public static final int R8_OPTIMIZED_RESOURCE_SHRINKING_VALUE = 208;
+  /**
+   * <code>R8_MAIN_DEX_LIST_DISALLOWED = 209;</code>
+   */
+  public static final int R8_MAIN_DEX_LIST_DISALLOWED_VALUE = 209;
+  /**
+   * <code>BUILT_IN_KOTLIN = 210;</code>
+   */
+  public static final int BUILT_IN_KOTLIN_VALUE = 210;
 
 
   public final int getNumber() {
@@ -1930,6 +1946,8 @@ public enum BooleanOption
       case 206: return DEFAULT_TARGET_SDK_TO_COMPILE_SDK_IF_UNSET;
       case 207: return TEST_SUITE_SUPPORT;
       case 208: return R8_OPTIMIZED_RESOURCE_SHRINKING;
+      case 209: return R8_MAIN_DEX_LIST_DISALLOWED;
+      case 210: return BUILT_IN_KOTLIN;
       default: return null;
     }
   }
