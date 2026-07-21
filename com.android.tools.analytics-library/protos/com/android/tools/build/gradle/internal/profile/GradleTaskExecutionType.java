@@ -1114,6 +1114,14 @@ public enum GradleTaskExecutionType
    * <code>CHECK_JETIFIER = 274;</code>
    */
   CHECK_JETIFIER(274),
+  /**
+   * <code>JAVA_DOC_GENERATION = 275;</code>
+   */
+  JAVA_DOC_GENERATION(275),
+  /**
+   * <code>JAVA_DOC_JAR = 276;</code>
+   */
+  JAVA_DOC_JAR(276),
   UNRECOGNIZED(-1),
   ;
 
@@ -2217,6 +2225,14 @@ public enum GradleTaskExecutionType
    * <code>CHECK_JETIFIER = 274;</code>
    */
   public static final int CHECK_JETIFIER_VALUE = 274;
+  /**
+   * <code>JAVA_DOC_GENERATION = 275;</code>
+   */
+  public static final int JAVA_DOC_GENERATION_VALUE = 275;
+  /**
+   * <code>JAVA_DOC_JAR = 276;</code>
+   */
+  public static final int JAVA_DOC_JAR_VALUE = 276;
 
 
   public final int getNumber() {
@@ -2518,6 +2534,8 @@ public enum GradleTaskExecutionType
       case 272: return SOURCE_JAR;
       case 273: return MERGE_ASSETS_FOR_UNIT_TEST;
       case 274: return CHECK_JETIFIER;
+      case 275: return JAVA_DOC_GENERATION;
+      case 276: return JAVA_DOC_JAR;
       default: return null;
     }
   }
