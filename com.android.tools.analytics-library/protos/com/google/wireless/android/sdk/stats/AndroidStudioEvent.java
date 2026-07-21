@@ -2258,6 +2258,19 @@ private static final long serialVersionUID = 0L;
             bitField5_ |= 0x00000080;
             break;
           }
+          case 1402: {
+            com.google.wireless.android.sdk.stats.UpgradeAndroidStudioDialogStats.Builder subBuilder = null;
+            if (((bitField5_ & 0x00000100) != 0)) {
+              subBuilder = upgradeAndroidStudioDialog_.toBuilder();
+            }
+            upgradeAndroidStudioDialog_ = input.readMessage(com.google.wireless.android.sdk.stats.UpgradeAndroidStudioDialogStats.PARSER, extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(upgradeAndroidStudioDialog_);
+              upgradeAndroidStudioDialog_ = subBuilder.buildPartial();
+            }
+            bitField5_ |= 0x00000100;
+            break;
+          }
           default: {
             if (!parseUnknownField(
                 input, unknownFields, extensionRegistry, tag)) {
@@ -5092,6 +5105,14 @@ private static final long serialVersionUID = 0L;
      * <code>COMPOSE_PREVIEW_LITE_MODE = 290;</code>
      */
     COMPOSE_PREVIEW_LITE_MODE(290),
+    /**
+     * <pre>
+     * Upgrade Android Studio dialog event
+     * </pre>
+     *
+     * <code>UPGRADE_ANDROID_STUDIO_DIALOG = 291;</code>
+     */
+    UPGRADE_ANDROID_STUDIO_DIALOG(291),
     ;
 
     /**
@@ -7248,6 +7269,14 @@ private static final long serialVersionUID = 0L;
      * <code>COMPOSE_PREVIEW_LITE_MODE = 290;</code>
      */
     public static final int COMPOSE_PREVIEW_LITE_MODE_VALUE = 290;
+    /**
+     * <pre>
+     * Upgrade Android Studio dialog event
+     * </pre>
+     *
+     * <code>UPGRADE_ANDROID_STUDIO_DIALOG = 291;</code>
+     */
+    public static final int UPGRADE_ANDROID_STUDIO_DIALOG_VALUE = 291;
 
 
     public final int getNumber() {
@@ -7556,6 +7585,7 @@ private static final long serialVersionUID = 0L;
         case 288: return DEVICE_SCREENSHOT_EVENT;
         case 289: return EDITOR_NOTIFICATION;
         case 290: return COMPOSE_PREVIEW_LITE_MODE;
+        case 291: return UPGRADE_ANDROID_STUDIO_DIALOG;
         default: return null;
       }
     }
@@ -23083,6 +23113,44 @@ private static final long serialVersionUID = 0L;
     return composePreviewLiteModeEvent_ == null ? com.google.wireless.android.sdk.stats.ComposePreviewLiteModeEvent.getDefaultInstance() : composePreviewLiteModeEvent_;
   }
 
+  public static final int UPGRADE_ANDROID_STUDIO_DIALOG_FIELD_NUMBER = 175;
+  private com.google.wireless.android.sdk.stats.UpgradeAndroidStudioDialogStats upgradeAndroidStudioDialog_;
+  /**
+   * <pre>
+   * set when kind = UPGRADE_ANDROID_STUDIO_DIALOG
+   * </pre>
+   *
+   * <code>optional .android_studio.UpgradeAndroidStudioDialogStats upgrade_android_studio_dialog = 175;</code>
+   * @return Whether the upgradeAndroidStudioDialog field is set.
+   */
+  @java.lang.Override
+  public boolean hasUpgradeAndroidStudioDialog() {
+    return ((bitField5_ & 0x00000100) != 0);
+  }
+  /**
+   * <pre>
+   * set when kind = UPGRADE_ANDROID_STUDIO_DIALOG
+   * </pre>
+   *
+   * <code>optional .android_studio.UpgradeAndroidStudioDialogStats upgrade_android_studio_dialog = 175;</code>
+   * @return The upgradeAndroidStudioDialog.
+   */
+  @java.lang.Override
+  public com.google.wireless.android.sdk.stats.UpgradeAndroidStudioDialogStats getUpgradeAndroidStudioDialog() {
+    return upgradeAndroidStudioDialog_ == null ? com.google.wireless.android.sdk.stats.UpgradeAndroidStudioDialogStats.getDefaultInstance() : upgradeAndroidStudioDialog_;
+  }
+  /**
+   * <pre>
+   * set when kind = UPGRADE_ANDROID_STUDIO_DIALOG
+   * </pre>
+   *
+   * <code>optional .android_studio.UpgradeAndroidStudioDialogStats upgrade_android_studio_dialog = 175;</code>
+   */
+  @java.lang.Override
+  public com.google.wireless.android.sdk.stats.UpgradeAndroidStudioDialogStatsOrBuilder getUpgradeAndroidStudioDialogOrBuilder() {
+    return upgradeAndroidStudioDialog_ == null ? com.google.wireless.android.sdk.stats.UpgradeAndroidStudioDialogStats.getDefaultInstance() : upgradeAndroidStudioDialog_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -23618,6 +23686,9 @@ private static final long serialVersionUID = 0L;
     }
     if (((bitField5_ & 0x00000080) != 0)) {
       output.writeMessage(174, getComposePreviewLiteModeEvent());
+    }
+    if (((bitField5_ & 0x00000100) != 0)) {
+      output.writeMessage(175, getUpgradeAndroidStudioDialog());
     }
     unknownFields.writeTo(output);
   }
@@ -24329,6 +24400,10 @@ private static final long serialVersionUID = 0L;
     if (((bitField5_ & 0x00000080) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(174, getComposePreviewLiteModeEvent());
+    }
+    if (((bitField5_ & 0x00000100) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(175, getUpgradeAndroidStudioDialog());
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -25186,6 +25261,11 @@ private static final long serialVersionUID = 0L;
       if (!getComposePreviewLiteModeEvent()
           .equals(other.getComposePreviewLiteModeEvent())) return false;
     }
+    if (hasUpgradeAndroidStudioDialog() != other.hasUpgradeAndroidStudioDialog()) return false;
+    if (hasUpgradeAndroidStudioDialog()) {
+      if (!getUpgradeAndroidStudioDialog()
+          .equals(other.getUpgradeAndroidStudioDialog())) return false;
+    }
     if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
@@ -25895,6 +25975,10 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + COMPOSE_PREVIEW_LITE_MODE_EVENT_FIELD_NUMBER;
       hash = (53 * hash) + getComposePreviewLiteModeEvent().hashCode();
     }
+    if (hasUpgradeAndroidStudioDialog()) {
+      hash = (37 * hash) + UPGRADE_ANDROID_STUDIO_DIALOG_FIELD_NUMBER;
+      hash = (53 * hash) + getUpgradeAndroidStudioDialog().hashCode();
+    }
     hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -26174,6 +26258,7 @@ private static final long serialVersionUID = 0L;
         getDeviceScreenshotEventFieldBuilder();
         getEditorNotificationFieldBuilder();
         getComposePreviewLiteModeEventFieldBuilder();
+        getUpgradeAndroidStudioDialogFieldBuilder();
       }
     }
     @java.lang.Override
@@ -27131,6 +27216,12 @@ private static final long serialVersionUID = 0L;
         composePreviewLiteModeEventBuilder_.clear();
       }
       bitField5_ = (bitField5_ & ~0x00002000);
+      if (upgradeAndroidStudioDialogBuilder_ == null) {
+        upgradeAndroidStudioDialog_ = null;
+      } else {
+        upgradeAndroidStudioDialogBuilder_.clear();
+      }
+      bitField5_ = (bitField5_ & ~0x00004000);
       return this;
     }
 
@@ -28475,6 +28566,14 @@ private static final long serialVersionUID = 0L;
         }
         to_bitField5_ |= 0x00000080;
       }
+      if (((from_bitField5_ & 0x00004000) != 0)) {
+        if (upgradeAndroidStudioDialogBuilder_ == null) {
+          result.upgradeAndroidStudioDialog_ = upgradeAndroidStudioDialog_;
+        } else {
+          result.upgradeAndroidStudioDialog_ = upgradeAndroidStudioDialogBuilder_.build();
+        }
+        to_bitField5_ |= 0x00000100;
+      }
       result.bitField0_ = to_bitField0_;
       result.bitField1_ = to_bitField1_;
       result.bitField2_ = to_bitField2_;
@@ -29154,6 +29253,9 @@ private static final long serialVersionUID = 0L;
       }
       if (other.hasComposePreviewLiteModeEvent()) {
         mergeComposePreviewLiteModeEvent(other.getComposePreviewLiteModeEvent());
+      }
+      if (other.hasUpgradeAndroidStudioDialog()) {
+        mergeUpgradeAndroidStudioDialog(other.getUpgradeAndroidStudioDialog());
       }
       this.mergeUnknownFields(other.unknownFields);
       onChanged();
@@ -55613,6 +55715,162 @@ private static final long serialVersionUID = 0L;
         composePreviewLiteModeEvent_ = null;
       }
       return composePreviewLiteModeEventBuilder_;
+    }
+
+    private com.google.wireless.android.sdk.stats.UpgradeAndroidStudioDialogStats upgradeAndroidStudioDialog_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.UpgradeAndroidStudioDialogStats, com.google.wireless.android.sdk.stats.UpgradeAndroidStudioDialogStats.Builder, com.google.wireless.android.sdk.stats.UpgradeAndroidStudioDialogStatsOrBuilder> upgradeAndroidStudioDialogBuilder_;
+    /**
+     * <pre>
+     * set when kind = UPGRADE_ANDROID_STUDIO_DIALOG
+     * </pre>
+     *
+     * <code>optional .android_studio.UpgradeAndroidStudioDialogStats upgrade_android_studio_dialog = 175;</code>
+     * @return Whether the upgradeAndroidStudioDialog field is set.
+     */
+    public boolean hasUpgradeAndroidStudioDialog() {
+      return ((bitField5_ & 0x00004000) != 0);
+    }
+    /**
+     * <pre>
+     * set when kind = UPGRADE_ANDROID_STUDIO_DIALOG
+     * </pre>
+     *
+     * <code>optional .android_studio.UpgradeAndroidStudioDialogStats upgrade_android_studio_dialog = 175;</code>
+     * @return The upgradeAndroidStudioDialog.
+     */
+    public com.google.wireless.android.sdk.stats.UpgradeAndroidStudioDialogStats getUpgradeAndroidStudioDialog() {
+      if (upgradeAndroidStudioDialogBuilder_ == null) {
+        return upgradeAndroidStudioDialog_ == null ? com.google.wireless.android.sdk.stats.UpgradeAndroidStudioDialogStats.getDefaultInstance() : upgradeAndroidStudioDialog_;
+      } else {
+        return upgradeAndroidStudioDialogBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * set when kind = UPGRADE_ANDROID_STUDIO_DIALOG
+     * </pre>
+     *
+     * <code>optional .android_studio.UpgradeAndroidStudioDialogStats upgrade_android_studio_dialog = 175;</code>
+     */
+    public Builder setUpgradeAndroidStudioDialog(com.google.wireless.android.sdk.stats.UpgradeAndroidStudioDialogStats value) {
+      if (upgradeAndroidStudioDialogBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        upgradeAndroidStudioDialog_ = value;
+        onChanged();
+      } else {
+        upgradeAndroidStudioDialogBuilder_.setMessage(value);
+      }
+      bitField5_ |= 0x00004000;
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = UPGRADE_ANDROID_STUDIO_DIALOG
+     * </pre>
+     *
+     * <code>optional .android_studio.UpgradeAndroidStudioDialogStats upgrade_android_studio_dialog = 175;</code>
+     */
+    public Builder setUpgradeAndroidStudioDialog(
+        com.google.wireless.android.sdk.stats.UpgradeAndroidStudioDialogStats.Builder builderForValue) {
+      if (upgradeAndroidStudioDialogBuilder_ == null) {
+        upgradeAndroidStudioDialog_ = builderForValue.build();
+        onChanged();
+      } else {
+        upgradeAndroidStudioDialogBuilder_.setMessage(builderForValue.build());
+      }
+      bitField5_ |= 0x00004000;
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = UPGRADE_ANDROID_STUDIO_DIALOG
+     * </pre>
+     *
+     * <code>optional .android_studio.UpgradeAndroidStudioDialogStats upgrade_android_studio_dialog = 175;</code>
+     */
+    public Builder mergeUpgradeAndroidStudioDialog(com.google.wireless.android.sdk.stats.UpgradeAndroidStudioDialogStats value) {
+      if (upgradeAndroidStudioDialogBuilder_ == null) {
+        if (((bitField5_ & 0x00004000) != 0) &&
+            upgradeAndroidStudioDialog_ != null &&
+            upgradeAndroidStudioDialog_ != com.google.wireless.android.sdk.stats.UpgradeAndroidStudioDialogStats.getDefaultInstance()) {
+          upgradeAndroidStudioDialog_ =
+            com.google.wireless.android.sdk.stats.UpgradeAndroidStudioDialogStats.newBuilder(upgradeAndroidStudioDialog_).mergeFrom(value).buildPartial();
+        } else {
+          upgradeAndroidStudioDialog_ = value;
+        }
+        onChanged();
+      } else {
+        upgradeAndroidStudioDialogBuilder_.mergeFrom(value);
+      }
+      bitField5_ |= 0x00004000;
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = UPGRADE_ANDROID_STUDIO_DIALOG
+     * </pre>
+     *
+     * <code>optional .android_studio.UpgradeAndroidStudioDialogStats upgrade_android_studio_dialog = 175;</code>
+     */
+    public Builder clearUpgradeAndroidStudioDialog() {
+      if (upgradeAndroidStudioDialogBuilder_ == null) {
+        upgradeAndroidStudioDialog_ = null;
+        onChanged();
+      } else {
+        upgradeAndroidStudioDialogBuilder_.clear();
+      }
+      bitField5_ = (bitField5_ & ~0x00004000);
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = UPGRADE_ANDROID_STUDIO_DIALOG
+     * </pre>
+     *
+     * <code>optional .android_studio.UpgradeAndroidStudioDialogStats upgrade_android_studio_dialog = 175;</code>
+     */
+    public com.google.wireless.android.sdk.stats.UpgradeAndroidStudioDialogStats.Builder getUpgradeAndroidStudioDialogBuilder() {
+      bitField5_ |= 0x00004000;
+      onChanged();
+      return getUpgradeAndroidStudioDialogFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * set when kind = UPGRADE_ANDROID_STUDIO_DIALOG
+     * </pre>
+     *
+     * <code>optional .android_studio.UpgradeAndroidStudioDialogStats upgrade_android_studio_dialog = 175;</code>
+     */
+    public com.google.wireless.android.sdk.stats.UpgradeAndroidStudioDialogStatsOrBuilder getUpgradeAndroidStudioDialogOrBuilder() {
+      if (upgradeAndroidStudioDialogBuilder_ != null) {
+        return upgradeAndroidStudioDialogBuilder_.getMessageOrBuilder();
+      } else {
+        return upgradeAndroidStudioDialog_ == null ?
+            com.google.wireless.android.sdk.stats.UpgradeAndroidStudioDialogStats.getDefaultInstance() : upgradeAndroidStudioDialog_;
+      }
+    }
+    /**
+     * <pre>
+     * set when kind = UPGRADE_ANDROID_STUDIO_DIALOG
+     * </pre>
+     *
+     * <code>optional .android_studio.UpgradeAndroidStudioDialogStats upgrade_android_studio_dialog = 175;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.UpgradeAndroidStudioDialogStats, com.google.wireless.android.sdk.stats.UpgradeAndroidStudioDialogStats.Builder, com.google.wireless.android.sdk.stats.UpgradeAndroidStudioDialogStatsOrBuilder> 
+        getUpgradeAndroidStudioDialogFieldBuilder() {
+      if (upgradeAndroidStudioDialogBuilder_ == null) {
+        upgradeAndroidStudioDialogBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.wireless.android.sdk.stats.UpgradeAndroidStudioDialogStats, com.google.wireless.android.sdk.stats.UpgradeAndroidStudioDialogStats.Builder, com.google.wireless.android.sdk.stats.UpgradeAndroidStudioDialogStatsOrBuilder>(
+                getUpgradeAndroidStudioDialog(),
+                getParentForChildren(),
+                isClean());
+        upgradeAndroidStudioDialog_ = null;
+      }
+      return upgradeAndroidStudioDialogBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

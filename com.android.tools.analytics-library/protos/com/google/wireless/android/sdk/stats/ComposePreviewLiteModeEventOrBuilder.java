@@ -25,4 +25,25 @@ public interface ComposePreviewLiteModeEventOrBuilder extends
    * @return The type.
    */
   com.google.wireless.android.sdk.stats.ComposePreviewLiteModeEvent.ComposePreviewLiteModeEventType getType();
+
+  /**
+   * <pre>
+   * True if Compose Preview Lite Mode is enabled when logging the event.
+   * For switch events, the value is logged after the switch happens.
+   * </pre>
+   *
+   * <code>optional bool is_compose_preview_lite_mode = 2;</code>
+   * @return Whether the isComposePreviewLiteMode field is set.
+   */
+  boolean hasIsComposePreviewLiteMode();
+  /**
+   * <pre>
+   * True if Compose Preview Lite Mode is enabled when logging the event.
+   * For switch events, the value is logged after the switch happens.
+   * </pre>
+   *
+   * <code>optional bool is_compose_preview_lite_mode = 2;</code>
+   * @return The isComposePreviewLiteMode.
+   */
+  boolean getIsComposePreviewLiteMode();
 }

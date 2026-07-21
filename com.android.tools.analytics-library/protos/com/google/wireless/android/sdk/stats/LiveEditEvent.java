@@ -580,12 +580,20 @@ private static final long serialVersionUID = 0L;
     AUTO(1),
     /**
      * <pre>
-     * The LiveEdit push was triggered by the user.
+     * The LiveEdit push was triggered by the user on hot key.
      * </pre>
      *
      * <code>MANUAL = 2;</code>
      */
     MANUAL(2),
+    /**
+     * <pre>
+     * The LiveEdit push was triggered by the user on save.
+     * </pre>
+     *
+     * <code>ON_SAVE = 3;</code>
+     */
+    ON_SAVE(3),
     ;
 
     /**
@@ -602,12 +610,20 @@ private static final long serialVersionUID = 0L;
     public static final int AUTO_VALUE = 1;
     /**
      * <pre>
-     * The LiveEdit push was triggered by the user.
+     * The LiveEdit push was triggered by the user on hot key.
      * </pre>
      *
      * <code>MANUAL = 2;</code>
      */
     public static final int MANUAL_VALUE = 2;
+    /**
+     * <pre>
+     * The LiveEdit push was triggered by the user on save.
+     * </pre>
+     *
+     * <code>ON_SAVE = 3;</code>
+     */
+    public static final int ON_SAVE_VALUE = 3;
 
 
     public final int getNumber() {
@@ -633,6 +649,7 @@ private static final long serialVersionUID = 0L;
         case 0: return UNKNOWN_MODE;
         case 1: return AUTO;
         case 2: return MANUAL;
+        case 3: return ON_SAVE;
         default: return null;
       }
     }
