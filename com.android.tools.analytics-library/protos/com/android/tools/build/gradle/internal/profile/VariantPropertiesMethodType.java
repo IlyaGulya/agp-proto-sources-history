@@ -593,6 +593,10 @@ public enum VariantPropertiesMethodType
    * <code>SOURCES_BASELINE_PROFILES_ACCESS = 134;</code>
    */
   SOURCES_BASELINE_PROFILES_ACCESS(134),
+  /**
+   * <code>INSTRUMENTATION_RUNNER_ARGUMENTS = 135;</code>
+   */
+  INSTRUMENTATION_RUNNER_ARGUMENTS(135),
   UNRECOGNIZED(-1),
   ;
 
@@ -1180,6 +1184,10 @@ public enum VariantPropertiesMethodType
    * <code>SOURCES_BASELINE_PROFILES_ACCESS = 134;</code>
    */
   public static final int SOURCES_BASELINE_PROFILES_ACCESS_VALUE = 134;
+  /**
+   * <code>INSTRUMENTATION_RUNNER_ARGUMENTS = 135;</code>
+   */
+  public static final int INSTRUMENTATION_RUNNER_ARGUMENTS_VALUE = 135;
 
 
   public final int getNumber() {
@@ -1341,6 +1349,7 @@ public enum VariantPropertiesMethodType
       case 132: return SOURCES_RESOURCES_ACCESS;
       case 133: return ADD_ARTIFACTS;
       case 134: return SOURCES_BASELINE_PROFILES_ACCESS;
+      case 135: return INSTRUMENTATION_RUNNER_ARGUMENTS;
       default: return null;
     }
   }

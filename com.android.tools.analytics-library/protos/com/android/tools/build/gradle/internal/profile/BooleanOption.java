@@ -710,6 +710,10 @@ public enum BooleanOption
    * <code>LINT_ANALYSIS_PER_COMPONENT = 172;</code>
    */
   LINT_ANALYSIS_PER_COMPONENT(172),
+  /**
+   * <code>ENABLE_VCS_INFO = 173;</code>
+   */
+  ENABLE_VCS_INFO(173),
   UNRECOGNIZED(-1),
   ;
 
@@ -1405,6 +1409,10 @@ public enum BooleanOption
    * <code>LINT_ANALYSIS_PER_COMPONENT = 172;</code>
    */
   public static final int LINT_ANALYSIS_PER_COMPONENT_VALUE = 172;
+  /**
+   * <code>ENABLE_VCS_INFO = 173;</code>
+   */
+  public static final int ENABLE_VCS_INFO_VALUE = 173;
 
 
   public final int getNumber() {
@@ -1604,6 +1612,7 @@ public enum BooleanOption
       case 170: return SUPPORT_PAST_STUDIO_VERSIONS;
       case 171: return ENABLE_SCREENSHOT_TEST;
       case 172: return LINT_ANALYSIS_PER_COMPONENT;
+      case 173: return ENABLE_VCS_INFO;
       default: return null;
     }
   }

@@ -1311,6 +1311,14 @@ public enum GradleTaskExecutionType
    * <code>VERIFY_LIBRARY_CLASSES = 323;</code>
    */
   VERIFY_LIBRARY_CLASSES(323),
+  /**
+   * <code>EXTRACT_VERSION_CONTROL_INFO = 324;</code>
+   */
+  EXTRACT_VERSION_CONTROL_INFO(324),
+  /**
+   * <code>EXPAND_ART_PROFILE_WILDCARDS = 325;</code>
+   */
+  EXPAND_ART_PROFILE_WILDCARDS(325),
   UNRECOGNIZED(-1),
   ;
 
@@ -2610,6 +2618,14 @@ public enum GradleTaskExecutionType
    * <code>VERIFY_LIBRARY_CLASSES = 323;</code>
    */
   public static final int VERIFY_LIBRARY_CLASSES_VALUE = 323;
+  /**
+   * <code>EXTRACT_VERSION_CONTROL_INFO = 324;</code>
+   */
+  public static final int EXTRACT_VERSION_CONTROL_INFO_VALUE = 324;
+  /**
+   * <code>EXPAND_ART_PROFILE_WILDCARDS = 325;</code>
+   */
+  public static final int EXPAND_ART_PROFILE_WILDCARDS_VALUE = 325;
 
 
   public final int getNumber() {
@@ -2960,6 +2976,8 @@ public enum GradleTaskExecutionType
       case 321: return EXTRACT_SUPPORTED_LOCALES;
       case 322: return GENERATE_LOCALE_CONFIG;
       case 323: return VERIFY_LIBRARY_CLASSES;
+      case 324: return EXTRACT_VERSION_CONTROL_INFO;
+      case 325: return EXPAND_ART_PROFILE_WILDCARDS;
       default: return null;
     }
   }
