@@ -4450,4 +4450,31 @@ public interface AndroidStudioEventOrBuilder extends
    * <code>optional .android_studio.DirectAccessUsageEvent direct_access_usage_event = 158;</code>
    */
   com.google.wireless.android.sdk.stats.DirectAccessUsageEventOrBuilder getDirectAccessUsageEventOrBuilder();
+
+  /**
+   * <pre>
+   * set when kind = SAFE_MODE_STATS_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.SafeModeStatsEvent safe_mode_stats_event = 159;</code>
+   * @return Whether the safeModeStatsEvent field is set.
+   */
+  boolean hasSafeModeStatsEvent();
+  /**
+   * <pre>
+   * set when kind = SAFE_MODE_STATS_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.SafeModeStatsEvent safe_mode_stats_event = 159;</code>
+   * @return The safeModeStatsEvent.
+   */
+  com.google.wireless.android.sdk.stats.SafeModeStatsEvent getSafeModeStatsEvent();
+  /**
+   * <pre>
+   * set when kind = SAFE_MODE_STATS_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.SafeModeStatsEvent safe_mode_stats_event = 159;</code>
+   */
+  com.google.wireless.android.sdk.stats.SafeModeStatsEventOrBuilder getSafeModeStatsEventOrBuilder();
 }

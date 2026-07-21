@@ -1012,9 +1012,9 @@ public enum GradleTaskExecutionType
    */
   TRANSFORM_CLASSES_WITH_ASM(248),
   /**
-   * <code>MANAGED_DEVICE_SETUP = 249;</code>
+   * <code>MANAGED_DEVICE_INSTRUMENTATION_TEST_SETUP = 249;</code>
    */
-  MANAGED_DEVICE_SETUP(249),
+  MANAGED_DEVICE_INSTRUMENTATION_TEST_SETUP(249),
   /**
    * <code>ANALYTICS_RECORDING = 250;</code>
    */
@@ -2291,9 +2291,9 @@ public enum GradleTaskExecutionType
    */
   public static final int TRANSFORM_CLASSES_WITH_ASM_VALUE = 248;
   /**
-   * <code>MANAGED_DEVICE_SETUP = 249;</code>
+   * <code>MANAGED_DEVICE_INSTRUMENTATION_TEST_SETUP = 249;</code>
    */
-  public static final int MANAGED_DEVICE_SETUP_VALUE = 249;
+  public static final int MANAGED_DEVICE_INSTRUMENTATION_TEST_SETUP_VALUE = 249;
   /**
    * <code>ANALYTICS_RECORDING = 250;</code>
    */
@@ -2845,7 +2845,7 @@ public enum GradleTaskExecutionType
       case 246: return SHRINK_RESOURCES_NEW_SHRINKER;
       case 247: return EXTRACT_PROFILER_NATIVE_DEPENDENCIES;
       case 248: return TRANSFORM_CLASSES_WITH_ASM;
-      case 249: return MANAGED_DEVICE_SETUP;
+      case 249: return MANAGED_DEVICE_INSTRUMENTATION_TEST_SETUP;
       case 250: return ANALYTICS_RECORDING;
       case 251: return APP_METADATA;
       case 252: return MANAGED_DEVICE_CLEAN;
