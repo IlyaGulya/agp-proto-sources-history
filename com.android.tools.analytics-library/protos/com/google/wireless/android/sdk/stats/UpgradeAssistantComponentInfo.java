@@ -181,6 +181,10 @@ private static final long serialVersionUID = 0L;
      * <code>MIGRATE_TO_TEST_COVERAGE = 15;</code>
      */
     MIGRATE_TO_TEST_COVERAGE(15),
+    /**
+     * <code>MIGRATE_PACKAGING_OPTIONS = 16;</code>
+     */
+    MIGRATE_PACKAGING_OPTIONS(16),
     ;
 
     /**
@@ -247,6 +251,10 @@ private static final long serialVersionUID = 0L;
      * <code>MIGRATE_TO_TEST_COVERAGE = 15;</code>
      */
     public static final int MIGRATE_TO_TEST_COVERAGE_VALUE = 15;
+    /**
+     * <code>MIGRATE_PACKAGING_OPTIONS = 16;</code>
+     */
+    public static final int MIGRATE_PACKAGING_OPTIONS_VALUE = 16;
 
 
     public final int getNumber() {
@@ -285,6 +293,7 @@ private static final long serialVersionUID = 0L;
         case 13: return MIGRATE_TO_INSTALLATION;
         case 14: return MIGRATE_TO_EMULATOR_SNAPSHOTS;
         case 15: return MIGRATE_TO_TEST_COVERAGE;
+        case 16: return MIGRATE_PACKAGING_OPTIONS;
         default: return null;
       }
     }
