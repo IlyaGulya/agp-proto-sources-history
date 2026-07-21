@@ -273,7 +273,7 @@ private static final long serialVersionUID = 0L;
     FAIL(2),
     /**
      * <pre>
-     * The run was aborted mid-way
+     * The run was aborted mid-way, for example, build failed.
      * </pre>
      *
      * <code>ABORT = 3;</code>
@@ -281,12 +281,21 @@ private static final long serialVersionUID = 0L;
     ABORT(3),
     /**
      * <pre>
-     * The `Before Run Task` failed.
+     * Deprecated
      * </pre>
      *
-     * <code>BEFORE_RUN_TASK_FAIL = 4;</code>
+     * <code>BEFORE_RUN_TASK_FAIL = 4 [deprecated = true];</code>
      */
+    @java.lang.Deprecated
     BEFORE_RUN_TASK_FAIL(4),
+    /**
+     * <pre>
+     * The run event was never completed for unknown reasons.
+     * </pre>
+     *
+     * <code>ABANDONED = 5;</code>
+     */
+    ABANDONED(5),
     ;
 
     /**
@@ -311,7 +320,7 @@ private static final long serialVersionUID = 0L;
     public static final int FAIL_VALUE = 2;
     /**
      * <pre>
-     * The run was aborted mid-way
+     * The run was aborted mid-way, for example, build failed.
      * </pre>
      *
      * <code>ABORT = 3;</code>
@@ -319,12 +328,20 @@ private static final long serialVersionUID = 0L;
     public static final int ABORT_VALUE = 3;
     /**
      * <pre>
-     * The `Before Run Task` failed.
+     * Deprecated
      * </pre>
      *
-     * <code>BEFORE_RUN_TASK_FAIL = 4;</code>
+     * <code>BEFORE_RUN_TASK_FAIL = 4 [deprecated = true];</code>
      */
-    public static final int BEFORE_RUN_TASK_FAIL_VALUE = 4;
+    @java.lang.Deprecated public static final int BEFORE_RUN_TASK_FAIL_VALUE = 4;
+    /**
+     * <pre>
+     * The run event was never completed for unknown reasons.
+     * </pre>
+     *
+     * <code>ABANDONED = 5;</code>
+     */
+    public static final int ABANDONED_VALUE = 5;
 
 
     public final int getNumber() {
@@ -352,6 +369,7 @@ private static final long serialVersionUID = 0L;
         case 2: return FAIL;
         case 3: return ABORT;
         case 4: return BEFORE_RUN_TASK_FAIL;
+        case 5: return ABANDONED;
         default: return null;
       }
     }
