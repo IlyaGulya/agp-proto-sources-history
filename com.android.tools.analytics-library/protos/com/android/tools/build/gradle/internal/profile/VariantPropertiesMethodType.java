@@ -769,6 +769,14 @@ public enum VariantPropertiesMethodType
    * <code>TEST_SUITE_CODE_COVERAGE = 177;</code>
    */
   TEST_SUITE_CODE_COVERAGE(177),
+  /**
+   * <code>TEST_SUITE_SOURCES = 178;</code>
+   */
+  TEST_SUITE_SOURCES(178),
+  /**
+   * <code>TEST_SUITE_SOURCE_DEPENDENCIES = 179;</code>
+   */
+  TEST_SUITE_SOURCE_DEPENDENCIES(179),
   UNRECOGNIZED(-1),
   ;
 
@@ -1532,6 +1540,14 @@ public enum VariantPropertiesMethodType
    * <code>TEST_SUITE_CODE_COVERAGE = 177;</code>
    */
   public static final int TEST_SUITE_CODE_COVERAGE_VALUE = 177;
+  /**
+   * <code>TEST_SUITE_SOURCES = 178;</code>
+   */
+  public static final int TEST_SUITE_SOURCES_VALUE = 178;
+  /**
+   * <code>TEST_SUITE_SOURCE_DEPENDENCIES = 179;</code>
+   */
+  public static final int TEST_SUITE_SOURCE_DEPENDENCIES_VALUE = 179;
 
 
   public final int getNumber() {
@@ -1736,6 +1752,8 @@ public enum VariantPropertiesMethodType
       case 175: return TEST_SUITES;
       case 176: return TEST_SUITE_ANDROID_RESOURCES_ENABLED;
       case 177: return TEST_SUITE_CODE_COVERAGE;
+      case 178: return TEST_SUITE_SOURCES;
+      case 179: return TEST_SUITE_SOURCE_DEPENDENCIES;
       default: return null;
     }
   }

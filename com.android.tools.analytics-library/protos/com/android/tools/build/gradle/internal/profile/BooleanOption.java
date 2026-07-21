@@ -928,6 +928,10 @@ public enum BooleanOption
    * <code>R8_GLOBAL_OPTIONS_IN_CONSUMER_RULES_DISALLOWED = 226;</code>
    */
   R8_GLOBAL_OPTIONS_IN_CONSUMER_RULES_DISALLOWED(226),
+  /**
+   * <code>DISABLE_KMP_RUNTIME_CLASSPATH = 227;</code>
+   */
+  DISABLE_KMP_RUNTIME_CLASSPATH(227),
   UNRECOGNIZED(-1),
   ;
 
@@ -1839,6 +1843,10 @@ public enum BooleanOption
    * <code>R8_GLOBAL_OPTIONS_IN_CONSUMER_RULES_DISALLOWED = 226;</code>
    */
   public static final int R8_GLOBAL_OPTIONS_IN_CONSUMER_RULES_DISALLOWED_VALUE = 226;
+  /**
+   * <code>DISABLE_KMP_RUNTIME_CLASSPATH = 227;</code>
+   */
+  public static final int DISABLE_KMP_RUNTIME_CLASSPATH_VALUE = 227;
 
 
   public final int getNumber() {
@@ -2092,6 +2100,7 @@ public enum BooleanOption
       case 224: return DEFAULT_ANDROIDX_TEST_RUNNER;
       case 225: return DISALLOW_PROVIDER_IN_ANDROID_SOURCE_SET;
       case 226: return R8_GLOBAL_OPTIONS_IN_CONSUMER_RULES_DISALLOWED;
+      case 227: return DISABLE_KMP_RUNTIME_CLASSPATH;
       default: return null;
     }
   }
