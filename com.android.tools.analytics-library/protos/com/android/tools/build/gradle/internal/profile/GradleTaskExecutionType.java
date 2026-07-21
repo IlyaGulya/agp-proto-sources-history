@@ -1251,6 +1251,18 @@ public enum GradleTaskExecutionType
    * <code>PACKAGE_PRIVACY_SANDBOX_SDK_BUNDLE = 308;</code>
    */
   PACKAGE_PRIVACY_SANDBOX_SDK_BUNDLE(308),
+  /**
+   * <code>BUILD_PRIVACY_SANDBOX_SDK_APKS = 309;</code>
+   */
+  BUILD_PRIVACY_SANDBOX_SDK_APKS(309),
+  /**
+   * <code>GENERATE_PRIVACY_SANDBOX_ASAR = 310;</code>
+   */
+  GENERATE_PRIVACY_SANDBOX_ASAR(310),
+  /**
+   * <code>GENERATE_PRIVACY_SANDBOX_SDK_RUNTIME_CONFIG_FILE = 311;</code>
+   */
+  GENERATE_PRIVACY_SANDBOX_SDK_RUNTIME_CONFIG_FILE(311),
   UNRECOGNIZED(-1),
   ;
 
@@ -2490,6 +2502,18 @@ public enum GradleTaskExecutionType
    * <code>PACKAGE_PRIVACY_SANDBOX_SDK_BUNDLE = 308;</code>
    */
   public static final int PACKAGE_PRIVACY_SANDBOX_SDK_BUNDLE_VALUE = 308;
+  /**
+   * <code>BUILD_PRIVACY_SANDBOX_SDK_APKS = 309;</code>
+   */
+  public static final int BUILD_PRIVACY_SANDBOX_SDK_APKS_VALUE = 309;
+  /**
+   * <code>GENERATE_PRIVACY_SANDBOX_ASAR = 310;</code>
+   */
+  public static final int GENERATE_PRIVACY_SANDBOX_ASAR_VALUE = 310;
+  /**
+   * <code>GENERATE_PRIVACY_SANDBOX_SDK_RUNTIME_CONFIG_FILE = 311;</code>
+   */
+  public static final int GENERATE_PRIVACY_SANDBOX_SDK_RUNTIME_CONFIG_FILE_VALUE = 311;
 
 
   public final int getNumber() {
@@ -2825,6 +2849,9 @@ public enum GradleTaskExecutionType
       case 306: return PRIVACY_SANDBOX_SDK_DEX;
       case 307: return PRIVACY_SANDBOX_SDK_MERGE_DEX;
       case 308: return PACKAGE_PRIVACY_SANDBOX_SDK_BUNDLE;
+      case 309: return BUILD_PRIVACY_SANDBOX_SDK_APKS;
+      case 310: return GENERATE_PRIVACY_SANDBOX_ASAR;
+      case 311: return GENERATE_PRIVACY_SANDBOX_SDK_RUNTIME_CONFIG_FILE;
       default: return null;
     }
   }
