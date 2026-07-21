@@ -629,6 +629,14 @@ public enum VariantPropertiesMethodType
    * <code>REGISTER_PRE_BUILD = 143;</code>
    */
   REGISTER_PRE_BUILD(143),
+  /**
+   * <code>SOURCES_DIRECTORIES_GET_STATIC = 144;</code>
+   */
+  SOURCES_DIRECTORIES_GET_STATIC(144),
+  /**
+   * <code>SOURCES_AND_OVERLAY_DIRECTORIES_GET_STATIC = 145;</code>
+   */
+  SOURCES_AND_OVERLAY_DIRECTORIES_GET_STATIC(145),
   UNRECOGNIZED(-1),
   ;
 
@@ -1252,6 +1260,14 @@ public enum VariantPropertiesMethodType
    * <code>REGISTER_PRE_BUILD = 143;</code>
    */
   public static final int REGISTER_PRE_BUILD_VALUE = 143;
+  /**
+   * <code>SOURCES_DIRECTORIES_GET_STATIC = 144;</code>
+   */
+  public static final int SOURCES_DIRECTORIES_GET_STATIC_VALUE = 144;
+  /**
+   * <code>SOURCES_AND_OVERLAY_DIRECTORIES_GET_STATIC = 145;</code>
+   */
+  public static final int SOURCES_AND_OVERLAY_DIRECTORIES_GET_STATIC_VALUE = 145;
 
 
   public final int getNumber() {
@@ -1422,6 +1438,8 @@ public enum VariantPropertiesMethodType
       case 141: return WIRED_WITH_MULTIPLE;
       case 142: return LIFECYCLE_TASKS;
       case 143: return REGISTER_PRE_BUILD;
+      case 144: return SOURCES_DIRECTORIES_GET_STATIC;
+      case 145: return SOURCES_AND_OVERLAY_DIRECTORIES_GET_STATIC;
       default: return null;
     }
   }

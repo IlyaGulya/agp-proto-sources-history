@@ -747,6 +747,10 @@ public enum BooleanOption
    * <code>PRIVACY_SANDBOX_SDK_PLUGIN_SUPPORT = 181;</code>
    */
   PRIVACY_SANDBOX_SDK_PLUGIN_SUPPORT(181),
+  /**
+   * <code>DISABLE_MINIFY_LOCAL_DEPENDENCIES_FOR_LIBRARIES = 182;</code>
+   */
+  DISABLE_MINIFY_LOCAL_DEPENDENCIES_FOR_LIBRARIES(182),
   UNRECOGNIZED(-1),
   ;
 
@@ -1478,6 +1482,10 @@ public enum BooleanOption
    * <code>PRIVACY_SANDBOX_SDK_PLUGIN_SUPPORT = 181;</code>
    */
   public static final int PRIVACY_SANDBOX_SDK_PLUGIN_SUPPORT_VALUE = 181;
+  /**
+   * <code>DISABLE_MINIFY_LOCAL_DEPENDENCIES_FOR_LIBRARIES = 182;</code>
+   */
+  public static final int DISABLE_MINIFY_LOCAL_DEPENDENCIES_FOR_LIBRARIES_VALUE = 182;
 
 
   public final int getNumber() {
@@ -1686,6 +1694,7 @@ public enum BooleanOption
       case 179: return PACKAGE_NATIVE_DEBUG_METADATA_IN_APP_BUNDLE;
       case 180: return ENABLE_NEW_TEST_DSL;
       case 181: return PRIVACY_SANDBOX_SDK_PLUGIN_SUPPORT;
+      case 182: return DISABLE_MINIFY_LOCAL_DEPENDENCIES_FOR_LIBRARIES;
       default: return null;
     }
   }
