@@ -4237,4 +4237,37 @@ public interface AndroidStudioEventOrBuilder extends
    * <code>optional .android_studio.MemoryUsageReportEvent memory_usage_report_event = 151;</code>
    */
   com.google.wireless.android.sdk.stats.MemoryUsageReportEventOrBuilder getMemoryUsageReportEventOrBuilder();
+
+  /**
+   * <pre>
+   * set when kind = SDK_INDEX_LOADED_CORRECTLY
+   * or kind = SDK_INDEX_CACHING_ERROR
+   * or kind = SDK_INDEX_DEFAULT_DATA_ERROR
+   * </pre>
+   *
+   * <code>optional .android_studio.SdkIndexLoadingDetails sdk_index_loading_details = 152;</code>
+   * @return Whether the sdkIndexLoadingDetails field is set.
+   */
+  boolean hasSdkIndexLoadingDetails();
+  /**
+   * <pre>
+   * set when kind = SDK_INDEX_LOADED_CORRECTLY
+   * or kind = SDK_INDEX_CACHING_ERROR
+   * or kind = SDK_INDEX_DEFAULT_DATA_ERROR
+   * </pre>
+   *
+   * <code>optional .android_studio.SdkIndexLoadingDetails sdk_index_loading_details = 152;</code>
+   * @return The sdkIndexLoadingDetails.
+   */
+  com.google.wireless.android.sdk.stats.SdkIndexLoadingDetails getSdkIndexLoadingDetails();
+  /**
+   * <pre>
+   * set when kind = SDK_INDEX_LOADED_CORRECTLY
+   * or kind = SDK_INDEX_CACHING_ERROR
+   * or kind = SDK_INDEX_DEFAULT_DATA_ERROR
+   * </pre>
+   *
+   * <code>optional .android_studio.SdkIndexLoadingDetails sdk_index_loading_details = 152;</code>
+   */
+  com.google.wireless.android.sdk.stats.SdkIndexLoadingDetailsOrBuilder getSdkIndexLoadingDetailsOrBuilder();
 }

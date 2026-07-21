@@ -642,6 +642,14 @@ public enum BooleanOption
    * <code>PRIVACY_SANDBOX_SDK_SUPPORT = 155;</code>
    */
   PRIVACY_SANDBOX_SDK_SUPPORT(155),
+  /**
+   * <code>BUILD_ANALYZER_TASK_LABELS = 156;</code>
+   */
+  BUILD_ANALYZER_TASK_LABELS(156),
+  /**
+   * <code>ENABLE_DEFAULT_DEBUG_SIGNING_CONFIG = 157;</code>
+   */
+  ENABLE_DEFAULT_DEBUG_SIGNING_CONFIG(157),
   UNRECOGNIZED(-1),
   ;
 
@@ -1269,6 +1277,14 @@ public enum BooleanOption
    * <code>PRIVACY_SANDBOX_SDK_SUPPORT = 155;</code>
    */
   public static final int PRIVACY_SANDBOX_SDK_SUPPORT_VALUE = 155;
+  /**
+   * <code>BUILD_ANALYZER_TASK_LABELS = 156;</code>
+   */
+  public static final int BUILD_ANALYZER_TASK_LABELS_VALUE = 156;
+  /**
+   * <code>ENABLE_DEFAULT_DEBUG_SIGNING_CONFIG = 157;</code>
+   */
+  public static final int ENABLE_DEFAULT_DEBUG_SIGNING_CONFIG_VALUE = 157;
 
 
   public final int getNumber() {
@@ -1451,6 +1467,8 @@ public enum BooleanOption
       case 153: return MISSING_LINT_BASELINE_IS_EMPTY_BASELINE;
       case 154: return LEGACY_TRANSFORM_TASK_FORCE_NON_INCREMENTAL;
       case 155: return PRIVACY_SANDBOX_SDK_SUPPORT;
+      case 156: return BUILD_ANALYZER_TASK_LABELS;
+      case 157: return ENABLE_DEFAULT_DEBUG_SIGNING_CONFIG;
       default: return null;
     }
   }
