@@ -540,6 +540,10 @@ private static final long serialVersionUID = 0L;
      * <code>PIXEL_8_PRO = 39;</code>
      */
     PIXEL_8_PRO(39),
+    /**
+     * <code>PIXEL_8A = 40;</code>
+     */
+    PIXEL_8A(40),
     ;
 
     /**
@@ -702,6 +706,10 @@ private static final long serialVersionUID = 0L;
      * <code>PIXEL_8_PRO = 39;</code>
      */
     public static final int PIXEL_8_PRO_VALUE = 39;
+    /**
+     * <code>PIXEL_8A = 40;</code>
+     */
+    public static final int PIXEL_8A_VALUE = 40;
 
 
     public final int getNumber() {
@@ -764,6 +772,7 @@ private static final long serialVersionUID = 0L;
         case 37: return PIXEL_7A;
         case 38: return PIXEL_8;
         case 39: return PIXEL_8_PRO;
+        case 40: return PIXEL_8A;
         default: return null;
       }
     }
