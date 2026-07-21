@@ -6403,4 +6403,58 @@ public interface AndroidStudioEventOrBuilder extends
    * <code>optional .android_studio.BackupAndSyncEvent backup_and_sync_event = 229 [lazy = true];</code>
    */
   com.google.wireless.android.sdk.stats.BackupAndSyncEventOrBuilder getBackupAndSyncEventOrBuilder();
+
+  /**
+   * <pre>
+   * set when kind = SENTIMENT_SURVEY_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.SentimentSurveyEvent sentiment_survey_event = 230 [lazy = true];</code>
+   * @return Whether the sentimentSurveyEvent field is set.
+   */
+  boolean hasSentimentSurveyEvent();
+  /**
+   * <pre>
+   * set when kind = SENTIMENT_SURVEY_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.SentimentSurveyEvent sentiment_survey_event = 230 [lazy = true];</code>
+   * @return The sentimentSurveyEvent.
+   */
+  com.google.wireless.android.sdk.stats.SentimentSurveyEvent getSentimentSurveyEvent();
+  /**
+   * <pre>
+   * set when kind = SENTIMENT_SURVEY_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.SentimentSurveyEvent sentiment_survey_event = 230 [lazy = true];</code>
+   */
+  com.google.wireless.android.sdk.stats.SentimentSurveyEventOrBuilder getSentimentSurveyEventOrBuilder();
+
+  /**
+   * <pre>
+   * set when kind = GEMINI_ADVERTISER_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.GeminiAdvertiserEvent gemini_advertiser_event = 231 [lazy = true];</code>
+   * @return Whether the geminiAdvertiserEvent field is set.
+   */
+  boolean hasGeminiAdvertiserEvent();
+  /**
+   * <pre>
+   * set when kind = GEMINI_ADVERTISER_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.GeminiAdvertiserEvent gemini_advertiser_event = 231 [lazy = true];</code>
+   * @return The geminiAdvertiserEvent.
+   */
+  com.google.wireless.android.sdk.stats.GeminiAdvertiserEvent getGeminiAdvertiserEvent();
+  /**
+   * <pre>
+   * set when kind = GEMINI_ADVERTISER_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.GeminiAdvertiserEvent gemini_advertiser_event = 231 [lazy = true];</code>
+   */
+  com.google.wireless.android.sdk.stats.GeminiAdvertiserEventOrBuilder getGeminiAdvertiserEventOrBuilder();
 }

@@ -3296,6 +3296,22 @@ private static final long serialVersionUID = 0L;
      * <code>BACKUP_AND_SYNC_EVENT = 348;</code>
      */
     BACKUP_AND_SYNC_EVENT(348),
+    /**
+     * <pre>
+     * Events related to the sentiment survey
+     * </pre>
+     *
+     * <code>SENTIMENT_SURVEY_EVENT = 349;</code>
+     */
+    SENTIMENT_SURVEY_EVENT(349),
+    /**
+     * <pre>
+     * Gemini Advertiser (Sign in Dialog) events
+     * </pre>
+     *
+     * <code>GEMINI_ADVERTISER_EVENT = 350;</code>
+     */
+    GEMINI_ADVERTISER_EVENT(350),
     ;
 
     /**
@@ -5901,6 +5917,22 @@ private static final long serialVersionUID = 0L;
      * <code>BACKUP_AND_SYNC_EVENT = 348;</code>
      */
     public static final int BACKUP_AND_SYNC_EVENT_VALUE = 348;
+    /**
+     * <pre>
+     * Events related to the sentiment survey
+     * </pre>
+     *
+     * <code>SENTIMENT_SURVEY_EVENT = 349;</code>
+     */
+    public static final int SENTIMENT_SURVEY_EVENT_VALUE = 349;
+    /**
+     * <pre>
+     * Gemini Advertiser (Sign in Dialog) events
+     * </pre>
+     *
+     * <code>GEMINI_ADVERTISER_EVENT = 350;</code>
+     */
+    public static final int GEMINI_ADVERTISER_EVENT_VALUE = 350;
 
 
     public final int getNumber() {
@@ -6267,6 +6299,8 @@ private static final long serialVersionUID = 0L;
         case 346: return JOURNEY_FINISHED_EVENT;
         case 347: return JOURNEY_ENGINE_ERROR_EVENT;
         case 348: return BACKUP_AND_SYNC_EVENT;
+        case 349: return SENTIMENT_SURVEY_EVENT;
+        case 350: return GEMINI_ADVERTISER_EVENT;
         default: return null;
       }
     }
@@ -12036,7 +12070,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional uint32 min_sdk = 2 [deprecated = true];</code>
        * @deprecated android_studio.AndroidStudioEvent.TemplatesUsage.TemplateModule.min_sdk is deprecated.
-       *     See studio_stats.proto;l=2027
+       *     See studio_stats.proto;l=2039
        * @return Whether the minSdk field is set.
        */
       @java.lang.Deprecated boolean hasMinSdk();
@@ -12047,7 +12081,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional uint32 min_sdk = 2 [deprecated = true];</code>
        * @deprecated android_studio.AndroidStudioEvent.TemplatesUsage.TemplateModule.min_sdk is deprecated.
-       *     See studio_stats.proto;l=2027
+       *     See studio_stats.proto;l=2039
        * @return The minSdk.
        */
       @java.lang.Deprecated int getMinSdk();
@@ -12578,7 +12612,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional uint32 min_sdk = 2 [deprecated = true];</code>
        * @deprecated android_studio.AndroidStudioEvent.TemplatesUsage.TemplateModule.min_sdk is deprecated.
-       *     See studio_stats.proto;l=2027
+       *     See studio_stats.proto;l=2039
        * @return Whether the minSdk field is set.
        */
       @java.lang.Override
@@ -12592,7 +12626,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional uint32 min_sdk = 2 [deprecated = true];</code>
        * @deprecated android_studio.AndroidStudioEvent.TemplatesUsage.TemplateModule.min_sdk is deprecated.
-       *     See studio_stats.proto;l=2027
+       *     See studio_stats.proto;l=2039
        * @return The minSdk.
        */
       @java.lang.Override
@@ -13230,7 +13264,7 @@ private static final long serialVersionUID = 0L;
          *
          * <code>optional uint32 min_sdk = 2 [deprecated = true];</code>
          * @deprecated android_studio.AndroidStudioEvent.TemplatesUsage.TemplateModule.min_sdk is deprecated.
-         *     See studio_stats.proto;l=2027
+         *     See studio_stats.proto;l=2039
          * @return Whether the minSdk field is set.
          */
         @java.lang.Override
@@ -13244,7 +13278,7 @@ private static final long serialVersionUID = 0L;
          *
          * <code>optional uint32 min_sdk = 2 [deprecated = true];</code>
          * @deprecated android_studio.AndroidStudioEvent.TemplatesUsage.TemplateModule.min_sdk is deprecated.
-         *     See studio_stats.proto;l=2027
+         *     See studio_stats.proto;l=2039
          * @return The minSdk.
          */
         @java.lang.Override
@@ -13258,7 +13292,7 @@ private static final long serialVersionUID = 0L;
          *
          * <code>optional uint32 min_sdk = 2 [deprecated = true];</code>
          * @deprecated android_studio.AndroidStudioEvent.TemplatesUsage.TemplateModule.min_sdk is deprecated.
-         *     See studio_stats.proto;l=2027
+         *     See studio_stats.proto;l=2039
          * @param value The minSdk to set.
          * @return This builder for chaining.
          */
@@ -13276,7 +13310,7 @@ private static final long serialVersionUID = 0L;
          *
          * <code>optional uint32 min_sdk = 2 [deprecated = true];</code>
          * @deprecated android_studio.AndroidStudioEvent.TemplatesUsage.TemplateModule.min_sdk is deprecated.
-         *     See studio_stats.proto;l=2027
+         *     See studio_stats.proto;l=2039
          * @return This builder for chaining.
          */
         @java.lang.Deprecated public Builder clearMinSdk() {
@@ -15636,6 +15670,7 @@ private static final long serialVersionUID = 0L;
   private int bitField4_;
   private int bitField5_;
   private int bitField6_;
+  private int bitField7_;
   public static final int CATEGORY_FIELD_NUMBER = 1;
   private int category_ = 0;
   /**
@@ -24681,6 +24716,82 @@ private static final long serialVersionUID = 0L;
     return backupAndSyncEvent_ == null ? com.google.wireless.android.sdk.stats.BackupAndSyncEvent.getDefaultInstance() : backupAndSyncEvent_;
   }
 
+  public static final int SENTIMENT_SURVEY_EVENT_FIELD_NUMBER = 230;
+  private com.google.wireless.android.sdk.stats.SentimentSurveyEvent sentimentSurveyEvent_;
+  /**
+   * <pre>
+   * set when kind = SENTIMENT_SURVEY_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.SentimentSurveyEvent sentiment_survey_event = 230 [lazy = true];</code>
+   * @return Whether the sentimentSurveyEvent field is set.
+   */
+  @java.lang.Override
+  public boolean hasSentimentSurveyEvent() {
+    return ((bitField6_ & 0x80000000) != 0);
+  }
+  /**
+   * <pre>
+   * set when kind = SENTIMENT_SURVEY_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.SentimentSurveyEvent sentiment_survey_event = 230 [lazy = true];</code>
+   * @return The sentimentSurveyEvent.
+   */
+  @java.lang.Override
+  public com.google.wireless.android.sdk.stats.SentimentSurveyEvent getSentimentSurveyEvent() {
+    return sentimentSurveyEvent_ == null ? com.google.wireless.android.sdk.stats.SentimentSurveyEvent.getDefaultInstance() : sentimentSurveyEvent_;
+  }
+  /**
+   * <pre>
+   * set when kind = SENTIMENT_SURVEY_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.SentimentSurveyEvent sentiment_survey_event = 230 [lazy = true];</code>
+   */
+  @java.lang.Override
+  public com.google.wireless.android.sdk.stats.SentimentSurveyEventOrBuilder getSentimentSurveyEventOrBuilder() {
+    return sentimentSurveyEvent_ == null ? com.google.wireless.android.sdk.stats.SentimentSurveyEvent.getDefaultInstance() : sentimentSurveyEvent_;
+  }
+
+  public static final int GEMINI_ADVERTISER_EVENT_FIELD_NUMBER = 231;
+  private com.google.wireless.android.sdk.stats.GeminiAdvertiserEvent geminiAdvertiserEvent_;
+  /**
+   * <pre>
+   * set when kind = GEMINI_ADVERTISER_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.GeminiAdvertiserEvent gemini_advertiser_event = 231 [lazy = true];</code>
+   * @return Whether the geminiAdvertiserEvent field is set.
+   */
+  @java.lang.Override
+  public boolean hasGeminiAdvertiserEvent() {
+    return ((bitField7_ & 0x00000001) != 0);
+  }
+  /**
+   * <pre>
+   * set when kind = GEMINI_ADVERTISER_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.GeminiAdvertiserEvent gemini_advertiser_event = 231 [lazy = true];</code>
+   * @return The geminiAdvertiserEvent.
+   */
+  @java.lang.Override
+  public com.google.wireless.android.sdk.stats.GeminiAdvertiserEvent getGeminiAdvertiserEvent() {
+    return geminiAdvertiserEvent_ == null ? com.google.wireless.android.sdk.stats.GeminiAdvertiserEvent.getDefaultInstance() : geminiAdvertiserEvent_;
+  }
+  /**
+   * <pre>
+   * set when kind = GEMINI_ADVERTISER_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.GeminiAdvertiserEvent gemini_advertiser_event = 231 [lazy = true];</code>
+   */
+  @java.lang.Override
+  public com.google.wireless.android.sdk.stats.GeminiAdvertiserEventOrBuilder getGeminiAdvertiserEventOrBuilder() {
+    return geminiAdvertiserEvent_ == null ? com.google.wireless.android.sdk.stats.GeminiAdvertiserEvent.getDefaultInstance() : geminiAdvertiserEvent_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -25381,6 +25492,12 @@ private static final long serialVersionUID = 0L;
     }
     if (((bitField6_ & 0x40000000) != 0)) {
       output.writeMessage(229, getBackupAndSyncEvent());
+    }
+    if (((bitField6_ & 0x80000000) != 0)) {
+      output.writeMessage(230, getSentimentSurveyEvent());
+    }
+    if (((bitField7_ & 0x00000001) != 0)) {
+      output.writeMessage(231, getGeminiAdvertiserEvent());
     }
     getUnknownFields().writeTo(output);
   }
@@ -26312,6 +26429,14 @@ private static final long serialVersionUID = 0L;
     if (((bitField6_ & 0x40000000) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(229, getBackupAndSyncEvent());
+    }
+    if (((bitField6_ & 0x80000000) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(230, getSentimentSurveyEvent());
+    }
+    if (((bitField7_ & 0x00000001) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(231, getGeminiAdvertiserEvent());
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -27444,6 +27569,16 @@ private static final long serialVersionUID = 0L;
       if (!getBackupAndSyncEvent()
           .equals(other.getBackupAndSyncEvent())) return false;
     }
+    if (hasSentimentSurveyEvent() != other.hasSentimentSurveyEvent()) return false;
+    if (hasSentimentSurveyEvent()) {
+      if (!getSentimentSurveyEvent()
+          .equals(other.getSentimentSurveyEvent())) return false;
+    }
+    if (hasGeminiAdvertiserEvent() != other.hasGeminiAdvertiserEvent()) return false;
+    if (hasGeminiAdvertiserEvent()) {
+      if (!getGeminiAdvertiserEvent()
+          .equals(other.getGeminiAdvertiserEvent())) return false;
+    }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -28373,6 +28508,14 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + BACKUP_AND_SYNC_EVENT_FIELD_NUMBER;
       hash = (53 * hash) + getBackupAndSyncEvent().hashCode();
     }
+    if (hasSentimentSurveyEvent()) {
+      hash = (37 * hash) + SENTIMENT_SURVEY_EVENT_FIELD_NUMBER;
+      hash = (53 * hash) + getSentimentSurveyEvent().hashCode();
+    }
+    if (hasGeminiAdvertiserEvent()) {
+      hash = (37 * hash) + GEMINI_ADVERTISER_EVENT_FIELD_NUMBER;
+      hash = (53 * hash) + getGeminiAdvertiserEvent().hashCode();
+    }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -28707,6 +28850,8 @@ private static final long serialVersionUID = 0L;
         getJourneyFinishedEventFieldBuilder();
         getJourneyEngineErrorEventFieldBuilder();
         getBackupAndSyncEventFieldBuilder();
+        getSentimentSurveyEventFieldBuilder();
+        getGeminiAdvertiserEventFieldBuilder();
       }
     }
     @java.lang.Override
@@ -29781,6 +29926,16 @@ private static final long serialVersionUID = 0L;
       if (backupAndSyncEventBuilder_ != null) {
         backupAndSyncEventBuilder_.dispose();
         backupAndSyncEventBuilder_ = null;
+      }
+      sentimentSurveyEvent_ = null;
+      if (sentimentSurveyEventBuilder_ != null) {
+        sentimentSurveyEventBuilder_.dispose();
+        sentimentSurveyEventBuilder_ = null;
+      }
+      geminiAdvertiserEvent_ = null;
+      if (geminiAdvertiserEventBuilder_ != null) {
+        geminiAdvertiserEventBuilder_.dispose();
+        geminiAdvertiserEventBuilder_ = null;
       }
       return this;
     }
@@ -31215,7 +31370,21 @@ private static final long serialVersionUID = 0L;
             : backupAndSyncEventBuilder_.build();
         to_bitField6_ |= 0x40000000;
       }
+      if (((from_bitField7_ & 0x00000020) != 0)) {
+        result.sentimentSurveyEvent_ = sentimentSurveyEventBuilder_ == null
+            ? sentimentSurveyEvent_
+            : sentimentSurveyEventBuilder_.build();
+        to_bitField6_ |= 0x80000000;
+      }
+      int to_bitField7_ = 0;
+      if (((from_bitField7_ & 0x00000040) != 0)) {
+        result.geminiAdvertiserEvent_ = geminiAdvertiserEventBuilder_ == null
+            ? geminiAdvertiserEvent_
+            : geminiAdvertiserEventBuilder_.build();
+        to_bitField7_ |= 0x00000001;
+      }
       result.bitField6_ |= to_bitField6_;
+      result.bitField7_ |= to_bitField7_;
     }
 
     @java.lang.Override
@@ -32020,6 +32189,12 @@ private static final long serialVersionUID = 0L;
       }
       if (other.hasBackupAndSyncEvent()) {
         mergeBackupAndSyncEvent(other.getBackupAndSyncEvent());
+      }
+      if (other.hasSentimentSurveyEvent()) {
+        mergeSentimentSurveyEvent(other.getSentimentSurveyEvent());
+      }
+      if (other.hasGeminiAdvertiserEvent()) {
+        mergeGeminiAdvertiserEvent(other.getGeminiAdvertiserEvent());
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -33718,6 +33893,20 @@ private static final long serialVersionUID = 0L;
               bitField7_ |= 0x00000010;
               break;
             } // case 1834
+            case 1842: {
+              input.readMessage(
+                  getSentimentSurveyEventFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField7_ |= 0x00000020;
+              break;
+            } // case 1842
+            case 1850: {
+              input.readMessage(
+                  getGeminiAdvertiserEventFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField7_ |= 0x00000040;
+              break;
+            } // case 1850
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -68573,6 +68762,316 @@ private static final long serialVersionUID = 0L;
         backupAndSyncEvent_ = null;
       }
       return backupAndSyncEventBuilder_;
+    }
+
+    private com.google.wireless.android.sdk.stats.SentimentSurveyEvent sentimentSurveyEvent_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.SentimentSurveyEvent, com.google.wireless.android.sdk.stats.SentimentSurveyEvent.Builder, com.google.wireless.android.sdk.stats.SentimentSurveyEventOrBuilder> sentimentSurveyEventBuilder_;
+    /**
+     * <pre>
+     * set when kind = SENTIMENT_SURVEY_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.SentimentSurveyEvent sentiment_survey_event = 230 [lazy = true];</code>
+     * @return Whether the sentimentSurveyEvent field is set.
+     */
+    public boolean hasSentimentSurveyEvent() {
+      return ((bitField7_ & 0x00000020) != 0);
+    }
+    /**
+     * <pre>
+     * set when kind = SENTIMENT_SURVEY_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.SentimentSurveyEvent sentiment_survey_event = 230 [lazy = true];</code>
+     * @return The sentimentSurveyEvent.
+     */
+    public com.google.wireless.android.sdk.stats.SentimentSurveyEvent getSentimentSurveyEvent() {
+      if (sentimentSurveyEventBuilder_ == null) {
+        return sentimentSurveyEvent_ == null ? com.google.wireless.android.sdk.stats.SentimentSurveyEvent.getDefaultInstance() : sentimentSurveyEvent_;
+      } else {
+        return sentimentSurveyEventBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * set when kind = SENTIMENT_SURVEY_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.SentimentSurveyEvent sentiment_survey_event = 230 [lazy = true];</code>
+     */
+    public Builder setSentimentSurveyEvent(com.google.wireless.android.sdk.stats.SentimentSurveyEvent value) {
+      if (sentimentSurveyEventBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        sentimentSurveyEvent_ = value;
+      } else {
+        sentimentSurveyEventBuilder_.setMessage(value);
+      }
+      bitField7_ |= 0x00000020;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = SENTIMENT_SURVEY_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.SentimentSurveyEvent sentiment_survey_event = 230 [lazy = true];</code>
+     */
+    public Builder setSentimentSurveyEvent(
+        com.google.wireless.android.sdk.stats.SentimentSurveyEvent.Builder builderForValue) {
+      if (sentimentSurveyEventBuilder_ == null) {
+        sentimentSurveyEvent_ = builderForValue.build();
+      } else {
+        sentimentSurveyEventBuilder_.setMessage(builderForValue.build());
+      }
+      bitField7_ |= 0x00000020;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = SENTIMENT_SURVEY_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.SentimentSurveyEvent sentiment_survey_event = 230 [lazy = true];</code>
+     */
+    public Builder mergeSentimentSurveyEvent(com.google.wireless.android.sdk.stats.SentimentSurveyEvent value) {
+      if (sentimentSurveyEventBuilder_ == null) {
+        if (((bitField7_ & 0x00000020) != 0) &&
+          sentimentSurveyEvent_ != null &&
+          sentimentSurveyEvent_ != com.google.wireless.android.sdk.stats.SentimentSurveyEvent.getDefaultInstance()) {
+          getSentimentSurveyEventBuilder().mergeFrom(value);
+        } else {
+          sentimentSurveyEvent_ = value;
+        }
+      } else {
+        sentimentSurveyEventBuilder_.mergeFrom(value);
+      }
+      bitField7_ |= 0x00000020;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = SENTIMENT_SURVEY_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.SentimentSurveyEvent sentiment_survey_event = 230 [lazy = true];</code>
+     */
+    public Builder clearSentimentSurveyEvent() {
+      bitField7_ = (bitField7_ & ~0x00000020);
+      sentimentSurveyEvent_ = null;
+      if (sentimentSurveyEventBuilder_ != null) {
+        sentimentSurveyEventBuilder_.dispose();
+        sentimentSurveyEventBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = SENTIMENT_SURVEY_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.SentimentSurveyEvent sentiment_survey_event = 230 [lazy = true];</code>
+     */
+    public com.google.wireless.android.sdk.stats.SentimentSurveyEvent.Builder getSentimentSurveyEventBuilder() {
+      bitField7_ |= 0x00000020;
+      onChanged();
+      return getSentimentSurveyEventFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * set when kind = SENTIMENT_SURVEY_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.SentimentSurveyEvent sentiment_survey_event = 230 [lazy = true];</code>
+     */
+    public com.google.wireless.android.sdk.stats.SentimentSurveyEventOrBuilder getSentimentSurveyEventOrBuilder() {
+      if (sentimentSurveyEventBuilder_ != null) {
+        return sentimentSurveyEventBuilder_.getMessageOrBuilder();
+      } else {
+        return sentimentSurveyEvent_ == null ?
+            com.google.wireless.android.sdk.stats.SentimentSurveyEvent.getDefaultInstance() : sentimentSurveyEvent_;
+      }
+    }
+    /**
+     * <pre>
+     * set when kind = SENTIMENT_SURVEY_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.SentimentSurveyEvent sentiment_survey_event = 230 [lazy = true];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.SentimentSurveyEvent, com.google.wireless.android.sdk.stats.SentimentSurveyEvent.Builder, com.google.wireless.android.sdk.stats.SentimentSurveyEventOrBuilder> 
+        getSentimentSurveyEventFieldBuilder() {
+      if (sentimentSurveyEventBuilder_ == null) {
+        sentimentSurveyEventBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.wireless.android.sdk.stats.SentimentSurveyEvent, com.google.wireless.android.sdk.stats.SentimentSurveyEvent.Builder, com.google.wireless.android.sdk.stats.SentimentSurveyEventOrBuilder>(
+                getSentimentSurveyEvent(),
+                getParentForChildren(),
+                isClean());
+        sentimentSurveyEvent_ = null;
+      }
+      return sentimentSurveyEventBuilder_;
+    }
+
+    private com.google.wireless.android.sdk.stats.GeminiAdvertiserEvent geminiAdvertiserEvent_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.GeminiAdvertiserEvent, com.google.wireless.android.sdk.stats.GeminiAdvertiserEvent.Builder, com.google.wireless.android.sdk.stats.GeminiAdvertiserEventOrBuilder> geminiAdvertiserEventBuilder_;
+    /**
+     * <pre>
+     * set when kind = GEMINI_ADVERTISER_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.GeminiAdvertiserEvent gemini_advertiser_event = 231 [lazy = true];</code>
+     * @return Whether the geminiAdvertiserEvent field is set.
+     */
+    public boolean hasGeminiAdvertiserEvent() {
+      return ((bitField7_ & 0x00000040) != 0);
+    }
+    /**
+     * <pre>
+     * set when kind = GEMINI_ADVERTISER_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.GeminiAdvertiserEvent gemini_advertiser_event = 231 [lazy = true];</code>
+     * @return The geminiAdvertiserEvent.
+     */
+    public com.google.wireless.android.sdk.stats.GeminiAdvertiserEvent getGeminiAdvertiserEvent() {
+      if (geminiAdvertiserEventBuilder_ == null) {
+        return geminiAdvertiserEvent_ == null ? com.google.wireless.android.sdk.stats.GeminiAdvertiserEvent.getDefaultInstance() : geminiAdvertiserEvent_;
+      } else {
+        return geminiAdvertiserEventBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * set when kind = GEMINI_ADVERTISER_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.GeminiAdvertiserEvent gemini_advertiser_event = 231 [lazy = true];</code>
+     */
+    public Builder setGeminiAdvertiserEvent(com.google.wireless.android.sdk.stats.GeminiAdvertiserEvent value) {
+      if (geminiAdvertiserEventBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        geminiAdvertiserEvent_ = value;
+      } else {
+        geminiAdvertiserEventBuilder_.setMessage(value);
+      }
+      bitField7_ |= 0x00000040;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = GEMINI_ADVERTISER_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.GeminiAdvertiserEvent gemini_advertiser_event = 231 [lazy = true];</code>
+     */
+    public Builder setGeminiAdvertiserEvent(
+        com.google.wireless.android.sdk.stats.GeminiAdvertiserEvent.Builder builderForValue) {
+      if (geminiAdvertiserEventBuilder_ == null) {
+        geminiAdvertiserEvent_ = builderForValue.build();
+      } else {
+        geminiAdvertiserEventBuilder_.setMessage(builderForValue.build());
+      }
+      bitField7_ |= 0x00000040;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = GEMINI_ADVERTISER_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.GeminiAdvertiserEvent gemini_advertiser_event = 231 [lazy = true];</code>
+     */
+    public Builder mergeGeminiAdvertiserEvent(com.google.wireless.android.sdk.stats.GeminiAdvertiserEvent value) {
+      if (geminiAdvertiserEventBuilder_ == null) {
+        if (((bitField7_ & 0x00000040) != 0) &&
+          geminiAdvertiserEvent_ != null &&
+          geminiAdvertiserEvent_ != com.google.wireless.android.sdk.stats.GeminiAdvertiserEvent.getDefaultInstance()) {
+          getGeminiAdvertiserEventBuilder().mergeFrom(value);
+        } else {
+          geminiAdvertiserEvent_ = value;
+        }
+      } else {
+        geminiAdvertiserEventBuilder_.mergeFrom(value);
+      }
+      bitField7_ |= 0x00000040;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = GEMINI_ADVERTISER_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.GeminiAdvertiserEvent gemini_advertiser_event = 231 [lazy = true];</code>
+     */
+    public Builder clearGeminiAdvertiserEvent() {
+      bitField7_ = (bitField7_ & ~0x00000040);
+      geminiAdvertiserEvent_ = null;
+      if (geminiAdvertiserEventBuilder_ != null) {
+        geminiAdvertiserEventBuilder_.dispose();
+        geminiAdvertiserEventBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = GEMINI_ADVERTISER_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.GeminiAdvertiserEvent gemini_advertiser_event = 231 [lazy = true];</code>
+     */
+    public com.google.wireless.android.sdk.stats.GeminiAdvertiserEvent.Builder getGeminiAdvertiserEventBuilder() {
+      bitField7_ |= 0x00000040;
+      onChanged();
+      return getGeminiAdvertiserEventFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * set when kind = GEMINI_ADVERTISER_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.GeminiAdvertiserEvent gemini_advertiser_event = 231 [lazy = true];</code>
+     */
+    public com.google.wireless.android.sdk.stats.GeminiAdvertiserEventOrBuilder getGeminiAdvertiserEventOrBuilder() {
+      if (geminiAdvertiserEventBuilder_ != null) {
+        return geminiAdvertiserEventBuilder_.getMessageOrBuilder();
+      } else {
+        return geminiAdvertiserEvent_ == null ?
+            com.google.wireless.android.sdk.stats.GeminiAdvertiserEvent.getDefaultInstance() : geminiAdvertiserEvent_;
+      }
+    }
+    /**
+     * <pre>
+     * set when kind = GEMINI_ADVERTISER_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.GeminiAdvertiserEvent gemini_advertiser_event = 231 [lazy = true];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.GeminiAdvertiserEvent, com.google.wireless.android.sdk.stats.GeminiAdvertiserEvent.Builder, com.google.wireless.android.sdk.stats.GeminiAdvertiserEventOrBuilder> 
+        getGeminiAdvertiserEventFieldBuilder() {
+      if (geminiAdvertiserEventBuilder_ == null) {
+        geminiAdvertiserEventBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.wireless.android.sdk.stats.GeminiAdvertiserEvent, com.google.wireless.android.sdk.stats.GeminiAdvertiserEvent.Builder, com.google.wireless.android.sdk.stats.GeminiAdvertiserEventOrBuilder>(
+                getGeminiAdvertiserEvent(),
+                getParentForChildren(),
+                isClean());
+        geminiAdvertiserEvent_ = null;
+      }
+      return geminiAdvertiserEventBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(
