@@ -7206,4 +7206,112 @@ public interface AndroidStudioEventOrBuilder extends
    * <code>optional .android_studio.ChangeReviewEvent change_review_event = 258 [lazy = true];</code>
    */
   com.google.wireless.android.sdk.stats.ChangeReviewEventOrBuilder getChangeReviewEventOrBuilder();
+
+  /**
+   * <pre>
+   * set when kind = MARKETING_METRICS_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.MarketingMetricsEvent marketing_metrics_event = 259 [lazy = true];</code>
+   * @return Whether the marketingMetricsEvent field is set.
+   */
+  boolean hasMarketingMetricsEvent();
+  /**
+   * <pre>
+   * set when kind = MARKETING_METRICS_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.MarketingMetricsEvent marketing_metrics_event = 259 [lazy = true];</code>
+   * @return The marketingMetricsEvent.
+   */
+  com.google.wireless.android.sdk.stats.MarketingMetricsEvent getMarketingMetricsEvent();
+  /**
+   * <pre>
+   * set when kind = MARKETING_METRICS_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.MarketingMetricsEvent marketing_metrics_event = 259 [lazy = true];</code>
+   */
+  com.google.wireless.android.sdk.stats.MarketingMetricsEventOrBuilder getMarketingMetricsEventOrBuilder();
+
+  /**
+   * <pre>
+   * Logged when a user interacts with the diff viewer UI (Engagement Track)
+   * </pre>
+   *
+   * <code>optional .android_studio.RenderDiffViewerEvent render_diff_viewer_event = 260 [lazy = true];</code>
+   * @return Whether the renderDiffViewerEvent field is set.
+   */
+  boolean hasRenderDiffViewerEvent();
+  /**
+   * <pre>
+   * Logged when a user interacts with the diff viewer UI (Engagement Track)
+   * </pre>
+   *
+   * <code>optional .android_studio.RenderDiffViewerEvent render_diff_viewer_event = 260 [lazy = true];</code>
+   * @return The renderDiffViewerEvent.
+   */
+  com.google.wireless.android.sdk.stats.RenderDiffViewerEvent getRenderDiffViewerEvent();
+  /**
+   * <pre>
+   * Logged when a user interacts with the diff viewer UI (Engagement Track)
+   * </pre>
+   *
+   * <code>optional .android_studio.RenderDiffViewerEvent render_diff_viewer_event = 260 [lazy = true];</code>
+   */
+  com.google.wireless.android.sdk.stats.RenderDiffViewerEventOrBuilder getRenderDiffViewerEventOrBuilder();
+
+  /**
+   * <pre>
+   * set when kind = LIGHTBUILD_SYNC_REQUESTED_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.LightbuildSyncRequestedEvent lightbuild_sync_requested_event = 261 [lazy = true];</code>
+   * @return Whether the lightbuildSyncRequestedEvent field is set.
+   */
+  boolean hasLightbuildSyncRequestedEvent();
+  /**
+   * <pre>
+   * set when kind = LIGHTBUILD_SYNC_REQUESTED_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.LightbuildSyncRequestedEvent lightbuild_sync_requested_event = 261 [lazy = true];</code>
+   * @return The lightbuildSyncRequestedEvent.
+   */
+  com.google.wireless.android.sdk.stats.LightbuildSyncRequestedEvent getLightbuildSyncRequestedEvent();
+  /**
+   * <pre>
+   * set when kind = LIGHTBUILD_SYNC_REQUESTED_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.LightbuildSyncRequestedEvent lightbuild_sync_requested_event = 261 [lazy = true];</code>
+   */
+  com.google.wireless.android.sdk.stats.LightbuildSyncRequestedEventOrBuilder getLightbuildSyncRequestedEventOrBuilder();
+
+  /**
+   * <pre>
+   * set when kind = LIGHTBUILD_SYNC_FINISHED_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.LightbuildSyncFinishedEvent lightbuild_sync_finished_event = 262 [lazy = true];</code>
+   * @return Whether the lightbuildSyncFinishedEvent field is set.
+   */
+  boolean hasLightbuildSyncFinishedEvent();
+  /**
+   * <pre>
+   * set when kind = LIGHTBUILD_SYNC_FINISHED_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.LightbuildSyncFinishedEvent lightbuild_sync_finished_event = 262 [lazy = true];</code>
+   * @return The lightbuildSyncFinishedEvent.
+   */
+  com.google.wireless.android.sdk.stats.LightbuildSyncFinishedEvent getLightbuildSyncFinishedEvent();
+  /**
+   * <pre>
+   * set when kind = LIGHTBUILD_SYNC_FINISHED_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.LightbuildSyncFinishedEvent lightbuild_sync_finished_event = 262 [lazy = true];</code>
+   */
+  com.google.wireless.android.sdk.stats.LightbuildSyncFinishedEventOrBuilder getLightbuildSyncFinishedEventOrBuilder();
 }

@@ -378,6 +378,62 @@ private static final long serialVersionUID = 0L;
     return totalLatencyMs_;
   }
 
+  public static final int HAS_PREVIOUS_VERSION_FIELD_NUMBER = 8;
+  private boolean hasPreviousVersion_ = false;
+  /**
+   * <pre>
+   * Whether a historical image was found in cache or trajectory for comparison
+   * </pre>
+   *
+   * <code>optional bool has_previous_version = 8;</code>
+   * @return Whether the hasPreviousVersion field is set.
+   */
+  @java.lang.Override
+  public boolean hasHasPreviousVersion() {
+    return ((bitField0_ & 0x00000080) != 0);
+  }
+  /**
+   * <pre>
+   * Whether a historical image was found in cache or trajectory for comparison
+   * </pre>
+   *
+   * <code>optional bool has_previous_version = 8;</code>
+   * @return The hasPreviousVersion.
+   */
+  @java.lang.Override
+  public boolean getHasPreviousVersion() {
+    return hasPreviousVersion_;
+  }
+
+  public static final int PIXEL_DELTA_PERCENTAGE_FIELD_NUMBER = 9;
+  private float pixelDeltaPercentage_ = 0F;
+  /**
+   * <pre>
+   * The percentage of pixels that changed (0.0 to 1.0)
+   * Only populated if has_previous_version is true.
+   * </pre>
+   *
+   * <code>optional float pixel_delta_percentage = 9;</code>
+   * @return Whether the pixelDeltaPercentage field is set.
+   */
+  @java.lang.Override
+  public boolean hasPixelDeltaPercentage() {
+    return ((bitField0_ & 0x00000100) != 0);
+  }
+  /**
+   * <pre>
+   * The percentage of pixels that changed (0.0 to 1.0)
+   * Only populated if has_previous_version is true.
+   * </pre>
+   *
+   * <code>optional float pixel_delta_percentage = 9;</code>
+   * @return The pixelDeltaPercentage.
+   */
+  @java.lang.Override
+  public float getPixelDeltaPercentage() {
+    return pixelDeltaPercentage_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -412,6 +468,12 @@ private static final long serialVersionUID = 0L;
     }
     if (((bitField0_ & 0x00000040) != 0)) {
       output.writeInt64(7, totalLatencyMs_);
+    }
+    if (((bitField0_ & 0x00000080) != 0)) {
+      output.writeBool(8, hasPreviousVersion_);
+    }
+    if (((bitField0_ & 0x00000100) != 0)) {
+      output.writeFloat(9, pixelDeltaPercentage_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -449,6 +511,14 @@ private static final long serialVersionUID = 0L;
     if (((bitField0_ & 0x00000040) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(7, totalLatencyMs_);
+    }
+    if (((bitField0_ & 0x00000080) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeBoolSize(8, hasPreviousVersion_);
+    }
+    if (((bitField0_ & 0x00000100) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeFloatSize(9, pixelDeltaPercentage_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -499,6 +569,17 @@ private static final long serialVersionUID = 0L;
       if (getTotalLatencyMs()
           != other.getTotalLatencyMs()) return false;
     }
+    if (hasHasPreviousVersion() != other.hasHasPreviousVersion()) return false;
+    if (hasHasPreviousVersion()) {
+      if (getHasPreviousVersion()
+          != other.getHasPreviousVersion()) return false;
+    }
+    if (hasPixelDeltaPercentage() != other.hasPixelDeltaPercentage()) return false;
+    if (hasPixelDeltaPercentage()) {
+      if (java.lang.Float.floatToIntBits(getPixelDeltaPercentage())
+          != java.lang.Float.floatToIntBits(
+              other.getPixelDeltaPercentage())) return false;
+    }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -543,6 +624,16 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + TOTAL_LATENCY_MS_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
           getTotalLatencyMs());
+    }
+    if (hasHasPreviousVersion()) {
+      hash = (37 * hash) + HAS_PREVIOUS_VERSION_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getHasPreviousVersion());
+    }
+    if (hasPixelDeltaPercentage()) {
+      hash = (37 * hash) + PIXEL_DELTA_PERCENTAGE_FIELD_NUMBER;
+      hash = (53 * hash) + java.lang.Float.floatToIntBits(
+          getPixelDeltaPercentage());
     }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
@@ -680,6 +771,8 @@ private static final long serialVersionUID = 0L;
       showDecorations_ = false;
       compilationDurationMs_ = 0L;
       totalLatencyMs_ = 0L;
+      hasPreviousVersion_ = false;
+      pixelDeltaPercentage_ = 0F;
       return this;
     }
 
@@ -742,6 +835,14 @@ private static final long serialVersionUID = 0L;
         result.totalLatencyMs_ = totalLatencyMs_;
         to_bitField0_ |= 0x00000040;
       }
+      if (((from_bitField0_ & 0x00000080) != 0)) {
+        result.hasPreviousVersion_ = hasPreviousVersion_;
+        to_bitField0_ |= 0x00000080;
+      }
+      if (((from_bitField0_ & 0x00000100) != 0)) {
+        result.pixelDeltaPercentage_ = pixelDeltaPercentage_;
+        to_bitField0_ |= 0x00000100;
+      }
       result.bitField0_ |= to_bitField0_;
     }
 
@@ -777,6 +878,12 @@ private static final long serialVersionUID = 0L;
       }
       if (other.hasTotalLatencyMs()) {
         setTotalLatencyMs(other.getTotalLatencyMs());
+      }
+      if (other.hasHasPreviousVersion()) {
+        setHasPreviousVersion(other.getHasPreviousVersion());
+      }
+      if (other.hasPixelDeltaPercentage()) {
+        setPixelDeltaPercentage(other.getPixelDeltaPercentage());
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -846,6 +953,16 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000040;
               break;
             } // case 56
+            case 64: {
+              hasPreviousVersion_ = input.readBool();
+              bitField0_ |= 0x00000080;
+              break;
+            } // case 64
+            case 77: {
+              pixelDeltaPercentage_ = input.readFloat();
+              bitField0_ |= 0x00000100;
+              break;
+            } // case 77
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -1205,6 +1322,122 @@ private static final long serialVersionUID = 0L;
     public Builder clearTotalLatencyMs() {
       bitField0_ = (bitField0_ & ~0x00000040);
       totalLatencyMs_ = 0L;
+      onChanged();
+      return this;
+    }
+
+    private boolean hasPreviousVersion_ ;
+    /**
+     * <pre>
+     * Whether a historical image was found in cache or trajectory for comparison
+     * </pre>
+     *
+     * <code>optional bool has_previous_version = 8;</code>
+     * @return Whether the hasPreviousVersion field is set.
+     */
+    @java.lang.Override
+    public boolean hasHasPreviousVersion() {
+      return ((bitField0_ & 0x00000080) != 0);
+    }
+    /**
+     * <pre>
+     * Whether a historical image was found in cache or trajectory for comparison
+     * </pre>
+     *
+     * <code>optional bool has_previous_version = 8;</code>
+     * @return The hasPreviousVersion.
+     */
+    @java.lang.Override
+    public boolean getHasPreviousVersion() {
+      return hasPreviousVersion_;
+    }
+    /**
+     * <pre>
+     * Whether a historical image was found in cache or trajectory for comparison
+     * </pre>
+     *
+     * <code>optional bool has_previous_version = 8;</code>
+     * @param value The hasPreviousVersion to set.
+     * @return This builder for chaining.
+     */
+    public Builder setHasPreviousVersion(boolean value) {
+
+      hasPreviousVersion_ = value;
+      bitField0_ |= 0x00000080;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Whether a historical image was found in cache or trajectory for comparison
+     * </pre>
+     *
+     * <code>optional bool has_previous_version = 8;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearHasPreviousVersion() {
+      bitField0_ = (bitField0_ & ~0x00000080);
+      hasPreviousVersion_ = false;
+      onChanged();
+      return this;
+    }
+
+    private float pixelDeltaPercentage_ ;
+    /**
+     * <pre>
+     * The percentage of pixels that changed (0.0 to 1.0)
+     * Only populated if has_previous_version is true.
+     * </pre>
+     *
+     * <code>optional float pixel_delta_percentage = 9;</code>
+     * @return Whether the pixelDeltaPercentage field is set.
+     */
+    @java.lang.Override
+    public boolean hasPixelDeltaPercentage() {
+      return ((bitField0_ & 0x00000100) != 0);
+    }
+    /**
+     * <pre>
+     * The percentage of pixels that changed (0.0 to 1.0)
+     * Only populated if has_previous_version is true.
+     * </pre>
+     *
+     * <code>optional float pixel_delta_percentage = 9;</code>
+     * @return The pixelDeltaPercentage.
+     */
+    @java.lang.Override
+    public float getPixelDeltaPercentage() {
+      return pixelDeltaPercentage_;
+    }
+    /**
+     * <pre>
+     * The percentage of pixels that changed (0.0 to 1.0)
+     * Only populated if has_previous_version is true.
+     * </pre>
+     *
+     * <code>optional float pixel_delta_percentage = 9;</code>
+     * @param value The pixelDeltaPercentage to set.
+     * @return This builder for chaining.
+     */
+    public Builder setPixelDeltaPercentage(float value) {
+
+      pixelDeltaPercentage_ = value;
+      bitField0_ |= 0x00000100;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The percentage of pixels that changed (0.0 to 1.0)
+     * Only populated if has_previous_version is true.
+     * </pre>
+     *
+     * <code>optional float pixel_delta_percentage = 9;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearPixelDeltaPercentage() {
+      bitField0_ = (bitField0_ & ~0x00000100);
+      pixelDeltaPercentage_ = 0F;
       onChanged();
       return this;
     }

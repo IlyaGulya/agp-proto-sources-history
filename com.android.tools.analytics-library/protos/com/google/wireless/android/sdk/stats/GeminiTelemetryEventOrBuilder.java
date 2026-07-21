@@ -118,5 +118,32 @@ public interface GeminiTelemetryEventOrBuilder extends
    */
   com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEventOrBuilder getAgentEventOrBuilder();
 
+  /**
+   * <pre>
+   * Events related to the permissions evaluation.
+   * </pre>
+   *
+   * <code>.android_studio.GeminiTelemetryEvent.PermissionApprovalEvent permission_approval_event = 5;</code>
+   * @return Whether the permissionApprovalEvent field is set.
+   */
+  boolean hasPermissionApprovalEvent();
+  /**
+   * <pre>
+   * Events related to the permissions evaluation.
+   * </pre>
+   *
+   * <code>.android_studio.GeminiTelemetryEvent.PermissionApprovalEvent permission_approval_event = 5;</code>
+   * @return The permissionApprovalEvent.
+   */
+  com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.PermissionApprovalEvent getPermissionApprovalEvent();
+  /**
+   * <pre>
+   * Events related to the permissions evaluation.
+   * </pre>
+   *
+   * <code>.android_studio.GeminiTelemetryEvent.PermissionApprovalEvent permission_approval_event = 5;</code>
+   */
+  com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.PermissionApprovalEventOrBuilder getPermissionApprovalEventOrBuilder();
+
   com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.DomainCase getDomainCase();
 }

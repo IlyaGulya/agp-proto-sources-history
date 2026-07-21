@@ -115,4 +115,44 @@ public interface RenderToolEventOrBuilder extends
    * @return The totalLatencyMs.
    */
   long getTotalLatencyMs();
+
+  /**
+   * <pre>
+   * Whether a historical image was found in cache or trajectory for comparison
+   * </pre>
+   *
+   * <code>optional bool has_previous_version = 8;</code>
+   * @return Whether the hasPreviousVersion field is set.
+   */
+  boolean hasHasPreviousVersion();
+  /**
+   * <pre>
+   * Whether a historical image was found in cache or trajectory for comparison
+   * </pre>
+   *
+   * <code>optional bool has_previous_version = 8;</code>
+   * @return The hasPreviousVersion.
+   */
+  boolean getHasPreviousVersion();
+
+  /**
+   * <pre>
+   * The percentage of pixels that changed (0.0 to 1.0)
+   * Only populated if has_previous_version is true.
+   * </pre>
+   *
+   * <code>optional float pixel_delta_percentage = 9;</code>
+   * @return Whether the pixelDeltaPercentage field is set.
+   */
+  boolean hasPixelDeltaPercentage();
+  /**
+   * <pre>
+   * The percentage of pixels that changed (0.0 to 1.0)
+   * Only populated if has_previous_version is true.
+   * </pre>
+   *
+   * <code>optional float pixel_delta_percentage = 9;</code>
+   * @return The pixelDeltaPercentage.
+   */
+  float getPixelDeltaPercentage();
 }

@@ -7331,6 +7331,1585 @@ private static final long serialVersionUID = 0L;
 
   }
 
+  public interface PermissionApprovalEventOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:android_studio.GeminiTelemetryEvent.PermissionApprovalEvent)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>optional .android_studio.GeminiTelemetryEvent.PermissionApprovalEvent.PermissionMode permission_mode = 1;</code>
+     * @return Whether the permissionMode field is set.
+     */
+    boolean hasPermissionMode();
+    /**
+     * <code>optional .android_studio.GeminiTelemetryEvent.PermissionApprovalEvent.PermissionMode permission_mode = 1;</code>
+     * @return The permissionMode.
+     */
+    com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.PermissionApprovalEvent.PermissionMode getPermissionMode();
+
+    /**
+     * <code>optional .android_studio.GeminiTelemetryEvent.PermissionApprovalEvent.DecisionSource decision_source = 2;</code>
+     * @return Whether the decisionSource field is set.
+     */
+    boolean hasDecisionSource();
+    /**
+     * <code>optional .android_studio.GeminiTelemetryEvent.PermissionApprovalEvent.DecisionSource decision_source = 2;</code>
+     * @return The decisionSource.
+     */
+    com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.PermissionApprovalEvent.DecisionSource getDecisionSource();
+
+    /**
+     * <code>optional .android_studio.GeminiTelemetryEvent.PermissionApprovalEvent.AuditorDecision auditor_decision = 3;</code>
+     * @return Whether the auditorDecision field is set.
+     */
+    boolean hasAuditorDecision();
+    /**
+     * <code>optional .android_studio.GeminiTelemetryEvent.PermissionApprovalEvent.AuditorDecision auditor_decision = 3;</code>
+     * @return The auditorDecision.
+     */
+    com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.PermissionApprovalEvent.AuditorDecision getAuditorDecision();
+
+    /**
+     * <code>optional .android_studio.GeminiTelemetryEvent.PermissionApprovalEvent.PermissionDecisionOutcome decision_outcome = 4;</code>
+     * @return Whether the decisionOutcome field is set.
+     */
+    boolean hasDecisionOutcome();
+    /**
+     * <code>optional .android_studio.GeminiTelemetryEvent.PermissionApprovalEvent.PermissionDecisionOutcome decision_outcome = 4;</code>
+     * @return The decisionOutcome.
+     */
+    com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.PermissionApprovalEvent.PermissionDecisionOutcome getDecisionOutcome();
+
+    /**
+     * <code>optional .android_studio.GeminiTelemetryEvent.PermissionApprovalEvent.PermissionType permission_type = 5;</code>
+     * @return Whether the permissionType field is set.
+     */
+    boolean hasPermissionType();
+    /**
+     * <code>optional .android_studio.GeminiTelemetryEvent.PermissionApprovalEvent.PermissionType permission_type = 5;</code>
+     * @return The permissionType.
+     */
+    com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.PermissionApprovalEvent.PermissionType getPermissionType();
+  }
+  /**
+   * Protobuf type {@code android_studio.GeminiTelemetryEvent.PermissionApprovalEvent}
+   */
+  public static final class PermissionApprovalEvent extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:android_studio.GeminiTelemetryEvent.PermissionApprovalEvent)
+      PermissionApprovalEventOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use PermissionApprovalEvent.newBuilder() to construct.
+    private PermissionApprovalEvent(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private PermissionApprovalEvent() {
+      permissionMode_ = 0;
+      decisionSource_ = 0;
+      auditorDecision_ = 0;
+      decisionOutcome_ = 0;
+      permissionType_ = 0;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new PermissionApprovalEvent();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_GeminiTelemetryEvent_PermissionApprovalEvent_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_GeminiTelemetryEvent_PermissionApprovalEvent_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.PermissionApprovalEvent.class, com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.PermissionApprovalEvent.Builder.class);
+    }
+
+    /**
+     * <pre>
+     * The policy mode the user has selected.
+     * </pre>
+     *
+     * Protobuf enum {@code android_studio.GeminiTelemetryEvent.PermissionApprovalEvent.PermissionMode}
+     */
+    public enum PermissionMode
+        implements com.google.protobuf.ProtocolMessageEnum {
+      /**
+       * <code>PERMISSION_MODE_UNSPECIFIED = 0;</code>
+       */
+      PERMISSION_MODE_UNSPECIFIED(0),
+      /**
+       * <pre>
+       * All sensitive actions require explicit manual approval.
+       * </pre>
+       *
+       * <code>STRICT = 1;</code>
+       */
+      STRICT(1),
+      /**
+       * <pre>
+       * A local fast model is used to audit actions and auto-approve safe ones.
+       * </pre>
+       *
+       * <code>SUPERVISED = 2;</code>
+       */
+      SUPERVISED(2),
+      /**
+       * <pre>
+       * Unrestricted mode where most actions are executed without prompting.
+       * </pre>
+       *
+       * <code>YOLO = 3;</code>
+       */
+      YOLO(3),
+      ;
+
+      /**
+       * <code>PERMISSION_MODE_UNSPECIFIED = 0;</code>
+       */
+      public static final int PERMISSION_MODE_UNSPECIFIED_VALUE = 0;
+      /**
+       * <pre>
+       * All sensitive actions require explicit manual approval.
+       * </pre>
+       *
+       * <code>STRICT = 1;</code>
+       */
+      public static final int STRICT_VALUE = 1;
+      /**
+       * <pre>
+       * A local fast model is used to audit actions and auto-approve safe ones.
+       * </pre>
+       *
+       * <code>SUPERVISED = 2;</code>
+       */
+      public static final int SUPERVISED_VALUE = 2;
+      /**
+       * <pre>
+       * Unrestricted mode where most actions are executed without prompting.
+       * </pre>
+       *
+       * <code>YOLO = 3;</code>
+       */
+      public static final int YOLO_VALUE = 3;
+
+
+      public final int getNumber() {
+        return value;
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static PermissionMode valueOf(int value) {
+        return forNumber(value);
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       */
+      public static PermissionMode forNumber(int value) {
+        switch (value) {
+          case 0: return PERMISSION_MODE_UNSPECIFIED;
+          case 1: return STRICT;
+          case 2: return SUPERVISED;
+          case 3: return YOLO;
+          default: return null;
+        }
+      }
+
+      public static com.google.protobuf.Internal.EnumLiteMap<PermissionMode>
+          internalGetValueMap() {
+        return internalValueMap;
+      }
+      private static final com.google.protobuf.Internal.EnumLiteMap<
+          PermissionMode> internalValueMap =
+            new com.google.protobuf.Internal.EnumLiteMap<PermissionMode>() {
+              public PermissionMode findValueByNumber(int number) {
+                return PermissionMode.forNumber(number);
+              }
+            };
+
+      public final com.google.protobuf.Descriptors.EnumValueDescriptor
+          getValueDescriptor() {
+        return getDescriptor().getValues().get(ordinal());
+      }
+      public final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptorForType() {
+        return getDescriptor();
+      }
+      public static final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptor() {
+        return com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.PermissionApprovalEvent.getDescriptor().getEnumTypes().get(0);
+      }
+
+      private static final PermissionMode[] VALUES = values();
+
+      public static PermissionMode valueOf(
+          com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+        if (desc.getType() != getDescriptor()) {
+          throw new java.lang.IllegalArgumentException(
+            "EnumValueDescriptor is not for this type.");
+        }
+        return VALUES[desc.getIndex()];
+      }
+
+      private final int value;
+
+      private PermissionMode(int value) {
+        this.value = value;
+      }
+
+      // @@protoc_insertion_point(enum_scope:android_studio.GeminiTelemetryEvent.PermissionApprovalEvent.PermissionMode)
+    }
+
+    /**
+     * <pre>
+     * Identifies how the decision to approve or review the operation was made.
+     * </pre>
+     *
+     * Protobuf enum {@code android_studio.GeminiTelemetryEvent.PermissionApprovalEvent.DecisionSource}
+     */
+    public enum DecisionSource
+        implements com.google.protobuf.ProtocolMessageEnum {
+      /**
+       * <code>DECISION_SOURCE_UNSPECIFIED = 0;</code>
+       */
+      DECISION_SOURCE_UNSPECIFIED(0),
+      /**
+       * <pre>
+       * Operation was deemed safe based on predefined static rules.
+       * </pre>
+       *
+       * <code>FAST_TRACK = 1;</code>
+       */
+      FAST_TRACK(1),
+      /**
+       * <pre>
+       * Operation was previously approved in the current session.
+       * </pre>
+       *
+       * <code>SESSION_CACHE = 2;</code>
+       */
+      SESSION_CACHE(2),
+      /**
+       * <pre>
+       * The decision was made by an AI auditor model.
+       * </pre>
+       *
+       * <code>LLM_AUDITOR = 3;</code>
+       */
+      LLM_AUDITOR(3),
+      /**
+       * <pre>
+       * The user had to manually approve or reject the action.
+       * </pre>
+       *
+       * <code>USER_MANUAL = 4;</code>
+       */
+      USER_MANUAL(4),
+      ;
+
+      /**
+       * <code>DECISION_SOURCE_UNSPECIFIED = 0;</code>
+       */
+      public static final int DECISION_SOURCE_UNSPECIFIED_VALUE = 0;
+      /**
+       * <pre>
+       * Operation was deemed safe based on predefined static rules.
+       * </pre>
+       *
+       * <code>FAST_TRACK = 1;</code>
+       */
+      public static final int FAST_TRACK_VALUE = 1;
+      /**
+       * <pre>
+       * Operation was previously approved in the current session.
+       * </pre>
+       *
+       * <code>SESSION_CACHE = 2;</code>
+       */
+      public static final int SESSION_CACHE_VALUE = 2;
+      /**
+       * <pre>
+       * The decision was made by an AI auditor model.
+       * </pre>
+       *
+       * <code>LLM_AUDITOR = 3;</code>
+       */
+      public static final int LLM_AUDITOR_VALUE = 3;
+      /**
+       * <pre>
+       * The user had to manually approve or reject the action.
+       * </pre>
+       *
+       * <code>USER_MANUAL = 4;</code>
+       */
+      public static final int USER_MANUAL_VALUE = 4;
+
+
+      public final int getNumber() {
+        return value;
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static DecisionSource valueOf(int value) {
+        return forNumber(value);
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       */
+      public static DecisionSource forNumber(int value) {
+        switch (value) {
+          case 0: return DECISION_SOURCE_UNSPECIFIED;
+          case 1: return FAST_TRACK;
+          case 2: return SESSION_CACHE;
+          case 3: return LLM_AUDITOR;
+          case 4: return USER_MANUAL;
+          default: return null;
+        }
+      }
+
+      public static com.google.protobuf.Internal.EnumLiteMap<DecisionSource>
+          internalGetValueMap() {
+        return internalValueMap;
+      }
+      private static final com.google.protobuf.Internal.EnumLiteMap<
+          DecisionSource> internalValueMap =
+            new com.google.protobuf.Internal.EnumLiteMap<DecisionSource>() {
+              public DecisionSource findValueByNumber(int number) {
+                return DecisionSource.forNumber(number);
+              }
+            };
+
+      public final com.google.protobuf.Descriptors.EnumValueDescriptor
+          getValueDescriptor() {
+        return getDescriptor().getValues().get(ordinal());
+      }
+      public final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptorForType() {
+        return getDescriptor();
+      }
+      public static final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptor() {
+        return com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.PermissionApprovalEvent.getDescriptor().getEnumTypes().get(1);
+      }
+
+      private static final DecisionSource[] VALUES = values();
+
+      public static DecisionSource valueOf(
+          com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+        if (desc.getType() != getDescriptor()) {
+          throw new java.lang.IllegalArgumentException(
+            "EnumValueDescriptor is not for this type.");
+        }
+        return VALUES[desc.getIndex()];
+      }
+
+      private final int value;
+
+      private DecisionSource(int value) {
+        this.value = value;
+      }
+
+      // @@protoc_insertion_point(enum_scope:android_studio.GeminiTelemetryEvent.PermissionApprovalEvent.DecisionSource)
+    }
+
+    /**
+     * <pre>
+     * The outcome determined by the AI auditor model, if LLM_AUDITOR was used.
+     * </pre>
+     *
+     * Protobuf enum {@code android_studio.GeminiTelemetryEvent.PermissionApprovalEvent.AuditorDecision}
+     */
+    public enum AuditorDecision
+        implements com.google.protobuf.ProtocolMessageEnum {
+      /**
+       * <code>AUDITOR_DECISION_UNSPECIFIED = 0;</code>
+       */
+      AUDITOR_DECISION_UNSPECIFIED(0),
+      /**
+       * <pre>
+       * The operation was considered safe and allowed to proceed.
+       * </pre>
+       *
+       * <code>SAFE = 1;</code>
+       */
+      SAFE(1),
+      /**
+       * <pre>
+       * The operation was flagged for manual user review.
+       * </pre>
+       *
+       * <code>REVIEW = 2;</code>
+       */
+      REVIEW(2),
+      ;
+
+      /**
+       * <code>AUDITOR_DECISION_UNSPECIFIED = 0;</code>
+       */
+      public static final int AUDITOR_DECISION_UNSPECIFIED_VALUE = 0;
+      /**
+       * <pre>
+       * The operation was considered safe and allowed to proceed.
+       * </pre>
+       *
+       * <code>SAFE = 1;</code>
+       */
+      public static final int SAFE_VALUE = 1;
+      /**
+       * <pre>
+       * The operation was flagged for manual user review.
+       * </pre>
+       *
+       * <code>REVIEW = 2;</code>
+       */
+      public static final int REVIEW_VALUE = 2;
+
+
+      public final int getNumber() {
+        return value;
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static AuditorDecision valueOf(int value) {
+        return forNumber(value);
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       */
+      public static AuditorDecision forNumber(int value) {
+        switch (value) {
+          case 0: return AUDITOR_DECISION_UNSPECIFIED;
+          case 1: return SAFE;
+          case 2: return REVIEW;
+          default: return null;
+        }
+      }
+
+      public static com.google.protobuf.Internal.EnumLiteMap<AuditorDecision>
+          internalGetValueMap() {
+        return internalValueMap;
+      }
+      private static final com.google.protobuf.Internal.EnumLiteMap<
+          AuditorDecision> internalValueMap =
+            new com.google.protobuf.Internal.EnumLiteMap<AuditorDecision>() {
+              public AuditorDecision findValueByNumber(int number) {
+                return AuditorDecision.forNumber(number);
+              }
+            };
+
+      public final com.google.protobuf.Descriptors.EnumValueDescriptor
+          getValueDescriptor() {
+        return getDescriptor().getValues().get(ordinal());
+      }
+      public final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptorForType() {
+        return getDescriptor();
+      }
+      public static final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptor() {
+        return com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.PermissionApprovalEvent.getDescriptor().getEnumTypes().get(2);
+      }
+
+      private static final AuditorDecision[] VALUES = values();
+
+      public static AuditorDecision valueOf(
+          com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+        if (desc.getType() != getDescriptor()) {
+          throw new java.lang.IllegalArgumentException(
+            "EnumValueDescriptor is not for this type.");
+        }
+        return VALUES[desc.getIndex()];
+      }
+
+      private final int value;
+
+      private AuditorDecision(int value) {
+        this.value = value;
+      }
+
+      // @@protoc_insertion_point(enum_scope:android_studio.GeminiTelemetryEvent.PermissionApprovalEvent.AuditorDecision)
+    }
+
+    /**
+     * <pre>
+     * The final outcome of the permission request evaluation.
+     * </pre>
+     *
+     * Protobuf enum {@code android_studio.GeminiTelemetryEvent.PermissionApprovalEvent.PermissionDecisionOutcome}
+     */
+    public enum PermissionDecisionOutcome
+        implements com.google.protobuf.ProtocolMessageEnum {
+      /**
+       * <code>PERMISSION_DECISION_OUTCOME_UNSPECIFIED = 0;</code>
+       */
+      PERMISSION_DECISION_OUTCOME_UNSPECIFIED(0),
+      /**
+       * <code>APPROVED = 1;</code>
+       */
+      APPROVED(1),
+      /**
+       * <code>DENIED = 2;</code>
+       */
+      DENIED(2),
+      ;
+
+      /**
+       * <code>PERMISSION_DECISION_OUTCOME_UNSPECIFIED = 0;</code>
+       */
+      public static final int PERMISSION_DECISION_OUTCOME_UNSPECIFIED_VALUE = 0;
+      /**
+       * <code>APPROVED = 1;</code>
+       */
+      public static final int APPROVED_VALUE = 1;
+      /**
+       * <code>DENIED = 2;</code>
+       */
+      public static final int DENIED_VALUE = 2;
+
+
+      public final int getNumber() {
+        return value;
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static PermissionDecisionOutcome valueOf(int value) {
+        return forNumber(value);
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       */
+      public static PermissionDecisionOutcome forNumber(int value) {
+        switch (value) {
+          case 0: return PERMISSION_DECISION_OUTCOME_UNSPECIFIED;
+          case 1: return APPROVED;
+          case 2: return DENIED;
+          default: return null;
+        }
+      }
+
+      public static com.google.protobuf.Internal.EnumLiteMap<PermissionDecisionOutcome>
+          internalGetValueMap() {
+        return internalValueMap;
+      }
+      private static final com.google.protobuf.Internal.EnumLiteMap<
+          PermissionDecisionOutcome> internalValueMap =
+            new com.google.protobuf.Internal.EnumLiteMap<PermissionDecisionOutcome>() {
+              public PermissionDecisionOutcome findValueByNumber(int number) {
+                return PermissionDecisionOutcome.forNumber(number);
+              }
+            };
+
+      public final com.google.protobuf.Descriptors.EnumValueDescriptor
+          getValueDescriptor() {
+        return getDescriptor().getValues().get(ordinal());
+      }
+      public final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptorForType() {
+        return getDescriptor();
+      }
+      public static final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptor() {
+        return com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.PermissionApprovalEvent.getDescriptor().getEnumTypes().get(3);
+      }
+
+      private static final PermissionDecisionOutcome[] VALUES = values();
+
+      public static PermissionDecisionOutcome valueOf(
+          com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+        if (desc.getType() != getDescriptor()) {
+          throw new java.lang.IllegalArgumentException(
+            "EnumValueDescriptor is not for this type.");
+        }
+        return VALUES[desc.getIndex()];
+      }
+
+      private final int value;
+
+      private PermissionDecisionOutcome(int value) {
+        this.value = value;
+      }
+
+      // @@protoc_insertion_point(enum_scope:android_studio.GeminiTelemetryEvent.PermissionApprovalEvent.PermissionDecisionOutcome)
+    }
+
+    /**
+     * <pre>
+     * The type of permission request being analyzed.
+     * </pre>
+     *
+     * Protobuf enum {@code android_studio.GeminiTelemetryEvent.PermissionApprovalEvent.PermissionType}
+     */
+    public enum PermissionType
+        implements com.google.protobuf.ProtocolMessageEnum {
+      /**
+       * <code>PERMISSION_TYPE_UNSPECIFIED = 0;</code>
+       */
+      PERMISSION_TYPE_UNSPECIFIED(0),
+      /**
+       * <code>EXECUTE = 1;</code>
+       */
+      EXECUTE(1),
+      /**
+       * <code>FILE = 2;</code>
+       */
+      FILE(2),
+      /**
+       * <code>URL = 3;</code>
+       */
+      URL(3),
+      /**
+       * <code>MCP = 4;</code>
+       */
+      MCP(4),
+      /**
+       * <code>OTHER = 5;</code>
+       */
+      OTHER(5),
+      ;
+
+      /**
+       * <code>PERMISSION_TYPE_UNSPECIFIED = 0;</code>
+       */
+      public static final int PERMISSION_TYPE_UNSPECIFIED_VALUE = 0;
+      /**
+       * <code>EXECUTE = 1;</code>
+       */
+      public static final int EXECUTE_VALUE = 1;
+      /**
+       * <code>FILE = 2;</code>
+       */
+      public static final int FILE_VALUE = 2;
+      /**
+       * <code>URL = 3;</code>
+       */
+      public static final int URL_VALUE = 3;
+      /**
+       * <code>MCP = 4;</code>
+       */
+      public static final int MCP_VALUE = 4;
+      /**
+       * <code>OTHER = 5;</code>
+       */
+      public static final int OTHER_VALUE = 5;
+
+
+      public final int getNumber() {
+        return value;
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static PermissionType valueOf(int value) {
+        return forNumber(value);
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       */
+      public static PermissionType forNumber(int value) {
+        switch (value) {
+          case 0: return PERMISSION_TYPE_UNSPECIFIED;
+          case 1: return EXECUTE;
+          case 2: return FILE;
+          case 3: return URL;
+          case 4: return MCP;
+          case 5: return OTHER;
+          default: return null;
+        }
+      }
+
+      public static com.google.protobuf.Internal.EnumLiteMap<PermissionType>
+          internalGetValueMap() {
+        return internalValueMap;
+      }
+      private static final com.google.protobuf.Internal.EnumLiteMap<
+          PermissionType> internalValueMap =
+            new com.google.protobuf.Internal.EnumLiteMap<PermissionType>() {
+              public PermissionType findValueByNumber(int number) {
+                return PermissionType.forNumber(number);
+              }
+            };
+
+      public final com.google.protobuf.Descriptors.EnumValueDescriptor
+          getValueDescriptor() {
+        return getDescriptor().getValues().get(ordinal());
+      }
+      public final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptorForType() {
+        return getDescriptor();
+      }
+      public static final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptor() {
+        return com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.PermissionApprovalEvent.getDescriptor().getEnumTypes().get(4);
+      }
+
+      private static final PermissionType[] VALUES = values();
+
+      public static PermissionType valueOf(
+          com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+        if (desc.getType() != getDescriptor()) {
+          throw new java.lang.IllegalArgumentException(
+            "EnumValueDescriptor is not for this type.");
+        }
+        return VALUES[desc.getIndex()];
+      }
+
+      private final int value;
+
+      private PermissionType(int value) {
+        this.value = value;
+      }
+
+      // @@protoc_insertion_point(enum_scope:android_studio.GeminiTelemetryEvent.PermissionApprovalEvent.PermissionType)
+    }
+
+    private int bitField0_;
+    public static final int PERMISSION_MODE_FIELD_NUMBER = 1;
+    private int permissionMode_ = 0;
+    /**
+     * <code>optional .android_studio.GeminiTelemetryEvent.PermissionApprovalEvent.PermissionMode permission_mode = 1;</code>
+     * @return Whether the permissionMode field is set.
+     */
+    @java.lang.Override public boolean hasPermissionMode() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <code>optional .android_studio.GeminiTelemetryEvent.PermissionApprovalEvent.PermissionMode permission_mode = 1;</code>
+     * @return The permissionMode.
+     */
+    @java.lang.Override public com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.PermissionApprovalEvent.PermissionMode getPermissionMode() {
+      com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.PermissionApprovalEvent.PermissionMode result = com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.PermissionApprovalEvent.PermissionMode.forNumber(permissionMode_);
+      return result == null ? com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.PermissionApprovalEvent.PermissionMode.PERMISSION_MODE_UNSPECIFIED : result;
+    }
+
+    public static final int DECISION_SOURCE_FIELD_NUMBER = 2;
+    private int decisionSource_ = 0;
+    /**
+     * <code>optional .android_studio.GeminiTelemetryEvent.PermissionApprovalEvent.DecisionSource decision_source = 2;</code>
+     * @return Whether the decisionSource field is set.
+     */
+    @java.lang.Override public boolean hasDecisionSource() {
+      return ((bitField0_ & 0x00000002) != 0);
+    }
+    /**
+     * <code>optional .android_studio.GeminiTelemetryEvent.PermissionApprovalEvent.DecisionSource decision_source = 2;</code>
+     * @return The decisionSource.
+     */
+    @java.lang.Override public com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.PermissionApprovalEvent.DecisionSource getDecisionSource() {
+      com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.PermissionApprovalEvent.DecisionSource result = com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.PermissionApprovalEvent.DecisionSource.forNumber(decisionSource_);
+      return result == null ? com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.PermissionApprovalEvent.DecisionSource.DECISION_SOURCE_UNSPECIFIED : result;
+    }
+
+    public static final int AUDITOR_DECISION_FIELD_NUMBER = 3;
+    private int auditorDecision_ = 0;
+    /**
+     * <code>optional .android_studio.GeminiTelemetryEvent.PermissionApprovalEvent.AuditorDecision auditor_decision = 3;</code>
+     * @return Whether the auditorDecision field is set.
+     */
+    @java.lang.Override public boolean hasAuditorDecision() {
+      return ((bitField0_ & 0x00000004) != 0);
+    }
+    /**
+     * <code>optional .android_studio.GeminiTelemetryEvent.PermissionApprovalEvent.AuditorDecision auditor_decision = 3;</code>
+     * @return The auditorDecision.
+     */
+    @java.lang.Override public com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.PermissionApprovalEvent.AuditorDecision getAuditorDecision() {
+      com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.PermissionApprovalEvent.AuditorDecision result = com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.PermissionApprovalEvent.AuditorDecision.forNumber(auditorDecision_);
+      return result == null ? com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.PermissionApprovalEvent.AuditorDecision.AUDITOR_DECISION_UNSPECIFIED : result;
+    }
+
+    public static final int DECISION_OUTCOME_FIELD_NUMBER = 4;
+    private int decisionOutcome_ = 0;
+    /**
+     * <code>optional .android_studio.GeminiTelemetryEvent.PermissionApprovalEvent.PermissionDecisionOutcome decision_outcome = 4;</code>
+     * @return Whether the decisionOutcome field is set.
+     */
+    @java.lang.Override public boolean hasDecisionOutcome() {
+      return ((bitField0_ & 0x00000008) != 0);
+    }
+    /**
+     * <code>optional .android_studio.GeminiTelemetryEvent.PermissionApprovalEvent.PermissionDecisionOutcome decision_outcome = 4;</code>
+     * @return The decisionOutcome.
+     */
+    @java.lang.Override public com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.PermissionApprovalEvent.PermissionDecisionOutcome getDecisionOutcome() {
+      com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.PermissionApprovalEvent.PermissionDecisionOutcome result = com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.PermissionApprovalEvent.PermissionDecisionOutcome.forNumber(decisionOutcome_);
+      return result == null ? com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.PermissionApprovalEvent.PermissionDecisionOutcome.PERMISSION_DECISION_OUTCOME_UNSPECIFIED : result;
+    }
+
+    public static final int PERMISSION_TYPE_FIELD_NUMBER = 5;
+    private int permissionType_ = 0;
+    /**
+     * <code>optional .android_studio.GeminiTelemetryEvent.PermissionApprovalEvent.PermissionType permission_type = 5;</code>
+     * @return Whether the permissionType field is set.
+     */
+    @java.lang.Override public boolean hasPermissionType() {
+      return ((bitField0_ & 0x00000010) != 0);
+    }
+    /**
+     * <code>optional .android_studio.GeminiTelemetryEvent.PermissionApprovalEvent.PermissionType permission_type = 5;</code>
+     * @return The permissionType.
+     */
+    @java.lang.Override public com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.PermissionApprovalEvent.PermissionType getPermissionType() {
+      com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.PermissionApprovalEvent.PermissionType result = com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.PermissionApprovalEvent.PermissionType.forNumber(permissionType_);
+      return result == null ? com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.PermissionApprovalEvent.PermissionType.PERMISSION_TYPE_UNSPECIFIED : result;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (((bitField0_ & 0x00000001) != 0)) {
+        output.writeEnum(1, permissionMode_);
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        output.writeEnum(2, decisionSource_);
+      }
+      if (((bitField0_ & 0x00000004) != 0)) {
+        output.writeEnum(3, auditorDecision_);
+      }
+      if (((bitField0_ & 0x00000008) != 0)) {
+        output.writeEnum(4, decisionOutcome_);
+      }
+      if (((bitField0_ & 0x00000010) != 0)) {
+        output.writeEnum(5, permissionType_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(1, permissionMode_);
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(2, decisionSource_);
+      }
+      if (((bitField0_ & 0x00000004) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(3, auditorDecision_);
+      }
+      if (((bitField0_ & 0x00000008) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(4, decisionOutcome_);
+      }
+      if (((bitField0_ & 0x00000010) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(5, permissionType_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.PermissionApprovalEvent)) {
+        return super.equals(obj);
+      }
+      com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.PermissionApprovalEvent other = (com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.PermissionApprovalEvent) obj;
+
+      if (hasPermissionMode() != other.hasPermissionMode()) return false;
+      if (hasPermissionMode()) {
+        if (permissionMode_ != other.permissionMode_) return false;
+      }
+      if (hasDecisionSource() != other.hasDecisionSource()) return false;
+      if (hasDecisionSource()) {
+        if (decisionSource_ != other.decisionSource_) return false;
+      }
+      if (hasAuditorDecision() != other.hasAuditorDecision()) return false;
+      if (hasAuditorDecision()) {
+        if (auditorDecision_ != other.auditorDecision_) return false;
+      }
+      if (hasDecisionOutcome() != other.hasDecisionOutcome()) return false;
+      if (hasDecisionOutcome()) {
+        if (decisionOutcome_ != other.decisionOutcome_) return false;
+      }
+      if (hasPermissionType() != other.hasPermissionType()) return false;
+      if (hasPermissionType()) {
+        if (permissionType_ != other.permissionType_) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasPermissionMode()) {
+        hash = (37 * hash) + PERMISSION_MODE_FIELD_NUMBER;
+        hash = (53 * hash) + permissionMode_;
+      }
+      if (hasDecisionSource()) {
+        hash = (37 * hash) + DECISION_SOURCE_FIELD_NUMBER;
+        hash = (53 * hash) + decisionSource_;
+      }
+      if (hasAuditorDecision()) {
+        hash = (37 * hash) + AUDITOR_DECISION_FIELD_NUMBER;
+        hash = (53 * hash) + auditorDecision_;
+      }
+      if (hasDecisionOutcome()) {
+        hash = (37 * hash) + DECISION_OUTCOME_FIELD_NUMBER;
+        hash = (53 * hash) + decisionOutcome_;
+      }
+      if (hasPermissionType()) {
+        hash = (37 * hash) + PERMISSION_TYPE_FIELD_NUMBER;
+        hash = (53 * hash) + permissionType_;
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.PermissionApprovalEvent parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.PermissionApprovalEvent parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.PermissionApprovalEvent parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.PermissionApprovalEvent parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.PermissionApprovalEvent parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.PermissionApprovalEvent parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.PermissionApprovalEvent parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.PermissionApprovalEvent parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.PermissionApprovalEvent parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.PermissionApprovalEvent parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.PermissionApprovalEvent parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.PermissionApprovalEvent parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.PermissionApprovalEvent prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code android_studio.GeminiTelemetryEvent.PermissionApprovalEvent}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:android_studio.GeminiTelemetryEvent.PermissionApprovalEvent)
+        com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.PermissionApprovalEventOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_GeminiTelemetryEvent_PermissionApprovalEvent_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_GeminiTelemetryEvent_PermissionApprovalEvent_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.PermissionApprovalEvent.class, com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.PermissionApprovalEvent.Builder.class);
+      }
+
+      // Construct using com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.PermissionApprovalEvent.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        permissionMode_ = 0;
+        decisionSource_ = 0;
+        auditorDecision_ = 0;
+        decisionOutcome_ = 0;
+        permissionType_ = 0;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_GeminiTelemetryEvent_PermissionApprovalEvent_descriptor;
+      }
+
+      @java.lang.Override
+      public com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.PermissionApprovalEvent getDefaultInstanceForType() {
+        return com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.PermissionApprovalEvent.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.PermissionApprovalEvent build() {
+        com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.PermissionApprovalEvent result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.PermissionApprovalEvent buildPartial() {
+        com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.PermissionApprovalEvent result = new com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.PermissionApprovalEvent(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.PermissionApprovalEvent result) {
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.permissionMode_ = permissionMode_;
+          to_bitField0_ |= 0x00000001;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.decisionSource_ = decisionSource_;
+          to_bitField0_ |= 0x00000002;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.auditorDecision_ = auditorDecision_;
+          to_bitField0_ |= 0x00000004;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.decisionOutcome_ = decisionOutcome_;
+          to_bitField0_ |= 0x00000008;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.permissionType_ = permissionType_;
+          to_bitField0_ |= 0x00000010;
+        }
+        result.bitField0_ |= to_bitField0_;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.PermissionApprovalEvent) {
+          return mergeFrom((com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.PermissionApprovalEvent)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.PermissionApprovalEvent other) {
+        if (other == com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.PermissionApprovalEvent.getDefaultInstance()) return this;
+        if (other.hasPermissionMode()) {
+          setPermissionMode(other.getPermissionMode());
+        }
+        if (other.hasDecisionSource()) {
+          setDecisionSource(other.getDecisionSource());
+        }
+        if (other.hasAuditorDecision()) {
+          setAuditorDecision(other.getAuditorDecision());
+        }
+        if (other.hasDecisionOutcome()) {
+          setDecisionOutcome(other.getDecisionOutcome());
+        }
+        if (other.hasPermissionType()) {
+          setPermissionType(other.getPermissionType());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                int tmpRaw = input.readEnum();
+                com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.PermissionApprovalEvent.PermissionMode tmpValue =
+                    com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.PermissionApprovalEvent.PermissionMode.forNumber(tmpRaw);
+                if (tmpValue == null) {
+                  mergeUnknownVarintField(1, tmpRaw);
+                } else {
+                  permissionMode_ = tmpRaw;
+                  bitField0_ |= 0x00000001;
+                }
+                break;
+              } // case 8
+              case 16: {
+                int tmpRaw = input.readEnum();
+                com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.PermissionApprovalEvent.DecisionSource tmpValue =
+                    com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.PermissionApprovalEvent.DecisionSource.forNumber(tmpRaw);
+                if (tmpValue == null) {
+                  mergeUnknownVarintField(2, tmpRaw);
+                } else {
+                  decisionSource_ = tmpRaw;
+                  bitField0_ |= 0x00000002;
+                }
+                break;
+              } // case 16
+              case 24: {
+                int tmpRaw = input.readEnum();
+                com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.PermissionApprovalEvent.AuditorDecision tmpValue =
+                    com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.PermissionApprovalEvent.AuditorDecision.forNumber(tmpRaw);
+                if (tmpValue == null) {
+                  mergeUnknownVarintField(3, tmpRaw);
+                } else {
+                  auditorDecision_ = tmpRaw;
+                  bitField0_ |= 0x00000004;
+                }
+                break;
+              } // case 24
+              case 32: {
+                int tmpRaw = input.readEnum();
+                com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.PermissionApprovalEvent.PermissionDecisionOutcome tmpValue =
+                    com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.PermissionApprovalEvent.PermissionDecisionOutcome.forNumber(tmpRaw);
+                if (tmpValue == null) {
+                  mergeUnknownVarintField(4, tmpRaw);
+                } else {
+                  decisionOutcome_ = tmpRaw;
+                  bitField0_ |= 0x00000008;
+                }
+                break;
+              } // case 32
+              case 40: {
+                int tmpRaw = input.readEnum();
+                com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.PermissionApprovalEvent.PermissionType tmpValue =
+                    com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.PermissionApprovalEvent.PermissionType.forNumber(tmpRaw);
+                if (tmpValue == null) {
+                  mergeUnknownVarintField(5, tmpRaw);
+                } else {
+                  permissionType_ = tmpRaw;
+                  bitField0_ |= 0x00000010;
+                }
+                break;
+              } // case 40
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private int permissionMode_ = 0;
+      /**
+       * <code>optional .android_studio.GeminiTelemetryEvent.PermissionApprovalEvent.PermissionMode permission_mode = 1;</code>
+       * @return Whether the permissionMode field is set.
+       */
+      @java.lang.Override public boolean hasPermissionMode() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>optional .android_studio.GeminiTelemetryEvent.PermissionApprovalEvent.PermissionMode permission_mode = 1;</code>
+       * @return The permissionMode.
+       */
+      @java.lang.Override
+      public com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.PermissionApprovalEvent.PermissionMode getPermissionMode() {
+        com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.PermissionApprovalEvent.PermissionMode result = com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.PermissionApprovalEvent.PermissionMode.forNumber(permissionMode_);
+        return result == null ? com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.PermissionApprovalEvent.PermissionMode.PERMISSION_MODE_UNSPECIFIED : result;
+      }
+      /**
+       * <code>optional .android_studio.GeminiTelemetryEvent.PermissionApprovalEvent.PermissionMode permission_mode = 1;</code>
+       * @param value The permissionMode to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPermissionMode(com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.PermissionApprovalEvent.PermissionMode value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x00000001;
+        permissionMode_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional .android_studio.GeminiTelemetryEvent.PermissionApprovalEvent.PermissionMode permission_mode = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPermissionMode() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        permissionMode_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int decisionSource_ = 0;
+      /**
+       * <code>optional .android_studio.GeminiTelemetryEvent.PermissionApprovalEvent.DecisionSource decision_source = 2;</code>
+       * @return Whether the decisionSource field is set.
+       */
+      @java.lang.Override public boolean hasDecisionSource() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <code>optional .android_studio.GeminiTelemetryEvent.PermissionApprovalEvent.DecisionSource decision_source = 2;</code>
+       * @return The decisionSource.
+       */
+      @java.lang.Override
+      public com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.PermissionApprovalEvent.DecisionSource getDecisionSource() {
+        com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.PermissionApprovalEvent.DecisionSource result = com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.PermissionApprovalEvent.DecisionSource.forNumber(decisionSource_);
+        return result == null ? com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.PermissionApprovalEvent.DecisionSource.DECISION_SOURCE_UNSPECIFIED : result;
+      }
+      /**
+       * <code>optional .android_studio.GeminiTelemetryEvent.PermissionApprovalEvent.DecisionSource decision_source = 2;</code>
+       * @param value The decisionSource to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDecisionSource(com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.PermissionApprovalEvent.DecisionSource value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x00000002;
+        decisionSource_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional .android_studio.GeminiTelemetryEvent.PermissionApprovalEvent.DecisionSource decision_source = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDecisionSource() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        decisionSource_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int auditorDecision_ = 0;
+      /**
+       * <code>optional .android_studio.GeminiTelemetryEvent.PermissionApprovalEvent.AuditorDecision auditor_decision = 3;</code>
+       * @return Whether the auditorDecision field is set.
+       */
+      @java.lang.Override public boolean hasAuditorDecision() {
+        return ((bitField0_ & 0x00000004) != 0);
+      }
+      /**
+       * <code>optional .android_studio.GeminiTelemetryEvent.PermissionApprovalEvent.AuditorDecision auditor_decision = 3;</code>
+       * @return The auditorDecision.
+       */
+      @java.lang.Override
+      public com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.PermissionApprovalEvent.AuditorDecision getAuditorDecision() {
+        com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.PermissionApprovalEvent.AuditorDecision result = com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.PermissionApprovalEvent.AuditorDecision.forNumber(auditorDecision_);
+        return result == null ? com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.PermissionApprovalEvent.AuditorDecision.AUDITOR_DECISION_UNSPECIFIED : result;
+      }
+      /**
+       * <code>optional .android_studio.GeminiTelemetryEvent.PermissionApprovalEvent.AuditorDecision auditor_decision = 3;</code>
+       * @param value The auditorDecision to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAuditorDecision(com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.PermissionApprovalEvent.AuditorDecision value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x00000004;
+        auditorDecision_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional .android_studio.GeminiTelemetryEvent.PermissionApprovalEvent.AuditorDecision auditor_decision = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAuditorDecision() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        auditorDecision_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int decisionOutcome_ = 0;
+      /**
+       * <code>optional .android_studio.GeminiTelemetryEvent.PermissionApprovalEvent.PermissionDecisionOutcome decision_outcome = 4;</code>
+       * @return Whether the decisionOutcome field is set.
+       */
+      @java.lang.Override public boolean hasDecisionOutcome() {
+        return ((bitField0_ & 0x00000008) != 0);
+      }
+      /**
+       * <code>optional .android_studio.GeminiTelemetryEvent.PermissionApprovalEvent.PermissionDecisionOutcome decision_outcome = 4;</code>
+       * @return The decisionOutcome.
+       */
+      @java.lang.Override
+      public com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.PermissionApprovalEvent.PermissionDecisionOutcome getDecisionOutcome() {
+        com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.PermissionApprovalEvent.PermissionDecisionOutcome result = com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.PermissionApprovalEvent.PermissionDecisionOutcome.forNumber(decisionOutcome_);
+        return result == null ? com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.PermissionApprovalEvent.PermissionDecisionOutcome.PERMISSION_DECISION_OUTCOME_UNSPECIFIED : result;
+      }
+      /**
+       * <code>optional .android_studio.GeminiTelemetryEvent.PermissionApprovalEvent.PermissionDecisionOutcome decision_outcome = 4;</code>
+       * @param value The decisionOutcome to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDecisionOutcome(com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.PermissionApprovalEvent.PermissionDecisionOutcome value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x00000008;
+        decisionOutcome_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional .android_studio.GeminiTelemetryEvent.PermissionApprovalEvent.PermissionDecisionOutcome decision_outcome = 4;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDecisionOutcome() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        decisionOutcome_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int permissionType_ = 0;
+      /**
+       * <code>optional .android_studio.GeminiTelemetryEvent.PermissionApprovalEvent.PermissionType permission_type = 5;</code>
+       * @return Whether the permissionType field is set.
+       */
+      @java.lang.Override public boolean hasPermissionType() {
+        return ((bitField0_ & 0x00000010) != 0);
+      }
+      /**
+       * <code>optional .android_studio.GeminiTelemetryEvent.PermissionApprovalEvent.PermissionType permission_type = 5;</code>
+       * @return The permissionType.
+       */
+      @java.lang.Override
+      public com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.PermissionApprovalEvent.PermissionType getPermissionType() {
+        com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.PermissionApprovalEvent.PermissionType result = com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.PermissionApprovalEvent.PermissionType.forNumber(permissionType_);
+        return result == null ? com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.PermissionApprovalEvent.PermissionType.PERMISSION_TYPE_UNSPECIFIED : result;
+      }
+      /**
+       * <code>optional .android_studio.GeminiTelemetryEvent.PermissionApprovalEvent.PermissionType permission_type = 5;</code>
+       * @param value The permissionType to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPermissionType(com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.PermissionApprovalEvent.PermissionType value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x00000010;
+        permissionType_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional .android_studio.GeminiTelemetryEvent.PermissionApprovalEvent.PermissionType permission_type = 5;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPermissionType() {
+        bitField0_ = (bitField0_ & ~0x00000010);
+        permissionType_ = 0;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:android_studio.GeminiTelemetryEvent.PermissionApprovalEvent)
+    }
+
+    // @@protoc_insertion_point(class_scope:android_studio.GeminiTelemetryEvent.PermissionApprovalEvent)
+    private static final com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.PermissionApprovalEvent DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.PermissionApprovalEvent();
+    }
+
+    public static com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.PermissionApprovalEvent getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<PermissionApprovalEvent>
+        PARSER = new com.google.protobuf.AbstractParser<PermissionApprovalEvent>() {
+      @java.lang.Override
+      public PermissionApprovalEvent parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<PermissionApprovalEvent> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<PermissionApprovalEvent> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.PermissionApprovalEvent getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   public interface AgentEventOrBuilder extends
       // @@protoc_insertion_point(interface_extends:android_studio.GeminiTelemetryEvent.AgentEvent)
       com.google.protobuf.MessageOrBuilder {
@@ -21881,6 +23460,7 @@ private static final long serialVersionUID = 0L;
     SERVER_EVENT(2),
     UI_EVENT(3),
     AGENT_EVENT(4),
+    PERMISSION_APPROVAL_EVENT(5),
     DOMAIN_NOT_SET(0);
     private final int value;
     private DomainCase(int value) {
@@ -21901,6 +23481,7 @@ private static final long serialVersionUID = 0L;
         case 2: return SERVER_EVENT;
         case 3: return UI_EVENT;
         case 4: return AGENT_EVENT;
+        case 5: return PERMISSION_APPROVAL_EVENT;
         case 0: return DOMAIN_NOT_SET;
         default: return null;
       }
@@ -22086,6 +23667,49 @@ private static final long serialVersionUID = 0L;
     return com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.getDefaultInstance();
   }
 
+  public static final int PERMISSION_APPROVAL_EVENT_FIELD_NUMBER = 5;
+  /**
+   * <pre>
+   * Events related to the permissions evaluation.
+   * </pre>
+   *
+   * <code>.android_studio.GeminiTelemetryEvent.PermissionApprovalEvent permission_approval_event = 5;</code>
+   * @return Whether the permissionApprovalEvent field is set.
+   */
+  @java.lang.Override
+  public boolean hasPermissionApprovalEvent() {
+    return domainCase_ == 5;
+  }
+  /**
+   * <pre>
+   * Events related to the permissions evaluation.
+   * </pre>
+   *
+   * <code>.android_studio.GeminiTelemetryEvent.PermissionApprovalEvent permission_approval_event = 5;</code>
+   * @return The permissionApprovalEvent.
+   */
+  @java.lang.Override
+  public com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.PermissionApprovalEvent getPermissionApprovalEvent() {
+    if (domainCase_ == 5) {
+       return (com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.PermissionApprovalEvent) domain_;
+    }
+    return com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.PermissionApprovalEvent.getDefaultInstance();
+  }
+  /**
+   * <pre>
+   * Events related to the permissions evaluation.
+   * </pre>
+   *
+   * <code>.android_studio.GeminiTelemetryEvent.PermissionApprovalEvent permission_approval_event = 5;</code>
+   */
+  @java.lang.Override
+  public com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.PermissionApprovalEventOrBuilder getPermissionApprovalEventOrBuilder() {
+    if (domainCase_ == 5) {
+       return (com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.PermissionApprovalEvent) domain_;
+    }
+    return com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.PermissionApprovalEvent.getDefaultInstance();
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -22112,6 +23736,9 @@ private static final long serialVersionUID = 0L;
     if (domainCase_ == 4) {
       output.writeMessage(4, (com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent) domain_);
     }
+    if (domainCase_ == 5) {
+      output.writeMessage(5, (com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.PermissionApprovalEvent) domain_);
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -22136,6 +23763,10 @@ private static final long serialVersionUID = 0L;
     if (domainCase_ == 4) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(4, (com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent) domain_);
+    }
+    if (domainCase_ == 5) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(5, (com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.PermissionApprovalEvent) domain_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -22171,6 +23802,10 @@ private static final long serialVersionUID = 0L;
         if (!getAgentEvent()
             .equals(other.getAgentEvent())) return false;
         break;
+      case 5:
+        if (!getPermissionApprovalEvent()
+            .equals(other.getPermissionApprovalEvent())) return false;
+        break;
       case 0:
       default:
     }
@@ -22201,6 +23836,10 @@ private static final long serialVersionUID = 0L;
       case 4:
         hash = (37 * hash) + AGENT_EVENT_FIELD_NUMBER;
         hash = (53 * hash) + getAgentEvent().hashCode();
+        break;
+      case 5:
+        hash = (37 * hash) + PERMISSION_APPROVAL_EVENT_FIELD_NUMBER;
+        hash = (53 * hash) + getPermissionApprovalEvent().hashCode();
         break;
       case 0:
       default:
@@ -22354,6 +23993,9 @@ private static final long serialVersionUID = 0L;
       if (agentEventBuilder_ != null) {
         agentEventBuilder_.clear();
       }
+      if (permissionApprovalEventBuilder_ != null) {
+        permissionApprovalEventBuilder_.clear();
+      }
       domainCase_ = 0;
       domain_ = null;
       return this;
@@ -22415,6 +24057,10 @@ private static final long serialVersionUID = 0L;
           agentEventBuilder_ != null) {
         result.domain_ = agentEventBuilder_.build();
       }
+      if (domainCase_ == 5 &&
+          permissionApprovalEventBuilder_ != null) {
+        result.domain_ = permissionApprovalEventBuilder_.build();
+      }
     }
 
     @java.lang.Override
@@ -22443,6 +24089,10 @@ private static final long serialVersionUID = 0L;
         }
         case AGENT_EVENT: {
           mergeAgentEvent(other.getAgentEvent());
+          break;
+        }
+        case PERMISSION_APPROVAL_EVENT: {
+          mergePermissionApprovalEvent(other.getPermissionApprovalEvent());
           break;
         }
         case DOMAIN_NOT_SET: {
@@ -22503,6 +24153,13 @@ private static final long serialVersionUID = 0L;
               domainCase_ = 4;
               break;
             } // case 34
+            case 42: {
+              input.readMessage(
+                  getPermissionApprovalEventFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              domainCase_ = 5;
+              break;
+            } // case 42
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -23231,6 +24888,184 @@ private static final long serialVersionUID = 0L;
       domainCase_ = 4;
       onChanged();
       return agentEventBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.PermissionApprovalEvent, com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.PermissionApprovalEvent.Builder, com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.PermissionApprovalEventOrBuilder> permissionApprovalEventBuilder_;
+    /**
+     * <pre>
+     * Events related to the permissions evaluation.
+     * </pre>
+     *
+     * <code>.android_studio.GeminiTelemetryEvent.PermissionApprovalEvent permission_approval_event = 5;</code>
+     * @return Whether the permissionApprovalEvent field is set.
+     */
+    @java.lang.Override
+    public boolean hasPermissionApprovalEvent() {
+      return domainCase_ == 5;
+    }
+    /**
+     * <pre>
+     * Events related to the permissions evaluation.
+     * </pre>
+     *
+     * <code>.android_studio.GeminiTelemetryEvent.PermissionApprovalEvent permission_approval_event = 5;</code>
+     * @return The permissionApprovalEvent.
+     */
+    @java.lang.Override
+    public com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.PermissionApprovalEvent getPermissionApprovalEvent() {
+      if (permissionApprovalEventBuilder_ == null) {
+        if (domainCase_ == 5) {
+          return (com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.PermissionApprovalEvent) domain_;
+        }
+        return com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.PermissionApprovalEvent.getDefaultInstance();
+      } else {
+        if (domainCase_ == 5) {
+          return permissionApprovalEventBuilder_.getMessage();
+        }
+        return com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.PermissionApprovalEvent.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * Events related to the permissions evaluation.
+     * </pre>
+     *
+     * <code>.android_studio.GeminiTelemetryEvent.PermissionApprovalEvent permission_approval_event = 5;</code>
+     */
+    public Builder setPermissionApprovalEvent(com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.PermissionApprovalEvent value) {
+      if (permissionApprovalEventBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        domain_ = value;
+        onChanged();
+      } else {
+        permissionApprovalEventBuilder_.setMessage(value);
+      }
+      domainCase_ = 5;
+      return this;
+    }
+    /**
+     * <pre>
+     * Events related to the permissions evaluation.
+     * </pre>
+     *
+     * <code>.android_studio.GeminiTelemetryEvent.PermissionApprovalEvent permission_approval_event = 5;</code>
+     */
+    public Builder setPermissionApprovalEvent(
+        com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.PermissionApprovalEvent.Builder builderForValue) {
+      if (permissionApprovalEventBuilder_ == null) {
+        domain_ = builderForValue.build();
+        onChanged();
+      } else {
+        permissionApprovalEventBuilder_.setMessage(builderForValue.build());
+      }
+      domainCase_ = 5;
+      return this;
+    }
+    /**
+     * <pre>
+     * Events related to the permissions evaluation.
+     * </pre>
+     *
+     * <code>.android_studio.GeminiTelemetryEvent.PermissionApprovalEvent permission_approval_event = 5;</code>
+     */
+    public Builder mergePermissionApprovalEvent(com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.PermissionApprovalEvent value) {
+      if (permissionApprovalEventBuilder_ == null) {
+        if (domainCase_ == 5 &&
+            domain_ != com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.PermissionApprovalEvent.getDefaultInstance()) {
+          domain_ = com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.PermissionApprovalEvent.newBuilder((com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.PermissionApprovalEvent) domain_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          domain_ = value;
+        }
+        onChanged();
+      } else {
+        if (domainCase_ == 5) {
+          permissionApprovalEventBuilder_.mergeFrom(value);
+        } else {
+          permissionApprovalEventBuilder_.setMessage(value);
+        }
+      }
+      domainCase_ = 5;
+      return this;
+    }
+    /**
+     * <pre>
+     * Events related to the permissions evaluation.
+     * </pre>
+     *
+     * <code>.android_studio.GeminiTelemetryEvent.PermissionApprovalEvent permission_approval_event = 5;</code>
+     */
+    public Builder clearPermissionApprovalEvent() {
+      if (permissionApprovalEventBuilder_ == null) {
+        if (domainCase_ == 5) {
+          domainCase_ = 0;
+          domain_ = null;
+          onChanged();
+        }
+      } else {
+        if (domainCase_ == 5) {
+          domainCase_ = 0;
+          domain_ = null;
+        }
+        permissionApprovalEventBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Events related to the permissions evaluation.
+     * </pre>
+     *
+     * <code>.android_studio.GeminiTelemetryEvent.PermissionApprovalEvent permission_approval_event = 5;</code>
+     */
+    public com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.PermissionApprovalEvent.Builder getPermissionApprovalEventBuilder() {
+      return getPermissionApprovalEventFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * Events related to the permissions evaluation.
+     * </pre>
+     *
+     * <code>.android_studio.GeminiTelemetryEvent.PermissionApprovalEvent permission_approval_event = 5;</code>
+     */
+    @java.lang.Override
+    public com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.PermissionApprovalEventOrBuilder getPermissionApprovalEventOrBuilder() {
+      if ((domainCase_ == 5) && (permissionApprovalEventBuilder_ != null)) {
+        return permissionApprovalEventBuilder_.getMessageOrBuilder();
+      } else {
+        if (domainCase_ == 5) {
+          return (com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.PermissionApprovalEvent) domain_;
+        }
+        return com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.PermissionApprovalEvent.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * Events related to the permissions evaluation.
+     * </pre>
+     *
+     * <code>.android_studio.GeminiTelemetryEvent.PermissionApprovalEvent permission_approval_event = 5;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.PermissionApprovalEvent, com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.PermissionApprovalEvent.Builder, com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.PermissionApprovalEventOrBuilder> 
+        getPermissionApprovalEventFieldBuilder() {
+      if (permissionApprovalEventBuilder_ == null) {
+        if (!(domainCase_ == 5)) {
+          domain_ = com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.PermissionApprovalEvent.getDefaultInstance();
+        }
+        permissionApprovalEventBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.PermissionApprovalEvent, com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.PermissionApprovalEvent.Builder, com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.PermissionApprovalEventOrBuilder>(
+                (com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.PermissionApprovalEvent) domain_,
+                getParentForChildren(),
+                isClean());
+        domain_ = null;
+      }
+      domainCase_ = 5;
+      onChanged();
+      return permissionApprovalEventBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(
