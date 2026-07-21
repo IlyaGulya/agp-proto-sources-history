@@ -776,43 +776,107 @@ private static final long serialVersionUID = 0L;
     com.google.wireless.android.sdk.stats.MemoryUsageReportEvent.ObjectsStatisticsOrBuilder getTotalStatsOrBuilder();
 
     /**
-     * <code>optional .android_studio.MemoryUsageReportEvent.ObjectsStatistics new_generation_stats = 2;</code>
+     * <pre>
+     * Historical: we no longer track object creation timestamps
+     * </pre>
+     *
+     * <code>optional .android_studio.MemoryUsageReportEvent.ObjectsStatistics new_generation_stats = 2 [deprecated = true];</code>
+     * @deprecated
      * @return Whether the newGenerationStats field is set.
      */
-    boolean hasNewGenerationStats();
+    @java.lang.Deprecated boolean hasNewGenerationStats();
     /**
-     * <code>optional .android_studio.MemoryUsageReportEvent.ObjectsStatistics new_generation_stats = 2;</code>
+     * <pre>
+     * Historical: we no longer track object creation timestamps
+     * </pre>
+     *
+     * <code>optional .android_studio.MemoryUsageReportEvent.ObjectsStatistics new_generation_stats = 2 [deprecated = true];</code>
+     * @deprecated
      * @return The newGenerationStats.
      */
-    com.google.wireless.android.sdk.stats.MemoryUsageReportEvent.ObjectsStatistics getNewGenerationStats();
+    @java.lang.Deprecated com.google.wireless.android.sdk.stats.MemoryUsageReportEvent.ObjectsStatistics getNewGenerationStats();
     /**
-     * <code>optional .android_studio.MemoryUsageReportEvent.ObjectsStatistics new_generation_stats = 2;</code>
+     * <pre>
+     * Historical: we no longer track object creation timestamps
+     * </pre>
+     *
+     * <code>optional .android_studio.MemoryUsageReportEvent.ObjectsStatistics new_generation_stats = 2 [deprecated = true];</code>
      */
-    com.google.wireless.android.sdk.stats.MemoryUsageReportEvent.ObjectsStatisticsOrBuilder getNewGenerationStatsOrBuilder();
+    @java.lang.Deprecated com.google.wireless.android.sdk.stats.MemoryUsageReportEvent.ObjectsStatisticsOrBuilder getNewGenerationStatsOrBuilder();
 
     /**
-     * <code>repeated .android_studio.MemoryUsageReportEvent.ObjectsStatistics old_generations_stats = 3;</code>
+     * <pre>
+     * Historical: we no longer track object creation timestamps
+     * </pre>
+     *
+     * <code>repeated .android_studio.MemoryUsageReportEvent.ObjectsStatistics old_generations_stats = 3 [deprecated = true];</code>
      */
-    java.util.List<com.google.wireless.android.sdk.stats.MemoryUsageReportEvent.ObjectsStatistics> 
+    @java.lang.Deprecated java.util.List<com.google.wireless.android.sdk.stats.MemoryUsageReportEvent.ObjectsStatistics> 
         getOldGenerationsStatsList();
     /**
-     * <code>repeated .android_studio.MemoryUsageReportEvent.ObjectsStatistics old_generations_stats = 3;</code>
+     * <pre>
+     * Historical: we no longer track object creation timestamps
+     * </pre>
+     *
+     * <code>repeated .android_studio.MemoryUsageReportEvent.ObjectsStatistics old_generations_stats = 3 [deprecated = true];</code>
      */
-    com.google.wireless.android.sdk.stats.MemoryUsageReportEvent.ObjectsStatistics getOldGenerationsStats(int index);
+    @java.lang.Deprecated com.google.wireless.android.sdk.stats.MemoryUsageReportEvent.ObjectsStatistics getOldGenerationsStats(int index);
     /**
-     * <code>repeated .android_studio.MemoryUsageReportEvent.ObjectsStatistics old_generations_stats = 3;</code>
+     * <pre>
+     * Historical: we no longer track object creation timestamps
+     * </pre>
+     *
+     * <code>repeated .android_studio.MemoryUsageReportEvent.ObjectsStatistics old_generations_stats = 3 [deprecated = true];</code>
      */
-    int getOldGenerationsStatsCount();
+    @java.lang.Deprecated int getOldGenerationsStatsCount();
     /**
-     * <code>repeated .android_studio.MemoryUsageReportEvent.ObjectsStatistics old_generations_stats = 3;</code>
+     * <pre>
+     * Historical: we no longer track object creation timestamps
+     * </pre>
+     *
+     * <code>repeated .android_studio.MemoryUsageReportEvent.ObjectsStatistics old_generations_stats = 3 [deprecated = true];</code>
      */
-    java.util.List<? extends com.google.wireless.android.sdk.stats.MemoryUsageReportEvent.ObjectsStatisticsOrBuilder> 
+    @java.lang.Deprecated java.util.List<? extends com.google.wireless.android.sdk.stats.MemoryUsageReportEvent.ObjectsStatisticsOrBuilder> 
         getOldGenerationsStatsOrBuilderList();
     /**
-     * <code>repeated .android_studio.MemoryUsageReportEvent.ObjectsStatistics old_generations_stats = 3;</code>
+     * <pre>
+     * Historical: we no longer track object creation timestamps
+     * </pre>
+     *
+     * <code>repeated .android_studio.MemoryUsageReportEvent.ObjectsStatistics old_generations_stats = 3 [deprecated = true];</code>
      */
-    com.google.wireless.android.sdk.stats.MemoryUsageReportEvent.ObjectsStatisticsOrBuilder getOldGenerationsStatsOrBuilder(
+    @java.lang.Deprecated com.google.wireless.android.sdk.stats.MemoryUsageReportEvent.ObjectsStatisticsOrBuilder getOldGenerationsStatsOrBuilder(
         int index);
+
+    /**
+     * <code>optional .android_studio.MemoryUsageReportEvent.ObjectsStatistics platform_objects_stats = 4;</code>
+     * @return Whether the platformObjectsStats field is set.
+     */
+    boolean hasPlatformObjectsStats();
+    /**
+     * <code>optional .android_studio.MemoryUsageReportEvent.ObjectsStatistics platform_objects_stats = 4;</code>
+     * @return The platformObjectsStats.
+     */
+    com.google.wireless.android.sdk.stats.MemoryUsageReportEvent.ObjectsStatistics getPlatformObjectsStats();
+    /**
+     * <code>optional .android_studio.MemoryUsageReportEvent.ObjectsStatistics platform_objects_stats = 4;</code>
+     */
+    com.google.wireless.android.sdk.stats.MemoryUsageReportEvent.ObjectsStatisticsOrBuilder getPlatformObjectsStatsOrBuilder();
+
+    /**
+     * <code>optional .android_studio.MemoryUsageReportEvent.ObjectsStatistics platform_retained_stats = 5;</code>
+     * @return Whether the platformRetainedStats field is set.
+     */
+    boolean hasPlatformRetainedStats();
+    /**
+     * <code>optional .android_studio.MemoryUsageReportEvent.ObjectsStatistics platform_retained_stats = 5;</code>
+     * @return The platformRetainedStats.
+     */
+    com.google.wireless.android.sdk.stats.MemoryUsageReportEvent.ObjectsStatistics getPlatformRetainedStats();
+    /**
+     * <code>optional .android_studio.MemoryUsageReportEvent.ObjectsStatistics platform_retained_stats = 5;</code>
+     */
+    com.google.wireless.android.sdk.stats.MemoryUsageReportEvent.ObjectsStatisticsOrBuilder getPlatformRetainedStatsOrBuilder();
   }
   /**
    * Protobuf type {@code android_studio.MemoryUsageReportEvent.MemoryTrafficStatistics}
@@ -896,6 +960,32 @@ private static final long serialVersionUID = 0L;
                   input.readMessage(com.google.wireless.android.sdk.stats.MemoryUsageReportEvent.ObjectsStatistics.PARSER, extensionRegistry));
               break;
             }
+            case 34: {
+              com.google.wireless.android.sdk.stats.MemoryUsageReportEvent.ObjectsStatistics.Builder subBuilder = null;
+              if (((bitField0_ & 0x00000004) != 0)) {
+                subBuilder = platformObjectsStats_.toBuilder();
+              }
+              platformObjectsStats_ = input.readMessage(com.google.wireless.android.sdk.stats.MemoryUsageReportEvent.ObjectsStatistics.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(platformObjectsStats_);
+                platformObjectsStats_ = subBuilder.buildPartial();
+              }
+              bitField0_ |= 0x00000004;
+              break;
+            }
+            case 42: {
+              com.google.wireless.android.sdk.stats.MemoryUsageReportEvent.ObjectsStatistics.Builder subBuilder = null;
+              if (((bitField0_ & 0x00000008) != 0)) {
+                subBuilder = platformRetainedStats_.toBuilder();
+              }
+              platformRetainedStats_ = input.readMessage(com.google.wireless.android.sdk.stats.MemoryUsageReportEvent.ObjectsStatistics.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(platformRetainedStats_);
+                platformRetainedStats_ = subBuilder.buildPartial();
+              }
+              bitField0_ |= 0x00000008;
+              break;
+            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -961,67 +1051,153 @@ private static final long serialVersionUID = 0L;
     public static final int NEW_GENERATION_STATS_FIELD_NUMBER = 2;
     private com.google.wireless.android.sdk.stats.MemoryUsageReportEvent.ObjectsStatistics newGenerationStats_;
     /**
-     * <code>optional .android_studio.MemoryUsageReportEvent.ObjectsStatistics new_generation_stats = 2;</code>
+     * <pre>
+     * Historical: we no longer track object creation timestamps
+     * </pre>
+     *
+     * <code>optional .android_studio.MemoryUsageReportEvent.ObjectsStatistics new_generation_stats = 2 [deprecated = true];</code>
+     * @deprecated
      * @return Whether the newGenerationStats field is set.
      */
     @java.lang.Override
-    public boolean hasNewGenerationStats() {
+    @java.lang.Deprecated public boolean hasNewGenerationStats() {
       return ((bitField0_ & 0x00000002) != 0);
     }
     /**
-     * <code>optional .android_studio.MemoryUsageReportEvent.ObjectsStatistics new_generation_stats = 2;</code>
+     * <pre>
+     * Historical: we no longer track object creation timestamps
+     * </pre>
+     *
+     * <code>optional .android_studio.MemoryUsageReportEvent.ObjectsStatistics new_generation_stats = 2 [deprecated = true];</code>
+     * @deprecated
      * @return The newGenerationStats.
      */
     @java.lang.Override
-    public com.google.wireless.android.sdk.stats.MemoryUsageReportEvent.ObjectsStatistics getNewGenerationStats() {
+    @java.lang.Deprecated public com.google.wireless.android.sdk.stats.MemoryUsageReportEvent.ObjectsStatistics getNewGenerationStats() {
       return newGenerationStats_ == null ? com.google.wireless.android.sdk.stats.MemoryUsageReportEvent.ObjectsStatistics.getDefaultInstance() : newGenerationStats_;
     }
     /**
-     * <code>optional .android_studio.MemoryUsageReportEvent.ObjectsStatistics new_generation_stats = 2;</code>
+     * <pre>
+     * Historical: we no longer track object creation timestamps
+     * </pre>
+     *
+     * <code>optional .android_studio.MemoryUsageReportEvent.ObjectsStatistics new_generation_stats = 2 [deprecated = true];</code>
      */
     @java.lang.Override
-    public com.google.wireless.android.sdk.stats.MemoryUsageReportEvent.ObjectsStatisticsOrBuilder getNewGenerationStatsOrBuilder() {
+    @java.lang.Deprecated public com.google.wireless.android.sdk.stats.MemoryUsageReportEvent.ObjectsStatisticsOrBuilder getNewGenerationStatsOrBuilder() {
       return newGenerationStats_ == null ? com.google.wireless.android.sdk.stats.MemoryUsageReportEvent.ObjectsStatistics.getDefaultInstance() : newGenerationStats_;
     }
 
     public static final int OLD_GENERATIONS_STATS_FIELD_NUMBER = 3;
     private java.util.List<com.google.wireless.android.sdk.stats.MemoryUsageReportEvent.ObjectsStatistics> oldGenerationsStats_;
     /**
-     * <code>repeated .android_studio.MemoryUsageReportEvent.ObjectsStatistics old_generations_stats = 3;</code>
+     * <pre>
+     * Historical: we no longer track object creation timestamps
+     * </pre>
+     *
+     * <code>repeated .android_studio.MemoryUsageReportEvent.ObjectsStatistics old_generations_stats = 3 [deprecated = true];</code>
      */
     @java.lang.Override
-    public java.util.List<com.google.wireless.android.sdk.stats.MemoryUsageReportEvent.ObjectsStatistics> getOldGenerationsStatsList() {
+    @java.lang.Deprecated public java.util.List<com.google.wireless.android.sdk.stats.MemoryUsageReportEvent.ObjectsStatistics> getOldGenerationsStatsList() {
       return oldGenerationsStats_;
     }
     /**
-     * <code>repeated .android_studio.MemoryUsageReportEvent.ObjectsStatistics old_generations_stats = 3;</code>
+     * <pre>
+     * Historical: we no longer track object creation timestamps
+     * </pre>
+     *
+     * <code>repeated .android_studio.MemoryUsageReportEvent.ObjectsStatistics old_generations_stats = 3 [deprecated = true];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends com.google.wireless.android.sdk.stats.MemoryUsageReportEvent.ObjectsStatisticsOrBuilder> 
+    @java.lang.Deprecated public java.util.List<? extends com.google.wireless.android.sdk.stats.MemoryUsageReportEvent.ObjectsStatisticsOrBuilder> 
         getOldGenerationsStatsOrBuilderList() {
       return oldGenerationsStats_;
     }
     /**
-     * <code>repeated .android_studio.MemoryUsageReportEvent.ObjectsStatistics old_generations_stats = 3;</code>
+     * <pre>
+     * Historical: we no longer track object creation timestamps
+     * </pre>
+     *
+     * <code>repeated .android_studio.MemoryUsageReportEvent.ObjectsStatistics old_generations_stats = 3 [deprecated = true];</code>
      */
     @java.lang.Override
-    public int getOldGenerationsStatsCount() {
+    @java.lang.Deprecated public int getOldGenerationsStatsCount() {
       return oldGenerationsStats_.size();
     }
     /**
-     * <code>repeated .android_studio.MemoryUsageReportEvent.ObjectsStatistics old_generations_stats = 3;</code>
+     * <pre>
+     * Historical: we no longer track object creation timestamps
+     * </pre>
+     *
+     * <code>repeated .android_studio.MemoryUsageReportEvent.ObjectsStatistics old_generations_stats = 3 [deprecated = true];</code>
      */
     @java.lang.Override
-    public com.google.wireless.android.sdk.stats.MemoryUsageReportEvent.ObjectsStatistics getOldGenerationsStats(int index) {
+    @java.lang.Deprecated public com.google.wireless.android.sdk.stats.MemoryUsageReportEvent.ObjectsStatistics getOldGenerationsStats(int index) {
       return oldGenerationsStats_.get(index);
     }
     /**
-     * <code>repeated .android_studio.MemoryUsageReportEvent.ObjectsStatistics old_generations_stats = 3;</code>
+     * <pre>
+     * Historical: we no longer track object creation timestamps
+     * </pre>
+     *
+     * <code>repeated .android_studio.MemoryUsageReportEvent.ObjectsStatistics old_generations_stats = 3 [deprecated = true];</code>
      */
     @java.lang.Override
-    public com.google.wireless.android.sdk.stats.MemoryUsageReportEvent.ObjectsStatisticsOrBuilder getOldGenerationsStatsOrBuilder(
+    @java.lang.Deprecated public com.google.wireless.android.sdk.stats.MemoryUsageReportEvent.ObjectsStatisticsOrBuilder getOldGenerationsStatsOrBuilder(
         int index) {
       return oldGenerationsStats_.get(index);
+    }
+
+    public static final int PLATFORM_OBJECTS_STATS_FIELD_NUMBER = 4;
+    private com.google.wireless.android.sdk.stats.MemoryUsageReportEvent.ObjectsStatistics platformObjectsStats_;
+    /**
+     * <code>optional .android_studio.MemoryUsageReportEvent.ObjectsStatistics platform_objects_stats = 4;</code>
+     * @return Whether the platformObjectsStats field is set.
+     */
+    @java.lang.Override
+    public boolean hasPlatformObjectsStats() {
+      return ((bitField0_ & 0x00000004) != 0);
+    }
+    /**
+     * <code>optional .android_studio.MemoryUsageReportEvent.ObjectsStatistics platform_objects_stats = 4;</code>
+     * @return The platformObjectsStats.
+     */
+    @java.lang.Override
+    public com.google.wireless.android.sdk.stats.MemoryUsageReportEvent.ObjectsStatistics getPlatformObjectsStats() {
+      return platformObjectsStats_ == null ? com.google.wireless.android.sdk.stats.MemoryUsageReportEvent.ObjectsStatistics.getDefaultInstance() : platformObjectsStats_;
+    }
+    /**
+     * <code>optional .android_studio.MemoryUsageReportEvent.ObjectsStatistics platform_objects_stats = 4;</code>
+     */
+    @java.lang.Override
+    public com.google.wireless.android.sdk.stats.MemoryUsageReportEvent.ObjectsStatisticsOrBuilder getPlatformObjectsStatsOrBuilder() {
+      return platformObjectsStats_ == null ? com.google.wireless.android.sdk.stats.MemoryUsageReportEvent.ObjectsStatistics.getDefaultInstance() : platformObjectsStats_;
+    }
+
+    public static final int PLATFORM_RETAINED_STATS_FIELD_NUMBER = 5;
+    private com.google.wireless.android.sdk.stats.MemoryUsageReportEvent.ObjectsStatistics platformRetainedStats_;
+    /**
+     * <code>optional .android_studio.MemoryUsageReportEvent.ObjectsStatistics platform_retained_stats = 5;</code>
+     * @return Whether the platformRetainedStats field is set.
+     */
+    @java.lang.Override
+    public boolean hasPlatformRetainedStats() {
+      return ((bitField0_ & 0x00000008) != 0);
+    }
+    /**
+     * <code>optional .android_studio.MemoryUsageReportEvent.ObjectsStatistics platform_retained_stats = 5;</code>
+     * @return The platformRetainedStats.
+     */
+    @java.lang.Override
+    public com.google.wireless.android.sdk.stats.MemoryUsageReportEvent.ObjectsStatistics getPlatformRetainedStats() {
+      return platformRetainedStats_ == null ? com.google.wireless.android.sdk.stats.MemoryUsageReportEvent.ObjectsStatistics.getDefaultInstance() : platformRetainedStats_;
+    }
+    /**
+     * <code>optional .android_studio.MemoryUsageReportEvent.ObjectsStatistics platform_retained_stats = 5;</code>
+     */
+    @java.lang.Override
+    public com.google.wireless.android.sdk.stats.MemoryUsageReportEvent.ObjectsStatisticsOrBuilder getPlatformRetainedStatsOrBuilder() {
+      return platformRetainedStats_ == null ? com.google.wireless.android.sdk.stats.MemoryUsageReportEvent.ObjectsStatistics.getDefaultInstance() : platformRetainedStats_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -1047,6 +1223,12 @@ private static final long serialVersionUID = 0L;
       for (int i = 0; i < oldGenerationsStats_.size(); i++) {
         output.writeMessage(3, oldGenerationsStats_.get(i));
       }
+      if (((bitField0_ & 0x00000004) != 0)) {
+        output.writeMessage(4, getPlatformObjectsStats());
+      }
+      if (((bitField0_ & 0x00000008) != 0)) {
+        output.writeMessage(5, getPlatformRetainedStats());
+      }
       unknownFields.writeTo(output);
     }
 
@@ -1067,6 +1249,14 @@ private static final long serialVersionUID = 0L;
       for (int i = 0; i < oldGenerationsStats_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, oldGenerationsStats_.get(i));
+      }
+      if (((bitField0_ & 0x00000004) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, getPlatformObjectsStats());
+      }
+      if (((bitField0_ & 0x00000008) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(5, getPlatformRetainedStats());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -1095,6 +1285,16 @@ private static final long serialVersionUID = 0L;
       }
       if (!getOldGenerationsStatsList()
           .equals(other.getOldGenerationsStatsList())) return false;
+      if (hasPlatformObjectsStats() != other.hasPlatformObjectsStats()) return false;
+      if (hasPlatformObjectsStats()) {
+        if (!getPlatformObjectsStats()
+            .equals(other.getPlatformObjectsStats())) return false;
+      }
+      if (hasPlatformRetainedStats() != other.hasPlatformRetainedStats()) return false;
+      if (hasPlatformRetainedStats()) {
+        if (!getPlatformRetainedStats()
+            .equals(other.getPlatformRetainedStats())) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -1117,6 +1317,14 @@ private static final long serialVersionUID = 0L;
       if (getOldGenerationsStatsCount() > 0) {
         hash = (37 * hash) + OLD_GENERATIONS_STATS_FIELD_NUMBER;
         hash = (53 * hash) + getOldGenerationsStatsList().hashCode();
+      }
+      if (hasPlatformObjectsStats()) {
+        hash = (37 * hash) + PLATFORM_OBJECTS_STATS_FIELD_NUMBER;
+        hash = (53 * hash) + getPlatformObjectsStats().hashCode();
+      }
+      if (hasPlatformRetainedStats()) {
+        hash = (37 * hash) + PLATFORM_RETAINED_STATS_FIELD_NUMBER;
+        hash = (53 * hash) + getPlatformRetainedStats().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -1249,6 +1457,8 @@ private static final long serialVersionUID = 0L;
           getTotalStatsFieldBuilder();
           getNewGenerationStatsFieldBuilder();
           getOldGenerationsStatsFieldBuilder();
+          getPlatformObjectsStatsFieldBuilder();
+          getPlatformRetainedStatsFieldBuilder();
         }
       }
       @java.lang.Override
@@ -1272,6 +1482,18 @@ private static final long serialVersionUID = 0L;
         } else {
           oldGenerationsStatsBuilder_.clear();
         }
+        if (platformObjectsStatsBuilder_ == null) {
+          platformObjectsStats_ = null;
+        } else {
+          platformObjectsStatsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000008);
+        if (platformRetainedStatsBuilder_ == null) {
+          platformRetainedStats_ = null;
+        } else {
+          platformRetainedStatsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000010);
         return this;
       }
 
@@ -1324,6 +1546,22 @@ private static final long serialVersionUID = 0L;
           result.oldGenerationsStats_ = oldGenerationsStats_;
         } else {
           result.oldGenerationsStats_ = oldGenerationsStatsBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          if (platformObjectsStatsBuilder_ == null) {
+            result.platformObjectsStats_ = platformObjectsStats_;
+          } else {
+            result.platformObjectsStats_ = platformObjectsStatsBuilder_.build();
+          }
+          to_bitField0_ |= 0x00000004;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          if (platformRetainedStatsBuilder_ == null) {
+            result.platformRetainedStats_ = platformRetainedStats_;
+          } else {
+            result.platformRetainedStats_ = platformRetainedStatsBuilder_.build();
+          }
+          to_bitField0_ |= 0x00000008;
         }
         result.bitField0_ = to_bitField0_;
         onBuilt();
@@ -1405,6 +1643,12 @@ private static final long serialVersionUID = 0L;
               oldGenerationsStatsBuilder_.addAllMessages(other.oldGenerationsStats_);
             }
           }
+        }
+        if (other.hasPlatformObjectsStats()) {
+          mergePlatformObjectsStats(other.getPlatformObjectsStats());
+        }
+        if (other.hasPlatformRetainedStats()) {
+          mergePlatformRetainedStats(other.getPlatformRetainedStats());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -1560,17 +1804,27 @@ private static final long serialVersionUID = 0L;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.wireless.android.sdk.stats.MemoryUsageReportEvent.ObjectsStatistics, com.google.wireless.android.sdk.stats.MemoryUsageReportEvent.ObjectsStatistics.Builder, com.google.wireless.android.sdk.stats.MemoryUsageReportEvent.ObjectsStatisticsOrBuilder> newGenerationStatsBuilder_;
       /**
-       * <code>optional .android_studio.MemoryUsageReportEvent.ObjectsStatistics new_generation_stats = 2;</code>
+       * <pre>
+       * Historical: we no longer track object creation timestamps
+       * </pre>
+       *
+       * <code>optional .android_studio.MemoryUsageReportEvent.ObjectsStatistics new_generation_stats = 2 [deprecated = true];</code>
+       * @deprecated
        * @return Whether the newGenerationStats field is set.
        */
-      public boolean hasNewGenerationStats() {
+      @java.lang.Deprecated public boolean hasNewGenerationStats() {
         return ((bitField0_ & 0x00000002) != 0);
       }
       /**
-       * <code>optional .android_studio.MemoryUsageReportEvent.ObjectsStatistics new_generation_stats = 2;</code>
+       * <pre>
+       * Historical: we no longer track object creation timestamps
+       * </pre>
+       *
+       * <code>optional .android_studio.MemoryUsageReportEvent.ObjectsStatistics new_generation_stats = 2 [deprecated = true];</code>
+       * @deprecated
        * @return The newGenerationStats.
        */
-      public com.google.wireless.android.sdk.stats.MemoryUsageReportEvent.ObjectsStatistics getNewGenerationStats() {
+      @java.lang.Deprecated public com.google.wireless.android.sdk.stats.MemoryUsageReportEvent.ObjectsStatistics getNewGenerationStats() {
         if (newGenerationStatsBuilder_ == null) {
           return newGenerationStats_ == null ? com.google.wireless.android.sdk.stats.MemoryUsageReportEvent.ObjectsStatistics.getDefaultInstance() : newGenerationStats_;
         } else {
@@ -1578,9 +1832,13 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
-       * <code>optional .android_studio.MemoryUsageReportEvent.ObjectsStatistics new_generation_stats = 2;</code>
+       * <pre>
+       * Historical: we no longer track object creation timestamps
+       * </pre>
+       *
+       * <code>optional .android_studio.MemoryUsageReportEvent.ObjectsStatistics new_generation_stats = 2 [deprecated = true];</code>
        */
-      public Builder setNewGenerationStats(com.google.wireless.android.sdk.stats.MemoryUsageReportEvent.ObjectsStatistics value) {
+      @java.lang.Deprecated public Builder setNewGenerationStats(com.google.wireless.android.sdk.stats.MemoryUsageReportEvent.ObjectsStatistics value) {
         if (newGenerationStatsBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -1594,9 +1852,13 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>optional .android_studio.MemoryUsageReportEvent.ObjectsStatistics new_generation_stats = 2;</code>
+       * <pre>
+       * Historical: we no longer track object creation timestamps
+       * </pre>
+       *
+       * <code>optional .android_studio.MemoryUsageReportEvent.ObjectsStatistics new_generation_stats = 2 [deprecated = true];</code>
        */
-      public Builder setNewGenerationStats(
+      @java.lang.Deprecated public Builder setNewGenerationStats(
           com.google.wireless.android.sdk.stats.MemoryUsageReportEvent.ObjectsStatistics.Builder builderForValue) {
         if (newGenerationStatsBuilder_ == null) {
           newGenerationStats_ = builderForValue.build();
@@ -1608,9 +1870,13 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>optional .android_studio.MemoryUsageReportEvent.ObjectsStatistics new_generation_stats = 2;</code>
+       * <pre>
+       * Historical: we no longer track object creation timestamps
+       * </pre>
+       *
+       * <code>optional .android_studio.MemoryUsageReportEvent.ObjectsStatistics new_generation_stats = 2 [deprecated = true];</code>
        */
-      public Builder mergeNewGenerationStats(com.google.wireless.android.sdk.stats.MemoryUsageReportEvent.ObjectsStatistics value) {
+      @java.lang.Deprecated public Builder mergeNewGenerationStats(com.google.wireless.android.sdk.stats.MemoryUsageReportEvent.ObjectsStatistics value) {
         if (newGenerationStatsBuilder_ == null) {
           if (((bitField0_ & 0x00000002) != 0) &&
               newGenerationStats_ != null &&
@@ -1628,9 +1894,13 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>optional .android_studio.MemoryUsageReportEvent.ObjectsStatistics new_generation_stats = 2;</code>
+       * <pre>
+       * Historical: we no longer track object creation timestamps
+       * </pre>
+       *
+       * <code>optional .android_studio.MemoryUsageReportEvent.ObjectsStatistics new_generation_stats = 2 [deprecated = true];</code>
        */
-      public Builder clearNewGenerationStats() {
+      @java.lang.Deprecated public Builder clearNewGenerationStats() {
         if (newGenerationStatsBuilder_ == null) {
           newGenerationStats_ = null;
           onChanged();
@@ -1641,17 +1911,25 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>optional .android_studio.MemoryUsageReportEvent.ObjectsStatistics new_generation_stats = 2;</code>
+       * <pre>
+       * Historical: we no longer track object creation timestamps
+       * </pre>
+       *
+       * <code>optional .android_studio.MemoryUsageReportEvent.ObjectsStatistics new_generation_stats = 2 [deprecated = true];</code>
        */
-      public com.google.wireless.android.sdk.stats.MemoryUsageReportEvent.ObjectsStatistics.Builder getNewGenerationStatsBuilder() {
+      @java.lang.Deprecated public com.google.wireless.android.sdk.stats.MemoryUsageReportEvent.ObjectsStatistics.Builder getNewGenerationStatsBuilder() {
         bitField0_ |= 0x00000002;
         onChanged();
         return getNewGenerationStatsFieldBuilder().getBuilder();
       }
       /**
-       * <code>optional .android_studio.MemoryUsageReportEvent.ObjectsStatistics new_generation_stats = 2;</code>
+       * <pre>
+       * Historical: we no longer track object creation timestamps
+       * </pre>
+       *
+       * <code>optional .android_studio.MemoryUsageReportEvent.ObjectsStatistics new_generation_stats = 2 [deprecated = true];</code>
        */
-      public com.google.wireless.android.sdk.stats.MemoryUsageReportEvent.ObjectsStatisticsOrBuilder getNewGenerationStatsOrBuilder() {
+      @java.lang.Deprecated public com.google.wireless.android.sdk.stats.MemoryUsageReportEvent.ObjectsStatisticsOrBuilder getNewGenerationStatsOrBuilder() {
         if (newGenerationStatsBuilder_ != null) {
           return newGenerationStatsBuilder_.getMessageOrBuilder();
         } else {
@@ -1660,7 +1938,11 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
-       * <code>optional .android_studio.MemoryUsageReportEvent.ObjectsStatistics new_generation_stats = 2;</code>
+       * <pre>
+       * Historical: we no longer track object creation timestamps
+       * </pre>
+       *
+       * <code>optional .android_studio.MemoryUsageReportEvent.ObjectsStatistics new_generation_stats = 2 [deprecated = true];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.wireless.android.sdk.stats.MemoryUsageReportEvent.ObjectsStatistics, com.google.wireless.android.sdk.stats.MemoryUsageReportEvent.ObjectsStatistics.Builder, com.google.wireless.android.sdk.stats.MemoryUsageReportEvent.ObjectsStatisticsOrBuilder> 
@@ -1689,9 +1971,13 @@ private static final long serialVersionUID = 0L;
           com.google.wireless.android.sdk.stats.MemoryUsageReportEvent.ObjectsStatistics, com.google.wireless.android.sdk.stats.MemoryUsageReportEvent.ObjectsStatistics.Builder, com.google.wireless.android.sdk.stats.MemoryUsageReportEvent.ObjectsStatisticsOrBuilder> oldGenerationsStatsBuilder_;
 
       /**
-       * <code>repeated .android_studio.MemoryUsageReportEvent.ObjectsStatistics old_generations_stats = 3;</code>
+       * <pre>
+       * Historical: we no longer track object creation timestamps
+       * </pre>
+       *
+       * <code>repeated .android_studio.MemoryUsageReportEvent.ObjectsStatistics old_generations_stats = 3 [deprecated = true];</code>
        */
-      public java.util.List<com.google.wireless.android.sdk.stats.MemoryUsageReportEvent.ObjectsStatistics> getOldGenerationsStatsList() {
+      @java.lang.Deprecated public java.util.List<com.google.wireless.android.sdk.stats.MemoryUsageReportEvent.ObjectsStatistics> getOldGenerationsStatsList() {
         if (oldGenerationsStatsBuilder_ == null) {
           return java.util.Collections.unmodifiableList(oldGenerationsStats_);
         } else {
@@ -1699,9 +1985,13 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
-       * <code>repeated .android_studio.MemoryUsageReportEvent.ObjectsStatistics old_generations_stats = 3;</code>
+       * <pre>
+       * Historical: we no longer track object creation timestamps
+       * </pre>
+       *
+       * <code>repeated .android_studio.MemoryUsageReportEvent.ObjectsStatistics old_generations_stats = 3 [deprecated = true];</code>
        */
-      public int getOldGenerationsStatsCount() {
+      @java.lang.Deprecated public int getOldGenerationsStatsCount() {
         if (oldGenerationsStatsBuilder_ == null) {
           return oldGenerationsStats_.size();
         } else {
@@ -1709,9 +1999,13 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
-       * <code>repeated .android_studio.MemoryUsageReportEvent.ObjectsStatistics old_generations_stats = 3;</code>
+       * <pre>
+       * Historical: we no longer track object creation timestamps
+       * </pre>
+       *
+       * <code>repeated .android_studio.MemoryUsageReportEvent.ObjectsStatistics old_generations_stats = 3 [deprecated = true];</code>
        */
-      public com.google.wireless.android.sdk.stats.MemoryUsageReportEvent.ObjectsStatistics getOldGenerationsStats(int index) {
+      @java.lang.Deprecated public com.google.wireless.android.sdk.stats.MemoryUsageReportEvent.ObjectsStatistics getOldGenerationsStats(int index) {
         if (oldGenerationsStatsBuilder_ == null) {
           return oldGenerationsStats_.get(index);
         } else {
@@ -1719,9 +2013,13 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
-       * <code>repeated .android_studio.MemoryUsageReportEvent.ObjectsStatistics old_generations_stats = 3;</code>
+       * <pre>
+       * Historical: we no longer track object creation timestamps
+       * </pre>
+       *
+       * <code>repeated .android_studio.MemoryUsageReportEvent.ObjectsStatistics old_generations_stats = 3 [deprecated = true];</code>
        */
-      public Builder setOldGenerationsStats(
+      @java.lang.Deprecated public Builder setOldGenerationsStats(
           int index, com.google.wireless.android.sdk.stats.MemoryUsageReportEvent.ObjectsStatistics value) {
         if (oldGenerationsStatsBuilder_ == null) {
           if (value == null) {
@@ -1736,9 +2034,13 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>repeated .android_studio.MemoryUsageReportEvent.ObjectsStatistics old_generations_stats = 3;</code>
+       * <pre>
+       * Historical: we no longer track object creation timestamps
+       * </pre>
+       *
+       * <code>repeated .android_studio.MemoryUsageReportEvent.ObjectsStatistics old_generations_stats = 3 [deprecated = true];</code>
        */
-      public Builder setOldGenerationsStats(
+      @java.lang.Deprecated public Builder setOldGenerationsStats(
           int index, com.google.wireless.android.sdk.stats.MemoryUsageReportEvent.ObjectsStatistics.Builder builderForValue) {
         if (oldGenerationsStatsBuilder_ == null) {
           ensureOldGenerationsStatsIsMutable();
@@ -1750,9 +2052,13 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>repeated .android_studio.MemoryUsageReportEvent.ObjectsStatistics old_generations_stats = 3;</code>
+       * <pre>
+       * Historical: we no longer track object creation timestamps
+       * </pre>
+       *
+       * <code>repeated .android_studio.MemoryUsageReportEvent.ObjectsStatistics old_generations_stats = 3 [deprecated = true];</code>
        */
-      public Builder addOldGenerationsStats(com.google.wireless.android.sdk.stats.MemoryUsageReportEvent.ObjectsStatistics value) {
+      @java.lang.Deprecated public Builder addOldGenerationsStats(com.google.wireless.android.sdk.stats.MemoryUsageReportEvent.ObjectsStatistics value) {
         if (oldGenerationsStatsBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -1766,9 +2072,13 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>repeated .android_studio.MemoryUsageReportEvent.ObjectsStatistics old_generations_stats = 3;</code>
+       * <pre>
+       * Historical: we no longer track object creation timestamps
+       * </pre>
+       *
+       * <code>repeated .android_studio.MemoryUsageReportEvent.ObjectsStatistics old_generations_stats = 3 [deprecated = true];</code>
        */
-      public Builder addOldGenerationsStats(
+      @java.lang.Deprecated public Builder addOldGenerationsStats(
           int index, com.google.wireless.android.sdk.stats.MemoryUsageReportEvent.ObjectsStatistics value) {
         if (oldGenerationsStatsBuilder_ == null) {
           if (value == null) {
@@ -1783,9 +2093,13 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>repeated .android_studio.MemoryUsageReportEvent.ObjectsStatistics old_generations_stats = 3;</code>
+       * <pre>
+       * Historical: we no longer track object creation timestamps
+       * </pre>
+       *
+       * <code>repeated .android_studio.MemoryUsageReportEvent.ObjectsStatistics old_generations_stats = 3 [deprecated = true];</code>
        */
-      public Builder addOldGenerationsStats(
+      @java.lang.Deprecated public Builder addOldGenerationsStats(
           com.google.wireless.android.sdk.stats.MemoryUsageReportEvent.ObjectsStatistics.Builder builderForValue) {
         if (oldGenerationsStatsBuilder_ == null) {
           ensureOldGenerationsStatsIsMutable();
@@ -1797,9 +2111,13 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>repeated .android_studio.MemoryUsageReportEvent.ObjectsStatistics old_generations_stats = 3;</code>
+       * <pre>
+       * Historical: we no longer track object creation timestamps
+       * </pre>
+       *
+       * <code>repeated .android_studio.MemoryUsageReportEvent.ObjectsStatistics old_generations_stats = 3 [deprecated = true];</code>
        */
-      public Builder addOldGenerationsStats(
+      @java.lang.Deprecated public Builder addOldGenerationsStats(
           int index, com.google.wireless.android.sdk.stats.MemoryUsageReportEvent.ObjectsStatistics.Builder builderForValue) {
         if (oldGenerationsStatsBuilder_ == null) {
           ensureOldGenerationsStatsIsMutable();
@@ -1811,9 +2129,13 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>repeated .android_studio.MemoryUsageReportEvent.ObjectsStatistics old_generations_stats = 3;</code>
+       * <pre>
+       * Historical: we no longer track object creation timestamps
+       * </pre>
+       *
+       * <code>repeated .android_studio.MemoryUsageReportEvent.ObjectsStatistics old_generations_stats = 3 [deprecated = true];</code>
        */
-      public Builder addAllOldGenerationsStats(
+      @java.lang.Deprecated public Builder addAllOldGenerationsStats(
           java.lang.Iterable<? extends com.google.wireless.android.sdk.stats.MemoryUsageReportEvent.ObjectsStatistics> values) {
         if (oldGenerationsStatsBuilder_ == null) {
           ensureOldGenerationsStatsIsMutable();
@@ -1826,9 +2148,13 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>repeated .android_studio.MemoryUsageReportEvent.ObjectsStatistics old_generations_stats = 3;</code>
+       * <pre>
+       * Historical: we no longer track object creation timestamps
+       * </pre>
+       *
+       * <code>repeated .android_studio.MemoryUsageReportEvent.ObjectsStatistics old_generations_stats = 3 [deprecated = true];</code>
        */
-      public Builder clearOldGenerationsStats() {
+      @java.lang.Deprecated public Builder clearOldGenerationsStats() {
         if (oldGenerationsStatsBuilder_ == null) {
           oldGenerationsStats_ = java.util.Collections.emptyList();
           bitField0_ = (bitField0_ & ~0x00000004);
@@ -1839,9 +2165,13 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>repeated .android_studio.MemoryUsageReportEvent.ObjectsStatistics old_generations_stats = 3;</code>
+       * <pre>
+       * Historical: we no longer track object creation timestamps
+       * </pre>
+       *
+       * <code>repeated .android_studio.MemoryUsageReportEvent.ObjectsStatistics old_generations_stats = 3 [deprecated = true];</code>
        */
-      public Builder removeOldGenerationsStats(int index) {
+      @java.lang.Deprecated public Builder removeOldGenerationsStats(int index) {
         if (oldGenerationsStatsBuilder_ == null) {
           ensureOldGenerationsStatsIsMutable();
           oldGenerationsStats_.remove(index);
@@ -1852,16 +2182,24 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>repeated .android_studio.MemoryUsageReportEvent.ObjectsStatistics old_generations_stats = 3;</code>
+       * <pre>
+       * Historical: we no longer track object creation timestamps
+       * </pre>
+       *
+       * <code>repeated .android_studio.MemoryUsageReportEvent.ObjectsStatistics old_generations_stats = 3 [deprecated = true];</code>
        */
-      public com.google.wireless.android.sdk.stats.MemoryUsageReportEvent.ObjectsStatistics.Builder getOldGenerationsStatsBuilder(
+      @java.lang.Deprecated public com.google.wireless.android.sdk.stats.MemoryUsageReportEvent.ObjectsStatistics.Builder getOldGenerationsStatsBuilder(
           int index) {
         return getOldGenerationsStatsFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .android_studio.MemoryUsageReportEvent.ObjectsStatistics old_generations_stats = 3;</code>
+       * <pre>
+       * Historical: we no longer track object creation timestamps
+       * </pre>
+       *
+       * <code>repeated .android_studio.MemoryUsageReportEvent.ObjectsStatistics old_generations_stats = 3 [deprecated = true];</code>
        */
-      public com.google.wireless.android.sdk.stats.MemoryUsageReportEvent.ObjectsStatisticsOrBuilder getOldGenerationsStatsOrBuilder(
+      @java.lang.Deprecated public com.google.wireless.android.sdk.stats.MemoryUsageReportEvent.ObjectsStatisticsOrBuilder getOldGenerationsStatsOrBuilder(
           int index) {
         if (oldGenerationsStatsBuilder_ == null) {
           return oldGenerationsStats_.get(index);  } else {
@@ -1869,9 +2207,13 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
-       * <code>repeated .android_studio.MemoryUsageReportEvent.ObjectsStatistics old_generations_stats = 3;</code>
+       * <pre>
+       * Historical: we no longer track object creation timestamps
+       * </pre>
+       *
+       * <code>repeated .android_studio.MemoryUsageReportEvent.ObjectsStatistics old_generations_stats = 3 [deprecated = true];</code>
        */
-      public java.util.List<? extends com.google.wireless.android.sdk.stats.MemoryUsageReportEvent.ObjectsStatisticsOrBuilder> 
+      @java.lang.Deprecated public java.util.List<? extends com.google.wireless.android.sdk.stats.MemoryUsageReportEvent.ObjectsStatisticsOrBuilder> 
            getOldGenerationsStatsOrBuilderList() {
         if (oldGenerationsStatsBuilder_ != null) {
           return oldGenerationsStatsBuilder_.getMessageOrBuilderList();
@@ -1880,24 +2222,36 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
-       * <code>repeated .android_studio.MemoryUsageReportEvent.ObjectsStatistics old_generations_stats = 3;</code>
+       * <pre>
+       * Historical: we no longer track object creation timestamps
+       * </pre>
+       *
+       * <code>repeated .android_studio.MemoryUsageReportEvent.ObjectsStatistics old_generations_stats = 3 [deprecated = true];</code>
        */
-      public com.google.wireless.android.sdk.stats.MemoryUsageReportEvent.ObjectsStatistics.Builder addOldGenerationsStatsBuilder() {
+      @java.lang.Deprecated public com.google.wireless.android.sdk.stats.MemoryUsageReportEvent.ObjectsStatistics.Builder addOldGenerationsStatsBuilder() {
         return getOldGenerationsStatsFieldBuilder().addBuilder(
             com.google.wireless.android.sdk.stats.MemoryUsageReportEvent.ObjectsStatistics.getDefaultInstance());
       }
       /**
-       * <code>repeated .android_studio.MemoryUsageReportEvent.ObjectsStatistics old_generations_stats = 3;</code>
+       * <pre>
+       * Historical: we no longer track object creation timestamps
+       * </pre>
+       *
+       * <code>repeated .android_studio.MemoryUsageReportEvent.ObjectsStatistics old_generations_stats = 3 [deprecated = true];</code>
        */
-      public com.google.wireless.android.sdk.stats.MemoryUsageReportEvent.ObjectsStatistics.Builder addOldGenerationsStatsBuilder(
+      @java.lang.Deprecated public com.google.wireless.android.sdk.stats.MemoryUsageReportEvent.ObjectsStatistics.Builder addOldGenerationsStatsBuilder(
           int index) {
         return getOldGenerationsStatsFieldBuilder().addBuilder(
             index, com.google.wireless.android.sdk.stats.MemoryUsageReportEvent.ObjectsStatistics.getDefaultInstance());
       }
       /**
-       * <code>repeated .android_studio.MemoryUsageReportEvent.ObjectsStatistics old_generations_stats = 3;</code>
+       * <pre>
+       * Historical: we no longer track object creation timestamps
+       * </pre>
+       *
+       * <code>repeated .android_studio.MemoryUsageReportEvent.ObjectsStatistics old_generations_stats = 3 [deprecated = true];</code>
        */
-      public java.util.List<com.google.wireless.android.sdk.stats.MemoryUsageReportEvent.ObjectsStatistics.Builder> 
+      @java.lang.Deprecated public java.util.List<com.google.wireless.android.sdk.stats.MemoryUsageReportEvent.ObjectsStatistics.Builder> 
            getOldGenerationsStatsBuilderList() {
         return getOldGenerationsStatsFieldBuilder().getBuilderList();
       }
@@ -1914,6 +2268,246 @@ private static final long serialVersionUID = 0L;
           oldGenerationsStats_ = null;
         }
         return oldGenerationsStatsBuilder_;
+      }
+
+      private com.google.wireless.android.sdk.stats.MemoryUsageReportEvent.ObjectsStatistics platformObjectsStats_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.wireless.android.sdk.stats.MemoryUsageReportEvent.ObjectsStatistics, com.google.wireless.android.sdk.stats.MemoryUsageReportEvent.ObjectsStatistics.Builder, com.google.wireless.android.sdk.stats.MemoryUsageReportEvent.ObjectsStatisticsOrBuilder> platformObjectsStatsBuilder_;
+      /**
+       * <code>optional .android_studio.MemoryUsageReportEvent.ObjectsStatistics platform_objects_stats = 4;</code>
+       * @return Whether the platformObjectsStats field is set.
+       */
+      public boolean hasPlatformObjectsStats() {
+        return ((bitField0_ & 0x00000008) != 0);
+      }
+      /**
+       * <code>optional .android_studio.MemoryUsageReportEvent.ObjectsStatistics platform_objects_stats = 4;</code>
+       * @return The platformObjectsStats.
+       */
+      public com.google.wireless.android.sdk.stats.MemoryUsageReportEvent.ObjectsStatistics getPlatformObjectsStats() {
+        if (platformObjectsStatsBuilder_ == null) {
+          return platformObjectsStats_ == null ? com.google.wireless.android.sdk.stats.MemoryUsageReportEvent.ObjectsStatistics.getDefaultInstance() : platformObjectsStats_;
+        } else {
+          return platformObjectsStatsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>optional .android_studio.MemoryUsageReportEvent.ObjectsStatistics platform_objects_stats = 4;</code>
+       */
+      public Builder setPlatformObjectsStats(com.google.wireless.android.sdk.stats.MemoryUsageReportEvent.ObjectsStatistics value) {
+        if (platformObjectsStatsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          platformObjectsStats_ = value;
+          onChanged();
+        } else {
+          platformObjectsStatsBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000008;
+        return this;
+      }
+      /**
+       * <code>optional .android_studio.MemoryUsageReportEvent.ObjectsStatistics platform_objects_stats = 4;</code>
+       */
+      public Builder setPlatformObjectsStats(
+          com.google.wireless.android.sdk.stats.MemoryUsageReportEvent.ObjectsStatistics.Builder builderForValue) {
+        if (platformObjectsStatsBuilder_ == null) {
+          platformObjectsStats_ = builderForValue.build();
+          onChanged();
+        } else {
+          platformObjectsStatsBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000008;
+        return this;
+      }
+      /**
+       * <code>optional .android_studio.MemoryUsageReportEvent.ObjectsStatistics platform_objects_stats = 4;</code>
+       */
+      public Builder mergePlatformObjectsStats(com.google.wireless.android.sdk.stats.MemoryUsageReportEvent.ObjectsStatistics value) {
+        if (platformObjectsStatsBuilder_ == null) {
+          if (((bitField0_ & 0x00000008) != 0) &&
+              platformObjectsStats_ != null &&
+              platformObjectsStats_ != com.google.wireless.android.sdk.stats.MemoryUsageReportEvent.ObjectsStatistics.getDefaultInstance()) {
+            platformObjectsStats_ =
+              com.google.wireless.android.sdk.stats.MemoryUsageReportEvent.ObjectsStatistics.newBuilder(platformObjectsStats_).mergeFrom(value).buildPartial();
+          } else {
+            platformObjectsStats_ = value;
+          }
+          onChanged();
+        } else {
+          platformObjectsStatsBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000008;
+        return this;
+      }
+      /**
+       * <code>optional .android_studio.MemoryUsageReportEvent.ObjectsStatistics platform_objects_stats = 4;</code>
+       */
+      public Builder clearPlatformObjectsStats() {
+        if (platformObjectsStatsBuilder_ == null) {
+          platformObjectsStats_ = null;
+          onChanged();
+        } else {
+          platformObjectsStatsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000008);
+        return this;
+      }
+      /**
+       * <code>optional .android_studio.MemoryUsageReportEvent.ObjectsStatistics platform_objects_stats = 4;</code>
+       */
+      public com.google.wireless.android.sdk.stats.MemoryUsageReportEvent.ObjectsStatistics.Builder getPlatformObjectsStatsBuilder() {
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return getPlatformObjectsStatsFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>optional .android_studio.MemoryUsageReportEvent.ObjectsStatistics platform_objects_stats = 4;</code>
+       */
+      public com.google.wireless.android.sdk.stats.MemoryUsageReportEvent.ObjectsStatisticsOrBuilder getPlatformObjectsStatsOrBuilder() {
+        if (platformObjectsStatsBuilder_ != null) {
+          return platformObjectsStatsBuilder_.getMessageOrBuilder();
+        } else {
+          return platformObjectsStats_ == null ?
+              com.google.wireless.android.sdk.stats.MemoryUsageReportEvent.ObjectsStatistics.getDefaultInstance() : platformObjectsStats_;
+        }
+      }
+      /**
+       * <code>optional .android_studio.MemoryUsageReportEvent.ObjectsStatistics platform_objects_stats = 4;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.wireless.android.sdk.stats.MemoryUsageReportEvent.ObjectsStatistics, com.google.wireless.android.sdk.stats.MemoryUsageReportEvent.ObjectsStatistics.Builder, com.google.wireless.android.sdk.stats.MemoryUsageReportEvent.ObjectsStatisticsOrBuilder> 
+          getPlatformObjectsStatsFieldBuilder() {
+        if (platformObjectsStatsBuilder_ == null) {
+          platformObjectsStatsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.wireless.android.sdk.stats.MemoryUsageReportEvent.ObjectsStatistics, com.google.wireless.android.sdk.stats.MemoryUsageReportEvent.ObjectsStatistics.Builder, com.google.wireless.android.sdk.stats.MemoryUsageReportEvent.ObjectsStatisticsOrBuilder>(
+                  getPlatformObjectsStats(),
+                  getParentForChildren(),
+                  isClean());
+          platformObjectsStats_ = null;
+        }
+        return platformObjectsStatsBuilder_;
+      }
+
+      private com.google.wireless.android.sdk.stats.MemoryUsageReportEvent.ObjectsStatistics platformRetainedStats_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.wireless.android.sdk.stats.MemoryUsageReportEvent.ObjectsStatistics, com.google.wireless.android.sdk.stats.MemoryUsageReportEvent.ObjectsStatistics.Builder, com.google.wireless.android.sdk.stats.MemoryUsageReportEvent.ObjectsStatisticsOrBuilder> platformRetainedStatsBuilder_;
+      /**
+       * <code>optional .android_studio.MemoryUsageReportEvent.ObjectsStatistics platform_retained_stats = 5;</code>
+       * @return Whether the platformRetainedStats field is set.
+       */
+      public boolean hasPlatformRetainedStats() {
+        return ((bitField0_ & 0x00000010) != 0);
+      }
+      /**
+       * <code>optional .android_studio.MemoryUsageReportEvent.ObjectsStatistics platform_retained_stats = 5;</code>
+       * @return The platformRetainedStats.
+       */
+      public com.google.wireless.android.sdk.stats.MemoryUsageReportEvent.ObjectsStatistics getPlatformRetainedStats() {
+        if (platformRetainedStatsBuilder_ == null) {
+          return platformRetainedStats_ == null ? com.google.wireless.android.sdk.stats.MemoryUsageReportEvent.ObjectsStatistics.getDefaultInstance() : platformRetainedStats_;
+        } else {
+          return platformRetainedStatsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>optional .android_studio.MemoryUsageReportEvent.ObjectsStatistics platform_retained_stats = 5;</code>
+       */
+      public Builder setPlatformRetainedStats(com.google.wireless.android.sdk.stats.MemoryUsageReportEvent.ObjectsStatistics value) {
+        if (platformRetainedStatsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          platformRetainedStats_ = value;
+          onChanged();
+        } else {
+          platformRetainedStatsBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000010;
+        return this;
+      }
+      /**
+       * <code>optional .android_studio.MemoryUsageReportEvent.ObjectsStatistics platform_retained_stats = 5;</code>
+       */
+      public Builder setPlatformRetainedStats(
+          com.google.wireless.android.sdk.stats.MemoryUsageReportEvent.ObjectsStatistics.Builder builderForValue) {
+        if (platformRetainedStatsBuilder_ == null) {
+          platformRetainedStats_ = builderForValue.build();
+          onChanged();
+        } else {
+          platformRetainedStatsBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000010;
+        return this;
+      }
+      /**
+       * <code>optional .android_studio.MemoryUsageReportEvent.ObjectsStatistics platform_retained_stats = 5;</code>
+       */
+      public Builder mergePlatformRetainedStats(com.google.wireless.android.sdk.stats.MemoryUsageReportEvent.ObjectsStatistics value) {
+        if (platformRetainedStatsBuilder_ == null) {
+          if (((bitField0_ & 0x00000010) != 0) &&
+              platformRetainedStats_ != null &&
+              platformRetainedStats_ != com.google.wireless.android.sdk.stats.MemoryUsageReportEvent.ObjectsStatistics.getDefaultInstance()) {
+            platformRetainedStats_ =
+              com.google.wireless.android.sdk.stats.MemoryUsageReportEvent.ObjectsStatistics.newBuilder(platformRetainedStats_).mergeFrom(value).buildPartial();
+          } else {
+            platformRetainedStats_ = value;
+          }
+          onChanged();
+        } else {
+          platformRetainedStatsBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000010;
+        return this;
+      }
+      /**
+       * <code>optional .android_studio.MemoryUsageReportEvent.ObjectsStatistics platform_retained_stats = 5;</code>
+       */
+      public Builder clearPlatformRetainedStats() {
+        if (platformRetainedStatsBuilder_ == null) {
+          platformRetainedStats_ = null;
+          onChanged();
+        } else {
+          platformRetainedStatsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000010);
+        return this;
+      }
+      /**
+       * <code>optional .android_studio.MemoryUsageReportEvent.ObjectsStatistics platform_retained_stats = 5;</code>
+       */
+      public com.google.wireless.android.sdk.stats.MemoryUsageReportEvent.ObjectsStatistics.Builder getPlatformRetainedStatsBuilder() {
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return getPlatformRetainedStatsFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>optional .android_studio.MemoryUsageReportEvent.ObjectsStatistics platform_retained_stats = 5;</code>
+       */
+      public com.google.wireless.android.sdk.stats.MemoryUsageReportEvent.ObjectsStatisticsOrBuilder getPlatformRetainedStatsOrBuilder() {
+        if (platformRetainedStatsBuilder_ != null) {
+          return platformRetainedStatsBuilder_.getMessageOrBuilder();
+        } else {
+          return platformRetainedStats_ == null ?
+              com.google.wireless.android.sdk.stats.MemoryUsageReportEvent.ObjectsStatistics.getDefaultInstance() : platformRetainedStats_;
+        }
+      }
+      /**
+       * <code>optional .android_studio.MemoryUsageReportEvent.ObjectsStatistics platform_retained_stats = 5;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.wireless.android.sdk.stats.MemoryUsageReportEvent.ObjectsStatistics, com.google.wireless.android.sdk.stats.MemoryUsageReportEvent.ObjectsStatistics.Builder, com.google.wireless.android.sdk.stats.MemoryUsageReportEvent.ObjectsStatisticsOrBuilder> 
+          getPlatformRetainedStatsFieldBuilder() {
+        if (platformRetainedStatsBuilder_ == null) {
+          platformRetainedStatsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.wireless.android.sdk.stats.MemoryUsageReportEvent.ObjectsStatistics, com.google.wireless.android.sdk.stats.MemoryUsageReportEvent.ObjectsStatistics.Builder, com.google.wireless.android.sdk.stats.MemoryUsageReportEvent.ObjectsStatisticsOrBuilder>(
+                  getPlatformRetainedStats(),
+                  getParentForChildren(),
+                  isClean());
+          platformRetainedStats_ = null;
+        }
+        return platformRetainedStatsBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
