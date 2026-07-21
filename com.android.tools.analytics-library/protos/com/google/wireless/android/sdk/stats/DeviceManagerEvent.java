@@ -233,6 +233,22 @@ private static final long serialVersionUID = 0L;
      * <code>PHYSICAL_DELETE_ACTION = 14;</code>
      */
     PHYSICAL_DELETE_ACTION(14),
+    /**
+     * <pre>
+     * The Unpair device action under the Virtual tab was clicked
+     * </pre>
+     *
+     * <code>VIRTUAL_UNPAIR_DEVICE_ACTION = 15;</code>
+     */
+    VIRTUAL_UNPAIR_DEVICE_ACTION(15),
+    /**
+     * <pre>
+     * The Unpair device action under the Physical tab was clicked
+     * </pre>
+     *
+     * <code>PHYSICAL_UNPAIR_DEVICE_ACTION = 16;</code>
+     */
+    PHYSICAL_UNPAIR_DEVICE_ACTION(16),
     ;
 
     /**
@@ -355,6 +371,22 @@ private static final long serialVersionUID = 0L;
      * <code>PHYSICAL_DELETE_ACTION = 14;</code>
      */
     public static final int PHYSICAL_DELETE_ACTION_VALUE = 14;
+    /**
+     * <pre>
+     * The Unpair device action under the Virtual tab was clicked
+     * </pre>
+     *
+     * <code>VIRTUAL_UNPAIR_DEVICE_ACTION = 15;</code>
+     */
+    public static final int VIRTUAL_UNPAIR_DEVICE_ACTION_VALUE = 15;
+    /**
+     * <pre>
+     * The Unpair device action under the Physical tab was clicked
+     * </pre>
+     *
+     * <code>PHYSICAL_UNPAIR_DEVICE_ACTION = 16;</code>
+     */
+    public static final int PHYSICAL_UNPAIR_DEVICE_ACTION_VALUE = 16;
 
 
     public final int getNumber() {
@@ -392,6 +424,8 @@ private static final long serialVersionUID = 0L;
         case 12: return PHYSICAL_DEVICE_FILE_EXPLORER_ACTION;
         case 13: return PHYSICAL_PAIR_DEVICE_ACTION;
         case 14: return PHYSICAL_DELETE_ACTION;
+        case 15: return VIRTUAL_UNPAIR_DEVICE_ACTION;
+        case 16: return PHYSICAL_UNPAIR_DEVICE_ACTION;
         default: return null;
       }
     }
