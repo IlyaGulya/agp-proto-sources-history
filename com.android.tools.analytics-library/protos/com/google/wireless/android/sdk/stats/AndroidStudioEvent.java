@@ -3051,6 +3051,15 @@ private static final long serialVersionUID = 0L;
      * <code>BACKUP_USAGE = 315;</code>
      */
     BACKUP_USAGE(315),
+    /**
+     * <pre>
+     * Different phases of startup. Wrappers for IntelliJ Feature Usage
+     * Statistics data
+     * </pre>
+     *
+     * <code>STARTUP_EVENT = 316;</code>
+     */
+    STARTUP_EVENT(316),
     ;
 
     /**
@@ -5408,6 +5417,15 @@ private static final long serialVersionUID = 0L;
      * <code>BACKUP_USAGE = 315;</code>
      */
     public static final int BACKUP_USAGE_VALUE = 315;
+    /**
+     * <pre>
+     * Different phases of startup. Wrappers for IntelliJ Feature Usage
+     * Statistics data
+     * </pre>
+     *
+     * <code>STARTUP_EVENT = 316;</code>
+     */
+    public static final int STARTUP_EVENT_VALUE = 316;
 
 
     public final int getNumber() {
@@ -5741,6 +5759,7 @@ private static final long serialVersionUID = 0L;
         case 313: return ADB_SERVER_STATUS;
         case 314: return WEAR_TILE_ANIMATION_TOOLING;
         case 315: return BACKUP_USAGE;
+        case 316: return STARTUP_EVENT;
         default: return null;
       }
     }
@@ -14627,6 +14646,7 @@ private static final long serialVersionUID = 0L;
   private int bitField3_;
   private int bitField4_;
   private int bitField5_;
+  private int bitField6_;
   public static final int CATEGORY_FIELD_NUMBER = 1;
   private int category_;
   /**
@@ -22466,6 +22486,44 @@ private static final long serialVersionUID = 0L;
     return backupUsageEvent_ == null ? com.google.wireless.android.sdk.stats.BackupUsageEvent.getDefaultInstance() : backupUsageEvent_;
   }
 
+  public static final int STARTUP_EVENT_FIELD_NUMBER = 199;
+  private com.google.wireless.android.sdk.stats.StartupEvent startupEvent_;
+  /**
+   * <pre>
+   * set when kind = STARTUP_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.StartupEvent startup_event = 199 [lazy = true];</code>
+   * @return Whether the startupEvent field is set.
+   */
+  @java.lang.Override
+  public boolean hasStartupEvent() {
+    return ((bitField6_ & 0x00000001) != 0);
+  }
+  /**
+   * <pre>
+   * set when kind = STARTUP_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.StartupEvent startup_event = 199 [lazy = true];</code>
+   * @return The startupEvent.
+   */
+  @java.lang.Override
+  public com.google.wireless.android.sdk.stats.StartupEvent getStartupEvent() {
+    return startupEvent_ == null ? com.google.wireless.android.sdk.stats.StartupEvent.getDefaultInstance() : startupEvent_;
+  }
+  /**
+   * <pre>
+   * set when kind = STARTUP_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.StartupEvent startup_event = 199 [lazy = true];</code>
+   */
+  @java.lang.Override
+  public com.google.wireless.android.sdk.stats.StartupEventOrBuilder getStartupEventOrBuilder() {
+    return startupEvent_ == null ? com.google.wireless.android.sdk.stats.StartupEvent.getDefaultInstance() : startupEvent_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -23073,6 +23131,9 @@ private static final long serialVersionUID = 0L;
     }
     if (((bitField5_ & 0x80000000) != 0)) {
       output.writeMessage(198, getBackupUsageEvent());
+    }
+    if (((bitField6_ & 0x00000001) != 0)) {
+      output.writeMessage(199, getStartupEvent());
     }
     getUnknownFields().writeTo(output);
   }
@@ -23880,6 +23941,10 @@ private static final long serialVersionUID = 0L;
     if (((bitField5_ & 0x80000000) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(198, getBackupUsageEvent());
+    }
+    if (((bitField6_ & 0x00000001) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(199, getStartupEvent());
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -24857,6 +24922,11 @@ private static final long serialVersionUID = 0L;
       if (!getBackupUsageEvent()
           .equals(other.getBackupUsageEvent())) return false;
     }
+    if (hasStartupEvent() != other.hasStartupEvent()) return false;
+    if (hasStartupEvent()) {
+      if (!getStartupEvent()
+          .equals(other.getStartupEvent())) return false;
+    }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -25662,6 +25732,10 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + BACKUP_USAGE_EVENT_FIELD_NUMBER;
       hash = (53 * hash) + getBackupUsageEvent().hashCode();
     }
+    if (hasStartupEvent()) {
+      hash = (37 * hash) + STARTUP_EVENT_FIELD_NUMBER;
+      hash = (53 * hash) + getStartupEvent().hashCode();
+    }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -25965,6 +26039,7 @@ private static final long serialVersionUID = 0L;
         getAdbServerStatusFieldBuilder();
         getWearTileAnimationToolingEventFieldBuilder();
         getBackupUsageEventFieldBuilder();
+        getStartupEventFieldBuilder();
       }
     }
     @java.lang.Override
@@ -27069,6 +27144,12 @@ private static final long serialVersionUID = 0L;
         backupUsageEventBuilder_.clear();
       }
       bitField6_ = (bitField6_ & ~0x00000020);
+      if (startupEventBuilder_ == null) {
+        startupEvent_ = null;
+      } else {
+        startupEventBuilder_.clear();
+      }
+      bitField6_ = (bitField6_ & ~0x00000040);
       return this;
     }
 
@@ -27108,6 +27189,7 @@ private static final long serialVersionUID = 0L;
       int to_bitField3_ = 0;
       int to_bitField4_ = 0;
       int to_bitField5_ = 0;
+      int to_bitField6_ = 0;
       if (((from_bitField0_ & 0x00000001) != 0)) {
         to_bitField0_ |= 0x00000001;
       }
@@ -28606,12 +28688,21 @@ private static final long serialVersionUID = 0L;
         }
         to_bitField5_ |= 0x80000000;
       }
+      if (((from_bitField6_ & 0x00000040) != 0)) {
+        if (startupEventBuilder_ == null) {
+          result.startupEvent_ = startupEvent_;
+        } else {
+          result.startupEvent_ = startupEventBuilder_.build();
+        }
+        to_bitField6_ |= 0x00000001;
+      }
       result.bitField0_ = to_bitField0_;
       result.bitField1_ = to_bitField1_;
       result.bitField2_ = to_bitField2_;
       result.bitField3_ = to_bitField3_;
       result.bitField4_ = to_bitField4_;
       result.bitField5_ = to_bitField5_;
+      result.bitField6_ = to_bitField6_;
       onBuilt();
       return result;
     }
@@ -29357,6 +29448,9 @@ private static final long serialVersionUID = 0L;
       }
       if (other.hasBackupUsageEvent()) {
         mergeBackupUsageEvent(other.getBackupUsageEvent());
+      }
+      if (other.hasStartupEvent()) {
+        mergeStartupEvent(other.getStartupEvent());
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -30838,6 +30932,13 @@ private static final long serialVersionUID = 0L;
               bitField6_ |= 0x00000020;
               break;
             } // case 1586
+            case 1594: {
+              input.readMessage(
+                  getStartupEventFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField6_ |= 0x00000040;
+              break;
+            } // case 1594
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -61046,6 +61147,162 @@ private static final long serialVersionUID = 0L;
         backupUsageEvent_ = null;
       }
       return backupUsageEventBuilder_;
+    }
+
+    private com.google.wireless.android.sdk.stats.StartupEvent startupEvent_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.StartupEvent, com.google.wireless.android.sdk.stats.StartupEvent.Builder, com.google.wireless.android.sdk.stats.StartupEventOrBuilder> startupEventBuilder_;
+    /**
+     * <pre>
+     * set when kind = STARTUP_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.StartupEvent startup_event = 199 [lazy = true];</code>
+     * @return Whether the startupEvent field is set.
+     */
+    public boolean hasStartupEvent() {
+      return ((bitField6_ & 0x00000040) != 0);
+    }
+    /**
+     * <pre>
+     * set when kind = STARTUP_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.StartupEvent startup_event = 199 [lazy = true];</code>
+     * @return The startupEvent.
+     */
+    public com.google.wireless.android.sdk.stats.StartupEvent getStartupEvent() {
+      if (startupEventBuilder_ == null) {
+        return startupEvent_ == null ? com.google.wireless.android.sdk.stats.StartupEvent.getDefaultInstance() : startupEvent_;
+      } else {
+        return startupEventBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * set when kind = STARTUP_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.StartupEvent startup_event = 199 [lazy = true];</code>
+     */
+    public Builder setStartupEvent(com.google.wireless.android.sdk.stats.StartupEvent value) {
+      if (startupEventBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        startupEvent_ = value;
+        onChanged();
+      } else {
+        startupEventBuilder_.setMessage(value);
+      }
+      bitField6_ |= 0x00000040;
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = STARTUP_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.StartupEvent startup_event = 199 [lazy = true];</code>
+     */
+    public Builder setStartupEvent(
+        com.google.wireless.android.sdk.stats.StartupEvent.Builder builderForValue) {
+      if (startupEventBuilder_ == null) {
+        startupEvent_ = builderForValue.build();
+        onChanged();
+      } else {
+        startupEventBuilder_.setMessage(builderForValue.build());
+      }
+      bitField6_ |= 0x00000040;
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = STARTUP_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.StartupEvent startup_event = 199 [lazy = true];</code>
+     */
+    public Builder mergeStartupEvent(com.google.wireless.android.sdk.stats.StartupEvent value) {
+      if (startupEventBuilder_ == null) {
+        if (((bitField6_ & 0x00000040) != 0) &&
+            startupEvent_ != null &&
+            startupEvent_ != com.google.wireless.android.sdk.stats.StartupEvent.getDefaultInstance()) {
+          startupEvent_ =
+            com.google.wireless.android.sdk.stats.StartupEvent.newBuilder(startupEvent_).mergeFrom(value).buildPartial();
+        } else {
+          startupEvent_ = value;
+        }
+        onChanged();
+      } else {
+        startupEventBuilder_.mergeFrom(value);
+      }
+      bitField6_ |= 0x00000040;
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = STARTUP_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.StartupEvent startup_event = 199 [lazy = true];</code>
+     */
+    public Builder clearStartupEvent() {
+      if (startupEventBuilder_ == null) {
+        startupEvent_ = null;
+        onChanged();
+      } else {
+        startupEventBuilder_.clear();
+      }
+      bitField6_ = (bitField6_ & ~0x00000040);
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = STARTUP_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.StartupEvent startup_event = 199 [lazy = true];</code>
+     */
+    public com.google.wireless.android.sdk.stats.StartupEvent.Builder getStartupEventBuilder() {
+      bitField6_ |= 0x00000040;
+      onChanged();
+      return getStartupEventFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * set when kind = STARTUP_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.StartupEvent startup_event = 199 [lazy = true];</code>
+     */
+    public com.google.wireless.android.sdk.stats.StartupEventOrBuilder getStartupEventOrBuilder() {
+      if (startupEventBuilder_ != null) {
+        return startupEventBuilder_.getMessageOrBuilder();
+      } else {
+        return startupEvent_ == null ?
+            com.google.wireless.android.sdk.stats.StartupEvent.getDefaultInstance() : startupEvent_;
+      }
+    }
+    /**
+     * <pre>
+     * set when kind = STARTUP_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.StartupEvent startup_event = 199 [lazy = true];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.StartupEvent, com.google.wireless.android.sdk.stats.StartupEvent.Builder, com.google.wireless.android.sdk.stats.StartupEventOrBuilder> 
+        getStartupEventFieldBuilder() {
+      if (startupEventBuilder_ == null) {
+        startupEventBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.wireless.android.sdk.stats.StartupEvent, com.google.wireless.android.sdk.stats.StartupEvent.Builder, com.google.wireless.android.sdk.stats.StartupEventOrBuilder>(
+                getStartupEvent(),
+                getParentForChildren(),
+                isClean());
+        startupEvent_ = null;
+      }
+      return startupEventBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(
