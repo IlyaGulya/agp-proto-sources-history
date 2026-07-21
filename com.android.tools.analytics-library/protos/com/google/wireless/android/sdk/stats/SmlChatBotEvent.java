@@ -983,6 +983,10 @@ private static final long serialVersionUID = 0L;
      * <code>REFERENCE_DELETED = 5;</code>
      */
     REFERENCE_DELETED(5),
+    /**
+     * <code>IMAGE_ATTACHMENT_CLICKED = 6;</code>
+     */
+    IMAGE_ATTACHMENT_CLICKED(6),
     ;
 
     /**
@@ -1009,6 +1013,10 @@ private static final long serialVersionUID = 0L;
      * <code>REFERENCE_DELETED = 5;</code>
      */
     public static final int REFERENCE_DELETED_VALUE = 5;
+    /**
+     * <code>IMAGE_ATTACHMENT_CLICKED = 6;</code>
+     */
+    public static final int IMAGE_ATTACHMENT_CLICKED_VALUE = 6;
 
 
     public final int getNumber() {
@@ -1037,6 +1045,7 @@ private static final long serialVersionUID = 0L;
         case 3: return COMPLETION_DISMISSED;
         case 4: return QUERY_WITH_CONTEXT_SUBMITTED;
         case 5: return REFERENCE_DELETED;
+        case 6: return IMAGE_ATTACHMENT_CLICKED;
         default: return null;
       }
     }
@@ -6384,7 +6393,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional bool success = 3 [deprecated = true];</code>
      * @deprecated android_studio.SmlChatBotEvent.ParseResult.success is deprecated.
-     *     See studio_stats.proto;l=15399
+     *     See studio_stats.proto;l=15403
      * @return Whether the success field is set.
      */
     @java.lang.Deprecated boolean hasSuccess();
@@ -6396,7 +6405,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional bool success = 3 [deprecated = true];</code>
      * @deprecated android_studio.SmlChatBotEvent.ParseResult.success is deprecated.
-     *     See studio_stats.proto;l=15399
+     *     See studio_stats.proto;l=15403
      * @return The success.
      */
     @java.lang.Deprecated boolean getSuccess();
@@ -6524,7 +6533,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional bool success = 3 [deprecated = true];</code>
      * @deprecated android_studio.SmlChatBotEvent.ParseResult.success is deprecated.
-     *     See studio_stats.proto;l=15399
+     *     See studio_stats.proto;l=15403
      * @return Whether the success field is set.
      */
     @java.lang.Override
@@ -6539,7 +6548,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional bool success = 3 [deprecated = true];</code>
      * @deprecated android_studio.SmlChatBotEvent.ParseResult.success is deprecated.
-     *     See studio_stats.proto;l=15399
+     *     See studio_stats.proto;l=15403
      * @return The success.
      */
     @java.lang.Override
@@ -7203,7 +7212,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional bool success = 3 [deprecated = true];</code>
        * @deprecated android_studio.SmlChatBotEvent.ParseResult.success is deprecated.
-       *     See studio_stats.proto;l=15399
+       *     See studio_stats.proto;l=15403
        * @return Whether the success field is set.
        */
       @java.lang.Override
@@ -7218,7 +7227,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional bool success = 3 [deprecated = true];</code>
        * @deprecated android_studio.SmlChatBotEvent.ParseResult.success is deprecated.
-       *     See studio_stats.proto;l=15399
+       *     See studio_stats.proto;l=15403
        * @return The success.
        */
       @java.lang.Override
@@ -7233,7 +7242,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional bool success = 3 [deprecated = true];</code>
        * @deprecated android_studio.SmlChatBotEvent.ParseResult.success is deprecated.
-       *     See studio_stats.proto;l=15399
+       *     See studio_stats.proto;l=15403
        * @param value The success to set.
        * @return This builder for chaining.
        */
@@ -7252,7 +7261,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional bool success = 3 [deprecated = true];</code>
        * @deprecated android_studio.SmlChatBotEvent.ParseResult.success is deprecated.
-       *     See studio_stats.proto;l=15399
+       *     See studio_stats.proto;l=15403
        * @return This builder for chaining.
        */
       @java.lang.Deprecated public Builder clearSuccess() {
