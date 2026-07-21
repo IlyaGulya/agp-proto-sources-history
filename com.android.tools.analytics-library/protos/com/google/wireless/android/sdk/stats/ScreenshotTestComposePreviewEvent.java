@@ -56,6 +56,14 @@ private static final long serialVersionUID = 0L;
      * <code>PREVIEW_RENDERING = 2;</code>
      */
     PREVIEW_RENDERING(2),
+    /**
+     * <code>VALIDATE_CLICKED = 3;</code>
+     */
+    VALIDATE_CLICKED(3),
+    /**
+     * <code>UPDATE_CLICKED = 4;</code>
+     */
+    UPDATE_CLICKED(4),
     ;
 
     /**
@@ -70,6 +78,14 @@ private static final long serialVersionUID = 0L;
      * <code>PREVIEW_RENDERING = 2;</code>
      */
     public static final int PREVIEW_RENDERING_VALUE = 2;
+    /**
+     * <code>VALIDATE_CLICKED = 3;</code>
+     */
+    public static final int VALIDATE_CLICKED_VALUE = 3;
+    /**
+     * <code>UPDATE_CLICKED = 4;</code>
+     */
+    public static final int UPDATE_CLICKED_VALUE = 4;
 
 
     public final int getNumber() {
@@ -95,6 +111,8 @@ private static final long serialVersionUID = 0L;
         case 0: return TYPE_UNKNOWN;
         case 1: return PREVIEW_DISCOVERY;
         case 2: return PREVIEW_RENDERING;
+        case 3: return VALIDATE_CLICKED;
+        case 4: return UPDATE_CLICKED;
         default: return null;
       }
     }
