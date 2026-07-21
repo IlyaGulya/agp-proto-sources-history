@@ -18,6 +18,8 @@ private static final long serialVersionUID = 0L;
   private ResizeComposePreviewEvent() {
     eventType_ = 0;
     resizeMode_ = 0;
+    resizeSource_ = 0;
+    deviceId_ = "";
   }
 
   @java.lang.Override
@@ -55,7 +57,7 @@ private static final long serialVersionUID = 0L;
     UNKNOWN_EVENT_TYPE(0),
     /**
      * <pre>
-     * User stops resizing, capturing an intermediate size.
+     * User finished resizing.
      * </pre>
      *
      * <code>RESIZE_STOPPED = 1;</code>
@@ -85,7 +87,7 @@ private static final long serialVersionUID = 0L;
     public static final int UNKNOWN_EVENT_TYPE_VALUE = 0;
     /**
      * <pre>
-     * User stops resizing, capturing an intermediate size.
+     * User finished resizing.
      * </pre>
      *
      * <code>RESIZE_STOPPED = 1;</code>
@@ -307,6 +309,132 @@ private static final long serialVersionUID = 0L;
     // @@protoc_insertion_point(enum_scope:android_studio.ResizeComposePreviewEvent.ResizeMode)
   }
 
+  /**
+   * <pre>
+   * The source of the resize event.
+   * </pre>
+   *
+   * Protobuf enum {@code android_studio.ResizeComposePreviewEvent.ResizeSource}
+   */
+  public enum ResizeSource
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <code>UNKNOWN_RESIZE_SOURCE = 0;</code>
+     */
+    UNKNOWN_RESIZE_SOURCE(0),
+    /**
+     * <pre>
+     * Logs only when user released drag handle.
+     * </pre>
+     *
+     * <code>DRAG = 1;</code>
+     */
+    DRAG(1),
+    /**
+     * <code>DROPDOWN = 2;</code>
+     */
+    DROPDOWN(2),
+    /**
+     * <code>TEXT_FIELD = 3;</code>
+     */
+    TEXT_FIELD(3),
+    ;
+
+    /**
+     * <code>UNKNOWN_RESIZE_SOURCE = 0;</code>
+     */
+    public static final int UNKNOWN_RESIZE_SOURCE_VALUE = 0;
+    /**
+     * <pre>
+     * Logs only when user released drag handle.
+     * </pre>
+     *
+     * <code>DRAG = 1;</code>
+     */
+    public static final int DRAG_VALUE = 1;
+    /**
+     * <code>DROPDOWN = 2;</code>
+     */
+    public static final int DROPDOWN_VALUE = 2;
+    /**
+     * <code>TEXT_FIELD = 3;</code>
+     */
+    public static final int TEXT_FIELD_VALUE = 3;
+
+
+    public final int getNumber() {
+      return value;
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     * @deprecated Use {@link #forNumber(int)} instead.
+     */
+    @java.lang.Deprecated
+    public static ResizeSource valueOf(int value) {
+      return forNumber(value);
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     */
+    public static ResizeSource forNumber(int value) {
+      switch (value) {
+        case 0: return UNKNOWN_RESIZE_SOURCE;
+        case 1: return DRAG;
+        case 2: return DROPDOWN;
+        case 3: return TEXT_FIELD;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<ResizeSource>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static final com.google.protobuf.Internal.EnumLiteMap<
+        ResizeSource> internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<ResizeSource>() {
+            public ResizeSource findValueByNumber(int number) {
+              return ResizeSource.forNumber(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      return getDescriptor().getValues().get(ordinal());
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return com.google.wireless.android.sdk.stats.ResizeComposePreviewEvent.getDescriptor().getEnumTypes().get(2);
+    }
+
+    private static final ResizeSource[] VALUES = values();
+
+    public static ResizeSource valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int value;
+
+    private ResizeSource(int value) {
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:android_studio.ResizeComposePreviewEvent.ResizeSource)
+  }
+
   private int bitField0_;
   public static final int EVENT_TYPE_FIELD_NUMBER = 1;
   private int eventType_ = 0;
@@ -370,7 +498,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>optional int32 stopped_device_width = 3 [deprecated = true];</code>
    * @deprecated android_studio.ResizeComposePreviewEvent.stopped_device_width is deprecated.
-   *     See studio_stats.proto;l=17162
+   *     See studio_stats.proto;l=17212
    * @return Whether the stoppedDeviceWidth field is set.
    */
   @java.lang.Override
@@ -385,7 +513,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>optional int32 stopped_device_width = 3 [deprecated = true];</code>
    * @deprecated android_studio.ResizeComposePreviewEvent.stopped_device_width is deprecated.
-   *     See studio_stats.proto;l=17162
+   *     See studio_stats.proto;l=17212
    * @return The stoppedDeviceWidth.
    */
   @java.lang.Override
@@ -398,7 +526,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>optional int32 stopped_device_height = 4 [deprecated = true];</code>
    * @deprecated android_studio.ResizeComposePreviewEvent.stopped_device_height is deprecated.
-   *     See studio_stats.proto;l=17163
+   *     See studio_stats.proto;l=17213
    * @return Whether the stoppedDeviceHeight field is set.
    */
   @java.lang.Override
@@ -408,7 +536,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>optional int32 stopped_device_height = 4 [deprecated = true];</code>
    * @deprecated android_studio.ResizeComposePreviewEvent.stopped_device_height is deprecated.
-   *     See studio_stats.proto;l=17163
+   *     See studio_stats.proto;l=17213
    * @return The stoppedDeviceHeight.
    */
   @java.lang.Override
@@ -426,7 +554,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>optional int32 saved_device_width = 5 [deprecated = true];</code>
    * @deprecated android_studio.ResizeComposePreviewEvent.saved_device_width is deprecated.
-   *     See studio_stats.proto;l=17167
+   *     See studio_stats.proto;l=17217
    * @return Whether the savedDeviceWidth field is set.
    */
   @java.lang.Override
@@ -441,7 +569,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>optional int32 saved_device_width = 5 [deprecated = true];</code>
    * @deprecated android_studio.ResizeComposePreviewEvent.saved_device_width is deprecated.
-   *     See studio_stats.proto;l=17167
+   *     See studio_stats.proto;l=17217
    * @return The savedDeviceWidth.
    */
   @java.lang.Override
@@ -454,7 +582,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>optional int32 saved_device_height = 6 [deprecated = true];</code>
    * @deprecated android_studio.ResizeComposePreviewEvent.saved_device_height is deprecated.
-   *     See studio_stats.proto;l=17168
+   *     See studio_stats.proto;l=17218
    * @return Whether the savedDeviceHeight field is set.
    */
   @java.lang.Override
@@ -464,7 +592,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>optional int32 saved_device_height = 6 [deprecated = true];</code>
    * @deprecated android_studio.ResizeComposePreviewEvent.saved_device_height is deprecated.
-   *     See studio_stats.proto;l=17168
+   *     See studio_stats.proto;l=17218
    * @return The savedDeviceHeight.
    */
   @java.lang.Override
@@ -557,6 +685,93 @@ private static final long serialVersionUID = 0L;
     return dpi_;
   }
 
+  public static final int RESIZE_SOURCE_FIELD_NUMBER = 10;
+  private int resizeSource_ = 0;
+  /**
+   * <pre>
+   * The source of the resize event. It's applicable only for RESIZE_STOPPED
+   * </pre>
+   *
+   * <code>optional .android_studio.ResizeComposePreviewEvent.ResizeSource resize_source = 10;</code>
+   * @return Whether the resizeSource field is set.
+   */
+  @java.lang.Override public boolean hasResizeSource() {
+    return ((bitField0_ & 0x00000200) != 0);
+  }
+  /**
+   * <pre>
+   * The source of the resize event. It's applicable only for RESIZE_STOPPED
+   * </pre>
+   *
+   * <code>optional .android_studio.ResizeComposePreviewEvent.ResizeSource resize_source = 10;</code>
+   * @return The resizeSource.
+   */
+  @java.lang.Override public com.google.wireless.android.sdk.stats.ResizeComposePreviewEvent.ResizeSource getResizeSource() {
+    com.google.wireless.android.sdk.stats.ResizeComposePreviewEvent.ResizeSource result = com.google.wireless.android.sdk.stats.ResizeComposePreviewEvent.ResizeSource.forNumber(resizeSource_);
+    return result == null ? com.google.wireless.android.sdk.stats.ResizeComposePreviewEvent.ResizeSource.UNKNOWN_RESIZE_SOURCE : result;
+  }
+
+  public static final int DEVICE_ID_FIELD_NUMBER = 11;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object deviceId_ = "";
+  /**
+   * <pre>
+   * The ID of the selected device (relevant for DROPDOWN events).
+   * </pre>
+   *
+   * <code>optional string device_id = 11;</code>
+   * @return Whether the deviceId field is set.
+   */
+  @java.lang.Override
+  public boolean hasDeviceId() {
+    return ((bitField0_ & 0x00000400) != 0);
+  }
+  /**
+   * <pre>
+   * The ID of the selected device (relevant for DROPDOWN events).
+   * </pre>
+   *
+   * <code>optional string device_id = 11;</code>
+   * @return The deviceId.
+   */
+  @java.lang.Override
+  public java.lang.String getDeviceId() {
+    java.lang.Object ref = deviceId_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      if (bs.isValidUtf8()) {
+        deviceId_ = s;
+      }
+      return s;
+    }
+  }
+  /**
+   * <pre>
+   * The ID of the selected device (relevant for DROPDOWN events).
+   * </pre>
+   *
+   * <code>optional string device_id = 11;</code>
+   * @return The bytes for deviceId.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getDeviceIdBytes() {
+    java.lang.Object ref = deviceId_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      deviceId_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -597,6 +812,12 @@ private static final long serialVersionUID = 0L;
     }
     if (((bitField0_ & 0x00000100) != 0)) {
       output.writeInt32(9, dpi_);
+    }
+    if (((bitField0_ & 0x00000200) != 0)) {
+      output.writeEnum(10, resizeSource_);
+    }
+    if (((bitField0_ & 0x00000400) != 0)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 11, deviceId_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -642,6 +863,13 @@ private static final long serialVersionUID = 0L;
     if (((bitField0_ & 0x00000100) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeInt32Size(9, dpi_);
+    }
+    if (((bitField0_ & 0x00000200) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeEnumSize(10, resizeSource_);
+    }
+    if (((bitField0_ & 0x00000400) != 0)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(11, deviceId_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -701,6 +929,15 @@ private static final long serialVersionUID = 0L;
       if (getDpi()
           != other.getDpi()) return false;
     }
+    if (hasResizeSource() != other.hasResizeSource()) return false;
+    if (hasResizeSource()) {
+      if (resizeSource_ != other.resizeSource_) return false;
+    }
+    if (hasDeviceId() != other.hasDeviceId()) return false;
+    if (hasDeviceId()) {
+      if (!getDeviceId()
+          .equals(other.getDeviceId())) return false;
+    }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -747,6 +984,14 @@ private static final long serialVersionUID = 0L;
     if (hasDpi()) {
       hash = (37 * hash) + DPI_FIELD_NUMBER;
       hash = (53 * hash) + getDpi();
+    }
+    if (hasResizeSource()) {
+      hash = (37 * hash) + RESIZE_SOURCE_FIELD_NUMBER;
+      hash = (53 * hash) + resizeSource_;
+    }
+    if (hasDeviceId()) {
+      hash = (37 * hash) + DEVICE_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getDeviceId().hashCode();
     }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
@@ -886,6 +1131,8 @@ private static final long serialVersionUID = 0L;
       deviceWidthDp_ = 0;
       deviceHeightDp_ = 0;
       dpi_ = 0;
+      resizeSource_ = 0;
+      deviceId_ = "";
       return this;
     }
 
@@ -956,6 +1203,14 @@ private static final long serialVersionUID = 0L;
         result.dpi_ = dpi_;
         to_bitField0_ |= 0x00000100;
       }
+      if (((from_bitField0_ & 0x00000200) != 0)) {
+        result.resizeSource_ = resizeSource_;
+        to_bitField0_ |= 0x00000200;
+      }
+      if (((from_bitField0_ & 0x00000400) != 0)) {
+        result.deviceId_ = deviceId_;
+        to_bitField0_ |= 0x00000400;
+      }
       result.bitField0_ |= to_bitField0_;
     }
 
@@ -997,6 +1252,14 @@ private static final long serialVersionUID = 0L;
       }
       if (other.hasDpi()) {
         setDpi(other.getDpi());
+      }
+      if (other.hasResizeSource()) {
+        setResizeSource(other.getResizeSource());
+      }
+      if (other.hasDeviceId()) {
+        deviceId_ = other.deviceId_;
+        bitField0_ |= 0x00000400;
+        onChanged();
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -1083,6 +1346,23 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000100;
               break;
             } // case 72
+            case 80: {
+              int tmpRaw = input.readEnum();
+              com.google.wireless.android.sdk.stats.ResizeComposePreviewEvent.ResizeSource tmpValue =
+                  com.google.wireless.android.sdk.stats.ResizeComposePreviewEvent.ResizeSource.forNumber(tmpRaw);
+              if (tmpValue == null) {
+                mergeUnknownVarintField(10, tmpRaw);
+              } else {
+                resizeSource_ = tmpRaw;
+                bitField0_ |= 0x00000200;
+              }
+              break;
+            } // case 80
+            case 90: {
+              deviceId_ = input.readBytes();
+              bitField0_ |= 0x00000400;
+              break;
+            } // case 90
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -1225,7 +1505,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional int32 stopped_device_width = 3 [deprecated = true];</code>
      * @deprecated android_studio.ResizeComposePreviewEvent.stopped_device_width is deprecated.
-     *     See studio_stats.proto;l=17162
+     *     See studio_stats.proto;l=17212
      * @return Whether the stoppedDeviceWidth field is set.
      */
     @java.lang.Override
@@ -1240,7 +1520,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional int32 stopped_device_width = 3 [deprecated = true];</code>
      * @deprecated android_studio.ResizeComposePreviewEvent.stopped_device_width is deprecated.
-     *     See studio_stats.proto;l=17162
+     *     See studio_stats.proto;l=17212
      * @return The stoppedDeviceWidth.
      */
     @java.lang.Override
@@ -1255,7 +1535,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional int32 stopped_device_width = 3 [deprecated = true];</code>
      * @deprecated android_studio.ResizeComposePreviewEvent.stopped_device_width is deprecated.
-     *     See studio_stats.proto;l=17162
+     *     See studio_stats.proto;l=17212
      * @param value The stoppedDeviceWidth to set.
      * @return This builder for chaining.
      */
@@ -1274,7 +1554,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional int32 stopped_device_width = 3 [deprecated = true];</code>
      * @deprecated android_studio.ResizeComposePreviewEvent.stopped_device_width is deprecated.
-     *     See studio_stats.proto;l=17162
+     *     See studio_stats.proto;l=17212
      * @return This builder for chaining.
      */
     @java.lang.Deprecated public Builder clearStoppedDeviceWidth() {
@@ -1288,7 +1568,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>optional int32 stopped_device_height = 4 [deprecated = true];</code>
      * @deprecated android_studio.ResizeComposePreviewEvent.stopped_device_height is deprecated.
-     *     See studio_stats.proto;l=17163
+     *     See studio_stats.proto;l=17213
      * @return Whether the stoppedDeviceHeight field is set.
      */
     @java.lang.Override
@@ -1298,7 +1578,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>optional int32 stopped_device_height = 4 [deprecated = true];</code>
      * @deprecated android_studio.ResizeComposePreviewEvent.stopped_device_height is deprecated.
-     *     See studio_stats.proto;l=17163
+     *     See studio_stats.proto;l=17213
      * @return The stoppedDeviceHeight.
      */
     @java.lang.Override
@@ -1308,7 +1588,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>optional int32 stopped_device_height = 4 [deprecated = true];</code>
      * @deprecated android_studio.ResizeComposePreviewEvent.stopped_device_height is deprecated.
-     *     See studio_stats.proto;l=17163
+     *     See studio_stats.proto;l=17213
      * @param value The stoppedDeviceHeight to set.
      * @return This builder for chaining.
      */
@@ -1322,7 +1602,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>optional int32 stopped_device_height = 4 [deprecated = true];</code>
      * @deprecated android_studio.ResizeComposePreviewEvent.stopped_device_height is deprecated.
-     *     See studio_stats.proto;l=17163
+     *     See studio_stats.proto;l=17213
      * @return This builder for chaining.
      */
     @java.lang.Deprecated public Builder clearStoppedDeviceHeight() {
@@ -1341,7 +1621,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional int32 saved_device_width = 5 [deprecated = true];</code>
      * @deprecated android_studio.ResizeComposePreviewEvent.saved_device_width is deprecated.
-     *     See studio_stats.proto;l=17167
+     *     See studio_stats.proto;l=17217
      * @return Whether the savedDeviceWidth field is set.
      */
     @java.lang.Override
@@ -1356,7 +1636,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional int32 saved_device_width = 5 [deprecated = true];</code>
      * @deprecated android_studio.ResizeComposePreviewEvent.saved_device_width is deprecated.
-     *     See studio_stats.proto;l=17167
+     *     See studio_stats.proto;l=17217
      * @return The savedDeviceWidth.
      */
     @java.lang.Override
@@ -1371,7 +1651,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional int32 saved_device_width = 5 [deprecated = true];</code>
      * @deprecated android_studio.ResizeComposePreviewEvent.saved_device_width is deprecated.
-     *     See studio_stats.proto;l=17167
+     *     See studio_stats.proto;l=17217
      * @param value The savedDeviceWidth to set.
      * @return This builder for chaining.
      */
@@ -1390,7 +1670,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional int32 saved_device_width = 5 [deprecated = true];</code>
      * @deprecated android_studio.ResizeComposePreviewEvent.saved_device_width is deprecated.
-     *     See studio_stats.proto;l=17167
+     *     See studio_stats.proto;l=17217
      * @return This builder for chaining.
      */
     @java.lang.Deprecated public Builder clearSavedDeviceWidth() {
@@ -1404,7 +1684,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>optional int32 saved_device_height = 6 [deprecated = true];</code>
      * @deprecated android_studio.ResizeComposePreviewEvent.saved_device_height is deprecated.
-     *     See studio_stats.proto;l=17168
+     *     See studio_stats.proto;l=17218
      * @return Whether the savedDeviceHeight field is set.
      */
     @java.lang.Override
@@ -1414,7 +1694,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>optional int32 saved_device_height = 6 [deprecated = true];</code>
      * @deprecated android_studio.ResizeComposePreviewEvent.saved_device_height is deprecated.
-     *     See studio_stats.proto;l=17168
+     *     See studio_stats.proto;l=17218
      * @return The savedDeviceHeight.
      */
     @java.lang.Override
@@ -1424,7 +1704,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>optional int32 saved_device_height = 6 [deprecated = true];</code>
      * @deprecated android_studio.ResizeComposePreviewEvent.saved_device_height is deprecated.
-     *     See studio_stats.proto;l=17168
+     *     See studio_stats.proto;l=17218
      * @param value The savedDeviceHeight to set.
      * @return This builder for chaining.
      */
@@ -1438,7 +1718,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>optional int32 saved_device_height = 6 [deprecated = true];</code>
      * @deprecated android_studio.ResizeComposePreviewEvent.saved_device_height is deprecated.
-     *     See studio_stats.proto;l=17168
+     *     See studio_stats.proto;l=17218
      * @return This builder for chaining.
      */
     @java.lang.Deprecated public Builder clearSavedDeviceHeight() {
@@ -1620,6 +1900,168 @@ private static final long serialVersionUID = 0L;
     public Builder clearDpi() {
       bitField0_ = (bitField0_ & ~0x00000100);
       dpi_ = 0;
+      onChanged();
+      return this;
+    }
+
+    private int resizeSource_ = 0;
+    /**
+     * <pre>
+     * The source of the resize event. It's applicable only for RESIZE_STOPPED
+     * </pre>
+     *
+     * <code>optional .android_studio.ResizeComposePreviewEvent.ResizeSource resize_source = 10;</code>
+     * @return Whether the resizeSource field is set.
+     */
+    @java.lang.Override public boolean hasResizeSource() {
+      return ((bitField0_ & 0x00000200) != 0);
+    }
+    /**
+     * <pre>
+     * The source of the resize event. It's applicable only for RESIZE_STOPPED
+     * </pre>
+     *
+     * <code>optional .android_studio.ResizeComposePreviewEvent.ResizeSource resize_source = 10;</code>
+     * @return The resizeSource.
+     */
+    @java.lang.Override
+    public com.google.wireless.android.sdk.stats.ResizeComposePreviewEvent.ResizeSource getResizeSource() {
+      com.google.wireless.android.sdk.stats.ResizeComposePreviewEvent.ResizeSource result = com.google.wireless.android.sdk.stats.ResizeComposePreviewEvent.ResizeSource.forNumber(resizeSource_);
+      return result == null ? com.google.wireless.android.sdk.stats.ResizeComposePreviewEvent.ResizeSource.UNKNOWN_RESIZE_SOURCE : result;
+    }
+    /**
+     * <pre>
+     * The source of the resize event. It's applicable only for RESIZE_STOPPED
+     * </pre>
+     *
+     * <code>optional .android_studio.ResizeComposePreviewEvent.ResizeSource resize_source = 10;</code>
+     * @param value The resizeSource to set.
+     * @return This builder for chaining.
+     */
+    public Builder setResizeSource(com.google.wireless.android.sdk.stats.ResizeComposePreviewEvent.ResizeSource value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      bitField0_ |= 0x00000200;
+      resizeSource_ = value.getNumber();
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The source of the resize event. It's applicable only for RESIZE_STOPPED
+     * </pre>
+     *
+     * <code>optional .android_studio.ResizeComposePreviewEvent.ResizeSource resize_source = 10;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearResizeSource() {
+      bitField0_ = (bitField0_ & ~0x00000200);
+      resizeSource_ = 0;
+      onChanged();
+      return this;
+    }
+
+    private java.lang.Object deviceId_ = "";
+    /**
+     * <pre>
+     * The ID of the selected device (relevant for DROPDOWN events).
+     * </pre>
+     *
+     * <code>optional string device_id = 11;</code>
+     * @return Whether the deviceId field is set.
+     */
+    public boolean hasDeviceId() {
+      return ((bitField0_ & 0x00000400) != 0);
+    }
+    /**
+     * <pre>
+     * The ID of the selected device (relevant for DROPDOWN events).
+     * </pre>
+     *
+     * <code>optional string device_id = 11;</code>
+     * @return The deviceId.
+     */
+    public java.lang.String getDeviceId() {
+      java.lang.Object ref = deviceId_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          deviceId_ = s;
+        }
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <pre>
+     * The ID of the selected device (relevant for DROPDOWN events).
+     * </pre>
+     *
+     * <code>optional string device_id = 11;</code>
+     * @return The bytes for deviceId.
+     */
+    public com.google.protobuf.ByteString
+        getDeviceIdBytes() {
+      java.lang.Object ref = deviceId_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        deviceId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <pre>
+     * The ID of the selected device (relevant for DROPDOWN events).
+     * </pre>
+     *
+     * <code>optional string device_id = 11;</code>
+     * @param value The deviceId to set.
+     * @return This builder for chaining.
+     */
+    public Builder setDeviceId(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      deviceId_ = value;
+      bitField0_ |= 0x00000400;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The ID of the selected device (relevant for DROPDOWN events).
+     * </pre>
+     *
+     * <code>optional string device_id = 11;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearDeviceId() {
+      deviceId_ = getDefaultInstance().getDeviceId();
+      bitField0_ = (bitField0_ & ~0x00000400);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The ID of the selected device (relevant for DROPDOWN events).
+     * </pre>
+     *
+     * <code>optional string device_id = 11;</code>
+     * @param value The bytes for deviceId to set.
+     * @return This builder for chaining.
+     */
+    public Builder setDeviceIdBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      deviceId_ = value;
+      bitField0_ |= 0x00000400;
       onChanged();
       return this;
     }

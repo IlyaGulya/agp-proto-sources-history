@@ -6457,4 +6457,112 @@ public interface AndroidStudioEventOrBuilder extends
    * <code>optional .android_studio.GeminiAdvertiserEvent gemini_advertiser_event = 231 [lazy = true];</code>
    */
   com.google.wireless.android.sdk.stats.GeminiAdvertiserEventOrBuilder getGeminiAdvertiserEventOrBuilder();
+
+  /**
+   * <pre>
+   * set when kind = STUDIO_DEPRECATION_NOTIFICATION_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.StudioDeprecationNotificationEvent studio_deprecation_notification_event = 232 [lazy = true];</code>
+   * @return Whether the studioDeprecationNotificationEvent field is set.
+   */
+  boolean hasStudioDeprecationNotificationEvent();
+  /**
+   * <pre>
+   * set when kind = STUDIO_DEPRECATION_NOTIFICATION_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.StudioDeprecationNotificationEvent studio_deprecation_notification_event = 232 [lazy = true];</code>
+   * @return The studioDeprecationNotificationEvent.
+   */
+  com.google.wireless.android.sdk.stats.StudioDeprecationNotificationEvent getStudioDeprecationNotificationEvent();
+  /**
+   * <pre>
+   * set when kind = STUDIO_DEPRECATION_NOTIFICATION_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.StudioDeprecationNotificationEvent studio_deprecation_notification_event = 232 [lazy = true];</code>
+   */
+  com.google.wireless.android.sdk.stats.StudioDeprecationNotificationEventOrBuilder getStudioDeprecationNotificationEventOrBuilder();
+
+  /**
+   * <pre>
+   * set when kind = DECLARATIVE_WATCH_FACE_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.DeclarativeWatchFaceEvent declarative_watch_face_event = 233 [lazy = true];</code>
+   * @return Whether the declarativeWatchFaceEvent field is set.
+   */
+  boolean hasDeclarativeWatchFaceEvent();
+  /**
+   * <pre>
+   * set when kind = DECLARATIVE_WATCH_FACE_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.DeclarativeWatchFaceEvent declarative_watch_face_event = 233 [lazy = true];</code>
+   * @return The declarativeWatchFaceEvent.
+   */
+  com.google.wireless.android.sdk.stats.DeclarativeWatchFaceEvent getDeclarativeWatchFaceEvent();
+  /**
+   * <pre>
+   * set when kind = DECLARATIVE_WATCH_FACE_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.DeclarativeWatchFaceEvent declarative_watch_face_event = 233 [lazy = true];</code>
+   */
+  com.google.wireless.android.sdk.stats.DeclarativeWatchFaceEventOrBuilder getDeclarativeWatchFaceEventOrBuilder();
+
+  /**
+   * <pre>
+   * set when kind = ANDROID_VIEW_SHOW_BUILD_FILES_IN_MODULE_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.AndroidViewShowBuildFilesInModuleEvent android_view_show_build_files_in_module_event = 234 [lazy = true];</code>
+   * @return Whether the androidViewShowBuildFilesInModuleEvent field is set.
+   */
+  boolean hasAndroidViewShowBuildFilesInModuleEvent();
+  /**
+   * <pre>
+   * set when kind = ANDROID_VIEW_SHOW_BUILD_FILES_IN_MODULE_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.AndroidViewShowBuildFilesInModuleEvent android_view_show_build_files_in_module_event = 234 [lazy = true];</code>
+   * @return The androidViewShowBuildFilesInModuleEvent.
+   */
+  com.google.wireless.android.sdk.stats.AndroidViewShowBuildFilesInModuleEvent getAndroidViewShowBuildFilesInModuleEvent();
+  /**
+   * <pre>
+   * set when kind = ANDROID_VIEW_SHOW_BUILD_FILES_IN_MODULE_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.AndroidViewShowBuildFilesInModuleEvent android_view_show_build_files_in_module_event = 234 [lazy = true];</code>
+   */
+  com.google.wireless.android.sdk.stats.AndroidViewShowBuildFilesInModuleEventOrBuilder getAndroidViewShowBuildFilesInModuleEventOrBuilder();
+
+  /**
+   * <pre>
+   * set when kind = PROJECT_VIEW_DEFAULT_VIEW_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.ProjectViewDefaultViewEvent project_view_default_view_event = 235 [lazy = true];</code>
+   * @return Whether the projectViewDefaultViewEvent field is set.
+   */
+  boolean hasProjectViewDefaultViewEvent();
+  /**
+   * <pre>
+   * set when kind = PROJECT_VIEW_DEFAULT_VIEW_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.ProjectViewDefaultViewEvent project_view_default_view_event = 235 [lazy = true];</code>
+   * @return The projectViewDefaultViewEvent.
+   */
+  com.google.wireless.android.sdk.stats.ProjectViewDefaultViewEvent getProjectViewDefaultViewEvent();
+  /**
+   * <pre>
+   * set when kind = PROJECT_VIEW_DEFAULT_VIEW_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.ProjectViewDefaultViewEvent project_view_default_view_event = 235 [lazy = true];</code>
+   */
+  com.google.wireless.android.sdk.stats.ProjectViewDefaultViewEventOrBuilder getProjectViewDefaultViewEventOrBuilder();
 }
