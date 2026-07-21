@@ -936,6 +936,10 @@ public enum BooleanOption
    * <code>KMP_USE_JVM_PLATFORM_TYPE = 228;</code>
    */
   KMP_USE_JVM_PLATFORM_TYPE(228),
+  /**
+   * <code>DISALLOW_KOTLIN_SOURCE_SETS = 229;</code>
+   */
+  DISALLOW_KOTLIN_SOURCE_SETS(229),
   UNRECOGNIZED(-1),
   ;
 
@@ -1855,6 +1859,10 @@ public enum BooleanOption
    * <code>KMP_USE_JVM_PLATFORM_TYPE = 228;</code>
    */
   public static final int KMP_USE_JVM_PLATFORM_TYPE_VALUE = 228;
+  /**
+   * <code>DISALLOW_KOTLIN_SOURCE_SETS = 229;</code>
+   */
+  public static final int DISALLOW_KOTLIN_SOURCE_SETS_VALUE = 229;
 
 
   public final int getNumber() {
@@ -2110,6 +2118,7 @@ public enum BooleanOption
       case 226: return R8_GLOBAL_OPTIONS_IN_CONSUMER_RULES_DISALLOWED;
       case 227: return DISABLE_KMP_RUNTIME_CLASSPATH;
       case 228: return KMP_USE_JVM_PLATFORM_TYPE;
+      case 229: return DISALLOW_KOTLIN_SOURCE_SETS;
       default: return null;
     }
   }

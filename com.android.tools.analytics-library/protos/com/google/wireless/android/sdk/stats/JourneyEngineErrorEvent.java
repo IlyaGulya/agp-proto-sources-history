@@ -109,6 +109,62 @@ private static final long serialVersionUID = 0L;
      * <code>UNKNOWN_ERROR = 7;</code>
      */
     UNKNOWN_ERROR(7),
+    /**
+     * <pre>
+     * The crawler ran out of time before exploring all actions
+     * </pre>
+     *
+     * <code>CRAWLER_TIMED_OUT = 8;</code>
+     */
+    CRAWLER_TIMED_OUT(8),
+    /**
+     * <pre>
+     * The app terminated during the crawl
+     * </pre>
+     *
+     * <code>APP_TERMINATED = 9;</code>
+     */
+    APP_TERMINATED(9),
+    /**
+     * <pre>
+     * The crawler service was terminated unexepectedly (e.g. OOM)
+     * </pre>
+     *
+     * <code>CRAWLER_TERMINATED = 10;</code>
+     */
+    CRAWLER_TERMINATED(10),
+    /**
+     * <pre>
+     * The crawl was canceled by the user
+     * </pre>
+     *
+     * <code>CRAWLER_CANCELLED = 11;</code>
+     */
+    CRAWLER_CANCELLED(11),
+    /**
+     * <pre>
+     * The agent timed out
+     * </pre>
+     *
+     * <code>AGENT_TIMED_OUT = 12;</code>
+     */
+    AGENT_TIMED_OUT(12),
+    /**
+     * <pre>
+     * The agent returned a RESOURCE_EXHAUSTED error
+     * </pre>
+     *
+     * <code>AGENT_RESOURCE_EXHAUSTED = 13;</code>
+     */
+    AGENT_RESOURCE_EXHAUSTED(13),
+    /**
+     * <pre>
+     * The app failed to launch
+     * </pre>
+     *
+     * <code>LAUNCH_APP_FAILED = 14;</code>
+     */
+    LAUNCH_APP_FAILED(14),
     ;
 
     /**
@@ -171,6 +227,62 @@ private static final long serialVersionUID = 0L;
      * <code>UNKNOWN_ERROR = 7;</code>
      */
     public static final int UNKNOWN_ERROR_VALUE = 7;
+    /**
+     * <pre>
+     * The crawler ran out of time before exploring all actions
+     * </pre>
+     *
+     * <code>CRAWLER_TIMED_OUT = 8;</code>
+     */
+    public static final int CRAWLER_TIMED_OUT_VALUE = 8;
+    /**
+     * <pre>
+     * The app terminated during the crawl
+     * </pre>
+     *
+     * <code>APP_TERMINATED = 9;</code>
+     */
+    public static final int APP_TERMINATED_VALUE = 9;
+    /**
+     * <pre>
+     * The crawler service was terminated unexepectedly (e.g. OOM)
+     * </pre>
+     *
+     * <code>CRAWLER_TERMINATED = 10;</code>
+     */
+    public static final int CRAWLER_TERMINATED_VALUE = 10;
+    /**
+     * <pre>
+     * The crawl was canceled by the user
+     * </pre>
+     *
+     * <code>CRAWLER_CANCELLED = 11;</code>
+     */
+    public static final int CRAWLER_CANCELLED_VALUE = 11;
+    /**
+     * <pre>
+     * The agent timed out
+     * </pre>
+     *
+     * <code>AGENT_TIMED_OUT = 12;</code>
+     */
+    public static final int AGENT_TIMED_OUT_VALUE = 12;
+    /**
+     * <pre>
+     * The agent returned a RESOURCE_EXHAUSTED error
+     * </pre>
+     *
+     * <code>AGENT_RESOURCE_EXHAUSTED = 13;</code>
+     */
+    public static final int AGENT_RESOURCE_EXHAUSTED_VALUE = 13;
+    /**
+     * <pre>
+     * The app failed to launch
+     * </pre>
+     *
+     * <code>LAUNCH_APP_FAILED = 14;</code>
+     */
+    public static final int LAUNCH_APP_FAILED_VALUE = 14;
 
 
     public final int getNumber() {
@@ -201,6 +313,13 @@ private static final long serialVersionUID = 0L;
         case 5: return JOURNEY_READ_FAILED;
         case 6: return AUTHENTICATION_FAILED;
         case 7: return UNKNOWN_ERROR;
+        case 8: return CRAWLER_TIMED_OUT;
+        case 9: return APP_TERMINATED;
+        case 10: return CRAWLER_TERMINATED;
+        case 11: return CRAWLER_CANCELLED;
+        case 12: return AGENT_TIMED_OUT;
+        case 13: return AGENT_RESOURCE_EXHAUSTED;
+        case 14: return LAUNCH_APP_FAILED;
         default: return null;
       }
     }
