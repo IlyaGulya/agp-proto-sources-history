@@ -121,6 +121,10 @@ private static final long serialVersionUID = 0L;
      */
     UNKNOWN_STATE(0),
     /**
+     * <pre>
+     * Configuration cache property not set, AGP version is incompatible
+     * </pre>
+     *
      * <code>AGP_NOT_COMPATIBLE = 1;</code>
      */
     AGP_NOT_COMPATIBLE(1),
@@ -129,14 +133,27 @@ private static final long serialVersionUID = 0L;
      */
     AGP_DOES_NOT_PROVIDE_PLUGINS_DATA(2),
     /**
+     * <pre>
+     * CC property not set, some plugins detected as incompatible
+     * </pre>
+     *
      * <code>INCOMPATIBLE_PLUGINS_DETECTED = 3;</code>
      */
     INCOMPATIBLE_PLUGINS_DETECTED(3),
     /**
+     * <pre>
+     * CC property not set, no plugins detected as incompatible
+     * but some unknown plugins or buildSrc code might be incompatible
+     * </pre>
+     *
      * <code>INCOMPATIBLE_PLUGINS_NOT_DETECTED = 4;</code>
      */
     INCOMPATIBLE_PLUGINS_NOT_DETECTED(4),
     /**
+     * <pre>
+     * CC property set to true
+     * </pre>
+     *
      * <code>CONFIGURATION_CACHE_TURNED_ON = 5;</code>
      */
     CONFIGURATION_CACHE_TURNED_ON(5),
@@ -144,6 +161,14 @@ private static final long serialVersionUID = 0L;
      * <code>CONFIGURATION_CACHE_TRIAL_FLOW_BUILD = 6;</code>
      */
     CONFIGURATION_CACHE_TRIAL_FLOW_BUILD(6),
+    /**
+     * <pre>
+     * CC property set to false
+     * </pre>
+     *
+     * <code>CONFIGURATION_CACHE_TURNED_OFF = 7;</code>
+     */
+    CONFIGURATION_CACHE_TURNED_OFF(7),
     ;
 
     /**
@@ -151,6 +176,10 @@ private static final long serialVersionUID = 0L;
      */
     public static final int UNKNOWN_STATE_VALUE = 0;
     /**
+     * <pre>
+     * Configuration cache property not set, AGP version is incompatible
+     * </pre>
+     *
      * <code>AGP_NOT_COMPATIBLE = 1;</code>
      */
     public static final int AGP_NOT_COMPATIBLE_VALUE = 1;
@@ -159,14 +188,27 @@ private static final long serialVersionUID = 0L;
      */
     public static final int AGP_DOES_NOT_PROVIDE_PLUGINS_DATA_VALUE = 2;
     /**
+     * <pre>
+     * CC property not set, some plugins detected as incompatible
+     * </pre>
+     *
      * <code>INCOMPATIBLE_PLUGINS_DETECTED = 3;</code>
      */
     public static final int INCOMPATIBLE_PLUGINS_DETECTED_VALUE = 3;
     /**
+     * <pre>
+     * CC property not set, no plugins detected as incompatible
+     * but some unknown plugins or buildSrc code might be incompatible
+     * </pre>
+     *
      * <code>INCOMPATIBLE_PLUGINS_NOT_DETECTED = 4;</code>
      */
     public static final int INCOMPATIBLE_PLUGINS_NOT_DETECTED_VALUE = 4;
     /**
+     * <pre>
+     * CC property set to true
+     * </pre>
+     *
      * <code>CONFIGURATION_CACHE_TURNED_ON = 5;</code>
      */
     public static final int CONFIGURATION_CACHE_TURNED_ON_VALUE = 5;
@@ -174,6 +216,14 @@ private static final long serialVersionUID = 0L;
      * <code>CONFIGURATION_CACHE_TRIAL_FLOW_BUILD = 6;</code>
      */
     public static final int CONFIGURATION_CACHE_TRIAL_FLOW_BUILD_VALUE = 6;
+    /**
+     * <pre>
+     * CC property set to false
+     * </pre>
+     *
+     * <code>CONFIGURATION_CACHE_TURNED_OFF = 7;</code>
+     */
+    public static final int CONFIGURATION_CACHE_TURNED_OFF_VALUE = 7;
 
 
     public final int getNumber() {
@@ -203,6 +253,7 @@ private static final long serialVersionUID = 0L;
         case 4: return INCOMPATIBLE_PLUGINS_NOT_DETECTED;
         case 5: return CONFIGURATION_CACHE_TURNED_ON;
         case 6: return CONFIGURATION_CACHE_TRIAL_FLOW_BUILD;
+        case 7: return CONFIGURATION_CACHE_TURNED_OFF;
         default: return null;
       }
     }
