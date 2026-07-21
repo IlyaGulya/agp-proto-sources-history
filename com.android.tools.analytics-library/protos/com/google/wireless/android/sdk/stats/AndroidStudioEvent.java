@@ -3244,6 +3244,14 @@ private static final long serialVersionUID = 0L;
      * <code>RESIZE_COMPOSE_PREVIEW_EVENT = 341;</code>
      */
     RESIZE_COMPOSE_PREVIEW_EVENT(341),
+    /**
+     * <pre>
+     * Even describing a Wi-Fi Pairing operation
+     * </pre>
+     *
+     * <code>WIFI_PAIRING_EVENT = 342;</code>
+     */
+    WIFI_PAIRING_EVENT(342),
     ;
 
     /**
@@ -5797,6 +5805,14 @@ private static final long serialVersionUID = 0L;
      * <code>RESIZE_COMPOSE_PREVIEW_EVENT = 341;</code>
      */
     public static final int RESIZE_COMPOSE_PREVIEW_EVENT_VALUE = 341;
+    /**
+     * <pre>
+     * Even describing a Wi-Fi Pairing operation
+     * </pre>
+     *
+     * <code>WIFI_PAIRING_EVENT = 342;</code>
+     */
+    public static final int WIFI_PAIRING_EVENT_VALUE = 342;
 
 
     public final int getNumber() {
@@ -6156,6 +6172,7 @@ private static final long serialVersionUID = 0L;
         case 339: return AUTO_SYNC_SETTING_CHANGE;
         case 340: return SUPPRESSED_SYNC;
         case 341: return RESIZE_COMPOSE_PREVIEW_EVENT;
+        case 342: return WIFI_PAIRING_EVENT;
         default: return null;
       }
     }
@@ -11907,7 +11924,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional uint32 min_sdk = 2 [deprecated = true];</code>
        * @deprecated android_studio.AndroidStudioEvent.TemplatesUsage.TemplateModule.min_sdk is deprecated.
-       *     See studio_stats.proto;l=1984
+       *     See studio_stats.proto;l=1990
        * @return Whether the minSdk field is set.
        */
       @java.lang.Deprecated boolean hasMinSdk();
@@ -11918,7 +11935,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional uint32 min_sdk = 2 [deprecated = true];</code>
        * @deprecated android_studio.AndroidStudioEvent.TemplatesUsage.TemplateModule.min_sdk is deprecated.
-       *     See studio_stats.proto;l=1984
+       *     See studio_stats.proto;l=1990
        * @return The minSdk.
        */
       @java.lang.Deprecated int getMinSdk();
@@ -12449,7 +12466,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional uint32 min_sdk = 2 [deprecated = true];</code>
        * @deprecated android_studio.AndroidStudioEvent.TemplatesUsage.TemplateModule.min_sdk is deprecated.
-       *     See studio_stats.proto;l=1984
+       *     See studio_stats.proto;l=1990
        * @return Whether the minSdk field is set.
        */
       @java.lang.Override
@@ -12463,7 +12480,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional uint32 min_sdk = 2 [deprecated = true];</code>
        * @deprecated android_studio.AndroidStudioEvent.TemplatesUsage.TemplateModule.min_sdk is deprecated.
-       *     See studio_stats.proto;l=1984
+       *     See studio_stats.proto;l=1990
        * @return The minSdk.
        */
       @java.lang.Override
@@ -13101,7 +13118,7 @@ private static final long serialVersionUID = 0L;
          *
          * <code>optional uint32 min_sdk = 2 [deprecated = true];</code>
          * @deprecated android_studio.AndroidStudioEvent.TemplatesUsage.TemplateModule.min_sdk is deprecated.
-         *     See studio_stats.proto;l=1984
+         *     See studio_stats.proto;l=1990
          * @return Whether the minSdk field is set.
          */
         @java.lang.Override
@@ -13115,7 +13132,7 @@ private static final long serialVersionUID = 0L;
          *
          * <code>optional uint32 min_sdk = 2 [deprecated = true];</code>
          * @deprecated android_studio.AndroidStudioEvent.TemplatesUsage.TemplateModule.min_sdk is deprecated.
-         *     See studio_stats.proto;l=1984
+         *     See studio_stats.proto;l=1990
          * @return The minSdk.
          */
         @java.lang.Override
@@ -13129,7 +13146,7 @@ private static final long serialVersionUID = 0L;
          *
          * <code>optional uint32 min_sdk = 2 [deprecated = true];</code>
          * @deprecated android_studio.AndroidStudioEvent.TemplatesUsage.TemplateModule.min_sdk is deprecated.
-         *     See studio_stats.proto;l=1984
+         *     See studio_stats.proto;l=1990
          * @param value The minSdk to set.
          * @return This builder for chaining.
          */
@@ -13147,7 +13164,7 @@ private static final long serialVersionUID = 0L;
          *
          * <code>optional uint32 min_sdk = 2 [deprecated = true];</code>
          * @deprecated android_studio.AndroidStudioEvent.TemplatesUsage.TemplateModule.min_sdk is deprecated.
-         *     See studio_stats.proto;l=1984
+         *     See studio_stats.proto;l=1990
          * @return This builder for chaining.
          */
         @java.lang.Deprecated public Builder clearMinSdk() {
@@ -24286,6 +24303,44 @@ private static final long serialVersionUID = 0L;
     return resizeComposePreviewEvent_ == null ? com.google.wireless.android.sdk.stats.ResizeComposePreviewEvent.getDefaultInstance() : resizeComposePreviewEvent_;
   }
 
+  public static final int WIFI_PAIRING_EVENT_FIELD_NUMBER = 223;
+  private com.google.wireless.android.sdk.stats.WifiPairingEvent wifiPairingEvent_;
+  /**
+   * <pre>
+   * set when kind = WIFI_PAIRING_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.WifiPairingEvent wifi_pairing_event = 223 [lazy = true];</code>
+   * @return Whether the wifiPairingEvent field is set.
+   */
+  @java.lang.Override
+  public boolean hasWifiPairingEvent() {
+    return ((bitField6_ & 0x01000000) != 0);
+  }
+  /**
+   * <pre>
+   * set when kind = WIFI_PAIRING_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.WifiPairingEvent wifi_pairing_event = 223 [lazy = true];</code>
+   * @return The wifiPairingEvent.
+   */
+  @java.lang.Override
+  public com.google.wireless.android.sdk.stats.WifiPairingEvent getWifiPairingEvent() {
+    return wifiPairingEvent_ == null ? com.google.wireless.android.sdk.stats.WifiPairingEvent.getDefaultInstance() : wifiPairingEvent_;
+  }
+  /**
+   * <pre>
+   * set when kind = WIFI_PAIRING_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.WifiPairingEvent wifi_pairing_event = 223 [lazy = true];</code>
+   */
+  @java.lang.Override
+  public com.google.wireless.android.sdk.stats.WifiPairingEventOrBuilder getWifiPairingEventOrBuilder() {
+    return wifiPairingEvent_ == null ? com.google.wireless.android.sdk.stats.WifiPairingEvent.getDefaultInstance() : wifiPairingEvent_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -24965,6 +25020,9 @@ private static final long serialVersionUID = 0L;
     }
     if (((bitField6_ & 0x00800000) != 0)) {
       output.writeMessage(222, getResizeComposePreviewEvent());
+    }
+    if (((bitField6_ & 0x01000000) != 0)) {
+      output.writeMessage(223, getWifiPairingEvent());
     }
     getUnknownFields().writeTo(output);
   }
@@ -25868,6 +25926,10 @@ private static final long serialVersionUID = 0L;
     if (((bitField6_ & 0x00800000) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(222, getResizeComposePreviewEvent());
+    }
+    if (((bitField6_ & 0x01000000) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(223, getWifiPairingEvent());
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -26965,6 +27027,11 @@ private static final long serialVersionUID = 0L;
       if (!getResizeComposePreviewEvent()
           .equals(other.getResizeComposePreviewEvent())) return false;
     }
+    if (hasWifiPairingEvent() != other.hasWifiPairingEvent()) return false;
+    if (hasWifiPairingEvent()) {
+      if (!getWifiPairingEvent()
+          .equals(other.getWifiPairingEvent())) return false;
+    }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -27866,6 +27933,10 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + RESIZE_COMPOSE_PREVIEW_EVENT_FIELD_NUMBER;
       hash = (53 * hash) + getResizeComposePreviewEvent().hashCode();
     }
+    if (hasWifiPairingEvent()) {
+      hash = (37 * hash) + WIFI_PAIRING_EVENT_FIELD_NUMBER;
+      hash = (53 * hash) + getWifiPairingEvent().hashCode();
+    }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -28193,6 +28264,7 @@ private static final long serialVersionUID = 0L;
         getAutoSyncSettingChangeEventFieldBuilder();
         getSuppressedSyncEventFieldBuilder();
         getResizeComposePreviewEventFieldBuilder();
+        getWifiPairingEventFieldBuilder();
       }
     }
     @java.lang.Override
@@ -29231,6 +29303,11 @@ private static final long serialVersionUID = 0L;
       if (resizeComposePreviewEventBuilder_ != null) {
         resizeComposePreviewEventBuilder_.dispose();
         resizeComposePreviewEventBuilder_ = null;
+      }
+      wifiPairingEvent_ = null;
+      if (wifiPairingEventBuilder_ != null) {
+        wifiPairingEventBuilder_.dispose();
+        wifiPairingEventBuilder_ = null;
       }
       return this;
     }
@@ -30615,6 +30692,12 @@ private static final long serialVersionUID = 0L;
             : resizeComposePreviewEventBuilder_.build();
         to_bitField6_ |= 0x00800000;
       }
+      if (((from_bitField6_ & 0x40000000) != 0)) {
+        result.wifiPairingEvent_ = wifiPairingEventBuilder_ == null
+            ? wifiPairingEvent_
+            : wifiPairingEventBuilder_.build();
+        to_bitField6_ |= 0x01000000;
+      }
       result.bitField5_ |= to_bitField5_;
       result.bitField6_ |= to_bitField6_;
     }
@@ -31400,6 +31483,9 @@ private static final long serialVersionUID = 0L;
       }
       if (other.hasResizeComposePreviewEvent()) {
         mergeResizeComposePreviewEvent(other.getResizeComposePreviewEvent());
+      }
+      if (other.hasWifiPairingEvent()) {
+        mergeWifiPairingEvent(other.getWifiPairingEvent());
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -33049,6 +33135,13 @@ private static final long serialVersionUID = 0L;
               bitField6_ |= 0x20000000;
               break;
             } // case 1778
+            case 1786: {
+              input.readMessage(
+                  getWifiPairingEventFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField6_ |= 0x40000000;
+              break;
+            } // case 1786
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -66818,6 +66911,161 @@ private static final long serialVersionUID = 0L;
         resizeComposePreviewEvent_ = null;
       }
       return resizeComposePreviewEventBuilder_;
+    }
+
+    private com.google.wireless.android.sdk.stats.WifiPairingEvent wifiPairingEvent_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.WifiPairingEvent, com.google.wireless.android.sdk.stats.WifiPairingEvent.Builder, com.google.wireless.android.sdk.stats.WifiPairingEventOrBuilder> wifiPairingEventBuilder_;
+    /**
+     * <pre>
+     * set when kind = WIFI_PAIRING_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.WifiPairingEvent wifi_pairing_event = 223 [lazy = true];</code>
+     * @return Whether the wifiPairingEvent field is set.
+     */
+    public boolean hasWifiPairingEvent() {
+      return ((bitField6_ & 0x40000000) != 0);
+    }
+    /**
+     * <pre>
+     * set when kind = WIFI_PAIRING_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.WifiPairingEvent wifi_pairing_event = 223 [lazy = true];</code>
+     * @return The wifiPairingEvent.
+     */
+    public com.google.wireless.android.sdk.stats.WifiPairingEvent getWifiPairingEvent() {
+      if (wifiPairingEventBuilder_ == null) {
+        return wifiPairingEvent_ == null ? com.google.wireless.android.sdk.stats.WifiPairingEvent.getDefaultInstance() : wifiPairingEvent_;
+      } else {
+        return wifiPairingEventBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * set when kind = WIFI_PAIRING_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.WifiPairingEvent wifi_pairing_event = 223 [lazy = true];</code>
+     */
+    public Builder setWifiPairingEvent(com.google.wireless.android.sdk.stats.WifiPairingEvent value) {
+      if (wifiPairingEventBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        wifiPairingEvent_ = value;
+      } else {
+        wifiPairingEventBuilder_.setMessage(value);
+      }
+      bitField6_ |= 0x40000000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = WIFI_PAIRING_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.WifiPairingEvent wifi_pairing_event = 223 [lazy = true];</code>
+     */
+    public Builder setWifiPairingEvent(
+        com.google.wireless.android.sdk.stats.WifiPairingEvent.Builder builderForValue) {
+      if (wifiPairingEventBuilder_ == null) {
+        wifiPairingEvent_ = builderForValue.build();
+      } else {
+        wifiPairingEventBuilder_.setMessage(builderForValue.build());
+      }
+      bitField6_ |= 0x40000000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = WIFI_PAIRING_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.WifiPairingEvent wifi_pairing_event = 223 [lazy = true];</code>
+     */
+    public Builder mergeWifiPairingEvent(com.google.wireless.android.sdk.stats.WifiPairingEvent value) {
+      if (wifiPairingEventBuilder_ == null) {
+        if (((bitField6_ & 0x40000000) != 0) &&
+          wifiPairingEvent_ != null &&
+          wifiPairingEvent_ != com.google.wireless.android.sdk.stats.WifiPairingEvent.getDefaultInstance()) {
+          getWifiPairingEventBuilder().mergeFrom(value);
+        } else {
+          wifiPairingEvent_ = value;
+        }
+      } else {
+        wifiPairingEventBuilder_.mergeFrom(value);
+      }
+      bitField6_ |= 0x40000000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = WIFI_PAIRING_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.WifiPairingEvent wifi_pairing_event = 223 [lazy = true];</code>
+     */
+    public Builder clearWifiPairingEvent() {
+      bitField6_ = (bitField6_ & ~0x40000000);
+      wifiPairingEvent_ = null;
+      if (wifiPairingEventBuilder_ != null) {
+        wifiPairingEventBuilder_.dispose();
+        wifiPairingEventBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = WIFI_PAIRING_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.WifiPairingEvent wifi_pairing_event = 223 [lazy = true];</code>
+     */
+    public com.google.wireless.android.sdk.stats.WifiPairingEvent.Builder getWifiPairingEventBuilder() {
+      bitField6_ |= 0x40000000;
+      onChanged();
+      return getWifiPairingEventFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * set when kind = WIFI_PAIRING_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.WifiPairingEvent wifi_pairing_event = 223 [lazy = true];</code>
+     */
+    public com.google.wireless.android.sdk.stats.WifiPairingEventOrBuilder getWifiPairingEventOrBuilder() {
+      if (wifiPairingEventBuilder_ != null) {
+        return wifiPairingEventBuilder_.getMessageOrBuilder();
+      } else {
+        return wifiPairingEvent_ == null ?
+            com.google.wireless.android.sdk.stats.WifiPairingEvent.getDefaultInstance() : wifiPairingEvent_;
+      }
+    }
+    /**
+     * <pre>
+     * set when kind = WIFI_PAIRING_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.WifiPairingEvent wifi_pairing_event = 223 [lazy = true];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.WifiPairingEvent, com.google.wireless.android.sdk.stats.WifiPairingEvent.Builder, com.google.wireless.android.sdk.stats.WifiPairingEventOrBuilder> 
+        getWifiPairingEventFieldBuilder() {
+      if (wifiPairingEventBuilder_ == null) {
+        wifiPairingEventBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.wireless.android.sdk.stats.WifiPairingEvent, com.google.wireless.android.sdk.stats.WifiPairingEvent.Builder, com.google.wireless.android.sdk.stats.WifiPairingEventOrBuilder>(
+                getWifiPairingEvent(),
+                getParentForChildren(),
+                isClean());
+        wifiPairingEvent_ = null;
+      }
+      return wifiPairingEventBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(
