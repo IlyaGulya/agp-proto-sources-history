@@ -585,6 +585,10 @@ public enum VariantPropertiesMethodType
    * <code>SOURCES_RESOURCES_ACCESS = 132;</code>
    */
   SOURCES_RESOURCES_ACCESS(132),
+  /**
+   * <code>ADD_ARTIFACTS = 133;</code>
+   */
+  ADD_ARTIFACTS(133),
   UNRECOGNIZED(-1),
   ;
 
@@ -1164,6 +1168,10 @@ public enum VariantPropertiesMethodType
    * <code>SOURCES_RESOURCES_ACCESS = 132;</code>
    */
   public static final int SOURCES_RESOURCES_ACCESS_VALUE = 132;
+  /**
+   * <code>ADD_ARTIFACTS = 133;</code>
+   */
+  public static final int ADD_ARTIFACTS_VALUE = 133;
 
 
   public final int getNumber() {
@@ -1323,6 +1331,7 @@ public enum VariantPropertiesMethodType
       case 130: return CODE_MINIFICATION;
       case 131: return SHRINK_RESOURCES;
       case 132: return SOURCES_RESOURCES_ACCESS;
+      case 133: return ADD_ARTIFACTS;
       default: return null;
     }
   }
