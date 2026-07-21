@@ -1678,6 +1678,19 @@ private static final long serialVersionUID = 0L;
             bitField3_ |= 0x10000000;
             break;
           }
+          case 1042: {
+            com.google.wireless.android.sdk.stats.WearPairingEvent.Builder subBuilder = null;
+            if (((bitField3_ & 0x20000000) != 0)) {
+              subBuilder = wearPairingEvent_.toBuilder();
+            }
+            wearPairingEvent_ = input.readMessage(com.google.wireless.android.sdk.stats.WearPairingEvent.PARSER, extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(wearPairingEvent_);
+              wearPairingEvent_ = subBuilder.buildPartial();
+            }
+            bitField3_ |= 0x20000000;
+            break;
+          }
           default: {
             if (!parseUnknownField(
                 input, unknownFields, extensionRegistry, tag)) {
@@ -4030,6 +4043,14 @@ private static final long serialVersionUID = 0L;
      * <code>DEVICE_MANAGER = 237;</code>
      */
     DEVICE_MANAGER(237),
+    /**
+     * <pre>
+     * Event related to Wear OS emulator pairing assistant
+     * </pre>
+     *
+     * <code>WEAR_PAIRING = 238;</code>
+     */
+    WEAR_PAIRING(238),
     ;
 
     /**
@@ -5761,6 +5782,14 @@ private static final long serialVersionUID = 0L;
      * <code>DEVICE_MANAGER = 237;</code>
      */
     public static final int DEVICE_MANAGER_VALUE = 237;
+    /**
+     * <pre>
+     * Event related to Wear OS emulator pairing assistant
+     * </pre>
+     *
+     * <code>WEAR_PAIRING = 238;</code>
+     */
+    public static final int WEAR_PAIRING_VALUE = 238;
 
 
     public final int getNumber() {
@@ -6016,6 +6045,7 @@ private static final long serialVersionUID = 0L;
         case 235: return RUN_START_DATA;
         case 236: return RUN_FINISH_DATA;
         case 237: return DEVICE_MANAGER;
+        case 238: return WEAR_PAIRING;
         default: return null;
       }
     }
@@ -19152,6 +19182,41 @@ private static final long serialVersionUID = 0L;
     return deviceManagerEvent_ == null ? com.google.wireless.android.sdk.stats.DeviceManagerEvent.getDefaultInstance() : deviceManagerEvent_;
   }
 
+  public static final int WEAR_PAIRING_EVENT_FIELD_NUMBER = 130;
+  private com.google.wireless.android.sdk.stats.WearPairingEvent wearPairingEvent_;
+  /**
+   * <pre>
+   * set when kind = WEAR_PAIRING
+   * </pre>
+   *
+   * <code>optional .android_studio.WearPairingEvent wear_pairing_event = 130;</code>
+   * @return Whether the wearPairingEvent field is set.
+   */
+  public boolean hasWearPairingEvent() {
+    return ((bitField3_ & 0x20000000) != 0);
+  }
+  /**
+   * <pre>
+   * set when kind = WEAR_PAIRING
+   * </pre>
+   *
+   * <code>optional .android_studio.WearPairingEvent wear_pairing_event = 130;</code>
+   * @return The wearPairingEvent.
+   */
+  public com.google.wireless.android.sdk.stats.WearPairingEvent getWearPairingEvent() {
+    return wearPairingEvent_ == null ? com.google.wireless.android.sdk.stats.WearPairingEvent.getDefaultInstance() : wearPairingEvent_;
+  }
+  /**
+   * <pre>
+   * set when kind = WEAR_PAIRING
+   * </pre>
+   *
+   * <code>optional .android_studio.WearPairingEvent wear_pairing_event = 130;</code>
+   */
+  public com.google.wireless.android.sdk.stats.WearPairingEventOrBuilder getWearPairingEventOrBuilder() {
+    return wearPairingEvent_ == null ? com.google.wireless.android.sdk.stats.WearPairingEvent.getDefaultInstance() : wearPairingEvent_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -19552,6 +19617,9 @@ private static final long serialVersionUID = 0L;
     }
     if (((bitField3_ & 0x10000000) != 0)) {
       output.writeMessage(129, getDeviceManagerEvent());
+    }
+    if (((bitField3_ & 0x20000000) != 0)) {
+      output.writeMessage(130, getWearPairingEvent());
     }
     unknownFields.writeTo(output);
   }
@@ -20075,6 +20143,10 @@ private static final long serialVersionUID = 0L;
     if (((bitField3_ & 0x10000000) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(129, getDeviceManagerEvent());
+    }
+    if (((bitField3_ & 0x20000000) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(130, getWearPairingEvent());
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -20713,6 +20785,11 @@ private static final long serialVersionUID = 0L;
       if (!getDeviceManagerEvent()
           .equals(other.getDeviceManagerEvent())) return false;
     }
+    if (hasWearPairingEvent() != other.hasWearPairingEvent()) return false;
+    if (hasWearPairingEvent()) {
+      if (!getWearPairingEvent()
+          .equals(other.getWearPairingEvent())) return false;
+    }
     if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
@@ -21242,6 +21319,10 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + DEVICE_MANAGER_EVENT_FIELD_NUMBER;
       hash = (53 * hash) + getDeviceManagerEvent().hashCode();
     }
+    if (hasWearPairingEvent()) {
+      hash = (37 * hash) + WEAR_PAIRING_EVENT_FIELD_NUMBER;
+      hash = (53 * hash) + getWearPairingEvent().hashCode();
+    }
     hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -21478,6 +21559,7 @@ private static final long serialVersionUID = 0L;
         getRunStartDataFieldBuilder();
         getRunFinishDataFieldBuilder();
         getDeviceManagerEventFieldBuilder();
+        getWearPairingEventFieldBuilder();
       }
     }
     @java.lang.Override
@@ -22173,6 +22255,12 @@ private static final long serialVersionUID = 0L;
         deviceManagerEventBuilder_.clear();
       }
       bitField4_ = (bitField4_ & ~0x00000001);
+      if (wearPairingEventBuilder_ == null) {
+        wearPairingEvent_ = null;
+      } else {
+        wearPairingEventBuilder_.clear();
+      }
+      bitField4_ = (bitField4_ & ~0x00000002);
       return this;
     }
 
@@ -23160,6 +23248,14 @@ private static final long serialVersionUID = 0L;
         }
         to_bitField3_ |= 0x10000000;
       }
+      if (((from_bitField4_ & 0x00000002) != 0)) {
+        if (wearPairingEventBuilder_ == null) {
+          result.wearPairingEvent_ = wearPairingEvent_;
+        } else {
+          result.wearPairingEvent_ = wearPairingEventBuilder_.build();
+        }
+        to_bitField3_ |= 0x20000000;
+      }
       result.bitField0_ = to_bitField0_;
       result.bitField1_ = to_bitField1_;
       result.bitField2_ = to_bitField2_;
@@ -23688,6 +23784,9 @@ private static final long serialVersionUID = 0L;
       }
       if (other.hasDeviceManagerEvent()) {
         mergeDeviceManagerEvent(other.getDeviceManagerEvent());
+      }
+      if (other.hasWearPairingEvent()) {
+        mergeWearPairingEvent(other.getWearPairingEvent());
       }
       this.mergeUnknownFields(other.unknownFields);
       onChanged();
@@ -43029,6 +43128,162 @@ private static final long serialVersionUID = 0L;
         deviceManagerEvent_ = null;
       }
       return deviceManagerEventBuilder_;
+    }
+
+    private com.google.wireless.android.sdk.stats.WearPairingEvent wearPairingEvent_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.WearPairingEvent, com.google.wireless.android.sdk.stats.WearPairingEvent.Builder, com.google.wireless.android.sdk.stats.WearPairingEventOrBuilder> wearPairingEventBuilder_;
+    /**
+     * <pre>
+     * set when kind = WEAR_PAIRING
+     * </pre>
+     *
+     * <code>optional .android_studio.WearPairingEvent wear_pairing_event = 130;</code>
+     * @return Whether the wearPairingEvent field is set.
+     */
+    public boolean hasWearPairingEvent() {
+      return ((bitField4_ & 0x00000002) != 0);
+    }
+    /**
+     * <pre>
+     * set when kind = WEAR_PAIRING
+     * </pre>
+     *
+     * <code>optional .android_studio.WearPairingEvent wear_pairing_event = 130;</code>
+     * @return The wearPairingEvent.
+     */
+    public com.google.wireless.android.sdk.stats.WearPairingEvent getWearPairingEvent() {
+      if (wearPairingEventBuilder_ == null) {
+        return wearPairingEvent_ == null ? com.google.wireless.android.sdk.stats.WearPairingEvent.getDefaultInstance() : wearPairingEvent_;
+      } else {
+        return wearPairingEventBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * set when kind = WEAR_PAIRING
+     * </pre>
+     *
+     * <code>optional .android_studio.WearPairingEvent wear_pairing_event = 130;</code>
+     */
+    public Builder setWearPairingEvent(com.google.wireless.android.sdk.stats.WearPairingEvent value) {
+      if (wearPairingEventBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        wearPairingEvent_ = value;
+        onChanged();
+      } else {
+        wearPairingEventBuilder_.setMessage(value);
+      }
+      bitField4_ |= 0x00000002;
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = WEAR_PAIRING
+     * </pre>
+     *
+     * <code>optional .android_studio.WearPairingEvent wear_pairing_event = 130;</code>
+     */
+    public Builder setWearPairingEvent(
+        com.google.wireless.android.sdk.stats.WearPairingEvent.Builder builderForValue) {
+      if (wearPairingEventBuilder_ == null) {
+        wearPairingEvent_ = builderForValue.build();
+        onChanged();
+      } else {
+        wearPairingEventBuilder_.setMessage(builderForValue.build());
+      }
+      bitField4_ |= 0x00000002;
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = WEAR_PAIRING
+     * </pre>
+     *
+     * <code>optional .android_studio.WearPairingEvent wear_pairing_event = 130;</code>
+     */
+    public Builder mergeWearPairingEvent(com.google.wireless.android.sdk.stats.WearPairingEvent value) {
+      if (wearPairingEventBuilder_ == null) {
+        if (((bitField4_ & 0x00000002) != 0) &&
+            wearPairingEvent_ != null &&
+            wearPairingEvent_ != com.google.wireless.android.sdk.stats.WearPairingEvent.getDefaultInstance()) {
+          wearPairingEvent_ =
+            com.google.wireless.android.sdk.stats.WearPairingEvent.newBuilder(wearPairingEvent_).mergeFrom(value).buildPartial();
+        } else {
+          wearPairingEvent_ = value;
+        }
+        onChanged();
+      } else {
+        wearPairingEventBuilder_.mergeFrom(value);
+      }
+      bitField4_ |= 0x00000002;
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = WEAR_PAIRING
+     * </pre>
+     *
+     * <code>optional .android_studio.WearPairingEvent wear_pairing_event = 130;</code>
+     */
+    public Builder clearWearPairingEvent() {
+      if (wearPairingEventBuilder_ == null) {
+        wearPairingEvent_ = null;
+        onChanged();
+      } else {
+        wearPairingEventBuilder_.clear();
+      }
+      bitField4_ = (bitField4_ & ~0x00000002);
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = WEAR_PAIRING
+     * </pre>
+     *
+     * <code>optional .android_studio.WearPairingEvent wear_pairing_event = 130;</code>
+     */
+    public com.google.wireless.android.sdk.stats.WearPairingEvent.Builder getWearPairingEventBuilder() {
+      bitField4_ |= 0x00000002;
+      onChanged();
+      return getWearPairingEventFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * set when kind = WEAR_PAIRING
+     * </pre>
+     *
+     * <code>optional .android_studio.WearPairingEvent wear_pairing_event = 130;</code>
+     */
+    public com.google.wireless.android.sdk.stats.WearPairingEventOrBuilder getWearPairingEventOrBuilder() {
+      if (wearPairingEventBuilder_ != null) {
+        return wearPairingEventBuilder_.getMessageOrBuilder();
+      } else {
+        return wearPairingEvent_ == null ?
+            com.google.wireless.android.sdk.stats.WearPairingEvent.getDefaultInstance() : wearPairingEvent_;
+      }
+    }
+    /**
+     * <pre>
+     * set when kind = WEAR_PAIRING
+     * </pre>
+     *
+     * <code>optional .android_studio.WearPairingEvent wear_pairing_event = 130;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.WearPairingEvent, com.google.wireless.android.sdk.stats.WearPairingEvent.Builder, com.google.wireless.android.sdk.stats.WearPairingEventOrBuilder> 
+        getWearPairingEventFieldBuilder() {
+      if (wearPairingEventBuilder_ == null) {
+        wearPairingEventBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.wireless.android.sdk.stats.WearPairingEvent, com.google.wireless.android.sdk.stats.WearPairingEvent.Builder, com.google.wireless.android.sdk.stats.WearPairingEventOrBuilder>(
+                getWearPairingEvent(),
+                getParentForChildren(),
+                isClean());
+        wearPairingEvent_ = null;
+      }
+      return wearPairingEventBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

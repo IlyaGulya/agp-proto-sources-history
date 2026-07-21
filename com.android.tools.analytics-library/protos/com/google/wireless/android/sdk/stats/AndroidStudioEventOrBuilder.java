@@ -3596,4 +3596,31 @@ public interface AndroidStudioEventOrBuilder extends
    * <code>optional .android_studio.DeviceManagerEvent device_manager_event = 129;</code>
    */
   com.google.wireless.android.sdk.stats.DeviceManagerEventOrBuilder getDeviceManagerEventOrBuilder();
+
+  /**
+   * <pre>
+   * set when kind = WEAR_PAIRING
+   * </pre>
+   *
+   * <code>optional .android_studio.WearPairingEvent wear_pairing_event = 130;</code>
+   * @return Whether the wearPairingEvent field is set.
+   */
+  boolean hasWearPairingEvent();
+  /**
+   * <pre>
+   * set when kind = WEAR_PAIRING
+   * </pre>
+   *
+   * <code>optional .android_studio.WearPairingEvent wear_pairing_event = 130;</code>
+   * @return The wearPairingEvent.
+   */
+  com.google.wireless.android.sdk.stats.WearPairingEvent getWearPairingEvent();
+  /**
+   * <pre>
+   * set when kind = WEAR_PAIRING
+   * </pre>
+   *
+   * <code>optional .android_studio.WearPairingEvent wear_pairing_event = 130;</code>
+   */
+  com.google.wireless.android.sdk.stats.WearPairingEventOrBuilder getWearPairingEventOrBuilder();
 }
