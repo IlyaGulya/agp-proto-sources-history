@@ -2245,6 +2245,19 @@ private static final long serialVersionUID = 0L;
             bitField5_ |= 0x00000040;
             break;
           }
+          case 1394: {
+            com.google.wireless.android.sdk.stats.ComposePreviewLiteModeEvent.Builder subBuilder = null;
+            if (((bitField5_ & 0x00000080) != 0)) {
+              subBuilder = composePreviewLiteModeEvent_.toBuilder();
+            }
+            composePreviewLiteModeEvent_ = input.readMessage(com.google.wireless.android.sdk.stats.ComposePreviewLiteModeEvent.PARSER, extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(composePreviewLiteModeEvent_);
+              composePreviewLiteModeEvent_ = subBuilder.buildPartial();
+            }
+            bitField5_ |= 0x00000080;
+            break;
+          }
           default: {
             if (!parseUnknownField(
                 input, unknownFields, extensionRegistry, tag)) {
@@ -5071,6 +5084,14 @@ private static final long serialVersionUID = 0L;
      * <code>EDITOR_NOTIFICATION = 289;</code>
      */
     EDITOR_NOTIFICATION(289),
+    /**
+     * <pre>
+     * Event related to Compose Preview Lite Mode
+     * </pre>
+     *
+     * <code>COMPOSE_PREVIEW_LITE_MODE = 290;</code>
+     */
+    COMPOSE_PREVIEW_LITE_MODE(290),
     ;
 
     /**
@@ -7219,6 +7240,14 @@ private static final long serialVersionUID = 0L;
      * <code>EDITOR_NOTIFICATION = 289;</code>
      */
     public static final int EDITOR_NOTIFICATION_VALUE = 289;
+    /**
+     * <pre>
+     * Event related to Compose Preview Lite Mode
+     * </pre>
+     *
+     * <code>COMPOSE_PREVIEW_LITE_MODE = 290;</code>
+     */
+    public static final int COMPOSE_PREVIEW_LITE_MODE_VALUE = 290;
 
 
     public final int getNumber() {
@@ -7526,6 +7555,7 @@ private static final long serialVersionUID = 0L;
         case 287: return GRADLE_JDK_MIGRATE_TO_LOCAL_PROPERTIES_DIALOG_CANCELED;
         case 288: return DEVICE_SCREENSHOT_EVENT;
         case 289: return EDITOR_NOTIFICATION;
+        case 290: return COMPOSE_PREVIEW_LITE_MODE;
         default: return null;
       }
     }
@@ -23015,6 +23045,44 @@ private static final long serialVersionUID = 0L;
     return editorNotification_ == null ? com.google.wireless.android.sdk.stats.EditorNotification.getDefaultInstance() : editorNotification_;
   }
 
+  public static final int COMPOSE_PREVIEW_LITE_MODE_EVENT_FIELD_NUMBER = 174;
+  private com.google.wireless.android.sdk.stats.ComposePreviewLiteModeEvent composePreviewLiteModeEvent_;
+  /**
+   * <pre>
+   * set when kind = COMPOSE_PREVIEW_LITE_MODE
+   * </pre>
+   *
+   * <code>optional .android_studio.ComposePreviewLiteModeEvent compose_preview_lite_mode_event = 174;</code>
+   * @return Whether the composePreviewLiteModeEvent field is set.
+   */
+  @java.lang.Override
+  public boolean hasComposePreviewLiteModeEvent() {
+    return ((bitField5_ & 0x00000080) != 0);
+  }
+  /**
+   * <pre>
+   * set when kind = COMPOSE_PREVIEW_LITE_MODE
+   * </pre>
+   *
+   * <code>optional .android_studio.ComposePreviewLiteModeEvent compose_preview_lite_mode_event = 174;</code>
+   * @return The composePreviewLiteModeEvent.
+   */
+  @java.lang.Override
+  public com.google.wireless.android.sdk.stats.ComposePreviewLiteModeEvent getComposePreviewLiteModeEvent() {
+    return composePreviewLiteModeEvent_ == null ? com.google.wireless.android.sdk.stats.ComposePreviewLiteModeEvent.getDefaultInstance() : composePreviewLiteModeEvent_;
+  }
+  /**
+   * <pre>
+   * set when kind = COMPOSE_PREVIEW_LITE_MODE
+   * </pre>
+   *
+   * <code>optional .android_studio.ComposePreviewLiteModeEvent compose_preview_lite_mode_event = 174;</code>
+   */
+  @java.lang.Override
+  public com.google.wireless.android.sdk.stats.ComposePreviewLiteModeEventOrBuilder getComposePreviewLiteModeEventOrBuilder() {
+    return composePreviewLiteModeEvent_ == null ? com.google.wireless.android.sdk.stats.ComposePreviewLiteModeEvent.getDefaultInstance() : composePreviewLiteModeEvent_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -23547,6 +23615,9 @@ private static final long serialVersionUID = 0L;
     }
     if (((bitField5_ & 0x00000040) != 0)) {
       output.writeMessage(173, getEditorNotification());
+    }
+    if (((bitField5_ & 0x00000080) != 0)) {
+      output.writeMessage(174, getComposePreviewLiteModeEvent());
     }
     unknownFields.writeTo(output);
   }
@@ -24254,6 +24325,10 @@ private static final long serialVersionUID = 0L;
     if (((bitField5_ & 0x00000040) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(173, getEditorNotification());
+    }
+    if (((bitField5_ & 0x00000080) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(174, getComposePreviewLiteModeEvent());
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -25106,6 +25181,11 @@ private static final long serialVersionUID = 0L;
       if (!getEditorNotification()
           .equals(other.getEditorNotification())) return false;
     }
+    if (hasComposePreviewLiteModeEvent() != other.hasComposePreviewLiteModeEvent()) return false;
+    if (hasComposePreviewLiteModeEvent()) {
+      if (!getComposePreviewLiteModeEvent()
+          .equals(other.getComposePreviewLiteModeEvent())) return false;
+    }
     if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
@@ -25811,6 +25891,10 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + EDITOR_NOTIFICATION_FIELD_NUMBER;
       hash = (53 * hash) + getEditorNotification().hashCode();
     }
+    if (hasComposePreviewLiteModeEvent()) {
+      hash = (37 * hash) + COMPOSE_PREVIEW_LITE_MODE_EVENT_FIELD_NUMBER;
+      hash = (53 * hash) + getComposePreviewLiteModeEvent().hashCode();
+    }
     hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -26089,6 +26173,7 @@ private static final long serialVersionUID = 0L;
         getKotlinSupportDeclinedFieldBuilder();
         getDeviceScreenshotEventFieldBuilder();
         getEditorNotificationFieldBuilder();
+        getComposePreviewLiteModeEventFieldBuilder();
       }
     }
     @java.lang.Override
@@ -27040,6 +27125,12 @@ private static final long serialVersionUID = 0L;
         editorNotificationBuilder_.clear();
       }
       bitField5_ = (bitField5_ & ~0x00001000);
+      if (composePreviewLiteModeEventBuilder_ == null) {
+        composePreviewLiteModeEvent_ = null;
+      } else {
+        composePreviewLiteModeEventBuilder_.clear();
+      }
+      bitField5_ = (bitField5_ & ~0x00002000);
       return this;
     }
 
@@ -28376,6 +28467,14 @@ private static final long serialVersionUID = 0L;
         }
         to_bitField5_ |= 0x00000040;
       }
+      if (((from_bitField5_ & 0x00002000) != 0)) {
+        if (composePreviewLiteModeEventBuilder_ == null) {
+          result.composePreviewLiteModeEvent_ = composePreviewLiteModeEvent_;
+        } else {
+          result.composePreviewLiteModeEvent_ = composePreviewLiteModeEventBuilder_.build();
+        }
+        to_bitField5_ |= 0x00000080;
+      }
       result.bitField0_ = to_bitField0_;
       result.bitField1_ = to_bitField1_;
       result.bitField2_ = to_bitField2_;
@@ -29052,6 +29151,9 @@ private static final long serialVersionUID = 0L;
       }
       if (other.hasEditorNotification()) {
         mergeEditorNotification(other.getEditorNotification());
+      }
+      if (other.hasComposePreviewLiteModeEvent()) {
+        mergeComposePreviewLiteModeEvent(other.getComposePreviewLiteModeEvent());
       }
       this.mergeUnknownFields(other.unknownFields);
       onChanged();
@@ -55355,6 +55457,162 @@ private static final long serialVersionUID = 0L;
         editorNotification_ = null;
       }
       return editorNotificationBuilder_;
+    }
+
+    private com.google.wireless.android.sdk.stats.ComposePreviewLiteModeEvent composePreviewLiteModeEvent_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.ComposePreviewLiteModeEvent, com.google.wireless.android.sdk.stats.ComposePreviewLiteModeEvent.Builder, com.google.wireless.android.sdk.stats.ComposePreviewLiteModeEventOrBuilder> composePreviewLiteModeEventBuilder_;
+    /**
+     * <pre>
+     * set when kind = COMPOSE_PREVIEW_LITE_MODE
+     * </pre>
+     *
+     * <code>optional .android_studio.ComposePreviewLiteModeEvent compose_preview_lite_mode_event = 174;</code>
+     * @return Whether the composePreviewLiteModeEvent field is set.
+     */
+    public boolean hasComposePreviewLiteModeEvent() {
+      return ((bitField5_ & 0x00002000) != 0);
+    }
+    /**
+     * <pre>
+     * set when kind = COMPOSE_PREVIEW_LITE_MODE
+     * </pre>
+     *
+     * <code>optional .android_studio.ComposePreviewLiteModeEvent compose_preview_lite_mode_event = 174;</code>
+     * @return The composePreviewLiteModeEvent.
+     */
+    public com.google.wireless.android.sdk.stats.ComposePreviewLiteModeEvent getComposePreviewLiteModeEvent() {
+      if (composePreviewLiteModeEventBuilder_ == null) {
+        return composePreviewLiteModeEvent_ == null ? com.google.wireless.android.sdk.stats.ComposePreviewLiteModeEvent.getDefaultInstance() : composePreviewLiteModeEvent_;
+      } else {
+        return composePreviewLiteModeEventBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * set when kind = COMPOSE_PREVIEW_LITE_MODE
+     * </pre>
+     *
+     * <code>optional .android_studio.ComposePreviewLiteModeEvent compose_preview_lite_mode_event = 174;</code>
+     */
+    public Builder setComposePreviewLiteModeEvent(com.google.wireless.android.sdk.stats.ComposePreviewLiteModeEvent value) {
+      if (composePreviewLiteModeEventBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        composePreviewLiteModeEvent_ = value;
+        onChanged();
+      } else {
+        composePreviewLiteModeEventBuilder_.setMessage(value);
+      }
+      bitField5_ |= 0x00002000;
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = COMPOSE_PREVIEW_LITE_MODE
+     * </pre>
+     *
+     * <code>optional .android_studio.ComposePreviewLiteModeEvent compose_preview_lite_mode_event = 174;</code>
+     */
+    public Builder setComposePreviewLiteModeEvent(
+        com.google.wireless.android.sdk.stats.ComposePreviewLiteModeEvent.Builder builderForValue) {
+      if (composePreviewLiteModeEventBuilder_ == null) {
+        composePreviewLiteModeEvent_ = builderForValue.build();
+        onChanged();
+      } else {
+        composePreviewLiteModeEventBuilder_.setMessage(builderForValue.build());
+      }
+      bitField5_ |= 0x00002000;
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = COMPOSE_PREVIEW_LITE_MODE
+     * </pre>
+     *
+     * <code>optional .android_studio.ComposePreviewLiteModeEvent compose_preview_lite_mode_event = 174;</code>
+     */
+    public Builder mergeComposePreviewLiteModeEvent(com.google.wireless.android.sdk.stats.ComposePreviewLiteModeEvent value) {
+      if (composePreviewLiteModeEventBuilder_ == null) {
+        if (((bitField5_ & 0x00002000) != 0) &&
+            composePreviewLiteModeEvent_ != null &&
+            composePreviewLiteModeEvent_ != com.google.wireless.android.sdk.stats.ComposePreviewLiteModeEvent.getDefaultInstance()) {
+          composePreviewLiteModeEvent_ =
+            com.google.wireless.android.sdk.stats.ComposePreviewLiteModeEvent.newBuilder(composePreviewLiteModeEvent_).mergeFrom(value).buildPartial();
+        } else {
+          composePreviewLiteModeEvent_ = value;
+        }
+        onChanged();
+      } else {
+        composePreviewLiteModeEventBuilder_.mergeFrom(value);
+      }
+      bitField5_ |= 0x00002000;
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = COMPOSE_PREVIEW_LITE_MODE
+     * </pre>
+     *
+     * <code>optional .android_studio.ComposePreviewLiteModeEvent compose_preview_lite_mode_event = 174;</code>
+     */
+    public Builder clearComposePreviewLiteModeEvent() {
+      if (composePreviewLiteModeEventBuilder_ == null) {
+        composePreviewLiteModeEvent_ = null;
+        onChanged();
+      } else {
+        composePreviewLiteModeEventBuilder_.clear();
+      }
+      bitField5_ = (bitField5_ & ~0x00002000);
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = COMPOSE_PREVIEW_LITE_MODE
+     * </pre>
+     *
+     * <code>optional .android_studio.ComposePreviewLiteModeEvent compose_preview_lite_mode_event = 174;</code>
+     */
+    public com.google.wireless.android.sdk.stats.ComposePreviewLiteModeEvent.Builder getComposePreviewLiteModeEventBuilder() {
+      bitField5_ |= 0x00002000;
+      onChanged();
+      return getComposePreviewLiteModeEventFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * set when kind = COMPOSE_PREVIEW_LITE_MODE
+     * </pre>
+     *
+     * <code>optional .android_studio.ComposePreviewLiteModeEvent compose_preview_lite_mode_event = 174;</code>
+     */
+    public com.google.wireless.android.sdk.stats.ComposePreviewLiteModeEventOrBuilder getComposePreviewLiteModeEventOrBuilder() {
+      if (composePreviewLiteModeEventBuilder_ != null) {
+        return composePreviewLiteModeEventBuilder_.getMessageOrBuilder();
+      } else {
+        return composePreviewLiteModeEvent_ == null ?
+            com.google.wireless.android.sdk.stats.ComposePreviewLiteModeEvent.getDefaultInstance() : composePreviewLiteModeEvent_;
+      }
+    }
+    /**
+     * <pre>
+     * set when kind = COMPOSE_PREVIEW_LITE_MODE
+     * </pre>
+     *
+     * <code>optional .android_studio.ComposePreviewLiteModeEvent compose_preview_lite_mode_event = 174;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.ComposePreviewLiteModeEvent, com.google.wireless.android.sdk.stats.ComposePreviewLiteModeEvent.Builder, com.google.wireless.android.sdk.stats.ComposePreviewLiteModeEventOrBuilder> 
+        getComposePreviewLiteModeEventFieldBuilder() {
+      if (composePreviewLiteModeEventBuilder_ == null) {
+        composePreviewLiteModeEventBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.wireless.android.sdk.stats.ComposePreviewLiteModeEvent, com.google.wireless.android.sdk.stats.ComposePreviewLiteModeEvent.Builder, com.google.wireless.android.sdk.stats.ComposePreviewLiteModeEventOrBuilder>(
+                getComposePreviewLiteModeEvent(),
+                getParentForChildren(),
+                isClean());
+        composePreviewLiteModeEvent_ = null;
+      }
+      return composePreviewLiteModeEventBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(
