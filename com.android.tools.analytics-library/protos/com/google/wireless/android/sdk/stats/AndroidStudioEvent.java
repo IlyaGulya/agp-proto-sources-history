@@ -7908,10 +7908,6 @@ private static final long serialVersionUID = 0L;
      * <code>WEAR_OS_COMPOSE_ACTIVITY = 66;</code>
      */
     WEAR_OS_COMPOSE_ACTIVITY(66),
-    /**
-     * <code>GOOGLE_WALLET_ACTIVITY = 67;</code>
-     */
-    GOOGLE_WALLET_ACTIVITY(67),
     ;
 
     /**
@@ -8186,10 +8182,6 @@ private static final long serialVersionUID = 0L;
      * <code>WEAR_OS_COMPOSE_ACTIVITY = 66;</code>
      */
     public static final int WEAR_OS_COMPOSE_ACTIVITY_VALUE = 66;
-    /**
-     * <code>GOOGLE_WALLET_ACTIVITY = 67;</code>
-     */
-    public static final int GOOGLE_WALLET_ACTIVITY_VALUE = 67;
 
 
     public final int getNumber() {
@@ -8279,7 +8271,6 @@ private static final long serialVersionUID = 0L;
         case 64: return MACROBENCHMARK_LIBRARY_MODULE;
         case 65: return GOOGLE_PAY_ACTIVITY;
         case 66: return WEAR_OS_COMPOSE_ACTIVITY;
-        case 67: return GOOGLE_WALLET_ACTIVITY;
         default: return null;
       }
     }
@@ -10934,10 +10925,6 @@ private static final long serialVersionUID = 0L;
          */
         CPP_GAME_ACTIVITY(60),
         /**
-         * <code>GOOGLE_WALLET_ACTIVITY = 61;</code>
-         */
-        GOOGLE_WALLET_ACTIVITY(61),
-        /**
          * <code>FRAGMENT_LIST = 23;</code>
          */
         FRAGMENT_LIST(23),
@@ -11185,10 +11172,6 @@ private static final long serialVersionUID = 0L;
          */
         public static final int CPP_GAME_ACTIVITY_VALUE = 60;
         /**
-         * <code>GOOGLE_WALLET_ACTIVITY = 61;</code>
-         */
-        public static final int GOOGLE_WALLET_ACTIVITY_VALUE = 61;
-        /**
          * <code>FRAGMENT_LIST = 23;</code>
          */
         public static final int FRAGMENT_LIST_VALUE = 23;
@@ -11376,7 +11359,6 @@ private static final long serialVersionUID = 0L;
             case 57: return RESPONSIVE_ACTIVITY;
             case 58: return GOOGLE_PAY_ACTIVITY;
             case 60: return CPP_GAME_ACTIVITY;
-            case 61: return GOOGLE_WALLET_ACTIVITY;
             case 23: return FRAGMENT_LIST;
             case 24: return FRAGMENT_BLANK;
             case 25: return FRAGMENT_FULLSCREEN;
