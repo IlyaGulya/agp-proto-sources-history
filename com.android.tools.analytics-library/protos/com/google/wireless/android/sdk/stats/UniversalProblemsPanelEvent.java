@@ -226,6 +226,14 @@ private static final long serialVersionUID = 0L;
      * <code>DESIGN_TOOLS = 3;</code>
      */
     DESIGN_TOOLS(3),
+    /**
+     * <pre>
+     * UI Check mode tab
+     * </pre>
+     *
+     * <code>UI_CHECK = 4;</code>
+     */
+    UI_CHECK(4),
     ;
 
     /**
@@ -256,6 +264,14 @@ private static final long serialVersionUID = 0L;
      * <code>DESIGN_TOOLS = 3;</code>
      */
     public static final int DESIGN_TOOLS_VALUE = 3;
+    /**
+     * <pre>
+     * UI Check mode tab
+     * </pre>
+     *
+     * <code>UI_CHECK = 4;</code>
+     */
+    public static final int UI_CHECK_VALUE = 4;
 
 
     public final int getNumber() {
@@ -282,6 +298,7 @@ private static final long serialVersionUID = 0L;
         case 1: return CURRENT_FILE;
         case 2: return PROJECT_ERRORS;
         case 3: return DESIGN_TOOLS;
+        case 4: return UI_CHECK;
         default: return null;
       }
     }

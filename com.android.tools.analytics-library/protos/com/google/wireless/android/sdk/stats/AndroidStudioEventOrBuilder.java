@@ -5077,4 +5077,31 @@ public interface AndroidStudioEventOrBuilder extends
    * <code>optional .android_studio.SmlAiExcludeEvent sml_ai_exclude_event = 181;</code>
    */
   com.google.wireless.android.sdk.stats.SmlAiExcludeEventOrBuilder getSmlAiExcludeEventOrBuilder();
+
+  /**
+   * <pre>
+   * set when kind = I_DEVICE_USAGE_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.IDeviceUsageEvent i_device_usage_event = 182;</code>
+   * @return Whether the iDeviceUsageEvent field is set.
+   */
+  boolean hasIDeviceUsageEvent();
+  /**
+   * <pre>
+   * set when kind = I_DEVICE_USAGE_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.IDeviceUsageEvent i_device_usage_event = 182;</code>
+   * @return The iDeviceUsageEvent.
+   */
+  com.google.wireless.android.sdk.stats.IDeviceUsageEvent getIDeviceUsageEvent();
+  /**
+   * <pre>
+   * set when kind = I_DEVICE_USAGE_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.IDeviceUsageEvent i_device_usage_event = 182;</code>
+   */
+  com.google.wireless.android.sdk.stats.IDeviceUsageEventOrBuilder getIDeviceUsageEventOrBuilder();
 }
