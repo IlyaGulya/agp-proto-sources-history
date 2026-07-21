@@ -122,4 +122,23 @@ public interface InteractivePreviewEventOrBuilder extends
    * @return The peerPreviews.
    */
   int getPeerPreviews();
+
+  /**
+   * <pre>
+   * Boolean to check if the interactive preview navigation panel is shown
+   * </pre>
+   *
+   * <code>optional bool navigation_panel_shown = 7;</code>
+   * @return Whether the navigationPanelShown field is set.
+   */
+  boolean hasNavigationPanelShown();
+  /**
+   * <pre>
+   * Boolean to check if the interactive preview navigation panel is shown
+   * </pre>
+   *
+   * <code>optional bool navigation_panel_shown = 7;</code>
+   * @return The navigationPanelShown.
+   */
+  boolean getNavigationPanelShown();
 }

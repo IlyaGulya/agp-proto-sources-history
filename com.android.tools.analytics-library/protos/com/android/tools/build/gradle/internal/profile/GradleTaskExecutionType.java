@@ -1464,6 +1464,10 @@ public enum GradleTaskExecutionType
    * <code>LEGACY_REPORTING_TEST_SUITE_TEST = 361;</code>
    */
   LEGACY_REPORTING_TEST_SUITE_TEST(361),
+  /**
+   * <code>GLOBAL_SYNTHETICS_GENERATOR = 362;</code>
+   */
+  GLOBAL_SYNTHETICS_GENERATOR(362),
   UNRECOGNIZED(-1),
   ;
 
@@ -2915,6 +2919,10 @@ public enum GradleTaskExecutionType
    * <code>LEGACY_REPORTING_TEST_SUITE_TEST = 361;</code>
    */
   public static final int LEGACY_REPORTING_TEST_SUITE_TEST_VALUE = 361;
+  /**
+   * <code>GLOBAL_SYNTHETICS_GENERATOR = 362;</code>
+   */
+  public static final int GLOBAL_SYNTHETICS_GENERATOR_VALUE = 362;
 
 
   public final int getNumber() {
@@ -3303,6 +3311,7 @@ public enum GradleTaskExecutionType
       case 359: return TEST_RESULTS_COLLECTION;
       case 360: return COMPRESS_JAVA_RES;
       case 361: return LEGACY_REPORTING_TEST_SUITE_TEST;
+      case 362: return GLOBAL_SYNTHETICS_GENERATOR;
       default: return null;
     }
   }

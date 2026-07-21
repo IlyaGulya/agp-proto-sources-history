@@ -22,6 +22,7 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.LazyStringArrayList.emptyList();
     flags_ =
         com.google.protobuf.LazyStringArrayList.emptyList();
+    agentName_ = 0;
   }
 
   @java.lang.Override
@@ -42,6 +43,147 @@ private static final long serialVersionUID = 0L;
     return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_AndroidCliInvocation_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
             com.google.wireless.android.sdk.stats.AndroidCliInvocation.class, com.google.wireless.android.sdk.stats.AndroidCliInvocation.Builder.class);
+  }
+
+  /**
+   * Protobuf enum {@code android_studio.AndroidCliInvocation.Agent}
+   */
+  public enum Agent
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <code>UNKNOWN = 0;</code>
+     */
+    UNKNOWN(0),
+    /**
+     * <code>AGY = 1;</code>
+     */
+    AGY(1),
+    /**
+     * <code>GEMINI_CLI = 2;</code>
+     */
+    GEMINI_CLI(2),
+    /**
+     * <code>CLAUDE_CODE = 3;</code>
+     */
+    CLAUDE_CODE(3),
+    /**
+     * <code>ANDROID_STUDIO = 4;</code>
+     */
+    ANDROID_STUDIO(4),
+    /**
+     * <code>OTHER = 5;</code>
+     */
+    OTHER(5),
+    /**
+     * <code>CODEX = 6;</code>
+     */
+    CODEX(6),
+    ;
+
+    /**
+     * <code>UNKNOWN = 0;</code>
+     */
+    public static final int UNKNOWN_VALUE = 0;
+    /**
+     * <code>AGY = 1;</code>
+     */
+    public static final int AGY_VALUE = 1;
+    /**
+     * <code>GEMINI_CLI = 2;</code>
+     */
+    public static final int GEMINI_CLI_VALUE = 2;
+    /**
+     * <code>CLAUDE_CODE = 3;</code>
+     */
+    public static final int CLAUDE_CODE_VALUE = 3;
+    /**
+     * <code>ANDROID_STUDIO = 4;</code>
+     */
+    public static final int ANDROID_STUDIO_VALUE = 4;
+    /**
+     * <code>OTHER = 5;</code>
+     */
+    public static final int OTHER_VALUE = 5;
+    /**
+     * <code>CODEX = 6;</code>
+     */
+    public static final int CODEX_VALUE = 6;
+
+
+    public final int getNumber() {
+      return value;
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     * @deprecated Use {@link #forNumber(int)} instead.
+     */
+    @java.lang.Deprecated
+    public static Agent valueOf(int value) {
+      return forNumber(value);
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     */
+    public static Agent forNumber(int value) {
+      switch (value) {
+        case 0: return UNKNOWN;
+        case 1: return AGY;
+        case 2: return GEMINI_CLI;
+        case 3: return CLAUDE_CODE;
+        case 4: return ANDROID_STUDIO;
+        case 5: return OTHER;
+        case 6: return CODEX;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<Agent>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static final com.google.protobuf.Internal.EnumLiteMap<
+        Agent> internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<Agent>() {
+            public Agent findValueByNumber(int number) {
+              return Agent.forNumber(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      return getDescriptor().getValues().get(ordinal());
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return com.google.wireless.android.sdk.stats.AndroidCliInvocation.getDescriptor().getEnumTypes().get(0);
+    }
+
+    private static final Agent[] VALUES = values();
+
+    public static Agent valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int value;
+
+    private Agent(int value) {
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:android_studio.AndroidCliInvocation.Agent)
   }
 
   private int bitField0_;
@@ -232,6 +374,32 @@ private static final long serialVersionUID = 0L;
     return flags_.getByteString(index);
   }
 
+  public static final int AGENT_NAME_FIELD_NUMBER = 5;
+  private int agentName_ = 0;
+  /**
+   * <pre>
+   * The name of the agent invoking android-cli
+   * </pre>
+   *
+   * <code>optional .android_studio.AndroidCliInvocation.Agent agent_name = 5;</code>
+   * @return Whether the agentName field is set.
+   */
+  @java.lang.Override public boolean hasAgentName() {
+    return ((bitField0_ & 0x00000004) != 0);
+  }
+  /**
+   * <pre>
+   * The name of the agent invoking android-cli
+   * </pre>
+   *
+   * <code>optional .android_studio.AndroidCliInvocation.Agent agent_name = 5;</code>
+   * @return The agentName.
+   */
+  @java.lang.Override public com.google.wireless.android.sdk.stats.AndroidCliInvocation.Agent getAgentName() {
+    com.google.wireless.android.sdk.stats.AndroidCliInvocation.Agent result = com.google.wireless.android.sdk.stats.AndroidCliInvocation.Agent.forNumber(agentName_);
+    return result == null ? com.google.wireless.android.sdk.stats.AndroidCliInvocation.Agent.UNKNOWN : result;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -257,6 +425,9 @@ private static final long serialVersionUID = 0L;
     }
     for (int i = 0; i < flags_.size(); i++) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 4, flags_.getRaw(i));
+    }
+    if (((bitField0_ & 0x00000004) != 0)) {
+      output.writeEnum(5, agentName_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -289,6 +460,10 @@ private static final long serialVersionUID = 0L;
       size += dataSize;
       size += 1 * getFlagsList().size();
     }
+    if (((bitField0_ & 0x00000004) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeEnumSize(5, agentName_);
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -318,6 +493,10 @@ private static final long serialVersionUID = 0L;
         .equals(other.getGlobalFlagsList())) return false;
     if (!getFlagsList()
         .equals(other.getFlagsList())) return false;
+    if (hasAgentName() != other.hasAgentName()) return false;
+    if (hasAgentName()) {
+      if (agentName_ != other.agentName_) return false;
+    }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -344,6 +523,10 @@ private static final long serialVersionUID = 0L;
     if (getFlagsCount() > 0) {
       hash = (37 * hash) + FLAGS_FIELD_NUMBER;
       hash = (53 * hash) + getFlagsList().hashCode();
+    }
+    if (hasAgentName()) {
+      hash = (37 * hash) + AGENT_NAME_FIELD_NUMBER;
+      hash = (53 * hash) + agentName_;
     }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
@@ -480,6 +663,7 @@ private static final long serialVersionUID = 0L;
           com.google.protobuf.LazyStringArrayList.emptyList();
       flags_ =
           com.google.protobuf.LazyStringArrayList.emptyList();
+      agentName_ = 0;
       return this;
     }
 
@@ -530,6 +714,10 @@ private static final long serialVersionUID = 0L;
         flags_.makeImmutable();
         result.flags_ = flags_;
       }
+      if (((from_bitField0_ & 0x00000010) != 0)) {
+        result.agentName_ = agentName_;
+        to_bitField0_ |= 0x00000004;
+      }
       result.bitField0_ |= to_bitField0_;
     }
 
@@ -574,6 +762,9 @@ private static final long serialVersionUID = 0L;
           flags_.addAll(other.flags_);
         }
         onChanged();
+      }
+      if (other.hasAgentName()) {
+        setAgentName(other.getAgentName());
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -623,6 +814,18 @@ private static final long serialVersionUID = 0L;
               flags_.add(bs);
               break;
             } // case 34
+            case 40: {
+              int tmpRaw = input.readEnum();
+              com.google.wireless.android.sdk.stats.AndroidCliInvocation.Agent tmpValue =
+                  com.google.wireless.android.sdk.stats.AndroidCliInvocation.Agent.forNumber(tmpRaw);
+              if (tmpValue == null) {
+                mergeUnknownVarintField(5, tmpRaw);
+              } else {
+                agentName_ = tmpRaw;
+                bitField0_ |= 0x00000010;
+              }
+              break;
+            } // case 40
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -1046,6 +1249,64 @@ private static final long serialVersionUID = 0L;
       ensureFlagsIsMutable();
       flags_.add(value);
       bitField0_ |= 0x00000008;
+      onChanged();
+      return this;
+    }
+
+    private int agentName_ = 0;
+    /**
+     * <pre>
+     * The name of the agent invoking android-cli
+     * </pre>
+     *
+     * <code>optional .android_studio.AndroidCliInvocation.Agent agent_name = 5;</code>
+     * @return Whether the agentName field is set.
+     */
+    @java.lang.Override public boolean hasAgentName() {
+      return ((bitField0_ & 0x00000010) != 0);
+    }
+    /**
+     * <pre>
+     * The name of the agent invoking android-cli
+     * </pre>
+     *
+     * <code>optional .android_studio.AndroidCliInvocation.Agent agent_name = 5;</code>
+     * @return The agentName.
+     */
+    @java.lang.Override
+    public com.google.wireless.android.sdk.stats.AndroidCliInvocation.Agent getAgentName() {
+      com.google.wireless.android.sdk.stats.AndroidCliInvocation.Agent result = com.google.wireless.android.sdk.stats.AndroidCliInvocation.Agent.forNumber(agentName_);
+      return result == null ? com.google.wireless.android.sdk.stats.AndroidCliInvocation.Agent.UNKNOWN : result;
+    }
+    /**
+     * <pre>
+     * The name of the agent invoking android-cli
+     * </pre>
+     *
+     * <code>optional .android_studio.AndroidCliInvocation.Agent agent_name = 5;</code>
+     * @param value The agentName to set.
+     * @return This builder for chaining.
+     */
+    public Builder setAgentName(com.google.wireless.android.sdk.stats.AndroidCliInvocation.Agent value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      bitField0_ |= 0x00000010;
+      agentName_ = value.getNumber();
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The name of the agent invoking android-cli
+     * </pre>
+     *
+     * <code>optional .android_studio.AndroidCliInvocation.Agent agent_name = 5;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearAgentName() {
+      bitField0_ = (bitField0_ & ~0x00000010);
+      agentName_ = 0;
       onChanged();
       return this;
     }

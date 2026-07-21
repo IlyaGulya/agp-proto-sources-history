@@ -56,6 +56,10 @@ public enum OptionalBooleanOption
    * <code>LINT_USE_K2_UAST = 11;</code>
    */
   LINT_USE_K2_UAST(11),
+  /**
+   * <code>LINT_PRINT_TEXT_REPORT = 12;</code>
+   */
+  LINT_PRINT_TEXT_REPORT(12),
   UNRECOGNIZED(-1),
   ;
 
@@ -107,6 +111,10 @@ public enum OptionalBooleanOption
    * <code>LINT_USE_K2_UAST = 11;</code>
    */
   public static final int LINT_USE_K2_UAST_VALUE = 11;
+  /**
+   * <code>LINT_PRINT_TEXT_REPORT = 12;</code>
+   */
+  public static final int LINT_PRINT_TEXT_REPORT_VALUE = 12;
 
 
   public final int getNumber() {
@@ -145,6 +153,7 @@ public enum OptionalBooleanOption
       case 9: return DISABLE_AUTOMATIC_COMPONENT_CREATION;
       case 10: return ENABLE_API_MODELING_AND_GLOBAL_SYNTHETICS;
       case 11: return LINT_USE_K2_UAST;
+      case 12: return LINT_PRINT_TEXT_REPORT;
       default: return null;
     }
   }

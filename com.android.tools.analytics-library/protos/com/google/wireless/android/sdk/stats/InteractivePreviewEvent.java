@@ -64,6 +64,22 @@ private static final long serialVersionUID = 0L;
      * <code>REPORT_STARTUP_TIME = 2;</code>
      */
     REPORT_STARTUP_TIME(2),
+    /**
+     * <code>NAVIGATION_PANEL_BACK_PRESS = 3;</code>
+     */
+    NAVIGATION_PANEL_BACK_PRESS(3),
+    /**
+     * <code>NAVIGATION_PANEL_PROGRESS_PRESS = 4;</code>
+     */
+    NAVIGATION_PANEL_PROGRESS_PRESS(4),
+    /**
+     * <code>NAVIGATION_PANEL_VISIBILITY_CHANGE = 5;</code>
+     */
+    NAVIGATION_PANEL_VISIBILITY_CHANGE(5),
+    /**
+     * <code>NAVIGATION_PANEL_EDGE_DROPDOWN_PRESS = 6;</code>
+     */
+    NAVIGATION_PANEL_EDGE_DROPDOWN_PRESS(6),
     ;
 
     /**
@@ -78,6 +94,22 @@ private static final long serialVersionUID = 0L;
      * <code>REPORT_STARTUP_TIME = 2;</code>
      */
     public static final int REPORT_STARTUP_TIME_VALUE = 2;
+    /**
+     * <code>NAVIGATION_PANEL_BACK_PRESS = 3;</code>
+     */
+    public static final int NAVIGATION_PANEL_BACK_PRESS_VALUE = 3;
+    /**
+     * <code>NAVIGATION_PANEL_PROGRESS_PRESS = 4;</code>
+     */
+    public static final int NAVIGATION_PANEL_PROGRESS_PRESS_VALUE = 4;
+    /**
+     * <code>NAVIGATION_PANEL_VISIBILITY_CHANGE = 5;</code>
+     */
+    public static final int NAVIGATION_PANEL_VISIBILITY_CHANGE_VALUE = 5;
+    /**
+     * <code>NAVIGATION_PANEL_EDGE_DROPDOWN_PRESS = 6;</code>
+     */
+    public static final int NAVIGATION_PANEL_EDGE_DROPDOWN_PRESS_VALUE = 6;
 
 
     public final int getNumber() {
@@ -103,6 +135,10 @@ private static final long serialVersionUID = 0L;
         case 0: return UNKNOWN_EVENT_TYPE;
         case 1: return REPORT_FPS;
         case 2: return REPORT_STARTUP_TIME;
+        case 3: return NAVIGATION_PANEL_BACK_PRESS;
+        case 4: return NAVIGATION_PANEL_PROGRESS_PRESS;
+        case 5: return NAVIGATION_PANEL_VISIBILITY_CHANGE;
+        case 6: return NAVIGATION_PANEL_EDGE_DROPDOWN_PRESS;
         default: return null;
       }
     }
@@ -316,6 +352,33 @@ private static final long serialVersionUID = 0L;
     return peerPreviews_;
   }
 
+  public static final int NAVIGATION_PANEL_SHOWN_FIELD_NUMBER = 7;
+  private boolean navigationPanelShown_ = false;
+  /**
+   * <pre>
+   * Boolean to check if the interactive preview navigation panel is shown
+   * </pre>
+   *
+   * <code>optional bool navigation_panel_shown = 7;</code>
+   * @return Whether the navigationPanelShown field is set.
+   */
+  @java.lang.Override
+  public boolean hasNavigationPanelShown() {
+    return ((bitField0_ & 0x00000040) != 0);
+  }
+  /**
+   * <pre>
+   * Boolean to check if the interactive preview navigation panel is shown
+   * </pre>
+   *
+   * <code>optional bool navigation_panel_shown = 7;</code>
+   * @return The navigationPanelShown.
+   */
+  @java.lang.Override
+  public boolean getNavigationPanelShown() {
+    return navigationPanelShown_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -347,6 +410,9 @@ private static final long serialVersionUID = 0L;
     }
     if (((bitField0_ & 0x00000020) != 0)) {
       output.writeInt32(6, peerPreviews_);
+    }
+    if (((bitField0_ & 0x00000040) != 0)) {
+      output.writeBool(7, navigationPanelShown_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -380,6 +446,10 @@ private static final long serialVersionUID = 0L;
     if (((bitField0_ & 0x00000020) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeInt32Size(6, peerPreviews_);
+    }
+    if (((bitField0_ & 0x00000040) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeBoolSize(7, navigationPanelShown_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -425,6 +495,11 @@ private static final long serialVersionUID = 0L;
       if (getPeerPreviews()
           != other.getPeerPreviews()) return false;
     }
+    if (hasNavigationPanelShown() != other.hasNavigationPanelShown()) return false;
+    if (hasNavigationPanelShown()) {
+      if (getNavigationPanelShown()
+          != other.getNavigationPanelShown()) return false;
+    }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -459,6 +534,11 @@ private static final long serialVersionUID = 0L;
     if (hasPeerPreviews()) {
       hash = (37 * hash) + PEER_PREVIEWS_FIELD_NUMBER;
       hash = (53 * hash) + getPeerPreviews();
+    }
+    if (hasNavigationPanelShown()) {
+      hash = (37 * hash) + NAVIGATION_PANEL_SHOWN_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getNavigationPanelShown());
     }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
@@ -599,6 +679,7 @@ private static final long serialVersionUID = 0L;
       actions_ = 0;
       startupTimeMs_ = 0;
       peerPreviews_ = 0;
+      navigationPanelShown_ = false;
       return this;
     }
 
@@ -657,6 +738,10 @@ private static final long serialVersionUID = 0L;
         result.peerPreviews_ = peerPreviews_;
         to_bitField0_ |= 0x00000020;
       }
+      if (((from_bitField0_ & 0x00000040) != 0)) {
+        result.navigationPanelShown_ = navigationPanelShown_;
+        to_bitField0_ |= 0x00000040;
+      }
       result.bitField0_ |= to_bitField0_;
     }
 
@@ -689,6 +774,9 @@ private static final long serialVersionUID = 0L;
       }
       if (other.hasPeerPreviews()) {
         setPeerPreviews(other.getPeerPreviews());
+      }
+      if (other.hasNavigationPanelShown()) {
+        setNavigationPanelShown(other.getNavigationPanelShown());
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -753,6 +841,11 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000020;
               break;
             } // case 48
+            case 56: {
+              navigationPanelShown_ = input.readBool();
+              bitField0_ |= 0x00000040;
+              break;
+            } // case 56
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -1108,6 +1201,62 @@ private static final long serialVersionUID = 0L;
     public Builder clearPeerPreviews() {
       bitField0_ = (bitField0_ & ~0x00000020);
       peerPreviews_ = 0;
+      onChanged();
+      return this;
+    }
+
+    private boolean navigationPanelShown_ ;
+    /**
+     * <pre>
+     * Boolean to check if the interactive preview navigation panel is shown
+     * </pre>
+     *
+     * <code>optional bool navigation_panel_shown = 7;</code>
+     * @return Whether the navigationPanelShown field is set.
+     */
+    @java.lang.Override
+    public boolean hasNavigationPanelShown() {
+      return ((bitField0_ & 0x00000040) != 0);
+    }
+    /**
+     * <pre>
+     * Boolean to check if the interactive preview navigation panel is shown
+     * </pre>
+     *
+     * <code>optional bool navigation_panel_shown = 7;</code>
+     * @return The navigationPanelShown.
+     */
+    @java.lang.Override
+    public boolean getNavigationPanelShown() {
+      return navigationPanelShown_;
+    }
+    /**
+     * <pre>
+     * Boolean to check if the interactive preview navigation panel is shown
+     * </pre>
+     *
+     * <code>optional bool navigation_panel_shown = 7;</code>
+     * @param value The navigationPanelShown to set.
+     * @return This builder for chaining.
+     */
+    public Builder setNavigationPanelShown(boolean value) {
+
+      navigationPanelShown_ = value;
+      bitField0_ |= 0x00000040;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Boolean to check if the interactive preview navigation panel is shown
+     * </pre>
+     *
+     * <code>optional bool navigation_panel_shown = 7;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearNavigationPanelShown() {
+      bitField0_ = (bitField0_ & ~0x00000040);
+      navigationPanelShown_ = false;
       onChanged();
       return this;
     }

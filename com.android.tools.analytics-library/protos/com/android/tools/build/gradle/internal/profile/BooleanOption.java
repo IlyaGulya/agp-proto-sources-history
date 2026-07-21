@@ -960,6 +960,14 @@ public enum BooleanOption
    * <code>LINT_DEFAULT_BASELINE_CONVENTION = 234;</code>
    */
   LINT_DEFAULT_BASELINE_CONVENTION(234),
+  /**
+   * <code>DISABLE_COMPILE_SDK_CHECKS_TESTS = 235;</code>
+   */
+  DISABLE_COMPILE_SDK_CHECKS_TESTS(235),
+  /**
+   * <code>ENABLE_GLOBAL_SYNTHETICS_FOR_ALL_DEBUG_BUILDS = 236;</code>
+   */
+  ENABLE_GLOBAL_SYNTHETICS_FOR_ALL_DEBUG_BUILDS(236),
   UNRECOGNIZED(-1),
   ;
 
@@ -1903,6 +1911,14 @@ public enum BooleanOption
    * <code>LINT_DEFAULT_BASELINE_CONVENTION = 234;</code>
    */
   public static final int LINT_DEFAULT_BASELINE_CONVENTION_VALUE = 234;
+  /**
+   * <code>DISABLE_COMPILE_SDK_CHECKS_TESTS = 235;</code>
+   */
+  public static final int DISABLE_COMPILE_SDK_CHECKS_TESTS_VALUE = 235;
+  /**
+   * <code>ENABLE_GLOBAL_SYNTHETICS_FOR_ALL_DEBUG_BUILDS = 236;</code>
+   */
+  public static final int ENABLE_GLOBAL_SYNTHETICS_FOR_ALL_DEBUG_BUILDS_VALUE = 236;
 
 
   public final int getNumber() {
@@ -2164,6 +2180,8 @@ public enum BooleanOption
       case 232: return ENABLE_JAVA_RESOURCE_OPTIMIZATIONS;
       case 233: return AUTO_ENCODE_MINIMUM_AGP_VERSION_IN_AAR_METADATA;
       case 234: return LINT_DEFAULT_BASELINE_CONVENTION;
+      case 235: return DISABLE_COMPILE_SDK_CHECKS_TESTS;
+      case 236: return ENABLE_GLOBAL_SYNTHETICS_FOR_ALL_DEBUG_BUILDS;
       default: return null;
     }
   }
