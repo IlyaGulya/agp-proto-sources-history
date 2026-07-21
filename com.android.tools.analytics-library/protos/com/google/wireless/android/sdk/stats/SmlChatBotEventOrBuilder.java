@@ -127,5 +127,20 @@ public interface SmlChatBotEventOrBuilder extends
    */
   com.google.wireless.android.sdk.stats.SmlChatBotEvent.DependencySuggestionOrBuilder getDependencySuggestionOrBuilder();
 
+  /**
+   * <code>.android_studio.SmlChatBotEvent.HallucinationDetectorResult hallucination_detector_result = 9;</code>
+   * @return Whether the hallucinationDetectorResult field is set.
+   */
+  boolean hasHallucinationDetectorResult();
+  /**
+   * <code>.android_studio.SmlChatBotEvent.HallucinationDetectorResult hallucination_detector_result = 9;</code>
+   * @return The hallucinationDetectorResult.
+   */
+  com.google.wireless.android.sdk.stats.SmlChatBotEvent.HallucinationDetectorResult getHallucinationDetectorResult();
+  /**
+   * <code>.android_studio.SmlChatBotEvent.HallucinationDetectorResult hallucination_detector_result = 9;</code>
+   */
+  com.google.wireless.android.sdk.stats.SmlChatBotEvent.HallucinationDetectorResultOrBuilder getHallucinationDetectorResultOrBuilder();
+
   public com.google.wireless.android.sdk.stats.SmlChatBotEvent.ContentCase getContentCase();
 }

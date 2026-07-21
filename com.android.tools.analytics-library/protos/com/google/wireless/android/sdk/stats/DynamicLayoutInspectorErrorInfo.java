@@ -645,6 +645,10 @@ private static final long serialVersionUID = 0L;
      * <code>TRANSPORT_PUSH_FAILED_FILE_NOT_FOUND = 302;</code>
      */
     TRANSPORT_PUSH_FAILED_FILE_NOT_FOUND(302),
+    /**
+     * <code>UNEXPECTED_ERROR = 401;</code>
+     */
+    UNEXPECTED_ERROR(401),
     ;
 
     /**
@@ -787,6 +791,10 @@ private static final long serialVersionUID = 0L;
      * <code>TRANSPORT_PUSH_FAILED_FILE_NOT_FOUND = 302;</code>
      */
     public static final int TRANSPORT_PUSH_FAILED_FILE_NOT_FOUND_VALUE = 302;
+    /**
+     * <code>UNEXPECTED_ERROR = 401;</code>
+     */
+    public static final int UNEXPECTED_ERROR_VALUE = 401;
 
 
     public final int getNumber() {
@@ -828,6 +836,7 @@ private static final long serialVersionUID = 0L;
         case 211: return APP_INSPECTION_FAILED_MAVEN_DOWNLOAD;
         case 301: return TRANSPORT_UNKNOWN_ERROR;
         case 302: return TRANSPORT_PUSH_FAILED_FILE_NOT_FOUND;
+        case 401: return UNEXPECTED_ERROR;
         default: return null;
       }
     }

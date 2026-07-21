@@ -1347,6 +1347,10 @@ public enum GradleTaskExecutionType
    * <code>VALIDATE_RESOURCES = 332;</code>
    */
   VALIDATE_RESOURCES(332),
+  /**
+   * <code>GENERATE_ADDITIONAL_APK_SPLIT_FOR_DEPLOYMENT_VIA_APK = 333;</code>
+   */
+  GENERATE_ADDITIONAL_APK_SPLIT_FOR_DEPLOYMENT_VIA_APK(333),
   UNRECOGNIZED(-1),
   ;
 
@@ -2682,6 +2686,10 @@ public enum GradleTaskExecutionType
    * <code>VALIDATE_RESOURCES = 332;</code>
    */
   public static final int VALIDATE_RESOURCES_VALUE = 332;
+  /**
+   * <code>GENERATE_ADDITIONAL_APK_SPLIT_FOR_DEPLOYMENT_VIA_APK = 333;</code>
+   */
+  public static final int GENERATE_ADDITIONAL_APK_SPLIT_FOR_DEPLOYMENT_VIA_APK_VALUE = 333;
 
 
   public final int getNumber() {
@@ -3041,6 +3049,7 @@ public enum GradleTaskExecutionType
       case 330: return PREVIEW_SCREENSHOT_UPDATE;
       case 331: return PREVIEW_SCREENSHOT_RENDER;
       case 332: return VALIDATE_RESOURCES;
+      case 333: return GENERATE_ADDITIONAL_APK_SPLIT_FOR_DEPLOYMENT_VIA_APK;
       default: return null;
     }
   }

@@ -718,6 +718,229 @@ private static final long serialVersionUID = 0L;
     // @@protoc_insertion_point(enum_scope:android_studio.SmlChatBotEvent.Command)
   }
 
+  /**
+   * Protobuf enum {@code android_studio.SmlChatBotEvent.CodeDomain}
+   */
+  public enum CodeDomain
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <code>UNDEFINED = 0;</code>
+     */
+    UNDEFINED(0),
+    /**
+     * <code>COMPOSE = 1;</code>
+     */
+    COMPOSE(1),
+    ;
+
+    /**
+     * <code>UNDEFINED = 0;</code>
+     */
+    public static final int UNDEFINED_VALUE = 0;
+    /**
+     * <code>COMPOSE = 1;</code>
+     */
+    public static final int COMPOSE_VALUE = 1;
+
+
+    public final int getNumber() {
+      return value;
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     * @deprecated Use {@link #forNumber(int)} instead.
+     */
+    @java.lang.Deprecated
+    public static CodeDomain valueOf(int value) {
+      return forNumber(value);
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     */
+    public static CodeDomain forNumber(int value) {
+      switch (value) {
+        case 0: return UNDEFINED;
+        case 1: return COMPOSE;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<CodeDomain>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static final com.google.protobuf.Internal.EnumLiteMap<
+        CodeDomain> internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<CodeDomain>() {
+            public CodeDomain findValueByNumber(int number) {
+              return CodeDomain.forNumber(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      return getDescriptor().getValues().get(ordinal());
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return com.google.wireless.android.sdk.stats.SmlChatBotEvent.getDescriptor().getEnumTypes().get(3);
+    }
+
+    private static final CodeDomain[] VALUES = values();
+
+    public static CodeDomain valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int value;
+
+    private CodeDomain(int value) {
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:android_studio.SmlChatBotEvent.CodeDomain)
+  }
+
+  /**
+   * Protobuf enum {@code android_studio.SmlChatBotEvent.HallucinationType}
+   */
+  public enum HallucinationType
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <code>OTHER = 0;</code>
+     */
+    OTHER(0),
+    /**
+     * <pre>
+     * covers unresolved symbols, mismatched types in calls, wrong number
+     * of parameters, wrong receiver type, etc. - anything which means the
+     * model made up an API or used one in the wrong way.
+     * </pre>
+     *
+     * <code>BAD_API = 1;</code>
+     */
+    BAD_API(1),
+    /**
+     * <pre>
+     * covers errors that arise when the semantics of composables are not
+     * followed, like invoking a composable from a non-composable context
+     * </pre>
+     *
+     * <code>COMPOSE_SEMANTICS = 2;</code>
+     */
+    COMPOSE_SEMANTICS(2),
+    ;
+
+    /**
+     * <code>OTHER = 0;</code>
+     */
+    public static final int OTHER_VALUE = 0;
+    /**
+     * <pre>
+     * covers unresolved symbols, mismatched types in calls, wrong number
+     * of parameters, wrong receiver type, etc. - anything which means the
+     * model made up an API or used one in the wrong way.
+     * </pre>
+     *
+     * <code>BAD_API = 1;</code>
+     */
+    public static final int BAD_API_VALUE = 1;
+    /**
+     * <pre>
+     * covers errors that arise when the semantics of composables are not
+     * followed, like invoking a composable from a non-composable context
+     * </pre>
+     *
+     * <code>COMPOSE_SEMANTICS = 2;</code>
+     */
+    public static final int COMPOSE_SEMANTICS_VALUE = 2;
+
+
+    public final int getNumber() {
+      return value;
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     * @deprecated Use {@link #forNumber(int)} instead.
+     */
+    @java.lang.Deprecated
+    public static HallucinationType valueOf(int value) {
+      return forNumber(value);
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     */
+    public static HallucinationType forNumber(int value) {
+      switch (value) {
+        case 0: return OTHER;
+        case 1: return BAD_API;
+        case 2: return COMPOSE_SEMANTICS;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<HallucinationType>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static final com.google.protobuf.Internal.EnumLiteMap<
+        HallucinationType> internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<HallucinationType>() {
+            public HallucinationType findValueByNumber(int number) {
+              return HallucinationType.forNumber(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      return getDescriptor().getValues().get(ordinal());
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return com.google.wireless.android.sdk.stats.SmlChatBotEvent.getDescriptor().getEnumTypes().get(4);
+    }
+
+    private static final HallucinationType[] VALUES = values();
+
+    public static HallucinationType valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int value;
+
+    private HallucinationType(int value) {
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:android_studio.SmlChatBotEvent.HallucinationType)
+  }
+
   public interface BotResponseOrBuilder extends
       // @@protoc_insertion_point(interface_extends:android_studio.SmlChatBotEvent.BotResponse)
       com.google.protobuf.MessageOrBuilder {
@@ -7152,6 +7375,1361 @@ private static final long serialVersionUID = 0L;
 
   }
 
+  public interface HallucinationDetectorResultOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:android_studio.SmlChatBotEvent.HallucinationDetectorResult)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>optional .android_studio.SmlResponseMetadata metadata = 1;</code>
+     * @return Whether the metadata field is set.
+     */
+    boolean hasMetadata();
+    /**
+     * <code>optional .android_studio.SmlResponseMetadata metadata = 1;</code>
+     * @return The metadata.
+     */
+    com.google.wireless.android.sdk.stats.SmlResponseMetadata getMetadata();
+    /**
+     * <code>optional .android_studio.SmlResponseMetadata metadata = 1;</code>
+     */
+    com.google.wireless.android.sdk.stats.SmlResponseMetadataOrBuilder getMetadataOrBuilder();
+
+    /**
+     * <code>optional bool has_hallucination = 2;</code>
+     * @return Whether the hasHallucination field is set.
+     */
+    boolean hasHasHallucination();
+    /**
+     * <code>optional bool has_hallucination = 2;</code>
+     * @return The hasHallucination.
+     */
+    boolean getHasHallucination();
+
+    /**
+     * <code>optional .android_studio.EditorFileType file_type = 3;</code>
+     * @return Whether the fileType field is set.
+     */
+    boolean hasFileType();
+    /**
+     * <code>optional .android_studio.EditorFileType file_type = 3;</code>
+     * @return The fileType.
+     */
+    com.google.wireless.android.sdk.stats.EditorFileType getFileType();
+
+    /**
+     * <pre>
+     * libraries, frameworks, or other categories applicable to the code snippet
+     * </pre>
+     *
+     * <code>repeated .android_studio.SmlChatBotEvent.CodeDomain code_domains = 4 [packed = true];</code>
+     * @return A list containing the codeDomains.
+     */
+    java.util.List<com.google.wireless.android.sdk.stats.SmlChatBotEvent.CodeDomain> getCodeDomainsList();
+    /**
+     * <pre>
+     * libraries, frameworks, or other categories applicable to the code snippet
+     * </pre>
+     *
+     * <code>repeated .android_studio.SmlChatBotEvent.CodeDomain code_domains = 4 [packed = true];</code>
+     * @return The count of codeDomains.
+     */
+    int getCodeDomainsCount();
+    /**
+     * <pre>
+     * libraries, frameworks, or other categories applicable to the code snippet
+     * </pre>
+     *
+     * <code>repeated .android_studio.SmlChatBotEvent.CodeDomain code_domains = 4 [packed = true];</code>
+     * @param index The index of the element to return.
+     * @return The codeDomains at the given index.
+     */
+    com.google.wireless.android.sdk.stats.SmlChatBotEvent.CodeDomain getCodeDomains(int index);
+
+    /**
+     * <pre>
+     * types of hallucinations detected in the snippet
+     * </pre>
+     *
+     * <code>repeated .android_studio.SmlChatBotEvent.HallucinationType hallucination_types = 5 [packed = true];</code>
+     * @return A list containing the hallucinationTypes.
+     */
+    java.util.List<com.google.wireless.android.sdk.stats.SmlChatBotEvent.HallucinationType> getHallucinationTypesList();
+    /**
+     * <pre>
+     * types of hallucinations detected in the snippet
+     * </pre>
+     *
+     * <code>repeated .android_studio.SmlChatBotEvent.HallucinationType hallucination_types = 5 [packed = true];</code>
+     * @return The count of hallucinationTypes.
+     */
+    int getHallucinationTypesCount();
+    /**
+     * <pre>
+     * types of hallucinations detected in the snippet
+     * </pre>
+     *
+     * <code>repeated .android_studio.SmlChatBotEvent.HallucinationType hallucination_types = 5 [packed = true];</code>
+     * @param index The index of the element to return.
+     * @return The hallucinationTypes at the given index.
+     */
+    com.google.wireless.android.sdk.stats.SmlChatBotEvent.HallucinationType getHallucinationTypes(int index);
+  }
+  /**
+   * Protobuf type {@code android_studio.SmlChatBotEvent.HallucinationDetectorResult}
+   */
+  public static final class HallucinationDetectorResult extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:android_studio.SmlChatBotEvent.HallucinationDetectorResult)
+      HallucinationDetectorResultOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use HallucinationDetectorResult.newBuilder() to construct.
+    private HallucinationDetectorResult(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private HallucinationDetectorResult() {
+      fileType_ = 0;
+      codeDomains_ = java.util.Collections.emptyList();
+      hallucinationTypes_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new HallucinationDetectorResult();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_SmlChatBotEvent_HallucinationDetectorResult_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_SmlChatBotEvent_HallucinationDetectorResult_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.google.wireless.android.sdk.stats.SmlChatBotEvent.HallucinationDetectorResult.class, com.google.wireless.android.sdk.stats.SmlChatBotEvent.HallucinationDetectorResult.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int METADATA_FIELD_NUMBER = 1;
+    private com.google.wireless.android.sdk.stats.SmlResponseMetadata metadata_;
+    /**
+     * <code>optional .android_studio.SmlResponseMetadata metadata = 1;</code>
+     * @return Whether the metadata field is set.
+     */
+    @java.lang.Override
+    public boolean hasMetadata() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <code>optional .android_studio.SmlResponseMetadata metadata = 1;</code>
+     * @return The metadata.
+     */
+    @java.lang.Override
+    public com.google.wireless.android.sdk.stats.SmlResponseMetadata getMetadata() {
+      return metadata_ == null ? com.google.wireless.android.sdk.stats.SmlResponseMetadata.getDefaultInstance() : metadata_;
+    }
+    /**
+     * <code>optional .android_studio.SmlResponseMetadata metadata = 1;</code>
+     */
+    @java.lang.Override
+    public com.google.wireless.android.sdk.stats.SmlResponseMetadataOrBuilder getMetadataOrBuilder() {
+      return metadata_ == null ? com.google.wireless.android.sdk.stats.SmlResponseMetadata.getDefaultInstance() : metadata_;
+    }
+
+    public static final int HAS_HALLUCINATION_FIELD_NUMBER = 2;
+    private boolean hasHallucination_;
+    /**
+     * <code>optional bool has_hallucination = 2;</code>
+     * @return Whether the hasHallucination field is set.
+     */
+    @java.lang.Override
+    public boolean hasHasHallucination() {
+      return ((bitField0_ & 0x00000002) != 0);
+    }
+    /**
+     * <code>optional bool has_hallucination = 2;</code>
+     * @return The hasHallucination.
+     */
+    @java.lang.Override
+    public boolean getHasHallucination() {
+      return hasHallucination_;
+    }
+
+    public static final int FILE_TYPE_FIELD_NUMBER = 3;
+    private int fileType_;
+    /**
+     * <code>optional .android_studio.EditorFileType file_type = 3;</code>
+     * @return Whether the fileType field is set.
+     */
+    @java.lang.Override public boolean hasFileType() {
+      return ((bitField0_ & 0x00000004) != 0);
+    }
+    /**
+     * <code>optional .android_studio.EditorFileType file_type = 3;</code>
+     * @return The fileType.
+     */
+    @java.lang.Override public com.google.wireless.android.sdk.stats.EditorFileType getFileType() {
+      @SuppressWarnings("deprecation")
+      com.google.wireless.android.sdk.stats.EditorFileType result = com.google.wireless.android.sdk.stats.EditorFileType.valueOf(fileType_);
+      return result == null ? com.google.wireless.android.sdk.stats.EditorFileType.UNKNOWN : result;
+    }
+
+    public static final int CODE_DOMAINS_FIELD_NUMBER = 4;
+    private java.util.List<java.lang.Integer> codeDomains_;
+    private static final com.google.protobuf.Internal.ListAdapter.Converter<
+        java.lang.Integer, com.google.wireless.android.sdk.stats.SmlChatBotEvent.CodeDomain> codeDomains_converter_ =
+            new com.google.protobuf.Internal.ListAdapter.Converter<
+                java.lang.Integer, com.google.wireless.android.sdk.stats.SmlChatBotEvent.CodeDomain>() {
+              public com.google.wireless.android.sdk.stats.SmlChatBotEvent.CodeDomain convert(java.lang.Integer from) {
+                @SuppressWarnings("deprecation")
+                com.google.wireless.android.sdk.stats.SmlChatBotEvent.CodeDomain result = com.google.wireless.android.sdk.stats.SmlChatBotEvent.CodeDomain.valueOf(from);
+                return result == null ? com.google.wireless.android.sdk.stats.SmlChatBotEvent.CodeDomain.UNDEFINED : result;
+              }
+            };
+    /**
+     * <pre>
+     * libraries, frameworks, or other categories applicable to the code snippet
+     * </pre>
+     *
+     * <code>repeated .android_studio.SmlChatBotEvent.CodeDomain code_domains = 4 [packed = true];</code>
+     * @return A list containing the codeDomains.
+     */
+    @java.lang.Override
+    public java.util.List<com.google.wireless.android.sdk.stats.SmlChatBotEvent.CodeDomain> getCodeDomainsList() {
+      return new com.google.protobuf.Internal.ListAdapter<
+          java.lang.Integer, com.google.wireless.android.sdk.stats.SmlChatBotEvent.CodeDomain>(codeDomains_, codeDomains_converter_);
+    }
+    /**
+     * <pre>
+     * libraries, frameworks, or other categories applicable to the code snippet
+     * </pre>
+     *
+     * <code>repeated .android_studio.SmlChatBotEvent.CodeDomain code_domains = 4 [packed = true];</code>
+     * @return The count of codeDomains.
+     */
+    @java.lang.Override
+    public int getCodeDomainsCount() {
+      return codeDomains_.size();
+    }
+    /**
+     * <pre>
+     * libraries, frameworks, or other categories applicable to the code snippet
+     * </pre>
+     *
+     * <code>repeated .android_studio.SmlChatBotEvent.CodeDomain code_domains = 4 [packed = true];</code>
+     * @param index The index of the element to return.
+     * @return The codeDomains at the given index.
+     */
+    @java.lang.Override
+    public com.google.wireless.android.sdk.stats.SmlChatBotEvent.CodeDomain getCodeDomains(int index) {
+      return codeDomains_converter_.convert(codeDomains_.get(index));
+    }
+    private int codeDomainsMemoizedSerializedSize;
+
+    public static final int HALLUCINATION_TYPES_FIELD_NUMBER = 5;
+    private java.util.List<java.lang.Integer> hallucinationTypes_;
+    private static final com.google.protobuf.Internal.ListAdapter.Converter<
+        java.lang.Integer, com.google.wireless.android.sdk.stats.SmlChatBotEvent.HallucinationType> hallucinationTypes_converter_ =
+            new com.google.protobuf.Internal.ListAdapter.Converter<
+                java.lang.Integer, com.google.wireless.android.sdk.stats.SmlChatBotEvent.HallucinationType>() {
+              public com.google.wireless.android.sdk.stats.SmlChatBotEvent.HallucinationType convert(java.lang.Integer from) {
+                @SuppressWarnings("deprecation")
+                com.google.wireless.android.sdk.stats.SmlChatBotEvent.HallucinationType result = com.google.wireless.android.sdk.stats.SmlChatBotEvent.HallucinationType.valueOf(from);
+                return result == null ? com.google.wireless.android.sdk.stats.SmlChatBotEvent.HallucinationType.OTHER : result;
+              }
+            };
+    /**
+     * <pre>
+     * types of hallucinations detected in the snippet
+     * </pre>
+     *
+     * <code>repeated .android_studio.SmlChatBotEvent.HallucinationType hallucination_types = 5 [packed = true];</code>
+     * @return A list containing the hallucinationTypes.
+     */
+    @java.lang.Override
+    public java.util.List<com.google.wireless.android.sdk.stats.SmlChatBotEvent.HallucinationType> getHallucinationTypesList() {
+      return new com.google.protobuf.Internal.ListAdapter<
+          java.lang.Integer, com.google.wireless.android.sdk.stats.SmlChatBotEvent.HallucinationType>(hallucinationTypes_, hallucinationTypes_converter_);
+    }
+    /**
+     * <pre>
+     * types of hallucinations detected in the snippet
+     * </pre>
+     *
+     * <code>repeated .android_studio.SmlChatBotEvent.HallucinationType hallucination_types = 5 [packed = true];</code>
+     * @return The count of hallucinationTypes.
+     */
+    @java.lang.Override
+    public int getHallucinationTypesCount() {
+      return hallucinationTypes_.size();
+    }
+    /**
+     * <pre>
+     * types of hallucinations detected in the snippet
+     * </pre>
+     *
+     * <code>repeated .android_studio.SmlChatBotEvent.HallucinationType hallucination_types = 5 [packed = true];</code>
+     * @param index The index of the element to return.
+     * @return The hallucinationTypes at the given index.
+     */
+    @java.lang.Override
+    public com.google.wireless.android.sdk.stats.SmlChatBotEvent.HallucinationType getHallucinationTypes(int index) {
+      return hallucinationTypes_converter_.convert(hallucinationTypes_.get(index));
+    }
+    private int hallucinationTypesMemoizedSerializedSize;
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getSerializedSize();
+      if (((bitField0_ & 0x00000001) != 0)) {
+        output.writeMessage(1, getMetadata());
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        output.writeBool(2, hasHallucination_);
+      }
+      if (((bitField0_ & 0x00000004) != 0)) {
+        output.writeEnum(3, fileType_);
+      }
+      if (getCodeDomainsList().size() > 0) {
+        output.writeUInt32NoTag(34);
+        output.writeUInt32NoTag(codeDomainsMemoizedSerializedSize);
+      }
+      for (int i = 0; i < codeDomains_.size(); i++) {
+        output.writeEnumNoTag(codeDomains_.get(i));
+      }
+      if (getHallucinationTypesList().size() > 0) {
+        output.writeUInt32NoTag(42);
+        output.writeUInt32NoTag(hallucinationTypesMemoizedSerializedSize);
+      }
+      for (int i = 0; i < hallucinationTypes_.size(); i++) {
+        output.writeEnumNoTag(hallucinationTypes_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getMetadata());
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(2, hasHallucination_);
+      }
+      if (((bitField0_ & 0x00000004) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(3, fileType_);
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < codeDomains_.size(); i++) {
+          dataSize += com.google.protobuf.CodedOutputStream
+            .computeEnumSizeNoTag(codeDomains_.get(i));
+        }
+        size += dataSize;
+        if (!getCodeDomainsList().isEmpty()) {  size += 1;
+          size += com.google.protobuf.CodedOutputStream
+            .computeUInt32SizeNoTag(dataSize);
+        }codeDomainsMemoizedSerializedSize = dataSize;
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < hallucinationTypes_.size(); i++) {
+          dataSize += com.google.protobuf.CodedOutputStream
+            .computeEnumSizeNoTag(hallucinationTypes_.get(i));
+        }
+        size += dataSize;
+        if (!getHallucinationTypesList().isEmpty()) {  size += 1;
+          size += com.google.protobuf.CodedOutputStream
+            .computeUInt32SizeNoTag(dataSize);
+        }hallucinationTypesMemoizedSerializedSize = dataSize;
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.google.wireless.android.sdk.stats.SmlChatBotEvent.HallucinationDetectorResult)) {
+        return super.equals(obj);
+      }
+      com.google.wireless.android.sdk.stats.SmlChatBotEvent.HallucinationDetectorResult other = (com.google.wireless.android.sdk.stats.SmlChatBotEvent.HallucinationDetectorResult) obj;
+
+      if (hasMetadata() != other.hasMetadata()) return false;
+      if (hasMetadata()) {
+        if (!getMetadata()
+            .equals(other.getMetadata())) return false;
+      }
+      if (hasHasHallucination() != other.hasHasHallucination()) return false;
+      if (hasHasHallucination()) {
+        if (getHasHallucination()
+            != other.getHasHallucination()) return false;
+      }
+      if (hasFileType() != other.hasFileType()) return false;
+      if (hasFileType()) {
+        if (fileType_ != other.fileType_) return false;
+      }
+      if (!codeDomains_.equals(other.codeDomains_)) return false;
+      if (!hallucinationTypes_.equals(other.hallucinationTypes_)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasMetadata()) {
+        hash = (37 * hash) + METADATA_FIELD_NUMBER;
+        hash = (53 * hash) + getMetadata().hashCode();
+      }
+      if (hasHasHallucination()) {
+        hash = (37 * hash) + HAS_HALLUCINATION_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+            getHasHallucination());
+      }
+      if (hasFileType()) {
+        hash = (37 * hash) + FILE_TYPE_FIELD_NUMBER;
+        hash = (53 * hash) + fileType_;
+      }
+      if (getCodeDomainsCount() > 0) {
+        hash = (37 * hash) + CODE_DOMAINS_FIELD_NUMBER;
+        hash = (53 * hash) + codeDomains_.hashCode();
+      }
+      if (getHallucinationTypesCount() > 0) {
+        hash = (37 * hash) + HALLUCINATION_TYPES_FIELD_NUMBER;
+        hash = (53 * hash) + hallucinationTypes_.hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.google.wireless.android.sdk.stats.SmlChatBotEvent.HallucinationDetectorResult parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.google.wireless.android.sdk.stats.SmlChatBotEvent.HallucinationDetectorResult parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.google.wireless.android.sdk.stats.SmlChatBotEvent.HallucinationDetectorResult parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.google.wireless.android.sdk.stats.SmlChatBotEvent.HallucinationDetectorResult parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.google.wireless.android.sdk.stats.SmlChatBotEvent.HallucinationDetectorResult parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.google.wireless.android.sdk.stats.SmlChatBotEvent.HallucinationDetectorResult parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.google.wireless.android.sdk.stats.SmlChatBotEvent.HallucinationDetectorResult parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.google.wireless.android.sdk.stats.SmlChatBotEvent.HallucinationDetectorResult parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.google.wireless.android.sdk.stats.SmlChatBotEvent.HallucinationDetectorResult parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.google.wireless.android.sdk.stats.SmlChatBotEvent.HallucinationDetectorResult parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.google.wireless.android.sdk.stats.SmlChatBotEvent.HallucinationDetectorResult parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.google.wireless.android.sdk.stats.SmlChatBotEvent.HallucinationDetectorResult parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.google.wireless.android.sdk.stats.SmlChatBotEvent.HallucinationDetectorResult prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code android_studio.SmlChatBotEvent.HallucinationDetectorResult}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:android_studio.SmlChatBotEvent.HallucinationDetectorResult)
+        com.google.wireless.android.sdk.stats.SmlChatBotEvent.HallucinationDetectorResultOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_SmlChatBotEvent_HallucinationDetectorResult_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_SmlChatBotEvent_HallucinationDetectorResult_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.google.wireless.android.sdk.stats.SmlChatBotEvent.HallucinationDetectorResult.class, com.google.wireless.android.sdk.stats.SmlChatBotEvent.HallucinationDetectorResult.Builder.class);
+      }
+
+      // Construct using com.google.wireless.android.sdk.stats.SmlChatBotEvent.HallucinationDetectorResult.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getMetadataFieldBuilder();
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        if (metadataBuilder_ == null) {
+          metadata_ = null;
+        } else {
+          metadataBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        hasHallucination_ = false;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        fileType_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000004);
+        codeDomains_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000008);
+        hallucinationTypes_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000010);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_SmlChatBotEvent_HallucinationDetectorResult_descriptor;
+      }
+
+      @java.lang.Override
+      public com.google.wireless.android.sdk.stats.SmlChatBotEvent.HallucinationDetectorResult getDefaultInstanceForType() {
+        return com.google.wireless.android.sdk.stats.SmlChatBotEvent.HallucinationDetectorResult.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.google.wireless.android.sdk.stats.SmlChatBotEvent.HallucinationDetectorResult build() {
+        com.google.wireless.android.sdk.stats.SmlChatBotEvent.HallucinationDetectorResult result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.google.wireless.android.sdk.stats.SmlChatBotEvent.HallucinationDetectorResult buildPartial() {
+        com.google.wireless.android.sdk.stats.SmlChatBotEvent.HallucinationDetectorResult result = new com.google.wireless.android.sdk.stats.SmlChatBotEvent.HallucinationDetectorResult(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          if (metadataBuilder_ == null) {
+            result.metadata_ = metadata_;
+          } else {
+            result.metadata_ = metadataBuilder_.build();
+          }
+          to_bitField0_ |= 0x00000001;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.hasHallucination_ = hasHallucination_;
+          to_bitField0_ |= 0x00000002;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          to_bitField0_ |= 0x00000004;
+        }
+        result.fileType_ = fileType_;
+        if (((bitField0_ & 0x00000008) != 0)) {
+          codeDomains_ = java.util.Collections.unmodifiableList(codeDomains_);
+          bitField0_ = (bitField0_ & ~0x00000008);
+        }
+        result.codeDomains_ = codeDomains_;
+        if (((bitField0_ & 0x00000010) != 0)) {
+          hallucinationTypes_ = java.util.Collections.unmodifiableList(hallucinationTypes_);
+          bitField0_ = (bitField0_ & ~0x00000010);
+        }
+        result.hallucinationTypes_ = hallucinationTypes_;
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.google.wireless.android.sdk.stats.SmlChatBotEvent.HallucinationDetectorResult) {
+          return mergeFrom((com.google.wireless.android.sdk.stats.SmlChatBotEvent.HallucinationDetectorResult)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.google.wireless.android.sdk.stats.SmlChatBotEvent.HallucinationDetectorResult other) {
+        if (other == com.google.wireless.android.sdk.stats.SmlChatBotEvent.HallucinationDetectorResult.getDefaultInstance()) return this;
+        if (other.hasMetadata()) {
+          mergeMetadata(other.getMetadata());
+        }
+        if (other.hasHasHallucination()) {
+          setHasHallucination(other.getHasHallucination());
+        }
+        if (other.hasFileType()) {
+          setFileType(other.getFileType());
+        }
+        if (!other.codeDomains_.isEmpty()) {
+          if (codeDomains_.isEmpty()) {
+            codeDomains_ = other.codeDomains_;
+            bitField0_ = (bitField0_ & ~0x00000008);
+          } else {
+            ensureCodeDomainsIsMutable();
+            codeDomains_.addAll(other.codeDomains_);
+          }
+          onChanged();
+        }
+        if (!other.hallucinationTypes_.isEmpty()) {
+          if (hallucinationTypes_.isEmpty()) {
+            hallucinationTypes_ = other.hallucinationTypes_;
+            bitField0_ = (bitField0_ & ~0x00000010);
+          } else {
+            ensureHallucinationTypesIsMutable();
+            hallucinationTypes_.addAll(other.hallucinationTypes_);
+          }
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getMetadataFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 16: {
+                hasHallucination_ = input.readBool();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 16
+              case 24: {
+                int tmpRaw = input.readEnum();
+                com.google.wireless.android.sdk.stats.EditorFileType tmpValue =
+                    com.google.wireless.android.sdk.stats.EditorFileType.forNumber(tmpRaw);
+                if (tmpValue == null) {
+                  mergeUnknownVarintField(3, tmpRaw);
+                } else {
+                  fileType_ = tmpRaw;
+                  bitField0_ |= 0x00000004;
+                }
+                break;
+              } // case 24
+              case 32: {
+                int tmpRaw = input.readEnum();
+                com.google.wireless.android.sdk.stats.SmlChatBotEvent.CodeDomain tmpValue =
+                    com.google.wireless.android.sdk.stats.SmlChatBotEvent.CodeDomain.forNumber(tmpRaw);
+                if (tmpValue == null) {
+                  mergeUnknownVarintField(4, tmpRaw);
+                } else {
+                  ensureCodeDomainsIsMutable();
+                  codeDomains_.add(tmpRaw);
+                }
+                break;
+              } // case 32
+              case 34: {
+                int length = input.readRawVarint32();
+                int oldLimit = input.pushLimit(length);
+                while(input.getBytesUntilLimit() > 0) {
+                  int tmpRaw = input.readEnum();
+                  com.google.wireless.android.sdk.stats.SmlChatBotEvent.CodeDomain tmpValue =
+                      com.google.wireless.android.sdk.stats.SmlChatBotEvent.CodeDomain.forNumber(tmpRaw);
+                  if (tmpValue == null) {
+                    mergeUnknownVarintField(4, tmpRaw);
+                  } else {
+                    ensureCodeDomainsIsMutable();
+                    codeDomains_.add(tmpRaw);
+                  }
+                }
+                input.popLimit(oldLimit);
+                break;
+              } // case 34
+              case 40: {
+                int tmpRaw = input.readEnum();
+                com.google.wireless.android.sdk.stats.SmlChatBotEvent.HallucinationType tmpValue =
+                    com.google.wireless.android.sdk.stats.SmlChatBotEvent.HallucinationType.forNumber(tmpRaw);
+                if (tmpValue == null) {
+                  mergeUnknownVarintField(5, tmpRaw);
+                } else {
+                  ensureHallucinationTypesIsMutable();
+                  hallucinationTypes_.add(tmpRaw);
+                }
+                break;
+              } // case 40
+              case 42: {
+                int length = input.readRawVarint32();
+                int oldLimit = input.pushLimit(length);
+                while(input.getBytesUntilLimit() > 0) {
+                  int tmpRaw = input.readEnum();
+                  com.google.wireless.android.sdk.stats.SmlChatBotEvent.HallucinationType tmpValue =
+                      com.google.wireless.android.sdk.stats.SmlChatBotEvent.HallucinationType.forNumber(tmpRaw);
+                  if (tmpValue == null) {
+                    mergeUnknownVarintField(5, tmpRaw);
+                  } else {
+                    ensureHallucinationTypesIsMutable();
+                    hallucinationTypes_.add(tmpRaw);
+                  }
+                }
+                input.popLimit(oldLimit);
+                break;
+              } // case 42
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.google.wireless.android.sdk.stats.SmlResponseMetadata metadata_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.wireless.android.sdk.stats.SmlResponseMetadata, com.google.wireless.android.sdk.stats.SmlResponseMetadata.Builder, com.google.wireless.android.sdk.stats.SmlResponseMetadataOrBuilder> metadataBuilder_;
+      /**
+       * <code>optional .android_studio.SmlResponseMetadata metadata = 1;</code>
+       * @return Whether the metadata field is set.
+       */
+      public boolean hasMetadata() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>optional .android_studio.SmlResponseMetadata metadata = 1;</code>
+       * @return The metadata.
+       */
+      public com.google.wireless.android.sdk.stats.SmlResponseMetadata getMetadata() {
+        if (metadataBuilder_ == null) {
+          return metadata_ == null ? com.google.wireless.android.sdk.stats.SmlResponseMetadata.getDefaultInstance() : metadata_;
+        } else {
+          return metadataBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>optional .android_studio.SmlResponseMetadata metadata = 1;</code>
+       */
+      public Builder setMetadata(com.google.wireless.android.sdk.stats.SmlResponseMetadata value) {
+        if (metadataBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          metadata_ = value;
+          onChanged();
+        } else {
+          metadataBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        return this;
+      }
+      /**
+       * <code>optional .android_studio.SmlResponseMetadata metadata = 1;</code>
+       */
+      public Builder setMetadata(
+          com.google.wireless.android.sdk.stats.SmlResponseMetadata.Builder builderForValue) {
+        if (metadataBuilder_ == null) {
+          metadata_ = builderForValue.build();
+          onChanged();
+        } else {
+          metadataBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        return this;
+      }
+      /**
+       * <code>optional .android_studio.SmlResponseMetadata metadata = 1;</code>
+       */
+      public Builder mergeMetadata(com.google.wireless.android.sdk.stats.SmlResponseMetadata value) {
+        if (metadataBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+              metadata_ != null &&
+              metadata_ != com.google.wireless.android.sdk.stats.SmlResponseMetadata.getDefaultInstance()) {
+            metadata_ =
+              com.google.wireless.android.sdk.stats.SmlResponseMetadata.newBuilder(metadata_).mergeFrom(value).buildPartial();
+          } else {
+            metadata_ = value;
+          }
+          onChanged();
+        } else {
+          metadataBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        return this;
+      }
+      /**
+       * <code>optional .android_studio.SmlResponseMetadata metadata = 1;</code>
+       */
+      public Builder clearMetadata() {
+        if (metadataBuilder_ == null) {
+          metadata_ = null;
+          onChanged();
+        } else {
+          metadataBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+      /**
+       * <code>optional .android_studio.SmlResponseMetadata metadata = 1;</code>
+       */
+      public com.google.wireless.android.sdk.stats.SmlResponseMetadata.Builder getMetadataBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getMetadataFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>optional .android_studio.SmlResponseMetadata metadata = 1;</code>
+       */
+      public com.google.wireless.android.sdk.stats.SmlResponseMetadataOrBuilder getMetadataOrBuilder() {
+        if (metadataBuilder_ != null) {
+          return metadataBuilder_.getMessageOrBuilder();
+        } else {
+          return metadata_ == null ?
+              com.google.wireless.android.sdk.stats.SmlResponseMetadata.getDefaultInstance() : metadata_;
+        }
+      }
+      /**
+       * <code>optional .android_studio.SmlResponseMetadata metadata = 1;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.wireless.android.sdk.stats.SmlResponseMetadata, com.google.wireless.android.sdk.stats.SmlResponseMetadata.Builder, com.google.wireless.android.sdk.stats.SmlResponseMetadataOrBuilder> 
+          getMetadataFieldBuilder() {
+        if (metadataBuilder_ == null) {
+          metadataBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.wireless.android.sdk.stats.SmlResponseMetadata, com.google.wireless.android.sdk.stats.SmlResponseMetadata.Builder, com.google.wireless.android.sdk.stats.SmlResponseMetadataOrBuilder>(
+                  getMetadata(),
+                  getParentForChildren(),
+                  isClean());
+          metadata_ = null;
+        }
+        return metadataBuilder_;
+      }
+
+      private boolean hasHallucination_ ;
+      /**
+       * <code>optional bool has_hallucination = 2;</code>
+       * @return Whether the hasHallucination field is set.
+       */
+      @java.lang.Override
+      public boolean hasHasHallucination() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <code>optional bool has_hallucination = 2;</code>
+       * @return The hasHallucination.
+       */
+      @java.lang.Override
+      public boolean getHasHallucination() {
+        return hasHallucination_;
+      }
+      /**
+       * <code>optional bool has_hallucination = 2;</code>
+       * @param value The hasHallucination to set.
+       * @return This builder for chaining.
+       */
+      public Builder setHasHallucination(boolean value) {
+        bitField0_ |= 0x00000002;
+        hasHallucination_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional bool has_hallucination = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearHasHallucination() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        hasHallucination_ = false;
+        onChanged();
+        return this;
+      }
+
+      private int fileType_ = 0;
+      /**
+       * <code>optional .android_studio.EditorFileType file_type = 3;</code>
+       * @return Whether the fileType field is set.
+       */
+      @java.lang.Override public boolean hasFileType() {
+        return ((bitField0_ & 0x00000004) != 0);
+      }
+      /**
+       * <code>optional .android_studio.EditorFileType file_type = 3;</code>
+       * @return The fileType.
+       */
+      @java.lang.Override
+      public com.google.wireless.android.sdk.stats.EditorFileType getFileType() {
+        @SuppressWarnings("deprecation")
+        com.google.wireless.android.sdk.stats.EditorFileType result = com.google.wireless.android.sdk.stats.EditorFileType.valueOf(fileType_);
+        return result == null ? com.google.wireless.android.sdk.stats.EditorFileType.UNKNOWN : result;
+      }
+      /**
+       * <code>optional .android_studio.EditorFileType file_type = 3;</code>
+       * @param value The fileType to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFileType(com.google.wireless.android.sdk.stats.EditorFileType value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x00000004;
+        fileType_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional .android_studio.EditorFileType file_type = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearFileType() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        fileType_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private java.util.List<java.lang.Integer> codeDomains_ =
+        java.util.Collections.emptyList();
+      private void ensureCodeDomainsIsMutable() {
+        if (!((bitField0_ & 0x00000008) != 0)) {
+          codeDomains_ = new java.util.ArrayList<java.lang.Integer>(codeDomains_);
+          bitField0_ |= 0x00000008;
+        }
+      }
+      /**
+       * <pre>
+       * libraries, frameworks, or other categories applicable to the code snippet
+       * </pre>
+       *
+       * <code>repeated .android_studio.SmlChatBotEvent.CodeDomain code_domains = 4 [packed = true];</code>
+       * @return A list containing the codeDomains.
+       */
+      public java.util.List<com.google.wireless.android.sdk.stats.SmlChatBotEvent.CodeDomain> getCodeDomainsList() {
+        return new com.google.protobuf.Internal.ListAdapter<
+            java.lang.Integer, com.google.wireless.android.sdk.stats.SmlChatBotEvent.CodeDomain>(codeDomains_, codeDomains_converter_);
+      }
+      /**
+       * <pre>
+       * libraries, frameworks, or other categories applicable to the code snippet
+       * </pre>
+       *
+       * <code>repeated .android_studio.SmlChatBotEvent.CodeDomain code_domains = 4 [packed = true];</code>
+       * @return The count of codeDomains.
+       */
+      public int getCodeDomainsCount() {
+        return codeDomains_.size();
+      }
+      /**
+       * <pre>
+       * libraries, frameworks, or other categories applicable to the code snippet
+       * </pre>
+       *
+       * <code>repeated .android_studio.SmlChatBotEvent.CodeDomain code_domains = 4 [packed = true];</code>
+       * @param index The index of the element to return.
+       * @return The codeDomains at the given index.
+       */
+      public com.google.wireless.android.sdk.stats.SmlChatBotEvent.CodeDomain getCodeDomains(int index) {
+        return codeDomains_converter_.convert(codeDomains_.get(index));
+      }
+      /**
+       * <pre>
+       * libraries, frameworks, or other categories applicable to the code snippet
+       * </pre>
+       *
+       * <code>repeated .android_studio.SmlChatBotEvent.CodeDomain code_domains = 4 [packed = true];</code>
+       * @param index The index to set the value at.
+       * @param value The codeDomains to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCodeDomains(
+          int index, com.google.wireless.android.sdk.stats.SmlChatBotEvent.CodeDomain value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureCodeDomainsIsMutable();
+        codeDomains_.set(index, value.getNumber());
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * libraries, frameworks, or other categories applicable to the code snippet
+       * </pre>
+       *
+       * <code>repeated .android_studio.SmlChatBotEvent.CodeDomain code_domains = 4 [packed = true];</code>
+       * @param value The codeDomains to add.
+       * @return This builder for chaining.
+       */
+      public Builder addCodeDomains(com.google.wireless.android.sdk.stats.SmlChatBotEvent.CodeDomain value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureCodeDomainsIsMutable();
+        codeDomains_.add(value.getNumber());
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * libraries, frameworks, or other categories applicable to the code snippet
+       * </pre>
+       *
+       * <code>repeated .android_studio.SmlChatBotEvent.CodeDomain code_domains = 4 [packed = true];</code>
+       * @param values The codeDomains to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllCodeDomains(
+          java.lang.Iterable<? extends com.google.wireless.android.sdk.stats.SmlChatBotEvent.CodeDomain> values) {
+        ensureCodeDomainsIsMutable();
+        for (com.google.wireless.android.sdk.stats.SmlChatBotEvent.CodeDomain value : values) {
+          codeDomains_.add(value.getNumber());
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * libraries, frameworks, or other categories applicable to the code snippet
+       * </pre>
+       *
+       * <code>repeated .android_studio.SmlChatBotEvent.CodeDomain code_domains = 4 [packed = true];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCodeDomains() {
+        codeDomains_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000008);
+        onChanged();
+        return this;
+      }
+
+      private java.util.List<java.lang.Integer> hallucinationTypes_ =
+        java.util.Collections.emptyList();
+      private void ensureHallucinationTypesIsMutable() {
+        if (!((bitField0_ & 0x00000010) != 0)) {
+          hallucinationTypes_ = new java.util.ArrayList<java.lang.Integer>(hallucinationTypes_);
+          bitField0_ |= 0x00000010;
+        }
+      }
+      /**
+       * <pre>
+       * types of hallucinations detected in the snippet
+       * </pre>
+       *
+       * <code>repeated .android_studio.SmlChatBotEvent.HallucinationType hallucination_types = 5 [packed = true];</code>
+       * @return A list containing the hallucinationTypes.
+       */
+      public java.util.List<com.google.wireless.android.sdk.stats.SmlChatBotEvent.HallucinationType> getHallucinationTypesList() {
+        return new com.google.protobuf.Internal.ListAdapter<
+            java.lang.Integer, com.google.wireless.android.sdk.stats.SmlChatBotEvent.HallucinationType>(hallucinationTypes_, hallucinationTypes_converter_);
+      }
+      /**
+       * <pre>
+       * types of hallucinations detected in the snippet
+       * </pre>
+       *
+       * <code>repeated .android_studio.SmlChatBotEvent.HallucinationType hallucination_types = 5 [packed = true];</code>
+       * @return The count of hallucinationTypes.
+       */
+      public int getHallucinationTypesCount() {
+        return hallucinationTypes_.size();
+      }
+      /**
+       * <pre>
+       * types of hallucinations detected in the snippet
+       * </pre>
+       *
+       * <code>repeated .android_studio.SmlChatBotEvent.HallucinationType hallucination_types = 5 [packed = true];</code>
+       * @param index The index of the element to return.
+       * @return The hallucinationTypes at the given index.
+       */
+      public com.google.wireless.android.sdk.stats.SmlChatBotEvent.HallucinationType getHallucinationTypes(int index) {
+        return hallucinationTypes_converter_.convert(hallucinationTypes_.get(index));
+      }
+      /**
+       * <pre>
+       * types of hallucinations detected in the snippet
+       * </pre>
+       *
+       * <code>repeated .android_studio.SmlChatBotEvent.HallucinationType hallucination_types = 5 [packed = true];</code>
+       * @param index The index to set the value at.
+       * @param value The hallucinationTypes to set.
+       * @return This builder for chaining.
+       */
+      public Builder setHallucinationTypes(
+          int index, com.google.wireless.android.sdk.stats.SmlChatBotEvent.HallucinationType value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureHallucinationTypesIsMutable();
+        hallucinationTypes_.set(index, value.getNumber());
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * types of hallucinations detected in the snippet
+       * </pre>
+       *
+       * <code>repeated .android_studio.SmlChatBotEvent.HallucinationType hallucination_types = 5 [packed = true];</code>
+       * @param value The hallucinationTypes to add.
+       * @return This builder for chaining.
+       */
+      public Builder addHallucinationTypes(com.google.wireless.android.sdk.stats.SmlChatBotEvent.HallucinationType value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureHallucinationTypesIsMutable();
+        hallucinationTypes_.add(value.getNumber());
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * types of hallucinations detected in the snippet
+       * </pre>
+       *
+       * <code>repeated .android_studio.SmlChatBotEvent.HallucinationType hallucination_types = 5 [packed = true];</code>
+       * @param values The hallucinationTypes to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllHallucinationTypes(
+          java.lang.Iterable<? extends com.google.wireless.android.sdk.stats.SmlChatBotEvent.HallucinationType> values) {
+        ensureHallucinationTypesIsMutable();
+        for (com.google.wireless.android.sdk.stats.SmlChatBotEvent.HallucinationType value : values) {
+          hallucinationTypes_.add(value.getNumber());
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * types of hallucinations detected in the snippet
+       * </pre>
+       *
+       * <code>repeated .android_studio.SmlChatBotEvent.HallucinationType hallucination_types = 5 [packed = true];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearHallucinationTypes() {
+        hallucinationTypes_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000010);
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:android_studio.SmlChatBotEvent.HallucinationDetectorResult)
+    }
+
+    // @@protoc_insertion_point(class_scope:android_studio.SmlChatBotEvent.HallucinationDetectorResult)
+    private static final com.google.wireless.android.sdk.stats.SmlChatBotEvent.HallucinationDetectorResult DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.google.wireless.android.sdk.stats.SmlChatBotEvent.HallucinationDetectorResult();
+    }
+
+    public static com.google.wireless.android.sdk.stats.SmlChatBotEvent.HallucinationDetectorResult getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<HallucinationDetectorResult>
+        PARSER = new com.google.protobuf.AbstractParser<HallucinationDetectorResult>() {
+      @java.lang.Override
+      public HallucinationDetectorResult parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<HallucinationDetectorResult> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<HallucinationDetectorResult> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.wireless.android.sdk.stats.SmlChatBotEvent.HallucinationDetectorResult getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private int bitField0_;
   private int contentCase_ = 0;
   private java.lang.Object content_;
@@ -7166,6 +8744,7 @@ private static final long serialVersionUID = 0L;
     BOT_INVOKED(6),
     SLASH_ACTION(7),
     DEPENDENCY_SUGGESTION(8),
+    HALLUCINATION_DETECTOR_RESULT(9),
     CONTENT_NOT_SET(0);
     private final int value;
     private ContentCase(int value) {
@@ -7191,6 +8770,7 @@ private static final long serialVersionUID = 0L;
         case 6: return BOT_INVOKED;
         case 7: return SLASH_ACTION;
         case 8: return DEPENDENCY_SUGGESTION;
+        case 9: return HALLUCINATION_DETECTOR_RESULT;
         case 0: return CONTENT_NOT_SET;
         default: return null;
       }
@@ -7454,6 +9034,37 @@ private static final long serialVersionUID = 0L;
     return com.google.wireless.android.sdk.stats.SmlChatBotEvent.DependencySuggestion.getDefaultInstance();
   }
 
+  public static final int HALLUCINATION_DETECTOR_RESULT_FIELD_NUMBER = 9;
+  /**
+   * <code>.android_studio.SmlChatBotEvent.HallucinationDetectorResult hallucination_detector_result = 9;</code>
+   * @return Whether the hallucinationDetectorResult field is set.
+   */
+  @java.lang.Override
+  public boolean hasHallucinationDetectorResult() {
+    return contentCase_ == 9;
+  }
+  /**
+   * <code>.android_studio.SmlChatBotEvent.HallucinationDetectorResult hallucination_detector_result = 9;</code>
+   * @return The hallucinationDetectorResult.
+   */
+  @java.lang.Override
+  public com.google.wireless.android.sdk.stats.SmlChatBotEvent.HallucinationDetectorResult getHallucinationDetectorResult() {
+    if (contentCase_ == 9) {
+       return (com.google.wireless.android.sdk.stats.SmlChatBotEvent.HallucinationDetectorResult) content_;
+    }
+    return com.google.wireless.android.sdk.stats.SmlChatBotEvent.HallucinationDetectorResult.getDefaultInstance();
+  }
+  /**
+   * <code>.android_studio.SmlChatBotEvent.HallucinationDetectorResult hallucination_detector_result = 9;</code>
+   */
+  @java.lang.Override
+  public com.google.wireless.android.sdk.stats.SmlChatBotEvent.HallucinationDetectorResultOrBuilder getHallucinationDetectorResultOrBuilder() {
+    if (contentCase_ == 9) {
+       return (com.google.wireless.android.sdk.stats.SmlChatBotEvent.HallucinationDetectorResult) content_;
+    }
+    return com.google.wireless.android.sdk.stats.SmlChatBotEvent.HallucinationDetectorResult.getDefaultInstance();
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -7491,6 +9102,9 @@ private static final long serialVersionUID = 0L;
     }
     if (contentCase_ == 8) {
       output.writeMessage(8, (com.google.wireless.android.sdk.stats.SmlChatBotEvent.DependencySuggestion) content_);
+    }
+    if (contentCase_ == 9) {
+      output.writeMessage(9, (com.google.wireless.android.sdk.stats.SmlChatBotEvent.HallucinationDetectorResult) content_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -7532,6 +9146,10 @@ private static final long serialVersionUID = 0L;
     if (contentCase_ == 8) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(8, (com.google.wireless.android.sdk.stats.SmlChatBotEvent.DependencySuggestion) content_);
+    }
+    if (contentCase_ == 9) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(9, (com.google.wireless.android.sdk.stats.SmlChatBotEvent.HallucinationDetectorResult) content_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -7582,6 +9200,10 @@ private static final long serialVersionUID = 0L;
         if (!getDependencySuggestion()
             .equals(other.getDependencySuggestion())) return false;
         break;
+      case 9:
+        if (!getHallucinationDetectorResult()
+            .equals(other.getHallucinationDetectorResult())) return false;
+        break;
       case 0:
       default:
     }
@@ -7628,6 +9250,10 @@ private static final long serialVersionUID = 0L;
       case 8:
         hash = (37 * hash) + DEPENDENCY_SUGGESTION_FIELD_NUMBER;
         hash = (53 * hash) + getDependencySuggestion().hashCode();
+        break;
+      case 9:
+        hash = (37 * hash) + HALLUCINATION_DETECTOR_RESULT_FIELD_NUMBER;
+        hash = (53 * hash) + getHallucinationDetectorResult().hashCode();
         break;
       case 0:
       default:
@@ -7784,6 +9410,9 @@ private static final long serialVersionUID = 0L;
       if (dependencySuggestionBuilder_ != null) {
         dependencySuggestionBuilder_.clear();
       }
+      if (hallucinationDetectorResultBuilder_ != null) {
+        hallucinationDetectorResultBuilder_.clear();
+      }
       contentCase_ = 0;
       content_ = null;
       return this;
@@ -7870,6 +9499,13 @@ private static final long serialVersionUID = 0L;
           result.content_ = dependencySuggestionBuilder_.build();
         }
       }
+      if (contentCase_ == 9) {
+        if (hallucinationDetectorResultBuilder_ == null) {
+          result.content_ = content_;
+        } else {
+          result.content_ = hallucinationDetectorResultBuilder_.build();
+        }
+      }
       result.bitField0_ = to_bitField0_;
       result.contentCase_ = contentCase_;
       onBuilt();
@@ -7951,6 +9587,10 @@ private static final long serialVersionUID = 0L;
         }
         case DEPENDENCY_SUGGESTION: {
           mergeDependencySuggestion(other.getDependencySuggestion());
+          break;
+        }
+        case HALLUCINATION_DETECTOR_RESULT: {
+          mergeHallucinationDetectorResult(other.getHallucinationDetectorResult());
           break;
         }
         case CONTENT_NOT_SET: {
@@ -8039,6 +9679,13 @@ private static final long serialVersionUID = 0L;
               contentCase_ = 8;
               break;
             } // case 66
+            case 74: {
+              input.readMessage(
+                  getHallucinationDetectorResultFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              contentCase_ = 9;
+              break;
+            } // case 74
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -9197,6 +10844,147 @@ private static final long serialVersionUID = 0L;
       contentCase_ = 8;
       onChanged();;
       return dependencySuggestionBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.SmlChatBotEvent.HallucinationDetectorResult, com.google.wireless.android.sdk.stats.SmlChatBotEvent.HallucinationDetectorResult.Builder, com.google.wireless.android.sdk.stats.SmlChatBotEvent.HallucinationDetectorResultOrBuilder> hallucinationDetectorResultBuilder_;
+    /**
+     * <code>.android_studio.SmlChatBotEvent.HallucinationDetectorResult hallucination_detector_result = 9;</code>
+     * @return Whether the hallucinationDetectorResult field is set.
+     */
+    @java.lang.Override
+    public boolean hasHallucinationDetectorResult() {
+      return contentCase_ == 9;
+    }
+    /**
+     * <code>.android_studio.SmlChatBotEvent.HallucinationDetectorResult hallucination_detector_result = 9;</code>
+     * @return The hallucinationDetectorResult.
+     */
+    @java.lang.Override
+    public com.google.wireless.android.sdk.stats.SmlChatBotEvent.HallucinationDetectorResult getHallucinationDetectorResult() {
+      if (hallucinationDetectorResultBuilder_ == null) {
+        if (contentCase_ == 9) {
+          return (com.google.wireless.android.sdk.stats.SmlChatBotEvent.HallucinationDetectorResult) content_;
+        }
+        return com.google.wireless.android.sdk.stats.SmlChatBotEvent.HallucinationDetectorResult.getDefaultInstance();
+      } else {
+        if (contentCase_ == 9) {
+          return hallucinationDetectorResultBuilder_.getMessage();
+        }
+        return com.google.wireless.android.sdk.stats.SmlChatBotEvent.HallucinationDetectorResult.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.android_studio.SmlChatBotEvent.HallucinationDetectorResult hallucination_detector_result = 9;</code>
+     */
+    public Builder setHallucinationDetectorResult(com.google.wireless.android.sdk.stats.SmlChatBotEvent.HallucinationDetectorResult value) {
+      if (hallucinationDetectorResultBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        content_ = value;
+        onChanged();
+      } else {
+        hallucinationDetectorResultBuilder_.setMessage(value);
+      }
+      contentCase_ = 9;
+      return this;
+    }
+    /**
+     * <code>.android_studio.SmlChatBotEvent.HallucinationDetectorResult hallucination_detector_result = 9;</code>
+     */
+    public Builder setHallucinationDetectorResult(
+        com.google.wireless.android.sdk.stats.SmlChatBotEvent.HallucinationDetectorResult.Builder builderForValue) {
+      if (hallucinationDetectorResultBuilder_ == null) {
+        content_ = builderForValue.build();
+        onChanged();
+      } else {
+        hallucinationDetectorResultBuilder_.setMessage(builderForValue.build());
+      }
+      contentCase_ = 9;
+      return this;
+    }
+    /**
+     * <code>.android_studio.SmlChatBotEvent.HallucinationDetectorResult hallucination_detector_result = 9;</code>
+     */
+    public Builder mergeHallucinationDetectorResult(com.google.wireless.android.sdk.stats.SmlChatBotEvent.HallucinationDetectorResult value) {
+      if (hallucinationDetectorResultBuilder_ == null) {
+        if (contentCase_ == 9 &&
+            content_ != com.google.wireless.android.sdk.stats.SmlChatBotEvent.HallucinationDetectorResult.getDefaultInstance()) {
+          content_ = com.google.wireless.android.sdk.stats.SmlChatBotEvent.HallucinationDetectorResult.newBuilder((com.google.wireless.android.sdk.stats.SmlChatBotEvent.HallucinationDetectorResult) content_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          content_ = value;
+        }
+        onChanged();
+      } else {
+        if (contentCase_ == 9) {
+          hallucinationDetectorResultBuilder_.mergeFrom(value);
+        }
+        hallucinationDetectorResultBuilder_.setMessage(value);
+      }
+      contentCase_ = 9;
+      return this;
+    }
+    /**
+     * <code>.android_studio.SmlChatBotEvent.HallucinationDetectorResult hallucination_detector_result = 9;</code>
+     */
+    public Builder clearHallucinationDetectorResult() {
+      if (hallucinationDetectorResultBuilder_ == null) {
+        if (contentCase_ == 9) {
+          contentCase_ = 0;
+          content_ = null;
+          onChanged();
+        }
+      } else {
+        if (contentCase_ == 9) {
+          contentCase_ = 0;
+          content_ = null;
+        }
+        hallucinationDetectorResultBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>.android_studio.SmlChatBotEvent.HallucinationDetectorResult hallucination_detector_result = 9;</code>
+     */
+    public com.google.wireless.android.sdk.stats.SmlChatBotEvent.HallucinationDetectorResult.Builder getHallucinationDetectorResultBuilder() {
+      return getHallucinationDetectorResultFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.android_studio.SmlChatBotEvent.HallucinationDetectorResult hallucination_detector_result = 9;</code>
+     */
+    @java.lang.Override
+    public com.google.wireless.android.sdk.stats.SmlChatBotEvent.HallucinationDetectorResultOrBuilder getHallucinationDetectorResultOrBuilder() {
+      if ((contentCase_ == 9) && (hallucinationDetectorResultBuilder_ != null)) {
+        return hallucinationDetectorResultBuilder_.getMessageOrBuilder();
+      } else {
+        if (contentCase_ == 9) {
+          return (com.google.wireless.android.sdk.stats.SmlChatBotEvent.HallucinationDetectorResult) content_;
+        }
+        return com.google.wireless.android.sdk.stats.SmlChatBotEvent.HallucinationDetectorResult.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.android_studio.SmlChatBotEvent.HallucinationDetectorResult hallucination_detector_result = 9;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.SmlChatBotEvent.HallucinationDetectorResult, com.google.wireless.android.sdk.stats.SmlChatBotEvent.HallucinationDetectorResult.Builder, com.google.wireless.android.sdk.stats.SmlChatBotEvent.HallucinationDetectorResultOrBuilder> 
+        getHallucinationDetectorResultFieldBuilder() {
+      if (hallucinationDetectorResultBuilder_ == null) {
+        if (!(contentCase_ == 9)) {
+          content_ = com.google.wireless.android.sdk.stats.SmlChatBotEvent.HallucinationDetectorResult.getDefaultInstance();
+        }
+        hallucinationDetectorResultBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.wireless.android.sdk.stats.SmlChatBotEvent.HallucinationDetectorResult, com.google.wireless.android.sdk.stats.SmlChatBotEvent.HallucinationDetectorResult.Builder, com.google.wireless.android.sdk.stats.SmlChatBotEvent.HallucinationDetectorResultOrBuilder>(
+                (com.google.wireless.android.sdk.stats.SmlChatBotEvent.HallucinationDetectorResult) content_,
+                getParentForChildren(),
+                isClean());
+        content_ = null;
+      }
+      contentCase_ = 9;
+      onChanged();;
+      return hallucinationDetectorResultBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

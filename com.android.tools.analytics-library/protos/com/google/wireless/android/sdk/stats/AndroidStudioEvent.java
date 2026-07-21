@@ -2914,6 +2914,14 @@ private static final long serialVersionUID = 0L;
      * <code>I_DEVICE_USAGE_EVENT = 298;</code>
      */
     I_DEVICE_USAGE_EVENT(298),
+    /**
+     * <pre>
+     * Event related to merged manifest view usage
+     * </pre>
+     *
+     * <code>MANIFEST_PANEL_EVENT = 299;</code>
+     */
+    MANIFEST_PANEL_EVENT(299),
     ;
 
     /**
@@ -5134,6 +5142,14 @@ private static final long serialVersionUID = 0L;
      * <code>I_DEVICE_USAGE_EVENT = 298;</code>
      */
     public static final int I_DEVICE_USAGE_EVENT_VALUE = 298;
+    /**
+     * <pre>
+     * Event related to merged manifest view usage
+     * </pre>
+     *
+     * <code>MANIFEST_PANEL_EVENT = 299;</code>
+     */
+    public static final int MANIFEST_PANEL_EVENT_VALUE = 299;
 
 
     public final int getNumber() {
@@ -5450,6 +5466,7 @@ private static final long serialVersionUID = 0L;
         case 296: return LINT_TOOLTIP_LINK_EVENT;
         case 297: return SML_AI_EXCLUDE_EVENT;
         case 298: return I_DEVICE_USAGE_EVENT;
+        case 299: return MANIFEST_PANEL_EVENT;
         default: return null;
       }
     }
@@ -7534,12 +7551,20 @@ private static final long serialVersionUID = 0L;
     AGDE(6),
     /**
      * <pre>
-     * Android Studio for Platform (ASfP)
+     * Android Studio for Platform (ASfP) - Public
      * </pre>
      *
      * <code>ANDROID_STUDIO_FOR_PLATFORM = 7;</code>
      */
     ANDROID_STUDIO_FOR_PLATFORM(7),
+    /**
+     * <pre>
+     * Android Studio for Platform (ASfP) - Internal
+     * </pre>
+     *
+     * <code>ANDROID_STUDIO_FOR_PLATFORM_INTERNAL = 8;</code>
+     */
+    ANDROID_STUDIO_FOR_PLATFORM_INTERNAL(8),
     ;
 
     /**
@@ -7576,12 +7601,20 @@ private static final long serialVersionUID = 0L;
     public static final int AGDE_VALUE = 6;
     /**
      * <pre>
-     * Android Studio for Platform (ASfP)
+     * Android Studio for Platform (ASfP) - Public
      * </pre>
      *
      * <code>ANDROID_STUDIO_FOR_PLATFORM = 7;</code>
      */
     public static final int ANDROID_STUDIO_FOR_PLATFORM_VALUE = 7;
+    /**
+     * <pre>
+     * Android Studio for Platform (ASfP) - Internal
+     * </pre>
+     *
+     * <code>ANDROID_STUDIO_FOR_PLATFORM_INTERNAL = 8;</code>
+     */
+    public static final int ANDROID_STUDIO_FOR_PLATFORM_INTERNAL_VALUE = 8;
 
 
     public final int getNumber() {
@@ -7612,6 +7645,7 @@ private static final long serialVersionUID = 0L;
         case 5: return GAME_TOOLS;
         case 6: return AGDE;
         case 7: return ANDROID_STUDIO_FOR_PLATFORM;
+        case 8: return ANDROID_STUDIO_FOR_PLATFORM_INTERNAL;
         default: return null;
       }
     }

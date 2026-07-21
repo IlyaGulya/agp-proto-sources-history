@@ -18,6 +18,8 @@ private static final long serialVersionUID = 0L;
   private SoongSyncStats() {
     trigger_ = 0;
     status_ = 0;
+    lunchTarget_ = "";
+    modulePaths_ = com.google.protobuf.LazyStringArrayList.EMPTY;
   }
 
   @java.lang.Override
@@ -346,6 +348,121 @@ private static final long serialVersionUID = 0L;
     return totalTimeMs_;
   }
 
+  public static final int LUNCH_TARGET_FIELD_NUMBER = 4;
+  private volatile java.lang.Object lunchTarget_;
+  /**
+   * <pre>
+   * Lunch target used for sync
+   * </pre>
+   *
+   * <code>optional string lunch_target = 4;</code>
+   * @return Whether the lunchTarget field is set.
+   */
+  @java.lang.Override
+  public boolean hasLunchTarget() {
+    return ((bitField0_ & 0x00000008) != 0);
+  }
+  /**
+   * <pre>
+   * Lunch target used for sync
+   * </pre>
+   *
+   * <code>optional string lunch_target = 4;</code>
+   * @return The lunchTarget.
+   */
+  @java.lang.Override
+  public java.lang.String getLunchTarget() {
+    java.lang.Object ref = lunchTarget_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      if (bs.isValidUtf8()) {
+        lunchTarget_ = s;
+      }
+      return s;
+    }
+  }
+  /**
+   * <pre>
+   * Lunch target used for sync
+   * </pre>
+   *
+   * <code>optional string lunch_target = 4;</code>
+   * @return The bytes for lunchTarget.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getLunchTargetBytes() {
+    java.lang.Object ref = lunchTarget_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      lunchTarget_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
+  public static final int MODULE_PATHS_FIELD_NUMBER = 5;
+  private com.google.protobuf.LazyStringList modulePaths_;
+  /**
+   * <pre>
+   * Module paths that were synced. These are paths relative
+   * to the Platform repo checkout and do not contain PII.
+   * </pre>
+   *
+   * <code>repeated string module_paths = 5;</code>
+   * @return A list containing the modulePaths.
+   */
+  public com.google.protobuf.ProtocolStringList
+      getModulePathsList() {
+    return modulePaths_;
+  }
+  /**
+   * <pre>
+   * Module paths that were synced. These are paths relative
+   * to the Platform repo checkout and do not contain PII.
+   * </pre>
+   *
+   * <code>repeated string module_paths = 5;</code>
+   * @return The count of modulePaths.
+   */
+  public int getModulePathsCount() {
+    return modulePaths_.size();
+  }
+  /**
+   * <pre>
+   * Module paths that were synced. These are paths relative
+   * to the Platform repo checkout and do not contain PII.
+   * </pre>
+   *
+   * <code>repeated string module_paths = 5;</code>
+   * @param index The index of the element to return.
+   * @return The modulePaths at the given index.
+   */
+  public java.lang.String getModulePaths(int index) {
+    return modulePaths_.get(index);
+  }
+  /**
+   * <pre>
+   * Module paths that were synced. These are paths relative
+   * to the Platform repo checkout and do not contain PII.
+   * </pre>
+   *
+   * <code>repeated string module_paths = 5;</code>
+   * @param index The index of the value to return.
+   * @return The bytes of the modulePaths at the given index.
+   */
+  public com.google.protobuf.ByteString
+      getModulePathsBytes(int index) {
+    return modulePaths_.getByteString(index);
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -369,6 +486,12 @@ private static final long serialVersionUID = 0L;
     if (((bitField0_ & 0x00000004) != 0)) {
       output.writeInt64(3, totalTimeMs_);
     }
+    if (((bitField0_ & 0x00000008) != 0)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 4, lunchTarget_);
+    }
+    for (int i = 0; i < modulePaths_.size(); i++) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 5, modulePaths_.getRaw(i));
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -389,6 +512,17 @@ private static final long serialVersionUID = 0L;
     if (((bitField0_ & 0x00000004) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(3, totalTimeMs_);
+    }
+    if (((bitField0_ & 0x00000008) != 0)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, lunchTarget_);
+    }
+    {
+      int dataSize = 0;
+      for (int i = 0; i < modulePaths_.size(); i++) {
+        dataSize += computeStringSizeNoTag(modulePaths_.getRaw(i));
+      }
+      size += dataSize;
+      size += 1 * getModulePathsList().size();
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -418,6 +552,13 @@ private static final long serialVersionUID = 0L;
       if (getTotalTimeMs()
           != other.getTotalTimeMs()) return false;
     }
+    if (hasLunchTarget() != other.hasLunchTarget()) return false;
+    if (hasLunchTarget()) {
+      if (!getLunchTarget()
+          .equals(other.getLunchTarget())) return false;
+    }
+    if (!getModulePathsList()
+        .equals(other.getModulePathsList())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -441,6 +582,14 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + TOTAL_TIME_MS_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
           getTotalTimeMs());
+    }
+    if (hasLunchTarget()) {
+      hash = (37 * hash) + LUNCH_TARGET_FIELD_NUMBER;
+      hash = (53 * hash) + getLunchTarget().hashCode();
+    }
+    if (getModulePathsCount() > 0) {
+      hash = (37 * hash) + MODULE_PATHS_FIELD_NUMBER;
+      hash = (53 * hash) + getModulePathsList().hashCode();
     }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
@@ -576,6 +725,10 @@ private static final long serialVersionUID = 0L;
       bitField0_ = (bitField0_ & ~0x00000002);
       totalTimeMs_ = 0L;
       bitField0_ = (bitField0_ & ~0x00000004);
+      lunchTarget_ = "";
+      bitField0_ = (bitField0_ & ~0x00000008);
+      modulePaths_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      bitField0_ = (bitField0_ & ~0x00000010);
       return this;
     }
 
@@ -616,6 +769,15 @@ private static final long serialVersionUID = 0L;
         result.totalTimeMs_ = totalTimeMs_;
         to_bitField0_ |= 0x00000004;
       }
+      if (((from_bitField0_ & 0x00000008) != 0)) {
+        to_bitField0_ |= 0x00000008;
+      }
+      result.lunchTarget_ = lunchTarget_;
+      if (((bitField0_ & 0x00000010) != 0)) {
+        modulePaths_ = modulePaths_.getUnmodifiableView();
+        bitField0_ = (bitField0_ & ~0x00000010);
+      }
+      result.modulePaths_ = modulePaths_;
       result.bitField0_ = to_bitField0_;
       onBuilt();
       return result;
@@ -674,6 +836,21 @@ private static final long serialVersionUID = 0L;
       if (other.hasTotalTimeMs()) {
         setTotalTimeMs(other.getTotalTimeMs());
       }
+      if (other.hasLunchTarget()) {
+        bitField0_ |= 0x00000008;
+        lunchTarget_ = other.lunchTarget_;
+        onChanged();
+      }
+      if (!other.modulePaths_.isEmpty()) {
+        if (modulePaths_.isEmpty()) {
+          modulePaths_ = other.modulePaths_;
+          bitField0_ = (bitField0_ & ~0x00000010);
+        } else {
+          ensureModulePathsIsMutable();
+          modulePaths_.addAll(other.modulePaths_);
+        }
+        onChanged();
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -729,6 +906,17 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000004;
               break;
             } // case 24
+            case 34: {
+              lunchTarget_ = input.readBytes();
+              bitField0_ |= 0x00000008;
+              break;
+            } // case 34
+            case 42: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              ensureModulePathsIsMutable();
+              modulePaths_.add(bs);
+              break;
+            } // case 42
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -915,6 +1103,268 @@ private static final long serialVersionUID = 0L;
     public Builder clearTotalTimeMs() {
       bitField0_ = (bitField0_ & ~0x00000004);
       totalTimeMs_ = 0L;
+      onChanged();
+      return this;
+    }
+
+    private java.lang.Object lunchTarget_ = "";
+    /**
+     * <pre>
+     * Lunch target used for sync
+     * </pre>
+     *
+     * <code>optional string lunch_target = 4;</code>
+     * @return Whether the lunchTarget field is set.
+     */
+    public boolean hasLunchTarget() {
+      return ((bitField0_ & 0x00000008) != 0);
+    }
+    /**
+     * <pre>
+     * Lunch target used for sync
+     * </pre>
+     *
+     * <code>optional string lunch_target = 4;</code>
+     * @return The lunchTarget.
+     */
+    public java.lang.String getLunchTarget() {
+      java.lang.Object ref = lunchTarget_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          lunchTarget_ = s;
+        }
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <pre>
+     * Lunch target used for sync
+     * </pre>
+     *
+     * <code>optional string lunch_target = 4;</code>
+     * @return The bytes for lunchTarget.
+     */
+    public com.google.protobuf.ByteString
+        getLunchTargetBytes() {
+      java.lang.Object ref = lunchTarget_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        lunchTarget_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <pre>
+     * Lunch target used for sync
+     * </pre>
+     *
+     * <code>optional string lunch_target = 4;</code>
+     * @param value The lunchTarget to set.
+     * @return This builder for chaining.
+     */
+    public Builder setLunchTarget(
+        java.lang.String value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000008;
+      lunchTarget_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Lunch target used for sync
+     * </pre>
+     *
+     * <code>optional string lunch_target = 4;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearLunchTarget() {
+      bitField0_ = (bitField0_ & ~0x00000008);
+      lunchTarget_ = getDefaultInstance().getLunchTarget();
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Lunch target used for sync
+     * </pre>
+     *
+     * <code>optional string lunch_target = 4;</code>
+     * @param value The bytes for lunchTarget to set.
+     * @return This builder for chaining.
+     */
+    public Builder setLunchTargetBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000008;
+      lunchTarget_ = value;
+      onChanged();
+      return this;
+    }
+
+    private com.google.protobuf.LazyStringList modulePaths_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    private void ensureModulePathsIsMutable() {
+      if (!((bitField0_ & 0x00000010) != 0)) {
+        modulePaths_ = new com.google.protobuf.LazyStringArrayList(modulePaths_);
+        bitField0_ |= 0x00000010;
+       }
+    }
+    /**
+     * <pre>
+     * Module paths that were synced. These are paths relative
+     * to the Platform repo checkout and do not contain PII.
+     * </pre>
+     *
+     * <code>repeated string module_paths = 5;</code>
+     * @return A list containing the modulePaths.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getModulePathsList() {
+      return modulePaths_.getUnmodifiableView();
+    }
+    /**
+     * <pre>
+     * Module paths that were synced. These are paths relative
+     * to the Platform repo checkout and do not contain PII.
+     * </pre>
+     *
+     * <code>repeated string module_paths = 5;</code>
+     * @return The count of modulePaths.
+     */
+    public int getModulePathsCount() {
+      return modulePaths_.size();
+    }
+    /**
+     * <pre>
+     * Module paths that were synced. These are paths relative
+     * to the Platform repo checkout and do not contain PII.
+     * </pre>
+     *
+     * <code>repeated string module_paths = 5;</code>
+     * @param index The index of the element to return.
+     * @return The modulePaths at the given index.
+     */
+    public java.lang.String getModulePaths(int index) {
+      return modulePaths_.get(index);
+    }
+    /**
+     * <pre>
+     * Module paths that were synced. These are paths relative
+     * to the Platform repo checkout and do not contain PII.
+     * </pre>
+     *
+     * <code>repeated string module_paths = 5;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the modulePaths at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getModulePathsBytes(int index) {
+      return modulePaths_.getByteString(index);
+    }
+    /**
+     * <pre>
+     * Module paths that were synced. These are paths relative
+     * to the Platform repo checkout and do not contain PII.
+     * </pre>
+     *
+     * <code>repeated string module_paths = 5;</code>
+     * @param index The index to set the value at.
+     * @param value The modulePaths to set.
+     * @return This builder for chaining.
+     */
+    public Builder setModulePaths(
+        int index, java.lang.String value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureModulePathsIsMutable();
+      modulePaths_.set(index, value);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Module paths that were synced. These are paths relative
+     * to the Platform repo checkout and do not contain PII.
+     * </pre>
+     *
+     * <code>repeated string module_paths = 5;</code>
+     * @param value The modulePaths to add.
+     * @return This builder for chaining.
+     */
+    public Builder addModulePaths(
+        java.lang.String value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureModulePathsIsMutable();
+      modulePaths_.add(value);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Module paths that were synced. These are paths relative
+     * to the Platform repo checkout and do not contain PII.
+     * </pre>
+     *
+     * <code>repeated string module_paths = 5;</code>
+     * @param values The modulePaths to add.
+     * @return This builder for chaining.
+     */
+    public Builder addAllModulePaths(
+        java.lang.Iterable<java.lang.String> values) {
+      ensureModulePathsIsMutable();
+      com.google.protobuf.AbstractMessageLite.Builder.addAll(
+          values, modulePaths_);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Module paths that were synced. These are paths relative
+     * to the Platform repo checkout and do not contain PII.
+     * </pre>
+     *
+     * <code>repeated string module_paths = 5;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearModulePaths() {
+      modulePaths_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      bitField0_ = (bitField0_ & ~0x00000010);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Module paths that were synced. These are paths relative
+     * to the Platform repo checkout and do not contain PII.
+     * </pre>
+     *
+     * <code>repeated string module_paths = 5;</code>
+     * @param value The bytes of the modulePaths to add.
+     * @return This builder for chaining.
+     */
+    public Builder addModulePathsBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureModulePathsIsMutable();
+      modulePaths_.add(value);
       onChanged();
       return this;
     }
