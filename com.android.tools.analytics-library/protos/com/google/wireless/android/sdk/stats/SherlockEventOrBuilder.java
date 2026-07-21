@@ -187,4 +187,112 @@ public interface SherlockEventOrBuilder extends
    * <code>optional .android_studio.SherlockEvent.PerfettoTraceLoadedMetadata perfetto_trace_loaded_metadata = 7 [lazy = true];</code>
    */
   com.google.wireless.android.sdk.stats.SherlockEvent.PerfettoTraceLoadedMetadataOrBuilder getPerfettoTraceLoadedMetadataOrBuilder();
+
+  /**
+   * <pre>
+   * Set if |type| is |TRACK_ITEM_SELECTED|
+   * </pre>
+   *
+   * <code>optional .android_studio.SherlockEvent.TrackItemSelectedMetadata track_item_selected_metadata = 8 [lazy = true];</code>
+   * @return Whether the trackItemSelectedMetadata field is set.
+   */
+  boolean hasTrackItemSelectedMetadata();
+  /**
+   * <pre>
+   * Set if |type| is |TRACK_ITEM_SELECTED|
+   * </pre>
+   *
+   * <code>optional .android_studio.SherlockEvent.TrackItemSelectedMetadata track_item_selected_metadata = 8 [lazy = true];</code>
+   * @return The trackItemSelectedMetadata.
+   */
+  com.google.wireless.android.sdk.stats.SherlockEvent.TrackItemSelectedMetadata getTrackItemSelectedMetadata();
+  /**
+   * <pre>
+   * Set if |type| is |TRACK_ITEM_SELECTED|
+   * </pre>
+   *
+   * <code>optional .android_studio.SherlockEvent.TrackItemSelectedMetadata track_item_selected_metadata = 8 [lazy = true];</code>
+   */
+  com.google.wireless.android.sdk.stats.SherlockEvent.TrackItemSelectedMetadataOrBuilder getTrackItemSelectedMetadataOrBuilder();
+
+  /**
+   * <pre>
+   * Set if |type| is |TRACK_PIN_TOGGLED|
+   * </pre>
+   *
+   * <code>optional .android_studio.SherlockEvent.TrackPinToggledMetadata track_pin_toggled_metadata = 9 [lazy = true];</code>
+   * @return Whether the trackPinToggledMetadata field is set.
+   */
+  boolean hasTrackPinToggledMetadata();
+  /**
+   * <pre>
+   * Set if |type| is |TRACK_PIN_TOGGLED|
+   * </pre>
+   *
+   * <code>optional .android_studio.SherlockEvent.TrackPinToggledMetadata track_pin_toggled_metadata = 9 [lazy = true];</code>
+   * @return The trackPinToggledMetadata.
+   */
+  com.google.wireless.android.sdk.stats.SherlockEvent.TrackPinToggledMetadata getTrackPinToggledMetadata();
+  /**
+   * <pre>
+   * Set if |type| is |TRACK_PIN_TOGGLED|
+   * </pre>
+   *
+   * <code>optional .android_studio.SherlockEvent.TrackPinToggledMetadata track_pin_toggled_metadata = 9 [lazy = true];</code>
+   */
+  com.google.wireless.android.sdk.stats.SherlockEvent.TrackPinToggledMetadataOrBuilder getTrackPinToggledMetadataOrBuilder();
+
+  /**
+   * <pre>
+   * Set if |type| is |TRACK_GROUP_TOGGLED|
+   * </pre>
+   *
+   * <code>optional .android_studio.SherlockEvent.TrackGroupToggledMetadata track_group_toggled_metadata = 10 [lazy = true];</code>
+   * @return Whether the trackGroupToggledMetadata field is set.
+   */
+  boolean hasTrackGroupToggledMetadata();
+  /**
+   * <pre>
+   * Set if |type| is |TRACK_GROUP_TOGGLED|
+   * </pre>
+   *
+   * <code>optional .android_studio.SherlockEvent.TrackGroupToggledMetadata track_group_toggled_metadata = 10 [lazy = true];</code>
+   * @return The trackGroupToggledMetadata.
+   */
+  com.google.wireless.android.sdk.stats.SherlockEvent.TrackGroupToggledMetadata getTrackGroupToggledMetadata();
+  /**
+   * <pre>
+   * Set if |type| is |TRACK_GROUP_TOGGLED|
+   * </pre>
+   *
+   * <code>optional .android_studio.SherlockEvent.TrackGroupToggledMetadata track_group_toggled_metadata = 10 [lazy = true];</code>
+   */
+  com.google.wireless.android.sdk.stats.SherlockEvent.TrackGroupToggledMetadataOrBuilder getTrackGroupToggledMetadataOrBuilder();
+
+  /**
+   * <pre>
+   * Set if |type| is |CAPTURE_EVENT|
+   * </pre>
+   *
+   * <code>optional .android_studio.SherlockEvent.CaptureEventMetadata capture_event_metadata = 11 [lazy = true];</code>
+   * @return Whether the captureEventMetadata field is set.
+   */
+  boolean hasCaptureEventMetadata();
+  /**
+   * <pre>
+   * Set if |type| is |CAPTURE_EVENT|
+   * </pre>
+   *
+   * <code>optional .android_studio.SherlockEvent.CaptureEventMetadata capture_event_metadata = 11 [lazy = true];</code>
+   * @return The captureEventMetadata.
+   */
+  com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata getCaptureEventMetadata();
+  /**
+   * <pre>
+   * Set if |type| is |CAPTURE_EVENT|
+   * </pre>
+   *
+   * <code>optional .android_studio.SherlockEvent.CaptureEventMetadata capture_event_metadata = 11 [lazy = true];</code>
+   */
+  com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadataOrBuilder getCaptureEventMetadataOrBuilder();
 }
