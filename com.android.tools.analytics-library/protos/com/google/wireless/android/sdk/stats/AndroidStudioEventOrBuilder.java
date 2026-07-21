@@ -4423,4 +4423,31 @@ public interface AndroidStudioEventOrBuilder extends
    * <code>optional .android_studio.CreateDiagnosticReportAction create_diagnostic_report_action_event = 157;</code>
    */
   com.google.wireless.android.sdk.stats.CreateDiagnosticReportActionOrBuilder getCreateDiagnosticReportActionEventOrBuilder();
+
+  /**
+   * <pre>
+   * set when kind = DIRECT_ACCESS_USAGE_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.DirectAccessUsageEvent direct_access_usage_event = 158;</code>
+   * @return Whether the directAccessUsageEvent field is set.
+   */
+  boolean hasDirectAccessUsageEvent();
+  /**
+   * <pre>
+   * set when kind = DIRECT_ACCESS_USAGE_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.DirectAccessUsageEvent direct_access_usage_event = 158;</code>
+   * @return The directAccessUsageEvent.
+   */
+  com.google.wireless.android.sdk.stats.DirectAccessUsageEvent getDirectAccessUsageEvent();
+  /**
+   * <pre>
+   * set when kind = DIRECT_ACCESS_USAGE_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.DirectAccessUsageEvent direct_access_usage_event = 158;</code>
+   */
+  com.google.wireless.android.sdk.stats.DirectAccessUsageEventOrBuilder getDirectAccessUsageEventOrBuilder();
 }

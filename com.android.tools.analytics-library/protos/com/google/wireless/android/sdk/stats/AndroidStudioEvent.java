@@ -2036,6 +2036,19 @@ private static final long serialVersionUID = 0L;
             bitField4_ |= 0x00400000;
             break;
           }
+          case 1266: {
+            com.google.wireless.android.sdk.stats.DirectAccessUsageEvent.Builder subBuilder = null;
+            if (((bitField4_ & 0x00800000) != 0)) {
+              subBuilder = directAccessUsageEvent_.toBuilder();
+            }
+            directAccessUsageEvent_ = input.readMessage(com.google.wireless.android.sdk.stats.DirectAccessUsageEvent.PARSER, extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(directAccessUsageEvent_);
+              directAccessUsageEvent_ = subBuilder.buildPartial();
+            }
+            bitField4_ |= 0x00800000;
+            break;
+          }
           default: {
             if (!parseUnknownField(
                 input, unknownFields, extensionRegistry, tag)) {
@@ -4718,6 +4731,14 @@ private static final long serialVersionUID = 0L;
      * <code>UPGRADE_ASSISTANT_CTA_OLD_AGP_DISMISSED = 271;</code>
      */
     UPGRADE_ASSISTANT_CTA_OLD_AGP_DISMISSED(271),
+    /**
+     * <pre>
+     * Event marking interaction with Direct Access
+     * </pre>
+     *
+     * <code>DIRECT_ACCESS_USAGE_EVENT = 272;</code>
+     */
+    DIRECT_ACCESS_USAGE_EVENT(272),
     ;
 
     /**
@@ -6722,6 +6743,14 @@ private static final long serialVersionUID = 0L;
      * <code>UPGRADE_ASSISTANT_CTA_OLD_AGP_DISMISSED = 271;</code>
      */
     public static final int UPGRADE_ASSISTANT_CTA_OLD_AGP_DISMISSED_VALUE = 271;
+    /**
+     * <pre>
+     * Event marking interaction with Direct Access
+     * </pre>
+     *
+     * <code>DIRECT_ACCESS_USAGE_EVENT = 272;</code>
+     */
+    public static final int DIRECT_ACCESS_USAGE_EVENT_VALUE = 272;
 
 
     public final int getNumber() {
@@ -7011,6 +7040,7 @@ private static final long serialVersionUID = 0L;
         case 269: return HEAP_REPORT_EVENT;
         case 270: return CREATE_DIAGNOSTIC_REPORT_ACTION;
         case 271: return UPGRADE_ASSISTANT_CTA_OLD_AGP_DISMISSED;
+        case 272: return DIRECT_ACCESS_USAGE_EVENT;
         default: return null;
       }
     }
@@ -21806,6 +21836,44 @@ private static final long serialVersionUID = 0L;
     return createDiagnosticReportActionEvent_ == null ? com.google.wireless.android.sdk.stats.CreateDiagnosticReportAction.getDefaultInstance() : createDiagnosticReportActionEvent_;
   }
 
+  public static final int DIRECT_ACCESS_USAGE_EVENT_FIELD_NUMBER = 158;
+  private com.google.wireless.android.sdk.stats.DirectAccessUsageEvent directAccessUsageEvent_;
+  /**
+   * <pre>
+   * set when kind = DIRECT_ACCESS_USAGE_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.DirectAccessUsageEvent direct_access_usage_event = 158;</code>
+   * @return Whether the directAccessUsageEvent field is set.
+   */
+  @java.lang.Override
+  public boolean hasDirectAccessUsageEvent() {
+    return ((bitField4_ & 0x00800000) != 0);
+  }
+  /**
+   * <pre>
+   * set when kind = DIRECT_ACCESS_USAGE_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.DirectAccessUsageEvent direct_access_usage_event = 158;</code>
+   * @return The directAccessUsageEvent.
+   */
+  @java.lang.Override
+  public com.google.wireless.android.sdk.stats.DirectAccessUsageEvent getDirectAccessUsageEvent() {
+    return directAccessUsageEvent_ == null ? com.google.wireless.android.sdk.stats.DirectAccessUsageEvent.getDefaultInstance() : directAccessUsageEvent_;
+  }
+  /**
+   * <pre>
+   * set when kind = DIRECT_ACCESS_USAGE_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.DirectAccessUsageEvent direct_access_usage_event = 158;</code>
+   */
+  @java.lang.Override
+  public com.google.wireless.android.sdk.stats.DirectAccessUsageEventOrBuilder getDirectAccessUsageEventOrBuilder() {
+    return directAccessUsageEvent_ == null ? com.google.wireless.android.sdk.stats.DirectAccessUsageEvent.getDefaultInstance() : directAccessUsageEvent_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -22290,6 +22358,9 @@ private static final long serialVersionUID = 0L;
     }
     if (((bitField4_ & 0x00400000) != 0)) {
       output.writeMessage(157, getCreateDiagnosticReportActionEvent());
+    }
+    if (((bitField4_ & 0x00800000) != 0)) {
+      output.writeMessage(158, getDirectAccessUsageEvent());
     }
     unknownFields.writeTo(output);
   }
@@ -22933,6 +23004,10 @@ private static final long serialVersionUID = 0L;
     if (((bitField4_ & 0x00400000) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(157, getCreateDiagnosticReportActionEvent());
+    }
+    if (((bitField4_ & 0x00800000) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(158, getDirectAccessUsageEvent());
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -23705,6 +23780,11 @@ private static final long serialVersionUID = 0L;
       if (!getCreateDiagnosticReportActionEvent()
           .equals(other.getCreateDiagnosticReportActionEvent())) return false;
     }
+    if (hasDirectAccessUsageEvent() != other.hasDirectAccessUsageEvent()) return false;
+    if (hasDirectAccessUsageEvent()) {
+      if (!getDirectAccessUsageEvent()
+          .equals(other.getDirectAccessUsageEvent())) return false;
+    }
     if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
@@ -24346,6 +24426,10 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + CREATE_DIAGNOSTIC_REPORT_ACTION_EVENT_FIELD_NUMBER;
       hash = (53 * hash) + getCreateDiagnosticReportActionEvent().hashCode();
     }
+    if (hasDirectAccessUsageEvent()) {
+      hash = (37 * hash) + DIRECT_ACCESS_USAGE_EVENT_FIELD_NUMBER;
+      hash = (53 * hash) + getDirectAccessUsageEvent().hashCode();
+    }
     hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -24608,6 +24692,7 @@ private static final long serialVersionUID = 0L;
         getProjectViewSelectionChangeEventFieldBuilder();
         getHeapReportEventFieldBuilder();
         getCreateDiagnosticReportActionEventFieldBuilder();
+        getDirectAccessUsageEventFieldBuilder();
       }
     }
     @java.lang.Override
@@ -25463,6 +25548,12 @@ private static final long serialVersionUID = 0L;
         createDiagnosticReportActionEventBuilder_.clear();
       }
       bitField4_ = (bitField4_ & ~0x10000000);
+      if (directAccessUsageEventBuilder_ == null) {
+        directAccessUsageEvent_ = null;
+      } else {
+        directAccessUsageEventBuilder_.clear();
+      }
+      bitField4_ = (bitField4_ & ~0x20000000);
       return this;
     }
 
@@ -26669,6 +26760,14 @@ private static final long serialVersionUID = 0L;
         }
         to_bitField4_ |= 0x00400000;
       }
+      if (((from_bitField4_ & 0x20000000) != 0)) {
+        if (directAccessUsageEventBuilder_ == null) {
+          result.directAccessUsageEvent_ = directAccessUsageEvent_;
+        } else {
+          result.directAccessUsageEvent_ = directAccessUsageEventBuilder_.build();
+        }
+        to_bitField4_ |= 0x00800000;
+      }
       result.bitField0_ = to_bitField0_;
       result.bitField1_ = to_bitField1_;
       result.bitField2_ = to_bitField2_;
@@ -27296,6 +27395,9 @@ private static final long serialVersionUID = 0L;
       }
       if (other.hasCreateDiagnosticReportActionEvent()) {
         mergeCreateDiagnosticReportActionEvent(other.getCreateDiagnosticReportActionEvent());
+      }
+      if (other.hasDirectAccessUsageEvent()) {
+        mergeDirectAccessUsageEvent(other.getDirectAccessUsageEvent());
       }
       this.mergeUnknownFields(other.unknownFields);
       onChanged();
@@ -51090,6 +51192,162 @@ private static final long serialVersionUID = 0L;
         createDiagnosticReportActionEvent_ = null;
       }
       return createDiagnosticReportActionEventBuilder_;
+    }
+
+    private com.google.wireless.android.sdk.stats.DirectAccessUsageEvent directAccessUsageEvent_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.DirectAccessUsageEvent, com.google.wireless.android.sdk.stats.DirectAccessUsageEvent.Builder, com.google.wireless.android.sdk.stats.DirectAccessUsageEventOrBuilder> directAccessUsageEventBuilder_;
+    /**
+     * <pre>
+     * set when kind = DIRECT_ACCESS_USAGE_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.DirectAccessUsageEvent direct_access_usage_event = 158;</code>
+     * @return Whether the directAccessUsageEvent field is set.
+     */
+    public boolean hasDirectAccessUsageEvent() {
+      return ((bitField4_ & 0x20000000) != 0);
+    }
+    /**
+     * <pre>
+     * set when kind = DIRECT_ACCESS_USAGE_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.DirectAccessUsageEvent direct_access_usage_event = 158;</code>
+     * @return The directAccessUsageEvent.
+     */
+    public com.google.wireless.android.sdk.stats.DirectAccessUsageEvent getDirectAccessUsageEvent() {
+      if (directAccessUsageEventBuilder_ == null) {
+        return directAccessUsageEvent_ == null ? com.google.wireless.android.sdk.stats.DirectAccessUsageEvent.getDefaultInstance() : directAccessUsageEvent_;
+      } else {
+        return directAccessUsageEventBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * set when kind = DIRECT_ACCESS_USAGE_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.DirectAccessUsageEvent direct_access_usage_event = 158;</code>
+     */
+    public Builder setDirectAccessUsageEvent(com.google.wireless.android.sdk.stats.DirectAccessUsageEvent value) {
+      if (directAccessUsageEventBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        directAccessUsageEvent_ = value;
+        onChanged();
+      } else {
+        directAccessUsageEventBuilder_.setMessage(value);
+      }
+      bitField4_ |= 0x20000000;
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = DIRECT_ACCESS_USAGE_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.DirectAccessUsageEvent direct_access_usage_event = 158;</code>
+     */
+    public Builder setDirectAccessUsageEvent(
+        com.google.wireless.android.sdk.stats.DirectAccessUsageEvent.Builder builderForValue) {
+      if (directAccessUsageEventBuilder_ == null) {
+        directAccessUsageEvent_ = builderForValue.build();
+        onChanged();
+      } else {
+        directAccessUsageEventBuilder_.setMessage(builderForValue.build());
+      }
+      bitField4_ |= 0x20000000;
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = DIRECT_ACCESS_USAGE_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.DirectAccessUsageEvent direct_access_usage_event = 158;</code>
+     */
+    public Builder mergeDirectAccessUsageEvent(com.google.wireless.android.sdk.stats.DirectAccessUsageEvent value) {
+      if (directAccessUsageEventBuilder_ == null) {
+        if (((bitField4_ & 0x20000000) != 0) &&
+            directAccessUsageEvent_ != null &&
+            directAccessUsageEvent_ != com.google.wireless.android.sdk.stats.DirectAccessUsageEvent.getDefaultInstance()) {
+          directAccessUsageEvent_ =
+            com.google.wireless.android.sdk.stats.DirectAccessUsageEvent.newBuilder(directAccessUsageEvent_).mergeFrom(value).buildPartial();
+        } else {
+          directAccessUsageEvent_ = value;
+        }
+        onChanged();
+      } else {
+        directAccessUsageEventBuilder_.mergeFrom(value);
+      }
+      bitField4_ |= 0x20000000;
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = DIRECT_ACCESS_USAGE_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.DirectAccessUsageEvent direct_access_usage_event = 158;</code>
+     */
+    public Builder clearDirectAccessUsageEvent() {
+      if (directAccessUsageEventBuilder_ == null) {
+        directAccessUsageEvent_ = null;
+        onChanged();
+      } else {
+        directAccessUsageEventBuilder_.clear();
+      }
+      bitField4_ = (bitField4_ & ~0x20000000);
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = DIRECT_ACCESS_USAGE_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.DirectAccessUsageEvent direct_access_usage_event = 158;</code>
+     */
+    public com.google.wireless.android.sdk.stats.DirectAccessUsageEvent.Builder getDirectAccessUsageEventBuilder() {
+      bitField4_ |= 0x20000000;
+      onChanged();
+      return getDirectAccessUsageEventFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * set when kind = DIRECT_ACCESS_USAGE_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.DirectAccessUsageEvent direct_access_usage_event = 158;</code>
+     */
+    public com.google.wireless.android.sdk.stats.DirectAccessUsageEventOrBuilder getDirectAccessUsageEventOrBuilder() {
+      if (directAccessUsageEventBuilder_ != null) {
+        return directAccessUsageEventBuilder_.getMessageOrBuilder();
+      } else {
+        return directAccessUsageEvent_ == null ?
+            com.google.wireless.android.sdk.stats.DirectAccessUsageEvent.getDefaultInstance() : directAccessUsageEvent_;
+      }
+    }
+    /**
+     * <pre>
+     * set when kind = DIRECT_ACCESS_USAGE_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.DirectAccessUsageEvent direct_access_usage_event = 158;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.DirectAccessUsageEvent, com.google.wireless.android.sdk.stats.DirectAccessUsageEvent.Builder, com.google.wireless.android.sdk.stats.DirectAccessUsageEventOrBuilder> 
+        getDirectAccessUsageEventFieldBuilder() {
+      if (directAccessUsageEventBuilder_ == null) {
+        directAccessUsageEventBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.wireless.android.sdk.stats.DirectAccessUsageEvent, com.google.wireless.android.sdk.stats.DirectAccessUsageEvent.Builder, com.google.wireless.android.sdk.stats.DirectAccessUsageEventOrBuilder>(
+                getDirectAccessUsageEvent(),
+                getParentForChildren(),
+                isClean());
+        directAccessUsageEvent_ = null;
+      }
+      return directAccessUsageEventBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(
