@@ -880,6 +880,10 @@ public enum BooleanOption
    * <code>ENABLE_LEGACY_VARIANT_API = 214;</code>
    */
   ENABLE_LEGACY_VARIANT_API(214),
+  /**
+   * <code>DISALLOW_USES_SDK_IN_MANIFEST = 215;</code>
+   */
+  DISALLOW_USES_SDK_IN_MANIFEST(215),
   UNRECOGNIZED(-1),
   ;
 
@@ -1743,6 +1747,10 @@ public enum BooleanOption
    * <code>ENABLE_LEGACY_VARIANT_API = 214;</code>
    */
   public static final int ENABLE_LEGACY_VARIANT_API_VALUE = 214;
+  /**
+   * <code>DISALLOW_USES_SDK_IN_MANIFEST = 215;</code>
+   */
+  public static final int DISALLOW_USES_SDK_IN_MANIFEST_VALUE = 215;
 
 
   public final int getNumber() {
@@ -1984,6 +1992,7 @@ public enum BooleanOption
       case 212: return ANDROID_BUILTIN_TEST_PLATFORM;
       case 213: return R8_GRADUAL_API;
       case 214: return ENABLE_LEGACY_VARIANT_API;
+      case 215: return DISALLOW_USES_SDK_IN_MANIFEST;
       default: return null;
     }
   }

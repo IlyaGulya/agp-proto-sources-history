@@ -266,6 +266,10 @@ private static final long serialVersionUID = 0L;
      * <code>BLOCK_BUILD_FEATURE_BUILD_CONFIG_PRESENT = 54;</code>
      */
     BLOCK_BUILD_FEATURE_BUILD_CONFIG_PRESENT(54),
+    /**
+     * <code>ONLY_ENABLE_UNIT_TEST_BY_DEFAULT_FOR_THE_TESTED_BUILD_TYPE = 55;</code>
+     */
+    ONLY_ENABLE_UNIT_TEST_BY_DEFAULT_FOR_THE_TESTED_BUILD_TYPE(55),
     ;
 
     /**
@@ -488,6 +492,10 @@ private static final long serialVersionUID = 0L;
      * <code>BLOCK_BUILD_FEATURE_BUILD_CONFIG_PRESENT = 54;</code>
      */
     public static final int BLOCK_BUILD_FEATURE_BUILD_CONFIG_PRESENT_VALUE = 54;
+    /**
+     * <code>ONLY_ENABLE_UNIT_TEST_BY_DEFAULT_FOR_THE_TESTED_BUILD_TYPE = 55;</code>
+     */
+    public static final int ONLY_ENABLE_UNIT_TEST_BY_DEFAULT_FOR_THE_TESTED_BUILD_TYPE_VALUE = 55;
 
 
     public final int getNumber() {
@@ -565,6 +573,7 @@ private static final long serialVersionUID = 0L;
         case 52: return DAEMON_JVM_CRITERIA;
         case 53: return USES_SDK_IN_MANIFEST_DISALLOWED_DEFAULT;
         case 54: return BLOCK_BUILD_FEATURE_BUILD_CONFIG_PRESENT;
+        case 55: return ONLY_ENABLE_UNIT_TEST_BY_DEFAULT_FOR_THE_TESTED_BUILD_TYPE;
         default: return null;
       }
     }
