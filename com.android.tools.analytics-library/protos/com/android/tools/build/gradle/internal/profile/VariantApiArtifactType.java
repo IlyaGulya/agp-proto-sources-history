@@ -72,6 +72,10 @@ public enum VariantApiArtifactType
    * <code>VERSION_CONTROL_INFO_FILE = 14;</code>
    */
   VERSION_CONTROL_INFO_FILE(14),
+  /**
+   * <code>OBFUSCATION_MAPPING_PARTITION_FILE = 15;</code>
+   */
+  OBFUSCATION_MAPPING_PARTITION_FILE(15),
   UNRECOGNIZED(-1),
   ;
 
@@ -139,6 +143,10 @@ public enum VariantApiArtifactType
    * <code>VERSION_CONTROL_INFO_FILE = 14;</code>
    */
   public static final int VERSION_CONTROL_INFO_FILE_VALUE = 14;
+  /**
+   * <code>OBFUSCATION_MAPPING_PARTITION_FILE = 15;</code>
+   */
+  public static final int OBFUSCATION_MAPPING_PARTITION_FILE_VALUE = 15;
 
 
   public final int getNumber() {
@@ -180,6 +188,7 @@ public enum VariantApiArtifactType
       case 12: return MERGED_NATIVE_LIBS;
       case 13: return RUNTIME_SYMBOL_LIST;
       case 14: return VERSION_CONTROL_INFO_FILE;
+      case 15: return OBFUSCATION_MAPPING_PARTITION_FILE;
       default: return null;
     }
   }

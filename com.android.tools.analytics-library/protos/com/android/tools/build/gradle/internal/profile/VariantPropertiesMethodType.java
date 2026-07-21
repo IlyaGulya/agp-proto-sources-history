@@ -729,6 +729,10 @@ public enum VariantPropertiesMethodType
    * <code>CONSUMER_PROGUARD_FILES = 167;</code>
    */
   CONSUMER_PROGUARD_FILES(167),
+  /**
+   * <code>CONFIGURE_JAVA_COMPILE_TASK = 168;</code>
+   */
+  CONFIGURE_JAVA_COMPILE_TASK(168),
   UNRECOGNIZED(-1),
   ;
 
@@ -1452,6 +1456,10 @@ public enum VariantPropertiesMethodType
    * <code>CONSUMER_PROGUARD_FILES = 167;</code>
    */
   public static final int CONSUMER_PROGUARD_FILES_VALUE = 167;
+  /**
+   * <code>CONFIGURE_JAVA_COMPILE_TASK = 168;</code>
+   */
+  public static final int CONFIGURE_JAVA_COMPILE_TASK_VALUE = 168;
 
 
   public final int getNumber() {
@@ -1646,6 +1654,7 @@ public enum VariantPropertiesMethodType
       case 165: return JUNIT_ENGINE_SPEC;
       case 166: return TEST_SUITE_TARGETS;
       case 167: return CONSUMER_PROGUARD_FILES;
+      case 168: return CONFIGURE_JAVA_COMPILE_TASK;
       default: return null;
     }
   }
