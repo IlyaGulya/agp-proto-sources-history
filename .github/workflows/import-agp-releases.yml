@@ -1,0 +1,68 @@
+name: Import AGP protobuf releases
+
+on:
+  schedule:
+    - cron: "7 3 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: import-agp-protobuf-releases
+  cancel-in-progress: false
+
+jobs:
+  import:
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
+
+      - name: Set up Java
+        uses: actions/setup-java@v5
+        with:
+          distribution: temurin
+          java-version: "17"
+
+      - name: Set up Gradle
+        uses: gradle/actions/setup-gradle@v4
+        with:
+          gradle-version: "9.2.1"
+
+      - name: Find new AGP releases
+        id: releases
+        shell: bash
+        run: |
+          versions="$(python3 scripts/find_releases.py)"
+          echo "versions=$versions" >> "$GITHUB_OUTPUT"
+
+      - name: Import each release as a commit
+        if: steps.releases.outputs.versions != ''
+        shell: bash
+        env:
+          VERSIONS: ${{ steps.releases.outputs.versions }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          versions=($VERSIONS)
+          batch_size=20
+
+          for ((start = 0; start < ${#versions[@]}; start += batch_size)); do
+            batch=("${versions[@]:start:batch_size}")
+            version_csv="$(IFS=,; echo "${batch[*]}")"
+            gradle --parallel dumpSources -PagpVersions="$version_csv"
+
+            for version in "${batch[@]}"; do
+              scripts/import_release.sh "$version" "build/agp-sources/$version"
+              git push origin "HEAD:${GITHUB_REF_NAME}"
+              git push origin "agp-$version"
+            done
+
+            git gc
+            find build/agp-sources -mindepth 1 -delete
+          done
