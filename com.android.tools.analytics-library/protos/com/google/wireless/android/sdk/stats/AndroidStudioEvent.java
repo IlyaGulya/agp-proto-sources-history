@@ -9019,6 +9019,15 @@ private static final long serialVersionUID = 0L;
      * <code>TYPE_MISSING_COMPOSE_COMPILER_GRADLE_PLUGIN = 66;</code>
      */
     TYPE_MISSING_COMPOSE_COMPILER_GRADLE_PLUGIN(66),
+    /**
+     * <pre>
+     * Disabling the library constraints results in better sync performance,
+     * this will be surfaced to the user via this issue.
+     * </pre>
+     *
+     * <code>TYPE_LIBRARY_CONSTRAINTS_SHOULD_BE_DISABLED = 67;</code>
+     */
+    TYPE_LIBRARY_CONSTRAINTS_SHOULD_BE_DISABLED(67),
     ;
 
     /**
@@ -9500,6 +9509,15 @@ private static final long serialVersionUID = 0L;
      * <code>TYPE_MISSING_COMPOSE_COMPILER_GRADLE_PLUGIN = 66;</code>
      */
     public static final int TYPE_MISSING_COMPOSE_COMPILER_GRADLE_PLUGIN_VALUE = 66;
+    /**
+     * <pre>
+     * Disabling the library constraints results in better sync performance,
+     * this will be surfaced to the user via this issue.
+     * </pre>
+     *
+     * <code>TYPE_LIBRARY_CONSTRAINTS_SHOULD_BE_DISABLED = 67;</code>
+     */
+    public static final int TYPE_LIBRARY_CONSTRAINTS_SHOULD_BE_DISABLED_VALUE = 67;
 
 
     public final int getNumber() {
@@ -9589,6 +9607,7 @@ private static final long serialVersionUID = 0L;
         case 64: return TYPE_NAMESPACE_NOT_SET;
         case 65: return TYPE_INCONSISTENT_BUILD_FEATURE_SETTING;
         case 66: return TYPE_MISSING_COMPOSE_COMPILER_GRADLE_PLUGIN;
+        case 67: return TYPE_LIBRARY_CONSTRAINTS_SHOULD_BE_DISABLED;
         default: return null;
       }
     }
@@ -9859,6 +9878,10 @@ private static final long serialVersionUID = 0L;
      * <code>ADD_COMPOSE_COMPILER_GRADLE_PLUGIN_HYPERLINK = 52;</code>
      */
     ADD_COMPOSE_COMPILER_GRADLE_PLUGIN_HYPERLINK(52),
+    /**
+     * <code>DISABLE_LIBRARY_CONSTRAINTS_HYPERLINK = 53;</code>
+     */
+    DISABLE_LIBRARY_CONSTRAINTS_HYPERLINK(53),
     ;
 
     /**
@@ -10073,6 +10096,10 @@ private static final long serialVersionUID = 0L;
      * <code>ADD_COMPOSE_COMPILER_GRADLE_PLUGIN_HYPERLINK = 52;</code>
      */
     public static final int ADD_COMPOSE_COMPILER_GRADLE_PLUGIN_HYPERLINK_VALUE = 52;
+    /**
+     * <code>DISABLE_LIBRARY_CONSTRAINTS_HYPERLINK = 53;</code>
+     */
+    public static final int DISABLE_LIBRARY_CONSTRAINTS_HYPERLINK_VALUE = 53;
 
 
     public final int getNumber() {
@@ -10148,6 +10175,7 @@ private static final long serialVersionUID = 0L;
         case 50: return OPEN_UPGRADE_ASSISTANT_HYPERLINK;
         case 51: return SUPPRESS_UNSUPPORTED_SDK_HYPERLINK;
         case 52: return ADD_COMPOSE_COMPILER_GRADLE_PLUGIN_HYPERLINK;
+        case 53: return DISABLE_LIBRARY_CONSTRAINTS_HYPERLINK;
         default: return null;
       }
     }
