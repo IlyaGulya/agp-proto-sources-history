@@ -735,6 +735,14 @@ public enum BooleanOption
    * <code>IDE_AVOID_TASK_REGISTRATION = 178;</code>
    */
   IDE_AVOID_TASK_REGISTRATION(178),
+  /**
+   * <code>PACKAGE_NATIVE_DEBUG_METADATA_IN_APP_BUNDLE = 179;</code>
+   */
+  PACKAGE_NATIVE_DEBUG_METADATA_IN_APP_BUNDLE(179),
+  /**
+   * <code>ENABLE_NEW_TEST_DSL = 180;</code>
+   */
+  ENABLE_NEW_TEST_DSL(180),
   UNRECOGNIZED(-1),
   ;
 
@@ -1454,6 +1462,14 @@ public enum BooleanOption
    * <code>IDE_AVOID_TASK_REGISTRATION = 178;</code>
    */
   public static final int IDE_AVOID_TASK_REGISTRATION_VALUE = 178;
+  /**
+   * <code>PACKAGE_NATIVE_DEBUG_METADATA_IN_APP_BUNDLE = 179;</code>
+   */
+  public static final int PACKAGE_NATIVE_DEBUG_METADATA_IN_APP_BUNDLE_VALUE = 179;
+  /**
+   * <code>ENABLE_NEW_TEST_DSL = 180;</code>
+   */
+  public static final int ENABLE_NEW_TEST_DSL_VALUE = 180;
 
 
   public final int getNumber() {
@@ -1659,6 +1675,8 @@ public enum BooleanOption
       case 176: return USE_FULL_CLASSPATH_FOR_DEXING_TRANSFORM;
       case 177: return ANDROID_TEST_LEAVE_APKS_INSTALLED_AFTER_RUN;
       case 178: return IDE_AVOID_TASK_REGISTRATION;
+      case 179: return PACKAGE_NATIVE_DEBUG_METADATA_IN_APP_BUNDLE;
+      case 180: return ENABLE_NEW_TEST_DSL;
       default: return null;
     }
   }

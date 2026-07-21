@@ -5104,4 +5104,31 @@ public interface AndroidStudioEventOrBuilder extends
    * <code>optional .android_studio.IDeviceUsageEvent i_device_usage_event = 182;</code>
    */
   com.google.wireless.android.sdk.stats.IDeviceUsageEventOrBuilder getIDeviceUsageEventOrBuilder();
+
+  /**
+   * <pre>
+   * set when kind = GRADLE_JDK_CONFIGURATION
+   * </pre>
+   *
+   * <code>optional .android_studio.GradleJdkConfigurationEvent gradle_jdk_configuration_event = 183;</code>
+   * @return Whether the gradleJdkConfigurationEvent field is set.
+   */
+  boolean hasGradleJdkConfigurationEvent();
+  /**
+   * <pre>
+   * set when kind = GRADLE_JDK_CONFIGURATION
+   * </pre>
+   *
+   * <code>optional .android_studio.GradleJdkConfigurationEvent gradle_jdk_configuration_event = 183;</code>
+   * @return The gradleJdkConfigurationEvent.
+   */
+  com.google.wireless.android.sdk.stats.GradleJdkConfigurationEvent getGradleJdkConfigurationEvent();
+  /**
+   * <pre>
+   * set when kind = GRADLE_JDK_CONFIGURATION
+   * </pre>
+   *
+   * <code>optional .android_studio.GradleJdkConfigurationEvent gradle_jdk_configuration_event = 183;</code>
+   */
+  com.google.wireless.android.sdk.stats.GradleJdkConfigurationEventOrBuilder getGradleJdkConfigurationEventOrBuilder();
 }

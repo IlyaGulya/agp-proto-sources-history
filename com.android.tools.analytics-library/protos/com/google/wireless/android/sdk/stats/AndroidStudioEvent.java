@@ -2922,6 +2922,14 @@ private static final long serialVersionUID = 0L;
      * <code>MANIFEST_PANEL_EVENT = 299;</code>
      */
     MANIFEST_PANEL_EVENT(299),
+    /**
+     * <pre>
+     * Event to report Gradle JDK configuration during sync
+     * </pre>
+     *
+     * <code>GRADLE_JDK_CONFIGURATION = 300;</code>
+     */
+    GRADLE_JDK_CONFIGURATION(300),
     ;
 
     /**
@@ -5150,6 +5158,14 @@ private static final long serialVersionUID = 0L;
      * <code>MANIFEST_PANEL_EVENT = 299;</code>
      */
     public static final int MANIFEST_PANEL_EVENT_VALUE = 299;
+    /**
+     * <pre>
+     * Event to report Gradle JDK configuration during sync
+     * </pre>
+     *
+     * <code>GRADLE_JDK_CONFIGURATION = 300;</code>
+     */
+    public static final int GRADLE_JDK_CONFIGURATION_VALUE = 300;
 
 
     public final int getNumber() {
@@ -5467,6 +5483,7 @@ private static final long serialVersionUID = 0L;
         case 297: return SML_AI_EXCLUDE_EVENT;
         case 298: return I_DEVICE_USAGE_EVENT;
         case 299: return MANIFEST_PANEL_EVENT;
+        case 300: return GRADLE_JDK_CONFIGURATION;
         default: return null;
       }
     }
@@ -21344,6 +21361,44 @@ private static final long serialVersionUID = 0L;
     return iDeviceUsageEvent_ == null ? com.google.wireless.android.sdk.stats.IDeviceUsageEvent.getDefaultInstance() : iDeviceUsageEvent_;
   }
 
+  public static final int GRADLE_JDK_CONFIGURATION_EVENT_FIELD_NUMBER = 183;
+  private com.google.wireless.android.sdk.stats.GradleJdkConfigurationEvent gradleJdkConfigurationEvent_;
+  /**
+   * <pre>
+   * set when kind = GRADLE_JDK_CONFIGURATION
+   * </pre>
+   *
+   * <code>optional .android_studio.GradleJdkConfigurationEvent gradle_jdk_configuration_event = 183;</code>
+   * @return Whether the gradleJdkConfigurationEvent field is set.
+   */
+  @java.lang.Override
+  public boolean hasGradleJdkConfigurationEvent() {
+    return ((bitField5_ & 0x00010000) != 0);
+  }
+  /**
+   * <pre>
+   * set when kind = GRADLE_JDK_CONFIGURATION
+   * </pre>
+   *
+   * <code>optional .android_studio.GradleJdkConfigurationEvent gradle_jdk_configuration_event = 183;</code>
+   * @return The gradleJdkConfigurationEvent.
+   */
+  @java.lang.Override
+  public com.google.wireless.android.sdk.stats.GradleJdkConfigurationEvent getGradleJdkConfigurationEvent() {
+    return gradleJdkConfigurationEvent_ == null ? com.google.wireless.android.sdk.stats.GradleJdkConfigurationEvent.getDefaultInstance() : gradleJdkConfigurationEvent_;
+  }
+  /**
+   * <pre>
+   * set when kind = GRADLE_JDK_CONFIGURATION
+   * </pre>
+   *
+   * <code>optional .android_studio.GradleJdkConfigurationEvent gradle_jdk_configuration_event = 183;</code>
+   */
+  @java.lang.Override
+  public com.google.wireless.android.sdk.stats.GradleJdkConfigurationEventOrBuilder getGradleJdkConfigurationEventOrBuilder() {
+    return gradleJdkConfigurationEvent_ == null ? com.google.wireless.android.sdk.stats.GradleJdkConfigurationEvent.getDefaultInstance() : gradleJdkConfigurationEvent_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -21903,6 +21958,9 @@ private static final long serialVersionUID = 0L;
     }
     if (((bitField5_ & 0x00008000) != 0)) {
       output.writeMessage(182, getIDeviceUsageEvent());
+    }
+    if (((bitField5_ & 0x00010000) != 0)) {
+      output.writeMessage(183, getGradleJdkConfigurationEvent());
     }
     getUnknownFields().writeTo(output);
   }
@@ -22646,6 +22704,10 @@ private static final long serialVersionUID = 0L;
     if (((bitField5_ & 0x00008000) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(182, getIDeviceUsageEvent());
+    }
+    if (((bitField5_ & 0x00010000) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(183, getGradleJdkConfigurationEvent());
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -23543,6 +23605,11 @@ private static final long serialVersionUID = 0L;
       if (!getIDeviceUsageEvent()
           .equals(other.getIDeviceUsageEvent())) return false;
     }
+    if (hasGradleJdkConfigurationEvent() != other.hasGradleJdkConfigurationEvent()) return false;
+    if (hasGradleJdkConfigurationEvent()) {
+      if (!getGradleJdkConfigurationEvent()
+          .equals(other.getGradleJdkConfigurationEvent())) return false;
+    }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -24284,6 +24351,10 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + I_DEVICE_USAGE_EVENT_FIELD_NUMBER;
       hash = (53 * hash) + getIDeviceUsageEvent().hashCode();
     }
+    if (hasGradleJdkConfigurationEvent()) {
+      hash = (37 * hash) + GRADLE_JDK_CONFIGURATION_EVENT_FIELD_NUMBER;
+      hash = (53 * hash) + getGradleJdkConfigurationEvent().hashCode();
+    }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -24571,6 +24642,7 @@ private static final long serialVersionUID = 0L;
         getLintTooltipLinkEventFieldBuilder();
         getSmlAiExcludeEventFieldBuilder();
         getIDeviceUsageEventFieldBuilder();
+        getGradleJdkConfigurationEventFieldBuilder();
       }
     }
     @java.lang.Override
@@ -25579,6 +25651,12 @@ private static final long serialVersionUID = 0L;
         iDeviceUsageEventBuilder_.clear();
       }
       bitField5_ = (bitField5_ & ~0x00200000);
+      if (gradleJdkConfigurationEventBuilder_ == null) {
+        gradleJdkConfigurationEvent_ = null;
+      } else {
+        gradleJdkConfigurationEventBuilder_.clear();
+      }
+      bitField5_ = (bitField5_ & ~0x00400000);
       return this;
     }
 
@@ -26987,6 +27065,14 @@ private static final long serialVersionUID = 0L;
         }
         to_bitField5_ |= 0x00008000;
       }
+      if (((from_bitField5_ & 0x00400000) != 0)) {
+        if (gradleJdkConfigurationEventBuilder_ == null) {
+          result.gradleJdkConfigurationEvent_ = gradleJdkConfigurationEvent_;
+        } else {
+          result.gradleJdkConfigurationEvent_ = gradleJdkConfigurationEventBuilder_.build();
+        }
+        to_bitField5_ |= 0x00010000;
+      }
       result.bitField0_ = to_bitField0_;
       result.bitField1_ = to_bitField1_;
       result.bitField2_ = to_bitField2_;
@@ -27690,6 +27776,9 @@ private static final long serialVersionUID = 0L;
       }
       if (other.hasIDeviceUsageEvent()) {
         mergeIDeviceUsageEvent(other.getIDeviceUsageEvent());
+      }
+      if (other.hasGradleJdkConfigurationEvent()) {
+        mergeGradleJdkConfigurationEvent(other.getGradleJdkConfigurationEvent());
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -29059,6 +29148,13 @@ private static final long serialVersionUID = 0L;
               bitField5_ |= 0x00200000;
               break;
             } // case 1458
+            case 1466: {
+              input.readMessage(
+                  getGradleJdkConfigurationEventFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField5_ |= 0x00400000;
+              break;
+            } // case 1466
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -56752,6 +56848,162 @@ private static final long serialVersionUID = 0L;
         iDeviceUsageEvent_ = null;
       }
       return iDeviceUsageEventBuilder_;
+    }
+
+    private com.google.wireless.android.sdk.stats.GradleJdkConfigurationEvent gradleJdkConfigurationEvent_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.GradleJdkConfigurationEvent, com.google.wireless.android.sdk.stats.GradleJdkConfigurationEvent.Builder, com.google.wireless.android.sdk.stats.GradleJdkConfigurationEventOrBuilder> gradleJdkConfigurationEventBuilder_;
+    /**
+     * <pre>
+     * set when kind = GRADLE_JDK_CONFIGURATION
+     * </pre>
+     *
+     * <code>optional .android_studio.GradleJdkConfigurationEvent gradle_jdk_configuration_event = 183;</code>
+     * @return Whether the gradleJdkConfigurationEvent field is set.
+     */
+    public boolean hasGradleJdkConfigurationEvent() {
+      return ((bitField5_ & 0x00400000) != 0);
+    }
+    /**
+     * <pre>
+     * set when kind = GRADLE_JDK_CONFIGURATION
+     * </pre>
+     *
+     * <code>optional .android_studio.GradleJdkConfigurationEvent gradle_jdk_configuration_event = 183;</code>
+     * @return The gradleJdkConfigurationEvent.
+     */
+    public com.google.wireless.android.sdk.stats.GradleJdkConfigurationEvent getGradleJdkConfigurationEvent() {
+      if (gradleJdkConfigurationEventBuilder_ == null) {
+        return gradleJdkConfigurationEvent_ == null ? com.google.wireless.android.sdk.stats.GradleJdkConfigurationEvent.getDefaultInstance() : gradleJdkConfigurationEvent_;
+      } else {
+        return gradleJdkConfigurationEventBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * set when kind = GRADLE_JDK_CONFIGURATION
+     * </pre>
+     *
+     * <code>optional .android_studio.GradleJdkConfigurationEvent gradle_jdk_configuration_event = 183;</code>
+     */
+    public Builder setGradleJdkConfigurationEvent(com.google.wireless.android.sdk.stats.GradleJdkConfigurationEvent value) {
+      if (gradleJdkConfigurationEventBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        gradleJdkConfigurationEvent_ = value;
+        onChanged();
+      } else {
+        gradleJdkConfigurationEventBuilder_.setMessage(value);
+      }
+      bitField5_ |= 0x00400000;
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = GRADLE_JDK_CONFIGURATION
+     * </pre>
+     *
+     * <code>optional .android_studio.GradleJdkConfigurationEvent gradle_jdk_configuration_event = 183;</code>
+     */
+    public Builder setGradleJdkConfigurationEvent(
+        com.google.wireless.android.sdk.stats.GradleJdkConfigurationEvent.Builder builderForValue) {
+      if (gradleJdkConfigurationEventBuilder_ == null) {
+        gradleJdkConfigurationEvent_ = builderForValue.build();
+        onChanged();
+      } else {
+        gradleJdkConfigurationEventBuilder_.setMessage(builderForValue.build());
+      }
+      bitField5_ |= 0x00400000;
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = GRADLE_JDK_CONFIGURATION
+     * </pre>
+     *
+     * <code>optional .android_studio.GradleJdkConfigurationEvent gradle_jdk_configuration_event = 183;</code>
+     */
+    public Builder mergeGradleJdkConfigurationEvent(com.google.wireless.android.sdk.stats.GradleJdkConfigurationEvent value) {
+      if (gradleJdkConfigurationEventBuilder_ == null) {
+        if (((bitField5_ & 0x00400000) != 0) &&
+            gradleJdkConfigurationEvent_ != null &&
+            gradleJdkConfigurationEvent_ != com.google.wireless.android.sdk.stats.GradleJdkConfigurationEvent.getDefaultInstance()) {
+          gradleJdkConfigurationEvent_ =
+            com.google.wireless.android.sdk.stats.GradleJdkConfigurationEvent.newBuilder(gradleJdkConfigurationEvent_).mergeFrom(value).buildPartial();
+        } else {
+          gradleJdkConfigurationEvent_ = value;
+        }
+        onChanged();
+      } else {
+        gradleJdkConfigurationEventBuilder_.mergeFrom(value);
+      }
+      bitField5_ |= 0x00400000;
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = GRADLE_JDK_CONFIGURATION
+     * </pre>
+     *
+     * <code>optional .android_studio.GradleJdkConfigurationEvent gradle_jdk_configuration_event = 183;</code>
+     */
+    public Builder clearGradleJdkConfigurationEvent() {
+      if (gradleJdkConfigurationEventBuilder_ == null) {
+        gradleJdkConfigurationEvent_ = null;
+        onChanged();
+      } else {
+        gradleJdkConfigurationEventBuilder_.clear();
+      }
+      bitField5_ = (bitField5_ & ~0x00400000);
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = GRADLE_JDK_CONFIGURATION
+     * </pre>
+     *
+     * <code>optional .android_studio.GradleJdkConfigurationEvent gradle_jdk_configuration_event = 183;</code>
+     */
+    public com.google.wireless.android.sdk.stats.GradleJdkConfigurationEvent.Builder getGradleJdkConfigurationEventBuilder() {
+      bitField5_ |= 0x00400000;
+      onChanged();
+      return getGradleJdkConfigurationEventFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * set when kind = GRADLE_JDK_CONFIGURATION
+     * </pre>
+     *
+     * <code>optional .android_studio.GradleJdkConfigurationEvent gradle_jdk_configuration_event = 183;</code>
+     */
+    public com.google.wireless.android.sdk.stats.GradleJdkConfigurationEventOrBuilder getGradleJdkConfigurationEventOrBuilder() {
+      if (gradleJdkConfigurationEventBuilder_ != null) {
+        return gradleJdkConfigurationEventBuilder_.getMessageOrBuilder();
+      } else {
+        return gradleJdkConfigurationEvent_ == null ?
+            com.google.wireless.android.sdk.stats.GradleJdkConfigurationEvent.getDefaultInstance() : gradleJdkConfigurationEvent_;
+      }
+    }
+    /**
+     * <pre>
+     * set when kind = GRADLE_JDK_CONFIGURATION
+     * </pre>
+     *
+     * <code>optional .android_studio.GradleJdkConfigurationEvent gradle_jdk_configuration_event = 183;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.GradleJdkConfigurationEvent, com.google.wireless.android.sdk.stats.GradleJdkConfigurationEvent.Builder, com.google.wireless.android.sdk.stats.GradleJdkConfigurationEventOrBuilder> 
+        getGradleJdkConfigurationEventFieldBuilder() {
+      if (gradleJdkConfigurationEventBuilder_ == null) {
+        gradleJdkConfigurationEventBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.wireless.android.sdk.stats.GradleJdkConfigurationEvent, com.google.wireless.android.sdk.stats.GradleJdkConfigurationEvent.Builder, com.google.wireless.android.sdk.stats.GradleJdkConfigurationEventOrBuilder>(
+                getGradleJdkConfigurationEvent(),
+                getParentForChildren(),
+                isClean());
+        gradleJdkConfigurationEvent_ = null;
+      }
+      return gradleJdkConfigurationEventBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(
