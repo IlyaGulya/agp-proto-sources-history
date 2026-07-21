@@ -2219,6 +2219,19 @@ private static final long serialVersionUID = 0L;
             bitField5_ |= 0x00000010;
             break;
           }
+          case 1378: {
+            com.google.wireless.android.sdk.stats.DeviceScreenshotEvent.Builder subBuilder = null;
+            if (((bitField5_ & 0x00000020) != 0)) {
+              subBuilder = deviceScreenshotEvent_.toBuilder();
+            }
+            deviceScreenshotEvent_ = input.readMessage(com.google.wireless.android.sdk.stats.DeviceScreenshotEvent.PARSER, extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(deviceScreenshotEvent_);
+              deviceScreenshotEvent_ = subBuilder.buildPartial();
+            }
+            bitField5_ |= 0x00000020;
+            break;
+          }
           default: {
             if (!parseUnknownField(
                 input, unknownFields, extensionRegistry, tag)) {
@@ -5013,6 +5026,30 @@ private static final long serialVersionUID = 0L;
      * <code>KOTLIN_SUPPORT_DECLINED_EVENT = 285;</code>
      */
     KOTLIN_SUPPORT_DECLINED_EVENT(285),
+    /**
+     * <pre>
+     * Event raised when user accepted to migrate Gradle JDK to local.properties
+     * </pre>
+     *
+     * <code>GRADLE_JDK_MIGRATE_TO_LOCAL_PROPERTIES_DIALOG_ACCEPTED = 286;</code>
+     */
+    GRADLE_JDK_MIGRATE_TO_LOCAL_PROPERTIES_DIALOG_ACCEPTED(286),
+    /**
+     * <pre>
+     * Event raised when user declined to migrate Gradle JDK to local.properties
+     * </pre>
+     *
+     * <code>GRADLE_JDK_MIGRATE_TO_LOCAL_PROPERTIES_DIALOG_CANCELED = 287;</code>
+     */
+    GRADLE_JDK_MIGRATE_TO_LOCAL_PROPERTIES_DIALOG_CANCELED(287),
+    /**
+     * <pre>
+     * Event related to screenshots taken of running devices
+     * </pre>
+     *
+     * <code>DEVICE_SCREENSHOT_EVENT = 288;</code>
+     */
+    DEVICE_SCREENSHOT_EVENT(288),
     ;
 
     /**
@@ -7129,6 +7166,30 @@ private static final long serialVersionUID = 0L;
      * <code>KOTLIN_SUPPORT_DECLINED_EVENT = 285;</code>
      */
     public static final int KOTLIN_SUPPORT_DECLINED_EVENT_VALUE = 285;
+    /**
+     * <pre>
+     * Event raised when user accepted to migrate Gradle JDK to local.properties
+     * </pre>
+     *
+     * <code>GRADLE_JDK_MIGRATE_TO_LOCAL_PROPERTIES_DIALOG_ACCEPTED = 286;</code>
+     */
+    public static final int GRADLE_JDK_MIGRATE_TO_LOCAL_PROPERTIES_DIALOG_ACCEPTED_VALUE = 286;
+    /**
+     * <pre>
+     * Event raised when user declined to migrate Gradle JDK to local.properties
+     * </pre>
+     *
+     * <code>GRADLE_JDK_MIGRATE_TO_LOCAL_PROPERTIES_DIALOG_CANCELED = 287;</code>
+     */
+    public static final int GRADLE_JDK_MIGRATE_TO_LOCAL_PROPERTIES_DIALOG_CANCELED_VALUE = 287;
+    /**
+     * <pre>
+     * Event related to screenshots taken of running devices
+     * </pre>
+     *
+     * <code>DEVICE_SCREENSHOT_EVENT = 288;</code>
+     */
+    public static final int DEVICE_SCREENSHOT_EVENT_VALUE = 288;
 
 
     public final int getNumber() {
@@ -7432,6 +7493,9 @@ private static final long serialVersionUID = 0L;
         case 283: return SML_CHATBOT_EVENT;
         case 284: return SML_CONFIGURATION_EVENT;
         case 285: return KOTLIN_SUPPORT_DECLINED_EVENT;
+        case 286: return GRADLE_JDK_MIGRATE_TO_LOCAL_PROPERTIES_DIALOG_ACCEPTED;
+        case 287: return GRADLE_JDK_MIGRATE_TO_LOCAL_PROPERTIES_DIALOG_CANCELED;
+        case 288: return DEVICE_SCREENSHOT_EVENT;
         default: return null;
       }
     }
@@ -22827,6 +22891,44 @@ private static final long serialVersionUID = 0L;
     return kotlinSupportDeclined_ == null ? com.google.wireless.android.sdk.stats.KotlinSupportDeclined.getDefaultInstance() : kotlinSupportDeclined_;
   }
 
+  public static final int DEVICE_SCREENSHOT_EVENT_FIELD_NUMBER = 172;
+  private com.google.wireless.android.sdk.stats.DeviceScreenshotEvent deviceScreenshotEvent_;
+  /**
+   * <pre>
+   * set when kind = DEVICE_SCREENSHOT_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.DeviceScreenshotEvent device_screenshot_event = 172;</code>
+   * @return Whether the deviceScreenshotEvent field is set.
+   */
+  @java.lang.Override
+  public boolean hasDeviceScreenshotEvent() {
+    return ((bitField5_ & 0x00000020) != 0);
+  }
+  /**
+   * <pre>
+   * set when kind = DEVICE_SCREENSHOT_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.DeviceScreenshotEvent device_screenshot_event = 172;</code>
+   * @return The deviceScreenshotEvent.
+   */
+  @java.lang.Override
+  public com.google.wireless.android.sdk.stats.DeviceScreenshotEvent getDeviceScreenshotEvent() {
+    return deviceScreenshotEvent_ == null ? com.google.wireless.android.sdk.stats.DeviceScreenshotEvent.getDefaultInstance() : deviceScreenshotEvent_;
+  }
+  /**
+   * <pre>
+   * set when kind = DEVICE_SCREENSHOT_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.DeviceScreenshotEvent device_screenshot_event = 172;</code>
+   */
+  @java.lang.Override
+  public com.google.wireless.android.sdk.stats.DeviceScreenshotEventOrBuilder getDeviceScreenshotEventOrBuilder() {
+    return deviceScreenshotEvent_ == null ? com.google.wireless.android.sdk.stats.DeviceScreenshotEvent.getDefaultInstance() : deviceScreenshotEvent_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -23353,6 +23455,9 @@ private static final long serialVersionUID = 0L;
     }
     if (((bitField5_ & 0x00000010) != 0)) {
       output.writeMessage(171, getKotlinSupportDeclined());
+    }
+    if (((bitField5_ & 0x00000020) != 0)) {
+      output.writeMessage(172, getDeviceScreenshotEvent());
     }
     unknownFields.writeTo(output);
   }
@@ -24052,6 +24157,10 @@ private static final long serialVersionUID = 0L;
     if (((bitField5_ & 0x00000010) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(171, getKotlinSupportDeclined());
+    }
+    if (((bitField5_ & 0x00000020) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(172, getDeviceScreenshotEvent());
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -24894,6 +25003,11 @@ private static final long serialVersionUID = 0L;
       if (!getKotlinSupportDeclined()
           .equals(other.getKotlinSupportDeclined())) return false;
     }
+    if (hasDeviceScreenshotEvent() != other.hasDeviceScreenshotEvent()) return false;
+    if (hasDeviceScreenshotEvent()) {
+      if (!getDeviceScreenshotEvent()
+          .equals(other.getDeviceScreenshotEvent())) return false;
+    }
     if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
@@ -25591,6 +25705,10 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + KOTLIN_SUPPORT_DECLINED_FIELD_NUMBER;
       hash = (53 * hash) + getKotlinSupportDeclined().hashCode();
     }
+    if (hasDeviceScreenshotEvent()) {
+      hash = (37 * hash) + DEVICE_SCREENSHOT_EVENT_FIELD_NUMBER;
+      hash = (53 * hash) + getDeviceScreenshotEvent().hashCode();
+    }
     hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -25867,6 +25985,7 @@ private static final long serialVersionUID = 0L;
         getSmlChatBotEventFieldBuilder();
         getSmlConfigurationEventFieldBuilder();
         getKotlinSupportDeclinedFieldBuilder();
+        getDeviceScreenshotEventFieldBuilder();
       }
     }
     @java.lang.Override
@@ -26806,6 +26925,12 @@ private static final long serialVersionUID = 0L;
         kotlinSupportDeclinedBuilder_.clear();
       }
       bitField5_ = (bitField5_ & ~0x00000400);
+      if (deviceScreenshotEventBuilder_ == null) {
+        deviceScreenshotEvent_ = null;
+      } else {
+        deviceScreenshotEventBuilder_.clear();
+      }
+      bitField5_ = (bitField5_ & ~0x00000800);
       return this;
     }
 
@@ -28126,6 +28251,14 @@ private static final long serialVersionUID = 0L;
         }
         to_bitField5_ |= 0x00000010;
       }
+      if (((from_bitField5_ & 0x00000800) != 0)) {
+        if (deviceScreenshotEventBuilder_ == null) {
+          result.deviceScreenshotEvent_ = deviceScreenshotEvent_;
+        } else {
+          result.deviceScreenshotEvent_ = deviceScreenshotEventBuilder_.build();
+        }
+        to_bitField5_ |= 0x00000020;
+      }
       result.bitField0_ = to_bitField0_;
       result.bitField1_ = to_bitField1_;
       result.bitField2_ = to_bitField2_;
@@ -28796,6 +28929,9 @@ private static final long serialVersionUID = 0L;
       }
       if (other.hasKotlinSupportDeclined()) {
         mergeKotlinSupportDeclined(other.getKotlinSupportDeclined());
+      }
+      if (other.hasDeviceScreenshotEvent()) {
+        mergeDeviceScreenshotEvent(other.getDeviceScreenshotEvent());
       }
       this.mergeUnknownFields(other.unknownFields);
       onChanged();
@@ -54787,6 +54923,162 @@ private static final long serialVersionUID = 0L;
         kotlinSupportDeclined_ = null;
       }
       return kotlinSupportDeclinedBuilder_;
+    }
+
+    private com.google.wireless.android.sdk.stats.DeviceScreenshotEvent deviceScreenshotEvent_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.DeviceScreenshotEvent, com.google.wireless.android.sdk.stats.DeviceScreenshotEvent.Builder, com.google.wireless.android.sdk.stats.DeviceScreenshotEventOrBuilder> deviceScreenshotEventBuilder_;
+    /**
+     * <pre>
+     * set when kind = DEVICE_SCREENSHOT_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.DeviceScreenshotEvent device_screenshot_event = 172;</code>
+     * @return Whether the deviceScreenshotEvent field is set.
+     */
+    public boolean hasDeviceScreenshotEvent() {
+      return ((bitField5_ & 0x00000800) != 0);
+    }
+    /**
+     * <pre>
+     * set when kind = DEVICE_SCREENSHOT_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.DeviceScreenshotEvent device_screenshot_event = 172;</code>
+     * @return The deviceScreenshotEvent.
+     */
+    public com.google.wireless.android.sdk.stats.DeviceScreenshotEvent getDeviceScreenshotEvent() {
+      if (deviceScreenshotEventBuilder_ == null) {
+        return deviceScreenshotEvent_ == null ? com.google.wireless.android.sdk.stats.DeviceScreenshotEvent.getDefaultInstance() : deviceScreenshotEvent_;
+      } else {
+        return deviceScreenshotEventBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * set when kind = DEVICE_SCREENSHOT_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.DeviceScreenshotEvent device_screenshot_event = 172;</code>
+     */
+    public Builder setDeviceScreenshotEvent(com.google.wireless.android.sdk.stats.DeviceScreenshotEvent value) {
+      if (deviceScreenshotEventBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        deviceScreenshotEvent_ = value;
+        onChanged();
+      } else {
+        deviceScreenshotEventBuilder_.setMessage(value);
+      }
+      bitField5_ |= 0x00000800;
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = DEVICE_SCREENSHOT_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.DeviceScreenshotEvent device_screenshot_event = 172;</code>
+     */
+    public Builder setDeviceScreenshotEvent(
+        com.google.wireless.android.sdk.stats.DeviceScreenshotEvent.Builder builderForValue) {
+      if (deviceScreenshotEventBuilder_ == null) {
+        deviceScreenshotEvent_ = builderForValue.build();
+        onChanged();
+      } else {
+        deviceScreenshotEventBuilder_.setMessage(builderForValue.build());
+      }
+      bitField5_ |= 0x00000800;
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = DEVICE_SCREENSHOT_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.DeviceScreenshotEvent device_screenshot_event = 172;</code>
+     */
+    public Builder mergeDeviceScreenshotEvent(com.google.wireless.android.sdk.stats.DeviceScreenshotEvent value) {
+      if (deviceScreenshotEventBuilder_ == null) {
+        if (((bitField5_ & 0x00000800) != 0) &&
+            deviceScreenshotEvent_ != null &&
+            deviceScreenshotEvent_ != com.google.wireless.android.sdk.stats.DeviceScreenshotEvent.getDefaultInstance()) {
+          deviceScreenshotEvent_ =
+            com.google.wireless.android.sdk.stats.DeviceScreenshotEvent.newBuilder(deviceScreenshotEvent_).mergeFrom(value).buildPartial();
+        } else {
+          deviceScreenshotEvent_ = value;
+        }
+        onChanged();
+      } else {
+        deviceScreenshotEventBuilder_.mergeFrom(value);
+      }
+      bitField5_ |= 0x00000800;
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = DEVICE_SCREENSHOT_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.DeviceScreenshotEvent device_screenshot_event = 172;</code>
+     */
+    public Builder clearDeviceScreenshotEvent() {
+      if (deviceScreenshotEventBuilder_ == null) {
+        deviceScreenshotEvent_ = null;
+        onChanged();
+      } else {
+        deviceScreenshotEventBuilder_.clear();
+      }
+      bitField5_ = (bitField5_ & ~0x00000800);
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = DEVICE_SCREENSHOT_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.DeviceScreenshotEvent device_screenshot_event = 172;</code>
+     */
+    public com.google.wireless.android.sdk.stats.DeviceScreenshotEvent.Builder getDeviceScreenshotEventBuilder() {
+      bitField5_ |= 0x00000800;
+      onChanged();
+      return getDeviceScreenshotEventFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * set when kind = DEVICE_SCREENSHOT_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.DeviceScreenshotEvent device_screenshot_event = 172;</code>
+     */
+    public com.google.wireless.android.sdk.stats.DeviceScreenshotEventOrBuilder getDeviceScreenshotEventOrBuilder() {
+      if (deviceScreenshotEventBuilder_ != null) {
+        return deviceScreenshotEventBuilder_.getMessageOrBuilder();
+      } else {
+        return deviceScreenshotEvent_ == null ?
+            com.google.wireless.android.sdk.stats.DeviceScreenshotEvent.getDefaultInstance() : deviceScreenshotEvent_;
+      }
+    }
+    /**
+     * <pre>
+     * set when kind = DEVICE_SCREENSHOT_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.DeviceScreenshotEvent device_screenshot_event = 172;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.DeviceScreenshotEvent, com.google.wireless.android.sdk.stats.DeviceScreenshotEvent.Builder, com.google.wireless.android.sdk.stats.DeviceScreenshotEventOrBuilder> 
+        getDeviceScreenshotEventFieldBuilder() {
+      if (deviceScreenshotEventBuilder_ == null) {
+        deviceScreenshotEventBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.wireless.android.sdk.stats.DeviceScreenshotEvent, com.google.wireless.android.sdk.stats.DeviceScreenshotEvent.Builder, com.google.wireless.android.sdk.stats.DeviceScreenshotEventOrBuilder>(
+                getDeviceScreenshotEvent(),
+                getParentForChildren(),
+                isClean());
+        deviceScreenshotEvent_ = null;
+      }
+      return deviceScreenshotEventBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

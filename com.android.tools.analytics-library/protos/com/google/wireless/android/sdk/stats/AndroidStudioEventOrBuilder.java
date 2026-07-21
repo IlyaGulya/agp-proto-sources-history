@@ -4807,4 +4807,31 @@ public interface AndroidStudioEventOrBuilder extends
    * <code>optional .android_studio.KotlinSupportDeclined kotlin_support_declined = 171;</code>
    */
   com.google.wireless.android.sdk.stats.KotlinSupportDeclinedOrBuilder getKotlinSupportDeclinedOrBuilder();
+
+  /**
+   * <pre>
+   * set when kind = DEVICE_SCREENSHOT_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.DeviceScreenshotEvent device_screenshot_event = 172;</code>
+   * @return Whether the deviceScreenshotEvent field is set.
+   */
+  boolean hasDeviceScreenshotEvent();
+  /**
+   * <pre>
+   * set when kind = DEVICE_SCREENSHOT_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.DeviceScreenshotEvent device_screenshot_event = 172;</code>
+   * @return The deviceScreenshotEvent.
+   */
+  com.google.wireless.android.sdk.stats.DeviceScreenshotEvent getDeviceScreenshotEvent();
+  /**
+   * <pre>
+   * set when kind = DEVICE_SCREENSHOT_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.DeviceScreenshotEvent device_screenshot_event = 172;</code>
+   */
+  com.google.wireless.android.sdk.stats.DeviceScreenshotEventOrBuilder getDeviceScreenshotEventOrBuilder();
 }

@@ -694,6 +694,10 @@ public enum BooleanOption
    * <code>ENABLE_EMULATOR_CONTROL = 168;</code>
    */
   ENABLE_EMULATOR_CONTROL(168),
+  /**
+   * <code>FUSED_LIBRARY_SUPPORT = 169;</code>
+   */
+  FUSED_LIBRARY_SUPPORT(169),
   UNRECOGNIZED(-1),
   ;
 
@@ -1373,6 +1377,10 @@ public enum BooleanOption
    * <code>ENABLE_EMULATOR_CONTROL = 168;</code>
    */
   public static final int ENABLE_EMULATOR_CONTROL_VALUE = 168;
+  /**
+   * <code>FUSED_LIBRARY_SUPPORT = 169;</code>
+   */
+  public static final int FUSED_LIBRARY_SUPPORT_VALUE = 169;
 
 
   public final int getNumber() {
@@ -1568,6 +1576,7 @@ public enum BooleanOption
       case 166: return SUPPRESS_EXTRACT_NATIVE_LIBS_WARNINGS;
       case 167: return EXCLUDE_LIBRARY_COMPONENTS_FROM_CONSTRAINTS;
       case 168: return ENABLE_EMULATOR_CONTROL;
+      case 169: return FUSED_LIBRARY_SUPPORT;
       default: return null;
     }
   }
