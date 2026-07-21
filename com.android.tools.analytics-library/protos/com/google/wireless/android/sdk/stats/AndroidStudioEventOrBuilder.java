@@ -4369,4 +4369,58 @@ public interface AndroidStudioEventOrBuilder extends
    * <code>optional .android_studio.ProjectViewSelectionChangeEvent project_view_selection_change_event = 155;</code>
    */
   com.google.wireless.android.sdk.stats.ProjectViewSelectionChangeEventOrBuilder getProjectViewSelectionChangeEventOrBuilder();
+
+  /**
+   * <pre>
+   * set when kind = HEAP_REPORT_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.HeapReportEvent heap_report_event = 156;</code>
+   * @return Whether the heapReportEvent field is set.
+   */
+  boolean hasHeapReportEvent();
+  /**
+   * <pre>
+   * set when kind = HEAP_REPORT_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.HeapReportEvent heap_report_event = 156;</code>
+   * @return The heapReportEvent.
+   */
+  com.google.wireless.android.sdk.stats.HeapReportEvent getHeapReportEvent();
+  /**
+   * <pre>
+   * set when kind = HEAP_REPORT_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.HeapReportEvent heap_report_event = 156;</code>
+   */
+  com.google.wireless.android.sdk.stats.HeapReportEventOrBuilder getHeapReportEventOrBuilder();
+
+  /**
+   * <pre>
+   * set when kind = CREATE_DIAGNOSTIC_REPORT_ACTION
+   * </pre>
+   *
+   * <code>optional .android_studio.CreateDiagnosticReportAction create_diagnostic_report_action_event = 157;</code>
+   * @return Whether the createDiagnosticReportActionEvent field is set.
+   */
+  boolean hasCreateDiagnosticReportActionEvent();
+  /**
+   * <pre>
+   * set when kind = CREATE_DIAGNOSTIC_REPORT_ACTION
+   * </pre>
+   *
+   * <code>optional .android_studio.CreateDiagnosticReportAction create_diagnostic_report_action_event = 157;</code>
+   * @return The createDiagnosticReportActionEvent.
+   */
+  com.google.wireless.android.sdk.stats.CreateDiagnosticReportAction getCreateDiagnosticReportActionEvent();
+  /**
+   * <pre>
+   * set when kind = CREATE_DIAGNOSTIC_REPORT_ACTION
+   * </pre>
+   *
+   * <code>optional .android_studio.CreateDiagnosticReportAction create_diagnostic_report_action_event = 157;</code>
+   */
+  com.google.wireless.android.sdk.stats.CreateDiagnosticReportActionOrBuilder getCreateDiagnosticReportActionEventOrBuilder();
 }
