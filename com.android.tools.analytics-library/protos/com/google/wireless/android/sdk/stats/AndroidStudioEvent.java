@@ -1743,6 +1743,19 @@ private static final long serialVersionUID = 0L;
             bitField4_ |= 0x00000002;
             break;
           }
+          case 1082: {
+            com.google.wireless.android.sdk.stats.GradleVersionCatalogDetectorEvent.Builder subBuilder = null;
+            if (((bitField4_ & 0x00000004) != 0)) {
+              subBuilder = gradleVersionCatalogDetectorEvent_.toBuilder();
+            }
+            gradleVersionCatalogDetectorEvent_ = input.readMessage(com.google.wireless.android.sdk.stats.GradleVersionCatalogDetectorEvent.PARSER, extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(gradleVersionCatalogDetectorEvent_);
+              gradleVersionCatalogDetectorEvent_ = subBuilder.buildPartial();
+            }
+            bitField4_ |= 0x00000004;
+            break;
+          }
           default: {
             if (!parseUnknownField(
                 input, unknownFields, extensionRegistry, tag)) {
@@ -4135,6 +4148,14 @@ private static final long serialVersionUID = 0L;
      * <code>OPTOUT_METRICS = 242;</code>
      */
     OPTOUT_METRICS(242),
+    /**
+     * <pre>
+     * Event related to project Version Catalog usage detection
+     * </pre>
+     *
+     * <code>GRADLE_VERSION_CATALOG_DETECTOR = 243;</code>
+     */
+    GRADLE_VERSION_CATALOG_DETECTOR(243),
     ;
 
     /**
@@ -5906,6 +5927,14 @@ private static final long serialVersionUID = 0L;
      * <code>OPTOUT_METRICS = 242;</code>
      */
     public static final int OPTOUT_METRICS_VALUE = 242;
+    /**
+     * <pre>
+     * Event related to project Version Catalog usage detection
+     * </pre>
+     *
+     * <code>GRADLE_VERSION_CATALOG_DETECTOR = 243;</code>
+     */
+    public static final int GRADLE_VERSION_CATALOG_DETECTOR_VALUE = 243;
 
 
     public final int getNumber() {
@@ -6166,6 +6195,7 @@ private static final long serialVersionUID = 0L;
         case 240: return DEVICE_EXPLORER;
         case 241: return OPTIN_METRICS;
         case 242: return OPTOUT_METRICS;
+        case 243: return GRADLE_VERSION_CATALOG_DETECTOR;
         default: return null;
       }
     }
@@ -19488,6 +19518,41 @@ private static final long serialVersionUID = 0L;
     return optOutOfMetrics_ == null ? com.google.wireless.android.sdk.stats.OptOutOfMetrics.getDefaultInstance() : optOutOfMetrics_;
   }
 
+  public static final int GRADLE_VERSION_CATALOG_DETECTOR_EVENT_FIELD_NUMBER = 135;
+  private com.google.wireless.android.sdk.stats.GradleVersionCatalogDetectorEvent gradleVersionCatalogDetectorEvent_;
+  /**
+   * <pre>
+   * set when kind = GRADLE_VERSION_CATALOG_DETECTOR
+   * </pre>
+   *
+   * <code>optional .android_studio.GradleVersionCatalogDetectorEvent gradle_version_catalog_detector_event = 135;</code>
+   * @return Whether the gradleVersionCatalogDetectorEvent field is set.
+   */
+  public boolean hasGradleVersionCatalogDetectorEvent() {
+    return ((bitField4_ & 0x00000004) != 0);
+  }
+  /**
+   * <pre>
+   * set when kind = GRADLE_VERSION_CATALOG_DETECTOR
+   * </pre>
+   *
+   * <code>optional .android_studio.GradleVersionCatalogDetectorEvent gradle_version_catalog_detector_event = 135;</code>
+   * @return The gradleVersionCatalogDetectorEvent.
+   */
+  public com.google.wireless.android.sdk.stats.GradleVersionCatalogDetectorEvent getGradleVersionCatalogDetectorEvent() {
+    return gradleVersionCatalogDetectorEvent_ == null ? com.google.wireless.android.sdk.stats.GradleVersionCatalogDetectorEvent.getDefaultInstance() : gradleVersionCatalogDetectorEvent_;
+  }
+  /**
+   * <pre>
+   * set when kind = GRADLE_VERSION_CATALOG_DETECTOR
+   * </pre>
+   *
+   * <code>optional .android_studio.GradleVersionCatalogDetectorEvent gradle_version_catalog_detector_event = 135;</code>
+   */
+  public com.google.wireless.android.sdk.stats.GradleVersionCatalogDetectorEventOrBuilder getGradleVersionCatalogDetectorEventOrBuilder() {
+    return gradleVersionCatalogDetectorEvent_ == null ? com.google.wireless.android.sdk.stats.GradleVersionCatalogDetectorEvent.getDefaultInstance() : gradleVersionCatalogDetectorEvent_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -19903,6 +19968,9 @@ private static final long serialVersionUID = 0L;
     }
     if (((bitField4_ & 0x00000002) != 0)) {
       output.writeMessage(134, getOptOutOfMetrics());
+    }
+    if (((bitField4_ & 0x00000004) != 0)) {
+      output.writeMessage(135, getGradleVersionCatalogDetectorEvent());
     }
     unknownFields.writeTo(output);
   }
@@ -20446,6 +20514,10 @@ private static final long serialVersionUID = 0L;
     if (((bitField4_ & 0x00000002) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(134, getOptOutOfMetrics());
+    }
+    if (((bitField4_ & 0x00000004) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(135, getGradleVersionCatalogDetectorEvent());
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -21109,6 +21181,11 @@ private static final long serialVersionUID = 0L;
       if (!getOptOutOfMetrics()
           .equals(other.getOptOutOfMetrics())) return false;
     }
+    if (hasGradleVersionCatalogDetectorEvent() != other.hasGradleVersionCatalogDetectorEvent()) return false;
+    if (hasGradleVersionCatalogDetectorEvent()) {
+      if (!getGradleVersionCatalogDetectorEvent()
+          .equals(other.getGradleVersionCatalogDetectorEvent())) return false;
+    }
     if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
@@ -21658,6 +21735,10 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + OPT_OUT_OF_METRICS_FIELD_NUMBER;
       hash = (53 * hash) + getOptOutOfMetrics().hashCode();
     }
+    if (hasGradleVersionCatalogDetectorEvent()) {
+      hash = (37 * hash) + GRADLE_VERSION_CATALOG_DETECTOR_EVENT_FIELD_NUMBER;
+      hash = (53 * hash) + getGradleVersionCatalogDetectorEvent().hashCode();
+    }
     hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -21899,6 +21980,7 @@ private static final long serialVersionUID = 0L;
         getDeviceExplorerEventFieldBuilder();
         getOptInToMetricsFieldBuilder();
         getOptOutOfMetricsFieldBuilder();
+        getGradleVersionCatalogDetectorEventFieldBuilder();
       }
     }
     @java.lang.Override
@@ -22624,6 +22706,12 @@ private static final long serialVersionUID = 0L;
         optOutOfMetricsBuilder_.clear();
       }
       bitField4_ = (bitField4_ & ~0x00000020);
+      if (gradleVersionCatalogDetectorEventBuilder_ == null) {
+        gradleVersionCatalogDetectorEvent_ = null;
+      } else {
+        gradleVersionCatalogDetectorEventBuilder_.clear();
+      }
+      bitField4_ = (bitField4_ & ~0x00000040);
       return this;
     }
 
@@ -23652,6 +23740,14 @@ private static final long serialVersionUID = 0L;
         }
         to_bitField4_ |= 0x00000002;
       }
+      if (((from_bitField4_ & 0x00000040) != 0)) {
+        if (gradleVersionCatalogDetectorEventBuilder_ == null) {
+          result.gradleVersionCatalogDetectorEvent_ = gradleVersionCatalogDetectorEvent_;
+        } else {
+          result.gradleVersionCatalogDetectorEvent_ = gradleVersionCatalogDetectorEventBuilder_.build();
+        }
+        to_bitField4_ |= 0x00000004;
+      }
       result.bitField0_ = to_bitField0_;
       result.bitField1_ = to_bitField1_;
       result.bitField2_ = to_bitField2_;
@@ -24196,6 +24292,9 @@ private static final long serialVersionUID = 0L;
       }
       if (other.hasOptOutOfMetrics()) {
         mergeOptOutOfMetrics(other.getOptOutOfMetrics());
+      }
+      if (other.hasGradleVersionCatalogDetectorEvent()) {
+        mergeGradleVersionCatalogDetectorEvent(other.getGradleVersionCatalogDetectorEvent());
       }
       this.mergeUnknownFields(other.unknownFields);
       onChanged();
@@ -44317,6 +44416,162 @@ private static final long serialVersionUID = 0L;
         optOutOfMetrics_ = null;
       }
       return optOutOfMetricsBuilder_;
+    }
+
+    private com.google.wireless.android.sdk.stats.GradleVersionCatalogDetectorEvent gradleVersionCatalogDetectorEvent_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.GradleVersionCatalogDetectorEvent, com.google.wireless.android.sdk.stats.GradleVersionCatalogDetectorEvent.Builder, com.google.wireless.android.sdk.stats.GradleVersionCatalogDetectorEventOrBuilder> gradleVersionCatalogDetectorEventBuilder_;
+    /**
+     * <pre>
+     * set when kind = GRADLE_VERSION_CATALOG_DETECTOR
+     * </pre>
+     *
+     * <code>optional .android_studio.GradleVersionCatalogDetectorEvent gradle_version_catalog_detector_event = 135;</code>
+     * @return Whether the gradleVersionCatalogDetectorEvent field is set.
+     */
+    public boolean hasGradleVersionCatalogDetectorEvent() {
+      return ((bitField4_ & 0x00000040) != 0);
+    }
+    /**
+     * <pre>
+     * set when kind = GRADLE_VERSION_CATALOG_DETECTOR
+     * </pre>
+     *
+     * <code>optional .android_studio.GradleVersionCatalogDetectorEvent gradle_version_catalog_detector_event = 135;</code>
+     * @return The gradleVersionCatalogDetectorEvent.
+     */
+    public com.google.wireless.android.sdk.stats.GradleVersionCatalogDetectorEvent getGradleVersionCatalogDetectorEvent() {
+      if (gradleVersionCatalogDetectorEventBuilder_ == null) {
+        return gradleVersionCatalogDetectorEvent_ == null ? com.google.wireless.android.sdk.stats.GradleVersionCatalogDetectorEvent.getDefaultInstance() : gradleVersionCatalogDetectorEvent_;
+      } else {
+        return gradleVersionCatalogDetectorEventBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * set when kind = GRADLE_VERSION_CATALOG_DETECTOR
+     * </pre>
+     *
+     * <code>optional .android_studio.GradleVersionCatalogDetectorEvent gradle_version_catalog_detector_event = 135;</code>
+     */
+    public Builder setGradleVersionCatalogDetectorEvent(com.google.wireless.android.sdk.stats.GradleVersionCatalogDetectorEvent value) {
+      if (gradleVersionCatalogDetectorEventBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        gradleVersionCatalogDetectorEvent_ = value;
+        onChanged();
+      } else {
+        gradleVersionCatalogDetectorEventBuilder_.setMessage(value);
+      }
+      bitField4_ |= 0x00000040;
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = GRADLE_VERSION_CATALOG_DETECTOR
+     * </pre>
+     *
+     * <code>optional .android_studio.GradleVersionCatalogDetectorEvent gradle_version_catalog_detector_event = 135;</code>
+     */
+    public Builder setGradleVersionCatalogDetectorEvent(
+        com.google.wireless.android.sdk.stats.GradleVersionCatalogDetectorEvent.Builder builderForValue) {
+      if (gradleVersionCatalogDetectorEventBuilder_ == null) {
+        gradleVersionCatalogDetectorEvent_ = builderForValue.build();
+        onChanged();
+      } else {
+        gradleVersionCatalogDetectorEventBuilder_.setMessage(builderForValue.build());
+      }
+      bitField4_ |= 0x00000040;
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = GRADLE_VERSION_CATALOG_DETECTOR
+     * </pre>
+     *
+     * <code>optional .android_studio.GradleVersionCatalogDetectorEvent gradle_version_catalog_detector_event = 135;</code>
+     */
+    public Builder mergeGradleVersionCatalogDetectorEvent(com.google.wireless.android.sdk.stats.GradleVersionCatalogDetectorEvent value) {
+      if (gradleVersionCatalogDetectorEventBuilder_ == null) {
+        if (((bitField4_ & 0x00000040) != 0) &&
+            gradleVersionCatalogDetectorEvent_ != null &&
+            gradleVersionCatalogDetectorEvent_ != com.google.wireless.android.sdk.stats.GradleVersionCatalogDetectorEvent.getDefaultInstance()) {
+          gradleVersionCatalogDetectorEvent_ =
+            com.google.wireless.android.sdk.stats.GradleVersionCatalogDetectorEvent.newBuilder(gradleVersionCatalogDetectorEvent_).mergeFrom(value).buildPartial();
+        } else {
+          gradleVersionCatalogDetectorEvent_ = value;
+        }
+        onChanged();
+      } else {
+        gradleVersionCatalogDetectorEventBuilder_.mergeFrom(value);
+      }
+      bitField4_ |= 0x00000040;
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = GRADLE_VERSION_CATALOG_DETECTOR
+     * </pre>
+     *
+     * <code>optional .android_studio.GradleVersionCatalogDetectorEvent gradle_version_catalog_detector_event = 135;</code>
+     */
+    public Builder clearGradleVersionCatalogDetectorEvent() {
+      if (gradleVersionCatalogDetectorEventBuilder_ == null) {
+        gradleVersionCatalogDetectorEvent_ = null;
+        onChanged();
+      } else {
+        gradleVersionCatalogDetectorEventBuilder_.clear();
+      }
+      bitField4_ = (bitField4_ & ~0x00000040);
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = GRADLE_VERSION_CATALOG_DETECTOR
+     * </pre>
+     *
+     * <code>optional .android_studio.GradleVersionCatalogDetectorEvent gradle_version_catalog_detector_event = 135;</code>
+     */
+    public com.google.wireless.android.sdk.stats.GradleVersionCatalogDetectorEvent.Builder getGradleVersionCatalogDetectorEventBuilder() {
+      bitField4_ |= 0x00000040;
+      onChanged();
+      return getGradleVersionCatalogDetectorEventFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * set when kind = GRADLE_VERSION_CATALOG_DETECTOR
+     * </pre>
+     *
+     * <code>optional .android_studio.GradleVersionCatalogDetectorEvent gradle_version_catalog_detector_event = 135;</code>
+     */
+    public com.google.wireless.android.sdk.stats.GradleVersionCatalogDetectorEventOrBuilder getGradleVersionCatalogDetectorEventOrBuilder() {
+      if (gradleVersionCatalogDetectorEventBuilder_ != null) {
+        return gradleVersionCatalogDetectorEventBuilder_.getMessageOrBuilder();
+      } else {
+        return gradleVersionCatalogDetectorEvent_ == null ?
+            com.google.wireless.android.sdk.stats.GradleVersionCatalogDetectorEvent.getDefaultInstance() : gradleVersionCatalogDetectorEvent_;
+      }
+    }
+    /**
+     * <pre>
+     * set when kind = GRADLE_VERSION_CATALOG_DETECTOR
+     * </pre>
+     *
+     * <code>optional .android_studio.GradleVersionCatalogDetectorEvent gradle_version_catalog_detector_event = 135;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.GradleVersionCatalogDetectorEvent, com.google.wireless.android.sdk.stats.GradleVersionCatalogDetectorEvent.Builder, com.google.wireless.android.sdk.stats.GradleVersionCatalogDetectorEventOrBuilder> 
+        getGradleVersionCatalogDetectorEventFieldBuilder() {
+      if (gradleVersionCatalogDetectorEventBuilder_ == null) {
+        gradleVersionCatalogDetectorEventBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.wireless.android.sdk.stats.GradleVersionCatalogDetectorEvent, com.google.wireless.android.sdk.stats.GradleVersionCatalogDetectorEvent.Builder, com.google.wireless.android.sdk.stats.GradleVersionCatalogDetectorEventOrBuilder>(
+                getGradleVersionCatalogDetectorEvent(),
+                getParentForChildren(),
+                isClean());
+        gradleVersionCatalogDetectorEvent_ = null;
+      }
+      return gradleVersionCatalogDetectorEventBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(
