@@ -17140,6 +17140,29 @@ private static final long serialVersionUID = 0L;
     public interface SuccessOrBuilder extends
         // @@protoc_insertion_point(interface_extends:android_studio.SherlockEvent.CaptureEventMetadata.Success)
         com.google.protobuf.MessageOrBuilder {
+
+      /**
+       * <pre>
+       * The duration (in milliseconds) that it took to actually stop the trace
+       * after the user clicked the stop button. This is only populated for
+       * manual stops. See b/507460819 for context.
+       * </pre>
+       *
+       * <code>optional int32 time_to_stop_ms = 1;</code>
+       * @return Whether the timeToStopMs field is set.
+       */
+      boolean hasTimeToStopMs();
+      /**
+       * <pre>
+       * The duration (in milliseconds) that it took to actually stop the trace
+       * after the user clicked the stop button. This is only populated for
+       * manual stops. See b/507460819 for context.
+       * </pre>
+       *
+       * <code>optional int32 time_to_stop_ms = 1;</code>
+       * @return The timeToStopMs.
+       */
+      int getTimeToStopMs();
     }
     /**
      * Protobuf type {@code android_studio.SherlockEvent.CaptureEventMetadata.Success}
@@ -17176,6 +17199,38 @@ private static final long serialVersionUID = 0L;
                 com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata.Success.class, com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata.Success.Builder.class);
       }
 
+      private int bitField0_;
+      public static final int TIME_TO_STOP_MS_FIELD_NUMBER = 1;
+      private int timeToStopMs_ = 0;
+      /**
+       * <pre>
+       * The duration (in milliseconds) that it took to actually stop the trace
+       * after the user clicked the stop button. This is only populated for
+       * manual stops. See b/507460819 for context.
+       * </pre>
+       *
+       * <code>optional int32 time_to_stop_ms = 1;</code>
+       * @return Whether the timeToStopMs field is set.
+       */
+      @java.lang.Override
+      public boolean hasTimeToStopMs() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <pre>
+       * The duration (in milliseconds) that it took to actually stop the trace
+       * after the user clicked the stop button. This is only populated for
+       * manual stops. See b/507460819 for context.
+       * </pre>
+       *
+       * <code>optional int32 time_to_stop_ms = 1;</code>
+       * @return The timeToStopMs.
+       */
+      @java.lang.Override
+      public int getTimeToStopMs() {
+        return timeToStopMs_;
+      }
+
       private byte memoizedIsInitialized = -1;
       @java.lang.Override
       public final boolean isInitialized() {
@@ -17190,6 +17245,9 @@ private static final long serialVersionUID = 0L;
       @java.lang.Override
       public void writeTo(com.google.protobuf.CodedOutputStream output)
                           throws java.io.IOException {
+        if (((bitField0_ & 0x00000001) != 0)) {
+          output.writeInt32(1, timeToStopMs_);
+        }
         getUnknownFields().writeTo(output);
       }
 
@@ -17199,6 +17257,10 @@ private static final long serialVersionUID = 0L;
         if (size != -1) return size;
 
         size = 0;
+        if (((bitField0_ & 0x00000001) != 0)) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeInt32Size(1, timeToStopMs_);
+        }
         size += getUnknownFields().getSerializedSize();
         memoizedSize = size;
         return size;
@@ -17214,6 +17276,11 @@ private static final long serialVersionUID = 0L;
         }
         com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata.Success other = (com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata.Success) obj;
 
+        if (hasTimeToStopMs() != other.hasTimeToStopMs()) return false;
+        if (hasTimeToStopMs()) {
+          if (getTimeToStopMs()
+              != other.getTimeToStopMs()) return false;
+        }
         if (!getUnknownFields().equals(other.getUnknownFields())) return false;
         return true;
       }
@@ -17225,6 +17292,10 @@ private static final long serialVersionUID = 0L;
         }
         int hash = 41;
         hash = (19 * hash) + getDescriptor().hashCode();
+        if (hasTimeToStopMs()) {
+          hash = (37 * hash) + TIME_TO_STOP_MS_FIELD_NUMBER;
+          hash = (53 * hash) + getTimeToStopMs();
+        }
         hash = (29 * hash) + getUnknownFields().hashCode();
         memoizedHashCode = hash;
         return hash;
@@ -17353,6 +17424,8 @@ private static final long serialVersionUID = 0L;
         @java.lang.Override
         public Builder clear() {
           super.clear();
+          bitField0_ = 0;
+          timeToStopMs_ = 0;
           return this;
         }
 
@@ -17379,8 +17452,19 @@ private static final long serialVersionUID = 0L;
         @java.lang.Override
         public com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata.Success buildPartial() {
           com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata.Success result = new com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata.Success(this);
+          if (bitField0_ != 0) { buildPartial0(result); }
           onBuilt();
           return result;
+        }
+
+        private void buildPartial0(com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata.Success result) {
+          int from_bitField0_ = bitField0_;
+          int to_bitField0_ = 0;
+          if (((from_bitField0_ & 0x00000001) != 0)) {
+            result.timeToStopMs_ = timeToStopMs_;
+            to_bitField0_ |= 0x00000001;
+          }
+          result.bitField0_ |= to_bitField0_;
         }
 
         @java.lang.Override
@@ -17395,6 +17479,9 @@ private static final long serialVersionUID = 0L;
 
         public Builder mergeFrom(com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata.Success other) {
           if (other == com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata.Success.getDefaultInstance()) return this;
+          if (other.hasTimeToStopMs()) {
+            setTimeToStopMs(other.getTimeToStopMs());
+          }
           this.mergeUnknownFields(other.getUnknownFields());
           onChanged();
           return this;
@@ -17421,6 +17508,11 @@ private static final long serialVersionUID = 0L;
                 case 0:
                   done = true;
                   break;
+                case 8: {
+                  timeToStopMs_ = input.readInt32();
+                  bitField0_ |= 0x00000001;
+                  break;
+                } // case 8
                 default: {
                   if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                     done = true; // was an endgroup tag
@@ -17434,6 +17526,71 @@ private static final long serialVersionUID = 0L;
           } finally {
             onChanged();
           } // finally
+          return this;
+        }
+        private int bitField0_;
+
+        private int timeToStopMs_ ;
+        /**
+         * <pre>
+         * The duration (in milliseconds) that it took to actually stop the trace
+         * after the user clicked the stop button. This is only populated for
+         * manual stops. See b/507460819 for context.
+         * </pre>
+         *
+         * <code>optional int32 time_to_stop_ms = 1;</code>
+         * @return Whether the timeToStopMs field is set.
+         */
+        @java.lang.Override
+        public boolean hasTimeToStopMs() {
+          return ((bitField0_ & 0x00000001) != 0);
+        }
+        /**
+         * <pre>
+         * The duration (in milliseconds) that it took to actually stop the trace
+         * after the user clicked the stop button. This is only populated for
+         * manual stops. See b/507460819 for context.
+         * </pre>
+         *
+         * <code>optional int32 time_to_stop_ms = 1;</code>
+         * @return The timeToStopMs.
+         */
+        @java.lang.Override
+        public int getTimeToStopMs() {
+          return timeToStopMs_;
+        }
+        /**
+         * <pre>
+         * The duration (in milliseconds) that it took to actually stop the trace
+         * after the user clicked the stop button. This is only populated for
+         * manual stops. See b/507460819 for context.
+         * </pre>
+         *
+         * <code>optional int32 time_to_stop_ms = 1;</code>
+         * @param value The timeToStopMs to set.
+         * @return This builder for chaining.
+         */
+        public Builder setTimeToStopMs(int value) {
+
+          timeToStopMs_ = value;
+          bitField0_ |= 0x00000001;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * The duration (in milliseconds) that it took to actually stop the trace
+         * after the user clicked the stop button. This is only populated for
+         * manual stops. See b/507460819 for context.
+         * </pre>
+         *
+         * <code>optional int32 time_to_stop_ms = 1;</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearTimeToStopMs() {
+          bitField0_ = (bitField0_ & ~0x00000001);
+          timeToStopMs_ = 0;
+          onChanged();
           return this;
         }
         @java.lang.Override
