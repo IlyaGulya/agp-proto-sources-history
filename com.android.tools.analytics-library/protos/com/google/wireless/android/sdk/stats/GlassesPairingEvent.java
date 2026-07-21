@@ -6,7 +6,7 @@ package com.google.wireless.android.sdk.stats;
 /**
  * <pre>
  * Event related to Glasses emulator pairing assistant
- * Next ID: 24
+ * Next ID: 32
  * </pre>
  *
  * Protobuf type {@code android_studio.GlassesPairingEvent}
@@ -245,6 +245,70 @@ private static final long serialVersionUID = 0L;
      * <code>PAIRING_ERROR_GENERIC = 21;</code>
      */
     PAIRING_ERROR_GENERIC(21),
+    /**
+     * <pre>
+     * Reconciliation found a bond that was not tracked
+     * </pre>
+     *
+     * <code>RECONCILIATION_BOND_DISCOVERED = 24;</code>
+     */
+    RECONCILIATION_BOND_DISCOVERED(24),
+    /**
+     * <pre>
+     * Reconciliation removed a bond that was no longer valid
+     * </pre>
+     *
+     * <code>RECONCILIATION_BOND_REMOVED = 25;</code>
+     */
+    RECONCILIATION_BOND_REMOVED(25),
+    /**
+     * <pre>
+     * Reconciliation resolved asymmetric state between devices
+     * </pre>
+     *
+     * <code>RECONCILIATION_ASYMMETRIC_STATE_RESOLVED = 26;</code>
+     */
+    RECONCILIATION_ASYMMETRIC_STATE_RESOLVED(26),
+    /**
+     * <pre>
+     * User clicked unpair action
+     * </pre>
+     *
+     * <code>UNPAIR_ACTION_CLICKED = 27;</code>
+     */
+    UNPAIR_ACTION_CLICKED(27),
+    /**
+     * <pre>
+     * Unpair successful
+     * </pre>
+     *
+     * <code>UNPAIR_SUCCESSFUL = 28;</code>
+     */
+    UNPAIR_SUCCESSFUL(28),
+    /**
+     * <pre>
+     * Unpair failed
+     * </pre>
+     *
+     * <code>UNPAIR_FAILED = 29;</code>
+     */
+    UNPAIR_FAILED(29),
+    /**
+     * <pre>
+     * Cascading wipe initiated
+     * </pre>
+     *
+     * <code>CASCADING_WIPE_INITIATED = 30;</code>
+     */
+    CASCADING_WIPE_INITIATED(30),
+    /**
+     * <pre>
+     * Orphaned pairing purged
+     * </pre>
+     *
+     * <code>ORPHANED_PAIRING_PURGED = 31;</code>
+     */
+    ORPHANED_PAIRING_PURGED(31),
     ;
 
     /**
@@ -439,6 +503,70 @@ private static final long serialVersionUID = 0L;
      * <code>PAIRING_ERROR_GENERIC = 21;</code>
      */
     public static final int PAIRING_ERROR_GENERIC_VALUE = 21;
+    /**
+     * <pre>
+     * Reconciliation found a bond that was not tracked
+     * </pre>
+     *
+     * <code>RECONCILIATION_BOND_DISCOVERED = 24;</code>
+     */
+    public static final int RECONCILIATION_BOND_DISCOVERED_VALUE = 24;
+    /**
+     * <pre>
+     * Reconciliation removed a bond that was no longer valid
+     * </pre>
+     *
+     * <code>RECONCILIATION_BOND_REMOVED = 25;</code>
+     */
+    public static final int RECONCILIATION_BOND_REMOVED_VALUE = 25;
+    /**
+     * <pre>
+     * Reconciliation resolved asymmetric state between devices
+     * </pre>
+     *
+     * <code>RECONCILIATION_ASYMMETRIC_STATE_RESOLVED = 26;</code>
+     */
+    public static final int RECONCILIATION_ASYMMETRIC_STATE_RESOLVED_VALUE = 26;
+    /**
+     * <pre>
+     * User clicked unpair action
+     * </pre>
+     *
+     * <code>UNPAIR_ACTION_CLICKED = 27;</code>
+     */
+    public static final int UNPAIR_ACTION_CLICKED_VALUE = 27;
+    /**
+     * <pre>
+     * Unpair successful
+     * </pre>
+     *
+     * <code>UNPAIR_SUCCESSFUL = 28;</code>
+     */
+    public static final int UNPAIR_SUCCESSFUL_VALUE = 28;
+    /**
+     * <pre>
+     * Unpair failed
+     * </pre>
+     *
+     * <code>UNPAIR_FAILED = 29;</code>
+     */
+    public static final int UNPAIR_FAILED_VALUE = 29;
+    /**
+     * <pre>
+     * Cascading wipe initiated
+     * </pre>
+     *
+     * <code>CASCADING_WIPE_INITIATED = 30;</code>
+     */
+    public static final int CASCADING_WIPE_INITIATED_VALUE = 30;
+    /**
+     * <pre>
+     * Orphaned pairing purged
+     * </pre>
+     *
+     * <code>ORPHANED_PAIRING_PURGED = 31;</code>
+     */
+    public static final int ORPHANED_PAIRING_PURGED_VALUE = 31;
 
 
     public final int getNumber() {
@@ -485,6 +613,14 @@ private static final long serialVersionUID = 0L;
         case 19: return PAIRING_ERROR_SHELL_COMMAND;
         case 20: return PAIRING_ERROR_IO_FAILED;
         case 21: return PAIRING_ERROR_GENERIC;
+        case 24: return RECONCILIATION_BOND_DISCOVERED;
+        case 25: return RECONCILIATION_BOND_REMOVED;
+        case 26: return RECONCILIATION_ASYMMETRIC_STATE_RESOLVED;
+        case 27: return UNPAIR_ACTION_CLICKED;
+        case 28: return UNPAIR_SUCCESSFUL;
+        case 29: return UNPAIR_FAILED;
+        case 30: return CASCADING_WIPE_INITIATED;
+        case 31: return ORPHANED_PAIRING_PURGED;
         default: return null;
       }
     }
@@ -723,7 +859,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Event related to Glasses emulator pairing assistant
-   * Next ID: 24
+   * Next ID: 32
    * </pre>
    *
    * Protobuf type {@code android_studio.GlassesPairingEvent}

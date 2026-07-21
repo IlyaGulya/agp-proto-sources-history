@@ -105,4 +105,23 @@ public interface AndroidCliInvocationOrBuilder extends
    */
   com.google.protobuf.ByteString
       getFlagsBytes(int index);
+
+  /**
+   * <pre>
+   * The name of the agent invoking android-cli
+   * </pre>
+   *
+   * <code>optional .android_studio.AndroidCliInvocation.Agent agent_name = 5;</code>
+   * @return Whether the agentName field is set.
+   */
+  boolean hasAgentName();
+  /**
+   * <pre>
+   * The name of the agent invoking android-cli
+   * </pre>
+   *
+   * <code>optional .android_studio.AndroidCliInvocation.Agent agent_name = 5;</code>
+   * @return The agentName.
+   */
+  com.google.wireless.android.sdk.stats.AndroidCliInvocation.Agent getAgentName();
 }
