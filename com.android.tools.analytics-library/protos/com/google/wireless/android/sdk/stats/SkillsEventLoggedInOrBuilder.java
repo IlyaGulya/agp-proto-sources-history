@@ -33,4 +33,21 @@ public interface SkillsEventLoggedInOrBuilder extends
    * <code>optional .android_studio.SmlResponseMetadataLoggedIn metadata = 1 [lazy = true];</code>
    */
   com.google.wireless.android.sdk.stats.SmlResponseMetadataLoggedInOrBuilder getMetadataOrBuilder();
+
+  /**
+   * <code>.android_studio.SkillsEventLoggedIn.Activation activation = 2 [lazy = true];</code>
+   * @return Whether the activation field is set.
+   */
+  boolean hasActivation();
+  /**
+   * <code>.android_studio.SkillsEventLoggedIn.Activation activation = 2 [lazy = true];</code>
+   * @return The activation.
+   */
+  com.google.wireless.android.sdk.stats.SkillsEventLoggedIn.Activation getActivation();
+  /**
+   * <code>.android_studio.SkillsEventLoggedIn.Activation activation = 2 [lazy = true];</code>
+   */
+  com.google.wireless.android.sdk.stats.SkillsEventLoggedIn.ActivationOrBuilder getActivationOrBuilder();
+
+  com.google.wireless.android.sdk.stats.SkillsEventLoggedIn.EventCase getEventCase();
 }

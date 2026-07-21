@@ -590,13 +590,17 @@ private static final long serialVersionUID = 0L;
      */
     VULKAN_PROTECTED_MEMORY_EMULATION(139),
     /**
-     * <pre>
-     * Next tag: 141
-     * </pre>
-     *
      * <code>XR_DIMMING = 140;</code>
      */
     XR_DIMMING(140),
+    /**
+     * <pre>
+     * Next tag: 142
+     * </pre>
+     *
+     * <code>XR_HAND_AND_EYE_POINTERS = 141;</code>
+     */
+    XR_HAND_AND_EYE_POINTERS(141),
     ;
 
     /**
@@ -1132,13 +1136,17 @@ private static final long serialVersionUID = 0L;
      */
     public static final int VULKAN_PROTECTED_MEMORY_EMULATION_VALUE = 139;
     /**
-     * <pre>
-     * Next tag: 141
-     * </pre>
-     *
      * <code>XR_DIMMING = 140;</code>
      */
     public static final int XR_DIMMING_VALUE = 140;
+    /**
+     * <pre>
+     * Next tag: 142
+     * </pre>
+     *
+     * <code>XR_HAND_AND_EYE_POINTERS = 141;</code>
+     */
+    public static final int XR_HAND_AND_EYE_POINTERS_VALUE = 141;
 
 
     public final int getNumber() {
@@ -1292,6 +1300,7 @@ private static final long serialVersionUID = 0L;
         case 138: return QEMU_CAMERA_SENSOR_ORIENTATION;
         case 139: return VULKAN_PROTECTED_MEMORY_EMULATION;
         case 140: return XR_DIMMING;
+        case 141: return XR_HAND_AND_EYE_POINTERS;
         default: return null;
       }
     }

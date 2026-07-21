@@ -205,7 +205,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>optional bool density_auto = 2 [deprecated = true];</code>
    * @deprecated android_studio.GradleBuildSplits.density_auto is deprecated.
-   *     See studio_stats.proto;l=5414
+   *     See studio_stats.proto;l=5421
    * @return Whether the densityAuto field is set.
    */
   @java.lang.Override
@@ -221,7 +221,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>optional bool density_auto = 2 [deprecated = true];</code>
    * @deprecated android_studio.GradleBuildSplits.density_auto is deprecated.
-   *     See studio_stats.proto;l=5414
+   *     See studio_stats.proto;l=5421
    * @return The densityAuto.
    */
   @java.lang.Override
@@ -379,7 +379,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>optional bool language_auto = 6 [deprecated = true];</code>
    * @deprecated android_studio.GradleBuildSplits.language_auto is deprecated.
-   *     See studio_stats.proto;l=5432
+   *     See studio_stats.proto;l=5439
    * @return Whether the languageAuto field is set.
    */
   @java.lang.Override
@@ -395,7 +395,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>optional bool language_auto = 6 [deprecated = true];</code>
    * @deprecated android_studio.GradleBuildSplits.language_auto is deprecated.
-   *     See studio_stats.proto;l=5432
+   *     See studio_stats.proto;l=5439
    * @return The languageAuto.
    */
   @java.lang.Override
@@ -1312,7 +1312,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional bool density_auto = 2 [deprecated = true];</code>
      * @deprecated android_studio.GradleBuildSplits.density_auto is deprecated.
-     *     See studio_stats.proto;l=5414
+     *     See studio_stats.proto;l=5421
      * @return Whether the densityAuto field is set.
      */
     @java.lang.Override
@@ -1328,7 +1328,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional bool density_auto = 2 [deprecated = true];</code>
      * @deprecated android_studio.GradleBuildSplits.density_auto is deprecated.
-     *     See studio_stats.proto;l=5414
+     *     See studio_stats.proto;l=5421
      * @return The densityAuto.
      */
     @java.lang.Override
@@ -1344,7 +1344,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional bool density_auto = 2 [deprecated = true];</code>
      * @deprecated android_studio.GradleBuildSplits.density_auto is deprecated.
-     *     See studio_stats.proto;l=5414
+     *     See studio_stats.proto;l=5421
      * @param value The densityAuto to set.
      * @return This builder for chaining.
      */
@@ -1364,7 +1364,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional bool density_auto = 2 [deprecated = true];</code>
      * @deprecated android_studio.GradleBuildSplits.density_auto is deprecated.
-     *     See studio_stats.proto;l=5414
+     *     See studio_stats.proto;l=5421
      * @return This builder for chaining.
      */
     @java.lang.Deprecated public Builder clearDensityAuto() {
@@ -1712,7 +1712,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional bool language_auto = 6 [deprecated = true];</code>
      * @deprecated android_studio.GradleBuildSplits.language_auto is deprecated.
-     *     See studio_stats.proto;l=5432
+     *     See studio_stats.proto;l=5439
      * @return Whether the languageAuto field is set.
      */
     @java.lang.Override
@@ -1728,7 +1728,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional bool language_auto = 6 [deprecated = true];</code>
      * @deprecated android_studio.GradleBuildSplits.language_auto is deprecated.
-     *     See studio_stats.proto;l=5432
+     *     See studio_stats.proto;l=5439
      * @return The languageAuto.
      */
     @java.lang.Override
@@ -1744,7 +1744,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional bool language_auto = 6 [deprecated = true];</code>
      * @deprecated android_studio.GradleBuildSplits.language_auto is deprecated.
-     *     See studio_stats.proto;l=5432
+     *     See studio_stats.proto;l=5439
      * @param value The languageAuto to set.
      * @return This builder for chaining.
      */
@@ -1764,7 +1764,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional bool language_auto = 6 [deprecated = true];</code>
      * @deprecated android_studio.GradleBuildSplits.language_auto is deprecated.
-     *     See studio_stats.proto;l=5432
+     *     See studio_stats.proto;l=5439
      * @return This builder for chaining.
      */
     @java.lang.Deprecated public Builder clearLanguageAuto() {

@@ -973,7 +973,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>optional string command_name = 1 [deprecated = true];</code>
    * @deprecated android_studio.AndroidCliInvocation.command_name is deprecated.
-   *     See studio_stats.proto;l=18677
+   *     See studio_stats.proto;l=18721
    * @return Whether the commandName field is set.
    */
   @java.lang.Override
@@ -987,7 +987,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>optional string command_name = 1 [deprecated = true];</code>
    * @deprecated android_studio.AndroidCliInvocation.command_name is deprecated.
-   *     See studio_stats.proto;l=18677
+   *     See studio_stats.proto;l=18721
    * @return The commandName.
    */
   @java.lang.Override
@@ -1012,7 +1012,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>optional string command_name = 1 [deprecated = true];</code>
    * @deprecated android_studio.AndroidCliInvocation.command_name is deprecated.
-   *     See studio_stats.proto;l=18677
+   *     See studio_stats.proto;l=18721
    * @return The bytes for commandName.
    */
   @java.lang.Override
@@ -1040,7 +1040,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>optional string sub_command_name = 2 [deprecated = true];</code>
    * @deprecated android_studio.AndroidCliInvocation.sub_command_name is deprecated.
-   *     See studio_stats.proto;l=18679
+   *     See studio_stats.proto;l=18723
    * @return Whether the subCommandName field is set.
    */
   @java.lang.Override
@@ -1054,7 +1054,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>optional string sub_command_name = 2 [deprecated = true];</code>
    * @deprecated android_studio.AndroidCliInvocation.sub_command_name is deprecated.
-   *     See studio_stats.proto;l=18679
+   *     See studio_stats.proto;l=18723
    * @return The subCommandName.
    */
   @java.lang.Override
@@ -1079,7 +1079,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>optional string sub_command_name = 2 [deprecated = true];</code>
    * @deprecated android_studio.AndroidCliInvocation.sub_command_name is deprecated.
-   *     See studio_stats.proto;l=18679
+   *     See studio_stats.proto;l=18723
    * @return The bytes for subCommandName.
    */
   @java.lang.Override
@@ -1108,7 +1108,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated string global_flags = 3 [deprecated = true];</code>
    * @deprecated android_studio.AndroidCliInvocation.global_flags is deprecated.
-   *     See studio_stats.proto;l=18681
+   *     See studio_stats.proto;l=18725
    * @return A list containing the globalFlags.
    */
   @java.lang.Deprecated public com.google.protobuf.ProtocolStringList
@@ -1122,7 +1122,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated string global_flags = 3 [deprecated = true];</code>
    * @deprecated android_studio.AndroidCliInvocation.global_flags is deprecated.
-   *     See studio_stats.proto;l=18681
+   *     See studio_stats.proto;l=18725
    * @return The count of globalFlags.
    */
   @java.lang.Deprecated public int getGlobalFlagsCount() {
@@ -1135,7 +1135,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated string global_flags = 3 [deprecated = true];</code>
    * @deprecated android_studio.AndroidCliInvocation.global_flags is deprecated.
-   *     See studio_stats.proto;l=18681
+   *     See studio_stats.proto;l=18725
    * @param index The index of the element to return.
    * @return The globalFlags at the given index.
    */
@@ -1149,7 +1149,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated string global_flags = 3 [deprecated = true];</code>
    * @deprecated android_studio.AndroidCliInvocation.global_flags is deprecated.
-   *     See studio_stats.proto;l=18681
+   *     See studio_stats.proto;l=18725
    * @param index The index of the value to return.
    * @return The bytes of the globalFlags at the given index.
    */
@@ -1169,7 +1169,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated string flags = 4 [deprecated = true];</code>
    * @deprecated android_studio.AndroidCliInvocation.flags is deprecated.
-   *     See studio_stats.proto;l=18683
+   *     See studio_stats.proto;l=18727
    * @return A list containing the flags.
    */
   @java.lang.Deprecated public com.google.protobuf.ProtocolStringList
@@ -1183,7 +1183,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated string flags = 4 [deprecated = true];</code>
    * @deprecated android_studio.AndroidCliInvocation.flags is deprecated.
-   *     See studio_stats.proto;l=18683
+   *     See studio_stats.proto;l=18727
    * @return The count of flags.
    */
   @java.lang.Deprecated public int getFlagsCount() {
@@ -1196,7 +1196,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated string flags = 4 [deprecated = true];</code>
    * @deprecated android_studio.AndroidCliInvocation.flags is deprecated.
-   *     See studio_stats.proto;l=18683
+   *     See studio_stats.proto;l=18727
    * @param index The index of the element to return.
    * @return The flags at the given index.
    */
@@ -1210,7 +1210,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated string flags = 4 [deprecated = true];</code>
    * @deprecated android_studio.AndroidCliInvocation.flags is deprecated.
-   *     See studio_stats.proto;l=18683
+   *     See studio_stats.proto;l=18727
    * @param index The index of the value to return.
    * @return The bytes of the flags at the given index.
    */
@@ -1839,7 +1839,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional string command_name = 1 [deprecated = true];</code>
      * @deprecated android_studio.AndroidCliInvocation.command_name is deprecated.
-     *     See studio_stats.proto;l=18677
+     *     See studio_stats.proto;l=18721
      * @return Whether the commandName field is set.
      */
     @java.lang.Deprecated public boolean hasCommandName() {
@@ -1852,7 +1852,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional string command_name = 1 [deprecated = true];</code>
      * @deprecated android_studio.AndroidCliInvocation.command_name is deprecated.
-     *     See studio_stats.proto;l=18677
+     *     See studio_stats.proto;l=18721
      * @return The commandName.
      */
     @java.lang.Deprecated public java.lang.String getCommandName() {
@@ -1876,7 +1876,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional string command_name = 1 [deprecated = true];</code>
      * @deprecated android_studio.AndroidCliInvocation.command_name is deprecated.
-     *     See studio_stats.proto;l=18677
+     *     See studio_stats.proto;l=18721
      * @return The bytes for commandName.
      */
     @java.lang.Deprecated public com.google.protobuf.ByteString
@@ -1899,7 +1899,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional string command_name = 1 [deprecated = true];</code>
      * @deprecated android_studio.AndroidCliInvocation.command_name is deprecated.
-     *     See studio_stats.proto;l=18677
+     *     See studio_stats.proto;l=18721
      * @param value The commandName to set.
      * @return This builder for chaining.
      */
@@ -1918,7 +1918,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional string command_name = 1 [deprecated = true];</code>
      * @deprecated android_studio.AndroidCliInvocation.command_name is deprecated.
-     *     See studio_stats.proto;l=18677
+     *     See studio_stats.proto;l=18721
      * @return This builder for chaining.
      */
     @java.lang.Deprecated public Builder clearCommandName() {
@@ -1934,7 +1934,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional string command_name = 1 [deprecated = true];</code>
      * @deprecated android_studio.AndroidCliInvocation.command_name is deprecated.
-     *     See studio_stats.proto;l=18677
+     *     See studio_stats.proto;l=18721
      * @param value The bytes for commandName to set.
      * @return This builder for chaining.
      */
@@ -1955,7 +1955,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional string sub_command_name = 2 [deprecated = true];</code>
      * @deprecated android_studio.AndroidCliInvocation.sub_command_name is deprecated.
-     *     See studio_stats.proto;l=18679
+     *     See studio_stats.proto;l=18723
      * @return Whether the subCommandName field is set.
      */
     @java.lang.Deprecated public boolean hasSubCommandName() {
@@ -1968,7 +1968,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional string sub_command_name = 2 [deprecated = true];</code>
      * @deprecated android_studio.AndroidCliInvocation.sub_command_name is deprecated.
-     *     See studio_stats.proto;l=18679
+     *     See studio_stats.proto;l=18723
      * @return The subCommandName.
      */
     @java.lang.Deprecated public java.lang.String getSubCommandName() {
@@ -1992,7 +1992,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional string sub_command_name = 2 [deprecated = true];</code>
      * @deprecated android_studio.AndroidCliInvocation.sub_command_name is deprecated.
-     *     See studio_stats.proto;l=18679
+     *     See studio_stats.proto;l=18723
      * @return The bytes for subCommandName.
      */
     @java.lang.Deprecated public com.google.protobuf.ByteString
@@ -2015,7 +2015,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional string sub_command_name = 2 [deprecated = true];</code>
      * @deprecated android_studio.AndroidCliInvocation.sub_command_name is deprecated.
-     *     See studio_stats.proto;l=18679
+     *     See studio_stats.proto;l=18723
      * @param value The subCommandName to set.
      * @return This builder for chaining.
      */
@@ -2034,7 +2034,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional string sub_command_name = 2 [deprecated = true];</code>
      * @deprecated android_studio.AndroidCliInvocation.sub_command_name is deprecated.
-     *     See studio_stats.proto;l=18679
+     *     See studio_stats.proto;l=18723
      * @return This builder for chaining.
      */
     @java.lang.Deprecated public Builder clearSubCommandName() {
@@ -2050,7 +2050,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional string sub_command_name = 2 [deprecated = true];</code>
      * @deprecated android_studio.AndroidCliInvocation.sub_command_name is deprecated.
-     *     See studio_stats.proto;l=18679
+     *     See studio_stats.proto;l=18723
      * @param value The bytes for subCommandName to set.
      * @return This builder for chaining.
      */
@@ -2078,7 +2078,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>repeated string global_flags = 3 [deprecated = true];</code>
      * @deprecated android_studio.AndroidCliInvocation.global_flags is deprecated.
-     *     See studio_stats.proto;l=18681
+     *     See studio_stats.proto;l=18725
      * @return A list containing the globalFlags.
      */
     @java.lang.Deprecated public com.google.protobuf.ProtocolStringList
@@ -2093,7 +2093,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>repeated string global_flags = 3 [deprecated = true];</code>
      * @deprecated android_studio.AndroidCliInvocation.global_flags is deprecated.
-     *     See studio_stats.proto;l=18681
+     *     See studio_stats.proto;l=18725
      * @return The count of globalFlags.
      */
     @java.lang.Deprecated public int getGlobalFlagsCount() {
@@ -2106,7 +2106,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>repeated string global_flags = 3 [deprecated = true];</code>
      * @deprecated android_studio.AndroidCliInvocation.global_flags is deprecated.
-     *     See studio_stats.proto;l=18681
+     *     See studio_stats.proto;l=18725
      * @param index The index of the element to return.
      * @return The globalFlags at the given index.
      */
@@ -2120,7 +2120,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>repeated string global_flags = 3 [deprecated = true];</code>
      * @deprecated android_studio.AndroidCliInvocation.global_flags is deprecated.
-     *     See studio_stats.proto;l=18681
+     *     See studio_stats.proto;l=18725
      * @param index The index of the value to return.
      * @return The bytes of the globalFlags at the given index.
      */
@@ -2135,7 +2135,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>repeated string global_flags = 3 [deprecated = true];</code>
      * @deprecated android_studio.AndroidCliInvocation.global_flags is deprecated.
-     *     See studio_stats.proto;l=18681
+     *     See studio_stats.proto;l=18725
      * @param index The index to set the value at.
      * @param value The globalFlags to set.
      * @return This builder for chaining.
@@ -2156,7 +2156,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>repeated string global_flags = 3 [deprecated = true];</code>
      * @deprecated android_studio.AndroidCliInvocation.global_flags is deprecated.
-     *     See studio_stats.proto;l=18681
+     *     See studio_stats.proto;l=18725
      * @param value The globalFlags to add.
      * @return This builder for chaining.
      */
@@ -2176,7 +2176,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>repeated string global_flags = 3 [deprecated = true];</code>
      * @deprecated android_studio.AndroidCliInvocation.global_flags is deprecated.
-     *     See studio_stats.proto;l=18681
+     *     See studio_stats.proto;l=18725
      * @param values The globalFlags to add.
      * @return This builder for chaining.
      */
@@ -2196,7 +2196,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>repeated string global_flags = 3 [deprecated = true];</code>
      * @deprecated android_studio.AndroidCliInvocation.global_flags is deprecated.
-     *     See studio_stats.proto;l=18681
+     *     See studio_stats.proto;l=18725
      * @return This builder for chaining.
      */
     @java.lang.Deprecated public Builder clearGlobalFlags() {
@@ -2213,7 +2213,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>repeated string global_flags = 3 [deprecated = true];</code>
      * @deprecated android_studio.AndroidCliInvocation.global_flags is deprecated.
-     *     See studio_stats.proto;l=18681
+     *     See studio_stats.proto;l=18725
      * @param value The bytes of the globalFlags to add.
      * @return This builder for chaining.
      */
@@ -2242,7 +2242,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>repeated string flags = 4 [deprecated = true];</code>
      * @deprecated android_studio.AndroidCliInvocation.flags is deprecated.
-     *     See studio_stats.proto;l=18683
+     *     See studio_stats.proto;l=18727
      * @return A list containing the flags.
      */
     @java.lang.Deprecated public com.google.protobuf.ProtocolStringList
@@ -2257,7 +2257,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>repeated string flags = 4 [deprecated = true];</code>
      * @deprecated android_studio.AndroidCliInvocation.flags is deprecated.
-     *     See studio_stats.proto;l=18683
+     *     See studio_stats.proto;l=18727
      * @return The count of flags.
      */
     @java.lang.Deprecated public int getFlagsCount() {
@@ -2270,7 +2270,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>repeated string flags = 4 [deprecated = true];</code>
      * @deprecated android_studio.AndroidCliInvocation.flags is deprecated.
-     *     See studio_stats.proto;l=18683
+     *     See studio_stats.proto;l=18727
      * @param index The index of the element to return.
      * @return The flags at the given index.
      */
@@ -2284,7 +2284,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>repeated string flags = 4 [deprecated = true];</code>
      * @deprecated android_studio.AndroidCliInvocation.flags is deprecated.
-     *     See studio_stats.proto;l=18683
+     *     See studio_stats.proto;l=18727
      * @param index The index of the value to return.
      * @return The bytes of the flags at the given index.
      */
@@ -2299,7 +2299,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>repeated string flags = 4 [deprecated = true];</code>
      * @deprecated android_studio.AndroidCliInvocation.flags is deprecated.
-     *     See studio_stats.proto;l=18683
+     *     See studio_stats.proto;l=18727
      * @param index The index to set the value at.
      * @param value The flags to set.
      * @return This builder for chaining.
@@ -2320,7 +2320,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>repeated string flags = 4 [deprecated = true];</code>
      * @deprecated android_studio.AndroidCliInvocation.flags is deprecated.
-     *     See studio_stats.proto;l=18683
+     *     See studio_stats.proto;l=18727
      * @param value The flags to add.
      * @return This builder for chaining.
      */
@@ -2340,7 +2340,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>repeated string flags = 4 [deprecated = true];</code>
      * @deprecated android_studio.AndroidCliInvocation.flags is deprecated.
-     *     See studio_stats.proto;l=18683
+     *     See studio_stats.proto;l=18727
      * @param values The flags to add.
      * @return This builder for chaining.
      */
@@ -2360,7 +2360,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>repeated string flags = 4 [deprecated = true];</code>
      * @deprecated android_studio.AndroidCliInvocation.flags is deprecated.
-     *     See studio_stats.proto;l=18683
+     *     See studio_stats.proto;l=18727
      * @return This builder for chaining.
      */
     @java.lang.Deprecated public Builder clearFlags() {
@@ -2377,7 +2377,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>repeated string flags = 4 [deprecated = true];</code>
      * @deprecated android_studio.AndroidCliInvocation.flags is deprecated.
-     *     See studio_stats.proto;l=18683
+     *     See studio_stats.proto;l=18727
      * @param value The bytes of the flags to add.
      * @return This builder for chaining.
      */
