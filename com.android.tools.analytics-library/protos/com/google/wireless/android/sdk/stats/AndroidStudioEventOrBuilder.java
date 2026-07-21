@@ -5869,4 +5869,85 @@ public interface AndroidStudioEventOrBuilder extends
    * <code>optional .android_studio.EditingMetricsEvent editing_metrics_event = 210 [lazy = true];</code>
    */
   com.google.wireless.android.sdk.stats.EditingMetricsEventOrBuilder getEditingMetricsEventOrBuilder();
+
+  /**
+   * <pre>
+   * set when kind = STUDIO_LABS_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.StudioLabsEvent studio_labs_event = 211 [lazy = true];</code>
+   * @return Whether the studioLabsEvent field is set.
+   */
+  boolean hasStudioLabsEvent();
+  /**
+   * <pre>
+   * set when kind = STUDIO_LABS_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.StudioLabsEvent studio_labs_event = 211 [lazy = true];</code>
+   * @return The studioLabsEvent.
+   */
+  com.google.wireless.android.sdk.stats.StudioLabsEvent getStudioLabsEvent();
+  /**
+   * <pre>
+   * set when kind = STUDIO_LABS_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.StudioLabsEvent studio_labs_event = 211 [lazy = true];</code>
+   */
+  com.google.wireless.android.sdk.stats.StudioLabsEventOrBuilder getStudioLabsEventOrBuilder();
+
+  /**
+   * <pre>
+   * set when kind = PROMPT_LIBRARY_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.PromptLibraryEvent prompt_library_event = 212 [lazy = true];</code>
+   * @return Whether the promptLibraryEvent field is set.
+   */
+  boolean hasPromptLibraryEvent();
+  /**
+   * <pre>
+   * set when kind = PROMPT_LIBRARY_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.PromptLibraryEvent prompt_library_event = 212 [lazy = true];</code>
+   * @return The promptLibraryEvent.
+   */
+  com.google.wireless.android.sdk.stats.PromptLibraryEvent getPromptLibraryEvent();
+  /**
+   * <pre>
+   * set when kind = PROMPT_LIBRARY_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.PromptLibraryEvent prompt_library_event = 212 [lazy = true];</code>
+   */
+  com.google.wireless.android.sdk.stats.PromptLibraryEventOrBuilder getPromptLibraryEventOrBuilder();
+
+  /**
+   * <pre>
+   * set when kind = GRADLE_SYNC_FAILURE_DETAILS
+   * </pre>
+   *
+   * <code>optional .android_studio.GradleFailureDetails gradle_failure_details = 213 [lazy = true];</code>
+   * @return Whether the gradleFailureDetails field is set.
+   */
+  boolean hasGradleFailureDetails();
+  /**
+   * <pre>
+   * set when kind = GRADLE_SYNC_FAILURE_DETAILS
+   * </pre>
+   *
+   * <code>optional .android_studio.GradleFailureDetails gradle_failure_details = 213 [lazy = true];</code>
+   * @return The gradleFailureDetails.
+   */
+  com.google.wireless.android.sdk.stats.GradleFailureDetails getGradleFailureDetails();
+  /**
+   * <pre>
+   * set when kind = GRADLE_SYNC_FAILURE_DETAILS
+   * </pre>
+   *
+   * <code>optional .android_studio.GradleFailureDetails gradle_failure_details = 213 [lazy = true];</code>
+   */
+  com.google.wireless.android.sdk.stats.GradleFailureDetailsOrBuilder getGradleFailureDetailsOrBuilder();
 }
