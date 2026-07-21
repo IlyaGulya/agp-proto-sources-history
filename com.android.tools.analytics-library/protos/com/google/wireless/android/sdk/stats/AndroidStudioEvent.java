@@ -3104,6 +3104,14 @@ private static final long serialVersionUID = 0L;
      * <code>SDK_INDEX_PROJECT_STATS = 323;</code>
      */
     SDK_INDEX_PROJECT_STATS(323),
+    /**
+     * <pre>
+     * Soong run event (in ASfP)
+     * </pre>
+     *
+     * <code>SOONG_RUN_EVENT = 324;</code>
+     */
+    SOONG_RUN_EVENT(324),
     ;
 
     /**
@@ -5514,6 +5522,14 @@ private static final long serialVersionUID = 0L;
      * <code>SDK_INDEX_PROJECT_STATS = 323;</code>
      */
     public static final int SDK_INDEX_PROJECT_STATS_VALUE = 323;
+    /**
+     * <pre>
+     * Soong run event (in ASfP)
+     * </pre>
+     *
+     * <code>SOONG_RUN_EVENT = 324;</code>
+     */
+    public static final int SOONG_RUN_EVENT_VALUE = 324;
 
 
     public final int getNumber() {
@@ -5855,6 +5871,7 @@ private static final long serialVersionUID = 0L;
         case 321: return UI_TOOLS_PREFERENCES;
         case 322: return SDK_INDEX_LIBRARY_HAS_VULNERABILITY_ISSUES;
         case 323: return SDK_INDEX_PROJECT_STATS;
+        case 324: return SOONG_RUN_EVENT;
         default: return null;
       }
     }
@@ -22850,6 +22867,44 @@ private static final long serialVersionUID = 0L;
     return sdkIndexProjectStats_ == null ? com.google.wireless.android.sdk.stats.SdkIndexProjectStats.getDefaultInstance() : sdkIndexProjectStats_;
   }
 
+  public static final int SOONG_RUN_EVENT_FIELD_NUMBER = 206;
+  private com.google.wireless.android.sdk.stats.SoongRunEvent soongRunEvent_;
+  /**
+   * <pre>
+   * set when kind = SOONG_RUN_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.SoongRunEvent soong_run_event = 206 [lazy = true];</code>
+   * @return Whether the soongRunEvent field is set.
+   */
+  @java.lang.Override
+  public boolean hasSoongRunEvent() {
+    return ((bitField6_ & 0x00000080) != 0);
+  }
+  /**
+   * <pre>
+   * set when kind = SOONG_RUN_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.SoongRunEvent soong_run_event = 206 [lazy = true];</code>
+   * @return The soongRunEvent.
+   */
+  @java.lang.Override
+  public com.google.wireless.android.sdk.stats.SoongRunEvent getSoongRunEvent() {
+    return soongRunEvent_ == null ? com.google.wireless.android.sdk.stats.SoongRunEvent.getDefaultInstance() : soongRunEvent_;
+  }
+  /**
+   * <pre>
+   * set when kind = SOONG_RUN_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.SoongRunEvent soong_run_event = 206 [lazy = true];</code>
+   */
+  @java.lang.Override
+  public com.google.wireless.android.sdk.stats.SoongRunEventOrBuilder getSoongRunEventOrBuilder() {
+    return soongRunEvent_ == null ? com.google.wireless.android.sdk.stats.SoongRunEvent.getDefaultInstance() : soongRunEvent_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -23478,6 +23533,9 @@ private static final long serialVersionUID = 0L;
     }
     if (((bitField6_ & 0x00000040) != 0)) {
       output.writeMessage(205, getSdkIndexProjectStats());
+    }
+    if (((bitField6_ & 0x00000080) != 0)) {
+      output.writeMessage(206, getSoongRunEvent());
     }
     getUnknownFields().writeTo(output);
   }
@@ -24313,6 +24371,10 @@ private static final long serialVersionUID = 0L;
     if (((bitField6_ & 0x00000040) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(205, getSdkIndexProjectStats());
+    }
+    if (((bitField6_ & 0x00000080) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(206, getSoongRunEvent());
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -25325,6 +25387,11 @@ private static final long serialVersionUID = 0L;
       if (!getSdkIndexProjectStats()
           .equals(other.getSdkIndexProjectStats())) return false;
     }
+    if (hasSoongRunEvent() != other.hasSoongRunEvent()) return false;
+    if (hasSoongRunEvent()) {
+      if (!getSoongRunEvent()
+          .equals(other.getSoongRunEvent())) return false;
+    }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -26158,6 +26225,10 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + SDK_INDEX_PROJECT_STATS_FIELD_NUMBER;
       hash = (53 * hash) + getSdkIndexProjectStats().hashCode();
     }
+    if (hasSoongRunEvent()) {
+      hash = (37 * hash) + SOONG_RUN_EVENT_FIELD_NUMBER;
+      hash = (53 * hash) + getSoongRunEvent().hashCode();
+    }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -26468,6 +26539,7 @@ private static final long serialVersionUID = 0L;
         getStartupPerformanceCodeLoadedAndVisibleInEditorFieldBuilder();
         getUiToolsPreferencesEventFieldBuilder();
         getSdkIndexProjectStatsFieldBuilder();
+        getSoongRunEventFieldBuilder();
       }
     }
     @java.lang.Override
@@ -27614,6 +27686,12 @@ private static final long serialVersionUID = 0L;
         sdkIndexProjectStatsBuilder_.clear();
       }
       bitField6_ = (bitField6_ & ~0x00001000);
+      if (soongRunEventBuilder_ == null) {
+        soongRunEvent_ = null;
+      } else {
+        soongRunEventBuilder_.clear();
+      }
+      bitField6_ = (bitField6_ & ~0x00002000);
       return this;
     }
 
@@ -29208,6 +29286,14 @@ private static final long serialVersionUID = 0L;
         }
         to_bitField6_ |= 0x00000040;
       }
+      if (((from_bitField6_ & 0x00002000) != 0)) {
+        if (soongRunEventBuilder_ == null) {
+          result.soongRunEvent_ = soongRunEvent_;
+        } else {
+          result.soongRunEvent_ = soongRunEventBuilder_.build();
+        }
+        to_bitField6_ |= 0x00000080;
+      }
       result.bitField0_ = to_bitField0_;
       result.bitField1_ = to_bitField1_;
       result.bitField2_ = to_bitField2_;
@@ -29981,6 +30067,9 @@ private static final long serialVersionUID = 0L;
       }
       if (other.hasSdkIndexProjectStats()) {
         mergeSdkIndexProjectStats(other.getSdkIndexProjectStats());
+      }
+      if (other.hasSoongRunEvent()) {
+        mergeSoongRunEvent(other.getSoongRunEvent());
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -31511,6 +31600,13 @@ private static final long serialVersionUID = 0L;
               bitField6_ |= 0x00001000;
               break;
             } // case 1642
+            case 1650: {
+              input.readMessage(
+                  getSoongRunEventFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField6_ |= 0x00002000;
+              break;
+            } // case 1650
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -62820,6 +62916,162 @@ private static final long serialVersionUID = 0L;
         sdkIndexProjectStats_ = null;
       }
       return sdkIndexProjectStatsBuilder_;
+    }
+
+    private com.google.wireless.android.sdk.stats.SoongRunEvent soongRunEvent_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.SoongRunEvent, com.google.wireless.android.sdk.stats.SoongRunEvent.Builder, com.google.wireless.android.sdk.stats.SoongRunEventOrBuilder> soongRunEventBuilder_;
+    /**
+     * <pre>
+     * set when kind = SOONG_RUN_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.SoongRunEvent soong_run_event = 206 [lazy = true];</code>
+     * @return Whether the soongRunEvent field is set.
+     */
+    public boolean hasSoongRunEvent() {
+      return ((bitField6_ & 0x00002000) != 0);
+    }
+    /**
+     * <pre>
+     * set when kind = SOONG_RUN_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.SoongRunEvent soong_run_event = 206 [lazy = true];</code>
+     * @return The soongRunEvent.
+     */
+    public com.google.wireless.android.sdk.stats.SoongRunEvent getSoongRunEvent() {
+      if (soongRunEventBuilder_ == null) {
+        return soongRunEvent_ == null ? com.google.wireless.android.sdk.stats.SoongRunEvent.getDefaultInstance() : soongRunEvent_;
+      } else {
+        return soongRunEventBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * set when kind = SOONG_RUN_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.SoongRunEvent soong_run_event = 206 [lazy = true];</code>
+     */
+    public Builder setSoongRunEvent(com.google.wireless.android.sdk.stats.SoongRunEvent value) {
+      if (soongRunEventBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        soongRunEvent_ = value;
+        onChanged();
+      } else {
+        soongRunEventBuilder_.setMessage(value);
+      }
+      bitField6_ |= 0x00002000;
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = SOONG_RUN_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.SoongRunEvent soong_run_event = 206 [lazy = true];</code>
+     */
+    public Builder setSoongRunEvent(
+        com.google.wireless.android.sdk.stats.SoongRunEvent.Builder builderForValue) {
+      if (soongRunEventBuilder_ == null) {
+        soongRunEvent_ = builderForValue.build();
+        onChanged();
+      } else {
+        soongRunEventBuilder_.setMessage(builderForValue.build());
+      }
+      bitField6_ |= 0x00002000;
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = SOONG_RUN_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.SoongRunEvent soong_run_event = 206 [lazy = true];</code>
+     */
+    public Builder mergeSoongRunEvent(com.google.wireless.android.sdk.stats.SoongRunEvent value) {
+      if (soongRunEventBuilder_ == null) {
+        if (((bitField6_ & 0x00002000) != 0) &&
+            soongRunEvent_ != null &&
+            soongRunEvent_ != com.google.wireless.android.sdk.stats.SoongRunEvent.getDefaultInstance()) {
+          soongRunEvent_ =
+            com.google.wireless.android.sdk.stats.SoongRunEvent.newBuilder(soongRunEvent_).mergeFrom(value).buildPartial();
+        } else {
+          soongRunEvent_ = value;
+        }
+        onChanged();
+      } else {
+        soongRunEventBuilder_.mergeFrom(value);
+      }
+      bitField6_ |= 0x00002000;
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = SOONG_RUN_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.SoongRunEvent soong_run_event = 206 [lazy = true];</code>
+     */
+    public Builder clearSoongRunEvent() {
+      if (soongRunEventBuilder_ == null) {
+        soongRunEvent_ = null;
+        onChanged();
+      } else {
+        soongRunEventBuilder_.clear();
+      }
+      bitField6_ = (bitField6_ & ~0x00002000);
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = SOONG_RUN_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.SoongRunEvent soong_run_event = 206 [lazy = true];</code>
+     */
+    public com.google.wireless.android.sdk.stats.SoongRunEvent.Builder getSoongRunEventBuilder() {
+      bitField6_ |= 0x00002000;
+      onChanged();
+      return getSoongRunEventFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * set when kind = SOONG_RUN_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.SoongRunEvent soong_run_event = 206 [lazy = true];</code>
+     */
+    public com.google.wireless.android.sdk.stats.SoongRunEventOrBuilder getSoongRunEventOrBuilder() {
+      if (soongRunEventBuilder_ != null) {
+        return soongRunEventBuilder_.getMessageOrBuilder();
+      } else {
+        return soongRunEvent_ == null ?
+            com.google.wireless.android.sdk.stats.SoongRunEvent.getDefaultInstance() : soongRunEvent_;
+      }
+    }
+    /**
+     * <pre>
+     * set when kind = SOONG_RUN_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.SoongRunEvent soong_run_event = 206 [lazy = true];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.SoongRunEvent, com.google.wireless.android.sdk.stats.SoongRunEvent.Builder, com.google.wireless.android.sdk.stats.SoongRunEventOrBuilder> 
+        getSoongRunEventFieldBuilder() {
+      if (soongRunEventBuilder_ == null) {
+        soongRunEventBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.wireless.android.sdk.stats.SoongRunEvent, com.google.wireless.android.sdk.stats.SoongRunEvent.Builder, com.google.wireless.android.sdk.stats.SoongRunEventOrBuilder>(
+                getSoongRunEvent(),
+                getParentForChildren(),
+                isClean());
+        soongRunEvent_ = null;
+      }
+      return soongRunEventBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(
