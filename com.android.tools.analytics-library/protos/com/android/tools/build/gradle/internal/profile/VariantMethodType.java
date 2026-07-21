@@ -160,6 +160,14 @@ public enum VariantMethodType
    * <code>TEST_SUITE_TARGET_BUILDER_TARGET_DEVICES = 36;</code>
    */
   TEST_SUITE_TARGET_BUILDER_TARGET_DEVICES(36),
+  /**
+   * <code>TEST_SUITE_BUILDER = 37;</code>
+   */
+  TEST_SUITE_BUILDER(37),
+  /**
+   * <code>TEST_SUITE_INCLUDE_ANDROID_RESOURCES = 38;</code>
+   */
+  TEST_SUITE_INCLUDE_ANDROID_RESOURCES(38),
   UNRECOGNIZED(-1),
   ;
 
@@ -315,6 +323,14 @@ public enum VariantMethodType
    * <code>TEST_SUITE_TARGET_BUILDER_TARGET_DEVICES = 36;</code>
    */
   public static final int TEST_SUITE_TARGET_BUILDER_TARGET_DEVICES_VALUE = 36;
+  /**
+   * <code>TEST_SUITE_BUILDER = 37;</code>
+   */
+  public static final int TEST_SUITE_BUILDER_VALUE = 37;
+  /**
+   * <code>TEST_SUITE_INCLUDE_ANDROID_RESOURCES = 38;</code>
+   */
+  public static final int TEST_SUITE_INCLUDE_ANDROID_RESOURCES_VALUE = 38;
 
 
   public final int getNumber() {
@@ -378,6 +394,8 @@ public enum VariantMethodType
       case 34: return JUNIT_ENGINE_BUILDER_ENGINE_DEPENDENCIES;
       case 35: return TEST_SUITE_TARGET_BUILDER_ENABLE;
       case 36: return TEST_SUITE_TARGET_BUILDER_TARGET_DEVICES;
+      case 37: return TEST_SUITE_BUILDER;
+      case 38: return TEST_SUITE_INCLUDE_ANDROID_RESOURCES;
       default: return null;
     }
   }

@@ -757,6 +757,18 @@ public enum VariantPropertiesMethodType
    * <code>TEST_SUITE_TARGET_TARGET_DEVICES = 174;</code>
    */
   TEST_SUITE_TARGET_TARGET_DEVICES(174),
+  /**
+   * <code>TEST_SUITES = 175;</code>
+   */
+  TEST_SUITES(175),
+  /**
+   * <code>TEST_SUITE_ANDROID_RESOURCES_ENABLED = 176;</code>
+   */
+  TEST_SUITE_ANDROID_RESOURCES_ENABLED(176),
+  /**
+   * <code>TEST_SUITE_CODE_COVERAGE = 177;</code>
+   */
+  TEST_SUITE_CODE_COVERAGE(177),
   UNRECOGNIZED(-1),
   ;
 
@@ -1508,6 +1520,18 @@ public enum VariantPropertiesMethodType
    * <code>TEST_SUITE_TARGET_TARGET_DEVICES = 174;</code>
    */
   public static final int TEST_SUITE_TARGET_TARGET_DEVICES_VALUE = 174;
+  /**
+   * <code>TEST_SUITES = 175;</code>
+   */
+  public static final int TEST_SUITES_VALUE = 175;
+  /**
+   * <code>TEST_SUITE_ANDROID_RESOURCES_ENABLED = 176;</code>
+   */
+  public static final int TEST_SUITE_ANDROID_RESOURCES_ENABLED_VALUE = 176;
+  /**
+   * <code>TEST_SUITE_CODE_COVERAGE = 177;</code>
+   */
+  public static final int TEST_SUITE_CODE_COVERAGE_VALUE = 177;
 
 
   public final int getNumber() {
@@ -1709,6 +1733,9 @@ public enum VariantPropertiesMethodType
       case 172: return JUNIT_ENGINE_DEPENDENCIES;
       case 173: return TEST_SUITE_TARGET_ENABLE;
       case 174: return TEST_SUITE_TARGET_TARGET_DEVICES;
+      case 175: return TEST_SUITES;
+      case 176: return TEST_SUITE_ANDROID_RESOURCES_ENABLED;
+      case 177: return TEST_SUITE_CODE_COVERAGE;
       default: return null;
     }
   }

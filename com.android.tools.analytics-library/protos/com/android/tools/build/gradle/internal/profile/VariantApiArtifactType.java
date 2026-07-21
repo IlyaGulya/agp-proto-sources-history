@@ -76,6 +76,22 @@ public enum VariantApiArtifactType
    * <code>OBFUSCATION_MAPPING_PARTITION_FILE = 15;</code>
    */
   OBFUSCATION_MAPPING_PARTITION_FILE(15),
+  /**
+   * <code>MULTIDEX_KEEP_PROGUARD = 16;</code>
+   */
+  MULTIDEX_KEEP_PROGUARD(16),
+  /**
+   * <code>NATIVE_DEBUG_METADATA = 17;</code>
+   */
+  NATIVE_DEBUG_METADATA(17),
+  /**
+   * <code>NATIVE_SYMBOL_TABLES = 18;</code>
+   */
+  NATIVE_SYMBOL_TABLES(18),
+  /**
+   * <code>PRE_COMPILATION_CLASSES = 19;</code>
+   */
+  PRE_COMPILATION_CLASSES(19),
   UNRECOGNIZED(-1),
   ;
 
@@ -147,6 +163,22 @@ public enum VariantApiArtifactType
    * <code>OBFUSCATION_MAPPING_PARTITION_FILE = 15;</code>
    */
   public static final int OBFUSCATION_MAPPING_PARTITION_FILE_VALUE = 15;
+  /**
+   * <code>MULTIDEX_KEEP_PROGUARD = 16;</code>
+   */
+  public static final int MULTIDEX_KEEP_PROGUARD_VALUE = 16;
+  /**
+   * <code>NATIVE_DEBUG_METADATA = 17;</code>
+   */
+  public static final int NATIVE_DEBUG_METADATA_VALUE = 17;
+  /**
+   * <code>NATIVE_SYMBOL_TABLES = 18;</code>
+   */
+  public static final int NATIVE_SYMBOL_TABLES_VALUE = 18;
+  /**
+   * <code>PRE_COMPILATION_CLASSES = 19;</code>
+   */
+  public static final int PRE_COMPILATION_CLASSES_VALUE = 19;
 
 
   public final int getNumber() {
@@ -189,6 +221,10 @@ public enum VariantApiArtifactType
       case 13: return RUNTIME_SYMBOL_LIST;
       case 14: return VERSION_CONTROL_INFO_FILE;
       case 15: return OBFUSCATION_MAPPING_PARTITION_FILE;
+      case 16: return MULTIDEX_KEEP_PROGUARD;
+      case 17: return NATIVE_DEBUG_METADATA;
+      case 18: return NATIVE_SYMBOL_TABLES;
+      case 19: return PRE_COMPILATION_CLASSES;
       default: return null;
     }
   }
