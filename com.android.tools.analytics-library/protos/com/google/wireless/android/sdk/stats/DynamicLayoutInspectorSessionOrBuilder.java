@@ -195,4 +195,23 @@ public interface DynamicLayoutInspectorSessionOrBuilder extends
    * <code>optional .android_studio.DynamicLayoutInspectorAttachToProcess attach = 7 [lazy = true];</code>
    */
   com.google.wireless.android.sdk.stats.DynamicLayoutInspectorAttachToProcessOrBuilder getAttachOrBuilder();
+
+  /**
+   * <pre>
+   * Indicates whether the session had a fold event
+   * </pre>
+   *
+   * <code>optional bool has_fold_event = 8;</code>
+   * @return Whether the hasFoldEvent field is set.
+   */
+  boolean hasHasFoldEvent();
+  /**
+   * <pre>
+   * Indicates whether the session had a fold event
+   * </pre>
+   *
+   * <code>optional bool has_fold_event = 8;</code>
+   * @return The hasFoldEvent.
+   */
+  boolean getHasFoldEvent();
 }
