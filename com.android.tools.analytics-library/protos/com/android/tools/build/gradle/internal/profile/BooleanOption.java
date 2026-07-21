@@ -743,6 +743,10 @@ public enum BooleanOption
    * <code>ENABLE_NEW_TEST_DSL = 180;</code>
    */
   ENABLE_NEW_TEST_DSL(180),
+  /**
+   * <code>PRIVACY_SANDBOX_SDK_PLUGIN_SUPPORT = 181;</code>
+   */
+  PRIVACY_SANDBOX_SDK_PLUGIN_SUPPORT(181),
   UNRECOGNIZED(-1),
   ;
 
@@ -1470,6 +1474,10 @@ public enum BooleanOption
    * <code>ENABLE_NEW_TEST_DSL = 180;</code>
    */
   public static final int ENABLE_NEW_TEST_DSL_VALUE = 180;
+  /**
+   * <code>PRIVACY_SANDBOX_SDK_PLUGIN_SUPPORT = 181;</code>
+   */
+  public static final int PRIVACY_SANDBOX_SDK_PLUGIN_SUPPORT_VALUE = 181;
 
 
   public final int getNumber() {
@@ -1677,6 +1685,7 @@ public enum BooleanOption
       case 178: return IDE_AVOID_TASK_REGISTRATION;
       case 179: return PACKAGE_NATIVE_DEBUG_METADATA_IN_APP_BUNDLE;
       case 180: return ENABLE_NEW_TEST_DSL;
+      case 181: return PRIVACY_SANDBOX_SDK_PLUGIN_SUPPORT;
       default: return null;
     }
   }

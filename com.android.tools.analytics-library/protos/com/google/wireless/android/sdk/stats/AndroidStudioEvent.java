@@ -2141,9 +2141,9 @@ private static final long serialVersionUID = 0L;
      */
     BUILD_ATTRIBUTION_UI_EVENT(199),
     /**
-     * <code>ANDROID_CPP_EXTENSION = 200;</code>
+     * <code>VS_PLUGIN = 200;</code>
      */
-    ANDROID_CPP_EXTENSION(200),
+    VS_PLUGIN(200),
     /**
      * <pre>
      * The event related to help panels in design editor
@@ -4394,9 +4394,9 @@ private static final long serialVersionUID = 0L;
      */
     public static final int BUILD_ATTRIBUTION_UI_EVENT_VALUE = 199;
     /**
-     * <code>ANDROID_CPP_EXTENSION = 200;</code>
+     * <code>VS_PLUGIN = 200;</code>
      */
-    public static final int ANDROID_CPP_EXTENSION_VALUE = 200;
+    public static final int VS_PLUGIN_VALUE = 200;
     /**
      * <pre>
      * The event related to help panels in design editor
@@ -5416,7 +5416,7 @@ private static final long serialVersionUID = 0L;
         case 197: return EDITOR_COMPLETION_STATS;
         case 198: return MULTI_VIEW_EVENT;
         case 199: return BUILD_ATTRIBUTION_UI_EVENT;
-        case 200: return ANDROID_CPP_EXTENSION;
+        case 200: return VS_PLUGIN;
         case 201: return DESIGN_EDITOR_HELP_PANEL_EVENT;
         case 202: return APP_INSPECTION;
         case 203: return ML_MODEL_BINDING;
@@ -6607,6 +6607,10 @@ private static final long serialVersionUID = 0L;
      * <code>BASELINE_PROFILES_MODULE = 68;</code>
      */
     BASELINE_PROFILES_MODULE(68),
+    /**
+     * <code>EXPERIMENTAL_ACTIVITY = 69;</code>
+     */
+    EXPERIMENTAL_ACTIVITY(69),
     ;
 
     /**
@@ -6889,6 +6893,10 @@ private static final long serialVersionUID = 0L;
      * <code>BASELINE_PROFILES_MODULE = 68;</code>
      */
     public static final int BASELINE_PROFILES_MODULE_VALUE = 68;
+    /**
+     * <code>EXPERIMENTAL_ACTIVITY = 69;</code>
+     */
+    public static final int EXPERIMENTAL_ACTIVITY_VALUE = 69;
 
 
     public final int getNumber() {
@@ -6980,6 +6988,7 @@ private static final long serialVersionUID = 0L;
         case 66: return WEAR_OS_COMPOSE_ACTIVITY;
         case 67: return GOOGLE_WALLET_ACTIVITY;
         case 68: return BASELINE_PROFILES_MODULE;
+        case 69: return EXPERIMENTAL_ACTIVITY;
         default: return null;
       }
     }
@@ -9588,7 +9597,7 @@ private static final long serialVersionUID = 0L;
        * <pre>
        * The different template components (eg Activities, Fragments, Services,
        * etc) the template engine could be asked to render
-       * Next ID: 61
+       * Next ID: 63
        * </pre>
        *
        * Protobuf enum {@code android_studio.AndroidStudioEvent.TemplatesUsage.TemplateComponent.TemplateType}
@@ -9845,6 +9854,10 @@ private static final long serialVersionUID = 0L;
          * <code>CONTENT_PROVIDER = 56;</code>
          */
         CONTENT_PROVIDER(56),
+        /**
+         * <code>EXPERIMENTAL_ACTIVITY = 62;</code>
+         */
+        EXPERIMENTAL_ACTIVITY(62),
         ;
 
         /**
@@ -10095,6 +10108,10 @@ private static final long serialVersionUID = 0L;
          * <code>CONTENT_PROVIDER = 56;</code>
          */
         public static final int CONTENT_PROVIDER_VALUE = 56;
+        /**
+         * <code>EXPERIMENTAL_ACTIVITY = 62;</code>
+         */
+        public static final int EXPERIMENTAL_ACTIVITY_VALUE = 62;
 
 
         public final int getNumber() {
@@ -10179,6 +10196,7 @@ private static final long serialVersionUID = 0L;
             case 54: return SERVICE;
             case 55: return SLICE_PROVIDER;
             case 56: return CONTENT_PROVIDER;
+            case 62: return EXPERIMENTAL_ACTIVITY;
             default: return null;
           }
         }
@@ -18163,42 +18181,42 @@ private static final long serialVersionUID = 0L;
     return buildAttributionUiEvent_ == null ? com.google.wireless.android.sdk.stats.BuildAttributionUiEvent.getDefaultInstance() : buildAttributionUiEvent_;
   }
 
-  public static final int ANDROID_CPP_EXTENSION_EVENT_FIELD_NUMBER = 99;
-  private com.google.wireless.android.sdk.stats.AndroidCppExtensionEvent androidCppExtensionEvent_;
+  public static final int VS_PLUGIN_EVENT_FIELD_NUMBER = 99;
+  private com.google.wireless.android.sdk.stats.VsPluginEvent vsPluginEvent_;
   /**
    * <pre>
-   * set when kind = ANDROID_CPP_EXTENSION
+   * set when kind = VS_PLUGIN
    * </pre>
    *
-   * <code>optional .android_studio.AndroidCppExtensionEvent android_cpp_extension_event = 99;</code>
-   * @return Whether the androidCppExtensionEvent field is set.
+   * <code>optional .android_studio.VsPluginEvent vs_plugin_event = 99;</code>
+   * @return Whether the vsPluginEvent field is set.
    */
   @java.lang.Override
-  public boolean hasAndroidCppExtensionEvent() {
+  public boolean hasVsPluginEvent() {
     return ((bitField3_ & 0x00000001) != 0);
   }
   /**
    * <pre>
-   * set when kind = ANDROID_CPP_EXTENSION
+   * set when kind = VS_PLUGIN
    * </pre>
    *
-   * <code>optional .android_studio.AndroidCppExtensionEvent android_cpp_extension_event = 99;</code>
-   * @return The androidCppExtensionEvent.
+   * <code>optional .android_studio.VsPluginEvent vs_plugin_event = 99;</code>
+   * @return The vsPluginEvent.
    */
   @java.lang.Override
-  public com.google.wireless.android.sdk.stats.AndroidCppExtensionEvent getAndroidCppExtensionEvent() {
-    return androidCppExtensionEvent_ == null ? com.google.wireless.android.sdk.stats.AndroidCppExtensionEvent.getDefaultInstance() : androidCppExtensionEvent_;
+  public com.google.wireless.android.sdk.stats.VsPluginEvent getVsPluginEvent() {
+    return vsPluginEvent_ == null ? com.google.wireless.android.sdk.stats.VsPluginEvent.getDefaultInstance() : vsPluginEvent_;
   }
   /**
    * <pre>
-   * set when kind = ANDROID_CPP_EXTENSION
+   * set when kind = VS_PLUGIN
    * </pre>
    *
-   * <code>optional .android_studio.AndroidCppExtensionEvent android_cpp_extension_event = 99;</code>
+   * <code>optional .android_studio.VsPluginEvent vs_plugin_event = 99;</code>
    */
   @java.lang.Override
-  public com.google.wireless.android.sdk.stats.AndroidCppExtensionEventOrBuilder getAndroidCppExtensionEventOrBuilder() {
-    return androidCppExtensionEvent_ == null ? com.google.wireless.android.sdk.stats.AndroidCppExtensionEvent.getDefaultInstance() : androidCppExtensionEvent_;
+  public com.google.wireless.android.sdk.stats.VsPluginEventOrBuilder getVsPluginEventOrBuilder() {
+    return vsPluginEvent_ == null ? com.google.wireless.android.sdk.stats.VsPluginEvent.getDefaultInstance() : vsPluginEvent_;
   }
 
   public static final int DESIGN_EDITOR_HELP_PANEL_EVENT_FIELD_NUMBER = 100;
@@ -21818,7 +21836,7 @@ private static final long serialVersionUID = 0L;
       output.writeMessage(98, getBuildAttributionUiEvent());
     }
     if (((bitField3_ & 0x00000001) != 0)) {
-      output.writeMessage(99, getAndroidCppExtensionEvent());
+      output.writeMessage(99, getVsPluginEvent());
     }
     if (((bitField3_ & 0x00000002) != 0)) {
       output.writeMessage(100, getDesignEditorHelpPanelEvent());
@@ -22479,7 +22497,7 @@ private static final long serialVersionUID = 0L;
     }
     if (((bitField3_ & 0x00000001) != 0)) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(99, getAndroidCppExtensionEvent());
+        .computeMessageSize(99, getVsPluginEvent());
     }
     if (((bitField3_ & 0x00000002) != 0)) {
       size += com.google.protobuf.CodedOutputStream
@@ -23323,10 +23341,10 @@ private static final long serialVersionUID = 0L;
       if (!getBuildAttributionUiEvent()
           .equals(other.getBuildAttributionUiEvent())) return false;
     }
-    if (hasAndroidCppExtensionEvent() != other.hasAndroidCppExtensionEvent()) return false;
-    if (hasAndroidCppExtensionEvent()) {
-      if (!getAndroidCppExtensionEvent()
-          .equals(other.getAndroidCppExtensionEvent())) return false;
+    if (hasVsPluginEvent() != other.hasVsPluginEvent()) return false;
+    if (hasVsPluginEvent()) {
+      if (!getVsPluginEvent()
+          .equals(other.getVsPluginEvent())) return false;
     }
     if (hasDesignEditorHelpPanelEvent() != other.hasDesignEditorHelpPanelEvent()) return false;
     if (hasDesignEditorHelpPanelEvent()) {
@@ -24153,9 +24171,9 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + BUILD_ATTRIBUTION_UI_EVENT_FIELD_NUMBER;
       hash = (53 * hash) + getBuildAttributionUiEvent().hashCode();
     }
-    if (hasAndroidCppExtensionEvent()) {
-      hash = (37 * hash) + ANDROID_CPP_EXTENSION_EVENT_FIELD_NUMBER;
-      hash = (53 * hash) + getAndroidCppExtensionEvent().hashCode();
+    if (hasVsPluginEvent()) {
+      hash = (37 * hash) + VS_PLUGIN_EVENT_FIELD_NUMBER;
+      hash = (53 * hash) + getVsPluginEvent().hashCode();
     }
     if (hasDesignEditorHelpPanelEvent()) {
       hash = (37 * hash) + DESIGN_EDITOR_HELP_PANEL_EVENT_FIELD_NUMBER;
@@ -24703,7 +24721,7 @@ private static final long serialVersionUID = 0L;
         getEditorCompletionStatsFieldBuilder();
         getMultiViewEventFieldBuilder();
         getBuildAttributionUiEventFieldBuilder();
-        getAndroidCppExtensionEventFieldBuilder();
+        getVsPluginEventFieldBuilder();
         getDesignEditorHelpPanelEventFieldBuilder();
         getAppInspectionEventFieldBuilder();
         getMlModelBindingEventFieldBuilder();
@@ -25304,10 +25322,10 @@ private static final long serialVersionUID = 0L;
         buildAttributionUiEventBuilder_.clear();
       }
       bitField3_ = (bitField3_ & ~0x00000004);
-      if (androidCppExtensionEventBuilder_ == null) {
-        androidCppExtensionEvent_ = null;
+      if (vsPluginEventBuilder_ == null) {
+        vsPluginEvent_ = null;
       } else {
-        androidCppExtensionEventBuilder_.clear();
+        vsPluginEventBuilder_.clear();
       }
       bitField3_ = (bitField3_ & ~0x00000008);
       if (designEditorHelpPanelEventBuilder_ == null) {
@@ -26563,10 +26581,10 @@ private static final long serialVersionUID = 0L;
         to_bitField2_ |= 0x80000000;
       }
       if (((from_bitField3_ & 0x00000008) != 0)) {
-        if (androidCppExtensionEventBuilder_ == null) {
-          result.androidCppExtensionEvent_ = androidCppExtensionEvent_;
+        if (vsPluginEventBuilder_ == null) {
+          result.vsPluginEvent_ = vsPluginEvent_;
         } else {
-          result.androidCppExtensionEvent_ = androidCppExtensionEventBuilder_.build();
+          result.vsPluginEvent_ = vsPluginEventBuilder_.build();
         }
         to_bitField3_ |= 0x00000001;
       }
@@ -27663,8 +27681,8 @@ private static final long serialVersionUID = 0L;
       if (other.hasBuildAttributionUiEvent()) {
         mergeBuildAttributionUiEvent(other.getBuildAttributionUiEvent());
       }
-      if (other.hasAndroidCppExtensionEvent()) {
-        mergeAndroidCppExtensionEvent(other.getAndroidCppExtensionEvent());
+      if (other.hasVsPluginEvent()) {
+        mergeVsPluginEvent(other.getVsPluginEvent());
       }
       if (other.hasDesignEditorHelpPanelEvent()) {
         mergeDesignEditorHelpPanelEvent(other.getDesignEditorHelpPanelEvent());
@@ -28736,7 +28754,7 @@ private static final long serialVersionUID = 0L;
             } // case 786
             case 794: {
               input.readMessage(
-                  getAndroidCppExtensionEventFieldBuilder().getBuilder(),
+                  getVsPluginEventFieldBuilder().getBuilder(),
                   extensionRegistry);
               bitField3_ |= 0x00000008;
               break;
@@ -43886,160 +43904,160 @@ private static final long serialVersionUID = 0L;
       return buildAttributionUiEventBuilder_;
     }
 
-    private com.google.wireless.android.sdk.stats.AndroidCppExtensionEvent androidCppExtensionEvent_;
+    private com.google.wireless.android.sdk.stats.VsPluginEvent vsPluginEvent_;
     private com.google.protobuf.SingleFieldBuilderV3<
-        com.google.wireless.android.sdk.stats.AndroidCppExtensionEvent, com.google.wireless.android.sdk.stats.AndroidCppExtensionEvent.Builder, com.google.wireless.android.sdk.stats.AndroidCppExtensionEventOrBuilder> androidCppExtensionEventBuilder_;
+        com.google.wireless.android.sdk.stats.VsPluginEvent, com.google.wireless.android.sdk.stats.VsPluginEvent.Builder, com.google.wireless.android.sdk.stats.VsPluginEventOrBuilder> vsPluginEventBuilder_;
     /**
      * <pre>
-     * set when kind = ANDROID_CPP_EXTENSION
+     * set when kind = VS_PLUGIN
      * </pre>
      *
-     * <code>optional .android_studio.AndroidCppExtensionEvent android_cpp_extension_event = 99;</code>
-     * @return Whether the androidCppExtensionEvent field is set.
+     * <code>optional .android_studio.VsPluginEvent vs_plugin_event = 99;</code>
+     * @return Whether the vsPluginEvent field is set.
      */
-    public boolean hasAndroidCppExtensionEvent() {
+    public boolean hasVsPluginEvent() {
       return ((bitField3_ & 0x00000008) != 0);
     }
     /**
      * <pre>
-     * set when kind = ANDROID_CPP_EXTENSION
+     * set when kind = VS_PLUGIN
      * </pre>
      *
-     * <code>optional .android_studio.AndroidCppExtensionEvent android_cpp_extension_event = 99;</code>
-     * @return The androidCppExtensionEvent.
+     * <code>optional .android_studio.VsPluginEvent vs_plugin_event = 99;</code>
+     * @return The vsPluginEvent.
      */
-    public com.google.wireless.android.sdk.stats.AndroidCppExtensionEvent getAndroidCppExtensionEvent() {
-      if (androidCppExtensionEventBuilder_ == null) {
-        return androidCppExtensionEvent_ == null ? com.google.wireless.android.sdk.stats.AndroidCppExtensionEvent.getDefaultInstance() : androidCppExtensionEvent_;
+    public com.google.wireless.android.sdk.stats.VsPluginEvent getVsPluginEvent() {
+      if (vsPluginEventBuilder_ == null) {
+        return vsPluginEvent_ == null ? com.google.wireless.android.sdk.stats.VsPluginEvent.getDefaultInstance() : vsPluginEvent_;
       } else {
-        return androidCppExtensionEventBuilder_.getMessage();
+        return vsPluginEventBuilder_.getMessage();
       }
     }
     /**
      * <pre>
-     * set when kind = ANDROID_CPP_EXTENSION
+     * set when kind = VS_PLUGIN
      * </pre>
      *
-     * <code>optional .android_studio.AndroidCppExtensionEvent android_cpp_extension_event = 99;</code>
+     * <code>optional .android_studio.VsPluginEvent vs_plugin_event = 99;</code>
      */
-    public Builder setAndroidCppExtensionEvent(com.google.wireless.android.sdk.stats.AndroidCppExtensionEvent value) {
-      if (androidCppExtensionEventBuilder_ == null) {
+    public Builder setVsPluginEvent(com.google.wireless.android.sdk.stats.VsPluginEvent value) {
+      if (vsPluginEventBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
         }
-        androidCppExtensionEvent_ = value;
+        vsPluginEvent_ = value;
         onChanged();
       } else {
-        androidCppExtensionEventBuilder_.setMessage(value);
+        vsPluginEventBuilder_.setMessage(value);
       }
       bitField3_ |= 0x00000008;
       return this;
     }
     /**
      * <pre>
-     * set when kind = ANDROID_CPP_EXTENSION
+     * set when kind = VS_PLUGIN
      * </pre>
      *
-     * <code>optional .android_studio.AndroidCppExtensionEvent android_cpp_extension_event = 99;</code>
+     * <code>optional .android_studio.VsPluginEvent vs_plugin_event = 99;</code>
      */
-    public Builder setAndroidCppExtensionEvent(
-        com.google.wireless.android.sdk.stats.AndroidCppExtensionEvent.Builder builderForValue) {
-      if (androidCppExtensionEventBuilder_ == null) {
-        androidCppExtensionEvent_ = builderForValue.build();
+    public Builder setVsPluginEvent(
+        com.google.wireless.android.sdk.stats.VsPluginEvent.Builder builderForValue) {
+      if (vsPluginEventBuilder_ == null) {
+        vsPluginEvent_ = builderForValue.build();
         onChanged();
       } else {
-        androidCppExtensionEventBuilder_.setMessage(builderForValue.build());
+        vsPluginEventBuilder_.setMessage(builderForValue.build());
       }
       bitField3_ |= 0x00000008;
       return this;
     }
     /**
      * <pre>
-     * set when kind = ANDROID_CPP_EXTENSION
+     * set when kind = VS_PLUGIN
      * </pre>
      *
-     * <code>optional .android_studio.AndroidCppExtensionEvent android_cpp_extension_event = 99;</code>
+     * <code>optional .android_studio.VsPluginEvent vs_plugin_event = 99;</code>
      */
-    public Builder mergeAndroidCppExtensionEvent(com.google.wireless.android.sdk.stats.AndroidCppExtensionEvent value) {
-      if (androidCppExtensionEventBuilder_ == null) {
+    public Builder mergeVsPluginEvent(com.google.wireless.android.sdk.stats.VsPluginEvent value) {
+      if (vsPluginEventBuilder_ == null) {
         if (((bitField3_ & 0x00000008) != 0) &&
-            androidCppExtensionEvent_ != null &&
-            androidCppExtensionEvent_ != com.google.wireless.android.sdk.stats.AndroidCppExtensionEvent.getDefaultInstance()) {
-          androidCppExtensionEvent_ =
-            com.google.wireless.android.sdk.stats.AndroidCppExtensionEvent.newBuilder(androidCppExtensionEvent_).mergeFrom(value).buildPartial();
+            vsPluginEvent_ != null &&
+            vsPluginEvent_ != com.google.wireless.android.sdk.stats.VsPluginEvent.getDefaultInstance()) {
+          vsPluginEvent_ =
+            com.google.wireless.android.sdk.stats.VsPluginEvent.newBuilder(vsPluginEvent_).mergeFrom(value).buildPartial();
         } else {
-          androidCppExtensionEvent_ = value;
+          vsPluginEvent_ = value;
         }
         onChanged();
       } else {
-        androidCppExtensionEventBuilder_.mergeFrom(value);
+        vsPluginEventBuilder_.mergeFrom(value);
       }
       bitField3_ |= 0x00000008;
       return this;
     }
     /**
      * <pre>
-     * set when kind = ANDROID_CPP_EXTENSION
+     * set when kind = VS_PLUGIN
      * </pre>
      *
-     * <code>optional .android_studio.AndroidCppExtensionEvent android_cpp_extension_event = 99;</code>
+     * <code>optional .android_studio.VsPluginEvent vs_plugin_event = 99;</code>
      */
-    public Builder clearAndroidCppExtensionEvent() {
-      if (androidCppExtensionEventBuilder_ == null) {
-        androidCppExtensionEvent_ = null;
+    public Builder clearVsPluginEvent() {
+      if (vsPluginEventBuilder_ == null) {
+        vsPluginEvent_ = null;
         onChanged();
       } else {
-        androidCppExtensionEventBuilder_.clear();
+        vsPluginEventBuilder_.clear();
       }
       bitField3_ = (bitField3_ & ~0x00000008);
       return this;
     }
     /**
      * <pre>
-     * set when kind = ANDROID_CPP_EXTENSION
+     * set when kind = VS_PLUGIN
      * </pre>
      *
-     * <code>optional .android_studio.AndroidCppExtensionEvent android_cpp_extension_event = 99;</code>
+     * <code>optional .android_studio.VsPluginEvent vs_plugin_event = 99;</code>
      */
-    public com.google.wireless.android.sdk.stats.AndroidCppExtensionEvent.Builder getAndroidCppExtensionEventBuilder() {
+    public com.google.wireless.android.sdk.stats.VsPluginEvent.Builder getVsPluginEventBuilder() {
       bitField3_ |= 0x00000008;
       onChanged();
-      return getAndroidCppExtensionEventFieldBuilder().getBuilder();
+      return getVsPluginEventFieldBuilder().getBuilder();
     }
     /**
      * <pre>
-     * set when kind = ANDROID_CPP_EXTENSION
+     * set when kind = VS_PLUGIN
      * </pre>
      *
-     * <code>optional .android_studio.AndroidCppExtensionEvent android_cpp_extension_event = 99;</code>
+     * <code>optional .android_studio.VsPluginEvent vs_plugin_event = 99;</code>
      */
-    public com.google.wireless.android.sdk.stats.AndroidCppExtensionEventOrBuilder getAndroidCppExtensionEventOrBuilder() {
-      if (androidCppExtensionEventBuilder_ != null) {
-        return androidCppExtensionEventBuilder_.getMessageOrBuilder();
+    public com.google.wireless.android.sdk.stats.VsPluginEventOrBuilder getVsPluginEventOrBuilder() {
+      if (vsPluginEventBuilder_ != null) {
+        return vsPluginEventBuilder_.getMessageOrBuilder();
       } else {
-        return androidCppExtensionEvent_ == null ?
-            com.google.wireless.android.sdk.stats.AndroidCppExtensionEvent.getDefaultInstance() : androidCppExtensionEvent_;
+        return vsPluginEvent_ == null ?
+            com.google.wireless.android.sdk.stats.VsPluginEvent.getDefaultInstance() : vsPluginEvent_;
       }
     }
     /**
      * <pre>
-     * set when kind = ANDROID_CPP_EXTENSION
+     * set when kind = VS_PLUGIN
      * </pre>
      *
-     * <code>optional .android_studio.AndroidCppExtensionEvent android_cpp_extension_event = 99;</code>
+     * <code>optional .android_studio.VsPluginEvent vs_plugin_event = 99;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
-        com.google.wireless.android.sdk.stats.AndroidCppExtensionEvent, com.google.wireless.android.sdk.stats.AndroidCppExtensionEvent.Builder, com.google.wireless.android.sdk.stats.AndroidCppExtensionEventOrBuilder> 
-        getAndroidCppExtensionEventFieldBuilder() {
-      if (androidCppExtensionEventBuilder_ == null) {
-        androidCppExtensionEventBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-            com.google.wireless.android.sdk.stats.AndroidCppExtensionEvent, com.google.wireless.android.sdk.stats.AndroidCppExtensionEvent.Builder, com.google.wireless.android.sdk.stats.AndroidCppExtensionEventOrBuilder>(
-                getAndroidCppExtensionEvent(),
+        com.google.wireless.android.sdk.stats.VsPluginEvent, com.google.wireless.android.sdk.stats.VsPluginEvent.Builder, com.google.wireless.android.sdk.stats.VsPluginEventOrBuilder> 
+        getVsPluginEventFieldBuilder() {
+      if (vsPluginEventBuilder_ == null) {
+        vsPluginEventBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.wireless.android.sdk.stats.VsPluginEvent, com.google.wireless.android.sdk.stats.VsPluginEvent.Builder, com.google.wireless.android.sdk.stats.VsPluginEventOrBuilder>(
+                getVsPluginEvent(),
                 getParentForChildren(),
                 isClean());
-        androidCppExtensionEvent_ = null;
+        vsPluginEvent_ = null;
       }
-      return androidCppExtensionEventBuilder_;
+      return vsPluginEventBuilder_;
     }
 
     private com.google.wireless.android.sdk.stats.DesignEditorHelpPanelEvent designEditorHelpPanelEvent_;

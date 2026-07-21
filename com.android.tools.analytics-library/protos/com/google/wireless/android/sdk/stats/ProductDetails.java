@@ -215,9 +215,9 @@ private static final long serialVersionUID = 0L;
      */
     STUDIO_PATCH_UPDATER(5),
     /**
-     * <code>ANDROID_CPP_EXTENSION = 6;</code>
+     * <code>VS_PLUGIN = 6;</code>
      */
-    ANDROID_CPP_EXTENSION(6),
+    VS_PLUGIN(6),
     /**
      * <code>GAME_TOOLS = 7;</code>
      */
@@ -249,9 +249,9 @@ private static final long serialVersionUID = 0L;
      */
     public static final int STUDIO_PATCH_UPDATER_VALUE = 5;
     /**
-     * <code>ANDROID_CPP_EXTENSION = 6;</code>
+     * <code>VS_PLUGIN = 6;</code>
      */
-    public static final int ANDROID_CPP_EXTENSION_VALUE = 6;
+    public static final int VS_PLUGIN_VALUE = 6;
     /**
      * <code>GAME_TOOLS = 7;</code>
      */
@@ -284,7 +284,7 @@ private static final long serialVersionUID = 0L;
         case 3: return GRADLE;
         case 4: return DDMS;
         case 5: return STUDIO_PATCH_UPDATER;
-        case 6: return ANDROID_CPP_EXTENSION;
+        case 6: return VS_PLUGIN;
         case 7: return GAME_TOOLS;
         default: return null;
       }
