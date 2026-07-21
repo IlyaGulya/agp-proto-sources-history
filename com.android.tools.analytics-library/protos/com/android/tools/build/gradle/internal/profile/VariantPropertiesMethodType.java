@@ -397,6 +397,10 @@ public enum VariantPropertiesMethodType
    * <code>VARIANT_PROPERTIES = 87;</code>
    */
   VARIANT_PROPERTIES(87),
+  /**
+   * <code>SIGNING_CONFIG_SET_CONFIG = 88;</code>
+   */
+  SIGNING_CONFIG_SET_CONFIG(88),
   UNRECOGNIZED(-1),
   ;
 
@@ -788,6 +792,10 @@ public enum VariantPropertiesMethodType
    * <code>VARIANT_PROPERTIES = 87;</code>
    */
   public static final int VARIANT_PROPERTIES_VALUE = 87;
+  /**
+   * <code>SIGNING_CONFIG_SET_CONFIG = 88;</code>
+   */
+  public static final int SIGNING_CONFIG_SET_CONFIG_VALUE = 88;
 
 
   public final int getNumber() {
@@ -902,6 +910,7 @@ public enum VariantPropertiesMethodType
       case 85: return MAKE_RES_VALUE_KEY;
       case 86: return TEST_FIXTURES;
       case 87: return VARIANT_PROPERTIES;
+      case 88: return SIGNING_CONFIG_SET_CONFIG;
       default: return null;
     }
   }

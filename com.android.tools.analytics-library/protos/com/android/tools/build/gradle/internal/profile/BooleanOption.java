@@ -609,10 +609,6 @@ public enum BooleanOption
    * <code>ENABLE_JACOCO_TRANSFORM_INSTRUMENTATION = 147;</code>
    */
   ENABLE_JACOCO_TRANSFORM_INSTRUMENTATION(147),
-  /**
-   * <code>DISABLE_AUTOMATIC_COMPONENT_CREATION = 148;</code>
-   */
-  DISABLE_AUTOMATIC_COMPONENT_CREATION(148),
   UNRECOGNIZED(-1),
   ;
 
@@ -1208,10 +1204,6 @@ public enum BooleanOption
    * <code>ENABLE_JACOCO_TRANSFORM_INSTRUMENTATION = 147;</code>
    */
   public static final int ENABLE_JACOCO_TRANSFORM_INSTRUMENTATION_VALUE = 147;
-  /**
-   * <code>DISABLE_AUTOMATIC_COMPONENT_CREATION = 148;</code>
-   */
-  public static final int DISABLE_AUTOMATIC_COMPONENT_CREATION_VALUE = 148;
 
 
   public final int getNumber() {
@@ -1386,7 +1378,6 @@ public enum BooleanOption
       case 145: return INCLUDE_REPOSITORIES_IN_DEPENDENCY_REPORT;
       case 146: return ENABLE_ART_PROFILES;
       case 147: return ENABLE_JACOCO_TRANSFORM_INSTRUMENTATION;
-      case 148: return DISABLE_AUTOMATIC_COMPONENT_CREATION;
       default: return null;
     }
   }
