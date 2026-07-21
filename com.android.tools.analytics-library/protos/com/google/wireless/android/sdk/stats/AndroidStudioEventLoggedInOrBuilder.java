@@ -68,6 +68,21 @@ public interface AndroidStudioEventLoggedInOrBuilder extends
   com.google.wireless.android.sdk.stats.DirectAccessUsageEventLoggedInOrBuilder getDirectAccessUsageEventOrBuilder();
 
   /**
+   * <code>optional .android_studio.TSdkUAEventLoggedIn tsdk_ua_event = 160 [lazy = true];</code>
+   * @return Whether the tsdkUaEvent field is set.
+   */
+  boolean hasTsdkUaEvent();
+  /**
+   * <code>optional .android_studio.TSdkUAEventLoggedIn tsdk_ua_event = 160 [lazy = true];</code>
+   * @return The tsdkUaEvent.
+   */
+  com.google.wireless.android.sdk.stats.TSdkUAEventLoggedIn getTsdkUaEvent();
+  /**
+   * <code>optional .android_studio.TSdkUAEventLoggedIn tsdk_ua_event = 160 [lazy = true];</code>
+   */
+  com.google.wireless.android.sdk.stats.TSdkUAEventLoggedInOrBuilder getTsdkUaEventOrBuilder();
+
+  /**
    * <code>optional .android_studio.SmlCompletionEventLoggedIn sml_completion_event = 167 [lazy = true];</code>
    * @return Whether the smlCompletionEvent field is set.
    */
@@ -203,6 +218,21 @@ public interface AndroidStudioEventLoggedInOrBuilder extends
   com.google.wireless.android.sdk.stats.PromptLibraryEventLoggedInOrBuilder getPromptLibraryEventOrBuilder();
 
   /**
+   * <code>optional .android_studio.JourneyFinishedEventLoggedIn journey_finished_event = 227 [lazy = true];</code>
+   * @return Whether the journeyFinishedEvent field is set.
+   */
+  boolean hasJourneyFinishedEvent();
+  /**
+   * <code>optional .android_studio.JourneyFinishedEventLoggedIn journey_finished_event = 227 [lazy = true];</code>
+   * @return The journeyFinishedEvent.
+   */
+  com.google.wireless.android.sdk.stats.JourneyFinishedEventLoggedIn getJourneyFinishedEvent();
+  /**
+   * <code>optional .android_studio.JourneyFinishedEventLoggedIn journey_finished_event = 227 [lazy = true];</code>
+   */
+  com.google.wireless.android.sdk.stats.JourneyFinishedEventLoggedInOrBuilder getJourneyFinishedEventOrBuilder();
+
+  /**
    * <code>optional .android_studio.PlayPolicyInsightsUsageEventLoggedIn play_policy_insights_usage_event = 236 [lazy = true];</code>
    * @return Whether the playPolicyInsightsUsageEvent field is set.
    */
@@ -216,4 +246,49 @@ public interface AndroidStudioEventLoggedInOrBuilder extends
    * <code>optional .android_studio.PlayPolicyInsightsUsageEventLoggedIn play_policy_insights_usage_event = 236 [lazy = true];</code>
    */
   com.google.wireless.android.sdk.stats.PlayPolicyInsightsUsageEventLoggedInOrBuilder getPlayPolicyInsightsUsageEventOrBuilder();
+
+  /**
+   * <code>optional .android_studio.ModelProviderEventLoggedIn model_provider_event = 237 [lazy = true];</code>
+   * @return Whether the modelProviderEvent field is set.
+   */
+  boolean hasModelProviderEvent();
+  /**
+   * <code>optional .android_studio.ModelProviderEventLoggedIn model_provider_event = 237 [lazy = true];</code>
+   * @return The modelProviderEvent.
+   */
+  com.google.wireless.android.sdk.stats.ModelProviderEventLoggedIn getModelProviderEvent();
+  /**
+   * <code>optional .android_studio.ModelProviderEventLoggedIn model_provider_event = 237 [lazy = true];</code>
+   */
+  com.google.wireless.android.sdk.stats.ModelProviderEventLoggedInOrBuilder getModelProviderEventOrBuilder();
+
+  /**
+   * <code>optional .android_studio.NextEditPredictionEventLoggedIn next_edit_prediction_event = 241 [lazy = true];</code>
+   * @return Whether the nextEditPredictionEvent field is set.
+   */
+  boolean hasNextEditPredictionEvent();
+  /**
+   * <code>optional .android_studio.NextEditPredictionEventLoggedIn next_edit_prediction_event = 241 [lazy = true];</code>
+   * @return The nextEditPredictionEvent.
+   */
+  com.google.wireless.android.sdk.stats.NextEditPredictionEventLoggedIn getNextEditPredictionEvent();
+  /**
+   * <code>optional .android_studio.NextEditPredictionEventLoggedIn next_edit_prediction_event = 241 [lazy = true];</code>
+   */
+  com.google.wireless.android.sdk.stats.NextEditPredictionEventLoggedInOrBuilder getNextEditPredictionEventOrBuilder();
+
+  /**
+   * <code>optional .android_studio.SkillsEventLoggedIn skills_event = 249 [lazy = true];</code>
+   * @return Whether the skillsEvent field is set.
+   */
+  boolean hasSkillsEvent();
+  /**
+   * <code>optional .android_studio.SkillsEventLoggedIn skills_event = 249 [lazy = true];</code>
+   * @return The skillsEvent.
+   */
+  com.google.wireless.android.sdk.stats.SkillsEventLoggedIn getSkillsEvent();
+  /**
+   * <code>optional .android_studio.SkillsEventLoggedIn skills_event = 249 [lazy = true];</code>
+   */
+  com.google.wireless.android.sdk.stats.SkillsEventLoggedInOrBuilder getSkillsEventOrBuilder();
 }

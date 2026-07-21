@@ -70,6 +70,16 @@ public final class AndroidStudioStatsLoggedIn {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_android_studio_DirectAccessUsageEventLoggedIn_StreamStartedDetails_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_android_studio_TSdkUAEventLoggedIn_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_android_studio_TSdkUAEventLoggedIn_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_android_studio_SmlResponseMetadataLoggedIn_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_android_studio_SmlResponseMetadataLoggedIn_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
     internal_static_android_studio_SmlCompletionEventLoggedIn_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -175,10 +185,55 @@ public final class AndroidStudioStatsLoggedIn {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_android_studio_PromptLibraryEventLoggedIn_Invoke_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_android_studio_JourneyFinishedEventLoggedIn_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_android_studio_JourneyFinishedEventLoggedIn_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
     internal_static_android_studio_PlayPolicyInsightsUsageEventLoggedIn_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_android_studio_PlayPolicyInsightsUsageEventLoggedIn_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_android_studio_ModelProviderEventLoggedIn_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_android_studio_ModelProviderEventLoggedIn_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_android_studio_ModelProviderEventLoggedIn_Update_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_android_studio_ModelProviderEventLoggedIn_Update_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_android_studio_NextEditPredictionEventLoggedIn_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_android_studio_NextEditPredictionEventLoggedIn_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_android_studio_NextEditPredictionEventLoggedIn_PredictionShown_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_android_studio_NextEditPredictionEventLoggedIn_PredictionShown_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_android_studio_NextEditPredictionEventLoggedIn_PredictionAccepted_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_android_studio_NextEditPredictionEventLoggedIn_PredictionAccepted_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_android_studio_NextEditPredictionEventLoggedIn_Session_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_android_studio_NextEditPredictionEventLoggedIn_Session_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_android_studio_NextEditPredictionEventLoggedIn_Session_SessionEvent_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_android_studio_NextEditPredictionEventLoggedIn_Session_SessionEvent_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_android_studio_SkillsEventLoggedIn_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_android_studio_SkillsEventLoggedIn_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -189,7 +244,7 @@ public final class AndroidStudioStatsLoggedIn {
   static {
     java.lang.String[] descriptorData = {
       "\n\034studio_stats_logged_in.proto\022\016android_" +
-      "studio\"\277\t\n\032AndroidStudioEventLoggedIn\022B\n" +
+      "studio\"\274\014\n\032AndroidStudioEventLoggedIn\022B\n" +
       "\017ui_action_stats\030\" \001(\0132%.android_studio." +
       "UIActionStatsLoggedInB\002(\001\022U\n\031app_links_a" +
       "ssistant_event\030+ \001(\0132..android_studio.Ap" +
@@ -198,167 +253,223 @@ public final class AndroidStudioStatsLoggedIn {
       "droid_studio.AppQualityInsightsUsageEven" +
       "tLoggedInB\002(\001\022V\n\031direct_access_usage_eve" +
       "nt\030\236\001 \001(\0132..android_studio.DirectAccessU" +
-      "sageEventLoggedInB\002(\001\022M\n\024sml_completion_" +
-      "event\030\247\001 \001(\0132*.android_studio.SmlComplet" +
-      "ionEventLoggedInB\002(\001\022K\n\023sml_transform_ev" +
-      "ent\030\250\001 \001(\0132).android_studio.SmlTransform" +
-      "EventLoggedInB\002(\001\022H\n\022sml_chat_bot_event\030" +
-      "\251\001 \001(\0132\'.android_studio.SmlChatBotEventL" +
-      "oggedInB\002(\001\022S\n\027sml_configuration_event\030\252" +
-      "\001 \001(\0132-.android_studio.SmlConfigurationE" +
-      "ventLoggedInB\002(\001\022W\n\020device_connected\030\277\001 " +
-      "\001(\01328.android_studio.DeviceConnectedNoti" +
-      "ficationEventLoggedInB\002(\001\022K\n\023test_scenar" +
-      "io_event\030\301\001 \001(\0132).android_studio.TestSce" +
-      "narioEventLoggedInB\002(\001\022k\n(android_studio" +
-      "_core_gemini_actions_event\030\317\001 \001(\01324.andr" +
-      "oid_studio.StudioCoreGeminiActionsEventL" +
-      "oggedInB\002(\001\022G\n\021studio_labs_event\030\323\001 \001(\0132" +
-      "\'.android_studio.StudioLabsEventLoggedIn" +
-      "B\002(\001\022M\n\024prompt_library_event\030\324\001 \001(\0132*.an" +
-      "droid_studio.PromptLibraryEventLoggedInB" +
-      "\002(\001\022c\n play_policy_insights_usage_event\030" +
-      "\354\001 \001(\01324.android_studio.PlayPolicyInsigh" +
-      "tsUsageEventLoggedInB\002(\001\"2\n\025UIActionStat" +
-      "sLoggedIn\022\031\n\021action_class_name\030\001 \001(\t\"\300\003\n" +
-      "\036AppLinksAssistantEventLoggedIn\022P\n\014event" +
-      "_source\030\003 \001(\0162:.android_studio.AppLinksA" +
-      "ssistantEventLoggedIn.EventSource\022`\n\022val" +
-      "idation_summary\030\013 \001(\0132@.android_studio.A" +
-      "ppLinksAssistantEventLoggedIn.Validation" +
-      "SummaryB\002(\001\022]\n\021intent_filter_fix\030\014 \001(\0132>" +
-      ".android_studio.AppLinksAssistantEventLo" +
-      "ggedIn.IntentFilterFixB\002(\001\032\023\n\021Validation" +
-      "Summary\032\021\n\017IntentFilterFix\"c\n\013EventSourc" +
-      "e\022\022\n\016UNKNOWN_SOURCE\020\000\022 \n\034NEW_LINK_CREATI" +
-      "ON_SIDE_PANEL\020\024\022\036\n\032LAUNCH_APP_LINKS_ASSI" +
-      "STANT\020(\"\362\002\n$AppQualityInsightsUsageEvent" +
-      "LoggedIn\022k\n\025insight_fetch_details\030\022 \001(\0132" +
-      "H.android_studio.AppQualityInsightsUsage" +
-      "EventLoggedIn.InsightFetchDetailsB\002(\001\032k\n" +
-      "\023InsightFetchDetails\022T\n\006source\030\004 \001(\0162D.a" +
-      "ndroid_studio.AppQualityInsightsUsageEve" +
-      "ntLoggedIn.AiInsightSource\"p\n\017AiInsightS" +
-      "ource\022\022\n\016UNKNOWN_SOURCE\020\000\022 \n\034AI_INSIGHT_" +
-      "SOURCE_STUDIO_BOT\020\001\022\'\n#AI_INSIGHT_SOURCE" +
-      "_CRASHLYTICS_TITAN\020\002\"\216\006\n\036DirectAccessUsa" +
-      "geEventLoggedIn\022W\n\004type\030\001 \001(\0162I.android_" +
-      "studio.DirectAccessUsageEventLoggedIn.Di" +
-      "rectAccessUsageEventType\022g\n\026reserve_devi" +
-      "ce_details\030\003 \001(\0132C.android_studio.Direct" +
-      "AccessUsageEventLoggedIn.ReserveDeviceDe" +
-      "tailsB\002(\001\022g\n\026connect_device_details\030\004 \001(" +
-      "\0132C.android_studio.DirectAccessUsageEven" +
-      "tLoggedIn.ConnectDeviceDetailsB\002(\001\022g\n\026st" +
-      "ream_started_details\030\005 \001(\0132C.android_stu" +
-      "dio.DirectAccessUsageEventLoggedIn.Strea" +
-      "mStartedDetailsB\002(\001\032\'\n\024ReserveDeviceDeta" +
-      "ils\022\017\n\007success\030\001 \001(\010\032\'\n\024ConnectDeviceDet" +
-      "ails\022\017\n\007success\030\001 \001(\010\032\'\n\024StreamStartedDe" +
-      "tails\022\017\n\007success\030\001 \001(\010\"\334\001\n\032DirectAccessU" +
-      "sageEventType\022\021\n\rUNKNOWN_EVENT\020\000\022\022\n\016RESE" +
-      "RVE_DEVICE\020\001\022\022\n\016CONNECT_DEVICE\020\002\022\022\n\016STRE" +
-      "AM_STARTED\020\003\022\026\n\022EXTEND_RESERVATION\020\004\022\023\n\017" +
-      "END_RESERVATION\020\005\022\025\n\021DISCONNECT_DEVICE\020\006" +
-      "\022\027\n\023SERVICE_DEPRECATION\020\007\022\022\n\016OEM_LAB_DIA" +
-      "LOG\020\010\"\335\001\n\032SmlCompletionEventLoggedIn\022\\\n\t" +
-      "aggregate\030\005 \001(\0132C.android_studio.SmlComp" +
-      "letionEventLoggedIn.CompletionAggregateE" +
-      "ventB\002(\001H\000\032S\n\030CompletionAggregateEvent\022\031" +
-      "\n\021completions_shown\030\004 \001(\005\022\034\n\024completions" +
-      "_accepted\030\005 \001(\005B\014\n\ncompletion\"\305\005\n\031SmlTra" +
-      "nsformEventLoggedIn\022Q\n\007request\030\001 \001(\0132:.a" +
-      "ndroid_studio.SmlTransformEventLoggedIn." +
-      "TransformRequestB\002(\001H\000\022S\n\010response\030\002 \001(\013" +
-      "2;.android_studio.SmlTransformEventLogge" +
-      "dIn.TransformResponseB\002(\001H\000\022M\n\005shown\030\003 \001" +
-      "(\01328.android_studio.SmlTransformEventLog" +
-      "gedIn.TransformShownB\002(\001H\000\022S\n\010accepted\030\004" +
-      " \001(\0132;.android_studio.SmlTransformEventL" +
-      "oggedIn.TransformAcceptedB\002(\001H\000\022O\n\016trans" +
-      "form_kind\030\005 \001(\01627.android_studio.SmlTran" +
-      "sformEventLoggedIn.TransformKind\032\022\n\020Tran" +
-      "sformRequest\032\023\n\021TransformResponse\032\020\n\016Tra" +
-      "nsformShown\032\023\n\021TransformAccepted\032\023\n\021Tran" +
-      "sformRejected\"\230\001\n\rTransformKind\022\013\n\007UNKNO" +
-      "WN\020\000\022\n\n\006CUSTOM\020\001\022\014\n\010DOCUMENT\020\002\022\036\n\032MULTIM" +
-      "ODAL_COMPOSE_PREVIEW\020\003\022\034\n\030GENERATE_COMPO" +
-      "SE_PREVIEW\020\004\022\"\n\036GENERATE_INSIGHT_SUGGEST" +
-      "ED_FIX\020\005B\013\n\ttransform\"\321\005\n\027SmlChatBotEven" +
-      "tLoggedIn\022K\n\010response\030\001 \001(\01323.android_st" +
-      "udio.SmlChatBotEventLoggedIn.BotResponse" +
-      "B\002(\001H\000\022S\n\016action_invoked\030\003 \001(\01325.android" +
-      "_studio.SmlChatBotEventLoggedIn.ActionIn" +
-      "vokedB\002(\001H\000\032R\n\013BotResponse\022C\n\tchat_mode\030" +
-      "\004 \001(\01620.android_studio.SmlChatBotEventLo" +
-      "ggedIn.ChatMode\032O\n\rActionInvoked\022>\n\006acti" +
-      "on\030\002 \001(\0162..android_studio.SmlChatBotEven" +
-      "tLoggedIn.Action\"O\n\010ChatMode\022\016\n\nOTHER_MO" +
-      "DE\020\000\022\010\n\004CHAT\020\001\022\016\n\nAGENT_MODE\020\002\022\031\n\025VERSIO" +
-      "N_UPGRADE_AGENT\020\003\"\222\002\n\006Action\022\013\n\007INVALID\020" +
-      "\000\022\022\n\016MOVE_TO_EDITOR\020\001\022\021\n\rMOVE_TO_CARET\020\002" +
-      "\022\024\n\020MOVE_TO_NEW_FILE\020\003\022\022\n\016ADD_DEPENDENCY" +
-      "\020\004\022\020\n\014BROWSE_TOPIC\020\005\022\031\n\025EXPLORE_IN_PLAYG" +
-      "ROUND\020\006\022\022\n\016MERGE_MANIFEST\020\007\022\024\n\020MERGE_SUG" +
-      "GESTION\020\t\022\024\n\020INSERT_RESOURCES\020\n\022\033\n\027INSER" +
-      "T_NAME_SUGGESTIONS\020\013\022\017\n\013COPY_BUTTON\020\014\022\017\n" +
-      "\013COPY_MANUAL\020\rB\t\n\007content\"\252\004\n\035SmlConfigu" +
-      "rationEventLoggedIn\022\025\n\rsml_available\030\001 \001" +
-      "(\010\022\036\n\026bot_onboarding_started\030\004 \001(\010\022 \n\030bo" +
-      "t_onboarding_completed\030\005 \001(\010\022\032\n\022completi" +
-      "on_enabled\030\002 \001(\010\022\031\n\021transform_enabled\030\003 " +
-      "\001(\010\022\037\n\027project_context_enabled\030\006 \001(\010\022X\n\017" +
-      "product_variant\030\007 \001(\0162?.android_studio.S" +
-      "mlConfigurationEventLoggedIn.SmlProductV" +
-      "ariant\022!\n\031agent_auto_accept_enabled\030\010 \001(" +
-      "\010\"\332\001\n\021SmlProductVariant\022\033\n\027PRODUCT_VARIA" +
-      "NT_UNKNOWN\020\000\022\030\n\024PRODUCT_VARIANT_FREE\020\001\022\034" +
-      "\n\030PRODUCT_VARIANT_BUSINESS\020\002\022*\n\"PRODUCT_" +
-      "VARIANT_DASHER_USER_CHOICE\020\003\032\002\010\001\022\037\n\033PROD" +
-      "UCT_VARIANT_DASHER_FREE\020\004\022#\n\037PRODUCT_VAR" +
-      "IANT_DASHER_BUSINESS\020\005\"\201\004\n\031TestScenarioE" +
-      "ventLoggedIn\022T\n\007request\030\001 \001(\0132=.android_" +
-      "studio.TestScenarioEventLoggedIn.TestSce" +
-      "narioRequestB\002(\001H\000\022`\n\024test_scenario_resu" +
-      "lt\030\003 \001(\0132<.android_studio.TestScenarioEv" +
-      "entLoggedIn.TestScenarioResultB\002(\001H\000\032\025\n\023" +
-      "TestScenarioRequest\032\265\001\n\022TestScenarioResu" +
-      "lt\022#\n\033misformatted_response_count\030\001 \001(\005\022" +
-      "Q\n\017generation_type\030\002 \001(\01628.android_studi" +
-      "o.TestScenarioEventLoggedIn.GenerationTy" +
-      "pe\022\022\n\nnum_accept\030\003 \001(\005\022\023\n\013num_decline\030\004 " +
-      "\001(\005\"P\n\016GenerationType\022\035\n\031GENERATION_TYPE" +
-      "_UNDEFINED\020\000\022\014\n\010NEW_FILE\020\001\022\021\n\rEXISTING_F" +
-      "ILE\020\002B\013\n\ttransform\"*\n(DeviceConnectedNot" +
-      "ificationEventLoggedIn\"\205\002\n$StudioCoreGem" +
-      "iniActionsEventLoggedIn\022K\n\006action\030\001 \001(\0162" +
-      ";.android_studio.StudioCoreGeminiActions" +
-      "EventLoggedIn.Action\022\025\n\rresults_count\030\005 " +
-      "\001(\005\022\025\n\rresults_taken\030\006 \001(\005\"b\n\006Action\022\013\n\007" +
-      "UNKNOWN\020\000\022\023\n\017RENAME_VARIABLE\020\001\022\032\n\026RETHIN" +
-      "K_VARIABLE_NAMES\020\002\022\032\n\026SUGGEST_COMMIT_MES" +
-      "SAGE\020\003\"\361\001\n\027StudioLabsEventLoggedIn\022Q\n\020pa" +
-      "ge_interaction\030\002 \001(\01627.android_studio.St" +
-      "udioLabsEventLoggedIn.PageInteraction\"\202\001" +
-      "\n\017PageInteraction\022\027\n\023UNKNOWN_INTERACTION" +
-      "\020\000\022\n\n\006OPENED\020\001\022\030\n\024APPLY_BUTTON_CLICKED\020\002" +
-      "\022\031\n\025CANCEL_BUTTON_CLICKED\020\003\022\025\n\021OK_BUTTON" +
-      "_CLICKED\020\004\"\245\002\n\032PromptLibraryEventLoggedI" +
-      "n\022A\n\006update\030\001 \001(\01321.android_studio.Promp" +
-      "tLibraryEventLoggedIn.Update\022A\n\006invoke\030\002" +
-      " \001(\01321.android_studio.PromptLibraryEvent" +
-      "LoggedIn.Invoke\032w\n\006Update\022\032\n\022prompts_in_" +
-      "library\030\001 \001(\005\022\023\n\013rules_count\030\002 \001(\005\022 \n\030bu" +
-      "iltins_overrides_count\030\003 \001(\005\022\032\n\022user_pro" +
-      "mpts_count\030\004 \001(\005\032\010\n\006Invoke\"\361\001\n$PlayPolic" +
-      "yInsightsUsageEventLoggedIn\022c\n\004type\030\001 \001(" +
-      "\0162U.android_studio.PlayPolicyInsightsUsa" +
-      "geEventLoggedIn.PlayPolicyInsightsUsageE" +
-      "ventType\"d\n PlayPolicyInsightsUsageEvent" +
-      "Type\022\021\n\rUNKNOWN_EVENT\020\000\022\027\n\023SERVICE_DEPRE" +
-      "CATION\020\001\022\024\n\020BATCH_INSPECTION\020\002BE\n%com.go" +
-      "ogle.wireless.android.sdk.statsB\032Android" +
-      "StudioStatsLoggedInP\001"
+      "sageEventLoggedInB\002(\001\022?\n\rtsdk_ua_event\030\240" +
+      "\001 \001(\0132#.android_studio.TSdkUAEventLogged" +
+      "InB\002(\001\022M\n\024sml_completion_event\030\247\001 \001(\0132*." +
+      "android_studio.SmlCompletionEventLoggedI" +
+      "nB\002(\001\022K\n\023sml_transform_event\030\250\001 \001(\0132).an" +
+      "droid_studio.SmlTransformEventLoggedInB\002" +
+      "(\001\022H\n\022sml_chat_bot_event\030\251\001 \001(\0132\'.androi" +
+      "d_studio.SmlChatBotEventLoggedInB\002(\001\022S\n\027" +
+      "sml_configuration_event\030\252\001 \001(\0132-.android" +
+      "_studio.SmlConfigurationEventLoggedInB\002(" +
+      "\001\022W\n\020device_connected\030\277\001 \001(\01328.android_s" +
+      "tudio.DeviceConnectedNotificationEventLo" +
+      "ggedInB\002(\001\022K\n\023test_scenario_event\030\301\001 \001(\013" +
+      "2).android_studio.TestScenarioEventLogge" +
+      "dInB\002(\001\022k\n(android_studio_core_gemini_ac" +
+      "tions_event\030\317\001 \001(\01324.android_studio.Stud" +
+      "ioCoreGeminiActionsEventLoggedInB\002(\001\022G\n\021" +
+      "studio_labs_event\030\323\001 \001(\0132\'.android_studi" +
+      "o.StudioLabsEventLoggedInB\002(\001\022M\n\024prompt_" +
+      "library_event\030\324\001 \001(\0132*.android_studio.Pr" +
+      "omptLibraryEventLoggedInB\002(\001\022Q\n\026journey_" +
+      "finished_event\030\343\001 \001(\0132,.android_studio.J" +
+      "ourneyFinishedEventLoggedInB\002(\001\022c\n play_" +
+      "policy_insights_usage_event\030\354\001 \001(\01324.and" +
+      "roid_studio.PlayPolicyInsightsUsageEvent" +
+      "LoggedInB\002(\001\022M\n\024model_provider_event\030\355\001 " +
+      "\001(\0132*.android_studio.ModelProviderEventL" +
+      "oggedInB\002(\001\022X\n\032next_edit_prediction_even" +
+      "t\030\361\001 \001(\0132/.android_studio.NextEditPredic" +
+      "tionEventLoggedInB\002(\001\022>\n\014skills_event\030\371\001" +
+      " \001(\0132#.android_studio.SkillsEventLoggedI" +
+      "nB\002(\001\"2\n\025UIActionStatsLoggedIn\022\031\n\021action" +
+      "_class_name\030\001 \001(\t\"\300\003\n\036AppLinksAssistantE" +
+      "ventLoggedIn\022P\n\014event_source\030\003 \001(\0162:.and" +
+      "roid_studio.AppLinksAssistantEventLogged" +
+      "In.EventSource\022`\n\022validation_summary\030\013 \001" +
+      "(\0132@.android_studio.AppLinksAssistantEve" +
+      "ntLoggedIn.ValidationSummaryB\002(\001\022]\n\021inte" +
+      "nt_filter_fix\030\014 \001(\0132>.android_studio.App" +
+      "LinksAssistantEventLoggedIn.IntentFilter" +
+      "FixB\002(\001\032\023\n\021ValidationSummary\032\021\n\017IntentFi" +
+      "lterFix\"c\n\013EventSource\022\022\n\016UNKNOWN_SOURCE" +
+      "\020\000\022 \n\034NEW_LINK_CREATION_SIDE_PANEL\020\024\022\036\n\032" +
+      "LAUNCH_APP_LINKS_ASSISTANT\020(\"\362\002\n$AppQual" +
+      "ityInsightsUsageEventLoggedIn\022k\n\025insight" +
+      "_fetch_details\030\022 \001(\0132H.android_studio.Ap" +
+      "pQualityInsightsUsageEventLoggedIn.Insig" +
+      "htFetchDetailsB\002(\001\032k\n\023InsightFetchDetail" +
+      "s\022T\n\006source\030\004 \001(\0162D.android_studio.AppQu" +
+      "alityInsightsUsageEventLoggedIn.AiInsigh" +
+      "tSource\"p\n\017AiInsightSource\022\022\n\016UNKNOWN_SO" +
+      "URCE\020\000\022 \n\034AI_INSIGHT_SOURCE_STUDIO_BOT\020\001" +
+      "\022\'\n#AI_INSIGHT_SOURCE_CRASHLYTICS_TITAN\020" +
+      "\002\"\216\006\n\036DirectAccessUsageEventLoggedIn\022W\n\004" +
+      "type\030\001 \001(\0162I.android_studio.DirectAccess" +
+      "UsageEventLoggedIn.DirectAccessUsageEven" +
+      "tType\022g\n\026reserve_device_details\030\003 \001(\0132C." +
+      "android_studio.DirectAccessUsageEventLog" +
+      "gedIn.ReserveDeviceDetailsB\002(\001\022g\n\026connec" +
+      "t_device_details\030\004 \001(\0132C.android_studio." +
+      "DirectAccessUsageEventLoggedIn.ConnectDe" +
+      "viceDetailsB\002(\001\022g\n\026stream_started_detail" +
+      "s\030\005 \001(\0132C.android_studio.DirectAccessUsa" +
+      "geEventLoggedIn.StreamStartedDetailsB\002(\001" +
+      "\032\'\n\024ReserveDeviceDetails\022\017\n\007success\030\001 \001(" +
+      "\010\032\'\n\024ConnectDeviceDetails\022\017\n\007success\030\001 \001" +
+      "(\010\032\'\n\024StreamStartedDetails\022\017\n\007success\030\001 " +
+      "\001(\010\"\334\001\n\032DirectAccessUsageEventType\022\021\n\rUN" +
+      "KNOWN_EVENT\020\000\022\022\n\016RESERVE_DEVICE\020\001\022\022\n\016CON" +
+      "NECT_DEVICE\020\002\022\022\n\016STREAM_STARTED\020\003\022\026\n\022EXT" +
+      "END_RESERVATION\020\004\022\023\n\017END_RESERVATION\020\005\022\025" +
+      "\n\021DISCONNECT_DEVICE\020\006\022\027\n\023SERVICE_DEPRECA" +
+      "TION\020\007\022\022\n\016OEM_LAB_DIALOG\020\010\"\025\n\023TSdkUAEven" +
+      "tLoggedIn\"\323\002\n\033SmlResponseMetadataLoggedI" +
+      "n\022\031\n\021model_provider_id\030\004 \001(\t\022\020\n\010model_id" +
+      "\030\005 \001(\t\022T\n\nagent_type\030\007 \001(\0162@.android_stu" +
+      "dio.SmlResponseMetadataLoggedIn.SmlAgent" +
+      "TypeLoggedIn\"\260\001\n\024SmlAgentTypeLoggedIn\022\032\n" +
+      "\026AGENT_TYPE_UNSPECIFIED\020\000\022\026\n\022AGENT_TYPE_" +
+      "GENERIC\020\001\022\034\n\030AGENT_TYPE_UPGRADE_AGENT\020\002\022" +
+      " \n\034AGENT_TYPE_NEW_PROJECT_AGENT\020\003\022$\n AGE" +
+      "NT_TYPE_DEEP_LINK_LOGIC_AGENT\020\004\"\335\001\n\032SmlC" +
+      "ompletionEventLoggedIn\022\\\n\taggregate\030\005 \001(" +
+      "\0132C.android_studio.SmlCompletionEventLog" +
+      "gedIn.CompletionAggregateEventB\002(\001H\000\032S\n\030" +
+      "CompletionAggregateEvent\022\031\n\021completions_" +
+      "shown\030\004 \001(\005\022\034\n\024completions_accepted\030\005 \001(" +
+      "\005B\014\n\ncompletion\"\305\005\n\031SmlTransformEventLog" +
+      "gedIn\022Q\n\007request\030\001 \001(\0132:.android_studio." +
+      "SmlTransformEventLoggedIn.TransformReque" +
+      "stB\002(\001H\000\022S\n\010response\030\002 \001(\0132;.android_stu" +
+      "dio.SmlTransformEventLoggedIn.TransformR" +
+      "esponseB\002(\001H\000\022M\n\005shown\030\003 \001(\01328.android_s" +
+      "tudio.SmlTransformEventLoggedIn.Transfor" +
+      "mShownB\002(\001H\000\022S\n\010accepted\030\004 \001(\0132;.android" +
+      "_studio.SmlTransformEventLoggedIn.Transf" +
+      "ormAcceptedB\002(\001H\000\022O\n\016transform_kind\030\005 \001(" +
+      "\01627.android_studio.SmlTransformEventLogg" +
+      "edIn.TransformKind\032\022\n\020TransformRequest\032\023" +
+      "\n\021TransformResponse\032\020\n\016TransformShown\032\023\n" +
+      "\021TransformAccepted\032\023\n\021TransformRejected\"" +
+      "\230\001\n\rTransformKind\022\013\n\007UNKNOWN\020\000\022\n\n\006CUSTOM" +
+      "\020\001\022\014\n\010DOCUMENT\020\002\022\036\n\032MULTIMODAL_COMPOSE_P" +
+      "REVIEW\020\003\022\034\n\030GENERATE_COMPOSE_PREVIEW\020\004\022\"" +
+      "\n\036GENERATE_INSIGHT_SUGGESTED_FIX\020\005B\013\n\ttr" +
+      "ansform\"\263\006\n\027SmlChatBotEventLoggedIn\022K\n\010r" +
+      "esponse\030\001 \001(\01323.android_studio.SmlChatBo" +
+      "tEventLoggedIn.BotResponseB\002(\001H\000\022S\n\016acti" +
+      "on_invoked\030\003 \001(\01325.android_studio.SmlCha" +
+      "tBotEventLoggedIn.ActionInvokedB\002(\001H\000\032\225\001" +
+      "\n\013BotResponse\022A\n\010metadata\030\001 \001(\0132+.androi" +
+      "d_studio.SmlResponseMetadataLoggedInB\002(\001" +
+      "\022C\n\tchat_mode\030\004 \001(\01620.android_studio.Sml" +
+      "ChatBotEventLoggedIn.ChatMode\032O\n\rActionI" +
+      "nvoked\022>\n\006action\030\002 \001(\0162..android_studio." +
+      "SmlChatBotEventLoggedIn.Action\"m\n\010ChatMo" +
+      "de\022\016\n\nOTHER_MODE\020\000\022\010\n\004CHAT\020\001\022\016\n\nAGENT_MO" +
+      "DE\020\002\022\031\n\025VERSION_UPGRADE_AGENT\020\003\022\016\n\nQUICK" +
+      "_EDIT\020\004\022\014\n\010PLANNING\020\005\"\222\002\n\006Action\022\013\n\007INVA" +
+      "LID\020\000\022\022\n\016MOVE_TO_EDITOR\020\001\022\021\n\rMOVE_TO_CAR" +
+      "ET\020\002\022\024\n\020MOVE_TO_NEW_FILE\020\003\022\022\n\016ADD_DEPEND" +
+      "ENCY\020\004\022\020\n\014BROWSE_TOPIC\020\005\022\031\n\025EXPLORE_IN_P" +
+      "LAYGROUND\020\006\022\022\n\016MERGE_MANIFEST\020\007\022\024\n\020MERGE" +
+      "_SUGGESTION\020\t\022\024\n\020INSERT_RESOURCES\020\n\022\033\n\027I" +
+      "NSERT_NAME_SUGGESTIONS\020\013\022\017\n\013COPY_BUTTON\020" +
+      "\014\022\017\n\013COPY_MANUAL\020\rB\t\n\007content\"\252\004\n\035SmlCon" +
+      "figurationEventLoggedIn\022\025\n\rsml_available" +
+      "\030\001 \001(\010\022\036\n\026bot_onboarding_started\030\004 \001(\010\022 " +
+      "\n\030bot_onboarding_completed\030\005 \001(\010\022\032\n\022comp" +
+      "letion_enabled\030\002 \001(\010\022\031\n\021transform_enable" +
+      "d\030\003 \001(\010\022\037\n\027project_context_enabled\030\006 \001(\010" +
+      "\022X\n\017product_variant\030\007 \001(\0162?.android_stud" +
+      "io.SmlConfigurationEventLoggedIn.SmlProd" +
+      "uctVariant\022!\n\031agent_auto_accept_enabled\030" +
+      "\010 \001(\010\"\332\001\n\021SmlProductVariant\022\033\n\027PRODUCT_V" +
+      "ARIANT_UNKNOWN\020\000\022\030\n\024PRODUCT_VARIANT_FREE" +
+      "\020\001\022\034\n\030PRODUCT_VARIANT_BUSINESS\020\002\022*\n\"PROD" +
+      "UCT_VARIANT_DASHER_USER_CHOICE\020\003\032\002\010\001\022\037\n\033" +
+      "PRODUCT_VARIANT_DASHER_FREE\020\004\022#\n\037PRODUCT" +
+      "_VARIANT_DASHER_BUSINESS\020\005\"\201\004\n\031TestScena" +
+      "rioEventLoggedIn\022T\n\007request\030\001 \001(\0132=.andr" +
+      "oid_studio.TestScenarioEventLoggedIn.Tes" +
+      "tScenarioRequestB\002(\001H\000\022`\n\024test_scenario_" +
+      "result\030\003 \001(\0132<.android_studio.TestScenar" +
+      "ioEventLoggedIn.TestScenarioResultB\002(\001H\000" +
+      "\032\025\n\023TestScenarioRequest\032\265\001\n\022TestScenario" +
+      "Result\022#\n\033misformatted_response_count\030\001 " +
+      "\001(\005\022Q\n\017generation_type\030\002 \001(\01628.android_s" +
+      "tudio.TestScenarioEventLoggedIn.Generati" +
+      "onType\022\022\n\nnum_accept\030\003 \001(\005\022\023\n\013num_declin" +
+      "e\030\004 \001(\005\"P\n\016GenerationType\022\035\n\031GENERATION_" +
+      "TYPE_UNDEFINED\020\000\022\014\n\010NEW_FILE\020\001\022\021\n\rEXISTI" +
+      "NG_FILE\020\002B\013\n\ttransform\"*\n(DeviceConnecte" +
+      "dNotificationEventLoggedIn\"\205\002\n$StudioCor" +
+      "eGeminiActionsEventLoggedIn\022K\n\006action\030\001 " +
+      "\001(\0162;.android_studio.StudioCoreGeminiAct" +
+      "ionsEventLoggedIn.Action\022\025\n\rresults_coun" +
+      "t\030\005 \001(\005\022\025\n\rresults_taken\030\006 \001(\005\"b\n\006Action" +
+      "\022\013\n\007UNKNOWN\020\000\022\023\n\017RENAME_VARIABLE\020\001\022\032\n\026RE" +
+      "THINK_VARIABLE_NAMES\020\002\022\032\n\026SUGGEST_COMMIT" +
+      "_MESSAGE\020\003\"\361\001\n\027StudioLabsEventLoggedIn\022Q" +
+      "\n\020page_interaction\030\002 \001(\01627.android_studi" +
+      "o.StudioLabsEventLoggedIn.PageInteractio" +
+      "n\"\202\001\n\017PageInteraction\022\027\n\023UNKNOWN_INTERAC" +
+      "TION\020\000\022\n\n\006OPENED\020\001\022\030\n\024APPLY_BUTTON_CLICK" +
+      "ED\020\002\022\031\n\025CANCEL_BUTTON_CLICKED\020\003\022\025\n\021OK_BU" +
+      "TTON_CLICKED\020\004\"\245\002\n\032PromptLibraryEventLog" +
+      "gedIn\022A\n\006update\030\001 \001(\01321.android_studio.P" +
+      "romptLibraryEventLoggedIn.Update\022A\n\006invo" +
+      "ke\030\002 \001(\01321.android_studio.PromptLibraryE" +
+      "ventLoggedIn.Invoke\032w\n\006Update\022\032\n\022prompts" +
+      "_in_library\030\001 \001(\005\022\023\n\013rules_count\030\002 \001(\005\022 " +
+      "\n\030builtins_overrides_count\030\003 \001(\005\022\032\n\022user" +
+      "_prompts_count\030\004 \001(\005\032\010\n\006Invoke\"\272\001\n\034Journ" +
+      "eyFinishedEventLoggedIn\022L\n\013test_result\030\001" +
+      " \001(\01627.android_studio.JourneyFinishedEve" +
+      "ntLoggedIn.TestResult\"L\n\nTestResult\022\013\n\007U" +
+      "NKNOWN\020\000\022\n\n\006PASSED\020\001\022\n\n\006FAILED\020\002\022\013\n\007ABOR" +
+      "TED\020\003\022\014\n\010CANCELED\020\004\"\361\001\n$PlayPolicyInsigh" +
+      "tsUsageEventLoggedIn\022c\n\004type\030\001 \001(\0162U.and" +
+      "roid_studio.PlayPolicyInsightsUsageEvent" +
+      "LoggedIn.PlayPolicyInsightsUsageEventTyp" +
+      "e\"d\n PlayPolicyInsightsUsageEventType\022\021\n" +
+      "\rUNKNOWN_EVENT\020\000\022\027\n\023SERVICE_DEPRECATION\020" +
+      "\001\022\024\n\020BATCH_INSPECTION\020\002\"\332\001\n\032ModelProvide" +
+      "rEventLoggedIn\022A\n\006update\030\001 \001(\01321.android" +
+      "_studio.ModelProviderEventLoggedIn.Updat" +
+      "e\032y\n\006Update\022#\n\033local_model_providers_cou" +
+      "nt\030\001 \001(\005\022$\n\034remote_model_providers_count" +
+      "\030\002 \001(\005\022$\n\034gemini_model_providers_count\030\003" +
+      " \001(\005\"\352\006\n\037NextEditPredictionEventLoggedIn" +
+      "\022T\n\005shown\030\001 \001(\0132?.android_studio.NextEdi" +
+      "tPredictionEventLoggedIn.PredictionShown" +
+      "B\002(\001H\000\022Z\n\010accepted\030\002 \001(\0132B.android_studi" +
+      "o.NextEditPredictionEventLoggedIn.Predic" +
+      "tionAcceptedB\002(\001H\000\022N\n\007session\030\006 \001(\01327.an" +
+      "droid_studio.NextEditPredictionEventLogg" +
+      "edIn.SessionB\002(\001H\000\032\021\n\017PredictionShown\032\024\n" +
+      "\022PredictionAccepted\032\203\004\n\007Session\022T\n\006event" +
+      "s\030\005 \003(\0132D.android_studio.NextEditPredict" +
+      "ionEventLoggedIn.Session.SessionEvent\032\241\003" +
+      "\n\014SessionEvent\022\\\n\004type\030\001 \001(\0162N.android_s" +
+      "tudio.NextEditPredictionEventLoggedIn.Se" +
+      "ssion.SessionEvent.EventType\"\262\002\n\tEventTy" +
+      "pe\022\026\n\022UNKNOWN_EVENT_TYPE\020\000\022\020\n\014REQUEST_SE" +
+      "NT\020\001\022\025\n\021RESPONSE_RECEIVED\020\002\022\024\n\020PREDICTIO" +
+      "N_SHOWN\020\003\022\027\n\023PREDICTION_ACCEPTED\020\004\022\027\n\023PR" +
+      "EDICTION_REJECTED\020\005\022\025\n\021SESSION_CANCELLED" +
+      "\020\006\022\021\n\rCONTROL_SHOWN\020\007\022\024\n\020CONTROL_ACCEPTE" +
+      "D\020\010\022\024\n\020CONTROL_REJECTED\020\t\022\022\n\016CONTROL_HID" +
+      "DEN\020\n\022\025\n\021PREDICTION_FAILED\020\013\022\033\n\027CONTROL_" +
+      "DISPOSED_UNSEEN\020\014B\026\n\024next_edit_predictio" +
+      "n\"X\n\023SkillsEventLoggedIn\022A\n\010metadata\030\001 \001" +
+      "(\0132+.android_studio.SmlResponseMetadataL" +
+      "oggedInB\002(\001BE\n%com.google.wireless.andro" +
+      "id.sdk.statsB\032AndroidStudioStatsLoggedIn" +
+      "P\001"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -369,7 +480,7 @@ public final class AndroidStudioStatsLoggedIn {
     internal_static_android_studio_AndroidStudioEventLoggedIn_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_android_studio_AndroidStudioEventLoggedIn_descriptor,
-        new java.lang.String[] { "UiActionStats", "AppLinksAssistantEvent", "AppQualityInsightsUsageEvent", "DirectAccessUsageEvent", "SmlCompletionEvent", "SmlTransformEvent", "SmlChatBotEvent", "SmlConfigurationEvent", "DeviceConnected", "TestScenarioEvent", "AndroidStudioCoreGeminiActionsEvent", "StudioLabsEvent", "PromptLibraryEvent", "PlayPolicyInsightsUsageEvent", });
+        new java.lang.String[] { "UiActionStats", "AppLinksAssistantEvent", "AppQualityInsightsUsageEvent", "DirectAccessUsageEvent", "TsdkUaEvent", "SmlCompletionEvent", "SmlTransformEvent", "SmlChatBotEvent", "SmlConfigurationEvent", "DeviceConnected", "TestScenarioEvent", "AndroidStudioCoreGeminiActionsEvent", "StudioLabsEvent", "PromptLibraryEvent", "JourneyFinishedEvent", "PlayPolicyInsightsUsageEvent", "ModelProviderEvent", "NextEditPredictionEvent", "SkillsEvent", });
     internal_static_android_studio_UIActionStatsLoggedIn_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_android_studio_UIActionStatsLoggedIn_fieldAccessorTable = new
@@ -430,8 +541,20 @@ public final class AndroidStudioStatsLoggedIn {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_android_studio_DirectAccessUsageEventLoggedIn_StreamStartedDetails_descriptor,
         new java.lang.String[] { "Success", });
-    internal_static_android_studio_SmlCompletionEventLoggedIn_descriptor =
+    internal_static_android_studio_TSdkUAEventLoggedIn_descriptor =
       getDescriptor().getMessageTypes().get(5);
+    internal_static_android_studio_TSdkUAEventLoggedIn_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_android_studio_TSdkUAEventLoggedIn_descriptor,
+        new java.lang.String[] { });
+    internal_static_android_studio_SmlResponseMetadataLoggedIn_descriptor =
+      getDescriptor().getMessageTypes().get(6);
+    internal_static_android_studio_SmlResponseMetadataLoggedIn_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_android_studio_SmlResponseMetadataLoggedIn_descriptor,
+        new java.lang.String[] { "ModelProviderId", "ModelId", "AgentType", });
+    internal_static_android_studio_SmlCompletionEventLoggedIn_descriptor =
+      getDescriptor().getMessageTypes().get(7);
     internal_static_android_studio_SmlCompletionEventLoggedIn_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_android_studio_SmlCompletionEventLoggedIn_descriptor,
@@ -443,7 +566,7 @@ public final class AndroidStudioStatsLoggedIn {
         internal_static_android_studio_SmlCompletionEventLoggedIn_CompletionAggregateEvent_descriptor,
         new java.lang.String[] { "CompletionsShown", "CompletionsAccepted", });
     internal_static_android_studio_SmlTransformEventLoggedIn_descriptor =
-      getDescriptor().getMessageTypes().get(6);
+      getDescriptor().getMessageTypes().get(8);
     internal_static_android_studio_SmlTransformEventLoggedIn_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_android_studio_SmlTransformEventLoggedIn_descriptor,
@@ -479,7 +602,7 @@ public final class AndroidStudioStatsLoggedIn {
         internal_static_android_studio_SmlTransformEventLoggedIn_TransformRejected_descriptor,
         new java.lang.String[] { });
     internal_static_android_studio_SmlChatBotEventLoggedIn_descriptor =
-      getDescriptor().getMessageTypes().get(7);
+      getDescriptor().getMessageTypes().get(9);
     internal_static_android_studio_SmlChatBotEventLoggedIn_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_android_studio_SmlChatBotEventLoggedIn_descriptor,
@@ -489,7 +612,7 @@ public final class AndroidStudioStatsLoggedIn {
     internal_static_android_studio_SmlChatBotEventLoggedIn_BotResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_android_studio_SmlChatBotEventLoggedIn_BotResponse_descriptor,
-        new java.lang.String[] { "ChatMode", });
+        new java.lang.String[] { "Metadata", "ChatMode", });
     internal_static_android_studio_SmlChatBotEventLoggedIn_ActionInvoked_descriptor =
       internal_static_android_studio_SmlChatBotEventLoggedIn_descriptor.getNestedTypes().get(1);
     internal_static_android_studio_SmlChatBotEventLoggedIn_ActionInvoked_fieldAccessorTable = new
@@ -497,13 +620,13 @@ public final class AndroidStudioStatsLoggedIn {
         internal_static_android_studio_SmlChatBotEventLoggedIn_ActionInvoked_descriptor,
         new java.lang.String[] { "Action", });
     internal_static_android_studio_SmlConfigurationEventLoggedIn_descriptor =
-      getDescriptor().getMessageTypes().get(8);
+      getDescriptor().getMessageTypes().get(10);
     internal_static_android_studio_SmlConfigurationEventLoggedIn_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_android_studio_SmlConfigurationEventLoggedIn_descriptor,
         new java.lang.String[] { "SmlAvailable", "BotOnboardingStarted", "BotOnboardingCompleted", "CompletionEnabled", "TransformEnabled", "ProjectContextEnabled", "ProductVariant", "AgentAutoAcceptEnabled", });
     internal_static_android_studio_TestScenarioEventLoggedIn_descriptor =
-      getDescriptor().getMessageTypes().get(9);
+      getDescriptor().getMessageTypes().get(11);
     internal_static_android_studio_TestScenarioEventLoggedIn_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_android_studio_TestScenarioEventLoggedIn_descriptor,
@@ -521,25 +644,25 @@ public final class AndroidStudioStatsLoggedIn {
         internal_static_android_studio_TestScenarioEventLoggedIn_TestScenarioResult_descriptor,
         new java.lang.String[] { "MisformattedResponseCount", "GenerationType", "NumAccept", "NumDecline", });
     internal_static_android_studio_DeviceConnectedNotificationEventLoggedIn_descriptor =
-      getDescriptor().getMessageTypes().get(10);
+      getDescriptor().getMessageTypes().get(12);
     internal_static_android_studio_DeviceConnectedNotificationEventLoggedIn_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_android_studio_DeviceConnectedNotificationEventLoggedIn_descriptor,
         new java.lang.String[] { });
     internal_static_android_studio_StudioCoreGeminiActionsEventLoggedIn_descriptor =
-      getDescriptor().getMessageTypes().get(11);
+      getDescriptor().getMessageTypes().get(13);
     internal_static_android_studio_StudioCoreGeminiActionsEventLoggedIn_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_android_studio_StudioCoreGeminiActionsEventLoggedIn_descriptor,
         new java.lang.String[] { "Action", "ResultsCount", "ResultsTaken", });
     internal_static_android_studio_StudioLabsEventLoggedIn_descriptor =
-      getDescriptor().getMessageTypes().get(12);
+      getDescriptor().getMessageTypes().get(14);
     internal_static_android_studio_StudioLabsEventLoggedIn_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_android_studio_StudioLabsEventLoggedIn_descriptor,
         new java.lang.String[] { "PageInteraction", });
     internal_static_android_studio_PromptLibraryEventLoggedIn_descriptor =
-      getDescriptor().getMessageTypes().get(13);
+      getDescriptor().getMessageTypes().get(15);
     internal_static_android_studio_PromptLibraryEventLoggedIn_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_android_studio_PromptLibraryEventLoggedIn_descriptor,
@@ -556,12 +679,66 @@ public final class AndroidStudioStatsLoggedIn {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_android_studio_PromptLibraryEventLoggedIn_Invoke_descriptor,
         new java.lang.String[] { });
+    internal_static_android_studio_JourneyFinishedEventLoggedIn_descriptor =
+      getDescriptor().getMessageTypes().get(16);
+    internal_static_android_studio_JourneyFinishedEventLoggedIn_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_android_studio_JourneyFinishedEventLoggedIn_descriptor,
+        new java.lang.String[] { "TestResult", });
     internal_static_android_studio_PlayPolicyInsightsUsageEventLoggedIn_descriptor =
-      getDescriptor().getMessageTypes().get(14);
+      getDescriptor().getMessageTypes().get(17);
     internal_static_android_studio_PlayPolicyInsightsUsageEventLoggedIn_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_android_studio_PlayPolicyInsightsUsageEventLoggedIn_descriptor,
         new java.lang.String[] { "Type", });
+    internal_static_android_studio_ModelProviderEventLoggedIn_descriptor =
+      getDescriptor().getMessageTypes().get(18);
+    internal_static_android_studio_ModelProviderEventLoggedIn_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_android_studio_ModelProviderEventLoggedIn_descriptor,
+        new java.lang.String[] { "Update", });
+    internal_static_android_studio_ModelProviderEventLoggedIn_Update_descriptor =
+      internal_static_android_studio_ModelProviderEventLoggedIn_descriptor.getNestedTypes().get(0);
+    internal_static_android_studio_ModelProviderEventLoggedIn_Update_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_android_studio_ModelProviderEventLoggedIn_Update_descriptor,
+        new java.lang.String[] { "LocalModelProvidersCount", "RemoteModelProvidersCount", "GeminiModelProvidersCount", });
+    internal_static_android_studio_NextEditPredictionEventLoggedIn_descriptor =
+      getDescriptor().getMessageTypes().get(19);
+    internal_static_android_studio_NextEditPredictionEventLoggedIn_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_android_studio_NextEditPredictionEventLoggedIn_descriptor,
+        new java.lang.String[] { "Shown", "Accepted", "Session", "NextEditPrediction", });
+    internal_static_android_studio_NextEditPredictionEventLoggedIn_PredictionShown_descriptor =
+      internal_static_android_studio_NextEditPredictionEventLoggedIn_descriptor.getNestedTypes().get(0);
+    internal_static_android_studio_NextEditPredictionEventLoggedIn_PredictionShown_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_android_studio_NextEditPredictionEventLoggedIn_PredictionShown_descriptor,
+        new java.lang.String[] { });
+    internal_static_android_studio_NextEditPredictionEventLoggedIn_PredictionAccepted_descriptor =
+      internal_static_android_studio_NextEditPredictionEventLoggedIn_descriptor.getNestedTypes().get(1);
+    internal_static_android_studio_NextEditPredictionEventLoggedIn_PredictionAccepted_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_android_studio_NextEditPredictionEventLoggedIn_PredictionAccepted_descriptor,
+        new java.lang.String[] { });
+    internal_static_android_studio_NextEditPredictionEventLoggedIn_Session_descriptor =
+      internal_static_android_studio_NextEditPredictionEventLoggedIn_descriptor.getNestedTypes().get(2);
+    internal_static_android_studio_NextEditPredictionEventLoggedIn_Session_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_android_studio_NextEditPredictionEventLoggedIn_Session_descriptor,
+        new java.lang.String[] { "Events", });
+    internal_static_android_studio_NextEditPredictionEventLoggedIn_Session_SessionEvent_descriptor =
+      internal_static_android_studio_NextEditPredictionEventLoggedIn_Session_descriptor.getNestedTypes().get(0);
+    internal_static_android_studio_NextEditPredictionEventLoggedIn_Session_SessionEvent_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_android_studio_NextEditPredictionEventLoggedIn_Session_SessionEvent_descriptor,
+        new java.lang.String[] { "Type", });
+    internal_static_android_studio_SkillsEventLoggedIn_descriptor =
+      getDescriptor().getMessageTypes().get(20);
+    internal_static_android_studio_SkillsEventLoggedIn_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_android_studio_SkillsEventLoggedIn_descriptor,
+        new java.lang.String[] { "Metadata", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)
