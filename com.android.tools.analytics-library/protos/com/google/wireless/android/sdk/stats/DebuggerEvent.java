@@ -2849,6 +2849,10 @@ private static final long serialVersionUID = 0L;
        * <code>DEVICE = 3;</code>
        */
       DEVICE(3),
+      /**
+       * <code>FILES = 4;</code>
+       */
+      FILES(4),
       ;
 
       /**
@@ -2867,6 +2871,10 @@ private static final long serialVersionUID = 0L;
        * <code>DEVICE = 3;</code>
        */
       public static final int DEVICE_VALUE = 3;
+      /**
+       * <code>FILES = 4;</code>
+       */
+      public static final int FILES_VALUE = 4;
 
 
       public final int getNumber() {
@@ -2893,6 +2901,7 @@ private static final long serialVersionUID = 0L;
           case 1: return APK_PROVIDER;
           case 2: return DEVICE_FALLBACK;
           case 3: return DEVICE;
+          case 4: return FILES;
           default: return null;
         }
       }
