@@ -6268,4 +6268,31 @@ public interface AndroidStudioEventOrBuilder extends
    * <code>optional .android_studio.CommitMetricsEvent commit_metrics_event = 224 [lazy = true];</code>
    */
   com.google.wireless.android.sdk.stats.CommitMetricsEventOrBuilder getCommitMetricsEventOrBuilder();
+
+  /**
+   * <pre>
+   * set when kind = K2_MODE_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.K2ModeEvent k2_mode_event = 226 [lazy = true];</code>
+   * @return Whether the k2ModeEvent field is set.
+   */
+  boolean hasK2ModeEvent();
+  /**
+   * <pre>
+   * set when kind = K2_MODE_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.K2ModeEvent k2_mode_event = 226 [lazy = true];</code>
+   * @return The k2ModeEvent.
+   */
+  com.google.wireless.android.sdk.stats.K2ModeEvent getK2ModeEvent();
+  /**
+   * <pre>
+   * set when kind = K2_MODE_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.K2ModeEvent k2_mode_event = 226 [lazy = true];</code>
+   */
+  com.google.wireless.android.sdk.stats.K2ModeEventOrBuilder getK2ModeEventOrBuilder();
 }
