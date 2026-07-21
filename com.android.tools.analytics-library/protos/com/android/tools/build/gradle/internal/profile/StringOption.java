@@ -189,6 +189,10 @@ public enum StringOption
    * <code>LINT_RESERVED_MEMORY_PER_TASK = 44;</code>
    */
   LINT_RESERVED_MEMORY_PER_TASK(44),
+  /**
+   * <code>NDK_SUPPRESS_MIN_SDK_VERSION_ERROR = 45;</code>
+   */
+  NDK_SUPPRESS_MIN_SDK_VERSION_ERROR(45),
   UNRECOGNIZED(-1),
   ;
 
@@ -372,6 +376,10 @@ public enum StringOption
    * <code>LINT_RESERVED_MEMORY_PER_TASK = 44;</code>
    */
   public static final int LINT_RESERVED_MEMORY_PER_TASK_VALUE = 44;
+  /**
+   * <code>NDK_SUPPRESS_MIN_SDK_VERSION_ERROR = 45;</code>
+   */
+  public static final int NDK_SUPPRESS_MIN_SDK_VERSION_ERROR_VALUE = 45;
 
 
   public final int getNumber() {
@@ -443,6 +451,7 @@ public enum StringOption
       case 42: return ANDROID_PRIVACY_SANDBOX_SDK_API_GENERATOR_GENERATED_RUNTIME_DEPENDENCIES;
       case 43: return ANDROID_PRIVACY_SANDBOX_SDK_API_PACKAGER;
       case 44: return LINT_RESERVED_MEMORY_PER_TASK;
+      case 45: return NDK_SUPPRESS_MIN_SDK_VERSION_ERROR;
       default: return null;
     }
   }
