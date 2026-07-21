@@ -23,31 +23,46 @@ public interface AdbUsageEventOrBuilder extends
   com.google.wireless.android.sdk.stats.AdbUsageEvent.JdwpProcessPropertiesCollectorEventOrBuilder getProcessPropertiesEventOrBuilder();
 
   /**
-   * <pre>
-   * Add other types of events, e.g. attaching debugger, etc
-   * </pre>
-   *
    * <code>.android_studio.AdbUsageEvent.AdbDeviceStateChangeEvent device_state_change_event = 2 [lazy = true];</code>
    * @return Whether the deviceStateChangeEvent field is set.
    */
   boolean hasDeviceStateChangeEvent();
   /**
-   * <pre>
-   * Add other types of events, e.g. attaching debugger, etc
-   * </pre>
-   *
    * <code>.android_studio.AdbUsageEvent.AdbDeviceStateChangeEvent device_state_change_event = 2 [lazy = true];</code>
    * @return The deviceStateChangeEvent.
    */
   com.google.wireless.android.sdk.stats.AdbUsageEvent.AdbDeviceStateChangeEvent getDeviceStateChangeEvent();
   /**
+   * <code>.android_studio.AdbUsageEvent.AdbDeviceStateChangeEvent device_state_change_event = 2 [lazy = true];</code>
+   */
+  com.google.wireless.android.sdk.stats.AdbUsageEvent.AdbDeviceStateChangeEventOrBuilder getDeviceStateChangeEventOrBuilder();
+
+  /**
    * <pre>
    * Add other types of events, e.g. attaching debugger, etc
    * </pre>
    *
-   * <code>.android_studio.AdbUsageEvent.AdbDeviceStateChangeEvent device_state_change_event = 2 [lazy = true];</code>
+   * <code>.android_studio.AdbUsageEvent.AppInfoProcessPropertiesCollectorEvent app_info_process_properties_event = 3 [lazy = true];</code>
+   * @return Whether the appInfoProcessPropertiesEvent field is set.
    */
-  com.google.wireless.android.sdk.stats.AdbUsageEvent.AdbDeviceStateChangeEventOrBuilder getDeviceStateChangeEventOrBuilder();
+  boolean hasAppInfoProcessPropertiesEvent();
+  /**
+   * <pre>
+   * Add other types of events, e.g. attaching debugger, etc
+   * </pre>
+   *
+   * <code>.android_studio.AdbUsageEvent.AppInfoProcessPropertiesCollectorEvent app_info_process_properties_event = 3 [lazy = true];</code>
+   * @return The appInfoProcessPropertiesEvent.
+   */
+  com.google.wireless.android.sdk.stats.AdbUsageEvent.AppInfoProcessPropertiesCollectorEvent getAppInfoProcessPropertiesEvent();
+  /**
+   * <pre>
+   * Add other types of events, e.g. attaching debugger, etc
+   * </pre>
+   *
+   * <code>.android_studio.AdbUsageEvent.AppInfoProcessPropertiesCollectorEvent app_info_process_properties_event = 3 [lazy = true];</code>
+   */
+  com.google.wireless.android.sdk.stats.AdbUsageEvent.AppInfoProcessPropertiesCollectorEventOrBuilder getAppInfoProcessPropertiesEventOrBuilder();
 
   com.google.wireless.android.sdk.stats.AdbUsageEvent.EventCase getEventCase();
 }

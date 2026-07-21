@@ -2087,6 +2087,679 @@ private static final long serialVersionUID = 0L;
 
   }
 
+  public interface AppInfoProcessPropertiesCollectorEventOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:android_studio.AdbUsageEvent.AppInfoProcessPropertiesCollectorEvent)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>optional .android_studio.AdbUsageEvent.AppInfoProcessPropertiesCollectorEvent.EventType event_type = 1;</code>
+     * @return Whether the eventType field is set.
+     */
+    boolean hasEventType();
+    /**
+     * <code>optional .android_studio.AdbUsageEvent.AppInfoProcessPropertiesCollectorEvent.EventType event_type = 1;</code>
+     * @return The eventType.
+     */
+    com.google.wireless.android.sdk.stats.AdbUsageEvent.AppInfoProcessPropertiesCollectorEvent.EventType getEventType();
+  }
+  /**
+   * Protobuf type {@code android_studio.AdbUsageEvent.AppInfoProcessPropertiesCollectorEvent}
+   */
+  public static final class AppInfoProcessPropertiesCollectorEvent extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:android_studio.AdbUsageEvent.AppInfoProcessPropertiesCollectorEvent)
+      AppInfoProcessPropertiesCollectorEventOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use AppInfoProcessPropertiesCollectorEvent.newBuilder() to construct.
+    private AppInfoProcessPropertiesCollectorEvent(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private AppInfoProcessPropertiesCollectorEvent() {
+      eventType_ = 0;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new AppInfoProcessPropertiesCollectorEvent();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_AdbUsageEvent_AppInfoProcessPropertiesCollectorEvent_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_AdbUsageEvent_AppInfoProcessPropertiesCollectorEvent_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.google.wireless.android.sdk.stats.AdbUsageEvent.AppInfoProcessPropertiesCollectorEvent.class, com.google.wireless.android.sdk.stats.AdbUsageEvent.AppInfoProcessPropertiesCollectorEvent.Builder.class);
+    }
+
+    /**
+     * <pre>
+     * The type of event
+     * </pre>
+     *
+     * Protobuf enum {@code android_studio.AdbUsageEvent.AppInfoProcessPropertiesCollectorEvent.EventType}
+     */
+    public enum EventType
+        implements com.google.protobuf.ProtocolMessageEnum {
+      /**
+       * <code>EVENT_TYPE_UNSPECIFIED = 0;</code>
+       */
+      EVENT_TYPE_UNSPECIFIED(0),
+      /**
+       * <pre>
+       * We collected process value using track-app service
+       * </pre>
+       *
+       * <code>TRACK_APP_VALUE_COLLECTED = 1;</code>
+       */
+      TRACK_APP_VALUE_COLLECTED(1),
+      /**
+       * <pre>
+       * We retrieved a VmInfo value
+       * </pre>
+       *
+       * <code>VM_INFO_VALUE_COLLECTED = 2;</code>
+       */
+      VM_INFO_VALUE_COLLECTED(2),
+      /**
+       * <pre>
+       * track-app service encountered an error
+       * </pre>
+       *
+       * <code>TRACK_APP_IO_EXCEPTION = 3;</code>
+       */
+      TRACK_APP_IO_EXCEPTION(3),
+      /**
+       * <pre>
+       * track-app service encountered an error
+       * </pre>
+       *
+       * <code>TRACK_APP_OTHER_EXCEPTION = 4;</code>
+       */
+      TRACK_APP_OTHER_EXCEPTION(4),
+      /**
+       * <pre>
+       * Failed to get a VmInfo value
+       * </pre>
+       *
+       * <code>VM_INFO_IO_EXCEPTION = 5;</code>
+       */
+      VM_INFO_IO_EXCEPTION(5),
+      /**
+       * <pre>
+       * Failed to get a VmInfo value
+       * </pre>
+       *
+       * <code>VM_INFO_OTHER_EXCEPTION = 6;</code>
+       */
+      VM_INFO_OTHER_EXCEPTION(6),
+      ;
+
+      /**
+       * <code>EVENT_TYPE_UNSPECIFIED = 0;</code>
+       */
+      public static final int EVENT_TYPE_UNSPECIFIED_VALUE = 0;
+      /**
+       * <pre>
+       * We collected process value using track-app service
+       * </pre>
+       *
+       * <code>TRACK_APP_VALUE_COLLECTED = 1;</code>
+       */
+      public static final int TRACK_APP_VALUE_COLLECTED_VALUE = 1;
+      /**
+       * <pre>
+       * We retrieved a VmInfo value
+       * </pre>
+       *
+       * <code>VM_INFO_VALUE_COLLECTED = 2;</code>
+       */
+      public static final int VM_INFO_VALUE_COLLECTED_VALUE = 2;
+      /**
+       * <pre>
+       * track-app service encountered an error
+       * </pre>
+       *
+       * <code>TRACK_APP_IO_EXCEPTION = 3;</code>
+       */
+      public static final int TRACK_APP_IO_EXCEPTION_VALUE = 3;
+      /**
+       * <pre>
+       * track-app service encountered an error
+       * </pre>
+       *
+       * <code>TRACK_APP_OTHER_EXCEPTION = 4;</code>
+       */
+      public static final int TRACK_APP_OTHER_EXCEPTION_VALUE = 4;
+      /**
+       * <pre>
+       * Failed to get a VmInfo value
+       * </pre>
+       *
+       * <code>VM_INFO_IO_EXCEPTION = 5;</code>
+       */
+      public static final int VM_INFO_IO_EXCEPTION_VALUE = 5;
+      /**
+       * <pre>
+       * Failed to get a VmInfo value
+       * </pre>
+       *
+       * <code>VM_INFO_OTHER_EXCEPTION = 6;</code>
+       */
+      public static final int VM_INFO_OTHER_EXCEPTION_VALUE = 6;
+
+
+      public final int getNumber() {
+        return value;
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static EventType valueOf(int value) {
+        return forNumber(value);
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       */
+      public static EventType forNumber(int value) {
+        switch (value) {
+          case 0: return EVENT_TYPE_UNSPECIFIED;
+          case 1: return TRACK_APP_VALUE_COLLECTED;
+          case 2: return VM_INFO_VALUE_COLLECTED;
+          case 3: return TRACK_APP_IO_EXCEPTION;
+          case 4: return TRACK_APP_OTHER_EXCEPTION;
+          case 5: return VM_INFO_IO_EXCEPTION;
+          case 6: return VM_INFO_OTHER_EXCEPTION;
+          default: return null;
+        }
+      }
+
+      public static com.google.protobuf.Internal.EnumLiteMap<EventType>
+          internalGetValueMap() {
+        return internalValueMap;
+      }
+      private static final com.google.protobuf.Internal.EnumLiteMap<
+          EventType> internalValueMap =
+            new com.google.protobuf.Internal.EnumLiteMap<EventType>() {
+              public EventType findValueByNumber(int number) {
+                return EventType.forNumber(number);
+              }
+            };
+
+      public final com.google.protobuf.Descriptors.EnumValueDescriptor
+          getValueDescriptor() {
+        return getDescriptor().getValues().get(ordinal());
+      }
+      public final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptorForType() {
+        return getDescriptor();
+      }
+      public static final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptor() {
+        return com.google.wireless.android.sdk.stats.AdbUsageEvent.AppInfoProcessPropertiesCollectorEvent.getDescriptor().getEnumTypes().get(0);
+      }
+
+      private static final EventType[] VALUES = values();
+
+      public static EventType valueOf(
+          com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+        if (desc.getType() != getDescriptor()) {
+          throw new java.lang.IllegalArgumentException(
+            "EnumValueDescriptor is not for this type.");
+        }
+        return VALUES[desc.getIndex()];
+      }
+
+      private final int value;
+
+      private EventType(int value) {
+        this.value = value;
+      }
+
+      // @@protoc_insertion_point(enum_scope:android_studio.AdbUsageEvent.AppInfoProcessPropertiesCollectorEvent.EventType)
+    }
+
+    private int bitField0_;
+    public static final int EVENT_TYPE_FIELD_NUMBER = 1;
+    private int eventType_ = 0;
+    /**
+     * <code>optional .android_studio.AdbUsageEvent.AppInfoProcessPropertiesCollectorEvent.EventType event_type = 1;</code>
+     * @return Whether the eventType field is set.
+     */
+    @java.lang.Override public boolean hasEventType() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <code>optional .android_studio.AdbUsageEvent.AppInfoProcessPropertiesCollectorEvent.EventType event_type = 1;</code>
+     * @return The eventType.
+     */
+    @java.lang.Override public com.google.wireless.android.sdk.stats.AdbUsageEvent.AppInfoProcessPropertiesCollectorEvent.EventType getEventType() {
+      com.google.wireless.android.sdk.stats.AdbUsageEvent.AppInfoProcessPropertiesCollectorEvent.EventType result = com.google.wireless.android.sdk.stats.AdbUsageEvent.AppInfoProcessPropertiesCollectorEvent.EventType.forNumber(eventType_);
+      return result == null ? com.google.wireless.android.sdk.stats.AdbUsageEvent.AppInfoProcessPropertiesCollectorEvent.EventType.EVENT_TYPE_UNSPECIFIED : result;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (((bitField0_ & 0x00000001) != 0)) {
+        output.writeEnum(1, eventType_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(1, eventType_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.google.wireless.android.sdk.stats.AdbUsageEvent.AppInfoProcessPropertiesCollectorEvent)) {
+        return super.equals(obj);
+      }
+      com.google.wireless.android.sdk.stats.AdbUsageEvent.AppInfoProcessPropertiesCollectorEvent other = (com.google.wireless.android.sdk.stats.AdbUsageEvent.AppInfoProcessPropertiesCollectorEvent) obj;
+
+      if (hasEventType() != other.hasEventType()) return false;
+      if (hasEventType()) {
+        if (eventType_ != other.eventType_) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasEventType()) {
+        hash = (37 * hash) + EVENT_TYPE_FIELD_NUMBER;
+        hash = (53 * hash) + eventType_;
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.google.wireless.android.sdk.stats.AdbUsageEvent.AppInfoProcessPropertiesCollectorEvent parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.google.wireless.android.sdk.stats.AdbUsageEvent.AppInfoProcessPropertiesCollectorEvent parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.google.wireless.android.sdk.stats.AdbUsageEvent.AppInfoProcessPropertiesCollectorEvent parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.google.wireless.android.sdk.stats.AdbUsageEvent.AppInfoProcessPropertiesCollectorEvent parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.google.wireless.android.sdk.stats.AdbUsageEvent.AppInfoProcessPropertiesCollectorEvent parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.google.wireless.android.sdk.stats.AdbUsageEvent.AppInfoProcessPropertiesCollectorEvent parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.google.wireless.android.sdk.stats.AdbUsageEvent.AppInfoProcessPropertiesCollectorEvent parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.google.wireless.android.sdk.stats.AdbUsageEvent.AppInfoProcessPropertiesCollectorEvent parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.google.wireless.android.sdk.stats.AdbUsageEvent.AppInfoProcessPropertiesCollectorEvent parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.google.wireless.android.sdk.stats.AdbUsageEvent.AppInfoProcessPropertiesCollectorEvent parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.google.wireless.android.sdk.stats.AdbUsageEvent.AppInfoProcessPropertiesCollectorEvent parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.google.wireless.android.sdk.stats.AdbUsageEvent.AppInfoProcessPropertiesCollectorEvent parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.google.wireless.android.sdk.stats.AdbUsageEvent.AppInfoProcessPropertiesCollectorEvent prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code android_studio.AdbUsageEvent.AppInfoProcessPropertiesCollectorEvent}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:android_studio.AdbUsageEvent.AppInfoProcessPropertiesCollectorEvent)
+        com.google.wireless.android.sdk.stats.AdbUsageEvent.AppInfoProcessPropertiesCollectorEventOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_AdbUsageEvent_AppInfoProcessPropertiesCollectorEvent_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_AdbUsageEvent_AppInfoProcessPropertiesCollectorEvent_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.google.wireless.android.sdk.stats.AdbUsageEvent.AppInfoProcessPropertiesCollectorEvent.class, com.google.wireless.android.sdk.stats.AdbUsageEvent.AppInfoProcessPropertiesCollectorEvent.Builder.class);
+      }
+
+      // Construct using com.google.wireless.android.sdk.stats.AdbUsageEvent.AppInfoProcessPropertiesCollectorEvent.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        eventType_ = 0;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_AdbUsageEvent_AppInfoProcessPropertiesCollectorEvent_descriptor;
+      }
+
+      @java.lang.Override
+      public com.google.wireless.android.sdk.stats.AdbUsageEvent.AppInfoProcessPropertiesCollectorEvent getDefaultInstanceForType() {
+        return com.google.wireless.android.sdk.stats.AdbUsageEvent.AppInfoProcessPropertiesCollectorEvent.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.google.wireless.android.sdk.stats.AdbUsageEvent.AppInfoProcessPropertiesCollectorEvent build() {
+        com.google.wireless.android.sdk.stats.AdbUsageEvent.AppInfoProcessPropertiesCollectorEvent result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.google.wireless.android.sdk.stats.AdbUsageEvent.AppInfoProcessPropertiesCollectorEvent buildPartial() {
+        com.google.wireless.android.sdk.stats.AdbUsageEvent.AppInfoProcessPropertiesCollectorEvent result = new com.google.wireless.android.sdk.stats.AdbUsageEvent.AppInfoProcessPropertiesCollectorEvent(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.google.wireless.android.sdk.stats.AdbUsageEvent.AppInfoProcessPropertiesCollectorEvent result) {
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.eventType_ = eventType_;
+          to_bitField0_ |= 0x00000001;
+        }
+        result.bitField0_ |= to_bitField0_;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.google.wireless.android.sdk.stats.AdbUsageEvent.AppInfoProcessPropertiesCollectorEvent) {
+          return mergeFrom((com.google.wireless.android.sdk.stats.AdbUsageEvent.AppInfoProcessPropertiesCollectorEvent)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.google.wireless.android.sdk.stats.AdbUsageEvent.AppInfoProcessPropertiesCollectorEvent other) {
+        if (other == com.google.wireless.android.sdk.stats.AdbUsageEvent.AppInfoProcessPropertiesCollectorEvent.getDefaultInstance()) return this;
+        if (other.hasEventType()) {
+          setEventType(other.getEventType());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                int tmpRaw = input.readEnum();
+                com.google.wireless.android.sdk.stats.AdbUsageEvent.AppInfoProcessPropertiesCollectorEvent.EventType tmpValue =
+                    com.google.wireless.android.sdk.stats.AdbUsageEvent.AppInfoProcessPropertiesCollectorEvent.EventType.forNumber(tmpRaw);
+                if (tmpValue == null) {
+                  mergeUnknownVarintField(1, tmpRaw);
+                } else {
+                  eventType_ = tmpRaw;
+                  bitField0_ |= 0x00000001;
+                }
+                break;
+              } // case 8
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private int eventType_ = 0;
+      /**
+       * <code>optional .android_studio.AdbUsageEvent.AppInfoProcessPropertiesCollectorEvent.EventType event_type = 1;</code>
+       * @return Whether the eventType field is set.
+       */
+      @java.lang.Override public boolean hasEventType() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>optional .android_studio.AdbUsageEvent.AppInfoProcessPropertiesCollectorEvent.EventType event_type = 1;</code>
+       * @return The eventType.
+       */
+      @java.lang.Override
+      public com.google.wireless.android.sdk.stats.AdbUsageEvent.AppInfoProcessPropertiesCollectorEvent.EventType getEventType() {
+        com.google.wireless.android.sdk.stats.AdbUsageEvent.AppInfoProcessPropertiesCollectorEvent.EventType result = com.google.wireless.android.sdk.stats.AdbUsageEvent.AppInfoProcessPropertiesCollectorEvent.EventType.forNumber(eventType_);
+        return result == null ? com.google.wireless.android.sdk.stats.AdbUsageEvent.AppInfoProcessPropertiesCollectorEvent.EventType.EVENT_TYPE_UNSPECIFIED : result;
+      }
+      /**
+       * <code>optional .android_studio.AdbUsageEvent.AppInfoProcessPropertiesCollectorEvent.EventType event_type = 1;</code>
+       * @param value The eventType to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEventType(com.google.wireless.android.sdk.stats.AdbUsageEvent.AppInfoProcessPropertiesCollectorEvent.EventType value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x00000001;
+        eventType_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional .android_studio.AdbUsageEvent.AppInfoProcessPropertiesCollectorEvent.EventType event_type = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearEventType() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        eventType_ = 0;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:android_studio.AdbUsageEvent.AppInfoProcessPropertiesCollectorEvent)
+    }
+
+    // @@protoc_insertion_point(class_scope:android_studio.AdbUsageEvent.AppInfoProcessPropertiesCollectorEvent)
+    private static final com.google.wireless.android.sdk.stats.AdbUsageEvent.AppInfoProcessPropertiesCollectorEvent DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.google.wireless.android.sdk.stats.AdbUsageEvent.AppInfoProcessPropertiesCollectorEvent();
+    }
+
+    public static com.google.wireless.android.sdk.stats.AdbUsageEvent.AppInfoProcessPropertiesCollectorEvent getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<AppInfoProcessPropertiesCollectorEvent>
+        PARSER = new com.google.protobuf.AbstractParser<AppInfoProcessPropertiesCollectorEvent>() {
+      @java.lang.Override
+      public AppInfoProcessPropertiesCollectorEvent parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<AppInfoProcessPropertiesCollectorEvent> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<AppInfoProcessPropertiesCollectorEvent> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.wireless.android.sdk.stats.AdbUsageEvent.AppInfoProcessPropertiesCollectorEvent getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private int bitField0_;
   private int eventCase_ = 0;
   @SuppressWarnings("serial")
@@ -2096,6 +2769,7 @@ private static final long serialVersionUID = 0L;
           com.google.protobuf.AbstractMessage.InternalOneOfEnum {
     PROCESS_PROPERTIES_EVENT(1),
     DEVICE_STATE_CHANGE_EVENT(2),
+    APP_INFO_PROCESS_PROPERTIES_EVENT(3),
     EVENT_NOT_SET(0);
     private final int value;
     private EventCase(int value) {
@@ -2115,6 +2789,7 @@ private static final long serialVersionUID = 0L;
       switch (value) {
         case 1: return PROCESS_PROPERTIES_EVENT;
         case 2: return DEVICE_STATE_CHANGE_EVENT;
+        case 3: return APP_INFO_PROCESS_PROPERTIES_EVENT;
         case 0: return EVENT_NOT_SET;
         default: return null;
       }
@@ -2163,10 +2838,6 @@ private static final long serialVersionUID = 0L;
 
   public static final int DEVICE_STATE_CHANGE_EVENT_FIELD_NUMBER = 2;
   /**
-   * <pre>
-   * Add other types of events, e.g. attaching debugger, etc
-   * </pre>
-   *
    * <code>.android_studio.AdbUsageEvent.AdbDeviceStateChangeEvent device_state_change_event = 2 [lazy = true];</code>
    * @return Whether the deviceStateChangeEvent field is set.
    */
@@ -2175,10 +2846,6 @@ private static final long serialVersionUID = 0L;
     return eventCase_ == 2;
   }
   /**
-   * <pre>
-   * Add other types of events, e.g. attaching debugger, etc
-   * </pre>
-   *
    * <code>.android_studio.AdbUsageEvent.AdbDeviceStateChangeEvent device_state_change_event = 2 [lazy = true];</code>
    * @return The deviceStateChangeEvent.
    */
@@ -2190,10 +2857,6 @@ private static final long serialVersionUID = 0L;
     return com.google.wireless.android.sdk.stats.AdbUsageEvent.AdbDeviceStateChangeEvent.getDefaultInstance();
   }
   /**
-   * <pre>
-   * Add other types of events, e.g. attaching debugger, etc
-   * </pre>
-   *
    * <code>.android_studio.AdbUsageEvent.AdbDeviceStateChangeEvent device_state_change_event = 2 [lazy = true];</code>
    */
   @java.lang.Override
@@ -2202,6 +2865,49 @@ private static final long serialVersionUID = 0L;
        return (com.google.wireless.android.sdk.stats.AdbUsageEvent.AdbDeviceStateChangeEvent) event_;
     }
     return com.google.wireless.android.sdk.stats.AdbUsageEvent.AdbDeviceStateChangeEvent.getDefaultInstance();
+  }
+
+  public static final int APP_INFO_PROCESS_PROPERTIES_EVENT_FIELD_NUMBER = 3;
+  /**
+   * <pre>
+   * Add other types of events, e.g. attaching debugger, etc
+   * </pre>
+   *
+   * <code>.android_studio.AdbUsageEvent.AppInfoProcessPropertiesCollectorEvent app_info_process_properties_event = 3 [lazy = true];</code>
+   * @return Whether the appInfoProcessPropertiesEvent field is set.
+   */
+  @java.lang.Override
+  public boolean hasAppInfoProcessPropertiesEvent() {
+    return eventCase_ == 3;
+  }
+  /**
+   * <pre>
+   * Add other types of events, e.g. attaching debugger, etc
+   * </pre>
+   *
+   * <code>.android_studio.AdbUsageEvent.AppInfoProcessPropertiesCollectorEvent app_info_process_properties_event = 3 [lazy = true];</code>
+   * @return The appInfoProcessPropertiesEvent.
+   */
+  @java.lang.Override
+  public com.google.wireless.android.sdk.stats.AdbUsageEvent.AppInfoProcessPropertiesCollectorEvent getAppInfoProcessPropertiesEvent() {
+    if (eventCase_ == 3) {
+       return (com.google.wireless.android.sdk.stats.AdbUsageEvent.AppInfoProcessPropertiesCollectorEvent) event_;
+    }
+    return com.google.wireless.android.sdk.stats.AdbUsageEvent.AppInfoProcessPropertiesCollectorEvent.getDefaultInstance();
+  }
+  /**
+   * <pre>
+   * Add other types of events, e.g. attaching debugger, etc
+   * </pre>
+   *
+   * <code>.android_studio.AdbUsageEvent.AppInfoProcessPropertiesCollectorEvent app_info_process_properties_event = 3 [lazy = true];</code>
+   */
+  @java.lang.Override
+  public com.google.wireless.android.sdk.stats.AdbUsageEvent.AppInfoProcessPropertiesCollectorEventOrBuilder getAppInfoProcessPropertiesEventOrBuilder() {
+    if (eventCase_ == 3) {
+       return (com.google.wireless.android.sdk.stats.AdbUsageEvent.AppInfoProcessPropertiesCollectorEvent) event_;
+    }
+    return com.google.wireless.android.sdk.stats.AdbUsageEvent.AppInfoProcessPropertiesCollectorEvent.getDefaultInstance();
   }
 
   private byte memoizedIsInitialized = -1;
@@ -2224,6 +2930,9 @@ private static final long serialVersionUID = 0L;
     if (eventCase_ == 2) {
       output.writeMessage(2, (com.google.wireless.android.sdk.stats.AdbUsageEvent.AdbDeviceStateChangeEvent) event_);
     }
+    if (eventCase_ == 3) {
+      output.writeMessage(3, (com.google.wireless.android.sdk.stats.AdbUsageEvent.AppInfoProcessPropertiesCollectorEvent) event_);
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -2240,6 +2949,10 @@ private static final long serialVersionUID = 0L;
     if (eventCase_ == 2) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(2, (com.google.wireless.android.sdk.stats.AdbUsageEvent.AdbDeviceStateChangeEvent) event_);
+    }
+    if (eventCase_ == 3) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(3, (com.google.wireless.android.sdk.stats.AdbUsageEvent.AppInfoProcessPropertiesCollectorEvent) event_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -2266,6 +2979,10 @@ private static final long serialVersionUID = 0L;
         if (!getDeviceStateChangeEvent()
             .equals(other.getDeviceStateChangeEvent())) return false;
         break;
+      case 3:
+        if (!getAppInfoProcessPropertiesEvent()
+            .equals(other.getAppInfoProcessPropertiesEvent())) return false;
+        break;
       case 0:
       default:
     }
@@ -2288,6 +3005,10 @@ private static final long serialVersionUID = 0L;
       case 2:
         hash = (37 * hash) + DEVICE_STATE_CHANGE_EVENT_FIELD_NUMBER;
         hash = (53 * hash) + getDeviceStateChangeEvent().hashCode();
+        break;
+      case 3:
+        hash = (37 * hash) + APP_INFO_PROCESS_PROPERTIES_EVENT_FIELD_NUMBER;
+        hash = (53 * hash) + getAppInfoProcessPropertiesEvent().hashCode();
         break;
       case 0:
       default:
@@ -2427,6 +3148,9 @@ private static final long serialVersionUID = 0L;
       if (deviceStateChangeEventBuilder_ != null) {
         deviceStateChangeEventBuilder_.clear();
       }
+      if (appInfoProcessPropertiesEventBuilder_ != null) {
+        appInfoProcessPropertiesEventBuilder_.clear();
+      }
       eventCase_ = 0;
       event_ = null;
       return this;
@@ -2476,6 +3200,10 @@ private static final long serialVersionUID = 0L;
           deviceStateChangeEventBuilder_ != null) {
         result.event_ = deviceStateChangeEventBuilder_.build();
       }
+      if (eventCase_ == 3 &&
+          appInfoProcessPropertiesEventBuilder_ != null) {
+        result.event_ = appInfoProcessPropertiesEventBuilder_.build();
+      }
     }
 
     @java.lang.Override
@@ -2497,6 +3225,10 @@ private static final long serialVersionUID = 0L;
         }
         case DEVICE_STATE_CHANGE_EVENT: {
           mergeDeviceStateChangeEvent(other.getDeviceStateChangeEvent());
+          break;
+        }
+        case APP_INFO_PROCESS_PROPERTIES_EVENT: {
+          mergeAppInfoProcessPropertiesEvent(other.getAppInfoProcessPropertiesEvent());
           break;
         }
         case EVENT_NOT_SET: {
@@ -2543,6 +3275,13 @@ private static final long serialVersionUID = 0L;
               eventCase_ = 2;
               break;
             } // case 18
+            case 26: {
+              input.readMessage(
+                  getAppInfoProcessPropertiesEventFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              eventCase_ = 3;
+              break;
+            } // case 26
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -2720,10 +3459,6 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.wireless.android.sdk.stats.AdbUsageEvent.AdbDeviceStateChangeEvent, com.google.wireless.android.sdk.stats.AdbUsageEvent.AdbDeviceStateChangeEvent.Builder, com.google.wireless.android.sdk.stats.AdbUsageEvent.AdbDeviceStateChangeEventOrBuilder> deviceStateChangeEventBuilder_;
     /**
-     * <pre>
-     * Add other types of events, e.g. attaching debugger, etc
-     * </pre>
-     *
      * <code>.android_studio.AdbUsageEvent.AdbDeviceStateChangeEvent device_state_change_event = 2 [lazy = true];</code>
      * @return Whether the deviceStateChangeEvent field is set.
      */
@@ -2732,10 +3467,6 @@ private static final long serialVersionUID = 0L;
       return eventCase_ == 2;
     }
     /**
-     * <pre>
-     * Add other types of events, e.g. attaching debugger, etc
-     * </pre>
-     *
      * <code>.android_studio.AdbUsageEvent.AdbDeviceStateChangeEvent device_state_change_event = 2 [lazy = true];</code>
      * @return The deviceStateChangeEvent.
      */
@@ -2754,10 +3485,6 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <pre>
-     * Add other types of events, e.g. attaching debugger, etc
-     * </pre>
-     *
      * <code>.android_studio.AdbUsageEvent.AdbDeviceStateChangeEvent device_state_change_event = 2 [lazy = true];</code>
      */
     public Builder setDeviceStateChangeEvent(com.google.wireless.android.sdk.stats.AdbUsageEvent.AdbDeviceStateChangeEvent value) {
@@ -2774,10 +3501,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * Add other types of events, e.g. attaching debugger, etc
-     * </pre>
-     *
      * <code>.android_studio.AdbUsageEvent.AdbDeviceStateChangeEvent device_state_change_event = 2 [lazy = true];</code>
      */
     public Builder setDeviceStateChangeEvent(
@@ -2792,10 +3515,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * Add other types of events, e.g. attaching debugger, etc
-     * </pre>
-     *
      * <code>.android_studio.AdbUsageEvent.AdbDeviceStateChangeEvent device_state_change_event = 2 [lazy = true];</code>
      */
     public Builder mergeDeviceStateChangeEvent(com.google.wireless.android.sdk.stats.AdbUsageEvent.AdbDeviceStateChangeEvent value) {
@@ -2819,10 +3538,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * Add other types of events, e.g. attaching debugger, etc
-     * </pre>
-     *
      * <code>.android_studio.AdbUsageEvent.AdbDeviceStateChangeEvent device_state_change_event = 2 [lazy = true];</code>
      */
     public Builder clearDeviceStateChangeEvent() {
@@ -2842,20 +3557,12 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * Add other types of events, e.g. attaching debugger, etc
-     * </pre>
-     *
      * <code>.android_studio.AdbUsageEvent.AdbDeviceStateChangeEvent device_state_change_event = 2 [lazy = true];</code>
      */
     public com.google.wireless.android.sdk.stats.AdbUsageEvent.AdbDeviceStateChangeEvent.Builder getDeviceStateChangeEventBuilder() {
       return getDeviceStateChangeEventFieldBuilder().getBuilder();
     }
     /**
-     * <pre>
-     * Add other types of events, e.g. attaching debugger, etc
-     * </pre>
-     *
      * <code>.android_studio.AdbUsageEvent.AdbDeviceStateChangeEvent device_state_change_event = 2 [lazy = true];</code>
      */
     @java.lang.Override
@@ -2870,10 +3577,6 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <pre>
-     * Add other types of events, e.g. attaching debugger, etc
-     * </pre>
-     *
      * <code>.android_studio.AdbUsageEvent.AdbDeviceStateChangeEvent device_state_change_event = 2 [lazy = true];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
@@ -2893,6 +3596,184 @@ private static final long serialVersionUID = 0L;
       eventCase_ = 2;
       onChanged();
       return deviceStateChangeEventBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.AdbUsageEvent.AppInfoProcessPropertiesCollectorEvent, com.google.wireless.android.sdk.stats.AdbUsageEvent.AppInfoProcessPropertiesCollectorEvent.Builder, com.google.wireless.android.sdk.stats.AdbUsageEvent.AppInfoProcessPropertiesCollectorEventOrBuilder> appInfoProcessPropertiesEventBuilder_;
+    /**
+     * <pre>
+     * Add other types of events, e.g. attaching debugger, etc
+     * </pre>
+     *
+     * <code>.android_studio.AdbUsageEvent.AppInfoProcessPropertiesCollectorEvent app_info_process_properties_event = 3 [lazy = true];</code>
+     * @return Whether the appInfoProcessPropertiesEvent field is set.
+     */
+    @java.lang.Override
+    public boolean hasAppInfoProcessPropertiesEvent() {
+      return eventCase_ == 3;
+    }
+    /**
+     * <pre>
+     * Add other types of events, e.g. attaching debugger, etc
+     * </pre>
+     *
+     * <code>.android_studio.AdbUsageEvent.AppInfoProcessPropertiesCollectorEvent app_info_process_properties_event = 3 [lazy = true];</code>
+     * @return The appInfoProcessPropertiesEvent.
+     */
+    @java.lang.Override
+    public com.google.wireless.android.sdk.stats.AdbUsageEvent.AppInfoProcessPropertiesCollectorEvent getAppInfoProcessPropertiesEvent() {
+      if (appInfoProcessPropertiesEventBuilder_ == null) {
+        if (eventCase_ == 3) {
+          return (com.google.wireless.android.sdk.stats.AdbUsageEvent.AppInfoProcessPropertiesCollectorEvent) event_;
+        }
+        return com.google.wireless.android.sdk.stats.AdbUsageEvent.AppInfoProcessPropertiesCollectorEvent.getDefaultInstance();
+      } else {
+        if (eventCase_ == 3) {
+          return appInfoProcessPropertiesEventBuilder_.getMessage();
+        }
+        return com.google.wireless.android.sdk.stats.AdbUsageEvent.AppInfoProcessPropertiesCollectorEvent.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * Add other types of events, e.g. attaching debugger, etc
+     * </pre>
+     *
+     * <code>.android_studio.AdbUsageEvent.AppInfoProcessPropertiesCollectorEvent app_info_process_properties_event = 3 [lazy = true];</code>
+     */
+    public Builder setAppInfoProcessPropertiesEvent(com.google.wireless.android.sdk.stats.AdbUsageEvent.AppInfoProcessPropertiesCollectorEvent value) {
+      if (appInfoProcessPropertiesEventBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        event_ = value;
+        onChanged();
+      } else {
+        appInfoProcessPropertiesEventBuilder_.setMessage(value);
+      }
+      eventCase_ = 3;
+      return this;
+    }
+    /**
+     * <pre>
+     * Add other types of events, e.g. attaching debugger, etc
+     * </pre>
+     *
+     * <code>.android_studio.AdbUsageEvent.AppInfoProcessPropertiesCollectorEvent app_info_process_properties_event = 3 [lazy = true];</code>
+     */
+    public Builder setAppInfoProcessPropertiesEvent(
+        com.google.wireless.android.sdk.stats.AdbUsageEvent.AppInfoProcessPropertiesCollectorEvent.Builder builderForValue) {
+      if (appInfoProcessPropertiesEventBuilder_ == null) {
+        event_ = builderForValue.build();
+        onChanged();
+      } else {
+        appInfoProcessPropertiesEventBuilder_.setMessage(builderForValue.build());
+      }
+      eventCase_ = 3;
+      return this;
+    }
+    /**
+     * <pre>
+     * Add other types of events, e.g. attaching debugger, etc
+     * </pre>
+     *
+     * <code>.android_studio.AdbUsageEvent.AppInfoProcessPropertiesCollectorEvent app_info_process_properties_event = 3 [lazy = true];</code>
+     */
+    public Builder mergeAppInfoProcessPropertiesEvent(com.google.wireless.android.sdk.stats.AdbUsageEvent.AppInfoProcessPropertiesCollectorEvent value) {
+      if (appInfoProcessPropertiesEventBuilder_ == null) {
+        if (eventCase_ == 3 &&
+            event_ != com.google.wireless.android.sdk.stats.AdbUsageEvent.AppInfoProcessPropertiesCollectorEvent.getDefaultInstance()) {
+          event_ = com.google.wireless.android.sdk.stats.AdbUsageEvent.AppInfoProcessPropertiesCollectorEvent.newBuilder((com.google.wireless.android.sdk.stats.AdbUsageEvent.AppInfoProcessPropertiesCollectorEvent) event_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          event_ = value;
+        }
+        onChanged();
+      } else {
+        if (eventCase_ == 3) {
+          appInfoProcessPropertiesEventBuilder_.mergeFrom(value);
+        } else {
+          appInfoProcessPropertiesEventBuilder_.setMessage(value);
+        }
+      }
+      eventCase_ = 3;
+      return this;
+    }
+    /**
+     * <pre>
+     * Add other types of events, e.g. attaching debugger, etc
+     * </pre>
+     *
+     * <code>.android_studio.AdbUsageEvent.AppInfoProcessPropertiesCollectorEvent app_info_process_properties_event = 3 [lazy = true];</code>
+     */
+    public Builder clearAppInfoProcessPropertiesEvent() {
+      if (appInfoProcessPropertiesEventBuilder_ == null) {
+        if (eventCase_ == 3) {
+          eventCase_ = 0;
+          event_ = null;
+          onChanged();
+        }
+      } else {
+        if (eventCase_ == 3) {
+          eventCase_ = 0;
+          event_ = null;
+        }
+        appInfoProcessPropertiesEventBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Add other types of events, e.g. attaching debugger, etc
+     * </pre>
+     *
+     * <code>.android_studio.AdbUsageEvent.AppInfoProcessPropertiesCollectorEvent app_info_process_properties_event = 3 [lazy = true];</code>
+     */
+    public com.google.wireless.android.sdk.stats.AdbUsageEvent.AppInfoProcessPropertiesCollectorEvent.Builder getAppInfoProcessPropertiesEventBuilder() {
+      return getAppInfoProcessPropertiesEventFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * Add other types of events, e.g. attaching debugger, etc
+     * </pre>
+     *
+     * <code>.android_studio.AdbUsageEvent.AppInfoProcessPropertiesCollectorEvent app_info_process_properties_event = 3 [lazy = true];</code>
+     */
+    @java.lang.Override
+    public com.google.wireless.android.sdk.stats.AdbUsageEvent.AppInfoProcessPropertiesCollectorEventOrBuilder getAppInfoProcessPropertiesEventOrBuilder() {
+      if ((eventCase_ == 3) && (appInfoProcessPropertiesEventBuilder_ != null)) {
+        return appInfoProcessPropertiesEventBuilder_.getMessageOrBuilder();
+      } else {
+        if (eventCase_ == 3) {
+          return (com.google.wireless.android.sdk.stats.AdbUsageEvent.AppInfoProcessPropertiesCollectorEvent) event_;
+        }
+        return com.google.wireless.android.sdk.stats.AdbUsageEvent.AppInfoProcessPropertiesCollectorEvent.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * Add other types of events, e.g. attaching debugger, etc
+     * </pre>
+     *
+     * <code>.android_studio.AdbUsageEvent.AppInfoProcessPropertiesCollectorEvent app_info_process_properties_event = 3 [lazy = true];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.AdbUsageEvent.AppInfoProcessPropertiesCollectorEvent, com.google.wireless.android.sdk.stats.AdbUsageEvent.AppInfoProcessPropertiesCollectorEvent.Builder, com.google.wireless.android.sdk.stats.AdbUsageEvent.AppInfoProcessPropertiesCollectorEventOrBuilder> 
+        getAppInfoProcessPropertiesEventFieldBuilder() {
+      if (appInfoProcessPropertiesEventBuilder_ == null) {
+        if (!(eventCase_ == 3)) {
+          event_ = com.google.wireless.android.sdk.stats.AdbUsageEvent.AppInfoProcessPropertiesCollectorEvent.getDefaultInstance();
+        }
+        appInfoProcessPropertiesEventBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.wireless.android.sdk.stats.AdbUsageEvent.AppInfoProcessPropertiesCollectorEvent, com.google.wireless.android.sdk.stats.AdbUsageEvent.AppInfoProcessPropertiesCollectorEvent.Builder, com.google.wireless.android.sdk.stats.AdbUsageEvent.AppInfoProcessPropertiesCollectorEventOrBuilder>(
+                (com.google.wireless.android.sdk.stats.AdbUsageEvent.AppInfoProcessPropertiesCollectorEvent) event_,
+                getParentForChildren(),
+                isClean());
+        event_ = null;
+      }
+      eventCase_ = 3;
+      onChanged();
+      return appInfoProcessPropertiesEventBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

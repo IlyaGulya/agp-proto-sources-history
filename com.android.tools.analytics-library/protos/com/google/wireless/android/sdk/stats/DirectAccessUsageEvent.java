@@ -106,6 +106,14 @@ private static final long serialVersionUID = 0L;
      * <code>SERVICE_DEPRECATION = 7;</code>
      */
     SERVICE_DEPRECATION(7),
+    /**
+     * <pre>
+     * OEM Lab dialog shown
+     * </pre>
+     *
+     * <code>OEM_LAB_DIALOG = 8;</code>
+     */
+    OEM_LAB_DIALOG(8),
     ;
 
     /**
@@ -168,6 +176,14 @@ private static final long serialVersionUID = 0L;
      * <code>SERVICE_DEPRECATION = 7;</code>
      */
     public static final int SERVICE_DEPRECATION_VALUE = 7;
+    /**
+     * <pre>
+     * OEM Lab dialog shown
+     * </pre>
+     *
+     * <code>OEM_LAB_DIALOG = 8;</code>
+     */
+    public static final int OEM_LAB_DIALOG_VALUE = 8;
 
 
     public final int getNumber() {
@@ -198,6 +214,7 @@ private static final long serialVersionUID = 0L;
         case 5: return END_RESERVATION;
         case 6: return DISCONNECT_DEVICE;
         case 7: return SERVICE_DEPRECATION;
+        case 8: return OEM_LAB_DIALOG;
         default: return null;
       }
     }
@@ -4896,7 +4913,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional bool user_ended = 2 [deprecated = true];</code>
      * @deprecated android_studio.DirectAccessUsageEvent.EndReservationDetails.user_ended is deprecated.
-     *     See studio_stats.proto;l=15241
+     *     See studio_stats.proto;l=15248
      * @return Whether the userEnded field is set.
      */
     @java.lang.Deprecated boolean hasUserEnded();
@@ -4908,7 +4925,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional bool user_ended = 2 [deprecated = true];</code>
      * @deprecated android_studio.DirectAccessUsageEvent.EndReservationDetails.user_ended is deprecated.
-     *     See studio_stats.proto;l=15241
+     *     See studio_stats.proto;l=15248
      * @return The userEnded.
      */
     @java.lang.Deprecated boolean getUserEnded();
@@ -4942,7 +4959,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional uint32 average_connection_latency_ms = 4 [deprecated = true];</code>
      * @deprecated android_studio.DirectAccessUsageEvent.EndReservationDetails.average_connection_latency_ms is deprecated.
-     *     See studio_stats.proto;l=15247
+     *     See studio_stats.proto;l=15254
      * @return Whether the averageConnectionLatencyMs field is set.
      */
     @java.lang.Deprecated boolean hasAverageConnectionLatencyMs();
@@ -4954,7 +4971,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional uint32 average_connection_latency_ms = 4 [deprecated = true];</code>
      * @deprecated android_studio.DirectAccessUsageEvent.EndReservationDetails.average_connection_latency_ms is deprecated.
-     *     See studio_stats.proto;l=15247
+     *     See studio_stats.proto;l=15254
      * @return The averageConnectionLatencyMs.
      */
     @java.lang.Deprecated int getAverageConnectionLatencyMs();
@@ -5217,7 +5234,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional bool user_ended = 2 [deprecated = true];</code>
      * @deprecated android_studio.DirectAccessUsageEvent.EndReservationDetails.user_ended is deprecated.
-     *     See studio_stats.proto;l=15241
+     *     See studio_stats.proto;l=15248
      * @return Whether the userEnded field is set.
      */
     @java.lang.Override
@@ -5232,7 +5249,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional bool user_ended = 2 [deprecated = true];</code>
      * @deprecated android_studio.DirectAccessUsageEvent.EndReservationDetails.user_ended is deprecated.
-     *     See studio_stats.proto;l=15241
+     *     See studio_stats.proto;l=15248
      * @return The userEnded.
      */
     @java.lang.Override
@@ -5279,7 +5296,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional uint32 average_connection_latency_ms = 4 [deprecated = true];</code>
      * @deprecated android_studio.DirectAccessUsageEvent.EndReservationDetails.average_connection_latency_ms is deprecated.
-     *     See studio_stats.proto;l=15247
+     *     See studio_stats.proto;l=15254
      * @return Whether the averageConnectionLatencyMs field is set.
      */
     @java.lang.Override
@@ -5294,7 +5311,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional uint32 average_connection_latency_ms = 4 [deprecated = true];</code>
      * @deprecated android_studio.DirectAccessUsageEvent.EndReservationDetails.average_connection_latency_ms is deprecated.
-     *     See studio_stats.proto;l=15247
+     *     See studio_stats.proto;l=15254
      * @return The averageConnectionLatencyMs.
      */
     @java.lang.Override
@@ -5897,7 +5914,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional bool user_ended = 2 [deprecated = true];</code>
        * @deprecated android_studio.DirectAccessUsageEvent.EndReservationDetails.user_ended is deprecated.
-       *     See studio_stats.proto;l=15241
+       *     See studio_stats.proto;l=15248
        * @return Whether the userEnded field is set.
        */
       @java.lang.Override
@@ -5912,7 +5929,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional bool user_ended = 2 [deprecated = true];</code>
        * @deprecated android_studio.DirectAccessUsageEvent.EndReservationDetails.user_ended is deprecated.
-       *     See studio_stats.proto;l=15241
+       *     See studio_stats.proto;l=15248
        * @return The userEnded.
        */
       @java.lang.Override
@@ -5927,7 +5944,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional bool user_ended = 2 [deprecated = true];</code>
        * @deprecated android_studio.DirectAccessUsageEvent.EndReservationDetails.user_ended is deprecated.
-       *     See studio_stats.proto;l=15241
+       *     See studio_stats.proto;l=15248
        * @param value The userEnded to set.
        * @return This builder for chaining.
        */
@@ -5946,7 +5963,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional bool user_ended = 2 [deprecated = true];</code>
        * @deprecated android_studio.DirectAccessUsageEvent.EndReservationDetails.user_ended is deprecated.
-       *     See studio_stats.proto;l=15241
+       *     See studio_stats.proto;l=15248
        * @return This builder for chaining.
        */
       @java.lang.Deprecated public Builder clearUserEnded() {
@@ -6025,7 +6042,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional uint32 average_connection_latency_ms = 4 [deprecated = true];</code>
        * @deprecated android_studio.DirectAccessUsageEvent.EndReservationDetails.average_connection_latency_ms is deprecated.
-       *     See studio_stats.proto;l=15247
+       *     See studio_stats.proto;l=15254
        * @return Whether the averageConnectionLatencyMs field is set.
        */
       @java.lang.Override
@@ -6040,7 +6057,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional uint32 average_connection_latency_ms = 4 [deprecated = true];</code>
        * @deprecated android_studio.DirectAccessUsageEvent.EndReservationDetails.average_connection_latency_ms is deprecated.
-       *     See studio_stats.proto;l=15247
+       *     See studio_stats.proto;l=15254
        * @return The averageConnectionLatencyMs.
        */
       @java.lang.Override
@@ -6055,7 +6072,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional uint32 average_connection_latency_ms = 4 [deprecated = true];</code>
        * @deprecated android_studio.DirectAccessUsageEvent.EndReservationDetails.average_connection_latency_ms is deprecated.
-       *     See studio_stats.proto;l=15247
+       *     See studio_stats.proto;l=15254
        * @param value The averageConnectionLatencyMs to set.
        * @return This builder for chaining.
        */
@@ -6074,7 +6091,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional uint32 average_connection_latency_ms = 4 [deprecated = true];</code>
        * @deprecated android_studio.DirectAccessUsageEvent.EndReservationDetails.average_connection_latency_ms is deprecated.
-       *     See studio_stats.proto;l=15247
+       *     See studio_stats.proto;l=15254
        * @return This builder for chaining.
        */
       @java.lang.Deprecated public Builder clearAverageConnectionLatencyMs() {
@@ -6355,6 +6372,896 @@ private static final long serialVersionUID = 0L;
 
     @java.lang.Override
     public com.google.wireless.android.sdk.stats.DirectAccessUsageEvent.EndReservationDetails getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface OemLabDialogDetailsOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:android_studio.DirectAccessUsageEvent.OemLabDialogDetails)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>optional .android_studio.DirectAccessUsageEvent.OemLabDialogDetails.AccessCheckResult access_check_result = 1;</code>
+     * @return Whether the accessCheckResult field is set.
+     */
+    boolean hasAccessCheckResult();
+    /**
+     * <code>optional .android_studio.DirectAccessUsageEvent.OemLabDialogDetails.AccessCheckResult access_check_result = 1;</code>
+     * @return The accessCheckResult.
+     */
+    com.google.wireless.android.sdk.stats.DirectAccessUsageEvent.OemLabDialogDetails.AccessCheckResult getAccessCheckResult();
+
+    /**
+     * <pre>
+     * True if the user clicks the button to go to the console
+     * </pre>
+     *
+     * <code>optional bool clicked_cloud_console_button = 2;</code>
+     * @return Whether the clickedCloudConsoleButton field is set.
+     */
+    boolean hasClickedCloudConsoleButton();
+    /**
+     * <pre>
+     * True if the user clicks the button to go to the console
+     * </pre>
+     *
+     * <code>optional bool clicked_cloud_console_button = 2;</code>
+     * @return The clickedCloudConsoleButton.
+     */
+    boolean getClickedCloudConsoleButton();
+
+    /**
+     * <pre>
+     * True if Studio received a callback from pantheon saying changes had been
+     * made.
+     * </pre>
+     *
+     * <code>optional bool received_callback = 3;</code>
+     * @return Whether the receivedCallback field is set.
+     */
+    boolean hasReceivedCallback();
+    /**
+     * <pre>
+     * True if Studio received a callback from pantheon saying changes had been
+     * made.
+     * </pre>
+     *
+     * <code>optional bool received_callback = 3;</code>
+     * @return The receivedCallback.
+     */
+    boolean getReceivedCallback();
+  }
+  /**
+   * Protobuf type {@code android_studio.DirectAccessUsageEvent.OemLabDialogDetails}
+   */
+  public static final class OemLabDialogDetails extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:android_studio.DirectAccessUsageEvent.OemLabDialogDetails)
+      OemLabDialogDetailsOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use OemLabDialogDetails.newBuilder() to construct.
+    private OemLabDialogDetails(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private OemLabDialogDetails() {
+      accessCheckResult_ = 0;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new OemLabDialogDetails();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_DirectAccessUsageEvent_OemLabDialogDetails_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_DirectAccessUsageEvent_OemLabDialogDetails_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.google.wireless.android.sdk.stats.DirectAccessUsageEvent.OemLabDialogDetails.class, com.google.wireless.android.sdk.stats.DirectAccessUsageEvent.OemLabDialogDetails.Builder.class);
+    }
+
+    /**
+     * Protobuf enum {@code android_studio.DirectAccessUsageEvent.OemLabDialogDetails.AccessCheckResult}
+     */
+    public enum AccessCheckResult
+        implements com.google.protobuf.ProtocolMessageEnum {
+      /**
+       * <code>UNKNOWN = 0;</code>
+       */
+      UNKNOWN(0),
+      /**
+       * <pre>
+       * Unable to check
+       * </pre>
+       *
+       * <code>CHECK_FAILED = 1;</code>
+       */
+      CHECK_FAILED(1),
+      /**
+       * <pre>
+       * User has access to EULA acceptance page
+       * </pre>
+       *
+       * <code>ACCESS = 2;</code>
+       */
+      ACCESS(2),
+      /**
+       * <pre>
+       * User doesn't have access to EULA acceptance page
+       * </pre>
+       *
+       * <code>NO_ACCESS = 3;</code>
+       */
+      NO_ACCESS(3),
+      ;
+
+      /**
+       * <code>UNKNOWN = 0;</code>
+       */
+      public static final int UNKNOWN_VALUE = 0;
+      /**
+       * <pre>
+       * Unable to check
+       * </pre>
+       *
+       * <code>CHECK_FAILED = 1;</code>
+       */
+      public static final int CHECK_FAILED_VALUE = 1;
+      /**
+       * <pre>
+       * User has access to EULA acceptance page
+       * </pre>
+       *
+       * <code>ACCESS = 2;</code>
+       */
+      public static final int ACCESS_VALUE = 2;
+      /**
+       * <pre>
+       * User doesn't have access to EULA acceptance page
+       * </pre>
+       *
+       * <code>NO_ACCESS = 3;</code>
+       */
+      public static final int NO_ACCESS_VALUE = 3;
+
+
+      public final int getNumber() {
+        return value;
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static AccessCheckResult valueOf(int value) {
+        return forNumber(value);
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       */
+      public static AccessCheckResult forNumber(int value) {
+        switch (value) {
+          case 0: return UNKNOWN;
+          case 1: return CHECK_FAILED;
+          case 2: return ACCESS;
+          case 3: return NO_ACCESS;
+          default: return null;
+        }
+      }
+
+      public static com.google.protobuf.Internal.EnumLiteMap<AccessCheckResult>
+          internalGetValueMap() {
+        return internalValueMap;
+      }
+      private static final com.google.protobuf.Internal.EnumLiteMap<
+          AccessCheckResult> internalValueMap =
+            new com.google.protobuf.Internal.EnumLiteMap<AccessCheckResult>() {
+              public AccessCheckResult findValueByNumber(int number) {
+                return AccessCheckResult.forNumber(number);
+              }
+            };
+
+      public final com.google.protobuf.Descriptors.EnumValueDescriptor
+          getValueDescriptor() {
+        return getDescriptor().getValues().get(ordinal());
+      }
+      public final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptorForType() {
+        return getDescriptor();
+      }
+      public static final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptor() {
+        return com.google.wireless.android.sdk.stats.DirectAccessUsageEvent.OemLabDialogDetails.getDescriptor().getEnumTypes().get(0);
+      }
+
+      private static final AccessCheckResult[] VALUES = values();
+
+      public static AccessCheckResult valueOf(
+          com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+        if (desc.getType() != getDescriptor()) {
+          throw new java.lang.IllegalArgumentException(
+            "EnumValueDescriptor is not for this type.");
+        }
+        return VALUES[desc.getIndex()];
+      }
+
+      private final int value;
+
+      private AccessCheckResult(int value) {
+        this.value = value;
+      }
+
+      // @@protoc_insertion_point(enum_scope:android_studio.DirectAccessUsageEvent.OemLabDialogDetails.AccessCheckResult)
+    }
+
+    private int bitField0_;
+    public static final int ACCESS_CHECK_RESULT_FIELD_NUMBER = 1;
+    private int accessCheckResult_ = 0;
+    /**
+     * <code>optional .android_studio.DirectAccessUsageEvent.OemLabDialogDetails.AccessCheckResult access_check_result = 1;</code>
+     * @return Whether the accessCheckResult field is set.
+     */
+    @java.lang.Override public boolean hasAccessCheckResult() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <code>optional .android_studio.DirectAccessUsageEvent.OemLabDialogDetails.AccessCheckResult access_check_result = 1;</code>
+     * @return The accessCheckResult.
+     */
+    @java.lang.Override public com.google.wireless.android.sdk.stats.DirectAccessUsageEvent.OemLabDialogDetails.AccessCheckResult getAccessCheckResult() {
+      com.google.wireless.android.sdk.stats.DirectAccessUsageEvent.OemLabDialogDetails.AccessCheckResult result = com.google.wireless.android.sdk.stats.DirectAccessUsageEvent.OemLabDialogDetails.AccessCheckResult.forNumber(accessCheckResult_);
+      return result == null ? com.google.wireless.android.sdk.stats.DirectAccessUsageEvent.OemLabDialogDetails.AccessCheckResult.UNKNOWN : result;
+    }
+
+    public static final int CLICKED_CLOUD_CONSOLE_BUTTON_FIELD_NUMBER = 2;
+    private boolean clickedCloudConsoleButton_ = false;
+    /**
+     * <pre>
+     * True if the user clicks the button to go to the console
+     * </pre>
+     *
+     * <code>optional bool clicked_cloud_console_button = 2;</code>
+     * @return Whether the clickedCloudConsoleButton field is set.
+     */
+    @java.lang.Override
+    public boolean hasClickedCloudConsoleButton() {
+      return ((bitField0_ & 0x00000002) != 0);
+    }
+    /**
+     * <pre>
+     * True if the user clicks the button to go to the console
+     * </pre>
+     *
+     * <code>optional bool clicked_cloud_console_button = 2;</code>
+     * @return The clickedCloudConsoleButton.
+     */
+    @java.lang.Override
+    public boolean getClickedCloudConsoleButton() {
+      return clickedCloudConsoleButton_;
+    }
+
+    public static final int RECEIVED_CALLBACK_FIELD_NUMBER = 3;
+    private boolean receivedCallback_ = false;
+    /**
+     * <pre>
+     * True if Studio received a callback from pantheon saying changes had been
+     * made.
+     * </pre>
+     *
+     * <code>optional bool received_callback = 3;</code>
+     * @return Whether the receivedCallback field is set.
+     */
+    @java.lang.Override
+    public boolean hasReceivedCallback() {
+      return ((bitField0_ & 0x00000004) != 0);
+    }
+    /**
+     * <pre>
+     * True if Studio received a callback from pantheon saying changes had been
+     * made.
+     * </pre>
+     *
+     * <code>optional bool received_callback = 3;</code>
+     * @return The receivedCallback.
+     */
+    @java.lang.Override
+    public boolean getReceivedCallback() {
+      return receivedCallback_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (((bitField0_ & 0x00000001) != 0)) {
+        output.writeEnum(1, accessCheckResult_);
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        output.writeBool(2, clickedCloudConsoleButton_);
+      }
+      if (((bitField0_ & 0x00000004) != 0)) {
+        output.writeBool(3, receivedCallback_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(1, accessCheckResult_);
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(2, clickedCloudConsoleButton_);
+      }
+      if (((bitField0_ & 0x00000004) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(3, receivedCallback_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.google.wireless.android.sdk.stats.DirectAccessUsageEvent.OemLabDialogDetails)) {
+        return super.equals(obj);
+      }
+      com.google.wireless.android.sdk.stats.DirectAccessUsageEvent.OemLabDialogDetails other = (com.google.wireless.android.sdk.stats.DirectAccessUsageEvent.OemLabDialogDetails) obj;
+
+      if (hasAccessCheckResult() != other.hasAccessCheckResult()) return false;
+      if (hasAccessCheckResult()) {
+        if (accessCheckResult_ != other.accessCheckResult_) return false;
+      }
+      if (hasClickedCloudConsoleButton() != other.hasClickedCloudConsoleButton()) return false;
+      if (hasClickedCloudConsoleButton()) {
+        if (getClickedCloudConsoleButton()
+            != other.getClickedCloudConsoleButton()) return false;
+      }
+      if (hasReceivedCallback() != other.hasReceivedCallback()) return false;
+      if (hasReceivedCallback()) {
+        if (getReceivedCallback()
+            != other.getReceivedCallback()) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasAccessCheckResult()) {
+        hash = (37 * hash) + ACCESS_CHECK_RESULT_FIELD_NUMBER;
+        hash = (53 * hash) + accessCheckResult_;
+      }
+      if (hasClickedCloudConsoleButton()) {
+        hash = (37 * hash) + CLICKED_CLOUD_CONSOLE_BUTTON_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+            getClickedCloudConsoleButton());
+      }
+      if (hasReceivedCallback()) {
+        hash = (37 * hash) + RECEIVED_CALLBACK_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+            getReceivedCallback());
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.google.wireless.android.sdk.stats.DirectAccessUsageEvent.OemLabDialogDetails parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.google.wireless.android.sdk.stats.DirectAccessUsageEvent.OemLabDialogDetails parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.google.wireless.android.sdk.stats.DirectAccessUsageEvent.OemLabDialogDetails parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.google.wireless.android.sdk.stats.DirectAccessUsageEvent.OemLabDialogDetails parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.google.wireless.android.sdk.stats.DirectAccessUsageEvent.OemLabDialogDetails parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.google.wireless.android.sdk.stats.DirectAccessUsageEvent.OemLabDialogDetails parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.google.wireless.android.sdk.stats.DirectAccessUsageEvent.OemLabDialogDetails parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.google.wireless.android.sdk.stats.DirectAccessUsageEvent.OemLabDialogDetails parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.google.wireless.android.sdk.stats.DirectAccessUsageEvent.OemLabDialogDetails parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.google.wireless.android.sdk.stats.DirectAccessUsageEvent.OemLabDialogDetails parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.google.wireless.android.sdk.stats.DirectAccessUsageEvent.OemLabDialogDetails parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.google.wireless.android.sdk.stats.DirectAccessUsageEvent.OemLabDialogDetails parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.google.wireless.android.sdk.stats.DirectAccessUsageEvent.OemLabDialogDetails prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code android_studio.DirectAccessUsageEvent.OemLabDialogDetails}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:android_studio.DirectAccessUsageEvent.OemLabDialogDetails)
+        com.google.wireless.android.sdk.stats.DirectAccessUsageEvent.OemLabDialogDetailsOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_DirectAccessUsageEvent_OemLabDialogDetails_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_DirectAccessUsageEvent_OemLabDialogDetails_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.google.wireless.android.sdk.stats.DirectAccessUsageEvent.OemLabDialogDetails.class, com.google.wireless.android.sdk.stats.DirectAccessUsageEvent.OemLabDialogDetails.Builder.class);
+      }
+
+      // Construct using com.google.wireless.android.sdk.stats.DirectAccessUsageEvent.OemLabDialogDetails.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        accessCheckResult_ = 0;
+        clickedCloudConsoleButton_ = false;
+        receivedCallback_ = false;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_DirectAccessUsageEvent_OemLabDialogDetails_descriptor;
+      }
+
+      @java.lang.Override
+      public com.google.wireless.android.sdk.stats.DirectAccessUsageEvent.OemLabDialogDetails getDefaultInstanceForType() {
+        return com.google.wireless.android.sdk.stats.DirectAccessUsageEvent.OemLabDialogDetails.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.google.wireless.android.sdk.stats.DirectAccessUsageEvent.OemLabDialogDetails build() {
+        com.google.wireless.android.sdk.stats.DirectAccessUsageEvent.OemLabDialogDetails result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.google.wireless.android.sdk.stats.DirectAccessUsageEvent.OemLabDialogDetails buildPartial() {
+        com.google.wireless.android.sdk.stats.DirectAccessUsageEvent.OemLabDialogDetails result = new com.google.wireless.android.sdk.stats.DirectAccessUsageEvent.OemLabDialogDetails(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.google.wireless.android.sdk.stats.DirectAccessUsageEvent.OemLabDialogDetails result) {
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.accessCheckResult_ = accessCheckResult_;
+          to_bitField0_ |= 0x00000001;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.clickedCloudConsoleButton_ = clickedCloudConsoleButton_;
+          to_bitField0_ |= 0x00000002;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.receivedCallback_ = receivedCallback_;
+          to_bitField0_ |= 0x00000004;
+        }
+        result.bitField0_ |= to_bitField0_;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.google.wireless.android.sdk.stats.DirectAccessUsageEvent.OemLabDialogDetails) {
+          return mergeFrom((com.google.wireless.android.sdk.stats.DirectAccessUsageEvent.OemLabDialogDetails)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.google.wireless.android.sdk.stats.DirectAccessUsageEvent.OemLabDialogDetails other) {
+        if (other == com.google.wireless.android.sdk.stats.DirectAccessUsageEvent.OemLabDialogDetails.getDefaultInstance()) return this;
+        if (other.hasAccessCheckResult()) {
+          setAccessCheckResult(other.getAccessCheckResult());
+        }
+        if (other.hasClickedCloudConsoleButton()) {
+          setClickedCloudConsoleButton(other.getClickedCloudConsoleButton());
+        }
+        if (other.hasReceivedCallback()) {
+          setReceivedCallback(other.getReceivedCallback());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                int tmpRaw = input.readEnum();
+                com.google.wireless.android.sdk.stats.DirectAccessUsageEvent.OemLabDialogDetails.AccessCheckResult tmpValue =
+                    com.google.wireless.android.sdk.stats.DirectAccessUsageEvent.OemLabDialogDetails.AccessCheckResult.forNumber(tmpRaw);
+                if (tmpValue == null) {
+                  mergeUnknownVarintField(1, tmpRaw);
+                } else {
+                  accessCheckResult_ = tmpRaw;
+                  bitField0_ |= 0x00000001;
+                }
+                break;
+              } // case 8
+              case 16: {
+                clickedCloudConsoleButton_ = input.readBool();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 16
+              case 24: {
+                receivedCallback_ = input.readBool();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 24
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private int accessCheckResult_ = 0;
+      /**
+       * <code>optional .android_studio.DirectAccessUsageEvent.OemLabDialogDetails.AccessCheckResult access_check_result = 1;</code>
+       * @return Whether the accessCheckResult field is set.
+       */
+      @java.lang.Override public boolean hasAccessCheckResult() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>optional .android_studio.DirectAccessUsageEvent.OemLabDialogDetails.AccessCheckResult access_check_result = 1;</code>
+       * @return The accessCheckResult.
+       */
+      @java.lang.Override
+      public com.google.wireless.android.sdk.stats.DirectAccessUsageEvent.OemLabDialogDetails.AccessCheckResult getAccessCheckResult() {
+        com.google.wireless.android.sdk.stats.DirectAccessUsageEvent.OemLabDialogDetails.AccessCheckResult result = com.google.wireless.android.sdk.stats.DirectAccessUsageEvent.OemLabDialogDetails.AccessCheckResult.forNumber(accessCheckResult_);
+        return result == null ? com.google.wireless.android.sdk.stats.DirectAccessUsageEvent.OemLabDialogDetails.AccessCheckResult.UNKNOWN : result;
+      }
+      /**
+       * <code>optional .android_studio.DirectAccessUsageEvent.OemLabDialogDetails.AccessCheckResult access_check_result = 1;</code>
+       * @param value The accessCheckResult to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAccessCheckResult(com.google.wireless.android.sdk.stats.DirectAccessUsageEvent.OemLabDialogDetails.AccessCheckResult value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x00000001;
+        accessCheckResult_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional .android_studio.DirectAccessUsageEvent.OemLabDialogDetails.AccessCheckResult access_check_result = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAccessCheckResult() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        accessCheckResult_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private boolean clickedCloudConsoleButton_ ;
+      /**
+       * <pre>
+       * True if the user clicks the button to go to the console
+       * </pre>
+       *
+       * <code>optional bool clicked_cloud_console_button = 2;</code>
+       * @return Whether the clickedCloudConsoleButton field is set.
+       */
+      @java.lang.Override
+      public boolean hasClickedCloudConsoleButton() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <pre>
+       * True if the user clicks the button to go to the console
+       * </pre>
+       *
+       * <code>optional bool clicked_cloud_console_button = 2;</code>
+       * @return The clickedCloudConsoleButton.
+       */
+      @java.lang.Override
+      public boolean getClickedCloudConsoleButton() {
+        return clickedCloudConsoleButton_;
+      }
+      /**
+       * <pre>
+       * True if the user clicks the button to go to the console
+       * </pre>
+       *
+       * <code>optional bool clicked_cloud_console_button = 2;</code>
+       * @param value The clickedCloudConsoleButton to set.
+       * @return This builder for chaining.
+       */
+      public Builder setClickedCloudConsoleButton(boolean value) {
+
+        clickedCloudConsoleButton_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * True if the user clicks the button to go to the console
+       * </pre>
+       *
+       * <code>optional bool clicked_cloud_console_button = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearClickedCloudConsoleButton() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        clickedCloudConsoleButton_ = false;
+        onChanged();
+        return this;
+      }
+
+      private boolean receivedCallback_ ;
+      /**
+       * <pre>
+       * True if Studio received a callback from pantheon saying changes had been
+       * made.
+       * </pre>
+       *
+       * <code>optional bool received_callback = 3;</code>
+       * @return Whether the receivedCallback field is set.
+       */
+      @java.lang.Override
+      public boolean hasReceivedCallback() {
+        return ((bitField0_ & 0x00000004) != 0);
+      }
+      /**
+       * <pre>
+       * True if Studio received a callback from pantheon saying changes had been
+       * made.
+       * </pre>
+       *
+       * <code>optional bool received_callback = 3;</code>
+       * @return The receivedCallback.
+       */
+      @java.lang.Override
+      public boolean getReceivedCallback() {
+        return receivedCallback_;
+      }
+      /**
+       * <pre>
+       * True if Studio received a callback from pantheon saying changes had been
+       * made.
+       * </pre>
+       *
+       * <code>optional bool received_callback = 3;</code>
+       * @param value The receivedCallback to set.
+       * @return This builder for chaining.
+       */
+      public Builder setReceivedCallback(boolean value) {
+
+        receivedCallback_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * True if Studio received a callback from pantheon saying changes had been
+       * made.
+       * </pre>
+       *
+       * <code>optional bool received_callback = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearReceivedCallback() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        receivedCallback_ = false;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:android_studio.DirectAccessUsageEvent.OemLabDialogDetails)
+    }
+
+    // @@protoc_insertion_point(class_scope:android_studio.DirectAccessUsageEvent.OemLabDialogDetails)
+    private static final com.google.wireless.android.sdk.stats.DirectAccessUsageEvent.OemLabDialogDetails DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.google.wireless.android.sdk.stats.DirectAccessUsageEvent.OemLabDialogDetails();
+    }
+
+    public static com.google.wireless.android.sdk.stats.DirectAccessUsageEvent.OemLabDialogDetails getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<OemLabDialogDetails>
+        PARSER = new com.google.protobuf.AbstractParser<OemLabDialogDetails>() {
+      @java.lang.Override
+      public OemLabDialogDetails parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<OemLabDialogDetails> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<OemLabDialogDetails> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.wireless.android.sdk.stats.DirectAccessUsageEvent.OemLabDialogDetails getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -6746,6 +7653,44 @@ private static final long serialVersionUID = 0L;
     return devServiceDeprecationInfo_ == null ? com.google.wireless.android.sdk.stats.DevServiceDeprecationInfo.getDefaultInstance() : devServiceDeprecationInfo_;
   }
 
+  public static final int OEM_LAB_DIALOG_DETAILS_FIELD_NUMBER = 11;
+  private com.google.wireless.android.sdk.stats.DirectAccessUsageEvent.OemLabDialogDetails oemLabDialogDetails_;
+  /**
+   * <pre>
+   * set when type = OEM_LAB_DIALOG
+   * </pre>
+   *
+   * <code>optional .android_studio.DirectAccessUsageEvent.OemLabDialogDetails oem_lab_dialog_details = 11 [lazy = true];</code>
+   * @return Whether the oemLabDialogDetails field is set.
+   */
+  @java.lang.Override
+  public boolean hasOemLabDialogDetails() {
+    return ((bitField0_ & 0x00000400) != 0);
+  }
+  /**
+   * <pre>
+   * set when type = OEM_LAB_DIALOG
+   * </pre>
+   *
+   * <code>optional .android_studio.DirectAccessUsageEvent.OemLabDialogDetails oem_lab_dialog_details = 11 [lazy = true];</code>
+   * @return The oemLabDialogDetails.
+   */
+  @java.lang.Override
+  public com.google.wireless.android.sdk.stats.DirectAccessUsageEvent.OemLabDialogDetails getOemLabDialogDetails() {
+    return oemLabDialogDetails_ == null ? com.google.wireless.android.sdk.stats.DirectAccessUsageEvent.OemLabDialogDetails.getDefaultInstance() : oemLabDialogDetails_;
+  }
+  /**
+   * <pre>
+   * set when type = OEM_LAB_DIALOG
+   * </pre>
+   *
+   * <code>optional .android_studio.DirectAccessUsageEvent.OemLabDialogDetails oem_lab_dialog_details = 11 [lazy = true];</code>
+   */
+  @java.lang.Override
+  public com.google.wireless.android.sdk.stats.DirectAccessUsageEvent.OemLabDialogDetailsOrBuilder getOemLabDialogDetailsOrBuilder() {
+    return oemLabDialogDetails_ == null ? com.google.wireless.android.sdk.stats.DirectAccessUsageEvent.OemLabDialogDetails.getDefaultInstance() : oemLabDialogDetails_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -6789,6 +7734,9 @@ private static final long serialVersionUID = 0L;
     }
     if (((bitField0_ & 0x00000200) != 0)) {
       output.writeMessage(10, getDevServiceDeprecationInfo());
+    }
+    if (((bitField0_ & 0x00000400) != 0)) {
+      output.writeMessage(11, getOemLabDialogDetails());
     }
     getUnknownFields().writeTo(output);
   }
@@ -6837,6 +7785,10 @@ private static final long serialVersionUID = 0L;
     if (((bitField0_ & 0x00000200) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(10, getDevServiceDeprecationInfo());
+    }
+    if (((bitField0_ & 0x00000400) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(11, getOemLabDialogDetails());
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -6901,6 +7853,11 @@ private static final long serialVersionUID = 0L;
       if (!getDevServiceDeprecationInfo()
           .equals(other.getDevServiceDeprecationInfo())) return false;
     }
+    if (hasOemLabDialogDetails() != other.hasOemLabDialogDetails()) return false;
+    if (hasOemLabDialogDetails()) {
+      if (!getOemLabDialogDetails()
+          .equals(other.getOemLabDialogDetails())) return false;
+    }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -6951,6 +7908,10 @@ private static final long serialVersionUID = 0L;
     if (hasDevServiceDeprecationInfo()) {
       hash = (37 * hash) + DEV_SERVICE_DEPRECATION_INFO_FIELD_NUMBER;
       hash = (53 * hash) + getDevServiceDeprecationInfo().hashCode();
+    }
+    if (hasOemLabDialogDetails()) {
+      hash = (37 * hash) + OEM_LAB_DIALOG_DETAILS_FIELD_NUMBER;
+      hash = (53 * hash) + getOemLabDialogDetails().hashCode();
     }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
@@ -7087,6 +8048,7 @@ private static final long serialVersionUID = 0L;
         getEndReservationDetailsFieldBuilder();
         getDisconnectDeviceDetailsFieldBuilder();
         getDevServiceDeprecationInfoFieldBuilder();
+        getOemLabDialogDetailsFieldBuilder();
       }
     }
     @java.lang.Override
@@ -7130,6 +8092,11 @@ private static final long serialVersionUID = 0L;
       if (devServiceDeprecationInfoBuilder_ != null) {
         devServiceDeprecationInfoBuilder_.dispose();
         devServiceDeprecationInfoBuilder_ = null;
+      }
+      oemLabDialogDetails_ = null;
+      if (oemLabDialogDetailsBuilder_ != null) {
+        oemLabDialogDetailsBuilder_.dispose();
+        oemLabDialogDetailsBuilder_ = null;
       }
       return this;
     }
@@ -7219,6 +8186,12 @@ private static final long serialVersionUID = 0L;
             : devServiceDeprecationInfoBuilder_.build();
         to_bitField0_ |= 0x00000200;
       }
+      if (((from_bitField0_ & 0x00000400) != 0)) {
+        result.oemLabDialogDetails_ = oemLabDialogDetailsBuilder_ == null
+            ? oemLabDialogDetails_
+            : oemLabDialogDetailsBuilder_.build();
+        to_bitField0_ |= 0x00000400;
+      }
       result.bitField0_ |= to_bitField0_;
     }
 
@@ -7265,6 +8238,9 @@ private static final long serialVersionUID = 0L;
       }
       if (other.hasDevServiceDeprecationInfo()) {
         mergeDevServiceDeprecationInfo(other.getDevServiceDeprecationInfo());
+      }
+      if (other.hasOemLabDialogDetails()) {
+        mergeOemLabDialogDetails(other.getOemLabDialogDetails());
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -7370,6 +8346,13 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000200;
               break;
             } // case 82
+            case 90: {
+              input.readMessage(
+                  getOemLabDialogDetailsFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000400;
+              break;
+            } // case 90
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -8702,6 +9685,161 @@ private static final long serialVersionUID = 0L;
         devServiceDeprecationInfo_ = null;
       }
       return devServiceDeprecationInfoBuilder_;
+    }
+
+    private com.google.wireless.android.sdk.stats.DirectAccessUsageEvent.OemLabDialogDetails oemLabDialogDetails_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.DirectAccessUsageEvent.OemLabDialogDetails, com.google.wireless.android.sdk.stats.DirectAccessUsageEvent.OemLabDialogDetails.Builder, com.google.wireless.android.sdk.stats.DirectAccessUsageEvent.OemLabDialogDetailsOrBuilder> oemLabDialogDetailsBuilder_;
+    /**
+     * <pre>
+     * set when type = OEM_LAB_DIALOG
+     * </pre>
+     *
+     * <code>optional .android_studio.DirectAccessUsageEvent.OemLabDialogDetails oem_lab_dialog_details = 11 [lazy = true];</code>
+     * @return Whether the oemLabDialogDetails field is set.
+     */
+    public boolean hasOemLabDialogDetails() {
+      return ((bitField0_ & 0x00000400) != 0);
+    }
+    /**
+     * <pre>
+     * set when type = OEM_LAB_DIALOG
+     * </pre>
+     *
+     * <code>optional .android_studio.DirectAccessUsageEvent.OemLabDialogDetails oem_lab_dialog_details = 11 [lazy = true];</code>
+     * @return The oemLabDialogDetails.
+     */
+    public com.google.wireless.android.sdk.stats.DirectAccessUsageEvent.OemLabDialogDetails getOemLabDialogDetails() {
+      if (oemLabDialogDetailsBuilder_ == null) {
+        return oemLabDialogDetails_ == null ? com.google.wireless.android.sdk.stats.DirectAccessUsageEvent.OemLabDialogDetails.getDefaultInstance() : oemLabDialogDetails_;
+      } else {
+        return oemLabDialogDetailsBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * set when type = OEM_LAB_DIALOG
+     * </pre>
+     *
+     * <code>optional .android_studio.DirectAccessUsageEvent.OemLabDialogDetails oem_lab_dialog_details = 11 [lazy = true];</code>
+     */
+    public Builder setOemLabDialogDetails(com.google.wireless.android.sdk.stats.DirectAccessUsageEvent.OemLabDialogDetails value) {
+      if (oemLabDialogDetailsBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        oemLabDialogDetails_ = value;
+      } else {
+        oemLabDialogDetailsBuilder_.setMessage(value);
+      }
+      bitField0_ |= 0x00000400;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * set when type = OEM_LAB_DIALOG
+     * </pre>
+     *
+     * <code>optional .android_studio.DirectAccessUsageEvent.OemLabDialogDetails oem_lab_dialog_details = 11 [lazy = true];</code>
+     */
+    public Builder setOemLabDialogDetails(
+        com.google.wireless.android.sdk.stats.DirectAccessUsageEvent.OemLabDialogDetails.Builder builderForValue) {
+      if (oemLabDialogDetailsBuilder_ == null) {
+        oemLabDialogDetails_ = builderForValue.build();
+      } else {
+        oemLabDialogDetailsBuilder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x00000400;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * set when type = OEM_LAB_DIALOG
+     * </pre>
+     *
+     * <code>optional .android_studio.DirectAccessUsageEvent.OemLabDialogDetails oem_lab_dialog_details = 11 [lazy = true];</code>
+     */
+    public Builder mergeOemLabDialogDetails(com.google.wireless.android.sdk.stats.DirectAccessUsageEvent.OemLabDialogDetails value) {
+      if (oemLabDialogDetailsBuilder_ == null) {
+        if (((bitField0_ & 0x00000400) != 0) &&
+          oemLabDialogDetails_ != null &&
+          oemLabDialogDetails_ != com.google.wireless.android.sdk.stats.DirectAccessUsageEvent.OemLabDialogDetails.getDefaultInstance()) {
+          getOemLabDialogDetailsBuilder().mergeFrom(value);
+        } else {
+          oemLabDialogDetails_ = value;
+        }
+      } else {
+        oemLabDialogDetailsBuilder_.mergeFrom(value);
+      }
+      bitField0_ |= 0x00000400;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * set when type = OEM_LAB_DIALOG
+     * </pre>
+     *
+     * <code>optional .android_studio.DirectAccessUsageEvent.OemLabDialogDetails oem_lab_dialog_details = 11 [lazy = true];</code>
+     */
+    public Builder clearOemLabDialogDetails() {
+      bitField0_ = (bitField0_ & ~0x00000400);
+      oemLabDialogDetails_ = null;
+      if (oemLabDialogDetailsBuilder_ != null) {
+        oemLabDialogDetailsBuilder_.dispose();
+        oemLabDialogDetailsBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * set when type = OEM_LAB_DIALOG
+     * </pre>
+     *
+     * <code>optional .android_studio.DirectAccessUsageEvent.OemLabDialogDetails oem_lab_dialog_details = 11 [lazy = true];</code>
+     */
+    public com.google.wireless.android.sdk.stats.DirectAccessUsageEvent.OemLabDialogDetails.Builder getOemLabDialogDetailsBuilder() {
+      bitField0_ |= 0x00000400;
+      onChanged();
+      return getOemLabDialogDetailsFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * set when type = OEM_LAB_DIALOG
+     * </pre>
+     *
+     * <code>optional .android_studio.DirectAccessUsageEvent.OemLabDialogDetails oem_lab_dialog_details = 11 [lazy = true];</code>
+     */
+    public com.google.wireless.android.sdk.stats.DirectAccessUsageEvent.OemLabDialogDetailsOrBuilder getOemLabDialogDetailsOrBuilder() {
+      if (oemLabDialogDetailsBuilder_ != null) {
+        return oemLabDialogDetailsBuilder_.getMessageOrBuilder();
+      } else {
+        return oemLabDialogDetails_ == null ?
+            com.google.wireless.android.sdk.stats.DirectAccessUsageEvent.OemLabDialogDetails.getDefaultInstance() : oemLabDialogDetails_;
+      }
+    }
+    /**
+     * <pre>
+     * set when type = OEM_LAB_DIALOG
+     * </pre>
+     *
+     * <code>optional .android_studio.DirectAccessUsageEvent.OemLabDialogDetails oem_lab_dialog_details = 11 [lazy = true];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.DirectAccessUsageEvent.OemLabDialogDetails, com.google.wireless.android.sdk.stats.DirectAccessUsageEvent.OemLabDialogDetails.Builder, com.google.wireless.android.sdk.stats.DirectAccessUsageEvent.OemLabDialogDetailsOrBuilder> 
+        getOemLabDialogDetailsFieldBuilder() {
+      if (oemLabDialogDetailsBuilder_ == null) {
+        oemLabDialogDetailsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.wireless.android.sdk.stats.DirectAccessUsageEvent.OemLabDialogDetails, com.google.wireless.android.sdk.stats.DirectAccessUsageEvent.OemLabDialogDetails.Builder, com.google.wireless.android.sdk.stats.DirectAccessUsageEvent.OemLabDialogDetailsOrBuilder>(
+                getOemLabDialogDetails(),
+                getParentForChildren(),
+                isClean());
+        oemLabDialogDetails_ = null;
+      }
+      return oemLabDialogDetailsBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

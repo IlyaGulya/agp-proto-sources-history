@@ -258,6 +258,14 @@ private static final long serialVersionUID = 0L;
      * <code>DAEMON_JVM_CRITERIA = 52;</code>
      */
     DAEMON_JVM_CRITERIA(52),
+    /**
+     * <code>USES_SDK_IN_MANIFEST_DISALLOWED_DEFAULT = 53;</code>
+     */
+    USES_SDK_IN_MANIFEST_DISALLOWED_DEFAULT(53),
+    /**
+     * <code>BLOCK_BUILD_FEATURE_BUILD_CONFIG_PRESENT = 54;</code>
+     */
+    BLOCK_BUILD_FEATURE_BUILD_CONFIG_PRESENT(54),
     ;
 
     /**
@@ -472,6 +480,14 @@ private static final long serialVersionUID = 0L;
      * <code>DAEMON_JVM_CRITERIA = 52;</code>
      */
     public static final int DAEMON_JVM_CRITERIA_VALUE = 52;
+    /**
+     * <code>USES_SDK_IN_MANIFEST_DISALLOWED_DEFAULT = 53;</code>
+     */
+    public static final int USES_SDK_IN_MANIFEST_DISALLOWED_DEFAULT_VALUE = 53;
+    /**
+     * <code>BLOCK_BUILD_FEATURE_BUILD_CONFIG_PRESENT = 54;</code>
+     */
+    public static final int BLOCK_BUILD_FEATURE_BUILD_CONFIG_PRESENT_VALUE = 54;
 
 
     public final int getNumber() {
@@ -547,6 +563,8 @@ private static final long serialVersionUID = 0L;
         case 50: return BLOCK_R8_OPTIMIZED_RESOURCE_SHRINKING_PRESENT;
         case 51: return USE_R8_OPTIMIZED_RESOURCE_SHRINKING_DEFAULT;
         case 52: return DAEMON_JVM_CRITERIA;
+        case 53: return USES_SDK_IN_MANIFEST_DISALLOWED_DEFAULT;
+        case 54: return BLOCK_BUILD_FEATURE_BUILD_CONFIG_PRESENT;
         default: return null;
       }
     }
