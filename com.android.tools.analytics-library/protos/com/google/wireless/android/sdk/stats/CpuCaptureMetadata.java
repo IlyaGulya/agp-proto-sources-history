@@ -187,11 +187,12 @@ private static final long serialVersionUID = 0L;
     USER_ABORTED_PARSING(4),
     /**
      * <pre>
-     * There was an error while preprocessing the trace file
+     * Deprecated by PREPROCESS_FAILED_* enum constants.
      * </pre>
      *
-     * <code>PREPROCESS_FAILURE = 5;</code>
+     * <code>PREPROCESS_FAILURE = 5 [deprecated = true];</code>
      */
+    @java.lang.Deprecated
     PREPROCESS_FAILURE(5),
     /**
      * <pre>
@@ -346,6 +347,41 @@ private static final long serialVersionUID = 0L;
      * <code>PARSING_FAILED_CAUSE_UNKNOWN = 24;</code>
      */
     PARSING_FAILED_CAUSE_UNKNOWN(24),
+    /**
+     * <pre>
+     * Couldn't preprocess the simpleperf trace: empty file.
+     * </pre>
+     *
+     * <code>PREPROCESS_FAILED_SIMPLEPERF_EMPTY_FILE = 25;</code>
+     */
+    PREPROCESS_FAILED_SIMPLEPERF_EMPTY_FILE(25),
+    /**
+     * <pre>
+     * Couldn't preprocess the simpelperf trace: the report-sample command
+     * reported errors at exit.
+     * </pre>
+     *
+     * <code>PREPROCESS_FAILED_SIMPLEPERF_ERRORS_AT_EXIT = 26;</code>
+     */
+    PREPROCESS_FAILED_SIMPLEPERF_ERRORS_AT_EXIT(26),
+    /**
+     * <pre>
+     * Couldn't preprocess the simpelperf trace: I/O error while executing
+     * the report-sample command.
+     * </pre>
+     *
+     * <code>PREPROCESS_FAILED_SIMPLEPERF_IO_ERROR = 27;</code>
+     */
+    PREPROCESS_FAILED_SIMPLEPERF_IO_ERROR(27),
+    /**
+     * <pre>
+     * Couldn't preprocess the simpelperf trace: InterruptedException while
+     * waiting for the report-sample command.
+     * </pre>
+     *
+     * <code>PREPROCESS_FAILED_SIMPLEPERF_FAILED_TO_WAIT = 28;</code>
+     */
+    PREPROCESS_FAILED_SIMPLEPERF_FAILED_TO_WAIT(28),
     ;
 
     /**
@@ -387,12 +423,12 @@ private static final long serialVersionUID = 0L;
     public static final int USER_ABORTED_PARSING_VALUE = 4;
     /**
      * <pre>
-     * There was an error while preprocessing the trace file
+     * Deprecated by PREPROCESS_FAILED_* enum constants.
      * </pre>
      *
-     * <code>PREPROCESS_FAILURE = 5;</code>
+     * <code>PREPROCESS_FAILURE = 5 [deprecated = true];</code>
      */
-    public static final int PREPROCESS_FAILURE_VALUE = 5;
+    @java.lang.Deprecated public static final int PREPROCESS_FAILURE_VALUE = 5;
     /**
      * <pre>
      * There was no ongoing capture to stop.
@@ -546,6 +582,41 @@ private static final long serialVersionUID = 0L;
      * <code>PARSING_FAILED_CAUSE_UNKNOWN = 24;</code>
      */
     public static final int PARSING_FAILED_CAUSE_UNKNOWN_VALUE = 24;
+    /**
+     * <pre>
+     * Couldn't preprocess the simpleperf trace: empty file.
+     * </pre>
+     *
+     * <code>PREPROCESS_FAILED_SIMPLEPERF_EMPTY_FILE = 25;</code>
+     */
+    public static final int PREPROCESS_FAILED_SIMPLEPERF_EMPTY_FILE_VALUE = 25;
+    /**
+     * <pre>
+     * Couldn't preprocess the simpelperf trace: the report-sample command
+     * reported errors at exit.
+     * </pre>
+     *
+     * <code>PREPROCESS_FAILED_SIMPLEPERF_ERRORS_AT_EXIT = 26;</code>
+     */
+    public static final int PREPROCESS_FAILED_SIMPLEPERF_ERRORS_AT_EXIT_VALUE = 26;
+    /**
+     * <pre>
+     * Couldn't preprocess the simpelperf trace: I/O error while executing
+     * the report-sample command.
+     * </pre>
+     *
+     * <code>PREPROCESS_FAILED_SIMPLEPERF_IO_ERROR = 27;</code>
+     */
+    public static final int PREPROCESS_FAILED_SIMPLEPERF_IO_ERROR_VALUE = 27;
+    /**
+     * <pre>
+     * Couldn't preprocess the simpelperf trace: InterruptedException while
+     * waiting for the report-sample command.
+     * </pre>
+     *
+     * <code>PREPROCESS_FAILED_SIMPLEPERF_FAILED_TO_WAIT = 28;</code>
+     */
+    public static final int PREPROCESS_FAILED_SIMPLEPERF_FAILED_TO_WAIT_VALUE = 28;
 
 
     public final int getNumber() {
@@ -593,6 +664,10 @@ private static final long serialVersionUID = 0L;
         case 22: return PARSING_FAILED_FILE_HEADER_ERROR;
         case 23: return PARSING_FAILED_PARSER_ERROR;
         case 24: return PARSING_FAILED_CAUSE_UNKNOWN;
+        case 25: return PREPROCESS_FAILED_SIMPLEPERF_EMPTY_FILE;
+        case 26: return PREPROCESS_FAILED_SIMPLEPERF_ERRORS_AT_EXIT;
+        case 27: return PREPROCESS_FAILED_SIMPLEPERF_IO_ERROR;
+        case 28: return PREPROCESS_FAILED_SIMPLEPERF_FAILED_TO_WAIT;
         default: return null;
       }
     }
