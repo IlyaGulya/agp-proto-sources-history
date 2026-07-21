@@ -820,6 +820,10 @@ public enum BooleanOption
    * <code>GENERATE_SYNC_ISSUE_WHEN_LIBRARY_CONSTRAINTS_ARE_ENABLED = 199;</code>
    */
   GENERATE_SYNC_ISSUE_WHEN_LIBRARY_CONSTRAINTS_ARE_ENABLED(199),
+  /**
+   * <code>GRADUAL_R8_SHRINKING = 200;</code>
+   */
+  GRADUAL_R8_SHRINKING(200),
   UNRECOGNIZED(-1),
   ;
 
@@ -1623,6 +1627,10 @@ public enum BooleanOption
    * <code>GENERATE_SYNC_ISSUE_WHEN_LIBRARY_CONSTRAINTS_ARE_ENABLED = 199;</code>
    */
   public static final int GENERATE_SYNC_ISSUE_WHEN_LIBRARY_CONSTRAINTS_ARE_ENABLED_VALUE = 199;
+  /**
+   * <code>GRADUAL_R8_SHRINKING = 200;</code>
+   */
+  public static final int GRADUAL_R8_SHRINKING_VALUE = 200;
 
 
   public final int getNumber() {
@@ -1849,6 +1857,7 @@ public enum BooleanOption
       case 197: return DUMP_ARTIFACTS_LOCATIONS;
       case 198: return R8_STRICT_FULL_MODE_FOR_KEEP_RULES;
       case 199: return GENERATE_SYNC_ISSUE_WHEN_LIBRARY_CONSTRAINTS_ARE_ENABLED;
+      case 200: return GRADUAL_R8_SHRINKING;
       default: return null;
     }
   }

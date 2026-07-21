@@ -6241,4 +6241,31 @@ public interface AndroidStudioEventOrBuilder extends
    * <code>optional .android_studio.WifiPairingEvent wifi_pairing_event = 223 [lazy = true];</code>
    */
   com.google.wireless.android.sdk.stats.WifiPairingEventOrBuilder getWifiPairingEventOrBuilder();
+
+  /**
+   * <pre>
+   * set when kind = COMMIT_METRICS_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.CommitMetricsEvent commit_metrics_event = 224 [lazy = true];</code>
+   * @return Whether the commitMetricsEvent field is set.
+   */
+  boolean hasCommitMetricsEvent();
+  /**
+   * <pre>
+   * set when kind = COMMIT_METRICS_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.CommitMetricsEvent commit_metrics_event = 224 [lazy = true];</code>
+   * @return The commitMetricsEvent.
+   */
+  com.google.wireless.android.sdk.stats.CommitMetricsEvent getCommitMetricsEvent();
+  /**
+   * <pre>
+   * set when kind = COMMIT_METRICS_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.CommitMetricsEvent commit_metrics_event = 224 [lazy = true];</code>
+   */
+  com.google.wireless.android.sdk.stats.CommitMetricsEventOrBuilder getCommitMetricsEventOrBuilder();
 }
