@@ -24,6 +24,7 @@ public final class ResourcesInternal {
      * </pre>
      *
      * <code>string resource_name = 1;</code>
+     * @return The resourceName.
      */
     java.lang.String getResourceName();
     /**
@@ -32,6 +33,7 @@ public final class ResourcesInternal {
      * </pre>
      *
      * <code>string resource_name = 1;</code>
+     * @return The bytes for resourceName.
      */
     com.google.protobuf.ByteString
         getResourceNameBytes();
@@ -42,6 +44,7 @@ public final class ResourcesInternal {
      * </pre>
      *
      * <code>.aapt.pb.Configuration config = 2;</code>
+     * @return Whether the config field is set.
      */
     boolean hasConfig();
     /**
@@ -50,6 +53,7 @@ public final class ResourcesInternal {
      * </pre>
      *
      * <code>.aapt.pb.Configuration config = 2;</code>
+     * @return The config.
      */
     com.android.aapt.ConfigurationOuterClass.Configuration getConfig();
     /**
@@ -67,6 +71,7 @@ public final class ResourcesInternal {
      * </pre>
      *
      * <code>.aapt.pb.FileReference.Type type = 3;</code>
+     * @return The enum numeric value on the wire for type.
      */
     int getTypeValue();
     /**
@@ -75,6 +80,7 @@ public final class ResourcesInternal {
      * </pre>
      *
      * <code>.aapt.pb.FileReference.Type type = 3;</code>
+     * @return The type.
      */
     com.android.aapt.Resources.FileReference.Type getType();
 
@@ -85,6 +91,7 @@ public final class ResourcesInternal {
      * </pre>
      *
      * <code>string source_path = 4;</code>
+     * @return The sourcePath.
      */
     java.lang.String getSourcePath();
     /**
@@ -94,6 +101,7 @@ public final class ResourcesInternal {
      * </pre>
      *
      * <code>string source_path = 4;</code>
+     * @return The bytes for sourcePath.
      */
     com.google.protobuf.ByteString
         getSourcePathBytes();
@@ -167,6 +175,13 @@ public final class ResourcesInternal {
     }
 
     @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new CompiledFile();
+    }
+
+    @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
@@ -176,6 +191,9 @@ public final class ResourcesInternal {
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
@@ -187,13 +205,6 @@ public final class ResourcesInternal {
             case 0:
               done = true;
               break;
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
             case 10: {
               java.lang.String s = input.readStringRequireUtf8();
 
@@ -226,12 +237,19 @@ public final class ResourcesInternal {
               break;
             }
             case 42: {
-              if (!((mutable_bitField0_ & 0x00000010) == 0x00000010)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 exportedSymbol_ = new java.util.ArrayList<android.aapt.pb.internal.ResourcesInternal.CompiledFile.Symbol>();
-                mutable_bitField0_ |= 0x00000010;
+                mutable_bitField0_ |= 0x00000001;
               }
               exportedSymbol_.add(
                   input.readMessage(android.aapt.pb.internal.ResourcesInternal.CompiledFile.Symbol.parser(), extensionRegistry));
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
               break;
             }
           }
@@ -242,7 +260,7 @@ public final class ResourcesInternal {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000010) == 0x00000010)) {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
           exportedSymbol_ = java.util.Collections.unmodifiableList(exportedSymbol_);
         }
         this.unknownFields = unknownFields.build();
@@ -254,6 +272,7 @@ public final class ResourcesInternal {
       return android.aapt.pb.internal.ResourcesInternal.internal_static_aapt_pb_internal_CompiledFile_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
       return android.aapt.pb.internal.ResourcesInternal.internal_static_aapt_pb_internal_CompiledFile_fieldAccessorTable
@@ -271,6 +290,7 @@ public final class ResourcesInternal {
        * </pre>
        *
        * <code>string resource_name = 1;</code>
+       * @return The resourceName.
        */
       java.lang.String getResourceName();
       /**
@@ -279,6 +299,7 @@ public final class ResourcesInternal {
        * </pre>
        *
        * <code>string resource_name = 1;</code>
+       * @return The bytes for resourceName.
        */
       com.google.protobuf.ByteString
           getResourceNameBytes();
@@ -289,6 +310,7 @@ public final class ResourcesInternal {
        * </pre>
        *
        * <code>.aapt.pb.SourcePosition source = 2;</code>
+       * @return Whether the source field is set.
        */
       boolean hasSource();
       /**
@@ -297,6 +319,7 @@ public final class ResourcesInternal {
        * </pre>
        *
        * <code>.aapt.pb.SourcePosition source = 2;</code>
+       * @return The source.
        */
       com.android.aapt.Resources.SourcePosition getSource();
       /**
@@ -325,6 +348,13 @@ public final class ResourcesInternal {
       }
 
       @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new Symbol();
+      }
+
+      @java.lang.Override
       public final com.google.protobuf.UnknownFieldSet
       getUnknownFields() {
         return this.unknownFields;
@@ -334,7 +364,9 @@ public final class ResourcesInternal {
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
         this();
-        int mutable_bitField0_ = 0;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         com.google.protobuf.UnknownFieldSet.Builder unknownFields =
             com.google.protobuf.UnknownFieldSet.newBuilder();
         try {
@@ -345,13 +377,6 @@ public final class ResourcesInternal {
               case 0:
                 done = true;
                 break;
-              default: {
-                if (!parseUnknownFieldProto3(
-                    input, unknownFields, extensionRegistry, tag)) {
-                  done = true;
-                }
-                break;
-              }
               case 10: {
                 java.lang.String s = input.readStringRequireUtf8();
 
@@ -371,6 +396,13 @@ public final class ResourcesInternal {
 
                 break;
               }
+              default: {
+                if (!parseUnknownField(
+                    input, unknownFields, extensionRegistry, tag)) {
+                  done = true;
+                }
+                break;
+              }
             }
           }
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -388,6 +420,7 @@ public final class ResourcesInternal {
         return android.aapt.pb.internal.ResourcesInternal.internal_static_aapt_pb_internal_CompiledFile_Symbol_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return android.aapt.pb.internal.ResourcesInternal.internal_static_aapt_pb_internal_CompiledFile_Symbol_fieldAccessorTable
@@ -403,6 +436,7 @@ public final class ResourcesInternal {
        * </pre>
        *
        * <code>string resource_name = 1;</code>
+       * @return The resourceName.
        */
       public java.lang.String getResourceName() {
         java.lang.Object ref = resourceName_;
@@ -422,6 +456,7 @@ public final class ResourcesInternal {
        * </pre>
        *
        * <code>string resource_name = 1;</code>
+       * @return The bytes for resourceName.
        */
       public com.google.protobuf.ByteString
           getResourceNameBytes() {
@@ -445,6 +480,7 @@ public final class ResourcesInternal {
        * </pre>
        *
        * <code>.aapt.pb.SourcePosition source = 2;</code>
+       * @return Whether the source field is set.
        */
       public boolean hasSource() {
         return source_ != null;
@@ -455,6 +491,7 @@ public final class ResourcesInternal {
        * </pre>
        *
        * <code>.aapt.pb.SourcePosition source = 2;</code>
+       * @return The source.
        */
       public com.android.aapt.Resources.SourcePosition getSource() {
         return source_ == null ? com.android.aapt.Resources.SourcePosition.getDefaultInstance() : source_;
@@ -471,6 +508,7 @@ public final class ResourcesInternal {
       }
 
       private byte memoizedIsInitialized = -1;
+      @java.lang.Override
       public final boolean isInitialized() {
         byte isInitialized = memoizedIsInitialized;
         if (isInitialized == 1) return true;
@@ -480,6 +518,7 @@ public final class ResourcesInternal {
         return true;
       }
 
+      @java.lang.Override
       public void writeTo(com.google.protobuf.CodedOutputStream output)
                           throws java.io.IOException {
         if (!getResourceNameBytes().isEmpty()) {
@@ -491,6 +530,7 @@ public final class ResourcesInternal {
         unknownFields.writeTo(output);
       }
 
+      @java.lang.Override
       public int getSerializedSize() {
         int size = memoizedSize;
         if (size != -1) return size;
@@ -518,16 +558,15 @@ public final class ResourcesInternal {
         }
         android.aapt.pb.internal.ResourcesInternal.CompiledFile.Symbol other = (android.aapt.pb.internal.ResourcesInternal.CompiledFile.Symbol) obj;
 
-        boolean result = true;
-        result = result && getResourceName()
-            .equals(other.getResourceName());
-        result = result && (hasSource() == other.hasSource());
+        if (!getResourceName()
+            .equals(other.getResourceName())) return false;
+        if (hasSource() != other.hasSource()) return false;
         if (hasSource()) {
-          result = result && getSource()
-              .equals(other.getSource());
+          if (!getSource()
+              .equals(other.getSource())) return false;
         }
-        result = result && unknownFields.equals(other.unknownFields);
-        return result;
+        if (!unknownFields.equals(other.unknownFields)) return false;
+        return true;
       }
 
       @java.lang.Override
@@ -618,6 +657,7 @@ public final class ResourcesInternal {
             .parseWithIOException(PARSER, input, extensionRegistry);
       }
 
+      @java.lang.Override
       public Builder newBuilderForType() { return newBuilder(); }
       public static Builder newBuilder() {
         return DEFAULT_INSTANCE.toBuilder();
@@ -625,6 +665,7 @@ public final class ResourcesInternal {
       public static Builder newBuilder(android.aapt.pb.internal.ResourcesInternal.CompiledFile.Symbol prototype) {
         return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
       }
+      @java.lang.Override
       public Builder toBuilder() {
         return this == DEFAULT_INSTANCE
             ? new Builder() : new Builder().mergeFrom(this);
@@ -648,6 +689,7 @@ public final class ResourcesInternal {
           return android.aapt.pb.internal.ResourcesInternal.internal_static_aapt_pb_internal_CompiledFile_Symbol_descriptor;
         }
 
+        @java.lang.Override
         protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
             internalGetFieldAccessorTable() {
           return android.aapt.pb.internal.ResourcesInternal.internal_static_aapt_pb_internal_CompiledFile_Symbol_fieldAccessorTable
@@ -670,6 +712,7 @@ public final class ResourcesInternal {
                   .alwaysUseFieldBuilders) {
           }
         }
+        @java.lang.Override
         public Builder clear() {
           super.clear();
           resourceName_ = "";
@@ -683,15 +726,18 @@ public final class ResourcesInternal {
           return this;
         }
 
+        @java.lang.Override
         public com.google.protobuf.Descriptors.Descriptor
             getDescriptorForType() {
           return android.aapt.pb.internal.ResourcesInternal.internal_static_aapt_pb_internal_CompiledFile_Symbol_descriptor;
         }
 
+        @java.lang.Override
         public android.aapt.pb.internal.ResourcesInternal.CompiledFile.Symbol getDefaultInstanceForType() {
           return android.aapt.pb.internal.ResourcesInternal.CompiledFile.Symbol.getDefaultInstance();
         }
 
+        @java.lang.Override
         public android.aapt.pb.internal.ResourcesInternal.CompiledFile.Symbol build() {
           android.aapt.pb.internal.ResourcesInternal.CompiledFile.Symbol result = buildPartial();
           if (!result.isInitialized()) {
@@ -700,6 +746,7 @@ public final class ResourcesInternal {
           return result;
         }
 
+        @java.lang.Override
         public android.aapt.pb.internal.ResourcesInternal.CompiledFile.Symbol buildPartial() {
           android.aapt.pb.internal.ResourcesInternal.CompiledFile.Symbol result = new android.aapt.pb.internal.ResourcesInternal.CompiledFile.Symbol(this);
           result.resourceName_ = resourceName_;
@@ -712,32 +759,39 @@ public final class ResourcesInternal {
           return result;
         }
 
+        @java.lang.Override
         public Builder clone() {
-          return (Builder) super.clone();
+          return super.clone();
         }
+        @java.lang.Override
         public Builder setField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             java.lang.Object value) {
-          return (Builder) super.setField(field, value);
+          return super.setField(field, value);
         }
+        @java.lang.Override
         public Builder clearField(
             com.google.protobuf.Descriptors.FieldDescriptor field) {
-          return (Builder) super.clearField(field);
+          return super.clearField(field);
         }
+        @java.lang.Override
         public Builder clearOneof(
             com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-          return (Builder) super.clearOneof(oneof);
+          return super.clearOneof(oneof);
         }
+        @java.lang.Override
         public Builder setRepeatedField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             int index, java.lang.Object value) {
-          return (Builder) super.setRepeatedField(field, index, value);
+          return super.setRepeatedField(field, index, value);
         }
+        @java.lang.Override
         public Builder addRepeatedField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             java.lang.Object value) {
-          return (Builder) super.addRepeatedField(field, value);
+          return super.addRepeatedField(field, value);
         }
+        @java.lang.Override
         public Builder mergeFrom(com.google.protobuf.Message other) {
           if (other instanceof android.aapt.pb.internal.ResourcesInternal.CompiledFile.Symbol) {
             return mergeFrom((android.aapt.pb.internal.ResourcesInternal.CompiledFile.Symbol)other);
@@ -761,10 +815,12 @@ public final class ResourcesInternal {
           return this;
         }
 
+        @java.lang.Override
         public final boolean isInitialized() {
           return true;
         }
 
+        @java.lang.Override
         public Builder mergeFrom(
             com.google.protobuf.CodedInputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -790,6 +846,7 @@ public final class ResourcesInternal {
          * </pre>
          *
          * <code>string resource_name = 1;</code>
+         * @return The resourceName.
          */
         public java.lang.String getResourceName() {
           java.lang.Object ref = resourceName_;
@@ -809,6 +866,7 @@ public final class ResourcesInternal {
          * </pre>
          *
          * <code>string resource_name = 1;</code>
+         * @return The bytes for resourceName.
          */
         public com.google.protobuf.ByteString
             getResourceNameBytes() {
@@ -829,6 +887,8 @@ public final class ResourcesInternal {
          * </pre>
          *
          * <code>string resource_name = 1;</code>
+         * @param value The resourceName to set.
+         * @return This builder for chaining.
          */
         public Builder setResourceName(
             java.lang.String value) {
@@ -846,6 +906,7 @@ public final class ResourcesInternal {
          * </pre>
          *
          * <code>string resource_name = 1;</code>
+         * @return This builder for chaining.
          */
         public Builder clearResourceName() {
           
@@ -859,6 +920,8 @@ public final class ResourcesInternal {
          * </pre>
          *
          * <code>string resource_name = 1;</code>
+         * @param value The bytes for resourceName to set.
+         * @return This builder for chaining.
          */
         public Builder setResourceNameBytes(
             com.google.protobuf.ByteString value) {
@@ -872,7 +935,7 @@ public final class ResourcesInternal {
           return this;
         }
 
-        private com.android.aapt.Resources.SourcePosition source_ = null;
+        private com.android.aapt.Resources.SourcePosition source_;
         private com.google.protobuf.SingleFieldBuilderV3<
             com.android.aapt.Resources.SourcePosition, com.android.aapt.Resources.SourcePosition.Builder, com.android.aapt.Resources.SourcePositionOrBuilder> sourceBuilder_;
         /**
@@ -881,6 +944,7 @@ public final class ResourcesInternal {
          * </pre>
          *
          * <code>.aapt.pb.SourcePosition source = 2;</code>
+         * @return Whether the source field is set.
          */
         public boolean hasSource() {
           return sourceBuilder_ != null || source_ != null;
@@ -891,6 +955,7 @@ public final class ResourcesInternal {
          * </pre>
          *
          * <code>.aapt.pb.SourcePosition source = 2;</code>
+         * @return The source.
          */
         public com.android.aapt.Resources.SourcePosition getSource() {
           if (sourceBuilder_ == null) {
@@ -1024,11 +1089,13 @@ public final class ResourcesInternal {
           }
           return sourceBuilder_;
         }
+        @java.lang.Override
         public final Builder setUnknownFields(
             final com.google.protobuf.UnknownFieldSet unknownFields) {
-          return super.setUnknownFieldsProto3(unknownFields);
+          return super.setUnknownFields(unknownFields);
         }
 
+        @java.lang.Override
         public final Builder mergeUnknownFields(
             final com.google.protobuf.UnknownFieldSet unknownFields) {
           return super.mergeUnknownFields(unknownFields);
@@ -1050,11 +1117,12 @@ public final class ResourcesInternal {
 
       private static final com.google.protobuf.Parser<Symbol>
           PARSER = new com.google.protobuf.AbstractParser<Symbol>() {
+        @java.lang.Override
         public Symbol parsePartialFrom(
             com.google.protobuf.CodedInputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws com.google.protobuf.InvalidProtocolBufferException {
-            return new Symbol(input, extensionRegistry);
+          return new Symbol(input, extensionRegistry);
         }
       };
 
@@ -1067,13 +1135,13 @@ public final class ResourcesInternal {
         return PARSER;
       }
 
+      @java.lang.Override
       public android.aapt.pb.internal.ResourcesInternal.CompiledFile.Symbol getDefaultInstanceForType() {
         return DEFAULT_INSTANCE;
       }
 
     }
 
-    private int bitField0_;
     public static final int RESOURCE_NAME_FIELD_NUMBER = 1;
     private volatile java.lang.Object resourceName_;
     /**
@@ -1082,6 +1150,7 @@ public final class ResourcesInternal {
      * </pre>
      *
      * <code>string resource_name = 1;</code>
+     * @return The resourceName.
      */
     public java.lang.String getResourceName() {
       java.lang.Object ref = resourceName_;
@@ -1101,6 +1170,7 @@ public final class ResourcesInternal {
      * </pre>
      *
      * <code>string resource_name = 1;</code>
+     * @return The bytes for resourceName.
      */
     public com.google.protobuf.ByteString
         getResourceNameBytes() {
@@ -1124,6 +1194,7 @@ public final class ResourcesInternal {
      * </pre>
      *
      * <code>.aapt.pb.Configuration config = 2;</code>
+     * @return Whether the config field is set.
      */
     public boolean hasConfig() {
       return config_ != null;
@@ -1134,6 +1205,7 @@ public final class ResourcesInternal {
      * </pre>
      *
      * <code>.aapt.pb.Configuration config = 2;</code>
+     * @return The config.
      */
     public com.android.aapt.ConfigurationOuterClass.Configuration getConfig() {
       return config_ == null ? com.android.aapt.ConfigurationOuterClass.Configuration.getDefaultInstance() : config_;
@@ -1157,6 +1229,7 @@ public final class ResourcesInternal {
      * </pre>
      *
      * <code>.aapt.pb.FileReference.Type type = 3;</code>
+     * @return The enum numeric value on the wire for type.
      */
     public int getTypeValue() {
       return type_;
@@ -1167,8 +1240,10 @@ public final class ResourcesInternal {
      * </pre>
      *
      * <code>.aapt.pb.FileReference.Type type = 3;</code>
+     * @return The type.
      */
     public com.android.aapt.Resources.FileReference.Type getType() {
+      @SuppressWarnings("deprecation")
       com.android.aapt.Resources.FileReference.Type result = com.android.aapt.Resources.FileReference.Type.valueOf(type_);
       return result == null ? com.android.aapt.Resources.FileReference.Type.UNRECOGNIZED : result;
     }
@@ -1182,6 +1257,7 @@ public final class ResourcesInternal {
      * </pre>
      *
      * <code>string source_path = 4;</code>
+     * @return The sourcePath.
      */
     public java.lang.String getSourcePath() {
       java.lang.Object ref = sourcePath_;
@@ -1202,6 +1278,7 @@ public final class ResourcesInternal {
      * </pre>
      *
      * <code>string source_path = 4;</code>
+     * @return The bytes for sourcePath.
      */
     public com.google.protobuf.ByteString
         getSourcePathBytes() {
@@ -1273,6 +1350,7 @@ public final class ResourcesInternal {
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -1282,6 +1360,7 @@ public final class ResourcesInternal {
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (!getResourceNameBytes().isEmpty()) {
@@ -1302,6 +1381,7 @@ public final class ResourcesInternal {
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -1340,21 +1420,20 @@ public final class ResourcesInternal {
       }
       android.aapt.pb.internal.ResourcesInternal.CompiledFile other = (android.aapt.pb.internal.ResourcesInternal.CompiledFile) obj;
 
-      boolean result = true;
-      result = result && getResourceName()
-          .equals(other.getResourceName());
-      result = result && (hasConfig() == other.hasConfig());
+      if (!getResourceName()
+          .equals(other.getResourceName())) return false;
+      if (hasConfig() != other.hasConfig()) return false;
       if (hasConfig()) {
-        result = result && getConfig()
-            .equals(other.getConfig());
+        if (!getConfig()
+            .equals(other.getConfig())) return false;
       }
-      result = result && type_ == other.type_;
-      result = result && getSourcePath()
-          .equals(other.getSourcePath());
-      result = result && getExportedSymbolList()
-          .equals(other.getExportedSymbolList());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (type_ != other.type_) return false;
+      if (!getSourcePath()
+          .equals(other.getSourcePath())) return false;
+      if (!getExportedSymbolList()
+          .equals(other.getExportedSymbolList())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -1453,6 +1532,7 @@ public final class ResourcesInternal {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -1460,6 +1540,7 @@ public final class ResourcesInternal {
     public static Builder newBuilder(android.aapt.pb.internal.ResourcesInternal.CompiledFile prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -1488,6 +1569,7 @@ public final class ResourcesInternal {
         return android.aapt.pb.internal.ResourcesInternal.internal_static_aapt_pb_internal_CompiledFile_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return android.aapt.pb.internal.ResourcesInternal.internal_static_aapt_pb_internal_CompiledFile_fieldAccessorTable
@@ -1511,6 +1593,7 @@ public final class ResourcesInternal {
           getExportedSymbolFieldBuilder();
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         resourceName_ = "";
@@ -1527,22 +1610,25 @@ public final class ResourcesInternal {
 
         if (exportedSymbolBuilder_ == null) {
           exportedSymbol_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000010);
+          bitField0_ = (bitField0_ & ~0x00000001);
         } else {
           exportedSymbolBuilder_.clear();
         }
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
         return android.aapt.pb.internal.ResourcesInternal.internal_static_aapt_pb_internal_CompiledFile_descriptor;
       }
 
+      @java.lang.Override
       public android.aapt.pb.internal.ResourcesInternal.CompiledFile getDefaultInstanceForType() {
         return android.aapt.pb.internal.ResourcesInternal.CompiledFile.getDefaultInstance();
       }
 
+      @java.lang.Override
       public android.aapt.pb.internal.ResourcesInternal.CompiledFile build() {
         android.aapt.pb.internal.ResourcesInternal.CompiledFile result = buildPartial();
         if (!result.isInitialized()) {
@@ -1551,10 +1637,10 @@ public final class ResourcesInternal {
         return result;
       }
 
+      @java.lang.Override
       public android.aapt.pb.internal.ResourcesInternal.CompiledFile buildPartial() {
         android.aapt.pb.internal.ResourcesInternal.CompiledFile result = new android.aapt.pb.internal.ResourcesInternal.CompiledFile(this);
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         result.resourceName_ = resourceName_;
         if (configBuilder_ == null) {
           result.config_ = config_;
@@ -1564,45 +1650,51 @@ public final class ResourcesInternal {
         result.type_ = type_;
         result.sourcePath_ = sourcePath_;
         if (exportedSymbolBuilder_ == null) {
-          if (((bitField0_ & 0x00000010) == 0x00000010)) {
+          if (((bitField0_ & 0x00000001) != 0)) {
             exportedSymbol_ = java.util.Collections.unmodifiableList(exportedSymbol_);
-            bitField0_ = (bitField0_ & ~0x00000010);
+            bitField0_ = (bitField0_ & ~0x00000001);
           }
           result.exportedSymbol_ = exportedSymbol_;
         } else {
           result.exportedSymbol_ = exportedSymbolBuilder_.build();
         }
-        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof android.aapt.pb.internal.ResourcesInternal.CompiledFile) {
           return mergeFrom((android.aapt.pb.internal.ResourcesInternal.CompiledFile)other);
@@ -1632,7 +1724,7 @@ public final class ResourcesInternal {
           if (!other.exportedSymbol_.isEmpty()) {
             if (exportedSymbol_.isEmpty()) {
               exportedSymbol_ = other.exportedSymbol_;
-              bitField0_ = (bitField0_ & ~0x00000010);
+              bitField0_ = (bitField0_ & ~0x00000001);
             } else {
               ensureExportedSymbolIsMutable();
               exportedSymbol_.addAll(other.exportedSymbol_);
@@ -1645,7 +1737,7 @@ public final class ResourcesInternal {
               exportedSymbolBuilder_.dispose();
               exportedSymbolBuilder_ = null;
               exportedSymbol_ = other.exportedSymbol_;
-              bitField0_ = (bitField0_ & ~0x00000010);
+              bitField0_ = (bitField0_ & ~0x00000001);
               exportedSymbolBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getExportedSymbolFieldBuilder() : null;
@@ -1659,10 +1751,12 @@ public final class ResourcesInternal {
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1689,6 +1783,7 @@ public final class ResourcesInternal {
        * </pre>
        *
        * <code>string resource_name = 1;</code>
+       * @return The resourceName.
        */
       public java.lang.String getResourceName() {
         java.lang.Object ref = resourceName_;
@@ -1708,6 +1803,7 @@ public final class ResourcesInternal {
        * </pre>
        *
        * <code>string resource_name = 1;</code>
+       * @return The bytes for resourceName.
        */
       public com.google.protobuf.ByteString
           getResourceNameBytes() {
@@ -1728,6 +1824,8 @@ public final class ResourcesInternal {
        * </pre>
        *
        * <code>string resource_name = 1;</code>
+       * @param value The resourceName to set.
+       * @return This builder for chaining.
        */
       public Builder setResourceName(
           java.lang.String value) {
@@ -1745,6 +1843,7 @@ public final class ResourcesInternal {
        * </pre>
        *
        * <code>string resource_name = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearResourceName() {
         
@@ -1758,6 +1857,8 @@ public final class ResourcesInternal {
        * </pre>
        *
        * <code>string resource_name = 1;</code>
+       * @param value The bytes for resourceName to set.
+       * @return This builder for chaining.
        */
       public Builder setResourceNameBytes(
           com.google.protobuf.ByteString value) {
@@ -1771,7 +1872,7 @@ public final class ResourcesInternal {
         return this;
       }
 
-      private com.android.aapt.ConfigurationOuterClass.Configuration config_ = null;
+      private com.android.aapt.ConfigurationOuterClass.Configuration config_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.android.aapt.ConfigurationOuterClass.Configuration, com.android.aapt.ConfigurationOuterClass.Configuration.Builder, com.android.aapt.ConfigurationOuterClass.ConfigurationOrBuilder> configBuilder_;
       /**
@@ -1780,6 +1881,7 @@ public final class ResourcesInternal {
        * </pre>
        *
        * <code>.aapt.pb.Configuration config = 2;</code>
+       * @return Whether the config field is set.
        */
       public boolean hasConfig() {
         return configBuilder_ != null || config_ != null;
@@ -1790,6 +1892,7 @@ public final class ResourcesInternal {
        * </pre>
        *
        * <code>.aapt.pb.Configuration config = 2;</code>
+       * @return The config.
        */
       public com.android.aapt.ConfigurationOuterClass.Configuration getConfig() {
         if (configBuilder_ == null) {
@@ -1931,6 +2034,7 @@ public final class ResourcesInternal {
        * </pre>
        *
        * <code>.aapt.pb.FileReference.Type type = 3;</code>
+       * @return The enum numeric value on the wire for type.
        */
       public int getTypeValue() {
         return type_;
@@ -1941,6 +2045,8 @@ public final class ResourcesInternal {
        * </pre>
        *
        * <code>.aapt.pb.FileReference.Type type = 3;</code>
+       * @param value The enum numeric value on the wire for type to set.
+       * @return This builder for chaining.
        */
       public Builder setTypeValue(int value) {
         type_ = value;
@@ -1953,8 +2059,10 @@ public final class ResourcesInternal {
        * </pre>
        *
        * <code>.aapt.pb.FileReference.Type type = 3;</code>
+       * @return The type.
        */
       public com.android.aapt.Resources.FileReference.Type getType() {
+        @SuppressWarnings("deprecation")
         com.android.aapt.Resources.FileReference.Type result = com.android.aapt.Resources.FileReference.Type.valueOf(type_);
         return result == null ? com.android.aapt.Resources.FileReference.Type.UNRECOGNIZED : result;
       }
@@ -1964,6 +2072,8 @@ public final class ResourcesInternal {
        * </pre>
        *
        * <code>.aapt.pb.FileReference.Type type = 3;</code>
+       * @param value The type to set.
+       * @return This builder for chaining.
        */
       public Builder setType(com.android.aapt.Resources.FileReference.Type value) {
         if (value == null) {
@@ -1980,6 +2090,7 @@ public final class ResourcesInternal {
        * </pre>
        *
        * <code>.aapt.pb.FileReference.Type type = 3;</code>
+       * @return This builder for chaining.
        */
       public Builder clearType() {
         
@@ -1996,6 +2107,7 @@ public final class ResourcesInternal {
        * </pre>
        *
        * <code>string source_path = 4;</code>
+       * @return The sourcePath.
        */
       public java.lang.String getSourcePath() {
         java.lang.Object ref = sourcePath_;
@@ -2016,6 +2128,7 @@ public final class ResourcesInternal {
        * </pre>
        *
        * <code>string source_path = 4;</code>
+       * @return The bytes for sourcePath.
        */
       public com.google.protobuf.ByteString
           getSourcePathBytes() {
@@ -2037,6 +2150,8 @@ public final class ResourcesInternal {
        * </pre>
        *
        * <code>string source_path = 4;</code>
+       * @param value The sourcePath to set.
+       * @return This builder for chaining.
        */
       public Builder setSourcePath(
           java.lang.String value) {
@@ -2055,6 +2170,7 @@ public final class ResourcesInternal {
        * </pre>
        *
        * <code>string source_path = 4;</code>
+       * @return This builder for chaining.
        */
       public Builder clearSourcePath() {
         
@@ -2069,6 +2185,8 @@ public final class ResourcesInternal {
        * </pre>
        *
        * <code>string source_path = 4;</code>
+       * @param value The bytes for sourcePath to set.
+       * @return This builder for chaining.
        */
       public Builder setSourcePathBytes(
           com.google.protobuf.ByteString value) {
@@ -2085,9 +2203,9 @@ public final class ResourcesInternal {
       private java.util.List<android.aapt.pb.internal.ResourcesInternal.CompiledFile.Symbol> exportedSymbol_ =
         java.util.Collections.emptyList();
       private void ensureExportedSymbolIsMutable() {
-        if (!((bitField0_ & 0x00000010) == 0x00000010)) {
+        if (!((bitField0_ & 0x00000001) != 0)) {
           exportedSymbol_ = new java.util.ArrayList<android.aapt.pb.internal.ResourcesInternal.CompiledFile.Symbol>(exportedSymbol_);
-          bitField0_ |= 0x00000010;
+          bitField0_ |= 0x00000001;
          }
       }
 
@@ -2281,7 +2399,7 @@ public final class ResourcesInternal {
       public Builder clearExportedSymbol() {
         if (exportedSymbolBuilder_ == null) {
           exportedSymbol_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000010);
+          bitField0_ = (bitField0_ & ~0x00000001);
           onChanged();
         } else {
           exportedSymbolBuilder_.clear();
@@ -2386,18 +2504,20 @@ public final class ResourcesInternal {
           exportedSymbolBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               android.aapt.pb.internal.ResourcesInternal.CompiledFile.Symbol, android.aapt.pb.internal.ResourcesInternal.CompiledFile.Symbol.Builder, android.aapt.pb.internal.ResourcesInternal.CompiledFile.SymbolOrBuilder>(
                   exportedSymbol_,
-                  ((bitField0_ & 0x00000010) == 0x00000010),
+                  ((bitField0_ & 0x00000001) != 0),
                   getParentForChildren(),
                   isClean());
           exportedSymbol_ = null;
         }
         return exportedSymbolBuilder_;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
@@ -2419,11 +2539,12 @@ public final class ResourcesInternal {
 
     private static final com.google.protobuf.Parser<CompiledFile>
         PARSER = new com.google.protobuf.AbstractParser<CompiledFile>() {
+      @java.lang.Override
       public CompiledFile parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-          return new CompiledFile(input, extensionRegistry);
+        return new CompiledFile(input, extensionRegistry);
       }
     };
 
@@ -2436,6 +2557,7 @@ public final class ResourcesInternal {
       return PARSER;
     }
 
+    @java.lang.Override
     public android.aapt.pb.internal.ResourcesInternal.CompiledFile getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -2472,20 +2594,12 @@ public final class ResourcesInternal {
       "(\t\022\'\n\006source\030\002 \001(\0132\027.aapt.pb.SourcePosit" +
       "ionB\032\n\030android.aapt.pb.internalb\006proto3"
     };
-    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
-          public com.google.protobuf.ExtensionRegistry assignDescriptors(
-              com.google.protobuf.Descriptors.FileDescriptor root) {
-            descriptor = root;
-            return null;
-          }
-        };
-    com.google.protobuf.Descriptors.FileDescriptor
+    descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.android.aapt.ConfigurationOuterClass.getDescriptor(),
           com.android.aapt.Resources.getDescriptor(),
-        }, assigner);
+        });
     internal_static_aapt_pb_internal_CompiledFile_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_aapt_pb_internal_CompiledFile_fieldAccessorTable = new
