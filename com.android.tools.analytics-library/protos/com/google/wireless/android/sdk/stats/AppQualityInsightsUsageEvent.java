@@ -14415,6 +14415,17 @@ private static final long serialVersionUID = 0L;
      * @return The experiment.
      */
     com.google.wireless.android.sdk.stats.AppQualityInsightsUsageEvent.InsightExperiment getExperiment();
+
+    /**
+     * <code>optional bool is_cached = 3;</code>
+     * @return Whether the isCached field is set.
+     */
+    boolean hasIsCached();
+    /**
+     * <code>optional bool is_cached = 3;</code>
+     * @return The isCached.
+     */
+    boolean getIsCached();
   }
   /**
    * Protobuf type {@code android_studio.AppQualityInsightsUsageEvent.InsightFetchDetails}
@@ -14497,6 +14508,25 @@ private static final long serialVersionUID = 0L;
       return result == null ? com.google.wireless.android.sdk.stats.AppQualityInsightsUsageEvent.InsightExperiment.UNKNOWN_EXPERIMENT : result;
     }
 
+    public static final int IS_CACHED_FIELD_NUMBER = 3;
+    private boolean isCached_;
+    /**
+     * <code>optional bool is_cached = 3;</code>
+     * @return Whether the isCached field is set.
+     */
+    @java.lang.Override
+    public boolean hasIsCached() {
+      return ((bitField0_ & 0x00000004) != 0);
+    }
+    /**
+     * <code>optional bool is_cached = 3;</code>
+     * @return The isCached.
+     */
+    @java.lang.Override
+    public boolean getIsCached() {
+      return isCached_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -14517,6 +14547,9 @@ private static final long serialVersionUID = 0L;
       if (((bitField0_ & 0x00000002) != 0)) {
         output.writeEnum(2, experiment_);
       }
+      if (((bitField0_ & 0x00000004) != 0)) {
+        output.writeBool(3, isCached_);
+      }
       getUnknownFields().writeTo(output);
     }
 
@@ -14533,6 +14566,10 @@ private static final long serialVersionUID = 0L;
       if (((bitField0_ & 0x00000002) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(2, experiment_);
+      }
+      if (((bitField0_ & 0x00000004) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(3, isCached_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -14557,6 +14594,11 @@ private static final long serialVersionUID = 0L;
       if (hasExperiment()) {
         if (experiment_ != other.experiment_) return false;
       }
+      if (hasIsCached() != other.hasIsCached()) return false;
+      if (hasIsCached()) {
+        if (getIsCached()
+            != other.getIsCached()) return false;
+      }
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -14575,6 +14617,11 @@ private static final long serialVersionUID = 0L;
       if (hasExperiment()) {
         hash = (37 * hash) + EXPERIMENT_FIELD_NUMBER;
         hash = (53 * hash) + experiment_;
+      }
+      if (hasIsCached()) {
+        hash = (37 * hash) + IS_CACHED_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+            getIsCached());
       }
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
@@ -14708,6 +14755,8 @@ private static final long serialVersionUID = 0L;
         bitField0_ = (bitField0_ & ~0x00000001);
         experiment_ = 0;
         bitField0_ = (bitField0_ & ~0x00000002);
+        isCached_ = false;
+        bitField0_ = (bitField0_ & ~0x00000004);
         return this;
       }
 
@@ -14744,6 +14793,10 @@ private static final long serialVersionUID = 0L;
           to_bitField0_ |= 0x00000002;
         }
         result.experiment_ = experiment_;
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.isCached_ = isCached_;
+          to_bitField0_ |= 0x00000004;
+        }
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -14799,6 +14852,9 @@ private static final long serialVersionUID = 0L;
         if (other.hasExperiment()) {
           setExperiment(other.getExperiment());
         }
+        if (other.hasIsCached()) {
+          setIsCached(other.getIsCached());
+        }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
@@ -14849,6 +14905,11 @@ private static final long serialVersionUID = 0L;
                 }
                 break;
               } // case 16
+              case 24: {
+                isCached_ = input.readBool();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 24
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -14948,6 +15009,45 @@ private static final long serialVersionUID = 0L;
       public Builder clearExperiment() {
         bitField0_ = (bitField0_ & ~0x00000002);
         experiment_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private boolean isCached_ ;
+      /**
+       * <code>optional bool is_cached = 3;</code>
+       * @return Whether the isCached field is set.
+       */
+      @java.lang.Override
+      public boolean hasIsCached() {
+        return ((bitField0_ & 0x00000004) != 0);
+      }
+      /**
+       * <code>optional bool is_cached = 3;</code>
+       * @return The isCached.
+       */
+      @java.lang.Override
+      public boolean getIsCached() {
+        return isCached_;
+      }
+      /**
+       * <code>optional bool is_cached = 3;</code>
+       * @param value The isCached to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIsCached(boolean value) {
+        bitField0_ |= 0x00000004;
+        isCached_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional bool is_cached = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearIsCached() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        isCached_ = false;
         onChanged();
         return this;
       }
