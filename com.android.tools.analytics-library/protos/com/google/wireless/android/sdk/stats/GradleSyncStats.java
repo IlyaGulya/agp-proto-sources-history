@@ -1120,6 +1120,30 @@ private static final long serialVersionUID = 0L;
      * <code>TRIGGER_GRADLEDEPENDENCY_LAST_MARKER = 5799;</code>
      */
     TRIGGER_GRADLEDEPENDENCY_LAST_MARKER(5799),
+    /**
+     * <pre>
+     * First marker for changes related to Version Catalogs
+     * </pre>
+     *
+     * <code>TRIGGER_VERSION_CATALOG_FIRST_MARKER = 6000;</code>
+     */
+    TRIGGER_VERSION_CATALOG_FIRST_MARKER(6000),
+    /**
+     * <pre>
+     * A Version Catalog file was added
+     * </pre>
+     *
+     * <code>TRIGGER_VERSION_CATALOG_FILE_ADDED = 6001;</code>
+     */
+    TRIGGER_VERSION_CATALOG_FILE_ADDED(6001),
+    /**
+     * <pre>
+     * Last marker for changes related to Version Catalogs
+     * </pre>
+     *
+     * <code>TRIGGER_VERSION_CATALOG_LAST_MARKER = 6099;</code>
+     */
+    TRIGGER_VERSION_CATALOG_LAST_MARKER(6099),
     ;
 
     /**
@@ -2013,6 +2037,30 @@ private static final long serialVersionUID = 0L;
      * <code>TRIGGER_GRADLEDEPENDENCY_LAST_MARKER = 5799;</code>
      */
     public static final int TRIGGER_GRADLEDEPENDENCY_LAST_MARKER_VALUE = 5799;
+    /**
+     * <pre>
+     * First marker for changes related to Version Catalogs
+     * </pre>
+     *
+     * <code>TRIGGER_VERSION_CATALOG_FIRST_MARKER = 6000;</code>
+     */
+    public static final int TRIGGER_VERSION_CATALOG_FIRST_MARKER_VALUE = 6000;
+    /**
+     * <pre>
+     * A Version Catalog file was added
+     * </pre>
+     *
+     * <code>TRIGGER_VERSION_CATALOG_FILE_ADDED = 6001;</code>
+     */
+    public static final int TRIGGER_VERSION_CATALOG_FILE_ADDED_VALUE = 6001;
+    /**
+     * <pre>
+     * Last marker for changes related to Version Catalogs
+     * </pre>
+     *
+     * <code>TRIGGER_VERSION_CATALOG_LAST_MARKER = 6099;</code>
+     */
+    public static final int TRIGGER_VERSION_CATALOG_LAST_MARKER_VALUE = 6099;
 
 
     public final int getNumber() {
@@ -2145,6 +2193,9 @@ private static final long serialVersionUID = 0L;
         case 5701: return TRIGGER_GRADLEDEPENDENCY_ADDED;
         case 5702: return TRIGGER_GRADLEDEPENDENCY_UPDATED;
         case 5799: return TRIGGER_GRADLEDEPENDENCY_LAST_MARKER;
+        case 6000: return TRIGGER_VERSION_CATALOG_FIRST_MARKER;
+        case 6001: return TRIGGER_VERSION_CATALOG_FILE_ADDED;
+        case 6099: return TRIGGER_VERSION_CATALOG_LAST_MARKER;
         default: return null;
       }
     }

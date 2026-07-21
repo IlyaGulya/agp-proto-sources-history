@@ -1291,6 +1291,26 @@ public enum GradleTaskExecutionType
    * <code>SIGN_ASB = 318;</code>
    */
   SIGN_ASB(318),
+  /**
+   * <code>MANAGED_DEVICE_TEST = 319;</code>
+   */
+  MANAGED_DEVICE_TEST(319),
+  /**
+   * <code>MANAGED_DEVICE_SETUP = 320;</code>
+   */
+  MANAGED_DEVICE_SETUP(320),
+  /**
+   * <code>EXTRACT_SUPPORTED_LOCALES = 321;</code>
+   */
+  EXTRACT_SUPPORTED_LOCALES(321),
+  /**
+   * <code>GENERATE_LOCALE_CONFIG = 322;</code>
+   */
+  GENERATE_LOCALE_CONFIG(322),
+  /**
+   * <code>VERIFY_LIBRARY_CLASSES = 323;</code>
+   */
+  VERIFY_LIBRARY_CLASSES(323),
   UNRECOGNIZED(-1),
   ;
 
@@ -2570,6 +2590,26 @@ public enum GradleTaskExecutionType
    * <code>SIGN_ASB = 318;</code>
    */
   public static final int SIGN_ASB_VALUE = 318;
+  /**
+   * <code>MANAGED_DEVICE_TEST = 319;</code>
+   */
+  public static final int MANAGED_DEVICE_TEST_VALUE = 319;
+  /**
+   * <code>MANAGED_DEVICE_SETUP = 320;</code>
+   */
+  public static final int MANAGED_DEVICE_SETUP_VALUE = 320;
+  /**
+   * <code>EXTRACT_SUPPORTED_LOCALES = 321;</code>
+   */
+  public static final int EXTRACT_SUPPORTED_LOCALES_VALUE = 321;
+  /**
+   * <code>GENERATE_LOCALE_CONFIG = 322;</code>
+   */
+  public static final int GENERATE_LOCALE_CONFIG_VALUE = 322;
+  /**
+   * <code>VERIFY_LIBRARY_CLASSES = 323;</code>
+   */
+  public static final int VERIFY_LIBRARY_CLASSES_VALUE = 323;
 
 
   public final int getNumber() {
@@ -2915,6 +2955,11 @@ public enum GradleTaskExecutionType
       case 316: return FEATURE_GLOBAL_SYNTHETICS_MERGE;
       case 317: return BUILD_ANALYZER;
       case 318: return SIGN_ASB;
+      case 319: return MANAGED_DEVICE_TEST;
+      case 320: return MANAGED_DEVICE_SETUP;
+      case 321: return EXTRACT_SUPPORTED_LOCALES;
+      case 322: return GENERATE_LOCALE_CONFIG;
+      case 323: return VERIFY_LIBRARY_CLASSES;
       default: return null;
     }
   }

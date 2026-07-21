@@ -670,6 +670,10 @@ public enum BooleanOption
    * <code>PRIVACY_SANDBOX_SDK_REQUIRE_SERVICES = 162;</code>
    */
   PRIVACY_SANDBOX_SDK_REQUIRE_SERVICES(162),
+  /**
+   * <code>VERIFY_AAR_CLASSES = 163;</code>
+   */
+  VERIFY_AAR_CLASSES(163),
   UNRECOGNIZED(-1),
   ;
 
@@ -1325,6 +1329,10 @@ public enum BooleanOption
    * <code>PRIVACY_SANDBOX_SDK_REQUIRE_SERVICES = 162;</code>
    */
   public static final int PRIVACY_SANDBOX_SDK_REQUIRE_SERVICES_VALUE = 162;
+  /**
+   * <code>VERIFY_AAR_CLASSES = 163;</code>
+   */
+  public static final int VERIFY_AAR_CLASSES_VALUE = 163;
 
 
   public final int getNumber() {
@@ -1514,6 +1522,7 @@ public enum BooleanOption
       case 160: return ENABLE_GLOBAL_SYNTHETICS;
       case 161: return PRINT_LINT_STACK_TRACE;
       case 162: return PRIVACY_SANDBOX_SDK_REQUIRE_SERVICES;
+      case 163: return VERIFY_AAR_CLASSES;
       default: return null;
     }
   }
