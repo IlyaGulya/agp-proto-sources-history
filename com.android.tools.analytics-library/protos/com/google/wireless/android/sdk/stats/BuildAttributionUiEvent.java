@@ -760,6 +760,10 @@ private static final long serialVersionUID = 0L;
      * <code>JETIFIER_MIGRATION = 9;</code>
      */
     JETIFIER_MIGRATION(9),
+    /**
+     * <code>DOWNLOADS_INFO = 10;</code>
+     */
+    DOWNLOADS_INFO(10),
     ;
 
     /**
@@ -802,6 +806,10 @@ private static final long serialVersionUID = 0L;
      * <code>JETIFIER_MIGRATION = 9;</code>
      */
     public static final int JETIFIER_MIGRATION_VALUE = 9;
+    /**
+     * <code>DOWNLOADS_INFO = 10;</code>
+     */
+    public static final int DOWNLOADS_INFO_VALUE = 10;
 
 
     public final int getNumber() {
@@ -834,6 +842,7 @@ private static final long serialVersionUID = 0L;
         case 7: return CONFIGURE_GC;
         case 8: return CONFIGURATION_CACHING;
         case 9: return JETIFIER_MIGRATION;
+        case 10: return DOWNLOADS_INFO;
         default: return null;
       }
     }
@@ -1369,6 +1378,30 @@ private static final long serialVersionUID = 0L;
        * <code>DOWNLOADS_INFO = 29;</code>
        */
       DOWNLOADS_INFO(29),
+      /**
+       * <pre>
+       * Group by Task Category page in critical path window.
+       * </pre>
+       *
+       * <code>TASK_CATEGORY_PAGE = 30;</code>
+       */
+      TASK_CATEGORY_PAGE(30),
+      /**
+       * <pre>
+       * Single task category page.
+       * </pre>
+       *
+       * <code>TASK_CATEGORY_CRITICAL_PATH_TASKS_ROOT = 31;</code>
+       */
+      TASK_CATEGORY_CRITICAL_PATH_TASKS_ROOT(31),
+      /**
+       * <pre>
+       * Task page in Group by Category page.
+       * </pre>
+       *
+       * <code>TASK_CATEGORY_CRITICAL_PATH_TASK_PAGE = 32;</code>
+       */
+      TASK_CATEGORY_CRITICAL_PATH_TASK_PAGE(32),
       ;
 
       /**
@@ -1499,6 +1532,30 @@ private static final long serialVersionUID = 0L;
        * <code>DOWNLOADS_INFO = 29;</code>
        */
       public static final int DOWNLOADS_INFO_VALUE = 29;
+      /**
+       * <pre>
+       * Group by Task Category page in critical path window.
+       * </pre>
+       *
+       * <code>TASK_CATEGORY_PAGE = 30;</code>
+       */
+      public static final int TASK_CATEGORY_PAGE_VALUE = 30;
+      /**
+       * <pre>
+       * Single task category page.
+       * </pre>
+       *
+       * <code>TASK_CATEGORY_CRITICAL_PATH_TASKS_ROOT = 31;</code>
+       */
+      public static final int TASK_CATEGORY_CRITICAL_PATH_TASKS_ROOT_VALUE = 31;
+      /**
+       * <pre>
+       * Task page in Group by Category page.
+       * </pre>
+       *
+       * <code>TASK_CATEGORY_CRITICAL_PATH_TASK_PAGE = 32;</code>
+       */
+      public static final int TASK_CATEGORY_CRITICAL_PATH_TASK_PAGE_VALUE = 32;
 
 
       public final int getNumber() {
@@ -1551,6 +1608,9 @@ private static final long serialVersionUID = 0L;
           case 27: return CONFIGURATION_CACHE_PLUGIN_WARNING;
           case 28: return JETIFIER_USAGE_WARNING;
           case 29: return DOWNLOADS_INFO;
+          case 30: return TASK_CATEGORY_PAGE;
+          case 31: return TASK_CATEGORY_CRITICAL_PATH_TASKS_ROOT;
+          case 32: return TASK_CATEGORY_CRITICAL_PATH_TASK_PAGE;
           default: return null;
         }
       }
