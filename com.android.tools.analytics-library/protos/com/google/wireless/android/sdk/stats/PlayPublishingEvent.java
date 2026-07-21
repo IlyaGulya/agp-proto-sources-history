@@ -2646,6 +2646,38 @@ private static final long serialVersionUID = 0L;
        * <code>FAILED_RELEASE_NOT_ALLOWED_ON_TRACK = 5;</code>
        */
       FAILED_RELEASE_NOT_ALLOWED_ON_TRACK(5),
+      /**
+       * <pre>
+       * Bundle was signed with the wrong key.
+       * </pre>
+       *
+       * <code>FAILED_BUNDLE_SIGNED_WITH_WRONG_KEY = 6;</code>
+       */
+      FAILED_BUNDLE_SIGNED_WITH_WRONG_KEY(6),
+      /**
+       * <pre>
+       * User cancelled the upload.
+       * </pre>
+       *
+       * <code>FAILED_USER_CANCELLED = 7;</code>
+       */
+      FAILED_USER_CANCELLED(7),
+      /**
+       * <pre>
+       * Failed to create the release.
+       * </pre>
+       *
+       * <code>FAILED_TO_CREATE_RELEASE = 8;</code>
+       */
+      FAILED_TO_CREATE_RELEASE(8),
+      /**
+       * <pre>
+       * Failed to commit the release.
+       * </pre>
+       *
+       * <code>FAILED_TO_COMMIT_RELEASE = 9;</code>
+       */
+      FAILED_TO_COMMIT_RELEASE(9),
       ;
 
       /**
@@ -2692,6 +2724,38 @@ private static final long serialVersionUID = 0L;
        * <code>FAILED_RELEASE_NOT_ALLOWED_ON_TRACK = 5;</code>
        */
       public static final int FAILED_RELEASE_NOT_ALLOWED_ON_TRACK_VALUE = 5;
+      /**
+       * <pre>
+       * Bundle was signed with the wrong key.
+       * </pre>
+       *
+       * <code>FAILED_BUNDLE_SIGNED_WITH_WRONG_KEY = 6;</code>
+       */
+      public static final int FAILED_BUNDLE_SIGNED_WITH_WRONG_KEY_VALUE = 6;
+      /**
+       * <pre>
+       * User cancelled the upload.
+       * </pre>
+       *
+       * <code>FAILED_USER_CANCELLED = 7;</code>
+       */
+      public static final int FAILED_USER_CANCELLED_VALUE = 7;
+      /**
+       * <pre>
+       * Failed to create the release.
+       * </pre>
+       *
+       * <code>FAILED_TO_CREATE_RELEASE = 8;</code>
+       */
+      public static final int FAILED_TO_CREATE_RELEASE_VALUE = 8;
+      /**
+       * <pre>
+       * Failed to commit the release.
+       * </pre>
+       *
+       * <code>FAILED_TO_COMMIT_RELEASE = 9;</code>
+       */
+      public static final int FAILED_TO_COMMIT_RELEASE_VALUE = 9;
 
 
       public final int getNumber() {
@@ -2720,6 +2784,10 @@ private static final long serialVersionUID = 0L;
           case 3: return FAILED_VERSION_CODE_ALREADY_EXISTS;
           case 4: return FAILED_TO_UPLOAD_BUNDLE;
           case 5: return FAILED_RELEASE_NOT_ALLOWED_ON_TRACK;
+          case 6: return FAILED_BUNDLE_SIGNED_WITH_WRONG_KEY;
+          case 7: return FAILED_USER_CANCELLED;
+          case 8: return FAILED_TO_CREATE_RELEASE;
+          case 9: return FAILED_TO_COMMIT_RELEASE;
           default: return null;
         }
       }

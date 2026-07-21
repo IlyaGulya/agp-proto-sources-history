@@ -1722,6 +1722,33 @@ public interface AndroidStudioEventOrBuilder extends
 
   /**
    * <pre>
+   * set when kind = ROLLBACK_TOOL_CALL_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.RollbackToolCallEvent rollback_tool_call_event = 257 [lazy = true];</code>
+   * @return Whether the rollbackToolCallEvent field is set.
+   */
+  boolean hasRollbackToolCallEvent();
+  /**
+   * <pre>
+   * set when kind = ROLLBACK_TOOL_CALL_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.RollbackToolCallEvent rollback_tool_call_event = 257 [lazy = true];</code>
+   * @return The rollbackToolCallEvent.
+   */
+  com.google.wireless.android.sdk.stats.RollbackToolCallEvent getRollbackToolCallEvent();
+  /**
+   * <pre>
+   * set when kind = ROLLBACK_TOOL_CALL_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.RollbackToolCallEvent rollback_tool_call_event = 257 [lazy = true];</code>
+   */
+  com.google.wireless.android.sdk.stats.RollbackToolCallEventOrBuilder getRollbackToolCallEventOrBuilder();
+
+  /**
+   * <pre>
    * the project id as used in the playstore, e.g.
    * 'com.google.android.apps.maps'. This is sensitive information and
    * thus restricted to "raw" sawmill access. This data is only available in
@@ -1846,7 +1873,7 @@ public interface AndroidStudioEventOrBuilder extends
    *
    * <code>optional .android_studio.StudioRunEvent studio_run_event = 65 [deprecated = true, lazy = true];</code>
    * @deprecated android_studio.AndroidStudioEvent.studio_run_event is deprecated.
-   *     See studio_stats.proto;l=261
+   *     See studio_stats.proto;l=264
    * @return Whether the studioRunEvent field is set.
    */
   @java.lang.Deprecated boolean hasStudioRunEvent();
@@ -1857,7 +1884,7 @@ public interface AndroidStudioEventOrBuilder extends
    *
    * <code>optional .android_studio.StudioRunEvent studio_run_event = 65 [deprecated = true, lazy = true];</code>
    * @deprecated android_studio.AndroidStudioEvent.studio_run_event is deprecated.
-   *     See studio_stats.proto;l=261
+   *     See studio_stats.proto;l=264
    * @return The studioRunEvent.
    */
   @java.lang.Deprecated com.google.wireless.android.sdk.stats.StudioRunEvent getStudioRunEvent();
@@ -3295,7 +3322,7 @@ public interface AndroidStudioEventOrBuilder extends
    *
    * <code>optional .android_studio.AutoImportEvent auto_import_event = 117 [deprecated = true, lazy = true];</code>
    * @deprecated android_studio.AndroidStudioEvent.auto_import_event is deprecated.
-   *     See studio_stats.proto;l=442
+   *     See studio_stats.proto;l=445
    * @return Whether the autoImportEvent field is set.
    */
   @java.lang.Deprecated boolean hasAutoImportEvent();
@@ -3307,7 +3334,7 @@ public interface AndroidStudioEventOrBuilder extends
    *
    * <code>optional .android_studio.AutoImportEvent auto_import_event = 117 [deprecated = true, lazy = true];</code>
    * @deprecated android_studio.AndroidStudioEvent.auto_import_event is deprecated.
-   *     See studio_stats.proto;l=442
+   *     See studio_stats.proto;l=445
    * @return The autoImportEvent.
    */
   @java.lang.Deprecated com.google.wireless.android.sdk.stats.AutoImportEvent getAutoImportEvent();

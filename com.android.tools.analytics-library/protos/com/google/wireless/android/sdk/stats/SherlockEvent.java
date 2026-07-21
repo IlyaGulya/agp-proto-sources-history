@@ -459,6 +459,10 @@ private static final long serialVersionUID = 0L;
      */
     TRACK_KIND_VULKAN_EVENT(8),
     /**
+     * <code>TRACK_KIND_GPU = 17;</code>
+     */
+    TRACK_KIND_GPU(17),
+    /**
      * <pre>
      * Process &amp; Thread Kinds
      * </pre>
@@ -487,6 +491,42 @@ private static final long serialVersionUID = 0L;
      */
     TRACK_KIND_TIMELINE(14),
     /**
+     * <code>TRACK_KIND_PROCESSES = 18;</code>
+     */
+    TRACK_KIND_PROCESSES(18),
+    /**
+     * <code>TRACK_KIND_IDLE_PROCESSES = 19;</code>
+     */
+    TRACK_KIND_IDLE_PROCESSES(19),
+    /**
+     * <pre>
+     * Frame &amp; Display Kinds
+     * </pre>
+     *
+     * <code>TRACK_KIND_FRAME_EVENTS = 20;</code>
+     */
+    TRACK_KIND_FRAME_EVENTS(20),
+    /**
+     * <code>TRACK_KIND_FRAME_LAYER = 21;</code>
+     */
+    TRACK_KIND_FRAME_LAYER(21),
+    /**
+     * <code>TRACK_KIND_FPS = 22;</code>
+     */
+    TRACK_KIND_FPS(22),
+    /**
+     * <code>TRACK_KIND_FRAME_TIME = 23;</code>
+     */
+    TRACK_KIND_FRAME_TIME(23),
+    /**
+     * <code>TRACK_KIND_FRAME_ON_DISPLAY = 24;</code>
+     */
+    TRACK_KIND_FRAME_ON_DISPLAY(24),
+    /**
+     * <code>TRACK_KIND_JANK_CUJ = 25;</code>
+     */
+    TRACK_KIND_JANK_CUJ(25),
+    /**
      * <pre>
      * Generic/Other Kinds
      * </pre>
@@ -498,6 +538,18 @@ private static final long serialVersionUID = 0L;
      * <code>TRACK_KIND_POWER = 16;</code>
      */
     TRACK_KIND_POWER(16),
+    /**
+     * <code>TRACK_KIND_APP_STARTUP = 26;</code>
+     */
+    TRACK_KIND_APP_STARTUP(26),
+    /**
+     * <code>TRACK_KIND_ENERGY = 27;</code>
+     */
+    TRACK_KIND_ENERGY(27),
+    /**
+     * <code>TRACK_KIND_MEMORY_SUMMARY = 28;</code>
+     */
+    TRACK_KIND_MEMORY_SUMMARY(28),
     ;
 
     /**
@@ -545,6 +597,10 @@ private static final long serialVersionUID = 0L;
      */
     public static final int TRACK_KIND_VULKAN_EVENT_VALUE = 8;
     /**
+     * <code>TRACK_KIND_GPU = 17;</code>
+     */
+    public static final int TRACK_KIND_GPU_VALUE = 17;
+    /**
      * <pre>
      * Process &amp; Thread Kinds
      * </pre>
@@ -573,6 +629,42 @@ private static final long serialVersionUID = 0L;
      */
     public static final int TRACK_KIND_TIMELINE_VALUE = 14;
     /**
+     * <code>TRACK_KIND_PROCESSES = 18;</code>
+     */
+    public static final int TRACK_KIND_PROCESSES_VALUE = 18;
+    /**
+     * <code>TRACK_KIND_IDLE_PROCESSES = 19;</code>
+     */
+    public static final int TRACK_KIND_IDLE_PROCESSES_VALUE = 19;
+    /**
+     * <pre>
+     * Frame &amp; Display Kinds
+     * </pre>
+     *
+     * <code>TRACK_KIND_FRAME_EVENTS = 20;</code>
+     */
+    public static final int TRACK_KIND_FRAME_EVENTS_VALUE = 20;
+    /**
+     * <code>TRACK_KIND_FRAME_LAYER = 21;</code>
+     */
+    public static final int TRACK_KIND_FRAME_LAYER_VALUE = 21;
+    /**
+     * <code>TRACK_KIND_FPS = 22;</code>
+     */
+    public static final int TRACK_KIND_FPS_VALUE = 22;
+    /**
+     * <code>TRACK_KIND_FRAME_TIME = 23;</code>
+     */
+    public static final int TRACK_KIND_FRAME_TIME_VALUE = 23;
+    /**
+     * <code>TRACK_KIND_FRAME_ON_DISPLAY = 24;</code>
+     */
+    public static final int TRACK_KIND_FRAME_ON_DISPLAY_VALUE = 24;
+    /**
+     * <code>TRACK_KIND_JANK_CUJ = 25;</code>
+     */
+    public static final int TRACK_KIND_JANK_CUJ_VALUE = 25;
+    /**
      * <pre>
      * Generic/Other Kinds
      * </pre>
@@ -584,6 +676,18 @@ private static final long serialVersionUID = 0L;
      * <code>TRACK_KIND_POWER = 16;</code>
      */
     public static final int TRACK_KIND_POWER_VALUE = 16;
+    /**
+     * <code>TRACK_KIND_APP_STARTUP = 26;</code>
+     */
+    public static final int TRACK_KIND_APP_STARTUP_VALUE = 26;
+    /**
+     * <code>TRACK_KIND_ENERGY = 27;</code>
+     */
+    public static final int TRACK_KIND_ENERGY_VALUE = 27;
+    /**
+     * <code>TRACK_KIND_MEMORY_SUMMARY = 28;</code>
+     */
+    public static final int TRACK_KIND_MEMORY_SUMMARY_VALUE = 28;
 
 
     public final int getNumber() {
@@ -615,14 +719,26 @@ private static final long serialVersionUID = 0L;
         case 6: return TRACK_KIND_GPU_QUEUE;
         case 7: return TRACK_KIND_GPU_COUNTER;
         case 8: return TRACK_KIND_VULKAN_EVENT;
+        case 17: return TRACK_KIND_GPU;
         case 9: return TRACK_KIND_PROCESS_SUMMARY;
         case 10: return TRACK_KIND_PROCESS_MEMORY;
         case 11: return TRACK_KIND_PROCESS_COUNTER;
         case 12: return TRACK_KIND_ASYNC_EVENT;
         case 13: return TRACK_KIND_THREAD;
         case 14: return TRACK_KIND_TIMELINE;
+        case 18: return TRACK_KIND_PROCESSES;
+        case 19: return TRACK_KIND_IDLE_PROCESSES;
+        case 20: return TRACK_KIND_FRAME_EVENTS;
+        case 21: return TRACK_KIND_FRAME_LAYER;
+        case 22: return TRACK_KIND_FPS;
+        case 23: return TRACK_KIND_FRAME_TIME;
+        case 24: return TRACK_KIND_FRAME_ON_DISPLAY;
+        case 25: return TRACK_KIND_JANK_CUJ;
         case 15: return TRACK_KIND_BATTERY;
         case 16: return TRACK_KIND_POWER;
+        case 26: return TRACK_KIND_APP_STARTUP;
+        case 27: return TRACK_KIND_ENERGY;
+        case 28: return TRACK_KIND_MEMORY_SUMMARY;
         default: return null;
       }
     }

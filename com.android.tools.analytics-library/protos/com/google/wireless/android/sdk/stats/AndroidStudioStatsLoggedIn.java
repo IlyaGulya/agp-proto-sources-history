@@ -234,6 +234,11 @@ public final class AndroidStudioStatsLoggedIn {
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_android_studio_SkillsEventLoggedIn_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_android_studio_SkillsEventLoggedIn_Activation_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_android_studio_SkillsEventLoggedIn_Activation_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -465,11 +470,16 @@ public final class AndroidStudioStatsLoggedIn {
       "D\020\010\022\024\n\020CONTROL_REJECTED\020\t\022\022\n\016CONTROL_HID" +
       "DEN\020\n\022\025\n\021PREDICTION_FAILED\020\013\022\033\n\027CONTROL_" +
       "DISPOSED_UNSEEN\020\014B\026\n\024next_edit_predictio" +
-      "n\"X\n\023SkillsEventLoggedIn\022A\n\010metadata\030\001 \001" +
-      "(\0132+.android_studio.SmlResponseMetadataL" +
-      "oggedInB\002(\001BE\n%com.google.wireless.andro" +
-      "id.sdk.statsB\032AndroidStudioStatsLoggedIn" +
-      "P\001"
+      "n\"\261\002\n\023SkillsEventLoggedIn\022A\n\010metadata\030\001 " +
+      "\001(\0132+.android_studio.SmlResponseMetadata" +
+      "LoggedInB\002(\001\022H\n\nactivation\030\002 \001(\0132..andro" +
+      "id_studio.SkillsEventLoggedIn.Activation" +
+      "B\002(\001H\000\032I\n\nActivation\022;\n\004type\030\001 \001(\0162-.and" +
+      "roid_studio.SkillsEventLoggedIn.SkillTyp" +
+      "e\"9\n\tSkillType\022\013\n\007UNKNOWN\020\000\022\r\n\tPRE_BUILT" +
+      "\020\001\022\020\n\014USER_DEFINED\020\002B\007\n\005eventBE\n%com.goo" +
+      "gle.wireless.android.sdk.statsB\032AndroidS" +
+      "tudioStatsLoggedInP\001"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -738,7 +748,13 @@ public final class AndroidStudioStatsLoggedIn {
     internal_static_android_studio_SkillsEventLoggedIn_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_android_studio_SkillsEventLoggedIn_descriptor,
-        new java.lang.String[] { "Metadata", });
+        new java.lang.String[] { "Metadata", "Activation", "Event", });
+    internal_static_android_studio_SkillsEventLoggedIn_Activation_descriptor =
+      internal_static_android_studio_SkillsEventLoggedIn_descriptor.getNestedTypes().get(0);
+    internal_static_android_studio_SkillsEventLoggedIn_Activation_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_android_studio_SkillsEventLoggedIn_Activation_descriptor,
+        new java.lang.String[] { "Type", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)
