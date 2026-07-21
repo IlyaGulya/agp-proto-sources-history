@@ -21,7 +21,6 @@ private static final long serialVersionUID = 0L;
     launchTaskDetail_ = java.util.Collections.emptyList();
     deployFailureId_ = "";
     appComponentType_ = 0;
-    devices_ = java.util.Collections.emptyList();
   }
 
   @java.lang.Override
@@ -200,15 +199,6 @@ private static final long serialVersionUID = 0L;
             }
             break;
           }
-          case 210: {
-            if (!((mutable_bitField0_ & 0x02000000) != 0)) {
-              devices_ = new java.util.ArrayList<com.google.wireless.android.sdk.stats.RunDeviceInfo>();
-              mutable_bitField0_ |= 0x02000000;
-            }
-            devices_.add(
-                input.readMessage(com.google.wireless.android.sdk.stats.RunDeviceInfo.PARSER, extensionRegistry));
-            break;
-          }
           default: {
             if (!parseUnknownField(
                 input, unknownFields, extensionRegistry, tag)) {
@@ -226,9 +216,6 @@ private static final long serialVersionUID = 0L;
     } finally {
       if (((mutable_bitField0_ & 0x00000200) != 0)) {
         launchTaskDetail_ = java.util.Collections.unmodifiableList(launchTaskDetail_);
-      }
-      if (((mutable_bitField0_ & 0x02000000) != 0)) {
-        devices_ = java.util.Collections.unmodifiableList(devices_);
       }
       this.unknownFields = unknownFields.build();
       makeExtensionsImmutable();
@@ -1277,66 +1264,6 @@ private static final long serialVersionUID = 0L;
     return result == null ? com.google.wireless.android.sdk.stats.RunEvent.AppComponent.UNKNOWN : result;
   }
 
-  public static final int DEVICES_FIELD_NUMBER = 26;
-  private java.util.List<com.google.wireless.android.sdk.stats.RunDeviceInfo> devices_;
-  /**
-   * <pre>
-   * List of devices on which the command was called
-   * </pre>
-   *
-   * <code>repeated .android_studio.RunDeviceInfo devices = 26;</code>
-   */
-  @java.lang.Override
-  public java.util.List<com.google.wireless.android.sdk.stats.RunDeviceInfo> getDevicesList() {
-    return devices_;
-  }
-  /**
-   * <pre>
-   * List of devices on which the command was called
-   * </pre>
-   *
-   * <code>repeated .android_studio.RunDeviceInfo devices = 26;</code>
-   */
-  @java.lang.Override
-  public java.util.List<? extends com.google.wireless.android.sdk.stats.RunDeviceInfoOrBuilder> 
-      getDevicesOrBuilderList() {
-    return devices_;
-  }
-  /**
-   * <pre>
-   * List of devices on which the command was called
-   * </pre>
-   *
-   * <code>repeated .android_studio.RunDeviceInfo devices = 26;</code>
-   */
-  @java.lang.Override
-  public int getDevicesCount() {
-    return devices_.size();
-  }
-  /**
-   * <pre>
-   * List of devices on which the command was called
-   * </pre>
-   *
-   * <code>repeated .android_studio.RunDeviceInfo devices = 26;</code>
-   */
-  @java.lang.Override
-  public com.google.wireless.android.sdk.stats.RunDeviceInfo getDevices(int index) {
-    return devices_.get(index);
-  }
-  /**
-   * <pre>
-   * List of devices on which the command was called
-   * </pre>
-   *
-   * <code>repeated .android_studio.RunDeviceInfo devices = 26;</code>
-   */
-  @java.lang.Override
-  public com.google.wireless.android.sdk.stats.RunDeviceInfoOrBuilder getDevicesOrBuilder(
-      int index) {
-    return devices_.get(index);
-  }
-
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -1425,9 +1352,6 @@ private static final long serialVersionUID = 0L;
     }
     if (((bitField0_ & 0x00800000) != 0)) {
       output.writeEnum(25, appComponentType_);
-    }
-    for (int i = 0; i < devices_.size(); i++) {
-      output.writeMessage(26, devices_.get(i));
     }
     unknownFields.writeTo(output);
   }
@@ -1535,10 +1459,6 @@ private static final long serialVersionUID = 0L;
     if (((bitField0_ & 0x00800000) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(25, appComponentType_);
-    }
-    for (int i = 0; i < devices_.size(); i++) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(26, devices_.get(i));
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -1675,8 +1595,6 @@ private static final long serialVersionUID = 0L;
     if (hasAppComponentType()) {
       if (appComponentType_ != other.appComponentType_) return false;
     }
-    if (!getDevicesList()
-        .equals(other.getDevicesList())) return false;
     if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
@@ -1807,10 +1725,6 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + APP_COMPONENT_TYPE_FIELD_NUMBER;
       hash = (53 * hash) + appComponentType_;
     }
-    if (getDevicesCount() > 0) {
-      hash = (37 * hash) + DEVICES_FIELD_NUMBER;
-      hash = (53 * hash) + getDevicesList().hashCode();
-    }
     hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -1940,7 +1854,6 @@ private static final long serialVersionUID = 0L;
       if (com.google.protobuf.GeneratedMessageV3
               .alwaysUseFieldBuilders) {
         getLaunchTaskDetailFieldBuilder();
-        getDevicesFieldBuilder();
       }
     }
     @java.lang.Override
@@ -2000,12 +1913,6 @@ private static final long serialVersionUID = 0L;
       bitField0_ = (bitField0_ & ~0x00800000);
       appComponentType_ = 0;
       bitField0_ = (bitField0_ & ~0x01000000);
-      if (devicesBuilder_ == null) {
-        devices_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x02000000);
-      } else {
-        devicesBuilder_.clear();
-      }
       return this;
     }
 
@@ -2139,15 +2046,6 @@ private static final long serialVersionUID = 0L;
         to_bitField0_ |= 0x00800000;
       }
       result.appComponentType_ = appComponentType_;
-      if (devicesBuilder_ == null) {
-        if (((bitField0_ & 0x02000000) != 0)) {
-          devices_ = java.util.Collections.unmodifiableList(devices_);
-          bitField0_ = (bitField0_ & ~0x02000000);
-        }
-        result.devices_ = devices_;
-      } else {
-        result.devices_ = devicesBuilder_.build();
-      }
       result.bitField0_ = to_bitField0_;
       onBuilt();
       return result;
@@ -2298,32 +2196,6 @@ private static final long serialVersionUID = 0L;
       }
       if (other.hasAppComponentType()) {
         setAppComponentType(other.getAppComponentType());
-      }
-      if (devicesBuilder_ == null) {
-        if (!other.devices_.isEmpty()) {
-          if (devices_.isEmpty()) {
-            devices_ = other.devices_;
-            bitField0_ = (bitField0_ & ~0x02000000);
-          } else {
-            ensureDevicesIsMutable();
-            devices_.addAll(other.devices_);
-          }
-          onChanged();
-        }
-      } else {
-        if (!other.devices_.isEmpty()) {
-          if (devicesBuilder_.isEmpty()) {
-            devicesBuilder_.dispose();
-            devicesBuilder_ = null;
-            devices_ = other.devices_;
-            bitField0_ = (bitField0_ & ~0x02000000);
-            devicesBuilder_ = 
-              com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
-                 getDevicesFieldBuilder() : null;
-          } else {
-            devicesBuilder_.addAllMessages(other.devices_);
-          }
-        }
       }
       this.mergeUnknownFields(other.unknownFields);
       onChanged();
@@ -4087,318 +3959,6 @@ private static final long serialVersionUID = 0L;
       appComponentType_ = 0;
       onChanged();
       return this;
-    }
-
-    private java.util.List<com.google.wireless.android.sdk.stats.RunDeviceInfo> devices_ =
-      java.util.Collections.emptyList();
-    private void ensureDevicesIsMutable() {
-      if (!((bitField0_ & 0x02000000) != 0)) {
-        devices_ = new java.util.ArrayList<com.google.wireless.android.sdk.stats.RunDeviceInfo>(devices_);
-        bitField0_ |= 0x02000000;
-       }
-    }
-
-    private com.google.protobuf.RepeatedFieldBuilderV3<
-        com.google.wireless.android.sdk.stats.RunDeviceInfo, com.google.wireless.android.sdk.stats.RunDeviceInfo.Builder, com.google.wireless.android.sdk.stats.RunDeviceInfoOrBuilder> devicesBuilder_;
-
-    /**
-     * <pre>
-     * List of devices on which the command was called
-     * </pre>
-     *
-     * <code>repeated .android_studio.RunDeviceInfo devices = 26;</code>
-     */
-    public java.util.List<com.google.wireless.android.sdk.stats.RunDeviceInfo> getDevicesList() {
-      if (devicesBuilder_ == null) {
-        return java.util.Collections.unmodifiableList(devices_);
-      } else {
-        return devicesBuilder_.getMessageList();
-      }
-    }
-    /**
-     * <pre>
-     * List of devices on which the command was called
-     * </pre>
-     *
-     * <code>repeated .android_studio.RunDeviceInfo devices = 26;</code>
-     */
-    public int getDevicesCount() {
-      if (devicesBuilder_ == null) {
-        return devices_.size();
-      } else {
-        return devicesBuilder_.getCount();
-      }
-    }
-    /**
-     * <pre>
-     * List of devices on which the command was called
-     * </pre>
-     *
-     * <code>repeated .android_studio.RunDeviceInfo devices = 26;</code>
-     */
-    public com.google.wireless.android.sdk.stats.RunDeviceInfo getDevices(int index) {
-      if (devicesBuilder_ == null) {
-        return devices_.get(index);
-      } else {
-        return devicesBuilder_.getMessage(index);
-      }
-    }
-    /**
-     * <pre>
-     * List of devices on which the command was called
-     * </pre>
-     *
-     * <code>repeated .android_studio.RunDeviceInfo devices = 26;</code>
-     */
-    public Builder setDevices(
-        int index, com.google.wireless.android.sdk.stats.RunDeviceInfo value) {
-      if (devicesBuilder_ == null) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        ensureDevicesIsMutable();
-        devices_.set(index, value);
-        onChanged();
-      } else {
-        devicesBuilder_.setMessage(index, value);
-      }
-      return this;
-    }
-    /**
-     * <pre>
-     * List of devices on which the command was called
-     * </pre>
-     *
-     * <code>repeated .android_studio.RunDeviceInfo devices = 26;</code>
-     */
-    public Builder setDevices(
-        int index, com.google.wireless.android.sdk.stats.RunDeviceInfo.Builder builderForValue) {
-      if (devicesBuilder_ == null) {
-        ensureDevicesIsMutable();
-        devices_.set(index, builderForValue.build());
-        onChanged();
-      } else {
-        devicesBuilder_.setMessage(index, builderForValue.build());
-      }
-      return this;
-    }
-    /**
-     * <pre>
-     * List of devices on which the command was called
-     * </pre>
-     *
-     * <code>repeated .android_studio.RunDeviceInfo devices = 26;</code>
-     */
-    public Builder addDevices(com.google.wireless.android.sdk.stats.RunDeviceInfo value) {
-      if (devicesBuilder_ == null) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        ensureDevicesIsMutable();
-        devices_.add(value);
-        onChanged();
-      } else {
-        devicesBuilder_.addMessage(value);
-      }
-      return this;
-    }
-    /**
-     * <pre>
-     * List of devices on which the command was called
-     * </pre>
-     *
-     * <code>repeated .android_studio.RunDeviceInfo devices = 26;</code>
-     */
-    public Builder addDevices(
-        int index, com.google.wireless.android.sdk.stats.RunDeviceInfo value) {
-      if (devicesBuilder_ == null) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        ensureDevicesIsMutable();
-        devices_.add(index, value);
-        onChanged();
-      } else {
-        devicesBuilder_.addMessage(index, value);
-      }
-      return this;
-    }
-    /**
-     * <pre>
-     * List of devices on which the command was called
-     * </pre>
-     *
-     * <code>repeated .android_studio.RunDeviceInfo devices = 26;</code>
-     */
-    public Builder addDevices(
-        com.google.wireless.android.sdk.stats.RunDeviceInfo.Builder builderForValue) {
-      if (devicesBuilder_ == null) {
-        ensureDevicesIsMutable();
-        devices_.add(builderForValue.build());
-        onChanged();
-      } else {
-        devicesBuilder_.addMessage(builderForValue.build());
-      }
-      return this;
-    }
-    /**
-     * <pre>
-     * List of devices on which the command was called
-     * </pre>
-     *
-     * <code>repeated .android_studio.RunDeviceInfo devices = 26;</code>
-     */
-    public Builder addDevices(
-        int index, com.google.wireless.android.sdk.stats.RunDeviceInfo.Builder builderForValue) {
-      if (devicesBuilder_ == null) {
-        ensureDevicesIsMutable();
-        devices_.add(index, builderForValue.build());
-        onChanged();
-      } else {
-        devicesBuilder_.addMessage(index, builderForValue.build());
-      }
-      return this;
-    }
-    /**
-     * <pre>
-     * List of devices on which the command was called
-     * </pre>
-     *
-     * <code>repeated .android_studio.RunDeviceInfo devices = 26;</code>
-     */
-    public Builder addAllDevices(
-        java.lang.Iterable<? extends com.google.wireless.android.sdk.stats.RunDeviceInfo> values) {
-      if (devicesBuilder_ == null) {
-        ensureDevicesIsMutable();
-        com.google.protobuf.AbstractMessageLite.Builder.addAll(
-            values, devices_);
-        onChanged();
-      } else {
-        devicesBuilder_.addAllMessages(values);
-      }
-      return this;
-    }
-    /**
-     * <pre>
-     * List of devices on which the command was called
-     * </pre>
-     *
-     * <code>repeated .android_studio.RunDeviceInfo devices = 26;</code>
-     */
-    public Builder clearDevices() {
-      if (devicesBuilder_ == null) {
-        devices_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x02000000);
-        onChanged();
-      } else {
-        devicesBuilder_.clear();
-      }
-      return this;
-    }
-    /**
-     * <pre>
-     * List of devices on which the command was called
-     * </pre>
-     *
-     * <code>repeated .android_studio.RunDeviceInfo devices = 26;</code>
-     */
-    public Builder removeDevices(int index) {
-      if (devicesBuilder_ == null) {
-        ensureDevicesIsMutable();
-        devices_.remove(index);
-        onChanged();
-      } else {
-        devicesBuilder_.remove(index);
-      }
-      return this;
-    }
-    /**
-     * <pre>
-     * List of devices on which the command was called
-     * </pre>
-     *
-     * <code>repeated .android_studio.RunDeviceInfo devices = 26;</code>
-     */
-    public com.google.wireless.android.sdk.stats.RunDeviceInfo.Builder getDevicesBuilder(
-        int index) {
-      return getDevicesFieldBuilder().getBuilder(index);
-    }
-    /**
-     * <pre>
-     * List of devices on which the command was called
-     * </pre>
-     *
-     * <code>repeated .android_studio.RunDeviceInfo devices = 26;</code>
-     */
-    public com.google.wireless.android.sdk.stats.RunDeviceInfoOrBuilder getDevicesOrBuilder(
-        int index) {
-      if (devicesBuilder_ == null) {
-        return devices_.get(index);  } else {
-        return devicesBuilder_.getMessageOrBuilder(index);
-      }
-    }
-    /**
-     * <pre>
-     * List of devices on which the command was called
-     * </pre>
-     *
-     * <code>repeated .android_studio.RunDeviceInfo devices = 26;</code>
-     */
-    public java.util.List<? extends com.google.wireless.android.sdk.stats.RunDeviceInfoOrBuilder> 
-         getDevicesOrBuilderList() {
-      if (devicesBuilder_ != null) {
-        return devicesBuilder_.getMessageOrBuilderList();
-      } else {
-        return java.util.Collections.unmodifiableList(devices_);
-      }
-    }
-    /**
-     * <pre>
-     * List of devices on which the command was called
-     * </pre>
-     *
-     * <code>repeated .android_studio.RunDeviceInfo devices = 26;</code>
-     */
-    public com.google.wireless.android.sdk.stats.RunDeviceInfo.Builder addDevicesBuilder() {
-      return getDevicesFieldBuilder().addBuilder(
-          com.google.wireless.android.sdk.stats.RunDeviceInfo.getDefaultInstance());
-    }
-    /**
-     * <pre>
-     * List of devices on which the command was called
-     * </pre>
-     *
-     * <code>repeated .android_studio.RunDeviceInfo devices = 26;</code>
-     */
-    public com.google.wireless.android.sdk.stats.RunDeviceInfo.Builder addDevicesBuilder(
-        int index) {
-      return getDevicesFieldBuilder().addBuilder(
-          index, com.google.wireless.android.sdk.stats.RunDeviceInfo.getDefaultInstance());
-    }
-    /**
-     * <pre>
-     * List of devices on which the command was called
-     * </pre>
-     *
-     * <code>repeated .android_studio.RunDeviceInfo devices = 26;</code>
-     */
-    public java.util.List<com.google.wireless.android.sdk.stats.RunDeviceInfo.Builder> 
-         getDevicesBuilderList() {
-      return getDevicesFieldBuilder().getBuilderList();
-    }
-    private com.google.protobuf.RepeatedFieldBuilderV3<
-        com.google.wireless.android.sdk.stats.RunDeviceInfo, com.google.wireless.android.sdk.stats.RunDeviceInfo.Builder, com.google.wireless.android.sdk.stats.RunDeviceInfoOrBuilder> 
-        getDevicesFieldBuilder() {
-      if (devicesBuilder_ == null) {
-        devicesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-            com.google.wireless.android.sdk.stats.RunDeviceInfo, com.google.wireless.android.sdk.stats.RunDeviceInfo.Builder, com.google.wireless.android.sdk.stats.RunDeviceInfoOrBuilder>(
-                devices_,
-                ((bitField0_ & 0x02000000) != 0),
-                getParentForChildren(),
-                isClean());
-        devices_ = null;
-      }
-      return devicesBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

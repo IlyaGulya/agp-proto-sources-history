@@ -553,6 +553,26 @@ public enum VariantPropertiesMethodType
    * <code>VARIANT_AAR_METADATA_MIN_COMPILE_SDK_EXTENSION = 124;</code>
    */
   VARIANT_AAR_METADATA_MIN_COMPILE_SDK_EXTENSION(124),
+  /**
+   * <code>FOR_SCOPE = 125;</code>
+   */
+  FOR_SCOPE(125),
+  /**
+   * <code>SCOPED_ARTIFACTS_TO_GET = 126;</code>
+   */
+  SCOPED_ARTIFACTS_TO_GET(126),
+  /**
+   * <code>SCOPED_ARTIFACTS_TO_TRANSFORM = 127;</code>
+   */
+  SCOPED_ARTIFACTS_TO_TRANSFORM(127),
+  /**
+   * <code>SCOPED_ARTIFACTS_TO_REPLACE = 128;</code>
+   */
+  SCOPED_ARTIFACTS_TO_REPLACE(128),
+  /**
+   * <code>SCOPED_ARTIFACTS_APPEND = 129;</code>
+   */
+  SCOPED_ARTIFACTS_APPEND(129),
   UNRECOGNIZED(-1),
   ;
 
@@ -1100,6 +1120,26 @@ public enum VariantPropertiesMethodType
    * <code>VARIANT_AAR_METADATA_MIN_COMPILE_SDK_EXTENSION = 124;</code>
    */
   public static final int VARIANT_AAR_METADATA_MIN_COMPILE_SDK_EXTENSION_VALUE = 124;
+  /**
+   * <code>FOR_SCOPE = 125;</code>
+   */
+  public static final int FOR_SCOPE_VALUE = 125;
+  /**
+   * <code>SCOPED_ARTIFACTS_TO_GET = 126;</code>
+   */
+  public static final int SCOPED_ARTIFACTS_TO_GET_VALUE = 126;
+  /**
+   * <code>SCOPED_ARTIFACTS_TO_TRANSFORM = 127;</code>
+   */
+  public static final int SCOPED_ARTIFACTS_TO_TRANSFORM_VALUE = 127;
+  /**
+   * <code>SCOPED_ARTIFACTS_TO_REPLACE = 128;</code>
+   */
+  public static final int SCOPED_ARTIFACTS_TO_REPLACE_VALUE = 128;
+  /**
+   * <code>SCOPED_ARTIFACTS_APPEND = 129;</code>
+   */
+  public static final int SCOPED_ARTIFACTS_APPEND_VALUE = 129;
 
 
   public final int getNumber() {
@@ -1251,6 +1291,11 @@ public enum VariantPropertiesMethodType
       case 122: return CONFIGURATIONS;
       case 123: return COMPONENTS;
       case 124: return VARIANT_AAR_METADATA_MIN_COMPILE_SDK_EXTENSION;
+      case 125: return FOR_SCOPE;
+      case 126: return SCOPED_ARTIFACTS_TO_GET;
+      case 127: return SCOPED_ARTIFACTS_TO_TRANSFORM;
+      case 128: return SCOPED_ARTIFACTS_TO_REPLACE;
+      case 129: return SCOPED_ARTIFACTS_APPEND;
       default: return null;
     }
   }

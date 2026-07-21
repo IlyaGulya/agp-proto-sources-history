@@ -56,6 +56,10 @@ public enum VariantApiArtifactType
    * <code>APK_FROM_BUNDLE = 10;</code>
    */
   APK_FROM_BUNDLE(10),
+  /**
+   * <code>PROJECT_CLASSES = 11;</code>
+   */
+  PROJECT_CLASSES(11),
   UNRECOGNIZED(-1),
   ;
 
@@ -107,6 +111,10 @@ public enum VariantApiArtifactType
    * <code>APK_FROM_BUNDLE = 10;</code>
    */
   public static final int APK_FROM_BUNDLE_VALUE = 10;
+  /**
+   * <code>PROJECT_CLASSES = 11;</code>
+   */
+  public static final int PROJECT_CLASSES_VALUE = 11;
 
 
   public final int getNumber() {
@@ -144,6 +152,7 @@ public enum VariantApiArtifactType
       case 8: return ASSETS;
       case 9: return METADATA_LIBRARY_DEPENDENCIES_REPORT;
       case 10: return APK_FROM_BUNDLE;
+      case 11: return PROJECT_CLASSES;
       default: return null;
     }
   }
