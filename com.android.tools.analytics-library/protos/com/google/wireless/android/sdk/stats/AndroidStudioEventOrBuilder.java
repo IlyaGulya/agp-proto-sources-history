@@ -7044,4 +7044,31 @@ public interface AndroidStudioEventOrBuilder extends
    * <code>optional .android_studio.UnitTestGenerationEvent unit_test_generation_event = 252 [lazy = true];</code>
    */
   com.google.wireless.android.sdk.stats.UnitTestGenerationEventOrBuilder getUnitTestGenerationEventOrBuilder();
+
+  /**
+   * <pre>
+   * set when kind = SHERLOCK_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.SherlockEvent sherlock_event = 253 [lazy = true];</code>
+   * @return Whether the sherlockEvent field is set.
+   */
+  boolean hasSherlockEvent();
+  /**
+   * <pre>
+   * set when kind = SHERLOCK_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.SherlockEvent sherlock_event = 253 [lazy = true];</code>
+   * @return The sherlockEvent.
+   */
+  com.google.wireless.android.sdk.stats.SherlockEvent getSherlockEvent();
+  /**
+   * <pre>
+   * set when kind = SHERLOCK_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.SherlockEvent sherlock_event = 253 [lazy = true];</code>
+   */
+  com.google.wireless.android.sdk.stats.SherlockEventOrBuilder getSherlockEventOrBuilder();
 }

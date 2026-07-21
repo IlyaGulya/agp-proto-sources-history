@@ -63,6 +63,10 @@ private static final long serialVersionUID = 0L;
      * <code>QUICK_EDIT = 4;</code>
      */
     QUICK_EDIT(4),
+    /**
+     * <code>PLANNING = 5;</code>
+     */
+    PLANNING(5),
     ;
 
     /**
@@ -85,6 +89,10 @@ private static final long serialVersionUID = 0L;
      * <code>QUICK_EDIT = 4;</code>
      */
     public static final int QUICK_EDIT_VALUE = 4;
+    /**
+     * <code>PLANNING = 5;</code>
+     */
+    public static final int PLANNING_VALUE = 5;
 
 
     public final int getNumber() {
@@ -112,6 +120,7 @@ private static final long serialVersionUID = 0L;
         case 2: return AGENT_MODE;
         case 3: return VERSION_UPGRADE_AGENT;
         case 4: return QUICK_EDIT;
+        case 5: return PLANNING;
         default: return null;
       }
     }
@@ -7558,7 +7567,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional bool success = 3 [deprecated = true];</code>
      * @deprecated android_studio.SmlChatBotEvent.ParseResult.success is deprecated.
-     *     See studio_stats.proto;l=16594
+     *     See studio_stats.proto;l=16844
      * @return Whether the success field is set.
      */
     @java.lang.Deprecated boolean hasSuccess();
@@ -7570,7 +7579,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional bool success = 3 [deprecated = true];</code>
      * @deprecated android_studio.SmlChatBotEvent.ParseResult.success is deprecated.
-     *     See studio_stats.proto;l=16594
+     *     See studio_stats.proto;l=16844
      * @return The success.
      */
     @java.lang.Deprecated boolean getSuccess();
@@ -7698,7 +7707,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional bool success = 3 [deprecated = true];</code>
      * @deprecated android_studio.SmlChatBotEvent.ParseResult.success is deprecated.
-     *     See studio_stats.proto;l=16594
+     *     See studio_stats.proto;l=16844
      * @return Whether the success field is set.
      */
     @java.lang.Override
@@ -7713,7 +7722,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional bool success = 3 [deprecated = true];</code>
      * @deprecated android_studio.SmlChatBotEvent.ParseResult.success is deprecated.
-     *     See studio_stats.proto;l=16594
+     *     See studio_stats.proto;l=16844
      * @return The success.
      */
     @java.lang.Override
@@ -8377,7 +8386,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional bool success = 3 [deprecated = true];</code>
        * @deprecated android_studio.SmlChatBotEvent.ParseResult.success is deprecated.
-       *     See studio_stats.proto;l=16594
+       *     See studio_stats.proto;l=16844
        * @return Whether the success field is set.
        */
       @java.lang.Override
@@ -8392,7 +8401,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional bool success = 3 [deprecated = true];</code>
        * @deprecated android_studio.SmlChatBotEvent.ParseResult.success is deprecated.
-       *     See studio_stats.proto;l=16594
+       *     See studio_stats.proto;l=16844
        * @return The success.
        */
       @java.lang.Override
@@ -8407,7 +8416,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional bool success = 3 [deprecated = true];</code>
        * @deprecated android_studio.SmlChatBotEvent.ParseResult.success is deprecated.
-       *     See studio_stats.proto;l=16594
+       *     See studio_stats.proto;l=16844
        * @param value The success to set.
        * @return This builder for chaining.
        */
@@ -8426,7 +8435,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional bool success = 3 [deprecated = true];</code>
        * @deprecated android_studio.SmlChatBotEvent.ParseResult.success is deprecated.
-       *     See studio_stats.proto;l=16594
+       *     See studio_stats.proto;l=16844
        * @return This builder for chaining.
        */
       @java.lang.Deprecated public Builder clearSuccess() {
@@ -30399,6 +30408,3355 @@ private static final long serialVersionUID = 0L;
 
   }
 
+  public interface PlanningModeEventOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:android_studio.SmlChatBotEvent.PlanningModeEvent)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * The conversation session this event happened in.
+     * </pre>
+     *
+     * <code>optional string session_id = 1;</code>
+     * @return Whether the sessionId field is set.
+     */
+    boolean hasSessionId();
+    /**
+     * <pre>
+     * The conversation session this event happened in.
+     * </pre>
+     *
+     * <code>optional string session_id = 1;</code>
+     * @return The sessionId.
+     */
+    java.lang.String getSessionId();
+    /**
+     * <pre>
+     * The conversation session this event happened in.
+     * </pre>
+     *
+     * <code>optional string session_id = 1;</code>
+     * @return The bytes for sessionId.
+     */
+    com.google.protobuf.ByteString
+        getSessionIdBytes();
+
+    /**
+     * <code>.android_studio.SmlChatBotEvent.PlanningModeEvent.PlanCreated plan_created = 2;</code>
+     * @return Whether the planCreated field is set.
+     */
+    boolean hasPlanCreated();
+    /**
+     * <code>.android_studio.SmlChatBotEvent.PlanningModeEvent.PlanCreated plan_created = 2;</code>
+     * @return The planCreated.
+     */
+    com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.PlanCreated getPlanCreated();
+    /**
+     * <code>.android_studio.SmlChatBotEvent.PlanningModeEvent.PlanCreated plan_created = 2;</code>
+     */
+    com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.PlanCreatedOrBuilder getPlanCreatedOrBuilder();
+
+    /**
+     * <code>.android_studio.SmlChatBotEvent.PlanningModeEvent.PlanApproved plan_approved = 3;</code>
+     * @return Whether the planApproved field is set.
+     */
+    boolean hasPlanApproved();
+    /**
+     * <code>.android_studio.SmlChatBotEvent.PlanningModeEvent.PlanApproved plan_approved = 3;</code>
+     * @return The planApproved.
+     */
+    com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.PlanApproved getPlanApproved();
+    /**
+     * <code>.android_studio.SmlChatBotEvent.PlanningModeEvent.PlanApproved plan_approved = 3;</code>
+     */
+    com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.PlanApprovedOrBuilder getPlanApprovedOrBuilder();
+
+    /**
+     * <code>.android_studio.SmlChatBotEvent.PlanningModeEvent.CommentsSent comments_sent = 4;</code>
+     * @return Whether the commentsSent field is set.
+     */
+    boolean hasCommentsSent();
+    /**
+     * <code>.android_studio.SmlChatBotEvent.PlanningModeEvent.CommentsSent comments_sent = 4;</code>
+     * @return The commentsSent.
+     */
+    com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.CommentsSent getCommentsSent();
+    /**
+     * <code>.android_studio.SmlChatBotEvent.PlanningModeEvent.CommentsSent comments_sent = 4;</code>
+     */
+    com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.CommentsSentOrBuilder getCommentsSentOrBuilder();
+
+    /**
+     * <code>.android_studio.SmlChatBotEvent.PlanningModeEvent.ArtifactEdited artifact_edited = 5;</code>
+     * @return Whether the artifactEdited field is set.
+     */
+    boolean hasArtifactEdited();
+    /**
+     * <code>.android_studio.SmlChatBotEvent.PlanningModeEvent.ArtifactEdited artifact_edited = 5;</code>
+     * @return The artifactEdited.
+     */
+    com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.ArtifactEdited getArtifactEdited();
+    /**
+     * <code>.android_studio.SmlChatBotEvent.PlanningModeEvent.ArtifactEdited artifact_edited = 5;</code>
+     */
+    com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.ArtifactEditedOrBuilder getArtifactEditedOrBuilder();
+
+    com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.EventCase getEventCase();
+  }
+  /**
+   * Protobuf type {@code android_studio.SmlChatBotEvent.PlanningModeEvent}
+   */
+  public static final class PlanningModeEvent extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:android_studio.SmlChatBotEvent.PlanningModeEvent)
+      PlanningModeEventOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use PlanningModeEvent.newBuilder() to construct.
+    private PlanningModeEvent(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private PlanningModeEvent() {
+      sessionId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new PlanningModeEvent();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_SmlChatBotEvent_PlanningModeEvent_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_SmlChatBotEvent_PlanningModeEvent_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.class, com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.Builder.class);
+    }
+
+    public interface PlanCreatedOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:android_studio.SmlChatBotEvent.PlanningModeEvent.PlanCreated)
+        com.google.protobuf.MessageOrBuilder {
+    }
+    /**
+     * <pre>
+     * The implementation plan for this task was created for the first time
+     * </pre>
+     *
+     * Protobuf type {@code android_studio.SmlChatBotEvent.PlanningModeEvent.PlanCreated}
+     */
+    public static final class PlanCreated extends
+        com.google.protobuf.GeneratedMessageV3 implements
+        // @@protoc_insertion_point(message_implements:android_studio.SmlChatBotEvent.PlanningModeEvent.PlanCreated)
+        PlanCreatedOrBuilder {
+    private static final long serialVersionUID = 0L;
+      // Use PlanCreated.newBuilder() to construct.
+      private PlanCreated(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+        super(builder);
+      }
+      private PlanCreated() {
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new PlanCreated();
+      }
+
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_SmlChatBotEvent_PlanningModeEvent_PlanCreated_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_SmlChatBotEvent_PlanningModeEvent_PlanCreated_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.PlanCreated.class, com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.PlanCreated.Builder.class);
+      }
+
+      private byte memoizedIsInitialized = -1;
+      @java.lang.Override
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      @java.lang.Override
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        getUnknownFields().writeTo(output);
+      }
+
+      @java.lang.Override
+      public int getSerializedSize() {
+        int size = memoizedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        size += getUnknownFields().getSerializedSize();
+        memoizedSize = size;
+        return size;
+      }
+
+      @java.lang.Override
+      public boolean equals(final java.lang.Object obj) {
+        if (obj == this) {
+         return true;
+        }
+        if (!(obj instanceof com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.PlanCreated)) {
+          return super.equals(obj);
+        }
+        com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.PlanCreated other = (com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.PlanCreated) obj;
+
+        if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+        return true;
+      }
+
+      @java.lang.Override
+      public int hashCode() {
+        if (memoizedHashCode != 0) {
+          return memoizedHashCode;
+        }
+        int hash = 41;
+        hash = (19 * hash) + getDescriptor().hashCode();
+        hash = (29 * hash) + getUnknownFields().hashCode();
+        memoizedHashCode = hash;
+        return hash;
+      }
+
+      public static com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.PlanCreated parseFrom(
+          java.nio.ByteBuffer data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.PlanCreated parseFrom(
+          java.nio.ByteBuffer data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.PlanCreated parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.PlanCreated parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.PlanCreated parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.PlanCreated parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.PlanCreated parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.PlanCreated parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.PlanCreated parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input);
+      }
+      public static com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.PlanCreated parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.PlanCreated parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.PlanCreated parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      @java.lang.Override
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder() {
+        return DEFAULT_INSTANCE.toBuilder();
+      }
+      public static Builder newBuilder(com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.PlanCreated prototype) {
+        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+      }
+      @java.lang.Override
+      public Builder toBuilder() {
+        return this == DEFAULT_INSTANCE
+            ? new Builder() : new Builder().mergeFrom(this);
+      }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * <pre>
+       * The implementation plan for this task was created for the first time
+       * </pre>
+       *
+       * Protobuf type {@code android_studio.SmlChatBotEvent.PlanningModeEvent.PlanCreated}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:android_studio.SmlChatBotEvent.PlanningModeEvent.PlanCreated)
+          com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.PlanCreatedOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_SmlChatBotEvent_PlanningModeEvent_PlanCreated_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_SmlChatBotEvent_PlanningModeEvent_PlanCreated_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.PlanCreated.class, com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.PlanCreated.Builder.class);
+        }
+
+        // Construct using com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.PlanCreated.newBuilder()
+        private Builder() {
+
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          super(parent);
+
+        }
+        @java.lang.Override
+        public Builder clear() {
+          super.clear();
+          return this;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_SmlChatBotEvent_PlanningModeEvent_PlanCreated_descriptor;
+        }
+
+        @java.lang.Override
+        public com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.PlanCreated getDefaultInstanceForType() {
+          return com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.PlanCreated.getDefaultInstance();
+        }
+
+        @java.lang.Override
+        public com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.PlanCreated build() {
+          com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.PlanCreated result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        @java.lang.Override
+        public com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.PlanCreated buildPartial() {
+          com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.PlanCreated result = new com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.PlanCreated(this);
+          onBuilt();
+          return result;
+        }
+
+        @java.lang.Override
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.PlanCreated) {
+            return mergeFrom((com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.PlanCreated)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.PlanCreated other) {
+          if (other == com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.PlanCreated.getDefaultInstance()) return this;
+          this.mergeUnknownFields(other.getUnknownFields());
+          onChanged();
+          return this;
+        }
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        @java.lang.Override
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          if (extensionRegistry == null) {
+            throw new java.lang.NullPointerException();
+          }
+          try {
+            boolean done = false;
+            while (!done) {
+              int tag = input.readTag();
+              switch (tag) {
+                case 0:
+                  done = true;
+                  break;
+                default: {
+                  if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                    done = true; // was an endgroup tag
+                  }
+                  break;
+                } // default:
+              } // switch (tag)
+            } // while (!done)
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            throw e.unwrapIOException();
+          } finally {
+            onChanged();
+          } // finally
+          return this;
+        }
+        @java.lang.Override
+        public final Builder setUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.setUnknownFields(unknownFields);
+        }
+
+        @java.lang.Override
+        public final Builder mergeUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.mergeUnknownFields(unknownFields);
+        }
+
+
+        // @@protoc_insertion_point(builder_scope:android_studio.SmlChatBotEvent.PlanningModeEvent.PlanCreated)
+      }
+
+      // @@protoc_insertion_point(class_scope:android_studio.SmlChatBotEvent.PlanningModeEvent.PlanCreated)
+      private static final com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.PlanCreated DEFAULT_INSTANCE;
+      static {
+        DEFAULT_INSTANCE = new com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.PlanCreated();
+      }
+
+      public static com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.PlanCreated getDefaultInstance() {
+        return DEFAULT_INSTANCE;
+      }
+
+      @java.lang.Deprecated public static final com.google.protobuf.Parser<PlanCreated>
+          PARSER = new com.google.protobuf.AbstractParser<PlanCreated>() {
+        @java.lang.Override
+        public PlanCreated parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          Builder builder = newBuilder();
+          try {
+            builder.mergeFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            throw e.setUnfinishedMessage(builder.buildPartial());
+          } catch (com.google.protobuf.UninitializedMessageException e) {
+            throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+          } catch (java.io.IOException e) {
+            throw new com.google.protobuf.InvalidProtocolBufferException(e)
+                .setUnfinishedMessage(builder.buildPartial());
+          }
+          return builder.buildPartial();
+        }
+      };
+
+      public static com.google.protobuf.Parser<PlanCreated> parser() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<PlanCreated> getParserForType() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.PlanCreated getDefaultInstanceForType() {
+        return DEFAULT_INSTANCE;
+      }
+
+    }
+
+    public interface PlanApprovedOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:android_studio.SmlChatBotEvent.PlanningModeEvent.PlanApproved)
+        com.google.protobuf.MessageOrBuilder {
+    }
+    /**
+     * <pre>
+     * The user approved the implementation plan.
+     * </pre>
+     *
+     * Protobuf type {@code android_studio.SmlChatBotEvent.PlanningModeEvent.PlanApproved}
+     */
+    public static final class PlanApproved extends
+        com.google.protobuf.GeneratedMessageV3 implements
+        // @@protoc_insertion_point(message_implements:android_studio.SmlChatBotEvent.PlanningModeEvent.PlanApproved)
+        PlanApprovedOrBuilder {
+    private static final long serialVersionUID = 0L;
+      // Use PlanApproved.newBuilder() to construct.
+      private PlanApproved(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+        super(builder);
+      }
+      private PlanApproved() {
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new PlanApproved();
+      }
+
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_SmlChatBotEvent_PlanningModeEvent_PlanApproved_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_SmlChatBotEvent_PlanningModeEvent_PlanApproved_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.PlanApproved.class, com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.PlanApproved.Builder.class);
+      }
+
+      private byte memoizedIsInitialized = -1;
+      @java.lang.Override
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      @java.lang.Override
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        getUnknownFields().writeTo(output);
+      }
+
+      @java.lang.Override
+      public int getSerializedSize() {
+        int size = memoizedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        size += getUnknownFields().getSerializedSize();
+        memoizedSize = size;
+        return size;
+      }
+
+      @java.lang.Override
+      public boolean equals(final java.lang.Object obj) {
+        if (obj == this) {
+         return true;
+        }
+        if (!(obj instanceof com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.PlanApproved)) {
+          return super.equals(obj);
+        }
+        com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.PlanApproved other = (com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.PlanApproved) obj;
+
+        if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+        return true;
+      }
+
+      @java.lang.Override
+      public int hashCode() {
+        if (memoizedHashCode != 0) {
+          return memoizedHashCode;
+        }
+        int hash = 41;
+        hash = (19 * hash) + getDescriptor().hashCode();
+        hash = (29 * hash) + getUnknownFields().hashCode();
+        memoizedHashCode = hash;
+        return hash;
+      }
+
+      public static com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.PlanApproved parseFrom(
+          java.nio.ByteBuffer data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.PlanApproved parseFrom(
+          java.nio.ByteBuffer data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.PlanApproved parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.PlanApproved parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.PlanApproved parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.PlanApproved parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.PlanApproved parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.PlanApproved parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.PlanApproved parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input);
+      }
+      public static com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.PlanApproved parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.PlanApproved parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.PlanApproved parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      @java.lang.Override
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder() {
+        return DEFAULT_INSTANCE.toBuilder();
+      }
+      public static Builder newBuilder(com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.PlanApproved prototype) {
+        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+      }
+      @java.lang.Override
+      public Builder toBuilder() {
+        return this == DEFAULT_INSTANCE
+            ? new Builder() : new Builder().mergeFrom(this);
+      }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * <pre>
+       * The user approved the implementation plan.
+       * </pre>
+       *
+       * Protobuf type {@code android_studio.SmlChatBotEvent.PlanningModeEvent.PlanApproved}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:android_studio.SmlChatBotEvent.PlanningModeEvent.PlanApproved)
+          com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.PlanApprovedOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_SmlChatBotEvent_PlanningModeEvent_PlanApproved_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_SmlChatBotEvent_PlanningModeEvent_PlanApproved_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.PlanApproved.class, com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.PlanApproved.Builder.class);
+        }
+
+        // Construct using com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.PlanApproved.newBuilder()
+        private Builder() {
+
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          super(parent);
+
+        }
+        @java.lang.Override
+        public Builder clear() {
+          super.clear();
+          return this;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_SmlChatBotEvent_PlanningModeEvent_PlanApproved_descriptor;
+        }
+
+        @java.lang.Override
+        public com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.PlanApproved getDefaultInstanceForType() {
+          return com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.PlanApproved.getDefaultInstance();
+        }
+
+        @java.lang.Override
+        public com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.PlanApproved build() {
+          com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.PlanApproved result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        @java.lang.Override
+        public com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.PlanApproved buildPartial() {
+          com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.PlanApproved result = new com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.PlanApproved(this);
+          onBuilt();
+          return result;
+        }
+
+        @java.lang.Override
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.PlanApproved) {
+            return mergeFrom((com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.PlanApproved)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.PlanApproved other) {
+          if (other == com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.PlanApproved.getDefaultInstance()) return this;
+          this.mergeUnknownFields(other.getUnknownFields());
+          onChanged();
+          return this;
+        }
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        @java.lang.Override
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          if (extensionRegistry == null) {
+            throw new java.lang.NullPointerException();
+          }
+          try {
+            boolean done = false;
+            while (!done) {
+              int tag = input.readTag();
+              switch (tag) {
+                case 0:
+                  done = true;
+                  break;
+                default: {
+                  if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                    done = true; // was an endgroup tag
+                  }
+                  break;
+                } // default:
+              } // switch (tag)
+            } // while (!done)
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            throw e.unwrapIOException();
+          } finally {
+            onChanged();
+          } // finally
+          return this;
+        }
+        @java.lang.Override
+        public final Builder setUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.setUnknownFields(unknownFields);
+        }
+
+        @java.lang.Override
+        public final Builder mergeUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.mergeUnknownFields(unknownFields);
+        }
+
+
+        // @@protoc_insertion_point(builder_scope:android_studio.SmlChatBotEvent.PlanningModeEvent.PlanApproved)
+      }
+
+      // @@protoc_insertion_point(class_scope:android_studio.SmlChatBotEvent.PlanningModeEvent.PlanApproved)
+      private static final com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.PlanApproved DEFAULT_INSTANCE;
+      static {
+        DEFAULT_INSTANCE = new com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.PlanApproved();
+      }
+
+      public static com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.PlanApproved getDefaultInstance() {
+        return DEFAULT_INSTANCE;
+      }
+
+      @java.lang.Deprecated public static final com.google.protobuf.Parser<PlanApproved>
+          PARSER = new com.google.protobuf.AbstractParser<PlanApproved>() {
+        @java.lang.Override
+        public PlanApproved parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          Builder builder = newBuilder();
+          try {
+            builder.mergeFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            throw e.setUnfinishedMessage(builder.buildPartial());
+          } catch (com.google.protobuf.UninitializedMessageException e) {
+            throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+          } catch (java.io.IOException e) {
+            throw new com.google.protobuf.InvalidProtocolBufferException(e)
+                .setUnfinishedMessage(builder.buildPartial());
+          }
+          return builder.buildPartial();
+        }
+      };
+
+      public static com.google.protobuf.Parser<PlanApproved> parser() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<PlanApproved> getParserForType() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.PlanApproved getDefaultInstanceForType() {
+        return DEFAULT_INSTANCE;
+      }
+
+    }
+
+    public interface CommentsSentOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:android_studio.SmlChatBotEvent.PlanningModeEvent.CommentsSent)
+        com.google.protobuf.MessageOrBuilder {
+
+      /**
+       * <code>optional int32 comments_count = 1;</code>
+       * @return Whether the commentsCount field is set.
+       */
+      boolean hasCommentsCount();
+      /**
+       * <code>optional int32 comments_count = 1;</code>
+       * @return The commentsCount.
+       */
+      int getCommentsCount();
+    }
+    /**
+     * <pre>
+     * The user sent comments on the implementation plan
+     * </pre>
+     *
+     * Protobuf type {@code android_studio.SmlChatBotEvent.PlanningModeEvent.CommentsSent}
+     */
+    public static final class CommentsSent extends
+        com.google.protobuf.GeneratedMessageV3 implements
+        // @@protoc_insertion_point(message_implements:android_studio.SmlChatBotEvent.PlanningModeEvent.CommentsSent)
+        CommentsSentOrBuilder {
+    private static final long serialVersionUID = 0L;
+      // Use CommentsSent.newBuilder() to construct.
+      private CommentsSent(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+        super(builder);
+      }
+      private CommentsSent() {
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new CommentsSent();
+      }
+
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_SmlChatBotEvent_PlanningModeEvent_CommentsSent_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_SmlChatBotEvent_PlanningModeEvent_CommentsSent_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.CommentsSent.class, com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.CommentsSent.Builder.class);
+      }
+
+      private int bitField0_;
+      public static final int COMMENTS_COUNT_FIELD_NUMBER = 1;
+      private int commentsCount_ = 0;
+      /**
+       * <code>optional int32 comments_count = 1;</code>
+       * @return Whether the commentsCount field is set.
+       */
+      @java.lang.Override
+      public boolean hasCommentsCount() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>optional int32 comments_count = 1;</code>
+       * @return The commentsCount.
+       */
+      @java.lang.Override
+      public int getCommentsCount() {
+        return commentsCount_;
+      }
+
+      private byte memoizedIsInitialized = -1;
+      @java.lang.Override
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      @java.lang.Override
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        if (((bitField0_ & 0x00000001) != 0)) {
+          output.writeInt32(1, commentsCount_);
+        }
+        getUnknownFields().writeTo(output);
+      }
+
+      @java.lang.Override
+      public int getSerializedSize() {
+        int size = memoizedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        if (((bitField0_ & 0x00000001) != 0)) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeInt32Size(1, commentsCount_);
+        }
+        size += getUnknownFields().getSerializedSize();
+        memoizedSize = size;
+        return size;
+      }
+
+      @java.lang.Override
+      public boolean equals(final java.lang.Object obj) {
+        if (obj == this) {
+         return true;
+        }
+        if (!(obj instanceof com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.CommentsSent)) {
+          return super.equals(obj);
+        }
+        com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.CommentsSent other = (com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.CommentsSent) obj;
+
+        if (hasCommentsCount() != other.hasCommentsCount()) return false;
+        if (hasCommentsCount()) {
+          if (getCommentsCount()
+              != other.getCommentsCount()) return false;
+        }
+        if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+        return true;
+      }
+
+      @java.lang.Override
+      public int hashCode() {
+        if (memoizedHashCode != 0) {
+          return memoizedHashCode;
+        }
+        int hash = 41;
+        hash = (19 * hash) + getDescriptor().hashCode();
+        if (hasCommentsCount()) {
+          hash = (37 * hash) + COMMENTS_COUNT_FIELD_NUMBER;
+          hash = (53 * hash) + getCommentsCount();
+        }
+        hash = (29 * hash) + getUnknownFields().hashCode();
+        memoizedHashCode = hash;
+        return hash;
+      }
+
+      public static com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.CommentsSent parseFrom(
+          java.nio.ByteBuffer data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.CommentsSent parseFrom(
+          java.nio.ByteBuffer data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.CommentsSent parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.CommentsSent parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.CommentsSent parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.CommentsSent parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.CommentsSent parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.CommentsSent parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.CommentsSent parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input);
+      }
+      public static com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.CommentsSent parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.CommentsSent parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.CommentsSent parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      @java.lang.Override
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder() {
+        return DEFAULT_INSTANCE.toBuilder();
+      }
+      public static Builder newBuilder(com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.CommentsSent prototype) {
+        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+      }
+      @java.lang.Override
+      public Builder toBuilder() {
+        return this == DEFAULT_INSTANCE
+            ? new Builder() : new Builder().mergeFrom(this);
+      }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * <pre>
+       * The user sent comments on the implementation plan
+       * </pre>
+       *
+       * Protobuf type {@code android_studio.SmlChatBotEvent.PlanningModeEvent.CommentsSent}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:android_studio.SmlChatBotEvent.PlanningModeEvent.CommentsSent)
+          com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.CommentsSentOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_SmlChatBotEvent_PlanningModeEvent_CommentsSent_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_SmlChatBotEvent_PlanningModeEvent_CommentsSent_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.CommentsSent.class, com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.CommentsSent.Builder.class);
+        }
+
+        // Construct using com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.CommentsSent.newBuilder()
+        private Builder() {
+
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          super(parent);
+
+        }
+        @java.lang.Override
+        public Builder clear() {
+          super.clear();
+          bitField0_ = 0;
+          commentsCount_ = 0;
+          return this;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_SmlChatBotEvent_PlanningModeEvent_CommentsSent_descriptor;
+        }
+
+        @java.lang.Override
+        public com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.CommentsSent getDefaultInstanceForType() {
+          return com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.CommentsSent.getDefaultInstance();
+        }
+
+        @java.lang.Override
+        public com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.CommentsSent build() {
+          com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.CommentsSent result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        @java.lang.Override
+        public com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.CommentsSent buildPartial() {
+          com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.CommentsSent result = new com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.CommentsSent(this);
+          if (bitField0_ != 0) { buildPartial0(result); }
+          onBuilt();
+          return result;
+        }
+
+        private void buildPartial0(com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.CommentsSent result) {
+          int from_bitField0_ = bitField0_;
+          int to_bitField0_ = 0;
+          if (((from_bitField0_ & 0x00000001) != 0)) {
+            result.commentsCount_ = commentsCount_;
+            to_bitField0_ |= 0x00000001;
+          }
+          result.bitField0_ |= to_bitField0_;
+        }
+
+        @java.lang.Override
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.CommentsSent) {
+            return mergeFrom((com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.CommentsSent)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.CommentsSent other) {
+          if (other == com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.CommentsSent.getDefaultInstance()) return this;
+          if (other.hasCommentsCount()) {
+            setCommentsCount(other.getCommentsCount());
+          }
+          this.mergeUnknownFields(other.getUnknownFields());
+          onChanged();
+          return this;
+        }
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        @java.lang.Override
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          if (extensionRegistry == null) {
+            throw new java.lang.NullPointerException();
+          }
+          try {
+            boolean done = false;
+            while (!done) {
+              int tag = input.readTag();
+              switch (tag) {
+                case 0:
+                  done = true;
+                  break;
+                case 8: {
+                  commentsCount_ = input.readInt32();
+                  bitField0_ |= 0x00000001;
+                  break;
+                } // case 8
+                default: {
+                  if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                    done = true; // was an endgroup tag
+                  }
+                  break;
+                } // default:
+              } // switch (tag)
+            } // while (!done)
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            throw e.unwrapIOException();
+          } finally {
+            onChanged();
+          } // finally
+          return this;
+        }
+        private int bitField0_;
+
+        private int commentsCount_ ;
+        /**
+         * <code>optional int32 comments_count = 1;</code>
+         * @return Whether the commentsCount field is set.
+         */
+        @java.lang.Override
+        public boolean hasCommentsCount() {
+          return ((bitField0_ & 0x00000001) != 0);
+        }
+        /**
+         * <code>optional int32 comments_count = 1;</code>
+         * @return The commentsCount.
+         */
+        @java.lang.Override
+        public int getCommentsCount() {
+          return commentsCount_;
+        }
+        /**
+         * <code>optional int32 comments_count = 1;</code>
+         * @param value The commentsCount to set.
+         * @return This builder for chaining.
+         */
+        public Builder setCommentsCount(int value) {
+
+          commentsCount_ = value;
+          bitField0_ |= 0x00000001;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>optional int32 comments_count = 1;</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearCommentsCount() {
+          bitField0_ = (bitField0_ & ~0x00000001);
+          commentsCount_ = 0;
+          onChanged();
+          return this;
+        }
+        @java.lang.Override
+        public final Builder setUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.setUnknownFields(unknownFields);
+        }
+
+        @java.lang.Override
+        public final Builder mergeUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.mergeUnknownFields(unknownFields);
+        }
+
+
+        // @@protoc_insertion_point(builder_scope:android_studio.SmlChatBotEvent.PlanningModeEvent.CommentsSent)
+      }
+
+      // @@protoc_insertion_point(class_scope:android_studio.SmlChatBotEvent.PlanningModeEvent.CommentsSent)
+      private static final com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.CommentsSent DEFAULT_INSTANCE;
+      static {
+        DEFAULT_INSTANCE = new com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.CommentsSent();
+      }
+
+      public static com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.CommentsSent getDefaultInstance() {
+        return DEFAULT_INSTANCE;
+      }
+
+      @java.lang.Deprecated public static final com.google.protobuf.Parser<CommentsSent>
+          PARSER = new com.google.protobuf.AbstractParser<CommentsSent>() {
+        @java.lang.Override
+        public CommentsSent parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          Builder builder = newBuilder();
+          try {
+            builder.mergeFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            throw e.setUnfinishedMessage(builder.buildPartial());
+          } catch (com.google.protobuf.UninitializedMessageException e) {
+            throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+          } catch (java.io.IOException e) {
+            throw new com.google.protobuf.InvalidProtocolBufferException(e)
+                .setUnfinishedMessage(builder.buildPartial());
+          }
+          return builder.buildPartial();
+        }
+      };
+
+      public static com.google.protobuf.Parser<CommentsSent> parser() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<CommentsSent> getParserForType() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.CommentsSent getDefaultInstanceForType() {
+        return DEFAULT_INSTANCE;
+      }
+
+    }
+
+    public interface ArtifactEditedOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:android_studio.SmlChatBotEvent.PlanningModeEvent.ArtifactEdited)
+        com.google.protobuf.MessageOrBuilder {
+
+      /**
+       * <code>optional string artifact_name = 1;</code>
+       * @return Whether the artifactName field is set.
+       */
+      boolean hasArtifactName();
+      /**
+       * <code>optional string artifact_name = 1;</code>
+       * @return The artifactName.
+       */
+      java.lang.String getArtifactName();
+      /**
+       * <code>optional string artifact_name = 1;</code>
+       * @return The bytes for artifactName.
+       */
+      com.google.protobuf.ByteString
+          getArtifactNameBytes();
+    }
+    /**
+     * <pre>
+     * An artifact (implementation_plan, task_list, walkthrough, etc.) was
+     * edited by the agent.
+     * </pre>
+     *
+     * Protobuf type {@code android_studio.SmlChatBotEvent.PlanningModeEvent.ArtifactEdited}
+     */
+    public static final class ArtifactEdited extends
+        com.google.protobuf.GeneratedMessageV3 implements
+        // @@protoc_insertion_point(message_implements:android_studio.SmlChatBotEvent.PlanningModeEvent.ArtifactEdited)
+        ArtifactEditedOrBuilder {
+    private static final long serialVersionUID = 0L;
+      // Use ArtifactEdited.newBuilder() to construct.
+      private ArtifactEdited(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+        super(builder);
+      }
+      private ArtifactEdited() {
+        artifactName_ = "";
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new ArtifactEdited();
+      }
+
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_SmlChatBotEvent_PlanningModeEvent_ArtifactEdited_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_SmlChatBotEvent_PlanningModeEvent_ArtifactEdited_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.ArtifactEdited.class, com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.ArtifactEdited.Builder.class);
+      }
+
+      private int bitField0_;
+      public static final int ARTIFACT_NAME_FIELD_NUMBER = 1;
+      @SuppressWarnings("serial")
+      private volatile java.lang.Object artifactName_ = "";
+      /**
+       * <code>optional string artifact_name = 1;</code>
+       * @return Whether the artifactName field is set.
+       */
+      @java.lang.Override
+      public boolean hasArtifactName() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>optional string artifact_name = 1;</code>
+       * @return The artifactName.
+       */
+      @java.lang.Override
+      public java.lang.String getArtifactName() {
+        java.lang.Object ref = artifactName_;
+        if (ref instanceof java.lang.String) {
+          return (java.lang.String) ref;
+        } else {
+          com.google.protobuf.ByteString bs = 
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            artifactName_ = s;
+          }
+          return s;
+        }
+      }
+      /**
+       * <code>optional string artifact_name = 1;</code>
+       * @return The bytes for artifactName.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getArtifactNameBytes() {
+        java.lang.Object ref = artifactName_;
+        if (ref instanceof java.lang.String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          artifactName_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+
+      private byte memoizedIsInitialized = -1;
+      @java.lang.Override
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      @java.lang.Override
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        if (((bitField0_ & 0x00000001) != 0)) {
+          com.google.protobuf.GeneratedMessageV3.writeString(output, 1, artifactName_);
+        }
+        getUnknownFields().writeTo(output);
+      }
+
+      @java.lang.Override
+      public int getSerializedSize() {
+        int size = memoizedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        if (((bitField0_ & 0x00000001) != 0)) {
+          size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, artifactName_);
+        }
+        size += getUnknownFields().getSerializedSize();
+        memoizedSize = size;
+        return size;
+      }
+
+      @java.lang.Override
+      public boolean equals(final java.lang.Object obj) {
+        if (obj == this) {
+         return true;
+        }
+        if (!(obj instanceof com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.ArtifactEdited)) {
+          return super.equals(obj);
+        }
+        com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.ArtifactEdited other = (com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.ArtifactEdited) obj;
+
+        if (hasArtifactName() != other.hasArtifactName()) return false;
+        if (hasArtifactName()) {
+          if (!getArtifactName()
+              .equals(other.getArtifactName())) return false;
+        }
+        if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+        return true;
+      }
+
+      @java.lang.Override
+      public int hashCode() {
+        if (memoizedHashCode != 0) {
+          return memoizedHashCode;
+        }
+        int hash = 41;
+        hash = (19 * hash) + getDescriptor().hashCode();
+        if (hasArtifactName()) {
+          hash = (37 * hash) + ARTIFACT_NAME_FIELD_NUMBER;
+          hash = (53 * hash) + getArtifactName().hashCode();
+        }
+        hash = (29 * hash) + getUnknownFields().hashCode();
+        memoizedHashCode = hash;
+        return hash;
+      }
+
+      public static com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.ArtifactEdited parseFrom(
+          java.nio.ByteBuffer data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.ArtifactEdited parseFrom(
+          java.nio.ByteBuffer data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.ArtifactEdited parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.ArtifactEdited parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.ArtifactEdited parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.ArtifactEdited parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.ArtifactEdited parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.ArtifactEdited parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.ArtifactEdited parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input);
+      }
+      public static com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.ArtifactEdited parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.ArtifactEdited parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.ArtifactEdited parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      @java.lang.Override
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder() {
+        return DEFAULT_INSTANCE.toBuilder();
+      }
+      public static Builder newBuilder(com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.ArtifactEdited prototype) {
+        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+      }
+      @java.lang.Override
+      public Builder toBuilder() {
+        return this == DEFAULT_INSTANCE
+            ? new Builder() : new Builder().mergeFrom(this);
+      }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * <pre>
+       * An artifact (implementation_plan, task_list, walkthrough, etc.) was
+       * edited by the agent.
+       * </pre>
+       *
+       * Protobuf type {@code android_studio.SmlChatBotEvent.PlanningModeEvent.ArtifactEdited}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:android_studio.SmlChatBotEvent.PlanningModeEvent.ArtifactEdited)
+          com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.ArtifactEditedOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_SmlChatBotEvent_PlanningModeEvent_ArtifactEdited_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_SmlChatBotEvent_PlanningModeEvent_ArtifactEdited_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.ArtifactEdited.class, com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.ArtifactEdited.Builder.class);
+        }
+
+        // Construct using com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.ArtifactEdited.newBuilder()
+        private Builder() {
+
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          super(parent);
+
+        }
+        @java.lang.Override
+        public Builder clear() {
+          super.clear();
+          bitField0_ = 0;
+          artifactName_ = "";
+          return this;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_SmlChatBotEvent_PlanningModeEvent_ArtifactEdited_descriptor;
+        }
+
+        @java.lang.Override
+        public com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.ArtifactEdited getDefaultInstanceForType() {
+          return com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.ArtifactEdited.getDefaultInstance();
+        }
+
+        @java.lang.Override
+        public com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.ArtifactEdited build() {
+          com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.ArtifactEdited result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        @java.lang.Override
+        public com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.ArtifactEdited buildPartial() {
+          com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.ArtifactEdited result = new com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.ArtifactEdited(this);
+          if (bitField0_ != 0) { buildPartial0(result); }
+          onBuilt();
+          return result;
+        }
+
+        private void buildPartial0(com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.ArtifactEdited result) {
+          int from_bitField0_ = bitField0_;
+          int to_bitField0_ = 0;
+          if (((from_bitField0_ & 0x00000001) != 0)) {
+            result.artifactName_ = artifactName_;
+            to_bitField0_ |= 0x00000001;
+          }
+          result.bitField0_ |= to_bitField0_;
+        }
+
+        @java.lang.Override
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.ArtifactEdited) {
+            return mergeFrom((com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.ArtifactEdited)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.ArtifactEdited other) {
+          if (other == com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.ArtifactEdited.getDefaultInstance()) return this;
+          if (other.hasArtifactName()) {
+            artifactName_ = other.artifactName_;
+            bitField0_ |= 0x00000001;
+            onChanged();
+          }
+          this.mergeUnknownFields(other.getUnknownFields());
+          onChanged();
+          return this;
+        }
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        @java.lang.Override
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          if (extensionRegistry == null) {
+            throw new java.lang.NullPointerException();
+          }
+          try {
+            boolean done = false;
+            while (!done) {
+              int tag = input.readTag();
+              switch (tag) {
+                case 0:
+                  done = true;
+                  break;
+                case 10: {
+                  artifactName_ = input.readBytes();
+                  bitField0_ |= 0x00000001;
+                  break;
+                } // case 10
+                default: {
+                  if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                    done = true; // was an endgroup tag
+                  }
+                  break;
+                } // default:
+              } // switch (tag)
+            } // while (!done)
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            throw e.unwrapIOException();
+          } finally {
+            onChanged();
+          } // finally
+          return this;
+        }
+        private int bitField0_;
+
+        private java.lang.Object artifactName_ = "";
+        /**
+         * <code>optional string artifact_name = 1;</code>
+         * @return Whether the artifactName field is set.
+         */
+        public boolean hasArtifactName() {
+          return ((bitField0_ & 0x00000001) != 0);
+        }
+        /**
+         * <code>optional string artifact_name = 1;</code>
+         * @return The artifactName.
+         */
+        public java.lang.String getArtifactName() {
+          java.lang.Object ref = artifactName_;
+          if (!(ref instanceof java.lang.String)) {
+            com.google.protobuf.ByteString bs =
+                (com.google.protobuf.ByteString) ref;
+            java.lang.String s = bs.toStringUtf8();
+            if (bs.isValidUtf8()) {
+              artifactName_ = s;
+            }
+            return s;
+          } else {
+            return (java.lang.String) ref;
+          }
+        }
+        /**
+         * <code>optional string artifact_name = 1;</code>
+         * @return The bytes for artifactName.
+         */
+        public com.google.protobuf.ByteString
+            getArtifactNameBytes() {
+          java.lang.Object ref = artifactName_;
+          if (ref instanceof String) {
+            com.google.protobuf.ByteString b = 
+                com.google.protobuf.ByteString.copyFromUtf8(
+                    (java.lang.String) ref);
+            artifactName_ = b;
+            return b;
+          } else {
+            return (com.google.protobuf.ByteString) ref;
+          }
+        }
+        /**
+         * <code>optional string artifact_name = 1;</code>
+         * @param value The artifactName to set.
+         * @return This builder for chaining.
+         */
+        public Builder setArtifactName(
+            java.lang.String value) {
+          if (value == null) { throw new NullPointerException(); }
+          artifactName_ = value;
+          bitField0_ |= 0x00000001;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>optional string artifact_name = 1;</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearArtifactName() {
+          artifactName_ = getDefaultInstance().getArtifactName();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>optional string artifact_name = 1;</code>
+         * @param value The bytes for artifactName to set.
+         * @return This builder for chaining.
+         */
+        public Builder setArtifactNameBytes(
+            com.google.protobuf.ByteString value) {
+          if (value == null) { throw new NullPointerException(); }
+          artifactName_ = value;
+          bitField0_ |= 0x00000001;
+          onChanged();
+          return this;
+        }
+        @java.lang.Override
+        public final Builder setUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.setUnknownFields(unknownFields);
+        }
+
+        @java.lang.Override
+        public final Builder mergeUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.mergeUnknownFields(unknownFields);
+        }
+
+
+        // @@protoc_insertion_point(builder_scope:android_studio.SmlChatBotEvent.PlanningModeEvent.ArtifactEdited)
+      }
+
+      // @@protoc_insertion_point(class_scope:android_studio.SmlChatBotEvent.PlanningModeEvent.ArtifactEdited)
+      private static final com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.ArtifactEdited DEFAULT_INSTANCE;
+      static {
+        DEFAULT_INSTANCE = new com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.ArtifactEdited();
+      }
+
+      public static com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.ArtifactEdited getDefaultInstance() {
+        return DEFAULT_INSTANCE;
+      }
+
+      @java.lang.Deprecated public static final com.google.protobuf.Parser<ArtifactEdited>
+          PARSER = new com.google.protobuf.AbstractParser<ArtifactEdited>() {
+        @java.lang.Override
+        public ArtifactEdited parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          Builder builder = newBuilder();
+          try {
+            builder.mergeFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            throw e.setUnfinishedMessage(builder.buildPartial());
+          } catch (com.google.protobuf.UninitializedMessageException e) {
+            throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+          } catch (java.io.IOException e) {
+            throw new com.google.protobuf.InvalidProtocolBufferException(e)
+                .setUnfinishedMessage(builder.buildPartial());
+          }
+          return builder.buildPartial();
+        }
+      };
+
+      public static com.google.protobuf.Parser<ArtifactEdited> parser() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<ArtifactEdited> getParserForType() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.ArtifactEdited getDefaultInstanceForType() {
+        return DEFAULT_INSTANCE;
+      }
+
+    }
+
+    private int bitField0_;
+    private int eventCase_ = 0;
+    @SuppressWarnings("serial")
+    private java.lang.Object event_;
+    public enum EventCase
+        implements com.google.protobuf.Internal.EnumLite,
+            com.google.protobuf.AbstractMessage.InternalOneOfEnum {
+      PLAN_CREATED(2),
+      PLAN_APPROVED(3),
+      COMMENTS_SENT(4),
+      ARTIFACT_EDITED(5),
+      EVENT_NOT_SET(0);
+      private final int value;
+      private EventCase(int value) {
+        this.value = value;
+      }
+      /**
+       * @param value The number of the enum to look for.
+       * @return The enum associated with the given number.
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static EventCase valueOf(int value) {
+        return forNumber(value);
+      }
+
+      public static EventCase forNumber(int value) {
+        switch (value) {
+          case 2: return PLAN_CREATED;
+          case 3: return PLAN_APPROVED;
+          case 4: return COMMENTS_SENT;
+          case 5: return ARTIFACT_EDITED;
+          case 0: return EVENT_NOT_SET;
+          default: return null;
+        }
+      }
+      public int getNumber() {
+        return this.value;
+      }
+    };
+
+    public EventCase
+    getEventCase() {
+      return EventCase.forNumber(
+          eventCase_);
+    }
+
+    public static final int SESSION_ID_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object sessionId_ = "";
+    /**
+     * <pre>
+     * The conversation session this event happened in.
+     * </pre>
+     *
+     * <code>optional string session_id = 1;</code>
+     * @return Whether the sessionId field is set.
+     */
+    @java.lang.Override
+    public boolean hasSessionId() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <pre>
+     * The conversation session this event happened in.
+     * </pre>
+     *
+     * <code>optional string session_id = 1;</code>
+     * @return The sessionId.
+     */
+    @java.lang.Override
+    public java.lang.String getSessionId() {
+      java.lang.Object ref = sessionId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          sessionId_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * The conversation session this event happened in.
+     * </pre>
+     *
+     * <code>optional string session_id = 1;</code>
+     * @return The bytes for sessionId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getSessionIdBytes() {
+      java.lang.Object ref = sessionId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        sessionId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int PLAN_CREATED_FIELD_NUMBER = 2;
+    /**
+     * <code>.android_studio.SmlChatBotEvent.PlanningModeEvent.PlanCreated plan_created = 2;</code>
+     * @return Whether the planCreated field is set.
+     */
+    @java.lang.Override
+    public boolean hasPlanCreated() {
+      return eventCase_ == 2;
+    }
+    /**
+     * <code>.android_studio.SmlChatBotEvent.PlanningModeEvent.PlanCreated plan_created = 2;</code>
+     * @return The planCreated.
+     */
+    @java.lang.Override
+    public com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.PlanCreated getPlanCreated() {
+      if (eventCase_ == 2) {
+         return (com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.PlanCreated) event_;
+      }
+      return com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.PlanCreated.getDefaultInstance();
+    }
+    /**
+     * <code>.android_studio.SmlChatBotEvent.PlanningModeEvent.PlanCreated plan_created = 2;</code>
+     */
+    @java.lang.Override
+    public com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.PlanCreatedOrBuilder getPlanCreatedOrBuilder() {
+      if (eventCase_ == 2) {
+         return (com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.PlanCreated) event_;
+      }
+      return com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.PlanCreated.getDefaultInstance();
+    }
+
+    public static final int PLAN_APPROVED_FIELD_NUMBER = 3;
+    /**
+     * <code>.android_studio.SmlChatBotEvent.PlanningModeEvent.PlanApproved plan_approved = 3;</code>
+     * @return Whether the planApproved field is set.
+     */
+    @java.lang.Override
+    public boolean hasPlanApproved() {
+      return eventCase_ == 3;
+    }
+    /**
+     * <code>.android_studio.SmlChatBotEvent.PlanningModeEvent.PlanApproved plan_approved = 3;</code>
+     * @return The planApproved.
+     */
+    @java.lang.Override
+    public com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.PlanApproved getPlanApproved() {
+      if (eventCase_ == 3) {
+         return (com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.PlanApproved) event_;
+      }
+      return com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.PlanApproved.getDefaultInstance();
+    }
+    /**
+     * <code>.android_studio.SmlChatBotEvent.PlanningModeEvent.PlanApproved plan_approved = 3;</code>
+     */
+    @java.lang.Override
+    public com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.PlanApprovedOrBuilder getPlanApprovedOrBuilder() {
+      if (eventCase_ == 3) {
+         return (com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.PlanApproved) event_;
+      }
+      return com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.PlanApproved.getDefaultInstance();
+    }
+
+    public static final int COMMENTS_SENT_FIELD_NUMBER = 4;
+    /**
+     * <code>.android_studio.SmlChatBotEvent.PlanningModeEvent.CommentsSent comments_sent = 4;</code>
+     * @return Whether the commentsSent field is set.
+     */
+    @java.lang.Override
+    public boolean hasCommentsSent() {
+      return eventCase_ == 4;
+    }
+    /**
+     * <code>.android_studio.SmlChatBotEvent.PlanningModeEvent.CommentsSent comments_sent = 4;</code>
+     * @return The commentsSent.
+     */
+    @java.lang.Override
+    public com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.CommentsSent getCommentsSent() {
+      if (eventCase_ == 4) {
+         return (com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.CommentsSent) event_;
+      }
+      return com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.CommentsSent.getDefaultInstance();
+    }
+    /**
+     * <code>.android_studio.SmlChatBotEvent.PlanningModeEvent.CommentsSent comments_sent = 4;</code>
+     */
+    @java.lang.Override
+    public com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.CommentsSentOrBuilder getCommentsSentOrBuilder() {
+      if (eventCase_ == 4) {
+         return (com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.CommentsSent) event_;
+      }
+      return com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.CommentsSent.getDefaultInstance();
+    }
+
+    public static final int ARTIFACT_EDITED_FIELD_NUMBER = 5;
+    /**
+     * <code>.android_studio.SmlChatBotEvent.PlanningModeEvent.ArtifactEdited artifact_edited = 5;</code>
+     * @return Whether the artifactEdited field is set.
+     */
+    @java.lang.Override
+    public boolean hasArtifactEdited() {
+      return eventCase_ == 5;
+    }
+    /**
+     * <code>.android_studio.SmlChatBotEvent.PlanningModeEvent.ArtifactEdited artifact_edited = 5;</code>
+     * @return The artifactEdited.
+     */
+    @java.lang.Override
+    public com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.ArtifactEdited getArtifactEdited() {
+      if (eventCase_ == 5) {
+         return (com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.ArtifactEdited) event_;
+      }
+      return com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.ArtifactEdited.getDefaultInstance();
+    }
+    /**
+     * <code>.android_studio.SmlChatBotEvent.PlanningModeEvent.ArtifactEdited artifact_edited = 5;</code>
+     */
+    @java.lang.Override
+    public com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.ArtifactEditedOrBuilder getArtifactEditedOrBuilder() {
+      if (eventCase_ == 5) {
+         return (com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.ArtifactEdited) event_;
+      }
+      return com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.ArtifactEdited.getDefaultInstance();
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (((bitField0_ & 0x00000001) != 0)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, sessionId_);
+      }
+      if (eventCase_ == 2) {
+        output.writeMessage(2, (com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.PlanCreated) event_);
+      }
+      if (eventCase_ == 3) {
+        output.writeMessage(3, (com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.PlanApproved) event_);
+      }
+      if (eventCase_ == 4) {
+        output.writeMessage(4, (com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.CommentsSent) event_);
+      }
+      if (eventCase_ == 5) {
+        output.writeMessage(5, (com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.ArtifactEdited) event_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) != 0)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, sessionId_);
+      }
+      if (eventCase_ == 2) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, (com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.PlanCreated) event_);
+      }
+      if (eventCase_ == 3) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, (com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.PlanApproved) event_);
+      }
+      if (eventCase_ == 4) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, (com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.CommentsSent) event_);
+      }
+      if (eventCase_ == 5) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(5, (com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.ArtifactEdited) event_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent)) {
+        return super.equals(obj);
+      }
+      com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent other = (com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent) obj;
+
+      if (hasSessionId() != other.hasSessionId()) return false;
+      if (hasSessionId()) {
+        if (!getSessionId()
+            .equals(other.getSessionId())) return false;
+      }
+      if (!getEventCase().equals(other.getEventCase())) return false;
+      switch (eventCase_) {
+        case 2:
+          if (!getPlanCreated()
+              .equals(other.getPlanCreated())) return false;
+          break;
+        case 3:
+          if (!getPlanApproved()
+              .equals(other.getPlanApproved())) return false;
+          break;
+        case 4:
+          if (!getCommentsSent()
+              .equals(other.getCommentsSent())) return false;
+          break;
+        case 5:
+          if (!getArtifactEdited()
+              .equals(other.getArtifactEdited())) return false;
+          break;
+        case 0:
+        default:
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasSessionId()) {
+        hash = (37 * hash) + SESSION_ID_FIELD_NUMBER;
+        hash = (53 * hash) + getSessionId().hashCode();
+      }
+      switch (eventCase_) {
+        case 2:
+          hash = (37 * hash) + PLAN_CREATED_FIELD_NUMBER;
+          hash = (53 * hash) + getPlanCreated().hashCode();
+          break;
+        case 3:
+          hash = (37 * hash) + PLAN_APPROVED_FIELD_NUMBER;
+          hash = (53 * hash) + getPlanApproved().hashCode();
+          break;
+        case 4:
+          hash = (37 * hash) + COMMENTS_SENT_FIELD_NUMBER;
+          hash = (53 * hash) + getCommentsSent().hashCode();
+          break;
+        case 5:
+          hash = (37 * hash) + ARTIFACT_EDITED_FIELD_NUMBER;
+          hash = (53 * hash) + getArtifactEdited().hashCode();
+          break;
+        case 0:
+        default:
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code android_studio.SmlChatBotEvent.PlanningModeEvent}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:android_studio.SmlChatBotEvent.PlanningModeEvent)
+        com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEventOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_SmlChatBotEvent_PlanningModeEvent_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_SmlChatBotEvent_PlanningModeEvent_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.class, com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.Builder.class);
+      }
+
+      // Construct using com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        sessionId_ = "";
+        if (planCreatedBuilder_ != null) {
+          planCreatedBuilder_.clear();
+        }
+        if (planApprovedBuilder_ != null) {
+          planApprovedBuilder_.clear();
+        }
+        if (commentsSentBuilder_ != null) {
+          commentsSentBuilder_.clear();
+        }
+        if (artifactEditedBuilder_ != null) {
+          artifactEditedBuilder_.clear();
+        }
+        eventCase_ = 0;
+        event_ = null;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_SmlChatBotEvent_PlanningModeEvent_descriptor;
+      }
+
+      @java.lang.Override
+      public com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent getDefaultInstanceForType() {
+        return com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent build() {
+        com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent buildPartial() {
+        com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent result = new com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        buildPartialOneofs(result);
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent result) {
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.sessionId_ = sessionId_;
+          to_bitField0_ |= 0x00000001;
+        }
+        result.bitField0_ |= to_bitField0_;
+      }
+
+      private void buildPartialOneofs(com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent result) {
+        result.eventCase_ = eventCase_;
+        result.event_ = this.event_;
+        if (eventCase_ == 2 &&
+            planCreatedBuilder_ != null) {
+          result.event_ = planCreatedBuilder_.build();
+        }
+        if (eventCase_ == 3 &&
+            planApprovedBuilder_ != null) {
+          result.event_ = planApprovedBuilder_.build();
+        }
+        if (eventCase_ == 4 &&
+            commentsSentBuilder_ != null) {
+          result.event_ = commentsSentBuilder_.build();
+        }
+        if (eventCase_ == 5 &&
+            artifactEditedBuilder_ != null) {
+          result.event_ = artifactEditedBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent) {
+          return mergeFrom((com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent other) {
+        if (other == com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.getDefaultInstance()) return this;
+        if (other.hasSessionId()) {
+          sessionId_ = other.sessionId_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        switch (other.getEventCase()) {
+          case PLAN_CREATED: {
+            mergePlanCreated(other.getPlanCreated());
+            break;
+          }
+          case PLAN_APPROVED: {
+            mergePlanApproved(other.getPlanApproved());
+            break;
+          }
+          case COMMENTS_SENT: {
+            mergeCommentsSent(other.getCommentsSent());
+            break;
+          }
+          case ARTIFACT_EDITED: {
+            mergeArtifactEdited(other.getArtifactEdited());
+            break;
+          }
+          case EVENT_NOT_SET: {
+            break;
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                sessionId_ = input.readBytes();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                input.readMessage(
+                    getPlanCreatedFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                eventCase_ = 2;
+                break;
+              } // case 18
+              case 26: {
+                input.readMessage(
+                    getPlanApprovedFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                eventCase_ = 3;
+                break;
+              } // case 26
+              case 34: {
+                input.readMessage(
+                    getCommentsSentFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                eventCase_ = 4;
+                break;
+              } // case 34
+              case 42: {
+                input.readMessage(
+                    getArtifactEditedFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                eventCase_ = 5;
+                break;
+              } // case 42
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int eventCase_ = 0;
+      private java.lang.Object event_;
+      public EventCase
+          getEventCase() {
+        return EventCase.forNumber(
+            eventCase_);
+      }
+
+      public Builder clearEvent() {
+        eventCase_ = 0;
+        event_ = null;
+        onChanged();
+        return this;
+      }
+
+      private int bitField0_;
+
+      private java.lang.Object sessionId_ = "";
+      /**
+       * <pre>
+       * The conversation session this event happened in.
+       * </pre>
+       *
+       * <code>optional string session_id = 1;</code>
+       * @return Whether the sessionId field is set.
+       */
+      public boolean hasSessionId() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <pre>
+       * The conversation session this event happened in.
+       * </pre>
+       *
+       * <code>optional string session_id = 1;</code>
+       * @return The sessionId.
+       */
+      public java.lang.String getSessionId() {
+        java.lang.Object ref = sessionId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            sessionId_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The conversation session this event happened in.
+       * </pre>
+       *
+       * <code>optional string session_id = 1;</code>
+       * @return The bytes for sessionId.
+       */
+      public com.google.protobuf.ByteString
+          getSessionIdBytes() {
+        java.lang.Object ref = sessionId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          sessionId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The conversation session this event happened in.
+       * </pre>
+       *
+       * <code>optional string session_id = 1;</code>
+       * @param value The sessionId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSessionId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        sessionId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The conversation session this event happened in.
+       * </pre>
+       *
+       * <code>optional string session_id = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSessionId() {
+        sessionId_ = getDefaultInstance().getSessionId();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The conversation session this event happened in.
+       * </pre>
+       *
+       * <code>optional string session_id = 1;</code>
+       * @param value The bytes for sessionId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSessionIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        sessionId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.PlanCreated, com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.PlanCreated.Builder, com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.PlanCreatedOrBuilder> planCreatedBuilder_;
+      /**
+       * <code>.android_studio.SmlChatBotEvent.PlanningModeEvent.PlanCreated plan_created = 2;</code>
+       * @return Whether the planCreated field is set.
+       */
+      @java.lang.Override
+      public boolean hasPlanCreated() {
+        return eventCase_ == 2;
+      }
+      /**
+       * <code>.android_studio.SmlChatBotEvent.PlanningModeEvent.PlanCreated plan_created = 2;</code>
+       * @return The planCreated.
+       */
+      @java.lang.Override
+      public com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.PlanCreated getPlanCreated() {
+        if (planCreatedBuilder_ == null) {
+          if (eventCase_ == 2) {
+            return (com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.PlanCreated) event_;
+          }
+          return com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.PlanCreated.getDefaultInstance();
+        } else {
+          if (eventCase_ == 2) {
+            return planCreatedBuilder_.getMessage();
+          }
+          return com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.PlanCreated.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.android_studio.SmlChatBotEvent.PlanningModeEvent.PlanCreated plan_created = 2;</code>
+       */
+      public Builder setPlanCreated(com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.PlanCreated value) {
+        if (planCreatedBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          event_ = value;
+          onChanged();
+        } else {
+          planCreatedBuilder_.setMessage(value);
+        }
+        eventCase_ = 2;
+        return this;
+      }
+      /**
+       * <code>.android_studio.SmlChatBotEvent.PlanningModeEvent.PlanCreated plan_created = 2;</code>
+       */
+      public Builder setPlanCreated(
+          com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.PlanCreated.Builder builderForValue) {
+        if (planCreatedBuilder_ == null) {
+          event_ = builderForValue.build();
+          onChanged();
+        } else {
+          planCreatedBuilder_.setMessage(builderForValue.build());
+        }
+        eventCase_ = 2;
+        return this;
+      }
+      /**
+       * <code>.android_studio.SmlChatBotEvent.PlanningModeEvent.PlanCreated plan_created = 2;</code>
+       */
+      public Builder mergePlanCreated(com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.PlanCreated value) {
+        if (planCreatedBuilder_ == null) {
+          if (eventCase_ == 2 &&
+              event_ != com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.PlanCreated.getDefaultInstance()) {
+            event_ = com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.PlanCreated.newBuilder((com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.PlanCreated) event_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            event_ = value;
+          }
+          onChanged();
+        } else {
+          if (eventCase_ == 2) {
+            planCreatedBuilder_.mergeFrom(value);
+          } else {
+            planCreatedBuilder_.setMessage(value);
+          }
+        }
+        eventCase_ = 2;
+        return this;
+      }
+      /**
+       * <code>.android_studio.SmlChatBotEvent.PlanningModeEvent.PlanCreated plan_created = 2;</code>
+       */
+      public Builder clearPlanCreated() {
+        if (planCreatedBuilder_ == null) {
+          if (eventCase_ == 2) {
+            eventCase_ = 0;
+            event_ = null;
+            onChanged();
+          }
+        } else {
+          if (eventCase_ == 2) {
+            eventCase_ = 0;
+            event_ = null;
+          }
+          planCreatedBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>.android_studio.SmlChatBotEvent.PlanningModeEvent.PlanCreated plan_created = 2;</code>
+       */
+      public com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.PlanCreated.Builder getPlanCreatedBuilder() {
+        return getPlanCreatedFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.android_studio.SmlChatBotEvent.PlanningModeEvent.PlanCreated plan_created = 2;</code>
+       */
+      @java.lang.Override
+      public com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.PlanCreatedOrBuilder getPlanCreatedOrBuilder() {
+        if ((eventCase_ == 2) && (planCreatedBuilder_ != null)) {
+          return planCreatedBuilder_.getMessageOrBuilder();
+        } else {
+          if (eventCase_ == 2) {
+            return (com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.PlanCreated) event_;
+          }
+          return com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.PlanCreated.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.android_studio.SmlChatBotEvent.PlanningModeEvent.PlanCreated plan_created = 2;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.PlanCreated, com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.PlanCreated.Builder, com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.PlanCreatedOrBuilder> 
+          getPlanCreatedFieldBuilder() {
+        if (planCreatedBuilder_ == null) {
+          if (!(eventCase_ == 2)) {
+            event_ = com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.PlanCreated.getDefaultInstance();
+          }
+          planCreatedBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.PlanCreated, com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.PlanCreated.Builder, com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.PlanCreatedOrBuilder>(
+                  (com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.PlanCreated) event_,
+                  getParentForChildren(),
+                  isClean());
+          event_ = null;
+        }
+        eventCase_ = 2;
+        onChanged();
+        return planCreatedBuilder_;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.PlanApproved, com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.PlanApproved.Builder, com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.PlanApprovedOrBuilder> planApprovedBuilder_;
+      /**
+       * <code>.android_studio.SmlChatBotEvent.PlanningModeEvent.PlanApproved plan_approved = 3;</code>
+       * @return Whether the planApproved field is set.
+       */
+      @java.lang.Override
+      public boolean hasPlanApproved() {
+        return eventCase_ == 3;
+      }
+      /**
+       * <code>.android_studio.SmlChatBotEvent.PlanningModeEvent.PlanApproved plan_approved = 3;</code>
+       * @return The planApproved.
+       */
+      @java.lang.Override
+      public com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.PlanApproved getPlanApproved() {
+        if (planApprovedBuilder_ == null) {
+          if (eventCase_ == 3) {
+            return (com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.PlanApproved) event_;
+          }
+          return com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.PlanApproved.getDefaultInstance();
+        } else {
+          if (eventCase_ == 3) {
+            return planApprovedBuilder_.getMessage();
+          }
+          return com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.PlanApproved.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.android_studio.SmlChatBotEvent.PlanningModeEvent.PlanApproved plan_approved = 3;</code>
+       */
+      public Builder setPlanApproved(com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.PlanApproved value) {
+        if (planApprovedBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          event_ = value;
+          onChanged();
+        } else {
+          planApprovedBuilder_.setMessage(value);
+        }
+        eventCase_ = 3;
+        return this;
+      }
+      /**
+       * <code>.android_studio.SmlChatBotEvent.PlanningModeEvent.PlanApproved plan_approved = 3;</code>
+       */
+      public Builder setPlanApproved(
+          com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.PlanApproved.Builder builderForValue) {
+        if (planApprovedBuilder_ == null) {
+          event_ = builderForValue.build();
+          onChanged();
+        } else {
+          planApprovedBuilder_.setMessage(builderForValue.build());
+        }
+        eventCase_ = 3;
+        return this;
+      }
+      /**
+       * <code>.android_studio.SmlChatBotEvent.PlanningModeEvent.PlanApproved plan_approved = 3;</code>
+       */
+      public Builder mergePlanApproved(com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.PlanApproved value) {
+        if (planApprovedBuilder_ == null) {
+          if (eventCase_ == 3 &&
+              event_ != com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.PlanApproved.getDefaultInstance()) {
+            event_ = com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.PlanApproved.newBuilder((com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.PlanApproved) event_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            event_ = value;
+          }
+          onChanged();
+        } else {
+          if (eventCase_ == 3) {
+            planApprovedBuilder_.mergeFrom(value);
+          } else {
+            planApprovedBuilder_.setMessage(value);
+          }
+        }
+        eventCase_ = 3;
+        return this;
+      }
+      /**
+       * <code>.android_studio.SmlChatBotEvent.PlanningModeEvent.PlanApproved plan_approved = 3;</code>
+       */
+      public Builder clearPlanApproved() {
+        if (planApprovedBuilder_ == null) {
+          if (eventCase_ == 3) {
+            eventCase_ = 0;
+            event_ = null;
+            onChanged();
+          }
+        } else {
+          if (eventCase_ == 3) {
+            eventCase_ = 0;
+            event_ = null;
+          }
+          planApprovedBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>.android_studio.SmlChatBotEvent.PlanningModeEvent.PlanApproved plan_approved = 3;</code>
+       */
+      public com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.PlanApproved.Builder getPlanApprovedBuilder() {
+        return getPlanApprovedFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.android_studio.SmlChatBotEvent.PlanningModeEvent.PlanApproved plan_approved = 3;</code>
+       */
+      @java.lang.Override
+      public com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.PlanApprovedOrBuilder getPlanApprovedOrBuilder() {
+        if ((eventCase_ == 3) && (planApprovedBuilder_ != null)) {
+          return planApprovedBuilder_.getMessageOrBuilder();
+        } else {
+          if (eventCase_ == 3) {
+            return (com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.PlanApproved) event_;
+          }
+          return com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.PlanApproved.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.android_studio.SmlChatBotEvent.PlanningModeEvent.PlanApproved plan_approved = 3;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.PlanApproved, com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.PlanApproved.Builder, com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.PlanApprovedOrBuilder> 
+          getPlanApprovedFieldBuilder() {
+        if (planApprovedBuilder_ == null) {
+          if (!(eventCase_ == 3)) {
+            event_ = com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.PlanApproved.getDefaultInstance();
+          }
+          planApprovedBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.PlanApproved, com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.PlanApproved.Builder, com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.PlanApprovedOrBuilder>(
+                  (com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.PlanApproved) event_,
+                  getParentForChildren(),
+                  isClean());
+          event_ = null;
+        }
+        eventCase_ = 3;
+        onChanged();
+        return planApprovedBuilder_;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.CommentsSent, com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.CommentsSent.Builder, com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.CommentsSentOrBuilder> commentsSentBuilder_;
+      /**
+       * <code>.android_studio.SmlChatBotEvent.PlanningModeEvent.CommentsSent comments_sent = 4;</code>
+       * @return Whether the commentsSent field is set.
+       */
+      @java.lang.Override
+      public boolean hasCommentsSent() {
+        return eventCase_ == 4;
+      }
+      /**
+       * <code>.android_studio.SmlChatBotEvent.PlanningModeEvent.CommentsSent comments_sent = 4;</code>
+       * @return The commentsSent.
+       */
+      @java.lang.Override
+      public com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.CommentsSent getCommentsSent() {
+        if (commentsSentBuilder_ == null) {
+          if (eventCase_ == 4) {
+            return (com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.CommentsSent) event_;
+          }
+          return com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.CommentsSent.getDefaultInstance();
+        } else {
+          if (eventCase_ == 4) {
+            return commentsSentBuilder_.getMessage();
+          }
+          return com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.CommentsSent.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.android_studio.SmlChatBotEvent.PlanningModeEvent.CommentsSent comments_sent = 4;</code>
+       */
+      public Builder setCommentsSent(com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.CommentsSent value) {
+        if (commentsSentBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          event_ = value;
+          onChanged();
+        } else {
+          commentsSentBuilder_.setMessage(value);
+        }
+        eventCase_ = 4;
+        return this;
+      }
+      /**
+       * <code>.android_studio.SmlChatBotEvent.PlanningModeEvent.CommentsSent comments_sent = 4;</code>
+       */
+      public Builder setCommentsSent(
+          com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.CommentsSent.Builder builderForValue) {
+        if (commentsSentBuilder_ == null) {
+          event_ = builderForValue.build();
+          onChanged();
+        } else {
+          commentsSentBuilder_.setMessage(builderForValue.build());
+        }
+        eventCase_ = 4;
+        return this;
+      }
+      /**
+       * <code>.android_studio.SmlChatBotEvent.PlanningModeEvent.CommentsSent comments_sent = 4;</code>
+       */
+      public Builder mergeCommentsSent(com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.CommentsSent value) {
+        if (commentsSentBuilder_ == null) {
+          if (eventCase_ == 4 &&
+              event_ != com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.CommentsSent.getDefaultInstance()) {
+            event_ = com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.CommentsSent.newBuilder((com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.CommentsSent) event_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            event_ = value;
+          }
+          onChanged();
+        } else {
+          if (eventCase_ == 4) {
+            commentsSentBuilder_.mergeFrom(value);
+          } else {
+            commentsSentBuilder_.setMessage(value);
+          }
+        }
+        eventCase_ = 4;
+        return this;
+      }
+      /**
+       * <code>.android_studio.SmlChatBotEvent.PlanningModeEvent.CommentsSent comments_sent = 4;</code>
+       */
+      public Builder clearCommentsSent() {
+        if (commentsSentBuilder_ == null) {
+          if (eventCase_ == 4) {
+            eventCase_ = 0;
+            event_ = null;
+            onChanged();
+          }
+        } else {
+          if (eventCase_ == 4) {
+            eventCase_ = 0;
+            event_ = null;
+          }
+          commentsSentBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>.android_studio.SmlChatBotEvent.PlanningModeEvent.CommentsSent comments_sent = 4;</code>
+       */
+      public com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.CommentsSent.Builder getCommentsSentBuilder() {
+        return getCommentsSentFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.android_studio.SmlChatBotEvent.PlanningModeEvent.CommentsSent comments_sent = 4;</code>
+       */
+      @java.lang.Override
+      public com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.CommentsSentOrBuilder getCommentsSentOrBuilder() {
+        if ((eventCase_ == 4) && (commentsSentBuilder_ != null)) {
+          return commentsSentBuilder_.getMessageOrBuilder();
+        } else {
+          if (eventCase_ == 4) {
+            return (com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.CommentsSent) event_;
+          }
+          return com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.CommentsSent.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.android_studio.SmlChatBotEvent.PlanningModeEvent.CommentsSent comments_sent = 4;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.CommentsSent, com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.CommentsSent.Builder, com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.CommentsSentOrBuilder> 
+          getCommentsSentFieldBuilder() {
+        if (commentsSentBuilder_ == null) {
+          if (!(eventCase_ == 4)) {
+            event_ = com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.CommentsSent.getDefaultInstance();
+          }
+          commentsSentBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.CommentsSent, com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.CommentsSent.Builder, com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.CommentsSentOrBuilder>(
+                  (com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.CommentsSent) event_,
+                  getParentForChildren(),
+                  isClean());
+          event_ = null;
+        }
+        eventCase_ = 4;
+        onChanged();
+        return commentsSentBuilder_;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.ArtifactEdited, com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.ArtifactEdited.Builder, com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.ArtifactEditedOrBuilder> artifactEditedBuilder_;
+      /**
+       * <code>.android_studio.SmlChatBotEvent.PlanningModeEvent.ArtifactEdited artifact_edited = 5;</code>
+       * @return Whether the artifactEdited field is set.
+       */
+      @java.lang.Override
+      public boolean hasArtifactEdited() {
+        return eventCase_ == 5;
+      }
+      /**
+       * <code>.android_studio.SmlChatBotEvent.PlanningModeEvent.ArtifactEdited artifact_edited = 5;</code>
+       * @return The artifactEdited.
+       */
+      @java.lang.Override
+      public com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.ArtifactEdited getArtifactEdited() {
+        if (artifactEditedBuilder_ == null) {
+          if (eventCase_ == 5) {
+            return (com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.ArtifactEdited) event_;
+          }
+          return com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.ArtifactEdited.getDefaultInstance();
+        } else {
+          if (eventCase_ == 5) {
+            return artifactEditedBuilder_.getMessage();
+          }
+          return com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.ArtifactEdited.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.android_studio.SmlChatBotEvent.PlanningModeEvent.ArtifactEdited artifact_edited = 5;</code>
+       */
+      public Builder setArtifactEdited(com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.ArtifactEdited value) {
+        if (artifactEditedBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          event_ = value;
+          onChanged();
+        } else {
+          artifactEditedBuilder_.setMessage(value);
+        }
+        eventCase_ = 5;
+        return this;
+      }
+      /**
+       * <code>.android_studio.SmlChatBotEvent.PlanningModeEvent.ArtifactEdited artifact_edited = 5;</code>
+       */
+      public Builder setArtifactEdited(
+          com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.ArtifactEdited.Builder builderForValue) {
+        if (artifactEditedBuilder_ == null) {
+          event_ = builderForValue.build();
+          onChanged();
+        } else {
+          artifactEditedBuilder_.setMessage(builderForValue.build());
+        }
+        eventCase_ = 5;
+        return this;
+      }
+      /**
+       * <code>.android_studio.SmlChatBotEvent.PlanningModeEvent.ArtifactEdited artifact_edited = 5;</code>
+       */
+      public Builder mergeArtifactEdited(com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.ArtifactEdited value) {
+        if (artifactEditedBuilder_ == null) {
+          if (eventCase_ == 5 &&
+              event_ != com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.ArtifactEdited.getDefaultInstance()) {
+            event_ = com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.ArtifactEdited.newBuilder((com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.ArtifactEdited) event_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            event_ = value;
+          }
+          onChanged();
+        } else {
+          if (eventCase_ == 5) {
+            artifactEditedBuilder_.mergeFrom(value);
+          } else {
+            artifactEditedBuilder_.setMessage(value);
+          }
+        }
+        eventCase_ = 5;
+        return this;
+      }
+      /**
+       * <code>.android_studio.SmlChatBotEvent.PlanningModeEvent.ArtifactEdited artifact_edited = 5;</code>
+       */
+      public Builder clearArtifactEdited() {
+        if (artifactEditedBuilder_ == null) {
+          if (eventCase_ == 5) {
+            eventCase_ = 0;
+            event_ = null;
+            onChanged();
+          }
+        } else {
+          if (eventCase_ == 5) {
+            eventCase_ = 0;
+            event_ = null;
+          }
+          artifactEditedBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>.android_studio.SmlChatBotEvent.PlanningModeEvent.ArtifactEdited artifact_edited = 5;</code>
+       */
+      public com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.ArtifactEdited.Builder getArtifactEditedBuilder() {
+        return getArtifactEditedFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.android_studio.SmlChatBotEvent.PlanningModeEvent.ArtifactEdited artifact_edited = 5;</code>
+       */
+      @java.lang.Override
+      public com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.ArtifactEditedOrBuilder getArtifactEditedOrBuilder() {
+        if ((eventCase_ == 5) && (artifactEditedBuilder_ != null)) {
+          return artifactEditedBuilder_.getMessageOrBuilder();
+        } else {
+          if (eventCase_ == 5) {
+            return (com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.ArtifactEdited) event_;
+          }
+          return com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.ArtifactEdited.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.android_studio.SmlChatBotEvent.PlanningModeEvent.ArtifactEdited artifact_edited = 5;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.ArtifactEdited, com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.ArtifactEdited.Builder, com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.ArtifactEditedOrBuilder> 
+          getArtifactEditedFieldBuilder() {
+        if (artifactEditedBuilder_ == null) {
+          if (!(eventCase_ == 5)) {
+            event_ = com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.ArtifactEdited.getDefaultInstance();
+          }
+          artifactEditedBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.ArtifactEdited, com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.ArtifactEdited.Builder, com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.ArtifactEditedOrBuilder>(
+                  (com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.ArtifactEdited) event_,
+                  getParentForChildren(),
+                  isClean());
+          event_ = null;
+        }
+        eventCase_ = 5;
+        onChanged();
+        return artifactEditedBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:android_studio.SmlChatBotEvent.PlanningModeEvent)
+    }
+
+    // @@protoc_insertion_point(class_scope:android_studio.SmlChatBotEvent.PlanningModeEvent)
+    private static final com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent();
+    }
+
+    public static com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<PlanningModeEvent>
+        PARSER = new com.google.protobuf.AbstractParser<PlanningModeEvent>() {
+      @java.lang.Override
+      public PlanningModeEvent parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<PlanningModeEvent> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<PlanningModeEvent> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private int bitField0_;
   private int contentCase_ = 0;
   @SuppressWarnings("serial")
@@ -30426,6 +33784,7 @@ private static final long serialVersionUID = 0L;
     RECENT_CHATS_EVENT(18),
     CHANGES_DRAWER_EVENT(19),
     CONVERSATION_ACTION_INVOKED(20),
+    PLANNING_MODE_EVENT(21),
     CONTENT_NOT_SET(0);
     private final int value;
     private ContentCase(int value) {
@@ -30463,6 +33822,7 @@ private static final long serialVersionUID = 0L;
         case 18: return RECENT_CHATS_EVENT;
         case 19: return CHANGES_DRAWER_EVENT;
         case 20: return CONVERSATION_ACTION_INVOKED;
+        case 21: return PLANNING_MODE_EVENT;
         case 0: return CONTENT_NOT_SET;
         default: return null;
       }
@@ -31098,6 +34458,37 @@ private static final long serialVersionUID = 0L;
     return com.google.wireless.android.sdk.stats.SmlChatBotEvent.ConversationActionInvoked.getDefaultInstance();
   }
 
+  public static final int PLANNING_MODE_EVENT_FIELD_NUMBER = 21;
+  /**
+   * <code>.android_studio.SmlChatBotEvent.PlanningModeEvent planning_mode_event = 21 [lazy = true];</code>
+   * @return Whether the planningModeEvent field is set.
+   */
+  @java.lang.Override
+  public boolean hasPlanningModeEvent() {
+    return contentCase_ == 21;
+  }
+  /**
+   * <code>.android_studio.SmlChatBotEvent.PlanningModeEvent planning_mode_event = 21 [lazy = true];</code>
+   * @return The planningModeEvent.
+   */
+  @java.lang.Override
+  public com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent getPlanningModeEvent() {
+    if (contentCase_ == 21) {
+       return (com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent) content_;
+    }
+    return com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.getDefaultInstance();
+  }
+  /**
+   * <code>.android_studio.SmlChatBotEvent.PlanningModeEvent planning_mode_event = 21 [lazy = true];</code>
+   */
+  @java.lang.Override
+  public com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEventOrBuilder getPlanningModeEventOrBuilder() {
+    if (contentCase_ == 21) {
+       return (com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent) content_;
+    }
+    return com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.getDefaultInstance();
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -31171,6 +34562,9 @@ private static final long serialVersionUID = 0L;
     }
     if (contentCase_ == 20) {
       output.writeMessage(20, (com.google.wireless.android.sdk.stats.SmlChatBotEvent.ConversationActionInvoked) content_);
+    }
+    if (contentCase_ == 21) {
+      output.writeMessage(21, (com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent) content_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -31260,6 +34654,10 @@ private static final long serialVersionUID = 0L;
     if (contentCase_ == 20) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(20, (com.google.wireless.android.sdk.stats.SmlChatBotEvent.ConversationActionInvoked) content_);
+    }
+    if (contentCase_ == 21) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(21, (com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent) content_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -31358,6 +34756,10 @@ private static final long serialVersionUID = 0L;
         if (!getConversationActionInvoked()
             .equals(other.getConversationActionInvoked())) return false;
         break;
+      case 21:
+        if (!getPlanningModeEvent()
+            .equals(other.getPlanningModeEvent())) return false;
+        break;
       case 0:
       default:
     }
@@ -31452,6 +34854,10 @@ private static final long serialVersionUID = 0L;
       case 20:
         hash = (37 * hash) + CONVERSATION_ACTION_INVOKED_FIELD_NUMBER;
         hash = (53 * hash) + getConversationActionInvoked().hashCode();
+        break;
+      case 21:
+        hash = (37 * hash) + PLANNING_MODE_EVENT_FIELD_NUMBER;
+        hash = (53 * hash) + getPlanningModeEvent().hashCode();
         break;
       case 0:
       default:
@@ -31645,6 +35051,9 @@ private static final long serialVersionUID = 0L;
       if (conversationActionInvokedBuilder_ != null) {
         conversationActionInvokedBuilder_.clear();
       }
+      if (planningModeEventBuilder_ != null) {
+        planningModeEventBuilder_.clear();
+      }
       contentCase_ = 0;
       content_ = null;
       return this;
@@ -31766,6 +35175,10 @@ private static final long serialVersionUID = 0L;
           conversationActionInvokedBuilder_ != null) {
         result.content_ = conversationActionInvokedBuilder_.build();
       }
+      if (contentCase_ == 21 &&
+          planningModeEventBuilder_ != null) {
+        result.content_ = planningModeEventBuilder_.build();
+      }
     }
 
     @java.lang.Override
@@ -31859,6 +35272,10 @@ private static final long serialVersionUID = 0L;
         }
         case CONVERSATION_ACTION_INVOKED: {
           mergeConversationActionInvoked(other.getConversationActionInvoked());
+          break;
+        }
+        case PLANNING_MODE_EVENT: {
+          mergePlanningModeEvent(other.getPlanningModeEvent());
           break;
         }
         case CONTENT_NOT_SET: {
@@ -32031,6 +35448,13 @@ private static final long serialVersionUID = 0L;
               contentCase_ = 20;
               break;
             } // case 162
+            case 170: {
+              input.readMessage(
+                  getPlanningModeEventFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              contentCase_ = 21;
+              break;
+            } // case 170
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -34901,6 +38325,148 @@ private static final long serialVersionUID = 0L;
       contentCase_ = 20;
       onChanged();
       return conversationActionInvokedBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent, com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.Builder, com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEventOrBuilder> planningModeEventBuilder_;
+    /**
+     * <code>.android_studio.SmlChatBotEvent.PlanningModeEvent planning_mode_event = 21 [lazy = true];</code>
+     * @return Whether the planningModeEvent field is set.
+     */
+    @java.lang.Override
+    public boolean hasPlanningModeEvent() {
+      return contentCase_ == 21;
+    }
+    /**
+     * <code>.android_studio.SmlChatBotEvent.PlanningModeEvent planning_mode_event = 21 [lazy = true];</code>
+     * @return The planningModeEvent.
+     */
+    @java.lang.Override
+    public com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent getPlanningModeEvent() {
+      if (planningModeEventBuilder_ == null) {
+        if (contentCase_ == 21) {
+          return (com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent) content_;
+        }
+        return com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.getDefaultInstance();
+      } else {
+        if (contentCase_ == 21) {
+          return planningModeEventBuilder_.getMessage();
+        }
+        return com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.android_studio.SmlChatBotEvent.PlanningModeEvent planning_mode_event = 21 [lazy = true];</code>
+     */
+    public Builder setPlanningModeEvent(com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent value) {
+      if (planningModeEventBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        content_ = value;
+        onChanged();
+      } else {
+        planningModeEventBuilder_.setMessage(value);
+      }
+      contentCase_ = 21;
+      return this;
+    }
+    /**
+     * <code>.android_studio.SmlChatBotEvent.PlanningModeEvent planning_mode_event = 21 [lazy = true];</code>
+     */
+    public Builder setPlanningModeEvent(
+        com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.Builder builderForValue) {
+      if (planningModeEventBuilder_ == null) {
+        content_ = builderForValue.build();
+        onChanged();
+      } else {
+        planningModeEventBuilder_.setMessage(builderForValue.build());
+      }
+      contentCase_ = 21;
+      return this;
+    }
+    /**
+     * <code>.android_studio.SmlChatBotEvent.PlanningModeEvent planning_mode_event = 21 [lazy = true];</code>
+     */
+    public Builder mergePlanningModeEvent(com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent value) {
+      if (planningModeEventBuilder_ == null) {
+        if (contentCase_ == 21 &&
+            content_ != com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.getDefaultInstance()) {
+          content_ = com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.newBuilder((com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent) content_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          content_ = value;
+        }
+        onChanged();
+      } else {
+        if (contentCase_ == 21) {
+          planningModeEventBuilder_.mergeFrom(value);
+        } else {
+          planningModeEventBuilder_.setMessage(value);
+        }
+      }
+      contentCase_ = 21;
+      return this;
+    }
+    /**
+     * <code>.android_studio.SmlChatBotEvent.PlanningModeEvent planning_mode_event = 21 [lazy = true];</code>
+     */
+    public Builder clearPlanningModeEvent() {
+      if (planningModeEventBuilder_ == null) {
+        if (contentCase_ == 21) {
+          contentCase_ = 0;
+          content_ = null;
+          onChanged();
+        }
+      } else {
+        if (contentCase_ == 21) {
+          contentCase_ = 0;
+          content_ = null;
+        }
+        planningModeEventBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>.android_studio.SmlChatBotEvent.PlanningModeEvent planning_mode_event = 21 [lazy = true];</code>
+     */
+    public com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.Builder getPlanningModeEventBuilder() {
+      return getPlanningModeEventFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.android_studio.SmlChatBotEvent.PlanningModeEvent planning_mode_event = 21 [lazy = true];</code>
+     */
+    @java.lang.Override
+    public com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEventOrBuilder getPlanningModeEventOrBuilder() {
+      if ((contentCase_ == 21) && (planningModeEventBuilder_ != null)) {
+        return planningModeEventBuilder_.getMessageOrBuilder();
+      } else {
+        if (contentCase_ == 21) {
+          return (com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent) content_;
+        }
+        return com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.android_studio.SmlChatBotEvent.PlanningModeEvent planning_mode_event = 21 [lazy = true];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent, com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.Builder, com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEventOrBuilder> 
+        getPlanningModeEventFieldBuilder() {
+      if (planningModeEventBuilder_ == null) {
+        if (!(contentCase_ == 21)) {
+          content_ = com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.getDefaultInstance();
+        }
+        planningModeEventBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent, com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.Builder, com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEventOrBuilder>(
+                (com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent) content_,
+                getParentForChildren(),
+                isClean());
+        content_ = null;
+      }
+      contentCase_ = 21;
+      onChanged();
+      return planningModeEventBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

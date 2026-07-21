@@ -307,5 +307,20 @@ public interface SmlChatBotEventOrBuilder extends
    */
   com.google.wireless.android.sdk.stats.SmlChatBotEvent.ConversationActionInvokedOrBuilder getConversationActionInvokedOrBuilder();
 
+  /**
+   * <code>.android_studio.SmlChatBotEvent.PlanningModeEvent planning_mode_event = 21 [lazy = true];</code>
+   * @return Whether the planningModeEvent field is set.
+   */
+  boolean hasPlanningModeEvent();
+  /**
+   * <code>.android_studio.SmlChatBotEvent.PlanningModeEvent planning_mode_event = 21 [lazy = true];</code>
+   * @return The planningModeEvent.
+   */
+  com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent getPlanningModeEvent();
+  /**
+   * <code>.android_studio.SmlChatBotEvent.PlanningModeEvent planning_mode_event = 21 [lazy = true];</code>
+   */
+  com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEventOrBuilder getPlanningModeEventOrBuilder();
+
   com.google.wireless.android.sdk.stats.SmlChatBotEvent.ContentCase getContentCase();
 }
