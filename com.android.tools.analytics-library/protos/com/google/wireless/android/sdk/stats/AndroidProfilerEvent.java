@@ -485,6 +485,10 @@ private static final long serialVersionUID = 0L;
      * <code>MEMORY_JVM_RECORDING_STAGE = 10;</code>
      */
     MEMORY_JVM_RECORDING_STAGE(10),
+    /**
+     * <code>LIVE_STAGE = 11;</code>
+     */
+    LIVE_STAGE(11),
     ;
 
     /**
@@ -539,6 +543,10 @@ private static final long serialVersionUID = 0L;
      * <code>MEMORY_JVM_RECORDING_STAGE = 10;</code>
      */
     public static final int MEMORY_JVM_RECORDING_STAGE_VALUE = 10;
+    /**
+     * <code>LIVE_STAGE = 11;</code>
+     */
+    public static final int LIVE_STAGE_VALUE = 11;
 
 
     public final int getNumber() {
@@ -572,6 +580,7 @@ private static final long serialVersionUID = 0L;
         case 8: return MEMORY_HEAP_DUMP_STAGE;
         case 9: return MEMORY_NATIVE_RECORDING_STAGE;
         case 10: return MEMORY_JVM_RECORDING_STAGE;
+        case 11: return LIVE_STAGE;
         default: return null;
       }
     }
