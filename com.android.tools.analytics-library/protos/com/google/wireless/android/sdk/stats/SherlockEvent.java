@@ -13564,6 +13564,14 @@ private static final long serialVersionUID = 0L;
        * <code>SELECTION_KIND_PROCESS_MEMORY = 11;</code>
        */
       SELECTION_KIND_PROCESS_MEMORY(11),
+      /**
+       * <code>SELECTION_KIND_JANK_CUJ = 12;</code>
+       */
+      SELECTION_KIND_JANK_CUJ(12),
+      /**
+       * <code>SELECTION_KIND_APP_STARTUP = 13;</code>
+       */
+      SELECTION_KIND_APP_STARTUP(13),
       ;
 
       /**
@@ -13614,6 +13622,14 @@ private static final long serialVersionUID = 0L;
        * <code>SELECTION_KIND_PROCESS_MEMORY = 11;</code>
        */
       public static final int SELECTION_KIND_PROCESS_MEMORY_VALUE = 11;
+      /**
+       * <code>SELECTION_KIND_JANK_CUJ = 12;</code>
+       */
+      public static final int SELECTION_KIND_JANK_CUJ_VALUE = 12;
+      /**
+       * <code>SELECTION_KIND_APP_STARTUP = 13;</code>
+       */
+      public static final int SELECTION_KIND_APP_STARTUP_VALUE = 13;
 
 
       public final int getNumber() {
@@ -13648,6 +13664,8 @@ private static final long serialVersionUID = 0L;
           case 9: return SELECTION_KIND_MEMORY;
           case 10: return SELECTION_KIND_BATTERY;
           case 11: return SELECTION_KIND_PROCESS_MEMORY;
+          case 12: return SELECTION_KIND_JANK_CUJ;
+          case 13: return SELECTION_KIND_APP_STARTUP;
           default: return null;
         }
       }

@@ -23,6 +23,7 @@ private static final long serialVersionUID = 0L;
     flags_ =
         com.google.protobuf.LazyStringArrayList.emptyList();
     agentName_ = 0;
+    args_ = java.util.Collections.emptyList();
   }
 
   @java.lang.Override
@@ -186,34 +187,811 @@ private static final long serialVersionUID = 0L;
     // @@protoc_insertion_point(enum_scope:android_studio.AndroidCliInvocation.Agent)
   }
 
+  public interface ArgOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:android_studio.AndroidCliInvocation.Arg)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>optional string flag = 1;</code>
+     * @return Whether the flag field is set.
+     */
+    boolean hasFlag();
+    /**
+     * <code>optional string flag = 1;</code>
+     * @return The flag.
+     */
+    java.lang.String getFlag();
+    /**
+     * <code>optional string flag = 1;</code>
+     * @return The bytes for flag.
+     */
+    com.google.protobuf.ByteString
+        getFlagBytes();
+
+    /**
+     * <pre>
+     * Non-user-generated values only.
+     * </pre>
+     *
+     * <code>optional string value = 2;</code>
+     * @return Whether the value field is set.
+     */
+    boolean hasValue();
+    /**
+     * <pre>
+     * Non-user-generated values only.
+     * </pre>
+     *
+     * <code>optional string value = 2;</code>
+     * @return The value.
+     */
+    java.lang.String getValue();
+    /**
+     * <pre>
+     * Non-user-generated values only.
+     * </pre>
+     *
+     * <code>optional string value = 2;</code>
+     * @return The bytes for value.
+     */
+    com.google.protobuf.ByteString
+        getValueBytes();
+  }
+  /**
+   * Protobuf type {@code android_studio.AndroidCliInvocation.Arg}
+   */
+  public static final class Arg extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:android_studio.AndroidCliInvocation.Arg)
+      ArgOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use Arg.newBuilder() to construct.
+    private Arg(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private Arg() {
+      flag_ = "";
+      value_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Arg();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_AndroidCliInvocation_Arg_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_AndroidCliInvocation_Arg_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.google.wireless.android.sdk.stats.AndroidCliInvocation.Arg.class, com.google.wireless.android.sdk.stats.AndroidCliInvocation.Arg.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int FLAG_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object flag_ = "";
+    /**
+     * <code>optional string flag = 1;</code>
+     * @return Whether the flag field is set.
+     */
+    @java.lang.Override
+    public boolean hasFlag() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <code>optional string flag = 1;</code>
+     * @return The flag.
+     */
+    @java.lang.Override
+    public java.lang.String getFlag() {
+      java.lang.Object ref = flag_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          flag_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string flag = 1;</code>
+     * @return The bytes for flag.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getFlagBytes() {
+      java.lang.Object ref = flag_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        flag_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int VALUE_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object value_ = "";
+    /**
+     * <pre>
+     * Non-user-generated values only.
+     * </pre>
+     *
+     * <code>optional string value = 2;</code>
+     * @return Whether the value field is set.
+     */
+    @java.lang.Override
+    public boolean hasValue() {
+      return ((bitField0_ & 0x00000002) != 0);
+    }
+    /**
+     * <pre>
+     * Non-user-generated values only.
+     * </pre>
+     *
+     * <code>optional string value = 2;</code>
+     * @return The value.
+     */
+    @java.lang.Override
+    public java.lang.String getValue() {
+      java.lang.Object ref = value_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          value_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Non-user-generated values only.
+     * </pre>
+     *
+     * <code>optional string value = 2;</code>
+     * @return The bytes for value.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getValueBytes() {
+      java.lang.Object ref = value_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        value_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (((bitField0_ & 0x00000001) != 0)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, flag_);
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, value_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) != 0)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, flag_);
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, value_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.google.wireless.android.sdk.stats.AndroidCliInvocation.Arg)) {
+        return super.equals(obj);
+      }
+      com.google.wireless.android.sdk.stats.AndroidCliInvocation.Arg other = (com.google.wireless.android.sdk.stats.AndroidCliInvocation.Arg) obj;
+
+      if (hasFlag() != other.hasFlag()) return false;
+      if (hasFlag()) {
+        if (!getFlag()
+            .equals(other.getFlag())) return false;
+      }
+      if (hasValue() != other.hasValue()) return false;
+      if (hasValue()) {
+        if (!getValue()
+            .equals(other.getValue())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasFlag()) {
+        hash = (37 * hash) + FLAG_FIELD_NUMBER;
+        hash = (53 * hash) + getFlag().hashCode();
+      }
+      if (hasValue()) {
+        hash = (37 * hash) + VALUE_FIELD_NUMBER;
+        hash = (53 * hash) + getValue().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.google.wireless.android.sdk.stats.AndroidCliInvocation.Arg parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.google.wireless.android.sdk.stats.AndroidCliInvocation.Arg parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.google.wireless.android.sdk.stats.AndroidCliInvocation.Arg parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.google.wireless.android.sdk.stats.AndroidCliInvocation.Arg parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.google.wireless.android.sdk.stats.AndroidCliInvocation.Arg parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.google.wireless.android.sdk.stats.AndroidCliInvocation.Arg parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.google.wireless.android.sdk.stats.AndroidCliInvocation.Arg parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.google.wireless.android.sdk.stats.AndroidCliInvocation.Arg parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.google.wireless.android.sdk.stats.AndroidCliInvocation.Arg parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.google.wireless.android.sdk.stats.AndroidCliInvocation.Arg parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.google.wireless.android.sdk.stats.AndroidCliInvocation.Arg parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.google.wireless.android.sdk.stats.AndroidCliInvocation.Arg parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.google.wireless.android.sdk.stats.AndroidCliInvocation.Arg prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code android_studio.AndroidCliInvocation.Arg}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:android_studio.AndroidCliInvocation.Arg)
+        com.google.wireless.android.sdk.stats.AndroidCliInvocation.ArgOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_AndroidCliInvocation_Arg_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_AndroidCliInvocation_Arg_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.google.wireless.android.sdk.stats.AndroidCliInvocation.Arg.class, com.google.wireless.android.sdk.stats.AndroidCliInvocation.Arg.Builder.class);
+      }
+
+      // Construct using com.google.wireless.android.sdk.stats.AndroidCliInvocation.Arg.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        flag_ = "";
+        value_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_AndroidCliInvocation_Arg_descriptor;
+      }
+
+      @java.lang.Override
+      public com.google.wireless.android.sdk.stats.AndroidCliInvocation.Arg getDefaultInstanceForType() {
+        return com.google.wireless.android.sdk.stats.AndroidCliInvocation.Arg.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.google.wireless.android.sdk.stats.AndroidCliInvocation.Arg build() {
+        com.google.wireless.android.sdk.stats.AndroidCliInvocation.Arg result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.google.wireless.android.sdk.stats.AndroidCliInvocation.Arg buildPartial() {
+        com.google.wireless.android.sdk.stats.AndroidCliInvocation.Arg result = new com.google.wireless.android.sdk.stats.AndroidCliInvocation.Arg(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.google.wireless.android.sdk.stats.AndroidCliInvocation.Arg result) {
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.flag_ = flag_;
+          to_bitField0_ |= 0x00000001;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.value_ = value_;
+          to_bitField0_ |= 0x00000002;
+        }
+        result.bitField0_ |= to_bitField0_;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.google.wireless.android.sdk.stats.AndroidCliInvocation.Arg) {
+          return mergeFrom((com.google.wireless.android.sdk.stats.AndroidCliInvocation.Arg)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.google.wireless.android.sdk.stats.AndroidCliInvocation.Arg other) {
+        if (other == com.google.wireless.android.sdk.stats.AndroidCliInvocation.Arg.getDefaultInstance()) return this;
+        if (other.hasFlag()) {
+          flag_ = other.flag_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (other.hasValue()) {
+          value_ = other.value_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                flag_ = input.readBytes();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                value_ = input.readBytes();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object flag_ = "";
+      /**
+       * <code>optional string flag = 1;</code>
+       * @return Whether the flag field is set.
+       */
+      public boolean hasFlag() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>optional string flag = 1;</code>
+       * @return The flag.
+       */
+      public java.lang.String getFlag() {
+        java.lang.Object ref = flag_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            flag_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string flag = 1;</code>
+       * @return The bytes for flag.
+       */
+      public com.google.protobuf.ByteString
+          getFlagBytes() {
+        java.lang.Object ref = flag_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          flag_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string flag = 1;</code>
+       * @param value The flag to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFlag(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        flag_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string flag = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearFlag() {
+        flag_ = getDefaultInstance().getFlag();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string flag = 1;</code>
+       * @param value The bytes for flag to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFlagBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        flag_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object value_ = "";
+      /**
+       * <pre>
+       * Non-user-generated values only.
+       * </pre>
+       *
+       * <code>optional string value = 2;</code>
+       * @return Whether the value field is set.
+       */
+      public boolean hasValue() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <pre>
+       * Non-user-generated values only.
+       * </pre>
+       *
+       * <code>optional string value = 2;</code>
+       * @return The value.
+       */
+      public java.lang.String getValue() {
+        java.lang.Object ref = value_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            value_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Non-user-generated values only.
+       * </pre>
+       *
+       * <code>optional string value = 2;</code>
+       * @return The bytes for value.
+       */
+      public com.google.protobuf.ByteString
+          getValueBytes() {
+        java.lang.Object ref = value_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          value_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Non-user-generated values only.
+       * </pre>
+       *
+       * <code>optional string value = 2;</code>
+       * @param value The value to set.
+       * @return This builder for chaining.
+       */
+      public Builder setValue(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        value_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Non-user-generated values only.
+       * </pre>
+       *
+       * <code>optional string value = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearValue() {
+        value_ = getDefaultInstance().getValue();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Non-user-generated values only.
+       * </pre>
+       *
+       * <code>optional string value = 2;</code>
+       * @param value The bytes for value to set.
+       * @return This builder for chaining.
+       */
+      public Builder setValueBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        value_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:android_studio.AndroidCliInvocation.Arg)
+    }
+
+    // @@protoc_insertion_point(class_scope:android_studio.AndroidCliInvocation.Arg)
+    private static final com.google.wireless.android.sdk.stats.AndroidCliInvocation.Arg DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.google.wireless.android.sdk.stats.AndroidCliInvocation.Arg();
+    }
+
+    public static com.google.wireless.android.sdk.stats.AndroidCliInvocation.Arg getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<Arg>
+        PARSER = new com.google.protobuf.AbstractParser<Arg>() {
+      @java.lang.Override
+      public Arg parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<Arg> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Arg> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.wireless.android.sdk.stats.AndroidCliInvocation.Arg getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private int bitField0_;
   public static final int COMMAND_NAME_FIELD_NUMBER = 1;
   @SuppressWarnings("serial")
   private volatile java.lang.Object commandName_ = "";
   /**
    * <pre>
-   * Note that we only log the command and sub-command name, and not the entire
-   * command line to avoid logging user data.
+   * Deprecated. Subsumed by "args" field.
    * </pre>
    *
-   * <code>optional string command_name = 1;</code>
+   * <code>optional string command_name = 1 [deprecated = true];</code>
+   * @deprecated android_studio.AndroidCliInvocation.command_name is deprecated.
+   *     See studio_stats.proto;l=18570
    * @return Whether the commandName field is set.
    */
   @java.lang.Override
-  public boolean hasCommandName() {
+  @java.lang.Deprecated public boolean hasCommandName() {
     return ((bitField0_ & 0x00000001) != 0);
   }
   /**
    * <pre>
-   * Note that we only log the command and sub-command name, and not the entire
-   * command line to avoid logging user data.
+   * Deprecated. Subsumed by "args" field.
    * </pre>
    *
-   * <code>optional string command_name = 1;</code>
+   * <code>optional string command_name = 1 [deprecated = true];</code>
+   * @deprecated android_studio.AndroidCliInvocation.command_name is deprecated.
+   *     See studio_stats.proto;l=18570
    * @return The commandName.
    */
   @java.lang.Override
-  public java.lang.String getCommandName() {
+  @java.lang.Deprecated public java.lang.String getCommandName() {
     java.lang.Object ref = commandName_;
     if (ref instanceof java.lang.String) {
       return (java.lang.String) ref;
@@ -229,15 +1007,16 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Note that we only log the command and sub-command name, and not the entire
-   * command line to avoid logging user data.
+   * Deprecated. Subsumed by "args" field.
    * </pre>
    *
-   * <code>optional string command_name = 1;</code>
+   * <code>optional string command_name = 1 [deprecated = true];</code>
+   * @deprecated android_studio.AndroidCliInvocation.command_name is deprecated.
+   *     See studio_stats.proto;l=18570
    * @return The bytes for commandName.
    */
   @java.lang.Override
-  public com.google.protobuf.ByteString
+  @java.lang.Deprecated public com.google.protobuf.ByteString
       getCommandNameBytes() {
     java.lang.Object ref = commandName_;
     if (ref instanceof java.lang.String) {
@@ -255,19 +1034,31 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private volatile java.lang.Object subCommandName_ = "";
   /**
-   * <code>optional string sub_command_name = 2;</code>
+   * <pre>
+   * Deprecated. Subsumed by "args" field.
+   * </pre>
+   *
+   * <code>optional string sub_command_name = 2 [deprecated = true];</code>
+   * @deprecated android_studio.AndroidCliInvocation.sub_command_name is deprecated.
+   *     See studio_stats.proto;l=18572
    * @return Whether the subCommandName field is set.
    */
   @java.lang.Override
-  public boolean hasSubCommandName() {
+  @java.lang.Deprecated public boolean hasSubCommandName() {
     return ((bitField0_ & 0x00000002) != 0);
   }
   /**
-   * <code>optional string sub_command_name = 2;</code>
+   * <pre>
+   * Deprecated. Subsumed by "args" field.
+   * </pre>
+   *
+   * <code>optional string sub_command_name = 2 [deprecated = true];</code>
+   * @deprecated android_studio.AndroidCliInvocation.sub_command_name is deprecated.
+   *     See studio_stats.proto;l=18572
    * @return The subCommandName.
    */
   @java.lang.Override
-  public java.lang.String getSubCommandName() {
+  @java.lang.Deprecated public java.lang.String getSubCommandName() {
     java.lang.Object ref = subCommandName_;
     if (ref instanceof java.lang.String) {
       return (java.lang.String) ref;
@@ -282,11 +1073,17 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <code>optional string sub_command_name = 2;</code>
+   * <pre>
+   * Deprecated. Subsumed by "args" field.
+   * </pre>
+   *
+   * <code>optional string sub_command_name = 2 [deprecated = true];</code>
+   * @deprecated android_studio.AndroidCliInvocation.sub_command_name is deprecated.
+   *     See studio_stats.proto;l=18572
    * @return The bytes for subCommandName.
    */
   @java.lang.Override
-  public com.google.protobuf.ByteString
+  @java.lang.Deprecated public com.google.protobuf.ByteString
       getSubCommandNameBytes() {
     java.lang.Object ref = subCommandName_;
     if (ref instanceof java.lang.String) {
@@ -305,34 +1102,58 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.LazyStringArrayList globalFlags_ =
       com.google.protobuf.LazyStringArrayList.emptyList();
   /**
-   * <code>repeated string global_flags = 3;</code>
+   * <pre>
+   * Deprecated. Subsumed by "args" field.
+   * </pre>
+   *
+   * <code>repeated string global_flags = 3 [deprecated = true];</code>
+   * @deprecated android_studio.AndroidCliInvocation.global_flags is deprecated.
+   *     See studio_stats.proto;l=18574
    * @return A list containing the globalFlags.
    */
-  public com.google.protobuf.ProtocolStringList
+  @java.lang.Deprecated public com.google.protobuf.ProtocolStringList
       getGlobalFlagsList() {
     return globalFlags_;
   }
   /**
-   * <code>repeated string global_flags = 3;</code>
+   * <pre>
+   * Deprecated. Subsumed by "args" field.
+   * </pre>
+   *
+   * <code>repeated string global_flags = 3 [deprecated = true];</code>
+   * @deprecated android_studio.AndroidCliInvocation.global_flags is deprecated.
+   *     See studio_stats.proto;l=18574
    * @return The count of globalFlags.
    */
-  public int getGlobalFlagsCount() {
+  @java.lang.Deprecated public int getGlobalFlagsCount() {
     return globalFlags_.size();
   }
   /**
-   * <code>repeated string global_flags = 3;</code>
+   * <pre>
+   * Deprecated. Subsumed by "args" field.
+   * </pre>
+   *
+   * <code>repeated string global_flags = 3 [deprecated = true];</code>
+   * @deprecated android_studio.AndroidCliInvocation.global_flags is deprecated.
+   *     See studio_stats.proto;l=18574
    * @param index The index of the element to return.
    * @return The globalFlags at the given index.
    */
-  public java.lang.String getGlobalFlags(int index) {
+  @java.lang.Deprecated public java.lang.String getGlobalFlags(int index) {
     return globalFlags_.get(index);
   }
   /**
-   * <code>repeated string global_flags = 3;</code>
+   * <pre>
+   * Deprecated. Subsumed by "args" field.
+   * </pre>
+   *
+   * <code>repeated string global_flags = 3 [deprecated = true];</code>
+   * @deprecated android_studio.AndroidCliInvocation.global_flags is deprecated.
+   *     See studio_stats.proto;l=18574
    * @param index The index of the value to return.
    * @return The bytes of the globalFlags at the given index.
    */
-  public com.google.protobuf.ByteString
+  @java.lang.Deprecated public com.google.protobuf.ByteString
       getGlobalFlagsBytes(int index) {
     return globalFlags_.getByteString(index);
   }
@@ -342,34 +1163,58 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.LazyStringArrayList flags_ =
       com.google.protobuf.LazyStringArrayList.emptyList();
   /**
-   * <code>repeated string flags = 4;</code>
+   * <pre>
+   * Deprecated. Subsumed by "args" field.
+   * </pre>
+   *
+   * <code>repeated string flags = 4 [deprecated = true];</code>
+   * @deprecated android_studio.AndroidCliInvocation.flags is deprecated.
+   *     See studio_stats.proto;l=18576
    * @return A list containing the flags.
    */
-  public com.google.protobuf.ProtocolStringList
+  @java.lang.Deprecated public com.google.protobuf.ProtocolStringList
       getFlagsList() {
     return flags_;
   }
   /**
-   * <code>repeated string flags = 4;</code>
+   * <pre>
+   * Deprecated. Subsumed by "args" field.
+   * </pre>
+   *
+   * <code>repeated string flags = 4 [deprecated = true];</code>
+   * @deprecated android_studio.AndroidCliInvocation.flags is deprecated.
+   *     See studio_stats.proto;l=18576
    * @return The count of flags.
    */
-  public int getFlagsCount() {
+  @java.lang.Deprecated public int getFlagsCount() {
     return flags_.size();
   }
   /**
-   * <code>repeated string flags = 4;</code>
+   * <pre>
+   * Deprecated. Subsumed by "args" field.
+   * </pre>
+   *
+   * <code>repeated string flags = 4 [deprecated = true];</code>
+   * @deprecated android_studio.AndroidCliInvocation.flags is deprecated.
+   *     See studio_stats.proto;l=18576
    * @param index The index of the element to return.
    * @return The flags at the given index.
    */
-  public java.lang.String getFlags(int index) {
+  @java.lang.Deprecated public java.lang.String getFlags(int index) {
     return flags_.get(index);
   }
   /**
-   * <code>repeated string flags = 4;</code>
+   * <pre>
+   * Deprecated. Subsumed by "args" field.
+   * </pre>
+   *
+   * <code>repeated string flags = 4 [deprecated = true];</code>
+   * @deprecated android_studio.AndroidCliInvocation.flags is deprecated.
+   *     See studio_stats.proto;l=18576
    * @param index The index of the value to return.
    * @return The bytes of the flags at the given index.
    */
-  public com.google.protobuf.ByteString
+  @java.lang.Deprecated public com.google.protobuf.ByteString
       getFlagsBytes(int index) {
     return flags_.getByteString(index);
   }
@@ -400,6 +1245,77 @@ private static final long serialVersionUID = 0L;
     return result == null ? com.google.wireless.android.sdk.stats.AndroidCliInvocation.Agent.UNKNOWN : result;
   }
 
+  public static final int ARGS_FIELD_NUMBER = 6;
+  @SuppressWarnings("serial")
+  private java.util.List<com.google.wireless.android.sdk.stats.AndroidCliInvocation.Arg> args_;
+  /**
+   * <pre>
+   * The commands and arguments passed to android-cli. Flags names
+   * (with "--"" prefix) are Arg.flag. Positional arguments, commands, and flag
+   * values are Arg.value. User-generated values are redacted.
+   * </pre>
+   *
+   * <code>repeated .android_studio.AndroidCliInvocation.Arg args = 6;</code>
+   */
+  @java.lang.Override
+  public java.util.List<com.google.wireless.android.sdk.stats.AndroidCliInvocation.Arg> getArgsList() {
+    return args_;
+  }
+  /**
+   * <pre>
+   * The commands and arguments passed to android-cli. Flags names
+   * (with "--"" prefix) are Arg.flag. Positional arguments, commands, and flag
+   * values are Arg.value. User-generated values are redacted.
+   * </pre>
+   *
+   * <code>repeated .android_studio.AndroidCliInvocation.Arg args = 6;</code>
+   */
+  @java.lang.Override
+  public java.util.List<? extends com.google.wireless.android.sdk.stats.AndroidCliInvocation.ArgOrBuilder> 
+      getArgsOrBuilderList() {
+    return args_;
+  }
+  /**
+   * <pre>
+   * The commands and arguments passed to android-cli. Flags names
+   * (with "--"" prefix) are Arg.flag. Positional arguments, commands, and flag
+   * values are Arg.value. User-generated values are redacted.
+   * </pre>
+   *
+   * <code>repeated .android_studio.AndroidCliInvocation.Arg args = 6;</code>
+   */
+  @java.lang.Override
+  public int getArgsCount() {
+    return args_.size();
+  }
+  /**
+   * <pre>
+   * The commands and arguments passed to android-cli. Flags names
+   * (with "--"" prefix) are Arg.flag. Positional arguments, commands, and flag
+   * values are Arg.value. User-generated values are redacted.
+   * </pre>
+   *
+   * <code>repeated .android_studio.AndroidCliInvocation.Arg args = 6;</code>
+   */
+  @java.lang.Override
+  public com.google.wireless.android.sdk.stats.AndroidCliInvocation.Arg getArgs(int index) {
+    return args_.get(index);
+  }
+  /**
+   * <pre>
+   * The commands and arguments passed to android-cli. Flags names
+   * (with "--"" prefix) are Arg.flag. Positional arguments, commands, and flag
+   * values are Arg.value. User-generated values are redacted.
+   * </pre>
+   *
+   * <code>repeated .android_studio.AndroidCliInvocation.Arg args = 6;</code>
+   */
+  @java.lang.Override
+  public com.google.wireless.android.sdk.stats.AndroidCliInvocation.ArgOrBuilder getArgsOrBuilder(
+      int index) {
+    return args_.get(index);
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -428,6 +1344,9 @@ private static final long serialVersionUID = 0L;
     }
     if (((bitField0_ & 0x00000004) != 0)) {
       output.writeEnum(5, agentName_);
+    }
+    for (int i = 0; i < args_.size(); i++) {
+      output.writeMessage(6, args_.get(i));
     }
     getUnknownFields().writeTo(output);
   }
@@ -464,6 +1383,10 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(5, agentName_);
     }
+    for (int i = 0; i < args_.size(); i++) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(6, args_.get(i));
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -497,6 +1420,8 @@ private static final long serialVersionUID = 0L;
     if (hasAgentName()) {
       if (agentName_ != other.agentName_) return false;
     }
+    if (!getArgsList()
+        .equals(other.getArgsList())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -527,6 +1452,10 @@ private static final long serialVersionUID = 0L;
     if (hasAgentName()) {
       hash = (37 * hash) + AGENT_NAME_FIELD_NUMBER;
       hash = (53 * hash) + agentName_;
+    }
+    if (getArgsCount() > 0) {
+      hash = (37 * hash) + ARGS_FIELD_NUMBER;
+      hash = (53 * hash) + getArgsList().hashCode();
     }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
@@ -664,6 +1593,13 @@ private static final long serialVersionUID = 0L;
       flags_ =
           com.google.protobuf.LazyStringArrayList.emptyList();
       agentName_ = 0;
+      if (argsBuilder_ == null) {
+        args_ = java.util.Collections.emptyList();
+      } else {
+        args_ = null;
+        argsBuilder_.clear();
+      }
+      bitField0_ = (bitField0_ & ~0x00000020);
       return this;
     }
 
@@ -690,9 +1626,22 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.wireless.android.sdk.stats.AndroidCliInvocation buildPartial() {
       com.google.wireless.android.sdk.stats.AndroidCliInvocation result = new com.google.wireless.android.sdk.stats.AndroidCliInvocation(this);
+      buildPartialRepeatedFields(result);
       if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
+    }
+
+    private void buildPartialRepeatedFields(com.google.wireless.android.sdk.stats.AndroidCliInvocation result) {
+      if (argsBuilder_ == null) {
+        if (((bitField0_ & 0x00000020) != 0)) {
+          args_ = java.util.Collections.unmodifiableList(args_);
+          bitField0_ = (bitField0_ & ~0x00000020);
+        }
+        result.args_ = args_;
+      } else {
+        result.args_ = argsBuilder_.build();
+      }
     }
 
     private void buildPartial0(com.google.wireless.android.sdk.stats.AndroidCliInvocation result) {
@@ -766,6 +1715,32 @@ private static final long serialVersionUID = 0L;
       if (other.hasAgentName()) {
         setAgentName(other.getAgentName());
       }
+      if (argsBuilder_ == null) {
+        if (!other.args_.isEmpty()) {
+          if (args_.isEmpty()) {
+            args_ = other.args_;
+            bitField0_ = (bitField0_ & ~0x00000020);
+          } else {
+            ensureArgsIsMutable();
+            args_.addAll(other.args_);
+          }
+          onChanged();
+        }
+      } else {
+        if (!other.args_.isEmpty()) {
+          if (argsBuilder_.isEmpty()) {
+            argsBuilder_.dispose();
+            argsBuilder_ = null;
+            args_ = other.args_;
+            bitField0_ = (bitField0_ & ~0x00000020);
+            argsBuilder_ = 
+              com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                 getArgsFieldBuilder() : null;
+          } else {
+            argsBuilder_.addAllMessages(other.args_);
+          }
+        }
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -826,6 +1801,19 @@ private static final long serialVersionUID = 0L;
               }
               break;
             } // case 40
+            case 50: {
+              com.google.wireless.android.sdk.stats.AndroidCliInvocation.Arg m =
+                  input.readMessage(
+                      com.google.wireless.android.sdk.stats.AndroidCliInvocation.Arg.PARSER,
+                      extensionRegistry);
+              if (argsBuilder_ == null) {
+                ensureArgsIsMutable();
+                args_.add(m);
+              } else {
+                argsBuilder_.addMessage(m);
+              }
+              break;
+            } // case 50
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -846,26 +1834,28 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object commandName_ = "";
     /**
      * <pre>
-     * Note that we only log the command and sub-command name, and not the entire
-     * command line to avoid logging user data.
+     * Deprecated. Subsumed by "args" field.
      * </pre>
      *
-     * <code>optional string command_name = 1;</code>
+     * <code>optional string command_name = 1 [deprecated = true];</code>
+     * @deprecated android_studio.AndroidCliInvocation.command_name is deprecated.
+     *     See studio_stats.proto;l=18570
      * @return Whether the commandName field is set.
      */
-    public boolean hasCommandName() {
+    @java.lang.Deprecated public boolean hasCommandName() {
       return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
-     * Note that we only log the command and sub-command name, and not the entire
-     * command line to avoid logging user data.
+     * Deprecated. Subsumed by "args" field.
      * </pre>
      *
-     * <code>optional string command_name = 1;</code>
+     * <code>optional string command_name = 1 [deprecated = true];</code>
+     * @deprecated android_studio.AndroidCliInvocation.command_name is deprecated.
+     *     See studio_stats.proto;l=18570
      * @return The commandName.
      */
-    public java.lang.String getCommandName() {
+    @java.lang.Deprecated public java.lang.String getCommandName() {
       java.lang.Object ref = commandName_;
       if (!(ref instanceof java.lang.String)) {
         com.google.protobuf.ByteString bs =
@@ -881,14 +1871,15 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Note that we only log the command and sub-command name, and not the entire
-     * command line to avoid logging user data.
+     * Deprecated. Subsumed by "args" field.
      * </pre>
      *
-     * <code>optional string command_name = 1;</code>
+     * <code>optional string command_name = 1 [deprecated = true];</code>
+     * @deprecated android_studio.AndroidCliInvocation.command_name is deprecated.
+     *     See studio_stats.proto;l=18570
      * @return The bytes for commandName.
      */
-    public com.google.protobuf.ByteString
+    @java.lang.Deprecated public com.google.protobuf.ByteString
         getCommandNameBytes() {
       java.lang.Object ref = commandName_;
       if (ref instanceof String) {
@@ -903,15 +1894,16 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Note that we only log the command and sub-command name, and not the entire
-     * command line to avoid logging user data.
+     * Deprecated. Subsumed by "args" field.
      * </pre>
      *
-     * <code>optional string command_name = 1;</code>
+     * <code>optional string command_name = 1 [deprecated = true];</code>
+     * @deprecated android_studio.AndroidCliInvocation.command_name is deprecated.
+     *     See studio_stats.proto;l=18570
      * @param value The commandName to set.
      * @return This builder for chaining.
      */
-    public Builder setCommandName(
+    @java.lang.Deprecated public Builder setCommandName(
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       commandName_ = value;
@@ -921,14 +1913,15 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Note that we only log the command and sub-command name, and not the entire
-     * command line to avoid logging user data.
+     * Deprecated. Subsumed by "args" field.
      * </pre>
      *
-     * <code>optional string command_name = 1;</code>
+     * <code>optional string command_name = 1 [deprecated = true];</code>
+     * @deprecated android_studio.AndroidCliInvocation.command_name is deprecated.
+     *     See studio_stats.proto;l=18570
      * @return This builder for chaining.
      */
-    public Builder clearCommandName() {
+    @java.lang.Deprecated public Builder clearCommandName() {
       commandName_ = getDefaultInstance().getCommandName();
       bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
@@ -936,15 +1929,16 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Note that we only log the command and sub-command name, and not the entire
-     * command line to avoid logging user data.
+     * Deprecated. Subsumed by "args" field.
      * </pre>
      *
-     * <code>optional string command_name = 1;</code>
+     * <code>optional string command_name = 1 [deprecated = true];</code>
+     * @deprecated android_studio.AndroidCliInvocation.command_name is deprecated.
+     *     See studio_stats.proto;l=18570
      * @param value The bytes for commandName to set.
      * @return This builder for chaining.
      */
-    public Builder setCommandNameBytes(
+    @java.lang.Deprecated public Builder setCommandNameBytes(
         com.google.protobuf.ByteString value) {
       if (value == null) { throw new NullPointerException(); }
       commandName_ = value;
@@ -955,17 +1949,29 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object subCommandName_ = "";
     /**
-     * <code>optional string sub_command_name = 2;</code>
+     * <pre>
+     * Deprecated. Subsumed by "args" field.
+     * </pre>
+     *
+     * <code>optional string sub_command_name = 2 [deprecated = true];</code>
+     * @deprecated android_studio.AndroidCliInvocation.sub_command_name is deprecated.
+     *     See studio_stats.proto;l=18572
      * @return Whether the subCommandName field is set.
      */
-    public boolean hasSubCommandName() {
+    @java.lang.Deprecated public boolean hasSubCommandName() {
       return ((bitField0_ & 0x00000002) != 0);
     }
     /**
-     * <code>optional string sub_command_name = 2;</code>
+     * <pre>
+     * Deprecated. Subsumed by "args" field.
+     * </pre>
+     *
+     * <code>optional string sub_command_name = 2 [deprecated = true];</code>
+     * @deprecated android_studio.AndroidCliInvocation.sub_command_name is deprecated.
+     *     See studio_stats.proto;l=18572
      * @return The subCommandName.
      */
-    public java.lang.String getSubCommandName() {
+    @java.lang.Deprecated public java.lang.String getSubCommandName() {
       java.lang.Object ref = subCommandName_;
       if (!(ref instanceof java.lang.String)) {
         com.google.protobuf.ByteString bs =
@@ -980,10 +1986,16 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>optional string sub_command_name = 2;</code>
+     * <pre>
+     * Deprecated. Subsumed by "args" field.
+     * </pre>
+     *
+     * <code>optional string sub_command_name = 2 [deprecated = true];</code>
+     * @deprecated android_studio.AndroidCliInvocation.sub_command_name is deprecated.
+     *     See studio_stats.proto;l=18572
      * @return The bytes for subCommandName.
      */
-    public com.google.protobuf.ByteString
+    @java.lang.Deprecated public com.google.protobuf.ByteString
         getSubCommandNameBytes() {
       java.lang.Object ref = subCommandName_;
       if (ref instanceof String) {
@@ -997,11 +2009,17 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>optional string sub_command_name = 2;</code>
+     * <pre>
+     * Deprecated. Subsumed by "args" field.
+     * </pre>
+     *
+     * <code>optional string sub_command_name = 2 [deprecated = true];</code>
+     * @deprecated android_studio.AndroidCliInvocation.sub_command_name is deprecated.
+     *     See studio_stats.proto;l=18572
      * @param value The subCommandName to set.
      * @return This builder for chaining.
      */
-    public Builder setSubCommandName(
+    @java.lang.Deprecated public Builder setSubCommandName(
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       subCommandName_ = value;
@@ -1010,21 +2028,33 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>optional string sub_command_name = 2;</code>
+     * <pre>
+     * Deprecated. Subsumed by "args" field.
+     * </pre>
+     *
+     * <code>optional string sub_command_name = 2 [deprecated = true];</code>
+     * @deprecated android_studio.AndroidCliInvocation.sub_command_name is deprecated.
+     *     See studio_stats.proto;l=18572
      * @return This builder for chaining.
      */
-    public Builder clearSubCommandName() {
+    @java.lang.Deprecated public Builder clearSubCommandName() {
       subCommandName_ = getDefaultInstance().getSubCommandName();
       bitField0_ = (bitField0_ & ~0x00000002);
       onChanged();
       return this;
     }
     /**
-     * <code>optional string sub_command_name = 2;</code>
+     * <pre>
+     * Deprecated. Subsumed by "args" field.
+     * </pre>
+     *
+     * <code>optional string sub_command_name = 2 [deprecated = true];</code>
+     * @deprecated android_studio.AndroidCliInvocation.sub_command_name is deprecated.
+     *     See studio_stats.proto;l=18572
      * @param value The bytes for subCommandName to set.
      * @return This builder for chaining.
      */
-    public Builder setSubCommandNameBytes(
+    @java.lang.Deprecated public Builder setSubCommandNameBytes(
         com.google.protobuf.ByteString value) {
       if (value == null) { throw new NullPointerException(); }
       subCommandName_ = value;
@@ -1042,45 +2072,75 @@ private static final long serialVersionUID = 0L;
       bitField0_ |= 0x00000004;
     }
     /**
-     * <code>repeated string global_flags = 3;</code>
+     * <pre>
+     * Deprecated. Subsumed by "args" field.
+     * </pre>
+     *
+     * <code>repeated string global_flags = 3 [deprecated = true];</code>
+     * @deprecated android_studio.AndroidCliInvocation.global_flags is deprecated.
+     *     See studio_stats.proto;l=18574
      * @return A list containing the globalFlags.
      */
-    public com.google.protobuf.ProtocolStringList
+    @java.lang.Deprecated public com.google.protobuf.ProtocolStringList
         getGlobalFlagsList() {
       globalFlags_.makeImmutable();
       return globalFlags_;
     }
     /**
-     * <code>repeated string global_flags = 3;</code>
+     * <pre>
+     * Deprecated. Subsumed by "args" field.
+     * </pre>
+     *
+     * <code>repeated string global_flags = 3 [deprecated = true];</code>
+     * @deprecated android_studio.AndroidCliInvocation.global_flags is deprecated.
+     *     See studio_stats.proto;l=18574
      * @return The count of globalFlags.
      */
-    public int getGlobalFlagsCount() {
+    @java.lang.Deprecated public int getGlobalFlagsCount() {
       return globalFlags_.size();
     }
     /**
-     * <code>repeated string global_flags = 3;</code>
+     * <pre>
+     * Deprecated. Subsumed by "args" field.
+     * </pre>
+     *
+     * <code>repeated string global_flags = 3 [deprecated = true];</code>
+     * @deprecated android_studio.AndroidCliInvocation.global_flags is deprecated.
+     *     See studio_stats.proto;l=18574
      * @param index The index of the element to return.
      * @return The globalFlags at the given index.
      */
-    public java.lang.String getGlobalFlags(int index) {
+    @java.lang.Deprecated public java.lang.String getGlobalFlags(int index) {
       return globalFlags_.get(index);
     }
     /**
-     * <code>repeated string global_flags = 3;</code>
+     * <pre>
+     * Deprecated. Subsumed by "args" field.
+     * </pre>
+     *
+     * <code>repeated string global_flags = 3 [deprecated = true];</code>
+     * @deprecated android_studio.AndroidCliInvocation.global_flags is deprecated.
+     *     See studio_stats.proto;l=18574
      * @param index The index of the value to return.
      * @return The bytes of the globalFlags at the given index.
      */
-    public com.google.protobuf.ByteString
+    @java.lang.Deprecated public com.google.protobuf.ByteString
         getGlobalFlagsBytes(int index) {
       return globalFlags_.getByteString(index);
     }
     /**
-     * <code>repeated string global_flags = 3;</code>
+     * <pre>
+     * Deprecated. Subsumed by "args" field.
+     * </pre>
+     *
+     * <code>repeated string global_flags = 3 [deprecated = true];</code>
+     * @deprecated android_studio.AndroidCliInvocation.global_flags is deprecated.
+     *     See studio_stats.proto;l=18574
      * @param index The index to set the value at.
      * @param value The globalFlags to set.
      * @return This builder for chaining.
      */
-    public Builder setGlobalFlags(
+    @java.lang.Deprecated public Builder setGlobalFlags(
         int index, java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       ensureGlobalFlagsIsMutable();
@@ -1090,11 +2150,17 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated string global_flags = 3;</code>
+     * <pre>
+     * Deprecated. Subsumed by "args" field.
+     * </pre>
+     *
+     * <code>repeated string global_flags = 3 [deprecated = true];</code>
+     * @deprecated android_studio.AndroidCliInvocation.global_flags is deprecated.
+     *     See studio_stats.proto;l=18574
      * @param value The globalFlags to add.
      * @return This builder for chaining.
      */
-    public Builder addGlobalFlags(
+    @java.lang.Deprecated public Builder addGlobalFlags(
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       ensureGlobalFlagsIsMutable();
@@ -1104,11 +2170,17 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated string global_flags = 3;</code>
+     * <pre>
+     * Deprecated. Subsumed by "args" field.
+     * </pre>
+     *
+     * <code>repeated string global_flags = 3 [deprecated = true];</code>
+     * @deprecated android_studio.AndroidCliInvocation.global_flags is deprecated.
+     *     See studio_stats.proto;l=18574
      * @param values The globalFlags to add.
      * @return This builder for chaining.
      */
-    public Builder addAllGlobalFlags(
+    @java.lang.Deprecated public Builder addAllGlobalFlags(
         java.lang.Iterable<java.lang.String> values) {
       ensureGlobalFlagsIsMutable();
       com.google.protobuf.AbstractMessageLite.Builder.addAll(
@@ -1118,10 +2190,16 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated string global_flags = 3;</code>
+     * <pre>
+     * Deprecated. Subsumed by "args" field.
+     * </pre>
+     *
+     * <code>repeated string global_flags = 3 [deprecated = true];</code>
+     * @deprecated android_studio.AndroidCliInvocation.global_flags is deprecated.
+     *     See studio_stats.proto;l=18574
      * @return This builder for chaining.
      */
-    public Builder clearGlobalFlags() {
+    @java.lang.Deprecated public Builder clearGlobalFlags() {
       globalFlags_ =
         com.google.protobuf.LazyStringArrayList.emptyList();
       bitField0_ = (bitField0_ & ~0x00000004);;
@@ -1129,11 +2207,17 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated string global_flags = 3;</code>
+     * <pre>
+     * Deprecated. Subsumed by "args" field.
+     * </pre>
+     *
+     * <code>repeated string global_flags = 3 [deprecated = true];</code>
+     * @deprecated android_studio.AndroidCliInvocation.global_flags is deprecated.
+     *     See studio_stats.proto;l=18574
      * @param value The bytes of the globalFlags to add.
      * @return This builder for chaining.
      */
-    public Builder addGlobalFlagsBytes(
+    @java.lang.Deprecated public Builder addGlobalFlagsBytes(
         com.google.protobuf.ByteString value) {
       if (value == null) { throw new NullPointerException(); }
       ensureGlobalFlagsIsMutable();
@@ -1152,45 +2236,75 @@ private static final long serialVersionUID = 0L;
       bitField0_ |= 0x00000008;
     }
     /**
-     * <code>repeated string flags = 4;</code>
+     * <pre>
+     * Deprecated. Subsumed by "args" field.
+     * </pre>
+     *
+     * <code>repeated string flags = 4 [deprecated = true];</code>
+     * @deprecated android_studio.AndroidCliInvocation.flags is deprecated.
+     *     See studio_stats.proto;l=18576
      * @return A list containing the flags.
      */
-    public com.google.protobuf.ProtocolStringList
+    @java.lang.Deprecated public com.google.protobuf.ProtocolStringList
         getFlagsList() {
       flags_.makeImmutable();
       return flags_;
     }
     /**
-     * <code>repeated string flags = 4;</code>
+     * <pre>
+     * Deprecated. Subsumed by "args" field.
+     * </pre>
+     *
+     * <code>repeated string flags = 4 [deprecated = true];</code>
+     * @deprecated android_studio.AndroidCliInvocation.flags is deprecated.
+     *     See studio_stats.proto;l=18576
      * @return The count of flags.
      */
-    public int getFlagsCount() {
+    @java.lang.Deprecated public int getFlagsCount() {
       return flags_.size();
     }
     /**
-     * <code>repeated string flags = 4;</code>
+     * <pre>
+     * Deprecated. Subsumed by "args" field.
+     * </pre>
+     *
+     * <code>repeated string flags = 4 [deprecated = true];</code>
+     * @deprecated android_studio.AndroidCliInvocation.flags is deprecated.
+     *     See studio_stats.proto;l=18576
      * @param index The index of the element to return.
      * @return The flags at the given index.
      */
-    public java.lang.String getFlags(int index) {
+    @java.lang.Deprecated public java.lang.String getFlags(int index) {
       return flags_.get(index);
     }
     /**
-     * <code>repeated string flags = 4;</code>
+     * <pre>
+     * Deprecated. Subsumed by "args" field.
+     * </pre>
+     *
+     * <code>repeated string flags = 4 [deprecated = true];</code>
+     * @deprecated android_studio.AndroidCliInvocation.flags is deprecated.
+     *     See studio_stats.proto;l=18576
      * @param index The index of the value to return.
      * @return The bytes of the flags at the given index.
      */
-    public com.google.protobuf.ByteString
+    @java.lang.Deprecated public com.google.protobuf.ByteString
         getFlagsBytes(int index) {
       return flags_.getByteString(index);
     }
     /**
-     * <code>repeated string flags = 4;</code>
+     * <pre>
+     * Deprecated. Subsumed by "args" field.
+     * </pre>
+     *
+     * <code>repeated string flags = 4 [deprecated = true];</code>
+     * @deprecated android_studio.AndroidCliInvocation.flags is deprecated.
+     *     See studio_stats.proto;l=18576
      * @param index The index to set the value at.
      * @param value The flags to set.
      * @return This builder for chaining.
      */
-    public Builder setFlags(
+    @java.lang.Deprecated public Builder setFlags(
         int index, java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       ensureFlagsIsMutable();
@@ -1200,11 +2314,17 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated string flags = 4;</code>
+     * <pre>
+     * Deprecated. Subsumed by "args" field.
+     * </pre>
+     *
+     * <code>repeated string flags = 4 [deprecated = true];</code>
+     * @deprecated android_studio.AndroidCliInvocation.flags is deprecated.
+     *     See studio_stats.proto;l=18576
      * @param value The flags to add.
      * @return This builder for chaining.
      */
-    public Builder addFlags(
+    @java.lang.Deprecated public Builder addFlags(
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       ensureFlagsIsMutable();
@@ -1214,11 +2334,17 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated string flags = 4;</code>
+     * <pre>
+     * Deprecated. Subsumed by "args" field.
+     * </pre>
+     *
+     * <code>repeated string flags = 4 [deprecated = true];</code>
+     * @deprecated android_studio.AndroidCliInvocation.flags is deprecated.
+     *     See studio_stats.proto;l=18576
      * @param values The flags to add.
      * @return This builder for chaining.
      */
-    public Builder addAllFlags(
+    @java.lang.Deprecated public Builder addAllFlags(
         java.lang.Iterable<java.lang.String> values) {
       ensureFlagsIsMutable();
       com.google.protobuf.AbstractMessageLite.Builder.addAll(
@@ -1228,10 +2354,16 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated string flags = 4;</code>
+     * <pre>
+     * Deprecated. Subsumed by "args" field.
+     * </pre>
+     *
+     * <code>repeated string flags = 4 [deprecated = true];</code>
+     * @deprecated android_studio.AndroidCliInvocation.flags is deprecated.
+     *     See studio_stats.proto;l=18576
      * @return This builder for chaining.
      */
-    public Builder clearFlags() {
+    @java.lang.Deprecated public Builder clearFlags() {
       flags_ =
         com.google.protobuf.LazyStringArrayList.emptyList();
       bitField0_ = (bitField0_ & ~0x00000008);;
@@ -1239,11 +2371,17 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated string flags = 4;</code>
+     * <pre>
+     * Deprecated. Subsumed by "args" field.
+     * </pre>
+     *
+     * <code>repeated string flags = 4 [deprecated = true];</code>
+     * @deprecated android_studio.AndroidCliInvocation.flags is deprecated.
+     *     See studio_stats.proto;l=18576
      * @param value The bytes of the flags to add.
      * @return This builder for chaining.
      */
-    public Builder addFlagsBytes(
+    @java.lang.Deprecated public Builder addFlagsBytes(
         com.google.protobuf.ByteString value) {
       if (value == null) { throw new NullPointerException(); }
       ensureFlagsIsMutable();
@@ -1309,6 +2447,354 @@ private static final long serialVersionUID = 0L;
       agentName_ = 0;
       onChanged();
       return this;
+    }
+
+    private java.util.List<com.google.wireless.android.sdk.stats.AndroidCliInvocation.Arg> args_ =
+      java.util.Collections.emptyList();
+    private void ensureArgsIsMutable() {
+      if (!((bitField0_ & 0x00000020) != 0)) {
+        args_ = new java.util.ArrayList<com.google.wireless.android.sdk.stats.AndroidCliInvocation.Arg>(args_);
+        bitField0_ |= 0x00000020;
+       }
+    }
+
+    private com.google.protobuf.RepeatedFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.AndroidCliInvocation.Arg, com.google.wireless.android.sdk.stats.AndroidCliInvocation.Arg.Builder, com.google.wireless.android.sdk.stats.AndroidCliInvocation.ArgOrBuilder> argsBuilder_;
+
+    /**
+     * <pre>
+     * The commands and arguments passed to android-cli. Flags names
+     * (with "--"" prefix) are Arg.flag. Positional arguments, commands, and flag
+     * values are Arg.value. User-generated values are redacted.
+     * </pre>
+     *
+     * <code>repeated .android_studio.AndroidCliInvocation.Arg args = 6;</code>
+     */
+    public java.util.List<com.google.wireless.android.sdk.stats.AndroidCliInvocation.Arg> getArgsList() {
+      if (argsBuilder_ == null) {
+        return java.util.Collections.unmodifiableList(args_);
+      } else {
+        return argsBuilder_.getMessageList();
+      }
+    }
+    /**
+     * <pre>
+     * The commands and arguments passed to android-cli. Flags names
+     * (with "--"" prefix) are Arg.flag. Positional arguments, commands, and flag
+     * values are Arg.value. User-generated values are redacted.
+     * </pre>
+     *
+     * <code>repeated .android_studio.AndroidCliInvocation.Arg args = 6;</code>
+     */
+    public int getArgsCount() {
+      if (argsBuilder_ == null) {
+        return args_.size();
+      } else {
+        return argsBuilder_.getCount();
+      }
+    }
+    /**
+     * <pre>
+     * The commands and arguments passed to android-cli. Flags names
+     * (with "--"" prefix) are Arg.flag. Positional arguments, commands, and flag
+     * values are Arg.value. User-generated values are redacted.
+     * </pre>
+     *
+     * <code>repeated .android_studio.AndroidCliInvocation.Arg args = 6;</code>
+     */
+    public com.google.wireless.android.sdk.stats.AndroidCliInvocation.Arg getArgs(int index) {
+      if (argsBuilder_ == null) {
+        return args_.get(index);
+      } else {
+        return argsBuilder_.getMessage(index);
+      }
+    }
+    /**
+     * <pre>
+     * The commands and arguments passed to android-cli. Flags names
+     * (with "--"" prefix) are Arg.flag. Positional arguments, commands, and flag
+     * values are Arg.value. User-generated values are redacted.
+     * </pre>
+     *
+     * <code>repeated .android_studio.AndroidCliInvocation.Arg args = 6;</code>
+     */
+    public Builder setArgs(
+        int index, com.google.wireless.android.sdk.stats.AndroidCliInvocation.Arg value) {
+      if (argsBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureArgsIsMutable();
+        args_.set(index, value);
+        onChanged();
+      } else {
+        argsBuilder_.setMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * The commands and arguments passed to android-cli. Flags names
+     * (with "--"" prefix) are Arg.flag. Positional arguments, commands, and flag
+     * values are Arg.value. User-generated values are redacted.
+     * </pre>
+     *
+     * <code>repeated .android_studio.AndroidCliInvocation.Arg args = 6;</code>
+     */
+    public Builder setArgs(
+        int index, com.google.wireless.android.sdk.stats.AndroidCliInvocation.Arg.Builder builderForValue) {
+      if (argsBuilder_ == null) {
+        ensureArgsIsMutable();
+        args_.set(index, builderForValue.build());
+        onChanged();
+      } else {
+        argsBuilder_.setMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * The commands and arguments passed to android-cli. Flags names
+     * (with "--"" prefix) are Arg.flag. Positional arguments, commands, and flag
+     * values are Arg.value. User-generated values are redacted.
+     * </pre>
+     *
+     * <code>repeated .android_studio.AndroidCliInvocation.Arg args = 6;</code>
+     */
+    public Builder addArgs(com.google.wireless.android.sdk.stats.AndroidCliInvocation.Arg value) {
+      if (argsBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureArgsIsMutable();
+        args_.add(value);
+        onChanged();
+      } else {
+        argsBuilder_.addMessage(value);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * The commands and arguments passed to android-cli. Flags names
+     * (with "--"" prefix) are Arg.flag. Positional arguments, commands, and flag
+     * values are Arg.value. User-generated values are redacted.
+     * </pre>
+     *
+     * <code>repeated .android_studio.AndroidCliInvocation.Arg args = 6;</code>
+     */
+    public Builder addArgs(
+        int index, com.google.wireless.android.sdk.stats.AndroidCliInvocation.Arg value) {
+      if (argsBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureArgsIsMutable();
+        args_.add(index, value);
+        onChanged();
+      } else {
+        argsBuilder_.addMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * The commands and arguments passed to android-cli. Flags names
+     * (with "--"" prefix) are Arg.flag. Positional arguments, commands, and flag
+     * values are Arg.value. User-generated values are redacted.
+     * </pre>
+     *
+     * <code>repeated .android_studio.AndroidCliInvocation.Arg args = 6;</code>
+     */
+    public Builder addArgs(
+        com.google.wireless.android.sdk.stats.AndroidCliInvocation.Arg.Builder builderForValue) {
+      if (argsBuilder_ == null) {
+        ensureArgsIsMutable();
+        args_.add(builderForValue.build());
+        onChanged();
+      } else {
+        argsBuilder_.addMessage(builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * The commands and arguments passed to android-cli. Flags names
+     * (with "--"" prefix) are Arg.flag. Positional arguments, commands, and flag
+     * values are Arg.value. User-generated values are redacted.
+     * </pre>
+     *
+     * <code>repeated .android_studio.AndroidCliInvocation.Arg args = 6;</code>
+     */
+    public Builder addArgs(
+        int index, com.google.wireless.android.sdk.stats.AndroidCliInvocation.Arg.Builder builderForValue) {
+      if (argsBuilder_ == null) {
+        ensureArgsIsMutable();
+        args_.add(index, builderForValue.build());
+        onChanged();
+      } else {
+        argsBuilder_.addMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * The commands and arguments passed to android-cli. Flags names
+     * (with "--"" prefix) are Arg.flag. Positional arguments, commands, and flag
+     * values are Arg.value. User-generated values are redacted.
+     * </pre>
+     *
+     * <code>repeated .android_studio.AndroidCliInvocation.Arg args = 6;</code>
+     */
+    public Builder addAllArgs(
+        java.lang.Iterable<? extends com.google.wireless.android.sdk.stats.AndroidCliInvocation.Arg> values) {
+      if (argsBuilder_ == null) {
+        ensureArgsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, args_);
+        onChanged();
+      } else {
+        argsBuilder_.addAllMessages(values);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * The commands and arguments passed to android-cli. Flags names
+     * (with "--"" prefix) are Arg.flag. Positional arguments, commands, and flag
+     * values are Arg.value. User-generated values are redacted.
+     * </pre>
+     *
+     * <code>repeated .android_studio.AndroidCliInvocation.Arg args = 6;</code>
+     */
+    public Builder clearArgs() {
+      if (argsBuilder_ == null) {
+        args_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000020);
+        onChanged();
+      } else {
+        argsBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * The commands and arguments passed to android-cli. Flags names
+     * (with "--"" prefix) are Arg.flag. Positional arguments, commands, and flag
+     * values are Arg.value. User-generated values are redacted.
+     * </pre>
+     *
+     * <code>repeated .android_studio.AndroidCliInvocation.Arg args = 6;</code>
+     */
+    public Builder removeArgs(int index) {
+      if (argsBuilder_ == null) {
+        ensureArgsIsMutable();
+        args_.remove(index);
+        onChanged();
+      } else {
+        argsBuilder_.remove(index);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * The commands and arguments passed to android-cli. Flags names
+     * (with "--"" prefix) are Arg.flag. Positional arguments, commands, and flag
+     * values are Arg.value. User-generated values are redacted.
+     * </pre>
+     *
+     * <code>repeated .android_studio.AndroidCliInvocation.Arg args = 6;</code>
+     */
+    public com.google.wireless.android.sdk.stats.AndroidCliInvocation.Arg.Builder getArgsBuilder(
+        int index) {
+      return getArgsFieldBuilder().getBuilder(index);
+    }
+    /**
+     * <pre>
+     * The commands and arguments passed to android-cli. Flags names
+     * (with "--"" prefix) are Arg.flag. Positional arguments, commands, and flag
+     * values are Arg.value. User-generated values are redacted.
+     * </pre>
+     *
+     * <code>repeated .android_studio.AndroidCliInvocation.Arg args = 6;</code>
+     */
+    public com.google.wireless.android.sdk.stats.AndroidCliInvocation.ArgOrBuilder getArgsOrBuilder(
+        int index) {
+      if (argsBuilder_ == null) {
+        return args_.get(index);  } else {
+        return argsBuilder_.getMessageOrBuilder(index);
+      }
+    }
+    /**
+     * <pre>
+     * The commands and arguments passed to android-cli. Flags names
+     * (with "--"" prefix) are Arg.flag. Positional arguments, commands, and flag
+     * values are Arg.value. User-generated values are redacted.
+     * </pre>
+     *
+     * <code>repeated .android_studio.AndroidCliInvocation.Arg args = 6;</code>
+     */
+    public java.util.List<? extends com.google.wireless.android.sdk.stats.AndroidCliInvocation.ArgOrBuilder> 
+         getArgsOrBuilderList() {
+      if (argsBuilder_ != null) {
+        return argsBuilder_.getMessageOrBuilderList();
+      } else {
+        return java.util.Collections.unmodifiableList(args_);
+      }
+    }
+    /**
+     * <pre>
+     * The commands and arguments passed to android-cli. Flags names
+     * (with "--"" prefix) are Arg.flag. Positional arguments, commands, and flag
+     * values are Arg.value. User-generated values are redacted.
+     * </pre>
+     *
+     * <code>repeated .android_studio.AndroidCliInvocation.Arg args = 6;</code>
+     */
+    public com.google.wireless.android.sdk.stats.AndroidCliInvocation.Arg.Builder addArgsBuilder() {
+      return getArgsFieldBuilder().addBuilder(
+          com.google.wireless.android.sdk.stats.AndroidCliInvocation.Arg.getDefaultInstance());
+    }
+    /**
+     * <pre>
+     * The commands and arguments passed to android-cli. Flags names
+     * (with "--"" prefix) are Arg.flag. Positional arguments, commands, and flag
+     * values are Arg.value. User-generated values are redacted.
+     * </pre>
+     *
+     * <code>repeated .android_studio.AndroidCliInvocation.Arg args = 6;</code>
+     */
+    public com.google.wireless.android.sdk.stats.AndroidCliInvocation.Arg.Builder addArgsBuilder(
+        int index) {
+      return getArgsFieldBuilder().addBuilder(
+          index, com.google.wireless.android.sdk.stats.AndroidCliInvocation.Arg.getDefaultInstance());
+    }
+    /**
+     * <pre>
+     * The commands and arguments passed to android-cli. Flags names
+     * (with "--"" prefix) are Arg.flag. Positional arguments, commands, and flag
+     * values are Arg.value. User-generated values are redacted.
+     * </pre>
+     *
+     * <code>repeated .android_studio.AndroidCliInvocation.Arg args = 6;</code>
+     */
+    public java.util.List<com.google.wireless.android.sdk.stats.AndroidCliInvocation.Arg.Builder> 
+         getArgsBuilderList() {
+      return getArgsFieldBuilder().getBuilderList();
+    }
+    private com.google.protobuf.RepeatedFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.AndroidCliInvocation.Arg, com.google.wireless.android.sdk.stats.AndroidCliInvocation.Arg.Builder, com.google.wireless.android.sdk.stats.AndroidCliInvocation.ArgOrBuilder> 
+        getArgsFieldBuilder() {
+      if (argsBuilder_ == null) {
+        argsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+            com.google.wireless.android.sdk.stats.AndroidCliInvocation.Arg, com.google.wireless.android.sdk.stats.AndroidCliInvocation.Arg.Builder, com.google.wireless.android.sdk.stats.AndroidCliInvocation.ArgOrBuilder>(
+                args_,
+                ((bitField0_ & 0x00000020) != 0),
+                getParentForChildren(),
+                isClean());
+        args_ = null;
+      }
+      return argsBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

@@ -3536,6 +3536,22 @@ private static final long serialVersionUID = 0L;
      * <code>SHERLOCK_EVENT = 377;</code>
      */
     SHERLOCK_EVENT(377),
+    /**
+     * <pre>
+     * Mcp enablement event.
+     * </pre>
+     *
+     * <code>MCP_ENABLEMENT_EVENT = 378;</code>
+     */
+    MCP_ENABLEMENT_EVENT(378),
+    /**
+     * <pre>
+     * Gemini telemetry event.
+     * </pre>
+     *
+     * <code>GEMINI_TELEMETRY_EVENT = 379;</code>
+     */
+    GEMINI_TELEMETRY_EVENT(379),
     ;
 
     /**
@@ -6363,6 +6379,22 @@ private static final long serialVersionUID = 0L;
      * <code>SHERLOCK_EVENT = 377;</code>
      */
     public static final int SHERLOCK_EVENT_VALUE = 377;
+    /**
+     * <pre>
+     * Mcp enablement event.
+     * </pre>
+     *
+     * <code>MCP_ENABLEMENT_EVENT = 378;</code>
+     */
+    public static final int MCP_ENABLEMENT_EVENT_VALUE = 378;
+    /**
+     * <pre>
+     * Gemini telemetry event.
+     * </pre>
+     *
+     * <code>GEMINI_TELEMETRY_EVENT = 379;</code>
+     */
+    public static final int GEMINI_TELEMETRY_EVENT_VALUE = 379;
 
 
     public final int getNumber() {
@@ -6758,6 +6790,8 @@ private static final long serialVersionUID = 0L;
         case 375: return UNIT_TEST_GENERATION_EVENT;
         case 376: return SHERLOCK_PING;
         case 377: return SHERLOCK_EVENT;
+        case 378: return MCP_ENABLEMENT_EVENT;
+        case 379: return GEMINI_TELEMETRY_EVENT;
         default: return null;
       }
     }
@@ -13723,7 +13757,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional uint32 min_sdk = 2 [deprecated = true];</code>
        * @deprecated android_studio.AndroidStudioEvent.TemplatesUsage.TemplateModule.min_sdk is deprecated.
-       *     See studio_stats.proto;l=2197
+       *     See studio_stats.proto;l=2209
        * @return Whether the minSdk field is set.
        */
       @java.lang.Deprecated boolean hasMinSdk();
@@ -13734,7 +13768,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional uint32 min_sdk = 2 [deprecated = true];</code>
        * @deprecated android_studio.AndroidStudioEvent.TemplatesUsage.TemplateModule.min_sdk is deprecated.
-       *     See studio_stats.proto;l=2197
+       *     See studio_stats.proto;l=2209
        * @return The minSdk.
        */
       @java.lang.Deprecated int getMinSdk();
@@ -14265,7 +14299,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional uint32 min_sdk = 2 [deprecated = true];</code>
        * @deprecated android_studio.AndroidStudioEvent.TemplatesUsage.TemplateModule.min_sdk is deprecated.
-       *     See studio_stats.proto;l=2197
+       *     See studio_stats.proto;l=2209
        * @return Whether the minSdk field is set.
        */
       @java.lang.Override
@@ -14279,7 +14313,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional uint32 min_sdk = 2 [deprecated = true];</code>
        * @deprecated android_studio.AndroidStudioEvent.TemplatesUsage.TemplateModule.min_sdk is deprecated.
-       *     See studio_stats.proto;l=2197
+       *     See studio_stats.proto;l=2209
        * @return The minSdk.
        */
       @java.lang.Override
@@ -14917,7 +14951,7 @@ private static final long serialVersionUID = 0L;
          *
          * <code>optional uint32 min_sdk = 2 [deprecated = true];</code>
          * @deprecated android_studio.AndroidStudioEvent.TemplatesUsage.TemplateModule.min_sdk is deprecated.
-         *     See studio_stats.proto;l=2197
+         *     See studio_stats.proto;l=2209
          * @return Whether the minSdk field is set.
          */
         @java.lang.Override
@@ -14931,7 +14965,7 @@ private static final long serialVersionUID = 0L;
          *
          * <code>optional uint32 min_sdk = 2 [deprecated = true];</code>
          * @deprecated android_studio.AndroidStudioEvent.TemplatesUsage.TemplateModule.min_sdk is deprecated.
-         *     See studio_stats.proto;l=2197
+         *     See studio_stats.proto;l=2209
          * @return The minSdk.
          */
         @java.lang.Override
@@ -14945,7 +14979,7 @@ private static final long serialVersionUID = 0L;
          *
          * <code>optional uint32 min_sdk = 2 [deprecated = true];</code>
          * @deprecated android_studio.AndroidStudioEvent.TemplatesUsage.TemplateModule.min_sdk is deprecated.
-         *     See studio_stats.proto;l=2197
+         *     See studio_stats.proto;l=2209
          * @param value The minSdk to set.
          * @return This builder for chaining.
          */
@@ -14963,7 +14997,7 @@ private static final long serialVersionUID = 0L;
          *
          * <code>optional uint32 min_sdk = 2 [deprecated = true];</code>
          * @deprecated android_studio.AndroidStudioEvent.TemplatesUsage.TemplateModule.min_sdk is deprecated.
-         *     See studio_stats.proto;l=2197
+         *     See studio_stats.proto;l=2209
          * @return This builder for chaining.
          */
         @java.lang.Deprecated public Builder clearMinSdk() {
@@ -27307,6 +27341,82 @@ private static final long serialVersionUID = 0L;
     return sherlockEvent_ == null ? com.google.wireless.android.sdk.stats.SherlockEvent.getDefaultInstance() : sherlockEvent_;
   }
 
+  public static final int MCP_ENABLEMENT_EVENT_FIELD_NUMBER = 254;
+  private com.google.wireless.android.sdk.stats.McpEnablementEvent mcpEnablementEvent_;
+  /**
+   * <pre>
+   * set when kind = MCP_ENABLEMENT_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.McpEnablementEvent mcp_enablement_event = 254 [lazy = true];</code>
+   * @return Whether the mcpEnablementEvent field is set.
+   */
+  @java.lang.Override
+  public boolean hasMcpEnablementEvent() {
+    return ((bitField7_ & 0x00400000) != 0);
+  }
+  /**
+   * <pre>
+   * set when kind = MCP_ENABLEMENT_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.McpEnablementEvent mcp_enablement_event = 254 [lazy = true];</code>
+   * @return The mcpEnablementEvent.
+   */
+  @java.lang.Override
+  public com.google.wireless.android.sdk.stats.McpEnablementEvent getMcpEnablementEvent() {
+    return mcpEnablementEvent_ == null ? com.google.wireless.android.sdk.stats.McpEnablementEvent.getDefaultInstance() : mcpEnablementEvent_;
+  }
+  /**
+   * <pre>
+   * set when kind = MCP_ENABLEMENT_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.McpEnablementEvent mcp_enablement_event = 254 [lazy = true];</code>
+   */
+  @java.lang.Override
+  public com.google.wireless.android.sdk.stats.McpEnablementEventOrBuilder getMcpEnablementEventOrBuilder() {
+    return mcpEnablementEvent_ == null ? com.google.wireless.android.sdk.stats.McpEnablementEvent.getDefaultInstance() : mcpEnablementEvent_;
+  }
+
+  public static final int GEMINI_TELEMETRY_EVENT_FIELD_NUMBER = 255;
+  private com.google.wireless.android.sdk.stats.GeminiTelemetryEvent geminiTelemetryEvent_;
+  /**
+   * <pre>
+   * set when kind = GEMINI_TELEMETRY_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.GeminiTelemetryEvent gemini_telemetry_event = 255 [lazy = true];</code>
+   * @return Whether the geminiTelemetryEvent field is set.
+   */
+  @java.lang.Override
+  public boolean hasGeminiTelemetryEvent() {
+    return ((bitField7_ & 0x00800000) != 0);
+  }
+  /**
+   * <pre>
+   * set when kind = GEMINI_TELEMETRY_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.GeminiTelemetryEvent gemini_telemetry_event = 255 [lazy = true];</code>
+   * @return The geminiTelemetryEvent.
+   */
+  @java.lang.Override
+  public com.google.wireless.android.sdk.stats.GeminiTelemetryEvent getGeminiTelemetryEvent() {
+    return geminiTelemetryEvent_ == null ? com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.getDefaultInstance() : geminiTelemetryEvent_;
+  }
+  /**
+   * <pre>
+   * set when kind = GEMINI_TELEMETRY_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.GeminiTelemetryEvent gemini_telemetry_event = 255 [lazy = true];</code>
+   */
+  @java.lang.Override
+  public com.google.wireless.android.sdk.stats.GeminiTelemetryEventOrBuilder getGeminiTelemetryEventOrBuilder() {
+    return geminiTelemetryEvent_ == null ? com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.getDefaultInstance() : geminiTelemetryEvent_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -28079,6 +28189,12 @@ private static final long serialVersionUID = 0L;
     }
     if (((bitField7_ & 0x00200000) != 0)) {
       output.writeMessage(253, getSherlockEvent());
+    }
+    if (((bitField7_ & 0x00400000) != 0)) {
+      output.writeMessage(254, getMcpEnablementEvent());
+    }
+    if (((bitField7_ & 0x00800000) != 0)) {
+      output.writeMessage(255, getGeminiTelemetryEvent());
     }
     getUnknownFields().writeTo(output);
   }
@@ -29106,6 +29222,14 @@ private static final long serialVersionUID = 0L;
     if (((bitField7_ & 0x00200000) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(253, getSherlockEvent());
+    }
+    if (((bitField7_ & 0x00400000) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(254, getMcpEnablementEvent());
+    }
+    if (((bitField7_ & 0x00800000) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(255, getGeminiTelemetryEvent());
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -30355,6 +30479,16 @@ private static final long serialVersionUID = 0L;
       if (!getSherlockEvent()
           .equals(other.getSherlockEvent())) return false;
     }
+    if (hasMcpEnablementEvent() != other.hasMcpEnablementEvent()) return false;
+    if (hasMcpEnablementEvent()) {
+      if (!getMcpEnablementEvent()
+          .equals(other.getMcpEnablementEvent())) return false;
+    }
+    if (hasGeminiTelemetryEvent() != other.hasGeminiTelemetryEvent()) return false;
+    if (hasGeminiTelemetryEvent()) {
+      if (!getGeminiTelemetryEvent()
+          .equals(other.getGeminiTelemetryEvent())) return false;
+    }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -31380,6 +31514,14 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + SHERLOCK_EVENT_FIELD_NUMBER;
       hash = (53 * hash) + getSherlockEvent().hashCode();
     }
+    if (hasMcpEnablementEvent()) {
+      hash = (37 * hash) + MCP_ENABLEMENT_EVENT_FIELD_NUMBER;
+      hash = (53 * hash) + getMcpEnablementEvent().hashCode();
+    }
+    if (hasGeminiTelemetryEvent()) {
+      hash = (37 * hash) + GEMINI_TELEMETRY_EVENT_FIELD_NUMBER;
+      hash = (53 * hash) + getGeminiTelemetryEvent().hashCode();
+    }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -31738,6 +31880,8 @@ private static final long serialVersionUID = 0L;
         getAndroidCliInvocationFieldBuilder();
         getUnitTestGenerationEventFieldBuilder();
         getSherlockEventFieldBuilder();
+        getMcpEnablementEventFieldBuilder();
+        getGeminiTelemetryEventFieldBuilder();
       }
     }
     @java.lang.Override
@@ -32934,6 +33078,16 @@ private static final long serialVersionUID = 0L;
       if (sherlockEventBuilder_ != null) {
         sherlockEventBuilder_.dispose();
         sherlockEventBuilder_ = null;
+      }
+      mcpEnablementEvent_ = null;
+      if (mcpEnablementEventBuilder_ != null) {
+        mcpEnablementEventBuilder_.dispose();
+        mcpEnablementEventBuilder_ = null;
+      }
+      geminiTelemetryEvent_ = null;
+      if (geminiTelemetryEventBuilder_ != null) {
+        geminiTelemetryEventBuilder_.dispose();
+        geminiTelemetryEventBuilder_ = null;
       }
       return this;
     }
@@ -34516,6 +34670,18 @@ private static final long serialVersionUID = 0L;
             : sherlockEventBuilder_.build();
         to_bitField7_ |= 0x00200000;
       }
+      if (((from_bitField7_ & 0x20000000) != 0)) {
+        result.mcpEnablementEvent_ = mcpEnablementEventBuilder_ == null
+            ? mcpEnablementEvent_
+            : mcpEnablementEventBuilder_.build();
+        to_bitField7_ |= 0x00400000;
+      }
+      if (((from_bitField7_ & 0x40000000) != 0)) {
+        result.geminiTelemetryEvent_ = geminiTelemetryEventBuilder_ == null
+            ? geminiTelemetryEvent_
+            : geminiTelemetryEventBuilder_.build();
+        to_bitField7_ |= 0x00800000;
+      }
       result.bitField6_ |= to_bitField6_;
       result.bitField7_ |= to_bitField7_;
     }
@@ -35417,6 +35583,12 @@ private static final long serialVersionUID = 0L;
       }
       if (other.hasSherlockEvent()) {
         mergeSherlockEvent(other.getSherlockEvent());
+      }
+      if (other.hasMcpEnablementEvent()) {
+        mergeMcpEnablementEvent(other.getMcpEnablementEvent());
+      }
+      if (other.hasGeminiTelemetryEvent()) {
+        mergeGeminiTelemetryEvent(other.getGeminiTelemetryEvent());
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -37289,6 +37461,20 @@ private static final long serialVersionUID = 0L;
               bitField7_ |= 0x10000000;
               break;
             } // case 2026
+            case 2034: {
+              input.readMessage(
+                  getMcpEnablementEventFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField7_ |= 0x20000000;
+              break;
+            } // case 2034
+            case 2042: {
+              input.readMessage(
+                  getGeminiTelemetryEventFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField7_ |= 0x40000000;
+              break;
+            } // case 2042
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -76030,6 +76216,316 @@ private static final long serialVersionUID = 0L;
         sherlockEvent_ = null;
       }
       return sherlockEventBuilder_;
+    }
+
+    private com.google.wireless.android.sdk.stats.McpEnablementEvent mcpEnablementEvent_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.McpEnablementEvent, com.google.wireless.android.sdk.stats.McpEnablementEvent.Builder, com.google.wireless.android.sdk.stats.McpEnablementEventOrBuilder> mcpEnablementEventBuilder_;
+    /**
+     * <pre>
+     * set when kind = MCP_ENABLEMENT_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.McpEnablementEvent mcp_enablement_event = 254 [lazy = true];</code>
+     * @return Whether the mcpEnablementEvent field is set.
+     */
+    public boolean hasMcpEnablementEvent() {
+      return ((bitField7_ & 0x20000000) != 0);
+    }
+    /**
+     * <pre>
+     * set when kind = MCP_ENABLEMENT_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.McpEnablementEvent mcp_enablement_event = 254 [lazy = true];</code>
+     * @return The mcpEnablementEvent.
+     */
+    public com.google.wireless.android.sdk.stats.McpEnablementEvent getMcpEnablementEvent() {
+      if (mcpEnablementEventBuilder_ == null) {
+        return mcpEnablementEvent_ == null ? com.google.wireless.android.sdk.stats.McpEnablementEvent.getDefaultInstance() : mcpEnablementEvent_;
+      } else {
+        return mcpEnablementEventBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * set when kind = MCP_ENABLEMENT_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.McpEnablementEvent mcp_enablement_event = 254 [lazy = true];</code>
+     */
+    public Builder setMcpEnablementEvent(com.google.wireless.android.sdk.stats.McpEnablementEvent value) {
+      if (mcpEnablementEventBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        mcpEnablementEvent_ = value;
+      } else {
+        mcpEnablementEventBuilder_.setMessage(value);
+      }
+      bitField7_ |= 0x20000000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = MCP_ENABLEMENT_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.McpEnablementEvent mcp_enablement_event = 254 [lazy = true];</code>
+     */
+    public Builder setMcpEnablementEvent(
+        com.google.wireless.android.sdk.stats.McpEnablementEvent.Builder builderForValue) {
+      if (mcpEnablementEventBuilder_ == null) {
+        mcpEnablementEvent_ = builderForValue.build();
+      } else {
+        mcpEnablementEventBuilder_.setMessage(builderForValue.build());
+      }
+      bitField7_ |= 0x20000000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = MCP_ENABLEMENT_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.McpEnablementEvent mcp_enablement_event = 254 [lazy = true];</code>
+     */
+    public Builder mergeMcpEnablementEvent(com.google.wireless.android.sdk.stats.McpEnablementEvent value) {
+      if (mcpEnablementEventBuilder_ == null) {
+        if (((bitField7_ & 0x20000000) != 0) &&
+          mcpEnablementEvent_ != null &&
+          mcpEnablementEvent_ != com.google.wireless.android.sdk.stats.McpEnablementEvent.getDefaultInstance()) {
+          getMcpEnablementEventBuilder().mergeFrom(value);
+        } else {
+          mcpEnablementEvent_ = value;
+        }
+      } else {
+        mcpEnablementEventBuilder_.mergeFrom(value);
+      }
+      bitField7_ |= 0x20000000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = MCP_ENABLEMENT_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.McpEnablementEvent mcp_enablement_event = 254 [lazy = true];</code>
+     */
+    public Builder clearMcpEnablementEvent() {
+      bitField7_ = (bitField7_ & ~0x20000000);
+      mcpEnablementEvent_ = null;
+      if (mcpEnablementEventBuilder_ != null) {
+        mcpEnablementEventBuilder_.dispose();
+        mcpEnablementEventBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = MCP_ENABLEMENT_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.McpEnablementEvent mcp_enablement_event = 254 [lazy = true];</code>
+     */
+    public com.google.wireless.android.sdk.stats.McpEnablementEvent.Builder getMcpEnablementEventBuilder() {
+      bitField7_ |= 0x20000000;
+      onChanged();
+      return getMcpEnablementEventFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * set when kind = MCP_ENABLEMENT_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.McpEnablementEvent mcp_enablement_event = 254 [lazy = true];</code>
+     */
+    public com.google.wireless.android.sdk.stats.McpEnablementEventOrBuilder getMcpEnablementEventOrBuilder() {
+      if (mcpEnablementEventBuilder_ != null) {
+        return mcpEnablementEventBuilder_.getMessageOrBuilder();
+      } else {
+        return mcpEnablementEvent_ == null ?
+            com.google.wireless.android.sdk.stats.McpEnablementEvent.getDefaultInstance() : mcpEnablementEvent_;
+      }
+    }
+    /**
+     * <pre>
+     * set when kind = MCP_ENABLEMENT_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.McpEnablementEvent mcp_enablement_event = 254 [lazy = true];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.McpEnablementEvent, com.google.wireless.android.sdk.stats.McpEnablementEvent.Builder, com.google.wireless.android.sdk.stats.McpEnablementEventOrBuilder> 
+        getMcpEnablementEventFieldBuilder() {
+      if (mcpEnablementEventBuilder_ == null) {
+        mcpEnablementEventBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.wireless.android.sdk.stats.McpEnablementEvent, com.google.wireless.android.sdk.stats.McpEnablementEvent.Builder, com.google.wireless.android.sdk.stats.McpEnablementEventOrBuilder>(
+                getMcpEnablementEvent(),
+                getParentForChildren(),
+                isClean());
+        mcpEnablementEvent_ = null;
+      }
+      return mcpEnablementEventBuilder_;
+    }
+
+    private com.google.wireless.android.sdk.stats.GeminiTelemetryEvent geminiTelemetryEvent_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.GeminiTelemetryEvent, com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.Builder, com.google.wireless.android.sdk.stats.GeminiTelemetryEventOrBuilder> geminiTelemetryEventBuilder_;
+    /**
+     * <pre>
+     * set when kind = GEMINI_TELEMETRY_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.GeminiTelemetryEvent gemini_telemetry_event = 255 [lazy = true];</code>
+     * @return Whether the geminiTelemetryEvent field is set.
+     */
+    public boolean hasGeminiTelemetryEvent() {
+      return ((bitField7_ & 0x40000000) != 0);
+    }
+    /**
+     * <pre>
+     * set when kind = GEMINI_TELEMETRY_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.GeminiTelemetryEvent gemini_telemetry_event = 255 [lazy = true];</code>
+     * @return The geminiTelemetryEvent.
+     */
+    public com.google.wireless.android.sdk.stats.GeminiTelemetryEvent getGeminiTelemetryEvent() {
+      if (geminiTelemetryEventBuilder_ == null) {
+        return geminiTelemetryEvent_ == null ? com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.getDefaultInstance() : geminiTelemetryEvent_;
+      } else {
+        return geminiTelemetryEventBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * set when kind = GEMINI_TELEMETRY_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.GeminiTelemetryEvent gemini_telemetry_event = 255 [lazy = true];</code>
+     */
+    public Builder setGeminiTelemetryEvent(com.google.wireless.android.sdk.stats.GeminiTelemetryEvent value) {
+      if (geminiTelemetryEventBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        geminiTelemetryEvent_ = value;
+      } else {
+        geminiTelemetryEventBuilder_.setMessage(value);
+      }
+      bitField7_ |= 0x40000000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = GEMINI_TELEMETRY_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.GeminiTelemetryEvent gemini_telemetry_event = 255 [lazy = true];</code>
+     */
+    public Builder setGeminiTelemetryEvent(
+        com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.Builder builderForValue) {
+      if (geminiTelemetryEventBuilder_ == null) {
+        geminiTelemetryEvent_ = builderForValue.build();
+      } else {
+        geminiTelemetryEventBuilder_.setMessage(builderForValue.build());
+      }
+      bitField7_ |= 0x40000000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = GEMINI_TELEMETRY_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.GeminiTelemetryEvent gemini_telemetry_event = 255 [lazy = true];</code>
+     */
+    public Builder mergeGeminiTelemetryEvent(com.google.wireless.android.sdk.stats.GeminiTelemetryEvent value) {
+      if (geminiTelemetryEventBuilder_ == null) {
+        if (((bitField7_ & 0x40000000) != 0) &&
+          geminiTelemetryEvent_ != null &&
+          geminiTelemetryEvent_ != com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.getDefaultInstance()) {
+          getGeminiTelemetryEventBuilder().mergeFrom(value);
+        } else {
+          geminiTelemetryEvent_ = value;
+        }
+      } else {
+        geminiTelemetryEventBuilder_.mergeFrom(value);
+      }
+      bitField7_ |= 0x40000000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = GEMINI_TELEMETRY_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.GeminiTelemetryEvent gemini_telemetry_event = 255 [lazy = true];</code>
+     */
+    public Builder clearGeminiTelemetryEvent() {
+      bitField7_ = (bitField7_ & ~0x40000000);
+      geminiTelemetryEvent_ = null;
+      if (geminiTelemetryEventBuilder_ != null) {
+        geminiTelemetryEventBuilder_.dispose();
+        geminiTelemetryEventBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = GEMINI_TELEMETRY_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.GeminiTelemetryEvent gemini_telemetry_event = 255 [lazy = true];</code>
+     */
+    public com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.Builder getGeminiTelemetryEventBuilder() {
+      bitField7_ |= 0x40000000;
+      onChanged();
+      return getGeminiTelemetryEventFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * set when kind = GEMINI_TELEMETRY_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.GeminiTelemetryEvent gemini_telemetry_event = 255 [lazy = true];</code>
+     */
+    public com.google.wireless.android.sdk.stats.GeminiTelemetryEventOrBuilder getGeminiTelemetryEventOrBuilder() {
+      if (geminiTelemetryEventBuilder_ != null) {
+        return geminiTelemetryEventBuilder_.getMessageOrBuilder();
+      } else {
+        return geminiTelemetryEvent_ == null ?
+            com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.getDefaultInstance() : geminiTelemetryEvent_;
+      }
+    }
+    /**
+     * <pre>
+     * set when kind = GEMINI_TELEMETRY_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.GeminiTelemetryEvent gemini_telemetry_event = 255 [lazy = true];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.GeminiTelemetryEvent, com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.Builder, com.google.wireless.android.sdk.stats.GeminiTelemetryEventOrBuilder> 
+        getGeminiTelemetryEventFieldBuilder() {
+      if (geminiTelemetryEventBuilder_ == null) {
+        geminiTelemetryEventBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.wireless.android.sdk.stats.GeminiTelemetryEvent, com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.Builder, com.google.wireless.android.sdk.stats.GeminiTelemetryEventOrBuilder>(
+                getGeminiTelemetryEvent(),
+                getParentForChildren(),
+                isClean());
+        geminiTelemetryEvent_ = null;
+      }
+      return geminiTelemetryEventBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(
