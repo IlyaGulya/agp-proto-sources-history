@@ -28,41 +28,57 @@ public interface SmlConfigurationEventOrBuilder extends
 
   /**
    * <pre>
-   * Whether this user has started Studio Bot onboarding.
+   * Deprecated. Use StudioBotConfigurationEvent.OnboardingEvent instead.
+   * Deprecated in Android Studio 2026.1.3 (Quail 3). Whether this user has
+   * started Studio Bot onboarding.
    * </pre>
    *
-   * <code>optional bool bot_onboarding_started = 4;</code>
+   * <code>optional bool bot_onboarding_started = 4 [deprecated = true];</code>
+   * @deprecated android_studio.SmlConfigurationEvent.bot_onboarding_started is deprecated.
+   *     See studio_stats.proto;l=18369
    * @return Whether the botOnboardingStarted field is set.
    */
-  boolean hasBotOnboardingStarted();
+  @java.lang.Deprecated boolean hasBotOnboardingStarted();
   /**
    * <pre>
-   * Whether this user has started Studio Bot onboarding.
+   * Deprecated. Use StudioBotConfigurationEvent.OnboardingEvent instead.
+   * Deprecated in Android Studio 2026.1.3 (Quail 3). Whether this user has
+   * started Studio Bot onboarding.
    * </pre>
    *
-   * <code>optional bool bot_onboarding_started = 4;</code>
+   * <code>optional bool bot_onboarding_started = 4 [deprecated = true];</code>
+   * @deprecated android_studio.SmlConfigurationEvent.bot_onboarding_started is deprecated.
+   *     See studio_stats.proto;l=18369
    * @return The botOnboardingStarted.
    */
-  boolean getBotOnboardingStarted();
+  @java.lang.Deprecated boolean getBotOnboardingStarted();
 
   /**
    * <pre>
-   * Whether this user has completed Studio Bot onboarding.
+   * Deprecated. Use StudioBotConfigurationEvent.OnboardingEvent instead.
+   * Deprecated in Android Studio 2026.1.3 (Quail 3). Whether this user has
+   * completed Studio Bot onboarding.
    * </pre>
    *
-   * <code>optional bool bot_onboarding_completed = 5;</code>
+   * <code>optional bool bot_onboarding_completed = 5 [deprecated = true];</code>
+   * @deprecated android_studio.SmlConfigurationEvent.bot_onboarding_completed is deprecated.
+   *     See studio_stats.proto;l=18374
    * @return Whether the botOnboardingCompleted field is set.
    */
-  boolean hasBotOnboardingCompleted();
+  @java.lang.Deprecated boolean hasBotOnboardingCompleted();
   /**
    * <pre>
-   * Whether this user has completed Studio Bot onboarding.
+   * Deprecated. Use StudioBotConfigurationEvent.OnboardingEvent instead.
+   * Deprecated in Android Studio 2026.1.3 (Quail 3). Whether this user has
+   * completed Studio Bot onboarding.
    * </pre>
    *
-   * <code>optional bool bot_onboarding_completed = 5;</code>
+   * <code>optional bool bot_onboarding_completed = 5 [deprecated = true];</code>
+   * @deprecated android_studio.SmlConfigurationEvent.bot_onboarding_completed is deprecated.
+   *     See studio_stats.proto;l=18374
    * @return The botOnboardingCompleted.
    */
-  boolean getBotOnboardingCompleted();
+  @java.lang.Deprecated boolean getBotOnboardingCompleted();
 
   /**
    * <pre>
@@ -131,7 +147,7 @@ public interface SmlConfigurationEventOrBuilder extends
    *
    * <code>optional .android_studio.SmlConfigurationEvent.SmlProductVariant product_variant = 7 [deprecated = true];</code>
    * @deprecated android_studio.SmlConfigurationEvent.product_variant is deprecated.
-   *     See studio_stats.proto;l=18151
+   *     See studio_stats.proto;l=18389
    * @return Whether the productVariant field is set.
    */
   @java.lang.Deprecated boolean hasProductVariant();
@@ -145,7 +161,7 @@ public interface SmlConfigurationEventOrBuilder extends
    *
    * <code>optional .android_studio.SmlConfigurationEvent.SmlProductVariant product_variant = 7 [deprecated = true];</code>
    * @deprecated android_studio.SmlConfigurationEvent.product_variant is deprecated.
-   *     See studio_stats.proto;l=18151
+   *     See studio_stats.proto;l=18389
    * @return The productVariant.
    */
   @java.lang.Deprecated com.google.wireless.android.sdk.stats.SmlConfigurationEvent.SmlProductVariant getProductVariant();

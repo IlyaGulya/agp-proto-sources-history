@@ -418,26 +418,34 @@ private static final long serialVersionUID = 0L;
   private boolean botOnboardingStarted_ = false;
   /**
    * <pre>
-   * Whether this user has started Studio Bot onboarding.
+   * Deprecated. Use StudioBotConfigurationEvent.OnboardingEvent instead.
+   * Deprecated in Android Studio 2026.1.3 (Quail 3). Whether this user has
+   * started Studio Bot onboarding.
    * </pre>
    *
-   * <code>optional bool bot_onboarding_started = 4;</code>
+   * <code>optional bool bot_onboarding_started = 4 [deprecated = true];</code>
+   * @deprecated android_studio.SmlConfigurationEvent.bot_onboarding_started is deprecated.
+   *     See studio_stats.proto;l=18369
    * @return Whether the botOnboardingStarted field is set.
    */
   @java.lang.Override
-  public boolean hasBotOnboardingStarted() {
+  @java.lang.Deprecated public boolean hasBotOnboardingStarted() {
     return ((bitField0_ & 0x00000002) != 0);
   }
   /**
    * <pre>
-   * Whether this user has started Studio Bot onboarding.
+   * Deprecated. Use StudioBotConfigurationEvent.OnboardingEvent instead.
+   * Deprecated in Android Studio 2026.1.3 (Quail 3). Whether this user has
+   * started Studio Bot onboarding.
    * </pre>
    *
-   * <code>optional bool bot_onboarding_started = 4;</code>
+   * <code>optional bool bot_onboarding_started = 4 [deprecated = true];</code>
+   * @deprecated android_studio.SmlConfigurationEvent.bot_onboarding_started is deprecated.
+   *     See studio_stats.proto;l=18369
    * @return The botOnboardingStarted.
    */
   @java.lang.Override
-  public boolean getBotOnboardingStarted() {
+  @java.lang.Deprecated public boolean getBotOnboardingStarted() {
     return botOnboardingStarted_;
   }
 
@@ -445,26 +453,34 @@ private static final long serialVersionUID = 0L;
   private boolean botOnboardingCompleted_ = false;
   /**
    * <pre>
-   * Whether this user has completed Studio Bot onboarding.
+   * Deprecated. Use StudioBotConfigurationEvent.OnboardingEvent instead.
+   * Deprecated in Android Studio 2026.1.3 (Quail 3). Whether this user has
+   * completed Studio Bot onboarding.
    * </pre>
    *
-   * <code>optional bool bot_onboarding_completed = 5;</code>
+   * <code>optional bool bot_onboarding_completed = 5 [deprecated = true];</code>
+   * @deprecated android_studio.SmlConfigurationEvent.bot_onboarding_completed is deprecated.
+   *     See studio_stats.proto;l=18374
    * @return Whether the botOnboardingCompleted field is set.
    */
   @java.lang.Override
-  public boolean hasBotOnboardingCompleted() {
+  @java.lang.Deprecated public boolean hasBotOnboardingCompleted() {
     return ((bitField0_ & 0x00000004) != 0);
   }
   /**
    * <pre>
-   * Whether this user has completed Studio Bot onboarding.
+   * Deprecated. Use StudioBotConfigurationEvent.OnboardingEvent instead.
+   * Deprecated in Android Studio 2026.1.3 (Quail 3). Whether this user has
+   * completed Studio Bot onboarding.
    * </pre>
    *
-   * <code>optional bool bot_onboarding_completed = 5;</code>
+   * <code>optional bool bot_onboarding_completed = 5 [deprecated = true];</code>
+   * @deprecated android_studio.SmlConfigurationEvent.bot_onboarding_completed is deprecated.
+   *     See studio_stats.proto;l=18374
    * @return The botOnboardingCompleted.
    */
   @java.lang.Override
-  public boolean getBotOnboardingCompleted() {
+  @java.lang.Deprecated public boolean getBotOnboardingCompleted() {
     return botOnboardingCompleted_;
   }
 
@@ -561,7 +577,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>optional .android_studio.SmlConfigurationEvent.SmlProductVariant product_variant = 7 [deprecated = true];</code>
    * @deprecated android_studio.SmlConfigurationEvent.product_variant is deprecated.
-   *     See studio_stats.proto;l=18151
+   *     See studio_stats.proto;l=18389
    * @return Whether the productVariant field is set.
    */
   @java.lang.Override @java.lang.Deprecated public boolean hasProductVariant() {
@@ -577,7 +593,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>optional .android_studio.SmlConfigurationEvent.SmlProductVariant product_variant = 7 [deprecated = true];</code>
    * @deprecated android_studio.SmlConfigurationEvent.product_variant is deprecated.
-   *     See studio_stats.proto;l=18151
+   *     See studio_stats.proto;l=18389
    * @return The productVariant.
    */
   @java.lang.Override @java.lang.Deprecated public com.google.wireless.android.sdk.stats.SmlConfigurationEvent.SmlProductVariant getProductVariant() {
@@ -1549,38 +1565,50 @@ private static final long serialVersionUID = 0L;
     private boolean botOnboardingStarted_ ;
     /**
      * <pre>
-     * Whether this user has started Studio Bot onboarding.
+     * Deprecated. Use StudioBotConfigurationEvent.OnboardingEvent instead.
+     * Deprecated in Android Studio 2026.1.3 (Quail 3). Whether this user has
+     * started Studio Bot onboarding.
      * </pre>
      *
-     * <code>optional bool bot_onboarding_started = 4;</code>
+     * <code>optional bool bot_onboarding_started = 4 [deprecated = true];</code>
+     * @deprecated android_studio.SmlConfigurationEvent.bot_onboarding_started is deprecated.
+     *     See studio_stats.proto;l=18369
      * @return Whether the botOnboardingStarted field is set.
      */
     @java.lang.Override
-    public boolean hasBotOnboardingStarted() {
+    @java.lang.Deprecated public boolean hasBotOnboardingStarted() {
       return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <pre>
-     * Whether this user has started Studio Bot onboarding.
+     * Deprecated. Use StudioBotConfigurationEvent.OnboardingEvent instead.
+     * Deprecated in Android Studio 2026.1.3 (Quail 3). Whether this user has
+     * started Studio Bot onboarding.
      * </pre>
      *
-     * <code>optional bool bot_onboarding_started = 4;</code>
+     * <code>optional bool bot_onboarding_started = 4 [deprecated = true];</code>
+     * @deprecated android_studio.SmlConfigurationEvent.bot_onboarding_started is deprecated.
+     *     See studio_stats.proto;l=18369
      * @return The botOnboardingStarted.
      */
     @java.lang.Override
-    public boolean getBotOnboardingStarted() {
+    @java.lang.Deprecated public boolean getBotOnboardingStarted() {
       return botOnboardingStarted_;
     }
     /**
      * <pre>
-     * Whether this user has started Studio Bot onboarding.
+     * Deprecated. Use StudioBotConfigurationEvent.OnboardingEvent instead.
+     * Deprecated in Android Studio 2026.1.3 (Quail 3). Whether this user has
+     * started Studio Bot onboarding.
      * </pre>
      *
-     * <code>optional bool bot_onboarding_started = 4;</code>
+     * <code>optional bool bot_onboarding_started = 4 [deprecated = true];</code>
+     * @deprecated android_studio.SmlConfigurationEvent.bot_onboarding_started is deprecated.
+     *     See studio_stats.proto;l=18369
      * @param value The botOnboardingStarted to set.
      * @return This builder for chaining.
      */
-    public Builder setBotOnboardingStarted(boolean value) {
+    @java.lang.Deprecated public Builder setBotOnboardingStarted(boolean value) {
 
       botOnboardingStarted_ = value;
       bitField0_ |= 0x00000002;
@@ -1589,13 +1617,17 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Whether this user has started Studio Bot onboarding.
+     * Deprecated. Use StudioBotConfigurationEvent.OnboardingEvent instead.
+     * Deprecated in Android Studio 2026.1.3 (Quail 3). Whether this user has
+     * started Studio Bot onboarding.
      * </pre>
      *
-     * <code>optional bool bot_onboarding_started = 4;</code>
+     * <code>optional bool bot_onboarding_started = 4 [deprecated = true];</code>
+     * @deprecated android_studio.SmlConfigurationEvent.bot_onboarding_started is deprecated.
+     *     See studio_stats.proto;l=18369
      * @return This builder for chaining.
      */
-    public Builder clearBotOnboardingStarted() {
+    @java.lang.Deprecated public Builder clearBotOnboardingStarted() {
       bitField0_ = (bitField0_ & ~0x00000002);
       botOnboardingStarted_ = false;
       onChanged();
@@ -1605,38 +1637,50 @@ private static final long serialVersionUID = 0L;
     private boolean botOnboardingCompleted_ ;
     /**
      * <pre>
-     * Whether this user has completed Studio Bot onboarding.
+     * Deprecated. Use StudioBotConfigurationEvent.OnboardingEvent instead.
+     * Deprecated in Android Studio 2026.1.3 (Quail 3). Whether this user has
+     * completed Studio Bot onboarding.
      * </pre>
      *
-     * <code>optional bool bot_onboarding_completed = 5;</code>
+     * <code>optional bool bot_onboarding_completed = 5 [deprecated = true];</code>
+     * @deprecated android_studio.SmlConfigurationEvent.bot_onboarding_completed is deprecated.
+     *     See studio_stats.proto;l=18374
      * @return Whether the botOnboardingCompleted field is set.
      */
     @java.lang.Override
-    public boolean hasBotOnboardingCompleted() {
+    @java.lang.Deprecated public boolean hasBotOnboardingCompleted() {
       return ((bitField0_ & 0x00000004) != 0);
     }
     /**
      * <pre>
-     * Whether this user has completed Studio Bot onboarding.
+     * Deprecated. Use StudioBotConfigurationEvent.OnboardingEvent instead.
+     * Deprecated in Android Studio 2026.1.3 (Quail 3). Whether this user has
+     * completed Studio Bot onboarding.
      * </pre>
      *
-     * <code>optional bool bot_onboarding_completed = 5;</code>
+     * <code>optional bool bot_onboarding_completed = 5 [deprecated = true];</code>
+     * @deprecated android_studio.SmlConfigurationEvent.bot_onboarding_completed is deprecated.
+     *     See studio_stats.proto;l=18374
      * @return The botOnboardingCompleted.
      */
     @java.lang.Override
-    public boolean getBotOnboardingCompleted() {
+    @java.lang.Deprecated public boolean getBotOnboardingCompleted() {
       return botOnboardingCompleted_;
     }
     /**
      * <pre>
-     * Whether this user has completed Studio Bot onboarding.
+     * Deprecated. Use StudioBotConfigurationEvent.OnboardingEvent instead.
+     * Deprecated in Android Studio 2026.1.3 (Quail 3). Whether this user has
+     * completed Studio Bot onboarding.
      * </pre>
      *
-     * <code>optional bool bot_onboarding_completed = 5;</code>
+     * <code>optional bool bot_onboarding_completed = 5 [deprecated = true];</code>
+     * @deprecated android_studio.SmlConfigurationEvent.bot_onboarding_completed is deprecated.
+     *     See studio_stats.proto;l=18374
      * @param value The botOnboardingCompleted to set.
      * @return This builder for chaining.
      */
-    public Builder setBotOnboardingCompleted(boolean value) {
+    @java.lang.Deprecated public Builder setBotOnboardingCompleted(boolean value) {
 
       botOnboardingCompleted_ = value;
       bitField0_ |= 0x00000004;
@@ -1645,13 +1689,17 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Whether this user has completed Studio Bot onboarding.
+     * Deprecated. Use StudioBotConfigurationEvent.OnboardingEvent instead.
+     * Deprecated in Android Studio 2026.1.3 (Quail 3). Whether this user has
+     * completed Studio Bot onboarding.
      * </pre>
      *
-     * <code>optional bool bot_onboarding_completed = 5;</code>
+     * <code>optional bool bot_onboarding_completed = 5 [deprecated = true];</code>
+     * @deprecated android_studio.SmlConfigurationEvent.bot_onboarding_completed is deprecated.
+     *     See studio_stats.proto;l=18374
      * @return This builder for chaining.
      */
-    public Builder clearBotOnboardingCompleted() {
+    @java.lang.Deprecated public Builder clearBotOnboardingCompleted() {
       bitField0_ = (bitField0_ & ~0x00000004);
       botOnboardingCompleted_ = false;
       onChanged();
@@ -1837,7 +1885,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional .android_studio.SmlConfigurationEvent.SmlProductVariant product_variant = 7 [deprecated = true];</code>
      * @deprecated android_studio.SmlConfigurationEvent.product_variant is deprecated.
-     *     See studio_stats.proto;l=18151
+     *     See studio_stats.proto;l=18389
      * @return Whether the productVariant field is set.
      */
     @java.lang.Override @java.lang.Deprecated public boolean hasProductVariant() {
@@ -1853,7 +1901,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional .android_studio.SmlConfigurationEvent.SmlProductVariant product_variant = 7 [deprecated = true];</code>
      * @deprecated android_studio.SmlConfigurationEvent.product_variant is deprecated.
-     *     See studio_stats.proto;l=18151
+     *     See studio_stats.proto;l=18389
      * @return The productVariant.
      */
     @java.lang.Override
@@ -1871,7 +1919,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional .android_studio.SmlConfigurationEvent.SmlProductVariant product_variant = 7 [deprecated = true];</code>
      * @deprecated android_studio.SmlConfigurationEvent.product_variant is deprecated.
-     *     See studio_stats.proto;l=18151
+     *     See studio_stats.proto;l=18389
      * @param value The productVariant to set.
      * @return This builder for chaining.
      */
@@ -1894,7 +1942,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional .android_studio.SmlConfigurationEvent.SmlProductVariant product_variant = 7 [deprecated = true];</code>
      * @deprecated android_studio.SmlConfigurationEvent.product_variant is deprecated.
-     *     See studio_stats.proto;l=18151
+     *     See studio_stats.proto;l=18389
      * @return This builder for chaining.
      */
     @java.lang.Deprecated public Builder clearProductVariant() {

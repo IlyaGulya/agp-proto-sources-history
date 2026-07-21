@@ -14,7 +14,7 @@ public interface SmlCompletionEventOrBuilder extends
    *
    * <code>.android_studio.SmlCompletionEvent.CompletionRequest request = 1 [deprecated = true, lazy = true];</code>
    * @deprecated android_studio.SmlCompletionEvent.request is deprecated.
-   *     See studio_stats.proto;l=16944
+   *     See studio_stats.proto;l=17040
    * @return Whether the request field is set.
    */
   @java.lang.Deprecated boolean hasRequest();
@@ -25,7 +25,7 @@ public interface SmlCompletionEventOrBuilder extends
    *
    * <code>.android_studio.SmlCompletionEvent.CompletionRequest request = 1 [deprecated = true, lazy = true];</code>
    * @deprecated android_studio.SmlCompletionEvent.request is deprecated.
-   *     See studio_stats.proto;l=16944
+   *     See studio_stats.proto;l=17040
    * @return The request.
    */
   @java.lang.Deprecated com.google.wireless.android.sdk.stats.SmlCompletionEvent.CompletionRequest getRequest();
@@ -45,7 +45,7 @@ public interface SmlCompletionEventOrBuilder extends
    *
    * <code>.android_studio.SmlCompletionEvent.CompletionResponse response = 2 [deprecated = true, lazy = true];</code>
    * @deprecated android_studio.SmlCompletionEvent.response is deprecated.
-   *     See studio_stats.proto;l=16946
+   *     See studio_stats.proto;l=17042
    * @return Whether the response field is set.
    */
   @java.lang.Deprecated boolean hasResponse();
@@ -56,7 +56,7 @@ public interface SmlCompletionEventOrBuilder extends
    *
    * <code>.android_studio.SmlCompletionEvent.CompletionResponse response = 2 [deprecated = true, lazy = true];</code>
    * @deprecated android_studio.SmlCompletionEvent.response is deprecated.
-   *     See studio_stats.proto;l=16946
+   *     See studio_stats.proto;l=17042
    * @return The response.
    */
   @java.lang.Deprecated com.google.wireless.android.sdk.stats.SmlCompletionEvent.CompletionResponse getResponse();
@@ -76,7 +76,7 @@ public interface SmlCompletionEventOrBuilder extends
    *
    * <code>.android_studio.SmlCompletionEvent.CompletionShown shown = 3 [deprecated = true, lazy = true];</code>
    * @deprecated android_studio.SmlCompletionEvent.shown is deprecated.
-   *     See studio_stats.proto;l=16948
+   *     See studio_stats.proto;l=17044
    * @return Whether the shown field is set.
    */
   @java.lang.Deprecated boolean hasShown();
@@ -87,7 +87,7 @@ public interface SmlCompletionEventOrBuilder extends
    *
    * <code>.android_studio.SmlCompletionEvent.CompletionShown shown = 3 [deprecated = true, lazy = true];</code>
    * @deprecated android_studio.SmlCompletionEvent.shown is deprecated.
-   *     See studio_stats.proto;l=16948
+   *     See studio_stats.proto;l=17044
    * @return The shown.
    */
   @java.lang.Deprecated com.google.wireless.android.sdk.stats.SmlCompletionEvent.CompletionShown getShown();
@@ -107,7 +107,7 @@ public interface SmlCompletionEventOrBuilder extends
    *
    * <code>.android_studio.SmlCompletionEvent.CompletionAccepted accepted = 4 [deprecated = true, lazy = true];</code>
    * @deprecated android_studio.SmlCompletionEvent.accepted is deprecated.
-   *     See studio_stats.proto;l=16950
+   *     See studio_stats.proto;l=17046
    * @return Whether the accepted field is set.
    */
   @java.lang.Deprecated boolean hasAccepted();
@@ -118,7 +118,7 @@ public interface SmlCompletionEventOrBuilder extends
    *
    * <code>.android_studio.SmlCompletionEvent.CompletionAccepted accepted = 4 [deprecated = true, lazy = true];</code>
    * @deprecated android_studio.SmlCompletionEvent.accepted is deprecated.
-   *     See studio_stats.proto;l=16950
+   *     See studio_stats.proto;l=17046
    * @return The accepted.
    */
   @java.lang.Deprecated com.google.wireless.android.sdk.stats.SmlCompletionEvent.CompletionAccepted getAccepted();

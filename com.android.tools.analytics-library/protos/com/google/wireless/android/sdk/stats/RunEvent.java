@@ -246,6 +246,10 @@ private static final long serialVersionUID = 0L;
      * <code>DECLARATIVE_WATCH_FACE = 5;</code>
      */
     DECLARATIVE_WATCH_FACE(5),
+    /**
+     * <code>WEAR_WIDGET = 6;</code>
+     */
+    WEAR_WIDGET(6),
     ;
 
     /**
@@ -272,6 +276,10 @@ private static final long serialVersionUID = 0L;
      * <code>DECLARATIVE_WATCH_FACE = 5;</code>
      */
     public static final int DECLARATIVE_WATCH_FACE_VALUE = 5;
+    /**
+     * <code>WEAR_WIDGET = 6;</code>
+     */
+    public static final int WEAR_WIDGET_VALUE = 6;
 
 
     public final int getNumber() {
@@ -300,6 +308,7 @@ private static final long serialVersionUID = 0L;
         case 3: return TILE;
         case 4: return COMPLICATION;
         case 5: return DECLARATIVE_WATCH_FACE;
+        case 6: return WEAR_WIDGET;
         default: return null;
       }
     }

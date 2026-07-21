@@ -7597,19 +7597,36 @@ private static final long serialVersionUID = 0L;
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>optional .android_studio.GeminiTelemetryEvent.UiEvent.ChangesDrawerEvent changes_drawer_event = 1;</code>
+     * <code>.android_studio.GeminiTelemetryEvent.UiEvent.ChangesDrawerEvent changes_drawer_event = 1;</code>
      * @return Whether the changesDrawerEvent field is set.
      */
     boolean hasChangesDrawerEvent();
     /**
-     * <code>optional .android_studio.GeminiTelemetryEvent.UiEvent.ChangesDrawerEvent changes_drawer_event = 1;</code>
+     * <code>.android_studio.GeminiTelemetryEvent.UiEvent.ChangesDrawerEvent changes_drawer_event = 1;</code>
      * @return The changesDrawerEvent.
      */
     com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.ChangesDrawerEvent getChangesDrawerEvent();
     /**
-     * <code>optional .android_studio.GeminiTelemetryEvent.UiEvent.ChangesDrawerEvent changes_drawer_event = 1;</code>
+     * <code>.android_studio.GeminiTelemetryEvent.UiEvent.ChangesDrawerEvent changes_drawer_event = 1;</code>
      */
     com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.ChangesDrawerEventOrBuilder getChangesDrawerEventOrBuilder();
+
+    /**
+     * <code>.android_studio.GeminiTelemetryEvent.UiEvent.GuidedModeEvent guided_mode_event = 2;</code>
+     * @return Whether the guidedModeEvent field is set.
+     */
+    boolean hasGuidedModeEvent();
+    /**
+     * <code>.android_studio.GeminiTelemetryEvent.UiEvent.GuidedModeEvent guided_mode_event = 2;</code>
+     * @return The guidedModeEvent.
+     */
+    com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.GuidedModeEvent getGuidedModeEvent();
+    /**
+     * <code>.android_studio.GeminiTelemetryEvent.UiEvent.GuidedModeEvent guided_mode_event = 2;</code>
+     */
+    com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.GuidedModeEventOrBuilder getGuidedModeEventOrBuilder();
+
+    com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.EventCase getEventCase();
   }
   /**
    * Protobuf type {@code android_studio.GeminiTelemetryEvent.UiEvent}
@@ -8222,31 +8239,685 @@ private static final long serialVersionUID = 0L;
 
     }
 
-    private int bitField0_;
-    public static final int CHANGES_DRAWER_EVENT_FIELD_NUMBER = 1;
-    private com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.ChangesDrawerEvent changesDrawerEvent_;
+    public interface GuidedModeEventOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:android_studio.GeminiTelemetryEvent.UiEvent.GuidedModeEvent)
+        com.google.protobuf.MessageOrBuilder {
+
+      /**
+       * <code>optional .android_studio.SmlChatBotEvent.PlanningModeEvent planning_mode_event = 1;</code>
+       * @return Whether the planningModeEvent field is set.
+       */
+      boolean hasPlanningModeEvent();
+      /**
+       * <code>optional .android_studio.SmlChatBotEvent.PlanningModeEvent planning_mode_event = 1;</code>
+       * @return The planningModeEvent.
+       */
+      com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent getPlanningModeEvent();
+      /**
+       * <code>optional .android_studio.SmlChatBotEvent.PlanningModeEvent planning_mode_event = 1;</code>
+       */
+      com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEventOrBuilder getPlanningModeEventOrBuilder();
+    }
     /**
-     * <code>optional .android_studio.GeminiTelemetryEvent.UiEvent.ChangesDrawerEvent changes_drawer_event = 1;</code>
+     * Protobuf type {@code android_studio.GeminiTelemetryEvent.UiEvent.GuidedModeEvent}
+     */
+    public static final class GuidedModeEvent extends
+        com.google.protobuf.GeneratedMessageV3 implements
+        // @@protoc_insertion_point(message_implements:android_studio.GeminiTelemetryEvent.UiEvent.GuidedModeEvent)
+        GuidedModeEventOrBuilder {
+    private static final long serialVersionUID = 0L;
+      // Use GuidedModeEvent.newBuilder() to construct.
+      private GuidedModeEvent(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+        super(builder);
+      }
+      private GuidedModeEvent() {
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new GuidedModeEvent();
+      }
+
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_GeminiTelemetryEvent_UiEvent_GuidedModeEvent_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_GeminiTelemetryEvent_UiEvent_GuidedModeEvent_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.GuidedModeEvent.class, com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.GuidedModeEvent.Builder.class);
+      }
+
+      private int bitField0_;
+      public static final int PLANNING_MODE_EVENT_FIELD_NUMBER = 1;
+      private com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent planningModeEvent_;
+      /**
+       * <code>optional .android_studio.SmlChatBotEvent.PlanningModeEvent planning_mode_event = 1;</code>
+       * @return Whether the planningModeEvent field is set.
+       */
+      @java.lang.Override
+      public boolean hasPlanningModeEvent() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>optional .android_studio.SmlChatBotEvent.PlanningModeEvent planning_mode_event = 1;</code>
+       * @return The planningModeEvent.
+       */
+      @java.lang.Override
+      public com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent getPlanningModeEvent() {
+        return planningModeEvent_ == null ? com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.getDefaultInstance() : planningModeEvent_;
+      }
+      /**
+       * <code>optional .android_studio.SmlChatBotEvent.PlanningModeEvent planning_mode_event = 1;</code>
+       */
+      @java.lang.Override
+      public com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEventOrBuilder getPlanningModeEventOrBuilder() {
+        return planningModeEvent_ == null ? com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.getDefaultInstance() : planningModeEvent_;
+      }
+
+      private byte memoizedIsInitialized = -1;
+      @java.lang.Override
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      @java.lang.Override
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        if (((bitField0_ & 0x00000001) != 0)) {
+          output.writeMessage(1, getPlanningModeEvent());
+        }
+        getUnknownFields().writeTo(output);
+      }
+
+      @java.lang.Override
+      public int getSerializedSize() {
+        int size = memoizedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        if (((bitField0_ & 0x00000001) != 0)) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(1, getPlanningModeEvent());
+        }
+        size += getUnknownFields().getSerializedSize();
+        memoizedSize = size;
+        return size;
+      }
+
+      @java.lang.Override
+      public boolean equals(final java.lang.Object obj) {
+        if (obj == this) {
+         return true;
+        }
+        if (!(obj instanceof com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.GuidedModeEvent)) {
+          return super.equals(obj);
+        }
+        com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.GuidedModeEvent other = (com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.GuidedModeEvent) obj;
+
+        if (hasPlanningModeEvent() != other.hasPlanningModeEvent()) return false;
+        if (hasPlanningModeEvent()) {
+          if (!getPlanningModeEvent()
+              .equals(other.getPlanningModeEvent())) return false;
+        }
+        if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+        return true;
+      }
+
+      @java.lang.Override
+      public int hashCode() {
+        if (memoizedHashCode != 0) {
+          return memoizedHashCode;
+        }
+        int hash = 41;
+        hash = (19 * hash) + getDescriptor().hashCode();
+        if (hasPlanningModeEvent()) {
+          hash = (37 * hash) + PLANNING_MODE_EVENT_FIELD_NUMBER;
+          hash = (53 * hash) + getPlanningModeEvent().hashCode();
+        }
+        hash = (29 * hash) + getUnknownFields().hashCode();
+        memoizedHashCode = hash;
+        return hash;
+      }
+
+      public static com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.GuidedModeEvent parseFrom(
+          java.nio.ByteBuffer data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.GuidedModeEvent parseFrom(
+          java.nio.ByteBuffer data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.GuidedModeEvent parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.GuidedModeEvent parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.GuidedModeEvent parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.GuidedModeEvent parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.GuidedModeEvent parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.GuidedModeEvent parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.GuidedModeEvent parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input);
+      }
+      public static com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.GuidedModeEvent parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.GuidedModeEvent parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.GuidedModeEvent parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      @java.lang.Override
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder() {
+        return DEFAULT_INSTANCE.toBuilder();
+      }
+      public static Builder newBuilder(com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.GuidedModeEvent prototype) {
+        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+      }
+      @java.lang.Override
+      public Builder toBuilder() {
+        return this == DEFAULT_INSTANCE
+            ? new Builder() : new Builder().mergeFrom(this);
+      }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * Protobuf type {@code android_studio.GeminiTelemetryEvent.UiEvent.GuidedModeEvent}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:android_studio.GeminiTelemetryEvent.UiEvent.GuidedModeEvent)
+          com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.GuidedModeEventOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_GeminiTelemetryEvent_UiEvent_GuidedModeEvent_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_GeminiTelemetryEvent_UiEvent_GuidedModeEvent_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.GuidedModeEvent.class, com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.GuidedModeEvent.Builder.class);
+        }
+
+        // Construct using com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.GuidedModeEvent.newBuilder()
+        private Builder() {
+          maybeForceBuilderInitialization();
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          super(parent);
+          maybeForceBuilderInitialization();
+        }
+        private void maybeForceBuilderInitialization() {
+          if (com.google.protobuf.GeneratedMessageV3
+                  .alwaysUseFieldBuilders) {
+            getPlanningModeEventFieldBuilder();
+          }
+        }
+        @java.lang.Override
+        public Builder clear() {
+          super.clear();
+          bitField0_ = 0;
+          planningModeEvent_ = null;
+          if (planningModeEventBuilder_ != null) {
+            planningModeEventBuilder_.dispose();
+            planningModeEventBuilder_ = null;
+          }
+          return this;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_GeminiTelemetryEvent_UiEvent_GuidedModeEvent_descriptor;
+        }
+
+        @java.lang.Override
+        public com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.GuidedModeEvent getDefaultInstanceForType() {
+          return com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.GuidedModeEvent.getDefaultInstance();
+        }
+
+        @java.lang.Override
+        public com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.GuidedModeEvent build() {
+          com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.GuidedModeEvent result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        @java.lang.Override
+        public com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.GuidedModeEvent buildPartial() {
+          com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.GuidedModeEvent result = new com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.GuidedModeEvent(this);
+          if (bitField0_ != 0) { buildPartial0(result); }
+          onBuilt();
+          return result;
+        }
+
+        private void buildPartial0(com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.GuidedModeEvent result) {
+          int from_bitField0_ = bitField0_;
+          int to_bitField0_ = 0;
+          if (((from_bitField0_ & 0x00000001) != 0)) {
+            result.planningModeEvent_ = planningModeEventBuilder_ == null
+                ? planningModeEvent_
+                : planningModeEventBuilder_.build();
+            to_bitField0_ |= 0x00000001;
+          }
+          result.bitField0_ |= to_bitField0_;
+        }
+
+        @java.lang.Override
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.GuidedModeEvent) {
+            return mergeFrom((com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.GuidedModeEvent)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.GuidedModeEvent other) {
+          if (other == com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.GuidedModeEvent.getDefaultInstance()) return this;
+          if (other.hasPlanningModeEvent()) {
+            mergePlanningModeEvent(other.getPlanningModeEvent());
+          }
+          this.mergeUnknownFields(other.getUnknownFields());
+          onChanged();
+          return this;
+        }
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        @java.lang.Override
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          if (extensionRegistry == null) {
+            throw new java.lang.NullPointerException();
+          }
+          try {
+            boolean done = false;
+            while (!done) {
+              int tag = input.readTag();
+              switch (tag) {
+                case 0:
+                  done = true;
+                  break;
+                case 10: {
+                  input.readMessage(
+                      getPlanningModeEventFieldBuilder().getBuilder(),
+                      extensionRegistry);
+                  bitField0_ |= 0x00000001;
+                  break;
+                } // case 10
+                default: {
+                  if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                    done = true; // was an endgroup tag
+                  }
+                  break;
+                } // default:
+              } // switch (tag)
+            } // while (!done)
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            throw e.unwrapIOException();
+          } finally {
+            onChanged();
+          } // finally
+          return this;
+        }
+        private int bitField0_;
+
+        private com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent planningModeEvent_;
+        private com.google.protobuf.SingleFieldBuilderV3<
+            com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent, com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.Builder, com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEventOrBuilder> planningModeEventBuilder_;
+        /**
+         * <code>optional .android_studio.SmlChatBotEvent.PlanningModeEvent planning_mode_event = 1;</code>
+         * @return Whether the planningModeEvent field is set.
+         */
+        public boolean hasPlanningModeEvent() {
+          return ((bitField0_ & 0x00000001) != 0);
+        }
+        /**
+         * <code>optional .android_studio.SmlChatBotEvent.PlanningModeEvent planning_mode_event = 1;</code>
+         * @return The planningModeEvent.
+         */
+        public com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent getPlanningModeEvent() {
+          if (planningModeEventBuilder_ == null) {
+            return planningModeEvent_ == null ? com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.getDefaultInstance() : planningModeEvent_;
+          } else {
+            return planningModeEventBuilder_.getMessage();
+          }
+        }
+        /**
+         * <code>optional .android_studio.SmlChatBotEvent.PlanningModeEvent planning_mode_event = 1;</code>
+         */
+        public Builder setPlanningModeEvent(com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent value) {
+          if (planningModeEventBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            planningModeEvent_ = value;
+          } else {
+            planningModeEventBuilder_.setMessage(value);
+          }
+          bitField0_ |= 0x00000001;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>optional .android_studio.SmlChatBotEvent.PlanningModeEvent planning_mode_event = 1;</code>
+         */
+        public Builder setPlanningModeEvent(
+            com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.Builder builderForValue) {
+          if (planningModeEventBuilder_ == null) {
+            planningModeEvent_ = builderForValue.build();
+          } else {
+            planningModeEventBuilder_.setMessage(builderForValue.build());
+          }
+          bitField0_ |= 0x00000001;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>optional .android_studio.SmlChatBotEvent.PlanningModeEvent planning_mode_event = 1;</code>
+         */
+        public Builder mergePlanningModeEvent(com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent value) {
+          if (planningModeEventBuilder_ == null) {
+            if (((bitField0_ & 0x00000001) != 0) &&
+              planningModeEvent_ != null &&
+              planningModeEvent_ != com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.getDefaultInstance()) {
+              getPlanningModeEventBuilder().mergeFrom(value);
+            } else {
+              planningModeEvent_ = value;
+            }
+          } else {
+            planningModeEventBuilder_.mergeFrom(value);
+          }
+          bitField0_ |= 0x00000001;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>optional .android_studio.SmlChatBotEvent.PlanningModeEvent planning_mode_event = 1;</code>
+         */
+        public Builder clearPlanningModeEvent() {
+          bitField0_ = (bitField0_ & ~0x00000001);
+          planningModeEvent_ = null;
+          if (planningModeEventBuilder_ != null) {
+            planningModeEventBuilder_.dispose();
+            planningModeEventBuilder_ = null;
+          }
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>optional .android_studio.SmlChatBotEvent.PlanningModeEvent planning_mode_event = 1;</code>
+         */
+        public com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.Builder getPlanningModeEventBuilder() {
+          bitField0_ |= 0x00000001;
+          onChanged();
+          return getPlanningModeEventFieldBuilder().getBuilder();
+        }
+        /**
+         * <code>optional .android_studio.SmlChatBotEvent.PlanningModeEvent planning_mode_event = 1;</code>
+         */
+        public com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEventOrBuilder getPlanningModeEventOrBuilder() {
+          if (planningModeEventBuilder_ != null) {
+            return planningModeEventBuilder_.getMessageOrBuilder();
+          } else {
+            return planningModeEvent_ == null ?
+                com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.getDefaultInstance() : planningModeEvent_;
+          }
+        }
+        /**
+         * <code>optional .android_studio.SmlChatBotEvent.PlanningModeEvent planning_mode_event = 1;</code>
+         */
+        private com.google.protobuf.SingleFieldBuilderV3<
+            com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent, com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.Builder, com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEventOrBuilder> 
+            getPlanningModeEventFieldBuilder() {
+          if (planningModeEventBuilder_ == null) {
+            planningModeEventBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent, com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.Builder, com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEventOrBuilder>(
+                    getPlanningModeEvent(),
+                    getParentForChildren(),
+                    isClean());
+            planningModeEvent_ = null;
+          }
+          return planningModeEventBuilder_;
+        }
+        @java.lang.Override
+        public final Builder setUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.setUnknownFields(unknownFields);
+        }
+
+        @java.lang.Override
+        public final Builder mergeUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.mergeUnknownFields(unknownFields);
+        }
+
+
+        // @@protoc_insertion_point(builder_scope:android_studio.GeminiTelemetryEvent.UiEvent.GuidedModeEvent)
+      }
+
+      // @@protoc_insertion_point(class_scope:android_studio.GeminiTelemetryEvent.UiEvent.GuidedModeEvent)
+      private static final com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.GuidedModeEvent DEFAULT_INSTANCE;
+      static {
+        DEFAULT_INSTANCE = new com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.GuidedModeEvent();
+      }
+
+      public static com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.GuidedModeEvent getDefaultInstance() {
+        return DEFAULT_INSTANCE;
+      }
+
+      @java.lang.Deprecated public static final com.google.protobuf.Parser<GuidedModeEvent>
+          PARSER = new com.google.protobuf.AbstractParser<GuidedModeEvent>() {
+        @java.lang.Override
+        public GuidedModeEvent parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          Builder builder = newBuilder();
+          try {
+            builder.mergeFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            throw e.setUnfinishedMessage(builder.buildPartial());
+          } catch (com.google.protobuf.UninitializedMessageException e) {
+            throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+          } catch (java.io.IOException e) {
+            throw new com.google.protobuf.InvalidProtocolBufferException(e)
+                .setUnfinishedMessage(builder.buildPartial());
+          }
+          return builder.buildPartial();
+        }
+      };
+
+      public static com.google.protobuf.Parser<GuidedModeEvent> parser() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<GuidedModeEvent> getParserForType() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.GuidedModeEvent getDefaultInstanceForType() {
+        return DEFAULT_INSTANCE;
+      }
+
+    }
+
+    private int bitField0_;
+    private int eventCase_ = 0;
+    @SuppressWarnings("serial")
+    private java.lang.Object event_;
+    public enum EventCase
+        implements com.google.protobuf.Internal.EnumLite,
+            com.google.protobuf.AbstractMessage.InternalOneOfEnum {
+      CHANGES_DRAWER_EVENT(1),
+      GUIDED_MODE_EVENT(2),
+      EVENT_NOT_SET(0);
+      private final int value;
+      private EventCase(int value) {
+        this.value = value;
+      }
+      /**
+       * @param value The number of the enum to look for.
+       * @return The enum associated with the given number.
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static EventCase valueOf(int value) {
+        return forNumber(value);
+      }
+
+      public static EventCase forNumber(int value) {
+        switch (value) {
+          case 1: return CHANGES_DRAWER_EVENT;
+          case 2: return GUIDED_MODE_EVENT;
+          case 0: return EVENT_NOT_SET;
+          default: return null;
+        }
+      }
+      public int getNumber() {
+        return this.value;
+      }
+    };
+
+    public EventCase
+    getEventCase() {
+      return EventCase.forNumber(
+          eventCase_);
+    }
+
+    public static final int CHANGES_DRAWER_EVENT_FIELD_NUMBER = 1;
+    /**
+     * <code>.android_studio.GeminiTelemetryEvent.UiEvent.ChangesDrawerEvent changes_drawer_event = 1;</code>
      * @return Whether the changesDrawerEvent field is set.
      */
     @java.lang.Override
     public boolean hasChangesDrawerEvent() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return eventCase_ == 1;
     }
     /**
-     * <code>optional .android_studio.GeminiTelemetryEvent.UiEvent.ChangesDrawerEvent changes_drawer_event = 1;</code>
+     * <code>.android_studio.GeminiTelemetryEvent.UiEvent.ChangesDrawerEvent changes_drawer_event = 1;</code>
      * @return The changesDrawerEvent.
      */
     @java.lang.Override
     public com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.ChangesDrawerEvent getChangesDrawerEvent() {
-      return changesDrawerEvent_ == null ? com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.ChangesDrawerEvent.getDefaultInstance() : changesDrawerEvent_;
+      if (eventCase_ == 1) {
+         return (com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.ChangesDrawerEvent) event_;
+      }
+      return com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.ChangesDrawerEvent.getDefaultInstance();
     }
     /**
-     * <code>optional .android_studio.GeminiTelemetryEvent.UiEvent.ChangesDrawerEvent changes_drawer_event = 1;</code>
+     * <code>.android_studio.GeminiTelemetryEvent.UiEvent.ChangesDrawerEvent changes_drawer_event = 1;</code>
      */
     @java.lang.Override
     public com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.ChangesDrawerEventOrBuilder getChangesDrawerEventOrBuilder() {
-      return changesDrawerEvent_ == null ? com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.ChangesDrawerEvent.getDefaultInstance() : changesDrawerEvent_;
+      if (eventCase_ == 1) {
+         return (com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.ChangesDrawerEvent) event_;
+      }
+      return com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.ChangesDrawerEvent.getDefaultInstance();
+    }
+
+    public static final int GUIDED_MODE_EVENT_FIELD_NUMBER = 2;
+    /**
+     * <code>.android_studio.GeminiTelemetryEvent.UiEvent.GuidedModeEvent guided_mode_event = 2;</code>
+     * @return Whether the guidedModeEvent field is set.
+     */
+    @java.lang.Override
+    public boolean hasGuidedModeEvent() {
+      return eventCase_ == 2;
+    }
+    /**
+     * <code>.android_studio.GeminiTelemetryEvent.UiEvent.GuidedModeEvent guided_mode_event = 2;</code>
+     * @return The guidedModeEvent.
+     */
+    @java.lang.Override
+    public com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.GuidedModeEvent getGuidedModeEvent() {
+      if (eventCase_ == 2) {
+         return (com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.GuidedModeEvent) event_;
+      }
+      return com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.GuidedModeEvent.getDefaultInstance();
+    }
+    /**
+     * <code>.android_studio.GeminiTelemetryEvent.UiEvent.GuidedModeEvent guided_mode_event = 2;</code>
+     */
+    @java.lang.Override
+    public com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.GuidedModeEventOrBuilder getGuidedModeEventOrBuilder() {
+      if (eventCase_ == 2) {
+         return (com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.GuidedModeEvent) event_;
+      }
+      return com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.GuidedModeEvent.getDefaultInstance();
     }
 
     private byte memoizedIsInitialized = -1;
@@ -8263,8 +8934,11 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
-        output.writeMessage(1, getChangesDrawerEvent());
+      if (eventCase_ == 1) {
+        output.writeMessage(1, (com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.ChangesDrawerEvent) event_);
+      }
+      if (eventCase_ == 2) {
+        output.writeMessage(2, (com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.GuidedModeEvent) event_);
       }
       getUnknownFields().writeTo(output);
     }
@@ -8275,9 +8949,13 @@ private static final long serialVersionUID = 0L;
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (eventCase_ == 1) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(1, getChangesDrawerEvent());
+          .computeMessageSize(1, (com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.ChangesDrawerEvent) event_);
+      }
+      if (eventCase_ == 2) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, (com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.GuidedModeEvent) event_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -8294,10 +8972,18 @@ private static final long serialVersionUID = 0L;
       }
       com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent other = (com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent) obj;
 
-      if (hasChangesDrawerEvent() != other.hasChangesDrawerEvent()) return false;
-      if (hasChangesDrawerEvent()) {
-        if (!getChangesDrawerEvent()
-            .equals(other.getChangesDrawerEvent())) return false;
+      if (!getEventCase().equals(other.getEventCase())) return false;
+      switch (eventCase_) {
+        case 1:
+          if (!getChangesDrawerEvent()
+              .equals(other.getChangesDrawerEvent())) return false;
+          break;
+        case 2:
+          if (!getGuidedModeEvent()
+              .equals(other.getGuidedModeEvent())) return false;
+          break;
+        case 0:
+        default:
       }
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
@@ -8310,9 +8996,17 @@ private static final long serialVersionUID = 0L;
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      if (hasChangesDrawerEvent()) {
-        hash = (37 * hash) + CHANGES_DRAWER_EVENT_FIELD_NUMBER;
-        hash = (53 * hash) + getChangesDrawerEvent().hashCode();
+      switch (eventCase_) {
+        case 1:
+          hash = (37 * hash) + CHANGES_DRAWER_EVENT_FIELD_NUMBER;
+          hash = (53 * hash) + getChangesDrawerEvent().hashCode();
+          break;
+        case 2:
+          hash = (37 * hash) + GUIDED_MODE_EVENT_FIELD_NUMBER;
+          hash = (53 * hash) + getGuidedModeEvent().hashCode();
+          break;
+        case 0:
+        default:
       }
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
@@ -8431,29 +9125,26 @@ private static final long serialVersionUID = 0L;
 
       // Construct using com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getChangesDrawerEventFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
         bitField0_ = 0;
-        changesDrawerEvent_ = null;
         if (changesDrawerEventBuilder_ != null) {
-          changesDrawerEventBuilder_.dispose();
-          changesDrawerEventBuilder_ = null;
+          changesDrawerEventBuilder_.clear();
         }
+        if (guidedModeEventBuilder_ != null) {
+          guidedModeEventBuilder_.clear();
+        }
+        eventCase_ = 0;
+        event_ = null;
         return this;
       }
 
@@ -8481,20 +9172,26 @@ private static final long serialVersionUID = 0L;
       public com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent buildPartial() {
         com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent result = new com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent(this);
         if (bitField0_ != 0) { buildPartial0(result); }
+        buildPartialOneofs(result);
         onBuilt();
         return result;
       }
 
       private void buildPartial0(com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.changesDrawerEvent_ = changesDrawerEventBuilder_ == null
-              ? changesDrawerEvent_
-              : changesDrawerEventBuilder_.build();
-          to_bitField0_ |= 0x00000001;
+      }
+
+      private void buildPartialOneofs(com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent result) {
+        result.eventCase_ = eventCase_;
+        result.event_ = this.event_;
+        if (eventCase_ == 1 &&
+            changesDrawerEventBuilder_ != null) {
+          result.event_ = changesDrawerEventBuilder_.build();
         }
-        result.bitField0_ |= to_bitField0_;
+        if (eventCase_ == 2 &&
+            guidedModeEventBuilder_ != null) {
+          result.event_ = guidedModeEventBuilder_.build();
+        }
       }
 
       @java.lang.Override
@@ -8509,8 +9206,18 @@ private static final long serialVersionUID = 0L;
 
       public Builder mergeFrom(com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent other) {
         if (other == com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.getDefaultInstance()) return this;
-        if (other.hasChangesDrawerEvent()) {
-          mergeChangesDrawerEvent(other.getChangesDrawerEvent());
+        switch (other.getEventCase()) {
+          case CHANGES_DRAWER_EVENT: {
+            mergeChangesDrawerEvent(other.getChangesDrawerEvent());
+            break;
+          }
+          case GUIDED_MODE_EVENT: {
+            mergeGuidedModeEvent(other.getGuidedModeEvent());
+            break;
+          }
+          case EVENT_NOT_SET: {
+            break;
+          }
         }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
@@ -8542,9 +9249,16 @@ private static final long serialVersionUID = 0L;
                 input.readMessage(
                     getChangesDrawerEventFieldBuilder().getBuilder(),
                     extensionRegistry);
-                bitField0_ |= 0x00000001;
+                eventCase_ = 1;
                 break;
               } // case 10
+              case 18: {
+                input.readMessage(
+                    getGuidedModeEventFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                eventCase_ = 2;
+                break;
+              } // case 18
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -8560,125 +9274,305 @@ private static final long serialVersionUID = 0L;
         } // finally
         return this;
       }
+      private int eventCase_ = 0;
+      private java.lang.Object event_;
+      public EventCase
+          getEventCase() {
+        return EventCase.forNumber(
+            eventCase_);
+      }
+
+      public Builder clearEvent() {
+        eventCase_ = 0;
+        event_ = null;
+        onChanged();
+        return this;
+      }
+
       private int bitField0_;
 
-      private com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.ChangesDrawerEvent changesDrawerEvent_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.ChangesDrawerEvent, com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.ChangesDrawerEvent.Builder, com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.ChangesDrawerEventOrBuilder> changesDrawerEventBuilder_;
       /**
-       * <code>optional .android_studio.GeminiTelemetryEvent.UiEvent.ChangesDrawerEvent changes_drawer_event = 1;</code>
+       * <code>.android_studio.GeminiTelemetryEvent.UiEvent.ChangesDrawerEvent changes_drawer_event = 1;</code>
        * @return Whether the changesDrawerEvent field is set.
        */
+      @java.lang.Override
       public boolean hasChangesDrawerEvent() {
-        return ((bitField0_ & 0x00000001) != 0);
+        return eventCase_ == 1;
       }
       /**
-       * <code>optional .android_studio.GeminiTelemetryEvent.UiEvent.ChangesDrawerEvent changes_drawer_event = 1;</code>
+       * <code>.android_studio.GeminiTelemetryEvent.UiEvent.ChangesDrawerEvent changes_drawer_event = 1;</code>
        * @return The changesDrawerEvent.
        */
+      @java.lang.Override
       public com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.ChangesDrawerEvent getChangesDrawerEvent() {
         if (changesDrawerEventBuilder_ == null) {
-          return changesDrawerEvent_ == null ? com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.ChangesDrawerEvent.getDefaultInstance() : changesDrawerEvent_;
+          if (eventCase_ == 1) {
+            return (com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.ChangesDrawerEvent) event_;
+          }
+          return com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.ChangesDrawerEvent.getDefaultInstance();
         } else {
-          return changesDrawerEventBuilder_.getMessage();
+          if (eventCase_ == 1) {
+            return changesDrawerEventBuilder_.getMessage();
+          }
+          return com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.ChangesDrawerEvent.getDefaultInstance();
         }
       }
       /**
-       * <code>optional .android_studio.GeminiTelemetryEvent.UiEvent.ChangesDrawerEvent changes_drawer_event = 1;</code>
+       * <code>.android_studio.GeminiTelemetryEvent.UiEvent.ChangesDrawerEvent changes_drawer_event = 1;</code>
        */
       public Builder setChangesDrawerEvent(com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.ChangesDrawerEvent value) {
         if (changesDrawerEventBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
           }
-          changesDrawerEvent_ = value;
+          event_ = value;
+          onChanged();
         } else {
           changesDrawerEventBuilder_.setMessage(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        eventCase_ = 1;
         return this;
       }
       /**
-       * <code>optional .android_studio.GeminiTelemetryEvent.UiEvent.ChangesDrawerEvent changes_drawer_event = 1;</code>
+       * <code>.android_studio.GeminiTelemetryEvent.UiEvent.ChangesDrawerEvent changes_drawer_event = 1;</code>
        */
       public Builder setChangesDrawerEvent(
           com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.ChangesDrawerEvent.Builder builderForValue) {
         if (changesDrawerEventBuilder_ == null) {
-          changesDrawerEvent_ = builderForValue.build();
+          event_ = builderForValue.build();
+          onChanged();
         } else {
           changesDrawerEventBuilder_.setMessage(builderForValue.build());
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        eventCase_ = 1;
         return this;
       }
       /**
-       * <code>optional .android_studio.GeminiTelemetryEvent.UiEvent.ChangesDrawerEvent changes_drawer_event = 1;</code>
+       * <code>.android_studio.GeminiTelemetryEvent.UiEvent.ChangesDrawerEvent changes_drawer_event = 1;</code>
        */
       public Builder mergeChangesDrawerEvent(com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.ChangesDrawerEvent value) {
         if (changesDrawerEventBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) != 0) &&
-            changesDrawerEvent_ != null &&
-            changesDrawerEvent_ != com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.ChangesDrawerEvent.getDefaultInstance()) {
-            getChangesDrawerEventBuilder().mergeFrom(value);
+          if (eventCase_ == 1 &&
+              event_ != com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.ChangesDrawerEvent.getDefaultInstance()) {
+            event_ = com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.ChangesDrawerEvent.newBuilder((com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.ChangesDrawerEvent) event_)
+                .mergeFrom(value).buildPartial();
           } else {
-            changesDrawerEvent_ = value;
+            event_ = value;
           }
+          onChanged();
         } else {
-          changesDrawerEventBuilder_.mergeFrom(value);
+          if (eventCase_ == 1) {
+            changesDrawerEventBuilder_.mergeFrom(value);
+          } else {
+            changesDrawerEventBuilder_.setMessage(value);
+          }
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        eventCase_ = 1;
         return this;
       }
       /**
-       * <code>optional .android_studio.GeminiTelemetryEvent.UiEvent.ChangesDrawerEvent changes_drawer_event = 1;</code>
+       * <code>.android_studio.GeminiTelemetryEvent.UiEvent.ChangesDrawerEvent changes_drawer_event = 1;</code>
        */
       public Builder clearChangesDrawerEvent() {
-        bitField0_ = (bitField0_ & ~0x00000001);
-        changesDrawerEvent_ = null;
-        if (changesDrawerEventBuilder_ != null) {
-          changesDrawerEventBuilder_.dispose();
-          changesDrawerEventBuilder_ = null;
+        if (changesDrawerEventBuilder_ == null) {
+          if (eventCase_ == 1) {
+            eventCase_ = 0;
+            event_ = null;
+            onChanged();
+          }
+        } else {
+          if (eventCase_ == 1) {
+            eventCase_ = 0;
+            event_ = null;
+          }
+          changesDrawerEventBuilder_.clear();
         }
-        onChanged();
         return this;
       }
       /**
-       * <code>optional .android_studio.GeminiTelemetryEvent.UiEvent.ChangesDrawerEvent changes_drawer_event = 1;</code>
+       * <code>.android_studio.GeminiTelemetryEvent.UiEvent.ChangesDrawerEvent changes_drawer_event = 1;</code>
        */
       public com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.ChangesDrawerEvent.Builder getChangesDrawerEventBuilder() {
-        bitField0_ |= 0x00000001;
-        onChanged();
         return getChangesDrawerEventFieldBuilder().getBuilder();
       }
       /**
-       * <code>optional .android_studio.GeminiTelemetryEvent.UiEvent.ChangesDrawerEvent changes_drawer_event = 1;</code>
+       * <code>.android_studio.GeminiTelemetryEvent.UiEvent.ChangesDrawerEvent changes_drawer_event = 1;</code>
        */
+      @java.lang.Override
       public com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.ChangesDrawerEventOrBuilder getChangesDrawerEventOrBuilder() {
-        if (changesDrawerEventBuilder_ != null) {
+        if ((eventCase_ == 1) && (changesDrawerEventBuilder_ != null)) {
           return changesDrawerEventBuilder_.getMessageOrBuilder();
         } else {
-          return changesDrawerEvent_ == null ?
-              com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.ChangesDrawerEvent.getDefaultInstance() : changesDrawerEvent_;
+          if (eventCase_ == 1) {
+            return (com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.ChangesDrawerEvent) event_;
+          }
+          return com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.ChangesDrawerEvent.getDefaultInstance();
         }
       }
       /**
-       * <code>optional .android_studio.GeminiTelemetryEvent.UiEvent.ChangesDrawerEvent changes_drawer_event = 1;</code>
+       * <code>.android_studio.GeminiTelemetryEvent.UiEvent.ChangesDrawerEvent changes_drawer_event = 1;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.ChangesDrawerEvent, com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.ChangesDrawerEvent.Builder, com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.ChangesDrawerEventOrBuilder> 
           getChangesDrawerEventFieldBuilder() {
         if (changesDrawerEventBuilder_ == null) {
+          if (!(eventCase_ == 1)) {
+            event_ = com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.ChangesDrawerEvent.getDefaultInstance();
+          }
           changesDrawerEventBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
               com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.ChangesDrawerEvent, com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.ChangesDrawerEvent.Builder, com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.ChangesDrawerEventOrBuilder>(
-                  getChangesDrawerEvent(),
+                  (com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.ChangesDrawerEvent) event_,
                   getParentForChildren(),
                   isClean());
-          changesDrawerEvent_ = null;
+          event_ = null;
         }
+        eventCase_ = 1;
+        onChanged();
         return changesDrawerEventBuilder_;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.GuidedModeEvent, com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.GuidedModeEvent.Builder, com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.GuidedModeEventOrBuilder> guidedModeEventBuilder_;
+      /**
+       * <code>.android_studio.GeminiTelemetryEvent.UiEvent.GuidedModeEvent guided_mode_event = 2;</code>
+       * @return Whether the guidedModeEvent field is set.
+       */
+      @java.lang.Override
+      public boolean hasGuidedModeEvent() {
+        return eventCase_ == 2;
+      }
+      /**
+       * <code>.android_studio.GeminiTelemetryEvent.UiEvent.GuidedModeEvent guided_mode_event = 2;</code>
+       * @return The guidedModeEvent.
+       */
+      @java.lang.Override
+      public com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.GuidedModeEvent getGuidedModeEvent() {
+        if (guidedModeEventBuilder_ == null) {
+          if (eventCase_ == 2) {
+            return (com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.GuidedModeEvent) event_;
+          }
+          return com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.GuidedModeEvent.getDefaultInstance();
+        } else {
+          if (eventCase_ == 2) {
+            return guidedModeEventBuilder_.getMessage();
+          }
+          return com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.GuidedModeEvent.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.android_studio.GeminiTelemetryEvent.UiEvent.GuidedModeEvent guided_mode_event = 2;</code>
+       */
+      public Builder setGuidedModeEvent(com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.GuidedModeEvent value) {
+        if (guidedModeEventBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          event_ = value;
+          onChanged();
+        } else {
+          guidedModeEventBuilder_.setMessage(value);
+        }
+        eventCase_ = 2;
+        return this;
+      }
+      /**
+       * <code>.android_studio.GeminiTelemetryEvent.UiEvent.GuidedModeEvent guided_mode_event = 2;</code>
+       */
+      public Builder setGuidedModeEvent(
+          com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.GuidedModeEvent.Builder builderForValue) {
+        if (guidedModeEventBuilder_ == null) {
+          event_ = builderForValue.build();
+          onChanged();
+        } else {
+          guidedModeEventBuilder_.setMessage(builderForValue.build());
+        }
+        eventCase_ = 2;
+        return this;
+      }
+      /**
+       * <code>.android_studio.GeminiTelemetryEvent.UiEvent.GuidedModeEvent guided_mode_event = 2;</code>
+       */
+      public Builder mergeGuidedModeEvent(com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.GuidedModeEvent value) {
+        if (guidedModeEventBuilder_ == null) {
+          if (eventCase_ == 2 &&
+              event_ != com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.GuidedModeEvent.getDefaultInstance()) {
+            event_ = com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.GuidedModeEvent.newBuilder((com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.GuidedModeEvent) event_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            event_ = value;
+          }
+          onChanged();
+        } else {
+          if (eventCase_ == 2) {
+            guidedModeEventBuilder_.mergeFrom(value);
+          } else {
+            guidedModeEventBuilder_.setMessage(value);
+          }
+        }
+        eventCase_ = 2;
+        return this;
+      }
+      /**
+       * <code>.android_studio.GeminiTelemetryEvent.UiEvent.GuidedModeEvent guided_mode_event = 2;</code>
+       */
+      public Builder clearGuidedModeEvent() {
+        if (guidedModeEventBuilder_ == null) {
+          if (eventCase_ == 2) {
+            eventCase_ = 0;
+            event_ = null;
+            onChanged();
+          }
+        } else {
+          if (eventCase_ == 2) {
+            eventCase_ = 0;
+            event_ = null;
+          }
+          guidedModeEventBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>.android_studio.GeminiTelemetryEvent.UiEvent.GuidedModeEvent guided_mode_event = 2;</code>
+       */
+      public com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.GuidedModeEvent.Builder getGuidedModeEventBuilder() {
+        return getGuidedModeEventFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.android_studio.GeminiTelemetryEvent.UiEvent.GuidedModeEvent guided_mode_event = 2;</code>
+       */
+      @java.lang.Override
+      public com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.GuidedModeEventOrBuilder getGuidedModeEventOrBuilder() {
+        if ((eventCase_ == 2) && (guidedModeEventBuilder_ != null)) {
+          return guidedModeEventBuilder_.getMessageOrBuilder();
+        } else {
+          if (eventCase_ == 2) {
+            return (com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.GuidedModeEvent) event_;
+          }
+          return com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.GuidedModeEvent.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.android_studio.GeminiTelemetryEvent.UiEvent.GuidedModeEvent guided_mode_event = 2;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.GuidedModeEvent, com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.GuidedModeEvent.Builder, com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.GuidedModeEventOrBuilder> 
+          getGuidedModeEventFieldBuilder() {
+        if (guidedModeEventBuilder_ == null) {
+          if (!(eventCase_ == 2)) {
+            event_ = com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.GuidedModeEvent.getDefaultInstance();
+          }
+          guidedModeEventBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.GuidedModeEvent, com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.GuidedModeEvent.Builder, com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.GuidedModeEventOrBuilder>(
+                  (com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.GuidedModeEvent) event_,
+                  getParentForChildren(),
+                  isClean());
+          event_ = null;
+        }
+        eventCase_ = 2;
+        onChanged();
+        return guidedModeEventBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -10708,6 +11602,33 @@ private static final long serialVersionUID = 0L;
        */
       com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.ReadFileToolCallDataOrBuilder getReadFileToolCallDataOrBuilder();
 
+      /**
+       * <pre>
+       * Data for a set_plan_state tool call.
+       * </pre>
+       *
+       * <code>.android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SetPlanStateCallData set_plan_state_call_data = 14;</code>
+       * @return Whether the setPlanStateCallData field is set.
+       */
+      boolean hasSetPlanStateCallData();
+      /**
+       * <pre>
+       * Data for a set_plan_state tool call.
+       * </pre>
+       *
+       * <code>.android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SetPlanStateCallData set_plan_state_call_data = 14;</code>
+       * @return The setPlanStateCallData.
+       */
+      com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SetPlanStateCallData getSetPlanStateCallData();
+      /**
+       * <pre>
+       * Data for a set_plan_state tool call.
+       * </pre>
+       *
+       * <code>.android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SetPlanStateCallData set_plan_state_call_data = 14;</code>
+       */
+      com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SetPlanStateCallDataOrBuilder getSetPlanStateCallDataOrBuilder();
+
       com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.ToolSpecificMetadataCase getToolSpecificMetadataCase();
     }
     /**
@@ -11558,6 +12479,175 @@ private static final long serialVersionUID = 0L;
         }
 
         // @@protoc_insertion_point(enum_scope:android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.ResponseStatus)
+      }
+
+      /**
+       * <pre>
+       * The state of the planner during tool execution.
+       * </pre>
+       *
+       * Protobuf enum {@code android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.PlannerState}
+       */
+      public enum PlannerState
+          implements com.google.protobuf.ProtocolMessageEnum {
+        /**
+         * <pre>
+         * Unknown or unspecified state.
+         * </pre>
+         *
+         * <code>UNKNOWN_PLANNER_STATE = 0;</code>
+         */
+        UNKNOWN_PLANNER_STATE(0),
+        /**
+         * <pre>
+         * Initial state — no plan is active for this conversation.
+         * </pre>
+         *
+         * <code>PLANNER_STATE_IDLE = 1;</code>
+         */
+        PLANNER_STATE_IDLE(1),
+        /**
+         * <pre>
+         * The user is reviewing / refining the generated plan before execution
+         * begins.
+         * </pre>
+         *
+         * <code>PLANNER_STATE_REFINING = 2;</code>
+         */
+        PLANNER_STATE_REFINING(2),
+        /**
+         * <pre>
+         * The agent is executing the plan.
+         * </pre>
+         *
+         * <code>PLANNER_STATE_EXECUTING = 3;</code>
+         */
+        PLANNER_STATE_EXECUTING(3),
+        /**
+         * <pre>
+         * The agent has finished executing all steps.
+         * </pre>
+         *
+         * <code>PLANNER_STATE_COMPLETED = 4;</code>
+         */
+        PLANNER_STATE_COMPLETED(4),
+        ;
+
+        /**
+         * <pre>
+         * Unknown or unspecified state.
+         * </pre>
+         *
+         * <code>UNKNOWN_PLANNER_STATE = 0;</code>
+         */
+        public static final int UNKNOWN_PLANNER_STATE_VALUE = 0;
+        /**
+         * <pre>
+         * Initial state — no plan is active for this conversation.
+         * </pre>
+         *
+         * <code>PLANNER_STATE_IDLE = 1;</code>
+         */
+        public static final int PLANNER_STATE_IDLE_VALUE = 1;
+        /**
+         * <pre>
+         * The user is reviewing / refining the generated plan before execution
+         * begins.
+         * </pre>
+         *
+         * <code>PLANNER_STATE_REFINING = 2;</code>
+         */
+        public static final int PLANNER_STATE_REFINING_VALUE = 2;
+        /**
+         * <pre>
+         * The agent is executing the plan.
+         * </pre>
+         *
+         * <code>PLANNER_STATE_EXECUTING = 3;</code>
+         */
+        public static final int PLANNER_STATE_EXECUTING_VALUE = 3;
+        /**
+         * <pre>
+         * The agent has finished executing all steps.
+         * </pre>
+         *
+         * <code>PLANNER_STATE_COMPLETED = 4;</code>
+         */
+        public static final int PLANNER_STATE_COMPLETED_VALUE = 4;
+
+
+        public final int getNumber() {
+          return value;
+        }
+
+        /**
+         * @param value The numeric wire value of the corresponding enum entry.
+         * @return The enum associated with the given numeric wire value.
+         * @deprecated Use {@link #forNumber(int)} instead.
+         */
+        @java.lang.Deprecated
+        public static PlannerState valueOf(int value) {
+          return forNumber(value);
+        }
+
+        /**
+         * @param value The numeric wire value of the corresponding enum entry.
+         * @return The enum associated with the given numeric wire value.
+         */
+        public static PlannerState forNumber(int value) {
+          switch (value) {
+            case 0: return UNKNOWN_PLANNER_STATE;
+            case 1: return PLANNER_STATE_IDLE;
+            case 2: return PLANNER_STATE_REFINING;
+            case 3: return PLANNER_STATE_EXECUTING;
+            case 4: return PLANNER_STATE_COMPLETED;
+            default: return null;
+          }
+        }
+
+        public static com.google.protobuf.Internal.EnumLiteMap<PlannerState>
+            internalGetValueMap() {
+          return internalValueMap;
+        }
+        private static final com.google.protobuf.Internal.EnumLiteMap<
+            PlannerState> internalValueMap =
+              new com.google.protobuf.Internal.EnumLiteMap<PlannerState>() {
+                public PlannerState findValueByNumber(int number) {
+                  return PlannerState.forNumber(number);
+                }
+              };
+
+        public final com.google.protobuf.Descriptors.EnumValueDescriptor
+            getValueDescriptor() {
+          return getDescriptor().getValues().get(ordinal());
+        }
+        public final com.google.protobuf.Descriptors.EnumDescriptor
+            getDescriptorForType() {
+          return getDescriptor();
+        }
+        public static final com.google.protobuf.Descriptors.EnumDescriptor
+            getDescriptor() {
+          return com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.getDescriptor().getEnumTypes().get(2);
+        }
+
+        private static final PlannerState[] VALUES = values();
+
+        public static PlannerState valueOf(
+            com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+          if (desc.getType() != getDescriptor()) {
+            throw new java.lang.IllegalArgumentException(
+              "EnumValueDescriptor is not for this type.");
+          }
+          return VALUES[desc.getIndex()];
+        }
+
+        private final int value;
+
+        private PlannerState(int value) {
+          this.value = value;
+        }
+
+        // @@protoc_insertion_point(enum_scope:android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.PlannerState)
       }
 
       public interface SearchArgumentsOrBuilder extends
@@ -21643,6 +22733,593 @@ private static final long serialVersionUID = 0L;
 
       }
 
+      public interface SetPlanStateCallDataOrBuilder extends
+          // @@protoc_insertion_point(interface_extends:android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SetPlanStateCallData)
+          com.google.protobuf.MessageOrBuilder {
+
+        /**
+         * <code>optional .android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.PlannerState prev_planner_state = 1;</code>
+         * @return Whether the prevPlannerState field is set.
+         */
+        boolean hasPrevPlannerState();
+        /**
+         * <code>optional .android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.PlannerState prev_planner_state = 1;</code>
+         * @return The prevPlannerState.
+         */
+        com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.PlannerState getPrevPlannerState();
+
+        /**
+         * <code>optional .android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.PlannerState curr_planner_state = 2;</code>
+         * @return Whether the currPlannerState field is set.
+         */
+        boolean hasCurrPlannerState();
+        /**
+         * <code>optional .android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.PlannerState curr_planner_state = 2;</code>
+         * @return The currPlannerState.
+         */
+        com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.PlannerState getCurrPlannerState();
+      }
+      /**
+       * Protobuf type {@code android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SetPlanStateCallData}
+       */
+      public static final class SetPlanStateCallData extends
+          com.google.protobuf.GeneratedMessageV3 implements
+          // @@protoc_insertion_point(message_implements:android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SetPlanStateCallData)
+          SetPlanStateCallDataOrBuilder {
+      private static final long serialVersionUID = 0L;
+        // Use SetPlanStateCallData.newBuilder() to construct.
+        private SetPlanStateCallData(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+          super(builder);
+        }
+        private SetPlanStateCallData() {
+          prevPlannerState_ = 0;
+          currPlannerState_ = 0;
+        }
+
+        @java.lang.Override
+        @SuppressWarnings({"unused"})
+        protected java.lang.Object newInstance(
+            UnusedPrivateParameter unused) {
+          return new SetPlanStateCallData();
+        }
+
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_GeminiTelemetryEvent_AgentEvent_ToolExecutionSpan_SetPlanStateCallData_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_GeminiTelemetryEvent_AgentEvent_ToolExecutionSpan_SetPlanStateCallData_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SetPlanStateCallData.class, com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SetPlanStateCallData.Builder.class);
+        }
+
+        private int bitField0_;
+        public static final int PREV_PLANNER_STATE_FIELD_NUMBER = 1;
+        private int prevPlannerState_ = 0;
+        /**
+         * <code>optional .android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.PlannerState prev_planner_state = 1;</code>
+         * @return Whether the prevPlannerState field is set.
+         */
+        @java.lang.Override public boolean hasPrevPlannerState() {
+          return ((bitField0_ & 0x00000001) != 0);
+        }
+        /**
+         * <code>optional .android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.PlannerState prev_planner_state = 1;</code>
+         * @return The prevPlannerState.
+         */
+        @java.lang.Override public com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.PlannerState getPrevPlannerState() {
+          com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.PlannerState result = com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.PlannerState.forNumber(prevPlannerState_);
+          return result == null ? com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.PlannerState.UNKNOWN_PLANNER_STATE : result;
+        }
+
+        public static final int CURR_PLANNER_STATE_FIELD_NUMBER = 2;
+        private int currPlannerState_ = 0;
+        /**
+         * <code>optional .android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.PlannerState curr_planner_state = 2;</code>
+         * @return Whether the currPlannerState field is set.
+         */
+        @java.lang.Override public boolean hasCurrPlannerState() {
+          return ((bitField0_ & 0x00000002) != 0);
+        }
+        /**
+         * <code>optional .android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.PlannerState curr_planner_state = 2;</code>
+         * @return The currPlannerState.
+         */
+        @java.lang.Override public com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.PlannerState getCurrPlannerState() {
+          com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.PlannerState result = com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.PlannerState.forNumber(currPlannerState_);
+          return result == null ? com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.PlannerState.UNKNOWN_PLANNER_STATE : result;
+        }
+
+        private byte memoizedIsInitialized = -1;
+        @java.lang.Override
+        public final boolean isInitialized() {
+          byte isInitialized = memoizedIsInitialized;
+          if (isInitialized == 1) return true;
+          if (isInitialized == 0) return false;
+
+          memoizedIsInitialized = 1;
+          return true;
+        }
+
+        @java.lang.Override
+        public void writeTo(com.google.protobuf.CodedOutputStream output)
+                            throws java.io.IOException {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            output.writeEnum(1, prevPlannerState_);
+          }
+          if (((bitField0_ & 0x00000002) != 0)) {
+            output.writeEnum(2, currPlannerState_);
+          }
+          getUnknownFields().writeTo(output);
+        }
+
+        @java.lang.Override
+        public int getSerializedSize() {
+          int size = memoizedSize;
+          if (size != -1) return size;
+
+          size = 0;
+          if (((bitField0_ & 0x00000001) != 0)) {
+            size += com.google.protobuf.CodedOutputStream
+              .computeEnumSize(1, prevPlannerState_);
+          }
+          if (((bitField0_ & 0x00000002) != 0)) {
+            size += com.google.protobuf.CodedOutputStream
+              .computeEnumSize(2, currPlannerState_);
+          }
+          size += getUnknownFields().getSerializedSize();
+          memoizedSize = size;
+          return size;
+        }
+
+        @java.lang.Override
+        public boolean equals(final java.lang.Object obj) {
+          if (obj == this) {
+           return true;
+          }
+          if (!(obj instanceof com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SetPlanStateCallData)) {
+            return super.equals(obj);
+          }
+          com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SetPlanStateCallData other = (com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SetPlanStateCallData) obj;
+
+          if (hasPrevPlannerState() != other.hasPrevPlannerState()) return false;
+          if (hasPrevPlannerState()) {
+            if (prevPlannerState_ != other.prevPlannerState_) return false;
+          }
+          if (hasCurrPlannerState() != other.hasCurrPlannerState()) return false;
+          if (hasCurrPlannerState()) {
+            if (currPlannerState_ != other.currPlannerState_) return false;
+          }
+          if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+          return true;
+        }
+
+        @java.lang.Override
+        public int hashCode() {
+          if (memoizedHashCode != 0) {
+            return memoizedHashCode;
+          }
+          int hash = 41;
+          hash = (19 * hash) + getDescriptor().hashCode();
+          if (hasPrevPlannerState()) {
+            hash = (37 * hash) + PREV_PLANNER_STATE_FIELD_NUMBER;
+            hash = (53 * hash) + prevPlannerState_;
+          }
+          if (hasCurrPlannerState()) {
+            hash = (37 * hash) + CURR_PLANNER_STATE_FIELD_NUMBER;
+            hash = (53 * hash) + currPlannerState_;
+          }
+          hash = (29 * hash) + getUnknownFields().hashCode();
+          memoizedHashCode = hash;
+          return hash;
+        }
+
+        public static com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SetPlanStateCallData parseFrom(
+            java.nio.ByteBuffer data)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return PARSER.parseFrom(data);
+        }
+        public static com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SetPlanStateCallData parseFrom(
+            java.nio.ByteBuffer data,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return PARSER.parseFrom(data, extensionRegistry);
+        }
+        public static com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SetPlanStateCallData parseFrom(
+            com.google.protobuf.ByteString data)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return PARSER.parseFrom(data);
+        }
+        public static com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SetPlanStateCallData parseFrom(
+            com.google.protobuf.ByteString data,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return PARSER.parseFrom(data, extensionRegistry);
+        }
+        public static com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SetPlanStateCallData parseFrom(byte[] data)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return PARSER.parseFrom(data);
+        }
+        public static com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SetPlanStateCallData parseFrom(
+            byte[] data,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return PARSER.parseFrom(data, extensionRegistry);
+        }
+        public static com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SetPlanStateCallData parseFrom(java.io.InputStream input)
+            throws java.io.IOException {
+          return com.google.protobuf.GeneratedMessageV3
+              .parseWithIOException(PARSER, input);
+        }
+        public static com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SetPlanStateCallData parseFrom(
+            java.io.InputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          return com.google.protobuf.GeneratedMessageV3
+              .parseWithIOException(PARSER, input, extensionRegistry);
+        }
+        public static com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SetPlanStateCallData parseDelimitedFrom(java.io.InputStream input)
+            throws java.io.IOException {
+          return com.google.protobuf.GeneratedMessageV3
+              .parseDelimitedWithIOException(PARSER, input);
+        }
+        public static com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SetPlanStateCallData parseDelimitedFrom(
+            java.io.InputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          return com.google.protobuf.GeneratedMessageV3
+              .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+        }
+        public static com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SetPlanStateCallData parseFrom(
+            com.google.protobuf.CodedInputStream input)
+            throws java.io.IOException {
+          return com.google.protobuf.GeneratedMessageV3
+              .parseWithIOException(PARSER, input);
+        }
+        public static com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SetPlanStateCallData parseFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          return com.google.protobuf.GeneratedMessageV3
+              .parseWithIOException(PARSER, input, extensionRegistry);
+        }
+
+        @java.lang.Override
+        public Builder newBuilderForType() { return newBuilder(); }
+        public static Builder newBuilder() {
+          return DEFAULT_INSTANCE.toBuilder();
+        }
+        public static Builder newBuilder(com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SetPlanStateCallData prototype) {
+          return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+        }
+        @java.lang.Override
+        public Builder toBuilder() {
+          return this == DEFAULT_INSTANCE
+              ? new Builder() : new Builder().mergeFrom(this);
+        }
+
+        @java.lang.Override
+        protected Builder newBuilderForType(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          Builder builder = new Builder(parent);
+          return builder;
+        }
+        /**
+         * Protobuf type {@code android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SetPlanStateCallData}
+         */
+        public static final class Builder extends
+            com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+            // @@protoc_insertion_point(builder_implements:android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SetPlanStateCallData)
+            com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SetPlanStateCallDataOrBuilder {
+          public static final com.google.protobuf.Descriptors.Descriptor
+              getDescriptor() {
+            return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_GeminiTelemetryEvent_AgentEvent_ToolExecutionSpan_SetPlanStateCallData_descriptor;
+          }
+
+          @java.lang.Override
+          protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+              internalGetFieldAccessorTable() {
+            return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_GeminiTelemetryEvent_AgentEvent_ToolExecutionSpan_SetPlanStateCallData_fieldAccessorTable
+                .ensureFieldAccessorsInitialized(
+                    com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SetPlanStateCallData.class, com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SetPlanStateCallData.Builder.class);
+          }
+
+          // Construct using com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SetPlanStateCallData.newBuilder()
+          private Builder() {
+
+          }
+
+          private Builder(
+              com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+            super(parent);
+
+          }
+          @java.lang.Override
+          public Builder clear() {
+            super.clear();
+            bitField0_ = 0;
+            prevPlannerState_ = 0;
+            currPlannerState_ = 0;
+            return this;
+          }
+
+          @java.lang.Override
+          public com.google.protobuf.Descriptors.Descriptor
+              getDescriptorForType() {
+            return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_GeminiTelemetryEvent_AgentEvent_ToolExecutionSpan_SetPlanStateCallData_descriptor;
+          }
+
+          @java.lang.Override
+          public com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SetPlanStateCallData getDefaultInstanceForType() {
+            return com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SetPlanStateCallData.getDefaultInstance();
+          }
+
+          @java.lang.Override
+          public com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SetPlanStateCallData build() {
+            com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SetPlanStateCallData result = buildPartial();
+            if (!result.isInitialized()) {
+              throw newUninitializedMessageException(result);
+            }
+            return result;
+          }
+
+          @java.lang.Override
+          public com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SetPlanStateCallData buildPartial() {
+            com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SetPlanStateCallData result = new com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SetPlanStateCallData(this);
+            if (bitField0_ != 0) { buildPartial0(result); }
+            onBuilt();
+            return result;
+          }
+
+          private void buildPartial0(com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SetPlanStateCallData result) {
+            int from_bitField0_ = bitField0_;
+            int to_bitField0_ = 0;
+            if (((from_bitField0_ & 0x00000001) != 0)) {
+              result.prevPlannerState_ = prevPlannerState_;
+              to_bitField0_ |= 0x00000001;
+            }
+            if (((from_bitField0_ & 0x00000002) != 0)) {
+              result.currPlannerState_ = currPlannerState_;
+              to_bitField0_ |= 0x00000002;
+            }
+            result.bitField0_ |= to_bitField0_;
+          }
+
+          @java.lang.Override
+          public Builder mergeFrom(com.google.protobuf.Message other) {
+            if (other instanceof com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SetPlanStateCallData) {
+              return mergeFrom((com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SetPlanStateCallData)other);
+            } else {
+              super.mergeFrom(other);
+              return this;
+            }
+          }
+
+          public Builder mergeFrom(com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SetPlanStateCallData other) {
+            if (other == com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SetPlanStateCallData.getDefaultInstance()) return this;
+            if (other.hasPrevPlannerState()) {
+              setPrevPlannerState(other.getPrevPlannerState());
+            }
+            if (other.hasCurrPlannerState()) {
+              setCurrPlannerState(other.getCurrPlannerState());
+            }
+            this.mergeUnknownFields(other.getUnknownFields());
+            onChanged();
+            return this;
+          }
+
+          @java.lang.Override
+          public final boolean isInitialized() {
+            return true;
+          }
+
+          @java.lang.Override
+          public Builder mergeFrom(
+              com.google.protobuf.CodedInputStream input,
+              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+              throws java.io.IOException {
+            if (extensionRegistry == null) {
+              throw new java.lang.NullPointerException();
+            }
+            try {
+              boolean done = false;
+              while (!done) {
+                int tag = input.readTag();
+                switch (tag) {
+                  case 0:
+                    done = true;
+                    break;
+                  case 8: {
+                    int tmpRaw = input.readEnum();
+                    com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.PlannerState tmpValue =
+                        com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.PlannerState.forNumber(tmpRaw);
+                    if (tmpValue == null) {
+                      mergeUnknownVarintField(1, tmpRaw);
+                    } else {
+                      prevPlannerState_ = tmpRaw;
+                      bitField0_ |= 0x00000001;
+                    }
+                    break;
+                  } // case 8
+                  case 16: {
+                    int tmpRaw = input.readEnum();
+                    com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.PlannerState tmpValue =
+                        com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.PlannerState.forNumber(tmpRaw);
+                    if (tmpValue == null) {
+                      mergeUnknownVarintField(2, tmpRaw);
+                    } else {
+                      currPlannerState_ = tmpRaw;
+                      bitField0_ |= 0x00000002;
+                    }
+                    break;
+                  } // case 16
+                  default: {
+                    if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                      done = true; // was an endgroup tag
+                    }
+                    break;
+                  } // default:
+                } // switch (tag)
+              } // while (!done)
+            } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+              throw e.unwrapIOException();
+            } finally {
+              onChanged();
+            } // finally
+            return this;
+          }
+          private int bitField0_;
+
+          private int prevPlannerState_ = 0;
+          /**
+           * <code>optional .android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.PlannerState prev_planner_state = 1;</code>
+           * @return Whether the prevPlannerState field is set.
+           */
+          @java.lang.Override public boolean hasPrevPlannerState() {
+            return ((bitField0_ & 0x00000001) != 0);
+          }
+          /**
+           * <code>optional .android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.PlannerState prev_planner_state = 1;</code>
+           * @return The prevPlannerState.
+           */
+          @java.lang.Override
+          public com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.PlannerState getPrevPlannerState() {
+            com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.PlannerState result = com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.PlannerState.forNumber(prevPlannerState_);
+            return result == null ? com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.PlannerState.UNKNOWN_PLANNER_STATE : result;
+          }
+          /**
+           * <code>optional .android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.PlannerState prev_planner_state = 1;</code>
+           * @param value The prevPlannerState to set.
+           * @return This builder for chaining.
+           */
+          public Builder setPrevPlannerState(com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.PlannerState value) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            bitField0_ |= 0x00000001;
+            prevPlannerState_ = value.getNumber();
+            onChanged();
+            return this;
+          }
+          /**
+           * <code>optional .android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.PlannerState prev_planner_state = 1;</code>
+           * @return This builder for chaining.
+           */
+          public Builder clearPrevPlannerState() {
+            bitField0_ = (bitField0_ & ~0x00000001);
+            prevPlannerState_ = 0;
+            onChanged();
+            return this;
+          }
+
+          private int currPlannerState_ = 0;
+          /**
+           * <code>optional .android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.PlannerState curr_planner_state = 2;</code>
+           * @return Whether the currPlannerState field is set.
+           */
+          @java.lang.Override public boolean hasCurrPlannerState() {
+            return ((bitField0_ & 0x00000002) != 0);
+          }
+          /**
+           * <code>optional .android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.PlannerState curr_planner_state = 2;</code>
+           * @return The currPlannerState.
+           */
+          @java.lang.Override
+          public com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.PlannerState getCurrPlannerState() {
+            com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.PlannerState result = com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.PlannerState.forNumber(currPlannerState_);
+            return result == null ? com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.PlannerState.UNKNOWN_PLANNER_STATE : result;
+          }
+          /**
+           * <code>optional .android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.PlannerState curr_planner_state = 2;</code>
+           * @param value The currPlannerState to set.
+           * @return This builder for chaining.
+           */
+          public Builder setCurrPlannerState(com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.PlannerState value) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            bitField0_ |= 0x00000002;
+            currPlannerState_ = value.getNumber();
+            onChanged();
+            return this;
+          }
+          /**
+           * <code>optional .android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.PlannerState curr_planner_state = 2;</code>
+           * @return This builder for chaining.
+           */
+          public Builder clearCurrPlannerState() {
+            bitField0_ = (bitField0_ & ~0x00000002);
+            currPlannerState_ = 0;
+            onChanged();
+            return this;
+          }
+          @java.lang.Override
+          public final Builder setUnknownFields(
+              final com.google.protobuf.UnknownFieldSet unknownFields) {
+            return super.setUnknownFields(unknownFields);
+          }
+
+          @java.lang.Override
+          public final Builder mergeUnknownFields(
+              final com.google.protobuf.UnknownFieldSet unknownFields) {
+            return super.mergeUnknownFields(unknownFields);
+          }
+
+
+          // @@protoc_insertion_point(builder_scope:android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SetPlanStateCallData)
+        }
+
+        // @@protoc_insertion_point(class_scope:android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SetPlanStateCallData)
+        private static final com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SetPlanStateCallData DEFAULT_INSTANCE;
+        static {
+          DEFAULT_INSTANCE = new com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SetPlanStateCallData();
+        }
+
+        public static com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SetPlanStateCallData getDefaultInstance() {
+          return DEFAULT_INSTANCE;
+        }
+
+        @java.lang.Deprecated public static final com.google.protobuf.Parser<SetPlanStateCallData>
+            PARSER = new com.google.protobuf.AbstractParser<SetPlanStateCallData>() {
+          @java.lang.Override
+          public SetPlanStateCallData parsePartialFrom(
+              com.google.protobuf.CodedInputStream input,
+              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+              throws com.google.protobuf.InvalidProtocolBufferException {
+            Builder builder = newBuilder();
+            try {
+              builder.mergeFrom(input, extensionRegistry);
+            } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+              throw e.setUnfinishedMessage(builder.buildPartial());
+            } catch (com.google.protobuf.UninitializedMessageException e) {
+              throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+            } catch (java.io.IOException e) {
+              throw new com.google.protobuf.InvalidProtocolBufferException(e)
+                  .setUnfinishedMessage(builder.buildPartial());
+            }
+            return builder.buildPartial();
+          }
+        };
+
+        public static com.google.protobuf.Parser<SetPlanStateCallData> parser() {
+          return PARSER;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Parser<SetPlanStateCallData> getParserForType() {
+          return PARSER;
+        }
+
+        @java.lang.Override
+        public com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SetPlanStateCallData getDefaultInstanceForType() {
+          return DEFAULT_INSTANCE;
+        }
+
+      }
+
       private int bitField0_;
       private int toolSpecificMetadataCase_ = 0;
       @SuppressWarnings("serial")
@@ -21656,6 +23333,7 @@ private static final long serialVersionUID = 0L;
         GREP_TOOL_CALL_DATA(11),
         RAG_TOOL_CALL_DATA(12),
         READ_FILE_TOOL_CALL_DATA(13),
+        SET_PLAN_STATE_CALL_DATA(14),
         TOOLSPECIFICMETADATA_NOT_SET(0);
         private final int value;
         private ToolSpecificMetadataCase(int value) {
@@ -21679,6 +23357,7 @@ private static final long serialVersionUID = 0L;
             case 11: return GREP_TOOL_CALL_DATA;
             case 12: return RAG_TOOL_CALL_DATA;
             case 13: return READ_FILE_TOOL_CALL_DATA;
+            case 14: return SET_PLAN_STATE_CALL_DATA;
             case 0: return TOOLSPECIFICMETADATA_NOT_SET;
             default: return null;
           }
@@ -22207,6 +23886,49 @@ private static final long serialVersionUID = 0L;
         return com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.ReadFileToolCallData.getDefaultInstance();
       }
 
+      public static final int SET_PLAN_STATE_CALL_DATA_FIELD_NUMBER = 14;
+      /**
+       * <pre>
+       * Data for a set_plan_state tool call.
+       * </pre>
+       *
+       * <code>.android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SetPlanStateCallData set_plan_state_call_data = 14;</code>
+       * @return Whether the setPlanStateCallData field is set.
+       */
+      @java.lang.Override
+      public boolean hasSetPlanStateCallData() {
+        return toolSpecificMetadataCase_ == 14;
+      }
+      /**
+       * <pre>
+       * Data for a set_plan_state tool call.
+       * </pre>
+       *
+       * <code>.android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SetPlanStateCallData set_plan_state_call_data = 14;</code>
+       * @return The setPlanStateCallData.
+       */
+      @java.lang.Override
+      public com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SetPlanStateCallData getSetPlanStateCallData() {
+        if (toolSpecificMetadataCase_ == 14) {
+           return (com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SetPlanStateCallData) toolSpecificMetadata_;
+        }
+        return com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SetPlanStateCallData.getDefaultInstance();
+      }
+      /**
+       * <pre>
+       * Data for a set_plan_state tool call.
+       * </pre>
+       *
+       * <code>.android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SetPlanStateCallData set_plan_state_call_data = 14;</code>
+       */
+      @java.lang.Override
+      public com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SetPlanStateCallDataOrBuilder getSetPlanStateCallDataOrBuilder() {
+        if (toolSpecificMetadataCase_ == 14) {
+           return (com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SetPlanStateCallData) toolSpecificMetadata_;
+        }
+        return com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SetPlanStateCallData.getDefaultInstance();
+      }
+
       private byte memoizedIsInitialized = -1;
       @java.lang.Override
       public final boolean isInitialized() {
@@ -22259,6 +23981,9 @@ private static final long serialVersionUID = 0L;
         }
         if (toolSpecificMetadataCase_ == 13) {
           output.writeMessage(13, (com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.ReadFileToolCallData) toolSpecificMetadata_);
+        }
+        if (toolSpecificMetadataCase_ == 14) {
+          output.writeMessage(14, (com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SetPlanStateCallData) toolSpecificMetadata_);
         }
         getUnknownFields().writeTo(output);
       }
@@ -22318,6 +24043,10 @@ private static final long serialVersionUID = 0L;
         if (toolSpecificMetadataCase_ == 13) {
           size += com.google.protobuf.CodedOutputStream
             .computeMessageSize(13, (com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.ReadFileToolCallData) toolSpecificMetadata_);
+        }
+        if (toolSpecificMetadataCase_ == 14) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(14, (com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SetPlanStateCallData) toolSpecificMetadata_);
         }
         size += getUnknownFields().getSerializedSize();
         memoizedSize = size;
@@ -22393,6 +24122,10 @@ private static final long serialVersionUID = 0L;
             if (!getReadFileToolCallData()
                 .equals(other.getReadFileToolCallData())) return false;
             break;
+          case 14:
+            if (!getSetPlanStateCallData()
+                .equals(other.getSetPlanStateCallData())) return false;
+            break;
           case 0:
           default:
         }
@@ -22462,6 +24195,10 @@ private static final long serialVersionUID = 0L;
           case 13:
             hash = (37 * hash) + READ_FILE_TOOL_CALL_DATA_FIELD_NUMBER;
             hash = (53 * hash) + getReadFileToolCallData().hashCode();
+            break;
+          case 14:
+            hash = (37 * hash) + SET_PLAN_STATE_CALL_DATA_FIELD_NUMBER;
+            hash = (53 * hash) + getSetPlanStateCallData().hashCode();
             break;
           case 0:
           default:
@@ -22620,6 +24357,9 @@ private static final long serialVersionUID = 0L;
           if (readFileToolCallDataBuilder_ != null) {
             readFileToolCallDataBuilder_.clear();
           }
+          if (setPlanStateCallDataBuilder_ != null) {
+            setPlanStateCallDataBuilder_.clear();
+          }
           toolSpecificMetadataCase_ = 0;
           toolSpecificMetadata_ = null;
           return this;
@@ -22715,6 +24455,10 @@ private static final long serialVersionUID = 0L;
               readFileToolCallDataBuilder_ != null) {
             result.toolSpecificMetadata_ = readFileToolCallDataBuilder_.build();
           }
+          if (toolSpecificMetadataCase_ == 14 &&
+              setPlanStateCallDataBuilder_ != null) {
+            result.toolSpecificMetadata_ = setPlanStateCallDataBuilder_.build();
+          }
         }
 
         @java.lang.Override
@@ -22777,6 +24521,10 @@ private static final long serialVersionUID = 0L;
             }
             case READ_FILE_TOOL_CALL_DATA: {
               mergeReadFileToolCallData(other.getReadFileToolCallData());
+              break;
+            }
+            case SET_PLAN_STATE_CALL_DATA: {
+              mergeSetPlanStateCallData(other.getSetPlanStateCallData());
               break;
             }
             case TOOLSPECIFICMETADATA_NOT_SET: {
@@ -22900,6 +24648,13 @@ private static final long serialVersionUID = 0L;
                   toolSpecificMetadataCase_ = 13;
                   break;
                 } // case 106
+                case 114: {
+                  input.readMessage(
+                      getSetPlanStateCallDataFieldBuilder().getBuilder(),
+                      extensionRegistry);
+                  toolSpecificMetadataCase_ = 14;
+                  break;
+                } // case 114
                 default: {
                   if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                     done = true; // was an endgroup tag
@@ -24490,6 +26245,184 @@ private static final long serialVersionUID = 0L;
           toolSpecificMetadataCase_ = 13;
           onChanged();
           return readFileToolCallDataBuilder_;
+        }
+
+        private com.google.protobuf.SingleFieldBuilderV3<
+            com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SetPlanStateCallData, com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SetPlanStateCallData.Builder, com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SetPlanStateCallDataOrBuilder> setPlanStateCallDataBuilder_;
+        /**
+         * <pre>
+         * Data for a set_plan_state tool call.
+         * </pre>
+         *
+         * <code>.android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SetPlanStateCallData set_plan_state_call_data = 14;</code>
+         * @return Whether the setPlanStateCallData field is set.
+         */
+        @java.lang.Override
+        public boolean hasSetPlanStateCallData() {
+          return toolSpecificMetadataCase_ == 14;
+        }
+        /**
+         * <pre>
+         * Data for a set_plan_state tool call.
+         * </pre>
+         *
+         * <code>.android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SetPlanStateCallData set_plan_state_call_data = 14;</code>
+         * @return The setPlanStateCallData.
+         */
+        @java.lang.Override
+        public com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SetPlanStateCallData getSetPlanStateCallData() {
+          if (setPlanStateCallDataBuilder_ == null) {
+            if (toolSpecificMetadataCase_ == 14) {
+              return (com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SetPlanStateCallData) toolSpecificMetadata_;
+            }
+            return com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SetPlanStateCallData.getDefaultInstance();
+          } else {
+            if (toolSpecificMetadataCase_ == 14) {
+              return setPlanStateCallDataBuilder_.getMessage();
+            }
+            return com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SetPlanStateCallData.getDefaultInstance();
+          }
+        }
+        /**
+         * <pre>
+         * Data for a set_plan_state tool call.
+         * </pre>
+         *
+         * <code>.android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SetPlanStateCallData set_plan_state_call_data = 14;</code>
+         */
+        public Builder setSetPlanStateCallData(com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SetPlanStateCallData value) {
+          if (setPlanStateCallDataBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            toolSpecificMetadata_ = value;
+            onChanged();
+          } else {
+            setPlanStateCallDataBuilder_.setMessage(value);
+          }
+          toolSpecificMetadataCase_ = 14;
+          return this;
+        }
+        /**
+         * <pre>
+         * Data for a set_plan_state tool call.
+         * </pre>
+         *
+         * <code>.android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SetPlanStateCallData set_plan_state_call_data = 14;</code>
+         */
+        public Builder setSetPlanStateCallData(
+            com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SetPlanStateCallData.Builder builderForValue) {
+          if (setPlanStateCallDataBuilder_ == null) {
+            toolSpecificMetadata_ = builderForValue.build();
+            onChanged();
+          } else {
+            setPlanStateCallDataBuilder_.setMessage(builderForValue.build());
+          }
+          toolSpecificMetadataCase_ = 14;
+          return this;
+        }
+        /**
+         * <pre>
+         * Data for a set_plan_state tool call.
+         * </pre>
+         *
+         * <code>.android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SetPlanStateCallData set_plan_state_call_data = 14;</code>
+         */
+        public Builder mergeSetPlanStateCallData(com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SetPlanStateCallData value) {
+          if (setPlanStateCallDataBuilder_ == null) {
+            if (toolSpecificMetadataCase_ == 14 &&
+                toolSpecificMetadata_ != com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SetPlanStateCallData.getDefaultInstance()) {
+              toolSpecificMetadata_ = com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SetPlanStateCallData.newBuilder((com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SetPlanStateCallData) toolSpecificMetadata_)
+                  .mergeFrom(value).buildPartial();
+            } else {
+              toolSpecificMetadata_ = value;
+            }
+            onChanged();
+          } else {
+            if (toolSpecificMetadataCase_ == 14) {
+              setPlanStateCallDataBuilder_.mergeFrom(value);
+            } else {
+              setPlanStateCallDataBuilder_.setMessage(value);
+            }
+          }
+          toolSpecificMetadataCase_ = 14;
+          return this;
+        }
+        /**
+         * <pre>
+         * Data for a set_plan_state tool call.
+         * </pre>
+         *
+         * <code>.android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SetPlanStateCallData set_plan_state_call_data = 14;</code>
+         */
+        public Builder clearSetPlanStateCallData() {
+          if (setPlanStateCallDataBuilder_ == null) {
+            if (toolSpecificMetadataCase_ == 14) {
+              toolSpecificMetadataCase_ = 0;
+              toolSpecificMetadata_ = null;
+              onChanged();
+            }
+          } else {
+            if (toolSpecificMetadataCase_ == 14) {
+              toolSpecificMetadataCase_ = 0;
+              toolSpecificMetadata_ = null;
+            }
+            setPlanStateCallDataBuilder_.clear();
+          }
+          return this;
+        }
+        /**
+         * <pre>
+         * Data for a set_plan_state tool call.
+         * </pre>
+         *
+         * <code>.android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SetPlanStateCallData set_plan_state_call_data = 14;</code>
+         */
+        public com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SetPlanStateCallData.Builder getSetPlanStateCallDataBuilder() {
+          return getSetPlanStateCallDataFieldBuilder().getBuilder();
+        }
+        /**
+         * <pre>
+         * Data for a set_plan_state tool call.
+         * </pre>
+         *
+         * <code>.android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SetPlanStateCallData set_plan_state_call_data = 14;</code>
+         */
+        @java.lang.Override
+        public com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SetPlanStateCallDataOrBuilder getSetPlanStateCallDataOrBuilder() {
+          if ((toolSpecificMetadataCase_ == 14) && (setPlanStateCallDataBuilder_ != null)) {
+            return setPlanStateCallDataBuilder_.getMessageOrBuilder();
+          } else {
+            if (toolSpecificMetadataCase_ == 14) {
+              return (com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SetPlanStateCallData) toolSpecificMetadata_;
+            }
+            return com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SetPlanStateCallData.getDefaultInstance();
+          }
+        }
+        /**
+         * <pre>
+         * Data for a set_plan_state tool call.
+         * </pre>
+         *
+         * <code>.android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SetPlanStateCallData set_plan_state_call_data = 14;</code>
+         */
+        private com.google.protobuf.SingleFieldBuilderV3<
+            com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SetPlanStateCallData, com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SetPlanStateCallData.Builder, com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SetPlanStateCallDataOrBuilder> 
+            getSetPlanStateCallDataFieldBuilder() {
+          if (setPlanStateCallDataBuilder_ == null) {
+            if (!(toolSpecificMetadataCase_ == 14)) {
+              toolSpecificMetadata_ = com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SetPlanStateCallData.getDefaultInstance();
+            }
+            setPlanStateCallDataBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SetPlanStateCallData, com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SetPlanStateCallData.Builder, com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SetPlanStateCallDataOrBuilder>(
+                    (com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SetPlanStateCallData) toolSpecificMetadata_,
+                    getParentForChildren(),
+                    isClean());
+            toolSpecificMetadata_ = null;
+          }
+          toolSpecificMetadataCase_ = 14;
+          onChanged();
+          return setPlanStateCallDataBuilder_;
         }
         @java.lang.Override
         public final Builder setUnknownFields(

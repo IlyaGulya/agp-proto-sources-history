@@ -78,6 +78,10 @@ private static final long serialVersionUID = 0L;
      * <code>LOGGED_IN_ON_STUDIO_START = 7;</code>
      */
     LOGGED_IN_ON_STUDIO_START(7),
+    /**
+     * <code>STARTUP_SIGNIN_DIALOG_SHOWN = 8;</code>
+     */
+    STARTUP_SIGNIN_DIALOG_SHOWN(8),
     ;
 
     /**
@@ -113,6 +117,10 @@ private static final long serialVersionUID = 0L;
      * <code>LOGGED_IN_ON_STUDIO_START = 7;</code>
      */
     public static final int LOGGED_IN_ON_STUDIO_START_VALUE = 7;
+    /**
+     * <code>STARTUP_SIGNIN_DIALOG_SHOWN = 8;</code>
+     */
+    public static final int STARTUP_SIGNIN_DIALOG_SHOWN_VALUE = 8;
 
 
     public final int getNumber() {
@@ -142,6 +150,7 @@ private static final long serialVersionUID = 0L;
         case 5: return LOGOUT_WITH_SUCCESS;
         case 6: return LOGOUT_WITH_FAILURE;
         case 7: return LOGGED_IN_ON_STUDIO_START;
+        case 8: return STARTUP_SIGNIN_DIALOG_SHOWN;
         default: return null;
       }
     }
@@ -224,6 +233,14 @@ private static final long serialVersionUID = 0L;
      * <code>AUTH_ERROR_NOTIFICATION_LOGIN = 3;</code>
      */
     AUTH_ERROR_NOTIFICATION_LOGIN(3),
+    /**
+     * <pre>
+     * A user signs in via the startup sign in dialog.
+     * </pre>
+     *
+     * <code>STARTUP_SIGNIN_DIALOG_LOGIN = 4;</code>
+     */
+    STARTUP_SIGNIN_DIALOG_LOGIN(4),
     ;
 
     /**
@@ -254,6 +271,14 @@ private static final long serialVersionUID = 0L;
      * <code>AUTH_ERROR_NOTIFICATION_LOGIN = 3;</code>
      */
     public static final int AUTH_ERROR_NOTIFICATION_LOGIN_VALUE = 3;
+    /**
+     * <pre>
+     * A user signs in via the startup sign in dialog.
+     * </pre>
+     *
+     * <code>STARTUP_SIGNIN_DIALOG_LOGIN = 4;</code>
+     */
+    public static final int STARTUP_SIGNIN_DIALOG_LOGIN_VALUE = 4;
 
 
     public final int getNumber() {
@@ -280,6 +305,7 @@ private static final long serialVersionUID = 0L;
         case 1: return COMBINED_LOGIN;
         case 2: return FEATURE_LOGIN;
         case 3: return AUTH_ERROR_NOTIFICATION_LOGIN;
+        case 4: return STARTUP_SIGNIN_DIALOG_LOGIN;
         default: return null;
       }
     }

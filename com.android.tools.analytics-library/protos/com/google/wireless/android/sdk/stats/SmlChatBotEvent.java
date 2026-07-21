@@ -7567,7 +7567,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional bool success = 3 [deprecated = true];</code>
      * @deprecated android_studio.SmlChatBotEvent.ParseResult.success is deprecated.
-     *     See studio_stats.proto;l=17187
+     *     See studio_stats.proto;l=17283
      * @return Whether the success field is set.
      */
     @java.lang.Deprecated boolean hasSuccess();
@@ -7579,7 +7579,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional bool success = 3 [deprecated = true];</code>
      * @deprecated android_studio.SmlChatBotEvent.ParseResult.success is deprecated.
-     *     See studio_stats.proto;l=17187
+     *     See studio_stats.proto;l=17283
      * @return The success.
      */
     @java.lang.Deprecated boolean getSuccess();
@@ -7707,7 +7707,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional bool success = 3 [deprecated = true];</code>
      * @deprecated android_studio.SmlChatBotEvent.ParseResult.success is deprecated.
-     *     See studio_stats.proto;l=17187
+     *     See studio_stats.proto;l=17283
      * @return Whether the success field is set.
      */
     @java.lang.Override
@@ -7722,7 +7722,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional bool success = 3 [deprecated = true];</code>
      * @deprecated android_studio.SmlChatBotEvent.ParseResult.success is deprecated.
-     *     See studio_stats.proto;l=17187
+     *     See studio_stats.proto;l=17283
      * @return The success.
      */
     @java.lang.Override
@@ -8386,7 +8386,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional bool success = 3 [deprecated = true];</code>
        * @deprecated android_studio.SmlChatBotEvent.ParseResult.success is deprecated.
-       *     See studio_stats.proto;l=17187
+       *     See studio_stats.proto;l=17283
        * @return Whether the success field is set.
        */
       @java.lang.Override
@@ -8401,7 +8401,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional bool success = 3 [deprecated = true];</code>
        * @deprecated android_studio.SmlChatBotEvent.ParseResult.success is deprecated.
-       *     See studio_stats.proto;l=17187
+       *     See studio_stats.proto;l=17283
        * @return The success.
        */
       @java.lang.Override
@@ -8416,7 +8416,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional bool success = 3 [deprecated = true];</code>
        * @deprecated android_studio.SmlChatBotEvent.ParseResult.success is deprecated.
-       *     See studio_stats.proto;l=17187
+       *     See studio_stats.proto;l=17283
        * @param value The success to set.
        * @return This builder for chaining.
        */
@@ -8435,7 +8435,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional bool success = 3 [deprecated = true];</code>
        * @deprecated android_studio.SmlChatBotEvent.ParseResult.success is deprecated.
-       *     See studio_stats.proto;l=17187
+       *     See studio_stats.proto;l=17283
        * @return This builder for chaining.
        */
       @java.lang.Deprecated public Builder clearSuccess() {
@@ -31781,6 +31781,17 @@ private static final long serialVersionUID = 0L;
        */
       com.google.protobuf.ByteString
           getArtifactNameBytes();
+
+      /**
+       * <code>optional .android_studio.SmlChatBotEvent.PlanningModeEvent.ArtifactEdited.ArtifactType artifact_type = 2;</code>
+       * @return Whether the artifactType field is set.
+       */
+      boolean hasArtifactType();
+      /**
+       * <code>optional .android_studio.SmlChatBotEvent.PlanningModeEvent.ArtifactEdited.ArtifactType artifact_type = 2;</code>
+       * @return The artifactType.
+       */
+      com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.ArtifactEdited.ArtifactType getArtifactType();
     }
     /**
      * <pre>
@@ -31801,6 +31812,7 @@ private static final long serialVersionUID = 0L;
       }
       private ArtifactEdited() {
         artifactName_ = "";
+        artifactType_ = 0;
       }
 
       @java.lang.Override
@@ -31821,6 +31833,120 @@ private static final long serialVersionUID = 0L;
         return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_SmlChatBotEvent_PlanningModeEvent_ArtifactEdited_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.ArtifactEdited.class, com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.ArtifactEdited.Builder.class);
+      }
+
+      /**
+       * Protobuf enum {@code android_studio.SmlChatBotEvent.PlanningModeEvent.ArtifactEdited.ArtifactType}
+       */
+      public enum ArtifactType
+          implements com.google.protobuf.ProtocolMessageEnum {
+        /**
+         * <code>ARTIFACT_TYPE_UNSPECIFIED = 0;</code>
+         */
+        ARTIFACT_TYPE_UNSPECIFIED(0),
+        /**
+         * <code>ARTIFACT_TYPE_IMPLEMENTATION_PLAN = 1;</code>
+         */
+        ARTIFACT_TYPE_IMPLEMENTATION_PLAN(1),
+        /**
+         * <code>ARTIFACT_TYPE_TASK = 2;</code>
+         */
+        ARTIFACT_TYPE_TASK(2),
+        /**
+         * <code>ARTIFACT_TYPE_WALKTHROUGH = 3;</code>
+         */
+        ARTIFACT_TYPE_WALKTHROUGH(3),
+        ;
+
+        /**
+         * <code>ARTIFACT_TYPE_UNSPECIFIED = 0;</code>
+         */
+        public static final int ARTIFACT_TYPE_UNSPECIFIED_VALUE = 0;
+        /**
+         * <code>ARTIFACT_TYPE_IMPLEMENTATION_PLAN = 1;</code>
+         */
+        public static final int ARTIFACT_TYPE_IMPLEMENTATION_PLAN_VALUE = 1;
+        /**
+         * <code>ARTIFACT_TYPE_TASK = 2;</code>
+         */
+        public static final int ARTIFACT_TYPE_TASK_VALUE = 2;
+        /**
+         * <code>ARTIFACT_TYPE_WALKTHROUGH = 3;</code>
+         */
+        public static final int ARTIFACT_TYPE_WALKTHROUGH_VALUE = 3;
+
+
+        public final int getNumber() {
+          return value;
+        }
+
+        /**
+         * @param value The numeric wire value of the corresponding enum entry.
+         * @return The enum associated with the given numeric wire value.
+         * @deprecated Use {@link #forNumber(int)} instead.
+         */
+        @java.lang.Deprecated
+        public static ArtifactType valueOf(int value) {
+          return forNumber(value);
+        }
+
+        /**
+         * @param value The numeric wire value of the corresponding enum entry.
+         * @return The enum associated with the given numeric wire value.
+         */
+        public static ArtifactType forNumber(int value) {
+          switch (value) {
+            case 0: return ARTIFACT_TYPE_UNSPECIFIED;
+            case 1: return ARTIFACT_TYPE_IMPLEMENTATION_PLAN;
+            case 2: return ARTIFACT_TYPE_TASK;
+            case 3: return ARTIFACT_TYPE_WALKTHROUGH;
+            default: return null;
+          }
+        }
+
+        public static com.google.protobuf.Internal.EnumLiteMap<ArtifactType>
+            internalGetValueMap() {
+          return internalValueMap;
+        }
+        private static final com.google.protobuf.Internal.EnumLiteMap<
+            ArtifactType> internalValueMap =
+              new com.google.protobuf.Internal.EnumLiteMap<ArtifactType>() {
+                public ArtifactType findValueByNumber(int number) {
+                  return ArtifactType.forNumber(number);
+                }
+              };
+
+        public final com.google.protobuf.Descriptors.EnumValueDescriptor
+            getValueDescriptor() {
+          return getDescriptor().getValues().get(ordinal());
+        }
+        public final com.google.protobuf.Descriptors.EnumDescriptor
+            getDescriptorForType() {
+          return getDescriptor();
+        }
+        public static final com.google.protobuf.Descriptors.EnumDescriptor
+            getDescriptor() {
+          return com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.ArtifactEdited.getDescriptor().getEnumTypes().get(0);
+        }
+
+        private static final ArtifactType[] VALUES = values();
+
+        public static ArtifactType valueOf(
+            com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+          if (desc.getType() != getDescriptor()) {
+            throw new java.lang.IllegalArgumentException(
+              "EnumValueDescriptor is not for this type.");
+          }
+          return VALUES[desc.getIndex()];
+        }
+
+        private final int value;
+
+        private ArtifactType(int value) {
+          this.value = value;
+        }
+
+        // @@protoc_insertion_point(enum_scope:android_studio.SmlChatBotEvent.PlanningModeEvent.ArtifactEdited.ArtifactType)
       }
 
       private int bitField0_;
@@ -31873,6 +31999,24 @@ private static final long serialVersionUID = 0L;
         }
       }
 
+      public static final int ARTIFACT_TYPE_FIELD_NUMBER = 2;
+      private int artifactType_ = 0;
+      /**
+       * <code>optional .android_studio.SmlChatBotEvent.PlanningModeEvent.ArtifactEdited.ArtifactType artifact_type = 2;</code>
+       * @return Whether the artifactType field is set.
+       */
+      @java.lang.Override public boolean hasArtifactType() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <code>optional .android_studio.SmlChatBotEvent.PlanningModeEvent.ArtifactEdited.ArtifactType artifact_type = 2;</code>
+       * @return The artifactType.
+       */
+      @java.lang.Override public com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.ArtifactEdited.ArtifactType getArtifactType() {
+        com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.ArtifactEdited.ArtifactType result = com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.ArtifactEdited.ArtifactType.forNumber(artifactType_);
+        return result == null ? com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.ArtifactEdited.ArtifactType.ARTIFACT_TYPE_UNSPECIFIED : result;
+      }
+
       private byte memoizedIsInitialized = -1;
       @java.lang.Override
       public final boolean isInitialized() {
@@ -31890,6 +32034,9 @@ private static final long serialVersionUID = 0L;
         if (((bitField0_ & 0x00000001) != 0)) {
           com.google.protobuf.GeneratedMessageV3.writeString(output, 1, artifactName_);
         }
+        if (((bitField0_ & 0x00000002) != 0)) {
+          output.writeEnum(2, artifactType_);
+        }
         getUnknownFields().writeTo(output);
       }
 
@@ -31901,6 +32048,10 @@ private static final long serialVersionUID = 0L;
         size = 0;
         if (((bitField0_ & 0x00000001) != 0)) {
           size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, artifactName_);
+        }
+        if (((bitField0_ & 0x00000002) != 0)) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeEnumSize(2, artifactType_);
         }
         size += getUnknownFields().getSerializedSize();
         memoizedSize = size;
@@ -31922,6 +32073,10 @@ private static final long serialVersionUID = 0L;
           if (!getArtifactName()
               .equals(other.getArtifactName())) return false;
         }
+        if (hasArtifactType() != other.hasArtifactType()) return false;
+        if (hasArtifactType()) {
+          if (artifactType_ != other.artifactType_) return false;
+        }
         if (!getUnknownFields().equals(other.getUnknownFields())) return false;
         return true;
       }
@@ -31936,6 +32091,10 @@ private static final long serialVersionUID = 0L;
         if (hasArtifactName()) {
           hash = (37 * hash) + ARTIFACT_NAME_FIELD_NUMBER;
           hash = (53 * hash) + getArtifactName().hashCode();
+        }
+        if (hasArtifactType()) {
+          hash = (37 * hash) + ARTIFACT_TYPE_FIELD_NUMBER;
+          hash = (53 * hash) + artifactType_;
         }
         hash = (29 * hash) + getUnknownFields().hashCode();
         memoizedHashCode = hash;
@@ -32072,6 +32231,7 @@ private static final long serialVersionUID = 0L;
           super.clear();
           bitField0_ = 0;
           artifactName_ = "";
+          artifactType_ = 0;
           return this;
         }
 
@@ -32110,6 +32270,10 @@ private static final long serialVersionUID = 0L;
             result.artifactName_ = artifactName_;
             to_bitField0_ |= 0x00000001;
           }
+          if (((from_bitField0_ & 0x00000002) != 0)) {
+            result.artifactType_ = artifactType_;
+            to_bitField0_ |= 0x00000002;
+          }
           result.bitField0_ |= to_bitField0_;
         }
 
@@ -32129,6 +32293,9 @@ private static final long serialVersionUID = 0L;
             artifactName_ = other.artifactName_;
             bitField0_ |= 0x00000001;
             onChanged();
+          }
+          if (other.hasArtifactType()) {
+            setArtifactType(other.getArtifactType());
           }
           this.mergeUnknownFields(other.getUnknownFields());
           onChanged();
@@ -32161,6 +32328,18 @@ private static final long serialVersionUID = 0L;
                   bitField0_ |= 0x00000001;
                   break;
                 } // case 10
+                case 16: {
+                  int tmpRaw = input.readEnum();
+                  com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.ArtifactEdited.ArtifactType tmpValue =
+                      com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.ArtifactEdited.ArtifactType.forNumber(tmpRaw);
+                  if (tmpValue == null) {
+                    mergeUnknownVarintField(2, tmpRaw);
+                  } else {
+                    artifactType_ = tmpRaw;
+                    bitField0_ |= 0x00000002;
+                  }
+                  break;
+                } // case 16
                 default: {
                   if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                     done = true; // was an endgroup tag
@@ -32254,6 +32433,48 @@ private static final long serialVersionUID = 0L;
           if (value == null) { throw new NullPointerException(); }
           artifactName_ = value;
           bitField0_ |= 0x00000001;
+          onChanged();
+          return this;
+        }
+
+        private int artifactType_ = 0;
+        /**
+         * <code>optional .android_studio.SmlChatBotEvent.PlanningModeEvent.ArtifactEdited.ArtifactType artifact_type = 2;</code>
+         * @return Whether the artifactType field is set.
+         */
+        @java.lang.Override public boolean hasArtifactType() {
+          return ((bitField0_ & 0x00000002) != 0);
+        }
+        /**
+         * <code>optional .android_studio.SmlChatBotEvent.PlanningModeEvent.ArtifactEdited.ArtifactType artifact_type = 2;</code>
+         * @return The artifactType.
+         */
+        @java.lang.Override
+        public com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.ArtifactEdited.ArtifactType getArtifactType() {
+          com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.ArtifactEdited.ArtifactType result = com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.ArtifactEdited.ArtifactType.forNumber(artifactType_);
+          return result == null ? com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.ArtifactEdited.ArtifactType.ARTIFACT_TYPE_UNSPECIFIED : result;
+        }
+        /**
+         * <code>optional .android_studio.SmlChatBotEvent.PlanningModeEvent.ArtifactEdited.ArtifactType artifact_type = 2;</code>
+         * @param value The artifactType to set.
+         * @return This builder for chaining.
+         */
+        public Builder setArtifactType(com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.ArtifactEdited.ArtifactType value) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          bitField0_ |= 0x00000002;
+          artifactType_ = value.getNumber();
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>optional .android_studio.SmlChatBotEvent.PlanningModeEvent.ArtifactEdited.ArtifactType artifact_type = 2;</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearArtifactType() {
+          bitField0_ = (bitField0_ & ~0x00000002);
+          artifactType_ = 0;
           onChanged();
           return this;
         }
