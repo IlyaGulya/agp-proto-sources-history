@@ -4915,4 +4915,58 @@ public interface AndroidStudioEventOrBuilder extends
    * <code>optional .android_studio.UpgradeAndroidStudioDialogStats upgrade_android_studio_dialog = 175;</code>
    */
   com.google.wireless.android.sdk.stats.UpgradeAndroidStudioDialogStatsOrBuilder getUpgradeAndroidStudioDialogOrBuilder();
+
+  /**
+   * <pre>
+   * set when kind = DEBUGGER_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.DebuggerEvent debugger_event = 176;</code>
+   * @return Whether the debuggerEvent field is set.
+   */
+  boolean hasDebuggerEvent();
+  /**
+   * <pre>
+   * set when kind = DEBUGGER_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.DebuggerEvent debugger_event = 176;</code>
+   * @return The debuggerEvent.
+   */
+  com.google.wireless.android.sdk.stats.DebuggerEvent getDebuggerEvent();
+  /**
+   * <pre>
+   * set when kind = DEBUGGER_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.DebuggerEvent debugger_event = 176;</code>
+   */
+  com.google.wireless.android.sdk.stats.DebuggerEventOrBuilder getDebuggerEventOrBuilder();
+
+  /**
+   * <pre>
+   * set when kind = SOONG_SYNC_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.SoongSyncStats soong_sync_stats = 177;</code>
+   * @return Whether the soongSyncStats field is set.
+   */
+  boolean hasSoongSyncStats();
+  /**
+   * <pre>
+   * set when kind = SOONG_SYNC_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.SoongSyncStats soong_sync_stats = 177;</code>
+   * @return The soongSyncStats.
+   */
+  com.google.wireless.android.sdk.stats.SoongSyncStats getSoongSyncStats();
+  /**
+   * <pre>
+   * set when kind = SOONG_SYNC_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.SoongSyncStats soong_sync_stats = 177;</code>
+   */
+  com.google.wireless.android.sdk.stats.SoongSyncStatsOrBuilder getSoongSyncStatsOrBuilder();
 }
