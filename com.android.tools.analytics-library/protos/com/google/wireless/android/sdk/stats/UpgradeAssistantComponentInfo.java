@@ -185,6 +185,14 @@ private static final long serialVersionUID = 0L;
      * <code>MIGRATE_PACKAGING_OPTIONS = 16;</code>
      */
     MIGRATE_PACKAGING_OPTIONS(16),
+    /**
+     * <code>MIGRATE_TO_LINT = 17;</code>
+     */
+    MIGRATE_TO_LINT(17),
+    /**
+     * <code>REWRITE_DEPRECATED_OPERATORS = 18;</code>
+     */
+    REWRITE_DEPRECATED_OPERATORS(18),
     ;
 
     /**
@@ -255,6 +263,14 @@ private static final long serialVersionUID = 0L;
      * <code>MIGRATE_PACKAGING_OPTIONS = 16;</code>
      */
     public static final int MIGRATE_PACKAGING_OPTIONS_VALUE = 16;
+    /**
+     * <code>MIGRATE_TO_LINT = 17;</code>
+     */
+    public static final int MIGRATE_TO_LINT_VALUE = 17;
+    /**
+     * <code>REWRITE_DEPRECATED_OPERATORS = 18;</code>
+     */
+    public static final int REWRITE_DEPRECATED_OPERATORS_VALUE = 18;
 
 
     public final int getNumber() {
@@ -294,6 +310,8 @@ private static final long serialVersionUID = 0L;
         case 14: return MIGRATE_TO_EMULATOR_SNAPSHOTS;
         case 15: return MIGRATE_TO_TEST_COVERAGE;
         case 16: return MIGRATE_PACKAGING_OPTIONS;
+        case 17: return MIGRATE_TO_LINT;
+        case 18: return REWRITE_DEPRECATED_OPERATORS;
         default: return null;
       }
     }
