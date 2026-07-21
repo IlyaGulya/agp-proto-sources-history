@@ -1340,7 +1340,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional bool is_default_preset = 12 [deprecated = true];</code>
      * @deprecated android_studio.LogcatUsageEvent.LogcatFormatConfiguration.is_default_preset is deprecated.
-     *     See studio_stats.proto;l=14035
+     *     See studio_stats.proto;l=14045
      * @return Whether the isDefaultPreset field is set.
      */
     @java.lang.Deprecated boolean hasIsDefaultPreset();
@@ -1351,7 +1351,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional bool is_default_preset = 12 [deprecated = true];</code>
      * @deprecated android_studio.LogcatUsageEvent.LogcatFormatConfiguration.is_default_preset is deprecated.
-     *     See studio_stats.proto;l=14035
+     *     See studio_stats.proto;l=14045
      * @return The isDefaultPreset.
      */
     @java.lang.Deprecated boolean getIsDefaultPreset();
@@ -1363,7 +1363,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional bool is_apply_button_used = 13 [deprecated = true];</code>
      * @deprecated android_studio.LogcatUsageEvent.LogcatFormatConfiguration.is_apply_button_used is deprecated.
-     *     See studio_stats.proto;l=14038
+     *     See studio_stats.proto;l=14048
      * @return Whether the isApplyButtonUsed field is set.
      */
     @java.lang.Deprecated boolean hasIsApplyButtonUsed();
@@ -1374,7 +1374,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional bool is_apply_button_used = 13 [deprecated = true];</code>
      * @deprecated android_studio.LogcatUsageEvent.LogcatFormatConfiguration.is_apply_button_used is deprecated.
-     *     See studio_stats.proto;l=14038
+     *     See studio_stats.proto;l=14048
      * @return The isApplyButtonUsed.
      */
     @java.lang.Deprecated boolean getIsApplyButtonUsed();
@@ -1858,7 +1858,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional bool is_default_preset = 12 [deprecated = true];</code>
      * @deprecated android_studio.LogcatUsageEvent.LogcatFormatConfiguration.is_default_preset is deprecated.
-     *     See studio_stats.proto;l=14035
+     *     See studio_stats.proto;l=14045
      * @return Whether the isDefaultPreset field is set.
      */
     @java.lang.Override
@@ -1872,7 +1872,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional bool is_default_preset = 12 [deprecated = true];</code>
      * @deprecated android_studio.LogcatUsageEvent.LogcatFormatConfiguration.is_default_preset is deprecated.
-     *     See studio_stats.proto;l=14035
+     *     See studio_stats.proto;l=14045
      * @return The isDefaultPreset.
      */
     @java.lang.Override
@@ -1889,7 +1889,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional bool is_apply_button_used = 13 [deprecated = true];</code>
      * @deprecated android_studio.LogcatUsageEvent.LogcatFormatConfiguration.is_apply_button_used is deprecated.
-     *     See studio_stats.proto;l=14038
+     *     See studio_stats.proto;l=14048
      * @return Whether the isApplyButtonUsed field is set.
      */
     @java.lang.Override
@@ -1903,7 +1903,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional bool is_apply_button_used = 13 [deprecated = true];</code>
      * @deprecated android_studio.LogcatUsageEvent.LogcatFormatConfiguration.is_apply_button_used is deprecated.
-     *     See studio_stats.proto;l=14038
+     *     See studio_stats.proto;l=14048
      * @return The isApplyButtonUsed.
      */
     @java.lang.Override
@@ -3204,7 +3204,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional bool is_default_preset = 12 [deprecated = true];</code>
        * @deprecated android_studio.LogcatUsageEvent.LogcatFormatConfiguration.is_default_preset is deprecated.
-       *     See studio_stats.proto;l=14035
+       *     See studio_stats.proto;l=14045
        * @return Whether the isDefaultPreset field is set.
        */
       @java.lang.Override
@@ -3218,7 +3218,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional bool is_default_preset = 12 [deprecated = true];</code>
        * @deprecated android_studio.LogcatUsageEvent.LogcatFormatConfiguration.is_default_preset is deprecated.
-       *     See studio_stats.proto;l=14035
+       *     See studio_stats.proto;l=14045
        * @return The isDefaultPreset.
        */
       @java.lang.Override
@@ -3232,7 +3232,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional bool is_default_preset = 12 [deprecated = true];</code>
        * @deprecated android_studio.LogcatUsageEvent.LogcatFormatConfiguration.is_default_preset is deprecated.
-       *     See studio_stats.proto;l=14035
+       *     See studio_stats.proto;l=14045
        * @param value The isDefaultPreset to set.
        * @return This builder for chaining.
        */
@@ -3250,7 +3250,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional bool is_default_preset = 12 [deprecated = true];</code>
        * @deprecated android_studio.LogcatUsageEvent.LogcatFormatConfiguration.is_default_preset is deprecated.
-       *     See studio_stats.proto;l=14035
+       *     See studio_stats.proto;l=14045
        * @return This builder for chaining.
        */
       @java.lang.Deprecated public Builder clearIsDefaultPreset() {
@@ -3268,7 +3268,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional bool is_apply_button_used = 13 [deprecated = true];</code>
        * @deprecated android_studio.LogcatUsageEvent.LogcatFormatConfiguration.is_apply_button_used is deprecated.
-       *     See studio_stats.proto;l=14038
+       *     See studio_stats.proto;l=14048
        * @return Whether the isApplyButtonUsed field is set.
        */
       @java.lang.Override
@@ -3282,7 +3282,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional bool is_apply_button_used = 13 [deprecated = true];</code>
        * @deprecated android_studio.LogcatUsageEvent.LogcatFormatConfiguration.is_apply_button_used is deprecated.
-       *     See studio_stats.proto;l=14038
+       *     See studio_stats.proto;l=14048
        * @return The isApplyButtonUsed.
        */
       @java.lang.Override
@@ -3296,7 +3296,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional bool is_apply_button_used = 13 [deprecated = true];</code>
        * @deprecated android_studio.LogcatUsageEvent.LogcatFormatConfiguration.is_apply_button_used is deprecated.
-       *     See studio_stats.proto;l=14038
+       *     See studio_stats.proto;l=14048
        * @param value The isApplyButtonUsed to set.
        * @return This builder for chaining.
        */
@@ -3314,7 +3314,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional bool is_apply_button_used = 13 [deprecated = true];</code>
        * @deprecated android_studio.LogcatUsageEvent.LogcatFormatConfiguration.is_apply_button_used is deprecated.
-       *     See studio_stats.proto;l=14038
+       *     See studio_stats.proto;l=14048
        * @return This builder for chaining.
        */
       @java.lang.Deprecated public Builder clearIsApplyButtonUsed() {
@@ -8693,6 +8693,17 @@ private static final long serialVersionUID = 0L;
      * @return The isMappingCached.
      */
     boolean getIsMappingCached();
+
+    /**
+     * <code>optional .android_studio.LogcatUsageEvent.StackRetraceEvent.MappingType mapping_type = 5;</code>
+     * @return Whether the mappingType field is set.
+     */
+    boolean hasMappingType();
+    /**
+     * <code>optional .android_studio.LogcatUsageEvent.StackRetraceEvent.MappingType mapping_type = 5;</code>
+     * @return The mappingType.
+     */
+    com.google.wireless.android.sdk.stats.LogcatUsageEvent.StackRetraceEvent.MappingType getMappingType();
   }
   /**
    * Protobuf type {@code android_studio.LogcatUsageEvent.StackRetraceEvent}
@@ -8708,6 +8719,7 @@ private static final long serialVersionUID = 0L;
     }
     private StackRetraceEvent() {
       resultString_ = "";
+      mappingType_ = 0;
     }
 
     @java.lang.Override
@@ -8728,6 +8740,111 @@ private static final long serialVersionUID = 0L;
       return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_LogcatUsageEvent_StackRetraceEvent_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               com.google.wireless.android.sdk.stats.LogcatUsageEvent.StackRetraceEvent.class, com.google.wireless.android.sdk.stats.LogcatUsageEvent.StackRetraceEvent.Builder.class);
+    }
+
+    /**
+     * Protobuf enum {@code android_studio.LogcatUsageEvent.StackRetraceEvent.MappingType}
+     */
+    public enum MappingType
+        implements com.google.protobuf.ProtocolMessageEnum {
+      /**
+       * <code>UNKNOWN_MAPPING_TYPE = 0;</code>
+       */
+      UNKNOWN_MAPPING_TYPE(0),
+      /**
+       * <code>TEXT = 1;</code>
+       */
+      TEXT(1),
+      /**
+       * <code>PARTITIONED = 2;</code>
+       */
+      PARTITIONED(2),
+      ;
+
+      /**
+       * <code>UNKNOWN_MAPPING_TYPE = 0;</code>
+       */
+      public static final int UNKNOWN_MAPPING_TYPE_VALUE = 0;
+      /**
+       * <code>TEXT = 1;</code>
+       */
+      public static final int TEXT_VALUE = 1;
+      /**
+       * <code>PARTITIONED = 2;</code>
+       */
+      public static final int PARTITIONED_VALUE = 2;
+
+
+      public final int getNumber() {
+        return value;
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static MappingType valueOf(int value) {
+        return forNumber(value);
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       */
+      public static MappingType forNumber(int value) {
+        switch (value) {
+          case 0: return UNKNOWN_MAPPING_TYPE;
+          case 1: return TEXT;
+          case 2: return PARTITIONED;
+          default: return null;
+        }
+      }
+
+      public static com.google.protobuf.Internal.EnumLiteMap<MappingType>
+          internalGetValueMap() {
+        return internalValueMap;
+      }
+      private static final com.google.protobuf.Internal.EnumLiteMap<
+          MappingType> internalValueMap =
+            new com.google.protobuf.Internal.EnumLiteMap<MappingType>() {
+              public MappingType findValueByNumber(int number) {
+                return MappingType.forNumber(number);
+              }
+            };
+
+      public final com.google.protobuf.Descriptors.EnumValueDescriptor
+          getValueDescriptor() {
+        return getDescriptor().getValues().get(ordinal());
+      }
+      public final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptorForType() {
+        return getDescriptor();
+      }
+      public static final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptor() {
+        return com.google.wireless.android.sdk.stats.LogcatUsageEvent.StackRetraceEvent.getDescriptor().getEnumTypes().get(0);
+      }
+
+      private static final MappingType[] VALUES = values();
+
+      public static MappingType valueOf(
+          com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+        if (desc.getType() != getDescriptor()) {
+          throw new java.lang.IllegalArgumentException(
+            "EnumValueDescriptor is not for this type.");
+        }
+        return VALUES[desc.getIndex()];
+      }
+
+      private final int value;
+
+      private MappingType(int value) {
+        this.value = value;
+      }
+
+      // @@protoc_insertion_point(enum_scope:android_studio.LogcatUsageEvent.StackRetraceEvent.MappingType)
     }
 
     private int bitField0_;
@@ -8881,6 +8998,24 @@ private static final long serialVersionUID = 0L;
       return isMappingCached_;
     }
 
+    public static final int MAPPING_TYPE_FIELD_NUMBER = 5;
+    private int mappingType_ = 0;
+    /**
+     * <code>optional .android_studio.LogcatUsageEvent.StackRetraceEvent.MappingType mapping_type = 5;</code>
+     * @return Whether the mappingType field is set.
+     */
+    @java.lang.Override public boolean hasMappingType() {
+      return ((bitField0_ & 0x00000010) != 0);
+    }
+    /**
+     * <code>optional .android_studio.LogcatUsageEvent.StackRetraceEvent.MappingType mapping_type = 5;</code>
+     * @return The mappingType.
+     */
+    @java.lang.Override public com.google.wireless.android.sdk.stats.LogcatUsageEvent.StackRetraceEvent.MappingType getMappingType() {
+      com.google.wireless.android.sdk.stats.LogcatUsageEvent.StackRetraceEvent.MappingType result = com.google.wireless.android.sdk.stats.LogcatUsageEvent.StackRetraceEvent.MappingType.forNumber(mappingType_);
+      return result == null ? com.google.wireless.android.sdk.stats.LogcatUsageEvent.StackRetraceEvent.MappingType.UNKNOWN_MAPPING_TYPE : result;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -8907,6 +9042,9 @@ private static final long serialVersionUID = 0L;
       if (((bitField0_ & 0x00000008) != 0)) {
         output.writeBool(4, isMappingCached_);
       }
+      if (((bitField0_ & 0x00000010) != 0)) {
+        output.writeEnum(5, mappingType_);
+      }
       getUnknownFields().writeTo(output);
     }
 
@@ -8930,6 +9068,10 @@ private static final long serialVersionUID = 0L;
       if (((bitField0_ & 0x00000008) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(4, isMappingCached_);
+      }
+      if (((bitField0_ & 0x00000010) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(5, mappingType_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -8966,6 +9108,10 @@ private static final long serialVersionUID = 0L;
         if (getIsMappingCached()
             != other.getIsMappingCached()) return false;
       }
+      if (hasMappingType() != other.hasMappingType()) return false;
+      if (hasMappingType()) {
+        if (mappingType_ != other.mappingType_) return false;
+      }
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -8995,6 +9141,10 @@ private static final long serialVersionUID = 0L;
         hash = (37 * hash) + IS_MAPPING_CACHED_FIELD_NUMBER;
         hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
             getIsMappingCached());
+      }
+      if (hasMappingType()) {
+        hash = (37 * hash) + MAPPING_TYPE_FIELD_NUMBER;
+        hash = (53 * hash) + mappingType_;
       }
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
@@ -9129,6 +9279,7 @@ private static final long serialVersionUID = 0L;
         retraceTimeMs_ = 0L;
         mappingFileSize_ = 0L;
         isMappingCached_ = false;
+        mappingType_ = 0;
         return this;
       }
 
@@ -9179,6 +9330,10 @@ private static final long serialVersionUID = 0L;
           result.isMappingCached_ = isMappingCached_;
           to_bitField0_ |= 0x00000008;
         }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.mappingType_ = mappingType_;
+          to_bitField0_ |= 0x00000010;
+        }
         result.bitField0_ |= to_bitField0_;
       }
 
@@ -9207,6 +9362,9 @@ private static final long serialVersionUID = 0L;
         }
         if (other.hasIsMappingCached()) {
           setIsMappingCached(other.getIsMappingCached());
+        }
+        if (other.hasMappingType()) {
+          setMappingType(other.getMappingType());
         }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
@@ -9254,6 +9412,18 @@ private static final long serialVersionUID = 0L;
                 bitField0_ |= 0x00000008;
                 break;
               } // case 32
+              case 40: {
+                int tmpRaw = input.readEnum();
+                com.google.wireless.android.sdk.stats.LogcatUsageEvent.StackRetraceEvent.MappingType tmpValue =
+                    com.google.wireless.android.sdk.stats.LogcatUsageEvent.StackRetraceEvent.MappingType.forNumber(tmpRaw);
+                if (tmpValue == null) {
+                  mergeUnknownVarintField(5, tmpRaw);
+                } else {
+                  mappingType_ = tmpRaw;
+                  bitField0_ |= 0x00000010;
+                }
+                break;
+              } // case 40
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -9558,6 +9728,48 @@ private static final long serialVersionUID = 0L;
         onChanged();
         return this;
       }
+
+      private int mappingType_ = 0;
+      /**
+       * <code>optional .android_studio.LogcatUsageEvent.StackRetraceEvent.MappingType mapping_type = 5;</code>
+       * @return Whether the mappingType field is set.
+       */
+      @java.lang.Override public boolean hasMappingType() {
+        return ((bitField0_ & 0x00000010) != 0);
+      }
+      /**
+       * <code>optional .android_studio.LogcatUsageEvent.StackRetraceEvent.MappingType mapping_type = 5;</code>
+       * @return The mappingType.
+       */
+      @java.lang.Override
+      public com.google.wireless.android.sdk.stats.LogcatUsageEvent.StackRetraceEvent.MappingType getMappingType() {
+        com.google.wireless.android.sdk.stats.LogcatUsageEvent.StackRetraceEvent.MappingType result = com.google.wireless.android.sdk.stats.LogcatUsageEvent.StackRetraceEvent.MappingType.forNumber(mappingType_);
+        return result == null ? com.google.wireless.android.sdk.stats.LogcatUsageEvent.StackRetraceEvent.MappingType.UNKNOWN_MAPPING_TYPE : result;
+      }
+      /**
+       * <code>optional .android_studio.LogcatUsageEvent.StackRetraceEvent.MappingType mapping_type = 5;</code>
+       * @param value The mappingType to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMappingType(com.google.wireless.android.sdk.stats.LogcatUsageEvent.StackRetraceEvent.MappingType value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x00000010;
+        mappingType_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional .android_studio.LogcatUsageEvent.StackRetraceEvent.MappingType mapping_type = 5;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMappingType() {
+        bitField0_ = (bitField0_ & ~0x00000010);
+        mappingType_ = 0;
+        onChanged();
+        return this;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -9658,7 +9870,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>optional .android_studio.LogcatUsageEvent.LogcatFormatConfiguration format_dialog = 2 [deprecated = true, lazy = true];</code>
    * @deprecated android_studio.LogcatUsageEvent.format_dialog is deprecated.
-   *     See studio_stats.proto;l=13953
+   *     See studio_stats.proto;l=13963
    * @return Whether the formatDialog field is set.
    */
   @java.lang.Override
@@ -9672,7 +9884,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>optional .android_studio.LogcatUsageEvent.LogcatFormatConfiguration format_dialog = 2 [deprecated = true, lazy = true];</code>
    * @deprecated android_studio.LogcatUsageEvent.format_dialog is deprecated.
-   *     See studio_stats.proto;l=13953
+   *     See studio_stats.proto;l=13963
    * @return The formatDialog.
    */
   @java.lang.Override
@@ -10415,7 +10627,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional .android_studio.LogcatUsageEvent.LogcatFormatConfiguration format_dialog = 2 [deprecated = true, lazy = true];</code>
      * @deprecated android_studio.LogcatUsageEvent.format_dialog is deprecated.
-     *     See studio_stats.proto;l=13953
+     *     See studio_stats.proto;l=13963
      * @return Whether the formatDialog field is set.
      */
     @java.lang.Deprecated public boolean hasFormatDialog() {
@@ -10428,7 +10640,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional .android_studio.LogcatUsageEvent.LogcatFormatConfiguration format_dialog = 2 [deprecated = true, lazy = true];</code>
      * @deprecated android_studio.LogcatUsageEvent.format_dialog is deprecated.
-     *     See studio_stats.proto;l=13953
+     *     See studio_stats.proto;l=13963
      * @return The formatDialog.
      */
     @java.lang.Deprecated public com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatConfiguration getFormatDialog() {

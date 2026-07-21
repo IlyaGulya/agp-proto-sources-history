@@ -487,6 +487,14 @@ private static final long serialVersionUID = 0L;
      */
     TRANSPORT_DAEMON_STARTED(10),
     /**
+     * <pre>
+     * Triggered when the profiler tool window is created successfully.
+     * </pre>
+     *
+     * <code>PROFILER_TOOL_WINDOW_CREATED = 11;</code>
+     */
+    PROFILER_TOOL_WINDOW_CREATED(11),
+    /**
      * <code>CHANGE_DEVICE = 101;</code>
      */
     CHANGE_DEVICE(101),
@@ -968,6 +976,14 @@ private static final long serialVersionUID = 0L;
      */
     public static final int TRANSPORT_DAEMON_STARTED_VALUE = 10;
     /**
+     * <pre>
+     * Triggered when the profiler tool window is created successfully.
+     * </pre>
+     *
+     * <code>PROFILER_TOOL_WINDOW_CREATED = 11;</code>
+     */
+    public static final int PROFILER_TOOL_WINDOW_CREATED_VALUE = 11;
+    /**
      * <code>CHANGE_DEVICE = 101;</code>
      */
     public static final int CHANGE_DEVICE_VALUE = 101;
@@ -1395,6 +1411,7 @@ private static final long serialVersionUID = 0L;
         case 8: return TRANSPORT_PROXY_FAILED;
         case 9: return PROFILER_INITIALIZATION_FAILED;
         case 10: return TRANSPORT_DAEMON_STARTED;
+        case 11: return PROFILER_TOOL_WINDOW_CREATED;
         case 101: return CHANGE_DEVICE;
         case 102: return CHANGE_PROCESS;
         case 103: return GO_BACK;
@@ -3316,7 +3333,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>optional .android_studio.CpuProfilingConfig cpu_config = 3 [deprecated = true, lazy = true];</code>
    * @deprecated android_studio.AndroidProfilerEvent.cpu_config is deprecated.
-   *     See studio_stats.proto;l=8428
+   *     See studio_stats.proto;l=8436
    * @return Whether the cpuConfig field is set.
    */
   @java.lang.Override
@@ -3331,7 +3348,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>optional .android_studio.CpuProfilingConfig cpu_config = 3 [deprecated = true, lazy = true];</code>
    * @deprecated android_studio.AndroidProfilerEvent.cpu_config is deprecated.
-   *     See studio_stats.proto;l=8428
+   *     See studio_stats.proto;l=8436
    * @return The cpuConfig.
    */
   @java.lang.Override
@@ -5939,7 +5956,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional .android_studio.CpuProfilingConfig cpu_config = 3 [deprecated = true, lazy = true];</code>
      * @deprecated android_studio.AndroidProfilerEvent.cpu_config is deprecated.
-     *     See studio_stats.proto;l=8428
+     *     See studio_stats.proto;l=8436
      * @return Whether the cpuConfig field is set.
      */
     @java.lang.Deprecated public boolean hasCpuConfig() {
@@ -5953,7 +5970,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional .android_studio.CpuProfilingConfig cpu_config = 3 [deprecated = true, lazy = true];</code>
      * @deprecated android_studio.AndroidProfilerEvent.cpu_config is deprecated.
-     *     See studio_stats.proto;l=8428
+     *     See studio_stats.proto;l=8436
      * @return The cpuConfig.
      */
     @java.lang.Deprecated public com.google.wireless.android.sdk.stats.CpuProfilingConfig getCpuConfig() {

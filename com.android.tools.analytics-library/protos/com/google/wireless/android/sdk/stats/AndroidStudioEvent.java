@@ -3394,6 +3394,14 @@ private static final long serialVersionUID = 0L;
      * <code>NEXT_EDIT_PREDICTION_EVENT = 360;</code>
      */
     NEXT_EDIT_PREDICTION_EVENT(360),
+    /**
+     * <pre>
+     * Event related to SML RAG
+     * </pre>
+     *
+     * <code>SML_RAG_EVENT = 361;</code>
+     */
+    SML_RAG_EVENT(361),
     ;
 
     /**
@@ -6097,6 +6105,14 @@ private static final long serialVersionUID = 0L;
      * <code>NEXT_EDIT_PREDICTION_EVENT = 360;</code>
      */
     public static final int NEXT_EDIT_PREDICTION_EVENT_VALUE = 360;
+    /**
+     * <pre>
+     * Event related to SML RAG
+     * </pre>
+     *
+     * <code>SML_RAG_EVENT = 361;</code>
+     */
+    public static final int SML_RAG_EVENT_VALUE = 361;
 
 
     public final int getNumber() {
@@ -6475,6 +6491,7 @@ private static final long serialVersionUID = 0L;
         case 358: return ADVERTISER_NOTIFICATION_EVENT;
         case 359: return ASSET_STUDIO_WIZARD_EVENT;
         case 360: return NEXT_EDIT_PREDICTION_EVENT;
+        case 361: return SML_RAG_EVENT;
         default: return null;
       }
     }
@@ -12244,7 +12261,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional uint32 min_sdk = 2 [deprecated = true];</code>
        * @deprecated android_studio.AndroidStudioEvent.TemplatesUsage.TemplateModule.min_sdk is deprecated.
-       *     See studio_stats.proto;l=2108
+       *     See studio_stats.proto;l=2114
        * @return Whether the minSdk field is set.
        */
       @java.lang.Deprecated boolean hasMinSdk();
@@ -12255,7 +12272,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional uint32 min_sdk = 2 [deprecated = true];</code>
        * @deprecated android_studio.AndroidStudioEvent.TemplatesUsage.TemplateModule.min_sdk is deprecated.
-       *     See studio_stats.proto;l=2108
+       *     See studio_stats.proto;l=2114
        * @return The minSdk.
        */
       @java.lang.Deprecated int getMinSdk();
@@ -12786,7 +12803,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional uint32 min_sdk = 2 [deprecated = true];</code>
        * @deprecated android_studio.AndroidStudioEvent.TemplatesUsage.TemplateModule.min_sdk is deprecated.
-       *     See studio_stats.proto;l=2108
+       *     See studio_stats.proto;l=2114
        * @return Whether the minSdk field is set.
        */
       @java.lang.Override
@@ -12800,7 +12817,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional uint32 min_sdk = 2 [deprecated = true];</code>
        * @deprecated android_studio.AndroidStudioEvent.TemplatesUsage.TemplateModule.min_sdk is deprecated.
-       *     See studio_stats.proto;l=2108
+       *     See studio_stats.proto;l=2114
        * @return The minSdk.
        */
       @java.lang.Override
@@ -13438,7 +13455,7 @@ private static final long serialVersionUID = 0L;
          *
          * <code>optional uint32 min_sdk = 2 [deprecated = true];</code>
          * @deprecated android_studio.AndroidStudioEvent.TemplatesUsage.TemplateModule.min_sdk is deprecated.
-         *     See studio_stats.proto;l=2108
+         *     See studio_stats.proto;l=2114
          * @return Whether the minSdk field is set.
          */
         @java.lang.Override
@@ -13452,7 +13469,7 @@ private static final long serialVersionUID = 0L;
          *
          * <code>optional uint32 min_sdk = 2 [deprecated = true];</code>
          * @deprecated android_studio.AndroidStudioEvent.TemplatesUsage.TemplateModule.min_sdk is deprecated.
-         *     See studio_stats.proto;l=2108
+         *     See studio_stats.proto;l=2114
          * @return The minSdk.
          */
         @java.lang.Override
@@ -13466,7 +13483,7 @@ private static final long serialVersionUID = 0L;
          *
          * <code>optional uint32 min_sdk = 2 [deprecated = true];</code>
          * @deprecated android_studio.AndroidStudioEvent.TemplatesUsage.TemplateModule.min_sdk is deprecated.
-         *     See studio_stats.proto;l=2108
+         *     See studio_stats.proto;l=2114
          * @param value The minSdk to set.
          * @return This builder for chaining.
          */
@@ -13484,7 +13501,7 @@ private static final long serialVersionUID = 0L;
          *
          * <code>optional uint32 min_sdk = 2 [deprecated = true];</code>
          * @deprecated android_studio.AndroidStudioEvent.TemplatesUsage.TemplateModule.min_sdk is deprecated.
-         *     See studio_stats.proto;l=2108
+         *     See studio_stats.proto;l=2114
          * @return This builder for chaining.
          */
         @java.lang.Deprecated public Builder clearMinSdk() {
@@ -25346,6 +25363,44 @@ private static final long serialVersionUID = 0L;
     return nextEditPredictionEvent_ == null ? com.google.wireless.android.sdk.stats.NextEditPredictionEvent.getDefaultInstance() : nextEditPredictionEvent_;
   }
 
+  public static final int SML_RAG_EVENT_FIELD_NUMBER = 242;
+  private com.google.wireless.android.sdk.stats.SmlRagEvent smlRagEvent_;
+  /**
+   * <pre>
+   * set when kind = SML_RAG_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.SmlRagEvent sml_rag_event = 242 [lazy = true];</code>
+   * @return Whether the smlRagEvent field is set.
+   */
+  @java.lang.Override
+  public boolean hasSmlRagEvent() {
+    return ((bitField7_ & 0x00000800) != 0);
+  }
+  /**
+   * <pre>
+   * set when kind = SML_RAG_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.SmlRagEvent sml_rag_event = 242 [lazy = true];</code>
+   * @return The smlRagEvent.
+   */
+  @java.lang.Override
+  public com.google.wireless.android.sdk.stats.SmlRagEvent getSmlRagEvent() {
+    return smlRagEvent_ == null ? com.google.wireless.android.sdk.stats.SmlRagEvent.getDefaultInstance() : smlRagEvent_;
+  }
+  /**
+   * <pre>
+   * set when kind = SML_RAG_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.SmlRagEvent sml_rag_event = 242 [lazy = true];</code>
+   */
+  @java.lang.Override
+  public com.google.wireless.android.sdk.stats.SmlRagEventOrBuilder getSmlRagEventOrBuilder() {
+    return smlRagEvent_ == null ? com.google.wireless.android.sdk.stats.SmlRagEvent.getDefaultInstance() : smlRagEvent_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -26082,6 +26137,9 @@ private static final long serialVersionUID = 0L;
     }
     if (((bitField7_ & 0x00000400) != 0)) {
       output.writeMessage(241, getNextEditPredictionEvent());
+    }
+    if (((bitField7_ & 0x00000800) != 0)) {
+      output.writeMessage(242, getSmlRagEvent());
     }
     getUnknownFields().writeTo(output);
   }
@@ -27061,6 +27119,10 @@ private static final long serialVersionUID = 0L;
     if (((bitField7_ & 0x00000400) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(241, getNextEditPredictionEvent());
+    }
+    if (((bitField7_ & 0x00000800) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(242, getSmlRagEvent());
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -28253,6 +28315,11 @@ private static final long serialVersionUID = 0L;
       if (!getNextEditPredictionEvent()
           .equals(other.getNextEditPredictionEvent())) return false;
     }
+    if (hasSmlRagEvent() != other.hasSmlRagEvent()) return false;
+    if (hasSmlRagEvent()) {
+      if (!getSmlRagEvent()
+          .equals(other.getSmlRagEvent())) return false;
+    }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -29230,6 +29297,10 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + NEXT_EDIT_PREDICTION_EVENT_FIELD_NUMBER;
       hash = (53 * hash) + getNextEditPredictionEvent().hashCode();
     }
+    if (hasSmlRagEvent()) {
+      hash = (37 * hash) + SML_RAG_EVENT_FIELD_NUMBER;
+      hash = (53 * hash) + getSmlRagEvent().hashCode();
+    }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -29576,6 +29647,7 @@ private static final long serialVersionUID = 0L;
         getAdvertiserNotificationEventFieldBuilder();
         getAssetStudioWizardEventFieldBuilder();
         getNextEditPredictionEventFieldBuilder();
+        getSmlRagEventFieldBuilder();
       }
     }
     @java.lang.Override
@@ -30710,6 +30782,11 @@ private static final long serialVersionUID = 0L;
       if (nextEditPredictionEventBuilder_ != null) {
         nextEditPredictionEventBuilder_.dispose();
         nextEditPredictionEventBuilder_ = null;
+      }
+      smlRagEvent_ = null;
+      if (smlRagEventBuilder_ != null) {
+        smlRagEventBuilder_.dispose();
+        smlRagEventBuilder_ = null;
       }
       return this;
     }
@@ -32217,6 +32294,12 @@ private static final long serialVersionUID = 0L;
             : nextEditPredictionEventBuilder_.build();
         to_bitField7_ |= 0x00000400;
       }
+      if (((from_bitField7_ & 0x00020000) != 0)) {
+        result.smlRagEvent_ = smlRagEventBuilder_ == null
+            ? smlRagEvent_
+            : smlRagEventBuilder_.build();
+        to_bitField7_ |= 0x00000800;
+      }
       result.bitField6_ |= to_bitField6_;
       result.bitField7_ |= to_bitField7_;
     }
@@ -33059,6 +33142,9 @@ private static final long serialVersionUID = 0L;
       }
       if (other.hasNextEditPredictionEvent()) {
         mergeNextEditPredictionEvent(other.getNextEditPredictionEvent());
+      }
+      if (other.hasSmlRagEvent()) {
+        mergeSmlRagEvent(other.getSmlRagEvent());
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -34841,6 +34927,13 @@ private static final long serialVersionUID = 0L;
               bitField7_ |= 0x00010000;
               break;
             } // case 1930
+            case 1938: {
+              input.readMessage(
+                  getSmlRagEventFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField7_ |= 0x00020000;
+              break;
+            } // case 1938
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -71556,6 +71649,161 @@ private static final long serialVersionUID = 0L;
         nextEditPredictionEvent_ = null;
       }
       return nextEditPredictionEventBuilder_;
+    }
+
+    private com.google.wireless.android.sdk.stats.SmlRagEvent smlRagEvent_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.SmlRagEvent, com.google.wireless.android.sdk.stats.SmlRagEvent.Builder, com.google.wireless.android.sdk.stats.SmlRagEventOrBuilder> smlRagEventBuilder_;
+    /**
+     * <pre>
+     * set when kind = SML_RAG_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.SmlRagEvent sml_rag_event = 242 [lazy = true];</code>
+     * @return Whether the smlRagEvent field is set.
+     */
+    public boolean hasSmlRagEvent() {
+      return ((bitField7_ & 0x00020000) != 0);
+    }
+    /**
+     * <pre>
+     * set when kind = SML_RAG_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.SmlRagEvent sml_rag_event = 242 [lazy = true];</code>
+     * @return The smlRagEvent.
+     */
+    public com.google.wireless.android.sdk.stats.SmlRagEvent getSmlRagEvent() {
+      if (smlRagEventBuilder_ == null) {
+        return smlRagEvent_ == null ? com.google.wireless.android.sdk.stats.SmlRagEvent.getDefaultInstance() : smlRagEvent_;
+      } else {
+        return smlRagEventBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * set when kind = SML_RAG_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.SmlRagEvent sml_rag_event = 242 [lazy = true];</code>
+     */
+    public Builder setSmlRagEvent(com.google.wireless.android.sdk.stats.SmlRagEvent value) {
+      if (smlRagEventBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        smlRagEvent_ = value;
+      } else {
+        smlRagEventBuilder_.setMessage(value);
+      }
+      bitField7_ |= 0x00020000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = SML_RAG_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.SmlRagEvent sml_rag_event = 242 [lazy = true];</code>
+     */
+    public Builder setSmlRagEvent(
+        com.google.wireless.android.sdk.stats.SmlRagEvent.Builder builderForValue) {
+      if (smlRagEventBuilder_ == null) {
+        smlRagEvent_ = builderForValue.build();
+      } else {
+        smlRagEventBuilder_.setMessage(builderForValue.build());
+      }
+      bitField7_ |= 0x00020000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = SML_RAG_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.SmlRagEvent sml_rag_event = 242 [lazy = true];</code>
+     */
+    public Builder mergeSmlRagEvent(com.google.wireless.android.sdk.stats.SmlRagEvent value) {
+      if (smlRagEventBuilder_ == null) {
+        if (((bitField7_ & 0x00020000) != 0) &&
+          smlRagEvent_ != null &&
+          smlRagEvent_ != com.google.wireless.android.sdk.stats.SmlRagEvent.getDefaultInstance()) {
+          getSmlRagEventBuilder().mergeFrom(value);
+        } else {
+          smlRagEvent_ = value;
+        }
+      } else {
+        smlRagEventBuilder_.mergeFrom(value);
+      }
+      bitField7_ |= 0x00020000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = SML_RAG_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.SmlRagEvent sml_rag_event = 242 [lazy = true];</code>
+     */
+    public Builder clearSmlRagEvent() {
+      bitField7_ = (bitField7_ & ~0x00020000);
+      smlRagEvent_ = null;
+      if (smlRagEventBuilder_ != null) {
+        smlRagEventBuilder_.dispose();
+        smlRagEventBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = SML_RAG_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.SmlRagEvent sml_rag_event = 242 [lazy = true];</code>
+     */
+    public com.google.wireless.android.sdk.stats.SmlRagEvent.Builder getSmlRagEventBuilder() {
+      bitField7_ |= 0x00020000;
+      onChanged();
+      return getSmlRagEventFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * set when kind = SML_RAG_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.SmlRagEvent sml_rag_event = 242 [lazy = true];</code>
+     */
+    public com.google.wireless.android.sdk.stats.SmlRagEventOrBuilder getSmlRagEventOrBuilder() {
+      if (smlRagEventBuilder_ != null) {
+        return smlRagEventBuilder_.getMessageOrBuilder();
+      } else {
+        return smlRagEvent_ == null ?
+            com.google.wireless.android.sdk.stats.SmlRagEvent.getDefaultInstance() : smlRagEvent_;
+      }
+    }
+    /**
+     * <pre>
+     * set when kind = SML_RAG_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.SmlRagEvent sml_rag_event = 242 [lazy = true];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.SmlRagEvent, com.google.wireless.android.sdk.stats.SmlRagEvent.Builder, com.google.wireless.android.sdk.stats.SmlRagEventOrBuilder> 
+        getSmlRagEventFieldBuilder() {
+      if (smlRagEventBuilder_ == null) {
+        smlRagEventBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.wireless.android.sdk.stats.SmlRagEvent, com.google.wireless.android.sdk.stats.SmlRagEvent.Builder, com.google.wireless.android.sdk.stats.SmlRagEventOrBuilder>(
+                getSmlRagEvent(),
+                getParentForChildren(),
+                isClean());
+        smlRagEvent_ = null;
+      }
+      return smlRagEventBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

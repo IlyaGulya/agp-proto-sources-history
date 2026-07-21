@@ -562,13 +562,21 @@ private static final long serialVersionUID = 0L;
      */
     DUAL_MODE_MOUSE_DISPLAY_HOST_CURSOR(132),
     /**
-     * <pre>
-     * Next tag: 134
-     * </pre>
-     *
      * <code>ALL_APPS_FOR_HOME_TRAY = 133;</code>
      */
     ALL_APPS_FOR_HOME_TRAY(133),
+    /**
+     * <code>FORCE_LAVAPIPE = 134;</code>
+     */
+    FORCE_LAVAPIPE(134),
+    /**
+     * <pre>
+     * Next tag: 136
+     * </pre>
+     *
+     * <code>FORCE_LAVAPIPE_FOR_SOFTWARE_RENDERING = 135;</code>
+     */
+    FORCE_LAVAPIPE_FOR_SOFTWARE_RENDERING(135),
     ;
 
     /**
@@ -1076,13 +1084,21 @@ private static final long serialVersionUID = 0L;
      */
     public static final int DUAL_MODE_MOUSE_DISPLAY_HOST_CURSOR_VALUE = 132;
     /**
-     * <pre>
-     * Next tag: 134
-     * </pre>
-     *
      * <code>ALL_APPS_FOR_HOME_TRAY = 133;</code>
      */
     public static final int ALL_APPS_FOR_HOME_TRAY_VALUE = 133;
+    /**
+     * <code>FORCE_LAVAPIPE = 134;</code>
+     */
+    public static final int FORCE_LAVAPIPE_VALUE = 134;
+    /**
+     * <pre>
+     * Next tag: 136
+     * </pre>
+     *
+     * <code>FORCE_LAVAPIPE_FOR_SOFTWARE_RENDERING = 135;</code>
+     */
+    public static final int FORCE_LAVAPIPE_FOR_SOFTWARE_RENDERING_VALUE = 135;
 
 
     public final int getNumber() {
@@ -1229,6 +1245,8 @@ private static final long serialVersionUID = 0L;
         case 131: return VIRTIO_DUAL_MODE_MOUSE;
         case 132: return DUAL_MODE_MOUSE_DISPLAY_HOST_CURSOR;
         case 133: return ALL_APPS_FOR_HOME_TRAY;
+        case 134: return FORCE_LAVAPIPE;
+        case 135: return FORCE_LAVAPIPE_FOR_SOFTWARE_RENDERING;
         default: return null;
       }
     }

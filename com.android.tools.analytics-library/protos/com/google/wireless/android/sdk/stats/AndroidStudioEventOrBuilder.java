@@ -6727,4 +6727,31 @@ public interface AndroidStudioEventOrBuilder extends
    * <code>optional .android_studio.NextEditPredictionEvent next_edit_prediction_event = 241 [lazy = true];</code>
    */
   com.google.wireless.android.sdk.stats.NextEditPredictionEventOrBuilder getNextEditPredictionEventOrBuilder();
+
+  /**
+   * <pre>
+   * set when kind = SML_RAG_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.SmlRagEvent sml_rag_event = 242 [lazy = true];</code>
+   * @return Whether the smlRagEvent field is set.
+   */
+  boolean hasSmlRagEvent();
+  /**
+   * <pre>
+   * set when kind = SML_RAG_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.SmlRagEvent sml_rag_event = 242 [lazy = true];</code>
+   * @return The smlRagEvent.
+   */
+  com.google.wireless.android.sdk.stats.SmlRagEvent getSmlRagEvent();
+  /**
+   * <pre>
+   * set when kind = SML_RAG_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.SmlRagEvent sml_rag_event = 242 [lazy = true];</code>
+   */
+  com.google.wireless.android.sdk.stats.SmlRagEventOrBuilder getSmlRagEventOrBuilder();
 }
