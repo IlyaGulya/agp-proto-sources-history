@@ -1468,6 +1468,10 @@ public enum GradleTaskExecutionType
    * <code>GLOBAL_SYNTHETICS_GENERATOR = 362;</code>
    */
   GLOBAL_SYNTHETICS_GENERATOR(362),
+  /**
+   * <code>ANDROID_TEST_DISCOVERY = 363;</code>
+   */
+  ANDROID_TEST_DISCOVERY(363),
   UNRECOGNIZED(-1),
   ;
 
@@ -2923,6 +2927,10 @@ public enum GradleTaskExecutionType
    * <code>GLOBAL_SYNTHETICS_GENERATOR = 362;</code>
    */
   public static final int GLOBAL_SYNTHETICS_GENERATOR_VALUE = 362;
+  /**
+   * <code>ANDROID_TEST_DISCOVERY = 363;</code>
+   */
+  public static final int ANDROID_TEST_DISCOVERY_VALUE = 363;
 
 
   public final int getNumber() {
@@ -3312,6 +3320,7 @@ public enum GradleTaskExecutionType
       case 360: return COMPRESS_JAVA_RES;
       case 361: return LEGACY_REPORTING_TEST_SUITE_TEST;
       case 362: return GLOBAL_SYNTHETICS_GENERATOR;
+      case 363: return ANDROID_TEST_DISCOVERY;
       default: return null;
     }
   }

@@ -3528,6 +3528,14 @@ private static final long serialVersionUID = 0L;
      * <code>SHERLOCK_PING = 376;</code>
      */
     SHERLOCK_PING(376),
+    /**
+     * <pre>
+     * Sherlock event.
+     * </pre>
+     *
+     * <code>SHERLOCK_EVENT = 377;</code>
+     */
+    SHERLOCK_EVENT(377),
     ;
 
     /**
@@ -6347,6 +6355,14 @@ private static final long serialVersionUID = 0L;
      * <code>SHERLOCK_PING = 376;</code>
      */
     public static final int SHERLOCK_PING_VALUE = 376;
+    /**
+     * <pre>
+     * Sherlock event.
+     * </pre>
+     *
+     * <code>SHERLOCK_EVENT = 377;</code>
+     */
+    public static final int SHERLOCK_EVENT_VALUE = 377;
 
 
     public final int getNumber() {
@@ -6741,6 +6757,7 @@ private static final long serialVersionUID = 0L;
         case 374: return ANDROID_CLI_INVOCATION;
         case 375: return UNIT_TEST_GENERATION_EVENT;
         case 376: return SHERLOCK_PING;
+        case 377: return SHERLOCK_EVENT;
         default: return null;
       }
     }
@@ -13706,7 +13723,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional uint32 min_sdk = 2 [deprecated = true];</code>
        * @deprecated android_studio.AndroidStudioEvent.TemplatesUsage.TemplateModule.min_sdk is deprecated.
-       *     See studio_stats.proto;l=2191
+       *     See studio_stats.proto;l=2197
        * @return Whether the minSdk field is set.
        */
       @java.lang.Deprecated boolean hasMinSdk();
@@ -13717,7 +13734,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional uint32 min_sdk = 2 [deprecated = true];</code>
        * @deprecated android_studio.AndroidStudioEvent.TemplatesUsage.TemplateModule.min_sdk is deprecated.
-       *     See studio_stats.proto;l=2191
+       *     See studio_stats.proto;l=2197
        * @return The minSdk.
        */
       @java.lang.Deprecated int getMinSdk();
@@ -14248,7 +14265,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional uint32 min_sdk = 2 [deprecated = true];</code>
        * @deprecated android_studio.AndroidStudioEvent.TemplatesUsage.TemplateModule.min_sdk is deprecated.
-       *     See studio_stats.proto;l=2191
+       *     See studio_stats.proto;l=2197
        * @return Whether the minSdk field is set.
        */
       @java.lang.Override
@@ -14262,7 +14279,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional uint32 min_sdk = 2 [deprecated = true];</code>
        * @deprecated android_studio.AndroidStudioEvent.TemplatesUsage.TemplateModule.min_sdk is deprecated.
-       *     See studio_stats.proto;l=2191
+       *     See studio_stats.proto;l=2197
        * @return The minSdk.
        */
       @java.lang.Override
@@ -14900,7 +14917,7 @@ private static final long serialVersionUID = 0L;
          *
          * <code>optional uint32 min_sdk = 2 [deprecated = true];</code>
          * @deprecated android_studio.AndroidStudioEvent.TemplatesUsage.TemplateModule.min_sdk is deprecated.
-         *     See studio_stats.proto;l=2191
+         *     See studio_stats.proto;l=2197
          * @return Whether the minSdk field is set.
          */
         @java.lang.Override
@@ -14914,7 +14931,7 @@ private static final long serialVersionUID = 0L;
          *
          * <code>optional uint32 min_sdk = 2 [deprecated = true];</code>
          * @deprecated android_studio.AndroidStudioEvent.TemplatesUsage.TemplateModule.min_sdk is deprecated.
-         *     See studio_stats.proto;l=2191
+         *     See studio_stats.proto;l=2197
          * @return The minSdk.
          */
         @java.lang.Override
@@ -14928,7 +14945,7 @@ private static final long serialVersionUID = 0L;
          *
          * <code>optional uint32 min_sdk = 2 [deprecated = true];</code>
          * @deprecated android_studio.AndroidStudioEvent.TemplatesUsage.TemplateModule.min_sdk is deprecated.
-         *     See studio_stats.proto;l=2191
+         *     See studio_stats.proto;l=2197
          * @param value The minSdk to set.
          * @return This builder for chaining.
          */
@@ -14946,7 +14963,7 @@ private static final long serialVersionUID = 0L;
          *
          * <code>optional uint32 min_sdk = 2 [deprecated = true];</code>
          * @deprecated android_studio.AndroidStudioEvent.TemplatesUsage.TemplateModule.min_sdk is deprecated.
-         *     See studio_stats.proto;l=2191
+         *     See studio_stats.proto;l=2197
          * @return This builder for chaining.
          */
         @java.lang.Deprecated public Builder clearMinSdk() {
@@ -27252,6 +27269,44 @@ private static final long serialVersionUID = 0L;
     return unitTestGenerationEvent_ == null ? com.google.wireless.android.sdk.stats.UnitTestGenerationEvent.getDefaultInstance() : unitTestGenerationEvent_;
   }
 
+  public static final int SHERLOCK_EVENT_FIELD_NUMBER = 253;
+  private com.google.wireless.android.sdk.stats.SherlockEvent sherlockEvent_;
+  /**
+   * <pre>
+   * set when kind = SHERLOCK_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.SherlockEvent sherlock_event = 253 [lazy = true];</code>
+   * @return Whether the sherlockEvent field is set.
+   */
+  @java.lang.Override
+  public boolean hasSherlockEvent() {
+    return ((bitField7_ & 0x00200000) != 0);
+  }
+  /**
+   * <pre>
+   * set when kind = SHERLOCK_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.SherlockEvent sherlock_event = 253 [lazy = true];</code>
+   * @return The sherlockEvent.
+   */
+  @java.lang.Override
+  public com.google.wireless.android.sdk.stats.SherlockEvent getSherlockEvent() {
+    return sherlockEvent_ == null ? com.google.wireless.android.sdk.stats.SherlockEvent.getDefaultInstance() : sherlockEvent_;
+  }
+  /**
+   * <pre>
+   * set when kind = SHERLOCK_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.SherlockEvent sherlock_event = 253 [lazy = true];</code>
+   */
+  @java.lang.Override
+  public com.google.wireless.android.sdk.stats.SherlockEventOrBuilder getSherlockEventOrBuilder() {
+    return sherlockEvent_ == null ? com.google.wireless.android.sdk.stats.SherlockEvent.getDefaultInstance() : sherlockEvent_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -28021,6 +28076,9 @@ private static final long serialVersionUID = 0L;
     }
     if (((bitField7_ & 0x00100000) != 0)) {
       output.writeMessage(252, getUnitTestGenerationEvent());
+    }
+    if (((bitField7_ & 0x00200000) != 0)) {
+      output.writeMessage(253, getSherlockEvent());
     }
     getUnknownFields().writeTo(output);
   }
@@ -29044,6 +29102,10 @@ private static final long serialVersionUID = 0L;
     if (((bitField7_ & 0x00100000) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(252, getUnitTestGenerationEvent());
+    }
+    if (((bitField7_ & 0x00200000) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(253, getSherlockEvent());
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -30288,6 +30350,11 @@ private static final long serialVersionUID = 0L;
       if (!getUnitTestGenerationEvent()
           .equals(other.getUnitTestGenerationEvent())) return false;
     }
+    if (hasSherlockEvent() != other.hasSherlockEvent()) return false;
+    if (hasSherlockEvent()) {
+      if (!getSherlockEvent()
+          .equals(other.getSherlockEvent())) return false;
+    }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -31309,6 +31376,10 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + UNIT_TEST_GENERATION_EVENT_FIELD_NUMBER;
       hash = (53 * hash) + getUnitTestGenerationEvent().hashCode();
     }
+    if (hasSherlockEvent()) {
+      hash = (37 * hash) + SHERLOCK_EVENT_FIELD_NUMBER;
+      hash = (53 * hash) + getSherlockEvent().hashCode();
+    }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -31666,6 +31737,7 @@ private static final long serialVersionUID = 0L;
         getEmulatorWindowsHypervisorMigrationEventFieldBuilder();
         getAndroidCliInvocationFieldBuilder();
         getUnitTestGenerationEventFieldBuilder();
+        getSherlockEventFieldBuilder();
       }
     }
     @java.lang.Override
@@ -32857,6 +32929,11 @@ private static final long serialVersionUID = 0L;
       if (unitTestGenerationEventBuilder_ != null) {
         unitTestGenerationEventBuilder_.dispose();
         unitTestGenerationEventBuilder_ = null;
+      }
+      sherlockEvent_ = null;
+      if (sherlockEventBuilder_ != null) {
+        sherlockEventBuilder_.dispose();
+        sherlockEventBuilder_ = null;
       }
       return this;
     }
@@ -34433,6 +34510,12 @@ private static final long serialVersionUID = 0L;
             : unitTestGenerationEventBuilder_.build();
         to_bitField7_ |= 0x00100000;
       }
+      if (((from_bitField7_ & 0x10000000) != 0)) {
+        result.sherlockEvent_ = sherlockEventBuilder_ == null
+            ? sherlockEvent_
+            : sherlockEventBuilder_.build();
+        to_bitField7_ |= 0x00200000;
+      }
       result.bitField6_ |= to_bitField6_;
       result.bitField7_ |= to_bitField7_;
     }
@@ -35331,6 +35414,9 @@ private static final long serialVersionUID = 0L;
       }
       if (other.hasUnitTestGenerationEvent()) {
         mergeUnitTestGenerationEvent(other.getUnitTestGenerationEvent());
+      }
+      if (other.hasSherlockEvent()) {
+        mergeSherlockEvent(other.getSherlockEvent());
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -37196,6 +37282,13 @@ private static final long serialVersionUID = 0L;
               bitField7_ |= 0x08000000;
               break;
             } // case 2018
+            case 2026: {
+              input.readMessage(
+                  getSherlockEventFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField7_ |= 0x10000000;
+              break;
+            } // case 2026
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -75782,6 +75875,161 @@ private static final long serialVersionUID = 0L;
         unitTestGenerationEvent_ = null;
       }
       return unitTestGenerationEventBuilder_;
+    }
+
+    private com.google.wireless.android.sdk.stats.SherlockEvent sherlockEvent_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.SherlockEvent, com.google.wireless.android.sdk.stats.SherlockEvent.Builder, com.google.wireless.android.sdk.stats.SherlockEventOrBuilder> sherlockEventBuilder_;
+    /**
+     * <pre>
+     * set when kind = SHERLOCK_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.SherlockEvent sherlock_event = 253 [lazy = true];</code>
+     * @return Whether the sherlockEvent field is set.
+     */
+    public boolean hasSherlockEvent() {
+      return ((bitField7_ & 0x10000000) != 0);
+    }
+    /**
+     * <pre>
+     * set when kind = SHERLOCK_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.SherlockEvent sherlock_event = 253 [lazy = true];</code>
+     * @return The sherlockEvent.
+     */
+    public com.google.wireless.android.sdk.stats.SherlockEvent getSherlockEvent() {
+      if (sherlockEventBuilder_ == null) {
+        return sherlockEvent_ == null ? com.google.wireless.android.sdk.stats.SherlockEvent.getDefaultInstance() : sherlockEvent_;
+      } else {
+        return sherlockEventBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * set when kind = SHERLOCK_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.SherlockEvent sherlock_event = 253 [lazy = true];</code>
+     */
+    public Builder setSherlockEvent(com.google.wireless.android.sdk.stats.SherlockEvent value) {
+      if (sherlockEventBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        sherlockEvent_ = value;
+      } else {
+        sherlockEventBuilder_.setMessage(value);
+      }
+      bitField7_ |= 0x10000000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = SHERLOCK_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.SherlockEvent sherlock_event = 253 [lazy = true];</code>
+     */
+    public Builder setSherlockEvent(
+        com.google.wireless.android.sdk.stats.SherlockEvent.Builder builderForValue) {
+      if (sherlockEventBuilder_ == null) {
+        sherlockEvent_ = builderForValue.build();
+      } else {
+        sherlockEventBuilder_.setMessage(builderForValue.build());
+      }
+      bitField7_ |= 0x10000000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = SHERLOCK_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.SherlockEvent sherlock_event = 253 [lazy = true];</code>
+     */
+    public Builder mergeSherlockEvent(com.google.wireless.android.sdk.stats.SherlockEvent value) {
+      if (sherlockEventBuilder_ == null) {
+        if (((bitField7_ & 0x10000000) != 0) &&
+          sherlockEvent_ != null &&
+          sherlockEvent_ != com.google.wireless.android.sdk.stats.SherlockEvent.getDefaultInstance()) {
+          getSherlockEventBuilder().mergeFrom(value);
+        } else {
+          sherlockEvent_ = value;
+        }
+      } else {
+        sherlockEventBuilder_.mergeFrom(value);
+      }
+      bitField7_ |= 0x10000000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = SHERLOCK_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.SherlockEvent sherlock_event = 253 [lazy = true];</code>
+     */
+    public Builder clearSherlockEvent() {
+      bitField7_ = (bitField7_ & ~0x10000000);
+      sherlockEvent_ = null;
+      if (sherlockEventBuilder_ != null) {
+        sherlockEventBuilder_.dispose();
+        sherlockEventBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = SHERLOCK_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.SherlockEvent sherlock_event = 253 [lazy = true];</code>
+     */
+    public com.google.wireless.android.sdk.stats.SherlockEvent.Builder getSherlockEventBuilder() {
+      bitField7_ |= 0x10000000;
+      onChanged();
+      return getSherlockEventFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * set when kind = SHERLOCK_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.SherlockEvent sherlock_event = 253 [lazy = true];</code>
+     */
+    public com.google.wireless.android.sdk.stats.SherlockEventOrBuilder getSherlockEventOrBuilder() {
+      if (sherlockEventBuilder_ != null) {
+        return sherlockEventBuilder_.getMessageOrBuilder();
+      } else {
+        return sherlockEvent_ == null ?
+            com.google.wireless.android.sdk.stats.SherlockEvent.getDefaultInstance() : sherlockEvent_;
+      }
+    }
+    /**
+     * <pre>
+     * set when kind = SHERLOCK_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.SherlockEvent sherlock_event = 253 [lazy = true];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.SherlockEvent, com.google.wireless.android.sdk.stats.SherlockEvent.Builder, com.google.wireless.android.sdk.stats.SherlockEventOrBuilder> 
+        getSherlockEventFieldBuilder() {
+      if (sherlockEventBuilder_ == null) {
+        sherlockEventBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.wireless.android.sdk.stats.SherlockEvent, com.google.wireless.android.sdk.stats.SherlockEvent.Builder, com.google.wireless.android.sdk.stats.SherlockEventOrBuilder>(
+                getSherlockEvent(),
+                getParentForChildren(),
+                isClean());
+        sherlockEvent_ = null;
+      }
+      return sherlockEventBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(
