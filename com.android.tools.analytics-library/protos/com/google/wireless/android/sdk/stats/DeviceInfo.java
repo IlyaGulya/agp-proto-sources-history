@@ -30,7 +30,8 @@ private static final long serialVersionUID = 0L;
     deviceType_ = 0;
     buildApiLevelFull_ = "";
     mdnsConnectionType_ = 0;
-    characteristics_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    characteristics_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
     deviceProvisionerId_ = "";
     connectionId_ = "";
     oemLabName_ = "";
@@ -43,11 +44,6 @@ private static final long serialVersionUID = 0L;
     return new DeviceInfo();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
-    return this.unknownFields;
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_DeviceInfo_descriptor;
@@ -520,7 +516,8 @@ private static final long serialVersionUID = 0L;
 
   private int bitField0_;
   public static final int ANONYMIZED_SERIAL_NUMBER_FIELD_NUMBER = 1;
-  private volatile java.lang.Object anonymizedSerialNumber_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object anonymizedSerialNumber_ = "";
   /**
    * <pre>
    * serial number of the device, salted &amp; sha256ed on the client.
@@ -580,7 +577,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int BUILD_TAGS_FIELD_NUMBER = 2;
-  private volatile java.lang.Object buildTags_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object buildTags_ = "";
   /**
    * <pre>
    * Tags used to build the android version on this device.
@@ -643,7 +641,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int BUILD_TYPE_FIELD_NUMBER = 3;
-  private volatile java.lang.Object buildType_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object buildType_ = "";
   /**
    * <pre>
    * Type of build this device is running.
@@ -706,7 +705,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int BUILD_VERSION_RELEASE_FIELD_NUMBER = 4;
-  private volatile java.lang.Object buildVersionRelease_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object buildVersionRelease_ = "";
   /**
    * <pre>
    * Android version e.g. '5.1.1'
@@ -766,14 +766,15 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int BUILD_API_LEVEL_FIELD_NUMBER = 5;
-  private int buildApiLevel_;
+  private int buildApiLevel_ = 0;
   /**
    * <pre>
    * Historic: doesn't support api levels for code names such as 'N'.
    * </pre>
    *
    * <code>optional int32 build_api_level = 5 [deprecated = true];</code>
-   * @deprecated
+   * @deprecated android_studio.DeviceInfo.build_api_level is deprecated.
+   *     See studio_stats.proto;l=2421
    * @return Whether the buildApiLevel field is set.
    */
   @java.lang.Override
@@ -786,7 +787,8 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>optional int32 build_api_level = 5 [deprecated = true];</code>
-   * @deprecated
+   * @deprecated android_studio.DeviceInfo.build_api_level is deprecated.
+   *     See studio_stats.proto;l=2421
    * @return The buildApiLevel.
    */
   @java.lang.Override
@@ -795,7 +797,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int CPU_ABI_FIELD_NUMBER = 6;
-  private int cpuAbi_;
+  private int cpuAbi_ = 0;
   /**
    * <pre>
    * ABI of the device, e.g. 'armeabi-v7a' or 'x86'
@@ -816,13 +818,13 @@ private static final long serialVersionUID = 0L;
    * @return The cpuAbi.
    */
   @java.lang.Override public com.google.wireless.android.sdk.stats.DeviceInfo.ApplicationBinaryInterface getCpuAbi() {
-    @SuppressWarnings("deprecation")
-    com.google.wireless.android.sdk.stats.DeviceInfo.ApplicationBinaryInterface result = com.google.wireless.android.sdk.stats.DeviceInfo.ApplicationBinaryInterface.valueOf(cpuAbi_);
+    com.google.wireless.android.sdk.stats.DeviceInfo.ApplicationBinaryInterface result = com.google.wireless.android.sdk.stats.DeviceInfo.ApplicationBinaryInterface.forNumber(cpuAbi_);
     return result == null ? com.google.wireless.android.sdk.stats.DeviceInfo.ApplicationBinaryInterface.UNKNOWN_ABI : result;
   }
 
   public static final int MANUFACTURER_FIELD_NUMBER = 7;
-  private volatile java.lang.Object manufacturer_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object manufacturer_ = "";
   /**
    * <pre>
    * Device manufacturer, e.g. 'Motorola' or 'Samsung'
@@ -882,7 +884,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int MODEL_FIELD_NUMBER = 8;
-  private volatile java.lang.Object model_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object model_ = "";
   /**
    * <pre>
    * Device model, e.g. 'Nexus 5' or 'GT-I9500'.
@@ -942,7 +945,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int DEVICE_TYPE_FIELD_NUMBER = 9;
-  private int deviceType_;
+  private int deviceType_ = 0;
   /**
    * <pre>
    * What kind of device is this? Physicial/Emulator/Cloud etc...
@@ -963,13 +966,13 @@ private static final long serialVersionUID = 0L;
    * @return The deviceType.
    */
   @java.lang.Override public com.google.wireless.android.sdk.stats.DeviceInfo.DeviceType getDeviceType() {
-    @SuppressWarnings("deprecation")
-    com.google.wireless.android.sdk.stats.DeviceInfo.DeviceType result = com.google.wireless.android.sdk.stats.DeviceInfo.DeviceType.valueOf(deviceType_);
+    com.google.wireless.android.sdk.stats.DeviceInfo.DeviceType result = com.google.wireless.android.sdk.stats.DeviceInfo.DeviceType.forNumber(deviceType_);
     return result == null ? com.google.wireless.android.sdk.stats.DeviceInfo.DeviceType.UNKNOWN_DEVICE_TYPE : result;
   }
 
   public static final int BUILD_API_LEVEL_FULL_FIELD_NUMBER = 10;
-  private volatile java.lang.Object buildApiLevelFull_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object buildApiLevelFull_ = "";
   /**
    * <pre>
    * android api level  e.g. '23' or 'N'
@@ -1029,7 +1032,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int MDNS_CONNECTION_TYPE_FIELD_NUMBER = 11;
-  private int mdnsConnectionType_;
+  private int mdnsConnectionType_ = 0;
   /**
    * <pre>
    * Describes the type of mDNS connection (if any)
@@ -1050,13 +1053,14 @@ private static final long serialVersionUID = 0L;
    * @return The mdnsConnectionType.
    */
   @java.lang.Override public com.google.wireless.android.sdk.stats.DeviceInfo.MdnsConnectionType getMdnsConnectionType() {
-    @SuppressWarnings("deprecation")
-    com.google.wireless.android.sdk.stats.DeviceInfo.MdnsConnectionType result = com.google.wireless.android.sdk.stats.DeviceInfo.MdnsConnectionType.valueOf(mdnsConnectionType_);
+    com.google.wireless.android.sdk.stats.DeviceInfo.MdnsConnectionType result = com.google.wireless.android.sdk.stats.DeviceInfo.MdnsConnectionType.forNumber(mdnsConnectionType_);
     return result == null ? com.google.wireless.android.sdk.stats.DeviceInfo.MdnsConnectionType.UNKNOWN_MDNS_CONNECTION_TYPE : result;
   }
 
   public static final int CHARACTERISTICS_FIELD_NUMBER = 12;
-  private com.google.protobuf.LazyStringList characteristics_;
+  @SuppressWarnings("serial")
+  private com.google.protobuf.LazyStringArrayList characteristics_ =
+      com.google.protobuf.LazyStringArrayList.emptyList();
   /**
    * <pre>
    * Set of characteristics obtained from "ro.build.characteristics" property
@@ -1107,7 +1111,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int DEVICE_PROVISIONER_ID_FIELD_NUMBER = 13;
-  private volatile java.lang.Object deviceProvisionerId_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object deviceProvisionerId_ = "";
   /**
    * <pre>
    * ID of device provisioner plugin that created the device
@@ -1167,7 +1172,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int CONNECTION_ID_FIELD_NUMBER = 14;
-  private volatile java.lang.Object connectionId_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object connectionId_ = "";
   /**
    * <pre>
    * A unique identifier of the connection session, i.e. a contiguous time
@@ -1233,7 +1239,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int OEM_LAB_NAME_FIELD_NUMBER = 15;
-  private volatile java.lang.Object oemLabName_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object oemLabName_ = "";
   /**
    * <pre>
    * If this is a remote physical device from a non-google lab, this is the
@@ -1704,36 +1711,23 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       anonymizedSerialNumber_ = "";
-      bitField0_ = (bitField0_ & ~0x00000001);
       buildTags_ = "";
-      bitField0_ = (bitField0_ & ~0x00000002);
       buildType_ = "";
-      bitField0_ = (bitField0_ & ~0x00000004);
       buildVersionRelease_ = "";
-      bitField0_ = (bitField0_ & ~0x00000008);
       buildApiLevel_ = 0;
-      bitField0_ = (bitField0_ & ~0x00000010);
       cpuAbi_ = 0;
-      bitField0_ = (bitField0_ & ~0x00000020);
       manufacturer_ = "";
-      bitField0_ = (bitField0_ & ~0x00000040);
       model_ = "";
-      bitField0_ = (bitField0_ & ~0x00000080);
       deviceType_ = 0;
-      bitField0_ = (bitField0_ & ~0x00000100);
       buildApiLevelFull_ = "";
-      bitField0_ = (bitField0_ & ~0x00000200);
       mdnsConnectionType_ = 0;
-      bitField0_ = (bitField0_ & ~0x00000400);
-      characteristics_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      bitField0_ = (bitField0_ & ~0x00000800);
+      characteristics_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
       deviceProvisionerId_ = "";
-      bitField0_ = (bitField0_ & ~0x00001000);
       connectionId_ = "";
-      bitField0_ = (bitField0_ & ~0x00002000);
       oemLabName_ = "";
-      bitField0_ = (bitField0_ & ~0x00004000);
       return this;
     }
 
@@ -1760,106 +1754,77 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.wireless.android.sdk.stats.DeviceInfo buildPartial() {
       com.google.wireless.android.sdk.stats.DeviceInfo result = new com.google.wireless.android.sdk.stats.DeviceInfo(this);
+      if (bitField0_ != 0) { buildPartial0(result); }
+      onBuilt();
+      return result;
+    }
+
+    private void buildPartial0(com.google.wireless.android.sdk.stats.DeviceInfo result) {
       int from_bitField0_ = bitField0_;
       int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.anonymizedSerialNumber_ = anonymizedSerialNumber_;
         to_bitField0_ |= 0x00000001;
       }
-      result.anonymizedSerialNumber_ = anonymizedSerialNumber_;
       if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.buildTags_ = buildTags_;
         to_bitField0_ |= 0x00000002;
       }
-      result.buildTags_ = buildTags_;
       if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.buildType_ = buildType_;
         to_bitField0_ |= 0x00000004;
       }
-      result.buildType_ = buildType_;
       if (((from_bitField0_ & 0x00000008) != 0)) {
+        result.buildVersionRelease_ = buildVersionRelease_;
         to_bitField0_ |= 0x00000008;
       }
-      result.buildVersionRelease_ = buildVersionRelease_;
       if (((from_bitField0_ & 0x00000010) != 0)) {
         result.buildApiLevel_ = buildApiLevel_;
         to_bitField0_ |= 0x00000010;
       }
       if (((from_bitField0_ & 0x00000020) != 0)) {
+        result.cpuAbi_ = cpuAbi_;
         to_bitField0_ |= 0x00000020;
       }
-      result.cpuAbi_ = cpuAbi_;
       if (((from_bitField0_ & 0x00000040) != 0)) {
+        result.manufacturer_ = manufacturer_;
         to_bitField0_ |= 0x00000040;
       }
-      result.manufacturer_ = manufacturer_;
       if (((from_bitField0_ & 0x00000080) != 0)) {
+        result.model_ = model_;
         to_bitField0_ |= 0x00000080;
       }
-      result.model_ = model_;
       if (((from_bitField0_ & 0x00000100) != 0)) {
+        result.deviceType_ = deviceType_;
         to_bitField0_ |= 0x00000100;
       }
-      result.deviceType_ = deviceType_;
       if (((from_bitField0_ & 0x00000200) != 0)) {
+        result.buildApiLevelFull_ = buildApiLevelFull_;
         to_bitField0_ |= 0x00000200;
       }
-      result.buildApiLevelFull_ = buildApiLevelFull_;
       if (((from_bitField0_ & 0x00000400) != 0)) {
+        result.mdnsConnectionType_ = mdnsConnectionType_;
         to_bitField0_ |= 0x00000400;
       }
-      result.mdnsConnectionType_ = mdnsConnectionType_;
-      if (((bitField0_ & 0x00000800) != 0)) {
-        characteristics_ = characteristics_.getUnmodifiableView();
-        bitField0_ = (bitField0_ & ~0x00000800);
+      if (((from_bitField0_ & 0x00000800) != 0)) {
+        characteristics_.makeImmutable();
+        result.characteristics_ = characteristics_;
       }
-      result.characteristics_ = characteristics_;
       if (((from_bitField0_ & 0x00001000) != 0)) {
+        result.deviceProvisionerId_ = deviceProvisionerId_;
         to_bitField0_ |= 0x00000800;
       }
-      result.deviceProvisionerId_ = deviceProvisionerId_;
       if (((from_bitField0_ & 0x00002000) != 0)) {
+        result.connectionId_ = connectionId_;
         to_bitField0_ |= 0x00001000;
       }
-      result.connectionId_ = connectionId_;
       if (((from_bitField0_ & 0x00004000) != 0)) {
+        result.oemLabName_ = oemLabName_;
         to_bitField0_ |= 0x00002000;
       }
-      result.oemLabName_ = oemLabName_;
-      result.bitField0_ = to_bitField0_;
-      onBuilt();
-      return result;
+      result.bitField0_ |= to_bitField0_;
     }
 
-    @java.lang.Override
-    public Builder clone() {
-      return super.clone();
-    }
-    @java.lang.Override
-    public Builder setField(
-        com.google.protobuf.Descriptors.FieldDescriptor field,
-        java.lang.Object value) {
-      return super.setField(field, value);
-    }
-    @java.lang.Override
-    public Builder clearField(
-        com.google.protobuf.Descriptors.FieldDescriptor field) {
-      return super.clearField(field);
-    }
-    @java.lang.Override
-    public Builder clearOneof(
-        com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-      return super.clearOneof(oneof);
-    }
-    @java.lang.Override
-    public Builder setRepeatedField(
-        com.google.protobuf.Descriptors.FieldDescriptor field,
-        int index, java.lang.Object value) {
-      return super.setRepeatedField(field, index, value);
-    }
-    @java.lang.Override
-    public Builder addRepeatedField(
-        com.google.protobuf.Descriptors.FieldDescriptor field,
-        java.lang.Object value) {
-      return super.addRepeatedField(field, value);
-    }
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
       if (other instanceof com.google.wireless.android.sdk.stats.DeviceInfo) {
@@ -1873,23 +1838,23 @@ private static final long serialVersionUID = 0L;
     public Builder mergeFrom(com.google.wireless.android.sdk.stats.DeviceInfo other) {
       if (other == com.google.wireless.android.sdk.stats.DeviceInfo.getDefaultInstance()) return this;
       if (other.hasAnonymizedSerialNumber()) {
-        bitField0_ |= 0x00000001;
         anonymizedSerialNumber_ = other.anonymizedSerialNumber_;
+        bitField0_ |= 0x00000001;
         onChanged();
       }
       if (other.hasBuildTags()) {
-        bitField0_ |= 0x00000002;
         buildTags_ = other.buildTags_;
+        bitField0_ |= 0x00000002;
         onChanged();
       }
       if (other.hasBuildType()) {
-        bitField0_ |= 0x00000004;
         buildType_ = other.buildType_;
+        bitField0_ |= 0x00000004;
         onChanged();
       }
       if (other.hasBuildVersionRelease()) {
-        bitField0_ |= 0x00000008;
         buildVersionRelease_ = other.buildVersionRelease_;
+        bitField0_ |= 0x00000008;
         onChanged();
       }
       if (other.hasBuildApiLevel()) {
@@ -1899,21 +1864,21 @@ private static final long serialVersionUID = 0L;
         setCpuAbi(other.getCpuAbi());
       }
       if (other.hasManufacturer()) {
-        bitField0_ |= 0x00000040;
         manufacturer_ = other.manufacturer_;
+        bitField0_ |= 0x00000040;
         onChanged();
       }
       if (other.hasModel()) {
-        bitField0_ |= 0x00000080;
         model_ = other.model_;
+        bitField0_ |= 0x00000080;
         onChanged();
       }
       if (other.hasDeviceType()) {
         setDeviceType(other.getDeviceType());
       }
       if (other.hasBuildApiLevelFull()) {
-        bitField0_ |= 0x00000200;
         buildApiLevelFull_ = other.buildApiLevelFull_;
+        bitField0_ |= 0x00000200;
         onChanged();
       }
       if (other.hasMdnsConnectionType()) {
@@ -1922,7 +1887,7 @@ private static final long serialVersionUID = 0L;
       if (!other.characteristics_.isEmpty()) {
         if (characteristics_.isEmpty()) {
           characteristics_ = other.characteristics_;
-          bitField0_ = (bitField0_ & ~0x00000800);
+          bitField0_ |= 0x00000800;
         } else {
           ensureCharacteristicsIsMutable();
           characteristics_.addAll(other.characteristics_);
@@ -1930,18 +1895,18 @@ private static final long serialVersionUID = 0L;
         onChanged();
       }
       if (other.hasDeviceProvisionerId()) {
-        bitField0_ |= 0x00001000;
         deviceProvisionerId_ = other.deviceProvisionerId_;
+        bitField0_ |= 0x00001000;
         onChanged();
       }
       if (other.hasConnectionId()) {
-        bitField0_ |= 0x00002000;
         connectionId_ = other.connectionId_;
+        bitField0_ |= 0x00002000;
         onChanged();
       }
       if (other.hasOemLabName()) {
-        bitField0_ |= 0x00004000;
         oemLabName_ = other.oemLabName_;
+        bitField0_ |= 0x00004000;
         onChanged();
       }
       this.mergeUnknownFields(other.getUnknownFields());
@@ -2150,11 +2115,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setAnonymizedSerialNumber(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000001;
+      if (value == null) { throw new NullPointerException(); }
       anonymizedSerialNumber_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -2167,8 +2130,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearAnonymizedSerialNumber() {
-      bitField0_ = (bitField0_ & ~0x00000001);
       anonymizedSerialNumber_ = getDefaultInstance().getAnonymizedSerialNumber();
+      bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
@@ -2183,11 +2146,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setAnonymizedSerialNumberBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000001;
+      if (value == null) { throw new NullPointerException(); }
       anonymizedSerialNumber_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -2262,11 +2223,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setBuildTags(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000002;
+      if (value == null) { throw new NullPointerException(); }
       buildTags_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -2280,8 +2239,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearBuildTags() {
-      bitField0_ = (bitField0_ & ~0x00000002);
       buildTags_ = getDefaultInstance().getBuildTags();
+      bitField0_ = (bitField0_ & ~0x00000002);
       onChanged();
       return this;
     }
@@ -2297,11 +2256,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setBuildTagsBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000002;
+      if (value == null) { throw new NullPointerException(); }
       buildTags_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -2376,11 +2333,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setBuildType(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000004;
+      if (value == null) { throw new NullPointerException(); }
       buildType_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -2394,8 +2349,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearBuildType() {
-      bitField0_ = (bitField0_ & ~0x00000004);
       buildType_ = getDefaultInstance().getBuildType();
+      bitField0_ = (bitField0_ & ~0x00000004);
       onChanged();
       return this;
     }
@@ -2411,11 +2366,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setBuildTypeBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000004;
+      if (value == null) { throw new NullPointerException(); }
       buildType_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -2486,11 +2439,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setBuildVersionRelease(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000008;
+      if (value == null) { throw new NullPointerException(); }
       buildVersionRelease_ = value;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -2503,8 +2454,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearBuildVersionRelease() {
-      bitField0_ = (bitField0_ & ~0x00000008);
       buildVersionRelease_ = getDefaultInstance().getBuildVersionRelease();
+      bitField0_ = (bitField0_ & ~0x00000008);
       onChanged();
       return this;
     }
@@ -2519,11 +2470,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setBuildVersionReleaseBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000008;
+      if (value == null) { throw new NullPointerException(); }
       buildVersionRelease_ = value;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -2535,7 +2484,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>optional int32 build_api_level = 5 [deprecated = true];</code>
-     * @deprecated
+     * @deprecated android_studio.DeviceInfo.build_api_level is deprecated.
+     *     See studio_stats.proto;l=2421
      * @return Whether the buildApiLevel field is set.
      */
     @java.lang.Override
@@ -2548,7 +2498,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>optional int32 build_api_level = 5 [deprecated = true];</code>
-     * @deprecated
+     * @deprecated android_studio.DeviceInfo.build_api_level is deprecated.
+     *     See studio_stats.proto;l=2421
      * @return The buildApiLevel.
      */
     @java.lang.Override
@@ -2561,13 +2512,15 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>optional int32 build_api_level = 5 [deprecated = true];</code>
-     * @deprecated
+     * @deprecated android_studio.DeviceInfo.build_api_level is deprecated.
+     *     See studio_stats.proto;l=2421
      * @param value The buildApiLevel to set.
      * @return This builder for chaining.
      */
     @java.lang.Deprecated public Builder setBuildApiLevel(int value) {
-      bitField0_ |= 0x00000010;
+
       buildApiLevel_ = value;
+      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -2577,7 +2530,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>optional int32 build_api_level = 5 [deprecated = true];</code>
-     * @deprecated
+     * @deprecated android_studio.DeviceInfo.build_api_level is deprecated.
+     *     See studio_stats.proto;l=2421
      * @return This builder for chaining.
      */
     @java.lang.Deprecated public Builder clearBuildApiLevel() {
@@ -2609,8 +2563,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public com.google.wireless.android.sdk.stats.DeviceInfo.ApplicationBinaryInterface getCpuAbi() {
-      @SuppressWarnings("deprecation")
-      com.google.wireless.android.sdk.stats.DeviceInfo.ApplicationBinaryInterface result = com.google.wireless.android.sdk.stats.DeviceInfo.ApplicationBinaryInterface.valueOf(cpuAbi_);
+      com.google.wireless.android.sdk.stats.DeviceInfo.ApplicationBinaryInterface result = com.google.wireless.android.sdk.stats.DeviceInfo.ApplicationBinaryInterface.forNumber(cpuAbi_);
       return result == null ? com.google.wireless.android.sdk.stats.DeviceInfo.ApplicationBinaryInterface.UNKNOWN_ABI : result;
     }
     /**
@@ -2712,11 +2665,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setManufacturer(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000040;
+      if (value == null) { throw new NullPointerException(); }
       manufacturer_ = value;
+      bitField0_ |= 0x00000040;
       onChanged();
       return this;
     }
@@ -2729,8 +2680,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearManufacturer() {
-      bitField0_ = (bitField0_ & ~0x00000040);
       manufacturer_ = getDefaultInstance().getManufacturer();
+      bitField0_ = (bitField0_ & ~0x00000040);
       onChanged();
       return this;
     }
@@ -2745,11 +2696,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setManufacturerBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000040;
+      if (value == null) { throw new NullPointerException(); }
       manufacturer_ = value;
+      bitField0_ |= 0x00000040;
       onChanged();
       return this;
     }
@@ -2820,11 +2769,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setModel(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000080;
+      if (value == null) { throw new NullPointerException(); }
       model_ = value;
+      bitField0_ |= 0x00000080;
       onChanged();
       return this;
     }
@@ -2837,8 +2784,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearModel() {
-      bitField0_ = (bitField0_ & ~0x00000080);
       model_ = getDefaultInstance().getModel();
+      bitField0_ = (bitField0_ & ~0x00000080);
       onChanged();
       return this;
     }
@@ -2853,11 +2800,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setModelBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000080;
+      if (value == null) { throw new NullPointerException(); }
       model_ = value;
+      bitField0_ |= 0x00000080;
       onChanged();
       return this;
     }
@@ -2884,8 +2829,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public com.google.wireless.android.sdk.stats.DeviceInfo.DeviceType getDeviceType() {
-      @SuppressWarnings("deprecation")
-      com.google.wireless.android.sdk.stats.DeviceInfo.DeviceType result = com.google.wireless.android.sdk.stats.DeviceInfo.DeviceType.valueOf(deviceType_);
+      com.google.wireless.android.sdk.stats.DeviceInfo.DeviceType result = com.google.wireless.android.sdk.stats.DeviceInfo.DeviceType.forNumber(deviceType_);
       return result == null ? com.google.wireless.android.sdk.stats.DeviceInfo.DeviceType.UNKNOWN_DEVICE_TYPE : result;
     }
     /**
@@ -2987,11 +2931,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setBuildApiLevelFull(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000200;
+      if (value == null) { throw new NullPointerException(); }
       buildApiLevelFull_ = value;
+      bitField0_ |= 0x00000200;
       onChanged();
       return this;
     }
@@ -3004,8 +2946,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearBuildApiLevelFull() {
-      bitField0_ = (bitField0_ & ~0x00000200);
       buildApiLevelFull_ = getDefaultInstance().getBuildApiLevelFull();
+      bitField0_ = (bitField0_ & ~0x00000200);
       onChanged();
       return this;
     }
@@ -3020,11 +2962,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setBuildApiLevelFullBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000200;
+      if (value == null) { throw new NullPointerException(); }
       buildApiLevelFull_ = value;
+      bitField0_ |= 0x00000200;
       onChanged();
       return this;
     }
@@ -3051,8 +2991,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public com.google.wireless.android.sdk.stats.DeviceInfo.MdnsConnectionType getMdnsConnectionType() {
-      @SuppressWarnings("deprecation")
-      com.google.wireless.android.sdk.stats.DeviceInfo.MdnsConnectionType result = com.google.wireless.android.sdk.stats.DeviceInfo.MdnsConnectionType.valueOf(mdnsConnectionType_);
+      com.google.wireless.android.sdk.stats.DeviceInfo.MdnsConnectionType result = com.google.wireless.android.sdk.stats.DeviceInfo.MdnsConnectionType.forNumber(mdnsConnectionType_);
       return result == null ? com.google.wireless.android.sdk.stats.DeviceInfo.MdnsConnectionType.UNKNOWN_MDNS_CONNECTION_TYPE : result;
     }
     /**
@@ -3088,12 +3027,13 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private com.google.protobuf.LazyStringList characteristics_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    private com.google.protobuf.LazyStringArrayList characteristics_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
     private void ensureCharacteristicsIsMutable() {
-      if (!((bitField0_ & 0x00000800) != 0)) {
+      if (!characteristics_.isModifiable()) {
         characteristics_ = new com.google.protobuf.LazyStringArrayList(characteristics_);
-        bitField0_ |= 0x00000800;
-       }
+      }
+      bitField0_ |= 0x00000800;
     }
     /**
      * <pre>
@@ -3105,7 +3045,8 @@ private static final long serialVersionUID = 0L;
      */
     public com.google.protobuf.ProtocolStringList
         getCharacteristicsList() {
-      return characteristics_.getUnmodifiableView();
+      characteristics_.makeImmutable();
+      return characteristics_;
     }
     /**
      * <pre>
@@ -3155,11 +3096,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setCharacteristics(
         int index, java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureCharacteristicsIsMutable();
+      if (value == null) { throw new NullPointerException(); }
+      ensureCharacteristicsIsMutable();
       characteristics_.set(index, value);
+      bitField0_ |= 0x00000800;
       onChanged();
       return this;
     }
@@ -3174,11 +3114,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder addCharacteristics(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureCharacteristicsIsMutable();
+      if (value == null) { throw new NullPointerException(); }
+      ensureCharacteristicsIsMutable();
       characteristics_.add(value);
+      bitField0_ |= 0x00000800;
       onChanged();
       return this;
     }
@@ -3196,6 +3135,7 @@ private static final long serialVersionUID = 0L;
       ensureCharacteristicsIsMutable();
       com.google.protobuf.AbstractMessageLite.Builder.addAll(
           values, characteristics_);
+      bitField0_ |= 0x00000800;
       onChanged();
       return this;
     }
@@ -3208,8 +3148,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearCharacteristics() {
-      characteristics_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      bitField0_ = (bitField0_ & ~0x00000800);
+      characteristics_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+      bitField0_ = (bitField0_ & ~0x00000800);;
       onChanged();
       return this;
     }
@@ -3224,11 +3165,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder addCharacteristicsBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureCharacteristicsIsMutable();
+      if (value == null) { throw new NullPointerException(); }
+      ensureCharacteristicsIsMutable();
       characteristics_.add(value);
+      bitField0_ |= 0x00000800;
       onChanged();
       return this;
     }
@@ -3299,11 +3239,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setDeviceProvisionerId(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00001000;
+      if (value == null) { throw new NullPointerException(); }
       deviceProvisionerId_ = value;
+      bitField0_ |= 0x00001000;
       onChanged();
       return this;
     }
@@ -3316,8 +3254,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearDeviceProvisionerId() {
-      bitField0_ = (bitField0_ & ~0x00001000);
       deviceProvisionerId_ = getDefaultInstance().getDeviceProvisionerId();
+      bitField0_ = (bitField0_ & ~0x00001000);
       onChanged();
       return this;
     }
@@ -3332,11 +3270,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setDeviceProvisionerIdBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00001000;
+      if (value == null) { throw new NullPointerException(); }
       deviceProvisionerId_ = value;
+      bitField0_ |= 0x00001000;
       onChanged();
       return this;
     }
@@ -3415,11 +3351,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setConnectionId(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00002000;
+      if (value == null) { throw new NullPointerException(); }
       connectionId_ = value;
+      bitField0_ |= 0x00002000;
       onChanged();
       return this;
     }
@@ -3434,8 +3368,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearConnectionId() {
-      bitField0_ = (bitField0_ & ~0x00002000);
       connectionId_ = getDefaultInstance().getConnectionId();
+      bitField0_ = (bitField0_ & ~0x00002000);
       onChanged();
       return this;
     }
@@ -3452,11 +3386,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setConnectionIdBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00002000;
+      if (value == null) { throw new NullPointerException(); }
       connectionId_ = value;
+      bitField0_ |= 0x00002000;
       onChanged();
       return this;
     }
@@ -3531,11 +3463,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setOemLabName(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00004000;
+      if (value == null) { throw new NullPointerException(); }
       oemLabName_ = value;
+      bitField0_ |= 0x00004000;
       onChanged();
       return this;
     }
@@ -3549,8 +3479,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearOemLabName() {
-      bitField0_ = (bitField0_ & ~0x00004000);
       oemLabName_ = getDefaultInstance().getOemLabName();
+      bitField0_ = (bitField0_ & ~0x00004000);
       onChanged();
       return this;
     }
@@ -3566,11 +3496,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setOemLabNameBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00004000;
+      if (value == null) { throw new NullPointerException(); }
       oemLabName_ = value;
+      bitField0_ |= 0x00004000;
       onChanged();
       return this;
     }

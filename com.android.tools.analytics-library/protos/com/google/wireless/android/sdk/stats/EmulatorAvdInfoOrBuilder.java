@@ -13,7 +13,8 @@ public interface EmulatorAvdInfoOrBuilder extends
    * </pre>
    *
    * <code>optional string name = 1 [deprecated = true];</code>
-   * @deprecated
+   * @deprecated android_studio.EmulatorAvdInfo.name is deprecated.
+   *     See studio_stats.proto;l=2775
    * @return Whether the name field is set.
    */
   @java.lang.Deprecated boolean hasName();
@@ -23,7 +24,8 @@ public interface EmulatorAvdInfoOrBuilder extends
    * </pre>
    *
    * <code>optional string name = 1 [deprecated = true];</code>
-   * @deprecated
+   * @deprecated android_studio.EmulatorAvdInfo.name is deprecated.
+   *     See studio_stats.proto;l=2775
    * @return The name.
    */
   @java.lang.Deprecated java.lang.String getName();
@@ -33,7 +35,8 @@ public interface EmulatorAvdInfoOrBuilder extends
    * </pre>
    *
    * <code>optional string name = 1 [deprecated = true];</code>
-   * @deprecated
+   * @deprecated android_studio.EmulatorAvdInfo.name is deprecated.
+   *     See studio_stats.proto;l=2775
    * @return The bytes for name.
    */
   @java.lang.Deprecated com.google.protobuf.ByteString
@@ -79,7 +82,7 @@ public interface EmulatorAvdInfoOrBuilder extends
 
   /**
    * <pre>
-   * When was this AVD created, UTC Unix timespamp.
+   * When was this AVD created, UTC Unix timestamp.
    * </pre>
    *
    * <code>optional int64 creation_timestamp = 4;</code>
@@ -88,7 +91,7 @@ public interface EmulatorAvdInfoOrBuilder extends
   boolean hasCreationTimestamp();
   /**
    * <pre>
-   * When was this AVD created, UTC Unix timespamp.
+   * When was this AVD created, UTC Unix timestamp.
    * </pre>
    *
    * <code>optional int64 creation_timestamp = 4;</code>
