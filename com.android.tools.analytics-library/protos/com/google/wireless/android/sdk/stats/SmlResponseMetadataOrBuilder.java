@@ -54,4 +54,91 @@ public interface SmlResponseMetadataOrBuilder extends
    * @return The serverExperimentIds at the given index.
    */
   int getServerExperimentIds(int index);
+
+  /**
+   * <pre>
+   * If the response was generated for an agent task, the associated task id.
+   * </pre>
+   *
+   * <code>optional string agent_task_id = 3;</code>
+   * @return Whether the agentTaskId field is set.
+   */
+  boolean hasAgentTaskId();
+  /**
+   * <pre>
+   * If the response was generated for an agent task, the associated task id.
+   * </pre>
+   *
+   * <code>optional string agent_task_id = 3;</code>
+   * @return The agentTaskId.
+   */
+  java.lang.String getAgentTaskId();
+  /**
+   * <pre>
+   * If the response was generated for an agent task, the associated task id.
+   * </pre>
+   *
+   * <code>optional string agent_task_id = 3;</code>
+   * @return The bytes for agentTaskId.
+   */
+  com.google.protobuf.ByteString
+      getAgentTaskIdBytes();
+
+  /**
+   * <pre>
+   * e.g. google-aistudio, openai, or "default" for the built-in model
+   * </pre>
+   *
+   * <code>optional string model_provider_id = 4;</code>
+   * @return Whether the modelProviderId field is set.
+   */
+  boolean hasModelProviderId();
+  /**
+   * <pre>
+   * e.g. google-aistudio, openai, or "default" for the built-in model
+   * </pre>
+   *
+   * <code>optional string model_provider_id = 4;</code>
+   * @return The modelProviderId.
+   */
+  java.lang.String getModelProviderId();
+  /**
+   * <pre>
+   * e.g. google-aistudio, openai, or "default" for the built-in model
+   * </pre>
+   *
+   * <code>optional string model_provider_id = 4;</code>
+   * @return The bytes for modelProviderId.
+   */
+  com.google.protobuf.ByteString
+      getModelProviderIdBytes();
+
+  /**
+   * <pre>
+   * e.g. gemini-2.5-pro, o1, or "default" for the built-in model
+   * </pre>
+   *
+   * <code>optional string model_id = 5;</code>
+   * @return Whether the modelId field is set.
+   */
+  boolean hasModelId();
+  /**
+   * <pre>
+   * e.g. gemini-2.5-pro, o1, or "default" for the built-in model
+   * </pre>
+   *
+   * <code>optional string model_id = 5;</code>
+   * @return The modelId.
+   */
+  java.lang.String getModelId();
+  /**
+   * <pre>
+   * e.g. gemini-2.5-pro, o1, or "default" for the built-in model
+   * </pre>
+   *
+   * <code>optional string model_id = 5;</code>
+   * @return The bytes for modelId.
+   */
+  com.google.protobuf.ByteString
+      getModelIdBytes();
 }

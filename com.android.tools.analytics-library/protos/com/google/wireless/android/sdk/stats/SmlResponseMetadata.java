@@ -17,6 +17,9 @@ private static final long serialVersionUID = 0L;
   }
   private SmlResponseMetadata() {
     serverExperimentIds_ = emptyIntList();
+    agentTaskId_ = "";
+    modelProviderId_ = "";
+    modelId_ = "";
   }
 
   @java.lang.Override
@@ -107,6 +110,189 @@ private static final long serialVersionUID = 0L;
     return serverExperimentIds_.getInt(index);
   }
 
+  public static final int AGENT_TASK_ID_FIELD_NUMBER = 3;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object agentTaskId_ = "";
+  /**
+   * <pre>
+   * If the response was generated for an agent task, the associated task id.
+   * </pre>
+   *
+   * <code>optional string agent_task_id = 3;</code>
+   * @return Whether the agentTaskId field is set.
+   */
+  @java.lang.Override
+  public boolean hasAgentTaskId() {
+    return ((bitField0_ & 0x00000002) != 0);
+  }
+  /**
+   * <pre>
+   * If the response was generated for an agent task, the associated task id.
+   * </pre>
+   *
+   * <code>optional string agent_task_id = 3;</code>
+   * @return The agentTaskId.
+   */
+  @java.lang.Override
+  public java.lang.String getAgentTaskId() {
+    java.lang.Object ref = agentTaskId_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      if (bs.isValidUtf8()) {
+        agentTaskId_ = s;
+      }
+      return s;
+    }
+  }
+  /**
+   * <pre>
+   * If the response was generated for an agent task, the associated task id.
+   * </pre>
+   *
+   * <code>optional string agent_task_id = 3;</code>
+   * @return The bytes for agentTaskId.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getAgentTaskIdBytes() {
+    java.lang.Object ref = agentTaskId_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      agentTaskId_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
+  public static final int MODEL_PROVIDER_ID_FIELD_NUMBER = 4;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object modelProviderId_ = "";
+  /**
+   * <pre>
+   * e.g. google-aistudio, openai, or "default" for the built-in model
+   * </pre>
+   *
+   * <code>optional string model_provider_id = 4;</code>
+   * @return Whether the modelProviderId field is set.
+   */
+  @java.lang.Override
+  public boolean hasModelProviderId() {
+    return ((bitField0_ & 0x00000004) != 0);
+  }
+  /**
+   * <pre>
+   * e.g. google-aistudio, openai, or "default" for the built-in model
+   * </pre>
+   *
+   * <code>optional string model_provider_id = 4;</code>
+   * @return The modelProviderId.
+   */
+  @java.lang.Override
+  public java.lang.String getModelProviderId() {
+    java.lang.Object ref = modelProviderId_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      if (bs.isValidUtf8()) {
+        modelProviderId_ = s;
+      }
+      return s;
+    }
+  }
+  /**
+   * <pre>
+   * e.g. google-aistudio, openai, or "default" for the built-in model
+   * </pre>
+   *
+   * <code>optional string model_provider_id = 4;</code>
+   * @return The bytes for modelProviderId.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getModelProviderIdBytes() {
+    java.lang.Object ref = modelProviderId_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      modelProviderId_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
+  public static final int MODEL_ID_FIELD_NUMBER = 5;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object modelId_ = "";
+  /**
+   * <pre>
+   * e.g. gemini-2.5-pro, o1, or "default" for the built-in model
+   * </pre>
+   *
+   * <code>optional string model_id = 5;</code>
+   * @return Whether the modelId field is set.
+   */
+  @java.lang.Override
+  public boolean hasModelId() {
+    return ((bitField0_ & 0x00000008) != 0);
+  }
+  /**
+   * <pre>
+   * e.g. gemini-2.5-pro, o1, or "default" for the built-in model
+   * </pre>
+   *
+   * <code>optional string model_id = 5;</code>
+   * @return The modelId.
+   */
+  @java.lang.Override
+  public java.lang.String getModelId() {
+    java.lang.Object ref = modelId_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      if (bs.isValidUtf8()) {
+        modelId_ = s;
+      }
+      return s;
+    }
+  }
+  /**
+   * <pre>
+   * e.g. gemini-2.5-pro, o1, or "default" for the built-in model
+   * </pre>
+   *
+   * <code>optional string model_id = 5;</code>
+   * @return The bytes for modelId.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getModelIdBytes() {
+    java.lang.Object ref = modelId_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      modelId_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -126,6 +312,15 @@ private static final long serialVersionUID = 0L;
     }
     for (int i = 0; i < serverExperimentIds_.size(); i++) {
       output.writeInt32(2, serverExperimentIds_.getInt(i));
+    }
+    if (((bitField0_ & 0x00000002) != 0)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 3, agentTaskId_);
+    }
+    if (((bitField0_ & 0x00000004) != 0)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 4, modelProviderId_);
+    }
+    if (((bitField0_ & 0x00000008) != 0)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 5, modelId_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -149,6 +344,15 @@ private static final long serialVersionUID = 0L;
       size += dataSize;
       size += 1 * getServerExperimentIdsList().size();
     }
+    if (((bitField0_ & 0x00000002) != 0)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, agentTaskId_);
+    }
+    if (((bitField0_ & 0x00000004) != 0)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, modelProviderId_);
+    }
+    if (((bitField0_ & 0x00000008) != 0)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, modelId_);
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -171,6 +375,21 @@ private static final long serialVersionUID = 0L;
     }
     if (!getServerExperimentIdsList()
         .equals(other.getServerExperimentIdsList())) return false;
+    if (hasAgentTaskId() != other.hasAgentTaskId()) return false;
+    if (hasAgentTaskId()) {
+      if (!getAgentTaskId()
+          .equals(other.getAgentTaskId())) return false;
+    }
+    if (hasModelProviderId() != other.hasModelProviderId()) return false;
+    if (hasModelProviderId()) {
+      if (!getModelProviderId()
+          .equals(other.getModelProviderId())) return false;
+    }
+    if (hasModelId() != other.hasModelId()) return false;
+    if (hasModelId()) {
+      if (!getModelId()
+          .equals(other.getModelId())) return false;
+    }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -190,6 +409,18 @@ private static final long serialVersionUID = 0L;
     if (getServerExperimentIdsCount() > 0) {
       hash = (37 * hash) + SERVER_EXPERIMENT_IDS_FIELD_NUMBER;
       hash = (53 * hash) + getServerExperimentIdsList().hashCode();
+    }
+    if (hasAgentTaskId()) {
+      hash = (37 * hash) + AGENT_TASK_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getAgentTaskId().hashCode();
+    }
+    if (hasModelProviderId()) {
+      hash = (37 * hash) + MODEL_PROVIDER_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getModelProviderId().hashCode();
+    }
+    if (hasModelId()) {
+      hash = (37 * hash) + MODEL_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getModelId().hashCode();
     }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
@@ -322,6 +553,9 @@ private static final long serialVersionUID = 0L;
       bitField0_ = 0;
       rpcGlobalId_ = 0L;
       serverExperimentIds_ = emptyIntList();
+      agentTaskId_ = "";
+      modelProviderId_ = "";
+      modelId_ = "";
       return this;
     }
 
@@ -369,6 +603,18 @@ private static final long serialVersionUID = 0L;
         result.rpcGlobalId_ = rpcGlobalId_;
         to_bitField0_ |= 0x00000001;
       }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.agentTaskId_ = agentTaskId_;
+        to_bitField0_ |= 0x00000002;
+      }
+      if (((from_bitField0_ & 0x00000008) != 0)) {
+        result.modelProviderId_ = modelProviderId_;
+        to_bitField0_ |= 0x00000004;
+      }
+      if (((from_bitField0_ & 0x00000010) != 0)) {
+        result.modelId_ = modelId_;
+        to_bitField0_ |= 0x00000008;
+      }
       result.bitField0_ |= to_bitField0_;
     }
 
@@ -395,6 +641,21 @@ private static final long serialVersionUID = 0L;
           ensureServerExperimentIdsIsMutable();
           serverExperimentIds_.addAll(other.serverExperimentIds_);
         }
+        onChanged();
+      }
+      if (other.hasAgentTaskId()) {
+        agentTaskId_ = other.agentTaskId_;
+        bitField0_ |= 0x00000004;
+        onChanged();
+      }
+      if (other.hasModelProviderId()) {
+        modelProviderId_ = other.modelProviderId_;
+        bitField0_ |= 0x00000008;
+        onChanged();
+      }
+      if (other.hasModelId()) {
+        modelId_ = other.modelId_;
+        bitField0_ |= 0x00000010;
         onChanged();
       }
       this.mergeUnknownFields(other.getUnknownFields());
@@ -444,6 +705,21 @@ private static final long serialVersionUID = 0L;
               input.popLimit(limit);
               break;
             } // case 18
+            case 26: {
+              agentTaskId_ = input.readBytes();
+              bitField0_ |= 0x00000004;
+              break;
+            } // case 26
+            case 34: {
+              modelProviderId_ = input.readBytes();
+              bitField0_ |= 0x00000008;
+              break;
+            } // case 34
+            case 42: {
+              modelId_ = input.readBytes();
+              bitField0_ |= 0x00000010;
+              break;
+            } // case 42
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -622,6 +898,318 @@ private static final long serialVersionUID = 0L;
     public Builder clearServerExperimentIds() {
       serverExperimentIds_ = emptyIntList();
       bitField0_ = (bitField0_ & ~0x00000002);
+      onChanged();
+      return this;
+    }
+
+    private java.lang.Object agentTaskId_ = "";
+    /**
+     * <pre>
+     * If the response was generated for an agent task, the associated task id.
+     * </pre>
+     *
+     * <code>optional string agent_task_id = 3;</code>
+     * @return Whether the agentTaskId field is set.
+     */
+    public boolean hasAgentTaskId() {
+      return ((bitField0_ & 0x00000004) != 0);
+    }
+    /**
+     * <pre>
+     * If the response was generated for an agent task, the associated task id.
+     * </pre>
+     *
+     * <code>optional string agent_task_id = 3;</code>
+     * @return The agentTaskId.
+     */
+    public java.lang.String getAgentTaskId() {
+      java.lang.Object ref = agentTaskId_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          agentTaskId_ = s;
+        }
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <pre>
+     * If the response was generated for an agent task, the associated task id.
+     * </pre>
+     *
+     * <code>optional string agent_task_id = 3;</code>
+     * @return The bytes for agentTaskId.
+     */
+    public com.google.protobuf.ByteString
+        getAgentTaskIdBytes() {
+      java.lang.Object ref = agentTaskId_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        agentTaskId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <pre>
+     * If the response was generated for an agent task, the associated task id.
+     * </pre>
+     *
+     * <code>optional string agent_task_id = 3;</code>
+     * @param value The agentTaskId to set.
+     * @return This builder for chaining.
+     */
+    public Builder setAgentTaskId(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      agentTaskId_ = value;
+      bitField0_ |= 0x00000004;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * If the response was generated for an agent task, the associated task id.
+     * </pre>
+     *
+     * <code>optional string agent_task_id = 3;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearAgentTaskId() {
+      agentTaskId_ = getDefaultInstance().getAgentTaskId();
+      bitField0_ = (bitField0_ & ~0x00000004);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * If the response was generated for an agent task, the associated task id.
+     * </pre>
+     *
+     * <code>optional string agent_task_id = 3;</code>
+     * @param value The bytes for agentTaskId to set.
+     * @return This builder for chaining.
+     */
+    public Builder setAgentTaskIdBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      agentTaskId_ = value;
+      bitField0_ |= 0x00000004;
+      onChanged();
+      return this;
+    }
+
+    private java.lang.Object modelProviderId_ = "";
+    /**
+     * <pre>
+     * e.g. google-aistudio, openai, or "default" for the built-in model
+     * </pre>
+     *
+     * <code>optional string model_provider_id = 4;</code>
+     * @return Whether the modelProviderId field is set.
+     */
+    public boolean hasModelProviderId() {
+      return ((bitField0_ & 0x00000008) != 0);
+    }
+    /**
+     * <pre>
+     * e.g. google-aistudio, openai, or "default" for the built-in model
+     * </pre>
+     *
+     * <code>optional string model_provider_id = 4;</code>
+     * @return The modelProviderId.
+     */
+    public java.lang.String getModelProviderId() {
+      java.lang.Object ref = modelProviderId_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          modelProviderId_ = s;
+        }
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <pre>
+     * e.g. google-aistudio, openai, or "default" for the built-in model
+     * </pre>
+     *
+     * <code>optional string model_provider_id = 4;</code>
+     * @return The bytes for modelProviderId.
+     */
+    public com.google.protobuf.ByteString
+        getModelProviderIdBytes() {
+      java.lang.Object ref = modelProviderId_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        modelProviderId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <pre>
+     * e.g. google-aistudio, openai, or "default" for the built-in model
+     * </pre>
+     *
+     * <code>optional string model_provider_id = 4;</code>
+     * @param value The modelProviderId to set.
+     * @return This builder for chaining.
+     */
+    public Builder setModelProviderId(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      modelProviderId_ = value;
+      bitField0_ |= 0x00000008;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * e.g. google-aistudio, openai, or "default" for the built-in model
+     * </pre>
+     *
+     * <code>optional string model_provider_id = 4;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearModelProviderId() {
+      modelProviderId_ = getDefaultInstance().getModelProviderId();
+      bitField0_ = (bitField0_ & ~0x00000008);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * e.g. google-aistudio, openai, or "default" for the built-in model
+     * </pre>
+     *
+     * <code>optional string model_provider_id = 4;</code>
+     * @param value The bytes for modelProviderId to set.
+     * @return This builder for chaining.
+     */
+    public Builder setModelProviderIdBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      modelProviderId_ = value;
+      bitField0_ |= 0x00000008;
+      onChanged();
+      return this;
+    }
+
+    private java.lang.Object modelId_ = "";
+    /**
+     * <pre>
+     * e.g. gemini-2.5-pro, o1, or "default" for the built-in model
+     * </pre>
+     *
+     * <code>optional string model_id = 5;</code>
+     * @return Whether the modelId field is set.
+     */
+    public boolean hasModelId() {
+      return ((bitField0_ & 0x00000010) != 0);
+    }
+    /**
+     * <pre>
+     * e.g. gemini-2.5-pro, o1, or "default" for the built-in model
+     * </pre>
+     *
+     * <code>optional string model_id = 5;</code>
+     * @return The modelId.
+     */
+    public java.lang.String getModelId() {
+      java.lang.Object ref = modelId_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          modelId_ = s;
+        }
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <pre>
+     * e.g. gemini-2.5-pro, o1, or "default" for the built-in model
+     * </pre>
+     *
+     * <code>optional string model_id = 5;</code>
+     * @return The bytes for modelId.
+     */
+    public com.google.protobuf.ByteString
+        getModelIdBytes() {
+      java.lang.Object ref = modelId_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        modelId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <pre>
+     * e.g. gemini-2.5-pro, o1, or "default" for the built-in model
+     * </pre>
+     *
+     * <code>optional string model_id = 5;</code>
+     * @param value The modelId to set.
+     * @return This builder for chaining.
+     */
+    public Builder setModelId(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      modelId_ = value;
+      bitField0_ |= 0x00000010;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * e.g. gemini-2.5-pro, o1, or "default" for the built-in model
+     * </pre>
+     *
+     * <code>optional string model_id = 5;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearModelId() {
+      modelId_ = getDefaultInstance().getModelId();
+      bitField0_ = (bitField0_ & ~0x00000010);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * e.g. gemini-2.5-pro, o1, or "default" for the built-in model
+     * </pre>
+     *
+     * <code>optional string model_id = 5;</code>
+     * @param value The bytes for modelId to set.
+     * @return This builder for chaining.
+     */
+    public Builder setModelIdBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      modelId_ = value;
+      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
