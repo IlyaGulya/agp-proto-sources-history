@@ -67,5 +67,35 @@ public interface NextEditPredictionEventOrBuilder extends
    */
   com.google.wireless.android.sdk.stats.NextEditPredictionEvent.EnabledStatusOrBuilder getEnabledStatusOrBuilder();
 
+  /**
+   * <code>.android_studio.NextEditPredictionEvent.PredictionFailure failure = 5 [lazy = true];</code>
+   * @return Whether the failure field is set.
+   */
+  boolean hasFailure();
+  /**
+   * <code>.android_studio.NextEditPredictionEvent.PredictionFailure failure = 5 [lazy = true];</code>
+   * @return The failure.
+   */
+  com.google.wireless.android.sdk.stats.NextEditPredictionEvent.PredictionFailure getFailure();
+  /**
+   * <code>.android_studio.NextEditPredictionEvent.PredictionFailure failure = 5 [lazy = true];</code>
+   */
+  com.google.wireless.android.sdk.stats.NextEditPredictionEvent.PredictionFailureOrBuilder getFailureOrBuilder();
+
+  /**
+   * <code>.android_studio.NextEditPredictionEvent.Session session = 6 [lazy = true];</code>
+   * @return Whether the session field is set.
+   */
+  boolean hasSession();
+  /**
+   * <code>.android_studio.NextEditPredictionEvent.Session session = 6 [lazy = true];</code>
+   * @return The session.
+   */
+  com.google.wireless.android.sdk.stats.NextEditPredictionEvent.Session getSession();
+  /**
+   * <code>.android_studio.NextEditPredictionEvent.Session session = 6 [lazy = true];</code>
+   */
+  com.google.wireless.android.sdk.stats.NextEditPredictionEvent.SessionOrBuilder getSessionOrBuilder();
+
   com.google.wireless.android.sdk.stats.NextEditPredictionEvent.NextEditPredictionCase getNextEditPredictionCase();
 }

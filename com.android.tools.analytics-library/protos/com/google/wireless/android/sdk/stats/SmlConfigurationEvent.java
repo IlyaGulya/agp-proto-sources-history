@@ -560,7 +560,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>optional .android_studio.SmlConfigurationEvent.SmlProductVariant product_variant = 7 [deprecated = true];</code>
    * @deprecated android_studio.SmlConfigurationEvent.product_variant is deprecated.
-   *     See studio_stats.proto;l=16636
+   *     See studio_stats.proto;l=16660
    * @return Whether the productVariant field is set.
    */
   @java.lang.Override @java.lang.Deprecated public boolean hasProductVariant() {
@@ -576,7 +576,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>optional .android_studio.SmlConfigurationEvent.SmlProductVariant product_variant = 7 [deprecated = true];</code>
    * @deprecated android_studio.SmlConfigurationEvent.product_variant is deprecated.
-   *     See studio_stats.proto;l=16636
+   *     See studio_stats.proto;l=16660
    * @return The productVariant.
    */
   @java.lang.Override @java.lang.Deprecated public com.google.wireless.android.sdk.stats.SmlConfigurationEvent.SmlProductVariant getProductVariant() {
@@ -1686,7 +1686,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional .android_studio.SmlConfigurationEvent.SmlProductVariant product_variant = 7 [deprecated = true];</code>
      * @deprecated android_studio.SmlConfigurationEvent.product_variant is deprecated.
-     *     See studio_stats.proto;l=16636
+     *     See studio_stats.proto;l=16660
      * @return Whether the productVariant field is set.
      */
     @java.lang.Override @java.lang.Deprecated public boolean hasProductVariant() {
@@ -1702,7 +1702,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional .android_studio.SmlConfigurationEvent.SmlProductVariant product_variant = 7 [deprecated = true];</code>
      * @deprecated android_studio.SmlConfigurationEvent.product_variant is deprecated.
-     *     See studio_stats.proto;l=16636
+     *     See studio_stats.proto;l=16660
      * @return The productVariant.
      */
     @java.lang.Override
@@ -1720,7 +1720,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional .android_studio.SmlConfigurationEvent.SmlProductVariant product_variant = 7 [deprecated = true];</code>
      * @deprecated android_studio.SmlConfigurationEvent.product_variant is deprecated.
-     *     See studio_stats.proto;l=16636
+     *     See studio_stats.proto;l=16660
      * @param value The productVariant to set.
      * @return This builder for chaining.
      */
@@ -1743,7 +1743,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional .android_studio.SmlConfigurationEvent.SmlProductVariant product_variant = 7 [deprecated = true];</code>
      * @deprecated android_studio.SmlConfigurationEvent.product_variant is deprecated.
-     *     See studio_stats.proto;l=16636
+     *     See studio_stats.proto;l=16660
      * @return This builder for chaining.
      */
     @java.lang.Deprecated public Builder clearProductVariant() {

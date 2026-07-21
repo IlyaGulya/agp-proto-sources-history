@@ -3459,6 +3459,14 @@ private static final long serialVersionUID = 0L;
      * <code>STUDIO_BOT_TOOL_WINDOW_AUTO_OPEN_EVENT = 368;</code>
      */
     STUDIO_BOT_TOOL_WINDOW_AUTO_OPEN_EVENT(368),
+    /**
+     * <pre>
+     * Event related to Skills
+     * </pre>
+     *
+     * <code>SKILLS_EVENT = 369;</code>
+     */
+    SKILLS_EVENT(369),
     ;
 
     /**
@@ -6226,6 +6234,14 @@ private static final long serialVersionUID = 0L;
      * <code>STUDIO_BOT_TOOL_WINDOW_AUTO_OPEN_EVENT = 368;</code>
      */
     public static final int STUDIO_BOT_TOOL_WINDOW_AUTO_OPEN_EVENT_VALUE = 368;
+    /**
+     * <pre>
+     * Event related to Skills
+     * </pre>
+     *
+     * <code>SKILLS_EVENT = 369;</code>
+     */
+    public static final int SKILLS_EVENT_VALUE = 369;
 
 
     public final int getNumber() {
@@ -6612,6 +6628,7 @@ private static final long serialVersionUID = 0L;
         case 366: return QUICK_EDIT_ONBOARDING;
         case 367: return EMULATOR_CONSOLE_EVENTS;
         case 368: return STUDIO_BOT_TOOL_WINDOW_AUTO_OPEN_EVENT;
+        case 369: return SKILLS_EVENT;
         default: return null;
       }
     }
@@ -12381,7 +12398,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional uint32 min_sdk = 2 [deprecated = true];</code>
        * @deprecated android_studio.AndroidStudioEvent.TemplatesUsage.TemplateModule.min_sdk is deprecated.
-       *     See studio_stats.proto;l=2155
+       *     See studio_stats.proto;l=2161
        * @return Whether the minSdk field is set.
        */
       @java.lang.Deprecated boolean hasMinSdk();
@@ -12392,7 +12409,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional uint32 min_sdk = 2 [deprecated = true];</code>
        * @deprecated android_studio.AndroidStudioEvent.TemplatesUsage.TemplateModule.min_sdk is deprecated.
-       *     See studio_stats.proto;l=2155
+       *     See studio_stats.proto;l=2161
        * @return The minSdk.
        */
       @java.lang.Deprecated int getMinSdk();
@@ -12923,7 +12940,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional uint32 min_sdk = 2 [deprecated = true];</code>
        * @deprecated android_studio.AndroidStudioEvent.TemplatesUsage.TemplateModule.min_sdk is deprecated.
-       *     See studio_stats.proto;l=2155
+       *     See studio_stats.proto;l=2161
        * @return Whether the minSdk field is set.
        */
       @java.lang.Override
@@ -12937,7 +12954,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional uint32 min_sdk = 2 [deprecated = true];</code>
        * @deprecated android_studio.AndroidStudioEvent.TemplatesUsage.TemplateModule.min_sdk is deprecated.
-       *     See studio_stats.proto;l=2155
+       *     See studio_stats.proto;l=2161
        * @return The minSdk.
        */
       @java.lang.Override
@@ -13575,7 +13592,7 @@ private static final long serialVersionUID = 0L;
          *
          * <code>optional uint32 min_sdk = 2 [deprecated = true];</code>
          * @deprecated android_studio.AndroidStudioEvent.TemplatesUsage.TemplateModule.min_sdk is deprecated.
-         *     See studio_stats.proto;l=2155
+         *     See studio_stats.proto;l=2161
          * @return Whether the minSdk field is set.
          */
         @java.lang.Override
@@ -13589,7 +13606,7 @@ private static final long serialVersionUID = 0L;
          *
          * <code>optional uint32 min_sdk = 2 [deprecated = true];</code>
          * @deprecated android_studio.AndroidStudioEvent.TemplatesUsage.TemplateModule.min_sdk is deprecated.
-         *     See studio_stats.proto;l=2155
+         *     See studio_stats.proto;l=2161
          * @return The minSdk.
          */
         @java.lang.Override
@@ -13603,7 +13620,7 @@ private static final long serialVersionUID = 0L;
          *
          * <code>optional uint32 min_sdk = 2 [deprecated = true];</code>
          * @deprecated android_studio.AndroidStudioEvent.TemplatesUsage.TemplateModule.min_sdk is deprecated.
-         *     See studio_stats.proto;l=2155
+         *     See studio_stats.proto;l=2161
          * @param value The minSdk to set.
          * @return This builder for chaining.
          */
@@ -13621,7 +13638,7 @@ private static final long serialVersionUID = 0L;
          *
          * <code>optional uint32 min_sdk = 2 [deprecated = true];</code>
          * @deprecated android_studio.AndroidStudioEvent.TemplatesUsage.TemplateModule.min_sdk is deprecated.
-         *     See studio_stats.proto;l=2155
+         *     See studio_stats.proto;l=2161
          * @return This builder for chaining.
          */
         @java.lang.Deprecated public Builder clearMinSdk() {
@@ -25772,6 +25789,44 @@ private static final long serialVersionUID = 0L;
     return studioBotToolWindowAutoOpenEvent_ == null ? com.google.wireless.android.sdk.stats.StudioBotToolWindowAutoOpenEvent.getDefaultInstance() : studioBotToolWindowAutoOpenEvent_;
   }
 
+  public static final int SKILLS_EVENT_FIELD_NUMBER = 249;
+  private com.google.wireless.android.sdk.stats.SkillsEvent skillsEvent_;
+  /**
+   * <pre>
+   * set when kind = SKILLS_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.SkillsEvent skills_event = 249 [lazy = true];</code>
+   * @return Whether the skillsEvent field is set.
+   */
+  @java.lang.Override
+  public boolean hasSkillsEvent() {
+    return ((bitField7_ & 0x00020000) != 0);
+  }
+  /**
+   * <pre>
+   * set when kind = SKILLS_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.SkillsEvent skills_event = 249 [lazy = true];</code>
+   * @return The skillsEvent.
+   */
+  @java.lang.Override
+  public com.google.wireless.android.sdk.stats.SkillsEvent getSkillsEvent() {
+    return skillsEvent_ == null ? com.google.wireless.android.sdk.stats.SkillsEvent.getDefaultInstance() : skillsEvent_;
+  }
+  /**
+   * <pre>
+   * set when kind = SKILLS_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.SkillsEvent skills_event = 249 [lazy = true];</code>
+   */
+  @java.lang.Override
+  public com.google.wireless.android.sdk.stats.SkillsEventOrBuilder getSkillsEventOrBuilder() {
+    return skillsEvent_ == null ? com.google.wireless.android.sdk.stats.SkillsEvent.getDefaultInstance() : skillsEvent_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -26529,6 +26584,9 @@ private static final long serialVersionUID = 0L;
     }
     if (((bitField7_ & 0x00010000) != 0)) {
       output.writeMessage(248, getStudioBotToolWindowAutoOpenEvent());
+    }
+    if (((bitField7_ & 0x00020000) != 0)) {
+      output.writeMessage(249, getSkillsEvent());
     }
     getUnknownFields().writeTo(output);
   }
@@ -27536,6 +27594,10 @@ private static final long serialVersionUID = 0L;
     if (((bitField7_ & 0x00010000) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(248, getStudioBotToolWindowAutoOpenEvent());
+    }
+    if (((bitField7_ & 0x00020000) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(249, getSkillsEvent());
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -28760,6 +28822,11 @@ private static final long serialVersionUID = 0L;
       if (!getStudioBotToolWindowAutoOpenEvent()
           .equals(other.getStudioBotToolWindowAutoOpenEvent())) return false;
     }
+    if (hasSkillsEvent() != other.hasSkillsEvent()) return false;
+    if (hasSkillsEvent()) {
+      if (!getSkillsEvent()
+          .equals(other.getSkillsEvent())) return false;
+    }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -29765,6 +29832,10 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + STUDIO_BOT_TOOL_WINDOW_AUTO_OPEN_EVENT_FIELD_NUMBER;
       hash = (53 * hash) + getStudioBotToolWindowAutoOpenEvent().hashCode();
     }
+    if (hasSkillsEvent()) {
+      hash = (37 * hash) + SKILLS_EVENT_FIELD_NUMBER;
+      hash = (53 * hash) + getSkillsEvent().hashCode();
+    }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -30118,6 +30189,7 @@ private static final long serialVersionUID = 0L;
         getRenderToolEventFieldBuilder();
         getEmulatorConsoleEventsFieldBuilder();
         getStudioBotToolWindowAutoOpenEventFieldBuilder();
+        getSkillsEventFieldBuilder();
       }
     }
     @java.lang.Override
@@ -31289,6 +31361,11 @@ private static final long serialVersionUID = 0L;
       if (studioBotToolWindowAutoOpenEventBuilder_ != null) {
         studioBotToolWindowAutoOpenEventBuilder_.dispose();
         studioBotToolWindowAutoOpenEventBuilder_ = null;
+      }
+      skillsEvent_ = null;
+      if (skillsEventBuilder_ != null) {
+        skillsEventBuilder_.dispose();
+        skillsEventBuilder_ = null;
       }
       return this;
     }
@@ -32841,6 +32918,12 @@ private static final long serialVersionUID = 0L;
             : studioBotToolWindowAutoOpenEventBuilder_.build();
         to_bitField7_ |= 0x00010000;
       }
+      if (((from_bitField7_ & 0x01000000) != 0)) {
+        result.skillsEvent_ = skillsEventBuilder_ == null
+            ? skillsEvent_
+            : skillsEventBuilder_.build();
+        to_bitField7_ |= 0x00020000;
+      }
       result.bitField6_ |= to_bitField6_;
       result.bitField7_ |= to_bitField7_;
     }
@@ -33727,6 +33810,9 @@ private static final long serialVersionUID = 0L;
       }
       if (other.hasStudioBotToolWindowAutoOpenEvent()) {
         mergeStudioBotToolWindowAutoOpenEvent(other.getStudioBotToolWindowAutoOpenEvent());
+      }
+      if (other.hasSkillsEvent()) {
+        mergeSkillsEvent(other.getSkillsEvent());
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -35564,6 +35650,13 @@ private static final long serialVersionUID = 0L;
               bitField7_ |= 0x00800000;
               break;
             } // case 1986
+            case 1994: {
+              input.readMessage(
+                  getSkillsEventFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField7_ |= 0x01000000;
+              break;
+            } // case 1994
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -73521,6 +73614,161 @@ private static final long serialVersionUID = 0L;
         studioBotToolWindowAutoOpenEvent_ = null;
       }
       return studioBotToolWindowAutoOpenEventBuilder_;
+    }
+
+    private com.google.wireless.android.sdk.stats.SkillsEvent skillsEvent_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.SkillsEvent, com.google.wireless.android.sdk.stats.SkillsEvent.Builder, com.google.wireless.android.sdk.stats.SkillsEventOrBuilder> skillsEventBuilder_;
+    /**
+     * <pre>
+     * set when kind = SKILLS_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.SkillsEvent skills_event = 249 [lazy = true];</code>
+     * @return Whether the skillsEvent field is set.
+     */
+    public boolean hasSkillsEvent() {
+      return ((bitField7_ & 0x01000000) != 0);
+    }
+    /**
+     * <pre>
+     * set when kind = SKILLS_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.SkillsEvent skills_event = 249 [lazy = true];</code>
+     * @return The skillsEvent.
+     */
+    public com.google.wireless.android.sdk.stats.SkillsEvent getSkillsEvent() {
+      if (skillsEventBuilder_ == null) {
+        return skillsEvent_ == null ? com.google.wireless.android.sdk.stats.SkillsEvent.getDefaultInstance() : skillsEvent_;
+      } else {
+        return skillsEventBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * set when kind = SKILLS_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.SkillsEvent skills_event = 249 [lazy = true];</code>
+     */
+    public Builder setSkillsEvent(com.google.wireless.android.sdk.stats.SkillsEvent value) {
+      if (skillsEventBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        skillsEvent_ = value;
+      } else {
+        skillsEventBuilder_.setMessage(value);
+      }
+      bitField7_ |= 0x01000000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = SKILLS_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.SkillsEvent skills_event = 249 [lazy = true];</code>
+     */
+    public Builder setSkillsEvent(
+        com.google.wireless.android.sdk.stats.SkillsEvent.Builder builderForValue) {
+      if (skillsEventBuilder_ == null) {
+        skillsEvent_ = builderForValue.build();
+      } else {
+        skillsEventBuilder_.setMessage(builderForValue.build());
+      }
+      bitField7_ |= 0x01000000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = SKILLS_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.SkillsEvent skills_event = 249 [lazy = true];</code>
+     */
+    public Builder mergeSkillsEvent(com.google.wireless.android.sdk.stats.SkillsEvent value) {
+      if (skillsEventBuilder_ == null) {
+        if (((bitField7_ & 0x01000000) != 0) &&
+          skillsEvent_ != null &&
+          skillsEvent_ != com.google.wireless.android.sdk.stats.SkillsEvent.getDefaultInstance()) {
+          getSkillsEventBuilder().mergeFrom(value);
+        } else {
+          skillsEvent_ = value;
+        }
+      } else {
+        skillsEventBuilder_.mergeFrom(value);
+      }
+      bitField7_ |= 0x01000000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = SKILLS_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.SkillsEvent skills_event = 249 [lazy = true];</code>
+     */
+    public Builder clearSkillsEvent() {
+      bitField7_ = (bitField7_ & ~0x01000000);
+      skillsEvent_ = null;
+      if (skillsEventBuilder_ != null) {
+        skillsEventBuilder_.dispose();
+        skillsEventBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = SKILLS_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.SkillsEvent skills_event = 249 [lazy = true];</code>
+     */
+    public com.google.wireless.android.sdk.stats.SkillsEvent.Builder getSkillsEventBuilder() {
+      bitField7_ |= 0x01000000;
+      onChanged();
+      return getSkillsEventFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * set when kind = SKILLS_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.SkillsEvent skills_event = 249 [lazy = true];</code>
+     */
+    public com.google.wireless.android.sdk.stats.SkillsEventOrBuilder getSkillsEventOrBuilder() {
+      if (skillsEventBuilder_ != null) {
+        return skillsEventBuilder_.getMessageOrBuilder();
+      } else {
+        return skillsEvent_ == null ?
+            com.google.wireless.android.sdk.stats.SkillsEvent.getDefaultInstance() : skillsEvent_;
+      }
+    }
+    /**
+     * <pre>
+     * set when kind = SKILLS_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.SkillsEvent skills_event = 249 [lazy = true];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.SkillsEvent, com.google.wireless.android.sdk.stats.SkillsEvent.Builder, com.google.wireless.android.sdk.stats.SkillsEventOrBuilder> 
+        getSkillsEventFieldBuilder() {
+      if (skillsEventBuilder_ == null) {
+        skillsEventBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.wireless.android.sdk.stats.SkillsEvent, com.google.wireless.android.sdk.stats.SkillsEvent.Builder, com.google.wireless.android.sdk.stats.SkillsEventOrBuilder>(
+                getSkillsEvent(),
+                getParentForChildren(),
+                isClean());
+        skillsEvent_ = null;
+      }
+      return skillsEventBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

@@ -57,25 +57,84 @@ private static final long serialVersionUID = 0L;
      */
     PREVIEW_RENDERING(2),
     /**
+     * <pre>
+     * Number of times the screenshot tests were run.
+     * </pre>
+     *
      * <code>VALIDATE_CLICKED = 3;</code>
      */
     VALIDATE_CLICKED(3),
     /**
+     * <pre>
+     * Number of times the update action was successfully
+     * completed from the dialog.
+     * </pre>
+     *
      * <code>UPDATE_CLICKED = 4;</code>
      */
     UPDATE_CLICKED(4),
     /**
+     * <pre>
+     * Number of times the dialog was opened.
+     * </pre>
+     *
      * <code>SCREENSHOT_DIALOG_OPEN = 5;</code>
      */
     SCREENSHOT_DIALOG_OPEN(5),
     /**
+     * <pre>
+     * Number of times the dialog was closed without
+     * completing the update flow.
+     * </pre>
+     *
      * <code>SCREENSHOT_DIALOG_CLOSE = 6;</code>
      */
     SCREENSHOT_DIALOG_CLOSE(6),
     /**
+     * <pre>
+     * Number of times the user tried to open the dialog
+     * when it was already open.
+     * </pre>
+     *
      * <code>SCREENSHOT_DIALOG_ALREADY_OPEN = 7;</code>
      */
     SCREENSHOT_DIALOG_ALREADY_OPEN(7),
+    /**
+     * <pre>
+     * Number of times the copying of reference images
+     * action failed after clicking the 'Add' button.
+     * </pre>
+     *
+     * <code>SCREENSHOT_DIALOG_UPDATE_ACTION_FAILURE = 8;</code>
+     */
+    SCREENSHOT_DIALOG_UPDATE_ACTION_FAILURE(8),
+    /**
+     * <pre>
+     * Number of times an image failed to load or
+     * render within the preview details panel of the dialog.
+     * </pre>
+     *
+     * <code>SCREENSHOT_DIALOG_RENDER_FAILURE = 9;</code>
+     */
+    SCREENSHOT_DIALOG_RENDER_FAILURE(9),
+    /**
+     * <pre>
+     * Number of times when the test suite finished execution
+     * but no screenshot test results were discovered.
+     * </pre>
+     *
+     * <code>SCREENSHOT_DIALOG_TEST_RESULTS_EMPTY = 10;</code>
+     */
+    SCREENSHOT_DIALOG_TEST_RESULTS_EMPTY(10),
+    /**
+     * <pre>
+     * Number of times the build failed before the dialog
+     * can be populated with any test results.
+     * </pre>
+     *
+     * <code>SCREENSHOT_DIALOG_BUILD_FAILURE = 11;</code>
+     */
+    SCREENSHOT_DIALOG_BUILD_FAILURE(11),
     ;
 
     /**
@@ -91,25 +150,84 @@ private static final long serialVersionUID = 0L;
      */
     public static final int PREVIEW_RENDERING_VALUE = 2;
     /**
+     * <pre>
+     * Number of times the screenshot tests were run.
+     * </pre>
+     *
      * <code>VALIDATE_CLICKED = 3;</code>
      */
     public static final int VALIDATE_CLICKED_VALUE = 3;
     /**
+     * <pre>
+     * Number of times the update action was successfully
+     * completed from the dialog.
+     * </pre>
+     *
      * <code>UPDATE_CLICKED = 4;</code>
      */
     public static final int UPDATE_CLICKED_VALUE = 4;
     /**
+     * <pre>
+     * Number of times the dialog was opened.
+     * </pre>
+     *
      * <code>SCREENSHOT_DIALOG_OPEN = 5;</code>
      */
     public static final int SCREENSHOT_DIALOG_OPEN_VALUE = 5;
     /**
+     * <pre>
+     * Number of times the dialog was closed without
+     * completing the update flow.
+     * </pre>
+     *
      * <code>SCREENSHOT_DIALOG_CLOSE = 6;</code>
      */
     public static final int SCREENSHOT_DIALOG_CLOSE_VALUE = 6;
     /**
+     * <pre>
+     * Number of times the user tried to open the dialog
+     * when it was already open.
+     * </pre>
+     *
      * <code>SCREENSHOT_DIALOG_ALREADY_OPEN = 7;</code>
      */
     public static final int SCREENSHOT_DIALOG_ALREADY_OPEN_VALUE = 7;
+    /**
+     * <pre>
+     * Number of times the copying of reference images
+     * action failed after clicking the 'Add' button.
+     * </pre>
+     *
+     * <code>SCREENSHOT_DIALOG_UPDATE_ACTION_FAILURE = 8;</code>
+     */
+    public static final int SCREENSHOT_DIALOG_UPDATE_ACTION_FAILURE_VALUE = 8;
+    /**
+     * <pre>
+     * Number of times an image failed to load or
+     * render within the preview details panel of the dialog.
+     * </pre>
+     *
+     * <code>SCREENSHOT_DIALOG_RENDER_FAILURE = 9;</code>
+     */
+    public static final int SCREENSHOT_DIALOG_RENDER_FAILURE_VALUE = 9;
+    /**
+     * <pre>
+     * Number of times when the test suite finished execution
+     * but no screenshot test results were discovered.
+     * </pre>
+     *
+     * <code>SCREENSHOT_DIALOG_TEST_RESULTS_EMPTY = 10;</code>
+     */
+    public static final int SCREENSHOT_DIALOG_TEST_RESULTS_EMPTY_VALUE = 10;
+    /**
+     * <pre>
+     * Number of times the build failed before the dialog
+     * can be populated with any test results.
+     * </pre>
+     *
+     * <code>SCREENSHOT_DIALOG_BUILD_FAILURE = 11;</code>
+     */
+    public static final int SCREENSHOT_DIALOG_BUILD_FAILURE_VALUE = 11;
 
 
     public final int getNumber() {
@@ -140,6 +258,10 @@ private static final long serialVersionUID = 0L;
         case 5: return SCREENSHOT_DIALOG_OPEN;
         case 6: return SCREENSHOT_DIALOG_CLOSE;
         case 7: return SCREENSHOT_DIALOG_ALREADY_OPEN;
+        case 8: return SCREENSHOT_DIALOG_UPDATE_ACTION_FAILURE;
+        case 9: return SCREENSHOT_DIALOG_RENDER_FAILURE;
+        case 10: return SCREENSHOT_DIALOG_TEST_RESULTS_EMPTY;
+        case 11: return SCREENSHOT_DIALOG_BUILD_FAILURE;
         default: return null;
       }
     }
