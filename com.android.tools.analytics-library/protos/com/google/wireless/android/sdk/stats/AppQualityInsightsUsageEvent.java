@@ -1934,6 +1934,25 @@ private static final long serialVersionUID = 0L;
      * @return The deviceFilter.
      */
     boolean getDeviceFilter();
+
+    /**
+     * <pre>
+     * The visibility type used for this fetch.
+     * </pre>
+     *
+     * <code>optional .android_studio.AppQualityInsightsUsageEvent.AppQualityInsightsFetchDetails.VisibilityFilter visibility_filter = 11;</code>
+     * @return Whether the visibilityFilter field is set.
+     */
+    boolean hasVisibilityFilter();
+    /**
+     * <pre>
+     * The visibility type used for this fetch.
+     * </pre>
+     *
+     * <code>optional .android_studio.AppQualityInsightsUsageEvent.AppQualityInsightsFetchDetails.VisibilityFilter visibility_filter = 11;</code>
+     * @return The visibilityFilter.
+     */
+    com.google.wireless.android.sdk.stats.AppQualityInsightsUsageEvent.AppQualityInsightsFetchDetails.VisibilityFilter getVisibilityFilter();
   }
   /**
    * Protobuf type {@code android_studio.AppQualityInsightsUsageEvent.AppQualityInsightsFetchDetails}
@@ -1952,6 +1971,7 @@ private static final long serialVersionUID = 0L;
       severityFilter_ = 0;
       fetchSource_ = 0;
       signalFilter_ = 0;
+      visibilityFilter_ = 0;
     }
 
     @java.lang.Override
@@ -2061,6 +2081,18 @@ private static final long serialVersionUID = 0L;
             case 80: {
               bitField0_ |= 0x00000200;
               deviceFilter_ = input.readBool();
+              break;
+            }
+            case 88: {
+              int rawValue = input.readEnum();
+                @SuppressWarnings("deprecation")
+              com.google.wireless.android.sdk.stats.AppQualityInsightsUsageEvent.AppQualityInsightsFetchDetails.VisibilityFilter value = com.google.wireless.android.sdk.stats.AppQualityInsightsUsageEvent.AppQualityInsightsFetchDetails.VisibilityFilter.valueOf(rawValue);
+              if (value == null) {
+                unknownFields.mergeVarintField(11, rawValue);
+              } else {
+                bitField0_ |= 0x00000400;
+                visibilityFilter_ = rawValue;
+              }
               break;
             }
             default: {
@@ -2628,6 +2660,111 @@ private static final long serialVersionUID = 0L;
       // @@protoc_insertion_point(enum_scope:android_studio.AppQualityInsightsUsageEvent.AppQualityInsightsFetchDetails.SignalFilter)
     }
 
+    /**
+     * Protobuf enum {@code android_studio.AppQualityInsightsUsageEvent.AppQualityInsightsFetchDetails.VisibilityFilter}
+     */
+    public enum VisibilityFilter
+        implements com.google.protobuf.ProtocolMessageEnum {
+      /**
+       * <code>UNKNOWN_VISIBILITY = 0;</code>
+       */
+      UNKNOWN_VISIBILITY(0),
+      /**
+       * <code>ALL_VISIBILITY = 1;</code>
+       */
+      ALL_VISIBILITY(1),
+      /**
+       * <code>USER_PERCEIVED = 2;</code>
+       */
+      USER_PERCEIVED(2),
+      ;
+
+      /**
+       * <code>UNKNOWN_VISIBILITY = 0;</code>
+       */
+      public static final int UNKNOWN_VISIBILITY_VALUE = 0;
+      /**
+       * <code>ALL_VISIBILITY = 1;</code>
+       */
+      public static final int ALL_VISIBILITY_VALUE = 1;
+      /**
+       * <code>USER_PERCEIVED = 2;</code>
+       */
+      public static final int USER_PERCEIVED_VALUE = 2;
+
+
+      public final int getNumber() {
+        return value;
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static VisibilityFilter valueOf(int value) {
+        return forNumber(value);
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       */
+      public static VisibilityFilter forNumber(int value) {
+        switch (value) {
+          case 0: return UNKNOWN_VISIBILITY;
+          case 1: return ALL_VISIBILITY;
+          case 2: return USER_PERCEIVED;
+          default: return null;
+        }
+      }
+
+      public static com.google.protobuf.Internal.EnumLiteMap<VisibilityFilter>
+          internalGetValueMap() {
+        return internalValueMap;
+      }
+      private static final com.google.protobuf.Internal.EnumLiteMap<
+          VisibilityFilter> internalValueMap =
+            new com.google.protobuf.Internal.EnumLiteMap<VisibilityFilter>() {
+              public VisibilityFilter findValueByNumber(int number) {
+                return VisibilityFilter.forNumber(number);
+              }
+            };
+
+      public final com.google.protobuf.Descriptors.EnumValueDescriptor
+          getValueDescriptor() {
+        return getDescriptor().getValues().get(ordinal());
+      }
+      public final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptorForType() {
+        return getDescriptor();
+      }
+      public static final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptor() {
+        return com.google.wireless.android.sdk.stats.AppQualityInsightsUsageEvent.AppQualityInsightsFetchDetails.getDescriptor().getEnumTypes().get(4);
+      }
+
+      private static final VisibilityFilter[] VALUES = values();
+
+      public static VisibilityFilter valueOf(
+          com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+        if (desc.getType() != getDescriptor()) {
+          throw new java.lang.IllegalArgumentException(
+            "EnumValueDescriptor is not for this type.");
+        }
+        return VALUES[desc.getIndex()];
+      }
+
+      private final int value;
+
+      private VisibilityFilter(int value) {
+        this.value = value;
+      }
+
+      // @@protoc_insertion_point(enum_scope:android_studio.AppQualityInsightsUsageEvent.AppQualityInsightsFetchDetails.VisibilityFilter)
+    }
+
     private int bitField0_;
     public static final int TIME_FILTER_FIELD_NUMBER = 1;
     private int timeFilter_;
@@ -2907,6 +3044,33 @@ private static final long serialVersionUID = 0L;
       return deviceFilter_;
     }
 
+    public static final int VISIBILITY_FILTER_FIELD_NUMBER = 11;
+    private int visibilityFilter_;
+    /**
+     * <pre>
+     * The visibility type used for this fetch.
+     * </pre>
+     *
+     * <code>optional .android_studio.AppQualityInsightsUsageEvent.AppQualityInsightsFetchDetails.VisibilityFilter visibility_filter = 11;</code>
+     * @return Whether the visibilityFilter field is set.
+     */
+    @java.lang.Override public boolean hasVisibilityFilter() {
+      return ((bitField0_ & 0x00000400) != 0);
+    }
+    /**
+     * <pre>
+     * The visibility type used for this fetch.
+     * </pre>
+     *
+     * <code>optional .android_studio.AppQualityInsightsUsageEvent.AppQualityInsightsFetchDetails.VisibilityFilter visibility_filter = 11;</code>
+     * @return The visibilityFilter.
+     */
+    @java.lang.Override public com.google.wireless.android.sdk.stats.AppQualityInsightsUsageEvent.AppQualityInsightsFetchDetails.VisibilityFilter getVisibilityFilter() {
+      @SuppressWarnings("deprecation")
+      com.google.wireless.android.sdk.stats.AppQualityInsightsUsageEvent.AppQualityInsightsFetchDetails.VisibilityFilter result = com.google.wireless.android.sdk.stats.AppQualityInsightsUsageEvent.AppQualityInsightsFetchDetails.VisibilityFilter.valueOf(visibilityFilter_);
+      return result == null ? com.google.wireless.android.sdk.stats.AppQualityInsightsUsageEvent.AppQualityInsightsFetchDetails.VisibilityFilter.UNKNOWN_VISIBILITY : result;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -2950,6 +3114,9 @@ private static final long serialVersionUID = 0L;
       }
       if (((bitField0_ & 0x00000200) != 0)) {
         output.writeBool(10, deviceFilter_);
+      }
+      if (((bitField0_ & 0x00000400) != 0)) {
+        output.writeEnum(11, visibilityFilter_);
       }
       unknownFields.writeTo(output);
     }
@@ -2999,6 +3166,10 @@ private static final long serialVersionUID = 0L;
       if (((bitField0_ & 0x00000200) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(10, deviceFilter_);
+      }
+      if (((bitField0_ & 0x00000400) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(11, visibilityFilter_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -3061,6 +3232,10 @@ private static final long serialVersionUID = 0L;
         if (getDeviceFilter()
             != other.getDeviceFilter()) return false;
       }
+      if (hasVisibilityFilter() != other.hasVisibilityFilter()) return false;
+      if (hasVisibilityFilter()) {
+        if (visibilityFilter_ != other.visibilityFilter_) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -3116,6 +3291,10 @@ private static final long serialVersionUID = 0L;
         hash = (37 * hash) + DEVICE_FILTER_FIELD_NUMBER;
         hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
             getDeviceFilter());
+      }
+      if (hasVisibilityFilter()) {
+        hash = (37 * hash) + VISIBILITY_FILTER_FIELD_NUMBER;
+        hash = (53 * hash) + visibilityFilter_;
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -3270,6 +3449,8 @@ private static final long serialVersionUID = 0L;
         bitField0_ = (bitField0_ & ~0x00000100);
         deviceFilter_ = false;
         bitField0_ = (bitField0_ & ~0x00000200);
+        visibilityFilter_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000400);
         return this;
       }
 
@@ -3338,6 +3519,10 @@ private static final long serialVersionUID = 0L;
           result.deviceFilter_ = deviceFilter_;
           to_bitField0_ |= 0x00000200;
         }
+        if (((from_bitField0_ & 0x00000400) != 0)) {
+          to_bitField0_ |= 0x00000400;
+        }
+        result.visibilityFilter_ = visibilityFilter_;
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -3416,6 +3601,9 @@ private static final long serialVersionUID = 0L;
         }
         if (other.hasDeviceFilter()) {
           setDeviceFilter(other.getDeviceFilter());
+        }
+        if (other.hasVisibilityFilter()) {
+          setVisibilityFilter(other.getVisibilityFilter());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -4025,6 +4213,65 @@ private static final long serialVersionUID = 0L;
       public Builder clearDeviceFilter() {
         bitField0_ = (bitField0_ & ~0x00000200);
         deviceFilter_ = false;
+        onChanged();
+        return this;
+      }
+
+      private int visibilityFilter_ = 0;
+      /**
+       * <pre>
+       * The visibility type used for this fetch.
+       * </pre>
+       *
+       * <code>optional .android_studio.AppQualityInsightsUsageEvent.AppQualityInsightsFetchDetails.VisibilityFilter visibility_filter = 11;</code>
+       * @return Whether the visibilityFilter field is set.
+       */
+      @java.lang.Override public boolean hasVisibilityFilter() {
+        return ((bitField0_ & 0x00000400) != 0);
+      }
+      /**
+       * <pre>
+       * The visibility type used for this fetch.
+       * </pre>
+       *
+       * <code>optional .android_studio.AppQualityInsightsUsageEvent.AppQualityInsightsFetchDetails.VisibilityFilter visibility_filter = 11;</code>
+       * @return The visibilityFilter.
+       */
+      @java.lang.Override
+      public com.google.wireless.android.sdk.stats.AppQualityInsightsUsageEvent.AppQualityInsightsFetchDetails.VisibilityFilter getVisibilityFilter() {
+        @SuppressWarnings("deprecation")
+        com.google.wireless.android.sdk.stats.AppQualityInsightsUsageEvent.AppQualityInsightsFetchDetails.VisibilityFilter result = com.google.wireless.android.sdk.stats.AppQualityInsightsUsageEvent.AppQualityInsightsFetchDetails.VisibilityFilter.valueOf(visibilityFilter_);
+        return result == null ? com.google.wireless.android.sdk.stats.AppQualityInsightsUsageEvent.AppQualityInsightsFetchDetails.VisibilityFilter.UNKNOWN_VISIBILITY : result;
+      }
+      /**
+       * <pre>
+       * The visibility type used for this fetch.
+       * </pre>
+       *
+       * <code>optional .android_studio.AppQualityInsightsUsageEvent.AppQualityInsightsFetchDetails.VisibilityFilter visibility_filter = 11;</code>
+       * @param value The visibilityFilter to set.
+       * @return This builder for chaining.
+       */
+      public Builder setVisibilityFilter(com.google.wireless.android.sdk.stats.AppQualityInsightsUsageEvent.AppQualityInsightsFetchDetails.VisibilityFilter value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x00000400;
+        visibilityFilter_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The visibility type used for this fetch.
+       * </pre>
+       *
+       * <code>optional .android_studio.AppQualityInsightsUsageEvent.AppQualityInsightsFetchDetails.VisibilityFilter visibility_filter = 11;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearVisibilityFilter() {
+        bitField0_ = (bitField0_ & ~0x00000400);
+        visibilityFilter_ = 0;
         onChanged();
         return this;
       }

@@ -281,6 +281,14 @@ private static final long serialVersionUID = 0L;
      * <code>PENDING_ERROR_IN_ANOTHER_FILE_AUTO_MODE = 23;</code>
      */
     PENDING_ERROR_IN_ANOTHER_FILE_AUTO_MODE(23),
+    /**
+     * <code>UNSUPPORTED_BUILD_LIBRARY_DESUGAR = 24;</code>
+     */
+    UNSUPPORTED_BUILD_LIBRARY_DESUGAR(24),
+    /**
+     * <code>BAD_MIN_API = 25;</code>
+     */
+    BAD_MIN_API(25),
     ;
 
     /**
@@ -430,6 +438,14 @@ private static final long serialVersionUID = 0L;
      * <code>PENDING_ERROR_IN_ANOTHER_FILE_AUTO_MODE = 23;</code>
      */
     public static final int PENDING_ERROR_IN_ANOTHER_FILE_AUTO_MODE_VALUE = 23;
+    /**
+     * <code>UNSUPPORTED_BUILD_LIBRARY_DESUGAR = 24;</code>
+     */
+    public static final int UNSUPPORTED_BUILD_LIBRARY_DESUGAR_VALUE = 24;
+    /**
+     * <code>BAD_MIN_API = 25;</code>
+     */
+    public static final int BAD_MIN_API_VALUE = 25;
 
 
     public final int getNumber() {
@@ -476,6 +492,8 @@ private static final long serialVersionUID = 0L;
         case 21: return INTERNAL_ERROR;
         case 22: return KNOWN_ISSUE;
         case 23: return PENDING_ERROR_IN_ANOTHER_FILE_AUTO_MODE;
+        case 24: return UNSUPPORTED_BUILD_LIBRARY_DESUGAR;
+        case 25: return BAD_MIN_API;
         default: return null;
       }
     }

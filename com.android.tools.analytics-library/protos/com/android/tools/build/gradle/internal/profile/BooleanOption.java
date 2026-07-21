@@ -719,6 +719,10 @@ public enum BooleanOption
    * <code>LINT_BASELINE_OMIT_LINE_NUMBERS = 174;</code>
    */
   LINT_BASELINE_OMIT_LINE_NUMBERS(174),
+  /**
+   * <code>LINT_USE_K2_UAST = 175;</code>
+   */
+  LINT_USE_K2_UAST(175),
   UNRECOGNIZED(-1),
   ;
 
@@ -1422,6 +1426,10 @@ public enum BooleanOption
    * <code>LINT_BASELINE_OMIT_LINE_NUMBERS = 174;</code>
    */
   public static final int LINT_BASELINE_OMIT_LINE_NUMBERS_VALUE = 174;
+  /**
+   * <code>LINT_USE_K2_UAST = 175;</code>
+   */
+  public static final int LINT_USE_K2_UAST_VALUE = 175;
 
 
   public final int getNumber() {
@@ -1623,6 +1631,7 @@ public enum BooleanOption
       case 172: return LINT_ANALYSIS_PER_COMPONENT;
       case 173: return ENABLE_VCS_INFO;
       case 174: return LINT_BASELINE_OMIT_LINE_NUMBERS;
+      case 175: return LINT_USE_K2_UAST;
       default: return null;
     }
   }
