@@ -68,6 +68,21 @@ private static final long serialVersionUID = 0L;
             libModuleCount_ = input.readInt64();
             break;
           }
+          case 32: {
+            bitField0_ |= 0x00000008;
+            dynamicFeatureModuleCount_ = input.readInt64();
+            break;
+          }
+          case 40: {
+            bitField0_ |= 0x00000010;
+            testModuleCount_ = input.readInt64();
+            break;
+          }
+          case 48: {
+            bitField0_ |= 0x00000020;
+            kotlinMultiplatformModuleCount_ = input.readInt64();
+            break;
+          }
           default: {
             if (!parseUnknownField(
                 input, unknownFields, extensionRegistry, tag)) {
@@ -159,7 +174,7 @@ private static final long serialVersionUID = 0L;
   private long libModuleCount_;
   /**
    * <pre>
-   * Number of library modules in this app..
+   * Number of library modules in this app.
    * </pre>
    *
    * <code>optional int64 lib_module_count = 3;</code>
@@ -171,7 +186,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Number of library modules in this app..
+   * Number of library modules in this app.
    * </pre>
    *
    * <code>optional int64 lib_module_count = 3;</code>
@@ -180,6 +195,87 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public long getLibModuleCount() {
     return libModuleCount_;
+  }
+
+  public static final int DYNAMIC_FEATURE_MODULE_COUNT_FIELD_NUMBER = 4;
+  private long dynamicFeatureModuleCount_;
+  /**
+   * <pre>
+   * Number of dynamic feature modules in this app.
+   * </pre>
+   *
+   * <code>optional int64 dynamic_feature_module_count = 4;</code>
+   * @return Whether the dynamicFeatureModuleCount field is set.
+   */
+  @java.lang.Override
+  public boolean hasDynamicFeatureModuleCount() {
+    return ((bitField0_ & 0x00000008) != 0);
+  }
+  /**
+   * <pre>
+   * Number of dynamic feature modules in this app.
+   * </pre>
+   *
+   * <code>optional int64 dynamic_feature_module_count = 4;</code>
+   * @return The dynamicFeatureModuleCount.
+   */
+  @java.lang.Override
+  public long getDynamicFeatureModuleCount() {
+    return dynamicFeatureModuleCount_;
+  }
+
+  public static final int TEST_MODULE_COUNT_FIELD_NUMBER = 5;
+  private long testModuleCount_;
+  /**
+   * <pre>
+   * Number of android test modules in this app.
+   * </pre>
+   *
+   * <code>optional int64 test_module_count = 5;</code>
+   * @return Whether the testModuleCount field is set.
+   */
+  @java.lang.Override
+  public boolean hasTestModuleCount() {
+    return ((bitField0_ & 0x00000010) != 0);
+  }
+  /**
+   * <pre>
+   * Number of android test modules in this app.
+   * </pre>
+   *
+   * <code>optional int64 test_module_count = 5;</code>
+   * @return The testModuleCount.
+   */
+  @java.lang.Override
+  public long getTestModuleCount() {
+    return testModuleCount_;
+  }
+
+  public static final int KOTLIN_MULTIPLATFORM_MODULE_COUNT_FIELD_NUMBER = 6;
+  private long kotlinMultiplatformModuleCount_;
+  /**
+   * <pre>
+   * Number of kotlin multiplatform modules in this app.
+   * </pre>
+   *
+   * <code>optional int64 kotlin_multiplatform_module_count = 6;</code>
+   * @return Whether the kotlinMultiplatformModuleCount field is set.
+   */
+  @java.lang.Override
+  public boolean hasKotlinMultiplatformModuleCount() {
+    return ((bitField0_ & 0x00000020) != 0);
+  }
+  /**
+   * <pre>
+   * Number of kotlin multiplatform modules in this app.
+   * </pre>
+   *
+   * <code>optional int64 kotlin_multiplatform_module_count = 6;</code>
+   * @return The kotlinMultiplatformModuleCount.
+   */
+  @java.lang.Override
+  public long getKotlinMultiplatformModuleCount() {
+    return kotlinMultiplatformModuleCount_;
   }
 
   private byte memoizedIsInitialized = -1;
@@ -205,6 +301,15 @@ private static final long serialVersionUID = 0L;
     if (((bitField0_ & 0x00000004) != 0)) {
       output.writeInt64(3, libModuleCount_);
     }
+    if (((bitField0_ & 0x00000008) != 0)) {
+      output.writeInt64(4, dynamicFeatureModuleCount_);
+    }
+    if (((bitField0_ & 0x00000010) != 0)) {
+      output.writeInt64(5, testModuleCount_);
+    }
+    if (((bitField0_ & 0x00000020) != 0)) {
+      output.writeInt64(6, kotlinMultiplatformModuleCount_);
+    }
     unknownFields.writeTo(output);
   }
 
@@ -225,6 +330,18 @@ private static final long serialVersionUID = 0L;
     if (((bitField0_ & 0x00000004) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(3, libModuleCount_);
+    }
+    if (((bitField0_ & 0x00000008) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeInt64Size(4, dynamicFeatureModuleCount_);
+    }
+    if (((bitField0_ & 0x00000010) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeInt64Size(5, testModuleCount_);
+    }
+    if (((bitField0_ & 0x00000020) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeInt64Size(6, kotlinMultiplatformModuleCount_);
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -256,6 +373,21 @@ private static final long serialVersionUID = 0L;
       if (getLibModuleCount()
           != other.getLibModuleCount()) return false;
     }
+    if (hasDynamicFeatureModuleCount() != other.hasDynamicFeatureModuleCount()) return false;
+    if (hasDynamicFeatureModuleCount()) {
+      if (getDynamicFeatureModuleCount()
+          != other.getDynamicFeatureModuleCount()) return false;
+    }
+    if (hasTestModuleCount() != other.hasTestModuleCount()) return false;
+    if (hasTestModuleCount()) {
+      if (getTestModuleCount()
+          != other.getTestModuleCount()) return false;
+    }
+    if (hasKotlinMultiplatformModuleCount() != other.hasKotlinMultiplatformModuleCount()) return false;
+    if (hasKotlinMultiplatformModuleCount()) {
+      if (getKotlinMultiplatformModuleCount()
+          != other.getKotlinMultiplatformModuleCount()) return false;
+    }
     if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
@@ -281,6 +413,21 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + LIB_MODULE_COUNT_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
           getLibModuleCount());
+    }
+    if (hasDynamicFeatureModuleCount()) {
+      hash = (37 * hash) + DYNAMIC_FEATURE_MODULE_COUNT_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getDynamicFeatureModuleCount());
+    }
+    if (hasTestModuleCount()) {
+      hash = (37 * hash) + TEST_MODULE_COUNT_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getTestModuleCount());
+    }
+    if (hasKotlinMultiplatformModuleCount()) {
+      hash = (37 * hash) + KOTLIN_MULTIPLATFORM_MODULE_COUNT_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getKotlinMultiplatformModuleCount());
     }
     hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
@@ -425,6 +572,12 @@ private static final long serialVersionUID = 0L;
       bitField0_ = (bitField0_ & ~0x00000002);
       libModuleCount_ = 0L;
       bitField0_ = (bitField0_ & ~0x00000004);
+      dynamicFeatureModuleCount_ = 0L;
+      bitField0_ = (bitField0_ & ~0x00000008);
+      testModuleCount_ = 0L;
+      bitField0_ = (bitField0_ & ~0x00000010);
+      kotlinMultiplatformModuleCount_ = 0L;
+      bitField0_ = (bitField0_ & ~0x00000020);
       return this;
     }
 
@@ -464,6 +617,18 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000004) != 0)) {
         result.libModuleCount_ = libModuleCount_;
         to_bitField0_ |= 0x00000004;
+      }
+      if (((from_bitField0_ & 0x00000008) != 0)) {
+        result.dynamicFeatureModuleCount_ = dynamicFeatureModuleCount_;
+        to_bitField0_ |= 0x00000008;
+      }
+      if (((from_bitField0_ & 0x00000010) != 0)) {
+        result.testModuleCount_ = testModuleCount_;
+        to_bitField0_ |= 0x00000010;
+      }
+      if (((from_bitField0_ & 0x00000020) != 0)) {
+        result.kotlinMultiplatformModuleCount_ = kotlinMultiplatformModuleCount_;
+        to_bitField0_ |= 0x00000020;
       }
       result.bitField0_ = to_bitField0_;
       onBuilt();
@@ -522,6 +687,15 @@ private static final long serialVersionUID = 0L;
       }
       if (other.hasLibModuleCount()) {
         setLibModuleCount(other.getLibModuleCount());
+      }
+      if (other.hasDynamicFeatureModuleCount()) {
+        setDynamicFeatureModuleCount(other.getDynamicFeatureModuleCount());
+      }
+      if (other.hasTestModuleCount()) {
+        setTestModuleCount(other.getTestModuleCount());
+      }
+      if (other.hasKotlinMultiplatformModuleCount()) {
+        setKotlinMultiplatformModuleCount(other.getKotlinMultiplatformModuleCount());
       }
       this.mergeUnknownFields(other.unknownFields);
       onChanged();
@@ -666,7 +840,7 @@ private static final long serialVersionUID = 0L;
     private long libModuleCount_ ;
     /**
      * <pre>
-     * Number of library modules in this app..
+     * Number of library modules in this app.
      * </pre>
      *
      * <code>optional int64 lib_module_count = 3;</code>
@@ -678,7 +852,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Number of library modules in this app..
+     * Number of library modules in this app.
      * </pre>
      *
      * <code>optional int64 lib_module_count = 3;</code>
@@ -690,7 +864,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Number of library modules in this app..
+     * Number of library modules in this app.
      * </pre>
      *
      * <code>optional int64 lib_module_count = 3;</code>
@@ -705,7 +879,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Number of library modules in this app..
+     * Number of library modules in this app.
      * </pre>
      *
      * <code>optional int64 lib_module_count = 3;</code>
@@ -714,6 +888,171 @@ private static final long serialVersionUID = 0L;
     public Builder clearLibModuleCount() {
       bitField0_ = (bitField0_ & ~0x00000004);
       libModuleCount_ = 0L;
+      onChanged();
+      return this;
+    }
+
+    private long dynamicFeatureModuleCount_ ;
+    /**
+     * <pre>
+     * Number of dynamic feature modules in this app.
+     * </pre>
+     *
+     * <code>optional int64 dynamic_feature_module_count = 4;</code>
+     * @return Whether the dynamicFeatureModuleCount field is set.
+     */
+    @java.lang.Override
+    public boolean hasDynamicFeatureModuleCount() {
+      return ((bitField0_ & 0x00000008) != 0);
+    }
+    /**
+     * <pre>
+     * Number of dynamic feature modules in this app.
+     * </pre>
+     *
+     * <code>optional int64 dynamic_feature_module_count = 4;</code>
+     * @return The dynamicFeatureModuleCount.
+     */
+    @java.lang.Override
+    public long getDynamicFeatureModuleCount() {
+      return dynamicFeatureModuleCount_;
+    }
+    /**
+     * <pre>
+     * Number of dynamic feature modules in this app.
+     * </pre>
+     *
+     * <code>optional int64 dynamic_feature_module_count = 4;</code>
+     * @param value The dynamicFeatureModuleCount to set.
+     * @return This builder for chaining.
+     */
+    public Builder setDynamicFeatureModuleCount(long value) {
+      bitField0_ |= 0x00000008;
+      dynamicFeatureModuleCount_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Number of dynamic feature modules in this app.
+     * </pre>
+     *
+     * <code>optional int64 dynamic_feature_module_count = 4;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearDynamicFeatureModuleCount() {
+      bitField0_ = (bitField0_ & ~0x00000008);
+      dynamicFeatureModuleCount_ = 0L;
+      onChanged();
+      return this;
+    }
+
+    private long testModuleCount_ ;
+    /**
+     * <pre>
+     * Number of android test modules in this app.
+     * </pre>
+     *
+     * <code>optional int64 test_module_count = 5;</code>
+     * @return Whether the testModuleCount field is set.
+     */
+    @java.lang.Override
+    public boolean hasTestModuleCount() {
+      return ((bitField0_ & 0x00000010) != 0);
+    }
+    /**
+     * <pre>
+     * Number of android test modules in this app.
+     * </pre>
+     *
+     * <code>optional int64 test_module_count = 5;</code>
+     * @return The testModuleCount.
+     */
+    @java.lang.Override
+    public long getTestModuleCount() {
+      return testModuleCount_;
+    }
+    /**
+     * <pre>
+     * Number of android test modules in this app.
+     * </pre>
+     *
+     * <code>optional int64 test_module_count = 5;</code>
+     * @param value The testModuleCount to set.
+     * @return This builder for chaining.
+     */
+    public Builder setTestModuleCount(long value) {
+      bitField0_ |= 0x00000010;
+      testModuleCount_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Number of android test modules in this app.
+     * </pre>
+     *
+     * <code>optional int64 test_module_count = 5;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearTestModuleCount() {
+      bitField0_ = (bitField0_ & ~0x00000010);
+      testModuleCount_ = 0L;
+      onChanged();
+      return this;
+    }
+
+    private long kotlinMultiplatformModuleCount_ ;
+    /**
+     * <pre>
+     * Number of kotlin multiplatform modules in this app.
+     * </pre>
+     *
+     * <code>optional int64 kotlin_multiplatform_module_count = 6;</code>
+     * @return Whether the kotlinMultiplatformModuleCount field is set.
+     */
+    @java.lang.Override
+    public boolean hasKotlinMultiplatformModuleCount() {
+      return ((bitField0_ & 0x00000020) != 0);
+    }
+    /**
+     * <pre>
+     * Number of kotlin multiplatform modules in this app.
+     * </pre>
+     *
+     * <code>optional int64 kotlin_multiplatform_module_count = 6;</code>
+     * @return The kotlinMultiplatformModuleCount.
+     */
+    @java.lang.Override
+    public long getKotlinMultiplatformModuleCount() {
+      return kotlinMultiplatformModuleCount_;
+    }
+    /**
+     * <pre>
+     * Number of kotlin multiplatform modules in this app.
+     * </pre>
+     *
+     * <code>optional int64 kotlin_multiplatform_module_count = 6;</code>
+     * @param value The kotlinMultiplatformModuleCount to set.
+     * @return This builder for chaining.
+     */
+    public Builder setKotlinMultiplatformModuleCount(long value) {
+      bitField0_ |= 0x00000020;
+      kotlinMultiplatformModuleCount_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Number of kotlin multiplatform modules in this app.
+     * </pre>
+     *
+     * <code>optional int64 kotlin_multiplatform_module_count = 6;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearKotlinMultiplatformModuleCount() {
+      bitField0_ = (bitField0_ & ~0x00000020);
+      kotlinMultiplatformModuleCount_ = 0L;
       onChanged();
       return this;
     }
