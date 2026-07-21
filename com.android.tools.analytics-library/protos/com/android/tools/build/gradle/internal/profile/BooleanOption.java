@@ -832,6 +832,10 @@ public enum BooleanOption
    * <code>FAIL_ON_MISSING_PROGUARD_FILES = 202;</code>
    */
   FAIL_ON_MISSING_PROGUARD_FILES(202),
+  /**
+   * <code>TEST_SIMULATE_AGP_VERSION_BEHAVIOR = 203;</code>
+   */
+  TEST_SIMULATE_AGP_VERSION_BEHAVIOR(203),
   UNRECOGNIZED(-1),
   ;
 
@@ -1647,6 +1651,10 @@ public enum BooleanOption
    * <code>FAIL_ON_MISSING_PROGUARD_FILES = 202;</code>
    */
   public static final int FAIL_ON_MISSING_PROGUARD_FILES_VALUE = 202;
+  /**
+   * <code>TEST_SIMULATE_AGP_VERSION_BEHAVIOR = 203;</code>
+   */
+  public static final int TEST_SIMULATE_AGP_VERSION_BEHAVIOR_VALUE = 203;
 
 
   public final int getNumber() {
@@ -1876,6 +1884,7 @@ public enum BooleanOption
       case 200: return GRADUAL_R8_SHRINKING;
       case 201: return ENABLE_PROBLEMS_API;
       case 202: return FAIL_ON_MISSING_PROGUARD_FILES;
+      case 203: return TEST_SIMULATE_AGP_VERSION_BEHAVIOR;
       default: return null;
     }
   }
