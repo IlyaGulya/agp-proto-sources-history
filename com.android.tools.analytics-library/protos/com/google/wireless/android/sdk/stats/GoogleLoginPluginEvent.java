@@ -17,6 +17,7 @@ private static final long serialVersionUID = 0L;
   }
   private GoogleLoginPluginEvent() {
     event_ = 0;
+    loginType_ = 0;
   }
 
   @java.lang.Override
@@ -193,6 +194,127 @@ private static final long serialVersionUID = 0L;
     }
 
     // @@protoc_insertion_point(enum_scope:android_studio.GoogleLoginPluginEvent.EventKind)
+  }
+
+  /**
+   * Protobuf enum {@code android_studio.GoogleLoginPluginEvent.LoginType}
+   */
+  public enum LoginType
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <code>UNKNOWN_TYPE = 0;</code>
+     */
+    UNKNOWN_TYPE(0),
+    /**
+     * <pre>
+     * A user signs in via the combined sign-in flow.
+     * </pre>
+     *
+     * <code>COMBINED_LOGIN = 1;</code>
+     */
+    COMBINED_LOGIN(1),
+    /**
+     * <pre>
+     * A user signs in via the specific feature login flow.
+     * </pre>
+     *
+     * <code>FEATURE_LOGIN = 2;</code>
+     */
+    FEATURE_LOGIN(2),
+    ;
+
+    /**
+     * <code>UNKNOWN_TYPE = 0;</code>
+     */
+    public static final int UNKNOWN_TYPE_VALUE = 0;
+    /**
+     * <pre>
+     * A user signs in via the combined sign-in flow.
+     * </pre>
+     *
+     * <code>COMBINED_LOGIN = 1;</code>
+     */
+    public static final int COMBINED_LOGIN_VALUE = 1;
+    /**
+     * <pre>
+     * A user signs in via the specific feature login flow.
+     * </pre>
+     *
+     * <code>FEATURE_LOGIN = 2;</code>
+     */
+    public static final int FEATURE_LOGIN_VALUE = 2;
+
+
+    public final int getNumber() {
+      return value;
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     * @deprecated Use {@link #forNumber(int)} instead.
+     */
+    @java.lang.Deprecated
+    public static LoginType valueOf(int value) {
+      return forNumber(value);
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     */
+    public static LoginType forNumber(int value) {
+      switch (value) {
+        case 0: return UNKNOWN_TYPE;
+        case 1: return COMBINED_LOGIN;
+        case 2: return FEATURE_LOGIN;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<LoginType>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static final com.google.protobuf.Internal.EnumLiteMap<
+        LoginType> internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<LoginType>() {
+            public LoginType findValueByNumber(int number) {
+              return LoginType.forNumber(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      return getDescriptor().getValues().get(ordinal());
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return com.google.wireless.android.sdk.stats.GoogleLoginPluginEvent.getDescriptor().getEnumTypes().get(1);
+    }
+
+    private static final LoginType[] VALUES = values();
+
+    public static LoginType valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int value;
+
+    private LoginType(int value) {
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:android_studio.GoogleLoginPluginEvent.LoginType)
   }
 
   public interface LoginFeaturesOrBuilder extends
@@ -921,6 +1043,25 @@ private static final long serialVersionUID = 0L;
     return features_ == null ? com.google.wireless.android.sdk.stats.GoogleLoginPluginEvent.LoginFeatures.getDefaultInstance() : features_;
   }
 
+  public static final int LOGIN_TYPE_FIELD_NUMBER = 3;
+  private int loginType_;
+  /**
+   * <code>optional .android_studio.GoogleLoginPluginEvent.LoginType login_type = 3;</code>
+   * @return Whether the loginType field is set.
+   */
+  @java.lang.Override public boolean hasLoginType() {
+    return ((bitField0_ & 0x00000004) != 0);
+  }
+  /**
+   * <code>optional .android_studio.GoogleLoginPluginEvent.LoginType login_type = 3;</code>
+   * @return The loginType.
+   */
+  @java.lang.Override public com.google.wireless.android.sdk.stats.GoogleLoginPluginEvent.LoginType getLoginType() {
+    @SuppressWarnings("deprecation")
+    com.google.wireless.android.sdk.stats.GoogleLoginPluginEvent.LoginType result = com.google.wireless.android.sdk.stats.GoogleLoginPluginEvent.LoginType.valueOf(loginType_);
+    return result == null ? com.google.wireless.android.sdk.stats.GoogleLoginPluginEvent.LoginType.UNKNOWN_TYPE : result;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -941,6 +1082,9 @@ private static final long serialVersionUID = 0L;
     if (((bitField0_ & 0x00000002) != 0)) {
       output.writeMessage(2, getFeatures());
     }
+    if (((bitField0_ & 0x00000004) != 0)) {
+      output.writeEnum(3, loginType_);
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -957,6 +1101,10 @@ private static final long serialVersionUID = 0L;
     if (((bitField0_ & 0x00000002) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(2, getFeatures());
+    }
+    if (((bitField0_ & 0x00000004) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeEnumSize(3, loginType_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -982,6 +1130,10 @@ private static final long serialVersionUID = 0L;
       if (!getFeatures()
           .equals(other.getFeatures())) return false;
     }
+    if (hasLoginType() != other.hasLoginType()) return false;
+    if (hasLoginType()) {
+      if (loginType_ != other.loginType_) return false;
+    }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -1000,6 +1152,10 @@ private static final long serialVersionUID = 0L;
     if (hasFeatures()) {
       hash = (37 * hash) + FEATURES_FIELD_NUMBER;
       hash = (53 * hash) + getFeatures().hashCode();
+    }
+    if (hasLoginType()) {
+      hash = (37 * hash) + LOGIN_TYPE_FIELD_NUMBER;
+      hash = (53 * hash) + loginType_;
     }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
@@ -1143,6 +1299,8 @@ private static final long serialVersionUID = 0L;
         featuresBuilder_.clear();
       }
       bitField0_ = (bitField0_ & ~0x00000002);
+      loginType_ = 0;
+      bitField0_ = (bitField0_ & ~0x00000004);
       return this;
     }
 
@@ -1183,6 +1341,10 @@ private static final long serialVersionUID = 0L;
         }
         to_bitField0_ |= 0x00000002;
       }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        to_bitField0_ |= 0x00000004;
+      }
+      result.loginType_ = loginType_;
       result.bitField0_ = to_bitField0_;
       onBuilt();
       return result;
@@ -1238,6 +1400,9 @@ private static final long serialVersionUID = 0L;
       if (other.hasFeatures()) {
         mergeFeatures(other.getFeatures());
       }
+      if (other.hasLoginType()) {
+        setLoginType(other.getLoginType());
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -1283,6 +1448,18 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000002;
               break;
             } // case 18
+            case 24: {
+              int tmpRaw = input.readEnum();
+              com.google.wireless.android.sdk.stats.GoogleLoginPluginEvent.LoginType tmpValue =
+                  com.google.wireless.android.sdk.stats.GoogleLoginPluginEvent.LoginType.forNumber(tmpRaw);
+              if (tmpValue == null) {
+                mergeUnknownVarintField(3, tmpRaw);
+              } else {
+                loginType_ = tmpRaw;
+                bitField0_ |= 0x00000004;
+              }
+              break;
+            } // case 24
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -1461,6 +1638,49 @@ private static final long serialVersionUID = 0L;
         features_ = null;
       }
       return featuresBuilder_;
+    }
+
+    private int loginType_ = 0;
+    /**
+     * <code>optional .android_studio.GoogleLoginPluginEvent.LoginType login_type = 3;</code>
+     * @return Whether the loginType field is set.
+     */
+    @java.lang.Override public boolean hasLoginType() {
+      return ((bitField0_ & 0x00000004) != 0);
+    }
+    /**
+     * <code>optional .android_studio.GoogleLoginPluginEvent.LoginType login_type = 3;</code>
+     * @return The loginType.
+     */
+    @java.lang.Override
+    public com.google.wireless.android.sdk.stats.GoogleLoginPluginEvent.LoginType getLoginType() {
+      @SuppressWarnings("deprecation")
+      com.google.wireless.android.sdk.stats.GoogleLoginPluginEvent.LoginType result = com.google.wireless.android.sdk.stats.GoogleLoginPluginEvent.LoginType.valueOf(loginType_);
+      return result == null ? com.google.wireless.android.sdk.stats.GoogleLoginPluginEvent.LoginType.UNKNOWN_TYPE : result;
+    }
+    /**
+     * <code>optional .android_studio.GoogleLoginPluginEvent.LoginType login_type = 3;</code>
+     * @param value The loginType to set.
+     * @return This builder for chaining.
+     */
+    public Builder setLoginType(com.google.wireless.android.sdk.stats.GoogleLoginPluginEvent.LoginType value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      bitField0_ |= 0x00000004;
+      loginType_ = value.getNumber();
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>optional .android_studio.GoogleLoginPluginEvent.LoginType login_type = 3;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearLoginType() {
+      bitField0_ = (bitField0_ & ~0x00000004);
+      loginType_ = 0;
+      onChanged();
+      return this;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

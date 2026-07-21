@@ -32,4 +32,15 @@ public interface GoogleLoginPluginEventOrBuilder extends
    * <code>optional .android_studio.GoogleLoginPluginEvent.LoginFeatures features = 2;</code>
    */
   com.google.wireless.android.sdk.stats.GoogleLoginPluginEvent.LoginFeaturesOrBuilder getFeaturesOrBuilder();
+
+  /**
+   * <code>optional .android_studio.GoogleLoginPluginEvent.LoginType login_type = 3;</code>
+   * @return Whether the loginType field is set.
+   */
+  boolean hasLoginType();
+  /**
+   * <code>optional .android_studio.GoogleLoginPluginEvent.LoginType login_type = 3;</code>
+   * @return The loginType.
+   */
+  com.google.wireless.android.sdk.stats.GoogleLoginPluginEvent.LoginType getLoginType();
 }
