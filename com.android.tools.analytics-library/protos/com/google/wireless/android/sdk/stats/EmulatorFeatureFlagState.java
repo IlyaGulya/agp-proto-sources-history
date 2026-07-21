@@ -582,13 +582,21 @@ private static final long serialVersionUID = 0L;
      */
     FORCE_GPU_SOFTWARE(137),
     /**
-     * <pre>
-     * Next tag: 139
-     * </pre>
-     *
      * <code>QEMU_CAMERA_SENSOR_ORIENTATION = 138;</code>
      */
     QEMU_CAMERA_SENSOR_ORIENTATION(138),
+    /**
+     * <code>VULKAN_PROTECTED_MEMORY_EMULATION = 139;</code>
+     */
+    VULKAN_PROTECTED_MEMORY_EMULATION(139),
+    /**
+     * <pre>
+     * Next tag: 141
+     * </pre>
+     *
+     * <code>XR_DIMMING = 140;</code>
+     */
+    XR_DIMMING(140),
     ;
 
     /**
@@ -1116,13 +1124,21 @@ private static final long serialVersionUID = 0L;
      */
     public static final int FORCE_GPU_SOFTWARE_VALUE = 137;
     /**
-     * <pre>
-     * Next tag: 139
-     * </pre>
-     *
      * <code>QEMU_CAMERA_SENSOR_ORIENTATION = 138;</code>
      */
     public static final int QEMU_CAMERA_SENSOR_ORIENTATION_VALUE = 138;
+    /**
+     * <code>VULKAN_PROTECTED_MEMORY_EMULATION = 139;</code>
+     */
+    public static final int VULKAN_PROTECTED_MEMORY_EMULATION_VALUE = 139;
+    /**
+     * <pre>
+     * Next tag: 141
+     * </pre>
+     *
+     * <code>XR_DIMMING = 140;</code>
+     */
+    public static final int XR_DIMMING_VALUE = 140;
 
 
     public final int getNumber() {
@@ -1274,6 +1290,8 @@ private static final long serialVersionUID = 0L;
         case 136: return FORCE_GPU_HOST;
         case 137: return FORCE_GPU_SOFTWARE;
         case 138: return QEMU_CAMERA_SENSOR_ORIENTATION;
+        case 139: return VULKAN_PROTECTED_MEMORY_EMULATION;
+        case 140: return XR_DIMMING;
         default: return null;
       }
     }

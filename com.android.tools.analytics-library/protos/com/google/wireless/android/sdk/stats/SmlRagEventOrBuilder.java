@@ -82,5 +82,35 @@ public interface SmlRagEventOrBuilder extends
    */
   com.google.wireless.android.sdk.stats.SmlRagEvent.KbRagIndexerMetricsOrBuilder getKbRagOrBuilder();
 
+  /**
+   * <code>.android_studio.SmlRagEvent.FindDeclarationMetrics find_declaration = 6 [lazy = true];</code>
+   * @return Whether the findDeclaration field is set.
+   */
+  boolean hasFindDeclaration();
+  /**
+   * <code>.android_studio.SmlRagEvent.FindDeclarationMetrics find_declaration = 6 [lazy = true];</code>
+   * @return The findDeclaration.
+   */
+  com.google.wireless.android.sdk.stats.SmlRagEvent.FindDeclarationMetrics getFindDeclaration();
+  /**
+   * <code>.android_studio.SmlRagEvent.FindDeclarationMetrics find_declaration = 6 [lazy = true];</code>
+   */
+  com.google.wireless.android.sdk.stats.SmlRagEvent.FindDeclarationMetricsOrBuilder getFindDeclarationOrBuilder();
+
+  /**
+   * <code>.android_studio.SmlRagEvent.FindUsagesMetrics find_usages = 7 [lazy = true];</code>
+   * @return Whether the findUsages field is set.
+   */
+  boolean hasFindUsages();
+  /**
+   * <code>.android_studio.SmlRagEvent.FindUsagesMetrics find_usages = 7 [lazy = true];</code>
+   * @return The findUsages.
+   */
+  com.google.wireless.android.sdk.stats.SmlRagEvent.FindUsagesMetrics getFindUsages();
+  /**
+   * <code>.android_studio.SmlRagEvent.FindUsagesMetrics find_usages = 7 [lazy = true];</code>
+   */
+  com.google.wireless.android.sdk.stats.SmlRagEvent.FindUsagesMetricsOrBuilder getFindUsagesOrBuilder();
+
   com.google.wireless.android.sdk.stats.SmlRagEvent.ContentCase getContentCase();
 }

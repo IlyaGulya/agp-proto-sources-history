@@ -821,6 +821,18 @@ public enum VariantPropertiesMethodType
    * <code>VARIANT_AAR_METADATA_MIN_COMPILE_SDK_VERSION_SPEC = 190;</code>
    */
   VARIANT_AAR_METADATA_MIN_COMPILE_SDK_VERSION_SPEC(190),
+  /**
+   * <code>GET_ARTIFACT_WITH_ATTRIBUTES = 191;</code>
+   */
+  GET_ARTIFACT_WITH_ATTRIBUTES(191),
+  /**
+   * <code>TO_APPEND_TO_WITH_ATTRIBUTES = 192;</code>
+   */
+  TO_APPEND_TO_WITH_ATTRIBUTES(192),
+  /**
+   * <code>GET_ALL_WITH_ATTRIBUTES = 193;</code>
+   */
+  GET_ALL_WITH_ATTRIBUTES(193),
   UNRECOGNIZED(-1),
   ;
 
@@ -1636,6 +1648,18 @@ public enum VariantPropertiesMethodType
    * <code>VARIANT_AAR_METADATA_MIN_COMPILE_SDK_VERSION_SPEC = 190;</code>
    */
   public static final int VARIANT_AAR_METADATA_MIN_COMPILE_SDK_VERSION_SPEC_VALUE = 190;
+  /**
+   * <code>GET_ARTIFACT_WITH_ATTRIBUTES = 191;</code>
+   */
+  public static final int GET_ARTIFACT_WITH_ATTRIBUTES_VALUE = 191;
+  /**
+   * <code>TO_APPEND_TO_WITH_ATTRIBUTES = 192;</code>
+   */
+  public static final int TO_APPEND_TO_WITH_ATTRIBUTES_VALUE = 192;
+  /**
+   * <code>GET_ALL_WITH_ATTRIBUTES = 193;</code>
+   */
+  public static final int GET_ALL_WITH_ATTRIBUTES_VALUE = 193;
 
 
   public final int getNumber() {
@@ -1853,6 +1877,9 @@ public enum VariantPropertiesMethodType
       case 188: return VARIANT_AAR_METADATA_MIN_COMPILE_SDK_MINOR;
       case 189: return VARIANT_AAR_METADATA_MIN_COMPILE_SDK_VERSION;
       case 190: return VARIANT_AAR_METADATA_MIN_COMPILE_SDK_VERSION_SPEC;
+      case 191: return GET_ARTIFACT_WITH_ATTRIBUTES;
+      case 192: return TO_APPEND_TO_WITH_ATTRIBUTES;
+      case 193: return GET_ALL_WITH_ATTRIBUTES;
       default: return null;
     }
   }

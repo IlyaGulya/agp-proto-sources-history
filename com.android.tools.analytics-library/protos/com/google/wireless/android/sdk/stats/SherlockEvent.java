@@ -139,6 +139,14 @@ private static final long serialVersionUID = 0L;
      * <code>PERFETTO_SQL_QUERY_EXECUTED = 302;</code>
      */
     PERFETTO_SQL_QUERY_EXECUTED(302),
+    /**
+     * <pre>
+     * Fired when trace loading into the viewer is finished (success or error).
+     * </pre>
+     *
+     * <code>PERFETTO_TRACE_LOADED = 303;</code>
+     */
+    PERFETTO_TRACE_LOADED(303),
     ;
 
     /**
@@ -230,6 +238,14 @@ private static final long serialVersionUID = 0L;
      * <code>PERFETTO_SQL_QUERY_EXECUTED = 302;</code>
      */
     public static final int PERFETTO_SQL_QUERY_EXECUTED_VALUE = 302;
+    /**
+     * <pre>
+     * Fired when trace loading into the viewer is finished (success or error).
+     * </pre>
+     *
+     * <code>PERFETTO_TRACE_LOADED = 303;</code>
+     */
+    public static final int PERFETTO_TRACE_LOADED_VALUE = 303;
 
 
     public final int getNumber() {
@@ -267,6 +283,7 @@ private static final long serialVersionUID = 0L;
         case 223: return GPU_COUNTER_SELECTION_DIALOG_PROCEED;
         case 301: return PERFETTO_TRACE_OPENED;
         case 302: return PERFETTO_SQL_QUERY_EXECUTED;
+        case 303: return PERFETTO_TRACE_LOADED;
         default: return null;
       }
     }
@@ -11243,6 +11260,1850 @@ private static final long serialVersionUID = 0L;
 
   }
 
+  public interface PerfettoTraceLoadedMetadataOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:android_studio.SherlockEvent.PerfettoTraceLoadedMetadata)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * The final status of the trace loading operation.
+     * </pre>
+     *
+     * <code>optional .android_studio.SherlockEvent.PerfettoTraceLoadedMetadata.TraceLoadStatus trace_load_status = 1;</code>
+     * @return Whether the traceLoadStatus field is set.
+     */
+    boolean hasTraceLoadStatus();
+    /**
+     * <pre>
+     * The final status of the trace loading operation.
+     * </pre>
+     *
+     * <code>optional .android_studio.SherlockEvent.PerfettoTraceLoadedMetadata.TraceLoadStatus trace_load_status = 1;</code>
+     * @return The traceLoadStatus.
+     */
+    com.google.wireless.android.sdk.stats.SherlockEvent.PerfettoTraceLoadedMetadata.TraceLoadStatus getTraceLoadStatus();
+
+    /**
+     * <pre>
+     * Time taken to start the trace processor process and establish the RPC
+     * connection.
+     * </pre>
+     *
+     * <code>optional int64 rpc_client_init_duration_ms = 2;</code>
+     * @return Whether the rpcClientInitDurationMs field is set.
+     */
+    boolean hasRpcClientInitDurationMs();
+    /**
+     * <pre>
+     * Time taken to start the trace processor process and establish the RPC
+     * connection.
+     * </pre>
+     *
+     * <code>optional int64 rpc_client_init_duration_ms = 2;</code>
+     * @return The rpcClientInitDurationMs.
+     */
+    long getRpcClientInitDurationMs();
+
+    /**
+     * <pre>
+     * Time taken by the trace processor to parse the trace file.
+     * </pre>
+     *
+     * <code>optional int64 capture_parsing_duration_ms = 3;</code>
+     * @return Whether the captureParsingDurationMs field is set.
+     */
+    boolean hasCaptureParsingDurationMs();
+    /**
+     * <pre>
+     * Time taken by the trace processor to parse the trace file.
+     * </pre>
+     *
+     * <code>optional int64 capture_parsing_duration_ms = 3;</code>
+     * @return The captureParsingDurationMs.
+     */
+    long getCaptureParsingDurationMs();
+
+    /**
+     * <pre>
+     * Time taken to query the trace processor and populate the model with
+     * summary data (e.g., threads, processes, counters).
+     * </pre>
+     *
+     * <code>optional int64 overview_data_loading_duration_ms = 4;</code>
+     * @return Whether the overviewDataLoadingDurationMs field is set.
+     */
+    boolean hasOverviewDataLoadingDurationMs();
+    /**
+     * <pre>
+     * Time taken to query the trace processor and populate the model with
+     * summary data (e.g., threads, processes, counters).
+     * </pre>
+     *
+     * <code>optional int64 overview_data_loading_duration_ms = 4;</code>
+     * @return The overviewDataLoadingDurationMs.
+     */
+    long getOverviewDataLoadingDurationMs();
+
+    /**
+     * <pre>
+     * Duration of the trace in nanoseconds.
+     * </pre>
+     *
+     * <code>optional int64 trace_duration_ns = 5;</code>
+     * @return Whether the traceDurationNs field is set.
+     */
+    boolean hasTraceDurationNs();
+    /**
+     * <pre>
+     * Duration of the trace in nanoseconds.
+     * </pre>
+     *
+     * <code>optional int64 trace_duration_ns = 5;</code>
+     * @return The traceDurationNs.
+     */
+    long getTraceDurationNs();
+
+    /**
+     * <pre>
+     * Duration of the initial calculated visible time range in nanoseconds.
+     * </pre>
+     *
+     * <code>optional int64 calculated_view_duration_ns = 6;</code>
+     * @return Whether the calculatedViewDurationNs field is set.
+     */
+    boolean hasCalculatedViewDurationNs();
+    /**
+     * <pre>
+     * Duration of the initial calculated visible time range in nanoseconds.
+     * </pre>
+     *
+     * <code>optional int64 calculated_view_duration_ns = 6;</code>
+     * @return The calculatedViewDurationNs.
+     */
+    long getCalculatedViewDurationNs();
+
+    /**
+     * <pre>
+     * Size of the trace file in bytes.
+     * </pre>
+     *
+     * <code>optional int64 trace_file_size_bytes = 7;</code>
+     * @return Whether the traceFileSizeBytes field is set.
+     */
+    boolean hasTraceFileSizeBytes();
+    /**
+     * <pre>
+     * Size of the trace file in bytes.
+     * </pre>
+     *
+     * <code>optional int64 trace_file_size_bytes = 7;</code>
+     * @return The traceFileSizeBytes.
+     */
+    long getTraceFileSizeBytes();
+
+    /**
+     * <pre>
+     * Number of threads in the trace.
+     * </pre>
+     *
+     * <code>optional int32 trace_threads_count = 8;</code>
+     * @return Whether the traceThreadsCount field is set.
+     */
+    boolean hasTraceThreadsCount();
+    /**
+     * <pre>
+     * Number of threads in the trace.
+     * </pre>
+     *
+     * <code>optional int32 trace_threads_count = 8;</code>
+     * @return The traceThreadsCount.
+     */
+    int getTraceThreadsCount();
+
+    /**
+     * <pre>
+     * Number of processes in the trace.
+     * </pre>
+     *
+     * <code>optional int32 trace_processes_count = 9;</code>
+     * @return Whether the traceProcessesCount field is set.
+     */
+    boolean hasTraceProcessesCount();
+    /**
+     * <pre>
+     * Number of processes in the trace.
+     * </pre>
+     *
+     * <code>optional int32 trace_processes_count = 9;</code>
+     * @return The traceProcessesCount.
+     */
+    int getTraceProcessesCount();
+
+    /**
+     * <pre>
+     * Number of counters in the trace.
+     * </pre>
+     *
+     * <code>optional int32 trace_counters_count = 10;</code>
+     * @return Whether the traceCountersCount field is set.
+     */
+    boolean hasTraceCountersCount();
+    /**
+     * <pre>
+     * Number of counters in the trace.
+     * </pre>
+     *
+     * <code>optional int32 trace_counters_count = 10;</code>
+     * @return The traceCountersCount.
+     */
+    int getTraceCountersCount();
+  }
+  /**
+   * <pre>
+   * Metadata for the |PERFETTO_TRACE_LOADED| event.
+   * </pre>
+   *
+   * Protobuf type {@code android_studio.SherlockEvent.PerfettoTraceLoadedMetadata}
+   */
+  public static final class PerfettoTraceLoadedMetadata extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:android_studio.SherlockEvent.PerfettoTraceLoadedMetadata)
+      PerfettoTraceLoadedMetadataOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use PerfettoTraceLoadedMetadata.newBuilder() to construct.
+    private PerfettoTraceLoadedMetadata(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private PerfettoTraceLoadedMetadata() {
+      traceLoadStatus_ = 0;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new PerfettoTraceLoadedMetadata();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_SherlockEvent_PerfettoTraceLoadedMetadata_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_SherlockEvent_PerfettoTraceLoadedMetadata_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.google.wireless.android.sdk.stats.SherlockEvent.PerfettoTraceLoadedMetadata.class, com.google.wireless.android.sdk.stats.SherlockEvent.PerfettoTraceLoadedMetadata.Builder.class);
+    }
+
+    /**
+     * Protobuf enum {@code android_studio.SherlockEvent.PerfettoTraceLoadedMetadata.TraceLoadStatus}
+     */
+    public enum TraceLoadStatus
+        implements com.google.protobuf.ProtocolMessageEnum {
+      /**
+       * <code>TRACE_LOAD_STATUS_UNKNOWN = 0;</code>
+       */
+      TRACE_LOAD_STATUS_UNKNOWN(0),
+      /**
+       * <code>TRACE_LOAD_STATUS_SUCCESS = 1;</code>
+       */
+      TRACE_LOAD_STATUS_SUCCESS(1),
+      /**
+       * <code>TRACE_LOAD_STATUS_TIMEOUT = 2;</code>
+       */
+      TRACE_LOAD_STATUS_TIMEOUT(2),
+      /**
+       * <code>TRACE_LOAD_STATUS_IO_ERROR = 3;</code>
+       */
+      TRACE_LOAD_STATUS_IO_ERROR(3),
+      /**
+       * <code>TRACE_LOAD_STATUS_SERVER_UNAVAILABLE = 4;</code>
+       */
+      TRACE_LOAD_STATUS_SERVER_UNAVAILABLE(4),
+      ;
+
+      /**
+       * <code>TRACE_LOAD_STATUS_UNKNOWN = 0;</code>
+       */
+      public static final int TRACE_LOAD_STATUS_UNKNOWN_VALUE = 0;
+      /**
+       * <code>TRACE_LOAD_STATUS_SUCCESS = 1;</code>
+       */
+      public static final int TRACE_LOAD_STATUS_SUCCESS_VALUE = 1;
+      /**
+       * <code>TRACE_LOAD_STATUS_TIMEOUT = 2;</code>
+       */
+      public static final int TRACE_LOAD_STATUS_TIMEOUT_VALUE = 2;
+      /**
+       * <code>TRACE_LOAD_STATUS_IO_ERROR = 3;</code>
+       */
+      public static final int TRACE_LOAD_STATUS_IO_ERROR_VALUE = 3;
+      /**
+       * <code>TRACE_LOAD_STATUS_SERVER_UNAVAILABLE = 4;</code>
+       */
+      public static final int TRACE_LOAD_STATUS_SERVER_UNAVAILABLE_VALUE = 4;
+
+
+      public final int getNumber() {
+        return value;
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static TraceLoadStatus valueOf(int value) {
+        return forNumber(value);
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       */
+      public static TraceLoadStatus forNumber(int value) {
+        switch (value) {
+          case 0: return TRACE_LOAD_STATUS_UNKNOWN;
+          case 1: return TRACE_LOAD_STATUS_SUCCESS;
+          case 2: return TRACE_LOAD_STATUS_TIMEOUT;
+          case 3: return TRACE_LOAD_STATUS_IO_ERROR;
+          case 4: return TRACE_LOAD_STATUS_SERVER_UNAVAILABLE;
+          default: return null;
+        }
+      }
+
+      public static com.google.protobuf.Internal.EnumLiteMap<TraceLoadStatus>
+          internalGetValueMap() {
+        return internalValueMap;
+      }
+      private static final com.google.protobuf.Internal.EnumLiteMap<
+          TraceLoadStatus> internalValueMap =
+            new com.google.protobuf.Internal.EnumLiteMap<TraceLoadStatus>() {
+              public TraceLoadStatus findValueByNumber(int number) {
+                return TraceLoadStatus.forNumber(number);
+              }
+            };
+
+      public final com.google.protobuf.Descriptors.EnumValueDescriptor
+          getValueDescriptor() {
+        return getDescriptor().getValues().get(ordinal());
+      }
+      public final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptorForType() {
+        return getDescriptor();
+      }
+      public static final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptor() {
+        return com.google.wireless.android.sdk.stats.SherlockEvent.PerfettoTraceLoadedMetadata.getDescriptor().getEnumTypes().get(0);
+      }
+
+      private static final TraceLoadStatus[] VALUES = values();
+
+      public static TraceLoadStatus valueOf(
+          com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+        if (desc.getType() != getDescriptor()) {
+          throw new java.lang.IllegalArgumentException(
+            "EnumValueDescriptor is not for this type.");
+        }
+        return VALUES[desc.getIndex()];
+      }
+
+      private final int value;
+
+      private TraceLoadStatus(int value) {
+        this.value = value;
+      }
+
+      // @@protoc_insertion_point(enum_scope:android_studio.SherlockEvent.PerfettoTraceLoadedMetadata.TraceLoadStatus)
+    }
+
+    private int bitField0_;
+    public static final int TRACE_LOAD_STATUS_FIELD_NUMBER = 1;
+    private int traceLoadStatus_ = 0;
+    /**
+     * <pre>
+     * The final status of the trace loading operation.
+     * </pre>
+     *
+     * <code>optional .android_studio.SherlockEvent.PerfettoTraceLoadedMetadata.TraceLoadStatus trace_load_status = 1;</code>
+     * @return Whether the traceLoadStatus field is set.
+     */
+    @java.lang.Override public boolean hasTraceLoadStatus() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <pre>
+     * The final status of the trace loading operation.
+     * </pre>
+     *
+     * <code>optional .android_studio.SherlockEvent.PerfettoTraceLoadedMetadata.TraceLoadStatus trace_load_status = 1;</code>
+     * @return The traceLoadStatus.
+     */
+    @java.lang.Override public com.google.wireless.android.sdk.stats.SherlockEvent.PerfettoTraceLoadedMetadata.TraceLoadStatus getTraceLoadStatus() {
+      com.google.wireless.android.sdk.stats.SherlockEvent.PerfettoTraceLoadedMetadata.TraceLoadStatus result = com.google.wireless.android.sdk.stats.SherlockEvent.PerfettoTraceLoadedMetadata.TraceLoadStatus.forNumber(traceLoadStatus_);
+      return result == null ? com.google.wireless.android.sdk.stats.SherlockEvent.PerfettoTraceLoadedMetadata.TraceLoadStatus.TRACE_LOAD_STATUS_UNKNOWN : result;
+    }
+
+    public static final int RPC_CLIENT_INIT_DURATION_MS_FIELD_NUMBER = 2;
+    private long rpcClientInitDurationMs_ = 0L;
+    /**
+     * <pre>
+     * Time taken to start the trace processor process and establish the RPC
+     * connection.
+     * </pre>
+     *
+     * <code>optional int64 rpc_client_init_duration_ms = 2;</code>
+     * @return Whether the rpcClientInitDurationMs field is set.
+     */
+    @java.lang.Override
+    public boolean hasRpcClientInitDurationMs() {
+      return ((bitField0_ & 0x00000002) != 0);
+    }
+    /**
+     * <pre>
+     * Time taken to start the trace processor process and establish the RPC
+     * connection.
+     * </pre>
+     *
+     * <code>optional int64 rpc_client_init_duration_ms = 2;</code>
+     * @return The rpcClientInitDurationMs.
+     */
+    @java.lang.Override
+    public long getRpcClientInitDurationMs() {
+      return rpcClientInitDurationMs_;
+    }
+
+    public static final int CAPTURE_PARSING_DURATION_MS_FIELD_NUMBER = 3;
+    private long captureParsingDurationMs_ = 0L;
+    /**
+     * <pre>
+     * Time taken by the trace processor to parse the trace file.
+     * </pre>
+     *
+     * <code>optional int64 capture_parsing_duration_ms = 3;</code>
+     * @return Whether the captureParsingDurationMs field is set.
+     */
+    @java.lang.Override
+    public boolean hasCaptureParsingDurationMs() {
+      return ((bitField0_ & 0x00000004) != 0);
+    }
+    /**
+     * <pre>
+     * Time taken by the trace processor to parse the trace file.
+     * </pre>
+     *
+     * <code>optional int64 capture_parsing_duration_ms = 3;</code>
+     * @return The captureParsingDurationMs.
+     */
+    @java.lang.Override
+    public long getCaptureParsingDurationMs() {
+      return captureParsingDurationMs_;
+    }
+
+    public static final int OVERVIEW_DATA_LOADING_DURATION_MS_FIELD_NUMBER = 4;
+    private long overviewDataLoadingDurationMs_ = 0L;
+    /**
+     * <pre>
+     * Time taken to query the trace processor and populate the model with
+     * summary data (e.g., threads, processes, counters).
+     * </pre>
+     *
+     * <code>optional int64 overview_data_loading_duration_ms = 4;</code>
+     * @return Whether the overviewDataLoadingDurationMs field is set.
+     */
+    @java.lang.Override
+    public boolean hasOverviewDataLoadingDurationMs() {
+      return ((bitField0_ & 0x00000008) != 0);
+    }
+    /**
+     * <pre>
+     * Time taken to query the trace processor and populate the model with
+     * summary data (e.g., threads, processes, counters).
+     * </pre>
+     *
+     * <code>optional int64 overview_data_loading_duration_ms = 4;</code>
+     * @return The overviewDataLoadingDurationMs.
+     */
+    @java.lang.Override
+    public long getOverviewDataLoadingDurationMs() {
+      return overviewDataLoadingDurationMs_;
+    }
+
+    public static final int TRACE_DURATION_NS_FIELD_NUMBER = 5;
+    private long traceDurationNs_ = 0L;
+    /**
+     * <pre>
+     * Duration of the trace in nanoseconds.
+     * </pre>
+     *
+     * <code>optional int64 trace_duration_ns = 5;</code>
+     * @return Whether the traceDurationNs field is set.
+     */
+    @java.lang.Override
+    public boolean hasTraceDurationNs() {
+      return ((bitField0_ & 0x00000010) != 0);
+    }
+    /**
+     * <pre>
+     * Duration of the trace in nanoseconds.
+     * </pre>
+     *
+     * <code>optional int64 trace_duration_ns = 5;</code>
+     * @return The traceDurationNs.
+     */
+    @java.lang.Override
+    public long getTraceDurationNs() {
+      return traceDurationNs_;
+    }
+
+    public static final int CALCULATED_VIEW_DURATION_NS_FIELD_NUMBER = 6;
+    private long calculatedViewDurationNs_ = 0L;
+    /**
+     * <pre>
+     * Duration of the initial calculated visible time range in nanoseconds.
+     * </pre>
+     *
+     * <code>optional int64 calculated_view_duration_ns = 6;</code>
+     * @return Whether the calculatedViewDurationNs field is set.
+     */
+    @java.lang.Override
+    public boolean hasCalculatedViewDurationNs() {
+      return ((bitField0_ & 0x00000020) != 0);
+    }
+    /**
+     * <pre>
+     * Duration of the initial calculated visible time range in nanoseconds.
+     * </pre>
+     *
+     * <code>optional int64 calculated_view_duration_ns = 6;</code>
+     * @return The calculatedViewDurationNs.
+     */
+    @java.lang.Override
+    public long getCalculatedViewDurationNs() {
+      return calculatedViewDurationNs_;
+    }
+
+    public static final int TRACE_FILE_SIZE_BYTES_FIELD_NUMBER = 7;
+    private long traceFileSizeBytes_ = 0L;
+    /**
+     * <pre>
+     * Size of the trace file in bytes.
+     * </pre>
+     *
+     * <code>optional int64 trace_file_size_bytes = 7;</code>
+     * @return Whether the traceFileSizeBytes field is set.
+     */
+    @java.lang.Override
+    public boolean hasTraceFileSizeBytes() {
+      return ((bitField0_ & 0x00000040) != 0);
+    }
+    /**
+     * <pre>
+     * Size of the trace file in bytes.
+     * </pre>
+     *
+     * <code>optional int64 trace_file_size_bytes = 7;</code>
+     * @return The traceFileSizeBytes.
+     */
+    @java.lang.Override
+    public long getTraceFileSizeBytes() {
+      return traceFileSizeBytes_;
+    }
+
+    public static final int TRACE_THREADS_COUNT_FIELD_NUMBER = 8;
+    private int traceThreadsCount_ = 0;
+    /**
+     * <pre>
+     * Number of threads in the trace.
+     * </pre>
+     *
+     * <code>optional int32 trace_threads_count = 8;</code>
+     * @return Whether the traceThreadsCount field is set.
+     */
+    @java.lang.Override
+    public boolean hasTraceThreadsCount() {
+      return ((bitField0_ & 0x00000080) != 0);
+    }
+    /**
+     * <pre>
+     * Number of threads in the trace.
+     * </pre>
+     *
+     * <code>optional int32 trace_threads_count = 8;</code>
+     * @return The traceThreadsCount.
+     */
+    @java.lang.Override
+    public int getTraceThreadsCount() {
+      return traceThreadsCount_;
+    }
+
+    public static final int TRACE_PROCESSES_COUNT_FIELD_NUMBER = 9;
+    private int traceProcessesCount_ = 0;
+    /**
+     * <pre>
+     * Number of processes in the trace.
+     * </pre>
+     *
+     * <code>optional int32 trace_processes_count = 9;</code>
+     * @return Whether the traceProcessesCount field is set.
+     */
+    @java.lang.Override
+    public boolean hasTraceProcessesCount() {
+      return ((bitField0_ & 0x00000100) != 0);
+    }
+    /**
+     * <pre>
+     * Number of processes in the trace.
+     * </pre>
+     *
+     * <code>optional int32 trace_processes_count = 9;</code>
+     * @return The traceProcessesCount.
+     */
+    @java.lang.Override
+    public int getTraceProcessesCount() {
+      return traceProcessesCount_;
+    }
+
+    public static final int TRACE_COUNTERS_COUNT_FIELD_NUMBER = 10;
+    private int traceCountersCount_ = 0;
+    /**
+     * <pre>
+     * Number of counters in the trace.
+     * </pre>
+     *
+     * <code>optional int32 trace_counters_count = 10;</code>
+     * @return Whether the traceCountersCount field is set.
+     */
+    @java.lang.Override
+    public boolean hasTraceCountersCount() {
+      return ((bitField0_ & 0x00000200) != 0);
+    }
+    /**
+     * <pre>
+     * Number of counters in the trace.
+     * </pre>
+     *
+     * <code>optional int32 trace_counters_count = 10;</code>
+     * @return The traceCountersCount.
+     */
+    @java.lang.Override
+    public int getTraceCountersCount() {
+      return traceCountersCount_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (((bitField0_ & 0x00000001) != 0)) {
+        output.writeEnum(1, traceLoadStatus_);
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        output.writeInt64(2, rpcClientInitDurationMs_);
+      }
+      if (((bitField0_ & 0x00000004) != 0)) {
+        output.writeInt64(3, captureParsingDurationMs_);
+      }
+      if (((bitField0_ & 0x00000008) != 0)) {
+        output.writeInt64(4, overviewDataLoadingDurationMs_);
+      }
+      if (((bitField0_ & 0x00000010) != 0)) {
+        output.writeInt64(5, traceDurationNs_);
+      }
+      if (((bitField0_ & 0x00000020) != 0)) {
+        output.writeInt64(6, calculatedViewDurationNs_);
+      }
+      if (((bitField0_ & 0x00000040) != 0)) {
+        output.writeInt64(7, traceFileSizeBytes_);
+      }
+      if (((bitField0_ & 0x00000080) != 0)) {
+        output.writeInt32(8, traceThreadsCount_);
+      }
+      if (((bitField0_ & 0x00000100) != 0)) {
+        output.writeInt32(9, traceProcessesCount_);
+      }
+      if (((bitField0_ & 0x00000200) != 0)) {
+        output.writeInt32(10, traceCountersCount_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(1, traceLoadStatus_);
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(2, rpcClientInitDurationMs_);
+      }
+      if (((bitField0_ & 0x00000004) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(3, captureParsingDurationMs_);
+      }
+      if (((bitField0_ & 0x00000008) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(4, overviewDataLoadingDurationMs_);
+      }
+      if (((bitField0_ & 0x00000010) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(5, traceDurationNs_);
+      }
+      if (((bitField0_ & 0x00000020) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(6, calculatedViewDurationNs_);
+      }
+      if (((bitField0_ & 0x00000040) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(7, traceFileSizeBytes_);
+      }
+      if (((bitField0_ & 0x00000080) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(8, traceThreadsCount_);
+      }
+      if (((bitField0_ & 0x00000100) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(9, traceProcessesCount_);
+      }
+      if (((bitField0_ & 0x00000200) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(10, traceCountersCount_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.google.wireless.android.sdk.stats.SherlockEvent.PerfettoTraceLoadedMetadata)) {
+        return super.equals(obj);
+      }
+      com.google.wireless.android.sdk.stats.SherlockEvent.PerfettoTraceLoadedMetadata other = (com.google.wireless.android.sdk.stats.SherlockEvent.PerfettoTraceLoadedMetadata) obj;
+
+      if (hasTraceLoadStatus() != other.hasTraceLoadStatus()) return false;
+      if (hasTraceLoadStatus()) {
+        if (traceLoadStatus_ != other.traceLoadStatus_) return false;
+      }
+      if (hasRpcClientInitDurationMs() != other.hasRpcClientInitDurationMs()) return false;
+      if (hasRpcClientInitDurationMs()) {
+        if (getRpcClientInitDurationMs()
+            != other.getRpcClientInitDurationMs()) return false;
+      }
+      if (hasCaptureParsingDurationMs() != other.hasCaptureParsingDurationMs()) return false;
+      if (hasCaptureParsingDurationMs()) {
+        if (getCaptureParsingDurationMs()
+            != other.getCaptureParsingDurationMs()) return false;
+      }
+      if (hasOverviewDataLoadingDurationMs() != other.hasOverviewDataLoadingDurationMs()) return false;
+      if (hasOverviewDataLoadingDurationMs()) {
+        if (getOverviewDataLoadingDurationMs()
+            != other.getOverviewDataLoadingDurationMs()) return false;
+      }
+      if (hasTraceDurationNs() != other.hasTraceDurationNs()) return false;
+      if (hasTraceDurationNs()) {
+        if (getTraceDurationNs()
+            != other.getTraceDurationNs()) return false;
+      }
+      if (hasCalculatedViewDurationNs() != other.hasCalculatedViewDurationNs()) return false;
+      if (hasCalculatedViewDurationNs()) {
+        if (getCalculatedViewDurationNs()
+            != other.getCalculatedViewDurationNs()) return false;
+      }
+      if (hasTraceFileSizeBytes() != other.hasTraceFileSizeBytes()) return false;
+      if (hasTraceFileSizeBytes()) {
+        if (getTraceFileSizeBytes()
+            != other.getTraceFileSizeBytes()) return false;
+      }
+      if (hasTraceThreadsCount() != other.hasTraceThreadsCount()) return false;
+      if (hasTraceThreadsCount()) {
+        if (getTraceThreadsCount()
+            != other.getTraceThreadsCount()) return false;
+      }
+      if (hasTraceProcessesCount() != other.hasTraceProcessesCount()) return false;
+      if (hasTraceProcessesCount()) {
+        if (getTraceProcessesCount()
+            != other.getTraceProcessesCount()) return false;
+      }
+      if (hasTraceCountersCount() != other.hasTraceCountersCount()) return false;
+      if (hasTraceCountersCount()) {
+        if (getTraceCountersCount()
+            != other.getTraceCountersCount()) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasTraceLoadStatus()) {
+        hash = (37 * hash) + TRACE_LOAD_STATUS_FIELD_NUMBER;
+        hash = (53 * hash) + traceLoadStatus_;
+      }
+      if (hasRpcClientInitDurationMs()) {
+        hash = (37 * hash) + RPC_CLIENT_INIT_DURATION_MS_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            getRpcClientInitDurationMs());
+      }
+      if (hasCaptureParsingDurationMs()) {
+        hash = (37 * hash) + CAPTURE_PARSING_DURATION_MS_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            getCaptureParsingDurationMs());
+      }
+      if (hasOverviewDataLoadingDurationMs()) {
+        hash = (37 * hash) + OVERVIEW_DATA_LOADING_DURATION_MS_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            getOverviewDataLoadingDurationMs());
+      }
+      if (hasTraceDurationNs()) {
+        hash = (37 * hash) + TRACE_DURATION_NS_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            getTraceDurationNs());
+      }
+      if (hasCalculatedViewDurationNs()) {
+        hash = (37 * hash) + CALCULATED_VIEW_DURATION_NS_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            getCalculatedViewDurationNs());
+      }
+      if (hasTraceFileSizeBytes()) {
+        hash = (37 * hash) + TRACE_FILE_SIZE_BYTES_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            getTraceFileSizeBytes());
+      }
+      if (hasTraceThreadsCount()) {
+        hash = (37 * hash) + TRACE_THREADS_COUNT_FIELD_NUMBER;
+        hash = (53 * hash) + getTraceThreadsCount();
+      }
+      if (hasTraceProcessesCount()) {
+        hash = (37 * hash) + TRACE_PROCESSES_COUNT_FIELD_NUMBER;
+        hash = (53 * hash) + getTraceProcessesCount();
+      }
+      if (hasTraceCountersCount()) {
+        hash = (37 * hash) + TRACE_COUNTERS_COUNT_FIELD_NUMBER;
+        hash = (53 * hash) + getTraceCountersCount();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.google.wireless.android.sdk.stats.SherlockEvent.PerfettoTraceLoadedMetadata parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.google.wireless.android.sdk.stats.SherlockEvent.PerfettoTraceLoadedMetadata parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.google.wireless.android.sdk.stats.SherlockEvent.PerfettoTraceLoadedMetadata parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.google.wireless.android.sdk.stats.SherlockEvent.PerfettoTraceLoadedMetadata parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.google.wireless.android.sdk.stats.SherlockEvent.PerfettoTraceLoadedMetadata parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.google.wireless.android.sdk.stats.SherlockEvent.PerfettoTraceLoadedMetadata parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.google.wireless.android.sdk.stats.SherlockEvent.PerfettoTraceLoadedMetadata parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.google.wireless.android.sdk.stats.SherlockEvent.PerfettoTraceLoadedMetadata parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.google.wireless.android.sdk.stats.SherlockEvent.PerfettoTraceLoadedMetadata parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.google.wireless.android.sdk.stats.SherlockEvent.PerfettoTraceLoadedMetadata parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.google.wireless.android.sdk.stats.SherlockEvent.PerfettoTraceLoadedMetadata parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.google.wireless.android.sdk.stats.SherlockEvent.PerfettoTraceLoadedMetadata parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.google.wireless.android.sdk.stats.SherlockEvent.PerfettoTraceLoadedMetadata prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Metadata for the |PERFETTO_TRACE_LOADED| event.
+     * </pre>
+     *
+     * Protobuf type {@code android_studio.SherlockEvent.PerfettoTraceLoadedMetadata}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:android_studio.SherlockEvent.PerfettoTraceLoadedMetadata)
+        com.google.wireless.android.sdk.stats.SherlockEvent.PerfettoTraceLoadedMetadataOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_SherlockEvent_PerfettoTraceLoadedMetadata_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_SherlockEvent_PerfettoTraceLoadedMetadata_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.google.wireless.android.sdk.stats.SherlockEvent.PerfettoTraceLoadedMetadata.class, com.google.wireless.android.sdk.stats.SherlockEvent.PerfettoTraceLoadedMetadata.Builder.class);
+      }
+
+      // Construct using com.google.wireless.android.sdk.stats.SherlockEvent.PerfettoTraceLoadedMetadata.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        traceLoadStatus_ = 0;
+        rpcClientInitDurationMs_ = 0L;
+        captureParsingDurationMs_ = 0L;
+        overviewDataLoadingDurationMs_ = 0L;
+        traceDurationNs_ = 0L;
+        calculatedViewDurationNs_ = 0L;
+        traceFileSizeBytes_ = 0L;
+        traceThreadsCount_ = 0;
+        traceProcessesCount_ = 0;
+        traceCountersCount_ = 0;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_SherlockEvent_PerfettoTraceLoadedMetadata_descriptor;
+      }
+
+      @java.lang.Override
+      public com.google.wireless.android.sdk.stats.SherlockEvent.PerfettoTraceLoadedMetadata getDefaultInstanceForType() {
+        return com.google.wireless.android.sdk.stats.SherlockEvent.PerfettoTraceLoadedMetadata.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.google.wireless.android.sdk.stats.SherlockEvent.PerfettoTraceLoadedMetadata build() {
+        com.google.wireless.android.sdk.stats.SherlockEvent.PerfettoTraceLoadedMetadata result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.google.wireless.android.sdk.stats.SherlockEvent.PerfettoTraceLoadedMetadata buildPartial() {
+        com.google.wireless.android.sdk.stats.SherlockEvent.PerfettoTraceLoadedMetadata result = new com.google.wireless.android.sdk.stats.SherlockEvent.PerfettoTraceLoadedMetadata(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.google.wireless.android.sdk.stats.SherlockEvent.PerfettoTraceLoadedMetadata result) {
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.traceLoadStatus_ = traceLoadStatus_;
+          to_bitField0_ |= 0x00000001;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.rpcClientInitDurationMs_ = rpcClientInitDurationMs_;
+          to_bitField0_ |= 0x00000002;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.captureParsingDurationMs_ = captureParsingDurationMs_;
+          to_bitField0_ |= 0x00000004;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.overviewDataLoadingDurationMs_ = overviewDataLoadingDurationMs_;
+          to_bitField0_ |= 0x00000008;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.traceDurationNs_ = traceDurationNs_;
+          to_bitField0_ |= 0x00000010;
+        }
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          result.calculatedViewDurationNs_ = calculatedViewDurationNs_;
+          to_bitField0_ |= 0x00000020;
+        }
+        if (((from_bitField0_ & 0x00000040) != 0)) {
+          result.traceFileSizeBytes_ = traceFileSizeBytes_;
+          to_bitField0_ |= 0x00000040;
+        }
+        if (((from_bitField0_ & 0x00000080) != 0)) {
+          result.traceThreadsCount_ = traceThreadsCount_;
+          to_bitField0_ |= 0x00000080;
+        }
+        if (((from_bitField0_ & 0x00000100) != 0)) {
+          result.traceProcessesCount_ = traceProcessesCount_;
+          to_bitField0_ |= 0x00000100;
+        }
+        if (((from_bitField0_ & 0x00000200) != 0)) {
+          result.traceCountersCount_ = traceCountersCount_;
+          to_bitField0_ |= 0x00000200;
+        }
+        result.bitField0_ |= to_bitField0_;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.google.wireless.android.sdk.stats.SherlockEvent.PerfettoTraceLoadedMetadata) {
+          return mergeFrom((com.google.wireless.android.sdk.stats.SherlockEvent.PerfettoTraceLoadedMetadata)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.google.wireless.android.sdk.stats.SherlockEvent.PerfettoTraceLoadedMetadata other) {
+        if (other == com.google.wireless.android.sdk.stats.SherlockEvent.PerfettoTraceLoadedMetadata.getDefaultInstance()) return this;
+        if (other.hasTraceLoadStatus()) {
+          setTraceLoadStatus(other.getTraceLoadStatus());
+        }
+        if (other.hasRpcClientInitDurationMs()) {
+          setRpcClientInitDurationMs(other.getRpcClientInitDurationMs());
+        }
+        if (other.hasCaptureParsingDurationMs()) {
+          setCaptureParsingDurationMs(other.getCaptureParsingDurationMs());
+        }
+        if (other.hasOverviewDataLoadingDurationMs()) {
+          setOverviewDataLoadingDurationMs(other.getOverviewDataLoadingDurationMs());
+        }
+        if (other.hasTraceDurationNs()) {
+          setTraceDurationNs(other.getTraceDurationNs());
+        }
+        if (other.hasCalculatedViewDurationNs()) {
+          setCalculatedViewDurationNs(other.getCalculatedViewDurationNs());
+        }
+        if (other.hasTraceFileSizeBytes()) {
+          setTraceFileSizeBytes(other.getTraceFileSizeBytes());
+        }
+        if (other.hasTraceThreadsCount()) {
+          setTraceThreadsCount(other.getTraceThreadsCount());
+        }
+        if (other.hasTraceProcessesCount()) {
+          setTraceProcessesCount(other.getTraceProcessesCount());
+        }
+        if (other.hasTraceCountersCount()) {
+          setTraceCountersCount(other.getTraceCountersCount());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                int tmpRaw = input.readEnum();
+                com.google.wireless.android.sdk.stats.SherlockEvent.PerfettoTraceLoadedMetadata.TraceLoadStatus tmpValue =
+                    com.google.wireless.android.sdk.stats.SherlockEvent.PerfettoTraceLoadedMetadata.TraceLoadStatus.forNumber(tmpRaw);
+                if (tmpValue == null) {
+                  mergeUnknownVarintField(1, tmpRaw);
+                } else {
+                  traceLoadStatus_ = tmpRaw;
+                  bitField0_ |= 0x00000001;
+                }
+                break;
+              } // case 8
+              case 16: {
+                rpcClientInitDurationMs_ = input.readInt64();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 16
+              case 24: {
+                captureParsingDurationMs_ = input.readInt64();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 24
+              case 32: {
+                overviewDataLoadingDurationMs_ = input.readInt64();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 32
+              case 40: {
+                traceDurationNs_ = input.readInt64();
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 40
+              case 48: {
+                calculatedViewDurationNs_ = input.readInt64();
+                bitField0_ |= 0x00000020;
+                break;
+              } // case 48
+              case 56: {
+                traceFileSizeBytes_ = input.readInt64();
+                bitField0_ |= 0x00000040;
+                break;
+              } // case 56
+              case 64: {
+                traceThreadsCount_ = input.readInt32();
+                bitField0_ |= 0x00000080;
+                break;
+              } // case 64
+              case 72: {
+                traceProcessesCount_ = input.readInt32();
+                bitField0_ |= 0x00000100;
+                break;
+              } // case 72
+              case 80: {
+                traceCountersCount_ = input.readInt32();
+                bitField0_ |= 0x00000200;
+                break;
+              } // case 80
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private int traceLoadStatus_ = 0;
+      /**
+       * <pre>
+       * The final status of the trace loading operation.
+       * </pre>
+       *
+       * <code>optional .android_studio.SherlockEvent.PerfettoTraceLoadedMetadata.TraceLoadStatus trace_load_status = 1;</code>
+       * @return Whether the traceLoadStatus field is set.
+       */
+      @java.lang.Override public boolean hasTraceLoadStatus() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <pre>
+       * The final status of the trace loading operation.
+       * </pre>
+       *
+       * <code>optional .android_studio.SherlockEvent.PerfettoTraceLoadedMetadata.TraceLoadStatus trace_load_status = 1;</code>
+       * @return The traceLoadStatus.
+       */
+      @java.lang.Override
+      public com.google.wireless.android.sdk.stats.SherlockEvent.PerfettoTraceLoadedMetadata.TraceLoadStatus getTraceLoadStatus() {
+        com.google.wireless.android.sdk.stats.SherlockEvent.PerfettoTraceLoadedMetadata.TraceLoadStatus result = com.google.wireless.android.sdk.stats.SherlockEvent.PerfettoTraceLoadedMetadata.TraceLoadStatus.forNumber(traceLoadStatus_);
+        return result == null ? com.google.wireless.android.sdk.stats.SherlockEvent.PerfettoTraceLoadedMetadata.TraceLoadStatus.TRACE_LOAD_STATUS_UNKNOWN : result;
+      }
+      /**
+       * <pre>
+       * The final status of the trace loading operation.
+       * </pre>
+       *
+       * <code>optional .android_studio.SherlockEvent.PerfettoTraceLoadedMetadata.TraceLoadStatus trace_load_status = 1;</code>
+       * @param value The traceLoadStatus to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTraceLoadStatus(com.google.wireless.android.sdk.stats.SherlockEvent.PerfettoTraceLoadedMetadata.TraceLoadStatus value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x00000001;
+        traceLoadStatus_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The final status of the trace loading operation.
+       * </pre>
+       *
+       * <code>optional .android_studio.SherlockEvent.PerfettoTraceLoadedMetadata.TraceLoadStatus trace_load_status = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTraceLoadStatus() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        traceLoadStatus_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private long rpcClientInitDurationMs_ ;
+      /**
+       * <pre>
+       * Time taken to start the trace processor process and establish the RPC
+       * connection.
+       * </pre>
+       *
+       * <code>optional int64 rpc_client_init_duration_ms = 2;</code>
+       * @return Whether the rpcClientInitDurationMs field is set.
+       */
+      @java.lang.Override
+      public boolean hasRpcClientInitDurationMs() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <pre>
+       * Time taken to start the trace processor process and establish the RPC
+       * connection.
+       * </pre>
+       *
+       * <code>optional int64 rpc_client_init_duration_ms = 2;</code>
+       * @return The rpcClientInitDurationMs.
+       */
+      @java.lang.Override
+      public long getRpcClientInitDurationMs() {
+        return rpcClientInitDurationMs_;
+      }
+      /**
+       * <pre>
+       * Time taken to start the trace processor process and establish the RPC
+       * connection.
+       * </pre>
+       *
+       * <code>optional int64 rpc_client_init_duration_ms = 2;</code>
+       * @param value The rpcClientInitDurationMs to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRpcClientInitDurationMs(long value) {
+
+        rpcClientInitDurationMs_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Time taken to start the trace processor process and establish the RPC
+       * connection.
+       * </pre>
+       *
+       * <code>optional int64 rpc_client_init_duration_ms = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRpcClientInitDurationMs() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        rpcClientInitDurationMs_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long captureParsingDurationMs_ ;
+      /**
+       * <pre>
+       * Time taken by the trace processor to parse the trace file.
+       * </pre>
+       *
+       * <code>optional int64 capture_parsing_duration_ms = 3;</code>
+       * @return Whether the captureParsingDurationMs field is set.
+       */
+      @java.lang.Override
+      public boolean hasCaptureParsingDurationMs() {
+        return ((bitField0_ & 0x00000004) != 0);
+      }
+      /**
+       * <pre>
+       * Time taken by the trace processor to parse the trace file.
+       * </pre>
+       *
+       * <code>optional int64 capture_parsing_duration_ms = 3;</code>
+       * @return The captureParsingDurationMs.
+       */
+      @java.lang.Override
+      public long getCaptureParsingDurationMs() {
+        return captureParsingDurationMs_;
+      }
+      /**
+       * <pre>
+       * Time taken by the trace processor to parse the trace file.
+       * </pre>
+       *
+       * <code>optional int64 capture_parsing_duration_ms = 3;</code>
+       * @param value The captureParsingDurationMs to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCaptureParsingDurationMs(long value) {
+
+        captureParsingDurationMs_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Time taken by the trace processor to parse the trace file.
+       * </pre>
+       *
+       * <code>optional int64 capture_parsing_duration_ms = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCaptureParsingDurationMs() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        captureParsingDurationMs_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long overviewDataLoadingDurationMs_ ;
+      /**
+       * <pre>
+       * Time taken to query the trace processor and populate the model with
+       * summary data (e.g., threads, processes, counters).
+       * </pre>
+       *
+       * <code>optional int64 overview_data_loading_duration_ms = 4;</code>
+       * @return Whether the overviewDataLoadingDurationMs field is set.
+       */
+      @java.lang.Override
+      public boolean hasOverviewDataLoadingDurationMs() {
+        return ((bitField0_ & 0x00000008) != 0);
+      }
+      /**
+       * <pre>
+       * Time taken to query the trace processor and populate the model with
+       * summary data (e.g., threads, processes, counters).
+       * </pre>
+       *
+       * <code>optional int64 overview_data_loading_duration_ms = 4;</code>
+       * @return The overviewDataLoadingDurationMs.
+       */
+      @java.lang.Override
+      public long getOverviewDataLoadingDurationMs() {
+        return overviewDataLoadingDurationMs_;
+      }
+      /**
+       * <pre>
+       * Time taken to query the trace processor and populate the model with
+       * summary data (e.g., threads, processes, counters).
+       * </pre>
+       *
+       * <code>optional int64 overview_data_loading_duration_ms = 4;</code>
+       * @param value The overviewDataLoadingDurationMs to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOverviewDataLoadingDurationMs(long value) {
+
+        overviewDataLoadingDurationMs_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Time taken to query the trace processor and populate the model with
+       * summary data (e.g., threads, processes, counters).
+       * </pre>
+       *
+       * <code>optional int64 overview_data_loading_duration_ms = 4;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearOverviewDataLoadingDurationMs() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        overviewDataLoadingDurationMs_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long traceDurationNs_ ;
+      /**
+       * <pre>
+       * Duration of the trace in nanoseconds.
+       * </pre>
+       *
+       * <code>optional int64 trace_duration_ns = 5;</code>
+       * @return Whether the traceDurationNs field is set.
+       */
+      @java.lang.Override
+      public boolean hasTraceDurationNs() {
+        return ((bitField0_ & 0x00000010) != 0);
+      }
+      /**
+       * <pre>
+       * Duration of the trace in nanoseconds.
+       * </pre>
+       *
+       * <code>optional int64 trace_duration_ns = 5;</code>
+       * @return The traceDurationNs.
+       */
+      @java.lang.Override
+      public long getTraceDurationNs() {
+        return traceDurationNs_;
+      }
+      /**
+       * <pre>
+       * Duration of the trace in nanoseconds.
+       * </pre>
+       *
+       * <code>optional int64 trace_duration_ns = 5;</code>
+       * @param value The traceDurationNs to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTraceDurationNs(long value) {
+
+        traceDurationNs_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Duration of the trace in nanoseconds.
+       * </pre>
+       *
+       * <code>optional int64 trace_duration_ns = 5;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTraceDurationNs() {
+        bitField0_ = (bitField0_ & ~0x00000010);
+        traceDurationNs_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long calculatedViewDurationNs_ ;
+      /**
+       * <pre>
+       * Duration of the initial calculated visible time range in nanoseconds.
+       * </pre>
+       *
+       * <code>optional int64 calculated_view_duration_ns = 6;</code>
+       * @return Whether the calculatedViewDurationNs field is set.
+       */
+      @java.lang.Override
+      public boolean hasCalculatedViewDurationNs() {
+        return ((bitField0_ & 0x00000020) != 0);
+      }
+      /**
+       * <pre>
+       * Duration of the initial calculated visible time range in nanoseconds.
+       * </pre>
+       *
+       * <code>optional int64 calculated_view_duration_ns = 6;</code>
+       * @return The calculatedViewDurationNs.
+       */
+      @java.lang.Override
+      public long getCalculatedViewDurationNs() {
+        return calculatedViewDurationNs_;
+      }
+      /**
+       * <pre>
+       * Duration of the initial calculated visible time range in nanoseconds.
+       * </pre>
+       *
+       * <code>optional int64 calculated_view_duration_ns = 6;</code>
+       * @param value The calculatedViewDurationNs to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCalculatedViewDurationNs(long value) {
+
+        calculatedViewDurationNs_ = value;
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Duration of the initial calculated visible time range in nanoseconds.
+       * </pre>
+       *
+       * <code>optional int64 calculated_view_duration_ns = 6;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCalculatedViewDurationNs() {
+        bitField0_ = (bitField0_ & ~0x00000020);
+        calculatedViewDurationNs_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long traceFileSizeBytes_ ;
+      /**
+       * <pre>
+       * Size of the trace file in bytes.
+       * </pre>
+       *
+       * <code>optional int64 trace_file_size_bytes = 7;</code>
+       * @return Whether the traceFileSizeBytes field is set.
+       */
+      @java.lang.Override
+      public boolean hasTraceFileSizeBytes() {
+        return ((bitField0_ & 0x00000040) != 0);
+      }
+      /**
+       * <pre>
+       * Size of the trace file in bytes.
+       * </pre>
+       *
+       * <code>optional int64 trace_file_size_bytes = 7;</code>
+       * @return The traceFileSizeBytes.
+       */
+      @java.lang.Override
+      public long getTraceFileSizeBytes() {
+        return traceFileSizeBytes_;
+      }
+      /**
+       * <pre>
+       * Size of the trace file in bytes.
+       * </pre>
+       *
+       * <code>optional int64 trace_file_size_bytes = 7;</code>
+       * @param value The traceFileSizeBytes to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTraceFileSizeBytes(long value) {
+
+        traceFileSizeBytes_ = value;
+        bitField0_ |= 0x00000040;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Size of the trace file in bytes.
+       * </pre>
+       *
+       * <code>optional int64 trace_file_size_bytes = 7;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTraceFileSizeBytes() {
+        bitField0_ = (bitField0_ & ~0x00000040);
+        traceFileSizeBytes_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private int traceThreadsCount_ ;
+      /**
+       * <pre>
+       * Number of threads in the trace.
+       * </pre>
+       *
+       * <code>optional int32 trace_threads_count = 8;</code>
+       * @return Whether the traceThreadsCount field is set.
+       */
+      @java.lang.Override
+      public boolean hasTraceThreadsCount() {
+        return ((bitField0_ & 0x00000080) != 0);
+      }
+      /**
+       * <pre>
+       * Number of threads in the trace.
+       * </pre>
+       *
+       * <code>optional int32 trace_threads_count = 8;</code>
+       * @return The traceThreadsCount.
+       */
+      @java.lang.Override
+      public int getTraceThreadsCount() {
+        return traceThreadsCount_;
+      }
+      /**
+       * <pre>
+       * Number of threads in the trace.
+       * </pre>
+       *
+       * <code>optional int32 trace_threads_count = 8;</code>
+       * @param value The traceThreadsCount to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTraceThreadsCount(int value) {
+
+        traceThreadsCount_ = value;
+        bitField0_ |= 0x00000080;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Number of threads in the trace.
+       * </pre>
+       *
+       * <code>optional int32 trace_threads_count = 8;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTraceThreadsCount() {
+        bitField0_ = (bitField0_ & ~0x00000080);
+        traceThreadsCount_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int traceProcessesCount_ ;
+      /**
+       * <pre>
+       * Number of processes in the trace.
+       * </pre>
+       *
+       * <code>optional int32 trace_processes_count = 9;</code>
+       * @return Whether the traceProcessesCount field is set.
+       */
+      @java.lang.Override
+      public boolean hasTraceProcessesCount() {
+        return ((bitField0_ & 0x00000100) != 0);
+      }
+      /**
+       * <pre>
+       * Number of processes in the trace.
+       * </pre>
+       *
+       * <code>optional int32 trace_processes_count = 9;</code>
+       * @return The traceProcessesCount.
+       */
+      @java.lang.Override
+      public int getTraceProcessesCount() {
+        return traceProcessesCount_;
+      }
+      /**
+       * <pre>
+       * Number of processes in the trace.
+       * </pre>
+       *
+       * <code>optional int32 trace_processes_count = 9;</code>
+       * @param value The traceProcessesCount to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTraceProcessesCount(int value) {
+
+        traceProcessesCount_ = value;
+        bitField0_ |= 0x00000100;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Number of processes in the trace.
+       * </pre>
+       *
+       * <code>optional int32 trace_processes_count = 9;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTraceProcessesCount() {
+        bitField0_ = (bitField0_ & ~0x00000100);
+        traceProcessesCount_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int traceCountersCount_ ;
+      /**
+       * <pre>
+       * Number of counters in the trace.
+       * </pre>
+       *
+       * <code>optional int32 trace_counters_count = 10;</code>
+       * @return Whether the traceCountersCount field is set.
+       */
+      @java.lang.Override
+      public boolean hasTraceCountersCount() {
+        return ((bitField0_ & 0x00000200) != 0);
+      }
+      /**
+       * <pre>
+       * Number of counters in the trace.
+       * </pre>
+       *
+       * <code>optional int32 trace_counters_count = 10;</code>
+       * @return The traceCountersCount.
+       */
+      @java.lang.Override
+      public int getTraceCountersCount() {
+        return traceCountersCount_;
+      }
+      /**
+       * <pre>
+       * Number of counters in the trace.
+       * </pre>
+       *
+       * <code>optional int32 trace_counters_count = 10;</code>
+       * @param value The traceCountersCount to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTraceCountersCount(int value) {
+
+        traceCountersCount_ = value;
+        bitField0_ |= 0x00000200;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Number of counters in the trace.
+       * </pre>
+       *
+       * <code>optional int32 trace_counters_count = 10;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTraceCountersCount() {
+        bitField0_ = (bitField0_ & ~0x00000200);
+        traceCountersCount_ = 0;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:android_studio.SherlockEvent.PerfettoTraceLoadedMetadata)
+    }
+
+    // @@protoc_insertion_point(class_scope:android_studio.SherlockEvent.PerfettoTraceLoadedMetadata)
+    private static final com.google.wireless.android.sdk.stats.SherlockEvent.PerfettoTraceLoadedMetadata DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.google.wireless.android.sdk.stats.SherlockEvent.PerfettoTraceLoadedMetadata();
+    }
+
+    public static com.google.wireless.android.sdk.stats.SherlockEvent.PerfettoTraceLoadedMetadata getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<PerfettoTraceLoadedMetadata>
+        PARSER = new com.google.protobuf.AbstractParser<PerfettoTraceLoadedMetadata>() {
+      @java.lang.Override
+      public PerfettoTraceLoadedMetadata parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<PerfettoTraceLoadedMetadata> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<PerfettoTraceLoadedMetadata> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.wireless.android.sdk.stats.SherlockEvent.PerfettoTraceLoadedMetadata getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private int bitField0_;
   public static final int TYPE_FIELD_NUMBER = 1;
   private int type_ = 0;
@@ -11460,6 +13321,44 @@ private static final long serialVersionUID = 0L;
     return perfettoSqlQueryMetadata_ == null ? com.google.wireless.android.sdk.stats.SherlockEvent.PerfettoSqlQueryMetadata.getDefaultInstance() : perfettoSqlQueryMetadata_;
   }
 
+  public static final int PERFETTO_TRACE_LOADED_METADATA_FIELD_NUMBER = 7;
+  private com.google.wireless.android.sdk.stats.SherlockEvent.PerfettoTraceLoadedMetadata perfettoTraceLoadedMetadata_;
+  /**
+   * <pre>
+   * Set if |type| is |PERFETTO_TRACE_LOADED|
+   * </pre>
+   *
+   * <code>optional .android_studio.SherlockEvent.PerfettoTraceLoadedMetadata perfetto_trace_loaded_metadata = 7 [lazy = true];</code>
+   * @return Whether the perfettoTraceLoadedMetadata field is set.
+   */
+  @java.lang.Override
+  public boolean hasPerfettoTraceLoadedMetadata() {
+    return ((bitField0_ & 0x00000040) != 0);
+  }
+  /**
+   * <pre>
+   * Set if |type| is |PERFETTO_TRACE_LOADED|
+   * </pre>
+   *
+   * <code>optional .android_studio.SherlockEvent.PerfettoTraceLoadedMetadata perfetto_trace_loaded_metadata = 7 [lazy = true];</code>
+   * @return The perfettoTraceLoadedMetadata.
+   */
+  @java.lang.Override
+  public com.google.wireless.android.sdk.stats.SherlockEvent.PerfettoTraceLoadedMetadata getPerfettoTraceLoadedMetadata() {
+    return perfettoTraceLoadedMetadata_ == null ? com.google.wireless.android.sdk.stats.SherlockEvent.PerfettoTraceLoadedMetadata.getDefaultInstance() : perfettoTraceLoadedMetadata_;
+  }
+  /**
+   * <pre>
+   * Set if |type| is |PERFETTO_TRACE_LOADED|
+   * </pre>
+   *
+   * <code>optional .android_studio.SherlockEvent.PerfettoTraceLoadedMetadata perfetto_trace_loaded_metadata = 7 [lazy = true];</code>
+   */
+  @java.lang.Override
+  public com.google.wireless.android.sdk.stats.SherlockEvent.PerfettoTraceLoadedMetadataOrBuilder getPerfettoTraceLoadedMetadataOrBuilder() {
+    return perfettoTraceLoadedMetadata_ == null ? com.google.wireless.android.sdk.stats.SherlockEvent.PerfettoTraceLoadedMetadata.getDefaultInstance() : perfettoTraceLoadedMetadata_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -11491,6 +13390,9 @@ private static final long serialVersionUID = 0L;
     }
     if (((bitField0_ & 0x00000020) != 0)) {
       output.writeMessage(6, getPerfettoSqlQueryMetadata());
+    }
+    if (((bitField0_ & 0x00000040) != 0)) {
+      output.writeMessage(7, getPerfettoTraceLoadedMetadata());
     }
     getUnknownFields().writeTo(output);
   }
@@ -11524,6 +13426,10 @@ private static final long serialVersionUID = 0L;
     if (((bitField0_ & 0x00000020) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(6, getPerfettoSqlQueryMetadata());
+    }
+    if (((bitField0_ & 0x00000040) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(7, getPerfettoTraceLoadedMetadata());
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -11569,6 +13475,11 @@ private static final long serialVersionUID = 0L;
       if (!getPerfettoSqlQueryMetadata()
           .equals(other.getPerfettoSqlQueryMetadata())) return false;
     }
+    if (hasPerfettoTraceLoadedMetadata() != other.hasPerfettoTraceLoadedMetadata()) return false;
+    if (hasPerfettoTraceLoadedMetadata()) {
+      if (!getPerfettoTraceLoadedMetadata()
+          .equals(other.getPerfettoTraceLoadedMetadata())) return false;
+    }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -11603,6 +13514,10 @@ private static final long serialVersionUID = 0L;
     if (hasPerfettoSqlQueryMetadata()) {
       hash = (37 * hash) + PERFETTO_SQL_QUERY_METADATA_FIELD_NUMBER;
       hash = (53 * hash) + getPerfettoSqlQueryMetadata().hashCode();
+    }
+    if (hasPerfettoTraceLoadedMetadata()) {
+      hash = (37 * hash) + PERFETTO_TRACE_LOADED_METADATA_FIELD_NUMBER;
+      hash = (53 * hash) + getPerfettoTraceLoadedMetadata().hashCode();
     }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
@@ -11743,6 +13658,7 @@ private static final long serialVersionUID = 0L;
         getNewCaptureDialogMetadataFieldBuilder();
         getPerfettoTraceOpenedMetadataFieldBuilder();
         getPerfettoSqlQueryMetadataFieldBuilder();
+        getPerfettoTraceLoadedMetadataFieldBuilder();
       }
     }
     @java.lang.Override
@@ -11774,6 +13690,11 @@ private static final long serialVersionUID = 0L;
       if (perfettoSqlQueryMetadataBuilder_ != null) {
         perfettoSqlQueryMetadataBuilder_.dispose();
         perfettoSqlQueryMetadataBuilder_ = null;
+      }
+      perfettoTraceLoadedMetadata_ = null;
+      if (perfettoTraceLoadedMetadataBuilder_ != null) {
+        perfettoTraceLoadedMetadataBuilder_.dispose();
+        perfettoTraceLoadedMetadataBuilder_ = null;
       }
       return this;
     }
@@ -11843,6 +13764,12 @@ private static final long serialVersionUID = 0L;
             : perfettoSqlQueryMetadataBuilder_.build();
         to_bitField0_ |= 0x00000020;
       }
+      if (((from_bitField0_ & 0x00000040) != 0)) {
+        result.perfettoTraceLoadedMetadata_ = perfettoTraceLoadedMetadataBuilder_ == null
+            ? perfettoTraceLoadedMetadata_
+            : perfettoTraceLoadedMetadataBuilder_.build();
+        to_bitField0_ |= 0x00000040;
+      }
       result.bitField0_ |= to_bitField0_;
     }
 
@@ -11875,6 +13802,9 @@ private static final long serialVersionUID = 0L;
       }
       if (other.hasPerfettoSqlQueryMetadata()) {
         mergePerfettoSqlQueryMetadata(other.getPerfettoSqlQueryMetadata());
+      }
+      if (other.hasPerfettoTraceLoadedMetadata()) {
+        mergePerfettoTraceLoadedMetadata(other.getPerfettoTraceLoadedMetadata());
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -11949,6 +13879,13 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000020;
               break;
             } // case 50
+            case 58: {
+              input.readMessage(
+                  getPerfettoTraceLoadedMetadataFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000040;
+              break;
+            } // case 58
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -12797,6 +14734,161 @@ private static final long serialVersionUID = 0L;
         perfettoSqlQueryMetadata_ = null;
       }
       return perfettoSqlQueryMetadataBuilder_;
+    }
+
+    private com.google.wireless.android.sdk.stats.SherlockEvent.PerfettoTraceLoadedMetadata perfettoTraceLoadedMetadata_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.SherlockEvent.PerfettoTraceLoadedMetadata, com.google.wireless.android.sdk.stats.SherlockEvent.PerfettoTraceLoadedMetadata.Builder, com.google.wireless.android.sdk.stats.SherlockEvent.PerfettoTraceLoadedMetadataOrBuilder> perfettoTraceLoadedMetadataBuilder_;
+    /**
+     * <pre>
+     * Set if |type| is |PERFETTO_TRACE_LOADED|
+     * </pre>
+     *
+     * <code>optional .android_studio.SherlockEvent.PerfettoTraceLoadedMetadata perfetto_trace_loaded_metadata = 7 [lazy = true];</code>
+     * @return Whether the perfettoTraceLoadedMetadata field is set.
+     */
+    public boolean hasPerfettoTraceLoadedMetadata() {
+      return ((bitField0_ & 0x00000040) != 0);
+    }
+    /**
+     * <pre>
+     * Set if |type| is |PERFETTO_TRACE_LOADED|
+     * </pre>
+     *
+     * <code>optional .android_studio.SherlockEvent.PerfettoTraceLoadedMetadata perfetto_trace_loaded_metadata = 7 [lazy = true];</code>
+     * @return The perfettoTraceLoadedMetadata.
+     */
+    public com.google.wireless.android.sdk.stats.SherlockEvent.PerfettoTraceLoadedMetadata getPerfettoTraceLoadedMetadata() {
+      if (perfettoTraceLoadedMetadataBuilder_ == null) {
+        return perfettoTraceLoadedMetadata_ == null ? com.google.wireless.android.sdk.stats.SherlockEvent.PerfettoTraceLoadedMetadata.getDefaultInstance() : perfettoTraceLoadedMetadata_;
+      } else {
+        return perfettoTraceLoadedMetadataBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * Set if |type| is |PERFETTO_TRACE_LOADED|
+     * </pre>
+     *
+     * <code>optional .android_studio.SherlockEvent.PerfettoTraceLoadedMetadata perfetto_trace_loaded_metadata = 7 [lazy = true];</code>
+     */
+    public Builder setPerfettoTraceLoadedMetadata(com.google.wireless.android.sdk.stats.SherlockEvent.PerfettoTraceLoadedMetadata value) {
+      if (perfettoTraceLoadedMetadataBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        perfettoTraceLoadedMetadata_ = value;
+      } else {
+        perfettoTraceLoadedMetadataBuilder_.setMessage(value);
+      }
+      bitField0_ |= 0x00000040;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Set if |type| is |PERFETTO_TRACE_LOADED|
+     * </pre>
+     *
+     * <code>optional .android_studio.SherlockEvent.PerfettoTraceLoadedMetadata perfetto_trace_loaded_metadata = 7 [lazy = true];</code>
+     */
+    public Builder setPerfettoTraceLoadedMetadata(
+        com.google.wireless.android.sdk.stats.SherlockEvent.PerfettoTraceLoadedMetadata.Builder builderForValue) {
+      if (perfettoTraceLoadedMetadataBuilder_ == null) {
+        perfettoTraceLoadedMetadata_ = builderForValue.build();
+      } else {
+        perfettoTraceLoadedMetadataBuilder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x00000040;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Set if |type| is |PERFETTO_TRACE_LOADED|
+     * </pre>
+     *
+     * <code>optional .android_studio.SherlockEvent.PerfettoTraceLoadedMetadata perfetto_trace_loaded_metadata = 7 [lazy = true];</code>
+     */
+    public Builder mergePerfettoTraceLoadedMetadata(com.google.wireless.android.sdk.stats.SherlockEvent.PerfettoTraceLoadedMetadata value) {
+      if (perfettoTraceLoadedMetadataBuilder_ == null) {
+        if (((bitField0_ & 0x00000040) != 0) &&
+          perfettoTraceLoadedMetadata_ != null &&
+          perfettoTraceLoadedMetadata_ != com.google.wireless.android.sdk.stats.SherlockEvent.PerfettoTraceLoadedMetadata.getDefaultInstance()) {
+          getPerfettoTraceLoadedMetadataBuilder().mergeFrom(value);
+        } else {
+          perfettoTraceLoadedMetadata_ = value;
+        }
+      } else {
+        perfettoTraceLoadedMetadataBuilder_.mergeFrom(value);
+      }
+      bitField0_ |= 0x00000040;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Set if |type| is |PERFETTO_TRACE_LOADED|
+     * </pre>
+     *
+     * <code>optional .android_studio.SherlockEvent.PerfettoTraceLoadedMetadata perfetto_trace_loaded_metadata = 7 [lazy = true];</code>
+     */
+    public Builder clearPerfettoTraceLoadedMetadata() {
+      bitField0_ = (bitField0_ & ~0x00000040);
+      perfettoTraceLoadedMetadata_ = null;
+      if (perfettoTraceLoadedMetadataBuilder_ != null) {
+        perfettoTraceLoadedMetadataBuilder_.dispose();
+        perfettoTraceLoadedMetadataBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Set if |type| is |PERFETTO_TRACE_LOADED|
+     * </pre>
+     *
+     * <code>optional .android_studio.SherlockEvent.PerfettoTraceLoadedMetadata perfetto_trace_loaded_metadata = 7 [lazy = true];</code>
+     */
+    public com.google.wireless.android.sdk.stats.SherlockEvent.PerfettoTraceLoadedMetadata.Builder getPerfettoTraceLoadedMetadataBuilder() {
+      bitField0_ |= 0x00000040;
+      onChanged();
+      return getPerfettoTraceLoadedMetadataFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * Set if |type| is |PERFETTO_TRACE_LOADED|
+     * </pre>
+     *
+     * <code>optional .android_studio.SherlockEvent.PerfettoTraceLoadedMetadata perfetto_trace_loaded_metadata = 7 [lazy = true];</code>
+     */
+    public com.google.wireless.android.sdk.stats.SherlockEvent.PerfettoTraceLoadedMetadataOrBuilder getPerfettoTraceLoadedMetadataOrBuilder() {
+      if (perfettoTraceLoadedMetadataBuilder_ != null) {
+        return perfettoTraceLoadedMetadataBuilder_.getMessageOrBuilder();
+      } else {
+        return perfettoTraceLoadedMetadata_ == null ?
+            com.google.wireless.android.sdk.stats.SherlockEvent.PerfettoTraceLoadedMetadata.getDefaultInstance() : perfettoTraceLoadedMetadata_;
+      }
+    }
+    /**
+     * <pre>
+     * Set if |type| is |PERFETTO_TRACE_LOADED|
+     * </pre>
+     *
+     * <code>optional .android_studio.SherlockEvent.PerfettoTraceLoadedMetadata perfetto_trace_loaded_metadata = 7 [lazy = true];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.SherlockEvent.PerfettoTraceLoadedMetadata, com.google.wireless.android.sdk.stats.SherlockEvent.PerfettoTraceLoadedMetadata.Builder, com.google.wireless.android.sdk.stats.SherlockEvent.PerfettoTraceLoadedMetadataOrBuilder> 
+        getPerfettoTraceLoadedMetadataFieldBuilder() {
+      if (perfettoTraceLoadedMetadataBuilder_ == null) {
+        perfettoTraceLoadedMetadataBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.wireless.android.sdk.stats.SherlockEvent.PerfettoTraceLoadedMetadata, com.google.wireless.android.sdk.stats.SherlockEvent.PerfettoTraceLoadedMetadata.Builder, com.google.wireless.android.sdk.stats.SherlockEvent.PerfettoTraceLoadedMetadataOrBuilder>(
+                getPerfettoTraceLoadedMetadata(),
+                getParentForChildren(),
+                isClean());
+        perfettoTraceLoadedMetadata_ = null;
+      }
+      return perfettoTraceLoadedMetadataBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

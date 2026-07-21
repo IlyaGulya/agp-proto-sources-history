@@ -128,6 +128,10 @@ public enum VariantApiArtifactType
    * <code>LINT_XML_REPORT = 28;</code>
    */
   LINT_XML_REPORT(28),
+  /**
+   * <code>TEST_SUITE_RESULT_FILE = 29;</code>
+   */
+  TEST_SUITE_RESULT_FILE(29),
   UNRECOGNIZED(-1),
   ;
 
@@ -251,6 +255,10 @@ public enum VariantApiArtifactType
    * <code>LINT_XML_REPORT = 28;</code>
    */
   public static final int LINT_XML_REPORT_VALUE = 28;
+  /**
+   * <code>TEST_SUITE_RESULT_FILE = 29;</code>
+   */
+  public static final int TEST_SUITE_RESULT_FILE_VALUE = 29;
 
 
   public final int getNumber() {
@@ -306,6 +314,7 @@ public enum VariantApiArtifactType
       case 26: return LINT_SARIF_REPORT;
       case 27: return LINT_TEXT_REPORT;
       case 28: return LINT_XML_REPORT;
+      case 29: return TEST_SUITE_RESULT_FILE;
       default: return null;
     }
   }
