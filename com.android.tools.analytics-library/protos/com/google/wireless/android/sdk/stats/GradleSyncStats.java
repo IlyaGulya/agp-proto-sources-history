@@ -175,6 +175,19 @@ private static final long serialVersionUID = 0L;
             }
             break;
           }
+          case 122: {
+            com.google.wireless.android.sdk.stats.BuildDownloadsAnalysisData.Builder subBuilder = null;
+            if (((bitField0_ & 0x00004000) != 0)) {
+              subBuilder = downloadsData_.toBuilder();
+            }
+            downloadsData_ = input.readMessage(com.google.wireless.android.sdk.stats.BuildDownloadsAnalysisData.PARSER, extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(downloadsData_);
+              downloadsData_ = subBuilder.buildPartial();
+            }
+            bitField0_ |= 0x00004000;
+            break;
+          }
           default: {
             if (!parseUnknownField(
                 input, unknownFields, extensionRegistry, tag)) {
@@ -3185,6 +3198,44 @@ private static final long serialVersionUID = 0L;
     return result == null ? com.google.wireless.android.sdk.stats.GradleSyncStats.StudioRequestedExecution.UNKNOWN_STUDIO_REQUESTED_EXECUTION_TYPE : result;
   }
 
+  public static final int DOWNLOADS_DATA_FIELD_NUMBER = 15;
+  private com.google.wireless.android.sdk.stats.BuildDownloadsAnalysisData downloadsData_;
+  /**
+   * <pre>
+   * Data on downloads happened during sync.
+   * </pre>
+   *
+   * <code>optional .android_studio.BuildDownloadsAnalysisData downloads_data = 15;</code>
+   * @return Whether the downloadsData field is set.
+   */
+  @java.lang.Override
+  public boolean hasDownloadsData() {
+    return ((bitField0_ & 0x00004000) != 0);
+  }
+  /**
+   * <pre>
+   * Data on downloads happened during sync.
+   * </pre>
+   *
+   * <code>optional .android_studio.BuildDownloadsAnalysisData downloads_data = 15;</code>
+   * @return The downloadsData.
+   */
+  @java.lang.Override
+  public com.google.wireless.android.sdk.stats.BuildDownloadsAnalysisData getDownloadsData() {
+    return downloadsData_ == null ? com.google.wireless.android.sdk.stats.BuildDownloadsAnalysisData.getDefaultInstance() : downloadsData_;
+  }
+  /**
+   * <pre>
+   * Data on downloads happened during sync.
+   * </pre>
+   *
+   * <code>optional .android_studio.BuildDownloadsAnalysisData downloads_data = 15;</code>
+   */
+  @java.lang.Override
+  public com.google.wireless.android.sdk.stats.BuildDownloadsAnalysisDataOrBuilder getDownloadsDataOrBuilder() {
+    return downloadsData_ == null ? com.google.wireless.android.sdk.stats.BuildDownloadsAnalysisData.getDefaultInstance() : downloadsData_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -3240,6 +3291,9 @@ private static final long serialVersionUID = 0L;
     }
     if (((bitField0_ & 0x00002000) != 0)) {
       output.writeEnum(14, studioRequestedSyncType_);
+    }
+    if (((bitField0_ & 0x00004000) != 0)) {
+      output.writeMessage(15, getDownloadsData());
     }
     unknownFields.writeTo(output);
   }
@@ -3303,6 +3357,10 @@ private static final long serialVersionUID = 0L;
     if (((bitField0_ & 0x00002000) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(14, studioRequestedSyncType_);
+    }
+    if (((bitField0_ & 0x00004000) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(15, getDownloadsData());
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -3383,6 +3441,11 @@ private static final long serialVersionUID = 0L;
     if (hasStudioRequestedSyncType()) {
       if (studioRequestedSyncType_ != other.studioRequestedSyncType_) return false;
     }
+    if (hasDownloadsData() != other.hasDownloadsData()) return false;
+    if (hasDownloadsData()) {
+      if (!getDownloadsData()
+          .equals(other.getDownloadsData())) return false;
+    }
     if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
@@ -3455,6 +3518,10 @@ private static final long serialVersionUID = 0L;
     if (hasStudioRequestedSyncType()) {
       hash = (37 * hash) + STUDIO_REQUESTED_SYNC_TYPE_FIELD_NUMBER;
       hash = (53 * hash) + studioRequestedSyncType_;
+    }
+    if (hasDownloadsData()) {
+      hash = (37 * hash) + DOWNLOADS_DATA_FIELD_NUMBER;
+      hash = (53 * hash) + getDownloadsData().hashCode();
     }
     hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
@@ -3588,6 +3655,7 @@ private static final long serialVersionUID = 0L;
     private void maybeForceBuilderInitialization() {
       if (com.google.protobuf.GeneratedMessageV3
               .alwaysUseFieldBuilders) {
+        getDownloadsDataFieldBuilder();
       }
     }
     @java.lang.Override
@@ -3621,6 +3689,12 @@ private static final long serialVersionUID = 0L;
       bitField0_ = (bitField0_ & ~0x00001000);
       studioRequestedSyncType_ = 0;
       bitField0_ = (bitField0_ & ~0x00002000);
+      if (downloadsDataBuilder_ == null) {
+        downloadsData_ = null;
+      } else {
+        downloadsDataBuilder_.clear();
+      }
+      bitField0_ = (bitField0_ & ~0x00004000);
       return this;
     }
 
@@ -3705,6 +3779,14 @@ private static final long serialVersionUID = 0L;
         to_bitField0_ |= 0x00002000;
       }
       result.studioRequestedSyncType_ = studioRequestedSyncType_;
+      if (((from_bitField0_ & 0x00004000) != 0)) {
+        if (downloadsDataBuilder_ == null) {
+          result.downloadsData_ = downloadsData_;
+        } else {
+          result.downloadsData_ = downloadsDataBuilder_.build();
+        }
+        to_bitField0_ |= 0x00004000;
+      }
       result.bitField0_ = to_bitField0_;
       onBuilt();
       return result;
@@ -3799,6 +3881,9 @@ private static final long serialVersionUID = 0L;
       }
       if (other.hasStudioRequestedSyncType()) {
         setStudioRequestedSyncType(other.getStudioRequestedSyncType());
+      }
+      if (other.hasDownloadsData()) {
+        mergeDownloadsData(other.getDownloadsData());
       }
       this.mergeUnknownFields(other.unknownFields);
       onChanged();
@@ -4758,6 +4843,162 @@ private static final long serialVersionUID = 0L;
       studioRequestedSyncType_ = 0;
       onChanged();
       return this;
+    }
+
+    private com.google.wireless.android.sdk.stats.BuildDownloadsAnalysisData downloadsData_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.BuildDownloadsAnalysisData, com.google.wireless.android.sdk.stats.BuildDownloadsAnalysisData.Builder, com.google.wireless.android.sdk.stats.BuildDownloadsAnalysisDataOrBuilder> downloadsDataBuilder_;
+    /**
+     * <pre>
+     * Data on downloads happened during sync.
+     * </pre>
+     *
+     * <code>optional .android_studio.BuildDownloadsAnalysisData downloads_data = 15;</code>
+     * @return Whether the downloadsData field is set.
+     */
+    public boolean hasDownloadsData() {
+      return ((bitField0_ & 0x00004000) != 0);
+    }
+    /**
+     * <pre>
+     * Data on downloads happened during sync.
+     * </pre>
+     *
+     * <code>optional .android_studio.BuildDownloadsAnalysisData downloads_data = 15;</code>
+     * @return The downloadsData.
+     */
+    public com.google.wireless.android.sdk.stats.BuildDownloadsAnalysisData getDownloadsData() {
+      if (downloadsDataBuilder_ == null) {
+        return downloadsData_ == null ? com.google.wireless.android.sdk.stats.BuildDownloadsAnalysisData.getDefaultInstance() : downloadsData_;
+      } else {
+        return downloadsDataBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * Data on downloads happened during sync.
+     * </pre>
+     *
+     * <code>optional .android_studio.BuildDownloadsAnalysisData downloads_data = 15;</code>
+     */
+    public Builder setDownloadsData(com.google.wireless.android.sdk.stats.BuildDownloadsAnalysisData value) {
+      if (downloadsDataBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        downloadsData_ = value;
+        onChanged();
+      } else {
+        downloadsDataBuilder_.setMessage(value);
+      }
+      bitField0_ |= 0x00004000;
+      return this;
+    }
+    /**
+     * <pre>
+     * Data on downloads happened during sync.
+     * </pre>
+     *
+     * <code>optional .android_studio.BuildDownloadsAnalysisData downloads_data = 15;</code>
+     */
+    public Builder setDownloadsData(
+        com.google.wireless.android.sdk.stats.BuildDownloadsAnalysisData.Builder builderForValue) {
+      if (downloadsDataBuilder_ == null) {
+        downloadsData_ = builderForValue.build();
+        onChanged();
+      } else {
+        downloadsDataBuilder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x00004000;
+      return this;
+    }
+    /**
+     * <pre>
+     * Data on downloads happened during sync.
+     * </pre>
+     *
+     * <code>optional .android_studio.BuildDownloadsAnalysisData downloads_data = 15;</code>
+     */
+    public Builder mergeDownloadsData(com.google.wireless.android.sdk.stats.BuildDownloadsAnalysisData value) {
+      if (downloadsDataBuilder_ == null) {
+        if (((bitField0_ & 0x00004000) != 0) &&
+            downloadsData_ != null &&
+            downloadsData_ != com.google.wireless.android.sdk.stats.BuildDownloadsAnalysisData.getDefaultInstance()) {
+          downloadsData_ =
+            com.google.wireless.android.sdk.stats.BuildDownloadsAnalysisData.newBuilder(downloadsData_).mergeFrom(value).buildPartial();
+        } else {
+          downloadsData_ = value;
+        }
+        onChanged();
+      } else {
+        downloadsDataBuilder_.mergeFrom(value);
+      }
+      bitField0_ |= 0x00004000;
+      return this;
+    }
+    /**
+     * <pre>
+     * Data on downloads happened during sync.
+     * </pre>
+     *
+     * <code>optional .android_studio.BuildDownloadsAnalysisData downloads_data = 15;</code>
+     */
+    public Builder clearDownloadsData() {
+      if (downloadsDataBuilder_ == null) {
+        downloadsData_ = null;
+        onChanged();
+      } else {
+        downloadsDataBuilder_.clear();
+      }
+      bitField0_ = (bitField0_ & ~0x00004000);
+      return this;
+    }
+    /**
+     * <pre>
+     * Data on downloads happened during sync.
+     * </pre>
+     *
+     * <code>optional .android_studio.BuildDownloadsAnalysisData downloads_data = 15;</code>
+     */
+    public com.google.wireless.android.sdk.stats.BuildDownloadsAnalysisData.Builder getDownloadsDataBuilder() {
+      bitField0_ |= 0x00004000;
+      onChanged();
+      return getDownloadsDataFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * Data on downloads happened during sync.
+     * </pre>
+     *
+     * <code>optional .android_studio.BuildDownloadsAnalysisData downloads_data = 15;</code>
+     */
+    public com.google.wireless.android.sdk.stats.BuildDownloadsAnalysisDataOrBuilder getDownloadsDataOrBuilder() {
+      if (downloadsDataBuilder_ != null) {
+        return downloadsDataBuilder_.getMessageOrBuilder();
+      } else {
+        return downloadsData_ == null ?
+            com.google.wireless.android.sdk.stats.BuildDownloadsAnalysisData.getDefaultInstance() : downloadsData_;
+      }
+    }
+    /**
+     * <pre>
+     * Data on downloads happened during sync.
+     * </pre>
+     *
+     * <code>optional .android_studio.BuildDownloadsAnalysisData downloads_data = 15;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.BuildDownloadsAnalysisData, com.google.wireless.android.sdk.stats.BuildDownloadsAnalysisData.Builder, com.google.wireless.android.sdk.stats.BuildDownloadsAnalysisDataOrBuilder> 
+        getDownloadsDataFieldBuilder() {
+      if (downloadsDataBuilder_ == null) {
+        downloadsDataBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.wireless.android.sdk.stats.BuildDownloadsAnalysisData, com.google.wireless.android.sdk.stats.BuildDownloadsAnalysisData.Builder, com.google.wireless.android.sdk.stats.BuildDownloadsAnalysisDataOrBuilder>(
+                getDownloadsData(),
+                getParentForChildren(),
+                isClean());
+        downloadsData_ = null;
+      }
+      return downloadsDataBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

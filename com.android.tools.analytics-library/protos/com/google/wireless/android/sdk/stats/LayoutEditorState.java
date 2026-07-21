@@ -316,6 +316,10 @@ private static final long serialVersionUID = 0L;
      * <code>GLANCE_APP_WIDGET = 8;</code>
      */
     GLANCE_APP_WIDGET(8),
+    /**
+     * <code>VALIDATION_TOOL = 9;</code>
+     */
+    VALIDATION_TOOL(9),
     ;
 
     /**
@@ -354,6 +358,10 @@ private static final long serialVersionUID = 0L;
      * <code>GLANCE_APP_WIDGET = 8;</code>
      */
     public static final int GLANCE_APP_WIDGET_VALUE = 8;
+    /**
+     * <code>VALIDATION_TOOL = 9;</code>
+     */
+    public static final int VALIDATION_TOOL_VALUE = 9;
 
 
     public final int getNumber() {
@@ -385,6 +393,7 @@ private static final long serialVersionUID = 0L;
         case 6: return CUSTOM_VIEWS;
         case 7: return GLANCE_WEAR_TILE;
         case 8: return GLANCE_APP_WIDGET;
+        case 9: return VALIDATION_TOOL;
         default: return null;
       }
     }

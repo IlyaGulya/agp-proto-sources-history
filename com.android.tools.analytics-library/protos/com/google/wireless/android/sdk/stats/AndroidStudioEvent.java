@@ -2010,6 +2010,32 @@ private static final long serialVersionUID = 0L;
             bitField4_ |= 0x00100000;
             break;
           }
+          case 1250: {
+            com.google.wireless.android.sdk.stats.HeapReportEvent.Builder subBuilder = null;
+            if (((bitField4_ & 0x00200000) != 0)) {
+              subBuilder = heapReportEvent_.toBuilder();
+            }
+            heapReportEvent_ = input.readMessage(com.google.wireless.android.sdk.stats.HeapReportEvent.PARSER, extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(heapReportEvent_);
+              heapReportEvent_ = subBuilder.buildPartial();
+            }
+            bitField4_ |= 0x00200000;
+            break;
+          }
+          case 1258: {
+            com.google.wireless.android.sdk.stats.CreateDiagnosticReportAction.Builder subBuilder = null;
+            if (((bitField4_ & 0x00400000) != 0)) {
+              subBuilder = createDiagnosticReportActionEvent_.toBuilder();
+            }
+            createDiagnosticReportActionEvent_ = input.readMessage(com.google.wireless.android.sdk.stats.CreateDiagnosticReportAction.PARSER, extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(createDiagnosticReportActionEvent_);
+              createDiagnosticReportActionEvent_ = subBuilder.buildPartial();
+            }
+            bitField4_ |= 0x00400000;
+            break;
+          }
           default: {
             if (!parseUnknownField(
                 input, unknownFields, extensionRegistry, tag)) {
@@ -4668,6 +4694,30 @@ private static final long serialVersionUID = 0L;
      * <code>PROJECT_VIEW_SELECTION_CHANGE_EVENT = 268;</code>
      */
     PROJECT_VIEW_SELECTION_CHANGE_EVENT(268),
+    /**
+     * <pre>
+     * Event related to collection or analysis of client side heap reports
+     * </pre>
+     *
+     * <code>HEAP_REPORT_EVENT = 269;</code>
+     */
+    HEAP_REPORT_EVENT(269),
+    /**
+     * <pre>
+     * Action taken by user from create diagnostic report dialog
+     * </pre>
+     *
+     * <code>CREATE_DIAGNOSTIC_REPORT_ACTION = 270;</code>
+     */
+    CREATE_DIAGNOSTIC_REPORT_ACTION(270),
+    /**
+     * <pre>
+     * Event when the AGP Upgrade Assistant CTA from an old AGP is dismissed
+     * </pre>
+     *
+     * <code>UPGRADE_ASSISTANT_CTA_OLD_AGP_DISMISSED = 271;</code>
+     */
+    UPGRADE_ASSISTANT_CTA_OLD_AGP_DISMISSED(271),
     ;
 
     /**
@@ -6648,6 +6698,30 @@ private static final long serialVersionUID = 0L;
      * <code>PROJECT_VIEW_SELECTION_CHANGE_EVENT = 268;</code>
      */
     public static final int PROJECT_VIEW_SELECTION_CHANGE_EVENT_VALUE = 268;
+    /**
+     * <pre>
+     * Event related to collection or analysis of client side heap reports
+     * </pre>
+     *
+     * <code>HEAP_REPORT_EVENT = 269;</code>
+     */
+    public static final int HEAP_REPORT_EVENT_VALUE = 269;
+    /**
+     * <pre>
+     * Action taken by user from create diagnostic report dialog
+     * </pre>
+     *
+     * <code>CREATE_DIAGNOSTIC_REPORT_ACTION = 270;</code>
+     */
+    public static final int CREATE_DIAGNOSTIC_REPORT_ACTION_VALUE = 270;
+    /**
+     * <pre>
+     * Event when the AGP Upgrade Assistant CTA from an old AGP is dismissed
+     * </pre>
+     *
+     * <code>UPGRADE_ASSISTANT_CTA_OLD_AGP_DISMISSED = 271;</code>
+     */
+    public static final int UPGRADE_ASSISTANT_CTA_OLD_AGP_DISMISSED_VALUE = 271;
 
 
     public final int getNumber() {
@@ -6934,6 +7008,9 @@ private static final long serialVersionUID = 0L;
         case 266: return MANIFEST_MERGER_STATS;
         case 267: return THREADING_AGENT_STATS;
         case 268: return PROJECT_VIEW_SELECTION_CHANGE_EVENT;
+        case 269: return HEAP_REPORT_EVENT;
+        case 270: return CREATE_DIAGNOSTIC_REPORT_ACTION;
+        case 271: return UPGRADE_ASSISTANT_CTA_OLD_AGP_DISMISSED;
         default: return null;
       }
     }
@@ -21653,6 +21730,82 @@ private static final long serialVersionUID = 0L;
     return projectViewSelectionChangeEvent_ == null ? com.google.wireless.android.sdk.stats.ProjectViewSelectionChangeEvent.getDefaultInstance() : projectViewSelectionChangeEvent_;
   }
 
+  public static final int HEAP_REPORT_EVENT_FIELD_NUMBER = 156;
+  private com.google.wireless.android.sdk.stats.HeapReportEvent heapReportEvent_;
+  /**
+   * <pre>
+   * set when kind = HEAP_REPORT_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.HeapReportEvent heap_report_event = 156;</code>
+   * @return Whether the heapReportEvent field is set.
+   */
+  @java.lang.Override
+  public boolean hasHeapReportEvent() {
+    return ((bitField4_ & 0x00200000) != 0);
+  }
+  /**
+   * <pre>
+   * set when kind = HEAP_REPORT_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.HeapReportEvent heap_report_event = 156;</code>
+   * @return The heapReportEvent.
+   */
+  @java.lang.Override
+  public com.google.wireless.android.sdk.stats.HeapReportEvent getHeapReportEvent() {
+    return heapReportEvent_ == null ? com.google.wireless.android.sdk.stats.HeapReportEvent.getDefaultInstance() : heapReportEvent_;
+  }
+  /**
+   * <pre>
+   * set when kind = HEAP_REPORT_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.HeapReportEvent heap_report_event = 156;</code>
+   */
+  @java.lang.Override
+  public com.google.wireless.android.sdk.stats.HeapReportEventOrBuilder getHeapReportEventOrBuilder() {
+    return heapReportEvent_ == null ? com.google.wireless.android.sdk.stats.HeapReportEvent.getDefaultInstance() : heapReportEvent_;
+  }
+
+  public static final int CREATE_DIAGNOSTIC_REPORT_ACTION_EVENT_FIELD_NUMBER = 157;
+  private com.google.wireless.android.sdk.stats.CreateDiagnosticReportAction createDiagnosticReportActionEvent_;
+  /**
+   * <pre>
+   * set when kind = CREATE_DIAGNOSTIC_REPORT_ACTION
+   * </pre>
+   *
+   * <code>optional .android_studio.CreateDiagnosticReportAction create_diagnostic_report_action_event = 157;</code>
+   * @return Whether the createDiagnosticReportActionEvent field is set.
+   */
+  @java.lang.Override
+  public boolean hasCreateDiagnosticReportActionEvent() {
+    return ((bitField4_ & 0x00400000) != 0);
+  }
+  /**
+   * <pre>
+   * set when kind = CREATE_DIAGNOSTIC_REPORT_ACTION
+   * </pre>
+   *
+   * <code>optional .android_studio.CreateDiagnosticReportAction create_diagnostic_report_action_event = 157;</code>
+   * @return The createDiagnosticReportActionEvent.
+   */
+  @java.lang.Override
+  public com.google.wireless.android.sdk.stats.CreateDiagnosticReportAction getCreateDiagnosticReportActionEvent() {
+    return createDiagnosticReportActionEvent_ == null ? com.google.wireless.android.sdk.stats.CreateDiagnosticReportAction.getDefaultInstance() : createDiagnosticReportActionEvent_;
+  }
+  /**
+   * <pre>
+   * set when kind = CREATE_DIAGNOSTIC_REPORT_ACTION
+   * </pre>
+   *
+   * <code>optional .android_studio.CreateDiagnosticReportAction create_diagnostic_report_action_event = 157;</code>
+   */
+  @java.lang.Override
+  public com.google.wireless.android.sdk.stats.CreateDiagnosticReportActionOrBuilder getCreateDiagnosticReportActionEventOrBuilder() {
+    return createDiagnosticReportActionEvent_ == null ? com.google.wireless.android.sdk.stats.CreateDiagnosticReportAction.getDefaultInstance() : createDiagnosticReportActionEvent_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -22131,6 +22284,12 @@ private static final long serialVersionUID = 0L;
     }
     if (((bitField4_ & 0x00100000) != 0)) {
       output.writeMessage(155, getProjectViewSelectionChangeEvent());
+    }
+    if (((bitField4_ & 0x00200000) != 0)) {
+      output.writeMessage(156, getHeapReportEvent());
+    }
+    if (((bitField4_ & 0x00400000) != 0)) {
+      output.writeMessage(157, getCreateDiagnosticReportActionEvent());
     }
     unknownFields.writeTo(output);
   }
@@ -22766,6 +22925,14 @@ private static final long serialVersionUID = 0L;
     if (((bitField4_ & 0x00100000) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(155, getProjectViewSelectionChangeEvent());
+    }
+    if (((bitField4_ & 0x00200000) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(156, getHeapReportEvent());
+    }
+    if (((bitField4_ & 0x00400000) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(157, getCreateDiagnosticReportActionEvent());
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -23528,6 +23695,16 @@ private static final long serialVersionUID = 0L;
       if (!getProjectViewSelectionChangeEvent()
           .equals(other.getProjectViewSelectionChangeEvent())) return false;
     }
+    if (hasHeapReportEvent() != other.hasHeapReportEvent()) return false;
+    if (hasHeapReportEvent()) {
+      if (!getHeapReportEvent()
+          .equals(other.getHeapReportEvent())) return false;
+    }
+    if (hasCreateDiagnosticReportActionEvent() != other.hasCreateDiagnosticReportActionEvent()) return false;
+    if (hasCreateDiagnosticReportActionEvent()) {
+      if (!getCreateDiagnosticReportActionEvent()
+          .equals(other.getCreateDiagnosticReportActionEvent())) return false;
+    }
     if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
@@ -24161,6 +24338,14 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + PROJECT_VIEW_SELECTION_CHANGE_EVENT_FIELD_NUMBER;
       hash = (53 * hash) + getProjectViewSelectionChangeEvent().hashCode();
     }
+    if (hasHeapReportEvent()) {
+      hash = (37 * hash) + HEAP_REPORT_EVENT_FIELD_NUMBER;
+      hash = (53 * hash) + getHeapReportEvent().hashCode();
+    }
+    if (hasCreateDiagnosticReportActionEvent()) {
+      hash = (37 * hash) + CREATE_DIAGNOSTIC_REPORT_ACTION_EVENT_FIELD_NUMBER;
+      hash = (53 * hash) + getCreateDiagnosticReportActionEvent().hashCode();
+    }
     hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -24421,6 +24606,8 @@ private static final long serialVersionUID = 0L;
         getManifestMergerStatsFieldBuilder();
         getThreadingAgentUsageEventFieldBuilder();
         getProjectViewSelectionChangeEventFieldBuilder();
+        getHeapReportEventFieldBuilder();
+        getCreateDiagnosticReportActionEventFieldBuilder();
       }
     }
     @java.lang.Override
@@ -25264,6 +25451,18 @@ private static final long serialVersionUID = 0L;
         projectViewSelectionChangeEventBuilder_.clear();
       }
       bitField4_ = (bitField4_ & ~0x04000000);
+      if (heapReportEventBuilder_ == null) {
+        heapReportEvent_ = null;
+      } else {
+        heapReportEventBuilder_.clear();
+      }
+      bitField4_ = (bitField4_ & ~0x08000000);
+      if (createDiagnosticReportActionEventBuilder_ == null) {
+        createDiagnosticReportActionEvent_ = null;
+      } else {
+        createDiagnosticReportActionEventBuilder_.clear();
+      }
+      bitField4_ = (bitField4_ & ~0x10000000);
       return this;
     }
 
@@ -26454,6 +26653,22 @@ private static final long serialVersionUID = 0L;
         }
         to_bitField4_ |= 0x00100000;
       }
+      if (((from_bitField4_ & 0x08000000) != 0)) {
+        if (heapReportEventBuilder_ == null) {
+          result.heapReportEvent_ = heapReportEvent_;
+        } else {
+          result.heapReportEvent_ = heapReportEventBuilder_.build();
+        }
+        to_bitField4_ |= 0x00200000;
+      }
+      if (((from_bitField4_ & 0x10000000) != 0)) {
+        if (createDiagnosticReportActionEventBuilder_ == null) {
+          result.createDiagnosticReportActionEvent_ = createDiagnosticReportActionEvent_;
+        } else {
+          result.createDiagnosticReportActionEvent_ = createDiagnosticReportActionEventBuilder_.build();
+        }
+        to_bitField4_ |= 0x00400000;
+      }
       result.bitField0_ = to_bitField0_;
       result.bitField1_ = to_bitField1_;
       result.bitField2_ = to_bitField2_;
@@ -27075,6 +27290,12 @@ private static final long serialVersionUID = 0L;
       }
       if (other.hasProjectViewSelectionChangeEvent()) {
         mergeProjectViewSelectionChangeEvent(other.getProjectViewSelectionChangeEvent());
+      }
+      if (other.hasHeapReportEvent()) {
+        mergeHeapReportEvent(other.getHeapReportEvent());
+      }
+      if (other.hasCreateDiagnosticReportActionEvent()) {
+        mergeCreateDiagnosticReportActionEvent(other.getCreateDiagnosticReportActionEvent());
       }
       this.mergeUnknownFields(other.unknownFields);
       onChanged();
@@ -50557,6 +50778,318 @@ private static final long serialVersionUID = 0L;
         projectViewSelectionChangeEvent_ = null;
       }
       return projectViewSelectionChangeEventBuilder_;
+    }
+
+    private com.google.wireless.android.sdk.stats.HeapReportEvent heapReportEvent_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.HeapReportEvent, com.google.wireless.android.sdk.stats.HeapReportEvent.Builder, com.google.wireless.android.sdk.stats.HeapReportEventOrBuilder> heapReportEventBuilder_;
+    /**
+     * <pre>
+     * set when kind = HEAP_REPORT_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.HeapReportEvent heap_report_event = 156;</code>
+     * @return Whether the heapReportEvent field is set.
+     */
+    public boolean hasHeapReportEvent() {
+      return ((bitField4_ & 0x08000000) != 0);
+    }
+    /**
+     * <pre>
+     * set when kind = HEAP_REPORT_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.HeapReportEvent heap_report_event = 156;</code>
+     * @return The heapReportEvent.
+     */
+    public com.google.wireless.android.sdk.stats.HeapReportEvent getHeapReportEvent() {
+      if (heapReportEventBuilder_ == null) {
+        return heapReportEvent_ == null ? com.google.wireless.android.sdk.stats.HeapReportEvent.getDefaultInstance() : heapReportEvent_;
+      } else {
+        return heapReportEventBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * set when kind = HEAP_REPORT_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.HeapReportEvent heap_report_event = 156;</code>
+     */
+    public Builder setHeapReportEvent(com.google.wireless.android.sdk.stats.HeapReportEvent value) {
+      if (heapReportEventBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        heapReportEvent_ = value;
+        onChanged();
+      } else {
+        heapReportEventBuilder_.setMessage(value);
+      }
+      bitField4_ |= 0x08000000;
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = HEAP_REPORT_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.HeapReportEvent heap_report_event = 156;</code>
+     */
+    public Builder setHeapReportEvent(
+        com.google.wireless.android.sdk.stats.HeapReportEvent.Builder builderForValue) {
+      if (heapReportEventBuilder_ == null) {
+        heapReportEvent_ = builderForValue.build();
+        onChanged();
+      } else {
+        heapReportEventBuilder_.setMessage(builderForValue.build());
+      }
+      bitField4_ |= 0x08000000;
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = HEAP_REPORT_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.HeapReportEvent heap_report_event = 156;</code>
+     */
+    public Builder mergeHeapReportEvent(com.google.wireless.android.sdk.stats.HeapReportEvent value) {
+      if (heapReportEventBuilder_ == null) {
+        if (((bitField4_ & 0x08000000) != 0) &&
+            heapReportEvent_ != null &&
+            heapReportEvent_ != com.google.wireless.android.sdk.stats.HeapReportEvent.getDefaultInstance()) {
+          heapReportEvent_ =
+            com.google.wireless.android.sdk.stats.HeapReportEvent.newBuilder(heapReportEvent_).mergeFrom(value).buildPartial();
+        } else {
+          heapReportEvent_ = value;
+        }
+        onChanged();
+      } else {
+        heapReportEventBuilder_.mergeFrom(value);
+      }
+      bitField4_ |= 0x08000000;
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = HEAP_REPORT_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.HeapReportEvent heap_report_event = 156;</code>
+     */
+    public Builder clearHeapReportEvent() {
+      if (heapReportEventBuilder_ == null) {
+        heapReportEvent_ = null;
+        onChanged();
+      } else {
+        heapReportEventBuilder_.clear();
+      }
+      bitField4_ = (bitField4_ & ~0x08000000);
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = HEAP_REPORT_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.HeapReportEvent heap_report_event = 156;</code>
+     */
+    public com.google.wireless.android.sdk.stats.HeapReportEvent.Builder getHeapReportEventBuilder() {
+      bitField4_ |= 0x08000000;
+      onChanged();
+      return getHeapReportEventFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * set when kind = HEAP_REPORT_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.HeapReportEvent heap_report_event = 156;</code>
+     */
+    public com.google.wireless.android.sdk.stats.HeapReportEventOrBuilder getHeapReportEventOrBuilder() {
+      if (heapReportEventBuilder_ != null) {
+        return heapReportEventBuilder_.getMessageOrBuilder();
+      } else {
+        return heapReportEvent_ == null ?
+            com.google.wireless.android.sdk.stats.HeapReportEvent.getDefaultInstance() : heapReportEvent_;
+      }
+    }
+    /**
+     * <pre>
+     * set when kind = HEAP_REPORT_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.HeapReportEvent heap_report_event = 156;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.HeapReportEvent, com.google.wireless.android.sdk.stats.HeapReportEvent.Builder, com.google.wireless.android.sdk.stats.HeapReportEventOrBuilder> 
+        getHeapReportEventFieldBuilder() {
+      if (heapReportEventBuilder_ == null) {
+        heapReportEventBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.wireless.android.sdk.stats.HeapReportEvent, com.google.wireless.android.sdk.stats.HeapReportEvent.Builder, com.google.wireless.android.sdk.stats.HeapReportEventOrBuilder>(
+                getHeapReportEvent(),
+                getParentForChildren(),
+                isClean());
+        heapReportEvent_ = null;
+      }
+      return heapReportEventBuilder_;
+    }
+
+    private com.google.wireless.android.sdk.stats.CreateDiagnosticReportAction createDiagnosticReportActionEvent_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.CreateDiagnosticReportAction, com.google.wireless.android.sdk.stats.CreateDiagnosticReportAction.Builder, com.google.wireless.android.sdk.stats.CreateDiagnosticReportActionOrBuilder> createDiagnosticReportActionEventBuilder_;
+    /**
+     * <pre>
+     * set when kind = CREATE_DIAGNOSTIC_REPORT_ACTION
+     * </pre>
+     *
+     * <code>optional .android_studio.CreateDiagnosticReportAction create_diagnostic_report_action_event = 157;</code>
+     * @return Whether the createDiagnosticReportActionEvent field is set.
+     */
+    public boolean hasCreateDiagnosticReportActionEvent() {
+      return ((bitField4_ & 0x10000000) != 0);
+    }
+    /**
+     * <pre>
+     * set when kind = CREATE_DIAGNOSTIC_REPORT_ACTION
+     * </pre>
+     *
+     * <code>optional .android_studio.CreateDiagnosticReportAction create_diagnostic_report_action_event = 157;</code>
+     * @return The createDiagnosticReportActionEvent.
+     */
+    public com.google.wireless.android.sdk.stats.CreateDiagnosticReportAction getCreateDiagnosticReportActionEvent() {
+      if (createDiagnosticReportActionEventBuilder_ == null) {
+        return createDiagnosticReportActionEvent_ == null ? com.google.wireless.android.sdk.stats.CreateDiagnosticReportAction.getDefaultInstance() : createDiagnosticReportActionEvent_;
+      } else {
+        return createDiagnosticReportActionEventBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * set when kind = CREATE_DIAGNOSTIC_REPORT_ACTION
+     * </pre>
+     *
+     * <code>optional .android_studio.CreateDiagnosticReportAction create_diagnostic_report_action_event = 157;</code>
+     */
+    public Builder setCreateDiagnosticReportActionEvent(com.google.wireless.android.sdk.stats.CreateDiagnosticReportAction value) {
+      if (createDiagnosticReportActionEventBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        createDiagnosticReportActionEvent_ = value;
+        onChanged();
+      } else {
+        createDiagnosticReportActionEventBuilder_.setMessage(value);
+      }
+      bitField4_ |= 0x10000000;
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = CREATE_DIAGNOSTIC_REPORT_ACTION
+     * </pre>
+     *
+     * <code>optional .android_studio.CreateDiagnosticReportAction create_diagnostic_report_action_event = 157;</code>
+     */
+    public Builder setCreateDiagnosticReportActionEvent(
+        com.google.wireless.android.sdk.stats.CreateDiagnosticReportAction.Builder builderForValue) {
+      if (createDiagnosticReportActionEventBuilder_ == null) {
+        createDiagnosticReportActionEvent_ = builderForValue.build();
+        onChanged();
+      } else {
+        createDiagnosticReportActionEventBuilder_.setMessage(builderForValue.build());
+      }
+      bitField4_ |= 0x10000000;
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = CREATE_DIAGNOSTIC_REPORT_ACTION
+     * </pre>
+     *
+     * <code>optional .android_studio.CreateDiagnosticReportAction create_diagnostic_report_action_event = 157;</code>
+     */
+    public Builder mergeCreateDiagnosticReportActionEvent(com.google.wireless.android.sdk.stats.CreateDiagnosticReportAction value) {
+      if (createDiagnosticReportActionEventBuilder_ == null) {
+        if (((bitField4_ & 0x10000000) != 0) &&
+            createDiagnosticReportActionEvent_ != null &&
+            createDiagnosticReportActionEvent_ != com.google.wireless.android.sdk.stats.CreateDiagnosticReportAction.getDefaultInstance()) {
+          createDiagnosticReportActionEvent_ =
+            com.google.wireless.android.sdk.stats.CreateDiagnosticReportAction.newBuilder(createDiagnosticReportActionEvent_).mergeFrom(value).buildPartial();
+        } else {
+          createDiagnosticReportActionEvent_ = value;
+        }
+        onChanged();
+      } else {
+        createDiagnosticReportActionEventBuilder_.mergeFrom(value);
+      }
+      bitField4_ |= 0x10000000;
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = CREATE_DIAGNOSTIC_REPORT_ACTION
+     * </pre>
+     *
+     * <code>optional .android_studio.CreateDiagnosticReportAction create_diagnostic_report_action_event = 157;</code>
+     */
+    public Builder clearCreateDiagnosticReportActionEvent() {
+      if (createDiagnosticReportActionEventBuilder_ == null) {
+        createDiagnosticReportActionEvent_ = null;
+        onChanged();
+      } else {
+        createDiagnosticReportActionEventBuilder_.clear();
+      }
+      bitField4_ = (bitField4_ & ~0x10000000);
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = CREATE_DIAGNOSTIC_REPORT_ACTION
+     * </pre>
+     *
+     * <code>optional .android_studio.CreateDiagnosticReportAction create_diagnostic_report_action_event = 157;</code>
+     */
+    public com.google.wireless.android.sdk.stats.CreateDiagnosticReportAction.Builder getCreateDiagnosticReportActionEventBuilder() {
+      bitField4_ |= 0x10000000;
+      onChanged();
+      return getCreateDiagnosticReportActionEventFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * set when kind = CREATE_DIAGNOSTIC_REPORT_ACTION
+     * </pre>
+     *
+     * <code>optional .android_studio.CreateDiagnosticReportAction create_diagnostic_report_action_event = 157;</code>
+     */
+    public com.google.wireless.android.sdk.stats.CreateDiagnosticReportActionOrBuilder getCreateDiagnosticReportActionEventOrBuilder() {
+      if (createDiagnosticReportActionEventBuilder_ != null) {
+        return createDiagnosticReportActionEventBuilder_.getMessageOrBuilder();
+      } else {
+        return createDiagnosticReportActionEvent_ == null ?
+            com.google.wireless.android.sdk.stats.CreateDiagnosticReportAction.getDefaultInstance() : createDiagnosticReportActionEvent_;
+      }
+    }
+    /**
+     * <pre>
+     * set when kind = CREATE_DIAGNOSTIC_REPORT_ACTION
+     * </pre>
+     *
+     * <code>optional .android_studio.CreateDiagnosticReportAction create_diagnostic_report_action_event = 157;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.CreateDiagnosticReportAction, com.google.wireless.android.sdk.stats.CreateDiagnosticReportAction.Builder, com.google.wireless.android.sdk.stats.CreateDiagnosticReportActionOrBuilder> 
+        getCreateDiagnosticReportActionEventFieldBuilder() {
+      if (createDiagnosticReportActionEventBuilder_ == null) {
+        createDiagnosticReportActionEventBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.wireless.android.sdk.stats.CreateDiagnosticReportAction, com.google.wireless.android.sdk.stats.CreateDiagnosticReportAction.Builder, com.google.wireless.android.sdk.stats.CreateDiagnosticReportActionOrBuilder>(
+                getCreateDiagnosticReportActionEvent(),
+                getParentForChildren(),
+                isClean());
+        createDiagnosticReportActionEvent_ = null;
+      }
+      return createDiagnosticReportActionEventBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(
