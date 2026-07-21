@@ -1678,8 +1678,9 @@ private static final long serialVersionUID = 0L;
      * The event is related to Theme Editor.
      * </pre>
      *
-     * <code>THEME_EDITOR = 9;</code>
+     * <code>THEME_EDITOR = 9 [deprecated = true];</code>
      */
+    @java.lang.Deprecated
     THEME_EDITOR(9),
     /**
      * <code>APP_INDEXING = 10;</code>
@@ -1907,7 +1908,7 @@ private static final long serialVersionUID = 0L;
      * The event is related to Theme Editor.
      * </pre>
      *
-     * <code>THEME_EDITOR = 9;</code>
+     * <code>THEME_EDITOR = 9 [deprecated = true];</code>
      */
     public static final int THEME_EDITOR_VALUE = 9;
     /**
@@ -2326,8 +2327,9 @@ private static final long serialVersionUID = 0L;
      * User opened the Theme Editor.
      * </pre>
      *
-     * <code>THEME_EDITOR_OPEN = 20;</code>
+     * <code>THEME_EDITOR_OPEN = 20 [deprecated = true];</code>
      */
+    @java.lang.Deprecated
     THEME_EDITOR_OPEN(20),
     /**
      * <pre>
@@ -3930,7 +3932,7 @@ private static final long serialVersionUID = 0L;
      * User opened the Theme Editor.
      * </pre>
      *
-     * <code>THEME_EDITOR_OPEN = 20;</code>
+     * <code>THEME_EDITOR_OPEN = 20 [deprecated = true];</code>
      */
     public static final int THEME_EDITOR_OPEN_VALUE = 20;
     /**

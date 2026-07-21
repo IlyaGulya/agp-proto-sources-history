@@ -178,6 +178,11 @@ private static final long serialVersionUID = 0L;
             configurationCachingEnabled_ = input.readBool();
             break;
           }
+          case 176: {
+            bitField0_ |= 0x00002000;
+            parallelTaskExecution_ = input.readBool();
+            break;
+          }
           default: {
             if (!parseUnknownField(
                 input, unknownFields, extensionRegistry, tag)) {
@@ -1024,6 +1029,31 @@ private static final long serialVersionUID = 0L;
     return configurationCachingEnabled_;
   }
 
+  public static final int PARALLEL_TASK_EXECUTION_FIELD_NUMBER = 22;
+  private boolean parallelTaskExecution_;
+  /**
+   * <pre>
+   * If Gradle parallel task execution is enabled.
+   * </pre>
+   *
+   * <code>optional bool parallel_task_execution = 22;</code>
+   * @return Whether the parallelTaskExecution field is set.
+   */
+  public boolean hasParallelTaskExecution() {
+    return ((bitField0_ & 0x00002000) != 0);
+  }
+  /**
+   * <pre>
+   * If Gradle parallel task execution is enabled.
+   * </pre>
+   *
+   * <code>optional bool parallel_task_execution = 22;</code>
+   * @return The parallelTaskExecution.
+   */
+  public boolean getParallelTaskExecution() {
+    return parallelTaskExecution_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -1088,6 +1118,9 @@ private static final long serialVersionUID = 0L;
     }
     if (((bitField0_ & 0x00001000) != 0)) {
       output.writeBool(21, configurationCachingEnabled_);
+    }
+    if (((bitField0_ & 0x00002000) != 0)) {
+      output.writeBool(22, parallelTaskExecution_);
     }
     unknownFields.writeTo(output);
   }
@@ -1163,6 +1196,10 @@ private static final long serialVersionUID = 0L;
     if (((bitField0_ & 0x00001000) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeBoolSize(21, configurationCachingEnabled_);
+    }
+    if (((bitField0_ & 0x00002000) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeBoolSize(22, parallelTaskExecution_);
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -1252,6 +1289,11 @@ private static final long serialVersionUID = 0L;
       if (getConfigurationCachingEnabled()
           != other.getConfigurationCachingEnabled()) return false;
     }
+    if (hasParallelTaskExecution() != other.hasParallelTaskExecution()) return false;
+    if (hasParallelTaskExecution()) {
+      if (getParallelTaskExecution()
+          != other.getParallelTaskExecution()) return false;
+    }
     if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
@@ -1336,6 +1378,11 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + CONFIGURATION_CACHING_ENABLED_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
           getConfigurationCachingEnabled());
+    }
+    if (hasParallelTaskExecution()) {
+      hash = (37 * hash) + PARALLEL_TASK_EXECUTION_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getParallelTaskExecution());
     }
     hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
@@ -1528,6 +1575,8 @@ private static final long serialVersionUID = 0L;
       bitField0_ = (bitField0_ & ~0x00008000);
       configurationCachingEnabled_ = false;
       bitField0_ = (bitField0_ & ~0x00010000);
+      parallelTaskExecution_ = false;
+      bitField0_ = (bitField0_ & ~0x00020000);
       return this;
     }
 
@@ -1643,6 +1692,10 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00010000) != 0)) {
         result.configurationCachingEnabled_ = configurationCachingEnabled_;
         to_bitField0_ |= 0x00001000;
+      }
+      if (((from_bitField0_ & 0x00020000) != 0)) {
+        result.parallelTaskExecution_ = parallelTaskExecution_;
+        to_bitField0_ |= 0x00002000;
       }
       result.bitField0_ = to_bitField0_;
       onBuilt();
@@ -1831,6 +1884,9 @@ private static final long serialVersionUID = 0L;
       }
       if (other.hasConfigurationCachingEnabled()) {
         setConfigurationCachingEnabled(other.getConfigurationCachingEnabled());
+      }
+      if (other.hasParallelTaskExecution()) {
+        setParallelTaskExecution(other.getParallelTaskExecution());
       }
       this.mergeUnknownFields(other.unknownFields);
       onChanged();
@@ -4182,6 +4238,59 @@ private static final long serialVersionUID = 0L;
     public Builder clearConfigurationCachingEnabled() {
       bitField0_ = (bitField0_ & ~0x00010000);
       configurationCachingEnabled_ = false;
+      onChanged();
+      return this;
+    }
+
+    private boolean parallelTaskExecution_ ;
+    /**
+     * <pre>
+     * If Gradle parallel task execution is enabled.
+     * </pre>
+     *
+     * <code>optional bool parallel_task_execution = 22;</code>
+     * @return Whether the parallelTaskExecution field is set.
+     */
+    public boolean hasParallelTaskExecution() {
+      return ((bitField0_ & 0x00020000) != 0);
+    }
+    /**
+     * <pre>
+     * If Gradle parallel task execution is enabled.
+     * </pre>
+     *
+     * <code>optional bool parallel_task_execution = 22;</code>
+     * @return The parallelTaskExecution.
+     */
+    public boolean getParallelTaskExecution() {
+      return parallelTaskExecution_;
+    }
+    /**
+     * <pre>
+     * If Gradle parallel task execution is enabled.
+     * </pre>
+     *
+     * <code>optional bool parallel_task_execution = 22;</code>
+     * @param value The parallelTaskExecution to set.
+     * @return This builder for chaining.
+     */
+    public Builder setParallelTaskExecution(boolean value) {
+      bitField0_ |= 0x00020000;
+      parallelTaskExecution_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * If Gradle parallel task execution is enabled.
+     * </pre>
+     *
+     * <code>optional bool parallel_task_execution = 22;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearParallelTaskExecution() {
+      bitField0_ = (bitField0_ & ~0x00020000);
+      parallelTaskExecution_ = false;
       onChanged();
       return this;
     }
