@@ -216,6 +216,14 @@ private static final long serialVersionUID = 0L;
      * <code>FEATURE_LOGIN = 2;</code>
      */
     FEATURE_LOGIN(2),
+    /**
+     * <pre>
+     * A user signs in via the authentication error notification.
+     * </pre>
+     *
+     * <code>AUTH_ERROR_NOTIFICATION_LOGIN = 3;</code>
+     */
+    AUTH_ERROR_NOTIFICATION_LOGIN(3),
     ;
 
     /**
@@ -238,6 +246,14 @@ private static final long serialVersionUID = 0L;
      * <code>FEATURE_LOGIN = 2;</code>
      */
     public static final int FEATURE_LOGIN_VALUE = 2;
+    /**
+     * <pre>
+     * A user signs in via the authentication error notification.
+     * </pre>
+     *
+     * <code>AUTH_ERROR_NOTIFICATION_LOGIN = 3;</code>
+     */
+    public static final int AUTH_ERROR_NOTIFICATION_LOGIN_VALUE = 3;
 
 
     public final int getNumber() {
@@ -263,6 +279,7 @@ private static final long serialVersionUID = 0L;
         case 0: return UNKNOWN_TYPE;
         case 1: return COMBINED_LOGIN;
         case 2: return FEATURE_LOGIN;
+        case 3: return AUTH_ERROR_NOTIFICATION_LOGIN;
         default: return null;
       }
     }
