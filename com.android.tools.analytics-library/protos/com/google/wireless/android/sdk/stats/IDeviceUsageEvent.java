@@ -294,6 +294,14 @@ private static final long serialVersionUID = 0L;
      * <code>UNSUPPORTED_METHOD = 59;</code>
      */
     UNSUPPORTED_METHOD(59),
+    /**
+     * <code>CREATE_REVERSE = 60;</code>
+     */
+    CREATE_REVERSE(60),
+    /**
+     * <code>REMOVE_REVERSE = 61;</code>
+     */
+    REMOVE_REVERSE(61),
     ;
 
     /**
@@ -536,6 +544,14 @@ private static final long serialVersionUID = 0L;
      * <code>UNSUPPORTED_METHOD = 59;</code>
      */
     public static final int UNSUPPORTED_METHOD_VALUE = 59;
+    /**
+     * <code>CREATE_REVERSE = 60;</code>
+     */
+    public static final int CREATE_REVERSE_VALUE = 60;
+    /**
+     * <code>REMOVE_REVERSE = 61;</code>
+     */
+    public static final int REMOVE_REVERSE_VALUE = 61;
 
 
     public final int getNumber() {
@@ -618,6 +634,8 @@ private static final long serialVersionUID = 0L;
         case 57: return RAW_EXEC2;
         case 58: return STAT_FILE;
         case 59: return UNSUPPORTED_METHOD;
+        case 60: return CREATE_REVERSE;
+        case 61: return REMOVE_REVERSE;
         default: return null;
       }
     }

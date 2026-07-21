@@ -2791,30 +2791,30 @@ public interface AndroidStudioEventOrBuilder extends
 
   /**
    * <pre>
-   * set when kind = ANDROID_CPP_EXTENSION
+   * set when kind = VS_PLUGIN
    * </pre>
    *
-   * <code>optional .android_studio.AndroidCppExtensionEvent android_cpp_extension_event = 99;</code>
-   * @return Whether the androidCppExtensionEvent field is set.
+   * <code>optional .android_studio.VsPluginEvent vs_plugin_event = 99;</code>
+   * @return Whether the vsPluginEvent field is set.
    */
-  boolean hasAndroidCppExtensionEvent();
+  boolean hasVsPluginEvent();
   /**
    * <pre>
-   * set when kind = ANDROID_CPP_EXTENSION
+   * set when kind = VS_PLUGIN
    * </pre>
    *
-   * <code>optional .android_studio.AndroidCppExtensionEvent android_cpp_extension_event = 99;</code>
-   * @return The androidCppExtensionEvent.
+   * <code>optional .android_studio.VsPluginEvent vs_plugin_event = 99;</code>
+   * @return The vsPluginEvent.
    */
-  com.google.wireless.android.sdk.stats.AndroidCppExtensionEvent getAndroidCppExtensionEvent();
+  com.google.wireless.android.sdk.stats.VsPluginEvent getVsPluginEvent();
   /**
    * <pre>
-   * set when kind = ANDROID_CPP_EXTENSION
+   * set when kind = VS_PLUGIN
    * </pre>
    *
-   * <code>optional .android_studio.AndroidCppExtensionEvent android_cpp_extension_event = 99;</code>
+   * <code>optional .android_studio.VsPluginEvent vs_plugin_event = 99;</code>
    */
-  com.google.wireless.android.sdk.stats.AndroidCppExtensionEventOrBuilder getAndroidCppExtensionEventOrBuilder();
+  com.google.wireless.android.sdk.stats.VsPluginEventOrBuilder getVsPluginEventOrBuilder();
 
   /**
    * <pre>
