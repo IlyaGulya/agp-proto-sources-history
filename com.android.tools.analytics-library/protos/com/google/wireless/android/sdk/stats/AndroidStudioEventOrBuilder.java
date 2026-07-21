@@ -5998,4 +5998,31 @@ public interface AndroidStudioEventOrBuilder extends
    * <code>optional .android_studio.AdbDelegateUsageEvent adb_delegate_usage_event = 214 [lazy = true];</code>
    */
   com.google.wireless.android.sdk.stats.AdbDelegateUsageEventOrBuilder getAdbDelegateUsageEventOrBuilder();
+
+  /**
+   * <pre>
+   * set when kind = SETUP_WIZARD_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.SetupWizardEvent setup_wizard_event = 215 [lazy = true];</code>
+   * @return Whether the setupWizardEvent field is set.
+   */
+  boolean hasSetupWizardEvent();
+  /**
+   * <pre>
+   * set when kind = SETUP_WIZARD_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.SetupWizardEvent setup_wizard_event = 215 [lazy = true];</code>
+   * @return The setupWizardEvent.
+   */
+  com.google.wireless.android.sdk.stats.SetupWizardEvent getSetupWizardEvent();
+  /**
+   * <pre>
+   * set when kind = SETUP_WIZARD_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.SetupWizardEvent setup_wizard_event = 215 [lazy = true];</code>
+   */
+  com.google.wireless.android.sdk.stats.SetupWizardEventOrBuilder getSetupWizardEventOrBuilder();
 }

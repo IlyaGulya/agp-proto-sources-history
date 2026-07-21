@@ -800,6 +800,10 @@ public enum BooleanOption
    * <code>DISABLE_INLINE_SCOPES_NUMBERS = 194;</code>
    */
   DISABLE_INLINE_SCOPES_NUMBERS(194),
+  /**
+   * <code>R8_OPTIMIZED_SHRINKING = 195;</code>
+   */
+  R8_OPTIMIZED_SHRINKING(195),
   UNRECOGNIZED(-1),
   ;
 
@@ -1583,6 +1587,10 @@ public enum BooleanOption
    * <code>DISABLE_INLINE_SCOPES_NUMBERS = 194;</code>
    */
   public static final int DISABLE_INLINE_SCOPES_NUMBERS_VALUE = 194;
+  /**
+   * <code>R8_OPTIMIZED_SHRINKING = 195;</code>
+   */
+  public static final int R8_OPTIMIZED_SHRINKING_VALUE = 195;
 
 
   public final int getNumber() {
@@ -1804,6 +1812,7 @@ public enum BooleanOption
       case 192: return SUPPORT_OEM_TOKEN_LIBRARIES;
       case 193: return SKIP_APKS_VIA_BUNDLE_IF_POSSIBLE;
       case 194: return DISABLE_INLINE_SCOPES_NUMBERS;
+      case 195: return R8_OPTIMIZED_SHRINKING;
       default: return null;
     }
   }
