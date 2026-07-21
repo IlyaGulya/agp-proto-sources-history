@@ -2070,6 +2070,21 @@ public final class AndroidStudioStats {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_android_studio_SmlChatBotEvent_UserFeedback_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_android_studio_SmlChatBotEvent_ActionInvoked_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_android_studio_SmlChatBotEvent_ActionInvoked_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_android_studio_SmlChatBotEvent_ActionResult_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_android_studio_SmlChatBotEvent_ActionResult_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_android_studio_SmlChatBotEvent_ParseResult_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_android_studio_SmlChatBotEvent_ParseResult_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
     internal_static_android_studio_SmlConfigurationEvent_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -7208,101 +7223,124 @@ public final class AndroidStudioStats {
       "\010metadata\030\001 \001(\0132#.android_studio.SmlResp" +
       "onseMetadata\032J\n\021TransformAccepted\0225\n\010met" +
       "adata\030\001 \001(\0132#.android_studio.SmlResponse" +
-      "MetadataB\013\n\ttransform\"\307\003\n\017SmlChatBotEven" +
+      "MetadataB\013\n\ttransform\"\311\n\n\017SmlChatBotEven" +
       "t\022?\n\010response\030\001 \001(\0132+.android_studio.Sml" +
       "ChatBotEvent.BotResponseH\000\022E\n\ruser_feedb" +
       "ack\030\002 \001(\0132,.android_studio.SmlChatBotEve" +
-      "nt.UserFeedbackH\000\032X\n\013BotResponse\0225\n\010meta" +
-      "data\030\001 \001(\0132#.android_studio.SmlResponseM" +
-      "etadata\022\022\n\nlatency_ms\030\002 \001(\004\032\306\001\n\014UserFeed" +
-      "back\0225\n\010metadata\030\001 \001(\0132#.android_studio." +
-      "SmlResponseMetadata\022I\n\tsentiment\030\002 \001(\01626" +
-      ".android_studio.SmlChatBotEvent.UserFeed" +
-      "back.Sentiment\"4\n\tSentiment\022\013\n\007UNKNOWN\020\000" +
-      "\022\014\n\010POSITIVE\020\001\022\014\n\010NEGATIVE\020\002B\t\n\007content\"" +
-      "e\n\025SmlConfigurationEvent\022\025\n\rsml_availabl" +
-      "e\030\001 \001(\010\022\032\n\022completion_enabled\030\002 \001(\010\022\031\n\021t" +
-      "ransform_enabled\030\003 \001(\010\"g\n\025KotlinSupportD" +
-      "eclined\022N\n\021template_renderer\030\001 \001(\01623.and" +
-      "roid_studio.AndroidStudioEvent.TemplateR" +
-      "enderer\"\362\002\n\025DeviceScreenshotEvent\022E\n\013dev" +
-      "ice_type\030\001 \001(\01620.android_studio.DeviceSc" +
-      "reenshotEvent.DeviceType\022Q\n\021decoration_o" +
-      "ption\030\002 \001(\01626.android_studio.DeviceScree" +
-      "nshotEvent.DecorationOption\"B\n\nDeviceTyp" +
-      "e\022\027\n\023UNKNOWN_DEVICE_TYPE\020\000\022\t\n\005PHONE\020\001\022\010\n" +
-      "\004WEAR\020\002\022\006\n\002TV\020\003\"{\n\020DecorationOption\022\035\n\031U" +
-      "NKNOWN_DECORATION_OPTION\020\000\022\017\n\013RECTANGULA" +
-      "R\020\001\022\026\n\022DISPLAY_SHAPE_CLIP\020\002\022\023\n\017PLAY_COMP" +
-      "ATIBLE\020\003\022\n\n\006FRAMED\020\004*\237\001\n\025EmulatorSnapsho" +
-      "tFlags\022\027\n\023SNAPSHOT_FLAGS_NONE\020\000\022%\n!SNAPS" +
-      "HOT_FLAGS_RAM_COMPRESSED_BIT\020\001\022*\n&SNAPSH" +
-      "OT_FLAGS_TEXTURES_COMPRESSED_BIT\020\002\022\032\n\026SN" +
-      "APSHOT_FLAGS_HDD_BIT\020\003*\254\002\n\031EmulatorSnaps" +
-      "hotSaveState\022+\n\'EMULATOR_SNAPSHOT_SAVE_S" +
-      "UCCEEDED_NORMAL\020\000\022!\n\035EMULATOR_SNAPSHOT_S" +
-      "AVE_FAILED\020\001\022.\n*EMULATOR_SNAPSHOT_SAVE_S" +
-      "KIPPED_UNSUPPORTED\020\002\022-\n)EMULATOR_SNAPSHO" +
-      "T_SAVE_SKIPPED_NOT_BOOTED\020\003\022.\n*EMULATOR_" +
-      "SNAPSHOT_SAVE_SKIPPED_NO_SNAPSHOT\020\004\0220\n,E" +
-      "MULATOR_SNAPSHOT_SAVE_SKIPPED_DISK_PRESS" +
-      "URE\020\005*\215\002\n\031EmulatorSnapshotLoadState\022+\n\'E" +
-      "MULATOR_SNAPSHOT_LOAD_SUCCEEDED_NORMAL\020\000" +
-      "\022!\n\035EMULATOR_SNAPSHOT_LOAD_FAILED\020\001\022.\n*E" +
-      "MULATOR_SNAPSHOT_LOAD_SKIPPED_UNSUPPORTE" +
-      "D\020\002\022&\n\"EMULATOR_SNAPSHOT_LOAD_NO_SNAPSHO" +
-      "T\020\003\022\'\n#EMULATOR_SNAPSHOT_LOAD_OLD_SNAPSH" +
-      "OT\020\004\022\037\n\033EMULATOR_SNAPSHOT_LOAD_HUNG\020\005*\335\n" +
-      "\n\035EmulatorSnapshotFailureReason\0220\n,EMULA" +
-      "TOR_SNAPSHOT_FAILURE_REASON_UNSPECIFIED\020" +
-      "\000\0223\n/EMULATOR_SNAPSHOT_FAILURE_REASON_CO" +
-      "RRUPTED_DATA\020\001\0223\n/EMULATOR_SNAPSHOT_FAIL" +
-      "URE_REASON_NO_SNAPSHOT_PB\020\002\0224\n0EMULATOR_" +
-      "SNAPSHOT_FAILURE_REASON_BAD_SNAPSHOT_PB\020" +
-      "\003\0229\n5EMULATOR_SNAPSHOT_FAILURE_REASON_IN" +
-      "COMPATIBLE_VERSION\020\004\0220\n,EMULATOR_SNAPSHO" +
-      "T_FAILURE_REASON_NO_RAM_FILE\020\005\0225\n1EMULAT" +
-      "OR_SNAPSHOT_FAILURE_REASON_NO_TEXTURES_F" +
-      "ILE\020\006\022<\n8EMULATOR_SNAPSHOT_FAILURE_REASO" +
-      "N_SNAPSHOTS_NOT_SUPPORTED\020\007\022?\n:EMULATOR_" +
-      "SNAPSHOT_FAILURE_REASON_UNRECOVERABLE_ER" +
-      "ROR_LIMIT\020\220N\022:\n5EMULATOR_SNAPSHOT_FAILUR" +
-      "E_REASON_NO_SNAPSHOT_IN_IMAGE\020\221N\022E\n@EMUL" +
-      "ATOR_SNAPSHOT_FAILURE_REASON_CONFIG_MISM" +
-      "ATCH_HOST_HYPERVISOR\020\222N\022>\n9EMULATOR_SNAP" +
-      "SHOT_FAILURE_REASON_CONFIG_MISMATCH_HOST" +
-      "_GPU\020\223N\022>\n9EMULATOR_SNAPSHOT_FAILURE_REA" +
-      "SON_CONFIG_MISMATCH_RENDERER\020\224N\022>\n9EMULA" +
-      "TOR_SNAPSHOT_FAILURE_REASON_CONFIG_MISMA" +
-      "TCH_FEATURES\020\225N\0229\n4EMULATOR_SNAPSHOT_FAI" +
-      "LURE_REASON_CONFIG_MISMATCH_AVD\020\226N\022:\n5EM" +
-      "ULATOR_SNAPSHOT_FAILURE_REASON_SYSTEM_IM" +
-      "AGE_CHANGED\020\227N\022=\n7EMULATOR_SNAPSHOT_FAIL" +
-      "URE_REASON_VALIDATION_ERROR_LIMIT\020\240\234\001\0225\n" +
-      "/EMULATOR_SNAPSHOT_FAILURE_REASON_INTERN" +
-      "AL_ERROR\020\241\234\001\022>\n8EMULATOR_SNAPSHOT_FAILUR" +
-      "E_REASON_EMULATION_ENGINE_FAILED\020\242\234\001\0221\n+" +
-      "EMULATOR_SNAPSHOT_FAILURE_REASON_RAM_FAI" +
-      "LED\020\243\234\001\0226\n0EMULATOR_SNAPSHOT_FAILURE_REA" +
-      "SON_TEXTURES_FAILED\020\244\234\001\0222\n,EMULATOR_SNAP" +
-      "SHOT_FAILURE_REASON_ADB_OFFLINE\020\245\234\001\0228\n2E" +
-      "MULATOR_SNAPSHOT_FAILURE_REASON_IN_PROGR" +
-      "ESS_LIMIT\020\260\352\001*[\n\014SearchOption\022\031\n\025UNKNOWN" +
-      "_SEARCH_OPTION\020\000\022\010\n\004NONE\020\001\022\024\n\020MULTIPLE_M" +
-      "ATCHES\020\002\022\020\n\014SINGLE_MATCH\020\003*\316\003\n\016EditorFil" +
-      "eType\022\013\n\007UNKNOWN\020\000\022\010\n\004JAVA\020\001\022\n\n\006KOTLIN\020\002" +
-      "\022\007\n\003XML\020\003\022\n\n\006GROOVY\020\004\022\016\n\nPROPERTIES\020\005\022\010\n" +
-      "\004JSON\020\006\022\021\n\rKOTLIN_SCRIPT\020\007\022\n\n\006NATIVE\020\010\022\020",
-      "\n\014XML_MANIFEST\020\t\022\020\n\014XML_RES_ANIM\020\n\022\024\n\020XM" +
-      "L_RES_ANIMATOR\020\013\022\021\n\rXML_RES_COLOR\020\014\022\024\n\020X" +
-      "ML_RES_DRAWABLE\020\r\022\020\n\014XML_RES_FONT\020\016\022\030\n\024X" +
-      "ML_RES_INTERPOLATOR\020\017\022\022\n\016XML_RES_LAYOUT\020" +
-      "\020\022\020\n\014XML_RES_MENU\020\021\022\022\n\016XML_RES_MIPMAP\020\022\022" +
-      "\026\n\022XML_RES_NAVIGATION\020\023\022\017\n\013XML_RES_RAW\020\024" +
-      "\022\026\n\022XML_RES_TRANSITION\020\025\022\022\n\016XML_RES_VALU" +
-      "ES\020\026\022\017\n\013XML_RES_XML\020\027\022\022\n\016KOTLIN_COMPOSE\020" +
-      "\030\022\010\n\004TOML\020\031B=\n%com.google.wireless.andro" +
-      "id.sdk.statsB\022AndroidStudioStatsP\001"
+      "nt.UserFeedbackH\000\022G\n\016action_invoked\030\003 \001(" +
+      "\0132-.android_studio.SmlChatBotEvent.Actio" +
+      "nInvokedH\000\022E\n\raction_result\030\004 \001(\0132,.andr" +
+      "oid_studio.SmlChatBotEvent.ActionResultH" +
+      "\000\022C\n\014parse_result\030\005 \001(\0132+.android_studio" +
+      ".SmlChatBotEvent.ParseResultH\000\032X\n\013BotRes" +
+      "ponse\0225\n\010metadata\030\001 \001(\0132#.android_studio" +
+      ".SmlResponseMetadata\022\022\n\nlatency_ms\030\002 \001(\004" +
+      "\032\306\001\n\014UserFeedback\0225\n\010metadata\030\001 \001(\0132#.an" +
+      "droid_studio.SmlResponseMetadata\022I\n\tsent" +
+      "iment\030\002 \001(\01626.android_studio.SmlChatBotE" +
+      "vent.UserFeedback.Sentiment\"4\n\tSentiment" +
+      "\022\013\n\007UNKNOWN\020\000\022\014\n\010POSITIVE\020\001\022\014\n\010NEGATIVE\020" +
+      "\002\032\261\001\n\rActionInvoked\0225\n\010metadata\030\001 \001(\0132#." +
+      "android_studio.SmlResponseMetadata\0226\n\006ac" +
+      "tion\030\002 \001(\0162&.android_studio.SmlChatBotEv" +
+      "ent.Action\0221\n\tfile_type\030\003 \001(\0162\036.android_" +
+      "studio.EditorFileType\032\301\001\n\014ActionResult\0225" +
+      "\n\010metadata\030\001 \001(\0132#.android_studio.SmlRes" +
+      "ponseMetadata\0226\n\006action\030\002 \001(\0162&.android_" +
+      "studio.SmlChatBotEvent.Action\0221\n\tfile_ty" +
+      "pe\030\003 \001(\0162\036.android_studio.EditorFileType" +
+      "\022\017\n\007success\030\004 \001(\010\032\210\001\n\013ParseResult\0225\n\010met" +
+      "adata\030\001 \001(\0132#.android_studio.SmlResponse" +
+      "Metadata\0221\n\tfile_type\030\002 \001(\0162\036.android_st" +
+      "udio.EditorFileType\022\017\n\007success\030\003 \001(\010\"\247\001\n" +
+      "\006Action\022\013\n\007INVALID\020\000\022\022\n\016MOVE_TO_EDITOR\020\001" +
+      "\022\021\n\rMOVE_TO_CARET\020\002\022\024\n\020MOVE_TO_NEW_FILE\020" +
+      "\003\022\022\n\016ADD_DEPENDENCY\020\004\022\020\n\014BROWSE_TOPIC\020\005\022" +
+      "\031\n\025EXPLORE_IN_PLAYGROUND\020\006\022\022\n\016MERGE_MANI" +
+      "FEST\020\007B\t\n\007content\"e\n\025SmlConfigurationEve" +
+      "nt\022\025\n\rsml_available\030\001 \001(\010\022\032\n\022completion_" +
+      "enabled\030\002 \001(\010\022\031\n\021transform_enabled\030\003 \001(\010" +
+      "\"g\n\025KotlinSupportDeclined\022N\n\021template_re" +
+      "nderer\030\001 \001(\01623.android_studio.AndroidStu" +
+      "dioEvent.TemplateRenderer\"\362\002\n\025DeviceScre" +
+      "enshotEvent\022E\n\013device_type\030\001 \001(\01620.andro" +
+      "id_studio.DeviceScreenshotEvent.DeviceTy" +
+      "pe\022Q\n\021decoration_option\030\002 \001(\01626.android_" +
+      "studio.DeviceScreenshotEvent.DecorationO" +
+      "ption\"B\n\nDeviceType\022\027\n\023UNKNOWN_DEVICE_TY" +
+      "PE\020\000\022\t\n\005PHONE\020\001\022\010\n\004WEAR\020\002\022\006\n\002TV\020\003\"{\n\020Dec" +
+      "orationOption\022\035\n\031UNKNOWN_DECORATION_OPTI" +
+      "ON\020\000\022\017\n\013RECTANGULAR\020\001\022\026\n\022DISPLAY_SHAPE_C" +
+      "LIP\020\002\022\023\n\017PLAY_COMPATIBLE\020\003\022\n\n\006FRAMED\020\004*\237" +
+      "\001\n\025EmulatorSnapshotFlags\022\027\n\023SNAPSHOT_FLA" +
+      "GS_NONE\020\000\022%\n!SNAPSHOT_FLAGS_RAM_COMPRESS" +
+      "ED_BIT\020\001\022*\n&SNAPSHOT_FLAGS_TEXTURES_COMP" +
+      "RESSED_BIT\020\002\022\032\n\026SNAPSHOT_FLAGS_HDD_BIT\020\003" +
+      "*\254\002\n\031EmulatorSnapshotSaveState\022+\n\'EMULAT" +
+      "OR_SNAPSHOT_SAVE_SUCCEEDED_NORMAL\020\000\022!\n\035E" +
+      "MULATOR_SNAPSHOT_SAVE_FAILED\020\001\022.\n*EMULAT" +
+      "OR_SNAPSHOT_SAVE_SKIPPED_UNSUPPORTED\020\002\022-" +
+      "\n)EMULATOR_SNAPSHOT_SAVE_SKIPPED_NOT_BOO" +
+      "TED\020\003\022.\n*EMULATOR_SNAPSHOT_SAVE_SKIPPED_" +
+      "NO_SNAPSHOT\020\004\0220\n,EMULATOR_SNAPSHOT_SAVE_" +
+      "SKIPPED_DISK_PRESSURE\020\005*\215\002\n\031EmulatorSnap" +
+      "shotLoadState\022+\n\'EMULATOR_SNAPSHOT_LOAD_" +
+      "SUCCEEDED_NORMAL\020\000\022!\n\035EMULATOR_SNAPSHOT_" +
+      "LOAD_FAILED\020\001\022.\n*EMULATOR_SNAPSHOT_LOAD_" +
+      "SKIPPED_UNSUPPORTED\020\002\022&\n\"EMULATOR_SNAPSH" +
+      "OT_LOAD_NO_SNAPSHOT\020\003\022\'\n#EMULATOR_SNAPSH" +
+      "OT_LOAD_OLD_SNAPSHOT\020\004\022\037\n\033EMULATOR_SNAPS" +
+      "HOT_LOAD_HUNG\020\005*\335\n\n\035EmulatorSnapshotFail" +
+      "ureReason\0220\n,EMULATOR_SNAPSHOT_FAILURE_R" +
+      "EASON_UNSPECIFIED\020\000\0223\n/EMULATOR_SNAPSHOT" +
+      "_FAILURE_REASON_CORRUPTED_DATA\020\001\0223\n/EMUL" +
+      "ATOR_SNAPSHOT_FAILURE_REASON_NO_SNAPSHOT" +
+      "_PB\020\002\0224\n0EMULATOR_SNAPSHOT_FAILURE_REASO" +
+      "N_BAD_SNAPSHOT_PB\020\003\0229\n5EMULATOR_SNAPSHOT" +
+      "_FAILURE_REASON_INCOMPATIBLE_VERSION\020\004\0220" +
+      "\n,EMULATOR_SNAPSHOT_FAILURE_REASON_NO_RA" +
+      "M_FILE\020\005\0225\n1EMULATOR_SNAPSHOT_FAILURE_RE" +
+      "ASON_NO_TEXTURES_FILE\020\006\022<\n8EMULATOR_SNAP" +
+      "SHOT_FAILURE_REASON_SNAPSHOTS_NOT_SUPPOR" +
+      "TED\020\007\022?\n:EMULATOR_SNAPSHOT_FAILURE_REASO" +
+      "N_UNRECOVERABLE_ERROR_LIMIT\020\220N\022:\n5EMULAT" +
+      "OR_SNAPSHOT_FAILURE_REASON_NO_SNAPSHOT_I" +
+      "N_IMAGE\020\221N\022E\n@EMULATOR_SNAPSHOT_FAILURE_" +
+      "REASON_CONFIG_MISMATCH_HOST_HYPERVISOR\020\222" +
+      "N\022>\n9EMULATOR_SNAPSHOT_FAILURE_REASON_CO",
+      "NFIG_MISMATCH_HOST_GPU\020\223N\022>\n9EMULATOR_SN" +
+      "APSHOT_FAILURE_REASON_CONFIG_MISMATCH_RE" +
+      "NDERER\020\224N\022>\n9EMULATOR_SNAPSHOT_FAILURE_R" +
+      "EASON_CONFIG_MISMATCH_FEATURES\020\225N\0229\n4EMU" +
+      "LATOR_SNAPSHOT_FAILURE_REASON_CONFIG_MIS" +
+      "MATCH_AVD\020\226N\022:\n5EMULATOR_SNAPSHOT_FAILUR" +
+      "E_REASON_SYSTEM_IMAGE_CHANGED\020\227N\022=\n7EMUL" +
+      "ATOR_SNAPSHOT_FAILURE_REASON_VALIDATION_" +
+      "ERROR_LIMIT\020\240\234\001\0225\n/EMULATOR_SNAPSHOT_FAI" +
+      "LURE_REASON_INTERNAL_ERROR\020\241\234\001\022>\n8EMULAT" +
+      "OR_SNAPSHOT_FAILURE_REASON_EMULATION_ENG" +
+      "INE_FAILED\020\242\234\001\0221\n+EMULATOR_SNAPSHOT_FAIL" +
+      "URE_REASON_RAM_FAILED\020\243\234\001\0226\n0EMULATOR_SN" +
+      "APSHOT_FAILURE_REASON_TEXTURES_FAILED\020\244\234" +
+      "\001\0222\n,EMULATOR_SNAPSHOT_FAILURE_REASON_AD" +
+      "B_OFFLINE\020\245\234\001\0228\n2EMULATOR_SNAPSHOT_FAILU" +
+      "RE_REASON_IN_PROGRESS_LIMIT\020\260\352\001*[\n\014Searc" +
+      "hOption\022\031\n\025UNKNOWN_SEARCH_OPTION\020\000\022\010\n\004NO" +
+      "NE\020\001\022\024\n\020MULTIPLE_MATCHES\020\002\022\020\n\014SINGLE_MAT" +
+      "CH\020\003*\316\003\n\016EditorFileType\022\013\n\007UNKNOWN\020\000\022\010\n\004" +
+      "JAVA\020\001\022\n\n\006KOTLIN\020\002\022\007\n\003XML\020\003\022\n\n\006GROOVY\020\004\022" +
+      "\016\n\nPROPERTIES\020\005\022\010\n\004JSON\020\006\022\021\n\rKOTLIN_SCRI" +
+      "PT\020\007\022\n\n\006NATIVE\020\010\022\020\n\014XML_MANIFEST\020\t\022\020\n\014XM" +
+      "L_RES_ANIM\020\n\022\024\n\020XML_RES_ANIMATOR\020\013\022\021\n\rXM" +
+      "L_RES_COLOR\020\014\022\024\n\020XML_RES_DRAWABLE\020\r\022\020\n\014X" +
+      "ML_RES_FONT\020\016\022\030\n\024XML_RES_INTERPOLATOR\020\017\022" +
+      "\022\n\016XML_RES_LAYOUT\020\020\022\020\n\014XML_RES_MENU\020\021\022\022\n" +
+      "\016XML_RES_MIPMAP\020\022\022\026\n\022XML_RES_NAVIGATION\020" +
+      "\023\022\017\n\013XML_RES_RAW\020\024\022\026\n\022XML_RES_TRANSITION" +
+      "\020\025\022\022\n\016XML_RES_VALUES\020\026\022\017\n\013XML_RES_XML\020\027\022" +
+      "\022\n\016KOTLIN_COMPOSE\020\030\022\010\n\004TOML\020\031B=\n%com.goo" +
+      "gle.wireless.android.sdk.statsB\022AndroidS" +
+      "tudioStatsP\001"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -9761,7 +9799,7 @@ public final class AndroidStudioStats {
     internal_static_android_studio_SmlChatBotEvent_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_android_studio_SmlChatBotEvent_descriptor,
-        new java.lang.String[] { "Response", "UserFeedback", "Content", });
+        new java.lang.String[] { "Response", "UserFeedback", "ActionInvoked", "ActionResult", "ParseResult", "Content", });
     internal_static_android_studio_SmlChatBotEvent_BotResponse_descriptor =
       internal_static_android_studio_SmlChatBotEvent_descriptor.getNestedTypes().get(0);
     internal_static_android_studio_SmlChatBotEvent_BotResponse_fieldAccessorTable = new
@@ -9774,6 +9812,24 @@ public final class AndroidStudioStats {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_android_studio_SmlChatBotEvent_UserFeedback_descriptor,
         new java.lang.String[] { "Metadata", "Sentiment", });
+    internal_static_android_studio_SmlChatBotEvent_ActionInvoked_descriptor =
+      internal_static_android_studio_SmlChatBotEvent_descriptor.getNestedTypes().get(2);
+    internal_static_android_studio_SmlChatBotEvent_ActionInvoked_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_android_studio_SmlChatBotEvent_ActionInvoked_descriptor,
+        new java.lang.String[] { "Metadata", "Action", "FileType", });
+    internal_static_android_studio_SmlChatBotEvent_ActionResult_descriptor =
+      internal_static_android_studio_SmlChatBotEvent_descriptor.getNestedTypes().get(3);
+    internal_static_android_studio_SmlChatBotEvent_ActionResult_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_android_studio_SmlChatBotEvent_ActionResult_descriptor,
+        new java.lang.String[] { "Metadata", "Action", "FileType", "Success", });
+    internal_static_android_studio_SmlChatBotEvent_ParseResult_descriptor =
+      internal_static_android_studio_SmlChatBotEvent_descriptor.getNestedTypes().get(4);
+    internal_static_android_studio_SmlChatBotEvent_ParseResult_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_android_studio_SmlChatBotEvent_ParseResult_descriptor,
+        new java.lang.String[] { "Metadata", "FileType", "Success", });
     internal_static_android_studio_SmlConfigurationEvent_descriptor =
       getDescriptor().getMessageTypes().get(291);
     internal_static_android_studio_SmlConfigurationEvent_fieldAccessorTable = new

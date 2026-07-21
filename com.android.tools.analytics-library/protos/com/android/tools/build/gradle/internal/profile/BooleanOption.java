@@ -698,6 +698,18 @@ public enum BooleanOption
    * <code>FUSED_LIBRARY_SUPPORT = 169;</code>
    */
   FUSED_LIBRARY_SUPPORT(169),
+  /**
+   * <code>SUPPORT_PAST_STUDIO_VERSIONS = 170;</code>
+   */
+  SUPPORT_PAST_STUDIO_VERSIONS(170),
+  /**
+   * <code>ENABLE_SCREENSHOT_TEST = 171;</code>
+   */
+  ENABLE_SCREENSHOT_TEST(171),
+  /**
+   * <code>LINT_ANALYSIS_PER_COMPONENT = 172;</code>
+   */
+  LINT_ANALYSIS_PER_COMPONENT(172),
   UNRECOGNIZED(-1),
   ;
 
@@ -1381,6 +1393,18 @@ public enum BooleanOption
    * <code>FUSED_LIBRARY_SUPPORT = 169;</code>
    */
   public static final int FUSED_LIBRARY_SUPPORT_VALUE = 169;
+  /**
+   * <code>SUPPORT_PAST_STUDIO_VERSIONS = 170;</code>
+   */
+  public static final int SUPPORT_PAST_STUDIO_VERSIONS_VALUE = 170;
+  /**
+   * <code>ENABLE_SCREENSHOT_TEST = 171;</code>
+   */
+  public static final int ENABLE_SCREENSHOT_TEST_VALUE = 171;
+  /**
+   * <code>LINT_ANALYSIS_PER_COMPONENT = 172;</code>
+   */
+  public static final int LINT_ANALYSIS_PER_COMPONENT_VALUE = 172;
 
 
   public final int getNumber() {
@@ -1577,6 +1601,9 @@ public enum BooleanOption
       case 167: return EXCLUDE_LIBRARY_COMPONENTS_FROM_CONSTRAINTS;
       case 168: return ENABLE_EMULATOR_CONTROL;
       case 169: return FUSED_LIBRARY_SUPPORT;
+      case 170: return SUPPORT_PAST_STUDIO_VERSIONS;
+      case 171: return ENABLE_SCREENSHOT_TEST;
+      case 172: return LINT_ANALYSIS_PER_COMPONENT;
       default: return null;
     }
   }
