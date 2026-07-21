@@ -4021,4 +4021,31 @@ public interface AndroidStudioEventOrBuilder extends
    * <code>optional .android_studio.EditorPickerEvent editor_picker_event = 143;</code>
    */
   com.google.wireless.android.sdk.stats.EditorPickerEventOrBuilder getEditorPickerEventOrBuilder();
+
+  /**
+   * <pre>
+   * set when kind = COMPOSE_MULTI_PREVIEW
+   * </pre>
+   *
+   * <code>optional .android_studio.ComposeMultiPreviewEvent compose_multi_preview_event = 144;</code>
+   * @return Whether the composeMultiPreviewEvent field is set.
+   */
+  boolean hasComposeMultiPreviewEvent();
+  /**
+   * <pre>
+   * set when kind = COMPOSE_MULTI_PREVIEW
+   * </pre>
+   *
+   * <code>optional .android_studio.ComposeMultiPreviewEvent compose_multi_preview_event = 144;</code>
+   * @return The composeMultiPreviewEvent.
+   */
+  com.google.wireless.android.sdk.stats.ComposeMultiPreviewEvent getComposeMultiPreviewEvent();
+  /**
+   * <pre>
+   * set when kind = COMPOSE_MULTI_PREVIEW
+   * </pre>
+   *
+   * <code>optional .android_studio.ComposeMultiPreviewEvent compose_multi_preview_event = 144;</code>
+   */
+  com.google.wireless.android.sdk.stats.ComposeMultiPreviewEventOrBuilder getComposeMultiPreviewEventOrBuilder();
 }

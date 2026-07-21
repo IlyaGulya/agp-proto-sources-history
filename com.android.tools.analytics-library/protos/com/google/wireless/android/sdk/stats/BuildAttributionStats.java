@@ -21,6 +21,8 @@ private static final long serialVersionUID = 0L;
   }
   private BuildAttributionStats() {
     buildAttributionReportSessionId_ = "";
+    buildAnalysisStatus_ = 0;
+    buildType_ = 0;
   }
 
   @java.lang.Override
@@ -86,6 +88,30 @@ private static final long serialVersionUID = 0L;
             buildAttributionReportSessionId_ = bs;
             break;
           }
+          case 32: {
+            int rawValue = input.readEnum();
+              @SuppressWarnings("deprecation")
+            com.google.wireless.android.sdk.stats.BuildAttributionStats.BuildAnalysisStatus value = com.google.wireless.android.sdk.stats.BuildAttributionStats.BuildAnalysisStatus.valueOf(rawValue);
+            if (value == null) {
+              unknownFields.mergeVarintField(4, rawValue);
+            } else {
+              bitField0_ |= 0x00000008;
+              buildAnalysisStatus_ = rawValue;
+            }
+            break;
+          }
+          case 40: {
+            int rawValue = input.readEnum();
+              @SuppressWarnings("deprecation")
+            com.google.wireless.android.sdk.stats.BuildAttributionStats.BuildType value = com.google.wireless.android.sdk.stats.BuildAttributionStats.BuildType.valueOf(rawValue);
+            if (value == null) {
+              unknownFields.mergeVarintField(5, rawValue);
+            } else {
+              bitField0_ |= 0x00000010;
+              buildType_ = rawValue;
+            }
+            break;
+          }
           default: {
             if (!parseUnknownField(
                 input, unknownFields, extensionRegistry, tag)) {
@@ -116,6 +142,274 @@ private static final long serialVersionUID = 0L;
     return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_BuildAttributionStats_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
             com.google.wireless.android.sdk.stats.BuildAttributionStats.class, com.google.wireless.android.sdk.stats.BuildAttributionStats.Builder.class);
+  }
+
+  /**
+   * Protobuf enum {@code android_studio.BuildAttributionStats.BuildAnalysisStatus}
+   */
+  public enum BuildAnalysisStatus
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <code>UNKNOWN_STATUS = 0;</code>
+     */
+    UNKNOWN_STATUS(0),
+    /**
+     * <pre>
+     * Build successful, analysis successful.
+     * </pre>
+     *
+     * <code>SUCCESS = 1;</code>
+     */
+    SUCCESS(1),
+    /**
+     * <pre>
+     * Build failed, no analysis done.
+     * </pre>
+     *
+     * <code>BUILD_FAILURE = 2;</code>
+     */
+    BUILD_FAILURE(2),
+    /**
+     * <pre>
+     * Build analyzer failed during events processing or post-processing.
+     * </pre>
+     *
+     * <code>ANALYSIS_FAILURE = 3;</code>
+     */
+    ANALYSIS_FAILURE(3),
+    ;
+
+    /**
+     * <code>UNKNOWN_STATUS = 0;</code>
+     */
+    public static final int UNKNOWN_STATUS_VALUE = 0;
+    /**
+     * <pre>
+     * Build successful, analysis successful.
+     * </pre>
+     *
+     * <code>SUCCESS = 1;</code>
+     */
+    public static final int SUCCESS_VALUE = 1;
+    /**
+     * <pre>
+     * Build failed, no analysis done.
+     * </pre>
+     *
+     * <code>BUILD_FAILURE = 2;</code>
+     */
+    public static final int BUILD_FAILURE_VALUE = 2;
+    /**
+     * <pre>
+     * Build analyzer failed during events processing or post-processing.
+     * </pre>
+     *
+     * <code>ANALYSIS_FAILURE = 3;</code>
+     */
+    public static final int ANALYSIS_FAILURE_VALUE = 3;
+
+
+    public final int getNumber() {
+      return value;
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     * @deprecated Use {@link #forNumber(int)} instead.
+     */
+    @java.lang.Deprecated
+    public static BuildAnalysisStatus valueOf(int value) {
+      return forNumber(value);
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     */
+    public static BuildAnalysisStatus forNumber(int value) {
+      switch (value) {
+        case 0: return UNKNOWN_STATUS;
+        case 1: return SUCCESS;
+        case 2: return BUILD_FAILURE;
+        case 3: return ANALYSIS_FAILURE;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<BuildAnalysisStatus>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static final com.google.protobuf.Internal.EnumLiteMap<
+        BuildAnalysisStatus> internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<BuildAnalysisStatus>() {
+            public BuildAnalysisStatus findValueByNumber(int number) {
+              return BuildAnalysisStatus.forNumber(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      return getDescriptor().getValues().get(ordinal());
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return com.google.wireless.android.sdk.stats.BuildAttributionStats.getDescriptor().getEnumTypes().get(0);
+    }
+
+    private static final BuildAnalysisStatus[] VALUES = values();
+
+    public static BuildAnalysisStatus valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int value;
+
+    private BuildAnalysisStatus(int value) {
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:android_studio.BuildAttributionStats.BuildAnalysisStatus)
+  }
+
+  /**
+   * Protobuf enum {@code android_studio.BuildAttributionStats.BuildType}
+   */
+  public enum BuildType
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <code>UNKNOWN_BUILD_TYPE = 0;</code>
+     */
+    UNKNOWN_BUILD_TYPE(0),
+    /**
+     * <code>REGULAR_BUILD = 1;</code>
+     */
+    REGULAR_BUILD(1),
+    /**
+     * <pre>
+     * Build triggered from Build Analyzer configuration cache warning page.
+     * </pre>
+     *
+     * <code>CONFIGURATION_CACHE_TRIAL_FLOW_BUILD = 2;</code>
+     */
+    CONFIGURATION_CACHE_TRIAL_FLOW_BUILD(2),
+    /**
+     * <pre>
+     * Build triggered from Build Analyzer jetifier warning page.
+     * </pre>
+     *
+     * <code>CHECK_JETIFIER_BUILD = 3;</code>
+     */
+    CHECK_JETIFIER_BUILD(3),
+    ;
+
+    /**
+     * <code>UNKNOWN_BUILD_TYPE = 0;</code>
+     */
+    public static final int UNKNOWN_BUILD_TYPE_VALUE = 0;
+    /**
+     * <code>REGULAR_BUILD = 1;</code>
+     */
+    public static final int REGULAR_BUILD_VALUE = 1;
+    /**
+     * <pre>
+     * Build triggered from Build Analyzer configuration cache warning page.
+     * </pre>
+     *
+     * <code>CONFIGURATION_CACHE_TRIAL_FLOW_BUILD = 2;</code>
+     */
+    public static final int CONFIGURATION_CACHE_TRIAL_FLOW_BUILD_VALUE = 2;
+    /**
+     * <pre>
+     * Build triggered from Build Analyzer jetifier warning page.
+     * </pre>
+     *
+     * <code>CHECK_JETIFIER_BUILD = 3;</code>
+     */
+    public static final int CHECK_JETIFIER_BUILD_VALUE = 3;
+
+
+    public final int getNumber() {
+      return value;
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     * @deprecated Use {@link #forNumber(int)} instead.
+     */
+    @java.lang.Deprecated
+    public static BuildType valueOf(int value) {
+      return forNumber(value);
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     */
+    public static BuildType forNumber(int value) {
+      switch (value) {
+        case 0: return UNKNOWN_BUILD_TYPE;
+        case 1: return REGULAR_BUILD;
+        case 2: return CONFIGURATION_CACHE_TRIAL_FLOW_BUILD;
+        case 3: return CHECK_JETIFIER_BUILD;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<BuildType>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static final com.google.protobuf.Internal.EnumLiteMap<
+        BuildType> internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<BuildType>() {
+            public BuildType findValueByNumber(int number) {
+              return BuildType.forNumber(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      return getDescriptor().getValues().get(ordinal());
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return com.google.wireless.android.sdk.stats.BuildAttributionStats.getDescriptor().getEnumTypes().get(1);
+    }
+
+    private static final BuildType[] VALUES = values();
+
+    public static BuildType valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int value;
+
+    private BuildType(int value) {
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:android_studio.BuildAttributionStats.BuildType)
   }
 
   private int bitField0_;
@@ -258,6 +552,44 @@ private static final long serialVersionUID = 0L;
     }
   }
 
+  public static final int BUILD_ANALYSIS_STATUS_FIELD_NUMBER = 4;
+  private int buildAnalysisStatus_;
+  /**
+   * <code>optional .android_studio.BuildAttributionStats.BuildAnalysisStatus build_analysis_status = 4;</code>
+   * @return Whether the buildAnalysisStatus field is set.
+   */
+  @java.lang.Override public boolean hasBuildAnalysisStatus() {
+    return ((bitField0_ & 0x00000008) != 0);
+  }
+  /**
+   * <code>optional .android_studio.BuildAttributionStats.BuildAnalysisStatus build_analysis_status = 4;</code>
+   * @return The buildAnalysisStatus.
+   */
+  @java.lang.Override public com.google.wireless.android.sdk.stats.BuildAttributionStats.BuildAnalysisStatus getBuildAnalysisStatus() {
+    @SuppressWarnings("deprecation")
+    com.google.wireless.android.sdk.stats.BuildAttributionStats.BuildAnalysisStatus result = com.google.wireless.android.sdk.stats.BuildAttributionStats.BuildAnalysisStatus.valueOf(buildAnalysisStatus_);
+    return result == null ? com.google.wireless.android.sdk.stats.BuildAttributionStats.BuildAnalysisStatus.UNKNOWN_STATUS : result;
+  }
+
+  public static final int BUILD_TYPE_FIELD_NUMBER = 5;
+  private int buildType_;
+  /**
+   * <code>optional .android_studio.BuildAttributionStats.BuildType build_type = 5;</code>
+   * @return Whether the buildType field is set.
+   */
+  @java.lang.Override public boolean hasBuildType() {
+    return ((bitField0_ & 0x00000010) != 0);
+  }
+  /**
+   * <code>optional .android_studio.BuildAttributionStats.BuildType build_type = 5;</code>
+   * @return The buildType.
+   */
+  @java.lang.Override public com.google.wireless.android.sdk.stats.BuildAttributionStats.BuildType getBuildType() {
+    @SuppressWarnings("deprecation")
+    com.google.wireless.android.sdk.stats.BuildAttributionStats.BuildType result = com.google.wireless.android.sdk.stats.BuildAttributionStats.BuildType.valueOf(buildType_);
+    return result == null ? com.google.wireless.android.sdk.stats.BuildAttributionStats.BuildType.UNKNOWN_BUILD_TYPE : result;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -281,6 +613,12 @@ private static final long serialVersionUID = 0L;
     if (((bitField0_ & 0x00000004) != 0)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 3, buildAttributionReportSessionId_);
     }
+    if (((bitField0_ & 0x00000008) != 0)) {
+      output.writeEnum(4, buildAnalysisStatus_);
+    }
+    if (((bitField0_ & 0x00000010) != 0)) {
+      output.writeEnum(5, buildType_);
+    }
     unknownFields.writeTo(output);
   }
 
@@ -300,6 +638,14 @@ private static final long serialVersionUID = 0L;
     }
     if (((bitField0_ & 0x00000004) != 0)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, buildAttributionReportSessionId_);
+    }
+    if (((bitField0_ & 0x00000008) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeEnumSize(4, buildAnalysisStatus_);
+    }
+    if (((bitField0_ & 0x00000010) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeEnumSize(5, buildType_);
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -331,6 +677,14 @@ private static final long serialVersionUID = 0L;
       if (!getBuildAttributionReportSessionId()
           .equals(other.getBuildAttributionReportSessionId())) return false;
     }
+    if (hasBuildAnalysisStatus() != other.hasBuildAnalysisStatus()) return false;
+    if (hasBuildAnalysisStatus()) {
+      if (buildAnalysisStatus_ != other.buildAnalysisStatus_) return false;
+    }
+    if (hasBuildType() != other.hasBuildType()) return false;
+    if (hasBuildType()) {
+      if (buildType_ != other.buildType_) return false;
+    }
     if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
@@ -353,6 +707,14 @@ private static final long serialVersionUID = 0L;
     if (hasBuildAttributionReportSessionId()) {
       hash = (37 * hash) + BUILD_ATTRIBUTION_REPORT_SESSION_ID_FIELD_NUMBER;
       hash = (53 * hash) + getBuildAttributionReportSessionId().hashCode();
+    }
+    if (hasBuildAnalysisStatus()) {
+      hash = (37 * hash) + BUILD_ANALYSIS_STATUS_FIELD_NUMBER;
+      hash = (53 * hash) + buildAnalysisStatus_;
+    }
+    if (hasBuildType()) {
+      hash = (37 * hash) + BUILD_TYPE_FIELD_NUMBER;
+      hash = (53 * hash) + buildType_;
     }
     hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
@@ -507,6 +869,10 @@ private static final long serialVersionUID = 0L;
       bitField0_ = (bitField0_ & ~0x00000002);
       buildAttributionReportSessionId_ = "";
       bitField0_ = (bitField0_ & ~0x00000004);
+      buildAnalysisStatus_ = 0;
+      bitField0_ = (bitField0_ & ~0x00000008);
+      buildType_ = 0;
+      bitField0_ = (bitField0_ & ~0x00000010);
       return this;
     }
 
@@ -555,6 +921,14 @@ private static final long serialVersionUID = 0L;
         to_bitField0_ |= 0x00000004;
       }
       result.buildAttributionReportSessionId_ = buildAttributionReportSessionId_;
+      if (((from_bitField0_ & 0x00000008) != 0)) {
+        to_bitField0_ |= 0x00000008;
+      }
+      result.buildAnalysisStatus_ = buildAnalysisStatus_;
+      if (((from_bitField0_ & 0x00000010) != 0)) {
+        to_bitField0_ |= 0x00000010;
+      }
+      result.buildType_ = buildType_;
       result.bitField0_ = to_bitField0_;
       onBuilt();
       return result;
@@ -614,6 +988,12 @@ private static final long serialVersionUID = 0L;
         bitField0_ |= 0x00000004;
         buildAttributionReportSessionId_ = other.buildAttributionReportSessionId_;
         onChanged();
+      }
+      if (other.hasBuildAnalysisStatus()) {
+        setBuildAnalysisStatus(other.getBuildAnalysisStatus());
+      }
+      if (other.hasBuildType()) {
+        setBuildType(other.getBuildType());
       }
       this.mergeUnknownFields(other.unknownFields);
       onChanged();
@@ -1067,6 +1447,92 @@ private static final long serialVersionUID = 0L;
   }
   bitField0_ |= 0x00000004;
       buildAttributionReportSessionId_ = value;
+      onChanged();
+      return this;
+    }
+
+    private int buildAnalysisStatus_ = 0;
+    /**
+     * <code>optional .android_studio.BuildAttributionStats.BuildAnalysisStatus build_analysis_status = 4;</code>
+     * @return Whether the buildAnalysisStatus field is set.
+     */
+    @java.lang.Override public boolean hasBuildAnalysisStatus() {
+      return ((bitField0_ & 0x00000008) != 0);
+    }
+    /**
+     * <code>optional .android_studio.BuildAttributionStats.BuildAnalysisStatus build_analysis_status = 4;</code>
+     * @return The buildAnalysisStatus.
+     */
+    @java.lang.Override
+    public com.google.wireless.android.sdk.stats.BuildAttributionStats.BuildAnalysisStatus getBuildAnalysisStatus() {
+      @SuppressWarnings("deprecation")
+      com.google.wireless.android.sdk.stats.BuildAttributionStats.BuildAnalysisStatus result = com.google.wireless.android.sdk.stats.BuildAttributionStats.BuildAnalysisStatus.valueOf(buildAnalysisStatus_);
+      return result == null ? com.google.wireless.android.sdk.stats.BuildAttributionStats.BuildAnalysisStatus.UNKNOWN_STATUS : result;
+    }
+    /**
+     * <code>optional .android_studio.BuildAttributionStats.BuildAnalysisStatus build_analysis_status = 4;</code>
+     * @param value The buildAnalysisStatus to set.
+     * @return This builder for chaining.
+     */
+    public Builder setBuildAnalysisStatus(com.google.wireless.android.sdk.stats.BuildAttributionStats.BuildAnalysisStatus value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      bitField0_ |= 0x00000008;
+      buildAnalysisStatus_ = value.getNumber();
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>optional .android_studio.BuildAttributionStats.BuildAnalysisStatus build_analysis_status = 4;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearBuildAnalysisStatus() {
+      bitField0_ = (bitField0_ & ~0x00000008);
+      buildAnalysisStatus_ = 0;
+      onChanged();
+      return this;
+    }
+
+    private int buildType_ = 0;
+    /**
+     * <code>optional .android_studio.BuildAttributionStats.BuildType build_type = 5;</code>
+     * @return Whether the buildType field is set.
+     */
+    @java.lang.Override public boolean hasBuildType() {
+      return ((bitField0_ & 0x00000010) != 0);
+    }
+    /**
+     * <code>optional .android_studio.BuildAttributionStats.BuildType build_type = 5;</code>
+     * @return The buildType.
+     */
+    @java.lang.Override
+    public com.google.wireless.android.sdk.stats.BuildAttributionStats.BuildType getBuildType() {
+      @SuppressWarnings("deprecation")
+      com.google.wireless.android.sdk.stats.BuildAttributionStats.BuildType result = com.google.wireless.android.sdk.stats.BuildAttributionStats.BuildType.valueOf(buildType_);
+      return result == null ? com.google.wireless.android.sdk.stats.BuildAttributionStats.BuildType.UNKNOWN_BUILD_TYPE : result;
+    }
+    /**
+     * <code>optional .android_studio.BuildAttributionStats.BuildType build_type = 5;</code>
+     * @param value The buildType to set.
+     * @return This builder for chaining.
+     */
+    public Builder setBuildType(com.google.wireless.android.sdk.stats.BuildAttributionStats.BuildType value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      bitField0_ |= 0x00000010;
+      buildType_ = value.getNumber();
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>optional .android_studio.BuildAttributionStats.BuildType build_type = 5;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearBuildType() {
+      bitField0_ = (bitField0_ & ~0x00000010);
+      buildType_ = 0;
       onChanged();
       return this;
     }
