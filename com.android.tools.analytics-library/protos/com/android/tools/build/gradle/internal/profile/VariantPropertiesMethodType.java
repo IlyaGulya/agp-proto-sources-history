@@ -437,6 +437,30 @@ public enum VariantPropertiesMethodType
    * <code>VARIANT_AAR_METADATA_MIN_AGP_VERSION = 97;</code>
    */
   VARIANT_AAR_METADATA_MIN_AGP_VERSION(97),
+  /**
+   * <code>COMPONENT_SOURCES_ACCESS = 98;</code>
+   */
+  COMPONENT_SOURCES_ACCESS(98),
+  /**
+   * <code>SOURCES_JAVA_ACCESS = 99;</code>
+   */
+  SOURCES_JAVA_ACCESS(99),
+  /**
+   * <code>SOURCES_DIRECTORIES_GET_ALL = 100;</code>
+   */
+  SOURCES_DIRECTORIES_GET_ALL(100),
+  /**
+   * <code>SOURCES_DIRECTORIES_ADD = 101;</code>
+   */
+  SOURCES_DIRECTORIES_ADD(101),
+  /**
+   * <code>SOURCES_DIRECTORIES_SRC_DIR = 102;</code>
+   */
+  SOURCES_DIRECTORIES_SRC_DIR(102),
+  /**
+   * <code>SOURCES_EXTRAS_ACCESS = 103;</code>
+   */
+  SOURCES_EXTRAS_ACCESS(103),
   UNRECOGNIZED(-1),
   ;
 
@@ -868,6 +892,30 @@ public enum VariantPropertiesMethodType
    * <code>VARIANT_AAR_METADATA_MIN_AGP_VERSION = 97;</code>
    */
   public static final int VARIANT_AAR_METADATA_MIN_AGP_VERSION_VALUE = 97;
+  /**
+   * <code>COMPONENT_SOURCES_ACCESS = 98;</code>
+   */
+  public static final int COMPONENT_SOURCES_ACCESS_VALUE = 98;
+  /**
+   * <code>SOURCES_JAVA_ACCESS = 99;</code>
+   */
+  public static final int SOURCES_JAVA_ACCESS_VALUE = 99;
+  /**
+   * <code>SOURCES_DIRECTORIES_GET_ALL = 100;</code>
+   */
+  public static final int SOURCES_DIRECTORIES_GET_ALL_VALUE = 100;
+  /**
+   * <code>SOURCES_DIRECTORIES_ADD = 101;</code>
+   */
+  public static final int SOURCES_DIRECTORIES_ADD_VALUE = 101;
+  /**
+   * <code>SOURCES_DIRECTORIES_SRC_DIR = 102;</code>
+   */
+  public static final int SOURCES_DIRECTORIES_SRC_DIR_VALUE = 102;
+  /**
+   * <code>SOURCES_EXTRAS_ACCESS = 103;</code>
+   */
+  public static final int SOURCES_EXTRAS_ACCESS_VALUE = 103;
 
 
   public final int getNumber() {
@@ -992,6 +1040,12 @@ public enum VariantPropertiesMethodType
       case 95: return ANNOTATION_PROCESSOR_ARGUMENT_PROVIDERS;
       case 96: return NESTED_COMPONENTS;
       case 97: return VARIANT_AAR_METADATA_MIN_AGP_VERSION;
+      case 98: return COMPONENT_SOURCES_ACCESS;
+      case 99: return SOURCES_JAVA_ACCESS;
+      case 100: return SOURCES_DIRECTORIES_GET_ALL;
+      case 101: return SOURCES_DIRECTORIES_ADD;
+      case 102: return SOURCES_DIRECTORIES_SRC_DIR;
+      case 103: return SOURCES_EXTRAS_ACCESS;
       default: return null;
     }
   }
