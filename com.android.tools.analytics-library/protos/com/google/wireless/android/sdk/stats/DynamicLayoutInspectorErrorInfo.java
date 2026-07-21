@@ -118,8 +118,24 @@ private static final long serialVersionUID = 0L;
     NOT_STARTED(1),
     /**
      * <pre>
+     * Test ADB roundtrip to device successful
+     * </pre>
+     *
+     * <code>ADB_PING = 4;</code>
+     */
+    ADB_PING(4),
+    /**
+     * <pre>
      * App Inspection states
      * ---------------------------------
+     * Studio has established an app inspection connection to the device
+     * </pre>
+     *
+     * <code>ATTACH_SUCCESS = 7;</code>
+     */
+    ATTACH_SUCCESS(7),
+    /**
+     * <pre>
      * Studio sent a request to start capturing
      * </pre>
      *
@@ -274,8 +290,24 @@ private static final long serialVersionUID = 0L;
     public static final int NOT_STARTED_VALUE = 1;
     /**
      * <pre>
+     * Test ADB roundtrip to device successful
+     * </pre>
+     *
+     * <code>ADB_PING = 4;</code>
+     */
+    public static final int ADB_PING_VALUE = 4;
+    /**
+     * <pre>
      * App Inspection states
      * ---------------------------------
+     * Studio has established an app inspection connection to the device
+     * </pre>
+     *
+     * <code>ATTACH_SUCCESS = 7;</code>
+     */
+    public static final int ATTACH_SUCCESS_VALUE = 7;
+    /**
+     * <pre>
      * Studio sent a request to start capturing
      * </pre>
      *
@@ -442,6 +474,8 @@ private static final long serialVersionUID = 0L;
       switch (value) {
         case 0: return UNKNOWN_ATTACH_ERROR_STATE;
         case 1: return NOT_STARTED;
+        case 4: return ADB_PING;
+        case 7: return ATTACH_SUCCESS;
         case 10: return START_REQUEST_SENT;
         case 20: return START_RECEIVED;
         case 30: return STARTED;

@@ -302,6 +302,14 @@ private static final long serialVersionUID = 0L;
      * <code>ENTRY_POINT_METHOD = 8;</code>
      */
     ENTRY_POINT_METHOD(8),
+    /**
+     * <code>ASSISTED_INJECTED_CONSTRUCTOR = 9;</code>
+     */
+    ASSISTED_INJECTED_CONSTRUCTOR(9),
+    /**
+     * <code>ASSISTED_FACTORY_METHOD = 10;</code>
+     */
+    ASSISTED_FACTORY_METHOD(10),
     ;
 
     /**
@@ -340,6 +348,14 @@ private static final long serialVersionUID = 0L;
      * <code>ENTRY_POINT_METHOD = 8;</code>
      */
     public static final int ENTRY_POINT_METHOD_VALUE = 8;
+    /**
+     * <code>ASSISTED_INJECTED_CONSTRUCTOR = 9;</code>
+     */
+    public static final int ASSISTED_INJECTED_CONSTRUCTOR_VALUE = 9;
+    /**
+     * <code>ASSISTED_FACTORY_METHOD = 10;</code>
+     */
+    public static final int ASSISTED_FACTORY_METHOD_VALUE = 10;
 
 
     public final int getNumber() {
@@ -371,6 +387,8 @@ private static final long serialVersionUID = 0L;
         case 6: return ENTRY_POINT;
         case 7: return COMPONENT_METHOD;
         case 8: return ENTRY_POINT_METHOD;
+        case 9: return ASSISTED_INJECTED_CONSTRUCTOR;
+        case 10: return ASSISTED_FACTORY_METHOD;
         default: return null;
       }
     }

@@ -1170,6 +1170,10 @@ public enum GradleTaskExecutionType
    * <code>MANAGED_DEVICE_INSTRUMENTATION_TEST_RESULT_AGGREGATION = 288;</code>
    */
   MANAGED_DEVICE_INSTRUMENTATION_TEST_RESULT_AGGREGATION(288),
+  /**
+   * <code>APP_ID_LIST = 289;</code>
+   */
+  APP_ID_LIST(289),
   UNRECOGNIZED(-1),
   ;
 
@@ -2329,6 +2333,10 @@ public enum GradleTaskExecutionType
    * <code>MANAGED_DEVICE_INSTRUMENTATION_TEST_RESULT_AGGREGATION = 288;</code>
    */
   public static final int MANAGED_DEVICE_INSTRUMENTATION_TEST_RESULT_AGGREGATION_VALUE = 288;
+  /**
+   * <code>APP_ID_LIST = 289;</code>
+   */
+  public static final int APP_ID_LIST_VALUE = 289;
 
 
   public final int getNumber() {
@@ -2644,6 +2652,7 @@ public enum GradleTaskExecutionType
       case 286: return MODULE_VARIANT_MODEL;
       case 287: return TEST_MODULE_VARIANT_MODEL;
       case 288: return MANAGED_DEVICE_INSTRUMENTATION_TEST_RESULT_AGGREGATION;
+      case 289: return APP_ID_LIST;
       default: return null;
     }
   }

@@ -157,6 +157,14 @@ private static final long serialVersionUID = 0L;
      * <code>CMAKE = 4;</code>
      */
     CMAKE(4),
+    /**
+     * <pre>
+     * Custom build system that uses Ninja as back end.
+     * </pre>
+     *
+     * <code>NINJA = 5;</code>
+     */
+    NINJA(5),
     ;
 
     /**
@@ -195,6 +203,14 @@ private static final long serialVersionUID = 0L;
      * <code>CMAKE = 4;</code>
      */
     public static final int CMAKE_VALUE = 4;
+    /**
+     * <pre>
+     * Custom build system that uses Ninja as back end.
+     * </pre>
+     *
+     * <code>NINJA = 5;</code>
+     */
+    public static final int NINJA_VALUE = 5;
 
 
     public final int getNumber() {
@@ -222,6 +238,7 @@ private static final long serialVersionUID = 0L;
         case 2: return NDK_COMPILE;
         case 3: return NDK_BUILD;
         case 4: return CMAKE;
+        case 5: return NINJA;
         default: return null;
       }
     }

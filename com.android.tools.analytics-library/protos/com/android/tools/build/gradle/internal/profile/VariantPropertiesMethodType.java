@@ -485,22 +485,6 @@ public enum VariantPropertiesMethodType
    * <code>INSTRUMENTATION_EXCLUDES = 107;</code>
    */
   INSTRUMENTATION_EXCLUDES(107),
-  /**
-   * <code>SOURCES_RES_ACCESS = 108;</code>
-   */
-  SOURCES_RES_ACCESS(108),
-  /**
-   * <code>SOURCES_AND_OVERLAY_DIRECTORIES_GET_ALL = 109;</code>
-   */
-  SOURCES_AND_OVERLAY_DIRECTORIES_GET_ALL(109),
-  /**
-   * <code>COMPILE_CLASSPATH = 110;</code>
-   */
-  COMPILE_CLASSPATH(110),
-  /**
-   * <code>BUNDLE_CONFIG_ADD_METADATA = 111;</code>
-   */
-  BUNDLE_CONFIG_ADD_METADATA(111),
   UNRECOGNIZED(-1),
   ;
 
@@ -980,22 +964,6 @@ public enum VariantPropertiesMethodType
    * <code>INSTRUMENTATION_EXCLUDES = 107;</code>
    */
   public static final int INSTRUMENTATION_EXCLUDES_VALUE = 107;
-  /**
-   * <code>SOURCES_RES_ACCESS = 108;</code>
-   */
-  public static final int SOURCES_RES_ACCESS_VALUE = 108;
-  /**
-   * <code>SOURCES_AND_OVERLAY_DIRECTORIES_GET_ALL = 109;</code>
-   */
-  public static final int SOURCES_AND_OVERLAY_DIRECTORIES_GET_ALL_VALUE = 109;
-  /**
-   * <code>COMPILE_CLASSPATH = 110;</code>
-   */
-  public static final int COMPILE_CLASSPATH_VALUE = 110;
-  /**
-   * <code>BUNDLE_CONFIG_ADD_METADATA = 111;</code>
-   */
-  public static final int BUNDLE_CONFIG_ADD_METADATA_VALUE = 111;
 
 
   public final int getNumber() {
@@ -1130,10 +1098,6 @@ public enum VariantPropertiesMethodType
       case 105: return INSTRUMENTATION_TRANSFORM_CLASSES_WITH;
       case 106: return INSTRUMENTATION_SET_ASM_FRAMES_COMPUTATUION_MODE;
       case 107: return INSTRUMENTATION_EXCLUDES;
-      case 108: return SOURCES_RES_ACCESS;
-      case 109: return SOURCES_AND_OVERLAY_DIRECTORIES_GET_ALL;
-      case 110: return COMPILE_CLASSPATH;
-      case 111: return BUNDLE_CONFIG_ADD_METADATA;
       default: return null;
     }
   }

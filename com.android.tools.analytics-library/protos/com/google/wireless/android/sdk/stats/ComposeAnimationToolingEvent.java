@@ -176,6 +176,38 @@ private static final long serialVersionUID = 0L;
      * <code>DRAG_ANIMATION_INSPECTOR_TIMELINE = 15;</code>
      */
     DRAG_ANIMATION_INSPECTOR_TIMELINE(15),
+    /**
+     * <code>EXPAND_ANIMATION_CARD = 16;</code>
+     */
+    EXPAND_ANIMATION_CARD(16),
+    /**
+     * <code>COLLAPSE_ANIMATION_CARD = 17;</code>
+     */
+    COLLAPSE_ANIMATION_CARD(17),
+    /**
+     * <code>OPEN_ANIMATION_IN_TAB = 18;</code>
+     */
+    OPEN_ANIMATION_IN_TAB(18),
+    /**
+     * <code>CLOSE_ANIMATION_TAB = 19;</code>
+     */
+    CLOSE_ANIMATION_TAB(19),
+    /**
+     * <code>LOCK_ANIMATION = 20;</code>
+     */
+    LOCK_ANIMATION(20),
+    /**
+     * <code>UNLOCK_ANIMATION = 21;</code>
+     */
+    UNLOCK_ANIMATION(21),
+    /**
+     * <code>RESET_TIMELINE = 22;</code>
+     */
+    RESET_TIMELINE(22),
+    /**
+     * <code>DRAG_TIMELINE_LINE = 23;</code>
+     */
+    DRAG_TIMELINE_LINE(23),
     ;
 
     /**
@@ -246,6 +278,38 @@ private static final long serialVersionUID = 0L;
      * <code>DRAG_ANIMATION_INSPECTOR_TIMELINE = 15;</code>
      */
     public static final int DRAG_ANIMATION_INSPECTOR_TIMELINE_VALUE = 15;
+    /**
+     * <code>EXPAND_ANIMATION_CARD = 16;</code>
+     */
+    public static final int EXPAND_ANIMATION_CARD_VALUE = 16;
+    /**
+     * <code>COLLAPSE_ANIMATION_CARD = 17;</code>
+     */
+    public static final int COLLAPSE_ANIMATION_CARD_VALUE = 17;
+    /**
+     * <code>OPEN_ANIMATION_IN_TAB = 18;</code>
+     */
+    public static final int OPEN_ANIMATION_IN_TAB_VALUE = 18;
+    /**
+     * <code>CLOSE_ANIMATION_TAB = 19;</code>
+     */
+    public static final int CLOSE_ANIMATION_TAB_VALUE = 19;
+    /**
+     * <code>LOCK_ANIMATION = 20;</code>
+     */
+    public static final int LOCK_ANIMATION_VALUE = 20;
+    /**
+     * <code>UNLOCK_ANIMATION = 21;</code>
+     */
+    public static final int UNLOCK_ANIMATION_VALUE = 21;
+    /**
+     * <code>RESET_TIMELINE = 22;</code>
+     */
+    public static final int RESET_TIMELINE_VALUE = 22;
+    /**
+     * <code>DRAG_TIMELINE_LINE = 23;</code>
+     */
+    public static final int DRAG_TIMELINE_LINE_VALUE = 23;
 
 
     public final int getNumber() {
@@ -284,6 +348,14 @@ private static final long serialVersionUID = 0L;
         case 13: return TRIGGER_SWAP_STATES_ACTION;
         case 14: return CLICK_ANIMATION_INSPECTOR_TIMELINE;
         case 15: return DRAG_ANIMATION_INSPECTOR_TIMELINE;
+        case 16: return EXPAND_ANIMATION_CARD;
+        case 17: return COLLAPSE_ANIMATION_CARD;
+        case 18: return OPEN_ANIMATION_IN_TAB;
+        case 19: return CLOSE_ANIMATION_TAB;
+        case 20: return LOCK_ANIMATION;
+        case 21: return UNLOCK_ANIMATION;
+        case 22: return RESET_TIMELINE;
+        case 23: return DRAG_TIMELINE_LINE;
         default: return null;
       }
     }
