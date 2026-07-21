@@ -476,6 +476,14 @@ private static final long serialVersionUID = 0L;
      * <code>JAVA_LIBRARY = 9;</code>
      */
     JAVA_LIBRARY(9),
+    /**
+     * <pre>
+     * For test fixtures components.
+     * </pre>
+     *
+     * <code>TEST_FIXTURES = 10;</code>
+     */
+    TEST_FIXTURES(10),
     ;
 
     /**
@@ -559,6 +567,14 @@ private static final long serialVersionUID = 0L;
      * <code>JAVA_LIBRARY = 9;</code>
      */
     public static final int JAVA_LIBRARY_VALUE = 9;
+    /**
+     * <pre>
+     * For test fixtures components.
+     * </pre>
+     *
+     * <code>TEST_FIXTURES = 10;</code>
+     */
+    public static final int TEST_FIXTURES_VALUE = 10;
 
 
     public final int getNumber() {
@@ -591,6 +607,7 @@ private static final long serialVersionUID = 0L;
         case 7: return OPTIONAL_APK;
         case 8: return TEST_APK;
         case 9: return JAVA_LIBRARY;
+        case 10: return TEST_FIXTURES;
         default: return null;
       }
     }

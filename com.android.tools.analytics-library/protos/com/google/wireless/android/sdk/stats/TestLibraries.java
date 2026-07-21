@@ -9,7 +9,7 @@ package com.google.wireless.android.sdk.stats;
  * Each string field of this message holds the exact version of the given
  * library (e.g. "1.0.0") that the field name represents. The field is populated
  * only if this project uses the given library.
- * Next ID: 31
+ * Next ID: 33
  * </pre>
  *
  * Protobuf type {@code android_studio.TestLibraries}
@@ -50,6 +50,8 @@ private static final long serialVersionUID = 0L;
     fragmentTestingVersion_ = "";
     benchmarkCommonVersion_ = "";
     benchmarkJunit4Version_ = "";
+    benchmarkMacroVersion_ = "";
+    benchmarkMacroJunit4Version_ = "";
     robolectricVersion_ = "";
     mockitoVersion_ = "";
     junitVersion_ = "";
@@ -101,13 +103,13 @@ private static final long serialVersionUID = 0L;
           }
           case 26: {
             com.google.protobuf.ByteString bs = input.readBytes();
-            bitField0_ |= 0x04000000;
+            bitField0_ |= 0x10000000;
             robolectricVersion_ = bs;
             break;
           }
           case 34: {
             com.google.protobuf.ByteString bs = input.readBytes();
-            bitField0_ |= 0x08000000;
+            bitField0_ |= 0x20000000;
             mockitoVersion_ = bs;
             break;
           }
@@ -191,13 +193,13 @@ private static final long serialVersionUID = 0L;
           }
           case 146: {
             com.google.protobuf.ByteString bs = input.readBytes();
-            bitField0_ |= 0x10000000;
+            bitField0_ |= 0x40000000;
             junitVersion_ = bs;
             break;
           }
           case 154: {
             com.google.protobuf.ByteString bs = input.readBytes();
-            bitField0_ |= 0x20000000;
+            bitField0_ |= 0x80000000;
             truthVersion_ = bs;
             break;
           }
@@ -265,6 +267,18 @@ private static final long serialVersionUID = 0L;
             com.google.protobuf.ByteString bs = input.readBytes();
             bitField0_ |= 0x00000100;
             testSupportEspressoAccessibilityVersion_ = bs;
+            break;
+          }
+          case 250: {
+            com.google.protobuf.ByteString bs = input.readBytes();
+            bitField0_ |= 0x04000000;
+            benchmarkMacroVersion_ = bs;
+            break;
+          }
+          case 258: {
+            com.google.protobuf.ByteString bs = input.readBytes();
+            bitField0_ |= 0x08000000;
+            benchmarkMacroJunit4Version_ = bs;
             break;
           }
           default: {
@@ -1782,6 +1796,120 @@ private static final long serialVersionUID = 0L;
     }
   }
 
+  public static final int BENCHMARK_MACRO_VERSION_FIELD_NUMBER = 31;
+  private volatile java.lang.Object benchmarkMacroVersion_;
+  /**
+   * <pre>
+   * "androidx.benchmark:benchmark-macro".
+   * </pre>
+   *
+   * <code>optional string benchmark_macro_version = 31;</code>
+   * @return Whether the benchmarkMacroVersion field is set.
+   */
+  public boolean hasBenchmarkMacroVersion() {
+    return ((bitField0_ & 0x04000000) != 0);
+  }
+  /**
+   * <pre>
+   * "androidx.benchmark:benchmark-macro".
+   * </pre>
+   *
+   * <code>optional string benchmark_macro_version = 31;</code>
+   * @return The benchmarkMacroVersion.
+   */
+  public java.lang.String getBenchmarkMacroVersion() {
+    java.lang.Object ref = benchmarkMacroVersion_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      if (bs.isValidUtf8()) {
+        benchmarkMacroVersion_ = s;
+      }
+      return s;
+    }
+  }
+  /**
+   * <pre>
+   * "androidx.benchmark:benchmark-macro".
+   * </pre>
+   *
+   * <code>optional string benchmark_macro_version = 31;</code>
+   * @return The bytes for benchmarkMacroVersion.
+   */
+  public com.google.protobuf.ByteString
+      getBenchmarkMacroVersionBytes() {
+    java.lang.Object ref = benchmarkMacroVersion_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      benchmarkMacroVersion_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
+  public static final int BENCHMARK_MACRO_JUNIT4_VERSION_FIELD_NUMBER = 32;
+  private volatile java.lang.Object benchmarkMacroJunit4Version_;
+  /**
+   * <pre>
+   * "androidx.benchmark:benchmark-macro-junit4".
+   * </pre>
+   *
+   * <code>optional string benchmark_macro_junit4_version = 32;</code>
+   * @return Whether the benchmarkMacroJunit4Version field is set.
+   */
+  public boolean hasBenchmarkMacroJunit4Version() {
+    return ((bitField0_ & 0x08000000) != 0);
+  }
+  /**
+   * <pre>
+   * "androidx.benchmark:benchmark-macro-junit4".
+   * </pre>
+   *
+   * <code>optional string benchmark_macro_junit4_version = 32;</code>
+   * @return The benchmarkMacroJunit4Version.
+   */
+  public java.lang.String getBenchmarkMacroJunit4Version() {
+    java.lang.Object ref = benchmarkMacroJunit4Version_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      if (bs.isValidUtf8()) {
+        benchmarkMacroJunit4Version_ = s;
+      }
+      return s;
+    }
+  }
+  /**
+   * <pre>
+   * "androidx.benchmark:benchmark-macro-junit4".
+   * </pre>
+   *
+   * <code>optional string benchmark_macro_junit4_version = 32;</code>
+   * @return The bytes for benchmarkMacroJunit4Version.
+   */
+  public com.google.protobuf.ByteString
+      getBenchmarkMacroJunit4VersionBytes() {
+    java.lang.Object ref = benchmarkMacroJunit4Version_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      benchmarkMacroJunit4Version_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
   public static final int ROBOLECTRIC_VERSION_FIELD_NUMBER = 3;
   private volatile java.lang.Object robolectricVersion_;
   /**
@@ -1793,7 +1921,7 @@ private static final long serialVersionUID = 0L;
    * @return Whether the robolectricVersion field is set.
    */
   public boolean hasRobolectricVersion() {
-    return ((bitField0_ & 0x04000000) != 0);
+    return ((bitField0_ & 0x10000000) != 0);
   }
   /**
    * <pre>
@@ -1850,7 +1978,7 @@ private static final long serialVersionUID = 0L;
    * @return Whether the mockitoVersion field is set.
    */
   public boolean hasMockitoVersion() {
-    return ((bitField0_ & 0x08000000) != 0);
+    return ((bitField0_ & 0x20000000) != 0);
   }
   /**
    * <pre>
@@ -1907,7 +2035,7 @@ private static final long serialVersionUID = 0L;
    * @return Whether the junitVersion field is set.
    */
   public boolean hasJunitVersion() {
-    return ((bitField0_ & 0x10000000) != 0);
+    return ((bitField0_ & 0x40000000) != 0);
   }
   /**
    * <pre>
@@ -1964,7 +2092,7 @@ private static final long serialVersionUID = 0L;
    * @return Whether the truthVersion field is set.
    */
   public boolean hasTruthVersion() {
-    return ((bitField0_ & 0x20000000) != 0);
+    return ((bitField0_ & 0x80000000) != 0);
   }
   /**
    * <pre>
@@ -2030,10 +2158,10 @@ private static final long serialVersionUID = 0L;
     if (((bitField0_ & 0x00020000) != 0)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 2, espressoVersion_);
     }
-    if (((bitField0_ & 0x04000000) != 0)) {
+    if (((bitField0_ & 0x10000000) != 0)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 3, robolectricVersion_);
     }
-    if (((bitField0_ & 0x08000000) != 0)) {
+    if (((bitField0_ & 0x20000000) != 0)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 4, mockitoVersion_);
     }
     if (((bitField0_ & 0x00040000) != 0)) {
@@ -2075,10 +2203,10 @@ private static final long serialVersionUID = 0L;
     if (((bitField0_ & 0x00800000) != 0)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 17, fragmentTestingVersion_);
     }
-    if (((bitField0_ & 0x10000000) != 0)) {
+    if (((bitField0_ & 0x40000000) != 0)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 18, junitVersion_);
     }
-    if (((bitField0_ & 0x20000000) != 0)) {
+    if (((bitField0_ & 0x80000000) != 0)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 19, truthVersion_);
     }
     if (((bitField0_ & 0x01000000) != 0)) {
@@ -2114,6 +2242,12 @@ private static final long serialVersionUID = 0L;
     if (((bitField0_ & 0x00000100) != 0)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 30, testSupportEspressoAccessibilityVersion_);
     }
+    if (((bitField0_ & 0x04000000) != 0)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 31, benchmarkMacroVersion_);
+    }
+    if (((bitField0_ & 0x08000000) != 0)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 32, benchmarkMacroJunit4Version_);
+    }
     unknownFields.writeTo(output);
   }
 
@@ -2129,10 +2263,10 @@ private static final long serialVersionUID = 0L;
     if (((bitField0_ & 0x00020000) != 0)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, espressoVersion_);
     }
-    if (((bitField0_ & 0x04000000) != 0)) {
+    if (((bitField0_ & 0x10000000) != 0)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, robolectricVersion_);
     }
-    if (((bitField0_ & 0x08000000) != 0)) {
+    if (((bitField0_ & 0x20000000) != 0)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, mockitoVersion_);
     }
     if (((bitField0_ & 0x00040000) != 0)) {
@@ -2174,10 +2308,10 @@ private static final long serialVersionUID = 0L;
     if (((bitField0_ & 0x00800000) != 0)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(17, fragmentTestingVersion_);
     }
-    if (((bitField0_ & 0x10000000) != 0)) {
+    if (((bitField0_ & 0x40000000) != 0)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(18, junitVersion_);
     }
-    if (((bitField0_ & 0x20000000) != 0)) {
+    if (((bitField0_ & 0x80000000) != 0)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(19, truthVersion_);
     }
     if (((bitField0_ & 0x01000000) != 0)) {
@@ -2212,6 +2346,12 @@ private static final long serialVersionUID = 0L;
     }
     if (((bitField0_ & 0x00000100) != 0)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(30, testSupportEspressoAccessibilityVersion_);
+    }
+    if (((bitField0_ & 0x04000000) != 0)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(31, benchmarkMacroVersion_);
+    }
+    if (((bitField0_ & 0x08000000) != 0)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(32, benchmarkMacroJunit4Version_);
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -2358,6 +2498,16 @@ private static final long serialVersionUID = 0L;
       if (!getBenchmarkJunit4Version()
           .equals(other.getBenchmarkJunit4Version())) return false;
     }
+    if (hasBenchmarkMacroVersion() != other.hasBenchmarkMacroVersion()) return false;
+    if (hasBenchmarkMacroVersion()) {
+      if (!getBenchmarkMacroVersion()
+          .equals(other.getBenchmarkMacroVersion())) return false;
+    }
+    if (hasBenchmarkMacroJunit4Version() != other.hasBenchmarkMacroJunit4Version()) return false;
+    if (hasBenchmarkMacroJunit4Version()) {
+      if (!getBenchmarkMacroJunit4Version()
+          .equals(other.getBenchmarkMacroJunit4Version())) return false;
+    }
     if (hasRobolectricVersion() != other.hasRobolectricVersion()) return false;
     if (hasRobolectricVersion()) {
       if (!getRobolectricVersion()
@@ -2493,6 +2643,14 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + BENCHMARK_JUNIT4_VERSION_FIELD_NUMBER;
       hash = (53 * hash) + getBenchmarkJunit4Version().hashCode();
     }
+    if (hasBenchmarkMacroVersion()) {
+      hash = (37 * hash) + BENCHMARK_MACRO_VERSION_FIELD_NUMBER;
+      hash = (53 * hash) + getBenchmarkMacroVersion().hashCode();
+    }
+    if (hasBenchmarkMacroJunit4Version()) {
+      hash = (37 * hash) + BENCHMARK_MACRO_JUNIT4_VERSION_FIELD_NUMBER;
+      hash = (53 * hash) + getBenchmarkMacroJunit4Version().hashCode();
+    }
     if (hasRobolectricVersion()) {
       hash = (37 * hash) + ROBOLECTRIC_VERSION_FIELD_NUMBER;
       hash = (53 * hash) + getRobolectricVersion().hashCode();
@@ -2610,7 +2768,7 @@ private static final long serialVersionUID = 0L;
    * Each string field of this message holds the exact version of the given
    * library (e.g. "1.0.0") that the field name represents. The field is populated
    * only if this project uses the given library.
-   * Next ID: 31
+   * Next ID: 33
    * </pre>
    *
    * Protobuf type {@code android_studio.TestLibraries}
@@ -2702,14 +2860,18 @@ private static final long serialVersionUID = 0L;
       bitField0_ = (bitField0_ & ~0x01000000);
       benchmarkJunit4Version_ = "";
       bitField0_ = (bitField0_ & ~0x02000000);
-      robolectricVersion_ = "";
+      benchmarkMacroVersion_ = "";
       bitField0_ = (bitField0_ & ~0x04000000);
-      mockitoVersion_ = "";
+      benchmarkMacroJunit4Version_ = "";
       bitField0_ = (bitField0_ & ~0x08000000);
-      junitVersion_ = "";
+      robolectricVersion_ = "";
       bitField0_ = (bitField0_ & ~0x10000000);
-      truthVersion_ = "";
+      mockitoVersion_ = "";
       bitField0_ = (bitField0_ & ~0x20000000);
+      junitVersion_ = "";
+      bitField0_ = (bitField0_ & ~0x40000000);
+      truthVersion_ = "";
+      bitField0_ = (bitField0_ & ~0x80000000);
       return this;
     }
 
@@ -2845,17 +3007,25 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x04000000) != 0)) {
         to_bitField0_ |= 0x04000000;
       }
-      result.robolectricVersion_ = robolectricVersion_;
+      result.benchmarkMacroVersion_ = benchmarkMacroVersion_;
       if (((from_bitField0_ & 0x08000000) != 0)) {
         to_bitField0_ |= 0x08000000;
       }
-      result.mockitoVersion_ = mockitoVersion_;
+      result.benchmarkMacroJunit4Version_ = benchmarkMacroJunit4Version_;
       if (((from_bitField0_ & 0x10000000) != 0)) {
         to_bitField0_ |= 0x10000000;
       }
-      result.junitVersion_ = junitVersion_;
+      result.robolectricVersion_ = robolectricVersion_;
       if (((from_bitField0_ & 0x20000000) != 0)) {
         to_bitField0_ |= 0x20000000;
+      }
+      result.mockitoVersion_ = mockitoVersion_;
+      if (((from_bitField0_ & 0x40000000) != 0)) {
+        to_bitField0_ |= 0x40000000;
+      }
+      result.junitVersion_ = junitVersion_;
+      if (((from_bitField0_ & 0x80000000) != 0)) {
+        to_bitField0_ |= 0x80000000;
       }
       result.truthVersion_ = truthVersion_;
       result.bitField0_ = to_bitField0_;
@@ -3037,23 +3207,33 @@ private static final long serialVersionUID = 0L;
         benchmarkJunit4Version_ = other.benchmarkJunit4Version_;
         onChanged();
       }
-      if (other.hasRobolectricVersion()) {
+      if (other.hasBenchmarkMacroVersion()) {
         bitField0_ |= 0x04000000;
+        benchmarkMacroVersion_ = other.benchmarkMacroVersion_;
+        onChanged();
+      }
+      if (other.hasBenchmarkMacroJunit4Version()) {
+        bitField0_ |= 0x08000000;
+        benchmarkMacroJunit4Version_ = other.benchmarkMacroJunit4Version_;
+        onChanged();
+      }
+      if (other.hasRobolectricVersion()) {
+        bitField0_ |= 0x10000000;
         robolectricVersion_ = other.robolectricVersion_;
         onChanged();
       }
       if (other.hasMockitoVersion()) {
-        bitField0_ |= 0x08000000;
+        bitField0_ |= 0x20000000;
         mockitoVersion_ = other.mockitoVersion_;
         onChanged();
       }
       if (other.hasJunitVersion()) {
-        bitField0_ |= 0x10000000;
+        bitField0_ |= 0x40000000;
         junitVersion_ = other.junitVersion_;
         onChanged();
       }
       if (other.hasTruthVersion()) {
-        bitField0_ |= 0x20000000;
+        bitField0_ |= 0x80000000;
         truthVersion_ = other.truthVersion_;
         onChanged();
       }
@@ -5895,6 +6075,222 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
+    private java.lang.Object benchmarkMacroVersion_ = "";
+    /**
+     * <pre>
+     * "androidx.benchmark:benchmark-macro".
+     * </pre>
+     *
+     * <code>optional string benchmark_macro_version = 31;</code>
+     * @return Whether the benchmarkMacroVersion field is set.
+     */
+    public boolean hasBenchmarkMacroVersion() {
+      return ((bitField0_ & 0x04000000) != 0);
+    }
+    /**
+     * <pre>
+     * "androidx.benchmark:benchmark-macro".
+     * </pre>
+     *
+     * <code>optional string benchmark_macro_version = 31;</code>
+     * @return The benchmarkMacroVersion.
+     */
+    public java.lang.String getBenchmarkMacroVersion() {
+      java.lang.Object ref = benchmarkMacroVersion_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          benchmarkMacroVersion_ = s;
+        }
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <pre>
+     * "androidx.benchmark:benchmark-macro".
+     * </pre>
+     *
+     * <code>optional string benchmark_macro_version = 31;</code>
+     * @return The bytes for benchmarkMacroVersion.
+     */
+    public com.google.protobuf.ByteString
+        getBenchmarkMacroVersionBytes() {
+      java.lang.Object ref = benchmarkMacroVersion_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        benchmarkMacroVersion_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <pre>
+     * "androidx.benchmark:benchmark-macro".
+     * </pre>
+     *
+     * <code>optional string benchmark_macro_version = 31;</code>
+     * @param value The benchmarkMacroVersion to set.
+     * @return This builder for chaining.
+     */
+    public Builder setBenchmarkMacroVersion(
+        java.lang.String value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x04000000;
+      benchmarkMacroVersion_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * "androidx.benchmark:benchmark-macro".
+     * </pre>
+     *
+     * <code>optional string benchmark_macro_version = 31;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearBenchmarkMacroVersion() {
+      bitField0_ = (bitField0_ & ~0x04000000);
+      benchmarkMacroVersion_ = getDefaultInstance().getBenchmarkMacroVersion();
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * "androidx.benchmark:benchmark-macro".
+     * </pre>
+     *
+     * <code>optional string benchmark_macro_version = 31;</code>
+     * @param value The bytes for benchmarkMacroVersion to set.
+     * @return This builder for chaining.
+     */
+    public Builder setBenchmarkMacroVersionBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x04000000;
+      benchmarkMacroVersion_ = value;
+      onChanged();
+      return this;
+    }
+
+    private java.lang.Object benchmarkMacroJunit4Version_ = "";
+    /**
+     * <pre>
+     * "androidx.benchmark:benchmark-macro-junit4".
+     * </pre>
+     *
+     * <code>optional string benchmark_macro_junit4_version = 32;</code>
+     * @return Whether the benchmarkMacroJunit4Version field is set.
+     */
+    public boolean hasBenchmarkMacroJunit4Version() {
+      return ((bitField0_ & 0x08000000) != 0);
+    }
+    /**
+     * <pre>
+     * "androidx.benchmark:benchmark-macro-junit4".
+     * </pre>
+     *
+     * <code>optional string benchmark_macro_junit4_version = 32;</code>
+     * @return The benchmarkMacroJunit4Version.
+     */
+    public java.lang.String getBenchmarkMacroJunit4Version() {
+      java.lang.Object ref = benchmarkMacroJunit4Version_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          benchmarkMacroJunit4Version_ = s;
+        }
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <pre>
+     * "androidx.benchmark:benchmark-macro-junit4".
+     * </pre>
+     *
+     * <code>optional string benchmark_macro_junit4_version = 32;</code>
+     * @return The bytes for benchmarkMacroJunit4Version.
+     */
+    public com.google.protobuf.ByteString
+        getBenchmarkMacroJunit4VersionBytes() {
+      java.lang.Object ref = benchmarkMacroJunit4Version_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        benchmarkMacroJunit4Version_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <pre>
+     * "androidx.benchmark:benchmark-macro-junit4".
+     * </pre>
+     *
+     * <code>optional string benchmark_macro_junit4_version = 32;</code>
+     * @param value The benchmarkMacroJunit4Version to set.
+     * @return This builder for chaining.
+     */
+    public Builder setBenchmarkMacroJunit4Version(
+        java.lang.String value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x08000000;
+      benchmarkMacroJunit4Version_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * "androidx.benchmark:benchmark-macro-junit4".
+     * </pre>
+     *
+     * <code>optional string benchmark_macro_junit4_version = 32;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearBenchmarkMacroJunit4Version() {
+      bitField0_ = (bitField0_ & ~0x08000000);
+      benchmarkMacroJunit4Version_ = getDefaultInstance().getBenchmarkMacroJunit4Version();
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * "androidx.benchmark:benchmark-macro-junit4".
+     * </pre>
+     *
+     * <code>optional string benchmark_macro_junit4_version = 32;</code>
+     * @param value The bytes for benchmarkMacroJunit4Version to set.
+     * @return This builder for chaining.
+     */
+    public Builder setBenchmarkMacroJunit4VersionBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x08000000;
+      benchmarkMacroJunit4Version_ = value;
+      onChanged();
+      return this;
+    }
+
     private java.lang.Object robolectricVersion_ = "";
     /**
      * <pre>
@@ -5905,7 +6301,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the robolectricVersion field is set.
      */
     public boolean hasRobolectricVersion() {
-      return ((bitField0_ & 0x04000000) != 0);
+      return ((bitField0_ & 0x10000000) != 0);
     }
     /**
      * <pre>
@@ -5964,7 +6360,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
     throw new NullPointerException();
   }
-  bitField0_ |= 0x04000000;
+  bitField0_ |= 0x10000000;
       robolectricVersion_ = value;
       onChanged();
       return this;
@@ -5978,7 +6374,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearRobolectricVersion() {
-      bitField0_ = (bitField0_ & ~0x04000000);
+      bitField0_ = (bitField0_ & ~0x10000000);
       robolectricVersion_ = getDefaultInstance().getRobolectricVersion();
       onChanged();
       return this;
@@ -5997,7 +6393,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
     throw new NullPointerException();
   }
-  bitField0_ |= 0x04000000;
+  bitField0_ |= 0x10000000;
       robolectricVersion_ = value;
       onChanged();
       return this;
@@ -6013,7 +6409,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the mockitoVersion field is set.
      */
     public boolean hasMockitoVersion() {
-      return ((bitField0_ & 0x08000000) != 0);
+      return ((bitField0_ & 0x20000000) != 0);
     }
     /**
      * <pre>
@@ -6072,7 +6468,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
     throw new NullPointerException();
   }
-  bitField0_ |= 0x08000000;
+  bitField0_ |= 0x20000000;
       mockitoVersion_ = value;
       onChanged();
       return this;
@@ -6086,7 +6482,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearMockitoVersion() {
-      bitField0_ = (bitField0_ & ~0x08000000);
+      bitField0_ = (bitField0_ & ~0x20000000);
       mockitoVersion_ = getDefaultInstance().getMockitoVersion();
       onChanged();
       return this;
@@ -6105,7 +6501,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
     throw new NullPointerException();
   }
-  bitField0_ |= 0x08000000;
+  bitField0_ |= 0x20000000;
       mockitoVersion_ = value;
       onChanged();
       return this;
@@ -6121,7 +6517,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the junitVersion field is set.
      */
     public boolean hasJunitVersion() {
-      return ((bitField0_ & 0x10000000) != 0);
+      return ((bitField0_ & 0x40000000) != 0);
     }
     /**
      * <pre>
@@ -6180,7 +6576,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
     throw new NullPointerException();
   }
-  bitField0_ |= 0x10000000;
+  bitField0_ |= 0x40000000;
       junitVersion_ = value;
       onChanged();
       return this;
@@ -6194,7 +6590,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearJunitVersion() {
-      bitField0_ = (bitField0_ & ~0x10000000);
+      bitField0_ = (bitField0_ & ~0x40000000);
       junitVersion_ = getDefaultInstance().getJunitVersion();
       onChanged();
       return this;
@@ -6213,7 +6609,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
     throw new NullPointerException();
   }
-  bitField0_ |= 0x10000000;
+  bitField0_ |= 0x40000000;
       junitVersion_ = value;
       onChanged();
       return this;
@@ -6229,7 +6625,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the truthVersion field is set.
      */
     public boolean hasTruthVersion() {
-      return ((bitField0_ & 0x20000000) != 0);
+      return ((bitField0_ & 0x80000000) != 0);
     }
     /**
      * <pre>
@@ -6288,7 +6684,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
     throw new NullPointerException();
   }
-  bitField0_ |= 0x20000000;
+  bitField0_ |= 0x80000000;
       truthVersion_ = value;
       onChanged();
       return this;
@@ -6302,7 +6698,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearTruthVersion() {
-      bitField0_ = (bitField0_ & ~0x20000000);
+      bitField0_ = (bitField0_ & ~0x80000000);
       truthVersion_ = getDefaultInstance().getTruthVersion();
       onChanged();
       return this;
@@ -6321,7 +6717,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
     throw new NullPointerException();
   }
-  bitField0_ |= 0x20000000;
+  bitField0_ |= 0x80000000;
       truthVersion_ = value;
       onChanged();
       return this;

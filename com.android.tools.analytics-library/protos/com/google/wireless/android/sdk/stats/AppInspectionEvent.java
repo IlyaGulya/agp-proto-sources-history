@@ -2899,6 +2899,10 @@ private static final long serialVersionUID = 0L;
          * <code>QUERY_RESULTS_EXPORT_BUTTON = 3;</code>
          */
         QUERY_RESULTS_EXPORT_BUTTON(3),
+        /**
+         * <code>TABLE_CONTENTS_EXPORT_BUTTON = 4;</code>
+         */
+        TABLE_CONTENTS_EXPORT_BUTTON(4),
         ;
 
         /**
@@ -2917,6 +2921,10 @@ private static final long serialVersionUID = 0L;
          * <code>QUERY_RESULTS_EXPORT_BUTTON = 3;</code>
          */
         public static final int QUERY_RESULTS_EXPORT_BUTTON_VALUE = 3;
+        /**
+         * <code>TABLE_CONTENTS_EXPORT_BUTTON = 4;</code>
+         */
+        public static final int TABLE_CONTENTS_EXPORT_BUTTON_VALUE = 4;
 
 
         public final int getNumber() {
@@ -2943,6 +2951,7 @@ private static final long serialVersionUID = 0L;
             case 1: return SCHEMA_TREE_CONTEXT_MENU;
             case 2: return SCHEMA_TREE_EXPORT_BUTTON;
             case 3: return QUERY_RESULTS_EXPORT_BUTTON;
+            case 4: return TABLE_CONTENTS_EXPORT_BUTTON;
             default: return null;
           }
         }
@@ -3472,7 +3481,7 @@ private static final long serialVersionUID = 0L;
 
       /**
        * <pre>
-       * What is the format of the soruce data
+       * What is the format of the source data
        * </pre>
        *
        * <code>optional .android_studio.AppInspectionEvent.DatabaseInspectorEvent.ExportOperationCompletedEvent.SourceFormat source_format = 2;</code>
@@ -3481,7 +3490,7 @@ private static final long serialVersionUID = 0L;
       boolean hasSourceFormat();
       /**
        * <pre>
-       * What is the format of the soruce data
+       * What is the format of the source data
        * </pre>
        *
        * <code>optional .android_studio.AppInspectionEvent.DatabaseInspectorEvent.ExportOperationCompletedEvent.SourceFormat source_format = 2;</code>
@@ -3526,6 +3535,25 @@ private static final long serialVersionUID = 0L;
        * @return The exportDurationMs.
        */
       int getExportDurationMs();
+
+      /**
+       * <pre>
+       * Was the operation successful? If not, how did it fail?
+       * </pre>
+       *
+       * <code>optional .android_studio.AppInspectionEvent.DatabaseInspectorEvent.ExportOperationCompletedEvent.Outcome outcome = 5;</code>
+       * @return Whether the outcome field is set.
+       */
+      boolean hasOutcome();
+      /**
+       * <pre>
+       * Was the operation successful? If not, how did it fail?
+       * </pre>
+       *
+       * <code>optional .android_studio.AppInspectionEvent.DatabaseInspectorEvent.ExportOperationCompletedEvent.Outcome outcome = 5;</code>
+       * @return The outcome.
+       */
+      com.google.wireless.android.sdk.stats.AppInspectionEvent.DatabaseInspectorEvent.ExportOperationCompletedEvent.Outcome getOutcome();
     }
     /**
      * <pre>
@@ -3547,6 +3575,7 @@ private static final long serialVersionUID = 0L;
         source_ = 0;
         sourceFormat_ = 0;
         destination_ = 0;
+        outcome_ = 0;
       }
 
       @java.lang.Override
@@ -3619,6 +3648,18 @@ private static final long serialVersionUID = 0L;
               case 32: {
                 bitField0_ |= 0x00000008;
                 exportDurationMs_ = input.readInt32();
+                break;
+              }
+              case 40: {
+                int rawValue = input.readEnum();
+                  @SuppressWarnings("deprecation")
+                com.google.wireless.android.sdk.stats.AppInspectionEvent.DatabaseInspectorEvent.ExportOperationCompletedEvent.Outcome value = com.google.wireless.android.sdk.stats.AppInspectionEvent.DatabaseInspectorEvent.ExportOperationCompletedEvent.Outcome.valueOf(rawValue);
+                if (value == null) {
+                  unknownFields.mergeVarintField(5, rawValue);
+                } else {
+                  bitField0_ |= 0x00000010;
+                  outcome_ = rawValue;
+                }
                 break;
               }
               default: {
@@ -3986,6 +4027,162 @@ private static final long serialVersionUID = 0L;
         // @@protoc_insertion_point(enum_scope:android_studio.AppInspectionEvent.DatabaseInspectorEvent.ExportOperationCompletedEvent.Destination)
       }
 
+      /**
+       * Protobuf enum {@code android_studio.AppInspectionEvent.DatabaseInspectorEvent.ExportOperationCompletedEvent.Outcome}
+       */
+      public enum Outcome
+          implements com.google.protobuf.ProtocolMessageEnum {
+        /**
+         * <code>UNKNOWN_OUTCOME = 0;</code>
+         */
+        UNKNOWN_OUTCOME(0),
+        /**
+         * <code>SUCCESS_OUTCOME = 1;</code>
+         */
+        SUCCESS_OUTCOME(1),
+        /**
+         * <code>CANCELLED_BY_USER_OUTCOME = 2;</code>
+         */
+        CANCELLED_BY_USER_OUTCOME(2),
+        /**
+         * <pre>
+         * Export operation was cancelled due to entering/leaving offline mode.
+         * </pre>
+         *
+         * <code>CANCELLED_BY_OFFLINE_MODE_CHANGE_OUTCOME = 3;</code>
+         */
+        CANCELLED_BY_OFFLINE_MODE_CHANGE_OUTCOME(3),
+        /**
+         * <pre>
+         * Cancelled due to normal flow, e.g. Studio shutting down.
+         * </pre>
+         *
+         * <code>CANCELLED_OTHER_OUTCOME = 4;</code>
+         */
+        CANCELLED_OTHER_OUTCOME(4),
+        /**
+         * <pre>
+         * Genuine error while performing an export operation.
+         * </pre>
+         *
+         * <code>ERROR_OUTCOME = 5;</code>
+         */
+        ERROR_OUTCOME(5),
+        ;
+
+        /**
+         * <code>UNKNOWN_OUTCOME = 0;</code>
+         */
+        public static final int UNKNOWN_OUTCOME_VALUE = 0;
+        /**
+         * <code>SUCCESS_OUTCOME = 1;</code>
+         */
+        public static final int SUCCESS_OUTCOME_VALUE = 1;
+        /**
+         * <code>CANCELLED_BY_USER_OUTCOME = 2;</code>
+         */
+        public static final int CANCELLED_BY_USER_OUTCOME_VALUE = 2;
+        /**
+         * <pre>
+         * Export operation was cancelled due to entering/leaving offline mode.
+         * </pre>
+         *
+         * <code>CANCELLED_BY_OFFLINE_MODE_CHANGE_OUTCOME = 3;</code>
+         */
+        public static final int CANCELLED_BY_OFFLINE_MODE_CHANGE_OUTCOME_VALUE = 3;
+        /**
+         * <pre>
+         * Cancelled due to normal flow, e.g. Studio shutting down.
+         * </pre>
+         *
+         * <code>CANCELLED_OTHER_OUTCOME = 4;</code>
+         */
+        public static final int CANCELLED_OTHER_OUTCOME_VALUE = 4;
+        /**
+         * <pre>
+         * Genuine error while performing an export operation.
+         * </pre>
+         *
+         * <code>ERROR_OUTCOME = 5;</code>
+         */
+        public static final int ERROR_OUTCOME_VALUE = 5;
+
+
+        public final int getNumber() {
+          return value;
+        }
+
+        /**
+         * @param value The numeric wire value of the corresponding enum entry.
+         * @return The enum associated with the given numeric wire value.
+         * @deprecated Use {@link #forNumber(int)} instead.
+         */
+        @java.lang.Deprecated
+        public static Outcome valueOf(int value) {
+          return forNumber(value);
+        }
+
+        /**
+         * @param value The numeric wire value of the corresponding enum entry.
+         * @return The enum associated with the given numeric wire value.
+         */
+        public static Outcome forNumber(int value) {
+          switch (value) {
+            case 0: return UNKNOWN_OUTCOME;
+            case 1: return SUCCESS_OUTCOME;
+            case 2: return CANCELLED_BY_USER_OUTCOME;
+            case 3: return CANCELLED_BY_OFFLINE_MODE_CHANGE_OUTCOME;
+            case 4: return CANCELLED_OTHER_OUTCOME;
+            case 5: return ERROR_OUTCOME;
+            default: return null;
+          }
+        }
+
+        public static com.google.protobuf.Internal.EnumLiteMap<Outcome>
+            internalGetValueMap() {
+          return internalValueMap;
+        }
+        private static final com.google.protobuf.Internal.EnumLiteMap<
+            Outcome> internalValueMap =
+              new com.google.protobuf.Internal.EnumLiteMap<Outcome>() {
+                public Outcome findValueByNumber(int number) {
+                  return Outcome.forNumber(number);
+                }
+              };
+
+        public final com.google.protobuf.Descriptors.EnumValueDescriptor
+            getValueDescriptor() {
+          return getDescriptor().getValues().get(ordinal());
+        }
+        public final com.google.protobuf.Descriptors.EnumDescriptor
+            getDescriptorForType() {
+          return getDescriptor();
+        }
+        public static final com.google.protobuf.Descriptors.EnumDescriptor
+            getDescriptor() {
+          return com.google.wireless.android.sdk.stats.AppInspectionEvent.DatabaseInspectorEvent.ExportOperationCompletedEvent.getDescriptor().getEnumTypes().get(3);
+        }
+
+        private static final Outcome[] VALUES = values();
+
+        public static Outcome valueOf(
+            com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+          if (desc.getType() != getDescriptor()) {
+            throw new java.lang.IllegalArgumentException(
+              "EnumValueDescriptor is not for this type.");
+          }
+          return VALUES[desc.getIndex()];
+        }
+
+        private final int value;
+
+        private Outcome(int value) {
+          this.value = value;
+        }
+
+        // @@protoc_insertion_point(enum_scope:android_studio.AppInspectionEvent.DatabaseInspectorEvent.ExportOperationCompletedEvent.Outcome)
+      }
+
       private int bitField0_;
       public static final int SOURCE_FIELD_NUMBER = 1;
       private int source_;
@@ -4018,7 +4215,7 @@ private static final long serialVersionUID = 0L;
       private int sourceFormat_;
       /**
        * <pre>
-       * What is the format of the soruce data
+       * What is the format of the source data
        * </pre>
        *
        * <code>optional .android_studio.AppInspectionEvent.DatabaseInspectorEvent.ExportOperationCompletedEvent.SourceFormat source_format = 2;</code>
@@ -4029,7 +4226,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * What is the format of the soruce data
+       * What is the format of the source data
        * </pre>
        *
        * <code>optional .android_studio.AppInspectionEvent.DatabaseInspectorEvent.ExportOperationCompletedEvent.SourceFormat source_format = 2;</code>
@@ -4093,6 +4290,33 @@ private static final long serialVersionUID = 0L;
         return exportDurationMs_;
       }
 
+      public static final int OUTCOME_FIELD_NUMBER = 5;
+      private int outcome_;
+      /**
+       * <pre>
+       * Was the operation successful? If not, how did it fail?
+       * </pre>
+       *
+       * <code>optional .android_studio.AppInspectionEvent.DatabaseInspectorEvent.ExportOperationCompletedEvent.Outcome outcome = 5;</code>
+       * @return Whether the outcome field is set.
+       */
+      public boolean hasOutcome() {
+        return ((bitField0_ & 0x00000010) != 0);
+      }
+      /**
+       * <pre>
+       * Was the operation successful? If not, how did it fail?
+       * </pre>
+       *
+       * <code>optional .android_studio.AppInspectionEvent.DatabaseInspectorEvent.ExportOperationCompletedEvent.Outcome outcome = 5;</code>
+       * @return The outcome.
+       */
+      public com.google.wireless.android.sdk.stats.AppInspectionEvent.DatabaseInspectorEvent.ExportOperationCompletedEvent.Outcome getOutcome() {
+        @SuppressWarnings("deprecation")
+        com.google.wireless.android.sdk.stats.AppInspectionEvent.DatabaseInspectorEvent.ExportOperationCompletedEvent.Outcome result = com.google.wireless.android.sdk.stats.AppInspectionEvent.DatabaseInspectorEvent.ExportOperationCompletedEvent.Outcome.valueOf(outcome_);
+        return result == null ? com.google.wireless.android.sdk.stats.AppInspectionEvent.DatabaseInspectorEvent.ExportOperationCompletedEvent.Outcome.UNKNOWN_OUTCOME : result;
+      }
+
       private byte memoizedIsInitialized = -1;
       @java.lang.Override
       public final boolean isInitialized() {
@@ -4119,6 +4343,9 @@ private static final long serialVersionUID = 0L;
         if (((bitField0_ & 0x00000008) != 0)) {
           output.writeInt32(4, exportDurationMs_);
         }
+        if (((bitField0_ & 0x00000010) != 0)) {
+          output.writeEnum(5, outcome_);
+        }
         unknownFields.writeTo(output);
       }
 
@@ -4143,6 +4370,10 @@ private static final long serialVersionUID = 0L;
         if (((bitField0_ & 0x00000008) != 0)) {
           size += com.google.protobuf.CodedOutputStream
             .computeInt32Size(4, exportDurationMs_);
+        }
+        if (((bitField0_ & 0x00000010) != 0)) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeEnumSize(5, outcome_);
         }
         size += unknownFields.getSerializedSize();
         memoizedSize = size;
@@ -4176,6 +4407,10 @@ private static final long serialVersionUID = 0L;
           if (getExportDurationMs()
               != other.getExportDurationMs()) return false;
         }
+        if (hasOutcome() != other.hasOutcome()) return false;
+        if (hasOutcome()) {
+          if (outcome_ != other.outcome_) return false;
+        }
         if (!unknownFields.equals(other.unknownFields)) return false;
         return true;
       }
@@ -4202,6 +4437,10 @@ private static final long serialVersionUID = 0L;
         if (hasExportDurationMs()) {
           hash = (37 * hash) + EXPORT_DURATION_MS_FIELD_NUMBER;
           hash = (53 * hash) + getExportDurationMs();
+        }
+        if (hasOutcome()) {
+          hash = (37 * hash) + OUTCOME_FIELD_NUMBER;
+          hash = (53 * hash) + outcome_;
         }
         hash = (29 * hash) + unknownFields.hashCode();
         memoizedHashCode = hash;
@@ -4348,6 +4587,8 @@ private static final long serialVersionUID = 0L;
           bitField0_ = (bitField0_ & ~0x00000004);
           exportDurationMs_ = 0;
           bitField0_ = (bitField0_ & ~0x00000008);
+          outcome_ = 0;
+          bitField0_ = (bitField0_ & ~0x00000010);
           return this;
         }
 
@@ -4392,6 +4633,10 @@ private static final long serialVersionUID = 0L;
             result.exportDurationMs_ = exportDurationMs_;
             to_bitField0_ |= 0x00000008;
           }
+          if (((from_bitField0_ & 0x00000010) != 0)) {
+            to_bitField0_ |= 0x00000010;
+          }
+          result.outcome_ = outcome_;
           result.bitField0_ = to_bitField0_;
           onBuilt();
           return result;
@@ -4452,6 +4697,9 @@ private static final long serialVersionUID = 0L;
           }
           if (other.hasExportDurationMs()) {
             setExportDurationMs(other.getExportDurationMs());
+          }
+          if (other.hasOutcome()) {
+            setOutcome(other.getOutcome());
           }
           this.mergeUnknownFields(other.unknownFields);
           onChanged();
@@ -4544,7 +4792,7 @@ private static final long serialVersionUID = 0L;
         private int sourceFormat_ = 0;
         /**
          * <pre>
-         * What is the format of the soruce data
+         * What is the format of the source data
          * </pre>
          *
          * <code>optional .android_studio.AppInspectionEvent.DatabaseInspectorEvent.ExportOperationCompletedEvent.SourceFormat source_format = 2;</code>
@@ -4555,7 +4803,7 @@ private static final long serialVersionUID = 0L;
         }
         /**
          * <pre>
-         * What is the format of the soruce data
+         * What is the format of the source data
          * </pre>
          *
          * <code>optional .android_studio.AppInspectionEvent.DatabaseInspectorEvent.ExportOperationCompletedEvent.SourceFormat source_format = 2;</code>
@@ -4568,7 +4816,7 @@ private static final long serialVersionUID = 0L;
         }
         /**
          * <pre>
-         * What is the format of the soruce data
+         * What is the format of the source data
          * </pre>
          *
          * <code>optional .android_studio.AppInspectionEvent.DatabaseInspectorEvent.ExportOperationCompletedEvent.SourceFormat source_format = 2;</code>
@@ -4586,7 +4834,7 @@ private static final long serialVersionUID = 0L;
         }
         /**
          * <pre>
-         * What is the format of the soruce data
+         * What is the format of the source data
          * </pre>
          *
          * <code>optional .android_studio.AppInspectionEvent.DatabaseInspectorEvent.ExportOperationCompletedEvent.SourceFormat source_format = 2;</code>
@@ -4706,6 +4954,64 @@ private static final long serialVersionUID = 0L;
         public Builder clearExportDurationMs() {
           bitField0_ = (bitField0_ & ~0x00000008);
           exportDurationMs_ = 0;
+          onChanged();
+          return this;
+        }
+
+        private int outcome_ = 0;
+        /**
+         * <pre>
+         * Was the operation successful? If not, how did it fail?
+         * </pre>
+         *
+         * <code>optional .android_studio.AppInspectionEvent.DatabaseInspectorEvent.ExportOperationCompletedEvent.Outcome outcome = 5;</code>
+         * @return Whether the outcome field is set.
+         */
+        public boolean hasOutcome() {
+          return ((bitField0_ & 0x00000010) != 0);
+        }
+        /**
+         * <pre>
+         * Was the operation successful? If not, how did it fail?
+         * </pre>
+         *
+         * <code>optional .android_studio.AppInspectionEvent.DatabaseInspectorEvent.ExportOperationCompletedEvent.Outcome outcome = 5;</code>
+         * @return The outcome.
+         */
+        public com.google.wireless.android.sdk.stats.AppInspectionEvent.DatabaseInspectorEvent.ExportOperationCompletedEvent.Outcome getOutcome() {
+          @SuppressWarnings("deprecation")
+          com.google.wireless.android.sdk.stats.AppInspectionEvent.DatabaseInspectorEvent.ExportOperationCompletedEvent.Outcome result = com.google.wireless.android.sdk.stats.AppInspectionEvent.DatabaseInspectorEvent.ExportOperationCompletedEvent.Outcome.valueOf(outcome_);
+          return result == null ? com.google.wireless.android.sdk.stats.AppInspectionEvent.DatabaseInspectorEvent.ExportOperationCompletedEvent.Outcome.UNKNOWN_OUTCOME : result;
+        }
+        /**
+         * <pre>
+         * Was the operation successful? If not, how did it fail?
+         * </pre>
+         *
+         * <code>optional .android_studio.AppInspectionEvent.DatabaseInspectorEvent.ExportOperationCompletedEvent.Outcome outcome = 5;</code>
+         * @param value The outcome to set.
+         * @return This builder for chaining.
+         */
+        public Builder setOutcome(com.google.wireless.android.sdk.stats.AppInspectionEvent.DatabaseInspectorEvent.ExportOperationCompletedEvent.Outcome value) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          bitField0_ |= 0x00000010;
+          outcome_ = value.getNumber();
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Was the operation successful? If not, how did it fail?
+         * </pre>
+         *
+         * <code>optional .android_studio.AppInspectionEvent.DatabaseInspectorEvent.ExportOperationCompletedEvent.Outcome outcome = 5;</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearOutcome() {
+          bitField0_ = (bitField0_ & ~0x00000010);
+          outcome_ = 0;
           onChanged();
           return this;
         }
