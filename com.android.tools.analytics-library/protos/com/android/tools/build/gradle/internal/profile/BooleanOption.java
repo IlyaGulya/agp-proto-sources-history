@@ -948,6 +948,10 @@ public enum BooleanOption
    * <code>LINT_REPORT_AGGREGATION = 231;</code>
    */
   LINT_REPORT_AGGREGATION(231),
+  /**
+   * <code>ENABLE_JAVA_RESOURCE_OPTIMIZATIONS = 232;</code>
+   */
+  ENABLE_JAVA_RESOURCE_OPTIMIZATIONS(232),
   UNRECOGNIZED(-1),
   ;
 
@@ -1879,6 +1883,10 @@ public enum BooleanOption
    * <code>LINT_REPORT_AGGREGATION = 231;</code>
    */
   public static final int LINT_REPORT_AGGREGATION_VALUE = 231;
+  /**
+   * <code>ENABLE_JAVA_RESOURCE_OPTIMIZATIONS = 232;</code>
+   */
+  public static final int ENABLE_JAVA_RESOURCE_OPTIMIZATIONS_VALUE = 232;
 
 
   public final int getNumber() {
@@ -2137,6 +2145,7 @@ public enum BooleanOption
       case 229: return DISALLOW_KOTLIN_SOURCE_SETS;
       case 230: return TREAT_MANIFEST_MERGER_WARNINGS_AS_ERRORS;
       case 231: return LINT_REPORT_AGGREGATION;
+      case 232: return ENABLE_JAVA_RESOURCE_OPTIMIZATIONS;
       default: return null;
     }
   }

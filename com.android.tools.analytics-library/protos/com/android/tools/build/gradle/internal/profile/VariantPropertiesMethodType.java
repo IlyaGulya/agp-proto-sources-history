@@ -805,6 +805,22 @@ public enum VariantPropertiesMethodType
    * <code>COMPILE_SDK = 186;</code>
    */
   COMPILE_SDK(186),
+  /**
+   * <code>SOURCES_AAR_KEEP_RULES_ACCESS = 187;</code>
+   */
+  SOURCES_AAR_KEEP_RULES_ACCESS(187),
+  /**
+   * <code>VARIANT_AAR_METADATA_MIN_COMPILE_SDK_MINOR = 188;</code>
+   */
+  VARIANT_AAR_METADATA_MIN_COMPILE_SDK_MINOR(188),
+  /**
+   * <code>VARIANT_AAR_METADATA_MIN_COMPILE_SDK_VERSION = 189;</code>
+   */
+  VARIANT_AAR_METADATA_MIN_COMPILE_SDK_VERSION(189),
+  /**
+   * <code>VARIANT_AAR_METADATA_MIN_COMPILE_SDK_VERSION_SPEC = 190;</code>
+   */
+  VARIANT_AAR_METADATA_MIN_COMPILE_SDK_VERSION_SPEC(190),
   UNRECOGNIZED(-1),
   ;
 
@@ -1604,6 +1620,22 @@ public enum VariantPropertiesMethodType
    * <code>COMPILE_SDK = 186;</code>
    */
   public static final int COMPILE_SDK_VALUE = 186;
+  /**
+   * <code>SOURCES_AAR_KEEP_RULES_ACCESS = 187;</code>
+   */
+  public static final int SOURCES_AAR_KEEP_RULES_ACCESS_VALUE = 187;
+  /**
+   * <code>VARIANT_AAR_METADATA_MIN_COMPILE_SDK_MINOR = 188;</code>
+   */
+  public static final int VARIANT_AAR_METADATA_MIN_COMPILE_SDK_MINOR_VALUE = 188;
+  /**
+   * <code>VARIANT_AAR_METADATA_MIN_COMPILE_SDK_VERSION = 189;</code>
+   */
+  public static final int VARIANT_AAR_METADATA_MIN_COMPILE_SDK_VERSION_VALUE = 189;
+  /**
+   * <code>VARIANT_AAR_METADATA_MIN_COMPILE_SDK_VERSION_SPEC = 190;</code>
+   */
+  public static final int VARIANT_AAR_METADATA_MIN_COMPILE_SDK_VERSION_SPEC_VALUE = 190;
 
 
   public final int getNumber() {
@@ -1817,6 +1849,10 @@ public enum VariantPropertiesMethodType
       case 184: return TEST_SUITE_SOURCE_MANIFEST_FILE;
       case 185: return SOURCES_KEEP_RULES_ACCESS;
       case 186: return COMPILE_SDK;
+      case 187: return SOURCES_AAR_KEEP_RULES_ACCESS;
+      case 188: return VARIANT_AAR_METADATA_MIN_COMPILE_SDK_MINOR;
+      case 189: return VARIANT_AAR_METADATA_MIN_COMPILE_SDK_VERSION;
+      case 190: return VARIANT_AAR_METADATA_MIN_COMPILE_SDK_VERSION_SPEC;
       default: return null;
     }
   }
