@@ -157,6 +157,18 @@ private static final long serialVersionUID = 0L;
      * <code>OPEN_WEAR_DEVICES = 7;</code>
      */
     OPEN_WEAR_DEVICES(7),
+    /**
+     * <code>OPEN_REFERENCE_DEVICES = 8;</code>
+     */
+    OPEN_REFERENCE_DEVICES(8),
+    /**
+     * <pre>
+     * Select custom category which is created by user.
+     * </pre>
+     *
+     * <code>OPEN_USER_DEFINED_CUSTOM_SETS = 9;</code>
+     */
+    OPEN_USER_DEFINED_CUSTOM_SETS(9),
     ;
 
     /**
@@ -195,6 +207,18 @@ private static final long serialVersionUID = 0L;
      * <code>OPEN_WEAR_DEVICES = 7;</code>
      */
     public static final int OPEN_WEAR_DEVICES_VALUE = 7;
+    /**
+     * <code>OPEN_REFERENCE_DEVICES = 8;</code>
+     */
+    public static final int OPEN_REFERENCE_DEVICES_VALUE = 8;
+    /**
+     * <pre>
+     * Select custom category which is created by user.
+     * </pre>
+     *
+     * <code>OPEN_USER_DEFINED_CUSTOM_SETS = 9;</code>
+     */
+    public static final int OPEN_USER_DEFINED_CUSTOM_SETS_VALUE = 9;
 
 
     public final int getNumber() {
@@ -225,6 +249,8 @@ private static final long serialVersionUID = 0L;
         case 5: return OPEN_LARGE_FONT;
         case 6: return OPEN_LARGE_DISPLAY;
         case 7: return OPEN_WEAR_DEVICES;
+        case 8: return OPEN_REFERENCE_DEVICES;
+        case 9: return OPEN_USER_DEFINED_CUSTOM_SETS;
         default: return null;
       }
     }

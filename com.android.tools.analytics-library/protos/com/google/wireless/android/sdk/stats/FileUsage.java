@@ -23,6 +23,7 @@ private static final long serialVersionUID = 0L;
     filePath_ = "";
     fileType_ = "";
     pluginType_ = "";
+    pluginVersion_ = "";
   }
 
   @java.lang.Override
@@ -72,6 +73,12 @@ private static final long serialVersionUID = 0L;
             com.google.protobuf.ByteString bs = input.readBytes();
             bitField0_ |= 0x00000004;
             pluginType_ = bs;
+            break;
+          }
+          case 34: {
+            com.google.protobuf.ByteString bs = input.readBytes();
+            bitField0_ |= 0x00000008;
+            pluginVersion_ = bs;
             break;
           }
           default: {
@@ -278,6 +285,63 @@ private static final long serialVersionUID = 0L;
     }
   }
 
+  public static final int PLUGIN_VERSION_FIELD_NUMBER = 4;
+  private volatile java.lang.Object pluginVersion_;
+  /**
+   * <pre>
+   * Plugin version
+   * </pre>
+   *
+   * <code>optional string plugin_version = 4;</code>
+   * @return Whether the pluginVersion field is set.
+   */
+  public boolean hasPluginVersion() {
+    return ((bitField0_ & 0x00000008) != 0);
+  }
+  /**
+   * <pre>
+   * Plugin version
+   * </pre>
+   *
+   * <code>optional string plugin_version = 4;</code>
+   * @return The pluginVersion.
+   */
+  public java.lang.String getPluginVersion() {
+    java.lang.Object ref = pluginVersion_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      if (bs.isValidUtf8()) {
+        pluginVersion_ = s;
+      }
+      return s;
+    }
+  }
+  /**
+   * <pre>
+   * Plugin version
+   * </pre>
+   *
+   * <code>optional string plugin_version = 4;</code>
+   * @return The bytes for pluginVersion.
+   */
+  public com.google.protobuf.ByteString
+      getPluginVersionBytes() {
+    java.lang.Object ref = pluginVersion_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      pluginVersion_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -301,6 +365,9 @@ private static final long serialVersionUID = 0L;
     if (((bitField0_ & 0x00000004) != 0)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 3, pluginType_);
     }
+    if (((bitField0_ & 0x00000008) != 0)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 4, pluginVersion_);
+    }
     unknownFields.writeTo(output);
   }
 
@@ -318,6 +385,9 @@ private static final long serialVersionUID = 0L;
     }
     if (((bitField0_ & 0x00000004) != 0)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, pluginType_);
+    }
+    if (((bitField0_ & 0x00000008) != 0)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, pluginVersion_);
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -349,6 +419,11 @@ private static final long serialVersionUID = 0L;
       if (!getPluginType()
           .equals(other.getPluginType())) return false;
     }
+    if (hasPluginVersion() != other.hasPluginVersion()) return false;
+    if (hasPluginVersion()) {
+      if (!getPluginVersion()
+          .equals(other.getPluginVersion())) return false;
+    }
     if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
@@ -371,6 +446,10 @@ private static final long serialVersionUID = 0L;
     if (hasPluginType()) {
       hash = (37 * hash) + PLUGIN_TYPE_FIELD_NUMBER;
       hash = (53 * hash) + getPluginType().hashCode();
+    }
+    if (hasPluginVersion()) {
+      hash = (37 * hash) + PLUGIN_VERSION_FIELD_NUMBER;
+      hash = (53 * hash) + getPluginVersion().hashCode();
     }
     hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
@@ -515,6 +594,8 @@ private static final long serialVersionUID = 0L;
       bitField0_ = (bitField0_ & ~0x00000002);
       pluginType_ = "";
       bitField0_ = (bitField0_ & ~0x00000004);
+      pluginVersion_ = "";
+      bitField0_ = (bitField0_ & ~0x00000008);
       return this;
     }
 
@@ -555,6 +636,10 @@ private static final long serialVersionUID = 0L;
         to_bitField0_ |= 0x00000004;
       }
       result.pluginType_ = pluginType_;
+      if (((from_bitField0_ & 0x00000008) != 0)) {
+        to_bitField0_ |= 0x00000008;
+      }
+      result.pluginVersion_ = pluginVersion_;
       result.bitField0_ = to_bitField0_;
       onBuilt();
       return result;
@@ -617,6 +702,11 @@ private static final long serialVersionUID = 0L;
       if (other.hasPluginType()) {
         bitField0_ |= 0x00000004;
         pluginType_ = other.pluginType_;
+        onChanged();
+      }
+      if (other.hasPluginVersion()) {
+        bitField0_ |= 0x00000008;
+        pluginVersion_ = other.pluginVersion_;
         onChanged();
       }
       this.mergeUnknownFields(other.unknownFields);
@@ -969,6 +1059,114 @@ private static final long serialVersionUID = 0L;
   }
   bitField0_ |= 0x00000004;
       pluginType_ = value;
+      onChanged();
+      return this;
+    }
+
+    private java.lang.Object pluginVersion_ = "";
+    /**
+     * <pre>
+     * Plugin version
+     * </pre>
+     *
+     * <code>optional string plugin_version = 4;</code>
+     * @return Whether the pluginVersion field is set.
+     */
+    public boolean hasPluginVersion() {
+      return ((bitField0_ & 0x00000008) != 0);
+    }
+    /**
+     * <pre>
+     * Plugin version
+     * </pre>
+     *
+     * <code>optional string plugin_version = 4;</code>
+     * @return The pluginVersion.
+     */
+    public java.lang.String getPluginVersion() {
+      java.lang.Object ref = pluginVersion_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          pluginVersion_ = s;
+        }
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <pre>
+     * Plugin version
+     * </pre>
+     *
+     * <code>optional string plugin_version = 4;</code>
+     * @return The bytes for pluginVersion.
+     */
+    public com.google.protobuf.ByteString
+        getPluginVersionBytes() {
+      java.lang.Object ref = pluginVersion_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        pluginVersion_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <pre>
+     * Plugin version
+     * </pre>
+     *
+     * <code>optional string plugin_version = 4;</code>
+     * @param value The pluginVersion to set.
+     * @return This builder for chaining.
+     */
+    public Builder setPluginVersion(
+        java.lang.String value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000008;
+      pluginVersion_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Plugin version
+     * </pre>
+     *
+     * <code>optional string plugin_version = 4;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearPluginVersion() {
+      bitField0_ = (bitField0_ & ~0x00000008);
+      pluginVersion_ = getDefaultInstance().getPluginVersion();
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Plugin version
+     * </pre>
+     *
+     * <code>optional string plugin_version = 4;</code>
+     * @param value The bytes for pluginVersion to set.
+     * @return This builder for chaining.
+     */
+    public Builder setPluginVersionBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000008;
+      pluginVersion_ = value;
       onChanged();
       return this;
     }

@@ -274,6 +274,14 @@ private static final long serialVersionUID = 0L;
      * <code>ATTACH_ERROR = 16;</code>
      */
     ATTACH_ERROR(16),
+    /**
+     * <pre>
+     * An attach attempt was cancelled or preempted by the user
+     * </pre>
+     *
+     * <code>ATTACH_CANCELLED = 17;</code>
+     */
+    ATTACH_CANCELLED(17),
     ;
 
     /**
@@ -408,6 +416,14 @@ private static final long serialVersionUID = 0L;
      * <code>ATTACH_ERROR = 16;</code>
      */
     public static final int ATTACH_ERROR_VALUE = 16;
+    /**
+     * <pre>
+     * An attach attempt was cancelled or preempted by the user
+     * </pre>
+     *
+     * <code>ATTACH_CANCELLED = 17;</code>
+     */
+    public static final int ATTACH_CANCELLED_VALUE = 17;
 
 
     public final int getNumber() {
@@ -447,6 +463,7 @@ private static final long serialVersionUID = 0L;
         case 14: return SNAPSHOT_LOAD_ERROR;
         case 15: return SNAPSHOT_CANCELLED;
         case 16: return ATTACH_ERROR;
+        case 17: return ATTACH_CANCELLED;
         default: return null;
       }
     }

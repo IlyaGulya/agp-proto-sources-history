@@ -93,4 +93,33 @@ public interface FileUsageOrBuilder extends
    */
   com.google.protobuf.ByteString
       getPluginTypeBytes();
+
+  /**
+   * <pre>
+   * Plugin version
+   * </pre>
+   *
+   * <code>optional string plugin_version = 4;</code>
+   * @return Whether the pluginVersion field is set.
+   */
+  boolean hasPluginVersion();
+  /**
+   * <pre>
+   * Plugin version
+   * </pre>
+   *
+   * <code>optional string plugin_version = 4;</code>
+   * @return The pluginVersion.
+   */
+  java.lang.String getPluginVersion();
+  /**
+   * <pre>
+   * Plugin version
+   * </pre>
+   *
+   * <code>optional string plugin_version = 4;</code>
+   * @return The bytes for pluginVersion.
+   */
+  com.google.protobuf.ByteString
+      getPluginVersionBytes();
 }
