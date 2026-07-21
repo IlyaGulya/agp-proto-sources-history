@@ -153,6 +153,14 @@ private static final long serialVersionUID = 0L;
      * <code>REMOVE_SOURCE_SET_JNI = 8;</code>
      */
     REMOVE_SOURCE_SET_JNI(8),
+    /**
+     * <code>MIGRATE_TO_ANDROID_RESOURCES = 9;</code>
+     */
+    MIGRATE_TO_ANDROID_RESOURCES(9),
+    /**
+     * <code>REMOVE_BUILD_TYPE_USE_PROGUARD = 10;</code>
+     */
+    REMOVE_BUILD_TYPE_USE_PROGUARD(10),
     ;
 
     /**
@@ -191,6 +199,14 @@ private static final long serialVersionUID = 0L;
      * <code>REMOVE_SOURCE_SET_JNI = 8;</code>
      */
     public static final int REMOVE_SOURCE_SET_JNI_VALUE = 8;
+    /**
+     * <code>MIGRATE_TO_ANDROID_RESOURCES = 9;</code>
+     */
+    public static final int MIGRATE_TO_ANDROID_RESOURCES_VALUE = 9;
+    /**
+     * <code>REMOVE_BUILD_TYPE_USE_PROGUARD = 10;</code>
+     */
+    public static final int REMOVE_BUILD_TYPE_USE_PROGUARD_VALUE = 10;
 
 
     public final int getNumber() {
@@ -222,6 +238,8 @@ private static final long serialVersionUID = 0L;
         case 6: return FABRIC_CRASHLYTICS;
         case 7: return MIGRATE_TO_BUILD_FEATURES;
         case 8: return REMOVE_SOURCE_SET_JNI;
+        case 9: return MIGRATE_TO_ANDROID_RESOURCES;
+        case 10: return REMOVE_BUILD_TYPE_USE_PROGUARD;
         default: return null;
       }
     }

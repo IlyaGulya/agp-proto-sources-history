@@ -5,7 +5,7 @@ package com.google.wireless.android.sdk.stats;
 
 /**
  * <pre>
- * Record of Accessibility Testing Framework audit results.
+ * Record of Accessibility Testing Framework(ATF) audit results.
  * </pre>
  *
  * Protobuf type {@code android_studio.AtfAuditResult}
@@ -347,6 +347,50 @@ private static final long serialVersionUID = 0L;
      * @return The errorExpanded.
      */
     boolean getErrorExpanded();
+
+    /**
+     * <pre>
+     * ATF fix suggestions which are provided for this ATF check result
+     * </pre>
+     *
+     * <code>repeated .android_studio.AtfFixDetail fixes = 4;</code>
+     */
+    java.util.List<com.google.wireless.android.sdk.stats.AtfFixDetail> 
+        getFixesList();
+    /**
+     * <pre>
+     * ATF fix suggestions which are provided for this ATF check result
+     * </pre>
+     *
+     * <code>repeated .android_studio.AtfFixDetail fixes = 4;</code>
+     */
+    com.google.wireless.android.sdk.stats.AtfFixDetail getFixes(int index);
+    /**
+     * <pre>
+     * ATF fix suggestions which are provided for this ATF check result
+     * </pre>
+     *
+     * <code>repeated .android_studio.AtfFixDetail fixes = 4;</code>
+     */
+    int getFixesCount();
+    /**
+     * <pre>
+     * ATF fix suggestions which are provided for this ATF check result
+     * </pre>
+     *
+     * <code>repeated .android_studio.AtfFixDetail fixes = 4;</code>
+     */
+    java.util.List<? extends com.google.wireless.android.sdk.stats.AtfFixDetailOrBuilder> 
+        getFixesOrBuilderList();
+    /**
+     * <pre>
+     * ATF fix suggestions which are provided for this ATF check result
+     * </pre>
+     *
+     * <code>repeated .android_studio.AtfFixDetail fixes = 4;</code>
+     */
+    com.google.wireless.android.sdk.stats.AtfFixDetailOrBuilder getFixesOrBuilder(
+        int index);
   }
   /**
    * <pre>
@@ -367,6 +411,7 @@ private static final long serialVersionUID = 0L;
     private AtfResultCount() {
       checkName_ = "";
       resultType_ = 0;
+      fixes_ = java.util.Collections.emptyList();
     }
 
     @java.lang.Override
@@ -423,6 +468,15 @@ private static final long serialVersionUID = 0L;
               errorExpanded_ = input.readBool();
               break;
             }
+            case 34: {
+              if (!((mutable_bitField0_ & 0x00000008) != 0)) {
+                fixes_ = new java.util.ArrayList<com.google.wireless.android.sdk.stats.AtfFixDetail>();
+                mutable_bitField0_ |= 0x00000008;
+              }
+              fixes_.add(
+                  input.readMessage(com.google.wireless.android.sdk.stats.AtfFixDetail.PARSER, extensionRegistry));
+              break;
+            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -438,6 +492,9 @@ private static final long serialVersionUID = 0L;
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
+        if (((mutable_bitField0_ & 0x00000008) != 0)) {
+          fixes_ = java.util.Collections.unmodifiableList(fixes_);
+        }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
@@ -704,6 +761,61 @@ private static final long serialVersionUID = 0L;
       return errorExpanded_;
     }
 
+    public static final int FIXES_FIELD_NUMBER = 4;
+    private java.util.List<com.google.wireless.android.sdk.stats.AtfFixDetail> fixes_;
+    /**
+     * <pre>
+     * ATF fix suggestions which are provided for this ATF check result
+     * </pre>
+     *
+     * <code>repeated .android_studio.AtfFixDetail fixes = 4;</code>
+     */
+    public java.util.List<com.google.wireless.android.sdk.stats.AtfFixDetail> getFixesList() {
+      return fixes_;
+    }
+    /**
+     * <pre>
+     * ATF fix suggestions which are provided for this ATF check result
+     * </pre>
+     *
+     * <code>repeated .android_studio.AtfFixDetail fixes = 4;</code>
+     */
+    public java.util.List<? extends com.google.wireless.android.sdk.stats.AtfFixDetailOrBuilder> 
+        getFixesOrBuilderList() {
+      return fixes_;
+    }
+    /**
+     * <pre>
+     * ATF fix suggestions which are provided for this ATF check result
+     * </pre>
+     *
+     * <code>repeated .android_studio.AtfFixDetail fixes = 4;</code>
+     */
+    public int getFixesCount() {
+      return fixes_.size();
+    }
+    /**
+     * <pre>
+     * ATF fix suggestions which are provided for this ATF check result
+     * </pre>
+     *
+     * <code>repeated .android_studio.AtfFixDetail fixes = 4;</code>
+     */
+    public com.google.wireless.android.sdk.stats.AtfFixDetail getFixes(int index) {
+      return fixes_.get(index);
+    }
+    /**
+     * <pre>
+     * ATF fix suggestions which are provided for this ATF check result
+     * </pre>
+     *
+     * <code>repeated .android_studio.AtfFixDetail fixes = 4;</code>
+     */
+    public com.google.wireless.android.sdk.stats.AtfFixDetailOrBuilder getFixesOrBuilder(
+        int index) {
+      return fixes_.get(index);
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -727,6 +839,9 @@ private static final long serialVersionUID = 0L;
       if (((bitField0_ & 0x00000004) != 0)) {
         output.writeBool(3, errorExpanded_);
       }
+      for (int i = 0; i < fixes_.size(); i++) {
+        output.writeMessage(4, fixes_.get(i));
+      }
       unknownFields.writeTo(output);
     }
 
@@ -746,6 +861,10 @@ private static final long serialVersionUID = 0L;
       if (((bitField0_ & 0x00000004) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(3, errorExpanded_);
+      }
+      for (int i = 0; i < fixes_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, fixes_.get(i));
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -776,6 +895,8 @@ private static final long serialVersionUID = 0L;
         if (getErrorExpanded()
             != other.getErrorExpanded()) return false;
       }
+      if (!getFixesList()
+          .equals(other.getFixesList())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -799,6 +920,10 @@ private static final long serialVersionUID = 0L;
         hash = (37 * hash) + ERROR_EXPANDED_FIELD_NUMBER;
         hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
             getErrorExpanded());
+      }
+      if (getFixesCount() > 0) {
+        hash = (37 * hash) + FIXES_FIELD_NUMBER;
+        hash = (53 * hash) + getFixesList().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -932,6 +1057,7 @@ private static final long serialVersionUID = 0L;
       private void maybeForceBuilderInitialization() {
         if (com.google.protobuf.GeneratedMessageV3
                 .alwaysUseFieldBuilders) {
+          getFixesFieldBuilder();
         }
       }
       @java.lang.Override
@@ -943,6 +1069,12 @@ private static final long serialVersionUID = 0L;
         bitField0_ = (bitField0_ & ~0x00000002);
         errorExpanded_ = false;
         bitField0_ = (bitField0_ & ~0x00000004);
+        if (fixesBuilder_ == null) {
+          fixes_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000008);
+        } else {
+          fixesBuilder_.clear();
+        }
         return this;
       }
 
@@ -982,6 +1114,15 @@ private static final long serialVersionUID = 0L;
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.errorExpanded_ = errorExpanded_;
           to_bitField0_ |= 0x00000004;
+        }
+        if (fixesBuilder_ == null) {
+          if (((bitField0_ & 0x00000008) != 0)) {
+            fixes_ = java.util.Collections.unmodifiableList(fixes_);
+            bitField0_ = (bitField0_ & ~0x00000008);
+          }
+          result.fixes_ = fixes_;
+        } else {
+          result.fixes_ = fixesBuilder_.build();
         }
         result.bitField0_ = to_bitField0_;
         onBuilt();
@@ -1042,6 +1183,32 @@ private static final long serialVersionUID = 0L;
         }
         if (other.hasErrorExpanded()) {
           setErrorExpanded(other.getErrorExpanded());
+        }
+        if (fixesBuilder_ == null) {
+          if (!other.fixes_.isEmpty()) {
+            if (fixes_.isEmpty()) {
+              fixes_ = other.fixes_;
+              bitField0_ = (bitField0_ & ~0x00000008);
+            } else {
+              ensureFixesIsMutable();
+              fixes_.addAll(other.fixes_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.fixes_.isEmpty()) {
+            if (fixesBuilder_.isEmpty()) {
+              fixesBuilder_.dispose();
+              fixesBuilder_ = null;
+              fixes_ = other.fixes_;
+              bitField0_ = (bitField0_ & ~0x00000008);
+              fixesBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getFixesFieldBuilder() : null;
+            } else {
+              fixesBuilder_.addAllMessages(other.fixes_);
+            }
+          }
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -1297,6 +1464,318 @@ private static final long serialVersionUID = 0L;
         onChanged();
         return this;
       }
+
+      private java.util.List<com.google.wireless.android.sdk.stats.AtfFixDetail> fixes_ =
+        java.util.Collections.emptyList();
+      private void ensureFixesIsMutable() {
+        if (!((bitField0_ & 0x00000008) != 0)) {
+          fixes_ = new java.util.ArrayList<com.google.wireless.android.sdk.stats.AtfFixDetail>(fixes_);
+          bitField0_ |= 0x00000008;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.google.wireless.android.sdk.stats.AtfFixDetail, com.google.wireless.android.sdk.stats.AtfFixDetail.Builder, com.google.wireless.android.sdk.stats.AtfFixDetailOrBuilder> fixesBuilder_;
+
+      /**
+       * <pre>
+       * ATF fix suggestions which are provided for this ATF check result
+       * </pre>
+       *
+       * <code>repeated .android_studio.AtfFixDetail fixes = 4;</code>
+       */
+      public java.util.List<com.google.wireless.android.sdk.stats.AtfFixDetail> getFixesList() {
+        if (fixesBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(fixes_);
+        } else {
+          return fixesBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * ATF fix suggestions which are provided for this ATF check result
+       * </pre>
+       *
+       * <code>repeated .android_studio.AtfFixDetail fixes = 4;</code>
+       */
+      public int getFixesCount() {
+        if (fixesBuilder_ == null) {
+          return fixes_.size();
+        } else {
+          return fixesBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * ATF fix suggestions which are provided for this ATF check result
+       * </pre>
+       *
+       * <code>repeated .android_studio.AtfFixDetail fixes = 4;</code>
+       */
+      public com.google.wireless.android.sdk.stats.AtfFixDetail getFixes(int index) {
+        if (fixesBuilder_ == null) {
+          return fixes_.get(index);
+        } else {
+          return fixesBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * ATF fix suggestions which are provided for this ATF check result
+       * </pre>
+       *
+       * <code>repeated .android_studio.AtfFixDetail fixes = 4;</code>
+       */
+      public Builder setFixes(
+          int index, com.google.wireless.android.sdk.stats.AtfFixDetail value) {
+        if (fixesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureFixesIsMutable();
+          fixes_.set(index, value);
+          onChanged();
+        } else {
+          fixesBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * ATF fix suggestions which are provided for this ATF check result
+       * </pre>
+       *
+       * <code>repeated .android_studio.AtfFixDetail fixes = 4;</code>
+       */
+      public Builder setFixes(
+          int index, com.google.wireless.android.sdk.stats.AtfFixDetail.Builder builderForValue) {
+        if (fixesBuilder_ == null) {
+          ensureFixesIsMutable();
+          fixes_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          fixesBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * ATF fix suggestions which are provided for this ATF check result
+       * </pre>
+       *
+       * <code>repeated .android_studio.AtfFixDetail fixes = 4;</code>
+       */
+      public Builder addFixes(com.google.wireless.android.sdk.stats.AtfFixDetail value) {
+        if (fixesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureFixesIsMutable();
+          fixes_.add(value);
+          onChanged();
+        } else {
+          fixesBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * ATF fix suggestions which are provided for this ATF check result
+       * </pre>
+       *
+       * <code>repeated .android_studio.AtfFixDetail fixes = 4;</code>
+       */
+      public Builder addFixes(
+          int index, com.google.wireless.android.sdk.stats.AtfFixDetail value) {
+        if (fixesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureFixesIsMutable();
+          fixes_.add(index, value);
+          onChanged();
+        } else {
+          fixesBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * ATF fix suggestions which are provided for this ATF check result
+       * </pre>
+       *
+       * <code>repeated .android_studio.AtfFixDetail fixes = 4;</code>
+       */
+      public Builder addFixes(
+          com.google.wireless.android.sdk.stats.AtfFixDetail.Builder builderForValue) {
+        if (fixesBuilder_ == null) {
+          ensureFixesIsMutable();
+          fixes_.add(builderForValue.build());
+          onChanged();
+        } else {
+          fixesBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * ATF fix suggestions which are provided for this ATF check result
+       * </pre>
+       *
+       * <code>repeated .android_studio.AtfFixDetail fixes = 4;</code>
+       */
+      public Builder addFixes(
+          int index, com.google.wireless.android.sdk.stats.AtfFixDetail.Builder builderForValue) {
+        if (fixesBuilder_ == null) {
+          ensureFixesIsMutable();
+          fixes_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          fixesBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * ATF fix suggestions which are provided for this ATF check result
+       * </pre>
+       *
+       * <code>repeated .android_studio.AtfFixDetail fixes = 4;</code>
+       */
+      public Builder addAllFixes(
+          java.lang.Iterable<? extends com.google.wireless.android.sdk.stats.AtfFixDetail> values) {
+        if (fixesBuilder_ == null) {
+          ensureFixesIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, fixes_);
+          onChanged();
+        } else {
+          fixesBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * ATF fix suggestions which are provided for this ATF check result
+       * </pre>
+       *
+       * <code>repeated .android_studio.AtfFixDetail fixes = 4;</code>
+       */
+      public Builder clearFixes() {
+        if (fixesBuilder_ == null) {
+          fixes_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000008);
+          onChanged();
+        } else {
+          fixesBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * ATF fix suggestions which are provided for this ATF check result
+       * </pre>
+       *
+       * <code>repeated .android_studio.AtfFixDetail fixes = 4;</code>
+       */
+      public Builder removeFixes(int index) {
+        if (fixesBuilder_ == null) {
+          ensureFixesIsMutable();
+          fixes_.remove(index);
+          onChanged();
+        } else {
+          fixesBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * ATF fix suggestions which are provided for this ATF check result
+       * </pre>
+       *
+       * <code>repeated .android_studio.AtfFixDetail fixes = 4;</code>
+       */
+      public com.google.wireless.android.sdk.stats.AtfFixDetail.Builder getFixesBuilder(
+          int index) {
+        return getFixesFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * ATF fix suggestions which are provided for this ATF check result
+       * </pre>
+       *
+       * <code>repeated .android_studio.AtfFixDetail fixes = 4;</code>
+       */
+      public com.google.wireless.android.sdk.stats.AtfFixDetailOrBuilder getFixesOrBuilder(
+          int index) {
+        if (fixesBuilder_ == null) {
+          return fixes_.get(index);  } else {
+          return fixesBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * ATF fix suggestions which are provided for this ATF check result
+       * </pre>
+       *
+       * <code>repeated .android_studio.AtfFixDetail fixes = 4;</code>
+       */
+      public java.util.List<? extends com.google.wireless.android.sdk.stats.AtfFixDetailOrBuilder> 
+           getFixesOrBuilderList() {
+        if (fixesBuilder_ != null) {
+          return fixesBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(fixes_);
+        }
+      }
+      /**
+       * <pre>
+       * ATF fix suggestions which are provided for this ATF check result
+       * </pre>
+       *
+       * <code>repeated .android_studio.AtfFixDetail fixes = 4;</code>
+       */
+      public com.google.wireless.android.sdk.stats.AtfFixDetail.Builder addFixesBuilder() {
+        return getFixesFieldBuilder().addBuilder(
+            com.google.wireless.android.sdk.stats.AtfFixDetail.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * ATF fix suggestions which are provided for this ATF check result
+       * </pre>
+       *
+       * <code>repeated .android_studio.AtfFixDetail fixes = 4;</code>
+       */
+      public com.google.wireless.android.sdk.stats.AtfFixDetail.Builder addFixesBuilder(
+          int index) {
+        return getFixesFieldBuilder().addBuilder(
+            index, com.google.wireless.android.sdk.stats.AtfFixDetail.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * ATF fix suggestions which are provided for this ATF check result
+       * </pre>
+       *
+       * <code>repeated .android_studio.AtfFixDetail fixes = 4;</code>
+       */
+      public java.util.List<com.google.wireless.android.sdk.stats.AtfFixDetail.Builder> 
+           getFixesBuilderList() {
+        return getFixesFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.google.wireless.android.sdk.stats.AtfFixDetail, com.google.wireless.android.sdk.stats.AtfFixDetail.Builder, com.google.wireless.android.sdk.stats.AtfFixDetailOrBuilder> 
+          getFixesFieldBuilder() {
+        if (fixesBuilder_ == null) {
+          fixesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.google.wireless.android.sdk.stats.AtfFixDetail, com.google.wireless.android.sdk.stats.AtfFixDetail.Builder, com.google.wireless.android.sdk.stats.AtfFixDetailOrBuilder>(
+                  fixes_,
+                  ((bitField0_ & 0x00000008) != 0),
+                  getParentForChildren(),
+                  isClean());
+          fixes_ = null;
+        }
+        return fixesBuilder_;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -1537,7 +2016,7 @@ private static final long serialVersionUID = 0L;
   private int errorCount_;
   /**
    * <pre>
-   * Errors displayed in the error panel, including non atf errors.
+   * Errors displayed in the error panel, including non ATF errors.
    * </pre>
    *
    * <code>optional int32 error_count = 7;</code>
@@ -1548,7 +2027,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Errors displayed in the error panel, including non atf errors.
+   * Errors displayed in the error panel, including non ATF errors.
    * </pre>
    *
    * <code>optional int32 error_count = 7;</code>
@@ -1815,7 +2294,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Record of Accessibility Testing Framework audit results.
+   * Record of Accessibility Testing Framework(ATF) audit results.
    * </pre>
    *
    * Protobuf type {@code android_studio.AtfAuditResult}
@@ -2643,7 +3122,7 @@ private static final long serialVersionUID = 0L;
     private int errorCount_ ;
     /**
      * <pre>
-     * Errors displayed in the error panel, including non atf errors.
+     * Errors displayed in the error panel, including non ATF errors.
      * </pre>
      *
      * <code>optional int32 error_count = 7;</code>
@@ -2654,7 +3133,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Errors displayed in the error panel, including non atf errors.
+     * Errors displayed in the error panel, including non ATF errors.
      * </pre>
      *
      * <code>optional int32 error_count = 7;</code>
@@ -2665,7 +3144,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Errors displayed in the error panel, including non atf errors.
+     * Errors displayed in the error panel, including non ATF errors.
      * </pre>
      *
      * <code>optional int32 error_count = 7;</code>
@@ -2680,7 +3159,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Errors displayed in the error panel, including non atf errors.
+     * Errors displayed in the error panel, including non ATF errors.
      * </pre>
      *
      * <code>optional int32 error_count = 7;</code>

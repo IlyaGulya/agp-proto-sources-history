@@ -5,30 +5,29 @@ package com.google.wireless.android.sdk.stats;
 
 /**
  * <pre>
- * Details for Validation Tool events
- * Note: Validation Tool was called multi view or visualization tool.
+ * Details related to an ATF fix suggestion.
  * </pre>
  *
- * Protobuf type {@code android_studio.MultiViewEvent}
+ * Protobuf type {@code android_studio.AtfFixDetail}
  */
-public  final class MultiViewEvent extends
+public  final class AtfFixDetail extends
     com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:android_studio.MultiViewEvent)
-    MultiViewEventOrBuilder {
+    // @@protoc_insertion_point(message_implements:android_studio.AtfFixDetail)
+    AtfFixDetailOrBuilder {
 private static final long serialVersionUID = 0L;
-  // Use MultiViewEvent.newBuilder() to construct.
-  private MultiViewEvent(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+  // Use AtfFixDetail.newBuilder() to construct.
+  private AtfFixDetail(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
     super(builder);
   }
-  private MultiViewEvent() {
-    type_ = 0;
+  private AtfFixDetail() {
+    fixType_ = 0;
   }
 
   @java.lang.Override
   @SuppressWarnings({"unused"})
   protected java.lang.Object newInstance(
       UnusedPrivateParameter unused) {
-    return new MultiViewEvent();
+    return new AtfFixDetail();
   }
 
   @java.lang.Override
@@ -36,7 +35,7 @@ private static final long serialVersionUID = 0L;
   getUnknownFields() {
     return this.unknownFields;
   }
-  private MultiViewEvent(
+  private AtfFixDetail(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
@@ -55,15 +54,15 @@ private static final long serialVersionUID = 0L;
           case 0:
             done = true;
             break;
-          case 8: {
+          case 24: {
             int rawValue = input.readEnum();
               @SuppressWarnings("deprecation")
-            com.google.wireless.android.sdk.stats.MultiViewEvent.MultiViewEventType value = com.google.wireless.android.sdk.stats.MultiViewEvent.MultiViewEventType.valueOf(rawValue);
+            com.google.wireless.android.sdk.stats.AtfFixDetail.AtfFixType value = com.google.wireless.android.sdk.stats.AtfFixDetail.AtfFixType.valueOf(rawValue);
             if (value == null) {
-              unknownFields.mergeVarintField(1, rawValue);
+              unknownFields.mergeVarintField(3, rawValue);
             } else {
               bitField0_ |= 0x00000001;
-              type_ = rawValue;
+              fixType_ = rawValue;
             }
             break;
           }
@@ -88,100 +87,60 @@ private static final long serialVersionUID = 0L;
   }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_MultiViewEvent_descriptor;
+    return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_AtfFixDetail_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_MultiViewEvent_fieldAccessorTable
+    return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_AtfFixDetail_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            com.google.wireless.android.sdk.stats.MultiViewEvent.class, com.google.wireless.android.sdk.stats.MultiViewEvent.Builder.class);
+            com.google.wireless.android.sdk.stats.AtfFixDetail.class, com.google.wireless.android.sdk.stats.AtfFixDetail.Builder.class);
   }
 
   /**
    * <pre>
-   * List of event types available in Validation Tool
+   * Type of an ATF fix suggestion
    * </pre>
    *
-   * Protobuf enum {@code android_studio.MultiViewEvent.MultiViewEventType}
+   * Protobuf enum {@code android_studio.AtfFixDetail.AtfFixType}
    */
-  public enum MultiViewEventType
+  public enum AtfFixType
       implements com.google.protobuf.ProtocolMessageEnum {
     /**
-     * <code>UNKNOWN_EVENT_TYPE = 0;</code>
+     * <code>UNKNOWN = 0;</code>
      */
-    UNKNOWN_EVENT_TYPE(0),
+    UNKNOWN(0),
     /**
-     * <code>OPEN_PIXEL_DEVICES = 1;</code>
+     * <code>SET_VIEW_ATTRIBUTE = 1;</code>
      */
-    OPEN_PIXEL_DEVICES(1),
+    SET_VIEW_ATTRIBUTE(1),
     /**
-     * <code>OPEN_PROJECT_LOCALES = 2;</code>
+     * <code>REMOVE_VIEW_ATTRIBUTE = 2;</code>
      */
-    OPEN_PROJECT_LOCALES(2),
+    REMOVE_VIEW_ATTRIBUTE(2),
     /**
-     * <code>OPEN_CUSTOM_CONFIGURATION_SETS = 3;</code>
+     * <code>COMPOUND = 3;</code>
      */
-    OPEN_CUSTOM_CONFIGURATION_SETS(3),
-    /**
-     * <code>OPEN_COLOR_BLIND_MODE = 4;</code>
-     */
-    OPEN_COLOR_BLIND_MODE(4),
-    /**
-     * <code>OPEN_LARGE_FONT = 5;</code>
-     */
-    OPEN_LARGE_FONT(5),
-    /**
-     * <code>OPEN_LARGE_DISPLAY = 6;</code>
-     */
-    OPEN_LARGE_DISPLAY(6),
-    /**
-     * <pre>
-     * Select wear device category in Validation Tool
-     * </pre>
-     *
-     * <code>OPEN_WEAR_DEVICES = 7;</code>
-     */
-    OPEN_WEAR_DEVICES(7),
+    COMPOUND(3),
     ;
 
     /**
-     * <code>UNKNOWN_EVENT_TYPE = 0;</code>
+     * <code>UNKNOWN = 0;</code>
      */
-    public static final int UNKNOWN_EVENT_TYPE_VALUE = 0;
+    public static final int UNKNOWN_VALUE = 0;
     /**
-     * <code>OPEN_PIXEL_DEVICES = 1;</code>
+     * <code>SET_VIEW_ATTRIBUTE = 1;</code>
      */
-    public static final int OPEN_PIXEL_DEVICES_VALUE = 1;
+    public static final int SET_VIEW_ATTRIBUTE_VALUE = 1;
     /**
-     * <code>OPEN_PROJECT_LOCALES = 2;</code>
+     * <code>REMOVE_VIEW_ATTRIBUTE = 2;</code>
      */
-    public static final int OPEN_PROJECT_LOCALES_VALUE = 2;
+    public static final int REMOVE_VIEW_ATTRIBUTE_VALUE = 2;
     /**
-     * <code>OPEN_CUSTOM_CONFIGURATION_SETS = 3;</code>
+     * <code>COMPOUND = 3;</code>
      */
-    public static final int OPEN_CUSTOM_CONFIGURATION_SETS_VALUE = 3;
-    /**
-     * <code>OPEN_COLOR_BLIND_MODE = 4;</code>
-     */
-    public static final int OPEN_COLOR_BLIND_MODE_VALUE = 4;
-    /**
-     * <code>OPEN_LARGE_FONT = 5;</code>
-     */
-    public static final int OPEN_LARGE_FONT_VALUE = 5;
-    /**
-     * <code>OPEN_LARGE_DISPLAY = 6;</code>
-     */
-    public static final int OPEN_LARGE_DISPLAY_VALUE = 6;
-    /**
-     * <pre>
-     * Select wear device category in Validation Tool
-     * </pre>
-     *
-     * <code>OPEN_WEAR_DEVICES = 7;</code>
-     */
-    public static final int OPEN_WEAR_DEVICES_VALUE = 7;
+    public static final int COMPOUND_VALUE = 3;
 
 
     public final int getNumber() {
@@ -194,7 +153,7 @@ private static final long serialVersionUID = 0L;
      * @deprecated Use {@link #forNumber(int)} instead.
      */
     @java.lang.Deprecated
-    public static MultiViewEventType valueOf(int value) {
+    public static AtfFixType valueOf(int value) {
       return forNumber(value);
     }
 
@@ -202,29 +161,25 @@ private static final long serialVersionUID = 0L;
      * @param value The numeric wire value of the corresponding enum entry.
      * @return The enum associated with the given numeric wire value.
      */
-    public static MultiViewEventType forNumber(int value) {
+    public static AtfFixType forNumber(int value) {
       switch (value) {
-        case 0: return UNKNOWN_EVENT_TYPE;
-        case 1: return OPEN_PIXEL_DEVICES;
-        case 2: return OPEN_PROJECT_LOCALES;
-        case 3: return OPEN_CUSTOM_CONFIGURATION_SETS;
-        case 4: return OPEN_COLOR_BLIND_MODE;
-        case 5: return OPEN_LARGE_FONT;
-        case 6: return OPEN_LARGE_DISPLAY;
-        case 7: return OPEN_WEAR_DEVICES;
+        case 0: return UNKNOWN;
+        case 1: return SET_VIEW_ATTRIBUTE;
+        case 2: return REMOVE_VIEW_ATTRIBUTE;
+        case 3: return COMPOUND;
         default: return null;
       }
     }
 
-    public static com.google.protobuf.Internal.EnumLiteMap<MultiViewEventType>
+    public static com.google.protobuf.Internal.EnumLiteMap<AtfFixType>
         internalGetValueMap() {
       return internalValueMap;
     }
     private static final com.google.protobuf.Internal.EnumLiteMap<
-        MultiViewEventType> internalValueMap =
-          new com.google.protobuf.Internal.EnumLiteMap<MultiViewEventType>() {
-            public MultiViewEventType findValueByNumber(int number) {
-              return MultiViewEventType.forNumber(number);
+        AtfFixType> internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<AtfFixType>() {
+            public AtfFixType findValueByNumber(int number) {
+              return AtfFixType.forNumber(number);
             }
           };
 
@@ -238,12 +193,12 @@ private static final long serialVersionUID = 0L;
     }
     public static final com.google.protobuf.Descriptors.EnumDescriptor
         getDescriptor() {
-      return com.google.wireless.android.sdk.stats.MultiViewEvent.getDescriptor().getEnumTypes().get(0);
+      return com.google.wireless.android.sdk.stats.AtfFixDetail.getDescriptor().getEnumTypes().get(0);
     }
 
-    private static final MultiViewEventType[] VALUES = values();
+    private static final AtfFixType[] VALUES = values();
 
-    public static MultiViewEventType valueOf(
+    public static AtfFixType valueOf(
         com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
       if (desc.getType() != getDescriptor()) {
         throw new java.lang.IllegalArgumentException(
@@ -254,39 +209,39 @@ private static final long serialVersionUID = 0L;
 
     private final int value;
 
-    private MultiViewEventType(int value) {
+    private AtfFixType(int value) {
       this.value = value;
     }
 
-    // @@protoc_insertion_point(enum_scope:android_studio.MultiViewEvent.MultiViewEventType)
+    // @@protoc_insertion_point(enum_scope:android_studio.AtfFixDetail.AtfFixType)
   }
 
   private int bitField0_;
-  public static final int TYPE_FIELD_NUMBER = 1;
-  private int type_;
+  public static final int FIX_TYPE_FIELD_NUMBER = 3;
+  private int fixType_;
   /**
    * <pre>
-   * Type of event
+   * The type of the applied ATF fix
    * </pre>
    *
-   * <code>optional .android_studio.MultiViewEvent.MultiViewEventType type = 1;</code>
-   * @return Whether the type field is set.
+   * <code>optional .android_studio.AtfFixDetail.AtfFixType fix_type = 3;</code>
+   * @return Whether the fixType field is set.
    */
-  public boolean hasType() {
+  public boolean hasFixType() {
     return ((bitField0_ & 0x00000001) != 0);
   }
   /**
    * <pre>
-   * Type of event
+   * The type of the applied ATF fix
    * </pre>
    *
-   * <code>optional .android_studio.MultiViewEvent.MultiViewEventType type = 1;</code>
-   * @return The type.
+   * <code>optional .android_studio.AtfFixDetail.AtfFixType fix_type = 3;</code>
+   * @return The fixType.
    */
-  public com.google.wireless.android.sdk.stats.MultiViewEvent.MultiViewEventType getType() {
+  public com.google.wireless.android.sdk.stats.AtfFixDetail.AtfFixType getFixType() {
     @SuppressWarnings("deprecation")
-    com.google.wireless.android.sdk.stats.MultiViewEvent.MultiViewEventType result = com.google.wireless.android.sdk.stats.MultiViewEvent.MultiViewEventType.valueOf(type_);
-    return result == null ? com.google.wireless.android.sdk.stats.MultiViewEvent.MultiViewEventType.UNKNOWN_EVENT_TYPE : result;
+    com.google.wireless.android.sdk.stats.AtfFixDetail.AtfFixType result = com.google.wireless.android.sdk.stats.AtfFixDetail.AtfFixType.valueOf(fixType_);
+    return result == null ? com.google.wireless.android.sdk.stats.AtfFixDetail.AtfFixType.UNKNOWN : result;
   }
 
   private byte memoizedIsInitialized = -1;
@@ -304,7 +259,7 @@ private static final long serialVersionUID = 0L;
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
     if (((bitField0_ & 0x00000001) != 0)) {
-      output.writeEnum(1, type_);
+      output.writeEnum(3, fixType_);
     }
     unknownFields.writeTo(output);
   }
@@ -317,7 +272,7 @@ private static final long serialVersionUID = 0L;
     size = 0;
     if (((bitField0_ & 0x00000001) != 0)) {
       size += com.google.protobuf.CodedOutputStream
-        .computeEnumSize(1, type_);
+        .computeEnumSize(3, fixType_);
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -329,14 +284,14 @@ private static final long serialVersionUID = 0L;
     if (obj == this) {
      return true;
     }
-    if (!(obj instanceof com.google.wireless.android.sdk.stats.MultiViewEvent)) {
+    if (!(obj instanceof com.google.wireless.android.sdk.stats.AtfFixDetail)) {
       return super.equals(obj);
     }
-    com.google.wireless.android.sdk.stats.MultiViewEvent other = (com.google.wireless.android.sdk.stats.MultiViewEvent) obj;
+    com.google.wireless.android.sdk.stats.AtfFixDetail other = (com.google.wireless.android.sdk.stats.AtfFixDetail) obj;
 
-    if (hasType() != other.hasType()) return false;
-    if (hasType()) {
-      if (type_ != other.type_) return false;
+    if (hasFixType() != other.hasFixType()) return false;
+    if (hasFixType()) {
+      if (fixType_ != other.fixType_) return false;
     }
     if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
@@ -349,78 +304,78 @@ private static final long serialVersionUID = 0L;
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
-    if (hasType()) {
-      hash = (37 * hash) + TYPE_FIELD_NUMBER;
-      hash = (53 * hash) + type_;
+    if (hasFixType()) {
+      hash = (37 * hash) + FIX_TYPE_FIELD_NUMBER;
+      hash = (53 * hash) + fixType_;
     }
     hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
   }
 
-  public static com.google.wireless.android.sdk.stats.MultiViewEvent parseFrom(
+  public static com.google.wireless.android.sdk.stats.AtfFixDetail parseFrom(
       java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.google.wireless.android.sdk.stats.MultiViewEvent parseFrom(
+  public static com.google.wireless.android.sdk.stats.AtfFixDetail parseFrom(
       java.nio.ByteBuffer data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.google.wireless.android.sdk.stats.MultiViewEvent parseFrom(
+  public static com.google.wireless.android.sdk.stats.AtfFixDetail parseFrom(
       com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.google.wireless.android.sdk.stats.MultiViewEvent parseFrom(
+  public static com.google.wireless.android.sdk.stats.AtfFixDetail parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.google.wireless.android.sdk.stats.MultiViewEvent parseFrom(byte[] data)
+  public static com.google.wireless.android.sdk.stats.AtfFixDetail parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.google.wireless.android.sdk.stats.MultiViewEvent parseFrom(
+  public static com.google.wireless.android.sdk.stats.AtfFixDetail parseFrom(
       byte[] data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.google.wireless.android.sdk.stats.MultiViewEvent parseFrom(java.io.InputStream input)
+  public static com.google.wireless.android.sdk.stats.AtfFixDetail parseFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.google.wireless.android.sdk.stats.MultiViewEvent parseFrom(
+  public static com.google.wireless.android.sdk.stats.AtfFixDetail parseFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
-  public static com.google.wireless.android.sdk.stats.MultiViewEvent parseDelimitedFrom(java.io.InputStream input)
+  public static com.google.wireless.android.sdk.stats.AtfFixDetail parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
-  public static com.google.wireless.android.sdk.stats.MultiViewEvent parseDelimitedFrom(
+  public static com.google.wireless.android.sdk.stats.AtfFixDetail parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
   }
-  public static com.google.wireless.android.sdk.stats.MultiViewEvent parseFrom(
+  public static com.google.wireless.android.sdk.stats.AtfFixDetail parseFrom(
       com.google.protobuf.CodedInputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.google.wireless.android.sdk.stats.MultiViewEvent parseFrom(
+  public static com.google.wireless.android.sdk.stats.AtfFixDetail parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -433,7 +388,7 @@ private static final long serialVersionUID = 0L;
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
-  public static Builder newBuilder(com.google.wireless.android.sdk.stats.MultiViewEvent prototype) {
+  public static Builder newBuilder(com.google.wireless.android.sdk.stats.AtfFixDetail prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
   @java.lang.Override
@@ -450,30 +405,29 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Details for Validation Tool events
-   * Note: Validation Tool was called multi view or visualization tool.
+   * Details related to an ATF fix suggestion.
    * </pre>
    *
-   * Protobuf type {@code android_studio.MultiViewEvent}
+   * Protobuf type {@code android_studio.AtfFixDetail}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:android_studio.MultiViewEvent)
-      com.google.wireless.android.sdk.stats.MultiViewEventOrBuilder {
+      // @@protoc_insertion_point(builder_implements:android_studio.AtfFixDetail)
+      com.google.wireless.android.sdk.stats.AtfFixDetailOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_MultiViewEvent_descriptor;
+      return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_AtfFixDetail_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_MultiViewEvent_fieldAccessorTable
+      return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_AtfFixDetail_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.google.wireless.android.sdk.stats.MultiViewEvent.class, com.google.wireless.android.sdk.stats.MultiViewEvent.Builder.class);
+              com.google.wireless.android.sdk.stats.AtfFixDetail.class, com.google.wireless.android.sdk.stats.AtfFixDetail.Builder.class);
     }
 
-    // Construct using com.google.wireless.android.sdk.stats.MultiViewEvent.newBuilder()
+    // Construct using com.google.wireless.android.sdk.stats.AtfFixDetail.newBuilder()
     private Builder() {
       maybeForceBuilderInitialization();
     }
@@ -491,7 +445,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
-      type_ = 0;
+      fixType_ = 0;
       bitField0_ = (bitField0_ & ~0x00000001);
       return this;
     }
@@ -499,17 +453,17 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_MultiViewEvent_descriptor;
+      return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_AtfFixDetail_descriptor;
     }
 
     @java.lang.Override
-    public com.google.wireless.android.sdk.stats.MultiViewEvent getDefaultInstanceForType() {
-      return com.google.wireless.android.sdk.stats.MultiViewEvent.getDefaultInstance();
+    public com.google.wireless.android.sdk.stats.AtfFixDetail getDefaultInstanceForType() {
+      return com.google.wireless.android.sdk.stats.AtfFixDetail.getDefaultInstance();
     }
 
     @java.lang.Override
-    public com.google.wireless.android.sdk.stats.MultiViewEvent build() {
-      com.google.wireless.android.sdk.stats.MultiViewEvent result = buildPartial();
+    public com.google.wireless.android.sdk.stats.AtfFixDetail build() {
+      com.google.wireless.android.sdk.stats.AtfFixDetail result = buildPartial();
       if (!result.isInitialized()) {
         throw newUninitializedMessageException(result);
       }
@@ -517,14 +471,14 @@ private static final long serialVersionUID = 0L;
     }
 
     @java.lang.Override
-    public com.google.wireless.android.sdk.stats.MultiViewEvent buildPartial() {
-      com.google.wireless.android.sdk.stats.MultiViewEvent result = new com.google.wireless.android.sdk.stats.MultiViewEvent(this);
+    public com.google.wireless.android.sdk.stats.AtfFixDetail buildPartial() {
+      com.google.wireless.android.sdk.stats.AtfFixDetail result = new com.google.wireless.android.sdk.stats.AtfFixDetail(this);
       int from_bitField0_ = bitField0_;
       int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000001) != 0)) {
         to_bitField0_ |= 0x00000001;
       }
-      result.type_ = type_;
+      result.fixType_ = fixType_;
       result.bitField0_ = to_bitField0_;
       onBuilt();
       return result;
@@ -564,18 +518,18 @@ private static final long serialVersionUID = 0L;
     }
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
-      if (other instanceof com.google.wireless.android.sdk.stats.MultiViewEvent) {
-        return mergeFrom((com.google.wireless.android.sdk.stats.MultiViewEvent)other);
+      if (other instanceof com.google.wireless.android.sdk.stats.AtfFixDetail) {
+        return mergeFrom((com.google.wireless.android.sdk.stats.AtfFixDetail)other);
       } else {
         super.mergeFrom(other);
         return this;
       }
     }
 
-    public Builder mergeFrom(com.google.wireless.android.sdk.stats.MultiViewEvent other) {
-      if (other == com.google.wireless.android.sdk.stats.MultiViewEvent.getDefaultInstance()) return this;
-      if (other.hasType()) {
-        setType(other.getType());
+    public Builder mergeFrom(com.google.wireless.android.sdk.stats.AtfFixDetail other) {
+      if (other == com.google.wireless.android.sdk.stats.AtfFixDetail.getDefaultInstance()) return this;
+      if (other.hasFixType()) {
+        setFixType(other.getFixType());
       }
       this.mergeUnknownFields(other.unknownFields);
       onChanged();
@@ -592,11 +546,11 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      com.google.wireless.android.sdk.stats.MultiViewEvent parsedMessage = null;
+      com.google.wireless.android.sdk.stats.AtfFixDetail parsedMessage = null;
       try {
         parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        parsedMessage = (com.google.wireless.android.sdk.stats.MultiViewEvent) e.getUnfinishedMessage();
+        parsedMessage = (com.google.wireless.android.sdk.stats.AtfFixDetail) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
         if (parsedMessage != null) {
@@ -607,60 +561,60 @@ private static final long serialVersionUID = 0L;
     }
     private int bitField0_;
 
-    private int type_ = 0;
+    private int fixType_ = 0;
     /**
      * <pre>
-     * Type of event
+     * The type of the applied ATF fix
      * </pre>
      *
-     * <code>optional .android_studio.MultiViewEvent.MultiViewEventType type = 1;</code>
-     * @return Whether the type field is set.
+     * <code>optional .android_studio.AtfFixDetail.AtfFixType fix_type = 3;</code>
+     * @return Whether the fixType field is set.
      */
-    public boolean hasType() {
+    public boolean hasFixType() {
       return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
-     * Type of event
+     * The type of the applied ATF fix
      * </pre>
      *
-     * <code>optional .android_studio.MultiViewEvent.MultiViewEventType type = 1;</code>
-     * @return The type.
+     * <code>optional .android_studio.AtfFixDetail.AtfFixType fix_type = 3;</code>
+     * @return The fixType.
      */
-    public com.google.wireless.android.sdk.stats.MultiViewEvent.MultiViewEventType getType() {
+    public com.google.wireless.android.sdk.stats.AtfFixDetail.AtfFixType getFixType() {
       @SuppressWarnings("deprecation")
-      com.google.wireless.android.sdk.stats.MultiViewEvent.MultiViewEventType result = com.google.wireless.android.sdk.stats.MultiViewEvent.MultiViewEventType.valueOf(type_);
-      return result == null ? com.google.wireless.android.sdk.stats.MultiViewEvent.MultiViewEventType.UNKNOWN_EVENT_TYPE : result;
+      com.google.wireless.android.sdk.stats.AtfFixDetail.AtfFixType result = com.google.wireless.android.sdk.stats.AtfFixDetail.AtfFixType.valueOf(fixType_);
+      return result == null ? com.google.wireless.android.sdk.stats.AtfFixDetail.AtfFixType.UNKNOWN : result;
     }
     /**
      * <pre>
-     * Type of event
+     * The type of the applied ATF fix
      * </pre>
      *
-     * <code>optional .android_studio.MultiViewEvent.MultiViewEventType type = 1;</code>
-     * @param value The type to set.
+     * <code>optional .android_studio.AtfFixDetail.AtfFixType fix_type = 3;</code>
+     * @param value The fixType to set.
      * @return This builder for chaining.
      */
-    public Builder setType(com.google.wireless.android.sdk.stats.MultiViewEvent.MultiViewEventType value) {
+    public Builder setFixType(com.google.wireless.android.sdk.stats.AtfFixDetail.AtfFixType value) {
       if (value == null) {
         throw new NullPointerException();
       }
       bitField0_ |= 0x00000001;
-      type_ = value.getNumber();
+      fixType_ = value.getNumber();
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * Type of event
+     * The type of the applied ATF fix
      * </pre>
      *
-     * <code>optional .android_studio.MultiViewEvent.MultiViewEventType type = 1;</code>
+     * <code>optional .android_studio.AtfFixDetail.AtfFixType fix_type = 3;</code>
      * @return This builder for chaining.
      */
-    public Builder clearType() {
+    public Builder clearFixType() {
       bitField0_ = (bitField0_ & ~0x00000001);
-      type_ = 0;
+      fixType_ = 0;
       onChanged();
       return this;
     }
@@ -677,41 +631,41 @@ private static final long serialVersionUID = 0L;
     }
 
 
-    // @@protoc_insertion_point(builder_scope:android_studio.MultiViewEvent)
+    // @@protoc_insertion_point(builder_scope:android_studio.AtfFixDetail)
   }
 
-  // @@protoc_insertion_point(class_scope:android_studio.MultiViewEvent)
-  private static final com.google.wireless.android.sdk.stats.MultiViewEvent DEFAULT_INSTANCE;
+  // @@protoc_insertion_point(class_scope:android_studio.AtfFixDetail)
+  private static final com.google.wireless.android.sdk.stats.AtfFixDetail DEFAULT_INSTANCE;
   static {
-    DEFAULT_INSTANCE = new com.google.wireless.android.sdk.stats.MultiViewEvent();
+    DEFAULT_INSTANCE = new com.google.wireless.android.sdk.stats.AtfFixDetail();
   }
 
-  public static com.google.wireless.android.sdk.stats.MultiViewEvent getDefaultInstance() {
+  public static com.google.wireless.android.sdk.stats.AtfFixDetail getDefaultInstance() {
     return DEFAULT_INSTANCE;
   }
 
-  @java.lang.Deprecated public static final com.google.protobuf.Parser<MultiViewEvent>
-      PARSER = new com.google.protobuf.AbstractParser<MultiViewEvent>() {
+  @java.lang.Deprecated public static final com.google.protobuf.Parser<AtfFixDetail>
+      PARSER = new com.google.protobuf.AbstractParser<AtfFixDetail>() {
     @java.lang.Override
-    public MultiViewEvent parsePartialFrom(
+    public AtfFixDetail parsePartialFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return new MultiViewEvent(input, extensionRegistry);
+      return new AtfFixDetail(input, extensionRegistry);
     }
   };
 
-  public static com.google.protobuf.Parser<MultiViewEvent> parser() {
+  public static com.google.protobuf.Parser<AtfFixDetail> parser() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.google.protobuf.Parser<MultiViewEvent> getParserForType() {
+  public com.google.protobuf.Parser<AtfFixDetail> getParserForType() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.google.wireless.android.sdk.stats.MultiViewEvent getDefaultInstanceForType() {
+  public com.google.wireless.android.sdk.stats.AtfFixDetail getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
 

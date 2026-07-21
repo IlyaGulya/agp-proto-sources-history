@@ -597,6 +597,10 @@ public enum BooleanOption
    * <code>ENABLE_TEST_FIXTURES = 144;</code>
    */
   ENABLE_TEST_FIXTURES(144),
+  /**
+   * <code>INCLUDE_REPOSITORIES_IN_DEPENDENCY_REPORT = 145;</code>
+   */
+  INCLUDE_REPOSITORIES_IN_DEPENDENCY_REPORT(145),
   UNRECOGNIZED(-1),
   ;
 
@@ -1180,6 +1184,10 @@ public enum BooleanOption
    * <code>ENABLE_TEST_FIXTURES = 144;</code>
    */
   public static final int ENABLE_TEST_FIXTURES_VALUE = 144;
+  /**
+   * <code>INCLUDE_REPOSITORIES_IN_DEPENDENCY_REPORT = 145;</code>
+   */
+  public static final int INCLUDE_REPOSITORIES_IN_DEPENDENCY_REPORT_VALUE = 145;
 
 
   public final int getNumber() {
@@ -1351,6 +1359,7 @@ public enum BooleanOption
       case 142: return RELATIVE_COMPILE_LIB_RESOURCES;
       case 143: return R8_FAIL_ON_MISSING_CLASSES;
       case 144: return ENABLE_TEST_FIXTURES;
+      case 145: return INCLUDE_REPOSITORIES_IN_DEPENDENCY_REPORT;
       default: return null;
     }
   }

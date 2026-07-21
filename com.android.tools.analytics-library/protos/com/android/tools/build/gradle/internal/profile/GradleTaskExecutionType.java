@@ -1074,6 +1074,14 @@ public enum GradleTaskExecutionType
    * <code>ANDROID_LINT_ANALYSIS = 264;</code>
    */
   ANDROID_LINT_ANALYSIS(264),
+  /**
+   * <code>MERGE_R_FILES_FOR_DATA_BINDING = 265;</code>
+   */
+  MERGE_R_FILES_FOR_DATA_BINDING(265),
+  /**
+   * <code>DEVICE_SERIAL_TEST = 266;</code>
+   */
+  DEVICE_SERIAL_TEST(266),
   UNRECOGNIZED(-1),
   ;
 
@@ -2137,6 +2145,14 @@ public enum GradleTaskExecutionType
    * <code>ANDROID_LINT_ANALYSIS = 264;</code>
    */
   public static final int ANDROID_LINT_ANALYSIS_VALUE = 264;
+  /**
+   * <code>MERGE_R_FILES_FOR_DATA_BINDING = 265;</code>
+   */
+  public static final int MERGE_R_FILES_FOR_DATA_BINDING_VALUE = 265;
+  /**
+   * <code>DEVICE_SERIAL_TEST = 266;</code>
+   */
+  public static final int DEVICE_SERIAL_TEST_VALUE = 266;
 
 
   public final int getNumber() {
@@ -2428,6 +2444,8 @@ public enum GradleTaskExecutionType
       case 262: return D8_BUNDLE_MAIN_DEX_LIST;
       case 263: return FEATURE_DEX_MERGE;
       case 264: return ANDROID_LINT_ANALYSIS;
+      case 265: return MERGE_R_FILES_FOR_DATA_BINDING;
+      case 266: return DEVICE_SERIAL_TEST;
       default: return null;
     }
   }

@@ -144,6 +144,58 @@ private static final long serialVersionUID = 0L;
             bitField0_ |= 0x00000040;
             break;
           }
+          case 66: {
+            com.google.wireless.android.sdk.stats.ApplyAtfFixEvent.Builder subBuilder = null;
+            if (((bitField0_ & 0x00000080) != 0)) {
+              subBuilder = applyAtfFixEvent_.toBuilder();
+            }
+            applyAtfFixEvent_ = input.readMessage(com.google.wireless.android.sdk.stats.ApplyAtfFixEvent.PARSER, extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(applyAtfFixEvent_);
+              applyAtfFixEvent_ = subBuilder.buildPartial();
+            }
+            bitField0_ |= 0x00000080;
+            break;
+          }
+          case 74: {
+            com.google.wireless.android.sdk.stats.IgnoreAtfResultEvent.Builder subBuilder = null;
+            if (((bitField0_ & 0x00000100) != 0)) {
+              subBuilder = ignoreAtfResultEvent_.toBuilder();
+            }
+            ignoreAtfResultEvent_ = input.readMessage(com.google.wireless.android.sdk.stats.IgnoreAtfResultEvent.PARSER, extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(ignoreAtfResultEvent_);
+              ignoreAtfResultEvent_ = subBuilder.buildPartial();
+            }
+            bitField0_ |= 0x00000100;
+            break;
+          }
+          case 82: {
+            com.google.wireless.android.sdk.stats.UndoAppliedAtfFixEvent.Builder subBuilder = null;
+            if (((bitField0_ & 0x00000200) != 0)) {
+              subBuilder = undoAppliedAtfFixEvent_.toBuilder();
+            }
+            undoAppliedAtfFixEvent_ = input.readMessage(com.google.wireless.android.sdk.stats.UndoAppliedAtfFixEvent.PARSER, extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(undoAppliedAtfFixEvent_);
+              undoAppliedAtfFixEvent_ = subBuilder.buildPartial();
+            }
+            bitField0_ |= 0x00000200;
+            break;
+          }
+          case 90: {
+            com.google.wireless.android.sdk.stats.AnimationPreviewEvent.Builder subBuilder = null;
+            if (((bitField0_ & 0x00000400) != 0)) {
+              subBuilder = animationPreviewEvent_.toBuilder();
+            }
+            animationPreviewEvent_ = input.readMessage(com.google.wireless.android.sdk.stats.AnimationPreviewEvent.PARSER, extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(animationPreviewEvent_);
+              animationPreviewEvent_ = subBuilder.buildPartial();
+            }
+            bitField0_ |= 0x00000400;
+            break;
+          }
           default: {
             if (!parseUnknownField(
                 input, unknownFields, extensionRegistry, tag)) {
@@ -373,6 +425,22 @@ private static final long serialVersionUID = 0L;
      * <code>ATF_AUDIT_RESULT = 47;</code>
      */
     ATF_AUDIT_RESULT(47),
+    /**
+     * <code>APPLY_ATF_FIX = 48;</code>
+     */
+    APPLY_ATF_FIX(48),
+    /**
+     * <code>IGNORE_ATF_RESULT = 49;</code>
+     */
+    IGNORE_ATF_RESULT(49),
+    /**
+     * <code>UNDO_APPLIED_ATF_FIX = 50;</code>
+     */
+    UNDO_APPLIED_ATF_FIX(50),
+    /**
+     * <code>ANIMATION_PREVIEW = 51;</code>
+     */
+    ANIMATION_PREVIEW(51),
     ;
 
     /**
@@ -567,6 +635,22 @@ private static final long serialVersionUID = 0L;
      * <code>ATF_AUDIT_RESULT = 47;</code>
      */
     public static final int ATF_AUDIT_RESULT_VALUE = 47;
+    /**
+     * <code>APPLY_ATF_FIX = 48;</code>
+     */
+    public static final int APPLY_ATF_FIX_VALUE = 48;
+    /**
+     * <code>IGNORE_ATF_RESULT = 49;</code>
+     */
+    public static final int IGNORE_ATF_RESULT_VALUE = 49;
+    /**
+     * <code>UNDO_APPLIED_ATF_FIX = 50;</code>
+     */
+    public static final int UNDO_APPLIED_ATF_FIX_VALUE = 50;
+    /**
+     * <code>ANIMATION_PREVIEW = 51;</code>
+     */
+    public static final int ANIMATION_PREVIEW_VALUE = 51;
 
 
     public final int getNumber() {
@@ -637,6 +721,10 @@ private static final long serialVersionUID = 0L;
         case 45: return ENABLE_LAYOUTLIB_NATIVE;
         case 46: return DISABLE_LAYOUTLIB_NATIVE;
         case 47: return ATF_AUDIT_RESULT;
+        case 48: return APPLY_ATF_FIX;
+        case 49: return IGNORE_ATF_RESULT;
+        case 50: return UNDO_APPLIED_ATF_FIX;
+        case 51: return ANIMATION_PREVIEW;
         default: return null;
       }
     }
@@ -924,6 +1012,146 @@ private static final long serialVersionUID = 0L;
     return atfAuditResult_ == null ? com.google.wireless.android.sdk.stats.AtfAuditResult.getDefaultInstance() : atfAuditResult_;
   }
 
+  public static final int APPLY_ATF_FIX_EVENT_FIELD_NUMBER = 8;
+  private com.google.wireless.android.sdk.stats.ApplyAtfFixEvent applyAtfFixEvent_;
+  /**
+   * <pre>
+   * Details related to applying an atf fix (type = APPLY_ATF_FIX)
+   * </pre>
+   *
+   * <code>optional .android_studio.ApplyAtfFixEvent apply_atf_fix_event = 8;</code>
+   * @return Whether the applyAtfFixEvent field is set.
+   */
+  public boolean hasApplyAtfFixEvent() {
+    return ((bitField0_ & 0x00000080) != 0);
+  }
+  /**
+   * <pre>
+   * Details related to applying an atf fix (type = APPLY_ATF_FIX)
+   * </pre>
+   *
+   * <code>optional .android_studio.ApplyAtfFixEvent apply_atf_fix_event = 8;</code>
+   * @return The applyAtfFixEvent.
+   */
+  public com.google.wireless.android.sdk.stats.ApplyAtfFixEvent getApplyAtfFixEvent() {
+    return applyAtfFixEvent_ == null ? com.google.wireless.android.sdk.stats.ApplyAtfFixEvent.getDefaultInstance() : applyAtfFixEvent_;
+  }
+  /**
+   * <pre>
+   * Details related to applying an atf fix (type = APPLY_ATF_FIX)
+   * </pre>
+   *
+   * <code>optional .android_studio.ApplyAtfFixEvent apply_atf_fix_event = 8;</code>
+   */
+  public com.google.wireless.android.sdk.stats.ApplyAtfFixEventOrBuilder getApplyAtfFixEventOrBuilder() {
+    return applyAtfFixEvent_ == null ? com.google.wireless.android.sdk.stats.ApplyAtfFixEvent.getDefaultInstance() : applyAtfFixEvent_;
+  }
+
+  public static final int IGNORE_ATF_RESULT_EVENT_FIELD_NUMBER = 9;
+  private com.google.wireless.android.sdk.stats.IgnoreAtfResultEvent ignoreAtfResultEvent_;
+  /**
+   * <pre>
+   * Details related to ignoring an atf result (type = IGNORE_ATF_FIX)
+   * </pre>
+   *
+   * <code>optional .android_studio.IgnoreAtfResultEvent ignore_atf_result_event = 9;</code>
+   * @return Whether the ignoreAtfResultEvent field is set.
+   */
+  public boolean hasIgnoreAtfResultEvent() {
+    return ((bitField0_ & 0x00000100) != 0);
+  }
+  /**
+   * <pre>
+   * Details related to ignoring an atf result (type = IGNORE_ATF_FIX)
+   * </pre>
+   *
+   * <code>optional .android_studio.IgnoreAtfResultEvent ignore_atf_result_event = 9;</code>
+   * @return The ignoreAtfResultEvent.
+   */
+  public com.google.wireless.android.sdk.stats.IgnoreAtfResultEvent getIgnoreAtfResultEvent() {
+    return ignoreAtfResultEvent_ == null ? com.google.wireless.android.sdk.stats.IgnoreAtfResultEvent.getDefaultInstance() : ignoreAtfResultEvent_;
+  }
+  /**
+   * <pre>
+   * Details related to ignoring an atf result (type = IGNORE_ATF_FIX)
+   * </pre>
+   *
+   * <code>optional .android_studio.IgnoreAtfResultEvent ignore_atf_result_event = 9;</code>
+   */
+  public com.google.wireless.android.sdk.stats.IgnoreAtfResultEventOrBuilder getIgnoreAtfResultEventOrBuilder() {
+    return ignoreAtfResultEvent_ == null ? com.google.wireless.android.sdk.stats.IgnoreAtfResultEvent.getDefaultInstance() : ignoreAtfResultEvent_;
+  }
+
+  public static final int UNDO_APPLIED_ATF_FIX_EVENT_FIELD_NUMBER = 10;
+  private com.google.wireless.android.sdk.stats.UndoAppliedAtfFixEvent undoAppliedAtfFixEvent_;
+  /**
+   * <pre>
+   * Details related to undoing an applied atf fix (type = UNDO_APPLIED_ATF_FIX)
+   * </pre>
+   *
+   * <code>optional .android_studio.UndoAppliedAtfFixEvent undo_applied_atf_fix_event = 10;</code>
+   * @return Whether the undoAppliedAtfFixEvent field is set.
+   */
+  public boolean hasUndoAppliedAtfFixEvent() {
+    return ((bitField0_ & 0x00000200) != 0);
+  }
+  /**
+   * <pre>
+   * Details related to undoing an applied atf fix (type = UNDO_APPLIED_ATF_FIX)
+   * </pre>
+   *
+   * <code>optional .android_studio.UndoAppliedAtfFixEvent undo_applied_atf_fix_event = 10;</code>
+   * @return The undoAppliedAtfFixEvent.
+   */
+  public com.google.wireless.android.sdk.stats.UndoAppliedAtfFixEvent getUndoAppliedAtfFixEvent() {
+    return undoAppliedAtfFixEvent_ == null ? com.google.wireless.android.sdk.stats.UndoAppliedAtfFixEvent.getDefaultInstance() : undoAppliedAtfFixEvent_;
+  }
+  /**
+   * <pre>
+   * Details related to undoing an applied atf fix (type = UNDO_APPLIED_ATF_FIX)
+   * </pre>
+   *
+   * <code>optional .android_studio.UndoAppliedAtfFixEvent undo_applied_atf_fix_event = 10;</code>
+   */
+  public com.google.wireless.android.sdk.stats.UndoAppliedAtfFixEventOrBuilder getUndoAppliedAtfFixEventOrBuilder() {
+    return undoAppliedAtfFixEvent_ == null ? com.google.wireless.android.sdk.stats.UndoAppliedAtfFixEvent.getDefaultInstance() : undoAppliedAtfFixEvent_;
+  }
+
+  public static final int ANIMATION_PREVIEW_EVENT_FIELD_NUMBER = 11;
+  private com.google.wireless.android.sdk.stats.AnimationPreviewEvent animationPreviewEvent_;
+  /**
+   * <pre>
+   * Details related to interacting animation preview (type = ANIMATION_PREVIEW)
+   * </pre>
+   *
+   * <code>optional .android_studio.AnimationPreviewEvent animation_preview_event = 11;</code>
+   * @return Whether the animationPreviewEvent field is set.
+   */
+  public boolean hasAnimationPreviewEvent() {
+    return ((bitField0_ & 0x00000400) != 0);
+  }
+  /**
+   * <pre>
+   * Details related to interacting animation preview (type = ANIMATION_PREVIEW)
+   * </pre>
+   *
+   * <code>optional .android_studio.AnimationPreviewEvent animation_preview_event = 11;</code>
+   * @return The animationPreviewEvent.
+   */
+  public com.google.wireless.android.sdk.stats.AnimationPreviewEvent getAnimationPreviewEvent() {
+    return animationPreviewEvent_ == null ? com.google.wireless.android.sdk.stats.AnimationPreviewEvent.getDefaultInstance() : animationPreviewEvent_;
+  }
+  /**
+   * <pre>
+   * Details related to interacting animation preview (type = ANIMATION_PREVIEW)
+   * </pre>
+   *
+   * <code>optional .android_studio.AnimationPreviewEvent animation_preview_event = 11;</code>
+   */
+  public com.google.wireless.android.sdk.stats.AnimationPreviewEventOrBuilder getAnimationPreviewEventOrBuilder() {
+    return animationPreviewEvent_ == null ? com.google.wireless.android.sdk.stats.AnimationPreviewEvent.getDefaultInstance() : animationPreviewEvent_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -958,6 +1186,18 @@ private static final long serialVersionUID = 0L;
     }
     if (((bitField0_ & 0x00000040) != 0)) {
       output.writeMessage(7, getAtfAuditResult());
+    }
+    if (((bitField0_ & 0x00000080) != 0)) {
+      output.writeMessage(8, getApplyAtfFixEvent());
+    }
+    if (((bitField0_ & 0x00000100) != 0)) {
+      output.writeMessage(9, getIgnoreAtfResultEvent());
+    }
+    if (((bitField0_ & 0x00000200) != 0)) {
+      output.writeMessage(10, getUndoAppliedAtfFixEvent());
+    }
+    if (((bitField0_ & 0x00000400) != 0)) {
+      output.writeMessage(11, getAnimationPreviewEvent());
     }
     unknownFields.writeTo(output);
   }
@@ -995,6 +1235,22 @@ private static final long serialVersionUID = 0L;
     if (((bitField0_ & 0x00000040) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(7, getAtfAuditResult());
+    }
+    if (((bitField0_ & 0x00000080) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(8, getApplyAtfFixEvent());
+    }
+    if (((bitField0_ & 0x00000100) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(9, getIgnoreAtfResultEvent());
+    }
+    if (((bitField0_ & 0x00000200) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(10, getUndoAppliedAtfFixEvent());
+    }
+    if (((bitField0_ & 0x00000400) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(11, getAnimationPreviewEvent());
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -1045,6 +1301,26 @@ private static final long serialVersionUID = 0L;
       if (!getAtfAuditResult()
           .equals(other.getAtfAuditResult())) return false;
     }
+    if (hasApplyAtfFixEvent() != other.hasApplyAtfFixEvent()) return false;
+    if (hasApplyAtfFixEvent()) {
+      if (!getApplyAtfFixEvent()
+          .equals(other.getApplyAtfFixEvent())) return false;
+    }
+    if (hasIgnoreAtfResultEvent() != other.hasIgnoreAtfResultEvent()) return false;
+    if (hasIgnoreAtfResultEvent()) {
+      if (!getIgnoreAtfResultEvent()
+          .equals(other.getIgnoreAtfResultEvent())) return false;
+    }
+    if (hasUndoAppliedAtfFixEvent() != other.hasUndoAppliedAtfFixEvent()) return false;
+    if (hasUndoAppliedAtfFixEvent()) {
+      if (!getUndoAppliedAtfFixEvent()
+          .equals(other.getUndoAppliedAtfFixEvent())) return false;
+    }
+    if (hasAnimationPreviewEvent() != other.hasAnimationPreviewEvent()) return false;
+    if (hasAnimationPreviewEvent()) {
+      if (!getAnimationPreviewEvent()
+          .equals(other.getAnimationPreviewEvent())) return false;
+    }
     if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
@@ -1083,6 +1359,22 @@ private static final long serialVersionUID = 0L;
     if (hasAtfAuditResult()) {
       hash = (37 * hash) + ATF_AUDIT_RESULT_FIELD_NUMBER;
       hash = (53 * hash) + getAtfAuditResult().hashCode();
+    }
+    if (hasApplyAtfFixEvent()) {
+      hash = (37 * hash) + APPLY_ATF_FIX_EVENT_FIELD_NUMBER;
+      hash = (53 * hash) + getApplyAtfFixEvent().hashCode();
+    }
+    if (hasIgnoreAtfResultEvent()) {
+      hash = (37 * hash) + IGNORE_ATF_RESULT_EVENT_FIELD_NUMBER;
+      hash = (53 * hash) + getIgnoreAtfResultEvent().hashCode();
+    }
+    if (hasUndoAppliedAtfFixEvent()) {
+      hash = (37 * hash) + UNDO_APPLIED_ATF_FIX_EVENT_FIELD_NUMBER;
+      hash = (53 * hash) + getUndoAppliedAtfFixEvent().hashCode();
+    }
+    if (hasAnimationPreviewEvent()) {
+      hash = (37 * hash) + ANIMATION_PREVIEW_EVENT_FIELD_NUMBER;
+      hash = (53 * hash) + getAnimationPreviewEvent().hashCode();
     }
     hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
@@ -1222,6 +1514,10 @@ private static final long serialVersionUID = 0L;
         getAttributeChangeEventFieldBuilder();
         getFavoriteChangeEventFieldBuilder();
         getAtfAuditResultFieldBuilder();
+        getApplyAtfFixEventFieldBuilder();
+        getIgnoreAtfResultEventFieldBuilder();
+        getUndoAppliedAtfFixEventFieldBuilder();
+        getAnimationPreviewEventFieldBuilder();
       }
     }
     @java.lang.Override
@@ -1265,6 +1561,30 @@ private static final long serialVersionUID = 0L;
         atfAuditResultBuilder_.clear();
       }
       bitField0_ = (bitField0_ & ~0x00000040);
+      if (applyAtfFixEventBuilder_ == null) {
+        applyAtfFixEvent_ = null;
+      } else {
+        applyAtfFixEventBuilder_.clear();
+      }
+      bitField0_ = (bitField0_ & ~0x00000080);
+      if (ignoreAtfResultEventBuilder_ == null) {
+        ignoreAtfResultEvent_ = null;
+      } else {
+        ignoreAtfResultEventBuilder_.clear();
+      }
+      bitField0_ = (bitField0_ & ~0x00000100);
+      if (undoAppliedAtfFixEventBuilder_ == null) {
+        undoAppliedAtfFixEvent_ = null;
+      } else {
+        undoAppliedAtfFixEventBuilder_.clear();
+      }
+      bitField0_ = (bitField0_ & ~0x00000200);
+      if (animationPreviewEventBuilder_ == null) {
+        animationPreviewEvent_ = null;
+      } else {
+        animationPreviewEventBuilder_.clear();
+      }
+      bitField0_ = (bitField0_ & ~0x00000400);
       return this;
     }
 
@@ -1345,6 +1665,38 @@ private static final long serialVersionUID = 0L;
         }
         to_bitField0_ |= 0x00000040;
       }
+      if (((from_bitField0_ & 0x00000080) != 0)) {
+        if (applyAtfFixEventBuilder_ == null) {
+          result.applyAtfFixEvent_ = applyAtfFixEvent_;
+        } else {
+          result.applyAtfFixEvent_ = applyAtfFixEventBuilder_.build();
+        }
+        to_bitField0_ |= 0x00000080;
+      }
+      if (((from_bitField0_ & 0x00000100) != 0)) {
+        if (ignoreAtfResultEventBuilder_ == null) {
+          result.ignoreAtfResultEvent_ = ignoreAtfResultEvent_;
+        } else {
+          result.ignoreAtfResultEvent_ = ignoreAtfResultEventBuilder_.build();
+        }
+        to_bitField0_ |= 0x00000100;
+      }
+      if (((from_bitField0_ & 0x00000200) != 0)) {
+        if (undoAppliedAtfFixEventBuilder_ == null) {
+          result.undoAppliedAtfFixEvent_ = undoAppliedAtfFixEvent_;
+        } else {
+          result.undoAppliedAtfFixEvent_ = undoAppliedAtfFixEventBuilder_.build();
+        }
+        to_bitField0_ |= 0x00000200;
+      }
+      if (((from_bitField0_ & 0x00000400) != 0)) {
+        if (animationPreviewEventBuilder_ == null) {
+          result.animationPreviewEvent_ = animationPreviewEvent_;
+        } else {
+          result.animationPreviewEvent_ = animationPreviewEventBuilder_.build();
+        }
+        to_bitField0_ |= 0x00000400;
+      }
       result.bitField0_ = to_bitField0_;
       onBuilt();
       return result;
@@ -1414,6 +1766,18 @@ private static final long serialVersionUID = 0L;
       }
       if (other.hasAtfAuditResult()) {
         mergeAtfAuditResult(other.getAtfAuditResult());
+      }
+      if (other.hasApplyAtfFixEvent()) {
+        mergeApplyAtfFixEvent(other.getApplyAtfFixEvent());
+      }
+      if (other.hasIgnoreAtfResultEvent()) {
+        mergeIgnoreAtfResultEvent(other.getIgnoreAtfResultEvent());
+      }
+      if (other.hasUndoAppliedAtfFixEvent()) {
+        mergeUndoAppliedAtfFixEvent(other.getUndoAppliedAtfFixEvent());
+      }
+      if (other.hasAnimationPreviewEvent()) {
+        mergeAnimationPreviewEvent(other.getAnimationPreviewEvent());
       }
       this.mergeUnknownFields(other.unknownFields);
       onChanged();
@@ -2437,6 +2801,630 @@ private static final long serialVersionUID = 0L;
         atfAuditResult_ = null;
       }
       return atfAuditResultBuilder_;
+    }
+
+    private com.google.wireless.android.sdk.stats.ApplyAtfFixEvent applyAtfFixEvent_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.ApplyAtfFixEvent, com.google.wireless.android.sdk.stats.ApplyAtfFixEvent.Builder, com.google.wireless.android.sdk.stats.ApplyAtfFixEventOrBuilder> applyAtfFixEventBuilder_;
+    /**
+     * <pre>
+     * Details related to applying an atf fix (type = APPLY_ATF_FIX)
+     * </pre>
+     *
+     * <code>optional .android_studio.ApplyAtfFixEvent apply_atf_fix_event = 8;</code>
+     * @return Whether the applyAtfFixEvent field is set.
+     */
+    public boolean hasApplyAtfFixEvent() {
+      return ((bitField0_ & 0x00000080) != 0);
+    }
+    /**
+     * <pre>
+     * Details related to applying an atf fix (type = APPLY_ATF_FIX)
+     * </pre>
+     *
+     * <code>optional .android_studio.ApplyAtfFixEvent apply_atf_fix_event = 8;</code>
+     * @return The applyAtfFixEvent.
+     */
+    public com.google.wireless.android.sdk.stats.ApplyAtfFixEvent getApplyAtfFixEvent() {
+      if (applyAtfFixEventBuilder_ == null) {
+        return applyAtfFixEvent_ == null ? com.google.wireless.android.sdk.stats.ApplyAtfFixEvent.getDefaultInstance() : applyAtfFixEvent_;
+      } else {
+        return applyAtfFixEventBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * Details related to applying an atf fix (type = APPLY_ATF_FIX)
+     * </pre>
+     *
+     * <code>optional .android_studio.ApplyAtfFixEvent apply_atf_fix_event = 8;</code>
+     */
+    public Builder setApplyAtfFixEvent(com.google.wireless.android.sdk.stats.ApplyAtfFixEvent value) {
+      if (applyAtfFixEventBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        applyAtfFixEvent_ = value;
+        onChanged();
+      } else {
+        applyAtfFixEventBuilder_.setMessage(value);
+      }
+      bitField0_ |= 0x00000080;
+      return this;
+    }
+    /**
+     * <pre>
+     * Details related to applying an atf fix (type = APPLY_ATF_FIX)
+     * </pre>
+     *
+     * <code>optional .android_studio.ApplyAtfFixEvent apply_atf_fix_event = 8;</code>
+     */
+    public Builder setApplyAtfFixEvent(
+        com.google.wireless.android.sdk.stats.ApplyAtfFixEvent.Builder builderForValue) {
+      if (applyAtfFixEventBuilder_ == null) {
+        applyAtfFixEvent_ = builderForValue.build();
+        onChanged();
+      } else {
+        applyAtfFixEventBuilder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x00000080;
+      return this;
+    }
+    /**
+     * <pre>
+     * Details related to applying an atf fix (type = APPLY_ATF_FIX)
+     * </pre>
+     *
+     * <code>optional .android_studio.ApplyAtfFixEvent apply_atf_fix_event = 8;</code>
+     */
+    public Builder mergeApplyAtfFixEvent(com.google.wireless.android.sdk.stats.ApplyAtfFixEvent value) {
+      if (applyAtfFixEventBuilder_ == null) {
+        if (((bitField0_ & 0x00000080) != 0) &&
+            applyAtfFixEvent_ != null &&
+            applyAtfFixEvent_ != com.google.wireless.android.sdk.stats.ApplyAtfFixEvent.getDefaultInstance()) {
+          applyAtfFixEvent_ =
+            com.google.wireless.android.sdk.stats.ApplyAtfFixEvent.newBuilder(applyAtfFixEvent_).mergeFrom(value).buildPartial();
+        } else {
+          applyAtfFixEvent_ = value;
+        }
+        onChanged();
+      } else {
+        applyAtfFixEventBuilder_.mergeFrom(value);
+      }
+      bitField0_ |= 0x00000080;
+      return this;
+    }
+    /**
+     * <pre>
+     * Details related to applying an atf fix (type = APPLY_ATF_FIX)
+     * </pre>
+     *
+     * <code>optional .android_studio.ApplyAtfFixEvent apply_atf_fix_event = 8;</code>
+     */
+    public Builder clearApplyAtfFixEvent() {
+      if (applyAtfFixEventBuilder_ == null) {
+        applyAtfFixEvent_ = null;
+        onChanged();
+      } else {
+        applyAtfFixEventBuilder_.clear();
+      }
+      bitField0_ = (bitField0_ & ~0x00000080);
+      return this;
+    }
+    /**
+     * <pre>
+     * Details related to applying an atf fix (type = APPLY_ATF_FIX)
+     * </pre>
+     *
+     * <code>optional .android_studio.ApplyAtfFixEvent apply_atf_fix_event = 8;</code>
+     */
+    public com.google.wireless.android.sdk.stats.ApplyAtfFixEvent.Builder getApplyAtfFixEventBuilder() {
+      bitField0_ |= 0x00000080;
+      onChanged();
+      return getApplyAtfFixEventFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * Details related to applying an atf fix (type = APPLY_ATF_FIX)
+     * </pre>
+     *
+     * <code>optional .android_studio.ApplyAtfFixEvent apply_atf_fix_event = 8;</code>
+     */
+    public com.google.wireless.android.sdk.stats.ApplyAtfFixEventOrBuilder getApplyAtfFixEventOrBuilder() {
+      if (applyAtfFixEventBuilder_ != null) {
+        return applyAtfFixEventBuilder_.getMessageOrBuilder();
+      } else {
+        return applyAtfFixEvent_ == null ?
+            com.google.wireless.android.sdk.stats.ApplyAtfFixEvent.getDefaultInstance() : applyAtfFixEvent_;
+      }
+    }
+    /**
+     * <pre>
+     * Details related to applying an atf fix (type = APPLY_ATF_FIX)
+     * </pre>
+     *
+     * <code>optional .android_studio.ApplyAtfFixEvent apply_atf_fix_event = 8;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.ApplyAtfFixEvent, com.google.wireless.android.sdk.stats.ApplyAtfFixEvent.Builder, com.google.wireless.android.sdk.stats.ApplyAtfFixEventOrBuilder> 
+        getApplyAtfFixEventFieldBuilder() {
+      if (applyAtfFixEventBuilder_ == null) {
+        applyAtfFixEventBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.wireless.android.sdk.stats.ApplyAtfFixEvent, com.google.wireless.android.sdk.stats.ApplyAtfFixEvent.Builder, com.google.wireless.android.sdk.stats.ApplyAtfFixEventOrBuilder>(
+                getApplyAtfFixEvent(),
+                getParentForChildren(),
+                isClean());
+        applyAtfFixEvent_ = null;
+      }
+      return applyAtfFixEventBuilder_;
+    }
+
+    private com.google.wireless.android.sdk.stats.IgnoreAtfResultEvent ignoreAtfResultEvent_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.IgnoreAtfResultEvent, com.google.wireless.android.sdk.stats.IgnoreAtfResultEvent.Builder, com.google.wireless.android.sdk.stats.IgnoreAtfResultEventOrBuilder> ignoreAtfResultEventBuilder_;
+    /**
+     * <pre>
+     * Details related to ignoring an atf result (type = IGNORE_ATF_FIX)
+     * </pre>
+     *
+     * <code>optional .android_studio.IgnoreAtfResultEvent ignore_atf_result_event = 9;</code>
+     * @return Whether the ignoreAtfResultEvent field is set.
+     */
+    public boolean hasIgnoreAtfResultEvent() {
+      return ((bitField0_ & 0x00000100) != 0);
+    }
+    /**
+     * <pre>
+     * Details related to ignoring an atf result (type = IGNORE_ATF_FIX)
+     * </pre>
+     *
+     * <code>optional .android_studio.IgnoreAtfResultEvent ignore_atf_result_event = 9;</code>
+     * @return The ignoreAtfResultEvent.
+     */
+    public com.google.wireless.android.sdk.stats.IgnoreAtfResultEvent getIgnoreAtfResultEvent() {
+      if (ignoreAtfResultEventBuilder_ == null) {
+        return ignoreAtfResultEvent_ == null ? com.google.wireless.android.sdk.stats.IgnoreAtfResultEvent.getDefaultInstance() : ignoreAtfResultEvent_;
+      } else {
+        return ignoreAtfResultEventBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * Details related to ignoring an atf result (type = IGNORE_ATF_FIX)
+     * </pre>
+     *
+     * <code>optional .android_studio.IgnoreAtfResultEvent ignore_atf_result_event = 9;</code>
+     */
+    public Builder setIgnoreAtfResultEvent(com.google.wireless.android.sdk.stats.IgnoreAtfResultEvent value) {
+      if (ignoreAtfResultEventBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ignoreAtfResultEvent_ = value;
+        onChanged();
+      } else {
+        ignoreAtfResultEventBuilder_.setMessage(value);
+      }
+      bitField0_ |= 0x00000100;
+      return this;
+    }
+    /**
+     * <pre>
+     * Details related to ignoring an atf result (type = IGNORE_ATF_FIX)
+     * </pre>
+     *
+     * <code>optional .android_studio.IgnoreAtfResultEvent ignore_atf_result_event = 9;</code>
+     */
+    public Builder setIgnoreAtfResultEvent(
+        com.google.wireless.android.sdk.stats.IgnoreAtfResultEvent.Builder builderForValue) {
+      if (ignoreAtfResultEventBuilder_ == null) {
+        ignoreAtfResultEvent_ = builderForValue.build();
+        onChanged();
+      } else {
+        ignoreAtfResultEventBuilder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x00000100;
+      return this;
+    }
+    /**
+     * <pre>
+     * Details related to ignoring an atf result (type = IGNORE_ATF_FIX)
+     * </pre>
+     *
+     * <code>optional .android_studio.IgnoreAtfResultEvent ignore_atf_result_event = 9;</code>
+     */
+    public Builder mergeIgnoreAtfResultEvent(com.google.wireless.android.sdk.stats.IgnoreAtfResultEvent value) {
+      if (ignoreAtfResultEventBuilder_ == null) {
+        if (((bitField0_ & 0x00000100) != 0) &&
+            ignoreAtfResultEvent_ != null &&
+            ignoreAtfResultEvent_ != com.google.wireless.android.sdk.stats.IgnoreAtfResultEvent.getDefaultInstance()) {
+          ignoreAtfResultEvent_ =
+            com.google.wireless.android.sdk.stats.IgnoreAtfResultEvent.newBuilder(ignoreAtfResultEvent_).mergeFrom(value).buildPartial();
+        } else {
+          ignoreAtfResultEvent_ = value;
+        }
+        onChanged();
+      } else {
+        ignoreAtfResultEventBuilder_.mergeFrom(value);
+      }
+      bitField0_ |= 0x00000100;
+      return this;
+    }
+    /**
+     * <pre>
+     * Details related to ignoring an atf result (type = IGNORE_ATF_FIX)
+     * </pre>
+     *
+     * <code>optional .android_studio.IgnoreAtfResultEvent ignore_atf_result_event = 9;</code>
+     */
+    public Builder clearIgnoreAtfResultEvent() {
+      if (ignoreAtfResultEventBuilder_ == null) {
+        ignoreAtfResultEvent_ = null;
+        onChanged();
+      } else {
+        ignoreAtfResultEventBuilder_.clear();
+      }
+      bitField0_ = (bitField0_ & ~0x00000100);
+      return this;
+    }
+    /**
+     * <pre>
+     * Details related to ignoring an atf result (type = IGNORE_ATF_FIX)
+     * </pre>
+     *
+     * <code>optional .android_studio.IgnoreAtfResultEvent ignore_atf_result_event = 9;</code>
+     */
+    public com.google.wireless.android.sdk.stats.IgnoreAtfResultEvent.Builder getIgnoreAtfResultEventBuilder() {
+      bitField0_ |= 0x00000100;
+      onChanged();
+      return getIgnoreAtfResultEventFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * Details related to ignoring an atf result (type = IGNORE_ATF_FIX)
+     * </pre>
+     *
+     * <code>optional .android_studio.IgnoreAtfResultEvent ignore_atf_result_event = 9;</code>
+     */
+    public com.google.wireless.android.sdk.stats.IgnoreAtfResultEventOrBuilder getIgnoreAtfResultEventOrBuilder() {
+      if (ignoreAtfResultEventBuilder_ != null) {
+        return ignoreAtfResultEventBuilder_.getMessageOrBuilder();
+      } else {
+        return ignoreAtfResultEvent_ == null ?
+            com.google.wireless.android.sdk.stats.IgnoreAtfResultEvent.getDefaultInstance() : ignoreAtfResultEvent_;
+      }
+    }
+    /**
+     * <pre>
+     * Details related to ignoring an atf result (type = IGNORE_ATF_FIX)
+     * </pre>
+     *
+     * <code>optional .android_studio.IgnoreAtfResultEvent ignore_atf_result_event = 9;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.IgnoreAtfResultEvent, com.google.wireless.android.sdk.stats.IgnoreAtfResultEvent.Builder, com.google.wireless.android.sdk.stats.IgnoreAtfResultEventOrBuilder> 
+        getIgnoreAtfResultEventFieldBuilder() {
+      if (ignoreAtfResultEventBuilder_ == null) {
+        ignoreAtfResultEventBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.wireless.android.sdk.stats.IgnoreAtfResultEvent, com.google.wireless.android.sdk.stats.IgnoreAtfResultEvent.Builder, com.google.wireless.android.sdk.stats.IgnoreAtfResultEventOrBuilder>(
+                getIgnoreAtfResultEvent(),
+                getParentForChildren(),
+                isClean());
+        ignoreAtfResultEvent_ = null;
+      }
+      return ignoreAtfResultEventBuilder_;
+    }
+
+    private com.google.wireless.android.sdk.stats.UndoAppliedAtfFixEvent undoAppliedAtfFixEvent_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.UndoAppliedAtfFixEvent, com.google.wireless.android.sdk.stats.UndoAppliedAtfFixEvent.Builder, com.google.wireless.android.sdk.stats.UndoAppliedAtfFixEventOrBuilder> undoAppliedAtfFixEventBuilder_;
+    /**
+     * <pre>
+     * Details related to undoing an applied atf fix (type = UNDO_APPLIED_ATF_FIX)
+     * </pre>
+     *
+     * <code>optional .android_studio.UndoAppliedAtfFixEvent undo_applied_atf_fix_event = 10;</code>
+     * @return Whether the undoAppliedAtfFixEvent field is set.
+     */
+    public boolean hasUndoAppliedAtfFixEvent() {
+      return ((bitField0_ & 0x00000200) != 0);
+    }
+    /**
+     * <pre>
+     * Details related to undoing an applied atf fix (type = UNDO_APPLIED_ATF_FIX)
+     * </pre>
+     *
+     * <code>optional .android_studio.UndoAppliedAtfFixEvent undo_applied_atf_fix_event = 10;</code>
+     * @return The undoAppliedAtfFixEvent.
+     */
+    public com.google.wireless.android.sdk.stats.UndoAppliedAtfFixEvent getUndoAppliedAtfFixEvent() {
+      if (undoAppliedAtfFixEventBuilder_ == null) {
+        return undoAppliedAtfFixEvent_ == null ? com.google.wireless.android.sdk.stats.UndoAppliedAtfFixEvent.getDefaultInstance() : undoAppliedAtfFixEvent_;
+      } else {
+        return undoAppliedAtfFixEventBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * Details related to undoing an applied atf fix (type = UNDO_APPLIED_ATF_FIX)
+     * </pre>
+     *
+     * <code>optional .android_studio.UndoAppliedAtfFixEvent undo_applied_atf_fix_event = 10;</code>
+     */
+    public Builder setUndoAppliedAtfFixEvent(com.google.wireless.android.sdk.stats.UndoAppliedAtfFixEvent value) {
+      if (undoAppliedAtfFixEventBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        undoAppliedAtfFixEvent_ = value;
+        onChanged();
+      } else {
+        undoAppliedAtfFixEventBuilder_.setMessage(value);
+      }
+      bitField0_ |= 0x00000200;
+      return this;
+    }
+    /**
+     * <pre>
+     * Details related to undoing an applied atf fix (type = UNDO_APPLIED_ATF_FIX)
+     * </pre>
+     *
+     * <code>optional .android_studio.UndoAppliedAtfFixEvent undo_applied_atf_fix_event = 10;</code>
+     */
+    public Builder setUndoAppliedAtfFixEvent(
+        com.google.wireless.android.sdk.stats.UndoAppliedAtfFixEvent.Builder builderForValue) {
+      if (undoAppliedAtfFixEventBuilder_ == null) {
+        undoAppliedAtfFixEvent_ = builderForValue.build();
+        onChanged();
+      } else {
+        undoAppliedAtfFixEventBuilder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x00000200;
+      return this;
+    }
+    /**
+     * <pre>
+     * Details related to undoing an applied atf fix (type = UNDO_APPLIED_ATF_FIX)
+     * </pre>
+     *
+     * <code>optional .android_studio.UndoAppliedAtfFixEvent undo_applied_atf_fix_event = 10;</code>
+     */
+    public Builder mergeUndoAppliedAtfFixEvent(com.google.wireless.android.sdk.stats.UndoAppliedAtfFixEvent value) {
+      if (undoAppliedAtfFixEventBuilder_ == null) {
+        if (((bitField0_ & 0x00000200) != 0) &&
+            undoAppliedAtfFixEvent_ != null &&
+            undoAppliedAtfFixEvent_ != com.google.wireless.android.sdk.stats.UndoAppliedAtfFixEvent.getDefaultInstance()) {
+          undoAppliedAtfFixEvent_ =
+            com.google.wireless.android.sdk.stats.UndoAppliedAtfFixEvent.newBuilder(undoAppliedAtfFixEvent_).mergeFrom(value).buildPartial();
+        } else {
+          undoAppliedAtfFixEvent_ = value;
+        }
+        onChanged();
+      } else {
+        undoAppliedAtfFixEventBuilder_.mergeFrom(value);
+      }
+      bitField0_ |= 0x00000200;
+      return this;
+    }
+    /**
+     * <pre>
+     * Details related to undoing an applied atf fix (type = UNDO_APPLIED_ATF_FIX)
+     * </pre>
+     *
+     * <code>optional .android_studio.UndoAppliedAtfFixEvent undo_applied_atf_fix_event = 10;</code>
+     */
+    public Builder clearUndoAppliedAtfFixEvent() {
+      if (undoAppliedAtfFixEventBuilder_ == null) {
+        undoAppliedAtfFixEvent_ = null;
+        onChanged();
+      } else {
+        undoAppliedAtfFixEventBuilder_.clear();
+      }
+      bitField0_ = (bitField0_ & ~0x00000200);
+      return this;
+    }
+    /**
+     * <pre>
+     * Details related to undoing an applied atf fix (type = UNDO_APPLIED_ATF_FIX)
+     * </pre>
+     *
+     * <code>optional .android_studio.UndoAppliedAtfFixEvent undo_applied_atf_fix_event = 10;</code>
+     */
+    public com.google.wireless.android.sdk.stats.UndoAppliedAtfFixEvent.Builder getUndoAppliedAtfFixEventBuilder() {
+      bitField0_ |= 0x00000200;
+      onChanged();
+      return getUndoAppliedAtfFixEventFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * Details related to undoing an applied atf fix (type = UNDO_APPLIED_ATF_FIX)
+     * </pre>
+     *
+     * <code>optional .android_studio.UndoAppliedAtfFixEvent undo_applied_atf_fix_event = 10;</code>
+     */
+    public com.google.wireless.android.sdk.stats.UndoAppliedAtfFixEventOrBuilder getUndoAppliedAtfFixEventOrBuilder() {
+      if (undoAppliedAtfFixEventBuilder_ != null) {
+        return undoAppliedAtfFixEventBuilder_.getMessageOrBuilder();
+      } else {
+        return undoAppliedAtfFixEvent_ == null ?
+            com.google.wireless.android.sdk.stats.UndoAppliedAtfFixEvent.getDefaultInstance() : undoAppliedAtfFixEvent_;
+      }
+    }
+    /**
+     * <pre>
+     * Details related to undoing an applied atf fix (type = UNDO_APPLIED_ATF_FIX)
+     * </pre>
+     *
+     * <code>optional .android_studio.UndoAppliedAtfFixEvent undo_applied_atf_fix_event = 10;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.UndoAppliedAtfFixEvent, com.google.wireless.android.sdk.stats.UndoAppliedAtfFixEvent.Builder, com.google.wireless.android.sdk.stats.UndoAppliedAtfFixEventOrBuilder> 
+        getUndoAppliedAtfFixEventFieldBuilder() {
+      if (undoAppliedAtfFixEventBuilder_ == null) {
+        undoAppliedAtfFixEventBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.wireless.android.sdk.stats.UndoAppliedAtfFixEvent, com.google.wireless.android.sdk.stats.UndoAppliedAtfFixEvent.Builder, com.google.wireless.android.sdk.stats.UndoAppliedAtfFixEventOrBuilder>(
+                getUndoAppliedAtfFixEvent(),
+                getParentForChildren(),
+                isClean());
+        undoAppliedAtfFixEvent_ = null;
+      }
+      return undoAppliedAtfFixEventBuilder_;
+    }
+
+    private com.google.wireless.android.sdk.stats.AnimationPreviewEvent animationPreviewEvent_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.AnimationPreviewEvent, com.google.wireless.android.sdk.stats.AnimationPreviewEvent.Builder, com.google.wireless.android.sdk.stats.AnimationPreviewEventOrBuilder> animationPreviewEventBuilder_;
+    /**
+     * <pre>
+     * Details related to interacting animation preview (type = ANIMATION_PREVIEW)
+     * </pre>
+     *
+     * <code>optional .android_studio.AnimationPreviewEvent animation_preview_event = 11;</code>
+     * @return Whether the animationPreviewEvent field is set.
+     */
+    public boolean hasAnimationPreviewEvent() {
+      return ((bitField0_ & 0x00000400) != 0);
+    }
+    /**
+     * <pre>
+     * Details related to interacting animation preview (type = ANIMATION_PREVIEW)
+     * </pre>
+     *
+     * <code>optional .android_studio.AnimationPreviewEvent animation_preview_event = 11;</code>
+     * @return The animationPreviewEvent.
+     */
+    public com.google.wireless.android.sdk.stats.AnimationPreviewEvent getAnimationPreviewEvent() {
+      if (animationPreviewEventBuilder_ == null) {
+        return animationPreviewEvent_ == null ? com.google.wireless.android.sdk.stats.AnimationPreviewEvent.getDefaultInstance() : animationPreviewEvent_;
+      } else {
+        return animationPreviewEventBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * Details related to interacting animation preview (type = ANIMATION_PREVIEW)
+     * </pre>
+     *
+     * <code>optional .android_studio.AnimationPreviewEvent animation_preview_event = 11;</code>
+     */
+    public Builder setAnimationPreviewEvent(com.google.wireless.android.sdk.stats.AnimationPreviewEvent value) {
+      if (animationPreviewEventBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        animationPreviewEvent_ = value;
+        onChanged();
+      } else {
+        animationPreviewEventBuilder_.setMessage(value);
+      }
+      bitField0_ |= 0x00000400;
+      return this;
+    }
+    /**
+     * <pre>
+     * Details related to interacting animation preview (type = ANIMATION_PREVIEW)
+     * </pre>
+     *
+     * <code>optional .android_studio.AnimationPreviewEvent animation_preview_event = 11;</code>
+     */
+    public Builder setAnimationPreviewEvent(
+        com.google.wireless.android.sdk.stats.AnimationPreviewEvent.Builder builderForValue) {
+      if (animationPreviewEventBuilder_ == null) {
+        animationPreviewEvent_ = builderForValue.build();
+        onChanged();
+      } else {
+        animationPreviewEventBuilder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x00000400;
+      return this;
+    }
+    /**
+     * <pre>
+     * Details related to interacting animation preview (type = ANIMATION_PREVIEW)
+     * </pre>
+     *
+     * <code>optional .android_studio.AnimationPreviewEvent animation_preview_event = 11;</code>
+     */
+    public Builder mergeAnimationPreviewEvent(com.google.wireless.android.sdk.stats.AnimationPreviewEvent value) {
+      if (animationPreviewEventBuilder_ == null) {
+        if (((bitField0_ & 0x00000400) != 0) &&
+            animationPreviewEvent_ != null &&
+            animationPreviewEvent_ != com.google.wireless.android.sdk.stats.AnimationPreviewEvent.getDefaultInstance()) {
+          animationPreviewEvent_ =
+            com.google.wireless.android.sdk.stats.AnimationPreviewEvent.newBuilder(animationPreviewEvent_).mergeFrom(value).buildPartial();
+        } else {
+          animationPreviewEvent_ = value;
+        }
+        onChanged();
+      } else {
+        animationPreviewEventBuilder_.mergeFrom(value);
+      }
+      bitField0_ |= 0x00000400;
+      return this;
+    }
+    /**
+     * <pre>
+     * Details related to interacting animation preview (type = ANIMATION_PREVIEW)
+     * </pre>
+     *
+     * <code>optional .android_studio.AnimationPreviewEvent animation_preview_event = 11;</code>
+     */
+    public Builder clearAnimationPreviewEvent() {
+      if (animationPreviewEventBuilder_ == null) {
+        animationPreviewEvent_ = null;
+        onChanged();
+      } else {
+        animationPreviewEventBuilder_.clear();
+      }
+      bitField0_ = (bitField0_ & ~0x00000400);
+      return this;
+    }
+    /**
+     * <pre>
+     * Details related to interacting animation preview (type = ANIMATION_PREVIEW)
+     * </pre>
+     *
+     * <code>optional .android_studio.AnimationPreviewEvent animation_preview_event = 11;</code>
+     */
+    public com.google.wireless.android.sdk.stats.AnimationPreviewEvent.Builder getAnimationPreviewEventBuilder() {
+      bitField0_ |= 0x00000400;
+      onChanged();
+      return getAnimationPreviewEventFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * Details related to interacting animation preview (type = ANIMATION_PREVIEW)
+     * </pre>
+     *
+     * <code>optional .android_studio.AnimationPreviewEvent animation_preview_event = 11;</code>
+     */
+    public com.google.wireless.android.sdk.stats.AnimationPreviewEventOrBuilder getAnimationPreviewEventOrBuilder() {
+      if (animationPreviewEventBuilder_ != null) {
+        return animationPreviewEventBuilder_.getMessageOrBuilder();
+      } else {
+        return animationPreviewEvent_ == null ?
+            com.google.wireless.android.sdk.stats.AnimationPreviewEvent.getDefaultInstance() : animationPreviewEvent_;
+      }
+    }
+    /**
+     * <pre>
+     * Details related to interacting animation preview (type = ANIMATION_PREVIEW)
+     * </pre>
+     *
+     * <code>optional .android_studio.AnimationPreviewEvent animation_preview_event = 11;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.AnimationPreviewEvent, com.google.wireless.android.sdk.stats.AnimationPreviewEvent.Builder, com.google.wireless.android.sdk.stats.AnimationPreviewEventOrBuilder> 
+        getAnimationPreviewEventFieldBuilder() {
+      if (animationPreviewEventBuilder_ == null) {
+        animationPreviewEventBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.wireless.android.sdk.stats.AnimationPreviewEvent, com.google.wireless.android.sdk.stats.AnimationPreviewEvent.Builder, com.google.wireless.android.sdk.stats.AnimationPreviewEventOrBuilder>(
+                getAnimationPreviewEvent(),
+                getParentForChildren(),
+                isClean());
+        animationPreviewEvent_ = null;
+      }
+      return animationPreviewEventBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(
