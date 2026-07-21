@@ -5023,4 +5023,31 @@ public interface AndroidStudioEventOrBuilder extends
    * <code>optional .android_studio.EssentialsModeEvent essentials_mode_event = 179;</code>
    */
   com.google.wireless.android.sdk.stats.EssentialsModeEventOrBuilder getEssentialsModeEventOrBuilder();
+
+  /**
+   * <pre>
+   * set when kind = LINT_TOOLTIP_LINK_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.LintTooltipLinkEvent lint_tooltip_link_event = 180;</code>
+   * @return Whether the lintTooltipLinkEvent field is set.
+   */
+  boolean hasLintTooltipLinkEvent();
+  /**
+   * <pre>
+   * set when kind = LINT_TOOLTIP_LINK_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.LintTooltipLinkEvent lint_tooltip_link_event = 180;</code>
+   * @return The lintTooltipLinkEvent.
+   */
+  com.google.wireless.android.sdk.stats.LintTooltipLinkEvent getLintTooltipLinkEvent();
+  /**
+   * <pre>
+   * set when kind = LINT_TOOLTIP_LINK_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.LintTooltipLinkEvent lint_tooltip_link_event = 180;</code>
+   */
+  com.google.wireless.android.sdk.stats.LintTooltipLinkEventOrBuilder getLintTooltipLinkEventOrBuilder();
 }

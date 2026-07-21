@@ -2323,6 +2323,19 @@ private static final long serialVersionUID = 0L;
             bitField5_ |= 0x00001000;
             break;
           }
+          case 1442: {
+            com.google.wireless.android.sdk.stats.LintTooltipLinkEvent.Builder subBuilder = null;
+            if (((bitField5_ & 0x00002000) != 0)) {
+              subBuilder = lintTooltipLinkEvent_.toBuilder();
+            }
+            lintTooltipLinkEvent_ = input.readMessage(com.google.wireless.android.sdk.stats.LintTooltipLinkEvent.PARSER, extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(lintTooltipLinkEvent_);
+              lintTooltipLinkEvent_ = subBuilder.buildPartial();
+            }
+            bitField5_ |= 0x00002000;
+            break;
+          }
           default: {
             if (!parseUnknownField(
                 input, unknownFields, extensionRegistry, tag)) {
@@ -5197,6 +5210,14 @@ private static final long serialVersionUID = 0L;
      * <code>ESSENTIALS_MODE_EVENT = 295;</code>
      */
     ESSENTIALS_MODE_EVENT(295),
+    /**
+     * <pre>
+     * Event for links clicked in Lint tooltips.
+     * </pre>
+     *
+     * <code>LINT_TOOLTIP_LINK_EVENT = 296;</code>
+     */
+    LINT_TOOLTIP_LINK_EVENT(296),
     ;
 
     /**
@@ -7393,6 +7414,14 @@ private static final long serialVersionUID = 0L;
      * <code>ESSENTIALS_MODE_EVENT = 295;</code>
      */
     public static final int ESSENTIALS_MODE_EVENT_VALUE = 295;
+    /**
+     * <pre>
+     * Event for links clicked in Lint tooltips.
+     * </pre>
+     *
+     * <code>LINT_TOOLTIP_LINK_EVENT = 296;</code>
+     */
+    public static final int LINT_TOOLTIP_LINK_EVENT_VALUE = 296;
 
 
     public final int getNumber() {
@@ -7706,6 +7735,7 @@ private static final long serialVersionUID = 0L;
         case 293: return SOONG_SYNC_EVENT;
         case 294: return INTELLIJ_NEW_UI_SWITCH;
         case 295: return ESSENTIALS_MODE_EVENT;
+        case 296: return LINT_TOOLTIP_LINK_EVENT;
         default: return null;
       }
     }
@@ -9327,6 +9357,10 @@ private static final long serialVersionUID = 0L;
      */
     INTERNET_CONNECTION_ERROR(24),
     /**
+     * <pre>
+     * Failure when Studio does not support too old AGP.
+     * </pre>
+     *
      * <code>OLD_ANDROID_PLUGIN = 25;</code>
      */
     OLD_ANDROID_PLUGIN(25),
@@ -9370,6 +9404,38 @@ private static final long serialVersionUID = 0L;
      * <code>GRADLE_JVM_NOT_COMPATIBLE_WITH_AGP = 35;</code>
      */
     GRADLE_JVM_NOT_COMPATIBLE_WITH_AGP(35),
+    /**
+     * <pre>
+     * Failure because older Studio does not support newer AGP.
+     * </pre>
+     *
+     * <code>ANDROID_PLUGIN_TOO_NEW = 36;</code>
+     */
+    ANDROID_PLUGIN_TOO_NEW(36),
+    /**
+     * <pre>
+     * Failure because Studio and AGP preview versions differ.
+     * </pre>
+     *
+     * <code>ANDROID_PLUGIN_VERSION_INCOMPATIBLE = 37;</code>
+     */
+    ANDROID_PLUGIN_VERSION_INCOMPATIBLE(37),
+    /**
+     * <pre>
+     * Failure because of multiple AGP versions detected in projects.
+     * </pre>
+     *
+     * <code>MULTIPLE_ANDROID_PLUGIN_VERSIONS = 38;</code>
+     */
+    MULTIPLE_ANDROID_PLUGIN_VERSIONS(38),
+    /**
+     * <code>ANDROID_SYNC_NO_VALID_NATIVE_ABI_FOUND = 39;</code>
+     */
+    ANDROID_SYNC_NO_VALID_NATIVE_ABI_FOUND(39),
+    /**
+     * <code>ANDROID_SYNC_NO_VARIANTS_FOUND = 40;</code>
+     */
+    ANDROID_SYNC_NO_VARIANTS_FOUND(40),
     ;
 
     /**
@@ -9473,6 +9539,10 @@ private static final long serialVersionUID = 0L;
      */
     public static final int INTERNET_CONNECTION_ERROR_VALUE = 24;
     /**
+     * <pre>
+     * Failure when Studio does not support too old AGP.
+     * </pre>
+     *
      * <code>OLD_ANDROID_PLUGIN = 25;</code>
      */
     public static final int OLD_ANDROID_PLUGIN_VALUE = 25;
@@ -9516,6 +9586,38 @@ private static final long serialVersionUID = 0L;
      * <code>GRADLE_JVM_NOT_COMPATIBLE_WITH_AGP = 35;</code>
      */
     public static final int GRADLE_JVM_NOT_COMPATIBLE_WITH_AGP_VALUE = 35;
+    /**
+     * <pre>
+     * Failure because older Studio does not support newer AGP.
+     * </pre>
+     *
+     * <code>ANDROID_PLUGIN_TOO_NEW = 36;</code>
+     */
+    public static final int ANDROID_PLUGIN_TOO_NEW_VALUE = 36;
+    /**
+     * <pre>
+     * Failure because Studio and AGP preview versions differ.
+     * </pre>
+     *
+     * <code>ANDROID_PLUGIN_VERSION_INCOMPATIBLE = 37;</code>
+     */
+    public static final int ANDROID_PLUGIN_VERSION_INCOMPATIBLE_VALUE = 37;
+    /**
+     * <pre>
+     * Failure because of multiple AGP versions detected in projects.
+     * </pre>
+     *
+     * <code>MULTIPLE_ANDROID_PLUGIN_VERSIONS = 38;</code>
+     */
+    public static final int MULTIPLE_ANDROID_PLUGIN_VERSIONS_VALUE = 38;
+    /**
+     * <code>ANDROID_SYNC_NO_VALID_NATIVE_ABI_FOUND = 39;</code>
+     */
+    public static final int ANDROID_SYNC_NO_VALID_NATIVE_ABI_FOUND_VALUE = 39;
+    /**
+     * <code>ANDROID_SYNC_NO_VARIANTS_FOUND = 40;</code>
+     */
+    public static final int ANDROID_SYNC_NO_VARIANTS_FOUND_VALUE = 40;
 
 
     public final int getNumber() {
@@ -9574,6 +9676,11 @@ private static final long serialVersionUID = 0L;
         case 33: return GRADLE_DISTRIBUTION_INSTALL_ERROR;
         case 34: return DISTRIBUTIONSHA256SUM_FOUND_IN_WRAPPER;
         case 35: return GRADLE_JVM_NOT_COMPATIBLE_WITH_AGP;
+        case 36: return ANDROID_PLUGIN_TOO_NEW;
+        case 37: return ANDROID_PLUGIN_VERSION_INCOMPATIBLE;
+        case 38: return MULTIPLE_ANDROID_PLUGIN_VERSIONS;
+        case 39: return ANDROID_SYNC_NO_VALID_NATIVE_ABI_FOUND;
+        case 40: return ANDROID_SYNC_NO_VARIANTS_FOUND;
         default: return null;
       }
     }
@@ -23423,6 +23530,44 @@ private static final long serialVersionUID = 0L;
     return essentialsModeEvent_ == null ? com.google.wireless.android.sdk.stats.EssentialsModeEvent.getDefaultInstance() : essentialsModeEvent_;
   }
 
+  public static final int LINT_TOOLTIP_LINK_EVENT_FIELD_NUMBER = 180;
+  private com.google.wireless.android.sdk.stats.LintTooltipLinkEvent lintTooltipLinkEvent_;
+  /**
+   * <pre>
+   * set when kind = LINT_TOOLTIP_LINK_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.LintTooltipLinkEvent lint_tooltip_link_event = 180;</code>
+   * @return Whether the lintTooltipLinkEvent field is set.
+   */
+  @java.lang.Override
+  public boolean hasLintTooltipLinkEvent() {
+    return ((bitField5_ & 0x00002000) != 0);
+  }
+  /**
+   * <pre>
+   * set when kind = LINT_TOOLTIP_LINK_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.LintTooltipLinkEvent lint_tooltip_link_event = 180;</code>
+   * @return The lintTooltipLinkEvent.
+   */
+  @java.lang.Override
+  public com.google.wireless.android.sdk.stats.LintTooltipLinkEvent getLintTooltipLinkEvent() {
+    return lintTooltipLinkEvent_ == null ? com.google.wireless.android.sdk.stats.LintTooltipLinkEvent.getDefaultInstance() : lintTooltipLinkEvent_;
+  }
+  /**
+   * <pre>
+   * set when kind = LINT_TOOLTIP_LINK_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.LintTooltipLinkEvent lint_tooltip_link_event = 180;</code>
+   */
+  @java.lang.Override
+  public com.google.wireless.android.sdk.stats.LintTooltipLinkEventOrBuilder getLintTooltipLinkEventOrBuilder() {
+    return lintTooltipLinkEvent_ == null ? com.google.wireless.android.sdk.stats.LintTooltipLinkEvent.getDefaultInstance() : lintTooltipLinkEvent_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -23973,6 +24118,9 @@ private static final long serialVersionUID = 0L;
     }
     if (((bitField5_ & 0x00001000) != 0)) {
       output.writeMessage(179, getEssentialsModeEvent());
+    }
+    if (((bitField5_ & 0x00002000) != 0)) {
+      output.writeMessage(180, getLintTooltipLinkEvent());
     }
     unknownFields.writeTo(output);
   }
@@ -24704,6 +24852,10 @@ private static final long serialVersionUID = 0L;
     if (((bitField5_ & 0x00001000) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(179, getEssentialsModeEvent());
+    }
+    if (((bitField5_ & 0x00002000) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(180, getLintTooltipLinkEvent());
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -25586,6 +25738,11 @@ private static final long serialVersionUID = 0L;
       if (!getEssentialsModeEvent()
           .equals(other.getEssentialsModeEvent())) return false;
     }
+    if (hasLintTooltipLinkEvent() != other.hasLintTooltipLinkEvent()) return false;
+    if (hasLintTooltipLinkEvent()) {
+      if (!getLintTooltipLinkEvent()
+          .equals(other.getLintTooltipLinkEvent())) return false;
+    }
     if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
@@ -26315,6 +26472,10 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + ESSENTIALS_MODE_EVENT_FIELD_NUMBER;
       hash = (53 * hash) + getEssentialsModeEvent().hashCode();
     }
+    if (hasLintTooltipLinkEvent()) {
+      hash = (37 * hash) + LINT_TOOLTIP_LINK_EVENT_FIELD_NUMBER;
+      hash = (53 * hash) + getLintTooltipLinkEvent().hashCode();
+    }
     hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -26599,6 +26760,7 @@ private static final long serialVersionUID = 0L;
         getSoongSyncStatsFieldBuilder();
         getIntellijNewUiSwitchFieldBuilder();
         getEssentialsModeEventFieldBuilder();
+        getLintTooltipLinkEventFieldBuilder();
       }
     }
     @java.lang.Override
@@ -27586,6 +27748,12 @@ private static final long serialVersionUID = 0L;
         essentialsModeEventBuilder_.clear();
       }
       bitField5_ = (bitField5_ & ~0x00040000);
+      if (lintTooltipLinkEventBuilder_ == null) {
+        lintTooltipLinkEvent_ = null;
+      } else {
+        lintTooltipLinkEventBuilder_.clear();
+      }
+      bitField5_ = (bitField5_ & ~0x00080000);
       return this;
     }
 
@@ -28970,6 +29138,14 @@ private static final long serialVersionUID = 0L;
         }
         to_bitField5_ |= 0x00001000;
       }
+      if (((from_bitField5_ & 0x00080000) != 0)) {
+        if (lintTooltipLinkEventBuilder_ == null) {
+          result.lintTooltipLinkEvent_ = lintTooltipLinkEvent_;
+        } else {
+          result.lintTooltipLinkEvent_ = lintTooltipLinkEventBuilder_.build();
+        }
+        to_bitField5_ |= 0x00002000;
+      }
       result.bitField0_ = to_bitField0_;
       result.bitField1_ = to_bitField1_;
       result.bitField2_ = to_bitField2_;
@@ -29664,6 +29840,9 @@ private static final long serialVersionUID = 0L;
       }
       if (other.hasEssentialsModeEvent()) {
         mergeEssentialsModeEvent(other.getEssentialsModeEvent());
+      }
+      if (other.hasLintTooltipLinkEvent()) {
+        mergeLintTooltipLinkEvent(other.getLintTooltipLinkEvent());
       }
       this.mergeUnknownFields(other.unknownFields);
       onChanged();
@@ -56903,6 +57082,162 @@ private static final long serialVersionUID = 0L;
         essentialsModeEvent_ = null;
       }
       return essentialsModeEventBuilder_;
+    }
+
+    private com.google.wireless.android.sdk.stats.LintTooltipLinkEvent lintTooltipLinkEvent_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.LintTooltipLinkEvent, com.google.wireless.android.sdk.stats.LintTooltipLinkEvent.Builder, com.google.wireless.android.sdk.stats.LintTooltipLinkEventOrBuilder> lintTooltipLinkEventBuilder_;
+    /**
+     * <pre>
+     * set when kind = LINT_TOOLTIP_LINK_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.LintTooltipLinkEvent lint_tooltip_link_event = 180;</code>
+     * @return Whether the lintTooltipLinkEvent field is set.
+     */
+    public boolean hasLintTooltipLinkEvent() {
+      return ((bitField5_ & 0x00080000) != 0);
+    }
+    /**
+     * <pre>
+     * set when kind = LINT_TOOLTIP_LINK_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.LintTooltipLinkEvent lint_tooltip_link_event = 180;</code>
+     * @return The lintTooltipLinkEvent.
+     */
+    public com.google.wireless.android.sdk.stats.LintTooltipLinkEvent getLintTooltipLinkEvent() {
+      if (lintTooltipLinkEventBuilder_ == null) {
+        return lintTooltipLinkEvent_ == null ? com.google.wireless.android.sdk.stats.LintTooltipLinkEvent.getDefaultInstance() : lintTooltipLinkEvent_;
+      } else {
+        return lintTooltipLinkEventBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * set when kind = LINT_TOOLTIP_LINK_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.LintTooltipLinkEvent lint_tooltip_link_event = 180;</code>
+     */
+    public Builder setLintTooltipLinkEvent(com.google.wireless.android.sdk.stats.LintTooltipLinkEvent value) {
+      if (lintTooltipLinkEventBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        lintTooltipLinkEvent_ = value;
+        onChanged();
+      } else {
+        lintTooltipLinkEventBuilder_.setMessage(value);
+      }
+      bitField5_ |= 0x00080000;
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = LINT_TOOLTIP_LINK_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.LintTooltipLinkEvent lint_tooltip_link_event = 180;</code>
+     */
+    public Builder setLintTooltipLinkEvent(
+        com.google.wireless.android.sdk.stats.LintTooltipLinkEvent.Builder builderForValue) {
+      if (lintTooltipLinkEventBuilder_ == null) {
+        lintTooltipLinkEvent_ = builderForValue.build();
+        onChanged();
+      } else {
+        lintTooltipLinkEventBuilder_.setMessage(builderForValue.build());
+      }
+      bitField5_ |= 0x00080000;
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = LINT_TOOLTIP_LINK_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.LintTooltipLinkEvent lint_tooltip_link_event = 180;</code>
+     */
+    public Builder mergeLintTooltipLinkEvent(com.google.wireless.android.sdk.stats.LintTooltipLinkEvent value) {
+      if (lintTooltipLinkEventBuilder_ == null) {
+        if (((bitField5_ & 0x00080000) != 0) &&
+            lintTooltipLinkEvent_ != null &&
+            lintTooltipLinkEvent_ != com.google.wireless.android.sdk.stats.LintTooltipLinkEvent.getDefaultInstance()) {
+          lintTooltipLinkEvent_ =
+            com.google.wireless.android.sdk.stats.LintTooltipLinkEvent.newBuilder(lintTooltipLinkEvent_).mergeFrom(value).buildPartial();
+        } else {
+          lintTooltipLinkEvent_ = value;
+        }
+        onChanged();
+      } else {
+        lintTooltipLinkEventBuilder_.mergeFrom(value);
+      }
+      bitField5_ |= 0x00080000;
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = LINT_TOOLTIP_LINK_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.LintTooltipLinkEvent lint_tooltip_link_event = 180;</code>
+     */
+    public Builder clearLintTooltipLinkEvent() {
+      if (lintTooltipLinkEventBuilder_ == null) {
+        lintTooltipLinkEvent_ = null;
+        onChanged();
+      } else {
+        lintTooltipLinkEventBuilder_.clear();
+      }
+      bitField5_ = (bitField5_ & ~0x00080000);
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = LINT_TOOLTIP_LINK_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.LintTooltipLinkEvent lint_tooltip_link_event = 180;</code>
+     */
+    public com.google.wireless.android.sdk.stats.LintTooltipLinkEvent.Builder getLintTooltipLinkEventBuilder() {
+      bitField5_ |= 0x00080000;
+      onChanged();
+      return getLintTooltipLinkEventFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * set when kind = LINT_TOOLTIP_LINK_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.LintTooltipLinkEvent lint_tooltip_link_event = 180;</code>
+     */
+    public com.google.wireless.android.sdk.stats.LintTooltipLinkEventOrBuilder getLintTooltipLinkEventOrBuilder() {
+      if (lintTooltipLinkEventBuilder_ != null) {
+        return lintTooltipLinkEventBuilder_.getMessageOrBuilder();
+      } else {
+        return lintTooltipLinkEvent_ == null ?
+            com.google.wireless.android.sdk.stats.LintTooltipLinkEvent.getDefaultInstance() : lintTooltipLinkEvent_;
+      }
+    }
+    /**
+     * <pre>
+     * set when kind = LINT_TOOLTIP_LINK_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.LintTooltipLinkEvent lint_tooltip_link_event = 180;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.LintTooltipLinkEvent, com.google.wireless.android.sdk.stats.LintTooltipLinkEvent.Builder, com.google.wireless.android.sdk.stats.LintTooltipLinkEventOrBuilder> 
+        getLintTooltipLinkEventFieldBuilder() {
+      if (lintTooltipLinkEventBuilder_ == null) {
+        lintTooltipLinkEventBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.wireless.android.sdk.stats.LintTooltipLinkEvent, com.google.wireless.android.sdk.stats.LintTooltipLinkEvent.Builder, com.google.wireless.android.sdk.stats.LintTooltipLinkEventOrBuilder>(
+                getLintTooltipLinkEvent(),
+                getParentForChildren(),
+                isClean());
+        lintTooltipLinkEvent_ = null;
+      }
+      return lintTooltipLinkEventBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(
