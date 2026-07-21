@@ -103,6 +103,10 @@ private static final long serialVersionUID = 0L;
      * <code>WEAR_MARGIN = 10;</code>
      */
     WEAR_MARGIN(10),
+    /**
+     * <code>ATF_COLORBLIND = 11;</code>
+     */
+    ATF_COLORBLIND(11),
     ;
 
     /**
@@ -149,6 +153,10 @@ private static final long serialVersionUID = 0L;
      * <code>WEAR_MARGIN = 10;</code>
      */
     public static final int WEAR_MARGIN_VALUE = 10;
+    /**
+     * <code>ATF_COLORBLIND = 11;</code>
+     */
+    public static final int ATF_COLORBLIND_VALUE = 11;
 
 
     public final int getNumber() {
@@ -182,6 +190,7 @@ private static final long serialVersionUID = 0L;
         case 8: return TEXT_FIELD_SIZE;
         case 9: return BUTTON_SIZE;
         case 10: return WEAR_MARGIN;
+        case 11: return ATF_COLORBLIND;
         default: return null;
       }
     }
