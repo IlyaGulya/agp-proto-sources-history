@@ -55,4 +55,54 @@ public interface AndroidCliInvocationOrBuilder extends
    */
   com.google.protobuf.ByteString
       getSubCommandNameBytes();
+
+  /**
+   * <code>repeated string global_flags = 3;</code>
+   * @return A list containing the globalFlags.
+   */
+  java.util.List<java.lang.String>
+      getGlobalFlagsList();
+  /**
+   * <code>repeated string global_flags = 3;</code>
+   * @return The count of globalFlags.
+   */
+  int getGlobalFlagsCount();
+  /**
+   * <code>repeated string global_flags = 3;</code>
+   * @param index The index of the element to return.
+   * @return The globalFlags at the given index.
+   */
+  java.lang.String getGlobalFlags(int index);
+  /**
+   * <code>repeated string global_flags = 3;</code>
+   * @param index The index of the value to return.
+   * @return The bytes of the globalFlags at the given index.
+   */
+  com.google.protobuf.ByteString
+      getGlobalFlagsBytes(int index);
+
+  /**
+   * <code>repeated string flags = 4;</code>
+   * @return A list containing the flags.
+   */
+  java.util.List<java.lang.String>
+      getFlagsList();
+  /**
+   * <code>repeated string flags = 4;</code>
+   * @return The count of flags.
+   */
+  int getFlagsCount();
+  /**
+   * <code>repeated string flags = 4;</code>
+   * @param index The index of the element to return.
+   * @return The flags at the given index.
+   */
+  java.lang.String getFlags(int index);
+  /**
+   * <code>repeated string flags = 4;</code>
+   * @param index The index of the value to return.
+   * @return The bytes of the flags at the given index.
+   */
+  com.google.protobuf.ByteString
+      getFlagsBytes(int index);
 }

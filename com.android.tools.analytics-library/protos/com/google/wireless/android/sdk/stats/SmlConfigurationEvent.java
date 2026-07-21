@@ -20,6 +20,7 @@ private static final long serialVersionUID = 0L;
     tierName_ = "";
     licenseType_ = 0;
     userAccountType_ = 0;
+    tierId_ = "";
   }
 
   @java.lang.Override
@@ -560,7 +561,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>optional .android_studio.SmlConfigurationEvent.SmlProductVariant product_variant = 7 [deprecated = true];</code>
    * @deprecated android_studio.SmlConfigurationEvent.product_variant is deprecated.
-   *     See studio_stats.proto;l=17014
+   *     See studio_stats.proto;l=17008
    * @return Whether the productVariant field is set.
    */
   @java.lang.Override @java.lang.Deprecated public boolean hasProductVariant() {
@@ -576,7 +577,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>optional .android_studio.SmlConfigurationEvent.SmlProductVariant product_variant = 7 [deprecated = true];</code>
    * @deprecated android_studio.SmlConfigurationEvent.product_variant is deprecated.
-   *     See studio_stats.proto;l=17014
+   *     See studio_stats.proto;l=17008
    * @return The productVariant.
    */
   @java.lang.Override @java.lang.Deprecated public com.google.wireless.android.sdk.stats.SmlConfigurationEvent.SmlProductVariant getProductVariant() {
@@ -724,6 +725,96 @@ private static final long serialVersionUID = 0L;
     return result == null ? com.google.wireless.android.sdk.stats.SmlConfigurationEvent.UserAccountType.USER_ACCOUNT_TYPE_UNKNOWN : result;
   }
 
+  public static final int TIER_ID_FIELD_NUMBER = 12;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object tierId_ = "";
+  /**
+   * <pre>
+   * The tier ID of the onboarded user.
+   * </pre>
+   *
+   * <code>optional string tier_id = 12;</code>
+   * @return Whether the tierId field is set.
+   */
+  @java.lang.Override
+  public boolean hasTierId() {
+    return ((bitField0_ & 0x00000800) != 0);
+  }
+  /**
+   * <pre>
+   * The tier ID of the onboarded user.
+   * </pre>
+   *
+   * <code>optional string tier_id = 12;</code>
+   * @return The tierId.
+   */
+  @java.lang.Override
+  public java.lang.String getTierId() {
+    java.lang.Object ref = tierId_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      if (bs.isValidUtf8()) {
+        tierId_ = s;
+      }
+      return s;
+    }
+  }
+  /**
+   * <pre>
+   * The tier ID of the onboarded user.
+   * </pre>
+   *
+   * <code>optional string tier_id = 12;</code>
+   * @return The bytes for tierId.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getTierIdBytes() {
+    java.lang.Object ref = tierId_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      tierId_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
+  public static final int CONFIGURATION_TIME_MS_FIELD_NUMBER = 13;
+  private long configurationTimeMs_ = 0L;
+  /**
+   * <pre>
+   * Timestamp in ms. Can be used by various configuration events (for instance
+   * onboarding completion time)
+   * </pre>
+   *
+   * <code>optional int64 configuration_time_ms = 13;</code>
+   * @return Whether the configurationTimeMs field is set.
+   */
+  @java.lang.Override
+  public boolean hasConfigurationTimeMs() {
+    return ((bitField0_ & 0x00001000) != 0);
+  }
+  /**
+   * <pre>
+   * Timestamp in ms. Can be used by various configuration events (for instance
+   * onboarding completion time)
+   * </pre>
+   *
+   * <code>optional int64 configuration_time_ms = 13;</code>
+   * @return The configurationTimeMs.
+   */
+  @java.lang.Override
+  public long getConfigurationTimeMs() {
+    return configurationTimeMs_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -770,6 +861,12 @@ private static final long serialVersionUID = 0L;
     }
     if (((bitField0_ & 0x00000400) != 0)) {
       output.writeEnum(11, userAccountType_);
+    }
+    if (((bitField0_ & 0x00000800) != 0)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 12, tierId_);
+    }
+    if (((bitField0_ & 0x00001000) != 0)) {
+      output.writeInt64(13, configurationTimeMs_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -822,6 +919,13 @@ private static final long serialVersionUID = 0L;
     if (((bitField0_ & 0x00000400) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(11, userAccountType_);
+    }
+    if (((bitField0_ & 0x00000800) != 0)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(12, tierId_);
+    }
+    if (((bitField0_ & 0x00001000) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeInt64Size(13, configurationTimeMs_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -890,6 +994,16 @@ private static final long serialVersionUID = 0L;
     if (hasUserAccountType()) {
       if (userAccountType_ != other.userAccountType_) return false;
     }
+    if (hasTierId() != other.hasTierId()) return false;
+    if (hasTierId()) {
+      if (!getTierId()
+          .equals(other.getTierId())) return false;
+    }
+    if (hasConfigurationTimeMs() != other.hasConfigurationTimeMs()) return false;
+    if (hasConfigurationTimeMs()) {
+      if (getConfigurationTimeMs()
+          != other.getConfigurationTimeMs()) return false;
+    }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -951,6 +1065,15 @@ private static final long serialVersionUID = 0L;
     if (hasUserAccountType()) {
       hash = (37 * hash) + USER_ACCOUNT_TYPE_FIELD_NUMBER;
       hash = (53 * hash) + userAccountType_;
+    }
+    if (hasTierId()) {
+      hash = (37 * hash) + TIER_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getTierId().hashCode();
+    }
+    if (hasConfigurationTimeMs()) {
+      hash = (37 * hash) + CONFIGURATION_TIME_MS_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getConfigurationTimeMs());
     }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
@@ -1092,6 +1215,8 @@ private static final long serialVersionUID = 0L;
       tierName_ = "";
       licenseType_ = 0;
       userAccountType_ = 0;
+      tierId_ = "";
+      configurationTimeMs_ = 0L;
       return this;
     }
 
@@ -1170,6 +1295,14 @@ private static final long serialVersionUID = 0L;
         result.userAccountType_ = userAccountType_;
         to_bitField0_ |= 0x00000400;
       }
+      if (((from_bitField0_ & 0x00000800) != 0)) {
+        result.tierId_ = tierId_;
+        to_bitField0_ |= 0x00000800;
+      }
+      if (((from_bitField0_ & 0x00001000) != 0)) {
+        result.configurationTimeMs_ = configurationTimeMs_;
+        to_bitField0_ |= 0x00001000;
+      }
       result.bitField0_ |= to_bitField0_;
     }
 
@@ -1219,6 +1352,14 @@ private static final long serialVersionUID = 0L;
       }
       if (other.hasUserAccountType()) {
         setUserAccountType(other.getUserAccountType());
+      }
+      if (other.hasTierId()) {
+        tierId_ = other.tierId_;
+        bitField0_ |= 0x00000800;
+        onChanged();
+      }
+      if (other.hasConfigurationTimeMs()) {
+        setConfigurationTimeMs(other.getConfigurationTimeMs());
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -1322,6 +1463,16 @@ private static final long serialVersionUID = 0L;
               }
               break;
             } // case 88
+            case 98: {
+              tierId_ = input.readBytes();
+              bitField0_ |= 0x00000800;
+              break;
+            } // case 98
+            case 104: {
+              configurationTimeMs_ = input.readInt64();
+              bitField0_ |= 0x00001000;
+              break;
+            } // case 104
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -1686,7 +1837,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional .android_studio.SmlConfigurationEvent.SmlProductVariant product_variant = 7 [deprecated = true];</code>
      * @deprecated android_studio.SmlConfigurationEvent.product_variant is deprecated.
-     *     See studio_stats.proto;l=17014
+     *     See studio_stats.proto;l=17008
      * @return Whether the productVariant field is set.
      */
     @java.lang.Override @java.lang.Deprecated public boolean hasProductVariant() {
@@ -1702,7 +1853,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional .android_studio.SmlConfigurationEvent.SmlProductVariant product_variant = 7 [deprecated = true];</code>
      * @deprecated android_studio.SmlConfigurationEvent.product_variant is deprecated.
-     *     See studio_stats.proto;l=17014
+     *     See studio_stats.proto;l=17008
      * @return The productVariant.
      */
     @java.lang.Override
@@ -1720,7 +1871,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional .android_studio.SmlConfigurationEvent.SmlProductVariant product_variant = 7 [deprecated = true];</code>
      * @deprecated android_studio.SmlConfigurationEvent.product_variant is deprecated.
-     *     See studio_stats.proto;l=17014
+     *     See studio_stats.proto;l=17008
      * @param value The productVariant to set.
      * @return This builder for chaining.
      */
@@ -1743,7 +1894,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional .android_studio.SmlConfigurationEvent.SmlProductVariant product_variant = 7 [deprecated = true];</code>
      * @deprecated android_studio.SmlConfigurationEvent.product_variant is deprecated.
-     *     See studio_stats.proto;l=17014
+     *     See studio_stats.proto;l=17008
      * @return This builder for chaining.
      */
     @java.lang.Deprecated public Builder clearProductVariant() {
@@ -2025,6 +2176,170 @@ private static final long serialVersionUID = 0L;
     public Builder clearUserAccountType() {
       bitField0_ = (bitField0_ & ~0x00000400);
       userAccountType_ = 0;
+      onChanged();
+      return this;
+    }
+
+    private java.lang.Object tierId_ = "";
+    /**
+     * <pre>
+     * The tier ID of the onboarded user.
+     * </pre>
+     *
+     * <code>optional string tier_id = 12;</code>
+     * @return Whether the tierId field is set.
+     */
+    public boolean hasTierId() {
+      return ((bitField0_ & 0x00000800) != 0);
+    }
+    /**
+     * <pre>
+     * The tier ID of the onboarded user.
+     * </pre>
+     *
+     * <code>optional string tier_id = 12;</code>
+     * @return The tierId.
+     */
+    public java.lang.String getTierId() {
+      java.lang.Object ref = tierId_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          tierId_ = s;
+        }
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <pre>
+     * The tier ID of the onboarded user.
+     * </pre>
+     *
+     * <code>optional string tier_id = 12;</code>
+     * @return The bytes for tierId.
+     */
+    public com.google.protobuf.ByteString
+        getTierIdBytes() {
+      java.lang.Object ref = tierId_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        tierId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <pre>
+     * The tier ID of the onboarded user.
+     * </pre>
+     *
+     * <code>optional string tier_id = 12;</code>
+     * @param value The tierId to set.
+     * @return This builder for chaining.
+     */
+    public Builder setTierId(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      tierId_ = value;
+      bitField0_ |= 0x00000800;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The tier ID of the onboarded user.
+     * </pre>
+     *
+     * <code>optional string tier_id = 12;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearTierId() {
+      tierId_ = getDefaultInstance().getTierId();
+      bitField0_ = (bitField0_ & ~0x00000800);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The tier ID of the onboarded user.
+     * </pre>
+     *
+     * <code>optional string tier_id = 12;</code>
+     * @param value The bytes for tierId to set.
+     * @return This builder for chaining.
+     */
+    public Builder setTierIdBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      tierId_ = value;
+      bitField0_ |= 0x00000800;
+      onChanged();
+      return this;
+    }
+
+    private long configurationTimeMs_ ;
+    /**
+     * <pre>
+     * Timestamp in ms. Can be used by various configuration events (for instance
+     * onboarding completion time)
+     * </pre>
+     *
+     * <code>optional int64 configuration_time_ms = 13;</code>
+     * @return Whether the configurationTimeMs field is set.
+     */
+    @java.lang.Override
+    public boolean hasConfigurationTimeMs() {
+      return ((bitField0_ & 0x00001000) != 0);
+    }
+    /**
+     * <pre>
+     * Timestamp in ms. Can be used by various configuration events (for instance
+     * onboarding completion time)
+     * </pre>
+     *
+     * <code>optional int64 configuration_time_ms = 13;</code>
+     * @return The configurationTimeMs.
+     */
+    @java.lang.Override
+    public long getConfigurationTimeMs() {
+      return configurationTimeMs_;
+    }
+    /**
+     * <pre>
+     * Timestamp in ms. Can be used by various configuration events (for instance
+     * onboarding completion time)
+     * </pre>
+     *
+     * <code>optional int64 configuration_time_ms = 13;</code>
+     * @param value The configurationTimeMs to set.
+     * @return This builder for chaining.
+     */
+    public Builder setConfigurationTimeMs(long value) {
+
+      configurationTimeMs_ = value;
+      bitField0_ |= 0x00001000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Timestamp in ms. Can be used by various configuration events (for instance
+     * onboarding completion time)
+     * </pre>
+     *
+     * <code>optional int64 configuration_time_ms = 13;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearConfigurationTimeMs() {
+      bitField0_ = (bitField0_ & ~0x00001000);
+      configurationTimeMs_ = 0L;
       onChanged();
       return this;
     }

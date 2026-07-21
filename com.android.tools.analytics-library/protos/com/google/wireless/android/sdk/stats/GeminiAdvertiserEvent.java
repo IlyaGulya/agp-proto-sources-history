@@ -166,6 +166,14 @@ private static final long serialVersionUID = 0L;
      * <code>UPDATE_DEPENDENCIES = 14;</code>
      */
     UPDATE_DEPENDENCIES(14),
+    /**
+     * <pre>
+     * AI insights in AQI
+     * </pre>
+     *
+     * <code>APP_QUALITY_INSIGHTS = 15;</code>
+     */
+    APP_QUALITY_INSIGHTS(15),
     ;
 
     /**
@@ -289,6 +297,14 @@ private static final long serialVersionUID = 0L;
      * <code>UPDATE_DEPENDENCIES = 14;</code>
      */
     public static final int UPDATE_DEPENDENCIES_VALUE = 14;
+    /**
+     * <pre>
+     * AI insights in AQI
+     * </pre>
+     *
+     * <code>APP_QUALITY_INSIGHTS = 15;</code>
+     */
+    public static final int APP_QUALITY_INSIGHTS_VALUE = 15;
 
 
     public final int getNumber() {
@@ -326,6 +342,7 @@ private static final long serialVersionUID = 0L;
         case 12: return GENERIC;
         case 13: return UI_TOOLS;
         case 14: return UPDATE_DEPENDENCIES;
+        case 15: return APP_QUALITY_INSIGHTS;
         default: return null;
       }
     }

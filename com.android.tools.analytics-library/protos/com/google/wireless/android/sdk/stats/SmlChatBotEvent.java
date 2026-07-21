@@ -1788,6 +1788,22 @@ private static final long serialVersionUID = 0L;
      * <code>SUB_AGENT_ENDED_WITHOUT_RESPONSE = 24;</code>
      */
     SUB_AGENT_ENDED_WITHOUT_RESPONSE(24),
+    /**
+     * <pre>
+     * The arguments provided to the tool call were invalid.
+     * </pre>
+     *
+     * <code>ERR_INVALID_ARGUMENTS = 25;</code>
+     */
+    ERR_INVALID_ARGUMENTS(25),
+    /**
+     * <pre>
+     * The URL provided to the tool call was invalid.
+     * </pre>
+     *
+     * <code>ERR_INVALID_URL = 26;</code>
+     */
+    ERR_INVALID_URL(26),
     ;
 
     /**
@@ -1990,6 +2006,22 @@ private static final long serialVersionUID = 0L;
      * <code>SUB_AGENT_ENDED_WITHOUT_RESPONSE = 24;</code>
      */
     public static final int SUB_AGENT_ENDED_WITHOUT_RESPONSE_VALUE = 24;
+    /**
+     * <pre>
+     * The arguments provided to the tool call were invalid.
+     * </pre>
+     *
+     * <code>ERR_INVALID_ARGUMENTS = 25;</code>
+     */
+    public static final int ERR_INVALID_ARGUMENTS_VALUE = 25;
+    /**
+     * <pre>
+     * The URL provided to the tool call was invalid.
+     * </pre>
+     *
+     * <code>ERR_INVALID_URL = 26;</code>
+     */
+    public static final int ERR_INVALID_URL_VALUE = 26;
 
 
     public final int getNumber() {
@@ -2037,6 +2069,8 @@ private static final long serialVersionUID = 0L;
         case 22: return BUILD_TASK_NOT_FOUND;
         case 23: return SUB_AGENT_RESULT;
         case 24: return SUB_AGENT_ENDED_WITHOUT_RESPONSE;
+        case 25: return ERR_INVALID_ARGUMENTS;
+        case 26: return ERR_INVALID_URL;
         default: return null;
       }
     }
@@ -7524,7 +7558,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional bool success = 3 [deprecated = true];</code>
      * @deprecated android_studio.SmlChatBotEvent.ParseResult.success is deprecated.
-     *     See studio_stats.proto;l=16582
+     *     See studio_stats.proto;l=16572
      * @return Whether the success field is set.
      */
     @java.lang.Deprecated boolean hasSuccess();
@@ -7536,7 +7570,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional bool success = 3 [deprecated = true];</code>
      * @deprecated android_studio.SmlChatBotEvent.ParseResult.success is deprecated.
-     *     See studio_stats.proto;l=16582
+     *     See studio_stats.proto;l=16572
      * @return The success.
      */
     @java.lang.Deprecated boolean getSuccess();
@@ -7664,7 +7698,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional bool success = 3 [deprecated = true];</code>
      * @deprecated android_studio.SmlChatBotEvent.ParseResult.success is deprecated.
-     *     See studio_stats.proto;l=16582
+     *     See studio_stats.proto;l=16572
      * @return Whether the success field is set.
      */
     @java.lang.Override
@@ -7679,7 +7713,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional bool success = 3 [deprecated = true];</code>
      * @deprecated android_studio.SmlChatBotEvent.ParseResult.success is deprecated.
-     *     See studio_stats.proto;l=16582
+     *     See studio_stats.proto;l=16572
      * @return The success.
      */
     @java.lang.Override
@@ -8343,7 +8377,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional bool success = 3 [deprecated = true];</code>
        * @deprecated android_studio.SmlChatBotEvent.ParseResult.success is deprecated.
-       *     See studio_stats.proto;l=16582
+       *     See studio_stats.proto;l=16572
        * @return Whether the success field is set.
        */
       @java.lang.Override
@@ -8358,7 +8392,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional bool success = 3 [deprecated = true];</code>
        * @deprecated android_studio.SmlChatBotEvent.ParseResult.success is deprecated.
-       *     See studio_stats.proto;l=16582
+       *     See studio_stats.proto;l=16572
        * @return The success.
        */
       @java.lang.Override
@@ -8373,7 +8407,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional bool success = 3 [deprecated = true];</code>
        * @deprecated android_studio.SmlChatBotEvent.ParseResult.success is deprecated.
-       *     See studio_stats.proto;l=16582
+       *     See studio_stats.proto;l=16572
        * @param value The success to set.
        * @return This builder for chaining.
        */
@@ -8392,7 +8426,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional bool success = 3 [deprecated = true];</code>
        * @deprecated android_studio.SmlChatBotEvent.ParseResult.success is deprecated.
-       *     See studio_stats.proto;l=16582
+       *     See studio_stats.proto;l=16572
        * @return This builder for chaining.
        */
       @java.lang.Deprecated public Builder clearSuccess() {

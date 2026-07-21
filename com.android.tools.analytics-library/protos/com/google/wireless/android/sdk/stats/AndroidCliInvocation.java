@@ -18,6 +18,10 @@ private static final long serialVersionUID = 0L;
   private AndroidCliInvocation() {
     commandName_ = "";
     subCommandName_ = "";
+    globalFlags_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+    flags_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
   }
 
   @java.lang.Override
@@ -154,6 +158,80 @@ private static final long serialVersionUID = 0L;
     }
   }
 
+  public static final int GLOBAL_FLAGS_FIELD_NUMBER = 3;
+  @SuppressWarnings("serial")
+  private com.google.protobuf.LazyStringArrayList globalFlags_ =
+      com.google.protobuf.LazyStringArrayList.emptyList();
+  /**
+   * <code>repeated string global_flags = 3;</code>
+   * @return A list containing the globalFlags.
+   */
+  public com.google.protobuf.ProtocolStringList
+      getGlobalFlagsList() {
+    return globalFlags_;
+  }
+  /**
+   * <code>repeated string global_flags = 3;</code>
+   * @return The count of globalFlags.
+   */
+  public int getGlobalFlagsCount() {
+    return globalFlags_.size();
+  }
+  /**
+   * <code>repeated string global_flags = 3;</code>
+   * @param index The index of the element to return.
+   * @return The globalFlags at the given index.
+   */
+  public java.lang.String getGlobalFlags(int index) {
+    return globalFlags_.get(index);
+  }
+  /**
+   * <code>repeated string global_flags = 3;</code>
+   * @param index The index of the value to return.
+   * @return The bytes of the globalFlags at the given index.
+   */
+  public com.google.protobuf.ByteString
+      getGlobalFlagsBytes(int index) {
+    return globalFlags_.getByteString(index);
+  }
+
+  public static final int FLAGS_FIELD_NUMBER = 4;
+  @SuppressWarnings("serial")
+  private com.google.protobuf.LazyStringArrayList flags_ =
+      com.google.protobuf.LazyStringArrayList.emptyList();
+  /**
+   * <code>repeated string flags = 4;</code>
+   * @return A list containing the flags.
+   */
+  public com.google.protobuf.ProtocolStringList
+      getFlagsList() {
+    return flags_;
+  }
+  /**
+   * <code>repeated string flags = 4;</code>
+   * @return The count of flags.
+   */
+  public int getFlagsCount() {
+    return flags_.size();
+  }
+  /**
+   * <code>repeated string flags = 4;</code>
+   * @param index The index of the element to return.
+   * @return The flags at the given index.
+   */
+  public java.lang.String getFlags(int index) {
+    return flags_.get(index);
+  }
+  /**
+   * <code>repeated string flags = 4;</code>
+   * @param index The index of the value to return.
+   * @return The bytes of the flags at the given index.
+   */
+  public com.google.protobuf.ByteString
+      getFlagsBytes(int index) {
+    return flags_.getByteString(index);
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -174,6 +252,12 @@ private static final long serialVersionUID = 0L;
     if (((bitField0_ & 0x00000002) != 0)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 2, subCommandName_);
     }
+    for (int i = 0; i < globalFlags_.size(); i++) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 3, globalFlags_.getRaw(i));
+    }
+    for (int i = 0; i < flags_.size(); i++) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 4, flags_.getRaw(i));
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -188,6 +272,22 @@ private static final long serialVersionUID = 0L;
     }
     if (((bitField0_ & 0x00000002) != 0)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, subCommandName_);
+    }
+    {
+      int dataSize = 0;
+      for (int i = 0; i < globalFlags_.size(); i++) {
+        dataSize += computeStringSizeNoTag(globalFlags_.getRaw(i));
+      }
+      size += dataSize;
+      size += 1 * getGlobalFlagsList().size();
+    }
+    {
+      int dataSize = 0;
+      for (int i = 0; i < flags_.size(); i++) {
+        dataSize += computeStringSizeNoTag(flags_.getRaw(i));
+      }
+      size += dataSize;
+      size += 1 * getFlagsList().size();
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -214,6 +314,10 @@ private static final long serialVersionUID = 0L;
       if (!getSubCommandName()
           .equals(other.getSubCommandName())) return false;
     }
+    if (!getGlobalFlagsList()
+        .equals(other.getGlobalFlagsList())) return false;
+    if (!getFlagsList()
+        .equals(other.getFlagsList())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -232,6 +336,14 @@ private static final long serialVersionUID = 0L;
     if (hasSubCommandName()) {
       hash = (37 * hash) + SUB_COMMAND_NAME_FIELD_NUMBER;
       hash = (53 * hash) + getSubCommandName().hashCode();
+    }
+    if (getGlobalFlagsCount() > 0) {
+      hash = (37 * hash) + GLOBAL_FLAGS_FIELD_NUMBER;
+      hash = (53 * hash) + getGlobalFlagsList().hashCode();
+    }
+    if (getFlagsCount() > 0) {
+      hash = (37 * hash) + FLAGS_FIELD_NUMBER;
+      hash = (53 * hash) + getFlagsList().hashCode();
     }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
@@ -364,6 +476,10 @@ private static final long serialVersionUID = 0L;
       bitField0_ = 0;
       commandName_ = "";
       subCommandName_ = "";
+      globalFlags_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+      flags_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
       return this;
     }
 
@@ -406,6 +522,14 @@ private static final long serialVersionUID = 0L;
         result.subCommandName_ = subCommandName_;
         to_bitField0_ |= 0x00000002;
       }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        globalFlags_.makeImmutable();
+        result.globalFlags_ = globalFlags_;
+      }
+      if (((from_bitField0_ & 0x00000008) != 0)) {
+        flags_.makeImmutable();
+        result.flags_ = flags_;
+      }
       result.bitField0_ |= to_bitField0_;
     }
 
@@ -429,6 +553,26 @@ private static final long serialVersionUID = 0L;
       if (other.hasSubCommandName()) {
         subCommandName_ = other.subCommandName_;
         bitField0_ |= 0x00000002;
+        onChanged();
+      }
+      if (!other.globalFlags_.isEmpty()) {
+        if (globalFlags_.isEmpty()) {
+          globalFlags_ = other.globalFlags_;
+          bitField0_ |= 0x00000004;
+        } else {
+          ensureGlobalFlagsIsMutable();
+          globalFlags_.addAll(other.globalFlags_);
+        }
+        onChanged();
+      }
+      if (!other.flags_.isEmpty()) {
+        if (flags_.isEmpty()) {
+          flags_ = other.flags_;
+          bitField0_ |= 0x00000008;
+        } else {
+          ensureFlagsIsMutable();
+          flags_.addAll(other.flags_);
+        }
         onChanged();
       }
       this.mergeUnknownFields(other.getUnknownFields());
@@ -467,6 +611,18 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000002;
               break;
             } // case 18
+            case 26: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              ensureGlobalFlagsIsMutable();
+              globalFlags_.add(bs);
+              break;
+            } // case 26
+            case 34: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              ensureFlagsIsMutable();
+              flags_.add(bs);
+              break;
+            } // case 34
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -670,6 +826,226 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       subCommandName_ = value;
       bitField0_ |= 0x00000002;
+      onChanged();
+      return this;
+    }
+
+    private com.google.protobuf.LazyStringArrayList globalFlags_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+    private void ensureGlobalFlagsIsMutable() {
+      if (!globalFlags_.isModifiable()) {
+        globalFlags_ = new com.google.protobuf.LazyStringArrayList(globalFlags_);
+      }
+      bitField0_ |= 0x00000004;
+    }
+    /**
+     * <code>repeated string global_flags = 3;</code>
+     * @return A list containing the globalFlags.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getGlobalFlagsList() {
+      globalFlags_.makeImmutable();
+      return globalFlags_;
+    }
+    /**
+     * <code>repeated string global_flags = 3;</code>
+     * @return The count of globalFlags.
+     */
+    public int getGlobalFlagsCount() {
+      return globalFlags_.size();
+    }
+    /**
+     * <code>repeated string global_flags = 3;</code>
+     * @param index The index of the element to return.
+     * @return The globalFlags at the given index.
+     */
+    public java.lang.String getGlobalFlags(int index) {
+      return globalFlags_.get(index);
+    }
+    /**
+     * <code>repeated string global_flags = 3;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the globalFlags at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getGlobalFlagsBytes(int index) {
+      return globalFlags_.getByteString(index);
+    }
+    /**
+     * <code>repeated string global_flags = 3;</code>
+     * @param index The index to set the value at.
+     * @param value The globalFlags to set.
+     * @return This builder for chaining.
+     */
+    public Builder setGlobalFlags(
+        int index, java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      ensureGlobalFlagsIsMutable();
+      globalFlags_.set(index, value);
+      bitField0_ |= 0x00000004;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>repeated string global_flags = 3;</code>
+     * @param value The globalFlags to add.
+     * @return This builder for chaining.
+     */
+    public Builder addGlobalFlags(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      ensureGlobalFlagsIsMutable();
+      globalFlags_.add(value);
+      bitField0_ |= 0x00000004;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>repeated string global_flags = 3;</code>
+     * @param values The globalFlags to add.
+     * @return This builder for chaining.
+     */
+    public Builder addAllGlobalFlags(
+        java.lang.Iterable<java.lang.String> values) {
+      ensureGlobalFlagsIsMutable();
+      com.google.protobuf.AbstractMessageLite.Builder.addAll(
+          values, globalFlags_);
+      bitField0_ |= 0x00000004;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>repeated string global_flags = 3;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearGlobalFlags() {
+      globalFlags_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+      bitField0_ = (bitField0_ & ~0x00000004);;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>repeated string global_flags = 3;</code>
+     * @param value The bytes of the globalFlags to add.
+     * @return This builder for chaining.
+     */
+    public Builder addGlobalFlagsBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      ensureGlobalFlagsIsMutable();
+      globalFlags_.add(value);
+      bitField0_ |= 0x00000004;
+      onChanged();
+      return this;
+    }
+
+    private com.google.protobuf.LazyStringArrayList flags_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+    private void ensureFlagsIsMutable() {
+      if (!flags_.isModifiable()) {
+        flags_ = new com.google.protobuf.LazyStringArrayList(flags_);
+      }
+      bitField0_ |= 0x00000008;
+    }
+    /**
+     * <code>repeated string flags = 4;</code>
+     * @return A list containing the flags.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getFlagsList() {
+      flags_.makeImmutable();
+      return flags_;
+    }
+    /**
+     * <code>repeated string flags = 4;</code>
+     * @return The count of flags.
+     */
+    public int getFlagsCount() {
+      return flags_.size();
+    }
+    /**
+     * <code>repeated string flags = 4;</code>
+     * @param index The index of the element to return.
+     * @return The flags at the given index.
+     */
+    public java.lang.String getFlags(int index) {
+      return flags_.get(index);
+    }
+    /**
+     * <code>repeated string flags = 4;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the flags at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getFlagsBytes(int index) {
+      return flags_.getByteString(index);
+    }
+    /**
+     * <code>repeated string flags = 4;</code>
+     * @param index The index to set the value at.
+     * @param value The flags to set.
+     * @return This builder for chaining.
+     */
+    public Builder setFlags(
+        int index, java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      ensureFlagsIsMutable();
+      flags_.set(index, value);
+      bitField0_ |= 0x00000008;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>repeated string flags = 4;</code>
+     * @param value The flags to add.
+     * @return This builder for chaining.
+     */
+    public Builder addFlags(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      ensureFlagsIsMutable();
+      flags_.add(value);
+      bitField0_ |= 0x00000008;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>repeated string flags = 4;</code>
+     * @param values The flags to add.
+     * @return This builder for chaining.
+     */
+    public Builder addAllFlags(
+        java.lang.Iterable<java.lang.String> values) {
+      ensureFlagsIsMutable();
+      com.google.protobuf.AbstractMessageLite.Builder.addAll(
+          values, flags_);
+      bitField0_ |= 0x00000008;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>repeated string flags = 4;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearFlags() {
+      flags_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+      bitField0_ = (bitField0_ & ~0x00000008);;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>repeated string flags = 4;</code>
+     * @param value The bytes of the flags to add.
+     * @return This builder for chaining.
+     */
+    public Builder addFlagsBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      ensureFlagsIsMutable();
+      flags_.add(value);
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }

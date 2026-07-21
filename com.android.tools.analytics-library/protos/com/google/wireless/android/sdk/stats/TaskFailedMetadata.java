@@ -1546,21 +1546,6 @@ private static final long serialVersionUID = 0L;
      */
     com.google.wireless.android.sdk.stats.TaskFailedMetadata.AllocationTrackStatusOrBuilder getTrackStatusOrBuilder();
 
-    /**
-     * <code>.android_studio.TaskFailedMetadata.LeakCanaryStopStatus leakcanary_stop_status = 4 [lazy = true];</code>
-     * @return Whether the leakcanaryStopStatus field is set.
-     */
-    boolean hasLeakcanaryStopStatus();
-    /**
-     * <code>.android_studio.TaskFailedMetadata.LeakCanaryStopStatus leakcanary_stop_status = 4 [lazy = true];</code>
-     * @return The leakcanaryStopStatus.
-     */
-    com.google.wireless.android.sdk.stats.TaskFailedMetadata.LeakCanaryStopStatus getLeakcanaryStopStatus();
-    /**
-     * <code>.android_studio.TaskFailedMetadata.LeakCanaryStopStatus leakcanary_stop_status = 4 [lazy = true];</code>
-     */
-    com.google.wireless.android.sdk.stats.TaskFailedMetadata.LeakCanaryStopStatusOrBuilder getLeakcanaryStopStatusOrBuilder();
-
     com.google.wireless.android.sdk.stats.TaskFailedMetadata.TaskStopFailedMetadata.UnionCase getUnionCase();
   }
   /**
@@ -1608,7 +1593,6 @@ private static final long serialVersionUID = 0L;
       CPU_CAPTURE_METADATA(1),
       TRACE_STOP_STATUS(2),
       TRACK_STATUS(3),
-      LEAKCANARY_STOP_STATUS(4),
       UNION_NOT_SET(0);
       private final int value;
       private UnionCase(int value) {
@@ -1629,7 +1613,6 @@ private static final long serialVersionUID = 0L;
           case 1: return CPU_CAPTURE_METADATA;
           case 2: return TRACE_STOP_STATUS;
           case 3: return TRACK_STATUS;
-          case 4: return LEAKCANARY_STOP_STATUS;
           case 0: return UNION_NOT_SET;
           default: return null;
         }
@@ -1738,37 +1721,6 @@ private static final long serialVersionUID = 0L;
       return com.google.wireless.android.sdk.stats.TaskFailedMetadata.AllocationTrackStatus.getDefaultInstance();
     }
 
-    public static final int LEAKCANARY_STOP_STATUS_FIELD_NUMBER = 4;
-    /**
-     * <code>.android_studio.TaskFailedMetadata.LeakCanaryStopStatus leakcanary_stop_status = 4 [lazy = true];</code>
-     * @return Whether the leakcanaryStopStatus field is set.
-     */
-    @java.lang.Override
-    public boolean hasLeakcanaryStopStatus() {
-      return unionCase_ == 4;
-    }
-    /**
-     * <code>.android_studio.TaskFailedMetadata.LeakCanaryStopStatus leakcanary_stop_status = 4 [lazy = true];</code>
-     * @return The leakcanaryStopStatus.
-     */
-    @java.lang.Override
-    public com.google.wireless.android.sdk.stats.TaskFailedMetadata.LeakCanaryStopStatus getLeakcanaryStopStatus() {
-      if (unionCase_ == 4) {
-         return (com.google.wireless.android.sdk.stats.TaskFailedMetadata.LeakCanaryStopStatus) union_;
-      }
-      return com.google.wireless.android.sdk.stats.TaskFailedMetadata.LeakCanaryStopStatus.getDefaultInstance();
-    }
-    /**
-     * <code>.android_studio.TaskFailedMetadata.LeakCanaryStopStatus leakcanary_stop_status = 4 [lazy = true];</code>
-     */
-    @java.lang.Override
-    public com.google.wireless.android.sdk.stats.TaskFailedMetadata.LeakCanaryStopStatusOrBuilder getLeakcanaryStopStatusOrBuilder() {
-      if (unionCase_ == 4) {
-         return (com.google.wireless.android.sdk.stats.TaskFailedMetadata.LeakCanaryStopStatus) union_;
-      }
-      return com.google.wireless.android.sdk.stats.TaskFailedMetadata.LeakCanaryStopStatus.getDefaultInstance();
-    }
-
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -1792,9 +1744,6 @@ private static final long serialVersionUID = 0L;
       if (unionCase_ == 3) {
         output.writeMessage(3, (com.google.wireless.android.sdk.stats.TaskFailedMetadata.AllocationTrackStatus) union_);
       }
-      if (unionCase_ == 4) {
-        output.writeMessage(4, (com.google.wireless.android.sdk.stats.TaskFailedMetadata.LeakCanaryStopStatus) union_);
-      }
       getUnknownFields().writeTo(output);
     }
 
@@ -1815,10 +1764,6 @@ private static final long serialVersionUID = 0L;
       if (unionCase_ == 3) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, (com.google.wireless.android.sdk.stats.TaskFailedMetadata.AllocationTrackStatus) union_);
-      }
-      if (unionCase_ == 4) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(4, (com.google.wireless.android.sdk.stats.TaskFailedMetadata.LeakCanaryStopStatus) union_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -1849,10 +1794,6 @@ private static final long serialVersionUID = 0L;
           if (!getTrackStatus()
               .equals(other.getTrackStatus())) return false;
           break;
-        case 4:
-          if (!getLeakcanaryStopStatus()
-              .equals(other.getLeakcanaryStopStatus())) return false;
-          break;
         case 0:
         default:
       }
@@ -1879,10 +1820,6 @@ private static final long serialVersionUID = 0L;
         case 3:
           hash = (37 * hash) + TRACK_STATUS_FIELD_NUMBER;
           hash = (53 * hash) + getTrackStatus().hashCode();
-          break;
-        case 4:
-          hash = (37 * hash) + LEAKCANARY_STOP_STATUS_FIELD_NUMBER;
-          hash = (53 * hash) + getLeakcanaryStopStatus().hashCode();
           break;
         case 0:
         default:
@@ -2025,9 +1962,6 @@ private static final long serialVersionUID = 0L;
         if (trackStatusBuilder_ != null) {
           trackStatusBuilder_.clear();
         }
-        if (leakcanaryStopStatusBuilder_ != null) {
-          leakcanaryStopStatusBuilder_.clear();
-        }
         unionCase_ = 0;
         union_ = null;
         return this;
@@ -2081,10 +2015,6 @@ private static final long serialVersionUID = 0L;
             trackStatusBuilder_ != null) {
           result.union_ = trackStatusBuilder_.build();
         }
-        if (unionCase_ == 4 &&
-            leakcanaryStopStatusBuilder_ != null) {
-          result.union_ = leakcanaryStopStatusBuilder_.build();
-        }
       }
 
       @java.lang.Override
@@ -2110,10 +2040,6 @@ private static final long serialVersionUID = 0L;
           }
           case TRACK_STATUS: {
             mergeTrackStatus(other.getTrackStatus());
-            break;
-          }
-          case LEAKCANARY_STOP_STATUS: {
-            mergeLeakcanaryStopStatus(other.getLeakcanaryStopStatus());
             break;
           }
           case UNION_NOT_SET: {
@@ -2167,13 +2093,6 @@ private static final long serialVersionUID = 0L;
                 unionCase_ = 3;
                 break;
               } // case 26
-              case 34: {
-                input.readMessage(
-                    getLeakcanaryStopStatusFieldBuilder().getBuilder(),
-                    extensionRegistry);
-                unionCase_ = 4;
-                break;
-              } // case 34
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -2630,148 +2549,6 @@ private static final long serialVersionUID = 0L;
         unionCase_ = 3;
         onChanged();
         return trackStatusBuilder_;
-      }
-
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.wireless.android.sdk.stats.TaskFailedMetadata.LeakCanaryStopStatus, com.google.wireless.android.sdk.stats.TaskFailedMetadata.LeakCanaryStopStatus.Builder, com.google.wireless.android.sdk.stats.TaskFailedMetadata.LeakCanaryStopStatusOrBuilder> leakcanaryStopStatusBuilder_;
-      /**
-       * <code>.android_studio.TaskFailedMetadata.LeakCanaryStopStatus leakcanary_stop_status = 4 [lazy = true];</code>
-       * @return Whether the leakcanaryStopStatus field is set.
-       */
-      @java.lang.Override
-      public boolean hasLeakcanaryStopStatus() {
-        return unionCase_ == 4;
-      }
-      /**
-       * <code>.android_studio.TaskFailedMetadata.LeakCanaryStopStatus leakcanary_stop_status = 4 [lazy = true];</code>
-       * @return The leakcanaryStopStatus.
-       */
-      @java.lang.Override
-      public com.google.wireless.android.sdk.stats.TaskFailedMetadata.LeakCanaryStopStatus getLeakcanaryStopStatus() {
-        if (leakcanaryStopStatusBuilder_ == null) {
-          if (unionCase_ == 4) {
-            return (com.google.wireless.android.sdk.stats.TaskFailedMetadata.LeakCanaryStopStatus) union_;
-          }
-          return com.google.wireless.android.sdk.stats.TaskFailedMetadata.LeakCanaryStopStatus.getDefaultInstance();
-        } else {
-          if (unionCase_ == 4) {
-            return leakcanaryStopStatusBuilder_.getMessage();
-          }
-          return com.google.wireless.android.sdk.stats.TaskFailedMetadata.LeakCanaryStopStatus.getDefaultInstance();
-        }
-      }
-      /**
-       * <code>.android_studio.TaskFailedMetadata.LeakCanaryStopStatus leakcanary_stop_status = 4 [lazy = true];</code>
-       */
-      public Builder setLeakcanaryStopStatus(com.google.wireless.android.sdk.stats.TaskFailedMetadata.LeakCanaryStopStatus value) {
-        if (leakcanaryStopStatusBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          union_ = value;
-          onChanged();
-        } else {
-          leakcanaryStopStatusBuilder_.setMessage(value);
-        }
-        unionCase_ = 4;
-        return this;
-      }
-      /**
-       * <code>.android_studio.TaskFailedMetadata.LeakCanaryStopStatus leakcanary_stop_status = 4 [lazy = true];</code>
-       */
-      public Builder setLeakcanaryStopStatus(
-          com.google.wireless.android.sdk.stats.TaskFailedMetadata.LeakCanaryStopStatus.Builder builderForValue) {
-        if (leakcanaryStopStatusBuilder_ == null) {
-          union_ = builderForValue.build();
-          onChanged();
-        } else {
-          leakcanaryStopStatusBuilder_.setMessage(builderForValue.build());
-        }
-        unionCase_ = 4;
-        return this;
-      }
-      /**
-       * <code>.android_studio.TaskFailedMetadata.LeakCanaryStopStatus leakcanary_stop_status = 4 [lazy = true];</code>
-       */
-      public Builder mergeLeakcanaryStopStatus(com.google.wireless.android.sdk.stats.TaskFailedMetadata.LeakCanaryStopStatus value) {
-        if (leakcanaryStopStatusBuilder_ == null) {
-          if (unionCase_ == 4 &&
-              union_ != com.google.wireless.android.sdk.stats.TaskFailedMetadata.LeakCanaryStopStatus.getDefaultInstance()) {
-            union_ = com.google.wireless.android.sdk.stats.TaskFailedMetadata.LeakCanaryStopStatus.newBuilder((com.google.wireless.android.sdk.stats.TaskFailedMetadata.LeakCanaryStopStatus) union_)
-                .mergeFrom(value).buildPartial();
-          } else {
-            union_ = value;
-          }
-          onChanged();
-        } else {
-          if (unionCase_ == 4) {
-            leakcanaryStopStatusBuilder_.mergeFrom(value);
-          } else {
-            leakcanaryStopStatusBuilder_.setMessage(value);
-          }
-        }
-        unionCase_ = 4;
-        return this;
-      }
-      /**
-       * <code>.android_studio.TaskFailedMetadata.LeakCanaryStopStatus leakcanary_stop_status = 4 [lazy = true];</code>
-       */
-      public Builder clearLeakcanaryStopStatus() {
-        if (leakcanaryStopStatusBuilder_ == null) {
-          if (unionCase_ == 4) {
-            unionCase_ = 0;
-            union_ = null;
-            onChanged();
-          }
-        } else {
-          if (unionCase_ == 4) {
-            unionCase_ = 0;
-            union_ = null;
-          }
-          leakcanaryStopStatusBuilder_.clear();
-        }
-        return this;
-      }
-      /**
-       * <code>.android_studio.TaskFailedMetadata.LeakCanaryStopStatus leakcanary_stop_status = 4 [lazy = true];</code>
-       */
-      public com.google.wireless.android.sdk.stats.TaskFailedMetadata.LeakCanaryStopStatus.Builder getLeakcanaryStopStatusBuilder() {
-        return getLeakcanaryStopStatusFieldBuilder().getBuilder();
-      }
-      /**
-       * <code>.android_studio.TaskFailedMetadata.LeakCanaryStopStatus leakcanary_stop_status = 4 [lazy = true];</code>
-       */
-      @java.lang.Override
-      public com.google.wireless.android.sdk.stats.TaskFailedMetadata.LeakCanaryStopStatusOrBuilder getLeakcanaryStopStatusOrBuilder() {
-        if ((unionCase_ == 4) && (leakcanaryStopStatusBuilder_ != null)) {
-          return leakcanaryStopStatusBuilder_.getMessageOrBuilder();
-        } else {
-          if (unionCase_ == 4) {
-            return (com.google.wireless.android.sdk.stats.TaskFailedMetadata.LeakCanaryStopStatus) union_;
-          }
-          return com.google.wireless.android.sdk.stats.TaskFailedMetadata.LeakCanaryStopStatus.getDefaultInstance();
-        }
-      }
-      /**
-       * <code>.android_studio.TaskFailedMetadata.LeakCanaryStopStatus leakcanary_stop_status = 4 [lazy = true];</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.wireless.android.sdk.stats.TaskFailedMetadata.LeakCanaryStopStatus, com.google.wireless.android.sdk.stats.TaskFailedMetadata.LeakCanaryStopStatus.Builder, com.google.wireless.android.sdk.stats.TaskFailedMetadata.LeakCanaryStopStatusOrBuilder> 
-          getLeakcanaryStopStatusFieldBuilder() {
-        if (leakcanaryStopStatusBuilder_ == null) {
-          if (!(unionCase_ == 4)) {
-            union_ = com.google.wireless.android.sdk.stats.TaskFailedMetadata.LeakCanaryStopStatus.getDefaultInstance();
-          }
-          leakcanaryStopStatusBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.google.wireless.android.sdk.stats.TaskFailedMetadata.LeakCanaryStopStatus, com.google.wireless.android.sdk.stats.TaskFailedMetadata.LeakCanaryStopStatus.Builder, com.google.wireless.android.sdk.stats.TaskFailedMetadata.LeakCanaryStopStatusOrBuilder>(
-                  (com.google.wireless.android.sdk.stats.TaskFailedMetadata.LeakCanaryStopStatus) union_,
-                  getParentForChildren(),
-                  isClean());
-          union_ = null;
-        }
-        unionCase_ = 4;
-        onChanged();
-        return leakcanaryStopStatusBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -4298,10 +4075,6 @@ private static final long serialVersionUID = 0L;
        * <code>PARSING_FAILURE = 6;</code>
        */
       PARSING_FAILURE(6),
-      /**
-       * <code>RACE_CONDITION_DATA_LOSS = 7;</code>
-       */
-      RACE_CONDITION_DATA_LOSS(7),
       ;
 
       /**
@@ -4332,10 +4105,6 @@ private static final long serialVersionUID = 0L;
        * <code>PARSING_FAILURE = 6;</code>
        */
       public static final int PARSING_FAILURE_VALUE = 6;
-      /**
-       * <code>RACE_CONDITION_DATA_LOSS = 7;</code>
-       */
-      public static final int RACE_CONDITION_DATA_LOSS_VALUE = 7;
 
 
       public final int getNumber() {
@@ -4365,7 +4134,6 @@ private static final long serialVersionUID = 0L;
           case 4: return SHARK_ANALYSIS_OOM;
           case 5: return SHARK_ANALYSIS_EXCEPTION;
           case 6: return PARSING_FAILURE;
-          case 7: return RACE_CONDITION_DATA_LOSS;
           default: return null;
         }
       }
@@ -4839,582 +4607,6 @@ private static final long serialVersionUID = 0L;
 
     @java.lang.Override
     public com.google.wireless.android.sdk.stats.TaskFailedMetadata.LeakCanaryProcessingStatus getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
-  }
-
-  public interface LeakCanaryStopStatusOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:android_studio.TaskFailedMetadata.LeakCanaryStopStatus)
-      com.google.protobuf.MessageOrBuilder {
-
-    /**
-     * <code>optional .android_studio.TaskFailedMetadata.LeakCanaryStopStatus.ErrorCode error_code = 1;</code>
-     * @return Whether the errorCode field is set.
-     */
-    boolean hasErrorCode();
-    /**
-     * <code>optional .android_studio.TaskFailedMetadata.LeakCanaryStopStatus.ErrorCode error_code = 1;</code>
-     * @return The errorCode.
-     */
-    com.google.wireless.android.sdk.stats.TaskFailedMetadata.LeakCanaryStopStatus.ErrorCode getErrorCode();
-  }
-  /**
-   * Protobuf type {@code android_studio.TaskFailedMetadata.LeakCanaryStopStatus}
-   */
-  public static final class LeakCanaryStopStatus extends
-      com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:android_studio.TaskFailedMetadata.LeakCanaryStopStatus)
-      LeakCanaryStopStatusOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use LeakCanaryStopStatus.newBuilder() to construct.
-    private LeakCanaryStopStatus(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
-    private LeakCanaryStopStatus() {
-      errorCode_ = 0;
-    }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new LeakCanaryStopStatus();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_TaskFailedMetadata_LeakCanaryStopStatus_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_TaskFailedMetadata_LeakCanaryStopStatus_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              com.google.wireless.android.sdk.stats.TaskFailedMetadata.LeakCanaryStopStatus.class, com.google.wireless.android.sdk.stats.TaskFailedMetadata.LeakCanaryStopStatus.Builder.class);
-    }
-
-    /**
-     * Protobuf enum {@code android_studio.TaskFailedMetadata.LeakCanaryStopStatus.ErrorCode}
-     */
-    public enum ErrorCode
-        implements com.google.protobuf.ProtocolMessageEnum {
-      /**
-       * <code>UNKNOWN_ERROR = 0;</code>
-       */
-      UNKNOWN_ERROR(0),
-      /**
-       * <code>ZOMBIE_TRACKING_STOP_FAILED = 1;</code>
-       */
-      ZOMBIE_TRACKING_STOP_FAILED(1),
-      ;
-
-      /**
-       * <code>UNKNOWN_ERROR = 0;</code>
-       */
-      public static final int UNKNOWN_ERROR_VALUE = 0;
-      /**
-       * <code>ZOMBIE_TRACKING_STOP_FAILED = 1;</code>
-       */
-      public static final int ZOMBIE_TRACKING_STOP_FAILED_VALUE = 1;
-
-
-      public final int getNumber() {
-        return value;
-      }
-
-      /**
-       * @param value The numeric wire value of the corresponding enum entry.
-       * @return The enum associated with the given numeric wire value.
-       * @deprecated Use {@link #forNumber(int)} instead.
-       */
-      @java.lang.Deprecated
-      public static ErrorCode valueOf(int value) {
-        return forNumber(value);
-      }
-
-      /**
-       * @param value The numeric wire value of the corresponding enum entry.
-       * @return The enum associated with the given numeric wire value.
-       */
-      public static ErrorCode forNumber(int value) {
-        switch (value) {
-          case 0: return UNKNOWN_ERROR;
-          case 1: return ZOMBIE_TRACKING_STOP_FAILED;
-          default: return null;
-        }
-      }
-
-      public static com.google.protobuf.Internal.EnumLiteMap<ErrorCode>
-          internalGetValueMap() {
-        return internalValueMap;
-      }
-      private static final com.google.protobuf.Internal.EnumLiteMap<
-          ErrorCode> internalValueMap =
-            new com.google.protobuf.Internal.EnumLiteMap<ErrorCode>() {
-              public ErrorCode findValueByNumber(int number) {
-                return ErrorCode.forNumber(number);
-              }
-            };
-
-      public final com.google.protobuf.Descriptors.EnumValueDescriptor
-          getValueDescriptor() {
-        return getDescriptor().getValues().get(ordinal());
-      }
-      public final com.google.protobuf.Descriptors.EnumDescriptor
-          getDescriptorForType() {
-        return getDescriptor();
-      }
-      public static final com.google.protobuf.Descriptors.EnumDescriptor
-          getDescriptor() {
-        return com.google.wireless.android.sdk.stats.TaskFailedMetadata.LeakCanaryStopStatus.getDescriptor().getEnumTypes().get(0);
-      }
-
-      private static final ErrorCode[] VALUES = values();
-
-      public static ErrorCode valueOf(
-          com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
-        if (desc.getType() != getDescriptor()) {
-          throw new java.lang.IllegalArgumentException(
-            "EnumValueDescriptor is not for this type.");
-        }
-        return VALUES[desc.getIndex()];
-      }
-
-      private final int value;
-
-      private ErrorCode(int value) {
-        this.value = value;
-      }
-
-      // @@protoc_insertion_point(enum_scope:android_studio.TaskFailedMetadata.LeakCanaryStopStatus.ErrorCode)
-    }
-
-    private int bitField0_;
-    public static final int ERROR_CODE_FIELD_NUMBER = 1;
-    private int errorCode_ = 0;
-    /**
-     * <code>optional .android_studio.TaskFailedMetadata.LeakCanaryStopStatus.ErrorCode error_code = 1;</code>
-     * @return Whether the errorCode field is set.
-     */
-    @java.lang.Override public boolean hasErrorCode() {
-      return ((bitField0_ & 0x00000001) != 0);
-    }
-    /**
-     * <code>optional .android_studio.TaskFailedMetadata.LeakCanaryStopStatus.ErrorCode error_code = 1;</code>
-     * @return The errorCode.
-     */
-    @java.lang.Override public com.google.wireless.android.sdk.stats.TaskFailedMetadata.LeakCanaryStopStatus.ErrorCode getErrorCode() {
-      com.google.wireless.android.sdk.stats.TaskFailedMetadata.LeakCanaryStopStatus.ErrorCode result = com.google.wireless.android.sdk.stats.TaskFailedMetadata.LeakCanaryStopStatus.ErrorCode.forNumber(errorCode_);
-      return result == null ? com.google.wireless.android.sdk.stats.TaskFailedMetadata.LeakCanaryStopStatus.ErrorCode.UNKNOWN_ERROR : result;
-    }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
-        output.writeEnum(1, errorCode_);
-      }
-      getUnknownFields().writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeEnumSize(1, errorCode_);
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof com.google.wireless.android.sdk.stats.TaskFailedMetadata.LeakCanaryStopStatus)) {
-        return super.equals(obj);
-      }
-      com.google.wireless.android.sdk.stats.TaskFailedMetadata.LeakCanaryStopStatus other = (com.google.wireless.android.sdk.stats.TaskFailedMetadata.LeakCanaryStopStatus) obj;
-
-      if (hasErrorCode() != other.hasErrorCode()) return false;
-      if (hasErrorCode()) {
-        if (errorCode_ != other.errorCode_) return false;
-      }
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      if (hasErrorCode()) {
-        hash = (37 * hash) + ERROR_CODE_FIELD_NUMBER;
-        hash = (53 * hash) + errorCode_;
-      }
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
-    }
-
-    public static com.google.wireless.android.sdk.stats.TaskFailedMetadata.LeakCanaryStopStatus parseFrom(
-        java.nio.ByteBuffer data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.google.wireless.android.sdk.stats.TaskFailedMetadata.LeakCanaryStopStatus parseFrom(
-        java.nio.ByteBuffer data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.google.wireless.android.sdk.stats.TaskFailedMetadata.LeakCanaryStopStatus parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.google.wireless.android.sdk.stats.TaskFailedMetadata.LeakCanaryStopStatus parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.google.wireless.android.sdk.stats.TaskFailedMetadata.LeakCanaryStopStatus parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.google.wireless.android.sdk.stats.TaskFailedMetadata.LeakCanaryStopStatus parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.google.wireless.android.sdk.stats.TaskFailedMetadata.LeakCanaryStopStatus parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static com.google.wireless.android.sdk.stats.TaskFailedMetadata.LeakCanaryStopStatus parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static com.google.wireless.android.sdk.stats.TaskFailedMetadata.LeakCanaryStopStatus parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
-    }
-    public static com.google.wireless.android.sdk.stats.TaskFailedMetadata.LeakCanaryStopStatus parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static com.google.wireless.android.sdk.stats.TaskFailedMetadata.LeakCanaryStopStatus parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static com.google.wireless.android.sdk.stats.TaskFailedMetadata.LeakCanaryStopStatus parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
-    }
-    public static Builder newBuilder(com.google.wireless.android.sdk.stats.TaskFailedMetadata.LeakCanaryStopStatus prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
-    }
-
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
-    /**
-     * Protobuf type {@code android_studio.TaskFailedMetadata.LeakCanaryStopStatus}
-     */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:android_studio.TaskFailedMetadata.LeakCanaryStopStatus)
-        com.google.wireless.android.sdk.stats.TaskFailedMetadata.LeakCanaryStopStatusOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_TaskFailedMetadata_LeakCanaryStopStatus_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_TaskFailedMetadata_LeakCanaryStopStatus_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                com.google.wireless.android.sdk.stats.TaskFailedMetadata.LeakCanaryStopStatus.class, com.google.wireless.android.sdk.stats.TaskFailedMetadata.LeakCanaryStopStatus.Builder.class);
-      }
-
-      // Construct using com.google.wireless.android.sdk.stats.TaskFailedMetadata.LeakCanaryStopStatus.newBuilder()
-      private Builder() {
-
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        bitField0_ = 0;
-        errorCode_ = 0;
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_TaskFailedMetadata_LeakCanaryStopStatus_descriptor;
-      }
-
-      @java.lang.Override
-      public com.google.wireless.android.sdk.stats.TaskFailedMetadata.LeakCanaryStopStatus getDefaultInstanceForType() {
-        return com.google.wireless.android.sdk.stats.TaskFailedMetadata.LeakCanaryStopStatus.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public com.google.wireless.android.sdk.stats.TaskFailedMetadata.LeakCanaryStopStatus build() {
-        com.google.wireless.android.sdk.stats.TaskFailedMetadata.LeakCanaryStopStatus result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public com.google.wireless.android.sdk.stats.TaskFailedMetadata.LeakCanaryStopStatus buildPartial() {
-        com.google.wireless.android.sdk.stats.TaskFailedMetadata.LeakCanaryStopStatus result = new com.google.wireless.android.sdk.stats.TaskFailedMetadata.LeakCanaryStopStatus(this);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartial0(com.google.wireless.android.sdk.stats.TaskFailedMetadata.LeakCanaryStopStatus result) {
-        int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.errorCode_ = errorCode_;
-          to_bitField0_ |= 0x00000001;
-        }
-        result.bitField0_ |= to_bitField0_;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.google.wireless.android.sdk.stats.TaskFailedMetadata.LeakCanaryStopStatus) {
-          return mergeFrom((com.google.wireless.android.sdk.stats.TaskFailedMetadata.LeakCanaryStopStatus)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(com.google.wireless.android.sdk.stats.TaskFailedMetadata.LeakCanaryStopStatus other) {
-        if (other == com.google.wireless.android.sdk.stats.TaskFailedMetadata.LeakCanaryStopStatus.getDefaultInstance()) return this;
-        if (other.hasErrorCode()) {
-          setErrorCode(other.getErrorCode());
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 8: {
-                int tmpRaw = input.readEnum();
-                com.google.wireless.android.sdk.stats.TaskFailedMetadata.LeakCanaryStopStatus.ErrorCode tmpValue =
-                    com.google.wireless.android.sdk.stats.TaskFailedMetadata.LeakCanaryStopStatus.ErrorCode.forNumber(tmpRaw);
-                if (tmpValue == null) {
-                  mergeUnknownVarintField(1, tmpRaw);
-                } else {
-                  errorCode_ = tmpRaw;
-                  bitField0_ |= 0x00000001;
-                }
-                break;
-              } // case 8
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      private int bitField0_;
-
-      private int errorCode_ = 0;
-      /**
-       * <code>optional .android_studio.TaskFailedMetadata.LeakCanaryStopStatus.ErrorCode error_code = 1;</code>
-       * @return Whether the errorCode field is set.
-       */
-      @java.lang.Override public boolean hasErrorCode() {
-        return ((bitField0_ & 0x00000001) != 0);
-      }
-      /**
-       * <code>optional .android_studio.TaskFailedMetadata.LeakCanaryStopStatus.ErrorCode error_code = 1;</code>
-       * @return The errorCode.
-       */
-      @java.lang.Override
-      public com.google.wireless.android.sdk.stats.TaskFailedMetadata.LeakCanaryStopStatus.ErrorCode getErrorCode() {
-        com.google.wireless.android.sdk.stats.TaskFailedMetadata.LeakCanaryStopStatus.ErrorCode result = com.google.wireless.android.sdk.stats.TaskFailedMetadata.LeakCanaryStopStatus.ErrorCode.forNumber(errorCode_);
-        return result == null ? com.google.wireless.android.sdk.stats.TaskFailedMetadata.LeakCanaryStopStatus.ErrorCode.UNKNOWN_ERROR : result;
-      }
-      /**
-       * <code>optional .android_studio.TaskFailedMetadata.LeakCanaryStopStatus.ErrorCode error_code = 1;</code>
-       * @param value The errorCode to set.
-       * @return This builder for chaining.
-       */
-      public Builder setErrorCode(com.google.wireless.android.sdk.stats.TaskFailedMetadata.LeakCanaryStopStatus.ErrorCode value) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        bitField0_ |= 0x00000001;
-        errorCode_ = value.getNumber();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional .android_studio.TaskFailedMetadata.LeakCanaryStopStatus.ErrorCode error_code = 1;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearErrorCode() {
-        bitField0_ = (bitField0_ & ~0x00000001);
-        errorCode_ = 0;
-        onChanged();
-        return this;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
-
-      // @@protoc_insertion_point(builder_scope:android_studio.TaskFailedMetadata.LeakCanaryStopStatus)
-    }
-
-    // @@protoc_insertion_point(class_scope:android_studio.TaskFailedMetadata.LeakCanaryStopStatus)
-    private static final com.google.wireless.android.sdk.stats.TaskFailedMetadata.LeakCanaryStopStatus DEFAULT_INSTANCE;
-    static {
-      DEFAULT_INSTANCE = new com.google.wireless.android.sdk.stats.TaskFailedMetadata.LeakCanaryStopStatus();
-    }
-
-    public static com.google.wireless.android.sdk.stats.TaskFailedMetadata.LeakCanaryStopStatus getDefaultInstance() {
-      return DEFAULT_INSTANCE;
-    }
-
-    @java.lang.Deprecated public static final com.google.protobuf.Parser<LeakCanaryStopStatus>
-        PARSER = new com.google.protobuf.AbstractParser<LeakCanaryStopStatus>() {
-      @java.lang.Override
-      public LeakCanaryStopStatus parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
-
-    public static com.google.protobuf.Parser<LeakCanaryStopStatus> parser() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<LeakCanaryStopStatus> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.google.wireless.android.sdk.stats.TaskFailedMetadata.LeakCanaryStopStatus getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 

@@ -131,7 +131,7 @@ public interface SmlConfigurationEventOrBuilder extends
    *
    * <code>optional .android_studio.SmlConfigurationEvent.SmlProductVariant product_variant = 7 [deprecated = true];</code>
    * @deprecated android_studio.SmlConfigurationEvent.product_variant is deprecated.
-   *     See studio_stats.proto;l=17014
+   *     See studio_stats.proto;l=17008
    * @return Whether the productVariant field is set.
    */
   @java.lang.Deprecated boolean hasProductVariant();
@@ -145,7 +145,7 @@ public interface SmlConfigurationEventOrBuilder extends
    *
    * <code>optional .android_studio.SmlConfigurationEvent.SmlProductVariant product_variant = 7 [deprecated = true];</code>
    * @deprecated android_studio.SmlConfigurationEvent.product_variant is deprecated.
-   *     See studio_stats.proto;l=17014
+   *     See studio_stats.proto;l=17008
    * @return The productVariant.
    */
   @java.lang.Deprecated com.google.wireless.android.sdk.stats.SmlConfigurationEvent.SmlProductVariant getProductVariant();
@@ -235,4 +235,54 @@ public interface SmlConfigurationEventOrBuilder extends
    * @return The userAccountType.
    */
   com.google.wireless.android.sdk.stats.SmlConfigurationEvent.UserAccountType getUserAccountType();
+
+  /**
+   * <pre>
+   * The tier ID of the onboarded user.
+   * </pre>
+   *
+   * <code>optional string tier_id = 12;</code>
+   * @return Whether the tierId field is set.
+   */
+  boolean hasTierId();
+  /**
+   * <pre>
+   * The tier ID of the onboarded user.
+   * </pre>
+   *
+   * <code>optional string tier_id = 12;</code>
+   * @return The tierId.
+   */
+  java.lang.String getTierId();
+  /**
+   * <pre>
+   * The tier ID of the onboarded user.
+   * </pre>
+   *
+   * <code>optional string tier_id = 12;</code>
+   * @return The bytes for tierId.
+   */
+  com.google.protobuf.ByteString
+      getTierIdBytes();
+
+  /**
+   * <pre>
+   * Timestamp in ms. Can be used by various configuration events (for instance
+   * onboarding completion time)
+   * </pre>
+   *
+   * <code>optional int64 configuration_time_ms = 13;</code>
+   * @return Whether the configurationTimeMs field is set.
+   */
+  boolean hasConfigurationTimeMs();
+  /**
+   * <pre>
+   * Timestamp in ms. Can be used by various configuration events (for instance
+   * onboarding completion time)
+   * </pre>
+   *
+   * <code>optional int64 configuration_time_ms = 13;</code>
+   * @return The configurationTimeMs.
+   */
+  long getConfigurationTimeMs();
 }
