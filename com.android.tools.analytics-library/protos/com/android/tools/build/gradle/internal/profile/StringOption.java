@@ -141,6 +141,10 @@ public enum StringOption
    * <code>LINT_HEAP_SIZE = 32;</code>
    */
   LINT_HEAP_SIZE(32),
+  /**
+   * <code>SUPPRESS_UNSUPPORTED_COMPILE_SDK = 33;</code>
+   */
+  SUPPRESS_UNSUPPORTED_COMPILE_SDK(33),
   UNRECOGNIZED(-1),
   ;
 
@@ -276,6 +280,10 @@ public enum StringOption
    * <code>LINT_HEAP_SIZE = 32;</code>
    */
   public static final int LINT_HEAP_SIZE_VALUE = 32;
+  /**
+   * <code>SUPPRESS_UNSUPPORTED_COMPILE_SDK = 33;</code>
+   */
+  public static final int SUPPRESS_UNSUPPORTED_COMPILE_SDK_VALUE = 33;
 
 
   public final int getNumber() {
@@ -335,6 +343,7 @@ public enum StringOption
       case 30: return NATIVE_BUILD_OUTPUT_LEVEL;
       case 31: return AAPT2_FROM_MAVEN_VERSION_OVERRIDE;
       case 32: return LINT_HEAP_SIZE;
+      case 33: return SUPPRESS_UNSUPPORTED_COMPILE_SDK;
       default: return null;
     }
   }

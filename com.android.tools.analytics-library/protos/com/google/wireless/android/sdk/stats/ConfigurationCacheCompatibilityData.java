@@ -140,6 +140,10 @@ private static final long serialVersionUID = 0L;
      * <code>CONFIGURATION_CACHE_TURNED_ON = 5;</code>
      */
     CONFIGURATION_CACHE_TURNED_ON(5),
+    /**
+     * <code>CONFIGURATION_CACHE_TRIAL_FLOW_BUILD = 6;</code>
+     */
+    CONFIGURATION_CACHE_TRIAL_FLOW_BUILD(6),
     ;
 
     /**
@@ -166,6 +170,10 @@ private static final long serialVersionUID = 0L;
      * <code>CONFIGURATION_CACHE_TURNED_ON = 5;</code>
      */
     public static final int CONFIGURATION_CACHE_TURNED_ON_VALUE = 5;
+    /**
+     * <code>CONFIGURATION_CACHE_TRIAL_FLOW_BUILD = 6;</code>
+     */
+    public static final int CONFIGURATION_CACHE_TRIAL_FLOW_BUILD_VALUE = 6;
 
 
     public final int getNumber() {
@@ -194,6 +202,7 @@ private static final long serialVersionUID = 0L;
         case 3: return INCOMPATIBLE_PLUGINS_DETECTED;
         case 4: return INCOMPATIBLE_PLUGINS_NOT_DETECTED;
         case 5: return CONFIGURATION_CACHE_TURNED_ON;
+        case 6: return CONFIGURATION_CACHE_TRIAL_FLOW_BUILD;
         default: return null;
       }
     }

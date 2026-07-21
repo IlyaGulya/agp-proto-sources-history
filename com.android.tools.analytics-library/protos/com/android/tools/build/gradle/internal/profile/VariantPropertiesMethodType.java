@@ -389,6 +389,14 @@ public enum VariantPropertiesMethodType
    * <code>MAKE_RES_VALUE_KEY = 85;</code>
    */
   MAKE_RES_VALUE_KEY(85),
+  /**
+   * <code>TEST_FIXTURES = 86;</code>
+   */
+  TEST_FIXTURES(86),
+  /**
+   * <code>VARIANT_PROPERTIES = 87;</code>
+   */
+  VARIANT_PROPERTIES(87),
   UNRECOGNIZED(-1),
   ;
 
@@ -772,6 +780,14 @@ public enum VariantPropertiesMethodType
    * <code>MAKE_RES_VALUE_KEY = 85;</code>
    */
   public static final int MAKE_RES_VALUE_KEY_VALUE = 85;
+  /**
+   * <code>TEST_FIXTURES = 86;</code>
+   */
+  public static final int TEST_FIXTURES_VALUE = 86;
+  /**
+   * <code>VARIANT_PROPERTIES = 87;</code>
+   */
+  public static final int VARIANT_PROPERTIES_VALUE = 87;
 
 
   public final int getNumber() {
@@ -884,6 +900,8 @@ public enum VariantPropertiesMethodType
       case 83: return MAX_SDK_VERSION;
       case 84: return TARGET_SDK_VERSION;
       case 85: return MAKE_RES_VALUE_KEY;
+      case 86: return TEST_FIXTURES;
+      case 87: return VARIANT_PROPERTIES;
       default: return null;
     }
   }

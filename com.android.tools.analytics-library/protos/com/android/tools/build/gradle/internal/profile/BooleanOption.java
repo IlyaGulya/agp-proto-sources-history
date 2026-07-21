@@ -601,6 +601,10 @@ public enum BooleanOption
    * <code>INCLUDE_REPOSITORIES_IN_DEPENDENCY_REPORT = 145;</code>
    */
   INCLUDE_REPOSITORIES_IN_DEPENDENCY_REPORT(145),
+  /**
+   * <code>ENABLE_ART_PROFILES = 146;</code>
+   */
+  ENABLE_ART_PROFILES(146),
   UNRECOGNIZED(-1),
   ;
 
@@ -1188,6 +1192,10 @@ public enum BooleanOption
    * <code>INCLUDE_REPOSITORIES_IN_DEPENDENCY_REPORT = 145;</code>
    */
   public static final int INCLUDE_REPOSITORIES_IN_DEPENDENCY_REPORT_VALUE = 145;
+  /**
+   * <code>ENABLE_ART_PROFILES = 146;</code>
+   */
+  public static final int ENABLE_ART_PROFILES_VALUE = 146;
 
 
   public final int getNumber() {
@@ -1360,6 +1368,7 @@ public enum BooleanOption
       case 143: return R8_FAIL_ON_MISSING_CLASSES;
       case 144: return ENABLE_TEST_FIXTURES;
       case 145: return INCLUDE_REPOSITORIES_IN_DEPENDENCY_REPORT;
+      case 146: return ENABLE_ART_PROFILES;
       default: return null;
     }
   }

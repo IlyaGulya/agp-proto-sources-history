@@ -1082,6 +1082,18 @@ public enum GradleTaskExecutionType
    * <code>DEVICE_SERIAL_TEST = 266;</code>
    */
   DEVICE_SERIAL_TEST(266),
+  /**
+   * <code>LINT_MODEL_METADATA = 267;</code>
+   */
+  LINT_MODEL_METADATA(267),
+  /**
+   * <code>MERGE_ART_PROFILE = 268;</code>
+   */
+  MERGE_ART_PROFILE(268),
+  /**
+   * <code>PROCESS_LIBRARY_ART_PROFILE = 269;</code>
+   */
+  PROCESS_LIBRARY_ART_PROFILE(269),
   UNRECOGNIZED(-1),
   ;
 
@@ -2153,6 +2165,18 @@ public enum GradleTaskExecutionType
    * <code>DEVICE_SERIAL_TEST = 266;</code>
    */
   public static final int DEVICE_SERIAL_TEST_VALUE = 266;
+  /**
+   * <code>LINT_MODEL_METADATA = 267;</code>
+   */
+  public static final int LINT_MODEL_METADATA_VALUE = 267;
+  /**
+   * <code>MERGE_ART_PROFILE = 268;</code>
+   */
+  public static final int MERGE_ART_PROFILE_VALUE = 268;
+  /**
+   * <code>PROCESS_LIBRARY_ART_PROFILE = 269;</code>
+   */
+  public static final int PROCESS_LIBRARY_ART_PROFILE_VALUE = 269;
 
 
   public final int getNumber() {
@@ -2446,6 +2470,9 @@ public enum GradleTaskExecutionType
       case 264: return ANDROID_LINT_ANALYSIS;
       case 265: return MERGE_R_FILES_FOR_DATA_BINDING;
       case 266: return DEVICE_SERIAL_TEST;
+      case 267: return LINT_MODEL_METADATA;
+      case 268: return MERGE_ART_PROFILE;
+      case 269: return PROCESS_LIBRARY_ART_PROFILE;
       default: return null;
     }
   }
