@@ -1178,6 +1178,22 @@ public enum GradleTaskExecutionType
    * <code>KOTLIN_COMPILE_WITH_WORKERS = 290;</code>
    */
   KOTLIN_COMPILE_WITH_WORKERS(290),
+  /**
+   * <code>FUSED_LIBS_MERGE_CLASSES = 291;</code>
+   */
+  FUSED_LIBS_MERGE_CLASSES(291),
+  /**
+   * <code>FUSED_LIBS_BUNDLE_AAR = 292;</code>
+   */
+  FUSED_LIBS_BUNDLE_AAR(292),
+  /**
+   * <code>FUSED_LIBS_BUNDLE_CLASSES = 293;</code>
+   */
+  FUSED_LIBS_BUNDLE_CLASSES(293),
+  /**
+   * <code>FUSED_LIBS_BUNDLE = 294;</code>
+   */
+  FUSED_LIBS_BUNDLE(294),
   UNRECOGNIZED(-1),
   ;
 
@@ -2345,6 +2361,22 @@ public enum GradleTaskExecutionType
    * <code>KOTLIN_COMPILE_WITH_WORKERS = 290;</code>
    */
   public static final int KOTLIN_COMPILE_WITH_WORKERS_VALUE = 290;
+  /**
+   * <code>FUSED_LIBS_MERGE_CLASSES = 291;</code>
+   */
+  public static final int FUSED_LIBS_MERGE_CLASSES_VALUE = 291;
+  /**
+   * <code>FUSED_LIBS_BUNDLE_AAR = 292;</code>
+   */
+  public static final int FUSED_LIBS_BUNDLE_AAR_VALUE = 292;
+  /**
+   * <code>FUSED_LIBS_BUNDLE_CLASSES = 293;</code>
+   */
+  public static final int FUSED_LIBS_BUNDLE_CLASSES_VALUE = 293;
+  /**
+   * <code>FUSED_LIBS_BUNDLE = 294;</code>
+   */
+  public static final int FUSED_LIBS_BUNDLE_VALUE = 294;
 
 
   public final int getNumber() {
@@ -2662,6 +2694,10 @@ public enum GradleTaskExecutionType
       case 288: return MANAGED_DEVICE_INSTRUMENTATION_TEST_RESULT_AGGREGATION;
       case 289: return APP_ID_LIST;
       case 290: return KOTLIN_COMPILE_WITH_WORKERS;
+      case 291: return FUSED_LIBS_MERGE_CLASSES;
+      case 292: return FUSED_LIBS_BUNDLE_AAR;
+      case 293: return FUSED_LIBS_BUNDLE_CLASSES;
+      case 294: return FUSED_LIBS_BUNDLE;
       default: return null;
     }
   }

@@ -334,6 +334,21 @@ private static final long serialVersionUID = 0L;
             input.popLimit(limit);
             break;
           }
+          case 240: {
+            bitField0_ |= 0x00800000;
+            hasUnitTest_ = input.readBool();
+            break;
+          }
+          case 248: {
+            bitField0_ |= 0x01000000;
+            hasAndroidTest_ = input.readBool();
+            break;
+          }
+          case 256: {
+            bitField0_ |= 0x02000000;
+            hasTestFixtures_ = input.readBool();
+            break;
+          }
           default: {
             if (!parseUnknownField(
                 input, unknownFields, extensionRegistry, tag)) {
@@ -5206,6 +5221,81 @@ private static final long serialVersionUID = 0L;
   }
   private int cxxDiagnosticCodesMemoizedSerializedSize = -1;
 
+  public static final int HAS_UNIT_TEST_FIELD_NUMBER = 30;
+  private boolean hasUnitTest_;
+  /**
+   * <pre>
+   * whether this variant has unit tests enabled
+   * </pre>
+   *
+   * <code>optional bool has_unit_test = 30;</code>
+   * @return Whether the hasUnitTest field is set.
+   */
+  public boolean hasHasUnitTest() {
+    return ((bitField0_ & 0x00800000) != 0);
+  }
+  /**
+   * <pre>
+   * whether this variant has unit tests enabled
+   * </pre>
+   *
+   * <code>optional bool has_unit_test = 30;</code>
+   * @return The hasUnitTest.
+   */
+  public boolean getHasUnitTest() {
+    return hasUnitTest_;
+  }
+
+  public static final int HAS_ANDROID_TEST_FIELD_NUMBER = 31;
+  private boolean hasAndroidTest_;
+  /**
+   * <pre>
+   * whether this variant has android tests enabled
+   * </pre>
+   *
+   * <code>optional bool has_android_test = 31;</code>
+   * @return Whether the hasAndroidTest field is set.
+   */
+  public boolean hasHasAndroidTest() {
+    return ((bitField0_ & 0x01000000) != 0);
+  }
+  /**
+   * <pre>
+   * whether this variant has android tests enabled
+   * </pre>
+   *
+   * <code>optional bool has_android_test = 31;</code>
+   * @return The hasAndroidTest.
+   */
+  public boolean getHasAndroidTest() {
+    return hasAndroidTest_;
+  }
+
+  public static final int HAS_TEST_FIXTURES_FIELD_NUMBER = 32;
+  private boolean hasTestFixtures_;
+  /**
+   * <pre>
+   * whether this variant has test fixtures enabled
+   * </pre>
+   *
+   * <code>optional bool has_test_fixtures = 32;</code>
+   * @return Whether the hasTestFixtures field is set.
+   */
+  public boolean hasHasTestFixtures() {
+    return ((bitField0_ & 0x02000000) != 0);
+  }
+  /**
+   * <pre>
+   * whether this variant has test fixtures enabled
+   * </pre>
+   *
+   * <code>optional bool has_test_fixtures = 32;</code>
+   * @return The hasTestFixtures.
+   */
+  public boolean getHasTestFixtures() {
+    return hasTestFixtures_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -5311,6 +5401,15 @@ private static final long serialVersionUID = 0L;
     }
     for (int i = 0; i < cxxDiagnosticCodes_.size(); i++) {
       output.writeInt32NoTag(cxxDiagnosticCodes_.getInt(i));
+    }
+    if (((bitField0_ & 0x00800000) != 0)) {
+      output.writeBool(30, hasUnitTest_);
+    }
+    if (((bitField0_ & 0x01000000) != 0)) {
+      output.writeBool(31, hasAndroidTest_);
+    }
+    if (((bitField0_ & 0x02000000) != 0)) {
+      output.writeBool(32, hasTestFixtures_);
     }
     unknownFields.writeTo(output);
   }
@@ -5450,6 +5549,18 @@ private static final long serialVersionUID = 0L;
       }
       cxxDiagnosticCodesMemoizedSerializedSize = dataSize;
     }
+    if (((bitField0_ & 0x00800000) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeBoolSize(30, hasUnitTest_);
+    }
+    if (((bitField0_ & 0x01000000) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeBoolSize(31, hasAndroidTest_);
+    }
+    if (((bitField0_ & 0x02000000) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeBoolSize(32, hasTestFixtures_);
+    }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
     return size;
@@ -5585,6 +5696,21 @@ private static final long serialVersionUID = 0L;
         .equals(other.getFramesComputationModeUpdatesList())) return false;
     if (!getCxxDiagnosticCodesList()
         .equals(other.getCxxDiagnosticCodesList())) return false;
+    if (hasHasUnitTest() != other.hasHasUnitTest()) return false;
+    if (hasHasUnitTest()) {
+      if (getHasUnitTest()
+          != other.getHasUnitTest()) return false;
+    }
+    if (hasHasAndroidTest() != other.hasHasAndroidTest()) return false;
+    if (hasHasAndroidTest()) {
+      if (getHasAndroidTest()
+          != other.getHasAndroidTest()) return false;
+    }
+    if (hasHasTestFixtures() != other.hasHasTestFixtures()) return false;
+    if (hasHasTestFixtures()) {
+      if (getHasTestFixtures()
+          != other.getHasTestFixtures()) return false;
+    }
     if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
@@ -5721,6 +5847,21 @@ private static final long serialVersionUID = 0L;
     if (getCxxDiagnosticCodesCount() > 0) {
       hash = (37 * hash) + CXX_DIAGNOSTIC_CODES_FIELD_NUMBER;
       hash = (53 * hash) + getCxxDiagnosticCodesList().hashCode();
+    }
+    if (hasHasUnitTest()) {
+      hash = (37 * hash) + HAS_UNIT_TEST_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getHasUnitTest());
+    }
+    if (hasHasAndroidTest()) {
+      hash = (37 * hash) + HAS_ANDROID_TEST_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getHasAndroidTest());
+    }
+    if (hasHasTestFixtures()) {
+      hash = (37 * hash) + HAS_TEST_FIXTURES_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getHasTestFixtures());
     }
     hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
@@ -5958,6 +6099,12 @@ private static final long serialVersionUID = 0L;
       }
       cxxDiagnosticCodes_ = emptyIntList();
       bitField0_ = (bitField0_ & ~0x10000000);
+      hasUnitTest_ = false;
+      bitField0_ = (bitField0_ & ~0x20000000);
+      hasAndroidTest_ = false;
+      bitField0_ = (bitField0_ & ~0x40000000);
+      hasTestFixtures_ = false;
+      bitField0_ = (bitField0_ & ~0x80000000);
       return this;
     }
 
@@ -6144,6 +6291,18 @@ private static final long serialVersionUID = 0L;
         bitField0_ = (bitField0_ & ~0x10000000);
       }
       result.cxxDiagnosticCodes_ = cxxDiagnosticCodes_;
+      if (((from_bitField0_ & 0x20000000) != 0)) {
+        result.hasUnitTest_ = hasUnitTest_;
+        to_bitField0_ |= 0x00800000;
+      }
+      if (((from_bitField0_ & 0x40000000) != 0)) {
+        result.hasAndroidTest_ = hasAndroidTest_;
+        to_bitField0_ |= 0x01000000;
+      }
+      if (((from_bitField0_ & 0x80000000) != 0)) {
+        result.hasTestFixtures_ = hasTestFixtures_;
+        to_bitField0_ |= 0x02000000;
+      }
       result.bitField0_ = to_bitField0_;
       onBuilt();
       return result;
@@ -6387,6 +6546,15 @@ private static final long serialVersionUID = 0L;
           cxxDiagnosticCodes_.addAll(other.cxxDiagnosticCodes_);
         }
         onChanged();
+      }
+      if (other.hasHasUnitTest()) {
+        setHasUnitTest(other.getHasUnitTest());
+      }
+      if (other.hasHasAndroidTest()) {
+        setHasAndroidTest(other.getHasAndroidTest());
+      }
+      if (other.hasHasTestFixtures()) {
+        setHasTestFixtures(other.getHasTestFixtures());
       }
       this.mergeUnknownFields(other.unknownFields);
       onChanged();
@@ -9800,6 +9968,165 @@ private static final long serialVersionUID = 0L;
     public Builder clearCxxDiagnosticCodes() {
       cxxDiagnosticCodes_ = emptyIntList();
       bitField0_ = (bitField0_ & ~0x10000000);
+      onChanged();
+      return this;
+    }
+
+    private boolean hasUnitTest_ ;
+    /**
+     * <pre>
+     * whether this variant has unit tests enabled
+     * </pre>
+     *
+     * <code>optional bool has_unit_test = 30;</code>
+     * @return Whether the hasUnitTest field is set.
+     */
+    public boolean hasHasUnitTest() {
+      return ((bitField0_ & 0x20000000) != 0);
+    }
+    /**
+     * <pre>
+     * whether this variant has unit tests enabled
+     * </pre>
+     *
+     * <code>optional bool has_unit_test = 30;</code>
+     * @return The hasUnitTest.
+     */
+    public boolean getHasUnitTest() {
+      return hasUnitTest_;
+    }
+    /**
+     * <pre>
+     * whether this variant has unit tests enabled
+     * </pre>
+     *
+     * <code>optional bool has_unit_test = 30;</code>
+     * @param value The hasUnitTest to set.
+     * @return This builder for chaining.
+     */
+    public Builder setHasUnitTest(boolean value) {
+      bitField0_ |= 0x20000000;
+      hasUnitTest_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * whether this variant has unit tests enabled
+     * </pre>
+     *
+     * <code>optional bool has_unit_test = 30;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearHasUnitTest() {
+      bitField0_ = (bitField0_ & ~0x20000000);
+      hasUnitTest_ = false;
+      onChanged();
+      return this;
+    }
+
+    private boolean hasAndroidTest_ ;
+    /**
+     * <pre>
+     * whether this variant has android tests enabled
+     * </pre>
+     *
+     * <code>optional bool has_android_test = 31;</code>
+     * @return Whether the hasAndroidTest field is set.
+     */
+    public boolean hasHasAndroidTest() {
+      return ((bitField0_ & 0x40000000) != 0);
+    }
+    /**
+     * <pre>
+     * whether this variant has android tests enabled
+     * </pre>
+     *
+     * <code>optional bool has_android_test = 31;</code>
+     * @return The hasAndroidTest.
+     */
+    public boolean getHasAndroidTest() {
+      return hasAndroidTest_;
+    }
+    /**
+     * <pre>
+     * whether this variant has android tests enabled
+     * </pre>
+     *
+     * <code>optional bool has_android_test = 31;</code>
+     * @param value The hasAndroidTest to set.
+     * @return This builder for chaining.
+     */
+    public Builder setHasAndroidTest(boolean value) {
+      bitField0_ |= 0x40000000;
+      hasAndroidTest_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * whether this variant has android tests enabled
+     * </pre>
+     *
+     * <code>optional bool has_android_test = 31;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearHasAndroidTest() {
+      bitField0_ = (bitField0_ & ~0x40000000);
+      hasAndroidTest_ = false;
+      onChanged();
+      return this;
+    }
+
+    private boolean hasTestFixtures_ ;
+    /**
+     * <pre>
+     * whether this variant has test fixtures enabled
+     * </pre>
+     *
+     * <code>optional bool has_test_fixtures = 32;</code>
+     * @return Whether the hasTestFixtures field is set.
+     */
+    public boolean hasHasTestFixtures() {
+      return ((bitField0_ & 0x80000000) != 0);
+    }
+    /**
+     * <pre>
+     * whether this variant has test fixtures enabled
+     * </pre>
+     *
+     * <code>optional bool has_test_fixtures = 32;</code>
+     * @return The hasTestFixtures.
+     */
+    public boolean getHasTestFixtures() {
+      return hasTestFixtures_;
+    }
+    /**
+     * <pre>
+     * whether this variant has test fixtures enabled
+     * </pre>
+     *
+     * <code>optional bool has_test_fixtures = 32;</code>
+     * @param value The hasTestFixtures to set.
+     * @return This builder for chaining.
+     */
+    public Builder setHasTestFixtures(boolean value) {
+      bitField0_ |= 0x80000000;
+      hasTestFixtures_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * whether this variant has test fixtures enabled
+     * </pre>
+     *
+     * <code>optional bool has_test_fixtures = 32;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearHasTestFixtures() {
+      bitField0_ = (bitField0_ & ~0x80000000);
+      hasTestFixtures_ = false;
       onChanged();
       return this;
     }

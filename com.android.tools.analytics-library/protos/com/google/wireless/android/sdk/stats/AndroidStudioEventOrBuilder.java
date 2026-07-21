@@ -3964,4 +3964,34 @@ public interface AndroidStudioEventOrBuilder extends
    * <code>optional .android_studio.OSMetrics os_metrics = 141;</code>
    */
   com.google.wireless.android.sdk.stats.OSMetricsOrBuilder getOsMetricsOrBuilder();
+
+  /**
+   * <pre>
+   * set when kind is SDK_INDEX_LIBRARY_HAS_CRITICAL_ISSUES,
+   * SDK_INDEX_LIBRARY_IS_OUTDATED or SDK_INDEX_LIBRARY_IS_NON_COMPLIANT
+   * </pre>
+   *
+   * <code>optional .android_studio.SdkIndexLibraryDetails sdk_index_library_details = 142;</code>
+   * @return Whether the sdkIndexLibraryDetails field is set.
+   */
+  boolean hasSdkIndexLibraryDetails();
+  /**
+   * <pre>
+   * set when kind is SDK_INDEX_LIBRARY_HAS_CRITICAL_ISSUES,
+   * SDK_INDEX_LIBRARY_IS_OUTDATED or SDK_INDEX_LIBRARY_IS_NON_COMPLIANT
+   * </pre>
+   *
+   * <code>optional .android_studio.SdkIndexLibraryDetails sdk_index_library_details = 142;</code>
+   * @return The sdkIndexLibraryDetails.
+   */
+  com.google.wireless.android.sdk.stats.SdkIndexLibraryDetails getSdkIndexLibraryDetails();
+  /**
+   * <pre>
+   * set when kind is SDK_INDEX_LIBRARY_HAS_CRITICAL_ISSUES,
+   * SDK_INDEX_LIBRARY_IS_OUTDATED or SDK_INDEX_LIBRARY_IS_NON_COMPLIANT
+   * </pre>
+   *
+   * <code>optional .android_studio.SdkIndexLibraryDetails sdk_index_library_details = 142;</code>
+   */
+  com.google.wireless.android.sdk.stats.SdkIndexLibraryDetailsOrBuilder getSdkIndexLibraryDetailsOrBuilder();
 }

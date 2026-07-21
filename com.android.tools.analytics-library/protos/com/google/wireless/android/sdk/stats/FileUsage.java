@@ -24,6 +24,7 @@ private static final long serialVersionUID = 0L;
     fileType_ = "";
     pluginType_ = "";
     pluginVersion_ = "";
+    eventType_ = 0;
   }
 
   @java.lang.Override
@@ -81,6 +82,18 @@ private static final long serialVersionUID = 0L;
             pluginVersion_ = bs;
             break;
           }
+          case 40: {
+            int rawValue = input.readEnum();
+              @SuppressWarnings("deprecation")
+            com.google.wireless.android.sdk.stats.FileUsage.EventType value = com.google.wireless.android.sdk.stats.FileUsage.EventType.valueOf(rawValue);
+            if (value == null) {
+              unknownFields.mergeVarintField(5, rawValue);
+            } else {
+              bitField0_ |= 0x00000010;
+              eventType_ = rawValue;
+            }
+            break;
+          }
           default: {
             if (!parseUnknownField(
                 input, unknownFields, extensionRegistry, tag)) {
@@ -111,6 +124,129 @@ private static final long serialVersionUID = 0L;
     return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_FileUsage_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
             com.google.wireless.android.sdk.stats.FileUsage.class, com.google.wireless.android.sdk.stats.FileUsage.Builder.class);
+  }
+
+  /**
+   * Protobuf enum {@code android_studio.FileUsage.EventType}
+   */
+  public enum EventType
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <code>UNKNOWN_TYPE = 0;</code>
+     */
+    UNKNOWN_TYPE(0),
+    /**
+     * <code>SELECT = 1;</code>
+     */
+    SELECT(1),
+    /**
+     * <code>EDIT = 2;</code>
+     */
+    EDIT(2),
+    /**
+     * <code>OPEN = 3;</code>
+     */
+    OPEN(3),
+    /**
+     * <code>CLOSE = 4;</code>
+     */
+    CLOSE(4),
+    ;
+
+    /**
+     * <code>UNKNOWN_TYPE = 0;</code>
+     */
+    public static final int UNKNOWN_TYPE_VALUE = 0;
+    /**
+     * <code>SELECT = 1;</code>
+     */
+    public static final int SELECT_VALUE = 1;
+    /**
+     * <code>EDIT = 2;</code>
+     */
+    public static final int EDIT_VALUE = 2;
+    /**
+     * <code>OPEN = 3;</code>
+     */
+    public static final int OPEN_VALUE = 3;
+    /**
+     * <code>CLOSE = 4;</code>
+     */
+    public static final int CLOSE_VALUE = 4;
+
+
+    public final int getNumber() {
+      return value;
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     * @deprecated Use {@link #forNumber(int)} instead.
+     */
+    @java.lang.Deprecated
+    public static EventType valueOf(int value) {
+      return forNumber(value);
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     */
+    public static EventType forNumber(int value) {
+      switch (value) {
+        case 0: return UNKNOWN_TYPE;
+        case 1: return SELECT;
+        case 2: return EDIT;
+        case 3: return OPEN;
+        case 4: return CLOSE;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<EventType>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static final com.google.protobuf.Internal.EnumLiteMap<
+        EventType> internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<EventType>() {
+            public EventType findValueByNumber(int number) {
+              return EventType.forNumber(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      return getDescriptor().getValues().get(ordinal());
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return com.google.wireless.android.sdk.stats.FileUsage.getDescriptor().getEnumTypes().get(0);
+    }
+
+    private static final EventType[] VALUES = values();
+
+    public static EventType valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int value;
+
+    private EventType(int value) {
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:android_studio.FileUsage.EventType)
   }
 
   private int bitField0_;
@@ -342,6 +478,33 @@ private static final long serialVersionUID = 0L;
     }
   }
 
+  public static final int EVENT_TYPE_FIELD_NUMBER = 5;
+  private int eventType_;
+  /**
+   * <pre>
+   * Event type
+   * </pre>
+   *
+   * <code>optional .android_studio.FileUsage.EventType event_type = 5;</code>
+   * @return Whether the eventType field is set.
+   */
+  public boolean hasEventType() {
+    return ((bitField0_ & 0x00000010) != 0);
+  }
+  /**
+   * <pre>
+   * Event type
+   * </pre>
+   *
+   * <code>optional .android_studio.FileUsage.EventType event_type = 5;</code>
+   * @return The eventType.
+   */
+  public com.google.wireless.android.sdk.stats.FileUsage.EventType getEventType() {
+    @SuppressWarnings("deprecation")
+    com.google.wireless.android.sdk.stats.FileUsage.EventType result = com.google.wireless.android.sdk.stats.FileUsage.EventType.valueOf(eventType_);
+    return result == null ? com.google.wireless.android.sdk.stats.FileUsage.EventType.UNKNOWN_TYPE : result;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -368,6 +531,9 @@ private static final long serialVersionUID = 0L;
     if (((bitField0_ & 0x00000008) != 0)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 4, pluginVersion_);
     }
+    if (((bitField0_ & 0x00000010) != 0)) {
+      output.writeEnum(5, eventType_);
+    }
     unknownFields.writeTo(output);
   }
 
@@ -388,6 +554,10 @@ private static final long serialVersionUID = 0L;
     }
     if (((bitField0_ & 0x00000008) != 0)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, pluginVersion_);
+    }
+    if (((bitField0_ & 0x00000010) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeEnumSize(5, eventType_);
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -424,6 +594,10 @@ private static final long serialVersionUID = 0L;
       if (!getPluginVersion()
           .equals(other.getPluginVersion())) return false;
     }
+    if (hasEventType() != other.hasEventType()) return false;
+    if (hasEventType()) {
+      if (eventType_ != other.eventType_) return false;
+    }
     if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
@@ -450,6 +624,10 @@ private static final long serialVersionUID = 0L;
     if (hasPluginVersion()) {
       hash = (37 * hash) + PLUGIN_VERSION_FIELD_NUMBER;
       hash = (53 * hash) + getPluginVersion().hashCode();
+    }
+    if (hasEventType()) {
+      hash = (37 * hash) + EVENT_TYPE_FIELD_NUMBER;
+      hash = (53 * hash) + eventType_;
     }
     hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
@@ -596,6 +774,8 @@ private static final long serialVersionUID = 0L;
       bitField0_ = (bitField0_ & ~0x00000004);
       pluginVersion_ = "";
       bitField0_ = (bitField0_ & ~0x00000008);
+      eventType_ = 0;
+      bitField0_ = (bitField0_ & ~0x00000010);
       return this;
     }
 
@@ -640,6 +820,10 @@ private static final long serialVersionUID = 0L;
         to_bitField0_ |= 0x00000008;
       }
       result.pluginVersion_ = pluginVersion_;
+      if (((from_bitField0_ & 0x00000010) != 0)) {
+        to_bitField0_ |= 0x00000010;
+      }
+      result.eventType_ = eventType_;
       result.bitField0_ = to_bitField0_;
       onBuilt();
       return result;
@@ -708,6 +892,9 @@ private static final long serialVersionUID = 0L;
         bitField0_ |= 0x00000008;
         pluginVersion_ = other.pluginVersion_;
         onChanged();
+      }
+      if (other.hasEventType()) {
+        setEventType(other.getEventType());
       }
       this.mergeUnknownFields(other.unknownFields);
       onChanged();
@@ -1167,6 +1354,64 @@ private static final long serialVersionUID = 0L;
   }
   bitField0_ |= 0x00000008;
       pluginVersion_ = value;
+      onChanged();
+      return this;
+    }
+
+    private int eventType_ = 0;
+    /**
+     * <pre>
+     * Event type
+     * </pre>
+     *
+     * <code>optional .android_studio.FileUsage.EventType event_type = 5;</code>
+     * @return Whether the eventType field is set.
+     */
+    public boolean hasEventType() {
+      return ((bitField0_ & 0x00000010) != 0);
+    }
+    /**
+     * <pre>
+     * Event type
+     * </pre>
+     *
+     * <code>optional .android_studio.FileUsage.EventType event_type = 5;</code>
+     * @return The eventType.
+     */
+    public com.google.wireless.android.sdk.stats.FileUsage.EventType getEventType() {
+      @SuppressWarnings("deprecation")
+      com.google.wireless.android.sdk.stats.FileUsage.EventType result = com.google.wireless.android.sdk.stats.FileUsage.EventType.valueOf(eventType_);
+      return result == null ? com.google.wireless.android.sdk.stats.FileUsage.EventType.UNKNOWN_TYPE : result;
+    }
+    /**
+     * <pre>
+     * Event type
+     * </pre>
+     *
+     * <code>optional .android_studio.FileUsage.EventType event_type = 5;</code>
+     * @param value The eventType to set.
+     * @return This builder for chaining.
+     */
+    public Builder setEventType(com.google.wireless.android.sdk.stats.FileUsage.EventType value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      bitField0_ |= 0x00000010;
+      eventType_ = value.getNumber();
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Event type
+     * </pre>
+     *
+     * <code>optional .android_studio.FileUsage.EventType event_type = 5;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearEventType() {
+      bitField0_ = (bitField0_ & ~0x00000010);
+      eventType_ = 0;
       onChanged();
       return this;
     }
