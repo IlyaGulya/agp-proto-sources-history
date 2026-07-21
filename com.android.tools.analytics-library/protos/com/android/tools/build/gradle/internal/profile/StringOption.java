@@ -201,6 +201,10 @@ public enum StringOption
    * <code>ANDROID_PRIVACY_SANDBOX_SDK_KOTLIN_COMPILER_EMBEDDABLE = 47;</code>
    */
   ANDROID_PRIVACY_SANDBOX_SDK_KOTLIN_COMPILER_EMBEDDABLE(47),
+  /**
+   * <code>VALIDATION_ENGINE_VERSION = 48;</code>
+   */
+  VALIDATION_ENGINE_VERSION(48),
   UNRECOGNIZED(-1),
   ;
 
@@ -396,6 +400,10 @@ public enum StringOption
    * <code>ANDROID_PRIVACY_SANDBOX_SDK_KOTLIN_COMPILER_EMBEDDABLE = 47;</code>
    */
   public static final int ANDROID_PRIVACY_SANDBOX_SDK_KOTLIN_COMPILER_EMBEDDABLE_VALUE = 47;
+  /**
+   * <code>VALIDATION_ENGINE_VERSION = 48;</code>
+   */
+  public static final int VALIDATION_ENGINE_VERSION_VALUE = 48;
 
 
   public final int getNumber() {
@@ -470,6 +478,7 @@ public enum StringOption
       case 45: return NDK_SUPPRESS_MIN_SDK_VERSION_ERROR;
       case 46: return JACOCO_TOOL_VERSION;
       case 47: return ANDROID_PRIVACY_SANDBOX_SDK_KOTLIN_COMPILER_EMBEDDABLE;
+      case 48: return VALIDATION_ENGINE_VERSION;
       default: return null;
     }
   }

@@ -5515,4 +5515,31 @@ public interface AndroidStudioEventOrBuilder extends
    * <code>optional .android_studio.WearTileAnimationToolingEvent wear_tile_animation_tooling_event = 197 [lazy = true];</code>
    */
   com.google.wireless.android.sdk.stats.WearTileAnimationToolingEventOrBuilder getWearTileAnimationToolingEventOrBuilder();
+
+  /**
+   * <pre>
+   * set when kind = BACKUP_USAGE
+   * </pre>
+   *
+   * <code>optional .android_studio.BackupUsageEvent backup_usage_event = 198 [lazy = true];</code>
+   * @return Whether the backupUsageEvent field is set.
+   */
+  boolean hasBackupUsageEvent();
+  /**
+   * <pre>
+   * set when kind = BACKUP_USAGE
+   * </pre>
+   *
+   * <code>optional .android_studio.BackupUsageEvent backup_usage_event = 198 [lazy = true];</code>
+   * @return The backupUsageEvent.
+   */
+  com.google.wireless.android.sdk.stats.BackupUsageEvent getBackupUsageEvent();
+  /**
+   * <pre>
+   * set when kind = BACKUP_USAGE
+   * </pre>
+   *
+   * <code>optional .android_studio.BackupUsageEvent backup_usage_event = 198 [lazy = true];</code>
+   */
+  com.google.wireless.android.sdk.stats.BackupUsageEventOrBuilder getBackupUsageEventOrBuilder();
 }
