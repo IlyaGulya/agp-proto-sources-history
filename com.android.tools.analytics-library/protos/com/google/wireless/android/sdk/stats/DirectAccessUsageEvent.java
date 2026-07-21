@@ -244,12 +244,126 @@ private static final long serialVersionUID = 0L;
      * <code>UNKNOWN_FAILURE = 0;</code>
      */
     UNKNOWN_FAILURE(0),
+    /**
+     * <pre>
+     * Generic Reasons
+     * </pre>
+     *
+     * <code>USER_LOGGED_OUT = 1;</code>
+     */
+    USER_LOGGED_OUT(1),
+    /**
+     * <pre>
+     * CouroutineScope was cancelled leading to the failure.
+     * </pre>
+     *
+     * <code>SCOPE_CANCELLED = 2;</code>
+     */
+    SCOPE_CANCELLED(2),
+    /**
+     * <pre>
+     * Disconnect Reasons
+     * Device failed to connect to ADB
+     * </pre>
+     *
+     * <code>CONNECTION_FAILED = 11;</code>
+     */
+    CONNECTION_FAILED(11),
+    /**
+     * <pre>
+     * Device disconnected from ADB
+     * </pre>
+     *
+     * <code>ADB_DISCONNECTED = 12;</code>
+     */
+    ADB_DISCONNECTED(12),
+    /**
+     * <pre>
+     * Device disconnected due to latency
+     * </pre>
+     *
+     * <code>LATENCY_DISCONNECT = 13;</code>
+     */
+    LATENCY_DISCONNECT(13),
+    /**
+     * <pre>
+     * Session ended normally or through ERROR
+     * </pre>
+     *
+     * <code>SESSION_ENDED = 14;</code>
+     */
+    SESSION_ENDED(14),
+    /**
+     * <pre>
+     * User clicked disconnect before device could connect
+     * </pre>
+     *
+     * <code>DISCONNECT_BEFORE_CONNECTED = 15;</code>
+     */
+    DISCONNECT_BEFORE_CONNECTED(15),
     ;
 
     /**
      * <code>UNKNOWN_FAILURE = 0;</code>
      */
     public static final int UNKNOWN_FAILURE_VALUE = 0;
+    /**
+     * <pre>
+     * Generic Reasons
+     * </pre>
+     *
+     * <code>USER_LOGGED_OUT = 1;</code>
+     */
+    public static final int USER_LOGGED_OUT_VALUE = 1;
+    /**
+     * <pre>
+     * CouroutineScope was cancelled leading to the failure.
+     * </pre>
+     *
+     * <code>SCOPE_CANCELLED = 2;</code>
+     */
+    public static final int SCOPE_CANCELLED_VALUE = 2;
+    /**
+     * <pre>
+     * Disconnect Reasons
+     * Device failed to connect to ADB
+     * </pre>
+     *
+     * <code>CONNECTION_FAILED = 11;</code>
+     */
+    public static final int CONNECTION_FAILED_VALUE = 11;
+    /**
+     * <pre>
+     * Device disconnected from ADB
+     * </pre>
+     *
+     * <code>ADB_DISCONNECTED = 12;</code>
+     */
+    public static final int ADB_DISCONNECTED_VALUE = 12;
+    /**
+     * <pre>
+     * Device disconnected due to latency
+     * </pre>
+     *
+     * <code>LATENCY_DISCONNECT = 13;</code>
+     */
+    public static final int LATENCY_DISCONNECT_VALUE = 13;
+    /**
+     * <pre>
+     * Session ended normally or through ERROR
+     * </pre>
+     *
+     * <code>SESSION_ENDED = 14;</code>
+     */
+    public static final int SESSION_ENDED_VALUE = 14;
+    /**
+     * <pre>
+     * User clicked disconnect before device could connect
+     * </pre>
+     *
+     * <code>DISCONNECT_BEFORE_CONNECTED = 15;</code>
+     */
+    public static final int DISCONNECT_BEFORE_CONNECTED_VALUE = 15;
 
 
     public final int getNumber() {
@@ -273,6 +387,13 @@ private static final long serialVersionUID = 0L;
     public static FailureReason forNumber(int value) {
       switch (value) {
         case 0: return UNKNOWN_FAILURE;
+        case 1: return USER_LOGGED_OUT;
+        case 2: return SCOPE_CANCELLED;
+        case 11: return CONNECTION_FAILED;
+        case 12: return ADB_DISCONNECTED;
+        case 13: return LATENCY_DISCONNECT;
+        case 14: return SESSION_ENDED;
+        case 15: return DISCONNECT_BEFORE_CONNECTED;
         default: return null;
       }
     }
