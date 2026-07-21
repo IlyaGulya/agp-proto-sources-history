@@ -65,7 +65,7 @@ private static final long serialVersionUID = 0L;
     UNKNOWN_NATIVE_BUILD_SYSTEM_TYPE(0),
     /**
      * <pre>
-     * The Gradle epxerimental plugin
+     * The Gradle experimental plugin
      * </pre>
      *
      * <code>GRADLE_EXPERIMENTAL = 1;</code>
@@ -111,7 +111,7 @@ private static final long serialVersionUID = 0L;
     public static final int UNKNOWN_NATIVE_BUILD_SYSTEM_TYPE_VALUE = 0;
     /**
      * <pre>
-     * The Gradle epxerimental plugin
+     * The Gradle experimental plugin
      * </pre>
      *
      * <code>GRADLE_EXPERIMENTAL = 1;</code>

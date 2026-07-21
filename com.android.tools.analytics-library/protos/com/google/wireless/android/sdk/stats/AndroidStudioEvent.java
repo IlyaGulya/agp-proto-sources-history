@@ -2946,6 +2946,14 @@ private static final long serialVersionUID = 0L;
      * <code>PREVIEW_REFRESH_EVENT = 302;</code>
      */
     PREVIEW_REFRESH_EVENT(302),
+    /**
+     * <pre>
+     * Event related to Wear Health Services tool window
+     * </pre>
+     *
+     * <code>WEAR_HEALTH_SERVICES_TOOL_WINDOW_EVENT = 303;</code>
+     */
+    WEAR_HEALTH_SERVICES_TOOL_WINDOW_EVENT(303),
     ;
 
     /**
@@ -5198,6 +5206,14 @@ private static final long serialVersionUID = 0L;
      * <code>PREVIEW_REFRESH_EVENT = 302;</code>
      */
     public static final int PREVIEW_REFRESH_EVENT_VALUE = 302;
+    /**
+     * <pre>
+     * Event related to Wear Health Services tool window
+     * </pre>
+     *
+     * <code>WEAR_HEALTH_SERVICES_TOOL_WINDOW_EVENT = 303;</code>
+     */
+    public static final int WEAR_HEALTH_SERVICES_TOOL_WINDOW_EVENT_VALUE = 303;
 
 
     public final int getNumber() {
@@ -5518,6 +5534,7 @@ private static final long serialVersionUID = 0L;
         case 300: return GRADLE_JDK_CONFIGURATION;
         case 301: return RENDER_SECURITY_MANAGER_EVENT;
         case 302: return PREVIEW_REFRESH_EVENT;
+        case 303: return WEAR_HEALTH_SERVICES_TOOL_WINDOW_EVENT;
         default: return null;
       }
     }
@@ -21527,6 +21544,44 @@ private static final long serialVersionUID = 0L;
     return previewRefreshEvent_ == null ? com.google.wireless.android.sdk.stats.PreviewRefreshEvent.getDefaultInstance() : previewRefreshEvent_;
   }
 
+  public static final int WEAR_HEALTH_SERVICES_EVENT_FIELD_NUMBER = 186;
+  private com.google.wireless.android.sdk.stats.WearHealthServicesEvent wearHealthServicesEvent_;
+  /**
+   * <pre>
+   * set when kind = WEAR_HEALTH_SERVICES_TOOL_WINDOW_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.WearHealthServicesEvent wear_health_services_event = 186;</code>
+   * @return Whether the wearHealthServicesEvent field is set.
+   */
+  @java.lang.Override
+  public boolean hasWearHealthServicesEvent() {
+    return ((bitField5_ & 0x00080000) != 0);
+  }
+  /**
+   * <pre>
+   * set when kind = WEAR_HEALTH_SERVICES_TOOL_WINDOW_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.WearHealthServicesEvent wear_health_services_event = 186;</code>
+   * @return The wearHealthServicesEvent.
+   */
+  @java.lang.Override
+  public com.google.wireless.android.sdk.stats.WearHealthServicesEvent getWearHealthServicesEvent() {
+    return wearHealthServicesEvent_ == null ? com.google.wireless.android.sdk.stats.WearHealthServicesEvent.getDefaultInstance() : wearHealthServicesEvent_;
+  }
+  /**
+   * <pre>
+   * set when kind = WEAR_HEALTH_SERVICES_TOOL_WINDOW_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.WearHealthServicesEvent wear_health_services_event = 186;</code>
+   */
+  @java.lang.Override
+  public com.google.wireless.android.sdk.stats.WearHealthServicesEventOrBuilder getWearHealthServicesEventOrBuilder() {
+    return wearHealthServicesEvent_ == null ? com.google.wireless.android.sdk.stats.WearHealthServicesEvent.getDefaultInstance() : wearHealthServicesEvent_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -22095,6 +22150,9 @@ private static final long serialVersionUID = 0L;
     }
     if (((bitField5_ & 0x00040000) != 0)) {
       output.writeMessage(185, getPreviewRefreshEvent());
+    }
+    if (((bitField5_ & 0x00080000) != 0)) {
+      output.writeMessage(186, getWearHealthServicesEvent());
     }
     getUnknownFields().writeTo(output);
   }
@@ -22850,6 +22908,10 @@ private static final long serialVersionUID = 0L;
     if (((bitField5_ & 0x00040000) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(185, getPreviewRefreshEvent());
+    }
+    if (((bitField5_ & 0x00080000) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(186, getWearHealthServicesEvent());
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -23762,6 +23824,11 @@ private static final long serialVersionUID = 0L;
       if (!getPreviewRefreshEvent()
           .equals(other.getPreviewRefreshEvent())) return false;
     }
+    if (hasWearHealthServicesEvent() != other.hasWearHealthServicesEvent()) return false;
+    if (hasWearHealthServicesEvent()) {
+      if (!getWearHealthServicesEvent()
+          .equals(other.getWearHealthServicesEvent())) return false;
+    }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -24515,6 +24582,10 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + PREVIEW_REFRESH_EVENT_FIELD_NUMBER;
       hash = (53 * hash) + getPreviewRefreshEvent().hashCode();
     }
+    if (hasWearHealthServicesEvent()) {
+      hash = (37 * hash) + WEAR_HEALTH_SERVICES_EVENT_FIELD_NUMBER;
+      hash = (53 * hash) + getWearHealthServicesEvent().hashCode();
+    }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -24805,6 +24876,7 @@ private static final long serialVersionUID = 0L;
         getGradleJdkConfigurationEventFieldBuilder();
         getRenderSecurityManagerEventFieldBuilder();
         getPreviewRefreshEventFieldBuilder();
+        getWearHealthServicesEventFieldBuilder();
       }
     }
     @java.lang.Override
@@ -25831,6 +25903,12 @@ private static final long serialVersionUID = 0L;
         previewRefreshEventBuilder_.clear();
       }
       bitField5_ = (bitField5_ & ~0x01000000);
+      if (wearHealthServicesEventBuilder_ == null) {
+        wearHealthServicesEvent_ = null;
+      } else {
+        wearHealthServicesEventBuilder_.clear();
+      }
+      bitField5_ = (bitField5_ & ~0x02000000);
       return this;
     }
 
@@ -27263,6 +27341,14 @@ private static final long serialVersionUID = 0L;
         }
         to_bitField5_ |= 0x00040000;
       }
+      if (((from_bitField5_ & 0x02000000) != 0)) {
+        if (wearHealthServicesEventBuilder_ == null) {
+          result.wearHealthServicesEvent_ = wearHealthServicesEvent_;
+        } else {
+          result.wearHealthServicesEvent_ = wearHealthServicesEventBuilder_.build();
+        }
+        to_bitField5_ |= 0x00080000;
+      }
       result.bitField0_ = to_bitField0_;
       result.bitField1_ = to_bitField1_;
       result.bitField2_ = to_bitField2_;
@@ -27975,6 +28061,9 @@ private static final long serialVersionUID = 0L;
       }
       if (other.hasPreviewRefreshEvent()) {
         mergePreviewRefreshEvent(other.getPreviewRefreshEvent());
+      }
+      if (other.hasWearHealthServicesEvent()) {
+        mergeWearHealthServicesEvent(other.getWearHealthServicesEvent());
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -29365,6 +29454,13 @@ private static final long serialVersionUID = 0L;
               bitField5_ |= 0x01000000;
               break;
             } // case 1482
+            case 1490: {
+              input.readMessage(
+                  getWearHealthServicesEventFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField5_ |= 0x02000000;
+              break;
+            } // case 1490
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -57526,6 +57622,162 @@ private static final long serialVersionUID = 0L;
         previewRefreshEvent_ = null;
       }
       return previewRefreshEventBuilder_;
+    }
+
+    private com.google.wireless.android.sdk.stats.WearHealthServicesEvent wearHealthServicesEvent_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.WearHealthServicesEvent, com.google.wireless.android.sdk.stats.WearHealthServicesEvent.Builder, com.google.wireless.android.sdk.stats.WearHealthServicesEventOrBuilder> wearHealthServicesEventBuilder_;
+    /**
+     * <pre>
+     * set when kind = WEAR_HEALTH_SERVICES_TOOL_WINDOW_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.WearHealthServicesEvent wear_health_services_event = 186;</code>
+     * @return Whether the wearHealthServicesEvent field is set.
+     */
+    public boolean hasWearHealthServicesEvent() {
+      return ((bitField5_ & 0x02000000) != 0);
+    }
+    /**
+     * <pre>
+     * set when kind = WEAR_HEALTH_SERVICES_TOOL_WINDOW_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.WearHealthServicesEvent wear_health_services_event = 186;</code>
+     * @return The wearHealthServicesEvent.
+     */
+    public com.google.wireless.android.sdk.stats.WearHealthServicesEvent getWearHealthServicesEvent() {
+      if (wearHealthServicesEventBuilder_ == null) {
+        return wearHealthServicesEvent_ == null ? com.google.wireless.android.sdk.stats.WearHealthServicesEvent.getDefaultInstance() : wearHealthServicesEvent_;
+      } else {
+        return wearHealthServicesEventBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * set when kind = WEAR_HEALTH_SERVICES_TOOL_WINDOW_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.WearHealthServicesEvent wear_health_services_event = 186;</code>
+     */
+    public Builder setWearHealthServicesEvent(com.google.wireless.android.sdk.stats.WearHealthServicesEvent value) {
+      if (wearHealthServicesEventBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        wearHealthServicesEvent_ = value;
+        onChanged();
+      } else {
+        wearHealthServicesEventBuilder_.setMessage(value);
+      }
+      bitField5_ |= 0x02000000;
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = WEAR_HEALTH_SERVICES_TOOL_WINDOW_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.WearHealthServicesEvent wear_health_services_event = 186;</code>
+     */
+    public Builder setWearHealthServicesEvent(
+        com.google.wireless.android.sdk.stats.WearHealthServicesEvent.Builder builderForValue) {
+      if (wearHealthServicesEventBuilder_ == null) {
+        wearHealthServicesEvent_ = builderForValue.build();
+        onChanged();
+      } else {
+        wearHealthServicesEventBuilder_.setMessage(builderForValue.build());
+      }
+      bitField5_ |= 0x02000000;
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = WEAR_HEALTH_SERVICES_TOOL_WINDOW_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.WearHealthServicesEvent wear_health_services_event = 186;</code>
+     */
+    public Builder mergeWearHealthServicesEvent(com.google.wireless.android.sdk.stats.WearHealthServicesEvent value) {
+      if (wearHealthServicesEventBuilder_ == null) {
+        if (((bitField5_ & 0x02000000) != 0) &&
+            wearHealthServicesEvent_ != null &&
+            wearHealthServicesEvent_ != com.google.wireless.android.sdk.stats.WearHealthServicesEvent.getDefaultInstance()) {
+          wearHealthServicesEvent_ =
+            com.google.wireless.android.sdk.stats.WearHealthServicesEvent.newBuilder(wearHealthServicesEvent_).mergeFrom(value).buildPartial();
+        } else {
+          wearHealthServicesEvent_ = value;
+        }
+        onChanged();
+      } else {
+        wearHealthServicesEventBuilder_.mergeFrom(value);
+      }
+      bitField5_ |= 0x02000000;
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = WEAR_HEALTH_SERVICES_TOOL_WINDOW_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.WearHealthServicesEvent wear_health_services_event = 186;</code>
+     */
+    public Builder clearWearHealthServicesEvent() {
+      if (wearHealthServicesEventBuilder_ == null) {
+        wearHealthServicesEvent_ = null;
+        onChanged();
+      } else {
+        wearHealthServicesEventBuilder_.clear();
+      }
+      bitField5_ = (bitField5_ & ~0x02000000);
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = WEAR_HEALTH_SERVICES_TOOL_WINDOW_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.WearHealthServicesEvent wear_health_services_event = 186;</code>
+     */
+    public com.google.wireless.android.sdk.stats.WearHealthServicesEvent.Builder getWearHealthServicesEventBuilder() {
+      bitField5_ |= 0x02000000;
+      onChanged();
+      return getWearHealthServicesEventFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * set when kind = WEAR_HEALTH_SERVICES_TOOL_WINDOW_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.WearHealthServicesEvent wear_health_services_event = 186;</code>
+     */
+    public com.google.wireless.android.sdk.stats.WearHealthServicesEventOrBuilder getWearHealthServicesEventOrBuilder() {
+      if (wearHealthServicesEventBuilder_ != null) {
+        return wearHealthServicesEventBuilder_.getMessageOrBuilder();
+      } else {
+        return wearHealthServicesEvent_ == null ?
+            com.google.wireless.android.sdk.stats.WearHealthServicesEvent.getDefaultInstance() : wearHealthServicesEvent_;
+      }
+    }
+    /**
+     * <pre>
+     * set when kind = WEAR_HEALTH_SERVICES_TOOL_WINDOW_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.WearHealthServicesEvent wear_health_services_event = 186;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.WearHealthServicesEvent, com.google.wireless.android.sdk.stats.WearHealthServicesEvent.Builder, com.google.wireless.android.sdk.stats.WearHealthServicesEventOrBuilder> 
+        getWearHealthServicesEventFieldBuilder() {
+      if (wearHealthServicesEventBuilder_ == null) {
+        wearHealthServicesEventBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.wireless.android.sdk.stats.WearHealthServicesEvent, com.google.wireless.android.sdk.stats.WearHealthServicesEvent.Builder, com.google.wireless.android.sdk.stats.WearHealthServicesEventOrBuilder>(
+                getWearHealthServicesEvent(),
+                getParentForChildren(),
+                isClean());
+        wearHealthServicesEvent_ = null;
+      }
+      return wearHealthServicesEventBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(
