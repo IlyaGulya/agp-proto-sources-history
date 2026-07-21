@@ -814,4 +814,48 @@ public interface EmulatorDetailsOrBuilder extends
    * <code>optional .android_studio.EmulatorStreamScreenshot screenshot = 34;</code>
    */
   com.google.wireless.android.sdk.stats.EmulatorStreamScreenshotOrBuilder getScreenshotOrBuilder();
+
+  /**
+   * <pre>
+   * Metrics for Icebox
+   * </pre>
+   *
+   * <code>repeated .android_studio.EmulatorIcebox icebox = 35;</code>
+   */
+  java.util.List<com.google.wireless.android.sdk.stats.EmulatorIcebox> 
+      getIceboxList();
+  /**
+   * <pre>
+   * Metrics for Icebox
+   * </pre>
+   *
+   * <code>repeated .android_studio.EmulatorIcebox icebox = 35;</code>
+   */
+  com.google.wireless.android.sdk.stats.EmulatorIcebox getIcebox(int index);
+  /**
+   * <pre>
+   * Metrics for Icebox
+   * </pre>
+   *
+   * <code>repeated .android_studio.EmulatorIcebox icebox = 35;</code>
+   */
+  int getIceboxCount();
+  /**
+   * <pre>
+   * Metrics for Icebox
+   * </pre>
+   *
+   * <code>repeated .android_studio.EmulatorIcebox icebox = 35;</code>
+   */
+  java.util.List<? extends com.google.wireless.android.sdk.stats.EmulatorIceboxOrBuilder> 
+      getIceboxOrBuilderList();
+  /**
+   * <pre>
+   * Metrics for Icebox
+   * </pre>
+   *
+   * <code>repeated .android_studio.EmulatorIcebox icebox = 35;</code>
+   */
+  com.google.wireless.android.sdk.stats.EmulatorIceboxOrBuilder getIceboxOrBuilder(
+      int index);
 }

@@ -934,4 +934,149 @@ public interface TestLibrariesOrBuilder extends
    */
   com.google.protobuf.ByteString
       getTruthVersionBytes();
+
+  /**
+   * <pre>
+   * "org.testng:testng"
+   * </pre>
+   *
+   * <code>optional string test_ng_version = 33;</code>
+   * @return Whether the testNgVersion field is set.
+   */
+  boolean hasTestNgVersion();
+  /**
+   * <pre>
+   * "org.testng:testng"
+   * </pre>
+   *
+   * <code>optional string test_ng_version = 33;</code>
+   * @return The testNgVersion.
+   */
+  java.lang.String getTestNgVersion();
+  /**
+   * <pre>
+   * "org.testng:testng"
+   * </pre>
+   *
+   * <code>optional string test_ng_version = 33;</code>
+   * @return The bytes for testNgVersion.
+   */
+  com.google.protobuf.ByteString
+      getTestNgVersionBytes();
+
+  /**
+   * <pre>
+   * "org.junit.platform:junit-platform-launcher"
+   * </pre>
+   *
+   * <code>optional string junit_platform_launcher_version = 34;</code>
+   * @return Whether the junitPlatformLauncherVersion field is set.
+   */
+  boolean hasJunitPlatformLauncherVersion();
+  /**
+   * <pre>
+   * "org.junit.platform:junit-platform-launcher"
+   * </pre>
+   *
+   * <code>optional string junit_platform_launcher_version = 34;</code>
+   * @return The junitPlatformLauncherVersion.
+   */
+  java.lang.String getJunitPlatformLauncherVersion();
+  /**
+   * <pre>
+   * "org.junit.platform:junit-platform-launcher"
+   * </pre>
+   *
+   * <code>optional string junit_platform_launcher_version = 34;</code>
+   * @return The bytes for junitPlatformLauncherVersion.
+   */
+  com.google.protobuf.ByteString
+      getJunitPlatformLauncherVersionBytes();
+
+  /**
+   * <pre>
+   * "org.junit.platform:junit-platform-runner"
+   * </pre>
+   *
+   * <code>optional string junit_platform_runner_version = 35;</code>
+   * @return Whether the junitPlatformRunnerVersion field is set.
+   */
+  boolean hasJunitPlatformRunnerVersion();
+  /**
+   * <pre>
+   * "org.junit.platform:junit-platform-runner"
+   * </pre>
+   *
+   * <code>optional string junit_platform_runner_version = 35;</code>
+   * @return The junitPlatformRunnerVersion.
+   */
+  java.lang.String getJunitPlatformRunnerVersion();
+  /**
+   * <pre>
+   * "org.junit.platform:junit-platform-runner"
+   * </pre>
+   *
+   * <code>optional string junit_platform_runner_version = 35;</code>
+   * @return The bytes for junitPlatformRunnerVersion.
+   */
+  com.google.protobuf.ByteString
+      getJunitPlatformRunnerVersionBytes();
+
+  /**
+   * <pre>
+   * "org.junit.jupiter:junit-jupiter"
+   * </pre>
+   *
+   * <code>optional string junit_jupiter_version = 36;</code>
+   * @return Whether the junitJupiterVersion field is set.
+   */
+  boolean hasJunitJupiterVersion();
+  /**
+   * <pre>
+   * "org.junit.jupiter:junit-jupiter"
+   * </pre>
+   *
+   * <code>optional string junit_jupiter_version = 36;</code>
+   * @return The junitJupiterVersion.
+   */
+  java.lang.String getJunitJupiterVersion();
+  /**
+   * <pre>
+   * "org.junit.jupiter:junit-jupiter"
+   * </pre>
+   *
+   * <code>optional string junit_jupiter_version = 36;</code>
+   * @return The bytes for junitJupiterVersion.
+   */
+  com.google.protobuf.ByteString
+      getJunitJupiterVersionBytes();
+
+  /**
+   * <pre>
+   * "org.junit.vintage:junit-vintage-engine"
+   * </pre>
+   *
+   * <code>optional string junit_vintage_engine_version = 37;</code>
+   * @return Whether the junitVintageEngineVersion field is set.
+   */
+  boolean hasJunitVintageEngineVersion();
+  /**
+   * <pre>
+   * "org.junit.vintage:junit-vintage-engine"
+   * </pre>
+   *
+   * <code>optional string junit_vintage_engine_version = 37;</code>
+   * @return The junitVintageEngineVersion.
+   */
+  java.lang.String getJunitVintageEngineVersion();
+  /**
+   * <pre>
+   * "org.junit.vintage:junit-vintage-engine"
+   * </pre>
+   *
+   * <code>optional string junit_vintage_engine_version = 37;</code>
+   * @return The bytes for junitVintageEngineVersion.
+   */
+  com.google.protobuf.ByteString
+      getJunitVintageEngineVersionBytes();
 }
