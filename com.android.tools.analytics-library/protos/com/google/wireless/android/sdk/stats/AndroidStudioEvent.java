@@ -37,6 +37,7 @@ private static final long serialVersionUID = 0L;
     gradleSyncIssues_ = java.util.Collections.emptyList();
     offeredQuickFixes_ = java.util.Collections.emptyList();
     emulatorUiEvents_ = java.util.Collections.emptyList();
+    rawProjectIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
   }
 
   @java.lang.Override
@@ -1795,6 +1796,15 @@ private static final long serialVersionUID = 0L;
             bitField4_ |= 0x00000020;
             break;
           }
+          case 1114: {
+            com.google.protobuf.ByteString bs = input.readBytes();
+            if (!((mutable_bitField4_ & 0x00000400) != 0)) {
+              rawProjectIds_ = new com.google.protobuf.LazyStringArrayList();
+              mutable_bitField4_ |= 0x00000400;
+            }
+            rawProjectIds_.add(bs);
+            break;
+          }
           default: {
             if (!parseUnknownField(
                 input, unknownFields, extensionRegistry, tag)) {
@@ -1821,6 +1831,9 @@ private static final long serialVersionUID = 0L;
       }
       if (((mutable_bitField3_ & 0x00020000) != 0)) {
         emulatorUiEvents_ = java.util.Collections.unmodifiableList(emulatorUiEvents_);
+      }
+      if (((mutable_bitField4_ & 0x00000400) != 0)) {
+        rawProjectIds_ = rawProjectIds_.getUnmodifiableView();
       }
       this.unknownFields = unknownFields.build();
       makeExtensionsImmutable();
@@ -8768,6 +8781,14 @@ private static final long serialVersionUID = 0L;
      * <code>TYPE_COMPILE_SDK_VERSION_TOO_HIGH = 56;</code>
      */
     TYPE_COMPILE_SDK_VERSION_TOO_HIGH(56),
+    /**
+     * <pre>
+     * A higher compileSdk is required for compilation.
+     * </pre>
+     *
+     * <code>TYPE_COMPILE_SDK_VERSION_TOO_LOW = 57;</code>
+     */
+    TYPE_COMPILE_SDK_VERSION_TOO_LOW(57),
     ;
 
     /**
@@ -9164,6 +9185,14 @@ private static final long serialVersionUID = 0L;
      * <code>TYPE_COMPILE_SDK_VERSION_TOO_HIGH = 56;</code>
      */
     public static final int TYPE_COMPILE_SDK_VERSION_TOO_HIGH_VALUE = 56;
+    /**
+     * <pre>
+     * A higher compileSdk is required for compilation.
+     * </pre>
+     *
+     * <code>TYPE_COMPILE_SDK_VERSION_TOO_LOW = 57;</code>
+     */
+    public static final int TYPE_COMPILE_SDK_VERSION_TOO_LOW_VALUE = 57;
 
 
     public final int getNumber() {
@@ -9243,6 +9272,7 @@ private static final long serialVersionUID = 0L;
         case 54: return TYPE_JCENTER_IS_DEPRECATED;
         case 55: return TYPE_AGP_USED_JAVA_VERSION_TOO_LOW;
         case 56: return TYPE_COMPILE_SDK_VERSION_TOO_HIGH;
+        case 57: return TYPE_COMPILE_SDK_VERSION_TOO_LOW;
         default: return null;
       }
     }
@@ -19800,6 +19830,69 @@ private static final long serialVersionUID = 0L;
     return logcatUsageEvent_ == null ? com.google.wireless.android.sdk.stats.LogcatUsageEvent.getDefaultInstance() : logcatUsageEvent_;
   }
 
+  public static final int RAW_PROJECT_IDS_FIELD_NUMBER = 139;
+  private com.google.protobuf.LazyStringList rawProjectIds_;
+  /**
+   * <pre>
+   * the project ids as used in the playstore, e.g.
+   * 'com.google.android.apps.maps'. This is sensitive information and
+   * thus restricted to "raw" sawmill access. This data is only available in
+   * and for PWG approved scenarios.
+   * </pre>
+   *
+   * <code>repeated string raw_project_ids = 139;</code>
+   * @return A list containing the rawProjectIds.
+   */
+  public com.google.protobuf.ProtocolStringList
+      getRawProjectIdsList() {
+    return rawProjectIds_;
+  }
+  /**
+   * <pre>
+   * the project ids as used in the playstore, e.g.
+   * 'com.google.android.apps.maps'. This is sensitive information and
+   * thus restricted to "raw" sawmill access. This data is only available in
+   * and for PWG approved scenarios.
+   * </pre>
+   *
+   * <code>repeated string raw_project_ids = 139;</code>
+   * @return The count of rawProjectIds.
+   */
+  public int getRawProjectIdsCount() {
+    return rawProjectIds_.size();
+  }
+  /**
+   * <pre>
+   * the project ids as used in the playstore, e.g.
+   * 'com.google.android.apps.maps'. This is sensitive information and
+   * thus restricted to "raw" sawmill access. This data is only available in
+   * and for PWG approved scenarios.
+   * </pre>
+   *
+   * <code>repeated string raw_project_ids = 139;</code>
+   * @param index The index of the element to return.
+   * @return The rawProjectIds at the given index.
+   */
+  public java.lang.String getRawProjectIds(int index) {
+    return rawProjectIds_.get(index);
+  }
+  /**
+   * <pre>
+   * the project ids as used in the playstore, e.g.
+   * 'com.google.android.apps.maps'. This is sensitive information and
+   * thus restricted to "raw" sawmill access. This data is only available in
+   * and for PWG approved scenarios.
+   * </pre>
+   *
+   * <code>repeated string raw_project_ids = 139;</code>
+   * @param index The index of the value to return.
+   * @return The bytes of the rawProjectIds at the given index.
+   */
+  public com.google.protobuf.ByteString
+      getRawProjectIdsBytes(int index) {
+    return rawProjectIds_.getByteString(index);
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -20227,6 +20320,9 @@ private static final long serialVersionUID = 0L;
     }
     if (((bitField4_ & 0x00000020) != 0)) {
       output.writeMessage(138, getLogcatUsageEvent());
+    }
+    for (int i = 0; i < rawProjectIds_.size(); i++) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 139, rawProjectIds_.getRaw(i));
     }
     unknownFields.writeTo(output);
   }
@@ -20786,6 +20882,14 @@ private static final long serialVersionUID = 0L;
     if (((bitField4_ & 0x00000020) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(138, getLogcatUsageEvent());
+    }
+    {
+      int dataSize = 0;
+      for (int i = 0; i < rawProjectIds_.size(); i++) {
+        dataSize += computeStringSizeNoTag(rawProjectIds_.getRaw(i));
+      }
+      size += dataSize;
+      size += 2 * getRawProjectIdsList().size();
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -21469,6 +21573,8 @@ private static final long serialVersionUID = 0L;
       if (!getLogcatUsageEvent()
           .equals(other.getLogcatUsageEvent())) return false;
     }
+    if (!getRawProjectIdsList()
+        .equals(other.getRawProjectIdsList())) return false;
     if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
@@ -22033,6 +22139,10 @@ private static final long serialVersionUID = 0L;
     if (hasLogcatUsageEvent()) {
       hash = (37 * hash) + LOGCAT_USAGE_EVENT_FIELD_NUMBER;
       hash = (53 * hash) + getLogcatUsageEvent().hashCode();
+    }
+    if (getRawProjectIdsCount() > 0) {
+      hash = (37 * hash) + RAW_PROJECT_IDS_FIELD_NUMBER;
+      hash = (53 * hash) + getRawProjectIdsList().hashCode();
     }
     hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
@@ -23028,6 +23138,8 @@ private static final long serialVersionUID = 0L;
         logcatUsageEventBuilder_.clear();
       }
       bitField4_ = (bitField4_ & ~0x00000200);
+      rawProjectIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      bitField4_ = (bitField4_ & ~0x00000400);
       return this;
     }
 
@@ -24088,6 +24200,11 @@ private static final long serialVersionUID = 0L;
         }
         to_bitField4_ |= 0x00000020;
       }
+      if (((bitField4_ & 0x00000400) != 0)) {
+        rawProjectIds_ = rawProjectIds_.getUnmodifiableView();
+        bitField4_ = (bitField4_ & ~0x00000400);
+      }
+      result.rawProjectIds_ = rawProjectIds_;
       result.bitField0_ = to_bitField0_;
       result.bitField1_ = to_bitField1_;
       result.bitField2_ = to_bitField2_;
@@ -24644,6 +24761,16 @@ private static final long serialVersionUID = 0L;
       }
       if (other.hasLogcatUsageEvent()) {
         mergeLogcatUsageEvent(other.getLogcatUsageEvent());
+      }
+      if (!other.rawProjectIds_.isEmpty()) {
+        if (rawProjectIds_.isEmpty()) {
+          rawProjectIds_ = other.rawProjectIds_;
+          bitField4_ = (bitField4_ & ~0x00000400);
+        } else {
+          ensureRawProjectIdsIsMutable();
+          rawProjectIds_.addAll(other.rawProjectIds_);
+        }
+        onChanged();
       }
       this.mergeUnknownFields(other.unknownFields);
       onChanged();
@@ -45389,6 +45516,178 @@ private static final long serialVersionUID = 0L;
         logcatUsageEvent_ = null;
       }
       return logcatUsageEventBuilder_;
+    }
+
+    private com.google.protobuf.LazyStringList rawProjectIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    private void ensureRawProjectIdsIsMutable() {
+      if (!((bitField4_ & 0x00000400) != 0)) {
+        rawProjectIds_ = new com.google.protobuf.LazyStringArrayList(rawProjectIds_);
+        bitField4_ |= 0x00000400;
+       }
+    }
+    /**
+     * <pre>
+     * the project ids as used in the playstore, e.g.
+     * 'com.google.android.apps.maps'. This is sensitive information and
+     * thus restricted to "raw" sawmill access. This data is only available in
+     * and for PWG approved scenarios.
+     * </pre>
+     *
+     * <code>repeated string raw_project_ids = 139;</code>
+     * @return A list containing the rawProjectIds.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getRawProjectIdsList() {
+      return rawProjectIds_.getUnmodifiableView();
+    }
+    /**
+     * <pre>
+     * the project ids as used in the playstore, e.g.
+     * 'com.google.android.apps.maps'. This is sensitive information and
+     * thus restricted to "raw" sawmill access. This data is only available in
+     * and for PWG approved scenarios.
+     * </pre>
+     *
+     * <code>repeated string raw_project_ids = 139;</code>
+     * @return The count of rawProjectIds.
+     */
+    public int getRawProjectIdsCount() {
+      return rawProjectIds_.size();
+    }
+    /**
+     * <pre>
+     * the project ids as used in the playstore, e.g.
+     * 'com.google.android.apps.maps'. This is sensitive information and
+     * thus restricted to "raw" sawmill access. This data is only available in
+     * and for PWG approved scenarios.
+     * </pre>
+     *
+     * <code>repeated string raw_project_ids = 139;</code>
+     * @param index The index of the element to return.
+     * @return The rawProjectIds at the given index.
+     */
+    public java.lang.String getRawProjectIds(int index) {
+      return rawProjectIds_.get(index);
+    }
+    /**
+     * <pre>
+     * the project ids as used in the playstore, e.g.
+     * 'com.google.android.apps.maps'. This is sensitive information and
+     * thus restricted to "raw" sawmill access. This data is only available in
+     * and for PWG approved scenarios.
+     * </pre>
+     *
+     * <code>repeated string raw_project_ids = 139;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the rawProjectIds at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getRawProjectIdsBytes(int index) {
+      return rawProjectIds_.getByteString(index);
+    }
+    /**
+     * <pre>
+     * the project ids as used in the playstore, e.g.
+     * 'com.google.android.apps.maps'. This is sensitive information and
+     * thus restricted to "raw" sawmill access. This data is only available in
+     * and for PWG approved scenarios.
+     * </pre>
+     *
+     * <code>repeated string raw_project_ids = 139;</code>
+     * @param index The index to set the value at.
+     * @param value The rawProjectIds to set.
+     * @return This builder for chaining.
+     */
+    public Builder setRawProjectIds(
+        int index, java.lang.String value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureRawProjectIdsIsMutable();
+      rawProjectIds_.set(index, value);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * the project ids as used in the playstore, e.g.
+     * 'com.google.android.apps.maps'. This is sensitive information and
+     * thus restricted to "raw" sawmill access. This data is only available in
+     * and for PWG approved scenarios.
+     * </pre>
+     *
+     * <code>repeated string raw_project_ids = 139;</code>
+     * @param value The rawProjectIds to add.
+     * @return This builder for chaining.
+     */
+    public Builder addRawProjectIds(
+        java.lang.String value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureRawProjectIdsIsMutable();
+      rawProjectIds_.add(value);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * the project ids as used in the playstore, e.g.
+     * 'com.google.android.apps.maps'. This is sensitive information and
+     * thus restricted to "raw" sawmill access. This data is only available in
+     * and for PWG approved scenarios.
+     * </pre>
+     *
+     * <code>repeated string raw_project_ids = 139;</code>
+     * @param values The rawProjectIds to add.
+     * @return This builder for chaining.
+     */
+    public Builder addAllRawProjectIds(
+        java.lang.Iterable<java.lang.String> values) {
+      ensureRawProjectIdsIsMutable();
+      com.google.protobuf.AbstractMessageLite.Builder.addAll(
+          values, rawProjectIds_);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * the project ids as used in the playstore, e.g.
+     * 'com.google.android.apps.maps'. This is sensitive information and
+     * thus restricted to "raw" sawmill access. This data is only available in
+     * and for PWG approved scenarios.
+     * </pre>
+     *
+     * <code>repeated string raw_project_ids = 139;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearRawProjectIds() {
+      rawProjectIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      bitField4_ = (bitField4_ & ~0x00000400);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * the project ids as used in the playstore, e.g.
+     * 'com.google.android.apps.maps'. This is sensitive information and
+     * thus restricted to "raw" sawmill access. This data is only available in
+     * and for PWG approved scenarios.
+     * </pre>
+     *
+     * <code>repeated string raw_project_ids = 139;</code>
+     * @param value The bytes of the rawProjectIds to add.
+     * @return This builder for chaining.
+     */
+    public Builder addRawProjectIdsBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureRawProjectIdsIsMutable();
+      rawProjectIds_.add(value);
+      onChanged();
+      return this;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

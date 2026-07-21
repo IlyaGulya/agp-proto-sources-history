@@ -3839,4 +3839,57 @@ public interface AndroidStudioEventOrBuilder extends
    * <code>optional .android_studio.LogcatUsageEvent logcat_usage_event = 138;</code>
    */
   com.google.wireless.android.sdk.stats.LogcatUsageEventOrBuilder getLogcatUsageEventOrBuilder();
+
+  /**
+   * <pre>
+   * the project ids as used in the playstore, e.g.
+   * 'com.google.android.apps.maps'. This is sensitive information and
+   * thus restricted to "raw" sawmill access. This data is only available in
+   * and for PWG approved scenarios.
+   * </pre>
+   *
+   * <code>repeated string raw_project_ids = 139;</code>
+   * @return A list containing the rawProjectIds.
+   */
+  java.util.List<java.lang.String>
+      getRawProjectIdsList();
+  /**
+   * <pre>
+   * the project ids as used in the playstore, e.g.
+   * 'com.google.android.apps.maps'. This is sensitive information and
+   * thus restricted to "raw" sawmill access. This data is only available in
+   * and for PWG approved scenarios.
+   * </pre>
+   *
+   * <code>repeated string raw_project_ids = 139;</code>
+   * @return The count of rawProjectIds.
+   */
+  int getRawProjectIdsCount();
+  /**
+   * <pre>
+   * the project ids as used in the playstore, e.g.
+   * 'com.google.android.apps.maps'. This is sensitive information and
+   * thus restricted to "raw" sawmill access. This data is only available in
+   * and for PWG approved scenarios.
+   * </pre>
+   *
+   * <code>repeated string raw_project_ids = 139;</code>
+   * @param index The index of the element to return.
+   * @return The rawProjectIds at the given index.
+   */
+  java.lang.String getRawProjectIds(int index);
+  /**
+   * <pre>
+   * the project ids as used in the playstore, e.g.
+   * 'com.google.android.apps.maps'. This is sensitive information and
+   * thus restricted to "raw" sawmill access. This data is only available in
+   * and for PWG approved scenarios.
+   * </pre>
+   *
+   * <code>repeated string raw_project_ids = 139;</code>
+   * @param index The index of the value to return.
+   * @return The bytes of the rawProjectIds at the given index.
+   */
+  com.google.protobuf.ByteString
+      getRawProjectIdsBytes(int index);
 }

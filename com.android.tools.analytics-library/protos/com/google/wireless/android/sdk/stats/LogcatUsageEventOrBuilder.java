@@ -52,4 +52,31 @@ public interface LogcatUsageEventOrBuilder extends
    * <code>optional .android_studio.LogcatUsageEvent.LogcatFormatDialogEvent format_dialog = 2;</code>
    */
   com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatDialogEventOrBuilder getFormatDialogOrBuilder();
+
+  /**
+   * <pre>
+   * A logcat filter. Set when type is FILTER_ADDED_TO_HISTORY.
+   * </pre>
+   *
+   * <code>optional .android_studio.LogcatUsageEvent.LogcatFilterEvent logcat_filter = 3;</code>
+   * @return Whether the logcatFilter field is set.
+   */
+  boolean hasLogcatFilter();
+  /**
+   * <pre>
+   * A logcat filter. Set when type is FILTER_ADDED_TO_HISTORY.
+   * </pre>
+   *
+   * <code>optional .android_studio.LogcatUsageEvent.LogcatFilterEvent logcat_filter = 3;</code>
+   * @return The logcatFilter.
+   */
+  com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFilterEvent getLogcatFilter();
+  /**
+   * <pre>
+   * A logcat filter. Set when type is FILTER_ADDED_TO_HISTORY.
+   * </pre>
+   *
+   * <code>optional .android_studio.LogcatUsageEvent.LogcatFilterEvent logcat_filter = 3;</code>
+   */
+  com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFilterEventOrBuilder getLogcatFilterOrBuilder();
 }

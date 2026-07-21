@@ -79,6 +79,19 @@ private static final long serialVersionUID = 0L;
             bitField0_ |= 0x00000002;
             break;
           }
+          case 26: {
+            com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFilterEvent.Builder subBuilder = null;
+            if (((bitField0_ & 0x00000004) != 0)) {
+              subBuilder = logcatFilter_.toBuilder();
+            }
+            logcatFilter_ = input.readMessage(com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFilterEvent.PARSER, extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(logcatFilter_);
+              logcatFilter_ = subBuilder.buildPartial();
+            }
+            bitField0_ |= 0x00000004;
+            break;
+          }
           default: {
             if (!parseUnknownField(
                 input, unknownFields, extensionRegistry, tag)) {
@@ -136,6 +149,15 @@ private static final long serialVersionUID = 0L;
      * <code>FORMAT_DIALOG = 1;</code>
      */
     FORMAT_DIALOG(1),
+    /**
+     * <pre>
+     * We don't want to log filters on every keystroke so we only log when a
+     * filter is added to history which is much less frequent.
+     * </pre>
+     *
+     * <code>FILTER_ADDED_TO_HISTORY = 2;</code>
+     */
+    FILTER_ADDED_TO_HISTORY(2),
     ;
 
     /**
@@ -154,6 +176,15 @@ private static final long serialVersionUID = 0L;
      * <code>FORMAT_DIALOG = 1;</code>
      */
     public static final int FORMAT_DIALOG_VALUE = 1;
+    /**
+     * <pre>
+     * We don't want to log filters on every keystroke so we only log when a
+     * filter is added to history which is much less frequent.
+     * </pre>
+     *
+     * <code>FILTER_ADDED_TO_HISTORY = 2;</code>
+     */
+    public static final int FILTER_ADDED_TO_HISTORY_VALUE = 2;
 
 
     public final int getNumber() {
@@ -178,6 +209,7 @@ private static final long serialVersionUID = 0L;
       switch (value) {
         case 0: return UNKNOWN_EVENT_TYPE;
         case 1: return FORMAT_DIALOG;
+        case 2: return FILTER_ADDED_TO_HISTORY;
         default: return null;
       }
     }
@@ -2467,6 +2499,3475 @@ private static final long serialVersionUID = 0L;
 
   }
 
+  public interface LogcatFilterEventOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:android_studio.LogcatUsageEvent.LogcatFilterEvent)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Summary of search terms pertaining to the log entry 'tag' field
+     * </pre>
+     *
+     * <code>optional .android_studio.LogcatUsageEvent.LogcatFilterEvent.TermVariants tag_terms = 1;</code>
+     * @return Whether the tagTerms field is set.
+     */
+    boolean hasTagTerms();
+    /**
+     * <pre>
+     * Summary of search terms pertaining to the log entry 'tag' field
+     * </pre>
+     *
+     * <code>optional .android_studio.LogcatUsageEvent.LogcatFilterEvent.TermVariants tag_terms = 1;</code>
+     * @return The tagTerms.
+     */
+    com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFilterEvent.TermVariants getTagTerms();
+    /**
+     * <pre>
+     * Summary of search terms pertaining to the log entry 'tag' field
+     * </pre>
+     *
+     * <code>optional .android_studio.LogcatUsageEvent.LogcatFilterEvent.TermVariants tag_terms = 1;</code>
+     */
+    com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFilterEvent.TermVariantsOrBuilder getTagTermsOrBuilder();
+
+    /**
+     * <pre>
+     * Summary of search terms pertaining to the log entry 'package' field
+     * </pre>
+     *
+     * <code>optional .android_studio.LogcatUsageEvent.LogcatFilterEvent.TermVariants package_terms = 2;</code>
+     * @return Whether the packageTerms field is set.
+     */
+    boolean hasPackageTerms();
+    /**
+     * <pre>
+     * Summary of search terms pertaining to the log entry 'package' field
+     * </pre>
+     *
+     * <code>optional .android_studio.LogcatUsageEvent.LogcatFilterEvent.TermVariants package_terms = 2;</code>
+     * @return The packageTerms.
+     */
+    com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFilterEvent.TermVariants getPackageTerms();
+    /**
+     * <pre>
+     * Summary of search terms pertaining to the log entry 'package' field
+     * </pre>
+     *
+     * <code>optional .android_studio.LogcatUsageEvent.LogcatFilterEvent.TermVariants package_terms = 2;</code>
+     */
+    com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFilterEvent.TermVariantsOrBuilder getPackageTermsOrBuilder();
+
+    /**
+     * <pre>
+     * Summary of search terms pertaining to the log entry 'message' field
+     * </pre>
+     *
+     * <code>optional .android_studio.LogcatUsageEvent.LogcatFilterEvent.TermVariants message_terms = 3;</code>
+     * @return Whether the messageTerms field is set.
+     */
+    boolean hasMessageTerms();
+    /**
+     * <pre>
+     * Summary of search terms pertaining to the log entry 'message' field
+     * </pre>
+     *
+     * <code>optional .android_studio.LogcatUsageEvent.LogcatFilterEvent.TermVariants message_terms = 3;</code>
+     * @return The messageTerms.
+     */
+    com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFilterEvent.TermVariants getMessageTerms();
+    /**
+     * <pre>
+     * Summary of search terms pertaining to the log entry 'message' field
+     * </pre>
+     *
+     * <code>optional .android_studio.LogcatUsageEvent.LogcatFilterEvent.TermVariants message_terms = 3;</code>
+     */
+    com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFilterEvent.TermVariantsOrBuilder getMessageTermsOrBuilder();
+
+    /**
+     * <pre>
+     * Summary of search terms pertaining to entire log entry
+     * </pre>
+     *
+     * <code>optional .android_studio.LogcatUsageEvent.LogcatFilterEvent.TermVariants line_terms = 4;</code>
+     * @return Whether the lineTerms field is set.
+     */
+    boolean hasLineTerms();
+    /**
+     * <pre>
+     * Summary of search terms pertaining to entire log entry
+     * </pre>
+     *
+     * <code>optional .android_studio.LogcatUsageEvent.LogcatFilterEvent.TermVariants line_terms = 4;</code>
+     * @return The lineTerms.
+     */
+    com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFilterEvent.TermVariants getLineTerms();
+    /**
+     * <pre>
+     * Summary of search terms pertaining to entire log entry
+     * </pre>
+     *
+     * <code>optional .android_studio.LogcatUsageEvent.LogcatFilterEvent.TermVariants line_terms = 4;</code>
+     */
+    com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFilterEvent.TermVariantsOrBuilder getLineTermsOrBuilder();
+
+    /**
+     * <pre>
+     * Number of search terms pertaining to entire log entry. Differs from the
+     * above as these terms do not use the 'line:' prefix.
+     * </pre>
+     *
+     * <code>optional int32 implicit_line_terms = 5;</code>
+     * @return Whether the implicitLineTerms field is set.
+     */
+    boolean hasImplicitLineTerms();
+    /**
+     * <pre>
+     * Number of search terms pertaining to entire log entry. Differs from the
+     * above as these terms do not use the 'line:' prefix.
+     * </pre>
+     *
+     * <code>optional int32 implicit_line_terms = 5;</code>
+     * @return The implicitLineTerms.
+     */
+    int getImplicitLineTerms();
+
+    /**
+     * <pre>
+     * Number of search terms pertaining to the 'level' field.
+     * </pre>
+     *
+     * <code>optional int32 level_terms = 6;</code>
+     * @return Whether the levelTerms field is set.
+     */
+    boolean hasLevelTerms();
+    /**
+     * <pre>
+     * Number of search terms pertaining to the 'level' field.
+     * </pre>
+     *
+     * <code>optional int32 level_terms = 6;</code>
+     * @return The levelTerms.
+     */
+    int getLevelTerms();
+
+    /**
+     * <pre>
+     * Number of search terms pertaining to the 'timestamp' field. As in
+     * "how long ago the entry was logged"
+     * </pre>
+     *
+     * <code>optional int32 age_terms = 7;</code>
+     * @return Whether the ageTerms field is set.
+     */
+    boolean hasAgeTerms();
+    /**
+     * <pre>
+     * Number of search terms pertaining to the 'timestamp' field. As in
+     * "how long ago the entry was logged"
+     * </pre>
+     *
+     * <code>optional int32 age_terms = 7;</code>
+     * @return The ageTerms.
+     */
+    int getAgeTerms();
+
+    /**
+     * <pre>
+     * Number of the search terms of the form 'package:mine'.
+     * </pre>
+     *
+     * <code>optional int32 package_project_terms = 8;</code>
+     * @return Whether the packageProjectTerms field is set.
+     */
+    boolean hasPackageProjectTerms();
+    /**
+     * <pre>
+     * Number of the search terms of the form 'package:mine'.
+     * </pre>
+     *
+     * <code>optional int32 package_project_terms = 8;</code>
+     * @return The packageProjectTerms.
+     */
+    int getPackageProjectTerms();
+
+    /**
+     * <pre>
+     * Number of or operators in the expression
+     * </pre>
+     *
+     * <code>optional int32 or_operators = 9;</code>
+     * @return Whether the orOperators field is set.
+     */
+    boolean hasOrOperators();
+    /**
+     * <pre>
+     * Number of or operators in the expression
+     * </pre>
+     *
+     * <code>optional int32 or_operators = 9;</code>
+     * @return The orOperators.
+     */
+    int getOrOperators();
+
+    /**
+     * <pre>
+     * Number of and operators in the expression
+     * </pre>
+     *
+     * <code>optional int32 and_operators = 10;</code>
+     * @return Whether the andOperators field is set.
+     */
+    boolean hasAndOperators();
+    /**
+     * <pre>
+     * Number of and operators in the expression
+     * </pre>
+     *
+     * <code>optional int32 and_operators = 10;</code>
+     * @return The andOperators.
+     */
+    int getAndOperators();
+
+    /**
+     * <pre>
+     * Number of parentheses pairs in the expressions
+     * </pre>
+     *
+     * <code>optional int32 parentheses = 11;</code>
+     * @return Whether the parentheses field is set.
+     */
+    boolean hasParentheses();
+    /**
+     * <pre>
+     * Number of parentheses pairs in the expressions
+     * </pre>
+     *
+     * <code>optional int32 parentheses = 11;</code>
+     * @return The parentheses.
+     */
+    int getParentheses();
+
+    /**
+     * <pre>
+     * Does the filter contain an error
+     * </pre>
+     *
+     * <code>optional bool contains_errors = 12;</code>
+     * @return Whether the containsErrors field is set.
+     */
+    boolean hasContainsErrors();
+    /**
+     * <pre>
+     * Does the filter contain an error
+     * </pre>
+     *
+     * <code>optional bool contains_errors = 12;</code>
+     * @return The containsErrors.
+     */
+    boolean getContainsErrors();
+  }
+  /**
+   * <pre>
+   * A summary of a logcat search filter
+   * (Logcat is the logging from an Android device the developer is testing
+   * their app on)
+   * </pre>
+   *
+   * Protobuf type {@code android_studio.LogcatUsageEvent.LogcatFilterEvent}
+   */
+  public  static final class LogcatFilterEvent extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:android_studio.LogcatUsageEvent.LogcatFilterEvent)
+      LogcatFilterEventOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use LogcatFilterEvent.newBuilder() to construct.
+    private LogcatFilterEvent(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private LogcatFilterEvent() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new LogcatFilterEvent();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private LogcatFilterEvent(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFilterEvent.TermVariants.Builder subBuilder = null;
+              if (((bitField0_ & 0x00000001) != 0)) {
+                subBuilder = tagTerms_.toBuilder();
+              }
+              tagTerms_ = input.readMessage(com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFilterEvent.TermVariants.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(tagTerms_);
+                tagTerms_ = subBuilder.buildPartial();
+              }
+              bitField0_ |= 0x00000001;
+              break;
+            }
+            case 18: {
+              com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFilterEvent.TermVariants.Builder subBuilder = null;
+              if (((bitField0_ & 0x00000002) != 0)) {
+                subBuilder = packageTerms_.toBuilder();
+              }
+              packageTerms_ = input.readMessage(com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFilterEvent.TermVariants.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(packageTerms_);
+                packageTerms_ = subBuilder.buildPartial();
+              }
+              bitField0_ |= 0x00000002;
+              break;
+            }
+            case 26: {
+              com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFilterEvent.TermVariants.Builder subBuilder = null;
+              if (((bitField0_ & 0x00000004) != 0)) {
+                subBuilder = messageTerms_.toBuilder();
+              }
+              messageTerms_ = input.readMessage(com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFilterEvent.TermVariants.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(messageTerms_);
+                messageTerms_ = subBuilder.buildPartial();
+              }
+              bitField0_ |= 0x00000004;
+              break;
+            }
+            case 34: {
+              com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFilterEvent.TermVariants.Builder subBuilder = null;
+              if (((bitField0_ & 0x00000008) != 0)) {
+                subBuilder = lineTerms_.toBuilder();
+              }
+              lineTerms_ = input.readMessage(com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFilterEvent.TermVariants.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(lineTerms_);
+                lineTerms_ = subBuilder.buildPartial();
+              }
+              bitField0_ |= 0x00000008;
+              break;
+            }
+            case 40: {
+              bitField0_ |= 0x00000010;
+              implicitLineTerms_ = input.readInt32();
+              break;
+            }
+            case 48: {
+              bitField0_ |= 0x00000020;
+              levelTerms_ = input.readInt32();
+              break;
+            }
+            case 56: {
+              bitField0_ |= 0x00000040;
+              ageTerms_ = input.readInt32();
+              break;
+            }
+            case 64: {
+              bitField0_ |= 0x00000080;
+              packageProjectTerms_ = input.readInt32();
+              break;
+            }
+            case 72: {
+              bitField0_ |= 0x00000100;
+              orOperators_ = input.readInt32();
+              break;
+            }
+            case 80: {
+              bitField0_ |= 0x00000200;
+              andOperators_ = input.readInt32();
+              break;
+            }
+            case 88: {
+              bitField0_ |= 0x00000400;
+              parentheses_ = input.readInt32();
+              break;
+            }
+            case 96: {
+              bitField0_ |= 0x00000800;
+              containsErrors_ = input.readBool();
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_LogcatUsageEvent_LogcatFilterEvent_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_LogcatUsageEvent_LogcatFilterEvent_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFilterEvent.class, com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFilterEvent.Builder.class);
+    }
+
+    public interface TermVariantsOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:android_studio.LogcatUsageEvent.LogcatFilterEvent.TermVariants)
+        com.google.protobuf.MessageOrBuilder {
+
+      /**
+       * <pre>
+       * Number of normal terms (for example 'tag:foo')
+       * </pre>
+       *
+       * <code>optional int32 count = 1;</code>
+       * @return Whether the count field is set.
+       */
+      boolean hasCount();
+      /**
+       * <pre>
+       * Number of normal terms (for example 'tag:foo')
+       * </pre>
+       *
+       * <code>optional int32 count = 1;</code>
+       * @return The count.
+       */
+      int getCount();
+
+      /**
+       * <pre>
+       * Number of negated terms (for example '-tag:foo')
+       * </pre>
+       *
+       * <code>optional int32 count_negated = 2;</code>
+       * @return Whether the countNegated field is set.
+       */
+      boolean hasCountNegated();
+      /**
+       * <pre>
+       * Number of negated terms (for example '-tag:foo')
+       * </pre>
+       *
+       * <code>optional int32 count_negated = 2;</code>
+       * @return The countNegated.
+       */
+      int getCountNegated();
+
+      /**
+       * <pre>
+       * Number of regex terms (for example 'tag~:foo')
+       * </pre>
+       *
+       * <code>optional int32 count_regex = 3;</code>
+       * @return Whether the countRegex field is set.
+       */
+      boolean hasCountRegex();
+      /**
+       * <pre>
+       * Number of regex terms (for example 'tag~:foo')
+       * </pre>
+       *
+       * <code>optional int32 count_regex = 3;</code>
+       * @return The countRegex.
+       */
+      int getCountRegex();
+
+      /**
+       * <pre>
+       * Number of negated regex terms (for example '-tag~:foo')
+       * </pre>
+       *
+       * <code>optional int32 count_negated_regex = 4;</code>
+       * @return Whether the countNegatedRegex field is set.
+       */
+      boolean hasCountNegatedRegex();
+      /**
+       * <pre>
+       * Number of negated regex terms (for example '-tag~:foo')
+       * </pre>
+       *
+       * <code>optional int32 count_negated_regex = 4;</code>
+       * @return The countNegatedRegex.
+       */
+      int getCountNegatedRegex();
+    }
+    /**
+     * <pre>
+     * A summary of a term with regex and negated variants
+     * </pre>
+     *
+     * Protobuf type {@code android_studio.LogcatUsageEvent.LogcatFilterEvent.TermVariants}
+     */
+    public  static final class TermVariants extends
+        com.google.protobuf.GeneratedMessageV3 implements
+        // @@protoc_insertion_point(message_implements:android_studio.LogcatUsageEvent.LogcatFilterEvent.TermVariants)
+        TermVariantsOrBuilder {
+    private static final long serialVersionUID = 0L;
+      // Use TermVariants.newBuilder() to construct.
+      private TermVariants(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+        super(builder);
+      }
+      private TermVariants() {
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new TermVariants();
+      }
+
+      @java.lang.Override
+      public final com.google.protobuf.UnknownFieldSet
+      getUnknownFields() {
+        return this.unknownFields;
+      }
+      private TermVariants(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        this();
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        int mutable_bitField0_ = 0;
+        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+            com.google.protobuf.UnknownFieldSet.newBuilder();
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                bitField0_ |= 0x00000001;
+                count_ = input.readInt32();
+                break;
+              }
+              case 16: {
+                bitField0_ |= 0x00000002;
+                countNegated_ = input.readInt32();
+                break;
+              }
+              case 24: {
+                bitField0_ |= 0x00000004;
+                countRegex_ = input.readInt32();
+                break;
+              }
+              case 32: {
+                bitField0_ |= 0x00000008;
+                countNegatedRegex_ = input.readInt32();
+                break;
+              }
+              default: {
+                if (!parseUnknownField(
+                    input, unknownFields, extensionRegistry, tag)) {
+                  done = true;
+                }
+                break;
+              }
+            }
+          }
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(this);
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(
+              e).setUnfinishedMessage(this);
+        } finally {
+          this.unknownFields = unknownFields.build();
+          makeExtensionsImmutable();
+        }
+      }
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_LogcatUsageEvent_LogcatFilterEvent_TermVariants_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_LogcatUsageEvent_LogcatFilterEvent_TermVariants_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFilterEvent.TermVariants.class, com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFilterEvent.TermVariants.Builder.class);
+      }
+
+      private int bitField0_;
+      public static final int COUNT_FIELD_NUMBER = 1;
+      private int count_;
+      /**
+       * <pre>
+       * Number of normal terms (for example 'tag:foo')
+       * </pre>
+       *
+       * <code>optional int32 count = 1;</code>
+       * @return Whether the count field is set.
+       */
+      public boolean hasCount() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <pre>
+       * Number of normal terms (for example 'tag:foo')
+       * </pre>
+       *
+       * <code>optional int32 count = 1;</code>
+       * @return The count.
+       */
+      public int getCount() {
+        return count_;
+      }
+
+      public static final int COUNT_NEGATED_FIELD_NUMBER = 2;
+      private int countNegated_;
+      /**
+       * <pre>
+       * Number of negated terms (for example '-tag:foo')
+       * </pre>
+       *
+       * <code>optional int32 count_negated = 2;</code>
+       * @return Whether the countNegated field is set.
+       */
+      public boolean hasCountNegated() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <pre>
+       * Number of negated terms (for example '-tag:foo')
+       * </pre>
+       *
+       * <code>optional int32 count_negated = 2;</code>
+       * @return The countNegated.
+       */
+      public int getCountNegated() {
+        return countNegated_;
+      }
+
+      public static final int COUNT_REGEX_FIELD_NUMBER = 3;
+      private int countRegex_;
+      /**
+       * <pre>
+       * Number of regex terms (for example 'tag~:foo')
+       * </pre>
+       *
+       * <code>optional int32 count_regex = 3;</code>
+       * @return Whether the countRegex field is set.
+       */
+      public boolean hasCountRegex() {
+        return ((bitField0_ & 0x00000004) != 0);
+      }
+      /**
+       * <pre>
+       * Number of regex terms (for example 'tag~:foo')
+       * </pre>
+       *
+       * <code>optional int32 count_regex = 3;</code>
+       * @return The countRegex.
+       */
+      public int getCountRegex() {
+        return countRegex_;
+      }
+
+      public static final int COUNT_NEGATED_REGEX_FIELD_NUMBER = 4;
+      private int countNegatedRegex_;
+      /**
+       * <pre>
+       * Number of negated regex terms (for example '-tag~:foo')
+       * </pre>
+       *
+       * <code>optional int32 count_negated_regex = 4;</code>
+       * @return Whether the countNegatedRegex field is set.
+       */
+      public boolean hasCountNegatedRegex() {
+        return ((bitField0_ & 0x00000008) != 0);
+      }
+      /**
+       * <pre>
+       * Number of negated regex terms (for example '-tag~:foo')
+       * </pre>
+       *
+       * <code>optional int32 count_negated_regex = 4;</code>
+       * @return The countNegatedRegex.
+       */
+      public int getCountNegatedRegex() {
+        return countNegatedRegex_;
+      }
+
+      private byte memoizedIsInitialized = -1;
+      @java.lang.Override
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      @java.lang.Override
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        if (((bitField0_ & 0x00000001) != 0)) {
+          output.writeInt32(1, count_);
+        }
+        if (((bitField0_ & 0x00000002) != 0)) {
+          output.writeInt32(2, countNegated_);
+        }
+        if (((bitField0_ & 0x00000004) != 0)) {
+          output.writeInt32(3, countRegex_);
+        }
+        if (((bitField0_ & 0x00000008) != 0)) {
+          output.writeInt32(4, countNegatedRegex_);
+        }
+        unknownFields.writeTo(output);
+      }
+
+      @java.lang.Override
+      public int getSerializedSize() {
+        int size = memoizedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        if (((bitField0_ & 0x00000001) != 0)) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeInt32Size(1, count_);
+        }
+        if (((bitField0_ & 0x00000002) != 0)) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeInt32Size(2, countNegated_);
+        }
+        if (((bitField0_ & 0x00000004) != 0)) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeInt32Size(3, countRegex_);
+        }
+        if (((bitField0_ & 0x00000008) != 0)) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeInt32Size(4, countNegatedRegex_);
+        }
+        size += unknownFields.getSerializedSize();
+        memoizedSize = size;
+        return size;
+      }
+
+      @java.lang.Override
+      public boolean equals(final java.lang.Object obj) {
+        if (obj == this) {
+         return true;
+        }
+        if (!(obj instanceof com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFilterEvent.TermVariants)) {
+          return super.equals(obj);
+        }
+        com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFilterEvent.TermVariants other = (com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFilterEvent.TermVariants) obj;
+
+        if (hasCount() != other.hasCount()) return false;
+        if (hasCount()) {
+          if (getCount()
+              != other.getCount()) return false;
+        }
+        if (hasCountNegated() != other.hasCountNegated()) return false;
+        if (hasCountNegated()) {
+          if (getCountNegated()
+              != other.getCountNegated()) return false;
+        }
+        if (hasCountRegex() != other.hasCountRegex()) return false;
+        if (hasCountRegex()) {
+          if (getCountRegex()
+              != other.getCountRegex()) return false;
+        }
+        if (hasCountNegatedRegex() != other.hasCountNegatedRegex()) return false;
+        if (hasCountNegatedRegex()) {
+          if (getCountNegatedRegex()
+              != other.getCountNegatedRegex()) return false;
+        }
+        if (!unknownFields.equals(other.unknownFields)) return false;
+        return true;
+      }
+
+      @java.lang.Override
+      public int hashCode() {
+        if (memoizedHashCode != 0) {
+          return memoizedHashCode;
+        }
+        int hash = 41;
+        hash = (19 * hash) + getDescriptor().hashCode();
+        if (hasCount()) {
+          hash = (37 * hash) + COUNT_FIELD_NUMBER;
+          hash = (53 * hash) + getCount();
+        }
+        if (hasCountNegated()) {
+          hash = (37 * hash) + COUNT_NEGATED_FIELD_NUMBER;
+          hash = (53 * hash) + getCountNegated();
+        }
+        if (hasCountRegex()) {
+          hash = (37 * hash) + COUNT_REGEX_FIELD_NUMBER;
+          hash = (53 * hash) + getCountRegex();
+        }
+        if (hasCountNegatedRegex()) {
+          hash = (37 * hash) + COUNT_NEGATED_REGEX_FIELD_NUMBER;
+          hash = (53 * hash) + getCountNegatedRegex();
+        }
+        hash = (29 * hash) + unknownFields.hashCode();
+        memoizedHashCode = hash;
+        return hash;
+      }
+
+      public static com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFilterEvent.TermVariants parseFrom(
+          java.nio.ByteBuffer data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFilterEvent.TermVariants parseFrom(
+          java.nio.ByteBuffer data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFilterEvent.TermVariants parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFilterEvent.TermVariants parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFilterEvent.TermVariants parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFilterEvent.TermVariants parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFilterEvent.TermVariants parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFilterEvent.TermVariants parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFilterEvent.TermVariants parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input);
+      }
+      public static com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFilterEvent.TermVariants parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFilterEvent.TermVariants parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFilterEvent.TermVariants parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      @java.lang.Override
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder() {
+        return DEFAULT_INSTANCE.toBuilder();
+      }
+      public static Builder newBuilder(com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFilterEvent.TermVariants prototype) {
+        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+      }
+      @java.lang.Override
+      public Builder toBuilder() {
+        return this == DEFAULT_INSTANCE
+            ? new Builder() : new Builder().mergeFrom(this);
+      }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * <pre>
+       * A summary of a term with regex and negated variants
+       * </pre>
+       *
+       * Protobuf type {@code android_studio.LogcatUsageEvent.LogcatFilterEvent.TermVariants}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:android_studio.LogcatUsageEvent.LogcatFilterEvent.TermVariants)
+          com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFilterEvent.TermVariantsOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_LogcatUsageEvent_LogcatFilterEvent_TermVariants_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_LogcatUsageEvent_LogcatFilterEvent_TermVariants_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFilterEvent.TermVariants.class, com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFilterEvent.TermVariants.Builder.class);
+        }
+
+        // Construct using com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFilterEvent.TermVariants.newBuilder()
+        private Builder() {
+          maybeForceBuilderInitialization();
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          super(parent);
+          maybeForceBuilderInitialization();
+        }
+        private void maybeForceBuilderInitialization() {
+          if (com.google.protobuf.GeneratedMessageV3
+                  .alwaysUseFieldBuilders) {
+          }
+        }
+        @java.lang.Override
+        public Builder clear() {
+          super.clear();
+          count_ = 0;
+          bitField0_ = (bitField0_ & ~0x00000001);
+          countNegated_ = 0;
+          bitField0_ = (bitField0_ & ~0x00000002);
+          countRegex_ = 0;
+          bitField0_ = (bitField0_ & ~0x00000004);
+          countNegatedRegex_ = 0;
+          bitField0_ = (bitField0_ & ~0x00000008);
+          return this;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_LogcatUsageEvent_LogcatFilterEvent_TermVariants_descriptor;
+        }
+
+        @java.lang.Override
+        public com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFilterEvent.TermVariants getDefaultInstanceForType() {
+          return com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFilterEvent.TermVariants.getDefaultInstance();
+        }
+
+        @java.lang.Override
+        public com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFilterEvent.TermVariants build() {
+          com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFilterEvent.TermVariants result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        @java.lang.Override
+        public com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFilterEvent.TermVariants buildPartial() {
+          com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFilterEvent.TermVariants result = new com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFilterEvent.TermVariants(this);
+          int from_bitField0_ = bitField0_;
+          int to_bitField0_ = 0;
+          if (((from_bitField0_ & 0x00000001) != 0)) {
+            result.count_ = count_;
+            to_bitField0_ |= 0x00000001;
+          }
+          if (((from_bitField0_ & 0x00000002) != 0)) {
+            result.countNegated_ = countNegated_;
+            to_bitField0_ |= 0x00000002;
+          }
+          if (((from_bitField0_ & 0x00000004) != 0)) {
+            result.countRegex_ = countRegex_;
+            to_bitField0_ |= 0x00000004;
+          }
+          if (((from_bitField0_ & 0x00000008) != 0)) {
+            result.countNegatedRegex_ = countNegatedRegex_;
+            to_bitField0_ |= 0x00000008;
+          }
+          result.bitField0_ = to_bitField0_;
+          onBuilt();
+          return result;
+        }
+
+        @java.lang.Override
+        public Builder clone() {
+          return super.clone();
+        }
+        @java.lang.Override
+        public Builder setField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.setField(field, value);
+        }
+        @java.lang.Override
+        public Builder clearField(
+            com.google.protobuf.Descriptors.FieldDescriptor field) {
+          return super.clearField(field);
+        }
+        @java.lang.Override
+        public Builder clearOneof(
+            com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+          return super.clearOneof(oneof);
+        }
+        @java.lang.Override
+        public Builder setRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            int index, java.lang.Object value) {
+          return super.setRepeatedField(field, index, value);
+        }
+        @java.lang.Override
+        public Builder addRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.addRepeatedField(field, value);
+        }
+        @java.lang.Override
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFilterEvent.TermVariants) {
+            return mergeFrom((com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFilterEvent.TermVariants)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFilterEvent.TermVariants other) {
+          if (other == com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFilterEvent.TermVariants.getDefaultInstance()) return this;
+          if (other.hasCount()) {
+            setCount(other.getCount());
+          }
+          if (other.hasCountNegated()) {
+            setCountNegated(other.getCountNegated());
+          }
+          if (other.hasCountRegex()) {
+            setCountRegex(other.getCountRegex());
+          }
+          if (other.hasCountNegatedRegex()) {
+            setCountNegatedRegex(other.getCountNegatedRegex());
+          }
+          this.mergeUnknownFields(other.unknownFields);
+          onChanged();
+          return this;
+        }
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        @java.lang.Override
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFilterEvent.TermVariants parsedMessage = null;
+          try {
+            parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            parsedMessage = (com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFilterEvent.TermVariants) e.getUnfinishedMessage();
+            throw e.unwrapIOException();
+          } finally {
+            if (parsedMessage != null) {
+              mergeFrom(parsedMessage);
+            }
+          }
+          return this;
+        }
+        private int bitField0_;
+
+        private int count_ ;
+        /**
+         * <pre>
+         * Number of normal terms (for example 'tag:foo')
+         * </pre>
+         *
+         * <code>optional int32 count = 1;</code>
+         * @return Whether the count field is set.
+         */
+        public boolean hasCount() {
+          return ((bitField0_ & 0x00000001) != 0);
+        }
+        /**
+         * <pre>
+         * Number of normal terms (for example 'tag:foo')
+         * </pre>
+         *
+         * <code>optional int32 count = 1;</code>
+         * @return The count.
+         */
+        public int getCount() {
+          return count_;
+        }
+        /**
+         * <pre>
+         * Number of normal terms (for example 'tag:foo')
+         * </pre>
+         *
+         * <code>optional int32 count = 1;</code>
+         * @param value The count to set.
+         * @return This builder for chaining.
+         */
+        public Builder setCount(int value) {
+          bitField0_ |= 0x00000001;
+          count_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Number of normal terms (for example 'tag:foo')
+         * </pre>
+         *
+         * <code>optional int32 count = 1;</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearCount() {
+          bitField0_ = (bitField0_ & ~0x00000001);
+          count_ = 0;
+          onChanged();
+          return this;
+        }
+
+        private int countNegated_ ;
+        /**
+         * <pre>
+         * Number of negated terms (for example '-tag:foo')
+         * </pre>
+         *
+         * <code>optional int32 count_negated = 2;</code>
+         * @return Whether the countNegated field is set.
+         */
+        public boolean hasCountNegated() {
+          return ((bitField0_ & 0x00000002) != 0);
+        }
+        /**
+         * <pre>
+         * Number of negated terms (for example '-tag:foo')
+         * </pre>
+         *
+         * <code>optional int32 count_negated = 2;</code>
+         * @return The countNegated.
+         */
+        public int getCountNegated() {
+          return countNegated_;
+        }
+        /**
+         * <pre>
+         * Number of negated terms (for example '-tag:foo')
+         * </pre>
+         *
+         * <code>optional int32 count_negated = 2;</code>
+         * @param value The countNegated to set.
+         * @return This builder for chaining.
+         */
+        public Builder setCountNegated(int value) {
+          bitField0_ |= 0x00000002;
+          countNegated_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Number of negated terms (for example '-tag:foo')
+         * </pre>
+         *
+         * <code>optional int32 count_negated = 2;</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearCountNegated() {
+          bitField0_ = (bitField0_ & ~0x00000002);
+          countNegated_ = 0;
+          onChanged();
+          return this;
+        }
+
+        private int countRegex_ ;
+        /**
+         * <pre>
+         * Number of regex terms (for example 'tag~:foo')
+         * </pre>
+         *
+         * <code>optional int32 count_regex = 3;</code>
+         * @return Whether the countRegex field is set.
+         */
+        public boolean hasCountRegex() {
+          return ((bitField0_ & 0x00000004) != 0);
+        }
+        /**
+         * <pre>
+         * Number of regex terms (for example 'tag~:foo')
+         * </pre>
+         *
+         * <code>optional int32 count_regex = 3;</code>
+         * @return The countRegex.
+         */
+        public int getCountRegex() {
+          return countRegex_;
+        }
+        /**
+         * <pre>
+         * Number of regex terms (for example 'tag~:foo')
+         * </pre>
+         *
+         * <code>optional int32 count_regex = 3;</code>
+         * @param value The countRegex to set.
+         * @return This builder for chaining.
+         */
+        public Builder setCountRegex(int value) {
+          bitField0_ |= 0x00000004;
+          countRegex_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Number of regex terms (for example 'tag~:foo')
+         * </pre>
+         *
+         * <code>optional int32 count_regex = 3;</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearCountRegex() {
+          bitField0_ = (bitField0_ & ~0x00000004);
+          countRegex_ = 0;
+          onChanged();
+          return this;
+        }
+
+        private int countNegatedRegex_ ;
+        /**
+         * <pre>
+         * Number of negated regex terms (for example '-tag~:foo')
+         * </pre>
+         *
+         * <code>optional int32 count_negated_regex = 4;</code>
+         * @return Whether the countNegatedRegex field is set.
+         */
+        public boolean hasCountNegatedRegex() {
+          return ((bitField0_ & 0x00000008) != 0);
+        }
+        /**
+         * <pre>
+         * Number of negated regex terms (for example '-tag~:foo')
+         * </pre>
+         *
+         * <code>optional int32 count_negated_regex = 4;</code>
+         * @return The countNegatedRegex.
+         */
+        public int getCountNegatedRegex() {
+          return countNegatedRegex_;
+        }
+        /**
+         * <pre>
+         * Number of negated regex terms (for example '-tag~:foo')
+         * </pre>
+         *
+         * <code>optional int32 count_negated_regex = 4;</code>
+         * @param value The countNegatedRegex to set.
+         * @return This builder for chaining.
+         */
+        public Builder setCountNegatedRegex(int value) {
+          bitField0_ |= 0x00000008;
+          countNegatedRegex_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Number of negated regex terms (for example '-tag~:foo')
+         * </pre>
+         *
+         * <code>optional int32 count_negated_regex = 4;</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearCountNegatedRegex() {
+          bitField0_ = (bitField0_ & ~0x00000008);
+          countNegatedRegex_ = 0;
+          onChanged();
+          return this;
+        }
+        @java.lang.Override
+        public final Builder setUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.setUnknownFields(unknownFields);
+        }
+
+        @java.lang.Override
+        public final Builder mergeUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.mergeUnknownFields(unknownFields);
+        }
+
+
+        // @@protoc_insertion_point(builder_scope:android_studio.LogcatUsageEvent.LogcatFilterEvent.TermVariants)
+      }
+
+      // @@protoc_insertion_point(class_scope:android_studio.LogcatUsageEvent.LogcatFilterEvent.TermVariants)
+      private static final com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFilterEvent.TermVariants DEFAULT_INSTANCE;
+      static {
+        DEFAULT_INSTANCE = new com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFilterEvent.TermVariants();
+      }
+
+      public static com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFilterEvent.TermVariants getDefaultInstance() {
+        return DEFAULT_INSTANCE;
+      }
+
+      @java.lang.Deprecated public static final com.google.protobuf.Parser<TermVariants>
+          PARSER = new com.google.protobuf.AbstractParser<TermVariants>() {
+        @java.lang.Override
+        public TermVariants parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return new TermVariants(input, extensionRegistry);
+        }
+      };
+
+      public static com.google.protobuf.Parser<TermVariants> parser() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<TermVariants> getParserForType() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFilterEvent.TermVariants getDefaultInstanceForType() {
+        return DEFAULT_INSTANCE;
+      }
+
+    }
+
+    private int bitField0_;
+    public static final int TAG_TERMS_FIELD_NUMBER = 1;
+    private com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFilterEvent.TermVariants tagTerms_;
+    /**
+     * <pre>
+     * Summary of search terms pertaining to the log entry 'tag' field
+     * </pre>
+     *
+     * <code>optional .android_studio.LogcatUsageEvent.LogcatFilterEvent.TermVariants tag_terms = 1;</code>
+     * @return Whether the tagTerms field is set.
+     */
+    public boolean hasTagTerms() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <pre>
+     * Summary of search terms pertaining to the log entry 'tag' field
+     * </pre>
+     *
+     * <code>optional .android_studio.LogcatUsageEvent.LogcatFilterEvent.TermVariants tag_terms = 1;</code>
+     * @return The tagTerms.
+     */
+    public com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFilterEvent.TermVariants getTagTerms() {
+      return tagTerms_ == null ? com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFilterEvent.TermVariants.getDefaultInstance() : tagTerms_;
+    }
+    /**
+     * <pre>
+     * Summary of search terms pertaining to the log entry 'tag' field
+     * </pre>
+     *
+     * <code>optional .android_studio.LogcatUsageEvent.LogcatFilterEvent.TermVariants tag_terms = 1;</code>
+     */
+    public com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFilterEvent.TermVariantsOrBuilder getTagTermsOrBuilder() {
+      return tagTerms_ == null ? com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFilterEvent.TermVariants.getDefaultInstance() : tagTerms_;
+    }
+
+    public static final int PACKAGE_TERMS_FIELD_NUMBER = 2;
+    private com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFilterEvent.TermVariants packageTerms_;
+    /**
+     * <pre>
+     * Summary of search terms pertaining to the log entry 'package' field
+     * </pre>
+     *
+     * <code>optional .android_studio.LogcatUsageEvent.LogcatFilterEvent.TermVariants package_terms = 2;</code>
+     * @return Whether the packageTerms field is set.
+     */
+    public boolean hasPackageTerms() {
+      return ((bitField0_ & 0x00000002) != 0);
+    }
+    /**
+     * <pre>
+     * Summary of search terms pertaining to the log entry 'package' field
+     * </pre>
+     *
+     * <code>optional .android_studio.LogcatUsageEvent.LogcatFilterEvent.TermVariants package_terms = 2;</code>
+     * @return The packageTerms.
+     */
+    public com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFilterEvent.TermVariants getPackageTerms() {
+      return packageTerms_ == null ? com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFilterEvent.TermVariants.getDefaultInstance() : packageTerms_;
+    }
+    /**
+     * <pre>
+     * Summary of search terms pertaining to the log entry 'package' field
+     * </pre>
+     *
+     * <code>optional .android_studio.LogcatUsageEvent.LogcatFilterEvent.TermVariants package_terms = 2;</code>
+     */
+    public com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFilterEvent.TermVariantsOrBuilder getPackageTermsOrBuilder() {
+      return packageTerms_ == null ? com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFilterEvent.TermVariants.getDefaultInstance() : packageTerms_;
+    }
+
+    public static final int MESSAGE_TERMS_FIELD_NUMBER = 3;
+    private com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFilterEvent.TermVariants messageTerms_;
+    /**
+     * <pre>
+     * Summary of search terms pertaining to the log entry 'message' field
+     * </pre>
+     *
+     * <code>optional .android_studio.LogcatUsageEvent.LogcatFilterEvent.TermVariants message_terms = 3;</code>
+     * @return Whether the messageTerms field is set.
+     */
+    public boolean hasMessageTerms() {
+      return ((bitField0_ & 0x00000004) != 0);
+    }
+    /**
+     * <pre>
+     * Summary of search terms pertaining to the log entry 'message' field
+     * </pre>
+     *
+     * <code>optional .android_studio.LogcatUsageEvent.LogcatFilterEvent.TermVariants message_terms = 3;</code>
+     * @return The messageTerms.
+     */
+    public com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFilterEvent.TermVariants getMessageTerms() {
+      return messageTerms_ == null ? com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFilterEvent.TermVariants.getDefaultInstance() : messageTerms_;
+    }
+    /**
+     * <pre>
+     * Summary of search terms pertaining to the log entry 'message' field
+     * </pre>
+     *
+     * <code>optional .android_studio.LogcatUsageEvent.LogcatFilterEvent.TermVariants message_terms = 3;</code>
+     */
+    public com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFilterEvent.TermVariantsOrBuilder getMessageTermsOrBuilder() {
+      return messageTerms_ == null ? com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFilterEvent.TermVariants.getDefaultInstance() : messageTerms_;
+    }
+
+    public static final int LINE_TERMS_FIELD_NUMBER = 4;
+    private com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFilterEvent.TermVariants lineTerms_;
+    /**
+     * <pre>
+     * Summary of search terms pertaining to entire log entry
+     * </pre>
+     *
+     * <code>optional .android_studio.LogcatUsageEvent.LogcatFilterEvent.TermVariants line_terms = 4;</code>
+     * @return Whether the lineTerms field is set.
+     */
+    public boolean hasLineTerms() {
+      return ((bitField0_ & 0x00000008) != 0);
+    }
+    /**
+     * <pre>
+     * Summary of search terms pertaining to entire log entry
+     * </pre>
+     *
+     * <code>optional .android_studio.LogcatUsageEvent.LogcatFilterEvent.TermVariants line_terms = 4;</code>
+     * @return The lineTerms.
+     */
+    public com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFilterEvent.TermVariants getLineTerms() {
+      return lineTerms_ == null ? com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFilterEvent.TermVariants.getDefaultInstance() : lineTerms_;
+    }
+    /**
+     * <pre>
+     * Summary of search terms pertaining to entire log entry
+     * </pre>
+     *
+     * <code>optional .android_studio.LogcatUsageEvent.LogcatFilterEvent.TermVariants line_terms = 4;</code>
+     */
+    public com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFilterEvent.TermVariantsOrBuilder getLineTermsOrBuilder() {
+      return lineTerms_ == null ? com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFilterEvent.TermVariants.getDefaultInstance() : lineTerms_;
+    }
+
+    public static final int IMPLICIT_LINE_TERMS_FIELD_NUMBER = 5;
+    private int implicitLineTerms_;
+    /**
+     * <pre>
+     * Number of search terms pertaining to entire log entry. Differs from the
+     * above as these terms do not use the 'line:' prefix.
+     * </pre>
+     *
+     * <code>optional int32 implicit_line_terms = 5;</code>
+     * @return Whether the implicitLineTerms field is set.
+     */
+    public boolean hasImplicitLineTerms() {
+      return ((bitField0_ & 0x00000010) != 0);
+    }
+    /**
+     * <pre>
+     * Number of search terms pertaining to entire log entry. Differs from the
+     * above as these terms do not use the 'line:' prefix.
+     * </pre>
+     *
+     * <code>optional int32 implicit_line_terms = 5;</code>
+     * @return The implicitLineTerms.
+     */
+    public int getImplicitLineTerms() {
+      return implicitLineTerms_;
+    }
+
+    public static final int LEVEL_TERMS_FIELD_NUMBER = 6;
+    private int levelTerms_;
+    /**
+     * <pre>
+     * Number of search terms pertaining to the 'level' field.
+     * </pre>
+     *
+     * <code>optional int32 level_terms = 6;</code>
+     * @return Whether the levelTerms field is set.
+     */
+    public boolean hasLevelTerms() {
+      return ((bitField0_ & 0x00000020) != 0);
+    }
+    /**
+     * <pre>
+     * Number of search terms pertaining to the 'level' field.
+     * </pre>
+     *
+     * <code>optional int32 level_terms = 6;</code>
+     * @return The levelTerms.
+     */
+    public int getLevelTerms() {
+      return levelTerms_;
+    }
+
+    public static final int AGE_TERMS_FIELD_NUMBER = 7;
+    private int ageTerms_;
+    /**
+     * <pre>
+     * Number of search terms pertaining to the 'timestamp' field. As in
+     * "how long ago the entry was logged"
+     * </pre>
+     *
+     * <code>optional int32 age_terms = 7;</code>
+     * @return Whether the ageTerms field is set.
+     */
+    public boolean hasAgeTerms() {
+      return ((bitField0_ & 0x00000040) != 0);
+    }
+    /**
+     * <pre>
+     * Number of search terms pertaining to the 'timestamp' field. As in
+     * "how long ago the entry was logged"
+     * </pre>
+     *
+     * <code>optional int32 age_terms = 7;</code>
+     * @return The ageTerms.
+     */
+    public int getAgeTerms() {
+      return ageTerms_;
+    }
+
+    public static final int PACKAGE_PROJECT_TERMS_FIELD_NUMBER = 8;
+    private int packageProjectTerms_;
+    /**
+     * <pre>
+     * Number of the search terms of the form 'package:mine'.
+     * </pre>
+     *
+     * <code>optional int32 package_project_terms = 8;</code>
+     * @return Whether the packageProjectTerms field is set.
+     */
+    public boolean hasPackageProjectTerms() {
+      return ((bitField0_ & 0x00000080) != 0);
+    }
+    /**
+     * <pre>
+     * Number of the search terms of the form 'package:mine'.
+     * </pre>
+     *
+     * <code>optional int32 package_project_terms = 8;</code>
+     * @return The packageProjectTerms.
+     */
+    public int getPackageProjectTerms() {
+      return packageProjectTerms_;
+    }
+
+    public static final int OR_OPERATORS_FIELD_NUMBER = 9;
+    private int orOperators_;
+    /**
+     * <pre>
+     * Number of or operators in the expression
+     * </pre>
+     *
+     * <code>optional int32 or_operators = 9;</code>
+     * @return Whether the orOperators field is set.
+     */
+    public boolean hasOrOperators() {
+      return ((bitField0_ & 0x00000100) != 0);
+    }
+    /**
+     * <pre>
+     * Number of or operators in the expression
+     * </pre>
+     *
+     * <code>optional int32 or_operators = 9;</code>
+     * @return The orOperators.
+     */
+    public int getOrOperators() {
+      return orOperators_;
+    }
+
+    public static final int AND_OPERATORS_FIELD_NUMBER = 10;
+    private int andOperators_;
+    /**
+     * <pre>
+     * Number of and operators in the expression
+     * </pre>
+     *
+     * <code>optional int32 and_operators = 10;</code>
+     * @return Whether the andOperators field is set.
+     */
+    public boolean hasAndOperators() {
+      return ((bitField0_ & 0x00000200) != 0);
+    }
+    /**
+     * <pre>
+     * Number of and operators in the expression
+     * </pre>
+     *
+     * <code>optional int32 and_operators = 10;</code>
+     * @return The andOperators.
+     */
+    public int getAndOperators() {
+      return andOperators_;
+    }
+
+    public static final int PARENTHESES_FIELD_NUMBER = 11;
+    private int parentheses_;
+    /**
+     * <pre>
+     * Number of parentheses pairs in the expressions
+     * </pre>
+     *
+     * <code>optional int32 parentheses = 11;</code>
+     * @return Whether the parentheses field is set.
+     */
+    public boolean hasParentheses() {
+      return ((bitField0_ & 0x00000400) != 0);
+    }
+    /**
+     * <pre>
+     * Number of parentheses pairs in the expressions
+     * </pre>
+     *
+     * <code>optional int32 parentheses = 11;</code>
+     * @return The parentheses.
+     */
+    public int getParentheses() {
+      return parentheses_;
+    }
+
+    public static final int CONTAINS_ERRORS_FIELD_NUMBER = 12;
+    private boolean containsErrors_;
+    /**
+     * <pre>
+     * Does the filter contain an error
+     * </pre>
+     *
+     * <code>optional bool contains_errors = 12;</code>
+     * @return Whether the containsErrors field is set.
+     */
+    public boolean hasContainsErrors() {
+      return ((bitField0_ & 0x00000800) != 0);
+    }
+    /**
+     * <pre>
+     * Does the filter contain an error
+     * </pre>
+     *
+     * <code>optional bool contains_errors = 12;</code>
+     * @return The containsErrors.
+     */
+    public boolean getContainsErrors() {
+      return containsErrors_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (((bitField0_ & 0x00000001) != 0)) {
+        output.writeMessage(1, getTagTerms());
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        output.writeMessage(2, getPackageTerms());
+      }
+      if (((bitField0_ & 0x00000004) != 0)) {
+        output.writeMessage(3, getMessageTerms());
+      }
+      if (((bitField0_ & 0x00000008) != 0)) {
+        output.writeMessage(4, getLineTerms());
+      }
+      if (((bitField0_ & 0x00000010) != 0)) {
+        output.writeInt32(5, implicitLineTerms_);
+      }
+      if (((bitField0_ & 0x00000020) != 0)) {
+        output.writeInt32(6, levelTerms_);
+      }
+      if (((bitField0_ & 0x00000040) != 0)) {
+        output.writeInt32(7, ageTerms_);
+      }
+      if (((bitField0_ & 0x00000080) != 0)) {
+        output.writeInt32(8, packageProjectTerms_);
+      }
+      if (((bitField0_ & 0x00000100) != 0)) {
+        output.writeInt32(9, orOperators_);
+      }
+      if (((bitField0_ & 0x00000200) != 0)) {
+        output.writeInt32(10, andOperators_);
+      }
+      if (((bitField0_ & 0x00000400) != 0)) {
+        output.writeInt32(11, parentheses_);
+      }
+      if (((bitField0_ & 0x00000800) != 0)) {
+        output.writeBool(12, containsErrors_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getTagTerms());
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getPackageTerms());
+      }
+      if (((bitField0_ & 0x00000004) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getMessageTerms());
+      }
+      if (((bitField0_ & 0x00000008) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, getLineTerms());
+      }
+      if (((bitField0_ & 0x00000010) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(5, implicitLineTerms_);
+      }
+      if (((bitField0_ & 0x00000020) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(6, levelTerms_);
+      }
+      if (((bitField0_ & 0x00000040) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(7, ageTerms_);
+      }
+      if (((bitField0_ & 0x00000080) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(8, packageProjectTerms_);
+      }
+      if (((bitField0_ & 0x00000100) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(9, orOperators_);
+      }
+      if (((bitField0_ & 0x00000200) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(10, andOperators_);
+      }
+      if (((bitField0_ & 0x00000400) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(11, parentheses_);
+      }
+      if (((bitField0_ & 0x00000800) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(12, containsErrors_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFilterEvent)) {
+        return super.equals(obj);
+      }
+      com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFilterEvent other = (com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFilterEvent) obj;
+
+      if (hasTagTerms() != other.hasTagTerms()) return false;
+      if (hasTagTerms()) {
+        if (!getTagTerms()
+            .equals(other.getTagTerms())) return false;
+      }
+      if (hasPackageTerms() != other.hasPackageTerms()) return false;
+      if (hasPackageTerms()) {
+        if (!getPackageTerms()
+            .equals(other.getPackageTerms())) return false;
+      }
+      if (hasMessageTerms() != other.hasMessageTerms()) return false;
+      if (hasMessageTerms()) {
+        if (!getMessageTerms()
+            .equals(other.getMessageTerms())) return false;
+      }
+      if (hasLineTerms() != other.hasLineTerms()) return false;
+      if (hasLineTerms()) {
+        if (!getLineTerms()
+            .equals(other.getLineTerms())) return false;
+      }
+      if (hasImplicitLineTerms() != other.hasImplicitLineTerms()) return false;
+      if (hasImplicitLineTerms()) {
+        if (getImplicitLineTerms()
+            != other.getImplicitLineTerms()) return false;
+      }
+      if (hasLevelTerms() != other.hasLevelTerms()) return false;
+      if (hasLevelTerms()) {
+        if (getLevelTerms()
+            != other.getLevelTerms()) return false;
+      }
+      if (hasAgeTerms() != other.hasAgeTerms()) return false;
+      if (hasAgeTerms()) {
+        if (getAgeTerms()
+            != other.getAgeTerms()) return false;
+      }
+      if (hasPackageProjectTerms() != other.hasPackageProjectTerms()) return false;
+      if (hasPackageProjectTerms()) {
+        if (getPackageProjectTerms()
+            != other.getPackageProjectTerms()) return false;
+      }
+      if (hasOrOperators() != other.hasOrOperators()) return false;
+      if (hasOrOperators()) {
+        if (getOrOperators()
+            != other.getOrOperators()) return false;
+      }
+      if (hasAndOperators() != other.hasAndOperators()) return false;
+      if (hasAndOperators()) {
+        if (getAndOperators()
+            != other.getAndOperators()) return false;
+      }
+      if (hasParentheses() != other.hasParentheses()) return false;
+      if (hasParentheses()) {
+        if (getParentheses()
+            != other.getParentheses()) return false;
+      }
+      if (hasContainsErrors() != other.hasContainsErrors()) return false;
+      if (hasContainsErrors()) {
+        if (getContainsErrors()
+            != other.getContainsErrors()) return false;
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasTagTerms()) {
+        hash = (37 * hash) + TAG_TERMS_FIELD_NUMBER;
+        hash = (53 * hash) + getTagTerms().hashCode();
+      }
+      if (hasPackageTerms()) {
+        hash = (37 * hash) + PACKAGE_TERMS_FIELD_NUMBER;
+        hash = (53 * hash) + getPackageTerms().hashCode();
+      }
+      if (hasMessageTerms()) {
+        hash = (37 * hash) + MESSAGE_TERMS_FIELD_NUMBER;
+        hash = (53 * hash) + getMessageTerms().hashCode();
+      }
+      if (hasLineTerms()) {
+        hash = (37 * hash) + LINE_TERMS_FIELD_NUMBER;
+        hash = (53 * hash) + getLineTerms().hashCode();
+      }
+      if (hasImplicitLineTerms()) {
+        hash = (37 * hash) + IMPLICIT_LINE_TERMS_FIELD_NUMBER;
+        hash = (53 * hash) + getImplicitLineTerms();
+      }
+      if (hasLevelTerms()) {
+        hash = (37 * hash) + LEVEL_TERMS_FIELD_NUMBER;
+        hash = (53 * hash) + getLevelTerms();
+      }
+      if (hasAgeTerms()) {
+        hash = (37 * hash) + AGE_TERMS_FIELD_NUMBER;
+        hash = (53 * hash) + getAgeTerms();
+      }
+      if (hasPackageProjectTerms()) {
+        hash = (37 * hash) + PACKAGE_PROJECT_TERMS_FIELD_NUMBER;
+        hash = (53 * hash) + getPackageProjectTerms();
+      }
+      if (hasOrOperators()) {
+        hash = (37 * hash) + OR_OPERATORS_FIELD_NUMBER;
+        hash = (53 * hash) + getOrOperators();
+      }
+      if (hasAndOperators()) {
+        hash = (37 * hash) + AND_OPERATORS_FIELD_NUMBER;
+        hash = (53 * hash) + getAndOperators();
+      }
+      if (hasParentheses()) {
+        hash = (37 * hash) + PARENTHESES_FIELD_NUMBER;
+        hash = (53 * hash) + getParentheses();
+      }
+      if (hasContainsErrors()) {
+        hash = (37 * hash) + CONTAINS_ERRORS_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+            getContainsErrors());
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFilterEvent parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFilterEvent parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFilterEvent parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFilterEvent parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFilterEvent parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFilterEvent parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFilterEvent parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFilterEvent parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFilterEvent parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFilterEvent parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFilterEvent parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFilterEvent parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFilterEvent prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * A summary of a logcat search filter
+     * (Logcat is the logging from an Android device the developer is testing
+     * their app on)
+     * </pre>
+     *
+     * Protobuf type {@code android_studio.LogcatUsageEvent.LogcatFilterEvent}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:android_studio.LogcatUsageEvent.LogcatFilterEvent)
+        com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFilterEventOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_LogcatUsageEvent_LogcatFilterEvent_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_LogcatUsageEvent_LogcatFilterEvent_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFilterEvent.class, com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFilterEvent.Builder.class);
+      }
+
+      // Construct using com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFilterEvent.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getTagTermsFieldBuilder();
+          getPackageTermsFieldBuilder();
+          getMessageTermsFieldBuilder();
+          getLineTermsFieldBuilder();
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        if (tagTermsBuilder_ == null) {
+          tagTerms_ = null;
+        } else {
+          tagTermsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        if (packageTermsBuilder_ == null) {
+          packageTerms_ = null;
+        } else {
+          packageTermsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000002);
+        if (messageTermsBuilder_ == null) {
+          messageTerms_ = null;
+        } else {
+          messageTermsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000004);
+        if (lineTermsBuilder_ == null) {
+          lineTerms_ = null;
+        } else {
+          lineTermsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000008);
+        implicitLineTerms_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000010);
+        levelTerms_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000020);
+        ageTerms_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000040);
+        packageProjectTerms_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000080);
+        orOperators_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000100);
+        andOperators_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000200);
+        parentheses_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000400);
+        containsErrors_ = false;
+        bitField0_ = (bitField0_ & ~0x00000800);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_LogcatUsageEvent_LogcatFilterEvent_descriptor;
+      }
+
+      @java.lang.Override
+      public com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFilterEvent getDefaultInstanceForType() {
+        return com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFilterEvent.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFilterEvent build() {
+        com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFilterEvent result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFilterEvent buildPartial() {
+        com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFilterEvent result = new com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFilterEvent(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          if (tagTermsBuilder_ == null) {
+            result.tagTerms_ = tagTerms_;
+          } else {
+            result.tagTerms_ = tagTermsBuilder_.build();
+          }
+          to_bitField0_ |= 0x00000001;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          if (packageTermsBuilder_ == null) {
+            result.packageTerms_ = packageTerms_;
+          } else {
+            result.packageTerms_ = packageTermsBuilder_.build();
+          }
+          to_bitField0_ |= 0x00000002;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          if (messageTermsBuilder_ == null) {
+            result.messageTerms_ = messageTerms_;
+          } else {
+            result.messageTerms_ = messageTermsBuilder_.build();
+          }
+          to_bitField0_ |= 0x00000004;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          if (lineTermsBuilder_ == null) {
+            result.lineTerms_ = lineTerms_;
+          } else {
+            result.lineTerms_ = lineTermsBuilder_.build();
+          }
+          to_bitField0_ |= 0x00000008;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.implicitLineTerms_ = implicitLineTerms_;
+          to_bitField0_ |= 0x00000010;
+        }
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          result.levelTerms_ = levelTerms_;
+          to_bitField0_ |= 0x00000020;
+        }
+        if (((from_bitField0_ & 0x00000040) != 0)) {
+          result.ageTerms_ = ageTerms_;
+          to_bitField0_ |= 0x00000040;
+        }
+        if (((from_bitField0_ & 0x00000080) != 0)) {
+          result.packageProjectTerms_ = packageProjectTerms_;
+          to_bitField0_ |= 0x00000080;
+        }
+        if (((from_bitField0_ & 0x00000100) != 0)) {
+          result.orOperators_ = orOperators_;
+          to_bitField0_ |= 0x00000100;
+        }
+        if (((from_bitField0_ & 0x00000200) != 0)) {
+          result.andOperators_ = andOperators_;
+          to_bitField0_ |= 0x00000200;
+        }
+        if (((from_bitField0_ & 0x00000400) != 0)) {
+          result.parentheses_ = parentheses_;
+          to_bitField0_ |= 0x00000400;
+        }
+        if (((from_bitField0_ & 0x00000800) != 0)) {
+          result.containsErrors_ = containsErrors_;
+          to_bitField0_ |= 0x00000800;
+        }
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFilterEvent) {
+          return mergeFrom((com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFilterEvent)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFilterEvent other) {
+        if (other == com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFilterEvent.getDefaultInstance()) return this;
+        if (other.hasTagTerms()) {
+          mergeTagTerms(other.getTagTerms());
+        }
+        if (other.hasPackageTerms()) {
+          mergePackageTerms(other.getPackageTerms());
+        }
+        if (other.hasMessageTerms()) {
+          mergeMessageTerms(other.getMessageTerms());
+        }
+        if (other.hasLineTerms()) {
+          mergeLineTerms(other.getLineTerms());
+        }
+        if (other.hasImplicitLineTerms()) {
+          setImplicitLineTerms(other.getImplicitLineTerms());
+        }
+        if (other.hasLevelTerms()) {
+          setLevelTerms(other.getLevelTerms());
+        }
+        if (other.hasAgeTerms()) {
+          setAgeTerms(other.getAgeTerms());
+        }
+        if (other.hasPackageProjectTerms()) {
+          setPackageProjectTerms(other.getPackageProjectTerms());
+        }
+        if (other.hasOrOperators()) {
+          setOrOperators(other.getOrOperators());
+        }
+        if (other.hasAndOperators()) {
+          setAndOperators(other.getAndOperators());
+        }
+        if (other.hasParentheses()) {
+          setParentheses(other.getParentheses());
+        }
+        if (other.hasContainsErrors()) {
+          setContainsErrors(other.getContainsErrors());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFilterEvent parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFilterEvent) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFilterEvent.TermVariants tagTerms_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFilterEvent.TermVariants, com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFilterEvent.TermVariants.Builder, com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFilterEvent.TermVariantsOrBuilder> tagTermsBuilder_;
+      /**
+       * <pre>
+       * Summary of search terms pertaining to the log entry 'tag' field
+       * </pre>
+       *
+       * <code>optional .android_studio.LogcatUsageEvent.LogcatFilterEvent.TermVariants tag_terms = 1;</code>
+       * @return Whether the tagTerms field is set.
+       */
+      public boolean hasTagTerms() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <pre>
+       * Summary of search terms pertaining to the log entry 'tag' field
+       * </pre>
+       *
+       * <code>optional .android_studio.LogcatUsageEvent.LogcatFilterEvent.TermVariants tag_terms = 1;</code>
+       * @return The tagTerms.
+       */
+      public com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFilterEvent.TermVariants getTagTerms() {
+        if (tagTermsBuilder_ == null) {
+          return tagTerms_ == null ? com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFilterEvent.TermVariants.getDefaultInstance() : tagTerms_;
+        } else {
+          return tagTermsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Summary of search terms pertaining to the log entry 'tag' field
+       * </pre>
+       *
+       * <code>optional .android_studio.LogcatUsageEvent.LogcatFilterEvent.TermVariants tag_terms = 1;</code>
+       */
+      public Builder setTagTerms(com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFilterEvent.TermVariants value) {
+        if (tagTermsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          tagTerms_ = value;
+          onChanged();
+        } else {
+          tagTermsBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        return this;
+      }
+      /**
+       * <pre>
+       * Summary of search terms pertaining to the log entry 'tag' field
+       * </pre>
+       *
+       * <code>optional .android_studio.LogcatUsageEvent.LogcatFilterEvent.TermVariants tag_terms = 1;</code>
+       */
+      public Builder setTagTerms(
+          com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFilterEvent.TermVariants.Builder builderForValue) {
+        if (tagTermsBuilder_ == null) {
+          tagTerms_ = builderForValue.build();
+          onChanged();
+        } else {
+          tagTermsBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        return this;
+      }
+      /**
+       * <pre>
+       * Summary of search terms pertaining to the log entry 'tag' field
+       * </pre>
+       *
+       * <code>optional .android_studio.LogcatUsageEvent.LogcatFilterEvent.TermVariants tag_terms = 1;</code>
+       */
+      public Builder mergeTagTerms(com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFilterEvent.TermVariants value) {
+        if (tagTermsBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+              tagTerms_ != null &&
+              tagTerms_ != com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFilterEvent.TermVariants.getDefaultInstance()) {
+            tagTerms_ =
+              com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFilterEvent.TermVariants.newBuilder(tagTerms_).mergeFrom(value).buildPartial();
+          } else {
+            tagTerms_ = value;
+          }
+          onChanged();
+        } else {
+          tagTermsBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        return this;
+      }
+      /**
+       * <pre>
+       * Summary of search terms pertaining to the log entry 'tag' field
+       * </pre>
+       *
+       * <code>optional .android_studio.LogcatUsageEvent.LogcatFilterEvent.TermVariants tag_terms = 1;</code>
+       */
+      public Builder clearTagTerms() {
+        if (tagTermsBuilder_ == null) {
+          tagTerms_ = null;
+          onChanged();
+        } else {
+          tagTermsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+      /**
+       * <pre>
+       * Summary of search terms pertaining to the log entry 'tag' field
+       * </pre>
+       *
+       * <code>optional .android_studio.LogcatUsageEvent.LogcatFilterEvent.TermVariants tag_terms = 1;</code>
+       */
+      public com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFilterEvent.TermVariants.Builder getTagTermsBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getTagTermsFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Summary of search terms pertaining to the log entry 'tag' field
+       * </pre>
+       *
+       * <code>optional .android_studio.LogcatUsageEvent.LogcatFilterEvent.TermVariants tag_terms = 1;</code>
+       */
+      public com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFilterEvent.TermVariantsOrBuilder getTagTermsOrBuilder() {
+        if (tagTermsBuilder_ != null) {
+          return tagTermsBuilder_.getMessageOrBuilder();
+        } else {
+          return tagTerms_ == null ?
+              com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFilterEvent.TermVariants.getDefaultInstance() : tagTerms_;
+        }
+      }
+      /**
+       * <pre>
+       * Summary of search terms pertaining to the log entry 'tag' field
+       * </pre>
+       *
+       * <code>optional .android_studio.LogcatUsageEvent.LogcatFilterEvent.TermVariants tag_terms = 1;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFilterEvent.TermVariants, com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFilterEvent.TermVariants.Builder, com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFilterEvent.TermVariantsOrBuilder> 
+          getTagTermsFieldBuilder() {
+        if (tagTermsBuilder_ == null) {
+          tagTermsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFilterEvent.TermVariants, com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFilterEvent.TermVariants.Builder, com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFilterEvent.TermVariantsOrBuilder>(
+                  getTagTerms(),
+                  getParentForChildren(),
+                  isClean());
+          tagTerms_ = null;
+        }
+        return tagTermsBuilder_;
+      }
+
+      private com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFilterEvent.TermVariants packageTerms_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFilterEvent.TermVariants, com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFilterEvent.TermVariants.Builder, com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFilterEvent.TermVariantsOrBuilder> packageTermsBuilder_;
+      /**
+       * <pre>
+       * Summary of search terms pertaining to the log entry 'package' field
+       * </pre>
+       *
+       * <code>optional .android_studio.LogcatUsageEvent.LogcatFilterEvent.TermVariants package_terms = 2;</code>
+       * @return Whether the packageTerms field is set.
+       */
+      public boolean hasPackageTerms() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <pre>
+       * Summary of search terms pertaining to the log entry 'package' field
+       * </pre>
+       *
+       * <code>optional .android_studio.LogcatUsageEvent.LogcatFilterEvent.TermVariants package_terms = 2;</code>
+       * @return The packageTerms.
+       */
+      public com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFilterEvent.TermVariants getPackageTerms() {
+        if (packageTermsBuilder_ == null) {
+          return packageTerms_ == null ? com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFilterEvent.TermVariants.getDefaultInstance() : packageTerms_;
+        } else {
+          return packageTermsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Summary of search terms pertaining to the log entry 'package' field
+       * </pre>
+       *
+       * <code>optional .android_studio.LogcatUsageEvent.LogcatFilterEvent.TermVariants package_terms = 2;</code>
+       */
+      public Builder setPackageTerms(com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFilterEvent.TermVariants value) {
+        if (packageTermsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          packageTerms_ = value;
+          onChanged();
+        } else {
+          packageTermsBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000002;
+        return this;
+      }
+      /**
+       * <pre>
+       * Summary of search terms pertaining to the log entry 'package' field
+       * </pre>
+       *
+       * <code>optional .android_studio.LogcatUsageEvent.LogcatFilterEvent.TermVariants package_terms = 2;</code>
+       */
+      public Builder setPackageTerms(
+          com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFilterEvent.TermVariants.Builder builderForValue) {
+        if (packageTermsBuilder_ == null) {
+          packageTerms_ = builderForValue.build();
+          onChanged();
+        } else {
+          packageTermsBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000002;
+        return this;
+      }
+      /**
+       * <pre>
+       * Summary of search terms pertaining to the log entry 'package' field
+       * </pre>
+       *
+       * <code>optional .android_studio.LogcatUsageEvent.LogcatFilterEvent.TermVariants package_terms = 2;</code>
+       */
+      public Builder mergePackageTerms(com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFilterEvent.TermVariants value) {
+        if (packageTermsBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0) &&
+              packageTerms_ != null &&
+              packageTerms_ != com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFilterEvent.TermVariants.getDefaultInstance()) {
+            packageTerms_ =
+              com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFilterEvent.TermVariants.newBuilder(packageTerms_).mergeFrom(value).buildPartial();
+          } else {
+            packageTerms_ = value;
+          }
+          onChanged();
+        } else {
+          packageTermsBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000002;
+        return this;
+      }
+      /**
+       * <pre>
+       * Summary of search terms pertaining to the log entry 'package' field
+       * </pre>
+       *
+       * <code>optional .android_studio.LogcatUsageEvent.LogcatFilterEvent.TermVariants package_terms = 2;</code>
+       */
+      public Builder clearPackageTerms() {
+        if (packageTermsBuilder_ == null) {
+          packageTerms_ = null;
+          onChanged();
+        } else {
+          packageTermsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000002);
+        return this;
+      }
+      /**
+       * <pre>
+       * Summary of search terms pertaining to the log entry 'package' field
+       * </pre>
+       *
+       * <code>optional .android_studio.LogcatUsageEvent.LogcatFilterEvent.TermVariants package_terms = 2;</code>
+       */
+      public com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFilterEvent.TermVariants.Builder getPackageTermsBuilder() {
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return getPackageTermsFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Summary of search terms pertaining to the log entry 'package' field
+       * </pre>
+       *
+       * <code>optional .android_studio.LogcatUsageEvent.LogcatFilterEvent.TermVariants package_terms = 2;</code>
+       */
+      public com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFilterEvent.TermVariantsOrBuilder getPackageTermsOrBuilder() {
+        if (packageTermsBuilder_ != null) {
+          return packageTermsBuilder_.getMessageOrBuilder();
+        } else {
+          return packageTerms_ == null ?
+              com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFilterEvent.TermVariants.getDefaultInstance() : packageTerms_;
+        }
+      }
+      /**
+       * <pre>
+       * Summary of search terms pertaining to the log entry 'package' field
+       * </pre>
+       *
+       * <code>optional .android_studio.LogcatUsageEvent.LogcatFilterEvent.TermVariants package_terms = 2;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFilterEvent.TermVariants, com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFilterEvent.TermVariants.Builder, com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFilterEvent.TermVariantsOrBuilder> 
+          getPackageTermsFieldBuilder() {
+        if (packageTermsBuilder_ == null) {
+          packageTermsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFilterEvent.TermVariants, com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFilterEvent.TermVariants.Builder, com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFilterEvent.TermVariantsOrBuilder>(
+                  getPackageTerms(),
+                  getParentForChildren(),
+                  isClean());
+          packageTerms_ = null;
+        }
+        return packageTermsBuilder_;
+      }
+
+      private com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFilterEvent.TermVariants messageTerms_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFilterEvent.TermVariants, com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFilterEvent.TermVariants.Builder, com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFilterEvent.TermVariantsOrBuilder> messageTermsBuilder_;
+      /**
+       * <pre>
+       * Summary of search terms pertaining to the log entry 'message' field
+       * </pre>
+       *
+       * <code>optional .android_studio.LogcatUsageEvent.LogcatFilterEvent.TermVariants message_terms = 3;</code>
+       * @return Whether the messageTerms field is set.
+       */
+      public boolean hasMessageTerms() {
+        return ((bitField0_ & 0x00000004) != 0);
+      }
+      /**
+       * <pre>
+       * Summary of search terms pertaining to the log entry 'message' field
+       * </pre>
+       *
+       * <code>optional .android_studio.LogcatUsageEvent.LogcatFilterEvent.TermVariants message_terms = 3;</code>
+       * @return The messageTerms.
+       */
+      public com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFilterEvent.TermVariants getMessageTerms() {
+        if (messageTermsBuilder_ == null) {
+          return messageTerms_ == null ? com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFilterEvent.TermVariants.getDefaultInstance() : messageTerms_;
+        } else {
+          return messageTermsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Summary of search terms pertaining to the log entry 'message' field
+       * </pre>
+       *
+       * <code>optional .android_studio.LogcatUsageEvent.LogcatFilterEvent.TermVariants message_terms = 3;</code>
+       */
+      public Builder setMessageTerms(com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFilterEvent.TermVariants value) {
+        if (messageTermsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          messageTerms_ = value;
+          onChanged();
+        } else {
+          messageTermsBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000004;
+        return this;
+      }
+      /**
+       * <pre>
+       * Summary of search terms pertaining to the log entry 'message' field
+       * </pre>
+       *
+       * <code>optional .android_studio.LogcatUsageEvent.LogcatFilterEvent.TermVariants message_terms = 3;</code>
+       */
+      public Builder setMessageTerms(
+          com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFilterEvent.TermVariants.Builder builderForValue) {
+        if (messageTermsBuilder_ == null) {
+          messageTerms_ = builderForValue.build();
+          onChanged();
+        } else {
+          messageTermsBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000004;
+        return this;
+      }
+      /**
+       * <pre>
+       * Summary of search terms pertaining to the log entry 'message' field
+       * </pre>
+       *
+       * <code>optional .android_studio.LogcatUsageEvent.LogcatFilterEvent.TermVariants message_terms = 3;</code>
+       */
+      public Builder mergeMessageTerms(com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFilterEvent.TermVariants value) {
+        if (messageTermsBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) != 0) &&
+              messageTerms_ != null &&
+              messageTerms_ != com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFilterEvent.TermVariants.getDefaultInstance()) {
+            messageTerms_ =
+              com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFilterEvent.TermVariants.newBuilder(messageTerms_).mergeFrom(value).buildPartial();
+          } else {
+            messageTerms_ = value;
+          }
+          onChanged();
+        } else {
+          messageTermsBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000004;
+        return this;
+      }
+      /**
+       * <pre>
+       * Summary of search terms pertaining to the log entry 'message' field
+       * </pre>
+       *
+       * <code>optional .android_studio.LogcatUsageEvent.LogcatFilterEvent.TermVariants message_terms = 3;</code>
+       */
+      public Builder clearMessageTerms() {
+        if (messageTermsBuilder_ == null) {
+          messageTerms_ = null;
+          onChanged();
+        } else {
+          messageTermsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000004);
+        return this;
+      }
+      /**
+       * <pre>
+       * Summary of search terms pertaining to the log entry 'message' field
+       * </pre>
+       *
+       * <code>optional .android_studio.LogcatUsageEvent.LogcatFilterEvent.TermVariants message_terms = 3;</code>
+       */
+      public com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFilterEvent.TermVariants.Builder getMessageTermsBuilder() {
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return getMessageTermsFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Summary of search terms pertaining to the log entry 'message' field
+       * </pre>
+       *
+       * <code>optional .android_studio.LogcatUsageEvent.LogcatFilterEvent.TermVariants message_terms = 3;</code>
+       */
+      public com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFilterEvent.TermVariantsOrBuilder getMessageTermsOrBuilder() {
+        if (messageTermsBuilder_ != null) {
+          return messageTermsBuilder_.getMessageOrBuilder();
+        } else {
+          return messageTerms_ == null ?
+              com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFilterEvent.TermVariants.getDefaultInstance() : messageTerms_;
+        }
+      }
+      /**
+       * <pre>
+       * Summary of search terms pertaining to the log entry 'message' field
+       * </pre>
+       *
+       * <code>optional .android_studio.LogcatUsageEvent.LogcatFilterEvent.TermVariants message_terms = 3;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFilterEvent.TermVariants, com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFilterEvent.TermVariants.Builder, com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFilterEvent.TermVariantsOrBuilder> 
+          getMessageTermsFieldBuilder() {
+        if (messageTermsBuilder_ == null) {
+          messageTermsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFilterEvent.TermVariants, com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFilterEvent.TermVariants.Builder, com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFilterEvent.TermVariantsOrBuilder>(
+                  getMessageTerms(),
+                  getParentForChildren(),
+                  isClean());
+          messageTerms_ = null;
+        }
+        return messageTermsBuilder_;
+      }
+
+      private com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFilterEvent.TermVariants lineTerms_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFilterEvent.TermVariants, com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFilterEvent.TermVariants.Builder, com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFilterEvent.TermVariantsOrBuilder> lineTermsBuilder_;
+      /**
+       * <pre>
+       * Summary of search terms pertaining to entire log entry
+       * </pre>
+       *
+       * <code>optional .android_studio.LogcatUsageEvent.LogcatFilterEvent.TermVariants line_terms = 4;</code>
+       * @return Whether the lineTerms field is set.
+       */
+      public boolean hasLineTerms() {
+        return ((bitField0_ & 0x00000008) != 0);
+      }
+      /**
+       * <pre>
+       * Summary of search terms pertaining to entire log entry
+       * </pre>
+       *
+       * <code>optional .android_studio.LogcatUsageEvent.LogcatFilterEvent.TermVariants line_terms = 4;</code>
+       * @return The lineTerms.
+       */
+      public com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFilterEvent.TermVariants getLineTerms() {
+        if (lineTermsBuilder_ == null) {
+          return lineTerms_ == null ? com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFilterEvent.TermVariants.getDefaultInstance() : lineTerms_;
+        } else {
+          return lineTermsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Summary of search terms pertaining to entire log entry
+       * </pre>
+       *
+       * <code>optional .android_studio.LogcatUsageEvent.LogcatFilterEvent.TermVariants line_terms = 4;</code>
+       */
+      public Builder setLineTerms(com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFilterEvent.TermVariants value) {
+        if (lineTermsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          lineTerms_ = value;
+          onChanged();
+        } else {
+          lineTermsBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000008;
+        return this;
+      }
+      /**
+       * <pre>
+       * Summary of search terms pertaining to entire log entry
+       * </pre>
+       *
+       * <code>optional .android_studio.LogcatUsageEvent.LogcatFilterEvent.TermVariants line_terms = 4;</code>
+       */
+      public Builder setLineTerms(
+          com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFilterEvent.TermVariants.Builder builderForValue) {
+        if (lineTermsBuilder_ == null) {
+          lineTerms_ = builderForValue.build();
+          onChanged();
+        } else {
+          lineTermsBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000008;
+        return this;
+      }
+      /**
+       * <pre>
+       * Summary of search terms pertaining to entire log entry
+       * </pre>
+       *
+       * <code>optional .android_studio.LogcatUsageEvent.LogcatFilterEvent.TermVariants line_terms = 4;</code>
+       */
+      public Builder mergeLineTerms(com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFilterEvent.TermVariants value) {
+        if (lineTermsBuilder_ == null) {
+          if (((bitField0_ & 0x00000008) != 0) &&
+              lineTerms_ != null &&
+              lineTerms_ != com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFilterEvent.TermVariants.getDefaultInstance()) {
+            lineTerms_ =
+              com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFilterEvent.TermVariants.newBuilder(lineTerms_).mergeFrom(value).buildPartial();
+          } else {
+            lineTerms_ = value;
+          }
+          onChanged();
+        } else {
+          lineTermsBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000008;
+        return this;
+      }
+      /**
+       * <pre>
+       * Summary of search terms pertaining to entire log entry
+       * </pre>
+       *
+       * <code>optional .android_studio.LogcatUsageEvent.LogcatFilterEvent.TermVariants line_terms = 4;</code>
+       */
+      public Builder clearLineTerms() {
+        if (lineTermsBuilder_ == null) {
+          lineTerms_ = null;
+          onChanged();
+        } else {
+          lineTermsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000008);
+        return this;
+      }
+      /**
+       * <pre>
+       * Summary of search terms pertaining to entire log entry
+       * </pre>
+       *
+       * <code>optional .android_studio.LogcatUsageEvent.LogcatFilterEvent.TermVariants line_terms = 4;</code>
+       */
+      public com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFilterEvent.TermVariants.Builder getLineTermsBuilder() {
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return getLineTermsFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Summary of search terms pertaining to entire log entry
+       * </pre>
+       *
+       * <code>optional .android_studio.LogcatUsageEvent.LogcatFilterEvent.TermVariants line_terms = 4;</code>
+       */
+      public com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFilterEvent.TermVariantsOrBuilder getLineTermsOrBuilder() {
+        if (lineTermsBuilder_ != null) {
+          return lineTermsBuilder_.getMessageOrBuilder();
+        } else {
+          return lineTerms_ == null ?
+              com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFilterEvent.TermVariants.getDefaultInstance() : lineTerms_;
+        }
+      }
+      /**
+       * <pre>
+       * Summary of search terms pertaining to entire log entry
+       * </pre>
+       *
+       * <code>optional .android_studio.LogcatUsageEvent.LogcatFilterEvent.TermVariants line_terms = 4;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFilterEvent.TermVariants, com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFilterEvent.TermVariants.Builder, com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFilterEvent.TermVariantsOrBuilder> 
+          getLineTermsFieldBuilder() {
+        if (lineTermsBuilder_ == null) {
+          lineTermsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFilterEvent.TermVariants, com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFilterEvent.TermVariants.Builder, com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFilterEvent.TermVariantsOrBuilder>(
+                  getLineTerms(),
+                  getParentForChildren(),
+                  isClean());
+          lineTerms_ = null;
+        }
+        return lineTermsBuilder_;
+      }
+
+      private int implicitLineTerms_ ;
+      /**
+       * <pre>
+       * Number of search terms pertaining to entire log entry. Differs from the
+       * above as these terms do not use the 'line:' prefix.
+       * </pre>
+       *
+       * <code>optional int32 implicit_line_terms = 5;</code>
+       * @return Whether the implicitLineTerms field is set.
+       */
+      public boolean hasImplicitLineTerms() {
+        return ((bitField0_ & 0x00000010) != 0);
+      }
+      /**
+       * <pre>
+       * Number of search terms pertaining to entire log entry. Differs from the
+       * above as these terms do not use the 'line:' prefix.
+       * </pre>
+       *
+       * <code>optional int32 implicit_line_terms = 5;</code>
+       * @return The implicitLineTerms.
+       */
+      public int getImplicitLineTerms() {
+        return implicitLineTerms_;
+      }
+      /**
+       * <pre>
+       * Number of search terms pertaining to entire log entry. Differs from the
+       * above as these terms do not use the 'line:' prefix.
+       * </pre>
+       *
+       * <code>optional int32 implicit_line_terms = 5;</code>
+       * @param value The implicitLineTerms to set.
+       * @return This builder for chaining.
+       */
+      public Builder setImplicitLineTerms(int value) {
+        bitField0_ |= 0x00000010;
+        implicitLineTerms_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Number of search terms pertaining to entire log entry. Differs from the
+       * above as these terms do not use the 'line:' prefix.
+       * </pre>
+       *
+       * <code>optional int32 implicit_line_terms = 5;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearImplicitLineTerms() {
+        bitField0_ = (bitField0_ & ~0x00000010);
+        implicitLineTerms_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int levelTerms_ ;
+      /**
+       * <pre>
+       * Number of search terms pertaining to the 'level' field.
+       * </pre>
+       *
+       * <code>optional int32 level_terms = 6;</code>
+       * @return Whether the levelTerms field is set.
+       */
+      public boolean hasLevelTerms() {
+        return ((bitField0_ & 0x00000020) != 0);
+      }
+      /**
+       * <pre>
+       * Number of search terms pertaining to the 'level' field.
+       * </pre>
+       *
+       * <code>optional int32 level_terms = 6;</code>
+       * @return The levelTerms.
+       */
+      public int getLevelTerms() {
+        return levelTerms_;
+      }
+      /**
+       * <pre>
+       * Number of search terms pertaining to the 'level' field.
+       * </pre>
+       *
+       * <code>optional int32 level_terms = 6;</code>
+       * @param value The levelTerms to set.
+       * @return This builder for chaining.
+       */
+      public Builder setLevelTerms(int value) {
+        bitField0_ |= 0x00000020;
+        levelTerms_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Number of search terms pertaining to the 'level' field.
+       * </pre>
+       *
+       * <code>optional int32 level_terms = 6;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearLevelTerms() {
+        bitField0_ = (bitField0_ & ~0x00000020);
+        levelTerms_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int ageTerms_ ;
+      /**
+       * <pre>
+       * Number of search terms pertaining to the 'timestamp' field. As in
+       * "how long ago the entry was logged"
+       * </pre>
+       *
+       * <code>optional int32 age_terms = 7;</code>
+       * @return Whether the ageTerms field is set.
+       */
+      public boolean hasAgeTerms() {
+        return ((bitField0_ & 0x00000040) != 0);
+      }
+      /**
+       * <pre>
+       * Number of search terms pertaining to the 'timestamp' field. As in
+       * "how long ago the entry was logged"
+       * </pre>
+       *
+       * <code>optional int32 age_terms = 7;</code>
+       * @return The ageTerms.
+       */
+      public int getAgeTerms() {
+        return ageTerms_;
+      }
+      /**
+       * <pre>
+       * Number of search terms pertaining to the 'timestamp' field. As in
+       * "how long ago the entry was logged"
+       * </pre>
+       *
+       * <code>optional int32 age_terms = 7;</code>
+       * @param value The ageTerms to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAgeTerms(int value) {
+        bitField0_ |= 0x00000040;
+        ageTerms_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Number of search terms pertaining to the 'timestamp' field. As in
+       * "how long ago the entry was logged"
+       * </pre>
+       *
+       * <code>optional int32 age_terms = 7;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAgeTerms() {
+        bitField0_ = (bitField0_ & ~0x00000040);
+        ageTerms_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int packageProjectTerms_ ;
+      /**
+       * <pre>
+       * Number of the search terms of the form 'package:mine'.
+       * </pre>
+       *
+       * <code>optional int32 package_project_terms = 8;</code>
+       * @return Whether the packageProjectTerms field is set.
+       */
+      public boolean hasPackageProjectTerms() {
+        return ((bitField0_ & 0x00000080) != 0);
+      }
+      /**
+       * <pre>
+       * Number of the search terms of the form 'package:mine'.
+       * </pre>
+       *
+       * <code>optional int32 package_project_terms = 8;</code>
+       * @return The packageProjectTerms.
+       */
+      public int getPackageProjectTerms() {
+        return packageProjectTerms_;
+      }
+      /**
+       * <pre>
+       * Number of the search terms of the form 'package:mine'.
+       * </pre>
+       *
+       * <code>optional int32 package_project_terms = 8;</code>
+       * @param value The packageProjectTerms to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPackageProjectTerms(int value) {
+        bitField0_ |= 0x00000080;
+        packageProjectTerms_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Number of the search terms of the form 'package:mine'.
+       * </pre>
+       *
+       * <code>optional int32 package_project_terms = 8;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPackageProjectTerms() {
+        bitField0_ = (bitField0_ & ~0x00000080);
+        packageProjectTerms_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int orOperators_ ;
+      /**
+       * <pre>
+       * Number of or operators in the expression
+       * </pre>
+       *
+       * <code>optional int32 or_operators = 9;</code>
+       * @return Whether the orOperators field is set.
+       */
+      public boolean hasOrOperators() {
+        return ((bitField0_ & 0x00000100) != 0);
+      }
+      /**
+       * <pre>
+       * Number of or operators in the expression
+       * </pre>
+       *
+       * <code>optional int32 or_operators = 9;</code>
+       * @return The orOperators.
+       */
+      public int getOrOperators() {
+        return orOperators_;
+      }
+      /**
+       * <pre>
+       * Number of or operators in the expression
+       * </pre>
+       *
+       * <code>optional int32 or_operators = 9;</code>
+       * @param value The orOperators to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOrOperators(int value) {
+        bitField0_ |= 0x00000100;
+        orOperators_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Number of or operators in the expression
+       * </pre>
+       *
+       * <code>optional int32 or_operators = 9;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearOrOperators() {
+        bitField0_ = (bitField0_ & ~0x00000100);
+        orOperators_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int andOperators_ ;
+      /**
+       * <pre>
+       * Number of and operators in the expression
+       * </pre>
+       *
+       * <code>optional int32 and_operators = 10;</code>
+       * @return Whether the andOperators field is set.
+       */
+      public boolean hasAndOperators() {
+        return ((bitField0_ & 0x00000200) != 0);
+      }
+      /**
+       * <pre>
+       * Number of and operators in the expression
+       * </pre>
+       *
+       * <code>optional int32 and_operators = 10;</code>
+       * @return The andOperators.
+       */
+      public int getAndOperators() {
+        return andOperators_;
+      }
+      /**
+       * <pre>
+       * Number of and operators in the expression
+       * </pre>
+       *
+       * <code>optional int32 and_operators = 10;</code>
+       * @param value The andOperators to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAndOperators(int value) {
+        bitField0_ |= 0x00000200;
+        andOperators_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Number of and operators in the expression
+       * </pre>
+       *
+       * <code>optional int32 and_operators = 10;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAndOperators() {
+        bitField0_ = (bitField0_ & ~0x00000200);
+        andOperators_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int parentheses_ ;
+      /**
+       * <pre>
+       * Number of parentheses pairs in the expressions
+       * </pre>
+       *
+       * <code>optional int32 parentheses = 11;</code>
+       * @return Whether the parentheses field is set.
+       */
+      public boolean hasParentheses() {
+        return ((bitField0_ & 0x00000400) != 0);
+      }
+      /**
+       * <pre>
+       * Number of parentheses pairs in the expressions
+       * </pre>
+       *
+       * <code>optional int32 parentheses = 11;</code>
+       * @return The parentheses.
+       */
+      public int getParentheses() {
+        return parentheses_;
+      }
+      /**
+       * <pre>
+       * Number of parentheses pairs in the expressions
+       * </pre>
+       *
+       * <code>optional int32 parentheses = 11;</code>
+       * @param value The parentheses to set.
+       * @return This builder for chaining.
+       */
+      public Builder setParentheses(int value) {
+        bitField0_ |= 0x00000400;
+        parentheses_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Number of parentheses pairs in the expressions
+       * </pre>
+       *
+       * <code>optional int32 parentheses = 11;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearParentheses() {
+        bitField0_ = (bitField0_ & ~0x00000400);
+        parentheses_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private boolean containsErrors_ ;
+      /**
+       * <pre>
+       * Does the filter contain an error
+       * </pre>
+       *
+       * <code>optional bool contains_errors = 12;</code>
+       * @return Whether the containsErrors field is set.
+       */
+      public boolean hasContainsErrors() {
+        return ((bitField0_ & 0x00000800) != 0);
+      }
+      /**
+       * <pre>
+       * Does the filter contain an error
+       * </pre>
+       *
+       * <code>optional bool contains_errors = 12;</code>
+       * @return The containsErrors.
+       */
+      public boolean getContainsErrors() {
+        return containsErrors_;
+      }
+      /**
+       * <pre>
+       * Does the filter contain an error
+       * </pre>
+       *
+       * <code>optional bool contains_errors = 12;</code>
+       * @param value The containsErrors to set.
+       * @return This builder for chaining.
+       */
+      public Builder setContainsErrors(boolean value) {
+        bitField0_ |= 0x00000800;
+        containsErrors_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Does the filter contain an error
+       * </pre>
+       *
+       * <code>optional bool contains_errors = 12;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearContainsErrors() {
+        bitField0_ = (bitField0_ & ~0x00000800);
+        containsErrors_ = false;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:android_studio.LogcatUsageEvent.LogcatFilterEvent)
+    }
+
+    // @@protoc_insertion_point(class_scope:android_studio.LogcatUsageEvent.LogcatFilterEvent)
+    private static final com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFilterEvent DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFilterEvent();
+    }
+
+    public static com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFilterEvent getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<LogcatFilterEvent>
+        PARSER = new com.google.protobuf.AbstractParser<LogcatFilterEvent>() {
+      @java.lang.Override
+      public LogcatFilterEvent parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new LogcatFilterEvent(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<LogcatFilterEvent> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<LogcatFilterEvent> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFilterEvent getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private int bitField0_;
   public static final int TYPE_FIELD_NUMBER = 1;
   private int type_;
@@ -2530,6 +6031,41 @@ private static final long serialVersionUID = 0L;
     return formatDialog_ == null ? com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatDialogEvent.getDefaultInstance() : formatDialog_;
   }
 
+  public static final int LOGCAT_FILTER_FIELD_NUMBER = 3;
+  private com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFilterEvent logcatFilter_;
+  /**
+   * <pre>
+   * A logcat filter. Set when type is FILTER_ADDED_TO_HISTORY.
+   * </pre>
+   *
+   * <code>optional .android_studio.LogcatUsageEvent.LogcatFilterEvent logcat_filter = 3;</code>
+   * @return Whether the logcatFilter field is set.
+   */
+  public boolean hasLogcatFilter() {
+    return ((bitField0_ & 0x00000004) != 0);
+  }
+  /**
+   * <pre>
+   * A logcat filter. Set when type is FILTER_ADDED_TO_HISTORY.
+   * </pre>
+   *
+   * <code>optional .android_studio.LogcatUsageEvent.LogcatFilterEvent logcat_filter = 3;</code>
+   * @return The logcatFilter.
+   */
+  public com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFilterEvent getLogcatFilter() {
+    return logcatFilter_ == null ? com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFilterEvent.getDefaultInstance() : logcatFilter_;
+  }
+  /**
+   * <pre>
+   * A logcat filter. Set when type is FILTER_ADDED_TO_HISTORY.
+   * </pre>
+   *
+   * <code>optional .android_studio.LogcatUsageEvent.LogcatFilterEvent logcat_filter = 3;</code>
+   */
+  public com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFilterEventOrBuilder getLogcatFilterOrBuilder() {
+    return logcatFilter_ == null ? com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFilterEvent.getDefaultInstance() : logcatFilter_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -2550,6 +6086,9 @@ private static final long serialVersionUID = 0L;
     if (((bitField0_ & 0x00000002) != 0)) {
       output.writeMessage(2, getFormatDialog());
     }
+    if (((bitField0_ & 0x00000004) != 0)) {
+      output.writeMessage(3, getLogcatFilter());
+    }
     unknownFields.writeTo(output);
   }
 
@@ -2566,6 +6105,10 @@ private static final long serialVersionUID = 0L;
     if (((bitField0_ & 0x00000002) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(2, getFormatDialog());
+    }
+    if (((bitField0_ & 0x00000004) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(3, getLogcatFilter());
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -2591,6 +6134,11 @@ private static final long serialVersionUID = 0L;
       if (!getFormatDialog()
           .equals(other.getFormatDialog())) return false;
     }
+    if (hasLogcatFilter() != other.hasLogcatFilter()) return false;
+    if (hasLogcatFilter()) {
+      if (!getLogcatFilter()
+          .equals(other.getLogcatFilter())) return false;
+    }
     if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
@@ -2609,6 +6157,10 @@ private static final long serialVersionUID = 0L;
     if (hasFormatDialog()) {
       hash = (37 * hash) + FORMAT_DIALOG_FIELD_NUMBER;
       hash = (53 * hash) + getFormatDialog().hashCode();
+    }
+    if (hasLogcatFilter()) {
+      hash = (37 * hash) + LOGCAT_FILTER_FIELD_NUMBER;
+      hash = (53 * hash) + getLogcatFilter().hashCode();
     }
     hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
@@ -2743,6 +6295,7 @@ private static final long serialVersionUID = 0L;
       if (com.google.protobuf.GeneratedMessageV3
               .alwaysUseFieldBuilders) {
         getFormatDialogFieldBuilder();
+        getLogcatFilterFieldBuilder();
       }
     }
     @java.lang.Override
@@ -2756,6 +6309,12 @@ private static final long serialVersionUID = 0L;
         formatDialogBuilder_.clear();
       }
       bitField0_ = (bitField0_ & ~0x00000002);
+      if (logcatFilterBuilder_ == null) {
+        logcatFilter_ = null;
+      } else {
+        logcatFilterBuilder_.clear();
+      }
+      bitField0_ = (bitField0_ & ~0x00000004);
       return this;
     }
 
@@ -2795,6 +6354,14 @@ private static final long serialVersionUID = 0L;
           result.formatDialog_ = formatDialogBuilder_.build();
         }
         to_bitField0_ |= 0x00000002;
+      }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        if (logcatFilterBuilder_ == null) {
+          result.logcatFilter_ = logcatFilter_;
+        } else {
+          result.logcatFilter_ = logcatFilterBuilder_.build();
+        }
+        to_bitField0_ |= 0x00000004;
       }
       result.bitField0_ = to_bitField0_;
       onBuilt();
@@ -2850,6 +6417,9 @@ private static final long serialVersionUID = 0L;
       }
       if (other.hasFormatDialog()) {
         mergeFormatDialog(other.getFormatDialog());
+      }
+      if (other.hasLogcatFilter()) {
+        mergeLogcatFilter(other.getLogcatFilter());
       }
       this.mergeUnknownFields(other.unknownFields);
       onChanged();
@@ -3093,6 +6663,162 @@ private static final long serialVersionUID = 0L;
         formatDialog_ = null;
       }
       return formatDialogBuilder_;
+    }
+
+    private com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFilterEvent logcatFilter_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFilterEvent, com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFilterEvent.Builder, com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFilterEventOrBuilder> logcatFilterBuilder_;
+    /**
+     * <pre>
+     * A logcat filter. Set when type is FILTER_ADDED_TO_HISTORY.
+     * </pre>
+     *
+     * <code>optional .android_studio.LogcatUsageEvent.LogcatFilterEvent logcat_filter = 3;</code>
+     * @return Whether the logcatFilter field is set.
+     */
+    public boolean hasLogcatFilter() {
+      return ((bitField0_ & 0x00000004) != 0);
+    }
+    /**
+     * <pre>
+     * A logcat filter. Set when type is FILTER_ADDED_TO_HISTORY.
+     * </pre>
+     *
+     * <code>optional .android_studio.LogcatUsageEvent.LogcatFilterEvent logcat_filter = 3;</code>
+     * @return The logcatFilter.
+     */
+    public com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFilterEvent getLogcatFilter() {
+      if (logcatFilterBuilder_ == null) {
+        return logcatFilter_ == null ? com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFilterEvent.getDefaultInstance() : logcatFilter_;
+      } else {
+        return logcatFilterBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * A logcat filter. Set when type is FILTER_ADDED_TO_HISTORY.
+     * </pre>
+     *
+     * <code>optional .android_studio.LogcatUsageEvent.LogcatFilterEvent logcat_filter = 3;</code>
+     */
+    public Builder setLogcatFilter(com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFilterEvent value) {
+      if (logcatFilterBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        logcatFilter_ = value;
+        onChanged();
+      } else {
+        logcatFilterBuilder_.setMessage(value);
+      }
+      bitField0_ |= 0x00000004;
+      return this;
+    }
+    /**
+     * <pre>
+     * A logcat filter. Set when type is FILTER_ADDED_TO_HISTORY.
+     * </pre>
+     *
+     * <code>optional .android_studio.LogcatUsageEvent.LogcatFilterEvent logcat_filter = 3;</code>
+     */
+    public Builder setLogcatFilter(
+        com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFilterEvent.Builder builderForValue) {
+      if (logcatFilterBuilder_ == null) {
+        logcatFilter_ = builderForValue.build();
+        onChanged();
+      } else {
+        logcatFilterBuilder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x00000004;
+      return this;
+    }
+    /**
+     * <pre>
+     * A logcat filter. Set when type is FILTER_ADDED_TO_HISTORY.
+     * </pre>
+     *
+     * <code>optional .android_studio.LogcatUsageEvent.LogcatFilterEvent logcat_filter = 3;</code>
+     */
+    public Builder mergeLogcatFilter(com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFilterEvent value) {
+      if (logcatFilterBuilder_ == null) {
+        if (((bitField0_ & 0x00000004) != 0) &&
+            logcatFilter_ != null &&
+            logcatFilter_ != com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFilterEvent.getDefaultInstance()) {
+          logcatFilter_ =
+            com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFilterEvent.newBuilder(logcatFilter_).mergeFrom(value).buildPartial();
+        } else {
+          logcatFilter_ = value;
+        }
+        onChanged();
+      } else {
+        logcatFilterBuilder_.mergeFrom(value);
+      }
+      bitField0_ |= 0x00000004;
+      return this;
+    }
+    /**
+     * <pre>
+     * A logcat filter. Set when type is FILTER_ADDED_TO_HISTORY.
+     * </pre>
+     *
+     * <code>optional .android_studio.LogcatUsageEvent.LogcatFilterEvent logcat_filter = 3;</code>
+     */
+    public Builder clearLogcatFilter() {
+      if (logcatFilterBuilder_ == null) {
+        logcatFilter_ = null;
+        onChanged();
+      } else {
+        logcatFilterBuilder_.clear();
+      }
+      bitField0_ = (bitField0_ & ~0x00000004);
+      return this;
+    }
+    /**
+     * <pre>
+     * A logcat filter. Set when type is FILTER_ADDED_TO_HISTORY.
+     * </pre>
+     *
+     * <code>optional .android_studio.LogcatUsageEvent.LogcatFilterEvent logcat_filter = 3;</code>
+     */
+    public com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFilterEvent.Builder getLogcatFilterBuilder() {
+      bitField0_ |= 0x00000004;
+      onChanged();
+      return getLogcatFilterFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * A logcat filter. Set when type is FILTER_ADDED_TO_HISTORY.
+     * </pre>
+     *
+     * <code>optional .android_studio.LogcatUsageEvent.LogcatFilterEvent logcat_filter = 3;</code>
+     */
+    public com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFilterEventOrBuilder getLogcatFilterOrBuilder() {
+      if (logcatFilterBuilder_ != null) {
+        return logcatFilterBuilder_.getMessageOrBuilder();
+      } else {
+        return logcatFilter_ == null ?
+            com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFilterEvent.getDefaultInstance() : logcatFilter_;
+      }
+    }
+    /**
+     * <pre>
+     * A logcat filter. Set when type is FILTER_ADDED_TO_HISTORY.
+     * </pre>
+     *
+     * <code>optional .android_studio.LogcatUsageEvent.LogcatFilterEvent logcat_filter = 3;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFilterEvent, com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFilterEvent.Builder, com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFilterEventOrBuilder> 
+        getLogcatFilterFieldBuilder() {
+      if (logcatFilterBuilder_ == null) {
+        logcatFilterBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFilterEvent, com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFilterEvent.Builder, com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFilterEventOrBuilder>(
+                getLogcatFilter(),
+                getParentForChildren(),
+                isClean());
+        logcatFilter_ = null;
+      }
+      return logcatFilterBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(
