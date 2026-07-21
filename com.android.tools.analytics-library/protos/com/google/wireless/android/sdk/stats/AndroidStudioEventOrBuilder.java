@@ -6052,4 +6052,58 @@ public interface AndroidStudioEventOrBuilder extends
    * <code>optional .android_studio.BrowserSurveyEvent browser_survey_event = 216 [lazy = true];</code>
    */
   com.google.wireless.android.sdk.stats.BrowserSurveyEventOrBuilder getBrowserSurveyEventOrBuilder();
+
+  /**
+   * <pre>
+   * set when kind = GRADLE_DAEMON_JVM_CRITERIA_ERROR_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.GradleDaemonJvmCriteriaErrorEvent gradle_daemon_jvm_criteria_error_event = 217 [lazy = true];</code>
+   * @return Whether the gradleDaemonJvmCriteriaErrorEvent field is set.
+   */
+  boolean hasGradleDaemonJvmCriteriaErrorEvent();
+  /**
+   * <pre>
+   * set when kind = GRADLE_DAEMON_JVM_CRITERIA_ERROR_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.GradleDaemonJvmCriteriaErrorEvent gradle_daemon_jvm_criteria_error_event = 217 [lazy = true];</code>
+   * @return The gradleDaemonJvmCriteriaErrorEvent.
+   */
+  com.google.wireless.android.sdk.stats.GradleDaemonJvmCriteriaErrorEvent getGradleDaemonJvmCriteriaErrorEvent();
+  /**
+   * <pre>
+   * set when kind = GRADLE_DAEMON_JVM_CRITERIA_ERROR_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.GradleDaemonJvmCriteriaErrorEvent gradle_daemon_jvm_criteria_error_event = 217 [lazy = true];</code>
+   */
+  com.google.wireless.android.sdk.stats.GradleDaemonJvmCriteriaErrorEventOrBuilder getGradleDaemonJvmCriteriaErrorEventOrBuilder();
+
+  /**
+   * <pre>
+   * set when kind = ALIGN16KB_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.Align16kbEvent align16kb_event = 218 [lazy = true];</code>
+   * @return Whether the align16kbEvent field is set.
+   */
+  boolean hasAlign16KbEvent();
+  /**
+   * <pre>
+   * set when kind = ALIGN16KB_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.Align16kbEvent align16kb_event = 218 [lazy = true];</code>
+   * @return The align16kbEvent.
+   */
+  com.google.wireless.android.sdk.stats.Align16kbEvent getAlign16KbEvent();
+  /**
+   * <pre>
+   * set when kind = ALIGN16KB_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.Align16kbEvent align16kb_event = 218 [lazy = true];</code>
+   */
+  com.google.wireless.android.sdk.stats.Align16kbEventOrBuilder getAlign16KbEventOrBuilder();
 }

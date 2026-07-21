@@ -808,6 +808,10 @@ public enum BooleanOption
    * <code>ENABLE_DEVICE_TARGETING_CONFIG_API = 196;</code>
    */
   ENABLE_DEVICE_TARGETING_CONFIG_API(196),
+  /**
+   * <code>DUMP_ARTIFACTS_LOCATIONS = 197;</code>
+   */
+  DUMP_ARTIFACTS_LOCATIONS(197),
   UNRECOGNIZED(-1),
   ;
 
@@ -1599,6 +1603,10 @@ public enum BooleanOption
    * <code>ENABLE_DEVICE_TARGETING_CONFIG_API = 196;</code>
    */
   public static final int ENABLE_DEVICE_TARGETING_CONFIG_API_VALUE = 196;
+  /**
+   * <code>DUMP_ARTIFACTS_LOCATIONS = 197;</code>
+   */
+  public static final int DUMP_ARTIFACTS_LOCATIONS_VALUE = 197;
 
 
   public final int getNumber() {
@@ -1822,6 +1830,7 @@ public enum BooleanOption
       case 194: return DISABLE_INLINE_SCOPES_NUMBERS;
       case 195: return R8_OPTIMIZED_SHRINKING;
       case 196: return ENABLE_DEVICE_TARGETING_CONFIG_API;
+      case 197: return DUMP_ARTIFACTS_LOCATIONS;
       default: return null;
     }
   }

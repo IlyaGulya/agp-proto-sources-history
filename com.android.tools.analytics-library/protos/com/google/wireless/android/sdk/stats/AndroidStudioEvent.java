@@ -3200,6 +3200,18 @@ private static final long serialVersionUID = 0L;
      * <code>BROWSER_SURVEY_EVENT = 335;</code>
      */
     BROWSER_SURVEY_EVENT(335),
+    /**
+     * <code>GRADLE_DAEMON_JVM_CRITERIA_ERROR_EVENT = 336;</code>
+     */
+    GRADLE_DAEMON_JVM_CRITERIA_ERROR_EVENT(336),
+    /**
+     * <pre>
+     * Event for 16 KB Alignment information.
+     * </pre>
+     *
+     * <code>ALIGN16KB_EVENT = 337;</code>
+     */
+    ALIGN16KB_EVENT(337),
     ;
 
     /**
@@ -5709,6 +5721,18 @@ private static final long serialVersionUID = 0L;
      * <code>BROWSER_SURVEY_EVENT = 335;</code>
      */
     public static final int BROWSER_SURVEY_EVENT_VALUE = 335;
+    /**
+     * <code>GRADLE_DAEMON_JVM_CRITERIA_ERROR_EVENT = 336;</code>
+     */
+    public static final int GRADLE_DAEMON_JVM_CRITERIA_ERROR_EVENT_VALUE = 336;
+    /**
+     * <pre>
+     * Event for 16 KB Alignment information.
+     * </pre>
+     *
+     * <code>ALIGN16KB_EVENT = 337;</code>
+     */
+    public static final int ALIGN16KB_EVENT_VALUE = 337;
 
 
     public final int getNumber() {
@@ -6062,6 +6086,8 @@ private static final long serialVersionUID = 0L;
         case 333: return ADB_DELEGATE_USAGE_EVENT;
         case 334: return SETUP_WIZARD_EVENT;
         case 335: return BROWSER_SURVEY_EVENT;
+        case 336: return GRADLE_DAEMON_JVM_CRITERIA_ERROR_EVENT;
+        case 337: return ALIGN16KB_EVENT;
         default: return null;
       }
     }
@@ -7163,6 +7189,10 @@ private static final long serialVersionUID = 0L;
      * <code>EXPERIMENTAL_ACTIVITY_2 = 71;</code>
      */
     EXPERIMENTAL_ACTIVITY_2(71),
+    /**
+     * <code>COMPOSE_NAVIGATION_UI_ACTIVITY = 72;</code>
+     */
+    COMPOSE_NAVIGATION_UI_ACTIVITY(72),
     ;
 
     /**
@@ -7457,6 +7487,10 @@ private static final long serialVersionUID = 0L;
      * <code>EXPERIMENTAL_ACTIVITY_2 = 71;</code>
      */
     public static final int EXPERIMENTAL_ACTIVITY_2_VALUE = 71;
+    /**
+     * <code>COMPOSE_NAVIGATION_UI_ACTIVITY = 72;</code>
+     */
+    public static final int COMPOSE_NAVIGATION_UI_ACTIVITY_VALUE = 72;
 
 
     public final int getNumber() {
@@ -7551,6 +7585,7 @@ private static final long serialVersionUID = 0L;
         case 69: return EXPERIMENTAL_ACTIVITY;
         case 70: return KOTLIN_MULTIPLATFORM_LIBRARY_MODULE;
         case 71: return EXPERIMENTAL_ACTIVITY_2;
+        case 72: return COMPOSE_NAVIGATION_UI_ACTIVITY;
         default: return null;
       }
     }
@@ -7852,6 +7887,15 @@ private static final long serialVersionUID = 0L;
      * <code>UNKNOWN_PLUGIN_OTHER = 51;</code>
      */
     UNKNOWN_PLUGIN_OTHER(51),
+    /**
+     * <pre>
+     * Failure setting up Gradle Daemon JVM to trigger sync given unable to
+     * locate or download matching toolchain
+     * </pre>
+     *
+     * <code>GRADLE_DAEMON_JVM_CRITERIA_ERROR = 52;</code>
+     */
+    GRADLE_DAEMON_JVM_CRITERIA_ERROR(52),
     ;
 
     /**
@@ -8097,6 +8141,15 @@ private static final long serialVersionUID = 0L;
      * <code>UNKNOWN_PLUGIN_OTHER = 51;</code>
      */
     public static final int UNKNOWN_PLUGIN_OTHER_VALUE = 51;
+    /**
+     * <pre>
+     * Failure setting up Gradle Daemon JVM to trigger sync given unable to
+     * locate or download matching toolchain
+     * </pre>
+     *
+     * <code>GRADLE_DAEMON_JVM_CRITERIA_ERROR = 52;</code>
+     */
+    public static final int GRADLE_DAEMON_JVM_CRITERIA_ERROR_VALUE = 52;
 
 
     public final int getNumber() {
@@ -8171,6 +8224,7 @@ private static final long serialVersionUID = 0L;
         case 49: return MISSING_DEPENDENCY_OTHER;
         case 50: return UNKNOWN_PLUGIN_COM_ANDROID;
         case 51: return UNKNOWN_PLUGIN_OTHER;
+        case 52: return GRADLE_DAEMON_JVM_CRITERIA_ERROR;
         default: return null;
       }
     }
@@ -10320,7 +10374,7 @@ private static final long serialVersionUID = 0L;
        * <pre>
        * The different template components (eg Activities, Fragments, Services,
        * etc) the template engine could be asked to render
-       * Next ID: 64
+       * Next ID: 65
        * </pre>
        *
        * Protobuf enum {@code android_studio.AndroidStudioEvent.TemplatesUsage.TemplateComponent.TemplateType}
@@ -10436,6 +10490,10 @@ private static final long serialVersionUID = 0L;
          * <code>GOOGLE_WALLET_ACTIVITY = 61;</code>
          */
         GOOGLE_WALLET_ACTIVITY(61),
+        /**
+         * <code>COMPOSE_NAVIGATION_UI_ACTIVITY = 64;</code>
+         */
+        COMPOSE_NAVIGATION_UI_ACTIVITY(64),
         /**
          * <code>FRAGMENT_LIST = 23;</code>
          */
@@ -10696,6 +10754,10 @@ private static final long serialVersionUID = 0L;
          */
         public static final int GOOGLE_WALLET_ACTIVITY_VALUE = 61;
         /**
+         * <code>COMPOSE_NAVIGATION_UI_ACTIVITY = 64;</code>
+         */
+        public static final int COMPOSE_NAVIGATION_UI_ACTIVITY_VALUE = 64;
+        /**
          * <code>FRAGMENT_LIST = 23;</code>
          */
         public static final int FRAGMENT_LIST_VALUE = 23;
@@ -10892,6 +10954,7 @@ private static final long serialVersionUID = 0L;
             case 58: return GOOGLE_PAY_ACTIVITY;
             case 60: return CPP_GAME_ACTIVITY;
             case 61: return GOOGLE_WALLET_ACTIVITY;
+            case 64: return COMPOSE_NAVIGATION_UI_ACTIVITY;
             case 23: return FRAGMENT_LIST;
             case 24: return FRAGMENT_BLANK;
             case 25: return FRAGMENT_FULLSCREEN;
@@ -11748,7 +11811,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional uint32 min_sdk = 2 [deprecated = true];</code>
        * @deprecated android_studio.AndroidStudioEvent.TemplatesUsage.TemplateModule.min_sdk is deprecated.
-       *     See studio_stats.proto;l=1942
+       *     See studio_stats.proto;l=1958
        * @return Whether the minSdk field is set.
        */
       @java.lang.Deprecated boolean hasMinSdk();
@@ -11759,7 +11822,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional uint32 min_sdk = 2 [deprecated = true];</code>
        * @deprecated android_studio.AndroidStudioEvent.TemplatesUsage.TemplateModule.min_sdk is deprecated.
-       *     See studio_stats.proto;l=1942
+       *     See studio_stats.proto;l=1958
        * @return The minSdk.
        */
       @java.lang.Deprecated int getMinSdk();
@@ -12290,7 +12353,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional uint32 min_sdk = 2 [deprecated = true];</code>
        * @deprecated android_studio.AndroidStudioEvent.TemplatesUsage.TemplateModule.min_sdk is deprecated.
-       *     See studio_stats.proto;l=1942
+       *     See studio_stats.proto;l=1958
        * @return Whether the minSdk field is set.
        */
       @java.lang.Override
@@ -12304,7 +12367,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional uint32 min_sdk = 2 [deprecated = true];</code>
        * @deprecated android_studio.AndroidStudioEvent.TemplatesUsage.TemplateModule.min_sdk is deprecated.
-       *     See studio_stats.proto;l=1942
+       *     See studio_stats.proto;l=1958
        * @return The minSdk.
        */
       @java.lang.Override
@@ -12942,7 +13005,7 @@ private static final long serialVersionUID = 0L;
          *
          * <code>optional uint32 min_sdk = 2 [deprecated = true];</code>
          * @deprecated android_studio.AndroidStudioEvent.TemplatesUsage.TemplateModule.min_sdk is deprecated.
-         *     See studio_stats.proto;l=1942
+         *     See studio_stats.proto;l=1958
          * @return Whether the minSdk field is set.
          */
         @java.lang.Override
@@ -12956,7 +13019,7 @@ private static final long serialVersionUID = 0L;
          *
          * <code>optional uint32 min_sdk = 2 [deprecated = true];</code>
          * @deprecated android_studio.AndroidStudioEvent.TemplatesUsage.TemplateModule.min_sdk is deprecated.
-         *     See studio_stats.proto;l=1942
+         *     See studio_stats.proto;l=1958
          * @return The minSdk.
          */
         @java.lang.Override
@@ -12970,7 +13033,7 @@ private static final long serialVersionUID = 0L;
          *
          * <code>optional uint32 min_sdk = 2 [deprecated = true];</code>
          * @deprecated android_studio.AndroidStudioEvent.TemplatesUsage.TemplateModule.min_sdk is deprecated.
-         *     See studio_stats.proto;l=1942
+         *     See studio_stats.proto;l=1958
          * @param value The minSdk to set.
          * @return This builder for chaining.
          */
@@ -12988,7 +13051,7 @@ private static final long serialVersionUID = 0L;
          *
          * <code>optional uint32 min_sdk = 2 [deprecated = true];</code>
          * @deprecated android_studio.AndroidStudioEvent.TemplatesUsage.TemplateModule.min_sdk is deprecated.
-         *     See studio_stats.proto;l=1942
+         *     See studio_stats.proto;l=1958
          * @return This builder for chaining.
          */
         @java.lang.Deprecated public Builder clearMinSdk() {
@@ -23899,6 +23962,82 @@ private static final long serialVersionUID = 0L;
     return browserSurveyEvent_ == null ? com.google.wireless.android.sdk.stats.BrowserSurveyEvent.getDefaultInstance() : browserSurveyEvent_;
   }
 
+  public static final int GRADLE_DAEMON_JVM_CRITERIA_ERROR_EVENT_FIELD_NUMBER = 217;
+  private com.google.wireless.android.sdk.stats.GradleDaemonJvmCriteriaErrorEvent gradleDaemonJvmCriteriaErrorEvent_;
+  /**
+   * <pre>
+   * set when kind = GRADLE_DAEMON_JVM_CRITERIA_ERROR_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.GradleDaemonJvmCriteriaErrorEvent gradle_daemon_jvm_criteria_error_event = 217 [lazy = true];</code>
+   * @return Whether the gradleDaemonJvmCriteriaErrorEvent field is set.
+   */
+  @java.lang.Override
+  public boolean hasGradleDaemonJvmCriteriaErrorEvent() {
+    return ((bitField6_ & 0x00040000) != 0);
+  }
+  /**
+   * <pre>
+   * set when kind = GRADLE_DAEMON_JVM_CRITERIA_ERROR_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.GradleDaemonJvmCriteriaErrorEvent gradle_daemon_jvm_criteria_error_event = 217 [lazy = true];</code>
+   * @return The gradleDaemonJvmCriteriaErrorEvent.
+   */
+  @java.lang.Override
+  public com.google.wireless.android.sdk.stats.GradleDaemonJvmCriteriaErrorEvent getGradleDaemonJvmCriteriaErrorEvent() {
+    return gradleDaemonJvmCriteriaErrorEvent_ == null ? com.google.wireless.android.sdk.stats.GradleDaemonJvmCriteriaErrorEvent.getDefaultInstance() : gradleDaemonJvmCriteriaErrorEvent_;
+  }
+  /**
+   * <pre>
+   * set when kind = GRADLE_DAEMON_JVM_CRITERIA_ERROR_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.GradleDaemonJvmCriteriaErrorEvent gradle_daemon_jvm_criteria_error_event = 217 [lazy = true];</code>
+   */
+  @java.lang.Override
+  public com.google.wireless.android.sdk.stats.GradleDaemonJvmCriteriaErrorEventOrBuilder getGradleDaemonJvmCriteriaErrorEventOrBuilder() {
+    return gradleDaemonJvmCriteriaErrorEvent_ == null ? com.google.wireless.android.sdk.stats.GradleDaemonJvmCriteriaErrorEvent.getDefaultInstance() : gradleDaemonJvmCriteriaErrorEvent_;
+  }
+
+  public static final int ALIGN16KB_EVENT_FIELD_NUMBER = 218;
+  private com.google.wireless.android.sdk.stats.Align16kbEvent align16KbEvent_;
+  /**
+   * <pre>
+   * set when kind = ALIGN16KB_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.Align16kbEvent align16kb_event = 218 [lazy = true];</code>
+   * @return Whether the align16kbEvent field is set.
+   */
+  @java.lang.Override
+  public boolean hasAlign16KbEvent() {
+    return ((bitField6_ & 0x00080000) != 0);
+  }
+  /**
+   * <pre>
+   * set when kind = ALIGN16KB_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.Align16kbEvent align16kb_event = 218 [lazy = true];</code>
+   * @return The align16kbEvent.
+   */
+  @java.lang.Override
+  public com.google.wireless.android.sdk.stats.Align16kbEvent getAlign16KbEvent() {
+    return align16KbEvent_ == null ? com.google.wireless.android.sdk.stats.Align16kbEvent.getDefaultInstance() : align16KbEvent_;
+  }
+  /**
+   * <pre>
+   * set when kind = ALIGN16KB_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.Align16kbEvent align16kb_event = 218 [lazy = true];</code>
+   */
+  @java.lang.Override
+  public com.google.wireless.android.sdk.stats.Align16kbEventOrBuilder getAlign16KbEventOrBuilder() {
+    return align16KbEvent_ == null ? com.google.wireless.android.sdk.stats.Align16kbEvent.getDefaultInstance() : align16KbEvent_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -24560,6 +24699,12 @@ private static final long serialVersionUID = 0L;
     }
     if (((bitField6_ & 0x00020000) != 0)) {
       output.writeMessage(216, getBrowserSurveyEvent());
+    }
+    if (((bitField6_ & 0x00040000) != 0)) {
+      output.writeMessage(217, getGradleDaemonJvmCriteriaErrorEvent());
+    }
+    if (((bitField6_ & 0x00080000) != 0)) {
+      output.writeMessage(218, getAlign16KbEvent());
     }
     getUnknownFields().writeTo(output);
   }
@@ -25439,6 +25584,14 @@ private static final long serialVersionUID = 0L;
     if (((bitField6_ & 0x00020000) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(216, getBrowserSurveyEvent());
+    }
+    if (((bitField6_ & 0x00040000) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(217, getGradleDaemonJvmCriteriaErrorEvent());
+    }
+    if (((bitField6_ & 0x00080000) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(218, getAlign16KbEvent());
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -26506,6 +26659,16 @@ private static final long serialVersionUID = 0L;
       if (!getBrowserSurveyEvent()
           .equals(other.getBrowserSurveyEvent())) return false;
     }
+    if (hasGradleDaemonJvmCriteriaErrorEvent() != other.hasGradleDaemonJvmCriteriaErrorEvent()) return false;
+    if (hasGradleDaemonJvmCriteriaErrorEvent()) {
+      if (!getGradleDaemonJvmCriteriaErrorEvent()
+          .equals(other.getGradleDaemonJvmCriteriaErrorEvent())) return false;
+    }
+    if (hasAlign16KbEvent() != other.hasAlign16KbEvent()) return false;
+    if (hasAlign16KbEvent()) {
+      if (!getAlign16KbEvent()
+          .equals(other.getAlign16KbEvent())) return false;
+    }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -27383,6 +27546,14 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + BROWSER_SURVEY_EVENT_FIELD_NUMBER;
       hash = (53 * hash) + getBrowserSurveyEvent().hashCode();
     }
+    if (hasGradleDaemonJvmCriteriaErrorEvent()) {
+      hash = (37 * hash) + GRADLE_DAEMON_JVM_CRITERIA_ERROR_EVENT_FIELD_NUMBER;
+      hash = (53 * hash) + getGradleDaemonJvmCriteriaErrorEvent().hashCode();
+    }
+    if (hasAlign16KbEvent()) {
+      hash = (37 * hash) + ALIGN16KB_EVENT_FIELD_NUMBER;
+      hash = (53 * hash) + getAlign16KbEvent().hashCode();
+    }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -27704,6 +27875,8 @@ private static final long serialVersionUID = 0L;
         getAdbDelegateUsageEventFieldBuilder();
         getSetupWizardEventFieldBuilder();
         getBrowserSurveyEventFieldBuilder();
+        getGradleDaemonJvmCriteriaErrorEventFieldBuilder();
+        getAlign16KbEventFieldBuilder();
       }
     }
     @java.lang.Override
@@ -28712,6 +28885,16 @@ private static final long serialVersionUID = 0L;
       if (browserSurveyEventBuilder_ != null) {
         browserSurveyEventBuilder_.dispose();
         browserSurveyEventBuilder_ = null;
+      }
+      gradleDaemonJvmCriteriaErrorEvent_ = null;
+      if (gradleDaemonJvmCriteriaErrorEventBuilder_ != null) {
+        gradleDaemonJvmCriteriaErrorEventBuilder_.dispose();
+        gradleDaemonJvmCriteriaErrorEventBuilder_ = null;
+      }
+      align16KbEvent_ = null;
+      if (align16KbEventBuilder_ != null) {
+        align16KbEventBuilder_.dispose();
+        align16KbEventBuilder_ = null;
       }
       return this;
     }
@@ -30060,6 +30243,18 @@ private static final long serialVersionUID = 0L;
             : browserSurveyEventBuilder_.build();
         to_bitField6_ |= 0x00020000;
       }
+      if (((from_bitField6_ & 0x01000000) != 0)) {
+        result.gradleDaemonJvmCriteriaErrorEvent_ = gradleDaemonJvmCriteriaErrorEventBuilder_ == null
+            ? gradleDaemonJvmCriteriaErrorEvent_
+            : gradleDaemonJvmCriteriaErrorEventBuilder_.build();
+        to_bitField6_ |= 0x00040000;
+      }
+      if (((from_bitField6_ & 0x02000000) != 0)) {
+        result.align16KbEvent_ = align16KbEventBuilder_ == null
+            ? align16KbEvent_
+            : align16KbEventBuilder_.build();
+        to_bitField6_ |= 0x00080000;
+      }
       result.bitField5_ |= to_bitField5_;
       result.bitField6_ |= to_bitField6_;
     }
@@ -30827,6 +31022,12 @@ private static final long serialVersionUID = 0L;
       }
       if (other.hasBrowserSurveyEvent()) {
         mergeBrowserSurveyEvent(other.getBrowserSurveyEvent());
+      }
+      if (other.hasGradleDaemonJvmCriteriaErrorEvent()) {
+        mergeGradleDaemonJvmCriteriaErrorEvent(other.getGradleDaemonJvmCriteriaErrorEvent());
+      }
+      if (other.hasAlign16KbEvent()) {
+        mergeAlign16KbEvent(other.getAlign16KbEvent());
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -32434,6 +32635,20 @@ private static final long serialVersionUID = 0L;
               bitField6_ |= 0x00800000;
               break;
             } // case 1730
+            case 1738: {
+              input.readMessage(
+                  getGradleDaemonJvmCriteriaErrorEventFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField6_ |= 0x01000000;
+              break;
+            } // case 1738
+            case 1746: {
+              input.readMessage(
+                  getAlign16KbEventFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField6_ |= 0x02000000;
+              break;
+            } // case 1746
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -65273,6 +65488,316 @@ private static final long serialVersionUID = 0L;
         browserSurveyEvent_ = null;
       }
       return browserSurveyEventBuilder_;
+    }
+
+    private com.google.wireless.android.sdk.stats.GradleDaemonJvmCriteriaErrorEvent gradleDaemonJvmCriteriaErrorEvent_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.GradleDaemonJvmCriteriaErrorEvent, com.google.wireless.android.sdk.stats.GradleDaemonJvmCriteriaErrorEvent.Builder, com.google.wireless.android.sdk.stats.GradleDaemonJvmCriteriaErrorEventOrBuilder> gradleDaemonJvmCriteriaErrorEventBuilder_;
+    /**
+     * <pre>
+     * set when kind = GRADLE_DAEMON_JVM_CRITERIA_ERROR_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.GradleDaemonJvmCriteriaErrorEvent gradle_daemon_jvm_criteria_error_event = 217 [lazy = true];</code>
+     * @return Whether the gradleDaemonJvmCriteriaErrorEvent field is set.
+     */
+    public boolean hasGradleDaemonJvmCriteriaErrorEvent() {
+      return ((bitField6_ & 0x01000000) != 0);
+    }
+    /**
+     * <pre>
+     * set when kind = GRADLE_DAEMON_JVM_CRITERIA_ERROR_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.GradleDaemonJvmCriteriaErrorEvent gradle_daemon_jvm_criteria_error_event = 217 [lazy = true];</code>
+     * @return The gradleDaemonJvmCriteriaErrorEvent.
+     */
+    public com.google.wireless.android.sdk.stats.GradleDaemonJvmCriteriaErrorEvent getGradleDaemonJvmCriteriaErrorEvent() {
+      if (gradleDaemonJvmCriteriaErrorEventBuilder_ == null) {
+        return gradleDaemonJvmCriteriaErrorEvent_ == null ? com.google.wireless.android.sdk.stats.GradleDaemonJvmCriteriaErrorEvent.getDefaultInstance() : gradleDaemonJvmCriteriaErrorEvent_;
+      } else {
+        return gradleDaemonJvmCriteriaErrorEventBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * set when kind = GRADLE_DAEMON_JVM_CRITERIA_ERROR_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.GradleDaemonJvmCriteriaErrorEvent gradle_daemon_jvm_criteria_error_event = 217 [lazy = true];</code>
+     */
+    public Builder setGradleDaemonJvmCriteriaErrorEvent(com.google.wireless.android.sdk.stats.GradleDaemonJvmCriteriaErrorEvent value) {
+      if (gradleDaemonJvmCriteriaErrorEventBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        gradleDaemonJvmCriteriaErrorEvent_ = value;
+      } else {
+        gradleDaemonJvmCriteriaErrorEventBuilder_.setMessage(value);
+      }
+      bitField6_ |= 0x01000000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = GRADLE_DAEMON_JVM_CRITERIA_ERROR_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.GradleDaemonJvmCriteriaErrorEvent gradle_daemon_jvm_criteria_error_event = 217 [lazy = true];</code>
+     */
+    public Builder setGradleDaemonJvmCriteriaErrorEvent(
+        com.google.wireless.android.sdk.stats.GradleDaemonJvmCriteriaErrorEvent.Builder builderForValue) {
+      if (gradleDaemonJvmCriteriaErrorEventBuilder_ == null) {
+        gradleDaemonJvmCriteriaErrorEvent_ = builderForValue.build();
+      } else {
+        gradleDaemonJvmCriteriaErrorEventBuilder_.setMessage(builderForValue.build());
+      }
+      bitField6_ |= 0x01000000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = GRADLE_DAEMON_JVM_CRITERIA_ERROR_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.GradleDaemonJvmCriteriaErrorEvent gradle_daemon_jvm_criteria_error_event = 217 [lazy = true];</code>
+     */
+    public Builder mergeGradleDaemonJvmCriteriaErrorEvent(com.google.wireless.android.sdk.stats.GradleDaemonJvmCriteriaErrorEvent value) {
+      if (gradleDaemonJvmCriteriaErrorEventBuilder_ == null) {
+        if (((bitField6_ & 0x01000000) != 0) &&
+          gradleDaemonJvmCriteriaErrorEvent_ != null &&
+          gradleDaemonJvmCriteriaErrorEvent_ != com.google.wireless.android.sdk.stats.GradleDaemonJvmCriteriaErrorEvent.getDefaultInstance()) {
+          getGradleDaemonJvmCriteriaErrorEventBuilder().mergeFrom(value);
+        } else {
+          gradleDaemonJvmCriteriaErrorEvent_ = value;
+        }
+      } else {
+        gradleDaemonJvmCriteriaErrorEventBuilder_.mergeFrom(value);
+      }
+      bitField6_ |= 0x01000000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = GRADLE_DAEMON_JVM_CRITERIA_ERROR_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.GradleDaemonJvmCriteriaErrorEvent gradle_daemon_jvm_criteria_error_event = 217 [lazy = true];</code>
+     */
+    public Builder clearGradleDaemonJvmCriteriaErrorEvent() {
+      bitField6_ = (bitField6_ & ~0x01000000);
+      gradleDaemonJvmCriteriaErrorEvent_ = null;
+      if (gradleDaemonJvmCriteriaErrorEventBuilder_ != null) {
+        gradleDaemonJvmCriteriaErrorEventBuilder_.dispose();
+        gradleDaemonJvmCriteriaErrorEventBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = GRADLE_DAEMON_JVM_CRITERIA_ERROR_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.GradleDaemonJvmCriteriaErrorEvent gradle_daemon_jvm_criteria_error_event = 217 [lazy = true];</code>
+     */
+    public com.google.wireless.android.sdk.stats.GradleDaemonJvmCriteriaErrorEvent.Builder getGradleDaemonJvmCriteriaErrorEventBuilder() {
+      bitField6_ |= 0x01000000;
+      onChanged();
+      return getGradleDaemonJvmCriteriaErrorEventFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * set when kind = GRADLE_DAEMON_JVM_CRITERIA_ERROR_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.GradleDaemonJvmCriteriaErrorEvent gradle_daemon_jvm_criteria_error_event = 217 [lazy = true];</code>
+     */
+    public com.google.wireless.android.sdk.stats.GradleDaemonJvmCriteriaErrorEventOrBuilder getGradleDaemonJvmCriteriaErrorEventOrBuilder() {
+      if (gradleDaemonJvmCriteriaErrorEventBuilder_ != null) {
+        return gradleDaemonJvmCriteriaErrorEventBuilder_.getMessageOrBuilder();
+      } else {
+        return gradleDaemonJvmCriteriaErrorEvent_ == null ?
+            com.google.wireless.android.sdk.stats.GradleDaemonJvmCriteriaErrorEvent.getDefaultInstance() : gradleDaemonJvmCriteriaErrorEvent_;
+      }
+    }
+    /**
+     * <pre>
+     * set when kind = GRADLE_DAEMON_JVM_CRITERIA_ERROR_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.GradleDaemonJvmCriteriaErrorEvent gradle_daemon_jvm_criteria_error_event = 217 [lazy = true];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.GradleDaemonJvmCriteriaErrorEvent, com.google.wireless.android.sdk.stats.GradleDaemonJvmCriteriaErrorEvent.Builder, com.google.wireless.android.sdk.stats.GradleDaemonJvmCriteriaErrorEventOrBuilder> 
+        getGradleDaemonJvmCriteriaErrorEventFieldBuilder() {
+      if (gradleDaemonJvmCriteriaErrorEventBuilder_ == null) {
+        gradleDaemonJvmCriteriaErrorEventBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.wireless.android.sdk.stats.GradleDaemonJvmCriteriaErrorEvent, com.google.wireless.android.sdk.stats.GradleDaemonJvmCriteriaErrorEvent.Builder, com.google.wireless.android.sdk.stats.GradleDaemonJvmCriteriaErrorEventOrBuilder>(
+                getGradleDaemonJvmCriteriaErrorEvent(),
+                getParentForChildren(),
+                isClean());
+        gradleDaemonJvmCriteriaErrorEvent_ = null;
+      }
+      return gradleDaemonJvmCriteriaErrorEventBuilder_;
+    }
+
+    private com.google.wireless.android.sdk.stats.Align16kbEvent align16KbEvent_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.Align16kbEvent, com.google.wireless.android.sdk.stats.Align16kbEvent.Builder, com.google.wireless.android.sdk.stats.Align16kbEventOrBuilder> align16KbEventBuilder_;
+    /**
+     * <pre>
+     * set when kind = ALIGN16KB_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.Align16kbEvent align16kb_event = 218 [lazy = true];</code>
+     * @return Whether the align16kbEvent field is set.
+     */
+    public boolean hasAlign16KbEvent() {
+      return ((bitField6_ & 0x02000000) != 0);
+    }
+    /**
+     * <pre>
+     * set when kind = ALIGN16KB_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.Align16kbEvent align16kb_event = 218 [lazy = true];</code>
+     * @return The align16kbEvent.
+     */
+    public com.google.wireless.android.sdk.stats.Align16kbEvent getAlign16KbEvent() {
+      if (align16KbEventBuilder_ == null) {
+        return align16KbEvent_ == null ? com.google.wireless.android.sdk.stats.Align16kbEvent.getDefaultInstance() : align16KbEvent_;
+      } else {
+        return align16KbEventBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * set when kind = ALIGN16KB_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.Align16kbEvent align16kb_event = 218 [lazy = true];</code>
+     */
+    public Builder setAlign16KbEvent(com.google.wireless.android.sdk.stats.Align16kbEvent value) {
+      if (align16KbEventBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        align16KbEvent_ = value;
+      } else {
+        align16KbEventBuilder_.setMessage(value);
+      }
+      bitField6_ |= 0x02000000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = ALIGN16KB_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.Align16kbEvent align16kb_event = 218 [lazy = true];</code>
+     */
+    public Builder setAlign16KbEvent(
+        com.google.wireless.android.sdk.stats.Align16kbEvent.Builder builderForValue) {
+      if (align16KbEventBuilder_ == null) {
+        align16KbEvent_ = builderForValue.build();
+      } else {
+        align16KbEventBuilder_.setMessage(builderForValue.build());
+      }
+      bitField6_ |= 0x02000000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = ALIGN16KB_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.Align16kbEvent align16kb_event = 218 [lazy = true];</code>
+     */
+    public Builder mergeAlign16KbEvent(com.google.wireless.android.sdk.stats.Align16kbEvent value) {
+      if (align16KbEventBuilder_ == null) {
+        if (((bitField6_ & 0x02000000) != 0) &&
+          align16KbEvent_ != null &&
+          align16KbEvent_ != com.google.wireless.android.sdk.stats.Align16kbEvent.getDefaultInstance()) {
+          getAlign16KbEventBuilder().mergeFrom(value);
+        } else {
+          align16KbEvent_ = value;
+        }
+      } else {
+        align16KbEventBuilder_.mergeFrom(value);
+      }
+      bitField6_ |= 0x02000000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = ALIGN16KB_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.Align16kbEvent align16kb_event = 218 [lazy = true];</code>
+     */
+    public Builder clearAlign16KbEvent() {
+      bitField6_ = (bitField6_ & ~0x02000000);
+      align16KbEvent_ = null;
+      if (align16KbEventBuilder_ != null) {
+        align16KbEventBuilder_.dispose();
+        align16KbEventBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = ALIGN16KB_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.Align16kbEvent align16kb_event = 218 [lazy = true];</code>
+     */
+    public com.google.wireless.android.sdk.stats.Align16kbEvent.Builder getAlign16KbEventBuilder() {
+      bitField6_ |= 0x02000000;
+      onChanged();
+      return getAlign16KbEventFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * set when kind = ALIGN16KB_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.Align16kbEvent align16kb_event = 218 [lazy = true];</code>
+     */
+    public com.google.wireless.android.sdk.stats.Align16kbEventOrBuilder getAlign16KbEventOrBuilder() {
+      if (align16KbEventBuilder_ != null) {
+        return align16KbEventBuilder_.getMessageOrBuilder();
+      } else {
+        return align16KbEvent_ == null ?
+            com.google.wireless.android.sdk.stats.Align16kbEvent.getDefaultInstance() : align16KbEvent_;
+      }
+    }
+    /**
+     * <pre>
+     * set when kind = ALIGN16KB_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.Align16kbEvent align16kb_event = 218 [lazy = true];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.Align16kbEvent, com.google.wireless.android.sdk.stats.Align16kbEvent.Builder, com.google.wireless.android.sdk.stats.Align16kbEventOrBuilder> 
+        getAlign16KbEventFieldBuilder() {
+      if (align16KbEventBuilder_ == null) {
+        align16KbEventBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.wireless.android.sdk.stats.Align16kbEvent, com.google.wireless.android.sdk.stats.Align16kbEvent.Builder, com.google.wireless.android.sdk.stats.Align16kbEventOrBuilder>(
+                getAlign16KbEvent(),
+                getParentForChildren(),
+                isClean());
+        align16KbEvent_ = null;
+      }
+      return align16KbEventBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(
