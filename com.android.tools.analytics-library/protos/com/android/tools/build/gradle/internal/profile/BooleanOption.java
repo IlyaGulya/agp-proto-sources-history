@@ -751,6 +751,10 @@ public enum BooleanOption
    * <code>DISABLE_MINIFY_LOCAL_DEPENDENCIES_FOR_LIBRARIES = 182;</code>
    */
   DISABLE_MINIFY_LOCAL_DEPENDENCIES_FOR_LIBRARIES(182),
+  /**
+   * <code>DISABLE_KOTLIN_ATTRIBUTE_SETUP = 183;</code>
+   */
+  DISABLE_KOTLIN_ATTRIBUTE_SETUP(183),
   UNRECOGNIZED(-1),
   ;
 
@@ -1486,6 +1490,10 @@ public enum BooleanOption
    * <code>DISABLE_MINIFY_LOCAL_DEPENDENCIES_FOR_LIBRARIES = 182;</code>
    */
   public static final int DISABLE_MINIFY_LOCAL_DEPENDENCIES_FOR_LIBRARIES_VALUE = 182;
+  /**
+   * <code>DISABLE_KOTLIN_ATTRIBUTE_SETUP = 183;</code>
+   */
+  public static final int DISABLE_KOTLIN_ATTRIBUTE_SETUP_VALUE = 183;
 
 
   public final int getNumber() {
@@ -1695,6 +1703,7 @@ public enum BooleanOption
       case 180: return ENABLE_NEW_TEST_DSL;
       case 181: return PRIVACY_SANDBOX_SDK_PLUGIN_SUPPORT;
       case 182: return DISABLE_MINIFY_LOCAL_DEPENDENCIES_FOR_LIBRARIES;
+      case 183: return DISABLE_KOTLIN_ATTRIBUTE_SETUP;
       default: return null;
     }
   }
