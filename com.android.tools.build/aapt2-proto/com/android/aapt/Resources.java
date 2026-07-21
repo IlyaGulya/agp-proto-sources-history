@@ -18166,12 +18166,6 @@ public final class Resources {
      * <code>.aapt.pb.Value value = 2;</code>
      */
     com.android.aapt.Resources.ValueOrBuilder getValueOrBuilder();
-
-    /**
-     * <code>bool uses_readwrite_feature_flags = 4;</code>
-     * @return The usesReadwriteFeatureFlags.
-     */
-    boolean getUsesReadwriteFeatureFlags();
   }
   /**
    * <pre>
@@ -18264,17 +18258,6 @@ public final class Resources {
       return value_ == null ? com.android.aapt.Resources.Value.getDefaultInstance() : value_;
     }
 
-    public static final int USES_READWRITE_FEATURE_FLAGS_FIELD_NUMBER = 4;
-    private boolean usesReadwriteFeatureFlags_ = false;
-    /**
-     * <code>bool uses_readwrite_feature_flags = 4;</code>
-     * @return The usesReadwriteFeatureFlags.
-     */
-    @java.lang.Override
-    public boolean getUsesReadwriteFeatureFlags() {
-      return usesReadwriteFeatureFlags_;
-    }
-
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -18295,9 +18278,6 @@ public final class Resources {
       if (value_ != null) {
         output.writeMessage(2, getValue());
       }
-      if (usesReadwriteFeatureFlags_ != false) {
-        output.writeBool(4, usesReadwriteFeatureFlags_);
-      }
       getUnknownFields().writeTo(output);
     }
 
@@ -18314,10 +18294,6 @@ public final class Resources {
       if (value_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getValue());
-      }
-      if (usesReadwriteFeatureFlags_ != false) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(4, usesReadwriteFeatureFlags_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -18344,8 +18320,6 @@ public final class Resources {
         if (!getValue()
             .equals(other.getValue())) return false;
       }
-      if (getUsesReadwriteFeatureFlags()
-          != other.getUsesReadwriteFeatureFlags()) return false;
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -18365,9 +18339,6 @@ public final class Resources {
         hash = (37 * hash) + VALUE_FIELD_NUMBER;
         hash = (53 * hash) + getValue().hashCode();
       }
-      hash = (37 * hash) + USES_READWRITE_FEATURE_FLAGS_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
-          getUsesReadwriteFeatureFlags());
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -18511,7 +18482,6 @@ public final class Resources {
           valueBuilder_.dispose();
           valueBuilder_ = null;
         }
-        usesReadwriteFeatureFlags_ = false;
         return this;
       }
 
@@ -18555,9 +18525,6 @@ public final class Resources {
               ? value_
               : valueBuilder_.build();
         }
-        if (((from_bitField0_ & 0x00000004) != 0)) {
-          result.usesReadwriteFeatureFlags_ = usesReadwriteFeatureFlags_;
-        }
       }
 
       @java.lang.Override
@@ -18577,9 +18544,6 @@ public final class Resources {
         }
         if (other.hasValue()) {
           mergeValue(other.getValue());
-        }
-        if (other.getUsesReadwriteFeatureFlags() != false) {
-          setUsesReadwriteFeatureFlags(other.getUsesReadwriteFeatureFlags());
         }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
@@ -18621,11 +18585,6 @@ public final class Resources {
                 bitField0_ |= 0x00000002;
                 break;
               } // case 18
-              case 32: {
-                usesReadwriteFeatureFlags_ = input.readBool();
-                bitField0_ |= 0x00000004;
-                break;
-              } // case 32
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -18879,38 +18838,6 @@ public final class Resources {
           value_ = null;
         }
         return valueBuilder_;
-      }
-
-      private boolean usesReadwriteFeatureFlags_ ;
-      /**
-       * <code>bool uses_readwrite_feature_flags = 4;</code>
-       * @return The usesReadwriteFeatureFlags.
-       */
-      @java.lang.Override
-      public boolean getUsesReadwriteFeatureFlags() {
-        return usesReadwriteFeatureFlags_;
-      }
-      /**
-       * <code>bool uses_readwrite_feature_flags = 4;</code>
-       * @param value The usesReadwriteFeatureFlags to set.
-       * @return This builder for chaining.
-       */
-      public Builder setUsesReadwriteFeatureFlags(boolean value) {
-
-        usesReadwriteFeatureFlags_ = value;
-        bitField0_ |= 0x00000004;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>bool uses_readwrite_feature_flags = 4;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearUsesReadwriteFeatureFlags() {
-        bitField0_ = (bitField0_ & ~0x00000004);
-        usesReadwriteFeatureFlags_ = false;
-        onChanged();
-        return this;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -30835,14 +30762,14 @@ public final class Resources {
     /**
      * <code>float dimension_value_deprecated = 4 [deprecated = true];</code>
      * @deprecated aapt.pb.Primitive.dimension_value_deprecated is deprecated.
-     *     See Resources.proto;l=427
+     *     See Resources.proto;l=426
      * @return Whether the dimensionValueDeprecated field is set.
      */
     @java.lang.Deprecated boolean hasDimensionValueDeprecated();
     /**
      * <code>float dimension_value_deprecated = 4 [deprecated = true];</code>
      * @deprecated aapt.pb.Primitive.dimension_value_deprecated is deprecated.
-     *     See Resources.proto;l=427
+     *     See Resources.proto;l=426
      * @return The dimensionValueDeprecated.
      */
     @java.lang.Deprecated float getDimensionValueDeprecated();
@@ -30850,14 +30777,14 @@ public final class Resources {
     /**
      * <code>float fraction_value_deprecated = 5 [deprecated = true];</code>
      * @deprecated aapt.pb.Primitive.fraction_value_deprecated is deprecated.
-     *     See Resources.proto;l=428
+     *     See Resources.proto;l=427
      * @return Whether the fractionValueDeprecated field is set.
      */
     @java.lang.Deprecated boolean hasFractionValueDeprecated();
     /**
      * <code>float fraction_value_deprecated = 5 [deprecated = true];</code>
      * @deprecated aapt.pb.Primitive.fraction_value_deprecated is deprecated.
-     *     See Resources.proto;l=428
+     *     See Resources.proto;l=427
      * @return The fractionValueDeprecated.
      */
     @java.lang.Deprecated float getFractionValueDeprecated();
@@ -31972,7 +31899,7 @@ public final class Resources {
     /**
      * <code>float dimension_value_deprecated = 4 [deprecated = true];</code>
      * @deprecated aapt.pb.Primitive.dimension_value_deprecated is deprecated.
-     *     See Resources.proto;l=427
+     *     See Resources.proto;l=426
      * @return Whether the dimensionValueDeprecated field is set.
      */
     @java.lang.Override
@@ -31982,7 +31909,7 @@ public final class Resources {
     /**
      * <code>float dimension_value_deprecated = 4 [deprecated = true];</code>
      * @deprecated aapt.pb.Primitive.dimension_value_deprecated is deprecated.
-     *     See Resources.proto;l=427
+     *     See Resources.proto;l=426
      * @return The dimensionValueDeprecated.
      */
     @java.lang.Override
@@ -31997,7 +31924,7 @@ public final class Resources {
     /**
      * <code>float fraction_value_deprecated = 5 [deprecated = true];</code>
      * @deprecated aapt.pb.Primitive.fraction_value_deprecated is deprecated.
-     *     See Resources.proto;l=428
+     *     See Resources.proto;l=427
      * @return Whether the fractionValueDeprecated field is set.
      */
     @java.lang.Override
@@ -32007,7 +31934,7 @@ public final class Resources {
     /**
      * <code>float fraction_value_deprecated = 5 [deprecated = true];</code>
      * @deprecated aapt.pb.Primitive.fraction_value_deprecated is deprecated.
-     *     See Resources.proto;l=428
+     *     See Resources.proto;l=427
      * @return The fractionValueDeprecated.
      */
     @java.lang.Override
@@ -33420,7 +33347,7 @@ public final class Resources {
       /**
        * <code>float dimension_value_deprecated = 4 [deprecated = true];</code>
        * @deprecated aapt.pb.Primitive.dimension_value_deprecated is deprecated.
-       *     See Resources.proto;l=427
+       *     See Resources.proto;l=426
        * @return Whether the dimensionValueDeprecated field is set.
        */
       @java.lang.Deprecated public boolean hasDimensionValueDeprecated() {
@@ -33429,7 +33356,7 @@ public final class Resources {
       /**
        * <code>float dimension_value_deprecated = 4 [deprecated = true];</code>
        * @deprecated aapt.pb.Primitive.dimension_value_deprecated is deprecated.
-       *     See Resources.proto;l=427
+       *     See Resources.proto;l=426
        * @return The dimensionValueDeprecated.
        */
       @java.lang.Deprecated public float getDimensionValueDeprecated() {
@@ -33441,7 +33368,7 @@ public final class Resources {
       /**
        * <code>float dimension_value_deprecated = 4 [deprecated = true];</code>
        * @deprecated aapt.pb.Primitive.dimension_value_deprecated is deprecated.
-       *     See Resources.proto;l=427
+       *     See Resources.proto;l=426
        * @param value The dimensionValueDeprecated to set.
        * @return This builder for chaining.
        */
@@ -33455,7 +33382,7 @@ public final class Resources {
       /**
        * <code>float dimension_value_deprecated = 4 [deprecated = true];</code>
        * @deprecated aapt.pb.Primitive.dimension_value_deprecated is deprecated.
-       *     See Resources.proto;l=427
+       *     See Resources.proto;l=426
        * @return This builder for chaining.
        */
       @java.lang.Deprecated public Builder clearDimensionValueDeprecated() {
@@ -33470,7 +33397,7 @@ public final class Resources {
       /**
        * <code>float fraction_value_deprecated = 5 [deprecated = true];</code>
        * @deprecated aapt.pb.Primitive.fraction_value_deprecated is deprecated.
-       *     See Resources.proto;l=428
+       *     See Resources.proto;l=427
        * @return Whether the fractionValueDeprecated field is set.
        */
       @java.lang.Deprecated public boolean hasFractionValueDeprecated() {
@@ -33479,7 +33406,7 @@ public final class Resources {
       /**
        * <code>float fraction_value_deprecated = 5 [deprecated = true];</code>
        * @deprecated aapt.pb.Primitive.fraction_value_deprecated is deprecated.
-       *     See Resources.proto;l=428
+       *     See Resources.proto;l=427
        * @return The fractionValueDeprecated.
        */
       @java.lang.Deprecated public float getFractionValueDeprecated() {
@@ -33491,7 +33418,7 @@ public final class Resources {
       /**
        * <code>float fraction_value_deprecated = 5 [deprecated = true];</code>
        * @deprecated aapt.pb.Primitive.fraction_value_deprecated is deprecated.
-       *     See Resources.proto;l=428
+       *     See Resources.proto;l=427
        * @param value The fractionValueDeprecated to set.
        * @return This builder for chaining.
        */
@@ -33505,7 +33432,7 @@ public final class Resources {
       /**
        * <code>float fraction_value_deprecated = 5 [deprecated = true];</code>
        * @deprecated aapt.pb.Primitive.fraction_value_deprecated is deprecated.
-       *     See Resources.proto;l=428
+       *     See Resources.proto;l=427
        * @return This builder for chaining.
        */
       @java.lang.Deprecated public Builder clearFractionValueDeprecated() {
@@ -55641,114 +55568,113 @@ public final class Resources {
       "pb.StagedId\0228\n\032flag_disabled_config_valu" +
       "e\030\010 \003(\0132\024.aapt.pb.ConfigValue\0229\n\033readwri" +
       "te_flag_config_value\030\t \003(\0132\024.aapt.pb.Con" +
-      "figValue\"\200\001\n\013ConfigValue\022&\n\006config\030\001 \001(\013" +
-      "2\026.aapt.pb.Configuration\022\035\n\005value\030\002 \001(\0132" +
-      "\016.aapt.pb.Value\022$\n\034uses_readwrite_featur" +
-      "e_flags\030\004 \001(\010J\004\010\003\020\004\"\241\001\n\005Value\022\037\n\006source\030" +
+      "figValue\"Z\n\013ConfigValue\022&\n\006config\030\001 \001(\0132" +
+      "\026.aapt.pb.Configuration\022\035\n\005value\030\002 \001(\0132\016" +
+      ".aapt.pb.ValueJ\004\010\003\020\004\"\241\001\n\005Value\022\037\n\006source" +
+      "\030\001 \001(\0132\017.aapt.pb.Source\022\017\n\007comment\030\002 \001(\t" +
+      "\022\014\n\004weak\030\003 \001(\010\022\035\n\004item\030\004 \001(\0132\r.aapt.pb.I" +
+      "temH\000\0220\n\016compound_value\030\005 \001(\0132\026.aapt.pb." +
+      "CompoundValueH\000B\007\n\005value\"\313\002\n\004Item\022!\n\003ref" +
+      "\030\001 \001(\0132\022.aapt.pb.ReferenceH\000\022\036\n\003str\030\002 \001(" +
+      "\0132\017.aapt.pb.StringH\000\022%\n\007raw_str\030\003 \001(\0132\022." +
+      "aapt.pb.RawStringH\000\022+\n\nstyled_str\030\004 \001(\0132" +
+      "\025.aapt.pb.StyledStringH\000\022&\n\004file\030\005 \001(\0132\026" +
+      ".aapt.pb.FileReferenceH\000\022\031\n\002id\030\006 \001(\0132\013.a" +
+      "apt.pb.IdH\000\022\"\n\004prim\030\007 \001(\0132\022.aapt.pb.Prim" +
+      "itiveH\000\022\023\n\013flag_status\030\010 \001(\r\022\024\n\014flag_neg" +
+      "ated\030\t \001(\010\022\021\n\tflag_name\030\n \001(\tB\007\n\005value\"\255" +
+      "\002\n\rCompoundValue\022\"\n\004attr\030\001 \001(\0132\022.aapt.pb" +
+      ".AttributeH\000\022\037\n\005style\030\002 \001(\0132\016.aapt.pb.St" +
+      "yleH\000\022\'\n\tstyleable\030\003 \001(\0132\022.aapt.pb.Style" +
+      "ableH\000\022\037\n\005array\030\004 \001(\0132\016.aapt.pb.ArrayH\000\022" +
+      "!\n\006plural\030\005 \001(\0132\017.aapt.pb.PluralH\000\022#\n\005ma" +
+      "cro\030\006 \001(\0132\022.aapt.pb.MacroBodyH\000\022\023\n\013flag_" +
+      "status\030\007 \001(\r\022\024\n\014flag_negated\030\010 \001(\010\022\021\n\tfl" +
+      "ag_name\030\t \001(\tB\007\n\005value\"\030\n\007Boolean\022\r\n\005val" +
+      "ue\030\001 \001(\010\"\320\001\n\tReference\022%\n\004type\030\001 \001(\0162\027.a" +
+      "apt.pb.Reference.Type\022\n\n\002id\030\002 \001(\r\022\014\n\004nam" +
+      "e\030\003 \001(\t\022\017\n\007private\030\004 \001(\010\022$\n\nis_dynamic\030\005" +
+      " \001(\0132\020.aapt.pb.Boolean\022\022\n\ntype_flags\030\006 \001" +
+      "(\r\022\021\n\tallow_raw\030\007 \001(\010\"$\n\004Type\022\r\n\tREFEREN" +
+      "CE\020\000\022\r\n\tATTRIBUTE\020\001\"\004\n\002Id\"\027\n\006String\022\r\n\005v" +
+      "alue\030\001 \001(\t\"\032\n\tRawString\022\r\n\005value\030\001 \001(\t\"\203" +
+      "\001\n\014StyledString\022\r\n\005value\030\001 \001(\t\022(\n\004span\030\002" +
+      " \003(\0132\032.aapt.pb.StyledString.Span\032:\n\004Span" +
+      "\022\013\n\003tag\030\001 \001(\t\022\022\n\nfirst_char\030\002 \001(\r\022\021\n\tlas" +
+      "t_char\030\003 \001(\r\"\205\001\n\rFileReference\022\014\n\004path\030\001" +
+      " \001(\t\022)\n\004type\030\002 \001(\0162\033.aapt.pb.FileReferen" +
+      "ce.Type\";\n\004Type\022\013\n\007UNKNOWN\020\000\022\007\n\003PNG\020\001\022\016\n" +
+      "\nBINARY_XML\020\002\022\r\n\tPROTO_XML\020\003\"\203\004\n\tPrimiti" +
+      "ve\0221\n\nnull_value\030\001 \001(\0132\033.aapt.pb.Primiti" +
+      "ve.NullTypeH\000\0223\n\013empty_value\030\002 \001(\0132\034.aap" +
+      "t.pb.Primitive.EmptyTypeH\000\022\025\n\013float_valu" +
+      "e\030\003 \001(\002H\000\022\031\n\017dimension_value\030\r \001(\rH\000\022\030\n\016" +
+      "fraction_value\030\016 \001(\rH\000\022\033\n\021int_decimal_va" +
+      "lue\030\006 \001(\005H\000\022\037\n\025int_hexadecimal_value\030\007 \001" +
+      "(\rH\000\022\027\n\rboolean_value\030\010 \001(\010H\000\022\033\n\021color_a" +
+      "rgb8_value\030\t \001(\rH\000\022\032\n\020color_rgb8_value\030\n" +
+      " \001(\rH\000\022\033\n\021color_argb4_value\030\013 \001(\rH\000\022\032\n\020c" +
+      "olor_rgb4_value\030\014 \001(\rH\000\022(\n\032dimension_val" +
+      "ue_deprecated\030\004 \001(\002B\002\030\001H\000\022\'\n\031fraction_va" +
+      "lue_deprecated\030\005 \001(\002B\002\030\001H\000\032\n\n\010NullType\032\013" +
+      "\n\tEmptyTypeB\r\n\013oneof_value\"\220\003\n\tAttribute" +
+      "\022\024\n\014format_flags\030\001 \001(\r\022\017\n\007min_int\030\002 \001(\005\022" +
+      "\017\n\007max_int\030\003 \001(\005\022)\n\006symbol\030\004 \003(\0132\031.aapt." +
+      "pb.Attribute.Symbol\032y\n\006Symbol\022\037\n\006source\030" +
       "\001 \001(\0132\017.aapt.pb.Source\022\017\n\007comment\030\002 \001(\t\022" +
-      "\014\n\004weak\030\003 \001(\010\022\035\n\004item\030\004 \001(\0132\r.aapt.pb.It" +
-      "emH\000\0220\n\016compound_value\030\005 \001(\0132\026.aapt.pb.C" +
-      "ompoundValueH\000B\007\n\005value\"\313\002\n\004Item\022!\n\003ref\030" +
-      "\001 \001(\0132\022.aapt.pb.ReferenceH\000\022\036\n\003str\030\002 \001(\013" +
-      "2\017.aapt.pb.StringH\000\022%\n\007raw_str\030\003 \001(\0132\022.a" +
-      "apt.pb.RawStringH\000\022+\n\nstyled_str\030\004 \001(\0132\025" +
-      ".aapt.pb.StyledStringH\000\022&\n\004file\030\005 \001(\0132\026." +
-      "aapt.pb.FileReferenceH\000\022\031\n\002id\030\006 \001(\0132\013.aa" +
-      "pt.pb.IdH\000\022\"\n\004prim\030\007 \001(\0132\022.aapt.pb.Primi" +
-      "tiveH\000\022\023\n\013flag_status\030\010 \001(\r\022\024\n\014flag_nega" +
-      "ted\030\t \001(\010\022\021\n\tflag_name\030\n \001(\tB\007\n\005value\"\255\002" +
-      "\n\rCompoundValue\022\"\n\004attr\030\001 \001(\0132\022.aapt.pb." +
-      "AttributeH\000\022\037\n\005style\030\002 \001(\0132\016.aapt.pb.Sty" +
-      "leH\000\022\'\n\tstyleable\030\003 \001(\0132\022.aapt.pb.Stylea" +
-      "bleH\000\022\037\n\005array\030\004 \001(\0132\016.aapt.pb.ArrayH\000\022!" +
-      "\n\006plural\030\005 \001(\0132\017.aapt.pb.PluralH\000\022#\n\005mac" +
-      "ro\030\006 \001(\0132\022.aapt.pb.MacroBodyH\000\022\023\n\013flag_s" +
-      "tatus\030\007 \001(\r\022\024\n\014flag_negated\030\010 \001(\010\022\021\n\tfla" +
-      "g_name\030\t \001(\tB\007\n\005value\"\030\n\007Boolean\022\r\n\005valu" +
-      "e\030\001 \001(\010\"\320\001\n\tReference\022%\n\004type\030\001 \001(\0162\027.aa" +
-      "pt.pb.Reference.Type\022\n\n\002id\030\002 \001(\r\022\014\n\004name" +
-      "\030\003 \001(\t\022\017\n\007private\030\004 \001(\010\022$\n\nis_dynamic\030\005 " +
-      "\001(\0132\020.aapt.pb.Boolean\022\022\n\ntype_flags\030\006 \001(" +
-      "\r\022\021\n\tallow_raw\030\007 \001(\010\"$\n\004Type\022\r\n\tREFERENC" +
-      "E\020\000\022\r\n\tATTRIBUTE\020\001\"\004\n\002Id\"\027\n\006String\022\r\n\005va" +
-      "lue\030\001 \001(\t\"\032\n\tRawString\022\r\n\005value\030\001 \001(\t\"\203\001" +
-      "\n\014StyledString\022\r\n\005value\030\001 \001(\t\022(\n\004span\030\002 " +
-      "\003(\0132\032.aapt.pb.StyledString.Span\032:\n\004Span\022" +
-      "\013\n\003tag\030\001 \001(\t\022\022\n\nfirst_char\030\002 \001(\r\022\021\n\tlast" +
-      "_char\030\003 \001(\r\"\205\001\n\rFileReference\022\014\n\004path\030\001 " +
-      "\001(\t\022)\n\004type\030\002 \001(\0162\033.aapt.pb.FileReferenc" +
-      "e.Type\";\n\004Type\022\013\n\007UNKNOWN\020\000\022\007\n\003PNG\020\001\022\016\n\n" +
-      "BINARY_XML\020\002\022\r\n\tPROTO_XML\020\003\"\203\004\n\tPrimitiv" +
-      "e\0221\n\nnull_value\030\001 \001(\0132\033.aapt.pb.Primitiv" +
-      "e.NullTypeH\000\0223\n\013empty_value\030\002 \001(\0132\034.aapt" +
-      ".pb.Primitive.EmptyTypeH\000\022\025\n\013float_value" +
-      "\030\003 \001(\002H\000\022\031\n\017dimension_value\030\r \001(\rH\000\022\030\n\016f" +
-      "raction_value\030\016 \001(\rH\000\022\033\n\021int_decimal_val" +
-      "ue\030\006 \001(\005H\000\022\037\n\025int_hexadecimal_value\030\007 \001(" +
-      "\rH\000\022\027\n\rboolean_value\030\010 \001(\010H\000\022\033\n\021color_ar" +
-      "gb8_value\030\t \001(\rH\000\022\032\n\020color_rgb8_value\030\n " +
-      "\001(\rH\000\022\033\n\021color_argb4_value\030\013 \001(\rH\000\022\032\n\020co" +
-      "lor_rgb4_value\030\014 \001(\rH\000\022(\n\032dimension_valu" +
-      "e_deprecated\030\004 \001(\002B\002\030\001H\000\022\'\n\031fraction_val" +
-      "ue_deprecated\030\005 \001(\002B\002\030\001H\000\032\n\n\010NullType\032\013\n" +
-      "\tEmptyTypeB\r\n\013oneof_value\"\220\003\n\tAttribute\022" +
-      "\024\n\014format_flags\030\001 \001(\r\022\017\n\007min_int\030\002 \001(\005\022\017" +
-      "\n\007max_int\030\003 \001(\005\022)\n\006symbol\030\004 \003(\0132\031.aapt.p" +
-      "b.Attribute.Symbol\032y\n\006Symbol\022\037\n\006source\030\001" +
-      " \001(\0132\017.aapt.pb.Source\022\017\n\007comment\030\002 \001(\t\022 " +
-      "\n\004name\030\003 \001(\0132\022.aapt.pb.Reference\022\r\n\005valu" +
-      "e\030\004 \001(\r\022\014\n\004type\030\005 \001(\r\"\244\001\n\013FormatFlags\022\010\n" +
-      "\004NONE\020\000\022\t\n\003ANY\020\377\377\003\022\r\n\tREFERENCE\020\001\022\n\n\006STR" +
-      "ING\020\002\022\013\n\007INTEGER\020\004\022\013\n\007BOOLEAN\020\010\022\t\n\005COLOR" +
-      "\020\020\022\t\n\005FLOAT\020 \022\r\n\tDIMENSION\020@\022\r\n\010FRACTION" +
-      "\020\200\001\022\n\n\004ENUM\020\200\200\004\022\013\n\005FLAGS\020\200\200\010\"\361\001\n\005Style\022\"" +
-      "\n\006parent\030\001 \001(\0132\022.aapt.pb.Reference\022&\n\rpa" +
-      "rent_source\030\002 \001(\0132\017.aapt.pb.Source\022#\n\005en" +
-      "try\030\003 \003(\0132\024.aapt.pb.Style.Entry\032w\n\005Entry" +
-      "\022\037\n\006source\030\001 \001(\0132\017.aapt.pb.Source\022\017\n\007com" +
-      "ment\030\002 \001(\t\022\037\n\003key\030\003 \001(\0132\022.aapt.pb.Refere" +
-      "nce\022\033\n\004item\030\004 \001(\0132\r.aapt.pb.Item\"\221\001\n\tSty" +
-      "leable\022\'\n\005entry\030\001 \003(\0132\030.aapt.pb.Styleabl" +
-      "e.Entry\032[\n\005Entry\022\037\n\006source\030\001 \001(\0132\017.aapt." +
-      "pb.Source\022\017\n\007comment\030\002 \001(\t\022 \n\004attr\030\003 \001(\013" +
-      "2\022.aapt.pb.Reference\"\212\001\n\005Array\022\'\n\007elemen" +
-      "t\030\001 \003(\0132\026.aapt.pb.Array.Element\032X\n\007Eleme" +
-      "nt\022\037\n\006source\030\001 \001(\0132\017.aapt.pb.Source\022\017\n\007c" +
-      "omment\030\002 \001(\t\022\033\n\004item\030\003 \001(\0132\r.aapt.pb.Ite" +
-      "m\"\357\001\n\006Plural\022$\n\005entry\030\001 \003(\0132\025.aapt.pb.Pl" +
-      "ural.Entry\032|\n\005Entry\022\037\n\006source\030\001 \001(\0132\017.aa" +
-      "pt.pb.Source\022\017\n\007comment\030\002 \001(\t\022$\n\005arity\030\003" +
-      " \001(\0162\025.aapt.pb.Plural.Arity\022\033\n\004item\030\004 \001(" +
-      "\0132\r.aapt.pb.Item\"A\n\005Arity\022\010\n\004ZERO\020\000\022\007\n\003O" +
-      "NE\020\001\022\007\n\003TWO\020\002\022\007\n\003FEW\020\003\022\010\n\004MANY\020\004\022\t\n\005OTHE" +
-      "R\020\005\"r\n\007XmlNode\022&\n\007element\030\001 \001(\0132\023.aapt.p" +
-      "b.XmlElementH\000\022\016\n\004text\030\002 \001(\tH\000\022\'\n\006source" +
-      "\030\003 \001(\0132\027.aapt.pb.SourcePositionB\006\n\004node\"" +
-      "\262\001\n\nXmlElement\0224\n\025namespace_declaration\030" +
-      "\001 \003(\0132\025.aapt.pb.XmlNamespace\022\025\n\rnamespac" +
-      "e_uri\030\002 \001(\t\022\014\n\004name\030\003 \001(\t\022(\n\tattribute\030\004" +
-      " \003(\0132\025.aapt.pb.XmlAttribute\022\037\n\005child\030\005 \003" +
-      "(\0132\020.aapt.pb.XmlNode\"T\n\014XmlNamespace\022\016\n\006" +
-      "prefix\030\001 \001(\t\022\013\n\003uri\030\002 \001(\t\022\'\n\006source\030\003 \001(" +
-      "\0132\027.aapt.pb.SourcePosition\"\246\001\n\014XmlAttrib" +
-      "ute\022\025\n\rnamespace_uri\030\001 \001(\t\022\014\n\004name\030\002 \001(\t" +
-      "\022\r\n\005value\030\003 \001(\t\022\'\n\006source\030\004 \001(\0132\027.aapt.p" +
-      "b.SourcePosition\022\023\n\013resource_id\030\005 \001(\r\022$\n" +
-      "\rcompiled_item\030\006 \001(\0132\r.aapt.pb.Item\"\347\001\n\t" +
-      "MacroBody\022\022\n\nraw_string\030\001 \001(\t\022*\n\014style_s" +
-      "tring\030\002 \001(\0132\024.aapt.pb.StyleString\022?\n\027unt" +
-      "ranslatable_sections\030\003 \003(\0132\036.aapt.pb.Unt" +
-      "ranslatableSection\0220\n\017namespace_stack\030\004 " +
-      "\003(\0132\027.aapt.pb.NamespaceAlias\022\'\n\006source\030\005" +
-      " \001(\0132\027.aapt.pb.SourcePosition\"J\n\016Namespa" +
-      "ceAlias\022\016\n\006prefix\030\001 \001(\t\022\024\n\014package_name\030" +
-      "\002 \001(\t\022\022\n\nis_private\030\003 \001(\010\"\202\001\n\013StyleStrin" +
-      "g\022\013\n\003str\030\001 \001(\t\022(\n\005spans\030\002 \003(\0132\031.aapt.pb." +
-      "StyleString.Span\032<\n\004Span\022\014\n\004name\030\001 \001(\t\022\023" +
-      "\n\013start_index\030\002 \001(\r\022\021\n\tend_index\030\003 \001(\r\"?" +
-      "\n\025UntranslatableSection\022\023\n\013start_index\030\001" +
-      " \001(\004\022\021\n\tend_index\030\002 \001(\004B\022\n\020com.android.a" +
-      "aptb\006proto3"
+      " \n\004name\030\003 \001(\0132\022.aapt.pb.Reference\022\r\n\005val" +
+      "ue\030\004 \001(\r\022\014\n\004type\030\005 \001(\r\"\244\001\n\013FormatFlags\022\010" +
+      "\n\004NONE\020\000\022\t\n\003ANY\020\377\377\003\022\r\n\tREFERENCE\020\001\022\n\n\006ST" +
+      "RING\020\002\022\013\n\007INTEGER\020\004\022\013\n\007BOOLEAN\020\010\022\t\n\005COLO" +
+      "R\020\020\022\t\n\005FLOAT\020 \022\r\n\tDIMENSION\020@\022\r\n\010FRACTIO" +
+      "N\020\200\001\022\n\n\004ENUM\020\200\200\004\022\013\n\005FLAGS\020\200\200\010\"\361\001\n\005Style\022" +
+      "\"\n\006parent\030\001 \001(\0132\022.aapt.pb.Reference\022&\n\rp" +
+      "arent_source\030\002 \001(\0132\017.aapt.pb.Source\022#\n\005e" +
+      "ntry\030\003 \003(\0132\024.aapt.pb.Style.Entry\032w\n\005Entr" +
+      "y\022\037\n\006source\030\001 \001(\0132\017.aapt.pb.Source\022\017\n\007co" +
+      "mment\030\002 \001(\t\022\037\n\003key\030\003 \001(\0132\022.aapt.pb.Refer" +
+      "ence\022\033\n\004item\030\004 \001(\0132\r.aapt.pb.Item\"\221\001\n\tSt" +
+      "yleable\022\'\n\005entry\030\001 \003(\0132\030.aapt.pb.Styleab" +
+      "le.Entry\032[\n\005Entry\022\037\n\006source\030\001 \001(\0132\017.aapt" +
+      ".pb.Source\022\017\n\007comment\030\002 \001(\t\022 \n\004attr\030\003 \001(" +
+      "\0132\022.aapt.pb.Reference\"\212\001\n\005Array\022\'\n\007eleme" +
+      "nt\030\001 \003(\0132\026.aapt.pb.Array.Element\032X\n\007Elem" +
+      "ent\022\037\n\006source\030\001 \001(\0132\017.aapt.pb.Source\022\017\n\007" +
+      "comment\030\002 \001(\t\022\033\n\004item\030\003 \001(\0132\r.aapt.pb.It" +
+      "em\"\357\001\n\006Plural\022$\n\005entry\030\001 \003(\0132\025.aapt.pb.P" +
+      "lural.Entry\032|\n\005Entry\022\037\n\006source\030\001 \001(\0132\017.a" +
+      "apt.pb.Source\022\017\n\007comment\030\002 \001(\t\022$\n\005arity\030" +
+      "\003 \001(\0162\025.aapt.pb.Plural.Arity\022\033\n\004item\030\004 \001" +
+      "(\0132\r.aapt.pb.Item\"A\n\005Arity\022\010\n\004ZERO\020\000\022\007\n\003" +
+      "ONE\020\001\022\007\n\003TWO\020\002\022\007\n\003FEW\020\003\022\010\n\004MANY\020\004\022\t\n\005OTH" +
+      "ER\020\005\"r\n\007XmlNode\022&\n\007element\030\001 \001(\0132\023.aapt." +
+      "pb.XmlElementH\000\022\016\n\004text\030\002 \001(\tH\000\022\'\n\006sourc" +
+      "e\030\003 \001(\0132\027.aapt.pb.SourcePositionB\006\n\004node" +
+      "\"\262\001\n\nXmlElement\0224\n\025namespace_declaration" +
+      "\030\001 \003(\0132\025.aapt.pb.XmlNamespace\022\025\n\rnamespa" +
+      "ce_uri\030\002 \001(\t\022\014\n\004name\030\003 \001(\t\022(\n\tattribute\030" +
+      "\004 \003(\0132\025.aapt.pb.XmlAttribute\022\037\n\005child\030\005 " +
+      "\003(\0132\020.aapt.pb.XmlNode\"T\n\014XmlNamespace\022\016\n" +
+      "\006prefix\030\001 \001(\t\022\013\n\003uri\030\002 \001(\t\022\'\n\006source\030\003 \001" +
+      "(\0132\027.aapt.pb.SourcePosition\"\246\001\n\014XmlAttri" +
+      "bute\022\025\n\rnamespace_uri\030\001 \001(\t\022\014\n\004name\030\002 \001(" +
+      "\t\022\r\n\005value\030\003 \001(\t\022\'\n\006source\030\004 \001(\0132\027.aapt." +
+      "pb.SourcePosition\022\023\n\013resource_id\030\005 \001(\r\022$" +
+      "\n\rcompiled_item\030\006 \001(\0132\r.aapt.pb.Item\"\347\001\n" +
+      "\tMacroBody\022\022\n\nraw_string\030\001 \001(\t\022*\n\014style_" +
+      "string\030\002 \001(\0132\024.aapt.pb.StyleString\022?\n\027un" +
+      "translatable_sections\030\003 \003(\0132\036.aapt.pb.Un" +
+      "translatableSection\0220\n\017namespace_stack\030\004" +
+      " \003(\0132\027.aapt.pb.NamespaceAlias\022\'\n\006source\030" +
+      "\005 \001(\0132\027.aapt.pb.SourcePosition\"J\n\016Namesp" +
+      "aceAlias\022\016\n\006prefix\030\001 \001(\t\022\024\n\014package_name" +
+      "\030\002 \001(\t\022\022\n\nis_private\030\003 \001(\010\"\202\001\n\013StyleStri" +
+      "ng\022\013\n\003str\030\001 \001(\t\022(\n\005spans\030\002 \003(\0132\031.aapt.pb" +
+      ".StyleString.Span\032<\n\004Span\022\014\n\004name\030\001 \001(\t\022" +
+      "\023\n\013start_index\030\002 \001(\r\022\021\n\tend_index\030\003 \001(\r\"" +
+      "?\n\025UntranslatableSection\022\023\n\013start_index\030" +
+      "\001 \001(\004\022\021\n\tend_index\030\002 \001(\004B\022\n\020com.android." +
+      "aaptb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -55862,7 +55788,7 @@ public final class Resources {
     internal_static_aapt_pb_ConfigValue_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_aapt_pb_ConfigValue_descriptor,
-        new java.lang.String[] { "Config", "Value", "UsesReadwriteFeatureFlags", });
+        new java.lang.String[] { "Config", "Value", });
     internal_static_aapt_pb_Value_descriptor =
       getDescriptor().getMessageTypes().get(18);
     internal_static_aapt_pb_Value_fieldAccessorTable = new

@@ -833,6 +833,14 @@ public enum VariantPropertiesMethodType
    * <code>GET_ALL_WITH_ATTRIBUTES = 193;</code>
    */
   GET_ALL_WITH_ATTRIBUTES(193),
+  /**
+   * <code>SIGNING_CONFIG_FROM_CONFIG = 194;</code>
+   */
+  SIGNING_CONFIG_FROM_CONFIG(194),
+  /**
+   * <code>SIGNING_CONFIG_FROM_CONFIG_PROVIDER = 195;</code>
+   */
+  SIGNING_CONFIG_FROM_CONFIG_PROVIDER(195),
   UNRECOGNIZED(-1),
   ;
 
@@ -1660,6 +1668,14 @@ public enum VariantPropertiesMethodType
    * <code>GET_ALL_WITH_ATTRIBUTES = 193;</code>
    */
   public static final int GET_ALL_WITH_ATTRIBUTES_VALUE = 193;
+  /**
+   * <code>SIGNING_CONFIG_FROM_CONFIG = 194;</code>
+   */
+  public static final int SIGNING_CONFIG_FROM_CONFIG_VALUE = 194;
+  /**
+   * <code>SIGNING_CONFIG_FROM_CONFIG_PROVIDER = 195;</code>
+   */
+  public static final int SIGNING_CONFIG_FROM_CONFIG_PROVIDER_VALUE = 195;
 
 
   public final int getNumber() {
@@ -1880,6 +1896,8 @@ public enum VariantPropertiesMethodType
       case 191: return GET_ARTIFACT_WITH_ATTRIBUTES;
       case 192: return TO_APPEND_TO_WITH_ATTRIBUTES;
       case 193: return GET_ALL_WITH_ATTRIBUTES;
+      case 194: return SIGNING_CONFIG_FROM_CONFIG;
+      case 195: return SIGNING_CONFIG_FROM_CONFIG_PROVIDER;
       default: return null;
     }
   }

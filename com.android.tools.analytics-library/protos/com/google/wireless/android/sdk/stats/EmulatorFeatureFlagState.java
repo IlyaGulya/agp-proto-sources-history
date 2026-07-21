@@ -594,13 +594,17 @@ private static final long serialVersionUID = 0L;
      */
     XR_DIMMING(140),
     /**
-     * <pre>
-     * Next tag: 142
-     * </pre>
-     *
      * <code>XR_HAND_AND_EYE_POINTERS = 141;</code>
      */
     XR_HAND_AND_EYE_POINTERS(141),
+    /**
+     * <pre>
+     * Next tag: 143
+     * </pre>
+     *
+     * <code>XR_STATUS_LED = 142;</code>
+     */
+    XR_STATUS_LED(142),
     ;
 
     /**
@@ -1140,13 +1144,17 @@ private static final long serialVersionUID = 0L;
      */
     public static final int XR_DIMMING_VALUE = 140;
     /**
-     * <pre>
-     * Next tag: 142
-     * </pre>
-     *
      * <code>XR_HAND_AND_EYE_POINTERS = 141;</code>
      */
     public static final int XR_HAND_AND_EYE_POINTERS_VALUE = 141;
+    /**
+     * <pre>
+     * Next tag: 143
+     * </pre>
+     *
+     * <code>XR_STATUS_LED = 142;</code>
+     */
+    public static final int XR_STATUS_LED_VALUE = 142;
 
 
     public final int getNumber() {
@@ -1301,6 +1309,7 @@ private static final long serialVersionUID = 0L;
         case 139: return VULKAN_PROTECTED_MEMORY_EMULATION;
         case 140: return XR_DIMMING;
         case 141: return XR_HAND_AND_EYE_POINTERS;
+        case 142: return XR_STATUS_LED;
         default: return null;
       }
     }

@@ -7689,6 +7689,33 @@ private static final long serialVersionUID = 0L;
        */
       com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.RagToolCallDataOrBuilder getRagToolCallDataOrBuilder();
 
+      /**
+       * <pre>
+       * Data for a read_file tool call.
+       * </pre>
+       *
+       * <code>.android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.ReadFileToolCallData read_file_tool_call_data = 13;</code>
+       * @return Whether the readFileToolCallData field is set.
+       */
+      boolean hasReadFileToolCallData();
+      /**
+       * <pre>
+       * Data for a read_file tool call.
+       * </pre>
+       *
+       * <code>.android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.ReadFileToolCallData read_file_tool_call_data = 13;</code>
+       * @return The readFileToolCallData.
+       */
+      com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.ReadFileToolCallData getReadFileToolCallData();
+      /**
+       * <pre>
+       * Data for a read_file tool call.
+       * </pre>
+       *
+       * <code>.android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.ReadFileToolCallData read_file_tool_call_data = 13;</code>
+       */
+      com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.ReadFileToolCallDataOrBuilder getReadFileToolCallDataOrBuilder();
+
       com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.ToolSpecificMetadataCase getToolSpecificMetadataCase();
     }
     /**
@@ -17718,6 +17745,650 @@ private static final long serialVersionUID = 0L;
 
       }
 
+      public interface ReadFileToolCallDataOrBuilder extends
+          // @@protoc_insertion_point(interface_extends:android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.ReadFileToolCallData)
+          com.google.protobuf.MessageOrBuilder {
+
+        /**
+         * <pre>
+         * Indicates if the read tool call read a skill file.
+         * </pre>
+         *
+         * <code>optional bool is_skill_file = 1;</code>
+         * @return Whether the isSkillFile field is set.
+         */
+        boolean hasIsSkillFile();
+        /**
+         * <pre>
+         * Indicates if the read tool call read a skill file.
+         * </pre>
+         *
+         * <code>optional bool is_skill_file = 1;</code>
+         * @return The isSkillFile.
+         */
+        boolean getIsSkillFile();
+
+        /**
+         * <pre>
+         * The name of the skill if it's a bundled skill.
+         * </pre>
+         *
+         * <code>optional .android_studio.SkillsEvent.SkillName skill_name = 2;</code>
+         * @return Whether the skillName field is set.
+         */
+        boolean hasSkillName();
+        /**
+         * <pre>
+         * The name of the skill if it's a bundled skill.
+         * </pre>
+         *
+         * <code>optional .android_studio.SkillsEvent.SkillName skill_name = 2;</code>
+         * @return The skillName.
+         */
+        com.google.wireless.android.sdk.stats.SkillsEvent.SkillName getSkillName();
+      }
+      /**
+       * Protobuf type {@code android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.ReadFileToolCallData}
+       */
+      public static final class ReadFileToolCallData extends
+          com.google.protobuf.GeneratedMessageV3 implements
+          // @@protoc_insertion_point(message_implements:android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.ReadFileToolCallData)
+          ReadFileToolCallDataOrBuilder {
+      private static final long serialVersionUID = 0L;
+        // Use ReadFileToolCallData.newBuilder() to construct.
+        private ReadFileToolCallData(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+          super(builder);
+        }
+        private ReadFileToolCallData() {
+          skillName_ = 0;
+        }
+
+        @java.lang.Override
+        @SuppressWarnings({"unused"})
+        protected java.lang.Object newInstance(
+            UnusedPrivateParameter unused) {
+          return new ReadFileToolCallData();
+        }
+
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_GeminiTelemetryEvent_AgentEvent_ToolExecutionSpan_ReadFileToolCallData_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_GeminiTelemetryEvent_AgentEvent_ToolExecutionSpan_ReadFileToolCallData_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.ReadFileToolCallData.class, com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.ReadFileToolCallData.Builder.class);
+        }
+
+        private int bitField0_;
+        public static final int IS_SKILL_FILE_FIELD_NUMBER = 1;
+        private boolean isSkillFile_ = false;
+        /**
+         * <pre>
+         * Indicates if the read tool call read a skill file.
+         * </pre>
+         *
+         * <code>optional bool is_skill_file = 1;</code>
+         * @return Whether the isSkillFile field is set.
+         */
+        @java.lang.Override
+        public boolean hasIsSkillFile() {
+          return ((bitField0_ & 0x00000001) != 0);
+        }
+        /**
+         * <pre>
+         * Indicates if the read tool call read a skill file.
+         * </pre>
+         *
+         * <code>optional bool is_skill_file = 1;</code>
+         * @return The isSkillFile.
+         */
+        @java.lang.Override
+        public boolean getIsSkillFile() {
+          return isSkillFile_;
+        }
+
+        public static final int SKILL_NAME_FIELD_NUMBER = 2;
+        private int skillName_ = 0;
+        /**
+         * <pre>
+         * The name of the skill if it's a bundled skill.
+         * </pre>
+         *
+         * <code>optional .android_studio.SkillsEvent.SkillName skill_name = 2;</code>
+         * @return Whether the skillName field is set.
+         */
+        @java.lang.Override public boolean hasSkillName() {
+          return ((bitField0_ & 0x00000002) != 0);
+        }
+        /**
+         * <pre>
+         * The name of the skill if it's a bundled skill.
+         * </pre>
+         *
+         * <code>optional .android_studio.SkillsEvent.SkillName skill_name = 2;</code>
+         * @return The skillName.
+         */
+        @java.lang.Override public com.google.wireless.android.sdk.stats.SkillsEvent.SkillName getSkillName() {
+          com.google.wireless.android.sdk.stats.SkillsEvent.SkillName result = com.google.wireless.android.sdk.stats.SkillsEvent.SkillName.forNumber(skillName_);
+          return result == null ? com.google.wireless.android.sdk.stats.SkillsEvent.SkillName.UNKNOWN_SKILL_NAME : result;
+        }
+
+        private byte memoizedIsInitialized = -1;
+        @java.lang.Override
+        public final boolean isInitialized() {
+          byte isInitialized = memoizedIsInitialized;
+          if (isInitialized == 1) return true;
+          if (isInitialized == 0) return false;
+
+          memoizedIsInitialized = 1;
+          return true;
+        }
+
+        @java.lang.Override
+        public void writeTo(com.google.protobuf.CodedOutputStream output)
+                            throws java.io.IOException {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            output.writeBool(1, isSkillFile_);
+          }
+          if (((bitField0_ & 0x00000002) != 0)) {
+            output.writeEnum(2, skillName_);
+          }
+          getUnknownFields().writeTo(output);
+        }
+
+        @java.lang.Override
+        public int getSerializedSize() {
+          int size = memoizedSize;
+          if (size != -1) return size;
+
+          size = 0;
+          if (((bitField0_ & 0x00000001) != 0)) {
+            size += com.google.protobuf.CodedOutputStream
+              .computeBoolSize(1, isSkillFile_);
+          }
+          if (((bitField0_ & 0x00000002) != 0)) {
+            size += com.google.protobuf.CodedOutputStream
+              .computeEnumSize(2, skillName_);
+          }
+          size += getUnknownFields().getSerializedSize();
+          memoizedSize = size;
+          return size;
+        }
+
+        @java.lang.Override
+        public boolean equals(final java.lang.Object obj) {
+          if (obj == this) {
+           return true;
+          }
+          if (!(obj instanceof com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.ReadFileToolCallData)) {
+            return super.equals(obj);
+          }
+          com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.ReadFileToolCallData other = (com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.ReadFileToolCallData) obj;
+
+          if (hasIsSkillFile() != other.hasIsSkillFile()) return false;
+          if (hasIsSkillFile()) {
+            if (getIsSkillFile()
+                != other.getIsSkillFile()) return false;
+          }
+          if (hasSkillName() != other.hasSkillName()) return false;
+          if (hasSkillName()) {
+            if (skillName_ != other.skillName_) return false;
+          }
+          if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+          return true;
+        }
+
+        @java.lang.Override
+        public int hashCode() {
+          if (memoizedHashCode != 0) {
+            return memoizedHashCode;
+          }
+          int hash = 41;
+          hash = (19 * hash) + getDescriptor().hashCode();
+          if (hasIsSkillFile()) {
+            hash = (37 * hash) + IS_SKILL_FILE_FIELD_NUMBER;
+            hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+                getIsSkillFile());
+          }
+          if (hasSkillName()) {
+            hash = (37 * hash) + SKILL_NAME_FIELD_NUMBER;
+            hash = (53 * hash) + skillName_;
+          }
+          hash = (29 * hash) + getUnknownFields().hashCode();
+          memoizedHashCode = hash;
+          return hash;
+        }
+
+        public static com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.ReadFileToolCallData parseFrom(
+            java.nio.ByteBuffer data)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return PARSER.parseFrom(data);
+        }
+        public static com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.ReadFileToolCallData parseFrom(
+            java.nio.ByteBuffer data,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return PARSER.parseFrom(data, extensionRegistry);
+        }
+        public static com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.ReadFileToolCallData parseFrom(
+            com.google.protobuf.ByteString data)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return PARSER.parseFrom(data);
+        }
+        public static com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.ReadFileToolCallData parseFrom(
+            com.google.protobuf.ByteString data,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return PARSER.parseFrom(data, extensionRegistry);
+        }
+        public static com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.ReadFileToolCallData parseFrom(byte[] data)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return PARSER.parseFrom(data);
+        }
+        public static com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.ReadFileToolCallData parseFrom(
+            byte[] data,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return PARSER.parseFrom(data, extensionRegistry);
+        }
+        public static com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.ReadFileToolCallData parseFrom(java.io.InputStream input)
+            throws java.io.IOException {
+          return com.google.protobuf.GeneratedMessageV3
+              .parseWithIOException(PARSER, input);
+        }
+        public static com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.ReadFileToolCallData parseFrom(
+            java.io.InputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          return com.google.protobuf.GeneratedMessageV3
+              .parseWithIOException(PARSER, input, extensionRegistry);
+        }
+        public static com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.ReadFileToolCallData parseDelimitedFrom(java.io.InputStream input)
+            throws java.io.IOException {
+          return com.google.protobuf.GeneratedMessageV3
+              .parseDelimitedWithIOException(PARSER, input);
+        }
+        public static com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.ReadFileToolCallData parseDelimitedFrom(
+            java.io.InputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          return com.google.protobuf.GeneratedMessageV3
+              .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+        }
+        public static com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.ReadFileToolCallData parseFrom(
+            com.google.protobuf.CodedInputStream input)
+            throws java.io.IOException {
+          return com.google.protobuf.GeneratedMessageV3
+              .parseWithIOException(PARSER, input);
+        }
+        public static com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.ReadFileToolCallData parseFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          return com.google.protobuf.GeneratedMessageV3
+              .parseWithIOException(PARSER, input, extensionRegistry);
+        }
+
+        @java.lang.Override
+        public Builder newBuilderForType() { return newBuilder(); }
+        public static Builder newBuilder() {
+          return DEFAULT_INSTANCE.toBuilder();
+        }
+        public static Builder newBuilder(com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.ReadFileToolCallData prototype) {
+          return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+        }
+        @java.lang.Override
+        public Builder toBuilder() {
+          return this == DEFAULT_INSTANCE
+              ? new Builder() : new Builder().mergeFrom(this);
+        }
+
+        @java.lang.Override
+        protected Builder newBuilderForType(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          Builder builder = new Builder(parent);
+          return builder;
+        }
+        /**
+         * Protobuf type {@code android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.ReadFileToolCallData}
+         */
+        public static final class Builder extends
+            com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+            // @@protoc_insertion_point(builder_implements:android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.ReadFileToolCallData)
+            com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.ReadFileToolCallDataOrBuilder {
+          public static final com.google.protobuf.Descriptors.Descriptor
+              getDescriptor() {
+            return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_GeminiTelemetryEvent_AgentEvent_ToolExecutionSpan_ReadFileToolCallData_descriptor;
+          }
+
+          @java.lang.Override
+          protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+              internalGetFieldAccessorTable() {
+            return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_GeminiTelemetryEvent_AgentEvent_ToolExecutionSpan_ReadFileToolCallData_fieldAccessorTable
+                .ensureFieldAccessorsInitialized(
+                    com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.ReadFileToolCallData.class, com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.ReadFileToolCallData.Builder.class);
+          }
+
+          // Construct using com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.ReadFileToolCallData.newBuilder()
+          private Builder() {
+
+          }
+
+          private Builder(
+              com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+            super(parent);
+
+          }
+          @java.lang.Override
+          public Builder clear() {
+            super.clear();
+            bitField0_ = 0;
+            isSkillFile_ = false;
+            skillName_ = 0;
+            return this;
+          }
+
+          @java.lang.Override
+          public com.google.protobuf.Descriptors.Descriptor
+              getDescriptorForType() {
+            return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_GeminiTelemetryEvent_AgentEvent_ToolExecutionSpan_ReadFileToolCallData_descriptor;
+          }
+
+          @java.lang.Override
+          public com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.ReadFileToolCallData getDefaultInstanceForType() {
+            return com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.ReadFileToolCallData.getDefaultInstance();
+          }
+
+          @java.lang.Override
+          public com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.ReadFileToolCallData build() {
+            com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.ReadFileToolCallData result = buildPartial();
+            if (!result.isInitialized()) {
+              throw newUninitializedMessageException(result);
+            }
+            return result;
+          }
+
+          @java.lang.Override
+          public com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.ReadFileToolCallData buildPartial() {
+            com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.ReadFileToolCallData result = new com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.ReadFileToolCallData(this);
+            if (bitField0_ != 0) { buildPartial0(result); }
+            onBuilt();
+            return result;
+          }
+
+          private void buildPartial0(com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.ReadFileToolCallData result) {
+            int from_bitField0_ = bitField0_;
+            int to_bitField0_ = 0;
+            if (((from_bitField0_ & 0x00000001) != 0)) {
+              result.isSkillFile_ = isSkillFile_;
+              to_bitField0_ |= 0x00000001;
+            }
+            if (((from_bitField0_ & 0x00000002) != 0)) {
+              result.skillName_ = skillName_;
+              to_bitField0_ |= 0x00000002;
+            }
+            result.bitField0_ |= to_bitField0_;
+          }
+
+          @java.lang.Override
+          public Builder mergeFrom(com.google.protobuf.Message other) {
+            if (other instanceof com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.ReadFileToolCallData) {
+              return mergeFrom((com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.ReadFileToolCallData)other);
+            } else {
+              super.mergeFrom(other);
+              return this;
+            }
+          }
+
+          public Builder mergeFrom(com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.ReadFileToolCallData other) {
+            if (other == com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.ReadFileToolCallData.getDefaultInstance()) return this;
+            if (other.hasIsSkillFile()) {
+              setIsSkillFile(other.getIsSkillFile());
+            }
+            if (other.hasSkillName()) {
+              setSkillName(other.getSkillName());
+            }
+            this.mergeUnknownFields(other.getUnknownFields());
+            onChanged();
+            return this;
+          }
+
+          @java.lang.Override
+          public final boolean isInitialized() {
+            return true;
+          }
+
+          @java.lang.Override
+          public Builder mergeFrom(
+              com.google.protobuf.CodedInputStream input,
+              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+              throws java.io.IOException {
+            if (extensionRegistry == null) {
+              throw new java.lang.NullPointerException();
+            }
+            try {
+              boolean done = false;
+              while (!done) {
+                int tag = input.readTag();
+                switch (tag) {
+                  case 0:
+                    done = true;
+                    break;
+                  case 8: {
+                    isSkillFile_ = input.readBool();
+                    bitField0_ |= 0x00000001;
+                    break;
+                  } // case 8
+                  case 16: {
+                    int tmpRaw = input.readEnum();
+                    com.google.wireless.android.sdk.stats.SkillsEvent.SkillName tmpValue =
+                        com.google.wireless.android.sdk.stats.SkillsEvent.SkillName.forNumber(tmpRaw);
+                    if (tmpValue == null) {
+                      mergeUnknownVarintField(2, tmpRaw);
+                    } else {
+                      skillName_ = tmpRaw;
+                      bitField0_ |= 0x00000002;
+                    }
+                    break;
+                  } // case 16
+                  default: {
+                    if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                      done = true; // was an endgroup tag
+                    }
+                    break;
+                  } // default:
+                } // switch (tag)
+              } // while (!done)
+            } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+              throw e.unwrapIOException();
+            } finally {
+              onChanged();
+            } // finally
+            return this;
+          }
+          private int bitField0_;
+
+          private boolean isSkillFile_ ;
+          /**
+           * <pre>
+           * Indicates if the read tool call read a skill file.
+           * </pre>
+           *
+           * <code>optional bool is_skill_file = 1;</code>
+           * @return Whether the isSkillFile field is set.
+           */
+          @java.lang.Override
+          public boolean hasIsSkillFile() {
+            return ((bitField0_ & 0x00000001) != 0);
+          }
+          /**
+           * <pre>
+           * Indicates if the read tool call read a skill file.
+           * </pre>
+           *
+           * <code>optional bool is_skill_file = 1;</code>
+           * @return The isSkillFile.
+           */
+          @java.lang.Override
+          public boolean getIsSkillFile() {
+            return isSkillFile_;
+          }
+          /**
+           * <pre>
+           * Indicates if the read tool call read a skill file.
+           * </pre>
+           *
+           * <code>optional bool is_skill_file = 1;</code>
+           * @param value The isSkillFile to set.
+           * @return This builder for chaining.
+           */
+          public Builder setIsSkillFile(boolean value) {
+
+            isSkillFile_ = value;
+            bitField0_ |= 0x00000001;
+            onChanged();
+            return this;
+          }
+          /**
+           * <pre>
+           * Indicates if the read tool call read a skill file.
+           * </pre>
+           *
+           * <code>optional bool is_skill_file = 1;</code>
+           * @return This builder for chaining.
+           */
+          public Builder clearIsSkillFile() {
+            bitField0_ = (bitField0_ & ~0x00000001);
+            isSkillFile_ = false;
+            onChanged();
+            return this;
+          }
+
+          private int skillName_ = 0;
+          /**
+           * <pre>
+           * The name of the skill if it's a bundled skill.
+           * </pre>
+           *
+           * <code>optional .android_studio.SkillsEvent.SkillName skill_name = 2;</code>
+           * @return Whether the skillName field is set.
+           */
+          @java.lang.Override public boolean hasSkillName() {
+            return ((bitField0_ & 0x00000002) != 0);
+          }
+          /**
+           * <pre>
+           * The name of the skill if it's a bundled skill.
+           * </pre>
+           *
+           * <code>optional .android_studio.SkillsEvent.SkillName skill_name = 2;</code>
+           * @return The skillName.
+           */
+          @java.lang.Override
+          public com.google.wireless.android.sdk.stats.SkillsEvent.SkillName getSkillName() {
+            com.google.wireless.android.sdk.stats.SkillsEvent.SkillName result = com.google.wireless.android.sdk.stats.SkillsEvent.SkillName.forNumber(skillName_);
+            return result == null ? com.google.wireless.android.sdk.stats.SkillsEvent.SkillName.UNKNOWN_SKILL_NAME : result;
+          }
+          /**
+           * <pre>
+           * The name of the skill if it's a bundled skill.
+           * </pre>
+           *
+           * <code>optional .android_studio.SkillsEvent.SkillName skill_name = 2;</code>
+           * @param value The skillName to set.
+           * @return This builder for chaining.
+           */
+          public Builder setSkillName(com.google.wireless.android.sdk.stats.SkillsEvent.SkillName value) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            bitField0_ |= 0x00000002;
+            skillName_ = value.getNumber();
+            onChanged();
+            return this;
+          }
+          /**
+           * <pre>
+           * The name of the skill if it's a bundled skill.
+           * </pre>
+           *
+           * <code>optional .android_studio.SkillsEvent.SkillName skill_name = 2;</code>
+           * @return This builder for chaining.
+           */
+          public Builder clearSkillName() {
+            bitField0_ = (bitField0_ & ~0x00000002);
+            skillName_ = 0;
+            onChanged();
+            return this;
+          }
+          @java.lang.Override
+          public final Builder setUnknownFields(
+              final com.google.protobuf.UnknownFieldSet unknownFields) {
+            return super.setUnknownFields(unknownFields);
+          }
+
+          @java.lang.Override
+          public final Builder mergeUnknownFields(
+              final com.google.protobuf.UnknownFieldSet unknownFields) {
+            return super.mergeUnknownFields(unknownFields);
+          }
+
+
+          // @@protoc_insertion_point(builder_scope:android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.ReadFileToolCallData)
+        }
+
+        // @@protoc_insertion_point(class_scope:android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.ReadFileToolCallData)
+        private static final com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.ReadFileToolCallData DEFAULT_INSTANCE;
+        static {
+          DEFAULT_INSTANCE = new com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.ReadFileToolCallData();
+        }
+
+        public static com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.ReadFileToolCallData getDefaultInstance() {
+          return DEFAULT_INSTANCE;
+        }
+
+        @java.lang.Deprecated public static final com.google.protobuf.Parser<ReadFileToolCallData>
+            PARSER = new com.google.protobuf.AbstractParser<ReadFileToolCallData>() {
+          @java.lang.Override
+          public ReadFileToolCallData parsePartialFrom(
+              com.google.protobuf.CodedInputStream input,
+              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+              throws com.google.protobuf.InvalidProtocolBufferException {
+            Builder builder = newBuilder();
+            try {
+              builder.mergeFrom(input, extensionRegistry);
+            } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+              throw e.setUnfinishedMessage(builder.buildPartial());
+            } catch (com.google.protobuf.UninitializedMessageException e) {
+              throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+            } catch (java.io.IOException e) {
+              throw new com.google.protobuf.InvalidProtocolBufferException(e)
+                  .setUnfinishedMessage(builder.buildPartial());
+            }
+            return builder.buildPartial();
+          }
+        };
+
+        public static com.google.protobuf.Parser<ReadFileToolCallData> parser() {
+          return PARSER;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Parser<ReadFileToolCallData> getParserForType() {
+          return PARSER;
+        }
+
+        @java.lang.Override
+        public com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.ReadFileToolCallData getDefaultInstanceForType() {
+          return DEFAULT_INSTANCE;
+        }
+
+      }
+
       private int bitField0_;
       private int toolSpecificMetadataCase_ = 0;
       @SuppressWarnings("serial")
@@ -17730,6 +18401,7 @@ private static final long serialVersionUID = 0L;
         FIND_USAGES_TOOL_CALL_DATA(10),
         GREP_TOOL_CALL_DATA(11),
         RAG_TOOL_CALL_DATA(12),
+        READ_FILE_TOOL_CALL_DATA(13),
         TOOLSPECIFICMETADATA_NOT_SET(0);
         private final int value;
         private ToolSpecificMetadataCase(int value) {
@@ -17752,6 +18424,7 @@ private static final long serialVersionUID = 0L;
             case 10: return FIND_USAGES_TOOL_CALL_DATA;
             case 11: return GREP_TOOL_CALL_DATA;
             case 12: return RAG_TOOL_CALL_DATA;
+            case 13: return READ_FILE_TOOL_CALL_DATA;
             case 0: return TOOLSPECIFICMETADATA_NOT_SET;
             default: return null;
           }
@@ -18237,6 +18910,49 @@ private static final long serialVersionUID = 0L;
         return com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.RagToolCallData.getDefaultInstance();
       }
 
+      public static final int READ_FILE_TOOL_CALL_DATA_FIELD_NUMBER = 13;
+      /**
+       * <pre>
+       * Data for a read_file tool call.
+       * </pre>
+       *
+       * <code>.android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.ReadFileToolCallData read_file_tool_call_data = 13;</code>
+       * @return Whether the readFileToolCallData field is set.
+       */
+      @java.lang.Override
+      public boolean hasReadFileToolCallData() {
+        return toolSpecificMetadataCase_ == 13;
+      }
+      /**
+       * <pre>
+       * Data for a read_file tool call.
+       * </pre>
+       *
+       * <code>.android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.ReadFileToolCallData read_file_tool_call_data = 13;</code>
+       * @return The readFileToolCallData.
+       */
+      @java.lang.Override
+      public com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.ReadFileToolCallData getReadFileToolCallData() {
+        if (toolSpecificMetadataCase_ == 13) {
+           return (com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.ReadFileToolCallData) toolSpecificMetadata_;
+        }
+        return com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.ReadFileToolCallData.getDefaultInstance();
+      }
+      /**
+       * <pre>
+       * Data for a read_file tool call.
+       * </pre>
+       *
+       * <code>.android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.ReadFileToolCallData read_file_tool_call_data = 13;</code>
+       */
+      @java.lang.Override
+      public com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.ReadFileToolCallDataOrBuilder getReadFileToolCallDataOrBuilder() {
+        if (toolSpecificMetadataCase_ == 13) {
+           return (com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.ReadFileToolCallData) toolSpecificMetadata_;
+        }
+        return com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.ReadFileToolCallData.getDefaultInstance();
+      }
+
       private byte memoizedIsInitialized = -1;
       @java.lang.Override
       public final boolean isInitialized() {
@@ -18286,6 +19002,9 @@ private static final long serialVersionUID = 0L;
         }
         if (toolSpecificMetadataCase_ == 12) {
           output.writeMessage(12, (com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.RagToolCallData) toolSpecificMetadata_);
+        }
+        if (toolSpecificMetadataCase_ == 13) {
+          output.writeMessage(13, (com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.ReadFileToolCallData) toolSpecificMetadata_);
         }
         getUnknownFields().writeTo(output);
       }
@@ -18341,6 +19060,10 @@ private static final long serialVersionUID = 0L;
         if (toolSpecificMetadataCase_ == 12) {
           size += com.google.protobuf.CodedOutputStream
             .computeMessageSize(12, (com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.RagToolCallData) toolSpecificMetadata_);
+        }
+        if (toolSpecificMetadataCase_ == 13) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(13, (com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.ReadFileToolCallData) toolSpecificMetadata_);
         }
         size += getUnknownFields().getSerializedSize();
         memoizedSize = size;
@@ -18412,6 +19135,10 @@ private static final long serialVersionUID = 0L;
             if (!getRagToolCallData()
                 .equals(other.getRagToolCallData())) return false;
             break;
+          case 13:
+            if (!getReadFileToolCallData()
+                .equals(other.getReadFileToolCallData())) return false;
+            break;
           case 0:
           default:
         }
@@ -18477,6 +19204,10 @@ private static final long serialVersionUID = 0L;
           case 12:
             hash = (37 * hash) + RAG_TOOL_CALL_DATA_FIELD_NUMBER;
             hash = (53 * hash) + getRagToolCallData().hashCode();
+            break;
+          case 13:
+            hash = (37 * hash) + READ_FILE_TOOL_CALL_DATA_FIELD_NUMBER;
+            hash = (53 * hash) + getReadFileToolCallData().hashCode();
             break;
           case 0:
           default:
@@ -18632,6 +19363,9 @@ private static final long serialVersionUID = 0L;
           if (ragToolCallDataBuilder_ != null) {
             ragToolCallDataBuilder_.clear();
           }
+          if (readFileToolCallDataBuilder_ != null) {
+            readFileToolCallDataBuilder_.clear();
+          }
           toolSpecificMetadataCase_ = 0;
           toolSpecificMetadata_ = null;
           return this;
@@ -18723,6 +19457,10 @@ private static final long serialVersionUID = 0L;
               ragToolCallDataBuilder_ != null) {
             result.toolSpecificMetadata_ = ragToolCallDataBuilder_.build();
           }
+          if (toolSpecificMetadataCase_ == 13 &&
+              readFileToolCallDataBuilder_ != null) {
+            result.toolSpecificMetadata_ = readFileToolCallDataBuilder_.build();
+          }
         }
 
         @java.lang.Override
@@ -18781,6 +19519,10 @@ private static final long serialVersionUID = 0L;
             }
             case RAG_TOOL_CALL_DATA: {
               mergeRagToolCallData(other.getRagToolCallData());
+              break;
+            }
+            case READ_FILE_TOOL_CALL_DATA: {
+              mergeReadFileToolCallData(other.getReadFileToolCallData());
               break;
             }
             case TOOLSPECIFICMETADATA_NOT_SET: {
@@ -18897,6 +19639,13 @@ private static final long serialVersionUID = 0L;
                   toolSpecificMetadataCase_ = 12;
                   break;
                 } // case 98
+                case 106: {
+                  input.readMessage(
+                      getReadFileToolCallDataFieldBuilder().getBuilder(),
+                      extensionRegistry);
+                  toolSpecificMetadataCase_ = 13;
+                  break;
+                } // case 106
                 default: {
                   if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                     done = true; // was an endgroup tag
@@ -20309,6 +21058,184 @@ private static final long serialVersionUID = 0L;
           toolSpecificMetadataCase_ = 12;
           onChanged();
           return ragToolCallDataBuilder_;
+        }
+
+        private com.google.protobuf.SingleFieldBuilderV3<
+            com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.ReadFileToolCallData, com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.ReadFileToolCallData.Builder, com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.ReadFileToolCallDataOrBuilder> readFileToolCallDataBuilder_;
+        /**
+         * <pre>
+         * Data for a read_file tool call.
+         * </pre>
+         *
+         * <code>.android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.ReadFileToolCallData read_file_tool_call_data = 13;</code>
+         * @return Whether the readFileToolCallData field is set.
+         */
+        @java.lang.Override
+        public boolean hasReadFileToolCallData() {
+          return toolSpecificMetadataCase_ == 13;
+        }
+        /**
+         * <pre>
+         * Data for a read_file tool call.
+         * </pre>
+         *
+         * <code>.android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.ReadFileToolCallData read_file_tool_call_data = 13;</code>
+         * @return The readFileToolCallData.
+         */
+        @java.lang.Override
+        public com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.ReadFileToolCallData getReadFileToolCallData() {
+          if (readFileToolCallDataBuilder_ == null) {
+            if (toolSpecificMetadataCase_ == 13) {
+              return (com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.ReadFileToolCallData) toolSpecificMetadata_;
+            }
+            return com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.ReadFileToolCallData.getDefaultInstance();
+          } else {
+            if (toolSpecificMetadataCase_ == 13) {
+              return readFileToolCallDataBuilder_.getMessage();
+            }
+            return com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.ReadFileToolCallData.getDefaultInstance();
+          }
+        }
+        /**
+         * <pre>
+         * Data for a read_file tool call.
+         * </pre>
+         *
+         * <code>.android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.ReadFileToolCallData read_file_tool_call_data = 13;</code>
+         */
+        public Builder setReadFileToolCallData(com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.ReadFileToolCallData value) {
+          if (readFileToolCallDataBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            toolSpecificMetadata_ = value;
+            onChanged();
+          } else {
+            readFileToolCallDataBuilder_.setMessage(value);
+          }
+          toolSpecificMetadataCase_ = 13;
+          return this;
+        }
+        /**
+         * <pre>
+         * Data for a read_file tool call.
+         * </pre>
+         *
+         * <code>.android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.ReadFileToolCallData read_file_tool_call_data = 13;</code>
+         */
+        public Builder setReadFileToolCallData(
+            com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.ReadFileToolCallData.Builder builderForValue) {
+          if (readFileToolCallDataBuilder_ == null) {
+            toolSpecificMetadata_ = builderForValue.build();
+            onChanged();
+          } else {
+            readFileToolCallDataBuilder_.setMessage(builderForValue.build());
+          }
+          toolSpecificMetadataCase_ = 13;
+          return this;
+        }
+        /**
+         * <pre>
+         * Data for a read_file tool call.
+         * </pre>
+         *
+         * <code>.android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.ReadFileToolCallData read_file_tool_call_data = 13;</code>
+         */
+        public Builder mergeReadFileToolCallData(com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.ReadFileToolCallData value) {
+          if (readFileToolCallDataBuilder_ == null) {
+            if (toolSpecificMetadataCase_ == 13 &&
+                toolSpecificMetadata_ != com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.ReadFileToolCallData.getDefaultInstance()) {
+              toolSpecificMetadata_ = com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.ReadFileToolCallData.newBuilder((com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.ReadFileToolCallData) toolSpecificMetadata_)
+                  .mergeFrom(value).buildPartial();
+            } else {
+              toolSpecificMetadata_ = value;
+            }
+            onChanged();
+          } else {
+            if (toolSpecificMetadataCase_ == 13) {
+              readFileToolCallDataBuilder_.mergeFrom(value);
+            } else {
+              readFileToolCallDataBuilder_.setMessage(value);
+            }
+          }
+          toolSpecificMetadataCase_ = 13;
+          return this;
+        }
+        /**
+         * <pre>
+         * Data for a read_file tool call.
+         * </pre>
+         *
+         * <code>.android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.ReadFileToolCallData read_file_tool_call_data = 13;</code>
+         */
+        public Builder clearReadFileToolCallData() {
+          if (readFileToolCallDataBuilder_ == null) {
+            if (toolSpecificMetadataCase_ == 13) {
+              toolSpecificMetadataCase_ = 0;
+              toolSpecificMetadata_ = null;
+              onChanged();
+            }
+          } else {
+            if (toolSpecificMetadataCase_ == 13) {
+              toolSpecificMetadataCase_ = 0;
+              toolSpecificMetadata_ = null;
+            }
+            readFileToolCallDataBuilder_.clear();
+          }
+          return this;
+        }
+        /**
+         * <pre>
+         * Data for a read_file tool call.
+         * </pre>
+         *
+         * <code>.android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.ReadFileToolCallData read_file_tool_call_data = 13;</code>
+         */
+        public com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.ReadFileToolCallData.Builder getReadFileToolCallDataBuilder() {
+          return getReadFileToolCallDataFieldBuilder().getBuilder();
+        }
+        /**
+         * <pre>
+         * Data for a read_file tool call.
+         * </pre>
+         *
+         * <code>.android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.ReadFileToolCallData read_file_tool_call_data = 13;</code>
+         */
+        @java.lang.Override
+        public com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.ReadFileToolCallDataOrBuilder getReadFileToolCallDataOrBuilder() {
+          if ((toolSpecificMetadataCase_ == 13) && (readFileToolCallDataBuilder_ != null)) {
+            return readFileToolCallDataBuilder_.getMessageOrBuilder();
+          } else {
+            if (toolSpecificMetadataCase_ == 13) {
+              return (com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.ReadFileToolCallData) toolSpecificMetadata_;
+            }
+            return com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.ReadFileToolCallData.getDefaultInstance();
+          }
+        }
+        /**
+         * <pre>
+         * Data for a read_file tool call.
+         * </pre>
+         *
+         * <code>.android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.ReadFileToolCallData read_file_tool_call_data = 13;</code>
+         */
+        private com.google.protobuf.SingleFieldBuilderV3<
+            com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.ReadFileToolCallData, com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.ReadFileToolCallData.Builder, com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.ReadFileToolCallDataOrBuilder> 
+            getReadFileToolCallDataFieldBuilder() {
+          if (readFileToolCallDataBuilder_ == null) {
+            if (!(toolSpecificMetadataCase_ == 13)) {
+              toolSpecificMetadata_ = com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.ReadFileToolCallData.getDefaultInstance();
+            }
+            readFileToolCallDataBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.ReadFileToolCallData, com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.ReadFileToolCallData.Builder, com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.ReadFileToolCallDataOrBuilder>(
+                    (com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.ReadFileToolCallData) toolSpecificMetadata_,
+                    getParentForChildren(),
+                    isClean());
+            toolSpecificMetadata_ = null;
+          }
+          toolSpecificMetadataCase_ = 13;
+          onChanged();
+          return readFileToolCallDataBuilder_;
         }
         @java.lang.Override
         public final Builder setUnknownFields(
