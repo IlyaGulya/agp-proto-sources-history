@@ -3084,6 +3084,10 @@ public final class ClientAnalytics {
        * <code>ANDROID_STUDIO = 302;</code>
        */
       ANDROID_STUDIO(302),
+      /**
+       * <code>ANDROID_STUDIO_EVENT_LOGGED_IN = 2878;</code>
+       */
+      ANDROID_STUDIO_EVENT_LOGGED_IN(2878),
       ;
 
       /**
@@ -3094,6 +3098,10 @@ public final class ClientAnalytics {
        * <code>ANDROID_STUDIO = 302;</code>
        */
       public static final int ANDROID_STUDIO_VALUE = 302;
+      /**
+       * <code>ANDROID_STUDIO_EVENT_LOGGED_IN = 2878;</code>
+       */
+      public static final int ANDROID_STUDIO_EVENT_LOGGED_IN_VALUE = 2878;
 
 
       public final int getNumber() {
@@ -3118,6 +3126,7 @@ public final class ClientAnalytics {
         switch (value) {
           case -1: return UNKNOWN;
           case 302: return ANDROID_STUDIO;
+          case 2878: return ANDROID_STUDIO_EVENT_LOGGED_IN;
           default: return null;
         }
       }
@@ -4268,16 +4277,17 @@ public final class ClientAnalytics {
       "lientInfo.ClientType\022M\n\023desktop_client_i" +
       "nfo\030\003 \001(\01320.wireless_android_play_playlo" +
       "g.DesktopClientInfo\"\031\n\nClientType\022\013\n\007DES" +
-      "KTOP\020\002\"\253\002\n\nLogRequest\022\027\n\017request_time_ms" +
+      "KTOP\020\002\"\320\002\n\nLogRequest\022\027\n\017request_time_ms" +
       "\030\004 \001(\003\022>\n\013client_info\030\001 \001(\0132).wireless_a" +
       "ndroid_play_playlog.ClientInfo\022P\n\nlog_so" +
       "urce\030\002 \001(\01623.wireless_android_play_playl" +
       "og.LogRequest.LogSource:\007UNKNOWN\022:\n\tlog_" +
       "event\030\003 \003(\0132\'.wireless_android_play_play" +
-      "log.LogEvent\"6\n\tLogSource\022\024\n\007UNKNOWN\020\377\377\377" +
-      "\377\377\377\377\377\377\001\022\023\n\016ANDROID_STUDIO\020\256\002BA\n.com.goog" +
-      "le.wireless.android.play.playlog.protoB\017" +
-      "ClientAnalytics"
+      "log.LogEvent\"[\n\tLogSource\022\024\n\007UNKNOWN\020\377\377\377" +
+      "\377\377\377\377\377\377\001\022\023\n\016ANDROID_STUDIO\020\256\002\022#\n\036ANDROID_" +
+      "STUDIO_EVENT_LOGGED_IN\020\276\026BA\n.com.google." +
+      "wireless.android.play.playlog.protoB\017Cli" +
+      "entAnalytics"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

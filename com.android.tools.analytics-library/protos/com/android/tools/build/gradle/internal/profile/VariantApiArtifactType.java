@@ -96,6 +96,38 @@ public enum VariantApiArtifactType
    * <code>POST_COMPILATION_CLASSES = 20;</code>
    */
   POST_COMPILATION_CLASSES(20),
+  /**
+   * <code>AGGREGATED_LINT_HTML_REPORT = 21;</code>
+   */
+  AGGREGATED_LINT_HTML_REPORT(21),
+  /**
+   * <code>AGGREGATED_LINT_SARIF_REPORT = 22;</code>
+   */
+  AGGREGATED_LINT_SARIF_REPORT(22),
+  /**
+   * <code>AGGREGATED_LINT_TEXT_REPORT = 23;</code>
+   */
+  AGGREGATED_LINT_TEXT_REPORT(23),
+  /**
+   * <code>AGGREGATED_LINT_XML_REPORT = 24;</code>
+   */
+  AGGREGATED_LINT_XML_REPORT(24),
+  /**
+   * <code>LINT_HTML_REPORT = 25;</code>
+   */
+  LINT_HTML_REPORT(25),
+  /**
+   * <code>LINT_SARIF_REPORT = 26;</code>
+   */
+  LINT_SARIF_REPORT(26),
+  /**
+   * <code>LINT_TEXT_REPORT = 27;</code>
+   */
+  LINT_TEXT_REPORT(27),
+  /**
+   * <code>LINT_XML_REPORT = 28;</code>
+   */
+  LINT_XML_REPORT(28),
   UNRECOGNIZED(-1),
   ;
 
@@ -187,6 +219,38 @@ public enum VariantApiArtifactType
    * <code>POST_COMPILATION_CLASSES = 20;</code>
    */
   public static final int POST_COMPILATION_CLASSES_VALUE = 20;
+  /**
+   * <code>AGGREGATED_LINT_HTML_REPORT = 21;</code>
+   */
+  public static final int AGGREGATED_LINT_HTML_REPORT_VALUE = 21;
+  /**
+   * <code>AGGREGATED_LINT_SARIF_REPORT = 22;</code>
+   */
+  public static final int AGGREGATED_LINT_SARIF_REPORT_VALUE = 22;
+  /**
+   * <code>AGGREGATED_LINT_TEXT_REPORT = 23;</code>
+   */
+  public static final int AGGREGATED_LINT_TEXT_REPORT_VALUE = 23;
+  /**
+   * <code>AGGREGATED_LINT_XML_REPORT = 24;</code>
+   */
+  public static final int AGGREGATED_LINT_XML_REPORT_VALUE = 24;
+  /**
+   * <code>LINT_HTML_REPORT = 25;</code>
+   */
+  public static final int LINT_HTML_REPORT_VALUE = 25;
+  /**
+   * <code>LINT_SARIF_REPORT = 26;</code>
+   */
+  public static final int LINT_SARIF_REPORT_VALUE = 26;
+  /**
+   * <code>LINT_TEXT_REPORT = 27;</code>
+   */
+  public static final int LINT_TEXT_REPORT_VALUE = 27;
+  /**
+   * <code>LINT_XML_REPORT = 28;</code>
+   */
+  public static final int LINT_XML_REPORT_VALUE = 28;
 
 
   public final int getNumber() {
@@ -234,6 +298,14 @@ public enum VariantApiArtifactType
       case 18: return NATIVE_SYMBOL_TABLES;
       case 19: return PRE_COMPILATION_CLASSES;
       case 20: return POST_COMPILATION_CLASSES;
+      case 21: return AGGREGATED_LINT_HTML_REPORT;
+      case 22: return AGGREGATED_LINT_SARIF_REPORT;
+      case 23: return AGGREGATED_LINT_TEXT_REPORT;
+      case 24: return AGGREGATED_LINT_XML_REPORT;
+      case 25: return LINT_HTML_REPORT;
+      case 26: return LINT_SARIF_REPORT;
+      case 27: return LINT_TEXT_REPORT;
+      case 28: return LINT_XML_REPORT;
       default: return null;
     }
   }

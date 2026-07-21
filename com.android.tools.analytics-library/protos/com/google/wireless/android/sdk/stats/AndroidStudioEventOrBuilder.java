@@ -6987,4 +6987,31 @@ public interface AndroidStudioEventOrBuilder extends
    * <code>optional .android_studio.EmulatorWindowsHypervisorMigrationEvent emulator_windows_hypervisor_migration_event = 250 [lazy = true];</code>
    */
   com.google.wireless.android.sdk.stats.EmulatorWindowsHypervisorMigrationEventOrBuilder getEmulatorWindowsHypervisorMigrationEventOrBuilder();
+
+  /**
+   * <pre>
+   * set when kind = ANDROID_CLI_INVOCATION
+   * </pre>
+   *
+   * <code>optional .android_studio.AndroidCliInvocation android_cli_invocation = 251 [lazy = true];</code>
+   * @return Whether the androidCliInvocation field is set.
+   */
+  boolean hasAndroidCliInvocation();
+  /**
+   * <pre>
+   * set when kind = ANDROID_CLI_INVOCATION
+   * </pre>
+   *
+   * <code>optional .android_studio.AndroidCliInvocation android_cli_invocation = 251 [lazy = true];</code>
+   * @return The androidCliInvocation.
+   */
+  com.google.wireless.android.sdk.stats.AndroidCliInvocation getAndroidCliInvocation();
+  /**
+   * <pre>
+   * set when kind = ANDROID_CLI_INVOCATION
+   * </pre>
+   *
+   * <code>optional .android_studio.AndroidCliInvocation android_cli_invocation = 251 [lazy = true];</code>
+   */
+  com.google.wireless.android.sdk.stats.AndroidCliInvocationOrBuilder getAndroidCliInvocationOrBuilder();
 }
