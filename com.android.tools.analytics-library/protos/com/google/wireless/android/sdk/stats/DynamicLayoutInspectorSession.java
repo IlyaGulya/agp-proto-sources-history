@@ -92,6 +92,32 @@ private static final long serialVersionUID = 0L;
             bitField0_ |= 0x00000004;
             break;
           }
+          case 34: {
+            com.google.wireless.android.sdk.stats.DynamicLayoutInspectorCompose.Builder subBuilder = null;
+            if (((bitField0_ & 0x00000008) != 0)) {
+              subBuilder = compose_.toBuilder();
+            }
+            compose_ = input.readMessage(com.google.wireless.android.sdk.stats.DynamicLayoutInspectorCompose.PARSER, extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(compose_);
+              compose_ = subBuilder.buildPartial();
+            }
+            bitField0_ |= 0x00000008;
+            break;
+          }
+          case 42: {
+            com.google.wireless.android.sdk.stats.DynamicLayoutInspectorSystemNode.Builder subBuilder = null;
+            if (((bitField0_ & 0x00000010) != 0)) {
+              subBuilder = system_.toBuilder();
+            }
+            system_ = input.readMessage(com.google.wireless.android.sdk.stats.DynamicLayoutInspectorSystemNode.PARSER, extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(system_);
+              system_ = subBuilder.buildPartial();
+            }
+            bitField0_ |= 0x00000010;
+            break;
+          }
           default: {
             if (!parseUnknownField(
                 input, unknownFields, extensionRegistry, tag)) {
@@ -230,6 +256,76 @@ private static final long serialVersionUID = 0L;
     return memory_ == null ? com.google.wireless.android.sdk.stats.DynamicLayoutInspectorMemory.getDefaultInstance() : memory_;
   }
 
+  public static final int COMPOSE_FIELD_NUMBER = 4;
+  private com.google.wireless.android.sdk.stats.DynamicLayoutInspectorCompose compose_;
+  /**
+   * <pre>
+   * Session data around compose
+   * </pre>
+   *
+   * <code>optional .android_studio.DynamicLayoutInspectorCompose compose = 4;</code>
+   * @return Whether the compose field is set.
+   */
+  public boolean hasCompose() {
+    return ((bitField0_ & 0x00000008) != 0);
+  }
+  /**
+   * <pre>
+   * Session data around compose
+   * </pre>
+   *
+   * <code>optional .android_studio.DynamicLayoutInspectorCompose compose = 4;</code>
+   * @return The compose.
+   */
+  public com.google.wireless.android.sdk.stats.DynamicLayoutInspectorCompose getCompose() {
+    return compose_ == null ? com.google.wireless.android.sdk.stats.DynamicLayoutInspectorCompose.getDefaultInstance() : compose_;
+  }
+  /**
+   * <pre>
+   * Session data around compose
+   * </pre>
+   *
+   * <code>optional .android_studio.DynamicLayoutInspectorCompose compose = 4;</code>
+   */
+  public com.google.wireless.android.sdk.stats.DynamicLayoutInspectorComposeOrBuilder getComposeOrBuilder() {
+    return compose_ == null ? com.google.wireless.android.sdk.stats.DynamicLayoutInspectorCompose.getDefaultInstance() : compose_;
+  }
+
+  public static final int SYSTEM_FIELD_NUMBER = 5;
+  private com.google.wireless.android.sdk.stats.DynamicLayoutInspectorSystemNode system_;
+  /**
+   * <pre>
+   * Session data around the system view toggle
+   * </pre>
+   *
+   * <code>optional .android_studio.DynamicLayoutInspectorSystemNode system = 5;</code>
+   * @return Whether the system field is set.
+   */
+  public boolean hasSystem() {
+    return ((bitField0_ & 0x00000010) != 0);
+  }
+  /**
+   * <pre>
+   * Session data around the system view toggle
+   * </pre>
+   *
+   * <code>optional .android_studio.DynamicLayoutInspectorSystemNode system = 5;</code>
+   * @return The system.
+   */
+  public com.google.wireless.android.sdk.stats.DynamicLayoutInspectorSystemNode getSystem() {
+    return system_ == null ? com.google.wireless.android.sdk.stats.DynamicLayoutInspectorSystemNode.getDefaultInstance() : system_;
+  }
+  /**
+   * <pre>
+   * Session data around the system view toggle
+   * </pre>
+   *
+   * <code>optional .android_studio.DynamicLayoutInspectorSystemNode system = 5;</code>
+   */
+  public com.google.wireless.android.sdk.stats.DynamicLayoutInspectorSystemNodeOrBuilder getSystemOrBuilder() {
+    return system_ == null ? com.google.wireless.android.sdk.stats.DynamicLayoutInspectorSystemNode.getDefaultInstance() : system_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -253,6 +349,12 @@ private static final long serialVersionUID = 0L;
     if (((bitField0_ & 0x00000004) != 0)) {
       output.writeMessage(3, getMemory());
     }
+    if (((bitField0_ & 0x00000008) != 0)) {
+      output.writeMessage(4, getCompose());
+    }
+    if (((bitField0_ & 0x00000010) != 0)) {
+      output.writeMessage(5, getSystem());
+    }
     unknownFields.writeTo(output);
   }
 
@@ -273,6 +375,14 @@ private static final long serialVersionUID = 0L;
     if (((bitField0_ & 0x00000004) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(3, getMemory());
+    }
+    if (((bitField0_ & 0x00000008) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(4, getCompose());
+    }
+    if (((bitField0_ & 0x00000010) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(5, getSystem());
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -304,6 +414,16 @@ private static final long serialVersionUID = 0L;
       if (!getMemory()
           .equals(other.getMemory())) return false;
     }
+    if (hasCompose() != other.hasCompose()) return false;
+    if (hasCompose()) {
+      if (!getCompose()
+          .equals(other.getCompose())) return false;
+    }
+    if (hasSystem() != other.hasSystem()) return false;
+    if (hasSystem()) {
+      if (!getSystem()
+          .equals(other.getSystem())) return false;
+    }
     if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
@@ -326,6 +446,14 @@ private static final long serialVersionUID = 0L;
     if (hasMemory()) {
       hash = (37 * hash) + MEMORY_FIELD_NUMBER;
       hash = (53 * hash) + getMemory().hashCode();
+    }
+    if (hasCompose()) {
+      hash = (37 * hash) + COMPOSE_FIELD_NUMBER;
+      hash = (53 * hash) + getCompose().hashCode();
+    }
+    if (hasSystem()) {
+      hash = (37 * hash) + SYSTEM_FIELD_NUMBER;
+      hash = (53 * hash) + getSystem().hashCode();
     }
     hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
@@ -462,6 +590,8 @@ private static final long serialVersionUID = 0L;
         getLiveFieldBuilder();
         getRotationFieldBuilder();
         getMemoryFieldBuilder();
+        getComposeFieldBuilder();
+        getSystemFieldBuilder();
       }
     }
     @java.lang.Override
@@ -485,6 +615,18 @@ private static final long serialVersionUID = 0L;
         memoryBuilder_.clear();
       }
       bitField0_ = (bitField0_ & ~0x00000004);
+      if (composeBuilder_ == null) {
+        compose_ = null;
+      } else {
+        composeBuilder_.clear();
+      }
+      bitField0_ = (bitField0_ & ~0x00000008);
+      if (systemBuilder_ == null) {
+        system_ = null;
+      } else {
+        systemBuilder_.clear();
+      }
+      bitField0_ = (bitField0_ & ~0x00000010);
       return this;
     }
 
@@ -536,6 +678,22 @@ private static final long serialVersionUID = 0L;
           result.memory_ = memoryBuilder_.build();
         }
         to_bitField0_ |= 0x00000004;
+      }
+      if (((from_bitField0_ & 0x00000008) != 0)) {
+        if (composeBuilder_ == null) {
+          result.compose_ = compose_;
+        } else {
+          result.compose_ = composeBuilder_.build();
+        }
+        to_bitField0_ |= 0x00000008;
+      }
+      if (((from_bitField0_ & 0x00000010) != 0)) {
+        if (systemBuilder_ == null) {
+          result.system_ = system_;
+        } else {
+          result.system_ = systemBuilder_.build();
+        }
+        to_bitField0_ |= 0x00000010;
       }
       result.bitField0_ = to_bitField0_;
       onBuilt();
@@ -594,6 +752,12 @@ private static final long serialVersionUID = 0L;
       }
       if (other.hasMemory()) {
         mergeMemory(other.getMemory());
+      }
+      if (other.hasCompose()) {
+        mergeCompose(other.getCompose());
+      }
+      if (other.hasSystem()) {
+        mergeSystem(other.getSystem());
       }
       this.mergeUnknownFields(other.unknownFields);
       onChanged();
@@ -1091,6 +1255,318 @@ private static final long serialVersionUID = 0L;
         memory_ = null;
       }
       return memoryBuilder_;
+    }
+
+    private com.google.wireless.android.sdk.stats.DynamicLayoutInspectorCompose compose_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.DynamicLayoutInspectorCompose, com.google.wireless.android.sdk.stats.DynamicLayoutInspectorCompose.Builder, com.google.wireless.android.sdk.stats.DynamicLayoutInspectorComposeOrBuilder> composeBuilder_;
+    /**
+     * <pre>
+     * Session data around compose
+     * </pre>
+     *
+     * <code>optional .android_studio.DynamicLayoutInspectorCompose compose = 4;</code>
+     * @return Whether the compose field is set.
+     */
+    public boolean hasCompose() {
+      return ((bitField0_ & 0x00000008) != 0);
+    }
+    /**
+     * <pre>
+     * Session data around compose
+     * </pre>
+     *
+     * <code>optional .android_studio.DynamicLayoutInspectorCompose compose = 4;</code>
+     * @return The compose.
+     */
+    public com.google.wireless.android.sdk.stats.DynamicLayoutInspectorCompose getCompose() {
+      if (composeBuilder_ == null) {
+        return compose_ == null ? com.google.wireless.android.sdk.stats.DynamicLayoutInspectorCompose.getDefaultInstance() : compose_;
+      } else {
+        return composeBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * Session data around compose
+     * </pre>
+     *
+     * <code>optional .android_studio.DynamicLayoutInspectorCompose compose = 4;</code>
+     */
+    public Builder setCompose(com.google.wireless.android.sdk.stats.DynamicLayoutInspectorCompose value) {
+      if (composeBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        compose_ = value;
+        onChanged();
+      } else {
+        composeBuilder_.setMessage(value);
+      }
+      bitField0_ |= 0x00000008;
+      return this;
+    }
+    /**
+     * <pre>
+     * Session data around compose
+     * </pre>
+     *
+     * <code>optional .android_studio.DynamicLayoutInspectorCompose compose = 4;</code>
+     */
+    public Builder setCompose(
+        com.google.wireless.android.sdk.stats.DynamicLayoutInspectorCompose.Builder builderForValue) {
+      if (composeBuilder_ == null) {
+        compose_ = builderForValue.build();
+        onChanged();
+      } else {
+        composeBuilder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x00000008;
+      return this;
+    }
+    /**
+     * <pre>
+     * Session data around compose
+     * </pre>
+     *
+     * <code>optional .android_studio.DynamicLayoutInspectorCompose compose = 4;</code>
+     */
+    public Builder mergeCompose(com.google.wireless.android.sdk.stats.DynamicLayoutInspectorCompose value) {
+      if (composeBuilder_ == null) {
+        if (((bitField0_ & 0x00000008) != 0) &&
+            compose_ != null &&
+            compose_ != com.google.wireless.android.sdk.stats.DynamicLayoutInspectorCompose.getDefaultInstance()) {
+          compose_ =
+            com.google.wireless.android.sdk.stats.DynamicLayoutInspectorCompose.newBuilder(compose_).mergeFrom(value).buildPartial();
+        } else {
+          compose_ = value;
+        }
+        onChanged();
+      } else {
+        composeBuilder_.mergeFrom(value);
+      }
+      bitField0_ |= 0x00000008;
+      return this;
+    }
+    /**
+     * <pre>
+     * Session data around compose
+     * </pre>
+     *
+     * <code>optional .android_studio.DynamicLayoutInspectorCompose compose = 4;</code>
+     */
+    public Builder clearCompose() {
+      if (composeBuilder_ == null) {
+        compose_ = null;
+        onChanged();
+      } else {
+        composeBuilder_.clear();
+      }
+      bitField0_ = (bitField0_ & ~0x00000008);
+      return this;
+    }
+    /**
+     * <pre>
+     * Session data around compose
+     * </pre>
+     *
+     * <code>optional .android_studio.DynamicLayoutInspectorCompose compose = 4;</code>
+     */
+    public com.google.wireless.android.sdk.stats.DynamicLayoutInspectorCompose.Builder getComposeBuilder() {
+      bitField0_ |= 0x00000008;
+      onChanged();
+      return getComposeFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * Session data around compose
+     * </pre>
+     *
+     * <code>optional .android_studio.DynamicLayoutInspectorCompose compose = 4;</code>
+     */
+    public com.google.wireless.android.sdk.stats.DynamicLayoutInspectorComposeOrBuilder getComposeOrBuilder() {
+      if (composeBuilder_ != null) {
+        return composeBuilder_.getMessageOrBuilder();
+      } else {
+        return compose_ == null ?
+            com.google.wireless.android.sdk.stats.DynamicLayoutInspectorCompose.getDefaultInstance() : compose_;
+      }
+    }
+    /**
+     * <pre>
+     * Session data around compose
+     * </pre>
+     *
+     * <code>optional .android_studio.DynamicLayoutInspectorCompose compose = 4;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.DynamicLayoutInspectorCompose, com.google.wireless.android.sdk.stats.DynamicLayoutInspectorCompose.Builder, com.google.wireless.android.sdk.stats.DynamicLayoutInspectorComposeOrBuilder> 
+        getComposeFieldBuilder() {
+      if (composeBuilder_ == null) {
+        composeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.wireless.android.sdk.stats.DynamicLayoutInspectorCompose, com.google.wireless.android.sdk.stats.DynamicLayoutInspectorCompose.Builder, com.google.wireless.android.sdk.stats.DynamicLayoutInspectorComposeOrBuilder>(
+                getCompose(),
+                getParentForChildren(),
+                isClean());
+        compose_ = null;
+      }
+      return composeBuilder_;
+    }
+
+    private com.google.wireless.android.sdk.stats.DynamicLayoutInspectorSystemNode system_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.DynamicLayoutInspectorSystemNode, com.google.wireless.android.sdk.stats.DynamicLayoutInspectorSystemNode.Builder, com.google.wireless.android.sdk.stats.DynamicLayoutInspectorSystemNodeOrBuilder> systemBuilder_;
+    /**
+     * <pre>
+     * Session data around the system view toggle
+     * </pre>
+     *
+     * <code>optional .android_studio.DynamicLayoutInspectorSystemNode system = 5;</code>
+     * @return Whether the system field is set.
+     */
+    public boolean hasSystem() {
+      return ((bitField0_ & 0x00000010) != 0);
+    }
+    /**
+     * <pre>
+     * Session data around the system view toggle
+     * </pre>
+     *
+     * <code>optional .android_studio.DynamicLayoutInspectorSystemNode system = 5;</code>
+     * @return The system.
+     */
+    public com.google.wireless.android.sdk.stats.DynamicLayoutInspectorSystemNode getSystem() {
+      if (systemBuilder_ == null) {
+        return system_ == null ? com.google.wireless.android.sdk.stats.DynamicLayoutInspectorSystemNode.getDefaultInstance() : system_;
+      } else {
+        return systemBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * Session data around the system view toggle
+     * </pre>
+     *
+     * <code>optional .android_studio.DynamicLayoutInspectorSystemNode system = 5;</code>
+     */
+    public Builder setSystem(com.google.wireless.android.sdk.stats.DynamicLayoutInspectorSystemNode value) {
+      if (systemBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        system_ = value;
+        onChanged();
+      } else {
+        systemBuilder_.setMessage(value);
+      }
+      bitField0_ |= 0x00000010;
+      return this;
+    }
+    /**
+     * <pre>
+     * Session data around the system view toggle
+     * </pre>
+     *
+     * <code>optional .android_studio.DynamicLayoutInspectorSystemNode system = 5;</code>
+     */
+    public Builder setSystem(
+        com.google.wireless.android.sdk.stats.DynamicLayoutInspectorSystemNode.Builder builderForValue) {
+      if (systemBuilder_ == null) {
+        system_ = builderForValue.build();
+        onChanged();
+      } else {
+        systemBuilder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x00000010;
+      return this;
+    }
+    /**
+     * <pre>
+     * Session data around the system view toggle
+     * </pre>
+     *
+     * <code>optional .android_studio.DynamicLayoutInspectorSystemNode system = 5;</code>
+     */
+    public Builder mergeSystem(com.google.wireless.android.sdk.stats.DynamicLayoutInspectorSystemNode value) {
+      if (systemBuilder_ == null) {
+        if (((bitField0_ & 0x00000010) != 0) &&
+            system_ != null &&
+            system_ != com.google.wireless.android.sdk.stats.DynamicLayoutInspectorSystemNode.getDefaultInstance()) {
+          system_ =
+            com.google.wireless.android.sdk.stats.DynamicLayoutInspectorSystemNode.newBuilder(system_).mergeFrom(value).buildPartial();
+        } else {
+          system_ = value;
+        }
+        onChanged();
+      } else {
+        systemBuilder_.mergeFrom(value);
+      }
+      bitField0_ |= 0x00000010;
+      return this;
+    }
+    /**
+     * <pre>
+     * Session data around the system view toggle
+     * </pre>
+     *
+     * <code>optional .android_studio.DynamicLayoutInspectorSystemNode system = 5;</code>
+     */
+    public Builder clearSystem() {
+      if (systemBuilder_ == null) {
+        system_ = null;
+        onChanged();
+      } else {
+        systemBuilder_.clear();
+      }
+      bitField0_ = (bitField0_ & ~0x00000010);
+      return this;
+    }
+    /**
+     * <pre>
+     * Session data around the system view toggle
+     * </pre>
+     *
+     * <code>optional .android_studio.DynamicLayoutInspectorSystemNode system = 5;</code>
+     */
+    public com.google.wireless.android.sdk.stats.DynamicLayoutInspectorSystemNode.Builder getSystemBuilder() {
+      bitField0_ |= 0x00000010;
+      onChanged();
+      return getSystemFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * Session data around the system view toggle
+     * </pre>
+     *
+     * <code>optional .android_studio.DynamicLayoutInspectorSystemNode system = 5;</code>
+     */
+    public com.google.wireless.android.sdk.stats.DynamicLayoutInspectorSystemNodeOrBuilder getSystemOrBuilder() {
+      if (systemBuilder_ != null) {
+        return systemBuilder_.getMessageOrBuilder();
+      } else {
+        return system_ == null ?
+            com.google.wireless.android.sdk.stats.DynamicLayoutInspectorSystemNode.getDefaultInstance() : system_;
+      }
+    }
+    /**
+     * <pre>
+     * Session data around the system view toggle
+     * </pre>
+     *
+     * <code>optional .android_studio.DynamicLayoutInspectorSystemNode system = 5;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.DynamicLayoutInspectorSystemNode, com.google.wireless.android.sdk.stats.DynamicLayoutInspectorSystemNode.Builder, com.google.wireless.android.sdk.stats.DynamicLayoutInspectorSystemNodeOrBuilder> 
+        getSystemFieldBuilder() {
+      if (systemBuilder_ == null) {
+        systemBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.wireless.android.sdk.stats.DynamicLayoutInspectorSystemNode, com.google.wireless.android.sdk.stats.DynamicLayoutInspectorSystemNode.Builder, com.google.wireless.android.sdk.stats.DynamicLayoutInspectorSystemNodeOrBuilder>(
+                getSystem(),
+                getParentForChildren(),
+                isClean());
+        system_ = null;
+      }
+      return systemBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

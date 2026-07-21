@@ -1534,6 +1534,19 @@ private static final long serialVersionUID = 0L;
             bitField3_ |= 0x00020000;
             break;
           }
+          case 954: {
+            com.google.wireless.android.sdk.stats.LiveLiteralsEvent.Builder subBuilder = null;
+            if (((bitField3_ & 0x00040000) != 0)) {
+              subBuilder = liveLiteralsEvent_.toBuilder();
+            }
+            liveLiteralsEvent_ = input.readMessage(com.google.wireless.android.sdk.stats.LiveLiteralsEvent.PARSER, extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(liveLiteralsEvent_);
+              liveLiteralsEvent_ = subBuilder.buildPartial();
+            }
+            bitField3_ |= 0x00040000;
+            break;
+          }
           default: {
             if (!parseUnknownField(
                 input, unknownFields, extensionRegistry, tag)) {
@@ -3744,6 +3757,14 @@ private static final long serialVersionUID = 0L;
      * <code>FILE_USAGE = 220;</code>
      */
     FILE_USAGE(220),
+    /**
+     * <pre>
+     * Event related to live literals.
+     * </pre>
+     *
+     * <code>LIVE_LITERALS_EVENT = 221;</code>
+     */
+    LIVE_LITERALS_EVENT(221),
     ;
 
     /**
@@ -5336,6 +5357,14 @@ private static final long serialVersionUID = 0L;
      * <code>FILE_USAGE = 220;</code>
      */
     public static final int FILE_USAGE_VALUE = 220;
+    /**
+     * <pre>
+     * Event related to live literals.
+     * </pre>
+     *
+     * <code>LIVE_LITERALS_EVENT = 221;</code>
+     */
+    public static final int LIVE_LITERALS_EVENT_VALUE = 221;
 
 
     public final int getNumber() {
@@ -5574,6 +5603,7 @@ private static final long serialVersionUID = 0L;
         case 218: return COMPOSE_DEPLOY;
         case 219: return AUTO_IMPORT_EVENT;
         case 220: return FILE_USAGE;
+        case 221: return LIVE_LITERALS_EVENT;
         default: return null;
       }
     }
@@ -7962,6 +7992,14 @@ private static final long serialVersionUID = 0L;
      * <code>TYPE_MISSING_ANDROID_MANIFEST = 53;</code>
      */
     TYPE_MISSING_ANDROID_MANIFEST(53),
+    /**
+     * <pre>
+     * JCenter Maven is deprecated and it should not be used in build scripts.
+     * </pre>
+     *
+     * <code>TYPE_JCENTER_IS_DEPRECATED = 54;</code>
+     */
+    TYPE_JCENTER_IS_DEPRECATED(54),
     ;
 
     /**
@@ -8334,6 +8372,14 @@ private static final long serialVersionUID = 0L;
      * <code>TYPE_MISSING_ANDROID_MANIFEST = 53;</code>
      */
     public static final int TYPE_MISSING_ANDROID_MANIFEST_VALUE = 53;
+    /**
+     * <pre>
+     * JCenter Maven is deprecated and it should not be used in build scripts.
+     * </pre>
+     *
+     * <code>TYPE_JCENTER_IS_DEPRECATED = 54;</code>
+     */
+    public static final int TYPE_JCENTER_IS_DEPRECATED_VALUE = 54;
 
 
     public final int getNumber() {
@@ -8410,6 +8456,7 @@ private static final long serialVersionUID = 0L;
         case 51: return TYPE_MISSING_JAVA8_FLAG;
         case 52: return TYPE_EDIT_LOCKED_DSL_VALUE;
         case 53: return TYPE_MISSING_ANDROID_MANIFEST;
+        case 54: return TYPE_JCENTER_IS_DEPRECATED;
         default: return null;
       }
     }
@@ -18216,6 +18263,41 @@ private static final long serialVersionUID = 0L;
     return fileUsage_ == null ? com.google.wireless.android.sdk.stats.FileUsage.getDefaultInstance() : fileUsage_;
   }
 
+  public static final int LIVE_LITERALS_EVENT_FIELD_NUMBER = 119;
+  private com.google.wireless.android.sdk.stats.LiveLiteralsEvent liveLiteralsEvent_;
+  /**
+   * <pre>
+   * set when kind = LIVE_LITERALS_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.LiveLiteralsEvent live_literals_event = 119;</code>
+   * @return Whether the liveLiteralsEvent field is set.
+   */
+  public boolean hasLiveLiteralsEvent() {
+    return ((bitField3_ & 0x00040000) != 0);
+  }
+  /**
+   * <pre>
+   * set when kind = LIVE_LITERALS_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.LiveLiteralsEvent live_literals_event = 119;</code>
+   * @return The liveLiteralsEvent.
+   */
+  public com.google.wireless.android.sdk.stats.LiveLiteralsEvent getLiveLiteralsEvent() {
+    return liveLiteralsEvent_ == null ? com.google.wireless.android.sdk.stats.LiveLiteralsEvent.getDefaultInstance() : liveLiteralsEvent_;
+  }
+  /**
+   * <pre>
+   * set when kind = LIVE_LITERALS_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.LiveLiteralsEvent live_literals_event = 119;</code>
+   */
+  public com.google.wireless.android.sdk.stats.LiveLiteralsEventOrBuilder getLiveLiteralsEventOrBuilder() {
+    return liveLiteralsEvent_ == null ? com.google.wireless.android.sdk.stats.LiveLiteralsEvent.getDefaultInstance() : liveLiteralsEvent_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -18583,6 +18665,9 @@ private static final long serialVersionUID = 0L;
     }
     if (((bitField3_ & 0x00020000) != 0)) {
       output.writeMessage(118, getFileUsage());
+    }
+    if (((bitField3_ & 0x00040000) != 0)) {
+      output.writeMessage(119, getLiveLiteralsEvent());
     }
     unknownFields.writeTo(output);
   }
@@ -19062,6 +19147,10 @@ private static final long serialVersionUID = 0L;
     if (((bitField3_ & 0x00020000) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(118, getFileUsage());
+    }
+    if (((bitField3_ & 0x00040000) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(119, getLiveLiteralsEvent());
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -19645,6 +19734,11 @@ private static final long serialVersionUID = 0L;
       if (!getFileUsage()
           .equals(other.getFileUsage())) return false;
     }
+    if (hasLiveLiteralsEvent() != other.hasLiveLiteralsEvent()) return false;
+    if (hasLiveLiteralsEvent()) {
+      if (!getLiveLiteralsEvent()
+          .equals(other.getLiveLiteralsEvent())) return false;
+    }
     if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
@@ -20130,6 +20224,10 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + FILE_USAGE_FIELD_NUMBER;
       hash = (53 * hash) + getFileUsage().hashCode();
     }
+    if (hasLiveLiteralsEvent()) {
+      hash = (37 * hash) + LIVE_LITERALS_EVENT_FIELD_NUMBER;
+      hash = (53 * hash) + getLiveLiteralsEvent().hashCode();
+    }
     hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -20355,6 +20453,7 @@ private static final long serialVersionUID = 0L;
         getComposeDeployEventFieldBuilder();
         getAutoImportEventFieldBuilder();
         getFileUsageFieldBuilder();
+        getLiveLiteralsEventFieldBuilder();
       }
     }
     @java.lang.Override
@@ -20984,6 +21083,12 @@ private static final long serialVersionUID = 0L;
         fileUsageBuilder_.clear();
       }
       bitField3_ = (bitField3_ & ~0x00200000);
+      if (liveLiteralsEventBuilder_ == null) {
+        liveLiteralsEvent_ = null;
+      } else {
+        liveLiteralsEventBuilder_.clear();
+      }
+      bitField3_ = (bitField3_ & ~0x00400000);
       return this;
     }
 
@@ -21882,6 +21987,14 @@ private static final long serialVersionUID = 0L;
         }
         to_bitField3_ |= 0x00020000;
       }
+      if (((from_bitField3_ & 0x00400000) != 0)) {
+        if (liveLiteralsEventBuilder_ == null) {
+          result.liveLiteralsEvent_ = liveLiteralsEvent_;
+        } else {
+          result.liveLiteralsEvent_ = liveLiteralsEventBuilder_.build();
+        }
+        to_bitField3_ |= 0x00040000;
+      }
       result.bitField0_ = to_bitField0_;
       result.bitField1_ = to_bitField1_;
       result.bitField2_ = to_bitField2_;
@@ -22377,6 +22490,9 @@ private static final long serialVersionUID = 0L;
       }
       if (other.hasFileUsage()) {
         mergeFileUsage(other.getFileUsage());
+      }
+      if (other.hasLiveLiteralsEvent()) {
+        mergeLiveLiteralsEvent(other.getLiveLiteralsEvent());
       }
       this.mergeUnknownFields(other.unknownFields);
       onChanged();
@@ -39992,6 +40108,162 @@ private static final long serialVersionUID = 0L;
         fileUsage_ = null;
       }
       return fileUsageBuilder_;
+    }
+
+    private com.google.wireless.android.sdk.stats.LiveLiteralsEvent liveLiteralsEvent_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.LiveLiteralsEvent, com.google.wireless.android.sdk.stats.LiveLiteralsEvent.Builder, com.google.wireless.android.sdk.stats.LiveLiteralsEventOrBuilder> liveLiteralsEventBuilder_;
+    /**
+     * <pre>
+     * set when kind = LIVE_LITERALS_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.LiveLiteralsEvent live_literals_event = 119;</code>
+     * @return Whether the liveLiteralsEvent field is set.
+     */
+    public boolean hasLiveLiteralsEvent() {
+      return ((bitField3_ & 0x00400000) != 0);
+    }
+    /**
+     * <pre>
+     * set when kind = LIVE_LITERALS_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.LiveLiteralsEvent live_literals_event = 119;</code>
+     * @return The liveLiteralsEvent.
+     */
+    public com.google.wireless.android.sdk.stats.LiveLiteralsEvent getLiveLiteralsEvent() {
+      if (liveLiteralsEventBuilder_ == null) {
+        return liveLiteralsEvent_ == null ? com.google.wireless.android.sdk.stats.LiveLiteralsEvent.getDefaultInstance() : liveLiteralsEvent_;
+      } else {
+        return liveLiteralsEventBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * set when kind = LIVE_LITERALS_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.LiveLiteralsEvent live_literals_event = 119;</code>
+     */
+    public Builder setLiveLiteralsEvent(com.google.wireless.android.sdk.stats.LiveLiteralsEvent value) {
+      if (liveLiteralsEventBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        liveLiteralsEvent_ = value;
+        onChanged();
+      } else {
+        liveLiteralsEventBuilder_.setMessage(value);
+      }
+      bitField3_ |= 0x00400000;
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = LIVE_LITERALS_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.LiveLiteralsEvent live_literals_event = 119;</code>
+     */
+    public Builder setLiveLiteralsEvent(
+        com.google.wireless.android.sdk.stats.LiveLiteralsEvent.Builder builderForValue) {
+      if (liveLiteralsEventBuilder_ == null) {
+        liveLiteralsEvent_ = builderForValue.build();
+        onChanged();
+      } else {
+        liveLiteralsEventBuilder_.setMessage(builderForValue.build());
+      }
+      bitField3_ |= 0x00400000;
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = LIVE_LITERALS_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.LiveLiteralsEvent live_literals_event = 119;</code>
+     */
+    public Builder mergeLiveLiteralsEvent(com.google.wireless.android.sdk.stats.LiveLiteralsEvent value) {
+      if (liveLiteralsEventBuilder_ == null) {
+        if (((bitField3_ & 0x00400000) != 0) &&
+            liveLiteralsEvent_ != null &&
+            liveLiteralsEvent_ != com.google.wireless.android.sdk.stats.LiveLiteralsEvent.getDefaultInstance()) {
+          liveLiteralsEvent_ =
+            com.google.wireless.android.sdk.stats.LiveLiteralsEvent.newBuilder(liveLiteralsEvent_).mergeFrom(value).buildPartial();
+        } else {
+          liveLiteralsEvent_ = value;
+        }
+        onChanged();
+      } else {
+        liveLiteralsEventBuilder_.mergeFrom(value);
+      }
+      bitField3_ |= 0x00400000;
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = LIVE_LITERALS_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.LiveLiteralsEvent live_literals_event = 119;</code>
+     */
+    public Builder clearLiveLiteralsEvent() {
+      if (liveLiteralsEventBuilder_ == null) {
+        liveLiteralsEvent_ = null;
+        onChanged();
+      } else {
+        liveLiteralsEventBuilder_.clear();
+      }
+      bitField3_ = (bitField3_ & ~0x00400000);
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = LIVE_LITERALS_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.LiveLiteralsEvent live_literals_event = 119;</code>
+     */
+    public com.google.wireless.android.sdk.stats.LiveLiteralsEvent.Builder getLiveLiteralsEventBuilder() {
+      bitField3_ |= 0x00400000;
+      onChanged();
+      return getLiveLiteralsEventFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * set when kind = LIVE_LITERALS_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.LiveLiteralsEvent live_literals_event = 119;</code>
+     */
+    public com.google.wireless.android.sdk.stats.LiveLiteralsEventOrBuilder getLiveLiteralsEventOrBuilder() {
+      if (liveLiteralsEventBuilder_ != null) {
+        return liveLiteralsEventBuilder_.getMessageOrBuilder();
+      } else {
+        return liveLiteralsEvent_ == null ?
+            com.google.wireless.android.sdk.stats.LiveLiteralsEvent.getDefaultInstance() : liveLiteralsEvent_;
+      }
+    }
+    /**
+     * <pre>
+     * set when kind = LIVE_LITERALS_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.LiveLiteralsEvent live_literals_event = 119;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.LiveLiteralsEvent, com.google.wireless.android.sdk.stats.LiveLiteralsEvent.Builder, com.google.wireless.android.sdk.stats.LiveLiteralsEventOrBuilder> 
+        getLiveLiteralsEventFieldBuilder() {
+      if (liveLiteralsEventBuilder_ == null) {
+        liveLiteralsEventBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.wireless.android.sdk.stats.LiveLiteralsEvent, com.google.wireless.android.sdk.stats.LiveLiteralsEvent.Builder, com.google.wireless.android.sdk.stats.LiveLiteralsEventOrBuilder>(
+                getLiveLiteralsEvent(),
+                getParentForChildren(),
+                isClean());
+        liveLiteralsEvent_ = null;
+      }
+      return liveLiteralsEventBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

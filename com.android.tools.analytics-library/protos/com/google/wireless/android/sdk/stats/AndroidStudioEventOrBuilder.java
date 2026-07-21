@@ -3296,4 +3296,31 @@ public interface AndroidStudioEventOrBuilder extends
    * <code>optional .android_studio.FileUsage file_usage = 118;</code>
    */
   com.google.wireless.android.sdk.stats.FileUsageOrBuilder getFileUsageOrBuilder();
+
+  /**
+   * <pre>
+   * set when kind = LIVE_LITERALS_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.LiveLiteralsEvent live_literals_event = 119;</code>
+   * @return Whether the liveLiteralsEvent field is set.
+   */
+  boolean hasLiveLiteralsEvent();
+  /**
+   * <pre>
+   * set when kind = LIVE_LITERALS_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.LiveLiteralsEvent live_literals_event = 119;</code>
+   * @return The liveLiteralsEvent.
+   */
+  com.google.wireless.android.sdk.stats.LiveLiteralsEvent getLiveLiteralsEvent();
+  /**
+   * <pre>
+   * set when kind = LIVE_LITERALS_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.LiveLiteralsEvent live_literals_event = 119;</code>
+   */
+  com.google.wireless.android.sdk.stats.LiveLiteralsEventOrBuilder getLiveLiteralsEventOrBuilder();
 }
