@@ -3407,4 +3407,31 @@ public interface AndroidStudioEventOrBuilder extends
    * <code>optional .android_studio.SuggestedImportEvent suggested_import_event = 122;</code>
    */
   com.google.wireless.android.sdk.stats.SuggestedImportEventOrBuilder getSuggestedImportEventOrBuilder();
+
+  /**
+   * <pre>
+   * set when kind = VFS_REFRESH
+   * </pre>
+   *
+   * <code>optional .android_studio.VfsRefresh vfs_refresh = 123;</code>
+   * @return Whether the vfsRefresh field is set.
+   */
+  boolean hasVfsRefresh();
+  /**
+   * <pre>
+   * set when kind = VFS_REFRESH
+   * </pre>
+   *
+   * <code>optional .android_studio.VfsRefresh vfs_refresh = 123;</code>
+   * @return The vfsRefresh.
+   */
+  com.google.wireless.android.sdk.stats.VfsRefresh getVfsRefresh();
+  /**
+   * <pre>
+   * set when kind = VFS_REFRESH
+   * </pre>
+   *
+   * <code>optional .android_studio.VfsRefresh vfs_refresh = 123;</code>
+   */
+  com.google.wireless.android.sdk.stats.VfsRefreshOrBuilder getVfsRefreshOrBuilder();
 }

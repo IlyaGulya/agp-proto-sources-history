@@ -161,6 +161,10 @@ private static final long serialVersionUID = 0L;
      * <code>REMOVE_BUILD_TYPE_USE_PROGUARD = 10;</code>
      */
     REMOVE_BUILD_TYPE_USE_PROGUARD(10),
+    /**
+     * <code>REMOVE_IMPLEMENTATION_PROPERTIES = 11;</code>
+     */
+    REMOVE_IMPLEMENTATION_PROPERTIES(11),
     ;
 
     /**
@@ -207,6 +211,10 @@ private static final long serialVersionUID = 0L;
      * <code>REMOVE_BUILD_TYPE_USE_PROGUARD = 10;</code>
      */
     public static final int REMOVE_BUILD_TYPE_USE_PROGUARD_VALUE = 10;
+    /**
+     * <code>REMOVE_IMPLEMENTATION_PROPERTIES = 11;</code>
+     */
+    public static final int REMOVE_IMPLEMENTATION_PROPERTIES_VALUE = 11;
 
 
     public final int getNumber() {
@@ -240,6 +248,7 @@ private static final long serialVersionUID = 0L;
         case 8: return REMOVE_SOURCE_SET_JNI;
         case 9: return MIGRATE_TO_ANDROID_RESOURCES;
         case 10: return REMOVE_BUILD_TYPE_USE_PROGUARD;
+        case 11: return REMOVE_IMPLEMENTATION_PROPERTIES;
         default: return null;
       }
     }

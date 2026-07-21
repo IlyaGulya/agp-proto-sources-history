@@ -1586,6 +1586,19 @@ private static final long serialVersionUID = 0L;
             bitField3_ |= 0x00200000;
             break;
           }
+          case 986: {
+            com.google.wireless.android.sdk.stats.VfsRefresh.Builder subBuilder = null;
+            if (((bitField3_ & 0x00400000) != 0)) {
+              subBuilder = vfsRefresh_.toBuilder();
+            }
+            vfsRefresh_ = input.readMessage(com.google.wireless.android.sdk.stats.VfsRefresh.PARSER, extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(vfsRefresh_);
+              vfsRefresh_ = subBuilder.buildPartial();
+            }
+            bitField3_ |= 0x00400000;
+            break;
+          }
           default: {
             if (!parseUnknownField(
                 input, unknownFields, extensionRegistry, tag)) {
@@ -3832,6 +3845,14 @@ private static final long serialVersionUID = 0L;
      * <code>SUGGESTED_IMPORT_EVENT = 224;</code>
      */
     SUGGESTED_IMPORT_EVENT(224),
+    /**
+     * <pre>
+     * Event related to IntelliJ collected VFS refresh
+     * </pre>
+     *
+     * <code>VFS_REFRESH = 225;</code>
+     */
+    VFS_REFRESH(225),
     ;
 
     /**
@@ -5457,6 +5478,14 @@ private static final long serialVersionUID = 0L;
      * <code>SUGGESTED_IMPORT_EVENT = 224;</code>
      */
     public static final int SUGGESTED_IMPORT_EVENT_VALUE = 224;
+    /**
+     * <pre>
+     * Event related to IntelliJ collected VFS refresh
+     * </pre>
+     *
+     * <code>VFS_REFRESH = 225;</code>
+     */
+    public static final int VFS_REFRESH_VALUE = 225;
 
 
     public final int getNumber() {
@@ -5699,6 +5728,7 @@ private static final long serialVersionUID = 0L;
         case 222: return MIGRATE_TO_NON_TRANSITIVE_R_CLASS;
         case 223: return ANDROID_TEST_RETENTION_EVENT;
         case 224: return SUGGESTED_IMPORT_EVENT;
+        case 225: return VFS_REFRESH;
         default: return null;
       }
     }
@@ -6768,6 +6798,10 @@ private static final long serialVersionUID = 0L;
      * <code>RESPONSIVE_ACTIVITY = 63;</code>
      */
     RESPONSIVE_ACTIVITY(63),
+    /**
+     * <code>MACROBENCHMARK_LIBRARY_MODULE = 64;</code>
+     */
+    MACROBENCHMARK_LIBRARY_MODULE(64),
     ;
 
     /**
@@ -7030,6 +7064,10 @@ private static final long serialVersionUID = 0L;
      * <code>RESPONSIVE_ACTIVITY = 63;</code>
      */
     public static final int RESPONSIVE_ACTIVITY_VALUE = 63;
+    /**
+     * <code>MACROBENCHMARK_LIBRARY_MODULE = 64;</code>
+     */
+    public static final int MACROBENCHMARK_LIBRARY_MODULE_VALUE = 64;
 
 
     public final int getNumber() {
@@ -7116,6 +7154,7 @@ private static final long serialVersionUID = 0L;
         case 61: return ML_MODEL_BINDING_FEATURE_OFF_NOTIFICATION;
         case 62: return ANDROID_NATIVE_MODULE;
         case 63: return RESPONSIVE_ACTIVITY;
+        case 64: return MACROBENCHMARK_LIBRARY_MODULE;
         default: return null;
       }
     }
@@ -8112,6 +8151,14 @@ private static final long serialVersionUID = 0L;
      * <code>TYPE_AGP_USED_JAVA_VERSION_TOO_LOW = 55;</code>
      */
     TYPE_AGP_USED_JAVA_VERSION_TOO_LOW(55),
+    /**
+     * <pre>
+     * An AGP upgrade is recommended to use this compile sdk version.
+     * </pre>
+     *
+     * <code>TYPE_COMPILE_SDK_VERSION_TOO_HIGH = 56;</code>
+     */
+    TYPE_COMPILE_SDK_VERSION_TOO_HIGH(56),
     ;
 
     /**
@@ -8500,6 +8547,14 @@ private static final long serialVersionUID = 0L;
      * <code>TYPE_AGP_USED_JAVA_VERSION_TOO_LOW = 55;</code>
      */
     public static final int TYPE_AGP_USED_JAVA_VERSION_TOO_LOW_VALUE = 55;
+    /**
+     * <pre>
+     * An AGP upgrade is recommended to use this compile sdk version.
+     * </pre>
+     *
+     * <code>TYPE_COMPILE_SDK_VERSION_TOO_HIGH = 56;</code>
+     */
+    public static final int TYPE_COMPILE_SDK_VERSION_TOO_HIGH_VALUE = 56;
 
 
     public final int getNumber() {
@@ -8578,6 +8633,7 @@ private static final long serialVersionUID = 0L;
         case 53: return TYPE_MISSING_ANDROID_MANIFEST;
         case 54: return TYPE_JCENTER_IS_DEPRECATED;
         case 55: return TYPE_AGP_USED_JAVA_VERSION_TOO_LOW;
+        case 56: return TYPE_COMPILE_SDK_VERSION_TOO_HIGH;
         default: return null;
       }
     }
@@ -18546,6 +18602,41 @@ private static final long serialVersionUID = 0L;
     return suggestedImportEvent_ == null ? com.google.wireless.android.sdk.stats.SuggestedImportEvent.getDefaultInstance() : suggestedImportEvent_;
   }
 
+  public static final int VFS_REFRESH_FIELD_NUMBER = 123;
+  private com.google.wireless.android.sdk.stats.VfsRefresh vfsRefresh_;
+  /**
+   * <pre>
+   * set when kind = VFS_REFRESH
+   * </pre>
+   *
+   * <code>optional .android_studio.VfsRefresh vfs_refresh = 123;</code>
+   * @return Whether the vfsRefresh field is set.
+   */
+  public boolean hasVfsRefresh() {
+    return ((bitField3_ & 0x00400000) != 0);
+  }
+  /**
+   * <pre>
+   * set when kind = VFS_REFRESH
+   * </pre>
+   *
+   * <code>optional .android_studio.VfsRefresh vfs_refresh = 123;</code>
+   * @return The vfsRefresh.
+   */
+  public com.google.wireless.android.sdk.stats.VfsRefresh getVfsRefresh() {
+    return vfsRefresh_ == null ? com.google.wireless.android.sdk.stats.VfsRefresh.getDefaultInstance() : vfsRefresh_;
+  }
+  /**
+   * <pre>
+   * set when kind = VFS_REFRESH
+   * </pre>
+   *
+   * <code>optional .android_studio.VfsRefresh vfs_refresh = 123;</code>
+   */
+  public com.google.wireless.android.sdk.stats.VfsRefreshOrBuilder getVfsRefreshOrBuilder() {
+    return vfsRefresh_ == null ? com.google.wireless.android.sdk.stats.VfsRefresh.getDefaultInstance() : vfsRefresh_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -18925,6 +19016,9 @@ private static final long serialVersionUID = 0L;
     }
     if (((bitField3_ & 0x00200000) != 0)) {
       output.writeMessage(122, getSuggestedImportEvent());
+    }
+    if (((bitField3_ & 0x00400000) != 0)) {
+      output.writeMessage(123, getVfsRefresh());
     }
     unknownFields.writeTo(output);
   }
@@ -19420,6 +19514,10 @@ private static final long serialVersionUID = 0L;
     if (((bitField3_ & 0x00200000) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(122, getSuggestedImportEvent());
+    }
+    if (((bitField3_ & 0x00400000) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(123, getVfsRefresh());
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -20023,6 +20121,11 @@ private static final long serialVersionUID = 0L;
       if (!getSuggestedImportEvent()
           .equals(other.getSuggestedImportEvent())) return false;
     }
+    if (hasVfsRefresh() != other.hasVfsRefresh()) return false;
+    if (hasVfsRefresh()) {
+      if (!getVfsRefresh()
+          .equals(other.getVfsRefresh())) return false;
+    }
     if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
@@ -20524,6 +20627,10 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + SUGGESTED_IMPORT_EVENT_FIELD_NUMBER;
       hash = (53 * hash) + getSuggestedImportEvent().hashCode();
     }
+    if (hasVfsRefresh()) {
+      hash = (37 * hash) + VFS_REFRESH_FIELD_NUMBER;
+      hash = (53 * hash) + getVfsRefresh().hashCode();
+    }
     hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -20753,6 +20860,7 @@ private static final long serialVersionUID = 0L;
         getNonTransitiveRClassMigrationEventFieldBuilder();
         getAndroidTestRetentionEventFieldBuilder();
         getSuggestedImportEventFieldBuilder();
+        getVfsRefreshFieldBuilder();
       }
     }
     @java.lang.Override
@@ -21406,6 +21514,12 @@ private static final long serialVersionUID = 0L;
         suggestedImportEventBuilder_.clear();
       }
       bitField3_ = (bitField3_ & ~0x02000000);
+      if (vfsRefreshBuilder_ == null) {
+        vfsRefresh_ = null;
+      } else {
+        vfsRefreshBuilder_.clear();
+      }
+      bitField3_ = (bitField3_ & ~0x04000000);
       return this;
     }
 
@@ -22336,6 +22450,14 @@ private static final long serialVersionUID = 0L;
         }
         to_bitField3_ |= 0x00200000;
       }
+      if (((from_bitField3_ & 0x04000000) != 0)) {
+        if (vfsRefreshBuilder_ == null) {
+          result.vfsRefresh_ = vfsRefresh_;
+        } else {
+          result.vfsRefresh_ = vfsRefreshBuilder_.build();
+        }
+        to_bitField3_ |= 0x00400000;
+      }
       result.bitField0_ = to_bitField0_;
       result.bitField1_ = to_bitField1_;
       result.bitField2_ = to_bitField2_;
@@ -22843,6 +22965,9 @@ private static final long serialVersionUID = 0L;
       }
       if (other.hasSuggestedImportEvent()) {
         mergeSuggestedImportEvent(other.getSuggestedImportEvent());
+      }
+      if (other.hasVfsRefresh()) {
+        mergeVfsRefresh(other.getVfsRefresh());
       }
       this.mergeUnknownFields(other.unknownFields);
       onChanged();
@@ -41091,6 +41216,162 @@ private static final long serialVersionUID = 0L;
         suggestedImportEvent_ = null;
       }
       return suggestedImportEventBuilder_;
+    }
+
+    private com.google.wireless.android.sdk.stats.VfsRefresh vfsRefresh_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.VfsRefresh, com.google.wireless.android.sdk.stats.VfsRefresh.Builder, com.google.wireless.android.sdk.stats.VfsRefreshOrBuilder> vfsRefreshBuilder_;
+    /**
+     * <pre>
+     * set when kind = VFS_REFRESH
+     * </pre>
+     *
+     * <code>optional .android_studio.VfsRefresh vfs_refresh = 123;</code>
+     * @return Whether the vfsRefresh field is set.
+     */
+    public boolean hasVfsRefresh() {
+      return ((bitField3_ & 0x04000000) != 0);
+    }
+    /**
+     * <pre>
+     * set when kind = VFS_REFRESH
+     * </pre>
+     *
+     * <code>optional .android_studio.VfsRefresh vfs_refresh = 123;</code>
+     * @return The vfsRefresh.
+     */
+    public com.google.wireless.android.sdk.stats.VfsRefresh getVfsRefresh() {
+      if (vfsRefreshBuilder_ == null) {
+        return vfsRefresh_ == null ? com.google.wireless.android.sdk.stats.VfsRefresh.getDefaultInstance() : vfsRefresh_;
+      } else {
+        return vfsRefreshBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * set when kind = VFS_REFRESH
+     * </pre>
+     *
+     * <code>optional .android_studio.VfsRefresh vfs_refresh = 123;</code>
+     */
+    public Builder setVfsRefresh(com.google.wireless.android.sdk.stats.VfsRefresh value) {
+      if (vfsRefreshBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        vfsRefresh_ = value;
+        onChanged();
+      } else {
+        vfsRefreshBuilder_.setMessage(value);
+      }
+      bitField3_ |= 0x04000000;
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = VFS_REFRESH
+     * </pre>
+     *
+     * <code>optional .android_studio.VfsRefresh vfs_refresh = 123;</code>
+     */
+    public Builder setVfsRefresh(
+        com.google.wireless.android.sdk.stats.VfsRefresh.Builder builderForValue) {
+      if (vfsRefreshBuilder_ == null) {
+        vfsRefresh_ = builderForValue.build();
+        onChanged();
+      } else {
+        vfsRefreshBuilder_.setMessage(builderForValue.build());
+      }
+      bitField3_ |= 0x04000000;
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = VFS_REFRESH
+     * </pre>
+     *
+     * <code>optional .android_studio.VfsRefresh vfs_refresh = 123;</code>
+     */
+    public Builder mergeVfsRefresh(com.google.wireless.android.sdk.stats.VfsRefresh value) {
+      if (vfsRefreshBuilder_ == null) {
+        if (((bitField3_ & 0x04000000) != 0) &&
+            vfsRefresh_ != null &&
+            vfsRefresh_ != com.google.wireless.android.sdk.stats.VfsRefresh.getDefaultInstance()) {
+          vfsRefresh_ =
+            com.google.wireless.android.sdk.stats.VfsRefresh.newBuilder(vfsRefresh_).mergeFrom(value).buildPartial();
+        } else {
+          vfsRefresh_ = value;
+        }
+        onChanged();
+      } else {
+        vfsRefreshBuilder_.mergeFrom(value);
+      }
+      bitField3_ |= 0x04000000;
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = VFS_REFRESH
+     * </pre>
+     *
+     * <code>optional .android_studio.VfsRefresh vfs_refresh = 123;</code>
+     */
+    public Builder clearVfsRefresh() {
+      if (vfsRefreshBuilder_ == null) {
+        vfsRefresh_ = null;
+        onChanged();
+      } else {
+        vfsRefreshBuilder_.clear();
+      }
+      bitField3_ = (bitField3_ & ~0x04000000);
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = VFS_REFRESH
+     * </pre>
+     *
+     * <code>optional .android_studio.VfsRefresh vfs_refresh = 123;</code>
+     */
+    public com.google.wireless.android.sdk.stats.VfsRefresh.Builder getVfsRefreshBuilder() {
+      bitField3_ |= 0x04000000;
+      onChanged();
+      return getVfsRefreshFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * set when kind = VFS_REFRESH
+     * </pre>
+     *
+     * <code>optional .android_studio.VfsRefresh vfs_refresh = 123;</code>
+     */
+    public com.google.wireless.android.sdk.stats.VfsRefreshOrBuilder getVfsRefreshOrBuilder() {
+      if (vfsRefreshBuilder_ != null) {
+        return vfsRefreshBuilder_.getMessageOrBuilder();
+      } else {
+        return vfsRefresh_ == null ?
+            com.google.wireless.android.sdk.stats.VfsRefresh.getDefaultInstance() : vfsRefresh_;
+      }
+    }
+    /**
+     * <pre>
+     * set when kind = VFS_REFRESH
+     * </pre>
+     *
+     * <code>optional .android_studio.VfsRefresh vfs_refresh = 123;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.VfsRefresh, com.google.wireless.android.sdk.stats.VfsRefresh.Builder, com.google.wireless.android.sdk.stats.VfsRefreshOrBuilder> 
+        getVfsRefreshFieldBuilder() {
+      if (vfsRefreshBuilder_ == null) {
+        vfsRefreshBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.wireless.android.sdk.stats.VfsRefresh, com.google.wireless.android.sdk.stats.VfsRefresh.Builder, com.google.wireless.android.sdk.stats.VfsRefreshOrBuilder>(
+                getVfsRefresh(),
+                getParentForChildren(),
+                isClean());
+        vfsRefresh_ = null;
+      }
+      return vfsRefreshBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(
