@@ -6182,6 +6182,21 @@ private static final long serialVersionUID = 0L;
   public interface UiEventOrBuilder extends
       // @@protoc_insertion_point(interface_extends:android_studio.GeminiTelemetryEvent.UiEvent)
       com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>optional .android_studio.GeminiTelemetryEvent.UiEvent.ChangesDrawerEvent changes_drawer_event = 1;</code>
+     * @return Whether the changesDrawerEvent field is set.
+     */
+    boolean hasChangesDrawerEvent();
+    /**
+     * <code>optional .android_studio.GeminiTelemetryEvent.UiEvent.ChangesDrawerEvent changes_drawer_event = 1;</code>
+     * @return The changesDrawerEvent.
+     */
+    com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.ChangesDrawerEvent getChangesDrawerEvent();
+    /**
+     * <code>optional .android_studio.GeminiTelemetryEvent.UiEvent.ChangesDrawerEvent changes_drawer_event = 1;</code>
+     */
+    com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.ChangesDrawerEventOrBuilder getChangesDrawerEventOrBuilder();
   }
   /**
    * Protobuf type {@code android_studio.GeminiTelemetryEvent.UiEvent}
@@ -6218,6 +6233,609 @@ private static final long serialVersionUID = 0L;
               com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.class, com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.Builder.class);
     }
 
+    public interface ChangesDrawerEventOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:android_studio.GeminiTelemetryEvent.UiEvent.ChangesDrawerEvent)
+        com.google.protobuf.MessageOrBuilder {
+
+      /**
+       * <code>optional .android_studio.SmlChatBotEvent.ChangeResolved change_resolved = 1;</code>
+       * @return Whether the changeResolved field is set.
+       */
+      boolean hasChangeResolved();
+      /**
+       * <code>optional .android_studio.SmlChatBotEvent.ChangeResolved change_resolved = 1;</code>
+       * @return The changeResolved.
+       */
+      com.google.wireless.android.sdk.stats.SmlChatBotEvent.ChangeResolved getChangeResolved();
+      /**
+       * <code>optional .android_studio.SmlChatBotEvent.ChangeResolved change_resolved = 1;</code>
+       */
+      com.google.wireless.android.sdk.stats.SmlChatBotEvent.ChangeResolvedOrBuilder getChangeResolvedOrBuilder();
+    }
+    /**
+     * Protobuf type {@code android_studio.GeminiTelemetryEvent.UiEvent.ChangesDrawerEvent}
+     */
+    public static final class ChangesDrawerEvent extends
+        com.google.protobuf.GeneratedMessageV3 implements
+        // @@protoc_insertion_point(message_implements:android_studio.GeminiTelemetryEvent.UiEvent.ChangesDrawerEvent)
+        ChangesDrawerEventOrBuilder {
+    private static final long serialVersionUID = 0L;
+      // Use ChangesDrawerEvent.newBuilder() to construct.
+      private ChangesDrawerEvent(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+        super(builder);
+      }
+      private ChangesDrawerEvent() {
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new ChangesDrawerEvent();
+      }
+
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_GeminiTelemetryEvent_UiEvent_ChangesDrawerEvent_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_GeminiTelemetryEvent_UiEvent_ChangesDrawerEvent_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.ChangesDrawerEvent.class, com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.ChangesDrawerEvent.Builder.class);
+      }
+
+      private int bitField0_;
+      public static final int CHANGE_RESOLVED_FIELD_NUMBER = 1;
+      private com.google.wireless.android.sdk.stats.SmlChatBotEvent.ChangeResolved changeResolved_;
+      /**
+       * <code>optional .android_studio.SmlChatBotEvent.ChangeResolved change_resolved = 1;</code>
+       * @return Whether the changeResolved field is set.
+       */
+      @java.lang.Override
+      public boolean hasChangeResolved() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>optional .android_studio.SmlChatBotEvent.ChangeResolved change_resolved = 1;</code>
+       * @return The changeResolved.
+       */
+      @java.lang.Override
+      public com.google.wireless.android.sdk.stats.SmlChatBotEvent.ChangeResolved getChangeResolved() {
+        return changeResolved_ == null ? com.google.wireless.android.sdk.stats.SmlChatBotEvent.ChangeResolved.getDefaultInstance() : changeResolved_;
+      }
+      /**
+       * <code>optional .android_studio.SmlChatBotEvent.ChangeResolved change_resolved = 1;</code>
+       */
+      @java.lang.Override
+      public com.google.wireless.android.sdk.stats.SmlChatBotEvent.ChangeResolvedOrBuilder getChangeResolvedOrBuilder() {
+        return changeResolved_ == null ? com.google.wireless.android.sdk.stats.SmlChatBotEvent.ChangeResolved.getDefaultInstance() : changeResolved_;
+      }
+
+      private byte memoizedIsInitialized = -1;
+      @java.lang.Override
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      @java.lang.Override
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        if (((bitField0_ & 0x00000001) != 0)) {
+          output.writeMessage(1, getChangeResolved());
+        }
+        getUnknownFields().writeTo(output);
+      }
+
+      @java.lang.Override
+      public int getSerializedSize() {
+        int size = memoizedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        if (((bitField0_ & 0x00000001) != 0)) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(1, getChangeResolved());
+        }
+        size += getUnknownFields().getSerializedSize();
+        memoizedSize = size;
+        return size;
+      }
+
+      @java.lang.Override
+      public boolean equals(final java.lang.Object obj) {
+        if (obj == this) {
+         return true;
+        }
+        if (!(obj instanceof com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.ChangesDrawerEvent)) {
+          return super.equals(obj);
+        }
+        com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.ChangesDrawerEvent other = (com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.ChangesDrawerEvent) obj;
+
+        if (hasChangeResolved() != other.hasChangeResolved()) return false;
+        if (hasChangeResolved()) {
+          if (!getChangeResolved()
+              .equals(other.getChangeResolved())) return false;
+        }
+        if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+        return true;
+      }
+
+      @java.lang.Override
+      public int hashCode() {
+        if (memoizedHashCode != 0) {
+          return memoizedHashCode;
+        }
+        int hash = 41;
+        hash = (19 * hash) + getDescriptor().hashCode();
+        if (hasChangeResolved()) {
+          hash = (37 * hash) + CHANGE_RESOLVED_FIELD_NUMBER;
+          hash = (53 * hash) + getChangeResolved().hashCode();
+        }
+        hash = (29 * hash) + getUnknownFields().hashCode();
+        memoizedHashCode = hash;
+        return hash;
+      }
+
+      public static com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.ChangesDrawerEvent parseFrom(
+          java.nio.ByteBuffer data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.ChangesDrawerEvent parseFrom(
+          java.nio.ByteBuffer data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.ChangesDrawerEvent parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.ChangesDrawerEvent parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.ChangesDrawerEvent parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.ChangesDrawerEvent parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.ChangesDrawerEvent parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.ChangesDrawerEvent parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.ChangesDrawerEvent parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input);
+      }
+      public static com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.ChangesDrawerEvent parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.ChangesDrawerEvent parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.ChangesDrawerEvent parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      @java.lang.Override
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder() {
+        return DEFAULT_INSTANCE.toBuilder();
+      }
+      public static Builder newBuilder(com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.ChangesDrawerEvent prototype) {
+        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+      }
+      @java.lang.Override
+      public Builder toBuilder() {
+        return this == DEFAULT_INSTANCE
+            ? new Builder() : new Builder().mergeFrom(this);
+      }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * Protobuf type {@code android_studio.GeminiTelemetryEvent.UiEvent.ChangesDrawerEvent}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:android_studio.GeminiTelemetryEvent.UiEvent.ChangesDrawerEvent)
+          com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.ChangesDrawerEventOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_GeminiTelemetryEvent_UiEvent_ChangesDrawerEvent_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_GeminiTelemetryEvent_UiEvent_ChangesDrawerEvent_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.ChangesDrawerEvent.class, com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.ChangesDrawerEvent.Builder.class);
+        }
+
+        // Construct using com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.ChangesDrawerEvent.newBuilder()
+        private Builder() {
+          maybeForceBuilderInitialization();
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          super(parent);
+          maybeForceBuilderInitialization();
+        }
+        private void maybeForceBuilderInitialization() {
+          if (com.google.protobuf.GeneratedMessageV3
+                  .alwaysUseFieldBuilders) {
+            getChangeResolvedFieldBuilder();
+          }
+        }
+        @java.lang.Override
+        public Builder clear() {
+          super.clear();
+          bitField0_ = 0;
+          changeResolved_ = null;
+          if (changeResolvedBuilder_ != null) {
+            changeResolvedBuilder_.dispose();
+            changeResolvedBuilder_ = null;
+          }
+          return this;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_GeminiTelemetryEvent_UiEvent_ChangesDrawerEvent_descriptor;
+        }
+
+        @java.lang.Override
+        public com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.ChangesDrawerEvent getDefaultInstanceForType() {
+          return com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.ChangesDrawerEvent.getDefaultInstance();
+        }
+
+        @java.lang.Override
+        public com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.ChangesDrawerEvent build() {
+          com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.ChangesDrawerEvent result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        @java.lang.Override
+        public com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.ChangesDrawerEvent buildPartial() {
+          com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.ChangesDrawerEvent result = new com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.ChangesDrawerEvent(this);
+          if (bitField0_ != 0) { buildPartial0(result); }
+          onBuilt();
+          return result;
+        }
+
+        private void buildPartial0(com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.ChangesDrawerEvent result) {
+          int from_bitField0_ = bitField0_;
+          int to_bitField0_ = 0;
+          if (((from_bitField0_ & 0x00000001) != 0)) {
+            result.changeResolved_ = changeResolvedBuilder_ == null
+                ? changeResolved_
+                : changeResolvedBuilder_.build();
+            to_bitField0_ |= 0x00000001;
+          }
+          result.bitField0_ |= to_bitField0_;
+        }
+
+        @java.lang.Override
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.ChangesDrawerEvent) {
+            return mergeFrom((com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.ChangesDrawerEvent)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.ChangesDrawerEvent other) {
+          if (other == com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.ChangesDrawerEvent.getDefaultInstance()) return this;
+          if (other.hasChangeResolved()) {
+            mergeChangeResolved(other.getChangeResolved());
+          }
+          this.mergeUnknownFields(other.getUnknownFields());
+          onChanged();
+          return this;
+        }
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        @java.lang.Override
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          if (extensionRegistry == null) {
+            throw new java.lang.NullPointerException();
+          }
+          try {
+            boolean done = false;
+            while (!done) {
+              int tag = input.readTag();
+              switch (tag) {
+                case 0:
+                  done = true;
+                  break;
+                case 10: {
+                  input.readMessage(
+                      getChangeResolvedFieldBuilder().getBuilder(),
+                      extensionRegistry);
+                  bitField0_ |= 0x00000001;
+                  break;
+                } // case 10
+                default: {
+                  if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                    done = true; // was an endgroup tag
+                  }
+                  break;
+                } // default:
+              } // switch (tag)
+            } // while (!done)
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            throw e.unwrapIOException();
+          } finally {
+            onChanged();
+          } // finally
+          return this;
+        }
+        private int bitField0_;
+
+        private com.google.wireless.android.sdk.stats.SmlChatBotEvent.ChangeResolved changeResolved_;
+        private com.google.protobuf.SingleFieldBuilderV3<
+            com.google.wireless.android.sdk.stats.SmlChatBotEvent.ChangeResolved, com.google.wireless.android.sdk.stats.SmlChatBotEvent.ChangeResolved.Builder, com.google.wireless.android.sdk.stats.SmlChatBotEvent.ChangeResolvedOrBuilder> changeResolvedBuilder_;
+        /**
+         * <code>optional .android_studio.SmlChatBotEvent.ChangeResolved change_resolved = 1;</code>
+         * @return Whether the changeResolved field is set.
+         */
+        public boolean hasChangeResolved() {
+          return ((bitField0_ & 0x00000001) != 0);
+        }
+        /**
+         * <code>optional .android_studio.SmlChatBotEvent.ChangeResolved change_resolved = 1;</code>
+         * @return The changeResolved.
+         */
+        public com.google.wireless.android.sdk.stats.SmlChatBotEvent.ChangeResolved getChangeResolved() {
+          if (changeResolvedBuilder_ == null) {
+            return changeResolved_ == null ? com.google.wireless.android.sdk.stats.SmlChatBotEvent.ChangeResolved.getDefaultInstance() : changeResolved_;
+          } else {
+            return changeResolvedBuilder_.getMessage();
+          }
+        }
+        /**
+         * <code>optional .android_studio.SmlChatBotEvent.ChangeResolved change_resolved = 1;</code>
+         */
+        public Builder setChangeResolved(com.google.wireless.android.sdk.stats.SmlChatBotEvent.ChangeResolved value) {
+          if (changeResolvedBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            changeResolved_ = value;
+          } else {
+            changeResolvedBuilder_.setMessage(value);
+          }
+          bitField0_ |= 0x00000001;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>optional .android_studio.SmlChatBotEvent.ChangeResolved change_resolved = 1;</code>
+         */
+        public Builder setChangeResolved(
+            com.google.wireless.android.sdk.stats.SmlChatBotEvent.ChangeResolved.Builder builderForValue) {
+          if (changeResolvedBuilder_ == null) {
+            changeResolved_ = builderForValue.build();
+          } else {
+            changeResolvedBuilder_.setMessage(builderForValue.build());
+          }
+          bitField0_ |= 0x00000001;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>optional .android_studio.SmlChatBotEvent.ChangeResolved change_resolved = 1;</code>
+         */
+        public Builder mergeChangeResolved(com.google.wireless.android.sdk.stats.SmlChatBotEvent.ChangeResolved value) {
+          if (changeResolvedBuilder_ == null) {
+            if (((bitField0_ & 0x00000001) != 0) &&
+              changeResolved_ != null &&
+              changeResolved_ != com.google.wireless.android.sdk.stats.SmlChatBotEvent.ChangeResolved.getDefaultInstance()) {
+              getChangeResolvedBuilder().mergeFrom(value);
+            } else {
+              changeResolved_ = value;
+            }
+          } else {
+            changeResolvedBuilder_.mergeFrom(value);
+          }
+          bitField0_ |= 0x00000001;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>optional .android_studio.SmlChatBotEvent.ChangeResolved change_resolved = 1;</code>
+         */
+        public Builder clearChangeResolved() {
+          bitField0_ = (bitField0_ & ~0x00000001);
+          changeResolved_ = null;
+          if (changeResolvedBuilder_ != null) {
+            changeResolvedBuilder_.dispose();
+            changeResolvedBuilder_ = null;
+          }
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>optional .android_studio.SmlChatBotEvent.ChangeResolved change_resolved = 1;</code>
+         */
+        public com.google.wireless.android.sdk.stats.SmlChatBotEvent.ChangeResolved.Builder getChangeResolvedBuilder() {
+          bitField0_ |= 0x00000001;
+          onChanged();
+          return getChangeResolvedFieldBuilder().getBuilder();
+        }
+        /**
+         * <code>optional .android_studio.SmlChatBotEvent.ChangeResolved change_resolved = 1;</code>
+         */
+        public com.google.wireless.android.sdk.stats.SmlChatBotEvent.ChangeResolvedOrBuilder getChangeResolvedOrBuilder() {
+          if (changeResolvedBuilder_ != null) {
+            return changeResolvedBuilder_.getMessageOrBuilder();
+          } else {
+            return changeResolved_ == null ?
+                com.google.wireless.android.sdk.stats.SmlChatBotEvent.ChangeResolved.getDefaultInstance() : changeResolved_;
+          }
+        }
+        /**
+         * <code>optional .android_studio.SmlChatBotEvent.ChangeResolved change_resolved = 1;</code>
+         */
+        private com.google.protobuf.SingleFieldBuilderV3<
+            com.google.wireless.android.sdk.stats.SmlChatBotEvent.ChangeResolved, com.google.wireless.android.sdk.stats.SmlChatBotEvent.ChangeResolved.Builder, com.google.wireless.android.sdk.stats.SmlChatBotEvent.ChangeResolvedOrBuilder> 
+            getChangeResolvedFieldBuilder() {
+          if (changeResolvedBuilder_ == null) {
+            changeResolvedBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                com.google.wireless.android.sdk.stats.SmlChatBotEvent.ChangeResolved, com.google.wireless.android.sdk.stats.SmlChatBotEvent.ChangeResolved.Builder, com.google.wireless.android.sdk.stats.SmlChatBotEvent.ChangeResolvedOrBuilder>(
+                    getChangeResolved(),
+                    getParentForChildren(),
+                    isClean());
+            changeResolved_ = null;
+          }
+          return changeResolvedBuilder_;
+        }
+        @java.lang.Override
+        public final Builder setUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.setUnknownFields(unknownFields);
+        }
+
+        @java.lang.Override
+        public final Builder mergeUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.mergeUnknownFields(unknownFields);
+        }
+
+
+        // @@protoc_insertion_point(builder_scope:android_studio.GeminiTelemetryEvent.UiEvent.ChangesDrawerEvent)
+      }
+
+      // @@protoc_insertion_point(class_scope:android_studio.GeminiTelemetryEvent.UiEvent.ChangesDrawerEvent)
+      private static final com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.ChangesDrawerEvent DEFAULT_INSTANCE;
+      static {
+        DEFAULT_INSTANCE = new com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.ChangesDrawerEvent();
+      }
+
+      public static com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.ChangesDrawerEvent getDefaultInstance() {
+        return DEFAULT_INSTANCE;
+      }
+
+      @java.lang.Deprecated public static final com.google.protobuf.Parser<ChangesDrawerEvent>
+          PARSER = new com.google.protobuf.AbstractParser<ChangesDrawerEvent>() {
+        @java.lang.Override
+        public ChangesDrawerEvent parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          Builder builder = newBuilder();
+          try {
+            builder.mergeFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            throw e.setUnfinishedMessage(builder.buildPartial());
+          } catch (com.google.protobuf.UninitializedMessageException e) {
+            throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+          } catch (java.io.IOException e) {
+            throw new com.google.protobuf.InvalidProtocolBufferException(e)
+                .setUnfinishedMessage(builder.buildPartial());
+          }
+          return builder.buildPartial();
+        }
+      };
+
+      public static com.google.protobuf.Parser<ChangesDrawerEvent> parser() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<ChangesDrawerEvent> getParserForType() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.ChangesDrawerEvent getDefaultInstanceForType() {
+        return DEFAULT_INSTANCE;
+      }
+
+    }
+
+    private int bitField0_;
+    public static final int CHANGES_DRAWER_EVENT_FIELD_NUMBER = 1;
+    private com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.ChangesDrawerEvent changesDrawerEvent_;
+    /**
+     * <code>optional .android_studio.GeminiTelemetryEvent.UiEvent.ChangesDrawerEvent changes_drawer_event = 1;</code>
+     * @return Whether the changesDrawerEvent field is set.
+     */
+    @java.lang.Override
+    public boolean hasChangesDrawerEvent() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <code>optional .android_studio.GeminiTelemetryEvent.UiEvent.ChangesDrawerEvent changes_drawer_event = 1;</code>
+     * @return The changesDrawerEvent.
+     */
+    @java.lang.Override
+    public com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.ChangesDrawerEvent getChangesDrawerEvent() {
+      return changesDrawerEvent_ == null ? com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.ChangesDrawerEvent.getDefaultInstance() : changesDrawerEvent_;
+    }
+    /**
+     * <code>optional .android_studio.GeminiTelemetryEvent.UiEvent.ChangesDrawerEvent changes_drawer_event = 1;</code>
+     */
+    @java.lang.Override
+    public com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.ChangesDrawerEventOrBuilder getChangesDrawerEventOrBuilder() {
+      return changesDrawerEvent_ == null ? com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.ChangesDrawerEvent.getDefaultInstance() : changesDrawerEvent_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -6232,6 +6850,9 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
+      if (((bitField0_ & 0x00000001) != 0)) {
+        output.writeMessage(1, getChangesDrawerEvent());
+      }
       getUnknownFields().writeTo(output);
     }
 
@@ -6241,6 +6862,10 @@ private static final long serialVersionUID = 0L;
       if (size != -1) return size;
 
       size = 0;
+      if (((bitField0_ & 0x00000001) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getChangesDrawerEvent());
+      }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
@@ -6256,6 +6881,11 @@ private static final long serialVersionUID = 0L;
       }
       com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent other = (com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent) obj;
 
+      if (hasChangesDrawerEvent() != other.hasChangesDrawerEvent()) return false;
+      if (hasChangesDrawerEvent()) {
+        if (!getChangesDrawerEvent()
+            .equals(other.getChangesDrawerEvent())) return false;
+      }
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -6267,6 +6897,10 @@ private static final long serialVersionUID = 0L;
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasChangesDrawerEvent()) {
+        hash = (37 * hash) + CHANGES_DRAWER_EVENT_FIELD_NUMBER;
+        hash = (53 * hash) + getChangesDrawerEvent().hashCode();
+      }
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -6384,17 +7018,29 @@ private static final long serialVersionUID = 0L;
 
       // Construct using com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getChangesDrawerEventFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
+        changesDrawerEvent_ = null;
+        if (changesDrawerEventBuilder_ != null) {
+          changesDrawerEventBuilder_.dispose();
+          changesDrawerEventBuilder_ = null;
+        }
         return this;
       }
 
@@ -6421,8 +7067,21 @@ private static final long serialVersionUID = 0L;
       @java.lang.Override
       public com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent buildPartial() {
         com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent result = new com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
+      }
+
+      private void buildPartial0(com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent result) {
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.changesDrawerEvent_ = changesDrawerEventBuilder_ == null
+              ? changesDrawerEvent_
+              : changesDrawerEventBuilder_.build();
+          to_bitField0_ |= 0x00000001;
+        }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -6437,6 +7096,9 @@ private static final long serialVersionUID = 0L;
 
       public Builder mergeFrom(com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent other) {
         if (other == com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.getDefaultInstance()) return this;
+        if (other.hasChangesDrawerEvent()) {
+          mergeChangesDrawerEvent(other.getChangesDrawerEvent());
+        }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
@@ -6463,6 +7125,13 @@ private static final long serialVersionUID = 0L;
               case 0:
                 done = true;
                 break;
+              case 10: {
+                input.readMessage(
+                    getChangesDrawerEventFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -6477,6 +7146,126 @@ private static final long serialVersionUID = 0L;
           onChanged();
         } // finally
         return this;
+      }
+      private int bitField0_;
+
+      private com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.ChangesDrawerEvent changesDrawerEvent_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.ChangesDrawerEvent, com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.ChangesDrawerEvent.Builder, com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.ChangesDrawerEventOrBuilder> changesDrawerEventBuilder_;
+      /**
+       * <code>optional .android_studio.GeminiTelemetryEvent.UiEvent.ChangesDrawerEvent changes_drawer_event = 1;</code>
+       * @return Whether the changesDrawerEvent field is set.
+       */
+      public boolean hasChangesDrawerEvent() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>optional .android_studio.GeminiTelemetryEvent.UiEvent.ChangesDrawerEvent changes_drawer_event = 1;</code>
+       * @return The changesDrawerEvent.
+       */
+      public com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.ChangesDrawerEvent getChangesDrawerEvent() {
+        if (changesDrawerEventBuilder_ == null) {
+          return changesDrawerEvent_ == null ? com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.ChangesDrawerEvent.getDefaultInstance() : changesDrawerEvent_;
+        } else {
+          return changesDrawerEventBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>optional .android_studio.GeminiTelemetryEvent.UiEvent.ChangesDrawerEvent changes_drawer_event = 1;</code>
+       */
+      public Builder setChangesDrawerEvent(com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.ChangesDrawerEvent value) {
+        if (changesDrawerEventBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          changesDrawerEvent_ = value;
+        } else {
+          changesDrawerEventBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional .android_studio.GeminiTelemetryEvent.UiEvent.ChangesDrawerEvent changes_drawer_event = 1;</code>
+       */
+      public Builder setChangesDrawerEvent(
+          com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.ChangesDrawerEvent.Builder builderForValue) {
+        if (changesDrawerEventBuilder_ == null) {
+          changesDrawerEvent_ = builderForValue.build();
+        } else {
+          changesDrawerEventBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional .android_studio.GeminiTelemetryEvent.UiEvent.ChangesDrawerEvent changes_drawer_event = 1;</code>
+       */
+      public Builder mergeChangesDrawerEvent(com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.ChangesDrawerEvent value) {
+        if (changesDrawerEventBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            changesDrawerEvent_ != null &&
+            changesDrawerEvent_ != com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.ChangesDrawerEvent.getDefaultInstance()) {
+            getChangesDrawerEventBuilder().mergeFrom(value);
+          } else {
+            changesDrawerEvent_ = value;
+          }
+        } else {
+          changesDrawerEventBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional .android_studio.GeminiTelemetryEvent.UiEvent.ChangesDrawerEvent changes_drawer_event = 1;</code>
+       */
+      public Builder clearChangesDrawerEvent() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        changesDrawerEvent_ = null;
+        if (changesDrawerEventBuilder_ != null) {
+          changesDrawerEventBuilder_.dispose();
+          changesDrawerEventBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional .android_studio.GeminiTelemetryEvent.UiEvent.ChangesDrawerEvent changes_drawer_event = 1;</code>
+       */
+      public com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.ChangesDrawerEvent.Builder getChangesDrawerEventBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getChangesDrawerEventFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>optional .android_studio.GeminiTelemetryEvent.UiEvent.ChangesDrawerEvent changes_drawer_event = 1;</code>
+       */
+      public com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.ChangesDrawerEventOrBuilder getChangesDrawerEventOrBuilder() {
+        if (changesDrawerEventBuilder_ != null) {
+          return changesDrawerEventBuilder_.getMessageOrBuilder();
+        } else {
+          return changesDrawerEvent_ == null ?
+              com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.ChangesDrawerEvent.getDefaultInstance() : changesDrawerEvent_;
+        }
+      }
+      /**
+       * <code>optional .android_studio.GeminiTelemetryEvent.UiEvent.ChangesDrawerEvent changes_drawer_event = 1;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.ChangesDrawerEvent, com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.ChangesDrawerEvent.Builder, com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.ChangesDrawerEventOrBuilder> 
+          getChangesDrawerEventFieldBuilder() {
+        if (changesDrawerEventBuilder_ == null) {
+          changesDrawerEventBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.ChangesDrawerEvent, com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.ChangesDrawerEvent.Builder, com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.ChangesDrawerEventOrBuilder>(
+                  getChangesDrawerEvent(),
+                  getParentForChildren(),
+                  isClean());
+          changesDrawerEvent_ = null;
+        }
+        return changesDrawerEventBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -6767,7 +7556,7 @@ private static final long serialVersionUID = 0L;
 
       /**
        * <pre>
-       * Data for a find declaration tool call.
+       * Data for a find_declaration tool call.
        * </pre>
        *
        * <code>.android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.FindDeclarationToolCallData find_declaration_tool_call_data = 8;</code>
@@ -6776,7 +7565,7 @@ private static final long serialVersionUID = 0L;
       boolean hasFindDeclarationToolCallData();
       /**
        * <pre>
-       * Data for a find declaration tool call.
+       * Data for a find_declaration tool call.
        * </pre>
        *
        * <code>.android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.FindDeclarationToolCallData find_declaration_tool_call_data = 8;</code>
@@ -6785,12 +7574,120 @@ private static final long serialVersionUID = 0L;
       com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.FindDeclarationToolCallData getFindDeclarationToolCallData();
       /**
        * <pre>
-       * Data for a find declaration tool call.
+       * Data for a find_declaration tool call.
        * </pre>
        *
        * <code>.android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.FindDeclarationToolCallData find_declaration_tool_call_data = 8;</code>
        */
       com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.FindDeclarationToolCallDataOrBuilder getFindDeclarationToolCallDataOrBuilder();
+
+      /**
+       * <pre>
+       * Data for a find_files tool call.
+       * </pre>
+       *
+       * <code>.android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.FindFilesToolCallData find_files_tool_call_data = 9;</code>
+       * @return Whether the findFilesToolCallData field is set.
+       */
+      boolean hasFindFilesToolCallData();
+      /**
+       * <pre>
+       * Data for a find_files tool call.
+       * </pre>
+       *
+       * <code>.android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.FindFilesToolCallData find_files_tool_call_data = 9;</code>
+       * @return The findFilesToolCallData.
+       */
+      com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.FindFilesToolCallData getFindFilesToolCallData();
+      /**
+       * <pre>
+       * Data for a find_files tool call.
+       * </pre>
+       *
+       * <code>.android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.FindFilesToolCallData find_files_tool_call_data = 9;</code>
+       */
+      com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.FindFilesToolCallDataOrBuilder getFindFilesToolCallDataOrBuilder();
+
+      /**
+       * <pre>
+       * Data for a find_usages tool call.
+       * </pre>
+       *
+       * <code>.android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.FindUsagesToolCallData find_usages_tool_call_data = 10;</code>
+       * @return Whether the findUsagesToolCallData field is set.
+       */
+      boolean hasFindUsagesToolCallData();
+      /**
+       * <pre>
+       * Data for a find_usages tool call.
+       * </pre>
+       *
+       * <code>.android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.FindUsagesToolCallData find_usages_tool_call_data = 10;</code>
+       * @return The findUsagesToolCallData.
+       */
+      com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.FindUsagesToolCallData getFindUsagesToolCallData();
+      /**
+       * <pre>
+       * Data for a find_usages tool call.
+       * </pre>
+       *
+       * <code>.android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.FindUsagesToolCallData find_usages_tool_call_data = 10;</code>
+       */
+      com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.FindUsagesToolCallDataOrBuilder getFindUsagesToolCallDataOrBuilder();
+
+      /**
+       * <pre>
+       * Data for a grep tool call.
+       * </pre>
+       *
+       * <code>.android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.GrepToolCallData grep_tool_call_data = 11;</code>
+       * @return Whether the grepToolCallData field is set.
+       */
+      boolean hasGrepToolCallData();
+      /**
+       * <pre>
+       * Data for a grep tool call.
+       * </pre>
+       *
+       * <code>.android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.GrepToolCallData grep_tool_call_data = 11;</code>
+       * @return The grepToolCallData.
+       */
+      com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.GrepToolCallData getGrepToolCallData();
+      /**
+       * <pre>
+       * Data for a grep tool call.
+       * </pre>
+       *
+       * <code>.android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.GrepToolCallData grep_tool_call_data = 11;</code>
+       */
+      com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.GrepToolCallDataOrBuilder getGrepToolCallDataOrBuilder();
+
+      /**
+       * <pre>
+       * Data for a code_search tool call.
+       * </pre>
+       *
+       * <code>.android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.RagToolCallData rag_tool_call_data = 12;</code>
+       * @return Whether the ragToolCallData field is set.
+       */
+      boolean hasRagToolCallData();
+      /**
+       * <pre>
+       * Data for a code_search tool call.
+       * </pre>
+       *
+       * <code>.android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.RagToolCallData rag_tool_call_data = 12;</code>
+       * @return The ragToolCallData.
+       */
+      com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.RagToolCallData getRagToolCallData();
+      /**
+       * <pre>
+       * Data for a code_search tool call.
+       * </pre>
+       *
+       * <code>.android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.RagToolCallData rag_tool_call_data = 12;</code>
+       */
+      com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.RagToolCallDataOrBuilder getRagToolCallDataOrBuilder();
 
       com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.ToolSpecificMetadataCase getToolSpecificMetadataCase();
     }
@@ -7644,6 +8541,2315 @@ private static final long serialVersionUID = 0L;
         // @@protoc_insertion_point(enum_scope:android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.ResponseStatus)
       }
 
+      public interface SearchArgumentsOrBuilder extends
+          // @@protoc_insertion_point(interface_extends:android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchArguments)
+          com.google.protobuf.MessageOrBuilder {
+
+        /**
+         * <pre>
+         * Number of lines to show after the match (like grep -A).
+         * </pre>
+         *
+         * <code>optional int32 lines_after = 1;</code>
+         * @return Whether the linesAfter field is set.
+         */
+        boolean hasLinesAfter();
+        /**
+         * <pre>
+         * Number of lines to show after the match (like grep -A).
+         * </pre>
+         *
+         * <code>optional int32 lines_after = 1;</code>
+         * @return The linesAfter.
+         */
+        int getLinesAfter();
+
+        /**
+         * <pre>
+         * Number of lines to show before the match (like grep -B).
+         * </pre>
+         *
+         * <code>optional int32 lines_before = 2;</code>
+         * @return Whether the linesBefore field is set.
+         */
+        boolean hasLinesBefore();
+        /**
+         * <pre>
+         * Number of lines to show before the match (like grep -B).
+         * </pre>
+         *
+         * <code>optional int32 lines_before = 2;</code>
+         * @return The linesBefore.
+         */
+        int getLinesBefore();
+
+        /**
+         * <pre>
+         * Number of lines to show around the match (like grep -C).
+         * </pre>
+         *
+         * <code>optional int32 lines_context = 3;</code>
+         * @return Whether the linesContext field is set.
+         */
+        boolean hasLinesContext();
+        /**
+         * <pre>
+         * Number of lines to show around the match (like grep -C).
+         * </pre>
+         *
+         * <code>optional int32 lines_context = 3;</code>
+         * @return The linesContext.
+         */
+        int getLinesContext();
+
+        /**
+         * <pre>
+         * Pattern to filter results (like grep -E).
+         * </pre>
+         *
+         * <code>optional string filter = 4;</code>
+         * @return Whether the filter field is set.
+         */
+        boolean hasFilter();
+        /**
+         * <pre>
+         * Pattern to filter results (like grep -E).
+         * </pre>
+         *
+         * <code>optional string filter = 4;</code>
+         * @return The filter.
+         */
+        java.lang.String getFilter();
+        /**
+         * <pre>
+         * Pattern to filter results (like grep -E).
+         * </pre>
+         *
+         * <code>optional string filter = 4;</code>
+         * @return The bytes for filter.
+         */
+        com.google.protobuf.ByteString
+            getFilterBytes();
+
+        /**
+         * <pre>
+         * Type to search, e.g., "all" kinds, function "call", etc.
+         * </pre>
+         *
+         * <code>optional string type = 5;</code>
+         * @return Whether the type field is set.
+         */
+        boolean hasType();
+        /**
+         * <pre>
+         * Type to search, e.g., "all" kinds, function "call", etc.
+         * </pre>
+         *
+         * <code>optional string type = 5;</code>
+         * @return The type.
+         */
+        java.lang.String getType();
+        /**
+         * <pre>
+         * Type to search, e.g., "all" kinds, function "call", etc.
+         * </pre>
+         *
+         * <code>optional string type = 5;</code>
+         * @return The bytes for type.
+         */
+        com.google.protobuf.ByteString
+            getTypeBytes();
+
+        /**
+         * <pre>
+         * Glob-like patterns to filter in results.
+         * </pre>
+         *
+         * <code>optional string include_pattern = 6;</code>
+         * @return Whether the includePattern field is set.
+         */
+        boolean hasIncludePattern();
+        /**
+         * <pre>
+         * Glob-like patterns to filter in results.
+         * </pre>
+         *
+         * <code>optional string include_pattern = 6;</code>
+         * @return The includePattern.
+         */
+        java.lang.String getIncludePattern();
+        /**
+         * <pre>
+         * Glob-like patterns to filter in results.
+         * </pre>
+         *
+         * <code>optional string include_pattern = 6;</code>
+         * @return The bytes for includePattern.
+         */
+        com.google.protobuf.ByteString
+            getIncludePatternBytes();
+
+        /**
+         * <pre>
+         * Glob-like patterns to filter out results.
+         * </pre>
+         *
+         * <code>optional string exclude_pattern = 7;</code>
+         * @return Whether the excludePattern field is set.
+         */
+        boolean hasExcludePattern();
+        /**
+         * <pre>
+         * Glob-like patterns to filter out results.
+         * </pre>
+         *
+         * <code>optional string exclude_pattern = 7;</code>
+         * @return The excludePattern.
+         */
+        java.lang.String getExcludePattern();
+        /**
+         * <pre>
+         * Glob-like patterns to filter out results.
+         * </pre>
+         *
+         * <code>optional string exclude_pattern = 7;</code>
+         * @return The bytes for excludePattern.
+         */
+        com.google.protobuf.ByteString
+            getExcludePatternBytes();
+      }
+      /**
+       * Protobuf type {@code android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchArguments}
+       */
+      public static final class SearchArguments extends
+          com.google.protobuf.GeneratedMessageV3 implements
+          // @@protoc_insertion_point(message_implements:android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchArguments)
+          SearchArgumentsOrBuilder {
+      private static final long serialVersionUID = 0L;
+        // Use SearchArguments.newBuilder() to construct.
+        private SearchArguments(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+          super(builder);
+        }
+        private SearchArguments() {
+          filter_ = "";
+          type_ = "";
+          includePattern_ = "";
+          excludePattern_ = "";
+        }
+
+        @java.lang.Override
+        @SuppressWarnings({"unused"})
+        protected java.lang.Object newInstance(
+            UnusedPrivateParameter unused) {
+          return new SearchArguments();
+        }
+
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_GeminiTelemetryEvent_AgentEvent_ToolExecutionSpan_SearchArguments_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_GeminiTelemetryEvent_AgentEvent_ToolExecutionSpan_SearchArguments_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchArguments.class, com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchArguments.Builder.class);
+        }
+
+        private int bitField0_;
+        public static final int LINES_AFTER_FIELD_NUMBER = 1;
+        private int linesAfter_ = 0;
+        /**
+         * <pre>
+         * Number of lines to show after the match (like grep -A).
+         * </pre>
+         *
+         * <code>optional int32 lines_after = 1;</code>
+         * @return Whether the linesAfter field is set.
+         */
+        @java.lang.Override
+        public boolean hasLinesAfter() {
+          return ((bitField0_ & 0x00000001) != 0);
+        }
+        /**
+         * <pre>
+         * Number of lines to show after the match (like grep -A).
+         * </pre>
+         *
+         * <code>optional int32 lines_after = 1;</code>
+         * @return The linesAfter.
+         */
+        @java.lang.Override
+        public int getLinesAfter() {
+          return linesAfter_;
+        }
+
+        public static final int LINES_BEFORE_FIELD_NUMBER = 2;
+        private int linesBefore_ = 0;
+        /**
+         * <pre>
+         * Number of lines to show before the match (like grep -B).
+         * </pre>
+         *
+         * <code>optional int32 lines_before = 2;</code>
+         * @return Whether the linesBefore field is set.
+         */
+        @java.lang.Override
+        public boolean hasLinesBefore() {
+          return ((bitField0_ & 0x00000002) != 0);
+        }
+        /**
+         * <pre>
+         * Number of lines to show before the match (like grep -B).
+         * </pre>
+         *
+         * <code>optional int32 lines_before = 2;</code>
+         * @return The linesBefore.
+         */
+        @java.lang.Override
+        public int getLinesBefore() {
+          return linesBefore_;
+        }
+
+        public static final int LINES_CONTEXT_FIELD_NUMBER = 3;
+        private int linesContext_ = 0;
+        /**
+         * <pre>
+         * Number of lines to show around the match (like grep -C).
+         * </pre>
+         *
+         * <code>optional int32 lines_context = 3;</code>
+         * @return Whether the linesContext field is set.
+         */
+        @java.lang.Override
+        public boolean hasLinesContext() {
+          return ((bitField0_ & 0x00000004) != 0);
+        }
+        /**
+         * <pre>
+         * Number of lines to show around the match (like grep -C).
+         * </pre>
+         *
+         * <code>optional int32 lines_context = 3;</code>
+         * @return The linesContext.
+         */
+        @java.lang.Override
+        public int getLinesContext() {
+          return linesContext_;
+        }
+
+        public static final int FILTER_FIELD_NUMBER = 4;
+        @SuppressWarnings("serial")
+        private volatile java.lang.Object filter_ = "";
+        /**
+         * <pre>
+         * Pattern to filter results (like grep -E).
+         * </pre>
+         *
+         * <code>optional string filter = 4;</code>
+         * @return Whether the filter field is set.
+         */
+        @java.lang.Override
+        public boolean hasFilter() {
+          return ((bitField0_ & 0x00000008) != 0);
+        }
+        /**
+         * <pre>
+         * Pattern to filter results (like grep -E).
+         * </pre>
+         *
+         * <code>optional string filter = 4;</code>
+         * @return The filter.
+         */
+        @java.lang.Override
+        public java.lang.String getFilter() {
+          java.lang.Object ref = filter_;
+          if (ref instanceof java.lang.String) {
+            return (java.lang.String) ref;
+          } else {
+            com.google.protobuf.ByteString bs = 
+                (com.google.protobuf.ByteString) ref;
+            java.lang.String s = bs.toStringUtf8();
+            if (bs.isValidUtf8()) {
+              filter_ = s;
+            }
+            return s;
+          }
+        }
+        /**
+         * <pre>
+         * Pattern to filter results (like grep -E).
+         * </pre>
+         *
+         * <code>optional string filter = 4;</code>
+         * @return The bytes for filter.
+         */
+        @java.lang.Override
+        public com.google.protobuf.ByteString
+            getFilterBytes() {
+          java.lang.Object ref = filter_;
+          if (ref instanceof java.lang.String) {
+            com.google.protobuf.ByteString b = 
+                com.google.protobuf.ByteString.copyFromUtf8(
+                    (java.lang.String) ref);
+            filter_ = b;
+            return b;
+          } else {
+            return (com.google.protobuf.ByteString) ref;
+          }
+        }
+
+        public static final int TYPE_FIELD_NUMBER = 5;
+        @SuppressWarnings("serial")
+        private volatile java.lang.Object type_ = "";
+        /**
+         * <pre>
+         * Type to search, e.g., "all" kinds, function "call", etc.
+         * </pre>
+         *
+         * <code>optional string type = 5;</code>
+         * @return Whether the type field is set.
+         */
+        @java.lang.Override
+        public boolean hasType() {
+          return ((bitField0_ & 0x00000010) != 0);
+        }
+        /**
+         * <pre>
+         * Type to search, e.g., "all" kinds, function "call", etc.
+         * </pre>
+         *
+         * <code>optional string type = 5;</code>
+         * @return The type.
+         */
+        @java.lang.Override
+        public java.lang.String getType() {
+          java.lang.Object ref = type_;
+          if (ref instanceof java.lang.String) {
+            return (java.lang.String) ref;
+          } else {
+            com.google.protobuf.ByteString bs = 
+                (com.google.protobuf.ByteString) ref;
+            java.lang.String s = bs.toStringUtf8();
+            if (bs.isValidUtf8()) {
+              type_ = s;
+            }
+            return s;
+          }
+        }
+        /**
+         * <pre>
+         * Type to search, e.g., "all" kinds, function "call", etc.
+         * </pre>
+         *
+         * <code>optional string type = 5;</code>
+         * @return The bytes for type.
+         */
+        @java.lang.Override
+        public com.google.protobuf.ByteString
+            getTypeBytes() {
+          java.lang.Object ref = type_;
+          if (ref instanceof java.lang.String) {
+            com.google.protobuf.ByteString b = 
+                com.google.protobuf.ByteString.copyFromUtf8(
+                    (java.lang.String) ref);
+            type_ = b;
+            return b;
+          } else {
+            return (com.google.protobuf.ByteString) ref;
+          }
+        }
+
+        public static final int INCLUDE_PATTERN_FIELD_NUMBER = 6;
+        @SuppressWarnings("serial")
+        private volatile java.lang.Object includePattern_ = "";
+        /**
+         * <pre>
+         * Glob-like patterns to filter in results.
+         * </pre>
+         *
+         * <code>optional string include_pattern = 6;</code>
+         * @return Whether the includePattern field is set.
+         */
+        @java.lang.Override
+        public boolean hasIncludePattern() {
+          return ((bitField0_ & 0x00000020) != 0);
+        }
+        /**
+         * <pre>
+         * Glob-like patterns to filter in results.
+         * </pre>
+         *
+         * <code>optional string include_pattern = 6;</code>
+         * @return The includePattern.
+         */
+        @java.lang.Override
+        public java.lang.String getIncludePattern() {
+          java.lang.Object ref = includePattern_;
+          if (ref instanceof java.lang.String) {
+            return (java.lang.String) ref;
+          } else {
+            com.google.protobuf.ByteString bs = 
+                (com.google.protobuf.ByteString) ref;
+            java.lang.String s = bs.toStringUtf8();
+            if (bs.isValidUtf8()) {
+              includePattern_ = s;
+            }
+            return s;
+          }
+        }
+        /**
+         * <pre>
+         * Glob-like patterns to filter in results.
+         * </pre>
+         *
+         * <code>optional string include_pattern = 6;</code>
+         * @return The bytes for includePattern.
+         */
+        @java.lang.Override
+        public com.google.protobuf.ByteString
+            getIncludePatternBytes() {
+          java.lang.Object ref = includePattern_;
+          if (ref instanceof java.lang.String) {
+            com.google.protobuf.ByteString b = 
+                com.google.protobuf.ByteString.copyFromUtf8(
+                    (java.lang.String) ref);
+            includePattern_ = b;
+            return b;
+          } else {
+            return (com.google.protobuf.ByteString) ref;
+          }
+        }
+
+        public static final int EXCLUDE_PATTERN_FIELD_NUMBER = 7;
+        @SuppressWarnings("serial")
+        private volatile java.lang.Object excludePattern_ = "";
+        /**
+         * <pre>
+         * Glob-like patterns to filter out results.
+         * </pre>
+         *
+         * <code>optional string exclude_pattern = 7;</code>
+         * @return Whether the excludePattern field is set.
+         */
+        @java.lang.Override
+        public boolean hasExcludePattern() {
+          return ((bitField0_ & 0x00000040) != 0);
+        }
+        /**
+         * <pre>
+         * Glob-like patterns to filter out results.
+         * </pre>
+         *
+         * <code>optional string exclude_pattern = 7;</code>
+         * @return The excludePattern.
+         */
+        @java.lang.Override
+        public java.lang.String getExcludePattern() {
+          java.lang.Object ref = excludePattern_;
+          if (ref instanceof java.lang.String) {
+            return (java.lang.String) ref;
+          } else {
+            com.google.protobuf.ByteString bs = 
+                (com.google.protobuf.ByteString) ref;
+            java.lang.String s = bs.toStringUtf8();
+            if (bs.isValidUtf8()) {
+              excludePattern_ = s;
+            }
+            return s;
+          }
+        }
+        /**
+         * <pre>
+         * Glob-like patterns to filter out results.
+         * </pre>
+         *
+         * <code>optional string exclude_pattern = 7;</code>
+         * @return The bytes for excludePattern.
+         */
+        @java.lang.Override
+        public com.google.protobuf.ByteString
+            getExcludePatternBytes() {
+          java.lang.Object ref = excludePattern_;
+          if (ref instanceof java.lang.String) {
+            com.google.protobuf.ByteString b = 
+                com.google.protobuf.ByteString.copyFromUtf8(
+                    (java.lang.String) ref);
+            excludePattern_ = b;
+            return b;
+          } else {
+            return (com.google.protobuf.ByteString) ref;
+          }
+        }
+
+        private byte memoizedIsInitialized = -1;
+        @java.lang.Override
+        public final boolean isInitialized() {
+          byte isInitialized = memoizedIsInitialized;
+          if (isInitialized == 1) return true;
+          if (isInitialized == 0) return false;
+
+          memoizedIsInitialized = 1;
+          return true;
+        }
+
+        @java.lang.Override
+        public void writeTo(com.google.protobuf.CodedOutputStream output)
+                            throws java.io.IOException {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            output.writeInt32(1, linesAfter_);
+          }
+          if (((bitField0_ & 0x00000002) != 0)) {
+            output.writeInt32(2, linesBefore_);
+          }
+          if (((bitField0_ & 0x00000004) != 0)) {
+            output.writeInt32(3, linesContext_);
+          }
+          if (((bitField0_ & 0x00000008) != 0)) {
+            com.google.protobuf.GeneratedMessageV3.writeString(output, 4, filter_);
+          }
+          if (((bitField0_ & 0x00000010) != 0)) {
+            com.google.protobuf.GeneratedMessageV3.writeString(output, 5, type_);
+          }
+          if (((bitField0_ & 0x00000020) != 0)) {
+            com.google.protobuf.GeneratedMessageV3.writeString(output, 6, includePattern_);
+          }
+          if (((bitField0_ & 0x00000040) != 0)) {
+            com.google.protobuf.GeneratedMessageV3.writeString(output, 7, excludePattern_);
+          }
+          getUnknownFields().writeTo(output);
+        }
+
+        @java.lang.Override
+        public int getSerializedSize() {
+          int size = memoizedSize;
+          if (size != -1) return size;
+
+          size = 0;
+          if (((bitField0_ & 0x00000001) != 0)) {
+            size += com.google.protobuf.CodedOutputStream
+              .computeInt32Size(1, linesAfter_);
+          }
+          if (((bitField0_ & 0x00000002) != 0)) {
+            size += com.google.protobuf.CodedOutputStream
+              .computeInt32Size(2, linesBefore_);
+          }
+          if (((bitField0_ & 0x00000004) != 0)) {
+            size += com.google.protobuf.CodedOutputStream
+              .computeInt32Size(3, linesContext_);
+          }
+          if (((bitField0_ & 0x00000008) != 0)) {
+            size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, filter_);
+          }
+          if (((bitField0_ & 0x00000010) != 0)) {
+            size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, type_);
+          }
+          if (((bitField0_ & 0x00000020) != 0)) {
+            size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, includePattern_);
+          }
+          if (((bitField0_ & 0x00000040) != 0)) {
+            size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, excludePattern_);
+          }
+          size += getUnknownFields().getSerializedSize();
+          memoizedSize = size;
+          return size;
+        }
+
+        @java.lang.Override
+        public boolean equals(final java.lang.Object obj) {
+          if (obj == this) {
+           return true;
+          }
+          if (!(obj instanceof com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchArguments)) {
+            return super.equals(obj);
+          }
+          com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchArguments other = (com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchArguments) obj;
+
+          if (hasLinesAfter() != other.hasLinesAfter()) return false;
+          if (hasLinesAfter()) {
+            if (getLinesAfter()
+                != other.getLinesAfter()) return false;
+          }
+          if (hasLinesBefore() != other.hasLinesBefore()) return false;
+          if (hasLinesBefore()) {
+            if (getLinesBefore()
+                != other.getLinesBefore()) return false;
+          }
+          if (hasLinesContext() != other.hasLinesContext()) return false;
+          if (hasLinesContext()) {
+            if (getLinesContext()
+                != other.getLinesContext()) return false;
+          }
+          if (hasFilter() != other.hasFilter()) return false;
+          if (hasFilter()) {
+            if (!getFilter()
+                .equals(other.getFilter())) return false;
+          }
+          if (hasType() != other.hasType()) return false;
+          if (hasType()) {
+            if (!getType()
+                .equals(other.getType())) return false;
+          }
+          if (hasIncludePattern() != other.hasIncludePattern()) return false;
+          if (hasIncludePattern()) {
+            if (!getIncludePattern()
+                .equals(other.getIncludePattern())) return false;
+          }
+          if (hasExcludePattern() != other.hasExcludePattern()) return false;
+          if (hasExcludePattern()) {
+            if (!getExcludePattern()
+                .equals(other.getExcludePattern())) return false;
+          }
+          if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+          return true;
+        }
+
+        @java.lang.Override
+        public int hashCode() {
+          if (memoizedHashCode != 0) {
+            return memoizedHashCode;
+          }
+          int hash = 41;
+          hash = (19 * hash) + getDescriptor().hashCode();
+          if (hasLinesAfter()) {
+            hash = (37 * hash) + LINES_AFTER_FIELD_NUMBER;
+            hash = (53 * hash) + getLinesAfter();
+          }
+          if (hasLinesBefore()) {
+            hash = (37 * hash) + LINES_BEFORE_FIELD_NUMBER;
+            hash = (53 * hash) + getLinesBefore();
+          }
+          if (hasLinesContext()) {
+            hash = (37 * hash) + LINES_CONTEXT_FIELD_NUMBER;
+            hash = (53 * hash) + getLinesContext();
+          }
+          if (hasFilter()) {
+            hash = (37 * hash) + FILTER_FIELD_NUMBER;
+            hash = (53 * hash) + getFilter().hashCode();
+          }
+          if (hasType()) {
+            hash = (37 * hash) + TYPE_FIELD_NUMBER;
+            hash = (53 * hash) + getType().hashCode();
+          }
+          if (hasIncludePattern()) {
+            hash = (37 * hash) + INCLUDE_PATTERN_FIELD_NUMBER;
+            hash = (53 * hash) + getIncludePattern().hashCode();
+          }
+          if (hasExcludePattern()) {
+            hash = (37 * hash) + EXCLUDE_PATTERN_FIELD_NUMBER;
+            hash = (53 * hash) + getExcludePattern().hashCode();
+          }
+          hash = (29 * hash) + getUnknownFields().hashCode();
+          memoizedHashCode = hash;
+          return hash;
+        }
+
+        public static com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchArguments parseFrom(
+            java.nio.ByteBuffer data)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return PARSER.parseFrom(data);
+        }
+        public static com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchArguments parseFrom(
+            java.nio.ByteBuffer data,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return PARSER.parseFrom(data, extensionRegistry);
+        }
+        public static com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchArguments parseFrom(
+            com.google.protobuf.ByteString data)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return PARSER.parseFrom(data);
+        }
+        public static com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchArguments parseFrom(
+            com.google.protobuf.ByteString data,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return PARSER.parseFrom(data, extensionRegistry);
+        }
+        public static com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchArguments parseFrom(byte[] data)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return PARSER.parseFrom(data);
+        }
+        public static com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchArguments parseFrom(
+            byte[] data,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return PARSER.parseFrom(data, extensionRegistry);
+        }
+        public static com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchArguments parseFrom(java.io.InputStream input)
+            throws java.io.IOException {
+          return com.google.protobuf.GeneratedMessageV3
+              .parseWithIOException(PARSER, input);
+        }
+        public static com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchArguments parseFrom(
+            java.io.InputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          return com.google.protobuf.GeneratedMessageV3
+              .parseWithIOException(PARSER, input, extensionRegistry);
+        }
+        public static com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchArguments parseDelimitedFrom(java.io.InputStream input)
+            throws java.io.IOException {
+          return com.google.protobuf.GeneratedMessageV3
+              .parseDelimitedWithIOException(PARSER, input);
+        }
+        public static com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchArguments parseDelimitedFrom(
+            java.io.InputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          return com.google.protobuf.GeneratedMessageV3
+              .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+        }
+        public static com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchArguments parseFrom(
+            com.google.protobuf.CodedInputStream input)
+            throws java.io.IOException {
+          return com.google.protobuf.GeneratedMessageV3
+              .parseWithIOException(PARSER, input);
+        }
+        public static com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchArguments parseFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          return com.google.protobuf.GeneratedMessageV3
+              .parseWithIOException(PARSER, input, extensionRegistry);
+        }
+
+        @java.lang.Override
+        public Builder newBuilderForType() { return newBuilder(); }
+        public static Builder newBuilder() {
+          return DEFAULT_INSTANCE.toBuilder();
+        }
+        public static Builder newBuilder(com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchArguments prototype) {
+          return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+        }
+        @java.lang.Override
+        public Builder toBuilder() {
+          return this == DEFAULT_INSTANCE
+              ? new Builder() : new Builder().mergeFrom(this);
+        }
+
+        @java.lang.Override
+        protected Builder newBuilderForType(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          Builder builder = new Builder(parent);
+          return builder;
+        }
+        /**
+         * Protobuf type {@code android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchArguments}
+         */
+        public static final class Builder extends
+            com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+            // @@protoc_insertion_point(builder_implements:android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchArguments)
+            com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchArgumentsOrBuilder {
+          public static final com.google.protobuf.Descriptors.Descriptor
+              getDescriptor() {
+            return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_GeminiTelemetryEvent_AgentEvent_ToolExecutionSpan_SearchArguments_descriptor;
+          }
+
+          @java.lang.Override
+          protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+              internalGetFieldAccessorTable() {
+            return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_GeminiTelemetryEvent_AgentEvent_ToolExecutionSpan_SearchArguments_fieldAccessorTable
+                .ensureFieldAccessorsInitialized(
+                    com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchArguments.class, com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchArguments.Builder.class);
+          }
+
+          // Construct using com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchArguments.newBuilder()
+          private Builder() {
+
+          }
+
+          private Builder(
+              com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+            super(parent);
+
+          }
+          @java.lang.Override
+          public Builder clear() {
+            super.clear();
+            bitField0_ = 0;
+            linesAfter_ = 0;
+            linesBefore_ = 0;
+            linesContext_ = 0;
+            filter_ = "";
+            type_ = "";
+            includePattern_ = "";
+            excludePattern_ = "";
+            return this;
+          }
+
+          @java.lang.Override
+          public com.google.protobuf.Descriptors.Descriptor
+              getDescriptorForType() {
+            return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_GeminiTelemetryEvent_AgentEvent_ToolExecutionSpan_SearchArguments_descriptor;
+          }
+
+          @java.lang.Override
+          public com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchArguments getDefaultInstanceForType() {
+            return com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchArguments.getDefaultInstance();
+          }
+
+          @java.lang.Override
+          public com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchArguments build() {
+            com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchArguments result = buildPartial();
+            if (!result.isInitialized()) {
+              throw newUninitializedMessageException(result);
+            }
+            return result;
+          }
+
+          @java.lang.Override
+          public com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchArguments buildPartial() {
+            com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchArguments result = new com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchArguments(this);
+            if (bitField0_ != 0) { buildPartial0(result); }
+            onBuilt();
+            return result;
+          }
+
+          private void buildPartial0(com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchArguments result) {
+            int from_bitField0_ = bitField0_;
+            int to_bitField0_ = 0;
+            if (((from_bitField0_ & 0x00000001) != 0)) {
+              result.linesAfter_ = linesAfter_;
+              to_bitField0_ |= 0x00000001;
+            }
+            if (((from_bitField0_ & 0x00000002) != 0)) {
+              result.linesBefore_ = linesBefore_;
+              to_bitField0_ |= 0x00000002;
+            }
+            if (((from_bitField0_ & 0x00000004) != 0)) {
+              result.linesContext_ = linesContext_;
+              to_bitField0_ |= 0x00000004;
+            }
+            if (((from_bitField0_ & 0x00000008) != 0)) {
+              result.filter_ = filter_;
+              to_bitField0_ |= 0x00000008;
+            }
+            if (((from_bitField0_ & 0x00000010) != 0)) {
+              result.type_ = type_;
+              to_bitField0_ |= 0x00000010;
+            }
+            if (((from_bitField0_ & 0x00000020) != 0)) {
+              result.includePattern_ = includePattern_;
+              to_bitField0_ |= 0x00000020;
+            }
+            if (((from_bitField0_ & 0x00000040) != 0)) {
+              result.excludePattern_ = excludePattern_;
+              to_bitField0_ |= 0x00000040;
+            }
+            result.bitField0_ |= to_bitField0_;
+          }
+
+          @java.lang.Override
+          public Builder mergeFrom(com.google.protobuf.Message other) {
+            if (other instanceof com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchArguments) {
+              return mergeFrom((com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchArguments)other);
+            } else {
+              super.mergeFrom(other);
+              return this;
+            }
+          }
+
+          public Builder mergeFrom(com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchArguments other) {
+            if (other == com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchArguments.getDefaultInstance()) return this;
+            if (other.hasLinesAfter()) {
+              setLinesAfter(other.getLinesAfter());
+            }
+            if (other.hasLinesBefore()) {
+              setLinesBefore(other.getLinesBefore());
+            }
+            if (other.hasLinesContext()) {
+              setLinesContext(other.getLinesContext());
+            }
+            if (other.hasFilter()) {
+              filter_ = other.filter_;
+              bitField0_ |= 0x00000008;
+              onChanged();
+            }
+            if (other.hasType()) {
+              type_ = other.type_;
+              bitField0_ |= 0x00000010;
+              onChanged();
+            }
+            if (other.hasIncludePattern()) {
+              includePattern_ = other.includePattern_;
+              bitField0_ |= 0x00000020;
+              onChanged();
+            }
+            if (other.hasExcludePattern()) {
+              excludePattern_ = other.excludePattern_;
+              bitField0_ |= 0x00000040;
+              onChanged();
+            }
+            this.mergeUnknownFields(other.getUnknownFields());
+            onChanged();
+            return this;
+          }
+
+          @java.lang.Override
+          public final boolean isInitialized() {
+            return true;
+          }
+
+          @java.lang.Override
+          public Builder mergeFrom(
+              com.google.protobuf.CodedInputStream input,
+              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+              throws java.io.IOException {
+            if (extensionRegistry == null) {
+              throw new java.lang.NullPointerException();
+            }
+            try {
+              boolean done = false;
+              while (!done) {
+                int tag = input.readTag();
+                switch (tag) {
+                  case 0:
+                    done = true;
+                    break;
+                  case 8: {
+                    linesAfter_ = input.readInt32();
+                    bitField0_ |= 0x00000001;
+                    break;
+                  } // case 8
+                  case 16: {
+                    linesBefore_ = input.readInt32();
+                    bitField0_ |= 0x00000002;
+                    break;
+                  } // case 16
+                  case 24: {
+                    linesContext_ = input.readInt32();
+                    bitField0_ |= 0x00000004;
+                    break;
+                  } // case 24
+                  case 34: {
+                    filter_ = input.readBytes();
+                    bitField0_ |= 0x00000008;
+                    break;
+                  } // case 34
+                  case 42: {
+                    type_ = input.readBytes();
+                    bitField0_ |= 0x00000010;
+                    break;
+                  } // case 42
+                  case 50: {
+                    includePattern_ = input.readBytes();
+                    bitField0_ |= 0x00000020;
+                    break;
+                  } // case 50
+                  case 58: {
+                    excludePattern_ = input.readBytes();
+                    bitField0_ |= 0x00000040;
+                    break;
+                  } // case 58
+                  default: {
+                    if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                      done = true; // was an endgroup tag
+                    }
+                    break;
+                  } // default:
+                } // switch (tag)
+              } // while (!done)
+            } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+              throw e.unwrapIOException();
+            } finally {
+              onChanged();
+            } // finally
+            return this;
+          }
+          private int bitField0_;
+
+          private int linesAfter_ ;
+          /**
+           * <pre>
+           * Number of lines to show after the match (like grep -A).
+           * </pre>
+           *
+           * <code>optional int32 lines_after = 1;</code>
+           * @return Whether the linesAfter field is set.
+           */
+          @java.lang.Override
+          public boolean hasLinesAfter() {
+            return ((bitField0_ & 0x00000001) != 0);
+          }
+          /**
+           * <pre>
+           * Number of lines to show after the match (like grep -A).
+           * </pre>
+           *
+           * <code>optional int32 lines_after = 1;</code>
+           * @return The linesAfter.
+           */
+          @java.lang.Override
+          public int getLinesAfter() {
+            return linesAfter_;
+          }
+          /**
+           * <pre>
+           * Number of lines to show after the match (like grep -A).
+           * </pre>
+           *
+           * <code>optional int32 lines_after = 1;</code>
+           * @param value The linesAfter to set.
+           * @return This builder for chaining.
+           */
+          public Builder setLinesAfter(int value) {
+
+            linesAfter_ = value;
+            bitField0_ |= 0x00000001;
+            onChanged();
+            return this;
+          }
+          /**
+           * <pre>
+           * Number of lines to show after the match (like grep -A).
+           * </pre>
+           *
+           * <code>optional int32 lines_after = 1;</code>
+           * @return This builder for chaining.
+           */
+          public Builder clearLinesAfter() {
+            bitField0_ = (bitField0_ & ~0x00000001);
+            linesAfter_ = 0;
+            onChanged();
+            return this;
+          }
+
+          private int linesBefore_ ;
+          /**
+           * <pre>
+           * Number of lines to show before the match (like grep -B).
+           * </pre>
+           *
+           * <code>optional int32 lines_before = 2;</code>
+           * @return Whether the linesBefore field is set.
+           */
+          @java.lang.Override
+          public boolean hasLinesBefore() {
+            return ((bitField0_ & 0x00000002) != 0);
+          }
+          /**
+           * <pre>
+           * Number of lines to show before the match (like grep -B).
+           * </pre>
+           *
+           * <code>optional int32 lines_before = 2;</code>
+           * @return The linesBefore.
+           */
+          @java.lang.Override
+          public int getLinesBefore() {
+            return linesBefore_;
+          }
+          /**
+           * <pre>
+           * Number of lines to show before the match (like grep -B).
+           * </pre>
+           *
+           * <code>optional int32 lines_before = 2;</code>
+           * @param value The linesBefore to set.
+           * @return This builder for chaining.
+           */
+          public Builder setLinesBefore(int value) {
+
+            linesBefore_ = value;
+            bitField0_ |= 0x00000002;
+            onChanged();
+            return this;
+          }
+          /**
+           * <pre>
+           * Number of lines to show before the match (like grep -B).
+           * </pre>
+           *
+           * <code>optional int32 lines_before = 2;</code>
+           * @return This builder for chaining.
+           */
+          public Builder clearLinesBefore() {
+            bitField0_ = (bitField0_ & ~0x00000002);
+            linesBefore_ = 0;
+            onChanged();
+            return this;
+          }
+
+          private int linesContext_ ;
+          /**
+           * <pre>
+           * Number of lines to show around the match (like grep -C).
+           * </pre>
+           *
+           * <code>optional int32 lines_context = 3;</code>
+           * @return Whether the linesContext field is set.
+           */
+          @java.lang.Override
+          public boolean hasLinesContext() {
+            return ((bitField0_ & 0x00000004) != 0);
+          }
+          /**
+           * <pre>
+           * Number of lines to show around the match (like grep -C).
+           * </pre>
+           *
+           * <code>optional int32 lines_context = 3;</code>
+           * @return The linesContext.
+           */
+          @java.lang.Override
+          public int getLinesContext() {
+            return linesContext_;
+          }
+          /**
+           * <pre>
+           * Number of lines to show around the match (like grep -C).
+           * </pre>
+           *
+           * <code>optional int32 lines_context = 3;</code>
+           * @param value The linesContext to set.
+           * @return This builder for chaining.
+           */
+          public Builder setLinesContext(int value) {
+
+            linesContext_ = value;
+            bitField0_ |= 0x00000004;
+            onChanged();
+            return this;
+          }
+          /**
+           * <pre>
+           * Number of lines to show around the match (like grep -C).
+           * </pre>
+           *
+           * <code>optional int32 lines_context = 3;</code>
+           * @return This builder for chaining.
+           */
+          public Builder clearLinesContext() {
+            bitField0_ = (bitField0_ & ~0x00000004);
+            linesContext_ = 0;
+            onChanged();
+            return this;
+          }
+
+          private java.lang.Object filter_ = "";
+          /**
+           * <pre>
+           * Pattern to filter results (like grep -E).
+           * </pre>
+           *
+           * <code>optional string filter = 4;</code>
+           * @return Whether the filter field is set.
+           */
+          public boolean hasFilter() {
+            return ((bitField0_ & 0x00000008) != 0);
+          }
+          /**
+           * <pre>
+           * Pattern to filter results (like grep -E).
+           * </pre>
+           *
+           * <code>optional string filter = 4;</code>
+           * @return The filter.
+           */
+          public java.lang.String getFilter() {
+            java.lang.Object ref = filter_;
+            if (!(ref instanceof java.lang.String)) {
+              com.google.protobuf.ByteString bs =
+                  (com.google.protobuf.ByteString) ref;
+              java.lang.String s = bs.toStringUtf8();
+              if (bs.isValidUtf8()) {
+                filter_ = s;
+              }
+              return s;
+            } else {
+              return (java.lang.String) ref;
+            }
+          }
+          /**
+           * <pre>
+           * Pattern to filter results (like grep -E).
+           * </pre>
+           *
+           * <code>optional string filter = 4;</code>
+           * @return The bytes for filter.
+           */
+          public com.google.protobuf.ByteString
+              getFilterBytes() {
+            java.lang.Object ref = filter_;
+            if (ref instanceof String) {
+              com.google.protobuf.ByteString b = 
+                  com.google.protobuf.ByteString.copyFromUtf8(
+                      (java.lang.String) ref);
+              filter_ = b;
+              return b;
+            } else {
+              return (com.google.protobuf.ByteString) ref;
+            }
+          }
+          /**
+           * <pre>
+           * Pattern to filter results (like grep -E).
+           * </pre>
+           *
+           * <code>optional string filter = 4;</code>
+           * @param value The filter to set.
+           * @return This builder for chaining.
+           */
+          public Builder setFilter(
+              java.lang.String value) {
+            if (value == null) { throw new NullPointerException(); }
+            filter_ = value;
+            bitField0_ |= 0x00000008;
+            onChanged();
+            return this;
+          }
+          /**
+           * <pre>
+           * Pattern to filter results (like grep -E).
+           * </pre>
+           *
+           * <code>optional string filter = 4;</code>
+           * @return This builder for chaining.
+           */
+          public Builder clearFilter() {
+            filter_ = getDefaultInstance().getFilter();
+            bitField0_ = (bitField0_ & ~0x00000008);
+            onChanged();
+            return this;
+          }
+          /**
+           * <pre>
+           * Pattern to filter results (like grep -E).
+           * </pre>
+           *
+           * <code>optional string filter = 4;</code>
+           * @param value The bytes for filter to set.
+           * @return This builder for chaining.
+           */
+          public Builder setFilterBytes(
+              com.google.protobuf.ByteString value) {
+            if (value == null) { throw new NullPointerException(); }
+            filter_ = value;
+            bitField0_ |= 0x00000008;
+            onChanged();
+            return this;
+          }
+
+          private java.lang.Object type_ = "";
+          /**
+           * <pre>
+           * Type to search, e.g., "all" kinds, function "call", etc.
+           * </pre>
+           *
+           * <code>optional string type = 5;</code>
+           * @return Whether the type field is set.
+           */
+          public boolean hasType() {
+            return ((bitField0_ & 0x00000010) != 0);
+          }
+          /**
+           * <pre>
+           * Type to search, e.g., "all" kinds, function "call", etc.
+           * </pre>
+           *
+           * <code>optional string type = 5;</code>
+           * @return The type.
+           */
+          public java.lang.String getType() {
+            java.lang.Object ref = type_;
+            if (!(ref instanceof java.lang.String)) {
+              com.google.protobuf.ByteString bs =
+                  (com.google.protobuf.ByteString) ref;
+              java.lang.String s = bs.toStringUtf8();
+              if (bs.isValidUtf8()) {
+                type_ = s;
+              }
+              return s;
+            } else {
+              return (java.lang.String) ref;
+            }
+          }
+          /**
+           * <pre>
+           * Type to search, e.g., "all" kinds, function "call", etc.
+           * </pre>
+           *
+           * <code>optional string type = 5;</code>
+           * @return The bytes for type.
+           */
+          public com.google.protobuf.ByteString
+              getTypeBytes() {
+            java.lang.Object ref = type_;
+            if (ref instanceof String) {
+              com.google.protobuf.ByteString b = 
+                  com.google.protobuf.ByteString.copyFromUtf8(
+                      (java.lang.String) ref);
+              type_ = b;
+              return b;
+            } else {
+              return (com.google.protobuf.ByteString) ref;
+            }
+          }
+          /**
+           * <pre>
+           * Type to search, e.g., "all" kinds, function "call", etc.
+           * </pre>
+           *
+           * <code>optional string type = 5;</code>
+           * @param value The type to set.
+           * @return This builder for chaining.
+           */
+          public Builder setType(
+              java.lang.String value) {
+            if (value == null) { throw new NullPointerException(); }
+            type_ = value;
+            bitField0_ |= 0x00000010;
+            onChanged();
+            return this;
+          }
+          /**
+           * <pre>
+           * Type to search, e.g., "all" kinds, function "call", etc.
+           * </pre>
+           *
+           * <code>optional string type = 5;</code>
+           * @return This builder for chaining.
+           */
+          public Builder clearType() {
+            type_ = getDefaultInstance().getType();
+            bitField0_ = (bitField0_ & ~0x00000010);
+            onChanged();
+            return this;
+          }
+          /**
+           * <pre>
+           * Type to search, e.g., "all" kinds, function "call", etc.
+           * </pre>
+           *
+           * <code>optional string type = 5;</code>
+           * @param value The bytes for type to set.
+           * @return This builder for chaining.
+           */
+          public Builder setTypeBytes(
+              com.google.protobuf.ByteString value) {
+            if (value == null) { throw new NullPointerException(); }
+            type_ = value;
+            bitField0_ |= 0x00000010;
+            onChanged();
+            return this;
+          }
+
+          private java.lang.Object includePattern_ = "";
+          /**
+           * <pre>
+           * Glob-like patterns to filter in results.
+           * </pre>
+           *
+           * <code>optional string include_pattern = 6;</code>
+           * @return Whether the includePattern field is set.
+           */
+          public boolean hasIncludePattern() {
+            return ((bitField0_ & 0x00000020) != 0);
+          }
+          /**
+           * <pre>
+           * Glob-like patterns to filter in results.
+           * </pre>
+           *
+           * <code>optional string include_pattern = 6;</code>
+           * @return The includePattern.
+           */
+          public java.lang.String getIncludePattern() {
+            java.lang.Object ref = includePattern_;
+            if (!(ref instanceof java.lang.String)) {
+              com.google.protobuf.ByteString bs =
+                  (com.google.protobuf.ByteString) ref;
+              java.lang.String s = bs.toStringUtf8();
+              if (bs.isValidUtf8()) {
+                includePattern_ = s;
+              }
+              return s;
+            } else {
+              return (java.lang.String) ref;
+            }
+          }
+          /**
+           * <pre>
+           * Glob-like patterns to filter in results.
+           * </pre>
+           *
+           * <code>optional string include_pattern = 6;</code>
+           * @return The bytes for includePattern.
+           */
+          public com.google.protobuf.ByteString
+              getIncludePatternBytes() {
+            java.lang.Object ref = includePattern_;
+            if (ref instanceof String) {
+              com.google.protobuf.ByteString b = 
+                  com.google.protobuf.ByteString.copyFromUtf8(
+                      (java.lang.String) ref);
+              includePattern_ = b;
+              return b;
+            } else {
+              return (com.google.protobuf.ByteString) ref;
+            }
+          }
+          /**
+           * <pre>
+           * Glob-like patterns to filter in results.
+           * </pre>
+           *
+           * <code>optional string include_pattern = 6;</code>
+           * @param value The includePattern to set.
+           * @return This builder for chaining.
+           */
+          public Builder setIncludePattern(
+              java.lang.String value) {
+            if (value == null) { throw new NullPointerException(); }
+            includePattern_ = value;
+            bitField0_ |= 0x00000020;
+            onChanged();
+            return this;
+          }
+          /**
+           * <pre>
+           * Glob-like patterns to filter in results.
+           * </pre>
+           *
+           * <code>optional string include_pattern = 6;</code>
+           * @return This builder for chaining.
+           */
+          public Builder clearIncludePattern() {
+            includePattern_ = getDefaultInstance().getIncludePattern();
+            bitField0_ = (bitField0_ & ~0x00000020);
+            onChanged();
+            return this;
+          }
+          /**
+           * <pre>
+           * Glob-like patterns to filter in results.
+           * </pre>
+           *
+           * <code>optional string include_pattern = 6;</code>
+           * @param value The bytes for includePattern to set.
+           * @return This builder for chaining.
+           */
+          public Builder setIncludePatternBytes(
+              com.google.protobuf.ByteString value) {
+            if (value == null) { throw new NullPointerException(); }
+            includePattern_ = value;
+            bitField0_ |= 0x00000020;
+            onChanged();
+            return this;
+          }
+
+          private java.lang.Object excludePattern_ = "";
+          /**
+           * <pre>
+           * Glob-like patterns to filter out results.
+           * </pre>
+           *
+           * <code>optional string exclude_pattern = 7;</code>
+           * @return Whether the excludePattern field is set.
+           */
+          public boolean hasExcludePattern() {
+            return ((bitField0_ & 0x00000040) != 0);
+          }
+          /**
+           * <pre>
+           * Glob-like patterns to filter out results.
+           * </pre>
+           *
+           * <code>optional string exclude_pattern = 7;</code>
+           * @return The excludePattern.
+           */
+          public java.lang.String getExcludePattern() {
+            java.lang.Object ref = excludePattern_;
+            if (!(ref instanceof java.lang.String)) {
+              com.google.protobuf.ByteString bs =
+                  (com.google.protobuf.ByteString) ref;
+              java.lang.String s = bs.toStringUtf8();
+              if (bs.isValidUtf8()) {
+                excludePattern_ = s;
+              }
+              return s;
+            } else {
+              return (java.lang.String) ref;
+            }
+          }
+          /**
+           * <pre>
+           * Glob-like patterns to filter out results.
+           * </pre>
+           *
+           * <code>optional string exclude_pattern = 7;</code>
+           * @return The bytes for excludePattern.
+           */
+          public com.google.protobuf.ByteString
+              getExcludePatternBytes() {
+            java.lang.Object ref = excludePattern_;
+            if (ref instanceof String) {
+              com.google.protobuf.ByteString b = 
+                  com.google.protobuf.ByteString.copyFromUtf8(
+                      (java.lang.String) ref);
+              excludePattern_ = b;
+              return b;
+            } else {
+              return (com.google.protobuf.ByteString) ref;
+            }
+          }
+          /**
+           * <pre>
+           * Glob-like patterns to filter out results.
+           * </pre>
+           *
+           * <code>optional string exclude_pattern = 7;</code>
+           * @param value The excludePattern to set.
+           * @return This builder for chaining.
+           */
+          public Builder setExcludePattern(
+              java.lang.String value) {
+            if (value == null) { throw new NullPointerException(); }
+            excludePattern_ = value;
+            bitField0_ |= 0x00000040;
+            onChanged();
+            return this;
+          }
+          /**
+           * <pre>
+           * Glob-like patterns to filter out results.
+           * </pre>
+           *
+           * <code>optional string exclude_pattern = 7;</code>
+           * @return This builder for chaining.
+           */
+          public Builder clearExcludePattern() {
+            excludePattern_ = getDefaultInstance().getExcludePattern();
+            bitField0_ = (bitField0_ & ~0x00000040);
+            onChanged();
+            return this;
+          }
+          /**
+           * <pre>
+           * Glob-like patterns to filter out results.
+           * </pre>
+           *
+           * <code>optional string exclude_pattern = 7;</code>
+           * @param value The bytes for excludePattern to set.
+           * @return This builder for chaining.
+           */
+          public Builder setExcludePatternBytes(
+              com.google.protobuf.ByteString value) {
+            if (value == null) { throw new NullPointerException(); }
+            excludePattern_ = value;
+            bitField0_ |= 0x00000040;
+            onChanged();
+            return this;
+          }
+          @java.lang.Override
+          public final Builder setUnknownFields(
+              final com.google.protobuf.UnknownFieldSet unknownFields) {
+            return super.setUnknownFields(unknownFields);
+          }
+
+          @java.lang.Override
+          public final Builder mergeUnknownFields(
+              final com.google.protobuf.UnknownFieldSet unknownFields) {
+            return super.mergeUnknownFields(unknownFields);
+          }
+
+
+          // @@protoc_insertion_point(builder_scope:android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchArguments)
+        }
+
+        // @@protoc_insertion_point(class_scope:android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchArguments)
+        private static final com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchArguments DEFAULT_INSTANCE;
+        static {
+          DEFAULT_INSTANCE = new com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchArguments();
+        }
+
+        public static com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchArguments getDefaultInstance() {
+          return DEFAULT_INSTANCE;
+        }
+
+        @java.lang.Deprecated public static final com.google.protobuf.Parser<SearchArguments>
+            PARSER = new com.google.protobuf.AbstractParser<SearchArguments>() {
+          @java.lang.Override
+          public SearchArguments parsePartialFrom(
+              com.google.protobuf.CodedInputStream input,
+              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+              throws com.google.protobuf.InvalidProtocolBufferException {
+            Builder builder = newBuilder();
+            try {
+              builder.mergeFrom(input, extensionRegistry);
+            } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+              throw e.setUnfinishedMessage(builder.buildPartial());
+            } catch (com.google.protobuf.UninitializedMessageException e) {
+              throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+            } catch (java.io.IOException e) {
+              throw new com.google.protobuf.InvalidProtocolBufferException(e)
+                  .setUnfinishedMessage(builder.buildPartial());
+            }
+            return builder.buildPartial();
+          }
+        };
+
+        public static com.google.protobuf.Parser<SearchArguments> parser() {
+          return PARSER;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Parser<SearchArguments> getParserForType() {
+          return PARSER;
+        }
+
+        @java.lang.Override
+        public com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchArguments getDefaultInstanceForType() {
+          return DEFAULT_INSTANCE;
+        }
+
+      }
+
+      public interface SearchResponseOrBuilder extends
+          // @@protoc_insertion_point(interface_extends:android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchResponse)
+          com.google.protobuf.MessageOrBuilder {
+
+        /**
+         * <pre>
+         * The number of characters in the final response.
+         * </pre>
+         *
+         * <code>optional int32 response_length = 1;</code>
+         * @return Whether the responseLength field is set.
+         */
+        boolean hasResponseLength();
+        /**
+         * <pre>
+         * The number of characters in the final response.
+         * </pre>
+         *
+         * <code>optional int32 response_length = 1;</code>
+         * @return The responseLength.
+         */
+        int getResponseLength();
+
+        /**
+         * <pre>
+         * The number of characters in the search results before path
+         * deduplication.
+         * </pre>
+         *
+         * <code>optional int32 raw_result_length = 2;</code>
+         * @return Whether the rawResultLength field is set.
+         */
+        boolean hasRawResultLength();
+        /**
+         * <pre>
+         * The number of characters in the search results before path
+         * deduplication.
+         * </pre>
+         *
+         * <code>optional int32 raw_result_length = 2;</code>
+         * @return The rawResultLength.
+         */
+        int getRawResultLength();
+      }
+      /**
+       * Protobuf type {@code android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchResponse}
+       */
+      public static final class SearchResponse extends
+          com.google.protobuf.GeneratedMessageV3 implements
+          // @@protoc_insertion_point(message_implements:android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchResponse)
+          SearchResponseOrBuilder {
+      private static final long serialVersionUID = 0L;
+        // Use SearchResponse.newBuilder() to construct.
+        private SearchResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+          super(builder);
+        }
+        private SearchResponse() {
+        }
+
+        @java.lang.Override
+        @SuppressWarnings({"unused"})
+        protected java.lang.Object newInstance(
+            UnusedPrivateParameter unused) {
+          return new SearchResponse();
+        }
+
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_GeminiTelemetryEvent_AgentEvent_ToolExecutionSpan_SearchResponse_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_GeminiTelemetryEvent_AgentEvent_ToolExecutionSpan_SearchResponse_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchResponse.class, com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchResponse.Builder.class);
+        }
+
+        private int bitField0_;
+        public static final int RESPONSE_LENGTH_FIELD_NUMBER = 1;
+        private int responseLength_ = 0;
+        /**
+         * <pre>
+         * The number of characters in the final response.
+         * </pre>
+         *
+         * <code>optional int32 response_length = 1;</code>
+         * @return Whether the responseLength field is set.
+         */
+        @java.lang.Override
+        public boolean hasResponseLength() {
+          return ((bitField0_ & 0x00000001) != 0);
+        }
+        /**
+         * <pre>
+         * The number of characters in the final response.
+         * </pre>
+         *
+         * <code>optional int32 response_length = 1;</code>
+         * @return The responseLength.
+         */
+        @java.lang.Override
+        public int getResponseLength() {
+          return responseLength_;
+        }
+
+        public static final int RAW_RESULT_LENGTH_FIELD_NUMBER = 2;
+        private int rawResultLength_ = 0;
+        /**
+         * <pre>
+         * The number of characters in the search results before path
+         * deduplication.
+         * </pre>
+         *
+         * <code>optional int32 raw_result_length = 2;</code>
+         * @return Whether the rawResultLength field is set.
+         */
+        @java.lang.Override
+        public boolean hasRawResultLength() {
+          return ((bitField0_ & 0x00000002) != 0);
+        }
+        /**
+         * <pre>
+         * The number of characters in the search results before path
+         * deduplication.
+         * </pre>
+         *
+         * <code>optional int32 raw_result_length = 2;</code>
+         * @return The rawResultLength.
+         */
+        @java.lang.Override
+        public int getRawResultLength() {
+          return rawResultLength_;
+        }
+
+        private byte memoizedIsInitialized = -1;
+        @java.lang.Override
+        public final boolean isInitialized() {
+          byte isInitialized = memoizedIsInitialized;
+          if (isInitialized == 1) return true;
+          if (isInitialized == 0) return false;
+
+          memoizedIsInitialized = 1;
+          return true;
+        }
+
+        @java.lang.Override
+        public void writeTo(com.google.protobuf.CodedOutputStream output)
+                            throws java.io.IOException {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            output.writeInt32(1, responseLength_);
+          }
+          if (((bitField0_ & 0x00000002) != 0)) {
+            output.writeInt32(2, rawResultLength_);
+          }
+          getUnknownFields().writeTo(output);
+        }
+
+        @java.lang.Override
+        public int getSerializedSize() {
+          int size = memoizedSize;
+          if (size != -1) return size;
+
+          size = 0;
+          if (((bitField0_ & 0x00000001) != 0)) {
+            size += com.google.protobuf.CodedOutputStream
+              .computeInt32Size(1, responseLength_);
+          }
+          if (((bitField0_ & 0x00000002) != 0)) {
+            size += com.google.protobuf.CodedOutputStream
+              .computeInt32Size(2, rawResultLength_);
+          }
+          size += getUnknownFields().getSerializedSize();
+          memoizedSize = size;
+          return size;
+        }
+
+        @java.lang.Override
+        public boolean equals(final java.lang.Object obj) {
+          if (obj == this) {
+           return true;
+          }
+          if (!(obj instanceof com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchResponse)) {
+            return super.equals(obj);
+          }
+          com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchResponse other = (com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchResponse) obj;
+
+          if (hasResponseLength() != other.hasResponseLength()) return false;
+          if (hasResponseLength()) {
+            if (getResponseLength()
+                != other.getResponseLength()) return false;
+          }
+          if (hasRawResultLength() != other.hasRawResultLength()) return false;
+          if (hasRawResultLength()) {
+            if (getRawResultLength()
+                != other.getRawResultLength()) return false;
+          }
+          if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+          return true;
+        }
+
+        @java.lang.Override
+        public int hashCode() {
+          if (memoizedHashCode != 0) {
+            return memoizedHashCode;
+          }
+          int hash = 41;
+          hash = (19 * hash) + getDescriptor().hashCode();
+          if (hasResponseLength()) {
+            hash = (37 * hash) + RESPONSE_LENGTH_FIELD_NUMBER;
+            hash = (53 * hash) + getResponseLength();
+          }
+          if (hasRawResultLength()) {
+            hash = (37 * hash) + RAW_RESULT_LENGTH_FIELD_NUMBER;
+            hash = (53 * hash) + getRawResultLength();
+          }
+          hash = (29 * hash) + getUnknownFields().hashCode();
+          memoizedHashCode = hash;
+          return hash;
+        }
+
+        public static com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchResponse parseFrom(
+            java.nio.ByteBuffer data)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return PARSER.parseFrom(data);
+        }
+        public static com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchResponse parseFrom(
+            java.nio.ByteBuffer data,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return PARSER.parseFrom(data, extensionRegistry);
+        }
+        public static com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchResponse parseFrom(
+            com.google.protobuf.ByteString data)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return PARSER.parseFrom(data);
+        }
+        public static com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchResponse parseFrom(
+            com.google.protobuf.ByteString data,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return PARSER.parseFrom(data, extensionRegistry);
+        }
+        public static com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchResponse parseFrom(byte[] data)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return PARSER.parseFrom(data);
+        }
+        public static com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchResponse parseFrom(
+            byte[] data,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return PARSER.parseFrom(data, extensionRegistry);
+        }
+        public static com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchResponse parseFrom(java.io.InputStream input)
+            throws java.io.IOException {
+          return com.google.protobuf.GeneratedMessageV3
+              .parseWithIOException(PARSER, input);
+        }
+        public static com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchResponse parseFrom(
+            java.io.InputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          return com.google.protobuf.GeneratedMessageV3
+              .parseWithIOException(PARSER, input, extensionRegistry);
+        }
+        public static com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchResponse parseDelimitedFrom(java.io.InputStream input)
+            throws java.io.IOException {
+          return com.google.protobuf.GeneratedMessageV3
+              .parseDelimitedWithIOException(PARSER, input);
+        }
+        public static com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchResponse parseDelimitedFrom(
+            java.io.InputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          return com.google.protobuf.GeneratedMessageV3
+              .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+        }
+        public static com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchResponse parseFrom(
+            com.google.protobuf.CodedInputStream input)
+            throws java.io.IOException {
+          return com.google.protobuf.GeneratedMessageV3
+              .parseWithIOException(PARSER, input);
+        }
+        public static com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchResponse parseFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          return com.google.protobuf.GeneratedMessageV3
+              .parseWithIOException(PARSER, input, extensionRegistry);
+        }
+
+        @java.lang.Override
+        public Builder newBuilderForType() { return newBuilder(); }
+        public static Builder newBuilder() {
+          return DEFAULT_INSTANCE.toBuilder();
+        }
+        public static Builder newBuilder(com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchResponse prototype) {
+          return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+        }
+        @java.lang.Override
+        public Builder toBuilder() {
+          return this == DEFAULT_INSTANCE
+              ? new Builder() : new Builder().mergeFrom(this);
+        }
+
+        @java.lang.Override
+        protected Builder newBuilderForType(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          Builder builder = new Builder(parent);
+          return builder;
+        }
+        /**
+         * Protobuf type {@code android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchResponse}
+         */
+        public static final class Builder extends
+            com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+            // @@protoc_insertion_point(builder_implements:android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchResponse)
+            com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchResponseOrBuilder {
+          public static final com.google.protobuf.Descriptors.Descriptor
+              getDescriptor() {
+            return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_GeminiTelemetryEvent_AgentEvent_ToolExecutionSpan_SearchResponse_descriptor;
+          }
+
+          @java.lang.Override
+          protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+              internalGetFieldAccessorTable() {
+            return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_GeminiTelemetryEvent_AgentEvent_ToolExecutionSpan_SearchResponse_fieldAccessorTable
+                .ensureFieldAccessorsInitialized(
+                    com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchResponse.class, com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchResponse.Builder.class);
+          }
+
+          // Construct using com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchResponse.newBuilder()
+          private Builder() {
+
+          }
+
+          private Builder(
+              com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+            super(parent);
+
+          }
+          @java.lang.Override
+          public Builder clear() {
+            super.clear();
+            bitField0_ = 0;
+            responseLength_ = 0;
+            rawResultLength_ = 0;
+            return this;
+          }
+
+          @java.lang.Override
+          public com.google.protobuf.Descriptors.Descriptor
+              getDescriptorForType() {
+            return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_GeminiTelemetryEvent_AgentEvent_ToolExecutionSpan_SearchResponse_descriptor;
+          }
+
+          @java.lang.Override
+          public com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchResponse getDefaultInstanceForType() {
+            return com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchResponse.getDefaultInstance();
+          }
+
+          @java.lang.Override
+          public com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchResponse build() {
+            com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchResponse result = buildPartial();
+            if (!result.isInitialized()) {
+              throw newUninitializedMessageException(result);
+            }
+            return result;
+          }
+
+          @java.lang.Override
+          public com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchResponse buildPartial() {
+            com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchResponse result = new com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchResponse(this);
+            if (bitField0_ != 0) { buildPartial0(result); }
+            onBuilt();
+            return result;
+          }
+
+          private void buildPartial0(com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchResponse result) {
+            int from_bitField0_ = bitField0_;
+            int to_bitField0_ = 0;
+            if (((from_bitField0_ & 0x00000001) != 0)) {
+              result.responseLength_ = responseLength_;
+              to_bitField0_ |= 0x00000001;
+            }
+            if (((from_bitField0_ & 0x00000002) != 0)) {
+              result.rawResultLength_ = rawResultLength_;
+              to_bitField0_ |= 0x00000002;
+            }
+            result.bitField0_ |= to_bitField0_;
+          }
+
+          @java.lang.Override
+          public Builder mergeFrom(com.google.protobuf.Message other) {
+            if (other instanceof com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchResponse) {
+              return mergeFrom((com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchResponse)other);
+            } else {
+              super.mergeFrom(other);
+              return this;
+            }
+          }
+
+          public Builder mergeFrom(com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchResponse other) {
+            if (other == com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchResponse.getDefaultInstance()) return this;
+            if (other.hasResponseLength()) {
+              setResponseLength(other.getResponseLength());
+            }
+            if (other.hasRawResultLength()) {
+              setRawResultLength(other.getRawResultLength());
+            }
+            this.mergeUnknownFields(other.getUnknownFields());
+            onChanged();
+            return this;
+          }
+
+          @java.lang.Override
+          public final boolean isInitialized() {
+            return true;
+          }
+
+          @java.lang.Override
+          public Builder mergeFrom(
+              com.google.protobuf.CodedInputStream input,
+              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+              throws java.io.IOException {
+            if (extensionRegistry == null) {
+              throw new java.lang.NullPointerException();
+            }
+            try {
+              boolean done = false;
+              while (!done) {
+                int tag = input.readTag();
+                switch (tag) {
+                  case 0:
+                    done = true;
+                    break;
+                  case 8: {
+                    responseLength_ = input.readInt32();
+                    bitField0_ |= 0x00000001;
+                    break;
+                  } // case 8
+                  case 16: {
+                    rawResultLength_ = input.readInt32();
+                    bitField0_ |= 0x00000002;
+                    break;
+                  } // case 16
+                  default: {
+                    if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                      done = true; // was an endgroup tag
+                    }
+                    break;
+                  } // default:
+                } // switch (tag)
+              } // while (!done)
+            } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+              throw e.unwrapIOException();
+            } finally {
+              onChanged();
+            } // finally
+            return this;
+          }
+          private int bitField0_;
+
+          private int responseLength_ ;
+          /**
+           * <pre>
+           * The number of characters in the final response.
+           * </pre>
+           *
+           * <code>optional int32 response_length = 1;</code>
+           * @return Whether the responseLength field is set.
+           */
+          @java.lang.Override
+          public boolean hasResponseLength() {
+            return ((bitField0_ & 0x00000001) != 0);
+          }
+          /**
+           * <pre>
+           * The number of characters in the final response.
+           * </pre>
+           *
+           * <code>optional int32 response_length = 1;</code>
+           * @return The responseLength.
+           */
+          @java.lang.Override
+          public int getResponseLength() {
+            return responseLength_;
+          }
+          /**
+           * <pre>
+           * The number of characters in the final response.
+           * </pre>
+           *
+           * <code>optional int32 response_length = 1;</code>
+           * @param value The responseLength to set.
+           * @return This builder for chaining.
+           */
+          public Builder setResponseLength(int value) {
+
+            responseLength_ = value;
+            bitField0_ |= 0x00000001;
+            onChanged();
+            return this;
+          }
+          /**
+           * <pre>
+           * The number of characters in the final response.
+           * </pre>
+           *
+           * <code>optional int32 response_length = 1;</code>
+           * @return This builder for chaining.
+           */
+          public Builder clearResponseLength() {
+            bitField0_ = (bitField0_ & ~0x00000001);
+            responseLength_ = 0;
+            onChanged();
+            return this;
+          }
+
+          private int rawResultLength_ ;
+          /**
+           * <pre>
+           * The number of characters in the search results before path
+           * deduplication.
+           * </pre>
+           *
+           * <code>optional int32 raw_result_length = 2;</code>
+           * @return Whether the rawResultLength field is set.
+           */
+          @java.lang.Override
+          public boolean hasRawResultLength() {
+            return ((bitField0_ & 0x00000002) != 0);
+          }
+          /**
+           * <pre>
+           * The number of characters in the search results before path
+           * deduplication.
+           * </pre>
+           *
+           * <code>optional int32 raw_result_length = 2;</code>
+           * @return The rawResultLength.
+           */
+          @java.lang.Override
+          public int getRawResultLength() {
+            return rawResultLength_;
+          }
+          /**
+           * <pre>
+           * The number of characters in the search results before path
+           * deduplication.
+           * </pre>
+           *
+           * <code>optional int32 raw_result_length = 2;</code>
+           * @param value The rawResultLength to set.
+           * @return This builder for chaining.
+           */
+          public Builder setRawResultLength(int value) {
+
+            rawResultLength_ = value;
+            bitField0_ |= 0x00000002;
+            onChanged();
+            return this;
+          }
+          /**
+           * <pre>
+           * The number of characters in the search results before path
+           * deduplication.
+           * </pre>
+           *
+           * <code>optional int32 raw_result_length = 2;</code>
+           * @return This builder for chaining.
+           */
+          public Builder clearRawResultLength() {
+            bitField0_ = (bitField0_ & ~0x00000002);
+            rawResultLength_ = 0;
+            onChanged();
+            return this;
+          }
+          @java.lang.Override
+          public final Builder setUnknownFields(
+              final com.google.protobuf.UnknownFieldSet unknownFields) {
+            return super.setUnknownFields(unknownFields);
+          }
+
+          @java.lang.Override
+          public final Builder mergeUnknownFields(
+              final com.google.protobuf.UnknownFieldSet unknownFields) {
+            return super.mergeUnknownFields(unknownFields);
+          }
+
+
+          // @@protoc_insertion_point(builder_scope:android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchResponse)
+        }
+
+        // @@protoc_insertion_point(class_scope:android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchResponse)
+        private static final com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchResponse DEFAULT_INSTANCE;
+        static {
+          DEFAULT_INSTANCE = new com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchResponse();
+        }
+
+        public static com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchResponse getDefaultInstance() {
+          return DEFAULT_INSTANCE;
+        }
+
+        @java.lang.Deprecated public static final com.google.protobuf.Parser<SearchResponse>
+            PARSER = new com.google.protobuf.AbstractParser<SearchResponse>() {
+          @java.lang.Override
+          public SearchResponse parsePartialFrom(
+              com.google.protobuf.CodedInputStream input,
+              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+              throws com.google.protobuf.InvalidProtocolBufferException {
+            Builder builder = newBuilder();
+            try {
+              builder.mergeFrom(input, extensionRegistry);
+            } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+              throw e.setUnfinishedMessage(builder.buildPartial());
+            } catch (com.google.protobuf.UninitializedMessageException e) {
+              throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+            } catch (java.io.IOException e) {
+              throw new com.google.protobuf.InvalidProtocolBufferException(e)
+                  .setUnfinishedMessage(builder.buildPartial());
+            }
+            return builder.buildPartial();
+          }
+        };
+
+        public static com.google.protobuf.Parser<SearchResponse> parser() {
+          return PARSER;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Parser<SearchResponse> getParserForType() {
+          return PARSER;
+        }
+
+        @java.lang.Override
+        public com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchResponse getDefaultInstanceForType() {
+          return DEFAULT_INSTANCE;
+        }
+
+      }
+
       public interface FindDeclarationToolCallDataOrBuilder extends
           // @@protoc_insertion_point(interface_extends:android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.FindDeclarationToolCallData)
           com.google.protobuf.MessageOrBuilder {
@@ -7695,6 +10901,60 @@ private static final long serialVersionUID = 0L;
          * @return The resultCount.
          */
         int getResultCount();
+
+        /**
+         * <pre>
+         * The search arguments used for find_declaration.
+         * </pre>
+         *
+         * <code>optional .android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchArguments search_arguments = 3;</code>
+         * @return Whether the searchArguments field is set.
+         */
+        boolean hasSearchArguments();
+        /**
+         * <pre>
+         * The search arguments used for find_declaration.
+         * </pre>
+         *
+         * <code>optional .android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchArguments search_arguments = 3;</code>
+         * @return The searchArguments.
+         */
+        com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchArguments getSearchArguments();
+        /**
+         * <pre>
+         * The search arguments used for find_declaration.
+         * </pre>
+         *
+         * <code>optional .android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchArguments search_arguments = 3;</code>
+         */
+        com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchArgumentsOrBuilder getSearchArgumentsOrBuilder();
+
+        /**
+         * <pre>
+         * The search response.
+         * </pre>
+         *
+         * <code>optional .android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchResponse response = 4;</code>
+         * @return Whether the response field is set.
+         */
+        boolean hasResponse();
+        /**
+         * <pre>
+         * The search response.
+         * </pre>
+         *
+         * <code>optional .android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchResponse response = 4;</code>
+         * @return The response.
+         */
+        com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchResponse getResponse();
+        /**
+         * <pre>
+         * The search response.
+         * </pre>
+         *
+         * <code>optional .android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchResponse response = 4;</code>
+         */
+        com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchResponseOrBuilder getResponseOrBuilder();
       }
       /**
        * Protobuf type {@code android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.FindDeclarationToolCallData}
@@ -7821,6 +11081,82 @@ private static final long serialVersionUID = 0L;
           return resultCount_;
         }
 
+        public static final int SEARCH_ARGUMENTS_FIELD_NUMBER = 3;
+        private com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchArguments searchArguments_;
+        /**
+         * <pre>
+         * The search arguments used for find_declaration.
+         * </pre>
+         *
+         * <code>optional .android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchArguments search_arguments = 3;</code>
+         * @return Whether the searchArguments field is set.
+         */
+        @java.lang.Override
+        public boolean hasSearchArguments() {
+          return ((bitField0_ & 0x00000004) != 0);
+        }
+        /**
+         * <pre>
+         * The search arguments used for find_declaration.
+         * </pre>
+         *
+         * <code>optional .android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchArguments search_arguments = 3;</code>
+         * @return The searchArguments.
+         */
+        @java.lang.Override
+        public com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchArguments getSearchArguments() {
+          return searchArguments_ == null ? com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchArguments.getDefaultInstance() : searchArguments_;
+        }
+        /**
+         * <pre>
+         * The search arguments used for find_declaration.
+         * </pre>
+         *
+         * <code>optional .android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchArguments search_arguments = 3;</code>
+         */
+        @java.lang.Override
+        public com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchArgumentsOrBuilder getSearchArgumentsOrBuilder() {
+          return searchArguments_ == null ? com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchArguments.getDefaultInstance() : searchArguments_;
+        }
+
+        public static final int RESPONSE_FIELD_NUMBER = 4;
+        private com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchResponse response_;
+        /**
+         * <pre>
+         * The search response.
+         * </pre>
+         *
+         * <code>optional .android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchResponse response = 4;</code>
+         * @return Whether the response field is set.
+         */
+        @java.lang.Override
+        public boolean hasResponse() {
+          return ((bitField0_ & 0x00000008) != 0);
+        }
+        /**
+         * <pre>
+         * The search response.
+         * </pre>
+         *
+         * <code>optional .android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchResponse response = 4;</code>
+         * @return The response.
+         */
+        @java.lang.Override
+        public com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchResponse getResponse() {
+          return response_ == null ? com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchResponse.getDefaultInstance() : response_;
+        }
+        /**
+         * <pre>
+         * The search response.
+         * </pre>
+         *
+         * <code>optional .android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchResponse response = 4;</code>
+         */
+        @java.lang.Override
+        public com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchResponseOrBuilder getResponseOrBuilder() {
+          return response_ == null ? com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchResponse.getDefaultInstance() : response_;
+        }
+
         private byte memoizedIsInitialized = -1;
         @java.lang.Override
         public final boolean isInitialized() {
@@ -7841,6 +11177,12 @@ private static final long serialVersionUID = 0L;
           if (((bitField0_ & 0x00000002) != 0)) {
             output.writeInt32(2, resultCount_);
           }
+          if (((bitField0_ & 0x00000004) != 0)) {
+            output.writeMessage(3, getSearchArguments());
+          }
+          if (((bitField0_ & 0x00000008) != 0)) {
+            output.writeMessage(4, getResponse());
+          }
           getUnknownFields().writeTo(output);
         }
 
@@ -7856,6 +11198,14 @@ private static final long serialVersionUID = 0L;
           if (((bitField0_ & 0x00000002) != 0)) {
             size += com.google.protobuf.CodedOutputStream
               .computeInt32Size(2, resultCount_);
+          }
+          if (((bitField0_ & 0x00000004) != 0)) {
+            size += com.google.protobuf.CodedOutputStream
+              .computeMessageSize(3, getSearchArguments());
+          }
+          if (((bitField0_ & 0x00000008) != 0)) {
+            size += com.google.protobuf.CodedOutputStream
+              .computeMessageSize(4, getResponse());
           }
           size += getUnknownFields().getSerializedSize();
           memoizedSize = size;
@@ -7882,6 +11232,16 @@ private static final long serialVersionUID = 0L;
             if (getResultCount()
                 != other.getResultCount()) return false;
           }
+          if (hasSearchArguments() != other.hasSearchArguments()) return false;
+          if (hasSearchArguments()) {
+            if (!getSearchArguments()
+                .equals(other.getSearchArguments())) return false;
+          }
+          if (hasResponse() != other.hasResponse()) return false;
+          if (hasResponse()) {
+            if (!getResponse()
+                .equals(other.getResponse())) return false;
+          }
           if (!getUnknownFields().equals(other.getUnknownFields())) return false;
           return true;
         }
@@ -7900,6 +11260,14 @@ private static final long serialVersionUID = 0L;
           if (hasResultCount()) {
             hash = (37 * hash) + RESULT_COUNT_FIELD_NUMBER;
             hash = (53 * hash) + getResultCount();
+          }
+          if (hasSearchArguments()) {
+            hash = (37 * hash) + SEARCH_ARGUMENTS_FIELD_NUMBER;
+            hash = (53 * hash) + getSearchArguments().hashCode();
+          }
+          if (hasResponse()) {
+            hash = (37 * hash) + RESPONSE_FIELD_NUMBER;
+            hash = (53 * hash) + getResponse().hashCode();
           }
           hash = (29 * hash) + getUnknownFields().hashCode();
           memoizedHashCode = hash;
@@ -8018,13 +11386,20 @@ private static final long serialVersionUID = 0L;
 
           // Construct using com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.FindDeclarationToolCallData.newBuilder()
           private Builder() {
-
+            maybeForceBuilderInitialization();
           }
 
           private Builder(
               com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
             super(parent);
-
+            maybeForceBuilderInitialization();
+          }
+          private void maybeForceBuilderInitialization() {
+            if (com.google.protobuf.GeneratedMessageV3
+                    .alwaysUseFieldBuilders) {
+              getSearchArgumentsFieldBuilder();
+              getResponseFieldBuilder();
+            }
           }
           @java.lang.Override
           public Builder clear() {
@@ -8032,6 +11407,16 @@ private static final long serialVersionUID = 0L;
             bitField0_ = 0;
             exception_ = "";
             resultCount_ = 0;
+            searchArguments_ = null;
+            if (searchArgumentsBuilder_ != null) {
+              searchArgumentsBuilder_.dispose();
+              searchArgumentsBuilder_ = null;
+            }
+            response_ = null;
+            if (responseBuilder_ != null) {
+              responseBuilder_.dispose();
+              responseBuilder_ = null;
+            }
             return this;
           }
 
@@ -8074,6 +11459,18 @@ private static final long serialVersionUID = 0L;
               result.resultCount_ = resultCount_;
               to_bitField0_ |= 0x00000002;
             }
+            if (((from_bitField0_ & 0x00000004) != 0)) {
+              result.searchArguments_ = searchArgumentsBuilder_ == null
+                  ? searchArguments_
+                  : searchArgumentsBuilder_.build();
+              to_bitField0_ |= 0x00000004;
+            }
+            if (((from_bitField0_ & 0x00000008) != 0)) {
+              result.response_ = responseBuilder_ == null
+                  ? response_
+                  : responseBuilder_.build();
+              to_bitField0_ |= 0x00000008;
+            }
             result.bitField0_ |= to_bitField0_;
           }
 
@@ -8096,6 +11493,12 @@ private static final long serialVersionUID = 0L;
             }
             if (other.hasResultCount()) {
               setResultCount(other.getResultCount());
+            }
+            if (other.hasSearchArguments()) {
+              mergeSearchArguments(other.getSearchArguments());
+            }
+            if (other.hasResponse()) {
+              mergeResponse(other.getResponse());
             }
             this.mergeUnknownFields(other.getUnknownFields());
             onChanged();
@@ -8133,6 +11536,20 @@ private static final long serialVersionUID = 0L;
                     bitField0_ |= 0x00000002;
                     break;
                   } // case 16
+                  case 26: {
+                    input.readMessage(
+                        getSearchArgumentsFieldBuilder().getBuilder(),
+                        extensionRegistry);
+                    bitField0_ |= 0x00000004;
+                    break;
+                  } // case 26
+                  case 34: {
+                    input.readMessage(
+                        getResponseFieldBuilder().getBuilder(),
+                        extensionRegistry);
+                    bitField0_ |= 0x00000008;
+                    break;
+                  } // case 34
                   default: {
                     if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                       done = true; // was an endgroup tag
@@ -8309,6 +11726,316 @@ private static final long serialVersionUID = 0L;
             onChanged();
             return this;
           }
+
+          private com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchArguments searchArguments_;
+          private com.google.protobuf.SingleFieldBuilderV3<
+              com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchArguments, com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchArguments.Builder, com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchArgumentsOrBuilder> searchArgumentsBuilder_;
+          /**
+           * <pre>
+           * The search arguments used for find_declaration.
+           * </pre>
+           *
+           * <code>optional .android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchArguments search_arguments = 3;</code>
+           * @return Whether the searchArguments field is set.
+           */
+          public boolean hasSearchArguments() {
+            return ((bitField0_ & 0x00000004) != 0);
+          }
+          /**
+           * <pre>
+           * The search arguments used for find_declaration.
+           * </pre>
+           *
+           * <code>optional .android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchArguments search_arguments = 3;</code>
+           * @return The searchArguments.
+           */
+          public com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchArguments getSearchArguments() {
+            if (searchArgumentsBuilder_ == null) {
+              return searchArguments_ == null ? com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchArguments.getDefaultInstance() : searchArguments_;
+            } else {
+              return searchArgumentsBuilder_.getMessage();
+            }
+          }
+          /**
+           * <pre>
+           * The search arguments used for find_declaration.
+           * </pre>
+           *
+           * <code>optional .android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchArguments search_arguments = 3;</code>
+           */
+          public Builder setSearchArguments(com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchArguments value) {
+            if (searchArgumentsBuilder_ == null) {
+              if (value == null) {
+                throw new NullPointerException();
+              }
+              searchArguments_ = value;
+            } else {
+              searchArgumentsBuilder_.setMessage(value);
+            }
+            bitField0_ |= 0x00000004;
+            onChanged();
+            return this;
+          }
+          /**
+           * <pre>
+           * The search arguments used for find_declaration.
+           * </pre>
+           *
+           * <code>optional .android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchArguments search_arguments = 3;</code>
+           */
+          public Builder setSearchArguments(
+              com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchArguments.Builder builderForValue) {
+            if (searchArgumentsBuilder_ == null) {
+              searchArguments_ = builderForValue.build();
+            } else {
+              searchArgumentsBuilder_.setMessage(builderForValue.build());
+            }
+            bitField0_ |= 0x00000004;
+            onChanged();
+            return this;
+          }
+          /**
+           * <pre>
+           * The search arguments used for find_declaration.
+           * </pre>
+           *
+           * <code>optional .android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchArguments search_arguments = 3;</code>
+           */
+          public Builder mergeSearchArguments(com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchArguments value) {
+            if (searchArgumentsBuilder_ == null) {
+              if (((bitField0_ & 0x00000004) != 0) &&
+                searchArguments_ != null &&
+                searchArguments_ != com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchArguments.getDefaultInstance()) {
+                getSearchArgumentsBuilder().mergeFrom(value);
+              } else {
+                searchArguments_ = value;
+              }
+            } else {
+              searchArgumentsBuilder_.mergeFrom(value);
+            }
+            bitField0_ |= 0x00000004;
+            onChanged();
+            return this;
+          }
+          /**
+           * <pre>
+           * The search arguments used for find_declaration.
+           * </pre>
+           *
+           * <code>optional .android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchArguments search_arguments = 3;</code>
+           */
+          public Builder clearSearchArguments() {
+            bitField0_ = (bitField0_ & ~0x00000004);
+            searchArguments_ = null;
+            if (searchArgumentsBuilder_ != null) {
+              searchArgumentsBuilder_.dispose();
+              searchArgumentsBuilder_ = null;
+            }
+            onChanged();
+            return this;
+          }
+          /**
+           * <pre>
+           * The search arguments used for find_declaration.
+           * </pre>
+           *
+           * <code>optional .android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchArguments search_arguments = 3;</code>
+           */
+          public com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchArguments.Builder getSearchArgumentsBuilder() {
+            bitField0_ |= 0x00000004;
+            onChanged();
+            return getSearchArgumentsFieldBuilder().getBuilder();
+          }
+          /**
+           * <pre>
+           * The search arguments used for find_declaration.
+           * </pre>
+           *
+           * <code>optional .android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchArguments search_arguments = 3;</code>
+           */
+          public com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchArgumentsOrBuilder getSearchArgumentsOrBuilder() {
+            if (searchArgumentsBuilder_ != null) {
+              return searchArgumentsBuilder_.getMessageOrBuilder();
+            } else {
+              return searchArguments_ == null ?
+                  com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchArguments.getDefaultInstance() : searchArguments_;
+            }
+          }
+          /**
+           * <pre>
+           * The search arguments used for find_declaration.
+           * </pre>
+           *
+           * <code>optional .android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchArguments search_arguments = 3;</code>
+           */
+          private com.google.protobuf.SingleFieldBuilderV3<
+              com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchArguments, com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchArguments.Builder, com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchArgumentsOrBuilder> 
+              getSearchArgumentsFieldBuilder() {
+            if (searchArgumentsBuilder_ == null) {
+              searchArgumentsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                  com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchArguments, com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchArguments.Builder, com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchArgumentsOrBuilder>(
+                      getSearchArguments(),
+                      getParentForChildren(),
+                      isClean());
+              searchArguments_ = null;
+            }
+            return searchArgumentsBuilder_;
+          }
+
+          private com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchResponse response_;
+          private com.google.protobuf.SingleFieldBuilderV3<
+              com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchResponse, com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchResponse.Builder, com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchResponseOrBuilder> responseBuilder_;
+          /**
+           * <pre>
+           * The search response.
+           * </pre>
+           *
+           * <code>optional .android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchResponse response = 4;</code>
+           * @return Whether the response field is set.
+           */
+          public boolean hasResponse() {
+            return ((bitField0_ & 0x00000008) != 0);
+          }
+          /**
+           * <pre>
+           * The search response.
+           * </pre>
+           *
+           * <code>optional .android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchResponse response = 4;</code>
+           * @return The response.
+           */
+          public com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchResponse getResponse() {
+            if (responseBuilder_ == null) {
+              return response_ == null ? com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchResponse.getDefaultInstance() : response_;
+            } else {
+              return responseBuilder_.getMessage();
+            }
+          }
+          /**
+           * <pre>
+           * The search response.
+           * </pre>
+           *
+           * <code>optional .android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchResponse response = 4;</code>
+           */
+          public Builder setResponse(com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchResponse value) {
+            if (responseBuilder_ == null) {
+              if (value == null) {
+                throw new NullPointerException();
+              }
+              response_ = value;
+            } else {
+              responseBuilder_.setMessage(value);
+            }
+            bitField0_ |= 0x00000008;
+            onChanged();
+            return this;
+          }
+          /**
+           * <pre>
+           * The search response.
+           * </pre>
+           *
+           * <code>optional .android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchResponse response = 4;</code>
+           */
+          public Builder setResponse(
+              com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchResponse.Builder builderForValue) {
+            if (responseBuilder_ == null) {
+              response_ = builderForValue.build();
+            } else {
+              responseBuilder_.setMessage(builderForValue.build());
+            }
+            bitField0_ |= 0x00000008;
+            onChanged();
+            return this;
+          }
+          /**
+           * <pre>
+           * The search response.
+           * </pre>
+           *
+           * <code>optional .android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchResponse response = 4;</code>
+           */
+          public Builder mergeResponse(com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchResponse value) {
+            if (responseBuilder_ == null) {
+              if (((bitField0_ & 0x00000008) != 0) &&
+                response_ != null &&
+                response_ != com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchResponse.getDefaultInstance()) {
+                getResponseBuilder().mergeFrom(value);
+              } else {
+                response_ = value;
+              }
+            } else {
+              responseBuilder_.mergeFrom(value);
+            }
+            bitField0_ |= 0x00000008;
+            onChanged();
+            return this;
+          }
+          /**
+           * <pre>
+           * The search response.
+           * </pre>
+           *
+           * <code>optional .android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchResponse response = 4;</code>
+           */
+          public Builder clearResponse() {
+            bitField0_ = (bitField0_ & ~0x00000008);
+            response_ = null;
+            if (responseBuilder_ != null) {
+              responseBuilder_.dispose();
+              responseBuilder_ = null;
+            }
+            onChanged();
+            return this;
+          }
+          /**
+           * <pre>
+           * The search response.
+           * </pre>
+           *
+           * <code>optional .android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchResponse response = 4;</code>
+           */
+          public com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchResponse.Builder getResponseBuilder() {
+            bitField0_ |= 0x00000008;
+            onChanged();
+            return getResponseFieldBuilder().getBuilder();
+          }
+          /**
+           * <pre>
+           * The search response.
+           * </pre>
+           *
+           * <code>optional .android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchResponse response = 4;</code>
+           */
+          public com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchResponseOrBuilder getResponseOrBuilder() {
+            if (responseBuilder_ != null) {
+              return responseBuilder_.getMessageOrBuilder();
+            } else {
+              return response_ == null ?
+                  com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchResponse.getDefaultInstance() : response_;
+            }
+          }
+          /**
+           * <pre>
+           * The search response.
+           * </pre>
+           *
+           * <code>optional .android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchResponse response = 4;</code>
+           */
+          private com.google.protobuf.SingleFieldBuilderV3<
+              com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchResponse, com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchResponse.Builder, com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchResponseOrBuilder> 
+              getResponseFieldBuilder() {
+            if (responseBuilder_ == null) {
+              responseBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                  com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchResponse, com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchResponse.Builder, com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchResponseOrBuilder>(
+                      getResponse(),
+                      getParentForChildren(),
+                      isClean());
+              response_ = null;
+            }
+            return responseBuilder_;
+          }
           @java.lang.Override
           public final Builder setUnknownFields(
               final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -8373,6 +12100,5624 @@ private static final long serialVersionUID = 0L;
 
       }
 
+      public interface FindFilesToolCallDataOrBuilder extends
+          // @@protoc_insertion_point(interface_extends:android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.FindFilesToolCallData)
+          com.google.protobuf.MessageOrBuilder {
+
+        /**
+         * <pre>
+         * Comma separated exceptions from the find_files tool call.
+         * We will use "IndexerInactive" to indicate the indexer is not active.
+         * </pre>
+         *
+         * <code>optional string exception = 1;</code>
+         * @return Whether the exception field is set.
+         */
+        boolean hasException();
+        /**
+         * <pre>
+         * Comma separated exceptions from the find_files tool call.
+         * We will use "IndexerInactive" to indicate the indexer is not active.
+         * </pre>
+         *
+         * <code>optional string exception = 1;</code>
+         * @return The exception.
+         */
+        java.lang.String getException();
+        /**
+         * <pre>
+         * Comma separated exceptions from the find_files tool call.
+         * We will use "IndexerInactive" to indicate the indexer is not active.
+         * </pre>
+         *
+         * <code>optional string exception = 1;</code>
+         * @return The bytes for exception.
+         */
+        com.google.protobuf.ByteString
+            getExceptionBytes();
+
+        /**
+         * <pre>
+         * The number of files in the combined file search result.
+         * </pre>
+         *
+         * <code>optional int32 combined_result_count = 2;</code>
+         * @return Whether the combinedResultCount field is set.
+         */
+        boolean hasCombinedResultCount();
+        /**
+         * <pre>
+         * The number of files in the combined file search result.
+         * </pre>
+         *
+         * <code>optional int32 combined_result_count = 2;</code>
+         * @return The combinedResultCount.
+         */
+        int getCombinedResultCount();
+
+        /**
+         * <pre>
+         * The number of files in the bm25 file search result.
+         * </pre>
+         *
+         * <code>optional int32 bm25_search_count = 3;</code>
+         * @return Whether the bm25SearchCount field is set.
+         */
+        boolean hasBm25SearchCount();
+        /**
+         * <pre>
+         * The number of files in the bm25 file search result.
+         * </pre>
+         *
+         * <code>optional int32 bm25_search_count = 3;</code>
+         * @return The bm25SearchCount.
+         */
+        int getBm25SearchCount();
+
+        /**
+         * <pre>
+         * The number of files in the original find_files search result.
+         * </pre>
+         *
+         * <code>optional int32 found_files_count = 4;</code>
+         * @return Whether the foundFilesCount field is set.
+         */
+        boolean hasFoundFilesCount();
+        /**
+         * <pre>
+         * The number of files in the original find_files search result.
+         * </pre>
+         *
+         * <code>optional int32 found_files_count = 4;</code>
+         * @return The foundFilesCount.
+         */
+        int getFoundFilesCount();
+
+        /**
+         * <pre>
+         * The number of docs (a doc is a file in the current RAG indexer) that
+         * are indexed.
+         * </pre>
+         *
+         * <code>optional int32 total_indexed_docs = 5;</code>
+         * @return Whether the totalIndexedDocs field is set.
+         */
+        boolean hasTotalIndexedDocs();
+        /**
+         * <pre>
+         * The number of docs (a doc is a file in the current RAG indexer) that
+         * are indexed.
+         * </pre>
+         *
+         * <code>optional int32 total_indexed_docs = 5;</code>
+         * @return The totalIndexedDocs.
+         */
+        int getTotalIndexedDocs();
+
+        /**
+         * <pre>
+         * The search response.
+         * </pre>
+         *
+         * <code>optional .android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchResponse response = 6;</code>
+         * @return Whether the response field is set.
+         */
+        boolean hasResponse();
+        /**
+         * <pre>
+         * The search response.
+         * </pre>
+         *
+         * <code>optional .android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchResponse response = 6;</code>
+         * @return The response.
+         */
+        com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchResponse getResponse();
+        /**
+         * <pre>
+         * The search response.
+         * </pre>
+         *
+         * <code>optional .android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchResponse response = 6;</code>
+         */
+        com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchResponseOrBuilder getResponseOrBuilder();
+      }
+      /**
+       * Protobuf type {@code android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.FindFilesToolCallData}
+       */
+      public static final class FindFilesToolCallData extends
+          com.google.protobuf.GeneratedMessageV3 implements
+          // @@protoc_insertion_point(message_implements:android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.FindFilesToolCallData)
+          FindFilesToolCallDataOrBuilder {
+      private static final long serialVersionUID = 0L;
+        // Use FindFilesToolCallData.newBuilder() to construct.
+        private FindFilesToolCallData(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+          super(builder);
+        }
+        private FindFilesToolCallData() {
+          exception_ = "";
+        }
+
+        @java.lang.Override
+        @SuppressWarnings({"unused"})
+        protected java.lang.Object newInstance(
+            UnusedPrivateParameter unused) {
+          return new FindFilesToolCallData();
+        }
+
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_GeminiTelemetryEvent_AgentEvent_ToolExecutionSpan_FindFilesToolCallData_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_GeminiTelemetryEvent_AgentEvent_ToolExecutionSpan_FindFilesToolCallData_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.FindFilesToolCallData.class, com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.FindFilesToolCallData.Builder.class);
+        }
+
+        private int bitField0_;
+        public static final int EXCEPTION_FIELD_NUMBER = 1;
+        @SuppressWarnings("serial")
+        private volatile java.lang.Object exception_ = "";
+        /**
+         * <pre>
+         * Comma separated exceptions from the find_files tool call.
+         * We will use "IndexerInactive" to indicate the indexer is not active.
+         * </pre>
+         *
+         * <code>optional string exception = 1;</code>
+         * @return Whether the exception field is set.
+         */
+        @java.lang.Override
+        public boolean hasException() {
+          return ((bitField0_ & 0x00000001) != 0);
+        }
+        /**
+         * <pre>
+         * Comma separated exceptions from the find_files tool call.
+         * We will use "IndexerInactive" to indicate the indexer is not active.
+         * </pre>
+         *
+         * <code>optional string exception = 1;</code>
+         * @return The exception.
+         */
+        @java.lang.Override
+        public java.lang.String getException() {
+          java.lang.Object ref = exception_;
+          if (ref instanceof java.lang.String) {
+            return (java.lang.String) ref;
+          } else {
+            com.google.protobuf.ByteString bs = 
+                (com.google.protobuf.ByteString) ref;
+            java.lang.String s = bs.toStringUtf8();
+            if (bs.isValidUtf8()) {
+              exception_ = s;
+            }
+            return s;
+          }
+        }
+        /**
+         * <pre>
+         * Comma separated exceptions from the find_files tool call.
+         * We will use "IndexerInactive" to indicate the indexer is not active.
+         * </pre>
+         *
+         * <code>optional string exception = 1;</code>
+         * @return The bytes for exception.
+         */
+        @java.lang.Override
+        public com.google.protobuf.ByteString
+            getExceptionBytes() {
+          java.lang.Object ref = exception_;
+          if (ref instanceof java.lang.String) {
+            com.google.protobuf.ByteString b = 
+                com.google.protobuf.ByteString.copyFromUtf8(
+                    (java.lang.String) ref);
+            exception_ = b;
+            return b;
+          } else {
+            return (com.google.protobuf.ByteString) ref;
+          }
+        }
+
+        public static final int COMBINED_RESULT_COUNT_FIELD_NUMBER = 2;
+        private int combinedResultCount_ = 0;
+        /**
+         * <pre>
+         * The number of files in the combined file search result.
+         * </pre>
+         *
+         * <code>optional int32 combined_result_count = 2;</code>
+         * @return Whether the combinedResultCount field is set.
+         */
+        @java.lang.Override
+        public boolean hasCombinedResultCount() {
+          return ((bitField0_ & 0x00000002) != 0);
+        }
+        /**
+         * <pre>
+         * The number of files in the combined file search result.
+         * </pre>
+         *
+         * <code>optional int32 combined_result_count = 2;</code>
+         * @return The combinedResultCount.
+         */
+        @java.lang.Override
+        public int getCombinedResultCount() {
+          return combinedResultCount_;
+        }
+
+        public static final int BM25_SEARCH_COUNT_FIELD_NUMBER = 3;
+        private int bm25SearchCount_ = 0;
+        /**
+         * <pre>
+         * The number of files in the bm25 file search result.
+         * </pre>
+         *
+         * <code>optional int32 bm25_search_count = 3;</code>
+         * @return Whether the bm25SearchCount field is set.
+         */
+        @java.lang.Override
+        public boolean hasBm25SearchCount() {
+          return ((bitField0_ & 0x00000004) != 0);
+        }
+        /**
+         * <pre>
+         * The number of files in the bm25 file search result.
+         * </pre>
+         *
+         * <code>optional int32 bm25_search_count = 3;</code>
+         * @return The bm25SearchCount.
+         */
+        @java.lang.Override
+        public int getBm25SearchCount() {
+          return bm25SearchCount_;
+        }
+
+        public static final int FOUND_FILES_COUNT_FIELD_NUMBER = 4;
+        private int foundFilesCount_ = 0;
+        /**
+         * <pre>
+         * The number of files in the original find_files search result.
+         * </pre>
+         *
+         * <code>optional int32 found_files_count = 4;</code>
+         * @return Whether the foundFilesCount field is set.
+         */
+        @java.lang.Override
+        public boolean hasFoundFilesCount() {
+          return ((bitField0_ & 0x00000008) != 0);
+        }
+        /**
+         * <pre>
+         * The number of files in the original find_files search result.
+         * </pre>
+         *
+         * <code>optional int32 found_files_count = 4;</code>
+         * @return The foundFilesCount.
+         */
+        @java.lang.Override
+        public int getFoundFilesCount() {
+          return foundFilesCount_;
+        }
+
+        public static final int TOTAL_INDEXED_DOCS_FIELD_NUMBER = 5;
+        private int totalIndexedDocs_ = 0;
+        /**
+         * <pre>
+         * The number of docs (a doc is a file in the current RAG indexer) that
+         * are indexed.
+         * </pre>
+         *
+         * <code>optional int32 total_indexed_docs = 5;</code>
+         * @return Whether the totalIndexedDocs field is set.
+         */
+        @java.lang.Override
+        public boolean hasTotalIndexedDocs() {
+          return ((bitField0_ & 0x00000010) != 0);
+        }
+        /**
+         * <pre>
+         * The number of docs (a doc is a file in the current RAG indexer) that
+         * are indexed.
+         * </pre>
+         *
+         * <code>optional int32 total_indexed_docs = 5;</code>
+         * @return The totalIndexedDocs.
+         */
+        @java.lang.Override
+        public int getTotalIndexedDocs() {
+          return totalIndexedDocs_;
+        }
+
+        public static final int RESPONSE_FIELD_NUMBER = 6;
+        private com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchResponse response_;
+        /**
+         * <pre>
+         * The search response.
+         * </pre>
+         *
+         * <code>optional .android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchResponse response = 6;</code>
+         * @return Whether the response field is set.
+         */
+        @java.lang.Override
+        public boolean hasResponse() {
+          return ((bitField0_ & 0x00000020) != 0);
+        }
+        /**
+         * <pre>
+         * The search response.
+         * </pre>
+         *
+         * <code>optional .android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchResponse response = 6;</code>
+         * @return The response.
+         */
+        @java.lang.Override
+        public com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchResponse getResponse() {
+          return response_ == null ? com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchResponse.getDefaultInstance() : response_;
+        }
+        /**
+         * <pre>
+         * The search response.
+         * </pre>
+         *
+         * <code>optional .android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchResponse response = 6;</code>
+         */
+        @java.lang.Override
+        public com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchResponseOrBuilder getResponseOrBuilder() {
+          return response_ == null ? com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchResponse.getDefaultInstance() : response_;
+        }
+
+        private byte memoizedIsInitialized = -1;
+        @java.lang.Override
+        public final boolean isInitialized() {
+          byte isInitialized = memoizedIsInitialized;
+          if (isInitialized == 1) return true;
+          if (isInitialized == 0) return false;
+
+          memoizedIsInitialized = 1;
+          return true;
+        }
+
+        @java.lang.Override
+        public void writeTo(com.google.protobuf.CodedOutputStream output)
+                            throws java.io.IOException {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            com.google.protobuf.GeneratedMessageV3.writeString(output, 1, exception_);
+          }
+          if (((bitField0_ & 0x00000002) != 0)) {
+            output.writeInt32(2, combinedResultCount_);
+          }
+          if (((bitField0_ & 0x00000004) != 0)) {
+            output.writeInt32(3, bm25SearchCount_);
+          }
+          if (((bitField0_ & 0x00000008) != 0)) {
+            output.writeInt32(4, foundFilesCount_);
+          }
+          if (((bitField0_ & 0x00000010) != 0)) {
+            output.writeInt32(5, totalIndexedDocs_);
+          }
+          if (((bitField0_ & 0x00000020) != 0)) {
+            output.writeMessage(6, getResponse());
+          }
+          getUnknownFields().writeTo(output);
+        }
+
+        @java.lang.Override
+        public int getSerializedSize() {
+          int size = memoizedSize;
+          if (size != -1) return size;
+
+          size = 0;
+          if (((bitField0_ & 0x00000001) != 0)) {
+            size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, exception_);
+          }
+          if (((bitField0_ & 0x00000002) != 0)) {
+            size += com.google.protobuf.CodedOutputStream
+              .computeInt32Size(2, combinedResultCount_);
+          }
+          if (((bitField0_ & 0x00000004) != 0)) {
+            size += com.google.protobuf.CodedOutputStream
+              .computeInt32Size(3, bm25SearchCount_);
+          }
+          if (((bitField0_ & 0x00000008) != 0)) {
+            size += com.google.protobuf.CodedOutputStream
+              .computeInt32Size(4, foundFilesCount_);
+          }
+          if (((bitField0_ & 0x00000010) != 0)) {
+            size += com.google.protobuf.CodedOutputStream
+              .computeInt32Size(5, totalIndexedDocs_);
+          }
+          if (((bitField0_ & 0x00000020) != 0)) {
+            size += com.google.protobuf.CodedOutputStream
+              .computeMessageSize(6, getResponse());
+          }
+          size += getUnknownFields().getSerializedSize();
+          memoizedSize = size;
+          return size;
+        }
+
+        @java.lang.Override
+        public boolean equals(final java.lang.Object obj) {
+          if (obj == this) {
+           return true;
+          }
+          if (!(obj instanceof com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.FindFilesToolCallData)) {
+            return super.equals(obj);
+          }
+          com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.FindFilesToolCallData other = (com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.FindFilesToolCallData) obj;
+
+          if (hasException() != other.hasException()) return false;
+          if (hasException()) {
+            if (!getException()
+                .equals(other.getException())) return false;
+          }
+          if (hasCombinedResultCount() != other.hasCombinedResultCount()) return false;
+          if (hasCombinedResultCount()) {
+            if (getCombinedResultCount()
+                != other.getCombinedResultCount()) return false;
+          }
+          if (hasBm25SearchCount() != other.hasBm25SearchCount()) return false;
+          if (hasBm25SearchCount()) {
+            if (getBm25SearchCount()
+                != other.getBm25SearchCount()) return false;
+          }
+          if (hasFoundFilesCount() != other.hasFoundFilesCount()) return false;
+          if (hasFoundFilesCount()) {
+            if (getFoundFilesCount()
+                != other.getFoundFilesCount()) return false;
+          }
+          if (hasTotalIndexedDocs() != other.hasTotalIndexedDocs()) return false;
+          if (hasTotalIndexedDocs()) {
+            if (getTotalIndexedDocs()
+                != other.getTotalIndexedDocs()) return false;
+          }
+          if (hasResponse() != other.hasResponse()) return false;
+          if (hasResponse()) {
+            if (!getResponse()
+                .equals(other.getResponse())) return false;
+          }
+          if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+          return true;
+        }
+
+        @java.lang.Override
+        public int hashCode() {
+          if (memoizedHashCode != 0) {
+            return memoizedHashCode;
+          }
+          int hash = 41;
+          hash = (19 * hash) + getDescriptor().hashCode();
+          if (hasException()) {
+            hash = (37 * hash) + EXCEPTION_FIELD_NUMBER;
+            hash = (53 * hash) + getException().hashCode();
+          }
+          if (hasCombinedResultCount()) {
+            hash = (37 * hash) + COMBINED_RESULT_COUNT_FIELD_NUMBER;
+            hash = (53 * hash) + getCombinedResultCount();
+          }
+          if (hasBm25SearchCount()) {
+            hash = (37 * hash) + BM25_SEARCH_COUNT_FIELD_NUMBER;
+            hash = (53 * hash) + getBm25SearchCount();
+          }
+          if (hasFoundFilesCount()) {
+            hash = (37 * hash) + FOUND_FILES_COUNT_FIELD_NUMBER;
+            hash = (53 * hash) + getFoundFilesCount();
+          }
+          if (hasTotalIndexedDocs()) {
+            hash = (37 * hash) + TOTAL_INDEXED_DOCS_FIELD_NUMBER;
+            hash = (53 * hash) + getTotalIndexedDocs();
+          }
+          if (hasResponse()) {
+            hash = (37 * hash) + RESPONSE_FIELD_NUMBER;
+            hash = (53 * hash) + getResponse().hashCode();
+          }
+          hash = (29 * hash) + getUnknownFields().hashCode();
+          memoizedHashCode = hash;
+          return hash;
+        }
+
+        public static com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.FindFilesToolCallData parseFrom(
+            java.nio.ByteBuffer data)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return PARSER.parseFrom(data);
+        }
+        public static com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.FindFilesToolCallData parseFrom(
+            java.nio.ByteBuffer data,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return PARSER.parseFrom(data, extensionRegistry);
+        }
+        public static com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.FindFilesToolCallData parseFrom(
+            com.google.protobuf.ByteString data)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return PARSER.parseFrom(data);
+        }
+        public static com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.FindFilesToolCallData parseFrom(
+            com.google.protobuf.ByteString data,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return PARSER.parseFrom(data, extensionRegistry);
+        }
+        public static com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.FindFilesToolCallData parseFrom(byte[] data)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return PARSER.parseFrom(data);
+        }
+        public static com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.FindFilesToolCallData parseFrom(
+            byte[] data,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return PARSER.parseFrom(data, extensionRegistry);
+        }
+        public static com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.FindFilesToolCallData parseFrom(java.io.InputStream input)
+            throws java.io.IOException {
+          return com.google.protobuf.GeneratedMessageV3
+              .parseWithIOException(PARSER, input);
+        }
+        public static com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.FindFilesToolCallData parseFrom(
+            java.io.InputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          return com.google.protobuf.GeneratedMessageV3
+              .parseWithIOException(PARSER, input, extensionRegistry);
+        }
+        public static com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.FindFilesToolCallData parseDelimitedFrom(java.io.InputStream input)
+            throws java.io.IOException {
+          return com.google.protobuf.GeneratedMessageV3
+              .parseDelimitedWithIOException(PARSER, input);
+        }
+        public static com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.FindFilesToolCallData parseDelimitedFrom(
+            java.io.InputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          return com.google.protobuf.GeneratedMessageV3
+              .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+        }
+        public static com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.FindFilesToolCallData parseFrom(
+            com.google.protobuf.CodedInputStream input)
+            throws java.io.IOException {
+          return com.google.protobuf.GeneratedMessageV3
+              .parseWithIOException(PARSER, input);
+        }
+        public static com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.FindFilesToolCallData parseFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          return com.google.protobuf.GeneratedMessageV3
+              .parseWithIOException(PARSER, input, extensionRegistry);
+        }
+
+        @java.lang.Override
+        public Builder newBuilderForType() { return newBuilder(); }
+        public static Builder newBuilder() {
+          return DEFAULT_INSTANCE.toBuilder();
+        }
+        public static Builder newBuilder(com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.FindFilesToolCallData prototype) {
+          return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+        }
+        @java.lang.Override
+        public Builder toBuilder() {
+          return this == DEFAULT_INSTANCE
+              ? new Builder() : new Builder().mergeFrom(this);
+        }
+
+        @java.lang.Override
+        protected Builder newBuilderForType(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          Builder builder = new Builder(parent);
+          return builder;
+        }
+        /**
+         * Protobuf type {@code android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.FindFilesToolCallData}
+         */
+        public static final class Builder extends
+            com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+            // @@protoc_insertion_point(builder_implements:android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.FindFilesToolCallData)
+            com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.FindFilesToolCallDataOrBuilder {
+          public static final com.google.protobuf.Descriptors.Descriptor
+              getDescriptor() {
+            return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_GeminiTelemetryEvent_AgentEvent_ToolExecutionSpan_FindFilesToolCallData_descriptor;
+          }
+
+          @java.lang.Override
+          protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+              internalGetFieldAccessorTable() {
+            return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_GeminiTelemetryEvent_AgentEvent_ToolExecutionSpan_FindFilesToolCallData_fieldAccessorTable
+                .ensureFieldAccessorsInitialized(
+                    com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.FindFilesToolCallData.class, com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.FindFilesToolCallData.Builder.class);
+          }
+
+          // Construct using com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.FindFilesToolCallData.newBuilder()
+          private Builder() {
+            maybeForceBuilderInitialization();
+          }
+
+          private Builder(
+              com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+            super(parent);
+            maybeForceBuilderInitialization();
+          }
+          private void maybeForceBuilderInitialization() {
+            if (com.google.protobuf.GeneratedMessageV3
+                    .alwaysUseFieldBuilders) {
+              getResponseFieldBuilder();
+            }
+          }
+          @java.lang.Override
+          public Builder clear() {
+            super.clear();
+            bitField0_ = 0;
+            exception_ = "";
+            combinedResultCount_ = 0;
+            bm25SearchCount_ = 0;
+            foundFilesCount_ = 0;
+            totalIndexedDocs_ = 0;
+            response_ = null;
+            if (responseBuilder_ != null) {
+              responseBuilder_.dispose();
+              responseBuilder_ = null;
+            }
+            return this;
+          }
+
+          @java.lang.Override
+          public com.google.protobuf.Descriptors.Descriptor
+              getDescriptorForType() {
+            return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_GeminiTelemetryEvent_AgentEvent_ToolExecutionSpan_FindFilesToolCallData_descriptor;
+          }
+
+          @java.lang.Override
+          public com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.FindFilesToolCallData getDefaultInstanceForType() {
+            return com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.FindFilesToolCallData.getDefaultInstance();
+          }
+
+          @java.lang.Override
+          public com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.FindFilesToolCallData build() {
+            com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.FindFilesToolCallData result = buildPartial();
+            if (!result.isInitialized()) {
+              throw newUninitializedMessageException(result);
+            }
+            return result;
+          }
+
+          @java.lang.Override
+          public com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.FindFilesToolCallData buildPartial() {
+            com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.FindFilesToolCallData result = new com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.FindFilesToolCallData(this);
+            if (bitField0_ != 0) { buildPartial0(result); }
+            onBuilt();
+            return result;
+          }
+
+          private void buildPartial0(com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.FindFilesToolCallData result) {
+            int from_bitField0_ = bitField0_;
+            int to_bitField0_ = 0;
+            if (((from_bitField0_ & 0x00000001) != 0)) {
+              result.exception_ = exception_;
+              to_bitField0_ |= 0x00000001;
+            }
+            if (((from_bitField0_ & 0x00000002) != 0)) {
+              result.combinedResultCount_ = combinedResultCount_;
+              to_bitField0_ |= 0x00000002;
+            }
+            if (((from_bitField0_ & 0x00000004) != 0)) {
+              result.bm25SearchCount_ = bm25SearchCount_;
+              to_bitField0_ |= 0x00000004;
+            }
+            if (((from_bitField0_ & 0x00000008) != 0)) {
+              result.foundFilesCount_ = foundFilesCount_;
+              to_bitField0_ |= 0x00000008;
+            }
+            if (((from_bitField0_ & 0x00000010) != 0)) {
+              result.totalIndexedDocs_ = totalIndexedDocs_;
+              to_bitField0_ |= 0x00000010;
+            }
+            if (((from_bitField0_ & 0x00000020) != 0)) {
+              result.response_ = responseBuilder_ == null
+                  ? response_
+                  : responseBuilder_.build();
+              to_bitField0_ |= 0x00000020;
+            }
+            result.bitField0_ |= to_bitField0_;
+          }
+
+          @java.lang.Override
+          public Builder mergeFrom(com.google.protobuf.Message other) {
+            if (other instanceof com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.FindFilesToolCallData) {
+              return mergeFrom((com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.FindFilesToolCallData)other);
+            } else {
+              super.mergeFrom(other);
+              return this;
+            }
+          }
+
+          public Builder mergeFrom(com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.FindFilesToolCallData other) {
+            if (other == com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.FindFilesToolCallData.getDefaultInstance()) return this;
+            if (other.hasException()) {
+              exception_ = other.exception_;
+              bitField0_ |= 0x00000001;
+              onChanged();
+            }
+            if (other.hasCombinedResultCount()) {
+              setCombinedResultCount(other.getCombinedResultCount());
+            }
+            if (other.hasBm25SearchCount()) {
+              setBm25SearchCount(other.getBm25SearchCount());
+            }
+            if (other.hasFoundFilesCount()) {
+              setFoundFilesCount(other.getFoundFilesCount());
+            }
+            if (other.hasTotalIndexedDocs()) {
+              setTotalIndexedDocs(other.getTotalIndexedDocs());
+            }
+            if (other.hasResponse()) {
+              mergeResponse(other.getResponse());
+            }
+            this.mergeUnknownFields(other.getUnknownFields());
+            onChanged();
+            return this;
+          }
+
+          @java.lang.Override
+          public final boolean isInitialized() {
+            return true;
+          }
+
+          @java.lang.Override
+          public Builder mergeFrom(
+              com.google.protobuf.CodedInputStream input,
+              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+              throws java.io.IOException {
+            if (extensionRegistry == null) {
+              throw new java.lang.NullPointerException();
+            }
+            try {
+              boolean done = false;
+              while (!done) {
+                int tag = input.readTag();
+                switch (tag) {
+                  case 0:
+                    done = true;
+                    break;
+                  case 10: {
+                    exception_ = input.readBytes();
+                    bitField0_ |= 0x00000001;
+                    break;
+                  } // case 10
+                  case 16: {
+                    combinedResultCount_ = input.readInt32();
+                    bitField0_ |= 0x00000002;
+                    break;
+                  } // case 16
+                  case 24: {
+                    bm25SearchCount_ = input.readInt32();
+                    bitField0_ |= 0x00000004;
+                    break;
+                  } // case 24
+                  case 32: {
+                    foundFilesCount_ = input.readInt32();
+                    bitField0_ |= 0x00000008;
+                    break;
+                  } // case 32
+                  case 40: {
+                    totalIndexedDocs_ = input.readInt32();
+                    bitField0_ |= 0x00000010;
+                    break;
+                  } // case 40
+                  case 50: {
+                    input.readMessage(
+                        getResponseFieldBuilder().getBuilder(),
+                        extensionRegistry);
+                    bitField0_ |= 0x00000020;
+                    break;
+                  } // case 50
+                  default: {
+                    if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                      done = true; // was an endgroup tag
+                    }
+                    break;
+                  } // default:
+                } // switch (tag)
+              } // while (!done)
+            } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+              throw e.unwrapIOException();
+            } finally {
+              onChanged();
+            } // finally
+            return this;
+          }
+          private int bitField0_;
+
+          private java.lang.Object exception_ = "";
+          /**
+           * <pre>
+           * Comma separated exceptions from the find_files tool call.
+           * We will use "IndexerInactive" to indicate the indexer is not active.
+           * </pre>
+           *
+           * <code>optional string exception = 1;</code>
+           * @return Whether the exception field is set.
+           */
+          public boolean hasException() {
+            return ((bitField0_ & 0x00000001) != 0);
+          }
+          /**
+           * <pre>
+           * Comma separated exceptions from the find_files tool call.
+           * We will use "IndexerInactive" to indicate the indexer is not active.
+           * </pre>
+           *
+           * <code>optional string exception = 1;</code>
+           * @return The exception.
+           */
+          public java.lang.String getException() {
+            java.lang.Object ref = exception_;
+            if (!(ref instanceof java.lang.String)) {
+              com.google.protobuf.ByteString bs =
+                  (com.google.protobuf.ByteString) ref;
+              java.lang.String s = bs.toStringUtf8();
+              if (bs.isValidUtf8()) {
+                exception_ = s;
+              }
+              return s;
+            } else {
+              return (java.lang.String) ref;
+            }
+          }
+          /**
+           * <pre>
+           * Comma separated exceptions from the find_files tool call.
+           * We will use "IndexerInactive" to indicate the indexer is not active.
+           * </pre>
+           *
+           * <code>optional string exception = 1;</code>
+           * @return The bytes for exception.
+           */
+          public com.google.protobuf.ByteString
+              getExceptionBytes() {
+            java.lang.Object ref = exception_;
+            if (ref instanceof String) {
+              com.google.protobuf.ByteString b = 
+                  com.google.protobuf.ByteString.copyFromUtf8(
+                      (java.lang.String) ref);
+              exception_ = b;
+              return b;
+            } else {
+              return (com.google.protobuf.ByteString) ref;
+            }
+          }
+          /**
+           * <pre>
+           * Comma separated exceptions from the find_files tool call.
+           * We will use "IndexerInactive" to indicate the indexer is not active.
+           * </pre>
+           *
+           * <code>optional string exception = 1;</code>
+           * @param value The exception to set.
+           * @return This builder for chaining.
+           */
+          public Builder setException(
+              java.lang.String value) {
+            if (value == null) { throw new NullPointerException(); }
+            exception_ = value;
+            bitField0_ |= 0x00000001;
+            onChanged();
+            return this;
+          }
+          /**
+           * <pre>
+           * Comma separated exceptions from the find_files tool call.
+           * We will use "IndexerInactive" to indicate the indexer is not active.
+           * </pre>
+           *
+           * <code>optional string exception = 1;</code>
+           * @return This builder for chaining.
+           */
+          public Builder clearException() {
+            exception_ = getDefaultInstance().getException();
+            bitField0_ = (bitField0_ & ~0x00000001);
+            onChanged();
+            return this;
+          }
+          /**
+           * <pre>
+           * Comma separated exceptions from the find_files tool call.
+           * We will use "IndexerInactive" to indicate the indexer is not active.
+           * </pre>
+           *
+           * <code>optional string exception = 1;</code>
+           * @param value The bytes for exception to set.
+           * @return This builder for chaining.
+           */
+          public Builder setExceptionBytes(
+              com.google.protobuf.ByteString value) {
+            if (value == null) { throw new NullPointerException(); }
+            exception_ = value;
+            bitField0_ |= 0x00000001;
+            onChanged();
+            return this;
+          }
+
+          private int combinedResultCount_ ;
+          /**
+           * <pre>
+           * The number of files in the combined file search result.
+           * </pre>
+           *
+           * <code>optional int32 combined_result_count = 2;</code>
+           * @return Whether the combinedResultCount field is set.
+           */
+          @java.lang.Override
+          public boolean hasCombinedResultCount() {
+            return ((bitField0_ & 0x00000002) != 0);
+          }
+          /**
+           * <pre>
+           * The number of files in the combined file search result.
+           * </pre>
+           *
+           * <code>optional int32 combined_result_count = 2;</code>
+           * @return The combinedResultCount.
+           */
+          @java.lang.Override
+          public int getCombinedResultCount() {
+            return combinedResultCount_;
+          }
+          /**
+           * <pre>
+           * The number of files in the combined file search result.
+           * </pre>
+           *
+           * <code>optional int32 combined_result_count = 2;</code>
+           * @param value The combinedResultCount to set.
+           * @return This builder for chaining.
+           */
+          public Builder setCombinedResultCount(int value) {
+
+            combinedResultCount_ = value;
+            bitField0_ |= 0x00000002;
+            onChanged();
+            return this;
+          }
+          /**
+           * <pre>
+           * The number of files in the combined file search result.
+           * </pre>
+           *
+           * <code>optional int32 combined_result_count = 2;</code>
+           * @return This builder for chaining.
+           */
+          public Builder clearCombinedResultCount() {
+            bitField0_ = (bitField0_ & ~0x00000002);
+            combinedResultCount_ = 0;
+            onChanged();
+            return this;
+          }
+
+          private int bm25SearchCount_ ;
+          /**
+           * <pre>
+           * The number of files in the bm25 file search result.
+           * </pre>
+           *
+           * <code>optional int32 bm25_search_count = 3;</code>
+           * @return Whether the bm25SearchCount field is set.
+           */
+          @java.lang.Override
+          public boolean hasBm25SearchCount() {
+            return ((bitField0_ & 0x00000004) != 0);
+          }
+          /**
+           * <pre>
+           * The number of files in the bm25 file search result.
+           * </pre>
+           *
+           * <code>optional int32 bm25_search_count = 3;</code>
+           * @return The bm25SearchCount.
+           */
+          @java.lang.Override
+          public int getBm25SearchCount() {
+            return bm25SearchCount_;
+          }
+          /**
+           * <pre>
+           * The number of files in the bm25 file search result.
+           * </pre>
+           *
+           * <code>optional int32 bm25_search_count = 3;</code>
+           * @param value The bm25SearchCount to set.
+           * @return This builder for chaining.
+           */
+          public Builder setBm25SearchCount(int value) {
+
+            bm25SearchCount_ = value;
+            bitField0_ |= 0x00000004;
+            onChanged();
+            return this;
+          }
+          /**
+           * <pre>
+           * The number of files in the bm25 file search result.
+           * </pre>
+           *
+           * <code>optional int32 bm25_search_count = 3;</code>
+           * @return This builder for chaining.
+           */
+          public Builder clearBm25SearchCount() {
+            bitField0_ = (bitField0_ & ~0x00000004);
+            bm25SearchCount_ = 0;
+            onChanged();
+            return this;
+          }
+
+          private int foundFilesCount_ ;
+          /**
+           * <pre>
+           * The number of files in the original find_files search result.
+           * </pre>
+           *
+           * <code>optional int32 found_files_count = 4;</code>
+           * @return Whether the foundFilesCount field is set.
+           */
+          @java.lang.Override
+          public boolean hasFoundFilesCount() {
+            return ((bitField0_ & 0x00000008) != 0);
+          }
+          /**
+           * <pre>
+           * The number of files in the original find_files search result.
+           * </pre>
+           *
+           * <code>optional int32 found_files_count = 4;</code>
+           * @return The foundFilesCount.
+           */
+          @java.lang.Override
+          public int getFoundFilesCount() {
+            return foundFilesCount_;
+          }
+          /**
+           * <pre>
+           * The number of files in the original find_files search result.
+           * </pre>
+           *
+           * <code>optional int32 found_files_count = 4;</code>
+           * @param value The foundFilesCount to set.
+           * @return This builder for chaining.
+           */
+          public Builder setFoundFilesCount(int value) {
+
+            foundFilesCount_ = value;
+            bitField0_ |= 0x00000008;
+            onChanged();
+            return this;
+          }
+          /**
+           * <pre>
+           * The number of files in the original find_files search result.
+           * </pre>
+           *
+           * <code>optional int32 found_files_count = 4;</code>
+           * @return This builder for chaining.
+           */
+          public Builder clearFoundFilesCount() {
+            bitField0_ = (bitField0_ & ~0x00000008);
+            foundFilesCount_ = 0;
+            onChanged();
+            return this;
+          }
+
+          private int totalIndexedDocs_ ;
+          /**
+           * <pre>
+           * The number of docs (a doc is a file in the current RAG indexer) that
+           * are indexed.
+           * </pre>
+           *
+           * <code>optional int32 total_indexed_docs = 5;</code>
+           * @return Whether the totalIndexedDocs field is set.
+           */
+          @java.lang.Override
+          public boolean hasTotalIndexedDocs() {
+            return ((bitField0_ & 0x00000010) != 0);
+          }
+          /**
+           * <pre>
+           * The number of docs (a doc is a file in the current RAG indexer) that
+           * are indexed.
+           * </pre>
+           *
+           * <code>optional int32 total_indexed_docs = 5;</code>
+           * @return The totalIndexedDocs.
+           */
+          @java.lang.Override
+          public int getTotalIndexedDocs() {
+            return totalIndexedDocs_;
+          }
+          /**
+           * <pre>
+           * The number of docs (a doc is a file in the current RAG indexer) that
+           * are indexed.
+           * </pre>
+           *
+           * <code>optional int32 total_indexed_docs = 5;</code>
+           * @param value The totalIndexedDocs to set.
+           * @return This builder for chaining.
+           */
+          public Builder setTotalIndexedDocs(int value) {
+
+            totalIndexedDocs_ = value;
+            bitField0_ |= 0x00000010;
+            onChanged();
+            return this;
+          }
+          /**
+           * <pre>
+           * The number of docs (a doc is a file in the current RAG indexer) that
+           * are indexed.
+           * </pre>
+           *
+           * <code>optional int32 total_indexed_docs = 5;</code>
+           * @return This builder for chaining.
+           */
+          public Builder clearTotalIndexedDocs() {
+            bitField0_ = (bitField0_ & ~0x00000010);
+            totalIndexedDocs_ = 0;
+            onChanged();
+            return this;
+          }
+
+          private com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchResponse response_;
+          private com.google.protobuf.SingleFieldBuilderV3<
+              com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchResponse, com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchResponse.Builder, com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchResponseOrBuilder> responseBuilder_;
+          /**
+           * <pre>
+           * The search response.
+           * </pre>
+           *
+           * <code>optional .android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchResponse response = 6;</code>
+           * @return Whether the response field is set.
+           */
+          public boolean hasResponse() {
+            return ((bitField0_ & 0x00000020) != 0);
+          }
+          /**
+           * <pre>
+           * The search response.
+           * </pre>
+           *
+           * <code>optional .android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchResponse response = 6;</code>
+           * @return The response.
+           */
+          public com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchResponse getResponse() {
+            if (responseBuilder_ == null) {
+              return response_ == null ? com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchResponse.getDefaultInstance() : response_;
+            } else {
+              return responseBuilder_.getMessage();
+            }
+          }
+          /**
+           * <pre>
+           * The search response.
+           * </pre>
+           *
+           * <code>optional .android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchResponse response = 6;</code>
+           */
+          public Builder setResponse(com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchResponse value) {
+            if (responseBuilder_ == null) {
+              if (value == null) {
+                throw new NullPointerException();
+              }
+              response_ = value;
+            } else {
+              responseBuilder_.setMessage(value);
+            }
+            bitField0_ |= 0x00000020;
+            onChanged();
+            return this;
+          }
+          /**
+           * <pre>
+           * The search response.
+           * </pre>
+           *
+           * <code>optional .android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchResponse response = 6;</code>
+           */
+          public Builder setResponse(
+              com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchResponse.Builder builderForValue) {
+            if (responseBuilder_ == null) {
+              response_ = builderForValue.build();
+            } else {
+              responseBuilder_.setMessage(builderForValue.build());
+            }
+            bitField0_ |= 0x00000020;
+            onChanged();
+            return this;
+          }
+          /**
+           * <pre>
+           * The search response.
+           * </pre>
+           *
+           * <code>optional .android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchResponse response = 6;</code>
+           */
+          public Builder mergeResponse(com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchResponse value) {
+            if (responseBuilder_ == null) {
+              if (((bitField0_ & 0x00000020) != 0) &&
+                response_ != null &&
+                response_ != com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchResponse.getDefaultInstance()) {
+                getResponseBuilder().mergeFrom(value);
+              } else {
+                response_ = value;
+              }
+            } else {
+              responseBuilder_.mergeFrom(value);
+            }
+            bitField0_ |= 0x00000020;
+            onChanged();
+            return this;
+          }
+          /**
+           * <pre>
+           * The search response.
+           * </pre>
+           *
+           * <code>optional .android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchResponse response = 6;</code>
+           */
+          public Builder clearResponse() {
+            bitField0_ = (bitField0_ & ~0x00000020);
+            response_ = null;
+            if (responseBuilder_ != null) {
+              responseBuilder_.dispose();
+              responseBuilder_ = null;
+            }
+            onChanged();
+            return this;
+          }
+          /**
+           * <pre>
+           * The search response.
+           * </pre>
+           *
+           * <code>optional .android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchResponse response = 6;</code>
+           */
+          public com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchResponse.Builder getResponseBuilder() {
+            bitField0_ |= 0x00000020;
+            onChanged();
+            return getResponseFieldBuilder().getBuilder();
+          }
+          /**
+           * <pre>
+           * The search response.
+           * </pre>
+           *
+           * <code>optional .android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchResponse response = 6;</code>
+           */
+          public com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchResponseOrBuilder getResponseOrBuilder() {
+            if (responseBuilder_ != null) {
+              return responseBuilder_.getMessageOrBuilder();
+            } else {
+              return response_ == null ?
+                  com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchResponse.getDefaultInstance() : response_;
+            }
+          }
+          /**
+           * <pre>
+           * The search response.
+           * </pre>
+           *
+           * <code>optional .android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchResponse response = 6;</code>
+           */
+          private com.google.protobuf.SingleFieldBuilderV3<
+              com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchResponse, com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchResponse.Builder, com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchResponseOrBuilder> 
+              getResponseFieldBuilder() {
+            if (responseBuilder_ == null) {
+              responseBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                  com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchResponse, com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchResponse.Builder, com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchResponseOrBuilder>(
+                      getResponse(),
+                      getParentForChildren(),
+                      isClean());
+              response_ = null;
+            }
+            return responseBuilder_;
+          }
+          @java.lang.Override
+          public final Builder setUnknownFields(
+              final com.google.protobuf.UnknownFieldSet unknownFields) {
+            return super.setUnknownFields(unknownFields);
+          }
+
+          @java.lang.Override
+          public final Builder mergeUnknownFields(
+              final com.google.protobuf.UnknownFieldSet unknownFields) {
+            return super.mergeUnknownFields(unknownFields);
+          }
+
+
+          // @@protoc_insertion_point(builder_scope:android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.FindFilesToolCallData)
+        }
+
+        // @@protoc_insertion_point(class_scope:android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.FindFilesToolCallData)
+        private static final com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.FindFilesToolCallData DEFAULT_INSTANCE;
+        static {
+          DEFAULT_INSTANCE = new com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.FindFilesToolCallData();
+        }
+
+        public static com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.FindFilesToolCallData getDefaultInstance() {
+          return DEFAULT_INSTANCE;
+        }
+
+        @java.lang.Deprecated public static final com.google.protobuf.Parser<FindFilesToolCallData>
+            PARSER = new com.google.protobuf.AbstractParser<FindFilesToolCallData>() {
+          @java.lang.Override
+          public FindFilesToolCallData parsePartialFrom(
+              com.google.protobuf.CodedInputStream input,
+              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+              throws com.google.protobuf.InvalidProtocolBufferException {
+            Builder builder = newBuilder();
+            try {
+              builder.mergeFrom(input, extensionRegistry);
+            } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+              throw e.setUnfinishedMessage(builder.buildPartial());
+            } catch (com.google.protobuf.UninitializedMessageException e) {
+              throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+            } catch (java.io.IOException e) {
+              throw new com.google.protobuf.InvalidProtocolBufferException(e)
+                  .setUnfinishedMessage(builder.buildPartial());
+            }
+            return builder.buildPartial();
+          }
+        };
+
+        public static com.google.protobuf.Parser<FindFilesToolCallData> parser() {
+          return PARSER;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Parser<FindFilesToolCallData> getParserForType() {
+          return PARSER;
+        }
+
+        @java.lang.Override
+        public com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.FindFilesToolCallData getDefaultInstanceForType() {
+          return DEFAULT_INSTANCE;
+        }
+
+      }
+
+      public interface FindUsagesToolCallDataOrBuilder extends
+          // @@protoc_insertion_point(interface_extends:android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.FindUsagesToolCallData)
+          com.google.protobuf.MessageOrBuilder {
+
+        /**
+         * <pre>
+         * The exception the find_usages tool encountered.
+         * </pre>
+         *
+         * <code>optional string exception = 1;</code>
+         * @return Whether the exception field is set.
+         */
+        boolean hasException();
+        /**
+         * <pre>
+         * The exception the find_usages tool encountered.
+         * </pre>
+         *
+         * <code>optional string exception = 1;</code>
+         * @return The exception.
+         */
+        java.lang.String getException();
+        /**
+         * <pre>
+         * The exception the find_usages tool encountered.
+         * </pre>
+         *
+         * <code>optional string exception = 1;</code>
+         * @return The bytes for exception.
+         */
+        com.google.protobuf.ByteString
+            getExceptionBytes();
+
+        /**
+         * <pre>
+         * The number of files in the find_usages.
+         * </pre>
+         *
+         * <code>optional int32 result_count = 2;</code>
+         * @return Whether the resultCount field is set.
+         */
+        boolean hasResultCount();
+        /**
+         * <pre>
+         * The number of files in the find_usages.
+         * </pre>
+         *
+         * <code>optional int32 result_count = 2;</code>
+         * @return The resultCount.
+         */
+        int getResultCount();
+
+        /**
+         * <pre>
+         * The search arguments used for find_usages.
+         * </pre>
+         *
+         * <code>optional .android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchArguments search_arguments = 3;</code>
+         * @return Whether the searchArguments field is set.
+         */
+        boolean hasSearchArguments();
+        /**
+         * <pre>
+         * The search arguments used for find_usages.
+         * </pre>
+         *
+         * <code>optional .android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchArguments search_arguments = 3;</code>
+         * @return The searchArguments.
+         */
+        com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchArguments getSearchArguments();
+        /**
+         * <pre>
+         * The search arguments used for find_usages.
+         * </pre>
+         *
+         * <code>optional .android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchArguments search_arguments = 3;</code>
+         */
+        com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchArgumentsOrBuilder getSearchArgumentsOrBuilder();
+
+        /**
+         * <pre>
+         * The search response.
+         * </pre>
+         *
+         * <code>optional .android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchResponse response = 4;</code>
+         * @return Whether the response field is set.
+         */
+        boolean hasResponse();
+        /**
+         * <pre>
+         * The search response.
+         * </pre>
+         *
+         * <code>optional .android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchResponse response = 4;</code>
+         * @return The response.
+         */
+        com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchResponse getResponse();
+        /**
+         * <pre>
+         * The search response.
+         * </pre>
+         *
+         * <code>optional .android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchResponse response = 4;</code>
+         */
+        com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchResponseOrBuilder getResponseOrBuilder();
+      }
+      /**
+       * Protobuf type {@code android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.FindUsagesToolCallData}
+       */
+      public static final class FindUsagesToolCallData extends
+          com.google.protobuf.GeneratedMessageV3 implements
+          // @@protoc_insertion_point(message_implements:android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.FindUsagesToolCallData)
+          FindUsagesToolCallDataOrBuilder {
+      private static final long serialVersionUID = 0L;
+        // Use FindUsagesToolCallData.newBuilder() to construct.
+        private FindUsagesToolCallData(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+          super(builder);
+        }
+        private FindUsagesToolCallData() {
+          exception_ = "";
+        }
+
+        @java.lang.Override
+        @SuppressWarnings({"unused"})
+        protected java.lang.Object newInstance(
+            UnusedPrivateParameter unused) {
+          return new FindUsagesToolCallData();
+        }
+
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_GeminiTelemetryEvent_AgentEvent_ToolExecutionSpan_FindUsagesToolCallData_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_GeminiTelemetryEvent_AgentEvent_ToolExecutionSpan_FindUsagesToolCallData_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.FindUsagesToolCallData.class, com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.FindUsagesToolCallData.Builder.class);
+        }
+
+        private int bitField0_;
+        public static final int EXCEPTION_FIELD_NUMBER = 1;
+        @SuppressWarnings("serial")
+        private volatile java.lang.Object exception_ = "";
+        /**
+         * <pre>
+         * The exception the find_usages tool encountered.
+         * </pre>
+         *
+         * <code>optional string exception = 1;</code>
+         * @return Whether the exception field is set.
+         */
+        @java.lang.Override
+        public boolean hasException() {
+          return ((bitField0_ & 0x00000001) != 0);
+        }
+        /**
+         * <pre>
+         * The exception the find_usages tool encountered.
+         * </pre>
+         *
+         * <code>optional string exception = 1;</code>
+         * @return The exception.
+         */
+        @java.lang.Override
+        public java.lang.String getException() {
+          java.lang.Object ref = exception_;
+          if (ref instanceof java.lang.String) {
+            return (java.lang.String) ref;
+          } else {
+            com.google.protobuf.ByteString bs = 
+                (com.google.protobuf.ByteString) ref;
+            java.lang.String s = bs.toStringUtf8();
+            if (bs.isValidUtf8()) {
+              exception_ = s;
+            }
+            return s;
+          }
+        }
+        /**
+         * <pre>
+         * The exception the find_usages tool encountered.
+         * </pre>
+         *
+         * <code>optional string exception = 1;</code>
+         * @return The bytes for exception.
+         */
+        @java.lang.Override
+        public com.google.protobuf.ByteString
+            getExceptionBytes() {
+          java.lang.Object ref = exception_;
+          if (ref instanceof java.lang.String) {
+            com.google.protobuf.ByteString b = 
+                com.google.protobuf.ByteString.copyFromUtf8(
+                    (java.lang.String) ref);
+            exception_ = b;
+            return b;
+          } else {
+            return (com.google.protobuf.ByteString) ref;
+          }
+        }
+
+        public static final int RESULT_COUNT_FIELD_NUMBER = 2;
+        private int resultCount_ = 0;
+        /**
+         * <pre>
+         * The number of files in the find_usages.
+         * </pre>
+         *
+         * <code>optional int32 result_count = 2;</code>
+         * @return Whether the resultCount field is set.
+         */
+        @java.lang.Override
+        public boolean hasResultCount() {
+          return ((bitField0_ & 0x00000002) != 0);
+        }
+        /**
+         * <pre>
+         * The number of files in the find_usages.
+         * </pre>
+         *
+         * <code>optional int32 result_count = 2;</code>
+         * @return The resultCount.
+         */
+        @java.lang.Override
+        public int getResultCount() {
+          return resultCount_;
+        }
+
+        public static final int SEARCH_ARGUMENTS_FIELD_NUMBER = 3;
+        private com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchArguments searchArguments_;
+        /**
+         * <pre>
+         * The search arguments used for find_usages.
+         * </pre>
+         *
+         * <code>optional .android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchArguments search_arguments = 3;</code>
+         * @return Whether the searchArguments field is set.
+         */
+        @java.lang.Override
+        public boolean hasSearchArguments() {
+          return ((bitField0_ & 0x00000004) != 0);
+        }
+        /**
+         * <pre>
+         * The search arguments used for find_usages.
+         * </pre>
+         *
+         * <code>optional .android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchArguments search_arguments = 3;</code>
+         * @return The searchArguments.
+         */
+        @java.lang.Override
+        public com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchArguments getSearchArguments() {
+          return searchArguments_ == null ? com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchArguments.getDefaultInstance() : searchArguments_;
+        }
+        /**
+         * <pre>
+         * The search arguments used for find_usages.
+         * </pre>
+         *
+         * <code>optional .android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchArguments search_arguments = 3;</code>
+         */
+        @java.lang.Override
+        public com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchArgumentsOrBuilder getSearchArgumentsOrBuilder() {
+          return searchArguments_ == null ? com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchArguments.getDefaultInstance() : searchArguments_;
+        }
+
+        public static final int RESPONSE_FIELD_NUMBER = 4;
+        private com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchResponse response_;
+        /**
+         * <pre>
+         * The search response.
+         * </pre>
+         *
+         * <code>optional .android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchResponse response = 4;</code>
+         * @return Whether the response field is set.
+         */
+        @java.lang.Override
+        public boolean hasResponse() {
+          return ((bitField0_ & 0x00000008) != 0);
+        }
+        /**
+         * <pre>
+         * The search response.
+         * </pre>
+         *
+         * <code>optional .android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchResponse response = 4;</code>
+         * @return The response.
+         */
+        @java.lang.Override
+        public com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchResponse getResponse() {
+          return response_ == null ? com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchResponse.getDefaultInstance() : response_;
+        }
+        /**
+         * <pre>
+         * The search response.
+         * </pre>
+         *
+         * <code>optional .android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchResponse response = 4;</code>
+         */
+        @java.lang.Override
+        public com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchResponseOrBuilder getResponseOrBuilder() {
+          return response_ == null ? com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchResponse.getDefaultInstance() : response_;
+        }
+
+        private byte memoizedIsInitialized = -1;
+        @java.lang.Override
+        public final boolean isInitialized() {
+          byte isInitialized = memoizedIsInitialized;
+          if (isInitialized == 1) return true;
+          if (isInitialized == 0) return false;
+
+          memoizedIsInitialized = 1;
+          return true;
+        }
+
+        @java.lang.Override
+        public void writeTo(com.google.protobuf.CodedOutputStream output)
+                            throws java.io.IOException {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            com.google.protobuf.GeneratedMessageV3.writeString(output, 1, exception_);
+          }
+          if (((bitField0_ & 0x00000002) != 0)) {
+            output.writeInt32(2, resultCount_);
+          }
+          if (((bitField0_ & 0x00000004) != 0)) {
+            output.writeMessage(3, getSearchArguments());
+          }
+          if (((bitField0_ & 0x00000008) != 0)) {
+            output.writeMessage(4, getResponse());
+          }
+          getUnknownFields().writeTo(output);
+        }
+
+        @java.lang.Override
+        public int getSerializedSize() {
+          int size = memoizedSize;
+          if (size != -1) return size;
+
+          size = 0;
+          if (((bitField0_ & 0x00000001) != 0)) {
+            size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, exception_);
+          }
+          if (((bitField0_ & 0x00000002) != 0)) {
+            size += com.google.protobuf.CodedOutputStream
+              .computeInt32Size(2, resultCount_);
+          }
+          if (((bitField0_ & 0x00000004) != 0)) {
+            size += com.google.protobuf.CodedOutputStream
+              .computeMessageSize(3, getSearchArguments());
+          }
+          if (((bitField0_ & 0x00000008) != 0)) {
+            size += com.google.protobuf.CodedOutputStream
+              .computeMessageSize(4, getResponse());
+          }
+          size += getUnknownFields().getSerializedSize();
+          memoizedSize = size;
+          return size;
+        }
+
+        @java.lang.Override
+        public boolean equals(final java.lang.Object obj) {
+          if (obj == this) {
+           return true;
+          }
+          if (!(obj instanceof com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.FindUsagesToolCallData)) {
+            return super.equals(obj);
+          }
+          com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.FindUsagesToolCallData other = (com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.FindUsagesToolCallData) obj;
+
+          if (hasException() != other.hasException()) return false;
+          if (hasException()) {
+            if (!getException()
+                .equals(other.getException())) return false;
+          }
+          if (hasResultCount() != other.hasResultCount()) return false;
+          if (hasResultCount()) {
+            if (getResultCount()
+                != other.getResultCount()) return false;
+          }
+          if (hasSearchArguments() != other.hasSearchArguments()) return false;
+          if (hasSearchArguments()) {
+            if (!getSearchArguments()
+                .equals(other.getSearchArguments())) return false;
+          }
+          if (hasResponse() != other.hasResponse()) return false;
+          if (hasResponse()) {
+            if (!getResponse()
+                .equals(other.getResponse())) return false;
+          }
+          if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+          return true;
+        }
+
+        @java.lang.Override
+        public int hashCode() {
+          if (memoizedHashCode != 0) {
+            return memoizedHashCode;
+          }
+          int hash = 41;
+          hash = (19 * hash) + getDescriptor().hashCode();
+          if (hasException()) {
+            hash = (37 * hash) + EXCEPTION_FIELD_NUMBER;
+            hash = (53 * hash) + getException().hashCode();
+          }
+          if (hasResultCount()) {
+            hash = (37 * hash) + RESULT_COUNT_FIELD_NUMBER;
+            hash = (53 * hash) + getResultCount();
+          }
+          if (hasSearchArguments()) {
+            hash = (37 * hash) + SEARCH_ARGUMENTS_FIELD_NUMBER;
+            hash = (53 * hash) + getSearchArguments().hashCode();
+          }
+          if (hasResponse()) {
+            hash = (37 * hash) + RESPONSE_FIELD_NUMBER;
+            hash = (53 * hash) + getResponse().hashCode();
+          }
+          hash = (29 * hash) + getUnknownFields().hashCode();
+          memoizedHashCode = hash;
+          return hash;
+        }
+
+        public static com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.FindUsagesToolCallData parseFrom(
+            java.nio.ByteBuffer data)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return PARSER.parseFrom(data);
+        }
+        public static com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.FindUsagesToolCallData parseFrom(
+            java.nio.ByteBuffer data,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return PARSER.parseFrom(data, extensionRegistry);
+        }
+        public static com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.FindUsagesToolCallData parseFrom(
+            com.google.protobuf.ByteString data)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return PARSER.parseFrom(data);
+        }
+        public static com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.FindUsagesToolCallData parseFrom(
+            com.google.protobuf.ByteString data,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return PARSER.parseFrom(data, extensionRegistry);
+        }
+        public static com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.FindUsagesToolCallData parseFrom(byte[] data)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return PARSER.parseFrom(data);
+        }
+        public static com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.FindUsagesToolCallData parseFrom(
+            byte[] data,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return PARSER.parseFrom(data, extensionRegistry);
+        }
+        public static com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.FindUsagesToolCallData parseFrom(java.io.InputStream input)
+            throws java.io.IOException {
+          return com.google.protobuf.GeneratedMessageV3
+              .parseWithIOException(PARSER, input);
+        }
+        public static com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.FindUsagesToolCallData parseFrom(
+            java.io.InputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          return com.google.protobuf.GeneratedMessageV3
+              .parseWithIOException(PARSER, input, extensionRegistry);
+        }
+        public static com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.FindUsagesToolCallData parseDelimitedFrom(java.io.InputStream input)
+            throws java.io.IOException {
+          return com.google.protobuf.GeneratedMessageV3
+              .parseDelimitedWithIOException(PARSER, input);
+        }
+        public static com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.FindUsagesToolCallData parseDelimitedFrom(
+            java.io.InputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          return com.google.protobuf.GeneratedMessageV3
+              .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+        }
+        public static com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.FindUsagesToolCallData parseFrom(
+            com.google.protobuf.CodedInputStream input)
+            throws java.io.IOException {
+          return com.google.protobuf.GeneratedMessageV3
+              .parseWithIOException(PARSER, input);
+        }
+        public static com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.FindUsagesToolCallData parseFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          return com.google.protobuf.GeneratedMessageV3
+              .parseWithIOException(PARSER, input, extensionRegistry);
+        }
+
+        @java.lang.Override
+        public Builder newBuilderForType() { return newBuilder(); }
+        public static Builder newBuilder() {
+          return DEFAULT_INSTANCE.toBuilder();
+        }
+        public static Builder newBuilder(com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.FindUsagesToolCallData prototype) {
+          return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+        }
+        @java.lang.Override
+        public Builder toBuilder() {
+          return this == DEFAULT_INSTANCE
+              ? new Builder() : new Builder().mergeFrom(this);
+        }
+
+        @java.lang.Override
+        protected Builder newBuilderForType(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          Builder builder = new Builder(parent);
+          return builder;
+        }
+        /**
+         * Protobuf type {@code android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.FindUsagesToolCallData}
+         */
+        public static final class Builder extends
+            com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+            // @@protoc_insertion_point(builder_implements:android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.FindUsagesToolCallData)
+            com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.FindUsagesToolCallDataOrBuilder {
+          public static final com.google.protobuf.Descriptors.Descriptor
+              getDescriptor() {
+            return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_GeminiTelemetryEvent_AgentEvent_ToolExecutionSpan_FindUsagesToolCallData_descriptor;
+          }
+
+          @java.lang.Override
+          protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+              internalGetFieldAccessorTable() {
+            return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_GeminiTelemetryEvent_AgentEvent_ToolExecutionSpan_FindUsagesToolCallData_fieldAccessorTable
+                .ensureFieldAccessorsInitialized(
+                    com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.FindUsagesToolCallData.class, com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.FindUsagesToolCallData.Builder.class);
+          }
+
+          // Construct using com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.FindUsagesToolCallData.newBuilder()
+          private Builder() {
+            maybeForceBuilderInitialization();
+          }
+
+          private Builder(
+              com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+            super(parent);
+            maybeForceBuilderInitialization();
+          }
+          private void maybeForceBuilderInitialization() {
+            if (com.google.protobuf.GeneratedMessageV3
+                    .alwaysUseFieldBuilders) {
+              getSearchArgumentsFieldBuilder();
+              getResponseFieldBuilder();
+            }
+          }
+          @java.lang.Override
+          public Builder clear() {
+            super.clear();
+            bitField0_ = 0;
+            exception_ = "";
+            resultCount_ = 0;
+            searchArguments_ = null;
+            if (searchArgumentsBuilder_ != null) {
+              searchArgumentsBuilder_.dispose();
+              searchArgumentsBuilder_ = null;
+            }
+            response_ = null;
+            if (responseBuilder_ != null) {
+              responseBuilder_.dispose();
+              responseBuilder_ = null;
+            }
+            return this;
+          }
+
+          @java.lang.Override
+          public com.google.protobuf.Descriptors.Descriptor
+              getDescriptorForType() {
+            return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_GeminiTelemetryEvent_AgentEvent_ToolExecutionSpan_FindUsagesToolCallData_descriptor;
+          }
+
+          @java.lang.Override
+          public com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.FindUsagesToolCallData getDefaultInstanceForType() {
+            return com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.FindUsagesToolCallData.getDefaultInstance();
+          }
+
+          @java.lang.Override
+          public com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.FindUsagesToolCallData build() {
+            com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.FindUsagesToolCallData result = buildPartial();
+            if (!result.isInitialized()) {
+              throw newUninitializedMessageException(result);
+            }
+            return result;
+          }
+
+          @java.lang.Override
+          public com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.FindUsagesToolCallData buildPartial() {
+            com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.FindUsagesToolCallData result = new com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.FindUsagesToolCallData(this);
+            if (bitField0_ != 0) { buildPartial0(result); }
+            onBuilt();
+            return result;
+          }
+
+          private void buildPartial0(com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.FindUsagesToolCallData result) {
+            int from_bitField0_ = bitField0_;
+            int to_bitField0_ = 0;
+            if (((from_bitField0_ & 0x00000001) != 0)) {
+              result.exception_ = exception_;
+              to_bitField0_ |= 0x00000001;
+            }
+            if (((from_bitField0_ & 0x00000002) != 0)) {
+              result.resultCount_ = resultCount_;
+              to_bitField0_ |= 0x00000002;
+            }
+            if (((from_bitField0_ & 0x00000004) != 0)) {
+              result.searchArguments_ = searchArgumentsBuilder_ == null
+                  ? searchArguments_
+                  : searchArgumentsBuilder_.build();
+              to_bitField0_ |= 0x00000004;
+            }
+            if (((from_bitField0_ & 0x00000008) != 0)) {
+              result.response_ = responseBuilder_ == null
+                  ? response_
+                  : responseBuilder_.build();
+              to_bitField0_ |= 0x00000008;
+            }
+            result.bitField0_ |= to_bitField0_;
+          }
+
+          @java.lang.Override
+          public Builder mergeFrom(com.google.protobuf.Message other) {
+            if (other instanceof com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.FindUsagesToolCallData) {
+              return mergeFrom((com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.FindUsagesToolCallData)other);
+            } else {
+              super.mergeFrom(other);
+              return this;
+            }
+          }
+
+          public Builder mergeFrom(com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.FindUsagesToolCallData other) {
+            if (other == com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.FindUsagesToolCallData.getDefaultInstance()) return this;
+            if (other.hasException()) {
+              exception_ = other.exception_;
+              bitField0_ |= 0x00000001;
+              onChanged();
+            }
+            if (other.hasResultCount()) {
+              setResultCount(other.getResultCount());
+            }
+            if (other.hasSearchArguments()) {
+              mergeSearchArguments(other.getSearchArguments());
+            }
+            if (other.hasResponse()) {
+              mergeResponse(other.getResponse());
+            }
+            this.mergeUnknownFields(other.getUnknownFields());
+            onChanged();
+            return this;
+          }
+
+          @java.lang.Override
+          public final boolean isInitialized() {
+            return true;
+          }
+
+          @java.lang.Override
+          public Builder mergeFrom(
+              com.google.protobuf.CodedInputStream input,
+              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+              throws java.io.IOException {
+            if (extensionRegistry == null) {
+              throw new java.lang.NullPointerException();
+            }
+            try {
+              boolean done = false;
+              while (!done) {
+                int tag = input.readTag();
+                switch (tag) {
+                  case 0:
+                    done = true;
+                    break;
+                  case 10: {
+                    exception_ = input.readBytes();
+                    bitField0_ |= 0x00000001;
+                    break;
+                  } // case 10
+                  case 16: {
+                    resultCount_ = input.readInt32();
+                    bitField0_ |= 0x00000002;
+                    break;
+                  } // case 16
+                  case 26: {
+                    input.readMessage(
+                        getSearchArgumentsFieldBuilder().getBuilder(),
+                        extensionRegistry);
+                    bitField0_ |= 0x00000004;
+                    break;
+                  } // case 26
+                  case 34: {
+                    input.readMessage(
+                        getResponseFieldBuilder().getBuilder(),
+                        extensionRegistry);
+                    bitField0_ |= 0x00000008;
+                    break;
+                  } // case 34
+                  default: {
+                    if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                      done = true; // was an endgroup tag
+                    }
+                    break;
+                  } // default:
+                } // switch (tag)
+              } // while (!done)
+            } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+              throw e.unwrapIOException();
+            } finally {
+              onChanged();
+            } // finally
+            return this;
+          }
+          private int bitField0_;
+
+          private java.lang.Object exception_ = "";
+          /**
+           * <pre>
+           * The exception the find_usages tool encountered.
+           * </pre>
+           *
+           * <code>optional string exception = 1;</code>
+           * @return Whether the exception field is set.
+           */
+          public boolean hasException() {
+            return ((bitField0_ & 0x00000001) != 0);
+          }
+          /**
+           * <pre>
+           * The exception the find_usages tool encountered.
+           * </pre>
+           *
+           * <code>optional string exception = 1;</code>
+           * @return The exception.
+           */
+          public java.lang.String getException() {
+            java.lang.Object ref = exception_;
+            if (!(ref instanceof java.lang.String)) {
+              com.google.protobuf.ByteString bs =
+                  (com.google.protobuf.ByteString) ref;
+              java.lang.String s = bs.toStringUtf8();
+              if (bs.isValidUtf8()) {
+                exception_ = s;
+              }
+              return s;
+            } else {
+              return (java.lang.String) ref;
+            }
+          }
+          /**
+           * <pre>
+           * The exception the find_usages tool encountered.
+           * </pre>
+           *
+           * <code>optional string exception = 1;</code>
+           * @return The bytes for exception.
+           */
+          public com.google.protobuf.ByteString
+              getExceptionBytes() {
+            java.lang.Object ref = exception_;
+            if (ref instanceof String) {
+              com.google.protobuf.ByteString b = 
+                  com.google.protobuf.ByteString.copyFromUtf8(
+                      (java.lang.String) ref);
+              exception_ = b;
+              return b;
+            } else {
+              return (com.google.protobuf.ByteString) ref;
+            }
+          }
+          /**
+           * <pre>
+           * The exception the find_usages tool encountered.
+           * </pre>
+           *
+           * <code>optional string exception = 1;</code>
+           * @param value The exception to set.
+           * @return This builder for chaining.
+           */
+          public Builder setException(
+              java.lang.String value) {
+            if (value == null) { throw new NullPointerException(); }
+            exception_ = value;
+            bitField0_ |= 0x00000001;
+            onChanged();
+            return this;
+          }
+          /**
+           * <pre>
+           * The exception the find_usages tool encountered.
+           * </pre>
+           *
+           * <code>optional string exception = 1;</code>
+           * @return This builder for chaining.
+           */
+          public Builder clearException() {
+            exception_ = getDefaultInstance().getException();
+            bitField0_ = (bitField0_ & ~0x00000001);
+            onChanged();
+            return this;
+          }
+          /**
+           * <pre>
+           * The exception the find_usages tool encountered.
+           * </pre>
+           *
+           * <code>optional string exception = 1;</code>
+           * @param value The bytes for exception to set.
+           * @return This builder for chaining.
+           */
+          public Builder setExceptionBytes(
+              com.google.protobuf.ByteString value) {
+            if (value == null) { throw new NullPointerException(); }
+            exception_ = value;
+            bitField0_ |= 0x00000001;
+            onChanged();
+            return this;
+          }
+
+          private int resultCount_ ;
+          /**
+           * <pre>
+           * The number of files in the find_usages.
+           * </pre>
+           *
+           * <code>optional int32 result_count = 2;</code>
+           * @return Whether the resultCount field is set.
+           */
+          @java.lang.Override
+          public boolean hasResultCount() {
+            return ((bitField0_ & 0x00000002) != 0);
+          }
+          /**
+           * <pre>
+           * The number of files in the find_usages.
+           * </pre>
+           *
+           * <code>optional int32 result_count = 2;</code>
+           * @return The resultCount.
+           */
+          @java.lang.Override
+          public int getResultCount() {
+            return resultCount_;
+          }
+          /**
+           * <pre>
+           * The number of files in the find_usages.
+           * </pre>
+           *
+           * <code>optional int32 result_count = 2;</code>
+           * @param value The resultCount to set.
+           * @return This builder for chaining.
+           */
+          public Builder setResultCount(int value) {
+
+            resultCount_ = value;
+            bitField0_ |= 0x00000002;
+            onChanged();
+            return this;
+          }
+          /**
+           * <pre>
+           * The number of files in the find_usages.
+           * </pre>
+           *
+           * <code>optional int32 result_count = 2;</code>
+           * @return This builder for chaining.
+           */
+          public Builder clearResultCount() {
+            bitField0_ = (bitField0_ & ~0x00000002);
+            resultCount_ = 0;
+            onChanged();
+            return this;
+          }
+
+          private com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchArguments searchArguments_;
+          private com.google.protobuf.SingleFieldBuilderV3<
+              com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchArguments, com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchArguments.Builder, com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchArgumentsOrBuilder> searchArgumentsBuilder_;
+          /**
+           * <pre>
+           * The search arguments used for find_usages.
+           * </pre>
+           *
+           * <code>optional .android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchArguments search_arguments = 3;</code>
+           * @return Whether the searchArguments field is set.
+           */
+          public boolean hasSearchArguments() {
+            return ((bitField0_ & 0x00000004) != 0);
+          }
+          /**
+           * <pre>
+           * The search arguments used for find_usages.
+           * </pre>
+           *
+           * <code>optional .android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchArguments search_arguments = 3;</code>
+           * @return The searchArguments.
+           */
+          public com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchArguments getSearchArguments() {
+            if (searchArgumentsBuilder_ == null) {
+              return searchArguments_ == null ? com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchArguments.getDefaultInstance() : searchArguments_;
+            } else {
+              return searchArgumentsBuilder_.getMessage();
+            }
+          }
+          /**
+           * <pre>
+           * The search arguments used for find_usages.
+           * </pre>
+           *
+           * <code>optional .android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchArguments search_arguments = 3;</code>
+           */
+          public Builder setSearchArguments(com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchArguments value) {
+            if (searchArgumentsBuilder_ == null) {
+              if (value == null) {
+                throw new NullPointerException();
+              }
+              searchArguments_ = value;
+            } else {
+              searchArgumentsBuilder_.setMessage(value);
+            }
+            bitField0_ |= 0x00000004;
+            onChanged();
+            return this;
+          }
+          /**
+           * <pre>
+           * The search arguments used for find_usages.
+           * </pre>
+           *
+           * <code>optional .android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchArguments search_arguments = 3;</code>
+           */
+          public Builder setSearchArguments(
+              com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchArguments.Builder builderForValue) {
+            if (searchArgumentsBuilder_ == null) {
+              searchArguments_ = builderForValue.build();
+            } else {
+              searchArgumentsBuilder_.setMessage(builderForValue.build());
+            }
+            bitField0_ |= 0x00000004;
+            onChanged();
+            return this;
+          }
+          /**
+           * <pre>
+           * The search arguments used for find_usages.
+           * </pre>
+           *
+           * <code>optional .android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchArguments search_arguments = 3;</code>
+           */
+          public Builder mergeSearchArguments(com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchArguments value) {
+            if (searchArgumentsBuilder_ == null) {
+              if (((bitField0_ & 0x00000004) != 0) &&
+                searchArguments_ != null &&
+                searchArguments_ != com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchArguments.getDefaultInstance()) {
+                getSearchArgumentsBuilder().mergeFrom(value);
+              } else {
+                searchArguments_ = value;
+              }
+            } else {
+              searchArgumentsBuilder_.mergeFrom(value);
+            }
+            bitField0_ |= 0x00000004;
+            onChanged();
+            return this;
+          }
+          /**
+           * <pre>
+           * The search arguments used for find_usages.
+           * </pre>
+           *
+           * <code>optional .android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchArguments search_arguments = 3;</code>
+           */
+          public Builder clearSearchArguments() {
+            bitField0_ = (bitField0_ & ~0x00000004);
+            searchArguments_ = null;
+            if (searchArgumentsBuilder_ != null) {
+              searchArgumentsBuilder_.dispose();
+              searchArgumentsBuilder_ = null;
+            }
+            onChanged();
+            return this;
+          }
+          /**
+           * <pre>
+           * The search arguments used for find_usages.
+           * </pre>
+           *
+           * <code>optional .android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchArguments search_arguments = 3;</code>
+           */
+          public com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchArguments.Builder getSearchArgumentsBuilder() {
+            bitField0_ |= 0x00000004;
+            onChanged();
+            return getSearchArgumentsFieldBuilder().getBuilder();
+          }
+          /**
+           * <pre>
+           * The search arguments used for find_usages.
+           * </pre>
+           *
+           * <code>optional .android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchArguments search_arguments = 3;</code>
+           */
+          public com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchArgumentsOrBuilder getSearchArgumentsOrBuilder() {
+            if (searchArgumentsBuilder_ != null) {
+              return searchArgumentsBuilder_.getMessageOrBuilder();
+            } else {
+              return searchArguments_ == null ?
+                  com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchArguments.getDefaultInstance() : searchArguments_;
+            }
+          }
+          /**
+           * <pre>
+           * The search arguments used for find_usages.
+           * </pre>
+           *
+           * <code>optional .android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchArguments search_arguments = 3;</code>
+           */
+          private com.google.protobuf.SingleFieldBuilderV3<
+              com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchArguments, com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchArguments.Builder, com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchArgumentsOrBuilder> 
+              getSearchArgumentsFieldBuilder() {
+            if (searchArgumentsBuilder_ == null) {
+              searchArgumentsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                  com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchArguments, com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchArguments.Builder, com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchArgumentsOrBuilder>(
+                      getSearchArguments(),
+                      getParentForChildren(),
+                      isClean());
+              searchArguments_ = null;
+            }
+            return searchArgumentsBuilder_;
+          }
+
+          private com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchResponse response_;
+          private com.google.protobuf.SingleFieldBuilderV3<
+              com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchResponse, com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchResponse.Builder, com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchResponseOrBuilder> responseBuilder_;
+          /**
+           * <pre>
+           * The search response.
+           * </pre>
+           *
+           * <code>optional .android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchResponse response = 4;</code>
+           * @return Whether the response field is set.
+           */
+          public boolean hasResponse() {
+            return ((bitField0_ & 0x00000008) != 0);
+          }
+          /**
+           * <pre>
+           * The search response.
+           * </pre>
+           *
+           * <code>optional .android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchResponse response = 4;</code>
+           * @return The response.
+           */
+          public com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchResponse getResponse() {
+            if (responseBuilder_ == null) {
+              return response_ == null ? com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchResponse.getDefaultInstance() : response_;
+            } else {
+              return responseBuilder_.getMessage();
+            }
+          }
+          /**
+           * <pre>
+           * The search response.
+           * </pre>
+           *
+           * <code>optional .android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchResponse response = 4;</code>
+           */
+          public Builder setResponse(com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchResponse value) {
+            if (responseBuilder_ == null) {
+              if (value == null) {
+                throw new NullPointerException();
+              }
+              response_ = value;
+            } else {
+              responseBuilder_.setMessage(value);
+            }
+            bitField0_ |= 0x00000008;
+            onChanged();
+            return this;
+          }
+          /**
+           * <pre>
+           * The search response.
+           * </pre>
+           *
+           * <code>optional .android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchResponse response = 4;</code>
+           */
+          public Builder setResponse(
+              com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchResponse.Builder builderForValue) {
+            if (responseBuilder_ == null) {
+              response_ = builderForValue.build();
+            } else {
+              responseBuilder_.setMessage(builderForValue.build());
+            }
+            bitField0_ |= 0x00000008;
+            onChanged();
+            return this;
+          }
+          /**
+           * <pre>
+           * The search response.
+           * </pre>
+           *
+           * <code>optional .android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchResponse response = 4;</code>
+           */
+          public Builder mergeResponse(com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchResponse value) {
+            if (responseBuilder_ == null) {
+              if (((bitField0_ & 0x00000008) != 0) &&
+                response_ != null &&
+                response_ != com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchResponse.getDefaultInstance()) {
+                getResponseBuilder().mergeFrom(value);
+              } else {
+                response_ = value;
+              }
+            } else {
+              responseBuilder_.mergeFrom(value);
+            }
+            bitField0_ |= 0x00000008;
+            onChanged();
+            return this;
+          }
+          /**
+           * <pre>
+           * The search response.
+           * </pre>
+           *
+           * <code>optional .android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchResponse response = 4;</code>
+           */
+          public Builder clearResponse() {
+            bitField0_ = (bitField0_ & ~0x00000008);
+            response_ = null;
+            if (responseBuilder_ != null) {
+              responseBuilder_.dispose();
+              responseBuilder_ = null;
+            }
+            onChanged();
+            return this;
+          }
+          /**
+           * <pre>
+           * The search response.
+           * </pre>
+           *
+           * <code>optional .android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchResponse response = 4;</code>
+           */
+          public com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchResponse.Builder getResponseBuilder() {
+            bitField0_ |= 0x00000008;
+            onChanged();
+            return getResponseFieldBuilder().getBuilder();
+          }
+          /**
+           * <pre>
+           * The search response.
+           * </pre>
+           *
+           * <code>optional .android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchResponse response = 4;</code>
+           */
+          public com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchResponseOrBuilder getResponseOrBuilder() {
+            if (responseBuilder_ != null) {
+              return responseBuilder_.getMessageOrBuilder();
+            } else {
+              return response_ == null ?
+                  com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchResponse.getDefaultInstance() : response_;
+            }
+          }
+          /**
+           * <pre>
+           * The search response.
+           * </pre>
+           *
+           * <code>optional .android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchResponse response = 4;</code>
+           */
+          private com.google.protobuf.SingleFieldBuilderV3<
+              com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchResponse, com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchResponse.Builder, com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchResponseOrBuilder> 
+              getResponseFieldBuilder() {
+            if (responseBuilder_ == null) {
+              responseBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                  com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchResponse, com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchResponse.Builder, com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchResponseOrBuilder>(
+                      getResponse(),
+                      getParentForChildren(),
+                      isClean());
+              response_ = null;
+            }
+            return responseBuilder_;
+          }
+          @java.lang.Override
+          public final Builder setUnknownFields(
+              final com.google.protobuf.UnknownFieldSet unknownFields) {
+            return super.setUnknownFields(unknownFields);
+          }
+
+          @java.lang.Override
+          public final Builder mergeUnknownFields(
+              final com.google.protobuf.UnknownFieldSet unknownFields) {
+            return super.mergeUnknownFields(unknownFields);
+          }
+
+
+          // @@protoc_insertion_point(builder_scope:android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.FindUsagesToolCallData)
+        }
+
+        // @@protoc_insertion_point(class_scope:android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.FindUsagesToolCallData)
+        private static final com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.FindUsagesToolCallData DEFAULT_INSTANCE;
+        static {
+          DEFAULT_INSTANCE = new com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.FindUsagesToolCallData();
+        }
+
+        public static com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.FindUsagesToolCallData getDefaultInstance() {
+          return DEFAULT_INSTANCE;
+        }
+
+        @java.lang.Deprecated public static final com.google.protobuf.Parser<FindUsagesToolCallData>
+            PARSER = new com.google.protobuf.AbstractParser<FindUsagesToolCallData>() {
+          @java.lang.Override
+          public FindUsagesToolCallData parsePartialFrom(
+              com.google.protobuf.CodedInputStream input,
+              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+              throws com.google.protobuf.InvalidProtocolBufferException {
+            Builder builder = newBuilder();
+            try {
+              builder.mergeFrom(input, extensionRegistry);
+            } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+              throw e.setUnfinishedMessage(builder.buildPartial());
+            } catch (com.google.protobuf.UninitializedMessageException e) {
+              throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+            } catch (java.io.IOException e) {
+              throw new com.google.protobuf.InvalidProtocolBufferException(e)
+                  .setUnfinishedMessage(builder.buildPartial());
+            }
+            return builder.buildPartial();
+          }
+        };
+
+        public static com.google.protobuf.Parser<FindUsagesToolCallData> parser() {
+          return PARSER;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Parser<FindUsagesToolCallData> getParserForType() {
+          return PARSER;
+        }
+
+        @java.lang.Override
+        public com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.FindUsagesToolCallData getDefaultInstanceForType() {
+          return DEFAULT_INSTANCE;
+        }
+
+      }
+
+      public interface GrepToolCallDataOrBuilder extends
+          // @@protoc_insertion_point(interface_extends:android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.GrepToolCallData)
+          com.google.protobuf.MessageOrBuilder {
+
+        /**
+         * <pre>
+         * The number of files in the grep result.
+         * </pre>
+         *
+         * <code>optional int32 result_count = 1;</code>
+         * @return Whether the resultCount field is set.
+         */
+        boolean hasResultCount();
+        /**
+         * <pre>
+         * The number of files in the grep result.
+         * </pre>
+         *
+         * <code>optional int32 result_count = 1;</code>
+         * @return The resultCount.
+         */
+        int getResultCount();
+
+        /**
+         * <pre>
+         * Whether the query contains any regex of ".*+?^$|(){}" or not.
+         * </pre>
+         *
+         * <code>optional bool regex_query = 2;</code>
+         * @return Whether the regexQuery field is set.
+         */
+        boolean hasRegexQuery();
+        /**
+         * <pre>
+         * Whether the query contains any regex of ".*+?^$|(){}" or not.
+         * </pre>
+         *
+         * <code>optional bool regex_query = 2;</code>
+         * @return The regexQuery.
+         */
+        boolean getRegexQuery();
+
+        /**
+         * <pre>
+         * The number of files in the grep BM25 backend result.
+         * </pre>
+         *
+         * <code>optional int32 bm25_result_count = 3;</code>
+         * @return Whether the bm25ResultCount field is set.
+         */
+        boolean hasBm25ResultCount();
+        /**
+         * <pre>
+         * The number of files in the grep BM25 backend result.
+         * </pre>
+         *
+         * <code>optional int32 bm25_result_count = 3;</code>
+         * @return The bm25ResultCount.
+         */
+        int getBm25ResultCount();
+
+        /**
+         * <pre>
+         * The number of files in the original grep backend result.
+         * </pre>
+         *
+         * <code>optional int32 grep_result_count = 4;</code>
+         * @return Whether the grepResultCount field is set.
+         */
+        boolean hasGrepResultCount();
+        /**
+         * <pre>
+         * The number of files in the original grep backend result.
+         * </pre>
+         *
+         * <code>optional int32 grep_result_count = 4;</code>
+         * @return The grepResultCount.
+         */
+        int getGrepResultCount();
+
+        /**
+         * <pre>
+         * The number of docs (a doc is a file in the current RAG indexer) that
+         * are indexed.
+         * </pre>
+         *
+         * <code>optional int32 total_indexed_docs = 5;</code>
+         * @return Whether the totalIndexedDocs field is set.
+         */
+        boolean hasTotalIndexedDocs();
+        /**
+         * <pre>
+         * The number of docs (a doc is a file in the current RAG indexer) that
+         * are indexed.
+         * </pre>
+         *
+         * <code>optional int32 total_indexed_docs = 5;</code>
+         * @return The totalIndexedDocs.
+         */
+        int getTotalIndexedDocs();
+
+        /**
+         * <pre>
+         * The search arguments used for grep.
+         * </pre>
+         *
+         * <code>optional .android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchArguments search_arguments = 6;</code>
+         * @return Whether the searchArguments field is set.
+         */
+        boolean hasSearchArguments();
+        /**
+         * <pre>
+         * The search arguments used for grep.
+         * </pre>
+         *
+         * <code>optional .android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchArguments search_arguments = 6;</code>
+         * @return The searchArguments.
+         */
+        com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchArguments getSearchArguments();
+        /**
+         * <pre>
+         * The search arguments used for grep.
+         * </pre>
+         *
+         * <code>optional .android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchArguments search_arguments = 6;</code>
+         */
+        com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchArgumentsOrBuilder getSearchArgumentsOrBuilder();
+
+        /**
+         * <pre>
+         * The search response.
+         * </pre>
+         *
+         * <code>optional .android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchResponse response = 7;</code>
+         * @return Whether the response field is set.
+         */
+        boolean hasResponse();
+        /**
+         * <pre>
+         * The search response.
+         * </pre>
+         *
+         * <code>optional .android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchResponse response = 7;</code>
+         * @return The response.
+         */
+        com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchResponse getResponse();
+        /**
+         * <pre>
+         * The search response.
+         * </pre>
+         *
+         * <code>optional .android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchResponse response = 7;</code>
+         */
+        com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchResponseOrBuilder getResponseOrBuilder();
+      }
+      /**
+       * Protobuf type {@code android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.GrepToolCallData}
+       */
+      public static final class GrepToolCallData extends
+          com.google.protobuf.GeneratedMessageV3 implements
+          // @@protoc_insertion_point(message_implements:android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.GrepToolCallData)
+          GrepToolCallDataOrBuilder {
+      private static final long serialVersionUID = 0L;
+        // Use GrepToolCallData.newBuilder() to construct.
+        private GrepToolCallData(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+          super(builder);
+        }
+        private GrepToolCallData() {
+        }
+
+        @java.lang.Override
+        @SuppressWarnings({"unused"})
+        protected java.lang.Object newInstance(
+            UnusedPrivateParameter unused) {
+          return new GrepToolCallData();
+        }
+
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_GeminiTelemetryEvent_AgentEvent_ToolExecutionSpan_GrepToolCallData_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_GeminiTelemetryEvent_AgentEvent_ToolExecutionSpan_GrepToolCallData_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.GrepToolCallData.class, com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.GrepToolCallData.Builder.class);
+        }
+
+        private int bitField0_;
+        public static final int RESULT_COUNT_FIELD_NUMBER = 1;
+        private int resultCount_ = 0;
+        /**
+         * <pre>
+         * The number of files in the grep result.
+         * </pre>
+         *
+         * <code>optional int32 result_count = 1;</code>
+         * @return Whether the resultCount field is set.
+         */
+        @java.lang.Override
+        public boolean hasResultCount() {
+          return ((bitField0_ & 0x00000001) != 0);
+        }
+        /**
+         * <pre>
+         * The number of files in the grep result.
+         * </pre>
+         *
+         * <code>optional int32 result_count = 1;</code>
+         * @return The resultCount.
+         */
+        @java.lang.Override
+        public int getResultCount() {
+          return resultCount_;
+        }
+
+        public static final int REGEX_QUERY_FIELD_NUMBER = 2;
+        private boolean regexQuery_ = false;
+        /**
+         * <pre>
+         * Whether the query contains any regex of ".*+?^$|(){}" or not.
+         * </pre>
+         *
+         * <code>optional bool regex_query = 2;</code>
+         * @return Whether the regexQuery field is set.
+         */
+        @java.lang.Override
+        public boolean hasRegexQuery() {
+          return ((bitField0_ & 0x00000002) != 0);
+        }
+        /**
+         * <pre>
+         * Whether the query contains any regex of ".*+?^$|(){}" or not.
+         * </pre>
+         *
+         * <code>optional bool regex_query = 2;</code>
+         * @return The regexQuery.
+         */
+        @java.lang.Override
+        public boolean getRegexQuery() {
+          return regexQuery_;
+        }
+
+        public static final int BM25_RESULT_COUNT_FIELD_NUMBER = 3;
+        private int bm25ResultCount_ = 0;
+        /**
+         * <pre>
+         * The number of files in the grep BM25 backend result.
+         * </pre>
+         *
+         * <code>optional int32 bm25_result_count = 3;</code>
+         * @return Whether the bm25ResultCount field is set.
+         */
+        @java.lang.Override
+        public boolean hasBm25ResultCount() {
+          return ((bitField0_ & 0x00000004) != 0);
+        }
+        /**
+         * <pre>
+         * The number of files in the grep BM25 backend result.
+         * </pre>
+         *
+         * <code>optional int32 bm25_result_count = 3;</code>
+         * @return The bm25ResultCount.
+         */
+        @java.lang.Override
+        public int getBm25ResultCount() {
+          return bm25ResultCount_;
+        }
+
+        public static final int GREP_RESULT_COUNT_FIELD_NUMBER = 4;
+        private int grepResultCount_ = 0;
+        /**
+         * <pre>
+         * The number of files in the original grep backend result.
+         * </pre>
+         *
+         * <code>optional int32 grep_result_count = 4;</code>
+         * @return Whether the grepResultCount field is set.
+         */
+        @java.lang.Override
+        public boolean hasGrepResultCount() {
+          return ((bitField0_ & 0x00000008) != 0);
+        }
+        /**
+         * <pre>
+         * The number of files in the original grep backend result.
+         * </pre>
+         *
+         * <code>optional int32 grep_result_count = 4;</code>
+         * @return The grepResultCount.
+         */
+        @java.lang.Override
+        public int getGrepResultCount() {
+          return grepResultCount_;
+        }
+
+        public static final int TOTAL_INDEXED_DOCS_FIELD_NUMBER = 5;
+        private int totalIndexedDocs_ = 0;
+        /**
+         * <pre>
+         * The number of docs (a doc is a file in the current RAG indexer) that
+         * are indexed.
+         * </pre>
+         *
+         * <code>optional int32 total_indexed_docs = 5;</code>
+         * @return Whether the totalIndexedDocs field is set.
+         */
+        @java.lang.Override
+        public boolean hasTotalIndexedDocs() {
+          return ((bitField0_ & 0x00000010) != 0);
+        }
+        /**
+         * <pre>
+         * The number of docs (a doc is a file in the current RAG indexer) that
+         * are indexed.
+         * </pre>
+         *
+         * <code>optional int32 total_indexed_docs = 5;</code>
+         * @return The totalIndexedDocs.
+         */
+        @java.lang.Override
+        public int getTotalIndexedDocs() {
+          return totalIndexedDocs_;
+        }
+
+        public static final int SEARCH_ARGUMENTS_FIELD_NUMBER = 6;
+        private com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchArguments searchArguments_;
+        /**
+         * <pre>
+         * The search arguments used for grep.
+         * </pre>
+         *
+         * <code>optional .android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchArguments search_arguments = 6;</code>
+         * @return Whether the searchArguments field is set.
+         */
+        @java.lang.Override
+        public boolean hasSearchArguments() {
+          return ((bitField0_ & 0x00000020) != 0);
+        }
+        /**
+         * <pre>
+         * The search arguments used for grep.
+         * </pre>
+         *
+         * <code>optional .android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchArguments search_arguments = 6;</code>
+         * @return The searchArguments.
+         */
+        @java.lang.Override
+        public com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchArguments getSearchArguments() {
+          return searchArguments_ == null ? com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchArguments.getDefaultInstance() : searchArguments_;
+        }
+        /**
+         * <pre>
+         * The search arguments used for grep.
+         * </pre>
+         *
+         * <code>optional .android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchArguments search_arguments = 6;</code>
+         */
+        @java.lang.Override
+        public com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchArgumentsOrBuilder getSearchArgumentsOrBuilder() {
+          return searchArguments_ == null ? com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchArguments.getDefaultInstance() : searchArguments_;
+        }
+
+        public static final int RESPONSE_FIELD_NUMBER = 7;
+        private com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchResponse response_;
+        /**
+         * <pre>
+         * The search response.
+         * </pre>
+         *
+         * <code>optional .android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchResponse response = 7;</code>
+         * @return Whether the response field is set.
+         */
+        @java.lang.Override
+        public boolean hasResponse() {
+          return ((bitField0_ & 0x00000040) != 0);
+        }
+        /**
+         * <pre>
+         * The search response.
+         * </pre>
+         *
+         * <code>optional .android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchResponse response = 7;</code>
+         * @return The response.
+         */
+        @java.lang.Override
+        public com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchResponse getResponse() {
+          return response_ == null ? com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchResponse.getDefaultInstance() : response_;
+        }
+        /**
+         * <pre>
+         * The search response.
+         * </pre>
+         *
+         * <code>optional .android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchResponse response = 7;</code>
+         */
+        @java.lang.Override
+        public com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchResponseOrBuilder getResponseOrBuilder() {
+          return response_ == null ? com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchResponse.getDefaultInstance() : response_;
+        }
+
+        private byte memoizedIsInitialized = -1;
+        @java.lang.Override
+        public final boolean isInitialized() {
+          byte isInitialized = memoizedIsInitialized;
+          if (isInitialized == 1) return true;
+          if (isInitialized == 0) return false;
+
+          memoizedIsInitialized = 1;
+          return true;
+        }
+
+        @java.lang.Override
+        public void writeTo(com.google.protobuf.CodedOutputStream output)
+                            throws java.io.IOException {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            output.writeInt32(1, resultCount_);
+          }
+          if (((bitField0_ & 0x00000002) != 0)) {
+            output.writeBool(2, regexQuery_);
+          }
+          if (((bitField0_ & 0x00000004) != 0)) {
+            output.writeInt32(3, bm25ResultCount_);
+          }
+          if (((bitField0_ & 0x00000008) != 0)) {
+            output.writeInt32(4, grepResultCount_);
+          }
+          if (((bitField0_ & 0x00000010) != 0)) {
+            output.writeInt32(5, totalIndexedDocs_);
+          }
+          if (((bitField0_ & 0x00000020) != 0)) {
+            output.writeMessage(6, getSearchArguments());
+          }
+          if (((bitField0_ & 0x00000040) != 0)) {
+            output.writeMessage(7, getResponse());
+          }
+          getUnknownFields().writeTo(output);
+        }
+
+        @java.lang.Override
+        public int getSerializedSize() {
+          int size = memoizedSize;
+          if (size != -1) return size;
+
+          size = 0;
+          if (((bitField0_ & 0x00000001) != 0)) {
+            size += com.google.protobuf.CodedOutputStream
+              .computeInt32Size(1, resultCount_);
+          }
+          if (((bitField0_ & 0x00000002) != 0)) {
+            size += com.google.protobuf.CodedOutputStream
+              .computeBoolSize(2, regexQuery_);
+          }
+          if (((bitField0_ & 0x00000004) != 0)) {
+            size += com.google.protobuf.CodedOutputStream
+              .computeInt32Size(3, bm25ResultCount_);
+          }
+          if (((bitField0_ & 0x00000008) != 0)) {
+            size += com.google.protobuf.CodedOutputStream
+              .computeInt32Size(4, grepResultCount_);
+          }
+          if (((bitField0_ & 0x00000010) != 0)) {
+            size += com.google.protobuf.CodedOutputStream
+              .computeInt32Size(5, totalIndexedDocs_);
+          }
+          if (((bitField0_ & 0x00000020) != 0)) {
+            size += com.google.protobuf.CodedOutputStream
+              .computeMessageSize(6, getSearchArguments());
+          }
+          if (((bitField0_ & 0x00000040) != 0)) {
+            size += com.google.protobuf.CodedOutputStream
+              .computeMessageSize(7, getResponse());
+          }
+          size += getUnknownFields().getSerializedSize();
+          memoizedSize = size;
+          return size;
+        }
+
+        @java.lang.Override
+        public boolean equals(final java.lang.Object obj) {
+          if (obj == this) {
+           return true;
+          }
+          if (!(obj instanceof com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.GrepToolCallData)) {
+            return super.equals(obj);
+          }
+          com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.GrepToolCallData other = (com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.GrepToolCallData) obj;
+
+          if (hasResultCount() != other.hasResultCount()) return false;
+          if (hasResultCount()) {
+            if (getResultCount()
+                != other.getResultCount()) return false;
+          }
+          if (hasRegexQuery() != other.hasRegexQuery()) return false;
+          if (hasRegexQuery()) {
+            if (getRegexQuery()
+                != other.getRegexQuery()) return false;
+          }
+          if (hasBm25ResultCount() != other.hasBm25ResultCount()) return false;
+          if (hasBm25ResultCount()) {
+            if (getBm25ResultCount()
+                != other.getBm25ResultCount()) return false;
+          }
+          if (hasGrepResultCount() != other.hasGrepResultCount()) return false;
+          if (hasGrepResultCount()) {
+            if (getGrepResultCount()
+                != other.getGrepResultCount()) return false;
+          }
+          if (hasTotalIndexedDocs() != other.hasTotalIndexedDocs()) return false;
+          if (hasTotalIndexedDocs()) {
+            if (getTotalIndexedDocs()
+                != other.getTotalIndexedDocs()) return false;
+          }
+          if (hasSearchArguments() != other.hasSearchArguments()) return false;
+          if (hasSearchArguments()) {
+            if (!getSearchArguments()
+                .equals(other.getSearchArguments())) return false;
+          }
+          if (hasResponse() != other.hasResponse()) return false;
+          if (hasResponse()) {
+            if (!getResponse()
+                .equals(other.getResponse())) return false;
+          }
+          if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+          return true;
+        }
+
+        @java.lang.Override
+        public int hashCode() {
+          if (memoizedHashCode != 0) {
+            return memoizedHashCode;
+          }
+          int hash = 41;
+          hash = (19 * hash) + getDescriptor().hashCode();
+          if (hasResultCount()) {
+            hash = (37 * hash) + RESULT_COUNT_FIELD_NUMBER;
+            hash = (53 * hash) + getResultCount();
+          }
+          if (hasRegexQuery()) {
+            hash = (37 * hash) + REGEX_QUERY_FIELD_NUMBER;
+            hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+                getRegexQuery());
+          }
+          if (hasBm25ResultCount()) {
+            hash = (37 * hash) + BM25_RESULT_COUNT_FIELD_NUMBER;
+            hash = (53 * hash) + getBm25ResultCount();
+          }
+          if (hasGrepResultCount()) {
+            hash = (37 * hash) + GREP_RESULT_COUNT_FIELD_NUMBER;
+            hash = (53 * hash) + getGrepResultCount();
+          }
+          if (hasTotalIndexedDocs()) {
+            hash = (37 * hash) + TOTAL_INDEXED_DOCS_FIELD_NUMBER;
+            hash = (53 * hash) + getTotalIndexedDocs();
+          }
+          if (hasSearchArguments()) {
+            hash = (37 * hash) + SEARCH_ARGUMENTS_FIELD_NUMBER;
+            hash = (53 * hash) + getSearchArguments().hashCode();
+          }
+          if (hasResponse()) {
+            hash = (37 * hash) + RESPONSE_FIELD_NUMBER;
+            hash = (53 * hash) + getResponse().hashCode();
+          }
+          hash = (29 * hash) + getUnknownFields().hashCode();
+          memoizedHashCode = hash;
+          return hash;
+        }
+
+        public static com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.GrepToolCallData parseFrom(
+            java.nio.ByteBuffer data)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return PARSER.parseFrom(data);
+        }
+        public static com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.GrepToolCallData parseFrom(
+            java.nio.ByteBuffer data,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return PARSER.parseFrom(data, extensionRegistry);
+        }
+        public static com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.GrepToolCallData parseFrom(
+            com.google.protobuf.ByteString data)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return PARSER.parseFrom(data);
+        }
+        public static com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.GrepToolCallData parseFrom(
+            com.google.protobuf.ByteString data,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return PARSER.parseFrom(data, extensionRegistry);
+        }
+        public static com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.GrepToolCallData parseFrom(byte[] data)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return PARSER.parseFrom(data);
+        }
+        public static com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.GrepToolCallData parseFrom(
+            byte[] data,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return PARSER.parseFrom(data, extensionRegistry);
+        }
+        public static com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.GrepToolCallData parseFrom(java.io.InputStream input)
+            throws java.io.IOException {
+          return com.google.protobuf.GeneratedMessageV3
+              .parseWithIOException(PARSER, input);
+        }
+        public static com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.GrepToolCallData parseFrom(
+            java.io.InputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          return com.google.protobuf.GeneratedMessageV3
+              .parseWithIOException(PARSER, input, extensionRegistry);
+        }
+        public static com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.GrepToolCallData parseDelimitedFrom(java.io.InputStream input)
+            throws java.io.IOException {
+          return com.google.protobuf.GeneratedMessageV3
+              .parseDelimitedWithIOException(PARSER, input);
+        }
+        public static com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.GrepToolCallData parseDelimitedFrom(
+            java.io.InputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          return com.google.protobuf.GeneratedMessageV3
+              .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+        }
+        public static com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.GrepToolCallData parseFrom(
+            com.google.protobuf.CodedInputStream input)
+            throws java.io.IOException {
+          return com.google.protobuf.GeneratedMessageV3
+              .parseWithIOException(PARSER, input);
+        }
+        public static com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.GrepToolCallData parseFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          return com.google.protobuf.GeneratedMessageV3
+              .parseWithIOException(PARSER, input, extensionRegistry);
+        }
+
+        @java.lang.Override
+        public Builder newBuilderForType() { return newBuilder(); }
+        public static Builder newBuilder() {
+          return DEFAULT_INSTANCE.toBuilder();
+        }
+        public static Builder newBuilder(com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.GrepToolCallData prototype) {
+          return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+        }
+        @java.lang.Override
+        public Builder toBuilder() {
+          return this == DEFAULT_INSTANCE
+              ? new Builder() : new Builder().mergeFrom(this);
+        }
+
+        @java.lang.Override
+        protected Builder newBuilderForType(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          Builder builder = new Builder(parent);
+          return builder;
+        }
+        /**
+         * Protobuf type {@code android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.GrepToolCallData}
+         */
+        public static final class Builder extends
+            com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+            // @@protoc_insertion_point(builder_implements:android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.GrepToolCallData)
+            com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.GrepToolCallDataOrBuilder {
+          public static final com.google.protobuf.Descriptors.Descriptor
+              getDescriptor() {
+            return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_GeminiTelemetryEvent_AgentEvent_ToolExecutionSpan_GrepToolCallData_descriptor;
+          }
+
+          @java.lang.Override
+          protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+              internalGetFieldAccessorTable() {
+            return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_GeminiTelemetryEvent_AgentEvent_ToolExecutionSpan_GrepToolCallData_fieldAccessorTable
+                .ensureFieldAccessorsInitialized(
+                    com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.GrepToolCallData.class, com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.GrepToolCallData.Builder.class);
+          }
+
+          // Construct using com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.GrepToolCallData.newBuilder()
+          private Builder() {
+            maybeForceBuilderInitialization();
+          }
+
+          private Builder(
+              com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+            super(parent);
+            maybeForceBuilderInitialization();
+          }
+          private void maybeForceBuilderInitialization() {
+            if (com.google.protobuf.GeneratedMessageV3
+                    .alwaysUseFieldBuilders) {
+              getSearchArgumentsFieldBuilder();
+              getResponseFieldBuilder();
+            }
+          }
+          @java.lang.Override
+          public Builder clear() {
+            super.clear();
+            bitField0_ = 0;
+            resultCount_ = 0;
+            regexQuery_ = false;
+            bm25ResultCount_ = 0;
+            grepResultCount_ = 0;
+            totalIndexedDocs_ = 0;
+            searchArguments_ = null;
+            if (searchArgumentsBuilder_ != null) {
+              searchArgumentsBuilder_.dispose();
+              searchArgumentsBuilder_ = null;
+            }
+            response_ = null;
+            if (responseBuilder_ != null) {
+              responseBuilder_.dispose();
+              responseBuilder_ = null;
+            }
+            return this;
+          }
+
+          @java.lang.Override
+          public com.google.protobuf.Descriptors.Descriptor
+              getDescriptorForType() {
+            return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_GeminiTelemetryEvent_AgentEvent_ToolExecutionSpan_GrepToolCallData_descriptor;
+          }
+
+          @java.lang.Override
+          public com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.GrepToolCallData getDefaultInstanceForType() {
+            return com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.GrepToolCallData.getDefaultInstance();
+          }
+
+          @java.lang.Override
+          public com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.GrepToolCallData build() {
+            com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.GrepToolCallData result = buildPartial();
+            if (!result.isInitialized()) {
+              throw newUninitializedMessageException(result);
+            }
+            return result;
+          }
+
+          @java.lang.Override
+          public com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.GrepToolCallData buildPartial() {
+            com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.GrepToolCallData result = new com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.GrepToolCallData(this);
+            if (bitField0_ != 0) { buildPartial0(result); }
+            onBuilt();
+            return result;
+          }
+
+          private void buildPartial0(com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.GrepToolCallData result) {
+            int from_bitField0_ = bitField0_;
+            int to_bitField0_ = 0;
+            if (((from_bitField0_ & 0x00000001) != 0)) {
+              result.resultCount_ = resultCount_;
+              to_bitField0_ |= 0x00000001;
+            }
+            if (((from_bitField0_ & 0x00000002) != 0)) {
+              result.regexQuery_ = regexQuery_;
+              to_bitField0_ |= 0x00000002;
+            }
+            if (((from_bitField0_ & 0x00000004) != 0)) {
+              result.bm25ResultCount_ = bm25ResultCount_;
+              to_bitField0_ |= 0x00000004;
+            }
+            if (((from_bitField0_ & 0x00000008) != 0)) {
+              result.grepResultCount_ = grepResultCount_;
+              to_bitField0_ |= 0x00000008;
+            }
+            if (((from_bitField0_ & 0x00000010) != 0)) {
+              result.totalIndexedDocs_ = totalIndexedDocs_;
+              to_bitField0_ |= 0x00000010;
+            }
+            if (((from_bitField0_ & 0x00000020) != 0)) {
+              result.searchArguments_ = searchArgumentsBuilder_ == null
+                  ? searchArguments_
+                  : searchArgumentsBuilder_.build();
+              to_bitField0_ |= 0x00000020;
+            }
+            if (((from_bitField0_ & 0x00000040) != 0)) {
+              result.response_ = responseBuilder_ == null
+                  ? response_
+                  : responseBuilder_.build();
+              to_bitField0_ |= 0x00000040;
+            }
+            result.bitField0_ |= to_bitField0_;
+          }
+
+          @java.lang.Override
+          public Builder mergeFrom(com.google.protobuf.Message other) {
+            if (other instanceof com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.GrepToolCallData) {
+              return mergeFrom((com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.GrepToolCallData)other);
+            } else {
+              super.mergeFrom(other);
+              return this;
+            }
+          }
+
+          public Builder mergeFrom(com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.GrepToolCallData other) {
+            if (other == com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.GrepToolCallData.getDefaultInstance()) return this;
+            if (other.hasResultCount()) {
+              setResultCount(other.getResultCount());
+            }
+            if (other.hasRegexQuery()) {
+              setRegexQuery(other.getRegexQuery());
+            }
+            if (other.hasBm25ResultCount()) {
+              setBm25ResultCount(other.getBm25ResultCount());
+            }
+            if (other.hasGrepResultCount()) {
+              setGrepResultCount(other.getGrepResultCount());
+            }
+            if (other.hasTotalIndexedDocs()) {
+              setTotalIndexedDocs(other.getTotalIndexedDocs());
+            }
+            if (other.hasSearchArguments()) {
+              mergeSearchArguments(other.getSearchArguments());
+            }
+            if (other.hasResponse()) {
+              mergeResponse(other.getResponse());
+            }
+            this.mergeUnknownFields(other.getUnknownFields());
+            onChanged();
+            return this;
+          }
+
+          @java.lang.Override
+          public final boolean isInitialized() {
+            return true;
+          }
+
+          @java.lang.Override
+          public Builder mergeFrom(
+              com.google.protobuf.CodedInputStream input,
+              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+              throws java.io.IOException {
+            if (extensionRegistry == null) {
+              throw new java.lang.NullPointerException();
+            }
+            try {
+              boolean done = false;
+              while (!done) {
+                int tag = input.readTag();
+                switch (tag) {
+                  case 0:
+                    done = true;
+                    break;
+                  case 8: {
+                    resultCount_ = input.readInt32();
+                    bitField0_ |= 0x00000001;
+                    break;
+                  } // case 8
+                  case 16: {
+                    regexQuery_ = input.readBool();
+                    bitField0_ |= 0x00000002;
+                    break;
+                  } // case 16
+                  case 24: {
+                    bm25ResultCount_ = input.readInt32();
+                    bitField0_ |= 0x00000004;
+                    break;
+                  } // case 24
+                  case 32: {
+                    grepResultCount_ = input.readInt32();
+                    bitField0_ |= 0x00000008;
+                    break;
+                  } // case 32
+                  case 40: {
+                    totalIndexedDocs_ = input.readInt32();
+                    bitField0_ |= 0x00000010;
+                    break;
+                  } // case 40
+                  case 50: {
+                    input.readMessage(
+                        getSearchArgumentsFieldBuilder().getBuilder(),
+                        extensionRegistry);
+                    bitField0_ |= 0x00000020;
+                    break;
+                  } // case 50
+                  case 58: {
+                    input.readMessage(
+                        getResponseFieldBuilder().getBuilder(),
+                        extensionRegistry);
+                    bitField0_ |= 0x00000040;
+                    break;
+                  } // case 58
+                  default: {
+                    if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                      done = true; // was an endgroup tag
+                    }
+                    break;
+                  } // default:
+                } // switch (tag)
+              } // while (!done)
+            } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+              throw e.unwrapIOException();
+            } finally {
+              onChanged();
+            } // finally
+            return this;
+          }
+          private int bitField0_;
+
+          private int resultCount_ ;
+          /**
+           * <pre>
+           * The number of files in the grep result.
+           * </pre>
+           *
+           * <code>optional int32 result_count = 1;</code>
+           * @return Whether the resultCount field is set.
+           */
+          @java.lang.Override
+          public boolean hasResultCount() {
+            return ((bitField0_ & 0x00000001) != 0);
+          }
+          /**
+           * <pre>
+           * The number of files in the grep result.
+           * </pre>
+           *
+           * <code>optional int32 result_count = 1;</code>
+           * @return The resultCount.
+           */
+          @java.lang.Override
+          public int getResultCount() {
+            return resultCount_;
+          }
+          /**
+           * <pre>
+           * The number of files in the grep result.
+           * </pre>
+           *
+           * <code>optional int32 result_count = 1;</code>
+           * @param value The resultCount to set.
+           * @return This builder for chaining.
+           */
+          public Builder setResultCount(int value) {
+
+            resultCount_ = value;
+            bitField0_ |= 0x00000001;
+            onChanged();
+            return this;
+          }
+          /**
+           * <pre>
+           * The number of files in the grep result.
+           * </pre>
+           *
+           * <code>optional int32 result_count = 1;</code>
+           * @return This builder for chaining.
+           */
+          public Builder clearResultCount() {
+            bitField0_ = (bitField0_ & ~0x00000001);
+            resultCount_ = 0;
+            onChanged();
+            return this;
+          }
+
+          private boolean regexQuery_ ;
+          /**
+           * <pre>
+           * Whether the query contains any regex of ".*+?^$|(){}" or not.
+           * </pre>
+           *
+           * <code>optional bool regex_query = 2;</code>
+           * @return Whether the regexQuery field is set.
+           */
+          @java.lang.Override
+          public boolean hasRegexQuery() {
+            return ((bitField0_ & 0x00000002) != 0);
+          }
+          /**
+           * <pre>
+           * Whether the query contains any regex of ".*+?^$|(){}" or not.
+           * </pre>
+           *
+           * <code>optional bool regex_query = 2;</code>
+           * @return The regexQuery.
+           */
+          @java.lang.Override
+          public boolean getRegexQuery() {
+            return regexQuery_;
+          }
+          /**
+           * <pre>
+           * Whether the query contains any regex of ".*+?^$|(){}" or not.
+           * </pre>
+           *
+           * <code>optional bool regex_query = 2;</code>
+           * @param value The regexQuery to set.
+           * @return This builder for chaining.
+           */
+          public Builder setRegexQuery(boolean value) {
+
+            regexQuery_ = value;
+            bitField0_ |= 0x00000002;
+            onChanged();
+            return this;
+          }
+          /**
+           * <pre>
+           * Whether the query contains any regex of ".*+?^$|(){}" or not.
+           * </pre>
+           *
+           * <code>optional bool regex_query = 2;</code>
+           * @return This builder for chaining.
+           */
+          public Builder clearRegexQuery() {
+            bitField0_ = (bitField0_ & ~0x00000002);
+            regexQuery_ = false;
+            onChanged();
+            return this;
+          }
+
+          private int bm25ResultCount_ ;
+          /**
+           * <pre>
+           * The number of files in the grep BM25 backend result.
+           * </pre>
+           *
+           * <code>optional int32 bm25_result_count = 3;</code>
+           * @return Whether the bm25ResultCount field is set.
+           */
+          @java.lang.Override
+          public boolean hasBm25ResultCount() {
+            return ((bitField0_ & 0x00000004) != 0);
+          }
+          /**
+           * <pre>
+           * The number of files in the grep BM25 backend result.
+           * </pre>
+           *
+           * <code>optional int32 bm25_result_count = 3;</code>
+           * @return The bm25ResultCount.
+           */
+          @java.lang.Override
+          public int getBm25ResultCount() {
+            return bm25ResultCount_;
+          }
+          /**
+           * <pre>
+           * The number of files in the grep BM25 backend result.
+           * </pre>
+           *
+           * <code>optional int32 bm25_result_count = 3;</code>
+           * @param value The bm25ResultCount to set.
+           * @return This builder for chaining.
+           */
+          public Builder setBm25ResultCount(int value) {
+
+            bm25ResultCount_ = value;
+            bitField0_ |= 0x00000004;
+            onChanged();
+            return this;
+          }
+          /**
+           * <pre>
+           * The number of files in the grep BM25 backend result.
+           * </pre>
+           *
+           * <code>optional int32 bm25_result_count = 3;</code>
+           * @return This builder for chaining.
+           */
+          public Builder clearBm25ResultCount() {
+            bitField0_ = (bitField0_ & ~0x00000004);
+            bm25ResultCount_ = 0;
+            onChanged();
+            return this;
+          }
+
+          private int grepResultCount_ ;
+          /**
+           * <pre>
+           * The number of files in the original grep backend result.
+           * </pre>
+           *
+           * <code>optional int32 grep_result_count = 4;</code>
+           * @return Whether the grepResultCount field is set.
+           */
+          @java.lang.Override
+          public boolean hasGrepResultCount() {
+            return ((bitField0_ & 0x00000008) != 0);
+          }
+          /**
+           * <pre>
+           * The number of files in the original grep backend result.
+           * </pre>
+           *
+           * <code>optional int32 grep_result_count = 4;</code>
+           * @return The grepResultCount.
+           */
+          @java.lang.Override
+          public int getGrepResultCount() {
+            return grepResultCount_;
+          }
+          /**
+           * <pre>
+           * The number of files in the original grep backend result.
+           * </pre>
+           *
+           * <code>optional int32 grep_result_count = 4;</code>
+           * @param value The grepResultCount to set.
+           * @return This builder for chaining.
+           */
+          public Builder setGrepResultCount(int value) {
+
+            grepResultCount_ = value;
+            bitField0_ |= 0x00000008;
+            onChanged();
+            return this;
+          }
+          /**
+           * <pre>
+           * The number of files in the original grep backend result.
+           * </pre>
+           *
+           * <code>optional int32 grep_result_count = 4;</code>
+           * @return This builder for chaining.
+           */
+          public Builder clearGrepResultCount() {
+            bitField0_ = (bitField0_ & ~0x00000008);
+            grepResultCount_ = 0;
+            onChanged();
+            return this;
+          }
+
+          private int totalIndexedDocs_ ;
+          /**
+           * <pre>
+           * The number of docs (a doc is a file in the current RAG indexer) that
+           * are indexed.
+           * </pre>
+           *
+           * <code>optional int32 total_indexed_docs = 5;</code>
+           * @return Whether the totalIndexedDocs field is set.
+           */
+          @java.lang.Override
+          public boolean hasTotalIndexedDocs() {
+            return ((bitField0_ & 0x00000010) != 0);
+          }
+          /**
+           * <pre>
+           * The number of docs (a doc is a file in the current RAG indexer) that
+           * are indexed.
+           * </pre>
+           *
+           * <code>optional int32 total_indexed_docs = 5;</code>
+           * @return The totalIndexedDocs.
+           */
+          @java.lang.Override
+          public int getTotalIndexedDocs() {
+            return totalIndexedDocs_;
+          }
+          /**
+           * <pre>
+           * The number of docs (a doc is a file in the current RAG indexer) that
+           * are indexed.
+           * </pre>
+           *
+           * <code>optional int32 total_indexed_docs = 5;</code>
+           * @param value The totalIndexedDocs to set.
+           * @return This builder for chaining.
+           */
+          public Builder setTotalIndexedDocs(int value) {
+
+            totalIndexedDocs_ = value;
+            bitField0_ |= 0x00000010;
+            onChanged();
+            return this;
+          }
+          /**
+           * <pre>
+           * The number of docs (a doc is a file in the current RAG indexer) that
+           * are indexed.
+           * </pre>
+           *
+           * <code>optional int32 total_indexed_docs = 5;</code>
+           * @return This builder for chaining.
+           */
+          public Builder clearTotalIndexedDocs() {
+            bitField0_ = (bitField0_ & ~0x00000010);
+            totalIndexedDocs_ = 0;
+            onChanged();
+            return this;
+          }
+
+          private com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchArguments searchArguments_;
+          private com.google.protobuf.SingleFieldBuilderV3<
+              com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchArguments, com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchArguments.Builder, com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchArgumentsOrBuilder> searchArgumentsBuilder_;
+          /**
+           * <pre>
+           * The search arguments used for grep.
+           * </pre>
+           *
+           * <code>optional .android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchArguments search_arguments = 6;</code>
+           * @return Whether the searchArguments field is set.
+           */
+          public boolean hasSearchArguments() {
+            return ((bitField0_ & 0x00000020) != 0);
+          }
+          /**
+           * <pre>
+           * The search arguments used for grep.
+           * </pre>
+           *
+           * <code>optional .android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchArguments search_arguments = 6;</code>
+           * @return The searchArguments.
+           */
+          public com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchArguments getSearchArguments() {
+            if (searchArgumentsBuilder_ == null) {
+              return searchArguments_ == null ? com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchArguments.getDefaultInstance() : searchArguments_;
+            } else {
+              return searchArgumentsBuilder_.getMessage();
+            }
+          }
+          /**
+           * <pre>
+           * The search arguments used for grep.
+           * </pre>
+           *
+           * <code>optional .android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchArguments search_arguments = 6;</code>
+           */
+          public Builder setSearchArguments(com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchArguments value) {
+            if (searchArgumentsBuilder_ == null) {
+              if (value == null) {
+                throw new NullPointerException();
+              }
+              searchArguments_ = value;
+            } else {
+              searchArgumentsBuilder_.setMessage(value);
+            }
+            bitField0_ |= 0x00000020;
+            onChanged();
+            return this;
+          }
+          /**
+           * <pre>
+           * The search arguments used for grep.
+           * </pre>
+           *
+           * <code>optional .android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchArguments search_arguments = 6;</code>
+           */
+          public Builder setSearchArguments(
+              com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchArguments.Builder builderForValue) {
+            if (searchArgumentsBuilder_ == null) {
+              searchArguments_ = builderForValue.build();
+            } else {
+              searchArgumentsBuilder_.setMessage(builderForValue.build());
+            }
+            bitField0_ |= 0x00000020;
+            onChanged();
+            return this;
+          }
+          /**
+           * <pre>
+           * The search arguments used for grep.
+           * </pre>
+           *
+           * <code>optional .android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchArguments search_arguments = 6;</code>
+           */
+          public Builder mergeSearchArguments(com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchArguments value) {
+            if (searchArgumentsBuilder_ == null) {
+              if (((bitField0_ & 0x00000020) != 0) &&
+                searchArguments_ != null &&
+                searchArguments_ != com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchArguments.getDefaultInstance()) {
+                getSearchArgumentsBuilder().mergeFrom(value);
+              } else {
+                searchArguments_ = value;
+              }
+            } else {
+              searchArgumentsBuilder_.mergeFrom(value);
+            }
+            bitField0_ |= 0x00000020;
+            onChanged();
+            return this;
+          }
+          /**
+           * <pre>
+           * The search arguments used for grep.
+           * </pre>
+           *
+           * <code>optional .android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchArguments search_arguments = 6;</code>
+           */
+          public Builder clearSearchArguments() {
+            bitField0_ = (bitField0_ & ~0x00000020);
+            searchArguments_ = null;
+            if (searchArgumentsBuilder_ != null) {
+              searchArgumentsBuilder_.dispose();
+              searchArgumentsBuilder_ = null;
+            }
+            onChanged();
+            return this;
+          }
+          /**
+           * <pre>
+           * The search arguments used for grep.
+           * </pre>
+           *
+           * <code>optional .android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchArguments search_arguments = 6;</code>
+           */
+          public com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchArguments.Builder getSearchArgumentsBuilder() {
+            bitField0_ |= 0x00000020;
+            onChanged();
+            return getSearchArgumentsFieldBuilder().getBuilder();
+          }
+          /**
+           * <pre>
+           * The search arguments used for grep.
+           * </pre>
+           *
+           * <code>optional .android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchArguments search_arguments = 6;</code>
+           */
+          public com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchArgumentsOrBuilder getSearchArgumentsOrBuilder() {
+            if (searchArgumentsBuilder_ != null) {
+              return searchArgumentsBuilder_.getMessageOrBuilder();
+            } else {
+              return searchArguments_ == null ?
+                  com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchArguments.getDefaultInstance() : searchArguments_;
+            }
+          }
+          /**
+           * <pre>
+           * The search arguments used for grep.
+           * </pre>
+           *
+           * <code>optional .android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchArguments search_arguments = 6;</code>
+           */
+          private com.google.protobuf.SingleFieldBuilderV3<
+              com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchArguments, com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchArguments.Builder, com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchArgumentsOrBuilder> 
+              getSearchArgumentsFieldBuilder() {
+            if (searchArgumentsBuilder_ == null) {
+              searchArgumentsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                  com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchArguments, com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchArguments.Builder, com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchArgumentsOrBuilder>(
+                      getSearchArguments(),
+                      getParentForChildren(),
+                      isClean());
+              searchArguments_ = null;
+            }
+            return searchArgumentsBuilder_;
+          }
+
+          private com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchResponse response_;
+          private com.google.protobuf.SingleFieldBuilderV3<
+              com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchResponse, com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchResponse.Builder, com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchResponseOrBuilder> responseBuilder_;
+          /**
+           * <pre>
+           * The search response.
+           * </pre>
+           *
+           * <code>optional .android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchResponse response = 7;</code>
+           * @return Whether the response field is set.
+           */
+          public boolean hasResponse() {
+            return ((bitField0_ & 0x00000040) != 0);
+          }
+          /**
+           * <pre>
+           * The search response.
+           * </pre>
+           *
+           * <code>optional .android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchResponse response = 7;</code>
+           * @return The response.
+           */
+          public com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchResponse getResponse() {
+            if (responseBuilder_ == null) {
+              return response_ == null ? com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchResponse.getDefaultInstance() : response_;
+            } else {
+              return responseBuilder_.getMessage();
+            }
+          }
+          /**
+           * <pre>
+           * The search response.
+           * </pre>
+           *
+           * <code>optional .android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchResponse response = 7;</code>
+           */
+          public Builder setResponse(com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchResponse value) {
+            if (responseBuilder_ == null) {
+              if (value == null) {
+                throw new NullPointerException();
+              }
+              response_ = value;
+            } else {
+              responseBuilder_.setMessage(value);
+            }
+            bitField0_ |= 0x00000040;
+            onChanged();
+            return this;
+          }
+          /**
+           * <pre>
+           * The search response.
+           * </pre>
+           *
+           * <code>optional .android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchResponse response = 7;</code>
+           */
+          public Builder setResponse(
+              com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchResponse.Builder builderForValue) {
+            if (responseBuilder_ == null) {
+              response_ = builderForValue.build();
+            } else {
+              responseBuilder_.setMessage(builderForValue.build());
+            }
+            bitField0_ |= 0x00000040;
+            onChanged();
+            return this;
+          }
+          /**
+           * <pre>
+           * The search response.
+           * </pre>
+           *
+           * <code>optional .android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchResponse response = 7;</code>
+           */
+          public Builder mergeResponse(com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchResponse value) {
+            if (responseBuilder_ == null) {
+              if (((bitField0_ & 0x00000040) != 0) &&
+                response_ != null &&
+                response_ != com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchResponse.getDefaultInstance()) {
+                getResponseBuilder().mergeFrom(value);
+              } else {
+                response_ = value;
+              }
+            } else {
+              responseBuilder_.mergeFrom(value);
+            }
+            bitField0_ |= 0x00000040;
+            onChanged();
+            return this;
+          }
+          /**
+           * <pre>
+           * The search response.
+           * </pre>
+           *
+           * <code>optional .android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchResponse response = 7;</code>
+           */
+          public Builder clearResponse() {
+            bitField0_ = (bitField0_ & ~0x00000040);
+            response_ = null;
+            if (responseBuilder_ != null) {
+              responseBuilder_.dispose();
+              responseBuilder_ = null;
+            }
+            onChanged();
+            return this;
+          }
+          /**
+           * <pre>
+           * The search response.
+           * </pre>
+           *
+           * <code>optional .android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchResponse response = 7;</code>
+           */
+          public com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchResponse.Builder getResponseBuilder() {
+            bitField0_ |= 0x00000040;
+            onChanged();
+            return getResponseFieldBuilder().getBuilder();
+          }
+          /**
+           * <pre>
+           * The search response.
+           * </pre>
+           *
+           * <code>optional .android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchResponse response = 7;</code>
+           */
+          public com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchResponseOrBuilder getResponseOrBuilder() {
+            if (responseBuilder_ != null) {
+              return responseBuilder_.getMessageOrBuilder();
+            } else {
+              return response_ == null ?
+                  com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchResponse.getDefaultInstance() : response_;
+            }
+          }
+          /**
+           * <pre>
+           * The search response.
+           * </pre>
+           *
+           * <code>optional .android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchResponse response = 7;</code>
+           */
+          private com.google.protobuf.SingleFieldBuilderV3<
+              com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchResponse, com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchResponse.Builder, com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchResponseOrBuilder> 
+              getResponseFieldBuilder() {
+            if (responseBuilder_ == null) {
+              responseBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                  com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchResponse, com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchResponse.Builder, com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchResponseOrBuilder>(
+                      getResponse(),
+                      getParentForChildren(),
+                      isClean());
+              response_ = null;
+            }
+            return responseBuilder_;
+          }
+          @java.lang.Override
+          public final Builder setUnknownFields(
+              final com.google.protobuf.UnknownFieldSet unknownFields) {
+            return super.setUnknownFields(unknownFields);
+          }
+
+          @java.lang.Override
+          public final Builder mergeUnknownFields(
+              final com.google.protobuf.UnknownFieldSet unknownFields) {
+            return super.mergeUnknownFields(unknownFields);
+          }
+
+
+          // @@protoc_insertion_point(builder_scope:android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.GrepToolCallData)
+        }
+
+        // @@protoc_insertion_point(class_scope:android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.GrepToolCallData)
+        private static final com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.GrepToolCallData DEFAULT_INSTANCE;
+        static {
+          DEFAULT_INSTANCE = new com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.GrepToolCallData();
+        }
+
+        public static com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.GrepToolCallData getDefaultInstance() {
+          return DEFAULT_INSTANCE;
+        }
+
+        @java.lang.Deprecated public static final com.google.protobuf.Parser<GrepToolCallData>
+            PARSER = new com.google.protobuf.AbstractParser<GrepToolCallData>() {
+          @java.lang.Override
+          public GrepToolCallData parsePartialFrom(
+              com.google.protobuf.CodedInputStream input,
+              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+              throws com.google.protobuf.InvalidProtocolBufferException {
+            Builder builder = newBuilder();
+            try {
+              builder.mergeFrom(input, extensionRegistry);
+            } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+              throw e.setUnfinishedMessage(builder.buildPartial());
+            } catch (com.google.protobuf.UninitializedMessageException e) {
+              throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+            } catch (java.io.IOException e) {
+              throw new com.google.protobuf.InvalidProtocolBufferException(e)
+                  .setUnfinishedMessage(builder.buildPartial());
+            }
+            return builder.buildPartial();
+          }
+        };
+
+        public static com.google.protobuf.Parser<GrepToolCallData> parser() {
+          return PARSER;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Parser<GrepToolCallData> getParserForType() {
+          return PARSER;
+        }
+
+        @java.lang.Override
+        public com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.GrepToolCallData getDefaultInstanceForType() {
+          return DEFAULT_INSTANCE;
+        }
+
+      }
+
+      public interface RagToolCallDataOrBuilder extends
+          // @@protoc_insertion_point(interface_extends:android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.RagToolCallData)
+          com.google.protobuf.MessageOrBuilder {
+
+        /**
+         * <pre>
+         * The exception the code_search encountered.
+         * We will use "IndexerInactive" to indicate the indexer is not active.
+         * </pre>
+         *
+         * <code>optional string exception = 1;</code>
+         * @return Whether the exception field is set.
+         */
+        boolean hasException();
+        /**
+         * <pre>
+         * The exception the code_search encountered.
+         * We will use "IndexerInactive" to indicate the indexer is not active.
+         * </pre>
+         *
+         * <code>optional string exception = 1;</code>
+         * @return The exception.
+         */
+        java.lang.String getException();
+        /**
+         * <pre>
+         * The exception the code_search encountered.
+         * We will use "IndexerInactive" to indicate the indexer is not active.
+         * </pre>
+         *
+         * <code>optional string exception = 1;</code>
+         * @return The bytes for exception.
+         */
+        com.google.protobuf.ByteString
+            getExceptionBytes();
+
+        /**
+         * <pre>
+         * The number of files in code_search.
+         * </pre>
+         *
+         * <code>optional int32 result_count = 2;</code>
+         * @return Whether the resultCount field is set.
+         */
+        boolean hasResultCount();
+        /**
+         * <pre>
+         * The number of files in code_search.
+         * </pre>
+         *
+         * <code>optional int32 result_count = 2;</code>
+         * @return The resultCount.
+         */
+        int getResultCount();
+
+        /**
+         * <pre>
+         * The number of resource files code_search returned.
+         * </pre>
+         *
+         * <code>optional int32 resource_count = 3;</code>
+         * @return Whether the resourceCount field is set.
+         */
+        boolean hasResourceCount();
+        /**
+         * <pre>
+         * The number of resource files code_search returned.
+         * </pre>
+         *
+         * <code>optional int32 resource_count = 3;</code>
+         * @return The resourceCount.
+         */
+        int getResourceCount();
+
+        /**
+         * <pre>
+         * The number of files from out/ and builds/ that code_search returned.
+         * </pre>
+         *
+         * <code>optional int32 generated_files = 4;</code>
+         * @return Whether the generatedFiles field is set.
+         */
+        boolean hasGeneratedFiles();
+        /**
+         * <pre>
+         * The number of files from out/ and builds/ that code_search returned.
+         * </pre>
+         *
+         * <code>optional int32 generated_files = 4;</code>
+         * @return The generatedFiles.
+         */
+        int getGeneratedFiles();
+
+        /**
+         * <pre>
+         * The number of docs (a doc is a file in the current RAG indexer) that
+         * are indexed.
+         * </pre>
+         *
+         * <code>optional int32 total_indexed_docs = 5;</code>
+         * @return Whether the totalIndexedDocs field is set.
+         */
+        boolean hasTotalIndexedDocs();
+        /**
+         * <pre>
+         * The number of docs (a doc is a file in the current RAG indexer) that
+         * are indexed.
+         * </pre>
+         *
+         * <code>optional int32 total_indexed_docs = 5;</code>
+         * @return The totalIndexedDocs.
+         */
+        int getTotalIndexedDocs();
+
+        /**
+         * <pre>
+         * The search response.
+         * </pre>
+         *
+         * <code>optional .android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchResponse response = 6;</code>
+         * @return Whether the response field is set.
+         */
+        boolean hasResponse();
+        /**
+         * <pre>
+         * The search response.
+         * </pre>
+         *
+         * <code>optional .android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchResponse response = 6;</code>
+         * @return The response.
+         */
+        com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchResponse getResponse();
+        /**
+         * <pre>
+         * The search response.
+         * </pre>
+         *
+         * <code>optional .android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchResponse response = 6;</code>
+         */
+        com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchResponseOrBuilder getResponseOrBuilder();
+      }
+      /**
+       * Protobuf type {@code android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.RagToolCallData}
+       */
+      public static final class RagToolCallData extends
+          com.google.protobuf.GeneratedMessageV3 implements
+          // @@protoc_insertion_point(message_implements:android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.RagToolCallData)
+          RagToolCallDataOrBuilder {
+      private static final long serialVersionUID = 0L;
+        // Use RagToolCallData.newBuilder() to construct.
+        private RagToolCallData(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+          super(builder);
+        }
+        private RagToolCallData() {
+          exception_ = "";
+        }
+
+        @java.lang.Override
+        @SuppressWarnings({"unused"})
+        protected java.lang.Object newInstance(
+            UnusedPrivateParameter unused) {
+          return new RagToolCallData();
+        }
+
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_GeminiTelemetryEvent_AgentEvent_ToolExecutionSpan_RagToolCallData_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_GeminiTelemetryEvent_AgentEvent_ToolExecutionSpan_RagToolCallData_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.RagToolCallData.class, com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.RagToolCallData.Builder.class);
+        }
+
+        private int bitField0_;
+        public static final int EXCEPTION_FIELD_NUMBER = 1;
+        @SuppressWarnings("serial")
+        private volatile java.lang.Object exception_ = "";
+        /**
+         * <pre>
+         * The exception the code_search encountered.
+         * We will use "IndexerInactive" to indicate the indexer is not active.
+         * </pre>
+         *
+         * <code>optional string exception = 1;</code>
+         * @return Whether the exception field is set.
+         */
+        @java.lang.Override
+        public boolean hasException() {
+          return ((bitField0_ & 0x00000001) != 0);
+        }
+        /**
+         * <pre>
+         * The exception the code_search encountered.
+         * We will use "IndexerInactive" to indicate the indexer is not active.
+         * </pre>
+         *
+         * <code>optional string exception = 1;</code>
+         * @return The exception.
+         */
+        @java.lang.Override
+        public java.lang.String getException() {
+          java.lang.Object ref = exception_;
+          if (ref instanceof java.lang.String) {
+            return (java.lang.String) ref;
+          } else {
+            com.google.protobuf.ByteString bs = 
+                (com.google.protobuf.ByteString) ref;
+            java.lang.String s = bs.toStringUtf8();
+            if (bs.isValidUtf8()) {
+              exception_ = s;
+            }
+            return s;
+          }
+        }
+        /**
+         * <pre>
+         * The exception the code_search encountered.
+         * We will use "IndexerInactive" to indicate the indexer is not active.
+         * </pre>
+         *
+         * <code>optional string exception = 1;</code>
+         * @return The bytes for exception.
+         */
+        @java.lang.Override
+        public com.google.protobuf.ByteString
+            getExceptionBytes() {
+          java.lang.Object ref = exception_;
+          if (ref instanceof java.lang.String) {
+            com.google.protobuf.ByteString b = 
+                com.google.protobuf.ByteString.copyFromUtf8(
+                    (java.lang.String) ref);
+            exception_ = b;
+            return b;
+          } else {
+            return (com.google.protobuf.ByteString) ref;
+          }
+        }
+
+        public static final int RESULT_COUNT_FIELD_NUMBER = 2;
+        private int resultCount_ = 0;
+        /**
+         * <pre>
+         * The number of files in code_search.
+         * </pre>
+         *
+         * <code>optional int32 result_count = 2;</code>
+         * @return Whether the resultCount field is set.
+         */
+        @java.lang.Override
+        public boolean hasResultCount() {
+          return ((bitField0_ & 0x00000002) != 0);
+        }
+        /**
+         * <pre>
+         * The number of files in code_search.
+         * </pre>
+         *
+         * <code>optional int32 result_count = 2;</code>
+         * @return The resultCount.
+         */
+        @java.lang.Override
+        public int getResultCount() {
+          return resultCount_;
+        }
+
+        public static final int RESOURCE_COUNT_FIELD_NUMBER = 3;
+        private int resourceCount_ = 0;
+        /**
+         * <pre>
+         * The number of resource files code_search returned.
+         * </pre>
+         *
+         * <code>optional int32 resource_count = 3;</code>
+         * @return Whether the resourceCount field is set.
+         */
+        @java.lang.Override
+        public boolean hasResourceCount() {
+          return ((bitField0_ & 0x00000004) != 0);
+        }
+        /**
+         * <pre>
+         * The number of resource files code_search returned.
+         * </pre>
+         *
+         * <code>optional int32 resource_count = 3;</code>
+         * @return The resourceCount.
+         */
+        @java.lang.Override
+        public int getResourceCount() {
+          return resourceCount_;
+        }
+
+        public static final int GENERATED_FILES_FIELD_NUMBER = 4;
+        private int generatedFiles_ = 0;
+        /**
+         * <pre>
+         * The number of files from out/ and builds/ that code_search returned.
+         * </pre>
+         *
+         * <code>optional int32 generated_files = 4;</code>
+         * @return Whether the generatedFiles field is set.
+         */
+        @java.lang.Override
+        public boolean hasGeneratedFiles() {
+          return ((bitField0_ & 0x00000008) != 0);
+        }
+        /**
+         * <pre>
+         * The number of files from out/ and builds/ that code_search returned.
+         * </pre>
+         *
+         * <code>optional int32 generated_files = 4;</code>
+         * @return The generatedFiles.
+         */
+        @java.lang.Override
+        public int getGeneratedFiles() {
+          return generatedFiles_;
+        }
+
+        public static final int TOTAL_INDEXED_DOCS_FIELD_NUMBER = 5;
+        private int totalIndexedDocs_ = 0;
+        /**
+         * <pre>
+         * The number of docs (a doc is a file in the current RAG indexer) that
+         * are indexed.
+         * </pre>
+         *
+         * <code>optional int32 total_indexed_docs = 5;</code>
+         * @return Whether the totalIndexedDocs field is set.
+         */
+        @java.lang.Override
+        public boolean hasTotalIndexedDocs() {
+          return ((bitField0_ & 0x00000010) != 0);
+        }
+        /**
+         * <pre>
+         * The number of docs (a doc is a file in the current RAG indexer) that
+         * are indexed.
+         * </pre>
+         *
+         * <code>optional int32 total_indexed_docs = 5;</code>
+         * @return The totalIndexedDocs.
+         */
+        @java.lang.Override
+        public int getTotalIndexedDocs() {
+          return totalIndexedDocs_;
+        }
+
+        public static final int RESPONSE_FIELD_NUMBER = 6;
+        private com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchResponse response_;
+        /**
+         * <pre>
+         * The search response.
+         * </pre>
+         *
+         * <code>optional .android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchResponse response = 6;</code>
+         * @return Whether the response field is set.
+         */
+        @java.lang.Override
+        public boolean hasResponse() {
+          return ((bitField0_ & 0x00000020) != 0);
+        }
+        /**
+         * <pre>
+         * The search response.
+         * </pre>
+         *
+         * <code>optional .android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchResponse response = 6;</code>
+         * @return The response.
+         */
+        @java.lang.Override
+        public com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchResponse getResponse() {
+          return response_ == null ? com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchResponse.getDefaultInstance() : response_;
+        }
+        /**
+         * <pre>
+         * The search response.
+         * </pre>
+         *
+         * <code>optional .android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchResponse response = 6;</code>
+         */
+        @java.lang.Override
+        public com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchResponseOrBuilder getResponseOrBuilder() {
+          return response_ == null ? com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchResponse.getDefaultInstance() : response_;
+        }
+
+        private byte memoizedIsInitialized = -1;
+        @java.lang.Override
+        public final boolean isInitialized() {
+          byte isInitialized = memoizedIsInitialized;
+          if (isInitialized == 1) return true;
+          if (isInitialized == 0) return false;
+
+          memoizedIsInitialized = 1;
+          return true;
+        }
+
+        @java.lang.Override
+        public void writeTo(com.google.protobuf.CodedOutputStream output)
+                            throws java.io.IOException {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            com.google.protobuf.GeneratedMessageV3.writeString(output, 1, exception_);
+          }
+          if (((bitField0_ & 0x00000002) != 0)) {
+            output.writeInt32(2, resultCount_);
+          }
+          if (((bitField0_ & 0x00000004) != 0)) {
+            output.writeInt32(3, resourceCount_);
+          }
+          if (((bitField0_ & 0x00000008) != 0)) {
+            output.writeInt32(4, generatedFiles_);
+          }
+          if (((bitField0_ & 0x00000010) != 0)) {
+            output.writeInt32(5, totalIndexedDocs_);
+          }
+          if (((bitField0_ & 0x00000020) != 0)) {
+            output.writeMessage(6, getResponse());
+          }
+          getUnknownFields().writeTo(output);
+        }
+
+        @java.lang.Override
+        public int getSerializedSize() {
+          int size = memoizedSize;
+          if (size != -1) return size;
+
+          size = 0;
+          if (((bitField0_ & 0x00000001) != 0)) {
+            size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, exception_);
+          }
+          if (((bitField0_ & 0x00000002) != 0)) {
+            size += com.google.protobuf.CodedOutputStream
+              .computeInt32Size(2, resultCount_);
+          }
+          if (((bitField0_ & 0x00000004) != 0)) {
+            size += com.google.protobuf.CodedOutputStream
+              .computeInt32Size(3, resourceCount_);
+          }
+          if (((bitField0_ & 0x00000008) != 0)) {
+            size += com.google.protobuf.CodedOutputStream
+              .computeInt32Size(4, generatedFiles_);
+          }
+          if (((bitField0_ & 0x00000010) != 0)) {
+            size += com.google.protobuf.CodedOutputStream
+              .computeInt32Size(5, totalIndexedDocs_);
+          }
+          if (((bitField0_ & 0x00000020) != 0)) {
+            size += com.google.protobuf.CodedOutputStream
+              .computeMessageSize(6, getResponse());
+          }
+          size += getUnknownFields().getSerializedSize();
+          memoizedSize = size;
+          return size;
+        }
+
+        @java.lang.Override
+        public boolean equals(final java.lang.Object obj) {
+          if (obj == this) {
+           return true;
+          }
+          if (!(obj instanceof com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.RagToolCallData)) {
+            return super.equals(obj);
+          }
+          com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.RagToolCallData other = (com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.RagToolCallData) obj;
+
+          if (hasException() != other.hasException()) return false;
+          if (hasException()) {
+            if (!getException()
+                .equals(other.getException())) return false;
+          }
+          if (hasResultCount() != other.hasResultCount()) return false;
+          if (hasResultCount()) {
+            if (getResultCount()
+                != other.getResultCount()) return false;
+          }
+          if (hasResourceCount() != other.hasResourceCount()) return false;
+          if (hasResourceCount()) {
+            if (getResourceCount()
+                != other.getResourceCount()) return false;
+          }
+          if (hasGeneratedFiles() != other.hasGeneratedFiles()) return false;
+          if (hasGeneratedFiles()) {
+            if (getGeneratedFiles()
+                != other.getGeneratedFiles()) return false;
+          }
+          if (hasTotalIndexedDocs() != other.hasTotalIndexedDocs()) return false;
+          if (hasTotalIndexedDocs()) {
+            if (getTotalIndexedDocs()
+                != other.getTotalIndexedDocs()) return false;
+          }
+          if (hasResponse() != other.hasResponse()) return false;
+          if (hasResponse()) {
+            if (!getResponse()
+                .equals(other.getResponse())) return false;
+          }
+          if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+          return true;
+        }
+
+        @java.lang.Override
+        public int hashCode() {
+          if (memoizedHashCode != 0) {
+            return memoizedHashCode;
+          }
+          int hash = 41;
+          hash = (19 * hash) + getDescriptor().hashCode();
+          if (hasException()) {
+            hash = (37 * hash) + EXCEPTION_FIELD_NUMBER;
+            hash = (53 * hash) + getException().hashCode();
+          }
+          if (hasResultCount()) {
+            hash = (37 * hash) + RESULT_COUNT_FIELD_NUMBER;
+            hash = (53 * hash) + getResultCount();
+          }
+          if (hasResourceCount()) {
+            hash = (37 * hash) + RESOURCE_COUNT_FIELD_NUMBER;
+            hash = (53 * hash) + getResourceCount();
+          }
+          if (hasGeneratedFiles()) {
+            hash = (37 * hash) + GENERATED_FILES_FIELD_NUMBER;
+            hash = (53 * hash) + getGeneratedFiles();
+          }
+          if (hasTotalIndexedDocs()) {
+            hash = (37 * hash) + TOTAL_INDEXED_DOCS_FIELD_NUMBER;
+            hash = (53 * hash) + getTotalIndexedDocs();
+          }
+          if (hasResponse()) {
+            hash = (37 * hash) + RESPONSE_FIELD_NUMBER;
+            hash = (53 * hash) + getResponse().hashCode();
+          }
+          hash = (29 * hash) + getUnknownFields().hashCode();
+          memoizedHashCode = hash;
+          return hash;
+        }
+
+        public static com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.RagToolCallData parseFrom(
+            java.nio.ByteBuffer data)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return PARSER.parseFrom(data);
+        }
+        public static com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.RagToolCallData parseFrom(
+            java.nio.ByteBuffer data,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return PARSER.parseFrom(data, extensionRegistry);
+        }
+        public static com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.RagToolCallData parseFrom(
+            com.google.protobuf.ByteString data)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return PARSER.parseFrom(data);
+        }
+        public static com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.RagToolCallData parseFrom(
+            com.google.protobuf.ByteString data,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return PARSER.parseFrom(data, extensionRegistry);
+        }
+        public static com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.RagToolCallData parseFrom(byte[] data)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return PARSER.parseFrom(data);
+        }
+        public static com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.RagToolCallData parseFrom(
+            byte[] data,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return PARSER.parseFrom(data, extensionRegistry);
+        }
+        public static com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.RagToolCallData parseFrom(java.io.InputStream input)
+            throws java.io.IOException {
+          return com.google.protobuf.GeneratedMessageV3
+              .parseWithIOException(PARSER, input);
+        }
+        public static com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.RagToolCallData parseFrom(
+            java.io.InputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          return com.google.protobuf.GeneratedMessageV3
+              .parseWithIOException(PARSER, input, extensionRegistry);
+        }
+        public static com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.RagToolCallData parseDelimitedFrom(java.io.InputStream input)
+            throws java.io.IOException {
+          return com.google.protobuf.GeneratedMessageV3
+              .parseDelimitedWithIOException(PARSER, input);
+        }
+        public static com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.RagToolCallData parseDelimitedFrom(
+            java.io.InputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          return com.google.protobuf.GeneratedMessageV3
+              .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+        }
+        public static com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.RagToolCallData parseFrom(
+            com.google.protobuf.CodedInputStream input)
+            throws java.io.IOException {
+          return com.google.protobuf.GeneratedMessageV3
+              .parseWithIOException(PARSER, input);
+        }
+        public static com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.RagToolCallData parseFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          return com.google.protobuf.GeneratedMessageV3
+              .parseWithIOException(PARSER, input, extensionRegistry);
+        }
+
+        @java.lang.Override
+        public Builder newBuilderForType() { return newBuilder(); }
+        public static Builder newBuilder() {
+          return DEFAULT_INSTANCE.toBuilder();
+        }
+        public static Builder newBuilder(com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.RagToolCallData prototype) {
+          return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+        }
+        @java.lang.Override
+        public Builder toBuilder() {
+          return this == DEFAULT_INSTANCE
+              ? new Builder() : new Builder().mergeFrom(this);
+        }
+
+        @java.lang.Override
+        protected Builder newBuilderForType(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          Builder builder = new Builder(parent);
+          return builder;
+        }
+        /**
+         * Protobuf type {@code android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.RagToolCallData}
+         */
+        public static final class Builder extends
+            com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+            // @@protoc_insertion_point(builder_implements:android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.RagToolCallData)
+            com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.RagToolCallDataOrBuilder {
+          public static final com.google.protobuf.Descriptors.Descriptor
+              getDescriptor() {
+            return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_GeminiTelemetryEvent_AgentEvent_ToolExecutionSpan_RagToolCallData_descriptor;
+          }
+
+          @java.lang.Override
+          protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+              internalGetFieldAccessorTable() {
+            return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_GeminiTelemetryEvent_AgentEvent_ToolExecutionSpan_RagToolCallData_fieldAccessorTable
+                .ensureFieldAccessorsInitialized(
+                    com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.RagToolCallData.class, com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.RagToolCallData.Builder.class);
+          }
+
+          // Construct using com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.RagToolCallData.newBuilder()
+          private Builder() {
+            maybeForceBuilderInitialization();
+          }
+
+          private Builder(
+              com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+            super(parent);
+            maybeForceBuilderInitialization();
+          }
+          private void maybeForceBuilderInitialization() {
+            if (com.google.protobuf.GeneratedMessageV3
+                    .alwaysUseFieldBuilders) {
+              getResponseFieldBuilder();
+            }
+          }
+          @java.lang.Override
+          public Builder clear() {
+            super.clear();
+            bitField0_ = 0;
+            exception_ = "";
+            resultCount_ = 0;
+            resourceCount_ = 0;
+            generatedFiles_ = 0;
+            totalIndexedDocs_ = 0;
+            response_ = null;
+            if (responseBuilder_ != null) {
+              responseBuilder_.dispose();
+              responseBuilder_ = null;
+            }
+            return this;
+          }
+
+          @java.lang.Override
+          public com.google.protobuf.Descriptors.Descriptor
+              getDescriptorForType() {
+            return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_GeminiTelemetryEvent_AgentEvent_ToolExecutionSpan_RagToolCallData_descriptor;
+          }
+
+          @java.lang.Override
+          public com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.RagToolCallData getDefaultInstanceForType() {
+            return com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.RagToolCallData.getDefaultInstance();
+          }
+
+          @java.lang.Override
+          public com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.RagToolCallData build() {
+            com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.RagToolCallData result = buildPartial();
+            if (!result.isInitialized()) {
+              throw newUninitializedMessageException(result);
+            }
+            return result;
+          }
+
+          @java.lang.Override
+          public com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.RagToolCallData buildPartial() {
+            com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.RagToolCallData result = new com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.RagToolCallData(this);
+            if (bitField0_ != 0) { buildPartial0(result); }
+            onBuilt();
+            return result;
+          }
+
+          private void buildPartial0(com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.RagToolCallData result) {
+            int from_bitField0_ = bitField0_;
+            int to_bitField0_ = 0;
+            if (((from_bitField0_ & 0x00000001) != 0)) {
+              result.exception_ = exception_;
+              to_bitField0_ |= 0x00000001;
+            }
+            if (((from_bitField0_ & 0x00000002) != 0)) {
+              result.resultCount_ = resultCount_;
+              to_bitField0_ |= 0x00000002;
+            }
+            if (((from_bitField0_ & 0x00000004) != 0)) {
+              result.resourceCount_ = resourceCount_;
+              to_bitField0_ |= 0x00000004;
+            }
+            if (((from_bitField0_ & 0x00000008) != 0)) {
+              result.generatedFiles_ = generatedFiles_;
+              to_bitField0_ |= 0x00000008;
+            }
+            if (((from_bitField0_ & 0x00000010) != 0)) {
+              result.totalIndexedDocs_ = totalIndexedDocs_;
+              to_bitField0_ |= 0x00000010;
+            }
+            if (((from_bitField0_ & 0x00000020) != 0)) {
+              result.response_ = responseBuilder_ == null
+                  ? response_
+                  : responseBuilder_.build();
+              to_bitField0_ |= 0x00000020;
+            }
+            result.bitField0_ |= to_bitField0_;
+          }
+
+          @java.lang.Override
+          public Builder mergeFrom(com.google.protobuf.Message other) {
+            if (other instanceof com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.RagToolCallData) {
+              return mergeFrom((com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.RagToolCallData)other);
+            } else {
+              super.mergeFrom(other);
+              return this;
+            }
+          }
+
+          public Builder mergeFrom(com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.RagToolCallData other) {
+            if (other == com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.RagToolCallData.getDefaultInstance()) return this;
+            if (other.hasException()) {
+              exception_ = other.exception_;
+              bitField0_ |= 0x00000001;
+              onChanged();
+            }
+            if (other.hasResultCount()) {
+              setResultCount(other.getResultCount());
+            }
+            if (other.hasResourceCount()) {
+              setResourceCount(other.getResourceCount());
+            }
+            if (other.hasGeneratedFiles()) {
+              setGeneratedFiles(other.getGeneratedFiles());
+            }
+            if (other.hasTotalIndexedDocs()) {
+              setTotalIndexedDocs(other.getTotalIndexedDocs());
+            }
+            if (other.hasResponse()) {
+              mergeResponse(other.getResponse());
+            }
+            this.mergeUnknownFields(other.getUnknownFields());
+            onChanged();
+            return this;
+          }
+
+          @java.lang.Override
+          public final boolean isInitialized() {
+            return true;
+          }
+
+          @java.lang.Override
+          public Builder mergeFrom(
+              com.google.protobuf.CodedInputStream input,
+              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+              throws java.io.IOException {
+            if (extensionRegistry == null) {
+              throw new java.lang.NullPointerException();
+            }
+            try {
+              boolean done = false;
+              while (!done) {
+                int tag = input.readTag();
+                switch (tag) {
+                  case 0:
+                    done = true;
+                    break;
+                  case 10: {
+                    exception_ = input.readBytes();
+                    bitField0_ |= 0x00000001;
+                    break;
+                  } // case 10
+                  case 16: {
+                    resultCount_ = input.readInt32();
+                    bitField0_ |= 0x00000002;
+                    break;
+                  } // case 16
+                  case 24: {
+                    resourceCount_ = input.readInt32();
+                    bitField0_ |= 0x00000004;
+                    break;
+                  } // case 24
+                  case 32: {
+                    generatedFiles_ = input.readInt32();
+                    bitField0_ |= 0x00000008;
+                    break;
+                  } // case 32
+                  case 40: {
+                    totalIndexedDocs_ = input.readInt32();
+                    bitField0_ |= 0x00000010;
+                    break;
+                  } // case 40
+                  case 50: {
+                    input.readMessage(
+                        getResponseFieldBuilder().getBuilder(),
+                        extensionRegistry);
+                    bitField0_ |= 0x00000020;
+                    break;
+                  } // case 50
+                  default: {
+                    if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                      done = true; // was an endgroup tag
+                    }
+                    break;
+                  } // default:
+                } // switch (tag)
+              } // while (!done)
+            } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+              throw e.unwrapIOException();
+            } finally {
+              onChanged();
+            } // finally
+            return this;
+          }
+          private int bitField0_;
+
+          private java.lang.Object exception_ = "";
+          /**
+           * <pre>
+           * The exception the code_search encountered.
+           * We will use "IndexerInactive" to indicate the indexer is not active.
+           * </pre>
+           *
+           * <code>optional string exception = 1;</code>
+           * @return Whether the exception field is set.
+           */
+          public boolean hasException() {
+            return ((bitField0_ & 0x00000001) != 0);
+          }
+          /**
+           * <pre>
+           * The exception the code_search encountered.
+           * We will use "IndexerInactive" to indicate the indexer is not active.
+           * </pre>
+           *
+           * <code>optional string exception = 1;</code>
+           * @return The exception.
+           */
+          public java.lang.String getException() {
+            java.lang.Object ref = exception_;
+            if (!(ref instanceof java.lang.String)) {
+              com.google.protobuf.ByteString bs =
+                  (com.google.protobuf.ByteString) ref;
+              java.lang.String s = bs.toStringUtf8();
+              if (bs.isValidUtf8()) {
+                exception_ = s;
+              }
+              return s;
+            } else {
+              return (java.lang.String) ref;
+            }
+          }
+          /**
+           * <pre>
+           * The exception the code_search encountered.
+           * We will use "IndexerInactive" to indicate the indexer is not active.
+           * </pre>
+           *
+           * <code>optional string exception = 1;</code>
+           * @return The bytes for exception.
+           */
+          public com.google.protobuf.ByteString
+              getExceptionBytes() {
+            java.lang.Object ref = exception_;
+            if (ref instanceof String) {
+              com.google.protobuf.ByteString b = 
+                  com.google.protobuf.ByteString.copyFromUtf8(
+                      (java.lang.String) ref);
+              exception_ = b;
+              return b;
+            } else {
+              return (com.google.protobuf.ByteString) ref;
+            }
+          }
+          /**
+           * <pre>
+           * The exception the code_search encountered.
+           * We will use "IndexerInactive" to indicate the indexer is not active.
+           * </pre>
+           *
+           * <code>optional string exception = 1;</code>
+           * @param value The exception to set.
+           * @return This builder for chaining.
+           */
+          public Builder setException(
+              java.lang.String value) {
+            if (value == null) { throw new NullPointerException(); }
+            exception_ = value;
+            bitField0_ |= 0x00000001;
+            onChanged();
+            return this;
+          }
+          /**
+           * <pre>
+           * The exception the code_search encountered.
+           * We will use "IndexerInactive" to indicate the indexer is not active.
+           * </pre>
+           *
+           * <code>optional string exception = 1;</code>
+           * @return This builder for chaining.
+           */
+          public Builder clearException() {
+            exception_ = getDefaultInstance().getException();
+            bitField0_ = (bitField0_ & ~0x00000001);
+            onChanged();
+            return this;
+          }
+          /**
+           * <pre>
+           * The exception the code_search encountered.
+           * We will use "IndexerInactive" to indicate the indexer is not active.
+           * </pre>
+           *
+           * <code>optional string exception = 1;</code>
+           * @param value The bytes for exception to set.
+           * @return This builder for chaining.
+           */
+          public Builder setExceptionBytes(
+              com.google.protobuf.ByteString value) {
+            if (value == null) { throw new NullPointerException(); }
+            exception_ = value;
+            bitField0_ |= 0x00000001;
+            onChanged();
+            return this;
+          }
+
+          private int resultCount_ ;
+          /**
+           * <pre>
+           * The number of files in code_search.
+           * </pre>
+           *
+           * <code>optional int32 result_count = 2;</code>
+           * @return Whether the resultCount field is set.
+           */
+          @java.lang.Override
+          public boolean hasResultCount() {
+            return ((bitField0_ & 0x00000002) != 0);
+          }
+          /**
+           * <pre>
+           * The number of files in code_search.
+           * </pre>
+           *
+           * <code>optional int32 result_count = 2;</code>
+           * @return The resultCount.
+           */
+          @java.lang.Override
+          public int getResultCount() {
+            return resultCount_;
+          }
+          /**
+           * <pre>
+           * The number of files in code_search.
+           * </pre>
+           *
+           * <code>optional int32 result_count = 2;</code>
+           * @param value The resultCount to set.
+           * @return This builder for chaining.
+           */
+          public Builder setResultCount(int value) {
+
+            resultCount_ = value;
+            bitField0_ |= 0x00000002;
+            onChanged();
+            return this;
+          }
+          /**
+           * <pre>
+           * The number of files in code_search.
+           * </pre>
+           *
+           * <code>optional int32 result_count = 2;</code>
+           * @return This builder for chaining.
+           */
+          public Builder clearResultCount() {
+            bitField0_ = (bitField0_ & ~0x00000002);
+            resultCount_ = 0;
+            onChanged();
+            return this;
+          }
+
+          private int resourceCount_ ;
+          /**
+           * <pre>
+           * The number of resource files code_search returned.
+           * </pre>
+           *
+           * <code>optional int32 resource_count = 3;</code>
+           * @return Whether the resourceCount field is set.
+           */
+          @java.lang.Override
+          public boolean hasResourceCount() {
+            return ((bitField0_ & 0x00000004) != 0);
+          }
+          /**
+           * <pre>
+           * The number of resource files code_search returned.
+           * </pre>
+           *
+           * <code>optional int32 resource_count = 3;</code>
+           * @return The resourceCount.
+           */
+          @java.lang.Override
+          public int getResourceCount() {
+            return resourceCount_;
+          }
+          /**
+           * <pre>
+           * The number of resource files code_search returned.
+           * </pre>
+           *
+           * <code>optional int32 resource_count = 3;</code>
+           * @param value The resourceCount to set.
+           * @return This builder for chaining.
+           */
+          public Builder setResourceCount(int value) {
+
+            resourceCount_ = value;
+            bitField0_ |= 0x00000004;
+            onChanged();
+            return this;
+          }
+          /**
+           * <pre>
+           * The number of resource files code_search returned.
+           * </pre>
+           *
+           * <code>optional int32 resource_count = 3;</code>
+           * @return This builder for chaining.
+           */
+          public Builder clearResourceCount() {
+            bitField0_ = (bitField0_ & ~0x00000004);
+            resourceCount_ = 0;
+            onChanged();
+            return this;
+          }
+
+          private int generatedFiles_ ;
+          /**
+           * <pre>
+           * The number of files from out/ and builds/ that code_search returned.
+           * </pre>
+           *
+           * <code>optional int32 generated_files = 4;</code>
+           * @return Whether the generatedFiles field is set.
+           */
+          @java.lang.Override
+          public boolean hasGeneratedFiles() {
+            return ((bitField0_ & 0x00000008) != 0);
+          }
+          /**
+           * <pre>
+           * The number of files from out/ and builds/ that code_search returned.
+           * </pre>
+           *
+           * <code>optional int32 generated_files = 4;</code>
+           * @return The generatedFiles.
+           */
+          @java.lang.Override
+          public int getGeneratedFiles() {
+            return generatedFiles_;
+          }
+          /**
+           * <pre>
+           * The number of files from out/ and builds/ that code_search returned.
+           * </pre>
+           *
+           * <code>optional int32 generated_files = 4;</code>
+           * @param value The generatedFiles to set.
+           * @return This builder for chaining.
+           */
+          public Builder setGeneratedFiles(int value) {
+
+            generatedFiles_ = value;
+            bitField0_ |= 0x00000008;
+            onChanged();
+            return this;
+          }
+          /**
+           * <pre>
+           * The number of files from out/ and builds/ that code_search returned.
+           * </pre>
+           *
+           * <code>optional int32 generated_files = 4;</code>
+           * @return This builder for chaining.
+           */
+          public Builder clearGeneratedFiles() {
+            bitField0_ = (bitField0_ & ~0x00000008);
+            generatedFiles_ = 0;
+            onChanged();
+            return this;
+          }
+
+          private int totalIndexedDocs_ ;
+          /**
+           * <pre>
+           * The number of docs (a doc is a file in the current RAG indexer) that
+           * are indexed.
+           * </pre>
+           *
+           * <code>optional int32 total_indexed_docs = 5;</code>
+           * @return Whether the totalIndexedDocs field is set.
+           */
+          @java.lang.Override
+          public boolean hasTotalIndexedDocs() {
+            return ((bitField0_ & 0x00000010) != 0);
+          }
+          /**
+           * <pre>
+           * The number of docs (a doc is a file in the current RAG indexer) that
+           * are indexed.
+           * </pre>
+           *
+           * <code>optional int32 total_indexed_docs = 5;</code>
+           * @return The totalIndexedDocs.
+           */
+          @java.lang.Override
+          public int getTotalIndexedDocs() {
+            return totalIndexedDocs_;
+          }
+          /**
+           * <pre>
+           * The number of docs (a doc is a file in the current RAG indexer) that
+           * are indexed.
+           * </pre>
+           *
+           * <code>optional int32 total_indexed_docs = 5;</code>
+           * @param value The totalIndexedDocs to set.
+           * @return This builder for chaining.
+           */
+          public Builder setTotalIndexedDocs(int value) {
+
+            totalIndexedDocs_ = value;
+            bitField0_ |= 0x00000010;
+            onChanged();
+            return this;
+          }
+          /**
+           * <pre>
+           * The number of docs (a doc is a file in the current RAG indexer) that
+           * are indexed.
+           * </pre>
+           *
+           * <code>optional int32 total_indexed_docs = 5;</code>
+           * @return This builder for chaining.
+           */
+          public Builder clearTotalIndexedDocs() {
+            bitField0_ = (bitField0_ & ~0x00000010);
+            totalIndexedDocs_ = 0;
+            onChanged();
+            return this;
+          }
+
+          private com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchResponse response_;
+          private com.google.protobuf.SingleFieldBuilderV3<
+              com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchResponse, com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchResponse.Builder, com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchResponseOrBuilder> responseBuilder_;
+          /**
+           * <pre>
+           * The search response.
+           * </pre>
+           *
+           * <code>optional .android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchResponse response = 6;</code>
+           * @return Whether the response field is set.
+           */
+          public boolean hasResponse() {
+            return ((bitField0_ & 0x00000020) != 0);
+          }
+          /**
+           * <pre>
+           * The search response.
+           * </pre>
+           *
+           * <code>optional .android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchResponse response = 6;</code>
+           * @return The response.
+           */
+          public com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchResponse getResponse() {
+            if (responseBuilder_ == null) {
+              return response_ == null ? com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchResponse.getDefaultInstance() : response_;
+            } else {
+              return responseBuilder_.getMessage();
+            }
+          }
+          /**
+           * <pre>
+           * The search response.
+           * </pre>
+           *
+           * <code>optional .android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchResponse response = 6;</code>
+           */
+          public Builder setResponse(com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchResponse value) {
+            if (responseBuilder_ == null) {
+              if (value == null) {
+                throw new NullPointerException();
+              }
+              response_ = value;
+            } else {
+              responseBuilder_.setMessage(value);
+            }
+            bitField0_ |= 0x00000020;
+            onChanged();
+            return this;
+          }
+          /**
+           * <pre>
+           * The search response.
+           * </pre>
+           *
+           * <code>optional .android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchResponse response = 6;</code>
+           */
+          public Builder setResponse(
+              com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchResponse.Builder builderForValue) {
+            if (responseBuilder_ == null) {
+              response_ = builderForValue.build();
+            } else {
+              responseBuilder_.setMessage(builderForValue.build());
+            }
+            bitField0_ |= 0x00000020;
+            onChanged();
+            return this;
+          }
+          /**
+           * <pre>
+           * The search response.
+           * </pre>
+           *
+           * <code>optional .android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchResponse response = 6;</code>
+           */
+          public Builder mergeResponse(com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchResponse value) {
+            if (responseBuilder_ == null) {
+              if (((bitField0_ & 0x00000020) != 0) &&
+                response_ != null &&
+                response_ != com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchResponse.getDefaultInstance()) {
+                getResponseBuilder().mergeFrom(value);
+              } else {
+                response_ = value;
+              }
+            } else {
+              responseBuilder_.mergeFrom(value);
+            }
+            bitField0_ |= 0x00000020;
+            onChanged();
+            return this;
+          }
+          /**
+           * <pre>
+           * The search response.
+           * </pre>
+           *
+           * <code>optional .android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchResponse response = 6;</code>
+           */
+          public Builder clearResponse() {
+            bitField0_ = (bitField0_ & ~0x00000020);
+            response_ = null;
+            if (responseBuilder_ != null) {
+              responseBuilder_.dispose();
+              responseBuilder_ = null;
+            }
+            onChanged();
+            return this;
+          }
+          /**
+           * <pre>
+           * The search response.
+           * </pre>
+           *
+           * <code>optional .android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchResponse response = 6;</code>
+           */
+          public com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchResponse.Builder getResponseBuilder() {
+            bitField0_ |= 0x00000020;
+            onChanged();
+            return getResponseFieldBuilder().getBuilder();
+          }
+          /**
+           * <pre>
+           * The search response.
+           * </pre>
+           *
+           * <code>optional .android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchResponse response = 6;</code>
+           */
+          public com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchResponseOrBuilder getResponseOrBuilder() {
+            if (responseBuilder_ != null) {
+              return responseBuilder_.getMessageOrBuilder();
+            } else {
+              return response_ == null ?
+                  com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchResponse.getDefaultInstance() : response_;
+            }
+          }
+          /**
+           * <pre>
+           * The search response.
+           * </pre>
+           *
+           * <code>optional .android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchResponse response = 6;</code>
+           */
+          private com.google.protobuf.SingleFieldBuilderV3<
+              com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchResponse, com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchResponse.Builder, com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchResponseOrBuilder> 
+              getResponseFieldBuilder() {
+            if (responseBuilder_ == null) {
+              responseBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                  com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchResponse, com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchResponse.Builder, com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchResponseOrBuilder>(
+                      getResponse(),
+                      getParentForChildren(),
+                      isClean());
+              response_ = null;
+            }
+            return responseBuilder_;
+          }
+          @java.lang.Override
+          public final Builder setUnknownFields(
+              final com.google.protobuf.UnknownFieldSet unknownFields) {
+            return super.setUnknownFields(unknownFields);
+          }
+
+          @java.lang.Override
+          public final Builder mergeUnknownFields(
+              final com.google.protobuf.UnknownFieldSet unknownFields) {
+            return super.mergeUnknownFields(unknownFields);
+          }
+
+
+          // @@protoc_insertion_point(builder_scope:android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.RagToolCallData)
+        }
+
+        // @@protoc_insertion_point(class_scope:android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.RagToolCallData)
+        private static final com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.RagToolCallData DEFAULT_INSTANCE;
+        static {
+          DEFAULT_INSTANCE = new com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.RagToolCallData();
+        }
+
+        public static com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.RagToolCallData getDefaultInstance() {
+          return DEFAULT_INSTANCE;
+        }
+
+        @java.lang.Deprecated public static final com.google.protobuf.Parser<RagToolCallData>
+            PARSER = new com.google.protobuf.AbstractParser<RagToolCallData>() {
+          @java.lang.Override
+          public RagToolCallData parsePartialFrom(
+              com.google.protobuf.CodedInputStream input,
+              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+              throws com.google.protobuf.InvalidProtocolBufferException {
+            Builder builder = newBuilder();
+            try {
+              builder.mergeFrom(input, extensionRegistry);
+            } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+              throw e.setUnfinishedMessage(builder.buildPartial());
+            } catch (com.google.protobuf.UninitializedMessageException e) {
+              throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+            } catch (java.io.IOException e) {
+              throw new com.google.protobuf.InvalidProtocolBufferException(e)
+                  .setUnfinishedMessage(builder.buildPartial());
+            }
+            return builder.buildPartial();
+          }
+        };
+
+        public static com.google.protobuf.Parser<RagToolCallData> parser() {
+          return PARSER;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Parser<RagToolCallData> getParserForType() {
+          return PARSER;
+        }
+
+        @java.lang.Override
+        public com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.RagToolCallData getDefaultInstanceForType() {
+          return DEFAULT_INSTANCE;
+        }
+
+      }
+
       private int bitField0_;
       private int toolSpecificMetadataCase_ = 0;
       @SuppressWarnings("serial")
@@ -8381,6 +17726,10 @@ private static final long serialVersionUID = 0L;
           implements com.google.protobuf.Internal.EnumLite,
               com.google.protobuf.AbstractMessage.InternalOneOfEnum {
         FIND_DECLARATION_TOOL_CALL_DATA(8),
+        FIND_FILES_TOOL_CALL_DATA(9),
+        FIND_USAGES_TOOL_CALL_DATA(10),
+        GREP_TOOL_CALL_DATA(11),
+        RAG_TOOL_CALL_DATA(12),
         TOOLSPECIFICMETADATA_NOT_SET(0);
         private final int value;
         private ToolSpecificMetadataCase(int value) {
@@ -8399,6 +17748,10 @@ private static final long serialVersionUID = 0L;
         public static ToolSpecificMetadataCase forNumber(int value) {
           switch (value) {
             case 8: return FIND_DECLARATION_TOOL_CALL_DATA;
+            case 9: return FIND_FILES_TOOL_CALL_DATA;
+            case 10: return FIND_USAGES_TOOL_CALL_DATA;
+            case 11: return GREP_TOOL_CALL_DATA;
+            case 12: return RAG_TOOL_CALL_DATA;
             case 0: return TOOLSPECIFICMETADATA_NOT_SET;
             default: return null;
           }
@@ -8672,7 +18025,7 @@ private static final long serialVersionUID = 0L;
       public static final int FIND_DECLARATION_TOOL_CALL_DATA_FIELD_NUMBER = 8;
       /**
        * <pre>
-       * Data for a find declaration tool call.
+       * Data for a find_declaration tool call.
        * </pre>
        *
        * <code>.android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.FindDeclarationToolCallData find_declaration_tool_call_data = 8;</code>
@@ -8684,7 +18037,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Data for a find declaration tool call.
+       * Data for a find_declaration tool call.
        * </pre>
        *
        * <code>.android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.FindDeclarationToolCallData find_declaration_tool_call_data = 8;</code>
@@ -8699,7 +18052,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Data for a find declaration tool call.
+       * Data for a find_declaration tool call.
        * </pre>
        *
        * <code>.android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.FindDeclarationToolCallData find_declaration_tool_call_data = 8;</code>
@@ -8710,6 +18063,178 @@ private static final long serialVersionUID = 0L;
            return (com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.FindDeclarationToolCallData) toolSpecificMetadata_;
         }
         return com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.FindDeclarationToolCallData.getDefaultInstance();
+      }
+
+      public static final int FIND_FILES_TOOL_CALL_DATA_FIELD_NUMBER = 9;
+      /**
+       * <pre>
+       * Data for a find_files tool call.
+       * </pre>
+       *
+       * <code>.android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.FindFilesToolCallData find_files_tool_call_data = 9;</code>
+       * @return Whether the findFilesToolCallData field is set.
+       */
+      @java.lang.Override
+      public boolean hasFindFilesToolCallData() {
+        return toolSpecificMetadataCase_ == 9;
+      }
+      /**
+       * <pre>
+       * Data for a find_files tool call.
+       * </pre>
+       *
+       * <code>.android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.FindFilesToolCallData find_files_tool_call_data = 9;</code>
+       * @return The findFilesToolCallData.
+       */
+      @java.lang.Override
+      public com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.FindFilesToolCallData getFindFilesToolCallData() {
+        if (toolSpecificMetadataCase_ == 9) {
+           return (com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.FindFilesToolCallData) toolSpecificMetadata_;
+        }
+        return com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.FindFilesToolCallData.getDefaultInstance();
+      }
+      /**
+       * <pre>
+       * Data for a find_files tool call.
+       * </pre>
+       *
+       * <code>.android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.FindFilesToolCallData find_files_tool_call_data = 9;</code>
+       */
+      @java.lang.Override
+      public com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.FindFilesToolCallDataOrBuilder getFindFilesToolCallDataOrBuilder() {
+        if (toolSpecificMetadataCase_ == 9) {
+           return (com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.FindFilesToolCallData) toolSpecificMetadata_;
+        }
+        return com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.FindFilesToolCallData.getDefaultInstance();
+      }
+
+      public static final int FIND_USAGES_TOOL_CALL_DATA_FIELD_NUMBER = 10;
+      /**
+       * <pre>
+       * Data for a find_usages tool call.
+       * </pre>
+       *
+       * <code>.android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.FindUsagesToolCallData find_usages_tool_call_data = 10;</code>
+       * @return Whether the findUsagesToolCallData field is set.
+       */
+      @java.lang.Override
+      public boolean hasFindUsagesToolCallData() {
+        return toolSpecificMetadataCase_ == 10;
+      }
+      /**
+       * <pre>
+       * Data for a find_usages tool call.
+       * </pre>
+       *
+       * <code>.android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.FindUsagesToolCallData find_usages_tool_call_data = 10;</code>
+       * @return The findUsagesToolCallData.
+       */
+      @java.lang.Override
+      public com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.FindUsagesToolCallData getFindUsagesToolCallData() {
+        if (toolSpecificMetadataCase_ == 10) {
+           return (com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.FindUsagesToolCallData) toolSpecificMetadata_;
+        }
+        return com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.FindUsagesToolCallData.getDefaultInstance();
+      }
+      /**
+       * <pre>
+       * Data for a find_usages tool call.
+       * </pre>
+       *
+       * <code>.android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.FindUsagesToolCallData find_usages_tool_call_data = 10;</code>
+       */
+      @java.lang.Override
+      public com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.FindUsagesToolCallDataOrBuilder getFindUsagesToolCallDataOrBuilder() {
+        if (toolSpecificMetadataCase_ == 10) {
+           return (com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.FindUsagesToolCallData) toolSpecificMetadata_;
+        }
+        return com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.FindUsagesToolCallData.getDefaultInstance();
+      }
+
+      public static final int GREP_TOOL_CALL_DATA_FIELD_NUMBER = 11;
+      /**
+       * <pre>
+       * Data for a grep tool call.
+       * </pre>
+       *
+       * <code>.android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.GrepToolCallData grep_tool_call_data = 11;</code>
+       * @return Whether the grepToolCallData field is set.
+       */
+      @java.lang.Override
+      public boolean hasGrepToolCallData() {
+        return toolSpecificMetadataCase_ == 11;
+      }
+      /**
+       * <pre>
+       * Data for a grep tool call.
+       * </pre>
+       *
+       * <code>.android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.GrepToolCallData grep_tool_call_data = 11;</code>
+       * @return The grepToolCallData.
+       */
+      @java.lang.Override
+      public com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.GrepToolCallData getGrepToolCallData() {
+        if (toolSpecificMetadataCase_ == 11) {
+           return (com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.GrepToolCallData) toolSpecificMetadata_;
+        }
+        return com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.GrepToolCallData.getDefaultInstance();
+      }
+      /**
+       * <pre>
+       * Data for a grep tool call.
+       * </pre>
+       *
+       * <code>.android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.GrepToolCallData grep_tool_call_data = 11;</code>
+       */
+      @java.lang.Override
+      public com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.GrepToolCallDataOrBuilder getGrepToolCallDataOrBuilder() {
+        if (toolSpecificMetadataCase_ == 11) {
+           return (com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.GrepToolCallData) toolSpecificMetadata_;
+        }
+        return com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.GrepToolCallData.getDefaultInstance();
+      }
+
+      public static final int RAG_TOOL_CALL_DATA_FIELD_NUMBER = 12;
+      /**
+       * <pre>
+       * Data for a code_search tool call.
+       * </pre>
+       *
+       * <code>.android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.RagToolCallData rag_tool_call_data = 12;</code>
+       * @return Whether the ragToolCallData field is set.
+       */
+      @java.lang.Override
+      public boolean hasRagToolCallData() {
+        return toolSpecificMetadataCase_ == 12;
+      }
+      /**
+       * <pre>
+       * Data for a code_search tool call.
+       * </pre>
+       *
+       * <code>.android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.RagToolCallData rag_tool_call_data = 12;</code>
+       * @return The ragToolCallData.
+       */
+      @java.lang.Override
+      public com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.RagToolCallData getRagToolCallData() {
+        if (toolSpecificMetadataCase_ == 12) {
+           return (com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.RagToolCallData) toolSpecificMetadata_;
+        }
+        return com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.RagToolCallData.getDefaultInstance();
+      }
+      /**
+       * <pre>
+       * Data for a code_search tool call.
+       * </pre>
+       *
+       * <code>.android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.RagToolCallData rag_tool_call_data = 12;</code>
+       */
+      @java.lang.Override
+      public com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.RagToolCallDataOrBuilder getRagToolCallDataOrBuilder() {
+        if (toolSpecificMetadataCase_ == 12) {
+           return (com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.RagToolCallData) toolSpecificMetadata_;
+        }
+        return com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.RagToolCallData.getDefaultInstance();
       }
 
       private byte memoizedIsInitialized = -1;
@@ -8750,6 +18275,18 @@ private static final long serialVersionUID = 0L;
         if (toolSpecificMetadataCase_ == 8) {
           output.writeMessage(8, (com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.FindDeclarationToolCallData) toolSpecificMetadata_);
         }
+        if (toolSpecificMetadataCase_ == 9) {
+          output.writeMessage(9, (com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.FindFilesToolCallData) toolSpecificMetadata_);
+        }
+        if (toolSpecificMetadataCase_ == 10) {
+          output.writeMessage(10, (com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.FindUsagesToolCallData) toolSpecificMetadata_);
+        }
+        if (toolSpecificMetadataCase_ == 11) {
+          output.writeMessage(11, (com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.GrepToolCallData) toolSpecificMetadata_);
+        }
+        if (toolSpecificMetadataCase_ == 12) {
+          output.writeMessage(12, (com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.RagToolCallData) toolSpecificMetadata_);
+        }
         getUnknownFields().writeTo(output);
       }
 
@@ -8788,6 +18325,22 @@ private static final long serialVersionUID = 0L;
         if (toolSpecificMetadataCase_ == 8) {
           size += com.google.protobuf.CodedOutputStream
             .computeMessageSize(8, (com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.FindDeclarationToolCallData) toolSpecificMetadata_);
+        }
+        if (toolSpecificMetadataCase_ == 9) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(9, (com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.FindFilesToolCallData) toolSpecificMetadata_);
+        }
+        if (toolSpecificMetadataCase_ == 10) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(10, (com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.FindUsagesToolCallData) toolSpecificMetadata_);
+        }
+        if (toolSpecificMetadataCase_ == 11) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(11, (com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.GrepToolCallData) toolSpecificMetadata_);
+        }
+        if (toolSpecificMetadataCase_ == 12) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(12, (com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.RagToolCallData) toolSpecificMetadata_);
         }
         size += getUnknownFields().getSerializedSize();
         memoizedSize = size;
@@ -8843,6 +18396,22 @@ private static final long serialVersionUID = 0L;
             if (!getFindDeclarationToolCallData()
                 .equals(other.getFindDeclarationToolCallData())) return false;
             break;
+          case 9:
+            if (!getFindFilesToolCallData()
+                .equals(other.getFindFilesToolCallData())) return false;
+            break;
+          case 10:
+            if (!getFindUsagesToolCallData()
+                .equals(other.getFindUsagesToolCallData())) return false;
+            break;
+          case 11:
+            if (!getGrepToolCallData()
+                .equals(other.getGrepToolCallData())) return false;
+            break;
+          case 12:
+            if (!getRagToolCallData()
+                .equals(other.getRagToolCallData())) return false;
+            break;
           case 0:
           default:
         }
@@ -8892,6 +18461,22 @@ private static final long serialVersionUID = 0L;
           case 8:
             hash = (37 * hash) + FIND_DECLARATION_TOOL_CALL_DATA_FIELD_NUMBER;
             hash = (53 * hash) + getFindDeclarationToolCallData().hashCode();
+            break;
+          case 9:
+            hash = (37 * hash) + FIND_FILES_TOOL_CALL_DATA_FIELD_NUMBER;
+            hash = (53 * hash) + getFindFilesToolCallData().hashCode();
+            break;
+          case 10:
+            hash = (37 * hash) + FIND_USAGES_TOOL_CALL_DATA_FIELD_NUMBER;
+            hash = (53 * hash) + getFindUsagesToolCallData().hashCode();
+            break;
+          case 11:
+            hash = (37 * hash) + GREP_TOOL_CALL_DATA_FIELD_NUMBER;
+            hash = (53 * hash) + getGrepToolCallData().hashCode();
+            break;
+          case 12:
+            hash = (37 * hash) + RAG_TOOL_CALL_DATA_FIELD_NUMBER;
+            hash = (53 * hash) + getRagToolCallData().hashCode();
             break;
           case 0:
           default:
@@ -9035,6 +18620,18 @@ private static final long serialVersionUID = 0L;
           if (findDeclarationToolCallDataBuilder_ != null) {
             findDeclarationToolCallDataBuilder_.clear();
           }
+          if (findFilesToolCallDataBuilder_ != null) {
+            findFilesToolCallDataBuilder_.clear();
+          }
+          if (findUsagesToolCallDataBuilder_ != null) {
+            findUsagesToolCallDataBuilder_.clear();
+          }
+          if (grepToolCallDataBuilder_ != null) {
+            grepToolCallDataBuilder_.clear();
+          }
+          if (ragToolCallDataBuilder_ != null) {
+            ragToolCallDataBuilder_.clear();
+          }
           toolSpecificMetadataCase_ = 0;
           toolSpecificMetadata_ = null;
           return this;
@@ -9110,6 +18707,22 @@ private static final long serialVersionUID = 0L;
               findDeclarationToolCallDataBuilder_ != null) {
             result.toolSpecificMetadata_ = findDeclarationToolCallDataBuilder_.build();
           }
+          if (toolSpecificMetadataCase_ == 9 &&
+              findFilesToolCallDataBuilder_ != null) {
+            result.toolSpecificMetadata_ = findFilesToolCallDataBuilder_.build();
+          }
+          if (toolSpecificMetadataCase_ == 10 &&
+              findUsagesToolCallDataBuilder_ != null) {
+            result.toolSpecificMetadata_ = findUsagesToolCallDataBuilder_.build();
+          }
+          if (toolSpecificMetadataCase_ == 11 &&
+              grepToolCallDataBuilder_ != null) {
+            result.toolSpecificMetadata_ = grepToolCallDataBuilder_.build();
+          }
+          if (toolSpecificMetadataCase_ == 12 &&
+              ragToolCallDataBuilder_ != null) {
+            result.toolSpecificMetadata_ = ragToolCallDataBuilder_.build();
+          }
         }
 
         @java.lang.Override
@@ -9152,6 +18765,22 @@ private static final long serialVersionUID = 0L;
           switch (other.getToolSpecificMetadataCase()) {
             case FIND_DECLARATION_TOOL_CALL_DATA: {
               mergeFindDeclarationToolCallData(other.getFindDeclarationToolCallData());
+              break;
+            }
+            case FIND_FILES_TOOL_CALL_DATA: {
+              mergeFindFilesToolCallData(other.getFindFilesToolCallData());
+              break;
+            }
+            case FIND_USAGES_TOOL_CALL_DATA: {
+              mergeFindUsagesToolCallData(other.getFindUsagesToolCallData());
+              break;
+            }
+            case GREP_TOOL_CALL_DATA: {
+              mergeGrepToolCallData(other.getGrepToolCallData());
+              break;
+            }
+            case RAG_TOOL_CALL_DATA: {
+              mergeRagToolCallData(other.getRagToolCallData());
               break;
             }
             case TOOLSPECIFICMETADATA_NOT_SET: {
@@ -9240,6 +18869,34 @@ private static final long serialVersionUID = 0L;
                   toolSpecificMetadataCase_ = 8;
                   break;
                 } // case 66
+                case 74: {
+                  input.readMessage(
+                      getFindFilesToolCallDataFieldBuilder().getBuilder(),
+                      extensionRegistry);
+                  toolSpecificMetadataCase_ = 9;
+                  break;
+                } // case 74
+                case 82: {
+                  input.readMessage(
+                      getFindUsagesToolCallDataFieldBuilder().getBuilder(),
+                      extensionRegistry);
+                  toolSpecificMetadataCase_ = 10;
+                  break;
+                } // case 82
+                case 90: {
+                  input.readMessage(
+                      getGrepToolCallDataFieldBuilder().getBuilder(),
+                      extensionRegistry);
+                  toolSpecificMetadataCase_ = 11;
+                  break;
+                } // case 90
+                case 98: {
+                  input.readMessage(
+                      getRagToolCallDataFieldBuilder().getBuilder(),
+                      extensionRegistry);
+                  toolSpecificMetadataCase_ = 12;
+                  break;
+                } // case 98
                 default: {
                   if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                     done = true; // was an endgroup tag
@@ -9768,7 +19425,7 @@ private static final long serialVersionUID = 0L;
             com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.FindDeclarationToolCallData, com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.FindDeclarationToolCallData.Builder, com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.FindDeclarationToolCallDataOrBuilder> findDeclarationToolCallDataBuilder_;
         /**
          * <pre>
-         * Data for a find declaration tool call.
+         * Data for a find_declaration tool call.
          * </pre>
          *
          * <code>.android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.FindDeclarationToolCallData find_declaration_tool_call_data = 8;</code>
@@ -9780,7 +19437,7 @@ private static final long serialVersionUID = 0L;
         }
         /**
          * <pre>
-         * Data for a find declaration tool call.
+         * Data for a find_declaration tool call.
          * </pre>
          *
          * <code>.android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.FindDeclarationToolCallData find_declaration_tool_call_data = 8;</code>
@@ -9802,7 +19459,7 @@ private static final long serialVersionUID = 0L;
         }
         /**
          * <pre>
-         * Data for a find declaration tool call.
+         * Data for a find_declaration tool call.
          * </pre>
          *
          * <code>.android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.FindDeclarationToolCallData find_declaration_tool_call_data = 8;</code>
@@ -9822,7 +19479,7 @@ private static final long serialVersionUID = 0L;
         }
         /**
          * <pre>
-         * Data for a find declaration tool call.
+         * Data for a find_declaration tool call.
          * </pre>
          *
          * <code>.android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.FindDeclarationToolCallData find_declaration_tool_call_data = 8;</code>
@@ -9840,7 +19497,7 @@ private static final long serialVersionUID = 0L;
         }
         /**
          * <pre>
-         * Data for a find declaration tool call.
+         * Data for a find_declaration tool call.
          * </pre>
          *
          * <code>.android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.FindDeclarationToolCallData find_declaration_tool_call_data = 8;</code>
@@ -9867,7 +19524,7 @@ private static final long serialVersionUID = 0L;
         }
         /**
          * <pre>
-         * Data for a find declaration tool call.
+         * Data for a find_declaration tool call.
          * </pre>
          *
          * <code>.android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.FindDeclarationToolCallData find_declaration_tool_call_data = 8;</code>
@@ -9890,7 +19547,7 @@ private static final long serialVersionUID = 0L;
         }
         /**
          * <pre>
-         * Data for a find declaration tool call.
+         * Data for a find_declaration tool call.
          * </pre>
          *
          * <code>.android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.FindDeclarationToolCallData find_declaration_tool_call_data = 8;</code>
@@ -9900,7 +19557,7 @@ private static final long serialVersionUID = 0L;
         }
         /**
          * <pre>
-         * Data for a find declaration tool call.
+         * Data for a find_declaration tool call.
          * </pre>
          *
          * <code>.android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.FindDeclarationToolCallData find_declaration_tool_call_data = 8;</code>
@@ -9918,7 +19575,7 @@ private static final long serialVersionUID = 0L;
         }
         /**
          * <pre>
-         * Data for a find declaration tool call.
+         * Data for a find_declaration tool call.
          * </pre>
          *
          * <code>.android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.FindDeclarationToolCallData find_declaration_tool_call_data = 8;</code>
@@ -9940,6 +19597,718 @@ private static final long serialVersionUID = 0L;
           toolSpecificMetadataCase_ = 8;
           onChanged();
           return findDeclarationToolCallDataBuilder_;
+        }
+
+        private com.google.protobuf.SingleFieldBuilderV3<
+            com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.FindFilesToolCallData, com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.FindFilesToolCallData.Builder, com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.FindFilesToolCallDataOrBuilder> findFilesToolCallDataBuilder_;
+        /**
+         * <pre>
+         * Data for a find_files tool call.
+         * </pre>
+         *
+         * <code>.android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.FindFilesToolCallData find_files_tool_call_data = 9;</code>
+         * @return Whether the findFilesToolCallData field is set.
+         */
+        @java.lang.Override
+        public boolean hasFindFilesToolCallData() {
+          return toolSpecificMetadataCase_ == 9;
+        }
+        /**
+         * <pre>
+         * Data for a find_files tool call.
+         * </pre>
+         *
+         * <code>.android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.FindFilesToolCallData find_files_tool_call_data = 9;</code>
+         * @return The findFilesToolCallData.
+         */
+        @java.lang.Override
+        public com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.FindFilesToolCallData getFindFilesToolCallData() {
+          if (findFilesToolCallDataBuilder_ == null) {
+            if (toolSpecificMetadataCase_ == 9) {
+              return (com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.FindFilesToolCallData) toolSpecificMetadata_;
+            }
+            return com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.FindFilesToolCallData.getDefaultInstance();
+          } else {
+            if (toolSpecificMetadataCase_ == 9) {
+              return findFilesToolCallDataBuilder_.getMessage();
+            }
+            return com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.FindFilesToolCallData.getDefaultInstance();
+          }
+        }
+        /**
+         * <pre>
+         * Data for a find_files tool call.
+         * </pre>
+         *
+         * <code>.android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.FindFilesToolCallData find_files_tool_call_data = 9;</code>
+         */
+        public Builder setFindFilesToolCallData(com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.FindFilesToolCallData value) {
+          if (findFilesToolCallDataBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            toolSpecificMetadata_ = value;
+            onChanged();
+          } else {
+            findFilesToolCallDataBuilder_.setMessage(value);
+          }
+          toolSpecificMetadataCase_ = 9;
+          return this;
+        }
+        /**
+         * <pre>
+         * Data for a find_files tool call.
+         * </pre>
+         *
+         * <code>.android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.FindFilesToolCallData find_files_tool_call_data = 9;</code>
+         */
+        public Builder setFindFilesToolCallData(
+            com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.FindFilesToolCallData.Builder builderForValue) {
+          if (findFilesToolCallDataBuilder_ == null) {
+            toolSpecificMetadata_ = builderForValue.build();
+            onChanged();
+          } else {
+            findFilesToolCallDataBuilder_.setMessage(builderForValue.build());
+          }
+          toolSpecificMetadataCase_ = 9;
+          return this;
+        }
+        /**
+         * <pre>
+         * Data for a find_files tool call.
+         * </pre>
+         *
+         * <code>.android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.FindFilesToolCallData find_files_tool_call_data = 9;</code>
+         */
+        public Builder mergeFindFilesToolCallData(com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.FindFilesToolCallData value) {
+          if (findFilesToolCallDataBuilder_ == null) {
+            if (toolSpecificMetadataCase_ == 9 &&
+                toolSpecificMetadata_ != com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.FindFilesToolCallData.getDefaultInstance()) {
+              toolSpecificMetadata_ = com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.FindFilesToolCallData.newBuilder((com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.FindFilesToolCallData) toolSpecificMetadata_)
+                  .mergeFrom(value).buildPartial();
+            } else {
+              toolSpecificMetadata_ = value;
+            }
+            onChanged();
+          } else {
+            if (toolSpecificMetadataCase_ == 9) {
+              findFilesToolCallDataBuilder_.mergeFrom(value);
+            } else {
+              findFilesToolCallDataBuilder_.setMessage(value);
+            }
+          }
+          toolSpecificMetadataCase_ = 9;
+          return this;
+        }
+        /**
+         * <pre>
+         * Data for a find_files tool call.
+         * </pre>
+         *
+         * <code>.android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.FindFilesToolCallData find_files_tool_call_data = 9;</code>
+         */
+        public Builder clearFindFilesToolCallData() {
+          if (findFilesToolCallDataBuilder_ == null) {
+            if (toolSpecificMetadataCase_ == 9) {
+              toolSpecificMetadataCase_ = 0;
+              toolSpecificMetadata_ = null;
+              onChanged();
+            }
+          } else {
+            if (toolSpecificMetadataCase_ == 9) {
+              toolSpecificMetadataCase_ = 0;
+              toolSpecificMetadata_ = null;
+            }
+            findFilesToolCallDataBuilder_.clear();
+          }
+          return this;
+        }
+        /**
+         * <pre>
+         * Data for a find_files tool call.
+         * </pre>
+         *
+         * <code>.android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.FindFilesToolCallData find_files_tool_call_data = 9;</code>
+         */
+        public com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.FindFilesToolCallData.Builder getFindFilesToolCallDataBuilder() {
+          return getFindFilesToolCallDataFieldBuilder().getBuilder();
+        }
+        /**
+         * <pre>
+         * Data for a find_files tool call.
+         * </pre>
+         *
+         * <code>.android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.FindFilesToolCallData find_files_tool_call_data = 9;</code>
+         */
+        @java.lang.Override
+        public com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.FindFilesToolCallDataOrBuilder getFindFilesToolCallDataOrBuilder() {
+          if ((toolSpecificMetadataCase_ == 9) && (findFilesToolCallDataBuilder_ != null)) {
+            return findFilesToolCallDataBuilder_.getMessageOrBuilder();
+          } else {
+            if (toolSpecificMetadataCase_ == 9) {
+              return (com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.FindFilesToolCallData) toolSpecificMetadata_;
+            }
+            return com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.FindFilesToolCallData.getDefaultInstance();
+          }
+        }
+        /**
+         * <pre>
+         * Data for a find_files tool call.
+         * </pre>
+         *
+         * <code>.android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.FindFilesToolCallData find_files_tool_call_data = 9;</code>
+         */
+        private com.google.protobuf.SingleFieldBuilderV3<
+            com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.FindFilesToolCallData, com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.FindFilesToolCallData.Builder, com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.FindFilesToolCallDataOrBuilder> 
+            getFindFilesToolCallDataFieldBuilder() {
+          if (findFilesToolCallDataBuilder_ == null) {
+            if (!(toolSpecificMetadataCase_ == 9)) {
+              toolSpecificMetadata_ = com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.FindFilesToolCallData.getDefaultInstance();
+            }
+            findFilesToolCallDataBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.FindFilesToolCallData, com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.FindFilesToolCallData.Builder, com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.FindFilesToolCallDataOrBuilder>(
+                    (com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.FindFilesToolCallData) toolSpecificMetadata_,
+                    getParentForChildren(),
+                    isClean());
+            toolSpecificMetadata_ = null;
+          }
+          toolSpecificMetadataCase_ = 9;
+          onChanged();
+          return findFilesToolCallDataBuilder_;
+        }
+
+        private com.google.protobuf.SingleFieldBuilderV3<
+            com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.FindUsagesToolCallData, com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.FindUsagesToolCallData.Builder, com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.FindUsagesToolCallDataOrBuilder> findUsagesToolCallDataBuilder_;
+        /**
+         * <pre>
+         * Data for a find_usages tool call.
+         * </pre>
+         *
+         * <code>.android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.FindUsagesToolCallData find_usages_tool_call_data = 10;</code>
+         * @return Whether the findUsagesToolCallData field is set.
+         */
+        @java.lang.Override
+        public boolean hasFindUsagesToolCallData() {
+          return toolSpecificMetadataCase_ == 10;
+        }
+        /**
+         * <pre>
+         * Data for a find_usages tool call.
+         * </pre>
+         *
+         * <code>.android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.FindUsagesToolCallData find_usages_tool_call_data = 10;</code>
+         * @return The findUsagesToolCallData.
+         */
+        @java.lang.Override
+        public com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.FindUsagesToolCallData getFindUsagesToolCallData() {
+          if (findUsagesToolCallDataBuilder_ == null) {
+            if (toolSpecificMetadataCase_ == 10) {
+              return (com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.FindUsagesToolCallData) toolSpecificMetadata_;
+            }
+            return com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.FindUsagesToolCallData.getDefaultInstance();
+          } else {
+            if (toolSpecificMetadataCase_ == 10) {
+              return findUsagesToolCallDataBuilder_.getMessage();
+            }
+            return com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.FindUsagesToolCallData.getDefaultInstance();
+          }
+        }
+        /**
+         * <pre>
+         * Data for a find_usages tool call.
+         * </pre>
+         *
+         * <code>.android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.FindUsagesToolCallData find_usages_tool_call_data = 10;</code>
+         */
+        public Builder setFindUsagesToolCallData(com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.FindUsagesToolCallData value) {
+          if (findUsagesToolCallDataBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            toolSpecificMetadata_ = value;
+            onChanged();
+          } else {
+            findUsagesToolCallDataBuilder_.setMessage(value);
+          }
+          toolSpecificMetadataCase_ = 10;
+          return this;
+        }
+        /**
+         * <pre>
+         * Data for a find_usages tool call.
+         * </pre>
+         *
+         * <code>.android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.FindUsagesToolCallData find_usages_tool_call_data = 10;</code>
+         */
+        public Builder setFindUsagesToolCallData(
+            com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.FindUsagesToolCallData.Builder builderForValue) {
+          if (findUsagesToolCallDataBuilder_ == null) {
+            toolSpecificMetadata_ = builderForValue.build();
+            onChanged();
+          } else {
+            findUsagesToolCallDataBuilder_.setMessage(builderForValue.build());
+          }
+          toolSpecificMetadataCase_ = 10;
+          return this;
+        }
+        /**
+         * <pre>
+         * Data for a find_usages tool call.
+         * </pre>
+         *
+         * <code>.android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.FindUsagesToolCallData find_usages_tool_call_data = 10;</code>
+         */
+        public Builder mergeFindUsagesToolCallData(com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.FindUsagesToolCallData value) {
+          if (findUsagesToolCallDataBuilder_ == null) {
+            if (toolSpecificMetadataCase_ == 10 &&
+                toolSpecificMetadata_ != com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.FindUsagesToolCallData.getDefaultInstance()) {
+              toolSpecificMetadata_ = com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.FindUsagesToolCallData.newBuilder((com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.FindUsagesToolCallData) toolSpecificMetadata_)
+                  .mergeFrom(value).buildPartial();
+            } else {
+              toolSpecificMetadata_ = value;
+            }
+            onChanged();
+          } else {
+            if (toolSpecificMetadataCase_ == 10) {
+              findUsagesToolCallDataBuilder_.mergeFrom(value);
+            } else {
+              findUsagesToolCallDataBuilder_.setMessage(value);
+            }
+          }
+          toolSpecificMetadataCase_ = 10;
+          return this;
+        }
+        /**
+         * <pre>
+         * Data for a find_usages tool call.
+         * </pre>
+         *
+         * <code>.android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.FindUsagesToolCallData find_usages_tool_call_data = 10;</code>
+         */
+        public Builder clearFindUsagesToolCallData() {
+          if (findUsagesToolCallDataBuilder_ == null) {
+            if (toolSpecificMetadataCase_ == 10) {
+              toolSpecificMetadataCase_ = 0;
+              toolSpecificMetadata_ = null;
+              onChanged();
+            }
+          } else {
+            if (toolSpecificMetadataCase_ == 10) {
+              toolSpecificMetadataCase_ = 0;
+              toolSpecificMetadata_ = null;
+            }
+            findUsagesToolCallDataBuilder_.clear();
+          }
+          return this;
+        }
+        /**
+         * <pre>
+         * Data for a find_usages tool call.
+         * </pre>
+         *
+         * <code>.android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.FindUsagesToolCallData find_usages_tool_call_data = 10;</code>
+         */
+        public com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.FindUsagesToolCallData.Builder getFindUsagesToolCallDataBuilder() {
+          return getFindUsagesToolCallDataFieldBuilder().getBuilder();
+        }
+        /**
+         * <pre>
+         * Data for a find_usages tool call.
+         * </pre>
+         *
+         * <code>.android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.FindUsagesToolCallData find_usages_tool_call_data = 10;</code>
+         */
+        @java.lang.Override
+        public com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.FindUsagesToolCallDataOrBuilder getFindUsagesToolCallDataOrBuilder() {
+          if ((toolSpecificMetadataCase_ == 10) && (findUsagesToolCallDataBuilder_ != null)) {
+            return findUsagesToolCallDataBuilder_.getMessageOrBuilder();
+          } else {
+            if (toolSpecificMetadataCase_ == 10) {
+              return (com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.FindUsagesToolCallData) toolSpecificMetadata_;
+            }
+            return com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.FindUsagesToolCallData.getDefaultInstance();
+          }
+        }
+        /**
+         * <pre>
+         * Data for a find_usages tool call.
+         * </pre>
+         *
+         * <code>.android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.FindUsagesToolCallData find_usages_tool_call_data = 10;</code>
+         */
+        private com.google.protobuf.SingleFieldBuilderV3<
+            com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.FindUsagesToolCallData, com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.FindUsagesToolCallData.Builder, com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.FindUsagesToolCallDataOrBuilder> 
+            getFindUsagesToolCallDataFieldBuilder() {
+          if (findUsagesToolCallDataBuilder_ == null) {
+            if (!(toolSpecificMetadataCase_ == 10)) {
+              toolSpecificMetadata_ = com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.FindUsagesToolCallData.getDefaultInstance();
+            }
+            findUsagesToolCallDataBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.FindUsagesToolCallData, com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.FindUsagesToolCallData.Builder, com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.FindUsagesToolCallDataOrBuilder>(
+                    (com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.FindUsagesToolCallData) toolSpecificMetadata_,
+                    getParentForChildren(),
+                    isClean());
+            toolSpecificMetadata_ = null;
+          }
+          toolSpecificMetadataCase_ = 10;
+          onChanged();
+          return findUsagesToolCallDataBuilder_;
+        }
+
+        private com.google.protobuf.SingleFieldBuilderV3<
+            com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.GrepToolCallData, com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.GrepToolCallData.Builder, com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.GrepToolCallDataOrBuilder> grepToolCallDataBuilder_;
+        /**
+         * <pre>
+         * Data for a grep tool call.
+         * </pre>
+         *
+         * <code>.android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.GrepToolCallData grep_tool_call_data = 11;</code>
+         * @return Whether the grepToolCallData field is set.
+         */
+        @java.lang.Override
+        public boolean hasGrepToolCallData() {
+          return toolSpecificMetadataCase_ == 11;
+        }
+        /**
+         * <pre>
+         * Data for a grep tool call.
+         * </pre>
+         *
+         * <code>.android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.GrepToolCallData grep_tool_call_data = 11;</code>
+         * @return The grepToolCallData.
+         */
+        @java.lang.Override
+        public com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.GrepToolCallData getGrepToolCallData() {
+          if (grepToolCallDataBuilder_ == null) {
+            if (toolSpecificMetadataCase_ == 11) {
+              return (com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.GrepToolCallData) toolSpecificMetadata_;
+            }
+            return com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.GrepToolCallData.getDefaultInstance();
+          } else {
+            if (toolSpecificMetadataCase_ == 11) {
+              return grepToolCallDataBuilder_.getMessage();
+            }
+            return com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.GrepToolCallData.getDefaultInstance();
+          }
+        }
+        /**
+         * <pre>
+         * Data for a grep tool call.
+         * </pre>
+         *
+         * <code>.android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.GrepToolCallData grep_tool_call_data = 11;</code>
+         */
+        public Builder setGrepToolCallData(com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.GrepToolCallData value) {
+          if (grepToolCallDataBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            toolSpecificMetadata_ = value;
+            onChanged();
+          } else {
+            grepToolCallDataBuilder_.setMessage(value);
+          }
+          toolSpecificMetadataCase_ = 11;
+          return this;
+        }
+        /**
+         * <pre>
+         * Data for a grep tool call.
+         * </pre>
+         *
+         * <code>.android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.GrepToolCallData grep_tool_call_data = 11;</code>
+         */
+        public Builder setGrepToolCallData(
+            com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.GrepToolCallData.Builder builderForValue) {
+          if (grepToolCallDataBuilder_ == null) {
+            toolSpecificMetadata_ = builderForValue.build();
+            onChanged();
+          } else {
+            grepToolCallDataBuilder_.setMessage(builderForValue.build());
+          }
+          toolSpecificMetadataCase_ = 11;
+          return this;
+        }
+        /**
+         * <pre>
+         * Data for a grep tool call.
+         * </pre>
+         *
+         * <code>.android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.GrepToolCallData grep_tool_call_data = 11;</code>
+         */
+        public Builder mergeGrepToolCallData(com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.GrepToolCallData value) {
+          if (grepToolCallDataBuilder_ == null) {
+            if (toolSpecificMetadataCase_ == 11 &&
+                toolSpecificMetadata_ != com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.GrepToolCallData.getDefaultInstance()) {
+              toolSpecificMetadata_ = com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.GrepToolCallData.newBuilder((com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.GrepToolCallData) toolSpecificMetadata_)
+                  .mergeFrom(value).buildPartial();
+            } else {
+              toolSpecificMetadata_ = value;
+            }
+            onChanged();
+          } else {
+            if (toolSpecificMetadataCase_ == 11) {
+              grepToolCallDataBuilder_.mergeFrom(value);
+            } else {
+              grepToolCallDataBuilder_.setMessage(value);
+            }
+          }
+          toolSpecificMetadataCase_ = 11;
+          return this;
+        }
+        /**
+         * <pre>
+         * Data for a grep tool call.
+         * </pre>
+         *
+         * <code>.android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.GrepToolCallData grep_tool_call_data = 11;</code>
+         */
+        public Builder clearGrepToolCallData() {
+          if (grepToolCallDataBuilder_ == null) {
+            if (toolSpecificMetadataCase_ == 11) {
+              toolSpecificMetadataCase_ = 0;
+              toolSpecificMetadata_ = null;
+              onChanged();
+            }
+          } else {
+            if (toolSpecificMetadataCase_ == 11) {
+              toolSpecificMetadataCase_ = 0;
+              toolSpecificMetadata_ = null;
+            }
+            grepToolCallDataBuilder_.clear();
+          }
+          return this;
+        }
+        /**
+         * <pre>
+         * Data for a grep tool call.
+         * </pre>
+         *
+         * <code>.android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.GrepToolCallData grep_tool_call_data = 11;</code>
+         */
+        public com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.GrepToolCallData.Builder getGrepToolCallDataBuilder() {
+          return getGrepToolCallDataFieldBuilder().getBuilder();
+        }
+        /**
+         * <pre>
+         * Data for a grep tool call.
+         * </pre>
+         *
+         * <code>.android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.GrepToolCallData grep_tool_call_data = 11;</code>
+         */
+        @java.lang.Override
+        public com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.GrepToolCallDataOrBuilder getGrepToolCallDataOrBuilder() {
+          if ((toolSpecificMetadataCase_ == 11) && (grepToolCallDataBuilder_ != null)) {
+            return grepToolCallDataBuilder_.getMessageOrBuilder();
+          } else {
+            if (toolSpecificMetadataCase_ == 11) {
+              return (com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.GrepToolCallData) toolSpecificMetadata_;
+            }
+            return com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.GrepToolCallData.getDefaultInstance();
+          }
+        }
+        /**
+         * <pre>
+         * Data for a grep tool call.
+         * </pre>
+         *
+         * <code>.android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.GrepToolCallData grep_tool_call_data = 11;</code>
+         */
+        private com.google.protobuf.SingleFieldBuilderV3<
+            com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.GrepToolCallData, com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.GrepToolCallData.Builder, com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.GrepToolCallDataOrBuilder> 
+            getGrepToolCallDataFieldBuilder() {
+          if (grepToolCallDataBuilder_ == null) {
+            if (!(toolSpecificMetadataCase_ == 11)) {
+              toolSpecificMetadata_ = com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.GrepToolCallData.getDefaultInstance();
+            }
+            grepToolCallDataBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.GrepToolCallData, com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.GrepToolCallData.Builder, com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.GrepToolCallDataOrBuilder>(
+                    (com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.GrepToolCallData) toolSpecificMetadata_,
+                    getParentForChildren(),
+                    isClean());
+            toolSpecificMetadata_ = null;
+          }
+          toolSpecificMetadataCase_ = 11;
+          onChanged();
+          return grepToolCallDataBuilder_;
+        }
+
+        private com.google.protobuf.SingleFieldBuilderV3<
+            com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.RagToolCallData, com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.RagToolCallData.Builder, com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.RagToolCallDataOrBuilder> ragToolCallDataBuilder_;
+        /**
+         * <pre>
+         * Data for a code_search tool call.
+         * </pre>
+         *
+         * <code>.android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.RagToolCallData rag_tool_call_data = 12;</code>
+         * @return Whether the ragToolCallData field is set.
+         */
+        @java.lang.Override
+        public boolean hasRagToolCallData() {
+          return toolSpecificMetadataCase_ == 12;
+        }
+        /**
+         * <pre>
+         * Data for a code_search tool call.
+         * </pre>
+         *
+         * <code>.android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.RagToolCallData rag_tool_call_data = 12;</code>
+         * @return The ragToolCallData.
+         */
+        @java.lang.Override
+        public com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.RagToolCallData getRagToolCallData() {
+          if (ragToolCallDataBuilder_ == null) {
+            if (toolSpecificMetadataCase_ == 12) {
+              return (com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.RagToolCallData) toolSpecificMetadata_;
+            }
+            return com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.RagToolCallData.getDefaultInstance();
+          } else {
+            if (toolSpecificMetadataCase_ == 12) {
+              return ragToolCallDataBuilder_.getMessage();
+            }
+            return com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.RagToolCallData.getDefaultInstance();
+          }
+        }
+        /**
+         * <pre>
+         * Data for a code_search tool call.
+         * </pre>
+         *
+         * <code>.android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.RagToolCallData rag_tool_call_data = 12;</code>
+         */
+        public Builder setRagToolCallData(com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.RagToolCallData value) {
+          if (ragToolCallDataBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            toolSpecificMetadata_ = value;
+            onChanged();
+          } else {
+            ragToolCallDataBuilder_.setMessage(value);
+          }
+          toolSpecificMetadataCase_ = 12;
+          return this;
+        }
+        /**
+         * <pre>
+         * Data for a code_search tool call.
+         * </pre>
+         *
+         * <code>.android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.RagToolCallData rag_tool_call_data = 12;</code>
+         */
+        public Builder setRagToolCallData(
+            com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.RagToolCallData.Builder builderForValue) {
+          if (ragToolCallDataBuilder_ == null) {
+            toolSpecificMetadata_ = builderForValue.build();
+            onChanged();
+          } else {
+            ragToolCallDataBuilder_.setMessage(builderForValue.build());
+          }
+          toolSpecificMetadataCase_ = 12;
+          return this;
+        }
+        /**
+         * <pre>
+         * Data for a code_search tool call.
+         * </pre>
+         *
+         * <code>.android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.RagToolCallData rag_tool_call_data = 12;</code>
+         */
+        public Builder mergeRagToolCallData(com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.RagToolCallData value) {
+          if (ragToolCallDataBuilder_ == null) {
+            if (toolSpecificMetadataCase_ == 12 &&
+                toolSpecificMetadata_ != com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.RagToolCallData.getDefaultInstance()) {
+              toolSpecificMetadata_ = com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.RagToolCallData.newBuilder((com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.RagToolCallData) toolSpecificMetadata_)
+                  .mergeFrom(value).buildPartial();
+            } else {
+              toolSpecificMetadata_ = value;
+            }
+            onChanged();
+          } else {
+            if (toolSpecificMetadataCase_ == 12) {
+              ragToolCallDataBuilder_.mergeFrom(value);
+            } else {
+              ragToolCallDataBuilder_.setMessage(value);
+            }
+          }
+          toolSpecificMetadataCase_ = 12;
+          return this;
+        }
+        /**
+         * <pre>
+         * Data for a code_search tool call.
+         * </pre>
+         *
+         * <code>.android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.RagToolCallData rag_tool_call_data = 12;</code>
+         */
+        public Builder clearRagToolCallData() {
+          if (ragToolCallDataBuilder_ == null) {
+            if (toolSpecificMetadataCase_ == 12) {
+              toolSpecificMetadataCase_ = 0;
+              toolSpecificMetadata_ = null;
+              onChanged();
+            }
+          } else {
+            if (toolSpecificMetadataCase_ == 12) {
+              toolSpecificMetadataCase_ = 0;
+              toolSpecificMetadata_ = null;
+            }
+            ragToolCallDataBuilder_.clear();
+          }
+          return this;
+        }
+        /**
+         * <pre>
+         * Data for a code_search tool call.
+         * </pre>
+         *
+         * <code>.android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.RagToolCallData rag_tool_call_data = 12;</code>
+         */
+        public com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.RagToolCallData.Builder getRagToolCallDataBuilder() {
+          return getRagToolCallDataFieldBuilder().getBuilder();
+        }
+        /**
+         * <pre>
+         * Data for a code_search tool call.
+         * </pre>
+         *
+         * <code>.android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.RagToolCallData rag_tool_call_data = 12;</code>
+         */
+        @java.lang.Override
+        public com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.RagToolCallDataOrBuilder getRagToolCallDataOrBuilder() {
+          if ((toolSpecificMetadataCase_ == 12) && (ragToolCallDataBuilder_ != null)) {
+            return ragToolCallDataBuilder_.getMessageOrBuilder();
+          } else {
+            if (toolSpecificMetadataCase_ == 12) {
+              return (com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.RagToolCallData) toolSpecificMetadata_;
+            }
+            return com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.RagToolCallData.getDefaultInstance();
+          }
+        }
+        /**
+         * <pre>
+         * Data for a code_search tool call.
+         * </pre>
+         *
+         * <code>.android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.RagToolCallData rag_tool_call_data = 12;</code>
+         */
+        private com.google.protobuf.SingleFieldBuilderV3<
+            com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.RagToolCallData, com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.RagToolCallData.Builder, com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.RagToolCallDataOrBuilder> 
+            getRagToolCallDataFieldBuilder() {
+          if (ragToolCallDataBuilder_ == null) {
+            if (!(toolSpecificMetadataCase_ == 12)) {
+              toolSpecificMetadata_ = com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.RagToolCallData.getDefaultInstance();
+            }
+            ragToolCallDataBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.RagToolCallData, com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.RagToolCallData.Builder, com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.RagToolCallDataOrBuilder>(
+                    (com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.RagToolCallData) toolSpecificMetadata_,
+                    getParentForChildren(),
+                    isClean());
+            toolSpecificMetadata_ = null;
+          }
+          toolSpecificMetadataCase_ = 12;
+          onChanged();
+          return ragToolCallDataBuilder_;
         }
         @java.lang.Override
         public final Builder setUnknownFields(

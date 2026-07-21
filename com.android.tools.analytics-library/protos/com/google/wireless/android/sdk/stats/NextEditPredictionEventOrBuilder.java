@@ -97,5 +97,20 @@ public interface NextEditPredictionEventOrBuilder extends
    */
   com.google.wireless.android.sdk.stats.NextEditPredictionEvent.SessionOrBuilder getSessionOrBuilder();
 
+  /**
+   * <code>.android_studio.NextEditPredictionEvent.RequestSent request_sent = 7 [lazy = true];</code>
+   * @return Whether the requestSent field is set.
+   */
+  boolean hasRequestSent();
+  /**
+   * <code>.android_studio.NextEditPredictionEvent.RequestSent request_sent = 7 [lazy = true];</code>
+   * @return The requestSent.
+   */
+  com.google.wireless.android.sdk.stats.NextEditPredictionEvent.RequestSent getRequestSent();
+  /**
+   * <code>.android_studio.NextEditPredictionEvent.RequestSent request_sent = 7 [lazy = true];</code>
+   */
+  com.google.wireless.android.sdk.stats.NextEditPredictionEvent.RequestSentOrBuilder getRequestSentOrBuilder();
+
   com.google.wireless.android.sdk.stats.NextEditPredictionEvent.NextEditPredictionCase getNextEditPredictionCase();
 }

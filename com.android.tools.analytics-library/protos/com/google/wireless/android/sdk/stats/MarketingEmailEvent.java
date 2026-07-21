@@ -214,6 +214,33 @@ private static final long serialVersionUID = 0L;
     return result == null ? com.google.wireless.android.sdk.stats.MarketingEmailEvent.EventSource.UNKNOWN : result;
   }
 
+  public static final int DO_NOT_SHOW_AGAIN_CLICKED_FIELD_NUMBER = 3;
+  private boolean doNotShowAgainClicked_ = false;
+  /**
+   * <pre>
+   * User clicked "Do not show again for one year" in the dialog
+   * </pre>
+   *
+   * <code>optional bool do_not_show_again_clicked = 3;</code>
+   * @return Whether the doNotShowAgainClicked field is set.
+   */
+  @java.lang.Override
+  public boolean hasDoNotShowAgainClicked() {
+    return ((bitField0_ & 0x00000004) != 0);
+  }
+  /**
+   * <pre>
+   * User clicked "Do not show again for one year" in the dialog
+   * </pre>
+   *
+   * <code>optional bool do_not_show_again_clicked = 3;</code>
+   * @return The doNotShowAgainClicked.
+   */
+  @java.lang.Override
+  public boolean getDoNotShowAgainClicked() {
+    return doNotShowAgainClicked_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -234,6 +261,9 @@ private static final long serialVersionUID = 0L;
     if (((bitField0_ & 0x00000002) != 0)) {
       output.writeEnum(2, eventSource_);
     }
+    if (((bitField0_ & 0x00000004) != 0)) {
+      output.writeBool(3, doNotShowAgainClicked_);
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -250,6 +280,10 @@ private static final long serialVersionUID = 0L;
     if (((bitField0_ & 0x00000002) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(2, eventSource_);
+    }
+    if (((bitField0_ & 0x00000004) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeBoolSize(3, doNotShowAgainClicked_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -275,6 +309,11 @@ private static final long serialVersionUID = 0L;
     if (hasEventSource()) {
       if (eventSource_ != other.eventSource_) return false;
     }
+    if (hasDoNotShowAgainClicked() != other.hasDoNotShowAgainClicked()) return false;
+    if (hasDoNotShowAgainClicked()) {
+      if (getDoNotShowAgainClicked()
+          != other.getDoNotShowAgainClicked()) return false;
+    }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -294,6 +333,11 @@ private static final long serialVersionUID = 0L;
     if (hasEventSource()) {
       hash = (37 * hash) + EVENT_SOURCE_FIELD_NUMBER;
       hash = (53 * hash) + eventSource_;
+    }
+    if (hasDoNotShowAgainClicked()) {
+      hash = (37 * hash) + DO_NOT_SHOW_AGAIN_CLICKED_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getDoNotShowAgainClicked());
     }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
@@ -426,6 +470,7 @@ private static final long serialVersionUID = 0L;
       bitField0_ = 0;
       optedIn_ = false;
       eventSource_ = 0;
+      doNotShowAgainClicked_ = false;
       return this;
     }
 
@@ -468,6 +513,10 @@ private static final long serialVersionUID = 0L;
         result.eventSource_ = eventSource_;
         to_bitField0_ |= 0x00000002;
       }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.doNotShowAgainClicked_ = doNotShowAgainClicked_;
+        to_bitField0_ |= 0x00000004;
+      }
       result.bitField0_ |= to_bitField0_;
     }
 
@@ -488,6 +537,9 @@ private static final long serialVersionUID = 0L;
       }
       if (other.hasEventSource()) {
         setEventSource(other.getEventSource());
+      }
+      if (other.hasDoNotShowAgainClicked()) {
+        setDoNotShowAgainClicked(other.getDoNotShowAgainClicked());
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -532,6 +584,11 @@ private static final long serialVersionUID = 0L;
               }
               break;
             } // case 16
+            case 24: {
+              doNotShowAgainClicked_ = input.readBool();
+              bitField0_ |= 0x00000004;
+              break;
+            } // case 24
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -659,6 +716,62 @@ private static final long serialVersionUID = 0L;
     public Builder clearEventSource() {
       bitField0_ = (bitField0_ & ~0x00000002);
       eventSource_ = 0;
+      onChanged();
+      return this;
+    }
+
+    private boolean doNotShowAgainClicked_ ;
+    /**
+     * <pre>
+     * User clicked "Do not show again for one year" in the dialog
+     * </pre>
+     *
+     * <code>optional bool do_not_show_again_clicked = 3;</code>
+     * @return Whether the doNotShowAgainClicked field is set.
+     */
+    @java.lang.Override
+    public boolean hasDoNotShowAgainClicked() {
+      return ((bitField0_ & 0x00000004) != 0);
+    }
+    /**
+     * <pre>
+     * User clicked "Do not show again for one year" in the dialog
+     * </pre>
+     *
+     * <code>optional bool do_not_show_again_clicked = 3;</code>
+     * @return The doNotShowAgainClicked.
+     */
+    @java.lang.Override
+    public boolean getDoNotShowAgainClicked() {
+      return doNotShowAgainClicked_;
+    }
+    /**
+     * <pre>
+     * User clicked "Do not show again for one year" in the dialog
+     * </pre>
+     *
+     * <code>optional bool do_not_show_again_clicked = 3;</code>
+     * @param value The doNotShowAgainClicked to set.
+     * @return This builder for chaining.
+     */
+    public Builder setDoNotShowAgainClicked(boolean value) {
+
+      doNotShowAgainClicked_ = value;
+      bitField0_ |= 0x00000004;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * User clicked "Do not show again for one year" in the dialog
+     * </pre>
+     *
+     * <code>optional bool do_not_show_again_clicked = 3;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearDoNotShowAgainClicked() {
+      bitField0_ = (bitField0_ & ~0x00000004);
+      doNotShowAgainClicked_ = false;
       onChanged();
       return this;
     }

@@ -7179,4 +7179,31 @@ public interface AndroidStudioEventOrBuilder extends
    * <code>optional .android_studio.PlayPublishingEvent play_publishing_event = 256 [lazy = true];</code>
    */
   com.google.wireless.android.sdk.stats.PlayPublishingEventOrBuilder getPlayPublishingEventOrBuilder();
+
+  /**
+   * <pre>
+   * set when kind = CHANGE_REVIEW_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.ChangeReviewEvent change_review_event = 258 [lazy = true];</code>
+   * @return Whether the changeReviewEvent field is set.
+   */
+  boolean hasChangeReviewEvent();
+  /**
+   * <pre>
+   * set when kind = CHANGE_REVIEW_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.ChangeReviewEvent change_review_event = 258 [lazy = true];</code>
+   * @return The changeReviewEvent.
+   */
+  com.google.wireless.android.sdk.stats.ChangeReviewEvent getChangeReviewEvent();
+  /**
+   * <pre>
+   * set when kind = CHANGE_REVIEW_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.ChangeReviewEvent change_review_event = 258 [lazy = true];</code>
+   */
+  com.google.wireless.android.sdk.stats.ChangeReviewEventOrBuilder getChangeReviewEventOrBuilder();
 }

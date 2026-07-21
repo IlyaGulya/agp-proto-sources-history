@@ -2402,7 +2402,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional string language = 3 [deprecated = true];</code>
      * @deprecated android_studio.NextEditPredictionEvent.Session.language is deprecated.
-     *     See studio_stats.proto;l=20145
+     *     See studio_stats.proto;l=20259
      * @return Whether the language field is set.
      */
     @java.lang.Deprecated boolean hasLanguage();
@@ -2413,7 +2413,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional string language = 3 [deprecated = true];</code>
      * @deprecated android_studio.NextEditPredictionEvent.Session.language is deprecated.
-     *     See studio_stats.proto;l=20145
+     *     See studio_stats.proto;l=20259
      * @return The language.
      */
     @java.lang.Deprecated java.lang.String getLanguage();
@@ -2424,7 +2424,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional string language = 3 [deprecated = true];</code>
      * @deprecated android_studio.NextEditPredictionEvent.Session.language is deprecated.
-     *     See studio_stats.proto;l=20145
+     *     See studio_stats.proto;l=20259
      * @return The bytes for language.
      */
     @java.lang.Deprecated com.google.protobuf.ByteString
@@ -2571,7 +2571,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional int32 offset = 3 [deprecated = true];</code>
        * @deprecated android_studio.NextEditPredictionEvent.Session.SessionEvent.offset is deprecated.
-       *     See studio_stats.proto;l=20214
+       *     See studio_stats.proto;l=20328
        * @return Whether the offset field is set.
        */
       @java.lang.Deprecated boolean hasOffset();
@@ -2582,7 +2582,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional int32 offset = 3 [deprecated = true];</code>
        * @deprecated android_studio.NextEditPredictionEvent.Session.SessionEvent.offset is deprecated.
-       *     See studio_stats.proto;l=20214
+       *     See studio_stats.proto;l=20328
        * @return The offset.
        */
       @java.lang.Deprecated int getOffset();
@@ -2590,14 +2590,14 @@ private static final long serialVersionUID = 0L;
       /**
        * <code>optional int32 original_length = 4 [deprecated = true];</code>
        * @deprecated android_studio.NextEditPredictionEvent.Session.SessionEvent.original_length is deprecated.
-       *     See studio_stats.proto;l=20215
+       *     See studio_stats.proto;l=20329
        * @return Whether the originalLength field is set.
        */
       @java.lang.Deprecated boolean hasOriginalLength();
       /**
        * <code>optional int32 original_length = 4 [deprecated = true];</code>
        * @deprecated android_studio.NextEditPredictionEvent.Session.SessionEvent.original_length is deprecated.
-       *     See studio_stats.proto;l=20215
+       *     See studio_stats.proto;l=20329
        * @return The originalLength.
        */
       @java.lang.Deprecated int getOriginalLength();
@@ -2605,14 +2605,14 @@ private static final long serialVersionUID = 0L;
       /**
        * <code>optional int32 new_length = 5 [deprecated = true];</code>
        * @deprecated android_studio.NextEditPredictionEvent.Session.SessionEvent.new_length is deprecated.
-       *     See studio_stats.proto;l=20216
+       *     See studio_stats.proto;l=20330
        * @return Whether the newLength field is set.
        */
       @java.lang.Deprecated boolean hasNewLength();
       /**
        * <code>optional int32 new_length = 5 [deprecated = true];</code>
        * @deprecated android_studio.NextEditPredictionEvent.Session.SessionEvent.new_length is deprecated.
-       *     See studio_stats.proto;l=20216
+       *     See studio_stats.proto;l=20330
        * @return The newLength.
        */
       @java.lang.Deprecated int getNewLength();
@@ -5630,7 +5630,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional int32 offset = 3 [deprecated = true];</code>
        * @deprecated android_studio.NextEditPredictionEvent.Session.SessionEvent.offset is deprecated.
-       *     See studio_stats.proto;l=20214
+       *     See studio_stats.proto;l=20328
        * @return Whether the offset field is set.
        */
       @java.lang.Override
@@ -5644,7 +5644,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional int32 offset = 3 [deprecated = true];</code>
        * @deprecated android_studio.NextEditPredictionEvent.Session.SessionEvent.offset is deprecated.
-       *     See studio_stats.proto;l=20214
+       *     See studio_stats.proto;l=20328
        * @return The offset.
        */
       @java.lang.Override
@@ -5657,7 +5657,7 @@ private static final long serialVersionUID = 0L;
       /**
        * <code>optional int32 original_length = 4 [deprecated = true];</code>
        * @deprecated android_studio.NextEditPredictionEvent.Session.SessionEvent.original_length is deprecated.
-       *     See studio_stats.proto;l=20215
+       *     See studio_stats.proto;l=20329
        * @return Whether the originalLength field is set.
        */
       @java.lang.Override
@@ -5667,7 +5667,7 @@ private static final long serialVersionUID = 0L;
       /**
        * <code>optional int32 original_length = 4 [deprecated = true];</code>
        * @deprecated android_studio.NextEditPredictionEvent.Session.SessionEvent.original_length is deprecated.
-       *     See studio_stats.proto;l=20215
+       *     See studio_stats.proto;l=20329
        * @return The originalLength.
        */
       @java.lang.Override
@@ -5680,7 +5680,7 @@ private static final long serialVersionUID = 0L;
       /**
        * <code>optional int32 new_length = 5 [deprecated = true];</code>
        * @deprecated android_studio.NextEditPredictionEvent.Session.SessionEvent.new_length is deprecated.
-       *     See studio_stats.proto;l=20216
+       *     See studio_stats.proto;l=20330
        * @return Whether the newLength field is set.
        */
       @java.lang.Override
@@ -5690,7 +5690,7 @@ private static final long serialVersionUID = 0L;
       /**
        * <code>optional int32 new_length = 5 [deprecated = true];</code>
        * @deprecated android_studio.NextEditPredictionEvent.Session.SessionEvent.new_length is deprecated.
-       *     See studio_stats.proto;l=20216
+       *     See studio_stats.proto;l=20330
        * @return The newLength.
        */
       @java.lang.Override
@@ -6493,7 +6493,7 @@ private static final long serialVersionUID = 0L;
          *
          * <code>optional int32 offset = 3 [deprecated = true];</code>
          * @deprecated android_studio.NextEditPredictionEvent.Session.SessionEvent.offset is deprecated.
-         *     See studio_stats.proto;l=20214
+         *     See studio_stats.proto;l=20328
          * @return Whether the offset field is set.
          */
         @java.lang.Override
@@ -6507,7 +6507,7 @@ private static final long serialVersionUID = 0L;
          *
          * <code>optional int32 offset = 3 [deprecated = true];</code>
          * @deprecated android_studio.NextEditPredictionEvent.Session.SessionEvent.offset is deprecated.
-         *     See studio_stats.proto;l=20214
+         *     See studio_stats.proto;l=20328
          * @return The offset.
          */
         @java.lang.Override
@@ -6521,7 +6521,7 @@ private static final long serialVersionUID = 0L;
          *
          * <code>optional int32 offset = 3 [deprecated = true];</code>
          * @deprecated android_studio.NextEditPredictionEvent.Session.SessionEvent.offset is deprecated.
-         *     See studio_stats.proto;l=20214
+         *     See studio_stats.proto;l=20328
          * @param value The offset to set.
          * @return This builder for chaining.
          */
@@ -6539,7 +6539,7 @@ private static final long serialVersionUID = 0L;
          *
          * <code>optional int32 offset = 3 [deprecated = true];</code>
          * @deprecated android_studio.NextEditPredictionEvent.Session.SessionEvent.offset is deprecated.
-         *     See studio_stats.proto;l=20214
+         *     See studio_stats.proto;l=20328
          * @return This builder for chaining.
          */
         @java.lang.Deprecated public Builder clearOffset() {
@@ -6553,7 +6553,7 @@ private static final long serialVersionUID = 0L;
         /**
          * <code>optional int32 original_length = 4 [deprecated = true];</code>
          * @deprecated android_studio.NextEditPredictionEvent.Session.SessionEvent.original_length is deprecated.
-         *     See studio_stats.proto;l=20215
+         *     See studio_stats.proto;l=20329
          * @return Whether the originalLength field is set.
          */
         @java.lang.Override
@@ -6563,7 +6563,7 @@ private static final long serialVersionUID = 0L;
         /**
          * <code>optional int32 original_length = 4 [deprecated = true];</code>
          * @deprecated android_studio.NextEditPredictionEvent.Session.SessionEvent.original_length is deprecated.
-         *     See studio_stats.proto;l=20215
+         *     See studio_stats.proto;l=20329
          * @return The originalLength.
          */
         @java.lang.Override
@@ -6573,7 +6573,7 @@ private static final long serialVersionUID = 0L;
         /**
          * <code>optional int32 original_length = 4 [deprecated = true];</code>
          * @deprecated android_studio.NextEditPredictionEvent.Session.SessionEvent.original_length is deprecated.
-         *     See studio_stats.proto;l=20215
+         *     See studio_stats.proto;l=20329
          * @param value The originalLength to set.
          * @return This builder for chaining.
          */
@@ -6587,7 +6587,7 @@ private static final long serialVersionUID = 0L;
         /**
          * <code>optional int32 original_length = 4 [deprecated = true];</code>
          * @deprecated android_studio.NextEditPredictionEvent.Session.SessionEvent.original_length is deprecated.
-         *     See studio_stats.proto;l=20215
+         *     See studio_stats.proto;l=20329
          * @return This builder for chaining.
          */
         @java.lang.Deprecated public Builder clearOriginalLength() {
@@ -6601,7 +6601,7 @@ private static final long serialVersionUID = 0L;
         /**
          * <code>optional int32 new_length = 5 [deprecated = true];</code>
          * @deprecated android_studio.NextEditPredictionEvent.Session.SessionEvent.new_length is deprecated.
-         *     See studio_stats.proto;l=20216
+         *     See studio_stats.proto;l=20330
          * @return Whether the newLength field is set.
          */
         @java.lang.Override
@@ -6611,7 +6611,7 @@ private static final long serialVersionUID = 0L;
         /**
          * <code>optional int32 new_length = 5 [deprecated = true];</code>
          * @deprecated android_studio.NextEditPredictionEvent.Session.SessionEvent.new_length is deprecated.
-         *     See studio_stats.proto;l=20216
+         *     See studio_stats.proto;l=20330
          * @return The newLength.
          */
         @java.lang.Override
@@ -6621,7 +6621,7 @@ private static final long serialVersionUID = 0L;
         /**
          * <code>optional int32 new_length = 5 [deprecated = true];</code>
          * @deprecated android_studio.NextEditPredictionEvent.Session.SessionEvent.new_length is deprecated.
-         *     See studio_stats.proto;l=20216
+         *     See studio_stats.proto;l=20330
          * @param value The newLength to set.
          * @return This builder for chaining.
          */
@@ -6635,7 +6635,7 @@ private static final long serialVersionUID = 0L;
         /**
          * <code>optional int32 new_length = 5 [deprecated = true];</code>
          * @deprecated android_studio.NextEditPredictionEvent.Session.SessionEvent.new_length is deprecated.
-         *     See studio_stats.proto;l=20216
+         *     See studio_stats.proto;l=20330
          * @return This builder for chaining.
          */
         @java.lang.Deprecated public Builder clearNewLength() {
@@ -7337,7 +7337,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional string language = 3 [deprecated = true];</code>
      * @deprecated android_studio.NextEditPredictionEvent.Session.language is deprecated.
-     *     See studio_stats.proto;l=20145
+     *     See studio_stats.proto;l=20259
      * @return Whether the language field is set.
      */
     @java.lang.Override
@@ -7351,7 +7351,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional string language = 3 [deprecated = true];</code>
      * @deprecated android_studio.NextEditPredictionEvent.Session.language is deprecated.
-     *     See studio_stats.proto;l=20145
+     *     See studio_stats.proto;l=20259
      * @return The language.
      */
     @java.lang.Override
@@ -7376,7 +7376,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional string language = 3 [deprecated = true];</code>
      * @deprecated android_studio.NextEditPredictionEvent.Session.language is deprecated.
-     *     See studio_stats.proto;l=20145
+     *     See studio_stats.proto;l=20259
      * @return The bytes for language.
      */
     @java.lang.Override
@@ -8112,7 +8112,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional string language = 3 [deprecated = true];</code>
        * @deprecated android_studio.NextEditPredictionEvent.Session.language is deprecated.
-       *     See studio_stats.proto;l=20145
+       *     See studio_stats.proto;l=20259
        * @return Whether the language field is set.
        */
       @java.lang.Deprecated public boolean hasLanguage() {
@@ -8125,7 +8125,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional string language = 3 [deprecated = true];</code>
        * @deprecated android_studio.NextEditPredictionEvent.Session.language is deprecated.
-       *     See studio_stats.proto;l=20145
+       *     See studio_stats.proto;l=20259
        * @return The language.
        */
       @java.lang.Deprecated public java.lang.String getLanguage() {
@@ -8149,7 +8149,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional string language = 3 [deprecated = true];</code>
        * @deprecated android_studio.NextEditPredictionEvent.Session.language is deprecated.
-       *     See studio_stats.proto;l=20145
+       *     See studio_stats.proto;l=20259
        * @return The bytes for language.
        */
       @java.lang.Deprecated public com.google.protobuf.ByteString
@@ -8172,7 +8172,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional string language = 3 [deprecated = true];</code>
        * @deprecated android_studio.NextEditPredictionEvent.Session.language is deprecated.
-       *     See studio_stats.proto;l=20145
+       *     See studio_stats.proto;l=20259
        * @param value The language to set.
        * @return This builder for chaining.
        */
@@ -8191,7 +8191,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional string language = 3 [deprecated = true];</code>
        * @deprecated android_studio.NextEditPredictionEvent.Session.language is deprecated.
-       *     See studio_stats.proto;l=20145
+       *     See studio_stats.proto;l=20259
        * @return This builder for chaining.
        */
       @java.lang.Deprecated public Builder clearLanguage() {
@@ -8207,7 +8207,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional string language = 3 [deprecated = true];</code>
        * @deprecated android_studio.NextEditPredictionEvent.Session.language is deprecated.
-       *     See studio_stats.proto;l=20145
+       *     See studio_stats.proto;l=20259
        * @param value The bytes for language to set.
        * @return This builder for chaining.
        */
@@ -8625,6 +8625,777 @@ private static final long serialVersionUID = 0L;
 
   }
 
+  public interface RequestSentOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:android_studio.NextEditPredictionEvent.RequestSent)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>optional string model_id = 1;</code>
+     * @return Whether the modelId field is set.
+     */
+    boolean hasModelId();
+    /**
+     * <code>optional string model_id = 1;</code>
+     * @return The modelId.
+     */
+    java.lang.String getModelId();
+    /**
+     * <code>optional string model_id = 1;</code>
+     * @return The bytes for modelId.
+     */
+    com.google.protobuf.ByteString
+        getModelIdBytes();
+
+    /**
+     * <code>optional .android_studio.NextEditPredictionEvent.RequestSent.ModelType model_type = 2;</code>
+     * @return Whether the modelType field is set.
+     */
+    boolean hasModelType();
+    /**
+     * <code>optional .android_studio.NextEditPredictionEvent.RequestSent.ModelType model_type = 2;</code>
+     * @return The modelType.
+     */
+    com.google.wireless.android.sdk.stats.NextEditPredictionEvent.RequestSent.ModelType getModelType();
+  }
+  /**
+   * Protobuf type {@code android_studio.NextEditPredictionEvent.RequestSent}
+   */
+  public static final class RequestSent extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:android_studio.NextEditPredictionEvent.RequestSent)
+      RequestSentOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use RequestSent.newBuilder() to construct.
+    private RequestSent(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private RequestSent() {
+      modelId_ = "";
+      modelType_ = 0;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new RequestSent();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_NextEditPredictionEvent_RequestSent_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_NextEditPredictionEvent_RequestSent_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.google.wireless.android.sdk.stats.NextEditPredictionEvent.RequestSent.class, com.google.wireless.android.sdk.stats.NextEditPredictionEvent.RequestSent.Builder.class);
+    }
+
+    /**
+     * Protobuf enum {@code android_studio.NextEditPredictionEvent.RequestSent.ModelType}
+     */
+    public enum ModelType
+        implements com.google.protobuf.ProtocolMessageEnum {
+      /**
+       * <code>UNKNOWN = 0;</code>
+       */
+      UNKNOWN(0),
+      /**
+       * <code>DEFAULT_MODEL_FREE_TIER = 1;</code>
+       */
+      DEFAULT_MODEL_FREE_TIER(1),
+      /**
+       * <code>DEFAULT_MODEL_PAID_TIER = 2;</code>
+       */
+      DEFAULT_MODEL_PAID_TIER(2),
+      /**
+       * <code>OTHER_MODEL = 3;</code>
+       */
+      OTHER_MODEL(3),
+      ;
+
+      /**
+       * <code>UNKNOWN = 0;</code>
+       */
+      public static final int UNKNOWN_VALUE = 0;
+      /**
+       * <code>DEFAULT_MODEL_FREE_TIER = 1;</code>
+       */
+      public static final int DEFAULT_MODEL_FREE_TIER_VALUE = 1;
+      /**
+       * <code>DEFAULT_MODEL_PAID_TIER = 2;</code>
+       */
+      public static final int DEFAULT_MODEL_PAID_TIER_VALUE = 2;
+      /**
+       * <code>OTHER_MODEL = 3;</code>
+       */
+      public static final int OTHER_MODEL_VALUE = 3;
+
+
+      public final int getNumber() {
+        return value;
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static ModelType valueOf(int value) {
+        return forNumber(value);
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       */
+      public static ModelType forNumber(int value) {
+        switch (value) {
+          case 0: return UNKNOWN;
+          case 1: return DEFAULT_MODEL_FREE_TIER;
+          case 2: return DEFAULT_MODEL_PAID_TIER;
+          case 3: return OTHER_MODEL;
+          default: return null;
+        }
+      }
+
+      public static com.google.protobuf.Internal.EnumLiteMap<ModelType>
+          internalGetValueMap() {
+        return internalValueMap;
+      }
+      private static final com.google.protobuf.Internal.EnumLiteMap<
+          ModelType> internalValueMap =
+            new com.google.protobuf.Internal.EnumLiteMap<ModelType>() {
+              public ModelType findValueByNumber(int number) {
+                return ModelType.forNumber(number);
+              }
+            };
+
+      public final com.google.protobuf.Descriptors.EnumValueDescriptor
+          getValueDescriptor() {
+        return getDescriptor().getValues().get(ordinal());
+      }
+      public final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptorForType() {
+        return getDescriptor();
+      }
+      public static final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptor() {
+        return com.google.wireless.android.sdk.stats.NextEditPredictionEvent.RequestSent.getDescriptor().getEnumTypes().get(0);
+      }
+
+      private static final ModelType[] VALUES = values();
+
+      public static ModelType valueOf(
+          com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+        if (desc.getType() != getDescriptor()) {
+          throw new java.lang.IllegalArgumentException(
+            "EnumValueDescriptor is not for this type.");
+        }
+        return VALUES[desc.getIndex()];
+      }
+
+      private final int value;
+
+      private ModelType(int value) {
+        this.value = value;
+      }
+
+      // @@protoc_insertion_point(enum_scope:android_studio.NextEditPredictionEvent.RequestSent.ModelType)
+    }
+
+    private int bitField0_;
+    public static final int MODEL_ID_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object modelId_ = "";
+    /**
+     * <code>optional string model_id = 1;</code>
+     * @return Whether the modelId field is set.
+     */
+    @java.lang.Override
+    public boolean hasModelId() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <code>optional string model_id = 1;</code>
+     * @return The modelId.
+     */
+    @java.lang.Override
+    public java.lang.String getModelId() {
+      java.lang.Object ref = modelId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          modelId_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string model_id = 1;</code>
+     * @return The bytes for modelId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getModelIdBytes() {
+      java.lang.Object ref = modelId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        modelId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int MODEL_TYPE_FIELD_NUMBER = 2;
+    private int modelType_ = 0;
+    /**
+     * <code>optional .android_studio.NextEditPredictionEvent.RequestSent.ModelType model_type = 2;</code>
+     * @return Whether the modelType field is set.
+     */
+    @java.lang.Override public boolean hasModelType() {
+      return ((bitField0_ & 0x00000002) != 0);
+    }
+    /**
+     * <code>optional .android_studio.NextEditPredictionEvent.RequestSent.ModelType model_type = 2;</code>
+     * @return The modelType.
+     */
+    @java.lang.Override public com.google.wireless.android.sdk.stats.NextEditPredictionEvent.RequestSent.ModelType getModelType() {
+      com.google.wireless.android.sdk.stats.NextEditPredictionEvent.RequestSent.ModelType result = com.google.wireless.android.sdk.stats.NextEditPredictionEvent.RequestSent.ModelType.forNumber(modelType_);
+      return result == null ? com.google.wireless.android.sdk.stats.NextEditPredictionEvent.RequestSent.ModelType.UNKNOWN : result;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (((bitField0_ & 0x00000001) != 0)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, modelId_);
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        output.writeEnum(2, modelType_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) != 0)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, modelId_);
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(2, modelType_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.google.wireless.android.sdk.stats.NextEditPredictionEvent.RequestSent)) {
+        return super.equals(obj);
+      }
+      com.google.wireless.android.sdk.stats.NextEditPredictionEvent.RequestSent other = (com.google.wireless.android.sdk.stats.NextEditPredictionEvent.RequestSent) obj;
+
+      if (hasModelId() != other.hasModelId()) return false;
+      if (hasModelId()) {
+        if (!getModelId()
+            .equals(other.getModelId())) return false;
+      }
+      if (hasModelType() != other.hasModelType()) return false;
+      if (hasModelType()) {
+        if (modelType_ != other.modelType_) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasModelId()) {
+        hash = (37 * hash) + MODEL_ID_FIELD_NUMBER;
+        hash = (53 * hash) + getModelId().hashCode();
+      }
+      if (hasModelType()) {
+        hash = (37 * hash) + MODEL_TYPE_FIELD_NUMBER;
+        hash = (53 * hash) + modelType_;
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.google.wireless.android.sdk.stats.NextEditPredictionEvent.RequestSent parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.google.wireless.android.sdk.stats.NextEditPredictionEvent.RequestSent parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.google.wireless.android.sdk.stats.NextEditPredictionEvent.RequestSent parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.google.wireless.android.sdk.stats.NextEditPredictionEvent.RequestSent parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.google.wireless.android.sdk.stats.NextEditPredictionEvent.RequestSent parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.google.wireless.android.sdk.stats.NextEditPredictionEvent.RequestSent parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.google.wireless.android.sdk.stats.NextEditPredictionEvent.RequestSent parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.google.wireless.android.sdk.stats.NextEditPredictionEvent.RequestSent parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.google.wireless.android.sdk.stats.NextEditPredictionEvent.RequestSent parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.google.wireless.android.sdk.stats.NextEditPredictionEvent.RequestSent parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.google.wireless.android.sdk.stats.NextEditPredictionEvent.RequestSent parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.google.wireless.android.sdk.stats.NextEditPredictionEvent.RequestSent parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.google.wireless.android.sdk.stats.NextEditPredictionEvent.RequestSent prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code android_studio.NextEditPredictionEvent.RequestSent}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:android_studio.NextEditPredictionEvent.RequestSent)
+        com.google.wireless.android.sdk.stats.NextEditPredictionEvent.RequestSentOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_NextEditPredictionEvent_RequestSent_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_NextEditPredictionEvent_RequestSent_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.google.wireless.android.sdk.stats.NextEditPredictionEvent.RequestSent.class, com.google.wireless.android.sdk.stats.NextEditPredictionEvent.RequestSent.Builder.class);
+      }
+
+      // Construct using com.google.wireless.android.sdk.stats.NextEditPredictionEvent.RequestSent.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        modelId_ = "";
+        modelType_ = 0;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_NextEditPredictionEvent_RequestSent_descriptor;
+      }
+
+      @java.lang.Override
+      public com.google.wireless.android.sdk.stats.NextEditPredictionEvent.RequestSent getDefaultInstanceForType() {
+        return com.google.wireless.android.sdk.stats.NextEditPredictionEvent.RequestSent.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.google.wireless.android.sdk.stats.NextEditPredictionEvent.RequestSent build() {
+        com.google.wireless.android.sdk.stats.NextEditPredictionEvent.RequestSent result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.google.wireless.android.sdk.stats.NextEditPredictionEvent.RequestSent buildPartial() {
+        com.google.wireless.android.sdk.stats.NextEditPredictionEvent.RequestSent result = new com.google.wireless.android.sdk.stats.NextEditPredictionEvent.RequestSent(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.google.wireless.android.sdk.stats.NextEditPredictionEvent.RequestSent result) {
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.modelId_ = modelId_;
+          to_bitField0_ |= 0x00000001;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.modelType_ = modelType_;
+          to_bitField0_ |= 0x00000002;
+        }
+        result.bitField0_ |= to_bitField0_;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.google.wireless.android.sdk.stats.NextEditPredictionEvent.RequestSent) {
+          return mergeFrom((com.google.wireless.android.sdk.stats.NextEditPredictionEvent.RequestSent)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.google.wireless.android.sdk.stats.NextEditPredictionEvent.RequestSent other) {
+        if (other == com.google.wireless.android.sdk.stats.NextEditPredictionEvent.RequestSent.getDefaultInstance()) return this;
+        if (other.hasModelId()) {
+          modelId_ = other.modelId_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (other.hasModelType()) {
+          setModelType(other.getModelType());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                modelId_ = input.readBytes();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 16: {
+                int tmpRaw = input.readEnum();
+                com.google.wireless.android.sdk.stats.NextEditPredictionEvent.RequestSent.ModelType tmpValue =
+                    com.google.wireless.android.sdk.stats.NextEditPredictionEvent.RequestSent.ModelType.forNumber(tmpRaw);
+                if (tmpValue == null) {
+                  mergeUnknownVarintField(2, tmpRaw);
+                } else {
+                  modelType_ = tmpRaw;
+                  bitField0_ |= 0x00000002;
+                }
+                break;
+              } // case 16
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object modelId_ = "";
+      /**
+       * <code>optional string model_id = 1;</code>
+       * @return Whether the modelId field is set.
+       */
+      public boolean hasModelId() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>optional string model_id = 1;</code>
+       * @return The modelId.
+       */
+      public java.lang.String getModelId() {
+        java.lang.Object ref = modelId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            modelId_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string model_id = 1;</code>
+       * @return The bytes for modelId.
+       */
+      public com.google.protobuf.ByteString
+          getModelIdBytes() {
+        java.lang.Object ref = modelId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          modelId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string model_id = 1;</code>
+       * @param value The modelId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setModelId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        modelId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string model_id = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearModelId() {
+        modelId_ = getDefaultInstance().getModelId();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string model_id = 1;</code>
+       * @param value The bytes for modelId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setModelIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        modelId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private int modelType_ = 0;
+      /**
+       * <code>optional .android_studio.NextEditPredictionEvent.RequestSent.ModelType model_type = 2;</code>
+       * @return Whether the modelType field is set.
+       */
+      @java.lang.Override public boolean hasModelType() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <code>optional .android_studio.NextEditPredictionEvent.RequestSent.ModelType model_type = 2;</code>
+       * @return The modelType.
+       */
+      @java.lang.Override
+      public com.google.wireless.android.sdk.stats.NextEditPredictionEvent.RequestSent.ModelType getModelType() {
+        com.google.wireless.android.sdk.stats.NextEditPredictionEvent.RequestSent.ModelType result = com.google.wireless.android.sdk.stats.NextEditPredictionEvent.RequestSent.ModelType.forNumber(modelType_);
+        return result == null ? com.google.wireless.android.sdk.stats.NextEditPredictionEvent.RequestSent.ModelType.UNKNOWN : result;
+      }
+      /**
+       * <code>optional .android_studio.NextEditPredictionEvent.RequestSent.ModelType model_type = 2;</code>
+       * @param value The modelType to set.
+       * @return This builder for chaining.
+       */
+      public Builder setModelType(com.google.wireless.android.sdk.stats.NextEditPredictionEvent.RequestSent.ModelType value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x00000002;
+        modelType_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional .android_studio.NextEditPredictionEvent.RequestSent.ModelType model_type = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearModelType() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        modelType_ = 0;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:android_studio.NextEditPredictionEvent.RequestSent)
+    }
+
+    // @@protoc_insertion_point(class_scope:android_studio.NextEditPredictionEvent.RequestSent)
+    private static final com.google.wireless.android.sdk.stats.NextEditPredictionEvent.RequestSent DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.google.wireless.android.sdk.stats.NextEditPredictionEvent.RequestSent();
+    }
+
+    public static com.google.wireless.android.sdk.stats.NextEditPredictionEvent.RequestSent getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<RequestSent>
+        PARSER = new com.google.protobuf.AbstractParser<RequestSent>() {
+      @java.lang.Override
+      public RequestSent parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<RequestSent> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<RequestSent> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.wireless.android.sdk.stats.NextEditPredictionEvent.RequestSent getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private int bitField0_;
   private int nextEditPredictionCase_ = 0;
   @SuppressWarnings("serial")
@@ -8638,6 +9409,7 @@ private static final long serialVersionUID = 0L;
     ENABLED_STATUS(4),
     FAILURE(5),
     SESSION(6),
+    REQUEST_SENT(7),
     NEXTEDITPREDICTION_NOT_SET(0);
     private final int value;
     private NextEditPredictionCase(int value) {
@@ -8661,6 +9433,7 @@ private static final long serialVersionUID = 0L;
         case 4: return ENABLED_STATUS;
         case 5: return FAILURE;
         case 6: return SESSION;
+        case 7: return REQUEST_SENT;
         case 0: return NEXTEDITPREDICTION_NOT_SET;
         default: return null;
       }
@@ -8862,6 +9635,37 @@ private static final long serialVersionUID = 0L;
     return com.google.wireless.android.sdk.stats.NextEditPredictionEvent.Session.getDefaultInstance();
   }
 
+  public static final int REQUEST_SENT_FIELD_NUMBER = 7;
+  /**
+   * <code>.android_studio.NextEditPredictionEvent.RequestSent request_sent = 7 [lazy = true];</code>
+   * @return Whether the requestSent field is set.
+   */
+  @java.lang.Override
+  public boolean hasRequestSent() {
+    return nextEditPredictionCase_ == 7;
+  }
+  /**
+   * <code>.android_studio.NextEditPredictionEvent.RequestSent request_sent = 7 [lazy = true];</code>
+   * @return The requestSent.
+   */
+  @java.lang.Override
+  public com.google.wireless.android.sdk.stats.NextEditPredictionEvent.RequestSent getRequestSent() {
+    if (nextEditPredictionCase_ == 7) {
+       return (com.google.wireless.android.sdk.stats.NextEditPredictionEvent.RequestSent) nextEditPrediction_;
+    }
+    return com.google.wireless.android.sdk.stats.NextEditPredictionEvent.RequestSent.getDefaultInstance();
+  }
+  /**
+   * <code>.android_studio.NextEditPredictionEvent.RequestSent request_sent = 7 [lazy = true];</code>
+   */
+  @java.lang.Override
+  public com.google.wireless.android.sdk.stats.NextEditPredictionEvent.RequestSentOrBuilder getRequestSentOrBuilder() {
+    if (nextEditPredictionCase_ == 7) {
+       return (com.google.wireless.android.sdk.stats.NextEditPredictionEvent.RequestSent) nextEditPrediction_;
+    }
+    return com.google.wireless.android.sdk.stats.NextEditPredictionEvent.RequestSent.getDefaultInstance();
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -8893,6 +9697,9 @@ private static final long serialVersionUID = 0L;
     }
     if (nextEditPredictionCase_ == 6) {
       output.writeMessage(6, (com.google.wireless.android.sdk.stats.NextEditPredictionEvent.Session) nextEditPrediction_);
+    }
+    if (nextEditPredictionCase_ == 7) {
+      output.writeMessage(7, (com.google.wireless.android.sdk.stats.NextEditPredictionEvent.RequestSent) nextEditPrediction_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -8926,6 +9733,10 @@ private static final long serialVersionUID = 0L;
     if (nextEditPredictionCase_ == 6) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(6, (com.google.wireless.android.sdk.stats.NextEditPredictionEvent.Session) nextEditPrediction_);
+    }
+    if (nextEditPredictionCase_ == 7) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(7, (com.google.wireless.android.sdk.stats.NextEditPredictionEvent.RequestSent) nextEditPrediction_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -8968,6 +9779,10 @@ private static final long serialVersionUID = 0L;
         if (!getSession()
             .equals(other.getSession())) return false;
         break;
+      case 7:
+        if (!getRequestSent()
+            .equals(other.getRequestSent())) return false;
+        break;
       case 0:
       default:
     }
@@ -9006,6 +9821,10 @@ private static final long serialVersionUID = 0L;
       case 6:
         hash = (37 * hash) + SESSION_FIELD_NUMBER;
         hash = (53 * hash) + getSession().hashCode();
+        break;
+      case 7:
+        hash = (37 * hash) + REQUEST_SENT_FIELD_NUMBER;
+        hash = (53 * hash) + getRequestSent().hashCode();
         break;
       case 0:
       default:
@@ -9157,6 +9976,9 @@ private static final long serialVersionUID = 0L;
       if (sessionBuilder_ != null) {
         sessionBuilder_.clear();
       }
+      if (requestSentBuilder_ != null) {
+        requestSentBuilder_.clear();
+      }
       nextEditPredictionCase_ = 0;
       nextEditPrediction_ = null;
       return this;
@@ -9222,6 +10044,10 @@ private static final long serialVersionUID = 0L;
           sessionBuilder_ != null) {
         result.nextEditPrediction_ = sessionBuilder_.build();
       }
+      if (nextEditPredictionCase_ == 7 &&
+          requestSentBuilder_ != null) {
+        result.nextEditPrediction_ = requestSentBuilder_.build();
+      }
     }
 
     @java.lang.Override
@@ -9259,6 +10085,10 @@ private static final long serialVersionUID = 0L;
         }
         case SESSION: {
           mergeSession(other.getSession());
+          break;
+        }
+        case REQUEST_SENT: {
+          mergeRequestSent(other.getRequestSent());
           break;
         }
         case NEXTEDITPREDICTION_NOT_SET: {
@@ -9333,6 +10163,13 @@ private static final long serialVersionUID = 0L;
               nextEditPredictionCase_ = 6;
               break;
             } // case 50
+            case 58: {
+              input.readMessage(
+                  getRequestSentFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              nextEditPredictionCase_ = 7;
+              break;
+            } // case 58
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -10215,6 +11052,148 @@ private static final long serialVersionUID = 0L;
       nextEditPredictionCase_ = 6;
       onChanged();
       return sessionBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.NextEditPredictionEvent.RequestSent, com.google.wireless.android.sdk.stats.NextEditPredictionEvent.RequestSent.Builder, com.google.wireless.android.sdk.stats.NextEditPredictionEvent.RequestSentOrBuilder> requestSentBuilder_;
+    /**
+     * <code>.android_studio.NextEditPredictionEvent.RequestSent request_sent = 7 [lazy = true];</code>
+     * @return Whether the requestSent field is set.
+     */
+    @java.lang.Override
+    public boolean hasRequestSent() {
+      return nextEditPredictionCase_ == 7;
+    }
+    /**
+     * <code>.android_studio.NextEditPredictionEvent.RequestSent request_sent = 7 [lazy = true];</code>
+     * @return The requestSent.
+     */
+    @java.lang.Override
+    public com.google.wireless.android.sdk.stats.NextEditPredictionEvent.RequestSent getRequestSent() {
+      if (requestSentBuilder_ == null) {
+        if (nextEditPredictionCase_ == 7) {
+          return (com.google.wireless.android.sdk.stats.NextEditPredictionEvent.RequestSent) nextEditPrediction_;
+        }
+        return com.google.wireless.android.sdk.stats.NextEditPredictionEvent.RequestSent.getDefaultInstance();
+      } else {
+        if (nextEditPredictionCase_ == 7) {
+          return requestSentBuilder_.getMessage();
+        }
+        return com.google.wireless.android.sdk.stats.NextEditPredictionEvent.RequestSent.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.android_studio.NextEditPredictionEvent.RequestSent request_sent = 7 [lazy = true];</code>
+     */
+    public Builder setRequestSent(com.google.wireless.android.sdk.stats.NextEditPredictionEvent.RequestSent value) {
+      if (requestSentBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        nextEditPrediction_ = value;
+        onChanged();
+      } else {
+        requestSentBuilder_.setMessage(value);
+      }
+      nextEditPredictionCase_ = 7;
+      return this;
+    }
+    /**
+     * <code>.android_studio.NextEditPredictionEvent.RequestSent request_sent = 7 [lazy = true];</code>
+     */
+    public Builder setRequestSent(
+        com.google.wireless.android.sdk.stats.NextEditPredictionEvent.RequestSent.Builder builderForValue) {
+      if (requestSentBuilder_ == null) {
+        nextEditPrediction_ = builderForValue.build();
+        onChanged();
+      } else {
+        requestSentBuilder_.setMessage(builderForValue.build());
+      }
+      nextEditPredictionCase_ = 7;
+      return this;
+    }
+    /**
+     * <code>.android_studio.NextEditPredictionEvent.RequestSent request_sent = 7 [lazy = true];</code>
+     */
+    public Builder mergeRequestSent(com.google.wireless.android.sdk.stats.NextEditPredictionEvent.RequestSent value) {
+      if (requestSentBuilder_ == null) {
+        if (nextEditPredictionCase_ == 7 &&
+            nextEditPrediction_ != com.google.wireless.android.sdk.stats.NextEditPredictionEvent.RequestSent.getDefaultInstance()) {
+          nextEditPrediction_ = com.google.wireless.android.sdk.stats.NextEditPredictionEvent.RequestSent.newBuilder((com.google.wireless.android.sdk.stats.NextEditPredictionEvent.RequestSent) nextEditPrediction_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          nextEditPrediction_ = value;
+        }
+        onChanged();
+      } else {
+        if (nextEditPredictionCase_ == 7) {
+          requestSentBuilder_.mergeFrom(value);
+        } else {
+          requestSentBuilder_.setMessage(value);
+        }
+      }
+      nextEditPredictionCase_ = 7;
+      return this;
+    }
+    /**
+     * <code>.android_studio.NextEditPredictionEvent.RequestSent request_sent = 7 [lazy = true];</code>
+     */
+    public Builder clearRequestSent() {
+      if (requestSentBuilder_ == null) {
+        if (nextEditPredictionCase_ == 7) {
+          nextEditPredictionCase_ = 0;
+          nextEditPrediction_ = null;
+          onChanged();
+        }
+      } else {
+        if (nextEditPredictionCase_ == 7) {
+          nextEditPredictionCase_ = 0;
+          nextEditPrediction_ = null;
+        }
+        requestSentBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>.android_studio.NextEditPredictionEvent.RequestSent request_sent = 7 [lazy = true];</code>
+     */
+    public com.google.wireless.android.sdk.stats.NextEditPredictionEvent.RequestSent.Builder getRequestSentBuilder() {
+      return getRequestSentFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.android_studio.NextEditPredictionEvent.RequestSent request_sent = 7 [lazy = true];</code>
+     */
+    @java.lang.Override
+    public com.google.wireless.android.sdk.stats.NextEditPredictionEvent.RequestSentOrBuilder getRequestSentOrBuilder() {
+      if ((nextEditPredictionCase_ == 7) && (requestSentBuilder_ != null)) {
+        return requestSentBuilder_.getMessageOrBuilder();
+      } else {
+        if (nextEditPredictionCase_ == 7) {
+          return (com.google.wireless.android.sdk.stats.NextEditPredictionEvent.RequestSent) nextEditPrediction_;
+        }
+        return com.google.wireless.android.sdk.stats.NextEditPredictionEvent.RequestSent.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.android_studio.NextEditPredictionEvent.RequestSent request_sent = 7 [lazy = true];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.NextEditPredictionEvent.RequestSent, com.google.wireless.android.sdk.stats.NextEditPredictionEvent.RequestSent.Builder, com.google.wireless.android.sdk.stats.NextEditPredictionEvent.RequestSentOrBuilder> 
+        getRequestSentFieldBuilder() {
+      if (requestSentBuilder_ == null) {
+        if (!(nextEditPredictionCase_ == 7)) {
+          nextEditPrediction_ = com.google.wireless.android.sdk.stats.NextEditPredictionEvent.RequestSent.getDefaultInstance();
+        }
+        requestSentBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.wireless.android.sdk.stats.NextEditPredictionEvent.RequestSent, com.google.wireless.android.sdk.stats.NextEditPredictionEvent.RequestSent.Builder, com.google.wireless.android.sdk.stats.NextEditPredictionEvent.RequestSentOrBuilder>(
+                (com.google.wireless.android.sdk.stats.NextEditPredictionEvent.RequestSent) nextEditPrediction_,
+                getParentForChildren(),
+                isClean());
+        nextEditPrediction_ = null;
+      }
+      nextEditPredictionCase_ = 7;
+      onChanged();
+      return requestSentBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(
