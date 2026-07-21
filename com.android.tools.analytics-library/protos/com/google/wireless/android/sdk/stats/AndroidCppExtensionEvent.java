@@ -426,6 +426,17 @@ private static final long serialVersionUID = 0L;
      * <code>optional .android_studio.AndroidCppExtensionEvent.BuildEvent.LinkCompleteInfo link_complete_info = 11;</code>
      */
     com.google.wireless.android.sdk.stats.AndroidCppExtensionEvent.BuildEvent.LinkCompleteInfoOrBuilder getLinkCompleteInfoOrBuilder();
+
+    /**
+     * <code>optional .android_studio.AndroidCppExtensionEvent.BuildEvent.NativeBuildBackend native_build_backend = 13;</code>
+     * @return Whether the nativeBuildBackend field is set.
+     */
+    boolean hasNativeBuildBackend();
+    /**
+     * <code>optional .android_studio.AndroidCppExtensionEvent.BuildEvent.NativeBuildBackend native_build_backend = 13;</code>
+     * @return The nativeBuildBackend.
+     */
+    com.google.wireless.android.sdk.stats.AndroidCppExtensionEvent.BuildEvent.NativeBuildBackend getNativeBuildBackend();
   }
   /**
    * Protobuf type {@code android_studio.AndroidCppExtensionEvent.BuildEvent}
@@ -446,6 +457,7 @@ private static final long serialVersionUID = 0L;
       ndkVersion_ = "";
       buildProjectPath_ = "";
       type_ = 0;
+      nativeBuildBackend_ = 0;
     }
 
     @java.lang.Override
@@ -579,6 +591,18 @@ private static final long serialVersionUID = 0L;
               com.google.protobuf.ByteString bs = input.readBytes();
               bitField0_ |= 0x00000080;
               buildProjectPath_ = bs;
+              break;
+            }
+            case 104: {
+              int rawValue = input.readEnum();
+                @SuppressWarnings("deprecation")
+              com.google.wireless.android.sdk.stats.AndroidCppExtensionEvent.BuildEvent.NativeBuildBackend value = com.google.wireless.android.sdk.stats.AndroidCppExtensionEvent.BuildEvent.NativeBuildBackend.valueOf(rawValue);
+              if (value == null) {
+                unknownFields.mergeVarintField(13, rawValue);
+              } else {
+                bitField0_ |= 0x00001000;
+                nativeBuildBackend_ = rawValue;
+              }
               break;
             }
             default: {
@@ -809,6 +833,14 @@ private static final long serialVersionUID = 0L;
        * <code>GNUPP17 = 16;</code>
        */
       GNUPP17(16),
+      /**
+       * <code>CPP20 = 17;</code>
+       */
+      CPP20(17),
+      /**
+       * <code>GNUPP20 = 18;</code>
+       */
+      GNUPP20(18),
       ;
 
       /**
@@ -879,6 +911,14 @@ private static final long serialVersionUID = 0L;
        * <code>GNUPP17 = 16;</code>
        */
       public static final int GNUPP17_VALUE = 16;
+      /**
+       * <code>CPP20 = 17;</code>
+       */
+      public static final int CPP20_VALUE = 17;
+      /**
+       * <code>GNUPP20 = 18;</code>
+       */
+      public static final int GNUPP20_VALUE = 18;
 
 
       public final int getNumber() {
@@ -918,6 +958,8 @@ private static final long serialVersionUID = 0L;
           case 14: return GNU17;
           case 15: return CPP17;
           case 16: return GNUPP17;
+          case 17: return CPP20;
+          case 18: return GNUPP20;
           default: return null;
         }
       }
@@ -965,6 +1007,120 @@ private static final long serialVersionUID = 0L;
       }
 
       // @@protoc_insertion_point(enum_scope:android_studio.AndroidCppExtensionEvent.BuildEvent.LanguageLevel)
+    }
+
+    /**
+     * Protobuf enum {@code android_studio.AndroidCppExtensionEvent.BuildEvent.NativeBuildBackend}
+     */
+    public enum NativeBuildBackend
+        implements com.google.protobuf.ProtocolMessageEnum {
+      /**
+       * <code>UNSPECIFIED_NATIVE_BUILD_BACKEND = 0;</code>
+       */
+      UNSPECIFIED_NATIVE_BUILD_BACKEND(0),
+      /**
+       * <code>ORIGINAL_MSBUILD = 1;</code>
+       */
+      ORIGINAL_MSBUILD(1),
+      /**
+       * <code>MULTITOOLTASK_MSBUILD = 2;</code>
+       */
+      MULTITOOLTASK_MSBUILD(2),
+      /**
+       * <code>NINJA = 3;</code>
+       */
+      NINJA(3),
+      ;
+
+      /**
+       * <code>UNSPECIFIED_NATIVE_BUILD_BACKEND = 0;</code>
+       */
+      public static final int UNSPECIFIED_NATIVE_BUILD_BACKEND_VALUE = 0;
+      /**
+       * <code>ORIGINAL_MSBUILD = 1;</code>
+       */
+      public static final int ORIGINAL_MSBUILD_VALUE = 1;
+      /**
+       * <code>MULTITOOLTASK_MSBUILD = 2;</code>
+       */
+      public static final int MULTITOOLTASK_MSBUILD_VALUE = 2;
+      /**
+       * <code>NINJA = 3;</code>
+       */
+      public static final int NINJA_VALUE = 3;
+
+
+      public final int getNumber() {
+        return value;
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static NativeBuildBackend valueOf(int value) {
+        return forNumber(value);
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       */
+      public static NativeBuildBackend forNumber(int value) {
+        switch (value) {
+          case 0: return UNSPECIFIED_NATIVE_BUILD_BACKEND;
+          case 1: return ORIGINAL_MSBUILD;
+          case 2: return MULTITOOLTASK_MSBUILD;
+          case 3: return NINJA;
+          default: return null;
+        }
+      }
+
+      public static com.google.protobuf.Internal.EnumLiteMap<NativeBuildBackend>
+          internalGetValueMap() {
+        return internalValueMap;
+      }
+      private static final com.google.protobuf.Internal.EnumLiteMap<
+          NativeBuildBackend> internalValueMap =
+            new com.google.protobuf.Internal.EnumLiteMap<NativeBuildBackend>() {
+              public NativeBuildBackend findValueByNumber(int number) {
+                return NativeBuildBackend.forNumber(number);
+              }
+            };
+
+      public final com.google.protobuf.Descriptors.EnumValueDescriptor
+          getValueDescriptor() {
+        return getDescriptor().getValues().get(ordinal());
+      }
+      public final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptorForType() {
+        return getDescriptor();
+      }
+      public static final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptor() {
+        return com.google.wireless.android.sdk.stats.AndroidCppExtensionEvent.BuildEvent.getDescriptor().getEnumTypes().get(2);
+      }
+
+      private static final NativeBuildBackend[] VALUES = values();
+
+      public static NativeBuildBackend valueOf(
+          com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+        if (desc.getType() != getDescriptor()) {
+          throw new java.lang.IllegalArgumentException(
+            "EnumValueDescriptor is not for this type.");
+        }
+        return VALUES[desc.getIndex()];
+      }
+
+      private final int value;
+
+      private NativeBuildBackend(int value) {
+        this.value = value;
+      }
+
+      // @@protoc_insertion_point(enum_scope:android_studio.AndroidCppExtensionEvent.BuildEvent.NativeBuildBackend)
     }
 
     public interface BuildCompleteInfoOrBuilder extends
@@ -4912,6 +5068,25 @@ private static final long serialVersionUID = 0L;
       return linkCompleteInfo_ == null ? com.google.wireless.android.sdk.stats.AndroidCppExtensionEvent.BuildEvent.LinkCompleteInfo.getDefaultInstance() : linkCompleteInfo_;
     }
 
+    public static final int NATIVE_BUILD_BACKEND_FIELD_NUMBER = 13;
+    private int nativeBuildBackend_;
+    /**
+     * <code>optional .android_studio.AndroidCppExtensionEvent.BuildEvent.NativeBuildBackend native_build_backend = 13;</code>
+     * @return Whether the nativeBuildBackend field is set.
+     */
+    @java.lang.Override public boolean hasNativeBuildBackend() {
+      return ((bitField0_ & 0x00001000) != 0);
+    }
+    /**
+     * <code>optional .android_studio.AndroidCppExtensionEvent.BuildEvent.NativeBuildBackend native_build_backend = 13;</code>
+     * @return The nativeBuildBackend.
+     */
+    @java.lang.Override public com.google.wireless.android.sdk.stats.AndroidCppExtensionEvent.BuildEvent.NativeBuildBackend getNativeBuildBackend() {
+      @SuppressWarnings("deprecation")
+      com.google.wireless.android.sdk.stats.AndroidCppExtensionEvent.BuildEvent.NativeBuildBackend result = com.google.wireless.android.sdk.stats.AndroidCppExtensionEvent.BuildEvent.NativeBuildBackend.valueOf(nativeBuildBackend_);
+      return result == null ? com.google.wireless.android.sdk.stats.AndroidCppExtensionEvent.BuildEvent.NativeBuildBackend.UNSPECIFIED_NATIVE_BUILD_BACKEND : result;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -4961,6 +5136,9 @@ private static final long serialVersionUID = 0L;
       }
       if (((bitField0_ & 0x00000080) != 0)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 12, buildProjectPath_);
+      }
+      if (((bitField0_ & 0x00001000) != 0)) {
+        output.writeEnum(13, nativeBuildBackend_);
       }
       unknownFields.writeTo(output);
     }
@@ -5014,6 +5192,10 @@ private static final long serialVersionUID = 0L;
       }
       if (((bitField0_ & 0x00000080) != 0)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(12, buildProjectPath_);
+      }
+      if (((bitField0_ & 0x00001000) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(13, nativeBuildBackend_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -5088,6 +5270,10 @@ private static final long serialVersionUID = 0L;
         if (!getLinkCompleteInfo()
             .equals(other.getLinkCompleteInfo())) return false;
       }
+      if (hasNativeBuildBackend() != other.hasNativeBuildBackend()) return false;
+      if (hasNativeBuildBackend()) {
+        if (nativeBuildBackend_ != other.nativeBuildBackend_) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -5149,6 +5335,10 @@ private static final long serialVersionUID = 0L;
       if (hasLinkCompleteInfo()) {
         hash = (37 * hash) + LINK_COMPLETE_INFO_FIELD_NUMBER;
         hash = (53 * hash) + getLinkCompleteInfo().hashCode();
+      }
+      if (hasNativeBuildBackend()) {
+        hash = (37 * hash) + NATIVE_BUILD_BACKEND_FIELD_NUMBER;
+        hash = (53 * hash) + nativeBuildBackend_;
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -5322,6 +5512,8 @@ private static final long serialVersionUID = 0L;
           linkCompleteInfoBuilder_.clear();
         }
         bitField0_ = (bitField0_ & ~0x00000800);
+        nativeBuildBackend_ = 0;
+        bitField0_ = (bitField0_ & ~0x00001000);
         return this;
       }
 
@@ -5410,6 +5602,10 @@ private static final long serialVersionUID = 0L;
           }
           to_bitField0_ |= 0x00000800;
         }
+        if (((from_bitField0_ & 0x00001000) != 0)) {
+          to_bitField0_ |= 0x00001000;
+        }
+        result.nativeBuildBackend_ = nativeBuildBackend_;
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -5502,6 +5698,9 @@ private static final long serialVersionUID = 0L;
         }
         if (other.hasLinkCompleteInfo()) {
           mergeLinkCompleteInfo(other.getLinkCompleteInfo());
+        }
+        if (other.hasNativeBuildBackend()) {
+          setNativeBuildBackend(other.getNativeBuildBackend());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -6490,6 +6689,49 @@ private static final long serialVersionUID = 0L;
           linkCompleteInfo_ = null;
         }
         return linkCompleteInfoBuilder_;
+      }
+
+      private int nativeBuildBackend_ = 0;
+      /**
+       * <code>optional .android_studio.AndroidCppExtensionEvent.BuildEvent.NativeBuildBackend native_build_backend = 13;</code>
+       * @return Whether the nativeBuildBackend field is set.
+       */
+      @java.lang.Override public boolean hasNativeBuildBackend() {
+        return ((bitField0_ & 0x00001000) != 0);
+      }
+      /**
+       * <code>optional .android_studio.AndroidCppExtensionEvent.BuildEvent.NativeBuildBackend native_build_backend = 13;</code>
+       * @return The nativeBuildBackend.
+       */
+      @java.lang.Override
+      public com.google.wireless.android.sdk.stats.AndroidCppExtensionEvent.BuildEvent.NativeBuildBackend getNativeBuildBackend() {
+        @SuppressWarnings("deprecation")
+        com.google.wireless.android.sdk.stats.AndroidCppExtensionEvent.BuildEvent.NativeBuildBackend result = com.google.wireless.android.sdk.stats.AndroidCppExtensionEvent.BuildEvent.NativeBuildBackend.valueOf(nativeBuildBackend_);
+        return result == null ? com.google.wireless.android.sdk.stats.AndroidCppExtensionEvent.BuildEvent.NativeBuildBackend.UNSPECIFIED_NATIVE_BUILD_BACKEND : result;
+      }
+      /**
+       * <code>optional .android_studio.AndroidCppExtensionEvent.BuildEvent.NativeBuildBackend native_build_backend = 13;</code>
+       * @param value The nativeBuildBackend to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNativeBuildBackend(com.google.wireless.android.sdk.stats.AndroidCppExtensionEvent.BuildEvent.NativeBuildBackend value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x00001000;
+        nativeBuildBackend_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional .android_studio.AndroidCppExtensionEvent.BuildEvent.NativeBuildBackend native_build_backend = 13;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearNativeBuildBackend() {
+        bitField0_ = (bitField0_ & ~0x00001000);
+        nativeBuildBackend_ = 0;
+        onChanged();
+        return this;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
