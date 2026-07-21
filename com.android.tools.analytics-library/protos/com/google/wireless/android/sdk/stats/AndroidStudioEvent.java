@@ -2141,6 +2141,71 @@ private static final long serialVersionUID = 0L;
             bitField4_ |= 0x40000000;
             break;
           }
+          case 1330: {
+            com.google.wireless.android.sdk.stats.ComposePreviewCanvasEvent.Builder subBuilder = null;
+            if (((bitField4_ & 0x80000000) != 0)) {
+              subBuilder = composePreviewCanvasEvent_.toBuilder();
+            }
+            composePreviewCanvasEvent_ = input.readMessage(com.google.wireless.android.sdk.stats.ComposePreviewCanvasEvent.PARSER, extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(composePreviewCanvasEvent_);
+              composePreviewCanvasEvent_ = subBuilder.buildPartial();
+            }
+            bitField4_ |= 0x80000000;
+            break;
+          }
+          case 1338: {
+            com.google.wireless.android.sdk.stats.SmlCompletionEvent.Builder subBuilder = null;
+            if (((bitField5_ & 0x00000001) != 0)) {
+              subBuilder = smlCompletionEvent_.toBuilder();
+            }
+            smlCompletionEvent_ = input.readMessage(com.google.wireless.android.sdk.stats.SmlCompletionEvent.PARSER, extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(smlCompletionEvent_);
+              smlCompletionEvent_ = subBuilder.buildPartial();
+            }
+            bitField5_ |= 0x00000001;
+            break;
+          }
+          case 1346: {
+            com.google.wireless.android.sdk.stats.SmlTransformEvent.Builder subBuilder = null;
+            if (((bitField5_ & 0x00000002) != 0)) {
+              subBuilder = smlTransformEvent_.toBuilder();
+            }
+            smlTransformEvent_ = input.readMessage(com.google.wireless.android.sdk.stats.SmlTransformEvent.PARSER, extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(smlTransformEvent_);
+              smlTransformEvent_ = subBuilder.buildPartial();
+            }
+            bitField5_ |= 0x00000002;
+            break;
+          }
+          case 1354: {
+            com.google.wireless.android.sdk.stats.SmlChatBotEvent.Builder subBuilder = null;
+            if (((bitField5_ & 0x00000004) != 0)) {
+              subBuilder = smlChatBotEvent_.toBuilder();
+            }
+            smlChatBotEvent_ = input.readMessage(com.google.wireless.android.sdk.stats.SmlChatBotEvent.PARSER, extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(smlChatBotEvent_);
+              smlChatBotEvent_ = subBuilder.buildPartial();
+            }
+            bitField5_ |= 0x00000004;
+            break;
+          }
+          case 1362: {
+            com.google.wireless.android.sdk.stats.SmlConfigurationEvent.Builder subBuilder = null;
+            if (((bitField5_ & 0x00000008) != 0)) {
+              subBuilder = smlConfigurationEvent_.toBuilder();
+            }
+            smlConfigurationEvent_ = input.readMessage(com.google.wireless.android.sdk.stats.SmlConfigurationEvent.PARSER, extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(smlConfigurationEvent_);
+              smlConfigurationEvent_ = subBuilder.buildPartial();
+            }
+            bitField5_ |= 0x00000008;
+            break;
+          }
           default: {
             if (!parseUnknownField(
                 input, unknownFields, extensionRegistry, tag)) {
@@ -4887,6 +4952,46 @@ private static final long serialVersionUID = 0L;
      * <code>SYSTEM_HEALTH_EVENT = 279;</code>
      */
     SYSTEM_HEALTH_EVENT(279),
+    /**
+     * <pre>
+     * Event related to compose preview canvas
+     * </pre>
+     *
+     * <code>COMPOSE_PREVIEW_CANVAS_EVENT = 280;</code>
+     */
+    COMPOSE_PREVIEW_CANVAS_EVENT(280),
+    /**
+     * <pre>
+     * Event related to ML based Code Completion
+     * </pre>
+     *
+     * <code>SML_COMPLETION_EVENT = 281;</code>
+     */
+    SML_COMPLETION_EVENT(281),
+    /**
+     * <pre>
+     * Event related to ML based Code Fixing/Transformation
+     * </pre>
+     *
+     * <code>SML_CODE_TRANSFORMATION_EVENT = 282;</code>
+     */
+    SML_CODE_TRANSFORMATION_EVENT(282),
+    /**
+     * <pre>
+     * Event related to Studio Chat Bot
+     * </pre>
+     *
+     * <code>SML_CHATBOT_EVENT = 283;</code>
+     */
+    SML_CHATBOT_EVENT(283),
+    /**
+     * <pre>
+     * Configuration settings for ML based features
+     * </pre>
+     *
+     * <code>SML_CONFIGURATION_EVENT = 284;</code>
+     */
+    SML_CONFIGURATION_EVENT(284),
     ;
 
     /**
@@ -6955,6 +7060,46 @@ private static final long serialVersionUID = 0L;
      * <code>SYSTEM_HEALTH_EVENT = 279;</code>
      */
     public static final int SYSTEM_HEALTH_EVENT_VALUE = 279;
+    /**
+     * <pre>
+     * Event related to compose preview canvas
+     * </pre>
+     *
+     * <code>COMPOSE_PREVIEW_CANVAS_EVENT = 280;</code>
+     */
+    public static final int COMPOSE_PREVIEW_CANVAS_EVENT_VALUE = 280;
+    /**
+     * <pre>
+     * Event related to ML based Code Completion
+     * </pre>
+     *
+     * <code>SML_COMPLETION_EVENT = 281;</code>
+     */
+    public static final int SML_COMPLETION_EVENT_VALUE = 281;
+    /**
+     * <pre>
+     * Event related to ML based Code Fixing/Transformation
+     * </pre>
+     *
+     * <code>SML_CODE_TRANSFORMATION_EVENT = 282;</code>
+     */
+    public static final int SML_CODE_TRANSFORMATION_EVENT_VALUE = 282;
+    /**
+     * <pre>
+     * Event related to Studio Chat Bot
+     * </pre>
+     *
+     * <code>SML_CHATBOT_EVENT = 283;</code>
+     */
+    public static final int SML_CHATBOT_EVENT_VALUE = 283;
+    /**
+     * <pre>
+     * Configuration settings for ML based features
+     * </pre>
+     *
+     * <code>SML_CONFIGURATION_EVENT = 284;</code>
+     */
+    public static final int SML_CONFIGURATION_EVENT_VALUE = 284;
 
 
     public final int getNumber() {
@@ -7252,6 +7397,11 @@ private static final long serialVersionUID = 0L;
         case 277: return BUILD_OUTPUT_DOWNLOADS_INFO_USER_INTERACTION;
         case 278: return DEVICE_MIRRORING_ABNORMAL_AGENT_TERMINATION;
         case 279: return SYSTEM_HEALTH_EVENT;
+        case 280: return COMPOSE_PREVIEW_CANVAS_EVENT;
+        case 281: return SML_COMPLETION_EVENT;
+        case 282: return SML_CODE_TRANSFORMATION_EVENT;
+        case 283: return SML_CHATBOT_EVENT;
+        case 284: return SML_CONFIGURATION_EVENT;
         default: return null;
       }
     }
@@ -9787,6 +9937,14 @@ private static final long serialVersionUID = 0L;
      * <code>TYPE_KMP_INCORRECT_PLATFORM_SOURCE_SET = 61;</code>
      */
     TYPE_KMP_INCORRECT_PLATFORM_SOURCE_SET(61),
+    /**
+     * <pre>
+     * Empty dimension results in no variant in IDE
+     * </pre>
+     *
+     * <code>TYPE_EMPTY_FLAVOR_DIMENSION = 62;</code>
+     */
+    TYPE_EMPTY_FLAVOR_DIMENSION(62),
     ;
 
     /**
@@ -10226,6 +10384,14 @@ private static final long serialVersionUID = 0L;
      * <code>TYPE_KMP_INCORRECT_PLATFORM_SOURCE_SET = 61;</code>
      */
     public static final int TYPE_KMP_INCORRECT_PLATFORM_SOURCE_SET_VALUE = 61;
+    /**
+     * <pre>
+     * Empty dimension results in no variant in IDE
+     * </pre>
+     *
+     * <code>TYPE_EMPTY_FLAVOR_DIMENSION = 62;</code>
+     */
+    public static final int TYPE_EMPTY_FLAVOR_DIMENSION_VALUE = 62;
 
 
     public final int getNumber() {
@@ -10310,6 +10476,7 @@ private static final long serialVersionUID = 0L;
         case 59: return TYPE_APPLICATION_ID_MUST_NOT_BE_DYNAMIC;
         case 60: return TYPE_REMOVED_API;
         case 61: return TYPE_KMP_INCORRECT_PLATFORM_SOURCE_SET;
+        case 62: return TYPE_EMPTY_FLAVOR_DIMENSION;
         default: return null;
       }
     }
@@ -15822,6 +15989,7 @@ private static final long serialVersionUID = 0L;
   private int bitField2_;
   private int bitField3_;
   private int bitField4_;
+  private int bitField5_;
   public static final int CATEGORY_FIELD_NUMBER = 1;
   private int category_;
   /**
@@ -22401,6 +22569,196 @@ private static final long serialVersionUID = 0L;
     return systemHealthEvent_ == null ? com.google.wireless.android.sdk.stats.SystemHealthEvent.getDefaultInstance() : systemHealthEvent_;
   }
 
+  public static final int COMPOSE_PREVIEW_CANVAS_EVENT_FIELD_NUMBER = 166;
+  private com.google.wireless.android.sdk.stats.ComposePreviewCanvasEvent composePreviewCanvasEvent_;
+  /**
+   * <pre>
+   * set when kind = COMPOSE_PREVIEW_CANVAS_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.ComposePreviewCanvasEvent compose_preview_canvas_event = 166;</code>
+   * @return Whether the composePreviewCanvasEvent field is set.
+   */
+  @java.lang.Override
+  public boolean hasComposePreviewCanvasEvent() {
+    return ((bitField4_ & 0x80000000) != 0);
+  }
+  /**
+   * <pre>
+   * set when kind = COMPOSE_PREVIEW_CANVAS_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.ComposePreviewCanvasEvent compose_preview_canvas_event = 166;</code>
+   * @return The composePreviewCanvasEvent.
+   */
+  @java.lang.Override
+  public com.google.wireless.android.sdk.stats.ComposePreviewCanvasEvent getComposePreviewCanvasEvent() {
+    return composePreviewCanvasEvent_ == null ? com.google.wireless.android.sdk.stats.ComposePreviewCanvasEvent.getDefaultInstance() : composePreviewCanvasEvent_;
+  }
+  /**
+   * <pre>
+   * set when kind = COMPOSE_PREVIEW_CANVAS_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.ComposePreviewCanvasEvent compose_preview_canvas_event = 166;</code>
+   */
+  @java.lang.Override
+  public com.google.wireless.android.sdk.stats.ComposePreviewCanvasEventOrBuilder getComposePreviewCanvasEventOrBuilder() {
+    return composePreviewCanvasEvent_ == null ? com.google.wireless.android.sdk.stats.ComposePreviewCanvasEvent.getDefaultInstance() : composePreviewCanvasEvent_;
+  }
+
+  public static final int SML_COMPLETION_EVENT_FIELD_NUMBER = 167;
+  private com.google.wireless.android.sdk.stats.SmlCompletionEvent smlCompletionEvent_;
+  /**
+   * <pre>
+   * set when kind = SML_COMPLETION_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.SmlCompletionEvent sml_completion_event = 167;</code>
+   * @return Whether the smlCompletionEvent field is set.
+   */
+  @java.lang.Override
+  public boolean hasSmlCompletionEvent() {
+    return ((bitField5_ & 0x00000001) != 0);
+  }
+  /**
+   * <pre>
+   * set when kind = SML_COMPLETION_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.SmlCompletionEvent sml_completion_event = 167;</code>
+   * @return The smlCompletionEvent.
+   */
+  @java.lang.Override
+  public com.google.wireless.android.sdk.stats.SmlCompletionEvent getSmlCompletionEvent() {
+    return smlCompletionEvent_ == null ? com.google.wireless.android.sdk.stats.SmlCompletionEvent.getDefaultInstance() : smlCompletionEvent_;
+  }
+  /**
+   * <pre>
+   * set when kind = SML_COMPLETION_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.SmlCompletionEvent sml_completion_event = 167;</code>
+   */
+  @java.lang.Override
+  public com.google.wireless.android.sdk.stats.SmlCompletionEventOrBuilder getSmlCompletionEventOrBuilder() {
+    return smlCompletionEvent_ == null ? com.google.wireless.android.sdk.stats.SmlCompletionEvent.getDefaultInstance() : smlCompletionEvent_;
+  }
+
+  public static final int SML_TRANSFORM_EVENT_FIELD_NUMBER = 168;
+  private com.google.wireless.android.sdk.stats.SmlTransformEvent smlTransformEvent_;
+  /**
+   * <pre>
+   * set when kind = SML_CODE_TRANSFORMATION_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.SmlTransformEvent sml_transform_event = 168;</code>
+   * @return Whether the smlTransformEvent field is set.
+   */
+  @java.lang.Override
+  public boolean hasSmlTransformEvent() {
+    return ((bitField5_ & 0x00000002) != 0);
+  }
+  /**
+   * <pre>
+   * set when kind = SML_CODE_TRANSFORMATION_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.SmlTransformEvent sml_transform_event = 168;</code>
+   * @return The smlTransformEvent.
+   */
+  @java.lang.Override
+  public com.google.wireless.android.sdk.stats.SmlTransformEvent getSmlTransformEvent() {
+    return smlTransformEvent_ == null ? com.google.wireless.android.sdk.stats.SmlTransformEvent.getDefaultInstance() : smlTransformEvent_;
+  }
+  /**
+   * <pre>
+   * set when kind = SML_CODE_TRANSFORMATION_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.SmlTransformEvent sml_transform_event = 168;</code>
+   */
+  @java.lang.Override
+  public com.google.wireless.android.sdk.stats.SmlTransformEventOrBuilder getSmlTransformEventOrBuilder() {
+    return smlTransformEvent_ == null ? com.google.wireless.android.sdk.stats.SmlTransformEvent.getDefaultInstance() : smlTransformEvent_;
+  }
+
+  public static final int SML_CHAT_BOT_EVENT_FIELD_NUMBER = 169;
+  private com.google.wireless.android.sdk.stats.SmlChatBotEvent smlChatBotEvent_;
+  /**
+   * <pre>
+   * set when kind = SML_CHATBOT_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.SmlChatBotEvent sml_chat_bot_event = 169;</code>
+   * @return Whether the smlChatBotEvent field is set.
+   */
+  @java.lang.Override
+  public boolean hasSmlChatBotEvent() {
+    return ((bitField5_ & 0x00000004) != 0);
+  }
+  /**
+   * <pre>
+   * set when kind = SML_CHATBOT_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.SmlChatBotEvent sml_chat_bot_event = 169;</code>
+   * @return The smlChatBotEvent.
+   */
+  @java.lang.Override
+  public com.google.wireless.android.sdk.stats.SmlChatBotEvent getSmlChatBotEvent() {
+    return smlChatBotEvent_ == null ? com.google.wireless.android.sdk.stats.SmlChatBotEvent.getDefaultInstance() : smlChatBotEvent_;
+  }
+  /**
+   * <pre>
+   * set when kind = SML_CHATBOT_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.SmlChatBotEvent sml_chat_bot_event = 169;</code>
+   */
+  @java.lang.Override
+  public com.google.wireless.android.sdk.stats.SmlChatBotEventOrBuilder getSmlChatBotEventOrBuilder() {
+    return smlChatBotEvent_ == null ? com.google.wireless.android.sdk.stats.SmlChatBotEvent.getDefaultInstance() : smlChatBotEvent_;
+  }
+
+  public static final int SML_CONFIGURATION_EVENT_FIELD_NUMBER = 170;
+  private com.google.wireless.android.sdk.stats.SmlConfigurationEvent smlConfigurationEvent_;
+  /**
+   * <pre>
+   * set when kind = SML_CONFIGURATION_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.SmlConfigurationEvent sml_configuration_event = 170;</code>
+   * @return Whether the smlConfigurationEvent field is set.
+   */
+  @java.lang.Override
+  public boolean hasSmlConfigurationEvent() {
+    return ((bitField5_ & 0x00000008) != 0);
+  }
+  /**
+   * <pre>
+   * set when kind = SML_CONFIGURATION_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.SmlConfigurationEvent sml_configuration_event = 170;</code>
+   * @return The smlConfigurationEvent.
+   */
+  @java.lang.Override
+  public com.google.wireless.android.sdk.stats.SmlConfigurationEvent getSmlConfigurationEvent() {
+    return smlConfigurationEvent_ == null ? com.google.wireless.android.sdk.stats.SmlConfigurationEvent.getDefaultInstance() : smlConfigurationEvent_;
+  }
+  /**
+   * <pre>
+   * set when kind = SML_CONFIGURATION_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.SmlConfigurationEvent sml_configuration_event = 170;</code>
+   */
+  @java.lang.Override
+  public com.google.wireless.android.sdk.stats.SmlConfigurationEventOrBuilder getSmlConfigurationEventOrBuilder() {
+    return smlConfigurationEvent_ == null ? com.google.wireless.android.sdk.stats.SmlConfigurationEvent.getDefaultInstance() : smlConfigurationEvent_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -22909,6 +23267,21 @@ private static final long serialVersionUID = 0L;
     }
     if (((bitField4_ & 0x40000000) != 0)) {
       output.writeMessage(165, getSystemHealthEvent());
+    }
+    if (((bitField4_ & 0x80000000) != 0)) {
+      output.writeMessage(166, getComposePreviewCanvasEvent());
+    }
+    if (((bitField5_ & 0x00000001) != 0)) {
+      output.writeMessage(167, getSmlCompletionEvent());
+    }
+    if (((bitField5_ & 0x00000002) != 0)) {
+      output.writeMessage(168, getSmlTransformEvent());
+    }
+    if (((bitField5_ & 0x00000004) != 0)) {
+      output.writeMessage(169, getSmlChatBotEvent());
+    }
+    if (((bitField5_ & 0x00000008) != 0)) {
+      output.writeMessage(170, getSmlConfigurationEvent());
     }
     unknownFields.writeTo(output);
   }
@@ -23584,6 +23957,26 @@ private static final long serialVersionUID = 0L;
     if (((bitField4_ & 0x40000000) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(165, getSystemHealthEvent());
+    }
+    if (((bitField4_ & 0x80000000) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(166, getComposePreviewCanvasEvent());
+    }
+    if (((bitField5_ & 0x00000001) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(167, getSmlCompletionEvent());
+    }
+    if (((bitField5_ & 0x00000002) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(168, getSmlTransformEvent());
+    }
+    if (((bitField5_ & 0x00000004) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(169, getSmlChatBotEvent());
+    }
+    if (((bitField5_ & 0x00000008) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(170, getSmlConfigurationEvent());
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -24396,6 +24789,31 @@ private static final long serialVersionUID = 0L;
       if (!getSystemHealthEvent()
           .equals(other.getSystemHealthEvent())) return false;
     }
+    if (hasComposePreviewCanvasEvent() != other.hasComposePreviewCanvasEvent()) return false;
+    if (hasComposePreviewCanvasEvent()) {
+      if (!getComposePreviewCanvasEvent()
+          .equals(other.getComposePreviewCanvasEvent())) return false;
+    }
+    if (hasSmlCompletionEvent() != other.hasSmlCompletionEvent()) return false;
+    if (hasSmlCompletionEvent()) {
+      if (!getSmlCompletionEvent()
+          .equals(other.getSmlCompletionEvent())) return false;
+    }
+    if (hasSmlTransformEvent() != other.hasSmlTransformEvent()) return false;
+    if (hasSmlTransformEvent()) {
+      if (!getSmlTransformEvent()
+          .equals(other.getSmlTransformEvent())) return false;
+    }
+    if (hasSmlChatBotEvent() != other.hasSmlChatBotEvent()) return false;
+    if (hasSmlChatBotEvent()) {
+      if (!getSmlChatBotEvent()
+          .equals(other.getSmlChatBotEvent())) return false;
+    }
+    if (hasSmlConfigurationEvent() != other.hasSmlConfigurationEvent()) return false;
+    if (hasSmlConfigurationEvent()) {
+      if (!getSmlConfigurationEvent()
+          .equals(other.getSmlConfigurationEvent())) return false;
+    }
     if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
@@ -25069,6 +25487,26 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + SYSTEM_HEALTH_EVENT_FIELD_NUMBER;
       hash = (53 * hash) + getSystemHealthEvent().hashCode();
     }
+    if (hasComposePreviewCanvasEvent()) {
+      hash = (37 * hash) + COMPOSE_PREVIEW_CANVAS_EVENT_FIELD_NUMBER;
+      hash = (53 * hash) + getComposePreviewCanvasEvent().hashCode();
+    }
+    if (hasSmlCompletionEvent()) {
+      hash = (37 * hash) + SML_COMPLETION_EVENT_FIELD_NUMBER;
+      hash = (53 * hash) + getSmlCompletionEvent().hashCode();
+    }
+    if (hasSmlTransformEvent()) {
+      hash = (37 * hash) + SML_TRANSFORM_EVENT_FIELD_NUMBER;
+      hash = (53 * hash) + getSmlTransformEvent().hashCode();
+    }
+    if (hasSmlChatBotEvent()) {
+      hash = (37 * hash) + SML_CHAT_BOT_EVENT_FIELD_NUMBER;
+      hash = (53 * hash) + getSmlChatBotEvent().hashCode();
+    }
+    if (hasSmlConfigurationEvent()) {
+      hash = (37 * hash) + SML_CONFIGURATION_EVENT_FIELD_NUMBER;
+      hash = (53 * hash) + getSmlConfigurationEvent().hashCode();
+    }
     hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -25339,6 +25777,11 @@ private static final long serialVersionUID = 0L;
         getBuildOutputDownloadsInfoEventFieldBuilder();
         getDeviceMirroringAbnormalAgentTerminationFieldBuilder();
         getSystemHealthEventFieldBuilder();
+        getComposePreviewCanvasEventFieldBuilder();
+        getSmlCompletionEventFieldBuilder();
+        getSmlTransformEventFieldBuilder();
+        getSmlChatBotEventFieldBuilder();
+        getSmlConfigurationEventFieldBuilder();
       }
     }
     @java.lang.Override
@@ -26242,6 +26685,36 @@ private static final long serialVersionUID = 0L;
         systemHealthEventBuilder_.clear();
       }
       bitField5_ = (bitField5_ & ~0x00000010);
+      if (composePreviewCanvasEventBuilder_ == null) {
+        composePreviewCanvasEvent_ = null;
+      } else {
+        composePreviewCanvasEventBuilder_.clear();
+      }
+      bitField5_ = (bitField5_ & ~0x00000020);
+      if (smlCompletionEventBuilder_ == null) {
+        smlCompletionEvent_ = null;
+      } else {
+        smlCompletionEventBuilder_.clear();
+      }
+      bitField5_ = (bitField5_ & ~0x00000040);
+      if (smlTransformEventBuilder_ == null) {
+        smlTransformEvent_ = null;
+      } else {
+        smlTransformEventBuilder_.clear();
+      }
+      bitField5_ = (bitField5_ & ~0x00000080);
+      if (smlChatBotEventBuilder_ == null) {
+        smlChatBotEvent_ = null;
+      } else {
+        smlChatBotEventBuilder_.clear();
+      }
+      bitField5_ = (bitField5_ & ~0x00000100);
+      if (smlConfigurationEventBuilder_ == null) {
+        smlConfigurationEvent_ = null;
+      } else {
+        smlConfigurationEventBuilder_.clear();
+      }
+      bitField5_ = (bitField5_ & ~0x00000200);
       return this;
     }
 
@@ -26279,6 +26752,7 @@ private static final long serialVersionUID = 0L;
       int to_bitField2_ = 0;
       int to_bitField3_ = 0;
       int to_bitField4_ = 0;
+      int to_bitField5_ = 0;
       if (((from_bitField0_ & 0x00000001) != 0)) {
         to_bitField0_ |= 0x00000001;
       }
@@ -27513,11 +27987,52 @@ private static final long serialVersionUID = 0L;
         }
         to_bitField4_ |= 0x40000000;
       }
+      if (((from_bitField5_ & 0x00000020) != 0)) {
+        if (composePreviewCanvasEventBuilder_ == null) {
+          result.composePreviewCanvasEvent_ = composePreviewCanvasEvent_;
+        } else {
+          result.composePreviewCanvasEvent_ = composePreviewCanvasEventBuilder_.build();
+        }
+        to_bitField4_ |= 0x80000000;
+      }
+      if (((from_bitField5_ & 0x00000040) != 0)) {
+        if (smlCompletionEventBuilder_ == null) {
+          result.smlCompletionEvent_ = smlCompletionEvent_;
+        } else {
+          result.smlCompletionEvent_ = smlCompletionEventBuilder_.build();
+        }
+        to_bitField5_ |= 0x00000001;
+      }
+      if (((from_bitField5_ & 0x00000080) != 0)) {
+        if (smlTransformEventBuilder_ == null) {
+          result.smlTransformEvent_ = smlTransformEvent_;
+        } else {
+          result.smlTransformEvent_ = smlTransformEventBuilder_.build();
+        }
+        to_bitField5_ |= 0x00000002;
+      }
+      if (((from_bitField5_ & 0x00000100) != 0)) {
+        if (smlChatBotEventBuilder_ == null) {
+          result.smlChatBotEvent_ = smlChatBotEvent_;
+        } else {
+          result.smlChatBotEvent_ = smlChatBotEventBuilder_.build();
+        }
+        to_bitField5_ |= 0x00000004;
+      }
+      if (((from_bitField5_ & 0x00000200) != 0)) {
+        if (smlConfigurationEventBuilder_ == null) {
+          result.smlConfigurationEvent_ = smlConfigurationEvent_;
+        } else {
+          result.smlConfigurationEvent_ = smlConfigurationEventBuilder_.build();
+        }
+        to_bitField5_ |= 0x00000008;
+      }
       result.bitField0_ = to_bitField0_;
       result.bitField1_ = to_bitField1_;
       result.bitField2_ = to_bitField2_;
       result.bitField3_ = to_bitField3_;
       result.bitField4_ = to_bitField4_;
+      result.bitField5_ = to_bitField5_;
       onBuilt();
       return result;
     }
@@ -28164,6 +28679,21 @@ private static final long serialVersionUID = 0L;
       }
       if (other.hasSystemHealthEvent()) {
         mergeSystemHealthEvent(other.getSystemHealthEvent());
+      }
+      if (other.hasComposePreviewCanvasEvent()) {
+        mergeComposePreviewCanvasEvent(other.getComposePreviewCanvasEvent());
+      }
+      if (other.hasSmlCompletionEvent()) {
+        mergeSmlCompletionEvent(other.getSmlCompletionEvent());
+      }
+      if (other.hasSmlTransformEvent()) {
+        mergeSmlTransformEvent(other.getSmlTransformEvent());
+      }
+      if (other.hasSmlChatBotEvent()) {
+        mergeSmlChatBotEvent(other.getSmlChatBotEvent());
+      }
+      if (other.hasSmlConfigurationEvent()) {
+        mergeSmlConfigurationEvent(other.getSmlConfigurationEvent());
       }
       this.mergeUnknownFields(other.unknownFields);
       onChanged();
@@ -53219,6 +53749,786 @@ private static final long serialVersionUID = 0L;
         systemHealthEvent_ = null;
       }
       return systemHealthEventBuilder_;
+    }
+
+    private com.google.wireless.android.sdk.stats.ComposePreviewCanvasEvent composePreviewCanvasEvent_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.ComposePreviewCanvasEvent, com.google.wireless.android.sdk.stats.ComposePreviewCanvasEvent.Builder, com.google.wireless.android.sdk.stats.ComposePreviewCanvasEventOrBuilder> composePreviewCanvasEventBuilder_;
+    /**
+     * <pre>
+     * set when kind = COMPOSE_PREVIEW_CANVAS_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.ComposePreviewCanvasEvent compose_preview_canvas_event = 166;</code>
+     * @return Whether the composePreviewCanvasEvent field is set.
+     */
+    public boolean hasComposePreviewCanvasEvent() {
+      return ((bitField5_ & 0x00000020) != 0);
+    }
+    /**
+     * <pre>
+     * set when kind = COMPOSE_PREVIEW_CANVAS_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.ComposePreviewCanvasEvent compose_preview_canvas_event = 166;</code>
+     * @return The composePreviewCanvasEvent.
+     */
+    public com.google.wireless.android.sdk.stats.ComposePreviewCanvasEvent getComposePreviewCanvasEvent() {
+      if (composePreviewCanvasEventBuilder_ == null) {
+        return composePreviewCanvasEvent_ == null ? com.google.wireless.android.sdk.stats.ComposePreviewCanvasEvent.getDefaultInstance() : composePreviewCanvasEvent_;
+      } else {
+        return composePreviewCanvasEventBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * set when kind = COMPOSE_PREVIEW_CANVAS_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.ComposePreviewCanvasEvent compose_preview_canvas_event = 166;</code>
+     */
+    public Builder setComposePreviewCanvasEvent(com.google.wireless.android.sdk.stats.ComposePreviewCanvasEvent value) {
+      if (composePreviewCanvasEventBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        composePreviewCanvasEvent_ = value;
+        onChanged();
+      } else {
+        composePreviewCanvasEventBuilder_.setMessage(value);
+      }
+      bitField5_ |= 0x00000020;
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = COMPOSE_PREVIEW_CANVAS_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.ComposePreviewCanvasEvent compose_preview_canvas_event = 166;</code>
+     */
+    public Builder setComposePreviewCanvasEvent(
+        com.google.wireless.android.sdk.stats.ComposePreviewCanvasEvent.Builder builderForValue) {
+      if (composePreviewCanvasEventBuilder_ == null) {
+        composePreviewCanvasEvent_ = builderForValue.build();
+        onChanged();
+      } else {
+        composePreviewCanvasEventBuilder_.setMessage(builderForValue.build());
+      }
+      bitField5_ |= 0x00000020;
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = COMPOSE_PREVIEW_CANVAS_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.ComposePreviewCanvasEvent compose_preview_canvas_event = 166;</code>
+     */
+    public Builder mergeComposePreviewCanvasEvent(com.google.wireless.android.sdk.stats.ComposePreviewCanvasEvent value) {
+      if (composePreviewCanvasEventBuilder_ == null) {
+        if (((bitField5_ & 0x00000020) != 0) &&
+            composePreviewCanvasEvent_ != null &&
+            composePreviewCanvasEvent_ != com.google.wireless.android.sdk.stats.ComposePreviewCanvasEvent.getDefaultInstance()) {
+          composePreviewCanvasEvent_ =
+            com.google.wireless.android.sdk.stats.ComposePreviewCanvasEvent.newBuilder(composePreviewCanvasEvent_).mergeFrom(value).buildPartial();
+        } else {
+          composePreviewCanvasEvent_ = value;
+        }
+        onChanged();
+      } else {
+        composePreviewCanvasEventBuilder_.mergeFrom(value);
+      }
+      bitField5_ |= 0x00000020;
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = COMPOSE_PREVIEW_CANVAS_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.ComposePreviewCanvasEvent compose_preview_canvas_event = 166;</code>
+     */
+    public Builder clearComposePreviewCanvasEvent() {
+      if (composePreviewCanvasEventBuilder_ == null) {
+        composePreviewCanvasEvent_ = null;
+        onChanged();
+      } else {
+        composePreviewCanvasEventBuilder_.clear();
+      }
+      bitField5_ = (bitField5_ & ~0x00000020);
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = COMPOSE_PREVIEW_CANVAS_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.ComposePreviewCanvasEvent compose_preview_canvas_event = 166;</code>
+     */
+    public com.google.wireless.android.sdk.stats.ComposePreviewCanvasEvent.Builder getComposePreviewCanvasEventBuilder() {
+      bitField5_ |= 0x00000020;
+      onChanged();
+      return getComposePreviewCanvasEventFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * set when kind = COMPOSE_PREVIEW_CANVAS_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.ComposePreviewCanvasEvent compose_preview_canvas_event = 166;</code>
+     */
+    public com.google.wireless.android.sdk.stats.ComposePreviewCanvasEventOrBuilder getComposePreviewCanvasEventOrBuilder() {
+      if (composePreviewCanvasEventBuilder_ != null) {
+        return composePreviewCanvasEventBuilder_.getMessageOrBuilder();
+      } else {
+        return composePreviewCanvasEvent_ == null ?
+            com.google.wireless.android.sdk.stats.ComposePreviewCanvasEvent.getDefaultInstance() : composePreviewCanvasEvent_;
+      }
+    }
+    /**
+     * <pre>
+     * set when kind = COMPOSE_PREVIEW_CANVAS_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.ComposePreviewCanvasEvent compose_preview_canvas_event = 166;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.ComposePreviewCanvasEvent, com.google.wireless.android.sdk.stats.ComposePreviewCanvasEvent.Builder, com.google.wireless.android.sdk.stats.ComposePreviewCanvasEventOrBuilder> 
+        getComposePreviewCanvasEventFieldBuilder() {
+      if (composePreviewCanvasEventBuilder_ == null) {
+        composePreviewCanvasEventBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.wireless.android.sdk.stats.ComposePreviewCanvasEvent, com.google.wireless.android.sdk.stats.ComposePreviewCanvasEvent.Builder, com.google.wireless.android.sdk.stats.ComposePreviewCanvasEventOrBuilder>(
+                getComposePreviewCanvasEvent(),
+                getParentForChildren(),
+                isClean());
+        composePreviewCanvasEvent_ = null;
+      }
+      return composePreviewCanvasEventBuilder_;
+    }
+
+    private com.google.wireless.android.sdk.stats.SmlCompletionEvent smlCompletionEvent_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.SmlCompletionEvent, com.google.wireless.android.sdk.stats.SmlCompletionEvent.Builder, com.google.wireless.android.sdk.stats.SmlCompletionEventOrBuilder> smlCompletionEventBuilder_;
+    /**
+     * <pre>
+     * set when kind = SML_COMPLETION_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.SmlCompletionEvent sml_completion_event = 167;</code>
+     * @return Whether the smlCompletionEvent field is set.
+     */
+    public boolean hasSmlCompletionEvent() {
+      return ((bitField5_ & 0x00000040) != 0);
+    }
+    /**
+     * <pre>
+     * set when kind = SML_COMPLETION_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.SmlCompletionEvent sml_completion_event = 167;</code>
+     * @return The smlCompletionEvent.
+     */
+    public com.google.wireless.android.sdk.stats.SmlCompletionEvent getSmlCompletionEvent() {
+      if (smlCompletionEventBuilder_ == null) {
+        return smlCompletionEvent_ == null ? com.google.wireless.android.sdk.stats.SmlCompletionEvent.getDefaultInstance() : smlCompletionEvent_;
+      } else {
+        return smlCompletionEventBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * set when kind = SML_COMPLETION_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.SmlCompletionEvent sml_completion_event = 167;</code>
+     */
+    public Builder setSmlCompletionEvent(com.google.wireless.android.sdk.stats.SmlCompletionEvent value) {
+      if (smlCompletionEventBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        smlCompletionEvent_ = value;
+        onChanged();
+      } else {
+        smlCompletionEventBuilder_.setMessage(value);
+      }
+      bitField5_ |= 0x00000040;
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = SML_COMPLETION_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.SmlCompletionEvent sml_completion_event = 167;</code>
+     */
+    public Builder setSmlCompletionEvent(
+        com.google.wireless.android.sdk.stats.SmlCompletionEvent.Builder builderForValue) {
+      if (smlCompletionEventBuilder_ == null) {
+        smlCompletionEvent_ = builderForValue.build();
+        onChanged();
+      } else {
+        smlCompletionEventBuilder_.setMessage(builderForValue.build());
+      }
+      bitField5_ |= 0x00000040;
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = SML_COMPLETION_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.SmlCompletionEvent sml_completion_event = 167;</code>
+     */
+    public Builder mergeSmlCompletionEvent(com.google.wireless.android.sdk.stats.SmlCompletionEvent value) {
+      if (smlCompletionEventBuilder_ == null) {
+        if (((bitField5_ & 0x00000040) != 0) &&
+            smlCompletionEvent_ != null &&
+            smlCompletionEvent_ != com.google.wireless.android.sdk.stats.SmlCompletionEvent.getDefaultInstance()) {
+          smlCompletionEvent_ =
+            com.google.wireless.android.sdk.stats.SmlCompletionEvent.newBuilder(smlCompletionEvent_).mergeFrom(value).buildPartial();
+        } else {
+          smlCompletionEvent_ = value;
+        }
+        onChanged();
+      } else {
+        smlCompletionEventBuilder_.mergeFrom(value);
+      }
+      bitField5_ |= 0x00000040;
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = SML_COMPLETION_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.SmlCompletionEvent sml_completion_event = 167;</code>
+     */
+    public Builder clearSmlCompletionEvent() {
+      if (smlCompletionEventBuilder_ == null) {
+        smlCompletionEvent_ = null;
+        onChanged();
+      } else {
+        smlCompletionEventBuilder_.clear();
+      }
+      bitField5_ = (bitField5_ & ~0x00000040);
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = SML_COMPLETION_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.SmlCompletionEvent sml_completion_event = 167;</code>
+     */
+    public com.google.wireless.android.sdk.stats.SmlCompletionEvent.Builder getSmlCompletionEventBuilder() {
+      bitField5_ |= 0x00000040;
+      onChanged();
+      return getSmlCompletionEventFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * set when kind = SML_COMPLETION_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.SmlCompletionEvent sml_completion_event = 167;</code>
+     */
+    public com.google.wireless.android.sdk.stats.SmlCompletionEventOrBuilder getSmlCompletionEventOrBuilder() {
+      if (smlCompletionEventBuilder_ != null) {
+        return smlCompletionEventBuilder_.getMessageOrBuilder();
+      } else {
+        return smlCompletionEvent_ == null ?
+            com.google.wireless.android.sdk.stats.SmlCompletionEvent.getDefaultInstance() : smlCompletionEvent_;
+      }
+    }
+    /**
+     * <pre>
+     * set when kind = SML_COMPLETION_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.SmlCompletionEvent sml_completion_event = 167;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.SmlCompletionEvent, com.google.wireless.android.sdk.stats.SmlCompletionEvent.Builder, com.google.wireless.android.sdk.stats.SmlCompletionEventOrBuilder> 
+        getSmlCompletionEventFieldBuilder() {
+      if (smlCompletionEventBuilder_ == null) {
+        smlCompletionEventBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.wireless.android.sdk.stats.SmlCompletionEvent, com.google.wireless.android.sdk.stats.SmlCompletionEvent.Builder, com.google.wireless.android.sdk.stats.SmlCompletionEventOrBuilder>(
+                getSmlCompletionEvent(),
+                getParentForChildren(),
+                isClean());
+        smlCompletionEvent_ = null;
+      }
+      return smlCompletionEventBuilder_;
+    }
+
+    private com.google.wireless.android.sdk.stats.SmlTransformEvent smlTransformEvent_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.SmlTransformEvent, com.google.wireless.android.sdk.stats.SmlTransformEvent.Builder, com.google.wireless.android.sdk.stats.SmlTransformEventOrBuilder> smlTransformEventBuilder_;
+    /**
+     * <pre>
+     * set when kind = SML_CODE_TRANSFORMATION_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.SmlTransformEvent sml_transform_event = 168;</code>
+     * @return Whether the smlTransformEvent field is set.
+     */
+    public boolean hasSmlTransformEvent() {
+      return ((bitField5_ & 0x00000080) != 0);
+    }
+    /**
+     * <pre>
+     * set when kind = SML_CODE_TRANSFORMATION_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.SmlTransformEvent sml_transform_event = 168;</code>
+     * @return The smlTransformEvent.
+     */
+    public com.google.wireless.android.sdk.stats.SmlTransformEvent getSmlTransformEvent() {
+      if (smlTransformEventBuilder_ == null) {
+        return smlTransformEvent_ == null ? com.google.wireless.android.sdk.stats.SmlTransformEvent.getDefaultInstance() : smlTransformEvent_;
+      } else {
+        return smlTransformEventBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * set when kind = SML_CODE_TRANSFORMATION_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.SmlTransformEvent sml_transform_event = 168;</code>
+     */
+    public Builder setSmlTransformEvent(com.google.wireless.android.sdk.stats.SmlTransformEvent value) {
+      if (smlTransformEventBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        smlTransformEvent_ = value;
+        onChanged();
+      } else {
+        smlTransformEventBuilder_.setMessage(value);
+      }
+      bitField5_ |= 0x00000080;
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = SML_CODE_TRANSFORMATION_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.SmlTransformEvent sml_transform_event = 168;</code>
+     */
+    public Builder setSmlTransformEvent(
+        com.google.wireless.android.sdk.stats.SmlTransformEvent.Builder builderForValue) {
+      if (smlTransformEventBuilder_ == null) {
+        smlTransformEvent_ = builderForValue.build();
+        onChanged();
+      } else {
+        smlTransformEventBuilder_.setMessage(builderForValue.build());
+      }
+      bitField5_ |= 0x00000080;
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = SML_CODE_TRANSFORMATION_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.SmlTransformEvent sml_transform_event = 168;</code>
+     */
+    public Builder mergeSmlTransformEvent(com.google.wireless.android.sdk.stats.SmlTransformEvent value) {
+      if (smlTransformEventBuilder_ == null) {
+        if (((bitField5_ & 0x00000080) != 0) &&
+            smlTransformEvent_ != null &&
+            smlTransformEvent_ != com.google.wireless.android.sdk.stats.SmlTransformEvent.getDefaultInstance()) {
+          smlTransformEvent_ =
+            com.google.wireless.android.sdk.stats.SmlTransformEvent.newBuilder(smlTransformEvent_).mergeFrom(value).buildPartial();
+        } else {
+          smlTransformEvent_ = value;
+        }
+        onChanged();
+      } else {
+        smlTransformEventBuilder_.mergeFrom(value);
+      }
+      bitField5_ |= 0x00000080;
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = SML_CODE_TRANSFORMATION_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.SmlTransformEvent sml_transform_event = 168;</code>
+     */
+    public Builder clearSmlTransformEvent() {
+      if (smlTransformEventBuilder_ == null) {
+        smlTransformEvent_ = null;
+        onChanged();
+      } else {
+        smlTransformEventBuilder_.clear();
+      }
+      bitField5_ = (bitField5_ & ~0x00000080);
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = SML_CODE_TRANSFORMATION_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.SmlTransformEvent sml_transform_event = 168;</code>
+     */
+    public com.google.wireless.android.sdk.stats.SmlTransformEvent.Builder getSmlTransformEventBuilder() {
+      bitField5_ |= 0x00000080;
+      onChanged();
+      return getSmlTransformEventFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * set when kind = SML_CODE_TRANSFORMATION_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.SmlTransformEvent sml_transform_event = 168;</code>
+     */
+    public com.google.wireless.android.sdk.stats.SmlTransformEventOrBuilder getSmlTransformEventOrBuilder() {
+      if (smlTransformEventBuilder_ != null) {
+        return smlTransformEventBuilder_.getMessageOrBuilder();
+      } else {
+        return smlTransformEvent_ == null ?
+            com.google.wireless.android.sdk.stats.SmlTransformEvent.getDefaultInstance() : smlTransformEvent_;
+      }
+    }
+    /**
+     * <pre>
+     * set when kind = SML_CODE_TRANSFORMATION_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.SmlTransformEvent sml_transform_event = 168;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.SmlTransformEvent, com.google.wireless.android.sdk.stats.SmlTransformEvent.Builder, com.google.wireless.android.sdk.stats.SmlTransformEventOrBuilder> 
+        getSmlTransformEventFieldBuilder() {
+      if (smlTransformEventBuilder_ == null) {
+        smlTransformEventBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.wireless.android.sdk.stats.SmlTransformEvent, com.google.wireless.android.sdk.stats.SmlTransformEvent.Builder, com.google.wireless.android.sdk.stats.SmlTransformEventOrBuilder>(
+                getSmlTransformEvent(),
+                getParentForChildren(),
+                isClean());
+        smlTransformEvent_ = null;
+      }
+      return smlTransformEventBuilder_;
+    }
+
+    private com.google.wireless.android.sdk.stats.SmlChatBotEvent smlChatBotEvent_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.SmlChatBotEvent, com.google.wireless.android.sdk.stats.SmlChatBotEvent.Builder, com.google.wireless.android.sdk.stats.SmlChatBotEventOrBuilder> smlChatBotEventBuilder_;
+    /**
+     * <pre>
+     * set when kind = SML_CHATBOT_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.SmlChatBotEvent sml_chat_bot_event = 169;</code>
+     * @return Whether the smlChatBotEvent field is set.
+     */
+    public boolean hasSmlChatBotEvent() {
+      return ((bitField5_ & 0x00000100) != 0);
+    }
+    /**
+     * <pre>
+     * set when kind = SML_CHATBOT_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.SmlChatBotEvent sml_chat_bot_event = 169;</code>
+     * @return The smlChatBotEvent.
+     */
+    public com.google.wireless.android.sdk.stats.SmlChatBotEvent getSmlChatBotEvent() {
+      if (smlChatBotEventBuilder_ == null) {
+        return smlChatBotEvent_ == null ? com.google.wireless.android.sdk.stats.SmlChatBotEvent.getDefaultInstance() : smlChatBotEvent_;
+      } else {
+        return smlChatBotEventBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * set when kind = SML_CHATBOT_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.SmlChatBotEvent sml_chat_bot_event = 169;</code>
+     */
+    public Builder setSmlChatBotEvent(com.google.wireless.android.sdk.stats.SmlChatBotEvent value) {
+      if (smlChatBotEventBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        smlChatBotEvent_ = value;
+        onChanged();
+      } else {
+        smlChatBotEventBuilder_.setMessage(value);
+      }
+      bitField5_ |= 0x00000100;
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = SML_CHATBOT_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.SmlChatBotEvent sml_chat_bot_event = 169;</code>
+     */
+    public Builder setSmlChatBotEvent(
+        com.google.wireless.android.sdk.stats.SmlChatBotEvent.Builder builderForValue) {
+      if (smlChatBotEventBuilder_ == null) {
+        smlChatBotEvent_ = builderForValue.build();
+        onChanged();
+      } else {
+        smlChatBotEventBuilder_.setMessage(builderForValue.build());
+      }
+      bitField5_ |= 0x00000100;
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = SML_CHATBOT_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.SmlChatBotEvent sml_chat_bot_event = 169;</code>
+     */
+    public Builder mergeSmlChatBotEvent(com.google.wireless.android.sdk.stats.SmlChatBotEvent value) {
+      if (smlChatBotEventBuilder_ == null) {
+        if (((bitField5_ & 0x00000100) != 0) &&
+            smlChatBotEvent_ != null &&
+            smlChatBotEvent_ != com.google.wireless.android.sdk.stats.SmlChatBotEvent.getDefaultInstance()) {
+          smlChatBotEvent_ =
+            com.google.wireless.android.sdk.stats.SmlChatBotEvent.newBuilder(smlChatBotEvent_).mergeFrom(value).buildPartial();
+        } else {
+          smlChatBotEvent_ = value;
+        }
+        onChanged();
+      } else {
+        smlChatBotEventBuilder_.mergeFrom(value);
+      }
+      bitField5_ |= 0x00000100;
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = SML_CHATBOT_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.SmlChatBotEvent sml_chat_bot_event = 169;</code>
+     */
+    public Builder clearSmlChatBotEvent() {
+      if (smlChatBotEventBuilder_ == null) {
+        smlChatBotEvent_ = null;
+        onChanged();
+      } else {
+        smlChatBotEventBuilder_.clear();
+      }
+      bitField5_ = (bitField5_ & ~0x00000100);
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = SML_CHATBOT_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.SmlChatBotEvent sml_chat_bot_event = 169;</code>
+     */
+    public com.google.wireless.android.sdk.stats.SmlChatBotEvent.Builder getSmlChatBotEventBuilder() {
+      bitField5_ |= 0x00000100;
+      onChanged();
+      return getSmlChatBotEventFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * set when kind = SML_CHATBOT_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.SmlChatBotEvent sml_chat_bot_event = 169;</code>
+     */
+    public com.google.wireless.android.sdk.stats.SmlChatBotEventOrBuilder getSmlChatBotEventOrBuilder() {
+      if (smlChatBotEventBuilder_ != null) {
+        return smlChatBotEventBuilder_.getMessageOrBuilder();
+      } else {
+        return smlChatBotEvent_ == null ?
+            com.google.wireless.android.sdk.stats.SmlChatBotEvent.getDefaultInstance() : smlChatBotEvent_;
+      }
+    }
+    /**
+     * <pre>
+     * set when kind = SML_CHATBOT_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.SmlChatBotEvent sml_chat_bot_event = 169;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.SmlChatBotEvent, com.google.wireless.android.sdk.stats.SmlChatBotEvent.Builder, com.google.wireless.android.sdk.stats.SmlChatBotEventOrBuilder> 
+        getSmlChatBotEventFieldBuilder() {
+      if (smlChatBotEventBuilder_ == null) {
+        smlChatBotEventBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.wireless.android.sdk.stats.SmlChatBotEvent, com.google.wireless.android.sdk.stats.SmlChatBotEvent.Builder, com.google.wireless.android.sdk.stats.SmlChatBotEventOrBuilder>(
+                getSmlChatBotEvent(),
+                getParentForChildren(),
+                isClean());
+        smlChatBotEvent_ = null;
+      }
+      return smlChatBotEventBuilder_;
+    }
+
+    private com.google.wireless.android.sdk.stats.SmlConfigurationEvent smlConfigurationEvent_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.SmlConfigurationEvent, com.google.wireless.android.sdk.stats.SmlConfigurationEvent.Builder, com.google.wireless.android.sdk.stats.SmlConfigurationEventOrBuilder> smlConfigurationEventBuilder_;
+    /**
+     * <pre>
+     * set when kind = SML_CONFIGURATION_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.SmlConfigurationEvent sml_configuration_event = 170;</code>
+     * @return Whether the smlConfigurationEvent field is set.
+     */
+    public boolean hasSmlConfigurationEvent() {
+      return ((bitField5_ & 0x00000200) != 0);
+    }
+    /**
+     * <pre>
+     * set when kind = SML_CONFIGURATION_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.SmlConfigurationEvent sml_configuration_event = 170;</code>
+     * @return The smlConfigurationEvent.
+     */
+    public com.google.wireless.android.sdk.stats.SmlConfigurationEvent getSmlConfigurationEvent() {
+      if (smlConfigurationEventBuilder_ == null) {
+        return smlConfigurationEvent_ == null ? com.google.wireless.android.sdk.stats.SmlConfigurationEvent.getDefaultInstance() : smlConfigurationEvent_;
+      } else {
+        return smlConfigurationEventBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * set when kind = SML_CONFIGURATION_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.SmlConfigurationEvent sml_configuration_event = 170;</code>
+     */
+    public Builder setSmlConfigurationEvent(com.google.wireless.android.sdk.stats.SmlConfigurationEvent value) {
+      if (smlConfigurationEventBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        smlConfigurationEvent_ = value;
+        onChanged();
+      } else {
+        smlConfigurationEventBuilder_.setMessage(value);
+      }
+      bitField5_ |= 0x00000200;
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = SML_CONFIGURATION_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.SmlConfigurationEvent sml_configuration_event = 170;</code>
+     */
+    public Builder setSmlConfigurationEvent(
+        com.google.wireless.android.sdk.stats.SmlConfigurationEvent.Builder builderForValue) {
+      if (smlConfigurationEventBuilder_ == null) {
+        smlConfigurationEvent_ = builderForValue.build();
+        onChanged();
+      } else {
+        smlConfigurationEventBuilder_.setMessage(builderForValue.build());
+      }
+      bitField5_ |= 0x00000200;
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = SML_CONFIGURATION_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.SmlConfigurationEvent sml_configuration_event = 170;</code>
+     */
+    public Builder mergeSmlConfigurationEvent(com.google.wireless.android.sdk.stats.SmlConfigurationEvent value) {
+      if (smlConfigurationEventBuilder_ == null) {
+        if (((bitField5_ & 0x00000200) != 0) &&
+            smlConfigurationEvent_ != null &&
+            smlConfigurationEvent_ != com.google.wireless.android.sdk.stats.SmlConfigurationEvent.getDefaultInstance()) {
+          smlConfigurationEvent_ =
+            com.google.wireless.android.sdk.stats.SmlConfigurationEvent.newBuilder(smlConfigurationEvent_).mergeFrom(value).buildPartial();
+        } else {
+          smlConfigurationEvent_ = value;
+        }
+        onChanged();
+      } else {
+        smlConfigurationEventBuilder_.mergeFrom(value);
+      }
+      bitField5_ |= 0x00000200;
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = SML_CONFIGURATION_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.SmlConfigurationEvent sml_configuration_event = 170;</code>
+     */
+    public Builder clearSmlConfigurationEvent() {
+      if (smlConfigurationEventBuilder_ == null) {
+        smlConfigurationEvent_ = null;
+        onChanged();
+      } else {
+        smlConfigurationEventBuilder_.clear();
+      }
+      bitField5_ = (bitField5_ & ~0x00000200);
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = SML_CONFIGURATION_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.SmlConfigurationEvent sml_configuration_event = 170;</code>
+     */
+    public com.google.wireless.android.sdk.stats.SmlConfigurationEvent.Builder getSmlConfigurationEventBuilder() {
+      bitField5_ |= 0x00000200;
+      onChanged();
+      return getSmlConfigurationEventFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * set when kind = SML_CONFIGURATION_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.SmlConfigurationEvent sml_configuration_event = 170;</code>
+     */
+    public com.google.wireless.android.sdk.stats.SmlConfigurationEventOrBuilder getSmlConfigurationEventOrBuilder() {
+      if (smlConfigurationEventBuilder_ != null) {
+        return smlConfigurationEventBuilder_.getMessageOrBuilder();
+      } else {
+        return smlConfigurationEvent_ == null ?
+            com.google.wireless.android.sdk.stats.SmlConfigurationEvent.getDefaultInstance() : smlConfigurationEvent_;
+      }
+    }
+    /**
+     * <pre>
+     * set when kind = SML_CONFIGURATION_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.SmlConfigurationEvent sml_configuration_event = 170;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.SmlConfigurationEvent, com.google.wireless.android.sdk.stats.SmlConfigurationEvent.Builder, com.google.wireless.android.sdk.stats.SmlConfigurationEventOrBuilder> 
+        getSmlConfigurationEventFieldBuilder() {
+      if (smlConfigurationEventBuilder_ == null) {
+        smlConfigurationEventBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.wireless.android.sdk.stats.SmlConfigurationEvent, com.google.wireless.android.sdk.stats.SmlConfigurationEvent.Builder, com.google.wireless.android.sdk.stats.SmlConfigurationEventOrBuilder>(
+                getSmlConfigurationEvent(),
+                getParentForChildren(),
+                isClean());
+        smlConfigurationEvent_ = null;
+      }
+      return smlConfigurationEventBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

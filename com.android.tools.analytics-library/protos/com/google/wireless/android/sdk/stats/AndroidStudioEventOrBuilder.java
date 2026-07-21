@@ -4645,4 +4645,139 @@ public interface AndroidStudioEventOrBuilder extends
    * <code>optional .android_studio.SystemHealthEvent system_health_event = 165;</code>
    */
   com.google.wireless.android.sdk.stats.SystemHealthEventOrBuilder getSystemHealthEventOrBuilder();
+
+  /**
+   * <pre>
+   * set when kind = COMPOSE_PREVIEW_CANVAS_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.ComposePreviewCanvasEvent compose_preview_canvas_event = 166;</code>
+   * @return Whether the composePreviewCanvasEvent field is set.
+   */
+  boolean hasComposePreviewCanvasEvent();
+  /**
+   * <pre>
+   * set when kind = COMPOSE_PREVIEW_CANVAS_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.ComposePreviewCanvasEvent compose_preview_canvas_event = 166;</code>
+   * @return The composePreviewCanvasEvent.
+   */
+  com.google.wireless.android.sdk.stats.ComposePreviewCanvasEvent getComposePreviewCanvasEvent();
+  /**
+   * <pre>
+   * set when kind = COMPOSE_PREVIEW_CANVAS_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.ComposePreviewCanvasEvent compose_preview_canvas_event = 166;</code>
+   */
+  com.google.wireless.android.sdk.stats.ComposePreviewCanvasEventOrBuilder getComposePreviewCanvasEventOrBuilder();
+
+  /**
+   * <pre>
+   * set when kind = SML_COMPLETION_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.SmlCompletionEvent sml_completion_event = 167;</code>
+   * @return Whether the smlCompletionEvent field is set.
+   */
+  boolean hasSmlCompletionEvent();
+  /**
+   * <pre>
+   * set when kind = SML_COMPLETION_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.SmlCompletionEvent sml_completion_event = 167;</code>
+   * @return The smlCompletionEvent.
+   */
+  com.google.wireless.android.sdk.stats.SmlCompletionEvent getSmlCompletionEvent();
+  /**
+   * <pre>
+   * set when kind = SML_COMPLETION_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.SmlCompletionEvent sml_completion_event = 167;</code>
+   */
+  com.google.wireless.android.sdk.stats.SmlCompletionEventOrBuilder getSmlCompletionEventOrBuilder();
+
+  /**
+   * <pre>
+   * set when kind = SML_CODE_TRANSFORMATION_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.SmlTransformEvent sml_transform_event = 168;</code>
+   * @return Whether the smlTransformEvent field is set.
+   */
+  boolean hasSmlTransformEvent();
+  /**
+   * <pre>
+   * set when kind = SML_CODE_TRANSFORMATION_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.SmlTransformEvent sml_transform_event = 168;</code>
+   * @return The smlTransformEvent.
+   */
+  com.google.wireless.android.sdk.stats.SmlTransformEvent getSmlTransformEvent();
+  /**
+   * <pre>
+   * set when kind = SML_CODE_TRANSFORMATION_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.SmlTransformEvent sml_transform_event = 168;</code>
+   */
+  com.google.wireless.android.sdk.stats.SmlTransformEventOrBuilder getSmlTransformEventOrBuilder();
+
+  /**
+   * <pre>
+   * set when kind = SML_CHATBOT_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.SmlChatBotEvent sml_chat_bot_event = 169;</code>
+   * @return Whether the smlChatBotEvent field is set.
+   */
+  boolean hasSmlChatBotEvent();
+  /**
+   * <pre>
+   * set when kind = SML_CHATBOT_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.SmlChatBotEvent sml_chat_bot_event = 169;</code>
+   * @return The smlChatBotEvent.
+   */
+  com.google.wireless.android.sdk.stats.SmlChatBotEvent getSmlChatBotEvent();
+  /**
+   * <pre>
+   * set when kind = SML_CHATBOT_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.SmlChatBotEvent sml_chat_bot_event = 169;</code>
+   */
+  com.google.wireless.android.sdk.stats.SmlChatBotEventOrBuilder getSmlChatBotEventOrBuilder();
+
+  /**
+   * <pre>
+   * set when kind = SML_CONFIGURATION_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.SmlConfigurationEvent sml_configuration_event = 170;</code>
+   * @return Whether the smlConfigurationEvent field is set.
+   */
+  boolean hasSmlConfigurationEvent();
+  /**
+   * <pre>
+   * set when kind = SML_CONFIGURATION_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.SmlConfigurationEvent sml_configuration_event = 170;</code>
+   * @return The smlConfigurationEvent.
+   */
+  com.google.wireless.android.sdk.stats.SmlConfigurationEvent getSmlConfigurationEvent();
+  /**
+   * <pre>
+   * set when kind = SML_CONFIGURATION_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.SmlConfigurationEvent sml_configuration_event = 170;</code>
+   */
+  com.google.wireless.android.sdk.stats.SmlConfigurationEventOrBuilder getSmlConfigurationEventOrBuilder();
 }

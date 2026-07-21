@@ -292,7 +292,7 @@ private static final long serialVersionUID = 0L;
   private boolean isBlocking_;
   /**
    * <pre>
-   * Is this library reported as blocking publising on Google Play?
+   * Is this library reported as blocking publishing on Google Play?
    * </pre>
    *
    * <code>optional bool is_blocking = 4;</code>
@@ -304,7 +304,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Is this library reported as blocking publising on Google Play?
+   * Is this library reported as blocking publishing on Google Play?
    * </pre>
    *
    * <code>optional bool is_blocking = 4;</code>
@@ -1035,7 +1035,7 @@ private static final long serialVersionUID = 0L;
     private boolean isBlocking_ ;
     /**
      * <pre>
-     * Is this library reported as blocking publising on Google Play?
+     * Is this library reported as blocking publishing on Google Play?
      * </pre>
      *
      * <code>optional bool is_blocking = 4;</code>
@@ -1047,7 +1047,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Is this library reported as blocking publising on Google Play?
+     * Is this library reported as blocking publishing on Google Play?
      * </pre>
      *
      * <code>optional bool is_blocking = 4;</code>
@@ -1059,7 +1059,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Is this library reported as blocking publising on Google Play?
+     * Is this library reported as blocking publishing on Google Play?
      * </pre>
      *
      * <code>optional bool is_blocking = 4;</code>
@@ -1074,7 +1074,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Is this library reported as blocking publising on Google Play?
+     * Is this library reported as blocking publishing on Google Play?
      * </pre>
      *
      * <code>optional bool is_blocking = 4;</code>
