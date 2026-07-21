@@ -592,9 +592,9 @@ public enum GradleTaskExecutionType
    */
   INSTALL_VARIANT_VIA_BUNDLE(144),
   /**
-   * <code>PACKAGE_FOR_UNIT_TEST = 145;</code>
+   * <code>PACKAGE_FOR_HOST_TEST = 145;</code>
    */
-  PACKAGE_FOR_UNIT_TEST(145),
+  PACKAGE_FOR_HOST_TEST(145),
   /**
    * <code>KAPT = 146;</code>
    */
@@ -1375,6 +1375,10 @@ public enum GradleTaskExecutionType
    * <code>PRIVACY_SANDBOX_VALIDATE_CONFIGURATION = 339;</code>
    */
   PRIVACY_SANDBOX_VALIDATE_CONFIGURATION(339),
+  /**
+   * <code>CONVERT_PROTO_RESOURCES = 340;</code>
+   */
+  CONVERT_PROTO_RESOURCES(340),
   UNRECOGNIZED(-1),
   ;
 
@@ -1959,9 +1963,9 @@ public enum GradleTaskExecutionType
    */
   public static final int INSTALL_VARIANT_VIA_BUNDLE_VALUE = 144;
   /**
-   * <code>PACKAGE_FOR_UNIT_TEST = 145;</code>
+   * <code>PACKAGE_FOR_HOST_TEST = 145;</code>
    */
-  public static final int PACKAGE_FOR_UNIT_TEST_VALUE = 145;
+  public static final int PACKAGE_FOR_HOST_TEST_VALUE = 145;
   /**
    * <code>KAPT = 146;</code>
    */
@@ -2738,6 +2742,10 @@ public enum GradleTaskExecutionType
    * <code>PRIVACY_SANDBOX_VALIDATE_CONFIGURATION = 339;</code>
    */
   public static final int PRIVACY_SANDBOX_VALIDATE_CONFIGURATION_VALUE = 339;
+  /**
+   * <code>CONVERT_PROTO_RESOURCES = 340;</code>
+   */
+  public static final int CONVERT_PROTO_RESOURCES_VALUE = 340;
 
 
   public final int getNumber() {
@@ -2909,7 +2917,7 @@ public enum GradleTaskExecutionType
       case 142: return GATHER_JAVA_MODULE_INFO;
       case 143: return LINT_FIX;
       case 144: return INSTALL_VARIANT_VIA_BUNDLE;
-      case 145: return PACKAGE_FOR_UNIT_TEST;
+      case 145: return PACKAGE_FOR_HOST_TEST;
       case 146: return KAPT;
       case 147: return KAPT_GENERATE_STUBS;
       case 148: return CHECK_MULTI_APK_LIBRARIES;
@@ -3104,6 +3112,7 @@ public enum GradleTaskExecutionType
       case 337: return MERGE_STARTUP_PROFILE;
       case 338: return GENERATE_PRIVACY_SANDBOX_PROGUARD_RULES;
       case 339: return PRIVACY_SANDBOX_VALIDATE_CONFIGURATION;
+      case 340: return CONVERT_PROTO_RESOURCES;
       default: return null;
     }
   }
