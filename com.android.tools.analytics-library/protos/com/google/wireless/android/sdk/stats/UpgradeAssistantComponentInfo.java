@@ -295,6 +295,14 @@ private static final long serialVersionUID = 0L;
      * <code>BUILT_IN_KOTLIN_DEFAULT = 61;</code>
      */
     BUILT_IN_KOTLIN_DEFAULT(61),
+    /**
+     * <code>NEWDSL_DEFAULT = 62;</code>
+     */
+    NEWDSL_DEFAULT(62),
+    /**
+     * <code>KOTLIN20_COMPOSE = 63;</code>
+     */
+    KOTLIN20_COMPOSE(63),
     ;
 
     /**
@@ -545,6 +553,14 @@ private static final long serialVersionUID = 0L;
      * <code>BUILT_IN_KOTLIN_DEFAULT = 61;</code>
      */
     public static final int BUILT_IN_KOTLIN_DEFAULT_VALUE = 61;
+    /**
+     * <code>NEWDSL_DEFAULT = 62;</code>
+     */
+    public static final int NEWDSL_DEFAULT_VALUE = 62;
+    /**
+     * <code>KOTLIN20_COMPOSE = 63;</code>
+     */
+    public static final int KOTLIN20_COMPOSE_VALUE = 63;
 
 
     public final int getNumber() {
@@ -629,6 +645,8 @@ private static final long serialVersionUID = 0L;
         case 59: return UNIQUE_PACKAGE_NAMES;
         case 60: return DEPENDENCY_CONSTRAINTS_DEFAULT;
         case 61: return BUILT_IN_KOTLIN_DEFAULT;
+        case 62: return NEWDSL_DEFAULT;
+        case 63: return KOTLIN20_COMPOSE;
         default: return null;
       }
     }

@@ -46,4 +46,15 @@ public interface SentimentSurveyEventOrBuilder extends
    * @return The type.
    */
   com.google.wireless.android.sdk.stats.SentimentSurveyEvent.Type getType();
+
+  /**
+   * <code>optional .android_studio.SentimentSurveyEvent.SurveyType survey_type = 3;</code>
+   * @return Whether the surveyType field is set.
+   */
+  boolean hasSurveyType();
+  /**
+   * <code>optional .android_studio.SentimentSurveyEvent.SurveyType survey_type = 3;</code>
+   * @return The surveyType.
+   */
+  com.google.wireless.android.sdk.stats.SentimentSurveyEvent.SurveyType getSurveyType();
 }

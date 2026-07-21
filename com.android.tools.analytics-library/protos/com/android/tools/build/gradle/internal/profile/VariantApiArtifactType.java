@@ -68,6 +68,10 @@ public enum VariantApiArtifactType
    * <code>RUNTIME_SYMBOL_LIST = 13;</code>
    */
   RUNTIME_SYMBOL_LIST(13),
+  /**
+   * <code>VERSION_CONTROL_INFO_FILE = 14;</code>
+   */
+  VERSION_CONTROL_INFO_FILE(14),
   UNRECOGNIZED(-1),
   ;
 
@@ -131,6 +135,10 @@ public enum VariantApiArtifactType
    * <code>RUNTIME_SYMBOL_LIST = 13;</code>
    */
   public static final int RUNTIME_SYMBOL_LIST_VALUE = 13;
+  /**
+   * <code>VERSION_CONTROL_INFO_FILE = 14;</code>
+   */
+  public static final int VERSION_CONTROL_INFO_FILE_VALUE = 14;
 
 
   public final int getNumber() {
@@ -171,6 +179,7 @@ public enum VariantApiArtifactType
       case 11: return PROJECT_CLASSES;
       case 12: return MERGED_NATIVE_LIBS;
       case 13: return RUNTIME_SYMBOL_LIST;
+      case 14: return VERSION_CONTROL_INFO_FILE;
       default: return null;
     }
   }

@@ -546,6 +546,10 @@ private static final long serialVersionUID = 0L;
      */
     XR_MODE_GLASSES_UI(119),
     /**
+     * <code>MICROPHONE_TOGGLE_UI = 120;</code>
+     */
+    MICROPHONE_TOGGLE_UI(120),
+    /**
      * <pre>
      * Intentional gap to avoid merge conflicts.
      * </pre>
@@ -1056,6 +1060,10 @@ private static final long serialVersionUID = 0L;
      */
     public static final int XR_MODE_GLASSES_UI_VALUE = 119;
     /**
+     * <code>MICROPHONE_TOGGLE_UI = 120;</code>
+     */
+    public static final int MICROPHONE_TOGGLE_UI_VALUE = 120;
+    /**
      * <pre>
      * Intentional gap to avoid merge conflicts.
      * </pre>
@@ -1217,6 +1225,7 @@ private static final long serialVersionUID = 0L;
         case 117: return VULKAN_ROBUSTNESS;
         case 118: return XR_MODE_UI;
         case 119: return XR_MODE_GLASSES_UI;
+        case 120: return MICROPHONE_TOGGLE_UI;
         case 131: return VIRTIO_DUAL_MODE_MOUSE;
         case 132: return DUAL_MODE_MOUSE_DISPLAY_HOST_CURSOR;
         case 133: return ALL_APPS_FOR_HOME_TRAY;
