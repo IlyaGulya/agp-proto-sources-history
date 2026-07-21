@@ -17,6 +17,9 @@ private static final long serialVersionUID = 0L;
   }
   private SmlConfigurationEvent() {
     productVariant_ = 0;
+    tierName_ = "";
+    licenseType_ = 0;
+    userAccountType_ = 0;
   }
 
   @java.lang.Override
@@ -170,6 +173,216 @@ private static final long serialVersionUID = 0L;
     }
 
     // @@protoc_insertion_point(enum_scope:android_studio.SmlConfigurationEvent.SmlProductVariant)
+  }
+
+  /**
+   * Protobuf enum {@code android_studio.SmlConfigurationEvent.UserAccountType}
+   */
+  public enum UserAccountType
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <code>USER_ACCOUNT_TYPE_UNKNOWN = 0;</code>
+     */
+    USER_ACCOUNT_TYPE_UNKNOWN(0),
+    /**
+     * <code>USER_ACCOUNT_TYPE_CONSUMER = 1;</code>
+     */
+    USER_ACCOUNT_TYPE_CONSUMER(1),
+    /**
+     * <code>USER_ACCOUNT_TYPE_DASHER = 2;</code>
+     */
+    USER_ACCOUNT_TYPE_DASHER(2),
+    ;
+
+    /**
+     * <code>USER_ACCOUNT_TYPE_UNKNOWN = 0;</code>
+     */
+    public static final int USER_ACCOUNT_TYPE_UNKNOWN_VALUE = 0;
+    /**
+     * <code>USER_ACCOUNT_TYPE_CONSUMER = 1;</code>
+     */
+    public static final int USER_ACCOUNT_TYPE_CONSUMER_VALUE = 1;
+    /**
+     * <code>USER_ACCOUNT_TYPE_DASHER = 2;</code>
+     */
+    public static final int USER_ACCOUNT_TYPE_DASHER_VALUE = 2;
+
+
+    public final int getNumber() {
+      return value;
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     * @deprecated Use {@link #forNumber(int)} instead.
+     */
+    @java.lang.Deprecated
+    public static UserAccountType valueOf(int value) {
+      return forNumber(value);
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     */
+    public static UserAccountType forNumber(int value) {
+      switch (value) {
+        case 0: return USER_ACCOUNT_TYPE_UNKNOWN;
+        case 1: return USER_ACCOUNT_TYPE_CONSUMER;
+        case 2: return USER_ACCOUNT_TYPE_DASHER;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<UserAccountType>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static final com.google.protobuf.Internal.EnumLiteMap<
+        UserAccountType> internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<UserAccountType>() {
+            public UserAccountType findValueByNumber(int number) {
+              return UserAccountType.forNumber(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      return getDescriptor().getValues().get(ordinal());
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return com.google.wireless.android.sdk.stats.SmlConfigurationEvent.getDescriptor().getEnumTypes().get(1);
+    }
+
+    private static final UserAccountType[] VALUES = values();
+
+    public static UserAccountType valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int value;
+
+    private UserAccountType(int value) {
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:android_studio.SmlConfigurationEvent.UserAccountType)
+  }
+
+  /**
+   * Protobuf enum {@code android_studio.SmlConfigurationEvent.LicenseType}
+   */
+  public enum LicenseType
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <code>LICENSE_TYPE_UNKNOWN = 0;</code>
+     */
+    LICENSE_TYPE_UNKNOWN(0),
+    /**
+     * <code>LICENSE_TYPE_CONSUMER = 1;</code>
+     */
+    LICENSE_TYPE_CONSUMER(1),
+    /**
+     * <code>LICENSE_TYPE_BUSINESS = 2;</code>
+     */
+    LICENSE_TYPE_BUSINESS(2),
+    ;
+
+    /**
+     * <code>LICENSE_TYPE_UNKNOWN = 0;</code>
+     */
+    public static final int LICENSE_TYPE_UNKNOWN_VALUE = 0;
+    /**
+     * <code>LICENSE_TYPE_CONSUMER = 1;</code>
+     */
+    public static final int LICENSE_TYPE_CONSUMER_VALUE = 1;
+    /**
+     * <code>LICENSE_TYPE_BUSINESS = 2;</code>
+     */
+    public static final int LICENSE_TYPE_BUSINESS_VALUE = 2;
+
+
+    public final int getNumber() {
+      return value;
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     * @deprecated Use {@link #forNumber(int)} instead.
+     */
+    @java.lang.Deprecated
+    public static LicenseType valueOf(int value) {
+      return forNumber(value);
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     */
+    public static LicenseType forNumber(int value) {
+      switch (value) {
+        case 0: return LICENSE_TYPE_UNKNOWN;
+        case 1: return LICENSE_TYPE_CONSUMER;
+        case 2: return LICENSE_TYPE_BUSINESS;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<LicenseType>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static final com.google.protobuf.Internal.EnumLiteMap<
+        LicenseType> internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<LicenseType>() {
+            public LicenseType findValueByNumber(int number) {
+              return LicenseType.forNumber(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      return getDescriptor().getValues().get(ordinal());
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return com.google.wireless.android.sdk.stats.SmlConfigurationEvent.getDescriptor().getEnumTypes().get(2);
+    }
+
+    private static final LicenseType[] VALUES = values();
+
+    public static LicenseType valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int value;
+
+    private LicenseType(int value) {
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:android_studio.SmlConfigurationEvent.LicenseType)
   }
 
   private int bitField0_;
@@ -339,24 +552,34 @@ private static final long serialVersionUID = 0L;
   private int productVariant_ = 0;
   /**
    * <pre>
-   * The product variant that was fetched by the LoadCodeAssist API
+   * Deprecated. The existing SmlProductVariant was a combined enum to identify
+   * both user account type and license type. Use UserAccountType and
+   * LicenseType instead. The product variant that was fetched by the
+   * LoadCodeAssist API
    * </pre>
    *
-   * <code>optional .android_studio.SmlConfigurationEvent.SmlProductVariant product_variant = 7;</code>
+   * <code>optional .android_studio.SmlConfigurationEvent.SmlProductVariant product_variant = 7 [deprecated = true];</code>
+   * @deprecated android_studio.SmlConfigurationEvent.product_variant is deprecated.
+   *     See studio_stats.proto;l=16546
    * @return Whether the productVariant field is set.
    */
-  @java.lang.Override public boolean hasProductVariant() {
+  @java.lang.Override @java.lang.Deprecated public boolean hasProductVariant() {
     return ((bitField0_ & 0x00000040) != 0);
   }
   /**
    * <pre>
-   * The product variant that was fetched by the LoadCodeAssist API
+   * Deprecated. The existing SmlProductVariant was a combined enum to identify
+   * both user account type and license type. Use UserAccountType and
+   * LicenseType instead. The product variant that was fetched by the
+   * LoadCodeAssist API
    * </pre>
    *
-   * <code>optional .android_studio.SmlConfigurationEvent.SmlProductVariant product_variant = 7;</code>
+   * <code>optional .android_studio.SmlConfigurationEvent.SmlProductVariant product_variant = 7 [deprecated = true];</code>
+   * @deprecated android_studio.SmlConfigurationEvent.product_variant is deprecated.
+   *     See studio_stats.proto;l=16546
    * @return The productVariant.
    */
-  @java.lang.Override public com.google.wireless.android.sdk.stats.SmlConfigurationEvent.SmlProductVariant getProductVariant() {
+  @java.lang.Override @java.lang.Deprecated public com.google.wireless.android.sdk.stats.SmlConfigurationEvent.SmlProductVariant getProductVariant() {
     com.google.wireless.android.sdk.stats.SmlConfigurationEvent.SmlProductVariant result = com.google.wireless.android.sdk.stats.SmlConfigurationEvent.SmlProductVariant.forNumber(productVariant_);
     return result == null ? com.google.wireless.android.sdk.stats.SmlConfigurationEvent.SmlProductVariant.PRODUCT_VARIANT_UNKNOWN : result;
   }
@@ -386,6 +609,119 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public boolean getAgentAutoAcceptEnabled() {
     return agentAutoAcceptEnabled_;
+  }
+
+  public static final int TIER_NAME_FIELD_NUMBER = 9;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object tierName_ = "";
+  /**
+   * <pre>
+   * details.
+   * </pre>
+   *
+   * <code>optional string tier_name = 9;</code>
+   * @return Whether the tierName field is set.
+   */
+  @java.lang.Override
+  public boolean hasTierName() {
+    return ((bitField0_ & 0x00000100) != 0);
+  }
+  /**
+   * <pre>
+   * details.
+   * </pre>
+   *
+   * <code>optional string tier_name = 9;</code>
+   * @return The tierName.
+   */
+  @java.lang.Override
+  public java.lang.String getTierName() {
+    java.lang.Object ref = tierName_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      if (bs.isValidUtf8()) {
+        tierName_ = s;
+      }
+      return s;
+    }
+  }
+  /**
+   * <pre>
+   * details.
+   * </pre>
+   *
+   * <code>optional string tier_name = 9;</code>
+   * @return The bytes for tierName.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getTierNameBytes() {
+    java.lang.Object ref = tierName_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      tierName_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
+  public static final int LICENSE_TYPE_FIELD_NUMBER = 10;
+  private int licenseType_ = 0;
+  /**
+   * <pre>
+   * The license type that was fetched by the LoadCodeAssist API.
+   * </pre>
+   *
+   * <code>optional .android_studio.SmlConfigurationEvent.LicenseType license_type = 10;</code>
+   * @return Whether the licenseType field is set.
+   */
+  @java.lang.Override public boolean hasLicenseType() {
+    return ((bitField0_ & 0x00000200) != 0);
+  }
+  /**
+   * <pre>
+   * The license type that was fetched by the LoadCodeAssist API.
+   * </pre>
+   *
+   * <code>optional .android_studio.SmlConfigurationEvent.LicenseType license_type = 10;</code>
+   * @return The licenseType.
+   */
+  @java.lang.Override public com.google.wireless.android.sdk.stats.SmlConfigurationEvent.LicenseType getLicenseType() {
+    com.google.wireless.android.sdk.stats.SmlConfigurationEvent.LicenseType result = com.google.wireless.android.sdk.stats.SmlConfigurationEvent.LicenseType.forNumber(licenseType_);
+    return result == null ? com.google.wireless.android.sdk.stats.SmlConfigurationEvent.LicenseType.LICENSE_TYPE_UNKNOWN : result;
+  }
+
+  public static final int USER_ACCOUNT_TYPE_FIELD_NUMBER = 11;
+  private int userAccountType_ = 0;
+  /**
+   * <pre>
+   * The user account type that was fetched by the LoadCodeAssist API.
+   * </pre>
+   *
+   * <code>optional .android_studio.SmlConfigurationEvent.UserAccountType user_account_type = 11;</code>
+   * @return Whether the userAccountType field is set.
+   */
+  @java.lang.Override public boolean hasUserAccountType() {
+    return ((bitField0_ & 0x00000400) != 0);
+  }
+  /**
+   * <pre>
+   * The user account type that was fetched by the LoadCodeAssist API.
+   * </pre>
+   *
+   * <code>optional .android_studio.SmlConfigurationEvent.UserAccountType user_account_type = 11;</code>
+   * @return The userAccountType.
+   */
+  @java.lang.Override public com.google.wireless.android.sdk.stats.SmlConfigurationEvent.UserAccountType getUserAccountType() {
+    com.google.wireless.android.sdk.stats.SmlConfigurationEvent.UserAccountType result = com.google.wireless.android.sdk.stats.SmlConfigurationEvent.UserAccountType.forNumber(userAccountType_);
+    return result == null ? com.google.wireless.android.sdk.stats.SmlConfigurationEvent.UserAccountType.USER_ACCOUNT_TYPE_UNKNOWN : result;
   }
 
   private byte memoizedIsInitialized = -1;
@@ -425,6 +761,15 @@ private static final long serialVersionUID = 0L;
     }
     if (((bitField0_ & 0x00000080) != 0)) {
       output.writeBool(8, agentAutoAcceptEnabled_);
+    }
+    if (((bitField0_ & 0x00000100) != 0)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 9, tierName_);
+    }
+    if (((bitField0_ & 0x00000200) != 0)) {
+      output.writeEnum(10, licenseType_);
+    }
+    if (((bitField0_ & 0x00000400) != 0)) {
+      output.writeEnum(11, userAccountType_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -466,6 +811,17 @@ private static final long serialVersionUID = 0L;
     if (((bitField0_ & 0x00000080) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeBoolSize(8, agentAutoAcceptEnabled_);
+    }
+    if (((bitField0_ & 0x00000100) != 0)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(9, tierName_);
+    }
+    if (((bitField0_ & 0x00000200) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeEnumSize(10, licenseType_);
+    }
+    if (((bitField0_ & 0x00000400) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeEnumSize(11, userAccountType_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -521,6 +877,19 @@ private static final long serialVersionUID = 0L;
       if (getAgentAutoAcceptEnabled()
           != other.getAgentAutoAcceptEnabled()) return false;
     }
+    if (hasTierName() != other.hasTierName()) return false;
+    if (hasTierName()) {
+      if (!getTierName()
+          .equals(other.getTierName())) return false;
+    }
+    if (hasLicenseType() != other.hasLicenseType()) return false;
+    if (hasLicenseType()) {
+      if (licenseType_ != other.licenseType_) return false;
+    }
+    if (hasUserAccountType() != other.hasUserAccountType()) return false;
+    if (hasUserAccountType()) {
+      if (userAccountType_ != other.userAccountType_) return false;
+    }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -570,6 +939,18 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + AGENT_AUTO_ACCEPT_ENABLED_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
           getAgentAutoAcceptEnabled());
+    }
+    if (hasTierName()) {
+      hash = (37 * hash) + TIER_NAME_FIELD_NUMBER;
+      hash = (53 * hash) + getTierName().hashCode();
+    }
+    if (hasLicenseType()) {
+      hash = (37 * hash) + LICENSE_TYPE_FIELD_NUMBER;
+      hash = (53 * hash) + licenseType_;
+    }
+    if (hasUserAccountType()) {
+      hash = (37 * hash) + USER_ACCOUNT_TYPE_FIELD_NUMBER;
+      hash = (53 * hash) + userAccountType_;
     }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
@@ -708,6 +1089,9 @@ private static final long serialVersionUID = 0L;
       projectContextEnabled_ = false;
       productVariant_ = 0;
       agentAutoAcceptEnabled_ = false;
+      tierName_ = "";
+      licenseType_ = 0;
+      userAccountType_ = 0;
       return this;
     }
 
@@ -774,6 +1158,18 @@ private static final long serialVersionUID = 0L;
         result.agentAutoAcceptEnabled_ = agentAutoAcceptEnabled_;
         to_bitField0_ |= 0x00000080;
       }
+      if (((from_bitField0_ & 0x00000100) != 0)) {
+        result.tierName_ = tierName_;
+        to_bitField0_ |= 0x00000100;
+      }
+      if (((from_bitField0_ & 0x00000200) != 0)) {
+        result.licenseType_ = licenseType_;
+        to_bitField0_ |= 0x00000200;
+      }
+      if (((from_bitField0_ & 0x00000400) != 0)) {
+        result.userAccountType_ = userAccountType_;
+        to_bitField0_ |= 0x00000400;
+      }
       result.bitField0_ |= to_bitField0_;
     }
 
@@ -812,6 +1208,17 @@ private static final long serialVersionUID = 0L;
       }
       if (other.hasAgentAutoAcceptEnabled()) {
         setAgentAutoAcceptEnabled(other.getAgentAutoAcceptEnabled());
+      }
+      if (other.hasTierName()) {
+        tierName_ = other.tierName_;
+        bitField0_ |= 0x00000100;
+        onChanged();
+      }
+      if (other.hasLicenseType()) {
+        setLicenseType(other.getLicenseType());
+      }
+      if (other.hasUserAccountType()) {
+        setUserAccountType(other.getUserAccountType());
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -886,6 +1293,35 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000080;
               break;
             } // case 64
+            case 74: {
+              tierName_ = input.readBytes();
+              bitField0_ |= 0x00000100;
+              break;
+            } // case 74
+            case 80: {
+              int tmpRaw = input.readEnum();
+              com.google.wireless.android.sdk.stats.SmlConfigurationEvent.LicenseType tmpValue =
+                  com.google.wireless.android.sdk.stats.SmlConfigurationEvent.LicenseType.forNumber(tmpRaw);
+              if (tmpValue == null) {
+                mergeUnknownVarintField(10, tmpRaw);
+              } else {
+                licenseType_ = tmpRaw;
+                bitField0_ |= 0x00000200;
+              }
+              break;
+            } // case 80
+            case 88: {
+              int tmpRaw = input.readEnum();
+              com.google.wireless.android.sdk.stats.SmlConfigurationEvent.UserAccountType tmpValue =
+                  com.google.wireless.android.sdk.stats.SmlConfigurationEvent.UserAccountType.forNumber(tmpRaw);
+              if (tmpValue == null) {
+                mergeUnknownVarintField(11, tmpRaw);
+              } else {
+                userAccountType_ = tmpRaw;
+                bitField0_ |= 0x00000400;
+              }
+              break;
+            } // case 88
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -1242,38 +1678,53 @@ private static final long serialVersionUID = 0L;
     private int productVariant_ = 0;
     /**
      * <pre>
-     * The product variant that was fetched by the LoadCodeAssist API
+     * Deprecated. The existing SmlProductVariant was a combined enum to identify
+     * both user account type and license type. Use UserAccountType and
+     * LicenseType instead. The product variant that was fetched by the
+     * LoadCodeAssist API
      * </pre>
      *
-     * <code>optional .android_studio.SmlConfigurationEvent.SmlProductVariant product_variant = 7;</code>
+     * <code>optional .android_studio.SmlConfigurationEvent.SmlProductVariant product_variant = 7 [deprecated = true];</code>
+     * @deprecated android_studio.SmlConfigurationEvent.product_variant is deprecated.
+     *     See studio_stats.proto;l=16546
      * @return Whether the productVariant field is set.
      */
-    @java.lang.Override public boolean hasProductVariant() {
+    @java.lang.Override @java.lang.Deprecated public boolean hasProductVariant() {
       return ((bitField0_ & 0x00000040) != 0);
     }
     /**
      * <pre>
-     * The product variant that was fetched by the LoadCodeAssist API
+     * Deprecated. The existing SmlProductVariant was a combined enum to identify
+     * both user account type and license type. Use UserAccountType and
+     * LicenseType instead. The product variant that was fetched by the
+     * LoadCodeAssist API
      * </pre>
      *
-     * <code>optional .android_studio.SmlConfigurationEvent.SmlProductVariant product_variant = 7;</code>
+     * <code>optional .android_studio.SmlConfigurationEvent.SmlProductVariant product_variant = 7 [deprecated = true];</code>
+     * @deprecated android_studio.SmlConfigurationEvent.product_variant is deprecated.
+     *     See studio_stats.proto;l=16546
      * @return The productVariant.
      */
     @java.lang.Override
-    public com.google.wireless.android.sdk.stats.SmlConfigurationEvent.SmlProductVariant getProductVariant() {
+    @java.lang.Deprecated public com.google.wireless.android.sdk.stats.SmlConfigurationEvent.SmlProductVariant getProductVariant() {
       com.google.wireless.android.sdk.stats.SmlConfigurationEvent.SmlProductVariant result = com.google.wireless.android.sdk.stats.SmlConfigurationEvent.SmlProductVariant.forNumber(productVariant_);
       return result == null ? com.google.wireless.android.sdk.stats.SmlConfigurationEvent.SmlProductVariant.PRODUCT_VARIANT_UNKNOWN : result;
     }
     /**
      * <pre>
-     * The product variant that was fetched by the LoadCodeAssist API
+     * Deprecated. The existing SmlProductVariant was a combined enum to identify
+     * both user account type and license type. Use UserAccountType and
+     * LicenseType instead. The product variant that was fetched by the
+     * LoadCodeAssist API
      * </pre>
      *
-     * <code>optional .android_studio.SmlConfigurationEvent.SmlProductVariant product_variant = 7;</code>
+     * <code>optional .android_studio.SmlConfigurationEvent.SmlProductVariant product_variant = 7 [deprecated = true];</code>
+     * @deprecated android_studio.SmlConfigurationEvent.product_variant is deprecated.
+     *     See studio_stats.proto;l=16546
      * @param value The productVariant to set.
      * @return This builder for chaining.
      */
-    public Builder setProductVariant(com.google.wireless.android.sdk.stats.SmlConfigurationEvent.SmlProductVariant value) {
+    @java.lang.Deprecated public Builder setProductVariant(com.google.wireless.android.sdk.stats.SmlConfigurationEvent.SmlProductVariant value) {
       if (value == null) {
         throw new NullPointerException();
       }
@@ -1284,13 +1735,18 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The product variant that was fetched by the LoadCodeAssist API
+     * Deprecated. The existing SmlProductVariant was a combined enum to identify
+     * both user account type and license type. Use UserAccountType and
+     * LicenseType instead. The product variant that was fetched by the
+     * LoadCodeAssist API
      * </pre>
      *
-     * <code>optional .android_studio.SmlConfigurationEvent.SmlProductVariant product_variant = 7;</code>
+     * <code>optional .android_studio.SmlConfigurationEvent.SmlProductVariant product_variant = 7 [deprecated = true];</code>
+     * @deprecated android_studio.SmlConfigurationEvent.product_variant is deprecated.
+     *     See studio_stats.proto;l=16546
      * @return This builder for chaining.
      */
-    public Builder clearProductVariant() {
+    @java.lang.Deprecated public Builder clearProductVariant() {
       bitField0_ = (bitField0_ & ~0x00000040);
       productVariant_ = 0;
       onChanged();
@@ -1349,6 +1805,226 @@ private static final long serialVersionUID = 0L;
     public Builder clearAgentAutoAcceptEnabled() {
       bitField0_ = (bitField0_ & ~0x00000080);
       agentAutoAcceptEnabled_ = false;
+      onChanged();
+      return this;
+    }
+
+    private java.lang.Object tierName_ = "";
+    /**
+     * <pre>
+     * details.
+     * </pre>
+     *
+     * <code>optional string tier_name = 9;</code>
+     * @return Whether the tierName field is set.
+     */
+    public boolean hasTierName() {
+      return ((bitField0_ & 0x00000100) != 0);
+    }
+    /**
+     * <pre>
+     * details.
+     * </pre>
+     *
+     * <code>optional string tier_name = 9;</code>
+     * @return The tierName.
+     */
+    public java.lang.String getTierName() {
+      java.lang.Object ref = tierName_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          tierName_ = s;
+        }
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <pre>
+     * details.
+     * </pre>
+     *
+     * <code>optional string tier_name = 9;</code>
+     * @return The bytes for tierName.
+     */
+    public com.google.protobuf.ByteString
+        getTierNameBytes() {
+      java.lang.Object ref = tierName_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        tierName_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <pre>
+     * details.
+     * </pre>
+     *
+     * <code>optional string tier_name = 9;</code>
+     * @param value The tierName to set.
+     * @return This builder for chaining.
+     */
+    public Builder setTierName(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      tierName_ = value;
+      bitField0_ |= 0x00000100;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * details.
+     * </pre>
+     *
+     * <code>optional string tier_name = 9;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearTierName() {
+      tierName_ = getDefaultInstance().getTierName();
+      bitField0_ = (bitField0_ & ~0x00000100);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * details.
+     * </pre>
+     *
+     * <code>optional string tier_name = 9;</code>
+     * @param value The bytes for tierName to set.
+     * @return This builder for chaining.
+     */
+    public Builder setTierNameBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      tierName_ = value;
+      bitField0_ |= 0x00000100;
+      onChanged();
+      return this;
+    }
+
+    private int licenseType_ = 0;
+    /**
+     * <pre>
+     * The license type that was fetched by the LoadCodeAssist API.
+     * </pre>
+     *
+     * <code>optional .android_studio.SmlConfigurationEvent.LicenseType license_type = 10;</code>
+     * @return Whether the licenseType field is set.
+     */
+    @java.lang.Override public boolean hasLicenseType() {
+      return ((bitField0_ & 0x00000200) != 0);
+    }
+    /**
+     * <pre>
+     * The license type that was fetched by the LoadCodeAssist API.
+     * </pre>
+     *
+     * <code>optional .android_studio.SmlConfigurationEvent.LicenseType license_type = 10;</code>
+     * @return The licenseType.
+     */
+    @java.lang.Override
+    public com.google.wireless.android.sdk.stats.SmlConfigurationEvent.LicenseType getLicenseType() {
+      com.google.wireless.android.sdk.stats.SmlConfigurationEvent.LicenseType result = com.google.wireless.android.sdk.stats.SmlConfigurationEvent.LicenseType.forNumber(licenseType_);
+      return result == null ? com.google.wireless.android.sdk.stats.SmlConfigurationEvent.LicenseType.LICENSE_TYPE_UNKNOWN : result;
+    }
+    /**
+     * <pre>
+     * The license type that was fetched by the LoadCodeAssist API.
+     * </pre>
+     *
+     * <code>optional .android_studio.SmlConfigurationEvent.LicenseType license_type = 10;</code>
+     * @param value The licenseType to set.
+     * @return This builder for chaining.
+     */
+    public Builder setLicenseType(com.google.wireless.android.sdk.stats.SmlConfigurationEvent.LicenseType value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      bitField0_ |= 0x00000200;
+      licenseType_ = value.getNumber();
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The license type that was fetched by the LoadCodeAssist API.
+     * </pre>
+     *
+     * <code>optional .android_studio.SmlConfigurationEvent.LicenseType license_type = 10;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearLicenseType() {
+      bitField0_ = (bitField0_ & ~0x00000200);
+      licenseType_ = 0;
+      onChanged();
+      return this;
+    }
+
+    private int userAccountType_ = 0;
+    /**
+     * <pre>
+     * The user account type that was fetched by the LoadCodeAssist API.
+     * </pre>
+     *
+     * <code>optional .android_studio.SmlConfigurationEvent.UserAccountType user_account_type = 11;</code>
+     * @return Whether the userAccountType field is set.
+     */
+    @java.lang.Override public boolean hasUserAccountType() {
+      return ((bitField0_ & 0x00000400) != 0);
+    }
+    /**
+     * <pre>
+     * The user account type that was fetched by the LoadCodeAssist API.
+     * </pre>
+     *
+     * <code>optional .android_studio.SmlConfigurationEvent.UserAccountType user_account_type = 11;</code>
+     * @return The userAccountType.
+     */
+    @java.lang.Override
+    public com.google.wireless.android.sdk.stats.SmlConfigurationEvent.UserAccountType getUserAccountType() {
+      com.google.wireless.android.sdk.stats.SmlConfigurationEvent.UserAccountType result = com.google.wireless.android.sdk.stats.SmlConfigurationEvent.UserAccountType.forNumber(userAccountType_);
+      return result == null ? com.google.wireless.android.sdk.stats.SmlConfigurationEvent.UserAccountType.USER_ACCOUNT_TYPE_UNKNOWN : result;
+    }
+    /**
+     * <pre>
+     * The user account type that was fetched by the LoadCodeAssist API.
+     * </pre>
+     *
+     * <code>optional .android_studio.SmlConfigurationEvent.UserAccountType user_account_type = 11;</code>
+     * @param value The userAccountType to set.
+     * @return This builder for chaining.
+     */
+    public Builder setUserAccountType(com.google.wireless.android.sdk.stats.SmlConfigurationEvent.UserAccountType value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      bitField0_ |= 0x00000400;
+      userAccountType_ = value.getNumber();
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The user account type that was fetched by the LoadCodeAssist API.
+     * </pre>
+     *
+     * <code>optional .android_studio.SmlConfigurationEvent.UserAccountType user_account_type = 11;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearUserAccountType() {
+      bitField0_ = (bitField0_ & ~0x00000400);
+      userAccountType_ = 0;
       onChanged();
       return this;
     }
