@@ -6565,4 +6565,31 @@ public interface AndroidStudioEventOrBuilder extends
    * <code>optional .android_studio.ProjectViewDefaultViewEvent project_view_default_view_event = 235 [lazy = true];</code>
    */
   com.google.wireless.android.sdk.stats.ProjectViewDefaultViewEventOrBuilder getProjectViewDefaultViewEventOrBuilder();
+
+  /**
+   * <pre>
+   * set when kind = PLAY_POLICY_INSIGHTS_USAGE
+   * </pre>
+   *
+   * <code>optional .android_studio.PlayPolicyInsightsUsageEvent play_policy_insights_usage_event = 236 [lazy = true];</code>
+   * @return Whether the playPolicyInsightsUsageEvent field is set.
+   */
+  boolean hasPlayPolicyInsightsUsageEvent();
+  /**
+   * <pre>
+   * set when kind = PLAY_POLICY_INSIGHTS_USAGE
+   * </pre>
+   *
+   * <code>optional .android_studio.PlayPolicyInsightsUsageEvent play_policy_insights_usage_event = 236 [lazy = true];</code>
+   * @return The playPolicyInsightsUsageEvent.
+   */
+  com.google.wireless.android.sdk.stats.PlayPolicyInsightsUsageEvent getPlayPolicyInsightsUsageEvent();
+  /**
+   * <pre>
+   * set when kind = PLAY_POLICY_INSIGHTS_USAGE
+   * </pre>
+   *
+   * <code>optional .android_studio.PlayPolicyInsightsUsageEvent play_policy_insights_usage_event = 236 [lazy = true];</code>
+   */
+  com.google.wireless.android.sdk.stats.PlayPolicyInsightsUsageEventOrBuilder getPlayPolicyInsightsUsageEventOrBuilder();
 }
