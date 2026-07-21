@@ -581,6 +581,10 @@ public enum BooleanOption
    * <code>RUN_LINT_IN_PROCESS = 140;</code>
    */
   RUN_LINT_IN_PROCESS(140),
+  /**
+   * <code>USE_LINT_PARTIAL_ANALYSIS = 141;</code>
+   */
+  USE_LINT_PARTIAL_ANALYSIS(141),
   UNRECOGNIZED(-1),
   ;
 
@@ -1148,6 +1152,10 @@ public enum BooleanOption
    * <code>RUN_LINT_IN_PROCESS = 140;</code>
    */
   public static final int RUN_LINT_IN_PROCESS_VALUE = 140;
+  /**
+   * <code>USE_LINT_PARTIAL_ANALYSIS = 141;</code>
+   */
+  public static final int USE_LINT_PARTIAL_ANALYSIS_VALUE = 141;
 
 
   public final int getNumber() {
@@ -1315,6 +1323,7 @@ public enum BooleanOption
       case 138: return ENABLE_LOCAL_TESTING;
       case 139: return ENABLE_DATABINDING_KTX;
       case 140: return RUN_LINT_IN_PROCESS;
+      case 141: return USE_LINT_PARTIAL_ANALYSIS;
       default: return null;
     }
   }

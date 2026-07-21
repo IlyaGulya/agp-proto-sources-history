@@ -37,13 +37,17 @@ public enum VariantMethodType
    */
   DEPENDENCIES_ACTION(6),
   /**
-   * <code>UNIT_TEST_ENABLED = 7;</code>
+   * <code>REGISTER_EXTENSION = 7;</code>
    */
-  UNIT_TEST_ENABLED(7),
+  REGISTER_EXTENSION(7),
   /**
-   * <code>ANDROID_TEST_ENABLED = 8;</code>
+   * <code>UNIT_TEST_ENABLED = 8;</code>
    */
-  ANDROID_TEST_ENABLED(8),
+  UNIT_TEST_ENABLED(8),
+  /**
+   * <code>ANDROID_TEST_ENABLED = 9;</code>
+   */
+  ANDROID_TEST_ENABLED(9),
   UNRECOGNIZED(-1),
   ;
 
@@ -76,13 +80,17 @@ public enum VariantMethodType
    */
   public static final int DEPENDENCIES_ACTION_VALUE = 6;
   /**
-   * <code>UNIT_TEST_ENABLED = 7;</code>
+   * <code>REGISTER_EXTENSION = 7;</code>
    */
-  public static final int UNIT_TEST_ENABLED_VALUE = 7;
+  public static final int REGISTER_EXTENSION_VALUE = 7;
   /**
-   * <code>ANDROID_TEST_ENABLED = 8;</code>
+   * <code>UNIT_TEST_ENABLED = 8;</code>
    */
-  public static final int ANDROID_TEST_ENABLED_VALUE = 8;
+  public static final int UNIT_TEST_ENABLED_VALUE = 8;
+  /**
+   * <code>ANDROID_TEST_ENABLED = 9;</code>
+   */
+  public static final int ANDROID_TEST_ENABLED_VALUE = 9;
 
 
   public final int getNumber() {
@@ -116,8 +124,9 @@ public enum VariantMethodType
       case 4: return MAX_SDK_VERSION_VALUE;
       case 5: return TARGET_SDK_VERSION_VALUE;
       case 6: return DEPENDENCIES_ACTION;
-      case 7: return UNIT_TEST_ENABLED;
-      case 8: return ANDROID_TEST_ENABLED;
+      case 7: return REGISTER_EXTENSION;
+      case 8: return UNIT_TEST_ENABLED;
+      case 9: return ANDROID_TEST_ENABLED;
       default: return null;
     }
   }

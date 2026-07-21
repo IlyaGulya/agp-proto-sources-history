@@ -87,4 +87,58 @@ public interface DynamicLayoutInspectorSessionOrBuilder extends
    * <code>optional .android_studio.DynamicLayoutInspectorMemory memory = 3;</code>
    */
   com.google.wireless.android.sdk.stats.DynamicLayoutInspectorMemoryOrBuilder getMemoryOrBuilder();
+
+  /**
+   * <pre>
+   * Session data around compose
+   * </pre>
+   *
+   * <code>optional .android_studio.DynamicLayoutInspectorCompose compose = 4;</code>
+   * @return Whether the compose field is set.
+   */
+  boolean hasCompose();
+  /**
+   * <pre>
+   * Session data around compose
+   * </pre>
+   *
+   * <code>optional .android_studio.DynamicLayoutInspectorCompose compose = 4;</code>
+   * @return The compose.
+   */
+  com.google.wireless.android.sdk.stats.DynamicLayoutInspectorCompose getCompose();
+  /**
+   * <pre>
+   * Session data around compose
+   * </pre>
+   *
+   * <code>optional .android_studio.DynamicLayoutInspectorCompose compose = 4;</code>
+   */
+  com.google.wireless.android.sdk.stats.DynamicLayoutInspectorComposeOrBuilder getComposeOrBuilder();
+
+  /**
+   * <pre>
+   * Session data around the system view toggle
+   * </pre>
+   *
+   * <code>optional .android_studio.DynamicLayoutInspectorSystemNode system = 5;</code>
+   * @return Whether the system field is set.
+   */
+  boolean hasSystem();
+  /**
+   * <pre>
+   * Session data around the system view toggle
+   * </pre>
+   *
+   * <code>optional .android_studio.DynamicLayoutInspectorSystemNode system = 5;</code>
+   * @return The system.
+   */
+  com.google.wireless.android.sdk.stats.DynamicLayoutInspectorSystemNode getSystem();
+  /**
+   * <pre>
+   * Session data around the system view toggle
+   * </pre>
+   *
+   * <code>optional .android_studio.DynamicLayoutInspectorSystemNode system = 5;</code>
+   */
+  com.google.wireless.android.sdk.stats.DynamicLayoutInspectorSystemNodeOrBuilder getSystemOrBuilder();
 }

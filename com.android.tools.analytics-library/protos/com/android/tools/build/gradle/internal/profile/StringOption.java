@@ -137,6 +137,10 @@ public enum StringOption
    * <code>AAPT2_FROM_MAVEN_VERSION_OVERRIDE = 31;</code>
    */
   AAPT2_FROM_MAVEN_VERSION_OVERRIDE(31),
+  /**
+   * <code>LINT_HEAP_SIZE = 32;</code>
+   */
+  LINT_HEAP_SIZE(32),
   UNRECOGNIZED(-1),
   ;
 
@@ -268,6 +272,10 @@ public enum StringOption
    * <code>AAPT2_FROM_MAVEN_VERSION_OVERRIDE = 31;</code>
    */
   public static final int AAPT2_FROM_MAVEN_VERSION_OVERRIDE_VALUE = 31;
+  /**
+   * <code>LINT_HEAP_SIZE = 32;</code>
+   */
+  public static final int LINT_HEAP_SIZE_VALUE = 32;
 
 
   public final int getNumber() {
@@ -326,6 +334,7 @@ public enum StringOption
       case 29: return JETIFIER_IGNORE_LIST;
       case 30: return NATIVE_BUILD_OUTPUT_LEVEL;
       case 31: return AAPT2_FROM_MAVEN_VERSION_OVERRIDE;
+      case 32: return LINT_HEAP_SIZE;
       default: return null;
     }
   }

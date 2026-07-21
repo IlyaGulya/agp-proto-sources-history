@@ -261,6 +261,50 @@ public enum VariantPropertiesMethodType
    * <code>NAMESPACE = 62;</code>
    */
   NAMESPACE(62),
+  /**
+   * <code>GET_EXTENSION = 63;</code>
+   */
+  GET_EXTENSION(63),
+  /**
+   * <code>DEXING = 64;</code>
+   */
+  DEXING(64),
+  /**
+   * <code>DEXING_ACTION = 65;</code>
+   */
+  DEXING_ACTION(65),
+  /**
+   * <code>MULTI_DEX_KEEP_FILE = 66;</code>
+   */
+  MULTI_DEX_KEEP_FILE(66),
+  /**
+   * <code>MULTI_DEX_KEEP_PROGUARD = 67;</code>
+   */
+  MULTI_DEX_KEEP_PROGUARD(67),
+  /**
+   * <code>RENDERSCRIPT = 68;</code>
+   */
+  RENDERSCRIPT(68),
+  /**
+   * <code>RENDERSCRIPT_SUPPORT_MODE = 69;</code>
+   */
+  RENDERSCRIPT_SUPPORT_MODE(69),
+  /**
+   * <code>RENDERSCRIPT_SUPPORT_MODE_BLAS = 70;</code>
+   */
+  RENDERSCRIPT_SUPPORT_MODE_BLAS(70),
+  /**
+   * <code>RENDERSCRIPT_NDK_MODE = 71;</code>
+   */
+  RENDERSCRIPT_NDK_MODE(71),
+  /**
+   * <code>RENDERSCRIPT_OPTIMIZATION_LEVEL = 72;</code>
+   */
+  RENDERSCRIPT_OPTIMIZATION_LEVEL(72),
+  /**
+   * <code>ANDROID_TEST = 73;</code>
+   */
+  ANDROID_TEST(73),
   UNRECOGNIZED(-1),
   ;
 
@@ -516,6 +560,50 @@ public enum VariantPropertiesMethodType
    * <code>NAMESPACE = 62;</code>
    */
   public static final int NAMESPACE_VALUE = 62;
+  /**
+   * <code>GET_EXTENSION = 63;</code>
+   */
+  public static final int GET_EXTENSION_VALUE = 63;
+  /**
+   * <code>DEXING = 64;</code>
+   */
+  public static final int DEXING_VALUE = 64;
+  /**
+   * <code>DEXING_ACTION = 65;</code>
+   */
+  public static final int DEXING_ACTION_VALUE = 65;
+  /**
+   * <code>MULTI_DEX_KEEP_FILE = 66;</code>
+   */
+  public static final int MULTI_DEX_KEEP_FILE_VALUE = 66;
+  /**
+   * <code>MULTI_DEX_KEEP_PROGUARD = 67;</code>
+   */
+  public static final int MULTI_DEX_KEEP_PROGUARD_VALUE = 67;
+  /**
+   * <code>RENDERSCRIPT = 68;</code>
+   */
+  public static final int RENDERSCRIPT_VALUE = 68;
+  /**
+   * <code>RENDERSCRIPT_SUPPORT_MODE = 69;</code>
+   */
+  public static final int RENDERSCRIPT_SUPPORT_MODE_VALUE = 69;
+  /**
+   * <code>RENDERSCRIPT_SUPPORT_MODE_BLAS = 70;</code>
+   */
+  public static final int RENDERSCRIPT_SUPPORT_MODE_BLAS_VALUE = 70;
+  /**
+   * <code>RENDERSCRIPT_NDK_MODE = 71;</code>
+   */
+  public static final int RENDERSCRIPT_NDK_MODE_VALUE = 71;
+  /**
+   * <code>RENDERSCRIPT_OPTIMIZATION_LEVEL = 72;</code>
+   */
+  public static final int RENDERSCRIPT_OPTIMIZATION_LEVEL_VALUE = 72;
+  /**
+   * <code>ANDROID_TEST = 73;</code>
+   */
+  public static final int ANDROID_TEST_VALUE = 73;
 
 
   public final int getNumber() {
@@ -605,6 +693,17 @@ public enum VariantPropertiesMethodType
       case 60: return NDK_BUILD_OPTIONS_CPP_FLAGS;
       case 61: return NDK_BUILD_OPTIONS_TARGETS;
       case 62: return NAMESPACE;
+      case 63: return GET_EXTENSION;
+      case 64: return DEXING;
+      case 65: return DEXING_ACTION;
+      case 66: return MULTI_DEX_KEEP_FILE;
+      case 67: return MULTI_DEX_KEEP_PROGUARD;
+      case 68: return RENDERSCRIPT;
+      case 69: return RENDERSCRIPT_SUPPORT_MODE;
+      case 70: return RENDERSCRIPT_SUPPORT_MODE_BLAS;
+      case 71: return RENDERSCRIPT_NDK_MODE;
+      case 72: return RENDERSCRIPT_OPTIMIZATION_LEVEL;
+      case 73: return ANDROID_TEST;
       default: return null;
     }
   }

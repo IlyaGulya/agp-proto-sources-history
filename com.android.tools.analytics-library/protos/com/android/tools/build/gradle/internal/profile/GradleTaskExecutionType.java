@@ -1070,6 +1070,10 @@ public enum GradleTaskExecutionType
    * <code>FEATURE_DEX_MERGE = 263;</code>
    */
   FEATURE_DEX_MERGE(263),
+  /**
+   * <code>ANDROID_LINT_ANALYSIS = 264;</code>
+   */
+  ANDROID_LINT_ANALYSIS(264),
   UNRECOGNIZED(-1),
   ;
 
@@ -2129,6 +2133,10 @@ public enum GradleTaskExecutionType
    * <code>FEATURE_DEX_MERGE = 263;</code>
    */
   public static final int FEATURE_DEX_MERGE_VALUE = 263;
+  /**
+   * <code>ANDROID_LINT_ANALYSIS = 264;</code>
+   */
+  public static final int ANDROID_LINT_ANALYSIS_VALUE = 264;
 
 
   public final int getNumber() {
@@ -2419,6 +2427,7 @@ public enum GradleTaskExecutionType
       case 261: return DESUGAR_LIB_KEEP_RULES_MERGE;
       case 262: return D8_BUNDLE_MAIN_DEX_LIST;
       case 263: return FEATURE_DEX_MERGE;
+      case 264: return ANDROID_LINT_ANALYSIS;
       default: return null;
     }
   }
