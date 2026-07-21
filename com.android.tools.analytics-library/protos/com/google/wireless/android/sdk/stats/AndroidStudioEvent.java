@@ -66,6 +66,7 @@ private static final long serialVersionUID = 0L;
     int mutable_bitField2_ = 0;
     int mutable_bitField3_ = 0;
     int mutable_bitField4_ = 0;
+    int mutable_bitField5_ = 0;
     com.google.protobuf.UnknownFieldSet.Builder unknownFields =
         com.google.protobuf.UnknownFieldSet.newBuilder();
     try {
@@ -2073,6 +2074,45 @@ private static final long serialVersionUID = 0L;
               tsdkUaEvent_ = subBuilder.buildPartial();
             }
             bitField4_ |= 0x02000000;
+            break;
+          }
+          case 1290: {
+            com.google.wireless.android.sdk.stats.IntelliJNewUIState.Builder subBuilder = null;
+            if (((bitField4_ & 0x04000000) != 0)) {
+              subBuilder = intellijNewUiStateEvent_.toBuilder();
+            }
+            intellijNewUiStateEvent_ = input.readMessage(com.google.wireless.android.sdk.stats.IntelliJNewUIState.PARSER, extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(intellijNewUiStateEvent_);
+              intellijNewUiStateEvent_ = subBuilder.buildPartial();
+            }
+            bitField4_ |= 0x04000000;
+            break;
+          }
+          case 1298: {
+            com.google.wireless.android.sdk.stats.KotlinGradlePerformance.Builder subBuilder = null;
+            if (((bitField4_ & 0x08000000) != 0)) {
+              subBuilder = kotlinGradlePerformanceEvent_.toBuilder();
+            }
+            kotlinGradlePerformanceEvent_ = input.readMessage(com.google.wireless.android.sdk.stats.KotlinGradlePerformance.PARSER, extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(kotlinGradlePerformanceEvent_);
+              kotlinGradlePerformanceEvent_ = subBuilder.buildPartial();
+            }
+            bitField4_ |= 0x08000000;
+            break;
+          }
+          case 1306: {
+            com.google.wireless.android.sdk.stats.BuildOutputDownloadsInfoEvent.Builder subBuilder = null;
+            if (((bitField4_ & 0x10000000) != 0)) {
+              subBuilder = buildOutputDownloadsInfoEvent_.toBuilder();
+            }
+            buildOutputDownloadsInfoEvent_ = input.readMessage(com.google.wireless.android.sdk.stats.BuildOutputDownloadsInfoEvent.PARSER, extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(buildOutputDownloadsInfoEvent_);
+              buildOutputDownloadsInfoEvent_ = subBuilder.buildPartial();
+            }
+            bitField4_ |= 0x10000000;
             break;
           }
           default: {
@@ -4781,6 +4821,30 @@ private static final long serialVersionUID = 0L;
      * <code>TSDKUA_EVENT = 274;</code>
      */
     TSDKUA_EVENT(274),
+    /**
+     * <pre>
+     * Event related to IntelliJ new UI state
+     * </pre>
+     *
+     * <code>INTELLIJ_NEW_UI_STATE_EVENT = 275;</code>
+     */
+    INTELLIJ_NEW_UI_STATE_EVENT(275),
+    /**
+     * <pre>
+     * Event related to kotlin gradle performance
+     * </pre>
+     *
+     * <code>KOTLIN_GRADLE_PERFORMANCE_EVENT = 276;</code>
+     */
+    KOTLIN_GRADLE_PERFORMANCE_EVENT(276),
+    /**
+     * <pre>
+     * Event tracking user interactions with build output downloads info UI
+     * </pre>
+     *
+     * <code>BUILD_OUTPUT_DOWNLOADS_INFO_USER_INTERACTION = 277;</code>
+     */
+    BUILD_OUTPUT_DOWNLOADS_INFO_USER_INTERACTION(277),
     ;
 
     /**
@@ -6809,6 +6873,30 @@ private static final long serialVersionUID = 0L;
      * <code>TSDKUA_EVENT = 274;</code>
      */
     public static final int TSDKUA_EVENT_VALUE = 274;
+    /**
+     * <pre>
+     * Event related to IntelliJ new UI state
+     * </pre>
+     *
+     * <code>INTELLIJ_NEW_UI_STATE_EVENT = 275;</code>
+     */
+    public static final int INTELLIJ_NEW_UI_STATE_EVENT_VALUE = 275;
+    /**
+     * <pre>
+     * Event related to kotlin gradle performance
+     * </pre>
+     *
+     * <code>KOTLIN_GRADLE_PERFORMANCE_EVENT = 276;</code>
+     */
+    public static final int KOTLIN_GRADLE_PERFORMANCE_EVENT_VALUE = 276;
+    /**
+     * <pre>
+     * Event tracking user interactions with build output downloads info UI
+     * </pre>
+     *
+     * <code>BUILD_OUTPUT_DOWNLOADS_INFO_USER_INTERACTION = 277;</code>
+     */
+    public static final int BUILD_OUTPUT_DOWNLOADS_INFO_USER_INTERACTION_VALUE = 277;
 
 
     public final int getNumber() {
@@ -7101,6 +7189,9 @@ private static final long serialVersionUID = 0L;
         case 272: return DIRECT_ACCESS_USAGE_EVENT;
         case 273: return SAFE_MODE_STATS_EVENT;
         case 274: return TSDKUA_EVENT;
+        case 275: return INTELLIJ_NEW_UI_STATE_EVENT;
+        case 276: return KOTLIN_GRADLE_PERFORMANCE_EVENT;
+        case 277: return BUILD_OUTPUT_DOWNLOADS_INFO_USER_INTERACTION;
         default: return null;
       }
     }
@@ -22043,6 +22134,120 @@ private static final long serialVersionUID = 0L;
     return tsdkUaEvent_ == null ? com.google.wireless.android.sdk.stats.TSdkUAEvent.getDefaultInstance() : tsdkUaEvent_;
   }
 
+  public static final int INTELLIJ_NEW_UI_STATE_EVENT_FIELD_NUMBER = 161;
+  private com.google.wireless.android.sdk.stats.IntelliJNewUIState intellijNewUiStateEvent_;
+  /**
+   * <pre>
+   * set when kind = INTELLIJ_NEW_UI_STATE_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.IntelliJNewUIState intellij_new_ui_state_event = 161;</code>
+   * @return Whether the intellijNewUiStateEvent field is set.
+   */
+  @java.lang.Override
+  public boolean hasIntellijNewUiStateEvent() {
+    return ((bitField4_ & 0x04000000) != 0);
+  }
+  /**
+   * <pre>
+   * set when kind = INTELLIJ_NEW_UI_STATE_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.IntelliJNewUIState intellij_new_ui_state_event = 161;</code>
+   * @return The intellijNewUiStateEvent.
+   */
+  @java.lang.Override
+  public com.google.wireless.android.sdk.stats.IntelliJNewUIState getIntellijNewUiStateEvent() {
+    return intellijNewUiStateEvent_ == null ? com.google.wireless.android.sdk.stats.IntelliJNewUIState.getDefaultInstance() : intellijNewUiStateEvent_;
+  }
+  /**
+   * <pre>
+   * set when kind = INTELLIJ_NEW_UI_STATE_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.IntelliJNewUIState intellij_new_ui_state_event = 161;</code>
+   */
+  @java.lang.Override
+  public com.google.wireless.android.sdk.stats.IntelliJNewUIStateOrBuilder getIntellijNewUiStateEventOrBuilder() {
+    return intellijNewUiStateEvent_ == null ? com.google.wireless.android.sdk.stats.IntelliJNewUIState.getDefaultInstance() : intellijNewUiStateEvent_;
+  }
+
+  public static final int KOTLIN_GRADLE_PERFORMANCE_EVENT_FIELD_NUMBER = 162;
+  private com.google.wireless.android.sdk.stats.KotlinGradlePerformance kotlinGradlePerformanceEvent_;
+  /**
+   * <pre>
+   * set when kind = KOTLIN_GRADLE_PERFORMANCE
+   * </pre>
+   *
+   * <code>optional .android_studio.KotlinGradlePerformance kotlin_gradle_performance_event = 162;</code>
+   * @return Whether the kotlinGradlePerformanceEvent field is set.
+   */
+  @java.lang.Override
+  public boolean hasKotlinGradlePerformanceEvent() {
+    return ((bitField4_ & 0x08000000) != 0);
+  }
+  /**
+   * <pre>
+   * set when kind = KOTLIN_GRADLE_PERFORMANCE
+   * </pre>
+   *
+   * <code>optional .android_studio.KotlinGradlePerformance kotlin_gradle_performance_event = 162;</code>
+   * @return The kotlinGradlePerformanceEvent.
+   */
+  @java.lang.Override
+  public com.google.wireless.android.sdk.stats.KotlinGradlePerformance getKotlinGradlePerformanceEvent() {
+    return kotlinGradlePerformanceEvent_ == null ? com.google.wireless.android.sdk.stats.KotlinGradlePerformance.getDefaultInstance() : kotlinGradlePerformanceEvent_;
+  }
+  /**
+   * <pre>
+   * set when kind = KOTLIN_GRADLE_PERFORMANCE
+   * </pre>
+   *
+   * <code>optional .android_studio.KotlinGradlePerformance kotlin_gradle_performance_event = 162;</code>
+   */
+  @java.lang.Override
+  public com.google.wireless.android.sdk.stats.KotlinGradlePerformanceOrBuilder getKotlinGradlePerformanceEventOrBuilder() {
+    return kotlinGradlePerformanceEvent_ == null ? com.google.wireless.android.sdk.stats.KotlinGradlePerformance.getDefaultInstance() : kotlinGradlePerformanceEvent_;
+  }
+
+  public static final int BUILD_OUTPUT_DOWNLOADS_INFO_EVENT_FIELD_NUMBER = 163;
+  private com.google.wireless.android.sdk.stats.BuildOutputDownloadsInfoEvent buildOutputDownloadsInfoEvent_;
+  /**
+   * <pre>
+   * set when kind = BUILD_OUTPUT_DOWNLOADS_INFO_USER_INTERACTION
+   * </pre>
+   *
+   * <code>optional .android_studio.BuildOutputDownloadsInfoEvent build_output_downloads_info_event = 163;</code>
+   * @return Whether the buildOutputDownloadsInfoEvent field is set.
+   */
+  @java.lang.Override
+  public boolean hasBuildOutputDownloadsInfoEvent() {
+    return ((bitField4_ & 0x10000000) != 0);
+  }
+  /**
+   * <pre>
+   * set when kind = BUILD_OUTPUT_DOWNLOADS_INFO_USER_INTERACTION
+   * </pre>
+   *
+   * <code>optional .android_studio.BuildOutputDownloadsInfoEvent build_output_downloads_info_event = 163;</code>
+   * @return The buildOutputDownloadsInfoEvent.
+   */
+  @java.lang.Override
+  public com.google.wireless.android.sdk.stats.BuildOutputDownloadsInfoEvent getBuildOutputDownloadsInfoEvent() {
+    return buildOutputDownloadsInfoEvent_ == null ? com.google.wireless.android.sdk.stats.BuildOutputDownloadsInfoEvent.getDefaultInstance() : buildOutputDownloadsInfoEvent_;
+  }
+  /**
+   * <pre>
+   * set when kind = BUILD_OUTPUT_DOWNLOADS_INFO_USER_INTERACTION
+   * </pre>
+   *
+   * <code>optional .android_studio.BuildOutputDownloadsInfoEvent build_output_downloads_info_event = 163;</code>
+   */
+  @java.lang.Override
+  public com.google.wireless.android.sdk.stats.BuildOutputDownloadsInfoEventOrBuilder getBuildOutputDownloadsInfoEventOrBuilder() {
+    return buildOutputDownloadsInfoEvent_ == null ? com.google.wireless.android.sdk.stats.BuildOutputDownloadsInfoEvent.getDefaultInstance() : buildOutputDownloadsInfoEvent_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -22536,6 +22741,15 @@ private static final long serialVersionUID = 0L;
     }
     if (((bitField4_ & 0x02000000) != 0)) {
       output.writeMessage(160, getTsdkUaEvent());
+    }
+    if (((bitField4_ & 0x04000000) != 0)) {
+      output.writeMessage(161, getIntellijNewUiStateEvent());
+    }
+    if (((bitField4_ & 0x08000000) != 0)) {
+      output.writeMessage(162, getKotlinGradlePerformanceEvent());
+    }
+    if (((bitField4_ & 0x10000000) != 0)) {
+      output.writeMessage(163, getBuildOutputDownloadsInfoEvent());
     }
     unknownFields.writeTo(output);
   }
@@ -23191,6 +23405,18 @@ private static final long serialVersionUID = 0L;
     if (((bitField4_ & 0x02000000) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(160, getTsdkUaEvent());
+    }
+    if (((bitField4_ & 0x04000000) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(161, getIntellijNewUiStateEvent());
+    }
+    if (((bitField4_ & 0x08000000) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(162, getKotlinGradlePerformanceEvent());
+    }
+    if (((bitField4_ & 0x10000000) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(163, getBuildOutputDownloadsInfoEvent());
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -23978,6 +24204,21 @@ private static final long serialVersionUID = 0L;
       if (!getTsdkUaEvent()
           .equals(other.getTsdkUaEvent())) return false;
     }
+    if (hasIntellijNewUiStateEvent() != other.hasIntellijNewUiStateEvent()) return false;
+    if (hasIntellijNewUiStateEvent()) {
+      if (!getIntellijNewUiStateEvent()
+          .equals(other.getIntellijNewUiStateEvent())) return false;
+    }
+    if (hasKotlinGradlePerformanceEvent() != other.hasKotlinGradlePerformanceEvent()) return false;
+    if (hasKotlinGradlePerformanceEvent()) {
+      if (!getKotlinGradlePerformanceEvent()
+          .equals(other.getKotlinGradlePerformanceEvent())) return false;
+    }
+    if (hasBuildOutputDownloadsInfoEvent() != other.hasBuildOutputDownloadsInfoEvent()) return false;
+    if (hasBuildOutputDownloadsInfoEvent()) {
+      if (!getBuildOutputDownloadsInfoEvent()
+          .equals(other.getBuildOutputDownloadsInfoEvent())) return false;
+    }
     if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
@@ -24631,6 +24872,18 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + TSDK_UA_EVENT_FIELD_NUMBER;
       hash = (53 * hash) + getTsdkUaEvent().hashCode();
     }
+    if (hasIntellijNewUiStateEvent()) {
+      hash = (37 * hash) + INTELLIJ_NEW_UI_STATE_EVENT_FIELD_NUMBER;
+      hash = (53 * hash) + getIntellijNewUiStateEvent().hashCode();
+    }
+    if (hasKotlinGradlePerformanceEvent()) {
+      hash = (37 * hash) + KOTLIN_GRADLE_PERFORMANCE_EVENT_FIELD_NUMBER;
+      hash = (53 * hash) + getKotlinGradlePerformanceEvent().hashCode();
+    }
+    if (hasBuildOutputDownloadsInfoEvent()) {
+      hash = (37 * hash) + BUILD_OUTPUT_DOWNLOADS_INFO_EVENT_FIELD_NUMBER;
+      hash = (53 * hash) + getBuildOutputDownloadsInfoEvent().hashCode();
+    }
     hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -24896,6 +25149,9 @@ private static final long serialVersionUID = 0L;
         getDirectAccessUsageEventFieldBuilder();
         getSafeModeStatsEventFieldBuilder();
         getTsdkUaEventFieldBuilder();
+        getIntellijNewUiStateEventFieldBuilder();
+        getKotlinGradlePerformanceEventFieldBuilder();
+        getBuildOutputDownloadsInfoEventFieldBuilder();
       }
     }
     @java.lang.Override
@@ -25769,6 +26025,24 @@ private static final long serialVersionUID = 0L;
         tsdkUaEventBuilder_.clear();
       }
       bitField4_ = (bitField4_ & ~0x80000000);
+      if (intellijNewUiStateEventBuilder_ == null) {
+        intellijNewUiStateEvent_ = null;
+      } else {
+        intellijNewUiStateEventBuilder_.clear();
+      }
+      bitField5_ = (bitField5_ & ~0x00000001);
+      if (kotlinGradlePerformanceEventBuilder_ == null) {
+        kotlinGradlePerformanceEvent_ = null;
+      } else {
+        kotlinGradlePerformanceEventBuilder_.clear();
+      }
+      bitField5_ = (bitField5_ & ~0x00000002);
+      if (buildOutputDownloadsInfoEventBuilder_ == null) {
+        buildOutputDownloadsInfoEvent_ = null;
+      } else {
+        buildOutputDownloadsInfoEventBuilder_.clear();
+      }
+      bitField5_ = (bitField5_ & ~0x00000004);
       return this;
     }
 
@@ -25800,6 +26074,7 @@ private static final long serialVersionUID = 0L;
       int from_bitField2_ = bitField2_;
       int from_bitField3_ = bitField3_;
       int from_bitField4_ = bitField4_;
+      int from_bitField5_ = bitField5_;
       int to_bitField0_ = 0;
       int to_bitField1_ = 0;
       int to_bitField2_ = 0;
@@ -26999,6 +27274,30 @@ private static final long serialVersionUID = 0L;
         }
         to_bitField4_ |= 0x02000000;
       }
+      if (((from_bitField5_ & 0x00000001) != 0)) {
+        if (intellijNewUiStateEventBuilder_ == null) {
+          result.intellijNewUiStateEvent_ = intellijNewUiStateEvent_;
+        } else {
+          result.intellijNewUiStateEvent_ = intellijNewUiStateEventBuilder_.build();
+        }
+        to_bitField4_ |= 0x04000000;
+      }
+      if (((from_bitField5_ & 0x00000002) != 0)) {
+        if (kotlinGradlePerformanceEventBuilder_ == null) {
+          result.kotlinGradlePerformanceEvent_ = kotlinGradlePerformanceEvent_;
+        } else {
+          result.kotlinGradlePerformanceEvent_ = kotlinGradlePerformanceEventBuilder_.build();
+        }
+        to_bitField4_ |= 0x08000000;
+      }
+      if (((from_bitField5_ & 0x00000004) != 0)) {
+        if (buildOutputDownloadsInfoEventBuilder_ == null) {
+          result.buildOutputDownloadsInfoEvent_ = buildOutputDownloadsInfoEvent_;
+        } else {
+          result.buildOutputDownloadsInfoEvent_ = buildOutputDownloadsInfoEventBuilder_.build();
+        }
+        to_bitField4_ |= 0x10000000;
+      }
       result.bitField0_ = to_bitField0_;
       result.bitField1_ = to_bitField1_;
       result.bitField2_ = to_bitField2_;
@@ -27636,6 +27935,15 @@ private static final long serialVersionUID = 0L;
       if (other.hasTsdkUaEvent()) {
         mergeTsdkUaEvent(other.getTsdkUaEvent());
       }
+      if (other.hasIntellijNewUiStateEvent()) {
+        mergeIntellijNewUiStateEvent(other.getIntellijNewUiStateEvent());
+      }
+      if (other.hasKotlinGradlePerformanceEvent()) {
+        mergeKotlinGradlePerformanceEvent(other.getKotlinGradlePerformanceEvent());
+      }
+      if (other.hasBuildOutputDownloadsInfoEvent()) {
+        mergeBuildOutputDownloadsInfoEvent(other.getBuildOutputDownloadsInfoEvent());
+      }
       this.mergeUnknownFields(other.unknownFields);
       onChanged();
       return this;
@@ -27669,6 +27977,7 @@ private static final long serialVersionUID = 0L;
     private int bitField2_;
     private int bitField3_;
     private int bitField4_;
+    private int bitField5_;
 
     private int category_ = 0;
     /**
@@ -51909,6 +52218,474 @@ private static final long serialVersionUID = 0L;
         tsdkUaEvent_ = null;
       }
       return tsdkUaEventBuilder_;
+    }
+
+    private com.google.wireless.android.sdk.stats.IntelliJNewUIState intellijNewUiStateEvent_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.IntelliJNewUIState, com.google.wireless.android.sdk.stats.IntelliJNewUIState.Builder, com.google.wireless.android.sdk.stats.IntelliJNewUIStateOrBuilder> intellijNewUiStateEventBuilder_;
+    /**
+     * <pre>
+     * set when kind = INTELLIJ_NEW_UI_STATE_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.IntelliJNewUIState intellij_new_ui_state_event = 161;</code>
+     * @return Whether the intellijNewUiStateEvent field is set.
+     */
+    public boolean hasIntellijNewUiStateEvent() {
+      return ((bitField5_ & 0x00000001) != 0);
+    }
+    /**
+     * <pre>
+     * set when kind = INTELLIJ_NEW_UI_STATE_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.IntelliJNewUIState intellij_new_ui_state_event = 161;</code>
+     * @return The intellijNewUiStateEvent.
+     */
+    public com.google.wireless.android.sdk.stats.IntelliJNewUIState getIntellijNewUiStateEvent() {
+      if (intellijNewUiStateEventBuilder_ == null) {
+        return intellijNewUiStateEvent_ == null ? com.google.wireless.android.sdk.stats.IntelliJNewUIState.getDefaultInstance() : intellijNewUiStateEvent_;
+      } else {
+        return intellijNewUiStateEventBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * set when kind = INTELLIJ_NEW_UI_STATE_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.IntelliJNewUIState intellij_new_ui_state_event = 161;</code>
+     */
+    public Builder setIntellijNewUiStateEvent(com.google.wireless.android.sdk.stats.IntelliJNewUIState value) {
+      if (intellijNewUiStateEventBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        intellijNewUiStateEvent_ = value;
+        onChanged();
+      } else {
+        intellijNewUiStateEventBuilder_.setMessage(value);
+      }
+      bitField5_ |= 0x00000001;
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = INTELLIJ_NEW_UI_STATE_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.IntelliJNewUIState intellij_new_ui_state_event = 161;</code>
+     */
+    public Builder setIntellijNewUiStateEvent(
+        com.google.wireless.android.sdk.stats.IntelliJNewUIState.Builder builderForValue) {
+      if (intellijNewUiStateEventBuilder_ == null) {
+        intellijNewUiStateEvent_ = builderForValue.build();
+        onChanged();
+      } else {
+        intellijNewUiStateEventBuilder_.setMessage(builderForValue.build());
+      }
+      bitField5_ |= 0x00000001;
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = INTELLIJ_NEW_UI_STATE_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.IntelliJNewUIState intellij_new_ui_state_event = 161;</code>
+     */
+    public Builder mergeIntellijNewUiStateEvent(com.google.wireless.android.sdk.stats.IntelliJNewUIState value) {
+      if (intellijNewUiStateEventBuilder_ == null) {
+        if (((bitField5_ & 0x00000001) != 0) &&
+            intellijNewUiStateEvent_ != null &&
+            intellijNewUiStateEvent_ != com.google.wireless.android.sdk.stats.IntelliJNewUIState.getDefaultInstance()) {
+          intellijNewUiStateEvent_ =
+            com.google.wireless.android.sdk.stats.IntelliJNewUIState.newBuilder(intellijNewUiStateEvent_).mergeFrom(value).buildPartial();
+        } else {
+          intellijNewUiStateEvent_ = value;
+        }
+        onChanged();
+      } else {
+        intellijNewUiStateEventBuilder_.mergeFrom(value);
+      }
+      bitField5_ |= 0x00000001;
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = INTELLIJ_NEW_UI_STATE_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.IntelliJNewUIState intellij_new_ui_state_event = 161;</code>
+     */
+    public Builder clearIntellijNewUiStateEvent() {
+      if (intellijNewUiStateEventBuilder_ == null) {
+        intellijNewUiStateEvent_ = null;
+        onChanged();
+      } else {
+        intellijNewUiStateEventBuilder_.clear();
+      }
+      bitField5_ = (bitField5_ & ~0x00000001);
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = INTELLIJ_NEW_UI_STATE_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.IntelliJNewUIState intellij_new_ui_state_event = 161;</code>
+     */
+    public com.google.wireless.android.sdk.stats.IntelliJNewUIState.Builder getIntellijNewUiStateEventBuilder() {
+      bitField5_ |= 0x00000001;
+      onChanged();
+      return getIntellijNewUiStateEventFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * set when kind = INTELLIJ_NEW_UI_STATE_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.IntelliJNewUIState intellij_new_ui_state_event = 161;</code>
+     */
+    public com.google.wireless.android.sdk.stats.IntelliJNewUIStateOrBuilder getIntellijNewUiStateEventOrBuilder() {
+      if (intellijNewUiStateEventBuilder_ != null) {
+        return intellijNewUiStateEventBuilder_.getMessageOrBuilder();
+      } else {
+        return intellijNewUiStateEvent_ == null ?
+            com.google.wireless.android.sdk.stats.IntelliJNewUIState.getDefaultInstance() : intellijNewUiStateEvent_;
+      }
+    }
+    /**
+     * <pre>
+     * set when kind = INTELLIJ_NEW_UI_STATE_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.IntelliJNewUIState intellij_new_ui_state_event = 161;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.IntelliJNewUIState, com.google.wireless.android.sdk.stats.IntelliJNewUIState.Builder, com.google.wireless.android.sdk.stats.IntelliJNewUIStateOrBuilder> 
+        getIntellijNewUiStateEventFieldBuilder() {
+      if (intellijNewUiStateEventBuilder_ == null) {
+        intellijNewUiStateEventBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.wireless.android.sdk.stats.IntelliJNewUIState, com.google.wireless.android.sdk.stats.IntelliJNewUIState.Builder, com.google.wireless.android.sdk.stats.IntelliJNewUIStateOrBuilder>(
+                getIntellijNewUiStateEvent(),
+                getParentForChildren(),
+                isClean());
+        intellijNewUiStateEvent_ = null;
+      }
+      return intellijNewUiStateEventBuilder_;
+    }
+
+    private com.google.wireless.android.sdk.stats.KotlinGradlePerformance kotlinGradlePerformanceEvent_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.KotlinGradlePerformance, com.google.wireless.android.sdk.stats.KotlinGradlePerformance.Builder, com.google.wireless.android.sdk.stats.KotlinGradlePerformanceOrBuilder> kotlinGradlePerformanceEventBuilder_;
+    /**
+     * <pre>
+     * set when kind = KOTLIN_GRADLE_PERFORMANCE
+     * </pre>
+     *
+     * <code>optional .android_studio.KotlinGradlePerformance kotlin_gradle_performance_event = 162;</code>
+     * @return Whether the kotlinGradlePerformanceEvent field is set.
+     */
+    public boolean hasKotlinGradlePerformanceEvent() {
+      return ((bitField5_ & 0x00000002) != 0);
+    }
+    /**
+     * <pre>
+     * set when kind = KOTLIN_GRADLE_PERFORMANCE
+     * </pre>
+     *
+     * <code>optional .android_studio.KotlinGradlePerformance kotlin_gradle_performance_event = 162;</code>
+     * @return The kotlinGradlePerformanceEvent.
+     */
+    public com.google.wireless.android.sdk.stats.KotlinGradlePerformance getKotlinGradlePerformanceEvent() {
+      if (kotlinGradlePerformanceEventBuilder_ == null) {
+        return kotlinGradlePerformanceEvent_ == null ? com.google.wireless.android.sdk.stats.KotlinGradlePerformance.getDefaultInstance() : kotlinGradlePerformanceEvent_;
+      } else {
+        return kotlinGradlePerformanceEventBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * set when kind = KOTLIN_GRADLE_PERFORMANCE
+     * </pre>
+     *
+     * <code>optional .android_studio.KotlinGradlePerformance kotlin_gradle_performance_event = 162;</code>
+     */
+    public Builder setKotlinGradlePerformanceEvent(com.google.wireless.android.sdk.stats.KotlinGradlePerformance value) {
+      if (kotlinGradlePerformanceEventBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        kotlinGradlePerformanceEvent_ = value;
+        onChanged();
+      } else {
+        kotlinGradlePerformanceEventBuilder_.setMessage(value);
+      }
+      bitField5_ |= 0x00000002;
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = KOTLIN_GRADLE_PERFORMANCE
+     * </pre>
+     *
+     * <code>optional .android_studio.KotlinGradlePerformance kotlin_gradle_performance_event = 162;</code>
+     */
+    public Builder setKotlinGradlePerformanceEvent(
+        com.google.wireless.android.sdk.stats.KotlinGradlePerformance.Builder builderForValue) {
+      if (kotlinGradlePerformanceEventBuilder_ == null) {
+        kotlinGradlePerformanceEvent_ = builderForValue.build();
+        onChanged();
+      } else {
+        kotlinGradlePerformanceEventBuilder_.setMessage(builderForValue.build());
+      }
+      bitField5_ |= 0x00000002;
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = KOTLIN_GRADLE_PERFORMANCE
+     * </pre>
+     *
+     * <code>optional .android_studio.KotlinGradlePerformance kotlin_gradle_performance_event = 162;</code>
+     */
+    public Builder mergeKotlinGradlePerformanceEvent(com.google.wireless.android.sdk.stats.KotlinGradlePerformance value) {
+      if (kotlinGradlePerformanceEventBuilder_ == null) {
+        if (((bitField5_ & 0x00000002) != 0) &&
+            kotlinGradlePerformanceEvent_ != null &&
+            kotlinGradlePerformanceEvent_ != com.google.wireless.android.sdk.stats.KotlinGradlePerformance.getDefaultInstance()) {
+          kotlinGradlePerformanceEvent_ =
+            com.google.wireless.android.sdk.stats.KotlinGradlePerformance.newBuilder(kotlinGradlePerformanceEvent_).mergeFrom(value).buildPartial();
+        } else {
+          kotlinGradlePerformanceEvent_ = value;
+        }
+        onChanged();
+      } else {
+        kotlinGradlePerformanceEventBuilder_.mergeFrom(value);
+      }
+      bitField5_ |= 0x00000002;
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = KOTLIN_GRADLE_PERFORMANCE
+     * </pre>
+     *
+     * <code>optional .android_studio.KotlinGradlePerformance kotlin_gradle_performance_event = 162;</code>
+     */
+    public Builder clearKotlinGradlePerformanceEvent() {
+      if (kotlinGradlePerformanceEventBuilder_ == null) {
+        kotlinGradlePerformanceEvent_ = null;
+        onChanged();
+      } else {
+        kotlinGradlePerformanceEventBuilder_.clear();
+      }
+      bitField5_ = (bitField5_ & ~0x00000002);
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = KOTLIN_GRADLE_PERFORMANCE
+     * </pre>
+     *
+     * <code>optional .android_studio.KotlinGradlePerformance kotlin_gradle_performance_event = 162;</code>
+     */
+    public com.google.wireless.android.sdk.stats.KotlinGradlePerformance.Builder getKotlinGradlePerformanceEventBuilder() {
+      bitField5_ |= 0x00000002;
+      onChanged();
+      return getKotlinGradlePerformanceEventFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * set when kind = KOTLIN_GRADLE_PERFORMANCE
+     * </pre>
+     *
+     * <code>optional .android_studio.KotlinGradlePerformance kotlin_gradle_performance_event = 162;</code>
+     */
+    public com.google.wireless.android.sdk.stats.KotlinGradlePerformanceOrBuilder getKotlinGradlePerformanceEventOrBuilder() {
+      if (kotlinGradlePerformanceEventBuilder_ != null) {
+        return kotlinGradlePerformanceEventBuilder_.getMessageOrBuilder();
+      } else {
+        return kotlinGradlePerformanceEvent_ == null ?
+            com.google.wireless.android.sdk.stats.KotlinGradlePerformance.getDefaultInstance() : kotlinGradlePerformanceEvent_;
+      }
+    }
+    /**
+     * <pre>
+     * set when kind = KOTLIN_GRADLE_PERFORMANCE
+     * </pre>
+     *
+     * <code>optional .android_studio.KotlinGradlePerformance kotlin_gradle_performance_event = 162;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.KotlinGradlePerformance, com.google.wireless.android.sdk.stats.KotlinGradlePerformance.Builder, com.google.wireless.android.sdk.stats.KotlinGradlePerformanceOrBuilder> 
+        getKotlinGradlePerformanceEventFieldBuilder() {
+      if (kotlinGradlePerformanceEventBuilder_ == null) {
+        kotlinGradlePerformanceEventBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.wireless.android.sdk.stats.KotlinGradlePerformance, com.google.wireless.android.sdk.stats.KotlinGradlePerformance.Builder, com.google.wireless.android.sdk.stats.KotlinGradlePerformanceOrBuilder>(
+                getKotlinGradlePerformanceEvent(),
+                getParentForChildren(),
+                isClean());
+        kotlinGradlePerformanceEvent_ = null;
+      }
+      return kotlinGradlePerformanceEventBuilder_;
+    }
+
+    private com.google.wireless.android.sdk.stats.BuildOutputDownloadsInfoEvent buildOutputDownloadsInfoEvent_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.BuildOutputDownloadsInfoEvent, com.google.wireless.android.sdk.stats.BuildOutputDownloadsInfoEvent.Builder, com.google.wireless.android.sdk.stats.BuildOutputDownloadsInfoEventOrBuilder> buildOutputDownloadsInfoEventBuilder_;
+    /**
+     * <pre>
+     * set when kind = BUILD_OUTPUT_DOWNLOADS_INFO_USER_INTERACTION
+     * </pre>
+     *
+     * <code>optional .android_studio.BuildOutputDownloadsInfoEvent build_output_downloads_info_event = 163;</code>
+     * @return Whether the buildOutputDownloadsInfoEvent field is set.
+     */
+    public boolean hasBuildOutputDownloadsInfoEvent() {
+      return ((bitField5_ & 0x00000004) != 0);
+    }
+    /**
+     * <pre>
+     * set when kind = BUILD_OUTPUT_DOWNLOADS_INFO_USER_INTERACTION
+     * </pre>
+     *
+     * <code>optional .android_studio.BuildOutputDownloadsInfoEvent build_output_downloads_info_event = 163;</code>
+     * @return The buildOutputDownloadsInfoEvent.
+     */
+    public com.google.wireless.android.sdk.stats.BuildOutputDownloadsInfoEvent getBuildOutputDownloadsInfoEvent() {
+      if (buildOutputDownloadsInfoEventBuilder_ == null) {
+        return buildOutputDownloadsInfoEvent_ == null ? com.google.wireless.android.sdk.stats.BuildOutputDownloadsInfoEvent.getDefaultInstance() : buildOutputDownloadsInfoEvent_;
+      } else {
+        return buildOutputDownloadsInfoEventBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * set when kind = BUILD_OUTPUT_DOWNLOADS_INFO_USER_INTERACTION
+     * </pre>
+     *
+     * <code>optional .android_studio.BuildOutputDownloadsInfoEvent build_output_downloads_info_event = 163;</code>
+     */
+    public Builder setBuildOutputDownloadsInfoEvent(com.google.wireless.android.sdk.stats.BuildOutputDownloadsInfoEvent value) {
+      if (buildOutputDownloadsInfoEventBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        buildOutputDownloadsInfoEvent_ = value;
+        onChanged();
+      } else {
+        buildOutputDownloadsInfoEventBuilder_.setMessage(value);
+      }
+      bitField5_ |= 0x00000004;
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = BUILD_OUTPUT_DOWNLOADS_INFO_USER_INTERACTION
+     * </pre>
+     *
+     * <code>optional .android_studio.BuildOutputDownloadsInfoEvent build_output_downloads_info_event = 163;</code>
+     */
+    public Builder setBuildOutputDownloadsInfoEvent(
+        com.google.wireless.android.sdk.stats.BuildOutputDownloadsInfoEvent.Builder builderForValue) {
+      if (buildOutputDownloadsInfoEventBuilder_ == null) {
+        buildOutputDownloadsInfoEvent_ = builderForValue.build();
+        onChanged();
+      } else {
+        buildOutputDownloadsInfoEventBuilder_.setMessage(builderForValue.build());
+      }
+      bitField5_ |= 0x00000004;
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = BUILD_OUTPUT_DOWNLOADS_INFO_USER_INTERACTION
+     * </pre>
+     *
+     * <code>optional .android_studio.BuildOutputDownloadsInfoEvent build_output_downloads_info_event = 163;</code>
+     */
+    public Builder mergeBuildOutputDownloadsInfoEvent(com.google.wireless.android.sdk.stats.BuildOutputDownloadsInfoEvent value) {
+      if (buildOutputDownloadsInfoEventBuilder_ == null) {
+        if (((bitField5_ & 0x00000004) != 0) &&
+            buildOutputDownloadsInfoEvent_ != null &&
+            buildOutputDownloadsInfoEvent_ != com.google.wireless.android.sdk.stats.BuildOutputDownloadsInfoEvent.getDefaultInstance()) {
+          buildOutputDownloadsInfoEvent_ =
+            com.google.wireless.android.sdk.stats.BuildOutputDownloadsInfoEvent.newBuilder(buildOutputDownloadsInfoEvent_).mergeFrom(value).buildPartial();
+        } else {
+          buildOutputDownloadsInfoEvent_ = value;
+        }
+        onChanged();
+      } else {
+        buildOutputDownloadsInfoEventBuilder_.mergeFrom(value);
+      }
+      bitField5_ |= 0x00000004;
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = BUILD_OUTPUT_DOWNLOADS_INFO_USER_INTERACTION
+     * </pre>
+     *
+     * <code>optional .android_studio.BuildOutputDownloadsInfoEvent build_output_downloads_info_event = 163;</code>
+     */
+    public Builder clearBuildOutputDownloadsInfoEvent() {
+      if (buildOutputDownloadsInfoEventBuilder_ == null) {
+        buildOutputDownloadsInfoEvent_ = null;
+        onChanged();
+      } else {
+        buildOutputDownloadsInfoEventBuilder_.clear();
+      }
+      bitField5_ = (bitField5_ & ~0x00000004);
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = BUILD_OUTPUT_DOWNLOADS_INFO_USER_INTERACTION
+     * </pre>
+     *
+     * <code>optional .android_studio.BuildOutputDownloadsInfoEvent build_output_downloads_info_event = 163;</code>
+     */
+    public com.google.wireless.android.sdk.stats.BuildOutputDownloadsInfoEvent.Builder getBuildOutputDownloadsInfoEventBuilder() {
+      bitField5_ |= 0x00000004;
+      onChanged();
+      return getBuildOutputDownloadsInfoEventFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * set when kind = BUILD_OUTPUT_DOWNLOADS_INFO_USER_INTERACTION
+     * </pre>
+     *
+     * <code>optional .android_studio.BuildOutputDownloadsInfoEvent build_output_downloads_info_event = 163;</code>
+     */
+    public com.google.wireless.android.sdk.stats.BuildOutputDownloadsInfoEventOrBuilder getBuildOutputDownloadsInfoEventOrBuilder() {
+      if (buildOutputDownloadsInfoEventBuilder_ != null) {
+        return buildOutputDownloadsInfoEventBuilder_.getMessageOrBuilder();
+      } else {
+        return buildOutputDownloadsInfoEvent_ == null ?
+            com.google.wireless.android.sdk.stats.BuildOutputDownloadsInfoEvent.getDefaultInstance() : buildOutputDownloadsInfoEvent_;
+      }
+    }
+    /**
+     * <pre>
+     * set when kind = BUILD_OUTPUT_DOWNLOADS_INFO_USER_INTERACTION
+     * </pre>
+     *
+     * <code>optional .android_studio.BuildOutputDownloadsInfoEvent build_output_downloads_info_event = 163;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.BuildOutputDownloadsInfoEvent, com.google.wireless.android.sdk.stats.BuildOutputDownloadsInfoEvent.Builder, com.google.wireless.android.sdk.stats.BuildOutputDownloadsInfoEventOrBuilder> 
+        getBuildOutputDownloadsInfoEventFieldBuilder() {
+      if (buildOutputDownloadsInfoEventBuilder_ == null) {
+        buildOutputDownloadsInfoEventBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.wireless.android.sdk.stats.BuildOutputDownloadsInfoEvent, com.google.wireless.android.sdk.stats.BuildOutputDownloadsInfoEvent.Builder, com.google.wireless.android.sdk.stats.BuildOutputDownloadsInfoEventOrBuilder>(
+                getBuildOutputDownloadsInfoEvent(),
+                getParentForChildren(),
+                isClean());
+        buildOutputDownloadsInfoEvent_ = null;
+      }
+      return buildOutputDownloadsInfoEventBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

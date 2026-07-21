@@ -28,6 +28,7 @@ private static final long serialVersionUID = 0L;
     syncExecutionType_ = 0;
     userRequestedSyncType_ = 0;
     studioRequestedSyncType_ = 0;
+    versionCatalogDetectorState_ = 0;
   }
 
   @java.lang.Override
@@ -186,6 +187,18 @@ private static final long serialVersionUID = 0L;
               downloadsData_ = subBuilder.buildPartial();
             }
             bitField0_ |= 0x00004000;
+            break;
+          }
+          case 128: {
+            int rawValue = input.readEnum();
+              @SuppressWarnings("deprecation")
+            com.google.wireless.android.sdk.stats.GradleVersionCatalogDetectorEvent.State value = com.google.wireless.android.sdk.stats.GradleVersionCatalogDetectorEvent.State.valueOf(rawValue);
+            if (value == null) {
+              unknownFields.mergeVarintField(16, rawValue);
+            } else {
+              bitField0_ |= 0x00008000;
+              versionCatalogDetectorState_ = rawValue;
+            }
             break;
           }
           default: {
@@ -3287,6 +3300,33 @@ private static final long serialVersionUID = 0L;
     return downloadsData_ == null ? com.google.wireless.android.sdk.stats.BuildDownloadsAnalysisData.getDefaultInstance() : downloadsData_;
   }
 
+  public static final int VERSION_CATALOG_DETECTOR_STATE_FIELD_NUMBER = 16;
+  private int versionCatalogDetectorState_;
+  /**
+   * <pre>
+   * Data on Version Catalog use.
+   * </pre>
+   *
+   * <code>optional .android_studio.GradleVersionCatalogDetectorEvent.State version_catalog_detector_state = 16;</code>
+   * @return Whether the versionCatalogDetectorState field is set.
+   */
+  @java.lang.Override public boolean hasVersionCatalogDetectorState() {
+    return ((bitField0_ & 0x00008000) != 0);
+  }
+  /**
+   * <pre>
+   * Data on Version Catalog use.
+   * </pre>
+   *
+   * <code>optional .android_studio.GradleVersionCatalogDetectorEvent.State version_catalog_detector_state = 16;</code>
+   * @return The versionCatalogDetectorState.
+   */
+  @java.lang.Override public com.google.wireless.android.sdk.stats.GradleVersionCatalogDetectorEvent.State getVersionCatalogDetectorState() {
+    @SuppressWarnings("deprecation")
+    com.google.wireless.android.sdk.stats.GradleVersionCatalogDetectorEvent.State result = com.google.wireless.android.sdk.stats.GradleVersionCatalogDetectorEvent.State.valueOf(versionCatalogDetectorState_);
+    return result == null ? com.google.wireless.android.sdk.stats.GradleVersionCatalogDetectorEvent.State.UNKNOWN_GRADLE_VERSION_CATALOG_DETECTOR_STATE : result;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -3345,6 +3385,9 @@ private static final long serialVersionUID = 0L;
     }
     if (((bitField0_ & 0x00004000) != 0)) {
       output.writeMessage(15, getDownloadsData());
+    }
+    if (((bitField0_ & 0x00008000) != 0)) {
+      output.writeEnum(16, versionCatalogDetectorState_);
     }
     unknownFields.writeTo(output);
   }
@@ -3412,6 +3455,10 @@ private static final long serialVersionUID = 0L;
     if (((bitField0_ & 0x00004000) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(15, getDownloadsData());
+    }
+    if (((bitField0_ & 0x00008000) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeEnumSize(16, versionCatalogDetectorState_);
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -3497,6 +3544,10 @@ private static final long serialVersionUID = 0L;
       if (!getDownloadsData()
           .equals(other.getDownloadsData())) return false;
     }
+    if (hasVersionCatalogDetectorState() != other.hasVersionCatalogDetectorState()) return false;
+    if (hasVersionCatalogDetectorState()) {
+      if (versionCatalogDetectorState_ != other.versionCatalogDetectorState_) return false;
+    }
     if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
@@ -3573,6 +3624,10 @@ private static final long serialVersionUID = 0L;
     if (hasDownloadsData()) {
       hash = (37 * hash) + DOWNLOADS_DATA_FIELD_NUMBER;
       hash = (53 * hash) + getDownloadsData().hashCode();
+    }
+    if (hasVersionCatalogDetectorState()) {
+      hash = (37 * hash) + VERSION_CATALOG_DETECTOR_STATE_FIELD_NUMBER;
+      hash = (53 * hash) + versionCatalogDetectorState_;
     }
     hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
@@ -3746,6 +3801,8 @@ private static final long serialVersionUID = 0L;
         downloadsDataBuilder_.clear();
       }
       bitField0_ = (bitField0_ & ~0x00004000);
+      versionCatalogDetectorState_ = 0;
+      bitField0_ = (bitField0_ & ~0x00008000);
       return this;
     }
 
@@ -3838,6 +3895,10 @@ private static final long serialVersionUID = 0L;
         }
         to_bitField0_ |= 0x00004000;
       }
+      if (((from_bitField0_ & 0x00008000) != 0)) {
+        to_bitField0_ |= 0x00008000;
+      }
+      result.versionCatalogDetectorState_ = versionCatalogDetectorState_;
       result.bitField0_ = to_bitField0_;
       onBuilt();
       return result;
@@ -3935,6 +3996,9 @@ private static final long serialVersionUID = 0L;
       }
       if (other.hasDownloadsData()) {
         mergeDownloadsData(other.getDownloadsData());
+      }
+      if (other.hasVersionCatalogDetectorState()) {
+        setVersionCatalogDetectorState(other.getVersionCatalogDetectorState());
       }
       this.mergeUnknownFields(other.unknownFields);
       onChanged();
@@ -5050,6 +5114,65 @@ private static final long serialVersionUID = 0L;
         downloadsData_ = null;
       }
       return downloadsDataBuilder_;
+    }
+
+    private int versionCatalogDetectorState_ = 0;
+    /**
+     * <pre>
+     * Data on Version Catalog use.
+     * </pre>
+     *
+     * <code>optional .android_studio.GradleVersionCatalogDetectorEvent.State version_catalog_detector_state = 16;</code>
+     * @return Whether the versionCatalogDetectorState field is set.
+     */
+    @java.lang.Override public boolean hasVersionCatalogDetectorState() {
+      return ((bitField0_ & 0x00008000) != 0);
+    }
+    /**
+     * <pre>
+     * Data on Version Catalog use.
+     * </pre>
+     *
+     * <code>optional .android_studio.GradleVersionCatalogDetectorEvent.State version_catalog_detector_state = 16;</code>
+     * @return The versionCatalogDetectorState.
+     */
+    @java.lang.Override
+    public com.google.wireless.android.sdk.stats.GradleVersionCatalogDetectorEvent.State getVersionCatalogDetectorState() {
+      @SuppressWarnings("deprecation")
+      com.google.wireless.android.sdk.stats.GradleVersionCatalogDetectorEvent.State result = com.google.wireless.android.sdk.stats.GradleVersionCatalogDetectorEvent.State.valueOf(versionCatalogDetectorState_);
+      return result == null ? com.google.wireless.android.sdk.stats.GradleVersionCatalogDetectorEvent.State.UNKNOWN_GRADLE_VERSION_CATALOG_DETECTOR_STATE : result;
+    }
+    /**
+     * <pre>
+     * Data on Version Catalog use.
+     * </pre>
+     *
+     * <code>optional .android_studio.GradleVersionCatalogDetectorEvent.State version_catalog_detector_state = 16;</code>
+     * @param value The versionCatalogDetectorState to set.
+     * @return This builder for chaining.
+     */
+    public Builder setVersionCatalogDetectorState(com.google.wireless.android.sdk.stats.GradleVersionCatalogDetectorEvent.State value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      bitField0_ |= 0x00008000;
+      versionCatalogDetectorState_ = value.getNumber();
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Data on Version Catalog use.
+     * </pre>
+     *
+     * <code>optional .android_studio.GradleVersionCatalogDetectorEvent.State version_catalog_detector_state = 16;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearVersionCatalogDetectorState() {
+      bitField0_ = (bitField0_ & ~0x00008000);
+      versionCatalogDetectorState_ = 0;
+      onChanged();
+      return this;
     }
     @java.lang.Override
     public final Builder setUnknownFields(
