@@ -275,6 +275,14 @@ private static final long serialVersionUID = 0L;
      * <code>FIX_ONE_DOMAIN_WEB_CHECKS_SAVE_JSON_BUTTON = 39;</code>
      */
     FIX_ONE_DOMAIN_WEB_CHECKS_SAVE_JSON_BUTTON(39),
+    /**
+     * <pre>
+     * Intention action.
+     * </pre>
+     *
+     * <code>LAUNCH_APP_LINKS_ASSISTANT = 40;</code>
+     */
+    LAUNCH_APP_LINKS_ASSISTANT(40),
     ;
 
     /**
@@ -489,6 +497,14 @@ private static final long serialVersionUID = 0L;
      * <code>FIX_ONE_DOMAIN_WEB_CHECKS_SAVE_JSON_BUTTON = 39;</code>
      */
     public static final int FIX_ONE_DOMAIN_WEB_CHECKS_SAVE_JSON_BUTTON_VALUE = 39;
+    /**
+     * <pre>
+     * Intention action.
+     * </pre>
+     *
+     * <code>LAUNCH_APP_LINKS_ASSISTANT = 40;</code>
+     */
+    public static final int LAUNCH_APP_LINKS_ASSISTANT_VALUE = 40;
 
 
     public final int getNumber() {
@@ -552,6 +568,7 @@ private static final long serialVersionUID = 0L;
         case 35: return VALIDATION;
         case 38: return FIX_ONE_DOMAIN_PAGE;
         case 39: return FIX_ONE_DOMAIN_WEB_CHECKS_SAVE_JSON_BUTTON;
+        case 40: return LAUNCH_APP_LINKS_ASSISTANT;
         default: return null;
       }
     }

@@ -17,6 +17,8 @@ private static final long serialVersionUID = 0L;
   }
   private SmlTransformEvent() {
     transformKind_ = 0;
+    sessionId_ = "";
+    transformPhase_ = 0;
   }
 
   @java.lang.Override
@@ -147,6 +149,120 @@ private static final long serialVersionUID = 0L;
     }
 
     // @@protoc_insertion_point(enum_scope:android_studio.SmlTransformEvent.TransformKind)
+  }
+
+  /**
+   * Protobuf enum {@code android_studio.SmlTransformEvent.TransformPhase}
+   */
+  public enum TransformPhase
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <code>UNKNOWN_PHASE = 0;</code>
+     */
+    UNKNOWN_PHASE(0),
+    /**
+     * <code>INITIAL_TRANSFORM = 1;</code>
+     */
+    INITIAL_TRANSFORM(1),
+    /**
+     * <code>REFINE = 2;</code>
+     */
+    REFINE(2),
+    /**
+     * <code>REGENERATE = 3;</code>
+     */
+    REGENERATE(3),
+    ;
+
+    /**
+     * <code>UNKNOWN_PHASE = 0;</code>
+     */
+    public static final int UNKNOWN_PHASE_VALUE = 0;
+    /**
+     * <code>INITIAL_TRANSFORM = 1;</code>
+     */
+    public static final int INITIAL_TRANSFORM_VALUE = 1;
+    /**
+     * <code>REFINE = 2;</code>
+     */
+    public static final int REFINE_VALUE = 2;
+    /**
+     * <code>REGENERATE = 3;</code>
+     */
+    public static final int REGENERATE_VALUE = 3;
+
+
+    public final int getNumber() {
+      return value;
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     * @deprecated Use {@link #forNumber(int)} instead.
+     */
+    @java.lang.Deprecated
+    public static TransformPhase valueOf(int value) {
+      return forNumber(value);
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     */
+    public static TransformPhase forNumber(int value) {
+      switch (value) {
+        case 0: return UNKNOWN_PHASE;
+        case 1: return INITIAL_TRANSFORM;
+        case 2: return REFINE;
+        case 3: return REGENERATE;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<TransformPhase>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static final com.google.protobuf.Internal.EnumLiteMap<
+        TransformPhase> internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<TransformPhase>() {
+            public TransformPhase findValueByNumber(int number) {
+              return TransformPhase.forNumber(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      return getDescriptor().getValues().get(ordinal());
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return com.google.wireless.android.sdk.stats.SmlTransformEvent.getDescriptor().getEnumTypes().get(1);
+    }
+
+    private static final TransformPhase[] VALUES = values();
+
+    public static TransformPhase valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int value;
+
+    private TransformPhase(int value) {
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:android_studio.SmlTransformEvent.TransformPhase)
   }
 
   public interface TransformRequestOrBuilder extends
@@ -5149,6 +5265,96 @@ private static final long serialVersionUID = 0L;
     return result == null ? com.google.wireless.android.sdk.stats.SmlTransformEvent.TransformKind.UNKNOWN : result;
   }
 
+  public static final int SESSION_ID_FIELD_NUMBER = 7;
+  private volatile java.lang.Object sessionId_;
+  /**
+   * <pre>
+   * Session id is used to group all the events for a single transform session
+   * which could contain an initial transform and multiple refinements.
+   * </pre>
+   *
+   * <code>optional string session_id = 7;</code>
+   * @return Whether the sessionId field is set.
+   */
+  @java.lang.Override
+  public boolean hasSessionId() {
+    return ((bitField0_ & 0x00000040) != 0);
+  }
+  /**
+   * <pre>
+   * Session id is used to group all the events for a single transform session
+   * which could contain an initial transform and multiple refinements.
+   * </pre>
+   *
+   * <code>optional string session_id = 7;</code>
+   * @return The sessionId.
+   */
+  @java.lang.Override
+  public java.lang.String getSessionId() {
+    java.lang.Object ref = sessionId_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      if (bs.isValidUtf8()) {
+        sessionId_ = s;
+      }
+      return s;
+    }
+  }
+  /**
+   * <pre>
+   * Session id is used to group all the events for a single transform session
+   * which could contain an initial transform and multiple refinements.
+   * </pre>
+   *
+   * <code>optional string session_id = 7;</code>
+   * @return The bytes for sessionId.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getSessionIdBytes() {
+    java.lang.Object ref = sessionId_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      sessionId_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
+  public static final int TRANSFORM_PHASE_FIELD_NUMBER = 8;
+  private int transformPhase_;
+  /**
+   * <pre>
+   * used to differentiate the initial transfrom and follow ups
+   * </pre>
+   *
+   * <code>optional .android_studio.SmlTransformEvent.TransformPhase transform_phase = 8;</code>
+   * @return Whether the transformPhase field is set.
+   */
+  @java.lang.Override public boolean hasTransformPhase() {
+    return ((bitField0_ & 0x00000080) != 0);
+  }
+  /**
+   * <pre>
+   * used to differentiate the initial transfrom and follow ups
+   * </pre>
+   *
+   * <code>optional .android_studio.SmlTransformEvent.TransformPhase transform_phase = 8;</code>
+   * @return The transformPhase.
+   */
+  @java.lang.Override public com.google.wireless.android.sdk.stats.SmlTransformEvent.TransformPhase getTransformPhase() {
+    @SuppressWarnings("deprecation")
+    com.google.wireless.android.sdk.stats.SmlTransformEvent.TransformPhase result = com.google.wireless.android.sdk.stats.SmlTransformEvent.TransformPhase.valueOf(transformPhase_);
+    return result == null ? com.google.wireless.android.sdk.stats.SmlTransformEvent.TransformPhase.UNKNOWN_PHASE : result;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -5180,6 +5386,12 @@ private static final long serialVersionUID = 0L;
     }
     if (transformCase_ == 6) {
       output.writeMessage(6, (com.google.wireless.android.sdk.stats.SmlTransformEvent.TransformRejected) transform_);
+    }
+    if (((bitField0_ & 0x00000040) != 0)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 7, sessionId_);
+    }
+    if (((bitField0_ & 0x00000080) != 0)) {
+      output.writeEnum(8, transformPhase_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -5214,6 +5426,13 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(6, (com.google.wireless.android.sdk.stats.SmlTransformEvent.TransformRejected) transform_);
     }
+    if (((bitField0_ & 0x00000040) != 0)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, sessionId_);
+    }
+    if (((bitField0_ & 0x00000080) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeEnumSize(8, transformPhase_);
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -5232,6 +5451,15 @@ private static final long serialVersionUID = 0L;
     if (hasTransformKind() != other.hasTransformKind()) return false;
     if (hasTransformKind()) {
       if (transformKind_ != other.transformKind_) return false;
+    }
+    if (hasSessionId() != other.hasSessionId()) return false;
+    if (hasSessionId()) {
+      if (!getSessionId()
+          .equals(other.getSessionId())) return false;
+    }
+    if (hasTransformPhase() != other.hasTransformPhase()) return false;
+    if (hasTransformPhase()) {
+      if (transformPhase_ != other.transformPhase_) return false;
     }
     if (!getTransformCase().equals(other.getTransformCase())) return false;
     switch (transformCase_) {
@@ -5272,6 +5500,14 @@ private static final long serialVersionUID = 0L;
     if (hasTransformKind()) {
       hash = (37 * hash) + TRANSFORM_KIND_FIELD_NUMBER;
       hash = (53 * hash) + transformKind_;
+    }
+    if (hasSessionId()) {
+      hash = (37 * hash) + SESSION_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getSessionId().hashCode();
+    }
+    if (hasTransformPhase()) {
+      hash = (37 * hash) + TRANSFORM_PHASE_FIELD_NUMBER;
+      hash = (53 * hash) + transformPhase_;
     }
     switch (transformCase_) {
       case 1:
@@ -5442,6 +5678,10 @@ private static final long serialVersionUID = 0L;
       }
       transformKind_ = 0;
       bitField0_ = (bitField0_ & ~0x00000020);
+      sessionId_ = "";
+      bitField0_ = (bitField0_ & ~0x00000040);
+      transformPhase_ = 0;
+      bitField0_ = (bitField0_ & ~0x00000080);
       transformCase_ = 0;
       transform_ = null;
       return this;
@@ -5511,6 +5751,14 @@ private static final long serialVersionUID = 0L;
         to_bitField0_ |= 0x00000020;
       }
       result.transformKind_ = transformKind_;
+      if (((from_bitField0_ & 0x00000040) != 0)) {
+        to_bitField0_ |= 0x00000040;
+      }
+      result.sessionId_ = sessionId_;
+      if (((from_bitField0_ & 0x00000080) != 0)) {
+        to_bitField0_ |= 0x00000080;
+      }
+      result.transformPhase_ = transformPhase_;
       result.bitField0_ = to_bitField0_;
       result.transformCase_ = transformCase_;
       onBuilt();
@@ -5563,6 +5811,14 @@ private static final long serialVersionUID = 0L;
       if (other == com.google.wireless.android.sdk.stats.SmlTransformEvent.getDefaultInstance()) return this;
       if (other.hasTransformKind()) {
         setTransformKind(other.getTransformKind());
+      }
+      if (other.hasSessionId()) {
+        bitField0_ |= 0x00000040;
+        sessionId_ = other.sessionId_;
+        onChanged();
+      }
+      if (other.hasTransformPhase()) {
+        setTransformPhase(other.getTransformPhase());
       }
       switch (other.getTransformCase()) {
         case REQUEST: {
@@ -5662,6 +5918,23 @@ private static final long serialVersionUID = 0L;
               transformCase_ = 6;
               break;
             } // case 50
+            case 58: {
+              sessionId_ = input.readBytes();
+              bitField0_ |= 0x00000040;
+              break;
+            } // case 58
+            case 64: {
+              int tmpRaw = input.readEnum();
+              com.google.wireless.android.sdk.stats.SmlTransformEvent.TransformPhase tmpValue =
+                  com.google.wireless.android.sdk.stats.SmlTransformEvent.TransformPhase.forNumber(tmpRaw);
+              if (tmpValue == null) {
+                mergeUnknownVarintField(8, tmpRaw);
+              } else {
+                transformPhase_ = tmpRaw;
+                bitField0_ |= 0x00000080;
+              }
+              break;
+            } // case 64
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -6458,6 +6731,179 @@ private static final long serialVersionUID = 0L;
     public Builder clearTransformKind() {
       bitField0_ = (bitField0_ & ~0x00000020);
       transformKind_ = 0;
+      onChanged();
+      return this;
+    }
+
+    private java.lang.Object sessionId_ = "";
+    /**
+     * <pre>
+     * Session id is used to group all the events for a single transform session
+     * which could contain an initial transform and multiple refinements.
+     * </pre>
+     *
+     * <code>optional string session_id = 7;</code>
+     * @return Whether the sessionId field is set.
+     */
+    public boolean hasSessionId() {
+      return ((bitField0_ & 0x00000040) != 0);
+    }
+    /**
+     * <pre>
+     * Session id is used to group all the events for a single transform session
+     * which could contain an initial transform and multiple refinements.
+     * </pre>
+     *
+     * <code>optional string session_id = 7;</code>
+     * @return The sessionId.
+     */
+    public java.lang.String getSessionId() {
+      java.lang.Object ref = sessionId_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          sessionId_ = s;
+        }
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <pre>
+     * Session id is used to group all the events for a single transform session
+     * which could contain an initial transform and multiple refinements.
+     * </pre>
+     *
+     * <code>optional string session_id = 7;</code>
+     * @return The bytes for sessionId.
+     */
+    public com.google.protobuf.ByteString
+        getSessionIdBytes() {
+      java.lang.Object ref = sessionId_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        sessionId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <pre>
+     * Session id is used to group all the events for a single transform session
+     * which could contain an initial transform and multiple refinements.
+     * </pre>
+     *
+     * <code>optional string session_id = 7;</code>
+     * @param value The sessionId to set.
+     * @return This builder for chaining.
+     */
+    public Builder setSessionId(
+        java.lang.String value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000040;
+      sessionId_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Session id is used to group all the events for a single transform session
+     * which could contain an initial transform and multiple refinements.
+     * </pre>
+     *
+     * <code>optional string session_id = 7;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearSessionId() {
+      bitField0_ = (bitField0_ & ~0x00000040);
+      sessionId_ = getDefaultInstance().getSessionId();
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Session id is used to group all the events for a single transform session
+     * which could contain an initial transform and multiple refinements.
+     * </pre>
+     *
+     * <code>optional string session_id = 7;</code>
+     * @param value The bytes for sessionId to set.
+     * @return This builder for chaining.
+     */
+    public Builder setSessionIdBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000040;
+      sessionId_ = value;
+      onChanged();
+      return this;
+    }
+
+    private int transformPhase_ = 0;
+    /**
+     * <pre>
+     * used to differentiate the initial transfrom and follow ups
+     * </pre>
+     *
+     * <code>optional .android_studio.SmlTransformEvent.TransformPhase transform_phase = 8;</code>
+     * @return Whether the transformPhase field is set.
+     */
+    @java.lang.Override public boolean hasTransformPhase() {
+      return ((bitField0_ & 0x00000080) != 0);
+    }
+    /**
+     * <pre>
+     * used to differentiate the initial transfrom and follow ups
+     * </pre>
+     *
+     * <code>optional .android_studio.SmlTransformEvent.TransformPhase transform_phase = 8;</code>
+     * @return The transformPhase.
+     */
+    @java.lang.Override
+    public com.google.wireless.android.sdk.stats.SmlTransformEvent.TransformPhase getTransformPhase() {
+      @SuppressWarnings("deprecation")
+      com.google.wireless.android.sdk.stats.SmlTransformEvent.TransformPhase result = com.google.wireless.android.sdk.stats.SmlTransformEvent.TransformPhase.valueOf(transformPhase_);
+      return result == null ? com.google.wireless.android.sdk.stats.SmlTransformEvent.TransformPhase.UNKNOWN_PHASE : result;
+    }
+    /**
+     * <pre>
+     * used to differentiate the initial transfrom and follow ups
+     * </pre>
+     *
+     * <code>optional .android_studio.SmlTransformEvent.TransformPhase transform_phase = 8;</code>
+     * @param value The transformPhase to set.
+     * @return This builder for chaining.
+     */
+    public Builder setTransformPhase(com.google.wireless.android.sdk.stats.SmlTransformEvent.TransformPhase value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      bitField0_ |= 0x00000080;
+      transformPhase_ = value.getNumber();
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * used to differentiate the initial transfrom and follow ups
+     * </pre>
+     *
+     * <code>optional .android_studio.SmlTransformEvent.TransformPhase transform_phase = 8;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearTransformPhase() {
+      bitField0_ = (bitField0_ & ~0x00000080);
+      transformPhase_ = 0;
       onChanged();
       return this;
     }

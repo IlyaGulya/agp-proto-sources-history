@@ -5761,4 +5761,58 @@ public interface AndroidStudioEventOrBuilder extends
    * <code>optional .android_studio.SoongRunEvent soong_run_event = 206 [lazy = true];</code>
    */
   com.google.wireless.android.sdk.stats.SoongRunEventOrBuilder getSoongRunEventOrBuilder();
+
+  /**
+   * <pre>
+   * set when kind = STUDIO_CORE_GEMINI_ACTIONS
+   * </pre>
+   *
+   * <code>optional .android_studio.StudioCoreGeminiActionsEvent android_studio_core_gemini_actions_event = 207 [lazy = true];</code>
+   * @return Whether the androidStudioCoreGeminiActionsEvent field is set.
+   */
+  boolean hasAndroidStudioCoreGeminiActionsEvent();
+  /**
+   * <pre>
+   * set when kind = STUDIO_CORE_GEMINI_ACTIONS
+   * </pre>
+   *
+   * <code>optional .android_studio.StudioCoreGeminiActionsEvent android_studio_core_gemini_actions_event = 207 [lazy = true];</code>
+   * @return The androidStudioCoreGeminiActionsEvent.
+   */
+  com.google.wireless.android.sdk.stats.StudioCoreGeminiActionsEvent getAndroidStudioCoreGeminiActionsEvent();
+  /**
+   * <pre>
+   * set when kind = STUDIO_CORE_GEMINI_ACTIONS
+   * </pre>
+   *
+   * <code>optional .android_studio.StudioCoreGeminiActionsEvent android_studio_core_gemini_actions_event = 207 [lazy = true];</code>
+   */
+  com.google.wireless.android.sdk.stats.StudioCoreGeminiActionsEventOrBuilder getAndroidStudioCoreGeminiActionsEventOrBuilder();
+
+  /**
+   * <pre>
+   * set when kind = VIRTUALIZATION_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.VirtualizationEvent virtualization_event = 208 [lazy = true];</code>
+   * @return Whether the virtualizationEvent field is set.
+   */
+  boolean hasVirtualizationEvent();
+  /**
+   * <pre>
+   * set when kind = VIRTUALIZATION_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.VirtualizationEvent virtualization_event = 208 [lazy = true];</code>
+   * @return The virtualizationEvent.
+   */
+  com.google.wireless.android.sdk.stats.VirtualizationEvent getVirtualizationEvent();
+  /**
+   * <pre>
+   * set when kind = VIRTUALIZATION_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.VirtualizationEvent virtualization_event = 208 [lazy = true];</code>
+   */
+  com.google.wireless.android.sdk.stats.VirtualizationEventOrBuilder getVirtualizationEventOrBuilder();
 }
