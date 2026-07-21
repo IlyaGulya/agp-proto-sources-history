@@ -3892,4 +3892,49 @@ public interface AndroidStudioEventOrBuilder extends
    */
   com.google.protobuf.ByteString
       getRawProjectIdsBytes(int index);
+
+  /**
+   * <pre>
+   * Client-side salted (rotating every 28 days), sha256 of the project id.
+   * set when kind = PROJECT_STRUCTURE_* or kind = APK_ANALYZER_STATS
+   * </pre>
+   *
+   * <code>repeated string project_ids = 140;</code>
+   * @return A list containing the projectIds.
+   */
+  java.util.List<java.lang.String>
+      getProjectIdsList();
+  /**
+   * <pre>
+   * Client-side salted (rotating every 28 days), sha256 of the project id.
+   * set when kind = PROJECT_STRUCTURE_* or kind = APK_ANALYZER_STATS
+   * </pre>
+   *
+   * <code>repeated string project_ids = 140;</code>
+   * @return The count of projectIds.
+   */
+  int getProjectIdsCount();
+  /**
+   * <pre>
+   * Client-side salted (rotating every 28 days), sha256 of the project id.
+   * set when kind = PROJECT_STRUCTURE_* or kind = APK_ANALYZER_STATS
+   * </pre>
+   *
+   * <code>repeated string project_ids = 140;</code>
+   * @param index The index of the element to return.
+   * @return The projectIds at the given index.
+   */
+  java.lang.String getProjectIds(int index);
+  /**
+   * <pre>
+   * Client-side salted (rotating every 28 days), sha256 of the project id.
+   * set when kind = PROJECT_STRUCTURE_* or kind = APK_ANALYZER_STATS
+   * </pre>
+   *
+   * <code>repeated string project_ids = 140;</code>
+   * @param index The index of the value to return.
+   * @return The bytes of the projectIds at the given index.
+   */
+  com.google.protobuf.ByteString
+      getProjectIdsBytes(int index);
 }
