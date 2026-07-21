@@ -180,12 +180,156 @@ private static final long serialVersionUID = 0L;
      * <code>UNKNOWN_SKILL_NAME = 0;</code>
      */
     UNKNOWN_SKILL_NAME(0),
+    /**
+     * <code>CAMERA1_TO_CAMERAX = 1;</code>
+     */
+    CAMERA1_TO_CAMERAX(1),
+    /**
+     * <code>APPFUNCTIONS = 2;</code>
+     */
+    APPFUNCTIONS(2),
+    /**
+     * <code>ANDROID_CLI = 3;</code>
+     */
+    ANDROID_CLI(3),
+    /**
+     * <code>FIREBASE_AUTH_BASICS = 4;</code>
+     */
+    FIREBASE_AUTH_BASICS(4),
+    /**
+     * <code>FIREBASE_BASICS = 5;</code>
+     */
+    FIREBASE_BASICS(5),
+    /**
+     * <code>VERIFIED_EMAIL = 6;</code>
+     */
+    VERIFIED_EMAIL(6),
+    /**
+     * <code>ADAPTIVE = 7;</code>
+     */
+    ADAPTIVE(7),
+    /**
+     * <code>MIGRATE_XML_VIEWS_TO_JETPACK_COMPOSE = 8;</code>
+     */
+    MIGRATE_XML_VIEWS_TO_JETPACK_COMPOSE(8),
+    /**
+     * <code>STYLES = 9;</code>
+     */
+    STYLES(9),
+    /**
+     * <code>NAVIGATION3 = 10;</code>
+     */
+    NAVIGATION3(10),
+    /**
+     * <code>R8_ANALYZER = 11;</code>
+     */
+    R8_ANALYZER(11),
+    /**
+     * <code>ENGAGE_SDK_INTEGRATION = 12;</code>
+     */
+    ENGAGE_SDK_INTEGRATION(12),
+    /**
+     * <code>PLAY_BILLING_LIBRARY_VERSION_UPGRADE = 13;</code>
+     */
+    PLAY_BILLING_LIBRARY_VERSION_UPGRADE(13),
+    /**
+     * <code>PERFETTO_SQL = 14;</code>
+     */
+    PERFETTO_SQL(14),
+    /**
+     * <code>PERFETTO_TRACE_ANALYSIS = 15;</code>
+     */
+    PERFETTO_TRACE_ANALYSIS(15),
+    /**
+     * <code>EDGE_TO_EDGE = 16;</code>
+     */
+    EDGE_TO_EDGE(16),
+    /**
+     * <code>TESTING_SETUP = 17;</code>
+     */
+    TESTING_SETUP(17),
+    /**
+     * <code>DISPLAY_GLASSES_WITH_JETPACK_COMPOSE_GLIMMER = 18;</code>
+     */
+    DISPLAY_GLASSES_WITH_JETPACK_COMPOSE_GLIMMER(18),
     ;
 
     /**
      * <code>UNKNOWN_SKILL_NAME = 0;</code>
      */
     public static final int UNKNOWN_SKILL_NAME_VALUE = 0;
+    /**
+     * <code>CAMERA1_TO_CAMERAX = 1;</code>
+     */
+    public static final int CAMERA1_TO_CAMERAX_VALUE = 1;
+    /**
+     * <code>APPFUNCTIONS = 2;</code>
+     */
+    public static final int APPFUNCTIONS_VALUE = 2;
+    /**
+     * <code>ANDROID_CLI = 3;</code>
+     */
+    public static final int ANDROID_CLI_VALUE = 3;
+    /**
+     * <code>FIREBASE_AUTH_BASICS = 4;</code>
+     */
+    public static final int FIREBASE_AUTH_BASICS_VALUE = 4;
+    /**
+     * <code>FIREBASE_BASICS = 5;</code>
+     */
+    public static final int FIREBASE_BASICS_VALUE = 5;
+    /**
+     * <code>VERIFIED_EMAIL = 6;</code>
+     */
+    public static final int VERIFIED_EMAIL_VALUE = 6;
+    /**
+     * <code>ADAPTIVE = 7;</code>
+     */
+    public static final int ADAPTIVE_VALUE = 7;
+    /**
+     * <code>MIGRATE_XML_VIEWS_TO_JETPACK_COMPOSE = 8;</code>
+     */
+    public static final int MIGRATE_XML_VIEWS_TO_JETPACK_COMPOSE_VALUE = 8;
+    /**
+     * <code>STYLES = 9;</code>
+     */
+    public static final int STYLES_VALUE = 9;
+    /**
+     * <code>NAVIGATION3 = 10;</code>
+     */
+    public static final int NAVIGATION3_VALUE = 10;
+    /**
+     * <code>R8_ANALYZER = 11;</code>
+     */
+    public static final int R8_ANALYZER_VALUE = 11;
+    /**
+     * <code>ENGAGE_SDK_INTEGRATION = 12;</code>
+     */
+    public static final int ENGAGE_SDK_INTEGRATION_VALUE = 12;
+    /**
+     * <code>PLAY_BILLING_LIBRARY_VERSION_UPGRADE = 13;</code>
+     */
+    public static final int PLAY_BILLING_LIBRARY_VERSION_UPGRADE_VALUE = 13;
+    /**
+     * <code>PERFETTO_SQL = 14;</code>
+     */
+    public static final int PERFETTO_SQL_VALUE = 14;
+    /**
+     * <code>PERFETTO_TRACE_ANALYSIS = 15;</code>
+     */
+    public static final int PERFETTO_TRACE_ANALYSIS_VALUE = 15;
+    /**
+     * <code>EDGE_TO_EDGE = 16;</code>
+     */
+    public static final int EDGE_TO_EDGE_VALUE = 16;
+    /**
+     * <code>TESTING_SETUP = 17;</code>
+     */
+    public static final int TESTING_SETUP_VALUE = 17;
+    /**
+     * <code>DISPLAY_GLASSES_WITH_JETPACK_COMPOSE_GLIMMER = 18;</code>
+     */
+    public static final int DISPLAY_GLASSES_WITH_JETPACK_COMPOSE_GLIMMER_VALUE = 18;
 
 
     public final int getNumber() {
@@ -209,6 +353,24 @@ private static final long serialVersionUID = 0L;
     public static SkillName forNumber(int value) {
       switch (value) {
         case 0: return UNKNOWN_SKILL_NAME;
+        case 1: return CAMERA1_TO_CAMERAX;
+        case 2: return APPFUNCTIONS;
+        case 3: return ANDROID_CLI;
+        case 4: return FIREBASE_AUTH_BASICS;
+        case 5: return FIREBASE_BASICS;
+        case 6: return VERIFIED_EMAIL;
+        case 7: return ADAPTIVE;
+        case 8: return MIGRATE_XML_VIEWS_TO_JETPACK_COMPOSE;
+        case 9: return STYLES;
+        case 10: return NAVIGATION3;
+        case 11: return R8_ANALYZER;
+        case 12: return ENGAGE_SDK_INTEGRATION;
+        case 13: return PLAY_BILLING_LIBRARY_VERSION_UPGRADE;
+        case 14: return PERFETTO_SQL;
+        case 15: return PERFETTO_TRACE_ANALYSIS;
+        case 16: return EDGE_TO_EDGE;
+        case 17: return TESTING_SETUP;
+        case 18: return DISPLAY_GLASSES_WITH_JETPACK_COMPOSE_GLIMMER;
         default: return null;
       }
     }
