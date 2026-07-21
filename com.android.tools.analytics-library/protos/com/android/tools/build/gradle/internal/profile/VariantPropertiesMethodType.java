@@ -17,10 +17,18 @@ public enum VariantPropertiesMethodType
    */
   ARTIFACTS(1),
   /**
+   * <pre>
+   * deprecated
+   * </pre>
+   *
    * <code>ASM_TRANSFORM_CLASSES = 2;</code>
    */
   ASM_TRANSFORM_CLASSES(2),
   /**
+   * <pre>
+   * deprecated
+   * </pre>
+   *
    * <code>ASM_FRAMES_COMPUTATION_NODE = 3;</code>
    */
   ASM_FRAMES_COMPUTATION_NODE(3),
@@ -461,6 +469,22 @@ public enum VariantPropertiesMethodType
    * <code>SOURCES_EXTRAS_ACCESS = 103;</code>
    */
   SOURCES_EXTRAS_ACCESS(103),
+  /**
+   * <code>INSTRUMENTATION = 104;</code>
+   */
+  INSTRUMENTATION(104),
+  /**
+   * <code>INSTRUMENTATION_TRANSFORM_CLASSES_WITH = 105;</code>
+   */
+  INSTRUMENTATION_TRANSFORM_CLASSES_WITH(105),
+  /**
+   * <code>INSTRUMENTATION_SET_ASM_FRAMES_COMPUTATUION_MODE = 106;</code>
+   */
+  INSTRUMENTATION_SET_ASM_FRAMES_COMPUTATUION_MODE(106),
+  /**
+   * <code>INSTRUMENTATION_EXCLUDES = 107;</code>
+   */
+  INSTRUMENTATION_EXCLUDES(107),
   UNRECOGNIZED(-1),
   ;
 
@@ -473,10 +497,18 @@ public enum VariantPropertiesMethodType
    */
   public static final int ARTIFACTS_VALUE = 1;
   /**
+   * <pre>
+   * deprecated
+   * </pre>
+   *
    * <code>ASM_TRANSFORM_CLASSES = 2;</code>
    */
   public static final int ASM_TRANSFORM_CLASSES_VALUE = 2;
   /**
+   * <pre>
+   * deprecated
+   * </pre>
+   *
    * <code>ASM_FRAMES_COMPUTATION_NODE = 3;</code>
    */
   public static final int ASM_FRAMES_COMPUTATION_NODE_VALUE = 3;
@@ -916,6 +948,22 @@ public enum VariantPropertiesMethodType
    * <code>SOURCES_EXTRAS_ACCESS = 103;</code>
    */
   public static final int SOURCES_EXTRAS_ACCESS_VALUE = 103;
+  /**
+   * <code>INSTRUMENTATION = 104;</code>
+   */
+  public static final int INSTRUMENTATION_VALUE = 104;
+  /**
+   * <code>INSTRUMENTATION_TRANSFORM_CLASSES_WITH = 105;</code>
+   */
+  public static final int INSTRUMENTATION_TRANSFORM_CLASSES_WITH_VALUE = 105;
+  /**
+   * <code>INSTRUMENTATION_SET_ASM_FRAMES_COMPUTATUION_MODE = 106;</code>
+   */
+  public static final int INSTRUMENTATION_SET_ASM_FRAMES_COMPUTATUION_MODE_VALUE = 106;
+  /**
+   * <code>INSTRUMENTATION_EXCLUDES = 107;</code>
+   */
+  public static final int INSTRUMENTATION_EXCLUDES_VALUE = 107;
 
 
   public final int getNumber() {
@@ -1046,6 +1094,10 @@ public enum VariantPropertiesMethodType
       case 101: return SOURCES_DIRECTORIES_ADD;
       case 102: return SOURCES_DIRECTORIES_SRC_DIR;
       case 103: return SOURCES_EXTRAS_ACCESS;
+      case 104: return INSTRUMENTATION;
+      case 105: return INSTRUMENTATION_TRANSFORM_CLASSES_WITH;
+      case 106: return INSTRUMENTATION_SET_ASM_FRAMES_COMPUTATUION_MODE;
+      case 107: return INSTRUMENTATION_EXCLUDES;
       default: return null;
     }
   }
