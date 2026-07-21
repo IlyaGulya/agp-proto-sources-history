@@ -715,6 +715,10 @@ public enum BooleanOption
    * <code>ENABLE_VCS_INFO = 173;</code>
    */
   ENABLE_VCS_INFO(173),
+  /**
+   * <code>LINT_BASELINE_OMIT_LINE_NUMBERS = 174;</code>
+   */
+  LINT_BASELINE_OMIT_LINE_NUMBERS(174),
   UNRECOGNIZED(-1),
   ;
 
@@ -1414,6 +1418,10 @@ public enum BooleanOption
    * <code>ENABLE_VCS_INFO = 173;</code>
    */
   public static final int ENABLE_VCS_INFO_VALUE = 173;
+  /**
+   * <code>LINT_BASELINE_OMIT_LINE_NUMBERS = 174;</code>
+   */
+  public static final int LINT_BASELINE_OMIT_LINE_NUMBERS_VALUE = 174;
 
 
   public final int getNumber() {
@@ -1614,6 +1622,7 @@ public enum BooleanOption
       case 171: return ENABLE_SCREENSHOT_TEST;
       case 172: return LINT_ANALYSIS_PER_COMPONENT;
       case 173: return ENABLE_VCS_INFO;
+      case 174: return LINT_BASELINE_OMIT_LINE_NUMBERS;
       default: return null;
     }
   }
