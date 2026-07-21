@@ -291,6 +291,10 @@ private static final long serialVersionUID = 0L;
      * <code>DEPENDENCY_CONSTRAINTS_DEFAULT = 60;</code>
      */
     DEPENDENCY_CONSTRAINTS_DEFAULT(60),
+    /**
+     * <code>BUILT_IN_KOTLIN_DEFAULT = 61;</code>
+     */
+    BUILT_IN_KOTLIN_DEFAULT(61),
     ;
 
     /**
@@ -537,6 +541,10 @@ private static final long serialVersionUID = 0L;
      * <code>DEPENDENCY_CONSTRAINTS_DEFAULT = 60;</code>
      */
     public static final int DEPENDENCY_CONSTRAINTS_DEFAULT_VALUE = 60;
+    /**
+     * <code>BUILT_IN_KOTLIN_DEFAULT = 61;</code>
+     */
+    public static final int BUILT_IN_KOTLIN_DEFAULT_VALUE = 61;
 
 
     public final int getNumber() {
@@ -620,6 +628,7 @@ private static final long serialVersionUID = 0L;
         case 58: return REMOVE_DEPRECATED_LIBRARY_TARGET_SDK;
         case 59: return UNIQUE_PACKAGE_NAMES;
         case 60: return DEPENDENCY_CONSTRAINTS_DEFAULT;
+        case 61: return BUILT_IN_KOTLIN_DEFAULT;
         default: return null;
       }
     }
