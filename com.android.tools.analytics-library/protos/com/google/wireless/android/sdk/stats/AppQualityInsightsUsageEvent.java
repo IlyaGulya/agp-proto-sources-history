@@ -16789,6 +16789,794 @@ private static final long serialVersionUID = 0L;
 
   }
 
+  public interface ServiceDeprecationInfoOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:android_studio.AppQualityInsightsUsageEvent.ServiceDeprecationInfo)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>optional .android_studio.AppQualityInsightsUsageEvent.ServiceDeprecationInfo.Panel panel = 1;</code>
+     * @return Whether the panel field is set.
+     */
+    boolean hasPanel();
+    /**
+     * <code>optional .android_studio.AppQualityInsightsUsageEvent.ServiceDeprecationInfo.Panel panel = 1;</code>
+     * @return The panel.
+     */
+    com.google.wireless.android.sdk.stats.AppQualityInsightsUsageEvent.ServiceDeprecationInfo.Panel getPanel();
+
+    /**
+     * <code>optional .android_studio.DevServiceDeprecationInfo dev_service_deprecation_info = 2;</code>
+     * @return Whether the devServiceDeprecationInfo field is set.
+     */
+    boolean hasDevServiceDeprecationInfo();
+    /**
+     * <code>optional .android_studio.DevServiceDeprecationInfo dev_service_deprecation_info = 2;</code>
+     * @return The devServiceDeprecationInfo.
+     */
+    com.google.wireless.android.sdk.stats.DevServiceDeprecationInfo getDevServiceDeprecationInfo();
+    /**
+     * <code>optional .android_studio.DevServiceDeprecationInfo dev_service_deprecation_info = 2;</code>
+     */
+    com.google.wireless.android.sdk.stats.DevServiceDeprecationInfoOrBuilder getDevServiceDeprecationInfoOrBuilder();
+  }
+  /**
+   * Protobuf type {@code android_studio.AppQualityInsightsUsageEvent.ServiceDeprecationInfo}
+   */
+  public static final class ServiceDeprecationInfo extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:android_studio.AppQualityInsightsUsageEvent.ServiceDeprecationInfo)
+      ServiceDeprecationInfoOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use ServiceDeprecationInfo.newBuilder() to construct.
+    private ServiceDeprecationInfo(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ServiceDeprecationInfo() {
+      panel_ = 0;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ServiceDeprecationInfo();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_AppQualityInsightsUsageEvent_ServiceDeprecationInfo_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_AppQualityInsightsUsageEvent_ServiceDeprecationInfo_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.google.wireless.android.sdk.stats.AppQualityInsightsUsageEvent.ServiceDeprecationInfo.class, com.google.wireless.android.sdk.stats.AppQualityInsightsUsageEvent.ServiceDeprecationInfo.Builder.class);
+    }
+
+    /**
+     * Protobuf enum {@code android_studio.AppQualityInsightsUsageEvent.ServiceDeprecationInfo.Panel}
+     */
+    public enum Panel
+        implements com.google.protobuf.ProtocolMessageEnum {
+      /**
+       * <code>UNKNOWN_PANEL = 0;</code>
+       */
+      UNKNOWN_PANEL(0),
+      /**
+       * <code>TAB_PANEL = 1;</code>
+       */
+      TAB_PANEL(1),
+      /**
+       * <code>INSIGHTS_PANEL = 2;</code>
+       */
+      INSIGHTS_PANEL(2),
+      ;
+
+      /**
+       * <code>UNKNOWN_PANEL = 0;</code>
+       */
+      public static final int UNKNOWN_PANEL_VALUE = 0;
+      /**
+       * <code>TAB_PANEL = 1;</code>
+       */
+      public static final int TAB_PANEL_VALUE = 1;
+      /**
+       * <code>INSIGHTS_PANEL = 2;</code>
+       */
+      public static final int INSIGHTS_PANEL_VALUE = 2;
+
+
+      public final int getNumber() {
+        return value;
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static Panel valueOf(int value) {
+        return forNumber(value);
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       */
+      public static Panel forNumber(int value) {
+        switch (value) {
+          case 0: return UNKNOWN_PANEL;
+          case 1: return TAB_PANEL;
+          case 2: return INSIGHTS_PANEL;
+          default: return null;
+        }
+      }
+
+      public static com.google.protobuf.Internal.EnumLiteMap<Panel>
+          internalGetValueMap() {
+        return internalValueMap;
+      }
+      private static final com.google.protobuf.Internal.EnumLiteMap<
+          Panel> internalValueMap =
+            new com.google.protobuf.Internal.EnumLiteMap<Panel>() {
+              public Panel findValueByNumber(int number) {
+                return Panel.forNumber(number);
+              }
+            };
+
+      public final com.google.protobuf.Descriptors.EnumValueDescriptor
+          getValueDescriptor() {
+        return getDescriptor().getValues().get(ordinal());
+      }
+      public final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptorForType() {
+        return getDescriptor();
+      }
+      public static final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptor() {
+        return com.google.wireless.android.sdk.stats.AppQualityInsightsUsageEvent.ServiceDeprecationInfo.getDescriptor().getEnumTypes().get(0);
+      }
+
+      private static final Panel[] VALUES = values();
+
+      public static Panel valueOf(
+          com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+        if (desc.getType() != getDescriptor()) {
+          throw new java.lang.IllegalArgumentException(
+            "EnumValueDescriptor is not for this type.");
+        }
+        return VALUES[desc.getIndex()];
+      }
+
+      private final int value;
+
+      private Panel(int value) {
+        this.value = value;
+      }
+
+      // @@protoc_insertion_point(enum_scope:android_studio.AppQualityInsightsUsageEvent.ServiceDeprecationInfo.Panel)
+    }
+
+    private int bitField0_;
+    public static final int PANEL_FIELD_NUMBER = 1;
+    private int panel_ = 0;
+    /**
+     * <code>optional .android_studio.AppQualityInsightsUsageEvent.ServiceDeprecationInfo.Panel panel = 1;</code>
+     * @return Whether the panel field is set.
+     */
+    @java.lang.Override public boolean hasPanel() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <code>optional .android_studio.AppQualityInsightsUsageEvent.ServiceDeprecationInfo.Panel panel = 1;</code>
+     * @return The panel.
+     */
+    @java.lang.Override public com.google.wireless.android.sdk.stats.AppQualityInsightsUsageEvent.ServiceDeprecationInfo.Panel getPanel() {
+      com.google.wireless.android.sdk.stats.AppQualityInsightsUsageEvent.ServiceDeprecationInfo.Panel result = com.google.wireless.android.sdk.stats.AppQualityInsightsUsageEvent.ServiceDeprecationInfo.Panel.forNumber(panel_);
+      return result == null ? com.google.wireless.android.sdk.stats.AppQualityInsightsUsageEvent.ServiceDeprecationInfo.Panel.UNKNOWN_PANEL : result;
+    }
+
+    public static final int DEV_SERVICE_DEPRECATION_INFO_FIELD_NUMBER = 2;
+    private com.google.wireless.android.sdk.stats.DevServiceDeprecationInfo devServiceDeprecationInfo_;
+    /**
+     * <code>optional .android_studio.DevServiceDeprecationInfo dev_service_deprecation_info = 2;</code>
+     * @return Whether the devServiceDeprecationInfo field is set.
+     */
+    @java.lang.Override
+    public boolean hasDevServiceDeprecationInfo() {
+      return ((bitField0_ & 0x00000002) != 0);
+    }
+    /**
+     * <code>optional .android_studio.DevServiceDeprecationInfo dev_service_deprecation_info = 2;</code>
+     * @return The devServiceDeprecationInfo.
+     */
+    @java.lang.Override
+    public com.google.wireless.android.sdk.stats.DevServiceDeprecationInfo getDevServiceDeprecationInfo() {
+      return devServiceDeprecationInfo_ == null ? com.google.wireless.android.sdk.stats.DevServiceDeprecationInfo.getDefaultInstance() : devServiceDeprecationInfo_;
+    }
+    /**
+     * <code>optional .android_studio.DevServiceDeprecationInfo dev_service_deprecation_info = 2;</code>
+     */
+    @java.lang.Override
+    public com.google.wireless.android.sdk.stats.DevServiceDeprecationInfoOrBuilder getDevServiceDeprecationInfoOrBuilder() {
+      return devServiceDeprecationInfo_ == null ? com.google.wireless.android.sdk.stats.DevServiceDeprecationInfo.getDefaultInstance() : devServiceDeprecationInfo_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (((bitField0_ & 0x00000001) != 0)) {
+        output.writeEnum(1, panel_);
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        output.writeMessage(2, getDevServiceDeprecationInfo());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(1, panel_);
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getDevServiceDeprecationInfo());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.google.wireless.android.sdk.stats.AppQualityInsightsUsageEvent.ServiceDeprecationInfo)) {
+        return super.equals(obj);
+      }
+      com.google.wireless.android.sdk.stats.AppQualityInsightsUsageEvent.ServiceDeprecationInfo other = (com.google.wireless.android.sdk.stats.AppQualityInsightsUsageEvent.ServiceDeprecationInfo) obj;
+
+      if (hasPanel() != other.hasPanel()) return false;
+      if (hasPanel()) {
+        if (panel_ != other.panel_) return false;
+      }
+      if (hasDevServiceDeprecationInfo() != other.hasDevServiceDeprecationInfo()) return false;
+      if (hasDevServiceDeprecationInfo()) {
+        if (!getDevServiceDeprecationInfo()
+            .equals(other.getDevServiceDeprecationInfo())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasPanel()) {
+        hash = (37 * hash) + PANEL_FIELD_NUMBER;
+        hash = (53 * hash) + panel_;
+      }
+      if (hasDevServiceDeprecationInfo()) {
+        hash = (37 * hash) + DEV_SERVICE_DEPRECATION_INFO_FIELD_NUMBER;
+        hash = (53 * hash) + getDevServiceDeprecationInfo().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.google.wireless.android.sdk.stats.AppQualityInsightsUsageEvent.ServiceDeprecationInfo parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.google.wireless.android.sdk.stats.AppQualityInsightsUsageEvent.ServiceDeprecationInfo parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.google.wireless.android.sdk.stats.AppQualityInsightsUsageEvent.ServiceDeprecationInfo parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.google.wireless.android.sdk.stats.AppQualityInsightsUsageEvent.ServiceDeprecationInfo parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.google.wireless.android.sdk.stats.AppQualityInsightsUsageEvent.ServiceDeprecationInfo parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.google.wireless.android.sdk.stats.AppQualityInsightsUsageEvent.ServiceDeprecationInfo parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.google.wireless.android.sdk.stats.AppQualityInsightsUsageEvent.ServiceDeprecationInfo parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.google.wireless.android.sdk.stats.AppQualityInsightsUsageEvent.ServiceDeprecationInfo parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.google.wireless.android.sdk.stats.AppQualityInsightsUsageEvent.ServiceDeprecationInfo parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.google.wireless.android.sdk.stats.AppQualityInsightsUsageEvent.ServiceDeprecationInfo parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.google.wireless.android.sdk.stats.AppQualityInsightsUsageEvent.ServiceDeprecationInfo parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.google.wireless.android.sdk.stats.AppQualityInsightsUsageEvent.ServiceDeprecationInfo parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.google.wireless.android.sdk.stats.AppQualityInsightsUsageEvent.ServiceDeprecationInfo prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code android_studio.AppQualityInsightsUsageEvent.ServiceDeprecationInfo}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:android_studio.AppQualityInsightsUsageEvent.ServiceDeprecationInfo)
+        com.google.wireless.android.sdk.stats.AppQualityInsightsUsageEvent.ServiceDeprecationInfoOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_AppQualityInsightsUsageEvent_ServiceDeprecationInfo_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_AppQualityInsightsUsageEvent_ServiceDeprecationInfo_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.google.wireless.android.sdk.stats.AppQualityInsightsUsageEvent.ServiceDeprecationInfo.class, com.google.wireless.android.sdk.stats.AppQualityInsightsUsageEvent.ServiceDeprecationInfo.Builder.class);
+      }
+
+      // Construct using com.google.wireless.android.sdk.stats.AppQualityInsightsUsageEvent.ServiceDeprecationInfo.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getDevServiceDeprecationInfoFieldBuilder();
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        panel_ = 0;
+        devServiceDeprecationInfo_ = null;
+        if (devServiceDeprecationInfoBuilder_ != null) {
+          devServiceDeprecationInfoBuilder_.dispose();
+          devServiceDeprecationInfoBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_AppQualityInsightsUsageEvent_ServiceDeprecationInfo_descriptor;
+      }
+
+      @java.lang.Override
+      public com.google.wireless.android.sdk.stats.AppQualityInsightsUsageEvent.ServiceDeprecationInfo getDefaultInstanceForType() {
+        return com.google.wireless.android.sdk.stats.AppQualityInsightsUsageEvent.ServiceDeprecationInfo.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.google.wireless.android.sdk.stats.AppQualityInsightsUsageEvent.ServiceDeprecationInfo build() {
+        com.google.wireless.android.sdk.stats.AppQualityInsightsUsageEvent.ServiceDeprecationInfo result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.google.wireless.android.sdk.stats.AppQualityInsightsUsageEvent.ServiceDeprecationInfo buildPartial() {
+        com.google.wireless.android.sdk.stats.AppQualityInsightsUsageEvent.ServiceDeprecationInfo result = new com.google.wireless.android.sdk.stats.AppQualityInsightsUsageEvent.ServiceDeprecationInfo(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.google.wireless.android.sdk.stats.AppQualityInsightsUsageEvent.ServiceDeprecationInfo result) {
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.panel_ = panel_;
+          to_bitField0_ |= 0x00000001;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.devServiceDeprecationInfo_ = devServiceDeprecationInfoBuilder_ == null
+              ? devServiceDeprecationInfo_
+              : devServiceDeprecationInfoBuilder_.build();
+          to_bitField0_ |= 0x00000002;
+        }
+        result.bitField0_ |= to_bitField0_;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.google.wireless.android.sdk.stats.AppQualityInsightsUsageEvent.ServiceDeprecationInfo) {
+          return mergeFrom((com.google.wireless.android.sdk.stats.AppQualityInsightsUsageEvent.ServiceDeprecationInfo)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.google.wireless.android.sdk.stats.AppQualityInsightsUsageEvent.ServiceDeprecationInfo other) {
+        if (other == com.google.wireless.android.sdk.stats.AppQualityInsightsUsageEvent.ServiceDeprecationInfo.getDefaultInstance()) return this;
+        if (other.hasPanel()) {
+          setPanel(other.getPanel());
+        }
+        if (other.hasDevServiceDeprecationInfo()) {
+          mergeDevServiceDeprecationInfo(other.getDevServiceDeprecationInfo());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                int tmpRaw = input.readEnum();
+                com.google.wireless.android.sdk.stats.AppQualityInsightsUsageEvent.ServiceDeprecationInfo.Panel tmpValue =
+                    com.google.wireless.android.sdk.stats.AppQualityInsightsUsageEvent.ServiceDeprecationInfo.Panel.forNumber(tmpRaw);
+                if (tmpValue == null) {
+                  mergeUnknownVarintField(1, tmpRaw);
+                } else {
+                  panel_ = tmpRaw;
+                  bitField0_ |= 0x00000001;
+                }
+                break;
+              } // case 8
+              case 18: {
+                input.readMessage(
+                    getDevServiceDeprecationInfoFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private int panel_ = 0;
+      /**
+       * <code>optional .android_studio.AppQualityInsightsUsageEvent.ServiceDeprecationInfo.Panel panel = 1;</code>
+       * @return Whether the panel field is set.
+       */
+      @java.lang.Override public boolean hasPanel() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>optional .android_studio.AppQualityInsightsUsageEvent.ServiceDeprecationInfo.Panel panel = 1;</code>
+       * @return The panel.
+       */
+      @java.lang.Override
+      public com.google.wireless.android.sdk.stats.AppQualityInsightsUsageEvent.ServiceDeprecationInfo.Panel getPanel() {
+        com.google.wireless.android.sdk.stats.AppQualityInsightsUsageEvent.ServiceDeprecationInfo.Panel result = com.google.wireless.android.sdk.stats.AppQualityInsightsUsageEvent.ServiceDeprecationInfo.Panel.forNumber(panel_);
+        return result == null ? com.google.wireless.android.sdk.stats.AppQualityInsightsUsageEvent.ServiceDeprecationInfo.Panel.UNKNOWN_PANEL : result;
+      }
+      /**
+       * <code>optional .android_studio.AppQualityInsightsUsageEvent.ServiceDeprecationInfo.Panel panel = 1;</code>
+       * @param value The panel to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPanel(com.google.wireless.android.sdk.stats.AppQualityInsightsUsageEvent.ServiceDeprecationInfo.Panel value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x00000001;
+        panel_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional .android_studio.AppQualityInsightsUsageEvent.ServiceDeprecationInfo.Panel panel = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPanel() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        panel_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private com.google.wireless.android.sdk.stats.DevServiceDeprecationInfo devServiceDeprecationInfo_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.wireless.android.sdk.stats.DevServiceDeprecationInfo, com.google.wireless.android.sdk.stats.DevServiceDeprecationInfo.Builder, com.google.wireless.android.sdk.stats.DevServiceDeprecationInfoOrBuilder> devServiceDeprecationInfoBuilder_;
+      /**
+       * <code>optional .android_studio.DevServiceDeprecationInfo dev_service_deprecation_info = 2;</code>
+       * @return Whether the devServiceDeprecationInfo field is set.
+       */
+      public boolean hasDevServiceDeprecationInfo() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <code>optional .android_studio.DevServiceDeprecationInfo dev_service_deprecation_info = 2;</code>
+       * @return The devServiceDeprecationInfo.
+       */
+      public com.google.wireless.android.sdk.stats.DevServiceDeprecationInfo getDevServiceDeprecationInfo() {
+        if (devServiceDeprecationInfoBuilder_ == null) {
+          return devServiceDeprecationInfo_ == null ? com.google.wireless.android.sdk.stats.DevServiceDeprecationInfo.getDefaultInstance() : devServiceDeprecationInfo_;
+        } else {
+          return devServiceDeprecationInfoBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>optional .android_studio.DevServiceDeprecationInfo dev_service_deprecation_info = 2;</code>
+       */
+      public Builder setDevServiceDeprecationInfo(com.google.wireless.android.sdk.stats.DevServiceDeprecationInfo value) {
+        if (devServiceDeprecationInfoBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          devServiceDeprecationInfo_ = value;
+        } else {
+          devServiceDeprecationInfoBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional .android_studio.DevServiceDeprecationInfo dev_service_deprecation_info = 2;</code>
+       */
+      public Builder setDevServiceDeprecationInfo(
+          com.google.wireless.android.sdk.stats.DevServiceDeprecationInfo.Builder builderForValue) {
+        if (devServiceDeprecationInfoBuilder_ == null) {
+          devServiceDeprecationInfo_ = builderForValue.build();
+        } else {
+          devServiceDeprecationInfoBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional .android_studio.DevServiceDeprecationInfo dev_service_deprecation_info = 2;</code>
+       */
+      public Builder mergeDevServiceDeprecationInfo(com.google.wireless.android.sdk.stats.DevServiceDeprecationInfo value) {
+        if (devServiceDeprecationInfoBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0) &&
+            devServiceDeprecationInfo_ != null &&
+            devServiceDeprecationInfo_ != com.google.wireless.android.sdk.stats.DevServiceDeprecationInfo.getDefaultInstance()) {
+            getDevServiceDeprecationInfoBuilder().mergeFrom(value);
+          } else {
+            devServiceDeprecationInfo_ = value;
+          }
+        } else {
+          devServiceDeprecationInfoBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional .android_studio.DevServiceDeprecationInfo dev_service_deprecation_info = 2;</code>
+       */
+      public Builder clearDevServiceDeprecationInfo() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        devServiceDeprecationInfo_ = null;
+        if (devServiceDeprecationInfoBuilder_ != null) {
+          devServiceDeprecationInfoBuilder_.dispose();
+          devServiceDeprecationInfoBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional .android_studio.DevServiceDeprecationInfo dev_service_deprecation_info = 2;</code>
+       */
+      public com.google.wireless.android.sdk.stats.DevServiceDeprecationInfo.Builder getDevServiceDeprecationInfoBuilder() {
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return getDevServiceDeprecationInfoFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>optional .android_studio.DevServiceDeprecationInfo dev_service_deprecation_info = 2;</code>
+       */
+      public com.google.wireless.android.sdk.stats.DevServiceDeprecationInfoOrBuilder getDevServiceDeprecationInfoOrBuilder() {
+        if (devServiceDeprecationInfoBuilder_ != null) {
+          return devServiceDeprecationInfoBuilder_.getMessageOrBuilder();
+        } else {
+          return devServiceDeprecationInfo_ == null ?
+              com.google.wireless.android.sdk.stats.DevServiceDeprecationInfo.getDefaultInstance() : devServiceDeprecationInfo_;
+        }
+      }
+      /**
+       * <code>optional .android_studio.DevServiceDeprecationInfo dev_service_deprecation_info = 2;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.wireless.android.sdk.stats.DevServiceDeprecationInfo, com.google.wireless.android.sdk.stats.DevServiceDeprecationInfo.Builder, com.google.wireless.android.sdk.stats.DevServiceDeprecationInfoOrBuilder> 
+          getDevServiceDeprecationInfoFieldBuilder() {
+        if (devServiceDeprecationInfoBuilder_ == null) {
+          devServiceDeprecationInfoBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.wireless.android.sdk.stats.DevServiceDeprecationInfo, com.google.wireless.android.sdk.stats.DevServiceDeprecationInfo.Builder, com.google.wireless.android.sdk.stats.DevServiceDeprecationInfoOrBuilder>(
+                  getDevServiceDeprecationInfo(),
+                  getParentForChildren(),
+                  isClean());
+          devServiceDeprecationInfo_ = null;
+        }
+        return devServiceDeprecationInfoBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:android_studio.AppQualityInsightsUsageEvent.ServiceDeprecationInfo)
+    }
+
+    // @@protoc_insertion_point(class_scope:android_studio.AppQualityInsightsUsageEvent.ServiceDeprecationInfo)
+    private static final com.google.wireless.android.sdk.stats.AppQualityInsightsUsageEvent.ServiceDeprecationInfo DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.google.wireless.android.sdk.stats.AppQualityInsightsUsageEvent.ServiceDeprecationInfo();
+    }
+
+    public static com.google.wireless.android.sdk.stats.AppQualityInsightsUsageEvent.ServiceDeprecationInfo getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<ServiceDeprecationInfo>
+        PARSER = new com.google.protobuf.AbstractParser<ServiceDeprecationInfo>() {
+      @java.lang.Override
+      public ServiceDeprecationInfo parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<ServiceDeprecationInfo> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ServiceDeprecationInfo> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.wireless.android.sdk.stats.AppQualityInsightsUsageEvent.ServiceDeprecationInfo getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private int bitField0_;
   public static final int APP_ID_FIELD_NUMBER = 1;
   @SuppressWarnings("serial")
@@ -17494,18 +18282,18 @@ private static final long serialVersionUID = 0L;
     return eventsFetched_ == null ? com.google.wireless.android.sdk.stats.AppQualityInsightsUsageEvent.EventsFetched.getDefaultInstance() : eventsFetched_;
   }
 
-  public static final int DEV_SERVICE_DEPRECATION_INFO_FIELD_NUMBER = 20;
-  private com.google.wireless.android.sdk.stats.DevServiceDeprecationInfo devServiceDeprecationInfo_;
+  public static final int SERVICE_DEPRECATION_INFO_FIELD_NUMBER = 20;
+  private com.google.wireless.android.sdk.stats.AppQualityInsightsUsageEvent.ServiceDeprecationInfo serviceDeprecationInfo_;
   /**
    * <pre>
    * set when type = SERVICE_DEPRECATION
    * </pre>
    *
-   * <code>optional .android_studio.DevServiceDeprecationInfo dev_service_deprecation_info = 20 [lazy = true];</code>
-   * @return Whether the devServiceDeprecationInfo field is set.
+   * <code>optional .android_studio.AppQualityInsightsUsageEvent.ServiceDeprecationInfo service_deprecation_info = 20 [lazy = true];</code>
+   * @return Whether the serviceDeprecationInfo field is set.
    */
   @java.lang.Override
-  public boolean hasDevServiceDeprecationInfo() {
+  public boolean hasServiceDeprecationInfo() {
     return ((bitField0_ & 0x00080000) != 0);
   }
   /**
@@ -17513,23 +18301,23 @@ private static final long serialVersionUID = 0L;
    * set when type = SERVICE_DEPRECATION
    * </pre>
    *
-   * <code>optional .android_studio.DevServiceDeprecationInfo dev_service_deprecation_info = 20 [lazy = true];</code>
-   * @return The devServiceDeprecationInfo.
+   * <code>optional .android_studio.AppQualityInsightsUsageEvent.ServiceDeprecationInfo service_deprecation_info = 20 [lazy = true];</code>
+   * @return The serviceDeprecationInfo.
    */
   @java.lang.Override
-  public com.google.wireless.android.sdk.stats.DevServiceDeprecationInfo getDevServiceDeprecationInfo() {
-    return devServiceDeprecationInfo_ == null ? com.google.wireless.android.sdk.stats.DevServiceDeprecationInfo.getDefaultInstance() : devServiceDeprecationInfo_;
+  public com.google.wireless.android.sdk.stats.AppQualityInsightsUsageEvent.ServiceDeprecationInfo getServiceDeprecationInfo() {
+    return serviceDeprecationInfo_ == null ? com.google.wireless.android.sdk.stats.AppQualityInsightsUsageEvent.ServiceDeprecationInfo.getDefaultInstance() : serviceDeprecationInfo_;
   }
   /**
    * <pre>
    * set when type = SERVICE_DEPRECATION
    * </pre>
    *
-   * <code>optional .android_studio.DevServiceDeprecationInfo dev_service_deprecation_info = 20 [lazy = true];</code>
+   * <code>optional .android_studio.AppQualityInsightsUsageEvent.ServiceDeprecationInfo service_deprecation_info = 20 [lazy = true];</code>
    */
   @java.lang.Override
-  public com.google.wireless.android.sdk.stats.DevServiceDeprecationInfoOrBuilder getDevServiceDeprecationInfoOrBuilder() {
-    return devServiceDeprecationInfo_ == null ? com.google.wireless.android.sdk.stats.DevServiceDeprecationInfo.getDefaultInstance() : devServiceDeprecationInfo_;
+  public com.google.wireless.android.sdk.stats.AppQualityInsightsUsageEvent.ServiceDeprecationInfoOrBuilder getServiceDeprecationInfoOrBuilder() {
+    return serviceDeprecationInfo_ == null ? com.google.wireless.android.sdk.stats.AppQualityInsightsUsageEvent.ServiceDeprecationInfo.getDefaultInstance() : serviceDeprecationInfo_;
   }
 
   private byte memoizedIsInitialized = -1;
@@ -17604,7 +18392,7 @@ private static final long serialVersionUID = 0L;
       output.writeMessage(19, getEventsFetched());
     }
     if (((bitField0_ & 0x00080000) != 0)) {
-      output.writeMessage(20, getDevServiceDeprecationInfo());
+      output.writeMessage(20, getServiceDeprecationInfo());
     }
     getUnknownFields().writeTo(output);
   }
@@ -17692,7 +18480,7 @@ private static final long serialVersionUID = 0L;
     }
     if (((bitField0_ & 0x00080000) != 0)) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(20, getDevServiceDeprecationInfo());
+        .computeMessageSize(20, getServiceDeprecationInfo());
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -17801,10 +18589,10 @@ private static final long serialVersionUID = 0L;
       if (!getEventsFetched()
           .equals(other.getEventsFetched())) return false;
     }
-    if (hasDevServiceDeprecationInfo() != other.hasDevServiceDeprecationInfo()) return false;
-    if (hasDevServiceDeprecationInfo()) {
-      if (!getDevServiceDeprecationInfo()
-          .equals(other.getDevServiceDeprecationInfo())) return false;
+    if (hasServiceDeprecationInfo() != other.hasServiceDeprecationInfo()) return false;
+    if (hasServiceDeprecationInfo()) {
+      if (!getServiceDeprecationInfo()
+          .equals(other.getServiceDeprecationInfo())) return false;
     }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
@@ -17894,9 +18682,9 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + EVENTS_FETCHED_FIELD_NUMBER;
       hash = (53 * hash) + getEventsFetched().hashCode();
     }
-    if (hasDevServiceDeprecationInfo()) {
-      hash = (37 * hash) + DEV_SERVICE_DEPRECATION_INFO_FIELD_NUMBER;
-      hash = (53 * hash) + getDevServiceDeprecationInfo().hashCode();
+    if (hasServiceDeprecationInfo()) {
+      hash = (37 * hash) + SERVICE_DEPRECATION_INFO_FIELD_NUMBER;
+      hash = (53 * hash) + getServiceDeprecationInfo().hashCode();
     }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
@@ -18040,7 +18828,7 @@ private static final long serialVersionUID = 0L;
         getInsightSentimentFieldBuilder();
         getInsightFetchDetailsFieldBuilder();
         getEventsFetchedFieldBuilder();
-        getDevServiceDeprecationInfoFieldBuilder();
+        getServiceDeprecationInfoFieldBuilder();
       }
     }
     @java.lang.Override
@@ -18122,10 +18910,10 @@ private static final long serialVersionUID = 0L;
         eventsFetchedBuilder_.dispose();
         eventsFetchedBuilder_ = null;
       }
-      devServiceDeprecationInfo_ = null;
-      if (devServiceDeprecationInfoBuilder_ != null) {
-        devServiceDeprecationInfoBuilder_.dispose();
-        devServiceDeprecationInfoBuilder_ = null;
+      serviceDeprecationInfo_ = null;
+      if (serviceDeprecationInfoBuilder_ != null) {
+        serviceDeprecationInfoBuilder_.dispose();
+        serviceDeprecationInfoBuilder_ = null;
       }
       return this;
     }
@@ -18266,9 +19054,9 @@ private static final long serialVersionUID = 0L;
         to_bitField0_ |= 0x00040000;
       }
       if (((from_bitField0_ & 0x00080000) != 0)) {
-        result.devServiceDeprecationInfo_ = devServiceDeprecationInfoBuilder_ == null
-            ? devServiceDeprecationInfo_
-            : devServiceDeprecationInfoBuilder_.build();
+        result.serviceDeprecationInfo_ = serviceDeprecationInfoBuilder_ == null
+            ? serviceDeprecationInfo_
+            : serviceDeprecationInfoBuilder_.build();
         to_bitField0_ |= 0x00080000;
       }
       result.bitField0_ |= to_bitField0_;
@@ -18345,8 +19133,8 @@ private static final long serialVersionUID = 0L;
       if (other.hasEventsFetched()) {
         mergeEventsFetched(other.getEventsFetched());
       }
-      if (other.hasDevServiceDeprecationInfo()) {
-        mergeDevServiceDeprecationInfo(other.getDevServiceDeprecationInfo());
+      if (other.hasServiceDeprecationInfo()) {
+        mergeServiceDeprecationInfo(other.getServiceDeprecationInfo());
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -18520,7 +19308,7 @@ private static final long serialVersionUID = 0L;
             } // case 154
             case 162: {
               input.readMessage(
-                  getDevServiceDeprecationInfoFieldBuilder().getBuilder(),
+                  getServiceDeprecationInfoFieldBuilder().getBuilder(),
                   extensionRegistry);
               bitField0_ |= 0x00080000;
               break;
@@ -21058,18 +21846,18 @@ private static final long serialVersionUID = 0L;
       return eventsFetchedBuilder_;
     }
 
-    private com.google.wireless.android.sdk.stats.DevServiceDeprecationInfo devServiceDeprecationInfo_;
+    private com.google.wireless.android.sdk.stats.AppQualityInsightsUsageEvent.ServiceDeprecationInfo serviceDeprecationInfo_;
     private com.google.protobuf.SingleFieldBuilderV3<
-        com.google.wireless.android.sdk.stats.DevServiceDeprecationInfo, com.google.wireless.android.sdk.stats.DevServiceDeprecationInfo.Builder, com.google.wireless.android.sdk.stats.DevServiceDeprecationInfoOrBuilder> devServiceDeprecationInfoBuilder_;
+        com.google.wireless.android.sdk.stats.AppQualityInsightsUsageEvent.ServiceDeprecationInfo, com.google.wireless.android.sdk.stats.AppQualityInsightsUsageEvent.ServiceDeprecationInfo.Builder, com.google.wireless.android.sdk.stats.AppQualityInsightsUsageEvent.ServiceDeprecationInfoOrBuilder> serviceDeprecationInfoBuilder_;
     /**
      * <pre>
      * set when type = SERVICE_DEPRECATION
      * </pre>
      *
-     * <code>optional .android_studio.DevServiceDeprecationInfo dev_service_deprecation_info = 20 [lazy = true];</code>
-     * @return Whether the devServiceDeprecationInfo field is set.
+     * <code>optional .android_studio.AppQualityInsightsUsageEvent.ServiceDeprecationInfo service_deprecation_info = 20 [lazy = true];</code>
+     * @return Whether the serviceDeprecationInfo field is set.
      */
-    public boolean hasDevServiceDeprecationInfo() {
+    public boolean hasServiceDeprecationInfo() {
       return ((bitField0_ & 0x00080000) != 0);
     }
     /**
@@ -21077,14 +21865,14 @@ private static final long serialVersionUID = 0L;
      * set when type = SERVICE_DEPRECATION
      * </pre>
      *
-     * <code>optional .android_studio.DevServiceDeprecationInfo dev_service_deprecation_info = 20 [lazy = true];</code>
-     * @return The devServiceDeprecationInfo.
+     * <code>optional .android_studio.AppQualityInsightsUsageEvent.ServiceDeprecationInfo service_deprecation_info = 20 [lazy = true];</code>
+     * @return The serviceDeprecationInfo.
      */
-    public com.google.wireless.android.sdk.stats.DevServiceDeprecationInfo getDevServiceDeprecationInfo() {
-      if (devServiceDeprecationInfoBuilder_ == null) {
-        return devServiceDeprecationInfo_ == null ? com.google.wireless.android.sdk.stats.DevServiceDeprecationInfo.getDefaultInstance() : devServiceDeprecationInfo_;
+    public com.google.wireless.android.sdk.stats.AppQualityInsightsUsageEvent.ServiceDeprecationInfo getServiceDeprecationInfo() {
+      if (serviceDeprecationInfoBuilder_ == null) {
+        return serviceDeprecationInfo_ == null ? com.google.wireless.android.sdk.stats.AppQualityInsightsUsageEvent.ServiceDeprecationInfo.getDefaultInstance() : serviceDeprecationInfo_;
       } else {
-        return devServiceDeprecationInfoBuilder_.getMessage();
+        return serviceDeprecationInfoBuilder_.getMessage();
       }
     }
     /**
@@ -21092,16 +21880,16 @@ private static final long serialVersionUID = 0L;
      * set when type = SERVICE_DEPRECATION
      * </pre>
      *
-     * <code>optional .android_studio.DevServiceDeprecationInfo dev_service_deprecation_info = 20 [lazy = true];</code>
+     * <code>optional .android_studio.AppQualityInsightsUsageEvent.ServiceDeprecationInfo service_deprecation_info = 20 [lazy = true];</code>
      */
-    public Builder setDevServiceDeprecationInfo(com.google.wireless.android.sdk.stats.DevServiceDeprecationInfo value) {
-      if (devServiceDeprecationInfoBuilder_ == null) {
+    public Builder setServiceDeprecationInfo(com.google.wireless.android.sdk.stats.AppQualityInsightsUsageEvent.ServiceDeprecationInfo value) {
+      if (serviceDeprecationInfoBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
         }
-        devServiceDeprecationInfo_ = value;
+        serviceDeprecationInfo_ = value;
       } else {
-        devServiceDeprecationInfoBuilder_.setMessage(value);
+        serviceDeprecationInfoBuilder_.setMessage(value);
       }
       bitField0_ |= 0x00080000;
       onChanged();
@@ -21112,14 +21900,14 @@ private static final long serialVersionUID = 0L;
      * set when type = SERVICE_DEPRECATION
      * </pre>
      *
-     * <code>optional .android_studio.DevServiceDeprecationInfo dev_service_deprecation_info = 20 [lazy = true];</code>
+     * <code>optional .android_studio.AppQualityInsightsUsageEvent.ServiceDeprecationInfo service_deprecation_info = 20 [lazy = true];</code>
      */
-    public Builder setDevServiceDeprecationInfo(
-        com.google.wireless.android.sdk.stats.DevServiceDeprecationInfo.Builder builderForValue) {
-      if (devServiceDeprecationInfoBuilder_ == null) {
-        devServiceDeprecationInfo_ = builderForValue.build();
+    public Builder setServiceDeprecationInfo(
+        com.google.wireless.android.sdk.stats.AppQualityInsightsUsageEvent.ServiceDeprecationInfo.Builder builderForValue) {
+      if (serviceDeprecationInfoBuilder_ == null) {
+        serviceDeprecationInfo_ = builderForValue.build();
       } else {
-        devServiceDeprecationInfoBuilder_.setMessage(builderForValue.build());
+        serviceDeprecationInfoBuilder_.setMessage(builderForValue.build());
       }
       bitField0_ |= 0x00080000;
       onChanged();
@@ -21130,19 +21918,19 @@ private static final long serialVersionUID = 0L;
      * set when type = SERVICE_DEPRECATION
      * </pre>
      *
-     * <code>optional .android_studio.DevServiceDeprecationInfo dev_service_deprecation_info = 20 [lazy = true];</code>
+     * <code>optional .android_studio.AppQualityInsightsUsageEvent.ServiceDeprecationInfo service_deprecation_info = 20 [lazy = true];</code>
      */
-    public Builder mergeDevServiceDeprecationInfo(com.google.wireless.android.sdk.stats.DevServiceDeprecationInfo value) {
-      if (devServiceDeprecationInfoBuilder_ == null) {
+    public Builder mergeServiceDeprecationInfo(com.google.wireless.android.sdk.stats.AppQualityInsightsUsageEvent.ServiceDeprecationInfo value) {
+      if (serviceDeprecationInfoBuilder_ == null) {
         if (((bitField0_ & 0x00080000) != 0) &&
-          devServiceDeprecationInfo_ != null &&
-          devServiceDeprecationInfo_ != com.google.wireless.android.sdk.stats.DevServiceDeprecationInfo.getDefaultInstance()) {
-          getDevServiceDeprecationInfoBuilder().mergeFrom(value);
+          serviceDeprecationInfo_ != null &&
+          serviceDeprecationInfo_ != com.google.wireless.android.sdk.stats.AppQualityInsightsUsageEvent.ServiceDeprecationInfo.getDefaultInstance()) {
+          getServiceDeprecationInfoBuilder().mergeFrom(value);
         } else {
-          devServiceDeprecationInfo_ = value;
+          serviceDeprecationInfo_ = value;
         }
       } else {
-        devServiceDeprecationInfoBuilder_.mergeFrom(value);
+        serviceDeprecationInfoBuilder_.mergeFrom(value);
       }
       bitField0_ |= 0x00080000;
       onChanged();
@@ -21153,14 +21941,14 @@ private static final long serialVersionUID = 0L;
      * set when type = SERVICE_DEPRECATION
      * </pre>
      *
-     * <code>optional .android_studio.DevServiceDeprecationInfo dev_service_deprecation_info = 20 [lazy = true];</code>
+     * <code>optional .android_studio.AppQualityInsightsUsageEvent.ServiceDeprecationInfo service_deprecation_info = 20 [lazy = true];</code>
      */
-    public Builder clearDevServiceDeprecationInfo() {
+    public Builder clearServiceDeprecationInfo() {
       bitField0_ = (bitField0_ & ~0x00080000);
-      devServiceDeprecationInfo_ = null;
-      if (devServiceDeprecationInfoBuilder_ != null) {
-        devServiceDeprecationInfoBuilder_.dispose();
-        devServiceDeprecationInfoBuilder_ = null;
+      serviceDeprecationInfo_ = null;
+      if (serviceDeprecationInfoBuilder_ != null) {
+        serviceDeprecationInfoBuilder_.dispose();
+        serviceDeprecationInfoBuilder_ = null;
       }
       onChanged();
       return this;
@@ -21170,26 +21958,26 @@ private static final long serialVersionUID = 0L;
      * set when type = SERVICE_DEPRECATION
      * </pre>
      *
-     * <code>optional .android_studio.DevServiceDeprecationInfo dev_service_deprecation_info = 20 [lazy = true];</code>
+     * <code>optional .android_studio.AppQualityInsightsUsageEvent.ServiceDeprecationInfo service_deprecation_info = 20 [lazy = true];</code>
      */
-    public com.google.wireless.android.sdk.stats.DevServiceDeprecationInfo.Builder getDevServiceDeprecationInfoBuilder() {
+    public com.google.wireless.android.sdk.stats.AppQualityInsightsUsageEvent.ServiceDeprecationInfo.Builder getServiceDeprecationInfoBuilder() {
       bitField0_ |= 0x00080000;
       onChanged();
-      return getDevServiceDeprecationInfoFieldBuilder().getBuilder();
+      return getServiceDeprecationInfoFieldBuilder().getBuilder();
     }
     /**
      * <pre>
      * set when type = SERVICE_DEPRECATION
      * </pre>
      *
-     * <code>optional .android_studio.DevServiceDeprecationInfo dev_service_deprecation_info = 20 [lazy = true];</code>
+     * <code>optional .android_studio.AppQualityInsightsUsageEvent.ServiceDeprecationInfo service_deprecation_info = 20 [lazy = true];</code>
      */
-    public com.google.wireless.android.sdk.stats.DevServiceDeprecationInfoOrBuilder getDevServiceDeprecationInfoOrBuilder() {
-      if (devServiceDeprecationInfoBuilder_ != null) {
-        return devServiceDeprecationInfoBuilder_.getMessageOrBuilder();
+    public com.google.wireless.android.sdk.stats.AppQualityInsightsUsageEvent.ServiceDeprecationInfoOrBuilder getServiceDeprecationInfoOrBuilder() {
+      if (serviceDeprecationInfoBuilder_ != null) {
+        return serviceDeprecationInfoBuilder_.getMessageOrBuilder();
       } else {
-        return devServiceDeprecationInfo_ == null ?
-            com.google.wireless.android.sdk.stats.DevServiceDeprecationInfo.getDefaultInstance() : devServiceDeprecationInfo_;
+        return serviceDeprecationInfo_ == null ?
+            com.google.wireless.android.sdk.stats.AppQualityInsightsUsageEvent.ServiceDeprecationInfo.getDefaultInstance() : serviceDeprecationInfo_;
       }
     }
     /**
@@ -21197,20 +21985,20 @@ private static final long serialVersionUID = 0L;
      * set when type = SERVICE_DEPRECATION
      * </pre>
      *
-     * <code>optional .android_studio.DevServiceDeprecationInfo dev_service_deprecation_info = 20 [lazy = true];</code>
+     * <code>optional .android_studio.AppQualityInsightsUsageEvent.ServiceDeprecationInfo service_deprecation_info = 20 [lazy = true];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
-        com.google.wireless.android.sdk.stats.DevServiceDeprecationInfo, com.google.wireless.android.sdk.stats.DevServiceDeprecationInfo.Builder, com.google.wireless.android.sdk.stats.DevServiceDeprecationInfoOrBuilder> 
-        getDevServiceDeprecationInfoFieldBuilder() {
-      if (devServiceDeprecationInfoBuilder_ == null) {
-        devServiceDeprecationInfoBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-            com.google.wireless.android.sdk.stats.DevServiceDeprecationInfo, com.google.wireless.android.sdk.stats.DevServiceDeprecationInfo.Builder, com.google.wireless.android.sdk.stats.DevServiceDeprecationInfoOrBuilder>(
-                getDevServiceDeprecationInfo(),
+        com.google.wireless.android.sdk.stats.AppQualityInsightsUsageEvent.ServiceDeprecationInfo, com.google.wireless.android.sdk.stats.AppQualityInsightsUsageEvent.ServiceDeprecationInfo.Builder, com.google.wireless.android.sdk.stats.AppQualityInsightsUsageEvent.ServiceDeprecationInfoOrBuilder> 
+        getServiceDeprecationInfoFieldBuilder() {
+      if (serviceDeprecationInfoBuilder_ == null) {
+        serviceDeprecationInfoBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.wireless.android.sdk.stats.AppQualityInsightsUsageEvent.ServiceDeprecationInfo, com.google.wireless.android.sdk.stats.AppQualityInsightsUsageEvent.ServiceDeprecationInfo.Builder, com.google.wireless.android.sdk.stats.AppQualityInsightsUsageEvent.ServiceDeprecationInfoOrBuilder>(
+                getServiceDeprecationInfo(),
                 getParentForChildren(),
                 isClean());
-        devServiceDeprecationInfo_ = null;
+        serviceDeprecationInfo_ = null;
       }
-      return devServiceDeprecationInfoBuilder_;
+      return serviceDeprecationInfoBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

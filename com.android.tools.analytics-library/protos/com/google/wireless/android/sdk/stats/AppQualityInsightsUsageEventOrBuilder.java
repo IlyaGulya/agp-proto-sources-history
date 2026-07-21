@@ -501,25 +501,25 @@ public interface AppQualityInsightsUsageEventOrBuilder extends
    * set when type = SERVICE_DEPRECATION
    * </pre>
    *
-   * <code>optional .android_studio.DevServiceDeprecationInfo dev_service_deprecation_info = 20 [lazy = true];</code>
-   * @return Whether the devServiceDeprecationInfo field is set.
+   * <code>optional .android_studio.AppQualityInsightsUsageEvent.ServiceDeprecationInfo service_deprecation_info = 20 [lazy = true];</code>
+   * @return Whether the serviceDeprecationInfo field is set.
    */
-  boolean hasDevServiceDeprecationInfo();
+  boolean hasServiceDeprecationInfo();
   /**
    * <pre>
    * set when type = SERVICE_DEPRECATION
    * </pre>
    *
-   * <code>optional .android_studio.DevServiceDeprecationInfo dev_service_deprecation_info = 20 [lazy = true];</code>
-   * @return The devServiceDeprecationInfo.
+   * <code>optional .android_studio.AppQualityInsightsUsageEvent.ServiceDeprecationInfo service_deprecation_info = 20 [lazy = true];</code>
+   * @return The serviceDeprecationInfo.
    */
-  com.google.wireless.android.sdk.stats.DevServiceDeprecationInfo getDevServiceDeprecationInfo();
+  com.google.wireless.android.sdk.stats.AppQualityInsightsUsageEvent.ServiceDeprecationInfo getServiceDeprecationInfo();
   /**
    * <pre>
    * set when type = SERVICE_DEPRECATION
    * </pre>
    *
-   * <code>optional .android_studio.DevServiceDeprecationInfo dev_service_deprecation_info = 20 [lazy = true];</code>
+   * <code>optional .android_studio.AppQualityInsightsUsageEvent.ServiceDeprecationInfo service_deprecation_info = 20 [lazy = true];</code>
    */
-  com.google.wireless.android.sdk.stats.DevServiceDeprecationInfoOrBuilder getDevServiceDeprecationInfoOrBuilder();
+  com.google.wireless.android.sdk.stats.AppQualityInsightsUsageEvent.ServiceDeprecationInfoOrBuilder getServiceDeprecationInfoOrBuilder();
 }
