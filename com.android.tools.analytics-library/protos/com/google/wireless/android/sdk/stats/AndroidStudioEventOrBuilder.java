@@ -3434,4 +3434,31 @@ public interface AndroidStudioEventOrBuilder extends
    * <code>optional .android_studio.VfsRefresh vfs_refresh = 123;</code>
    */
   com.google.wireless.android.sdk.stats.VfsRefreshOrBuilder getVfsRefreshOrBuilder();
+
+  /**
+   * <pre>
+   * Set when kind is SIGNING_WIZARD_*_FAILED or SIGNING_WIZARD_*_SUCCEEDED
+   * </pre>
+   *
+   * <code>optional .android_studio.SigningWizardEvent signing_wizard_event = 124;</code>
+   * @return Whether the signingWizardEvent field is set.
+   */
+  boolean hasSigningWizardEvent();
+  /**
+   * <pre>
+   * Set when kind is SIGNING_WIZARD_*_FAILED or SIGNING_WIZARD_*_SUCCEEDED
+   * </pre>
+   *
+   * <code>optional .android_studio.SigningWizardEvent signing_wizard_event = 124;</code>
+   * @return The signingWizardEvent.
+   */
+  com.google.wireless.android.sdk.stats.SigningWizardEvent getSigningWizardEvent();
+  /**
+   * <pre>
+   * Set when kind is SIGNING_WIZARD_*_FAILED or SIGNING_WIZARD_*_SUCCEEDED
+   * </pre>
+   *
+   * <code>optional .android_studio.SigningWizardEvent signing_wizard_event = 124;</code>
+   */
+  com.google.wireless.android.sdk.stats.SigningWizardEventOrBuilder getSigningWizardEventOrBuilder();
 }

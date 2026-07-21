@@ -1599,6 +1599,19 @@ private static final long serialVersionUID = 0L;
             bitField3_ |= 0x00400000;
             break;
           }
+          case 994: {
+            com.google.wireless.android.sdk.stats.SigningWizardEvent.Builder subBuilder = null;
+            if (((bitField3_ & 0x00800000) != 0)) {
+              subBuilder = signingWizardEvent_.toBuilder();
+            }
+            signingWizardEvent_ = input.readMessage(com.google.wireless.android.sdk.stats.SigningWizardEvent.PARSER, extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(signingWizardEvent_);
+              signingWizardEvent_ = subBuilder.buildPartial();
+            }
+            bitField3_ |= 0x00800000;
+            break;
+          }
           default: {
             if (!parseUnknownField(
                 input, unknownFields, extensionRegistry, tag)) {
@@ -3853,6 +3866,63 @@ private static final long serialVersionUID = 0L;
      * <code>VFS_REFRESH = 225;</code>
      */
     VFS_REFRESH(225),
+    /**
+     * <pre>
+     * Events related to Bundle/APK Signing wizard
+     * Dialog is opened
+     * </pre>
+     *
+     * <code>SIGNING_WIZARD_OPEN = 226;</code>
+     */
+    SIGNING_WIZARD_OPEN(226),
+    /**
+     * <pre>
+     * Ok action was performed ("Finish" button pressed)
+     * </pre>
+     *
+     * <code>SIGNING_WIZARD_OK_ACTION = 227;</code>
+     */
+    SIGNING_WIZARD_OK_ACTION(227),
+    /**
+     * <pre>
+     * Cancel action was performed ("Cancel" button is pressed or dialog closed)
+     * </pre>
+     *
+     * <code>SIGNING_WIZARD_CANCEL_ACTION = 228;</code>
+     */
+    SIGNING_WIZARD_CANCEL_ACTION(228),
+    /**
+     * <pre>
+     * Failed to sign Gradle project
+     * </pre>
+     *
+     * <code>SIGNING_WIZARD_GRADLE_SIGNING_FAILED = 229;</code>
+     */
+    SIGNING_WIZARD_GRADLE_SIGNING_FAILED(229),
+    /**
+     * <pre>
+     * Gradle project successfully signed
+     * </pre>
+     *
+     * <code>SIGNING_WIZARD_GRADLE_SIGNING_SUCCEEDED = 230;</code>
+     */
+    SIGNING_WIZARD_GRADLE_SIGNING_SUCCEEDED(230),
+    /**
+     * <pre>
+     * Failed to sign Intellij project
+     * </pre>
+     *
+     * <code>SIGNING_WIZARD_INTELLIJ_SIGNING_FAILED = 231;</code>
+     */
+    SIGNING_WIZARD_INTELLIJ_SIGNING_FAILED(231),
+    /**
+     * <pre>
+     * INTELLIJ project successfully signed
+     * </pre>
+     *
+     * <code>SIGNING_WIZARD_INTELLIJ_SIGNING_SUCCEEDED = 232;</code>
+     */
+    SIGNING_WIZARD_INTELLIJ_SIGNING_SUCCEEDED(232),
     ;
 
     /**
@@ -5486,6 +5556,63 @@ private static final long serialVersionUID = 0L;
      * <code>VFS_REFRESH = 225;</code>
      */
     public static final int VFS_REFRESH_VALUE = 225;
+    /**
+     * <pre>
+     * Events related to Bundle/APK Signing wizard
+     * Dialog is opened
+     * </pre>
+     *
+     * <code>SIGNING_WIZARD_OPEN = 226;</code>
+     */
+    public static final int SIGNING_WIZARD_OPEN_VALUE = 226;
+    /**
+     * <pre>
+     * Ok action was performed ("Finish" button pressed)
+     * </pre>
+     *
+     * <code>SIGNING_WIZARD_OK_ACTION = 227;</code>
+     */
+    public static final int SIGNING_WIZARD_OK_ACTION_VALUE = 227;
+    /**
+     * <pre>
+     * Cancel action was performed ("Cancel" button is pressed or dialog closed)
+     * </pre>
+     *
+     * <code>SIGNING_WIZARD_CANCEL_ACTION = 228;</code>
+     */
+    public static final int SIGNING_WIZARD_CANCEL_ACTION_VALUE = 228;
+    /**
+     * <pre>
+     * Failed to sign Gradle project
+     * </pre>
+     *
+     * <code>SIGNING_WIZARD_GRADLE_SIGNING_FAILED = 229;</code>
+     */
+    public static final int SIGNING_WIZARD_GRADLE_SIGNING_FAILED_VALUE = 229;
+    /**
+     * <pre>
+     * Gradle project successfully signed
+     * </pre>
+     *
+     * <code>SIGNING_WIZARD_GRADLE_SIGNING_SUCCEEDED = 230;</code>
+     */
+    public static final int SIGNING_WIZARD_GRADLE_SIGNING_SUCCEEDED_VALUE = 230;
+    /**
+     * <pre>
+     * Failed to sign Intellij project
+     * </pre>
+     *
+     * <code>SIGNING_WIZARD_INTELLIJ_SIGNING_FAILED = 231;</code>
+     */
+    public static final int SIGNING_WIZARD_INTELLIJ_SIGNING_FAILED_VALUE = 231;
+    /**
+     * <pre>
+     * INTELLIJ project successfully signed
+     * </pre>
+     *
+     * <code>SIGNING_WIZARD_INTELLIJ_SIGNING_SUCCEEDED = 232;</code>
+     */
+    public static final int SIGNING_WIZARD_INTELLIJ_SIGNING_SUCCEEDED_VALUE = 232;
 
 
     public final int getNumber() {
@@ -5729,6 +5856,13 @@ private static final long serialVersionUID = 0L;
         case 223: return ANDROID_TEST_RETENTION_EVENT;
         case 224: return SUGGESTED_IMPORT_EVENT;
         case 225: return VFS_REFRESH;
+        case 226: return SIGNING_WIZARD_OPEN;
+        case 227: return SIGNING_WIZARD_OK_ACTION;
+        case 228: return SIGNING_WIZARD_CANCEL_ACTION;
+        case 229: return SIGNING_WIZARD_GRADLE_SIGNING_FAILED;
+        case 230: return SIGNING_WIZARD_GRADLE_SIGNING_SUCCEEDED;
+        case 231: return SIGNING_WIZARD_INTELLIJ_SIGNING_FAILED;
+        case 232: return SIGNING_WIZARD_INTELLIJ_SIGNING_SUCCEEDED;
         default: return null;
       }
     }
@@ -18637,6 +18771,41 @@ private static final long serialVersionUID = 0L;
     return vfsRefresh_ == null ? com.google.wireless.android.sdk.stats.VfsRefresh.getDefaultInstance() : vfsRefresh_;
   }
 
+  public static final int SIGNING_WIZARD_EVENT_FIELD_NUMBER = 124;
+  private com.google.wireless.android.sdk.stats.SigningWizardEvent signingWizardEvent_;
+  /**
+   * <pre>
+   * Set when kind is SIGNING_WIZARD_*_FAILED or SIGNING_WIZARD_*_SUCCEEDED
+   * </pre>
+   *
+   * <code>optional .android_studio.SigningWizardEvent signing_wizard_event = 124;</code>
+   * @return Whether the signingWizardEvent field is set.
+   */
+  public boolean hasSigningWizardEvent() {
+    return ((bitField3_ & 0x00800000) != 0);
+  }
+  /**
+   * <pre>
+   * Set when kind is SIGNING_WIZARD_*_FAILED or SIGNING_WIZARD_*_SUCCEEDED
+   * </pre>
+   *
+   * <code>optional .android_studio.SigningWizardEvent signing_wizard_event = 124;</code>
+   * @return The signingWizardEvent.
+   */
+  public com.google.wireless.android.sdk.stats.SigningWizardEvent getSigningWizardEvent() {
+    return signingWizardEvent_ == null ? com.google.wireless.android.sdk.stats.SigningWizardEvent.getDefaultInstance() : signingWizardEvent_;
+  }
+  /**
+   * <pre>
+   * Set when kind is SIGNING_WIZARD_*_FAILED or SIGNING_WIZARD_*_SUCCEEDED
+   * </pre>
+   *
+   * <code>optional .android_studio.SigningWizardEvent signing_wizard_event = 124;</code>
+   */
+  public com.google.wireless.android.sdk.stats.SigningWizardEventOrBuilder getSigningWizardEventOrBuilder() {
+    return signingWizardEvent_ == null ? com.google.wireless.android.sdk.stats.SigningWizardEvent.getDefaultInstance() : signingWizardEvent_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -19019,6 +19188,9 @@ private static final long serialVersionUID = 0L;
     }
     if (((bitField3_ & 0x00400000) != 0)) {
       output.writeMessage(123, getVfsRefresh());
+    }
+    if (((bitField3_ & 0x00800000) != 0)) {
+      output.writeMessage(124, getSigningWizardEvent());
     }
     unknownFields.writeTo(output);
   }
@@ -19518,6 +19690,10 @@ private static final long serialVersionUID = 0L;
     if (((bitField3_ & 0x00400000) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(123, getVfsRefresh());
+    }
+    if (((bitField3_ & 0x00800000) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(124, getSigningWizardEvent());
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -20126,6 +20302,11 @@ private static final long serialVersionUID = 0L;
       if (!getVfsRefresh()
           .equals(other.getVfsRefresh())) return false;
     }
+    if (hasSigningWizardEvent() != other.hasSigningWizardEvent()) return false;
+    if (hasSigningWizardEvent()) {
+      if (!getSigningWizardEvent()
+          .equals(other.getSigningWizardEvent())) return false;
+    }
     if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
@@ -20631,6 +20812,10 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + VFS_REFRESH_FIELD_NUMBER;
       hash = (53 * hash) + getVfsRefresh().hashCode();
     }
+    if (hasSigningWizardEvent()) {
+      hash = (37 * hash) + SIGNING_WIZARD_EVENT_FIELD_NUMBER;
+      hash = (53 * hash) + getSigningWizardEvent().hashCode();
+    }
     hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -20861,6 +21046,7 @@ private static final long serialVersionUID = 0L;
         getAndroidTestRetentionEventFieldBuilder();
         getSuggestedImportEventFieldBuilder();
         getVfsRefreshFieldBuilder();
+        getSigningWizardEventFieldBuilder();
       }
     }
     @java.lang.Override
@@ -21520,6 +21706,12 @@ private static final long serialVersionUID = 0L;
         vfsRefreshBuilder_.clear();
       }
       bitField3_ = (bitField3_ & ~0x04000000);
+      if (signingWizardEventBuilder_ == null) {
+        signingWizardEvent_ = null;
+      } else {
+        signingWizardEventBuilder_.clear();
+      }
+      bitField3_ = (bitField3_ & ~0x08000000);
       return this;
     }
 
@@ -22458,6 +22650,14 @@ private static final long serialVersionUID = 0L;
         }
         to_bitField3_ |= 0x00400000;
       }
+      if (((from_bitField3_ & 0x08000000) != 0)) {
+        if (signingWizardEventBuilder_ == null) {
+          result.signingWizardEvent_ = signingWizardEvent_;
+        } else {
+          result.signingWizardEvent_ = signingWizardEventBuilder_.build();
+        }
+        to_bitField3_ |= 0x00800000;
+      }
       result.bitField0_ = to_bitField0_;
       result.bitField1_ = to_bitField1_;
       result.bitField2_ = to_bitField2_;
@@ -22968,6 +23168,9 @@ private static final long serialVersionUID = 0L;
       }
       if (other.hasVfsRefresh()) {
         mergeVfsRefresh(other.getVfsRefresh());
+      }
+      if (other.hasSigningWizardEvent()) {
+        mergeSigningWizardEvent(other.getSigningWizardEvent());
       }
       this.mergeUnknownFields(other.unknownFields);
       onChanged();
@@ -41372,6 +41575,162 @@ private static final long serialVersionUID = 0L;
         vfsRefresh_ = null;
       }
       return vfsRefreshBuilder_;
+    }
+
+    private com.google.wireless.android.sdk.stats.SigningWizardEvent signingWizardEvent_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.SigningWizardEvent, com.google.wireless.android.sdk.stats.SigningWizardEvent.Builder, com.google.wireless.android.sdk.stats.SigningWizardEventOrBuilder> signingWizardEventBuilder_;
+    /**
+     * <pre>
+     * Set when kind is SIGNING_WIZARD_*_FAILED or SIGNING_WIZARD_*_SUCCEEDED
+     * </pre>
+     *
+     * <code>optional .android_studio.SigningWizardEvent signing_wizard_event = 124;</code>
+     * @return Whether the signingWizardEvent field is set.
+     */
+    public boolean hasSigningWizardEvent() {
+      return ((bitField3_ & 0x08000000) != 0);
+    }
+    /**
+     * <pre>
+     * Set when kind is SIGNING_WIZARD_*_FAILED or SIGNING_WIZARD_*_SUCCEEDED
+     * </pre>
+     *
+     * <code>optional .android_studio.SigningWizardEvent signing_wizard_event = 124;</code>
+     * @return The signingWizardEvent.
+     */
+    public com.google.wireless.android.sdk.stats.SigningWizardEvent getSigningWizardEvent() {
+      if (signingWizardEventBuilder_ == null) {
+        return signingWizardEvent_ == null ? com.google.wireless.android.sdk.stats.SigningWizardEvent.getDefaultInstance() : signingWizardEvent_;
+      } else {
+        return signingWizardEventBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * Set when kind is SIGNING_WIZARD_*_FAILED or SIGNING_WIZARD_*_SUCCEEDED
+     * </pre>
+     *
+     * <code>optional .android_studio.SigningWizardEvent signing_wizard_event = 124;</code>
+     */
+    public Builder setSigningWizardEvent(com.google.wireless.android.sdk.stats.SigningWizardEvent value) {
+      if (signingWizardEventBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        signingWizardEvent_ = value;
+        onChanged();
+      } else {
+        signingWizardEventBuilder_.setMessage(value);
+      }
+      bitField3_ |= 0x08000000;
+      return this;
+    }
+    /**
+     * <pre>
+     * Set when kind is SIGNING_WIZARD_*_FAILED or SIGNING_WIZARD_*_SUCCEEDED
+     * </pre>
+     *
+     * <code>optional .android_studio.SigningWizardEvent signing_wizard_event = 124;</code>
+     */
+    public Builder setSigningWizardEvent(
+        com.google.wireless.android.sdk.stats.SigningWizardEvent.Builder builderForValue) {
+      if (signingWizardEventBuilder_ == null) {
+        signingWizardEvent_ = builderForValue.build();
+        onChanged();
+      } else {
+        signingWizardEventBuilder_.setMessage(builderForValue.build());
+      }
+      bitField3_ |= 0x08000000;
+      return this;
+    }
+    /**
+     * <pre>
+     * Set when kind is SIGNING_WIZARD_*_FAILED or SIGNING_WIZARD_*_SUCCEEDED
+     * </pre>
+     *
+     * <code>optional .android_studio.SigningWizardEvent signing_wizard_event = 124;</code>
+     */
+    public Builder mergeSigningWizardEvent(com.google.wireless.android.sdk.stats.SigningWizardEvent value) {
+      if (signingWizardEventBuilder_ == null) {
+        if (((bitField3_ & 0x08000000) != 0) &&
+            signingWizardEvent_ != null &&
+            signingWizardEvent_ != com.google.wireless.android.sdk.stats.SigningWizardEvent.getDefaultInstance()) {
+          signingWizardEvent_ =
+            com.google.wireless.android.sdk.stats.SigningWizardEvent.newBuilder(signingWizardEvent_).mergeFrom(value).buildPartial();
+        } else {
+          signingWizardEvent_ = value;
+        }
+        onChanged();
+      } else {
+        signingWizardEventBuilder_.mergeFrom(value);
+      }
+      bitField3_ |= 0x08000000;
+      return this;
+    }
+    /**
+     * <pre>
+     * Set when kind is SIGNING_WIZARD_*_FAILED or SIGNING_WIZARD_*_SUCCEEDED
+     * </pre>
+     *
+     * <code>optional .android_studio.SigningWizardEvent signing_wizard_event = 124;</code>
+     */
+    public Builder clearSigningWizardEvent() {
+      if (signingWizardEventBuilder_ == null) {
+        signingWizardEvent_ = null;
+        onChanged();
+      } else {
+        signingWizardEventBuilder_.clear();
+      }
+      bitField3_ = (bitField3_ & ~0x08000000);
+      return this;
+    }
+    /**
+     * <pre>
+     * Set when kind is SIGNING_WIZARD_*_FAILED or SIGNING_WIZARD_*_SUCCEEDED
+     * </pre>
+     *
+     * <code>optional .android_studio.SigningWizardEvent signing_wizard_event = 124;</code>
+     */
+    public com.google.wireless.android.sdk.stats.SigningWizardEvent.Builder getSigningWizardEventBuilder() {
+      bitField3_ |= 0x08000000;
+      onChanged();
+      return getSigningWizardEventFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * Set when kind is SIGNING_WIZARD_*_FAILED or SIGNING_WIZARD_*_SUCCEEDED
+     * </pre>
+     *
+     * <code>optional .android_studio.SigningWizardEvent signing_wizard_event = 124;</code>
+     */
+    public com.google.wireless.android.sdk.stats.SigningWizardEventOrBuilder getSigningWizardEventOrBuilder() {
+      if (signingWizardEventBuilder_ != null) {
+        return signingWizardEventBuilder_.getMessageOrBuilder();
+      } else {
+        return signingWizardEvent_ == null ?
+            com.google.wireless.android.sdk.stats.SigningWizardEvent.getDefaultInstance() : signingWizardEvent_;
+      }
+    }
+    /**
+     * <pre>
+     * Set when kind is SIGNING_WIZARD_*_FAILED or SIGNING_WIZARD_*_SUCCEEDED
+     * </pre>
+     *
+     * <code>optional .android_studio.SigningWizardEvent signing_wizard_event = 124;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.SigningWizardEvent, com.google.wireless.android.sdk.stats.SigningWizardEvent.Builder, com.google.wireless.android.sdk.stats.SigningWizardEventOrBuilder> 
+        getSigningWizardEventFieldBuilder() {
+      if (signingWizardEventBuilder_ == null) {
+        signingWizardEventBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.wireless.android.sdk.stats.SigningWizardEvent, com.google.wireless.android.sdk.stats.SigningWizardEvent.Builder, com.google.wireless.android.sdk.stats.SigningWizardEventOrBuilder>(
+                getSigningWizardEvent(),
+                getParentForChildren(),
+                isClean());
+        signingWizardEvent_ = null;
+      }
+      return signingWizardEventBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(
