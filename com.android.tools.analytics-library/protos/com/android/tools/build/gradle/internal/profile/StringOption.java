@@ -149,6 +149,10 @@ public enum StringOption
    * <code>LINT_VERSION_OVERRIDE = 34;</code>
    */
   LINT_VERSION_OVERRIDE(34),
+  /**
+   * <code>IDE_CHECK_JETIFIER_RESULT_FILE = 35;</code>
+   */
+  IDE_CHECK_JETIFIER_RESULT_FILE(35),
   UNRECOGNIZED(-1),
   ;
 
@@ -292,6 +296,10 @@ public enum StringOption
    * <code>LINT_VERSION_OVERRIDE = 34;</code>
    */
   public static final int LINT_VERSION_OVERRIDE_VALUE = 34;
+  /**
+   * <code>IDE_CHECK_JETIFIER_RESULT_FILE = 35;</code>
+   */
+  public static final int IDE_CHECK_JETIFIER_RESULT_FILE_VALUE = 35;
 
 
   public final int getNumber() {
@@ -353,6 +361,7 @@ public enum StringOption
       case 32: return LINT_HEAP_SIZE;
       case 33: return SUPPRESS_UNSUPPORTED_COMPILE_SDK;
       case 34: return LINT_VERSION_OVERRIDE;
+      case 35: return IDE_CHECK_JETIFIER_RESULT_FILE;
       default: return null;
     }
   }

@@ -1106,6 +1106,14 @@ public enum GradleTaskExecutionType
    * <code>SOURCE_JAR = 272;</code>
    */
   SOURCE_JAR(272),
+  /**
+   * <code>MERGE_ASSETS_FOR_UNIT_TEST = 273;</code>
+   */
+  MERGE_ASSETS_FOR_UNIT_TEST(273),
+  /**
+   * <code>CHECK_JETIFIER = 274;</code>
+   */
+  CHECK_JETIFIER(274),
   UNRECOGNIZED(-1),
   ;
 
@@ -2201,6 +2209,14 @@ public enum GradleTaskExecutionType
    * <code>SOURCE_JAR = 272;</code>
    */
   public static final int SOURCE_JAR_VALUE = 272;
+  /**
+   * <code>MERGE_ASSETS_FOR_UNIT_TEST = 273;</code>
+   */
+  public static final int MERGE_ASSETS_FOR_UNIT_TEST_VALUE = 273;
+  /**
+   * <code>CHECK_JETIFIER = 274;</code>
+   */
+  public static final int CHECK_JETIFIER_VALUE = 274;
 
 
   public final int getNumber() {
@@ -2500,6 +2516,8 @@ public enum GradleTaskExecutionType
       case 270: return COMPILE_ART_PROFILE;
       case 271: return ANDROID_LINT_TEXT_OUTPUT;
       case 272: return SOURCE_JAR;
+      case 273: return MERGE_ASSETS_FOR_UNIT_TEST;
+      case 274: return CHECK_JETIFIER;
       default: return null;
     }
   }
