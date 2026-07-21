@@ -112,5 +112,50 @@ public interface SmlRagEventOrBuilder extends
    */
   com.google.wireless.android.sdk.stats.SmlRagEvent.FindUsagesMetricsOrBuilder getFindUsagesOrBuilder();
 
+  /**
+   * <code>.android_studio.SmlRagEvent.LuceneIndexMetrics lucene_metrics = 8 [lazy = true];</code>
+   * @return Whether the luceneMetrics field is set.
+   */
+  boolean hasLuceneMetrics();
+  /**
+   * <code>.android_studio.SmlRagEvent.LuceneIndexMetrics lucene_metrics = 8 [lazy = true];</code>
+   * @return The luceneMetrics.
+   */
+  com.google.wireless.android.sdk.stats.SmlRagEvent.LuceneIndexMetrics getLuceneMetrics();
+  /**
+   * <code>.android_studio.SmlRagEvent.LuceneIndexMetrics lucene_metrics = 8 [lazy = true];</code>
+   */
+  com.google.wireless.android.sdk.stats.SmlRagEvent.LuceneIndexMetricsOrBuilder getLuceneMetricsOrBuilder();
+
+  /**
+   * <code>.android_studio.SmlRagEvent.IntellijScanMetrics intellij_scan = 9 [lazy = true];</code>
+   * @return Whether the intellijScan field is set.
+   */
+  boolean hasIntellijScan();
+  /**
+   * <code>.android_studio.SmlRagEvent.IntellijScanMetrics intellij_scan = 9 [lazy = true];</code>
+   * @return The intellijScan.
+   */
+  com.google.wireless.android.sdk.stats.SmlRagEvent.IntellijScanMetrics getIntellijScan();
+  /**
+   * <code>.android_studio.SmlRagEvent.IntellijScanMetrics intellij_scan = 9 [lazy = true];</code>
+   */
+  com.google.wireless.android.sdk.stats.SmlRagEvent.IntellijScanMetricsOrBuilder getIntellijScanOrBuilder();
+
+  /**
+   * <code>.android_studio.SmlRagEvent.IntellijIndexMetrics intellij_index = 10 [lazy = true];</code>
+   * @return Whether the intellijIndex field is set.
+   */
+  boolean hasIntellijIndex();
+  /**
+   * <code>.android_studio.SmlRagEvent.IntellijIndexMetrics intellij_index = 10 [lazy = true];</code>
+   * @return The intellijIndex.
+   */
+  com.google.wireless.android.sdk.stats.SmlRagEvent.IntellijIndexMetrics getIntellijIndex();
+  /**
+   * <code>.android_studio.SmlRagEvent.IntellijIndexMetrics intellij_index = 10 [lazy = true];</code>
+   */
+  com.google.wireless.android.sdk.stats.SmlRagEvent.IntellijIndexMetricsOrBuilder getIntellijIndexOrBuilder();
+
   com.google.wireless.android.sdk.stats.SmlRagEvent.ContentCase getContentCase();
 }
