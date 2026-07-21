@@ -5734,31 +5734,4 @@ public interface AndroidStudioEventOrBuilder extends
    * <code>optional .android_studio.SdkIndexProjectStats sdk_index_project_stats = 205 [lazy = true];</code>
    */
   com.google.wireless.android.sdk.stats.SdkIndexProjectStatsOrBuilder getSdkIndexProjectStatsOrBuilder();
-
-  /**
-   * <pre>
-   * set when kind = SOONG_RUN_EVENT
-   * </pre>
-   *
-   * <code>optional .android_studio.SoongRunEvent soong_run_event = 206 [lazy = true];</code>
-   * @return Whether the soongRunEvent field is set.
-   */
-  boolean hasSoongRunEvent();
-  /**
-   * <pre>
-   * set when kind = SOONG_RUN_EVENT
-   * </pre>
-   *
-   * <code>optional .android_studio.SoongRunEvent soong_run_event = 206 [lazy = true];</code>
-   * @return The soongRunEvent.
-   */
-  com.google.wireless.android.sdk.stats.SoongRunEvent getSoongRunEvent();
-  /**
-   * <pre>
-   * set when kind = SOONG_RUN_EVENT
-   * </pre>
-   *
-   * <code>optional .android_studio.SoongRunEvent soong_run_event = 206 [lazy = true];</code>
-   */
-  com.google.wireless.android.sdk.stats.SoongRunEventOrBuilder getSoongRunEventOrBuilder();
 }
