@@ -56,6 +56,14 @@ private static final long serialVersionUID = 0L;
      * <code>MARKETING_DIALOG = 1;</code>
      */
     MARKETING_DIALOG(1),
+    /**
+     * <pre>
+     * Checkbox in settings.
+     * </pre>
+     *
+     * <code>SETTINGS = 2;</code>
+     */
+    SETTINGS(2),
     ;
 
     /**
@@ -70,6 +78,14 @@ private static final long serialVersionUID = 0L;
      * <code>MARKETING_DIALOG = 1;</code>
      */
     public static final int MARKETING_DIALOG_VALUE = 1;
+    /**
+     * <pre>
+     * Checkbox in settings.
+     * </pre>
+     *
+     * <code>SETTINGS = 2;</code>
+     */
+    public static final int SETTINGS_VALUE = 2;
 
 
     public final int getNumber() {
@@ -94,6 +110,7 @@ private static final long serialVersionUID = 0L;
       switch (value) {
         case 0: return UNKNOWN;
         case 1: return MARKETING_DIALOG;
+        case 2: return SETTINGS;
         default: return null;
       }
     }

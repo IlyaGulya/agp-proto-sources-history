@@ -15058,6 +15058,23 @@ private static final long serialVersionUID = 0L;
      */
     com.google.protobuf.ByteString
         getToolCallIdBytes();
+
+    /**
+     * <code>.android_studio.SmlChatBotEvent.UpdateDepsRefactoringToolResult update_deps_refactoring_tool_result = 5;</code>
+     * @return Whether the updateDepsRefactoringToolResult field is set.
+     */
+    boolean hasUpdateDepsRefactoringToolResult();
+    /**
+     * <code>.android_studio.SmlChatBotEvent.UpdateDepsRefactoringToolResult update_deps_refactoring_tool_result = 5;</code>
+     * @return The updateDepsRefactoringToolResult.
+     */
+    com.google.wireless.android.sdk.stats.SmlChatBotEvent.UpdateDepsRefactoringToolResult getUpdateDepsRefactoringToolResult();
+    /**
+     * <code>.android_studio.SmlChatBotEvent.UpdateDepsRefactoringToolResult update_deps_refactoring_tool_result = 5;</code>
+     */
+    com.google.wireless.android.sdk.stats.SmlChatBotEvent.UpdateDepsRefactoringToolResultOrBuilder getUpdateDepsRefactoringToolResultOrBuilder();
+
+    com.google.wireless.android.sdk.stats.SmlChatBotEvent.ToolCallResponse.ResultCase getResultCase();
   }
   /**
    * Protobuf type {@code android_studio.SmlChatBotEvent.ToolCallResponse}
@@ -15098,6 +15115,46 @@ private static final long serialVersionUID = 0L;
     }
 
     private int bitField0_;
+    private int resultCase_ = 0;
+    @SuppressWarnings("serial")
+    private java.lang.Object result_;
+    public enum ResultCase
+        implements com.google.protobuf.Internal.EnumLite,
+            com.google.protobuf.AbstractMessage.InternalOneOfEnum {
+      UPDATE_DEPS_REFACTORING_TOOL_RESULT(5),
+      RESULT_NOT_SET(0);
+      private final int value;
+      private ResultCase(int value) {
+        this.value = value;
+      }
+      /**
+       * @param value The number of the enum to look for.
+       * @return The enum associated with the given number.
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static ResultCase valueOf(int value) {
+        return forNumber(value);
+      }
+
+      public static ResultCase forNumber(int value) {
+        switch (value) {
+          case 5: return UPDATE_DEPS_REFACTORING_TOOL_RESULT;
+          case 0: return RESULT_NOT_SET;
+          default: return null;
+        }
+      }
+      public int getNumber() {
+        return this.value;
+      }
+    };
+
+    public ResultCase
+    getResultCase() {
+      return ResultCase.forNumber(
+          resultCase_);
+    }
+
     public static final int TOOL_NAME_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object toolName_ = "";
@@ -15248,6 +15305,37 @@ private static final long serialVersionUID = 0L;
       }
     }
 
+    public static final int UPDATE_DEPS_REFACTORING_TOOL_RESULT_FIELD_NUMBER = 5;
+    /**
+     * <code>.android_studio.SmlChatBotEvent.UpdateDepsRefactoringToolResult update_deps_refactoring_tool_result = 5;</code>
+     * @return Whether the updateDepsRefactoringToolResult field is set.
+     */
+    @java.lang.Override
+    public boolean hasUpdateDepsRefactoringToolResult() {
+      return resultCase_ == 5;
+    }
+    /**
+     * <code>.android_studio.SmlChatBotEvent.UpdateDepsRefactoringToolResult update_deps_refactoring_tool_result = 5;</code>
+     * @return The updateDepsRefactoringToolResult.
+     */
+    @java.lang.Override
+    public com.google.wireless.android.sdk.stats.SmlChatBotEvent.UpdateDepsRefactoringToolResult getUpdateDepsRefactoringToolResult() {
+      if (resultCase_ == 5) {
+         return (com.google.wireless.android.sdk.stats.SmlChatBotEvent.UpdateDepsRefactoringToolResult) result_;
+      }
+      return com.google.wireless.android.sdk.stats.SmlChatBotEvent.UpdateDepsRefactoringToolResult.getDefaultInstance();
+    }
+    /**
+     * <code>.android_studio.SmlChatBotEvent.UpdateDepsRefactoringToolResult update_deps_refactoring_tool_result = 5;</code>
+     */
+    @java.lang.Override
+    public com.google.wireless.android.sdk.stats.SmlChatBotEvent.UpdateDepsRefactoringToolResultOrBuilder getUpdateDepsRefactoringToolResultOrBuilder() {
+      if (resultCase_ == 5) {
+         return (com.google.wireless.android.sdk.stats.SmlChatBotEvent.UpdateDepsRefactoringToolResult) result_;
+      }
+      return com.google.wireless.android.sdk.stats.SmlChatBotEvent.UpdateDepsRefactoringToolResult.getDefaultInstance();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -15274,6 +15362,9 @@ private static final long serialVersionUID = 0L;
       if (((bitField0_ & 0x00000008) != 0)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 4, toolCallId_);
       }
+      if (resultCase_ == 5) {
+        output.writeMessage(5, (com.google.wireless.android.sdk.stats.SmlChatBotEvent.UpdateDepsRefactoringToolResult) result_);
+      }
       getUnknownFields().writeTo(output);
     }
 
@@ -15296,6 +15387,10 @@ private static final long serialVersionUID = 0L;
       }
       if (((bitField0_ & 0x00000008) != 0)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, toolCallId_);
+      }
+      if (resultCase_ == 5) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(5, (com.google.wireless.android.sdk.stats.SmlChatBotEvent.UpdateDepsRefactoringToolResult) result_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -15331,6 +15426,15 @@ private static final long serialVersionUID = 0L;
         if (!getToolCallId()
             .equals(other.getToolCallId())) return false;
       }
+      if (!getResultCase().equals(other.getResultCase())) return false;
+      switch (resultCase_) {
+        case 5:
+          if (!getUpdateDepsRefactoringToolResult()
+              .equals(other.getUpdateDepsRefactoringToolResult())) return false;
+          break;
+        case 0:
+        default:
+      }
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -15357,6 +15461,14 @@ private static final long serialVersionUID = 0L;
       if (hasToolCallId()) {
         hash = (37 * hash) + TOOL_CALL_ID_FIELD_NUMBER;
         hash = (53 * hash) + getToolCallId().hashCode();
+      }
+      switch (resultCase_) {
+        case 5:
+          hash = (37 * hash) + UPDATE_DEPS_REFACTORING_TOOL_RESULT_FIELD_NUMBER;
+          hash = (53 * hash) + getUpdateDepsRefactoringToolResult().hashCode();
+          break;
+        case 0:
+        default:
       }
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
@@ -15501,6 +15613,11 @@ private static final long serialVersionUID = 0L;
           metadataBuilder_ = null;
         }
         toolCallId_ = "";
+        if (updateDepsRefactoringToolResultBuilder_ != null) {
+          updateDepsRefactoringToolResultBuilder_.clear();
+        }
+        resultCase_ = 0;
+        result_ = null;
         return this;
       }
 
@@ -15528,6 +15645,7 @@ private static final long serialVersionUID = 0L;
       public com.google.wireless.android.sdk.stats.SmlChatBotEvent.ToolCallResponse buildPartial() {
         com.google.wireless.android.sdk.stats.SmlChatBotEvent.ToolCallResponse result = new com.google.wireless.android.sdk.stats.SmlChatBotEvent.ToolCallResponse(this);
         if (bitField0_ != 0) { buildPartial0(result); }
+        buildPartialOneofs(result);
         onBuilt();
         return result;
       }
@@ -15554,6 +15672,15 @@ private static final long serialVersionUID = 0L;
           to_bitField0_ |= 0x00000008;
         }
         result.bitField0_ |= to_bitField0_;
+      }
+
+      private void buildPartialOneofs(com.google.wireless.android.sdk.stats.SmlChatBotEvent.ToolCallResponse result) {
+        result.resultCase_ = resultCase_;
+        result.result_ = this.result_;
+        if (resultCase_ == 5 &&
+            updateDepsRefactoringToolResultBuilder_ != null) {
+          result.result_ = updateDepsRefactoringToolResultBuilder_.build();
+        }
       }
 
       @java.lang.Override
@@ -15583,6 +15710,15 @@ private static final long serialVersionUID = 0L;
           toolCallId_ = other.toolCallId_;
           bitField0_ |= 0x00000008;
           onChanged();
+        }
+        switch (other.getResultCase()) {
+          case UPDATE_DEPS_REFACTORING_TOOL_RESULT: {
+            mergeUpdateDepsRefactoringToolResult(other.getUpdateDepsRefactoringToolResult());
+            break;
+          }
+          case RESULT_NOT_SET: {
+            break;
+          }
         }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
@@ -15639,6 +15775,13 @@ private static final long serialVersionUID = 0L;
                 bitField0_ |= 0x00000008;
                 break;
               } // case 34
+              case 42: {
+                input.readMessage(
+                    getUpdateDepsRefactoringToolResultFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                resultCase_ = 5;
+                break;
+              } // case 42
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -15654,6 +15797,21 @@ private static final long serialVersionUID = 0L;
         } // finally
         return this;
       }
+      private int resultCase_ = 0;
+      private java.lang.Object result_;
+      public ResultCase
+          getResultCase() {
+        return ResultCase.forNumber(
+            resultCase_);
+      }
+
+      public Builder clearResult() {
+        resultCase_ = 0;
+        result_ = null;
+        onChanged();
+        return this;
+      }
+
       private int bitField0_;
 
       private java.lang.Object toolName_ = "";
@@ -15992,6 +16150,148 @@ private static final long serialVersionUID = 0L;
         onChanged();
         return this;
       }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.wireless.android.sdk.stats.SmlChatBotEvent.UpdateDepsRefactoringToolResult, com.google.wireless.android.sdk.stats.SmlChatBotEvent.UpdateDepsRefactoringToolResult.Builder, com.google.wireless.android.sdk.stats.SmlChatBotEvent.UpdateDepsRefactoringToolResultOrBuilder> updateDepsRefactoringToolResultBuilder_;
+      /**
+       * <code>.android_studio.SmlChatBotEvent.UpdateDepsRefactoringToolResult update_deps_refactoring_tool_result = 5;</code>
+       * @return Whether the updateDepsRefactoringToolResult field is set.
+       */
+      @java.lang.Override
+      public boolean hasUpdateDepsRefactoringToolResult() {
+        return resultCase_ == 5;
+      }
+      /**
+       * <code>.android_studio.SmlChatBotEvent.UpdateDepsRefactoringToolResult update_deps_refactoring_tool_result = 5;</code>
+       * @return The updateDepsRefactoringToolResult.
+       */
+      @java.lang.Override
+      public com.google.wireless.android.sdk.stats.SmlChatBotEvent.UpdateDepsRefactoringToolResult getUpdateDepsRefactoringToolResult() {
+        if (updateDepsRefactoringToolResultBuilder_ == null) {
+          if (resultCase_ == 5) {
+            return (com.google.wireless.android.sdk.stats.SmlChatBotEvent.UpdateDepsRefactoringToolResult) result_;
+          }
+          return com.google.wireless.android.sdk.stats.SmlChatBotEvent.UpdateDepsRefactoringToolResult.getDefaultInstance();
+        } else {
+          if (resultCase_ == 5) {
+            return updateDepsRefactoringToolResultBuilder_.getMessage();
+          }
+          return com.google.wireless.android.sdk.stats.SmlChatBotEvent.UpdateDepsRefactoringToolResult.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.android_studio.SmlChatBotEvent.UpdateDepsRefactoringToolResult update_deps_refactoring_tool_result = 5;</code>
+       */
+      public Builder setUpdateDepsRefactoringToolResult(com.google.wireless.android.sdk.stats.SmlChatBotEvent.UpdateDepsRefactoringToolResult value) {
+        if (updateDepsRefactoringToolResultBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          result_ = value;
+          onChanged();
+        } else {
+          updateDepsRefactoringToolResultBuilder_.setMessage(value);
+        }
+        resultCase_ = 5;
+        return this;
+      }
+      /**
+       * <code>.android_studio.SmlChatBotEvent.UpdateDepsRefactoringToolResult update_deps_refactoring_tool_result = 5;</code>
+       */
+      public Builder setUpdateDepsRefactoringToolResult(
+          com.google.wireless.android.sdk.stats.SmlChatBotEvent.UpdateDepsRefactoringToolResult.Builder builderForValue) {
+        if (updateDepsRefactoringToolResultBuilder_ == null) {
+          result_ = builderForValue.build();
+          onChanged();
+        } else {
+          updateDepsRefactoringToolResultBuilder_.setMessage(builderForValue.build());
+        }
+        resultCase_ = 5;
+        return this;
+      }
+      /**
+       * <code>.android_studio.SmlChatBotEvent.UpdateDepsRefactoringToolResult update_deps_refactoring_tool_result = 5;</code>
+       */
+      public Builder mergeUpdateDepsRefactoringToolResult(com.google.wireless.android.sdk.stats.SmlChatBotEvent.UpdateDepsRefactoringToolResult value) {
+        if (updateDepsRefactoringToolResultBuilder_ == null) {
+          if (resultCase_ == 5 &&
+              result_ != com.google.wireless.android.sdk.stats.SmlChatBotEvent.UpdateDepsRefactoringToolResult.getDefaultInstance()) {
+            result_ = com.google.wireless.android.sdk.stats.SmlChatBotEvent.UpdateDepsRefactoringToolResult.newBuilder((com.google.wireless.android.sdk.stats.SmlChatBotEvent.UpdateDepsRefactoringToolResult) result_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            result_ = value;
+          }
+          onChanged();
+        } else {
+          if (resultCase_ == 5) {
+            updateDepsRefactoringToolResultBuilder_.mergeFrom(value);
+          } else {
+            updateDepsRefactoringToolResultBuilder_.setMessage(value);
+          }
+        }
+        resultCase_ = 5;
+        return this;
+      }
+      /**
+       * <code>.android_studio.SmlChatBotEvent.UpdateDepsRefactoringToolResult update_deps_refactoring_tool_result = 5;</code>
+       */
+      public Builder clearUpdateDepsRefactoringToolResult() {
+        if (updateDepsRefactoringToolResultBuilder_ == null) {
+          if (resultCase_ == 5) {
+            resultCase_ = 0;
+            result_ = null;
+            onChanged();
+          }
+        } else {
+          if (resultCase_ == 5) {
+            resultCase_ = 0;
+            result_ = null;
+          }
+          updateDepsRefactoringToolResultBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>.android_studio.SmlChatBotEvent.UpdateDepsRefactoringToolResult update_deps_refactoring_tool_result = 5;</code>
+       */
+      public com.google.wireless.android.sdk.stats.SmlChatBotEvent.UpdateDepsRefactoringToolResult.Builder getUpdateDepsRefactoringToolResultBuilder() {
+        return getUpdateDepsRefactoringToolResultFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.android_studio.SmlChatBotEvent.UpdateDepsRefactoringToolResult update_deps_refactoring_tool_result = 5;</code>
+       */
+      @java.lang.Override
+      public com.google.wireless.android.sdk.stats.SmlChatBotEvent.UpdateDepsRefactoringToolResultOrBuilder getUpdateDepsRefactoringToolResultOrBuilder() {
+        if ((resultCase_ == 5) && (updateDepsRefactoringToolResultBuilder_ != null)) {
+          return updateDepsRefactoringToolResultBuilder_.getMessageOrBuilder();
+        } else {
+          if (resultCase_ == 5) {
+            return (com.google.wireless.android.sdk.stats.SmlChatBotEvent.UpdateDepsRefactoringToolResult) result_;
+          }
+          return com.google.wireless.android.sdk.stats.SmlChatBotEvent.UpdateDepsRefactoringToolResult.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.android_studio.SmlChatBotEvent.UpdateDepsRefactoringToolResult update_deps_refactoring_tool_result = 5;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.wireless.android.sdk.stats.SmlChatBotEvent.UpdateDepsRefactoringToolResult, com.google.wireless.android.sdk.stats.SmlChatBotEvent.UpdateDepsRefactoringToolResult.Builder, com.google.wireless.android.sdk.stats.SmlChatBotEvent.UpdateDepsRefactoringToolResultOrBuilder> 
+          getUpdateDepsRefactoringToolResultFieldBuilder() {
+        if (updateDepsRefactoringToolResultBuilder_ == null) {
+          if (!(resultCase_ == 5)) {
+            result_ = com.google.wireless.android.sdk.stats.SmlChatBotEvent.UpdateDepsRefactoringToolResult.getDefaultInstance();
+          }
+          updateDepsRefactoringToolResultBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.wireless.android.sdk.stats.SmlChatBotEvent.UpdateDepsRefactoringToolResult, com.google.wireless.android.sdk.stats.SmlChatBotEvent.UpdateDepsRefactoringToolResult.Builder, com.google.wireless.android.sdk.stats.SmlChatBotEvent.UpdateDepsRefactoringToolResultOrBuilder>(
+                  (com.google.wireless.android.sdk.stats.SmlChatBotEvent.UpdateDepsRefactoringToolResult) result_,
+                  getParentForChildren(),
+                  isClean());
+          result_ = null;
+        }
+        resultCase_ = 5;
+        onChanged();
+        return updateDepsRefactoringToolResultBuilder_;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -16051,6 +16351,1954 @@ private static final long serialVersionUID = 0L;
 
     @java.lang.Override
     public com.google.wireless.android.sdk.stats.SmlChatBotEvent.ToolCallResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface UpdateDepsRefactoringToolResultOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:android_studio.SmlChatBotEvent.UpdateDepsRefactoringToolResult)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated .android_studio.SmlChatBotEvent.UpdateDepsRefactoringToolResult.DependencySuggestion dependency_suggestions = 1;</code>
+     */
+    java.util.List<com.google.wireless.android.sdk.stats.SmlChatBotEvent.UpdateDepsRefactoringToolResult.DependencySuggestion> 
+        getDependencySuggestionsList();
+    /**
+     * <code>repeated .android_studio.SmlChatBotEvent.UpdateDepsRefactoringToolResult.DependencySuggestion dependency_suggestions = 1;</code>
+     */
+    com.google.wireless.android.sdk.stats.SmlChatBotEvent.UpdateDepsRefactoringToolResult.DependencySuggestion getDependencySuggestions(int index);
+    /**
+     * <code>repeated .android_studio.SmlChatBotEvent.UpdateDepsRefactoringToolResult.DependencySuggestion dependency_suggestions = 1;</code>
+     */
+    int getDependencySuggestionsCount();
+    /**
+     * <code>repeated .android_studio.SmlChatBotEvent.UpdateDepsRefactoringToolResult.DependencySuggestion dependency_suggestions = 1;</code>
+     */
+    java.util.List<? extends com.google.wireless.android.sdk.stats.SmlChatBotEvent.UpdateDepsRefactoringToolResult.DependencySuggestionOrBuilder> 
+        getDependencySuggestionsOrBuilderList();
+    /**
+     * <code>repeated .android_studio.SmlChatBotEvent.UpdateDepsRefactoringToolResult.DependencySuggestion dependency_suggestions = 1;</code>
+     */
+    com.google.wireless.android.sdk.stats.SmlChatBotEvent.UpdateDepsRefactoringToolResult.DependencySuggestionOrBuilder getDependencySuggestionsOrBuilder(
+        int index);
+  }
+  /**
+   * <pre>
+   * The result of the update dependencies tool which indicates the
+   * suggested dependency updates. Also contains information if the user
+   * accepted/rejected the suggestions.
+   * </pre>
+   *
+   * Protobuf type {@code android_studio.SmlChatBotEvent.UpdateDepsRefactoringToolResult}
+   */
+  public static final class UpdateDepsRefactoringToolResult extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:android_studio.SmlChatBotEvent.UpdateDepsRefactoringToolResult)
+      UpdateDepsRefactoringToolResultOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use UpdateDepsRefactoringToolResult.newBuilder() to construct.
+    private UpdateDepsRefactoringToolResult(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private UpdateDepsRefactoringToolResult() {
+      dependencySuggestions_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new UpdateDepsRefactoringToolResult();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_SmlChatBotEvent_UpdateDepsRefactoringToolResult_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_SmlChatBotEvent_UpdateDepsRefactoringToolResult_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.google.wireless.android.sdk.stats.SmlChatBotEvent.UpdateDepsRefactoringToolResult.class, com.google.wireless.android.sdk.stats.SmlChatBotEvent.UpdateDepsRefactoringToolResult.Builder.class);
+    }
+
+    public interface DependencySuggestionOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:android_studio.SmlChatBotEvent.UpdateDepsRefactoringToolResult.DependencySuggestion)
+        com.google.protobuf.MessageOrBuilder {
+
+      /**
+       * <pre>
+       * The artifact ID of the dependency.
+       * </pre>
+       *
+       * <code>optional string artifact = 1;</code>
+       * @return Whether the artifact field is set.
+       */
+      boolean hasArtifact();
+      /**
+       * <pre>
+       * The artifact ID of the dependency.
+       * </pre>
+       *
+       * <code>optional string artifact = 1;</code>
+       * @return The artifact.
+       */
+      java.lang.String getArtifact();
+      /**
+       * <pre>
+       * The artifact ID of the dependency.
+       * </pre>
+       *
+       * <code>optional string artifact = 1;</code>
+       * @return The bytes for artifact.
+       */
+      com.google.protobuf.ByteString
+          getArtifactBytes();
+
+      /**
+       * <pre>
+       * The current version of the dependency.
+       * </pre>
+       *
+       * <code>optional string from_version = 2;</code>
+       * @return Whether the fromVersion field is set.
+       */
+      boolean hasFromVersion();
+      /**
+       * <pre>
+       * The current version of the dependency.
+       * </pre>
+       *
+       * <code>optional string from_version = 2;</code>
+       * @return The fromVersion.
+       */
+      java.lang.String getFromVersion();
+      /**
+       * <pre>
+       * The current version of the dependency.
+       * </pre>
+       *
+       * <code>optional string from_version = 2;</code>
+       * @return The bytes for fromVersion.
+       */
+      com.google.protobuf.ByteString
+          getFromVersionBytes();
+
+      /**
+       * <pre>
+       * The target version of the dependency.
+       * </pre>
+       *
+       * <code>optional string to_version = 3;</code>
+       * @return Whether the toVersion field is set.
+       */
+      boolean hasToVersion();
+      /**
+       * <pre>
+       * The target version of the dependency.
+       * </pre>
+       *
+       * <code>optional string to_version = 3;</code>
+       * @return The toVersion.
+       */
+      java.lang.String getToVersion();
+      /**
+       * <pre>
+       * The target version of the dependency.
+       * </pre>
+       *
+       * <code>optional string to_version = 3;</code>
+       * @return The bytes for toVersion.
+       */
+      com.google.protobuf.ByteString
+          getToVersionBytes();
+
+      /**
+       * <pre>
+       * Whether the dependency suggestion was accepted by the user.
+       * </pre>
+       *
+       * <code>optional bool accepted = 4;</code>
+       * @return Whether the accepted field is set.
+       */
+      boolean hasAccepted();
+      /**
+       * <pre>
+       * Whether the dependency suggestion was accepted by the user.
+       * </pre>
+       *
+       * <code>optional bool accepted = 4;</code>
+       * @return The accepted.
+       */
+      boolean getAccepted();
+    }
+    /**
+     * <pre>
+     * The dependency suggestion made by the tool.
+     * </pre>
+     *
+     * Protobuf type {@code android_studio.SmlChatBotEvent.UpdateDepsRefactoringToolResult.DependencySuggestion}
+     */
+    public static final class DependencySuggestion extends
+        com.google.protobuf.GeneratedMessageV3 implements
+        // @@protoc_insertion_point(message_implements:android_studio.SmlChatBotEvent.UpdateDepsRefactoringToolResult.DependencySuggestion)
+        DependencySuggestionOrBuilder {
+    private static final long serialVersionUID = 0L;
+      // Use DependencySuggestion.newBuilder() to construct.
+      private DependencySuggestion(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+        super(builder);
+      }
+      private DependencySuggestion() {
+        artifact_ = "";
+        fromVersion_ = "";
+        toVersion_ = "";
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new DependencySuggestion();
+      }
+
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_SmlChatBotEvent_UpdateDepsRefactoringToolResult_DependencySuggestion_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_SmlChatBotEvent_UpdateDepsRefactoringToolResult_DependencySuggestion_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.google.wireless.android.sdk.stats.SmlChatBotEvent.UpdateDepsRefactoringToolResult.DependencySuggestion.class, com.google.wireless.android.sdk.stats.SmlChatBotEvent.UpdateDepsRefactoringToolResult.DependencySuggestion.Builder.class);
+      }
+
+      private int bitField0_;
+      public static final int ARTIFACT_FIELD_NUMBER = 1;
+      @SuppressWarnings("serial")
+      private volatile java.lang.Object artifact_ = "";
+      /**
+       * <pre>
+       * The artifact ID of the dependency.
+       * </pre>
+       *
+       * <code>optional string artifact = 1;</code>
+       * @return Whether the artifact field is set.
+       */
+      @java.lang.Override
+      public boolean hasArtifact() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <pre>
+       * The artifact ID of the dependency.
+       * </pre>
+       *
+       * <code>optional string artifact = 1;</code>
+       * @return The artifact.
+       */
+      @java.lang.Override
+      public java.lang.String getArtifact() {
+        java.lang.Object ref = artifact_;
+        if (ref instanceof java.lang.String) {
+          return (java.lang.String) ref;
+        } else {
+          com.google.protobuf.ByteString bs = 
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            artifact_ = s;
+          }
+          return s;
+        }
+      }
+      /**
+       * <pre>
+       * The artifact ID of the dependency.
+       * </pre>
+       *
+       * <code>optional string artifact = 1;</code>
+       * @return The bytes for artifact.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getArtifactBytes() {
+        java.lang.Object ref = artifact_;
+        if (ref instanceof java.lang.String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          artifact_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+
+      public static final int FROM_VERSION_FIELD_NUMBER = 2;
+      @SuppressWarnings("serial")
+      private volatile java.lang.Object fromVersion_ = "";
+      /**
+       * <pre>
+       * The current version of the dependency.
+       * </pre>
+       *
+       * <code>optional string from_version = 2;</code>
+       * @return Whether the fromVersion field is set.
+       */
+      @java.lang.Override
+      public boolean hasFromVersion() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <pre>
+       * The current version of the dependency.
+       * </pre>
+       *
+       * <code>optional string from_version = 2;</code>
+       * @return The fromVersion.
+       */
+      @java.lang.Override
+      public java.lang.String getFromVersion() {
+        java.lang.Object ref = fromVersion_;
+        if (ref instanceof java.lang.String) {
+          return (java.lang.String) ref;
+        } else {
+          com.google.protobuf.ByteString bs = 
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            fromVersion_ = s;
+          }
+          return s;
+        }
+      }
+      /**
+       * <pre>
+       * The current version of the dependency.
+       * </pre>
+       *
+       * <code>optional string from_version = 2;</code>
+       * @return The bytes for fromVersion.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getFromVersionBytes() {
+        java.lang.Object ref = fromVersion_;
+        if (ref instanceof java.lang.String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          fromVersion_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+
+      public static final int TO_VERSION_FIELD_NUMBER = 3;
+      @SuppressWarnings("serial")
+      private volatile java.lang.Object toVersion_ = "";
+      /**
+       * <pre>
+       * The target version of the dependency.
+       * </pre>
+       *
+       * <code>optional string to_version = 3;</code>
+       * @return Whether the toVersion field is set.
+       */
+      @java.lang.Override
+      public boolean hasToVersion() {
+        return ((bitField0_ & 0x00000004) != 0);
+      }
+      /**
+       * <pre>
+       * The target version of the dependency.
+       * </pre>
+       *
+       * <code>optional string to_version = 3;</code>
+       * @return The toVersion.
+       */
+      @java.lang.Override
+      public java.lang.String getToVersion() {
+        java.lang.Object ref = toVersion_;
+        if (ref instanceof java.lang.String) {
+          return (java.lang.String) ref;
+        } else {
+          com.google.protobuf.ByteString bs = 
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            toVersion_ = s;
+          }
+          return s;
+        }
+      }
+      /**
+       * <pre>
+       * The target version of the dependency.
+       * </pre>
+       *
+       * <code>optional string to_version = 3;</code>
+       * @return The bytes for toVersion.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getToVersionBytes() {
+        java.lang.Object ref = toVersion_;
+        if (ref instanceof java.lang.String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          toVersion_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+
+      public static final int ACCEPTED_FIELD_NUMBER = 4;
+      private boolean accepted_ = false;
+      /**
+       * <pre>
+       * Whether the dependency suggestion was accepted by the user.
+       * </pre>
+       *
+       * <code>optional bool accepted = 4;</code>
+       * @return Whether the accepted field is set.
+       */
+      @java.lang.Override
+      public boolean hasAccepted() {
+        return ((bitField0_ & 0x00000008) != 0);
+      }
+      /**
+       * <pre>
+       * Whether the dependency suggestion was accepted by the user.
+       * </pre>
+       *
+       * <code>optional bool accepted = 4;</code>
+       * @return The accepted.
+       */
+      @java.lang.Override
+      public boolean getAccepted() {
+        return accepted_;
+      }
+
+      private byte memoizedIsInitialized = -1;
+      @java.lang.Override
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      @java.lang.Override
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        if (((bitField0_ & 0x00000001) != 0)) {
+          com.google.protobuf.GeneratedMessageV3.writeString(output, 1, artifact_);
+        }
+        if (((bitField0_ & 0x00000002) != 0)) {
+          com.google.protobuf.GeneratedMessageV3.writeString(output, 2, fromVersion_);
+        }
+        if (((bitField0_ & 0x00000004) != 0)) {
+          com.google.protobuf.GeneratedMessageV3.writeString(output, 3, toVersion_);
+        }
+        if (((bitField0_ & 0x00000008) != 0)) {
+          output.writeBool(4, accepted_);
+        }
+        getUnknownFields().writeTo(output);
+      }
+
+      @java.lang.Override
+      public int getSerializedSize() {
+        int size = memoizedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        if (((bitField0_ & 0x00000001) != 0)) {
+          size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, artifact_);
+        }
+        if (((bitField0_ & 0x00000002) != 0)) {
+          size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, fromVersion_);
+        }
+        if (((bitField0_ & 0x00000004) != 0)) {
+          size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, toVersion_);
+        }
+        if (((bitField0_ & 0x00000008) != 0)) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeBoolSize(4, accepted_);
+        }
+        size += getUnknownFields().getSerializedSize();
+        memoizedSize = size;
+        return size;
+      }
+
+      @java.lang.Override
+      public boolean equals(final java.lang.Object obj) {
+        if (obj == this) {
+         return true;
+        }
+        if (!(obj instanceof com.google.wireless.android.sdk.stats.SmlChatBotEvent.UpdateDepsRefactoringToolResult.DependencySuggestion)) {
+          return super.equals(obj);
+        }
+        com.google.wireless.android.sdk.stats.SmlChatBotEvent.UpdateDepsRefactoringToolResult.DependencySuggestion other = (com.google.wireless.android.sdk.stats.SmlChatBotEvent.UpdateDepsRefactoringToolResult.DependencySuggestion) obj;
+
+        if (hasArtifact() != other.hasArtifact()) return false;
+        if (hasArtifact()) {
+          if (!getArtifact()
+              .equals(other.getArtifact())) return false;
+        }
+        if (hasFromVersion() != other.hasFromVersion()) return false;
+        if (hasFromVersion()) {
+          if (!getFromVersion()
+              .equals(other.getFromVersion())) return false;
+        }
+        if (hasToVersion() != other.hasToVersion()) return false;
+        if (hasToVersion()) {
+          if (!getToVersion()
+              .equals(other.getToVersion())) return false;
+        }
+        if (hasAccepted() != other.hasAccepted()) return false;
+        if (hasAccepted()) {
+          if (getAccepted()
+              != other.getAccepted()) return false;
+        }
+        if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+        return true;
+      }
+
+      @java.lang.Override
+      public int hashCode() {
+        if (memoizedHashCode != 0) {
+          return memoizedHashCode;
+        }
+        int hash = 41;
+        hash = (19 * hash) + getDescriptor().hashCode();
+        if (hasArtifact()) {
+          hash = (37 * hash) + ARTIFACT_FIELD_NUMBER;
+          hash = (53 * hash) + getArtifact().hashCode();
+        }
+        if (hasFromVersion()) {
+          hash = (37 * hash) + FROM_VERSION_FIELD_NUMBER;
+          hash = (53 * hash) + getFromVersion().hashCode();
+        }
+        if (hasToVersion()) {
+          hash = (37 * hash) + TO_VERSION_FIELD_NUMBER;
+          hash = (53 * hash) + getToVersion().hashCode();
+        }
+        if (hasAccepted()) {
+          hash = (37 * hash) + ACCEPTED_FIELD_NUMBER;
+          hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+              getAccepted());
+        }
+        hash = (29 * hash) + getUnknownFields().hashCode();
+        memoizedHashCode = hash;
+        return hash;
+      }
+
+      public static com.google.wireless.android.sdk.stats.SmlChatBotEvent.UpdateDepsRefactoringToolResult.DependencySuggestion parseFrom(
+          java.nio.ByteBuffer data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static com.google.wireless.android.sdk.stats.SmlChatBotEvent.UpdateDepsRefactoringToolResult.DependencySuggestion parseFrom(
+          java.nio.ByteBuffer data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static com.google.wireless.android.sdk.stats.SmlChatBotEvent.UpdateDepsRefactoringToolResult.DependencySuggestion parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static com.google.wireless.android.sdk.stats.SmlChatBotEvent.UpdateDepsRefactoringToolResult.DependencySuggestion parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static com.google.wireless.android.sdk.stats.SmlChatBotEvent.UpdateDepsRefactoringToolResult.DependencySuggestion parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static com.google.wireless.android.sdk.stats.SmlChatBotEvent.UpdateDepsRefactoringToolResult.DependencySuggestion parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static com.google.wireless.android.sdk.stats.SmlChatBotEvent.UpdateDepsRefactoringToolResult.DependencySuggestion parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static com.google.wireless.android.sdk.stats.SmlChatBotEvent.UpdateDepsRefactoringToolResult.DependencySuggestion parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static com.google.wireless.android.sdk.stats.SmlChatBotEvent.UpdateDepsRefactoringToolResult.DependencySuggestion parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input);
+      }
+      public static com.google.wireless.android.sdk.stats.SmlChatBotEvent.UpdateDepsRefactoringToolResult.DependencySuggestion parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static com.google.wireless.android.sdk.stats.SmlChatBotEvent.UpdateDepsRefactoringToolResult.DependencySuggestion parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static com.google.wireless.android.sdk.stats.SmlChatBotEvent.UpdateDepsRefactoringToolResult.DependencySuggestion parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      @java.lang.Override
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder() {
+        return DEFAULT_INSTANCE.toBuilder();
+      }
+      public static Builder newBuilder(com.google.wireless.android.sdk.stats.SmlChatBotEvent.UpdateDepsRefactoringToolResult.DependencySuggestion prototype) {
+        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+      }
+      @java.lang.Override
+      public Builder toBuilder() {
+        return this == DEFAULT_INSTANCE
+            ? new Builder() : new Builder().mergeFrom(this);
+      }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * <pre>
+       * The dependency suggestion made by the tool.
+       * </pre>
+       *
+       * Protobuf type {@code android_studio.SmlChatBotEvent.UpdateDepsRefactoringToolResult.DependencySuggestion}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:android_studio.SmlChatBotEvent.UpdateDepsRefactoringToolResult.DependencySuggestion)
+          com.google.wireless.android.sdk.stats.SmlChatBotEvent.UpdateDepsRefactoringToolResult.DependencySuggestionOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_SmlChatBotEvent_UpdateDepsRefactoringToolResult_DependencySuggestion_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_SmlChatBotEvent_UpdateDepsRefactoringToolResult_DependencySuggestion_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  com.google.wireless.android.sdk.stats.SmlChatBotEvent.UpdateDepsRefactoringToolResult.DependencySuggestion.class, com.google.wireless.android.sdk.stats.SmlChatBotEvent.UpdateDepsRefactoringToolResult.DependencySuggestion.Builder.class);
+        }
+
+        // Construct using com.google.wireless.android.sdk.stats.SmlChatBotEvent.UpdateDepsRefactoringToolResult.DependencySuggestion.newBuilder()
+        private Builder() {
+
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          super(parent);
+
+        }
+        @java.lang.Override
+        public Builder clear() {
+          super.clear();
+          bitField0_ = 0;
+          artifact_ = "";
+          fromVersion_ = "";
+          toVersion_ = "";
+          accepted_ = false;
+          return this;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_SmlChatBotEvent_UpdateDepsRefactoringToolResult_DependencySuggestion_descriptor;
+        }
+
+        @java.lang.Override
+        public com.google.wireless.android.sdk.stats.SmlChatBotEvent.UpdateDepsRefactoringToolResult.DependencySuggestion getDefaultInstanceForType() {
+          return com.google.wireless.android.sdk.stats.SmlChatBotEvent.UpdateDepsRefactoringToolResult.DependencySuggestion.getDefaultInstance();
+        }
+
+        @java.lang.Override
+        public com.google.wireless.android.sdk.stats.SmlChatBotEvent.UpdateDepsRefactoringToolResult.DependencySuggestion build() {
+          com.google.wireless.android.sdk.stats.SmlChatBotEvent.UpdateDepsRefactoringToolResult.DependencySuggestion result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        @java.lang.Override
+        public com.google.wireless.android.sdk.stats.SmlChatBotEvent.UpdateDepsRefactoringToolResult.DependencySuggestion buildPartial() {
+          com.google.wireless.android.sdk.stats.SmlChatBotEvent.UpdateDepsRefactoringToolResult.DependencySuggestion result = new com.google.wireless.android.sdk.stats.SmlChatBotEvent.UpdateDepsRefactoringToolResult.DependencySuggestion(this);
+          if (bitField0_ != 0) { buildPartial0(result); }
+          onBuilt();
+          return result;
+        }
+
+        private void buildPartial0(com.google.wireless.android.sdk.stats.SmlChatBotEvent.UpdateDepsRefactoringToolResult.DependencySuggestion result) {
+          int from_bitField0_ = bitField0_;
+          int to_bitField0_ = 0;
+          if (((from_bitField0_ & 0x00000001) != 0)) {
+            result.artifact_ = artifact_;
+            to_bitField0_ |= 0x00000001;
+          }
+          if (((from_bitField0_ & 0x00000002) != 0)) {
+            result.fromVersion_ = fromVersion_;
+            to_bitField0_ |= 0x00000002;
+          }
+          if (((from_bitField0_ & 0x00000004) != 0)) {
+            result.toVersion_ = toVersion_;
+            to_bitField0_ |= 0x00000004;
+          }
+          if (((from_bitField0_ & 0x00000008) != 0)) {
+            result.accepted_ = accepted_;
+            to_bitField0_ |= 0x00000008;
+          }
+          result.bitField0_ |= to_bitField0_;
+        }
+
+        @java.lang.Override
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof com.google.wireless.android.sdk.stats.SmlChatBotEvent.UpdateDepsRefactoringToolResult.DependencySuggestion) {
+            return mergeFrom((com.google.wireless.android.sdk.stats.SmlChatBotEvent.UpdateDepsRefactoringToolResult.DependencySuggestion)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(com.google.wireless.android.sdk.stats.SmlChatBotEvent.UpdateDepsRefactoringToolResult.DependencySuggestion other) {
+          if (other == com.google.wireless.android.sdk.stats.SmlChatBotEvent.UpdateDepsRefactoringToolResult.DependencySuggestion.getDefaultInstance()) return this;
+          if (other.hasArtifact()) {
+            artifact_ = other.artifact_;
+            bitField0_ |= 0x00000001;
+            onChanged();
+          }
+          if (other.hasFromVersion()) {
+            fromVersion_ = other.fromVersion_;
+            bitField0_ |= 0x00000002;
+            onChanged();
+          }
+          if (other.hasToVersion()) {
+            toVersion_ = other.toVersion_;
+            bitField0_ |= 0x00000004;
+            onChanged();
+          }
+          if (other.hasAccepted()) {
+            setAccepted(other.getAccepted());
+          }
+          this.mergeUnknownFields(other.getUnknownFields());
+          onChanged();
+          return this;
+        }
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        @java.lang.Override
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          if (extensionRegistry == null) {
+            throw new java.lang.NullPointerException();
+          }
+          try {
+            boolean done = false;
+            while (!done) {
+              int tag = input.readTag();
+              switch (tag) {
+                case 0:
+                  done = true;
+                  break;
+                case 10: {
+                  artifact_ = input.readBytes();
+                  bitField0_ |= 0x00000001;
+                  break;
+                } // case 10
+                case 18: {
+                  fromVersion_ = input.readBytes();
+                  bitField0_ |= 0x00000002;
+                  break;
+                } // case 18
+                case 26: {
+                  toVersion_ = input.readBytes();
+                  bitField0_ |= 0x00000004;
+                  break;
+                } // case 26
+                case 32: {
+                  accepted_ = input.readBool();
+                  bitField0_ |= 0x00000008;
+                  break;
+                } // case 32
+                default: {
+                  if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                    done = true; // was an endgroup tag
+                  }
+                  break;
+                } // default:
+              } // switch (tag)
+            } // while (!done)
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            throw e.unwrapIOException();
+          } finally {
+            onChanged();
+          } // finally
+          return this;
+        }
+        private int bitField0_;
+
+        private java.lang.Object artifact_ = "";
+        /**
+         * <pre>
+         * The artifact ID of the dependency.
+         * </pre>
+         *
+         * <code>optional string artifact = 1;</code>
+         * @return Whether the artifact field is set.
+         */
+        public boolean hasArtifact() {
+          return ((bitField0_ & 0x00000001) != 0);
+        }
+        /**
+         * <pre>
+         * The artifact ID of the dependency.
+         * </pre>
+         *
+         * <code>optional string artifact = 1;</code>
+         * @return The artifact.
+         */
+        public java.lang.String getArtifact() {
+          java.lang.Object ref = artifact_;
+          if (!(ref instanceof java.lang.String)) {
+            com.google.protobuf.ByteString bs =
+                (com.google.protobuf.ByteString) ref;
+            java.lang.String s = bs.toStringUtf8();
+            if (bs.isValidUtf8()) {
+              artifact_ = s;
+            }
+            return s;
+          } else {
+            return (java.lang.String) ref;
+          }
+        }
+        /**
+         * <pre>
+         * The artifact ID of the dependency.
+         * </pre>
+         *
+         * <code>optional string artifact = 1;</code>
+         * @return The bytes for artifact.
+         */
+        public com.google.protobuf.ByteString
+            getArtifactBytes() {
+          java.lang.Object ref = artifact_;
+          if (ref instanceof String) {
+            com.google.protobuf.ByteString b = 
+                com.google.protobuf.ByteString.copyFromUtf8(
+                    (java.lang.String) ref);
+            artifact_ = b;
+            return b;
+          } else {
+            return (com.google.protobuf.ByteString) ref;
+          }
+        }
+        /**
+         * <pre>
+         * The artifact ID of the dependency.
+         * </pre>
+         *
+         * <code>optional string artifact = 1;</code>
+         * @param value The artifact to set.
+         * @return This builder for chaining.
+         */
+        public Builder setArtifact(
+            java.lang.String value) {
+          if (value == null) { throw new NullPointerException(); }
+          artifact_ = value;
+          bitField0_ |= 0x00000001;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * The artifact ID of the dependency.
+         * </pre>
+         *
+         * <code>optional string artifact = 1;</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearArtifact() {
+          artifact_ = getDefaultInstance().getArtifact();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * The artifact ID of the dependency.
+         * </pre>
+         *
+         * <code>optional string artifact = 1;</code>
+         * @param value The bytes for artifact to set.
+         * @return This builder for chaining.
+         */
+        public Builder setArtifactBytes(
+            com.google.protobuf.ByteString value) {
+          if (value == null) { throw new NullPointerException(); }
+          artifact_ = value;
+          bitField0_ |= 0x00000001;
+          onChanged();
+          return this;
+        }
+
+        private java.lang.Object fromVersion_ = "";
+        /**
+         * <pre>
+         * The current version of the dependency.
+         * </pre>
+         *
+         * <code>optional string from_version = 2;</code>
+         * @return Whether the fromVersion field is set.
+         */
+        public boolean hasFromVersion() {
+          return ((bitField0_ & 0x00000002) != 0);
+        }
+        /**
+         * <pre>
+         * The current version of the dependency.
+         * </pre>
+         *
+         * <code>optional string from_version = 2;</code>
+         * @return The fromVersion.
+         */
+        public java.lang.String getFromVersion() {
+          java.lang.Object ref = fromVersion_;
+          if (!(ref instanceof java.lang.String)) {
+            com.google.protobuf.ByteString bs =
+                (com.google.protobuf.ByteString) ref;
+            java.lang.String s = bs.toStringUtf8();
+            if (bs.isValidUtf8()) {
+              fromVersion_ = s;
+            }
+            return s;
+          } else {
+            return (java.lang.String) ref;
+          }
+        }
+        /**
+         * <pre>
+         * The current version of the dependency.
+         * </pre>
+         *
+         * <code>optional string from_version = 2;</code>
+         * @return The bytes for fromVersion.
+         */
+        public com.google.protobuf.ByteString
+            getFromVersionBytes() {
+          java.lang.Object ref = fromVersion_;
+          if (ref instanceof String) {
+            com.google.protobuf.ByteString b = 
+                com.google.protobuf.ByteString.copyFromUtf8(
+                    (java.lang.String) ref);
+            fromVersion_ = b;
+            return b;
+          } else {
+            return (com.google.protobuf.ByteString) ref;
+          }
+        }
+        /**
+         * <pre>
+         * The current version of the dependency.
+         * </pre>
+         *
+         * <code>optional string from_version = 2;</code>
+         * @param value The fromVersion to set.
+         * @return This builder for chaining.
+         */
+        public Builder setFromVersion(
+            java.lang.String value) {
+          if (value == null) { throw new NullPointerException(); }
+          fromVersion_ = value;
+          bitField0_ |= 0x00000002;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * The current version of the dependency.
+         * </pre>
+         *
+         * <code>optional string from_version = 2;</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearFromVersion() {
+          fromVersion_ = getDefaultInstance().getFromVersion();
+          bitField0_ = (bitField0_ & ~0x00000002);
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * The current version of the dependency.
+         * </pre>
+         *
+         * <code>optional string from_version = 2;</code>
+         * @param value The bytes for fromVersion to set.
+         * @return This builder for chaining.
+         */
+        public Builder setFromVersionBytes(
+            com.google.protobuf.ByteString value) {
+          if (value == null) { throw new NullPointerException(); }
+          fromVersion_ = value;
+          bitField0_ |= 0x00000002;
+          onChanged();
+          return this;
+        }
+
+        private java.lang.Object toVersion_ = "";
+        /**
+         * <pre>
+         * The target version of the dependency.
+         * </pre>
+         *
+         * <code>optional string to_version = 3;</code>
+         * @return Whether the toVersion field is set.
+         */
+        public boolean hasToVersion() {
+          return ((bitField0_ & 0x00000004) != 0);
+        }
+        /**
+         * <pre>
+         * The target version of the dependency.
+         * </pre>
+         *
+         * <code>optional string to_version = 3;</code>
+         * @return The toVersion.
+         */
+        public java.lang.String getToVersion() {
+          java.lang.Object ref = toVersion_;
+          if (!(ref instanceof java.lang.String)) {
+            com.google.protobuf.ByteString bs =
+                (com.google.protobuf.ByteString) ref;
+            java.lang.String s = bs.toStringUtf8();
+            if (bs.isValidUtf8()) {
+              toVersion_ = s;
+            }
+            return s;
+          } else {
+            return (java.lang.String) ref;
+          }
+        }
+        /**
+         * <pre>
+         * The target version of the dependency.
+         * </pre>
+         *
+         * <code>optional string to_version = 3;</code>
+         * @return The bytes for toVersion.
+         */
+        public com.google.protobuf.ByteString
+            getToVersionBytes() {
+          java.lang.Object ref = toVersion_;
+          if (ref instanceof String) {
+            com.google.protobuf.ByteString b = 
+                com.google.protobuf.ByteString.copyFromUtf8(
+                    (java.lang.String) ref);
+            toVersion_ = b;
+            return b;
+          } else {
+            return (com.google.protobuf.ByteString) ref;
+          }
+        }
+        /**
+         * <pre>
+         * The target version of the dependency.
+         * </pre>
+         *
+         * <code>optional string to_version = 3;</code>
+         * @param value The toVersion to set.
+         * @return This builder for chaining.
+         */
+        public Builder setToVersion(
+            java.lang.String value) {
+          if (value == null) { throw new NullPointerException(); }
+          toVersion_ = value;
+          bitField0_ |= 0x00000004;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * The target version of the dependency.
+         * </pre>
+         *
+         * <code>optional string to_version = 3;</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearToVersion() {
+          toVersion_ = getDefaultInstance().getToVersion();
+          bitField0_ = (bitField0_ & ~0x00000004);
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * The target version of the dependency.
+         * </pre>
+         *
+         * <code>optional string to_version = 3;</code>
+         * @param value The bytes for toVersion to set.
+         * @return This builder for chaining.
+         */
+        public Builder setToVersionBytes(
+            com.google.protobuf.ByteString value) {
+          if (value == null) { throw new NullPointerException(); }
+          toVersion_ = value;
+          bitField0_ |= 0x00000004;
+          onChanged();
+          return this;
+        }
+
+        private boolean accepted_ ;
+        /**
+         * <pre>
+         * Whether the dependency suggestion was accepted by the user.
+         * </pre>
+         *
+         * <code>optional bool accepted = 4;</code>
+         * @return Whether the accepted field is set.
+         */
+        @java.lang.Override
+        public boolean hasAccepted() {
+          return ((bitField0_ & 0x00000008) != 0);
+        }
+        /**
+         * <pre>
+         * Whether the dependency suggestion was accepted by the user.
+         * </pre>
+         *
+         * <code>optional bool accepted = 4;</code>
+         * @return The accepted.
+         */
+        @java.lang.Override
+        public boolean getAccepted() {
+          return accepted_;
+        }
+        /**
+         * <pre>
+         * Whether the dependency suggestion was accepted by the user.
+         * </pre>
+         *
+         * <code>optional bool accepted = 4;</code>
+         * @param value The accepted to set.
+         * @return This builder for chaining.
+         */
+        public Builder setAccepted(boolean value) {
+
+          accepted_ = value;
+          bitField0_ |= 0x00000008;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Whether the dependency suggestion was accepted by the user.
+         * </pre>
+         *
+         * <code>optional bool accepted = 4;</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearAccepted() {
+          bitField0_ = (bitField0_ & ~0x00000008);
+          accepted_ = false;
+          onChanged();
+          return this;
+        }
+        @java.lang.Override
+        public final Builder setUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.setUnknownFields(unknownFields);
+        }
+
+        @java.lang.Override
+        public final Builder mergeUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.mergeUnknownFields(unknownFields);
+        }
+
+
+        // @@protoc_insertion_point(builder_scope:android_studio.SmlChatBotEvent.UpdateDepsRefactoringToolResult.DependencySuggestion)
+      }
+
+      // @@protoc_insertion_point(class_scope:android_studio.SmlChatBotEvent.UpdateDepsRefactoringToolResult.DependencySuggestion)
+      private static final com.google.wireless.android.sdk.stats.SmlChatBotEvent.UpdateDepsRefactoringToolResult.DependencySuggestion DEFAULT_INSTANCE;
+      static {
+        DEFAULT_INSTANCE = new com.google.wireless.android.sdk.stats.SmlChatBotEvent.UpdateDepsRefactoringToolResult.DependencySuggestion();
+      }
+
+      public static com.google.wireless.android.sdk.stats.SmlChatBotEvent.UpdateDepsRefactoringToolResult.DependencySuggestion getDefaultInstance() {
+        return DEFAULT_INSTANCE;
+      }
+
+      @java.lang.Deprecated public static final com.google.protobuf.Parser<DependencySuggestion>
+          PARSER = new com.google.protobuf.AbstractParser<DependencySuggestion>() {
+        @java.lang.Override
+        public DependencySuggestion parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          Builder builder = newBuilder();
+          try {
+            builder.mergeFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            throw e.setUnfinishedMessage(builder.buildPartial());
+          } catch (com.google.protobuf.UninitializedMessageException e) {
+            throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+          } catch (java.io.IOException e) {
+            throw new com.google.protobuf.InvalidProtocolBufferException(e)
+                .setUnfinishedMessage(builder.buildPartial());
+          }
+          return builder.buildPartial();
+        }
+      };
+
+      public static com.google.protobuf.Parser<DependencySuggestion> parser() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<DependencySuggestion> getParserForType() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.wireless.android.sdk.stats.SmlChatBotEvent.UpdateDepsRefactoringToolResult.DependencySuggestion getDefaultInstanceForType() {
+        return DEFAULT_INSTANCE;
+      }
+
+    }
+
+    public static final int DEPENDENCY_SUGGESTIONS_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private java.util.List<com.google.wireless.android.sdk.stats.SmlChatBotEvent.UpdateDepsRefactoringToolResult.DependencySuggestion> dependencySuggestions_;
+    /**
+     * <code>repeated .android_studio.SmlChatBotEvent.UpdateDepsRefactoringToolResult.DependencySuggestion dependency_suggestions = 1;</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.google.wireless.android.sdk.stats.SmlChatBotEvent.UpdateDepsRefactoringToolResult.DependencySuggestion> getDependencySuggestionsList() {
+      return dependencySuggestions_;
+    }
+    /**
+     * <code>repeated .android_studio.SmlChatBotEvent.UpdateDepsRefactoringToolResult.DependencySuggestion dependency_suggestions = 1;</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.google.wireless.android.sdk.stats.SmlChatBotEvent.UpdateDepsRefactoringToolResult.DependencySuggestionOrBuilder> 
+        getDependencySuggestionsOrBuilderList() {
+      return dependencySuggestions_;
+    }
+    /**
+     * <code>repeated .android_studio.SmlChatBotEvent.UpdateDepsRefactoringToolResult.DependencySuggestion dependency_suggestions = 1;</code>
+     */
+    @java.lang.Override
+    public int getDependencySuggestionsCount() {
+      return dependencySuggestions_.size();
+    }
+    /**
+     * <code>repeated .android_studio.SmlChatBotEvent.UpdateDepsRefactoringToolResult.DependencySuggestion dependency_suggestions = 1;</code>
+     */
+    @java.lang.Override
+    public com.google.wireless.android.sdk.stats.SmlChatBotEvent.UpdateDepsRefactoringToolResult.DependencySuggestion getDependencySuggestions(int index) {
+      return dependencySuggestions_.get(index);
+    }
+    /**
+     * <code>repeated .android_studio.SmlChatBotEvent.UpdateDepsRefactoringToolResult.DependencySuggestion dependency_suggestions = 1;</code>
+     */
+    @java.lang.Override
+    public com.google.wireless.android.sdk.stats.SmlChatBotEvent.UpdateDepsRefactoringToolResult.DependencySuggestionOrBuilder getDependencySuggestionsOrBuilder(
+        int index) {
+      return dependencySuggestions_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < dependencySuggestions_.size(); i++) {
+        output.writeMessage(1, dependencySuggestions_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < dependencySuggestions_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, dependencySuggestions_.get(i));
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.google.wireless.android.sdk.stats.SmlChatBotEvent.UpdateDepsRefactoringToolResult)) {
+        return super.equals(obj);
+      }
+      com.google.wireless.android.sdk.stats.SmlChatBotEvent.UpdateDepsRefactoringToolResult other = (com.google.wireless.android.sdk.stats.SmlChatBotEvent.UpdateDepsRefactoringToolResult) obj;
+
+      if (!getDependencySuggestionsList()
+          .equals(other.getDependencySuggestionsList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getDependencySuggestionsCount() > 0) {
+        hash = (37 * hash) + DEPENDENCY_SUGGESTIONS_FIELD_NUMBER;
+        hash = (53 * hash) + getDependencySuggestionsList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.google.wireless.android.sdk.stats.SmlChatBotEvent.UpdateDepsRefactoringToolResult parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.google.wireless.android.sdk.stats.SmlChatBotEvent.UpdateDepsRefactoringToolResult parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.google.wireless.android.sdk.stats.SmlChatBotEvent.UpdateDepsRefactoringToolResult parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.google.wireless.android.sdk.stats.SmlChatBotEvent.UpdateDepsRefactoringToolResult parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.google.wireless.android.sdk.stats.SmlChatBotEvent.UpdateDepsRefactoringToolResult parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.google.wireless.android.sdk.stats.SmlChatBotEvent.UpdateDepsRefactoringToolResult parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.google.wireless.android.sdk.stats.SmlChatBotEvent.UpdateDepsRefactoringToolResult parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.google.wireless.android.sdk.stats.SmlChatBotEvent.UpdateDepsRefactoringToolResult parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.google.wireless.android.sdk.stats.SmlChatBotEvent.UpdateDepsRefactoringToolResult parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.google.wireless.android.sdk.stats.SmlChatBotEvent.UpdateDepsRefactoringToolResult parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.google.wireless.android.sdk.stats.SmlChatBotEvent.UpdateDepsRefactoringToolResult parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.google.wireless.android.sdk.stats.SmlChatBotEvent.UpdateDepsRefactoringToolResult parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.google.wireless.android.sdk.stats.SmlChatBotEvent.UpdateDepsRefactoringToolResult prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * The result of the update dependencies tool which indicates the
+     * suggested dependency updates. Also contains information if the user
+     * accepted/rejected the suggestions.
+     * </pre>
+     *
+     * Protobuf type {@code android_studio.SmlChatBotEvent.UpdateDepsRefactoringToolResult}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:android_studio.SmlChatBotEvent.UpdateDepsRefactoringToolResult)
+        com.google.wireless.android.sdk.stats.SmlChatBotEvent.UpdateDepsRefactoringToolResultOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_SmlChatBotEvent_UpdateDepsRefactoringToolResult_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_SmlChatBotEvent_UpdateDepsRefactoringToolResult_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.google.wireless.android.sdk.stats.SmlChatBotEvent.UpdateDepsRefactoringToolResult.class, com.google.wireless.android.sdk.stats.SmlChatBotEvent.UpdateDepsRefactoringToolResult.Builder.class);
+      }
+
+      // Construct using com.google.wireless.android.sdk.stats.SmlChatBotEvent.UpdateDepsRefactoringToolResult.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        if (dependencySuggestionsBuilder_ == null) {
+          dependencySuggestions_ = java.util.Collections.emptyList();
+        } else {
+          dependencySuggestions_ = null;
+          dependencySuggestionsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_SmlChatBotEvent_UpdateDepsRefactoringToolResult_descriptor;
+      }
+
+      @java.lang.Override
+      public com.google.wireless.android.sdk.stats.SmlChatBotEvent.UpdateDepsRefactoringToolResult getDefaultInstanceForType() {
+        return com.google.wireless.android.sdk.stats.SmlChatBotEvent.UpdateDepsRefactoringToolResult.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.google.wireless.android.sdk.stats.SmlChatBotEvent.UpdateDepsRefactoringToolResult build() {
+        com.google.wireless.android.sdk.stats.SmlChatBotEvent.UpdateDepsRefactoringToolResult result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.google.wireless.android.sdk.stats.SmlChatBotEvent.UpdateDepsRefactoringToolResult buildPartial() {
+        com.google.wireless.android.sdk.stats.SmlChatBotEvent.UpdateDepsRefactoringToolResult result = new com.google.wireless.android.sdk.stats.SmlChatBotEvent.UpdateDepsRefactoringToolResult(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.google.wireless.android.sdk.stats.SmlChatBotEvent.UpdateDepsRefactoringToolResult result) {
+        if (dependencySuggestionsBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            dependencySuggestions_ = java.util.Collections.unmodifiableList(dependencySuggestions_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.dependencySuggestions_ = dependencySuggestions_;
+        } else {
+          result.dependencySuggestions_ = dependencySuggestionsBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.google.wireless.android.sdk.stats.SmlChatBotEvent.UpdateDepsRefactoringToolResult result) {
+        int from_bitField0_ = bitField0_;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.google.wireless.android.sdk.stats.SmlChatBotEvent.UpdateDepsRefactoringToolResult) {
+          return mergeFrom((com.google.wireless.android.sdk.stats.SmlChatBotEvent.UpdateDepsRefactoringToolResult)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.google.wireless.android.sdk.stats.SmlChatBotEvent.UpdateDepsRefactoringToolResult other) {
+        if (other == com.google.wireless.android.sdk.stats.SmlChatBotEvent.UpdateDepsRefactoringToolResult.getDefaultInstance()) return this;
+        if (dependencySuggestionsBuilder_ == null) {
+          if (!other.dependencySuggestions_.isEmpty()) {
+            if (dependencySuggestions_.isEmpty()) {
+              dependencySuggestions_ = other.dependencySuggestions_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureDependencySuggestionsIsMutable();
+              dependencySuggestions_.addAll(other.dependencySuggestions_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.dependencySuggestions_.isEmpty()) {
+            if (dependencySuggestionsBuilder_.isEmpty()) {
+              dependencySuggestionsBuilder_.dispose();
+              dependencySuggestionsBuilder_ = null;
+              dependencySuggestions_ = other.dependencySuggestions_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              dependencySuggestionsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getDependencySuggestionsFieldBuilder() : null;
+            } else {
+              dependencySuggestionsBuilder_.addAllMessages(other.dependencySuggestions_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                com.google.wireless.android.sdk.stats.SmlChatBotEvent.UpdateDepsRefactoringToolResult.DependencySuggestion m =
+                    input.readMessage(
+                        com.google.wireless.android.sdk.stats.SmlChatBotEvent.UpdateDepsRefactoringToolResult.DependencySuggestion.PARSER,
+                        extensionRegistry);
+                if (dependencySuggestionsBuilder_ == null) {
+                  ensureDependencySuggestionsIsMutable();
+                  dependencySuggestions_.add(m);
+                } else {
+                  dependencySuggestionsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<com.google.wireless.android.sdk.stats.SmlChatBotEvent.UpdateDepsRefactoringToolResult.DependencySuggestion> dependencySuggestions_ =
+        java.util.Collections.emptyList();
+      private void ensureDependencySuggestionsIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          dependencySuggestions_ = new java.util.ArrayList<com.google.wireless.android.sdk.stats.SmlChatBotEvent.UpdateDepsRefactoringToolResult.DependencySuggestion>(dependencySuggestions_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.google.wireless.android.sdk.stats.SmlChatBotEvent.UpdateDepsRefactoringToolResult.DependencySuggestion, com.google.wireless.android.sdk.stats.SmlChatBotEvent.UpdateDepsRefactoringToolResult.DependencySuggestion.Builder, com.google.wireless.android.sdk.stats.SmlChatBotEvent.UpdateDepsRefactoringToolResult.DependencySuggestionOrBuilder> dependencySuggestionsBuilder_;
+
+      /**
+       * <code>repeated .android_studio.SmlChatBotEvent.UpdateDepsRefactoringToolResult.DependencySuggestion dependency_suggestions = 1;</code>
+       */
+      public java.util.List<com.google.wireless.android.sdk.stats.SmlChatBotEvent.UpdateDepsRefactoringToolResult.DependencySuggestion> getDependencySuggestionsList() {
+        if (dependencySuggestionsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(dependencySuggestions_);
+        } else {
+          return dependencySuggestionsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .android_studio.SmlChatBotEvent.UpdateDepsRefactoringToolResult.DependencySuggestion dependency_suggestions = 1;</code>
+       */
+      public int getDependencySuggestionsCount() {
+        if (dependencySuggestionsBuilder_ == null) {
+          return dependencySuggestions_.size();
+        } else {
+          return dependencySuggestionsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .android_studio.SmlChatBotEvent.UpdateDepsRefactoringToolResult.DependencySuggestion dependency_suggestions = 1;</code>
+       */
+      public com.google.wireless.android.sdk.stats.SmlChatBotEvent.UpdateDepsRefactoringToolResult.DependencySuggestion getDependencySuggestions(int index) {
+        if (dependencySuggestionsBuilder_ == null) {
+          return dependencySuggestions_.get(index);
+        } else {
+          return dependencySuggestionsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .android_studio.SmlChatBotEvent.UpdateDepsRefactoringToolResult.DependencySuggestion dependency_suggestions = 1;</code>
+       */
+      public Builder setDependencySuggestions(
+          int index, com.google.wireless.android.sdk.stats.SmlChatBotEvent.UpdateDepsRefactoringToolResult.DependencySuggestion value) {
+        if (dependencySuggestionsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureDependencySuggestionsIsMutable();
+          dependencySuggestions_.set(index, value);
+          onChanged();
+        } else {
+          dependencySuggestionsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .android_studio.SmlChatBotEvent.UpdateDepsRefactoringToolResult.DependencySuggestion dependency_suggestions = 1;</code>
+       */
+      public Builder setDependencySuggestions(
+          int index, com.google.wireless.android.sdk.stats.SmlChatBotEvent.UpdateDepsRefactoringToolResult.DependencySuggestion.Builder builderForValue) {
+        if (dependencySuggestionsBuilder_ == null) {
+          ensureDependencySuggestionsIsMutable();
+          dependencySuggestions_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          dependencySuggestionsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .android_studio.SmlChatBotEvent.UpdateDepsRefactoringToolResult.DependencySuggestion dependency_suggestions = 1;</code>
+       */
+      public Builder addDependencySuggestions(com.google.wireless.android.sdk.stats.SmlChatBotEvent.UpdateDepsRefactoringToolResult.DependencySuggestion value) {
+        if (dependencySuggestionsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureDependencySuggestionsIsMutable();
+          dependencySuggestions_.add(value);
+          onChanged();
+        } else {
+          dependencySuggestionsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .android_studio.SmlChatBotEvent.UpdateDepsRefactoringToolResult.DependencySuggestion dependency_suggestions = 1;</code>
+       */
+      public Builder addDependencySuggestions(
+          int index, com.google.wireless.android.sdk.stats.SmlChatBotEvent.UpdateDepsRefactoringToolResult.DependencySuggestion value) {
+        if (dependencySuggestionsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureDependencySuggestionsIsMutable();
+          dependencySuggestions_.add(index, value);
+          onChanged();
+        } else {
+          dependencySuggestionsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .android_studio.SmlChatBotEvent.UpdateDepsRefactoringToolResult.DependencySuggestion dependency_suggestions = 1;</code>
+       */
+      public Builder addDependencySuggestions(
+          com.google.wireless.android.sdk.stats.SmlChatBotEvent.UpdateDepsRefactoringToolResult.DependencySuggestion.Builder builderForValue) {
+        if (dependencySuggestionsBuilder_ == null) {
+          ensureDependencySuggestionsIsMutable();
+          dependencySuggestions_.add(builderForValue.build());
+          onChanged();
+        } else {
+          dependencySuggestionsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .android_studio.SmlChatBotEvent.UpdateDepsRefactoringToolResult.DependencySuggestion dependency_suggestions = 1;</code>
+       */
+      public Builder addDependencySuggestions(
+          int index, com.google.wireless.android.sdk.stats.SmlChatBotEvent.UpdateDepsRefactoringToolResult.DependencySuggestion.Builder builderForValue) {
+        if (dependencySuggestionsBuilder_ == null) {
+          ensureDependencySuggestionsIsMutable();
+          dependencySuggestions_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          dependencySuggestionsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .android_studio.SmlChatBotEvent.UpdateDepsRefactoringToolResult.DependencySuggestion dependency_suggestions = 1;</code>
+       */
+      public Builder addAllDependencySuggestions(
+          java.lang.Iterable<? extends com.google.wireless.android.sdk.stats.SmlChatBotEvent.UpdateDepsRefactoringToolResult.DependencySuggestion> values) {
+        if (dependencySuggestionsBuilder_ == null) {
+          ensureDependencySuggestionsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, dependencySuggestions_);
+          onChanged();
+        } else {
+          dependencySuggestionsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .android_studio.SmlChatBotEvent.UpdateDepsRefactoringToolResult.DependencySuggestion dependency_suggestions = 1;</code>
+       */
+      public Builder clearDependencySuggestions() {
+        if (dependencySuggestionsBuilder_ == null) {
+          dependencySuggestions_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          dependencySuggestionsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .android_studio.SmlChatBotEvent.UpdateDepsRefactoringToolResult.DependencySuggestion dependency_suggestions = 1;</code>
+       */
+      public Builder removeDependencySuggestions(int index) {
+        if (dependencySuggestionsBuilder_ == null) {
+          ensureDependencySuggestionsIsMutable();
+          dependencySuggestions_.remove(index);
+          onChanged();
+        } else {
+          dependencySuggestionsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .android_studio.SmlChatBotEvent.UpdateDepsRefactoringToolResult.DependencySuggestion dependency_suggestions = 1;</code>
+       */
+      public com.google.wireless.android.sdk.stats.SmlChatBotEvent.UpdateDepsRefactoringToolResult.DependencySuggestion.Builder getDependencySuggestionsBuilder(
+          int index) {
+        return getDependencySuggestionsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .android_studio.SmlChatBotEvent.UpdateDepsRefactoringToolResult.DependencySuggestion dependency_suggestions = 1;</code>
+       */
+      public com.google.wireless.android.sdk.stats.SmlChatBotEvent.UpdateDepsRefactoringToolResult.DependencySuggestionOrBuilder getDependencySuggestionsOrBuilder(
+          int index) {
+        if (dependencySuggestionsBuilder_ == null) {
+          return dependencySuggestions_.get(index);  } else {
+          return dependencySuggestionsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .android_studio.SmlChatBotEvent.UpdateDepsRefactoringToolResult.DependencySuggestion dependency_suggestions = 1;</code>
+       */
+      public java.util.List<? extends com.google.wireless.android.sdk.stats.SmlChatBotEvent.UpdateDepsRefactoringToolResult.DependencySuggestionOrBuilder> 
+           getDependencySuggestionsOrBuilderList() {
+        if (dependencySuggestionsBuilder_ != null) {
+          return dependencySuggestionsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(dependencySuggestions_);
+        }
+      }
+      /**
+       * <code>repeated .android_studio.SmlChatBotEvent.UpdateDepsRefactoringToolResult.DependencySuggestion dependency_suggestions = 1;</code>
+       */
+      public com.google.wireless.android.sdk.stats.SmlChatBotEvent.UpdateDepsRefactoringToolResult.DependencySuggestion.Builder addDependencySuggestionsBuilder() {
+        return getDependencySuggestionsFieldBuilder().addBuilder(
+            com.google.wireless.android.sdk.stats.SmlChatBotEvent.UpdateDepsRefactoringToolResult.DependencySuggestion.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .android_studio.SmlChatBotEvent.UpdateDepsRefactoringToolResult.DependencySuggestion dependency_suggestions = 1;</code>
+       */
+      public com.google.wireless.android.sdk.stats.SmlChatBotEvent.UpdateDepsRefactoringToolResult.DependencySuggestion.Builder addDependencySuggestionsBuilder(
+          int index) {
+        return getDependencySuggestionsFieldBuilder().addBuilder(
+            index, com.google.wireless.android.sdk.stats.SmlChatBotEvent.UpdateDepsRefactoringToolResult.DependencySuggestion.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .android_studio.SmlChatBotEvent.UpdateDepsRefactoringToolResult.DependencySuggestion dependency_suggestions = 1;</code>
+       */
+      public java.util.List<com.google.wireless.android.sdk.stats.SmlChatBotEvent.UpdateDepsRefactoringToolResult.DependencySuggestion.Builder> 
+           getDependencySuggestionsBuilderList() {
+        return getDependencySuggestionsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.google.wireless.android.sdk.stats.SmlChatBotEvent.UpdateDepsRefactoringToolResult.DependencySuggestion, com.google.wireless.android.sdk.stats.SmlChatBotEvent.UpdateDepsRefactoringToolResult.DependencySuggestion.Builder, com.google.wireless.android.sdk.stats.SmlChatBotEvent.UpdateDepsRefactoringToolResult.DependencySuggestionOrBuilder> 
+          getDependencySuggestionsFieldBuilder() {
+        if (dependencySuggestionsBuilder_ == null) {
+          dependencySuggestionsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.google.wireless.android.sdk.stats.SmlChatBotEvent.UpdateDepsRefactoringToolResult.DependencySuggestion, com.google.wireless.android.sdk.stats.SmlChatBotEvent.UpdateDepsRefactoringToolResult.DependencySuggestion.Builder, com.google.wireless.android.sdk.stats.SmlChatBotEvent.UpdateDepsRefactoringToolResult.DependencySuggestionOrBuilder>(
+                  dependencySuggestions_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          dependencySuggestions_ = null;
+        }
+        return dependencySuggestionsBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:android_studio.SmlChatBotEvent.UpdateDepsRefactoringToolResult)
+    }
+
+    // @@protoc_insertion_point(class_scope:android_studio.SmlChatBotEvent.UpdateDepsRefactoringToolResult)
+    private static final com.google.wireless.android.sdk.stats.SmlChatBotEvent.UpdateDepsRefactoringToolResult DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.google.wireless.android.sdk.stats.SmlChatBotEvent.UpdateDepsRefactoringToolResult();
+    }
+
+    public static com.google.wireless.android.sdk.stats.SmlChatBotEvent.UpdateDepsRefactoringToolResult getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<UpdateDepsRefactoringToolResult>
+        PARSER = new com.google.protobuf.AbstractParser<UpdateDepsRefactoringToolResult>() {
+      @java.lang.Override
+      public UpdateDepsRefactoringToolResult parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<UpdateDepsRefactoringToolResult> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<UpdateDepsRefactoringToolResult> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.wireless.android.sdk.stats.SmlChatBotEvent.UpdateDepsRefactoringToolResult getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
