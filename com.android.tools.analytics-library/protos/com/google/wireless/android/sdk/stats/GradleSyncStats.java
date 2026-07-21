@@ -458,6 +458,14 @@ private static final long serialVersionUID = 0L;
     TRIGGER_QF_ADD_COMPOSE_COMPILER_GRADLE_PLUGIN(431),
     /**
      * <pre>
+     * Gradle JVM is set to a compatible version using a quickfix
+     * </pre>
+     *
+     * <code>TRIGGER_QF_APPLY_COMPATIBLE_GRADLE_JVM = 432;</code>
+     */
+    TRIGGER_QF_APPLY_COMPATIBLE_GRADLE_JVM(432),
+    /**
+     * <pre>
      * Last marker for syncs caused by quickfixes
      * </pre>
      *
@@ -1423,6 +1431,14 @@ private static final long serialVersionUID = 0L;
     public static final int TRIGGER_QF_ADD_COMPOSE_COMPILER_GRADLE_PLUGIN_VALUE = 431;
     /**
      * <pre>
+     * Gradle JVM is set to a compatible version using a quickfix
+     * </pre>
+     *
+     * <code>TRIGGER_QF_APPLY_COMPATIBLE_GRADLE_JVM = 432;</code>
+     */
+    public static final int TRIGGER_QF_APPLY_COMPATIBLE_GRADLE_JVM_VALUE = 432;
+    /**
+     * <pre>
      * Last marker for syncs caused by quickfixes
      * </pre>
      *
@@ -2060,6 +2076,7 @@ private static final long serialVersionUID = 0L;
         case 429: return TRIGGER_QF_REMOVE_UNSUPPORTED_MODULES;
         case 430: return TRIGGER_QF_MIN_COMPILE_SDK_UPDATED;
         case 431: return TRIGGER_QF_ADD_COMPOSE_COMPILER_GRADLE_PLUGIN;
+        case 432: return TRIGGER_QF_APPLY_COMPATIBLE_GRADLE_JVM;
         case 999: return TRIGGER_QF_LAST_MARKER;
         case 1200: return TRIGGER_REFACTOR_FIRST_MARKER;
         case 1201: return TRIGGER_REFACTOR_MIGRATE_TO_ANDROIDX;
@@ -4335,7 +4352,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>optional .android_studio.GradleSyncStats.GradleSyncExecutionType sync_execution_type = 12 [deprecated = true];</code>
    * @deprecated android_studio.GradleSyncStats.sync_execution_type is deprecated.
-   *     See studio_stats.proto;l=8936
+   *     See studio_stats.proto;l=8939
    * @return Whether the syncExecutionType field is set.
    */
   @java.lang.Override @java.lang.Deprecated public boolean hasSyncExecutionType() {
@@ -4351,7 +4368,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>optional .android_studio.GradleSyncStats.GradleSyncExecutionType sync_execution_type = 12 [deprecated = true];</code>
    * @deprecated android_studio.GradleSyncStats.sync_execution_type is deprecated.
-   *     See studio_stats.proto;l=8936
+   *     See studio_stats.proto;l=8939
    * @return The syncExecutionType.
    */
   @java.lang.Override @java.lang.Deprecated public com.google.wireless.android.sdk.stats.GradleSyncStats.GradleSyncExecutionType getSyncExecutionType() {
@@ -6160,7 +6177,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional .android_studio.GradleSyncStats.GradleSyncExecutionType sync_execution_type = 12 [deprecated = true];</code>
      * @deprecated android_studio.GradleSyncStats.sync_execution_type is deprecated.
-     *     See studio_stats.proto;l=8936
+     *     See studio_stats.proto;l=8939
      * @return Whether the syncExecutionType field is set.
      */
     @java.lang.Override @java.lang.Deprecated public boolean hasSyncExecutionType() {
@@ -6176,7 +6193,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional .android_studio.GradleSyncStats.GradleSyncExecutionType sync_execution_type = 12 [deprecated = true];</code>
      * @deprecated android_studio.GradleSyncStats.sync_execution_type is deprecated.
-     *     See studio_stats.proto;l=8936
+     *     See studio_stats.proto;l=8939
      * @return The syncExecutionType.
      */
     @java.lang.Override
@@ -6194,7 +6211,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional .android_studio.GradleSyncStats.GradleSyncExecutionType sync_execution_type = 12 [deprecated = true];</code>
      * @deprecated android_studio.GradleSyncStats.sync_execution_type is deprecated.
-     *     See studio_stats.proto;l=8936
+     *     See studio_stats.proto;l=8939
      * @param value The syncExecutionType to set.
      * @return This builder for chaining.
      */
@@ -6217,7 +6234,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional .android_studio.GradleSyncStats.GradleSyncExecutionType sync_execution_type = 12 [deprecated = true];</code>
      * @deprecated android_studio.GradleSyncStats.sync_execution_type is deprecated.
-     *     See studio_stats.proto;l=8936
+     *     See studio_stats.proto;l=8939
      * @return This builder for chaining.
      */
     @java.lang.Deprecated public Builder clearSyncExecutionType() {

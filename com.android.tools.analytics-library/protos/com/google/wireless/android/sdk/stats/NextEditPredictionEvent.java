@@ -2396,20 +2396,38 @@ private static final long serialVersionUID = 0L;
         getModelIdBytes();
 
     /**
-     * <code>optional string language = 3;</code>
+     * <pre>
+     * Deprecated. Use editor_file_type instead.
+     * </pre>
+     *
+     * <code>optional string language = 3 [deprecated = true];</code>
+     * @deprecated android_studio.NextEditPredictionEvent.Session.language is deprecated.
+     *     See studio_stats.proto;l=18689
      * @return Whether the language field is set.
      */
-    boolean hasLanguage();
+    @java.lang.Deprecated boolean hasLanguage();
     /**
-     * <code>optional string language = 3;</code>
+     * <pre>
+     * Deprecated. Use editor_file_type instead.
+     * </pre>
+     *
+     * <code>optional string language = 3 [deprecated = true];</code>
+     * @deprecated android_studio.NextEditPredictionEvent.Session.language is deprecated.
+     *     See studio_stats.proto;l=18689
      * @return The language.
      */
-    java.lang.String getLanguage();
+    @java.lang.Deprecated java.lang.String getLanguage();
     /**
-     * <code>optional string language = 3;</code>
+     * <pre>
+     * Deprecated. Use editor_file_type instead.
+     * </pre>
+     *
+     * <code>optional string language = 3 [deprecated = true];</code>
+     * @deprecated android_studio.NextEditPredictionEvent.Session.language is deprecated.
+     *     See studio_stats.proto;l=18689
      * @return The bytes for language.
      */
-    com.google.protobuf.ByteString
+    @java.lang.Deprecated com.google.protobuf.ByteString
         getLanguageBytes();
 
     /**
@@ -2456,6 +2474,17 @@ private static final long serialVersionUID = 0L;
      */
     com.google.wireless.android.sdk.stats.NextEditPredictionEvent.Session.SessionEventOrBuilder getEventsOrBuilder(
         int index);
+
+    /**
+     * <code>optional .android_studio.EditorFileType editor_file_type = 6;</code>
+     * @return Whether the editorFileType field is set.
+     */
+    boolean hasEditorFileType();
+    /**
+     * <code>optional .android_studio.EditorFileType editor_file_type = 6;</code>
+     * @return The editorFileType.
+     */
+    com.google.wireless.android.sdk.stats.EditorFileType getEditorFileType();
   }
   /**
    * <pre>
@@ -2478,6 +2507,7 @@ private static final long serialVersionUID = 0L;
       modelId_ = "";
       language_ = "";
       events_ = java.util.Collections.emptyList();
+      editorFileType_ = 0;
     }
 
     @java.lang.Override
@@ -2541,7 +2571,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional int32 offset = 3 [deprecated = true];</code>
        * @deprecated android_studio.NextEditPredictionEvent.Session.SessionEvent.offset is deprecated.
-       *     See studio_stats.proto;l=18733
+       *     See studio_stats.proto;l=18758
        * @return Whether the offset field is set.
        */
       @java.lang.Deprecated boolean hasOffset();
@@ -2552,7 +2582,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional int32 offset = 3 [deprecated = true];</code>
        * @deprecated android_studio.NextEditPredictionEvent.Session.SessionEvent.offset is deprecated.
-       *     See studio_stats.proto;l=18733
+       *     See studio_stats.proto;l=18758
        * @return The offset.
        */
       @java.lang.Deprecated int getOffset();
@@ -2560,14 +2590,14 @@ private static final long serialVersionUID = 0L;
       /**
        * <code>optional int32 original_length = 4 [deprecated = true];</code>
        * @deprecated android_studio.NextEditPredictionEvent.Session.SessionEvent.original_length is deprecated.
-       *     See studio_stats.proto;l=18734
+       *     See studio_stats.proto;l=18759
        * @return Whether the originalLength field is set.
        */
       @java.lang.Deprecated boolean hasOriginalLength();
       /**
        * <code>optional int32 original_length = 4 [deprecated = true];</code>
        * @deprecated android_studio.NextEditPredictionEvent.Session.SessionEvent.original_length is deprecated.
-       *     See studio_stats.proto;l=18734
+       *     See studio_stats.proto;l=18759
        * @return The originalLength.
        */
       @java.lang.Deprecated int getOriginalLength();
@@ -2575,37 +2605,57 @@ private static final long serialVersionUID = 0L;
       /**
        * <code>optional int32 new_length = 5 [deprecated = true];</code>
        * @deprecated android_studio.NextEditPredictionEvent.Session.SessionEvent.new_length is deprecated.
-       *     See studio_stats.proto;l=18735
+       *     See studio_stats.proto;l=18760
        * @return Whether the newLength field is set.
        */
       @java.lang.Deprecated boolean hasNewLength();
       /**
        * <code>optional int32 new_length = 5 [deprecated = true];</code>
        * @deprecated android_studio.NextEditPredictionEvent.Session.SessionEvent.new_length is deprecated.
-       *     See studio_stats.proto;l=18735
+       *     See studio_stats.proto;l=18760
        * @return The newLength.
        */
       @java.lang.Deprecated int getNewLength();
 
       /**
+       * <pre>
+       * Deprecated. Do not use.
+       * </pre>
+       *
        * <code>repeated .android_studio.NextEditPredictionEvent.Session.SessionEvent.MetadataEntry metadata = 6 [deprecated = true];</code>
        */
       @java.lang.Deprecated java.util.List<com.google.wireless.android.sdk.stats.NextEditPredictionEvent.Session.SessionEvent.MetadataEntry> 
           getMetadataList();
       /**
+       * <pre>
+       * Deprecated. Do not use.
+       * </pre>
+       *
        * <code>repeated .android_studio.NextEditPredictionEvent.Session.SessionEvent.MetadataEntry metadata = 6 [deprecated = true];</code>
        */
       @java.lang.Deprecated com.google.wireless.android.sdk.stats.NextEditPredictionEvent.Session.SessionEvent.MetadataEntry getMetadata(int index);
       /**
+       * <pre>
+       * Deprecated. Do not use.
+       * </pre>
+       *
        * <code>repeated .android_studio.NextEditPredictionEvent.Session.SessionEvent.MetadataEntry metadata = 6 [deprecated = true];</code>
        */
       @java.lang.Deprecated int getMetadataCount();
       /**
+       * <pre>
+       * Deprecated. Do not use.
+       * </pre>
+       *
        * <code>repeated .android_studio.NextEditPredictionEvent.Session.SessionEvent.MetadataEntry metadata = 6 [deprecated = true];</code>
        */
       @java.lang.Deprecated java.util.List<? extends com.google.wireless.android.sdk.stats.NextEditPredictionEvent.Session.SessionEvent.MetadataEntryOrBuilder> 
           getMetadataOrBuilderList();
       /**
+       * <pre>
+       * Deprecated. Do not use.
+       * </pre>
+       *
        * <code>repeated .android_studio.NextEditPredictionEvent.Session.SessionEvent.MetadataEntry metadata = 6 [deprecated = true];</code>
        */
       @java.lang.Deprecated com.google.wireless.android.sdk.stats.NextEditPredictionEvent.Session.SessionEvent.MetadataEntryOrBuilder getMetadataOrBuilder(
@@ -2771,6 +2821,14 @@ private static final long serialVersionUID = 0L;
          * <code>PREDICTION_FAILED = 11;</code>
          */
         PREDICTION_FAILED(11),
+        /**
+         * <pre>
+         * A specific control was disposed before being shown to the user.
+         * </pre>
+         *
+         * <code>CONTROL_DISPOSED_UNSEEN = 12;</code>
+         */
+        CONTROL_DISPOSED_UNSEEN(12),
         ;
 
         /**
@@ -2861,6 +2919,14 @@ private static final long serialVersionUID = 0L;
          * <code>PREDICTION_FAILED = 11;</code>
          */
         public static final int PREDICTION_FAILED_VALUE = 11;
+        /**
+         * <pre>
+         * A specific control was disposed before being shown to the user.
+         * </pre>
+         *
+         * <code>CONTROL_DISPOSED_UNSEEN = 12;</code>
+         */
+        public static final int CONTROL_DISPOSED_UNSEEN_VALUE = 12;
 
 
         public final int getNumber() {
@@ -2895,6 +2961,7 @@ private static final long serialVersionUID = 0L;
             case 9: return CONTROL_REJECTED;
             case 10: return CONTROL_HIDDEN;
             case 11: return PREDICTION_FAILED;
+            case 12: return CONTROL_DISPOSED_UNSEEN;
             default: return null;
           }
         }
@@ -3922,6 +3989,10 @@ private static final long serialVersionUID = 0L;
            * <code>OUTDATED_PREDICTION = 9;</code>
            */
           OUTDATED_PREDICTION(9),
+          /**
+           * <code>NO_MODEL = 10;</code>
+           */
+          NO_MODEL(10),
           ;
 
           /**
@@ -3964,6 +4035,10 @@ private static final long serialVersionUID = 0L;
            * <code>OUTDATED_PREDICTION = 9;</code>
            */
           public static final int OUTDATED_PREDICTION_VALUE = 9;
+          /**
+           * <code>NO_MODEL = 10;</code>
+           */
+          public static final int NO_MODEL_VALUE = 10;
 
 
           public final int getNumber() {
@@ -3996,6 +4071,7 @@ private static final long serialVersionUID = 0L;
               case 7: return CONTENT_LINE_MISMATCH;
               case 8: return EXPECTED_LINE_NOT_FOUND;
               case 9: return OUTDATED_PREDICTION;
+              case 10: return NO_MODEL;
               default: return null;
             }
           }
@@ -5554,7 +5630,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional int32 offset = 3 [deprecated = true];</code>
        * @deprecated android_studio.NextEditPredictionEvent.Session.SessionEvent.offset is deprecated.
-       *     See studio_stats.proto;l=18733
+       *     See studio_stats.proto;l=18758
        * @return Whether the offset field is set.
        */
       @java.lang.Override
@@ -5568,7 +5644,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional int32 offset = 3 [deprecated = true];</code>
        * @deprecated android_studio.NextEditPredictionEvent.Session.SessionEvent.offset is deprecated.
-       *     See studio_stats.proto;l=18733
+       *     See studio_stats.proto;l=18758
        * @return The offset.
        */
       @java.lang.Override
@@ -5581,7 +5657,7 @@ private static final long serialVersionUID = 0L;
       /**
        * <code>optional int32 original_length = 4 [deprecated = true];</code>
        * @deprecated android_studio.NextEditPredictionEvent.Session.SessionEvent.original_length is deprecated.
-       *     See studio_stats.proto;l=18734
+       *     See studio_stats.proto;l=18759
        * @return Whether the originalLength field is set.
        */
       @java.lang.Override
@@ -5591,7 +5667,7 @@ private static final long serialVersionUID = 0L;
       /**
        * <code>optional int32 original_length = 4 [deprecated = true];</code>
        * @deprecated android_studio.NextEditPredictionEvent.Session.SessionEvent.original_length is deprecated.
-       *     See studio_stats.proto;l=18734
+       *     See studio_stats.proto;l=18759
        * @return The originalLength.
        */
       @java.lang.Override
@@ -5604,7 +5680,7 @@ private static final long serialVersionUID = 0L;
       /**
        * <code>optional int32 new_length = 5 [deprecated = true];</code>
        * @deprecated android_studio.NextEditPredictionEvent.Session.SessionEvent.new_length is deprecated.
-       *     See studio_stats.proto;l=18735
+       *     See studio_stats.proto;l=18760
        * @return Whether the newLength field is set.
        */
       @java.lang.Override
@@ -5614,7 +5690,7 @@ private static final long serialVersionUID = 0L;
       /**
        * <code>optional int32 new_length = 5 [deprecated = true];</code>
        * @deprecated android_studio.NextEditPredictionEvent.Session.SessionEvent.new_length is deprecated.
-       *     See studio_stats.proto;l=18735
+       *     See studio_stats.proto;l=18760
        * @return The newLength.
        */
       @java.lang.Override
@@ -5626,6 +5702,10 @@ private static final long serialVersionUID = 0L;
       @SuppressWarnings("serial")
       private java.util.List<com.google.wireless.android.sdk.stats.NextEditPredictionEvent.Session.SessionEvent.MetadataEntry> metadata_;
       /**
+       * <pre>
+       * Deprecated. Do not use.
+       * </pre>
+       *
        * <code>repeated .android_studio.NextEditPredictionEvent.Session.SessionEvent.MetadataEntry metadata = 6 [deprecated = true];</code>
        */
       @java.lang.Override
@@ -5633,6 +5713,10 @@ private static final long serialVersionUID = 0L;
         return metadata_;
       }
       /**
+       * <pre>
+       * Deprecated. Do not use.
+       * </pre>
+       *
        * <code>repeated .android_studio.NextEditPredictionEvent.Session.SessionEvent.MetadataEntry metadata = 6 [deprecated = true];</code>
        */
       @java.lang.Override
@@ -5641,6 +5725,10 @@ private static final long serialVersionUID = 0L;
         return metadata_;
       }
       /**
+       * <pre>
+       * Deprecated. Do not use.
+       * </pre>
+       *
        * <code>repeated .android_studio.NextEditPredictionEvent.Session.SessionEvent.MetadataEntry metadata = 6 [deprecated = true];</code>
        */
       @java.lang.Override
@@ -5648,6 +5736,10 @@ private static final long serialVersionUID = 0L;
         return metadata_.size();
       }
       /**
+       * <pre>
+       * Deprecated. Do not use.
+       * </pre>
+       *
        * <code>repeated .android_studio.NextEditPredictionEvent.Session.SessionEvent.MetadataEntry metadata = 6 [deprecated = true];</code>
        */
       @java.lang.Override
@@ -5655,6 +5747,10 @@ private static final long serialVersionUID = 0L;
         return metadata_.get(index);
       }
       /**
+       * <pre>
+       * Deprecated. Do not use.
+       * </pre>
+       *
        * <code>repeated .android_studio.NextEditPredictionEvent.Session.SessionEvent.MetadataEntry metadata = 6 [deprecated = true];</code>
        */
       @java.lang.Override
@@ -6397,7 +6493,7 @@ private static final long serialVersionUID = 0L;
          *
          * <code>optional int32 offset = 3 [deprecated = true];</code>
          * @deprecated android_studio.NextEditPredictionEvent.Session.SessionEvent.offset is deprecated.
-         *     See studio_stats.proto;l=18733
+         *     See studio_stats.proto;l=18758
          * @return Whether the offset field is set.
          */
         @java.lang.Override
@@ -6411,7 +6507,7 @@ private static final long serialVersionUID = 0L;
          *
          * <code>optional int32 offset = 3 [deprecated = true];</code>
          * @deprecated android_studio.NextEditPredictionEvent.Session.SessionEvent.offset is deprecated.
-         *     See studio_stats.proto;l=18733
+         *     See studio_stats.proto;l=18758
          * @return The offset.
          */
         @java.lang.Override
@@ -6425,7 +6521,7 @@ private static final long serialVersionUID = 0L;
          *
          * <code>optional int32 offset = 3 [deprecated = true];</code>
          * @deprecated android_studio.NextEditPredictionEvent.Session.SessionEvent.offset is deprecated.
-         *     See studio_stats.proto;l=18733
+         *     See studio_stats.proto;l=18758
          * @param value The offset to set.
          * @return This builder for chaining.
          */
@@ -6443,7 +6539,7 @@ private static final long serialVersionUID = 0L;
          *
          * <code>optional int32 offset = 3 [deprecated = true];</code>
          * @deprecated android_studio.NextEditPredictionEvent.Session.SessionEvent.offset is deprecated.
-         *     See studio_stats.proto;l=18733
+         *     See studio_stats.proto;l=18758
          * @return This builder for chaining.
          */
         @java.lang.Deprecated public Builder clearOffset() {
@@ -6457,7 +6553,7 @@ private static final long serialVersionUID = 0L;
         /**
          * <code>optional int32 original_length = 4 [deprecated = true];</code>
          * @deprecated android_studio.NextEditPredictionEvent.Session.SessionEvent.original_length is deprecated.
-         *     See studio_stats.proto;l=18734
+         *     See studio_stats.proto;l=18759
          * @return Whether the originalLength field is set.
          */
         @java.lang.Override
@@ -6467,7 +6563,7 @@ private static final long serialVersionUID = 0L;
         /**
          * <code>optional int32 original_length = 4 [deprecated = true];</code>
          * @deprecated android_studio.NextEditPredictionEvent.Session.SessionEvent.original_length is deprecated.
-         *     See studio_stats.proto;l=18734
+         *     See studio_stats.proto;l=18759
          * @return The originalLength.
          */
         @java.lang.Override
@@ -6477,7 +6573,7 @@ private static final long serialVersionUID = 0L;
         /**
          * <code>optional int32 original_length = 4 [deprecated = true];</code>
          * @deprecated android_studio.NextEditPredictionEvent.Session.SessionEvent.original_length is deprecated.
-         *     See studio_stats.proto;l=18734
+         *     See studio_stats.proto;l=18759
          * @param value The originalLength to set.
          * @return This builder for chaining.
          */
@@ -6491,7 +6587,7 @@ private static final long serialVersionUID = 0L;
         /**
          * <code>optional int32 original_length = 4 [deprecated = true];</code>
          * @deprecated android_studio.NextEditPredictionEvent.Session.SessionEvent.original_length is deprecated.
-         *     See studio_stats.proto;l=18734
+         *     See studio_stats.proto;l=18759
          * @return This builder for chaining.
          */
         @java.lang.Deprecated public Builder clearOriginalLength() {
@@ -6505,7 +6601,7 @@ private static final long serialVersionUID = 0L;
         /**
          * <code>optional int32 new_length = 5 [deprecated = true];</code>
          * @deprecated android_studio.NextEditPredictionEvent.Session.SessionEvent.new_length is deprecated.
-         *     See studio_stats.proto;l=18735
+         *     See studio_stats.proto;l=18760
          * @return Whether the newLength field is set.
          */
         @java.lang.Override
@@ -6515,7 +6611,7 @@ private static final long serialVersionUID = 0L;
         /**
          * <code>optional int32 new_length = 5 [deprecated = true];</code>
          * @deprecated android_studio.NextEditPredictionEvent.Session.SessionEvent.new_length is deprecated.
-         *     See studio_stats.proto;l=18735
+         *     See studio_stats.proto;l=18760
          * @return The newLength.
          */
         @java.lang.Override
@@ -6525,7 +6621,7 @@ private static final long serialVersionUID = 0L;
         /**
          * <code>optional int32 new_length = 5 [deprecated = true];</code>
          * @deprecated android_studio.NextEditPredictionEvent.Session.SessionEvent.new_length is deprecated.
-         *     See studio_stats.proto;l=18735
+         *     See studio_stats.proto;l=18760
          * @param value The newLength to set.
          * @return This builder for chaining.
          */
@@ -6539,7 +6635,7 @@ private static final long serialVersionUID = 0L;
         /**
          * <code>optional int32 new_length = 5 [deprecated = true];</code>
          * @deprecated android_studio.NextEditPredictionEvent.Session.SessionEvent.new_length is deprecated.
-         *     See studio_stats.proto;l=18735
+         *     See studio_stats.proto;l=18760
          * @return This builder for chaining.
          */
         @java.lang.Deprecated public Builder clearNewLength() {
@@ -6562,6 +6658,10 @@ private static final long serialVersionUID = 0L;
             com.google.wireless.android.sdk.stats.NextEditPredictionEvent.Session.SessionEvent.MetadataEntry, com.google.wireless.android.sdk.stats.NextEditPredictionEvent.Session.SessionEvent.MetadataEntry.Builder, com.google.wireless.android.sdk.stats.NextEditPredictionEvent.Session.SessionEvent.MetadataEntryOrBuilder> metadataBuilder_;
 
         /**
+         * <pre>
+         * Deprecated. Do not use.
+         * </pre>
+         *
          * <code>repeated .android_studio.NextEditPredictionEvent.Session.SessionEvent.MetadataEntry metadata = 6 [deprecated = true];</code>
          */
         @java.lang.Deprecated public java.util.List<com.google.wireless.android.sdk.stats.NextEditPredictionEvent.Session.SessionEvent.MetadataEntry> getMetadataList() {
@@ -6572,6 +6672,10 @@ private static final long serialVersionUID = 0L;
           }
         }
         /**
+         * <pre>
+         * Deprecated. Do not use.
+         * </pre>
+         *
          * <code>repeated .android_studio.NextEditPredictionEvent.Session.SessionEvent.MetadataEntry metadata = 6 [deprecated = true];</code>
          */
         @java.lang.Deprecated public int getMetadataCount() {
@@ -6582,6 +6686,10 @@ private static final long serialVersionUID = 0L;
           }
         }
         /**
+         * <pre>
+         * Deprecated. Do not use.
+         * </pre>
+         *
          * <code>repeated .android_studio.NextEditPredictionEvent.Session.SessionEvent.MetadataEntry metadata = 6 [deprecated = true];</code>
          */
         @java.lang.Deprecated public com.google.wireless.android.sdk.stats.NextEditPredictionEvent.Session.SessionEvent.MetadataEntry getMetadata(int index) {
@@ -6592,6 +6700,10 @@ private static final long serialVersionUID = 0L;
           }
         }
         /**
+         * <pre>
+         * Deprecated. Do not use.
+         * </pre>
+         *
          * <code>repeated .android_studio.NextEditPredictionEvent.Session.SessionEvent.MetadataEntry metadata = 6 [deprecated = true];</code>
          */
         @java.lang.Deprecated public Builder setMetadata(
@@ -6609,6 +6721,10 @@ private static final long serialVersionUID = 0L;
           return this;
         }
         /**
+         * <pre>
+         * Deprecated. Do not use.
+         * </pre>
+         *
          * <code>repeated .android_studio.NextEditPredictionEvent.Session.SessionEvent.MetadataEntry metadata = 6 [deprecated = true];</code>
          */
         @java.lang.Deprecated public Builder setMetadata(
@@ -6623,6 +6739,10 @@ private static final long serialVersionUID = 0L;
           return this;
         }
         /**
+         * <pre>
+         * Deprecated. Do not use.
+         * </pre>
+         *
          * <code>repeated .android_studio.NextEditPredictionEvent.Session.SessionEvent.MetadataEntry metadata = 6 [deprecated = true];</code>
          */
         @java.lang.Deprecated public Builder addMetadata(com.google.wireless.android.sdk.stats.NextEditPredictionEvent.Session.SessionEvent.MetadataEntry value) {
@@ -6639,6 +6759,10 @@ private static final long serialVersionUID = 0L;
           return this;
         }
         /**
+         * <pre>
+         * Deprecated. Do not use.
+         * </pre>
+         *
          * <code>repeated .android_studio.NextEditPredictionEvent.Session.SessionEvent.MetadataEntry metadata = 6 [deprecated = true];</code>
          */
         @java.lang.Deprecated public Builder addMetadata(
@@ -6656,6 +6780,10 @@ private static final long serialVersionUID = 0L;
           return this;
         }
         /**
+         * <pre>
+         * Deprecated. Do not use.
+         * </pre>
+         *
          * <code>repeated .android_studio.NextEditPredictionEvent.Session.SessionEvent.MetadataEntry metadata = 6 [deprecated = true];</code>
          */
         @java.lang.Deprecated public Builder addMetadata(
@@ -6670,6 +6798,10 @@ private static final long serialVersionUID = 0L;
           return this;
         }
         /**
+         * <pre>
+         * Deprecated. Do not use.
+         * </pre>
+         *
          * <code>repeated .android_studio.NextEditPredictionEvent.Session.SessionEvent.MetadataEntry metadata = 6 [deprecated = true];</code>
          */
         @java.lang.Deprecated public Builder addMetadata(
@@ -6684,6 +6816,10 @@ private static final long serialVersionUID = 0L;
           return this;
         }
         /**
+         * <pre>
+         * Deprecated. Do not use.
+         * </pre>
+         *
          * <code>repeated .android_studio.NextEditPredictionEvent.Session.SessionEvent.MetadataEntry metadata = 6 [deprecated = true];</code>
          */
         @java.lang.Deprecated public Builder addAllMetadata(
@@ -6699,6 +6835,10 @@ private static final long serialVersionUID = 0L;
           return this;
         }
         /**
+         * <pre>
+         * Deprecated. Do not use.
+         * </pre>
+         *
          * <code>repeated .android_studio.NextEditPredictionEvent.Session.SessionEvent.MetadataEntry metadata = 6 [deprecated = true];</code>
          */
         @java.lang.Deprecated public Builder clearMetadata() {
@@ -6712,6 +6852,10 @@ private static final long serialVersionUID = 0L;
           return this;
         }
         /**
+         * <pre>
+         * Deprecated. Do not use.
+         * </pre>
+         *
          * <code>repeated .android_studio.NextEditPredictionEvent.Session.SessionEvent.MetadataEntry metadata = 6 [deprecated = true];</code>
          */
         @java.lang.Deprecated public Builder removeMetadata(int index) {
@@ -6725,6 +6869,10 @@ private static final long serialVersionUID = 0L;
           return this;
         }
         /**
+         * <pre>
+         * Deprecated. Do not use.
+         * </pre>
+         *
          * <code>repeated .android_studio.NextEditPredictionEvent.Session.SessionEvent.MetadataEntry metadata = 6 [deprecated = true];</code>
          */
         @java.lang.Deprecated public com.google.wireless.android.sdk.stats.NextEditPredictionEvent.Session.SessionEvent.MetadataEntry.Builder getMetadataBuilder(
@@ -6732,6 +6880,10 @@ private static final long serialVersionUID = 0L;
           return getMetadataFieldBuilder().getBuilder(index);
         }
         /**
+         * <pre>
+         * Deprecated. Do not use.
+         * </pre>
+         *
          * <code>repeated .android_studio.NextEditPredictionEvent.Session.SessionEvent.MetadataEntry metadata = 6 [deprecated = true];</code>
          */
         @java.lang.Deprecated public com.google.wireless.android.sdk.stats.NextEditPredictionEvent.Session.SessionEvent.MetadataEntryOrBuilder getMetadataOrBuilder(
@@ -6742,6 +6894,10 @@ private static final long serialVersionUID = 0L;
           }
         }
         /**
+         * <pre>
+         * Deprecated. Do not use.
+         * </pre>
+         *
          * <code>repeated .android_studio.NextEditPredictionEvent.Session.SessionEvent.MetadataEntry metadata = 6 [deprecated = true];</code>
          */
         @java.lang.Deprecated public java.util.List<? extends com.google.wireless.android.sdk.stats.NextEditPredictionEvent.Session.SessionEvent.MetadataEntryOrBuilder> 
@@ -6753,6 +6909,10 @@ private static final long serialVersionUID = 0L;
           }
         }
         /**
+         * <pre>
+         * Deprecated. Do not use.
+         * </pre>
+         *
          * <code>repeated .android_studio.NextEditPredictionEvent.Session.SessionEvent.MetadataEntry metadata = 6 [deprecated = true];</code>
          */
         @java.lang.Deprecated public com.google.wireless.android.sdk.stats.NextEditPredictionEvent.Session.SessionEvent.MetadataEntry.Builder addMetadataBuilder() {
@@ -6760,6 +6920,10 @@ private static final long serialVersionUID = 0L;
               com.google.wireless.android.sdk.stats.NextEditPredictionEvent.Session.SessionEvent.MetadataEntry.getDefaultInstance());
         }
         /**
+         * <pre>
+         * Deprecated. Do not use.
+         * </pre>
+         *
          * <code>repeated .android_studio.NextEditPredictionEvent.Session.SessionEvent.MetadataEntry metadata = 6 [deprecated = true];</code>
          */
         @java.lang.Deprecated public com.google.wireless.android.sdk.stats.NextEditPredictionEvent.Session.SessionEvent.MetadataEntry.Builder addMetadataBuilder(
@@ -6768,6 +6932,10 @@ private static final long serialVersionUID = 0L;
               index, com.google.wireless.android.sdk.stats.NextEditPredictionEvent.Session.SessionEvent.MetadataEntry.getDefaultInstance());
         }
         /**
+         * <pre>
+         * Deprecated. Do not use.
+         * </pre>
+         *
          * <code>repeated .android_studio.NextEditPredictionEvent.Session.SessionEvent.MetadataEntry metadata = 6 [deprecated = true];</code>
          */
         @java.lang.Deprecated public java.util.List<com.google.wireless.android.sdk.stats.NextEditPredictionEvent.Session.SessionEvent.MetadataEntry.Builder> 
@@ -7163,19 +7331,31 @@ private static final long serialVersionUID = 0L;
     @SuppressWarnings("serial")
     private volatile java.lang.Object language_ = "";
     /**
-     * <code>optional string language = 3;</code>
+     * <pre>
+     * Deprecated. Use editor_file_type instead.
+     * </pre>
+     *
+     * <code>optional string language = 3 [deprecated = true];</code>
+     * @deprecated android_studio.NextEditPredictionEvent.Session.language is deprecated.
+     *     See studio_stats.proto;l=18689
      * @return Whether the language field is set.
      */
     @java.lang.Override
-    public boolean hasLanguage() {
+    @java.lang.Deprecated public boolean hasLanguage() {
       return ((bitField0_ & 0x00000004) != 0);
     }
     /**
-     * <code>optional string language = 3;</code>
+     * <pre>
+     * Deprecated. Use editor_file_type instead.
+     * </pre>
+     *
+     * <code>optional string language = 3 [deprecated = true];</code>
+     * @deprecated android_studio.NextEditPredictionEvent.Session.language is deprecated.
+     *     See studio_stats.proto;l=18689
      * @return The language.
      */
     @java.lang.Override
-    public java.lang.String getLanguage() {
+    @java.lang.Deprecated public java.lang.String getLanguage() {
       java.lang.Object ref = language_;
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
@@ -7190,11 +7370,17 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>optional string language = 3;</code>
+     * <pre>
+     * Deprecated. Use editor_file_type instead.
+     * </pre>
+     *
+     * <code>optional string language = 3 [deprecated = true];</code>
+     * @deprecated android_studio.NextEditPredictionEvent.Session.language is deprecated.
+     *     See studio_stats.proto;l=18689
      * @return The bytes for language.
      */
     @java.lang.Override
-    public com.google.protobuf.ByteString
+    @java.lang.Deprecated public com.google.protobuf.ByteString
         getLanguageBytes() {
       java.lang.Object ref = language_;
       if (ref instanceof java.lang.String) {
@@ -7278,6 +7464,24 @@ private static final long serialVersionUID = 0L;
       return events_.get(index);
     }
 
+    public static final int EDITOR_FILE_TYPE_FIELD_NUMBER = 6;
+    private int editorFileType_ = 0;
+    /**
+     * <code>optional .android_studio.EditorFileType editor_file_type = 6;</code>
+     * @return Whether the editorFileType field is set.
+     */
+    @java.lang.Override public boolean hasEditorFileType() {
+      return ((bitField0_ & 0x00000010) != 0);
+    }
+    /**
+     * <code>optional .android_studio.EditorFileType editor_file_type = 6;</code>
+     * @return The editorFileType.
+     */
+    @java.lang.Override public com.google.wireless.android.sdk.stats.EditorFileType getEditorFileType() {
+      com.google.wireless.android.sdk.stats.EditorFileType result = com.google.wireless.android.sdk.stats.EditorFileType.forNumber(editorFileType_);
+      return result == null ? com.google.wireless.android.sdk.stats.EditorFileType.UNKNOWN : result;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -7307,6 +7511,9 @@ private static final long serialVersionUID = 0L;
       for (int i = 0; i < events_.size(); i++) {
         output.writeMessage(5, events_.get(i));
       }
+      if (((bitField0_ & 0x00000010) != 0)) {
+        output.writeEnum(6, editorFileType_);
+      }
       getUnknownFields().writeTo(output);
     }
 
@@ -7333,6 +7540,10 @@ private static final long serialVersionUID = 0L;
       for (int i = 0; i < events_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(5, events_.get(i));
+      }
+      if (((bitField0_ & 0x00000010) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(6, editorFileType_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -7371,6 +7582,10 @@ private static final long serialVersionUID = 0L;
       }
       if (!getEventsList()
           .equals(other.getEventsList())) return false;
+      if (hasEditorFileType() != other.hasEditorFileType()) return false;
+      if (hasEditorFileType()) {
+        if (editorFileType_ != other.editorFileType_) return false;
+      }
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -7403,6 +7618,10 @@ private static final long serialVersionUID = 0L;
       if (getEventsCount() > 0) {
         hash = (37 * hash) + EVENTS_FIELD_NUMBER;
         hash = (53 * hash) + getEventsList().hashCode();
+      }
+      if (hasEditorFileType()) {
+        hash = (37 * hash) + EDITOR_FILE_TYPE_FIELD_NUMBER;
+        hash = (53 * hash) + editorFileType_;
       }
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
@@ -7549,6 +7768,7 @@ private static final long serialVersionUID = 0L;
           eventsBuilder_.clear();
         }
         bitField0_ = (bitField0_ & ~0x00000010);
+        editorFileType_ = 0;
         return this;
       }
 
@@ -7612,6 +7832,10 @@ private static final long serialVersionUID = 0L;
           result.forced_ = forced_;
           to_bitField0_ |= 0x00000008;
         }
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          result.editorFileType_ = editorFileType_;
+          to_bitField0_ |= 0x00000010;
+        }
         result.bitField0_ |= to_bitField0_;
       }
 
@@ -7668,6 +7892,9 @@ private static final long serialVersionUID = 0L;
               eventsBuilder_.addAllMessages(other.events_);
             }
           }
+        }
+        if (other.hasEditorFileType()) {
+          setEditorFileType(other.getEditorFileType());
         }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
@@ -7728,6 +7955,18 @@ private static final long serialVersionUID = 0L;
                 }
                 break;
               } // case 42
+              case 48: {
+                int tmpRaw = input.readEnum();
+                com.google.wireless.android.sdk.stats.EditorFileType tmpValue =
+                    com.google.wireless.android.sdk.stats.EditorFileType.forNumber(tmpRaw);
+                if (tmpValue == null) {
+                  mergeUnknownVarintField(6, tmpRaw);
+                } else {
+                  editorFileType_ = tmpRaw;
+                  bitField0_ |= 0x00000020;
+                }
+                break;
+              } // case 48
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -7867,17 +8106,29 @@ private static final long serialVersionUID = 0L;
 
       private java.lang.Object language_ = "";
       /**
-       * <code>optional string language = 3;</code>
+       * <pre>
+       * Deprecated. Use editor_file_type instead.
+       * </pre>
+       *
+       * <code>optional string language = 3 [deprecated = true];</code>
+       * @deprecated android_studio.NextEditPredictionEvent.Session.language is deprecated.
+       *     See studio_stats.proto;l=18689
        * @return Whether the language field is set.
        */
-      public boolean hasLanguage() {
+      @java.lang.Deprecated public boolean hasLanguage() {
         return ((bitField0_ & 0x00000004) != 0);
       }
       /**
-       * <code>optional string language = 3;</code>
+       * <pre>
+       * Deprecated. Use editor_file_type instead.
+       * </pre>
+       *
+       * <code>optional string language = 3 [deprecated = true];</code>
+       * @deprecated android_studio.NextEditPredictionEvent.Session.language is deprecated.
+       *     See studio_stats.proto;l=18689
        * @return The language.
        */
-      public java.lang.String getLanguage() {
+      @java.lang.Deprecated public java.lang.String getLanguage() {
         java.lang.Object ref = language_;
         if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
@@ -7892,10 +8143,16 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
-       * <code>optional string language = 3;</code>
+       * <pre>
+       * Deprecated. Use editor_file_type instead.
+       * </pre>
+       *
+       * <code>optional string language = 3 [deprecated = true];</code>
+       * @deprecated android_studio.NextEditPredictionEvent.Session.language is deprecated.
+       *     See studio_stats.proto;l=18689
        * @return The bytes for language.
        */
-      public com.google.protobuf.ByteString
+      @java.lang.Deprecated public com.google.protobuf.ByteString
           getLanguageBytes() {
         java.lang.Object ref = language_;
         if (ref instanceof String) {
@@ -7909,11 +8166,17 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
-       * <code>optional string language = 3;</code>
+       * <pre>
+       * Deprecated. Use editor_file_type instead.
+       * </pre>
+       *
+       * <code>optional string language = 3 [deprecated = true];</code>
+       * @deprecated android_studio.NextEditPredictionEvent.Session.language is deprecated.
+       *     See studio_stats.proto;l=18689
        * @param value The language to set.
        * @return This builder for chaining.
        */
-      public Builder setLanguage(
+      @java.lang.Deprecated public Builder setLanguage(
           java.lang.String value) {
         if (value == null) { throw new NullPointerException(); }
         language_ = value;
@@ -7922,21 +8185,33 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>optional string language = 3;</code>
+       * <pre>
+       * Deprecated. Use editor_file_type instead.
+       * </pre>
+       *
+       * <code>optional string language = 3 [deprecated = true];</code>
+       * @deprecated android_studio.NextEditPredictionEvent.Session.language is deprecated.
+       *     See studio_stats.proto;l=18689
        * @return This builder for chaining.
        */
-      public Builder clearLanguage() {
+      @java.lang.Deprecated public Builder clearLanguage() {
         language_ = getDefaultInstance().getLanguage();
         bitField0_ = (bitField0_ & ~0x00000004);
         onChanged();
         return this;
       }
       /**
-       * <code>optional string language = 3;</code>
+       * <pre>
+       * Deprecated. Use editor_file_type instead.
+       * </pre>
+       *
+       * <code>optional string language = 3 [deprecated = true];</code>
+       * @deprecated android_studio.NextEditPredictionEvent.Session.language is deprecated.
+       *     See studio_stats.proto;l=18689
        * @param value The bytes for language to set.
        * @return This builder for chaining.
        */
-      public Builder setLanguageBytes(
+      @java.lang.Deprecated public Builder setLanguageBytes(
           com.google.protobuf.ByteString value) {
         if (value == null) { throw new NullPointerException(); }
         language_ = value;
@@ -8243,6 +8518,48 @@ private static final long serialVersionUID = 0L;
           events_ = null;
         }
         return eventsBuilder_;
+      }
+
+      private int editorFileType_ = 0;
+      /**
+       * <code>optional .android_studio.EditorFileType editor_file_type = 6;</code>
+       * @return Whether the editorFileType field is set.
+       */
+      @java.lang.Override public boolean hasEditorFileType() {
+        return ((bitField0_ & 0x00000020) != 0);
+      }
+      /**
+       * <code>optional .android_studio.EditorFileType editor_file_type = 6;</code>
+       * @return The editorFileType.
+       */
+      @java.lang.Override
+      public com.google.wireless.android.sdk.stats.EditorFileType getEditorFileType() {
+        com.google.wireless.android.sdk.stats.EditorFileType result = com.google.wireless.android.sdk.stats.EditorFileType.forNumber(editorFileType_);
+        return result == null ? com.google.wireless.android.sdk.stats.EditorFileType.UNKNOWN : result;
+      }
+      /**
+       * <code>optional .android_studio.EditorFileType editor_file_type = 6;</code>
+       * @param value The editorFileType to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEditorFileType(com.google.wireless.android.sdk.stats.EditorFileType value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x00000020;
+        editorFileType_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional .android_studio.EditorFileType editor_file_type = 6;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearEditorFileType() {
+        bitField0_ = (bitField0_ & ~0x00000020);
+        editorFileType_ = 0;
+        onChanged();
+        return this;
       }
       @java.lang.Override
       public final Builder setUnknownFields(

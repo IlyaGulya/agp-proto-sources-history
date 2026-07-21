@@ -8446,6 +8446,15 @@ private static final long serialVersionUID = 0L;
      * <code>GRADLE_DAEMON_JVM_CRITERIA_ERROR = 52;</code>
      */
     GRADLE_DAEMON_JVM_CRITERIA_ERROR(52),
+    /**
+     * <pre>
+     * Failure because Gradle JVM is not compatible with a project's dependency
+     * required JVM runtime version
+     * </pre>
+     *
+     * <code>GRADLE_JVM_NOT_COMPATIBLE_WITH_DEPENDENCY = 53;</code>
+     */
+    GRADLE_JVM_NOT_COMPATIBLE_WITH_DEPENDENCY(53),
     ;
 
     /**
@@ -8700,6 +8709,15 @@ private static final long serialVersionUID = 0L;
      * <code>GRADLE_DAEMON_JVM_CRITERIA_ERROR = 52;</code>
      */
     public static final int GRADLE_DAEMON_JVM_CRITERIA_ERROR_VALUE = 52;
+    /**
+     * <pre>
+     * Failure because Gradle JVM is not compatible with a project's dependency
+     * required JVM runtime version
+     * </pre>
+     *
+     * <code>GRADLE_JVM_NOT_COMPATIBLE_WITH_DEPENDENCY = 53;</code>
+     */
+    public static final int GRADLE_JVM_NOT_COMPATIBLE_WITH_DEPENDENCY_VALUE = 53;
 
 
     public final int getNumber() {
@@ -8775,6 +8793,7 @@ private static final long serialVersionUID = 0L;
         case 50: return UNKNOWN_PLUGIN_COM_ANDROID;
         case 51: return UNKNOWN_PLUGIN_OTHER;
         case 52: return GRADLE_DAEMON_JVM_CRITERIA_ERROR;
+        case 53: return GRADLE_JVM_NOT_COMPATIBLE_WITH_DEPENDENCY;
         default: return null;
       }
     }

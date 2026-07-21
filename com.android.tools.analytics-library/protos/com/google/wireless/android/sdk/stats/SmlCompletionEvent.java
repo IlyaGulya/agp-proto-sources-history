@@ -49,7 +49,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional .android_studio.SmlCompletionEvent.CompletionRequest.Trigger trigger = 1 [deprecated = true];</code>
      * @deprecated android_studio.SmlCompletionEvent.CompletionRequest.trigger is deprecated.
-     *     See studio_stats.proto;l=15906
+     *     See studio_stats.proto;l=15911
      * @return Whether the trigger field is set.
      */
     @java.lang.Deprecated boolean hasTrigger();
@@ -60,7 +60,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional .android_studio.SmlCompletionEvent.CompletionRequest.Trigger trigger = 1 [deprecated = true];</code>
      * @deprecated android_studio.SmlCompletionEvent.CompletionRequest.trigger is deprecated.
-     *     See studio_stats.proto;l=15906
+     *     See studio_stats.proto;l=15911
      * @return The trigger.
      */
     @java.lang.Deprecated com.google.wireless.android.sdk.stats.SmlCompletionEvent.CompletionRequest.Trigger getTrigger();
@@ -72,7 +72,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional .android_studio.EditorFileType file_type = 2 [deprecated = true];</code>
      * @deprecated android_studio.SmlCompletionEvent.CompletionRequest.file_type is deprecated.
-     *     See studio_stats.proto;l=15908
+     *     See studio_stats.proto;l=15913
      * @return Whether the fileType field is set.
      */
     @java.lang.Deprecated boolean hasFileType();
@@ -83,7 +83,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional .android_studio.EditorFileType file_type = 2 [deprecated = true];</code>
      * @deprecated android_studio.SmlCompletionEvent.CompletionRequest.file_type is deprecated.
-     *     See studio_stats.proto;l=15908
+     *     See studio_stats.proto;l=15913
      * @return The fileType.
      */
     @java.lang.Deprecated com.google.wireless.android.sdk.stats.EditorFileType getFileType();
@@ -95,7 +95,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional uint32 prefix_length = 3 [deprecated = true];</code>
      * @deprecated android_studio.SmlCompletionEvent.CompletionRequest.prefix_length is deprecated.
-     *     See studio_stats.proto;l=15910
+     *     See studio_stats.proto;l=15915
      * @return Whether the prefixLength field is set.
      */
     @java.lang.Deprecated boolean hasPrefixLength();
@@ -106,7 +106,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional uint32 prefix_length = 3 [deprecated = true];</code>
      * @deprecated android_studio.SmlCompletionEvent.CompletionRequest.prefix_length is deprecated.
-     *     See studio_stats.proto;l=15910
+     *     See studio_stats.proto;l=15915
      * @return The prefixLength.
      */
     @java.lang.Deprecated int getPrefixLength();
@@ -118,7 +118,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional uint32 suffix_length = 4 [deprecated = true];</code>
      * @deprecated android_studio.SmlCompletionEvent.CompletionRequest.suffix_length is deprecated.
-     *     See studio_stats.proto;l=15912
+     *     See studio_stats.proto;l=15917
      * @return Whether the suffixLength field is set.
      */
     @java.lang.Deprecated boolean hasSuffixLength();
@@ -129,7 +129,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional uint32 suffix_length = 4 [deprecated = true];</code>
      * @deprecated android_studio.SmlCompletionEvent.CompletionRequest.suffix_length is deprecated.
-     *     See studio_stats.proto;l=15912
+     *     See studio_stats.proto;l=15917
      * @return The suffixLength.
      */
     @java.lang.Deprecated int getSuffixLength();
@@ -293,7 +293,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional .android_studio.SmlCompletionEvent.CompletionRequest.Trigger trigger = 1 [deprecated = true];</code>
      * @deprecated android_studio.SmlCompletionEvent.CompletionRequest.trigger is deprecated.
-     *     See studio_stats.proto;l=15906
+     *     See studio_stats.proto;l=15911
      * @return Whether the trigger field is set.
      */
     @java.lang.Override @java.lang.Deprecated public boolean hasTrigger() {
@@ -306,7 +306,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional .android_studio.SmlCompletionEvent.CompletionRequest.Trigger trigger = 1 [deprecated = true];</code>
      * @deprecated android_studio.SmlCompletionEvent.CompletionRequest.trigger is deprecated.
-     *     See studio_stats.proto;l=15906
+     *     See studio_stats.proto;l=15911
      * @return The trigger.
      */
     @java.lang.Override @java.lang.Deprecated public com.google.wireless.android.sdk.stats.SmlCompletionEvent.CompletionRequest.Trigger getTrigger() {
@@ -323,7 +323,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional .android_studio.EditorFileType file_type = 2 [deprecated = true];</code>
      * @deprecated android_studio.SmlCompletionEvent.CompletionRequest.file_type is deprecated.
-     *     See studio_stats.proto;l=15908
+     *     See studio_stats.proto;l=15913
      * @return Whether the fileType field is set.
      */
     @java.lang.Override @java.lang.Deprecated public boolean hasFileType() {
@@ -336,7 +336,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional .android_studio.EditorFileType file_type = 2 [deprecated = true];</code>
      * @deprecated android_studio.SmlCompletionEvent.CompletionRequest.file_type is deprecated.
-     *     See studio_stats.proto;l=15908
+     *     See studio_stats.proto;l=15913
      * @return The fileType.
      */
     @java.lang.Override @java.lang.Deprecated public com.google.wireless.android.sdk.stats.EditorFileType getFileType() {
@@ -353,7 +353,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional uint32 prefix_length = 3 [deprecated = true];</code>
      * @deprecated android_studio.SmlCompletionEvent.CompletionRequest.prefix_length is deprecated.
-     *     See studio_stats.proto;l=15910
+     *     See studio_stats.proto;l=15915
      * @return Whether the prefixLength field is set.
      */
     @java.lang.Override
@@ -367,7 +367,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional uint32 prefix_length = 3 [deprecated = true];</code>
      * @deprecated android_studio.SmlCompletionEvent.CompletionRequest.prefix_length is deprecated.
-     *     See studio_stats.proto;l=15910
+     *     See studio_stats.proto;l=15915
      * @return The prefixLength.
      */
     @java.lang.Override
@@ -384,7 +384,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional uint32 suffix_length = 4 [deprecated = true];</code>
      * @deprecated android_studio.SmlCompletionEvent.CompletionRequest.suffix_length is deprecated.
-     *     See studio_stats.proto;l=15912
+     *     See studio_stats.proto;l=15917
      * @return Whether the suffixLength field is set.
      */
     @java.lang.Override
@@ -398,7 +398,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional uint32 suffix_length = 4 [deprecated = true];</code>
      * @deprecated android_studio.SmlCompletionEvent.CompletionRequest.suffix_length is deprecated.
-     *     See studio_stats.proto;l=15912
+     *     See studio_stats.proto;l=15917
      * @return The suffixLength.
      */
     @java.lang.Override
@@ -816,7 +816,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional .android_studio.SmlCompletionEvent.CompletionRequest.Trigger trigger = 1 [deprecated = true];</code>
        * @deprecated android_studio.SmlCompletionEvent.CompletionRequest.trigger is deprecated.
-       *     See studio_stats.proto;l=15906
+       *     See studio_stats.proto;l=15911
        * @return Whether the trigger field is set.
        */
       @java.lang.Override @java.lang.Deprecated public boolean hasTrigger() {
@@ -829,7 +829,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional .android_studio.SmlCompletionEvent.CompletionRequest.Trigger trigger = 1 [deprecated = true];</code>
        * @deprecated android_studio.SmlCompletionEvent.CompletionRequest.trigger is deprecated.
-       *     See studio_stats.proto;l=15906
+       *     See studio_stats.proto;l=15911
        * @return The trigger.
        */
       @java.lang.Override
@@ -844,7 +844,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional .android_studio.SmlCompletionEvent.CompletionRequest.Trigger trigger = 1 [deprecated = true];</code>
        * @deprecated android_studio.SmlCompletionEvent.CompletionRequest.trigger is deprecated.
-       *     See studio_stats.proto;l=15906
+       *     See studio_stats.proto;l=15911
        * @param value The trigger to set.
        * @return This builder for chaining.
        */
@@ -864,7 +864,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional .android_studio.SmlCompletionEvent.CompletionRequest.Trigger trigger = 1 [deprecated = true];</code>
        * @deprecated android_studio.SmlCompletionEvent.CompletionRequest.trigger is deprecated.
-       *     See studio_stats.proto;l=15906
+       *     See studio_stats.proto;l=15911
        * @return This builder for chaining.
        */
       @java.lang.Deprecated public Builder clearTrigger() {
@@ -882,7 +882,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional .android_studio.EditorFileType file_type = 2 [deprecated = true];</code>
        * @deprecated android_studio.SmlCompletionEvent.CompletionRequest.file_type is deprecated.
-       *     See studio_stats.proto;l=15908
+       *     See studio_stats.proto;l=15913
        * @return Whether the fileType field is set.
        */
       @java.lang.Override @java.lang.Deprecated public boolean hasFileType() {
@@ -895,7 +895,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional .android_studio.EditorFileType file_type = 2 [deprecated = true];</code>
        * @deprecated android_studio.SmlCompletionEvent.CompletionRequest.file_type is deprecated.
-       *     See studio_stats.proto;l=15908
+       *     See studio_stats.proto;l=15913
        * @return The fileType.
        */
       @java.lang.Override
@@ -910,7 +910,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional .android_studio.EditorFileType file_type = 2 [deprecated = true];</code>
        * @deprecated android_studio.SmlCompletionEvent.CompletionRequest.file_type is deprecated.
-       *     See studio_stats.proto;l=15908
+       *     See studio_stats.proto;l=15913
        * @param value The fileType to set.
        * @return This builder for chaining.
        */
@@ -930,7 +930,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional .android_studio.EditorFileType file_type = 2 [deprecated = true];</code>
        * @deprecated android_studio.SmlCompletionEvent.CompletionRequest.file_type is deprecated.
-       *     See studio_stats.proto;l=15908
+       *     See studio_stats.proto;l=15913
        * @return This builder for chaining.
        */
       @java.lang.Deprecated public Builder clearFileType() {
@@ -948,7 +948,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional uint32 prefix_length = 3 [deprecated = true];</code>
        * @deprecated android_studio.SmlCompletionEvent.CompletionRequest.prefix_length is deprecated.
-       *     See studio_stats.proto;l=15910
+       *     See studio_stats.proto;l=15915
        * @return Whether the prefixLength field is set.
        */
       @java.lang.Override
@@ -962,7 +962,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional uint32 prefix_length = 3 [deprecated = true];</code>
        * @deprecated android_studio.SmlCompletionEvent.CompletionRequest.prefix_length is deprecated.
-       *     See studio_stats.proto;l=15910
+       *     See studio_stats.proto;l=15915
        * @return The prefixLength.
        */
       @java.lang.Override
@@ -976,7 +976,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional uint32 prefix_length = 3 [deprecated = true];</code>
        * @deprecated android_studio.SmlCompletionEvent.CompletionRequest.prefix_length is deprecated.
-       *     See studio_stats.proto;l=15910
+       *     See studio_stats.proto;l=15915
        * @param value The prefixLength to set.
        * @return This builder for chaining.
        */
@@ -994,7 +994,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional uint32 prefix_length = 3 [deprecated = true];</code>
        * @deprecated android_studio.SmlCompletionEvent.CompletionRequest.prefix_length is deprecated.
-       *     See studio_stats.proto;l=15910
+       *     See studio_stats.proto;l=15915
        * @return This builder for chaining.
        */
       @java.lang.Deprecated public Builder clearPrefixLength() {
@@ -1012,7 +1012,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional uint32 suffix_length = 4 [deprecated = true];</code>
        * @deprecated android_studio.SmlCompletionEvent.CompletionRequest.suffix_length is deprecated.
-       *     See studio_stats.proto;l=15912
+       *     See studio_stats.proto;l=15917
        * @return Whether the suffixLength field is set.
        */
       @java.lang.Override
@@ -1026,7 +1026,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional uint32 suffix_length = 4 [deprecated = true];</code>
        * @deprecated android_studio.SmlCompletionEvent.CompletionRequest.suffix_length is deprecated.
-       *     See studio_stats.proto;l=15912
+       *     See studio_stats.proto;l=15917
        * @return The suffixLength.
        */
       @java.lang.Override
@@ -1040,7 +1040,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional uint32 suffix_length = 4 [deprecated = true];</code>
        * @deprecated android_studio.SmlCompletionEvent.CompletionRequest.suffix_length is deprecated.
-       *     See studio_stats.proto;l=15912
+       *     See studio_stats.proto;l=15917
        * @param value The suffixLength to set.
        * @return This builder for chaining.
        */
@@ -1058,7 +1058,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional uint32 suffix_length = 4 [deprecated = true];</code>
        * @deprecated android_studio.SmlCompletionEvent.CompletionRequest.suffix_length is deprecated.
-       *     See studio_stats.proto;l=15912
+       *     See studio_stats.proto;l=15917
        * @return This builder for chaining.
        */
       @java.lang.Deprecated public Builder clearSuffixLength() {
@@ -1142,7 +1142,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional int32 status_code = 1 [deprecated = true];</code>
      * @deprecated android_studio.SmlCompletionEvent.CompletionError.status_code is deprecated.
-     *     See studio_stats.proto;l=15920
+     *     See studio_stats.proto;l=15925
      * @return Whether the statusCode field is set.
      */
     @java.lang.Deprecated boolean hasStatusCode();
@@ -1153,7 +1153,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional int32 status_code = 1 [deprecated = true];</code>
      * @deprecated android_studio.SmlCompletionEvent.CompletionError.status_code is deprecated.
-     *     See studio_stats.proto;l=15920
+     *     See studio_stats.proto;l=15925
      * @return The statusCode.
      */
     @java.lang.Deprecated int getStatusCode();
@@ -1207,7 +1207,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional int32 status_code = 1 [deprecated = true];</code>
      * @deprecated android_studio.SmlCompletionEvent.CompletionError.status_code is deprecated.
-     *     See studio_stats.proto;l=15920
+     *     See studio_stats.proto;l=15925
      * @return Whether the statusCode field is set.
      */
     @java.lang.Override
@@ -1221,7 +1221,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional int32 status_code = 1 [deprecated = true];</code>
      * @deprecated android_studio.SmlCompletionEvent.CompletionError.status_code is deprecated.
-     *     See studio_stats.proto;l=15920
+     *     See studio_stats.proto;l=15925
      * @return The statusCode.
      */
     @java.lang.Override
@@ -1540,7 +1540,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional int32 status_code = 1 [deprecated = true];</code>
        * @deprecated android_studio.SmlCompletionEvent.CompletionError.status_code is deprecated.
-       *     See studio_stats.proto;l=15920
+       *     See studio_stats.proto;l=15925
        * @return Whether the statusCode field is set.
        */
       @java.lang.Override
@@ -1554,7 +1554,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional int32 status_code = 1 [deprecated = true];</code>
        * @deprecated android_studio.SmlCompletionEvent.CompletionError.status_code is deprecated.
-       *     See studio_stats.proto;l=15920
+       *     See studio_stats.proto;l=15925
        * @return The statusCode.
        */
       @java.lang.Override
@@ -1568,7 +1568,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional int32 status_code = 1 [deprecated = true];</code>
        * @deprecated android_studio.SmlCompletionEvent.CompletionError.status_code is deprecated.
-       *     See studio_stats.proto;l=15920
+       *     See studio_stats.proto;l=15925
        * @param value The statusCode to set.
        * @return This builder for chaining.
        */
@@ -1586,7 +1586,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional int32 status_code = 1 [deprecated = true];</code>
        * @deprecated android_studio.SmlCompletionEvent.CompletionError.status_code is deprecated.
-       *     See studio_stats.proto;l=15920
+       *     See studio_stats.proto;l=15925
        * @return This builder for chaining.
        */
       @java.lang.Deprecated public Builder clearStatusCode() {
@@ -1670,7 +1670,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional .android_studio.SmlResponseMetadata metadata = 1 [deprecated = true, lazy = true];</code>
      * @deprecated android_studio.SmlCompletionEvent.CompletionResult.metadata is deprecated.
-     *     See studio_stats.proto;l=15928
+     *     See studio_stats.proto;l=15933
      * @return Whether the metadata field is set.
      */
     @java.lang.Deprecated boolean hasMetadata();
@@ -1681,7 +1681,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional .android_studio.SmlResponseMetadata metadata = 1 [deprecated = true, lazy = true];</code>
      * @deprecated android_studio.SmlCompletionEvent.CompletionResult.metadata is deprecated.
-     *     See studio_stats.proto;l=15928
+     *     See studio_stats.proto;l=15933
      * @return The metadata.
      */
     @java.lang.Deprecated com.google.wireless.android.sdk.stats.SmlResponseMetadata getMetadata();
@@ -1701,7 +1701,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional uint64 latency_ms = 2 [deprecated = true];</code>
      * @deprecated android_studio.SmlCompletionEvent.CompletionResult.latency_ms is deprecated.
-     *     See studio_stats.proto;l=15930
+     *     See studio_stats.proto;l=15935
      * @return Whether the latencyMs field is set.
      */
     @java.lang.Deprecated boolean hasLatencyMs();
@@ -1712,7 +1712,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional uint64 latency_ms = 2 [deprecated = true];</code>
      * @deprecated android_studio.SmlCompletionEvent.CompletionResult.latency_ms is deprecated.
-     *     See studio_stats.proto;l=15930
+     *     See studio_stats.proto;l=15935
      * @return The latencyMs.
      */
     @java.lang.Deprecated long getLatencyMs();
@@ -1724,7 +1724,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional int32 num_completions = 3 [deprecated = true];</code>
      * @deprecated android_studio.SmlCompletionEvent.CompletionResult.num_completions is deprecated.
-     *     See studio_stats.proto;l=15932
+     *     See studio_stats.proto;l=15937
      * @return Whether the numCompletions field is set.
      */
     @java.lang.Deprecated boolean hasNumCompletions();
@@ -1735,7 +1735,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional int32 num_completions = 3 [deprecated = true];</code>
      * @deprecated android_studio.SmlCompletionEvent.CompletionResult.num_completions is deprecated.
-     *     See studio_stats.proto;l=15932
+     *     See studio_stats.proto;l=15937
      * @return The numCompletions.
      */
     @java.lang.Deprecated int getNumCompletions();
@@ -1789,7 +1789,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional .android_studio.SmlResponseMetadata metadata = 1 [deprecated = true, lazy = true];</code>
      * @deprecated android_studio.SmlCompletionEvent.CompletionResult.metadata is deprecated.
-     *     See studio_stats.proto;l=15928
+     *     See studio_stats.proto;l=15933
      * @return Whether the metadata field is set.
      */
     @java.lang.Override
@@ -1803,7 +1803,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional .android_studio.SmlResponseMetadata metadata = 1 [deprecated = true, lazy = true];</code>
      * @deprecated android_studio.SmlCompletionEvent.CompletionResult.metadata is deprecated.
-     *     See studio_stats.proto;l=15928
+     *     See studio_stats.proto;l=15933
      * @return The metadata.
      */
     @java.lang.Override
@@ -1831,7 +1831,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional uint64 latency_ms = 2 [deprecated = true];</code>
      * @deprecated android_studio.SmlCompletionEvent.CompletionResult.latency_ms is deprecated.
-     *     See studio_stats.proto;l=15930
+     *     See studio_stats.proto;l=15935
      * @return Whether the latencyMs field is set.
      */
     @java.lang.Override
@@ -1845,7 +1845,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional uint64 latency_ms = 2 [deprecated = true];</code>
      * @deprecated android_studio.SmlCompletionEvent.CompletionResult.latency_ms is deprecated.
-     *     See studio_stats.proto;l=15930
+     *     See studio_stats.proto;l=15935
      * @return The latencyMs.
      */
     @java.lang.Override
@@ -1862,7 +1862,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional int32 num_completions = 3 [deprecated = true];</code>
      * @deprecated android_studio.SmlCompletionEvent.CompletionResult.num_completions is deprecated.
-     *     See studio_stats.proto;l=15932
+     *     See studio_stats.proto;l=15937
      * @return Whether the numCompletions field is set.
      */
     @java.lang.Override
@@ -1876,7 +1876,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional int32 num_completions = 3 [deprecated = true];</code>
      * @deprecated android_studio.SmlCompletionEvent.CompletionResult.num_completions is deprecated.
-     *     See studio_stats.proto;l=15932
+     *     See studio_stats.proto;l=15937
      * @return The numCompletions.
      */
     @java.lang.Override
@@ -2270,7 +2270,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional .android_studio.SmlResponseMetadata metadata = 1 [deprecated = true, lazy = true];</code>
        * @deprecated android_studio.SmlCompletionEvent.CompletionResult.metadata is deprecated.
-       *     See studio_stats.proto;l=15928
+       *     See studio_stats.proto;l=15933
        * @return Whether the metadata field is set.
        */
       @java.lang.Deprecated public boolean hasMetadata() {
@@ -2283,7 +2283,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional .android_studio.SmlResponseMetadata metadata = 1 [deprecated = true, lazy = true];</code>
        * @deprecated android_studio.SmlCompletionEvent.CompletionResult.metadata is deprecated.
-       *     See studio_stats.proto;l=15928
+       *     See studio_stats.proto;l=15933
        * @return The metadata.
        */
       @java.lang.Deprecated public com.google.wireless.android.sdk.stats.SmlResponseMetadata getMetadata() {
@@ -2427,7 +2427,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional uint64 latency_ms = 2 [deprecated = true];</code>
        * @deprecated android_studio.SmlCompletionEvent.CompletionResult.latency_ms is deprecated.
-       *     See studio_stats.proto;l=15930
+       *     See studio_stats.proto;l=15935
        * @return Whether the latencyMs field is set.
        */
       @java.lang.Override
@@ -2441,7 +2441,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional uint64 latency_ms = 2 [deprecated = true];</code>
        * @deprecated android_studio.SmlCompletionEvent.CompletionResult.latency_ms is deprecated.
-       *     See studio_stats.proto;l=15930
+       *     See studio_stats.proto;l=15935
        * @return The latencyMs.
        */
       @java.lang.Override
@@ -2455,7 +2455,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional uint64 latency_ms = 2 [deprecated = true];</code>
        * @deprecated android_studio.SmlCompletionEvent.CompletionResult.latency_ms is deprecated.
-       *     See studio_stats.proto;l=15930
+       *     See studio_stats.proto;l=15935
        * @param value The latencyMs to set.
        * @return This builder for chaining.
        */
@@ -2473,7 +2473,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional uint64 latency_ms = 2 [deprecated = true];</code>
        * @deprecated android_studio.SmlCompletionEvent.CompletionResult.latency_ms is deprecated.
-       *     See studio_stats.proto;l=15930
+       *     See studio_stats.proto;l=15935
        * @return This builder for chaining.
        */
       @java.lang.Deprecated public Builder clearLatencyMs() {
@@ -2491,7 +2491,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional int32 num_completions = 3 [deprecated = true];</code>
        * @deprecated android_studio.SmlCompletionEvent.CompletionResult.num_completions is deprecated.
-       *     See studio_stats.proto;l=15932
+       *     See studio_stats.proto;l=15937
        * @return Whether the numCompletions field is set.
        */
       @java.lang.Override
@@ -2505,7 +2505,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional int32 num_completions = 3 [deprecated = true];</code>
        * @deprecated android_studio.SmlCompletionEvent.CompletionResult.num_completions is deprecated.
-       *     See studio_stats.proto;l=15932
+       *     See studio_stats.proto;l=15937
        * @return The numCompletions.
        */
       @java.lang.Override
@@ -2519,7 +2519,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional int32 num_completions = 3 [deprecated = true];</code>
        * @deprecated android_studio.SmlCompletionEvent.CompletionResult.num_completions is deprecated.
-       *     See studio_stats.proto;l=15932
+       *     See studio_stats.proto;l=15937
        * @param value The numCompletions to set.
        * @return This builder for chaining.
        */
@@ -2537,7 +2537,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional int32 num_completions = 3 [deprecated = true];</code>
        * @deprecated android_studio.SmlCompletionEvent.CompletionResult.num_completions is deprecated.
-       *     See studio_stats.proto;l=15932
+       *     See studio_stats.proto;l=15937
        * @return This builder for chaining.
        */
       @java.lang.Deprecated public Builder clearNumCompletions() {
@@ -2621,7 +2621,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional .android_studio.SmlCompletionEvent.CompletionResult result = 1 [deprecated = true, lazy = true];</code>
      * @deprecated android_studio.SmlCompletionEvent.CompletionResponse.result is deprecated.
-     *     See studio_stats.proto;l=15940
+     *     See studio_stats.proto;l=15945
      * @return Whether the result field is set.
      */
     @java.lang.Deprecated boolean hasResult();
@@ -2632,7 +2632,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional .android_studio.SmlCompletionEvent.CompletionResult result = 1 [deprecated = true, lazy = true];</code>
      * @deprecated android_studio.SmlCompletionEvent.CompletionResponse.result is deprecated.
-     *     See studio_stats.proto;l=15940
+     *     See studio_stats.proto;l=15945
      * @return The result.
      */
     @java.lang.Deprecated com.google.wireless.android.sdk.stats.SmlCompletionEvent.CompletionResult getResult();
@@ -2652,7 +2652,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional .android_studio.SmlCompletionEvent.CompletionError backend_error = 2 [deprecated = true, lazy = true];</code>
      * @deprecated android_studio.SmlCompletionEvent.CompletionResponse.backend_error is deprecated.
-     *     See studio_stats.proto;l=15942
+     *     See studio_stats.proto;l=15947
      * @return Whether the backendError field is set.
      */
     @java.lang.Deprecated boolean hasBackendError();
@@ -2663,7 +2663,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional .android_studio.SmlCompletionEvent.CompletionError backend_error = 2 [deprecated = true, lazy = true];</code>
      * @deprecated android_studio.SmlCompletionEvent.CompletionResponse.backend_error is deprecated.
-     *     See studio_stats.proto;l=15942
+     *     See studio_stats.proto;l=15947
      * @return The backendError.
      */
     @java.lang.Deprecated com.google.wireless.android.sdk.stats.SmlCompletionEvent.CompletionError getBackendError();
@@ -2725,7 +2725,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional .android_studio.SmlCompletionEvent.CompletionResult result = 1 [deprecated = true, lazy = true];</code>
      * @deprecated android_studio.SmlCompletionEvent.CompletionResponse.result is deprecated.
-     *     See studio_stats.proto;l=15940
+     *     See studio_stats.proto;l=15945
      * @return Whether the result field is set.
      */
     @java.lang.Override
@@ -2739,7 +2739,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional .android_studio.SmlCompletionEvent.CompletionResult result = 1 [deprecated = true, lazy = true];</code>
      * @deprecated android_studio.SmlCompletionEvent.CompletionResponse.result is deprecated.
-     *     See studio_stats.proto;l=15940
+     *     See studio_stats.proto;l=15945
      * @return The result.
      */
     @java.lang.Override
@@ -2767,7 +2767,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional .android_studio.SmlCompletionEvent.CompletionError backend_error = 2 [deprecated = true, lazy = true];</code>
      * @deprecated android_studio.SmlCompletionEvent.CompletionResponse.backend_error is deprecated.
-     *     See studio_stats.proto;l=15942
+     *     See studio_stats.proto;l=15947
      * @return Whether the backendError field is set.
      */
     @java.lang.Override
@@ -2781,7 +2781,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional .android_studio.SmlCompletionEvent.CompletionError backend_error = 2 [deprecated = true, lazy = true];</code>
      * @deprecated android_studio.SmlCompletionEvent.CompletionResponse.backend_error is deprecated.
-     *     See studio_stats.proto;l=15942
+     *     See studio_stats.proto;l=15947
      * @return The backendError.
      */
     @java.lang.Override
@@ -3165,7 +3165,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional .android_studio.SmlCompletionEvent.CompletionResult result = 1 [deprecated = true, lazy = true];</code>
        * @deprecated android_studio.SmlCompletionEvent.CompletionResponse.result is deprecated.
-       *     See studio_stats.proto;l=15940
+       *     See studio_stats.proto;l=15945
        * @return Whether the result field is set.
        */
       @java.lang.Deprecated public boolean hasResult() {
@@ -3178,7 +3178,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional .android_studio.SmlCompletionEvent.CompletionResult result = 1 [deprecated = true, lazy = true];</code>
        * @deprecated android_studio.SmlCompletionEvent.CompletionResponse.result is deprecated.
-       *     See studio_stats.proto;l=15940
+       *     See studio_stats.proto;l=15945
        * @return The result.
        */
       @java.lang.Deprecated public com.google.wireless.android.sdk.stats.SmlCompletionEvent.CompletionResult getResult() {
@@ -3324,7 +3324,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional .android_studio.SmlCompletionEvent.CompletionError backend_error = 2 [deprecated = true, lazy = true];</code>
        * @deprecated android_studio.SmlCompletionEvent.CompletionResponse.backend_error is deprecated.
-       *     See studio_stats.proto;l=15942
+       *     See studio_stats.proto;l=15947
        * @return Whether the backendError field is set.
        */
       @java.lang.Deprecated public boolean hasBackendError() {
@@ -3337,7 +3337,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional .android_studio.SmlCompletionEvent.CompletionError backend_error = 2 [deprecated = true, lazy = true];</code>
        * @deprecated android_studio.SmlCompletionEvent.CompletionResponse.backend_error is deprecated.
-       *     See studio_stats.proto;l=15942
+       *     See studio_stats.proto;l=15947
        * @return The backendError.
        */
       @java.lang.Deprecated public com.google.wireless.android.sdk.stats.SmlCompletionEvent.CompletionError getBackendError() {
@@ -3547,7 +3547,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional .android_studio.SmlResponseMetadata metadata = 1 [deprecated = true, lazy = true];</code>
      * @deprecated android_studio.SmlCompletionEvent.CompletionShown.metadata is deprecated.
-     *     See studio_stats.proto;l=15950
+     *     See studio_stats.proto;l=15955
      * @return Whether the metadata field is set.
      */
     @java.lang.Deprecated boolean hasMetadata();
@@ -3558,7 +3558,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional .android_studio.SmlResponseMetadata metadata = 1 [deprecated = true, lazy = true];</code>
      * @deprecated android_studio.SmlCompletionEvent.CompletionShown.metadata is deprecated.
-     *     See studio_stats.proto;l=15950
+     *     See studio_stats.proto;l=15955
      * @return The metadata.
      */
     @java.lang.Deprecated com.google.wireless.android.sdk.stats.SmlResponseMetadata getMetadata();
@@ -3578,7 +3578,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional int32 shown_suggestion_index = 2 [deprecated = true];</code>
      * @deprecated android_studio.SmlCompletionEvent.CompletionShown.shown_suggestion_index is deprecated.
-     *     See studio_stats.proto;l=15952
+     *     See studio_stats.proto;l=15957
      * @return Whether the shownSuggestionIndex field is set.
      */
     @java.lang.Deprecated boolean hasShownSuggestionIndex();
@@ -3589,7 +3589,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional int32 shown_suggestion_index = 2 [deprecated = true];</code>
      * @deprecated android_studio.SmlCompletionEvent.CompletionShown.shown_suggestion_index is deprecated.
-     *     See studio_stats.proto;l=15952
+     *     See studio_stats.proto;l=15957
      * @return The shownSuggestionIndex.
      */
     @java.lang.Deprecated int getShownSuggestionIndex();
@@ -3643,7 +3643,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional .android_studio.SmlResponseMetadata metadata = 1 [deprecated = true, lazy = true];</code>
      * @deprecated android_studio.SmlCompletionEvent.CompletionShown.metadata is deprecated.
-     *     See studio_stats.proto;l=15950
+     *     See studio_stats.proto;l=15955
      * @return Whether the metadata field is set.
      */
     @java.lang.Override
@@ -3657,7 +3657,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional .android_studio.SmlResponseMetadata metadata = 1 [deprecated = true, lazy = true];</code>
      * @deprecated android_studio.SmlCompletionEvent.CompletionShown.metadata is deprecated.
-     *     See studio_stats.proto;l=15950
+     *     See studio_stats.proto;l=15955
      * @return The metadata.
      */
     @java.lang.Override
@@ -3685,7 +3685,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional int32 shown_suggestion_index = 2 [deprecated = true];</code>
      * @deprecated android_studio.SmlCompletionEvent.CompletionShown.shown_suggestion_index is deprecated.
-     *     See studio_stats.proto;l=15952
+     *     See studio_stats.proto;l=15957
      * @return Whether the shownSuggestionIndex field is set.
      */
     @java.lang.Override
@@ -3699,7 +3699,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional int32 shown_suggestion_index = 2 [deprecated = true];</code>
      * @deprecated android_studio.SmlCompletionEvent.CompletionShown.shown_suggestion_index is deprecated.
-     *     See studio_stats.proto;l=15952
+     *     See studio_stats.proto;l=15957
      * @return The shownSuggestionIndex.
      */
     @java.lang.Override
@@ -4063,7 +4063,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional .android_studio.SmlResponseMetadata metadata = 1 [deprecated = true, lazy = true];</code>
        * @deprecated android_studio.SmlCompletionEvent.CompletionShown.metadata is deprecated.
-       *     See studio_stats.proto;l=15950
+       *     See studio_stats.proto;l=15955
        * @return Whether the metadata field is set.
        */
       @java.lang.Deprecated public boolean hasMetadata() {
@@ -4076,7 +4076,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional .android_studio.SmlResponseMetadata metadata = 1 [deprecated = true, lazy = true];</code>
        * @deprecated android_studio.SmlCompletionEvent.CompletionShown.metadata is deprecated.
-       *     See studio_stats.proto;l=15950
+       *     See studio_stats.proto;l=15955
        * @return The metadata.
        */
       @java.lang.Deprecated public com.google.wireless.android.sdk.stats.SmlResponseMetadata getMetadata() {
@@ -4220,7 +4220,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional int32 shown_suggestion_index = 2 [deprecated = true];</code>
        * @deprecated android_studio.SmlCompletionEvent.CompletionShown.shown_suggestion_index is deprecated.
-       *     See studio_stats.proto;l=15952
+       *     See studio_stats.proto;l=15957
        * @return Whether the shownSuggestionIndex field is set.
        */
       @java.lang.Override
@@ -4234,7 +4234,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional int32 shown_suggestion_index = 2 [deprecated = true];</code>
        * @deprecated android_studio.SmlCompletionEvent.CompletionShown.shown_suggestion_index is deprecated.
-       *     See studio_stats.proto;l=15952
+       *     See studio_stats.proto;l=15957
        * @return The shownSuggestionIndex.
        */
       @java.lang.Override
@@ -4248,7 +4248,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional int32 shown_suggestion_index = 2 [deprecated = true];</code>
        * @deprecated android_studio.SmlCompletionEvent.CompletionShown.shown_suggestion_index is deprecated.
-       *     See studio_stats.proto;l=15952
+       *     See studio_stats.proto;l=15957
        * @param value The shownSuggestionIndex to set.
        * @return This builder for chaining.
        */
@@ -4266,7 +4266,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional int32 shown_suggestion_index = 2 [deprecated = true];</code>
        * @deprecated android_studio.SmlCompletionEvent.CompletionShown.shown_suggestion_index is deprecated.
-       *     See studio_stats.proto;l=15952
+       *     See studio_stats.proto;l=15957
        * @return This builder for chaining.
        */
       @java.lang.Deprecated public Builder clearShownSuggestionIndex() {
@@ -4350,7 +4350,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional .android_studio.SmlResponseMetadata metadata = 1 [deprecated = true, lazy = true];</code>
      * @deprecated android_studio.SmlCompletionEvent.CompletionAccepted.metadata is deprecated.
-     *     See studio_stats.proto;l=15960
+     *     See studio_stats.proto;l=15965
      * @return Whether the metadata field is set.
      */
     @java.lang.Deprecated boolean hasMetadata();
@@ -4361,7 +4361,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional .android_studio.SmlResponseMetadata metadata = 1 [deprecated = true, lazy = true];</code>
      * @deprecated android_studio.SmlCompletionEvent.CompletionAccepted.metadata is deprecated.
-     *     See studio_stats.proto;l=15960
+     *     See studio_stats.proto;l=15965
      * @return The metadata.
      */
     @java.lang.Deprecated com.google.wireless.android.sdk.stats.SmlResponseMetadata getMetadata();
@@ -4381,7 +4381,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional int32 accepted_suggestion_index = 2 [deprecated = true];</code>
      * @deprecated android_studio.SmlCompletionEvent.CompletionAccepted.accepted_suggestion_index is deprecated.
-     *     See studio_stats.proto;l=15962
+     *     See studio_stats.proto;l=15967
      * @return Whether the acceptedSuggestionIndex field is set.
      */
     @java.lang.Deprecated boolean hasAcceptedSuggestionIndex();
@@ -4392,7 +4392,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional int32 accepted_suggestion_index = 2 [deprecated = true];</code>
      * @deprecated android_studio.SmlCompletionEvent.CompletionAccepted.accepted_suggestion_index is deprecated.
-     *     See studio_stats.proto;l=15962
+     *     See studio_stats.proto;l=15967
      * @return The acceptedSuggestionIndex.
      */
     @java.lang.Deprecated int getAcceptedSuggestionIndex();
@@ -4404,7 +4404,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional int32 accepted_suggestion_length = 3 [deprecated = true];</code>
      * @deprecated android_studio.SmlCompletionEvent.CompletionAccepted.accepted_suggestion_length is deprecated.
-     *     See studio_stats.proto;l=15964
+     *     See studio_stats.proto;l=15969
      * @return Whether the acceptedSuggestionLength field is set.
      */
     @java.lang.Deprecated boolean hasAcceptedSuggestionLength();
@@ -4415,7 +4415,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional int32 accepted_suggestion_length = 3 [deprecated = true];</code>
      * @deprecated android_studio.SmlCompletionEvent.CompletionAccepted.accepted_suggestion_length is deprecated.
-     *     See studio_stats.proto;l=15964
+     *     See studio_stats.proto;l=15969
      * @return The acceptedSuggestionLength.
      */
     @java.lang.Deprecated int getAcceptedSuggestionLength();
@@ -4469,7 +4469,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional .android_studio.SmlResponseMetadata metadata = 1 [deprecated = true, lazy = true];</code>
      * @deprecated android_studio.SmlCompletionEvent.CompletionAccepted.metadata is deprecated.
-     *     See studio_stats.proto;l=15960
+     *     See studio_stats.proto;l=15965
      * @return Whether the metadata field is set.
      */
     @java.lang.Override
@@ -4483,7 +4483,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional .android_studio.SmlResponseMetadata metadata = 1 [deprecated = true, lazy = true];</code>
      * @deprecated android_studio.SmlCompletionEvent.CompletionAccepted.metadata is deprecated.
-     *     See studio_stats.proto;l=15960
+     *     See studio_stats.proto;l=15965
      * @return The metadata.
      */
     @java.lang.Override
@@ -4511,7 +4511,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional int32 accepted_suggestion_index = 2 [deprecated = true];</code>
      * @deprecated android_studio.SmlCompletionEvent.CompletionAccepted.accepted_suggestion_index is deprecated.
-     *     See studio_stats.proto;l=15962
+     *     See studio_stats.proto;l=15967
      * @return Whether the acceptedSuggestionIndex field is set.
      */
     @java.lang.Override
@@ -4525,7 +4525,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional int32 accepted_suggestion_index = 2 [deprecated = true];</code>
      * @deprecated android_studio.SmlCompletionEvent.CompletionAccepted.accepted_suggestion_index is deprecated.
-     *     See studio_stats.proto;l=15962
+     *     See studio_stats.proto;l=15967
      * @return The acceptedSuggestionIndex.
      */
     @java.lang.Override
@@ -4542,7 +4542,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional int32 accepted_suggestion_length = 3 [deprecated = true];</code>
      * @deprecated android_studio.SmlCompletionEvent.CompletionAccepted.accepted_suggestion_length is deprecated.
-     *     See studio_stats.proto;l=15964
+     *     See studio_stats.proto;l=15969
      * @return Whether the acceptedSuggestionLength field is set.
      */
     @java.lang.Override
@@ -4556,7 +4556,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional int32 accepted_suggestion_length = 3 [deprecated = true];</code>
      * @deprecated android_studio.SmlCompletionEvent.CompletionAccepted.accepted_suggestion_length is deprecated.
-     *     See studio_stats.proto;l=15964
+     *     See studio_stats.proto;l=15969
      * @return The acceptedSuggestionLength.
      */
     @java.lang.Override
@@ -4949,7 +4949,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional .android_studio.SmlResponseMetadata metadata = 1 [deprecated = true, lazy = true];</code>
        * @deprecated android_studio.SmlCompletionEvent.CompletionAccepted.metadata is deprecated.
-       *     See studio_stats.proto;l=15960
+       *     See studio_stats.proto;l=15965
        * @return Whether the metadata field is set.
        */
       @java.lang.Deprecated public boolean hasMetadata() {
@@ -4962,7 +4962,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional .android_studio.SmlResponseMetadata metadata = 1 [deprecated = true, lazy = true];</code>
        * @deprecated android_studio.SmlCompletionEvent.CompletionAccepted.metadata is deprecated.
-       *     See studio_stats.proto;l=15960
+       *     See studio_stats.proto;l=15965
        * @return The metadata.
        */
       @java.lang.Deprecated public com.google.wireless.android.sdk.stats.SmlResponseMetadata getMetadata() {
@@ -5106,7 +5106,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional int32 accepted_suggestion_index = 2 [deprecated = true];</code>
        * @deprecated android_studio.SmlCompletionEvent.CompletionAccepted.accepted_suggestion_index is deprecated.
-       *     See studio_stats.proto;l=15962
+       *     See studio_stats.proto;l=15967
        * @return Whether the acceptedSuggestionIndex field is set.
        */
       @java.lang.Override
@@ -5120,7 +5120,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional int32 accepted_suggestion_index = 2 [deprecated = true];</code>
        * @deprecated android_studio.SmlCompletionEvent.CompletionAccepted.accepted_suggestion_index is deprecated.
-       *     See studio_stats.proto;l=15962
+       *     See studio_stats.proto;l=15967
        * @return The acceptedSuggestionIndex.
        */
       @java.lang.Override
@@ -5134,7 +5134,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional int32 accepted_suggestion_index = 2 [deprecated = true];</code>
        * @deprecated android_studio.SmlCompletionEvent.CompletionAccepted.accepted_suggestion_index is deprecated.
-       *     See studio_stats.proto;l=15962
+       *     See studio_stats.proto;l=15967
        * @param value The acceptedSuggestionIndex to set.
        * @return This builder for chaining.
        */
@@ -5152,7 +5152,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional int32 accepted_suggestion_index = 2 [deprecated = true];</code>
        * @deprecated android_studio.SmlCompletionEvent.CompletionAccepted.accepted_suggestion_index is deprecated.
-       *     See studio_stats.proto;l=15962
+       *     See studio_stats.proto;l=15967
        * @return This builder for chaining.
        */
       @java.lang.Deprecated public Builder clearAcceptedSuggestionIndex() {
@@ -5170,7 +5170,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional int32 accepted_suggestion_length = 3 [deprecated = true];</code>
        * @deprecated android_studio.SmlCompletionEvent.CompletionAccepted.accepted_suggestion_length is deprecated.
-       *     See studio_stats.proto;l=15964
+       *     See studio_stats.proto;l=15969
        * @return Whether the acceptedSuggestionLength field is set.
        */
       @java.lang.Override
@@ -5184,7 +5184,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional int32 accepted_suggestion_length = 3 [deprecated = true];</code>
        * @deprecated android_studio.SmlCompletionEvent.CompletionAccepted.accepted_suggestion_length is deprecated.
-       *     See studio_stats.proto;l=15964
+       *     See studio_stats.proto;l=15969
        * @return The acceptedSuggestionLength.
        */
       @java.lang.Override
@@ -5198,7 +5198,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional int32 accepted_suggestion_length = 3 [deprecated = true];</code>
        * @deprecated android_studio.SmlCompletionEvent.CompletionAccepted.accepted_suggestion_length is deprecated.
-       *     See studio_stats.proto;l=15964
+       *     See studio_stats.proto;l=15969
        * @param value The acceptedSuggestionLength to set.
        * @return This builder for chaining.
        */
@@ -5216,7 +5216,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional int32 accepted_suggestion_length = 3 [deprecated = true];</code>
        * @deprecated android_studio.SmlCompletionEvent.CompletionAccepted.accepted_suggestion_length is deprecated.
-       *     See studio_stats.proto;l=15964
+       *     See studio_stats.proto;l=15969
        * @return This builder for chaining.
        */
       @java.lang.Deprecated public Builder clearAcceptedSuggestionLength() {
@@ -7424,7 +7424,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.android_studio.SmlCompletionEvent.CompletionRequest request = 1 [deprecated = true, lazy = true];</code>
    * @deprecated android_studio.SmlCompletionEvent.request is deprecated.
-   *     See studio_stats.proto;l=15994
+   *     See studio_stats.proto;l=15999
    * @return Whether the request field is set.
    */
   @java.lang.Override
@@ -7438,7 +7438,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.android_studio.SmlCompletionEvent.CompletionRequest request = 1 [deprecated = true, lazy = true];</code>
    * @deprecated android_studio.SmlCompletionEvent.request is deprecated.
-   *     See studio_stats.proto;l=15994
+   *     See studio_stats.proto;l=15999
    * @return The request.
    */
   @java.lang.Override
@@ -7471,7 +7471,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.android_studio.SmlCompletionEvent.CompletionResponse response = 2 [deprecated = true, lazy = true];</code>
    * @deprecated android_studio.SmlCompletionEvent.response is deprecated.
-   *     See studio_stats.proto;l=15996
+   *     See studio_stats.proto;l=16001
    * @return Whether the response field is set.
    */
   @java.lang.Override
@@ -7485,7 +7485,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.android_studio.SmlCompletionEvent.CompletionResponse response = 2 [deprecated = true, lazy = true];</code>
    * @deprecated android_studio.SmlCompletionEvent.response is deprecated.
-   *     See studio_stats.proto;l=15996
+   *     See studio_stats.proto;l=16001
    * @return The response.
    */
   @java.lang.Override
@@ -7518,7 +7518,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.android_studio.SmlCompletionEvent.CompletionShown shown = 3 [deprecated = true, lazy = true];</code>
    * @deprecated android_studio.SmlCompletionEvent.shown is deprecated.
-   *     See studio_stats.proto;l=15998
+   *     See studio_stats.proto;l=16003
    * @return Whether the shown field is set.
    */
   @java.lang.Override
@@ -7532,7 +7532,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.android_studio.SmlCompletionEvent.CompletionShown shown = 3 [deprecated = true, lazy = true];</code>
    * @deprecated android_studio.SmlCompletionEvent.shown is deprecated.
-   *     See studio_stats.proto;l=15998
+   *     See studio_stats.proto;l=16003
    * @return The shown.
    */
   @java.lang.Override
@@ -7565,7 +7565,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.android_studio.SmlCompletionEvent.CompletionAccepted accepted = 4 [deprecated = true, lazy = true];</code>
    * @deprecated android_studio.SmlCompletionEvent.accepted is deprecated.
-   *     See studio_stats.proto;l=16000
+   *     See studio_stats.proto;l=16005
    * @return Whether the accepted field is set.
    */
   @java.lang.Override
@@ -7579,7 +7579,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.android_studio.SmlCompletionEvent.CompletionAccepted accepted = 4 [deprecated = true, lazy = true];</code>
    * @deprecated android_studio.SmlCompletionEvent.accepted is deprecated.
-   *     See studio_stats.proto;l=16000
+   *     See studio_stats.proto;l=16005
    * @return The accepted.
    */
   @java.lang.Override
@@ -8114,7 +8114,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.android_studio.SmlCompletionEvent.CompletionRequest request = 1 [deprecated = true, lazy = true];</code>
      * @deprecated android_studio.SmlCompletionEvent.request is deprecated.
-     *     See studio_stats.proto;l=15994
+     *     See studio_stats.proto;l=15999
      * @return Whether the request field is set.
      */
     @java.lang.Override
@@ -8128,7 +8128,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.android_studio.SmlCompletionEvent.CompletionRequest request = 1 [deprecated = true, lazy = true];</code>
      * @deprecated android_studio.SmlCompletionEvent.request is deprecated.
-     *     See studio_stats.proto;l=15994
+     *     See studio_stats.proto;l=15999
      * @return The request.
      */
     @java.lang.Override
@@ -8296,7 +8296,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.android_studio.SmlCompletionEvent.CompletionResponse response = 2 [deprecated = true, lazy = true];</code>
      * @deprecated android_studio.SmlCompletionEvent.response is deprecated.
-     *     See studio_stats.proto;l=15996
+     *     See studio_stats.proto;l=16001
      * @return Whether the response field is set.
      */
     @java.lang.Override
@@ -8310,7 +8310,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.android_studio.SmlCompletionEvent.CompletionResponse response = 2 [deprecated = true, lazy = true];</code>
      * @deprecated android_studio.SmlCompletionEvent.response is deprecated.
-     *     See studio_stats.proto;l=15996
+     *     See studio_stats.proto;l=16001
      * @return The response.
      */
     @java.lang.Override
@@ -8478,7 +8478,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.android_studio.SmlCompletionEvent.CompletionShown shown = 3 [deprecated = true, lazy = true];</code>
      * @deprecated android_studio.SmlCompletionEvent.shown is deprecated.
-     *     See studio_stats.proto;l=15998
+     *     See studio_stats.proto;l=16003
      * @return Whether the shown field is set.
      */
     @java.lang.Override
@@ -8492,7 +8492,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.android_studio.SmlCompletionEvent.CompletionShown shown = 3 [deprecated = true, lazy = true];</code>
      * @deprecated android_studio.SmlCompletionEvent.shown is deprecated.
-     *     See studio_stats.proto;l=15998
+     *     See studio_stats.proto;l=16003
      * @return The shown.
      */
     @java.lang.Override
@@ -8660,7 +8660,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.android_studio.SmlCompletionEvent.CompletionAccepted accepted = 4 [deprecated = true, lazy = true];</code>
      * @deprecated android_studio.SmlCompletionEvent.accepted is deprecated.
-     *     See studio_stats.proto;l=16000
+     *     See studio_stats.proto;l=16005
      * @return Whether the accepted field is set.
      */
     @java.lang.Override
@@ -8674,7 +8674,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.android_studio.SmlCompletionEvent.CompletionAccepted accepted = 4 [deprecated = true, lazy = true];</code>
      * @deprecated android_studio.SmlCompletionEvent.accepted is deprecated.
-     *     See studio_stats.proto;l=16000
+     *     See studio_stats.proto;l=16005
      * @return The accepted.
      */
     @java.lang.Override
