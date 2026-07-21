@@ -232,6 +232,10 @@ private static final long serialVersionUID = 0L;
      * <code>BLOCK_R8_OPTIMIZED_SHRINKING_PRESENT = 46;</code>
      */
     BLOCK_R8_OPTIMIZED_SHRINKING_PRESENT(46),
+    /**
+     * <code>USE_R8_OPTIMIZED_SHRINKING_DEFAULT = 47;</code>
+     */
+    USE_R8_OPTIMIZED_SHRINKING_DEFAULT(47),
     ;
 
     /**
@@ -422,6 +426,10 @@ private static final long serialVersionUID = 0L;
      * <code>BLOCK_R8_OPTIMIZED_SHRINKING_PRESENT = 46;</code>
      */
     public static final int BLOCK_R8_OPTIMIZED_SHRINKING_PRESENT_VALUE = 46;
+    /**
+     * <code>USE_R8_OPTIMIZED_SHRINKING_DEFAULT = 47;</code>
+     */
+    public static final int USE_R8_OPTIMIZED_SHRINKING_DEFAULT_VALUE = 47;
 
 
     public final int getNumber() {
@@ -491,6 +499,7 @@ private static final long serialVersionUID = 0L;
         case 44: return BLOCK_R8_STRICT_FULL_MODE_FOR_KEEP_RULES_PRESENT;
         case 45: return BLOCK_R8_INTEGRATED_RESOURCE_SHRINKING_PRESENT;
         case 46: return BLOCK_R8_OPTIMIZED_SHRINKING_PRESENT;
+        case 47: return USE_R8_OPTIMIZED_SHRINKING_DEFAULT;
         default: return null;
       }
     }

@@ -501,21 +501,66 @@ private static final long serialVersionUID = 0L;
      */
     UWB(109),
     /**
-     * <code>UX_TEST_2024 = 110;</code>
+     * <pre>
+     * Do not use this -- use XR_MODE_UI below.
+     * </pre>
+     *
+     * <code>UX_TEST_2024 = 110 [deprecated = true];</code>
      */
+    @java.lang.Deprecated
     UX_TEST_2024(110),
     /**
      * <code>GUEST_ANGLE = 111;</code>
      */
     GUEST_ANGLE(111),
     /**
-     * <pre>
-     * Next tag: 113
-     * </pre>
-     *
      * <code>ANDROID_VIRTUALIZATION_FRAMEWORK = 112;</code>
      */
     ANDROID_VIRTUALIZATION_FRAMEWORK(112),
+    /**
+     * <code>BYPASS_VULKAN_DEVICE_FEATURE_OVERRIDES = 113;</code>
+     */
+    BYPASS_VULKAN_DEVICE_FEATURE_OVERRIDES(113),
+    /**
+     * <code>VULKAN_DEBUG_UTILS = 114;</code>
+     */
+    VULKAN_DEBUG_UTILS(114),
+    /**
+     * <code>VULKAN_COMMAND_BUFFER_CHECKPOINTS = 115;</code>
+     */
+    VULKAN_COMMAND_BUFFER_CHECKPOINTS(115),
+    /**
+     * <code>VULKAN_VIRTUAL_QUEUE = 116;</code>
+     */
+    VULKAN_VIRTUAL_QUEUE(116),
+    /**
+     * <code>VULKAN_ROBUSTNESS = 117;</code>
+     */
+    VULKAN_ROBUSTNESS(117),
+    /**
+     * <code>XR_MODE_UI = 118;</code>
+     */
+    XR_MODE_UI(118),
+    /**
+     * <pre>
+     * Intentional gap to avoid merge conflicts.
+     * </pre>
+     *
+     * <code>VIRTIO_DUAL_MODE_MOUSE = 131;</code>
+     */
+    VIRTIO_DUAL_MODE_MOUSE(131),
+    /**
+     * <code>DUAL_MODE_MOUSE_DISPLAY_HOST_CURSOR = 132;</code>
+     */
+    DUAL_MODE_MOUSE_DISPLAY_HOST_CURSOR(132),
+    /**
+     * <pre>
+     * Next tag: 134
+     * </pre>
+     *
+     * <code>ALL_APPS_FOR_HOME_TRAY = 133;</code>
+     */
+    ALL_APPS_FOR_HOME_TRAY(133),
     ;
 
     /**
@@ -963,21 +1008,65 @@ private static final long serialVersionUID = 0L;
      */
     public static final int UWB_VALUE = 109;
     /**
-     * <code>UX_TEST_2024 = 110;</code>
+     * <pre>
+     * Do not use this -- use XR_MODE_UI below.
+     * </pre>
+     *
+     * <code>UX_TEST_2024 = 110 [deprecated = true];</code>
      */
-    public static final int UX_TEST_2024_VALUE = 110;
+    @java.lang.Deprecated public static final int UX_TEST_2024_VALUE = 110;
     /**
      * <code>GUEST_ANGLE = 111;</code>
      */
     public static final int GUEST_ANGLE_VALUE = 111;
     /**
-     * <pre>
-     * Next tag: 113
-     * </pre>
-     *
      * <code>ANDROID_VIRTUALIZATION_FRAMEWORK = 112;</code>
      */
     public static final int ANDROID_VIRTUALIZATION_FRAMEWORK_VALUE = 112;
+    /**
+     * <code>BYPASS_VULKAN_DEVICE_FEATURE_OVERRIDES = 113;</code>
+     */
+    public static final int BYPASS_VULKAN_DEVICE_FEATURE_OVERRIDES_VALUE = 113;
+    /**
+     * <code>VULKAN_DEBUG_UTILS = 114;</code>
+     */
+    public static final int VULKAN_DEBUG_UTILS_VALUE = 114;
+    /**
+     * <code>VULKAN_COMMAND_BUFFER_CHECKPOINTS = 115;</code>
+     */
+    public static final int VULKAN_COMMAND_BUFFER_CHECKPOINTS_VALUE = 115;
+    /**
+     * <code>VULKAN_VIRTUAL_QUEUE = 116;</code>
+     */
+    public static final int VULKAN_VIRTUAL_QUEUE_VALUE = 116;
+    /**
+     * <code>VULKAN_ROBUSTNESS = 117;</code>
+     */
+    public static final int VULKAN_ROBUSTNESS_VALUE = 117;
+    /**
+     * <code>XR_MODE_UI = 118;</code>
+     */
+    public static final int XR_MODE_UI_VALUE = 118;
+    /**
+     * <pre>
+     * Intentional gap to avoid merge conflicts.
+     * </pre>
+     *
+     * <code>VIRTIO_DUAL_MODE_MOUSE = 131;</code>
+     */
+    public static final int VIRTIO_DUAL_MODE_MOUSE_VALUE = 131;
+    /**
+     * <code>DUAL_MODE_MOUSE_DISPLAY_HOST_CURSOR = 132;</code>
+     */
+    public static final int DUAL_MODE_MOUSE_DISPLAY_HOST_CURSOR_VALUE = 132;
+    /**
+     * <pre>
+     * Next tag: 134
+     * </pre>
+     *
+     * <code>ALL_APPS_FOR_HOME_TRAY = 133;</code>
+     */
+    public static final int ALL_APPS_FOR_HOME_TRAY_VALUE = 133;
 
 
     public final int getNumber() {
@@ -1113,6 +1202,15 @@ private static final long serialVersionUID = 0L;
         case 110: return UX_TEST_2024;
         case 111: return GUEST_ANGLE;
         case 112: return ANDROID_VIRTUALIZATION_FRAMEWORK;
+        case 113: return BYPASS_VULKAN_DEVICE_FEATURE_OVERRIDES;
+        case 114: return VULKAN_DEBUG_UTILS;
+        case 115: return VULKAN_COMMAND_BUFFER_CHECKPOINTS;
+        case 116: return VULKAN_VIRTUAL_QUEUE;
+        case 117: return VULKAN_ROBUSTNESS;
+        case 118: return XR_MODE_UI;
+        case 131: return VIRTIO_DUAL_MODE_MOUSE;
+        case 132: return DUAL_MODE_MOUSE_DISPLAY_HOST_CURSOR;
+        case 133: return ALL_APPS_FOR_HOME_TRAY;
         default: return null;
       }
     }
