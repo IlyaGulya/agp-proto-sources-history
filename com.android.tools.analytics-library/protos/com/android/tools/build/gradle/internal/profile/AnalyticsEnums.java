@@ -450,7 +450,7 @@ public final class AnalyticsEnums {
       "ANDROID_TEST_ENABLED\020\t\022\023\n\017MIN_SDK_PREVIE" +
       "W\020\n\022\026\n\022TARGET_SDK_PREVIEW\020\013\022%\n!VARIANT_B" +
       "UILDER_DEPENDENCIES_INFO\020\014\022\031\n\025TEST_FIXTU" +
-      "RES_ENABLED\020\r*\327\026\n\033VariantPropertiesMetho" +
+      "RES_ENABLED\020\r*\323\027\n\033VariantPropertiesMetho" +
       "dType\022\"\n\036UNKNOWN_PROPERTIES_METHOD_TYPE\020" +
       "\000\022\r\n\tARTIFACTS\020\001\022\031\n\025ASM_TRANSFORM_CLASSE" +
       "S\020\002\022\037\n\033ASM_FRAMES_COMPUTATION_NODE\020\003\022\016\n\n" +
@@ -522,9 +522,12 @@ public final class AnalyticsEnums {
       "S_ACCESS\020g\022\023\n\017INSTRUMENTATION\020h\022*\n&INSTR" +
       "UMENTATION_TRANSFORM_CLASSES_WITH\020i\0224\n0I" +
       "NSTRUMENTATION_SET_ASM_FRAMES_COMPUTATUI" +
-      "ON_MODE\020j\022\034\n\030INSTRUMENTATION_EXCLUDES\020kB" +
-      "3\n/com.android.tools.build.gradle.intern" +
-      "al.profileP\001b\006proto3"
+      "ON_MODE\020j\022\034\n\030INSTRUMENTATION_EXCLUDES\020k\022" +
+      "\026\n\022SOURCES_RES_ACCESS\020l\022+\n\'SOURCES_AND_O" +
+      "VERLAY_DIRECTORIES_GET_ALL\020m\022\025\n\021COMPILE_" +
+      "CLASSPATH\020n\022\036\n\032BUNDLE_CONFIG_ADD_METADAT" +
+      "A\020oB3\n/com.android.tools.build.gradle.in" +
+      "ternal.profileP\001b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
