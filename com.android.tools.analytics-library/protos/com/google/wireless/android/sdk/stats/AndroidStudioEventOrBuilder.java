@@ -3677,4 +3677,58 @@ public interface AndroidStudioEventOrBuilder extends
    * <code>optional .android_studio.DeviceExplorerEvent device_explorer_event = 132;</code>
    */
   com.google.wireless.android.sdk.stats.DeviceExplorerEventOrBuilder getDeviceExplorerEventOrBuilder();
+
+  /**
+   * <pre>
+   * set when kind = OPTIN_METRICS
+   * </pre>
+   *
+   * <code>optional .android_studio.OptInToMetrics opt_in_to_metrics = 133;</code>
+   * @return Whether the optInToMetrics field is set.
+   */
+  boolean hasOptInToMetrics();
+  /**
+   * <pre>
+   * set when kind = OPTIN_METRICS
+   * </pre>
+   *
+   * <code>optional .android_studio.OptInToMetrics opt_in_to_metrics = 133;</code>
+   * @return The optInToMetrics.
+   */
+  com.google.wireless.android.sdk.stats.OptInToMetrics getOptInToMetrics();
+  /**
+   * <pre>
+   * set when kind = OPTIN_METRICS
+   * </pre>
+   *
+   * <code>optional .android_studio.OptInToMetrics opt_in_to_metrics = 133;</code>
+   */
+  com.google.wireless.android.sdk.stats.OptInToMetricsOrBuilder getOptInToMetricsOrBuilder();
+
+  /**
+   * <pre>
+   * set when kind = OPTOUT_METRICS
+   * </pre>
+   *
+   * <code>optional .android_studio.OptOutOfMetrics opt_out_of_metrics = 134;</code>
+   * @return Whether the optOutOfMetrics field is set.
+   */
+  boolean hasOptOutOfMetrics();
+  /**
+   * <pre>
+   * set when kind = OPTOUT_METRICS
+   * </pre>
+   *
+   * <code>optional .android_studio.OptOutOfMetrics opt_out_of_metrics = 134;</code>
+   * @return The optOutOfMetrics.
+   */
+  com.google.wireless.android.sdk.stats.OptOutOfMetrics getOptOutOfMetrics();
+  /**
+   * <pre>
+   * set when kind = OPTOUT_METRICS
+   * </pre>
+   *
+   * <code>optional .android_studio.OptOutOfMetrics opt_out_of_metrics = 134;</code>
+   */
+  com.google.wireless.android.sdk.stats.OptOutOfMetricsOrBuilder getOptOutOfMetricsOrBuilder();
 }
