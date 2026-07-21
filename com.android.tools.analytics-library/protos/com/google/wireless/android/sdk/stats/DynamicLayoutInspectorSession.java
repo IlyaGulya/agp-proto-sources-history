@@ -309,6 +309,33 @@ private static final long serialVersionUID = 0L;
     return attach_ == null ? com.google.wireless.android.sdk.stats.DynamicLayoutInspectorAttachToProcess.getDefaultInstance() : attach_;
   }
 
+  public static final int HAS_FOLD_EVENT_FIELD_NUMBER = 8;
+  private boolean hasFoldEvent_ = false;
+  /**
+   * <pre>
+   * Indicates whether the session had a fold event
+   * </pre>
+   *
+   * <code>optional bool has_fold_event = 8;</code>
+   * @return Whether the hasFoldEvent field is set.
+   */
+  @java.lang.Override
+  public boolean hasHasFoldEvent() {
+    return ((bitField0_ & 0x00000080) != 0);
+  }
+  /**
+   * <pre>
+   * Indicates whether the session had a fold event
+   * </pre>
+   *
+   * <code>optional bool has_fold_event = 8;</code>
+   * @return The hasFoldEvent.
+   */
+  @java.lang.Override
+  public boolean getHasFoldEvent() {
+    return hasFoldEvent_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -343,6 +370,9 @@ private static final long serialVersionUID = 0L;
     }
     if (((bitField0_ & 0x00000040) != 0)) {
       output.writeMessage(7, getAttach());
+    }
+    if (((bitField0_ & 0x00000080) != 0)) {
+      output.writeBool(8, hasFoldEvent_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -380,6 +410,10 @@ private static final long serialVersionUID = 0L;
     if (((bitField0_ & 0x00000040) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(7, getAttach());
+    }
+    if (((bitField0_ & 0x00000080) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeBoolSize(8, hasFoldEvent_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -431,6 +465,11 @@ private static final long serialVersionUID = 0L;
       if (!getAttach()
           .equals(other.getAttach())) return false;
     }
+    if (hasHasFoldEvent() != other.hasHasFoldEvent()) return false;
+    if (hasHasFoldEvent()) {
+      if (getHasFoldEvent()
+          != other.getHasFoldEvent()) return false;
+    }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -469,6 +508,11 @@ private static final long serialVersionUID = 0L;
     if (hasAttach()) {
       hash = (37 * hash) + ATTACH_FIELD_NUMBER;
       hash = (53 * hash) + getAttach().hashCode();
+    }
+    if (hasHasFoldEvent()) {
+      hash = (37 * hash) + HAS_FOLD_EVENT_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getHasFoldEvent());
     }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
@@ -650,6 +694,7 @@ private static final long serialVersionUID = 0L;
         attachBuilder_.dispose();
         attachBuilder_ = null;
       }
+      hasFoldEvent_ = false;
       return this;
     }
 
@@ -726,6 +771,10 @@ private static final long serialVersionUID = 0L;
             : attachBuilder_.build();
         to_bitField0_ |= 0x00000040;
       }
+      if (((from_bitField0_ & 0x00000080) != 0)) {
+        result.hasFoldEvent_ = hasFoldEvent_;
+        to_bitField0_ |= 0x00000080;
+      }
       result.bitField0_ |= to_bitField0_;
     }
 
@@ -761,6 +810,9 @@ private static final long serialVersionUID = 0L;
       }
       if (other.hasAttach()) {
         mergeAttach(other.getAttach());
+      }
+      if (other.hasHasFoldEvent()) {
+        setHasFoldEvent(other.getHasFoldEvent());
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -837,6 +889,11 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000040;
               break;
             } // case 58
+            case 64: {
+              hasFoldEvent_ = input.readBool();
+              bitField0_ |= 0x00000080;
+              break;
+            } // case 64
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -1937,6 +1994,62 @@ private static final long serialVersionUID = 0L;
         attach_ = null;
       }
       return attachBuilder_;
+    }
+
+    private boolean hasFoldEvent_ ;
+    /**
+     * <pre>
+     * Indicates whether the session had a fold event
+     * </pre>
+     *
+     * <code>optional bool has_fold_event = 8;</code>
+     * @return Whether the hasFoldEvent field is set.
+     */
+    @java.lang.Override
+    public boolean hasHasFoldEvent() {
+      return ((bitField0_ & 0x00000080) != 0);
+    }
+    /**
+     * <pre>
+     * Indicates whether the session had a fold event
+     * </pre>
+     *
+     * <code>optional bool has_fold_event = 8;</code>
+     * @return The hasFoldEvent.
+     */
+    @java.lang.Override
+    public boolean getHasFoldEvent() {
+      return hasFoldEvent_;
+    }
+    /**
+     * <pre>
+     * Indicates whether the session had a fold event
+     * </pre>
+     *
+     * <code>optional bool has_fold_event = 8;</code>
+     * @param value The hasFoldEvent to set.
+     * @return This builder for chaining.
+     */
+    public Builder setHasFoldEvent(boolean value) {
+
+      hasFoldEvent_ = value;
+      bitField0_ |= 0x00000080;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Indicates whether the session had a fold event
+     * </pre>
+     *
+     * <code>optional bool has_fold_event = 8;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearHasFoldEvent() {
+      bitField0_ = (bitField0_ & ~0x00000080);
+      hasFoldEvent_ = false;
+      onChanged();
+      return this;
     }
     @java.lang.Override
     public final Builder setUnknownFields(
