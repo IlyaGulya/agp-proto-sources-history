@@ -725,6 +725,10 @@ public enum VariantPropertiesMethodType
    * <code>TEST_SUITE_TARGETS = 166;</code>
    */
   TEST_SUITE_TARGETS(166),
+  /**
+   * <code>CONSUMER_PROGUARD_FILES = 167;</code>
+   */
+  CONSUMER_PROGUARD_FILES(167),
   UNRECOGNIZED(-1),
   ;
 
@@ -1444,6 +1448,10 @@ public enum VariantPropertiesMethodType
    * <code>TEST_SUITE_TARGETS = 166;</code>
    */
   public static final int TEST_SUITE_TARGETS_VALUE = 166;
+  /**
+   * <code>CONSUMER_PROGUARD_FILES = 167;</code>
+   */
+  public static final int CONSUMER_PROGUARD_FILES_VALUE = 167;
 
 
   public final int getNumber() {
@@ -1637,6 +1645,7 @@ public enum VariantPropertiesMethodType
       case 164: return REGISTER_APK_INSTALLATION;
       case 165: return JUNIT_ENGINE_SPEC;
       case 166: return TEST_SUITE_TARGETS;
+      case 167: return CONSUMER_PROGUARD_FILES;
       default: return null;
     }
   }

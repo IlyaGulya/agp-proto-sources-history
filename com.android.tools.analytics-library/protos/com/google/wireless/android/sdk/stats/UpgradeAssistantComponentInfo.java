@@ -177,8 +177,9 @@ private static final long serialVersionUID = 0L;
      */
     USE_ANDROIDX_DEFAULT(32),
     /**
-     * <code>EXCLUDE_LIBRARY_COMPONENTS_FROM_CONSTRAINTS_DEFAULT = 33;</code>
+     * <code>EXCLUDE_LIBRARY_COMPONENTS_FROM_CONSTRAINTS_DEFAULT = 33 [deprecated = true];</code>
      */
+    @java.lang.Deprecated
     EXCLUDE_LIBRARY_COMPONENTS_FROM_CONSTRAINTS_DEFAULT(33),
     /**
      * <code>RES_VALUES_DEFAULT = 34;</code>
@@ -286,6 +287,10 @@ private static final long serialVersionUID = 0L;
      * <code>UNIQUE_PACKAGE_NAMES = 59;</code>
      */
     UNIQUE_PACKAGE_NAMES(59),
+    /**
+     * <code>DEPENDENCY_CONSTRAINTS_DEFAULT = 60;</code>
+     */
+    DEPENDENCY_CONSTRAINTS_DEFAULT(60),
     ;
 
     /**
@@ -421,9 +426,9 @@ private static final long serialVersionUID = 0L;
      */
     public static final int USE_ANDROIDX_DEFAULT_VALUE = 32;
     /**
-     * <code>EXCLUDE_LIBRARY_COMPONENTS_FROM_CONSTRAINTS_DEFAULT = 33;</code>
+     * <code>EXCLUDE_LIBRARY_COMPONENTS_FROM_CONSTRAINTS_DEFAULT = 33 [deprecated = true];</code>
      */
-    public static final int EXCLUDE_LIBRARY_COMPONENTS_FROM_CONSTRAINTS_DEFAULT_VALUE = 33;
+    @java.lang.Deprecated public static final int EXCLUDE_LIBRARY_COMPONENTS_FROM_CONSTRAINTS_DEFAULT_VALUE = 33;
     /**
      * <code>RES_VALUES_DEFAULT = 34;</code>
      */
@@ -528,6 +533,10 @@ private static final long serialVersionUID = 0L;
      * <code>UNIQUE_PACKAGE_NAMES = 59;</code>
      */
     public static final int UNIQUE_PACKAGE_NAMES_VALUE = 59;
+    /**
+     * <code>DEPENDENCY_CONSTRAINTS_DEFAULT = 60;</code>
+     */
+    public static final int DEPENDENCY_CONSTRAINTS_DEFAULT_VALUE = 60;
 
 
     public final int getNumber() {
@@ -610,6 +619,7 @@ private static final long serialVersionUID = 0L;
         case 57: return JCENTER_TO_MAVEN_CENTRAL;
         case 58: return REMOVE_DEPRECATED_LIBRARY_TARGET_SDK;
         case 59: return UNIQUE_PACKAGE_NAMES;
+        case 60: return DEPENDENCY_CONSTRAINTS_DEFAULT;
         default: return null;
       }
     }

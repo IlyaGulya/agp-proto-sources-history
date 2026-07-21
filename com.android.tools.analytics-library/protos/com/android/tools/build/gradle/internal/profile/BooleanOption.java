@@ -888,6 +888,18 @@ public enum BooleanOption
    * <code>CUSTOM_SHADER_PATH_REQUIRED = 216;</code>
    */
   CUSTOM_SHADER_PATH_REQUIRED(216),
+  /**
+   * <code>DISABLE_ALL_CONSTRAINTS = 217;</code>
+   */
+  DISABLE_ALL_CONSTRAINTS(217),
+  /**
+   * <code>ENABLE_CLASSPATH_CHECK_TASKS = 218;</code>
+   */
+  ENABLE_CLASSPATH_CHECK_TASKS(218),
+  /**
+   * <code>DEFAULT_MIN_COMPILE_SDK_IN_AAR_METADATA = 219;</code>
+   */
+  DEFAULT_MIN_COMPILE_SDK_IN_AAR_METADATA(219),
   UNRECOGNIZED(-1),
   ;
 
@@ -1759,6 +1771,18 @@ public enum BooleanOption
    * <code>CUSTOM_SHADER_PATH_REQUIRED = 216;</code>
    */
   public static final int CUSTOM_SHADER_PATH_REQUIRED_VALUE = 216;
+  /**
+   * <code>DISABLE_ALL_CONSTRAINTS = 217;</code>
+   */
+  public static final int DISABLE_ALL_CONSTRAINTS_VALUE = 217;
+  /**
+   * <code>ENABLE_CLASSPATH_CHECK_TASKS = 218;</code>
+   */
+  public static final int ENABLE_CLASSPATH_CHECK_TASKS_VALUE = 218;
+  /**
+   * <code>DEFAULT_MIN_COMPILE_SDK_IN_AAR_METADATA = 219;</code>
+   */
+  public static final int DEFAULT_MIN_COMPILE_SDK_IN_AAR_METADATA_VALUE = 219;
 
 
   public final int getNumber() {
@@ -2002,6 +2026,9 @@ public enum BooleanOption
       case 214: return ENABLE_LEGACY_VARIANT_API;
       case 215: return DISALLOW_USES_SDK_IN_MANIFEST;
       case 216: return CUSTOM_SHADER_PATH_REQUIRED;
+      case 217: return DISABLE_ALL_CONSTRAINTS;
+      case 218: return ENABLE_CLASSPATH_CHECK_TASKS;
+      case 219: return DEFAULT_MIN_COMPILE_SDK_IN_AAR_METADATA;
       default: return null;
     }
   }
