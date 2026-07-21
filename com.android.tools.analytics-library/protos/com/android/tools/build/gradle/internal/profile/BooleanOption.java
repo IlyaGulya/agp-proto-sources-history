@@ -796,6 +796,10 @@ public enum BooleanOption
    * <code>SKIP_APKS_VIA_BUNDLE_IF_POSSIBLE = 193;</code>
    */
   SKIP_APKS_VIA_BUNDLE_IF_POSSIBLE(193),
+  /**
+   * <code>DISABLE_INLINE_SCOPES_NUMBERS = 194;</code>
+   */
+  DISABLE_INLINE_SCOPES_NUMBERS(194),
   UNRECOGNIZED(-1),
   ;
 
@@ -1575,6 +1579,10 @@ public enum BooleanOption
    * <code>SKIP_APKS_VIA_BUNDLE_IF_POSSIBLE = 193;</code>
    */
   public static final int SKIP_APKS_VIA_BUNDLE_IF_POSSIBLE_VALUE = 193;
+  /**
+   * <code>DISABLE_INLINE_SCOPES_NUMBERS = 194;</code>
+   */
+  public static final int DISABLE_INLINE_SCOPES_NUMBERS_VALUE = 194;
 
 
   public final int getNumber() {
@@ -1795,6 +1803,7 @@ public enum BooleanOption
       case 191: return PRIVACY_SANDBOX_SDK_ENABLE_LINT;
       case 192: return SUPPORT_OEM_TOKEN_LIBRARIES;
       case 193: return SKIP_APKS_VIA_BUNDLE_IF_POSSIBLE;
+      case 194: return DISABLE_INLINE_SCOPES_NUMBERS;
       default: return null;
     }
   }
