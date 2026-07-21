@@ -97,6 +97,11 @@ private static final long serialVersionUID = 0L;
             }
             break;
           }
+          case 40: {
+            bitField0_ |= 0x00000010;
+            multipleProjectsOpen_ = input.readBool();
+            break;
+          }
           default: {
             if (!parseUnknownField(
                 input, unknownFields, extensionRegistry, tag)) {
@@ -399,6 +404,33 @@ private static final long serialVersionUID = 0L;
     return result == null ? com.google.wireless.android.sdk.stats.DynamicLayoutInspectorErrorInfo.AttachErrorCode.UNKNOWN_ERROR_CODE : result;
   }
 
+  public static final int MULTIPLE_PROJECTS_OPEN_FIELD_NUMBER = 5;
+  private boolean multipleProjectsOpen_;
+  /**
+   * <pre>
+   * When we attached to a process, were the multiple projects open?
+   * </pre>
+   *
+   * <code>optional bool multiple_projects_open = 5;</code>
+   * @return Whether the multipleProjectsOpen field is set.
+   */
+  @java.lang.Override
+  public boolean hasMultipleProjectsOpen() {
+    return ((bitField0_ & 0x00000010) != 0);
+  }
+  /**
+   * <pre>
+   * When we attached to a process, were the multiple projects open?
+   * </pre>
+   *
+   * <code>optional bool multiple_projects_open = 5;</code>
+   * @return The multipleProjectsOpen.
+   */
+  @java.lang.Override
+  public boolean getMultipleProjectsOpen() {
+    return multipleProjectsOpen_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -425,6 +457,9 @@ private static final long serialVersionUID = 0L;
     if (((bitField0_ & 0x00000008) != 0)) {
       output.writeEnum(4, composeErrorCode_);
     }
+    if (((bitField0_ & 0x00000010) != 0)) {
+      output.writeBool(5, multipleProjectsOpen_);
+    }
     unknownFields.writeTo(output);
   }
 
@@ -449,6 +484,10 @@ private static final long serialVersionUID = 0L;
     if (((bitField0_ & 0x00000008) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(4, composeErrorCode_);
+    }
+    if (((bitField0_ & 0x00000010) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeBoolSize(5, multipleProjectsOpen_);
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -483,6 +522,11 @@ private static final long serialVersionUID = 0L;
     if (hasComposeErrorCode()) {
       if (composeErrorCode_ != other.composeErrorCode_) return false;
     }
+    if (hasMultipleProjectsOpen() != other.hasMultipleProjectsOpen()) return false;
+    if (hasMultipleProjectsOpen()) {
+      if (getMultipleProjectsOpen()
+          != other.getMultipleProjectsOpen()) return false;
+    }
     if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
@@ -510,6 +554,11 @@ private static final long serialVersionUID = 0L;
     if (hasComposeErrorCode()) {
       hash = (37 * hash) + COMPOSE_ERROR_CODE_FIELD_NUMBER;
       hash = (53 * hash) + composeErrorCode_;
+    }
+    if (hasMultipleProjectsOpen()) {
+      hash = (37 * hash) + MULTIPLE_PROJECTS_OPEN_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getMultipleProjectsOpen());
     }
     hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
@@ -661,6 +710,8 @@ private static final long serialVersionUID = 0L;
       bitField0_ = (bitField0_ & ~0x00000004);
       composeErrorCode_ = 0;
       bitField0_ = (bitField0_ & ~0x00000008);
+      multipleProjectsOpen_ = false;
+      bitField0_ = (bitField0_ & ~0x00000010);
       return this;
     }
 
@@ -709,6 +760,10 @@ private static final long serialVersionUID = 0L;
         to_bitField0_ |= 0x00000008;
       }
       result.composeErrorCode_ = composeErrorCode_;
+      if (((from_bitField0_ & 0x00000010) != 0)) {
+        result.multipleProjectsOpen_ = multipleProjectsOpen_;
+        to_bitField0_ |= 0x00000010;
+      }
       result.bitField0_ = to_bitField0_;
       onBuilt();
       return result;
@@ -769,6 +824,9 @@ private static final long serialVersionUID = 0L;
       }
       if (other.hasComposeErrorCode()) {
         setComposeErrorCode(other.getComposeErrorCode());
+      }
+      if (other.hasMultipleProjectsOpen()) {
+        setMultipleProjectsOpen(other.getMultipleProjectsOpen());
       }
       this.mergeUnknownFields(other.unknownFields);
       onChanged();
@@ -1125,6 +1183,61 @@ private static final long serialVersionUID = 0L;
     public Builder clearComposeErrorCode() {
       bitField0_ = (bitField0_ & ~0x00000008);
       composeErrorCode_ = 0;
+      onChanged();
+      return this;
+    }
+
+    private boolean multipleProjectsOpen_ ;
+    /**
+     * <pre>
+     * When we attached to a process, were the multiple projects open?
+     * </pre>
+     *
+     * <code>optional bool multiple_projects_open = 5;</code>
+     * @return Whether the multipleProjectsOpen field is set.
+     */
+    @java.lang.Override
+    public boolean hasMultipleProjectsOpen() {
+      return ((bitField0_ & 0x00000010) != 0);
+    }
+    /**
+     * <pre>
+     * When we attached to a process, were the multiple projects open?
+     * </pre>
+     *
+     * <code>optional bool multiple_projects_open = 5;</code>
+     * @return The multipleProjectsOpen.
+     */
+    @java.lang.Override
+    public boolean getMultipleProjectsOpen() {
+      return multipleProjectsOpen_;
+    }
+    /**
+     * <pre>
+     * When we attached to a process, were the multiple projects open?
+     * </pre>
+     *
+     * <code>optional bool multiple_projects_open = 5;</code>
+     * @param value The multipleProjectsOpen to set.
+     * @return This builder for chaining.
+     */
+    public Builder setMultipleProjectsOpen(boolean value) {
+      bitField0_ |= 0x00000010;
+      multipleProjectsOpen_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * When we attached to a process, were the multiple projects open?
+     * </pre>
+     *
+     * <code>optional bool multiple_projects_open = 5;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearMultipleProjectsOpen() {
+      bitField0_ = (bitField0_ & ~0x00000010);
+      multipleProjectsOpen_ = false;
       onChanged();
       return this;
     }

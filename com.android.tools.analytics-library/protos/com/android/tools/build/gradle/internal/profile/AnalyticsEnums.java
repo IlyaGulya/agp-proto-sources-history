@@ -501,7 +501,7 @@ public final class AnalyticsEnums {
       "\020\n\022\026\n\022TARGET_SDK_PREVIEW\020\013\022%\n!VARIANT_BU" +
       "ILDER_DEPENDENCIES_INFO\020\014\022\031\n\025TEST_FIXTUR" +
       "ES_ENABLED\020\r\022\033\n\027CODE_MINIFICATION_VALUE\020" +
-      "\016\022\032\n\026SHRINK_RESOURCES_VALUE\020\017*\274\034\n\033Varian" +
+      "\016\022\032\n\026SHRINK_RESOURCES_VALUE\020\017*\343\034\n\033Varian" +
       "tPropertiesMethodType\022\"\n\036UNKNOWN_PROPERT" +
       "IES_METHOD_TYPE\020\000\022\r\n\tARTIFACTS\020\001\022\031\n\025ASM_" +
       "TRANSFORM_CLASSES\020\002\022\037\n\033ASM_FRAMES_COMPUT" +
@@ -592,9 +592,10 @@ public final class AnalyticsEnums {
       "OPED_ARTIFACTS_TO_REPLACE\020\200\001\022\034\n\027SCOPED_A" +
       "RTIFACTS_APPEND\020\201\001\022\026\n\021CODE_MINIFICATION\020" +
       "\202\001\022\025\n\020SHRINK_RESOURCES\020\203\001\022\035\n\030SOURCES_RES" +
-      "OURCES_ACCESS\020\204\001\022\022\n\rADD_ARTIFACTS\020\205\001B3\n/" +
-      "com.android.tools.build.gradle.internal." +
-      "profileP\001b\006proto3"
+      "OURCES_ACCESS\020\204\001\022\022\n\rADD_ARTIFACTS\020\205\001\022%\n " +
+      "SOURCES_BASELINE_PROFILES_ACCESS\020\206\001B3\n/c" +
+      "om.android.tools.build.gradle.internal.p" +
+      "rofileP\001b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
