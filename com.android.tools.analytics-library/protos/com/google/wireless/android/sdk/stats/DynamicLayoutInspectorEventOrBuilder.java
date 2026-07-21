@@ -52,4 +52,31 @@ public interface DynamicLayoutInspectorEventOrBuilder extends
    * <code>optional .android_studio.DynamicLayoutInspectorSession session = 2;</code>
    */
   com.google.wireless.android.sdk.stats.DynamicLayoutInspectorSessionOrBuilder getSessionOrBuilder();
+
+  /**
+   * <pre>
+   * Additional information that will be available when looking at a snapshot
+   * </pre>
+   *
+   * <code>optional .android_studio.DynamicLayoutInspectorSnapshotInfo snapshot_info = 3;</code>
+   * @return Whether the snapshotInfo field is set.
+   */
+  boolean hasSnapshotInfo();
+  /**
+   * <pre>
+   * Additional information that will be available when looking at a snapshot
+   * </pre>
+   *
+   * <code>optional .android_studio.DynamicLayoutInspectorSnapshotInfo snapshot_info = 3;</code>
+   * @return The snapshotInfo.
+   */
+  com.google.wireless.android.sdk.stats.DynamicLayoutInspectorSnapshotInfo getSnapshotInfo();
+  /**
+   * <pre>
+   * Additional information that will be available when looking at a snapshot
+   * </pre>
+   *
+   * <code>optional .android_studio.DynamicLayoutInspectorSnapshotInfo snapshot_info = 3;</code>
+   */
+  com.google.wireless.android.sdk.stats.DynamicLayoutInspectorSnapshotInfoOrBuilder getSnapshotInfoOrBuilder();
 }
