@@ -3569,4 +3569,31 @@ public interface AndroidStudioEventOrBuilder extends
    * <code>optional .android_studio.RunFinishData run_finish_data = 128;</code>
    */
   com.google.wireless.android.sdk.stats.RunFinishDataOrBuilder getRunFinishDataOrBuilder();
+
+  /**
+   * <pre>
+   * set when kind = DEVICE_MANAGER
+   * </pre>
+   *
+   * <code>optional .android_studio.DeviceManagerEvent device_manager_event = 129;</code>
+   * @return Whether the deviceManagerEvent field is set.
+   */
+  boolean hasDeviceManagerEvent();
+  /**
+   * <pre>
+   * set when kind = DEVICE_MANAGER
+   * </pre>
+   *
+   * <code>optional .android_studio.DeviceManagerEvent device_manager_event = 129;</code>
+   * @return The deviceManagerEvent.
+   */
+  com.google.wireless.android.sdk.stats.DeviceManagerEvent getDeviceManagerEvent();
+  /**
+   * <pre>
+   * set when kind = DEVICE_MANAGER
+   * </pre>
+   *
+   * <code>optional .android_studio.DeviceManagerEvent device_manager_event = 129;</code>
+   */
+  com.google.wireless.android.sdk.stats.DeviceManagerEventOrBuilder getDeviceManagerEventOrBuilder();
 }
