@@ -160,4 +160,31 @@ public interface SherlockEventOrBuilder extends
    * <code>optional .android_studio.SherlockEvent.PerfettoSqlQueryMetadata perfetto_sql_query_metadata = 6 [lazy = true];</code>
    */
   com.google.wireless.android.sdk.stats.SherlockEvent.PerfettoSqlQueryMetadataOrBuilder getPerfettoSqlQueryMetadataOrBuilder();
+
+  /**
+   * <pre>
+   * Set if |type| is |PERFETTO_TRACE_LOADED|
+   * </pre>
+   *
+   * <code>optional .android_studio.SherlockEvent.PerfettoTraceLoadedMetadata perfetto_trace_loaded_metadata = 7 [lazy = true];</code>
+   * @return Whether the perfettoTraceLoadedMetadata field is set.
+   */
+  boolean hasPerfettoTraceLoadedMetadata();
+  /**
+   * <pre>
+   * Set if |type| is |PERFETTO_TRACE_LOADED|
+   * </pre>
+   *
+   * <code>optional .android_studio.SherlockEvent.PerfettoTraceLoadedMetadata perfetto_trace_loaded_metadata = 7 [lazy = true];</code>
+   * @return The perfettoTraceLoadedMetadata.
+   */
+  com.google.wireless.android.sdk.stats.SherlockEvent.PerfettoTraceLoadedMetadata getPerfettoTraceLoadedMetadata();
+  /**
+   * <pre>
+   * Set if |type| is |PERFETTO_TRACE_LOADED|
+   * </pre>
+   *
+   * <code>optional .android_studio.SherlockEvent.PerfettoTraceLoadedMetadata perfetto_trace_loaded_metadata = 7 [lazy = true];</code>
+   */
+  com.google.wireless.android.sdk.stats.SherlockEvent.PerfettoTraceLoadedMetadataOrBuilder getPerfettoTraceLoadedMetadataOrBuilder();
 }

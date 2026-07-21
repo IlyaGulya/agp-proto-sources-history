@@ -131,7 +131,7 @@ public interface SmlConfigurationEventOrBuilder extends
    *
    * <code>optional .android_studio.SmlConfigurationEvent.SmlProductVariant product_variant = 7 [deprecated = true];</code>
    * @deprecated android_studio.SmlConfigurationEvent.product_variant is deprecated.
-   *     See studio_stats.proto;l=17305
+   *     See studio_stats.proto;l=17352
    * @return Whether the productVariant field is set.
    */
   @java.lang.Deprecated boolean hasProductVariant();
@@ -145,7 +145,7 @@ public interface SmlConfigurationEventOrBuilder extends
    *
    * <code>optional .android_studio.SmlConfigurationEvent.SmlProductVariant product_variant = 7 [deprecated = true];</code>
    * @deprecated android_studio.SmlConfigurationEvent.product_variant is deprecated.
-   *     See studio_stats.proto;l=17305
+   *     See studio_stats.proto;l=17352
    * @return The productVariant.
    */
   @java.lang.Deprecated com.google.wireless.android.sdk.stats.SmlConfigurationEvent.SmlProductVariant getProductVariant();
