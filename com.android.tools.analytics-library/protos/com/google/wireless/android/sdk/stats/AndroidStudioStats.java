@@ -7624,130 +7624,131 @@ public final class AndroidStudioStats {
       "BUG\020\020\022\017\n\013CMD_PROFILE\020\021\022\014\n\010CMD_TEST\020\022\022\014\n\010" +
       "CMD_STOP\020\023\022\014\n\010CMD_SYNC\020\024\022\020\n\014CMD_TERMINAL" +
       "\020\025\022\r\n\tCMD_SPLIT\020\026\022\017\n\013CMD_UNSPLIT\020\027\022\014\n\010CM" +
-      "D_OPEN\020\030\022\020\n\014CMD_GOTOTEST\020\031B\t\n\007content\"\247\001" +
+      "D_OPEN\020\030\022\020\n\014CMD_GOTOTEST\020\031B\t\n\007content\"\310\001" +
       "\n\025SmlConfigurationEvent\022\025\n\rsml_available" +
       "\030\001 \001(\010\022\036\n\026bot_onboarding_started\030\004 \001(\010\022 " +
       "\n\030bot_onboarding_completed\030\005 \001(\010\022\032\n\022comp" +
       "letion_enabled\030\002 \001(\010\022\031\n\021transform_enable" +
-      "d\030\003 \001(\010\"\205\001\n\021SmlAiExcludeEvent\022\025\n\rpaste_b" +
-      "locked\030\001 \001(\010\022 \n\030intention_action_blocked" +
-      "\030\002 \001(\010\022\036\n\026passive_action_blocked\030\003 \001(\010\022\027" +
-      "\n\017context_blocked\030\004 \001(\010\"g\n\025KotlinSupport" +
-      "Declined\022N\n\021template_renderer\030\001 \001(\01623.an" +
-      "droid_studio.AndroidStudioEvent.Template" +
-      "Renderer\"\362\002\n\025DeviceScreenshotEvent\022E\n\013de" +
-      "vice_type\030\001 \001(\01620.android_studio.DeviceS" +
-      "creenshotEvent.DeviceType\022Q\n\021decoration_" +
-      "option\030\002 \001(\01626.android_studio.DeviceScre" +
-      "enshotEvent.DecorationOption\"B\n\nDeviceTy" +
-      "pe\022\027\n\023UNKNOWN_DEVICE_TYPE\020\000\022\t\n\005PHONE\020\001\022\010" +
-      "\n\004WEAR\020\002\022\006\n\002TV\020\003\"{\n\020DecorationOption\022\035\n\031" +
-      "UNKNOWN_DECORATION_OPTION\020\000\022\017\n\013RECTANGUL" +
-      "AR\020\001\022\026\n\022DISPLAY_SHAPE_CLIP\020\002\022\023\n\017PLAY_COM" +
-      "PATIBLE\020\003\022\n\n\006FRAMED\020\004\"\232\001\n\022EditorNotifica" +
-      "tion\022N\n\021notification_type\030\001 \001(\01623.androi" +
-      "d_studio.EditorNotification.Notification" +
-      "Type\"4\n\020NotificationType\022\013\n\007UNKNOWN\020\000\022\023\n" +
-      "\017ESSENTIALS_MODE\020\001\"\273\004\n\rDebuggerEvent\0220\n\004" +
-      "type\030\001 \001(\0162\".android_studio.DebuggerEven" +
-      "t.Type\022G\n\020breakpoint_added\030\002 \001(\0132-.andro" +
-      "id_studio.DebuggerEvent.BreakpointAdded\022" +
-      "L\n\023frames_view_updated\030\003 \001(\0132/.android_s" +
-      "tudio.DebuggerEvent.FramesViewUpdated\032H\n" +
-      "\017BreakpointAdded\022\014\n\004type\030\001 \001(\t\022\023\n\013plugin" +
-      "_type\030\002 \001(\t\022\022\n\nin_session\030\003 \001(\010\032\314\001\n\021Fram" +
-      "esViewUpdated\022\023\n\013duration_ms\030\001 \001(\004\022\024\n\014to" +
-      "tal_frames\030\002 \001(\005\022U\n\017file_type_infos\030\003 \003(" +
-      "\0132<.android_studio.DebuggerEvent.FramesV" +
-      "iewUpdated.FileTypeInfo\0325\n\014FileTypeInfo\022" +
-      "\021\n\tfile_type\030\001 \001(\t\022\022\n\nnum_frames\030\002 \001(\005\"H" +
-      "\n\004Type\022\013\n\007UNKNOWN\020\000\022\032\n\026BREAKPOINT_ADDED_" +
-      "EVENT\020\001\022\027\n\023FRAMES_VIEW_UPDATED\020\002\"\243\002\n\016Soo" +
-      "ngSyncStats\0227\n\007trigger\030\001 \001(\0162&.android_s" +
-      "tudio.SoongSyncStats.Trigger\0225\n\006status\030\002" +
-      " \001(\0162%.android_studio.SoongSyncStats.Sta" +
-      "tus\022\025\n\rtotal_time_ms\030\003 \001(\003\"F\n\007Trigger\022\023\n" +
-      "\017TRIGGER_UNKNOWN\020\000\022\020\n\014PROJECT_OPEN\020\001\022\024\n\020" +
-      "USER_SYNC_ACTION\020\002\"B\n\006Status\022\022\n\016STATUS_U" +
-      "NKNOWN\020\000\022\013\n\007SUCCESS\020\001\022\010\n\004FAIL\020\002\022\r\n\tCANCE" +
-      "LLED\020\003\"\202\002\n\023IntelliJNewUISwitch\022G\n\rswitch" +
-      "_source\030\001 \001(\01620.android_studio.IntelliJN" +
-      "ewUISwitch.SwitchSource\022\016\n\006new_ui\030\002 \001(\010\"" +
-      "\221\001\n\014SwitchSource\022\022\n\016SOURCE_UNKNOWN\020\000\022\030\n\024" +
-      "ENABLE_NEW_UI_ACTION\020\001\022\031\n\025DISABLE_NEW_UI" +
-      "_ACTION\020\002\022\021\n\rWELCOME_PROMO\020\003\022\022\n\016WHATS_NE" +
-      "W_PAGE\020\004\022\021\n\rSETTINGS_PAGE\020\005\"&\n\023Essential" +
-      "sModeEvent\022\017\n\007enabled\030\001 \001(\010\"5\n\024LintToolt" +
-      "ipLinkEvent\022\020\n\010issue_id\030\001 \001(\t\022\013\n\003url\030\002 \001" +
-      "(\t*\237\001\n\025EmulatorSnapshotFlags\022\027\n\023SNAPSHOT" +
-      "_FLAGS_NONE\020\000\022%\n!SNAPSHOT_FLAGS_RAM_COMP" +
-      "RESSED_BIT\020\001\022*\n&SNAPSHOT_FLAGS_TEXTURES_" +
-      "COMPRESSED_BIT\020\002\022\032\n\026SNAPSHOT_FLAGS_HDD_B" +
-      "IT\020\003*\254\002\n\031EmulatorSnapshotSaveState\022+\n\'EM" +
-      "ULATOR_SNAPSHOT_SAVE_SUCCEEDED_NORMAL\020\000\022" +
-      "!\n\035EMULATOR_SNAPSHOT_SAVE_FAILED\020\001\022.\n*EM" +
-      "ULATOR_SNAPSHOT_SAVE_SKIPPED_UNSUPPORTED" +
-      "\020\002\022-\n)EMULATOR_SNAPSHOT_SAVE_SKIPPED_NOT" +
-      "_BOOTED\020\003\022.\n*EMULATOR_SNAPSHOT_SAVE_SKIP" +
-      "PED_NO_SNAPSHOT\020\004\0220\n,EMULATOR_SNAPSHOT_S" +
-      "AVE_SKIPPED_DISK_PRESSURE\020\005*\215\002\n\031Emulator" +
-      "SnapshotLoadState\022+\n\'EMULATOR_SNAPSHOT_L" +
-      "OAD_SUCCEEDED_NORMAL\020\000\022!\n\035EMULATOR_SNAPS" +
-      "HOT_LOAD_FAILED\020\001\022.\n*EMULATOR_SNAPSHOT_L" +
-      "OAD_SKIPPED_UNSUPPORTED\020\002\022&\n\"EMULATOR_SN" +
-      "APSHOT_LOAD_NO_SNAPSHOT\020\003\022\'\n#EMULATOR_SN" +
-      "APSHOT_LOAD_OLD_SNAPSHOT\020\004\022\037\n\033EMULATOR_S" +
-      "NAPSHOT_LOAD_HUNG\020\005*\335\n\n\035EmulatorSnapshot" +
-      "FailureReason\0220\n,EMULATOR_SNAPSHOT_FAILU" +
-      "RE_REASON_UNSPECIFIED\020\000\0223\n/EMULATOR_SNAP" +
-      "SHOT_FAILURE_REASON_CORRUPTED_DATA\020\001\0223\n/" +
-      "EMULATOR_SNAPSHOT_FAILURE_REASON_NO_SNAP" +
-      "SHOT_PB\020\002\0224\n0EMULATOR_SNAPSHOT_FAILURE_R" +
-      "EASON_BAD_SNAPSHOT_PB\020\003\0229\n5EMULATOR_SNAP" +
-      "SHOT_FAILURE_REASON_INCOMPATIBLE_VERSION" +
-      "\020\004\0220\n,EMULATOR_SNAPSHOT_FAILURE_REASON_N" +
-      "O_RAM_FILE\020\005\0225\n1EMULATOR_SNAPSHOT_FAILUR" +
-      "E_REASON_NO_TEXTURES_FILE\020\006\022<\n8EMULATOR_" +
-      "SNAPSHOT_FAILURE_REASON_SNAPSHOTS_NOT_SU" +
-      "PPORTED\020\007\022?\n:EMULATOR_SNAPSHOT_FAILURE_R" +
-      "EASON_UNRECOVERABLE_ERROR_LIMIT\020\220N\022:\n5EM" +
-      "ULATOR_SNAPSHOT_FAILURE_REASON_NO_SNAPSH" +
-      "OT_IN_IMAGE\020\221N\022E\n@EMULATOR_SNAPSHOT_FAIL" +
-      "URE_REASON_CONFIG_MISMATCH_HOST_HYPERVIS" +
-      "OR\020\222N\022>\n9EMULATOR_SNAPSHOT_FAILURE_REASO" +
-      "N_CONFIG_MISMATCH_HOST_GPU\020\223N\022>\n9EMULATO" +
-      "R_SNAPSHOT_FAILURE_REASON_CONFIG_MISMATC" +
-      "H_RENDERER\020\224N\022>\n9EMULATOR_SNAPSHOT_FAILU" +
-      "RE_REASON_CONFIG_MISMATCH_FEATURES\020\225N\0229\n" +
-      "4EMULATOR_SNAPSHOT_FAILURE_REASON_CONFIG" +
-      "_MISMATCH_AVD\020\226N\022:\n5EMULATOR_SNAPSHOT_FA" +
-      "ILURE_REASON_SYSTEM_IMAGE_CHANGED\020\227N\022=\n7" +
-      "EMULATOR_SNAPSHOT_FAILURE_REASON_VALIDAT" +
-      "ION_ERROR_LIMIT\020\240\234\001\0225\n/EMULATOR_SNAPSHOT" +
-      "_FAILURE_REASON_INTERNAL_ERROR\020\241\234\001\022>\n8EM" +
-      "ULATOR_SNAPSHOT_FAILURE_REASON_EMULATION" +
-      "_ENGINE_FAILED\020\242\234\001\0221\n+EMULATOR_SNAPSHOT_" +
-      "FAILURE_REASON_RAM_FAILED\020\243\234\001\0226\n0EMULATO" +
-      "R_SNAPSHOT_FAILURE_REASON_TEXTURES_FAILE" +
-      "D\020\244\234\001\0222\n,EMULATOR_SNAPSHOT_FAILURE_REASO" +
-      "N_ADB_OFFLINE\020\245\234\001\0228\n2EMULATOR_SNAPSHOT_F" +
-      "AILURE_REASON_IN_PROGRESS_LIMIT\020\260\352\001*[\n\014S" +
-      "earchOption\022\031\n\025UNKNOWN_SEARCH_OPTION\020\000\022\010" +
-      "\n\004NONE\020\001\022\024\n\020MULTIPLE_MATCHES\020\002\022\020\n\014SINGLE" +
-      "_MATCH\020\003*\316\003\n\016EditorFileType\022\013\n\007UNKNOWN\020\000" +
-      "\022\010\n\004JAVA\020\001\022\n\n\006KOTLIN\020\002\022\007\n\003XML\020\003\022\n\n\006GROOV" +
-      "Y\020\004\022\016\n\nPROPERTIES\020\005\022\010\n\004JSON\020\006\022\021\n\rKOTLIN_" +
-      "SCRIPT\020\007\022\n\n\006NATIVE\020\010\022\020\n\014XML_MANIFEST\020\t\022\020" +
-      "\n\014XML_RES_ANIM\020\n\022\024\n\020XML_RES_ANIMATOR\020\013\022\021" +
-      "\n\rXML_RES_COLOR\020\014\022\024\n\020XML_RES_DRAWABLE\020\r\022" +
-      "\020\n\014XML_RES_FONT\020\016\022\030\n\024XML_RES_INTERPOLATO" +
-      "R\020\017\022\022\n\016XML_RES_LAYOUT\020\020\022\020\n\014XML_RES_MENU\020" +
-      "\021\022\022\n\016XML_RES_MIPMAP\020\022\022\026\n\022XML_RES_NAVIGAT" +
-      "ION\020\023\022\017\n\013XML_RES_RAW\020\024\022\026\n\022XML_RES_TRANSI" +
-      "TION\020\025\022\022\n\016XML_RES_VALUES\020\026\022\017\n\013XML_RES_XM" +
-      "L\020\027\022\022\n\016KOTLIN_COMPOSE\020\030\022\010\n\004TOML\020\031B=\n%com" +
-      ".google.wireless.android.sdk.statsB\022Andr" +
-      "oidStudioStatsP\001"
+      "d\030\003 \001(\010\022\037\n\027project_context_enabled\030\006 \001(\010" +
+      "\"\205\001\n\021SmlAiExcludeEvent\022\025\n\rpaste_blocked\030" +
+      "\001 \001(\010\022 \n\030intention_action_blocked\030\002 \001(\010\022" +
+      "\036\n\026passive_action_blocked\030\003 \001(\010\022\027\n\017conte" +
+      "xt_blocked\030\004 \001(\010\"g\n\025KotlinSupportDecline" +
+      "d\022N\n\021template_renderer\030\001 \001(\01623.android_s" +
+      "tudio.AndroidStudioEvent.TemplateRendere" +
+      "r\"\362\002\n\025DeviceScreenshotEvent\022E\n\013device_ty" +
+      "pe\030\001 \001(\01620.android_studio.DeviceScreensh" +
+      "otEvent.DeviceType\022Q\n\021decoration_option\030" +
+      "\002 \001(\01626.android_studio.DeviceScreenshotE" +
+      "vent.DecorationOption\"B\n\nDeviceType\022\027\n\023U" +
+      "NKNOWN_DEVICE_TYPE\020\000\022\t\n\005PHONE\020\001\022\010\n\004WEAR\020" +
+      "\002\022\006\n\002TV\020\003\"{\n\020DecorationOption\022\035\n\031UNKNOWN" +
+      "_DECORATION_OPTION\020\000\022\017\n\013RECTANGULAR\020\001\022\026\n" +
+      "\022DISPLAY_SHAPE_CLIP\020\002\022\023\n\017PLAY_COMPATIBLE" +
+      "\020\003\022\n\n\006FRAMED\020\004\"\232\001\n\022EditorNotification\022N\n" +
+      "\021notification_type\030\001 \001(\01623.android_studi" +
+      "o.EditorNotification.NotificationType\"4\n" +
+      "\020NotificationType\022\013\n\007UNKNOWN\020\000\022\023\n\017ESSENT" +
+      "IALS_MODE\020\001\"\273\004\n\rDebuggerEvent\0220\n\004type\030\001 " +
+      "\001(\0162\".android_studio.DebuggerEvent.Type\022" +
+      "G\n\020breakpoint_added\030\002 \001(\0132-.android_stud" +
+      "io.DebuggerEvent.BreakpointAdded\022L\n\023fram" +
+      "es_view_updated\030\003 \001(\0132/.android_studio.D" +
+      "ebuggerEvent.FramesViewUpdated\032H\n\017Breakp" +
+      "ointAdded\022\014\n\004type\030\001 \001(\t\022\023\n\013plugin_type\030\002" +
+      " \001(\t\022\022\n\nin_session\030\003 \001(\010\032\314\001\n\021FramesViewU" +
+      "pdated\022\023\n\013duration_ms\030\001 \001(\004\022\024\n\014total_fra" +
+      "mes\030\002 \001(\005\022U\n\017file_type_infos\030\003 \003(\0132<.and" +
+      "roid_studio.DebuggerEvent.FramesViewUpda" +
+      "ted.FileTypeInfo\0325\n\014FileTypeInfo\022\021\n\tfile" +
+      "_type\030\001 \001(\t\022\022\n\nnum_frames\030\002 \001(\005\"H\n\004Type\022" +
+      "\013\n\007UNKNOWN\020\000\022\032\n\026BREAKPOINT_ADDED_EVENT\020\001" +
+      "\022\027\n\023FRAMES_VIEW_UPDATED\020\002\"\243\002\n\016SoongSyncS" +
+      "tats\0227\n\007trigger\030\001 \001(\0162&.android_studio.S" +
+      "oongSyncStats.Trigger\0225\n\006status\030\002 \001(\0162%." +
+      "android_studio.SoongSyncStats.Status\022\025\n\r" +
+      "total_time_ms\030\003 \001(\003\"F\n\007Trigger\022\023\n\017TRIGGE" +
+      "R_UNKNOWN\020\000\022\020\n\014PROJECT_OPEN\020\001\022\024\n\020USER_SY" +
+      "NC_ACTION\020\002\"B\n\006Status\022\022\n\016STATUS_UNKNOWN\020" +
+      "\000\022\013\n\007SUCCESS\020\001\022\010\n\004FAIL\020\002\022\r\n\tCANCELLED\020\003\"" +
+      "\202\002\n\023IntelliJNewUISwitch\022G\n\rswitch_source" +
+      "\030\001 \001(\01620.android_studio.IntelliJNewUISwi" +
+      "tch.SwitchSource\022\016\n\006new_ui\030\002 \001(\010\"\221\001\n\014Swi" +
+      "tchSource\022\022\n\016SOURCE_UNKNOWN\020\000\022\030\n\024ENABLE_" +
+      "NEW_UI_ACTION\020\001\022\031\n\025DISABLE_NEW_UI_ACTION" +
+      "\020\002\022\021\n\rWELCOME_PROMO\020\003\022\022\n\016WHATS_NEW_PAGE\020" +
+      "\004\022\021\n\rSETTINGS_PAGE\020\005\"&\n\023EssentialsModeEv" +
+      "ent\022\017\n\007enabled\030\001 \001(\010\"5\n\024LintTooltipLinkE" +
+      "vent\022\020\n\010issue_id\030\001 \001(\t\022\013\n\003url\030\002 \001(\t*\237\001\n\025" +
+      "EmulatorSnapshotFlags\022\027\n\023SNAPSHOT_FLAGS_" +
+      "NONE\020\000\022%\n!SNAPSHOT_FLAGS_RAM_COMPRESSED_" +
+      "BIT\020\001\022*\n&SNAPSHOT_FLAGS_TEXTURES_COMPRES" +
+      "SED_BIT\020\002\022\032\n\026SNAPSHOT_FLAGS_HDD_BIT\020\003*\254\002" +
+      "\n\031EmulatorSnapshotSaveState\022+\n\'EMULATOR_" +
+      "SNAPSHOT_SAVE_SUCCEEDED_NORMAL\020\000\022!\n\035EMUL" +
+      "ATOR_SNAPSHOT_SAVE_FAILED\020\001\022.\n*EMULATOR_" +
+      "SNAPSHOT_SAVE_SKIPPED_UNSUPPORTED\020\002\022-\n)E" +
+      "MULATOR_SNAPSHOT_SAVE_SKIPPED_NOT_BOOTED" +
+      "\020\003\022.\n*EMULATOR_SNAPSHOT_SAVE_SKIPPED_NO_" +
+      "SNAPSHOT\020\004\0220\n,EMULATOR_SNAPSHOT_SAVE_SKI" +
+      "PPED_DISK_PRESSURE\020\005*\215\002\n\031EmulatorSnapsho" +
+      "tLoadState\022+\n\'EMULATOR_SNAPSHOT_LOAD_SUC" +
+      "CEEDED_NORMAL\020\000\022!\n\035EMULATOR_SNAPSHOT_LOA" +
+      "D_FAILED\020\001\022.\n*EMULATOR_SNAPSHOT_LOAD_SKI" +
+      "PPED_UNSUPPORTED\020\002\022&\n\"EMULATOR_SNAPSHOT_" +
+      "LOAD_NO_SNAPSHOT\020\003\022\'\n#EMULATOR_SNAPSHOT_" +
+      "LOAD_OLD_SNAPSHOT\020\004\022\037\n\033EMULATOR_SNAPSHOT" +
+      "_LOAD_HUNG\020\005*\335\n\n\035EmulatorSnapshotFailure" +
+      "Reason\0220\n,EMULATOR_SNAPSHOT_FAILURE_REAS" +
+      "ON_UNSPECIFIED\020\000\0223\n/EMULATOR_SNAPSHOT_FA" +
+      "ILURE_REASON_CORRUPTED_DATA\020\001\0223\n/EMULATO" +
+      "R_SNAPSHOT_FAILURE_REASON_NO_SNAPSHOT_PB" +
+      "\020\002\0224\n0EMULATOR_SNAPSHOT_FAILURE_REASON_B" +
+      "AD_SNAPSHOT_PB\020\003\0229\n5EMULATOR_SNAPSHOT_FA" +
+      "ILURE_REASON_INCOMPATIBLE_VERSION\020\004\0220\n,E" +
+      "MULATOR_SNAPSHOT_FAILURE_REASON_NO_RAM_F" +
+      "ILE\020\005\0225\n1EMULATOR_SNAPSHOT_FAILURE_REASO" +
+      "N_NO_TEXTURES_FILE\020\006\022<\n8EMULATOR_SNAPSHO" +
+      "T_FAILURE_REASON_SNAPSHOTS_NOT_SUPPORTED" +
+      "\020\007\022?\n:EMULATOR_SNAPSHOT_FAILURE_REASON_U" +
+      "NRECOVERABLE_ERROR_LIMIT\020\220N\022:\n5EMULATOR_" +
+      "SNAPSHOT_FAILURE_REASON_NO_SNAPSHOT_IN_I" +
+      "MAGE\020\221N\022E\n@EMULATOR_SNAPSHOT_FAILURE_REA" +
+      "SON_CONFIG_MISMATCH_HOST_HYPERVISOR\020\222N\022>" +
+      "\n9EMULATOR_SNAPSHOT_FAILURE_REASON_CONFI" +
+      "G_MISMATCH_HOST_GPU\020\223N\022>\n9EMULATOR_SNAPS" +
+      "HOT_FAILURE_REASON_CONFIG_MISMATCH_RENDE" +
+      "RER\020\224N\022>\n9EMULATOR_SNAPSHOT_FAILURE_REAS" +
+      "ON_CONFIG_MISMATCH_FEATURES\020\225N\0229\n4EMULAT" +
+      "OR_SNAPSHOT_FAILURE_REASON_CONFIG_MISMAT" +
+      "CH_AVD\020\226N\022:\n5EMULATOR_SNAPSHOT_FAILURE_R" +
+      "EASON_SYSTEM_IMAGE_CHANGED\020\227N\022=\n7EMULATO" +
+      "R_SNAPSHOT_FAILURE_REASON_VALIDATION_ERR" +
+      "OR_LIMIT\020\240\234\001\0225\n/EMULATOR_SNAPSHOT_FAILUR" +
+      "E_REASON_INTERNAL_ERROR\020\241\234\001\022>\n8EMULATOR_" +
+      "SNAPSHOT_FAILURE_REASON_EMULATION_ENGINE" +
+      "_FAILED\020\242\234\001\0221\n+EMULATOR_SNAPSHOT_FAILURE" +
+      "_REASON_RAM_FAILED\020\243\234\001\0226\n0EMULATOR_SNAPS" +
+      "HOT_FAILURE_REASON_TEXTURES_FAILED\020\244\234\001\0222" +
+      "\n,EMULATOR_SNAPSHOT_FAILURE_REASON_ADB_O" +
+      "FFLINE\020\245\234\001\0228\n2EMULATOR_SNAPSHOT_FAILURE_" +
+      "REASON_IN_PROGRESS_LIMIT\020\260\352\001*[\n\014SearchOp" +
+      "tion\022\031\n\025UNKNOWN_SEARCH_OPTION\020\000\022\010\n\004NONE\020" +
+      "\001\022\024\n\020MULTIPLE_MATCHES\020\002\022\020\n\014SINGLE_MATCH\020" +
+      "\003*\316\003\n\016EditorFileType\022\013\n\007UNKNOWN\020\000\022\010\n\004JAV" +
+      "A\020\001\022\n\n\006KOTLIN\020\002\022\007\n\003XML\020\003\022\n\n\006GROOVY\020\004\022\016\n\n" +
+      "PROPERTIES\020\005\022\010\n\004JSON\020\006\022\021\n\rKOTLIN_SCRIPT\020" +
+      "\007\022\n\n\006NATIVE\020\010\022\020\n\014XML_MANIFEST\020\t\022\020\n\014XML_R" +
+      "ES_ANIM\020\n\022\024\n\020XML_RES_ANIMATOR\020\013\022\021\n\rXML_R" +
+      "ES_COLOR\020\014\022\024\n\020XML_RES_DRAWABLE\020\r\022\020\n\014XML_" +
+      "RES_FONT\020\016\022\030\n\024XML_RES_INTERPOLATOR\020\017\022\022\n\016" +
+      "XML_RES_LAYOUT\020\020\022\020\n\014XML_RES_MENU\020\021\022\022\n\016XM" +
+      "L_RES_MIPMAP\020\022\022\026\n\022XML_RES_NAVIGATION\020\023\022\017" +
+      "\n\013XML_RES_RAW\020\024\022\026\n\022XML_RES_TRANSITION\020\025\022" +
+      "\022\n\016XML_RES_VALUES\020\026\022\017\n\013XML_RES_XML\020\027\022\022\n\016" +
+      "KOTLIN_COMPOSE\020\030\022\010\n\004TOML\020\031B=\n%com.google" +
+      ".wireless.android.sdk.statsB\022AndroidStud" +
+      "ioStatsP\001"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -10332,7 +10333,7 @@ public final class AndroidStudioStats {
     internal_static_android_studio_SmlConfigurationEvent_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_android_studio_SmlConfigurationEvent_descriptor,
-        new java.lang.String[] { "SmlAvailable", "BotOnboardingStarted", "BotOnboardingCompleted", "CompletionEnabled", "TransformEnabled", });
+        new java.lang.String[] { "SmlAvailable", "BotOnboardingStarted", "BotOnboardingCompleted", "CompletionEnabled", "TransformEnabled", "ProjectContextEnabled", });
     internal_static_android_studio_SmlAiExcludeEvent_descriptor =
       getDescriptor().getMessageTypes().get(295);
     internal_static_android_studio_SmlAiExcludeEvent_fieldAccessorTable = new

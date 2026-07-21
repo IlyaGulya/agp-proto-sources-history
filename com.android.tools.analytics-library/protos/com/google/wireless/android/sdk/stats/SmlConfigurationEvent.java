@@ -179,6 +179,33 @@ private static final long serialVersionUID = 0L;
     return transformEnabled_;
   }
 
+  public static final int PROJECT_CONTEXT_ENABLED_FIELD_NUMBER = 6;
+  private boolean projectContextEnabled_;
+  /**
+   * <pre>
+   * User agrees to sending project context with queries
+   * </pre>
+   *
+   * <code>optional bool project_context_enabled = 6;</code>
+   * @return Whether the projectContextEnabled field is set.
+   */
+  @java.lang.Override
+  public boolean hasProjectContextEnabled() {
+    return ((bitField0_ & 0x00000020) != 0);
+  }
+  /**
+   * <pre>
+   * User agrees to sending project context with queries
+   * </pre>
+   *
+   * <code>optional bool project_context_enabled = 6;</code>
+   * @return The projectContextEnabled.
+   */
+  @java.lang.Override
+  public boolean getProjectContextEnabled() {
+    return projectContextEnabled_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -208,6 +235,9 @@ private static final long serialVersionUID = 0L;
     if (((bitField0_ & 0x00000004) != 0)) {
       output.writeBool(5, botOnboardingCompleted_);
     }
+    if (((bitField0_ & 0x00000020) != 0)) {
+      output.writeBool(6, projectContextEnabled_);
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -236,6 +266,10 @@ private static final long serialVersionUID = 0L;
     if (((bitField0_ & 0x00000004) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeBoolSize(5, botOnboardingCompleted_);
+    }
+    if (((bitField0_ & 0x00000020) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeBoolSize(6, projectContextEnabled_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -277,6 +311,11 @@ private static final long serialVersionUID = 0L;
       if (getTransformEnabled()
           != other.getTransformEnabled()) return false;
     }
+    if (hasProjectContextEnabled() != other.hasProjectContextEnabled()) return false;
+    if (hasProjectContextEnabled()) {
+      if (getProjectContextEnabled()
+          != other.getProjectContextEnabled()) return false;
+    }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -312,6 +351,11 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + TRANSFORM_ENABLED_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
           getTransformEnabled());
+    }
+    if (hasProjectContextEnabled()) {
+      hash = (37 * hash) + PROJECT_CONTEXT_ENABLED_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getProjectContextEnabled());
     }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
@@ -451,6 +495,8 @@ private static final long serialVersionUID = 0L;
       bitField0_ = (bitField0_ & ~0x00000008);
       transformEnabled_ = false;
       bitField0_ = (bitField0_ & ~0x00000010);
+      projectContextEnabled_ = false;
+      bitField0_ = (bitField0_ & ~0x00000020);
       return this;
     }
 
@@ -498,6 +544,10 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000010) != 0)) {
         result.transformEnabled_ = transformEnabled_;
         to_bitField0_ |= 0x00000010;
+      }
+      if (((from_bitField0_ & 0x00000020) != 0)) {
+        result.projectContextEnabled_ = projectContextEnabled_;
+        to_bitField0_ |= 0x00000020;
       }
       result.bitField0_ = to_bitField0_;
       onBuilt();
@@ -563,6 +613,9 @@ private static final long serialVersionUID = 0L;
       if (other.hasTransformEnabled()) {
         setTransformEnabled(other.getTransformEnabled());
       }
+      if (other.hasProjectContextEnabled()) {
+        setProjectContextEnabled(other.getProjectContextEnabled());
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -614,6 +667,11 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000004;
               break;
             } // case 40
+            case 48: {
+              projectContextEnabled_ = input.readBool();
+              bitField0_ |= 0x00000020;
+              break;
+            } // case 48
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -902,6 +960,61 @@ private static final long serialVersionUID = 0L;
     public Builder clearTransformEnabled() {
       bitField0_ = (bitField0_ & ~0x00000010);
       transformEnabled_ = false;
+      onChanged();
+      return this;
+    }
+
+    private boolean projectContextEnabled_ ;
+    /**
+     * <pre>
+     * User agrees to sending project context with queries
+     * </pre>
+     *
+     * <code>optional bool project_context_enabled = 6;</code>
+     * @return Whether the projectContextEnabled field is set.
+     */
+    @java.lang.Override
+    public boolean hasProjectContextEnabled() {
+      return ((bitField0_ & 0x00000020) != 0);
+    }
+    /**
+     * <pre>
+     * User agrees to sending project context with queries
+     * </pre>
+     *
+     * <code>optional bool project_context_enabled = 6;</code>
+     * @return The projectContextEnabled.
+     */
+    @java.lang.Override
+    public boolean getProjectContextEnabled() {
+      return projectContextEnabled_;
+    }
+    /**
+     * <pre>
+     * User agrees to sending project context with queries
+     * </pre>
+     *
+     * <code>optional bool project_context_enabled = 6;</code>
+     * @param value The projectContextEnabled to set.
+     * @return This builder for chaining.
+     */
+    public Builder setProjectContextEnabled(boolean value) {
+      bitField0_ |= 0x00000020;
+      projectContextEnabled_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * User agrees to sending project context with queries
+     * </pre>
+     *
+     * <code>optional bool project_context_enabled = 6;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearProjectContextEnabled() {
+      bitField0_ = (bitField0_ & ~0x00000020);
+      projectContextEnabled_ = false;
       onChanged();
       return this;
     }
