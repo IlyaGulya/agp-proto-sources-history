@@ -952,6 +952,10 @@ public enum BooleanOption
    * <code>ENABLE_JAVA_RESOURCE_OPTIMIZATIONS = 232;</code>
    */
   ENABLE_JAVA_RESOURCE_OPTIMIZATIONS(232),
+  /**
+   * <code>AUTO_ENCODE_MINIMUM_AGP_VERSION_IN_AAR_METADATA = 233;</code>
+   */
+  AUTO_ENCODE_MINIMUM_AGP_VERSION_IN_AAR_METADATA(233),
   UNRECOGNIZED(-1),
   ;
 
@@ -1887,6 +1891,10 @@ public enum BooleanOption
    * <code>ENABLE_JAVA_RESOURCE_OPTIMIZATIONS = 232;</code>
    */
   public static final int ENABLE_JAVA_RESOURCE_OPTIMIZATIONS_VALUE = 232;
+  /**
+   * <code>AUTO_ENCODE_MINIMUM_AGP_VERSION_IN_AAR_METADATA = 233;</code>
+   */
+  public static final int AUTO_ENCODE_MINIMUM_AGP_VERSION_IN_AAR_METADATA_VALUE = 233;
 
 
   public final int getNumber() {
@@ -2146,6 +2154,7 @@ public enum BooleanOption
       case 230: return TREAT_MANIFEST_MERGER_WARNINGS_AS_ERRORS;
       case 231: return LINT_REPORT_AGGREGATION;
       case 232: return ENABLE_JAVA_RESOURCE_OPTIMIZATIONS;
+      case 233: return AUTO_ENCODE_MINIMUM_AGP_VERSION_IN_AAR_METADATA;
       default: return null;
     }
   }

@@ -6960,4 +6960,31 @@ public interface AndroidStudioEventOrBuilder extends
    * <code>optional .android_studio.SkillsEvent skills_event = 249 [lazy = true];</code>
    */
   com.google.wireless.android.sdk.stats.SkillsEventOrBuilder getSkillsEventOrBuilder();
+
+  /**
+   * <pre>
+   * set when kind = EMULATOR_WINDOWS_HYPERVISOR_MIGRATION_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.EmulatorWindowsHypervisorMigrationEvent emulator_windows_hypervisor_migration_event = 250 [lazy = true];</code>
+   * @return Whether the emulatorWindowsHypervisorMigrationEvent field is set.
+   */
+  boolean hasEmulatorWindowsHypervisorMigrationEvent();
+  /**
+   * <pre>
+   * set when kind = EMULATOR_WINDOWS_HYPERVISOR_MIGRATION_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.EmulatorWindowsHypervisorMigrationEvent emulator_windows_hypervisor_migration_event = 250 [lazy = true];</code>
+   * @return The emulatorWindowsHypervisorMigrationEvent.
+   */
+  com.google.wireless.android.sdk.stats.EmulatorWindowsHypervisorMigrationEvent getEmulatorWindowsHypervisorMigrationEvent();
+  /**
+   * <pre>
+   * set when kind = EMULATOR_WINDOWS_HYPERVISOR_MIGRATION_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.EmulatorWindowsHypervisorMigrationEvent emulator_windows_hypervisor_migration_event = 250 [lazy = true];</code>
+   */
+  com.google.wireless.android.sdk.stats.EmulatorWindowsHypervisorMigrationEventOrBuilder getEmulatorWindowsHypervisorMigrationEventOrBuilder();
 }

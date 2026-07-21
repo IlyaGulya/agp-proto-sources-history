@@ -323,6 +323,14 @@ private static final long serialVersionUID = 0L;
      * <code>GOOGLE_PLAY_SDK_INDEX = 30;</code>
      */
     GOOGLE_PLAY_SDK_INDEX(30),
+    /**
+     * <pre>
+     * The event is related to Gradle JVM incompatible dialog
+     * </pre>
+     *
+     * <code>GRADLE_JVM_INCOMPATIBLE_DIALOG = 31;</code>
+     */
+    GRADLE_JVM_INCOMPATIBLE_DIALOG(31),
     ;
 
     /**
@@ -574,6 +582,14 @@ private static final long serialVersionUID = 0L;
      * <code>GOOGLE_PLAY_SDK_INDEX = 30;</code>
      */
     public static final int GOOGLE_PLAY_SDK_INDEX_VALUE = 30;
+    /**
+     * <pre>
+     * The event is related to Gradle JVM incompatible dialog
+     * </pre>
+     *
+     * <code>GRADLE_JVM_INCOMPATIBLE_DIALOG = 31;</code>
+     */
+    public static final int GRADLE_JVM_INCOMPATIBLE_DIALOG_VALUE = 31;
 
 
     public final int getNumber() {
@@ -627,6 +643,7 @@ private static final long serialVersionUID = 0L;
         case 28: return SPLITTING_TABS;
         case 29: return LOGCAT;
         case 30: return GOOGLE_PLAY_SDK_INDEX;
+        case 31: return GRADLE_JVM_INCOMPATIBLE_DIALOG;
         default: return null;
       }
     }
@@ -3467,6 +3484,30 @@ private static final long serialVersionUID = 0L;
      * <code>SKILLS_EVENT = 369;</code>
      */
     SKILLS_EVENT(369),
+    /**
+     * <pre>
+     * Event related to emulator Windows Hypervisor migration.
+     * </pre>
+     *
+     * <code>EMULATOR_WINDOWS_HYPERVISOR_MIGRATION_EVENT = 370;</code>
+     */
+    EMULATOR_WINDOWS_HYPERVISOR_MIGRATION_EVENT(370),
+    /**
+     * <pre>
+     * Events related to Gradle JVM incompatible dialog
+     * </pre>
+     *
+     * <code>GRADLE_JVM_INCOMPATIBLE_DIALOG_APPLY_COMPATIBLE_JVM = 371;</code>
+     */
+    GRADLE_JVM_INCOMPATIBLE_DIALOG_APPLY_COMPATIBLE_JVM(371),
+    /**
+     * <code>GRADLE_JVM_INCOMPATIBLE_DIALOG_OPEN_SETTINGS = 372;</code>
+     */
+    GRADLE_JVM_INCOMPATIBLE_DIALOG_OPEN_SETTINGS(372),
+    /**
+     * <code>GRADLE_JVM_INCOMPATIBLE_DIALOG_CANCEL = 373;</code>
+     */
+    GRADLE_JVM_INCOMPATIBLE_DIALOG_CANCEL(373),
     ;
 
     /**
@@ -6242,6 +6283,30 @@ private static final long serialVersionUID = 0L;
      * <code>SKILLS_EVENT = 369;</code>
      */
     public static final int SKILLS_EVENT_VALUE = 369;
+    /**
+     * <pre>
+     * Event related to emulator Windows Hypervisor migration.
+     * </pre>
+     *
+     * <code>EMULATOR_WINDOWS_HYPERVISOR_MIGRATION_EVENT = 370;</code>
+     */
+    public static final int EMULATOR_WINDOWS_HYPERVISOR_MIGRATION_EVENT_VALUE = 370;
+    /**
+     * <pre>
+     * Events related to Gradle JVM incompatible dialog
+     * </pre>
+     *
+     * <code>GRADLE_JVM_INCOMPATIBLE_DIALOG_APPLY_COMPATIBLE_JVM = 371;</code>
+     */
+    public static final int GRADLE_JVM_INCOMPATIBLE_DIALOG_APPLY_COMPATIBLE_JVM_VALUE = 371;
+    /**
+     * <code>GRADLE_JVM_INCOMPATIBLE_DIALOG_OPEN_SETTINGS = 372;</code>
+     */
+    public static final int GRADLE_JVM_INCOMPATIBLE_DIALOG_OPEN_SETTINGS_VALUE = 372;
+    /**
+     * <code>GRADLE_JVM_INCOMPATIBLE_DIALOG_CANCEL = 373;</code>
+     */
+    public static final int GRADLE_JVM_INCOMPATIBLE_DIALOG_CANCEL_VALUE = 373;
 
 
     public final int getNumber() {
@@ -6629,6 +6694,10 @@ private static final long serialVersionUID = 0L;
         case 367: return EMULATOR_CONSOLE_EVENTS;
         case 368: return STUDIO_BOT_TOOL_WINDOW_AUTO_OPEN_EVENT;
         case 369: return SKILLS_EVENT;
+        case 370: return EMULATOR_WINDOWS_HYPERVISOR_MIGRATION_EVENT;
+        case 371: return GRADLE_JVM_INCOMPATIBLE_DIALOG_APPLY_COMPATIBLE_JVM;
+        case 372: return GRADLE_JVM_INCOMPATIBLE_DIALOG_OPEN_SETTINGS;
+        case 373: return GRADLE_JVM_INCOMPATIBLE_DIALOG_CANCEL;
         default: return null;
       }
     }
@@ -9546,6 +9615,544 @@ private static final long serialVersionUID = 0L;
      * <code>TYPE_LIBRARY_CONSTRAINTS_SHOULD_BE_DISABLED = 67;</code>
      */
     TYPE_LIBRARY_CONSTRAINTS_SHOULD_BE_DISABLED(67),
+    /**
+     * <pre>
+     * Project uses RenderScript which is not supported on Riscv.
+     * </pre>
+     *
+     * <code>TYPE_RENDERSCRIPT_NOT_SUPPORTED_ON_RISCV = 68;</code>
+     */
+    TYPE_RENDERSCRIPT_NOT_SUPPORTED_ON_RISCV(68),
+    /**
+     * <pre>
+     * Using kotlin.sourceSets DSL to add Kotlin sources is not allowed with
+     * built-in Kotlin.
+     * </pre>
+     *
+     * <code>TYPE_KOTLIN_SOURCE_SET_NOT_ALLOWED = 69;</code>
+     */
+    TYPE_KOTLIN_SOURCE_SET_NOT_ALLOWED(69),
+    /**
+     * <pre>
+     * Found non-apk file in a configuration that should only contain apks.
+     * </pre>
+     *
+     * <code>TYPE_NON_APK_RUNTIME_DEP = 70;</code>
+     */
+    TYPE_NON_APK_RUNTIME_DEP(70),
+    /**
+     * <pre>
+     * Unable to find connectedCheck task name for a component.
+     * </pre>
+     *
+     * <code>TYPE_CONNECTED_CHECK_TASK_NOT_FOUND = 71;</code>
+     */
+    TYPE_CONNECTED_CHECK_TASK_NOT_FOUND(71),
+    /**
+     * <pre>
+     * Failed to parse XML in manifest.
+     * </pre>
+     *
+     * <code>TYPE_MANIFEST_PARSE_FAILED = 72;</code>
+     */
+    TYPE_MANIFEST_PARSE_FAILED(72),
+    /**
+     * <pre>
+     * User is using me.tatarka.retrolambda which is deprecated.
+     * </pre>
+     *
+     * <code>TYPE_RETROLAMBDA_USED = 73;</code>
+     */
+    TYPE_RETROLAMBDA_USED(73),
+    /**
+     * <pre>
+     * User is using FlatDirectoryArtifactRepository which is discouraged.
+     * </pre>
+     *
+     * <code>TYPE_FLAT_DIR_REPOSITORY_USED = 74;</code>
+     */
+    TYPE_FLAT_DIR_REPOSITORY_USED(74),
+    /**
+     * <pre>
+     * Access to deprecated legacy model requires compatibility mode.
+     * </pre>
+     *
+     * <code>TYPE_ACCESSING_DEPRECATED_LEGACY_MODEL = 75;</code>
+     */
+    TYPE_ACCESSING_DEPRECATED_LEGACY_MODEL(75),
+    /**
+     * <pre>
+     * Property cannot be set on a mergedFlavor directly.
+     * </pre>
+     *
+     * <code>TYPE_CANNOT_SET_ON_MERGED_FLAVOR = 76;</code>
+     */
+    TYPE_CANNOT_SET_ON_MERGED_FLAVOR(76),
+    /**
+     * <pre>
+     * Invalid value for compileSdkPreview or compileSdkMinor.
+     * </pre>
+     *
+     * <code>TYPE_COMPILE_SDK_PREVIEW_INVALID = 77;</code>
+     */
+    TYPE_COMPILE_SDK_PREVIEW_INVALID(77),
+    /**
+     * <pre>
+     * Invalid value for namespace.
+     * </pre>
+     *
+     * <code>TYPE_NAMESPACE_INVALID = 78;</code>
+     */
+    TYPE_NAMESPACE_INVALID(78),
+    /**
+     * <pre>
+     * Invalid Proguard file provided.
+     * </pre>
+     *
+     * <code>TYPE_PROGUARD_FILE_INVALID = 79;</code>
+     */
+    TYPE_PROGUARD_FILE_INVALID(79),
+    /**
+     * <pre>
+     * targetSdk is set in testOptions for non-library module.
+     * </pre>
+     *
+     * <code>TYPE_TEST_OPTIONS_TARGET_SDK_INVALID = 80;</code>
+     */
+    TYPE_TEST_OPTIONS_TARGET_SDK_INVALID(80),
+    /**
+     * <pre>
+     * KGP is loaded in a different classloader than AGP.
+     * </pre>
+     *
+     * <code>TYPE_KGP_LOADED_IN_DIFFERENT_CLASSLOADER = 81;</code>
+     */
+    TYPE_KGP_LOADED_IN_DIFFERENT_CLASSLOADER(81),
+    /**
+     * <pre>
+     * Selected execution profile does not exist or none selected.
+     * </pre>
+     *
+     * <code>TYPE_UNSUPPORTED_EXECUTION_PROFILE = 82;</code>
+     */
+    TYPE_UNSUPPORTED_EXECUTION_PROFILE(82),
+    /**
+     * <pre>
+     * Invalid value for lint version override.
+     * </pre>
+     *
+     * <code>TYPE_LINT_VERSION_OVERRIDE_INVALID = 83;</code>
+     */
+    TYPE_LINT_VERSION_OVERRIDE_INVALID(83),
+    /**
+     * <pre>
+     * Namespace and testNamespace have the same value.
+     * </pre>
+     *
+     * <code>TYPE_NAMESPACE_CONFLICT = 84;</code>
+     */
+    TYPE_NAMESPACE_CONFLICT(84),
+    /**
+     * <pre>
+     * Invalid value for version code.
+     * </pre>
+     *
+     * <code>TYPE_INVALID_VERSION_CODE = 85;</code>
+     */
+    TYPE_INVALID_VERSION_CODE(85),
+    /**
+     * <pre>
+     * Pure splits are not supported.
+     * </pre>
+     *
+     * <code>TYPE_PURE_SPLITS_NOT_SUPPORTED = 86;</code>
+     */
+    TYPE_PURE_SPLITS_NOT_SUPPORTED(86),
+    /**
+     * <pre>
+     * Minify is enabled in dynamic feature module.
+     * </pre>
+     *
+     * <code>TYPE_MINIFY_ENABLED_IN_DYNAMIC_FEATURE = 87;</code>
+     */
+    TYPE_MINIFY_ENABLED_IN_DYNAMIC_FEATURE(87),
+    /**
+     * <pre>
+     * ABI filters are declared in dynamic feature module.
+     * </pre>
+     *
+     * <code>TYPE_ABI_FILTERS_IN_DYNAMIC_FEATURE = 88;</code>
+     */
+    TYPE_ABI_FILTERS_IN_DYNAMIC_FEATURE(88),
+    /**
+     * <pre>
+     * Invalid publishing configuration.
+     * </pre>
+     *
+     * <code>TYPE_INVALID_PUBLISHING_CONFIG = 89;</code>
+     */
+    TYPE_INVALID_PUBLISHING_CONFIG(89),
+    /**
+     * <pre>
+     * Resource shrinking is not supported for this component type.
+     * </pre>
+     *
+     * <code>TYPE_RESOURCE_SHRINK_NOT_SUPPORTED = 90;</code>
+     */
+    TYPE_RESOURCE_SHRINK_NOT_SUPPORTED(90),
+    /**
+     * <pre>
+     * resValue is being replaced.
+     * </pre>
+     *
+     * <code>TYPE_RES_VALUE_REPLACED = 91;</code>
+     */
+    TYPE_RES_VALUE_REPLACED(91),
+    /**
+     * <pre>
+     * BuildConfig is used when the feature is disabled.
+     * </pre>
+     *
+     * <code>TYPE_BUILD_CONFIG_USED_WHEN_DISABLED = 92;</code>
+     */
+    TYPE_BUILD_CONFIG_USED_WHEN_DISABLED(92),
+    /**
+     * <pre>
+     * resource values are used when the feature is disabled.
+     * </pre>
+     *
+     * <code>TYPE_RES_VALUES_USED_WHEN_DISABLED = 93;</code>
+     */
+    TYPE_RES_VALUES_USED_WHEN_DISABLED(93),
+    /**
+     * <pre>
+     * Unrecognized SourceSet name.
+     * </pre>
+     *
+     * <code>TYPE_UNRECOGNIZED_SOURCE_SET = 94;</code>
+     */
+    TYPE_UNRECOGNIZED_SOURCE_SET(94),
+    /**
+     * <pre>
+     * applicationIdSuffix is ignored because applicationId is null.
+     * </pre>
+     *
+     * <code>TYPE_APPLICATION_ID_SUFFIX_IGNORED = 95;</code>
+     */
+    TYPE_APPLICATION_ID_SUFFIX_IGNORED(95),
+    /**
+     * <pre>
+     * applicationId is set in library project.
+     * </pre>
+     *
+     * <code>TYPE_APPLICATION_ID_NOT_ALLOWED_IN_LIBRARY = 96;</code>
+     */
+    TYPE_APPLICATION_ID_NOT_ALLOWED_IN_LIBRARY(96),
+    /**
+     * <pre>
+     * applicationIdSuffix is set in library project.
+     * </pre>
+     *
+     * <code>TYPE_APPLICATION_ID_SUFFIX_NOT_ALLOWED_IN_LIBRARY = 97;</code>
+     */
+    TYPE_APPLICATION_ID_SUFFIX_NOT_ALLOWED_IN_LIBRARY(97),
+    /**
+     * <pre>
+     * Conflicting ABI configuration.
+     * </pre>
+     *
+     * <code>TYPE_CONFLICTING_ABI_CONFIG = 98;</code>
+     */
+    TYPE_CONFLICTING_ABI_CONFIG(98),
+    /**
+     * <pre>
+     * Cannot build selected target ABI.
+     * </pre>
+     *
+     * <code>TYPE_CANNOT_BUILD_SELECTED_TARGET_ABI = 99;</code>
+     */
+    TYPE_CANNOT_BUILD_SELECTED_TARGET_ABI(99),
+    /**
+     * <pre>
+     * BuildType is both debuggable and has minifyEnabled set to true.
+     * </pre>
+     *
+     * <code>TYPE_DEBUGGABLE_AND_MINIFIED_ENABLED = 100;</code>
+     */
+    TYPE_DEBUGGABLE_AND_MINIFIED_ENABLED(100),
+    /**
+     * <pre>
+     * minSdkVersion is greater than targetSdkVersion.
+     * </pre>
+     *
+     * <code>TYPE_MIN_SDK_VERSION_GREATER_THAN_TARGET_SDK = 101;</code>
+     */
+    TYPE_MIN_SDK_VERSION_GREATER_THAN_TARGET_SDK(101),
+    /**
+     * <pre>
+     * Test suite ignored because variant does not support it.
+     * </pre>
+     *
+     * <code>TYPE_TEST_SUITE_IGNORED = 102;</code>
+     */
+    TYPE_TEST_SUITE_IGNORED(102),
+    /**
+     * <pre>
+     * Java 9+ compilation requires compileSdkVersion 30 or above.
+     * </pre>
+     *
+     * <code>TYPE_JAVA9_COMPILATION_REQUIRES_COMPILE_SDK30 = 103;</code>
+     */
+    TYPE_JAVA9_COMPILATION_REQUIRES_COMPILE_SDK30(103),
+    /**
+     * <pre>
+     * '--release' option for JavaCompile is not supported.
+     * </pre>
+     *
+     * <code>TYPE_JAVA_COMPILE_RELEASE_OPTION_NOT_SUPPORTED = 104;</code>
+     */
+    TYPE_JAVA_COMPILE_RELEASE_OPTION_NOT_SUPPORTED(104),
+    /**
+     * <pre>
+     * Java compiler has deprecated or removed support for source/target
+     * version.
+     * </pre>
+     *
+     * <code>TYPE_JAVA_COMPILE_DEPRECATED_SOURCE_TARGET = 105;</code>
+     */
+    TYPE_JAVA_COMPILE_DEPRECATED_SOURCE_TARGET(105),
+    /**
+     * <pre>
+     * Problems found when resolving SDK location.
+     * </pre>
+     *
+     * <code>TYPE_SDK_RESOLUTION_WARNING = 106;</code>
+     */
+    TYPE_SDK_RESOLUTION_WARNING(106),
+    /**
+     * <pre>
+     * Unable to find matching projects for Asset Packs.
+     * </pre>
+     *
+     * <code>TYPE_ASSET_PACK_PROJECT_NOT_FOUND = 107;</code>
+     */
+    TYPE_ASSET_PACK_PROJECT_NOT_FOUND(107),
+    /**
+     * <pre>
+     * R8 version mismatch.
+     * </pre>
+     *
+     * <code>TYPE_R8_VERSION_MISMATCH = 108;</code>
+     */
+    TYPE_R8_VERSION_MISMATCH(108),
+    /**
+     * <pre>
+     * R8 gradual API flag required.
+     * </pre>
+     *
+     * <code>TYPE_R8_GRADUAL_API_FLAG_REQUIRED = 109;</code>
+     */
+    TYPE_R8_GRADUAL_API_FLAG_REQUIRED(109),
+    /**
+     * <pre>
+     * Unable to find matching projects for Dynamic Features.
+     * </pre>
+     *
+     * <code>TYPE_DYNAMIC_FEATURE_PROJECT_NOT_FOUND = 110;</code>
+     */
+    TYPE_DYNAMIC_FEATURE_PROJECT_NOT_FOUND(110),
+    /**
+     * <pre>
+     * Fused Library Plugin is using Publication Only Mode.
+     * </pre>
+     *
+     * <code>TYPE_FUSED_LIBRARY_PUBLICATION_ONLY_MODE = 111;</code>
+     */
+    TYPE_FUSED_LIBRARY_PUBLICATION_ONLY_MODE(111),
+    /**
+     * <pre>
+     * Invalid asset pack bundle configuration.
+     * </pre>
+     *
+     * <code>TYPE_ASSET_PACK_BUNDLE_INVALID_CONFIG = 112;</code>
+     */
+    TYPE_ASSET_PACK_BUNDLE_INVALID_CONFIG(112),
+    /**
+     * <pre>
+     * Test suite support is experimental.
+     * </pre>
+     *
+     * <code>TYPE_TEST_SUITE_SUPPORT_EXPERIMENTAL = 113;</code>
+     */
+    TYPE_TEST_SUITE_SUPPORT_EXPERIMENTAL(113),
+    /**
+     * <pre>
+     * lint.targetSdk is smaller than android.targetSdk.
+     * </pre>
+     *
+     * <code>TYPE_LINT_TARGET_SDK_LESS_THAN_ANDROID_TARGET_SDK = 114;</code>
+     */
+    TYPE_LINT_TARGET_SDK_LESS_THAN_ANDROID_TARGET_SDK(114),
+    /**
+     * <pre>
+     * Access to deprecated legacy API requires compatibility mode.
+     * </pre>
+     *
+     * <code>TYPE_ACCESS_TO_DEPRECATED_LEGACY_API_REQUIRES_COMPATIBILITY_MODE = 115;</code>
+     */
+    TYPE_ACCESS_TO_DEPRECATED_LEGACY_API_REQUIRES_COMPATIBILITY_MODE(115),
+    /**
+     * <pre>
+     * Unknown SourceKind value.
+     * </pre>
+     *
+     * <code>TYPE_UNKNOWN_SOURCE_KIND = 116;</code>
+     */
+    TYPE_UNKNOWN_SOURCE_KIND(116),
+    /**
+     * <pre>
+     * variant.getApplicationId() is not supported by dynamic-feature plugins.
+     * </pre>
+     *
+     * <code>TYPE_GET_APPLICATION_ID_NOT_SUPPORTED_IN_DYNAMIC_FEATURE = 117;</code>
+     */
+    TYPE_GET_APPLICATION_ID_NOT_SUPPORTED_IN_DYNAMIC_FEATURE(117),
+    /**
+     * <pre>
+     * aidl support is disabled via buildFeatures.
+     * </pre>
+     *
+     * <code>TYPE_AIDL_DISABLED_VIA_BUILD_FEATURES = 118;</code>
+     */
+    TYPE_AIDL_DISABLED_VIA_BUILD_FEATURES(118),
+    /**
+     * <pre>
+     * renderscript support is disabled via buildFeatures.
+     * </pre>
+     *
+     * <code>TYPE_RENDERSCRIPT_DISABLED_VIA_BUILD_FEATURES = 119;</code>
+     */
+    TYPE_RENDERSCRIPT_DISABLED_VIA_BUILD_FEATURES(119),
+    /**
+     * <pre>
+     * android.dataBinding.addKtx has no effect.
+     * </pre>
+     *
+     * <code>TYPE_DATABINDING_KTX_NO_EFFECT = 120;</code>
+     */
+    TYPE_DATABINDING_KTX_NO_EFFECT(120),
+    /**
+     * <pre>
+     * Data Binding annotation processor version mismatch.
+     * </pre>
+     *
+     * <code>TYPE_DATABINDING_ANNOTATION_PROCESSOR_VERSION_MISMATCH = 121;</code>
+     */
+    TYPE_DATABINDING_ANNOTATION_PROCESSOR_VERSION_MISMATCH(121),
+    /**
+     * <pre>
+     * Multidex library is not needed.
+     * </pre>
+     *
+     * <code>TYPE_MULTIDEX_NOT_NEEDED = 122;</code>
+     */
+    TYPE_MULTIDEX_NOT_NEEDED(122),
+    /**
+     * <pre>
+     * Relative path is not supported in outputFileName.
+     * </pre>
+     *
+     * <code>TYPE_RELATIVE_PATH_NOT_SUPPORTED_IN_OUTPUT_FILE_NAME = 123;</code>
+     */
+    TYPE_RELATIVE_PATH_NOT_SUPPORTED_IN_OUTPUT_FILE_NAME(123),
+    /**
+     * <pre>
+     * Core library desugaring requires D8 or R8.
+     * </pre>
+     *
+     * <code>TYPE_CORE_LIBRARY_DESUGARING_REQUIRES_D8_OR_R8 = 124;</code>
+     */
+    TYPE_CORE_LIBRARY_DESUGARING_REQUIRES_D8_OR_R8(124),
+    /**
+     * <pre>
+     * Core library desugaring requires multidex.
+     * </pre>
+     *
+     * <code>TYPE_CORE_LIBRARY_DESUGARING_REQUIRES_MULTIDEX = 125;</code>
+     */
+    TYPE_CORE_LIBRARY_DESUGARING_REQUIRES_MULTIDEX(125),
+    /**
+     * <pre>
+     * Default Proguard file should not be specified in non-base module.
+     * </pre>
+     *
+     * <code>TYPE_DEFAULT_PROGUARD_FILE_IN_NON_BASE_MODULE = 126;</code>
+     */
+    TYPE_DEFAULT_PROGUARD_FILE_IN_NON_BASE_MODULE(126),
+    /**
+     * <pre>
+     * Default Proguard file should not be used as consumer configuration file.
+     * </pre>
+     *
+     * <code>TYPE_DEFAULT_PROGUARD_FILE_AS_CONSUMER_FILE = 127;</code>
+     */
+    TYPE_DEFAULT_PROGUARD_FILE_AS_CONSUMER_FILE(127),
+    /**
+     * <pre>
+     * Resource shrinking requires code shrinking to be turned on.
+     * </pre>
+     *
+     * <code>TYPE_RESOURCE_SHRINK_REQUIRES_CODE_SHRINK = 128;</code>
+     */
+    TYPE_RESOURCE_SHRINK_REQUIRES_CODE_SHRINK(128),
+    /**
+     * <pre>
+     * Multiple identical calls to Android Components API is not supported.
+     * </pre>
+     *
+     * <code>TYPE_MULTIPLE_IDENTICAL_CALLS_TO_ANDROID_COMPONENTS_API = 129;</code>
+     */
+    TYPE_MULTIPLE_IDENTICAL_CALLS_TO_ANDROID_COMPONENTS_API(129),
+    /**
+     * <pre>
+     * Proguard android-optimize.txt is disallowed.
+     * </pre>
+     *
+     * <code>TYPE_PROGUARD_ANDROID_OPTIMIZE_TXT_DISALLOWED = 130;</code>
+     */
+    TYPE_PROGUARD_ANDROID_OPTIMIZE_TXT_DISALLOWED(130),
+    /**
+     * <pre>
+     * Unknown Proguard file.
+     * </pre>
+     *
+     * <code>TYPE_UNKNOWN_PROGUARD_FILE = 131;</code>
+     */
+    TYPE_UNKNOWN_PROGUARD_FILE(131),
+    /**
+     * <pre>
+     * Variant can only have debuggable or profileable enabled.
+     * </pre>
+     *
+     * <code>TYPE_DEBUGGABLE_AND_PROFILEABLE_ENABLED = 132;</code>
+     */
+    TYPE_DEBUGGABLE_AND_PROFILEABLE_ENABLED(132),
+    /**
+     * <pre>
+     * androidTest test suite not defined for this variant.
+     * </pre>
+     *
+     * <code>TYPE_ANDROID_TEST_NOT_DEFINED = 133;</code>
+     */
+    TYPE_ANDROID_TEST_NOT_DEFINED(133),
+    /**
+     * <pre>
+     * Native multidex is always used for dynamic features.
+     * </pre>
+     *
+     * <code>TYPE_DYNAMIC_FEATURE_MULTIDEX_SET_IN_DSL = 134;</code>
+     */
+    TYPE_DYNAMIC_FEATURE_MULTIDEX_SET_IN_DSL(134),
     ;
 
     /**
@@ -10036,6 +10643,544 @@ private static final long serialVersionUID = 0L;
      * <code>TYPE_LIBRARY_CONSTRAINTS_SHOULD_BE_DISABLED = 67;</code>
      */
     public static final int TYPE_LIBRARY_CONSTRAINTS_SHOULD_BE_DISABLED_VALUE = 67;
+    /**
+     * <pre>
+     * Project uses RenderScript which is not supported on Riscv.
+     * </pre>
+     *
+     * <code>TYPE_RENDERSCRIPT_NOT_SUPPORTED_ON_RISCV = 68;</code>
+     */
+    public static final int TYPE_RENDERSCRIPT_NOT_SUPPORTED_ON_RISCV_VALUE = 68;
+    /**
+     * <pre>
+     * Using kotlin.sourceSets DSL to add Kotlin sources is not allowed with
+     * built-in Kotlin.
+     * </pre>
+     *
+     * <code>TYPE_KOTLIN_SOURCE_SET_NOT_ALLOWED = 69;</code>
+     */
+    public static final int TYPE_KOTLIN_SOURCE_SET_NOT_ALLOWED_VALUE = 69;
+    /**
+     * <pre>
+     * Found non-apk file in a configuration that should only contain apks.
+     * </pre>
+     *
+     * <code>TYPE_NON_APK_RUNTIME_DEP = 70;</code>
+     */
+    public static final int TYPE_NON_APK_RUNTIME_DEP_VALUE = 70;
+    /**
+     * <pre>
+     * Unable to find connectedCheck task name for a component.
+     * </pre>
+     *
+     * <code>TYPE_CONNECTED_CHECK_TASK_NOT_FOUND = 71;</code>
+     */
+    public static final int TYPE_CONNECTED_CHECK_TASK_NOT_FOUND_VALUE = 71;
+    /**
+     * <pre>
+     * Failed to parse XML in manifest.
+     * </pre>
+     *
+     * <code>TYPE_MANIFEST_PARSE_FAILED = 72;</code>
+     */
+    public static final int TYPE_MANIFEST_PARSE_FAILED_VALUE = 72;
+    /**
+     * <pre>
+     * User is using me.tatarka.retrolambda which is deprecated.
+     * </pre>
+     *
+     * <code>TYPE_RETROLAMBDA_USED = 73;</code>
+     */
+    public static final int TYPE_RETROLAMBDA_USED_VALUE = 73;
+    /**
+     * <pre>
+     * User is using FlatDirectoryArtifactRepository which is discouraged.
+     * </pre>
+     *
+     * <code>TYPE_FLAT_DIR_REPOSITORY_USED = 74;</code>
+     */
+    public static final int TYPE_FLAT_DIR_REPOSITORY_USED_VALUE = 74;
+    /**
+     * <pre>
+     * Access to deprecated legacy model requires compatibility mode.
+     * </pre>
+     *
+     * <code>TYPE_ACCESSING_DEPRECATED_LEGACY_MODEL = 75;</code>
+     */
+    public static final int TYPE_ACCESSING_DEPRECATED_LEGACY_MODEL_VALUE = 75;
+    /**
+     * <pre>
+     * Property cannot be set on a mergedFlavor directly.
+     * </pre>
+     *
+     * <code>TYPE_CANNOT_SET_ON_MERGED_FLAVOR = 76;</code>
+     */
+    public static final int TYPE_CANNOT_SET_ON_MERGED_FLAVOR_VALUE = 76;
+    /**
+     * <pre>
+     * Invalid value for compileSdkPreview or compileSdkMinor.
+     * </pre>
+     *
+     * <code>TYPE_COMPILE_SDK_PREVIEW_INVALID = 77;</code>
+     */
+    public static final int TYPE_COMPILE_SDK_PREVIEW_INVALID_VALUE = 77;
+    /**
+     * <pre>
+     * Invalid value for namespace.
+     * </pre>
+     *
+     * <code>TYPE_NAMESPACE_INVALID = 78;</code>
+     */
+    public static final int TYPE_NAMESPACE_INVALID_VALUE = 78;
+    /**
+     * <pre>
+     * Invalid Proguard file provided.
+     * </pre>
+     *
+     * <code>TYPE_PROGUARD_FILE_INVALID = 79;</code>
+     */
+    public static final int TYPE_PROGUARD_FILE_INVALID_VALUE = 79;
+    /**
+     * <pre>
+     * targetSdk is set in testOptions for non-library module.
+     * </pre>
+     *
+     * <code>TYPE_TEST_OPTIONS_TARGET_SDK_INVALID = 80;</code>
+     */
+    public static final int TYPE_TEST_OPTIONS_TARGET_SDK_INVALID_VALUE = 80;
+    /**
+     * <pre>
+     * KGP is loaded in a different classloader than AGP.
+     * </pre>
+     *
+     * <code>TYPE_KGP_LOADED_IN_DIFFERENT_CLASSLOADER = 81;</code>
+     */
+    public static final int TYPE_KGP_LOADED_IN_DIFFERENT_CLASSLOADER_VALUE = 81;
+    /**
+     * <pre>
+     * Selected execution profile does not exist or none selected.
+     * </pre>
+     *
+     * <code>TYPE_UNSUPPORTED_EXECUTION_PROFILE = 82;</code>
+     */
+    public static final int TYPE_UNSUPPORTED_EXECUTION_PROFILE_VALUE = 82;
+    /**
+     * <pre>
+     * Invalid value for lint version override.
+     * </pre>
+     *
+     * <code>TYPE_LINT_VERSION_OVERRIDE_INVALID = 83;</code>
+     */
+    public static final int TYPE_LINT_VERSION_OVERRIDE_INVALID_VALUE = 83;
+    /**
+     * <pre>
+     * Namespace and testNamespace have the same value.
+     * </pre>
+     *
+     * <code>TYPE_NAMESPACE_CONFLICT = 84;</code>
+     */
+    public static final int TYPE_NAMESPACE_CONFLICT_VALUE = 84;
+    /**
+     * <pre>
+     * Invalid value for version code.
+     * </pre>
+     *
+     * <code>TYPE_INVALID_VERSION_CODE = 85;</code>
+     */
+    public static final int TYPE_INVALID_VERSION_CODE_VALUE = 85;
+    /**
+     * <pre>
+     * Pure splits are not supported.
+     * </pre>
+     *
+     * <code>TYPE_PURE_SPLITS_NOT_SUPPORTED = 86;</code>
+     */
+    public static final int TYPE_PURE_SPLITS_NOT_SUPPORTED_VALUE = 86;
+    /**
+     * <pre>
+     * Minify is enabled in dynamic feature module.
+     * </pre>
+     *
+     * <code>TYPE_MINIFY_ENABLED_IN_DYNAMIC_FEATURE = 87;</code>
+     */
+    public static final int TYPE_MINIFY_ENABLED_IN_DYNAMIC_FEATURE_VALUE = 87;
+    /**
+     * <pre>
+     * ABI filters are declared in dynamic feature module.
+     * </pre>
+     *
+     * <code>TYPE_ABI_FILTERS_IN_DYNAMIC_FEATURE = 88;</code>
+     */
+    public static final int TYPE_ABI_FILTERS_IN_DYNAMIC_FEATURE_VALUE = 88;
+    /**
+     * <pre>
+     * Invalid publishing configuration.
+     * </pre>
+     *
+     * <code>TYPE_INVALID_PUBLISHING_CONFIG = 89;</code>
+     */
+    public static final int TYPE_INVALID_PUBLISHING_CONFIG_VALUE = 89;
+    /**
+     * <pre>
+     * Resource shrinking is not supported for this component type.
+     * </pre>
+     *
+     * <code>TYPE_RESOURCE_SHRINK_NOT_SUPPORTED = 90;</code>
+     */
+    public static final int TYPE_RESOURCE_SHRINK_NOT_SUPPORTED_VALUE = 90;
+    /**
+     * <pre>
+     * resValue is being replaced.
+     * </pre>
+     *
+     * <code>TYPE_RES_VALUE_REPLACED = 91;</code>
+     */
+    public static final int TYPE_RES_VALUE_REPLACED_VALUE = 91;
+    /**
+     * <pre>
+     * BuildConfig is used when the feature is disabled.
+     * </pre>
+     *
+     * <code>TYPE_BUILD_CONFIG_USED_WHEN_DISABLED = 92;</code>
+     */
+    public static final int TYPE_BUILD_CONFIG_USED_WHEN_DISABLED_VALUE = 92;
+    /**
+     * <pre>
+     * resource values are used when the feature is disabled.
+     * </pre>
+     *
+     * <code>TYPE_RES_VALUES_USED_WHEN_DISABLED = 93;</code>
+     */
+    public static final int TYPE_RES_VALUES_USED_WHEN_DISABLED_VALUE = 93;
+    /**
+     * <pre>
+     * Unrecognized SourceSet name.
+     * </pre>
+     *
+     * <code>TYPE_UNRECOGNIZED_SOURCE_SET = 94;</code>
+     */
+    public static final int TYPE_UNRECOGNIZED_SOURCE_SET_VALUE = 94;
+    /**
+     * <pre>
+     * applicationIdSuffix is ignored because applicationId is null.
+     * </pre>
+     *
+     * <code>TYPE_APPLICATION_ID_SUFFIX_IGNORED = 95;</code>
+     */
+    public static final int TYPE_APPLICATION_ID_SUFFIX_IGNORED_VALUE = 95;
+    /**
+     * <pre>
+     * applicationId is set in library project.
+     * </pre>
+     *
+     * <code>TYPE_APPLICATION_ID_NOT_ALLOWED_IN_LIBRARY = 96;</code>
+     */
+    public static final int TYPE_APPLICATION_ID_NOT_ALLOWED_IN_LIBRARY_VALUE = 96;
+    /**
+     * <pre>
+     * applicationIdSuffix is set in library project.
+     * </pre>
+     *
+     * <code>TYPE_APPLICATION_ID_SUFFIX_NOT_ALLOWED_IN_LIBRARY = 97;</code>
+     */
+    public static final int TYPE_APPLICATION_ID_SUFFIX_NOT_ALLOWED_IN_LIBRARY_VALUE = 97;
+    /**
+     * <pre>
+     * Conflicting ABI configuration.
+     * </pre>
+     *
+     * <code>TYPE_CONFLICTING_ABI_CONFIG = 98;</code>
+     */
+    public static final int TYPE_CONFLICTING_ABI_CONFIG_VALUE = 98;
+    /**
+     * <pre>
+     * Cannot build selected target ABI.
+     * </pre>
+     *
+     * <code>TYPE_CANNOT_BUILD_SELECTED_TARGET_ABI = 99;</code>
+     */
+    public static final int TYPE_CANNOT_BUILD_SELECTED_TARGET_ABI_VALUE = 99;
+    /**
+     * <pre>
+     * BuildType is both debuggable and has minifyEnabled set to true.
+     * </pre>
+     *
+     * <code>TYPE_DEBUGGABLE_AND_MINIFIED_ENABLED = 100;</code>
+     */
+    public static final int TYPE_DEBUGGABLE_AND_MINIFIED_ENABLED_VALUE = 100;
+    /**
+     * <pre>
+     * minSdkVersion is greater than targetSdkVersion.
+     * </pre>
+     *
+     * <code>TYPE_MIN_SDK_VERSION_GREATER_THAN_TARGET_SDK = 101;</code>
+     */
+    public static final int TYPE_MIN_SDK_VERSION_GREATER_THAN_TARGET_SDK_VALUE = 101;
+    /**
+     * <pre>
+     * Test suite ignored because variant does not support it.
+     * </pre>
+     *
+     * <code>TYPE_TEST_SUITE_IGNORED = 102;</code>
+     */
+    public static final int TYPE_TEST_SUITE_IGNORED_VALUE = 102;
+    /**
+     * <pre>
+     * Java 9+ compilation requires compileSdkVersion 30 or above.
+     * </pre>
+     *
+     * <code>TYPE_JAVA9_COMPILATION_REQUIRES_COMPILE_SDK30 = 103;</code>
+     */
+    public static final int TYPE_JAVA9_COMPILATION_REQUIRES_COMPILE_SDK30_VALUE = 103;
+    /**
+     * <pre>
+     * '--release' option for JavaCompile is not supported.
+     * </pre>
+     *
+     * <code>TYPE_JAVA_COMPILE_RELEASE_OPTION_NOT_SUPPORTED = 104;</code>
+     */
+    public static final int TYPE_JAVA_COMPILE_RELEASE_OPTION_NOT_SUPPORTED_VALUE = 104;
+    /**
+     * <pre>
+     * Java compiler has deprecated or removed support for source/target
+     * version.
+     * </pre>
+     *
+     * <code>TYPE_JAVA_COMPILE_DEPRECATED_SOURCE_TARGET = 105;</code>
+     */
+    public static final int TYPE_JAVA_COMPILE_DEPRECATED_SOURCE_TARGET_VALUE = 105;
+    /**
+     * <pre>
+     * Problems found when resolving SDK location.
+     * </pre>
+     *
+     * <code>TYPE_SDK_RESOLUTION_WARNING = 106;</code>
+     */
+    public static final int TYPE_SDK_RESOLUTION_WARNING_VALUE = 106;
+    /**
+     * <pre>
+     * Unable to find matching projects for Asset Packs.
+     * </pre>
+     *
+     * <code>TYPE_ASSET_PACK_PROJECT_NOT_FOUND = 107;</code>
+     */
+    public static final int TYPE_ASSET_PACK_PROJECT_NOT_FOUND_VALUE = 107;
+    /**
+     * <pre>
+     * R8 version mismatch.
+     * </pre>
+     *
+     * <code>TYPE_R8_VERSION_MISMATCH = 108;</code>
+     */
+    public static final int TYPE_R8_VERSION_MISMATCH_VALUE = 108;
+    /**
+     * <pre>
+     * R8 gradual API flag required.
+     * </pre>
+     *
+     * <code>TYPE_R8_GRADUAL_API_FLAG_REQUIRED = 109;</code>
+     */
+    public static final int TYPE_R8_GRADUAL_API_FLAG_REQUIRED_VALUE = 109;
+    /**
+     * <pre>
+     * Unable to find matching projects for Dynamic Features.
+     * </pre>
+     *
+     * <code>TYPE_DYNAMIC_FEATURE_PROJECT_NOT_FOUND = 110;</code>
+     */
+    public static final int TYPE_DYNAMIC_FEATURE_PROJECT_NOT_FOUND_VALUE = 110;
+    /**
+     * <pre>
+     * Fused Library Plugin is using Publication Only Mode.
+     * </pre>
+     *
+     * <code>TYPE_FUSED_LIBRARY_PUBLICATION_ONLY_MODE = 111;</code>
+     */
+    public static final int TYPE_FUSED_LIBRARY_PUBLICATION_ONLY_MODE_VALUE = 111;
+    /**
+     * <pre>
+     * Invalid asset pack bundle configuration.
+     * </pre>
+     *
+     * <code>TYPE_ASSET_PACK_BUNDLE_INVALID_CONFIG = 112;</code>
+     */
+    public static final int TYPE_ASSET_PACK_BUNDLE_INVALID_CONFIG_VALUE = 112;
+    /**
+     * <pre>
+     * Test suite support is experimental.
+     * </pre>
+     *
+     * <code>TYPE_TEST_SUITE_SUPPORT_EXPERIMENTAL = 113;</code>
+     */
+    public static final int TYPE_TEST_SUITE_SUPPORT_EXPERIMENTAL_VALUE = 113;
+    /**
+     * <pre>
+     * lint.targetSdk is smaller than android.targetSdk.
+     * </pre>
+     *
+     * <code>TYPE_LINT_TARGET_SDK_LESS_THAN_ANDROID_TARGET_SDK = 114;</code>
+     */
+    public static final int TYPE_LINT_TARGET_SDK_LESS_THAN_ANDROID_TARGET_SDK_VALUE = 114;
+    /**
+     * <pre>
+     * Access to deprecated legacy API requires compatibility mode.
+     * </pre>
+     *
+     * <code>TYPE_ACCESS_TO_DEPRECATED_LEGACY_API_REQUIRES_COMPATIBILITY_MODE = 115;</code>
+     */
+    public static final int TYPE_ACCESS_TO_DEPRECATED_LEGACY_API_REQUIRES_COMPATIBILITY_MODE_VALUE = 115;
+    /**
+     * <pre>
+     * Unknown SourceKind value.
+     * </pre>
+     *
+     * <code>TYPE_UNKNOWN_SOURCE_KIND = 116;</code>
+     */
+    public static final int TYPE_UNKNOWN_SOURCE_KIND_VALUE = 116;
+    /**
+     * <pre>
+     * variant.getApplicationId() is not supported by dynamic-feature plugins.
+     * </pre>
+     *
+     * <code>TYPE_GET_APPLICATION_ID_NOT_SUPPORTED_IN_DYNAMIC_FEATURE = 117;</code>
+     */
+    public static final int TYPE_GET_APPLICATION_ID_NOT_SUPPORTED_IN_DYNAMIC_FEATURE_VALUE = 117;
+    /**
+     * <pre>
+     * aidl support is disabled via buildFeatures.
+     * </pre>
+     *
+     * <code>TYPE_AIDL_DISABLED_VIA_BUILD_FEATURES = 118;</code>
+     */
+    public static final int TYPE_AIDL_DISABLED_VIA_BUILD_FEATURES_VALUE = 118;
+    /**
+     * <pre>
+     * renderscript support is disabled via buildFeatures.
+     * </pre>
+     *
+     * <code>TYPE_RENDERSCRIPT_DISABLED_VIA_BUILD_FEATURES = 119;</code>
+     */
+    public static final int TYPE_RENDERSCRIPT_DISABLED_VIA_BUILD_FEATURES_VALUE = 119;
+    /**
+     * <pre>
+     * android.dataBinding.addKtx has no effect.
+     * </pre>
+     *
+     * <code>TYPE_DATABINDING_KTX_NO_EFFECT = 120;</code>
+     */
+    public static final int TYPE_DATABINDING_KTX_NO_EFFECT_VALUE = 120;
+    /**
+     * <pre>
+     * Data Binding annotation processor version mismatch.
+     * </pre>
+     *
+     * <code>TYPE_DATABINDING_ANNOTATION_PROCESSOR_VERSION_MISMATCH = 121;</code>
+     */
+    public static final int TYPE_DATABINDING_ANNOTATION_PROCESSOR_VERSION_MISMATCH_VALUE = 121;
+    /**
+     * <pre>
+     * Multidex library is not needed.
+     * </pre>
+     *
+     * <code>TYPE_MULTIDEX_NOT_NEEDED = 122;</code>
+     */
+    public static final int TYPE_MULTIDEX_NOT_NEEDED_VALUE = 122;
+    /**
+     * <pre>
+     * Relative path is not supported in outputFileName.
+     * </pre>
+     *
+     * <code>TYPE_RELATIVE_PATH_NOT_SUPPORTED_IN_OUTPUT_FILE_NAME = 123;</code>
+     */
+    public static final int TYPE_RELATIVE_PATH_NOT_SUPPORTED_IN_OUTPUT_FILE_NAME_VALUE = 123;
+    /**
+     * <pre>
+     * Core library desugaring requires D8 or R8.
+     * </pre>
+     *
+     * <code>TYPE_CORE_LIBRARY_DESUGARING_REQUIRES_D8_OR_R8 = 124;</code>
+     */
+    public static final int TYPE_CORE_LIBRARY_DESUGARING_REQUIRES_D8_OR_R8_VALUE = 124;
+    /**
+     * <pre>
+     * Core library desugaring requires multidex.
+     * </pre>
+     *
+     * <code>TYPE_CORE_LIBRARY_DESUGARING_REQUIRES_MULTIDEX = 125;</code>
+     */
+    public static final int TYPE_CORE_LIBRARY_DESUGARING_REQUIRES_MULTIDEX_VALUE = 125;
+    /**
+     * <pre>
+     * Default Proguard file should not be specified in non-base module.
+     * </pre>
+     *
+     * <code>TYPE_DEFAULT_PROGUARD_FILE_IN_NON_BASE_MODULE = 126;</code>
+     */
+    public static final int TYPE_DEFAULT_PROGUARD_FILE_IN_NON_BASE_MODULE_VALUE = 126;
+    /**
+     * <pre>
+     * Default Proguard file should not be used as consumer configuration file.
+     * </pre>
+     *
+     * <code>TYPE_DEFAULT_PROGUARD_FILE_AS_CONSUMER_FILE = 127;</code>
+     */
+    public static final int TYPE_DEFAULT_PROGUARD_FILE_AS_CONSUMER_FILE_VALUE = 127;
+    /**
+     * <pre>
+     * Resource shrinking requires code shrinking to be turned on.
+     * </pre>
+     *
+     * <code>TYPE_RESOURCE_SHRINK_REQUIRES_CODE_SHRINK = 128;</code>
+     */
+    public static final int TYPE_RESOURCE_SHRINK_REQUIRES_CODE_SHRINK_VALUE = 128;
+    /**
+     * <pre>
+     * Multiple identical calls to Android Components API is not supported.
+     * </pre>
+     *
+     * <code>TYPE_MULTIPLE_IDENTICAL_CALLS_TO_ANDROID_COMPONENTS_API = 129;</code>
+     */
+    public static final int TYPE_MULTIPLE_IDENTICAL_CALLS_TO_ANDROID_COMPONENTS_API_VALUE = 129;
+    /**
+     * <pre>
+     * Proguard android-optimize.txt is disallowed.
+     * </pre>
+     *
+     * <code>TYPE_PROGUARD_ANDROID_OPTIMIZE_TXT_DISALLOWED = 130;</code>
+     */
+    public static final int TYPE_PROGUARD_ANDROID_OPTIMIZE_TXT_DISALLOWED_VALUE = 130;
+    /**
+     * <pre>
+     * Unknown Proguard file.
+     * </pre>
+     *
+     * <code>TYPE_UNKNOWN_PROGUARD_FILE = 131;</code>
+     */
+    public static final int TYPE_UNKNOWN_PROGUARD_FILE_VALUE = 131;
+    /**
+     * <pre>
+     * Variant can only have debuggable or profileable enabled.
+     * </pre>
+     *
+     * <code>TYPE_DEBUGGABLE_AND_PROFILEABLE_ENABLED = 132;</code>
+     */
+    public static final int TYPE_DEBUGGABLE_AND_PROFILEABLE_ENABLED_VALUE = 132;
+    /**
+     * <pre>
+     * androidTest test suite not defined for this variant.
+     * </pre>
+     *
+     * <code>TYPE_ANDROID_TEST_NOT_DEFINED = 133;</code>
+     */
+    public static final int TYPE_ANDROID_TEST_NOT_DEFINED_VALUE = 133;
+    /**
+     * <pre>
+     * Native multidex is always used for dynamic features.
+     * </pre>
+     *
+     * <code>TYPE_DYNAMIC_FEATURE_MULTIDEX_SET_IN_DSL = 134;</code>
+     */
+    public static final int TYPE_DYNAMIC_FEATURE_MULTIDEX_SET_IN_DSL_VALUE = 134;
 
 
     public final int getNumber() {
@@ -10126,6 +11271,73 @@ private static final long serialVersionUID = 0L;
         case 65: return TYPE_INCONSISTENT_BUILD_FEATURE_SETTING;
         case 66: return TYPE_MISSING_COMPOSE_COMPILER_GRADLE_PLUGIN;
         case 67: return TYPE_LIBRARY_CONSTRAINTS_SHOULD_BE_DISABLED;
+        case 68: return TYPE_RENDERSCRIPT_NOT_SUPPORTED_ON_RISCV;
+        case 69: return TYPE_KOTLIN_SOURCE_SET_NOT_ALLOWED;
+        case 70: return TYPE_NON_APK_RUNTIME_DEP;
+        case 71: return TYPE_CONNECTED_CHECK_TASK_NOT_FOUND;
+        case 72: return TYPE_MANIFEST_PARSE_FAILED;
+        case 73: return TYPE_RETROLAMBDA_USED;
+        case 74: return TYPE_FLAT_DIR_REPOSITORY_USED;
+        case 75: return TYPE_ACCESSING_DEPRECATED_LEGACY_MODEL;
+        case 76: return TYPE_CANNOT_SET_ON_MERGED_FLAVOR;
+        case 77: return TYPE_COMPILE_SDK_PREVIEW_INVALID;
+        case 78: return TYPE_NAMESPACE_INVALID;
+        case 79: return TYPE_PROGUARD_FILE_INVALID;
+        case 80: return TYPE_TEST_OPTIONS_TARGET_SDK_INVALID;
+        case 81: return TYPE_KGP_LOADED_IN_DIFFERENT_CLASSLOADER;
+        case 82: return TYPE_UNSUPPORTED_EXECUTION_PROFILE;
+        case 83: return TYPE_LINT_VERSION_OVERRIDE_INVALID;
+        case 84: return TYPE_NAMESPACE_CONFLICT;
+        case 85: return TYPE_INVALID_VERSION_CODE;
+        case 86: return TYPE_PURE_SPLITS_NOT_SUPPORTED;
+        case 87: return TYPE_MINIFY_ENABLED_IN_DYNAMIC_FEATURE;
+        case 88: return TYPE_ABI_FILTERS_IN_DYNAMIC_FEATURE;
+        case 89: return TYPE_INVALID_PUBLISHING_CONFIG;
+        case 90: return TYPE_RESOURCE_SHRINK_NOT_SUPPORTED;
+        case 91: return TYPE_RES_VALUE_REPLACED;
+        case 92: return TYPE_BUILD_CONFIG_USED_WHEN_DISABLED;
+        case 93: return TYPE_RES_VALUES_USED_WHEN_DISABLED;
+        case 94: return TYPE_UNRECOGNIZED_SOURCE_SET;
+        case 95: return TYPE_APPLICATION_ID_SUFFIX_IGNORED;
+        case 96: return TYPE_APPLICATION_ID_NOT_ALLOWED_IN_LIBRARY;
+        case 97: return TYPE_APPLICATION_ID_SUFFIX_NOT_ALLOWED_IN_LIBRARY;
+        case 98: return TYPE_CONFLICTING_ABI_CONFIG;
+        case 99: return TYPE_CANNOT_BUILD_SELECTED_TARGET_ABI;
+        case 100: return TYPE_DEBUGGABLE_AND_MINIFIED_ENABLED;
+        case 101: return TYPE_MIN_SDK_VERSION_GREATER_THAN_TARGET_SDK;
+        case 102: return TYPE_TEST_SUITE_IGNORED;
+        case 103: return TYPE_JAVA9_COMPILATION_REQUIRES_COMPILE_SDK30;
+        case 104: return TYPE_JAVA_COMPILE_RELEASE_OPTION_NOT_SUPPORTED;
+        case 105: return TYPE_JAVA_COMPILE_DEPRECATED_SOURCE_TARGET;
+        case 106: return TYPE_SDK_RESOLUTION_WARNING;
+        case 107: return TYPE_ASSET_PACK_PROJECT_NOT_FOUND;
+        case 108: return TYPE_R8_VERSION_MISMATCH;
+        case 109: return TYPE_R8_GRADUAL_API_FLAG_REQUIRED;
+        case 110: return TYPE_DYNAMIC_FEATURE_PROJECT_NOT_FOUND;
+        case 111: return TYPE_FUSED_LIBRARY_PUBLICATION_ONLY_MODE;
+        case 112: return TYPE_ASSET_PACK_BUNDLE_INVALID_CONFIG;
+        case 113: return TYPE_TEST_SUITE_SUPPORT_EXPERIMENTAL;
+        case 114: return TYPE_LINT_TARGET_SDK_LESS_THAN_ANDROID_TARGET_SDK;
+        case 115: return TYPE_ACCESS_TO_DEPRECATED_LEGACY_API_REQUIRES_COMPATIBILITY_MODE;
+        case 116: return TYPE_UNKNOWN_SOURCE_KIND;
+        case 117: return TYPE_GET_APPLICATION_ID_NOT_SUPPORTED_IN_DYNAMIC_FEATURE;
+        case 118: return TYPE_AIDL_DISABLED_VIA_BUILD_FEATURES;
+        case 119: return TYPE_RENDERSCRIPT_DISABLED_VIA_BUILD_FEATURES;
+        case 120: return TYPE_DATABINDING_KTX_NO_EFFECT;
+        case 121: return TYPE_DATABINDING_ANNOTATION_PROCESSOR_VERSION_MISMATCH;
+        case 122: return TYPE_MULTIDEX_NOT_NEEDED;
+        case 123: return TYPE_RELATIVE_PATH_NOT_SUPPORTED_IN_OUTPUT_FILE_NAME;
+        case 124: return TYPE_CORE_LIBRARY_DESUGARING_REQUIRES_D8_OR_R8;
+        case 125: return TYPE_CORE_LIBRARY_DESUGARING_REQUIRES_MULTIDEX;
+        case 126: return TYPE_DEFAULT_PROGUARD_FILE_IN_NON_BASE_MODULE;
+        case 127: return TYPE_DEFAULT_PROGUARD_FILE_AS_CONSUMER_FILE;
+        case 128: return TYPE_RESOURCE_SHRINK_REQUIRES_CODE_SHRINK;
+        case 129: return TYPE_MULTIPLE_IDENTICAL_CALLS_TO_ANDROID_COMPONENTS_API;
+        case 130: return TYPE_PROGUARD_ANDROID_OPTIMIZE_TXT_DISALLOWED;
+        case 131: return TYPE_UNKNOWN_PROGUARD_FILE;
+        case 132: return TYPE_DEBUGGABLE_AND_PROFILEABLE_ENABLED;
+        case 133: return TYPE_ANDROID_TEST_NOT_DEFINED;
+        case 134: return TYPE_DYNAMIC_FEATURE_MULTIDEX_SET_IN_DSL;
         default: return null;
       }
     }
@@ -12434,7 +13646,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional uint32 min_sdk = 2 [deprecated = true];</code>
        * @deprecated android_studio.AndroidStudioEvent.TemplatesUsage.TemplateModule.min_sdk is deprecated.
-       *     See studio_stats.proto;l=2161
+       *     See studio_stats.proto;l=2175
        * @return Whether the minSdk field is set.
        */
       @java.lang.Deprecated boolean hasMinSdk();
@@ -12445,7 +13657,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional uint32 min_sdk = 2 [deprecated = true];</code>
        * @deprecated android_studio.AndroidStudioEvent.TemplatesUsage.TemplateModule.min_sdk is deprecated.
-       *     See studio_stats.proto;l=2161
+       *     See studio_stats.proto;l=2175
        * @return The minSdk.
        */
       @java.lang.Deprecated int getMinSdk();
@@ -12976,7 +14188,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional uint32 min_sdk = 2 [deprecated = true];</code>
        * @deprecated android_studio.AndroidStudioEvent.TemplatesUsage.TemplateModule.min_sdk is deprecated.
-       *     See studio_stats.proto;l=2161
+       *     See studio_stats.proto;l=2175
        * @return Whether the minSdk field is set.
        */
       @java.lang.Override
@@ -12990,7 +14202,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional uint32 min_sdk = 2 [deprecated = true];</code>
        * @deprecated android_studio.AndroidStudioEvent.TemplatesUsage.TemplateModule.min_sdk is deprecated.
-       *     See studio_stats.proto;l=2161
+       *     See studio_stats.proto;l=2175
        * @return The minSdk.
        */
       @java.lang.Override
@@ -13628,7 +14840,7 @@ private static final long serialVersionUID = 0L;
          *
          * <code>optional uint32 min_sdk = 2 [deprecated = true];</code>
          * @deprecated android_studio.AndroidStudioEvent.TemplatesUsage.TemplateModule.min_sdk is deprecated.
-         *     See studio_stats.proto;l=2161
+         *     See studio_stats.proto;l=2175
          * @return Whether the minSdk field is set.
          */
         @java.lang.Override
@@ -13642,7 +14854,7 @@ private static final long serialVersionUID = 0L;
          *
          * <code>optional uint32 min_sdk = 2 [deprecated = true];</code>
          * @deprecated android_studio.AndroidStudioEvent.TemplatesUsage.TemplateModule.min_sdk is deprecated.
-         *     See studio_stats.proto;l=2161
+         *     See studio_stats.proto;l=2175
          * @return The minSdk.
          */
         @java.lang.Override
@@ -13656,7 +14868,7 @@ private static final long serialVersionUID = 0L;
          *
          * <code>optional uint32 min_sdk = 2 [deprecated = true];</code>
          * @deprecated android_studio.AndroidStudioEvent.TemplatesUsage.TemplateModule.min_sdk is deprecated.
-         *     See studio_stats.proto;l=2161
+         *     See studio_stats.proto;l=2175
          * @param value The minSdk to set.
          * @return This builder for chaining.
          */
@@ -13674,7 +14886,7 @@ private static final long serialVersionUID = 0L;
          *
          * <code>optional uint32 min_sdk = 2 [deprecated = true];</code>
          * @deprecated android_studio.AndroidStudioEvent.TemplatesUsage.TemplateModule.min_sdk is deprecated.
-         *     See studio_stats.proto;l=2161
+         *     See studio_stats.proto;l=2175
          * @return This builder for chaining.
          */
         @java.lang.Deprecated public Builder clearMinSdk() {
@@ -25863,6 +27075,44 @@ private static final long serialVersionUID = 0L;
     return skillsEvent_ == null ? com.google.wireless.android.sdk.stats.SkillsEvent.getDefaultInstance() : skillsEvent_;
   }
 
+  public static final int EMULATOR_WINDOWS_HYPERVISOR_MIGRATION_EVENT_FIELD_NUMBER = 250;
+  private com.google.wireless.android.sdk.stats.EmulatorWindowsHypervisorMigrationEvent emulatorWindowsHypervisorMigrationEvent_;
+  /**
+   * <pre>
+   * set when kind = EMULATOR_WINDOWS_HYPERVISOR_MIGRATION_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.EmulatorWindowsHypervisorMigrationEvent emulator_windows_hypervisor_migration_event = 250 [lazy = true];</code>
+   * @return Whether the emulatorWindowsHypervisorMigrationEvent field is set.
+   */
+  @java.lang.Override
+  public boolean hasEmulatorWindowsHypervisorMigrationEvent() {
+    return ((bitField7_ & 0x00040000) != 0);
+  }
+  /**
+   * <pre>
+   * set when kind = EMULATOR_WINDOWS_HYPERVISOR_MIGRATION_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.EmulatorWindowsHypervisorMigrationEvent emulator_windows_hypervisor_migration_event = 250 [lazy = true];</code>
+   * @return The emulatorWindowsHypervisorMigrationEvent.
+   */
+  @java.lang.Override
+  public com.google.wireless.android.sdk.stats.EmulatorWindowsHypervisorMigrationEvent getEmulatorWindowsHypervisorMigrationEvent() {
+    return emulatorWindowsHypervisorMigrationEvent_ == null ? com.google.wireless.android.sdk.stats.EmulatorWindowsHypervisorMigrationEvent.getDefaultInstance() : emulatorWindowsHypervisorMigrationEvent_;
+  }
+  /**
+   * <pre>
+   * set when kind = EMULATOR_WINDOWS_HYPERVISOR_MIGRATION_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.EmulatorWindowsHypervisorMigrationEvent emulator_windows_hypervisor_migration_event = 250 [lazy = true];</code>
+   */
+  @java.lang.Override
+  public com.google.wireless.android.sdk.stats.EmulatorWindowsHypervisorMigrationEventOrBuilder getEmulatorWindowsHypervisorMigrationEventOrBuilder() {
+    return emulatorWindowsHypervisorMigrationEvent_ == null ? com.google.wireless.android.sdk.stats.EmulatorWindowsHypervisorMigrationEvent.getDefaultInstance() : emulatorWindowsHypervisorMigrationEvent_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -26623,6 +27873,9 @@ private static final long serialVersionUID = 0L;
     }
     if (((bitField7_ & 0x00020000) != 0)) {
       output.writeMessage(249, getSkillsEvent());
+    }
+    if (((bitField7_ & 0x00040000) != 0)) {
+      output.writeMessage(250, getEmulatorWindowsHypervisorMigrationEvent());
     }
     getUnknownFields().writeTo(output);
   }
@@ -27634,6 +28887,10 @@ private static final long serialVersionUID = 0L;
     if (((bitField7_ & 0x00020000) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(249, getSkillsEvent());
+    }
+    if (((bitField7_ & 0x00040000) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(250, getEmulatorWindowsHypervisorMigrationEvent());
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -28863,6 +30120,11 @@ private static final long serialVersionUID = 0L;
       if (!getSkillsEvent()
           .equals(other.getSkillsEvent())) return false;
     }
+    if (hasEmulatorWindowsHypervisorMigrationEvent() != other.hasEmulatorWindowsHypervisorMigrationEvent()) return false;
+    if (hasEmulatorWindowsHypervisorMigrationEvent()) {
+      if (!getEmulatorWindowsHypervisorMigrationEvent()
+          .equals(other.getEmulatorWindowsHypervisorMigrationEvent())) return false;
+    }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -29872,6 +31134,10 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + SKILLS_EVENT_FIELD_NUMBER;
       hash = (53 * hash) + getSkillsEvent().hashCode();
     }
+    if (hasEmulatorWindowsHypervisorMigrationEvent()) {
+      hash = (37 * hash) + EMULATOR_WINDOWS_HYPERVISOR_MIGRATION_EVENT_FIELD_NUMBER;
+      hash = (53 * hash) + getEmulatorWindowsHypervisorMigrationEvent().hashCode();
+    }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -30226,6 +31492,7 @@ private static final long serialVersionUID = 0L;
         getEmulatorConsoleEventsFieldBuilder();
         getStudioBotToolWindowAutoOpenEventFieldBuilder();
         getSkillsEventFieldBuilder();
+        getEmulatorWindowsHypervisorMigrationEventFieldBuilder();
       }
     }
     @java.lang.Override
@@ -31402,6 +32669,11 @@ private static final long serialVersionUID = 0L;
       if (skillsEventBuilder_ != null) {
         skillsEventBuilder_.dispose();
         skillsEventBuilder_ = null;
+      }
+      emulatorWindowsHypervisorMigrationEvent_ = null;
+      if (emulatorWindowsHypervisorMigrationEventBuilder_ != null) {
+        emulatorWindowsHypervisorMigrationEventBuilder_.dispose();
+        emulatorWindowsHypervisorMigrationEventBuilder_ = null;
       }
       return this;
     }
@@ -32960,6 +34232,12 @@ private static final long serialVersionUID = 0L;
             : skillsEventBuilder_.build();
         to_bitField7_ |= 0x00020000;
       }
+      if (((from_bitField7_ & 0x02000000) != 0)) {
+        result.emulatorWindowsHypervisorMigrationEvent_ = emulatorWindowsHypervisorMigrationEventBuilder_ == null
+            ? emulatorWindowsHypervisorMigrationEvent_
+            : emulatorWindowsHypervisorMigrationEventBuilder_.build();
+        to_bitField7_ |= 0x00040000;
+      }
       result.bitField6_ |= to_bitField6_;
       result.bitField7_ |= to_bitField7_;
     }
@@ -33849,6 +35127,9 @@ private static final long serialVersionUID = 0L;
       }
       if (other.hasSkillsEvent()) {
         mergeSkillsEvent(other.getSkillsEvent());
+      }
+      if (other.hasEmulatorWindowsHypervisorMigrationEvent()) {
+        mergeEmulatorWindowsHypervisorMigrationEvent(other.getEmulatorWindowsHypervisorMigrationEvent());
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -35693,6 +36974,13 @@ private static final long serialVersionUID = 0L;
               bitField7_ |= 0x01000000;
               break;
             } // case 1994
+            case 2002: {
+              input.readMessage(
+                  getEmulatorWindowsHypervisorMigrationEventFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField7_ |= 0x02000000;
+              break;
+            } // case 2002
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -73805,6 +75093,161 @@ private static final long serialVersionUID = 0L;
         skillsEvent_ = null;
       }
       return skillsEventBuilder_;
+    }
+
+    private com.google.wireless.android.sdk.stats.EmulatorWindowsHypervisorMigrationEvent emulatorWindowsHypervisorMigrationEvent_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.EmulatorWindowsHypervisorMigrationEvent, com.google.wireless.android.sdk.stats.EmulatorWindowsHypervisorMigrationEvent.Builder, com.google.wireless.android.sdk.stats.EmulatorWindowsHypervisorMigrationEventOrBuilder> emulatorWindowsHypervisorMigrationEventBuilder_;
+    /**
+     * <pre>
+     * set when kind = EMULATOR_WINDOWS_HYPERVISOR_MIGRATION_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.EmulatorWindowsHypervisorMigrationEvent emulator_windows_hypervisor_migration_event = 250 [lazy = true];</code>
+     * @return Whether the emulatorWindowsHypervisorMigrationEvent field is set.
+     */
+    public boolean hasEmulatorWindowsHypervisorMigrationEvent() {
+      return ((bitField7_ & 0x02000000) != 0);
+    }
+    /**
+     * <pre>
+     * set when kind = EMULATOR_WINDOWS_HYPERVISOR_MIGRATION_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.EmulatorWindowsHypervisorMigrationEvent emulator_windows_hypervisor_migration_event = 250 [lazy = true];</code>
+     * @return The emulatorWindowsHypervisorMigrationEvent.
+     */
+    public com.google.wireless.android.sdk.stats.EmulatorWindowsHypervisorMigrationEvent getEmulatorWindowsHypervisorMigrationEvent() {
+      if (emulatorWindowsHypervisorMigrationEventBuilder_ == null) {
+        return emulatorWindowsHypervisorMigrationEvent_ == null ? com.google.wireless.android.sdk.stats.EmulatorWindowsHypervisorMigrationEvent.getDefaultInstance() : emulatorWindowsHypervisorMigrationEvent_;
+      } else {
+        return emulatorWindowsHypervisorMigrationEventBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * set when kind = EMULATOR_WINDOWS_HYPERVISOR_MIGRATION_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.EmulatorWindowsHypervisorMigrationEvent emulator_windows_hypervisor_migration_event = 250 [lazy = true];</code>
+     */
+    public Builder setEmulatorWindowsHypervisorMigrationEvent(com.google.wireless.android.sdk.stats.EmulatorWindowsHypervisorMigrationEvent value) {
+      if (emulatorWindowsHypervisorMigrationEventBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        emulatorWindowsHypervisorMigrationEvent_ = value;
+      } else {
+        emulatorWindowsHypervisorMigrationEventBuilder_.setMessage(value);
+      }
+      bitField7_ |= 0x02000000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = EMULATOR_WINDOWS_HYPERVISOR_MIGRATION_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.EmulatorWindowsHypervisorMigrationEvent emulator_windows_hypervisor_migration_event = 250 [lazy = true];</code>
+     */
+    public Builder setEmulatorWindowsHypervisorMigrationEvent(
+        com.google.wireless.android.sdk.stats.EmulatorWindowsHypervisorMigrationEvent.Builder builderForValue) {
+      if (emulatorWindowsHypervisorMigrationEventBuilder_ == null) {
+        emulatorWindowsHypervisorMigrationEvent_ = builderForValue.build();
+      } else {
+        emulatorWindowsHypervisorMigrationEventBuilder_.setMessage(builderForValue.build());
+      }
+      bitField7_ |= 0x02000000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = EMULATOR_WINDOWS_HYPERVISOR_MIGRATION_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.EmulatorWindowsHypervisorMigrationEvent emulator_windows_hypervisor_migration_event = 250 [lazy = true];</code>
+     */
+    public Builder mergeEmulatorWindowsHypervisorMigrationEvent(com.google.wireless.android.sdk.stats.EmulatorWindowsHypervisorMigrationEvent value) {
+      if (emulatorWindowsHypervisorMigrationEventBuilder_ == null) {
+        if (((bitField7_ & 0x02000000) != 0) &&
+          emulatorWindowsHypervisorMigrationEvent_ != null &&
+          emulatorWindowsHypervisorMigrationEvent_ != com.google.wireless.android.sdk.stats.EmulatorWindowsHypervisorMigrationEvent.getDefaultInstance()) {
+          getEmulatorWindowsHypervisorMigrationEventBuilder().mergeFrom(value);
+        } else {
+          emulatorWindowsHypervisorMigrationEvent_ = value;
+        }
+      } else {
+        emulatorWindowsHypervisorMigrationEventBuilder_.mergeFrom(value);
+      }
+      bitField7_ |= 0x02000000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = EMULATOR_WINDOWS_HYPERVISOR_MIGRATION_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.EmulatorWindowsHypervisorMigrationEvent emulator_windows_hypervisor_migration_event = 250 [lazy = true];</code>
+     */
+    public Builder clearEmulatorWindowsHypervisorMigrationEvent() {
+      bitField7_ = (bitField7_ & ~0x02000000);
+      emulatorWindowsHypervisorMigrationEvent_ = null;
+      if (emulatorWindowsHypervisorMigrationEventBuilder_ != null) {
+        emulatorWindowsHypervisorMigrationEventBuilder_.dispose();
+        emulatorWindowsHypervisorMigrationEventBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = EMULATOR_WINDOWS_HYPERVISOR_MIGRATION_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.EmulatorWindowsHypervisorMigrationEvent emulator_windows_hypervisor_migration_event = 250 [lazy = true];</code>
+     */
+    public com.google.wireless.android.sdk.stats.EmulatorWindowsHypervisorMigrationEvent.Builder getEmulatorWindowsHypervisorMigrationEventBuilder() {
+      bitField7_ |= 0x02000000;
+      onChanged();
+      return getEmulatorWindowsHypervisorMigrationEventFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * set when kind = EMULATOR_WINDOWS_HYPERVISOR_MIGRATION_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.EmulatorWindowsHypervisorMigrationEvent emulator_windows_hypervisor_migration_event = 250 [lazy = true];</code>
+     */
+    public com.google.wireless.android.sdk.stats.EmulatorWindowsHypervisorMigrationEventOrBuilder getEmulatorWindowsHypervisorMigrationEventOrBuilder() {
+      if (emulatorWindowsHypervisorMigrationEventBuilder_ != null) {
+        return emulatorWindowsHypervisorMigrationEventBuilder_.getMessageOrBuilder();
+      } else {
+        return emulatorWindowsHypervisorMigrationEvent_ == null ?
+            com.google.wireless.android.sdk.stats.EmulatorWindowsHypervisorMigrationEvent.getDefaultInstance() : emulatorWindowsHypervisorMigrationEvent_;
+      }
+    }
+    /**
+     * <pre>
+     * set when kind = EMULATOR_WINDOWS_HYPERVISOR_MIGRATION_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.EmulatorWindowsHypervisorMigrationEvent emulator_windows_hypervisor_migration_event = 250 [lazy = true];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.EmulatorWindowsHypervisorMigrationEvent, com.google.wireless.android.sdk.stats.EmulatorWindowsHypervisorMigrationEvent.Builder, com.google.wireless.android.sdk.stats.EmulatorWindowsHypervisorMigrationEventOrBuilder> 
+        getEmulatorWindowsHypervisorMigrationEventFieldBuilder() {
+      if (emulatorWindowsHypervisorMigrationEventBuilder_ == null) {
+        emulatorWindowsHypervisorMigrationEventBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.wireless.android.sdk.stats.EmulatorWindowsHypervisorMigrationEvent, com.google.wireless.android.sdk.stats.EmulatorWindowsHypervisorMigrationEvent.Builder, com.google.wireless.android.sdk.stats.EmulatorWindowsHypervisorMigrationEventOrBuilder>(
+                getEmulatorWindowsHypervisorMigrationEvent(),
+                getParentForChildren(),
+                isClean());
+        emulatorWindowsHypervisorMigrationEvent_ = null;
+      }
+      return emulatorWindowsHypervisorMigrationEventBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(
