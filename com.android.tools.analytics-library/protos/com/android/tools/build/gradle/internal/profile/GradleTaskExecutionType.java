@@ -1343,6 +1343,10 @@ public enum GradleTaskExecutionType
    * <code>PREVIEW_SCREENSHOT_RENDER = 331;</code>
    */
   PREVIEW_SCREENSHOT_RENDER(331),
+  /**
+   * <code>VALIDATE_RESOURCES = 332;</code>
+   */
+  VALIDATE_RESOURCES(332),
   UNRECOGNIZED(-1),
   ;
 
@@ -2674,6 +2678,10 @@ public enum GradleTaskExecutionType
    * <code>PREVIEW_SCREENSHOT_RENDER = 331;</code>
    */
   public static final int PREVIEW_SCREENSHOT_RENDER_VALUE = 331;
+  /**
+   * <code>VALIDATE_RESOURCES = 332;</code>
+   */
+  public static final int VALIDATE_RESOURCES_VALUE = 332;
 
 
   public final int getNumber() {
@@ -3032,6 +3040,7 @@ public enum GradleTaskExecutionType
       case 329: return GENERATE_RUNTIME_ENABLED_SDK_TABLE;
       case 330: return PREVIEW_SCREENSHOT_UPDATE;
       case 331: return PREVIEW_SCREENSHOT_RENDER;
+      case 332: return VALIDATE_RESOURCES;
       default: return null;
     }
   }
