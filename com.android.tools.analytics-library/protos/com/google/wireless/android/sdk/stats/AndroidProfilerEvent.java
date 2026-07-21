@@ -357,6 +357,19 @@ private static final long serialVersionUID = 0L;
             bitField0_ |= 0x00800000;
             break;
           }
+          case 202: {
+            com.google.wireless.android.sdk.stats.PerfettoSdkHandshakeMetadata.Builder subBuilder = null;
+            if (((bitField0_ & 0x01000000) != 0)) {
+              subBuilder = perfettoSdkHandshakeMetadata_.toBuilder();
+            }
+            perfettoSdkHandshakeMetadata_ = input.readMessage(com.google.wireless.android.sdk.stats.PerfettoSdkHandshakeMetadata.PARSER, extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(perfettoSdkHandshakeMetadata_);
+              perfettoSdkHandshakeMetadata_ = subBuilder.buildPartial();
+            }
+            bitField0_ |= 0x01000000;
+            break;
+          }
           default: {
             if (!parseUnknownField(
                 input, unknownFields, extensionRegistry, tag)) {
@@ -1006,6 +1019,10 @@ private static final long serialVersionUID = 0L;
      */
     TOGGLE_LIFECYCLE(222),
     /**
+     * <code>PERFETTO_SDK_HANDSHAKE = 223;</code>
+     */
+    PERFETTO_SDK_HANDSHAKE(223),
+    /**
      * <code>FORCE_GC = 301;</code>
      */
     FORCE_GC(301),
@@ -1446,6 +1463,10 @@ private static final long serialVersionUID = 0L;
      */
     public static final int TOGGLE_LIFECYCLE_VALUE = 222;
     /**
+     * <code>PERFETTO_SDK_HANDSHAKE = 223;</code>
+     */
+    public static final int PERFETTO_SDK_HANDSHAKE_VALUE = 223;
+    /**
      * <code>FORCE_GC = 301;</code>
      */
     public static final int FORCE_GC_VALUE = 301;
@@ -1677,6 +1698,7 @@ private static final long serialVersionUID = 0L;
         case 220: return SELECT_FRAME;
         case 221: return TOGGLE_ALL_FRAMES;
         case 222: return TOGGLE_LIFECYCLE;
+        case 223: return PERFETTO_SDK_HANDSHAKE;
         case 301: return FORCE_GC;
         case 302: return SNAPSHOT_HPROF;
         case 303: return CAPTURE_ALLOCATIONS;
@@ -4416,6 +4438,44 @@ private static final long serialVersionUID = 0L;
     return runWithProfilingMetadata_ == null ? com.google.wireless.android.sdk.stats.RunWithProfilingMetadata.getDefaultInstance() : runWithProfilingMetadata_;
   }
 
+  public static final int PERFETTO_SDK_HANDSHAKE_METADATA_FIELD_NUMBER = 25;
+  private com.google.wireless.android.sdk.stats.PerfettoSdkHandshakeMetadata perfettoSdkHandshakeMetadata_;
+  /**
+   * <pre>
+   * Set if |type| is |PERFETTO_SDK_HANDSHAKE|
+   * </pre>
+   *
+   * <code>optional .android_studio.PerfettoSdkHandshakeMetadata perfetto_sdk_handshake_metadata = 25;</code>
+   * @return Whether the perfettoSdkHandshakeMetadata field is set.
+   */
+  @java.lang.Override
+  public boolean hasPerfettoSdkHandshakeMetadata() {
+    return ((bitField0_ & 0x01000000) != 0);
+  }
+  /**
+   * <pre>
+   * Set if |type| is |PERFETTO_SDK_HANDSHAKE|
+   * </pre>
+   *
+   * <code>optional .android_studio.PerfettoSdkHandshakeMetadata perfetto_sdk_handshake_metadata = 25;</code>
+   * @return The perfettoSdkHandshakeMetadata.
+   */
+  @java.lang.Override
+  public com.google.wireless.android.sdk.stats.PerfettoSdkHandshakeMetadata getPerfettoSdkHandshakeMetadata() {
+    return perfettoSdkHandshakeMetadata_ == null ? com.google.wireless.android.sdk.stats.PerfettoSdkHandshakeMetadata.getDefaultInstance() : perfettoSdkHandshakeMetadata_;
+  }
+  /**
+   * <pre>
+   * Set if |type| is |PERFETTO_SDK_HANDSHAKE|
+   * </pre>
+   *
+   * <code>optional .android_studio.PerfettoSdkHandshakeMetadata perfetto_sdk_handshake_metadata = 25;</code>
+   */
+  @java.lang.Override
+  public com.google.wireless.android.sdk.stats.PerfettoSdkHandshakeMetadataOrBuilder getPerfettoSdkHandshakeMetadataOrBuilder() {
+    return perfettoSdkHandshakeMetadata_ == null ? com.google.wireless.android.sdk.stats.PerfettoSdkHandshakeMetadata.getDefaultInstance() : perfettoSdkHandshakeMetadata_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -4501,6 +4561,9 @@ private static final long serialVersionUID = 0L;
     }
     if (((bitField0_ & 0x00800000) != 0)) {
       output.writeMessage(24, getRunWithProfilingMetadata());
+    }
+    if (((bitField0_ & 0x01000000) != 0)) {
+      output.writeMessage(25, getPerfettoSdkHandshakeMetadata());
     }
     unknownFields.writeTo(output);
   }
@@ -4606,6 +4669,10 @@ private static final long serialVersionUID = 0L;
     if (((bitField0_ & 0x00800000) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(24, getRunWithProfilingMetadata());
+    }
+    if (((bitField0_ & 0x01000000) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(25, getPerfettoSdkHandshakeMetadata());
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -4739,6 +4806,11 @@ private static final long serialVersionUID = 0L;
       if (!getRunWithProfilingMetadata()
           .equals(other.getRunWithProfilingMetadata())) return false;
     }
+    if (hasPerfettoSdkHandshakeMetadata() != other.hasPerfettoSdkHandshakeMetadata()) return false;
+    if (hasPerfettoSdkHandshakeMetadata()) {
+      if (!getPerfettoSdkHandshakeMetadata()
+          .equals(other.getPerfettoSdkHandshakeMetadata())) return false;
+    }
     if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
@@ -4845,6 +4917,10 @@ private static final long serialVersionUID = 0L;
     if (hasRunWithProfilingMetadata()) {
       hash = (37 * hash) + RUN_WITH_PROFILING_METADATA_FIELD_NUMBER;
       hash = (53 * hash) + getRunWithProfilingMetadata().hashCode();
+    }
+    if (hasPerfettoSdkHandshakeMetadata()) {
+      hash = (37 * hash) + PERFETTO_SDK_HANDSHAKE_METADATA_FIELD_NUMBER;
+      hash = (53 * hash) + getPerfettoSdkHandshakeMetadata().hashCode();
     }
     hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
@@ -4998,6 +5074,7 @@ private static final long serialVersionUID = 0L;
         getTrackGroupMetadataFieldBuilder();
         getLoadingFieldBuilder();
         getRunWithProfilingMetadataFieldBuilder();
+        getPerfettoSdkHandshakeMetadataFieldBuilder();
       }
     }
     @java.lang.Override
@@ -5131,6 +5208,12 @@ private static final long serialVersionUID = 0L;
         runWithProfilingMetadataBuilder_.clear();
       }
       bitField0_ = (bitField0_ & ~0x00800000);
+      if (perfettoSdkHandshakeMetadataBuilder_ == null) {
+        perfettoSdkHandshakeMetadata_ = null;
+      } else {
+        perfettoSdkHandshakeMetadataBuilder_.clear();
+      }
+      bitField0_ = (bitField0_ & ~0x01000000);
       return this;
     }
 
@@ -5335,6 +5418,14 @@ private static final long serialVersionUID = 0L;
         }
         to_bitField0_ |= 0x00800000;
       }
+      if (((from_bitField0_ & 0x01000000) != 0)) {
+        if (perfettoSdkHandshakeMetadataBuilder_ == null) {
+          result.perfettoSdkHandshakeMetadata_ = perfettoSdkHandshakeMetadata_;
+        } else {
+          result.perfettoSdkHandshakeMetadata_ = perfettoSdkHandshakeMetadataBuilder_.build();
+        }
+        to_bitField0_ |= 0x01000000;
+      }
       result.bitField0_ = to_bitField0_;
       onBuilt();
       return result;
@@ -5455,6 +5546,9 @@ private static final long serialVersionUID = 0L;
       }
       if (other.hasRunWithProfilingMetadata()) {
         mergeRunWithProfilingMetadata(other.getRunWithProfilingMetadata());
+      }
+      if (other.hasPerfettoSdkHandshakeMetadata()) {
+        mergePerfettoSdkHandshakeMetadata(other.getPerfettoSdkHandshakeMetadata());
       }
       this.mergeUnknownFields(other.unknownFields);
       onChanged();
@@ -8845,6 +8939,162 @@ private static final long serialVersionUID = 0L;
         runWithProfilingMetadata_ = null;
       }
       return runWithProfilingMetadataBuilder_;
+    }
+
+    private com.google.wireless.android.sdk.stats.PerfettoSdkHandshakeMetadata perfettoSdkHandshakeMetadata_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.PerfettoSdkHandshakeMetadata, com.google.wireless.android.sdk.stats.PerfettoSdkHandshakeMetadata.Builder, com.google.wireless.android.sdk.stats.PerfettoSdkHandshakeMetadataOrBuilder> perfettoSdkHandshakeMetadataBuilder_;
+    /**
+     * <pre>
+     * Set if |type| is |PERFETTO_SDK_HANDSHAKE|
+     * </pre>
+     *
+     * <code>optional .android_studio.PerfettoSdkHandshakeMetadata perfetto_sdk_handshake_metadata = 25;</code>
+     * @return Whether the perfettoSdkHandshakeMetadata field is set.
+     */
+    public boolean hasPerfettoSdkHandshakeMetadata() {
+      return ((bitField0_ & 0x01000000) != 0);
+    }
+    /**
+     * <pre>
+     * Set if |type| is |PERFETTO_SDK_HANDSHAKE|
+     * </pre>
+     *
+     * <code>optional .android_studio.PerfettoSdkHandshakeMetadata perfetto_sdk_handshake_metadata = 25;</code>
+     * @return The perfettoSdkHandshakeMetadata.
+     */
+    public com.google.wireless.android.sdk.stats.PerfettoSdkHandshakeMetadata getPerfettoSdkHandshakeMetadata() {
+      if (perfettoSdkHandshakeMetadataBuilder_ == null) {
+        return perfettoSdkHandshakeMetadata_ == null ? com.google.wireless.android.sdk.stats.PerfettoSdkHandshakeMetadata.getDefaultInstance() : perfettoSdkHandshakeMetadata_;
+      } else {
+        return perfettoSdkHandshakeMetadataBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * Set if |type| is |PERFETTO_SDK_HANDSHAKE|
+     * </pre>
+     *
+     * <code>optional .android_studio.PerfettoSdkHandshakeMetadata perfetto_sdk_handshake_metadata = 25;</code>
+     */
+    public Builder setPerfettoSdkHandshakeMetadata(com.google.wireless.android.sdk.stats.PerfettoSdkHandshakeMetadata value) {
+      if (perfettoSdkHandshakeMetadataBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        perfettoSdkHandshakeMetadata_ = value;
+        onChanged();
+      } else {
+        perfettoSdkHandshakeMetadataBuilder_.setMessage(value);
+      }
+      bitField0_ |= 0x01000000;
+      return this;
+    }
+    /**
+     * <pre>
+     * Set if |type| is |PERFETTO_SDK_HANDSHAKE|
+     * </pre>
+     *
+     * <code>optional .android_studio.PerfettoSdkHandshakeMetadata perfetto_sdk_handshake_metadata = 25;</code>
+     */
+    public Builder setPerfettoSdkHandshakeMetadata(
+        com.google.wireless.android.sdk.stats.PerfettoSdkHandshakeMetadata.Builder builderForValue) {
+      if (perfettoSdkHandshakeMetadataBuilder_ == null) {
+        perfettoSdkHandshakeMetadata_ = builderForValue.build();
+        onChanged();
+      } else {
+        perfettoSdkHandshakeMetadataBuilder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x01000000;
+      return this;
+    }
+    /**
+     * <pre>
+     * Set if |type| is |PERFETTO_SDK_HANDSHAKE|
+     * </pre>
+     *
+     * <code>optional .android_studio.PerfettoSdkHandshakeMetadata perfetto_sdk_handshake_metadata = 25;</code>
+     */
+    public Builder mergePerfettoSdkHandshakeMetadata(com.google.wireless.android.sdk.stats.PerfettoSdkHandshakeMetadata value) {
+      if (perfettoSdkHandshakeMetadataBuilder_ == null) {
+        if (((bitField0_ & 0x01000000) != 0) &&
+            perfettoSdkHandshakeMetadata_ != null &&
+            perfettoSdkHandshakeMetadata_ != com.google.wireless.android.sdk.stats.PerfettoSdkHandshakeMetadata.getDefaultInstance()) {
+          perfettoSdkHandshakeMetadata_ =
+            com.google.wireless.android.sdk.stats.PerfettoSdkHandshakeMetadata.newBuilder(perfettoSdkHandshakeMetadata_).mergeFrom(value).buildPartial();
+        } else {
+          perfettoSdkHandshakeMetadata_ = value;
+        }
+        onChanged();
+      } else {
+        perfettoSdkHandshakeMetadataBuilder_.mergeFrom(value);
+      }
+      bitField0_ |= 0x01000000;
+      return this;
+    }
+    /**
+     * <pre>
+     * Set if |type| is |PERFETTO_SDK_HANDSHAKE|
+     * </pre>
+     *
+     * <code>optional .android_studio.PerfettoSdkHandshakeMetadata perfetto_sdk_handshake_metadata = 25;</code>
+     */
+    public Builder clearPerfettoSdkHandshakeMetadata() {
+      if (perfettoSdkHandshakeMetadataBuilder_ == null) {
+        perfettoSdkHandshakeMetadata_ = null;
+        onChanged();
+      } else {
+        perfettoSdkHandshakeMetadataBuilder_.clear();
+      }
+      bitField0_ = (bitField0_ & ~0x01000000);
+      return this;
+    }
+    /**
+     * <pre>
+     * Set if |type| is |PERFETTO_SDK_HANDSHAKE|
+     * </pre>
+     *
+     * <code>optional .android_studio.PerfettoSdkHandshakeMetadata perfetto_sdk_handshake_metadata = 25;</code>
+     */
+    public com.google.wireless.android.sdk.stats.PerfettoSdkHandshakeMetadata.Builder getPerfettoSdkHandshakeMetadataBuilder() {
+      bitField0_ |= 0x01000000;
+      onChanged();
+      return getPerfettoSdkHandshakeMetadataFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * Set if |type| is |PERFETTO_SDK_HANDSHAKE|
+     * </pre>
+     *
+     * <code>optional .android_studio.PerfettoSdkHandshakeMetadata perfetto_sdk_handshake_metadata = 25;</code>
+     */
+    public com.google.wireless.android.sdk.stats.PerfettoSdkHandshakeMetadataOrBuilder getPerfettoSdkHandshakeMetadataOrBuilder() {
+      if (perfettoSdkHandshakeMetadataBuilder_ != null) {
+        return perfettoSdkHandshakeMetadataBuilder_.getMessageOrBuilder();
+      } else {
+        return perfettoSdkHandshakeMetadata_ == null ?
+            com.google.wireless.android.sdk.stats.PerfettoSdkHandshakeMetadata.getDefaultInstance() : perfettoSdkHandshakeMetadata_;
+      }
+    }
+    /**
+     * <pre>
+     * Set if |type| is |PERFETTO_SDK_HANDSHAKE|
+     * </pre>
+     *
+     * <code>optional .android_studio.PerfettoSdkHandshakeMetadata perfetto_sdk_handshake_metadata = 25;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.PerfettoSdkHandshakeMetadata, com.google.wireless.android.sdk.stats.PerfettoSdkHandshakeMetadata.Builder, com.google.wireless.android.sdk.stats.PerfettoSdkHandshakeMetadataOrBuilder> 
+        getPerfettoSdkHandshakeMetadataFieldBuilder() {
+      if (perfettoSdkHandshakeMetadataBuilder_ == null) {
+        perfettoSdkHandshakeMetadataBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.wireless.android.sdk.stats.PerfettoSdkHandshakeMetadata, com.google.wireless.android.sdk.stats.PerfettoSdkHandshakeMetadata.Builder, com.google.wireless.android.sdk.stats.PerfettoSdkHandshakeMetadataOrBuilder>(
+                getPerfettoSdkHandshakeMetadata(),
+                getParentForChildren(),
+                isClean());
+        perfettoSdkHandshakeMetadata_ = null;
+      }
+      return perfettoSdkHandshakeMetadataBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

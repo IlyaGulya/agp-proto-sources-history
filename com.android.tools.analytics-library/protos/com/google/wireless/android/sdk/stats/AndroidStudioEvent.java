@@ -4597,6 +4597,14 @@ private static final long serialVersionUID = 0L;
      * <code>MEMORY_USAGE_REPORT_EVENT = 264;</code>
      */
     MEMORY_USAGE_REPORT_EVENT(264),
+    /**
+     * <pre>
+     * A sync between Android Studio and Gradle was cancelled.
+     * </pre>
+     *
+     * <code>GRADLE_SYNC_CANCELLED = 265;</code>
+     */
+    GRADLE_SYNC_CANCELLED(265),
     ;
 
     /**
@@ -6545,6 +6553,14 @@ private static final long serialVersionUID = 0L;
      * <code>MEMORY_USAGE_REPORT_EVENT = 264;</code>
      */
     public static final int MEMORY_USAGE_REPORT_EVENT_VALUE = 264;
+    /**
+     * <pre>
+     * A sync between Android Studio and Gradle was cancelled.
+     * </pre>
+     *
+     * <code>GRADLE_SYNC_CANCELLED = 265;</code>
+     */
+    public static final int GRADLE_SYNC_CANCELLED_VALUE = 265;
 
 
     public final int getNumber() {
@@ -6827,6 +6843,7 @@ private static final long serialVersionUID = 0L;
         case 262: return DEVICE_MIRRORING_SESSION;
         case 263: return FAST_PREVIEW_EVENT;
         case 264: return MEMORY_USAGE_REPORT_EVENT;
+        case 265: return GRADLE_SYNC_CANCELLED;
         default: return null;
       }
     }
@@ -7908,6 +7925,10 @@ private static final long serialVersionUID = 0L;
      * <code>WEAR_OS_COMPOSE_ACTIVITY = 66;</code>
      */
     WEAR_OS_COMPOSE_ACTIVITY(66),
+    /**
+     * <code>GOOGLE_WALLET_ACTIVITY = 67;</code>
+     */
+    GOOGLE_WALLET_ACTIVITY(67),
     ;
 
     /**
@@ -8182,6 +8203,10 @@ private static final long serialVersionUID = 0L;
      * <code>WEAR_OS_COMPOSE_ACTIVITY = 66;</code>
      */
     public static final int WEAR_OS_COMPOSE_ACTIVITY_VALUE = 66;
+    /**
+     * <code>GOOGLE_WALLET_ACTIVITY = 67;</code>
+     */
+    public static final int GOOGLE_WALLET_ACTIVITY_VALUE = 67;
 
 
     public final int getNumber() {
@@ -8271,6 +8296,7 @@ private static final long serialVersionUID = 0L;
         case 64: return MACROBENCHMARK_LIBRARY_MODULE;
         case 65: return GOOGLE_PAY_ACTIVITY;
         case 66: return WEAR_OS_COMPOSE_ACTIVITY;
+        case 67: return GOOGLE_WALLET_ACTIVITY;
         default: return null;
       }
     }
@@ -9310,6 +9336,14 @@ private static final long serialVersionUID = 0L;
      * <code>TYPE_REMOVED_API = 60;</code>
      */
     TYPE_REMOVED_API(60),
+    /**
+     * <pre>
+     * KMP projects with java plugin creates incorrect sourceSets in IDE
+     * </pre>
+     *
+     * <code>TYPE_KMP_INCORRECT_PLATFORM_SOURCE_SET = 61;</code>
+     */
+    TYPE_KMP_INCORRECT_PLATFORM_SOURCE_SET(61),
     ;
 
     /**
@@ -9741,6 +9775,14 @@ private static final long serialVersionUID = 0L;
      * <code>TYPE_REMOVED_API = 60;</code>
      */
     public static final int TYPE_REMOVED_API_VALUE = 60;
+    /**
+     * <pre>
+     * KMP projects with java plugin creates incorrect sourceSets in IDE
+     * </pre>
+     *
+     * <code>TYPE_KMP_INCORRECT_PLATFORM_SOURCE_SET = 61;</code>
+     */
+    public static final int TYPE_KMP_INCORRECT_PLATFORM_SOURCE_SET_VALUE = 61;
 
 
     public final int getNumber() {
@@ -9824,6 +9866,7 @@ private static final long serialVersionUID = 0L;
         case 58: return TYPE_ACCESSING_DISABLED_FEATURE_VARIANT_API;
         case 59: return TYPE_APPLICATION_ID_MUST_NOT_BE_DYNAMIC;
         case 60: return TYPE_REMOVED_API;
+        case 61: return TYPE_KMP_INCORRECT_PLATFORM_SOURCE_SET;
         default: return null;
       }
     }
@@ -10925,6 +10968,10 @@ private static final long serialVersionUID = 0L;
          */
         CPP_GAME_ACTIVITY(60),
         /**
+         * <code>GOOGLE_WALLET_ACTIVITY = 61;</code>
+         */
+        GOOGLE_WALLET_ACTIVITY(61),
+        /**
          * <code>FRAGMENT_LIST = 23;</code>
          */
         FRAGMENT_LIST(23),
@@ -11172,6 +11219,10 @@ private static final long serialVersionUID = 0L;
          */
         public static final int CPP_GAME_ACTIVITY_VALUE = 60;
         /**
+         * <code>GOOGLE_WALLET_ACTIVITY = 61;</code>
+         */
+        public static final int GOOGLE_WALLET_ACTIVITY_VALUE = 61;
+        /**
          * <code>FRAGMENT_LIST = 23;</code>
          */
         public static final int FRAGMENT_LIST_VALUE = 23;
@@ -11359,6 +11410,7 @@ private static final long serialVersionUID = 0L;
             case 57: return RESPONSIVE_ACTIVITY;
             case 58: return GOOGLE_PAY_ACTIVITY;
             case 60: return CPP_GAME_ACTIVITY;
+            case 61: return GOOGLE_WALLET_ACTIVITY;
             case 23: return FRAGMENT_LIST;
             case 24: return FRAGMENT_BLANK;
             case 25: return FRAGMENT_FULLSCREEN;
