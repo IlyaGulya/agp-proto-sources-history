@@ -76,12 +76,12 @@ private static final long serialVersionUID = 0L;
         getIndexerTypeBytes();
 
     /**
-     * <code>optional uint32 index_version = 2;</code>
+     * <code>optional int32 index_version = 2;</code>
      * @return Whether the indexVersion field is set.
      */
     boolean hasIndexVersion();
     /**
-     * <code>optional uint32 index_version = 2;</code>
+     * <code>optional int32 index_version = 2;</code>
      * @return The indexVersion.
      */
     int getIndexVersion();
@@ -120,7 +120,7 @@ private static final long serialVersionUID = 0L;
      * The number of indexed files.
      * </pre>
      *
-     * <code>optional uint32 indexed_files = 4;</code>
+     * <code>optional int32 indexed_files = 4;</code>
      * @return Whether the indexedFiles field is set.
      */
     boolean hasIndexedFiles();
@@ -129,7 +129,7 @@ private static final long serialVersionUID = 0L;
      * The number of indexed files.
      * </pre>
      *
-     * <code>optional uint32 indexed_files = 4;</code>
+     * <code>optional int32 indexed_files = 4;</code>
      * @return The indexedFiles.
      */
     int getIndexedFiles();
@@ -139,7 +139,7 @@ private static final long serialVersionUID = 0L;
      * The number of indexed Kotlin/Java files.
      * </pre>
      *
-     * <code>optional uint32 indexed_kt_files = 5;</code>
+     * <code>optional int32 indexed_kt_files = 5;</code>
      * @return Whether the indexedKtFiles field is set.
      */
     boolean hasIndexedKtFiles();
@@ -148,18 +148,18 @@ private static final long serialVersionUID = 0L;
      * The number of indexed Kotlin/Java files.
      * </pre>
      *
-     * <code>optional uint32 indexed_kt_files = 5;</code>
+     * <code>optional int32 indexed_kt_files = 5;</code>
      * @return The indexedKtFiles.
      */
     int getIndexedKtFiles();
 
     /**
-     * <code>optional uint32 indexed_java_files = 6;</code>
+     * <code>optional int32 indexed_java_files = 6;</code>
      * @return Whether the indexedJavaFiles field is set.
      */
     boolean hasIndexedJavaFiles();
     /**
-     * <code>optional uint32 indexed_java_files = 6;</code>
+     * <code>optional int32 indexed_java_files = 6;</code>
      * @return The indexedJavaFiles.
      */
     int getIndexedJavaFiles();
@@ -169,7 +169,7 @@ private static final long serialVersionUID = 0L;
      * The number of indexed files from out/ and builds/.
      * </pre>
      *
-     * <code>optional uint32 generated_files = 7;</code>
+     * <code>optional int32 generated_files = 7;</code>
      * @return Whether the generatedFiles field is set.
      */
     boolean hasGeneratedFiles();
@@ -178,7 +178,7 @@ private static final long serialVersionUID = 0L;
      * The number of indexed files from out/ and builds/.
      * </pre>
      *
-     * <code>optional uint32 generated_files = 7;</code>
+     * <code>optional int32 generated_files = 7;</code>
      * @return The generatedFiles.
      */
     int getGeneratedFiles();
@@ -188,7 +188,7 @@ private static final long serialVersionUID = 0L;
      * The time in milliseconds to index
      * </pre>
      *
-     * <code>optional uint64 indexing_time_ms = 8;</code>
+     * <code>optional int64 indexing_time_ms = 8;</code>
      * @return Whether the indexingTimeMs field is set.
      */
     boolean hasIndexingTimeMs();
@@ -197,7 +197,7 @@ private static final long serialVersionUID = 0L;
      * The time in milliseconds to index
      * </pre>
      *
-     * <code>optional uint64 indexing_time_ms = 8;</code>
+     * <code>optional int64 indexing_time_ms = 8;</code>
      * @return The indexingTimeMs.
      */
     long getIndexingTimeMs();
@@ -304,7 +304,7 @@ private static final long serialVersionUID = 0L;
     public static final int INDEX_VERSION_FIELD_NUMBER = 2;
     private int indexVersion_ = 0;
     /**
-     * <code>optional uint32 index_version = 2;</code>
+     * <code>optional int32 index_version = 2;</code>
      * @return Whether the indexVersion field is set.
      */
     @java.lang.Override
@@ -312,7 +312,7 @@ private static final long serialVersionUID = 0L;
       return ((bitField0_ & 0x00000002) != 0);
     }
     /**
-     * <code>optional uint32 index_version = 2;</code>
+     * <code>optional int32 index_version = 2;</code>
      * @return The indexVersion.
      */
     @java.lang.Override
@@ -388,7 +388,7 @@ private static final long serialVersionUID = 0L;
      * The number of indexed files.
      * </pre>
      *
-     * <code>optional uint32 indexed_files = 4;</code>
+     * <code>optional int32 indexed_files = 4;</code>
      * @return Whether the indexedFiles field is set.
      */
     @java.lang.Override
@@ -400,7 +400,7 @@ private static final long serialVersionUID = 0L;
      * The number of indexed files.
      * </pre>
      *
-     * <code>optional uint32 indexed_files = 4;</code>
+     * <code>optional int32 indexed_files = 4;</code>
      * @return The indexedFiles.
      */
     @java.lang.Override
@@ -415,7 +415,7 @@ private static final long serialVersionUID = 0L;
      * The number of indexed Kotlin/Java files.
      * </pre>
      *
-     * <code>optional uint32 indexed_kt_files = 5;</code>
+     * <code>optional int32 indexed_kt_files = 5;</code>
      * @return Whether the indexedKtFiles field is set.
      */
     @java.lang.Override
@@ -427,7 +427,7 @@ private static final long serialVersionUID = 0L;
      * The number of indexed Kotlin/Java files.
      * </pre>
      *
-     * <code>optional uint32 indexed_kt_files = 5;</code>
+     * <code>optional int32 indexed_kt_files = 5;</code>
      * @return The indexedKtFiles.
      */
     @java.lang.Override
@@ -438,7 +438,7 @@ private static final long serialVersionUID = 0L;
     public static final int INDEXED_JAVA_FILES_FIELD_NUMBER = 6;
     private int indexedJavaFiles_ = 0;
     /**
-     * <code>optional uint32 indexed_java_files = 6;</code>
+     * <code>optional int32 indexed_java_files = 6;</code>
      * @return Whether the indexedJavaFiles field is set.
      */
     @java.lang.Override
@@ -446,7 +446,7 @@ private static final long serialVersionUID = 0L;
       return ((bitField0_ & 0x00000020) != 0);
     }
     /**
-     * <code>optional uint32 indexed_java_files = 6;</code>
+     * <code>optional int32 indexed_java_files = 6;</code>
      * @return The indexedJavaFiles.
      */
     @java.lang.Override
@@ -461,7 +461,7 @@ private static final long serialVersionUID = 0L;
      * The number of indexed files from out/ and builds/.
      * </pre>
      *
-     * <code>optional uint32 generated_files = 7;</code>
+     * <code>optional int32 generated_files = 7;</code>
      * @return Whether the generatedFiles field is set.
      */
     @java.lang.Override
@@ -473,7 +473,7 @@ private static final long serialVersionUID = 0L;
      * The number of indexed files from out/ and builds/.
      * </pre>
      *
-     * <code>optional uint32 generated_files = 7;</code>
+     * <code>optional int32 generated_files = 7;</code>
      * @return The generatedFiles.
      */
     @java.lang.Override
@@ -488,7 +488,7 @@ private static final long serialVersionUID = 0L;
      * The time in milliseconds to index
      * </pre>
      *
-     * <code>optional uint64 indexing_time_ms = 8;</code>
+     * <code>optional int64 indexing_time_ms = 8;</code>
      * @return Whether the indexingTimeMs field is set.
      */
     @java.lang.Override
@@ -500,7 +500,7 @@ private static final long serialVersionUID = 0L;
      * The time in milliseconds to index
      * </pre>
      *
-     * <code>optional uint64 indexing_time_ms = 8;</code>
+     * <code>optional int64 indexing_time_ms = 8;</code>
      * @return The indexingTimeMs.
      */
     @java.lang.Override
@@ -526,25 +526,25 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, indexerType_);
       }
       if (((bitField0_ & 0x00000002) != 0)) {
-        output.writeUInt32(2, indexVersion_);
+        output.writeInt32(2, indexVersion_);
       }
       if (((bitField0_ & 0x00000004) != 0)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, indexException_);
       }
       if (((bitField0_ & 0x00000008) != 0)) {
-        output.writeUInt32(4, indexedFiles_);
+        output.writeInt32(4, indexedFiles_);
       }
       if (((bitField0_ & 0x00000010) != 0)) {
-        output.writeUInt32(5, indexedKtFiles_);
+        output.writeInt32(5, indexedKtFiles_);
       }
       if (((bitField0_ & 0x00000020) != 0)) {
-        output.writeUInt32(6, indexedJavaFiles_);
+        output.writeInt32(6, indexedJavaFiles_);
       }
       if (((bitField0_ & 0x00000040) != 0)) {
-        output.writeUInt32(7, generatedFiles_);
+        output.writeInt32(7, generatedFiles_);
       }
       if (((bitField0_ & 0x00000080) != 0)) {
-        output.writeUInt64(8, indexingTimeMs_);
+        output.writeInt64(8, indexingTimeMs_);
       }
       getUnknownFields().writeTo(output);
     }
@@ -560,30 +560,30 @@ private static final long serialVersionUID = 0L;
       }
       if (((bitField0_ & 0x00000002) != 0)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(2, indexVersion_);
+          .computeInt32Size(2, indexVersion_);
       }
       if (((bitField0_ & 0x00000004) != 0)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, indexException_);
       }
       if (((bitField0_ & 0x00000008) != 0)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(4, indexedFiles_);
+          .computeInt32Size(4, indexedFiles_);
       }
       if (((bitField0_ & 0x00000010) != 0)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(5, indexedKtFiles_);
+          .computeInt32Size(5, indexedKtFiles_);
       }
       if (((bitField0_ & 0x00000020) != 0)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(6, indexedJavaFiles_);
+          .computeInt32Size(6, indexedJavaFiles_);
       }
       if (((bitField0_ & 0x00000040) != 0)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(7, generatedFiles_);
+          .computeInt32Size(7, generatedFiles_);
       }
       if (((bitField0_ & 0x00000080) != 0)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt64Size(8, indexingTimeMs_);
+          .computeInt64Size(8, indexingTimeMs_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -962,7 +962,7 @@ private static final long serialVersionUID = 0L;
                 break;
               } // case 10
               case 16: {
-                indexVersion_ = input.readUInt32();
+                indexVersion_ = input.readInt32();
                 bitField0_ |= 0x00000002;
                 break;
               } // case 16
@@ -972,27 +972,27 @@ private static final long serialVersionUID = 0L;
                 break;
               } // case 26
               case 32: {
-                indexedFiles_ = input.readUInt32();
+                indexedFiles_ = input.readInt32();
                 bitField0_ |= 0x00000008;
                 break;
               } // case 32
               case 40: {
-                indexedKtFiles_ = input.readUInt32();
+                indexedKtFiles_ = input.readInt32();
                 bitField0_ |= 0x00000010;
                 break;
               } // case 40
               case 48: {
-                indexedJavaFiles_ = input.readUInt32();
+                indexedJavaFiles_ = input.readInt32();
                 bitField0_ |= 0x00000020;
                 break;
               } // case 48
               case 56: {
-                generatedFiles_ = input.readUInt32();
+                generatedFiles_ = input.readInt32();
                 bitField0_ |= 0x00000040;
                 break;
               } // case 56
               case 64: {
-                indexingTimeMs_ = input.readUInt64();
+                indexingTimeMs_ = input.readInt64();
                 bitField0_ |= 0x00000080;
                 break;
               } // case 64
@@ -1119,7 +1119,7 @@ private static final long serialVersionUID = 0L;
 
       private int indexVersion_ ;
       /**
-       * <code>optional uint32 index_version = 2;</code>
+       * <code>optional int32 index_version = 2;</code>
        * @return Whether the indexVersion field is set.
        */
       @java.lang.Override
@@ -1127,7 +1127,7 @@ private static final long serialVersionUID = 0L;
         return ((bitField0_ & 0x00000002) != 0);
       }
       /**
-       * <code>optional uint32 index_version = 2;</code>
+       * <code>optional int32 index_version = 2;</code>
        * @return The indexVersion.
        */
       @java.lang.Override
@@ -1135,7 +1135,7 @@ private static final long serialVersionUID = 0L;
         return indexVersion_;
       }
       /**
-       * <code>optional uint32 index_version = 2;</code>
+       * <code>optional int32 index_version = 2;</code>
        * @param value The indexVersion to set.
        * @return This builder for chaining.
        */
@@ -1147,7 +1147,7 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>optional uint32 index_version = 2;</code>
+       * <code>optional int32 index_version = 2;</code>
        * @return This builder for chaining.
        */
       public Builder clearIndexVersion() {
@@ -1267,7 +1267,7 @@ private static final long serialVersionUID = 0L;
        * The number of indexed files.
        * </pre>
        *
-       * <code>optional uint32 indexed_files = 4;</code>
+       * <code>optional int32 indexed_files = 4;</code>
        * @return Whether the indexedFiles field is set.
        */
       @java.lang.Override
@@ -1279,7 +1279,7 @@ private static final long serialVersionUID = 0L;
        * The number of indexed files.
        * </pre>
        *
-       * <code>optional uint32 indexed_files = 4;</code>
+       * <code>optional int32 indexed_files = 4;</code>
        * @return The indexedFiles.
        */
       @java.lang.Override
@@ -1291,7 +1291,7 @@ private static final long serialVersionUID = 0L;
        * The number of indexed files.
        * </pre>
        *
-       * <code>optional uint32 indexed_files = 4;</code>
+       * <code>optional int32 indexed_files = 4;</code>
        * @param value The indexedFiles to set.
        * @return This builder for chaining.
        */
@@ -1307,7 +1307,7 @@ private static final long serialVersionUID = 0L;
        * The number of indexed files.
        * </pre>
        *
-       * <code>optional uint32 indexed_files = 4;</code>
+       * <code>optional int32 indexed_files = 4;</code>
        * @return This builder for chaining.
        */
       public Builder clearIndexedFiles() {
@@ -1323,7 +1323,7 @@ private static final long serialVersionUID = 0L;
        * The number of indexed Kotlin/Java files.
        * </pre>
        *
-       * <code>optional uint32 indexed_kt_files = 5;</code>
+       * <code>optional int32 indexed_kt_files = 5;</code>
        * @return Whether the indexedKtFiles field is set.
        */
       @java.lang.Override
@@ -1335,7 +1335,7 @@ private static final long serialVersionUID = 0L;
        * The number of indexed Kotlin/Java files.
        * </pre>
        *
-       * <code>optional uint32 indexed_kt_files = 5;</code>
+       * <code>optional int32 indexed_kt_files = 5;</code>
        * @return The indexedKtFiles.
        */
       @java.lang.Override
@@ -1347,7 +1347,7 @@ private static final long serialVersionUID = 0L;
        * The number of indexed Kotlin/Java files.
        * </pre>
        *
-       * <code>optional uint32 indexed_kt_files = 5;</code>
+       * <code>optional int32 indexed_kt_files = 5;</code>
        * @param value The indexedKtFiles to set.
        * @return This builder for chaining.
        */
@@ -1363,7 +1363,7 @@ private static final long serialVersionUID = 0L;
        * The number of indexed Kotlin/Java files.
        * </pre>
        *
-       * <code>optional uint32 indexed_kt_files = 5;</code>
+       * <code>optional int32 indexed_kt_files = 5;</code>
        * @return This builder for chaining.
        */
       public Builder clearIndexedKtFiles() {
@@ -1375,7 +1375,7 @@ private static final long serialVersionUID = 0L;
 
       private int indexedJavaFiles_ ;
       /**
-       * <code>optional uint32 indexed_java_files = 6;</code>
+       * <code>optional int32 indexed_java_files = 6;</code>
        * @return Whether the indexedJavaFiles field is set.
        */
       @java.lang.Override
@@ -1383,7 +1383,7 @@ private static final long serialVersionUID = 0L;
         return ((bitField0_ & 0x00000020) != 0);
       }
       /**
-       * <code>optional uint32 indexed_java_files = 6;</code>
+       * <code>optional int32 indexed_java_files = 6;</code>
        * @return The indexedJavaFiles.
        */
       @java.lang.Override
@@ -1391,7 +1391,7 @@ private static final long serialVersionUID = 0L;
         return indexedJavaFiles_;
       }
       /**
-       * <code>optional uint32 indexed_java_files = 6;</code>
+       * <code>optional int32 indexed_java_files = 6;</code>
        * @param value The indexedJavaFiles to set.
        * @return This builder for chaining.
        */
@@ -1403,7 +1403,7 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>optional uint32 indexed_java_files = 6;</code>
+       * <code>optional int32 indexed_java_files = 6;</code>
        * @return This builder for chaining.
        */
       public Builder clearIndexedJavaFiles() {
@@ -1419,7 +1419,7 @@ private static final long serialVersionUID = 0L;
        * The number of indexed files from out/ and builds/.
        * </pre>
        *
-       * <code>optional uint32 generated_files = 7;</code>
+       * <code>optional int32 generated_files = 7;</code>
        * @return Whether the generatedFiles field is set.
        */
       @java.lang.Override
@@ -1431,7 +1431,7 @@ private static final long serialVersionUID = 0L;
        * The number of indexed files from out/ and builds/.
        * </pre>
        *
-       * <code>optional uint32 generated_files = 7;</code>
+       * <code>optional int32 generated_files = 7;</code>
        * @return The generatedFiles.
        */
       @java.lang.Override
@@ -1443,7 +1443,7 @@ private static final long serialVersionUID = 0L;
        * The number of indexed files from out/ and builds/.
        * </pre>
        *
-       * <code>optional uint32 generated_files = 7;</code>
+       * <code>optional int32 generated_files = 7;</code>
        * @param value The generatedFiles to set.
        * @return This builder for chaining.
        */
@@ -1459,7 +1459,7 @@ private static final long serialVersionUID = 0L;
        * The number of indexed files from out/ and builds/.
        * </pre>
        *
-       * <code>optional uint32 generated_files = 7;</code>
+       * <code>optional int32 generated_files = 7;</code>
        * @return This builder for chaining.
        */
       public Builder clearGeneratedFiles() {
@@ -1475,7 +1475,7 @@ private static final long serialVersionUID = 0L;
        * The time in milliseconds to index
        * </pre>
        *
-       * <code>optional uint64 indexing_time_ms = 8;</code>
+       * <code>optional int64 indexing_time_ms = 8;</code>
        * @return Whether the indexingTimeMs field is set.
        */
       @java.lang.Override
@@ -1487,7 +1487,7 @@ private static final long serialVersionUID = 0L;
        * The time in milliseconds to index
        * </pre>
        *
-       * <code>optional uint64 indexing_time_ms = 8;</code>
+       * <code>optional int64 indexing_time_ms = 8;</code>
        * @return The indexingTimeMs.
        */
       @java.lang.Override
@@ -1499,7 +1499,7 @@ private static final long serialVersionUID = 0L;
        * The time in milliseconds to index
        * </pre>
        *
-       * <code>optional uint64 indexing_time_ms = 8;</code>
+       * <code>optional int64 indexing_time_ms = 8;</code>
        * @param value The indexingTimeMs to set.
        * @return This builder for chaining.
        */
@@ -1515,7 +1515,7 @@ private static final long serialVersionUID = 0L;
        * The time in milliseconds to index
        * </pre>
        *
-       * <code>optional uint64 indexing_time_ms = 8;</code>
+       * <code>optional int64 indexing_time_ms = 8;</code>
        * @return This builder for chaining.
        */
       public Builder clearIndexingTimeMs() {
@@ -1629,7 +1629,7 @@ private static final long serialVersionUID = 0L;
      * The number of files in code_search
      * </pre>
      *
-     * <code>optional uint32 result_count = 2;</code>
+     * <code>optional int32 result_count = 2;</code>
      * @return Whether the resultCount field is set.
      */
     boolean hasResultCount();
@@ -1638,7 +1638,7 @@ private static final long serialVersionUID = 0L;
      * The number of files in code_search
      * </pre>
      *
-     * <code>optional uint32 result_count = 2;</code>
+     * <code>optional int32 result_count = 2;</code>
      * @return The resultCount.
      */
     int getResultCount();
@@ -1648,7 +1648,7 @@ private static final long serialVersionUID = 0L;
      * The number of resource files code_search returned.
      * </pre>
      *
-     * <code>optional uint32 resource_count = 3;</code>
+     * <code>optional int32 resource_count = 3;</code>
      * @return Whether the resourceCount field is set.
      */
     boolean hasResourceCount();
@@ -1657,7 +1657,7 @@ private static final long serialVersionUID = 0L;
      * The number of resource files code_search returned.
      * </pre>
      *
-     * <code>optional uint32 resource_count = 3;</code>
+     * <code>optional int32 resource_count = 3;</code>
      * @return The resourceCount.
      */
     int getResourceCount();
@@ -1667,7 +1667,7 @@ private static final long serialVersionUID = 0L;
      * The number of files from out/ and builds/ that code_search returned.
      * </pre>
      *
-     * <code>optional uint32 generated_files = 4;</code>
+     * <code>optional int32 generated_files = 4;</code>
      * @return Whether the generatedFiles field is set.
      */
     boolean hasGeneratedFiles();
@@ -1676,7 +1676,7 @@ private static final long serialVersionUID = 0L;
      * The number of files from out/ and builds/ that code_search returned.
      * </pre>
      *
-     * <code>optional uint32 generated_files = 4;</code>
+     * <code>optional int32 generated_files = 4;</code>
      * @return The generatedFiles.
      */
     int getGeneratedFiles();
@@ -1686,7 +1686,7 @@ private static final long serialVersionUID = 0L;
      * The time in milliseconds for code_search.
      * </pre>
      *
-     * <code>optional uint64 search_time_ms = 5;</code>
+     * <code>optional int64 search_time_ms = 5;</code>
      * @return Whether the searchTimeMs field is set.
      */
     boolean hasSearchTimeMs();
@@ -1695,7 +1695,7 @@ private static final long serialVersionUID = 0L;
      * The time in milliseconds for code_search.
      * </pre>
      *
-     * <code>optional uint64 search_time_ms = 5;</code>
+     * <code>optional int64 search_time_ms = 5;</code>
      * @return The searchTimeMs.
      */
     long getSearchTimeMs();
@@ -1808,7 +1808,7 @@ private static final long serialVersionUID = 0L;
      * The number of files in code_search
      * </pre>
      *
-     * <code>optional uint32 result_count = 2;</code>
+     * <code>optional int32 result_count = 2;</code>
      * @return Whether the resultCount field is set.
      */
     @java.lang.Override
@@ -1820,7 +1820,7 @@ private static final long serialVersionUID = 0L;
      * The number of files in code_search
      * </pre>
      *
-     * <code>optional uint32 result_count = 2;</code>
+     * <code>optional int32 result_count = 2;</code>
      * @return The resultCount.
      */
     @java.lang.Override
@@ -1835,7 +1835,7 @@ private static final long serialVersionUID = 0L;
      * The number of resource files code_search returned.
      * </pre>
      *
-     * <code>optional uint32 resource_count = 3;</code>
+     * <code>optional int32 resource_count = 3;</code>
      * @return Whether the resourceCount field is set.
      */
     @java.lang.Override
@@ -1847,7 +1847,7 @@ private static final long serialVersionUID = 0L;
      * The number of resource files code_search returned.
      * </pre>
      *
-     * <code>optional uint32 resource_count = 3;</code>
+     * <code>optional int32 resource_count = 3;</code>
      * @return The resourceCount.
      */
     @java.lang.Override
@@ -1862,7 +1862,7 @@ private static final long serialVersionUID = 0L;
      * The number of files from out/ and builds/ that code_search returned.
      * </pre>
      *
-     * <code>optional uint32 generated_files = 4;</code>
+     * <code>optional int32 generated_files = 4;</code>
      * @return Whether the generatedFiles field is set.
      */
     @java.lang.Override
@@ -1874,7 +1874,7 @@ private static final long serialVersionUID = 0L;
      * The number of files from out/ and builds/ that code_search returned.
      * </pre>
      *
-     * <code>optional uint32 generated_files = 4;</code>
+     * <code>optional int32 generated_files = 4;</code>
      * @return The generatedFiles.
      */
     @java.lang.Override
@@ -1889,7 +1889,7 @@ private static final long serialVersionUID = 0L;
      * The time in milliseconds for code_search.
      * </pre>
      *
-     * <code>optional uint64 search_time_ms = 5;</code>
+     * <code>optional int64 search_time_ms = 5;</code>
      * @return Whether the searchTimeMs field is set.
      */
     @java.lang.Override
@@ -1901,7 +1901,7 @@ private static final long serialVersionUID = 0L;
      * The time in milliseconds for code_search.
      * </pre>
      *
-     * <code>optional uint64 search_time_ms = 5;</code>
+     * <code>optional int64 search_time_ms = 5;</code>
      * @return The searchTimeMs.
      */
     @java.lang.Override
@@ -1927,16 +1927,16 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, searchException_);
       }
       if (((bitField0_ & 0x00000002) != 0)) {
-        output.writeUInt32(2, resultCount_);
+        output.writeInt32(2, resultCount_);
       }
       if (((bitField0_ & 0x00000004) != 0)) {
-        output.writeUInt32(3, resourceCount_);
+        output.writeInt32(3, resourceCount_);
       }
       if (((bitField0_ & 0x00000008) != 0)) {
-        output.writeUInt32(4, generatedFiles_);
+        output.writeInt32(4, generatedFiles_);
       }
       if (((bitField0_ & 0x00000010) != 0)) {
-        output.writeUInt64(5, searchTimeMs_);
+        output.writeInt64(5, searchTimeMs_);
       }
       getUnknownFields().writeTo(output);
     }
@@ -1952,19 +1952,19 @@ private static final long serialVersionUID = 0L;
       }
       if (((bitField0_ & 0x00000002) != 0)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(2, resultCount_);
+          .computeInt32Size(2, resultCount_);
       }
       if (((bitField0_ & 0x00000004) != 0)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(3, resourceCount_);
+          .computeInt32Size(3, resourceCount_);
       }
       if (((bitField0_ & 0x00000008) != 0)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(4, generatedFiles_);
+          .computeInt32Size(4, generatedFiles_);
       }
       if (((bitField0_ & 0x00000010) != 0)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt64Size(5, searchTimeMs_);
+          .computeInt64Size(5, searchTimeMs_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -2290,22 +2290,22 @@ private static final long serialVersionUID = 0L;
                 break;
               } // case 10
               case 16: {
-                resultCount_ = input.readUInt32();
+                resultCount_ = input.readInt32();
                 bitField0_ |= 0x00000002;
                 break;
               } // case 16
               case 24: {
-                resourceCount_ = input.readUInt32();
+                resourceCount_ = input.readInt32();
                 bitField0_ |= 0x00000004;
                 break;
               } // case 24
               case 32: {
-                generatedFiles_ = input.readUInt32();
+                generatedFiles_ = input.readInt32();
                 bitField0_ |= 0x00000008;
                 break;
               } // case 32
               case 40: {
-                searchTimeMs_ = input.readUInt64();
+                searchTimeMs_ = input.readInt64();
                 bitField0_ |= 0x00000010;
                 break;
               } // case 40
@@ -2442,7 +2442,7 @@ private static final long serialVersionUID = 0L;
        * The number of files in code_search
        * </pre>
        *
-       * <code>optional uint32 result_count = 2;</code>
+       * <code>optional int32 result_count = 2;</code>
        * @return Whether the resultCount field is set.
        */
       @java.lang.Override
@@ -2454,7 +2454,7 @@ private static final long serialVersionUID = 0L;
        * The number of files in code_search
        * </pre>
        *
-       * <code>optional uint32 result_count = 2;</code>
+       * <code>optional int32 result_count = 2;</code>
        * @return The resultCount.
        */
       @java.lang.Override
@@ -2466,7 +2466,7 @@ private static final long serialVersionUID = 0L;
        * The number of files in code_search
        * </pre>
        *
-       * <code>optional uint32 result_count = 2;</code>
+       * <code>optional int32 result_count = 2;</code>
        * @param value The resultCount to set.
        * @return This builder for chaining.
        */
@@ -2482,7 +2482,7 @@ private static final long serialVersionUID = 0L;
        * The number of files in code_search
        * </pre>
        *
-       * <code>optional uint32 result_count = 2;</code>
+       * <code>optional int32 result_count = 2;</code>
        * @return This builder for chaining.
        */
       public Builder clearResultCount() {
@@ -2498,7 +2498,7 @@ private static final long serialVersionUID = 0L;
        * The number of resource files code_search returned.
        * </pre>
        *
-       * <code>optional uint32 resource_count = 3;</code>
+       * <code>optional int32 resource_count = 3;</code>
        * @return Whether the resourceCount field is set.
        */
       @java.lang.Override
@@ -2510,7 +2510,7 @@ private static final long serialVersionUID = 0L;
        * The number of resource files code_search returned.
        * </pre>
        *
-       * <code>optional uint32 resource_count = 3;</code>
+       * <code>optional int32 resource_count = 3;</code>
        * @return The resourceCount.
        */
       @java.lang.Override
@@ -2522,7 +2522,7 @@ private static final long serialVersionUID = 0L;
        * The number of resource files code_search returned.
        * </pre>
        *
-       * <code>optional uint32 resource_count = 3;</code>
+       * <code>optional int32 resource_count = 3;</code>
        * @param value The resourceCount to set.
        * @return This builder for chaining.
        */
@@ -2538,7 +2538,7 @@ private static final long serialVersionUID = 0L;
        * The number of resource files code_search returned.
        * </pre>
        *
-       * <code>optional uint32 resource_count = 3;</code>
+       * <code>optional int32 resource_count = 3;</code>
        * @return This builder for chaining.
        */
       public Builder clearResourceCount() {
@@ -2554,7 +2554,7 @@ private static final long serialVersionUID = 0L;
        * The number of files from out/ and builds/ that code_search returned.
        * </pre>
        *
-       * <code>optional uint32 generated_files = 4;</code>
+       * <code>optional int32 generated_files = 4;</code>
        * @return Whether the generatedFiles field is set.
        */
       @java.lang.Override
@@ -2566,7 +2566,7 @@ private static final long serialVersionUID = 0L;
        * The number of files from out/ and builds/ that code_search returned.
        * </pre>
        *
-       * <code>optional uint32 generated_files = 4;</code>
+       * <code>optional int32 generated_files = 4;</code>
        * @return The generatedFiles.
        */
       @java.lang.Override
@@ -2578,7 +2578,7 @@ private static final long serialVersionUID = 0L;
        * The number of files from out/ and builds/ that code_search returned.
        * </pre>
        *
-       * <code>optional uint32 generated_files = 4;</code>
+       * <code>optional int32 generated_files = 4;</code>
        * @param value The generatedFiles to set.
        * @return This builder for chaining.
        */
@@ -2594,7 +2594,7 @@ private static final long serialVersionUID = 0L;
        * The number of files from out/ and builds/ that code_search returned.
        * </pre>
        *
-       * <code>optional uint32 generated_files = 4;</code>
+       * <code>optional int32 generated_files = 4;</code>
        * @return This builder for chaining.
        */
       public Builder clearGeneratedFiles() {
@@ -2610,7 +2610,7 @@ private static final long serialVersionUID = 0L;
        * The time in milliseconds for code_search.
        * </pre>
        *
-       * <code>optional uint64 search_time_ms = 5;</code>
+       * <code>optional int64 search_time_ms = 5;</code>
        * @return Whether the searchTimeMs field is set.
        */
       @java.lang.Override
@@ -2622,7 +2622,7 @@ private static final long serialVersionUID = 0L;
        * The time in milliseconds for code_search.
        * </pre>
        *
-       * <code>optional uint64 search_time_ms = 5;</code>
+       * <code>optional int64 search_time_ms = 5;</code>
        * @return The searchTimeMs.
        */
       @java.lang.Override
@@ -2634,7 +2634,7 @@ private static final long serialVersionUID = 0L;
        * The time in milliseconds for code_search.
        * </pre>
        *
-       * <code>optional uint64 search_time_ms = 5;</code>
+       * <code>optional int64 search_time_ms = 5;</code>
        * @param value The searchTimeMs to set.
        * @return This builder for chaining.
        */
@@ -2650,7 +2650,7 @@ private static final long serialVersionUID = 0L;
        * The time in milliseconds for code_search.
        * </pre>
        *
-       * <code>optional uint64 search_time_ms = 5;</code>
+       * <code>optional int64 search_time_ms = 5;</code>
        * @return This builder for chaining.
        */
       public Builder clearSearchTimeMs() {
@@ -2767,7 +2767,7 @@ private static final long serialVersionUID = 0L;
      * The number of files in the combined file search result.
      * </pre>
      *
-     * <code>optional uint32 combined_result_count = 2;</code>
+     * <code>optional int32 combined_result_count = 2;</code>
      * @return Whether the combinedResultCount field is set.
      */
     boolean hasCombinedResultCount();
@@ -2776,7 +2776,7 @@ private static final long serialVersionUID = 0L;
      * The number of files in the combined file search result.
      * </pre>
      *
-     * <code>optional uint32 combined_result_count = 2;</code>
+     * <code>optional int32 combined_result_count = 2;</code>
      * @return The combinedResultCount.
      */
     int getCombinedResultCount();
@@ -2786,7 +2786,7 @@ private static final long serialVersionUID = 0L;
      * The number of files in the bm25 file search result.
      * </pre>
      *
-     * <code>optional uint32 bm25_search_count = 3;</code>
+     * <code>optional int32 bm25_search_count = 3;</code>
      * @return Whether the bm25SearchCount field is set.
      */
     boolean hasBm25SearchCount();
@@ -2795,10 +2795,29 @@ private static final long serialVersionUID = 0L;
      * The number of files in the bm25 file search result.
      * </pre>
      *
-     * <code>optional uint32 bm25_search_count = 3;</code>
+     * <code>optional int32 bm25_search_count = 3;</code>
      * @return The bm25SearchCount.
      */
     int getBm25SearchCount();
+
+    /**
+     * <pre>
+     * The number of files in the original find_files search result.
+     * </pre>
+     *
+     * <code>optional int32 found_files_count = 4;</code>
+     * @return Whether the foundFilesCount field is set.
+     */
+    boolean hasFoundFilesCount();
+    /**
+     * <pre>
+     * The number of files in the original find_files search result.
+     * </pre>
+     *
+     * <code>optional int32 found_files_count = 4;</code>
+     * @return The foundFilesCount.
+     */
+    int getFoundFilesCount();
   }
   /**
    * <pre>
@@ -2917,7 +2936,7 @@ private static final long serialVersionUID = 0L;
      * The number of files in the combined file search result.
      * </pre>
      *
-     * <code>optional uint32 combined_result_count = 2;</code>
+     * <code>optional int32 combined_result_count = 2;</code>
      * @return Whether the combinedResultCount field is set.
      */
     @java.lang.Override
@@ -2929,7 +2948,7 @@ private static final long serialVersionUID = 0L;
      * The number of files in the combined file search result.
      * </pre>
      *
-     * <code>optional uint32 combined_result_count = 2;</code>
+     * <code>optional int32 combined_result_count = 2;</code>
      * @return The combinedResultCount.
      */
     @java.lang.Override
@@ -2944,7 +2963,7 @@ private static final long serialVersionUID = 0L;
      * The number of files in the bm25 file search result.
      * </pre>
      *
-     * <code>optional uint32 bm25_search_count = 3;</code>
+     * <code>optional int32 bm25_search_count = 3;</code>
      * @return Whether the bm25SearchCount field is set.
      */
     @java.lang.Override
@@ -2956,12 +2975,39 @@ private static final long serialVersionUID = 0L;
      * The number of files in the bm25 file search result.
      * </pre>
      *
-     * <code>optional uint32 bm25_search_count = 3;</code>
+     * <code>optional int32 bm25_search_count = 3;</code>
      * @return The bm25SearchCount.
      */
     @java.lang.Override
     public int getBm25SearchCount() {
       return bm25SearchCount_;
+    }
+
+    public static final int FOUND_FILES_COUNT_FIELD_NUMBER = 4;
+    private int foundFilesCount_ = 0;
+    /**
+     * <pre>
+     * The number of files in the original find_files search result.
+     * </pre>
+     *
+     * <code>optional int32 found_files_count = 4;</code>
+     * @return Whether the foundFilesCount field is set.
+     */
+    @java.lang.Override
+    public boolean hasFoundFilesCount() {
+      return ((bitField0_ & 0x00000008) != 0);
+    }
+    /**
+     * <pre>
+     * The number of files in the original find_files search result.
+     * </pre>
+     *
+     * <code>optional int32 found_files_count = 4;</code>
+     * @return The foundFilesCount.
+     */
+    @java.lang.Override
+    public int getFoundFilesCount() {
+      return foundFilesCount_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -2982,10 +3028,13 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, findFilesException_);
       }
       if (((bitField0_ & 0x00000002) != 0)) {
-        output.writeUInt32(2, combinedResultCount_);
+        output.writeInt32(2, combinedResultCount_);
       }
       if (((bitField0_ & 0x00000004) != 0)) {
-        output.writeUInt32(3, bm25SearchCount_);
+        output.writeInt32(3, bm25SearchCount_);
+      }
+      if (((bitField0_ & 0x00000008) != 0)) {
+        output.writeInt32(4, foundFilesCount_);
       }
       getUnknownFields().writeTo(output);
     }
@@ -3001,11 +3050,15 @@ private static final long serialVersionUID = 0L;
       }
       if (((bitField0_ & 0x00000002) != 0)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(2, combinedResultCount_);
+          .computeInt32Size(2, combinedResultCount_);
       }
       if (((bitField0_ & 0x00000004) != 0)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(3, bm25SearchCount_);
+          .computeInt32Size(3, bm25SearchCount_);
+      }
+      if (((bitField0_ & 0x00000008) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(4, foundFilesCount_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -3037,6 +3090,11 @@ private static final long serialVersionUID = 0L;
         if (getBm25SearchCount()
             != other.getBm25SearchCount()) return false;
       }
+      if (hasFoundFilesCount() != other.hasFoundFilesCount()) return false;
+      if (hasFoundFilesCount()) {
+        if (getFoundFilesCount()
+            != other.getFoundFilesCount()) return false;
+      }
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -3059,6 +3117,10 @@ private static final long serialVersionUID = 0L;
       if (hasBm25SearchCount()) {
         hash = (37 * hash) + BM25_SEARCH_COUNT_FIELD_NUMBER;
         hash = (53 * hash) + getBm25SearchCount();
+      }
+      if (hasFoundFilesCount()) {
+        hash = (37 * hash) + FOUND_FILES_COUNT_FIELD_NUMBER;
+        hash = (53 * hash) + getFoundFilesCount();
       }
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
@@ -3198,6 +3260,7 @@ private static final long serialVersionUID = 0L;
         findFilesException_ = "";
         combinedResultCount_ = 0;
         bm25SearchCount_ = 0;
+        foundFilesCount_ = 0;
         return this;
       }
 
@@ -3244,6 +3307,10 @@ private static final long serialVersionUID = 0L;
           result.bm25SearchCount_ = bm25SearchCount_;
           to_bitField0_ |= 0x00000004;
         }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.foundFilesCount_ = foundFilesCount_;
+          to_bitField0_ |= 0x00000008;
+        }
         result.bitField0_ |= to_bitField0_;
       }
 
@@ -3269,6 +3336,9 @@ private static final long serialVersionUID = 0L;
         }
         if (other.hasBm25SearchCount()) {
           setBm25SearchCount(other.getBm25SearchCount());
+        }
+        if (other.hasFoundFilesCount()) {
+          setFoundFilesCount(other.getFoundFilesCount());
         }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
@@ -3302,15 +3372,20 @@ private static final long serialVersionUID = 0L;
                 break;
               } // case 10
               case 16: {
-                combinedResultCount_ = input.readUInt32();
+                combinedResultCount_ = input.readInt32();
                 bitField0_ |= 0x00000002;
                 break;
               } // case 16
               case 24: {
-                bm25SearchCount_ = input.readUInt32();
+                bm25SearchCount_ = input.readInt32();
                 bitField0_ |= 0x00000004;
                 break;
               } // case 24
+              case 32: {
+                foundFilesCount_ = input.readInt32();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 32
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -3450,7 +3525,7 @@ private static final long serialVersionUID = 0L;
        * The number of files in the combined file search result.
        * </pre>
        *
-       * <code>optional uint32 combined_result_count = 2;</code>
+       * <code>optional int32 combined_result_count = 2;</code>
        * @return Whether the combinedResultCount field is set.
        */
       @java.lang.Override
@@ -3462,7 +3537,7 @@ private static final long serialVersionUID = 0L;
        * The number of files in the combined file search result.
        * </pre>
        *
-       * <code>optional uint32 combined_result_count = 2;</code>
+       * <code>optional int32 combined_result_count = 2;</code>
        * @return The combinedResultCount.
        */
       @java.lang.Override
@@ -3474,7 +3549,7 @@ private static final long serialVersionUID = 0L;
        * The number of files in the combined file search result.
        * </pre>
        *
-       * <code>optional uint32 combined_result_count = 2;</code>
+       * <code>optional int32 combined_result_count = 2;</code>
        * @param value The combinedResultCount to set.
        * @return This builder for chaining.
        */
@@ -3490,7 +3565,7 @@ private static final long serialVersionUID = 0L;
        * The number of files in the combined file search result.
        * </pre>
        *
-       * <code>optional uint32 combined_result_count = 2;</code>
+       * <code>optional int32 combined_result_count = 2;</code>
        * @return This builder for chaining.
        */
       public Builder clearCombinedResultCount() {
@@ -3506,7 +3581,7 @@ private static final long serialVersionUID = 0L;
        * The number of files in the bm25 file search result.
        * </pre>
        *
-       * <code>optional uint32 bm25_search_count = 3;</code>
+       * <code>optional int32 bm25_search_count = 3;</code>
        * @return Whether the bm25SearchCount field is set.
        */
       @java.lang.Override
@@ -3518,7 +3593,7 @@ private static final long serialVersionUID = 0L;
        * The number of files in the bm25 file search result.
        * </pre>
        *
-       * <code>optional uint32 bm25_search_count = 3;</code>
+       * <code>optional int32 bm25_search_count = 3;</code>
        * @return The bm25SearchCount.
        */
       @java.lang.Override
@@ -3530,7 +3605,7 @@ private static final long serialVersionUID = 0L;
        * The number of files in the bm25 file search result.
        * </pre>
        *
-       * <code>optional uint32 bm25_search_count = 3;</code>
+       * <code>optional int32 bm25_search_count = 3;</code>
        * @param value The bm25SearchCount to set.
        * @return This builder for chaining.
        */
@@ -3546,12 +3621,68 @@ private static final long serialVersionUID = 0L;
        * The number of files in the bm25 file search result.
        * </pre>
        *
-       * <code>optional uint32 bm25_search_count = 3;</code>
+       * <code>optional int32 bm25_search_count = 3;</code>
        * @return This builder for chaining.
        */
       public Builder clearBm25SearchCount() {
         bitField0_ = (bitField0_ & ~0x00000004);
         bm25SearchCount_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int foundFilesCount_ ;
+      /**
+       * <pre>
+       * The number of files in the original find_files search result.
+       * </pre>
+       *
+       * <code>optional int32 found_files_count = 4;</code>
+       * @return Whether the foundFilesCount field is set.
+       */
+      @java.lang.Override
+      public boolean hasFoundFilesCount() {
+        return ((bitField0_ & 0x00000008) != 0);
+      }
+      /**
+       * <pre>
+       * The number of files in the original find_files search result.
+       * </pre>
+       *
+       * <code>optional int32 found_files_count = 4;</code>
+       * @return The foundFilesCount.
+       */
+      @java.lang.Override
+      public int getFoundFilesCount() {
+        return foundFilesCount_;
+      }
+      /**
+       * <pre>
+       * The number of files in the original find_files search result.
+       * </pre>
+       *
+       * <code>optional int32 found_files_count = 4;</code>
+       * @param value The foundFilesCount to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFoundFilesCount(int value) {
+
+        foundFilesCount_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The number of files in the original find_files search result.
+       * </pre>
+       *
+       * <code>optional int32 found_files_count = 4;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearFoundFilesCount() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        foundFilesCount_ = 0;
         onChanged();
         return this;
       }
@@ -3628,7 +3759,7 @@ private static final long serialVersionUID = 0L;
      * The number of files in the grep result.
      * </pre>
      *
-     * <code>optional uint32 result_count = 1;</code>
+     * <code>optional int32 result_count = 1;</code>
      * @return Whether the resultCount field is set.
      */
     boolean hasResultCount();
@@ -3637,7 +3768,7 @@ private static final long serialVersionUID = 0L;
      * The number of files in the grep result.
      * </pre>
      *
-     * <code>optional uint32 result_count = 1;</code>
+     * <code>optional int32 result_count = 1;</code>
      * @return The resultCount.
      */
     int getResultCount();
@@ -3660,6 +3791,44 @@ private static final long serialVersionUID = 0L;
      * @return The regexQuery.
      */
     boolean getRegexQuery();
+
+    /**
+     * <pre>
+     * The number of files in the grep BM25 backend result.
+     * </pre>
+     *
+     * <code>optional int32 bm25_result_count = 3;</code>
+     * @return Whether the bm25ResultCount field is set.
+     */
+    boolean hasBm25ResultCount();
+    /**
+     * <pre>
+     * The number of files in the grep BM25 backend result.
+     * </pre>
+     *
+     * <code>optional int32 bm25_result_count = 3;</code>
+     * @return The bm25ResultCount.
+     */
+    int getBm25ResultCount();
+
+    /**
+     * <pre>
+     * The number of files in the original grep backend result.
+     * </pre>
+     *
+     * <code>optional int32 grep_result_count = 4;</code>
+     * @return Whether the grepResultCount field is set.
+     */
+    boolean hasGrepResultCount();
+    /**
+     * <pre>
+     * The number of files in the original grep backend result.
+     * </pre>
+     *
+     * <code>optional int32 grep_result_count = 4;</code>
+     * @return The grepResultCount.
+     */
+    int getGrepResultCount();
   }
   /**
    * Protobuf type {@code android_studio.SmlRagEvent.GrepMetrics}
@@ -3704,7 +3873,7 @@ private static final long serialVersionUID = 0L;
      * The number of files in the grep result.
      * </pre>
      *
-     * <code>optional uint32 result_count = 1;</code>
+     * <code>optional int32 result_count = 1;</code>
      * @return Whether the resultCount field is set.
      */
     @java.lang.Override
@@ -3716,7 +3885,7 @@ private static final long serialVersionUID = 0L;
      * The number of files in the grep result.
      * </pre>
      *
-     * <code>optional uint32 result_count = 1;</code>
+     * <code>optional int32 result_count = 1;</code>
      * @return The resultCount.
      */
     @java.lang.Override
@@ -3751,6 +3920,60 @@ private static final long serialVersionUID = 0L;
       return regexQuery_;
     }
 
+    public static final int BM25_RESULT_COUNT_FIELD_NUMBER = 3;
+    private int bm25ResultCount_ = 0;
+    /**
+     * <pre>
+     * The number of files in the grep BM25 backend result.
+     * </pre>
+     *
+     * <code>optional int32 bm25_result_count = 3;</code>
+     * @return Whether the bm25ResultCount field is set.
+     */
+    @java.lang.Override
+    public boolean hasBm25ResultCount() {
+      return ((bitField0_ & 0x00000004) != 0);
+    }
+    /**
+     * <pre>
+     * The number of files in the grep BM25 backend result.
+     * </pre>
+     *
+     * <code>optional int32 bm25_result_count = 3;</code>
+     * @return The bm25ResultCount.
+     */
+    @java.lang.Override
+    public int getBm25ResultCount() {
+      return bm25ResultCount_;
+    }
+
+    public static final int GREP_RESULT_COUNT_FIELD_NUMBER = 4;
+    private int grepResultCount_ = 0;
+    /**
+     * <pre>
+     * The number of files in the original grep backend result.
+     * </pre>
+     *
+     * <code>optional int32 grep_result_count = 4;</code>
+     * @return Whether the grepResultCount field is set.
+     */
+    @java.lang.Override
+    public boolean hasGrepResultCount() {
+      return ((bitField0_ & 0x00000008) != 0);
+    }
+    /**
+     * <pre>
+     * The number of files in the original grep backend result.
+     * </pre>
+     *
+     * <code>optional int32 grep_result_count = 4;</code>
+     * @return The grepResultCount.
+     */
+    @java.lang.Override
+    public int getGrepResultCount() {
+      return grepResultCount_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -3766,10 +3989,16 @@ private static final long serialVersionUID = 0L;
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (((bitField0_ & 0x00000001) != 0)) {
-        output.writeUInt32(1, resultCount_);
+        output.writeInt32(1, resultCount_);
       }
       if (((bitField0_ & 0x00000002) != 0)) {
         output.writeBool(2, regexQuery_);
+      }
+      if (((bitField0_ & 0x00000004) != 0)) {
+        output.writeInt32(3, bm25ResultCount_);
+      }
+      if (((bitField0_ & 0x00000008) != 0)) {
+        output.writeInt32(4, grepResultCount_);
       }
       getUnknownFields().writeTo(output);
     }
@@ -3782,11 +4011,19 @@ private static final long serialVersionUID = 0L;
       size = 0;
       if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(1, resultCount_);
+          .computeInt32Size(1, resultCount_);
       }
       if (((bitField0_ & 0x00000002) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(2, regexQuery_);
+      }
+      if (((bitField0_ & 0x00000004) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(3, bm25ResultCount_);
+      }
+      if (((bitField0_ & 0x00000008) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(4, grepResultCount_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -3813,6 +4050,16 @@ private static final long serialVersionUID = 0L;
         if (getRegexQuery()
             != other.getRegexQuery()) return false;
       }
+      if (hasBm25ResultCount() != other.hasBm25ResultCount()) return false;
+      if (hasBm25ResultCount()) {
+        if (getBm25ResultCount()
+            != other.getBm25ResultCount()) return false;
+      }
+      if (hasGrepResultCount() != other.hasGrepResultCount()) return false;
+      if (hasGrepResultCount()) {
+        if (getGrepResultCount()
+            != other.getGrepResultCount()) return false;
+      }
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -3832,6 +4079,14 @@ private static final long serialVersionUID = 0L;
         hash = (37 * hash) + REGEX_QUERY_FIELD_NUMBER;
         hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
             getRegexQuery());
+      }
+      if (hasBm25ResultCount()) {
+        hash = (37 * hash) + BM25_RESULT_COUNT_FIELD_NUMBER;
+        hash = (53 * hash) + getBm25ResultCount();
+      }
+      if (hasGrepResultCount()) {
+        hash = (37 * hash) + GREP_RESULT_COUNT_FIELD_NUMBER;
+        hash = (53 * hash) + getGrepResultCount();
       }
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
@@ -3964,6 +4219,8 @@ private static final long serialVersionUID = 0L;
         bitField0_ = 0;
         resultCount_ = 0;
         regexQuery_ = false;
+        bm25ResultCount_ = 0;
+        grepResultCount_ = 0;
         return this;
       }
 
@@ -4006,6 +4263,14 @@ private static final long serialVersionUID = 0L;
           result.regexQuery_ = regexQuery_;
           to_bitField0_ |= 0x00000002;
         }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.bm25ResultCount_ = bm25ResultCount_;
+          to_bitField0_ |= 0x00000004;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.grepResultCount_ = grepResultCount_;
+          to_bitField0_ |= 0x00000008;
+        }
         result.bitField0_ |= to_bitField0_;
       }
 
@@ -4026,6 +4291,12 @@ private static final long serialVersionUID = 0L;
         }
         if (other.hasRegexQuery()) {
           setRegexQuery(other.getRegexQuery());
+        }
+        if (other.hasBm25ResultCount()) {
+          setBm25ResultCount(other.getBm25ResultCount());
+        }
+        if (other.hasGrepResultCount()) {
+          setGrepResultCount(other.getGrepResultCount());
         }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
@@ -4054,7 +4325,7 @@ private static final long serialVersionUID = 0L;
                 done = true;
                 break;
               case 8: {
-                resultCount_ = input.readUInt32();
+                resultCount_ = input.readInt32();
                 bitField0_ |= 0x00000001;
                 break;
               } // case 8
@@ -4063,6 +4334,16 @@ private static final long serialVersionUID = 0L;
                 bitField0_ |= 0x00000002;
                 break;
               } // case 16
+              case 24: {
+                bm25ResultCount_ = input.readInt32();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 24
+              case 32: {
+                grepResultCount_ = input.readInt32();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 32
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -4086,7 +4367,7 @@ private static final long serialVersionUID = 0L;
        * The number of files in the grep result.
        * </pre>
        *
-       * <code>optional uint32 result_count = 1;</code>
+       * <code>optional int32 result_count = 1;</code>
        * @return Whether the resultCount field is set.
        */
       @java.lang.Override
@@ -4098,7 +4379,7 @@ private static final long serialVersionUID = 0L;
        * The number of files in the grep result.
        * </pre>
        *
-       * <code>optional uint32 result_count = 1;</code>
+       * <code>optional int32 result_count = 1;</code>
        * @return The resultCount.
        */
       @java.lang.Override
@@ -4110,7 +4391,7 @@ private static final long serialVersionUID = 0L;
        * The number of files in the grep result.
        * </pre>
        *
-       * <code>optional uint32 result_count = 1;</code>
+       * <code>optional int32 result_count = 1;</code>
        * @param value The resultCount to set.
        * @return This builder for chaining.
        */
@@ -4126,7 +4407,7 @@ private static final long serialVersionUID = 0L;
        * The number of files in the grep result.
        * </pre>
        *
-       * <code>optional uint32 result_count = 1;</code>
+       * <code>optional int32 result_count = 1;</code>
        * @return This builder for chaining.
        */
       public Builder clearResultCount() {
@@ -4188,6 +4469,118 @@ private static final long serialVersionUID = 0L;
       public Builder clearRegexQuery() {
         bitField0_ = (bitField0_ & ~0x00000002);
         regexQuery_ = false;
+        onChanged();
+        return this;
+      }
+
+      private int bm25ResultCount_ ;
+      /**
+       * <pre>
+       * The number of files in the grep BM25 backend result.
+       * </pre>
+       *
+       * <code>optional int32 bm25_result_count = 3;</code>
+       * @return Whether the bm25ResultCount field is set.
+       */
+      @java.lang.Override
+      public boolean hasBm25ResultCount() {
+        return ((bitField0_ & 0x00000004) != 0);
+      }
+      /**
+       * <pre>
+       * The number of files in the grep BM25 backend result.
+       * </pre>
+       *
+       * <code>optional int32 bm25_result_count = 3;</code>
+       * @return The bm25ResultCount.
+       */
+      @java.lang.Override
+      public int getBm25ResultCount() {
+        return bm25ResultCount_;
+      }
+      /**
+       * <pre>
+       * The number of files in the grep BM25 backend result.
+       * </pre>
+       *
+       * <code>optional int32 bm25_result_count = 3;</code>
+       * @param value The bm25ResultCount to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBm25ResultCount(int value) {
+
+        bm25ResultCount_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The number of files in the grep BM25 backend result.
+       * </pre>
+       *
+       * <code>optional int32 bm25_result_count = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearBm25ResultCount() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        bm25ResultCount_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int grepResultCount_ ;
+      /**
+       * <pre>
+       * The number of files in the original grep backend result.
+       * </pre>
+       *
+       * <code>optional int32 grep_result_count = 4;</code>
+       * @return Whether the grepResultCount field is set.
+       */
+      @java.lang.Override
+      public boolean hasGrepResultCount() {
+        return ((bitField0_ & 0x00000008) != 0);
+      }
+      /**
+       * <pre>
+       * The number of files in the original grep backend result.
+       * </pre>
+       *
+       * <code>optional int32 grep_result_count = 4;</code>
+       * @return The grepResultCount.
+       */
+      @java.lang.Override
+      public int getGrepResultCount() {
+        return grepResultCount_;
+      }
+      /**
+       * <pre>
+       * The number of files in the original grep backend result.
+       * </pre>
+       *
+       * <code>optional int32 grep_result_count = 4;</code>
+       * @param value The grepResultCount to set.
+       * @return This builder for chaining.
+       */
+      public Builder setGrepResultCount(int value) {
+
+        grepResultCount_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The number of files in the original grep backend result.
+       * </pre>
+       *
+       * <code>optional int32 grep_result_count = 4;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearGrepResultCount() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        grepResultCount_ = 0;
         onChanged();
         return this;
       }
@@ -4293,7 +4686,7 @@ private static final long serialVersionUID = 0L;
      * The time in milliseconds to index.
      * </pre>
      *
-     * <code>optional uint64 indexing_time_ms = 2;</code>
+     * <code>optional int64 indexing_time_ms = 2;</code>
      * @return Whether the indexingTimeMs field is set.
      */
     boolean hasIndexingTimeMs();
@@ -4302,7 +4695,7 @@ private static final long serialVersionUID = 0L;
      * The time in milliseconds to index.
      * </pre>
      *
-     * <code>optional uint64 indexing_time_ms = 2;</code>
+     * <code>optional int64 indexing_time_ms = 2;</code>
      * @return The indexingTimeMs.
      */
     long getIndexingTimeMs();
@@ -4431,7 +4824,7 @@ private static final long serialVersionUID = 0L;
      * The time in milliseconds to index.
      * </pre>
      *
-     * <code>optional uint64 indexing_time_ms = 2;</code>
+     * <code>optional int64 indexing_time_ms = 2;</code>
      * @return Whether the indexingTimeMs field is set.
      */
     @java.lang.Override
@@ -4443,7 +4836,7 @@ private static final long serialVersionUID = 0L;
      * The time in milliseconds to index.
      * </pre>
      *
-     * <code>optional uint64 indexing_time_ms = 2;</code>
+     * <code>optional int64 indexing_time_ms = 2;</code>
      * @return The indexingTimeMs.
      */
     @java.lang.Override
@@ -4496,7 +4889,7 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, indexException_);
       }
       if (((bitField0_ & 0x00000002) != 0)) {
-        output.writeUInt64(2, indexingTimeMs_);
+        output.writeInt64(2, indexingTimeMs_);
       }
       if (((bitField0_ & 0x00000004) != 0)) {
         output.writeBool(3, indexDownloadedDocs_);
@@ -4515,7 +4908,7 @@ private static final long serialVersionUID = 0L;
       }
       if (((bitField0_ & 0x00000002) != 0)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt64Size(2, indexingTimeMs_);
+          .computeInt64Size(2, indexingTimeMs_);
       }
       if (((bitField0_ & 0x00000004) != 0)) {
         size += com.google.protobuf.CodedOutputStream
@@ -4812,7 +5205,7 @@ private static final long serialVersionUID = 0L;
                 break;
               } // case 10
               case 16: {
-                indexingTimeMs_ = input.readUInt64();
+                indexingTimeMs_ = input.readInt64();
                 bitField0_ |= 0x00000002;
                 break;
               } // case 16
@@ -4948,7 +5341,7 @@ private static final long serialVersionUID = 0L;
        * The time in milliseconds to index.
        * </pre>
        *
-       * <code>optional uint64 indexing_time_ms = 2;</code>
+       * <code>optional int64 indexing_time_ms = 2;</code>
        * @return Whether the indexingTimeMs field is set.
        */
       @java.lang.Override
@@ -4960,7 +5353,7 @@ private static final long serialVersionUID = 0L;
        * The time in milliseconds to index.
        * </pre>
        *
-       * <code>optional uint64 indexing_time_ms = 2;</code>
+       * <code>optional int64 indexing_time_ms = 2;</code>
        * @return The indexingTimeMs.
        */
       @java.lang.Override
@@ -4972,7 +5365,7 @@ private static final long serialVersionUID = 0L;
        * The time in milliseconds to index.
        * </pre>
        *
-       * <code>optional uint64 indexing_time_ms = 2;</code>
+       * <code>optional int64 indexing_time_ms = 2;</code>
        * @param value The indexingTimeMs to set.
        * @return This builder for chaining.
        */
@@ -4988,7 +5381,7 @@ private static final long serialVersionUID = 0L;
        * The time in milliseconds to index.
        * </pre>
        *
-       * <code>optional uint64 indexing_time_ms = 2;</code>
+       * <code>optional int64 indexing_time_ms = 2;</code>
        * @return This builder for chaining.
        */
       public Builder clearIndexingTimeMs() {
