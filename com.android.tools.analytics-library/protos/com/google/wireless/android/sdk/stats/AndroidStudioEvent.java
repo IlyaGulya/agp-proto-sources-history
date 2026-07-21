@@ -1854,6 +1854,19 @@ private static final long serialVersionUID = 0L;
             bitField4_ |= 0x00000100;
             break;
           }
+          case 1154: {
+            com.google.wireless.android.sdk.stats.ComposeMultiPreviewEvent.Builder subBuilder = null;
+            if (((bitField4_ & 0x00000200) != 0)) {
+              subBuilder = composeMultiPreviewEvent_.toBuilder();
+            }
+            composeMultiPreviewEvent_ = input.readMessage(com.google.wireless.android.sdk.stats.ComposeMultiPreviewEvent.PARSER, extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(composeMultiPreviewEvent_);
+              composeMultiPreviewEvent_ = subBuilder.buildPartial();
+            }
+            bitField4_ |= 0x00000200;
+            break;
+          }
           default: {
             if (!parseUnknownField(
                 input, unknownFields, extensionRegistry, tag)) {
@@ -4416,6 +4429,14 @@ private static final long serialVersionUID = 0L;
      * <code>PROJECT_IDS = 256;</code>
      */
     PROJECT_IDS(256),
+    /**
+     * <pre>
+     * Event related to Compose MultiPreview
+     * </pre>
+     *
+     * <code>COMPOSE_MULTI_PREVIEW = 257;</code>
+     */
+    COMPOSE_MULTI_PREVIEW(257),
     ;
 
     /**
@@ -6300,6 +6321,14 @@ private static final long serialVersionUID = 0L;
      * <code>PROJECT_IDS = 256;</code>
      */
     public static final int PROJECT_IDS_VALUE = 256;
+    /**
+     * <pre>
+     * Event related to Compose MultiPreview
+     * </pre>
+     *
+     * <code>COMPOSE_MULTI_PREVIEW = 257;</code>
+     */
+    public static final int COMPOSE_MULTI_PREVIEW_VALUE = 257;
 
 
     public final int getNumber() {
@@ -6574,6 +6603,7 @@ private static final long serialVersionUID = 0L;
         case 254: return SDK_INDEX_LIBRARY_IS_NON_COMPLIANT;
         case 255: return EDITOR_PICKER;
         case 256: return PROJECT_IDS;
+        case 257: return COMPOSE_MULTI_PREVIEW;
         default: return null;
       }
     }
@@ -20721,6 +20751,44 @@ private static final long serialVersionUID = 0L;
     return editorPickerEvent_ == null ? com.google.wireless.android.sdk.stats.EditorPickerEvent.getDefaultInstance() : editorPickerEvent_;
   }
 
+  public static final int COMPOSE_MULTI_PREVIEW_EVENT_FIELD_NUMBER = 144;
+  private com.google.wireless.android.sdk.stats.ComposeMultiPreviewEvent composeMultiPreviewEvent_;
+  /**
+   * <pre>
+   * set when kind = COMPOSE_MULTI_PREVIEW
+   * </pre>
+   *
+   * <code>optional .android_studio.ComposeMultiPreviewEvent compose_multi_preview_event = 144;</code>
+   * @return Whether the composeMultiPreviewEvent field is set.
+   */
+  @java.lang.Override
+  public boolean hasComposeMultiPreviewEvent() {
+    return ((bitField4_ & 0x00000200) != 0);
+  }
+  /**
+   * <pre>
+   * set when kind = COMPOSE_MULTI_PREVIEW
+   * </pre>
+   *
+   * <code>optional .android_studio.ComposeMultiPreviewEvent compose_multi_preview_event = 144;</code>
+   * @return The composeMultiPreviewEvent.
+   */
+  @java.lang.Override
+  public com.google.wireless.android.sdk.stats.ComposeMultiPreviewEvent getComposeMultiPreviewEvent() {
+    return composeMultiPreviewEvent_ == null ? com.google.wireless.android.sdk.stats.ComposeMultiPreviewEvent.getDefaultInstance() : composeMultiPreviewEvent_;
+  }
+  /**
+   * <pre>
+   * set when kind = COMPOSE_MULTI_PREVIEW
+   * </pre>
+   *
+   * <code>optional .android_studio.ComposeMultiPreviewEvent compose_multi_preview_event = 144;</code>
+   */
+  @java.lang.Override
+  public com.google.wireless.android.sdk.stats.ComposeMultiPreviewEventOrBuilder getComposeMultiPreviewEventOrBuilder() {
+    return composeMultiPreviewEvent_ == null ? com.google.wireless.android.sdk.stats.ComposeMultiPreviewEvent.getDefaultInstance() : composeMultiPreviewEvent_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -21163,6 +21231,9 @@ private static final long serialVersionUID = 0L;
     }
     if (((bitField4_ & 0x00000100) != 0)) {
       output.writeMessage(143, getEditorPickerEvent());
+    }
+    if (((bitField4_ & 0x00000200) != 0)) {
+      output.writeMessage(144, getComposeMultiPreviewEvent());
     }
     unknownFields.writeTo(output);
   }
@@ -21750,6 +21821,10 @@ private static final long serialVersionUID = 0L;
     if (((bitField4_ & 0x00000100) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(143, getEditorPickerEvent());
+    }
+    if (((bitField4_ & 0x00000200) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(144, getComposeMultiPreviewEvent());
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -22452,6 +22527,11 @@ private static final long serialVersionUID = 0L;
       if (!getEditorPickerEvent()
           .equals(other.getEditorPickerEvent())) return false;
     }
+    if (hasComposeMultiPreviewEvent() != other.hasComposeMultiPreviewEvent()) return false;
+    if (hasComposeMultiPreviewEvent()) {
+      if (!getComposeMultiPreviewEvent()
+          .equals(other.getComposeMultiPreviewEvent())) return false;
+    }
     if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
@@ -23037,6 +23117,10 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + EDITOR_PICKER_EVENT_FIELD_NUMBER;
       hash = (53 * hash) + getEditorPickerEvent().hashCode();
     }
+    if (hasComposeMultiPreviewEvent()) {
+      hash = (37 * hash) + COMPOSE_MULTI_PREVIEW_EVENT_FIELD_NUMBER;
+      hash = (53 * hash) + getComposeMultiPreviewEvent().hashCode();
+    }
     hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -23285,6 +23369,7 @@ private static final long serialVersionUID = 0L;
         getOsMetricsFieldBuilder();
         getSdkIndexLibraryDetailsFieldBuilder();
         getEditorPickerEventFieldBuilder();
+        getComposeMultiPreviewEventFieldBuilder();
       }
     }
     @java.lang.Override
@@ -24056,6 +24141,12 @@ private static final long serialVersionUID = 0L;
         editorPickerEventBuilder_.clear();
       }
       bitField4_ = (bitField4_ & ~0x00004000);
+      if (composeMultiPreviewEventBuilder_ == null) {
+        composeMultiPreviewEvent_ = null;
+      } else {
+        composeMultiPreviewEventBuilder_.clear();
+      }
+      bitField4_ = (bitField4_ & ~0x00008000);
       return this;
     }
 
@@ -25150,6 +25241,14 @@ private static final long serialVersionUID = 0L;
         }
         to_bitField4_ |= 0x00000100;
       }
+      if (((from_bitField4_ & 0x00008000) != 0)) {
+        if (composeMultiPreviewEventBuilder_ == null) {
+          result.composeMultiPreviewEvent_ = composeMultiPreviewEvent_;
+        } else {
+          result.composeMultiPreviewEvent_ = composeMultiPreviewEventBuilder_.build();
+        }
+        to_bitField4_ |= 0x00000200;
+      }
       result.bitField0_ = to_bitField0_;
       result.bitField1_ = to_bitField1_;
       result.bitField2_ = to_bitField2_;
@@ -25735,6 +25834,9 @@ private static final long serialVersionUID = 0L;
       }
       if (other.hasEditorPickerEvent()) {
         mergeEditorPickerEvent(other.getEditorPickerEvent());
+      }
+      if (other.hasComposeMultiPreviewEvent()) {
+        mergeComposeMultiPreviewEvent(other.getComposeMultiPreviewEvent());
       }
       this.mergeUnknownFields(other.unknownFields);
       onChanged();
@@ -47299,6 +47401,162 @@ private static final long serialVersionUID = 0L;
         editorPickerEvent_ = null;
       }
       return editorPickerEventBuilder_;
+    }
+
+    private com.google.wireless.android.sdk.stats.ComposeMultiPreviewEvent composeMultiPreviewEvent_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.ComposeMultiPreviewEvent, com.google.wireless.android.sdk.stats.ComposeMultiPreviewEvent.Builder, com.google.wireless.android.sdk.stats.ComposeMultiPreviewEventOrBuilder> composeMultiPreviewEventBuilder_;
+    /**
+     * <pre>
+     * set when kind = COMPOSE_MULTI_PREVIEW
+     * </pre>
+     *
+     * <code>optional .android_studio.ComposeMultiPreviewEvent compose_multi_preview_event = 144;</code>
+     * @return Whether the composeMultiPreviewEvent field is set.
+     */
+    public boolean hasComposeMultiPreviewEvent() {
+      return ((bitField4_ & 0x00008000) != 0);
+    }
+    /**
+     * <pre>
+     * set when kind = COMPOSE_MULTI_PREVIEW
+     * </pre>
+     *
+     * <code>optional .android_studio.ComposeMultiPreviewEvent compose_multi_preview_event = 144;</code>
+     * @return The composeMultiPreviewEvent.
+     */
+    public com.google.wireless.android.sdk.stats.ComposeMultiPreviewEvent getComposeMultiPreviewEvent() {
+      if (composeMultiPreviewEventBuilder_ == null) {
+        return composeMultiPreviewEvent_ == null ? com.google.wireless.android.sdk.stats.ComposeMultiPreviewEvent.getDefaultInstance() : composeMultiPreviewEvent_;
+      } else {
+        return composeMultiPreviewEventBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * set when kind = COMPOSE_MULTI_PREVIEW
+     * </pre>
+     *
+     * <code>optional .android_studio.ComposeMultiPreviewEvent compose_multi_preview_event = 144;</code>
+     */
+    public Builder setComposeMultiPreviewEvent(com.google.wireless.android.sdk.stats.ComposeMultiPreviewEvent value) {
+      if (composeMultiPreviewEventBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        composeMultiPreviewEvent_ = value;
+        onChanged();
+      } else {
+        composeMultiPreviewEventBuilder_.setMessage(value);
+      }
+      bitField4_ |= 0x00008000;
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = COMPOSE_MULTI_PREVIEW
+     * </pre>
+     *
+     * <code>optional .android_studio.ComposeMultiPreviewEvent compose_multi_preview_event = 144;</code>
+     */
+    public Builder setComposeMultiPreviewEvent(
+        com.google.wireless.android.sdk.stats.ComposeMultiPreviewEvent.Builder builderForValue) {
+      if (composeMultiPreviewEventBuilder_ == null) {
+        composeMultiPreviewEvent_ = builderForValue.build();
+        onChanged();
+      } else {
+        composeMultiPreviewEventBuilder_.setMessage(builderForValue.build());
+      }
+      bitField4_ |= 0x00008000;
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = COMPOSE_MULTI_PREVIEW
+     * </pre>
+     *
+     * <code>optional .android_studio.ComposeMultiPreviewEvent compose_multi_preview_event = 144;</code>
+     */
+    public Builder mergeComposeMultiPreviewEvent(com.google.wireless.android.sdk.stats.ComposeMultiPreviewEvent value) {
+      if (composeMultiPreviewEventBuilder_ == null) {
+        if (((bitField4_ & 0x00008000) != 0) &&
+            composeMultiPreviewEvent_ != null &&
+            composeMultiPreviewEvent_ != com.google.wireless.android.sdk.stats.ComposeMultiPreviewEvent.getDefaultInstance()) {
+          composeMultiPreviewEvent_ =
+            com.google.wireless.android.sdk.stats.ComposeMultiPreviewEvent.newBuilder(composeMultiPreviewEvent_).mergeFrom(value).buildPartial();
+        } else {
+          composeMultiPreviewEvent_ = value;
+        }
+        onChanged();
+      } else {
+        composeMultiPreviewEventBuilder_.mergeFrom(value);
+      }
+      bitField4_ |= 0x00008000;
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = COMPOSE_MULTI_PREVIEW
+     * </pre>
+     *
+     * <code>optional .android_studio.ComposeMultiPreviewEvent compose_multi_preview_event = 144;</code>
+     */
+    public Builder clearComposeMultiPreviewEvent() {
+      if (composeMultiPreviewEventBuilder_ == null) {
+        composeMultiPreviewEvent_ = null;
+        onChanged();
+      } else {
+        composeMultiPreviewEventBuilder_.clear();
+      }
+      bitField4_ = (bitField4_ & ~0x00008000);
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = COMPOSE_MULTI_PREVIEW
+     * </pre>
+     *
+     * <code>optional .android_studio.ComposeMultiPreviewEvent compose_multi_preview_event = 144;</code>
+     */
+    public com.google.wireless.android.sdk.stats.ComposeMultiPreviewEvent.Builder getComposeMultiPreviewEventBuilder() {
+      bitField4_ |= 0x00008000;
+      onChanged();
+      return getComposeMultiPreviewEventFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * set when kind = COMPOSE_MULTI_PREVIEW
+     * </pre>
+     *
+     * <code>optional .android_studio.ComposeMultiPreviewEvent compose_multi_preview_event = 144;</code>
+     */
+    public com.google.wireless.android.sdk.stats.ComposeMultiPreviewEventOrBuilder getComposeMultiPreviewEventOrBuilder() {
+      if (composeMultiPreviewEventBuilder_ != null) {
+        return composeMultiPreviewEventBuilder_.getMessageOrBuilder();
+      } else {
+        return composeMultiPreviewEvent_ == null ?
+            com.google.wireless.android.sdk.stats.ComposeMultiPreviewEvent.getDefaultInstance() : composeMultiPreviewEvent_;
+      }
+    }
+    /**
+     * <pre>
+     * set when kind = COMPOSE_MULTI_PREVIEW
+     * </pre>
+     *
+     * <code>optional .android_studio.ComposeMultiPreviewEvent compose_multi_preview_event = 144;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.ComposeMultiPreviewEvent, com.google.wireless.android.sdk.stats.ComposeMultiPreviewEvent.Builder, com.google.wireless.android.sdk.stats.ComposeMultiPreviewEventOrBuilder> 
+        getComposeMultiPreviewEventFieldBuilder() {
+      if (composeMultiPreviewEventBuilder_ == null) {
+        composeMultiPreviewEventBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.wireless.android.sdk.stats.ComposeMultiPreviewEvent, com.google.wireless.android.sdk.stats.ComposeMultiPreviewEvent.Builder, com.google.wireless.android.sdk.stats.ComposeMultiPreviewEventOrBuilder>(
+                getComposeMultiPreviewEvent(),
+                getParentForChildren(),
+                isClean());
+        composeMultiPreviewEvent_ = null;
+      }
+      return composeMultiPreviewEventBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(
