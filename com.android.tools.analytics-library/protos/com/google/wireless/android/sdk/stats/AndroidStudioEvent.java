@@ -2954,6 +2954,14 @@ private static final long serialVersionUID = 0L;
      * <code>WEAR_HEALTH_SERVICES_TOOL_WINDOW_EVENT = 303;</code>
      */
     WEAR_HEALTH_SERVICES_TOOL_WINDOW_EVENT(303),
+    /**
+     * <pre>
+     * Event for UiSettingsPanel in the Running Devices Tool Window.
+     * </pre>
+     *
+     * <code>UI_DEVICE_SETTINGS_EVENT = 304;</code>
+     */
+    UI_DEVICE_SETTINGS_EVENT(304),
     ;
 
     /**
@@ -5214,6 +5222,14 @@ private static final long serialVersionUID = 0L;
      * <code>WEAR_HEALTH_SERVICES_TOOL_WINDOW_EVENT = 303;</code>
      */
     public static final int WEAR_HEALTH_SERVICES_TOOL_WINDOW_EVENT_VALUE = 303;
+    /**
+     * <pre>
+     * Event for UiSettingsPanel in the Running Devices Tool Window.
+     * </pre>
+     *
+     * <code>UI_DEVICE_SETTINGS_EVENT = 304;</code>
+     */
+    public static final int UI_DEVICE_SETTINGS_EVENT_VALUE = 304;
 
 
     public final int getNumber() {
@@ -5535,6 +5551,7 @@ private static final long serialVersionUID = 0L;
         case 301: return RENDER_SECURITY_MANAGER_EVENT;
         case 302: return PREVIEW_REFRESH_EVENT;
         case 303: return WEAR_HEALTH_SERVICES_TOOL_WINDOW_EVENT;
+        case 304: return UI_DEVICE_SETTINGS_EVENT;
         default: return null;
       }
     }
@@ -7270,6 +7287,18 @@ private static final long serialVersionUID = 0L;
      * <code>KTS_COMPILATION_ERROR = 44;</code>
      */
     KTS_COMPILATION_ERROR(44),
+    /**
+     * <code>GROOVY_COMPILATION_ERROR = 45;</code>
+     */
+    GROOVY_COMPILATION_ERROR(45),
+    /**
+     * <code>JAVA_COMPILATION_ERROR = 46;</code>
+     */
+    JAVA_COMPILATION_ERROR(46),
+    /**
+     * <code>INVALID_TOML_DEFINITION = 47;</code>
+     */
+    INVALID_TOML_DEFINITION(47),
     ;
 
     /**
@@ -7478,6 +7507,18 @@ private static final long serialVersionUID = 0L;
      * <code>KTS_COMPILATION_ERROR = 44;</code>
      */
     public static final int KTS_COMPILATION_ERROR_VALUE = 44;
+    /**
+     * <code>GROOVY_COMPILATION_ERROR = 45;</code>
+     */
+    public static final int GROOVY_COMPILATION_ERROR_VALUE = 45;
+    /**
+     * <code>JAVA_COMPILATION_ERROR = 46;</code>
+     */
+    public static final int JAVA_COMPILATION_ERROR_VALUE = 46;
+    /**
+     * <code>INVALID_TOML_DEFINITION = 47;</code>
+     */
+    public static final int INVALID_TOML_DEFINITION_VALUE = 47;
 
 
     public final int getNumber() {
@@ -7545,6 +7586,9 @@ private static final long serialVersionUID = 0L;
         case 42: return BUILD_ISSUE_CREATED_UNKNOWN_FAILURE;
         case 43: return ANDROID_BUILD_ISSUE_CREATED_UNKNOWN_FAILURE;
         case 44: return KTS_COMPILATION_ERROR;
+        case 45: return GROOVY_COMPILATION_ERROR;
+        case 46: return JAVA_COMPILATION_ERROR;
+        case 47: return INVALID_TOML_DEFINITION;
         default: return null;
       }
     }
@@ -21625,6 +21669,44 @@ private static final long serialVersionUID = 0L;
     return wearHealthServicesEvent_ == null ? com.google.wireless.android.sdk.stats.WearHealthServicesEvent.getDefaultInstance() : wearHealthServicesEvent_;
   }
 
+  public static final int UI_DEVICE_SETTINGS_EVENT_FIELD_NUMBER = 187;
+  private com.google.wireless.android.sdk.stats.UiDeviceSettingsEvent uiDeviceSettingsEvent_;
+  /**
+   * <pre>
+   * set when kind = UI_DEVICE_SETTINGS_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.UiDeviceSettingsEvent ui_device_settings_event = 187;</code>
+   * @return Whether the uiDeviceSettingsEvent field is set.
+   */
+  @java.lang.Override
+  public boolean hasUiDeviceSettingsEvent() {
+    return ((bitField5_ & 0x00100000) != 0);
+  }
+  /**
+   * <pre>
+   * set when kind = UI_DEVICE_SETTINGS_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.UiDeviceSettingsEvent ui_device_settings_event = 187;</code>
+   * @return The uiDeviceSettingsEvent.
+   */
+  @java.lang.Override
+  public com.google.wireless.android.sdk.stats.UiDeviceSettingsEvent getUiDeviceSettingsEvent() {
+    return uiDeviceSettingsEvent_ == null ? com.google.wireless.android.sdk.stats.UiDeviceSettingsEvent.getDefaultInstance() : uiDeviceSettingsEvent_;
+  }
+  /**
+   * <pre>
+   * set when kind = UI_DEVICE_SETTINGS_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.UiDeviceSettingsEvent ui_device_settings_event = 187;</code>
+   */
+  @java.lang.Override
+  public com.google.wireless.android.sdk.stats.UiDeviceSettingsEventOrBuilder getUiDeviceSettingsEventOrBuilder() {
+    return uiDeviceSettingsEvent_ == null ? com.google.wireless.android.sdk.stats.UiDeviceSettingsEvent.getDefaultInstance() : uiDeviceSettingsEvent_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -22196,6 +22278,9 @@ private static final long serialVersionUID = 0L;
     }
     if (((bitField5_ & 0x00080000) != 0)) {
       output.writeMessage(186, getWearHealthServicesEvent());
+    }
+    if (((bitField5_ & 0x00100000) != 0)) {
+      output.writeMessage(187, getUiDeviceSettingsEvent());
     }
     getUnknownFields().writeTo(output);
   }
@@ -22955,6 +23040,10 @@ private static final long serialVersionUID = 0L;
     if (((bitField5_ & 0x00080000) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(186, getWearHealthServicesEvent());
+    }
+    if (((bitField5_ & 0x00100000) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(187, getUiDeviceSettingsEvent());
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -23872,6 +23961,11 @@ private static final long serialVersionUID = 0L;
       if (!getWearHealthServicesEvent()
           .equals(other.getWearHealthServicesEvent())) return false;
     }
+    if (hasUiDeviceSettingsEvent() != other.hasUiDeviceSettingsEvent()) return false;
+    if (hasUiDeviceSettingsEvent()) {
+      if (!getUiDeviceSettingsEvent()
+          .equals(other.getUiDeviceSettingsEvent())) return false;
+    }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -24629,6 +24723,10 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + WEAR_HEALTH_SERVICES_EVENT_FIELD_NUMBER;
       hash = (53 * hash) + getWearHealthServicesEvent().hashCode();
     }
+    if (hasUiDeviceSettingsEvent()) {
+      hash = (37 * hash) + UI_DEVICE_SETTINGS_EVENT_FIELD_NUMBER;
+      hash = (53 * hash) + getUiDeviceSettingsEvent().hashCode();
+    }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -24920,6 +25018,7 @@ private static final long serialVersionUID = 0L;
         getRenderSecurityManagerEventFieldBuilder();
         getPreviewRefreshEventFieldBuilder();
         getWearHealthServicesEventFieldBuilder();
+        getUiDeviceSettingsEventFieldBuilder();
       }
     }
     @java.lang.Override
@@ -25952,6 +26051,12 @@ private static final long serialVersionUID = 0L;
         wearHealthServicesEventBuilder_.clear();
       }
       bitField5_ = (bitField5_ & ~0x02000000);
+      if (uiDeviceSettingsEventBuilder_ == null) {
+        uiDeviceSettingsEvent_ = null;
+      } else {
+        uiDeviceSettingsEventBuilder_.clear();
+      }
+      bitField5_ = (bitField5_ & ~0x04000000);
       return this;
     }
 
@@ -27392,6 +27497,14 @@ private static final long serialVersionUID = 0L;
         }
         to_bitField5_ |= 0x00080000;
       }
+      if (((from_bitField5_ & 0x04000000) != 0)) {
+        if (uiDeviceSettingsEventBuilder_ == null) {
+          result.uiDeviceSettingsEvent_ = uiDeviceSettingsEvent_;
+        } else {
+          result.uiDeviceSettingsEvent_ = uiDeviceSettingsEventBuilder_.build();
+        }
+        to_bitField5_ |= 0x00100000;
+      }
       result.bitField0_ = to_bitField0_;
       result.bitField1_ = to_bitField1_;
       result.bitField2_ = to_bitField2_;
@@ -28107,6 +28220,9 @@ private static final long serialVersionUID = 0L;
       }
       if (other.hasWearHealthServicesEvent()) {
         mergeWearHealthServicesEvent(other.getWearHealthServicesEvent());
+      }
+      if (other.hasUiDeviceSettingsEvent()) {
+        mergeUiDeviceSettingsEvent(other.getUiDeviceSettingsEvent());
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -29504,6 +29620,13 @@ private static final long serialVersionUID = 0L;
               bitField5_ |= 0x02000000;
               break;
             } // case 1490
+            case 1498: {
+              input.readMessage(
+                  getUiDeviceSettingsEventFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField5_ |= 0x04000000;
+              break;
+            } // case 1498
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -57821,6 +57944,162 @@ private static final long serialVersionUID = 0L;
         wearHealthServicesEvent_ = null;
       }
       return wearHealthServicesEventBuilder_;
+    }
+
+    private com.google.wireless.android.sdk.stats.UiDeviceSettingsEvent uiDeviceSettingsEvent_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.UiDeviceSettingsEvent, com.google.wireless.android.sdk.stats.UiDeviceSettingsEvent.Builder, com.google.wireless.android.sdk.stats.UiDeviceSettingsEventOrBuilder> uiDeviceSettingsEventBuilder_;
+    /**
+     * <pre>
+     * set when kind = UI_DEVICE_SETTINGS_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.UiDeviceSettingsEvent ui_device_settings_event = 187;</code>
+     * @return Whether the uiDeviceSettingsEvent field is set.
+     */
+    public boolean hasUiDeviceSettingsEvent() {
+      return ((bitField5_ & 0x04000000) != 0);
+    }
+    /**
+     * <pre>
+     * set when kind = UI_DEVICE_SETTINGS_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.UiDeviceSettingsEvent ui_device_settings_event = 187;</code>
+     * @return The uiDeviceSettingsEvent.
+     */
+    public com.google.wireless.android.sdk.stats.UiDeviceSettingsEvent getUiDeviceSettingsEvent() {
+      if (uiDeviceSettingsEventBuilder_ == null) {
+        return uiDeviceSettingsEvent_ == null ? com.google.wireless.android.sdk.stats.UiDeviceSettingsEvent.getDefaultInstance() : uiDeviceSettingsEvent_;
+      } else {
+        return uiDeviceSettingsEventBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * set when kind = UI_DEVICE_SETTINGS_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.UiDeviceSettingsEvent ui_device_settings_event = 187;</code>
+     */
+    public Builder setUiDeviceSettingsEvent(com.google.wireless.android.sdk.stats.UiDeviceSettingsEvent value) {
+      if (uiDeviceSettingsEventBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        uiDeviceSettingsEvent_ = value;
+        onChanged();
+      } else {
+        uiDeviceSettingsEventBuilder_.setMessage(value);
+      }
+      bitField5_ |= 0x04000000;
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = UI_DEVICE_SETTINGS_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.UiDeviceSettingsEvent ui_device_settings_event = 187;</code>
+     */
+    public Builder setUiDeviceSettingsEvent(
+        com.google.wireless.android.sdk.stats.UiDeviceSettingsEvent.Builder builderForValue) {
+      if (uiDeviceSettingsEventBuilder_ == null) {
+        uiDeviceSettingsEvent_ = builderForValue.build();
+        onChanged();
+      } else {
+        uiDeviceSettingsEventBuilder_.setMessage(builderForValue.build());
+      }
+      bitField5_ |= 0x04000000;
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = UI_DEVICE_SETTINGS_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.UiDeviceSettingsEvent ui_device_settings_event = 187;</code>
+     */
+    public Builder mergeUiDeviceSettingsEvent(com.google.wireless.android.sdk.stats.UiDeviceSettingsEvent value) {
+      if (uiDeviceSettingsEventBuilder_ == null) {
+        if (((bitField5_ & 0x04000000) != 0) &&
+            uiDeviceSettingsEvent_ != null &&
+            uiDeviceSettingsEvent_ != com.google.wireless.android.sdk.stats.UiDeviceSettingsEvent.getDefaultInstance()) {
+          uiDeviceSettingsEvent_ =
+            com.google.wireless.android.sdk.stats.UiDeviceSettingsEvent.newBuilder(uiDeviceSettingsEvent_).mergeFrom(value).buildPartial();
+        } else {
+          uiDeviceSettingsEvent_ = value;
+        }
+        onChanged();
+      } else {
+        uiDeviceSettingsEventBuilder_.mergeFrom(value);
+      }
+      bitField5_ |= 0x04000000;
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = UI_DEVICE_SETTINGS_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.UiDeviceSettingsEvent ui_device_settings_event = 187;</code>
+     */
+    public Builder clearUiDeviceSettingsEvent() {
+      if (uiDeviceSettingsEventBuilder_ == null) {
+        uiDeviceSettingsEvent_ = null;
+        onChanged();
+      } else {
+        uiDeviceSettingsEventBuilder_.clear();
+      }
+      bitField5_ = (bitField5_ & ~0x04000000);
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = UI_DEVICE_SETTINGS_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.UiDeviceSettingsEvent ui_device_settings_event = 187;</code>
+     */
+    public com.google.wireless.android.sdk.stats.UiDeviceSettingsEvent.Builder getUiDeviceSettingsEventBuilder() {
+      bitField5_ |= 0x04000000;
+      onChanged();
+      return getUiDeviceSettingsEventFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * set when kind = UI_DEVICE_SETTINGS_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.UiDeviceSettingsEvent ui_device_settings_event = 187;</code>
+     */
+    public com.google.wireless.android.sdk.stats.UiDeviceSettingsEventOrBuilder getUiDeviceSettingsEventOrBuilder() {
+      if (uiDeviceSettingsEventBuilder_ != null) {
+        return uiDeviceSettingsEventBuilder_.getMessageOrBuilder();
+      } else {
+        return uiDeviceSettingsEvent_ == null ?
+            com.google.wireless.android.sdk.stats.UiDeviceSettingsEvent.getDefaultInstance() : uiDeviceSettingsEvent_;
+      }
+    }
+    /**
+     * <pre>
+     * set when kind = UI_DEVICE_SETTINGS_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.UiDeviceSettingsEvent ui_device_settings_event = 187;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.UiDeviceSettingsEvent, com.google.wireless.android.sdk.stats.UiDeviceSettingsEvent.Builder, com.google.wireless.android.sdk.stats.UiDeviceSettingsEventOrBuilder> 
+        getUiDeviceSettingsEventFieldBuilder() {
+      if (uiDeviceSettingsEventBuilder_ == null) {
+        uiDeviceSettingsEventBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.wireless.android.sdk.stats.UiDeviceSettingsEvent, com.google.wireless.android.sdk.stats.UiDeviceSettingsEvent.Builder, com.google.wireless.android.sdk.stats.UiDeviceSettingsEventOrBuilder>(
+                getUiDeviceSettingsEvent(),
+                getParentForChildren(),
+                isClean());
+        uiDeviceSettingsEvent_ = null;
+      }
+      return uiDeviceSettingsEventBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(
