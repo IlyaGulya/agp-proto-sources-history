@@ -2062,6 +2062,19 @@ private static final long serialVersionUID = 0L;
             bitField4_ |= 0x01000000;
             break;
           }
+          case 1282: {
+            com.google.wireless.android.sdk.stats.TSdkUAEvent.Builder subBuilder = null;
+            if (((bitField4_ & 0x02000000) != 0)) {
+              subBuilder = tsdkUaEvent_.toBuilder();
+            }
+            tsdkUaEvent_ = input.readMessage(com.google.wireless.android.sdk.stats.TSdkUAEvent.PARSER, extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(tsdkUaEvent_);
+              tsdkUaEvent_ = subBuilder.buildPartial();
+            }
+            bitField4_ |= 0x02000000;
+            break;
+          }
           default: {
             if (!parseUnknownField(
                 input, unknownFields, extensionRegistry, tag)) {
@@ -4760,6 +4773,14 @@ private static final long serialVersionUID = 0L;
      * <code>SAFE_MODE_STATS_EVENT = 273;</code>
      */
     SAFE_MODE_STATS_EVENT(273),
+    /**
+     * <pre>
+     * Event related to targetSdkVersion Upgrade Assistant
+     * </pre>
+     *
+     * <code>TSDKUA_EVENT = 274;</code>
+     */
+    TSDKUA_EVENT(274),
     ;
 
     /**
@@ -6780,6 +6801,14 @@ private static final long serialVersionUID = 0L;
      * <code>SAFE_MODE_STATS_EVENT = 273;</code>
      */
     public static final int SAFE_MODE_STATS_EVENT_VALUE = 273;
+    /**
+     * <pre>
+     * Event related to targetSdkVersion Upgrade Assistant
+     * </pre>
+     *
+     * <code>TSDKUA_EVENT = 274;</code>
+     */
+    public static final int TSDKUA_EVENT_VALUE = 274;
 
 
     public final int getNumber() {
@@ -7071,6 +7100,7 @@ private static final long serialVersionUID = 0L;
         case 271: return UPGRADE_ASSISTANT_CTA_OLD_AGP_DISMISSED;
         case 272: return DIRECT_ACCESS_USAGE_EVENT;
         case 273: return SAFE_MODE_STATS_EVENT;
+        case 274: return TSDKUA_EVENT;
         default: return null;
       }
     }
@@ -8156,6 +8186,10 @@ private static final long serialVersionUID = 0L;
      * <code>GOOGLE_WALLET_ACTIVITY = 67;</code>
      */
     GOOGLE_WALLET_ACTIVITY(67),
+    /**
+     * <code>BASELINE_PROFILES_MODULE = 68;</code>
+     */
+    BASELINE_PROFILES_MODULE(68),
     ;
 
     /**
@@ -8434,6 +8468,10 @@ private static final long serialVersionUID = 0L;
      * <code>GOOGLE_WALLET_ACTIVITY = 67;</code>
      */
     public static final int GOOGLE_WALLET_ACTIVITY_VALUE = 67;
+    /**
+     * <code>BASELINE_PROFILES_MODULE = 68;</code>
+     */
+    public static final int BASELINE_PROFILES_MODULE_VALUE = 68;
 
 
     public final int getNumber() {
@@ -8524,6 +8562,7 @@ private static final long serialVersionUID = 0L;
         case 65: return GOOGLE_PAY_ACTIVITY;
         case 66: return WEAR_OS_COMPOSE_ACTIVITY;
         case 67: return GOOGLE_WALLET_ACTIVITY;
+        case 68: return BASELINE_PROFILES_MODULE;
         default: return null;
       }
     }
@@ -12705,6 +12744,10 @@ private static final long serialVersionUID = 0L;
          * <code>BENCHMARK_LIBRARY = 14;</code>
          */
         BENCHMARK_LIBRARY(14),
+        /**
+         * <code>BASELINE_PROFILES = 15;</code>
+         */
+        BASELINE_PROFILES(15),
         ;
 
         /**
@@ -12767,6 +12810,10 @@ private static final long serialVersionUID = 0L;
          * <code>BENCHMARK_LIBRARY = 14;</code>
          */
         public static final int BENCHMARK_LIBRARY_VALUE = 14;
+        /**
+         * <code>BASELINE_PROFILES = 15;</code>
+         */
+        public static final int BASELINE_PROFILES_VALUE = 15;
 
 
         public final int getNumber() {
@@ -12804,6 +12851,7 @@ private static final long serialVersionUID = 0L;
             case 12: return IMPORT_JAR_AAR;
             case 13: return JAVA_OR_KOTLIN_LIBRARY;
             case 14: return BENCHMARK_LIBRARY;
+            case 15: return BASELINE_PROFILES;
             default: return null;
           }
         }
@@ -16841,7 +16889,9 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Client-side salted (rotating every 532 days), sha256 of the project id.
-   * set when kind = PROJECT_STRUCTURE_* or kind = APK_ANALYZER_STATS
+   * set when kind = PROJECT_STRUCTURE_*
+   *       or kind = APK_ANALYZER_STATS
+   *       or kind = TSDKUA_EVENT
    * </pre>
    *
    * <code>optional string project_id = 31;</code>
@@ -16854,7 +16904,9 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Client-side salted (rotating every 532 days), sha256 of the project id.
-   * set when kind = PROJECT_STRUCTURE_* or kind = APK_ANALYZER_STATS
+   * set when kind = PROJECT_STRUCTURE_*
+   *       or kind = APK_ANALYZER_STATS
+   *       or kind = TSDKUA_EVENT
    * </pre>
    *
    * <code>optional string project_id = 31;</code>
@@ -16878,7 +16930,9 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Client-side salted (rotating every 532 days), sha256 of the project id.
-   * set when kind = PROJECT_STRUCTURE_* or kind = APK_ANALYZER_STATS
+   * set when kind = PROJECT_STRUCTURE_*
+   *       or kind = APK_ANALYZER_STATS
+   *       or kind = TSDKUA_EVENT
    * </pre>
    *
    * <code>optional string project_id = 31;</code>
@@ -21951,6 +22005,44 @@ private static final long serialVersionUID = 0L;
     return safeModeStatsEvent_ == null ? com.google.wireless.android.sdk.stats.SafeModeStatsEvent.getDefaultInstance() : safeModeStatsEvent_;
   }
 
+  public static final int TSDK_UA_EVENT_FIELD_NUMBER = 160;
+  private com.google.wireless.android.sdk.stats.TSdkUAEvent tsdkUaEvent_;
+  /**
+   * <pre>
+   * set when kind = TSDKUA_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.TSdkUAEvent tsdk_ua_event = 160;</code>
+   * @return Whether the tsdkUaEvent field is set.
+   */
+  @java.lang.Override
+  public boolean hasTsdkUaEvent() {
+    return ((bitField4_ & 0x02000000) != 0);
+  }
+  /**
+   * <pre>
+   * set when kind = TSDKUA_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.TSdkUAEvent tsdk_ua_event = 160;</code>
+   * @return The tsdkUaEvent.
+   */
+  @java.lang.Override
+  public com.google.wireless.android.sdk.stats.TSdkUAEvent getTsdkUaEvent() {
+    return tsdkUaEvent_ == null ? com.google.wireless.android.sdk.stats.TSdkUAEvent.getDefaultInstance() : tsdkUaEvent_;
+  }
+  /**
+   * <pre>
+   * set when kind = TSDKUA_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.TSdkUAEvent tsdk_ua_event = 160;</code>
+   */
+  @java.lang.Override
+  public com.google.wireless.android.sdk.stats.TSdkUAEventOrBuilder getTsdkUaEventOrBuilder() {
+    return tsdkUaEvent_ == null ? com.google.wireless.android.sdk.stats.TSdkUAEvent.getDefaultInstance() : tsdkUaEvent_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -22441,6 +22533,9 @@ private static final long serialVersionUID = 0L;
     }
     if (((bitField4_ & 0x01000000) != 0)) {
       output.writeMessage(159, getSafeModeStatsEvent());
+    }
+    if (((bitField4_ & 0x02000000) != 0)) {
+      output.writeMessage(160, getTsdkUaEvent());
     }
     unknownFields.writeTo(output);
   }
@@ -23092,6 +23187,10 @@ private static final long serialVersionUID = 0L;
     if (((bitField4_ & 0x01000000) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(159, getSafeModeStatsEvent());
+    }
+    if (((bitField4_ & 0x02000000) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(160, getTsdkUaEvent());
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -23874,6 +23973,11 @@ private static final long serialVersionUID = 0L;
       if (!getSafeModeStatsEvent()
           .equals(other.getSafeModeStatsEvent())) return false;
     }
+    if (hasTsdkUaEvent() != other.hasTsdkUaEvent()) return false;
+    if (hasTsdkUaEvent()) {
+      if (!getTsdkUaEvent()
+          .equals(other.getTsdkUaEvent())) return false;
+    }
     if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
@@ -24523,6 +24627,10 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + SAFE_MODE_STATS_EVENT_FIELD_NUMBER;
       hash = (53 * hash) + getSafeModeStatsEvent().hashCode();
     }
+    if (hasTsdkUaEvent()) {
+      hash = (37 * hash) + TSDK_UA_EVENT_FIELD_NUMBER;
+      hash = (53 * hash) + getTsdkUaEvent().hashCode();
+    }
     hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -24787,6 +24895,7 @@ private static final long serialVersionUID = 0L;
         getCreateDiagnosticReportActionEventFieldBuilder();
         getDirectAccessUsageEventFieldBuilder();
         getSafeModeStatsEventFieldBuilder();
+        getTsdkUaEventFieldBuilder();
       }
     }
     @java.lang.Override
@@ -25654,6 +25763,12 @@ private static final long serialVersionUID = 0L;
         safeModeStatsEventBuilder_.clear();
       }
       bitField4_ = (bitField4_ & ~0x40000000);
+      if (tsdkUaEventBuilder_ == null) {
+        tsdkUaEvent_ = null;
+      } else {
+        tsdkUaEventBuilder_.clear();
+      }
+      bitField4_ = (bitField4_ & ~0x80000000);
       return this;
     }
 
@@ -26876,6 +26991,14 @@ private static final long serialVersionUID = 0L;
         }
         to_bitField4_ |= 0x01000000;
       }
+      if (((from_bitField4_ & 0x80000000) != 0)) {
+        if (tsdkUaEventBuilder_ == null) {
+          result.tsdkUaEvent_ = tsdkUaEvent_;
+        } else {
+          result.tsdkUaEvent_ = tsdkUaEventBuilder_.build();
+        }
+        to_bitField4_ |= 0x02000000;
+      }
       result.bitField0_ = to_bitField0_;
       result.bitField1_ = to_bitField1_;
       result.bitField2_ = to_bitField2_;
@@ -27509,6 +27632,9 @@ private static final long serialVersionUID = 0L;
       }
       if (other.hasSafeModeStatsEvent()) {
         mergeSafeModeStatsEvent(other.getSafeModeStatsEvent());
+      }
+      if (other.hasTsdkUaEvent()) {
+        mergeTsdkUaEvent(other.getTsdkUaEvent());
       }
       this.mergeUnknownFields(other.unknownFields);
       onChanged();
@@ -31173,7 +31299,9 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Client-side salted (rotating every 532 days), sha256 of the project id.
-     * set when kind = PROJECT_STRUCTURE_* or kind = APK_ANALYZER_STATS
+     * set when kind = PROJECT_STRUCTURE_*
+     *       or kind = APK_ANALYZER_STATS
+     *       or kind = TSDKUA_EVENT
      * </pre>
      *
      * <code>optional string project_id = 31;</code>
@@ -31185,7 +31313,9 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Client-side salted (rotating every 532 days), sha256 of the project id.
-     * set when kind = PROJECT_STRUCTURE_* or kind = APK_ANALYZER_STATS
+     * set when kind = PROJECT_STRUCTURE_*
+     *       or kind = APK_ANALYZER_STATS
+     *       or kind = TSDKUA_EVENT
      * </pre>
      *
      * <code>optional string project_id = 31;</code>
@@ -31208,7 +31338,9 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Client-side salted (rotating every 532 days), sha256 of the project id.
-     * set when kind = PROJECT_STRUCTURE_* or kind = APK_ANALYZER_STATS
+     * set when kind = PROJECT_STRUCTURE_*
+     *       or kind = APK_ANALYZER_STATS
+     *       or kind = TSDKUA_EVENT
      * </pre>
      *
      * <code>optional string project_id = 31;</code>
@@ -31230,7 +31362,9 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Client-side salted (rotating every 532 days), sha256 of the project id.
-     * set when kind = PROJECT_STRUCTURE_* or kind = APK_ANALYZER_STATS
+     * set when kind = PROJECT_STRUCTURE_*
+     *       or kind = APK_ANALYZER_STATS
+     *       or kind = TSDKUA_EVENT
      * </pre>
      *
      * <code>optional string project_id = 31;</code>
@@ -31250,7 +31384,9 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Client-side salted (rotating every 532 days), sha256 of the project id.
-     * set when kind = PROJECT_STRUCTURE_* or kind = APK_ANALYZER_STATS
+     * set when kind = PROJECT_STRUCTURE_*
+     *       or kind = APK_ANALYZER_STATS
+     *       or kind = TSDKUA_EVENT
      * </pre>
      *
      * <code>optional string project_id = 31;</code>
@@ -31265,7 +31401,9 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Client-side salted (rotating every 532 days), sha256 of the project id.
-     * set when kind = PROJECT_STRUCTURE_* or kind = APK_ANALYZER_STATS
+     * set when kind = PROJECT_STRUCTURE_*
+     *       or kind = APK_ANALYZER_STATS
+     *       or kind = TSDKUA_EVENT
      * </pre>
      *
      * <code>optional string project_id = 31;</code>
@@ -51615,6 +51753,162 @@ private static final long serialVersionUID = 0L;
         safeModeStatsEvent_ = null;
       }
       return safeModeStatsEventBuilder_;
+    }
+
+    private com.google.wireless.android.sdk.stats.TSdkUAEvent tsdkUaEvent_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.TSdkUAEvent, com.google.wireless.android.sdk.stats.TSdkUAEvent.Builder, com.google.wireless.android.sdk.stats.TSdkUAEventOrBuilder> tsdkUaEventBuilder_;
+    /**
+     * <pre>
+     * set when kind = TSDKUA_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.TSdkUAEvent tsdk_ua_event = 160;</code>
+     * @return Whether the tsdkUaEvent field is set.
+     */
+    public boolean hasTsdkUaEvent() {
+      return ((bitField4_ & 0x80000000) != 0);
+    }
+    /**
+     * <pre>
+     * set when kind = TSDKUA_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.TSdkUAEvent tsdk_ua_event = 160;</code>
+     * @return The tsdkUaEvent.
+     */
+    public com.google.wireless.android.sdk.stats.TSdkUAEvent getTsdkUaEvent() {
+      if (tsdkUaEventBuilder_ == null) {
+        return tsdkUaEvent_ == null ? com.google.wireless.android.sdk.stats.TSdkUAEvent.getDefaultInstance() : tsdkUaEvent_;
+      } else {
+        return tsdkUaEventBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * set when kind = TSDKUA_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.TSdkUAEvent tsdk_ua_event = 160;</code>
+     */
+    public Builder setTsdkUaEvent(com.google.wireless.android.sdk.stats.TSdkUAEvent value) {
+      if (tsdkUaEventBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        tsdkUaEvent_ = value;
+        onChanged();
+      } else {
+        tsdkUaEventBuilder_.setMessage(value);
+      }
+      bitField4_ |= 0x80000000;
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = TSDKUA_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.TSdkUAEvent tsdk_ua_event = 160;</code>
+     */
+    public Builder setTsdkUaEvent(
+        com.google.wireless.android.sdk.stats.TSdkUAEvent.Builder builderForValue) {
+      if (tsdkUaEventBuilder_ == null) {
+        tsdkUaEvent_ = builderForValue.build();
+        onChanged();
+      } else {
+        tsdkUaEventBuilder_.setMessage(builderForValue.build());
+      }
+      bitField4_ |= 0x80000000;
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = TSDKUA_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.TSdkUAEvent tsdk_ua_event = 160;</code>
+     */
+    public Builder mergeTsdkUaEvent(com.google.wireless.android.sdk.stats.TSdkUAEvent value) {
+      if (tsdkUaEventBuilder_ == null) {
+        if (((bitField4_ & 0x80000000) != 0) &&
+            tsdkUaEvent_ != null &&
+            tsdkUaEvent_ != com.google.wireless.android.sdk.stats.TSdkUAEvent.getDefaultInstance()) {
+          tsdkUaEvent_ =
+            com.google.wireless.android.sdk.stats.TSdkUAEvent.newBuilder(tsdkUaEvent_).mergeFrom(value).buildPartial();
+        } else {
+          tsdkUaEvent_ = value;
+        }
+        onChanged();
+      } else {
+        tsdkUaEventBuilder_.mergeFrom(value);
+      }
+      bitField4_ |= 0x80000000;
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = TSDKUA_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.TSdkUAEvent tsdk_ua_event = 160;</code>
+     */
+    public Builder clearTsdkUaEvent() {
+      if (tsdkUaEventBuilder_ == null) {
+        tsdkUaEvent_ = null;
+        onChanged();
+      } else {
+        tsdkUaEventBuilder_.clear();
+      }
+      bitField4_ = (bitField4_ & ~0x80000000);
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = TSDKUA_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.TSdkUAEvent tsdk_ua_event = 160;</code>
+     */
+    public com.google.wireless.android.sdk.stats.TSdkUAEvent.Builder getTsdkUaEventBuilder() {
+      bitField4_ |= 0x80000000;
+      onChanged();
+      return getTsdkUaEventFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * set when kind = TSDKUA_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.TSdkUAEvent tsdk_ua_event = 160;</code>
+     */
+    public com.google.wireless.android.sdk.stats.TSdkUAEventOrBuilder getTsdkUaEventOrBuilder() {
+      if (tsdkUaEventBuilder_ != null) {
+        return tsdkUaEventBuilder_.getMessageOrBuilder();
+      } else {
+        return tsdkUaEvent_ == null ?
+            com.google.wireless.android.sdk.stats.TSdkUAEvent.getDefaultInstance() : tsdkUaEvent_;
+      }
+    }
+    /**
+     * <pre>
+     * set when kind = TSDKUA_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.TSdkUAEvent tsdk_ua_event = 160;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.TSdkUAEvent, com.google.wireless.android.sdk.stats.TSdkUAEvent.Builder, com.google.wireless.android.sdk.stats.TSdkUAEventOrBuilder> 
+        getTsdkUaEventFieldBuilder() {
+      if (tsdkUaEventBuilder_ == null) {
+        tsdkUaEventBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.wireless.android.sdk.stats.TSdkUAEvent, com.google.wireless.android.sdk.stats.TSdkUAEvent.Builder, com.google.wireless.android.sdk.stats.TSdkUAEventOrBuilder>(
+                getTsdkUaEvent(),
+                getParentForChildren(),
+                isClean());
+        tsdkUaEvent_ = null;
+      }
+      return tsdkUaEventBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

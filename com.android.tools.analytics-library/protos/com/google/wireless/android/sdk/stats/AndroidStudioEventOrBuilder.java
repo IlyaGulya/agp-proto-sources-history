@@ -843,7 +843,9 @@ public interface AndroidStudioEventOrBuilder extends
   /**
    * <pre>
    * Client-side salted (rotating every 532 days), sha256 of the project id.
-   * set when kind = PROJECT_STRUCTURE_* or kind = APK_ANALYZER_STATS
+   * set when kind = PROJECT_STRUCTURE_*
+   *       or kind = APK_ANALYZER_STATS
+   *       or kind = TSDKUA_EVENT
    * </pre>
    *
    * <code>optional string project_id = 31;</code>
@@ -853,7 +855,9 @@ public interface AndroidStudioEventOrBuilder extends
   /**
    * <pre>
    * Client-side salted (rotating every 532 days), sha256 of the project id.
-   * set when kind = PROJECT_STRUCTURE_* or kind = APK_ANALYZER_STATS
+   * set when kind = PROJECT_STRUCTURE_*
+   *       or kind = APK_ANALYZER_STATS
+   *       or kind = TSDKUA_EVENT
    * </pre>
    *
    * <code>optional string project_id = 31;</code>
@@ -863,7 +867,9 @@ public interface AndroidStudioEventOrBuilder extends
   /**
    * <pre>
    * Client-side salted (rotating every 532 days), sha256 of the project id.
-   * set when kind = PROJECT_STRUCTURE_* or kind = APK_ANALYZER_STATS
+   * set when kind = PROJECT_STRUCTURE_*
+   *       or kind = APK_ANALYZER_STATS
+   *       or kind = TSDKUA_EVENT
    * </pre>
    *
    * <code>optional string project_id = 31;</code>
@@ -4477,4 +4483,31 @@ public interface AndroidStudioEventOrBuilder extends
    * <code>optional .android_studio.SafeModeStatsEvent safe_mode_stats_event = 159;</code>
    */
   com.google.wireless.android.sdk.stats.SafeModeStatsEventOrBuilder getSafeModeStatsEventOrBuilder();
+
+  /**
+   * <pre>
+   * set when kind = TSDKUA_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.TSdkUAEvent tsdk_ua_event = 160;</code>
+   * @return Whether the tsdkUaEvent field is set.
+   */
+  boolean hasTsdkUaEvent();
+  /**
+   * <pre>
+   * set when kind = TSDKUA_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.TSdkUAEvent tsdk_ua_event = 160;</code>
+   * @return The tsdkUaEvent.
+   */
+  com.google.wireless.android.sdk.stats.TSdkUAEvent getTsdkUaEvent();
+  /**
+   * <pre>
+   * set when kind = TSDKUA_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.TSdkUAEvent tsdk_ua_event = 160;</code>
+   */
+  com.google.wireless.android.sdk.stats.TSdkUAEventOrBuilder getTsdkUaEventOrBuilder();
 }
