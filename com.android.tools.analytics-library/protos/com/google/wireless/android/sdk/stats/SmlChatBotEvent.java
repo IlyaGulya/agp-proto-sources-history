@@ -1538,6 +1538,456 @@ private static final long serialVersionUID = 0L;
     // @@protoc_insertion_point(enum_scope:android_studio.SmlChatBotEvent.ToolCallStatus)
   }
 
+  /**
+   * Protobuf enum {@code android_studio.SmlChatBotEvent.ToolCallResponseStatus}
+   */
+  public enum ToolCallResponseStatus
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <code>UNKNOWN_RESPONSE_STATUS = 0;</code>
+     */
+    UNKNOWN_RESPONSE_STATUS(0),
+    /**
+     * <pre>
+     * The tool call was successfully executed. Prefer more specific status
+     * where possible.
+     * </pre>
+     *
+     * <code>OK = 1;</code>
+     */
+    OK(1),
+    /**
+     * <pre>
+     * An error occurred when executing the tool call. Prefer more specific
+     * errors where possible.
+     * </pre>
+     *
+     * <code>ERROR_OCCURRED = 2;</code>
+     */
+    ERROR_OCCURRED(2),
+    /**
+     * <pre>
+     * The file was not found.
+     * </pre>
+     *
+     * <code>ERR_FILE_NOT_FOUND = 3;</code>
+     */
+    ERR_FILE_NOT_FOUND(3),
+    /**
+     * <pre>
+     * The file was not accessible.
+     * </pre>
+     *
+     * <code>ERR_FILE_INACCESSIBLE = 4;</code>
+     */
+    ERR_FILE_INACCESSIBLE(4),
+    /**
+     * <pre>
+     * The file was not in the project.
+     * </pre>
+     *
+     * <code>ERR_FILE_NOT_IN_PROJECT = 5;</code>
+     */
+    ERR_FILE_NOT_IN_PROJECT(5),
+    /**
+     * <pre>
+     * The file was blocked by AI exclude.
+     * </pre>
+     *
+     * <code>ERR_FILE_BLOCKED_BY_AI_EXCLUDE = 6;</code>
+     */
+    ERR_FILE_BLOCKED_BY_AI_EXCLUDE(6),
+    /**
+     * <pre>
+     * Encountered an IOException when executing the tool call.
+     * </pre>
+     *
+     * <code>ERR_IO_EXECPTION = 7;</code>
+     */
+    ERR_IO_EXECPTION(7),
+    /**
+     * <pre>
+     * No occurrences were found to replace in the replace text tool.
+     * </pre>
+     *
+     * <code>ERR_REPLACE_TEXT_NO_OCCURRENCES_FOUND_TO_REPLACE = 8;</code>
+     */
+    ERR_REPLACE_TEXT_NO_OCCURRENCES_FOUND_TO_REPLACE(8),
+    /**
+     * <pre>
+     * The new text is identical to the current text.
+     * </pre>
+     *
+     * <code>ERR_WRITE_FILE_NEW_TEXT_IDENTICAL_TO_CURRENT = 9;</code>
+     */
+    ERR_WRITE_FILE_NEW_TEXT_IDENTICAL_TO_CURRENT(9),
+    /**
+     * <pre>
+     * The user rejected the tool call.
+     * </pre>
+     *
+     * <code>ERR_USER_REJECTED_PROPOSAL = 10;</code>
+     */
+    ERR_USER_REJECTED_PROPOSAL(10),
+    /**
+     * <pre>
+     * The build finished successfully.
+     * </pre>
+     *
+     * <code>BUILD_FINISHED_SUCCESSFULLY = 11;</code>
+     */
+    BUILD_FINISHED_SUCCESSFULLY(11),
+    /**
+     * <pre>
+     * The build finished with errors.
+     * The output had "Build finished with errors" in it.
+     * </pre>
+     *
+     * <code>BUILD_FINISHED_WITH_ERRORS = 12;</code>
+     */
+    BUILD_FINISHED_WITH_ERRORS(12),
+    /**
+     * <pre>
+     * The build failed to finish. The output had "Build failed" in it.
+     * </pre>
+     *
+     * <code>BUILD_FAILED = 13;</code>
+     */
+    BUILD_FAILED(13),
+    /**
+     * <pre>
+     * The build was interrupted.
+     * </pre>
+     *
+     * <code>BUILD_INTERRUPTED = 14;</code>
+     */
+    BUILD_INTERRUPTED(14),
+    /**
+     * <pre>
+     * Gradle tool could not find any modules in the project.
+     * </pre>
+     *
+     * <code>GRADLE_ERR_NO_MODULES = 15;</code>
+     */
+    GRADLE_ERR_NO_MODULES(15),
+    /**
+     * <pre>
+     * Gradle tool could not run because project is not android.
+     * </pre>
+     *
+     * <code>GRADLE_ERR_NOT_ANDROID = 16;</code>
+     */
+    GRADLE_ERR_NOT_ANDROID(16),
+    /**
+     * <pre>
+     * Gradle tool could not find the module.
+     * </pre>
+     *
+     * <code>GRADLE_ERR_MODULE_NOT_FOUND = 17;</code>
+     */
+    GRADLE_ERR_MODULE_NOT_FOUND(17),
+    /**
+     * <pre>
+     * Gradle tool could not find the artifact.
+     * </pre>
+     *
+     * <code>GRADLE_ERR_ARTIFACT_NOT_FOUND = 18;</code>
+     */
+    GRADLE_ERR_ARTIFACT_NOT_FOUND(18),
+    /**
+     * <pre>
+     * Gradle tool could not find the variant.
+     * </pre>
+     *
+     * <code>GRADLE_ERR_VARIANT_NOT_FOUND = 19;</code>
+     */
+    GRADLE_ERR_VARIANT_NOT_FOUND(19),
+    /**
+     * <pre>
+     * Artifact provided to the Gradle tool was different type than expected.
+     * </pre>
+     *
+     * <code>GRADLE_ERR_WRONG_ARTIFACT = 20;</code>
+     */
+    GRADLE_ERR_WRONG_ARTIFACT(20),
+    /**
+     * <pre>
+     * Requested data was missing.
+     * </pre>
+     *
+     * <code>GRADLE_ERR_MISSING_DATA = 21;</code>
+     */
+    GRADLE_ERR_MISSING_DATA(21),
+    ;
+
+    /**
+     * <code>UNKNOWN_RESPONSE_STATUS = 0;</code>
+     */
+    public static final int UNKNOWN_RESPONSE_STATUS_VALUE = 0;
+    /**
+     * <pre>
+     * The tool call was successfully executed. Prefer more specific status
+     * where possible.
+     * </pre>
+     *
+     * <code>OK = 1;</code>
+     */
+    public static final int OK_VALUE = 1;
+    /**
+     * <pre>
+     * An error occurred when executing the tool call. Prefer more specific
+     * errors where possible.
+     * </pre>
+     *
+     * <code>ERROR_OCCURRED = 2;</code>
+     */
+    public static final int ERROR_OCCURRED_VALUE = 2;
+    /**
+     * <pre>
+     * The file was not found.
+     * </pre>
+     *
+     * <code>ERR_FILE_NOT_FOUND = 3;</code>
+     */
+    public static final int ERR_FILE_NOT_FOUND_VALUE = 3;
+    /**
+     * <pre>
+     * The file was not accessible.
+     * </pre>
+     *
+     * <code>ERR_FILE_INACCESSIBLE = 4;</code>
+     */
+    public static final int ERR_FILE_INACCESSIBLE_VALUE = 4;
+    /**
+     * <pre>
+     * The file was not in the project.
+     * </pre>
+     *
+     * <code>ERR_FILE_NOT_IN_PROJECT = 5;</code>
+     */
+    public static final int ERR_FILE_NOT_IN_PROJECT_VALUE = 5;
+    /**
+     * <pre>
+     * The file was blocked by AI exclude.
+     * </pre>
+     *
+     * <code>ERR_FILE_BLOCKED_BY_AI_EXCLUDE = 6;</code>
+     */
+    public static final int ERR_FILE_BLOCKED_BY_AI_EXCLUDE_VALUE = 6;
+    /**
+     * <pre>
+     * Encountered an IOException when executing the tool call.
+     * </pre>
+     *
+     * <code>ERR_IO_EXECPTION = 7;</code>
+     */
+    public static final int ERR_IO_EXECPTION_VALUE = 7;
+    /**
+     * <pre>
+     * No occurrences were found to replace in the replace text tool.
+     * </pre>
+     *
+     * <code>ERR_REPLACE_TEXT_NO_OCCURRENCES_FOUND_TO_REPLACE = 8;</code>
+     */
+    public static final int ERR_REPLACE_TEXT_NO_OCCURRENCES_FOUND_TO_REPLACE_VALUE = 8;
+    /**
+     * <pre>
+     * The new text is identical to the current text.
+     * </pre>
+     *
+     * <code>ERR_WRITE_FILE_NEW_TEXT_IDENTICAL_TO_CURRENT = 9;</code>
+     */
+    public static final int ERR_WRITE_FILE_NEW_TEXT_IDENTICAL_TO_CURRENT_VALUE = 9;
+    /**
+     * <pre>
+     * The user rejected the tool call.
+     * </pre>
+     *
+     * <code>ERR_USER_REJECTED_PROPOSAL = 10;</code>
+     */
+    public static final int ERR_USER_REJECTED_PROPOSAL_VALUE = 10;
+    /**
+     * <pre>
+     * The build finished successfully.
+     * </pre>
+     *
+     * <code>BUILD_FINISHED_SUCCESSFULLY = 11;</code>
+     */
+    public static final int BUILD_FINISHED_SUCCESSFULLY_VALUE = 11;
+    /**
+     * <pre>
+     * The build finished with errors.
+     * The output had "Build finished with errors" in it.
+     * </pre>
+     *
+     * <code>BUILD_FINISHED_WITH_ERRORS = 12;</code>
+     */
+    public static final int BUILD_FINISHED_WITH_ERRORS_VALUE = 12;
+    /**
+     * <pre>
+     * The build failed to finish. The output had "Build failed" in it.
+     * </pre>
+     *
+     * <code>BUILD_FAILED = 13;</code>
+     */
+    public static final int BUILD_FAILED_VALUE = 13;
+    /**
+     * <pre>
+     * The build was interrupted.
+     * </pre>
+     *
+     * <code>BUILD_INTERRUPTED = 14;</code>
+     */
+    public static final int BUILD_INTERRUPTED_VALUE = 14;
+    /**
+     * <pre>
+     * Gradle tool could not find any modules in the project.
+     * </pre>
+     *
+     * <code>GRADLE_ERR_NO_MODULES = 15;</code>
+     */
+    public static final int GRADLE_ERR_NO_MODULES_VALUE = 15;
+    /**
+     * <pre>
+     * Gradle tool could not run because project is not android.
+     * </pre>
+     *
+     * <code>GRADLE_ERR_NOT_ANDROID = 16;</code>
+     */
+    public static final int GRADLE_ERR_NOT_ANDROID_VALUE = 16;
+    /**
+     * <pre>
+     * Gradle tool could not find the module.
+     * </pre>
+     *
+     * <code>GRADLE_ERR_MODULE_NOT_FOUND = 17;</code>
+     */
+    public static final int GRADLE_ERR_MODULE_NOT_FOUND_VALUE = 17;
+    /**
+     * <pre>
+     * Gradle tool could not find the artifact.
+     * </pre>
+     *
+     * <code>GRADLE_ERR_ARTIFACT_NOT_FOUND = 18;</code>
+     */
+    public static final int GRADLE_ERR_ARTIFACT_NOT_FOUND_VALUE = 18;
+    /**
+     * <pre>
+     * Gradle tool could not find the variant.
+     * </pre>
+     *
+     * <code>GRADLE_ERR_VARIANT_NOT_FOUND = 19;</code>
+     */
+    public static final int GRADLE_ERR_VARIANT_NOT_FOUND_VALUE = 19;
+    /**
+     * <pre>
+     * Artifact provided to the Gradle tool was different type than expected.
+     * </pre>
+     *
+     * <code>GRADLE_ERR_WRONG_ARTIFACT = 20;</code>
+     */
+    public static final int GRADLE_ERR_WRONG_ARTIFACT_VALUE = 20;
+    /**
+     * <pre>
+     * Requested data was missing.
+     * </pre>
+     *
+     * <code>GRADLE_ERR_MISSING_DATA = 21;</code>
+     */
+    public static final int GRADLE_ERR_MISSING_DATA_VALUE = 21;
+
+
+    public final int getNumber() {
+      return value;
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     * @deprecated Use {@link #forNumber(int)} instead.
+     */
+    @java.lang.Deprecated
+    public static ToolCallResponseStatus valueOf(int value) {
+      return forNumber(value);
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     */
+    public static ToolCallResponseStatus forNumber(int value) {
+      switch (value) {
+        case 0: return UNKNOWN_RESPONSE_STATUS;
+        case 1: return OK;
+        case 2: return ERROR_OCCURRED;
+        case 3: return ERR_FILE_NOT_FOUND;
+        case 4: return ERR_FILE_INACCESSIBLE;
+        case 5: return ERR_FILE_NOT_IN_PROJECT;
+        case 6: return ERR_FILE_BLOCKED_BY_AI_EXCLUDE;
+        case 7: return ERR_IO_EXECPTION;
+        case 8: return ERR_REPLACE_TEXT_NO_OCCURRENCES_FOUND_TO_REPLACE;
+        case 9: return ERR_WRITE_FILE_NEW_TEXT_IDENTICAL_TO_CURRENT;
+        case 10: return ERR_USER_REJECTED_PROPOSAL;
+        case 11: return BUILD_FINISHED_SUCCESSFULLY;
+        case 12: return BUILD_FINISHED_WITH_ERRORS;
+        case 13: return BUILD_FAILED;
+        case 14: return BUILD_INTERRUPTED;
+        case 15: return GRADLE_ERR_NO_MODULES;
+        case 16: return GRADLE_ERR_NOT_ANDROID;
+        case 17: return GRADLE_ERR_MODULE_NOT_FOUND;
+        case 18: return GRADLE_ERR_ARTIFACT_NOT_FOUND;
+        case 19: return GRADLE_ERR_VARIANT_NOT_FOUND;
+        case 20: return GRADLE_ERR_WRONG_ARTIFACT;
+        case 21: return GRADLE_ERR_MISSING_DATA;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<ToolCallResponseStatus>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static final com.google.protobuf.Internal.EnumLiteMap<
+        ToolCallResponseStatus> internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<ToolCallResponseStatus>() {
+            public ToolCallResponseStatus findValueByNumber(int number) {
+              return ToolCallResponseStatus.forNumber(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      return getDescriptor().getValues().get(ordinal());
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return com.google.wireless.android.sdk.stats.SmlChatBotEvent.getDescriptor().getEnumTypes().get(9);
+    }
+
+    private static final ToolCallResponseStatus[] VALUES = values();
+
+    public static ToolCallResponseStatus valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int value;
+
+    private ToolCallResponseStatus(int value) {
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:android_studio.SmlChatBotEvent.ToolCallResponseStatus)
+  }
+
   public interface BotResponseOrBuilder extends
       // @@protoc_insertion_point(interface_extends:android_studio.SmlChatBotEvent.BotResponse)
       com.google.protobuf.MessageOrBuilder {
@@ -11872,6 +12322,898 @@ private static final long serialVersionUID = 0L;
 
   }
 
+  public interface ToolCallResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:android_studio.SmlChatBotEvent.ToolCallResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>optional string tool_name = 1;</code>
+     * @return Whether the toolName field is set.
+     */
+    boolean hasToolName();
+    /**
+     * <code>optional string tool_name = 1;</code>
+     * @return The toolName.
+     */
+    java.lang.String getToolName();
+    /**
+     * <code>optional string tool_name = 1;</code>
+     * @return The bytes for toolName.
+     */
+    com.google.protobuf.ByteString
+        getToolNameBytes();
+
+    /**
+     * <pre>
+     * The status of the tool call response.
+     * </pre>
+     *
+     * <code>optional .android_studio.SmlChatBotEvent.ToolCallResponseStatus response_status = 2;</code>
+     * @return Whether the responseStatus field is set.
+     */
+    boolean hasResponseStatus();
+    /**
+     * <pre>
+     * The status of the tool call response.
+     * </pre>
+     *
+     * <code>optional .android_studio.SmlChatBotEvent.ToolCallResponseStatus response_status = 2;</code>
+     * @return The responseStatus.
+     */
+    com.google.wireless.android.sdk.stats.SmlChatBotEvent.ToolCallResponseStatus getResponseStatus();
+
+    /**
+     * <code>optional .android_studio.SmlResponseMetadata metadata = 3 [lazy = true];</code>
+     * @return Whether the metadata field is set.
+     */
+    boolean hasMetadata();
+    /**
+     * <code>optional .android_studio.SmlResponseMetadata metadata = 3 [lazy = true];</code>
+     * @return The metadata.
+     */
+    com.google.wireless.android.sdk.stats.SmlResponseMetadata getMetadata();
+    /**
+     * <code>optional .android_studio.SmlResponseMetadata metadata = 3 [lazy = true];</code>
+     */
+    com.google.wireless.android.sdk.stats.SmlResponseMetadataOrBuilder getMetadataOrBuilder();
+  }
+  /**
+   * Protobuf type {@code android_studio.SmlChatBotEvent.ToolCallResponse}
+   */
+  public static final class ToolCallResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:android_studio.SmlChatBotEvent.ToolCallResponse)
+      ToolCallResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use ToolCallResponse.newBuilder() to construct.
+    private ToolCallResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ToolCallResponse() {
+      toolName_ = "";
+      responseStatus_ = 0;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ToolCallResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_SmlChatBotEvent_ToolCallResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_SmlChatBotEvent_ToolCallResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.google.wireless.android.sdk.stats.SmlChatBotEvent.ToolCallResponse.class, com.google.wireless.android.sdk.stats.SmlChatBotEvent.ToolCallResponse.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int TOOL_NAME_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object toolName_ = "";
+    /**
+     * <code>optional string tool_name = 1;</code>
+     * @return Whether the toolName field is set.
+     */
+    @java.lang.Override
+    public boolean hasToolName() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <code>optional string tool_name = 1;</code>
+     * @return The toolName.
+     */
+    @java.lang.Override
+    public java.lang.String getToolName() {
+      java.lang.Object ref = toolName_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          toolName_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string tool_name = 1;</code>
+     * @return The bytes for toolName.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getToolNameBytes() {
+      java.lang.Object ref = toolName_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        toolName_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int RESPONSE_STATUS_FIELD_NUMBER = 2;
+    private int responseStatus_ = 0;
+    /**
+     * <pre>
+     * The status of the tool call response.
+     * </pre>
+     *
+     * <code>optional .android_studio.SmlChatBotEvent.ToolCallResponseStatus response_status = 2;</code>
+     * @return Whether the responseStatus field is set.
+     */
+    @java.lang.Override public boolean hasResponseStatus() {
+      return ((bitField0_ & 0x00000002) != 0);
+    }
+    /**
+     * <pre>
+     * The status of the tool call response.
+     * </pre>
+     *
+     * <code>optional .android_studio.SmlChatBotEvent.ToolCallResponseStatus response_status = 2;</code>
+     * @return The responseStatus.
+     */
+    @java.lang.Override public com.google.wireless.android.sdk.stats.SmlChatBotEvent.ToolCallResponseStatus getResponseStatus() {
+      com.google.wireless.android.sdk.stats.SmlChatBotEvent.ToolCallResponseStatus result = com.google.wireless.android.sdk.stats.SmlChatBotEvent.ToolCallResponseStatus.forNumber(responseStatus_);
+      return result == null ? com.google.wireless.android.sdk.stats.SmlChatBotEvent.ToolCallResponseStatus.UNKNOWN_RESPONSE_STATUS : result;
+    }
+
+    public static final int METADATA_FIELD_NUMBER = 3;
+    private com.google.wireless.android.sdk.stats.SmlResponseMetadata metadata_;
+    /**
+     * <code>optional .android_studio.SmlResponseMetadata metadata = 3 [lazy = true];</code>
+     * @return Whether the metadata field is set.
+     */
+    @java.lang.Override
+    public boolean hasMetadata() {
+      return ((bitField0_ & 0x00000004) != 0);
+    }
+    /**
+     * <code>optional .android_studio.SmlResponseMetadata metadata = 3 [lazy = true];</code>
+     * @return The metadata.
+     */
+    @java.lang.Override
+    public com.google.wireless.android.sdk.stats.SmlResponseMetadata getMetadata() {
+      return metadata_ == null ? com.google.wireless.android.sdk.stats.SmlResponseMetadata.getDefaultInstance() : metadata_;
+    }
+    /**
+     * <code>optional .android_studio.SmlResponseMetadata metadata = 3 [lazy = true];</code>
+     */
+    @java.lang.Override
+    public com.google.wireless.android.sdk.stats.SmlResponseMetadataOrBuilder getMetadataOrBuilder() {
+      return metadata_ == null ? com.google.wireless.android.sdk.stats.SmlResponseMetadata.getDefaultInstance() : metadata_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (((bitField0_ & 0x00000001) != 0)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, toolName_);
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        output.writeEnum(2, responseStatus_);
+      }
+      if (((bitField0_ & 0x00000004) != 0)) {
+        output.writeMessage(3, getMetadata());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) != 0)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, toolName_);
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(2, responseStatus_);
+      }
+      if (((bitField0_ & 0x00000004) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getMetadata());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.google.wireless.android.sdk.stats.SmlChatBotEvent.ToolCallResponse)) {
+        return super.equals(obj);
+      }
+      com.google.wireless.android.sdk.stats.SmlChatBotEvent.ToolCallResponse other = (com.google.wireless.android.sdk.stats.SmlChatBotEvent.ToolCallResponse) obj;
+
+      if (hasToolName() != other.hasToolName()) return false;
+      if (hasToolName()) {
+        if (!getToolName()
+            .equals(other.getToolName())) return false;
+      }
+      if (hasResponseStatus() != other.hasResponseStatus()) return false;
+      if (hasResponseStatus()) {
+        if (responseStatus_ != other.responseStatus_) return false;
+      }
+      if (hasMetadata() != other.hasMetadata()) return false;
+      if (hasMetadata()) {
+        if (!getMetadata()
+            .equals(other.getMetadata())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasToolName()) {
+        hash = (37 * hash) + TOOL_NAME_FIELD_NUMBER;
+        hash = (53 * hash) + getToolName().hashCode();
+      }
+      if (hasResponseStatus()) {
+        hash = (37 * hash) + RESPONSE_STATUS_FIELD_NUMBER;
+        hash = (53 * hash) + responseStatus_;
+      }
+      if (hasMetadata()) {
+        hash = (37 * hash) + METADATA_FIELD_NUMBER;
+        hash = (53 * hash) + getMetadata().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.google.wireless.android.sdk.stats.SmlChatBotEvent.ToolCallResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.google.wireless.android.sdk.stats.SmlChatBotEvent.ToolCallResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.google.wireless.android.sdk.stats.SmlChatBotEvent.ToolCallResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.google.wireless.android.sdk.stats.SmlChatBotEvent.ToolCallResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.google.wireless.android.sdk.stats.SmlChatBotEvent.ToolCallResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.google.wireless.android.sdk.stats.SmlChatBotEvent.ToolCallResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.google.wireless.android.sdk.stats.SmlChatBotEvent.ToolCallResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.google.wireless.android.sdk.stats.SmlChatBotEvent.ToolCallResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.google.wireless.android.sdk.stats.SmlChatBotEvent.ToolCallResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.google.wireless.android.sdk.stats.SmlChatBotEvent.ToolCallResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.google.wireless.android.sdk.stats.SmlChatBotEvent.ToolCallResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.google.wireless.android.sdk.stats.SmlChatBotEvent.ToolCallResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.google.wireless.android.sdk.stats.SmlChatBotEvent.ToolCallResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code android_studio.SmlChatBotEvent.ToolCallResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:android_studio.SmlChatBotEvent.ToolCallResponse)
+        com.google.wireless.android.sdk.stats.SmlChatBotEvent.ToolCallResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_SmlChatBotEvent_ToolCallResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_SmlChatBotEvent_ToolCallResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.google.wireless.android.sdk.stats.SmlChatBotEvent.ToolCallResponse.class, com.google.wireless.android.sdk.stats.SmlChatBotEvent.ToolCallResponse.Builder.class);
+      }
+
+      // Construct using com.google.wireless.android.sdk.stats.SmlChatBotEvent.ToolCallResponse.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getMetadataFieldBuilder();
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        toolName_ = "";
+        responseStatus_ = 0;
+        metadata_ = null;
+        if (metadataBuilder_ != null) {
+          metadataBuilder_.dispose();
+          metadataBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_SmlChatBotEvent_ToolCallResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.google.wireless.android.sdk.stats.SmlChatBotEvent.ToolCallResponse getDefaultInstanceForType() {
+        return com.google.wireless.android.sdk.stats.SmlChatBotEvent.ToolCallResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.google.wireless.android.sdk.stats.SmlChatBotEvent.ToolCallResponse build() {
+        com.google.wireless.android.sdk.stats.SmlChatBotEvent.ToolCallResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.google.wireless.android.sdk.stats.SmlChatBotEvent.ToolCallResponse buildPartial() {
+        com.google.wireless.android.sdk.stats.SmlChatBotEvent.ToolCallResponse result = new com.google.wireless.android.sdk.stats.SmlChatBotEvent.ToolCallResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.google.wireless.android.sdk.stats.SmlChatBotEvent.ToolCallResponse result) {
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.toolName_ = toolName_;
+          to_bitField0_ |= 0x00000001;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.responseStatus_ = responseStatus_;
+          to_bitField0_ |= 0x00000002;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.metadata_ = metadataBuilder_ == null
+              ? metadata_
+              : metadataBuilder_.build();
+          to_bitField0_ |= 0x00000004;
+        }
+        result.bitField0_ |= to_bitField0_;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.google.wireless.android.sdk.stats.SmlChatBotEvent.ToolCallResponse) {
+          return mergeFrom((com.google.wireless.android.sdk.stats.SmlChatBotEvent.ToolCallResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.google.wireless.android.sdk.stats.SmlChatBotEvent.ToolCallResponse other) {
+        if (other == com.google.wireless.android.sdk.stats.SmlChatBotEvent.ToolCallResponse.getDefaultInstance()) return this;
+        if (other.hasToolName()) {
+          toolName_ = other.toolName_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (other.hasResponseStatus()) {
+          setResponseStatus(other.getResponseStatus());
+        }
+        if (other.hasMetadata()) {
+          mergeMetadata(other.getMetadata());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                toolName_ = input.readBytes();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 16: {
+                int tmpRaw = input.readEnum();
+                com.google.wireless.android.sdk.stats.SmlChatBotEvent.ToolCallResponseStatus tmpValue =
+                    com.google.wireless.android.sdk.stats.SmlChatBotEvent.ToolCallResponseStatus.forNumber(tmpRaw);
+                if (tmpValue == null) {
+                  mergeUnknownVarintField(2, tmpRaw);
+                } else {
+                  responseStatus_ = tmpRaw;
+                  bitField0_ |= 0x00000002;
+                }
+                break;
+              } // case 16
+              case 26: {
+                input.readMessage(
+                    getMetadataFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object toolName_ = "";
+      /**
+       * <code>optional string tool_name = 1;</code>
+       * @return Whether the toolName field is set.
+       */
+      public boolean hasToolName() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>optional string tool_name = 1;</code>
+       * @return The toolName.
+       */
+      public java.lang.String getToolName() {
+        java.lang.Object ref = toolName_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            toolName_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string tool_name = 1;</code>
+       * @return The bytes for toolName.
+       */
+      public com.google.protobuf.ByteString
+          getToolNameBytes() {
+        java.lang.Object ref = toolName_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          toolName_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string tool_name = 1;</code>
+       * @param value The toolName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setToolName(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        toolName_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string tool_name = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearToolName() {
+        toolName_ = getDefaultInstance().getToolName();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string tool_name = 1;</code>
+       * @param value The bytes for toolName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setToolNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        toolName_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private int responseStatus_ = 0;
+      /**
+       * <pre>
+       * The status of the tool call response.
+       * </pre>
+       *
+       * <code>optional .android_studio.SmlChatBotEvent.ToolCallResponseStatus response_status = 2;</code>
+       * @return Whether the responseStatus field is set.
+       */
+      @java.lang.Override public boolean hasResponseStatus() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <pre>
+       * The status of the tool call response.
+       * </pre>
+       *
+       * <code>optional .android_studio.SmlChatBotEvent.ToolCallResponseStatus response_status = 2;</code>
+       * @return The responseStatus.
+       */
+      @java.lang.Override
+      public com.google.wireless.android.sdk.stats.SmlChatBotEvent.ToolCallResponseStatus getResponseStatus() {
+        com.google.wireless.android.sdk.stats.SmlChatBotEvent.ToolCallResponseStatus result = com.google.wireless.android.sdk.stats.SmlChatBotEvent.ToolCallResponseStatus.forNumber(responseStatus_);
+        return result == null ? com.google.wireless.android.sdk.stats.SmlChatBotEvent.ToolCallResponseStatus.UNKNOWN_RESPONSE_STATUS : result;
+      }
+      /**
+       * <pre>
+       * The status of the tool call response.
+       * </pre>
+       *
+       * <code>optional .android_studio.SmlChatBotEvent.ToolCallResponseStatus response_status = 2;</code>
+       * @param value The responseStatus to set.
+       * @return This builder for chaining.
+       */
+      public Builder setResponseStatus(com.google.wireless.android.sdk.stats.SmlChatBotEvent.ToolCallResponseStatus value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x00000002;
+        responseStatus_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The status of the tool call response.
+       * </pre>
+       *
+       * <code>optional .android_studio.SmlChatBotEvent.ToolCallResponseStatus response_status = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearResponseStatus() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        responseStatus_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private com.google.wireless.android.sdk.stats.SmlResponseMetadata metadata_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.wireless.android.sdk.stats.SmlResponseMetadata, com.google.wireless.android.sdk.stats.SmlResponseMetadata.Builder, com.google.wireless.android.sdk.stats.SmlResponseMetadataOrBuilder> metadataBuilder_;
+      /**
+       * <code>optional .android_studio.SmlResponseMetadata metadata = 3 [lazy = true];</code>
+       * @return Whether the metadata field is set.
+       */
+      public boolean hasMetadata() {
+        return ((bitField0_ & 0x00000004) != 0);
+      }
+      /**
+       * <code>optional .android_studio.SmlResponseMetadata metadata = 3 [lazy = true];</code>
+       * @return The metadata.
+       */
+      public com.google.wireless.android.sdk.stats.SmlResponseMetadata getMetadata() {
+        if (metadataBuilder_ == null) {
+          return metadata_ == null ? com.google.wireless.android.sdk.stats.SmlResponseMetadata.getDefaultInstance() : metadata_;
+        } else {
+          return metadataBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>optional .android_studio.SmlResponseMetadata metadata = 3 [lazy = true];</code>
+       */
+      public Builder setMetadata(com.google.wireless.android.sdk.stats.SmlResponseMetadata value) {
+        if (metadataBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          metadata_ = value;
+        } else {
+          metadataBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional .android_studio.SmlResponseMetadata metadata = 3 [lazy = true];</code>
+       */
+      public Builder setMetadata(
+          com.google.wireless.android.sdk.stats.SmlResponseMetadata.Builder builderForValue) {
+        if (metadataBuilder_ == null) {
+          metadata_ = builderForValue.build();
+        } else {
+          metadataBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional .android_studio.SmlResponseMetadata metadata = 3 [lazy = true];</code>
+       */
+      public Builder mergeMetadata(com.google.wireless.android.sdk.stats.SmlResponseMetadata value) {
+        if (metadataBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) != 0) &&
+            metadata_ != null &&
+            metadata_ != com.google.wireless.android.sdk.stats.SmlResponseMetadata.getDefaultInstance()) {
+            getMetadataBuilder().mergeFrom(value);
+          } else {
+            metadata_ = value;
+          }
+        } else {
+          metadataBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional .android_studio.SmlResponseMetadata metadata = 3 [lazy = true];</code>
+       */
+      public Builder clearMetadata() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        metadata_ = null;
+        if (metadataBuilder_ != null) {
+          metadataBuilder_.dispose();
+          metadataBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional .android_studio.SmlResponseMetadata metadata = 3 [lazy = true];</code>
+       */
+      public com.google.wireless.android.sdk.stats.SmlResponseMetadata.Builder getMetadataBuilder() {
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return getMetadataFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>optional .android_studio.SmlResponseMetadata metadata = 3 [lazy = true];</code>
+       */
+      public com.google.wireless.android.sdk.stats.SmlResponseMetadataOrBuilder getMetadataOrBuilder() {
+        if (metadataBuilder_ != null) {
+          return metadataBuilder_.getMessageOrBuilder();
+        } else {
+          return metadata_ == null ?
+              com.google.wireless.android.sdk.stats.SmlResponseMetadata.getDefaultInstance() : metadata_;
+        }
+      }
+      /**
+       * <code>optional .android_studio.SmlResponseMetadata metadata = 3 [lazy = true];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.wireless.android.sdk.stats.SmlResponseMetadata, com.google.wireless.android.sdk.stats.SmlResponseMetadata.Builder, com.google.wireless.android.sdk.stats.SmlResponseMetadataOrBuilder> 
+          getMetadataFieldBuilder() {
+        if (metadataBuilder_ == null) {
+          metadataBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.wireless.android.sdk.stats.SmlResponseMetadata, com.google.wireless.android.sdk.stats.SmlResponseMetadata.Builder, com.google.wireless.android.sdk.stats.SmlResponseMetadataOrBuilder>(
+                  getMetadata(),
+                  getParentForChildren(),
+                  isClean());
+          metadata_ = null;
+        }
+        return metadataBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:android_studio.SmlChatBotEvent.ToolCallResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:android_studio.SmlChatBotEvent.ToolCallResponse)
+    private static final com.google.wireless.android.sdk.stats.SmlChatBotEvent.ToolCallResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.google.wireless.android.sdk.stats.SmlChatBotEvent.ToolCallResponse();
+    }
+
+    public static com.google.wireless.android.sdk.stats.SmlChatBotEvent.ToolCallResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<ToolCallResponse>
+        PARSER = new com.google.protobuf.AbstractParser<ToolCallResponse>() {
+      @java.lang.Override
+      public ToolCallResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<ToolCallResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ToolCallResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.wireless.android.sdk.stats.SmlChatBotEvent.ToolCallResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private int bitField0_;
   private int contentCase_ = 0;
   @SuppressWarnings("serial")
@@ -11892,6 +13234,7 @@ private static final long serialVersionUID = 0L;
     CONTEXT_DRAWER_EVENT(11),
     TOOL_CALL(12),
     TOOL_CALL_FOLLOW_UP_EVENT(13),
+    TOOL_CALL_RESPONSE(14),
     CONTENT_NOT_SET(0);
     private final int value;
     private ContentCase(int value) {
@@ -11922,6 +13265,7 @@ private static final long serialVersionUID = 0L;
         case 11: return CONTEXT_DRAWER_EVENT;
         case 12: return TOOL_CALL;
         case 13: return TOOL_CALL_FOLLOW_UP_EVENT;
+        case 14: return TOOL_CALL_RESPONSE;
         case 0: return CONTENT_NOT_SET;
         default: return null;
       }
@@ -12340,6 +13684,37 @@ private static final long serialVersionUID = 0L;
     return com.google.wireless.android.sdk.stats.SmlChatBotEvent.ToolCallFollowUpEvent.getDefaultInstance();
   }
 
+  public static final int TOOL_CALL_RESPONSE_FIELD_NUMBER = 14;
+  /**
+   * <code>.android_studio.SmlChatBotEvent.ToolCallResponse tool_call_response = 14 [lazy = true];</code>
+   * @return Whether the toolCallResponse field is set.
+   */
+  @java.lang.Override
+  public boolean hasToolCallResponse() {
+    return contentCase_ == 14;
+  }
+  /**
+   * <code>.android_studio.SmlChatBotEvent.ToolCallResponse tool_call_response = 14 [lazy = true];</code>
+   * @return The toolCallResponse.
+   */
+  @java.lang.Override
+  public com.google.wireless.android.sdk.stats.SmlChatBotEvent.ToolCallResponse getToolCallResponse() {
+    if (contentCase_ == 14) {
+       return (com.google.wireless.android.sdk.stats.SmlChatBotEvent.ToolCallResponse) content_;
+    }
+    return com.google.wireless.android.sdk.stats.SmlChatBotEvent.ToolCallResponse.getDefaultInstance();
+  }
+  /**
+   * <code>.android_studio.SmlChatBotEvent.ToolCallResponse tool_call_response = 14 [lazy = true];</code>
+   */
+  @java.lang.Override
+  public com.google.wireless.android.sdk.stats.SmlChatBotEvent.ToolCallResponseOrBuilder getToolCallResponseOrBuilder() {
+    if (contentCase_ == 14) {
+       return (com.google.wireless.android.sdk.stats.SmlChatBotEvent.ToolCallResponse) content_;
+    }
+    return com.google.wireless.android.sdk.stats.SmlChatBotEvent.ToolCallResponse.getDefaultInstance();
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -12392,6 +13767,9 @@ private static final long serialVersionUID = 0L;
     }
     if (contentCase_ == 13) {
       output.writeMessage(13, (com.google.wireless.android.sdk.stats.SmlChatBotEvent.ToolCallFollowUpEvent) content_);
+    }
+    if (contentCase_ == 14) {
+      output.writeMessage(14, (com.google.wireless.android.sdk.stats.SmlChatBotEvent.ToolCallResponse) content_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -12453,6 +13831,10 @@ private static final long serialVersionUID = 0L;
     if (contentCase_ == 13) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(13, (com.google.wireless.android.sdk.stats.SmlChatBotEvent.ToolCallFollowUpEvent) content_);
+    }
+    if (contentCase_ == 14) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(14, (com.google.wireless.android.sdk.stats.SmlChatBotEvent.ToolCallResponse) content_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -12523,6 +13905,10 @@ private static final long serialVersionUID = 0L;
         if (!getToolCallFollowUpEvent()
             .equals(other.getToolCallFollowUpEvent())) return false;
         break;
+      case 14:
+        if (!getToolCallResponse()
+            .equals(other.getToolCallResponse())) return false;
+        break;
       case 0:
       default:
     }
@@ -12589,6 +13975,10 @@ private static final long serialVersionUID = 0L;
       case 13:
         hash = (37 * hash) + TOOL_CALL_FOLLOW_UP_EVENT_FIELD_NUMBER;
         hash = (53 * hash) + getToolCallFollowUpEvent().hashCode();
+        break;
+      case 14:
+        hash = (37 * hash) + TOOL_CALL_RESPONSE_FIELD_NUMBER;
+        hash = (53 * hash) + getToolCallResponse().hashCode();
         break;
       case 0:
       default:
@@ -12761,6 +14151,9 @@ private static final long serialVersionUID = 0L;
       if (toolCallFollowUpEventBuilder_ != null) {
         toolCallFollowUpEventBuilder_.clear();
       }
+      if (toolCallResponseBuilder_ != null) {
+        toolCallResponseBuilder_.clear();
+      }
       contentCase_ = 0;
       content_ = null;
       return this;
@@ -12854,6 +14247,10 @@ private static final long serialVersionUID = 0L;
           toolCallFollowUpEventBuilder_ != null) {
         result.content_ = toolCallFollowUpEventBuilder_.build();
       }
+      if (contentCase_ == 14 &&
+          toolCallResponseBuilder_ != null) {
+        result.content_ = toolCallResponseBuilder_.build();
+      }
     }
 
     @java.lang.Override
@@ -12919,6 +14316,10 @@ private static final long serialVersionUID = 0L;
         }
         case TOOL_CALL_FOLLOW_UP_EVENT: {
           mergeToolCallFollowUpEvent(other.getToolCallFollowUpEvent());
+          break;
+        }
+        case TOOL_CALL_RESPONSE: {
+          mergeToolCallResponse(other.getToolCallResponse());
           break;
         }
         case CONTENT_NOT_SET: {
@@ -13042,6 +14443,13 @@ private static final long serialVersionUID = 0L;
               contentCase_ = 13;
               break;
             } // case 106
+            case 114: {
+              input.readMessage(
+                  getToolCallResponseFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              contentCase_ = 14;
+              break;
+            } // case 114
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -14918,6 +16326,148 @@ private static final long serialVersionUID = 0L;
       contentCase_ = 13;
       onChanged();
       return toolCallFollowUpEventBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.SmlChatBotEvent.ToolCallResponse, com.google.wireless.android.sdk.stats.SmlChatBotEvent.ToolCallResponse.Builder, com.google.wireless.android.sdk.stats.SmlChatBotEvent.ToolCallResponseOrBuilder> toolCallResponseBuilder_;
+    /**
+     * <code>.android_studio.SmlChatBotEvent.ToolCallResponse tool_call_response = 14 [lazy = true];</code>
+     * @return Whether the toolCallResponse field is set.
+     */
+    @java.lang.Override
+    public boolean hasToolCallResponse() {
+      return contentCase_ == 14;
+    }
+    /**
+     * <code>.android_studio.SmlChatBotEvent.ToolCallResponse tool_call_response = 14 [lazy = true];</code>
+     * @return The toolCallResponse.
+     */
+    @java.lang.Override
+    public com.google.wireless.android.sdk.stats.SmlChatBotEvent.ToolCallResponse getToolCallResponse() {
+      if (toolCallResponseBuilder_ == null) {
+        if (contentCase_ == 14) {
+          return (com.google.wireless.android.sdk.stats.SmlChatBotEvent.ToolCallResponse) content_;
+        }
+        return com.google.wireless.android.sdk.stats.SmlChatBotEvent.ToolCallResponse.getDefaultInstance();
+      } else {
+        if (contentCase_ == 14) {
+          return toolCallResponseBuilder_.getMessage();
+        }
+        return com.google.wireless.android.sdk.stats.SmlChatBotEvent.ToolCallResponse.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.android_studio.SmlChatBotEvent.ToolCallResponse tool_call_response = 14 [lazy = true];</code>
+     */
+    public Builder setToolCallResponse(com.google.wireless.android.sdk.stats.SmlChatBotEvent.ToolCallResponse value) {
+      if (toolCallResponseBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        content_ = value;
+        onChanged();
+      } else {
+        toolCallResponseBuilder_.setMessage(value);
+      }
+      contentCase_ = 14;
+      return this;
+    }
+    /**
+     * <code>.android_studio.SmlChatBotEvent.ToolCallResponse tool_call_response = 14 [lazy = true];</code>
+     */
+    public Builder setToolCallResponse(
+        com.google.wireless.android.sdk.stats.SmlChatBotEvent.ToolCallResponse.Builder builderForValue) {
+      if (toolCallResponseBuilder_ == null) {
+        content_ = builderForValue.build();
+        onChanged();
+      } else {
+        toolCallResponseBuilder_.setMessage(builderForValue.build());
+      }
+      contentCase_ = 14;
+      return this;
+    }
+    /**
+     * <code>.android_studio.SmlChatBotEvent.ToolCallResponse tool_call_response = 14 [lazy = true];</code>
+     */
+    public Builder mergeToolCallResponse(com.google.wireless.android.sdk.stats.SmlChatBotEvent.ToolCallResponse value) {
+      if (toolCallResponseBuilder_ == null) {
+        if (contentCase_ == 14 &&
+            content_ != com.google.wireless.android.sdk.stats.SmlChatBotEvent.ToolCallResponse.getDefaultInstance()) {
+          content_ = com.google.wireless.android.sdk.stats.SmlChatBotEvent.ToolCallResponse.newBuilder((com.google.wireless.android.sdk.stats.SmlChatBotEvent.ToolCallResponse) content_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          content_ = value;
+        }
+        onChanged();
+      } else {
+        if (contentCase_ == 14) {
+          toolCallResponseBuilder_.mergeFrom(value);
+        } else {
+          toolCallResponseBuilder_.setMessage(value);
+        }
+      }
+      contentCase_ = 14;
+      return this;
+    }
+    /**
+     * <code>.android_studio.SmlChatBotEvent.ToolCallResponse tool_call_response = 14 [lazy = true];</code>
+     */
+    public Builder clearToolCallResponse() {
+      if (toolCallResponseBuilder_ == null) {
+        if (contentCase_ == 14) {
+          contentCase_ = 0;
+          content_ = null;
+          onChanged();
+        }
+      } else {
+        if (contentCase_ == 14) {
+          contentCase_ = 0;
+          content_ = null;
+        }
+        toolCallResponseBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>.android_studio.SmlChatBotEvent.ToolCallResponse tool_call_response = 14 [lazy = true];</code>
+     */
+    public com.google.wireless.android.sdk.stats.SmlChatBotEvent.ToolCallResponse.Builder getToolCallResponseBuilder() {
+      return getToolCallResponseFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.android_studio.SmlChatBotEvent.ToolCallResponse tool_call_response = 14 [lazy = true];</code>
+     */
+    @java.lang.Override
+    public com.google.wireless.android.sdk.stats.SmlChatBotEvent.ToolCallResponseOrBuilder getToolCallResponseOrBuilder() {
+      if ((contentCase_ == 14) && (toolCallResponseBuilder_ != null)) {
+        return toolCallResponseBuilder_.getMessageOrBuilder();
+      } else {
+        if (contentCase_ == 14) {
+          return (com.google.wireless.android.sdk.stats.SmlChatBotEvent.ToolCallResponse) content_;
+        }
+        return com.google.wireless.android.sdk.stats.SmlChatBotEvent.ToolCallResponse.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.android_studio.SmlChatBotEvent.ToolCallResponse tool_call_response = 14 [lazy = true];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.SmlChatBotEvent.ToolCallResponse, com.google.wireless.android.sdk.stats.SmlChatBotEvent.ToolCallResponse.Builder, com.google.wireless.android.sdk.stats.SmlChatBotEvent.ToolCallResponseOrBuilder> 
+        getToolCallResponseFieldBuilder() {
+      if (toolCallResponseBuilder_ == null) {
+        if (!(contentCase_ == 14)) {
+          content_ = com.google.wireless.android.sdk.stats.SmlChatBotEvent.ToolCallResponse.getDefaultInstance();
+        }
+        toolCallResponseBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.wireless.android.sdk.stats.SmlChatBotEvent.ToolCallResponse, com.google.wireless.android.sdk.stats.SmlChatBotEvent.ToolCallResponse.Builder, com.google.wireless.android.sdk.stats.SmlChatBotEvent.ToolCallResponseOrBuilder>(
+                (com.google.wireless.android.sdk.stats.SmlChatBotEvent.ToolCallResponse) content_,
+                getParentForChildren(),
+                isClean());
+        content_ = null;
+      }
+      contentCase_ = 14;
+      onChanged();
+      return toolCallResponseBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(
