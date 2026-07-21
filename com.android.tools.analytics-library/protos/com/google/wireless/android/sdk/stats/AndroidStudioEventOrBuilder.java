@@ -4780,4 +4780,31 @@ public interface AndroidStudioEventOrBuilder extends
    * <code>optional .android_studio.SmlConfigurationEvent sml_configuration_event = 170;</code>
    */
   com.google.wireless.android.sdk.stats.SmlConfigurationEventOrBuilder getSmlConfigurationEventOrBuilder();
+
+  /**
+   * <pre>
+   * set when kind = KOTLIN_SUPPORT_DECLINED
+   * </pre>
+   *
+   * <code>optional .android_studio.KotlinSupportDeclined kotlin_support_declined = 171;</code>
+   * @return Whether the kotlinSupportDeclined field is set.
+   */
+  boolean hasKotlinSupportDeclined();
+  /**
+   * <pre>
+   * set when kind = KOTLIN_SUPPORT_DECLINED
+   * </pre>
+   *
+   * <code>optional .android_studio.KotlinSupportDeclined kotlin_support_declined = 171;</code>
+   * @return The kotlinSupportDeclined.
+   */
+  com.google.wireless.android.sdk.stats.KotlinSupportDeclined getKotlinSupportDeclined();
+  /**
+   * <pre>
+   * set when kind = KOTLIN_SUPPORT_DECLINED
+   * </pre>
+   *
+   * <code>optional .android_studio.KotlinSupportDeclined kotlin_support_declined = 171;</code>
+   */
+  com.google.wireless.android.sdk.stats.KotlinSupportDeclinedOrBuilder getKotlinSupportDeclinedOrBuilder();
 }

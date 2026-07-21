@@ -682,6 +682,18 @@ public enum BooleanOption
    * <code>ADDITIONAL_ARTIFACTS_IN_MODEL = 165;</code>
    */
   ADDITIONAL_ARTIFACTS_IN_MODEL(165),
+  /**
+   * <code>SUPPRESS_EXTRACT_NATIVE_LIBS_WARNINGS = 166;</code>
+   */
+  SUPPRESS_EXTRACT_NATIVE_LIBS_WARNINGS(166),
+  /**
+   * <code>EXCLUDE_LIBRARY_COMPONENTS_FROM_CONSTRAINTS = 167;</code>
+   */
+  EXCLUDE_LIBRARY_COMPONENTS_FROM_CONSTRAINTS(167),
+  /**
+   * <code>ENABLE_EMULATOR_CONTROL = 168;</code>
+   */
+  ENABLE_EMULATOR_CONTROL(168),
   UNRECOGNIZED(-1),
   ;
 
@@ -1349,6 +1361,18 @@ public enum BooleanOption
    * <code>ADDITIONAL_ARTIFACTS_IN_MODEL = 165;</code>
    */
   public static final int ADDITIONAL_ARTIFACTS_IN_MODEL_VALUE = 165;
+  /**
+   * <code>SUPPRESS_EXTRACT_NATIVE_LIBS_WARNINGS = 166;</code>
+   */
+  public static final int SUPPRESS_EXTRACT_NATIVE_LIBS_WARNINGS_VALUE = 166;
+  /**
+   * <code>EXCLUDE_LIBRARY_COMPONENTS_FROM_CONSTRAINTS = 167;</code>
+   */
+  public static final int EXCLUDE_LIBRARY_COMPONENTS_FROM_CONSTRAINTS_VALUE = 167;
+  /**
+   * <code>ENABLE_EMULATOR_CONTROL = 168;</code>
+   */
+  public static final int ENABLE_EMULATOR_CONTROL_VALUE = 168;
 
 
   public final int getNumber() {
@@ -1541,6 +1565,9 @@ public enum BooleanOption
       case 163: return VERIFY_AAR_CLASSES;
       case 164: return DISABLE_COMPILE_SDK_CHECKS;
       case 165: return ADDITIONAL_ARTIFACTS_IN_MODEL;
+      case 166: return SUPPRESS_EXTRACT_NATIVE_LIBS_WARNINGS;
+      case 167: return EXCLUDE_LIBRARY_COMPONENTS_FROM_CONSTRAINTS;
+      case 168: return ENABLE_EMULATOR_CONTROL;
       default: return null;
     }
   }
