@@ -1098,6 +1098,14 @@ public enum GradleTaskExecutionType
    * <code>COMPILE_ART_PROFILE = 270;</code>
    */
   COMPILE_ART_PROFILE(270),
+  /**
+   * <code>ANDROID_LINT_TEXT_OUTPUT = 271;</code>
+   */
+  ANDROID_LINT_TEXT_OUTPUT(271),
+  /**
+   * <code>SOURCE_JAR = 272;</code>
+   */
+  SOURCE_JAR(272),
   UNRECOGNIZED(-1),
   ;
 
@@ -2185,6 +2193,14 @@ public enum GradleTaskExecutionType
    * <code>COMPILE_ART_PROFILE = 270;</code>
    */
   public static final int COMPILE_ART_PROFILE_VALUE = 270;
+  /**
+   * <code>ANDROID_LINT_TEXT_OUTPUT = 271;</code>
+   */
+  public static final int ANDROID_LINT_TEXT_OUTPUT_VALUE = 271;
+  /**
+   * <code>SOURCE_JAR = 272;</code>
+   */
+  public static final int SOURCE_JAR_VALUE = 272;
 
 
   public final int getNumber() {
@@ -2482,6 +2498,8 @@ public enum GradleTaskExecutionType
       case 268: return MERGE_ART_PROFILE;
       case 269: return PROCESS_LIBRARY_ART_PROFILE;
       case 270: return COMPILE_ART_PROFILE;
+      case 271: return ANDROID_LINT_TEXT_OUTPUT;
+      case 272: return SOURCE_JAR;
       default: return null;
     }
   }

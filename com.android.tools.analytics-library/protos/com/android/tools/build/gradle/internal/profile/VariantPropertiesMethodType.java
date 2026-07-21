@@ -401,6 +401,34 @@ public enum VariantPropertiesMethodType
    * <code>SIGNING_CONFIG_SET_CONFIG = 88;</code>
    */
   SIGNING_CONFIG_SET_CONFIG(88),
+  /**
+   * <code>GET_BUNDLE_CONFIG = 89;</code>
+   */
+  GET_BUNDLE_CONFIG(89),
+  /**
+   * <code>GET_CODE_TRANSPARENCY = 90;</code>
+   */
+  GET_CODE_TRANSPARENCY(90),
+  /**
+   * <code>JAVA_COMPILATION_OPTIONS = 91;</code>
+   */
+  JAVA_COMPILATION_OPTIONS(91),
+  /**
+   * <code>ANNOTATION_PROCESSOR = 92;</code>
+   */
+  ANNOTATION_PROCESSOR(92),
+  /**
+   * <code>ANNOTATION_PROCESSOR_CLASS_NAMES = 93;</code>
+   */
+  ANNOTATION_PROCESSOR_CLASS_NAMES(93),
+  /**
+   * <code>ANNOTATION_PROCESSOR_ARGUMENTS = 94;</code>
+   */
+  ANNOTATION_PROCESSOR_ARGUMENTS(94),
+  /**
+   * <code>ANNOTATION_PROCESSOR_ARGUMENT_PROVIDERS = 95;</code>
+   */
+  ANNOTATION_PROCESSOR_ARGUMENT_PROVIDERS(95),
   UNRECOGNIZED(-1),
   ;
 
@@ -796,6 +824,34 @@ public enum VariantPropertiesMethodType
    * <code>SIGNING_CONFIG_SET_CONFIG = 88;</code>
    */
   public static final int SIGNING_CONFIG_SET_CONFIG_VALUE = 88;
+  /**
+   * <code>GET_BUNDLE_CONFIG = 89;</code>
+   */
+  public static final int GET_BUNDLE_CONFIG_VALUE = 89;
+  /**
+   * <code>GET_CODE_TRANSPARENCY = 90;</code>
+   */
+  public static final int GET_CODE_TRANSPARENCY_VALUE = 90;
+  /**
+   * <code>JAVA_COMPILATION_OPTIONS = 91;</code>
+   */
+  public static final int JAVA_COMPILATION_OPTIONS_VALUE = 91;
+  /**
+   * <code>ANNOTATION_PROCESSOR = 92;</code>
+   */
+  public static final int ANNOTATION_PROCESSOR_VALUE = 92;
+  /**
+   * <code>ANNOTATION_PROCESSOR_CLASS_NAMES = 93;</code>
+   */
+  public static final int ANNOTATION_PROCESSOR_CLASS_NAMES_VALUE = 93;
+  /**
+   * <code>ANNOTATION_PROCESSOR_ARGUMENTS = 94;</code>
+   */
+  public static final int ANNOTATION_PROCESSOR_ARGUMENTS_VALUE = 94;
+  /**
+   * <code>ANNOTATION_PROCESSOR_ARGUMENT_PROVIDERS = 95;</code>
+   */
+  public static final int ANNOTATION_PROCESSOR_ARGUMENT_PROVIDERS_VALUE = 95;
 
 
   public final int getNumber() {
@@ -911,6 +967,13 @@ public enum VariantPropertiesMethodType
       case 86: return TEST_FIXTURES;
       case 87: return VARIANT_PROPERTIES;
       case 88: return SIGNING_CONFIG_SET_CONFIG;
+      case 89: return GET_BUNDLE_CONFIG;
+      case 90: return GET_CODE_TRANSPARENCY;
+      case 91: return JAVA_COMPILATION_OPTIONS;
+      case 92: return ANNOTATION_PROCESSOR;
+      case 93: return ANNOTATION_PROCESSOR_CLASS_NAMES;
+      case 94: return ANNOTATION_PROCESSOR_ARGUMENTS;
+      case 95: return ANNOTATION_PROCESSOR_ARGUMENT_PROVIDERS;
       default: return null;
     }
   }

@@ -82,6 +82,33 @@ public interface AppInspectionEventOrBuilder extends
 
   /**
    * <pre>
+   * Event associated with the user interacting with the Network inspector
+   * </pre>
+   *
+   * <code>optional .android_studio.AppInspectionEvent.NetworkInspectorEvent network_inspector_event = 4;</code>
+   * @return Whether the networkInspectorEvent field is set.
+   */
+  boolean hasNetworkInspectorEvent();
+  /**
+   * <pre>
+   * Event associated with the user interacting with the Network inspector
+   * </pre>
+   *
+   * <code>optional .android_studio.AppInspectionEvent.NetworkInspectorEvent network_inspector_event = 4;</code>
+   * @return The networkInspectorEvent.
+   */
+  com.google.wireless.android.sdk.stats.AppInspectionEvent.NetworkInspectorEvent getNetworkInspectorEvent();
+  /**
+   * <pre>
+   * Event associated with the user interacting with the Network inspector
+   * </pre>
+   *
+   * <code>optional .android_studio.AppInspectionEvent.NetworkInspectorEvent network_inspector_event = 4;</code>
+   */
+  com.google.wireless.android.sdk.stats.AppInspectionEvent.NetworkInspectorEventOrBuilder getNetworkInspectorEventOrBuilder();
+
+  /**
+   * <pre>
    * Set if |type| is |ERROR_OCCURRED|
    * </pre>
    *
