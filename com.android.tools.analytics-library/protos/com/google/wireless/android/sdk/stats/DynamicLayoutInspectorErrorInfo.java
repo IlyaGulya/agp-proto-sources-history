@@ -699,6 +699,18 @@ private static final long serialVersionUID = 0L;
      * <code>APP_INSPECTION_FAILED_MAVEN_DOWNLOAD = 211;</code>
      */
     APP_INSPECTION_FAILED_MAVEN_DOWNLOAD(211),
+    /**
+     * <code>TRANSPORT_UNKNOWN_ERROR = 301;</code>
+     */
+    TRANSPORT_UNKNOWN_ERROR(301),
+    /**
+     * <code>TRANSPORT_PUSH_FAILED_FILE_NOT_FOUND = 302;</code>
+     */
+    TRANSPORT_PUSH_FAILED_FILE_NOT_FOUND(302),
+    /**
+     * <code>TRANSPORT_FAILED_TO_START_DAEMON = 303;</code>
+     */
+    TRANSPORT_FAILED_TO_START_DAEMON(303),
     ;
 
     /**
@@ -833,6 +845,18 @@ private static final long serialVersionUID = 0L;
      * <code>APP_INSPECTION_FAILED_MAVEN_DOWNLOAD = 211;</code>
      */
     public static final int APP_INSPECTION_FAILED_MAVEN_DOWNLOAD_VALUE = 211;
+    /**
+     * <code>TRANSPORT_UNKNOWN_ERROR = 301;</code>
+     */
+    public static final int TRANSPORT_UNKNOWN_ERROR_VALUE = 301;
+    /**
+     * <code>TRANSPORT_PUSH_FAILED_FILE_NOT_FOUND = 302;</code>
+     */
+    public static final int TRANSPORT_PUSH_FAILED_FILE_NOT_FOUND_VALUE = 302;
+    /**
+     * <code>TRANSPORT_FAILED_TO_START_DAEMON = 303;</code>
+     */
+    public static final int TRANSPORT_FAILED_TO_START_DAEMON_VALUE = 303;
 
 
     public final int getNumber() {
@@ -872,6 +896,9 @@ private static final long serialVersionUID = 0L;
         case 209: return APP_INSPECTION_SNAPSHOT_NOT_SPECIFIED;
         case 210: return APP_INSPECTION_COMPOSE_INSPECTOR_NOT_FOUND;
         case 211: return APP_INSPECTION_FAILED_MAVEN_DOWNLOAD;
+        case 301: return TRANSPORT_UNKNOWN_ERROR;
+        case 302: return TRANSPORT_PUSH_FAILED_FILE_NOT_FOUND;
+        case 303: return TRANSPORT_FAILED_TO_START_DAEMON;
         default: return null;
       }
     }

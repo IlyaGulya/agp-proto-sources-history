@@ -16634,7 +16634,7 @@ private static final long serialVersionUID = 0L;
   private volatile java.lang.Object projectId_;
   /**
    * <pre>
-   * Client-side salted (rotating every 28 days), sha256 of the project id.
+   * Client-side salted (rotating every 532 days), sha256 of the project id.
    * set when kind = PROJECT_STRUCTURE_* or kind = APK_ANALYZER_STATS
    * </pre>
    *
@@ -16647,7 +16647,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Client-side salted (rotating every 28 days), sha256 of the project id.
+   * Client-side salted (rotating every 532 days), sha256 of the project id.
    * set when kind = PROJECT_STRUCTURE_* or kind = APK_ANALYZER_STATS
    * </pre>
    *
@@ -16671,7 +16671,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Client-side salted (rotating every 28 days), sha256 of the project id.
+   * Client-side salted (rotating every 532 days), sha256 of the project id.
    * set when kind = PROJECT_STRUCTURE_* or kind = APK_ANALYZER_STATS
    * </pre>
    *
@@ -30534,7 +30534,7 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object projectId_ = "";
     /**
      * <pre>
-     * Client-side salted (rotating every 28 days), sha256 of the project id.
+     * Client-side salted (rotating every 532 days), sha256 of the project id.
      * set when kind = PROJECT_STRUCTURE_* or kind = APK_ANALYZER_STATS
      * </pre>
      *
@@ -30546,7 +30546,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Client-side salted (rotating every 28 days), sha256 of the project id.
+     * Client-side salted (rotating every 532 days), sha256 of the project id.
      * set when kind = PROJECT_STRUCTURE_* or kind = APK_ANALYZER_STATS
      * </pre>
      *
@@ -30569,7 +30569,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Client-side salted (rotating every 28 days), sha256 of the project id.
+     * Client-side salted (rotating every 532 days), sha256 of the project id.
      * set when kind = PROJECT_STRUCTURE_* or kind = APK_ANALYZER_STATS
      * </pre>
      *
@@ -30591,7 +30591,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Client-side salted (rotating every 28 days), sha256 of the project id.
+     * Client-side salted (rotating every 532 days), sha256 of the project id.
      * set when kind = PROJECT_STRUCTURE_* or kind = APK_ANALYZER_STATS
      * </pre>
      *
@@ -30611,7 +30611,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Client-side salted (rotating every 28 days), sha256 of the project id.
+     * Client-side salted (rotating every 532 days), sha256 of the project id.
      * set when kind = PROJECT_STRUCTURE_* or kind = APK_ANALYZER_STATS
      * </pre>
      *
@@ -30626,7 +30626,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Client-side salted (rotating every 28 days), sha256 of the project id.
+     * Client-side salted (rotating every 532 days), sha256 of the project id.
      * set when kind = PROJECT_STRUCTURE_* or kind = APK_ANALYZER_STATS
      * </pre>
      *
