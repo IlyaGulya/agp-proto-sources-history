@@ -526,6 +526,14 @@ private static final long serialVersionUID = 0L;
     TRIGGER_QF_GRADLEJVM_TO_USE_PROJECT_JDK(426),
     /**
      * <pre>
+     * Remove JCenter from repositories
+     * </pre>
+     *
+     * <code>TRIGGER_QF_REMOVE_JCENTER_FROM_REPOSITORIES = 427;</code>
+     */
+    TRIGGER_QF_REMOVE_JCENTER_FROM_REPOSITORIES(427),
+    /**
+     * <pre>
      * Last marker for syncs caused by quickfixes
      * </pre>
      *
@@ -564,6 +572,14 @@ private static final long serialVersionUID = 0L;
      * <code>TRIGGER_REFACTOR_MODULE_RENAMED = 1203;</code>
      */
     TRIGGER_REFACTOR_MODULE_RENAMED(1203),
+    /**
+     * <pre>
+     * Migrate project to use non-transitive R classes
+     * </pre>
+     *
+     * <code>TRIGGER_REFACTOR_MIGRATE_TO_NON_TRANSITIVE_R_CLASSES = 1204;</code>
+     */
+    TRIGGER_REFACTOR_MIGRATE_TO_NON_TRANSITIVE_R_CLASSES(1204),
     /**
      * <pre>
      * Last marker for syncs caused by a refactor
@@ -1387,6 +1403,14 @@ private static final long serialVersionUID = 0L;
     public static final int TRIGGER_QF_GRADLEJVM_TO_USE_PROJECT_JDK_VALUE = 426;
     /**
      * <pre>
+     * Remove JCenter from repositories
+     * </pre>
+     *
+     * <code>TRIGGER_QF_REMOVE_JCENTER_FROM_REPOSITORIES = 427;</code>
+     */
+    public static final int TRIGGER_QF_REMOVE_JCENTER_FROM_REPOSITORIES_VALUE = 427;
+    /**
+     * <pre>
      * Last marker for syncs caused by quickfixes
      * </pre>
      *
@@ -1425,6 +1449,14 @@ private static final long serialVersionUID = 0L;
      * <code>TRIGGER_REFACTOR_MODULE_RENAMED = 1203;</code>
      */
     public static final int TRIGGER_REFACTOR_MODULE_RENAMED_VALUE = 1203;
+    /**
+     * <pre>
+     * Migrate project to use non-transitive R classes
+     * </pre>
+     *
+     * <code>TRIGGER_REFACTOR_MIGRATE_TO_NON_TRANSITIVE_R_CLASSES = 1204;</code>
+     */
+    public static final int TRIGGER_REFACTOR_MIGRATE_TO_NON_TRANSITIVE_R_CLASSES_VALUE = 1204;
     /**
      * <pre>
      * Last marker for syncs caused by a refactor
@@ -1962,11 +1994,13 @@ private static final long serialVersionUID = 0L;
         case 424: return TRIGGER_QF_DISTRIBUTIONSHA256SUM_REMOVED_FROM_WRAPPER;
         case 425: return TRIGGER_QF_DISTRIBUTIONSHA256SUM_CONFIRMED_BY_USER;
         case 426: return TRIGGER_QF_GRADLEJVM_TO_USE_PROJECT_JDK;
+        case 427: return TRIGGER_QF_REMOVE_JCENTER_FROM_REPOSITORIES;
         case 999: return TRIGGER_QF_LAST_MARKER;
         case 1200: return TRIGGER_REFACTOR_FIRST_MARKER;
         case 1201: return TRIGGER_REFACTOR_MIGRATE_TO_ANDROIDX;
         case 1202: return TRIGGER_REFACTOR_MIGRATE_TO_RESOURCE_NAMESPACES;
         case 1203: return TRIGGER_REFACTOR_MODULE_RENAMED;
+        case 1204: return TRIGGER_REFACTOR_MIGRATE_TO_NON_TRANSITIVE_R_CLASSES;
         case 1299: return TRIGGER_REFACTOR_LAST_MARKER;
         case 1500: return TRIGGER_PSD_FIRST_MARKER;
         case 1501: return TRIGGER_PSD_DEPENDENCY_REMOVED;

@@ -474,4 +474,49 @@ public interface GradleBuildProjectOrBuilder extends
    */
   com.google.protobuf.ByteString
       getPluginNamesBytes(int index);
+
+  /**
+   * <pre>
+   * Record all of the task class names applied to the project
+   * e.g an example is ORG_GRADLE_API_TASKS_WRAPPER_WRAPPER_DECORATED
+   * </pre>
+   *
+   * <code>repeated string task_names = 17;</code>
+   * @return A list containing the taskNames.
+   */
+  java.util.List<java.lang.String>
+      getTaskNamesList();
+  /**
+   * <pre>
+   * Record all of the task class names applied to the project
+   * e.g an example is ORG_GRADLE_API_TASKS_WRAPPER_WRAPPER_DECORATED
+   * </pre>
+   *
+   * <code>repeated string task_names = 17;</code>
+   * @return The count of taskNames.
+   */
+  int getTaskNamesCount();
+  /**
+   * <pre>
+   * Record all of the task class names applied to the project
+   * e.g an example is ORG_GRADLE_API_TASKS_WRAPPER_WRAPPER_DECORATED
+   * </pre>
+   *
+   * <code>repeated string task_names = 17;</code>
+   * @param index The index of the element to return.
+   * @return The taskNames at the given index.
+   */
+  java.lang.String getTaskNames(int index);
+  /**
+   * <pre>
+   * Record all of the task class names applied to the project
+   * e.g an example is ORG_GRADLE_API_TASKS_WRAPPER_WRAPPER_DECORATED
+   * </pre>
+   *
+   * <code>repeated string task_names = 17;</code>
+   * @param index The index of the value to return.
+   * @return The bytes of the taskNames at the given index.
+   */
+  com.google.protobuf.ByteString
+      getTaskNamesBytes(int index);
 }
