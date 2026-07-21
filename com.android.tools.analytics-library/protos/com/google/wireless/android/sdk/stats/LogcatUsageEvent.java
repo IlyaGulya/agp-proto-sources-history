@@ -67,11 +67,11 @@ private static final long serialVersionUID = 0L;
             break;
           }
           case 18: {
-            com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatDialogEvent.Builder subBuilder = null;
+            com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatConfiguration.Builder subBuilder = null;
             if (((bitField0_ & 0x00000002) != 0)) {
               subBuilder = formatDialog_.toBuilder();
             }
-            formatDialog_ = input.readMessage(com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatDialogEvent.PARSER, extensionRegistry);
+            formatDialog_ = input.readMessage(com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatConfiguration.PARSER, extensionRegistry);
             if (subBuilder != null) {
               subBuilder.mergeFrom(formatDialog_);
               formatDialog_ = subBuilder.buildPartial();
@@ -90,6 +90,32 @@ private static final long serialVersionUID = 0L;
               logcatFilter_ = subBuilder.buildPartial();
             }
             bitField0_ |= 0x00000004;
+            break;
+          }
+          case 34: {
+            com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatDialog.Builder subBuilder = null;
+            if (((bitField0_ & 0x00000008) != 0)) {
+              subBuilder = formatDialogApplied_.toBuilder();
+            }
+            formatDialogApplied_ = input.readMessage(com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatDialog.PARSER, extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(formatDialogApplied_);
+              formatDialogApplied_ = subBuilder.buildPartial();
+            }
+            bitField0_ |= 0x00000008;
+            break;
+          }
+          case 42: {
+            com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatPanelEvent.Builder subBuilder = null;
+            if (((bitField0_ & 0x00000010) != 0)) {
+              subBuilder = panelAdded_.toBuilder();
+            }
+            panelAdded_ = input.readMessage(com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatPanelEvent.PARSER, extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(panelAdded_);
+              panelAdded_ = subBuilder.buildPartial();
+            }
+            bitField0_ |= 0x00000010;
             break;
           }
           default: {
@@ -158,6 +184,14 @@ private static final long serialVersionUID = 0L;
      * <code>FILTER_ADDED_TO_HISTORY = 2;</code>
      */
     FILTER_ADDED_TO_HISTORY(2),
+    /**
+     * <pre>
+     * A Logcat panel was added
+     * </pre>
+     *
+     * <code>PANEL_ADDED = 3;</code>
+     */
+    PANEL_ADDED(3),
     ;
 
     /**
@@ -185,6 +219,14 @@ private static final long serialVersionUID = 0L;
      * <code>FILTER_ADDED_TO_HISTORY = 2;</code>
      */
     public static final int FILTER_ADDED_TO_HISTORY_VALUE = 2;
+    /**
+     * <pre>
+     * A Logcat panel was added
+     * </pre>
+     *
+     * <code>PANEL_ADDED = 3;</code>
+     */
+    public static final int PANEL_ADDED_VALUE = 3;
 
 
     public final int getNumber() {
@@ -210,6 +252,7 @@ private static final long serialVersionUID = 0L;
         case 0: return UNKNOWN_EVENT_TYPE;
         case 1: return FORMAT_DIALOG;
         case 2: return FILTER_ADDED_TO_HISTORY;
+        case 3: return PANEL_ADDED;
         default: return null;
       }
     }
@@ -259,13 +302,966 @@ private static final long serialVersionUID = 0L;
     // @@protoc_insertion_point(enum_scope:android_studio.LogcatUsageEvent.Type)
   }
 
-  public interface LogcatFormatDialogEventOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:android_studio.LogcatUsageEvent.LogcatFormatDialogEvent)
+  public interface LogcatFormatDialogOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:android_studio.LogcatUsageEvent.LogcatFormatDialog)
       com.google.protobuf.MessageOrBuilder {
 
     /**
      * <pre>
-     * Show timestamp checkbox is set
+     * The Logcat format configuration the dialog represents
+     * </pre>
+     *
+     * <code>optional .android_studio.LogcatUsageEvent.LogcatFormatConfiguration configuration = 1;</code>
+     * @return Whether the configuration field is set.
+     */
+    boolean hasConfiguration();
+    /**
+     * <pre>
+     * The Logcat format configuration the dialog represents
+     * </pre>
+     *
+     * <code>optional .android_studio.LogcatUsageEvent.LogcatFormatConfiguration configuration = 1;</code>
+     * @return The configuration.
+     */
+    com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatConfiguration getConfiguration();
+    /**
+     * <pre>
+     * The Logcat format configuration the dialog represents
+     * </pre>
+     *
+     * <code>optional .android_studio.LogcatUsageEvent.LogcatFormatConfiguration configuration = 1;</code>
+     */
+    com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatConfigurationOrBuilder getConfigurationOrBuilder();
+
+    /**
+     * <pre>
+     * The state of the "set as default" checkbox
+     * </pre>
+     *
+     * <code>optional bool is_default_preset = 2;</code>
+     * @return Whether the isDefaultPreset field is set.
+     */
+    boolean hasIsDefaultPreset();
+    /**
+     * <pre>
+     * The state of the "set as default" checkbox
+     * </pre>
+     *
+     * <code>optional bool is_default_preset = 2;</code>
+     * @return The isDefaultPreset.
+     */
+    boolean getIsDefaultPreset();
+
+    /**
+     * <pre>
+     * True if the "Apply" button was used as oppesed to "OK"
+     * </pre>
+     *
+     * <code>optional bool is_apply_button_used = 3;</code>
+     * @return Whether the isApplyButtonUsed field is set.
+     */
+    boolean hasIsApplyButtonUsed();
+    /**
+     * <pre>
+     * True if the "Apply" button was used as oppesed to "OK"
+     * </pre>
+     *
+     * <code>optional bool is_apply_button_used = 3;</code>
+     * @return The isApplyButtonUsed.
+     */
+    boolean getIsApplyButtonUsed();
+  }
+  /**
+   * <pre>
+   * The state of a Logcat format dialog when applied
+   * </pre>
+   *
+   * Protobuf type {@code android_studio.LogcatUsageEvent.LogcatFormatDialog}
+   */
+  public  static final class LogcatFormatDialog extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:android_studio.LogcatUsageEvent.LogcatFormatDialog)
+      LogcatFormatDialogOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use LogcatFormatDialog.newBuilder() to construct.
+    private LogcatFormatDialog(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private LogcatFormatDialog() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new LogcatFormatDialog();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private LogcatFormatDialog(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatConfiguration.Builder subBuilder = null;
+              if (((bitField0_ & 0x00000001) != 0)) {
+                subBuilder = configuration_.toBuilder();
+              }
+              configuration_ = input.readMessage(com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatConfiguration.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(configuration_);
+                configuration_ = subBuilder.buildPartial();
+              }
+              bitField0_ |= 0x00000001;
+              break;
+            }
+            case 16: {
+              bitField0_ |= 0x00000002;
+              isDefaultPreset_ = input.readBool();
+              break;
+            }
+            case 24: {
+              bitField0_ |= 0x00000004;
+              isApplyButtonUsed_ = input.readBool();
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_LogcatUsageEvent_LogcatFormatDialog_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_LogcatUsageEvent_LogcatFormatDialog_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatDialog.class, com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatDialog.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int CONFIGURATION_FIELD_NUMBER = 1;
+    private com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatConfiguration configuration_;
+    /**
+     * <pre>
+     * The Logcat format configuration the dialog represents
+     * </pre>
+     *
+     * <code>optional .android_studio.LogcatUsageEvent.LogcatFormatConfiguration configuration = 1;</code>
+     * @return Whether the configuration field is set.
+     */
+    public boolean hasConfiguration() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <pre>
+     * The Logcat format configuration the dialog represents
+     * </pre>
+     *
+     * <code>optional .android_studio.LogcatUsageEvent.LogcatFormatConfiguration configuration = 1;</code>
+     * @return The configuration.
+     */
+    public com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatConfiguration getConfiguration() {
+      return configuration_ == null ? com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatConfiguration.getDefaultInstance() : configuration_;
+    }
+    /**
+     * <pre>
+     * The Logcat format configuration the dialog represents
+     * </pre>
+     *
+     * <code>optional .android_studio.LogcatUsageEvent.LogcatFormatConfiguration configuration = 1;</code>
+     */
+    public com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatConfigurationOrBuilder getConfigurationOrBuilder() {
+      return configuration_ == null ? com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatConfiguration.getDefaultInstance() : configuration_;
+    }
+
+    public static final int IS_DEFAULT_PRESET_FIELD_NUMBER = 2;
+    private boolean isDefaultPreset_;
+    /**
+     * <pre>
+     * The state of the "set as default" checkbox
+     * </pre>
+     *
+     * <code>optional bool is_default_preset = 2;</code>
+     * @return Whether the isDefaultPreset field is set.
+     */
+    public boolean hasIsDefaultPreset() {
+      return ((bitField0_ & 0x00000002) != 0);
+    }
+    /**
+     * <pre>
+     * The state of the "set as default" checkbox
+     * </pre>
+     *
+     * <code>optional bool is_default_preset = 2;</code>
+     * @return The isDefaultPreset.
+     */
+    public boolean getIsDefaultPreset() {
+      return isDefaultPreset_;
+    }
+
+    public static final int IS_APPLY_BUTTON_USED_FIELD_NUMBER = 3;
+    private boolean isApplyButtonUsed_;
+    /**
+     * <pre>
+     * True if the "Apply" button was used as oppesed to "OK"
+     * </pre>
+     *
+     * <code>optional bool is_apply_button_used = 3;</code>
+     * @return Whether the isApplyButtonUsed field is set.
+     */
+    public boolean hasIsApplyButtonUsed() {
+      return ((bitField0_ & 0x00000004) != 0);
+    }
+    /**
+     * <pre>
+     * True if the "Apply" button was used as oppesed to "OK"
+     * </pre>
+     *
+     * <code>optional bool is_apply_button_used = 3;</code>
+     * @return The isApplyButtonUsed.
+     */
+    public boolean getIsApplyButtonUsed() {
+      return isApplyButtonUsed_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (((bitField0_ & 0x00000001) != 0)) {
+        output.writeMessage(1, getConfiguration());
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        output.writeBool(2, isDefaultPreset_);
+      }
+      if (((bitField0_ & 0x00000004) != 0)) {
+        output.writeBool(3, isApplyButtonUsed_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getConfiguration());
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(2, isDefaultPreset_);
+      }
+      if (((bitField0_ & 0x00000004) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(3, isApplyButtonUsed_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatDialog)) {
+        return super.equals(obj);
+      }
+      com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatDialog other = (com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatDialog) obj;
+
+      if (hasConfiguration() != other.hasConfiguration()) return false;
+      if (hasConfiguration()) {
+        if (!getConfiguration()
+            .equals(other.getConfiguration())) return false;
+      }
+      if (hasIsDefaultPreset() != other.hasIsDefaultPreset()) return false;
+      if (hasIsDefaultPreset()) {
+        if (getIsDefaultPreset()
+            != other.getIsDefaultPreset()) return false;
+      }
+      if (hasIsApplyButtonUsed() != other.hasIsApplyButtonUsed()) return false;
+      if (hasIsApplyButtonUsed()) {
+        if (getIsApplyButtonUsed()
+            != other.getIsApplyButtonUsed()) return false;
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasConfiguration()) {
+        hash = (37 * hash) + CONFIGURATION_FIELD_NUMBER;
+        hash = (53 * hash) + getConfiguration().hashCode();
+      }
+      if (hasIsDefaultPreset()) {
+        hash = (37 * hash) + IS_DEFAULT_PRESET_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+            getIsDefaultPreset());
+      }
+      if (hasIsApplyButtonUsed()) {
+        hash = (37 * hash) + IS_APPLY_BUTTON_USED_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+            getIsApplyButtonUsed());
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatDialog parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatDialog parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatDialog parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatDialog parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatDialog parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatDialog parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatDialog parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatDialog parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatDialog parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatDialog parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatDialog parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatDialog parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatDialog prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * The state of a Logcat format dialog when applied
+     * </pre>
+     *
+     * Protobuf type {@code android_studio.LogcatUsageEvent.LogcatFormatDialog}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:android_studio.LogcatUsageEvent.LogcatFormatDialog)
+        com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatDialogOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_LogcatUsageEvent_LogcatFormatDialog_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_LogcatUsageEvent_LogcatFormatDialog_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatDialog.class, com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatDialog.Builder.class);
+      }
+
+      // Construct using com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatDialog.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getConfigurationFieldBuilder();
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        if (configurationBuilder_ == null) {
+          configuration_ = null;
+        } else {
+          configurationBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        isDefaultPreset_ = false;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        isApplyButtonUsed_ = false;
+        bitField0_ = (bitField0_ & ~0x00000004);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_LogcatUsageEvent_LogcatFormatDialog_descriptor;
+      }
+
+      @java.lang.Override
+      public com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatDialog getDefaultInstanceForType() {
+        return com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatDialog.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatDialog build() {
+        com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatDialog result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatDialog buildPartial() {
+        com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatDialog result = new com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatDialog(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          if (configurationBuilder_ == null) {
+            result.configuration_ = configuration_;
+          } else {
+            result.configuration_ = configurationBuilder_.build();
+          }
+          to_bitField0_ |= 0x00000001;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.isDefaultPreset_ = isDefaultPreset_;
+          to_bitField0_ |= 0x00000002;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.isApplyButtonUsed_ = isApplyButtonUsed_;
+          to_bitField0_ |= 0x00000004;
+        }
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatDialog) {
+          return mergeFrom((com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatDialog)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatDialog other) {
+        if (other == com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatDialog.getDefaultInstance()) return this;
+        if (other.hasConfiguration()) {
+          mergeConfiguration(other.getConfiguration());
+        }
+        if (other.hasIsDefaultPreset()) {
+          setIsDefaultPreset(other.getIsDefaultPreset());
+        }
+        if (other.hasIsApplyButtonUsed()) {
+          setIsApplyButtonUsed(other.getIsApplyButtonUsed());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatDialog parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatDialog) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatConfiguration configuration_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatConfiguration, com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatConfiguration.Builder, com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatConfigurationOrBuilder> configurationBuilder_;
+      /**
+       * <pre>
+       * The Logcat format configuration the dialog represents
+       * </pre>
+       *
+       * <code>optional .android_studio.LogcatUsageEvent.LogcatFormatConfiguration configuration = 1;</code>
+       * @return Whether the configuration field is set.
+       */
+      public boolean hasConfiguration() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <pre>
+       * The Logcat format configuration the dialog represents
+       * </pre>
+       *
+       * <code>optional .android_studio.LogcatUsageEvent.LogcatFormatConfiguration configuration = 1;</code>
+       * @return The configuration.
+       */
+      public com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatConfiguration getConfiguration() {
+        if (configurationBuilder_ == null) {
+          return configuration_ == null ? com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatConfiguration.getDefaultInstance() : configuration_;
+        } else {
+          return configurationBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * The Logcat format configuration the dialog represents
+       * </pre>
+       *
+       * <code>optional .android_studio.LogcatUsageEvent.LogcatFormatConfiguration configuration = 1;</code>
+       */
+      public Builder setConfiguration(com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatConfiguration value) {
+        if (configurationBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          configuration_ = value;
+          onChanged();
+        } else {
+          configurationBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        return this;
+      }
+      /**
+       * <pre>
+       * The Logcat format configuration the dialog represents
+       * </pre>
+       *
+       * <code>optional .android_studio.LogcatUsageEvent.LogcatFormatConfiguration configuration = 1;</code>
+       */
+      public Builder setConfiguration(
+          com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatConfiguration.Builder builderForValue) {
+        if (configurationBuilder_ == null) {
+          configuration_ = builderForValue.build();
+          onChanged();
+        } else {
+          configurationBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        return this;
+      }
+      /**
+       * <pre>
+       * The Logcat format configuration the dialog represents
+       * </pre>
+       *
+       * <code>optional .android_studio.LogcatUsageEvent.LogcatFormatConfiguration configuration = 1;</code>
+       */
+      public Builder mergeConfiguration(com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatConfiguration value) {
+        if (configurationBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+              configuration_ != null &&
+              configuration_ != com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatConfiguration.getDefaultInstance()) {
+            configuration_ =
+              com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatConfiguration.newBuilder(configuration_).mergeFrom(value).buildPartial();
+          } else {
+            configuration_ = value;
+          }
+          onChanged();
+        } else {
+          configurationBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        return this;
+      }
+      /**
+       * <pre>
+       * The Logcat format configuration the dialog represents
+       * </pre>
+       *
+       * <code>optional .android_studio.LogcatUsageEvent.LogcatFormatConfiguration configuration = 1;</code>
+       */
+      public Builder clearConfiguration() {
+        if (configurationBuilder_ == null) {
+          configuration_ = null;
+          onChanged();
+        } else {
+          configurationBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+      /**
+       * <pre>
+       * The Logcat format configuration the dialog represents
+       * </pre>
+       *
+       * <code>optional .android_studio.LogcatUsageEvent.LogcatFormatConfiguration configuration = 1;</code>
+       */
+      public com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatConfiguration.Builder getConfigurationBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getConfigurationFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * The Logcat format configuration the dialog represents
+       * </pre>
+       *
+       * <code>optional .android_studio.LogcatUsageEvent.LogcatFormatConfiguration configuration = 1;</code>
+       */
+      public com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatConfigurationOrBuilder getConfigurationOrBuilder() {
+        if (configurationBuilder_ != null) {
+          return configurationBuilder_.getMessageOrBuilder();
+        } else {
+          return configuration_ == null ?
+              com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatConfiguration.getDefaultInstance() : configuration_;
+        }
+      }
+      /**
+       * <pre>
+       * The Logcat format configuration the dialog represents
+       * </pre>
+       *
+       * <code>optional .android_studio.LogcatUsageEvent.LogcatFormatConfiguration configuration = 1;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatConfiguration, com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatConfiguration.Builder, com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatConfigurationOrBuilder> 
+          getConfigurationFieldBuilder() {
+        if (configurationBuilder_ == null) {
+          configurationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatConfiguration, com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatConfiguration.Builder, com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatConfigurationOrBuilder>(
+                  getConfiguration(),
+                  getParentForChildren(),
+                  isClean());
+          configuration_ = null;
+        }
+        return configurationBuilder_;
+      }
+
+      private boolean isDefaultPreset_ ;
+      /**
+       * <pre>
+       * The state of the "set as default" checkbox
+       * </pre>
+       *
+       * <code>optional bool is_default_preset = 2;</code>
+       * @return Whether the isDefaultPreset field is set.
+       */
+      public boolean hasIsDefaultPreset() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <pre>
+       * The state of the "set as default" checkbox
+       * </pre>
+       *
+       * <code>optional bool is_default_preset = 2;</code>
+       * @return The isDefaultPreset.
+       */
+      public boolean getIsDefaultPreset() {
+        return isDefaultPreset_;
+      }
+      /**
+       * <pre>
+       * The state of the "set as default" checkbox
+       * </pre>
+       *
+       * <code>optional bool is_default_preset = 2;</code>
+       * @param value The isDefaultPreset to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIsDefaultPreset(boolean value) {
+        bitField0_ |= 0x00000002;
+        isDefaultPreset_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The state of the "set as default" checkbox
+       * </pre>
+       *
+       * <code>optional bool is_default_preset = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearIsDefaultPreset() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        isDefaultPreset_ = false;
+        onChanged();
+        return this;
+      }
+
+      private boolean isApplyButtonUsed_ ;
+      /**
+       * <pre>
+       * True if the "Apply" button was used as oppesed to "OK"
+       * </pre>
+       *
+       * <code>optional bool is_apply_button_used = 3;</code>
+       * @return Whether the isApplyButtonUsed field is set.
+       */
+      public boolean hasIsApplyButtonUsed() {
+        return ((bitField0_ & 0x00000004) != 0);
+      }
+      /**
+       * <pre>
+       * True if the "Apply" button was used as oppesed to "OK"
+       * </pre>
+       *
+       * <code>optional bool is_apply_button_used = 3;</code>
+       * @return The isApplyButtonUsed.
+       */
+      public boolean getIsApplyButtonUsed() {
+        return isApplyButtonUsed_;
+      }
+      /**
+       * <pre>
+       * True if the "Apply" button was used as oppesed to "OK"
+       * </pre>
+       *
+       * <code>optional bool is_apply_button_used = 3;</code>
+       * @param value The isApplyButtonUsed to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIsApplyButtonUsed(boolean value) {
+        bitField0_ |= 0x00000004;
+        isApplyButtonUsed_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * True if the "Apply" button was used as oppesed to "OK"
+       * </pre>
+       *
+       * <code>optional bool is_apply_button_used = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearIsApplyButtonUsed() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        isApplyButtonUsed_ = false;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:android_studio.LogcatUsageEvent.LogcatFormatDialog)
+    }
+
+    // @@protoc_insertion_point(class_scope:android_studio.LogcatUsageEvent.LogcatFormatDialog)
+    private static final com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatDialog DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatDialog();
+    }
+
+    public static com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatDialog getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<LogcatFormatDialog>
+        PARSER = new com.google.protobuf.AbstractParser<LogcatFormatDialog>() {
+      @java.lang.Override
+      public LogcatFormatDialog parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new LogcatFormatDialog(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<LogcatFormatDialog> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<LogcatFormatDialog> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatDialog getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface LogcatFormatConfigurationOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:android_studio.LogcatUsageEvent.LogcatFormatConfiguration)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Show timestamp field
      * </pre>
      *
      * <code>optional bool is_show_timestamp = 1;</code>
@@ -274,7 +1270,7 @@ private static final long serialVersionUID = 0L;
     boolean hasIsShowTimestamp();
     /**
      * <pre>
-     * Show timestamp checkbox is set
+     * Show timestamp field
      * </pre>
      *
      * <code>optional bool is_show_timestamp = 1;</code>
@@ -284,7 +1280,7 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * Timestamp format includes the data
+     * Timestamp format includes the date
      * </pre>
      *
      * <code>optional bool is_show_date = 2;</code>
@@ -293,7 +1289,7 @@ private static final long serialVersionUID = 0L;
     boolean hasIsShowDate();
     /**
      * <pre>
-     * Timestamp format includes the data
+     * Timestamp format includes the date
      * </pre>
      *
      * <code>optional bool is_show_date = 2;</code>
@@ -303,7 +1299,7 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * Show process id checkbox is set
+     * Show the process id field
      * </pre>
      *
      * <code>optional bool is_show_process_id = 3;</code>
@@ -312,7 +1308,7 @@ private static final long serialVersionUID = 0L;
     boolean hasIsShowProcessId();
     /**
      * <pre>
-     * Show process id checkbox is set
+     * Show the process id field
      * </pre>
      *
      * <code>optional bool is_show_process_id = 3;</code>
@@ -322,7 +1318,7 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * Include thread id checkbox is set
+     * Show the thread id field
      * </pre>
      *
      * <code>optional bool is_show_thread_id = 4;</code>
@@ -331,7 +1327,7 @@ private static final long serialVersionUID = 0L;
     boolean hasIsShowThreadId();
     /**
      * <pre>
-     * Include thread id checkbox is set
+     * Show the thread id field
      * </pre>
      *
      * <code>optional bool is_show_thread_id = 4;</code>
@@ -341,7 +1337,7 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * Show tags checkbox is set
+     * Show the tag field
      * </pre>
      *
      * <code>optional bool is_show_tags = 5;</code>
@@ -350,7 +1346,7 @@ private static final long serialVersionUID = 0L;
     boolean hasIsShowTags();
     /**
      * <pre>
-     * Show tags checkbox is set
+     * Show the tag field
      * </pre>
      *
      * <code>optional bool is_show_tags = 5;</code>
@@ -360,7 +1356,7 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * Show repeated tags checkbox is set
+     * Show repeated tags
      * </pre>
      *
      * <code>optional bool is_show_repeated_tags = 6;</code>
@@ -369,7 +1365,7 @@ private static final long serialVersionUID = 0L;
     boolean hasIsShowRepeatedTags();
     /**
      * <pre>
-     * Show repeated tags checkbox is set
+     * Show repeated tags
      * </pre>
      *
      * <code>optional bool is_show_repeated_tags = 6;</code>
@@ -379,7 +1375,7 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * Value of tag width spinner
+     * The width of the tag field
      * </pre>
      *
      * <code>optional int32 tag_width = 7;</code>
@@ -388,7 +1384,7 @@ private static final long serialVersionUID = 0L;
     boolean hasTagWidth();
     /**
      * <pre>
-     * Value of tag width spinner
+     * The width of the tag field
      * </pre>
      *
      * <code>optional int32 tag_width = 7;</code>
@@ -398,7 +1394,7 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * Show packages checkbox is set
+     * Show the package field
      * </pre>
      *
      * <code>optional bool is_show_packages = 8;</code>
@@ -407,7 +1403,7 @@ private static final long serialVersionUID = 0L;
     boolean hasIsShowPackages();
     /**
      * <pre>
-     * Show packages checkbox is set
+     * Show the package field
      * </pre>
      *
      * <code>optional bool is_show_packages = 8;</code>
@@ -417,7 +1413,7 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * Show repeated packages checkbox is set
+     * Show repeated packages
      * </pre>
      *
      * <code>optional bool is_show_repeated_packages = 9;</code>
@@ -426,7 +1422,7 @@ private static final long serialVersionUID = 0L;
     boolean hasIsShowRepeatedPackages();
     /**
      * <pre>
-     * Show repeated packages checkbox is set
+     * Show repeated packages
      * </pre>
      *
      * <code>optional bool is_show_repeated_packages = 9;</code>
@@ -436,7 +1432,7 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * Value of package width spinner
+     * The width of the package field
      * </pre>
      *
      * <code>optional int32 package_width = 10;</code>
@@ -445,7 +1441,7 @@ private static final long serialVersionUID = 0L;
     boolean hasPackageWidth();
     /**
      * <pre>
-     * Value of package width spinner
+     * The width of the package field
      * </pre>
      *
      * <code>optional int32 package_width = 10;</code>
@@ -455,78 +1451,78 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * Value of the presests combo
+     * The preset configuration if applicable
      * </pre>
      *
-     * <code>optional .android_studio.LogcatUsageEvent.LogcatFormatDialogEvent.Preset preset = 11;</code>
+     * <code>optional .android_studio.LogcatUsageEvent.LogcatFormatConfiguration.Preset preset = 11;</code>
      * @return Whether the preset field is set.
      */
     boolean hasPreset();
     /**
      * <pre>
-     * Value of the presests combo
+     * The preset configuration if applicable
      * </pre>
      *
-     * <code>optional .android_studio.LogcatUsageEvent.LogcatFormatDialogEvent.Preset preset = 11;</code>
+     * <code>optional .android_studio.LogcatUsageEvent.LogcatFormatConfiguration.Preset preset = 11;</code>
      * @return The preset.
      */
-    com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatDialogEvent.Preset getPreset();
+    com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatConfiguration.Preset getPreset();
 
     /**
      * <pre>
-     * Use preset as default checkbox is selected
+     * Historical, no longer used for writing as of 02/2022
      * </pre>
      *
-     * <code>optional bool is_default_preset = 12;</code>
+     * <code>optional bool is_default_preset = 12 [deprecated = true];</code>
      * @return Whether the isDefaultPreset field is set.
      */
-    boolean hasIsDefaultPreset();
+    @java.lang.Deprecated boolean hasIsDefaultPreset();
     /**
      * <pre>
-     * Use preset as default checkbox is selected
+     * Historical, no longer used for writing as of 02/2022
      * </pre>
      *
-     * <code>optional bool is_default_preset = 12;</code>
+     * <code>optional bool is_default_preset = 12 [deprecated = true];</code>
      * @return The isDefaultPreset.
      */
-    boolean getIsDefaultPreset();
+    @java.lang.Deprecated boolean getIsDefaultPreset();
 
     /**
      * <pre>
-     * Apply button used (as opposed to OK)
+     * Historical, no longer used for writing as of 02/2022
      * </pre>
      *
-     * <code>optional bool is_apply_button_used = 13;</code>
+     * <code>optional bool is_apply_button_used = 13 [deprecated = true];</code>
      * @return Whether the isApplyButtonUsed field is set.
      */
-    boolean hasIsApplyButtonUsed();
+    @java.lang.Deprecated boolean hasIsApplyButtonUsed();
     /**
      * <pre>
-     * Apply button used (as opposed to OK)
+     * Historical, no longer used for writing as of 02/2022
      * </pre>
      *
-     * <code>optional bool is_apply_button_used = 13;</code>
+     * <code>optional bool is_apply_button_used = 13 [deprecated = true];</code>
      * @return The isApplyButtonUsed.
      */
-    boolean getIsApplyButtonUsed();
+    @java.lang.Deprecated boolean getIsApplyButtonUsed();
   }
   /**
    * <pre>
    * The state of a Logcat Format Dialog
    * </pre>
    *
-   * Protobuf type {@code android_studio.LogcatUsageEvent.LogcatFormatDialogEvent}
+   * Protobuf type {@code android_studio.LogcatUsageEvent.LogcatFormatConfiguration}
    */
-  public  static final class LogcatFormatDialogEvent extends
+  public  static final class LogcatFormatConfiguration extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:android_studio.LogcatUsageEvent.LogcatFormatDialogEvent)
-      LogcatFormatDialogEventOrBuilder {
+      // @@protoc_insertion_point(message_implements:android_studio.LogcatUsageEvent.LogcatFormatConfiguration)
+      LogcatFormatConfigurationOrBuilder {
   private static final long serialVersionUID = 0L;
-    // Use LogcatFormatDialogEvent.newBuilder() to construct.
-    private LogcatFormatDialogEvent(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+    // Use LogcatFormatConfiguration.newBuilder() to construct.
+    private LogcatFormatConfiguration(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
     }
-    private LogcatFormatDialogEvent() {
+    private LogcatFormatConfiguration() {
       preset_ = 0;
     }
 
@@ -534,7 +1530,7 @@ private static final long serialVersionUID = 0L;
     @SuppressWarnings({"unused"})
     protected java.lang.Object newInstance(
         UnusedPrivateParameter unused) {
-      return new LogcatFormatDialogEvent();
+      return new LogcatFormatConfiguration();
     }
 
     @java.lang.Override
@@ -542,7 +1538,7 @@ private static final long serialVersionUID = 0L;
     getUnknownFields() {
       return this.unknownFields;
     }
-    private LogcatFormatDialogEvent(
+    private LogcatFormatConfiguration(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -614,7 +1610,7 @@ private static final long serialVersionUID = 0L;
             case 88: {
               int rawValue = input.readEnum();
                 @SuppressWarnings("deprecation")
-              com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatDialogEvent.Preset value = com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatDialogEvent.Preset.valueOf(rawValue);
+              com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatConfiguration.Preset value = com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatConfiguration.Preset.valueOf(rawValue);
               if (value == null) {
                 unknownFields.mergeVarintField(11, rawValue);
               } else {
@@ -654,15 +1650,15 @@ private static final long serialVersionUID = 0L;
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_LogcatUsageEvent_LogcatFormatDialogEvent_descriptor;
+      return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_LogcatUsageEvent_LogcatFormatConfiguration_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_LogcatUsageEvent_LogcatFormatDialogEvent_fieldAccessorTable
+      return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_LogcatUsageEvent_LogcatFormatConfiguration_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatDialogEvent.class, com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatDialogEvent.Builder.class);
+              com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatConfiguration.class, com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatConfiguration.Builder.class);
     }
 
     /**
@@ -670,7 +1666,7 @@ private static final long serialVersionUID = 0L;
      * Logcat Format presets
      * </pre>
      *
-     * Protobuf enum {@code android_studio.LogcatUsageEvent.LogcatFormatDialogEvent.Preset}
+     * Protobuf enum {@code android_studio.LogcatUsageEvent.LogcatFormatConfiguration.Preset}
      */
     public enum Preset
         implements com.google.protobuf.ProtocolMessageEnum {
@@ -775,7 +1771,7 @@ private static final long serialVersionUID = 0L;
       }
       public static final com.google.protobuf.Descriptors.EnumDescriptor
           getDescriptor() {
-        return com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatDialogEvent.getDescriptor().getEnumTypes().get(0);
+        return com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatConfiguration.getDescriptor().getEnumTypes().get(0);
       }
 
       private static final Preset[] VALUES = values();
@@ -795,7 +1791,7 @@ private static final long serialVersionUID = 0L;
         this.value = value;
       }
 
-      // @@protoc_insertion_point(enum_scope:android_studio.LogcatUsageEvent.LogcatFormatDialogEvent.Preset)
+      // @@protoc_insertion_point(enum_scope:android_studio.LogcatUsageEvent.LogcatFormatConfiguration.Preset)
     }
 
     private int bitField0_;
@@ -803,7 +1799,7 @@ private static final long serialVersionUID = 0L;
     private boolean isShowTimestamp_;
     /**
      * <pre>
-     * Show timestamp checkbox is set
+     * Show timestamp field
      * </pre>
      *
      * <code>optional bool is_show_timestamp = 1;</code>
@@ -814,7 +1810,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Show timestamp checkbox is set
+     * Show timestamp field
      * </pre>
      *
      * <code>optional bool is_show_timestamp = 1;</code>
@@ -828,7 +1824,7 @@ private static final long serialVersionUID = 0L;
     private boolean isShowDate_;
     /**
      * <pre>
-     * Timestamp format includes the data
+     * Timestamp format includes the date
      * </pre>
      *
      * <code>optional bool is_show_date = 2;</code>
@@ -839,7 +1835,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Timestamp format includes the data
+     * Timestamp format includes the date
      * </pre>
      *
      * <code>optional bool is_show_date = 2;</code>
@@ -853,7 +1849,7 @@ private static final long serialVersionUID = 0L;
     private boolean isShowProcessId_;
     /**
      * <pre>
-     * Show process id checkbox is set
+     * Show the process id field
      * </pre>
      *
      * <code>optional bool is_show_process_id = 3;</code>
@@ -864,7 +1860,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Show process id checkbox is set
+     * Show the process id field
      * </pre>
      *
      * <code>optional bool is_show_process_id = 3;</code>
@@ -878,7 +1874,7 @@ private static final long serialVersionUID = 0L;
     private boolean isShowThreadId_;
     /**
      * <pre>
-     * Include thread id checkbox is set
+     * Show the thread id field
      * </pre>
      *
      * <code>optional bool is_show_thread_id = 4;</code>
@@ -889,7 +1885,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Include thread id checkbox is set
+     * Show the thread id field
      * </pre>
      *
      * <code>optional bool is_show_thread_id = 4;</code>
@@ -903,7 +1899,7 @@ private static final long serialVersionUID = 0L;
     private boolean isShowTags_;
     /**
      * <pre>
-     * Show tags checkbox is set
+     * Show the tag field
      * </pre>
      *
      * <code>optional bool is_show_tags = 5;</code>
@@ -914,7 +1910,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Show tags checkbox is set
+     * Show the tag field
      * </pre>
      *
      * <code>optional bool is_show_tags = 5;</code>
@@ -928,7 +1924,7 @@ private static final long serialVersionUID = 0L;
     private boolean isShowRepeatedTags_;
     /**
      * <pre>
-     * Show repeated tags checkbox is set
+     * Show repeated tags
      * </pre>
      *
      * <code>optional bool is_show_repeated_tags = 6;</code>
@@ -939,7 +1935,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Show repeated tags checkbox is set
+     * Show repeated tags
      * </pre>
      *
      * <code>optional bool is_show_repeated_tags = 6;</code>
@@ -953,7 +1949,7 @@ private static final long serialVersionUID = 0L;
     private int tagWidth_;
     /**
      * <pre>
-     * Value of tag width spinner
+     * The width of the tag field
      * </pre>
      *
      * <code>optional int32 tag_width = 7;</code>
@@ -964,7 +1960,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Value of tag width spinner
+     * The width of the tag field
      * </pre>
      *
      * <code>optional int32 tag_width = 7;</code>
@@ -978,7 +1974,7 @@ private static final long serialVersionUID = 0L;
     private boolean isShowPackages_;
     /**
      * <pre>
-     * Show packages checkbox is set
+     * Show the package field
      * </pre>
      *
      * <code>optional bool is_show_packages = 8;</code>
@@ -989,7 +1985,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Show packages checkbox is set
+     * Show the package field
      * </pre>
      *
      * <code>optional bool is_show_packages = 8;</code>
@@ -1003,7 +1999,7 @@ private static final long serialVersionUID = 0L;
     private boolean isShowRepeatedPackages_;
     /**
      * <pre>
-     * Show repeated packages checkbox is set
+     * Show repeated packages
      * </pre>
      *
      * <code>optional bool is_show_repeated_packages = 9;</code>
@@ -1014,7 +2010,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Show repeated packages checkbox is set
+     * Show repeated packages
      * </pre>
      *
      * <code>optional bool is_show_repeated_packages = 9;</code>
@@ -1028,7 +2024,7 @@ private static final long serialVersionUID = 0L;
     private int packageWidth_;
     /**
      * <pre>
-     * Value of package width spinner
+     * The width of the package field
      * </pre>
      *
      * <code>optional int32 package_width = 10;</code>
@@ -1039,7 +2035,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Value of package width spinner
+     * The width of the package field
      * </pre>
      *
      * <code>optional int32 package_width = 10;</code>
@@ -1053,10 +2049,10 @@ private static final long serialVersionUID = 0L;
     private int preset_;
     /**
      * <pre>
-     * Value of the presests combo
+     * The preset configuration if applicable
      * </pre>
      *
-     * <code>optional .android_studio.LogcatUsageEvent.LogcatFormatDialogEvent.Preset preset = 11;</code>
+     * <code>optional .android_studio.LogcatUsageEvent.LogcatFormatConfiguration.Preset preset = 11;</code>
      * @return Whether the preset field is set.
      */
     public boolean hasPreset() {
@@ -1064,40 +2060,40 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Value of the presests combo
+     * The preset configuration if applicable
      * </pre>
      *
-     * <code>optional .android_studio.LogcatUsageEvent.LogcatFormatDialogEvent.Preset preset = 11;</code>
+     * <code>optional .android_studio.LogcatUsageEvent.LogcatFormatConfiguration.Preset preset = 11;</code>
      * @return The preset.
      */
-    public com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatDialogEvent.Preset getPreset() {
+    public com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatConfiguration.Preset getPreset() {
       @SuppressWarnings("deprecation")
-      com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatDialogEvent.Preset result = com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatDialogEvent.Preset.valueOf(preset_);
-      return result == null ? com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatDialogEvent.Preset.UNKNOWN_PRESET : result;
+      com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatConfiguration.Preset result = com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatConfiguration.Preset.valueOf(preset_);
+      return result == null ? com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatConfiguration.Preset.UNKNOWN_PRESET : result;
     }
 
     public static final int IS_DEFAULT_PRESET_FIELD_NUMBER = 12;
     private boolean isDefaultPreset_;
     /**
      * <pre>
-     * Use preset as default checkbox is selected
+     * Historical, no longer used for writing as of 02/2022
      * </pre>
      *
-     * <code>optional bool is_default_preset = 12;</code>
+     * <code>optional bool is_default_preset = 12 [deprecated = true];</code>
      * @return Whether the isDefaultPreset field is set.
      */
-    public boolean hasIsDefaultPreset() {
+    @java.lang.Deprecated public boolean hasIsDefaultPreset() {
       return ((bitField0_ & 0x00000800) != 0);
     }
     /**
      * <pre>
-     * Use preset as default checkbox is selected
+     * Historical, no longer used for writing as of 02/2022
      * </pre>
      *
-     * <code>optional bool is_default_preset = 12;</code>
+     * <code>optional bool is_default_preset = 12 [deprecated = true];</code>
      * @return The isDefaultPreset.
      */
-    public boolean getIsDefaultPreset() {
+    @java.lang.Deprecated public boolean getIsDefaultPreset() {
       return isDefaultPreset_;
     }
 
@@ -1105,24 +2101,24 @@ private static final long serialVersionUID = 0L;
     private boolean isApplyButtonUsed_;
     /**
      * <pre>
-     * Apply button used (as opposed to OK)
+     * Historical, no longer used for writing as of 02/2022
      * </pre>
      *
-     * <code>optional bool is_apply_button_used = 13;</code>
+     * <code>optional bool is_apply_button_used = 13 [deprecated = true];</code>
      * @return Whether the isApplyButtonUsed field is set.
      */
-    public boolean hasIsApplyButtonUsed() {
+    @java.lang.Deprecated public boolean hasIsApplyButtonUsed() {
       return ((bitField0_ & 0x00001000) != 0);
     }
     /**
      * <pre>
-     * Apply button used (as opposed to OK)
+     * Historical, no longer used for writing as of 02/2022
      * </pre>
      *
-     * <code>optional bool is_apply_button_used = 13;</code>
+     * <code>optional bool is_apply_button_used = 13 [deprecated = true];</code>
      * @return The isApplyButtonUsed.
      */
-    public boolean getIsApplyButtonUsed() {
+    @java.lang.Deprecated public boolean getIsApplyButtonUsed() {
       return isApplyButtonUsed_;
     }
 
@@ -1250,10 +2246,10 @@ private static final long serialVersionUID = 0L;
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatDialogEvent)) {
+      if (!(obj instanceof com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatConfiguration)) {
         return super.equals(obj);
       }
-      com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatDialogEvent other = (com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatDialogEvent) obj;
+      com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatConfiguration other = (com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatConfiguration) obj;
 
       if (hasIsShowTimestamp() != other.hasIsShowTimestamp()) return false;
       if (hasIsShowTimestamp()) {
@@ -1397,69 +2393,69 @@ private static final long serialVersionUID = 0L;
       return hash;
     }
 
-    public static com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatDialogEvent parseFrom(
+    public static com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatConfiguration parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatDialogEvent parseFrom(
+    public static com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatConfiguration parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatDialogEvent parseFrom(
+    public static com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatConfiguration parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatDialogEvent parseFrom(
+    public static com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatConfiguration parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatDialogEvent parseFrom(byte[] data)
+    public static com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatConfiguration parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatDialogEvent parseFrom(
+    public static com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatConfiguration parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatDialogEvent parseFrom(java.io.InputStream input)
+    public static com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatConfiguration parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatDialogEvent parseFrom(
+    public static com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatConfiguration parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatDialogEvent parseDelimitedFrom(java.io.InputStream input)
+    public static com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatConfiguration parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatDialogEvent parseDelimitedFrom(
+    public static com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatConfiguration parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatDialogEvent parseFrom(
+    public static com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatConfiguration parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatDialogEvent parseFrom(
+    public static com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatConfiguration parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -1472,7 +2468,7 @@ private static final long serialVersionUID = 0L;
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatDialogEvent prototype) {
+    public static Builder newBuilder(com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatConfiguration prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -1492,26 +2488,26 @@ private static final long serialVersionUID = 0L;
      * The state of a Logcat Format Dialog
      * </pre>
      *
-     * Protobuf type {@code android_studio.LogcatUsageEvent.LogcatFormatDialogEvent}
+     * Protobuf type {@code android_studio.LogcatUsageEvent.LogcatFormatConfiguration}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:android_studio.LogcatUsageEvent.LogcatFormatDialogEvent)
-        com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatDialogEventOrBuilder {
+        // @@protoc_insertion_point(builder_implements:android_studio.LogcatUsageEvent.LogcatFormatConfiguration)
+        com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatConfigurationOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_LogcatUsageEvent_LogcatFormatDialogEvent_descriptor;
+        return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_LogcatUsageEvent_LogcatFormatConfiguration_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_LogcatUsageEvent_LogcatFormatDialogEvent_fieldAccessorTable
+        return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_LogcatUsageEvent_LogcatFormatConfiguration_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatDialogEvent.class, com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatDialogEvent.Builder.class);
+                com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatConfiguration.class, com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatConfiguration.Builder.class);
       }
 
-      // Construct using com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatDialogEvent.newBuilder()
+      // Construct using com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatConfiguration.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -1561,17 +2557,17 @@ private static final long serialVersionUID = 0L;
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_LogcatUsageEvent_LogcatFormatDialogEvent_descriptor;
+        return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_LogcatUsageEvent_LogcatFormatConfiguration_descriptor;
       }
 
       @java.lang.Override
-      public com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatDialogEvent getDefaultInstanceForType() {
-        return com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatDialogEvent.getDefaultInstance();
+      public com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatConfiguration getDefaultInstanceForType() {
+        return com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatConfiguration.getDefaultInstance();
       }
 
       @java.lang.Override
-      public com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatDialogEvent build() {
-        com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatDialogEvent result = buildPartial();
+      public com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatConfiguration build() {
+        com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatConfiguration result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -1579,8 +2575,8 @@ private static final long serialVersionUID = 0L;
       }
 
       @java.lang.Override
-      public com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatDialogEvent buildPartial() {
-        com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatDialogEvent result = new com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatDialogEvent(this);
+      public com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatConfiguration buildPartial() {
+        com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatConfiguration result = new com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatConfiguration(this);
         int from_bitField0_ = bitField0_;
         int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
@@ -1674,16 +2670,16 @@ private static final long serialVersionUID = 0L;
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatDialogEvent) {
-          return mergeFrom((com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatDialogEvent)other);
+        if (other instanceof com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatConfiguration) {
+          return mergeFrom((com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatConfiguration)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatDialogEvent other) {
-        if (other == com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatDialogEvent.getDefaultInstance()) return this;
+      public Builder mergeFrom(com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatConfiguration other) {
+        if (other == com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatConfiguration.getDefaultInstance()) return this;
         if (other.hasIsShowTimestamp()) {
           setIsShowTimestamp(other.getIsShowTimestamp());
         }
@@ -1738,11 +2734,11 @@ private static final long serialVersionUID = 0L;
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatDialogEvent parsedMessage = null;
+        com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatConfiguration parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatDialogEvent) e.getUnfinishedMessage();
+          parsedMessage = (com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatConfiguration) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -1756,7 +2752,7 @@ private static final long serialVersionUID = 0L;
       private boolean isShowTimestamp_ ;
       /**
        * <pre>
-       * Show timestamp checkbox is set
+       * Show timestamp field
        * </pre>
        *
        * <code>optional bool is_show_timestamp = 1;</code>
@@ -1767,7 +2763,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Show timestamp checkbox is set
+       * Show timestamp field
        * </pre>
        *
        * <code>optional bool is_show_timestamp = 1;</code>
@@ -1778,7 +2774,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Show timestamp checkbox is set
+       * Show timestamp field
        * </pre>
        *
        * <code>optional bool is_show_timestamp = 1;</code>
@@ -1793,7 +2789,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Show timestamp checkbox is set
+       * Show timestamp field
        * </pre>
        *
        * <code>optional bool is_show_timestamp = 1;</code>
@@ -1809,7 +2805,7 @@ private static final long serialVersionUID = 0L;
       private boolean isShowDate_ ;
       /**
        * <pre>
-       * Timestamp format includes the data
+       * Timestamp format includes the date
        * </pre>
        *
        * <code>optional bool is_show_date = 2;</code>
@@ -1820,7 +2816,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Timestamp format includes the data
+       * Timestamp format includes the date
        * </pre>
        *
        * <code>optional bool is_show_date = 2;</code>
@@ -1831,7 +2827,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Timestamp format includes the data
+       * Timestamp format includes the date
        * </pre>
        *
        * <code>optional bool is_show_date = 2;</code>
@@ -1846,7 +2842,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Timestamp format includes the data
+       * Timestamp format includes the date
        * </pre>
        *
        * <code>optional bool is_show_date = 2;</code>
@@ -1862,7 +2858,7 @@ private static final long serialVersionUID = 0L;
       private boolean isShowProcessId_ ;
       /**
        * <pre>
-       * Show process id checkbox is set
+       * Show the process id field
        * </pre>
        *
        * <code>optional bool is_show_process_id = 3;</code>
@@ -1873,7 +2869,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Show process id checkbox is set
+       * Show the process id field
        * </pre>
        *
        * <code>optional bool is_show_process_id = 3;</code>
@@ -1884,7 +2880,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Show process id checkbox is set
+       * Show the process id field
        * </pre>
        *
        * <code>optional bool is_show_process_id = 3;</code>
@@ -1899,7 +2895,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Show process id checkbox is set
+       * Show the process id field
        * </pre>
        *
        * <code>optional bool is_show_process_id = 3;</code>
@@ -1915,7 +2911,7 @@ private static final long serialVersionUID = 0L;
       private boolean isShowThreadId_ ;
       /**
        * <pre>
-       * Include thread id checkbox is set
+       * Show the thread id field
        * </pre>
        *
        * <code>optional bool is_show_thread_id = 4;</code>
@@ -1926,7 +2922,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Include thread id checkbox is set
+       * Show the thread id field
        * </pre>
        *
        * <code>optional bool is_show_thread_id = 4;</code>
@@ -1937,7 +2933,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Include thread id checkbox is set
+       * Show the thread id field
        * </pre>
        *
        * <code>optional bool is_show_thread_id = 4;</code>
@@ -1952,7 +2948,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Include thread id checkbox is set
+       * Show the thread id field
        * </pre>
        *
        * <code>optional bool is_show_thread_id = 4;</code>
@@ -1968,7 +2964,7 @@ private static final long serialVersionUID = 0L;
       private boolean isShowTags_ ;
       /**
        * <pre>
-       * Show tags checkbox is set
+       * Show the tag field
        * </pre>
        *
        * <code>optional bool is_show_tags = 5;</code>
@@ -1979,7 +2975,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Show tags checkbox is set
+       * Show the tag field
        * </pre>
        *
        * <code>optional bool is_show_tags = 5;</code>
@@ -1990,7 +2986,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Show tags checkbox is set
+       * Show the tag field
        * </pre>
        *
        * <code>optional bool is_show_tags = 5;</code>
@@ -2005,7 +3001,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Show tags checkbox is set
+       * Show the tag field
        * </pre>
        *
        * <code>optional bool is_show_tags = 5;</code>
@@ -2021,7 +3017,7 @@ private static final long serialVersionUID = 0L;
       private boolean isShowRepeatedTags_ ;
       /**
        * <pre>
-       * Show repeated tags checkbox is set
+       * Show repeated tags
        * </pre>
        *
        * <code>optional bool is_show_repeated_tags = 6;</code>
@@ -2032,7 +3028,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Show repeated tags checkbox is set
+       * Show repeated tags
        * </pre>
        *
        * <code>optional bool is_show_repeated_tags = 6;</code>
@@ -2043,7 +3039,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Show repeated tags checkbox is set
+       * Show repeated tags
        * </pre>
        *
        * <code>optional bool is_show_repeated_tags = 6;</code>
@@ -2058,7 +3054,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Show repeated tags checkbox is set
+       * Show repeated tags
        * </pre>
        *
        * <code>optional bool is_show_repeated_tags = 6;</code>
@@ -2074,7 +3070,7 @@ private static final long serialVersionUID = 0L;
       private int tagWidth_ ;
       /**
        * <pre>
-       * Value of tag width spinner
+       * The width of the tag field
        * </pre>
        *
        * <code>optional int32 tag_width = 7;</code>
@@ -2085,7 +3081,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Value of tag width spinner
+       * The width of the tag field
        * </pre>
        *
        * <code>optional int32 tag_width = 7;</code>
@@ -2096,7 +3092,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Value of tag width spinner
+       * The width of the tag field
        * </pre>
        *
        * <code>optional int32 tag_width = 7;</code>
@@ -2111,7 +3107,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Value of tag width spinner
+       * The width of the tag field
        * </pre>
        *
        * <code>optional int32 tag_width = 7;</code>
@@ -2127,7 +3123,7 @@ private static final long serialVersionUID = 0L;
       private boolean isShowPackages_ ;
       /**
        * <pre>
-       * Show packages checkbox is set
+       * Show the package field
        * </pre>
        *
        * <code>optional bool is_show_packages = 8;</code>
@@ -2138,7 +3134,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Show packages checkbox is set
+       * Show the package field
        * </pre>
        *
        * <code>optional bool is_show_packages = 8;</code>
@@ -2149,7 +3145,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Show packages checkbox is set
+       * Show the package field
        * </pre>
        *
        * <code>optional bool is_show_packages = 8;</code>
@@ -2164,7 +3160,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Show packages checkbox is set
+       * Show the package field
        * </pre>
        *
        * <code>optional bool is_show_packages = 8;</code>
@@ -2180,7 +3176,7 @@ private static final long serialVersionUID = 0L;
       private boolean isShowRepeatedPackages_ ;
       /**
        * <pre>
-       * Show repeated packages checkbox is set
+       * Show repeated packages
        * </pre>
        *
        * <code>optional bool is_show_repeated_packages = 9;</code>
@@ -2191,7 +3187,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Show repeated packages checkbox is set
+       * Show repeated packages
        * </pre>
        *
        * <code>optional bool is_show_repeated_packages = 9;</code>
@@ -2202,7 +3198,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Show repeated packages checkbox is set
+       * Show repeated packages
        * </pre>
        *
        * <code>optional bool is_show_repeated_packages = 9;</code>
@@ -2217,7 +3213,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Show repeated packages checkbox is set
+       * Show repeated packages
        * </pre>
        *
        * <code>optional bool is_show_repeated_packages = 9;</code>
@@ -2233,7 +3229,7 @@ private static final long serialVersionUID = 0L;
       private int packageWidth_ ;
       /**
        * <pre>
-       * Value of package width spinner
+       * The width of the package field
        * </pre>
        *
        * <code>optional int32 package_width = 10;</code>
@@ -2244,7 +3240,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Value of package width spinner
+       * The width of the package field
        * </pre>
        *
        * <code>optional int32 package_width = 10;</code>
@@ -2255,7 +3251,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Value of package width spinner
+       * The width of the package field
        * </pre>
        *
        * <code>optional int32 package_width = 10;</code>
@@ -2270,7 +3266,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Value of package width spinner
+       * The width of the package field
        * </pre>
        *
        * <code>optional int32 package_width = 10;</code>
@@ -2286,10 +3282,10 @@ private static final long serialVersionUID = 0L;
       private int preset_ = 0;
       /**
        * <pre>
-       * Value of the presests combo
+       * The preset configuration if applicable
        * </pre>
        *
-       * <code>optional .android_studio.LogcatUsageEvent.LogcatFormatDialogEvent.Preset preset = 11;</code>
+       * <code>optional .android_studio.LogcatUsageEvent.LogcatFormatConfiguration.Preset preset = 11;</code>
        * @return Whether the preset field is set.
        */
       public boolean hasPreset() {
@@ -2297,27 +3293,27 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Value of the presests combo
+       * The preset configuration if applicable
        * </pre>
        *
-       * <code>optional .android_studio.LogcatUsageEvent.LogcatFormatDialogEvent.Preset preset = 11;</code>
+       * <code>optional .android_studio.LogcatUsageEvent.LogcatFormatConfiguration.Preset preset = 11;</code>
        * @return The preset.
        */
-      public com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatDialogEvent.Preset getPreset() {
+      public com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatConfiguration.Preset getPreset() {
         @SuppressWarnings("deprecation")
-        com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatDialogEvent.Preset result = com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatDialogEvent.Preset.valueOf(preset_);
-        return result == null ? com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatDialogEvent.Preset.UNKNOWN_PRESET : result;
+        com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatConfiguration.Preset result = com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatConfiguration.Preset.valueOf(preset_);
+        return result == null ? com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatConfiguration.Preset.UNKNOWN_PRESET : result;
       }
       /**
        * <pre>
-       * Value of the presests combo
+       * The preset configuration if applicable
        * </pre>
        *
-       * <code>optional .android_studio.LogcatUsageEvent.LogcatFormatDialogEvent.Preset preset = 11;</code>
+       * <code>optional .android_studio.LogcatUsageEvent.LogcatFormatConfiguration.Preset preset = 11;</code>
        * @param value The preset to set.
        * @return This builder for chaining.
        */
-      public Builder setPreset(com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatDialogEvent.Preset value) {
+      public Builder setPreset(com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatConfiguration.Preset value) {
         if (value == null) {
           throw new NullPointerException();
         }
@@ -2328,10 +3324,10 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Value of the presests combo
+       * The preset configuration if applicable
        * </pre>
        *
-       * <code>optional .android_studio.LogcatUsageEvent.LogcatFormatDialogEvent.Preset preset = 11;</code>
+       * <code>optional .android_studio.LogcatUsageEvent.LogcatFormatConfiguration.Preset preset = 11;</code>
        * @return This builder for chaining.
        */
       public Builder clearPreset() {
@@ -2344,36 +3340,36 @@ private static final long serialVersionUID = 0L;
       private boolean isDefaultPreset_ ;
       /**
        * <pre>
-       * Use preset as default checkbox is selected
+       * Historical, no longer used for writing as of 02/2022
        * </pre>
        *
-       * <code>optional bool is_default_preset = 12;</code>
+       * <code>optional bool is_default_preset = 12 [deprecated = true];</code>
        * @return Whether the isDefaultPreset field is set.
        */
-      public boolean hasIsDefaultPreset() {
+      @java.lang.Deprecated public boolean hasIsDefaultPreset() {
         return ((bitField0_ & 0x00000800) != 0);
       }
       /**
        * <pre>
-       * Use preset as default checkbox is selected
+       * Historical, no longer used for writing as of 02/2022
        * </pre>
        *
-       * <code>optional bool is_default_preset = 12;</code>
+       * <code>optional bool is_default_preset = 12 [deprecated = true];</code>
        * @return The isDefaultPreset.
        */
-      public boolean getIsDefaultPreset() {
+      @java.lang.Deprecated public boolean getIsDefaultPreset() {
         return isDefaultPreset_;
       }
       /**
        * <pre>
-       * Use preset as default checkbox is selected
+       * Historical, no longer used for writing as of 02/2022
        * </pre>
        *
-       * <code>optional bool is_default_preset = 12;</code>
+       * <code>optional bool is_default_preset = 12 [deprecated = true];</code>
        * @param value The isDefaultPreset to set.
        * @return This builder for chaining.
        */
-      public Builder setIsDefaultPreset(boolean value) {
+      @java.lang.Deprecated public Builder setIsDefaultPreset(boolean value) {
         bitField0_ |= 0x00000800;
         isDefaultPreset_ = value;
         onChanged();
@@ -2381,13 +3377,13 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Use preset as default checkbox is selected
+       * Historical, no longer used for writing as of 02/2022
        * </pre>
        *
-       * <code>optional bool is_default_preset = 12;</code>
+       * <code>optional bool is_default_preset = 12 [deprecated = true];</code>
        * @return This builder for chaining.
        */
-      public Builder clearIsDefaultPreset() {
+      @java.lang.Deprecated public Builder clearIsDefaultPreset() {
         bitField0_ = (bitField0_ & ~0x00000800);
         isDefaultPreset_ = false;
         onChanged();
@@ -2397,36 +3393,36 @@ private static final long serialVersionUID = 0L;
       private boolean isApplyButtonUsed_ ;
       /**
        * <pre>
-       * Apply button used (as opposed to OK)
+       * Historical, no longer used for writing as of 02/2022
        * </pre>
        *
-       * <code>optional bool is_apply_button_used = 13;</code>
+       * <code>optional bool is_apply_button_used = 13 [deprecated = true];</code>
        * @return Whether the isApplyButtonUsed field is set.
        */
-      public boolean hasIsApplyButtonUsed() {
+      @java.lang.Deprecated public boolean hasIsApplyButtonUsed() {
         return ((bitField0_ & 0x00001000) != 0);
       }
       /**
        * <pre>
-       * Apply button used (as opposed to OK)
+       * Historical, no longer used for writing as of 02/2022
        * </pre>
        *
-       * <code>optional bool is_apply_button_used = 13;</code>
+       * <code>optional bool is_apply_button_used = 13 [deprecated = true];</code>
        * @return The isApplyButtonUsed.
        */
-      public boolean getIsApplyButtonUsed() {
+      @java.lang.Deprecated public boolean getIsApplyButtonUsed() {
         return isApplyButtonUsed_;
       }
       /**
        * <pre>
-       * Apply button used (as opposed to OK)
+       * Historical, no longer used for writing as of 02/2022
        * </pre>
        *
-       * <code>optional bool is_apply_button_used = 13;</code>
+       * <code>optional bool is_apply_button_used = 13 [deprecated = true];</code>
        * @param value The isApplyButtonUsed to set.
        * @return This builder for chaining.
        */
-      public Builder setIsApplyButtonUsed(boolean value) {
+      @java.lang.Deprecated public Builder setIsApplyButtonUsed(boolean value) {
         bitField0_ |= 0x00001000;
         isApplyButtonUsed_ = value;
         onChanged();
@@ -2434,13 +3430,13 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Apply button used (as opposed to OK)
+       * Historical, no longer used for writing as of 02/2022
        * </pre>
        *
-       * <code>optional bool is_apply_button_used = 13;</code>
+       * <code>optional bool is_apply_button_used = 13 [deprecated = true];</code>
        * @return This builder for chaining.
        */
-      public Builder clearIsApplyButtonUsed() {
+      @java.lang.Deprecated public Builder clearIsApplyButtonUsed() {
         bitField0_ = (bitField0_ & ~0x00001000);
         isApplyButtonUsed_ = false;
         onChanged();
@@ -2459,41 +3455,41 @@ private static final long serialVersionUID = 0L;
       }
 
 
-      // @@protoc_insertion_point(builder_scope:android_studio.LogcatUsageEvent.LogcatFormatDialogEvent)
+      // @@protoc_insertion_point(builder_scope:android_studio.LogcatUsageEvent.LogcatFormatConfiguration)
     }
 
-    // @@protoc_insertion_point(class_scope:android_studio.LogcatUsageEvent.LogcatFormatDialogEvent)
-    private static final com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatDialogEvent DEFAULT_INSTANCE;
+    // @@protoc_insertion_point(class_scope:android_studio.LogcatUsageEvent.LogcatFormatConfiguration)
+    private static final com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatConfiguration DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatDialogEvent();
+      DEFAULT_INSTANCE = new com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatConfiguration();
     }
 
-    public static com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatDialogEvent getDefaultInstance() {
+    public static com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatConfiguration getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    @java.lang.Deprecated public static final com.google.protobuf.Parser<LogcatFormatDialogEvent>
-        PARSER = new com.google.protobuf.AbstractParser<LogcatFormatDialogEvent>() {
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<LogcatFormatConfiguration>
+        PARSER = new com.google.protobuf.AbstractParser<LogcatFormatConfiguration>() {
       @java.lang.Override
-      public LogcatFormatDialogEvent parsePartialFrom(
+      public LogcatFormatConfiguration parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new LogcatFormatDialogEvent(input, extensionRegistry);
+        return new LogcatFormatConfiguration(input, extensionRegistry);
       }
     };
 
-    public static com.google.protobuf.Parser<LogcatFormatDialogEvent> parser() {
+    public static com.google.protobuf.Parser<LogcatFormatConfiguration> parser() {
       return PARSER;
     }
 
     @java.lang.Override
-    public com.google.protobuf.Parser<LogcatFormatDialogEvent> getParserForType() {
+    public com.google.protobuf.Parser<LogcatFormatConfiguration> getParserForType() {
       return PARSER;
     }
 
     @java.lang.Override
-    public com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatDialogEvent getDefaultInstanceForType() {
+    public com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatConfiguration getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -5968,6 +6964,1096 @@ private static final long serialVersionUID = 0L;
 
   }
 
+  public interface LogcatPanelEventOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:android_studio.LogcatUsageEvent.LogcatPanelEvent)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * True if the panel is created from a restore-state.
+     * </pre>
+     *
+     * <code>optional bool is_restored = 1;</code>
+     * @return Whether the isRestored field is set.
+     */
+    boolean hasIsRestored();
+    /**
+     * <pre>
+     * True if the panel is created from a restore-state.
+     * </pre>
+     *
+     * <code>optional bool is_restored = 1;</code>
+     * @return The isRestored.
+     */
+    boolean getIsRestored();
+
+    /**
+     * <pre>
+     * The formatting configuration of the panel
+     * </pre>
+     *
+     * <code>optional .android_studio.LogcatUsageEvent.LogcatFormatConfiguration format_configuration = 2;</code>
+     * @return Whether the formatConfiguration field is set.
+     */
+    boolean hasFormatConfiguration();
+    /**
+     * <pre>
+     * The formatting configuration of the panel
+     * </pre>
+     *
+     * <code>optional .android_studio.LogcatUsageEvent.LogcatFormatConfiguration format_configuration = 2;</code>
+     * @return The formatConfiguration.
+     */
+    com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatConfiguration getFormatConfiguration();
+    /**
+     * <pre>
+     * The formatting configuration of the panel
+     * </pre>
+     *
+     * <code>optional .android_studio.LogcatUsageEvent.LogcatFormatConfiguration format_configuration = 2;</code>
+     */
+    com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatConfigurationOrBuilder getFormatConfigurationOrBuilder();
+
+    /**
+     * <pre>
+     * The panel filter.
+     * </pre>
+     *
+     * <code>optional .android_studio.LogcatUsageEvent.LogcatFilterEvent filter = 3;</code>
+     * @return Whether the filter field is set.
+     */
+    boolean hasFilter();
+    /**
+     * <pre>
+     * The panel filter.
+     * </pre>
+     *
+     * <code>optional .android_studio.LogcatUsageEvent.LogcatFilterEvent filter = 3;</code>
+     * @return The filter.
+     */
+    com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFilterEvent getFilter();
+    /**
+     * <pre>
+     * The panel filter.
+     * </pre>
+     *
+     * <code>optional .android_studio.LogcatUsageEvent.LogcatFilterEvent filter = 3;</code>
+     */
+    com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFilterEventOrBuilder getFilterOrBuilder();
+  }
+  /**
+   * <pre>
+   * Details of a Logcat panel
+   * </pre>
+   *
+   * Protobuf type {@code android_studio.LogcatUsageEvent.LogcatPanelEvent}
+   */
+  public  static final class LogcatPanelEvent extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:android_studio.LogcatUsageEvent.LogcatPanelEvent)
+      LogcatPanelEventOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use LogcatPanelEvent.newBuilder() to construct.
+    private LogcatPanelEvent(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private LogcatPanelEvent() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new LogcatPanelEvent();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private LogcatPanelEvent(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+              bitField0_ |= 0x00000001;
+              isRestored_ = input.readBool();
+              break;
+            }
+            case 18: {
+              com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatConfiguration.Builder subBuilder = null;
+              if (((bitField0_ & 0x00000002) != 0)) {
+                subBuilder = formatConfiguration_.toBuilder();
+              }
+              formatConfiguration_ = input.readMessage(com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatConfiguration.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(formatConfiguration_);
+                formatConfiguration_ = subBuilder.buildPartial();
+              }
+              bitField0_ |= 0x00000002;
+              break;
+            }
+            case 26: {
+              com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFilterEvent.Builder subBuilder = null;
+              if (((bitField0_ & 0x00000004) != 0)) {
+                subBuilder = filter_.toBuilder();
+              }
+              filter_ = input.readMessage(com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFilterEvent.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(filter_);
+                filter_ = subBuilder.buildPartial();
+              }
+              bitField0_ |= 0x00000004;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_LogcatUsageEvent_LogcatPanelEvent_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_LogcatUsageEvent_LogcatPanelEvent_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatPanelEvent.class, com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatPanelEvent.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int IS_RESTORED_FIELD_NUMBER = 1;
+    private boolean isRestored_;
+    /**
+     * <pre>
+     * True if the panel is created from a restore-state.
+     * </pre>
+     *
+     * <code>optional bool is_restored = 1;</code>
+     * @return Whether the isRestored field is set.
+     */
+    public boolean hasIsRestored() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <pre>
+     * True if the panel is created from a restore-state.
+     * </pre>
+     *
+     * <code>optional bool is_restored = 1;</code>
+     * @return The isRestored.
+     */
+    public boolean getIsRestored() {
+      return isRestored_;
+    }
+
+    public static final int FORMAT_CONFIGURATION_FIELD_NUMBER = 2;
+    private com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatConfiguration formatConfiguration_;
+    /**
+     * <pre>
+     * The formatting configuration of the panel
+     * </pre>
+     *
+     * <code>optional .android_studio.LogcatUsageEvent.LogcatFormatConfiguration format_configuration = 2;</code>
+     * @return Whether the formatConfiguration field is set.
+     */
+    public boolean hasFormatConfiguration() {
+      return ((bitField0_ & 0x00000002) != 0);
+    }
+    /**
+     * <pre>
+     * The formatting configuration of the panel
+     * </pre>
+     *
+     * <code>optional .android_studio.LogcatUsageEvent.LogcatFormatConfiguration format_configuration = 2;</code>
+     * @return The formatConfiguration.
+     */
+    public com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatConfiguration getFormatConfiguration() {
+      return formatConfiguration_ == null ? com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatConfiguration.getDefaultInstance() : formatConfiguration_;
+    }
+    /**
+     * <pre>
+     * The formatting configuration of the panel
+     * </pre>
+     *
+     * <code>optional .android_studio.LogcatUsageEvent.LogcatFormatConfiguration format_configuration = 2;</code>
+     */
+    public com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatConfigurationOrBuilder getFormatConfigurationOrBuilder() {
+      return formatConfiguration_ == null ? com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatConfiguration.getDefaultInstance() : formatConfiguration_;
+    }
+
+    public static final int FILTER_FIELD_NUMBER = 3;
+    private com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFilterEvent filter_;
+    /**
+     * <pre>
+     * The panel filter.
+     * </pre>
+     *
+     * <code>optional .android_studio.LogcatUsageEvent.LogcatFilterEvent filter = 3;</code>
+     * @return Whether the filter field is set.
+     */
+    public boolean hasFilter() {
+      return ((bitField0_ & 0x00000004) != 0);
+    }
+    /**
+     * <pre>
+     * The panel filter.
+     * </pre>
+     *
+     * <code>optional .android_studio.LogcatUsageEvent.LogcatFilterEvent filter = 3;</code>
+     * @return The filter.
+     */
+    public com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFilterEvent getFilter() {
+      return filter_ == null ? com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFilterEvent.getDefaultInstance() : filter_;
+    }
+    /**
+     * <pre>
+     * The panel filter.
+     * </pre>
+     *
+     * <code>optional .android_studio.LogcatUsageEvent.LogcatFilterEvent filter = 3;</code>
+     */
+    public com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFilterEventOrBuilder getFilterOrBuilder() {
+      return filter_ == null ? com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFilterEvent.getDefaultInstance() : filter_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (((bitField0_ & 0x00000001) != 0)) {
+        output.writeBool(1, isRestored_);
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        output.writeMessage(2, getFormatConfiguration());
+      }
+      if (((bitField0_ & 0x00000004) != 0)) {
+        output.writeMessage(3, getFilter());
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(1, isRestored_);
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getFormatConfiguration());
+      }
+      if (((bitField0_ & 0x00000004) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getFilter());
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatPanelEvent)) {
+        return super.equals(obj);
+      }
+      com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatPanelEvent other = (com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatPanelEvent) obj;
+
+      if (hasIsRestored() != other.hasIsRestored()) return false;
+      if (hasIsRestored()) {
+        if (getIsRestored()
+            != other.getIsRestored()) return false;
+      }
+      if (hasFormatConfiguration() != other.hasFormatConfiguration()) return false;
+      if (hasFormatConfiguration()) {
+        if (!getFormatConfiguration()
+            .equals(other.getFormatConfiguration())) return false;
+      }
+      if (hasFilter() != other.hasFilter()) return false;
+      if (hasFilter()) {
+        if (!getFilter()
+            .equals(other.getFilter())) return false;
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasIsRestored()) {
+        hash = (37 * hash) + IS_RESTORED_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+            getIsRestored());
+      }
+      if (hasFormatConfiguration()) {
+        hash = (37 * hash) + FORMAT_CONFIGURATION_FIELD_NUMBER;
+        hash = (53 * hash) + getFormatConfiguration().hashCode();
+      }
+      if (hasFilter()) {
+        hash = (37 * hash) + FILTER_FIELD_NUMBER;
+        hash = (53 * hash) + getFilter().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatPanelEvent parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatPanelEvent parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatPanelEvent parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatPanelEvent parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatPanelEvent parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatPanelEvent parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatPanelEvent parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatPanelEvent parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatPanelEvent parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatPanelEvent parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatPanelEvent parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatPanelEvent parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatPanelEvent prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Details of a Logcat panel
+     * </pre>
+     *
+     * Protobuf type {@code android_studio.LogcatUsageEvent.LogcatPanelEvent}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:android_studio.LogcatUsageEvent.LogcatPanelEvent)
+        com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatPanelEventOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_LogcatUsageEvent_LogcatPanelEvent_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_LogcatUsageEvent_LogcatPanelEvent_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatPanelEvent.class, com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatPanelEvent.Builder.class);
+      }
+
+      // Construct using com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatPanelEvent.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getFormatConfigurationFieldBuilder();
+          getFilterFieldBuilder();
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        isRestored_ = false;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        if (formatConfigurationBuilder_ == null) {
+          formatConfiguration_ = null;
+        } else {
+          formatConfigurationBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000002);
+        if (filterBuilder_ == null) {
+          filter_ = null;
+        } else {
+          filterBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000004);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_LogcatUsageEvent_LogcatPanelEvent_descriptor;
+      }
+
+      @java.lang.Override
+      public com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatPanelEvent getDefaultInstanceForType() {
+        return com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatPanelEvent.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatPanelEvent build() {
+        com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatPanelEvent result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatPanelEvent buildPartial() {
+        com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatPanelEvent result = new com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatPanelEvent(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.isRestored_ = isRestored_;
+          to_bitField0_ |= 0x00000001;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          if (formatConfigurationBuilder_ == null) {
+            result.formatConfiguration_ = formatConfiguration_;
+          } else {
+            result.formatConfiguration_ = formatConfigurationBuilder_.build();
+          }
+          to_bitField0_ |= 0x00000002;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          if (filterBuilder_ == null) {
+            result.filter_ = filter_;
+          } else {
+            result.filter_ = filterBuilder_.build();
+          }
+          to_bitField0_ |= 0x00000004;
+        }
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatPanelEvent) {
+          return mergeFrom((com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatPanelEvent)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatPanelEvent other) {
+        if (other == com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatPanelEvent.getDefaultInstance()) return this;
+        if (other.hasIsRestored()) {
+          setIsRestored(other.getIsRestored());
+        }
+        if (other.hasFormatConfiguration()) {
+          mergeFormatConfiguration(other.getFormatConfiguration());
+        }
+        if (other.hasFilter()) {
+          mergeFilter(other.getFilter());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatPanelEvent parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatPanelEvent) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private boolean isRestored_ ;
+      /**
+       * <pre>
+       * True if the panel is created from a restore-state.
+       * </pre>
+       *
+       * <code>optional bool is_restored = 1;</code>
+       * @return Whether the isRestored field is set.
+       */
+      public boolean hasIsRestored() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <pre>
+       * True if the panel is created from a restore-state.
+       * </pre>
+       *
+       * <code>optional bool is_restored = 1;</code>
+       * @return The isRestored.
+       */
+      public boolean getIsRestored() {
+        return isRestored_;
+      }
+      /**
+       * <pre>
+       * True if the panel is created from a restore-state.
+       * </pre>
+       *
+       * <code>optional bool is_restored = 1;</code>
+       * @param value The isRestored to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIsRestored(boolean value) {
+        bitField0_ |= 0x00000001;
+        isRestored_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * True if the panel is created from a restore-state.
+       * </pre>
+       *
+       * <code>optional bool is_restored = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearIsRestored() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        isRestored_ = false;
+        onChanged();
+        return this;
+      }
+
+      private com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatConfiguration formatConfiguration_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatConfiguration, com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatConfiguration.Builder, com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatConfigurationOrBuilder> formatConfigurationBuilder_;
+      /**
+       * <pre>
+       * The formatting configuration of the panel
+       * </pre>
+       *
+       * <code>optional .android_studio.LogcatUsageEvent.LogcatFormatConfiguration format_configuration = 2;</code>
+       * @return Whether the formatConfiguration field is set.
+       */
+      public boolean hasFormatConfiguration() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <pre>
+       * The formatting configuration of the panel
+       * </pre>
+       *
+       * <code>optional .android_studio.LogcatUsageEvent.LogcatFormatConfiguration format_configuration = 2;</code>
+       * @return The formatConfiguration.
+       */
+      public com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatConfiguration getFormatConfiguration() {
+        if (formatConfigurationBuilder_ == null) {
+          return formatConfiguration_ == null ? com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatConfiguration.getDefaultInstance() : formatConfiguration_;
+        } else {
+          return formatConfigurationBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * The formatting configuration of the panel
+       * </pre>
+       *
+       * <code>optional .android_studio.LogcatUsageEvent.LogcatFormatConfiguration format_configuration = 2;</code>
+       */
+      public Builder setFormatConfiguration(com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatConfiguration value) {
+        if (formatConfigurationBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          formatConfiguration_ = value;
+          onChanged();
+        } else {
+          formatConfigurationBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000002;
+        return this;
+      }
+      /**
+       * <pre>
+       * The formatting configuration of the panel
+       * </pre>
+       *
+       * <code>optional .android_studio.LogcatUsageEvent.LogcatFormatConfiguration format_configuration = 2;</code>
+       */
+      public Builder setFormatConfiguration(
+          com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatConfiguration.Builder builderForValue) {
+        if (formatConfigurationBuilder_ == null) {
+          formatConfiguration_ = builderForValue.build();
+          onChanged();
+        } else {
+          formatConfigurationBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000002;
+        return this;
+      }
+      /**
+       * <pre>
+       * The formatting configuration of the panel
+       * </pre>
+       *
+       * <code>optional .android_studio.LogcatUsageEvent.LogcatFormatConfiguration format_configuration = 2;</code>
+       */
+      public Builder mergeFormatConfiguration(com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatConfiguration value) {
+        if (formatConfigurationBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0) &&
+              formatConfiguration_ != null &&
+              formatConfiguration_ != com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatConfiguration.getDefaultInstance()) {
+            formatConfiguration_ =
+              com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatConfiguration.newBuilder(formatConfiguration_).mergeFrom(value).buildPartial();
+          } else {
+            formatConfiguration_ = value;
+          }
+          onChanged();
+        } else {
+          formatConfigurationBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000002;
+        return this;
+      }
+      /**
+       * <pre>
+       * The formatting configuration of the panel
+       * </pre>
+       *
+       * <code>optional .android_studio.LogcatUsageEvent.LogcatFormatConfiguration format_configuration = 2;</code>
+       */
+      public Builder clearFormatConfiguration() {
+        if (formatConfigurationBuilder_ == null) {
+          formatConfiguration_ = null;
+          onChanged();
+        } else {
+          formatConfigurationBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000002);
+        return this;
+      }
+      /**
+       * <pre>
+       * The formatting configuration of the panel
+       * </pre>
+       *
+       * <code>optional .android_studio.LogcatUsageEvent.LogcatFormatConfiguration format_configuration = 2;</code>
+       */
+      public com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatConfiguration.Builder getFormatConfigurationBuilder() {
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return getFormatConfigurationFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * The formatting configuration of the panel
+       * </pre>
+       *
+       * <code>optional .android_studio.LogcatUsageEvent.LogcatFormatConfiguration format_configuration = 2;</code>
+       */
+      public com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatConfigurationOrBuilder getFormatConfigurationOrBuilder() {
+        if (formatConfigurationBuilder_ != null) {
+          return formatConfigurationBuilder_.getMessageOrBuilder();
+        } else {
+          return formatConfiguration_ == null ?
+              com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatConfiguration.getDefaultInstance() : formatConfiguration_;
+        }
+      }
+      /**
+       * <pre>
+       * The formatting configuration of the panel
+       * </pre>
+       *
+       * <code>optional .android_studio.LogcatUsageEvent.LogcatFormatConfiguration format_configuration = 2;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatConfiguration, com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatConfiguration.Builder, com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatConfigurationOrBuilder> 
+          getFormatConfigurationFieldBuilder() {
+        if (formatConfigurationBuilder_ == null) {
+          formatConfigurationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatConfiguration, com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatConfiguration.Builder, com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatConfigurationOrBuilder>(
+                  getFormatConfiguration(),
+                  getParentForChildren(),
+                  isClean());
+          formatConfiguration_ = null;
+        }
+        return formatConfigurationBuilder_;
+      }
+
+      private com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFilterEvent filter_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFilterEvent, com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFilterEvent.Builder, com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFilterEventOrBuilder> filterBuilder_;
+      /**
+       * <pre>
+       * The panel filter.
+       * </pre>
+       *
+       * <code>optional .android_studio.LogcatUsageEvent.LogcatFilterEvent filter = 3;</code>
+       * @return Whether the filter field is set.
+       */
+      public boolean hasFilter() {
+        return ((bitField0_ & 0x00000004) != 0);
+      }
+      /**
+       * <pre>
+       * The panel filter.
+       * </pre>
+       *
+       * <code>optional .android_studio.LogcatUsageEvent.LogcatFilterEvent filter = 3;</code>
+       * @return The filter.
+       */
+      public com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFilterEvent getFilter() {
+        if (filterBuilder_ == null) {
+          return filter_ == null ? com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFilterEvent.getDefaultInstance() : filter_;
+        } else {
+          return filterBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * The panel filter.
+       * </pre>
+       *
+       * <code>optional .android_studio.LogcatUsageEvent.LogcatFilterEvent filter = 3;</code>
+       */
+      public Builder setFilter(com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFilterEvent value) {
+        if (filterBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          filter_ = value;
+          onChanged();
+        } else {
+          filterBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000004;
+        return this;
+      }
+      /**
+       * <pre>
+       * The panel filter.
+       * </pre>
+       *
+       * <code>optional .android_studio.LogcatUsageEvent.LogcatFilterEvent filter = 3;</code>
+       */
+      public Builder setFilter(
+          com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFilterEvent.Builder builderForValue) {
+        if (filterBuilder_ == null) {
+          filter_ = builderForValue.build();
+          onChanged();
+        } else {
+          filterBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000004;
+        return this;
+      }
+      /**
+       * <pre>
+       * The panel filter.
+       * </pre>
+       *
+       * <code>optional .android_studio.LogcatUsageEvent.LogcatFilterEvent filter = 3;</code>
+       */
+      public Builder mergeFilter(com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFilterEvent value) {
+        if (filterBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) != 0) &&
+              filter_ != null &&
+              filter_ != com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFilterEvent.getDefaultInstance()) {
+            filter_ =
+              com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFilterEvent.newBuilder(filter_).mergeFrom(value).buildPartial();
+          } else {
+            filter_ = value;
+          }
+          onChanged();
+        } else {
+          filterBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000004;
+        return this;
+      }
+      /**
+       * <pre>
+       * The panel filter.
+       * </pre>
+       *
+       * <code>optional .android_studio.LogcatUsageEvent.LogcatFilterEvent filter = 3;</code>
+       */
+      public Builder clearFilter() {
+        if (filterBuilder_ == null) {
+          filter_ = null;
+          onChanged();
+        } else {
+          filterBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000004);
+        return this;
+      }
+      /**
+       * <pre>
+       * The panel filter.
+       * </pre>
+       *
+       * <code>optional .android_studio.LogcatUsageEvent.LogcatFilterEvent filter = 3;</code>
+       */
+      public com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFilterEvent.Builder getFilterBuilder() {
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return getFilterFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * The panel filter.
+       * </pre>
+       *
+       * <code>optional .android_studio.LogcatUsageEvent.LogcatFilterEvent filter = 3;</code>
+       */
+      public com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFilterEventOrBuilder getFilterOrBuilder() {
+        if (filterBuilder_ != null) {
+          return filterBuilder_.getMessageOrBuilder();
+        } else {
+          return filter_ == null ?
+              com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFilterEvent.getDefaultInstance() : filter_;
+        }
+      }
+      /**
+       * <pre>
+       * The panel filter.
+       * </pre>
+       *
+       * <code>optional .android_studio.LogcatUsageEvent.LogcatFilterEvent filter = 3;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFilterEvent, com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFilterEvent.Builder, com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFilterEventOrBuilder> 
+          getFilterFieldBuilder() {
+        if (filterBuilder_ == null) {
+          filterBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFilterEvent, com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFilterEvent.Builder, com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFilterEventOrBuilder>(
+                  getFilter(),
+                  getParentForChildren(),
+                  isClean());
+          filter_ = null;
+        }
+        return filterBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:android_studio.LogcatUsageEvent.LogcatPanelEvent)
+    }
+
+    // @@protoc_insertion_point(class_scope:android_studio.LogcatUsageEvent.LogcatPanelEvent)
+    private static final com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatPanelEvent DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatPanelEvent();
+    }
+
+    public static com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatPanelEvent getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<LogcatPanelEvent>
+        PARSER = new com.google.protobuf.AbstractParser<LogcatPanelEvent>() {
+      @java.lang.Override
+      public LogcatPanelEvent parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new LogcatPanelEvent(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<LogcatPanelEvent> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<LogcatPanelEvent> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatPanelEvent getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private int bitField0_;
   public static final int TYPE_FIELD_NUMBER = 1;
   private int type_;
@@ -5997,38 +8083,38 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int FORMAT_DIALOG_FIELD_NUMBER = 2;
-  private com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatDialogEvent formatDialog_;
+  private com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatConfiguration formatDialog_;
   /**
    * <pre>
-   * State of an applied Logcat Format dialog. Set if type is FORMAT_DIALOG
+   * Historical, no longer used for writing as of 02/2022
    * </pre>
    *
-   * <code>optional .android_studio.LogcatUsageEvent.LogcatFormatDialogEvent format_dialog = 2;</code>
+   * <code>optional .android_studio.LogcatUsageEvent.LogcatFormatConfiguration format_dialog = 2 [deprecated = true];</code>
    * @return Whether the formatDialog field is set.
    */
-  public boolean hasFormatDialog() {
+  @java.lang.Deprecated public boolean hasFormatDialog() {
     return ((bitField0_ & 0x00000002) != 0);
   }
   /**
    * <pre>
-   * State of an applied Logcat Format dialog. Set if type is FORMAT_DIALOG
+   * Historical, no longer used for writing as of 02/2022
    * </pre>
    *
-   * <code>optional .android_studio.LogcatUsageEvent.LogcatFormatDialogEvent format_dialog = 2;</code>
+   * <code>optional .android_studio.LogcatUsageEvent.LogcatFormatConfiguration format_dialog = 2 [deprecated = true];</code>
    * @return The formatDialog.
    */
-  public com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatDialogEvent getFormatDialog() {
-    return formatDialog_ == null ? com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatDialogEvent.getDefaultInstance() : formatDialog_;
+  @java.lang.Deprecated public com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatConfiguration getFormatDialog() {
+    return formatDialog_ == null ? com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatConfiguration.getDefaultInstance() : formatDialog_;
   }
   /**
    * <pre>
-   * State of an applied Logcat Format dialog. Set if type is FORMAT_DIALOG
+   * Historical, no longer used for writing as of 02/2022
    * </pre>
    *
-   * <code>optional .android_studio.LogcatUsageEvent.LogcatFormatDialogEvent format_dialog = 2;</code>
+   * <code>optional .android_studio.LogcatUsageEvent.LogcatFormatConfiguration format_dialog = 2 [deprecated = true];</code>
    */
-  public com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatDialogEventOrBuilder getFormatDialogOrBuilder() {
-    return formatDialog_ == null ? com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatDialogEvent.getDefaultInstance() : formatDialog_;
+  @java.lang.Deprecated public com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatConfigurationOrBuilder getFormatDialogOrBuilder() {
+    return formatDialog_ == null ? com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatConfiguration.getDefaultInstance() : formatDialog_;
   }
 
   public static final int LOGCAT_FILTER_FIELD_NUMBER = 3;
@@ -6066,6 +8152,76 @@ private static final long serialVersionUID = 0L;
     return logcatFilter_ == null ? com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFilterEvent.getDefaultInstance() : logcatFilter_;
   }
 
+  public static final int FORMAT_DIALOG_APPLIED_FIELD_NUMBER = 4;
+  private com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatDialog formatDialogApplied_;
+  /**
+   * <pre>
+   * The Logcat format configuration set by the format dialog
+   * </pre>
+   *
+   * <code>optional .android_studio.LogcatUsageEvent.LogcatFormatDialog format_dialog_applied = 4;</code>
+   * @return Whether the formatDialogApplied field is set.
+   */
+  public boolean hasFormatDialogApplied() {
+    return ((bitField0_ & 0x00000008) != 0);
+  }
+  /**
+   * <pre>
+   * The Logcat format configuration set by the format dialog
+   * </pre>
+   *
+   * <code>optional .android_studio.LogcatUsageEvent.LogcatFormatDialog format_dialog_applied = 4;</code>
+   * @return The formatDialogApplied.
+   */
+  public com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatDialog getFormatDialogApplied() {
+    return formatDialogApplied_ == null ? com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatDialog.getDefaultInstance() : formatDialogApplied_;
+  }
+  /**
+   * <pre>
+   * The Logcat format configuration set by the format dialog
+   * </pre>
+   *
+   * <code>optional .android_studio.LogcatUsageEvent.LogcatFormatDialog format_dialog_applied = 4;</code>
+   */
+  public com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatDialogOrBuilder getFormatDialogAppliedOrBuilder() {
+    return formatDialogApplied_ == null ? com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatDialog.getDefaultInstance() : formatDialogApplied_;
+  }
+
+  public static final int PANEL_ADDED_FIELD_NUMBER = 5;
+  private com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatPanelEvent panelAdded_;
+  /**
+   * <pre>
+   * A Logcat panel was added
+   * </pre>
+   *
+   * <code>optional .android_studio.LogcatUsageEvent.LogcatPanelEvent panel_added = 5;</code>
+   * @return Whether the panelAdded field is set.
+   */
+  public boolean hasPanelAdded() {
+    return ((bitField0_ & 0x00000010) != 0);
+  }
+  /**
+   * <pre>
+   * A Logcat panel was added
+   * </pre>
+   *
+   * <code>optional .android_studio.LogcatUsageEvent.LogcatPanelEvent panel_added = 5;</code>
+   * @return The panelAdded.
+   */
+  public com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatPanelEvent getPanelAdded() {
+    return panelAdded_ == null ? com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatPanelEvent.getDefaultInstance() : panelAdded_;
+  }
+  /**
+   * <pre>
+   * A Logcat panel was added
+   * </pre>
+   *
+   * <code>optional .android_studio.LogcatUsageEvent.LogcatPanelEvent panel_added = 5;</code>
+   */
+  public com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatPanelEventOrBuilder getPanelAddedOrBuilder() {
+    return panelAdded_ == null ? com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatPanelEvent.getDefaultInstance() : panelAdded_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -6089,6 +8245,12 @@ private static final long serialVersionUID = 0L;
     if (((bitField0_ & 0x00000004) != 0)) {
       output.writeMessage(3, getLogcatFilter());
     }
+    if (((bitField0_ & 0x00000008) != 0)) {
+      output.writeMessage(4, getFormatDialogApplied());
+    }
+    if (((bitField0_ & 0x00000010) != 0)) {
+      output.writeMessage(5, getPanelAdded());
+    }
     unknownFields.writeTo(output);
   }
 
@@ -6109,6 +8271,14 @@ private static final long serialVersionUID = 0L;
     if (((bitField0_ & 0x00000004) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(3, getLogcatFilter());
+    }
+    if (((bitField0_ & 0x00000008) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(4, getFormatDialogApplied());
+    }
+    if (((bitField0_ & 0x00000010) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(5, getPanelAdded());
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -6139,6 +8309,16 @@ private static final long serialVersionUID = 0L;
       if (!getLogcatFilter()
           .equals(other.getLogcatFilter())) return false;
     }
+    if (hasFormatDialogApplied() != other.hasFormatDialogApplied()) return false;
+    if (hasFormatDialogApplied()) {
+      if (!getFormatDialogApplied()
+          .equals(other.getFormatDialogApplied())) return false;
+    }
+    if (hasPanelAdded() != other.hasPanelAdded()) return false;
+    if (hasPanelAdded()) {
+      if (!getPanelAdded()
+          .equals(other.getPanelAdded())) return false;
+    }
     if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
@@ -6161,6 +8341,14 @@ private static final long serialVersionUID = 0L;
     if (hasLogcatFilter()) {
       hash = (37 * hash) + LOGCAT_FILTER_FIELD_NUMBER;
       hash = (53 * hash) + getLogcatFilter().hashCode();
+    }
+    if (hasFormatDialogApplied()) {
+      hash = (37 * hash) + FORMAT_DIALOG_APPLIED_FIELD_NUMBER;
+      hash = (53 * hash) + getFormatDialogApplied().hashCode();
+    }
+    if (hasPanelAdded()) {
+      hash = (37 * hash) + PANEL_ADDED_FIELD_NUMBER;
+      hash = (53 * hash) + getPanelAdded().hashCode();
     }
     hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
@@ -6296,6 +8484,8 @@ private static final long serialVersionUID = 0L;
               .alwaysUseFieldBuilders) {
         getFormatDialogFieldBuilder();
         getLogcatFilterFieldBuilder();
+        getFormatDialogAppliedFieldBuilder();
+        getPanelAddedFieldBuilder();
       }
     }
     @java.lang.Override
@@ -6315,6 +8505,18 @@ private static final long serialVersionUID = 0L;
         logcatFilterBuilder_.clear();
       }
       bitField0_ = (bitField0_ & ~0x00000004);
+      if (formatDialogAppliedBuilder_ == null) {
+        formatDialogApplied_ = null;
+      } else {
+        formatDialogAppliedBuilder_.clear();
+      }
+      bitField0_ = (bitField0_ & ~0x00000008);
+      if (panelAddedBuilder_ == null) {
+        panelAdded_ = null;
+      } else {
+        panelAddedBuilder_.clear();
+      }
+      bitField0_ = (bitField0_ & ~0x00000010);
       return this;
     }
 
@@ -6362,6 +8564,22 @@ private static final long serialVersionUID = 0L;
           result.logcatFilter_ = logcatFilterBuilder_.build();
         }
         to_bitField0_ |= 0x00000004;
+      }
+      if (((from_bitField0_ & 0x00000008) != 0)) {
+        if (formatDialogAppliedBuilder_ == null) {
+          result.formatDialogApplied_ = formatDialogApplied_;
+        } else {
+          result.formatDialogApplied_ = formatDialogAppliedBuilder_.build();
+        }
+        to_bitField0_ |= 0x00000008;
+      }
+      if (((from_bitField0_ & 0x00000010) != 0)) {
+        if (panelAddedBuilder_ == null) {
+          result.panelAdded_ = panelAdded_;
+        } else {
+          result.panelAdded_ = panelAddedBuilder_.build();
+        }
+        to_bitField0_ |= 0x00000010;
       }
       result.bitField0_ = to_bitField0_;
       onBuilt();
@@ -6420,6 +8638,12 @@ private static final long serialVersionUID = 0L;
       }
       if (other.hasLogcatFilter()) {
         mergeLogcatFilter(other.getLogcatFilter());
+      }
+      if (other.hasFormatDialogApplied()) {
+        mergeFormatDialogApplied(other.getFormatDialogApplied());
+      }
+      if (other.hasPanelAdded()) {
+        mergePanelAdded(other.getPanelAdded());
       }
       this.mergeUnknownFields(other.unknownFields);
       onChanged();
@@ -6509,43 +8733,43 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatDialogEvent formatDialog_;
+    private com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatConfiguration formatDialog_;
     private com.google.protobuf.SingleFieldBuilderV3<
-        com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatDialogEvent, com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatDialogEvent.Builder, com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatDialogEventOrBuilder> formatDialogBuilder_;
+        com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatConfiguration, com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatConfiguration.Builder, com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatConfigurationOrBuilder> formatDialogBuilder_;
     /**
      * <pre>
-     * State of an applied Logcat Format dialog. Set if type is FORMAT_DIALOG
+     * Historical, no longer used for writing as of 02/2022
      * </pre>
      *
-     * <code>optional .android_studio.LogcatUsageEvent.LogcatFormatDialogEvent format_dialog = 2;</code>
+     * <code>optional .android_studio.LogcatUsageEvent.LogcatFormatConfiguration format_dialog = 2 [deprecated = true];</code>
      * @return Whether the formatDialog field is set.
      */
-    public boolean hasFormatDialog() {
+    @java.lang.Deprecated public boolean hasFormatDialog() {
       return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <pre>
-     * State of an applied Logcat Format dialog. Set if type is FORMAT_DIALOG
+     * Historical, no longer used for writing as of 02/2022
      * </pre>
      *
-     * <code>optional .android_studio.LogcatUsageEvent.LogcatFormatDialogEvent format_dialog = 2;</code>
+     * <code>optional .android_studio.LogcatUsageEvent.LogcatFormatConfiguration format_dialog = 2 [deprecated = true];</code>
      * @return The formatDialog.
      */
-    public com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatDialogEvent getFormatDialog() {
+    @java.lang.Deprecated public com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatConfiguration getFormatDialog() {
       if (formatDialogBuilder_ == null) {
-        return formatDialog_ == null ? com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatDialogEvent.getDefaultInstance() : formatDialog_;
+        return formatDialog_ == null ? com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatConfiguration.getDefaultInstance() : formatDialog_;
       } else {
         return formatDialogBuilder_.getMessage();
       }
     }
     /**
      * <pre>
-     * State of an applied Logcat Format dialog. Set if type is FORMAT_DIALOG
+     * Historical, no longer used for writing as of 02/2022
      * </pre>
      *
-     * <code>optional .android_studio.LogcatUsageEvent.LogcatFormatDialogEvent format_dialog = 2;</code>
+     * <code>optional .android_studio.LogcatUsageEvent.LogcatFormatConfiguration format_dialog = 2 [deprecated = true];</code>
      */
-    public Builder setFormatDialog(com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatDialogEvent value) {
+    @java.lang.Deprecated public Builder setFormatDialog(com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatConfiguration value) {
       if (formatDialogBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -6560,13 +8784,13 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * State of an applied Logcat Format dialog. Set if type is FORMAT_DIALOG
+     * Historical, no longer used for writing as of 02/2022
      * </pre>
      *
-     * <code>optional .android_studio.LogcatUsageEvent.LogcatFormatDialogEvent format_dialog = 2;</code>
+     * <code>optional .android_studio.LogcatUsageEvent.LogcatFormatConfiguration format_dialog = 2 [deprecated = true];</code>
      */
-    public Builder setFormatDialog(
-        com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatDialogEvent.Builder builderForValue) {
+    @java.lang.Deprecated public Builder setFormatDialog(
+        com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatConfiguration.Builder builderForValue) {
       if (formatDialogBuilder_ == null) {
         formatDialog_ = builderForValue.build();
         onChanged();
@@ -6578,18 +8802,18 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * State of an applied Logcat Format dialog. Set if type is FORMAT_DIALOG
+     * Historical, no longer used for writing as of 02/2022
      * </pre>
      *
-     * <code>optional .android_studio.LogcatUsageEvent.LogcatFormatDialogEvent format_dialog = 2;</code>
+     * <code>optional .android_studio.LogcatUsageEvent.LogcatFormatConfiguration format_dialog = 2 [deprecated = true];</code>
      */
-    public Builder mergeFormatDialog(com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatDialogEvent value) {
+    @java.lang.Deprecated public Builder mergeFormatDialog(com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatConfiguration value) {
       if (formatDialogBuilder_ == null) {
         if (((bitField0_ & 0x00000002) != 0) &&
             formatDialog_ != null &&
-            formatDialog_ != com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatDialogEvent.getDefaultInstance()) {
+            formatDialog_ != com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatConfiguration.getDefaultInstance()) {
           formatDialog_ =
-            com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatDialogEvent.newBuilder(formatDialog_).mergeFrom(value).buildPartial();
+            com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatConfiguration.newBuilder(formatDialog_).mergeFrom(value).buildPartial();
         } else {
           formatDialog_ = value;
         }
@@ -6602,12 +8826,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * State of an applied Logcat Format dialog. Set if type is FORMAT_DIALOG
+     * Historical, no longer used for writing as of 02/2022
      * </pre>
      *
-     * <code>optional .android_studio.LogcatUsageEvent.LogcatFormatDialogEvent format_dialog = 2;</code>
+     * <code>optional .android_studio.LogcatUsageEvent.LogcatFormatConfiguration format_dialog = 2 [deprecated = true];</code>
      */
-    public Builder clearFormatDialog() {
+    @java.lang.Deprecated public Builder clearFormatDialog() {
       if (formatDialogBuilder_ == null) {
         formatDialog_ = null;
         onChanged();
@@ -6619,44 +8843,44 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * State of an applied Logcat Format dialog. Set if type is FORMAT_DIALOG
+     * Historical, no longer used for writing as of 02/2022
      * </pre>
      *
-     * <code>optional .android_studio.LogcatUsageEvent.LogcatFormatDialogEvent format_dialog = 2;</code>
+     * <code>optional .android_studio.LogcatUsageEvent.LogcatFormatConfiguration format_dialog = 2 [deprecated = true];</code>
      */
-    public com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatDialogEvent.Builder getFormatDialogBuilder() {
+    @java.lang.Deprecated public com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatConfiguration.Builder getFormatDialogBuilder() {
       bitField0_ |= 0x00000002;
       onChanged();
       return getFormatDialogFieldBuilder().getBuilder();
     }
     /**
      * <pre>
-     * State of an applied Logcat Format dialog. Set if type is FORMAT_DIALOG
+     * Historical, no longer used for writing as of 02/2022
      * </pre>
      *
-     * <code>optional .android_studio.LogcatUsageEvent.LogcatFormatDialogEvent format_dialog = 2;</code>
+     * <code>optional .android_studio.LogcatUsageEvent.LogcatFormatConfiguration format_dialog = 2 [deprecated = true];</code>
      */
-    public com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatDialogEventOrBuilder getFormatDialogOrBuilder() {
+    @java.lang.Deprecated public com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatConfigurationOrBuilder getFormatDialogOrBuilder() {
       if (formatDialogBuilder_ != null) {
         return formatDialogBuilder_.getMessageOrBuilder();
       } else {
         return formatDialog_ == null ?
-            com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatDialogEvent.getDefaultInstance() : formatDialog_;
+            com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatConfiguration.getDefaultInstance() : formatDialog_;
       }
     }
     /**
      * <pre>
-     * State of an applied Logcat Format dialog. Set if type is FORMAT_DIALOG
+     * Historical, no longer used for writing as of 02/2022
      * </pre>
      *
-     * <code>optional .android_studio.LogcatUsageEvent.LogcatFormatDialogEvent format_dialog = 2;</code>
+     * <code>optional .android_studio.LogcatUsageEvent.LogcatFormatConfiguration format_dialog = 2 [deprecated = true];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
-        com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatDialogEvent, com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatDialogEvent.Builder, com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatDialogEventOrBuilder> 
+        com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatConfiguration, com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatConfiguration.Builder, com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatConfigurationOrBuilder> 
         getFormatDialogFieldBuilder() {
       if (formatDialogBuilder_ == null) {
         formatDialogBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-            com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatDialogEvent, com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatDialogEvent.Builder, com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatDialogEventOrBuilder>(
+            com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatConfiguration, com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatConfiguration.Builder, com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatConfigurationOrBuilder>(
                 getFormatDialog(),
                 getParentForChildren(),
                 isClean());
@@ -6819,6 +9043,318 @@ private static final long serialVersionUID = 0L;
         logcatFilter_ = null;
       }
       return logcatFilterBuilder_;
+    }
+
+    private com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatDialog formatDialogApplied_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatDialog, com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatDialog.Builder, com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatDialogOrBuilder> formatDialogAppliedBuilder_;
+    /**
+     * <pre>
+     * The Logcat format configuration set by the format dialog
+     * </pre>
+     *
+     * <code>optional .android_studio.LogcatUsageEvent.LogcatFormatDialog format_dialog_applied = 4;</code>
+     * @return Whether the formatDialogApplied field is set.
+     */
+    public boolean hasFormatDialogApplied() {
+      return ((bitField0_ & 0x00000008) != 0);
+    }
+    /**
+     * <pre>
+     * The Logcat format configuration set by the format dialog
+     * </pre>
+     *
+     * <code>optional .android_studio.LogcatUsageEvent.LogcatFormatDialog format_dialog_applied = 4;</code>
+     * @return The formatDialogApplied.
+     */
+    public com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatDialog getFormatDialogApplied() {
+      if (formatDialogAppliedBuilder_ == null) {
+        return formatDialogApplied_ == null ? com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatDialog.getDefaultInstance() : formatDialogApplied_;
+      } else {
+        return formatDialogAppliedBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * The Logcat format configuration set by the format dialog
+     * </pre>
+     *
+     * <code>optional .android_studio.LogcatUsageEvent.LogcatFormatDialog format_dialog_applied = 4;</code>
+     */
+    public Builder setFormatDialogApplied(com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatDialog value) {
+      if (formatDialogAppliedBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        formatDialogApplied_ = value;
+        onChanged();
+      } else {
+        formatDialogAppliedBuilder_.setMessage(value);
+      }
+      bitField0_ |= 0x00000008;
+      return this;
+    }
+    /**
+     * <pre>
+     * The Logcat format configuration set by the format dialog
+     * </pre>
+     *
+     * <code>optional .android_studio.LogcatUsageEvent.LogcatFormatDialog format_dialog_applied = 4;</code>
+     */
+    public Builder setFormatDialogApplied(
+        com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatDialog.Builder builderForValue) {
+      if (formatDialogAppliedBuilder_ == null) {
+        formatDialogApplied_ = builderForValue.build();
+        onChanged();
+      } else {
+        formatDialogAppliedBuilder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x00000008;
+      return this;
+    }
+    /**
+     * <pre>
+     * The Logcat format configuration set by the format dialog
+     * </pre>
+     *
+     * <code>optional .android_studio.LogcatUsageEvent.LogcatFormatDialog format_dialog_applied = 4;</code>
+     */
+    public Builder mergeFormatDialogApplied(com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatDialog value) {
+      if (formatDialogAppliedBuilder_ == null) {
+        if (((bitField0_ & 0x00000008) != 0) &&
+            formatDialogApplied_ != null &&
+            formatDialogApplied_ != com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatDialog.getDefaultInstance()) {
+          formatDialogApplied_ =
+            com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatDialog.newBuilder(formatDialogApplied_).mergeFrom(value).buildPartial();
+        } else {
+          formatDialogApplied_ = value;
+        }
+        onChanged();
+      } else {
+        formatDialogAppliedBuilder_.mergeFrom(value);
+      }
+      bitField0_ |= 0x00000008;
+      return this;
+    }
+    /**
+     * <pre>
+     * The Logcat format configuration set by the format dialog
+     * </pre>
+     *
+     * <code>optional .android_studio.LogcatUsageEvent.LogcatFormatDialog format_dialog_applied = 4;</code>
+     */
+    public Builder clearFormatDialogApplied() {
+      if (formatDialogAppliedBuilder_ == null) {
+        formatDialogApplied_ = null;
+        onChanged();
+      } else {
+        formatDialogAppliedBuilder_.clear();
+      }
+      bitField0_ = (bitField0_ & ~0x00000008);
+      return this;
+    }
+    /**
+     * <pre>
+     * The Logcat format configuration set by the format dialog
+     * </pre>
+     *
+     * <code>optional .android_studio.LogcatUsageEvent.LogcatFormatDialog format_dialog_applied = 4;</code>
+     */
+    public com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatDialog.Builder getFormatDialogAppliedBuilder() {
+      bitField0_ |= 0x00000008;
+      onChanged();
+      return getFormatDialogAppliedFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * The Logcat format configuration set by the format dialog
+     * </pre>
+     *
+     * <code>optional .android_studio.LogcatUsageEvent.LogcatFormatDialog format_dialog_applied = 4;</code>
+     */
+    public com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatDialogOrBuilder getFormatDialogAppliedOrBuilder() {
+      if (formatDialogAppliedBuilder_ != null) {
+        return formatDialogAppliedBuilder_.getMessageOrBuilder();
+      } else {
+        return formatDialogApplied_ == null ?
+            com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatDialog.getDefaultInstance() : formatDialogApplied_;
+      }
+    }
+    /**
+     * <pre>
+     * The Logcat format configuration set by the format dialog
+     * </pre>
+     *
+     * <code>optional .android_studio.LogcatUsageEvent.LogcatFormatDialog format_dialog_applied = 4;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatDialog, com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatDialog.Builder, com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatDialogOrBuilder> 
+        getFormatDialogAppliedFieldBuilder() {
+      if (formatDialogAppliedBuilder_ == null) {
+        formatDialogAppliedBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatDialog, com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatDialog.Builder, com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatDialogOrBuilder>(
+                getFormatDialogApplied(),
+                getParentForChildren(),
+                isClean());
+        formatDialogApplied_ = null;
+      }
+      return formatDialogAppliedBuilder_;
+    }
+
+    private com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatPanelEvent panelAdded_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatPanelEvent, com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatPanelEvent.Builder, com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatPanelEventOrBuilder> panelAddedBuilder_;
+    /**
+     * <pre>
+     * A Logcat panel was added
+     * </pre>
+     *
+     * <code>optional .android_studio.LogcatUsageEvent.LogcatPanelEvent panel_added = 5;</code>
+     * @return Whether the panelAdded field is set.
+     */
+    public boolean hasPanelAdded() {
+      return ((bitField0_ & 0x00000010) != 0);
+    }
+    /**
+     * <pre>
+     * A Logcat panel was added
+     * </pre>
+     *
+     * <code>optional .android_studio.LogcatUsageEvent.LogcatPanelEvent panel_added = 5;</code>
+     * @return The panelAdded.
+     */
+    public com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatPanelEvent getPanelAdded() {
+      if (panelAddedBuilder_ == null) {
+        return panelAdded_ == null ? com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatPanelEvent.getDefaultInstance() : panelAdded_;
+      } else {
+        return panelAddedBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * A Logcat panel was added
+     * </pre>
+     *
+     * <code>optional .android_studio.LogcatUsageEvent.LogcatPanelEvent panel_added = 5;</code>
+     */
+    public Builder setPanelAdded(com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatPanelEvent value) {
+      if (panelAddedBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        panelAdded_ = value;
+        onChanged();
+      } else {
+        panelAddedBuilder_.setMessage(value);
+      }
+      bitField0_ |= 0x00000010;
+      return this;
+    }
+    /**
+     * <pre>
+     * A Logcat panel was added
+     * </pre>
+     *
+     * <code>optional .android_studio.LogcatUsageEvent.LogcatPanelEvent panel_added = 5;</code>
+     */
+    public Builder setPanelAdded(
+        com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatPanelEvent.Builder builderForValue) {
+      if (panelAddedBuilder_ == null) {
+        panelAdded_ = builderForValue.build();
+        onChanged();
+      } else {
+        panelAddedBuilder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x00000010;
+      return this;
+    }
+    /**
+     * <pre>
+     * A Logcat panel was added
+     * </pre>
+     *
+     * <code>optional .android_studio.LogcatUsageEvent.LogcatPanelEvent panel_added = 5;</code>
+     */
+    public Builder mergePanelAdded(com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatPanelEvent value) {
+      if (panelAddedBuilder_ == null) {
+        if (((bitField0_ & 0x00000010) != 0) &&
+            panelAdded_ != null &&
+            panelAdded_ != com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatPanelEvent.getDefaultInstance()) {
+          panelAdded_ =
+            com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatPanelEvent.newBuilder(panelAdded_).mergeFrom(value).buildPartial();
+        } else {
+          panelAdded_ = value;
+        }
+        onChanged();
+      } else {
+        panelAddedBuilder_.mergeFrom(value);
+      }
+      bitField0_ |= 0x00000010;
+      return this;
+    }
+    /**
+     * <pre>
+     * A Logcat panel was added
+     * </pre>
+     *
+     * <code>optional .android_studio.LogcatUsageEvent.LogcatPanelEvent panel_added = 5;</code>
+     */
+    public Builder clearPanelAdded() {
+      if (panelAddedBuilder_ == null) {
+        panelAdded_ = null;
+        onChanged();
+      } else {
+        panelAddedBuilder_.clear();
+      }
+      bitField0_ = (bitField0_ & ~0x00000010);
+      return this;
+    }
+    /**
+     * <pre>
+     * A Logcat panel was added
+     * </pre>
+     *
+     * <code>optional .android_studio.LogcatUsageEvent.LogcatPanelEvent panel_added = 5;</code>
+     */
+    public com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatPanelEvent.Builder getPanelAddedBuilder() {
+      bitField0_ |= 0x00000010;
+      onChanged();
+      return getPanelAddedFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * A Logcat panel was added
+     * </pre>
+     *
+     * <code>optional .android_studio.LogcatUsageEvent.LogcatPanelEvent panel_added = 5;</code>
+     */
+    public com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatPanelEventOrBuilder getPanelAddedOrBuilder() {
+      if (panelAddedBuilder_ != null) {
+        return panelAddedBuilder_.getMessageOrBuilder();
+      } else {
+        return panelAdded_ == null ?
+            com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatPanelEvent.getDefaultInstance() : panelAdded_;
+      }
+    }
+    /**
+     * <pre>
+     * A Logcat panel was added
+     * </pre>
+     *
+     * <code>optional .android_studio.LogcatUsageEvent.LogcatPanelEvent panel_added = 5;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatPanelEvent, com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatPanelEvent.Builder, com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatPanelEventOrBuilder> 
+        getPanelAddedFieldBuilder() {
+      if (panelAddedBuilder_ == null) {
+        panelAddedBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatPanelEvent, com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatPanelEvent.Builder, com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatPanelEventOrBuilder>(
+                getPanelAdded(),
+                getParentForChildren(),
+                isClean());
+        panelAdded_ = null;
+      }
+      return panelAddedBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

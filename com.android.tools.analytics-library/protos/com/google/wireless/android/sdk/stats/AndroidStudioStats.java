@@ -1600,10 +1600,15 @@ public final class AndroidStudioStats {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_android_studio_LogcatUsageEvent_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_android_studio_LogcatUsageEvent_LogcatFormatDialogEvent_descriptor;
+    internal_static_android_studio_LogcatUsageEvent_LogcatFormatDialog_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_android_studio_LogcatUsageEvent_LogcatFormatDialogEvent_fieldAccessorTable;
+      internal_static_android_studio_LogcatUsageEvent_LogcatFormatDialog_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_android_studio_LogcatUsageEvent_LogcatFormatConfiguration_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_android_studio_LogcatUsageEvent_LogcatFormatConfiguration_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
     internal_static_android_studio_LogcatUsageEvent_LogcatFilterEvent_descriptor;
   static final 
@@ -1614,6 +1619,11 @@ public final class AndroidStudioStats {
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_android_studio_LogcatUsageEvent_LogcatFilterEvent_TermVariants_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_android_studio_LogcatUsageEvent_LogcatPanelEvent_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_android_studio_LogcatUsageEvent_LogcatPanelEvent_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -5683,111 +5693,125 @@ public final class AndroidStudioStats {
       "L_WINDOW\020\001\"\216\001\n\tEventType\022\026\n\022UNKNOWN_EVEN" +
       "T_TYPE\020\000\022\021\n\rPANEL_CREATED\020\001\022\017\n\013TAB_CREAT" +
       "ED\020\002\022\017\n\013PANEL_SPLIT\020\003\022\017\n\013PANEL_MOVED\020\004\022\021" +
-      "\n\rPANEL_RENAMED\020\005\022\020\n\014PANEL_CLOSED\020\006\"\254\013\n\020" +
+      "\n\rPANEL_RENAMED\020\005\022\020\n\014PANEL_CLOSED\020\006\"\326\017\n\020" +
       "LogcatUsageEvent\0223\n\004type\030\001 \001(\0162%.android" +
-      "_studio.LogcatUsageEvent.Type\022O\n\rformat_" +
-      "dialog\030\002 \001(\01328.android_studio.LogcatUsag" +
-      "eEvent.LogcatFormatDialogEvent\022I\n\rlogcat" +
-      "_filter\030\003 \001(\01322.android_studio.LogcatUsa" +
-      "geEvent.LogcatFilterEvent\032\340\003\n\027LogcatForm" +
-      "atDialogEvent\022\031\n\021is_show_timestamp\030\001 \001(\010" +
-      "\022\024\n\014is_show_date\030\002 \001(\010\022\032\n\022is_show_proces" +
-      "s_id\030\003 \001(\010\022\031\n\021is_show_thread_id\030\004 \001(\010\022\024\n" +
-      "\014is_show_tags\030\005 \001(\010\022\035\n\025is_show_repeated_" +
-      "tags\030\006 \001(\010\022\021\n\ttag_width\030\007 \001(\005\022\030\n\020is_show" +
-      "_packages\030\010 \001(\010\022!\n\031is_show_repeated_pack" +
-      "ages\030\t \001(\010\022\025\n\rpackage_width\030\n \001(\005\022O\n\006pre" +
-      "set\030\013 \001(\0162?.android_studio.LogcatUsageEv" +
-      "ent.LogcatFormatDialogEvent.Preset\022\031\n\021is" +
-      "_default_preset\030\014 \001(\010\022\034\n\024is_apply_button" +
-      "_used\030\r \001(\010\"7\n\006Preset\022\022\n\016UNKNOWN_PRESET\020" +
-      "\000\022\014\n\010STANDARD\020\001\022\013\n\007COMPACT\020\002\032\223\005\n\021LogcatF" +
-      "ilterEvent\022R\n\ttag_terms\030\001 \001(\0132?.android_" +
-      "studio.LogcatUsageEvent.LogcatFilterEven" +
-      "t.TermVariants\022V\n\rpackage_terms\030\002 \001(\0132?." +
-      "android_studio.LogcatUsageEvent.LogcatFi" +
-      "lterEvent.TermVariants\022V\n\rmessage_terms\030" +
-      "\003 \001(\0132?.android_studio.LogcatUsageEvent." +
-      "LogcatFilterEvent.TermVariants\022S\n\nline_t" +
-      "erms\030\004 \001(\0132?.android_studio.LogcatUsageE" +
-      "vent.LogcatFilterEvent.TermVariants\022\033\n\023i" +
-      "mplicit_line_terms\030\005 \001(\005\022\023\n\013level_terms\030" +
-      "\006 \001(\005\022\021\n\tage_terms\030\007 \001(\005\022\035\n\025package_proj" +
-      "ect_terms\030\010 \001(\005\022\024\n\014or_operators\030\t \001(\005\022\025\n" +
-      "\rand_operators\030\n \001(\005\022\023\n\013parentheses\030\013 \001(" +
-      "\005\022\027\n\017contains_errors\030\014 \001(\010\032f\n\014TermVarian" +
-      "ts\022\r\n\005count\030\001 \001(\005\022\025\n\rcount_negated\030\002 \001(\005" +
-      "\022\023\n\013count_regex\030\003 \001(\005\022\033\n\023count_negated_r" +
-      "egex\030\004 \001(\005\"N\n\004Type\022\026\n\022UNKNOWN_EVENT_TYPE" +
-      "\020\000\022\021\n\rFORMAT_DIALOG\020\001\022\033\n\027FILTER_ADDED_TO" +
-      "_HISTORY\020\002*\237\001\n\025EmulatorSnapshotFlags\022\027\n\023" +
-      "SNAPSHOT_FLAGS_NONE\020\000\022%\n!SNAPSHOT_FLAGS_" +
-      "RAM_COMPRESSED_BIT\020\001\022*\n&SNAPSHOT_FLAGS_T" +
-      "EXTURES_COMPRESSED_BIT\020\002\022\032\n\026SNAPSHOT_FLA" +
-      "GS_HDD_BIT\020\003*\254\002\n\031EmulatorSnapshotSaveSta" +
-      "te\022+\n\'EMULATOR_SNAPSHOT_SAVE_SUCCEEDED_N" +
-      "ORMAL\020\000\022!\n\035EMULATOR_SNAPSHOT_SAVE_FAILED" +
-      "\020\001\022.\n*EMULATOR_SNAPSHOT_SAVE_SKIPPED_UNS" +
-      "UPPORTED\020\002\022-\n)EMULATOR_SNAPSHOT_SAVE_SKI" +
-      "PPED_NOT_BOOTED\020\003\022.\n*EMULATOR_SNAPSHOT_S" +
-      "AVE_SKIPPED_NO_SNAPSHOT\020\004\0220\n,EMULATOR_SN" +
-      "APSHOT_SAVE_SKIPPED_DISK_PRESSURE\020\005*\215\002\n\031" +
-      "EmulatorSnapshotLoadState\022+\n\'EMULATOR_SN" +
-      "APSHOT_LOAD_SUCCEEDED_NORMAL\020\000\022!\n\035EMULAT" +
-      "OR_SNAPSHOT_LOAD_FAILED\020\001\022.\n*EMULATOR_SN" +
-      "APSHOT_LOAD_SKIPPED_UNSUPPORTED\020\002\022&\n\"EMU" +
-      "LATOR_SNAPSHOT_LOAD_NO_SNAPSHOT\020\003\022\'\n#EMU" +
-      "LATOR_SNAPSHOT_LOAD_OLD_SNAPSHOT\020\004\022\037\n\033EM" +
-      "ULATOR_SNAPSHOT_LOAD_HUNG\020\005*\335\n\n\035Emulator" +
-      "SnapshotFailureReason\0220\n,EMULATOR_SNAPSH" +
-      "OT_FAILURE_REASON_UNSPECIFIED\020\000\0223\n/EMULA" +
-      "TOR_SNAPSHOT_FAILURE_REASON_CORRUPTED_DA" +
-      "TA\020\001\0223\n/EMULATOR_SNAPSHOT_FAILURE_REASON" +
-      "_NO_SNAPSHOT_PB\020\002\0224\n0EMULATOR_SNAPSHOT_F" +
-      "AILURE_REASON_BAD_SNAPSHOT_PB\020\003\0229\n5EMULA" +
-      "TOR_SNAPSHOT_FAILURE_REASON_INCOMPATIBLE" +
-      "_VERSION\020\004\0220\n,EMULATOR_SNAPSHOT_FAILURE_" +
-      "REASON_NO_RAM_FILE\020\005\0225\n1EMULATOR_SNAPSHO" +
-      "T_FAILURE_REASON_NO_TEXTURES_FILE\020\006\022<\n8E" +
-      "MULATOR_SNAPSHOT_FAILURE_REASON_SNAPSHOT" +
-      "S_NOT_SUPPORTED\020\007\022?\n:EMULATOR_SNAPSHOT_F" +
-      "AILURE_REASON_UNRECOVERABLE_ERROR_LIMIT\020" +
-      "\220N\022:\n5EMULATOR_SNAPSHOT_FAILURE_REASON_N" +
-      "O_SNAPSHOT_IN_IMAGE\020\221N\022E\n@EMULATOR_SNAPS" +
-      "HOT_FAILURE_REASON_CONFIG_MISMATCH_HOST_" +
-      "HYPERVISOR\020\222N\022>\n9EMULATOR_SNAPSHOT_FAILU" +
-      "RE_REASON_CONFIG_MISMATCH_HOST_GPU\020\223N\022>\n" +
-      "9EMULATOR_SNAPSHOT_FAILURE_REASON_CONFIG" +
-      "_MISMATCH_RENDERER\020\224N\022>\n9EMULATOR_SNAPSH" +
-      "OT_FAILURE_REASON_CONFIG_MISMATCH_FEATUR" +
-      "ES\020\225N\0229\n4EMULATOR_SNAPSHOT_FAILURE_REASO" +
-      "N_CONFIG_MISMATCH_AVD\020\226N\022:\n5EMULATOR_SNA" +
-      "PSHOT_FAILURE_REASON_SYSTEM_IMAGE_CHANGE" +
-      "D\020\227N\022=\n7EMULATOR_SNAPSHOT_FAILURE_REASON" +
-      "_VALIDATION_ERROR_LIMIT\020\240\234\001\0225\n/EMULATOR_" +
-      "SNAPSHOT_FAILURE_REASON_INTERNAL_ERROR\020\241" +
-      "\234\001\022>\n8EMULATOR_SNAPSHOT_FAILURE_REASON_E" +
-      "MULATION_ENGINE_FAILED\020\242\234\001\0221\n+EMULATOR_S" +
-      "NAPSHOT_FAILURE_REASON_RAM_FAILED\020\243\234\001\0226\n" +
-      "0EMULATOR_SNAPSHOT_FAILURE_REASON_TEXTUR" +
-      "ES_FAILED\020\244\234\001\0222\n,EMULATOR_SNAPSHOT_FAILU" +
-      "RE_REASON_ADB_OFFLINE\020\245\234\001\0228\n2EMULATOR_SN" +
-      "APSHOT_FAILURE_REASON_IN_PROGRESS_LIMIT\020" +
-      "\260\352\001*[\n\014SearchOption\022\031\n\025UNKNOWN_SEARCH_OP" +
-      "TION\020\000\022\010\n\004NONE\020\001\022\024\n\020MULTIPLE_MATCHES\020\002\022\020" +
-      "\n\014SINGLE_MATCH\020\003*\260\003\n\016EditorFileType\022\013\n\007U" +
-      "NKNOWN\020\000\022\010\n\004JAVA\020\001\022\n\n\006KOTLIN\020\002\022\007\n\003XML\020\003\022" +
-      "\n\n\006GROOVY\020\004\022\016\n\nPROPERTIES\020\005\022\010\n\004JSON\020\006\022\021\n" +
-      "\rKOTLIN_SCRIPT\020\007\022\n\n\006NATIVE\020\010\022\020\n\014XML_MANI" +
-      "FEST\020\t\022\020\n\014XML_RES_ANIM\020\n\022\024\n\020XML_RES_ANIM" +
-      "ATOR\020\013\022\021\n\rXML_RES_COLOR\020\014\022\024\n\020XML_RES_DRA" +
-      "WABLE\020\r\022\020\n\014XML_RES_FONT\020\016\022\030\n\024XML_RES_INT" +
-      "ERPOLATOR\020\017\022\022\n\016XML_RES_LAYOUT\020\020\022\020\n\014XML_R" +
-      "ES_MENU\020\021\022\022\n\016XML_RES_MIPMAP\020\022\022\026\n\022XML_RES" +
-      "_NAVIGATION\020\023\022\017\n\013XML_RES_RAW\020\024\022\026\n\022XML_RE" +
-      "S_TRANSITION\020\025\022\022\n\016XML_RES_VALUES\020\026\022\017\n\013XM" +
-      "L_RES_XML\020\027B=\n%com.google.wireless.andro" +
-      "id.sdk.statsB\022AndroidStudioStatsP\001"
+      "_studio.LogcatUsageEvent.Type\022U\n\rformat_" +
+      "dialog\030\002 \001(\0132:.android_studio.LogcatUsag" +
+      "eEvent.LogcatFormatConfigurationB\002\030\001\022I\n\r" +
+      "logcat_filter\030\003 \001(\01322.android_studio.Log" +
+      "catUsageEvent.LogcatFilterEvent\022R\n\025forma" +
+      "t_dialog_applied\030\004 \001(\01323.android_studio." +
+      "LogcatUsageEvent.LogcatFormatDialog\022F\n\013p" +
+      "anel_added\030\005 \001(\01321.android_studio.Logcat" +
+      "UsageEvent.LogcatPanelEvent\032\240\001\n\022LogcatFo" +
+      "rmatDialog\022Q\n\rconfiguration\030\001 \001(\0132:.andr" +
+      "oid_studio.LogcatUsageEvent.LogcatFormat" +
+      "Configuration\022\031\n\021is_default_preset\030\002 \001(\010" +
+      "\022\034\n\024is_apply_button_used\030\003 \001(\010\032\354\003\n\031Logca" +
+      "tFormatConfiguration\022\031\n\021is_show_timestam" +
+      "p\030\001 \001(\010\022\024\n\014is_show_date\030\002 \001(\010\022\032\n\022is_show" +
+      "_process_id\030\003 \001(\010\022\031\n\021is_show_thread_id\030\004" +
+      " \001(\010\022\024\n\014is_show_tags\030\005 \001(\010\022\035\n\025is_show_re" +
+      "peated_tags\030\006 \001(\010\022\021\n\ttag_width\030\007 \001(\005\022\030\n\020" +
+      "is_show_packages\030\010 \001(\010\022!\n\031is_show_repeat" +
+      "ed_packages\030\t \001(\010\022\025\n\rpackage_width\030\n \001(\005" +
+      "\022Q\n\006preset\030\013 \001(\0162A.android_studio.Logcat" +
+      "UsageEvent.LogcatFormatConfiguration.Pre" +
+      "set\022\035\n\021is_default_preset\030\014 \001(\010B\002\030\001\022 \n\024is" +
+      "_apply_button_used\030\r \001(\010B\002\030\001\"7\n\006Preset\022\022" +
+      "\n\016UNKNOWN_PRESET\020\000\022\014\n\010STANDARD\020\001\022\013\n\007COMP" +
+      "ACT\020\002\032\223\005\n\021LogcatFilterEvent\022R\n\ttag_terms" +
+      "\030\001 \001(\0132?.android_studio.LogcatUsageEvent" +
+      ".LogcatFilterEvent.TermVariants\022V\n\rpacka" +
+      "ge_terms\030\002 \001(\0132?.android_studio.LogcatUs" +
+      "ageEvent.LogcatFilterEvent.TermVariants\022" +
+      "V\n\rmessage_terms\030\003 \001(\0132?.android_studio." +
+      "LogcatUsageEvent.LogcatFilterEvent.TermV" +
+      "ariants\022S\n\nline_terms\030\004 \001(\0132?.android_st" +
+      "udio.LogcatUsageEvent.LogcatFilterEvent." +
+      "TermVariants\022\033\n\023implicit_line_terms\030\005 \001(" +
+      "\005\022\023\n\013level_terms\030\006 \001(\005\022\021\n\tage_terms\030\007 \001(" +
+      "\005\022\035\n\025package_project_terms\030\010 \001(\005\022\024\n\014or_o" +
+      "perators\030\t \001(\005\022\025\n\rand_operators\030\n \001(\005\022\023\n" +
+      "\013parentheses\030\013 \001(\005\022\027\n\017contains_errors\030\014 " +
+      "\001(\010\032f\n\014TermVariants\022\r\n\005count\030\001 \001(\005\022\025\n\rco" +
+      "unt_negated\030\002 \001(\005\022\023\n\013count_regex\030\003 \001(\005\022\033" +
+      "\n\023count_negated_regex\030\004 \001(\005\032\305\001\n\020LogcatPa" +
+      "nelEvent\022\023\n\013is_restored\030\001 \001(\010\022X\n\024format_" +
+      "configuration\030\002 \001(\0132:.android_studio.Log" +
+      "catUsageEvent.LogcatFormatConfiguration\022" +
+      "B\n\006filter\030\003 \001(\01322.android_studio.LogcatU" +
+      "sageEvent.LogcatFilterEvent\"_\n\004Type\022\026\n\022U" +
+      "NKNOWN_EVENT_TYPE\020\000\022\021\n\rFORMAT_DIALOG\020\001\022\033" +
+      "\n\027FILTER_ADDED_TO_HISTORY\020\002\022\017\n\013PANEL_ADD" +
+      "ED\020\003*\237\001\n\025EmulatorSnapshotFlags\022\027\n\023SNAPSH" +
+      "OT_FLAGS_NONE\020\000\022%\n!SNAPSHOT_FLAGS_RAM_CO" +
+      "MPRESSED_BIT\020\001\022*\n&SNAPSHOT_FLAGS_TEXTURE" +
+      "S_COMPRESSED_BIT\020\002\022\032\n\026SNAPSHOT_FLAGS_HDD" +
+      "_BIT\020\003*\254\002\n\031EmulatorSnapshotSaveState\022+\n\'" +
+      "EMULATOR_SNAPSHOT_SAVE_SUCCEEDED_NORMAL\020" +
+      "\000\022!\n\035EMULATOR_SNAPSHOT_SAVE_FAILED\020\001\022.\n*" +
+      "EMULATOR_SNAPSHOT_SAVE_SKIPPED_UNSUPPORT" +
+      "ED\020\002\022-\n)EMULATOR_SNAPSHOT_SAVE_SKIPPED_N" +
+      "OT_BOOTED\020\003\022.\n*EMULATOR_SNAPSHOT_SAVE_SK" +
+      "IPPED_NO_SNAPSHOT\020\004\0220\n,EMULATOR_SNAPSHOT" +
+      "_SAVE_SKIPPED_DISK_PRESSURE\020\005*\215\002\n\031Emulat" +
+      "orSnapshotLoadState\022+\n\'EMULATOR_SNAPSHOT" +
+      "_LOAD_SUCCEEDED_NORMAL\020\000\022!\n\035EMULATOR_SNA" +
+      "PSHOT_LOAD_FAILED\020\001\022.\n*EMULATOR_SNAPSHOT" +
+      "_LOAD_SKIPPED_UNSUPPORTED\020\002\022&\n\"EMULATOR_" +
+      "SNAPSHOT_LOAD_NO_SNAPSHOT\020\003\022\'\n#EMULATOR_" +
+      "SNAPSHOT_LOAD_OLD_SNAPSHOT\020\004\022\037\n\033EMULATOR" +
+      "_SNAPSHOT_LOAD_HUNG\020\005*\335\n\n\035EmulatorSnapsh" +
+      "otFailureReason\0220\n,EMULATOR_SNAPSHOT_FAI" +
+      "LURE_REASON_UNSPECIFIED\020\000\0223\n/EMULATOR_SN" +
+      "APSHOT_FAILURE_REASON_CORRUPTED_DATA\020\001\0223" +
+      "\n/EMULATOR_SNAPSHOT_FAILURE_REASON_NO_SN" +
+      "APSHOT_PB\020\002\0224\n0EMULATOR_SNAPSHOT_FAILURE" +
+      "_REASON_BAD_SNAPSHOT_PB\020\003\0229\n5EMULATOR_SN" +
+      "APSHOT_FAILURE_REASON_INCOMPATIBLE_VERSI" +
+      "ON\020\004\0220\n,EMULATOR_SNAPSHOT_FAILURE_REASON" +
+      "_NO_RAM_FILE\020\005\0225\n1EMULATOR_SNAPSHOT_FAIL" +
+      "URE_REASON_NO_TEXTURES_FILE\020\006\022<\n8EMULATO" +
+      "R_SNAPSHOT_FAILURE_REASON_SNAPSHOTS_NOT_" +
+      "SUPPORTED\020\007\022?\n:EMULATOR_SNAPSHOT_FAILURE" +
+      "_REASON_UNRECOVERABLE_ERROR_LIMIT\020\220N\022:\n5" +
+      "EMULATOR_SNAPSHOT_FAILURE_REASON_NO_SNAP" +
+      "SHOT_IN_IMAGE\020\221N\022E\n@EMULATOR_SNAPSHOT_FA" +
+      "ILURE_REASON_CONFIG_MISMATCH_HOST_HYPERV" +
+      "ISOR\020\222N\022>\n9EMULATOR_SNAPSHOT_FAILURE_REA" +
+      "SON_CONFIG_MISMATCH_HOST_GPU\020\223N\022>\n9EMULA" +
+      "TOR_SNAPSHOT_FAILURE_REASON_CONFIG_MISMA" +
+      "TCH_RENDERER\020\224N\022>\n9EMULATOR_SNAPSHOT_FAI" +
+      "LURE_REASON_CONFIG_MISMATCH_FEATURES\020\225N\022" +
+      "9\n4EMULATOR_SNAPSHOT_FAILURE_REASON_CONF" +
+      "IG_MISMATCH_AVD\020\226N\022:\n5EMULATOR_SNAPSHOT_" +
+      "FAILURE_REASON_SYSTEM_IMAGE_CHANGED\020\227N\022=" +
+      "\n7EMULATOR_SNAPSHOT_FAILURE_REASON_VALID" +
+      "ATION_ERROR_LIMIT\020\240\234\001\0225\n/EMULATOR_SNAPSH" +
+      "OT_FAILURE_REASON_INTERNAL_ERROR\020\241\234\001\022>\n8" +
+      "EMULATOR_SNAPSHOT_FAILURE_REASON_EMULATI" +
+      "ON_ENGINE_FAILED\020\242\234\001\0221\n+EMULATOR_SNAPSHO" +
+      "T_FAILURE_REASON_RAM_FAILED\020\243\234\001\0226\n0EMULA" +
+      "TOR_SNAPSHOT_FAILURE_REASON_TEXTURES_FAI" +
+      "LED\020\244\234\001\0222\n,EMULATOR_SNAPSHOT_FAILURE_REA" +
+      "SON_ADB_OFFLINE\020\245\234\001\0228\n2EMULATOR_SNAPSHOT" +
+      "_FAILURE_REASON_IN_PROGRESS_LIMIT\020\260\352\001*[\n" +
+      "\014SearchOption\022\031\n\025UNKNOWN_SEARCH_OPTION\020\000" +
+      "\022\010\n\004NONE\020\001\022\024\n\020MULTIPLE_MATCHES\020\002\022\020\n\014SING" +
+      "LE_MATCH\020\003*\260\003\n\016EditorFileType\022\013\n\007UNKNOWN" +
+      "\020\000\022\010\n\004JAVA\020\001\022\n\n\006KOTLIN\020\002\022\007\n\003XML\020\003\022\n\n\006GRO" +
+      "OVY\020\004\022\016\n\nPROPERTIES\020\005\022\010\n\004JSON\020\006\022\021\n\rKOTLI" +
+      "N_SCRIPT\020\007\022\n\n\006NATIVE\020\010\022\020\n\014XML_MANIFEST\020\t" +
+      "\022\020\n\014XML_RES_ANIM\020\n\022\024\n\020XML_RES_ANIMATOR\020\013" +
+      "\022\021\n\rXML_RES_COLOR\020\014\022\024\n\020XML_RES_DRAWABLE\020" +
+      "\r\022\020\n\014XML_RES_FONT\020\016\022\030\n\024XML_RES_INTERPOLA" +
+      "TOR\020\017\022\022\n\016XML_RES_LAYOUT\020\020\022\020\n\014XML_RES_MEN" +
+      "U\020\021\022\022\n\016XML_RES_MIPMAP\020\022\022\026\n\022XML_RES_NAVIG" +
+      "ATION\020\023\022\017\n\013XML_RES_RAW\020\024\022\026\n\022XML_RES_TRAN" +
+      "SITION\020\025\022\022\n\016XML_RES_VALUES\020\026\022\017\n\013XML_RES_" +
+      "XML\020\027B=\n%com.google.wireless.android.sdk" +
+      ".statsB\022AndroidStudioStatsP\001"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -7694,15 +7718,21 @@ public final class AndroidStudioStats {
     internal_static_android_studio_LogcatUsageEvent_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_android_studio_LogcatUsageEvent_descriptor,
-        new java.lang.String[] { "Type", "FormatDialog", "LogcatFilter", });
-    internal_static_android_studio_LogcatUsageEvent_LogcatFormatDialogEvent_descriptor =
+        new java.lang.String[] { "Type", "FormatDialog", "LogcatFilter", "FormatDialogApplied", "PanelAdded", });
+    internal_static_android_studio_LogcatUsageEvent_LogcatFormatDialog_descriptor =
       internal_static_android_studio_LogcatUsageEvent_descriptor.getNestedTypes().get(0);
-    internal_static_android_studio_LogcatUsageEvent_LogcatFormatDialogEvent_fieldAccessorTable = new
+    internal_static_android_studio_LogcatUsageEvent_LogcatFormatDialog_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_android_studio_LogcatUsageEvent_LogcatFormatDialogEvent_descriptor,
+        internal_static_android_studio_LogcatUsageEvent_LogcatFormatDialog_descriptor,
+        new java.lang.String[] { "Configuration", "IsDefaultPreset", "IsApplyButtonUsed", });
+    internal_static_android_studio_LogcatUsageEvent_LogcatFormatConfiguration_descriptor =
+      internal_static_android_studio_LogcatUsageEvent_descriptor.getNestedTypes().get(1);
+    internal_static_android_studio_LogcatUsageEvent_LogcatFormatConfiguration_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_android_studio_LogcatUsageEvent_LogcatFormatConfiguration_descriptor,
         new java.lang.String[] { "IsShowTimestamp", "IsShowDate", "IsShowProcessId", "IsShowThreadId", "IsShowTags", "IsShowRepeatedTags", "TagWidth", "IsShowPackages", "IsShowRepeatedPackages", "PackageWidth", "Preset", "IsDefaultPreset", "IsApplyButtonUsed", });
     internal_static_android_studio_LogcatUsageEvent_LogcatFilterEvent_descriptor =
-      internal_static_android_studio_LogcatUsageEvent_descriptor.getNestedTypes().get(1);
+      internal_static_android_studio_LogcatUsageEvent_descriptor.getNestedTypes().get(2);
     internal_static_android_studio_LogcatUsageEvent_LogcatFilterEvent_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_android_studio_LogcatUsageEvent_LogcatFilterEvent_descriptor,
@@ -7713,6 +7743,12 @@ public final class AndroidStudioStats {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_android_studio_LogcatUsageEvent_LogcatFilterEvent_TermVariants_descriptor,
         new java.lang.String[] { "Count", "CountNegated", "CountRegex", "CountNegatedRegex", });
+    internal_static_android_studio_LogcatUsageEvent_LogcatPanelEvent_descriptor =
+      internal_static_android_studio_LogcatUsageEvent_descriptor.getNestedTypes().get(3);
+    internal_static_android_studio_LogcatUsageEvent_LogcatPanelEvent_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_android_studio_LogcatUsageEvent_LogcatPanelEvent_descriptor,
+        new java.lang.String[] { "IsRestored", "FormatConfiguration", "Filter", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)

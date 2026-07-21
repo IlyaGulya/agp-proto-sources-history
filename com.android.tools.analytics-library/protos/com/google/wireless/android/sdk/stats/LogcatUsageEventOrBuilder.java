@@ -28,30 +28,30 @@ public interface LogcatUsageEventOrBuilder extends
 
   /**
    * <pre>
-   * State of an applied Logcat Format dialog. Set if type is FORMAT_DIALOG
+   * Historical, no longer used for writing as of 02/2022
    * </pre>
    *
-   * <code>optional .android_studio.LogcatUsageEvent.LogcatFormatDialogEvent format_dialog = 2;</code>
+   * <code>optional .android_studio.LogcatUsageEvent.LogcatFormatConfiguration format_dialog = 2 [deprecated = true];</code>
    * @return Whether the formatDialog field is set.
    */
-  boolean hasFormatDialog();
+  @java.lang.Deprecated boolean hasFormatDialog();
   /**
    * <pre>
-   * State of an applied Logcat Format dialog. Set if type is FORMAT_DIALOG
+   * Historical, no longer used for writing as of 02/2022
    * </pre>
    *
-   * <code>optional .android_studio.LogcatUsageEvent.LogcatFormatDialogEvent format_dialog = 2;</code>
+   * <code>optional .android_studio.LogcatUsageEvent.LogcatFormatConfiguration format_dialog = 2 [deprecated = true];</code>
    * @return The formatDialog.
    */
-  com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatDialogEvent getFormatDialog();
+  @java.lang.Deprecated com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatConfiguration getFormatDialog();
   /**
    * <pre>
-   * State of an applied Logcat Format dialog. Set if type is FORMAT_DIALOG
+   * Historical, no longer used for writing as of 02/2022
    * </pre>
    *
-   * <code>optional .android_studio.LogcatUsageEvent.LogcatFormatDialogEvent format_dialog = 2;</code>
+   * <code>optional .android_studio.LogcatUsageEvent.LogcatFormatConfiguration format_dialog = 2 [deprecated = true];</code>
    */
-  com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatDialogEventOrBuilder getFormatDialogOrBuilder();
+  @java.lang.Deprecated com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatConfigurationOrBuilder getFormatDialogOrBuilder();
 
   /**
    * <pre>
@@ -79,4 +79,58 @@ public interface LogcatUsageEventOrBuilder extends
    * <code>optional .android_studio.LogcatUsageEvent.LogcatFilterEvent logcat_filter = 3;</code>
    */
   com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFilterEventOrBuilder getLogcatFilterOrBuilder();
+
+  /**
+   * <pre>
+   * The Logcat format configuration set by the format dialog
+   * </pre>
+   *
+   * <code>optional .android_studio.LogcatUsageEvent.LogcatFormatDialog format_dialog_applied = 4;</code>
+   * @return Whether the formatDialogApplied field is set.
+   */
+  boolean hasFormatDialogApplied();
+  /**
+   * <pre>
+   * The Logcat format configuration set by the format dialog
+   * </pre>
+   *
+   * <code>optional .android_studio.LogcatUsageEvent.LogcatFormatDialog format_dialog_applied = 4;</code>
+   * @return The formatDialogApplied.
+   */
+  com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatDialog getFormatDialogApplied();
+  /**
+   * <pre>
+   * The Logcat format configuration set by the format dialog
+   * </pre>
+   *
+   * <code>optional .android_studio.LogcatUsageEvent.LogcatFormatDialog format_dialog_applied = 4;</code>
+   */
+  com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatDialogOrBuilder getFormatDialogAppliedOrBuilder();
+
+  /**
+   * <pre>
+   * A Logcat panel was added
+   * </pre>
+   *
+   * <code>optional .android_studio.LogcatUsageEvent.LogcatPanelEvent panel_added = 5;</code>
+   * @return Whether the panelAdded field is set.
+   */
+  boolean hasPanelAdded();
+  /**
+   * <pre>
+   * A Logcat panel was added
+   * </pre>
+   *
+   * <code>optional .android_studio.LogcatUsageEvent.LogcatPanelEvent panel_added = 5;</code>
+   * @return The panelAdded.
+   */
+  com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatPanelEvent getPanelAdded();
+  /**
+   * <pre>
+   * A Logcat panel was added
+   * </pre>
+   *
+   * <code>optional .android_studio.LogcatUsageEvent.LogcatPanelEvent panel_added = 5;</code>
+   */
+  com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatPanelEventOrBuilder getPanelAddedOrBuilder();
 }
