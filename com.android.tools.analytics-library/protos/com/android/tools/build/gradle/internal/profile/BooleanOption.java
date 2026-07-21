@@ -662,6 +662,10 @@ public enum BooleanOption
    * <code>ENABLE_GLOBAL_SYNTHETICS = 160;</code>
    */
   ENABLE_GLOBAL_SYNTHETICS(160),
+  /**
+   * <code>PRINT_LINT_STACK_TRACE = 161;</code>
+   */
+  PRINT_LINT_STACK_TRACE(161),
   UNRECOGNIZED(-1),
   ;
 
@@ -1309,6 +1313,10 @@ public enum BooleanOption
    * <code>ENABLE_GLOBAL_SYNTHETICS = 160;</code>
    */
   public static final int ENABLE_GLOBAL_SYNTHETICS_VALUE = 160;
+  /**
+   * <code>PRINT_LINT_STACK_TRACE = 161;</code>
+   */
+  public static final int PRINT_LINT_STACK_TRACE_VALUE = 161;
 
 
   public final int getNumber() {
@@ -1496,6 +1504,7 @@ public enum BooleanOption
       case 158: return ENABLE_INSTRUMENTATION_TEST_DESUGARING;
       case 159: return GRADLE_MANAGED_DEVICE_CUSTOM_DEVICE;
       case 160: return ENABLE_GLOBAL_SYNTHETICS;
+      case 161: return PRINT_LINT_STACK_TRACE;
       default: return null;
     }
   }
