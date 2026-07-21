@@ -2994,6 +2994,14 @@ private static final long serialVersionUID = 0L;
      * <code>ADB_DEVICE_CONNECTED = 308;</code>
      */
     ADB_DEVICE_CONNECTED(308),
+    /**
+     * <pre>
+     * Event related to screenshot test with Compose Preview.
+     * </pre>
+     *
+     * <code>SCREENSHOT_TEST_COMPOSE_PREVIEW = 309;</code>
+     */
+    SCREENSHOT_TEST_COMPOSE_PREVIEW(309),
     ;
 
     /**
@@ -5294,6 +5302,14 @@ private static final long serialVersionUID = 0L;
      * <code>ADB_DEVICE_CONNECTED = 308;</code>
      */
     public static final int ADB_DEVICE_CONNECTED_VALUE = 308;
+    /**
+     * <pre>
+     * Event related to screenshot test with Compose Preview.
+     * </pre>
+     *
+     * <code>SCREENSHOT_TEST_COMPOSE_PREVIEW = 309;</code>
+     */
+    public static final int SCREENSHOT_TEST_COMPOSE_PREVIEW_VALUE = 309;
 
 
     public final int getNumber() {
@@ -5620,6 +5636,7 @@ private static final long serialVersionUID = 0L;
         case 306: return SML_GEOLOCATION_EVENT;
         case 307: return SML_COMPLETION_REQUEST_ERROR;
         case 308: return ADB_DEVICE_CONNECTED;
+        case 309: return SCREENSHOT_TEST_COMPOSE_PREVIEW;
         default: return null;
       }
     }
@@ -21927,6 +21944,44 @@ private static final long serialVersionUID = 0L;
     return deviceConnected_ == null ? com.google.wireless.android.sdk.stats.DeviceConnectedNotificationEvent.getDefaultInstance() : deviceConnected_;
   }
 
+  public static final int SCREENSHOT_TEST_COMPOSE_PREVIEW_EVENT_FIELD_NUMBER = 192;
+  private com.google.wireless.android.sdk.stats.ScreenshotTestComposePreviewEvent screenshotTestComposePreviewEvent_;
+  /**
+   * <pre>
+   * set when kind = SCREENSHOT_TEST_COMPOSE_PREVIEW
+   * </pre>
+   *
+   * <code>optional .android_studio.ScreenshotTestComposePreviewEvent screenshot_test_compose_preview_event = 192;</code>
+   * @return Whether the screenshotTestComposePreviewEvent field is set.
+   */
+  @java.lang.Override
+  public boolean hasScreenshotTestComposePreviewEvent() {
+    return ((bitField5_ & 0x02000000) != 0);
+  }
+  /**
+   * <pre>
+   * set when kind = SCREENSHOT_TEST_COMPOSE_PREVIEW
+   * </pre>
+   *
+   * <code>optional .android_studio.ScreenshotTestComposePreviewEvent screenshot_test_compose_preview_event = 192;</code>
+   * @return The screenshotTestComposePreviewEvent.
+   */
+  @java.lang.Override
+  public com.google.wireless.android.sdk.stats.ScreenshotTestComposePreviewEvent getScreenshotTestComposePreviewEvent() {
+    return screenshotTestComposePreviewEvent_ == null ? com.google.wireless.android.sdk.stats.ScreenshotTestComposePreviewEvent.getDefaultInstance() : screenshotTestComposePreviewEvent_;
+  }
+  /**
+   * <pre>
+   * set when kind = SCREENSHOT_TEST_COMPOSE_PREVIEW
+   * </pre>
+   *
+   * <code>optional .android_studio.ScreenshotTestComposePreviewEvent screenshot_test_compose_preview_event = 192;</code>
+   */
+  @java.lang.Override
+  public com.google.wireless.android.sdk.stats.ScreenshotTestComposePreviewEventOrBuilder getScreenshotTestComposePreviewEventOrBuilder() {
+    return screenshotTestComposePreviewEvent_ == null ? com.google.wireless.android.sdk.stats.ScreenshotTestComposePreviewEvent.getDefaultInstance() : screenshotTestComposePreviewEvent_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -22513,6 +22568,9 @@ private static final long serialVersionUID = 0L;
     }
     if (((bitField5_ & 0x01000000) != 0)) {
       output.writeMessage(191, getDeviceConnected());
+    }
+    if (((bitField5_ & 0x02000000) != 0)) {
+      output.writeMessage(192, getScreenshotTestComposePreviewEvent());
     }
     getUnknownFields().writeTo(output);
   }
@@ -23292,6 +23350,10 @@ private static final long serialVersionUID = 0L;
     if (((bitField5_ & 0x01000000) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(191, getDeviceConnected());
+    }
+    if (((bitField5_ & 0x02000000) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(192, getScreenshotTestComposePreviewEvent());
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -24234,6 +24296,11 @@ private static final long serialVersionUID = 0L;
       if (!getDeviceConnected()
           .equals(other.getDeviceConnected())) return false;
     }
+    if (hasScreenshotTestComposePreviewEvent() != other.hasScreenshotTestComposePreviewEvent()) return false;
+    if (hasScreenshotTestComposePreviewEvent()) {
+      if (!getScreenshotTestComposePreviewEvent()
+          .equals(other.getScreenshotTestComposePreviewEvent())) return false;
+    }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -25011,6 +25078,10 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + DEVICE_CONNECTED_FIELD_NUMBER;
       hash = (53 * hash) + getDeviceConnected().hashCode();
     }
+    if (hasScreenshotTestComposePreviewEvent()) {
+      hash = (37 * hash) + SCREENSHOT_TEST_COMPOSE_PREVIEW_EVENT_FIELD_NUMBER;
+      hash = (53 * hash) + getScreenshotTestComposePreviewEvent().hashCode();
+    }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -25307,6 +25378,7 @@ private static final long serialVersionUID = 0L;
         getSmlGeolocationEventFieldBuilder();
         getSmlCompletionRequestErrorFieldBuilder();
         getDeviceConnectedFieldBuilder();
+        getScreenshotTestComposePreviewEventFieldBuilder();
       }
     }
     @java.lang.Override
@@ -26369,6 +26441,12 @@ private static final long serialVersionUID = 0L;
         deviceConnectedBuilder_.clear();
       }
       bitField5_ = (bitField5_ & ~0x40000000);
+      if (screenshotTestComposePreviewEventBuilder_ == null) {
+        screenshotTestComposePreviewEvent_ = null;
+      } else {
+        screenshotTestComposePreviewEventBuilder_.clear();
+      }
+      bitField5_ = (bitField5_ & ~0x80000000);
       return this;
     }
 
@@ -27849,6 +27927,14 @@ private static final long serialVersionUID = 0L;
         }
         to_bitField5_ |= 0x01000000;
       }
+      if (((from_bitField5_ & 0x80000000) != 0)) {
+        if (screenshotTestComposePreviewEventBuilder_ == null) {
+          result.screenshotTestComposePreviewEvent_ = screenshotTestComposePreviewEvent_;
+        } else {
+          result.screenshotTestComposePreviewEvent_ = screenshotTestComposePreviewEventBuilder_.build();
+        }
+        to_bitField5_ |= 0x02000000;
+      }
       result.bitField0_ = to_bitField0_;
       result.bitField1_ = to_bitField1_;
       result.bitField2_ = to_bitField2_;
@@ -28579,6 +28665,9 @@ private static final long serialVersionUID = 0L;
       }
       if (other.hasDeviceConnected()) {
         mergeDeviceConnected(other.getDeviceConnected());
+      }
+      if (other.hasScreenshotTestComposePreviewEvent()) {
+        mergeScreenshotTestComposePreviewEvent(other.getScreenshotTestComposePreviewEvent());
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -30011,6 +30100,13 @@ private static final long serialVersionUID = 0L;
               bitField5_ |= 0x40000000;
               break;
             } // case 1530
+            case 1538: {
+              input.readMessage(
+                  getScreenshotTestComposePreviewEventFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField5_ |= 0x80000000;
+              break;
+            } // case 1538
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -59108,6 +59204,162 @@ private static final long serialVersionUID = 0L;
         deviceConnected_ = null;
       }
       return deviceConnectedBuilder_;
+    }
+
+    private com.google.wireless.android.sdk.stats.ScreenshotTestComposePreviewEvent screenshotTestComposePreviewEvent_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.ScreenshotTestComposePreviewEvent, com.google.wireless.android.sdk.stats.ScreenshotTestComposePreviewEvent.Builder, com.google.wireless.android.sdk.stats.ScreenshotTestComposePreviewEventOrBuilder> screenshotTestComposePreviewEventBuilder_;
+    /**
+     * <pre>
+     * set when kind = SCREENSHOT_TEST_COMPOSE_PREVIEW
+     * </pre>
+     *
+     * <code>optional .android_studio.ScreenshotTestComposePreviewEvent screenshot_test_compose_preview_event = 192;</code>
+     * @return Whether the screenshotTestComposePreviewEvent field is set.
+     */
+    public boolean hasScreenshotTestComposePreviewEvent() {
+      return ((bitField5_ & 0x80000000) != 0);
+    }
+    /**
+     * <pre>
+     * set when kind = SCREENSHOT_TEST_COMPOSE_PREVIEW
+     * </pre>
+     *
+     * <code>optional .android_studio.ScreenshotTestComposePreviewEvent screenshot_test_compose_preview_event = 192;</code>
+     * @return The screenshotTestComposePreviewEvent.
+     */
+    public com.google.wireless.android.sdk.stats.ScreenshotTestComposePreviewEvent getScreenshotTestComposePreviewEvent() {
+      if (screenshotTestComposePreviewEventBuilder_ == null) {
+        return screenshotTestComposePreviewEvent_ == null ? com.google.wireless.android.sdk.stats.ScreenshotTestComposePreviewEvent.getDefaultInstance() : screenshotTestComposePreviewEvent_;
+      } else {
+        return screenshotTestComposePreviewEventBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * set when kind = SCREENSHOT_TEST_COMPOSE_PREVIEW
+     * </pre>
+     *
+     * <code>optional .android_studio.ScreenshotTestComposePreviewEvent screenshot_test_compose_preview_event = 192;</code>
+     */
+    public Builder setScreenshotTestComposePreviewEvent(com.google.wireless.android.sdk.stats.ScreenshotTestComposePreviewEvent value) {
+      if (screenshotTestComposePreviewEventBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        screenshotTestComposePreviewEvent_ = value;
+        onChanged();
+      } else {
+        screenshotTestComposePreviewEventBuilder_.setMessage(value);
+      }
+      bitField5_ |= 0x80000000;
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = SCREENSHOT_TEST_COMPOSE_PREVIEW
+     * </pre>
+     *
+     * <code>optional .android_studio.ScreenshotTestComposePreviewEvent screenshot_test_compose_preview_event = 192;</code>
+     */
+    public Builder setScreenshotTestComposePreviewEvent(
+        com.google.wireless.android.sdk.stats.ScreenshotTestComposePreviewEvent.Builder builderForValue) {
+      if (screenshotTestComposePreviewEventBuilder_ == null) {
+        screenshotTestComposePreviewEvent_ = builderForValue.build();
+        onChanged();
+      } else {
+        screenshotTestComposePreviewEventBuilder_.setMessage(builderForValue.build());
+      }
+      bitField5_ |= 0x80000000;
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = SCREENSHOT_TEST_COMPOSE_PREVIEW
+     * </pre>
+     *
+     * <code>optional .android_studio.ScreenshotTestComposePreviewEvent screenshot_test_compose_preview_event = 192;</code>
+     */
+    public Builder mergeScreenshotTestComposePreviewEvent(com.google.wireless.android.sdk.stats.ScreenshotTestComposePreviewEvent value) {
+      if (screenshotTestComposePreviewEventBuilder_ == null) {
+        if (((bitField5_ & 0x80000000) != 0) &&
+            screenshotTestComposePreviewEvent_ != null &&
+            screenshotTestComposePreviewEvent_ != com.google.wireless.android.sdk.stats.ScreenshotTestComposePreviewEvent.getDefaultInstance()) {
+          screenshotTestComposePreviewEvent_ =
+            com.google.wireless.android.sdk.stats.ScreenshotTestComposePreviewEvent.newBuilder(screenshotTestComposePreviewEvent_).mergeFrom(value).buildPartial();
+        } else {
+          screenshotTestComposePreviewEvent_ = value;
+        }
+        onChanged();
+      } else {
+        screenshotTestComposePreviewEventBuilder_.mergeFrom(value);
+      }
+      bitField5_ |= 0x80000000;
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = SCREENSHOT_TEST_COMPOSE_PREVIEW
+     * </pre>
+     *
+     * <code>optional .android_studio.ScreenshotTestComposePreviewEvent screenshot_test_compose_preview_event = 192;</code>
+     */
+    public Builder clearScreenshotTestComposePreviewEvent() {
+      if (screenshotTestComposePreviewEventBuilder_ == null) {
+        screenshotTestComposePreviewEvent_ = null;
+        onChanged();
+      } else {
+        screenshotTestComposePreviewEventBuilder_.clear();
+      }
+      bitField5_ = (bitField5_ & ~0x80000000);
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = SCREENSHOT_TEST_COMPOSE_PREVIEW
+     * </pre>
+     *
+     * <code>optional .android_studio.ScreenshotTestComposePreviewEvent screenshot_test_compose_preview_event = 192;</code>
+     */
+    public com.google.wireless.android.sdk.stats.ScreenshotTestComposePreviewEvent.Builder getScreenshotTestComposePreviewEventBuilder() {
+      bitField5_ |= 0x80000000;
+      onChanged();
+      return getScreenshotTestComposePreviewEventFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * set when kind = SCREENSHOT_TEST_COMPOSE_PREVIEW
+     * </pre>
+     *
+     * <code>optional .android_studio.ScreenshotTestComposePreviewEvent screenshot_test_compose_preview_event = 192;</code>
+     */
+    public com.google.wireless.android.sdk.stats.ScreenshotTestComposePreviewEventOrBuilder getScreenshotTestComposePreviewEventOrBuilder() {
+      if (screenshotTestComposePreviewEventBuilder_ != null) {
+        return screenshotTestComposePreviewEventBuilder_.getMessageOrBuilder();
+      } else {
+        return screenshotTestComposePreviewEvent_ == null ?
+            com.google.wireless.android.sdk.stats.ScreenshotTestComposePreviewEvent.getDefaultInstance() : screenshotTestComposePreviewEvent_;
+      }
+    }
+    /**
+     * <pre>
+     * set when kind = SCREENSHOT_TEST_COMPOSE_PREVIEW
+     * </pre>
+     *
+     * <code>optional .android_studio.ScreenshotTestComposePreviewEvent screenshot_test_compose_preview_event = 192;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.ScreenshotTestComposePreviewEvent, com.google.wireless.android.sdk.stats.ScreenshotTestComposePreviewEvent.Builder, com.google.wireless.android.sdk.stats.ScreenshotTestComposePreviewEventOrBuilder> 
+        getScreenshotTestComposePreviewEventFieldBuilder() {
+      if (screenshotTestComposePreviewEventBuilder_ == null) {
+        screenshotTestComposePreviewEventBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.wireless.android.sdk.stats.ScreenshotTestComposePreviewEvent, com.google.wireless.android.sdk.stats.ScreenshotTestComposePreviewEvent.Builder, com.google.wireless.android.sdk.stats.ScreenshotTestComposePreviewEventOrBuilder>(
+                getScreenshotTestComposePreviewEvent(),
+                getParentForChildren(),
+                isClean());
+        screenshotTestComposePreviewEvent_ = null;
+      }
+      return screenshotTestComposePreviewEventBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

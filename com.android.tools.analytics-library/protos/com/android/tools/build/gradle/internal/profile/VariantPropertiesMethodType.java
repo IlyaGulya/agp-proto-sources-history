@@ -697,6 +697,10 @@ public enum VariantPropertiesMethodType
    * <code>HOST_TEST_CODE_COVERAGE_ENABLED = 159;</code>
    */
   HOST_TEST_CODE_COVERAGE_ENABLED(159),
+  /**
+   * <code>DEVICE_TEST_CODE_COVERAGE_ENABLED = 160;</code>
+   */
+  DEVICE_TEST_CODE_COVERAGE_ENABLED(160),
   UNRECOGNIZED(-1),
   ;
 
@@ -1388,6 +1392,10 @@ public enum VariantPropertiesMethodType
    * <code>HOST_TEST_CODE_COVERAGE_ENABLED = 159;</code>
    */
   public static final int HOST_TEST_CODE_COVERAGE_ENABLED_VALUE = 159;
+  /**
+   * <code>DEVICE_TEST_CODE_COVERAGE_ENABLED = 160;</code>
+   */
+  public static final int DEVICE_TEST_CODE_COVERAGE_ENABLED_VALUE = 160;
 
 
   public final int getNumber() {
@@ -1574,6 +1582,7 @@ public enum VariantPropertiesMethodType
       case 157: return DEFAULT_DEVICE_TEST;
       case 158: return HOST_TESTS;
       case 159: return HOST_TEST_CODE_COVERAGE_ENABLED;
+      case 160: return DEVICE_TEST_CODE_COVERAGE_ENABLED;
       default: return null;
     }
   }
