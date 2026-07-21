@@ -7266,6 +7266,10 @@ private static final long serialVersionUID = 0L;
      * <code>ANDROID_BUILD_ISSUE_CREATED_UNKNOWN_FAILURE = 43;</code>
      */
     ANDROID_BUILD_ISSUE_CREATED_UNKNOWN_FAILURE(43),
+    /**
+     * <code>KTS_COMPILATION_ERROR = 44;</code>
+     */
+    KTS_COMPILATION_ERROR(44),
     ;
 
     /**
@@ -7470,6 +7474,10 @@ private static final long serialVersionUID = 0L;
      * <code>ANDROID_BUILD_ISSUE_CREATED_UNKNOWN_FAILURE = 43;</code>
      */
     public static final int ANDROID_BUILD_ISSUE_CREATED_UNKNOWN_FAILURE_VALUE = 43;
+    /**
+     * <code>KTS_COMPILATION_ERROR = 44;</code>
+     */
+    public static final int KTS_COMPILATION_ERROR_VALUE = 44;
 
 
     public final int getNumber() {
@@ -7536,6 +7544,7 @@ private static final long serialVersionUID = 0L;
         case 41: return ANDROID_SYNC_JDK_IMPORT_CHECK;
         case 42: return BUILD_ISSUE_CREATED_UNKNOWN_FAILURE;
         case 43: return ANDROID_BUILD_ISSUE_CREATED_UNKNOWN_FAILURE;
+        case 44: return KTS_COMPILATION_ERROR;
         default: return null;
       }
     }
