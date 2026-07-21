@@ -3344,6 +3344,50 @@ private static final long serialVersionUID = 0L;
        * @return The status.
        */
       com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.ServerEvent.ResponseEvent.ModelApiStatus getStatus();
+
+      /**
+       * <pre>
+       * Ordered list of streamed chunks as they were received.
+       * </pre>
+       *
+       * <code>repeated .android_studio.GeminiTelemetryEvent.ServerEvent.ResponseEvent.ResponseChunk response_chunks = 11;</code>
+       */
+      java.util.List<com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.ServerEvent.ResponseEvent.ResponseChunk> 
+          getResponseChunksList();
+      /**
+       * <pre>
+       * Ordered list of streamed chunks as they were received.
+       * </pre>
+       *
+       * <code>repeated .android_studio.GeminiTelemetryEvent.ServerEvent.ResponseEvent.ResponseChunk response_chunks = 11;</code>
+       */
+      com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.ServerEvent.ResponseEvent.ResponseChunk getResponseChunks(int index);
+      /**
+       * <pre>
+       * Ordered list of streamed chunks as they were received.
+       * </pre>
+       *
+       * <code>repeated .android_studio.GeminiTelemetryEvent.ServerEvent.ResponseEvent.ResponseChunk response_chunks = 11;</code>
+       */
+      int getResponseChunksCount();
+      /**
+       * <pre>
+       * Ordered list of streamed chunks as they were received.
+       * </pre>
+       *
+       * <code>repeated .android_studio.GeminiTelemetryEvent.ServerEvent.ResponseEvent.ResponseChunk response_chunks = 11;</code>
+       */
+      java.util.List<? extends com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.ServerEvent.ResponseEvent.ResponseChunkOrBuilder> 
+          getResponseChunksOrBuilderList();
+      /**
+       * <pre>
+       * Ordered list of streamed chunks as they were received.
+       * </pre>
+       *
+       * <code>repeated .android_studio.GeminiTelemetryEvent.ServerEvent.ResponseEvent.ResponseChunk response_chunks = 11;</code>
+       */
+      com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.ServerEvent.ResponseEvent.ResponseChunkOrBuilder getResponseChunksOrBuilder(
+          int index);
     }
     /**
      * <pre>
@@ -3365,6 +3409,7 @@ private static final long serialVersionUID = 0L;
         actualModelId_ = "";
         finishReason_ = 0;
         status_ = 0;
+        responseChunks_ = java.util.Collections.emptyList();
       }
 
       @java.lang.Override
@@ -3913,6 +3958,929 @@ private static final long serialVersionUID = 0L;
         // @@protoc_insertion_point(enum_scope:android_studio.GeminiTelemetryEvent.ServerEvent.ResponseEvent.ModelApiStatus)
       }
 
+      public interface ResponseChunkOrBuilder extends
+          // @@protoc_insertion_point(interface_extends:android_studio.GeminiTelemetryEvent.ServerEvent.ResponseEvent.ResponseChunk)
+          com.google.protobuf.MessageOrBuilder {
+
+        /**
+         * <pre>
+         * Timestamp of when this chunk was received in milliseconds since
+         * epoch.
+         * </pre>
+         *
+         * <code>optional int64 timestamp_ms = 1;</code>
+         * @return Whether the timestampMs field is set.
+         */
+        boolean hasTimestampMs();
+        /**
+         * <pre>
+         * Timestamp of when this chunk was received in milliseconds since
+         * epoch.
+         * </pre>
+         *
+         * <code>optional int64 timestamp_ms = 1;</code>
+         * @return The timestampMs.
+         */
+        long getTimestampMs();
+
+        /**
+         * <pre>
+         * The character length of the generated response text in this chunk.
+         * </pre>
+         *
+         * <code>optional int32 text_length_chars = 2;</code>
+         * @return Whether the textLengthChars field is set.
+         */
+        boolean hasTextLengthChars();
+        /**
+         * <pre>
+         * The character length of the generated response text in this chunk.
+         * </pre>
+         *
+         * <code>optional int32 text_length_chars = 2;</code>
+         * @return The textLengthChars.
+         */
+        int getTextLengthChars();
+
+        /**
+         * <pre>
+         * The character length of the generated thought/reasoning in this
+         * chunk.
+         * </pre>
+         *
+         * <code>optional int32 thought_length_chars = 3;</code>
+         * @return Whether the thoughtLengthChars field is set.
+         */
+        boolean hasThoughtLengthChars();
+        /**
+         * <pre>
+         * The character length of the generated thought/reasoning in this
+         * chunk.
+         * </pre>
+         *
+         * <code>optional int32 thought_length_chars = 3;</code>
+         * @return The thoughtLengthChars.
+         */
+        int getThoughtLengthChars();
+
+        /**
+         * <pre>
+         * Whether the thought signature was present (not null) in this chunk.
+         * </pre>
+         *
+         * <code>optional bool has_signature = 4;</code>
+         * @return Whether the hasSignature field is set.
+         */
+        boolean hasHasSignature();
+        /**
+         * <pre>
+         * Whether the thought signature was present (not null) in this chunk.
+         * </pre>
+         *
+         * <code>optional bool has_signature = 4;</code>
+         * @return The hasSignature.
+         */
+        boolean getHasSignature();
+      }
+      /**
+       * <pre>
+       * Represents the character lengths and timing of a single streamed chunk.
+       * </pre>
+       *
+       * Protobuf type {@code android_studio.GeminiTelemetryEvent.ServerEvent.ResponseEvent.ResponseChunk}
+       */
+      public static final class ResponseChunk extends
+          com.google.protobuf.GeneratedMessageV3 implements
+          // @@protoc_insertion_point(message_implements:android_studio.GeminiTelemetryEvent.ServerEvent.ResponseEvent.ResponseChunk)
+          ResponseChunkOrBuilder {
+      private static final long serialVersionUID = 0L;
+        // Use ResponseChunk.newBuilder() to construct.
+        private ResponseChunk(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+          super(builder);
+        }
+        private ResponseChunk() {
+        }
+
+        @java.lang.Override
+        @SuppressWarnings({"unused"})
+        protected java.lang.Object newInstance(
+            UnusedPrivateParameter unused) {
+          return new ResponseChunk();
+        }
+
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_GeminiTelemetryEvent_ServerEvent_ResponseEvent_ResponseChunk_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_GeminiTelemetryEvent_ServerEvent_ResponseEvent_ResponseChunk_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.ServerEvent.ResponseEvent.ResponseChunk.class, com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.ServerEvent.ResponseEvent.ResponseChunk.Builder.class);
+        }
+
+        private int bitField0_;
+        public static final int TIMESTAMP_MS_FIELD_NUMBER = 1;
+        private long timestampMs_ = 0L;
+        /**
+         * <pre>
+         * Timestamp of when this chunk was received in milliseconds since
+         * epoch.
+         * </pre>
+         *
+         * <code>optional int64 timestamp_ms = 1;</code>
+         * @return Whether the timestampMs field is set.
+         */
+        @java.lang.Override
+        public boolean hasTimestampMs() {
+          return ((bitField0_ & 0x00000001) != 0);
+        }
+        /**
+         * <pre>
+         * Timestamp of when this chunk was received in milliseconds since
+         * epoch.
+         * </pre>
+         *
+         * <code>optional int64 timestamp_ms = 1;</code>
+         * @return The timestampMs.
+         */
+        @java.lang.Override
+        public long getTimestampMs() {
+          return timestampMs_;
+        }
+
+        public static final int TEXT_LENGTH_CHARS_FIELD_NUMBER = 2;
+        private int textLengthChars_ = 0;
+        /**
+         * <pre>
+         * The character length of the generated response text in this chunk.
+         * </pre>
+         *
+         * <code>optional int32 text_length_chars = 2;</code>
+         * @return Whether the textLengthChars field is set.
+         */
+        @java.lang.Override
+        public boolean hasTextLengthChars() {
+          return ((bitField0_ & 0x00000002) != 0);
+        }
+        /**
+         * <pre>
+         * The character length of the generated response text in this chunk.
+         * </pre>
+         *
+         * <code>optional int32 text_length_chars = 2;</code>
+         * @return The textLengthChars.
+         */
+        @java.lang.Override
+        public int getTextLengthChars() {
+          return textLengthChars_;
+        }
+
+        public static final int THOUGHT_LENGTH_CHARS_FIELD_NUMBER = 3;
+        private int thoughtLengthChars_ = 0;
+        /**
+         * <pre>
+         * The character length of the generated thought/reasoning in this
+         * chunk.
+         * </pre>
+         *
+         * <code>optional int32 thought_length_chars = 3;</code>
+         * @return Whether the thoughtLengthChars field is set.
+         */
+        @java.lang.Override
+        public boolean hasThoughtLengthChars() {
+          return ((bitField0_ & 0x00000004) != 0);
+        }
+        /**
+         * <pre>
+         * The character length of the generated thought/reasoning in this
+         * chunk.
+         * </pre>
+         *
+         * <code>optional int32 thought_length_chars = 3;</code>
+         * @return The thoughtLengthChars.
+         */
+        @java.lang.Override
+        public int getThoughtLengthChars() {
+          return thoughtLengthChars_;
+        }
+
+        public static final int HAS_SIGNATURE_FIELD_NUMBER = 4;
+        private boolean hasSignature_ = false;
+        /**
+         * <pre>
+         * Whether the thought signature was present (not null) in this chunk.
+         * </pre>
+         *
+         * <code>optional bool has_signature = 4;</code>
+         * @return Whether the hasSignature field is set.
+         */
+        @java.lang.Override
+        public boolean hasHasSignature() {
+          return ((bitField0_ & 0x00000008) != 0);
+        }
+        /**
+         * <pre>
+         * Whether the thought signature was present (not null) in this chunk.
+         * </pre>
+         *
+         * <code>optional bool has_signature = 4;</code>
+         * @return The hasSignature.
+         */
+        @java.lang.Override
+        public boolean getHasSignature() {
+          return hasSignature_;
+        }
+
+        private byte memoizedIsInitialized = -1;
+        @java.lang.Override
+        public final boolean isInitialized() {
+          byte isInitialized = memoizedIsInitialized;
+          if (isInitialized == 1) return true;
+          if (isInitialized == 0) return false;
+
+          memoizedIsInitialized = 1;
+          return true;
+        }
+
+        @java.lang.Override
+        public void writeTo(com.google.protobuf.CodedOutputStream output)
+                            throws java.io.IOException {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            output.writeInt64(1, timestampMs_);
+          }
+          if (((bitField0_ & 0x00000002) != 0)) {
+            output.writeInt32(2, textLengthChars_);
+          }
+          if (((bitField0_ & 0x00000004) != 0)) {
+            output.writeInt32(3, thoughtLengthChars_);
+          }
+          if (((bitField0_ & 0x00000008) != 0)) {
+            output.writeBool(4, hasSignature_);
+          }
+          getUnknownFields().writeTo(output);
+        }
+
+        @java.lang.Override
+        public int getSerializedSize() {
+          int size = memoizedSize;
+          if (size != -1) return size;
+
+          size = 0;
+          if (((bitField0_ & 0x00000001) != 0)) {
+            size += com.google.protobuf.CodedOutputStream
+              .computeInt64Size(1, timestampMs_);
+          }
+          if (((bitField0_ & 0x00000002) != 0)) {
+            size += com.google.protobuf.CodedOutputStream
+              .computeInt32Size(2, textLengthChars_);
+          }
+          if (((bitField0_ & 0x00000004) != 0)) {
+            size += com.google.protobuf.CodedOutputStream
+              .computeInt32Size(3, thoughtLengthChars_);
+          }
+          if (((bitField0_ & 0x00000008) != 0)) {
+            size += com.google.protobuf.CodedOutputStream
+              .computeBoolSize(4, hasSignature_);
+          }
+          size += getUnknownFields().getSerializedSize();
+          memoizedSize = size;
+          return size;
+        }
+
+        @java.lang.Override
+        public boolean equals(final java.lang.Object obj) {
+          if (obj == this) {
+           return true;
+          }
+          if (!(obj instanceof com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.ServerEvent.ResponseEvent.ResponseChunk)) {
+            return super.equals(obj);
+          }
+          com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.ServerEvent.ResponseEvent.ResponseChunk other = (com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.ServerEvent.ResponseEvent.ResponseChunk) obj;
+
+          if (hasTimestampMs() != other.hasTimestampMs()) return false;
+          if (hasTimestampMs()) {
+            if (getTimestampMs()
+                != other.getTimestampMs()) return false;
+          }
+          if (hasTextLengthChars() != other.hasTextLengthChars()) return false;
+          if (hasTextLengthChars()) {
+            if (getTextLengthChars()
+                != other.getTextLengthChars()) return false;
+          }
+          if (hasThoughtLengthChars() != other.hasThoughtLengthChars()) return false;
+          if (hasThoughtLengthChars()) {
+            if (getThoughtLengthChars()
+                != other.getThoughtLengthChars()) return false;
+          }
+          if (hasHasSignature() != other.hasHasSignature()) return false;
+          if (hasHasSignature()) {
+            if (getHasSignature()
+                != other.getHasSignature()) return false;
+          }
+          if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+          return true;
+        }
+
+        @java.lang.Override
+        public int hashCode() {
+          if (memoizedHashCode != 0) {
+            return memoizedHashCode;
+          }
+          int hash = 41;
+          hash = (19 * hash) + getDescriptor().hashCode();
+          if (hasTimestampMs()) {
+            hash = (37 * hash) + TIMESTAMP_MS_FIELD_NUMBER;
+            hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+                getTimestampMs());
+          }
+          if (hasTextLengthChars()) {
+            hash = (37 * hash) + TEXT_LENGTH_CHARS_FIELD_NUMBER;
+            hash = (53 * hash) + getTextLengthChars();
+          }
+          if (hasThoughtLengthChars()) {
+            hash = (37 * hash) + THOUGHT_LENGTH_CHARS_FIELD_NUMBER;
+            hash = (53 * hash) + getThoughtLengthChars();
+          }
+          if (hasHasSignature()) {
+            hash = (37 * hash) + HAS_SIGNATURE_FIELD_NUMBER;
+            hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+                getHasSignature());
+          }
+          hash = (29 * hash) + getUnknownFields().hashCode();
+          memoizedHashCode = hash;
+          return hash;
+        }
+
+        public static com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.ServerEvent.ResponseEvent.ResponseChunk parseFrom(
+            java.nio.ByteBuffer data)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return PARSER.parseFrom(data);
+        }
+        public static com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.ServerEvent.ResponseEvent.ResponseChunk parseFrom(
+            java.nio.ByteBuffer data,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return PARSER.parseFrom(data, extensionRegistry);
+        }
+        public static com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.ServerEvent.ResponseEvent.ResponseChunk parseFrom(
+            com.google.protobuf.ByteString data)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return PARSER.parseFrom(data);
+        }
+        public static com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.ServerEvent.ResponseEvent.ResponseChunk parseFrom(
+            com.google.protobuf.ByteString data,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return PARSER.parseFrom(data, extensionRegistry);
+        }
+        public static com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.ServerEvent.ResponseEvent.ResponseChunk parseFrom(byte[] data)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return PARSER.parseFrom(data);
+        }
+        public static com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.ServerEvent.ResponseEvent.ResponseChunk parseFrom(
+            byte[] data,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return PARSER.parseFrom(data, extensionRegistry);
+        }
+        public static com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.ServerEvent.ResponseEvent.ResponseChunk parseFrom(java.io.InputStream input)
+            throws java.io.IOException {
+          return com.google.protobuf.GeneratedMessageV3
+              .parseWithIOException(PARSER, input);
+        }
+        public static com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.ServerEvent.ResponseEvent.ResponseChunk parseFrom(
+            java.io.InputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          return com.google.protobuf.GeneratedMessageV3
+              .parseWithIOException(PARSER, input, extensionRegistry);
+        }
+        public static com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.ServerEvent.ResponseEvent.ResponseChunk parseDelimitedFrom(java.io.InputStream input)
+            throws java.io.IOException {
+          return com.google.protobuf.GeneratedMessageV3
+              .parseDelimitedWithIOException(PARSER, input);
+        }
+        public static com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.ServerEvent.ResponseEvent.ResponseChunk parseDelimitedFrom(
+            java.io.InputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          return com.google.protobuf.GeneratedMessageV3
+              .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+        }
+        public static com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.ServerEvent.ResponseEvent.ResponseChunk parseFrom(
+            com.google.protobuf.CodedInputStream input)
+            throws java.io.IOException {
+          return com.google.protobuf.GeneratedMessageV3
+              .parseWithIOException(PARSER, input);
+        }
+        public static com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.ServerEvent.ResponseEvent.ResponseChunk parseFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          return com.google.protobuf.GeneratedMessageV3
+              .parseWithIOException(PARSER, input, extensionRegistry);
+        }
+
+        @java.lang.Override
+        public Builder newBuilderForType() { return newBuilder(); }
+        public static Builder newBuilder() {
+          return DEFAULT_INSTANCE.toBuilder();
+        }
+        public static Builder newBuilder(com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.ServerEvent.ResponseEvent.ResponseChunk prototype) {
+          return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+        }
+        @java.lang.Override
+        public Builder toBuilder() {
+          return this == DEFAULT_INSTANCE
+              ? new Builder() : new Builder().mergeFrom(this);
+        }
+
+        @java.lang.Override
+        protected Builder newBuilderForType(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          Builder builder = new Builder(parent);
+          return builder;
+        }
+        /**
+         * <pre>
+         * Represents the character lengths and timing of a single streamed chunk.
+         * </pre>
+         *
+         * Protobuf type {@code android_studio.GeminiTelemetryEvent.ServerEvent.ResponseEvent.ResponseChunk}
+         */
+        public static final class Builder extends
+            com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+            // @@protoc_insertion_point(builder_implements:android_studio.GeminiTelemetryEvent.ServerEvent.ResponseEvent.ResponseChunk)
+            com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.ServerEvent.ResponseEvent.ResponseChunkOrBuilder {
+          public static final com.google.protobuf.Descriptors.Descriptor
+              getDescriptor() {
+            return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_GeminiTelemetryEvent_ServerEvent_ResponseEvent_ResponseChunk_descriptor;
+          }
+
+          @java.lang.Override
+          protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+              internalGetFieldAccessorTable() {
+            return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_GeminiTelemetryEvent_ServerEvent_ResponseEvent_ResponseChunk_fieldAccessorTable
+                .ensureFieldAccessorsInitialized(
+                    com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.ServerEvent.ResponseEvent.ResponseChunk.class, com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.ServerEvent.ResponseEvent.ResponseChunk.Builder.class);
+          }
+
+          // Construct using com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.ServerEvent.ResponseEvent.ResponseChunk.newBuilder()
+          private Builder() {
+
+          }
+
+          private Builder(
+              com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+            super(parent);
+
+          }
+          @java.lang.Override
+          public Builder clear() {
+            super.clear();
+            bitField0_ = 0;
+            timestampMs_ = 0L;
+            textLengthChars_ = 0;
+            thoughtLengthChars_ = 0;
+            hasSignature_ = false;
+            return this;
+          }
+
+          @java.lang.Override
+          public com.google.protobuf.Descriptors.Descriptor
+              getDescriptorForType() {
+            return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_GeminiTelemetryEvent_ServerEvent_ResponseEvent_ResponseChunk_descriptor;
+          }
+
+          @java.lang.Override
+          public com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.ServerEvent.ResponseEvent.ResponseChunk getDefaultInstanceForType() {
+            return com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.ServerEvent.ResponseEvent.ResponseChunk.getDefaultInstance();
+          }
+
+          @java.lang.Override
+          public com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.ServerEvent.ResponseEvent.ResponseChunk build() {
+            com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.ServerEvent.ResponseEvent.ResponseChunk result = buildPartial();
+            if (!result.isInitialized()) {
+              throw newUninitializedMessageException(result);
+            }
+            return result;
+          }
+
+          @java.lang.Override
+          public com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.ServerEvent.ResponseEvent.ResponseChunk buildPartial() {
+            com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.ServerEvent.ResponseEvent.ResponseChunk result = new com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.ServerEvent.ResponseEvent.ResponseChunk(this);
+            if (bitField0_ != 0) { buildPartial0(result); }
+            onBuilt();
+            return result;
+          }
+
+          private void buildPartial0(com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.ServerEvent.ResponseEvent.ResponseChunk result) {
+            int from_bitField0_ = bitField0_;
+            int to_bitField0_ = 0;
+            if (((from_bitField0_ & 0x00000001) != 0)) {
+              result.timestampMs_ = timestampMs_;
+              to_bitField0_ |= 0x00000001;
+            }
+            if (((from_bitField0_ & 0x00000002) != 0)) {
+              result.textLengthChars_ = textLengthChars_;
+              to_bitField0_ |= 0x00000002;
+            }
+            if (((from_bitField0_ & 0x00000004) != 0)) {
+              result.thoughtLengthChars_ = thoughtLengthChars_;
+              to_bitField0_ |= 0x00000004;
+            }
+            if (((from_bitField0_ & 0x00000008) != 0)) {
+              result.hasSignature_ = hasSignature_;
+              to_bitField0_ |= 0x00000008;
+            }
+            result.bitField0_ |= to_bitField0_;
+          }
+
+          @java.lang.Override
+          public Builder mergeFrom(com.google.protobuf.Message other) {
+            if (other instanceof com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.ServerEvent.ResponseEvent.ResponseChunk) {
+              return mergeFrom((com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.ServerEvent.ResponseEvent.ResponseChunk)other);
+            } else {
+              super.mergeFrom(other);
+              return this;
+            }
+          }
+
+          public Builder mergeFrom(com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.ServerEvent.ResponseEvent.ResponseChunk other) {
+            if (other == com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.ServerEvent.ResponseEvent.ResponseChunk.getDefaultInstance()) return this;
+            if (other.hasTimestampMs()) {
+              setTimestampMs(other.getTimestampMs());
+            }
+            if (other.hasTextLengthChars()) {
+              setTextLengthChars(other.getTextLengthChars());
+            }
+            if (other.hasThoughtLengthChars()) {
+              setThoughtLengthChars(other.getThoughtLengthChars());
+            }
+            if (other.hasHasSignature()) {
+              setHasSignature(other.getHasSignature());
+            }
+            this.mergeUnknownFields(other.getUnknownFields());
+            onChanged();
+            return this;
+          }
+
+          @java.lang.Override
+          public final boolean isInitialized() {
+            return true;
+          }
+
+          @java.lang.Override
+          public Builder mergeFrom(
+              com.google.protobuf.CodedInputStream input,
+              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+              throws java.io.IOException {
+            if (extensionRegistry == null) {
+              throw new java.lang.NullPointerException();
+            }
+            try {
+              boolean done = false;
+              while (!done) {
+                int tag = input.readTag();
+                switch (tag) {
+                  case 0:
+                    done = true;
+                    break;
+                  case 8: {
+                    timestampMs_ = input.readInt64();
+                    bitField0_ |= 0x00000001;
+                    break;
+                  } // case 8
+                  case 16: {
+                    textLengthChars_ = input.readInt32();
+                    bitField0_ |= 0x00000002;
+                    break;
+                  } // case 16
+                  case 24: {
+                    thoughtLengthChars_ = input.readInt32();
+                    bitField0_ |= 0x00000004;
+                    break;
+                  } // case 24
+                  case 32: {
+                    hasSignature_ = input.readBool();
+                    bitField0_ |= 0x00000008;
+                    break;
+                  } // case 32
+                  default: {
+                    if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                      done = true; // was an endgroup tag
+                    }
+                    break;
+                  } // default:
+                } // switch (tag)
+              } // while (!done)
+            } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+              throw e.unwrapIOException();
+            } finally {
+              onChanged();
+            } // finally
+            return this;
+          }
+          private int bitField0_;
+
+          private long timestampMs_ ;
+          /**
+           * <pre>
+           * Timestamp of when this chunk was received in milliseconds since
+           * epoch.
+           * </pre>
+           *
+           * <code>optional int64 timestamp_ms = 1;</code>
+           * @return Whether the timestampMs field is set.
+           */
+          @java.lang.Override
+          public boolean hasTimestampMs() {
+            return ((bitField0_ & 0x00000001) != 0);
+          }
+          /**
+           * <pre>
+           * Timestamp of when this chunk was received in milliseconds since
+           * epoch.
+           * </pre>
+           *
+           * <code>optional int64 timestamp_ms = 1;</code>
+           * @return The timestampMs.
+           */
+          @java.lang.Override
+          public long getTimestampMs() {
+            return timestampMs_;
+          }
+          /**
+           * <pre>
+           * Timestamp of when this chunk was received in milliseconds since
+           * epoch.
+           * </pre>
+           *
+           * <code>optional int64 timestamp_ms = 1;</code>
+           * @param value The timestampMs to set.
+           * @return This builder for chaining.
+           */
+          public Builder setTimestampMs(long value) {
+
+            timestampMs_ = value;
+            bitField0_ |= 0x00000001;
+            onChanged();
+            return this;
+          }
+          /**
+           * <pre>
+           * Timestamp of when this chunk was received in milliseconds since
+           * epoch.
+           * </pre>
+           *
+           * <code>optional int64 timestamp_ms = 1;</code>
+           * @return This builder for chaining.
+           */
+          public Builder clearTimestampMs() {
+            bitField0_ = (bitField0_ & ~0x00000001);
+            timestampMs_ = 0L;
+            onChanged();
+            return this;
+          }
+
+          private int textLengthChars_ ;
+          /**
+           * <pre>
+           * The character length of the generated response text in this chunk.
+           * </pre>
+           *
+           * <code>optional int32 text_length_chars = 2;</code>
+           * @return Whether the textLengthChars field is set.
+           */
+          @java.lang.Override
+          public boolean hasTextLengthChars() {
+            return ((bitField0_ & 0x00000002) != 0);
+          }
+          /**
+           * <pre>
+           * The character length of the generated response text in this chunk.
+           * </pre>
+           *
+           * <code>optional int32 text_length_chars = 2;</code>
+           * @return The textLengthChars.
+           */
+          @java.lang.Override
+          public int getTextLengthChars() {
+            return textLengthChars_;
+          }
+          /**
+           * <pre>
+           * The character length of the generated response text in this chunk.
+           * </pre>
+           *
+           * <code>optional int32 text_length_chars = 2;</code>
+           * @param value The textLengthChars to set.
+           * @return This builder for chaining.
+           */
+          public Builder setTextLengthChars(int value) {
+
+            textLengthChars_ = value;
+            bitField0_ |= 0x00000002;
+            onChanged();
+            return this;
+          }
+          /**
+           * <pre>
+           * The character length of the generated response text in this chunk.
+           * </pre>
+           *
+           * <code>optional int32 text_length_chars = 2;</code>
+           * @return This builder for chaining.
+           */
+          public Builder clearTextLengthChars() {
+            bitField0_ = (bitField0_ & ~0x00000002);
+            textLengthChars_ = 0;
+            onChanged();
+            return this;
+          }
+
+          private int thoughtLengthChars_ ;
+          /**
+           * <pre>
+           * The character length of the generated thought/reasoning in this
+           * chunk.
+           * </pre>
+           *
+           * <code>optional int32 thought_length_chars = 3;</code>
+           * @return Whether the thoughtLengthChars field is set.
+           */
+          @java.lang.Override
+          public boolean hasThoughtLengthChars() {
+            return ((bitField0_ & 0x00000004) != 0);
+          }
+          /**
+           * <pre>
+           * The character length of the generated thought/reasoning in this
+           * chunk.
+           * </pre>
+           *
+           * <code>optional int32 thought_length_chars = 3;</code>
+           * @return The thoughtLengthChars.
+           */
+          @java.lang.Override
+          public int getThoughtLengthChars() {
+            return thoughtLengthChars_;
+          }
+          /**
+           * <pre>
+           * The character length of the generated thought/reasoning in this
+           * chunk.
+           * </pre>
+           *
+           * <code>optional int32 thought_length_chars = 3;</code>
+           * @param value The thoughtLengthChars to set.
+           * @return This builder for chaining.
+           */
+          public Builder setThoughtLengthChars(int value) {
+
+            thoughtLengthChars_ = value;
+            bitField0_ |= 0x00000004;
+            onChanged();
+            return this;
+          }
+          /**
+           * <pre>
+           * The character length of the generated thought/reasoning in this
+           * chunk.
+           * </pre>
+           *
+           * <code>optional int32 thought_length_chars = 3;</code>
+           * @return This builder for chaining.
+           */
+          public Builder clearThoughtLengthChars() {
+            bitField0_ = (bitField0_ & ~0x00000004);
+            thoughtLengthChars_ = 0;
+            onChanged();
+            return this;
+          }
+
+          private boolean hasSignature_ ;
+          /**
+           * <pre>
+           * Whether the thought signature was present (not null) in this chunk.
+           * </pre>
+           *
+           * <code>optional bool has_signature = 4;</code>
+           * @return Whether the hasSignature field is set.
+           */
+          @java.lang.Override
+          public boolean hasHasSignature() {
+            return ((bitField0_ & 0x00000008) != 0);
+          }
+          /**
+           * <pre>
+           * Whether the thought signature was present (not null) in this chunk.
+           * </pre>
+           *
+           * <code>optional bool has_signature = 4;</code>
+           * @return The hasSignature.
+           */
+          @java.lang.Override
+          public boolean getHasSignature() {
+            return hasSignature_;
+          }
+          /**
+           * <pre>
+           * Whether the thought signature was present (not null) in this chunk.
+           * </pre>
+           *
+           * <code>optional bool has_signature = 4;</code>
+           * @param value The hasSignature to set.
+           * @return This builder for chaining.
+           */
+          public Builder setHasSignature(boolean value) {
+
+            hasSignature_ = value;
+            bitField0_ |= 0x00000008;
+            onChanged();
+            return this;
+          }
+          /**
+           * <pre>
+           * Whether the thought signature was present (not null) in this chunk.
+           * </pre>
+           *
+           * <code>optional bool has_signature = 4;</code>
+           * @return This builder for chaining.
+           */
+          public Builder clearHasSignature() {
+            bitField0_ = (bitField0_ & ~0x00000008);
+            hasSignature_ = false;
+            onChanged();
+            return this;
+          }
+          @java.lang.Override
+          public final Builder setUnknownFields(
+              final com.google.protobuf.UnknownFieldSet unknownFields) {
+            return super.setUnknownFields(unknownFields);
+          }
+
+          @java.lang.Override
+          public final Builder mergeUnknownFields(
+              final com.google.protobuf.UnknownFieldSet unknownFields) {
+            return super.mergeUnknownFields(unknownFields);
+          }
+
+
+          // @@protoc_insertion_point(builder_scope:android_studio.GeminiTelemetryEvent.ServerEvent.ResponseEvent.ResponseChunk)
+        }
+
+        // @@protoc_insertion_point(class_scope:android_studio.GeminiTelemetryEvent.ServerEvent.ResponseEvent.ResponseChunk)
+        private static final com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.ServerEvent.ResponseEvent.ResponseChunk DEFAULT_INSTANCE;
+        static {
+          DEFAULT_INSTANCE = new com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.ServerEvent.ResponseEvent.ResponseChunk();
+        }
+
+        public static com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.ServerEvent.ResponseEvent.ResponseChunk getDefaultInstance() {
+          return DEFAULT_INSTANCE;
+        }
+
+        @java.lang.Deprecated public static final com.google.protobuf.Parser<ResponseChunk>
+            PARSER = new com.google.protobuf.AbstractParser<ResponseChunk>() {
+          @java.lang.Override
+          public ResponseChunk parsePartialFrom(
+              com.google.protobuf.CodedInputStream input,
+              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+              throws com.google.protobuf.InvalidProtocolBufferException {
+            Builder builder = newBuilder();
+            try {
+              builder.mergeFrom(input, extensionRegistry);
+            } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+              throw e.setUnfinishedMessage(builder.buildPartial());
+            } catch (com.google.protobuf.UninitializedMessageException e) {
+              throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+            } catch (java.io.IOException e) {
+              throw new com.google.protobuf.InvalidProtocolBufferException(e)
+                  .setUnfinishedMessage(builder.buildPartial());
+            }
+            return builder.buildPartial();
+          }
+        };
+
+        public static com.google.protobuf.Parser<ResponseChunk> parser() {
+          return PARSER;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Parser<ResponseChunk> getParserForType() {
+          return PARSER;
+        }
+
+        @java.lang.Override
+        public com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.ServerEvent.ResponseEvent.ResponseChunk getDefaultInstanceForType() {
+          return DEFAULT_INSTANCE;
+        }
+
+      }
+
       private int bitField0_;
       public static final int HTTP_STATUS_CODE_FIELD_NUMBER = 1;
       private int httpStatusCode_ = 0;
@@ -4217,6 +5185,67 @@ private static final long serialVersionUID = 0L;
         return result == null ? com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.ServerEvent.ResponseEvent.ModelApiStatus.MODEL_API_STATUS_UNSPECIFIED : result;
       }
 
+      public static final int RESPONSE_CHUNKS_FIELD_NUMBER = 11;
+      @SuppressWarnings("serial")
+      private java.util.List<com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.ServerEvent.ResponseEvent.ResponseChunk> responseChunks_;
+      /**
+       * <pre>
+       * Ordered list of streamed chunks as they were received.
+       * </pre>
+       *
+       * <code>repeated .android_studio.GeminiTelemetryEvent.ServerEvent.ResponseEvent.ResponseChunk response_chunks = 11;</code>
+       */
+      @java.lang.Override
+      public java.util.List<com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.ServerEvent.ResponseEvent.ResponseChunk> getResponseChunksList() {
+        return responseChunks_;
+      }
+      /**
+       * <pre>
+       * Ordered list of streamed chunks as they were received.
+       * </pre>
+       *
+       * <code>repeated .android_studio.GeminiTelemetryEvent.ServerEvent.ResponseEvent.ResponseChunk response_chunks = 11;</code>
+       */
+      @java.lang.Override
+      public java.util.List<? extends com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.ServerEvent.ResponseEvent.ResponseChunkOrBuilder> 
+          getResponseChunksOrBuilderList() {
+        return responseChunks_;
+      }
+      /**
+       * <pre>
+       * Ordered list of streamed chunks as they were received.
+       * </pre>
+       *
+       * <code>repeated .android_studio.GeminiTelemetryEvent.ServerEvent.ResponseEvent.ResponseChunk response_chunks = 11;</code>
+       */
+      @java.lang.Override
+      public int getResponseChunksCount() {
+        return responseChunks_.size();
+      }
+      /**
+       * <pre>
+       * Ordered list of streamed chunks as they were received.
+       * </pre>
+       *
+       * <code>repeated .android_studio.GeminiTelemetryEvent.ServerEvent.ResponseEvent.ResponseChunk response_chunks = 11;</code>
+       */
+      @java.lang.Override
+      public com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.ServerEvent.ResponseEvent.ResponseChunk getResponseChunks(int index) {
+        return responseChunks_.get(index);
+      }
+      /**
+       * <pre>
+       * Ordered list of streamed chunks as they were received.
+       * </pre>
+       *
+       * <code>repeated .android_studio.GeminiTelemetryEvent.ServerEvent.ResponseEvent.ResponseChunk response_chunks = 11;</code>
+       */
+      @java.lang.Override
+      public com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.ServerEvent.ResponseEvent.ResponseChunkOrBuilder getResponseChunksOrBuilder(
+          int index) {
+        return responseChunks_.get(index);
+      }
+
       private byte memoizedIsInitialized = -1;
       @java.lang.Override
       public final boolean isInitialized() {
@@ -4260,6 +5289,9 @@ private static final long serialVersionUID = 0L;
         }
         if (((bitField0_ & 0x00000200) != 0)) {
           output.writeEnum(10, status_);
+        }
+        for (int i = 0; i < responseChunks_.size(); i++) {
+          output.writeMessage(11, responseChunks_.get(i));
         }
         getUnknownFields().writeTo(output);
       }
@@ -4308,6 +5340,10 @@ private static final long serialVersionUID = 0L;
         if (((bitField0_ & 0x00000200) != 0)) {
           size += com.google.protobuf.CodedOutputStream
             .computeEnumSize(10, status_);
+        }
+        for (int i = 0; i < responseChunks_.size(); i++) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(11, responseChunks_.get(i));
         }
         size += getUnknownFields().getSerializedSize();
         memoizedSize = size;
@@ -4372,6 +5408,8 @@ private static final long serialVersionUID = 0L;
         if (hasStatus()) {
           if (status_ != other.status_) return false;
         }
+        if (!getResponseChunksList()
+            .equals(other.getResponseChunksList())) return false;
         if (!getUnknownFields().equals(other.getUnknownFields())) return false;
         return true;
       }
@@ -4425,6 +5463,10 @@ private static final long serialVersionUID = 0L;
         if (hasStatus()) {
           hash = (37 * hash) + STATUS_FIELD_NUMBER;
           hash = (53 * hash) + status_;
+        }
+        if (getResponseChunksCount() > 0) {
+          hash = (37 * hash) + RESPONSE_CHUNKS_FIELD_NUMBER;
+          hash = (53 * hash) + getResponseChunksList().hashCode();
         }
         hash = (29 * hash) + getUnknownFields().hashCode();
         memoizedHashCode = hash;
@@ -4569,6 +5611,13 @@ private static final long serialVersionUID = 0L;
           actualModelId_ = "";
           finishReason_ = 0;
           status_ = 0;
+          if (responseChunksBuilder_ == null) {
+            responseChunks_ = java.util.Collections.emptyList();
+          } else {
+            responseChunks_ = null;
+            responseChunksBuilder_.clear();
+          }
+          bitField0_ = (bitField0_ & ~0x00000400);
           return this;
         }
 
@@ -4595,9 +5644,22 @@ private static final long serialVersionUID = 0L;
         @java.lang.Override
         public com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.ServerEvent.ResponseEvent buildPartial() {
           com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.ServerEvent.ResponseEvent result = new com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.ServerEvent.ResponseEvent(this);
+          buildPartialRepeatedFields(result);
           if (bitField0_ != 0) { buildPartial0(result); }
           onBuilt();
           return result;
+        }
+
+        private void buildPartialRepeatedFields(com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.ServerEvent.ResponseEvent result) {
+          if (responseChunksBuilder_ == null) {
+            if (((bitField0_ & 0x00000400) != 0)) {
+              responseChunks_ = java.util.Collections.unmodifiableList(responseChunks_);
+              bitField0_ = (bitField0_ & ~0x00000400);
+            }
+            result.responseChunks_ = responseChunks_;
+          } else {
+            result.responseChunks_ = responseChunksBuilder_.build();
+          }
         }
 
         private void buildPartial0(com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.ServerEvent.ResponseEvent result) {
@@ -4690,6 +5752,32 @@ private static final long serialVersionUID = 0L;
           if (other.hasStatus()) {
             setStatus(other.getStatus());
           }
+          if (responseChunksBuilder_ == null) {
+            if (!other.responseChunks_.isEmpty()) {
+              if (responseChunks_.isEmpty()) {
+                responseChunks_ = other.responseChunks_;
+                bitField0_ = (bitField0_ & ~0x00000400);
+              } else {
+                ensureResponseChunksIsMutable();
+                responseChunks_.addAll(other.responseChunks_);
+              }
+              onChanged();
+            }
+          } else {
+            if (!other.responseChunks_.isEmpty()) {
+              if (responseChunksBuilder_.isEmpty()) {
+                responseChunksBuilder_.dispose();
+                responseChunksBuilder_ = null;
+                responseChunks_ = other.responseChunks_;
+                bitField0_ = (bitField0_ & ~0x00000400);
+                responseChunksBuilder_ = 
+                  com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                     getResponseChunksFieldBuilder() : null;
+              } else {
+                responseChunksBuilder_.addAllMessages(other.responseChunks_);
+              }
+            }
+          }
           this.mergeUnknownFields(other.getUnknownFields());
           onChanged();
           return this;
@@ -4780,6 +5868,19 @@ private static final long serialVersionUID = 0L;
                   }
                   break;
                 } // case 80
+                case 90: {
+                  com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.ServerEvent.ResponseEvent.ResponseChunk m =
+                      input.readMessage(
+                          com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.ServerEvent.ResponseEvent.ResponseChunk.PARSER,
+                          extensionRegistry);
+                  if (responseChunksBuilder_ == null) {
+                    ensureResponseChunksIsMutable();
+                    responseChunks_.add(m);
+                  } else {
+                    responseChunksBuilder_.addMessage(m);
+                  }
+                  break;
+                } // case 90
                 default: {
                   if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                     done = true; // was an endgroup tag
@@ -5409,6 +6510,318 @@ private static final long serialVersionUID = 0L;
           status_ = 0;
           onChanged();
           return this;
+        }
+
+        private java.util.List<com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.ServerEvent.ResponseEvent.ResponseChunk> responseChunks_ =
+          java.util.Collections.emptyList();
+        private void ensureResponseChunksIsMutable() {
+          if (!((bitField0_ & 0x00000400) != 0)) {
+            responseChunks_ = new java.util.ArrayList<com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.ServerEvent.ResponseEvent.ResponseChunk>(responseChunks_);
+            bitField0_ |= 0x00000400;
+           }
+        }
+
+        private com.google.protobuf.RepeatedFieldBuilderV3<
+            com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.ServerEvent.ResponseEvent.ResponseChunk, com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.ServerEvent.ResponseEvent.ResponseChunk.Builder, com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.ServerEvent.ResponseEvent.ResponseChunkOrBuilder> responseChunksBuilder_;
+
+        /**
+         * <pre>
+         * Ordered list of streamed chunks as they were received.
+         * </pre>
+         *
+         * <code>repeated .android_studio.GeminiTelemetryEvent.ServerEvent.ResponseEvent.ResponseChunk response_chunks = 11;</code>
+         */
+        public java.util.List<com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.ServerEvent.ResponseEvent.ResponseChunk> getResponseChunksList() {
+          if (responseChunksBuilder_ == null) {
+            return java.util.Collections.unmodifiableList(responseChunks_);
+          } else {
+            return responseChunksBuilder_.getMessageList();
+          }
+        }
+        /**
+         * <pre>
+         * Ordered list of streamed chunks as they were received.
+         * </pre>
+         *
+         * <code>repeated .android_studio.GeminiTelemetryEvent.ServerEvent.ResponseEvent.ResponseChunk response_chunks = 11;</code>
+         */
+        public int getResponseChunksCount() {
+          if (responseChunksBuilder_ == null) {
+            return responseChunks_.size();
+          } else {
+            return responseChunksBuilder_.getCount();
+          }
+        }
+        /**
+         * <pre>
+         * Ordered list of streamed chunks as they were received.
+         * </pre>
+         *
+         * <code>repeated .android_studio.GeminiTelemetryEvent.ServerEvent.ResponseEvent.ResponseChunk response_chunks = 11;</code>
+         */
+        public com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.ServerEvent.ResponseEvent.ResponseChunk getResponseChunks(int index) {
+          if (responseChunksBuilder_ == null) {
+            return responseChunks_.get(index);
+          } else {
+            return responseChunksBuilder_.getMessage(index);
+          }
+        }
+        /**
+         * <pre>
+         * Ordered list of streamed chunks as they were received.
+         * </pre>
+         *
+         * <code>repeated .android_studio.GeminiTelemetryEvent.ServerEvent.ResponseEvent.ResponseChunk response_chunks = 11;</code>
+         */
+        public Builder setResponseChunks(
+            int index, com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.ServerEvent.ResponseEvent.ResponseChunk value) {
+          if (responseChunksBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            ensureResponseChunksIsMutable();
+            responseChunks_.set(index, value);
+            onChanged();
+          } else {
+            responseChunksBuilder_.setMessage(index, value);
+          }
+          return this;
+        }
+        /**
+         * <pre>
+         * Ordered list of streamed chunks as they were received.
+         * </pre>
+         *
+         * <code>repeated .android_studio.GeminiTelemetryEvent.ServerEvent.ResponseEvent.ResponseChunk response_chunks = 11;</code>
+         */
+        public Builder setResponseChunks(
+            int index, com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.ServerEvent.ResponseEvent.ResponseChunk.Builder builderForValue) {
+          if (responseChunksBuilder_ == null) {
+            ensureResponseChunksIsMutable();
+            responseChunks_.set(index, builderForValue.build());
+            onChanged();
+          } else {
+            responseChunksBuilder_.setMessage(index, builderForValue.build());
+          }
+          return this;
+        }
+        /**
+         * <pre>
+         * Ordered list of streamed chunks as they were received.
+         * </pre>
+         *
+         * <code>repeated .android_studio.GeminiTelemetryEvent.ServerEvent.ResponseEvent.ResponseChunk response_chunks = 11;</code>
+         */
+        public Builder addResponseChunks(com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.ServerEvent.ResponseEvent.ResponseChunk value) {
+          if (responseChunksBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            ensureResponseChunksIsMutable();
+            responseChunks_.add(value);
+            onChanged();
+          } else {
+            responseChunksBuilder_.addMessage(value);
+          }
+          return this;
+        }
+        /**
+         * <pre>
+         * Ordered list of streamed chunks as they were received.
+         * </pre>
+         *
+         * <code>repeated .android_studio.GeminiTelemetryEvent.ServerEvent.ResponseEvent.ResponseChunk response_chunks = 11;</code>
+         */
+        public Builder addResponseChunks(
+            int index, com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.ServerEvent.ResponseEvent.ResponseChunk value) {
+          if (responseChunksBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            ensureResponseChunksIsMutable();
+            responseChunks_.add(index, value);
+            onChanged();
+          } else {
+            responseChunksBuilder_.addMessage(index, value);
+          }
+          return this;
+        }
+        /**
+         * <pre>
+         * Ordered list of streamed chunks as they were received.
+         * </pre>
+         *
+         * <code>repeated .android_studio.GeminiTelemetryEvent.ServerEvent.ResponseEvent.ResponseChunk response_chunks = 11;</code>
+         */
+        public Builder addResponseChunks(
+            com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.ServerEvent.ResponseEvent.ResponseChunk.Builder builderForValue) {
+          if (responseChunksBuilder_ == null) {
+            ensureResponseChunksIsMutable();
+            responseChunks_.add(builderForValue.build());
+            onChanged();
+          } else {
+            responseChunksBuilder_.addMessage(builderForValue.build());
+          }
+          return this;
+        }
+        /**
+         * <pre>
+         * Ordered list of streamed chunks as they were received.
+         * </pre>
+         *
+         * <code>repeated .android_studio.GeminiTelemetryEvent.ServerEvent.ResponseEvent.ResponseChunk response_chunks = 11;</code>
+         */
+        public Builder addResponseChunks(
+            int index, com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.ServerEvent.ResponseEvent.ResponseChunk.Builder builderForValue) {
+          if (responseChunksBuilder_ == null) {
+            ensureResponseChunksIsMutable();
+            responseChunks_.add(index, builderForValue.build());
+            onChanged();
+          } else {
+            responseChunksBuilder_.addMessage(index, builderForValue.build());
+          }
+          return this;
+        }
+        /**
+         * <pre>
+         * Ordered list of streamed chunks as they were received.
+         * </pre>
+         *
+         * <code>repeated .android_studio.GeminiTelemetryEvent.ServerEvent.ResponseEvent.ResponseChunk response_chunks = 11;</code>
+         */
+        public Builder addAllResponseChunks(
+            java.lang.Iterable<? extends com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.ServerEvent.ResponseEvent.ResponseChunk> values) {
+          if (responseChunksBuilder_ == null) {
+            ensureResponseChunksIsMutable();
+            com.google.protobuf.AbstractMessageLite.Builder.addAll(
+                values, responseChunks_);
+            onChanged();
+          } else {
+            responseChunksBuilder_.addAllMessages(values);
+          }
+          return this;
+        }
+        /**
+         * <pre>
+         * Ordered list of streamed chunks as they were received.
+         * </pre>
+         *
+         * <code>repeated .android_studio.GeminiTelemetryEvent.ServerEvent.ResponseEvent.ResponseChunk response_chunks = 11;</code>
+         */
+        public Builder clearResponseChunks() {
+          if (responseChunksBuilder_ == null) {
+            responseChunks_ = java.util.Collections.emptyList();
+            bitField0_ = (bitField0_ & ~0x00000400);
+            onChanged();
+          } else {
+            responseChunksBuilder_.clear();
+          }
+          return this;
+        }
+        /**
+         * <pre>
+         * Ordered list of streamed chunks as they were received.
+         * </pre>
+         *
+         * <code>repeated .android_studio.GeminiTelemetryEvent.ServerEvent.ResponseEvent.ResponseChunk response_chunks = 11;</code>
+         */
+        public Builder removeResponseChunks(int index) {
+          if (responseChunksBuilder_ == null) {
+            ensureResponseChunksIsMutable();
+            responseChunks_.remove(index);
+            onChanged();
+          } else {
+            responseChunksBuilder_.remove(index);
+          }
+          return this;
+        }
+        /**
+         * <pre>
+         * Ordered list of streamed chunks as they were received.
+         * </pre>
+         *
+         * <code>repeated .android_studio.GeminiTelemetryEvent.ServerEvent.ResponseEvent.ResponseChunk response_chunks = 11;</code>
+         */
+        public com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.ServerEvent.ResponseEvent.ResponseChunk.Builder getResponseChunksBuilder(
+            int index) {
+          return getResponseChunksFieldBuilder().getBuilder(index);
+        }
+        /**
+         * <pre>
+         * Ordered list of streamed chunks as they were received.
+         * </pre>
+         *
+         * <code>repeated .android_studio.GeminiTelemetryEvent.ServerEvent.ResponseEvent.ResponseChunk response_chunks = 11;</code>
+         */
+        public com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.ServerEvent.ResponseEvent.ResponseChunkOrBuilder getResponseChunksOrBuilder(
+            int index) {
+          if (responseChunksBuilder_ == null) {
+            return responseChunks_.get(index);  } else {
+            return responseChunksBuilder_.getMessageOrBuilder(index);
+          }
+        }
+        /**
+         * <pre>
+         * Ordered list of streamed chunks as they were received.
+         * </pre>
+         *
+         * <code>repeated .android_studio.GeminiTelemetryEvent.ServerEvent.ResponseEvent.ResponseChunk response_chunks = 11;</code>
+         */
+        public java.util.List<? extends com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.ServerEvent.ResponseEvent.ResponseChunkOrBuilder> 
+             getResponseChunksOrBuilderList() {
+          if (responseChunksBuilder_ != null) {
+            return responseChunksBuilder_.getMessageOrBuilderList();
+          } else {
+            return java.util.Collections.unmodifiableList(responseChunks_);
+          }
+        }
+        /**
+         * <pre>
+         * Ordered list of streamed chunks as they were received.
+         * </pre>
+         *
+         * <code>repeated .android_studio.GeminiTelemetryEvent.ServerEvent.ResponseEvent.ResponseChunk response_chunks = 11;</code>
+         */
+        public com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.ServerEvent.ResponseEvent.ResponseChunk.Builder addResponseChunksBuilder() {
+          return getResponseChunksFieldBuilder().addBuilder(
+              com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.ServerEvent.ResponseEvent.ResponseChunk.getDefaultInstance());
+        }
+        /**
+         * <pre>
+         * Ordered list of streamed chunks as they were received.
+         * </pre>
+         *
+         * <code>repeated .android_studio.GeminiTelemetryEvent.ServerEvent.ResponseEvent.ResponseChunk response_chunks = 11;</code>
+         */
+        public com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.ServerEvent.ResponseEvent.ResponseChunk.Builder addResponseChunksBuilder(
+            int index) {
+          return getResponseChunksFieldBuilder().addBuilder(
+              index, com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.ServerEvent.ResponseEvent.ResponseChunk.getDefaultInstance());
+        }
+        /**
+         * <pre>
+         * Ordered list of streamed chunks as they were received.
+         * </pre>
+         *
+         * <code>repeated .android_studio.GeminiTelemetryEvent.ServerEvent.ResponseEvent.ResponseChunk response_chunks = 11;</code>
+         */
+        public java.util.List<com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.ServerEvent.ResponseEvent.ResponseChunk.Builder> 
+             getResponseChunksBuilderList() {
+          return getResponseChunksFieldBuilder().getBuilderList();
+        }
+        private com.google.protobuf.RepeatedFieldBuilderV3<
+            com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.ServerEvent.ResponseEvent.ResponseChunk, com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.ServerEvent.ResponseEvent.ResponseChunk.Builder, com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.ServerEvent.ResponseEvent.ResponseChunkOrBuilder> 
+            getResponseChunksFieldBuilder() {
+          if (responseChunksBuilder_ == null) {
+            responseChunksBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+                com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.ServerEvent.ResponseEvent.ResponseChunk, com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.ServerEvent.ResponseEvent.ResponseChunk.Builder, com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.ServerEvent.ResponseEvent.ResponseChunkOrBuilder>(
+                    responseChunks_,
+                    ((bitField0_ & 0x00000400) != 0),
+                    getParentForChildren(),
+                    isClean());
+            responseChunks_ = null;
+          }
+          return responseChunksBuilder_;
         }
         @java.lang.Override
         public final Builder setUnknownFields(
@@ -19365,6 +20778,44 @@ private static final long serialVersionUID = 0L;
          * @return The skillName.
          */
         com.google.wireless.android.sdk.stats.SkillsEvent.SkillName getSkillName();
+
+        /**
+         * <pre>
+         * The number of lines requested to read in the tool call.
+         * </pre>
+         *
+         * <code>optional int32 requested_line_count = 3;</code>
+         * @return Whether the requestedLineCount field is set.
+         */
+        boolean hasRequestedLineCount();
+        /**
+         * <pre>
+         * The number of lines requested to read in the tool call.
+         * </pre>
+         *
+         * <code>optional int32 requested_line_count = 3;</code>
+         * @return The requestedLineCount.
+         */
+        int getRequestedLineCount();
+
+        /**
+         * <pre>
+         * The number of lines returned by the read tool.
+         * </pre>
+         *
+         * <code>optional int32 returned_line_count = 4;</code>
+         * @return Whether the returnedLineCount field is set.
+         */
+        boolean hasReturnedLineCount();
+        /**
+         * <pre>
+         * The number of lines returned by the read tool.
+         * </pre>
+         *
+         * <code>optional int32 returned_line_count = 4;</code>
+         * @return The returnedLineCount.
+         */
+        int getReturnedLineCount();
       }
       /**
        * Protobuf type {@code android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.ReadFileToolCallData}
@@ -19456,6 +20907,60 @@ private static final long serialVersionUID = 0L;
           return result == null ? com.google.wireless.android.sdk.stats.SkillsEvent.SkillName.UNKNOWN_SKILL_NAME : result;
         }
 
+        public static final int REQUESTED_LINE_COUNT_FIELD_NUMBER = 3;
+        private int requestedLineCount_ = 0;
+        /**
+         * <pre>
+         * The number of lines requested to read in the tool call.
+         * </pre>
+         *
+         * <code>optional int32 requested_line_count = 3;</code>
+         * @return Whether the requestedLineCount field is set.
+         */
+        @java.lang.Override
+        public boolean hasRequestedLineCount() {
+          return ((bitField0_ & 0x00000004) != 0);
+        }
+        /**
+         * <pre>
+         * The number of lines requested to read in the tool call.
+         * </pre>
+         *
+         * <code>optional int32 requested_line_count = 3;</code>
+         * @return The requestedLineCount.
+         */
+        @java.lang.Override
+        public int getRequestedLineCount() {
+          return requestedLineCount_;
+        }
+
+        public static final int RETURNED_LINE_COUNT_FIELD_NUMBER = 4;
+        private int returnedLineCount_ = 0;
+        /**
+         * <pre>
+         * The number of lines returned by the read tool.
+         * </pre>
+         *
+         * <code>optional int32 returned_line_count = 4;</code>
+         * @return Whether the returnedLineCount field is set.
+         */
+        @java.lang.Override
+        public boolean hasReturnedLineCount() {
+          return ((bitField0_ & 0x00000008) != 0);
+        }
+        /**
+         * <pre>
+         * The number of lines returned by the read tool.
+         * </pre>
+         *
+         * <code>optional int32 returned_line_count = 4;</code>
+         * @return The returnedLineCount.
+         */
+        @java.lang.Override
+        public int getReturnedLineCount() {
+          return returnedLineCount_;
+        }
+
         private byte memoizedIsInitialized = -1;
         @java.lang.Override
         public final boolean isInitialized() {
@@ -19476,6 +20981,12 @@ private static final long serialVersionUID = 0L;
           if (((bitField0_ & 0x00000002) != 0)) {
             output.writeEnum(2, skillName_);
           }
+          if (((bitField0_ & 0x00000004) != 0)) {
+            output.writeInt32(3, requestedLineCount_);
+          }
+          if (((bitField0_ & 0x00000008) != 0)) {
+            output.writeInt32(4, returnedLineCount_);
+          }
           getUnknownFields().writeTo(output);
         }
 
@@ -19492,6 +21003,14 @@ private static final long serialVersionUID = 0L;
           if (((bitField0_ & 0x00000002) != 0)) {
             size += com.google.protobuf.CodedOutputStream
               .computeEnumSize(2, skillName_);
+          }
+          if (((bitField0_ & 0x00000004) != 0)) {
+            size += com.google.protobuf.CodedOutputStream
+              .computeInt32Size(3, requestedLineCount_);
+          }
+          if (((bitField0_ & 0x00000008) != 0)) {
+            size += com.google.protobuf.CodedOutputStream
+              .computeInt32Size(4, returnedLineCount_);
           }
           size += getUnknownFields().getSerializedSize();
           memoizedSize = size;
@@ -19517,6 +21036,16 @@ private static final long serialVersionUID = 0L;
           if (hasSkillName()) {
             if (skillName_ != other.skillName_) return false;
           }
+          if (hasRequestedLineCount() != other.hasRequestedLineCount()) return false;
+          if (hasRequestedLineCount()) {
+            if (getRequestedLineCount()
+                != other.getRequestedLineCount()) return false;
+          }
+          if (hasReturnedLineCount() != other.hasReturnedLineCount()) return false;
+          if (hasReturnedLineCount()) {
+            if (getReturnedLineCount()
+                != other.getReturnedLineCount()) return false;
+          }
           if (!getUnknownFields().equals(other.getUnknownFields())) return false;
           return true;
         }
@@ -19536,6 +21065,14 @@ private static final long serialVersionUID = 0L;
           if (hasSkillName()) {
             hash = (37 * hash) + SKILL_NAME_FIELD_NUMBER;
             hash = (53 * hash) + skillName_;
+          }
+          if (hasRequestedLineCount()) {
+            hash = (37 * hash) + REQUESTED_LINE_COUNT_FIELD_NUMBER;
+            hash = (53 * hash) + getRequestedLineCount();
+          }
+          if (hasReturnedLineCount()) {
+            hash = (37 * hash) + RETURNED_LINE_COUNT_FIELD_NUMBER;
+            hash = (53 * hash) + getReturnedLineCount();
           }
           hash = (29 * hash) + getUnknownFields().hashCode();
           memoizedHashCode = hash;
@@ -19668,6 +21205,8 @@ private static final long serialVersionUID = 0L;
             bitField0_ = 0;
             isSkillFile_ = false;
             skillName_ = 0;
+            requestedLineCount_ = 0;
+            returnedLineCount_ = 0;
             return this;
           }
 
@@ -19710,6 +21249,14 @@ private static final long serialVersionUID = 0L;
               result.skillName_ = skillName_;
               to_bitField0_ |= 0x00000002;
             }
+            if (((from_bitField0_ & 0x00000004) != 0)) {
+              result.requestedLineCount_ = requestedLineCount_;
+              to_bitField0_ |= 0x00000004;
+            }
+            if (((from_bitField0_ & 0x00000008) != 0)) {
+              result.returnedLineCount_ = returnedLineCount_;
+              to_bitField0_ |= 0x00000008;
+            }
             result.bitField0_ |= to_bitField0_;
           }
 
@@ -19730,6 +21277,12 @@ private static final long serialVersionUID = 0L;
             }
             if (other.hasSkillName()) {
               setSkillName(other.getSkillName());
+            }
+            if (other.hasRequestedLineCount()) {
+              setRequestedLineCount(other.getRequestedLineCount());
+            }
+            if (other.hasReturnedLineCount()) {
+              setReturnedLineCount(other.getReturnedLineCount());
             }
             this.mergeUnknownFields(other.getUnknownFields());
             onChanged();
@@ -19774,6 +21327,16 @@ private static final long serialVersionUID = 0L;
                     }
                     break;
                   } // case 16
+                  case 24: {
+                    requestedLineCount_ = input.readInt32();
+                    bitField0_ |= 0x00000004;
+                    break;
+                  } // case 24
+                  case 32: {
+                    returnedLineCount_ = input.readInt32();
+                    bitField0_ |= 0x00000008;
+                    break;
+                  } // case 32
                   default: {
                     if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                       done = true; // was an endgroup tag
@@ -19901,6 +21464,118 @@ private static final long serialVersionUID = 0L;
           public Builder clearSkillName() {
             bitField0_ = (bitField0_ & ~0x00000002);
             skillName_ = 0;
+            onChanged();
+            return this;
+          }
+
+          private int requestedLineCount_ ;
+          /**
+           * <pre>
+           * The number of lines requested to read in the tool call.
+           * </pre>
+           *
+           * <code>optional int32 requested_line_count = 3;</code>
+           * @return Whether the requestedLineCount field is set.
+           */
+          @java.lang.Override
+          public boolean hasRequestedLineCount() {
+            return ((bitField0_ & 0x00000004) != 0);
+          }
+          /**
+           * <pre>
+           * The number of lines requested to read in the tool call.
+           * </pre>
+           *
+           * <code>optional int32 requested_line_count = 3;</code>
+           * @return The requestedLineCount.
+           */
+          @java.lang.Override
+          public int getRequestedLineCount() {
+            return requestedLineCount_;
+          }
+          /**
+           * <pre>
+           * The number of lines requested to read in the tool call.
+           * </pre>
+           *
+           * <code>optional int32 requested_line_count = 3;</code>
+           * @param value The requestedLineCount to set.
+           * @return This builder for chaining.
+           */
+          public Builder setRequestedLineCount(int value) {
+
+            requestedLineCount_ = value;
+            bitField0_ |= 0x00000004;
+            onChanged();
+            return this;
+          }
+          /**
+           * <pre>
+           * The number of lines requested to read in the tool call.
+           * </pre>
+           *
+           * <code>optional int32 requested_line_count = 3;</code>
+           * @return This builder for chaining.
+           */
+          public Builder clearRequestedLineCount() {
+            bitField0_ = (bitField0_ & ~0x00000004);
+            requestedLineCount_ = 0;
+            onChanged();
+            return this;
+          }
+
+          private int returnedLineCount_ ;
+          /**
+           * <pre>
+           * The number of lines returned by the read tool.
+           * </pre>
+           *
+           * <code>optional int32 returned_line_count = 4;</code>
+           * @return Whether the returnedLineCount field is set.
+           */
+          @java.lang.Override
+          public boolean hasReturnedLineCount() {
+            return ((bitField0_ & 0x00000008) != 0);
+          }
+          /**
+           * <pre>
+           * The number of lines returned by the read tool.
+           * </pre>
+           *
+           * <code>optional int32 returned_line_count = 4;</code>
+           * @return The returnedLineCount.
+           */
+          @java.lang.Override
+          public int getReturnedLineCount() {
+            return returnedLineCount_;
+          }
+          /**
+           * <pre>
+           * The number of lines returned by the read tool.
+           * </pre>
+           *
+           * <code>optional int32 returned_line_count = 4;</code>
+           * @param value The returnedLineCount to set.
+           * @return This builder for chaining.
+           */
+          public Builder setReturnedLineCount(int value) {
+
+            returnedLineCount_ = value;
+            bitField0_ |= 0x00000008;
+            onChanged();
+            return this;
+          }
+          /**
+           * <pre>
+           * The number of lines returned by the read tool.
+           * </pre>
+           *
+           * <code>optional int32 returned_line_count = 4;</code>
+           * @return This builder for chaining.
+           */
+          public Builder clearReturnedLineCount() {
+            bitField0_ = (bitField0_ & ~0x00000008);
+            returnedLineCount_ = 0;
             onChanged();
             return this;
           }
