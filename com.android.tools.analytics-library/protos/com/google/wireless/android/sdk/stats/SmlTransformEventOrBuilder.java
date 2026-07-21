@@ -8,62 +8,62 @@ public interface SmlTransformEventOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>.android_studio.SmlTransformEvent.TransformRequest request = 1;</code>
+   * <code>.android_studio.SmlTransformEvent.TransformRequest request = 1 [lazy = true];</code>
    * @return Whether the request field is set.
    */
   boolean hasRequest();
   /**
-   * <code>.android_studio.SmlTransformEvent.TransformRequest request = 1;</code>
+   * <code>.android_studio.SmlTransformEvent.TransformRequest request = 1 [lazy = true];</code>
    * @return The request.
    */
   com.google.wireless.android.sdk.stats.SmlTransformEvent.TransformRequest getRequest();
   /**
-   * <code>.android_studio.SmlTransformEvent.TransformRequest request = 1;</code>
+   * <code>.android_studio.SmlTransformEvent.TransformRequest request = 1 [lazy = true];</code>
    */
   com.google.wireless.android.sdk.stats.SmlTransformEvent.TransformRequestOrBuilder getRequestOrBuilder();
 
   /**
-   * <code>.android_studio.SmlTransformEvent.TransformResponse response = 2;</code>
+   * <code>.android_studio.SmlTransformEvent.TransformResponse response = 2 [lazy = true];</code>
    * @return Whether the response field is set.
    */
   boolean hasResponse();
   /**
-   * <code>.android_studio.SmlTransformEvent.TransformResponse response = 2;</code>
+   * <code>.android_studio.SmlTransformEvent.TransformResponse response = 2 [lazy = true];</code>
    * @return The response.
    */
   com.google.wireless.android.sdk.stats.SmlTransformEvent.TransformResponse getResponse();
   /**
-   * <code>.android_studio.SmlTransformEvent.TransformResponse response = 2;</code>
+   * <code>.android_studio.SmlTransformEvent.TransformResponse response = 2 [lazy = true];</code>
    */
   com.google.wireless.android.sdk.stats.SmlTransformEvent.TransformResponseOrBuilder getResponseOrBuilder();
 
   /**
-   * <code>.android_studio.SmlTransformEvent.TransformShown shown = 3;</code>
+   * <code>.android_studio.SmlTransformEvent.TransformShown shown = 3 [lazy = true];</code>
    * @return Whether the shown field is set.
    */
   boolean hasShown();
   /**
-   * <code>.android_studio.SmlTransformEvent.TransformShown shown = 3;</code>
+   * <code>.android_studio.SmlTransformEvent.TransformShown shown = 3 [lazy = true];</code>
    * @return The shown.
    */
   com.google.wireless.android.sdk.stats.SmlTransformEvent.TransformShown getShown();
   /**
-   * <code>.android_studio.SmlTransformEvent.TransformShown shown = 3;</code>
+   * <code>.android_studio.SmlTransformEvent.TransformShown shown = 3 [lazy = true];</code>
    */
   com.google.wireless.android.sdk.stats.SmlTransformEvent.TransformShownOrBuilder getShownOrBuilder();
 
   /**
-   * <code>.android_studio.SmlTransformEvent.TransformAccepted accepted = 4;</code>
+   * <code>.android_studio.SmlTransformEvent.TransformAccepted accepted = 4 [lazy = true];</code>
    * @return Whether the accepted field is set.
    */
   boolean hasAccepted();
   /**
-   * <code>.android_studio.SmlTransformEvent.TransformAccepted accepted = 4;</code>
+   * <code>.android_studio.SmlTransformEvent.TransformAccepted accepted = 4 [lazy = true];</code>
    * @return The accepted.
    */
   com.google.wireless.android.sdk.stats.SmlTransformEvent.TransformAccepted getAccepted();
   /**
-   * <code>.android_studio.SmlTransformEvent.TransformAccepted accepted = 4;</code>
+   * <code>.android_studio.SmlTransformEvent.TransformAccepted accepted = 4 [lazy = true];</code>
    */
   com.google.wireless.android.sdk.stats.SmlTransformEvent.TransformAcceptedOrBuilder getAcceptedOrBuilder();
 

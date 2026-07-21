@@ -7105,7 +7105,7 @@ private static final long serialVersionUID = 0L;
   public static final int VALIDATION_SUMMARY_FIELD_NUMBER = 11;
   private com.google.wireless.android.sdk.stats.AppLinksAssistantEvent.ValidationSummary validationSummary_;
   /**
-   * <code>optional .android_studio.AppLinksAssistantEvent.ValidationSummary validation_summary = 11;</code>
+   * <code>optional .android_studio.AppLinksAssistantEvent.ValidationSummary validation_summary = 11 [lazy = true];</code>
    * @return Whether the validationSummary field is set.
    */
   @java.lang.Override
@@ -7113,7 +7113,7 @@ private static final long serialVersionUID = 0L;
     return ((bitField0_ & 0x00000400) != 0);
   }
   /**
-   * <code>optional .android_studio.AppLinksAssistantEvent.ValidationSummary validation_summary = 11;</code>
+   * <code>optional .android_studio.AppLinksAssistantEvent.ValidationSummary validation_summary = 11 [lazy = true];</code>
    * @return The validationSummary.
    */
   @java.lang.Override
@@ -7121,7 +7121,7 @@ private static final long serialVersionUID = 0L;
     return validationSummary_ == null ? com.google.wireless.android.sdk.stats.AppLinksAssistantEvent.ValidationSummary.getDefaultInstance() : validationSummary_;
   }
   /**
-   * <code>optional .android_studio.AppLinksAssistantEvent.ValidationSummary validation_summary = 11;</code>
+   * <code>optional .android_studio.AppLinksAssistantEvent.ValidationSummary validation_summary = 11 [lazy = true];</code>
    */
   @java.lang.Override
   public com.google.wireless.android.sdk.stats.AppLinksAssistantEvent.ValidationSummaryOrBuilder getValidationSummaryOrBuilder() {
@@ -7131,7 +7131,7 @@ private static final long serialVersionUID = 0L;
   public static final int INTENT_FILTER_FIX_FIELD_NUMBER = 12;
   private com.google.wireless.android.sdk.stats.AppLinksAssistantEvent.IntentFilterFix intentFilterFix_;
   /**
-   * <code>optional .android_studio.AppLinksAssistantEvent.IntentFilterFix intent_filter_fix = 12;</code>
+   * <code>optional .android_studio.AppLinksAssistantEvent.IntentFilterFix intent_filter_fix = 12 [lazy = true];</code>
    * @return Whether the intentFilterFix field is set.
    */
   @java.lang.Override
@@ -7139,7 +7139,7 @@ private static final long serialVersionUID = 0L;
     return ((bitField0_ & 0x00000800) != 0);
   }
   /**
-   * <code>optional .android_studio.AppLinksAssistantEvent.IntentFilterFix intent_filter_fix = 12;</code>
+   * <code>optional .android_studio.AppLinksAssistantEvent.IntentFilterFix intent_filter_fix = 12 [lazy = true];</code>
    * @return The intentFilterFix.
    */
   @java.lang.Override
@@ -7147,7 +7147,7 @@ private static final long serialVersionUID = 0L;
     return intentFilterFix_ == null ? com.google.wireless.android.sdk.stats.AppLinksAssistantEvent.IntentFilterFix.getDefaultInstance() : intentFilterFix_;
   }
   /**
-   * <code>optional .android_studio.AppLinksAssistantEvent.IntentFilterFix intent_filter_fix = 12;</code>
+   * <code>optional .android_studio.AppLinksAssistantEvent.IntentFilterFix intent_filter_fix = 12 [lazy = true];</code>
    */
   @java.lang.Override
   public com.google.wireless.android.sdk.stats.AppLinksAssistantEvent.IntentFilterFixOrBuilder getIntentFilterFixOrBuilder() {
@@ -7180,7 +7180,7 @@ private static final long serialVersionUID = 0L;
    * The information of an interacted link collected for impact tracking.
    * </pre>
    *
-   * <code>optional .android_studio.AppLinksAssistantEvent.LinksRecord links_record = 14;</code>
+   * <code>optional .android_studio.AppLinksAssistantEvent.LinksRecord links_record = 14 [lazy = true];</code>
    * @return Whether the linksRecord field is set.
    */
   @java.lang.Override
@@ -7192,7 +7192,7 @@ private static final long serialVersionUID = 0L;
    * The information of an interacted link collected for impact tracking.
    * </pre>
    *
-   * <code>optional .android_studio.AppLinksAssistantEvent.LinksRecord links_record = 14;</code>
+   * <code>optional .android_studio.AppLinksAssistantEvent.LinksRecord links_record = 14 [lazy = true];</code>
    * @return The linksRecord.
    */
   @java.lang.Override
@@ -7204,7 +7204,7 @@ private static final long serialVersionUID = 0L;
    * The information of an interacted link collected for impact tracking.
    * </pre>
    *
-   * <code>optional .android_studio.AppLinksAssistantEvent.LinksRecord links_record = 14;</code>
+   * <code>optional .android_studio.AppLinksAssistantEvent.LinksRecord links_record = 14 [lazy = true];</code>
    */
   @java.lang.Override
   public com.google.wireless.android.sdk.stats.AppLinksAssistantEvent.LinksRecordOrBuilder getLinksRecordOrBuilder() {
@@ -8784,14 +8784,14 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.wireless.android.sdk.stats.AppLinksAssistantEvent.ValidationSummary, com.google.wireless.android.sdk.stats.AppLinksAssistantEvent.ValidationSummary.Builder, com.google.wireless.android.sdk.stats.AppLinksAssistantEvent.ValidationSummaryOrBuilder> validationSummaryBuilder_;
     /**
-     * <code>optional .android_studio.AppLinksAssistantEvent.ValidationSummary validation_summary = 11;</code>
+     * <code>optional .android_studio.AppLinksAssistantEvent.ValidationSummary validation_summary = 11 [lazy = true];</code>
      * @return Whether the validationSummary field is set.
      */
     public boolean hasValidationSummary() {
       return ((bitField0_ & 0x00000400) != 0);
     }
     /**
-     * <code>optional .android_studio.AppLinksAssistantEvent.ValidationSummary validation_summary = 11;</code>
+     * <code>optional .android_studio.AppLinksAssistantEvent.ValidationSummary validation_summary = 11 [lazy = true];</code>
      * @return The validationSummary.
      */
     public com.google.wireless.android.sdk.stats.AppLinksAssistantEvent.ValidationSummary getValidationSummary() {
@@ -8802,7 +8802,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>optional .android_studio.AppLinksAssistantEvent.ValidationSummary validation_summary = 11;</code>
+     * <code>optional .android_studio.AppLinksAssistantEvent.ValidationSummary validation_summary = 11 [lazy = true];</code>
      */
     public Builder setValidationSummary(com.google.wireless.android.sdk.stats.AppLinksAssistantEvent.ValidationSummary value) {
       if (validationSummaryBuilder_ == null) {
@@ -8818,7 +8818,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>optional .android_studio.AppLinksAssistantEvent.ValidationSummary validation_summary = 11;</code>
+     * <code>optional .android_studio.AppLinksAssistantEvent.ValidationSummary validation_summary = 11 [lazy = true];</code>
      */
     public Builder setValidationSummary(
         com.google.wireless.android.sdk.stats.AppLinksAssistantEvent.ValidationSummary.Builder builderForValue) {
@@ -8832,7 +8832,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>optional .android_studio.AppLinksAssistantEvent.ValidationSummary validation_summary = 11;</code>
+     * <code>optional .android_studio.AppLinksAssistantEvent.ValidationSummary validation_summary = 11 [lazy = true];</code>
      */
     public Builder mergeValidationSummary(com.google.wireless.android.sdk.stats.AppLinksAssistantEvent.ValidationSummary value) {
       if (validationSummaryBuilder_ == null) {
@@ -8852,7 +8852,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>optional .android_studio.AppLinksAssistantEvent.ValidationSummary validation_summary = 11;</code>
+     * <code>optional .android_studio.AppLinksAssistantEvent.ValidationSummary validation_summary = 11 [lazy = true];</code>
      */
     public Builder clearValidationSummary() {
       if (validationSummaryBuilder_ == null) {
@@ -8865,7 +8865,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>optional .android_studio.AppLinksAssistantEvent.ValidationSummary validation_summary = 11;</code>
+     * <code>optional .android_studio.AppLinksAssistantEvent.ValidationSummary validation_summary = 11 [lazy = true];</code>
      */
     public com.google.wireless.android.sdk.stats.AppLinksAssistantEvent.ValidationSummary.Builder getValidationSummaryBuilder() {
       bitField0_ |= 0x00000400;
@@ -8873,7 +8873,7 @@ private static final long serialVersionUID = 0L;
       return getValidationSummaryFieldBuilder().getBuilder();
     }
     /**
-     * <code>optional .android_studio.AppLinksAssistantEvent.ValidationSummary validation_summary = 11;</code>
+     * <code>optional .android_studio.AppLinksAssistantEvent.ValidationSummary validation_summary = 11 [lazy = true];</code>
      */
     public com.google.wireless.android.sdk.stats.AppLinksAssistantEvent.ValidationSummaryOrBuilder getValidationSummaryOrBuilder() {
       if (validationSummaryBuilder_ != null) {
@@ -8884,7 +8884,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>optional .android_studio.AppLinksAssistantEvent.ValidationSummary validation_summary = 11;</code>
+     * <code>optional .android_studio.AppLinksAssistantEvent.ValidationSummary validation_summary = 11 [lazy = true];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.wireless.android.sdk.stats.AppLinksAssistantEvent.ValidationSummary, com.google.wireless.android.sdk.stats.AppLinksAssistantEvent.ValidationSummary.Builder, com.google.wireless.android.sdk.stats.AppLinksAssistantEvent.ValidationSummaryOrBuilder> 
@@ -8904,14 +8904,14 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.wireless.android.sdk.stats.AppLinksAssistantEvent.IntentFilterFix, com.google.wireless.android.sdk.stats.AppLinksAssistantEvent.IntentFilterFix.Builder, com.google.wireless.android.sdk.stats.AppLinksAssistantEvent.IntentFilterFixOrBuilder> intentFilterFixBuilder_;
     /**
-     * <code>optional .android_studio.AppLinksAssistantEvent.IntentFilterFix intent_filter_fix = 12;</code>
+     * <code>optional .android_studio.AppLinksAssistantEvent.IntentFilterFix intent_filter_fix = 12 [lazy = true];</code>
      * @return Whether the intentFilterFix field is set.
      */
     public boolean hasIntentFilterFix() {
       return ((bitField0_ & 0x00000800) != 0);
     }
     /**
-     * <code>optional .android_studio.AppLinksAssistantEvent.IntentFilterFix intent_filter_fix = 12;</code>
+     * <code>optional .android_studio.AppLinksAssistantEvent.IntentFilterFix intent_filter_fix = 12 [lazy = true];</code>
      * @return The intentFilterFix.
      */
     public com.google.wireless.android.sdk.stats.AppLinksAssistantEvent.IntentFilterFix getIntentFilterFix() {
@@ -8922,7 +8922,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>optional .android_studio.AppLinksAssistantEvent.IntentFilterFix intent_filter_fix = 12;</code>
+     * <code>optional .android_studio.AppLinksAssistantEvent.IntentFilterFix intent_filter_fix = 12 [lazy = true];</code>
      */
     public Builder setIntentFilterFix(com.google.wireless.android.sdk.stats.AppLinksAssistantEvent.IntentFilterFix value) {
       if (intentFilterFixBuilder_ == null) {
@@ -8938,7 +8938,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>optional .android_studio.AppLinksAssistantEvent.IntentFilterFix intent_filter_fix = 12;</code>
+     * <code>optional .android_studio.AppLinksAssistantEvent.IntentFilterFix intent_filter_fix = 12 [lazy = true];</code>
      */
     public Builder setIntentFilterFix(
         com.google.wireless.android.sdk.stats.AppLinksAssistantEvent.IntentFilterFix.Builder builderForValue) {
@@ -8952,7 +8952,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>optional .android_studio.AppLinksAssistantEvent.IntentFilterFix intent_filter_fix = 12;</code>
+     * <code>optional .android_studio.AppLinksAssistantEvent.IntentFilterFix intent_filter_fix = 12 [lazy = true];</code>
      */
     public Builder mergeIntentFilterFix(com.google.wireless.android.sdk.stats.AppLinksAssistantEvent.IntentFilterFix value) {
       if (intentFilterFixBuilder_ == null) {
@@ -8972,7 +8972,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>optional .android_studio.AppLinksAssistantEvent.IntentFilterFix intent_filter_fix = 12;</code>
+     * <code>optional .android_studio.AppLinksAssistantEvent.IntentFilterFix intent_filter_fix = 12 [lazy = true];</code>
      */
     public Builder clearIntentFilterFix() {
       if (intentFilterFixBuilder_ == null) {
@@ -8985,7 +8985,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>optional .android_studio.AppLinksAssistantEvent.IntentFilterFix intent_filter_fix = 12;</code>
+     * <code>optional .android_studio.AppLinksAssistantEvent.IntentFilterFix intent_filter_fix = 12 [lazy = true];</code>
      */
     public com.google.wireless.android.sdk.stats.AppLinksAssistantEvent.IntentFilterFix.Builder getIntentFilterFixBuilder() {
       bitField0_ |= 0x00000800;
@@ -8993,7 +8993,7 @@ private static final long serialVersionUID = 0L;
       return getIntentFilterFixFieldBuilder().getBuilder();
     }
     /**
-     * <code>optional .android_studio.AppLinksAssistantEvent.IntentFilterFix intent_filter_fix = 12;</code>
+     * <code>optional .android_studio.AppLinksAssistantEvent.IntentFilterFix intent_filter_fix = 12 [lazy = true];</code>
      */
     public com.google.wireless.android.sdk.stats.AppLinksAssistantEvent.IntentFilterFixOrBuilder getIntentFilterFixOrBuilder() {
       if (intentFilterFixBuilder_ != null) {
@@ -9004,7 +9004,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>optional .android_studio.AppLinksAssistantEvent.IntentFilterFix intent_filter_fix = 12;</code>
+     * <code>optional .android_studio.AppLinksAssistantEvent.IntentFilterFix intent_filter_fix = 12 [lazy = true];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.wireless.android.sdk.stats.AppLinksAssistantEvent.IntentFilterFix, com.google.wireless.android.sdk.stats.AppLinksAssistantEvent.IntentFilterFix.Builder, com.google.wireless.android.sdk.stats.AppLinksAssistantEvent.IntentFilterFixOrBuilder> 
@@ -9071,7 +9071,7 @@ private static final long serialVersionUID = 0L;
      * The information of an interacted link collected for impact tracking.
      * </pre>
      *
-     * <code>optional .android_studio.AppLinksAssistantEvent.LinksRecord links_record = 14;</code>
+     * <code>optional .android_studio.AppLinksAssistantEvent.LinksRecord links_record = 14 [lazy = true];</code>
      * @return Whether the linksRecord field is set.
      */
     public boolean hasLinksRecord() {
@@ -9082,7 +9082,7 @@ private static final long serialVersionUID = 0L;
      * The information of an interacted link collected for impact tracking.
      * </pre>
      *
-     * <code>optional .android_studio.AppLinksAssistantEvent.LinksRecord links_record = 14;</code>
+     * <code>optional .android_studio.AppLinksAssistantEvent.LinksRecord links_record = 14 [lazy = true];</code>
      * @return The linksRecord.
      */
     public com.google.wireless.android.sdk.stats.AppLinksAssistantEvent.LinksRecord getLinksRecord() {
@@ -9097,7 +9097,7 @@ private static final long serialVersionUID = 0L;
      * The information of an interacted link collected for impact tracking.
      * </pre>
      *
-     * <code>optional .android_studio.AppLinksAssistantEvent.LinksRecord links_record = 14;</code>
+     * <code>optional .android_studio.AppLinksAssistantEvent.LinksRecord links_record = 14 [lazy = true];</code>
      */
     public Builder setLinksRecord(com.google.wireless.android.sdk.stats.AppLinksAssistantEvent.LinksRecord value) {
       if (linksRecordBuilder_ == null) {
@@ -9117,7 +9117,7 @@ private static final long serialVersionUID = 0L;
      * The information of an interacted link collected for impact tracking.
      * </pre>
      *
-     * <code>optional .android_studio.AppLinksAssistantEvent.LinksRecord links_record = 14;</code>
+     * <code>optional .android_studio.AppLinksAssistantEvent.LinksRecord links_record = 14 [lazy = true];</code>
      */
     public Builder setLinksRecord(
         com.google.wireless.android.sdk.stats.AppLinksAssistantEvent.LinksRecord.Builder builderForValue) {
@@ -9135,7 +9135,7 @@ private static final long serialVersionUID = 0L;
      * The information of an interacted link collected for impact tracking.
      * </pre>
      *
-     * <code>optional .android_studio.AppLinksAssistantEvent.LinksRecord links_record = 14;</code>
+     * <code>optional .android_studio.AppLinksAssistantEvent.LinksRecord links_record = 14 [lazy = true];</code>
      */
     public Builder mergeLinksRecord(com.google.wireless.android.sdk.stats.AppLinksAssistantEvent.LinksRecord value) {
       if (linksRecordBuilder_ == null) {
@@ -9159,7 +9159,7 @@ private static final long serialVersionUID = 0L;
      * The information of an interacted link collected for impact tracking.
      * </pre>
      *
-     * <code>optional .android_studio.AppLinksAssistantEvent.LinksRecord links_record = 14;</code>
+     * <code>optional .android_studio.AppLinksAssistantEvent.LinksRecord links_record = 14 [lazy = true];</code>
      */
     public Builder clearLinksRecord() {
       if (linksRecordBuilder_ == null) {
@@ -9176,7 +9176,7 @@ private static final long serialVersionUID = 0L;
      * The information of an interacted link collected for impact tracking.
      * </pre>
      *
-     * <code>optional .android_studio.AppLinksAssistantEvent.LinksRecord links_record = 14;</code>
+     * <code>optional .android_studio.AppLinksAssistantEvent.LinksRecord links_record = 14 [lazy = true];</code>
      */
     public com.google.wireless.android.sdk.stats.AppLinksAssistantEvent.LinksRecord.Builder getLinksRecordBuilder() {
       bitField0_ |= 0x00002000;
@@ -9188,7 +9188,7 @@ private static final long serialVersionUID = 0L;
      * The information of an interacted link collected for impact tracking.
      * </pre>
      *
-     * <code>optional .android_studio.AppLinksAssistantEvent.LinksRecord links_record = 14;</code>
+     * <code>optional .android_studio.AppLinksAssistantEvent.LinksRecord links_record = 14 [lazy = true];</code>
      */
     public com.google.wireless.android.sdk.stats.AppLinksAssistantEvent.LinksRecordOrBuilder getLinksRecordOrBuilder() {
       if (linksRecordBuilder_ != null) {
@@ -9203,7 +9203,7 @@ private static final long serialVersionUID = 0L;
      * The information of an interacted link collected for impact tracking.
      * </pre>
      *
-     * <code>optional .android_studio.AppLinksAssistantEvent.LinksRecord links_record = 14;</code>
+     * <code>optional .android_studio.AppLinksAssistantEvent.LinksRecord links_record = 14 [lazy = true];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.wireless.android.sdk.stats.AppLinksAssistantEvent.LinksRecord, com.google.wireless.android.sdk.stats.AppLinksAssistantEvent.LinksRecord.Builder, com.google.wireless.android.sdk.stats.AppLinksAssistantEvent.LinksRecordOrBuilder> 
