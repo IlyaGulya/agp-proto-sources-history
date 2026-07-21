@@ -85,6 +85,33 @@ private static final long serialVersionUID = 0L;
      */
     com.google.protobuf.ByteString
         getExceptionClassNameBytes();
+
+    /**
+     * <pre>
+     * The first stack frame of the exception that is filtered by the allowlist.
+     * </pre>
+     *
+     * <code>optional .android_studio.GradleFailureDetails.GradleExceptionStackFrameInfo top_frame_info = 2;</code>
+     * @return Whether the topFrameInfo field is set.
+     */
+    boolean hasTopFrameInfo();
+    /**
+     * <pre>
+     * The first stack frame of the exception that is filtered by the allowlist.
+     * </pre>
+     *
+     * <code>optional .android_studio.GradleFailureDetails.GradleExceptionStackFrameInfo top_frame_info = 2;</code>
+     * @return The topFrameInfo.
+     */
+    com.google.wireless.android.sdk.stats.GradleFailureDetails.GradleExceptionStackFrameInfo getTopFrameInfo();
+    /**
+     * <pre>
+     * The first stack frame of the exception that is filtered by the allowlist.
+     * </pre>
+     *
+     * <code>optional .android_studio.GradleFailureDetails.GradleExceptionStackFrameInfo top_frame_info = 2;</code>
+     */
+    com.google.wireless.android.sdk.stats.GradleFailureDetails.GradleExceptionStackFrameInfoOrBuilder getTopFrameInfoOrBuilder();
   }
   /**
    * <pre>
@@ -195,6 +222,44 @@ private static final long serialVersionUID = 0L;
       }
     }
 
+    public static final int TOP_FRAME_INFO_FIELD_NUMBER = 2;
+    private com.google.wireless.android.sdk.stats.GradleFailureDetails.GradleExceptionStackFrameInfo topFrameInfo_;
+    /**
+     * <pre>
+     * The first stack frame of the exception that is filtered by the allowlist.
+     * </pre>
+     *
+     * <code>optional .android_studio.GradleFailureDetails.GradleExceptionStackFrameInfo top_frame_info = 2;</code>
+     * @return Whether the topFrameInfo field is set.
+     */
+    @java.lang.Override
+    public boolean hasTopFrameInfo() {
+      return ((bitField0_ & 0x00000002) != 0);
+    }
+    /**
+     * <pre>
+     * The first stack frame of the exception that is filtered by the allowlist.
+     * </pre>
+     *
+     * <code>optional .android_studio.GradleFailureDetails.GradleExceptionStackFrameInfo top_frame_info = 2;</code>
+     * @return The topFrameInfo.
+     */
+    @java.lang.Override
+    public com.google.wireless.android.sdk.stats.GradleFailureDetails.GradleExceptionStackFrameInfo getTopFrameInfo() {
+      return topFrameInfo_ == null ? com.google.wireless.android.sdk.stats.GradleFailureDetails.GradleExceptionStackFrameInfo.getDefaultInstance() : topFrameInfo_;
+    }
+    /**
+     * <pre>
+     * The first stack frame of the exception that is filtered by the allowlist.
+     * </pre>
+     *
+     * <code>optional .android_studio.GradleFailureDetails.GradleExceptionStackFrameInfo top_frame_info = 2;</code>
+     */
+    @java.lang.Override
+    public com.google.wireless.android.sdk.stats.GradleFailureDetails.GradleExceptionStackFrameInfoOrBuilder getTopFrameInfoOrBuilder() {
+      return topFrameInfo_ == null ? com.google.wireless.android.sdk.stats.GradleFailureDetails.GradleExceptionStackFrameInfo.getDefaultInstance() : topFrameInfo_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -212,6 +277,9 @@ private static final long serialVersionUID = 0L;
       if (((bitField0_ & 0x00000001) != 0)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, exceptionClassName_);
       }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        output.writeMessage(2, getTopFrameInfo());
+      }
       getUnknownFields().writeTo(output);
     }
 
@@ -223,6 +291,10 @@ private static final long serialVersionUID = 0L;
       size = 0;
       if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, exceptionClassName_);
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getTopFrameInfo());
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -244,6 +316,11 @@ private static final long serialVersionUID = 0L;
         if (!getExceptionClassName()
             .equals(other.getExceptionClassName())) return false;
       }
+      if (hasTopFrameInfo() != other.hasTopFrameInfo()) return false;
+      if (hasTopFrameInfo()) {
+        if (!getTopFrameInfo()
+            .equals(other.getTopFrameInfo())) return false;
+      }
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -258,6 +335,10 @@ private static final long serialVersionUID = 0L;
       if (hasExceptionClassName()) {
         hash = (37 * hash) + EXCEPTION_CLASS_NAME_FIELD_NUMBER;
         hash = (53 * hash) + getExceptionClassName().hashCode();
+      }
+      if (hasTopFrameInfo()) {
+        hash = (37 * hash) + TOP_FRAME_INFO_FIELD_NUMBER;
+        hash = (53 * hash) + getTopFrameInfo().hashCode();
       }
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
@@ -380,19 +461,31 @@ private static final long serialVersionUID = 0L;
 
       // Construct using com.google.wireless.android.sdk.stats.GradleFailureDetails.GradleExceptionInfo.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getTopFrameInfoFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
         exceptionClassName_ = "";
         bitField0_ = (bitField0_ & ~0x00000001);
+        if (topFrameInfoBuilder_ == null) {
+          topFrameInfo_ = null;
+        } else {
+          topFrameInfoBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000002);
         return this;
       }
 
@@ -425,6 +518,14 @@ private static final long serialVersionUID = 0L;
           to_bitField0_ |= 0x00000001;
         }
         result.exceptionClassName_ = exceptionClassName_;
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          if (topFrameInfoBuilder_ == null) {
+            result.topFrameInfo_ = topFrameInfo_;
+          } else {
+            result.topFrameInfo_ = topFrameInfoBuilder_.build();
+          }
+          to_bitField0_ |= 0x00000002;
+        }
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -479,6 +580,9 @@ private static final long serialVersionUID = 0L;
           exceptionClassName_ = other.exceptionClassName_;
           onChanged();
         }
+        if (other.hasTopFrameInfo()) {
+          mergeTopFrameInfo(other.getTopFrameInfo());
+        }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
@@ -510,6 +614,13 @@ private static final long serialVersionUID = 0L;
                 bitField0_ |= 0x00000001;
                 break;
               } // case 10
+              case 18: {
+                input.readMessage(
+                    getTopFrameInfoFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -640,6 +751,162 @@ private static final long serialVersionUID = 0L;
         onChanged();
         return this;
       }
+
+      private com.google.wireless.android.sdk.stats.GradleFailureDetails.GradleExceptionStackFrameInfo topFrameInfo_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.wireless.android.sdk.stats.GradleFailureDetails.GradleExceptionStackFrameInfo, com.google.wireless.android.sdk.stats.GradleFailureDetails.GradleExceptionStackFrameInfo.Builder, com.google.wireless.android.sdk.stats.GradleFailureDetails.GradleExceptionStackFrameInfoOrBuilder> topFrameInfoBuilder_;
+      /**
+       * <pre>
+       * The first stack frame of the exception that is filtered by the allowlist.
+       * </pre>
+       *
+       * <code>optional .android_studio.GradleFailureDetails.GradleExceptionStackFrameInfo top_frame_info = 2;</code>
+       * @return Whether the topFrameInfo field is set.
+       */
+      public boolean hasTopFrameInfo() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <pre>
+       * The first stack frame of the exception that is filtered by the allowlist.
+       * </pre>
+       *
+       * <code>optional .android_studio.GradleFailureDetails.GradleExceptionStackFrameInfo top_frame_info = 2;</code>
+       * @return The topFrameInfo.
+       */
+      public com.google.wireless.android.sdk.stats.GradleFailureDetails.GradleExceptionStackFrameInfo getTopFrameInfo() {
+        if (topFrameInfoBuilder_ == null) {
+          return topFrameInfo_ == null ? com.google.wireless.android.sdk.stats.GradleFailureDetails.GradleExceptionStackFrameInfo.getDefaultInstance() : topFrameInfo_;
+        } else {
+          return topFrameInfoBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * The first stack frame of the exception that is filtered by the allowlist.
+       * </pre>
+       *
+       * <code>optional .android_studio.GradleFailureDetails.GradleExceptionStackFrameInfo top_frame_info = 2;</code>
+       */
+      public Builder setTopFrameInfo(com.google.wireless.android.sdk.stats.GradleFailureDetails.GradleExceptionStackFrameInfo value) {
+        if (topFrameInfoBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          topFrameInfo_ = value;
+          onChanged();
+        } else {
+          topFrameInfoBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000002;
+        return this;
+      }
+      /**
+       * <pre>
+       * The first stack frame of the exception that is filtered by the allowlist.
+       * </pre>
+       *
+       * <code>optional .android_studio.GradleFailureDetails.GradleExceptionStackFrameInfo top_frame_info = 2;</code>
+       */
+      public Builder setTopFrameInfo(
+          com.google.wireless.android.sdk.stats.GradleFailureDetails.GradleExceptionStackFrameInfo.Builder builderForValue) {
+        if (topFrameInfoBuilder_ == null) {
+          topFrameInfo_ = builderForValue.build();
+          onChanged();
+        } else {
+          topFrameInfoBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000002;
+        return this;
+      }
+      /**
+       * <pre>
+       * The first stack frame of the exception that is filtered by the allowlist.
+       * </pre>
+       *
+       * <code>optional .android_studio.GradleFailureDetails.GradleExceptionStackFrameInfo top_frame_info = 2;</code>
+       */
+      public Builder mergeTopFrameInfo(com.google.wireless.android.sdk.stats.GradleFailureDetails.GradleExceptionStackFrameInfo value) {
+        if (topFrameInfoBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0) &&
+              topFrameInfo_ != null &&
+              topFrameInfo_ != com.google.wireless.android.sdk.stats.GradleFailureDetails.GradleExceptionStackFrameInfo.getDefaultInstance()) {
+            topFrameInfo_ =
+              com.google.wireless.android.sdk.stats.GradleFailureDetails.GradleExceptionStackFrameInfo.newBuilder(topFrameInfo_).mergeFrom(value).buildPartial();
+          } else {
+            topFrameInfo_ = value;
+          }
+          onChanged();
+        } else {
+          topFrameInfoBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000002;
+        return this;
+      }
+      /**
+       * <pre>
+       * The first stack frame of the exception that is filtered by the allowlist.
+       * </pre>
+       *
+       * <code>optional .android_studio.GradleFailureDetails.GradleExceptionStackFrameInfo top_frame_info = 2;</code>
+       */
+      public Builder clearTopFrameInfo() {
+        if (topFrameInfoBuilder_ == null) {
+          topFrameInfo_ = null;
+          onChanged();
+        } else {
+          topFrameInfoBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000002);
+        return this;
+      }
+      /**
+       * <pre>
+       * The first stack frame of the exception that is filtered by the allowlist.
+       * </pre>
+       *
+       * <code>optional .android_studio.GradleFailureDetails.GradleExceptionStackFrameInfo top_frame_info = 2;</code>
+       */
+      public com.google.wireless.android.sdk.stats.GradleFailureDetails.GradleExceptionStackFrameInfo.Builder getTopFrameInfoBuilder() {
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return getTopFrameInfoFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * The first stack frame of the exception that is filtered by the allowlist.
+       * </pre>
+       *
+       * <code>optional .android_studio.GradleFailureDetails.GradleExceptionStackFrameInfo top_frame_info = 2;</code>
+       */
+      public com.google.wireless.android.sdk.stats.GradleFailureDetails.GradleExceptionStackFrameInfoOrBuilder getTopFrameInfoOrBuilder() {
+        if (topFrameInfoBuilder_ != null) {
+          return topFrameInfoBuilder_.getMessageOrBuilder();
+        } else {
+          return topFrameInfo_ == null ?
+              com.google.wireless.android.sdk.stats.GradleFailureDetails.GradleExceptionStackFrameInfo.getDefaultInstance() : topFrameInfo_;
+        }
+      }
+      /**
+       * <pre>
+       * The first stack frame of the exception that is filtered by the allowlist.
+       * </pre>
+       *
+       * <code>optional .android_studio.GradleFailureDetails.GradleExceptionStackFrameInfo top_frame_info = 2;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.wireless.android.sdk.stats.GradleFailureDetails.GradleExceptionStackFrameInfo, com.google.wireless.android.sdk.stats.GradleFailureDetails.GradleExceptionStackFrameInfo.Builder, com.google.wireless.android.sdk.stats.GradleFailureDetails.GradleExceptionStackFrameInfoOrBuilder> 
+          getTopFrameInfoFieldBuilder() {
+        if (topFrameInfoBuilder_ == null) {
+          topFrameInfoBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.wireless.android.sdk.stats.GradleFailureDetails.GradleExceptionStackFrameInfo, com.google.wireless.android.sdk.stats.GradleFailureDetails.GradleExceptionStackFrameInfo.Builder, com.google.wireless.android.sdk.stats.GradleFailureDetails.GradleExceptionStackFrameInfoOrBuilder>(
+                  getTopFrameInfo(),
+                  getParentForChildren(),
+                  isClean());
+          topFrameInfo_ = null;
+        }
+        return topFrameInfoBuilder_;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -699,6 +966,1194 @@ private static final long serialVersionUID = 0L;
 
     @java.lang.Override
     public com.google.wireless.android.sdk.stats.GradleFailureDetails.GradleExceptionInfo getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface GradleExceptionStackFrameInfoOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:android_studio.GradleFailureDetails.GradleExceptionStackFrameInfo)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>optional string class_name = 1;</code>
+     * @return Whether the className field is set.
+     */
+    boolean hasClassName();
+    /**
+     * <code>optional string class_name = 1;</code>
+     * @return The className.
+     */
+    java.lang.String getClassName();
+    /**
+     * <code>optional string class_name = 1;</code>
+     * @return The bytes for className.
+     */
+    com.google.protobuf.ByteString
+        getClassNameBytes();
+
+    /**
+     * <code>optional string method_name = 2;</code>
+     * @return Whether the methodName field is set.
+     */
+    boolean hasMethodName();
+    /**
+     * <code>optional string method_name = 2;</code>
+     * @return The methodName.
+     */
+    java.lang.String getMethodName();
+    /**
+     * <code>optional string method_name = 2;</code>
+     * @return The bytes for methodName.
+     */
+    com.google.protobuf.ByteString
+        getMethodNameBytes();
+
+    /**
+     * <code>optional string file_name = 3;</code>
+     * @return Whether the fileName field is set.
+     */
+    boolean hasFileName();
+    /**
+     * <code>optional string file_name = 3;</code>
+     * @return The fileName.
+     */
+    java.lang.String getFileName();
+    /**
+     * <code>optional string file_name = 3;</code>
+     * @return The bytes for fileName.
+     */
+    com.google.protobuf.ByteString
+        getFileNameBytes();
+
+    /**
+     * <code>optional int32 line_number = 4;</code>
+     * @return Whether the lineNumber field is set.
+     */
+    boolean hasLineNumber();
+    /**
+     * <code>optional int32 line_number = 4;</code>
+     * @return The lineNumber.
+     */
+    int getLineNumber();
+
+    /**
+     * <pre>
+     * The index of the frame in the stack trace array.
+     * </pre>
+     *
+     * <code>optional int32 frame_index = 5;</code>
+     * @return Whether the frameIndex field is set.
+     */
+    boolean hasFrameIndex();
+    /**
+     * <pre>
+     * The index of the frame in the stack trace array.
+     * </pre>
+     *
+     * <code>optional int32 frame_index = 5;</code>
+     * @return The frameIndex.
+     */
+    int getFrameIndex();
+  }
+  /**
+   * <pre>
+   * Information about a single stack frame in a returned failure.
+   * Frames are filtered by the same allowlist as GradleExceptionInfo.
+   * </pre>
+   *
+   * Protobuf type {@code android_studio.GradleFailureDetails.GradleExceptionStackFrameInfo}
+   */
+  public static final class GradleExceptionStackFrameInfo extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:android_studio.GradleFailureDetails.GradleExceptionStackFrameInfo)
+      GradleExceptionStackFrameInfoOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use GradleExceptionStackFrameInfo.newBuilder() to construct.
+    private GradleExceptionStackFrameInfo(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private GradleExceptionStackFrameInfo() {
+      className_ = "";
+      methodName_ = "";
+      fileName_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new GradleExceptionStackFrameInfo();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_GradleFailureDetails_GradleExceptionStackFrameInfo_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_GradleFailureDetails_GradleExceptionStackFrameInfo_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.google.wireless.android.sdk.stats.GradleFailureDetails.GradleExceptionStackFrameInfo.class, com.google.wireless.android.sdk.stats.GradleFailureDetails.GradleExceptionStackFrameInfo.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int CLASS_NAME_FIELD_NUMBER = 1;
+    private volatile java.lang.Object className_;
+    /**
+     * <code>optional string class_name = 1;</code>
+     * @return Whether the className field is set.
+     */
+    @java.lang.Override
+    public boolean hasClassName() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <code>optional string class_name = 1;</code>
+     * @return The className.
+     */
+    @java.lang.Override
+    public java.lang.String getClassName() {
+      java.lang.Object ref = className_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          className_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string class_name = 1;</code>
+     * @return The bytes for className.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getClassNameBytes() {
+      java.lang.Object ref = className_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        className_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int METHOD_NAME_FIELD_NUMBER = 2;
+    private volatile java.lang.Object methodName_;
+    /**
+     * <code>optional string method_name = 2;</code>
+     * @return Whether the methodName field is set.
+     */
+    @java.lang.Override
+    public boolean hasMethodName() {
+      return ((bitField0_ & 0x00000002) != 0);
+    }
+    /**
+     * <code>optional string method_name = 2;</code>
+     * @return The methodName.
+     */
+    @java.lang.Override
+    public java.lang.String getMethodName() {
+      java.lang.Object ref = methodName_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          methodName_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string method_name = 2;</code>
+     * @return The bytes for methodName.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getMethodNameBytes() {
+      java.lang.Object ref = methodName_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        methodName_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int FILE_NAME_FIELD_NUMBER = 3;
+    private volatile java.lang.Object fileName_;
+    /**
+     * <code>optional string file_name = 3;</code>
+     * @return Whether the fileName field is set.
+     */
+    @java.lang.Override
+    public boolean hasFileName() {
+      return ((bitField0_ & 0x00000004) != 0);
+    }
+    /**
+     * <code>optional string file_name = 3;</code>
+     * @return The fileName.
+     */
+    @java.lang.Override
+    public java.lang.String getFileName() {
+      java.lang.Object ref = fileName_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          fileName_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string file_name = 3;</code>
+     * @return The bytes for fileName.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getFileNameBytes() {
+      java.lang.Object ref = fileName_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        fileName_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int LINE_NUMBER_FIELD_NUMBER = 4;
+    private int lineNumber_;
+    /**
+     * <code>optional int32 line_number = 4;</code>
+     * @return Whether the lineNumber field is set.
+     */
+    @java.lang.Override
+    public boolean hasLineNumber() {
+      return ((bitField0_ & 0x00000008) != 0);
+    }
+    /**
+     * <code>optional int32 line_number = 4;</code>
+     * @return The lineNumber.
+     */
+    @java.lang.Override
+    public int getLineNumber() {
+      return lineNumber_;
+    }
+
+    public static final int FRAME_INDEX_FIELD_NUMBER = 5;
+    private int frameIndex_;
+    /**
+     * <pre>
+     * The index of the frame in the stack trace array.
+     * </pre>
+     *
+     * <code>optional int32 frame_index = 5;</code>
+     * @return Whether the frameIndex field is set.
+     */
+    @java.lang.Override
+    public boolean hasFrameIndex() {
+      return ((bitField0_ & 0x00000010) != 0);
+    }
+    /**
+     * <pre>
+     * The index of the frame in the stack trace array.
+     * </pre>
+     *
+     * <code>optional int32 frame_index = 5;</code>
+     * @return The frameIndex.
+     */
+    @java.lang.Override
+    public int getFrameIndex() {
+      return frameIndex_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (((bitField0_ & 0x00000001) != 0)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, className_);
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, methodName_);
+      }
+      if (((bitField0_ & 0x00000004) != 0)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, fileName_);
+      }
+      if (((bitField0_ & 0x00000008) != 0)) {
+        output.writeInt32(4, lineNumber_);
+      }
+      if (((bitField0_ & 0x00000010) != 0)) {
+        output.writeInt32(5, frameIndex_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) != 0)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, className_);
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, methodName_);
+      }
+      if (((bitField0_ & 0x00000004) != 0)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, fileName_);
+      }
+      if (((bitField0_ & 0x00000008) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(4, lineNumber_);
+      }
+      if (((bitField0_ & 0x00000010) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(5, frameIndex_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.google.wireless.android.sdk.stats.GradleFailureDetails.GradleExceptionStackFrameInfo)) {
+        return super.equals(obj);
+      }
+      com.google.wireless.android.sdk.stats.GradleFailureDetails.GradleExceptionStackFrameInfo other = (com.google.wireless.android.sdk.stats.GradleFailureDetails.GradleExceptionStackFrameInfo) obj;
+
+      if (hasClassName() != other.hasClassName()) return false;
+      if (hasClassName()) {
+        if (!getClassName()
+            .equals(other.getClassName())) return false;
+      }
+      if (hasMethodName() != other.hasMethodName()) return false;
+      if (hasMethodName()) {
+        if (!getMethodName()
+            .equals(other.getMethodName())) return false;
+      }
+      if (hasFileName() != other.hasFileName()) return false;
+      if (hasFileName()) {
+        if (!getFileName()
+            .equals(other.getFileName())) return false;
+      }
+      if (hasLineNumber() != other.hasLineNumber()) return false;
+      if (hasLineNumber()) {
+        if (getLineNumber()
+            != other.getLineNumber()) return false;
+      }
+      if (hasFrameIndex() != other.hasFrameIndex()) return false;
+      if (hasFrameIndex()) {
+        if (getFrameIndex()
+            != other.getFrameIndex()) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasClassName()) {
+        hash = (37 * hash) + CLASS_NAME_FIELD_NUMBER;
+        hash = (53 * hash) + getClassName().hashCode();
+      }
+      if (hasMethodName()) {
+        hash = (37 * hash) + METHOD_NAME_FIELD_NUMBER;
+        hash = (53 * hash) + getMethodName().hashCode();
+      }
+      if (hasFileName()) {
+        hash = (37 * hash) + FILE_NAME_FIELD_NUMBER;
+        hash = (53 * hash) + getFileName().hashCode();
+      }
+      if (hasLineNumber()) {
+        hash = (37 * hash) + LINE_NUMBER_FIELD_NUMBER;
+        hash = (53 * hash) + getLineNumber();
+      }
+      if (hasFrameIndex()) {
+        hash = (37 * hash) + FRAME_INDEX_FIELD_NUMBER;
+        hash = (53 * hash) + getFrameIndex();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.google.wireless.android.sdk.stats.GradleFailureDetails.GradleExceptionStackFrameInfo parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.google.wireless.android.sdk.stats.GradleFailureDetails.GradleExceptionStackFrameInfo parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.google.wireless.android.sdk.stats.GradleFailureDetails.GradleExceptionStackFrameInfo parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.google.wireless.android.sdk.stats.GradleFailureDetails.GradleExceptionStackFrameInfo parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.google.wireless.android.sdk.stats.GradleFailureDetails.GradleExceptionStackFrameInfo parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.google.wireless.android.sdk.stats.GradleFailureDetails.GradleExceptionStackFrameInfo parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.google.wireless.android.sdk.stats.GradleFailureDetails.GradleExceptionStackFrameInfo parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.google.wireless.android.sdk.stats.GradleFailureDetails.GradleExceptionStackFrameInfo parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.google.wireless.android.sdk.stats.GradleFailureDetails.GradleExceptionStackFrameInfo parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.google.wireless.android.sdk.stats.GradleFailureDetails.GradleExceptionStackFrameInfo parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.google.wireless.android.sdk.stats.GradleFailureDetails.GradleExceptionStackFrameInfo parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.google.wireless.android.sdk.stats.GradleFailureDetails.GradleExceptionStackFrameInfo parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.google.wireless.android.sdk.stats.GradleFailureDetails.GradleExceptionStackFrameInfo prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Information about a single stack frame in a returned failure.
+     * Frames are filtered by the same allowlist as GradleExceptionInfo.
+     * </pre>
+     *
+     * Protobuf type {@code android_studio.GradleFailureDetails.GradleExceptionStackFrameInfo}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:android_studio.GradleFailureDetails.GradleExceptionStackFrameInfo)
+        com.google.wireless.android.sdk.stats.GradleFailureDetails.GradleExceptionStackFrameInfoOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_GradleFailureDetails_GradleExceptionStackFrameInfo_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_GradleFailureDetails_GradleExceptionStackFrameInfo_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.google.wireless.android.sdk.stats.GradleFailureDetails.GradleExceptionStackFrameInfo.class, com.google.wireless.android.sdk.stats.GradleFailureDetails.GradleExceptionStackFrameInfo.Builder.class);
+      }
+
+      // Construct using com.google.wireless.android.sdk.stats.GradleFailureDetails.GradleExceptionStackFrameInfo.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        className_ = "";
+        bitField0_ = (bitField0_ & ~0x00000001);
+        methodName_ = "";
+        bitField0_ = (bitField0_ & ~0x00000002);
+        fileName_ = "";
+        bitField0_ = (bitField0_ & ~0x00000004);
+        lineNumber_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000008);
+        frameIndex_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000010);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_GradleFailureDetails_GradleExceptionStackFrameInfo_descriptor;
+      }
+
+      @java.lang.Override
+      public com.google.wireless.android.sdk.stats.GradleFailureDetails.GradleExceptionStackFrameInfo getDefaultInstanceForType() {
+        return com.google.wireless.android.sdk.stats.GradleFailureDetails.GradleExceptionStackFrameInfo.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.google.wireless.android.sdk.stats.GradleFailureDetails.GradleExceptionStackFrameInfo build() {
+        com.google.wireless.android.sdk.stats.GradleFailureDetails.GradleExceptionStackFrameInfo result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.google.wireless.android.sdk.stats.GradleFailureDetails.GradleExceptionStackFrameInfo buildPartial() {
+        com.google.wireless.android.sdk.stats.GradleFailureDetails.GradleExceptionStackFrameInfo result = new com.google.wireless.android.sdk.stats.GradleFailureDetails.GradleExceptionStackFrameInfo(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          to_bitField0_ |= 0x00000001;
+        }
+        result.className_ = className_;
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          to_bitField0_ |= 0x00000002;
+        }
+        result.methodName_ = methodName_;
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          to_bitField0_ |= 0x00000004;
+        }
+        result.fileName_ = fileName_;
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.lineNumber_ = lineNumber_;
+          to_bitField0_ |= 0x00000008;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.frameIndex_ = frameIndex_;
+          to_bitField0_ |= 0x00000010;
+        }
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.google.wireless.android.sdk.stats.GradleFailureDetails.GradleExceptionStackFrameInfo) {
+          return mergeFrom((com.google.wireless.android.sdk.stats.GradleFailureDetails.GradleExceptionStackFrameInfo)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.google.wireless.android.sdk.stats.GradleFailureDetails.GradleExceptionStackFrameInfo other) {
+        if (other == com.google.wireless.android.sdk.stats.GradleFailureDetails.GradleExceptionStackFrameInfo.getDefaultInstance()) return this;
+        if (other.hasClassName()) {
+          bitField0_ |= 0x00000001;
+          className_ = other.className_;
+          onChanged();
+        }
+        if (other.hasMethodName()) {
+          bitField0_ |= 0x00000002;
+          methodName_ = other.methodName_;
+          onChanged();
+        }
+        if (other.hasFileName()) {
+          bitField0_ |= 0x00000004;
+          fileName_ = other.fileName_;
+          onChanged();
+        }
+        if (other.hasLineNumber()) {
+          setLineNumber(other.getLineNumber());
+        }
+        if (other.hasFrameIndex()) {
+          setFrameIndex(other.getFrameIndex());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                className_ = input.readBytes();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                methodName_ = input.readBytes();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                fileName_ = input.readBytes();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 32: {
+                lineNumber_ = input.readInt32();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 32
+              case 40: {
+                frameIndex_ = input.readInt32();
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 40
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object className_ = "";
+      /**
+       * <code>optional string class_name = 1;</code>
+       * @return Whether the className field is set.
+       */
+      public boolean hasClassName() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>optional string class_name = 1;</code>
+       * @return The className.
+       */
+      public java.lang.String getClassName() {
+        java.lang.Object ref = className_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            className_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string class_name = 1;</code>
+       * @return The bytes for className.
+       */
+      public com.google.protobuf.ByteString
+          getClassNameBytes() {
+        java.lang.Object ref = className_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          className_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string class_name = 1;</code>
+       * @param value The className to set.
+       * @return This builder for chaining.
+       */
+      public Builder setClassName(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000001;
+        className_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string class_name = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearClassName() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        className_ = getDefaultInstance().getClassName();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string class_name = 1;</code>
+       * @param value The bytes for className to set.
+       * @return This builder for chaining.
+       */
+      public Builder setClassNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000001;
+        className_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object methodName_ = "";
+      /**
+       * <code>optional string method_name = 2;</code>
+       * @return Whether the methodName field is set.
+       */
+      public boolean hasMethodName() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <code>optional string method_name = 2;</code>
+       * @return The methodName.
+       */
+      public java.lang.String getMethodName() {
+        java.lang.Object ref = methodName_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            methodName_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string method_name = 2;</code>
+       * @return The bytes for methodName.
+       */
+      public com.google.protobuf.ByteString
+          getMethodNameBytes() {
+        java.lang.Object ref = methodName_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          methodName_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string method_name = 2;</code>
+       * @param value The methodName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMethodName(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000002;
+        methodName_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string method_name = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMethodName() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        methodName_ = getDefaultInstance().getMethodName();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string method_name = 2;</code>
+       * @param value The bytes for methodName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMethodNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000002;
+        methodName_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object fileName_ = "";
+      /**
+       * <code>optional string file_name = 3;</code>
+       * @return Whether the fileName field is set.
+       */
+      public boolean hasFileName() {
+        return ((bitField0_ & 0x00000004) != 0);
+      }
+      /**
+       * <code>optional string file_name = 3;</code>
+       * @return The fileName.
+       */
+      public java.lang.String getFileName() {
+        java.lang.Object ref = fileName_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            fileName_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string file_name = 3;</code>
+       * @return The bytes for fileName.
+       */
+      public com.google.protobuf.ByteString
+          getFileNameBytes() {
+        java.lang.Object ref = fileName_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          fileName_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string file_name = 3;</code>
+       * @param value The fileName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFileName(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000004;
+        fileName_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string file_name = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearFileName() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        fileName_ = getDefaultInstance().getFileName();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string file_name = 3;</code>
+       * @param value The bytes for fileName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFileNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000004;
+        fileName_ = value;
+        onChanged();
+        return this;
+      }
+
+      private int lineNumber_ ;
+      /**
+       * <code>optional int32 line_number = 4;</code>
+       * @return Whether the lineNumber field is set.
+       */
+      @java.lang.Override
+      public boolean hasLineNumber() {
+        return ((bitField0_ & 0x00000008) != 0);
+      }
+      /**
+       * <code>optional int32 line_number = 4;</code>
+       * @return The lineNumber.
+       */
+      @java.lang.Override
+      public int getLineNumber() {
+        return lineNumber_;
+      }
+      /**
+       * <code>optional int32 line_number = 4;</code>
+       * @param value The lineNumber to set.
+       * @return This builder for chaining.
+       */
+      public Builder setLineNumber(int value) {
+        bitField0_ |= 0x00000008;
+        lineNumber_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int32 line_number = 4;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearLineNumber() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        lineNumber_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int frameIndex_ ;
+      /**
+       * <pre>
+       * The index of the frame in the stack trace array.
+       * </pre>
+       *
+       * <code>optional int32 frame_index = 5;</code>
+       * @return Whether the frameIndex field is set.
+       */
+      @java.lang.Override
+      public boolean hasFrameIndex() {
+        return ((bitField0_ & 0x00000010) != 0);
+      }
+      /**
+       * <pre>
+       * The index of the frame in the stack trace array.
+       * </pre>
+       *
+       * <code>optional int32 frame_index = 5;</code>
+       * @return The frameIndex.
+       */
+      @java.lang.Override
+      public int getFrameIndex() {
+        return frameIndex_;
+      }
+      /**
+       * <pre>
+       * The index of the frame in the stack trace array.
+       * </pre>
+       *
+       * <code>optional int32 frame_index = 5;</code>
+       * @param value The frameIndex to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFrameIndex(int value) {
+        bitField0_ |= 0x00000010;
+        frameIndex_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The index of the frame in the stack trace array.
+       * </pre>
+       *
+       * <code>optional int32 frame_index = 5;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearFrameIndex() {
+        bitField0_ = (bitField0_ & ~0x00000010);
+        frameIndex_ = 0;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:android_studio.GradleFailureDetails.GradleExceptionStackFrameInfo)
+    }
+
+    // @@protoc_insertion_point(class_scope:android_studio.GradleFailureDetails.GradleExceptionStackFrameInfo)
+    private static final com.google.wireless.android.sdk.stats.GradleFailureDetails.GradleExceptionStackFrameInfo DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.google.wireless.android.sdk.stats.GradleFailureDetails.GradleExceptionStackFrameInfo();
+    }
+
+    public static com.google.wireless.android.sdk.stats.GradleFailureDetails.GradleExceptionStackFrameInfo getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<GradleExceptionStackFrameInfo>
+        PARSER = new com.google.protobuf.AbstractParser<GradleExceptionStackFrameInfo>() {
+      @java.lang.Override
+      public GradleExceptionStackFrameInfo parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<GradleExceptionStackFrameInfo> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<GradleExceptionStackFrameInfo> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.wireless.android.sdk.stats.GradleFailureDetails.GradleExceptionStackFrameInfo getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 

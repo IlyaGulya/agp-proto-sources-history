@@ -792,6 +792,10 @@ public enum BooleanOption
    * <code>SUPPORT_OEM_TOKEN_LIBRARIES = 192;</code>
    */
   SUPPORT_OEM_TOKEN_LIBRARIES(192),
+  /**
+   * <code>SKIP_APKS_VIA_BUNDLE_IF_POSSIBLE = 193;</code>
+   */
+  SKIP_APKS_VIA_BUNDLE_IF_POSSIBLE(193),
   UNRECOGNIZED(-1),
   ;
 
@@ -1567,6 +1571,10 @@ public enum BooleanOption
    * <code>SUPPORT_OEM_TOKEN_LIBRARIES = 192;</code>
    */
   public static final int SUPPORT_OEM_TOKEN_LIBRARIES_VALUE = 192;
+  /**
+   * <code>SKIP_APKS_VIA_BUNDLE_IF_POSSIBLE = 193;</code>
+   */
+  public static final int SKIP_APKS_VIA_BUNDLE_IF_POSSIBLE_VALUE = 193;
 
 
   public final int getNumber() {
@@ -1786,6 +1794,7 @@ public enum BooleanOption
       case 190: return R8_INTEGRATED_RESOURCE_SHRINKING;
       case 191: return PRIVACY_SANDBOX_SDK_ENABLE_LINT;
       case 192: return SUPPORT_OEM_TOKEN_LIBRARIES;
+      case 193: return SKIP_APKS_VIA_BUNDLE_IF_POSSIBLE;
       default: return null;
     }
   }
