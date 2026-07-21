@@ -214,4 +214,31 @@ public interface DynamicLayoutInspectorSessionOrBuilder extends
    * @return The hasFoldEvent.
    */
   boolean getHasFoldEvent();
+
+  /**
+   * <pre>
+   * Session data around state reads
+   * </pre>
+   *
+   * <code>optional .android_studio.DynamicLayoutInspectorStateReads state_reads = 9 [lazy = true];</code>
+   * @return Whether the stateReads field is set.
+   */
+  boolean hasStateReads();
+  /**
+   * <pre>
+   * Session data around state reads
+   * </pre>
+   *
+   * <code>optional .android_studio.DynamicLayoutInspectorStateReads state_reads = 9 [lazy = true];</code>
+   * @return The stateReads.
+   */
+  com.google.wireless.android.sdk.stats.DynamicLayoutInspectorStateReads getStateReads();
+  /**
+   * <pre>
+   * Session data around state reads
+   * </pre>
+   *
+   * <code>optional .android_studio.DynamicLayoutInspectorStateReads state_reads = 9 [lazy = true];</code>
+   */
+  com.google.wireless.android.sdk.stats.DynamicLayoutInspectorStateReadsOrBuilder getStateReadsOrBuilder();
 }

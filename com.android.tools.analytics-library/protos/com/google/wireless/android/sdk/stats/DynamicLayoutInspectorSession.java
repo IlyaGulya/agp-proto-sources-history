@@ -336,6 +336,44 @@ private static final long serialVersionUID = 0L;
     return hasFoldEvent_;
   }
 
+  public static final int STATE_READS_FIELD_NUMBER = 9;
+  private com.google.wireless.android.sdk.stats.DynamicLayoutInspectorStateReads stateReads_;
+  /**
+   * <pre>
+   * Session data around state reads
+   * </pre>
+   *
+   * <code>optional .android_studio.DynamicLayoutInspectorStateReads state_reads = 9 [lazy = true];</code>
+   * @return Whether the stateReads field is set.
+   */
+  @java.lang.Override
+  public boolean hasStateReads() {
+    return ((bitField0_ & 0x00000100) != 0);
+  }
+  /**
+   * <pre>
+   * Session data around state reads
+   * </pre>
+   *
+   * <code>optional .android_studio.DynamicLayoutInspectorStateReads state_reads = 9 [lazy = true];</code>
+   * @return The stateReads.
+   */
+  @java.lang.Override
+  public com.google.wireless.android.sdk.stats.DynamicLayoutInspectorStateReads getStateReads() {
+    return stateReads_ == null ? com.google.wireless.android.sdk.stats.DynamicLayoutInspectorStateReads.getDefaultInstance() : stateReads_;
+  }
+  /**
+   * <pre>
+   * Session data around state reads
+   * </pre>
+   *
+   * <code>optional .android_studio.DynamicLayoutInspectorStateReads state_reads = 9 [lazy = true];</code>
+   */
+  @java.lang.Override
+  public com.google.wireless.android.sdk.stats.DynamicLayoutInspectorStateReadsOrBuilder getStateReadsOrBuilder() {
+    return stateReads_ == null ? com.google.wireless.android.sdk.stats.DynamicLayoutInspectorStateReads.getDefaultInstance() : stateReads_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -373,6 +411,9 @@ private static final long serialVersionUID = 0L;
     }
     if (((bitField0_ & 0x00000080) != 0)) {
       output.writeBool(8, hasFoldEvent_);
+    }
+    if (((bitField0_ & 0x00000100) != 0)) {
+      output.writeMessage(9, getStateReads());
     }
     getUnknownFields().writeTo(output);
   }
@@ -414,6 +455,10 @@ private static final long serialVersionUID = 0L;
     if (((bitField0_ & 0x00000080) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeBoolSize(8, hasFoldEvent_);
+    }
+    if (((bitField0_ & 0x00000100) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(9, getStateReads());
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -470,6 +515,11 @@ private static final long serialVersionUID = 0L;
       if (getHasFoldEvent()
           != other.getHasFoldEvent()) return false;
     }
+    if (hasStateReads() != other.hasStateReads()) return false;
+    if (hasStateReads()) {
+      if (!getStateReads()
+          .equals(other.getStateReads())) return false;
+    }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -513,6 +563,10 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + HAS_FOLD_EVENT_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
           getHasFoldEvent());
+    }
+    if (hasStateReads()) {
+      hash = (37 * hash) + STATE_READS_FIELD_NUMBER;
+      hash = (53 * hash) + getStateReads().hashCode();
     }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
@@ -653,6 +707,7 @@ private static final long serialVersionUID = 0L;
         getSystemFieldBuilder();
         getGotoDeclarationFieldBuilder();
         getAttachFieldBuilder();
+        getStateReadsFieldBuilder();
       }
     }
     @java.lang.Override
@@ -695,6 +750,11 @@ private static final long serialVersionUID = 0L;
         attachBuilder_ = null;
       }
       hasFoldEvent_ = false;
+      stateReads_ = null;
+      if (stateReadsBuilder_ != null) {
+        stateReadsBuilder_.dispose();
+        stateReadsBuilder_ = null;
+      }
       return this;
     }
 
@@ -775,6 +835,12 @@ private static final long serialVersionUID = 0L;
         result.hasFoldEvent_ = hasFoldEvent_;
         to_bitField0_ |= 0x00000080;
       }
+      if (((from_bitField0_ & 0x00000100) != 0)) {
+        result.stateReads_ = stateReadsBuilder_ == null
+            ? stateReads_
+            : stateReadsBuilder_.build();
+        to_bitField0_ |= 0x00000100;
+      }
       result.bitField0_ |= to_bitField0_;
     }
 
@@ -813,6 +879,9 @@ private static final long serialVersionUID = 0L;
       }
       if (other.hasHasFoldEvent()) {
         setHasFoldEvent(other.getHasFoldEvent());
+      }
+      if (other.hasStateReads()) {
+        mergeStateReads(other.getStateReads());
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -894,6 +963,13 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000080;
               break;
             } // case 64
+            case 74: {
+              input.readMessage(
+                  getStateReadsFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000100;
+              break;
+            } // case 74
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -2050,6 +2126,161 @@ private static final long serialVersionUID = 0L;
       hasFoldEvent_ = false;
       onChanged();
       return this;
+    }
+
+    private com.google.wireless.android.sdk.stats.DynamicLayoutInspectorStateReads stateReads_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.DynamicLayoutInspectorStateReads, com.google.wireless.android.sdk.stats.DynamicLayoutInspectorStateReads.Builder, com.google.wireless.android.sdk.stats.DynamicLayoutInspectorStateReadsOrBuilder> stateReadsBuilder_;
+    /**
+     * <pre>
+     * Session data around state reads
+     * </pre>
+     *
+     * <code>optional .android_studio.DynamicLayoutInspectorStateReads state_reads = 9 [lazy = true];</code>
+     * @return Whether the stateReads field is set.
+     */
+    public boolean hasStateReads() {
+      return ((bitField0_ & 0x00000100) != 0);
+    }
+    /**
+     * <pre>
+     * Session data around state reads
+     * </pre>
+     *
+     * <code>optional .android_studio.DynamicLayoutInspectorStateReads state_reads = 9 [lazy = true];</code>
+     * @return The stateReads.
+     */
+    public com.google.wireless.android.sdk.stats.DynamicLayoutInspectorStateReads getStateReads() {
+      if (stateReadsBuilder_ == null) {
+        return stateReads_ == null ? com.google.wireless.android.sdk.stats.DynamicLayoutInspectorStateReads.getDefaultInstance() : stateReads_;
+      } else {
+        return stateReadsBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * Session data around state reads
+     * </pre>
+     *
+     * <code>optional .android_studio.DynamicLayoutInspectorStateReads state_reads = 9 [lazy = true];</code>
+     */
+    public Builder setStateReads(com.google.wireless.android.sdk.stats.DynamicLayoutInspectorStateReads value) {
+      if (stateReadsBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        stateReads_ = value;
+      } else {
+        stateReadsBuilder_.setMessage(value);
+      }
+      bitField0_ |= 0x00000100;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Session data around state reads
+     * </pre>
+     *
+     * <code>optional .android_studio.DynamicLayoutInspectorStateReads state_reads = 9 [lazy = true];</code>
+     */
+    public Builder setStateReads(
+        com.google.wireless.android.sdk.stats.DynamicLayoutInspectorStateReads.Builder builderForValue) {
+      if (stateReadsBuilder_ == null) {
+        stateReads_ = builderForValue.build();
+      } else {
+        stateReadsBuilder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x00000100;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Session data around state reads
+     * </pre>
+     *
+     * <code>optional .android_studio.DynamicLayoutInspectorStateReads state_reads = 9 [lazy = true];</code>
+     */
+    public Builder mergeStateReads(com.google.wireless.android.sdk.stats.DynamicLayoutInspectorStateReads value) {
+      if (stateReadsBuilder_ == null) {
+        if (((bitField0_ & 0x00000100) != 0) &&
+          stateReads_ != null &&
+          stateReads_ != com.google.wireless.android.sdk.stats.DynamicLayoutInspectorStateReads.getDefaultInstance()) {
+          getStateReadsBuilder().mergeFrom(value);
+        } else {
+          stateReads_ = value;
+        }
+      } else {
+        stateReadsBuilder_.mergeFrom(value);
+      }
+      bitField0_ |= 0x00000100;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Session data around state reads
+     * </pre>
+     *
+     * <code>optional .android_studio.DynamicLayoutInspectorStateReads state_reads = 9 [lazy = true];</code>
+     */
+    public Builder clearStateReads() {
+      bitField0_ = (bitField0_ & ~0x00000100);
+      stateReads_ = null;
+      if (stateReadsBuilder_ != null) {
+        stateReadsBuilder_.dispose();
+        stateReadsBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Session data around state reads
+     * </pre>
+     *
+     * <code>optional .android_studio.DynamicLayoutInspectorStateReads state_reads = 9 [lazy = true];</code>
+     */
+    public com.google.wireless.android.sdk.stats.DynamicLayoutInspectorStateReads.Builder getStateReadsBuilder() {
+      bitField0_ |= 0x00000100;
+      onChanged();
+      return getStateReadsFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * Session data around state reads
+     * </pre>
+     *
+     * <code>optional .android_studio.DynamicLayoutInspectorStateReads state_reads = 9 [lazy = true];</code>
+     */
+    public com.google.wireless.android.sdk.stats.DynamicLayoutInspectorStateReadsOrBuilder getStateReadsOrBuilder() {
+      if (stateReadsBuilder_ != null) {
+        return stateReadsBuilder_.getMessageOrBuilder();
+      } else {
+        return stateReads_ == null ?
+            com.google.wireless.android.sdk.stats.DynamicLayoutInspectorStateReads.getDefaultInstance() : stateReads_;
+      }
+    }
+    /**
+     * <pre>
+     * Session data around state reads
+     * </pre>
+     *
+     * <code>optional .android_studio.DynamicLayoutInspectorStateReads state_reads = 9 [lazy = true];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.DynamicLayoutInspectorStateReads, com.google.wireless.android.sdk.stats.DynamicLayoutInspectorStateReads.Builder, com.google.wireless.android.sdk.stats.DynamicLayoutInspectorStateReadsOrBuilder> 
+        getStateReadsFieldBuilder() {
+      if (stateReadsBuilder_ == null) {
+        stateReadsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.wireless.android.sdk.stats.DynamicLayoutInspectorStateReads, com.google.wireless.android.sdk.stats.DynamicLayoutInspectorStateReads.Builder, com.google.wireless.android.sdk.stats.DynamicLayoutInspectorStateReadsOrBuilder>(
+                getStateReads(),
+                getParentForChildren(),
+                isClean());
+        stateReads_ = null;
+      }
+      return stateReadsBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

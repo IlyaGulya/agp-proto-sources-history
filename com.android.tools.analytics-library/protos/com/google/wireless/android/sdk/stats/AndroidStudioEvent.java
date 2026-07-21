@@ -3402,6 +3402,14 @@ private static final long serialVersionUID = 0L;
      * <code>SML_RAG_EVENT = 361;</code>
      */
     SML_RAG_EVENT(361),
+    /**
+     * <pre>
+     * Event related to AI Glasses Pairing
+     * </pre>
+     *
+     * <code>GLASSES_PAIRING_EVENT = 362;</code>
+     */
+    GLASSES_PAIRING_EVENT(362),
     ;
 
     /**
@@ -6113,6 +6121,14 @@ private static final long serialVersionUID = 0L;
      * <code>SML_RAG_EVENT = 361;</code>
      */
     public static final int SML_RAG_EVENT_VALUE = 361;
+    /**
+     * <pre>
+     * Event related to AI Glasses Pairing
+     * </pre>
+     *
+     * <code>GLASSES_PAIRING_EVENT = 362;</code>
+     */
+    public static final int GLASSES_PAIRING_EVENT_VALUE = 362;
 
 
     public final int getNumber() {
@@ -6492,6 +6508,7 @@ private static final long serialVersionUID = 0L;
         case 359: return ASSET_STUDIO_WIZARD_EVENT;
         case 360: return NEXT_EDIT_PREDICTION_EVENT;
         case 361: return SML_RAG_EVENT;
+        case 362: return GLASSES_PAIRING_EVENT;
         default: return null;
       }
     }
@@ -12261,7 +12278,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional uint32 min_sdk = 2 [deprecated = true];</code>
        * @deprecated android_studio.AndroidStudioEvent.TemplatesUsage.TemplateModule.min_sdk is deprecated.
-       *     See studio_stats.proto;l=2114
+       *     See studio_stats.proto;l=2120
        * @return Whether the minSdk field is set.
        */
       @java.lang.Deprecated boolean hasMinSdk();
@@ -12272,7 +12289,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional uint32 min_sdk = 2 [deprecated = true];</code>
        * @deprecated android_studio.AndroidStudioEvent.TemplatesUsage.TemplateModule.min_sdk is deprecated.
-       *     See studio_stats.proto;l=2114
+       *     See studio_stats.proto;l=2120
        * @return The minSdk.
        */
       @java.lang.Deprecated int getMinSdk();
@@ -12803,7 +12820,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional uint32 min_sdk = 2 [deprecated = true];</code>
        * @deprecated android_studio.AndroidStudioEvent.TemplatesUsage.TemplateModule.min_sdk is deprecated.
-       *     See studio_stats.proto;l=2114
+       *     See studio_stats.proto;l=2120
        * @return Whether the minSdk field is set.
        */
       @java.lang.Override
@@ -12817,7 +12834,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional uint32 min_sdk = 2 [deprecated = true];</code>
        * @deprecated android_studio.AndroidStudioEvent.TemplatesUsage.TemplateModule.min_sdk is deprecated.
-       *     See studio_stats.proto;l=2114
+       *     See studio_stats.proto;l=2120
        * @return The minSdk.
        */
       @java.lang.Override
@@ -13455,7 +13472,7 @@ private static final long serialVersionUID = 0L;
          *
          * <code>optional uint32 min_sdk = 2 [deprecated = true];</code>
          * @deprecated android_studio.AndroidStudioEvent.TemplatesUsage.TemplateModule.min_sdk is deprecated.
-         *     See studio_stats.proto;l=2114
+         *     See studio_stats.proto;l=2120
          * @return Whether the minSdk field is set.
          */
         @java.lang.Override
@@ -13469,7 +13486,7 @@ private static final long serialVersionUID = 0L;
          *
          * <code>optional uint32 min_sdk = 2 [deprecated = true];</code>
          * @deprecated android_studio.AndroidStudioEvent.TemplatesUsage.TemplateModule.min_sdk is deprecated.
-         *     See studio_stats.proto;l=2114
+         *     See studio_stats.proto;l=2120
          * @return The minSdk.
          */
         @java.lang.Override
@@ -13483,7 +13500,7 @@ private static final long serialVersionUID = 0L;
          *
          * <code>optional uint32 min_sdk = 2 [deprecated = true];</code>
          * @deprecated android_studio.AndroidStudioEvent.TemplatesUsage.TemplateModule.min_sdk is deprecated.
-         *     See studio_stats.proto;l=2114
+         *     See studio_stats.proto;l=2120
          * @param value The minSdk to set.
          * @return This builder for chaining.
          */
@@ -13501,7 +13518,7 @@ private static final long serialVersionUID = 0L;
          *
          * <code>optional uint32 min_sdk = 2 [deprecated = true];</code>
          * @deprecated android_studio.AndroidStudioEvent.TemplatesUsage.TemplateModule.min_sdk is deprecated.
-         *     See studio_stats.proto;l=2114
+         *     See studio_stats.proto;l=2120
          * @return This builder for chaining.
          */
         @java.lang.Deprecated public Builder clearMinSdk() {
@@ -25401,6 +25418,44 @@ private static final long serialVersionUID = 0L;
     return smlRagEvent_ == null ? com.google.wireless.android.sdk.stats.SmlRagEvent.getDefaultInstance() : smlRagEvent_;
   }
 
+  public static final int GLASSES_PAIRING_EVENT_FIELD_NUMBER = 243;
+  private com.google.wireless.android.sdk.stats.GlassesPairingEvent glassesPairingEvent_;
+  /**
+   * <pre>
+   * set when kind = GLASSES_PAIRING_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.GlassesPairingEvent glasses_pairing_event = 243 [lazy = true];</code>
+   * @return Whether the glassesPairingEvent field is set.
+   */
+  @java.lang.Override
+  public boolean hasGlassesPairingEvent() {
+    return ((bitField7_ & 0x00001000) != 0);
+  }
+  /**
+   * <pre>
+   * set when kind = GLASSES_PAIRING_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.GlassesPairingEvent glasses_pairing_event = 243 [lazy = true];</code>
+   * @return The glassesPairingEvent.
+   */
+  @java.lang.Override
+  public com.google.wireless.android.sdk.stats.GlassesPairingEvent getGlassesPairingEvent() {
+    return glassesPairingEvent_ == null ? com.google.wireless.android.sdk.stats.GlassesPairingEvent.getDefaultInstance() : glassesPairingEvent_;
+  }
+  /**
+   * <pre>
+   * set when kind = GLASSES_PAIRING_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.GlassesPairingEvent glasses_pairing_event = 243 [lazy = true];</code>
+   */
+  @java.lang.Override
+  public com.google.wireless.android.sdk.stats.GlassesPairingEventOrBuilder getGlassesPairingEventOrBuilder() {
+    return glassesPairingEvent_ == null ? com.google.wireless.android.sdk.stats.GlassesPairingEvent.getDefaultInstance() : glassesPairingEvent_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -26140,6 +26195,9 @@ private static final long serialVersionUID = 0L;
     }
     if (((bitField7_ & 0x00000800) != 0)) {
       output.writeMessage(242, getSmlRagEvent());
+    }
+    if (((bitField7_ & 0x00001000) != 0)) {
+      output.writeMessage(243, getGlassesPairingEvent());
     }
     getUnknownFields().writeTo(output);
   }
@@ -27123,6 +27181,10 @@ private static final long serialVersionUID = 0L;
     if (((bitField7_ & 0x00000800) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(242, getSmlRagEvent());
+    }
+    if (((bitField7_ & 0x00001000) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(243, getGlassesPairingEvent());
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -28320,6 +28382,11 @@ private static final long serialVersionUID = 0L;
       if (!getSmlRagEvent()
           .equals(other.getSmlRagEvent())) return false;
     }
+    if (hasGlassesPairingEvent() != other.hasGlassesPairingEvent()) return false;
+    if (hasGlassesPairingEvent()) {
+      if (!getGlassesPairingEvent()
+          .equals(other.getGlassesPairingEvent())) return false;
+    }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -29301,6 +29368,10 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + SML_RAG_EVENT_FIELD_NUMBER;
       hash = (53 * hash) + getSmlRagEvent().hashCode();
     }
+    if (hasGlassesPairingEvent()) {
+      hash = (37 * hash) + GLASSES_PAIRING_EVENT_FIELD_NUMBER;
+      hash = (53 * hash) + getGlassesPairingEvent().hashCode();
+    }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -29648,6 +29719,7 @@ private static final long serialVersionUID = 0L;
         getAssetStudioWizardEventFieldBuilder();
         getNextEditPredictionEventFieldBuilder();
         getSmlRagEventFieldBuilder();
+        getGlassesPairingEventFieldBuilder();
       }
     }
     @java.lang.Override
@@ -30787,6 +30859,11 @@ private static final long serialVersionUID = 0L;
       if (smlRagEventBuilder_ != null) {
         smlRagEventBuilder_.dispose();
         smlRagEventBuilder_ = null;
+      }
+      glassesPairingEvent_ = null;
+      if (glassesPairingEventBuilder_ != null) {
+        glassesPairingEventBuilder_.dispose();
+        glassesPairingEventBuilder_ = null;
       }
       return this;
     }
@@ -32300,6 +32377,12 @@ private static final long serialVersionUID = 0L;
             : smlRagEventBuilder_.build();
         to_bitField7_ |= 0x00000800;
       }
+      if (((from_bitField7_ & 0x00040000) != 0)) {
+        result.glassesPairingEvent_ = glassesPairingEventBuilder_ == null
+            ? glassesPairingEvent_
+            : glassesPairingEventBuilder_.build();
+        to_bitField7_ |= 0x00001000;
+      }
       result.bitField6_ |= to_bitField6_;
       result.bitField7_ |= to_bitField7_;
     }
@@ -33145,6 +33228,9 @@ private static final long serialVersionUID = 0L;
       }
       if (other.hasSmlRagEvent()) {
         mergeSmlRagEvent(other.getSmlRagEvent());
+      }
+      if (other.hasGlassesPairingEvent()) {
+        mergeGlassesPairingEvent(other.getGlassesPairingEvent());
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -34934,6 +35020,13 @@ private static final long serialVersionUID = 0L;
               bitField7_ |= 0x00020000;
               break;
             } // case 1938
+            case 1946: {
+              input.readMessage(
+                  getGlassesPairingEventFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField7_ |= 0x00040000;
+              break;
+            } // case 1946
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -71804,6 +71897,161 @@ private static final long serialVersionUID = 0L;
         smlRagEvent_ = null;
       }
       return smlRagEventBuilder_;
+    }
+
+    private com.google.wireless.android.sdk.stats.GlassesPairingEvent glassesPairingEvent_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.GlassesPairingEvent, com.google.wireless.android.sdk.stats.GlassesPairingEvent.Builder, com.google.wireless.android.sdk.stats.GlassesPairingEventOrBuilder> glassesPairingEventBuilder_;
+    /**
+     * <pre>
+     * set when kind = GLASSES_PAIRING_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.GlassesPairingEvent glasses_pairing_event = 243 [lazy = true];</code>
+     * @return Whether the glassesPairingEvent field is set.
+     */
+    public boolean hasGlassesPairingEvent() {
+      return ((bitField7_ & 0x00040000) != 0);
+    }
+    /**
+     * <pre>
+     * set when kind = GLASSES_PAIRING_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.GlassesPairingEvent glasses_pairing_event = 243 [lazy = true];</code>
+     * @return The glassesPairingEvent.
+     */
+    public com.google.wireless.android.sdk.stats.GlassesPairingEvent getGlassesPairingEvent() {
+      if (glassesPairingEventBuilder_ == null) {
+        return glassesPairingEvent_ == null ? com.google.wireless.android.sdk.stats.GlassesPairingEvent.getDefaultInstance() : glassesPairingEvent_;
+      } else {
+        return glassesPairingEventBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * set when kind = GLASSES_PAIRING_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.GlassesPairingEvent glasses_pairing_event = 243 [lazy = true];</code>
+     */
+    public Builder setGlassesPairingEvent(com.google.wireless.android.sdk.stats.GlassesPairingEvent value) {
+      if (glassesPairingEventBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        glassesPairingEvent_ = value;
+      } else {
+        glassesPairingEventBuilder_.setMessage(value);
+      }
+      bitField7_ |= 0x00040000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = GLASSES_PAIRING_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.GlassesPairingEvent glasses_pairing_event = 243 [lazy = true];</code>
+     */
+    public Builder setGlassesPairingEvent(
+        com.google.wireless.android.sdk.stats.GlassesPairingEvent.Builder builderForValue) {
+      if (glassesPairingEventBuilder_ == null) {
+        glassesPairingEvent_ = builderForValue.build();
+      } else {
+        glassesPairingEventBuilder_.setMessage(builderForValue.build());
+      }
+      bitField7_ |= 0x00040000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = GLASSES_PAIRING_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.GlassesPairingEvent glasses_pairing_event = 243 [lazy = true];</code>
+     */
+    public Builder mergeGlassesPairingEvent(com.google.wireless.android.sdk.stats.GlassesPairingEvent value) {
+      if (glassesPairingEventBuilder_ == null) {
+        if (((bitField7_ & 0x00040000) != 0) &&
+          glassesPairingEvent_ != null &&
+          glassesPairingEvent_ != com.google.wireless.android.sdk.stats.GlassesPairingEvent.getDefaultInstance()) {
+          getGlassesPairingEventBuilder().mergeFrom(value);
+        } else {
+          glassesPairingEvent_ = value;
+        }
+      } else {
+        glassesPairingEventBuilder_.mergeFrom(value);
+      }
+      bitField7_ |= 0x00040000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = GLASSES_PAIRING_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.GlassesPairingEvent glasses_pairing_event = 243 [lazy = true];</code>
+     */
+    public Builder clearGlassesPairingEvent() {
+      bitField7_ = (bitField7_ & ~0x00040000);
+      glassesPairingEvent_ = null;
+      if (glassesPairingEventBuilder_ != null) {
+        glassesPairingEventBuilder_.dispose();
+        glassesPairingEventBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = GLASSES_PAIRING_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.GlassesPairingEvent glasses_pairing_event = 243 [lazy = true];</code>
+     */
+    public com.google.wireless.android.sdk.stats.GlassesPairingEvent.Builder getGlassesPairingEventBuilder() {
+      bitField7_ |= 0x00040000;
+      onChanged();
+      return getGlassesPairingEventFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * set when kind = GLASSES_PAIRING_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.GlassesPairingEvent glasses_pairing_event = 243 [lazy = true];</code>
+     */
+    public com.google.wireless.android.sdk.stats.GlassesPairingEventOrBuilder getGlassesPairingEventOrBuilder() {
+      if (glassesPairingEventBuilder_ != null) {
+        return glassesPairingEventBuilder_.getMessageOrBuilder();
+      } else {
+        return glassesPairingEvent_ == null ?
+            com.google.wireless.android.sdk.stats.GlassesPairingEvent.getDefaultInstance() : glassesPairingEvent_;
+      }
+    }
+    /**
+     * <pre>
+     * set when kind = GLASSES_PAIRING_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.GlassesPairingEvent glasses_pairing_event = 243 [lazy = true];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.GlassesPairingEvent, com.google.wireless.android.sdk.stats.GlassesPairingEvent.Builder, com.google.wireless.android.sdk.stats.GlassesPairingEventOrBuilder> 
+        getGlassesPairingEventFieldBuilder() {
+      if (glassesPairingEventBuilder_ == null) {
+        glassesPairingEventBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.wireless.android.sdk.stats.GlassesPairingEvent, com.google.wireless.android.sdk.stats.GlassesPairingEvent.Builder, com.google.wireless.android.sdk.stats.GlassesPairingEventOrBuilder>(
+                getGlassesPairingEvent(),
+                getParentForChildren(),
+                isClean());
+        glassesPairingEvent_ = null;
+      }
+      return glassesPairingEventBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

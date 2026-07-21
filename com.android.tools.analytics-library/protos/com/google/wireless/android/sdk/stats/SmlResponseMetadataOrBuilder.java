@@ -141,4 +141,36 @@ public interface SmlResponseMetadataOrBuilder extends
    */
   com.google.protobuf.ByteString
       getModelIdBytes();
+
+  /**
+   * <pre>
+   * If the response was generated within the Chat Timeline, the ID of the
+   * thread/session the response was generated for.
+   * </pre>
+   *
+   * <code>optional string thread_id = 6;</code>
+   * @return Whether the threadId field is set.
+   */
+  boolean hasThreadId();
+  /**
+   * <pre>
+   * If the response was generated within the Chat Timeline, the ID of the
+   * thread/session the response was generated for.
+   * </pre>
+   *
+   * <code>optional string thread_id = 6;</code>
+   * @return The threadId.
+   */
+  java.lang.String getThreadId();
+  /**
+   * <pre>
+   * If the response was generated within the Chat Timeline, the ID of the
+   * thread/session the response was generated for.
+   * </pre>
+   *
+   * <code>optional string thread_id = 6;</code>
+   * @return The bytes for threadId.
+   */
+  com.google.protobuf.ByteString
+      getThreadIdBytes();
 }
