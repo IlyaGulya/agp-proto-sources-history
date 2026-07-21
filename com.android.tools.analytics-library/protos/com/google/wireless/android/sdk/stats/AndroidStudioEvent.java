@@ -2297,6 +2297,32 @@ private static final long serialVersionUID = 0L;
             bitField5_ |= 0x00000400;
             break;
           }
+          case 1426: {
+            com.google.wireless.android.sdk.stats.IntelliJNewUISwitch.Builder subBuilder = null;
+            if (((bitField5_ & 0x00000800) != 0)) {
+              subBuilder = intellijNewUiSwitch_.toBuilder();
+            }
+            intellijNewUiSwitch_ = input.readMessage(com.google.wireless.android.sdk.stats.IntelliJNewUISwitch.PARSER, extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(intellijNewUiSwitch_);
+              intellijNewUiSwitch_ = subBuilder.buildPartial();
+            }
+            bitField5_ |= 0x00000800;
+            break;
+          }
+          case 1434: {
+            com.google.wireless.android.sdk.stats.EssentialsModeEvent.Builder subBuilder = null;
+            if (((bitField5_ & 0x00001000) != 0)) {
+              subBuilder = essentialsModeEvent_.toBuilder();
+            }
+            essentialsModeEvent_ = input.readMessage(com.google.wireless.android.sdk.stats.EssentialsModeEvent.PARSER, extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(essentialsModeEvent_);
+              essentialsModeEvent_ = subBuilder.buildPartial();
+            }
+            bitField5_ |= 0x00001000;
+            break;
+          }
           default: {
             if (!parseUnknownField(
                 input, unknownFields, extensionRegistry, tag)) {
@@ -5155,6 +5181,22 @@ private static final long serialVersionUID = 0L;
      * <code>SOONG_SYNC_EVENT = 293;</code>
      */
     SOONG_SYNC_EVENT(293),
+    /**
+     * <pre>
+     * Event related to the user toggling the new UI state
+     * </pre>
+     *
+     * <code>INTELLIJ_NEW_UI_SWITCH = 294;</code>
+     */
+    INTELLIJ_NEW_UI_SWITCH(294),
+    /**
+     * <pre>
+     * Event related to essentials mode state changes
+     * </pre>
+     *
+     * <code>ESSENTIALS_MODE_EVENT = 295;</code>
+     */
+    ESSENTIALS_MODE_EVENT(295),
     ;
 
     /**
@@ -7335,6 +7377,22 @@ private static final long serialVersionUID = 0L;
      * <code>SOONG_SYNC_EVENT = 293;</code>
      */
     public static final int SOONG_SYNC_EVENT_VALUE = 293;
+    /**
+     * <pre>
+     * Event related to the user toggling the new UI state
+     * </pre>
+     *
+     * <code>INTELLIJ_NEW_UI_SWITCH = 294;</code>
+     */
+    public static final int INTELLIJ_NEW_UI_SWITCH_VALUE = 294;
+    /**
+     * <pre>
+     * Event related to essentials mode state changes
+     * </pre>
+     *
+     * <code>ESSENTIALS_MODE_EVENT = 295;</code>
+     */
+    public static final int ESSENTIALS_MODE_EVENT_VALUE = 295;
 
 
     public final int getNumber() {
@@ -7646,6 +7704,8 @@ private static final long serialVersionUID = 0L;
         case 291: return UPGRADE_ANDROID_STUDIO_DIALOG;
         case 292: return DEBUGGER_EVENT;
         case 293: return SOONG_SYNC_EVENT;
+        case 294: return INTELLIJ_NEW_UI_SWITCH;
+        case 295: return ESSENTIALS_MODE_EVENT;
         default: return null;
       }
     }
@@ -23287,6 +23347,82 @@ private static final long serialVersionUID = 0L;
     return soongSyncStats_ == null ? com.google.wireless.android.sdk.stats.SoongSyncStats.getDefaultInstance() : soongSyncStats_;
   }
 
+  public static final int INTELLIJ_NEW_UI_SWITCH_FIELD_NUMBER = 178;
+  private com.google.wireless.android.sdk.stats.IntelliJNewUISwitch intellijNewUiSwitch_;
+  /**
+   * <pre>
+   * set when kind = INTELLIJ_NEW_UI_SWITCH
+   * </pre>
+   *
+   * <code>optional .android_studio.IntelliJNewUISwitch intellij_new_ui_switch = 178;</code>
+   * @return Whether the intellijNewUiSwitch field is set.
+   */
+  @java.lang.Override
+  public boolean hasIntellijNewUiSwitch() {
+    return ((bitField5_ & 0x00000800) != 0);
+  }
+  /**
+   * <pre>
+   * set when kind = INTELLIJ_NEW_UI_SWITCH
+   * </pre>
+   *
+   * <code>optional .android_studio.IntelliJNewUISwitch intellij_new_ui_switch = 178;</code>
+   * @return The intellijNewUiSwitch.
+   */
+  @java.lang.Override
+  public com.google.wireless.android.sdk.stats.IntelliJNewUISwitch getIntellijNewUiSwitch() {
+    return intellijNewUiSwitch_ == null ? com.google.wireless.android.sdk.stats.IntelliJNewUISwitch.getDefaultInstance() : intellijNewUiSwitch_;
+  }
+  /**
+   * <pre>
+   * set when kind = INTELLIJ_NEW_UI_SWITCH
+   * </pre>
+   *
+   * <code>optional .android_studio.IntelliJNewUISwitch intellij_new_ui_switch = 178;</code>
+   */
+  @java.lang.Override
+  public com.google.wireless.android.sdk.stats.IntelliJNewUISwitchOrBuilder getIntellijNewUiSwitchOrBuilder() {
+    return intellijNewUiSwitch_ == null ? com.google.wireless.android.sdk.stats.IntelliJNewUISwitch.getDefaultInstance() : intellijNewUiSwitch_;
+  }
+
+  public static final int ESSENTIALS_MODE_EVENT_FIELD_NUMBER = 179;
+  private com.google.wireless.android.sdk.stats.EssentialsModeEvent essentialsModeEvent_;
+  /**
+   * <pre>
+   * set when kind = ESSENTIALS_MODE_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.EssentialsModeEvent essentials_mode_event = 179;</code>
+   * @return Whether the essentialsModeEvent field is set.
+   */
+  @java.lang.Override
+  public boolean hasEssentialsModeEvent() {
+    return ((bitField5_ & 0x00001000) != 0);
+  }
+  /**
+   * <pre>
+   * set when kind = ESSENTIALS_MODE_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.EssentialsModeEvent essentials_mode_event = 179;</code>
+   * @return The essentialsModeEvent.
+   */
+  @java.lang.Override
+  public com.google.wireless.android.sdk.stats.EssentialsModeEvent getEssentialsModeEvent() {
+    return essentialsModeEvent_ == null ? com.google.wireless.android.sdk.stats.EssentialsModeEvent.getDefaultInstance() : essentialsModeEvent_;
+  }
+  /**
+   * <pre>
+   * set when kind = ESSENTIALS_MODE_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.EssentialsModeEvent essentials_mode_event = 179;</code>
+   */
+  @java.lang.Override
+  public com.google.wireless.android.sdk.stats.EssentialsModeEventOrBuilder getEssentialsModeEventOrBuilder() {
+    return essentialsModeEvent_ == null ? com.google.wireless.android.sdk.stats.EssentialsModeEvent.getDefaultInstance() : essentialsModeEvent_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -23831,6 +23967,12 @@ private static final long serialVersionUID = 0L;
     }
     if (((bitField5_ & 0x00000400) != 0)) {
       output.writeMessage(177, getSoongSyncStats());
+    }
+    if (((bitField5_ & 0x00000800) != 0)) {
+      output.writeMessage(178, getIntellijNewUiSwitch());
+    }
+    if (((bitField5_ & 0x00001000) != 0)) {
+      output.writeMessage(179, getEssentialsModeEvent());
     }
     unknownFields.writeTo(output);
   }
@@ -24554,6 +24696,14 @@ private static final long serialVersionUID = 0L;
     if (((bitField5_ & 0x00000400) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(177, getSoongSyncStats());
+    }
+    if (((bitField5_ & 0x00000800) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(178, getIntellijNewUiSwitch());
+    }
+    if (((bitField5_ & 0x00001000) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(179, getEssentialsModeEvent());
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -25426,6 +25576,16 @@ private static final long serialVersionUID = 0L;
       if (!getSoongSyncStats()
           .equals(other.getSoongSyncStats())) return false;
     }
+    if (hasIntellijNewUiSwitch() != other.hasIntellijNewUiSwitch()) return false;
+    if (hasIntellijNewUiSwitch()) {
+      if (!getIntellijNewUiSwitch()
+          .equals(other.getIntellijNewUiSwitch())) return false;
+    }
+    if (hasEssentialsModeEvent() != other.hasEssentialsModeEvent()) return false;
+    if (hasEssentialsModeEvent()) {
+      if (!getEssentialsModeEvent()
+          .equals(other.getEssentialsModeEvent())) return false;
+    }
     if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
@@ -26147,6 +26307,14 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + SOONG_SYNC_STATS_FIELD_NUMBER;
       hash = (53 * hash) + getSoongSyncStats().hashCode();
     }
+    if (hasIntellijNewUiSwitch()) {
+      hash = (37 * hash) + INTELLIJ_NEW_UI_SWITCH_FIELD_NUMBER;
+      hash = (53 * hash) + getIntellijNewUiSwitch().hashCode();
+    }
+    if (hasEssentialsModeEvent()) {
+      hash = (37 * hash) + ESSENTIALS_MODE_EVENT_FIELD_NUMBER;
+      hash = (53 * hash) + getEssentialsModeEvent().hashCode();
+    }
     hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -26429,6 +26597,8 @@ private static final long serialVersionUID = 0L;
         getUpgradeAndroidStudioDialogFieldBuilder();
         getDebuggerEventFieldBuilder();
         getSoongSyncStatsFieldBuilder();
+        getIntellijNewUiSwitchFieldBuilder();
+        getEssentialsModeEventFieldBuilder();
       }
     }
     @java.lang.Override
@@ -27404,6 +27574,18 @@ private static final long serialVersionUID = 0L;
         soongSyncStatsBuilder_.clear();
       }
       bitField5_ = (bitField5_ & ~0x00010000);
+      if (intellijNewUiSwitchBuilder_ == null) {
+        intellijNewUiSwitch_ = null;
+      } else {
+        intellijNewUiSwitchBuilder_.clear();
+      }
+      bitField5_ = (bitField5_ & ~0x00020000);
+      if (essentialsModeEventBuilder_ == null) {
+        essentialsModeEvent_ = null;
+      } else {
+        essentialsModeEventBuilder_.clear();
+      }
+      bitField5_ = (bitField5_ & ~0x00040000);
       return this;
     }
 
@@ -28772,6 +28954,22 @@ private static final long serialVersionUID = 0L;
         }
         to_bitField5_ |= 0x00000400;
       }
+      if (((from_bitField5_ & 0x00020000) != 0)) {
+        if (intellijNewUiSwitchBuilder_ == null) {
+          result.intellijNewUiSwitch_ = intellijNewUiSwitch_;
+        } else {
+          result.intellijNewUiSwitch_ = intellijNewUiSwitchBuilder_.build();
+        }
+        to_bitField5_ |= 0x00000800;
+      }
+      if (((from_bitField5_ & 0x00040000) != 0)) {
+        if (essentialsModeEventBuilder_ == null) {
+          result.essentialsModeEvent_ = essentialsModeEvent_;
+        } else {
+          result.essentialsModeEvent_ = essentialsModeEventBuilder_.build();
+        }
+        to_bitField5_ |= 0x00001000;
+      }
       result.bitField0_ = to_bitField0_;
       result.bitField1_ = to_bitField1_;
       result.bitField2_ = to_bitField2_;
@@ -29460,6 +29658,12 @@ private static final long serialVersionUID = 0L;
       }
       if (other.hasSoongSyncStats()) {
         mergeSoongSyncStats(other.getSoongSyncStats());
+      }
+      if (other.hasIntellijNewUiSwitch()) {
+        mergeIntellijNewUiSwitch(other.getIntellijNewUiSwitch());
+      }
+      if (other.hasEssentialsModeEvent()) {
+        mergeEssentialsModeEvent(other.getEssentialsModeEvent());
       }
       this.mergeUnknownFields(other.unknownFields);
       onChanged();
@@ -56387,6 +56591,318 @@ private static final long serialVersionUID = 0L;
         soongSyncStats_ = null;
       }
       return soongSyncStatsBuilder_;
+    }
+
+    private com.google.wireless.android.sdk.stats.IntelliJNewUISwitch intellijNewUiSwitch_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.IntelliJNewUISwitch, com.google.wireless.android.sdk.stats.IntelliJNewUISwitch.Builder, com.google.wireless.android.sdk.stats.IntelliJNewUISwitchOrBuilder> intellijNewUiSwitchBuilder_;
+    /**
+     * <pre>
+     * set when kind = INTELLIJ_NEW_UI_SWITCH
+     * </pre>
+     *
+     * <code>optional .android_studio.IntelliJNewUISwitch intellij_new_ui_switch = 178;</code>
+     * @return Whether the intellijNewUiSwitch field is set.
+     */
+    public boolean hasIntellijNewUiSwitch() {
+      return ((bitField5_ & 0x00020000) != 0);
+    }
+    /**
+     * <pre>
+     * set when kind = INTELLIJ_NEW_UI_SWITCH
+     * </pre>
+     *
+     * <code>optional .android_studio.IntelliJNewUISwitch intellij_new_ui_switch = 178;</code>
+     * @return The intellijNewUiSwitch.
+     */
+    public com.google.wireless.android.sdk.stats.IntelliJNewUISwitch getIntellijNewUiSwitch() {
+      if (intellijNewUiSwitchBuilder_ == null) {
+        return intellijNewUiSwitch_ == null ? com.google.wireless.android.sdk.stats.IntelliJNewUISwitch.getDefaultInstance() : intellijNewUiSwitch_;
+      } else {
+        return intellijNewUiSwitchBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * set when kind = INTELLIJ_NEW_UI_SWITCH
+     * </pre>
+     *
+     * <code>optional .android_studio.IntelliJNewUISwitch intellij_new_ui_switch = 178;</code>
+     */
+    public Builder setIntellijNewUiSwitch(com.google.wireless.android.sdk.stats.IntelliJNewUISwitch value) {
+      if (intellijNewUiSwitchBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        intellijNewUiSwitch_ = value;
+        onChanged();
+      } else {
+        intellijNewUiSwitchBuilder_.setMessage(value);
+      }
+      bitField5_ |= 0x00020000;
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = INTELLIJ_NEW_UI_SWITCH
+     * </pre>
+     *
+     * <code>optional .android_studio.IntelliJNewUISwitch intellij_new_ui_switch = 178;</code>
+     */
+    public Builder setIntellijNewUiSwitch(
+        com.google.wireless.android.sdk.stats.IntelliJNewUISwitch.Builder builderForValue) {
+      if (intellijNewUiSwitchBuilder_ == null) {
+        intellijNewUiSwitch_ = builderForValue.build();
+        onChanged();
+      } else {
+        intellijNewUiSwitchBuilder_.setMessage(builderForValue.build());
+      }
+      bitField5_ |= 0x00020000;
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = INTELLIJ_NEW_UI_SWITCH
+     * </pre>
+     *
+     * <code>optional .android_studio.IntelliJNewUISwitch intellij_new_ui_switch = 178;</code>
+     */
+    public Builder mergeIntellijNewUiSwitch(com.google.wireless.android.sdk.stats.IntelliJNewUISwitch value) {
+      if (intellijNewUiSwitchBuilder_ == null) {
+        if (((bitField5_ & 0x00020000) != 0) &&
+            intellijNewUiSwitch_ != null &&
+            intellijNewUiSwitch_ != com.google.wireless.android.sdk.stats.IntelliJNewUISwitch.getDefaultInstance()) {
+          intellijNewUiSwitch_ =
+            com.google.wireless.android.sdk.stats.IntelliJNewUISwitch.newBuilder(intellijNewUiSwitch_).mergeFrom(value).buildPartial();
+        } else {
+          intellijNewUiSwitch_ = value;
+        }
+        onChanged();
+      } else {
+        intellijNewUiSwitchBuilder_.mergeFrom(value);
+      }
+      bitField5_ |= 0x00020000;
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = INTELLIJ_NEW_UI_SWITCH
+     * </pre>
+     *
+     * <code>optional .android_studio.IntelliJNewUISwitch intellij_new_ui_switch = 178;</code>
+     */
+    public Builder clearIntellijNewUiSwitch() {
+      if (intellijNewUiSwitchBuilder_ == null) {
+        intellijNewUiSwitch_ = null;
+        onChanged();
+      } else {
+        intellijNewUiSwitchBuilder_.clear();
+      }
+      bitField5_ = (bitField5_ & ~0x00020000);
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = INTELLIJ_NEW_UI_SWITCH
+     * </pre>
+     *
+     * <code>optional .android_studio.IntelliJNewUISwitch intellij_new_ui_switch = 178;</code>
+     */
+    public com.google.wireless.android.sdk.stats.IntelliJNewUISwitch.Builder getIntellijNewUiSwitchBuilder() {
+      bitField5_ |= 0x00020000;
+      onChanged();
+      return getIntellijNewUiSwitchFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * set when kind = INTELLIJ_NEW_UI_SWITCH
+     * </pre>
+     *
+     * <code>optional .android_studio.IntelliJNewUISwitch intellij_new_ui_switch = 178;</code>
+     */
+    public com.google.wireless.android.sdk.stats.IntelliJNewUISwitchOrBuilder getIntellijNewUiSwitchOrBuilder() {
+      if (intellijNewUiSwitchBuilder_ != null) {
+        return intellijNewUiSwitchBuilder_.getMessageOrBuilder();
+      } else {
+        return intellijNewUiSwitch_ == null ?
+            com.google.wireless.android.sdk.stats.IntelliJNewUISwitch.getDefaultInstance() : intellijNewUiSwitch_;
+      }
+    }
+    /**
+     * <pre>
+     * set when kind = INTELLIJ_NEW_UI_SWITCH
+     * </pre>
+     *
+     * <code>optional .android_studio.IntelliJNewUISwitch intellij_new_ui_switch = 178;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.IntelliJNewUISwitch, com.google.wireless.android.sdk.stats.IntelliJNewUISwitch.Builder, com.google.wireless.android.sdk.stats.IntelliJNewUISwitchOrBuilder> 
+        getIntellijNewUiSwitchFieldBuilder() {
+      if (intellijNewUiSwitchBuilder_ == null) {
+        intellijNewUiSwitchBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.wireless.android.sdk.stats.IntelliJNewUISwitch, com.google.wireless.android.sdk.stats.IntelliJNewUISwitch.Builder, com.google.wireless.android.sdk.stats.IntelliJNewUISwitchOrBuilder>(
+                getIntellijNewUiSwitch(),
+                getParentForChildren(),
+                isClean());
+        intellijNewUiSwitch_ = null;
+      }
+      return intellijNewUiSwitchBuilder_;
+    }
+
+    private com.google.wireless.android.sdk.stats.EssentialsModeEvent essentialsModeEvent_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.EssentialsModeEvent, com.google.wireless.android.sdk.stats.EssentialsModeEvent.Builder, com.google.wireless.android.sdk.stats.EssentialsModeEventOrBuilder> essentialsModeEventBuilder_;
+    /**
+     * <pre>
+     * set when kind = ESSENTIALS_MODE_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.EssentialsModeEvent essentials_mode_event = 179;</code>
+     * @return Whether the essentialsModeEvent field is set.
+     */
+    public boolean hasEssentialsModeEvent() {
+      return ((bitField5_ & 0x00040000) != 0);
+    }
+    /**
+     * <pre>
+     * set when kind = ESSENTIALS_MODE_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.EssentialsModeEvent essentials_mode_event = 179;</code>
+     * @return The essentialsModeEvent.
+     */
+    public com.google.wireless.android.sdk.stats.EssentialsModeEvent getEssentialsModeEvent() {
+      if (essentialsModeEventBuilder_ == null) {
+        return essentialsModeEvent_ == null ? com.google.wireless.android.sdk.stats.EssentialsModeEvent.getDefaultInstance() : essentialsModeEvent_;
+      } else {
+        return essentialsModeEventBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * set when kind = ESSENTIALS_MODE_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.EssentialsModeEvent essentials_mode_event = 179;</code>
+     */
+    public Builder setEssentialsModeEvent(com.google.wireless.android.sdk.stats.EssentialsModeEvent value) {
+      if (essentialsModeEventBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        essentialsModeEvent_ = value;
+        onChanged();
+      } else {
+        essentialsModeEventBuilder_.setMessage(value);
+      }
+      bitField5_ |= 0x00040000;
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = ESSENTIALS_MODE_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.EssentialsModeEvent essentials_mode_event = 179;</code>
+     */
+    public Builder setEssentialsModeEvent(
+        com.google.wireless.android.sdk.stats.EssentialsModeEvent.Builder builderForValue) {
+      if (essentialsModeEventBuilder_ == null) {
+        essentialsModeEvent_ = builderForValue.build();
+        onChanged();
+      } else {
+        essentialsModeEventBuilder_.setMessage(builderForValue.build());
+      }
+      bitField5_ |= 0x00040000;
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = ESSENTIALS_MODE_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.EssentialsModeEvent essentials_mode_event = 179;</code>
+     */
+    public Builder mergeEssentialsModeEvent(com.google.wireless.android.sdk.stats.EssentialsModeEvent value) {
+      if (essentialsModeEventBuilder_ == null) {
+        if (((bitField5_ & 0x00040000) != 0) &&
+            essentialsModeEvent_ != null &&
+            essentialsModeEvent_ != com.google.wireless.android.sdk.stats.EssentialsModeEvent.getDefaultInstance()) {
+          essentialsModeEvent_ =
+            com.google.wireless.android.sdk.stats.EssentialsModeEvent.newBuilder(essentialsModeEvent_).mergeFrom(value).buildPartial();
+        } else {
+          essentialsModeEvent_ = value;
+        }
+        onChanged();
+      } else {
+        essentialsModeEventBuilder_.mergeFrom(value);
+      }
+      bitField5_ |= 0x00040000;
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = ESSENTIALS_MODE_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.EssentialsModeEvent essentials_mode_event = 179;</code>
+     */
+    public Builder clearEssentialsModeEvent() {
+      if (essentialsModeEventBuilder_ == null) {
+        essentialsModeEvent_ = null;
+        onChanged();
+      } else {
+        essentialsModeEventBuilder_.clear();
+      }
+      bitField5_ = (bitField5_ & ~0x00040000);
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = ESSENTIALS_MODE_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.EssentialsModeEvent essentials_mode_event = 179;</code>
+     */
+    public com.google.wireless.android.sdk.stats.EssentialsModeEvent.Builder getEssentialsModeEventBuilder() {
+      bitField5_ |= 0x00040000;
+      onChanged();
+      return getEssentialsModeEventFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * set when kind = ESSENTIALS_MODE_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.EssentialsModeEvent essentials_mode_event = 179;</code>
+     */
+    public com.google.wireless.android.sdk.stats.EssentialsModeEventOrBuilder getEssentialsModeEventOrBuilder() {
+      if (essentialsModeEventBuilder_ != null) {
+        return essentialsModeEventBuilder_.getMessageOrBuilder();
+      } else {
+        return essentialsModeEvent_ == null ?
+            com.google.wireless.android.sdk.stats.EssentialsModeEvent.getDefaultInstance() : essentialsModeEvent_;
+      }
+    }
+    /**
+     * <pre>
+     * set when kind = ESSENTIALS_MODE_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.EssentialsModeEvent essentials_mode_event = 179;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.EssentialsModeEvent, com.google.wireless.android.sdk.stats.EssentialsModeEvent.Builder, com.google.wireless.android.sdk.stats.EssentialsModeEventOrBuilder> 
+        getEssentialsModeEventFieldBuilder() {
+      if (essentialsModeEventBuilder_ == null) {
+        essentialsModeEventBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.wireless.android.sdk.stats.EssentialsModeEvent, com.google.wireless.android.sdk.stats.EssentialsModeEvent.Builder, com.google.wireless.android.sdk.stats.EssentialsModeEventOrBuilder>(
+                getEssentialsModeEvent(),
+                getParentForChildren(),
+                isClean());
+        essentialsModeEvent_ = null;
+      }
+      return essentialsModeEventBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

@@ -114,6 +114,11 @@ private static final long serialVersionUID = 0L;
             bitField0_ |= 0x00000010;
             break;
           }
+          case 48: {
+            bitField0_ |= 0x00000020;
+            essentialsMode_ = input.readBool();
+            break;
+          }
           default: {
             if (!parseUnknownField(
                 input, unknownFields, extensionRegistry, tag)) {
@@ -4585,6 +4590,33 @@ private static final long serialVersionUID = 0L;
     return exception_ == null ? com.google.wireless.android.sdk.stats.SystemHealthEvent.Exception.getDefaultInstance() : exception_;
   }
 
+  public static final int ESSENTIALS_MODE_FIELD_NUMBER = 6;
+  private boolean essentialsMode_;
+  /**
+   * <pre>
+   * Whether the IDE is in Essentials Mode
+   * </pre>
+   *
+   * <code>optional bool essentials_mode = 6;</code>
+   * @return Whether the essentialsMode field is set.
+   */
+  @java.lang.Override
+  public boolean hasEssentialsMode() {
+    return ((bitField0_ & 0x00000020) != 0);
+  }
+  /**
+   * <pre>
+   * Whether the IDE is in Essentials Mode
+   * </pre>
+   *
+   * <code>optional bool essentials_mode = 6;</code>
+   * @return The essentialsMode.
+   */
+  @java.lang.Override
+  public boolean getEssentialsMode() {
+    return essentialsMode_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -4614,6 +4646,9 @@ private static final long serialVersionUID = 0L;
     if (((bitField0_ & 0x00000010) != 0)) {
       output.writeMessage(5, getException());
     }
+    if (((bitField0_ & 0x00000020) != 0)) {
+      output.writeBool(6, essentialsMode_);
+    }
     unknownFields.writeTo(output);
   }
 
@@ -4642,6 +4677,10 @@ private static final long serialVersionUID = 0L;
     if (((bitField0_ & 0x00000010) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(5, getException());
+    }
+    if (((bitField0_ & 0x00000020) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeBoolSize(6, essentialsMode_);
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -4682,6 +4721,11 @@ private static final long serialVersionUID = 0L;
       if (!getException()
           .equals(other.getException())) return false;
     }
+    if (hasEssentialsMode() != other.hasEssentialsMode()) return false;
+    if (hasEssentialsMode()) {
+      if (getEssentialsMode()
+          != other.getEssentialsMode()) return false;
+    }
     if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
@@ -4712,6 +4756,11 @@ private static final long serialVersionUID = 0L;
     if (hasException()) {
       hash = (37 * hash) + EXCEPTION_FIELD_NUMBER;
       hash = (53 * hash) + getException().hashCode();
+    }
+    if (hasEssentialsMode()) {
+      hash = (37 * hash) + ESSENTIALS_MODE_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getEssentialsMode());
     }
     hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
@@ -4876,6 +4925,8 @@ private static final long serialVersionUID = 0L;
         exceptionBuilder_.clear();
       }
       bitField0_ = (bitField0_ & ~0x00000010);
+      essentialsMode_ = false;
+      bitField0_ = (bitField0_ & ~0x00000020);
       return this;
     }
 
@@ -4940,6 +4991,10 @@ private static final long serialVersionUID = 0L;
         }
         to_bitField0_ |= 0x00000010;
       }
+      if (((from_bitField0_ & 0x00000020) != 0)) {
+        result.essentialsMode_ = essentialsMode_;
+        to_bitField0_ |= 0x00000020;
+      }
       result.bitField0_ = to_bitField0_;
       onBuilt();
       return result;
@@ -5003,6 +5058,9 @@ private static final long serialVersionUID = 0L;
       }
       if (other.hasException()) {
         mergeException(other.getException());
+      }
+      if (other.hasEssentialsMode()) {
+        setEssentialsMode(other.getEssentialsMode());
       }
       this.mergeUnknownFields(other.unknownFields);
       onChanged();
@@ -5699,6 +5757,61 @@ private static final long serialVersionUID = 0L;
         exception_ = null;
       }
       return exceptionBuilder_;
+    }
+
+    private boolean essentialsMode_ ;
+    /**
+     * <pre>
+     * Whether the IDE is in Essentials Mode
+     * </pre>
+     *
+     * <code>optional bool essentials_mode = 6;</code>
+     * @return Whether the essentialsMode field is set.
+     */
+    @java.lang.Override
+    public boolean hasEssentialsMode() {
+      return ((bitField0_ & 0x00000020) != 0);
+    }
+    /**
+     * <pre>
+     * Whether the IDE is in Essentials Mode
+     * </pre>
+     *
+     * <code>optional bool essentials_mode = 6;</code>
+     * @return The essentialsMode.
+     */
+    @java.lang.Override
+    public boolean getEssentialsMode() {
+      return essentialsMode_;
+    }
+    /**
+     * <pre>
+     * Whether the IDE is in Essentials Mode
+     * </pre>
+     *
+     * <code>optional bool essentials_mode = 6;</code>
+     * @param value The essentialsMode to set.
+     * @return This builder for chaining.
+     */
+    public Builder setEssentialsMode(boolean value) {
+      bitField0_ |= 0x00000020;
+      essentialsMode_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Whether the IDE is in Essentials Mode
+     * </pre>
+     *
+     * <code>optional bool essentials_mode = 6;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearEssentialsMode() {
+      bitField0_ = (bitField0_ & ~0x00000020);
+      essentialsMode_ = false;
+      onChanged();
+      return this;
     }
     @java.lang.Override
     public final Builder setUnknownFields(
