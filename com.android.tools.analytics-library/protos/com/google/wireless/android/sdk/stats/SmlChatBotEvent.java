@@ -6838,7 +6838,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional bool success = 3 [deprecated = true];</code>
      * @deprecated android_studio.SmlChatBotEvent.ParseResult.success is deprecated.
-     *     See studio_stats.proto;l=15765
+     *     See studio_stats.proto;l=15774
      * @return Whether the success field is set.
      */
     @java.lang.Deprecated boolean hasSuccess();
@@ -6850,7 +6850,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional bool success = 3 [deprecated = true];</code>
      * @deprecated android_studio.SmlChatBotEvent.ParseResult.success is deprecated.
-     *     See studio_stats.proto;l=15765
+     *     See studio_stats.proto;l=15774
      * @return The success.
      */
     @java.lang.Deprecated boolean getSuccess();
@@ -6978,7 +6978,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional bool success = 3 [deprecated = true];</code>
      * @deprecated android_studio.SmlChatBotEvent.ParseResult.success is deprecated.
-     *     See studio_stats.proto;l=15765
+     *     See studio_stats.proto;l=15774
      * @return Whether the success field is set.
      */
     @java.lang.Override
@@ -6993,7 +6993,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional bool success = 3 [deprecated = true];</code>
      * @deprecated android_studio.SmlChatBotEvent.ParseResult.success is deprecated.
-     *     See studio_stats.proto;l=15765
+     *     See studio_stats.proto;l=15774
      * @return The success.
      */
     @java.lang.Override
@@ -7657,7 +7657,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional bool success = 3 [deprecated = true];</code>
        * @deprecated android_studio.SmlChatBotEvent.ParseResult.success is deprecated.
-       *     See studio_stats.proto;l=15765
+       *     See studio_stats.proto;l=15774
        * @return Whether the success field is set.
        */
       @java.lang.Override
@@ -7672,7 +7672,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional bool success = 3 [deprecated = true];</code>
        * @deprecated android_studio.SmlChatBotEvent.ParseResult.success is deprecated.
-       *     See studio_stats.proto;l=15765
+       *     See studio_stats.proto;l=15774
        * @return The success.
        */
       @java.lang.Override
@@ -7687,7 +7687,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional bool success = 3 [deprecated = true];</code>
        * @deprecated android_studio.SmlChatBotEvent.ParseResult.success is deprecated.
-       *     See studio_stats.proto;l=15765
+       *     See studio_stats.proto;l=15774
        * @param value The success to set.
        * @return This builder for chaining.
        */
@@ -7706,7 +7706,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional bool success = 3 [deprecated = true];</code>
        * @deprecated android_studio.SmlChatBotEvent.ParseResult.success is deprecated.
-       *     See studio_stats.proto;l=15765
+       *     See studio_stats.proto;l=15774
        * @return This builder for chaining.
        */
       @java.lang.Deprecated public Builder clearSuccess() {
@@ -11043,6 +11043,21 @@ private static final long serialVersionUID = 0L;
      * @return The status.
      */
     com.google.wireless.android.sdk.stats.SmlChatBotEvent.ToolCallStatus getStatus();
+
+    /**
+     * <code>optional .android_studio.SmlResponseMetadata metadata = 3 [lazy = true];</code>
+     * @return Whether the metadata field is set.
+     */
+    boolean hasMetadata();
+    /**
+     * <code>optional .android_studio.SmlResponseMetadata metadata = 3 [lazy = true];</code>
+     * @return The metadata.
+     */
+    com.google.wireless.android.sdk.stats.SmlResponseMetadata getMetadata();
+    /**
+     * <code>optional .android_studio.SmlResponseMetadata metadata = 3 [lazy = true];</code>
+     */
+    com.google.wireless.android.sdk.stats.SmlResponseMetadataOrBuilder getMetadataOrBuilder();
   }
   /**
    * Protobuf type {@code android_studio.SmlChatBotEvent.ToolCallFollowUpEvent}
@@ -11149,6 +11164,32 @@ private static final long serialVersionUID = 0L;
       return result == null ? com.google.wireless.android.sdk.stats.SmlChatBotEvent.ToolCallStatus.OTHER_STATUS : result;
     }
 
+    public static final int METADATA_FIELD_NUMBER = 3;
+    private com.google.wireless.android.sdk.stats.SmlResponseMetadata metadata_;
+    /**
+     * <code>optional .android_studio.SmlResponseMetadata metadata = 3 [lazy = true];</code>
+     * @return Whether the metadata field is set.
+     */
+    @java.lang.Override
+    public boolean hasMetadata() {
+      return ((bitField0_ & 0x00000004) != 0);
+    }
+    /**
+     * <code>optional .android_studio.SmlResponseMetadata metadata = 3 [lazy = true];</code>
+     * @return The metadata.
+     */
+    @java.lang.Override
+    public com.google.wireless.android.sdk.stats.SmlResponseMetadata getMetadata() {
+      return metadata_ == null ? com.google.wireless.android.sdk.stats.SmlResponseMetadata.getDefaultInstance() : metadata_;
+    }
+    /**
+     * <code>optional .android_studio.SmlResponseMetadata metadata = 3 [lazy = true];</code>
+     */
+    @java.lang.Override
+    public com.google.wireless.android.sdk.stats.SmlResponseMetadataOrBuilder getMetadataOrBuilder() {
+      return metadata_ == null ? com.google.wireless.android.sdk.stats.SmlResponseMetadata.getDefaultInstance() : metadata_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -11169,6 +11210,9 @@ private static final long serialVersionUID = 0L;
       if (((bitField0_ & 0x00000002) != 0)) {
         output.writeEnum(2, status_);
       }
+      if (((bitField0_ & 0x00000004) != 0)) {
+        output.writeMessage(3, getMetadata());
+      }
       getUnknownFields().writeTo(output);
     }
 
@@ -11184,6 +11228,10 @@ private static final long serialVersionUID = 0L;
       if (((bitField0_ & 0x00000002) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(2, status_);
+      }
+      if (((bitField0_ & 0x00000004) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getMetadata());
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -11209,6 +11257,11 @@ private static final long serialVersionUID = 0L;
       if (hasStatus()) {
         if (status_ != other.status_) return false;
       }
+      if (hasMetadata() != other.hasMetadata()) return false;
+      if (hasMetadata()) {
+        if (!getMetadata()
+            .equals(other.getMetadata())) return false;
+      }
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -11227,6 +11280,10 @@ private static final long serialVersionUID = 0L;
       if (hasStatus()) {
         hash = (37 * hash) + STATUS_FIELD_NUMBER;
         hash = (53 * hash) + status_;
+      }
+      if (hasMetadata()) {
+        hash = (37 * hash) + METADATA_FIELD_NUMBER;
+        hash = (53 * hash) + getMetadata().hashCode();
       }
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
@@ -11345,13 +11402,19 @@ private static final long serialVersionUID = 0L;
 
       // Construct using com.google.wireless.android.sdk.stats.SmlChatBotEvent.ToolCallFollowUpEvent.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getMetadataFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -11359,6 +11422,11 @@ private static final long serialVersionUID = 0L;
         bitField0_ = 0;
         toolName_ = "";
         status_ = 0;
+        metadata_ = null;
+        if (metadataBuilder_ != null) {
+          metadataBuilder_.dispose();
+          metadataBuilder_ = null;
+        }
         return this;
       }
 
@@ -11401,6 +11469,12 @@ private static final long serialVersionUID = 0L;
           result.status_ = status_;
           to_bitField0_ |= 0x00000002;
         }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.metadata_ = metadataBuilder_ == null
+              ? metadata_
+              : metadataBuilder_.build();
+          to_bitField0_ |= 0x00000004;
+        }
         result.bitField0_ |= to_bitField0_;
       }
 
@@ -11423,6 +11497,9 @@ private static final long serialVersionUID = 0L;
         }
         if (other.hasStatus()) {
           setStatus(other.getStatus());
+        }
+        if (other.hasMetadata()) {
+          mergeMetadata(other.getMetadata());
         }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
@@ -11467,6 +11544,13 @@ private static final long serialVersionUID = 0L;
                 }
                 break;
               } // case 16
+              case 26: {
+                input.readMessage(
+                    getMetadataFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -11604,6 +11688,125 @@ private static final long serialVersionUID = 0L;
         status_ = 0;
         onChanged();
         return this;
+      }
+
+      private com.google.wireless.android.sdk.stats.SmlResponseMetadata metadata_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.wireless.android.sdk.stats.SmlResponseMetadata, com.google.wireless.android.sdk.stats.SmlResponseMetadata.Builder, com.google.wireless.android.sdk.stats.SmlResponseMetadataOrBuilder> metadataBuilder_;
+      /**
+       * <code>optional .android_studio.SmlResponseMetadata metadata = 3 [lazy = true];</code>
+       * @return Whether the metadata field is set.
+       */
+      public boolean hasMetadata() {
+        return ((bitField0_ & 0x00000004) != 0);
+      }
+      /**
+       * <code>optional .android_studio.SmlResponseMetadata metadata = 3 [lazy = true];</code>
+       * @return The metadata.
+       */
+      public com.google.wireless.android.sdk.stats.SmlResponseMetadata getMetadata() {
+        if (metadataBuilder_ == null) {
+          return metadata_ == null ? com.google.wireless.android.sdk.stats.SmlResponseMetadata.getDefaultInstance() : metadata_;
+        } else {
+          return metadataBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>optional .android_studio.SmlResponseMetadata metadata = 3 [lazy = true];</code>
+       */
+      public Builder setMetadata(com.google.wireless.android.sdk.stats.SmlResponseMetadata value) {
+        if (metadataBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          metadata_ = value;
+        } else {
+          metadataBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional .android_studio.SmlResponseMetadata metadata = 3 [lazy = true];</code>
+       */
+      public Builder setMetadata(
+          com.google.wireless.android.sdk.stats.SmlResponseMetadata.Builder builderForValue) {
+        if (metadataBuilder_ == null) {
+          metadata_ = builderForValue.build();
+        } else {
+          metadataBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional .android_studio.SmlResponseMetadata metadata = 3 [lazy = true];</code>
+       */
+      public Builder mergeMetadata(com.google.wireless.android.sdk.stats.SmlResponseMetadata value) {
+        if (metadataBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) != 0) &&
+            metadata_ != null &&
+            metadata_ != com.google.wireless.android.sdk.stats.SmlResponseMetadata.getDefaultInstance()) {
+            getMetadataBuilder().mergeFrom(value);
+          } else {
+            metadata_ = value;
+          }
+        } else {
+          metadataBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional .android_studio.SmlResponseMetadata metadata = 3 [lazy = true];</code>
+       */
+      public Builder clearMetadata() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        metadata_ = null;
+        if (metadataBuilder_ != null) {
+          metadataBuilder_.dispose();
+          metadataBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional .android_studio.SmlResponseMetadata metadata = 3 [lazy = true];</code>
+       */
+      public com.google.wireless.android.sdk.stats.SmlResponseMetadata.Builder getMetadataBuilder() {
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return getMetadataFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>optional .android_studio.SmlResponseMetadata metadata = 3 [lazy = true];</code>
+       */
+      public com.google.wireless.android.sdk.stats.SmlResponseMetadataOrBuilder getMetadataOrBuilder() {
+        if (metadataBuilder_ != null) {
+          return metadataBuilder_.getMessageOrBuilder();
+        } else {
+          return metadata_ == null ?
+              com.google.wireless.android.sdk.stats.SmlResponseMetadata.getDefaultInstance() : metadata_;
+        }
+      }
+      /**
+       * <code>optional .android_studio.SmlResponseMetadata metadata = 3 [lazy = true];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.wireless.android.sdk.stats.SmlResponseMetadata, com.google.wireless.android.sdk.stats.SmlResponseMetadata.Builder, com.google.wireless.android.sdk.stats.SmlResponseMetadataOrBuilder> 
+          getMetadataFieldBuilder() {
+        if (metadataBuilder_ == null) {
+          metadataBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.wireless.android.sdk.stats.SmlResponseMetadata, com.google.wireless.android.sdk.stats.SmlResponseMetadata.Builder, com.google.wireless.android.sdk.stats.SmlResponseMetadataOrBuilder>(
+                  getMetadata(),
+                  getParentForChildren(),
+                  isClean());
+          metadata_ = null;
+        }
+        return metadataBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
