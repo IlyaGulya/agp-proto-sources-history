@@ -237,7 +237,7 @@ private static final long serialVersionUID = 0L;
     MANUAL_FIX_ROW(32),
     /**
      * <pre>
-     * Fix web checks page of new App Links Assistant.
+     * Fix all web checks page of new App Links Assistant.
      * </pre>
      *
      * <code>FIX_WEB_CHECKS_CREATE_JSON_BUTTON = 33;</code>
@@ -248,6 +248,14 @@ private static final long serialVersionUID = 0L;
      */
     FIX_WEB_CHECKS_SAVE_JSON_BUTTON(34),
     /**
+     * <code>FIX_WEB_CHECKS_PAGE = 36;</code>
+     */
+    FIX_WEB_CHECKS_PAGE(36),
+    /**
+     * <code>FIX_WEB_CHECKS_SINGLE_DOMAIN_DIFF_BUTTON = 37;</code>
+     */
+    FIX_WEB_CHECKS_SINGLE_DOMAIN_DIFF_BUTTON(37),
+    /**
      * <pre>
      * Event sources that are not tied to any particular UI.
      * </pre>
@@ -255,6 +263,18 @@ private static final long serialVersionUID = 0L;
      * <code>VALIDATION = 35;</code>
      */
     VALIDATION(35),
+    /**
+     * <pre>
+     * Single-domain JSON generation page of new App Links Assistant.
+     * </pre>
+     *
+     * <code>FIX_ONE_DOMAIN_PAGE = 38;</code>
+     */
+    FIX_ONE_DOMAIN_PAGE(38),
+    /**
+     * <code>FIX_ONE_DOMAIN_WEB_CHECKS_SAVE_JSON_BUTTON = 39;</code>
+     */
+    FIX_ONE_DOMAIN_WEB_CHECKS_SAVE_JSON_BUTTON(39),
     ;
 
     /**
@@ -431,7 +451,7 @@ private static final long serialVersionUID = 0L;
     public static final int MANUAL_FIX_ROW_VALUE = 32;
     /**
      * <pre>
-     * Fix web checks page of new App Links Assistant.
+     * Fix all web checks page of new App Links Assistant.
      * </pre>
      *
      * <code>FIX_WEB_CHECKS_CREATE_JSON_BUTTON = 33;</code>
@@ -442,6 +462,14 @@ private static final long serialVersionUID = 0L;
      */
     public static final int FIX_WEB_CHECKS_SAVE_JSON_BUTTON_VALUE = 34;
     /**
+     * <code>FIX_WEB_CHECKS_PAGE = 36;</code>
+     */
+    public static final int FIX_WEB_CHECKS_PAGE_VALUE = 36;
+    /**
+     * <code>FIX_WEB_CHECKS_SINGLE_DOMAIN_DIFF_BUTTON = 37;</code>
+     */
+    public static final int FIX_WEB_CHECKS_SINGLE_DOMAIN_DIFF_BUTTON_VALUE = 37;
+    /**
      * <pre>
      * Event sources that are not tied to any particular UI.
      * </pre>
@@ -449,6 +477,18 @@ private static final long serialVersionUID = 0L;
      * <code>VALIDATION = 35;</code>
      */
     public static final int VALIDATION_VALUE = 35;
+    /**
+     * <pre>
+     * Single-domain JSON generation page of new App Links Assistant.
+     * </pre>
+     *
+     * <code>FIX_ONE_DOMAIN_PAGE = 38;</code>
+     */
+    public static final int FIX_ONE_DOMAIN_PAGE_VALUE = 38;
+    /**
+     * <code>FIX_ONE_DOMAIN_WEB_CHECKS_SAVE_JSON_BUTTON = 39;</code>
+     */
+    public static final int FIX_ONE_DOMAIN_WEB_CHECKS_SAVE_JSON_BUTTON_VALUE = 39;
 
 
     public final int getNumber() {
@@ -507,7 +547,11 @@ private static final long serialVersionUID = 0L;
         case 32: return MANUAL_FIX_ROW;
         case 33: return FIX_WEB_CHECKS_CREATE_JSON_BUTTON;
         case 34: return FIX_WEB_CHECKS_SAVE_JSON_BUTTON;
+        case 36: return FIX_WEB_CHECKS_PAGE;
+        case 37: return FIX_WEB_CHECKS_SINGLE_DOMAIN_DIFF_BUTTON;
         case 35: return VALIDATION;
+        case 38: return FIX_ONE_DOMAIN_PAGE;
+        case 39: return FIX_ONE_DOMAIN_WEB_CHECKS_SAVE_JSON_BUTTON;
         default: return null;
       }
     }

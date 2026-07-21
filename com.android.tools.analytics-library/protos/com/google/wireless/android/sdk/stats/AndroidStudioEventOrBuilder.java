@@ -5542,4 +5542,31 @@ public interface AndroidStudioEventOrBuilder extends
    * <code>optional .android_studio.BackupUsageEvent backup_usage_event = 198 [lazy = true];</code>
    */
   com.google.wireless.android.sdk.stats.BackupUsageEventOrBuilder getBackupUsageEventOrBuilder();
+
+  /**
+   * <pre>
+   * set when kind = STARTUP_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.StartupEvent startup_event = 199 [lazy = true];</code>
+   * @return Whether the startupEvent field is set.
+   */
+  boolean hasStartupEvent();
+  /**
+   * <pre>
+   * set when kind = STARTUP_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.StartupEvent startup_event = 199 [lazy = true];</code>
+   * @return The startupEvent.
+   */
+  com.google.wireless.android.sdk.stats.StartupEvent getStartupEvent();
+  /**
+   * <pre>
+   * set when kind = STARTUP_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.StartupEvent startup_event = 199 [lazy = true];</code>
+   */
+  com.google.wireless.android.sdk.stats.StartupEventOrBuilder getStartupEventOrBuilder();
 }

@@ -181,6 +181,10 @@ private static final long serialVersionUID = 0L;
      * <code>USE_ANDROIDX_DEFAULT = 32;</code>
      */
     USE_ANDROIDX_DEFAULT(32),
+    /**
+     * <code>EXCLUDE_LIBRARY_COMPONENTS_FROM_CONSTRAINTS_DEFAULT = 33;</code>
+     */
+    EXCLUDE_LIBRARY_COMPONENTS_FROM_CONSTRAINTS_DEFAULT(33),
     ;
 
     /**
@@ -315,6 +319,10 @@ private static final long serialVersionUID = 0L;
      * <code>USE_ANDROIDX_DEFAULT = 32;</code>
      */
     public static final int USE_ANDROIDX_DEFAULT_VALUE = 32;
+    /**
+     * <code>EXCLUDE_LIBRARY_COMPONENTS_FROM_CONSTRAINTS_DEFAULT = 33;</code>
+     */
+    public static final int EXCLUDE_LIBRARY_COMPONENTS_FROM_CONSTRAINTS_DEFAULT_VALUE = 33;
 
 
     public final int getNumber() {
@@ -370,6 +378,7 @@ private static final long serialVersionUID = 0L;
         case 30: return SHADERS_DEFAULT;
         case 31: return MIGRATE_TEST_COVERAGE_ENABLED;
         case 32: return USE_ANDROIDX_DEFAULT;
+        case 33: return EXCLUDE_LIBRARY_COMPONENTS_FROM_CONSTRAINTS_DEFAULT;
         default: return null;
       }
     }
