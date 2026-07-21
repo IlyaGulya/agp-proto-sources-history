@@ -202,8 +202,9 @@ public enum StringOption
    */
   ANDROID_PRIVACY_SANDBOX_SDK_KOTLIN_COMPILER_EMBEDDABLE(47),
   /**
-   * <code>VALIDATION_ENGINE_VERSION = 48;</code>
+   * <code>VALIDATION_ENGINE_VERSION = 48 [deprecated = true];</code>
    */
+  @java.lang.Deprecated
   VALIDATION_ENGINE_VERSION(48),
   UNRECOGNIZED(-1),
   ;
@@ -401,9 +402,9 @@ public enum StringOption
    */
   public static final int ANDROID_PRIVACY_SANDBOX_SDK_KOTLIN_COMPILER_EMBEDDABLE_VALUE = 47;
   /**
-   * <code>VALIDATION_ENGINE_VERSION = 48;</code>
+   * <code>VALIDATION_ENGINE_VERSION = 48 [deprecated = true];</code>
    */
-  public static final int VALIDATION_ENGINE_VERSION_VALUE = 48;
+  @java.lang.Deprecated public static final int VALIDATION_ENGINE_VERSION_VALUE = 48;
 
 
   public final int getNumber() {
