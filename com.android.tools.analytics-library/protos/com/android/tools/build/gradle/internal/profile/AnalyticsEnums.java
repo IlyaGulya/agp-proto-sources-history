@@ -416,7 +416,7 @@ public final class AnalyticsEnums {
       "\034\n\030TARGET_SDK_VERSION_VALUE\020\005\022\027\n\023DEPENDE" +
       "NCIES_ACTION\020\006\022\026\n\022REGISTER_EXTENSION\020\007\022\025" +
       "\n\021UNIT_TEST_ENABLED\020\010\022\030\n\024ANDROID_TEST_EN" +
-      "ABLED\020\t*\224\020\n\033VariantPropertiesMethodType\022" +
+      "ABLED\020\t*\267\020\n\033VariantPropertiesMethodType\022" +
       "\"\n\036UNKNOWN_PROPERTIES_METHOD_TYPE\020\000\022\r\n\tA" +
       "RTIFACTS\020\001\022\031\n\025ASM_TRANSFORM_CLASSES\020\002\022\037\n" +
       "\033ASM_FRAMES_COMPUTATION_NODE\020\003\022\016\n\nBUILD_" +
@@ -467,9 +467,10 @@ public final class AnalyticsEnums {
       "VARIANT_AAR_METADATA_MIN_COMPILE_SDK\020K\022\034" +
       "\n\030SIGNING_CONFIG_ENABLE_V1\020L\022\034\n\030SIGNING_" +
       "CONFIG_ENABLE_V2\020M\022\034\n\030SIGNING_CONFIG_ENA" +
-      "BLE_V3\020N\022\034\n\030SIGNING_CONFIG_ENABLE_V4\020OB3" +
-      "\n/com.android.tools.build.gradle.interna" +
-      "l.profileP\001b\006proto3"
+      "BLE_V3\020N\022\034\n\030SIGNING_CONFIG_ENABLE_V4\020O\022!" +
+      "\n\035VARIANT_PSEUDOLOCALES_ENABLED\020PB3\n/com" +
+      ".android.tools.build.gradle.internal.pro" +
+      "fileP\001b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

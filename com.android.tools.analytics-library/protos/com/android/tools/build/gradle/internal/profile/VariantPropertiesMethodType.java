@@ -349,6 +349,10 @@ public enum VariantPropertiesMethodType
    * <code>SIGNING_CONFIG_ENABLE_V4 = 79;</code>
    */
   SIGNING_CONFIG_ENABLE_V4(79),
+  /**
+   * <code>VARIANT_PSEUDOLOCALES_ENABLED = 80;</code>
+   */
+  VARIANT_PSEUDOLOCALES_ENABLED(80),
   UNRECOGNIZED(-1),
   ;
 
@@ -692,6 +696,10 @@ public enum VariantPropertiesMethodType
    * <code>SIGNING_CONFIG_ENABLE_V4 = 79;</code>
    */
   public static final int SIGNING_CONFIG_ENABLE_V4_VALUE = 79;
+  /**
+   * <code>VARIANT_PSEUDOLOCALES_ENABLED = 80;</code>
+   */
+  public static final int VARIANT_PSEUDOLOCALES_ENABLED_VALUE = 80;
 
 
   public final int getNumber() {
@@ -798,6 +806,7 @@ public enum VariantPropertiesMethodType
       case 77: return SIGNING_CONFIG_ENABLE_V2;
       case 78: return SIGNING_CONFIG_ENABLE_V3;
       case 79: return SIGNING_CONFIG_ENABLE_V4;
+      case 80: return VARIANT_PSEUDOLOCALES_ENABLED;
       default: return null;
     }
   }

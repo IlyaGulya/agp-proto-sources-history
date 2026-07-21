@@ -348,6 +348,10 @@ private static final long serialVersionUID = 0L;
      * <code>FILTER_APPLIED = 19;</code>
      */
     FILTER_APPLIED(19),
+    /**
+     * <code>CONFIGURE_GC_WARNING_SUSPEND_CLICKED = 20;</code>
+     */
+    CONFIGURE_GC_WARNING_SUSPEND_CLICKED(20),
     ;
 
     /**
@@ -495,6 +499,10 @@ private static final long serialVersionUID = 0L;
      * <code>FILTER_APPLIED = 19;</code>
      */
     public static final int FILTER_APPLIED_VALUE = 19;
+    /**
+     * <code>CONFIGURE_GC_WARNING_SUSPEND_CLICKED = 20;</code>
+     */
+    public static final int CONFIGURE_GC_WARNING_SUSPEND_CLICKED_VALUE = 20;
 
 
     public final int getNumber() {
@@ -537,6 +545,7 @@ private static final long serialVersionUID = 0L;
         case 17: return GROUPING_CHANGED;
         case 18: return OPEN_MEMORY_SETTINGS_BUTTON_CLICKED;
         case 19: return FILTER_APPLIED;
+        case 20: return CONFIGURE_GC_WARNING_SUSPEND_CLICKED;
         default: return null;
       }
     }
@@ -623,6 +632,14 @@ private static final long serialVersionUID = 0L;
      * <code>OPTIMIZE_CONFIGURATION_PHASE_HELP = 6;</code>
      */
     OPTIMIZE_CONFIGURATION_PHASE_HELP(6),
+    /**
+     * <code>CONFIGURE_GC = 7;</code>
+     */
+    CONFIGURE_GC(7),
+    /**
+     * <code>CONFIGURATION_CACHING = 8;</code>
+     */
+    CONFIGURATION_CACHING(8),
     ;
 
     /**
@@ -653,6 +670,14 @@ private static final long serialVersionUID = 0L;
      * <code>OPTIMIZE_CONFIGURATION_PHASE_HELP = 6;</code>
      */
     public static final int OPTIMIZE_CONFIGURATION_PHASE_HELP_VALUE = 6;
+    /**
+     * <code>CONFIGURE_GC = 7;</code>
+     */
+    public static final int CONFIGURE_GC_VALUE = 7;
+    /**
+     * <code>CONFIGURATION_CACHING = 8;</code>
+     */
+    public static final int CONFIGURATION_CACHING_VALUE = 8;
 
 
     public final int getNumber() {
@@ -682,6 +707,8 @@ private static final long serialVersionUID = 0L;
         case 4: return UP_TO_DATE_EQUALS_FALSE_ISSUE_HELP;
         case 5: return NON_INCREMENTAL_ANNOTATION_PROCESSORS_HELP;
         case 6: return OPTIMIZE_CONFIGURATION_PHASE_HELP;
+        case 7: return CONFIGURE_GC;
+        case 8: return CONFIGURATION_CACHING;
         default: return null;
       }
     }
@@ -1163,6 +1190,10 @@ private static final long serialVersionUID = 0L;
        */
       CONFIGURATION_TIME_PLUGIN(22),
       /**
+       * <pre>
+       * Plugin warnings page when grouped by plugin.
+       * </pre>
+       *
        * <code>PLUGIN_WARNINGS_ROOT = 23;</code>
        */
       PLUGIN_WARNINGS_ROOT(23),
@@ -1170,6 +1201,22 @@ private static final long serialVersionUID = 0L;
        * <code>WARNINGS_ROOT = 24;</code>
        */
       WARNINGS_ROOT(24),
+      /**
+       * <pre>
+       * Task warnings page when grouped by plugin.
+       * </pre>
+       *
+       * <code>PLUGIN_TASK_WARNINGS = 25;</code>
+       */
+      PLUGIN_TASK_WARNINGS(25),
+      /**
+       * <code>CONFIGURATION_CACHE_ROOT = 26;</code>
+       */
+      CONFIGURATION_CACHE_ROOT(26),
+      /**
+       * <code>CONFIGURATION_CACHE_PLUGIN_WARNING = 27;</code>
+       */
+      CONFIGURATION_CACHE_PLUGIN_WARNING(27),
       ;
 
       /**
@@ -1265,6 +1312,10 @@ private static final long serialVersionUID = 0L;
        */
       public static final int CONFIGURATION_TIME_PLUGIN_VALUE = 22;
       /**
+       * <pre>
+       * Plugin warnings page when grouped by plugin.
+       * </pre>
+       *
        * <code>PLUGIN_WARNINGS_ROOT = 23;</code>
        */
       public static final int PLUGIN_WARNINGS_ROOT_VALUE = 23;
@@ -1272,6 +1323,22 @@ private static final long serialVersionUID = 0L;
        * <code>WARNINGS_ROOT = 24;</code>
        */
       public static final int WARNINGS_ROOT_VALUE = 24;
+      /**
+       * <pre>
+       * Task warnings page when grouped by plugin.
+       * </pre>
+       *
+       * <code>PLUGIN_TASK_WARNINGS = 25;</code>
+       */
+      public static final int PLUGIN_TASK_WARNINGS_VALUE = 25;
+      /**
+       * <code>CONFIGURATION_CACHE_ROOT = 26;</code>
+       */
+      public static final int CONFIGURATION_CACHE_ROOT_VALUE = 26;
+      /**
+       * <code>CONFIGURATION_CACHE_PLUGIN_WARNING = 27;</code>
+       */
+      public static final int CONFIGURATION_CACHE_PLUGIN_WARNING_VALUE = 27;
 
 
       public final int getNumber() {
@@ -1319,6 +1386,9 @@ private static final long serialVersionUID = 0L;
           case 22: return CONFIGURATION_TIME_PLUGIN;
           case 23: return PLUGIN_WARNINGS_ROOT;
           case 24: return WARNINGS_ROOT;
+          case 25: return PLUGIN_TASK_WARNINGS;
+          case 26: return CONFIGURATION_CACHE_ROOT;
+          case 27: return CONFIGURATION_CACHE_PLUGIN_WARNING;
           default: return null;
         }
       }
