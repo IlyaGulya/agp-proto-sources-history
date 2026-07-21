@@ -8900,6 +8900,14 @@ private static final long serialVersionUID = 0L;
      * <code>ANDROID_STUDIO_FOR_PLATFORM_INTERNAL = 8;</code>
      */
     ANDROID_STUDIO_FOR_PLATFORM_INTERNAL(8),
+    /**
+     * <pre>
+     * Standalone Android Studio profiler (codename Sherlock)
+     * </pre>
+     *
+     * <code>SHERLOCK = 9;</code>
+     */
+    SHERLOCK(9),
     ;
 
     /**
@@ -8950,6 +8958,14 @@ private static final long serialVersionUID = 0L;
      * <code>ANDROID_STUDIO_FOR_PLATFORM_INTERNAL = 8;</code>
      */
     public static final int ANDROID_STUDIO_FOR_PLATFORM_INTERNAL_VALUE = 8;
+    /**
+     * <pre>
+     * Standalone Android Studio profiler (codename Sherlock)
+     * </pre>
+     *
+     * <code>SHERLOCK = 9;</code>
+     */
+    public static final int SHERLOCK_VALUE = 9;
 
 
     public final int getNumber() {
@@ -8981,6 +8997,7 @@ private static final long serialVersionUID = 0L;
         case 6: return AGDE;
         case 7: return ANDROID_STUDIO_FOR_PLATFORM;
         case 8: return ANDROID_STUDIO_FOR_PLATFORM_INTERNAL;
+        case 9: return SHERLOCK;
         default: return null;
       }
     }
