@@ -238,6 +238,14 @@ private static final long serialVersionUID = 0L;
      * <code>PROJECT_JDK = 26;</code>
      */
     PROJECT_JDK(26),
+    /**
+     * <code>NON_CONSTANT_R_CLASS_DEFAULT = 27;</code>
+     */
+    NON_CONSTANT_R_CLASS_DEFAULT(27),
+    /**
+     * <code>ANDROID_MANIFEST_EXTRACT_NATIVE_LIBS = 28;</code>
+     */
+    ANDROID_MANIFEST_EXTRACT_NATIVE_LIBS(28),
     ;
 
     /**
@@ -348,6 +356,14 @@ private static final long serialVersionUID = 0L;
      * <code>PROJECT_JDK = 26;</code>
      */
     public static final int PROJECT_JDK_VALUE = 26;
+    /**
+     * <code>NON_CONSTANT_R_CLASS_DEFAULT = 27;</code>
+     */
+    public static final int NON_CONSTANT_R_CLASS_DEFAULT_VALUE = 27;
+    /**
+     * <code>ANDROID_MANIFEST_EXTRACT_NATIVE_LIBS = 28;</code>
+     */
+    public static final int ANDROID_MANIFEST_EXTRACT_NATIVE_LIBS_VALUE = 28;
 
 
     public final int getNumber() {
@@ -397,6 +413,8 @@ private static final long serialVersionUID = 0L;
         case 24: return AIDL_DEFAULT;
         case 25: return BUILD_CONFIG_DEFAULT;
         case 26: return PROJECT_JDK;
+        case 27: return NON_CONSTANT_R_CLASS_DEFAULT;
+        case 28: return ANDROID_MANIFEST_EXTRACT_NATIVE_LIBS;
         default: return null;
       }
     }

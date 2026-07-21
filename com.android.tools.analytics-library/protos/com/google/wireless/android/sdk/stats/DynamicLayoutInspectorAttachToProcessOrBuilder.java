@@ -90,4 +90,23 @@ public interface DynamicLayoutInspectorAttachToProcessOrBuilder extends
    * @return The composeErrorCode.
    */
   com.google.wireless.android.sdk.stats.DynamicLayoutInspectorErrorInfo.AttachErrorCode getComposeErrorCode();
+
+  /**
+   * <pre>
+   * When we attached to a process, were the multiple projects open?
+   * </pre>
+   *
+   * <code>optional bool multiple_projects_open = 5;</code>
+   * @return Whether the multipleProjectsOpen field is set.
+   */
+  boolean hasMultipleProjectsOpen();
+  /**
+   * <pre>
+   * When we attached to a process, were the multiple projects open?
+   * </pre>
+   *
+   * <code>optional bool multiple_projects_open = 5;</code>
+   * @return The multipleProjectsOpen.
+   */
+  boolean getMultipleProjectsOpen();
 }
