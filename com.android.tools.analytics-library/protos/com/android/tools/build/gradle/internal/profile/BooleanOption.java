@@ -940,6 +940,10 @@ public enum BooleanOption
    * <code>DISALLOW_KOTLIN_SOURCE_SETS = 229;</code>
    */
   DISALLOW_KOTLIN_SOURCE_SETS(229),
+  /**
+   * <code>TREAT_MANIFEST_MERGER_WARNINGS_AS_ERRORS = 230;</code>
+   */
+  TREAT_MANIFEST_MERGER_WARNINGS_AS_ERRORS(230),
   UNRECOGNIZED(-1),
   ;
 
@@ -1863,6 +1867,10 @@ public enum BooleanOption
    * <code>DISALLOW_KOTLIN_SOURCE_SETS = 229;</code>
    */
   public static final int DISALLOW_KOTLIN_SOURCE_SETS_VALUE = 229;
+  /**
+   * <code>TREAT_MANIFEST_MERGER_WARNINGS_AS_ERRORS = 230;</code>
+   */
+  public static final int TREAT_MANIFEST_MERGER_WARNINGS_AS_ERRORS_VALUE = 230;
 
 
   public final int getNumber() {
@@ -2119,6 +2127,7 @@ public enum BooleanOption
       case 227: return DISABLE_KMP_RUNTIME_CLASSPATH;
       case 228: return KMP_USE_JVM_PLATFORM_TYPE;
       case 229: return DISALLOW_KOTLIN_SOURCE_SETS;
+      case 230: return TREAT_MANIFEST_MERGER_WARNINGS_AS_ERRORS;
       default: return null;
     }
   }

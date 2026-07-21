@@ -6781,4 +6781,31 @@ public interface AndroidStudioEventOrBuilder extends
    * <code>optional .android_studio.GlassesPairingEvent glasses_pairing_event = 243 [lazy = true];</code>
    */
   com.google.wireless.android.sdk.stats.GlassesPairingEventOrBuilder getGlassesPairingEventOrBuilder();
+
+  /**
+   * <pre>
+   * set when kind = SERVER_PUSH_NOTIFICATION_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.ServerPushNotificationEvent server_push_notification_event = 244 [lazy = true];</code>
+   * @return Whether the serverPushNotificationEvent field is set.
+   */
+  boolean hasServerPushNotificationEvent();
+  /**
+   * <pre>
+   * set when kind = SERVER_PUSH_NOTIFICATION_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.ServerPushNotificationEvent server_push_notification_event = 244 [lazy = true];</code>
+   * @return The serverPushNotificationEvent.
+   */
+  com.google.wireless.android.sdk.stats.ServerPushNotificationEvent getServerPushNotificationEvent();
+  /**
+   * <pre>
+   * set when kind = SERVER_PUSH_NOTIFICATION_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.ServerPushNotificationEvent server_push_notification_event = 244 [lazy = true];</code>
+   */
+  com.google.wireless.android.sdk.stats.ServerPushNotificationEventOrBuilder getServerPushNotificationEventOrBuilder();
 }
