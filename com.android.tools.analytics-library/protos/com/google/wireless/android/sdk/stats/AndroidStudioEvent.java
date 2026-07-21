@@ -8228,6 +8228,22 @@ private static final long serialVersionUID = 0L;
      * <code>TYPE_EMPTY_FLAVOR_DIMENSION = 62;</code>
      */
     TYPE_EMPTY_FLAVOR_DIMENSION(62),
+    /**
+     * <pre>
+     * A sync issue type for exceptions that were converted to a sync issue.
+     * </pre>
+     *
+     * <code>TYPE_EXCEPTION = 63;</code>
+     */
+    TYPE_EXCEPTION(63),
+    /**
+     * <pre>
+     * Indicates that the namespace is missing.
+     * </pre>
+     *
+     * <code>TYPE_NAMESPACE_NOT_SET = 64;</code>
+     */
+    TYPE_NAMESPACE_NOT_SET(64),
     ;
 
     /**
@@ -8675,6 +8691,22 @@ private static final long serialVersionUID = 0L;
      * <code>TYPE_EMPTY_FLAVOR_DIMENSION = 62;</code>
      */
     public static final int TYPE_EMPTY_FLAVOR_DIMENSION_VALUE = 62;
+    /**
+     * <pre>
+     * A sync issue type for exceptions that were converted to a sync issue.
+     * </pre>
+     *
+     * <code>TYPE_EXCEPTION = 63;</code>
+     */
+    public static final int TYPE_EXCEPTION_VALUE = 63;
+    /**
+     * <pre>
+     * Indicates that the namespace is missing.
+     * </pre>
+     *
+     * <code>TYPE_NAMESPACE_NOT_SET = 64;</code>
+     */
+    public static final int TYPE_NAMESPACE_NOT_SET_VALUE = 64;
 
 
     public final int getNumber() {
@@ -8760,6 +8792,8 @@ private static final long serialVersionUID = 0L;
         case 60: return TYPE_REMOVED_API;
         case 61: return TYPE_KMP_INCORRECT_PLATFORM_SOURCE_SET;
         case 62: return TYPE_EMPTY_FLAVOR_DIMENSION;
+        case 63: return TYPE_EXCEPTION;
+        case 64: return TYPE_NAMESPACE_NOT_SET;
         default: return null;
       }
     }
