@@ -996,4 +996,25 @@ public interface EmulatorDetailsOrBuilder extends
    * <code>optional .android_studio.EmulatorGpuVkInfo active_vulkan_host_gpu = 41;</code>
    */
   com.google.wireless.android.sdk.stats.EmulatorGpuVkInfoOrBuilder getActiveVulkanHostGpuOrBuilder();
+
+  /**
+   * <pre>
+   * True if the emulator is running with high privileges (e.g. as
+   * administrator on Windows or as root on Linux).
+   * </pre>
+   *
+   * <code>optional bool has_elevated_privileges = 42;</code>
+   * @return Whether the hasElevatedPrivileges field is set.
+   */
+  boolean hasHasElevatedPrivileges();
+  /**
+   * <pre>
+   * True if the emulator is running with high privileges (e.g. as
+   * administrator on Windows or as root on Linux).
+   * </pre>
+   *
+   * <code>optional bool has_elevated_privileges = 42;</code>
+   * @return The hasElevatedPrivileges.
+   */
+  boolean getHasElevatedPrivileges();
 }

@@ -498,7 +498,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>optional int32 stopped_device_width = 3 [deprecated = true];</code>
    * @deprecated android_studio.ResizeComposePreviewEvent.stopped_device_width is deprecated.
-   *     See studio_stats.proto;l=17964
+   *     See studio_stats.proto;l=17971
    * @return Whether the stoppedDeviceWidth field is set.
    */
   @java.lang.Override
@@ -513,7 +513,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>optional int32 stopped_device_width = 3 [deprecated = true];</code>
    * @deprecated android_studio.ResizeComposePreviewEvent.stopped_device_width is deprecated.
-   *     See studio_stats.proto;l=17964
+   *     See studio_stats.proto;l=17971
    * @return The stoppedDeviceWidth.
    */
   @java.lang.Override
@@ -526,7 +526,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>optional int32 stopped_device_height = 4 [deprecated = true];</code>
    * @deprecated android_studio.ResizeComposePreviewEvent.stopped_device_height is deprecated.
-   *     See studio_stats.proto;l=17965
+   *     See studio_stats.proto;l=17972
    * @return Whether the stoppedDeviceHeight field is set.
    */
   @java.lang.Override
@@ -536,7 +536,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>optional int32 stopped_device_height = 4 [deprecated = true];</code>
    * @deprecated android_studio.ResizeComposePreviewEvent.stopped_device_height is deprecated.
-   *     See studio_stats.proto;l=17965
+   *     See studio_stats.proto;l=17972
    * @return The stoppedDeviceHeight.
    */
   @java.lang.Override
@@ -554,7 +554,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>optional int32 saved_device_width = 5 [deprecated = true];</code>
    * @deprecated android_studio.ResizeComposePreviewEvent.saved_device_width is deprecated.
-   *     See studio_stats.proto;l=17969
+   *     See studio_stats.proto;l=17976
    * @return Whether the savedDeviceWidth field is set.
    */
   @java.lang.Override
@@ -569,7 +569,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>optional int32 saved_device_width = 5 [deprecated = true];</code>
    * @deprecated android_studio.ResizeComposePreviewEvent.saved_device_width is deprecated.
-   *     See studio_stats.proto;l=17969
+   *     See studio_stats.proto;l=17976
    * @return The savedDeviceWidth.
    */
   @java.lang.Override
@@ -582,7 +582,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>optional int32 saved_device_height = 6 [deprecated = true];</code>
    * @deprecated android_studio.ResizeComposePreviewEvent.saved_device_height is deprecated.
-   *     See studio_stats.proto;l=17970
+   *     See studio_stats.proto;l=17977
    * @return Whether the savedDeviceHeight field is set.
    */
   @java.lang.Override
@@ -592,7 +592,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>optional int32 saved_device_height = 6 [deprecated = true];</code>
    * @deprecated android_studio.ResizeComposePreviewEvent.saved_device_height is deprecated.
-   *     See studio_stats.proto;l=17970
+   *     See studio_stats.proto;l=17977
    * @return The savedDeviceHeight.
    */
   @java.lang.Override
@@ -1505,7 +1505,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional int32 stopped_device_width = 3 [deprecated = true];</code>
      * @deprecated android_studio.ResizeComposePreviewEvent.stopped_device_width is deprecated.
-     *     See studio_stats.proto;l=17964
+     *     See studio_stats.proto;l=17971
      * @return Whether the stoppedDeviceWidth field is set.
      */
     @java.lang.Override
@@ -1520,7 +1520,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional int32 stopped_device_width = 3 [deprecated = true];</code>
      * @deprecated android_studio.ResizeComposePreviewEvent.stopped_device_width is deprecated.
-     *     See studio_stats.proto;l=17964
+     *     See studio_stats.proto;l=17971
      * @return The stoppedDeviceWidth.
      */
     @java.lang.Override
@@ -1535,7 +1535,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional int32 stopped_device_width = 3 [deprecated = true];</code>
      * @deprecated android_studio.ResizeComposePreviewEvent.stopped_device_width is deprecated.
-     *     See studio_stats.proto;l=17964
+     *     See studio_stats.proto;l=17971
      * @param value The stoppedDeviceWidth to set.
      * @return This builder for chaining.
      */
@@ -1554,7 +1554,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional int32 stopped_device_width = 3 [deprecated = true];</code>
      * @deprecated android_studio.ResizeComposePreviewEvent.stopped_device_width is deprecated.
-     *     See studio_stats.proto;l=17964
+     *     See studio_stats.proto;l=17971
      * @return This builder for chaining.
      */
     @java.lang.Deprecated public Builder clearStoppedDeviceWidth() {
@@ -1568,7 +1568,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>optional int32 stopped_device_height = 4 [deprecated = true];</code>
      * @deprecated android_studio.ResizeComposePreviewEvent.stopped_device_height is deprecated.
-     *     See studio_stats.proto;l=17965
+     *     See studio_stats.proto;l=17972
      * @return Whether the stoppedDeviceHeight field is set.
      */
     @java.lang.Override
@@ -1578,7 +1578,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>optional int32 stopped_device_height = 4 [deprecated = true];</code>
      * @deprecated android_studio.ResizeComposePreviewEvent.stopped_device_height is deprecated.
-     *     See studio_stats.proto;l=17965
+     *     See studio_stats.proto;l=17972
      * @return The stoppedDeviceHeight.
      */
     @java.lang.Override
@@ -1588,7 +1588,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>optional int32 stopped_device_height = 4 [deprecated = true];</code>
      * @deprecated android_studio.ResizeComposePreviewEvent.stopped_device_height is deprecated.
-     *     See studio_stats.proto;l=17965
+     *     See studio_stats.proto;l=17972
      * @param value The stoppedDeviceHeight to set.
      * @return This builder for chaining.
      */
@@ -1602,7 +1602,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>optional int32 stopped_device_height = 4 [deprecated = true];</code>
      * @deprecated android_studio.ResizeComposePreviewEvent.stopped_device_height is deprecated.
-     *     See studio_stats.proto;l=17965
+     *     See studio_stats.proto;l=17972
      * @return This builder for chaining.
      */
     @java.lang.Deprecated public Builder clearStoppedDeviceHeight() {
@@ -1621,7 +1621,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional int32 saved_device_width = 5 [deprecated = true];</code>
      * @deprecated android_studio.ResizeComposePreviewEvent.saved_device_width is deprecated.
-     *     See studio_stats.proto;l=17969
+     *     See studio_stats.proto;l=17976
      * @return Whether the savedDeviceWidth field is set.
      */
     @java.lang.Override
@@ -1636,7 +1636,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional int32 saved_device_width = 5 [deprecated = true];</code>
      * @deprecated android_studio.ResizeComposePreviewEvent.saved_device_width is deprecated.
-     *     See studio_stats.proto;l=17969
+     *     See studio_stats.proto;l=17976
      * @return The savedDeviceWidth.
      */
     @java.lang.Override
@@ -1651,7 +1651,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional int32 saved_device_width = 5 [deprecated = true];</code>
      * @deprecated android_studio.ResizeComposePreviewEvent.saved_device_width is deprecated.
-     *     See studio_stats.proto;l=17969
+     *     See studio_stats.proto;l=17976
      * @param value The savedDeviceWidth to set.
      * @return This builder for chaining.
      */
@@ -1670,7 +1670,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional int32 saved_device_width = 5 [deprecated = true];</code>
      * @deprecated android_studio.ResizeComposePreviewEvent.saved_device_width is deprecated.
-     *     See studio_stats.proto;l=17969
+     *     See studio_stats.proto;l=17976
      * @return This builder for chaining.
      */
     @java.lang.Deprecated public Builder clearSavedDeviceWidth() {
@@ -1684,7 +1684,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>optional int32 saved_device_height = 6 [deprecated = true];</code>
      * @deprecated android_studio.ResizeComposePreviewEvent.saved_device_height is deprecated.
-     *     See studio_stats.proto;l=17970
+     *     See studio_stats.proto;l=17977
      * @return Whether the savedDeviceHeight field is set.
      */
     @java.lang.Override
@@ -1694,7 +1694,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>optional int32 saved_device_height = 6 [deprecated = true];</code>
      * @deprecated android_studio.ResizeComposePreviewEvent.saved_device_height is deprecated.
-     *     See studio_stats.proto;l=17970
+     *     See studio_stats.proto;l=17977
      * @return The savedDeviceHeight.
      */
     @java.lang.Override
@@ -1704,7 +1704,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>optional int32 saved_device_height = 6 [deprecated = true];</code>
      * @deprecated android_studio.ResizeComposePreviewEvent.saved_device_height is deprecated.
-     *     See studio_stats.proto;l=17970
+     *     See studio_stats.proto;l=17977
      * @param value The savedDeviceHeight to set.
      * @return This builder for chaining.
      */
@@ -1718,7 +1718,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>optional int32 saved_device_height = 6 [deprecated = true];</code>
      * @deprecated android_studio.ResizeComposePreviewEvent.saved_device_height is deprecated.
-     *     See studio_stats.proto;l=17970
+     *     See studio_stats.proto;l=17977
      * @return This builder for chaining.
      */
     @java.lang.Deprecated public Builder clearSavedDeviceHeight() {

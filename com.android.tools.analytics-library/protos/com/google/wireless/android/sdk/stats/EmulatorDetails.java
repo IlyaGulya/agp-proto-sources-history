@@ -553,28 +553,34 @@ private static final long serialVersionUID = 0L;
      */
     HOST(1),
     /**
-     * <code>OFF = 2;</code>
+     * <code>OFF = 2 [deprecated = true];</code>
      */
+    @java.lang.Deprecated
     OFF(2),
     /**
-     * <code>GUEST = 3;</code>
+     * <code>GUEST = 3 [deprecated = true];</code>
      */
+    @java.lang.Deprecated
     GUEST(3),
     /**
-     * <code>MESA = 4;</code>
+     * <code>MESA = 4 [deprecated = true];</code>
      */
+    @java.lang.Deprecated
     MESA(4),
     /**
-     * <code>SWIFTSHADER = 5;</code>
+     * <code>SWIFTSHADER = 5 [deprecated = true];</code>
      */
+    @java.lang.Deprecated
     SWIFTSHADER(5),
     /**
-     * <code>ANGLE = 6;</code>
+     * <code>ANGLE = 6 [deprecated = true];</code>
      */
+    @java.lang.Deprecated
     ANGLE(6),
     /**
-     * <code>ANGLE9 = 7;</code>
+     * <code>ANGLE9 = 7 [deprecated = true];</code>
      */
+    @java.lang.Deprecated
     ANGLE9(7),
     /**
      * <code>SWIFTSHADER_INDIRECT = 8;</code>
@@ -585,9 +591,14 @@ private static final long serialVersionUID = 0L;
      */
     ANGLE_INDIRECT(9),
     /**
-     * <code>ANGLE9_INDIRECT = 10;</code>
+     * <code>ANGLE9_INDIRECT = 10 [deprecated = true];</code>
      */
+    @java.lang.Deprecated
     ANGLE9_INDIRECT(10),
+    /**
+     * <code>LAVAPIPE = 11;</code>
+     */
+    LAVAPIPE(11),
     /**
      * <code>ERROR_IN_EMULATOR_RENDERER = 255;</code>
      */
@@ -603,29 +614,29 @@ private static final long serialVersionUID = 0L;
      */
     public static final int HOST_VALUE = 1;
     /**
-     * <code>OFF = 2;</code>
+     * <code>OFF = 2 [deprecated = true];</code>
      */
-    public static final int OFF_VALUE = 2;
+    @java.lang.Deprecated public static final int OFF_VALUE = 2;
     /**
-     * <code>GUEST = 3;</code>
+     * <code>GUEST = 3 [deprecated = true];</code>
      */
-    public static final int GUEST_VALUE = 3;
+    @java.lang.Deprecated public static final int GUEST_VALUE = 3;
     /**
-     * <code>MESA = 4;</code>
+     * <code>MESA = 4 [deprecated = true];</code>
      */
-    public static final int MESA_VALUE = 4;
+    @java.lang.Deprecated public static final int MESA_VALUE = 4;
     /**
-     * <code>SWIFTSHADER = 5;</code>
+     * <code>SWIFTSHADER = 5 [deprecated = true];</code>
      */
-    public static final int SWIFTSHADER_VALUE = 5;
+    @java.lang.Deprecated public static final int SWIFTSHADER_VALUE = 5;
     /**
-     * <code>ANGLE = 6;</code>
+     * <code>ANGLE = 6 [deprecated = true];</code>
      */
-    public static final int ANGLE_VALUE = 6;
+    @java.lang.Deprecated public static final int ANGLE_VALUE = 6;
     /**
-     * <code>ANGLE9 = 7;</code>
+     * <code>ANGLE9 = 7 [deprecated = true];</code>
      */
-    public static final int ANGLE9_VALUE = 7;
+    @java.lang.Deprecated public static final int ANGLE9_VALUE = 7;
     /**
      * <code>SWIFTSHADER_INDIRECT = 8;</code>
      */
@@ -635,9 +646,13 @@ private static final long serialVersionUID = 0L;
      */
     public static final int ANGLE_INDIRECT_VALUE = 9;
     /**
-     * <code>ANGLE9_INDIRECT = 10;</code>
+     * <code>ANGLE9_INDIRECT = 10 [deprecated = true];</code>
      */
-    public static final int ANGLE9_INDIRECT_VALUE = 10;
+    @java.lang.Deprecated public static final int ANGLE9_INDIRECT_VALUE = 10;
+    /**
+     * <code>LAVAPIPE = 11;</code>
+     */
+    public static final int LAVAPIPE_VALUE = 11;
     /**
      * <code>ERROR_IN_EMULATOR_RENDERER = 255;</code>
      */
@@ -675,6 +690,7 @@ private static final long serialVersionUID = 0L;
         case 8: return SWIFTSHADER_INDIRECT;
         case 9: return ANGLE_INDIRECT;
         case 10: return ANGLE9_INDIRECT;
+        case 11: return LAVAPIPE;
         case 255: return ERROR_IN_EMULATOR_RENDERER;
         default: return null;
       }
@@ -2544,6 +2560,35 @@ private static final long serialVersionUID = 0L;
     return activeVulkanHostGpu_ == null ? com.google.wireless.android.sdk.stats.EmulatorGpuVkInfo.getDefaultInstance() : activeVulkanHostGpu_;
   }
 
+  public static final int HAS_ELEVATED_PRIVILEGES_FIELD_NUMBER = 42;
+  private boolean hasElevatedPrivileges_ = false;
+  /**
+   * <pre>
+   * True if the emulator is running with high privileges (e.g. as
+   * administrator on Windows or as root on Linux).
+   * </pre>
+   *
+   * <code>optional bool has_elevated_privileges = 42;</code>
+   * @return Whether the hasElevatedPrivileges field is set.
+   */
+  @java.lang.Override
+  public boolean hasHasElevatedPrivileges() {
+    return ((bitField1_ & 0x00000010) != 0);
+  }
+  /**
+   * <pre>
+   * True if the emulator is running with high privileges (e.g. as
+   * administrator on Windows or as root on Linux).
+   * </pre>
+   *
+   * <code>optional bool has_elevated_privileges = 42;</code>
+   * @return The hasElevatedPrivileges.
+   */
+  @java.lang.Override
+  public boolean getHasElevatedPrivileges() {
+    return hasElevatedPrivileges_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -2677,6 +2722,9 @@ private static final long serialVersionUID = 0L;
     }
     if (((bitField1_ & 0x00000008) != 0)) {
       output.writeMessage(41, getActiveVulkanHostGpu());
+    }
+    if (((bitField1_ & 0x00000010) != 0)) {
+      output.writeBool(42, hasElevatedPrivileges_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -2845,6 +2893,10 @@ private static final long serialVersionUID = 0L;
     if (((bitField1_ & 0x00000008) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(41, getActiveVulkanHostGpu());
+    }
+    if (((bitField1_ & 0x00000010) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeBoolSize(42, hasElevatedPrivileges_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -3043,6 +3095,11 @@ private static final long serialVersionUID = 0L;
       if (!getActiveVulkanHostGpu()
           .equals(other.getActiveVulkanHostGpu())) return false;
     }
+    if (hasHasElevatedPrivileges() != other.hasHasElevatedPrivileges()) return false;
+    if (hasHasElevatedPrivileges()) {
+      if (getHasElevatedPrivileges()
+          != other.getHasElevatedPrivileges()) return false;
+    }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -3221,6 +3278,11 @@ private static final long serialVersionUID = 0L;
     if (hasActiveVulkanHostGpu()) {
       hash = (37 * hash) + ACTIVE_VULKAN_HOST_GPU_FIELD_NUMBER;
       hash = (53 * hash) + getActiveVulkanHostGpu().hashCode();
+    }
+    if (hasHasElevatedPrivileges()) {
+      hash = (37 * hash) + HAS_ELEVATED_PRIVILEGES_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getHasElevatedPrivileges());
     }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
@@ -3524,6 +3586,7 @@ private static final long serialVersionUID = 0L;
         activeVulkanHostGpuBuilder_.dispose();
         activeVulkanHostGpuBuilder_ = null;
       }
+      hasElevatedPrivileges_ = false;
       return this;
     }
 
@@ -3788,6 +3851,10 @@ private static final long serialVersionUID = 0L;
             : activeVulkanHostGpuBuilder_.build();
         to_bitField1_ |= 0x00000008;
       }
+      if (((from_bitField1_ & 0x00000100) != 0)) {
+        result.hasElevatedPrivileges_ = hasElevatedPrivileges_;
+        to_bitField1_ |= 0x00000010;
+      }
       result.bitField0_ |= to_bitField0_;
       result.bitField1_ |= to_bitField1_;
     }
@@ -4017,6 +4084,9 @@ private static final long serialVersionUID = 0L;
       }
       if (other.hasActiveVulkanHostGpu()) {
         mergeActiveVulkanHostGpu(other.getActiveVulkanHostGpu());
+      }
+      if (other.hasHasElevatedPrivileges()) {
+        setHasElevatedPrivileges(other.getHasElevatedPrivileges());
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -4356,6 +4426,11 @@ private static final long serialVersionUID = 0L;
               bitField1_ |= 0x00000080;
               break;
             } // case 330
+            case 336: {
+              hasElevatedPrivileges_ = input.readBool();
+              bitField1_ |= 0x00000100;
+              break;
+            } // case 336
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -9469,6 +9544,66 @@ private static final long serialVersionUID = 0L;
         activeVulkanHostGpu_ = null;
       }
       return activeVulkanHostGpuBuilder_;
+    }
+
+    private boolean hasElevatedPrivileges_ ;
+    /**
+     * <pre>
+     * True if the emulator is running with high privileges (e.g. as
+     * administrator on Windows or as root on Linux).
+     * </pre>
+     *
+     * <code>optional bool has_elevated_privileges = 42;</code>
+     * @return Whether the hasElevatedPrivileges field is set.
+     */
+    @java.lang.Override
+    public boolean hasHasElevatedPrivileges() {
+      return ((bitField1_ & 0x00000100) != 0);
+    }
+    /**
+     * <pre>
+     * True if the emulator is running with high privileges (e.g. as
+     * administrator on Windows or as root on Linux).
+     * </pre>
+     *
+     * <code>optional bool has_elevated_privileges = 42;</code>
+     * @return The hasElevatedPrivileges.
+     */
+    @java.lang.Override
+    public boolean getHasElevatedPrivileges() {
+      return hasElevatedPrivileges_;
+    }
+    /**
+     * <pre>
+     * True if the emulator is running with high privileges (e.g. as
+     * administrator on Windows or as root on Linux).
+     * </pre>
+     *
+     * <code>optional bool has_elevated_privileges = 42;</code>
+     * @param value The hasElevatedPrivileges to set.
+     * @return This builder for chaining.
+     */
+    public Builder setHasElevatedPrivileges(boolean value) {
+
+      hasElevatedPrivileges_ = value;
+      bitField1_ |= 0x00000100;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * True if the emulator is running with high privileges (e.g. as
+     * administrator on Windows or as root on Linux).
+     * </pre>
+     *
+     * <code>optional bool has_elevated_privileges = 42;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearHasElevatedPrivileges() {
+      bitField1_ = (bitField1_ & ~0x00000100);
+      hasElevatedPrivileges_ = false;
+      onChanged();
+      return this;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

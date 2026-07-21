@@ -4913,7 +4913,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional bool user_ended = 2 [deprecated = true];</code>
      * @deprecated android_studio.DirectAccessUsageEvent.EndReservationDetails.user_ended is deprecated.
-     *     See studio_stats.proto;l=15491
+     *     See studio_stats.proto;l=15498
      * @return Whether the userEnded field is set.
      */
     @java.lang.Deprecated boolean hasUserEnded();
@@ -4925,7 +4925,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional bool user_ended = 2 [deprecated = true];</code>
      * @deprecated android_studio.DirectAccessUsageEvent.EndReservationDetails.user_ended is deprecated.
-     *     See studio_stats.proto;l=15491
+     *     See studio_stats.proto;l=15498
      * @return The userEnded.
      */
     @java.lang.Deprecated boolean getUserEnded();
@@ -4959,7 +4959,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional uint32 average_connection_latency_ms = 4 [deprecated = true];</code>
      * @deprecated android_studio.DirectAccessUsageEvent.EndReservationDetails.average_connection_latency_ms is deprecated.
-     *     See studio_stats.proto;l=15497
+     *     See studio_stats.proto;l=15504
      * @return Whether the averageConnectionLatencyMs field is set.
      */
     @java.lang.Deprecated boolean hasAverageConnectionLatencyMs();
@@ -4971,7 +4971,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional uint32 average_connection_latency_ms = 4 [deprecated = true];</code>
      * @deprecated android_studio.DirectAccessUsageEvent.EndReservationDetails.average_connection_latency_ms is deprecated.
-     *     See studio_stats.proto;l=15497
+     *     See studio_stats.proto;l=15504
      * @return The averageConnectionLatencyMs.
      */
     @java.lang.Deprecated int getAverageConnectionLatencyMs();
@@ -5234,7 +5234,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional bool user_ended = 2 [deprecated = true];</code>
      * @deprecated android_studio.DirectAccessUsageEvent.EndReservationDetails.user_ended is deprecated.
-     *     See studio_stats.proto;l=15491
+     *     See studio_stats.proto;l=15498
      * @return Whether the userEnded field is set.
      */
     @java.lang.Override
@@ -5249,7 +5249,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional bool user_ended = 2 [deprecated = true];</code>
      * @deprecated android_studio.DirectAccessUsageEvent.EndReservationDetails.user_ended is deprecated.
-     *     See studio_stats.proto;l=15491
+     *     See studio_stats.proto;l=15498
      * @return The userEnded.
      */
     @java.lang.Override
@@ -5296,7 +5296,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional uint32 average_connection_latency_ms = 4 [deprecated = true];</code>
      * @deprecated android_studio.DirectAccessUsageEvent.EndReservationDetails.average_connection_latency_ms is deprecated.
-     *     See studio_stats.proto;l=15497
+     *     See studio_stats.proto;l=15504
      * @return Whether the averageConnectionLatencyMs field is set.
      */
     @java.lang.Override
@@ -5311,7 +5311,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional uint32 average_connection_latency_ms = 4 [deprecated = true];</code>
      * @deprecated android_studio.DirectAccessUsageEvent.EndReservationDetails.average_connection_latency_ms is deprecated.
-     *     See studio_stats.proto;l=15497
+     *     See studio_stats.proto;l=15504
      * @return The averageConnectionLatencyMs.
      */
     @java.lang.Override
@@ -5914,7 +5914,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional bool user_ended = 2 [deprecated = true];</code>
        * @deprecated android_studio.DirectAccessUsageEvent.EndReservationDetails.user_ended is deprecated.
-       *     See studio_stats.proto;l=15491
+       *     See studio_stats.proto;l=15498
        * @return Whether the userEnded field is set.
        */
       @java.lang.Override
@@ -5929,7 +5929,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional bool user_ended = 2 [deprecated = true];</code>
        * @deprecated android_studio.DirectAccessUsageEvent.EndReservationDetails.user_ended is deprecated.
-       *     See studio_stats.proto;l=15491
+       *     See studio_stats.proto;l=15498
        * @return The userEnded.
        */
       @java.lang.Override
@@ -5944,7 +5944,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional bool user_ended = 2 [deprecated = true];</code>
        * @deprecated android_studio.DirectAccessUsageEvent.EndReservationDetails.user_ended is deprecated.
-       *     See studio_stats.proto;l=15491
+       *     See studio_stats.proto;l=15498
        * @param value The userEnded to set.
        * @return This builder for chaining.
        */
@@ -5963,7 +5963,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional bool user_ended = 2 [deprecated = true];</code>
        * @deprecated android_studio.DirectAccessUsageEvent.EndReservationDetails.user_ended is deprecated.
-       *     See studio_stats.proto;l=15491
+       *     See studio_stats.proto;l=15498
        * @return This builder for chaining.
        */
       @java.lang.Deprecated public Builder clearUserEnded() {
@@ -6042,7 +6042,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional uint32 average_connection_latency_ms = 4 [deprecated = true];</code>
        * @deprecated android_studio.DirectAccessUsageEvent.EndReservationDetails.average_connection_latency_ms is deprecated.
-       *     See studio_stats.proto;l=15497
+       *     See studio_stats.proto;l=15504
        * @return Whether the averageConnectionLatencyMs field is set.
        */
       @java.lang.Override
@@ -6057,7 +6057,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional uint32 average_connection_latency_ms = 4 [deprecated = true];</code>
        * @deprecated android_studio.DirectAccessUsageEvent.EndReservationDetails.average_connection_latency_ms is deprecated.
-       *     See studio_stats.proto;l=15497
+       *     See studio_stats.proto;l=15504
        * @return The averageConnectionLatencyMs.
        */
       @java.lang.Override
@@ -6072,7 +6072,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional uint32 average_connection_latency_ms = 4 [deprecated = true];</code>
        * @deprecated android_studio.DirectAccessUsageEvent.EndReservationDetails.average_connection_latency_ms is deprecated.
-       *     See studio_stats.proto;l=15497
+       *     See studio_stats.proto;l=15504
        * @param value The averageConnectionLatencyMs to set.
        * @return This builder for chaining.
        */
@@ -6091,7 +6091,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional uint32 average_connection_latency_ms = 4 [deprecated = true];</code>
        * @deprecated android_studio.DirectAccessUsageEvent.EndReservationDetails.average_connection_latency_ms is deprecated.
-       *     See studio_stats.proto;l=15497
+       *     See studio_stats.proto;l=15504
        * @return This builder for chaining.
        */
       @java.lang.Deprecated public Builder clearAverageConnectionLatencyMs() {
