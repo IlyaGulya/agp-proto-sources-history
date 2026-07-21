@@ -3346,6 +3346,14 @@ private static final long serialVersionUID = 0L;
      * <code>ANDROID_VIEW_SHOW_BUILD_FILES_IN_MODULE_EVENT = 354;</code>
      */
     ANDROID_VIEW_SHOW_BUILD_FILES_IN_MODULE_EVENT(354),
+    /**
+     * <pre>
+     * Event tracking usage of Play Policy Insights
+     * </pre>
+     *
+     * <code>PLAY_POLICY_INSIGHTS_USAGE_EVENT = 355;</code>
+     */
+    PLAY_POLICY_INSIGHTS_USAGE_EVENT(355),
     ;
 
     /**
@@ -6001,6 +6009,14 @@ private static final long serialVersionUID = 0L;
      * <code>ANDROID_VIEW_SHOW_BUILD_FILES_IN_MODULE_EVENT = 354;</code>
      */
     public static final int ANDROID_VIEW_SHOW_BUILD_FILES_IN_MODULE_EVENT_VALUE = 354;
+    /**
+     * <pre>
+     * Event tracking usage of Play Policy Insights
+     * </pre>
+     *
+     * <code>PLAY_POLICY_INSIGHTS_USAGE_EVENT = 355;</code>
+     */
+    public static final int PLAY_POLICY_INSIGHTS_USAGE_EVENT_VALUE = 355;
 
 
     public final int getNumber() {
@@ -6373,6 +6389,7 @@ private static final long serialVersionUID = 0L;
         case 352: return DECLARATIVE_WATCH_FACE_EVENT;
         case 353: return PROJECT_VIEW_DEFAULT_VIEW_EVENT;
         case 354: return ANDROID_VIEW_SHOW_BUILD_FILES_IN_MODULE_EVENT;
+        case 355: return PLAY_POLICY_INSIGHTS_USAGE_EVENT;
         default: return null;
       }
     }
@@ -12142,7 +12159,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional uint32 min_sdk = 2 [deprecated = true];</code>
        * @deprecated android_studio.AndroidStudioEvent.TemplatesUsage.TemplateModule.min_sdk is deprecated.
-       *     See studio_stats.proto;l=2069
+       *     See studio_stats.proto;l=2076
        * @return Whether the minSdk field is set.
        */
       @java.lang.Deprecated boolean hasMinSdk();
@@ -12153,7 +12170,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional uint32 min_sdk = 2 [deprecated = true];</code>
        * @deprecated android_studio.AndroidStudioEvent.TemplatesUsage.TemplateModule.min_sdk is deprecated.
-       *     See studio_stats.proto;l=2069
+       *     See studio_stats.proto;l=2076
        * @return The minSdk.
        */
       @java.lang.Deprecated int getMinSdk();
@@ -12684,7 +12701,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional uint32 min_sdk = 2 [deprecated = true];</code>
        * @deprecated android_studio.AndroidStudioEvent.TemplatesUsage.TemplateModule.min_sdk is deprecated.
-       *     See studio_stats.proto;l=2069
+       *     See studio_stats.proto;l=2076
        * @return Whether the minSdk field is set.
        */
       @java.lang.Override
@@ -12698,7 +12715,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional uint32 min_sdk = 2 [deprecated = true];</code>
        * @deprecated android_studio.AndroidStudioEvent.TemplatesUsage.TemplateModule.min_sdk is deprecated.
-       *     See studio_stats.proto;l=2069
+       *     See studio_stats.proto;l=2076
        * @return The minSdk.
        */
       @java.lang.Override
@@ -13336,7 +13353,7 @@ private static final long serialVersionUID = 0L;
          *
          * <code>optional uint32 min_sdk = 2 [deprecated = true];</code>
          * @deprecated android_studio.AndroidStudioEvent.TemplatesUsage.TemplateModule.min_sdk is deprecated.
-         *     See studio_stats.proto;l=2069
+         *     See studio_stats.proto;l=2076
          * @return Whether the minSdk field is set.
          */
         @java.lang.Override
@@ -13350,7 +13367,7 @@ private static final long serialVersionUID = 0L;
          *
          * <code>optional uint32 min_sdk = 2 [deprecated = true];</code>
          * @deprecated android_studio.AndroidStudioEvent.TemplatesUsage.TemplateModule.min_sdk is deprecated.
-         *     See studio_stats.proto;l=2069
+         *     See studio_stats.proto;l=2076
          * @return The minSdk.
          */
         @java.lang.Override
@@ -13364,7 +13381,7 @@ private static final long serialVersionUID = 0L;
          *
          * <code>optional uint32 min_sdk = 2 [deprecated = true];</code>
          * @deprecated android_studio.AndroidStudioEvent.TemplatesUsage.TemplateModule.min_sdk is deprecated.
-         *     See studio_stats.proto;l=2069
+         *     See studio_stats.proto;l=2076
          * @param value The minSdk to set.
          * @return This builder for chaining.
          */
@@ -13382,7 +13399,7 @@ private static final long serialVersionUID = 0L;
          *
          * <code>optional uint32 min_sdk = 2 [deprecated = true];</code>
          * @deprecated android_studio.AndroidStudioEvent.TemplatesUsage.TemplateModule.min_sdk is deprecated.
-         *     See studio_stats.proto;l=2069
+         *     See studio_stats.proto;l=2076
          * @return This builder for chaining.
          */
         @java.lang.Deprecated public Builder clearMinSdk() {
@@ -25016,6 +25033,44 @@ private static final long serialVersionUID = 0L;
     return projectViewDefaultViewEvent_ == null ? com.google.wireless.android.sdk.stats.ProjectViewDefaultViewEvent.getDefaultInstance() : projectViewDefaultViewEvent_;
   }
 
+  public static final int PLAY_POLICY_INSIGHTS_USAGE_EVENT_FIELD_NUMBER = 236;
+  private com.google.wireless.android.sdk.stats.PlayPolicyInsightsUsageEvent playPolicyInsightsUsageEvent_;
+  /**
+   * <pre>
+   * set when kind = PLAY_POLICY_INSIGHTS_USAGE
+   * </pre>
+   *
+   * <code>optional .android_studio.PlayPolicyInsightsUsageEvent play_policy_insights_usage_event = 236 [lazy = true];</code>
+   * @return Whether the playPolicyInsightsUsageEvent field is set.
+   */
+  @java.lang.Override
+  public boolean hasPlayPolicyInsightsUsageEvent() {
+    return ((bitField7_ & 0x00000020) != 0);
+  }
+  /**
+   * <pre>
+   * set when kind = PLAY_POLICY_INSIGHTS_USAGE
+   * </pre>
+   *
+   * <code>optional .android_studio.PlayPolicyInsightsUsageEvent play_policy_insights_usage_event = 236 [lazy = true];</code>
+   * @return The playPolicyInsightsUsageEvent.
+   */
+  @java.lang.Override
+  public com.google.wireless.android.sdk.stats.PlayPolicyInsightsUsageEvent getPlayPolicyInsightsUsageEvent() {
+    return playPolicyInsightsUsageEvent_ == null ? com.google.wireless.android.sdk.stats.PlayPolicyInsightsUsageEvent.getDefaultInstance() : playPolicyInsightsUsageEvent_;
+  }
+  /**
+   * <pre>
+   * set when kind = PLAY_POLICY_INSIGHTS_USAGE
+   * </pre>
+   *
+   * <code>optional .android_studio.PlayPolicyInsightsUsageEvent play_policy_insights_usage_event = 236 [lazy = true];</code>
+   */
+  @java.lang.Override
+  public com.google.wireless.android.sdk.stats.PlayPolicyInsightsUsageEventOrBuilder getPlayPolicyInsightsUsageEventOrBuilder() {
+    return playPolicyInsightsUsageEvent_ == null ? com.google.wireless.android.sdk.stats.PlayPolicyInsightsUsageEvent.getDefaultInstance() : playPolicyInsightsUsageEvent_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -25734,6 +25789,9 @@ private static final long serialVersionUID = 0L;
     }
     if (((bitField7_ & 0x00000010) != 0)) {
       output.writeMessage(235, getProjectViewDefaultViewEvent());
+    }
+    if (((bitField7_ & 0x00000020) != 0)) {
+      output.writeMessage(236, getPlayPolicyInsightsUsageEvent());
     }
     getUnknownFields().writeTo(output);
   }
@@ -26689,6 +26747,10 @@ private static final long serialVersionUID = 0L;
     if (((bitField7_ & 0x00000010) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(235, getProjectViewDefaultViewEvent());
+    }
+    if (((bitField7_ & 0x00000020) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(236, getPlayPolicyInsightsUsageEvent());
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -27851,6 +27913,11 @@ private static final long serialVersionUID = 0L;
       if (!getProjectViewDefaultViewEvent()
           .equals(other.getProjectViewDefaultViewEvent())) return false;
     }
+    if (hasPlayPolicyInsightsUsageEvent() != other.hasPlayPolicyInsightsUsageEvent()) return false;
+    if (hasPlayPolicyInsightsUsageEvent()) {
+      if (!getPlayPolicyInsightsUsageEvent()
+          .equals(other.getPlayPolicyInsightsUsageEvent())) return false;
+    }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -28804,6 +28871,10 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + PROJECT_VIEW_DEFAULT_VIEW_EVENT_FIELD_NUMBER;
       hash = (53 * hash) + getProjectViewDefaultViewEvent().hashCode();
     }
+    if (hasPlayPolicyInsightsUsageEvent()) {
+      hash = (37 * hash) + PLAY_POLICY_INSIGHTS_USAGE_EVENT_FIELD_NUMBER;
+      hash = (53 * hash) + getPlayPolicyInsightsUsageEvent().hashCode();
+    }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -29144,6 +29215,7 @@ private static final long serialVersionUID = 0L;
         getDeclarativeWatchFaceEventFieldBuilder();
         getAndroidViewShowBuildFilesInModuleEventFieldBuilder();
         getProjectViewDefaultViewEventFieldBuilder();
+        getPlayPolicyInsightsUsageEventFieldBuilder();
       }
     }
     @java.lang.Override
@@ -30248,6 +30320,11 @@ private static final long serialVersionUID = 0L;
       if (projectViewDefaultViewEventBuilder_ != null) {
         projectViewDefaultViewEventBuilder_.dispose();
         projectViewDefaultViewEventBuilder_ = null;
+      }
+      playPolicyInsightsUsageEvent_ = null;
+      if (playPolicyInsightsUsageEventBuilder_ != null) {
+        playPolicyInsightsUsageEventBuilder_.dispose();
+        playPolicyInsightsUsageEventBuilder_ = null;
       }
       return this;
     }
@@ -31719,6 +31796,12 @@ private static final long serialVersionUID = 0L;
             : projectViewDefaultViewEventBuilder_.build();
         to_bitField7_ |= 0x00000010;
       }
+      if (((from_bitField7_ & 0x00000800) != 0)) {
+        result.playPolicyInsightsUsageEvent_ = playPolicyInsightsUsageEventBuilder_ == null
+            ? playPolicyInsightsUsageEvent_
+            : playPolicyInsightsUsageEventBuilder_.build();
+        to_bitField7_ |= 0x00000020;
+      }
       result.bitField6_ |= to_bitField6_;
       result.bitField7_ |= to_bitField7_;
     }
@@ -32543,6 +32626,9 @@ private static final long serialVersionUID = 0L;
       }
       if (other.hasProjectViewDefaultViewEvent()) {
         mergeProjectViewDefaultViewEvent(other.getProjectViewDefaultViewEvent());
+      }
+      if (other.hasPlayPolicyInsightsUsageEvent()) {
+        mergePlayPolicyInsightsUsageEvent(other.getPlayPolicyInsightsUsageEvent());
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -34283,6 +34369,13 @@ private static final long serialVersionUID = 0L;
               bitField7_ |= 0x00000400;
               break;
             } // case 1882
+            case 1890: {
+              input.readMessage(
+                  getPlayPolicyInsightsUsageEventFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField7_ |= 0x00000800;
+              break;
+            } // case 1890
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -70068,6 +70161,161 @@ private static final long serialVersionUID = 0L;
         projectViewDefaultViewEvent_ = null;
       }
       return projectViewDefaultViewEventBuilder_;
+    }
+
+    private com.google.wireless.android.sdk.stats.PlayPolicyInsightsUsageEvent playPolicyInsightsUsageEvent_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.PlayPolicyInsightsUsageEvent, com.google.wireless.android.sdk.stats.PlayPolicyInsightsUsageEvent.Builder, com.google.wireless.android.sdk.stats.PlayPolicyInsightsUsageEventOrBuilder> playPolicyInsightsUsageEventBuilder_;
+    /**
+     * <pre>
+     * set when kind = PLAY_POLICY_INSIGHTS_USAGE
+     * </pre>
+     *
+     * <code>optional .android_studio.PlayPolicyInsightsUsageEvent play_policy_insights_usage_event = 236 [lazy = true];</code>
+     * @return Whether the playPolicyInsightsUsageEvent field is set.
+     */
+    public boolean hasPlayPolicyInsightsUsageEvent() {
+      return ((bitField7_ & 0x00000800) != 0);
+    }
+    /**
+     * <pre>
+     * set when kind = PLAY_POLICY_INSIGHTS_USAGE
+     * </pre>
+     *
+     * <code>optional .android_studio.PlayPolicyInsightsUsageEvent play_policy_insights_usage_event = 236 [lazy = true];</code>
+     * @return The playPolicyInsightsUsageEvent.
+     */
+    public com.google.wireless.android.sdk.stats.PlayPolicyInsightsUsageEvent getPlayPolicyInsightsUsageEvent() {
+      if (playPolicyInsightsUsageEventBuilder_ == null) {
+        return playPolicyInsightsUsageEvent_ == null ? com.google.wireless.android.sdk.stats.PlayPolicyInsightsUsageEvent.getDefaultInstance() : playPolicyInsightsUsageEvent_;
+      } else {
+        return playPolicyInsightsUsageEventBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * set when kind = PLAY_POLICY_INSIGHTS_USAGE
+     * </pre>
+     *
+     * <code>optional .android_studio.PlayPolicyInsightsUsageEvent play_policy_insights_usage_event = 236 [lazy = true];</code>
+     */
+    public Builder setPlayPolicyInsightsUsageEvent(com.google.wireless.android.sdk.stats.PlayPolicyInsightsUsageEvent value) {
+      if (playPolicyInsightsUsageEventBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        playPolicyInsightsUsageEvent_ = value;
+      } else {
+        playPolicyInsightsUsageEventBuilder_.setMessage(value);
+      }
+      bitField7_ |= 0x00000800;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = PLAY_POLICY_INSIGHTS_USAGE
+     * </pre>
+     *
+     * <code>optional .android_studio.PlayPolicyInsightsUsageEvent play_policy_insights_usage_event = 236 [lazy = true];</code>
+     */
+    public Builder setPlayPolicyInsightsUsageEvent(
+        com.google.wireless.android.sdk.stats.PlayPolicyInsightsUsageEvent.Builder builderForValue) {
+      if (playPolicyInsightsUsageEventBuilder_ == null) {
+        playPolicyInsightsUsageEvent_ = builderForValue.build();
+      } else {
+        playPolicyInsightsUsageEventBuilder_.setMessage(builderForValue.build());
+      }
+      bitField7_ |= 0x00000800;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = PLAY_POLICY_INSIGHTS_USAGE
+     * </pre>
+     *
+     * <code>optional .android_studio.PlayPolicyInsightsUsageEvent play_policy_insights_usage_event = 236 [lazy = true];</code>
+     */
+    public Builder mergePlayPolicyInsightsUsageEvent(com.google.wireless.android.sdk.stats.PlayPolicyInsightsUsageEvent value) {
+      if (playPolicyInsightsUsageEventBuilder_ == null) {
+        if (((bitField7_ & 0x00000800) != 0) &&
+          playPolicyInsightsUsageEvent_ != null &&
+          playPolicyInsightsUsageEvent_ != com.google.wireless.android.sdk.stats.PlayPolicyInsightsUsageEvent.getDefaultInstance()) {
+          getPlayPolicyInsightsUsageEventBuilder().mergeFrom(value);
+        } else {
+          playPolicyInsightsUsageEvent_ = value;
+        }
+      } else {
+        playPolicyInsightsUsageEventBuilder_.mergeFrom(value);
+      }
+      bitField7_ |= 0x00000800;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = PLAY_POLICY_INSIGHTS_USAGE
+     * </pre>
+     *
+     * <code>optional .android_studio.PlayPolicyInsightsUsageEvent play_policy_insights_usage_event = 236 [lazy = true];</code>
+     */
+    public Builder clearPlayPolicyInsightsUsageEvent() {
+      bitField7_ = (bitField7_ & ~0x00000800);
+      playPolicyInsightsUsageEvent_ = null;
+      if (playPolicyInsightsUsageEventBuilder_ != null) {
+        playPolicyInsightsUsageEventBuilder_.dispose();
+        playPolicyInsightsUsageEventBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = PLAY_POLICY_INSIGHTS_USAGE
+     * </pre>
+     *
+     * <code>optional .android_studio.PlayPolicyInsightsUsageEvent play_policy_insights_usage_event = 236 [lazy = true];</code>
+     */
+    public com.google.wireless.android.sdk.stats.PlayPolicyInsightsUsageEvent.Builder getPlayPolicyInsightsUsageEventBuilder() {
+      bitField7_ |= 0x00000800;
+      onChanged();
+      return getPlayPolicyInsightsUsageEventFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * set when kind = PLAY_POLICY_INSIGHTS_USAGE
+     * </pre>
+     *
+     * <code>optional .android_studio.PlayPolicyInsightsUsageEvent play_policy_insights_usage_event = 236 [lazy = true];</code>
+     */
+    public com.google.wireless.android.sdk.stats.PlayPolicyInsightsUsageEventOrBuilder getPlayPolicyInsightsUsageEventOrBuilder() {
+      if (playPolicyInsightsUsageEventBuilder_ != null) {
+        return playPolicyInsightsUsageEventBuilder_.getMessageOrBuilder();
+      } else {
+        return playPolicyInsightsUsageEvent_ == null ?
+            com.google.wireless.android.sdk.stats.PlayPolicyInsightsUsageEvent.getDefaultInstance() : playPolicyInsightsUsageEvent_;
+      }
+    }
+    /**
+     * <pre>
+     * set when kind = PLAY_POLICY_INSIGHTS_USAGE
+     * </pre>
+     *
+     * <code>optional .android_studio.PlayPolicyInsightsUsageEvent play_policy_insights_usage_event = 236 [lazy = true];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.PlayPolicyInsightsUsageEvent, com.google.wireless.android.sdk.stats.PlayPolicyInsightsUsageEvent.Builder, com.google.wireless.android.sdk.stats.PlayPolicyInsightsUsageEventOrBuilder> 
+        getPlayPolicyInsightsUsageEventFieldBuilder() {
+      if (playPolicyInsightsUsageEventBuilder_ == null) {
+        playPolicyInsightsUsageEventBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.wireless.android.sdk.stats.PlayPolicyInsightsUsageEvent, com.google.wireless.android.sdk.stats.PlayPolicyInsightsUsageEvent.Builder, com.google.wireless.android.sdk.stats.PlayPolicyInsightsUsageEventOrBuilder>(
+                getPlayPolicyInsightsUsageEvent(),
+                getParentForChildren(),
+                isClean());
+        playPolicyInsightsUsageEvent_ = null;
+      }
+      return playPolicyInsightsUsageEventBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(
