@@ -322,4 +322,23 @@ public interface AppQualityInsightsUsageEventOrBuilder extends
    * @return The isOffline.
    */
   boolean getIsOffline();
+
+  /**
+   * <pre>
+   * set when type = MODE_TRANSITION
+   * </pre>
+   *
+   * <code>optional .android_studio.AppQualityInsightsUsageEvent.AppQualityInsightsModeTransitionDetails mode_transition_details = 13;</code>
+   * @return Whether the modeTransitionDetails field is set.
+   */
+  boolean hasModeTransitionDetails();
+  /**
+   * <pre>
+   * set when type = MODE_TRANSITION
+   * </pre>
+   *
+   * <code>optional .android_studio.AppQualityInsightsUsageEvent.AppQualityInsightsModeTransitionDetails mode_transition_details = 13;</code>
+   * @return The modeTransitionDetails.
+   */
+  com.google.wireless.android.sdk.stats.AppQualityInsightsUsageEvent.AppQualityInsightsModeTransitionDetails getModeTransitionDetails();
 }
