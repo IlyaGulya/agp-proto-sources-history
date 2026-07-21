@@ -1440,6 +1440,14 @@ public enum GradleTaskExecutionType
    * <code>NEW_INCREMENTAL_GLOBAL = 355;</code>
    */
   NEW_INCREMENTAL_GLOBAL(355),
+  /**
+   * <code>CODE_COVERAGE_COLLECTION = 356;</code>
+   */
+  CODE_COVERAGE_COLLECTION(356),
+  /**
+   * <code>CODE_COVERAGE_REPORT = 357;</code>
+   */
+  CODE_COVERAGE_REPORT(357),
   UNRECOGNIZED(-1),
   ;
 
@@ -2867,6 +2875,14 @@ public enum GradleTaskExecutionType
    * <code>NEW_INCREMENTAL_GLOBAL = 355;</code>
    */
   public static final int NEW_INCREMENTAL_GLOBAL_VALUE = 355;
+  /**
+   * <code>CODE_COVERAGE_COLLECTION = 356;</code>
+   */
+  public static final int CODE_COVERAGE_COLLECTION_VALUE = 356;
+  /**
+   * <code>CODE_COVERAGE_REPORT = 357;</code>
+   */
+  public static final int CODE_COVERAGE_REPORT_VALUE = 357;
 
 
   public final int getNumber() {
@@ -3249,6 +3265,8 @@ public enum GradleTaskExecutionType
       case 353: return MANIFEST_PROCESSOR_GLOBAL;
       case 354: return MERGE_JAVA_RESOURCES_GLOBAL;
       case 355: return NEW_INCREMENTAL_GLOBAL;
+      case 356: return CODE_COVERAGE_COLLECTION;
+      case 357: return CODE_COVERAGE_REPORT;
       default: return null;
     }
   }

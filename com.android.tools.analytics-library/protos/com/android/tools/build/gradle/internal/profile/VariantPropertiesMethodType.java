@@ -777,6 +777,26 @@ public enum VariantPropertiesMethodType
    * <code>TEST_SUITE_SOURCE_DEPENDENCIES = 179;</code>
    */
   TEST_SUITE_SOURCE_DEPENDENCIES(179),
+  /**
+   * <code>TEST_SUITE_SOURCE_JAVA = 180;</code>
+   */
+  TEST_SUITE_SOURCE_JAVA(180),
+  /**
+   * <code>TEST_SUITE_SOURCE_KOTLIN = 181;</code>
+   */
+  TEST_SUITE_SOURCE_KOTLIN(181),
+  /**
+   * <code>TEST_SUITE_SOURCE_RESOURCES = 182;</code>
+   */
+  TEST_SUITE_SOURCE_RESOURCES(182),
+  /**
+   * <code>TEST_SUITE_SOURCE_ASSETS = 183;</code>
+   */
+  TEST_SUITE_SOURCE_ASSETS(183),
+  /**
+   * <code>TEST_SUITE_SOURCE_MANIFEST_FILE = 184;</code>
+   */
+  TEST_SUITE_SOURCE_MANIFEST_FILE(184),
   UNRECOGNIZED(-1),
   ;
 
@@ -1548,6 +1568,26 @@ public enum VariantPropertiesMethodType
    * <code>TEST_SUITE_SOURCE_DEPENDENCIES = 179;</code>
    */
   public static final int TEST_SUITE_SOURCE_DEPENDENCIES_VALUE = 179;
+  /**
+   * <code>TEST_SUITE_SOURCE_JAVA = 180;</code>
+   */
+  public static final int TEST_SUITE_SOURCE_JAVA_VALUE = 180;
+  /**
+   * <code>TEST_SUITE_SOURCE_KOTLIN = 181;</code>
+   */
+  public static final int TEST_SUITE_SOURCE_KOTLIN_VALUE = 181;
+  /**
+   * <code>TEST_SUITE_SOURCE_RESOURCES = 182;</code>
+   */
+  public static final int TEST_SUITE_SOURCE_RESOURCES_VALUE = 182;
+  /**
+   * <code>TEST_SUITE_SOURCE_ASSETS = 183;</code>
+   */
+  public static final int TEST_SUITE_SOURCE_ASSETS_VALUE = 183;
+  /**
+   * <code>TEST_SUITE_SOURCE_MANIFEST_FILE = 184;</code>
+   */
+  public static final int TEST_SUITE_SOURCE_MANIFEST_FILE_VALUE = 184;
 
 
   public final int getNumber() {
@@ -1754,6 +1794,11 @@ public enum VariantPropertiesMethodType
       case 177: return TEST_SUITE_CODE_COVERAGE;
       case 178: return TEST_SUITE_SOURCES;
       case 179: return TEST_SUITE_SOURCE_DEPENDENCIES;
+      case 180: return TEST_SUITE_SOURCE_JAVA;
+      case 181: return TEST_SUITE_SOURCE_KOTLIN;
+      case 182: return TEST_SUITE_SOURCE_RESOURCES;
+      case 183: return TEST_SUITE_SOURCE_ASSETS;
+      case 184: return TEST_SUITE_SOURCE_MANIFEST_FILE;
       default: return null;
     }
   }

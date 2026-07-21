@@ -578,13 +578,17 @@ private static final long serialVersionUID = 0L;
      */
     FORCE_GPU_HOST(136),
     /**
-     * <pre>
-     * Next tag: 138
-     * </pre>
-     *
      * <code>FORCE_GPU_SOFTWARE = 137;</code>
      */
     FORCE_GPU_SOFTWARE(137),
+    /**
+     * <pre>
+     * Next tag: 139
+     * </pre>
+     *
+     * <code>QEMU_CAMERA_SENSOR_ORIENTATION = 138;</code>
+     */
+    QEMU_CAMERA_SENSOR_ORIENTATION(138),
     ;
 
     /**
@@ -1108,13 +1112,17 @@ private static final long serialVersionUID = 0L;
      */
     public static final int FORCE_GPU_HOST_VALUE = 136;
     /**
-     * <pre>
-     * Next tag: 138
-     * </pre>
-     *
      * <code>FORCE_GPU_SOFTWARE = 137;</code>
      */
     public static final int FORCE_GPU_SOFTWARE_VALUE = 137;
+    /**
+     * <pre>
+     * Next tag: 139
+     * </pre>
+     *
+     * <code>QEMU_CAMERA_SENSOR_ORIENTATION = 138;</code>
+     */
+    public static final int QEMU_CAMERA_SENSOR_ORIENTATION_VALUE = 138;
 
 
     public final int getNumber() {
@@ -1265,6 +1273,7 @@ private static final long serialVersionUID = 0L;
         case 135: return FORCE_LAVAPIPE_FOR_SOFTWARE_RENDERING;
         case 136: return FORCE_GPU_HOST;
         case 137: return FORCE_GPU_SOFTWARE;
+        case 138: return QEMU_CAMERA_SENSOR_ORIENTATION;
         default: return null;
       }
     }
