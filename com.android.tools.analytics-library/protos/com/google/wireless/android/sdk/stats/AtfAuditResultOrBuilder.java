@@ -148,7 +148,7 @@ public interface AtfAuditResultOrBuilder extends
 
   /**
    * <pre>
-   * Errors displayed in the error panel, including non atf errors.
+   * Errors displayed in the error panel, including non ATF errors.
    * </pre>
    *
    * <code>optional int32 error_count = 7;</code>
@@ -157,7 +157,7 @@ public interface AtfAuditResultOrBuilder extends
   boolean hasErrorCount();
   /**
    * <pre>
-   * Errors displayed in the error panel, including non atf errors.
+   * Errors displayed in the error panel, including non ATF errors.
    * </pre>
    *
    * <code>optional int32 error_count = 7;</code>

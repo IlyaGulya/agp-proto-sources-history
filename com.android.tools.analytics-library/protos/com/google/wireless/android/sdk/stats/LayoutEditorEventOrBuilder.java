@@ -187,4 +187,112 @@ public interface LayoutEditorEventOrBuilder extends
    * <code>optional .android_studio.AtfAuditResult atf_audit_result = 7;</code>
    */
   com.google.wireless.android.sdk.stats.AtfAuditResultOrBuilder getAtfAuditResultOrBuilder();
+
+  /**
+   * <pre>
+   * Details related to applying an atf fix (type = APPLY_ATF_FIX)
+   * </pre>
+   *
+   * <code>optional .android_studio.ApplyAtfFixEvent apply_atf_fix_event = 8;</code>
+   * @return Whether the applyAtfFixEvent field is set.
+   */
+  boolean hasApplyAtfFixEvent();
+  /**
+   * <pre>
+   * Details related to applying an atf fix (type = APPLY_ATF_FIX)
+   * </pre>
+   *
+   * <code>optional .android_studio.ApplyAtfFixEvent apply_atf_fix_event = 8;</code>
+   * @return The applyAtfFixEvent.
+   */
+  com.google.wireless.android.sdk.stats.ApplyAtfFixEvent getApplyAtfFixEvent();
+  /**
+   * <pre>
+   * Details related to applying an atf fix (type = APPLY_ATF_FIX)
+   * </pre>
+   *
+   * <code>optional .android_studio.ApplyAtfFixEvent apply_atf_fix_event = 8;</code>
+   */
+  com.google.wireless.android.sdk.stats.ApplyAtfFixEventOrBuilder getApplyAtfFixEventOrBuilder();
+
+  /**
+   * <pre>
+   * Details related to ignoring an atf result (type = IGNORE_ATF_FIX)
+   * </pre>
+   *
+   * <code>optional .android_studio.IgnoreAtfResultEvent ignore_atf_result_event = 9;</code>
+   * @return Whether the ignoreAtfResultEvent field is set.
+   */
+  boolean hasIgnoreAtfResultEvent();
+  /**
+   * <pre>
+   * Details related to ignoring an atf result (type = IGNORE_ATF_FIX)
+   * </pre>
+   *
+   * <code>optional .android_studio.IgnoreAtfResultEvent ignore_atf_result_event = 9;</code>
+   * @return The ignoreAtfResultEvent.
+   */
+  com.google.wireless.android.sdk.stats.IgnoreAtfResultEvent getIgnoreAtfResultEvent();
+  /**
+   * <pre>
+   * Details related to ignoring an atf result (type = IGNORE_ATF_FIX)
+   * </pre>
+   *
+   * <code>optional .android_studio.IgnoreAtfResultEvent ignore_atf_result_event = 9;</code>
+   */
+  com.google.wireless.android.sdk.stats.IgnoreAtfResultEventOrBuilder getIgnoreAtfResultEventOrBuilder();
+
+  /**
+   * <pre>
+   * Details related to undoing an applied atf fix (type = UNDO_APPLIED_ATF_FIX)
+   * </pre>
+   *
+   * <code>optional .android_studio.UndoAppliedAtfFixEvent undo_applied_atf_fix_event = 10;</code>
+   * @return Whether the undoAppliedAtfFixEvent field is set.
+   */
+  boolean hasUndoAppliedAtfFixEvent();
+  /**
+   * <pre>
+   * Details related to undoing an applied atf fix (type = UNDO_APPLIED_ATF_FIX)
+   * </pre>
+   *
+   * <code>optional .android_studio.UndoAppliedAtfFixEvent undo_applied_atf_fix_event = 10;</code>
+   * @return The undoAppliedAtfFixEvent.
+   */
+  com.google.wireless.android.sdk.stats.UndoAppliedAtfFixEvent getUndoAppliedAtfFixEvent();
+  /**
+   * <pre>
+   * Details related to undoing an applied atf fix (type = UNDO_APPLIED_ATF_FIX)
+   * </pre>
+   *
+   * <code>optional .android_studio.UndoAppliedAtfFixEvent undo_applied_atf_fix_event = 10;</code>
+   */
+  com.google.wireless.android.sdk.stats.UndoAppliedAtfFixEventOrBuilder getUndoAppliedAtfFixEventOrBuilder();
+
+  /**
+   * <pre>
+   * Details related to interacting animation preview (type = ANIMATION_PREVIEW)
+   * </pre>
+   *
+   * <code>optional .android_studio.AnimationPreviewEvent animation_preview_event = 11;</code>
+   * @return Whether the animationPreviewEvent field is set.
+   */
+  boolean hasAnimationPreviewEvent();
+  /**
+   * <pre>
+   * Details related to interacting animation preview (type = ANIMATION_PREVIEW)
+   * </pre>
+   *
+   * <code>optional .android_studio.AnimationPreviewEvent animation_preview_event = 11;</code>
+   * @return The animationPreviewEvent.
+   */
+  com.google.wireless.android.sdk.stats.AnimationPreviewEvent getAnimationPreviewEvent();
+  /**
+   * <pre>
+   * Details related to interacting animation preview (type = ANIMATION_PREVIEW)
+   * </pre>
+   *
+   * <code>optional .android_studio.AnimationPreviewEvent animation_preview_event = 11;</code>
+   */
+  com.google.wireless.android.sdk.stats.AnimationPreviewEventOrBuilder getAnimationPreviewEventOrBuilder();
 }

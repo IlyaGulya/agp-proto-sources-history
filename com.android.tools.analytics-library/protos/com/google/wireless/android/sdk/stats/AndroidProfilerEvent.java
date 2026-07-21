@@ -403,6 +403,18 @@ private static final long serialVersionUID = 0L;
      * <code>CPU_CAPTURE_STAGE = 7;</code>
      */
     CPU_CAPTURE_STAGE(7),
+    /**
+     * <code>MEMORY_HEAP_DUMP_STAGE = 8;</code>
+     */
+    MEMORY_HEAP_DUMP_STAGE(8),
+    /**
+     * <code>MEMORY_NATIVE_RECORDING_STAGE = 9;</code>
+     */
+    MEMORY_NATIVE_RECORDING_STAGE(9),
+    /**
+     * <code>MEMORY_JVM_RECORDING_STAGE = 10;</code>
+     */
+    MEMORY_JVM_RECORDING_STAGE(10),
     ;
 
     /**
@@ -445,6 +457,18 @@ private static final long serialVersionUID = 0L;
      * <code>CPU_CAPTURE_STAGE = 7;</code>
      */
     public static final int CPU_CAPTURE_STAGE_VALUE = 7;
+    /**
+     * <code>MEMORY_HEAP_DUMP_STAGE = 8;</code>
+     */
+    public static final int MEMORY_HEAP_DUMP_STAGE_VALUE = 8;
+    /**
+     * <code>MEMORY_NATIVE_RECORDING_STAGE = 9;</code>
+     */
+    public static final int MEMORY_NATIVE_RECORDING_STAGE_VALUE = 9;
+    /**
+     * <code>MEMORY_JVM_RECORDING_STAGE = 10;</code>
+     */
+    public static final int MEMORY_JVM_RECORDING_STAGE_VALUE = 10;
 
 
     public final int getNumber() {
@@ -475,6 +499,9 @@ private static final long serialVersionUID = 0L;
         case 5: return NETWORK_STAGE;
         case 6: return ENERGY_STAGE;
         case 7: return CPU_CAPTURE_STAGE;
+        case 8: return MEMORY_HEAP_DUMP_STAGE;
+        case 9: return MEMORY_NATIVE_RECORDING_STAGE;
+        case 10: return MEMORY_JVM_RECORDING_STAGE;
         default: return null;
       }
     }
