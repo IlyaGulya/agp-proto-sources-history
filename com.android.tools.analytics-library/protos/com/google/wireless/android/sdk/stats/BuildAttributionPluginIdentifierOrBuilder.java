@@ -60,4 +60,36 @@ public interface BuildAttributionPluginIdentifierOrBuilder extends
    */
   com.google.protobuf.ByteString
       getPluginDisplayNameBytes();
+
+  /**
+   * <pre>
+   * The class name of the gradle plugin.
+   * ex: org.jetbrains.kotlin.gradle.plugin.KotlinAndroidPluginWrapper
+   * </pre>
+   *
+   * <code>optional string plugin_class_name = 3;</code>
+   * @return Whether the pluginClassName field is set.
+   */
+  boolean hasPluginClassName();
+  /**
+   * <pre>
+   * The class name of the gradle plugin.
+   * ex: org.jetbrains.kotlin.gradle.plugin.KotlinAndroidPluginWrapper
+   * </pre>
+   *
+   * <code>optional string plugin_class_name = 3;</code>
+   * @return The pluginClassName.
+   */
+  java.lang.String getPluginClassName();
+  /**
+   * <pre>
+   * The class name of the gradle plugin.
+   * ex: org.jetbrains.kotlin.gradle.plugin.KotlinAndroidPluginWrapper
+   * </pre>
+   *
+   * <code>optional string plugin_class_name = 3;</code>
+   * @return The bytes for pluginClassName.
+   */
+  com.google.protobuf.ByteString
+      getPluginClassNameBytes();
 }

@@ -1573,6 +1573,19 @@ private static final long serialVersionUID = 0L;
             bitField3_ |= 0x00100000;
             break;
           }
+          case 978: {
+            com.google.wireless.android.sdk.stats.SuggestedImportEvent.Builder subBuilder = null;
+            if (((bitField3_ & 0x00200000) != 0)) {
+              subBuilder = suggestedImportEvent_.toBuilder();
+            }
+            suggestedImportEvent_ = input.readMessage(com.google.wireless.android.sdk.stats.SuggestedImportEvent.PARSER, extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(suggestedImportEvent_);
+              suggestedImportEvent_ = subBuilder.buildPartial();
+            }
+            bitField3_ |= 0x00200000;
+            break;
+          }
           default: {
             if (!parseUnknownField(
                 input, unknownFields, extensionRegistry, tag)) {
@@ -3771,11 +3784,13 @@ private static final long serialVersionUID = 0L;
     COMPOSE_DEPLOY(218),
     /**
      * <pre>
+     * Deprecated, use SUGGESTED_IMPORT_EVENT instead.
      * Event related to auto-import support.
      * </pre>
      *
-     * <code>AUTO_IMPORT_EVENT = 219;</code>
+     * <code>AUTO_IMPORT_EVENT = 219 [deprecated = true];</code>
      */
+    @java.lang.Deprecated
     AUTO_IMPORT_EVENT(219),
     /**
      * <pre>
@@ -3809,6 +3824,14 @@ private static final long serialVersionUID = 0L;
      * <code>ANDROID_TEST_RETENTION_EVENT = 223;</code>
      */
     ANDROID_TEST_RETENTION_EVENT(223),
+    /**
+     * <pre>
+     * Event related to suggested import support.
+     * </pre>
+     *
+     * <code>SUGGESTED_IMPORT_EVENT = 224;</code>
+     */
+    SUGGESTED_IMPORT_EVENT(224),
     ;
 
     /**
@@ -5387,10 +5410,11 @@ private static final long serialVersionUID = 0L;
     public static final int COMPOSE_DEPLOY_VALUE = 218;
     /**
      * <pre>
+     * Deprecated, use SUGGESTED_IMPORT_EVENT instead.
      * Event related to auto-import support.
      * </pre>
      *
-     * <code>AUTO_IMPORT_EVENT = 219;</code>
+     * <code>AUTO_IMPORT_EVENT = 219 [deprecated = true];</code>
      */
     public static final int AUTO_IMPORT_EVENT_VALUE = 219;
     /**
@@ -5425,6 +5449,14 @@ private static final long serialVersionUID = 0L;
      * <code>ANDROID_TEST_RETENTION_EVENT = 223;</code>
      */
     public static final int ANDROID_TEST_RETENTION_EVENT_VALUE = 223;
+    /**
+     * <pre>
+     * Event related to suggested import support.
+     * </pre>
+     *
+     * <code>SUGGESTED_IMPORT_EVENT = 224;</code>
+     */
+    public static final int SUGGESTED_IMPORT_EVENT_VALUE = 224;
 
 
     public final int getNumber() {
@@ -5666,6 +5698,7 @@ private static final long serialVersionUID = 0L;
         case 221: return LIVE_LITERALS_EVENT;
         case 222: return MIGRATE_TO_NON_TRANSITIVE_R_CLASS;
         case 223: return ANDROID_TEST_RETENTION_EVENT;
+        case 224: return SUGGESTED_IMPORT_EVENT;
         default: return null;
       }
     }
@@ -18287,34 +18320,37 @@ private static final long serialVersionUID = 0L;
   private com.google.wireless.android.sdk.stats.AutoImportEvent autoImportEvent_;
   /**
    * <pre>
+   * Deprecated, use suggested_import_event instead.
    * set when kind = AUTO_IMPORT_EVENT
    * </pre>
    *
-   * <code>optional .android_studio.AutoImportEvent auto_import_event = 117;</code>
+   * <code>optional .android_studio.AutoImportEvent auto_import_event = 117 [deprecated = true];</code>
    * @return Whether the autoImportEvent field is set.
    */
-  public boolean hasAutoImportEvent() {
+  @java.lang.Deprecated public boolean hasAutoImportEvent() {
     return ((bitField3_ & 0x00010000) != 0);
   }
   /**
    * <pre>
+   * Deprecated, use suggested_import_event instead.
    * set when kind = AUTO_IMPORT_EVENT
    * </pre>
    *
-   * <code>optional .android_studio.AutoImportEvent auto_import_event = 117;</code>
+   * <code>optional .android_studio.AutoImportEvent auto_import_event = 117 [deprecated = true];</code>
    * @return The autoImportEvent.
    */
-  public com.google.wireless.android.sdk.stats.AutoImportEvent getAutoImportEvent() {
+  @java.lang.Deprecated public com.google.wireless.android.sdk.stats.AutoImportEvent getAutoImportEvent() {
     return autoImportEvent_ == null ? com.google.wireless.android.sdk.stats.AutoImportEvent.getDefaultInstance() : autoImportEvent_;
   }
   /**
    * <pre>
+   * Deprecated, use suggested_import_event instead.
    * set when kind = AUTO_IMPORT_EVENT
    * </pre>
    *
-   * <code>optional .android_studio.AutoImportEvent auto_import_event = 117;</code>
+   * <code>optional .android_studio.AutoImportEvent auto_import_event = 117 [deprecated = true];</code>
    */
-  public com.google.wireless.android.sdk.stats.AutoImportEventOrBuilder getAutoImportEventOrBuilder() {
+  @java.lang.Deprecated public com.google.wireless.android.sdk.stats.AutoImportEventOrBuilder getAutoImportEventOrBuilder() {
     return autoImportEvent_ == null ? com.google.wireless.android.sdk.stats.AutoImportEvent.getDefaultInstance() : autoImportEvent_;
   }
 
@@ -18456,6 +18492,41 @@ private static final long serialVersionUID = 0L;
    */
   public com.google.wireless.android.sdk.stats.AndroidTestRetentionEventOrBuilder getAndroidTestRetentionEventOrBuilder() {
     return androidTestRetentionEvent_ == null ? com.google.wireless.android.sdk.stats.AndroidTestRetentionEvent.getDefaultInstance() : androidTestRetentionEvent_;
+  }
+
+  public static final int SUGGESTED_IMPORT_EVENT_FIELD_NUMBER = 122;
+  private com.google.wireless.android.sdk.stats.SuggestedImportEvent suggestedImportEvent_;
+  /**
+   * <pre>
+   * set when kind = SUGGESTED_IMPORT_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.SuggestedImportEvent suggested_import_event = 122;</code>
+   * @return Whether the suggestedImportEvent field is set.
+   */
+  public boolean hasSuggestedImportEvent() {
+    return ((bitField3_ & 0x00200000) != 0);
+  }
+  /**
+   * <pre>
+   * set when kind = SUGGESTED_IMPORT_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.SuggestedImportEvent suggested_import_event = 122;</code>
+   * @return The suggestedImportEvent.
+   */
+  public com.google.wireless.android.sdk.stats.SuggestedImportEvent getSuggestedImportEvent() {
+    return suggestedImportEvent_ == null ? com.google.wireless.android.sdk.stats.SuggestedImportEvent.getDefaultInstance() : suggestedImportEvent_;
+  }
+  /**
+   * <pre>
+   * set when kind = SUGGESTED_IMPORT_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.SuggestedImportEvent suggested_import_event = 122;</code>
+   */
+  public com.google.wireless.android.sdk.stats.SuggestedImportEventOrBuilder getSuggestedImportEventOrBuilder() {
+    return suggestedImportEvent_ == null ? com.google.wireless.android.sdk.stats.SuggestedImportEvent.getDefaultInstance() : suggestedImportEvent_;
   }
 
   private byte memoizedIsInitialized = -1;
@@ -18834,6 +18905,9 @@ private static final long serialVersionUID = 0L;
     }
     if (((bitField3_ & 0x00100000) != 0)) {
       output.writeMessage(121, getAndroidTestRetentionEvent());
+    }
+    if (((bitField3_ & 0x00200000) != 0)) {
+      output.writeMessage(122, getSuggestedImportEvent());
     }
     unknownFields.writeTo(output);
   }
@@ -19325,6 +19399,10 @@ private static final long serialVersionUID = 0L;
     if (((bitField3_ & 0x00100000) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(121, getAndroidTestRetentionEvent());
+    }
+    if (((bitField3_ & 0x00200000) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(122, getSuggestedImportEvent());
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -19923,6 +20001,11 @@ private static final long serialVersionUID = 0L;
       if (!getAndroidTestRetentionEvent()
           .equals(other.getAndroidTestRetentionEvent())) return false;
     }
+    if (hasSuggestedImportEvent() != other.hasSuggestedImportEvent()) return false;
+    if (hasSuggestedImportEvent()) {
+      if (!getSuggestedImportEvent()
+          .equals(other.getSuggestedImportEvent())) return false;
+    }
     if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
@@ -20420,6 +20503,10 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + ANDROID_TEST_RETENTION_EVENT_FIELD_NUMBER;
       hash = (53 * hash) + getAndroidTestRetentionEvent().hashCode();
     }
+    if (hasSuggestedImportEvent()) {
+      hash = (37 * hash) + SUGGESTED_IMPORT_EVENT_FIELD_NUMBER;
+      hash = (53 * hash) + getSuggestedImportEvent().hashCode();
+    }
     hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -20648,6 +20735,7 @@ private static final long serialVersionUID = 0L;
         getLiveLiteralsEventFieldBuilder();
         getNonTransitiveRClassMigrationEventFieldBuilder();
         getAndroidTestRetentionEventFieldBuilder();
+        getSuggestedImportEventFieldBuilder();
       }
     }
     @java.lang.Override
@@ -21295,6 +21383,12 @@ private static final long serialVersionUID = 0L;
         androidTestRetentionEventBuilder_.clear();
       }
       bitField3_ = (bitField3_ & ~0x01000000);
+      if (suggestedImportEventBuilder_ == null) {
+        suggestedImportEvent_ = null;
+      } else {
+        suggestedImportEventBuilder_.clear();
+      }
+      bitField3_ = (bitField3_ & ~0x02000000);
       return this;
     }
 
@@ -22217,6 +22311,14 @@ private static final long serialVersionUID = 0L;
         }
         to_bitField3_ |= 0x00100000;
       }
+      if (((from_bitField3_ & 0x02000000) != 0)) {
+        if (suggestedImportEventBuilder_ == null) {
+          result.suggestedImportEvent_ = suggestedImportEvent_;
+        } else {
+          result.suggestedImportEvent_ = suggestedImportEventBuilder_.build();
+        }
+        to_bitField3_ |= 0x00200000;
+      }
       result.bitField0_ = to_bitField0_;
       result.bitField1_ = to_bitField1_;
       result.bitField2_ = to_bitField2_;
@@ -22721,6 +22823,9 @@ private static final long serialVersionUID = 0L;
       }
       if (other.hasAndroidTestRetentionEvent()) {
         mergeAndroidTestRetentionEvent(other.getAndroidTestRetentionEvent());
+      }
+      if (other.hasSuggestedImportEvent()) {
+        mergeSuggestedImportEvent(other.getSuggestedImportEvent());
       }
       this.mergeUnknownFields(other.unknownFields);
       onChanged();
@@ -40031,24 +40136,26 @@ private static final long serialVersionUID = 0L;
         com.google.wireless.android.sdk.stats.AutoImportEvent, com.google.wireless.android.sdk.stats.AutoImportEvent.Builder, com.google.wireless.android.sdk.stats.AutoImportEventOrBuilder> autoImportEventBuilder_;
     /**
      * <pre>
+     * Deprecated, use suggested_import_event instead.
      * set when kind = AUTO_IMPORT_EVENT
      * </pre>
      *
-     * <code>optional .android_studio.AutoImportEvent auto_import_event = 117;</code>
+     * <code>optional .android_studio.AutoImportEvent auto_import_event = 117 [deprecated = true];</code>
      * @return Whether the autoImportEvent field is set.
      */
-    public boolean hasAutoImportEvent() {
+    @java.lang.Deprecated public boolean hasAutoImportEvent() {
       return ((bitField3_ & 0x00100000) != 0);
     }
     /**
      * <pre>
+     * Deprecated, use suggested_import_event instead.
      * set when kind = AUTO_IMPORT_EVENT
      * </pre>
      *
-     * <code>optional .android_studio.AutoImportEvent auto_import_event = 117;</code>
+     * <code>optional .android_studio.AutoImportEvent auto_import_event = 117 [deprecated = true];</code>
      * @return The autoImportEvent.
      */
-    public com.google.wireless.android.sdk.stats.AutoImportEvent getAutoImportEvent() {
+    @java.lang.Deprecated public com.google.wireless.android.sdk.stats.AutoImportEvent getAutoImportEvent() {
       if (autoImportEventBuilder_ == null) {
         return autoImportEvent_ == null ? com.google.wireless.android.sdk.stats.AutoImportEvent.getDefaultInstance() : autoImportEvent_;
       } else {
@@ -40057,12 +40164,13 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
+     * Deprecated, use suggested_import_event instead.
      * set when kind = AUTO_IMPORT_EVENT
      * </pre>
      *
-     * <code>optional .android_studio.AutoImportEvent auto_import_event = 117;</code>
+     * <code>optional .android_studio.AutoImportEvent auto_import_event = 117 [deprecated = true];</code>
      */
-    public Builder setAutoImportEvent(com.google.wireless.android.sdk.stats.AutoImportEvent value) {
+    @java.lang.Deprecated public Builder setAutoImportEvent(com.google.wireless.android.sdk.stats.AutoImportEvent value) {
       if (autoImportEventBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -40077,12 +40185,13 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
+     * Deprecated, use suggested_import_event instead.
      * set when kind = AUTO_IMPORT_EVENT
      * </pre>
      *
-     * <code>optional .android_studio.AutoImportEvent auto_import_event = 117;</code>
+     * <code>optional .android_studio.AutoImportEvent auto_import_event = 117 [deprecated = true];</code>
      */
-    public Builder setAutoImportEvent(
+    @java.lang.Deprecated public Builder setAutoImportEvent(
         com.google.wireless.android.sdk.stats.AutoImportEvent.Builder builderForValue) {
       if (autoImportEventBuilder_ == null) {
         autoImportEvent_ = builderForValue.build();
@@ -40095,12 +40204,13 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
+     * Deprecated, use suggested_import_event instead.
      * set when kind = AUTO_IMPORT_EVENT
      * </pre>
      *
-     * <code>optional .android_studio.AutoImportEvent auto_import_event = 117;</code>
+     * <code>optional .android_studio.AutoImportEvent auto_import_event = 117 [deprecated = true];</code>
      */
-    public Builder mergeAutoImportEvent(com.google.wireless.android.sdk.stats.AutoImportEvent value) {
+    @java.lang.Deprecated public Builder mergeAutoImportEvent(com.google.wireless.android.sdk.stats.AutoImportEvent value) {
       if (autoImportEventBuilder_ == null) {
         if (((bitField3_ & 0x00100000) != 0) &&
             autoImportEvent_ != null &&
@@ -40119,12 +40229,13 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
+     * Deprecated, use suggested_import_event instead.
      * set when kind = AUTO_IMPORT_EVENT
      * </pre>
      *
-     * <code>optional .android_studio.AutoImportEvent auto_import_event = 117;</code>
+     * <code>optional .android_studio.AutoImportEvent auto_import_event = 117 [deprecated = true];</code>
      */
-    public Builder clearAutoImportEvent() {
+    @java.lang.Deprecated public Builder clearAutoImportEvent() {
       if (autoImportEventBuilder_ == null) {
         autoImportEvent_ = null;
         onChanged();
@@ -40136,24 +40247,26 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
+     * Deprecated, use suggested_import_event instead.
      * set when kind = AUTO_IMPORT_EVENT
      * </pre>
      *
-     * <code>optional .android_studio.AutoImportEvent auto_import_event = 117;</code>
+     * <code>optional .android_studio.AutoImportEvent auto_import_event = 117 [deprecated = true];</code>
      */
-    public com.google.wireless.android.sdk.stats.AutoImportEvent.Builder getAutoImportEventBuilder() {
+    @java.lang.Deprecated public com.google.wireless.android.sdk.stats.AutoImportEvent.Builder getAutoImportEventBuilder() {
       bitField3_ |= 0x00100000;
       onChanged();
       return getAutoImportEventFieldBuilder().getBuilder();
     }
     /**
      * <pre>
+     * Deprecated, use suggested_import_event instead.
      * set when kind = AUTO_IMPORT_EVENT
      * </pre>
      *
-     * <code>optional .android_studio.AutoImportEvent auto_import_event = 117;</code>
+     * <code>optional .android_studio.AutoImportEvent auto_import_event = 117 [deprecated = true];</code>
      */
-    public com.google.wireless.android.sdk.stats.AutoImportEventOrBuilder getAutoImportEventOrBuilder() {
+    @java.lang.Deprecated public com.google.wireless.android.sdk.stats.AutoImportEventOrBuilder getAutoImportEventOrBuilder() {
       if (autoImportEventBuilder_ != null) {
         return autoImportEventBuilder_.getMessageOrBuilder();
       } else {
@@ -40163,10 +40276,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
+     * Deprecated, use suggested_import_event instead.
      * set when kind = AUTO_IMPORT_EVENT
      * </pre>
      *
-     * <code>optional .android_studio.AutoImportEvent auto_import_event = 117;</code>
+     * <code>optional .android_studio.AutoImportEvent auto_import_event = 117 [deprecated = true];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.wireless.android.sdk.stats.AutoImportEvent, com.google.wireless.android.sdk.stats.AutoImportEvent.Builder, com.google.wireless.android.sdk.stats.AutoImportEventOrBuilder> 
@@ -40804,6 +40918,162 @@ private static final long serialVersionUID = 0L;
         androidTestRetentionEvent_ = null;
       }
       return androidTestRetentionEventBuilder_;
+    }
+
+    private com.google.wireless.android.sdk.stats.SuggestedImportEvent suggestedImportEvent_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.SuggestedImportEvent, com.google.wireless.android.sdk.stats.SuggestedImportEvent.Builder, com.google.wireless.android.sdk.stats.SuggestedImportEventOrBuilder> suggestedImportEventBuilder_;
+    /**
+     * <pre>
+     * set when kind = SUGGESTED_IMPORT_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.SuggestedImportEvent suggested_import_event = 122;</code>
+     * @return Whether the suggestedImportEvent field is set.
+     */
+    public boolean hasSuggestedImportEvent() {
+      return ((bitField3_ & 0x02000000) != 0);
+    }
+    /**
+     * <pre>
+     * set when kind = SUGGESTED_IMPORT_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.SuggestedImportEvent suggested_import_event = 122;</code>
+     * @return The suggestedImportEvent.
+     */
+    public com.google.wireless.android.sdk.stats.SuggestedImportEvent getSuggestedImportEvent() {
+      if (suggestedImportEventBuilder_ == null) {
+        return suggestedImportEvent_ == null ? com.google.wireless.android.sdk.stats.SuggestedImportEvent.getDefaultInstance() : suggestedImportEvent_;
+      } else {
+        return suggestedImportEventBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * set when kind = SUGGESTED_IMPORT_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.SuggestedImportEvent suggested_import_event = 122;</code>
+     */
+    public Builder setSuggestedImportEvent(com.google.wireless.android.sdk.stats.SuggestedImportEvent value) {
+      if (suggestedImportEventBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        suggestedImportEvent_ = value;
+        onChanged();
+      } else {
+        suggestedImportEventBuilder_.setMessage(value);
+      }
+      bitField3_ |= 0x02000000;
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = SUGGESTED_IMPORT_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.SuggestedImportEvent suggested_import_event = 122;</code>
+     */
+    public Builder setSuggestedImportEvent(
+        com.google.wireless.android.sdk.stats.SuggestedImportEvent.Builder builderForValue) {
+      if (suggestedImportEventBuilder_ == null) {
+        suggestedImportEvent_ = builderForValue.build();
+        onChanged();
+      } else {
+        suggestedImportEventBuilder_.setMessage(builderForValue.build());
+      }
+      bitField3_ |= 0x02000000;
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = SUGGESTED_IMPORT_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.SuggestedImportEvent suggested_import_event = 122;</code>
+     */
+    public Builder mergeSuggestedImportEvent(com.google.wireless.android.sdk.stats.SuggestedImportEvent value) {
+      if (suggestedImportEventBuilder_ == null) {
+        if (((bitField3_ & 0x02000000) != 0) &&
+            suggestedImportEvent_ != null &&
+            suggestedImportEvent_ != com.google.wireless.android.sdk.stats.SuggestedImportEvent.getDefaultInstance()) {
+          suggestedImportEvent_ =
+            com.google.wireless.android.sdk.stats.SuggestedImportEvent.newBuilder(suggestedImportEvent_).mergeFrom(value).buildPartial();
+        } else {
+          suggestedImportEvent_ = value;
+        }
+        onChanged();
+      } else {
+        suggestedImportEventBuilder_.mergeFrom(value);
+      }
+      bitField3_ |= 0x02000000;
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = SUGGESTED_IMPORT_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.SuggestedImportEvent suggested_import_event = 122;</code>
+     */
+    public Builder clearSuggestedImportEvent() {
+      if (suggestedImportEventBuilder_ == null) {
+        suggestedImportEvent_ = null;
+        onChanged();
+      } else {
+        suggestedImportEventBuilder_.clear();
+      }
+      bitField3_ = (bitField3_ & ~0x02000000);
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = SUGGESTED_IMPORT_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.SuggestedImportEvent suggested_import_event = 122;</code>
+     */
+    public com.google.wireless.android.sdk.stats.SuggestedImportEvent.Builder getSuggestedImportEventBuilder() {
+      bitField3_ |= 0x02000000;
+      onChanged();
+      return getSuggestedImportEventFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * set when kind = SUGGESTED_IMPORT_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.SuggestedImportEvent suggested_import_event = 122;</code>
+     */
+    public com.google.wireless.android.sdk.stats.SuggestedImportEventOrBuilder getSuggestedImportEventOrBuilder() {
+      if (suggestedImportEventBuilder_ != null) {
+        return suggestedImportEventBuilder_.getMessageOrBuilder();
+      } else {
+        return suggestedImportEvent_ == null ?
+            com.google.wireless.android.sdk.stats.SuggestedImportEvent.getDefaultInstance() : suggestedImportEvent_;
+      }
+    }
+    /**
+     * <pre>
+     * set when kind = SUGGESTED_IMPORT_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.SuggestedImportEvent suggested_import_event = 122;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.SuggestedImportEvent, com.google.wireless.android.sdk.stats.SuggestedImportEvent.Builder, com.google.wireless.android.sdk.stats.SuggestedImportEventOrBuilder> 
+        getSuggestedImportEventFieldBuilder() {
+      if (suggestedImportEventBuilder_ == null) {
+        suggestedImportEventBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.wireless.android.sdk.stats.SuggestedImportEvent, com.google.wireless.android.sdk.stats.SuggestedImportEvent.Builder, com.google.wireless.android.sdk.stats.SuggestedImportEventOrBuilder>(
+                getSuggestedImportEvent(),
+                getParentForChildren(),
+                isClean());
+        suggestedImportEvent_ = null;
+      }
+      return suggestedImportEventBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

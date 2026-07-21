@@ -3245,30 +3245,33 @@ public interface AndroidStudioEventOrBuilder extends
 
   /**
    * <pre>
+   * Deprecated, use suggested_import_event instead.
    * set when kind = AUTO_IMPORT_EVENT
    * </pre>
    *
-   * <code>optional .android_studio.AutoImportEvent auto_import_event = 117;</code>
+   * <code>optional .android_studio.AutoImportEvent auto_import_event = 117 [deprecated = true];</code>
    * @return Whether the autoImportEvent field is set.
    */
-  boolean hasAutoImportEvent();
+  @java.lang.Deprecated boolean hasAutoImportEvent();
   /**
    * <pre>
+   * Deprecated, use suggested_import_event instead.
    * set when kind = AUTO_IMPORT_EVENT
    * </pre>
    *
-   * <code>optional .android_studio.AutoImportEvent auto_import_event = 117;</code>
+   * <code>optional .android_studio.AutoImportEvent auto_import_event = 117 [deprecated = true];</code>
    * @return The autoImportEvent.
    */
-  com.google.wireless.android.sdk.stats.AutoImportEvent getAutoImportEvent();
+  @java.lang.Deprecated com.google.wireless.android.sdk.stats.AutoImportEvent getAutoImportEvent();
   /**
    * <pre>
+   * Deprecated, use suggested_import_event instead.
    * set when kind = AUTO_IMPORT_EVENT
    * </pre>
    *
-   * <code>optional .android_studio.AutoImportEvent auto_import_event = 117;</code>
+   * <code>optional .android_studio.AutoImportEvent auto_import_event = 117 [deprecated = true];</code>
    */
-  com.google.wireless.android.sdk.stats.AutoImportEventOrBuilder getAutoImportEventOrBuilder();
+  @java.lang.Deprecated com.google.wireless.android.sdk.stats.AutoImportEventOrBuilder getAutoImportEventOrBuilder();
 
   /**
    * <pre>
@@ -3377,4 +3380,31 @@ public interface AndroidStudioEventOrBuilder extends
    * <code>optional .android_studio.AndroidTestRetentionEvent android_test_retention_event = 121;</code>
    */
   com.google.wireless.android.sdk.stats.AndroidTestRetentionEventOrBuilder getAndroidTestRetentionEventOrBuilder();
+
+  /**
+   * <pre>
+   * set when kind = SUGGESTED_IMPORT_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.SuggestedImportEvent suggested_import_event = 122;</code>
+   * @return Whether the suggestedImportEvent field is set.
+   */
+  boolean hasSuggestedImportEvent();
+  /**
+   * <pre>
+   * set when kind = SUGGESTED_IMPORT_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.SuggestedImportEvent suggested_import_event = 122;</code>
+   * @return The suggestedImportEvent.
+   */
+  com.google.wireless.android.sdk.stats.SuggestedImportEvent getSuggestedImportEvent();
+  /**
+   * <pre>
+   * set when kind = SUGGESTED_IMPORT_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.SuggestedImportEvent suggested_import_event = 122;</code>
+   */
+  com.google.wireless.android.sdk.stats.SuggestedImportEventOrBuilder getSuggestedImportEventOrBuilder();
 }
