@@ -1472,6 +1472,14 @@ public enum GradleTaskExecutionType
    * <code>ANDROID_TEST_DISCOVERY = 363;</code>
    */
   ANDROID_TEST_DISCOVERY(363),
+  /**
+   * <code>PROCESS_TEST_MANIFEST_PACKAGING = 364;</code>
+   */
+  PROCESS_TEST_MANIFEST_PACKAGING(364),
+  /**
+   * <code>MERGE_COMPRESSED_JAVA_RES = 365;</code>
+   */
+  MERGE_COMPRESSED_JAVA_RES(365),
   UNRECOGNIZED(-1),
   ;
 
@@ -2931,6 +2939,14 @@ public enum GradleTaskExecutionType
    * <code>ANDROID_TEST_DISCOVERY = 363;</code>
    */
   public static final int ANDROID_TEST_DISCOVERY_VALUE = 363;
+  /**
+   * <code>PROCESS_TEST_MANIFEST_PACKAGING = 364;</code>
+   */
+  public static final int PROCESS_TEST_MANIFEST_PACKAGING_VALUE = 364;
+  /**
+   * <code>MERGE_COMPRESSED_JAVA_RES = 365;</code>
+   */
+  public static final int MERGE_COMPRESSED_JAVA_RES_VALUE = 365;
 
 
   public final int getNumber() {
@@ -3321,6 +3337,8 @@ public enum GradleTaskExecutionType
       case 361: return LEGACY_REPORTING_TEST_SUITE_TEST;
       case 362: return GLOBAL_SYNTHETICS_GENERATOR;
       case 363: return ANDROID_TEST_DISCOVERY;
+      case 364: return PROCESS_TEST_MANIFEST_PACKAGING;
+      case 365: return MERGE_COMPRESSED_JAVA_RES;
       default: return null;
     }
   }

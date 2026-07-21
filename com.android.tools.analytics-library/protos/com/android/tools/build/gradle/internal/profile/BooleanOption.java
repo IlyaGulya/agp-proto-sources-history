@@ -968,6 +968,10 @@ public enum BooleanOption
    * <code>ENABLE_GLOBAL_SYNTHETICS_FOR_ALL_DEBUG_BUILDS = 236;</code>
    */
   ENABLE_GLOBAL_SYNTHETICS_FOR_ALL_DEBUG_BUILDS(236),
+  /**
+   * <code>ENABLE_ON_THE_FLY_CODE_COVERAGE = 237;</code>
+   */
+  ENABLE_ON_THE_FLY_CODE_COVERAGE(237),
   UNRECOGNIZED(-1),
   ;
 
@@ -1919,6 +1923,10 @@ public enum BooleanOption
    * <code>ENABLE_GLOBAL_SYNTHETICS_FOR_ALL_DEBUG_BUILDS = 236;</code>
    */
   public static final int ENABLE_GLOBAL_SYNTHETICS_FOR_ALL_DEBUG_BUILDS_VALUE = 236;
+  /**
+   * <code>ENABLE_ON_THE_FLY_CODE_COVERAGE = 237;</code>
+   */
+  public static final int ENABLE_ON_THE_FLY_CODE_COVERAGE_VALUE = 237;
 
 
   public final int getNumber() {
@@ -2182,6 +2190,7 @@ public enum BooleanOption
       case 234: return LINT_DEFAULT_BASELINE_CONVENTION;
       case 235: return DISABLE_COMPILE_SDK_CHECKS_TESTS;
       case 236: return ENABLE_GLOBAL_SYNTHETICS_FOR_ALL_DEBUG_BUILDS;
+      case 237: return ENABLE_ON_THE_FLY_CODE_COVERAGE;
       default: return null;
     }
   }
