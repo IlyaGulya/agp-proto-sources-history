@@ -8453,8 +8453,8 @@ private static final long serialVersionUID = 0L;
     TYPE_INCONSISTENT_BUILD_FEATURE_SETTING(65),
     /**
      * <pre>
-     * Missing Compose Compiler Gradle plugin when compose is enabled and Kotlin version is 2.0
-     * or higher.
+     * Missing Compose Compiler Gradle plugin when compose is enabled and
+     * Kotlin version is 2.0 or higher.
      * </pre>
      *
      * <code>TYPE_MISSING_COMPOSE_COMPILER_GRADLE_PLUGIN = 66;</code>
@@ -8934,8 +8934,8 @@ private static final long serialVersionUID = 0L;
     public static final int TYPE_INCONSISTENT_BUILD_FEATURE_SETTING_VALUE = 65;
     /**
      * <pre>
-     * Missing Compose Compiler Gradle plugin when compose is enabled and Kotlin version is 2.0
-     * or higher.
+     * Missing Compose Compiler Gradle plugin when compose is enabled and
+     * Kotlin version is 2.0 or higher.
      * </pre>
      *
      * <code>TYPE_MISSING_COMPOSE_COMPILER_GRADLE_PLUGIN = 66;</code>
@@ -11679,6 +11679,18 @@ private static final long serialVersionUID = 0L;
          * <code>LEVEL_8 = 2;</code>
          */
         LEVEL_8(2),
+        /**
+         * <code>LEVEL_8_TOOLCHAIN = 3;</code>
+         */
+        LEVEL_8_TOOLCHAIN(3),
+        /**
+         * <code>LEVEL_11_TOOLCHAIN = 4;</code>
+         */
+        LEVEL_11_TOOLCHAIN(4),
+        /**
+         * <code>LEVEL_11_NO_TOOLCHAIN = 5;</code>
+         */
+        LEVEL_11_NO_TOOLCHAIN(5),
         ;
 
         /**
@@ -11693,6 +11705,18 @@ private static final long serialVersionUID = 0L;
          * <code>LEVEL_8 = 2;</code>
          */
         public static final int LEVEL_8_VALUE = 2;
+        /**
+         * <code>LEVEL_8_TOOLCHAIN = 3;</code>
+         */
+        public static final int LEVEL_8_TOOLCHAIN_VALUE = 3;
+        /**
+         * <code>LEVEL_11_TOOLCHAIN = 4;</code>
+         */
+        public static final int LEVEL_11_TOOLCHAIN_VALUE = 4;
+        /**
+         * <code>LEVEL_11_NO_TOOLCHAIN = 5;</code>
+         */
+        public static final int LEVEL_11_NO_TOOLCHAIN_VALUE = 5;
 
 
         public final int getNumber() {
@@ -11718,6 +11742,9 @@ private static final long serialVersionUID = 0L;
             case 0: return LEVEL_6;
             case 1: return LEVEL_7;
             case 2: return LEVEL_8;
+            case 3: return LEVEL_8_TOOLCHAIN;
+            case 4: return LEVEL_11_TOOLCHAIN;
+            case 5: return LEVEL_11_NO_TOOLCHAIN;
             default: return null;
           }
         }

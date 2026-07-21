@@ -130,6 +130,14 @@ private static final long serialVersionUID = 0L;
      * <code>EMULATOR_QUICKBOOT_LOAD_COLD_OLD_SNAPSHOT = 8;</code>
      */
     EMULATOR_QUICKBOOT_LOAD_COLD_OLD_SNAPSHOT(8),
+    /**
+     * <pre>
+     * Quickboot succeeded.
+     * </pre>
+     *
+     * <code>EMULATOR_QUICKBOOT_LOAD_SUCCEEDED_WITH_VULKAN = 9;</code>
+     */
+    EMULATOR_QUICKBOOT_LOAD_SUCCEEDED_WITH_VULKAN(9),
     ;
 
     /**
@@ -205,6 +213,14 @@ private static final long serialVersionUID = 0L;
      * <code>EMULATOR_QUICKBOOT_LOAD_COLD_OLD_SNAPSHOT = 8;</code>
      */
     public static final int EMULATOR_QUICKBOOT_LOAD_COLD_OLD_SNAPSHOT_VALUE = 8;
+    /**
+     * <pre>
+     * Quickboot succeeded.
+     * </pre>
+     *
+     * <code>EMULATOR_QUICKBOOT_LOAD_SUCCEEDED_WITH_VULKAN = 9;</code>
+     */
+    public static final int EMULATOR_QUICKBOOT_LOAD_SUCCEEDED_WITH_VULKAN_VALUE = 9;
 
 
     public final int getNumber() {
@@ -236,6 +252,7 @@ private static final long serialVersionUID = 0L;
         case 6: return EMULATOR_QUICKBOOT_LOAD_COLD_AVD;
         case 7: return EMULATOR_QUICKBOOT_LOAD_COLD_UNSUPPORTED;
         case 8: return EMULATOR_QUICKBOOT_LOAD_COLD_OLD_SNAPSHOT;
+        case 9: return EMULATOR_QUICKBOOT_LOAD_SUCCEEDED_WITH_VULKAN;
         default: return null;
       }
     }
