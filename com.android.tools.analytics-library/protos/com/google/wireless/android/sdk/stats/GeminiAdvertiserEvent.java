@@ -158,6 +158,14 @@ private static final long serialVersionUID = 0L;
      * <code>UI_TOOLS = 13;</code>
      */
     UI_TOOLS(13),
+    /**
+     * <pre>
+     * Update dependencies to latest versions.
+     * </pre>
+     *
+     * <code>UPDATE_DEPENDENCIES = 14;</code>
+     */
+    UPDATE_DEPENDENCIES(14),
     ;
 
     /**
@@ -273,6 +281,14 @@ private static final long serialVersionUID = 0L;
      * <code>UI_TOOLS = 13;</code>
      */
     public static final int UI_TOOLS_VALUE = 13;
+    /**
+     * <pre>
+     * Update dependencies to latest versions.
+     * </pre>
+     *
+     * <code>UPDATE_DEPENDENCIES = 14;</code>
+     */
+    public static final int UPDATE_DEPENDENCIES_VALUE = 14;
 
 
     public final int getNumber() {
@@ -309,6 +325,7 @@ private static final long serialVersionUID = 0L;
         case 11: return JOURNEYS;
         case 12: return GENERIC;
         case 13: return UI_TOOLS;
+        case 14: return UPDATE_DEPENDENCIES;
         default: return null;
       }
     }

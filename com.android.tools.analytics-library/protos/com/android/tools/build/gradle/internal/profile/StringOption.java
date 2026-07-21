@@ -218,6 +218,10 @@ public enum StringOption
    * <code>TEST_SUITE_TEST_TASK_ADDITIONAL_INPUTS_FILE = 51;</code>
    */
   TEST_SUITE_TEST_TASK_ADDITIONAL_INPUTS_FILE(51),
+  /**
+   * <code>SUPPRESS_AGP_SYNC_WARNINGS = 52;</code>
+   */
+  SUPPRESS_AGP_SYNC_WARNINGS(52),
   UNRECOGNIZED(-1),
   ;
 
@@ -429,6 +433,10 @@ public enum StringOption
    * <code>TEST_SUITE_TEST_TASK_ADDITIONAL_INPUTS_FILE = 51;</code>
    */
   public static final int TEST_SUITE_TEST_TASK_ADDITIONAL_INPUTS_FILE_VALUE = 51;
+  /**
+   * <code>SUPPRESS_AGP_SYNC_WARNINGS = 52;</code>
+   */
+  public static final int SUPPRESS_AGP_SYNC_WARNINGS_VALUE = 52;
 
 
   public final int getNumber() {
@@ -507,6 +515,7 @@ public enum StringOption
       case 49: return IDE_APK_SELECT_MULTIPLE_DEVICE_SPECS;
       case 50: return SIMULATE_AGP_VERSION_BEHAVIOR;
       case 51: return TEST_SUITE_TEST_TASK_ADDITIONAL_INPUTS_FILE;
+      case 52: return SUPPRESS_AGP_SYNC_WARNINGS;
       default: return null;
     }
   }
