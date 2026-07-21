@@ -278,6 +278,14 @@ private static final long serialVersionUID = 0L;
      * <code>INSERT_NAME_SUGGESTIONS = 11;</code>
      */
     INSERT_NAME_SUGGESTIONS(11),
+    /**
+     * <code>COPY_BUTTON = 12;</code>
+     */
+    COPY_BUTTON(12),
+    /**
+     * <code>COPY_MANUAL = 13;</code>
+     */
+    COPY_MANUAL(13),
     ;
 
     /**
@@ -324,6 +332,14 @@ private static final long serialVersionUID = 0L;
      * <code>INSERT_NAME_SUGGESTIONS = 11;</code>
      */
     public static final int INSERT_NAME_SUGGESTIONS_VALUE = 11;
+    /**
+     * <code>COPY_BUTTON = 12;</code>
+     */
+    public static final int COPY_BUTTON_VALUE = 12;
+    /**
+     * <code>COPY_MANUAL = 13;</code>
+     */
+    public static final int COPY_MANUAL_VALUE = 13;
 
 
     public final int getNumber() {
@@ -357,6 +373,8 @@ private static final long serialVersionUID = 0L;
         case 9: return MERGE_SUGGESTION;
         case 10: return INSERT_RESOURCES;
         case 11: return INSERT_NAME_SUGGESTIONS;
+        case 12: return COPY_BUTTON;
+        case 13: return COPY_MANUAL;
         default: return null;
       }
     }
