@@ -784,6 +784,14 @@ public enum BooleanOption
    * <code>R8_INTEGRATED_RESOURCE_SHRINKING = 190;</code>
    */
   R8_INTEGRATED_RESOURCE_SHRINKING(190),
+  /**
+   * <code>PRIVACY_SANDBOX_SDK_ENABLE_LINT = 191;</code>
+   */
+  PRIVACY_SANDBOX_SDK_ENABLE_LINT(191),
+  /**
+   * <code>SUPPORT_OEM_TOKEN_LIBRARIES = 192;</code>
+   */
+  SUPPORT_OEM_TOKEN_LIBRARIES(192),
   UNRECOGNIZED(-1),
   ;
 
@@ -1551,6 +1559,14 @@ public enum BooleanOption
    * <code>R8_INTEGRATED_RESOURCE_SHRINKING = 190;</code>
    */
   public static final int R8_INTEGRATED_RESOURCE_SHRINKING_VALUE = 190;
+  /**
+   * <code>PRIVACY_SANDBOX_SDK_ENABLE_LINT = 191;</code>
+   */
+  public static final int PRIVACY_SANDBOX_SDK_ENABLE_LINT_VALUE = 191;
+  /**
+   * <code>SUPPORT_OEM_TOKEN_LIBRARIES = 192;</code>
+   */
+  public static final int SUPPORT_OEM_TOKEN_LIBRARIES_VALUE = 192;
 
 
   public final int getNumber() {
@@ -1768,6 +1784,8 @@ public enum BooleanOption
       case 188: return USE_DECLARATIVE_INTERFACES;
       case 189: return ENABLE_COMPILE_RUNTIME_CLASSPATH_ALIGNMENT;
       case 190: return R8_INTEGRATED_RESOURCE_SHRINKING;
+      case 191: return PRIVACY_SANDBOX_SDK_ENABLE_LINT;
+      case 192: return SUPPORT_OEM_TOKEN_LIBRARIES;
       default: return null;
     }
   }

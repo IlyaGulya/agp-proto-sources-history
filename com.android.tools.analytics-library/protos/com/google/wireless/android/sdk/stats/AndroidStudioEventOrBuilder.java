@@ -5815,4 +5815,31 @@ public interface AndroidStudioEventOrBuilder extends
    * <code>optional .android_studio.VirtualizationEvent virtualization_event = 208 [lazy = true];</code>
    */
   com.google.wireless.android.sdk.stats.VirtualizationEventOrBuilder getVirtualizationEventOrBuilder();
+
+  /**
+   * <pre>
+   * set when kind = DAEMON_CODE_ANALYZER_FINISHED_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.DaemonCodeAnalyzerFinishedEvent daemon_code_analyzer_finished_event = 209 [lazy = true];</code>
+   * @return Whether the daemonCodeAnalyzerFinishedEvent field is set.
+   */
+  boolean hasDaemonCodeAnalyzerFinishedEvent();
+  /**
+   * <pre>
+   * set when kind = DAEMON_CODE_ANALYZER_FINISHED_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.DaemonCodeAnalyzerFinishedEvent daemon_code_analyzer_finished_event = 209 [lazy = true];</code>
+   * @return The daemonCodeAnalyzerFinishedEvent.
+   */
+  com.google.wireless.android.sdk.stats.DaemonCodeAnalyzerFinishedEvent getDaemonCodeAnalyzerFinishedEvent();
+  /**
+   * <pre>
+   * set when kind = DAEMON_CODE_ANALYZER_FINISHED_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.DaemonCodeAnalyzerFinishedEvent daemon_code_analyzer_finished_event = 209 [lazy = true];</code>
+   */
+  com.google.wireless.android.sdk.stats.DaemonCodeAnalyzerFinishedEventOrBuilder getDaemonCodeAnalyzerFinishedEventOrBuilder();
 }
