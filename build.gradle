@@ -1,0 +1,54 @@
+import org.gradle.api.attributes.java.TargetJvmEnvironment
+
+def agpVersions = providers.gradleProperty("agpVersions")
+  .map { it.split(",").findAll { version -> !version.isBlank() } }
+  .getOrElse([])
+
+repositories {
+  google()
+  mavenCentral()
+}
+
+def dumpSources = tasks.register("dumpSources")
+
+agpVersions.eachWithIndex { agpVersion, index ->
+  def agpConfiguration = configurations.create("agp${index}") {
+    attributes.attribute(
+      TargetJvmEnvironment.TARGET_JVM_ENVIRONMENT_ATTRIBUTE,
+      objects.named(TargetJvmEnvironment, TargetJvmEnvironment.STANDARD_JVM),
+    )
+  }
+  dependencies.add(agpConfiguration.name, "com.android.tools.build:gradle:${agpVersion}")
+
+  def dumpVersion = tasks.register("dumpSources${index}", Copy) {
+    inputs.files agpConfiguration
+    into(layout.buildDirectory.dir("agp-sources/${agpVersion}"))
+
+    def componentIds = agpConfiguration
+      .incoming
+      .resolutionResult
+      .allComponents
+      .collect { it.id }
+      .findAll {
+        it instanceof ModuleComponentIdentifier && it.group.startsWith("com.android.tools")
+      }
+      .toSet()
+
+    dependencies.createArtifactResolutionQuery()
+      .forComponents(componentIds)
+      .withArtifacts(JvmLibrary, SourcesArtifact)
+      .execute()
+      .resolvedComponents
+      .collectMany { it.getArtifacts(SourcesArtifact) }
+      .findAll { it instanceof ResolvedArtifactResult }
+      .each { ResolvedArtifactResult artifact ->
+        ModuleComponentIdentifier id = artifact.id.componentIdentifier
+        from(zipTree(artifact.file)) {
+          into("${id.group}/${id.module}")
+          exclude("**/*.RSA", "**/*.SF")
+          exclude("**/*.so", "**/*.dll", "**/*.dylib")
+        }
+      }
+  }
+  dumpSources.configure { it.dependsOn(dumpVersion) }
+}
