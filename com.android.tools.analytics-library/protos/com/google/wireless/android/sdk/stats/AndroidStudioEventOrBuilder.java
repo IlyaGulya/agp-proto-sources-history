@@ -4888,4 +4888,31 @@ public interface AndroidStudioEventOrBuilder extends
    * <code>optional .android_studio.ComposePreviewLiteModeEvent compose_preview_lite_mode_event = 174;</code>
    */
   com.google.wireless.android.sdk.stats.ComposePreviewLiteModeEventOrBuilder getComposePreviewLiteModeEventOrBuilder();
+
+  /**
+   * <pre>
+   * set when kind = UPGRADE_ANDROID_STUDIO_DIALOG
+   * </pre>
+   *
+   * <code>optional .android_studio.UpgradeAndroidStudioDialogStats upgrade_android_studio_dialog = 175;</code>
+   * @return Whether the upgradeAndroidStudioDialog field is set.
+   */
+  boolean hasUpgradeAndroidStudioDialog();
+  /**
+   * <pre>
+   * set when kind = UPGRADE_ANDROID_STUDIO_DIALOG
+   * </pre>
+   *
+   * <code>optional .android_studio.UpgradeAndroidStudioDialogStats upgrade_android_studio_dialog = 175;</code>
+   * @return The upgradeAndroidStudioDialog.
+   */
+  com.google.wireless.android.sdk.stats.UpgradeAndroidStudioDialogStats getUpgradeAndroidStudioDialog();
+  /**
+   * <pre>
+   * set when kind = UPGRADE_ANDROID_STUDIO_DIALOG
+   * </pre>
+   *
+   * <code>optional .android_studio.UpgradeAndroidStudioDialogStats upgrade_android_studio_dialog = 175;</code>
+   */
+  com.google.wireless.android.sdk.stats.UpgradeAndroidStudioDialogStatsOrBuilder getUpgradeAndroidStudioDialogOrBuilder();
 }

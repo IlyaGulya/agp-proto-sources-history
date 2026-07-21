@@ -66,6 +66,11 @@ private static final long serialVersionUID = 0L;
             }
             break;
           }
+          case 16: {
+            bitField0_ |= 0x00000002;
+            isComposePreviewLiteMode_ = input.readBool();
+            break;
+          }
           default: {
             if (!parseUnknownField(
                 input, unknownFields, extensionRegistry, tag)) {
@@ -115,6 +120,22 @@ private static final long serialVersionUID = 0L;
      * <code>OPEN_AND_RENDER = 1;</code>
      */
     OPEN_AND_RENDER(1),
+    /**
+     * <pre>
+     * Compose Preview Lite Mode was enabled/disabled.
+     * </pre>
+     *
+     * <code>PREVIEW_LITE_MODE_SWITCH = 2;</code>
+     */
+    PREVIEW_LITE_MODE_SWITCH(2),
+    /**
+     * <pre>
+     * Android Studio Essentials Mode was enabled/disabled.
+     * </pre>
+     *
+     * <code>STUDIO_ESSENTIALS_MODE_SWITCH = 3;</code>
+     */
+    STUDIO_ESSENTIALS_MODE_SWITCH(3),
     ;
 
     /**
@@ -129,6 +150,22 @@ private static final long serialVersionUID = 0L;
      * <code>OPEN_AND_RENDER = 1;</code>
      */
     public static final int OPEN_AND_RENDER_VALUE = 1;
+    /**
+     * <pre>
+     * Compose Preview Lite Mode was enabled/disabled.
+     * </pre>
+     *
+     * <code>PREVIEW_LITE_MODE_SWITCH = 2;</code>
+     */
+    public static final int PREVIEW_LITE_MODE_SWITCH_VALUE = 2;
+    /**
+     * <pre>
+     * Android Studio Essentials Mode was enabled/disabled.
+     * </pre>
+     *
+     * <code>STUDIO_ESSENTIALS_MODE_SWITCH = 3;</code>
+     */
+    public static final int STUDIO_ESSENTIALS_MODE_SWITCH_VALUE = 3;
 
 
     public final int getNumber() {
@@ -153,6 +190,8 @@ private static final long serialVersionUID = 0L;
       switch (value) {
         case 0: return UNKNOWN_EVENT_TYPE;
         case 1: return OPEN_AND_RENDER;
+        case 2: return PREVIEW_LITE_MODE_SWITCH;
+        case 3: return STUDIO_ESSENTIALS_MODE_SWITCH;
         default: return null;
       }
     }
@@ -230,6 +269,35 @@ private static final long serialVersionUID = 0L;
     return result == null ? com.google.wireless.android.sdk.stats.ComposePreviewLiteModeEvent.ComposePreviewLiteModeEventType.UNKNOWN_EVENT_TYPE : result;
   }
 
+  public static final int IS_COMPOSE_PREVIEW_LITE_MODE_FIELD_NUMBER = 2;
+  private boolean isComposePreviewLiteMode_;
+  /**
+   * <pre>
+   * True if Compose Preview Lite Mode is enabled when logging the event.
+   * For switch events, the value is logged after the switch happens.
+   * </pre>
+   *
+   * <code>optional bool is_compose_preview_lite_mode = 2;</code>
+   * @return Whether the isComposePreviewLiteMode field is set.
+   */
+  @java.lang.Override
+  public boolean hasIsComposePreviewLiteMode() {
+    return ((bitField0_ & 0x00000002) != 0);
+  }
+  /**
+   * <pre>
+   * True if Compose Preview Lite Mode is enabled when logging the event.
+   * For switch events, the value is logged after the switch happens.
+   * </pre>
+   *
+   * <code>optional bool is_compose_preview_lite_mode = 2;</code>
+   * @return The isComposePreviewLiteMode.
+   */
+  @java.lang.Override
+  public boolean getIsComposePreviewLiteMode() {
+    return isComposePreviewLiteMode_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -247,6 +315,9 @@ private static final long serialVersionUID = 0L;
     if (((bitField0_ & 0x00000001) != 0)) {
       output.writeEnum(1, type_);
     }
+    if (((bitField0_ & 0x00000002) != 0)) {
+      output.writeBool(2, isComposePreviewLiteMode_);
+    }
     unknownFields.writeTo(output);
   }
 
@@ -259,6 +330,10 @@ private static final long serialVersionUID = 0L;
     if (((bitField0_ & 0x00000001) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(1, type_);
+    }
+    if (((bitField0_ & 0x00000002) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeBoolSize(2, isComposePreviewLiteMode_);
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -279,6 +354,11 @@ private static final long serialVersionUID = 0L;
     if (hasType()) {
       if (type_ != other.type_) return false;
     }
+    if (hasIsComposePreviewLiteMode() != other.hasIsComposePreviewLiteMode()) return false;
+    if (hasIsComposePreviewLiteMode()) {
+      if (getIsComposePreviewLiteMode()
+          != other.getIsComposePreviewLiteMode()) return false;
+    }
     if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
@@ -293,6 +373,11 @@ private static final long serialVersionUID = 0L;
     if (hasType()) {
       hash = (37 * hash) + TYPE_FIELD_NUMBER;
       hash = (53 * hash) + type_;
+    }
+    if (hasIsComposePreviewLiteMode()) {
+      hash = (37 * hash) + IS_COMPOSE_PREVIEW_LITE_MODE_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getIsComposePreviewLiteMode());
     }
     hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
@@ -433,6 +518,8 @@ private static final long serialVersionUID = 0L;
       super.clear();
       type_ = 0;
       bitField0_ = (bitField0_ & ~0x00000001);
+      isComposePreviewLiteMode_ = false;
+      bitField0_ = (bitField0_ & ~0x00000002);
       return this;
     }
 
@@ -465,6 +552,10 @@ private static final long serialVersionUID = 0L;
         to_bitField0_ |= 0x00000001;
       }
       result.type_ = type_;
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.isComposePreviewLiteMode_ = isComposePreviewLiteMode_;
+        to_bitField0_ |= 0x00000002;
+      }
       result.bitField0_ = to_bitField0_;
       onBuilt();
       return result;
@@ -516,6 +607,9 @@ private static final long serialVersionUID = 0L;
       if (other == com.google.wireless.android.sdk.stats.ComposePreviewLiteModeEvent.getDefaultInstance()) return this;
       if (other.hasType()) {
         setType(other.getType());
+      }
+      if (other.hasIsComposePreviewLiteMode()) {
+        setIsComposePreviewLiteMode(other.getIsComposePreviewLiteMode());
       }
       this.mergeUnknownFields(other.unknownFields);
       onChanged();
@@ -602,6 +696,65 @@ private static final long serialVersionUID = 0L;
     public Builder clearType() {
       bitField0_ = (bitField0_ & ~0x00000001);
       type_ = 0;
+      onChanged();
+      return this;
+    }
+
+    private boolean isComposePreviewLiteMode_ ;
+    /**
+     * <pre>
+     * True if Compose Preview Lite Mode is enabled when logging the event.
+     * For switch events, the value is logged after the switch happens.
+     * </pre>
+     *
+     * <code>optional bool is_compose_preview_lite_mode = 2;</code>
+     * @return Whether the isComposePreviewLiteMode field is set.
+     */
+    @java.lang.Override
+    public boolean hasIsComposePreviewLiteMode() {
+      return ((bitField0_ & 0x00000002) != 0);
+    }
+    /**
+     * <pre>
+     * True if Compose Preview Lite Mode is enabled when logging the event.
+     * For switch events, the value is logged after the switch happens.
+     * </pre>
+     *
+     * <code>optional bool is_compose_preview_lite_mode = 2;</code>
+     * @return The isComposePreviewLiteMode.
+     */
+    @java.lang.Override
+    public boolean getIsComposePreviewLiteMode() {
+      return isComposePreviewLiteMode_;
+    }
+    /**
+     * <pre>
+     * True if Compose Preview Lite Mode is enabled when logging the event.
+     * For switch events, the value is logged after the switch happens.
+     * </pre>
+     *
+     * <code>optional bool is_compose_preview_lite_mode = 2;</code>
+     * @param value The isComposePreviewLiteMode to set.
+     * @return This builder for chaining.
+     */
+    public Builder setIsComposePreviewLiteMode(boolean value) {
+      bitField0_ |= 0x00000002;
+      isComposePreviewLiteMode_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * True if Compose Preview Lite Mode is enabled when logging the event.
+     * For switch events, the value is logged after the switch happens.
+     * </pre>
+     *
+     * <code>optional bool is_compose_preview_lite_mode = 2;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearIsComposePreviewLiteMode() {
+      bitField0_ = (bitField0_ & ~0x00000002);
+      isComposePreviewLiteMode_ = false;
       onChanged();
       return this;
     }
