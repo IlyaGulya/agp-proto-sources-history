@@ -920,6 +920,14 @@ public enum BooleanOption
    * <code>DEFAULT_ANDROIDX_TEST_RUNNER = 224;</code>
    */
   DEFAULT_ANDROIDX_TEST_RUNNER(224),
+  /**
+   * <code>DISALLOW_PROVIDER_IN_ANDROID_SOURCE_SET = 225;</code>
+   */
+  DISALLOW_PROVIDER_IN_ANDROID_SOURCE_SET(225),
+  /**
+   * <code>R8_GLOBAL_OPTIONS_IN_CONSUMER_RULES_DISALLOWED = 226;</code>
+   */
+  R8_GLOBAL_OPTIONS_IN_CONSUMER_RULES_DISALLOWED(226),
   UNRECOGNIZED(-1),
   ;
 
@@ -1823,6 +1831,14 @@ public enum BooleanOption
    * <code>DEFAULT_ANDROIDX_TEST_RUNNER = 224;</code>
    */
   public static final int DEFAULT_ANDROIDX_TEST_RUNNER_VALUE = 224;
+  /**
+   * <code>DISALLOW_PROVIDER_IN_ANDROID_SOURCE_SET = 225;</code>
+   */
+  public static final int DISALLOW_PROVIDER_IN_ANDROID_SOURCE_SET_VALUE = 225;
+  /**
+   * <code>R8_GLOBAL_OPTIONS_IN_CONSUMER_RULES_DISALLOWED = 226;</code>
+   */
+  public static final int R8_GLOBAL_OPTIONS_IN_CONSUMER_RULES_DISALLOWED_VALUE = 226;
 
 
   public final int getNumber() {
@@ -2074,6 +2090,8 @@ public enum BooleanOption
       case 222: return USE_NEW_DSL;
       case 223: return ENABLE_IDENTITY_TRANSFORMS_FOR_PROCESSED_ARTIFACTS;
       case 224: return DEFAULT_ANDROIDX_TEST_RUNNER;
+      case 225: return DISALLOW_PROVIDER_IN_ANDROID_SOURCE_SET;
+      case 226: return R8_GLOBAL_OPTIONS_IN_CONSUMER_RULES_DISALLOWED;
       default: return null;
     }
   }

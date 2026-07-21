@@ -924,8 +924,13 @@ private static final long serialVersionUID = 0L;
      */
     UNKNOWN_VK(0),
     /**
-     * <code>HARDWARE_VK = 1;</code>
+     * <pre>
+     * Deprecated, use HOST_DEFAULT_VK instead.
+     * </pre>
+     *
+     * <code>HARDWARE_VK = 1 [deprecated = true];</code>
      */
+    @java.lang.Deprecated
     HARDWARE_VK(1),
     /**
      * <pre>
@@ -959,6 +964,22 @@ private static final long serialVersionUID = 0L;
      * <code>KOSMICKRISP_VK = 5;</code>
      */
     KOSMICKRISP_VK(5),
+    /**
+     * <pre>
+     * Vulkan is disabled
+     * </pre>
+     *
+     * <code>DISABLED_VK = 6;</code>
+     */
+    DISABLED_VK(6),
+    /**
+     * <pre>
+     * Host Vulkan ICD
+     * </pre>
+     *
+     * <code>HOST_DEFAULT_VK = 7;</code>
+     */
+    HOST_DEFAULT_VK(7),
     ;
 
     /**
@@ -966,9 +987,13 @@ private static final long serialVersionUID = 0L;
      */
     public static final int UNKNOWN_VK_VALUE = 0;
     /**
-     * <code>HARDWARE_VK = 1;</code>
+     * <pre>
+     * Deprecated, use HOST_DEFAULT_VK instead.
+     * </pre>
+     *
+     * <code>HARDWARE_VK = 1 [deprecated = true];</code>
      */
-    public static final int HARDWARE_VK_VALUE = 1;
+    @java.lang.Deprecated public static final int HARDWARE_VK_VALUE = 1;
     /**
      * <pre>
      * Swiftshader software renderer
@@ -1001,6 +1026,22 @@ private static final long serialVersionUID = 0L;
      * <code>KOSMICKRISP_VK = 5;</code>
      */
     public static final int KOSMICKRISP_VK_VALUE = 5;
+    /**
+     * <pre>
+     * Vulkan is disabled
+     * </pre>
+     *
+     * <code>DISABLED_VK = 6;</code>
+     */
+    public static final int DISABLED_VK_VALUE = 6;
+    /**
+     * <pre>
+     * Host Vulkan ICD
+     * </pre>
+     *
+     * <code>HOST_DEFAULT_VK = 7;</code>
+     */
+    public static final int HOST_DEFAULT_VK_VALUE = 7;
 
 
     public final int getNumber() {
@@ -1029,6 +1070,8 @@ private static final long serialVersionUID = 0L;
         case 3: return MOLTEN_VK;
         case 4: return LAVAPIPE_VK;
         case 5: return KOSMICKRISP_VK;
+        case 6: return DISABLED_VK;
+        case 7: return HOST_DEFAULT_VK;
         default: return null;
       }
     }
@@ -2463,6 +2506,44 @@ private static final long serialVersionUID = 0L;
     return emuCompatInfo_ == null ? com.google.wireless.android.sdk.stats.EmulatorCompatibilityInfo.getDefaultInstance() : emuCompatInfo_;
   }
 
+  public static final int ACTIVE_VULKAN_HOST_GPU_FIELD_NUMBER = 41;
+  private com.google.wireless.android.sdk.stats.EmulatorGpuVkInfo activeVulkanHostGpu_;
+  /**
+   * <pre>
+   * In-use Vulkan GPU
+   * </pre>
+   *
+   * <code>optional .android_studio.EmulatorGpuVkInfo active_vulkan_host_gpu = 41;</code>
+   * @return Whether the activeVulkanHostGpu field is set.
+   */
+  @java.lang.Override
+  public boolean hasActiveVulkanHostGpu() {
+    return ((bitField1_ & 0x00000008) != 0);
+  }
+  /**
+   * <pre>
+   * In-use Vulkan GPU
+   * </pre>
+   *
+   * <code>optional .android_studio.EmulatorGpuVkInfo active_vulkan_host_gpu = 41;</code>
+   * @return The activeVulkanHostGpu.
+   */
+  @java.lang.Override
+  public com.google.wireless.android.sdk.stats.EmulatorGpuVkInfo getActiveVulkanHostGpu() {
+    return activeVulkanHostGpu_ == null ? com.google.wireless.android.sdk.stats.EmulatorGpuVkInfo.getDefaultInstance() : activeVulkanHostGpu_;
+  }
+  /**
+   * <pre>
+   * In-use Vulkan GPU
+   * </pre>
+   *
+   * <code>optional .android_studio.EmulatorGpuVkInfo active_vulkan_host_gpu = 41;</code>
+   */
+  @java.lang.Override
+  public com.google.wireless.android.sdk.stats.EmulatorGpuVkInfoOrBuilder getActiveVulkanHostGpuOrBuilder() {
+    return activeVulkanHostGpu_ == null ? com.google.wireless.android.sdk.stats.EmulatorGpuVkInfo.getDefaultInstance() : activeVulkanHostGpu_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -2593,6 +2674,9 @@ private static final long serialVersionUID = 0L;
     }
     if (((bitField1_ & 0x00000004) != 0)) {
       output.writeMessage(40, getEmuCompatInfo());
+    }
+    if (((bitField1_ & 0x00000008) != 0)) {
+      output.writeMessage(41, getActiveVulkanHostGpu());
     }
     getUnknownFields().writeTo(output);
   }
@@ -2757,6 +2841,10 @@ private static final long serialVersionUID = 0L;
     if (((bitField1_ & 0x00000004) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(40, getEmuCompatInfo());
+    }
+    if (((bitField1_ & 0x00000008) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(41, getActiveVulkanHostGpu());
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -2950,6 +3038,11 @@ private static final long serialVersionUID = 0L;
       if (!getEmuCompatInfo()
           .equals(other.getEmuCompatInfo())) return false;
     }
+    if (hasActiveVulkanHostGpu() != other.hasActiveVulkanHostGpu()) return false;
+    if (hasActiveVulkanHostGpu()) {
+      if (!getActiveVulkanHostGpu()
+          .equals(other.getActiveVulkanHostGpu())) return false;
+    }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -3125,6 +3218,10 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + EMU_COMPAT_INFO_FIELD_NUMBER;
       hash = (53 * hash) + getEmuCompatInfo().hashCode();
     }
+    if (hasActiveVulkanHostGpu()) {
+      hash = (37 * hash) + ACTIVE_VULKAN_HOST_GPU_FIELD_NUMBER;
+      hash = (53 * hash) + getActiveVulkanHostGpu().hashCode();
+    }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -3279,6 +3376,7 @@ private static final long serialVersionUID = 0L;
         getIceboxFieldBuilder();
         getResizableDisplayFieldBuilder();
         getEmuCompatInfoFieldBuilder();
+        getActiveVulkanHostGpuFieldBuilder();
       }
     }
     @java.lang.Override
@@ -3420,6 +3518,11 @@ private static final long serialVersionUID = 0L;
       if (emuCompatInfoBuilder_ != null) {
         emuCompatInfoBuilder_.dispose();
         emuCompatInfoBuilder_ = null;
+      }
+      activeVulkanHostGpu_ = null;
+      if (activeVulkanHostGpuBuilder_ != null) {
+        activeVulkanHostGpuBuilder_.dispose();
+        activeVulkanHostGpuBuilder_ = null;
       }
       return this;
     }
@@ -3679,6 +3782,12 @@ private static final long serialVersionUID = 0L;
             : emuCompatInfoBuilder_.build();
         to_bitField1_ |= 0x00000004;
       }
+      if (((from_bitField1_ & 0x00000080) != 0)) {
+        result.activeVulkanHostGpu_ = activeVulkanHostGpuBuilder_ == null
+            ? activeVulkanHostGpu_
+            : activeVulkanHostGpuBuilder_.build();
+        to_bitField1_ |= 0x00000008;
+      }
       result.bitField0_ |= to_bitField0_;
       result.bitField1_ |= to_bitField1_;
     }
@@ -3905,6 +4014,9 @@ private static final long serialVersionUID = 0L;
       }
       if (other.hasEmuCompatInfo()) {
         mergeEmuCompatInfo(other.getEmuCompatInfo());
+      }
+      if (other.hasActiveVulkanHostGpu()) {
+        mergeActiveVulkanHostGpu(other.getActiveVulkanHostGpu());
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -4237,6 +4349,13 @@ private static final long serialVersionUID = 0L;
               bitField1_ |= 0x00000040;
               break;
             } // case 322
+            case 330: {
+              input.readMessage(
+                  getActiveVulkanHostGpuFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField1_ |= 0x00000080;
+              break;
+            } // case 330
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -9195,6 +9314,161 @@ private static final long serialVersionUID = 0L;
         emuCompatInfo_ = null;
       }
       return emuCompatInfoBuilder_;
+    }
+
+    private com.google.wireless.android.sdk.stats.EmulatorGpuVkInfo activeVulkanHostGpu_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.EmulatorGpuVkInfo, com.google.wireless.android.sdk.stats.EmulatorGpuVkInfo.Builder, com.google.wireless.android.sdk.stats.EmulatorGpuVkInfoOrBuilder> activeVulkanHostGpuBuilder_;
+    /**
+     * <pre>
+     * In-use Vulkan GPU
+     * </pre>
+     *
+     * <code>optional .android_studio.EmulatorGpuVkInfo active_vulkan_host_gpu = 41;</code>
+     * @return Whether the activeVulkanHostGpu field is set.
+     */
+    public boolean hasActiveVulkanHostGpu() {
+      return ((bitField1_ & 0x00000080) != 0);
+    }
+    /**
+     * <pre>
+     * In-use Vulkan GPU
+     * </pre>
+     *
+     * <code>optional .android_studio.EmulatorGpuVkInfo active_vulkan_host_gpu = 41;</code>
+     * @return The activeVulkanHostGpu.
+     */
+    public com.google.wireless.android.sdk.stats.EmulatorGpuVkInfo getActiveVulkanHostGpu() {
+      if (activeVulkanHostGpuBuilder_ == null) {
+        return activeVulkanHostGpu_ == null ? com.google.wireless.android.sdk.stats.EmulatorGpuVkInfo.getDefaultInstance() : activeVulkanHostGpu_;
+      } else {
+        return activeVulkanHostGpuBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * In-use Vulkan GPU
+     * </pre>
+     *
+     * <code>optional .android_studio.EmulatorGpuVkInfo active_vulkan_host_gpu = 41;</code>
+     */
+    public Builder setActiveVulkanHostGpu(com.google.wireless.android.sdk.stats.EmulatorGpuVkInfo value) {
+      if (activeVulkanHostGpuBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        activeVulkanHostGpu_ = value;
+      } else {
+        activeVulkanHostGpuBuilder_.setMessage(value);
+      }
+      bitField1_ |= 0x00000080;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * In-use Vulkan GPU
+     * </pre>
+     *
+     * <code>optional .android_studio.EmulatorGpuVkInfo active_vulkan_host_gpu = 41;</code>
+     */
+    public Builder setActiveVulkanHostGpu(
+        com.google.wireless.android.sdk.stats.EmulatorGpuVkInfo.Builder builderForValue) {
+      if (activeVulkanHostGpuBuilder_ == null) {
+        activeVulkanHostGpu_ = builderForValue.build();
+      } else {
+        activeVulkanHostGpuBuilder_.setMessage(builderForValue.build());
+      }
+      bitField1_ |= 0x00000080;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * In-use Vulkan GPU
+     * </pre>
+     *
+     * <code>optional .android_studio.EmulatorGpuVkInfo active_vulkan_host_gpu = 41;</code>
+     */
+    public Builder mergeActiveVulkanHostGpu(com.google.wireless.android.sdk.stats.EmulatorGpuVkInfo value) {
+      if (activeVulkanHostGpuBuilder_ == null) {
+        if (((bitField1_ & 0x00000080) != 0) &&
+          activeVulkanHostGpu_ != null &&
+          activeVulkanHostGpu_ != com.google.wireless.android.sdk.stats.EmulatorGpuVkInfo.getDefaultInstance()) {
+          getActiveVulkanHostGpuBuilder().mergeFrom(value);
+        } else {
+          activeVulkanHostGpu_ = value;
+        }
+      } else {
+        activeVulkanHostGpuBuilder_.mergeFrom(value);
+      }
+      bitField1_ |= 0x00000080;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * In-use Vulkan GPU
+     * </pre>
+     *
+     * <code>optional .android_studio.EmulatorGpuVkInfo active_vulkan_host_gpu = 41;</code>
+     */
+    public Builder clearActiveVulkanHostGpu() {
+      bitField1_ = (bitField1_ & ~0x00000080);
+      activeVulkanHostGpu_ = null;
+      if (activeVulkanHostGpuBuilder_ != null) {
+        activeVulkanHostGpuBuilder_.dispose();
+        activeVulkanHostGpuBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * In-use Vulkan GPU
+     * </pre>
+     *
+     * <code>optional .android_studio.EmulatorGpuVkInfo active_vulkan_host_gpu = 41;</code>
+     */
+    public com.google.wireless.android.sdk.stats.EmulatorGpuVkInfo.Builder getActiveVulkanHostGpuBuilder() {
+      bitField1_ |= 0x00000080;
+      onChanged();
+      return getActiveVulkanHostGpuFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * In-use Vulkan GPU
+     * </pre>
+     *
+     * <code>optional .android_studio.EmulatorGpuVkInfo active_vulkan_host_gpu = 41;</code>
+     */
+    public com.google.wireless.android.sdk.stats.EmulatorGpuVkInfoOrBuilder getActiveVulkanHostGpuOrBuilder() {
+      if (activeVulkanHostGpuBuilder_ != null) {
+        return activeVulkanHostGpuBuilder_.getMessageOrBuilder();
+      } else {
+        return activeVulkanHostGpu_ == null ?
+            com.google.wireless.android.sdk.stats.EmulatorGpuVkInfo.getDefaultInstance() : activeVulkanHostGpu_;
+      }
+    }
+    /**
+     * <pre>
+     * In-use Vulkan GPU
+     * </pre>
+     *
+     * <code>optional .android_studio.EmulatorGpuVkInfo active_vulkan_host_gpu = 41;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.EmulatorGpuVkInfo, com.google.wireless.android.sdk.stats.EmulatorGpuVkInfo.Builder, com.google.wireless.android.sdk.stats.EmulatorGpuVkInfoOrBuilder> 
+        getActiveVulkanHostGpuFieldBuilder() {
+      if (activeVulkanHostGpuBuilder_ == null) {
+        activeVulkanHostGpuBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.wireless.android.sdk.stats.EmulatorGpuVkInfo, com.google.wireless.android.sdk.stats.EmulatorGpuVkInfo.Builder, com.google.wireless.android.sdk.stats.EmulatorGpuVkInfoOrBuilder>(
+                getActiveVulkanHostGpu(),
+                getParentForChildren(),
+                isClean());
+        activeVulkanHostGpu_ = null;
+      }
+      return activeVulkanHostGpuBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

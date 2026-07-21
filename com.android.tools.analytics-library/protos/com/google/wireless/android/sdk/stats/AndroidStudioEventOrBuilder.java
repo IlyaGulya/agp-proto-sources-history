@@ -6673,4 +6673,58 @@ public interface AndroidStudioEventOrBuilder extends
    * <code>optional .android_studio.AdvertiserNotificationEvent advertiser_notification_event = 239 [lazy = true];</code>
    */
   com.google.wireless.android.sdk.stats.AdvertiserNotificationEventOrBuilder getAdvertiserNotificationEventOrBuilder();
+
+  /**
+   * <pre>
+   * set when kind = ASSET_STUDIO_WIZARD_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.AssetStudioWizardEvent asset_studio_wizard_event = 240 [lazy = true];</code>
+   * @return Whether the assetStudioWizardEvent field is set.
+   */
+  boolean hasAssetStudioWizardEvent();
+  /**
+   * <pre>
+   * set when kind = ASSET_STUDIO_WIZARD_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.AssetStudioWizardEvent asset_studio_wizard_event = 240 [lazy = true];</code>
+   * @return The assetStudioWizardEvent.
+   */
+  com.google.wireless.android.sdk.stats.AssetStudioWizardEvent getAssetStudioWizardEvent();
+  /**
+   * <pre>
+   * set when kind = ASSET_STUDIO_WIZARD_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.AssetStudioWizardEvent asset_studio_wizard_event = 240 [lazy = true];</code>
+   */
+  com.google.wireless.android.sdk.stats.AssetStudioWizardEventOrBuilder getAssetStudioWizardEventOrBuilder();
+
+  /**
+   * <pre>
+   * set when kind = NEXT_EDIT_PREDICTION_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.NextEditPredictionEvent next_edit_prediction_event = 241 [lazy = true];</code>
+   * @return Whether the nextEditPredictionEvent field is set.
+   */
+  boolean hasNextEditPredictionEvent();
+  /**
+   * <pre>
+   * set when kind = NEXT_EDIT_PREDICTION_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.NextEditPredictionEvent next_edit_prediction_event = 241 [lazy = true];</code>
+   * @return The nextEditPredictionEvent.
+   */
+  com.google.wireless.android.sdk.stats.NextEditPredictionEvent getNextEditPredictionEvent();
+  /**
+   * <pre>
+   * set when kind = NEXT_EDIT_PREDICTION_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.NextEditPredictionEvent next_edit_prediction_event = 241 [lazy = true];</code>
+   */
+  com.google.wireless.android.sdk.stats.NextEditPredictionEventOrBuilder getNextEditPredictionEventOrBuilder();
 }

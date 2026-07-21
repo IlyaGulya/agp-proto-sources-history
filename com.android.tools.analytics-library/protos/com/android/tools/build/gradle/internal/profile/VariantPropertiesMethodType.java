@@ -733,6 +733,30 @@ public enum VariantPropertiesMethodType
    * <code>CONFIGURE_JAVA_COMPILE_TASK = 168;</code>
    */
   CONFIGURE_JAVA_COMPILE_TASK(168),
+  /**
+   * <code>JUNIT_ENGINE_INPUTS = 169;</code>
+   */
+  JUNIT_ENGINE_INPUTS(169),
+  /**
+   * <code>JUNIT_ENGINE_INCLUDED_ENGINES = 170;</code>
+   */
+  JUNIT_ENGINE_INCLUDED_ENGINES(170),
+  /**
+   * <code>JUNIT_ENGINE_INPUT_PROPERTIES = 171;</code>
+   */
+  JUNIT_ENGINE_INPUT_PROPERTIES(171),
+  /**
+   * <code>JUNIT_ENGINE_DEPENDENCIES = 172;</code>
+   */
+  JUNIT_ENGINE_DEPENDENCIES(172),
+  /**
+   * <code>TEST_SUITE_TARGET_ENABLE = 173;</code>
+   */
+  TEST_SUITE_TARGET_ENABLE(173),
+  /**
+   * <code>TEST_SUITE_TARGET_TARGET_DEVICES = 174;</code>
+   */
+  TEST_SUITE_TARGET_TARGET_DEVICES(174),
   UNRECOGNIZED(-1),
   ;
 
@@ -1460,6 +1484,30 @@ public enum VariantPropertiesMethodType
    * <code>CONFIGURE_JAVA_COMPILE_TASK = 168;</code>
    */
   public static final int CONFIGURE_JAVA_COMPILE_TASK_VALUE = 168;
+  /**
+   * <code>JUNIT_ENGINE_INPUTS = 169;</code>
+   */
+  public static final int JUNIT_ENGINE_INPUTS_VALUE = 169;
+  /**
+   * <code>JUNIT_ENGINE_INCLUDED_ENGINES = 170;</code>
+   */
+  public static final int JUNIT_ENGINE_INCLUDED_ENGINES_VALUE = 170;
+  /**
+   * <code>JUNIT_ENGINE_INPUT_PROPERTIES = 171;</code>
+   */
+  public static final int JUNIT_ENGINE_INPUT_PROPERTIES_VALUE = 171;
+  /**
+   * <code>JUNIT_ENGINE_DEPENDENCIES = 172;</code>
+   */
+  public static final int JUNIT_ENGINE_DEPENDENCIES_VALUE = 172;
+  /**
+   * <code>TEST_SUITE_TARGET_ENABLE = 173;</code>
+   */
+  public static final int TEST_SUITE_TARGET_ENABLE_VALUE = 173;
+  /**
+   * <code>TEST_SUITE_TARGET_TARGET_DEVICES = 174;</code>
+   */
+  public static final int TEST_SUITE_TARGET_TARGET_DEVICES_VALUE = 174;
 
 
   public final int getNumber() {
@@ -1655,6 +1703,12 @@ public enum VariantPropertiesMethodType
       case 166: return TEST_SUITE_TARGETS;
       case 167: return CONSUMER_PROGUARD_FILES;
       case 168: return CONFIGURE_JAVA_COMPILE_TASK;
+      case 169: return JUNIT_ENGINE_INPUTS;
+      case 170: return JUNIT_ENGINE_INCLUDED_ENGINES;
+      case 171: return JUNIT_ENGINE_INPUT_PROPERTIES;
+      case 172: return JUNIT_ENGINE_DEPENDENCIES;
+      case 173: return TEST_SUITE_TARGET_ENABLE;
+      case 174: return TEST_SUITE_TARGET_TARGET_DEVICES;
       default: return null;
     }
   }

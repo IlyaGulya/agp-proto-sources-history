@@ -101,8 +101,9 @@ private static final long serialVersionUID = 0L;
      */
     MIGRATE_TO_INSTALLATION(13),
     /**
-     * <code>MIGRATE_TO_EMULATOR_SNAPSHOTS = 14;</code>
+     * <code>MIGRATE_TO_EMULATOR_SNAPSHOTS = 14 [deprecated = true];</code>
      */
+    @java.lang.Deprecated
     MIGRATE_TO_EMULATOR_SNAPSHOTS(14),
     /**
      * <code>MIGRATE_TO_TEST_COVERAGE = 15;</code>
@@ -303,6 +304,10 @@ private static final long serialVersionUID = 0L;
      * <code>KOTLIN20_COMPOSE = 63;</code>
      */
     KOTLIN20_COMPOSE(63),
+    /**
+     * <code>REMOVE_EMULATOR_SNAPSHOTS = 64;</code>
+     */
+    REMOVE_EMULATOR_SNAPSHOTS(64),
     ;
 
     /**
@@ -362,9 +367,9 @@ private static final long serialVersionUID = 0L;
      */
     public static final int MIGRATE_TO_INSTALLATION_VALUE = 13;
     /**
-     * <code>MIGRATE_TO_EMULATOR_SNAPSHOTS = 14;</code>
+     * <code>MIGRATE_TO_EMULATOR_SNAPSHOTS = 14 [deprecated = true];</code>
      */
-    public static final int MIGRATE_TO_EMULATOR_SNAPSHOTS_VALUE = 14;
+    @java.lang.Deprecated public static final int MIGRATE_TO_EMULATOR_SNAPSHOTS_VALUE = 14;
     /**
      * <code>MIGRATE_TO_TEST_COVERAGE = 15;</code>
      */
@@ -561,6 +566,10 @@ private static final long serialVersionUID = 0L;
      * <code>KOTLIN20_COMPOSE = 63;</code>
      */
     public static final int KOTLIN20_COMPOSE_VALUE = 63;
+    /**
+     * <code>REMOVE_EMULATOR_SNAPSHOTS = 64;</code>
+     */
+    public static final int REMOVE_EMULATOR_SNAPSHOTS_VALUE = 64;
 
 
     public final int getNumber() {
@@ -647,6 +656,7 @@ private static final long serialVersionUID = 0L;
         case 61: return BUILT_IN_KOTLIN_DEFAULT;
         case 62: return NEWDSL_DEFAULT;
         case 63: return KOTLIN20_COMPOSE;
+        case 64: return REMOVE_EMULATOR_SNAPSHOTS;
         default: return null;
       }
     }

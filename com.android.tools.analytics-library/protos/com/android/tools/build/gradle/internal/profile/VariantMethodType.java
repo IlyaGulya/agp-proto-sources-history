@@ -136,6 +136,30 @@ public enum VariantMethodType
    * <code>TEST_SUITE_BUILDER_TARGETS = 30;</code>
    */
   TEST_SUITE_BUILDER_TARGETS(30),
+  /**
+   * <code>JUNIT_ENGINE_BUILDER_INPUTS = 31;</code>
+   */
+  JUNIT_ENGINE_BUILDER_INPUTS(31),
+  /**
+   * <code>JUNIT_ENGINE_BUILDER_INCLUDE_ENGINES = 32;</code>
+   */
+  JUNIT_ENGINE_BUILDER_INCLUDE_ENGINES(32),
+  /**
+   * <code>JUNIT_ENGINE_BUILDER_INPUT_PROPERTIES = 33;</code>
+   */
+  JUNIT_ENGINE_BUILDER_INPUT_PROPERTIES(33),
+  /**
+   * <code>JUNIT_ENGINE_BUILDER_ENGINE_DEPENDENCIES = 34;</code>
+   */
+  JUNIT_ENGINE_BUILDER_ENGINE_DEPENDENCIES(34),
+  /**
+   * <code>TEST_SUITE_TARGET_BUILDER_ENABLE = 35;</code>
+   */
+  TEST_SUITE_TARGET_BUILDER_ENABLE(35),
+  /**
+   * <code>TEST_SUITE_TARGET_BUILDER_TARGET_DEVICES = 36;</code>
+   */
+  TEST_SUITE_TARGET_BUILDER_TARGET_DEVICES(36),
   UNRECOGNIZED(-1),
   ;
 
@@ -267,6 +291,30 @@ public enum VariantMethodType
    * <code>TEST_SUITE_BUILDER_TARGETS = 30;</code>
    */
   public static final int TEST_SUITE_BUILDER_TARGETS_VALUE = 30;
+  /**
+   * <code>JUNIT_ENGINE_BUILDER_INPUTS = 31;</code>
+   */
+  public static final int JUNIT_ENGINE_BUILDER_INPUTS_VALUE = 31;
+  /**
+   * <code>JUNIT_ENGINE_BUILDER_INCLUDE_ENGINES = 32;</code>
+   */
+  public static final int JUNIT_ENGINE_BUILDER_INCLUDE_ENGINES_VALUE = 32;
+  /**
+   * <code>JUNIT_ENGINE_BUILDER_INPUT_PROPERTIES = 33;</code>
+   */
+  public static final int JUNIT_ENGINE_BUILDER_INPUT_PROPERTIES_VALUE = 33;
+  /**
+   * <code>JUNIT_ENGINE_BUILDER_ENGINE_DEPENDENCIES = 34;</code>
+   */
+  public static final int JUNIT_ENGINE_BUILDER_ENGINE_DEPENDENCIES_VALUE = 34;
+  /**
+   * <code>TEST_SUITE_TARGET_BUILDER_ENABLE = 35;</code>
+   */
+  public static final int TEST_SUITE_TARGET_BUILDER_ENABLE_VALUE = 35;
+  /**
+   * <code>TEST_SUITE_TARGET_BUILDER_TARGET_DEVICES = 36;</code>
+   */
+  public static final int TEST_SUITE_TARGET_BUILDER_TARGET_DEVICES_VALUE = 36;
 
 
   public final int getNumber() {
@@ -324,6 +372,12 @@ public enum VariantMethodType
       case 28: return JUNIT_ENGINE_SPEC_BUILDER;
       case 29: return TEST_SUITE_DEPENDENCIES;
       case 30: return TEST_SUITE_BUILDER_TARGETS;
+      case 31: return JUNIT_ENGINE_BUILDER_INPUTS;
+      case 32: return JUNIT_ENGINE_BUILDER_INCLUDE_ENGINES;
+      case 33: return JUNIT_ENGINE_BUILDER_INPUT_PROPERTIES;
+      case 34: return JUNIT_ENGINE_BUILDER_ENGINE_DEPENDENCIES;
+      case 35: return TEST_SUITE_TARGET_BUILDER_ENABLE;
+      case 36: return TEST_SUITE_TARGET_BUILDER_TARGET_DEVICES;
       default: return null;
     }
   }

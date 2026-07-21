@@ -28,4 +28,15 @@ public interface BackupAndSyncEventOrBuilder extends
    * @return The enablementFlow.
    */
   com.google.wireless.android.sdk.stats.BackupAndSyncEvent.EnablementFlow getEnablementFlow();
+
+  /**
+   * <code>optional .android_studio.BackupAndSyncEvent.Type type = 3;</code>
+   * @return Whether the type field is set.
+   */
+  boolean hasType();
+  /**
+   * <code>optional .android_studio.BackupAndSyncEvent.Type type = 3;</code>
+   * @return The type.
+   */
+  com.google.wireless.android.sdk.stats.BackupAndSyncEvent.Type getType();
 }
