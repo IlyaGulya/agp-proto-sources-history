@@ -188,6 +188,18 @@ private static final long serialVersionUID = 0L;
      * <code>MERGE_MANIFEST = 7;</code>
      */
     MERGE_MANIFEST(7),
+    /**
+     * <code>MERGE_SUGGESTION = 9;</code>
+     */
+    MERGE_SUGGESTION(9),
+    /**
+     * <code>INSERT_RESOURCES = 10;</code>
+     */
+    INSERT_RESOURCES(10),
+    /**
+     * <code>INSERT_NAME_SUGGESTIONS = 11;</code>
+     */
+    INSERT_NAME_SUGGESTIONS(11),
     ;
 
     /**
@@ -222,6 +234,18 @@ private static final long serialVersionUID = 0L;
      * <code>MERGE_MANIFEST = 7;</code>
      */
     public static final int MERGE_MANIFEST_VALUE = 7;
+    /**
+     * <code>MERGE_SUGGESTION = 9;</code>
+     */
+    public static final int MERGE_SUGGESTION_VALUE = 9;
+    /**
+     * <code>INSERT_RESOURCES = 10;</code>
+     */
+    public static final int INSERT_RESOURCES_VALUE = 10;
+    /**
+     * <code>INSERT_NAME_SUGGESTIONS = 11;</code>
+     */
+    public static final int INSERT_NAME_SUGGESTIONS_VALUE = 11;
 
 
     public final int getNumber() {
@@ -252,6 +276,9 @@ private static final long serialVersionUID = 0L;
         case 5: return BROWSE_TOPIC;
         case 6: return EXPLORE_IN_PLAYGROUND;
         case 7: return MERGE_MANIFEST;
+        case 9: return MERGE_SUGGESTION;
+        case 10: return INSERT_RESOURCES;
+        case 11: return INSERT_NAME_SUGGESTIONS;
         default: return null;
       }
     }

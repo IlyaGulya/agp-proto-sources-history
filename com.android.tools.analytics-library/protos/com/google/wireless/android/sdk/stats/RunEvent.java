@@ -279,6 +279,14 @@ private static final long serialVersionUID = 0L;
      * <code>ABORT = 3;</code>
      */
     ABORT(3),
+    /**
+     * <pre>
+     * The `Before Run Task` failed.
+     * </pre>
+     *
+     * <code>BEFORE_RUN_TASK_FAIL = 4;</code>
+     */
+    BEFORE_RUN_TASK_FAIL(4),
     ;
 
     /**
@@ -309,6 +317,14 @@ private static final long serialVersionUID = 0L;
      * <code>ABORT = 3;</code>
      */
     public static final int ABORT_VALUE = 3;
+    /**
+     * <pre>
+     * The `Before Run Task` failed.
+     * </pre>
+     *
+     * <code>BEFORE_RUN_TASK_FAIL = 4;</code>
+     */
+    public static final int BEFORE_RUN_TASK_FAIL_VALUE = 4;
 
 
     public final int getNumber() {
@@ -335,6 +351,7 @@ private static final long serialVersionUID = 0L;
         case 1: return SUCCESS;
         case 2: return FAIL;
         case 3: return ABORT;
+        case 4: return BEFORE_RUN_TASK_FAIL;
         default: return null;
       }
     }
