@@ -298,6 +298,54 @@ private static final long serialVersionUID = 0L;
      * <code>PLAY_DYNAMIC_FILTERS_INSPECTION_DISABLE_FOR_TAG = 44;</code>
      */
     PLAY_DYNAMIC_FILTERS_INSPECTION_DISABLE_FOR_TAG(44),
+    /**
+     * <pre>
+     * Domain failure inspection
+     * </pre>
+     *
+     * <code>DOMAIN_FAILURE_INSPECTION = 45;</code>
+     */
+    DOMAIN_FAILURE_INSPECTION(45),
+    /**
+     * <code>DOMAIN_FAILURE_INSPECTION_DISABLE_IN_SETTINGS = 46;</code>
+     */
+    DOMAIN_FAILURE_INSPECTION_DISABLE_IN_SETTINGS(46),
+    /**
+     * <code>DOMAIN_FAILURE_INSPECTION_DISABLE_FOR_FILE = 47;</code>
+     */
+    DOMAIN_FAILURE_INSPECTION_DISABLE_FOR_FILE(47),
+    /**
+     * <code>DOMAIN_FAILURE_INSPECTION_DISABLE_FOR_TAG = 48;</code>
+     */
+    DOMAIN_FAILURE_INSPECTION_DISABLE_FOR_TAG(48),
+    /**
+     * <code>ADD_URL_DIALOG_V2 = 49;</code>
+     */
+    ADD_URL_DIALOG_V2(49),
+    /**
+     * <code>ADD_JSON_V2 = 50;</code>
+     */
+    ADD_JSON_V2(50),
+    /**
+     * <code>TEST_APP_LINK_V2 = 51;</code>
+     */
+    TEST_APP_LINK_V2(51),
+    /**
+     * <code>OVERVIEW = 52;</code>
+     */
+    OVERVIEW(52),
+    /**
+     * <code>ISSUES_TAB = 53;</code>
+     */
+    ISSUES_TAB(53),
+    /**
+     * <code>CREATE_NEW_LINK_TAB = 54;</code>
+     */
+    CREATE_NEW_LINK_TAB(54),
+    /**
+     * <code>SEARCH_TAB = 55;</code>
+     */
+    SEARCH_TAB(55),
     ;
 
     /**
@@ -540,6 +588,54 @@ private static final long serialVersionUID = 0L;
      * <code>PLAY_DYNAMIC_FILTERS_INSPECTION_DISABLE_FOR_TAG = 44;</code>
      */
     public static final int PLAY_DYNAMIC_FILTERS_INSPECTION_DISABLE_FOR_TAG_VALUE = 44;
+    /**
+     * <pre>
+     * Domain failure inspection
+     * </pre>
+     *
+     * <code>DOMAIN_FAILURE_INSPECTION = 45;</code>
+     */
+    public static final int DOMAIN_FAILURE_INSPECTION_VALUE = 45;
+    /**
+     * <code>DOMAIN_FAILURE_INSPECTION_DISABLE_IN_SETTINGS = 46;</code>
+     */
+    public static final int DOMAIN_FAILURE_INSPECTION_DISABLE_IN_SETTINGS_VALUE = 46;
+    /**
+     * <code>DOMAIN_FAILURE_INSPECTION_DISABLE_FOR_FILE = 47;</code>
+     */
+    public static final int DOMAIN_FAILURE_INSPECTION_DISABLE_FOR_FILE_VALUE = 47;
+    /**
+     * <code>DOMAIN_FAILURE_INSPECTION_DISABLE_FOR_TAG = 48;</code>
+     */
+    public static final int DOMAIN_FAILURE_INSPECTION_DISABLE_FOR_TAG_VALUE = 48;
+    /**
+     * <code>ADD_URL_DIALOG_V2 = 49;</code>
+     */
+    public static final int ADD_URL_DIALOG_V2_VALUE = 49;
+    /**
+     * <code>ADD_JSON_V2 = 50;</code>
+     */
+    public static final int ADD_JSON_V2_VALUE = 50;
+    /**
+     * <code>TEST_APP_LINK_V2 = 51;</code>
+     */
+    public static final int TEST_APP_LINK_V2_VALUE = 51;
+    /**
+     * <code>OVERVIEW = 52;</code>
+     */
+    public static final int OVERVIEW_VALUE = 52;
+    /**
+     * <code>ISSUES_TAB = 53;</code>
+     */
+    public static final int ISSUES_TAB_VALUE = 53;
+    /**
+     * <code>CREATE_NEW_LINK_TAB = 54;</code>
+     */
+    public static final int CREATE_NEW_LINK_TAB_VALUE = 54;
+    /**
+     * <code>SEARCH_TAB = 55;</code>
+     */
+    public static final int SEARCH_TAB_VALUE = 55;
 
 
     public final int getNumber() {
@@ -608,6 +704,17 @@ private static final long serialVersionUID = 0L;
         case 42: return PLAY_DYNAMIC_FILTERS_INSPECTION_DISABLE_IN_SETTINGS;
         case 43: return PLAY_DYNAMIC_FILTERS_INSPECTION_DISABLE_FOR_FILE;
         case 44: return PLAY_DYNAMIC_FILTERS_INSPECTION_DISABLE_FOR_TAG;
+        case 45: return DOMAIN_FAILURE_INSPECTION;
+        case 46: return DOMAIN_FAILURE_INSPECTION_DISABLE_IN_SETTINGS;
+        case 47: return DOMAIN_FAILURE_INSPECTION_DISABLE_FOR_FILE;
+        case 48: return DOMAIN_FAILURE_INSPECTION_DISABLE_FOR_TAG;
+        case 49: return ADD_URL_DIALOG_V2;
+        case 50: return ADD_JSON_V2;
+        case 51: return TEST_APP_LINK_V2;
+        case 52: return OVERVIEW;
+        case 53: return ISSUES_TAB;
+        case 54: return CREATE_NEW_LINK_TAB;
+        case 55: return SEARCH_TAB;
         default: return null;
       }
     }
