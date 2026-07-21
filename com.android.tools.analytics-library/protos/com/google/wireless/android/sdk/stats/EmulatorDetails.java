@@ -29,6 +29,7 @@ private static final long serialVersionUID = 0L;
     hypervisor_ = 0;
     snapshotLoads_ = java.util.Collections.emptyList();
     snapshotSaves_ = java.util.Collections.emptyList();
+    icebox_ = java.util.Collections.emptyList();
   }
 
   @java.lang.Override
@@ -404,6 +405,15 @@ private static final long serialVersionUID = 0L;
             bitField0_ |= 0x20000000;
             break;
           }
+          case 282: {
+            if (!((mutable_bitField1_ & 0x00000002) != 0)) {
+              icebox_ = new java.util.ArrayList<com.google.wireless.android.sdk.stats.EmulatorIcebox>();
+              mutable_bitField1_ |= 0x00000002;
+            }
+            icebox_.add(
+                input.readMessage(com.google.wireless.android.sdk.stats.EmulatorIcebox.PARSER, extensionRegistry));
+            break;
+          }
           default: {
             if (!parseUnknownField(
                 input, unknownFields, extensionRegistry, tag)) {
@@ -427,6 +437,9 @@ private static final long serialVersionUID = 0L;
       }
       if (((mutable_bitField0_ & 0x00800000) != 0)) {
         snapshotSaves_ = java.util.Collections.unmodifiableList(snapshotSaves_);
+      }
+      if (((mutable_bitField1_ & 0x00000002) != 0)) {
+        icebox_ = java.util.Collections.unmodifiableList(icebox_);
       }
       this.unknownFields = unknownFields.build();
       makeExtensionsImmutable();
@@ -2388,6 +2401,61 @@ private static final long serialVersionUID = 0L;
     return screenshot_ == null ? com.google.wireless.android.sdk.stats.EmulatorStreamScreenshot.getDefaultInstance() : screenshot_;
   }
 
+  public static final int ICEBOX_FIELD_NUMBER = 35;
+  private java.util.List<com.google.wireless.android.sdk.stats.EmulatorIcebox> icebox_;
+  /**
+   * <pre>
+   * Metrics for Icebox
+   * </pre>
+   *
+   * <code>repeated .android_studio.EmulatorIcebox icebox = 35;</code>
+   */
+  public java.util.List<com.google.wireless.android.sdk.stats.EmulatorIcebox> getIceboxList() {
+    return icebox_;
+  }
+  /**
+   * <pre>
+   * Metrics for Icebox
+   * </pre>
+   *
+   * <code>repeated .android_studio.EmulatorIcebox icebox = 35;</code>
+   */
+  public java.util.List<? extends com.google.wireless.android.sdk.stats.EmulatorIceboxOrBuilder> 
+      getIceboxOrBuilderList() {
+    return icebox_;
+  }
+  /**
+   * <pre>
+   * Metrics for Icebox
+   * </pre>
+   *
+   * <code>repeated .android_studio.EmulatorIcebox icebox = 35;</code>
+   */
+  public int getIceboxCount() {
+    return icebox_.size();
+  }
+  /**
+   * <pre>
+   * Metrics for Icebox
+   * </pre>
+   *
+   * <code>repeated .android_studio.EmulatorIcebox icebox = 35;</code>
+   */
+  public com.google.wireless.android.sdk.stats.EmulatorIcebox getIcebox(int index) {
+    return icebox_.get(index);
+  }
+  /**
+   * <pre>
+   * Metrics for Icebox
+   * </pre>
+   *
+   * <code>repeated .android_studio.EmulatorIcebox icebox = 35;</code>
+   */
+  public com.google.wireless.android.sdk.stats.EmulatorIceboxOrBuilder getIceboxOrBuilder(
+      int index) {
+    return icebox_.get(index);
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -2500,6 +2568,9 @@ private static final long serialVersionUID = 0L;
     }
     if (((bitField0_ & 0x20000000) != 0)) {
       output.writeMessage(34, getScreenshot());
+    }
+    for (int i = 0; i < icebox_.size(); i++) {
+      output.writeMessage(35, icebox_.get(i));
     }
     unknownFields.writeTo(output);
   }
@@ -2640,6 +2711,10 @@ private static final long serialVersionUID = 0L;
     if (((bitField0_ & 0x20000000) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(34, getScreenshot());
+    }
+    for (int i = 0; i < icebox_.size(); i++) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(35, icebox_.get(i));
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -2807,6 +2882,8 @@ private static final long serialVersionUID = 0L;
       if (!getScreenshot()
           .equals(other.getScreenshot())) return false;
     }
+    if (!getIceboxList()
+        .equals(other.getIceboxList())) return false;
     if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
@@ -2957,6 +3034,10 @@ private static final long serialVersionUID = 0L;
     if (hasScreenshot()) {
       hash = (37 * hash) + SCREENSHOT_FIELD_NUMBER;
       hash = (53 * hash) + getScreenshot().hashCode();
+    }
+    if (getIceboxCount() > 0) {
+      hash = (37 * hash) + ICEBOX_FIELD_NUMBER;
+      hash = (53 * hash) + getIceboxList().hashCode();
     }
     hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
@@ -3109,6 +3190,7 @@ private static final long serialVersionUID = 0L;
         getGrpcFieldBuilder();
         getLocationV2FieldBuilder();
         getScreenshotFieldBuilder();
+        getIceboxFieldBuilder();
       }
     }
     @java.lang.Override
@@ -3256,6 +3338,12 @@ private static final long serialVersionUID = 0L;
         screenshotBuilder_.clear();
       }
       bitField1_ = (bitField1_ & ~0x00000001);
+      if (iceboxBuilder_ == null) {
+        icebox_ = java.util.Collections.emptyList();
+        bitField1_ = (bitField1_ & ~0x00000002);
+      } else {
+        iceboxBuilder_.clear();
+      }
       return this;
     }
 
@@ -3496,6 +3584,15 @@ private static final long serialVersionUID = 0L;
         }
         to_bitField0_ |= 0x20000000;
       }
+      if (iceboxBuilder_ == null) {
+        if (((bitField1_ & 0x00000002) != 0)) {
+          icebox_ = java.util.Collections.unmodifiableList(icebox_);
+          bitField1_ = (bitField1_ & ~0x00000002);
+        }
+        result.icebox_ = icebox_;
+      } else {
+        result.icebox_ = iceboxBuilder_.build();
+      }
       result.bitField0_ = to_bitField0_;
       onBuilt();
       return result;
@@ -3714,6 +3811,32 @@ private static final long serialVersionUID = 0L;
       }
       if (other.hasScreenshot()) {
         mergeScreenshot(other.getScreenshot());
+      }
+      if (iceboxBuilder_ == null) {
+        if (!other.icebox_.isEmpty()) {
+          if (icebox_.isEmpty()) {
+            icebox_ = other.icebox_;
+            bitField1_ = (bitField1_ & ~0x00000002);
+          } else {
+            ensureIceboxIsMutable();
+            icebox_.addAll(other.icebox_);
+          }
+          onChanged();
+        }
+      } else {
+        if (!other.icebox_.isEmpty()) {
+          if (iceboxBuilder_.isEmpty()) {
+            iceboxBuilder_.dispose();
+            iceboxBuilder_ = null;
+            icebox_ = other.icebox_;
+            bitField1_ = (bitField1_ & ~0x00000002);
+            iceboxBuilder_ = 
+              com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                 getIceboxFieldBuilder() : null;
+          } else {
+            iceboxBuilder_.addAllMessages(other.icebox_);
+          }
+        }
       }
       this.mergeUnknownFields(other.unknownFields);
       onChanged();
@@ -7890,6 +8013,318 @@ private static final long serialVersionUID = 0L;
         screenshot_ = null;
       }
       return screenshotBuilder_;
+    }
+
+    private java.util.List<com.google.wireless.android.sdk.stats.EmulatorIcebox> icebox_ =
+      java.util.Collections.emptyList();
+    private void ensureIceboxIsMutable() {
+      if (!((bitField1_ & 0x00000002) != 0)) {
+        icebox_ = new java.util.ArrayList<com.google.wireless.android.sdk.stats.EmulatorIcebox>(icebox_);
+        bitField1_ |= 0x00000002;
+       }
+    }
+
+    private com.google.protobuf.RepeatedFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.EmulatorIcebox, com.google.wireless.android.sdk.stats.EmulatorIcebox.Builder, com.google.wireless.android.sdk.stats.EmulatorIceboxOrBuilder> iceboxBuilder_;
+
+    /**
+     * <pre>
+     * Metrics for Icebox
+     * </pre>
+     *
+     * <code>repeated .android_studio.EmulatorIcebox icebox = 35;</code>
+     */
+    public java.util.List<com.google.wireless.android.sdk.stats.EmulatorIcebox> getIceboxList() {
+      if (iceboxBuilder_ == null) {
+        return java.util.Collections.unmodifiableList(icebox_);
+      } else {
+        return iceboxBuilder_.getMessageList();
+      }
+    }
+    /**
+     * <pre>
+     * Metrics for Icebox
+     * </pre>
+     *
+     * <code>repeated .android_studio.EmulatorIcebox icebox = 35;</code>
+     */
+    public int getIceboxCount() {
+      if (iceboxBuilder_ == null) {
+        return icebox_.size();
+      } else {
+        return iceboxBuilder_.getCount();
+      }
+    }
+    /**
+     * <pre>
+     * Metrics for Icebox
+     * </pre>
+     *
+     * <code>repeated .android_studio.EmulatorIcebox icebox = 35;</code>
+     */
+    public com.google.wireless.android.sdk.stats.EmulatorIcebox getIcebox(int index) {
+      if (iceboxBuilder_ == null) {
+        return icebox_.get(index);
+      } else {
+        return iceboxBuilder_.getMessage(index);
+      }
+    }
+    /**
+     * <pre>
+     * Metrics for Icebox
+     * </pre>
+     *
+     * <code>repeated .android_studio.EmulatorIcebox icebox = 35;</code>
+     */
+    public Builder setIcebox(
+        int index, com.google.wireless.android.sdk.stats.EmulatorIcebox value) {
+      if (iceboxBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureIceboxIsMutable();
+        icebox_.set(index, value);
+        onChanged();
+      } else {
+        iceboxBuilder_.setMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Metrics for Icebox
+     * </pre>
+     *
+     * <code>repeated .android_studio.EmulatorIcebox icebox = 35;</code>
+     */
+    public Builder setIcebox(
+        int index, com.google.wireless.android.sdk.stats.EmulatorIcebox.Builder builderForValue) {
+      if (iceboxBuilder_ == null) {
+        ensureIceboxIsMutable();
+        icebox_.set(index, builderForValue.build());
+        onChanged();
+      } else {
+        iceboxBuilder_.setMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Metrics for Icebox
+     * </pre>
+     *
+     * <code>repeated .android_studio.EmulatorIcebox icebox = 35;</code>
+     */
+    public Builder addIcebox(com.google.wireless.android.sdk.stats.EmulatorIcebox value) {
+      if (iceboxBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureIceboxIsMutable();
+        icebox_.add(value);
+        onChanged();
+      } else {
+        iceboxBuilder_.addMessage(value);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Metrics for Icebox
+     * </pre>
+     *
+     * <code>repeated .android_studio.EmulatorIcebox icebox = 35;</code>
+     */
+    public Builder addIcebox(
+        int index, com.google.wireless.android.sdk.stats.EmulatorIcebox value) {
+      if (iceboxBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureIceboxIsMutable();
+        icebox_.add(index, value);
+        onChanged();
+      } else {
+        iceboxBuilder_.addMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Metrics for Icebox
+     * </pre>
+     *
+     * <code>repeated .android_studio.EmulatorIcebox icebox = 35;</code>
+     */
+    public Builder addIcebox(
+        com.google.wireless.android.sdk.stats.EmulatorIcebox.Builder builderForValue) {
+      if (iceboxBuilder_ == null) {
+        ensureIceboxIsMutable();
+        icebox_.add(builderForValue.build());
+        onChanged();
+      } else {
+        iceboxBuilder_.addMessage(builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Metrics for Icebox
+     * </pre>
+     *
+     * <code>repeated .android_studio.EmulatorIcebox icebox = 35;</code>
+     */
+    public Builder addIcebox(
+        int index, com.google.wireless.android.sdk.stats.EmulatorIcebox.Builder builderForValue) {
+      if (iceboxBuilder_ == null) {
+        ensureIceboxIsMutable();
+        icebox_.add(index, builderForValue.build());
+        onChanged();
+      } else {
+        iceboxBuilder_.addMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Metrics for Icebox
+     * </pre>
+     *
+     * <code>repeated .android_studio.EmulatorIcebox icebox = 35;</code>
+     */
+    public Builder addAllIcebox(
+        java.lang.Iterable<? extends com.google.wireless.android.sdk.stats.EmulatorIcebox> values) {
+      if (iceboxBuilder_ == null) {
+        ensureIceboxIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, icebox_);
+        onChanged();
+      } else {
+        iceboxBuilder_.addAllMessages(values);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Metrics for Icebox
+     * </pre>
+     *
+     * <code>repeated .android_studio.EmulatorIcebox icebox = 35;</code>
+     */
+    public Builder clearIcebox() {
+      if (iceboxBuilder_ == null) {
+        icebox_ = java.util.Collections.emptyList();
+        bitField1_ = (bitField1_ & ~0x00000002);
+        onChanged();
+      } else {
+        iceboxBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Metrics for Icebox
+     * </pre>
+     *
+     * <code>repeated .android_studio.EmulatorIcebox icebox = 35;</code>
+     */
+    public Builder removeIcebox(int index) {
+      if (iceboxBuilder_ == null) {
+        ensureIceboxIsMutable();
+        icebox_.remove(index);
+        onChanged();
+      } else {
+        iceboxBuilder_.remove(index);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Metrics for Icebox
+     * </pre>
+     *
+     * <code>repeated .android_studio.EmulatorIcebox icebox = 35;</code>
+     */
+    public com.google.wireless.android.sdk.stats.EmulatorIcebox.Builder getIceboxBuilder(
+        int index) {
+      return getIceboxFieldBuilder().getBuilder(index);
+    }
+    /**
+     * <pre>
+     * Metrics for Icebox
+     * </pre>
+     *
+     * <code>repeated .android_studio.EmulatorIcebox icebox = 35;</code>
+     */
+    public com.google.wireless.android.sdk.stats.EmulatorIceboxOrBuilder getIceboxOrBuilder(
+        int index) {
+      if (iceboxBuilder_ == null) {
+        return icebox_.get(index);  } else {
+        return iceboxBuilder_.getMessageOrBuilder(index);
+      }
+    }
+    /**
+     * <pre>
+     * Metrics for Icebox
+     * </pre>
+     *
+     * <code>repeated .android_studio.EmulatorIcebox icebox = 35;</code>
+     */
+    public java.util.List<? extends com.google.wireless.android.sdk.stats.EmulatorIceboxOrBuilder> 
+         getIceboxOrBuilderList() {
+      if (iceboxBuilder_ != null) {
+        return iceboxBuilder_.getMessageOrBuilderList();
+      } else {
+        return java.util.Collections.unmodifiableList(icebox_);
+      }
+    }
+    /**
+     * <pre>
+     * Metrics for Icebox
+     * </pre>
+     *
+     * <code>repeated .android_studio.EmulatorIcebox icebox = 35;</code>
+     */
+    public com.google.wireless.android.sdk.stats.EmulatorIcebox.Builder addIceboxBuilder() {
+      return getIceboxFieldBuilder().addBuilder(
+          com.google.wireless.android.sdk.stats.EmulatorIcebox.getDefaultInstance());
+    }
+    /**
+     * <pre>
+     * Metrics for Icebox
+     * </pre>
+     *
+     * <code>repeated .android_studio.EmulatorIcebox icebox = 35;</code>
+     */
+    public com.google.wireless.android.sdk.stats.EmulatorIcebox.Builder addIceboxBuilder(
+        int index) {
+      return getIceboxFieldBuilder().addBuilder(
+          index, com.google.wireless.android.sdk.stats.EmulatorIcebox.getDefaultInstance());
+    }
+    /**
+     * <pre>
+     * Metrics for Icebox
+     * </pre>
+     *
+     * <code>repeated .android_studio.EmulatorIcebox icebox = 35;</code>
+     */
+    public java.util.List<com.google.wireless.android.sdk.stats.EmulatorIcebox.Builder> 
+         getIceboxBuilderList() {
+      return getIceboxFieldBuilder().getBuilderList();
+    }
+    private com.google.protobuf.RepeatedFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.EmulatorIcebox, com.google.wireless.android.sdk.stats.EmulatorIcebox.Builder, com.google.wireless.android.sdk.stats.EmulatorIceboxOrBuilder> 
+        getIceboxFieldBuilder() {
+      if (iceboxBuilder_ == null) {
+        iceboxBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+            com.google.wireless.android.sdk.stats.EmulatorIcebox, com.google.wireless.android.sdk.stats.EmulatorIcebox.Builder, com.google.wireless.android.sdk.stats.EmulatorIceboxOrBuilder>(
+                icebox_,
+                ((bitField1_ & 0x00000002) != 0),
+                getParentForChildren(),
+                isClean());
+        icebox_ = null;
+      }
+      return iceboxBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

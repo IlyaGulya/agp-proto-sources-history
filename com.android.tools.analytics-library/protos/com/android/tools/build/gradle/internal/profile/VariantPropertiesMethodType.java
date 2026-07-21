@@ -50,6 +50,10 @@ public enum VariantPropertiesMethodType
    */
   BUILD_CONFIG_FIELDS(9),
   /**
+   * <pre>
+   * deprecated
+   * </pre>
+   *
    * <code>ADD_BUILD_CONFIG_FIELD = 10;</code>
    */
   ADD_BUILD_CONFIG_FIELD(10),
@@ -58,6 +62,10 @@ public enum VariantPropertiesMethodType
    */
   RES_VALUE(11),
   /**
+   * <pre>
+   * deprecated
+   * </pre>
+   *
    * <code>ADD_RES_VALUE = 12;</code>
    */
   ADD_RES_VALUE(12),
@@ -202,6 +210,10 @@ public enum VariantPropertiesMethodType
    */
   JNI_LIBS_PACKAGING_OPTIONS(44),
   /**
+   * <pre>
+   * deprecated
+   * </pre>
+   *
    * <code>JNI_LIBS_PACKAGING_OPTIONS_ACTION = 45;</code>
    */
   JNI_LIBS_PACKAGING_OPTIONS_ACTION(45),
@@ -210,6 +222,10 @@ public enum VariantPropertiesMethodType
    */
   RESOURCES_PACKAGING_OPTIONS(46),
   /**
+   * <pre>
+   * deprecated
+   * </pre>
+   *
    * <code>RESOURCES_PACKAGING_OPTIONS_ACTION = 47;</code>
    */
   RESOURCES_PACKAGING_OPTIONS_ACTION(47),
@@ -357,6 +373,22 @@ public enum VariantPropertiesMethodType
    * <code>PROGUARD_FILES = 81;</code>
    */
   PROGUARD_FILES(81),
+  /**
+   * <code>MIN_SDK_VERSION = 82;</code>
+   */
+  MIN_SDK_VERSION(82),
+  /**
+   * <code>MAX_SDK_VERSION = 83;</code>
+   */
+  MAX_SDK_VERSION(83),
+  /**
+   * <code>TARGET_SDK_VERSION = 84;</code>
+   */
+  TARGET_SDK_VERSION(84),
+  /**
+   * <code>MAKE_RES_VALUE_KEY = 85;</code>
+   */
+  MAKE_RES_VALUE_KEY(85),
   UNRECOGNIZED(-1),
   ;
 
@@ -401,6 +433,10 @@ public enum VariantPropertiesMethodType
    */
   public static final int BUILD_CONFIG_FIELDS_VALUE = 9;
   /**
+   * <pre>
+   * deprecated
+   * </pre>
+   *
    * <code>ADD_BUILD_CONFIG_FIELD = 10;</code>
    */
   public static final int ADD_BUILD_CONFIG_FIELD_VALUE = 10;
@@ -409,6 +445,10 @@ public enum VariantPropertiesMethodType
    */
   public static final int RES_VALUE_VALUE = 11;
   /**
+   * <pre>
+   * deprecated
+   * </pre>
+   *
    * <code>ADD_RES_VALUE = 12;</code>
    */
   public static final int ADD_RES_VALUE_VALUE = 12;
@@ -553,6 +593,10 @@ public enum VariantPropertiesMethodType
    */
   public static final int JNI_LIBS_PACKAGING_OPTIONS_VALUE = 44;
   /**
+   * <pre>
+   * deprecated
+   * </pre>
+   *
    * <code>JNI_LIBS_PACKAGING_OPTIONS_ACTION = 45;</code>
    */
   public static final int JNI_LIBS_PACKAGING_OPTIONS_ACTION_VALUE = 45;
@@ -561,6 +605,10 @@ public enum VariantPropertiesMethodType
    */
   public static final int RESOURCES_PACKAGING_OPTIONS_VALUE = 46;
   /**
+   * <pre>
+   * deprecated
+   * </pre>
+   *
    * <code>RESOURCES_PACKAGING_OPTIONS_ACTION = 47;</code>
    */
   public static final int RESOURCES_PACKAGING_OPTIONS_ACTION_VALUE = 47;
@@ -708,6 +756,22 @@ public enum VariantPropertiesMethodType
    * <code>PROGUARD_FILES = 81;</code>
    */
   public static final int PROGUARD_FILES_VALUE = 81;
+  /**
+   * <code>MIN_SDK_VERSION = 82;</code>
+   */
+  public static final int MIN_SDK_VERSION_VALUE = 82;
+  /**
+   * <code>MAX_SDK_VERSION = 83;</code>
+   */
+  public static final int MAX_SDK_VERSION_VALUE = 83;
+  /**
+   * <code>TARGET_SDK_VERSION = 84;</code>
+   */
+  public static final int TARGET_SDK_VERSION_VALUE = 84;
+  /**
+   * <code>MAKE_RES_VALUE_KEY = 85;</code>
+   */
+  public static final int MAKE_RES_VALUE_KEY_VALUE = 85;
 
 
   public final int getNumber() {
@@ -816,6 +880,10 @@ public enum VariantPropertiesMethodType
       case 79: return SIGNING_CONFIG_ENABLE_V4;
       case 80: return VARIANT_PSEUDOLOCALES_ENABLED;
       case 81: return PROGUARD_FILES;
+      case 82: return MIN_SDK_VERSION;
+      case 83: return MAX_SDK_VERSION;
+      case 84: return TARGET_SDK_VERSION;
+      case 85: return MAKE_RES_VALUE_KEY;
       default: return null;
     }
   }

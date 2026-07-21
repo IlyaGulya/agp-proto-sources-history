@@ -8104,6 +8104,14 @@ private static final long serialVersionUID = 0L;
      * <code>TYPE_JCENTER_IS_DEPRECATED = 54;</code>
      */
     TYPE_JCENTER_IS_DEPRECATED(54),
+    /**
+     * <pre>
+     * Java version used by AGP is too low.
+     * </pre>
+     *
+     * <code>TYPE_AGP_USED_JAVA_VERSION_TOO_LOW = 55;</code>
+     */
+    TYPE_AGP_USED_JAVA_VERSION_TOO_LOW(55),
     ;
 
     /**
@@ -8484,6 +8492,14 @@ private static final long serialVersionUID = 0L;
      * <code>TYPE_JCENTER_IS_DEPRECATED = 54;</code>
      */
     public static final int TYPE_JCENTER_IS_DEPRECATED_VALUE = 54;
+    /**
+     * <pre>
+     * Java version used by AGP is too low.
+     * </pre>
+     *
+     * <code>TYPE_AGP_USED_JAVA_VERSION_TOO_LOW = 55;</code>
+     */
+    public static final int TYPE_AGP_USED_JAVA_VERSION_TOO_LOW_VALUE = 55;
 
 
     public final int getNumber() {
@@ -8561,6 +8577,7 @@ private static final long serialVersionUID = 0L;
         case 52: return TYPE_EDIT_LOCKED_DSL_VALUE;
         case 53: return TYPE_MISSING_ANDROID_MANIFEST;
         case 54: return TYPE_JCENTER_IS_DEPRECATED;
+        case 55: return TYPE_AGP_USED_JAVA_VERSION_TOO_LOW;
         default: return null;
       }
     }

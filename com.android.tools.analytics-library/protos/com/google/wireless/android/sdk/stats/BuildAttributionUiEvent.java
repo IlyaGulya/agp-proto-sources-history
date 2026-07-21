@@ -364,6 +364,14 @@ private static final long serialVersionUID = 0L;
      * <code>TURN_ON_CONFIGURATION_CACHE_IN_PROPERTIES_LINK_CLICKED = 23;</code>
      */
     TURN_ON_CONFIGURATION_CACHE_IN_PROPERTIES_LINK_CLICKED(23),
+    /**
+     * <pre>
+     * Update plugin button on configuration cache warnings.
+     * </pre>
+     *
+     * <code>UPDATE_PLUGIN_BUTTON_CLICKED = 24;</code>
+     */
+    UPDATE_PLUGIN_BUTTON_CLICKED(24),
     ;
 
     /**
@@ -527,6 +535,14 @@ private static final long serialVersionUID = 0L;
      * <code>TURN_ON_CONFIGURATION_CACHE_IN_PROPERTIES_LINK_CLICKED = 23;</code>
      */
     public static final int TURN_ON_CONFIGURATION_CACHE_IN_PROPERTIES_LINK_CLICKED_VALUE = 23;
+    /**
+     * <pre>
+     * Update plugin button on configuration cache warnings.
+     * </pre>
+     *
+     * <code>UPDATE_PLUGIN_BUTTON_CLICKED = 24;</code>
+     */
+    public static final int UPDATE_PLUGIN_BUTTON_CLICKED_VALUE = 24;
 
 
     public final int getNumber() {
@@ -573,6 +589,7 @@ private static final long serialVersionUID = 0L;
         case 21: return UPGRADE_AGP_BUTTON_CLICKED;
         case 22: return RERUN_BUILD_WITH_CONFIGURATION_CACHE_CLICKED;
         case 23: return TURN_ON_CONFIGURATION_CACHE_IN_PROPERTIES_LINK_CLICKED;
+        case 24: return UPDATE_PLUGIN_BUTTON_CLICKED;
         default: return null;
       }
     }
@@ -789,6 +806,7 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * Filter consists of items that might be included or not.
    * Current filter state is represented by items that are included (turned on).
+   * Next ID: 10
    * </pre>
    *
    * Protobuf enum {@code android_studio.BuildAttributionUiEvent.FilterItem}
@@ -831,6 +849,10 @@ private static final long serialVersionUID = 0L;
      * <code>SHOW_ANNOTATION_PROCESSOR_WARNINGS = 6;</code>
      */
     SHOW_ANNOTATION_PROCESSOR_WARNINGS(6),
+    /**
+     * <code>SHOW_CONFIGURATION_CACHE_WARNINGS = 9;</code>
+     */
+    SHOW_CONFIGURATION_CACHE_WARNINGS(9),
     /**
      * <pre>
      * Other task attributes filters
@@ -882,6 +904,10 @@ private static final long serialVersionUID = 0L;
      */
     public static final int SHOW_ANNOTATION_PROCESSOR_WARNINGS_VALUE = 6;
     /**
+     * <code>SHOW_CONFIGURATION_CACHE_WARNINGS = 9;</code>
+     */
+    public static final int SHOW_CONFIGURATION_CACHE_WARNINGS_VALUE = 9;
+    /**
      * <pre>
      * Other task attributes filters
      * </pre>
@@ -922,6 +948,7 @@ private static final long serialVersionUID = 0L;
         case 4: return SHOW_ALWAYS_RUN_TASK_WARNINGS;
         case 5: return SHOW_TASK_SETUP_ISSUE_WARNINGS;
         case 6: return SHOW_ANNOTATION_PROCESSOR_WARNINGS;
+        case 9: return SHOW_CONFIGURATION_CACHE_WARNINGS;
         case 7: return SHOW_WARNINGS_FOR_TASK_NOT_FROM_CRITICAL_PATH;
         case 8: return SHOW_TASKS_WITHOUT_WARNINGS;
         default: return null;

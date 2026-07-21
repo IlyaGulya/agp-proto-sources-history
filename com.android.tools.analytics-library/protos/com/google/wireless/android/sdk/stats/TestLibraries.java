@@ -9,7 +9,7 @@ package com.google.wireless.android.sdk.stats;
  * Each string field of this message holds the exact version of the given
  * library (e.g. "1.0.0") that the field name represents. The field is populated
  * only if this project uses the given library.
- * Next ID: 33
+ * Next ID: 38
  * </pre>
  *
  * Protobuf type {@code android_studio.TestLibraries}
@@ -56,6 +56,11 @@ private static final long serialVersionUID = 0L;
     mockitoVersion_ = "";
     junitVersion_ = "";
     truthVersion_ = "";
+    testNgVersion_ = "";
+    junitPlatformLauncherVersion_ = "";
+    junitPlatformRunnerVersion_ = "";
+    junitJupiterVersion_ = "";
+    junitVintageEngineVersion_ = "";
   }
 
   @java.lang.Override
@@ -79,6 +84,7 @@ private static final long serialVersionUID = 0L;
       throw new java.lang.NullPointerException();
     }
     int mutable_bitField0_ = 0;
+    int mutable_bitField1_ = 0;
     com.google.protobuf.UnknownFieldSet.Builder unknownFields =
         com.google.protobuf.UnknownFieldSet.newBuilder();
     try {
@@ -281,6 +287,36 @@ private static final long serialVersionUID = 0L;
             benchmarkMacroJunit4Version_ = bs;
             break;
           }
+          case 266: {
+            com.google.protobuf.ByteString bs = input.readBytes();
+            bitField1_ |= 0x00000001;
+            testNgVersion_ = bs;
+            break;
+          }
+          case 274: {
+            com.google.protobuf.ByteString bs = input.readBytes();
+            bitField1_ |= 0x00000002;
+            junitPlatformLauncherVersion_ = bs;
+            break;
+          }
+          case 282: {
+            com.google.protobuf.ByteString bs = input.readBytes();
+            bitField1_ |= 0x00000004;
+            junitPlatformRunnerVersion_ = bs;
+            break;
+          }
+          case 290: {
+            com.google.protobuf.ByteString bs = input.readBytes();
+            bitField1_ |= 0x00000008;
+            junitJupiterVersion_ = bs;
+            break;
+          }
+          case 298: {
+            com.google.protobuf.ByteString bs = input.readBytes();
+            bitField1_ |= 0x00000010;
+            junitVintageEngineVersion_ = bs;
+            break;
+          }
           default: {
             if (!parseUnknownField(
                 input, unknownFields, extensionRegistry, tag)) {
@@ -314,6 +350,7 @@ private static final long serialVersionUID = 0L;
   }
 
   private int bitField0_;
+  private int bitField1_;
   public static final int TEST_SUPPORT_LIBRARY_VERSION_FIELD_NUMBER = 1;
   private volatile java.lang.Object testSupportLibraryVersion_;
   /**
@@ -2138,6 +2175,291 @@ private static final long serialVersionUID = 0L;
     }
   }
 
+  public static final int TEST_NG_VERSION_FIELD_NUMBER = 33;
+  private volatile java.lang.Object testNgVersion_;
+  /**
+   * <pre>
+   * "org.testng:testng"
+   * </pre>
+   *
+   * <code>optional string test_ng_version = 33;</code>
+   * @return Whether the testNgVersion field is set.
+   */
+  public boolean hasTestNgVersion() {
+    return ((bitField1_ & 0x00000001) != 0);
+  }
+  /**
+   * <pre>
+   * "org.testng:testng"
+   * </pre>
+   *
+   * <code>optional string test_ng_version = 33;</code>
+   * @return The testNgVersion.
+   */
+  public java.lang.String getTestNgVersion() {
+    java.lang.Object ref = testNgVersion_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      if (bs.isValidUtf8()) {
+        testNgVersion_ = s;
+      }
+      return s;
+    }
+  }
+  /**
+   * <pre>
+   * "org.testng:testng"
+   * </pre>
+   *
+   * <code>optional string test_ng_version = 33;</code>
+   * @return The bytes for testNgVersion.
+   */
+  public com.google.protobuf.ByteString
+      getTestNgVersionBytes() {
+    java.lang.Object ref = testNgVersion_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      testNgVersion_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
+  public static final int JUNIT_PLATFORM_LAUNCHER_VERSION_FIELD_NUMBER = 34;
+  private volatile java.lang.Object junitPlatformLauncherVersion_;
+  /**
+   * <pre>
+   * "org.junit.platform:junit-platform-launcher"
+   * </pre>
+   *
+   * <code>optional string junit_platform_launcher_version = 34;</code>
+   * @return Whether the junitPlatformLauncherVersion field is set.
+   */
+  public boolean hasJunitPlatformLauncherVersion() {
+    return ((bitField1_ & 0x00000002) != 0);
+  }
+  /**
+   * <pre>
+   * "org.junit.platform:junit-platform-launcher"
+   * </pre>
+   *
+   * <code>optional string junit_platform_launcher_version = 34;</code>
+   * @return The junitPlatformLauncherVersion.
+   */
+  public java.lang.String getJunitPlatformLauncherVersion() {
+    java.lang.Object ref = junitPlatformLauncherVersion_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      if (bs.isValidUtf8()) {
+        junitPlatformLauncherVersion_ = s;
+      }
+      return s;
+    }
+  }
+  /**
+   * <pre>
+   * "org.junit.platform:junit-platform-launcher"
+   * </pre>
+   *
+   * <code>optional string junit_platform_launcher_version = 34;</code>
+   * @return The bytes for junitPlatformLauncherVersion.
+   */
+  public com.google.protobuf.ByteString
+      getJunitPlatformLauncherVersionBytes() {
+    java.lang.Object ref = junitPlatformLauncherVersion_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      junitPlatformLauncherVersion_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
+  public static final int JUNIT_PLATFORM_RUNNER_VERSION_FIELD_NUMBER = 35;
+  private volatile java.lang.Object junitPlatformRunnerVersion_;
+  /**
+   * <pre>
+   * "org.junit.platform:junit-platform-runner"
+   * </pre>
+   *
+   * <code>optional string junit_platform_runner_version = 35;</code>
+   * @return Whether the junitPlatformRunnerVersion field is set.
+   */
+  public boolean hasJunitPlatformRunnerVersion() {
+    return ((bitField1_ & 0x00000004) != 0);
+  }
+  /**
+   * <pre>
+   * "org.junit.platform:junit-platform-runner"
+   * </pre>
+   *
+   * <code>optional string junit_platform_runner_version = 35;</code>
+   * @return The junitPlatformRunnerVersion.
+   */
+  public java.lang.String getJunitPlatformRunnerVersion() {
+    java.lang.Object ref = junitPlatformRunnerVersion_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      if (bs.isValidUtf8()) {
+        junitPlatformRunnerVersion_ = s;
+      }
+      return s;
+    }
+  }
+  /**
+   * <pre>
+   * "org.junit.platform:junit-platform-runner"
+   * </pre>
+   *
+   * <code>optional string junit_platform_runner_version = 35;</code>
+   * @return The bytes for junitPlatformRunnerVersion.
+   */
+  public com.google.protobuf.ByteString
+      getJunitPlatformRunnerVersionBytes() {
+    java.lang.Object ref = junitPlatformRunnerVersion_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      junitPlatformRunnerVersion_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
+  public static final int JUNIT_JUPITER_VERSION_FIELD_NUMBER = 36;
+  private volatile java.lang.Object junitJupiterVersion_;
+  /**
+   * <pre>
+   * "org.junit.jupiter:junit-jupiter"
+   * </pre>
+   *
+   * <code>optional string junit_jupiter_version = 36;</code>
+   * @return Whether the junitJupiterVersion field is set.
+   */
+  public boolean hasJunitJupiterVersion() {
+    return ((bitField1_ & 0x00000008) != 0);
+  }
+  /**
+   * <pre>
+   * "org.junit.jupiter:junit-jupiter"
+   * </pre>
+   *
+   * <code>optional string junit_jupiter_version = 36;</code>
+   * @return The junitJupiterVersion.
+   */
+  public java.lang.String getJunitJupiterVersion() {
+    java.lang.Object ref = junitJupiterVersion_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      if (bs.isValidUtf8()) {
+        junitJupiterVersion_ = s;
+      }
+      return s;
+    }
+  }
+  /**
+   * <pre>
+   * "org.junit.jupiter:junit-jupiter"
+   * </pre>
+   *
+   * <code>optional string junit_jupiter_version = 36;</code>
+   * @return The bytes for junitJupiterVersion.
+   */
+  public com.google.protobuf.ByteString
+      getJunitJupiterVersionBytes() {
+    java.lang.Object ref = junitJupiterVersion_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      junitJupiterVersion_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
+  public static final int JUNIT_VINTAGE_ENGINE_VERSION_FIELD_NUMBER = 37;
+  private volatile java.lang.Object junitVintageEngineVersion_;
+  /**
+   * <pre>
+   * "org.junit.vintage:junit-vintage-engine"
+   * </pre>
+   *
+   * <code>optional string junit_vintage_engine_version = 37;</code>
+   * @return Whether the junitVintageEngineVersion field is set.
+   */
+  public boolean hasJunitVintageEngineVersion() {
+    return ((bitField1_ & 0x00000010) != 0);
+  }
+  /**
+   * <pre>
+   * "org.junit.vintage:junit-vintage-engine"
+   * </pre>
+   *
+   * <code>optional string junit_vintage_engine_version = 37;</code>
+   * @return The junitVintageEngineVersion.
+   */
+  public java.lang.String getJunitVintageEngineVersion() {
+    java.lang.Object ref = junitVintageEngineVersion_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      if (bs.isValidUtf8()) {
+        junitVintageEngineVersion_ = s;
+      }
+      return s;
+    }
+  }
+  /**
+   * <pre>
+   * "org.junit.vintage:junit-vintage-engine"
+   * </pre>
+   *
+   * <code>optional string junit_vintage_engine_version = 37;</code>
+   * @return The bytes for junitVintageEngineVersion.
+   */
+  public com.google.protobuf.ByteString
+      getJunitVintageEngineVersionBytes() {
+    java.lang.Object ref = junitVintageEngineVersion_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      junitVintageEngineVersion_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -2248,6 +2570,21 @@ private static final long serialVersionUID = 0L;
     if (((bitField0_ & 0x08000000) != 0)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 32, benchmarkMacroJunit4Version_);
     }
+    if (((bitField1_ & 0x00000001) != 0)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 33, testNgVersion_);
+    }
+    if (((bitField1_ & 0x00000002) != 0)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 34, junitPlatformLauncherVersion_);
+    }
+    if (((bitField1_ & 0x00000004) != 0)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 35, junitPlatformRunnerVersion_);
+    }
+    if (((bitField1_ & 0x00000008) != 0)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 36, junitJupiterVersion_);
+    }
+    if (((bitField1_ & 0x00000010) != 0)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 37, junitVintageEngineVersion_);
+    }
     unknownFields.writeTo(output);
   }
 
@@ -2352,6 +2689,21 @@ private static final long serialVersionUID = 0L;
     }
     if (((bitField0_ & 0x08000000) != 0)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(32, benchmarkMacroJunit4Version_);
+    }
+    if (((bitField1_ & 0x00000001) != 0)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(33, testNgVersion_);
+    }
+    if (((bitField1_ & 0x00000002) != 0)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(34, junitPlatformLauncherVersion_);
+    }
+    if (((bitField1_ & 0x00000004) != 0)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(35, junitPlatformRunnerVersion_);
+    }
+    if (((bitField1_ & 0x00000008) != 0)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(36, junitJupiterVersion_);
+    }
+    if (((bitField1_ & 0x00000010) != 0)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(37, junitVintageEngineVersion_);
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -2528,6 +2880,31 @@ private static final long serialVersionUID = 0L;
       if (!getTruthVersion()
           .equals(other.getTruthVersion())) return false;
     }
+    if (hasTestNgVersion() != other.hasTestNgVersion()) return false;
+    if (hasTestNgVersion()) {
+      if (!getTestNgVersion()
+          .equals(other.getTestNgVersion())) return false;
+    }
+    if (hasJunitPlatformLauncherVersion() != other.hasJunitPlatformLauncherVersion()) return false;
+    if (hasJunitPlatformLauncherVersion()) {
+      if (!getJunitPlatformLauncherVersion()
+          .equals(other.getJunitPlatformLauncherVersion())) return false;
+    }
+    if (hasJunitPlatformRunnerVersion() != other.hasJunitPlatformRunnerVersion()) return false;
+    if (hasJunitPlatformRunnerVersion()) {
+      if (!getJunitPlatformRunnerVersion()
+          .equals(other.getJunitPlatformRunnerVersion())) return false;
+    }
+    if (hasJunitJupiterVersion() != other.hasJunitJupiterVersion()) return false;
+    if (hasJunitJupiterVersion()) {
+      if (!getJunitJupiterVersion()
+          .equals(other.getJunitJupiterVersion())) return false;
+    }
+    if (hasJunitVintageEngineVersion() != other.hasJunitVintageEngineVersion()) return false;
+    if (hasJunitVintageEngineVersion()) {
+      if (!getJunitVintageEngineVersion()
+          .equals(other.getJunitVintageEngineVersion())) return false;
+    }
     if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
@@ -2667,6 +3044,26 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + TRUTH_VERSION_FIELD_NUMBER;
       hash = (53 * hash) + getTruthVersion().hashCode();
     }
+    if (hasTestNgVersion()) {
+      hash = (37 * hash) + TEST_NG_VERSION_FIELD_NUMBER;
+      hash = (53 * hash) + getTestNgVersion().hashCode();
+    }
+    if (hasJunitPlatformLauncherVersion()) {
+      hash = (37 * hash) + JUNIT_PLATFORM_LAUNCHER_VERSION_FIELD_NUMBER;
+      hash = (53 * hash) + getJunitPlatformLauncherVersion().hashCode();
+    }
+    if (hasJunitPlatformRunnerVersion()) {
+      hash = (37 * hash) + JUNIT_PLATFORM_RUNNER_VERSION_FIELD_NUMBER;
+      hash = (53 * hash) + getJunitPlatformRunnerVersion().hashCode();
+    }
+    if (hasJunitJupiterVersion()) {
+      hash = (37 * hash) + JUNIT_JUPITER_VERSION_FIELD_NUMBER;
+      hash = (53 * hash) + getJunitJupiterVersion().hashCode();
+    }
+    if (hasJunitVintageEngineVersion()) {
+      hash = (37 * hash) + JUNIT_VINTAGE_ENGINE_VERSION_FIELD_NUMBER;
+      hash = (53 * hash) + getJunitVintageEngineVersion().hashCode();
+    }
     hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -2768,7 +3165,7 @@ private static final long serialVersionUID = 0L;
    * Each string field of this message holds the exact version of the given
    * library (e.g. "1.0.0") that the field name represents. The field is populated
    * only if this project uses the given library.
-   * Next ID: 33
+   * Next ID: 38
    * </pre>
    *
    * Protobuf type {@code android_studio.TestLibraries}
@@ -2872,6 +3269,16 @@ private static final long serialVersionUID = 0L;
       bitField0_ = (bitField0_ & ~0x40000000);
       truthVersion_ = "";
       bitField0_ = (bitField0_ & ~0x80000000);
+      testNgVersion_ = "";
+      bitField1_ = (bitField1_ & ~0x00000001);
+      junitPlatformLauncherVersion_ = "";
+      bitField1_ = (bitField1_ & ~0x00000002);
+      junitPlatformRunnerVersion_ = "";
+      bitField1_ = (bitField1_ & ~0x00000004);
+      junitJupiterVersion_ = "";
+      bitField1_ = (bitField1_ & ~0x00000008);
+      junitVintageEngineVersion_ = "";
+      bitField1_ = (bitField1_ & ~0x00000010);
       return this;
     }
 
@@ -2899,7 +3306,9 @@ private static final long serialVersionUID = 0L;
     public com.google.wireless.android.sdk.stats.TestLibraries buildPartial() {
       com.google.wireless.android.sdk.stats.TestLibraries result = new com.google.wireless.android.sdk.stats.TestLibraries(this);
       int from_bitField0_ = bitField0_;
+      int from_bitField1_ = bitField1_;
       int to_bitField0_ = 0;
+      int to_bitField1_ = 0;
       if (((from_bitField0_ & 0x00000001) != 0)) {
         to_bitField0_ |= 0x00000001;
       }
@@ -3028,7 +3437,28 @@ private static final long serialVersionUID = 0L;
         to_bitField0_ |= 0x80000000;
       }
       result.truthVersion_ = truthVersion_;
+      if (((from_bitField1_ & 0x00000001) != 0)) {
+        to_bitField1_ |= 0x00000001;
+      }
+      result.testNgVersion_ = testNgVersion_;
+      if (((from_bitField1_ & 0x00000002) != 0)) {
+        to_bitField1_ |= 0x00000002;
+      }
+      result.junitPlatformLauncherVersion_ = junitPlatformLauncherVersion_;
+      if (((from_bitField1_ & 0x00000004) != 0)) {
+        to_bitField1_ |= 0x00000004;
+      }
+      result.junitPlatformRunnerVersion_ = junitPlatformRunnerVersion_;
+      if (((from_bitField1_ & 0x00000008) != 0)) {
+        to_bitField1_ |= 0x00000008;
+      }
+      result.junitJupiterVersion_ = junitJupiterVersion_;
+      if (((from_bitField1_ & 0x00000010) != 0)) {
+        to_bitField1_ |= 0x00000010;
+      }
+      result.junitVintageEngineVersion_ = junitVintageEngineVersion_;
       result.bitField0_ = to_bitField0_;
+      result.bitField1_ = to_bitField1_;
       onBuilt();
       return result;
     }
@@ -3237,6 +3667,31 @@ private static final long serialVersionUID = 0L;
         truthVersion_ = other.truthVersion_;
         onChanged();
       }
+      if (other.hasTestNgVersion()) {
+        bitField1_ |= 0x00000001;
+        testNgVersion_ = other.testNgVersion_;
+        onChanged();
+      }
+      if (other.hasJunitPlatformLauncherVersion()) {
+        bitField1_ |= 0x00000002;
+        junitPlatformLauncherVersion_ = other.junitPlatformLauncherVersion_;
+        onChanged();
+      }
+      if (other.hasJunitPlatformRunnerVersion()) {
+        bitField1_ |= 0x00000004;
+        junitPlatformRunnerVersion_ = other.junitPlatformRunnerVersion_;
+        onChanged();
+      }
+      if (other.hasJunitJupiterVersion()) {
+        bitField1_ |= 0x00000008;
+        junitJupiterVersion_ = other.junitJupiterVersion_;
+        onChanged();
+      }
+      if (other.hasJunitVintageEngineVersion()) {
+        bitField1_ |= 0x00000010;
+        junitVintageEngineVersion_ = other.junitVintageEngineVersion_;
+        onChanged();
+      }
       this.mergeUnknownFields(other.unknownFields);
       onChanged();
       return this;
@@ -3266,6 +3721,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     private int bitField0_;
+    private int bitField1_;
 
     private java.lang.Object testSupportLibraryVersion_ = "";
     /**
@@ -6719,6 +7175,546 @@ private static final long serialVersionUID = 0L;
   }
   bitField0_ |= 0x80000000;
       truthVersion_ = value;
+      onChanged();
+      return this;
+    }
+
+    private java.lang.Object testNgVersion_ = "";
+    /**
+     * <pre>
+     * "org.testng:testng"
+     * </pre>
+     *
+     * <code>optional string test_ng_version = 33;</code>
+     * @return Whether the testNgVersion field is set.
+     */
+    public boolean hasTestNgVersion() {
+      return ((bitField1_ & 0x00000001) != 0);
+    }
+    /**
+     * <pre>
+     * "org.testng:testng"
+     * </pre>
+     *
+     * <code>optional string test_ng_version = 33;</code>
+     * @return The testNgVersion.
+     */
+    public java.lang.String getTestNgVersion() {
+      java.lang.Object ref = testNgVersion_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          testNgVersion_ = s;
+        }
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <pre>
+     * "org.testng:testng"
+     * </pre>
+     *
+     * <code>optional string test_ng_version = 33;</code>
+     * @return The bytes for testNgVersion.
+     */
+    public com.google.protobuf.ByteString
+        getTestNgVersionBytes() {
+      java.lang.Object ref = testNgVersion_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        testNgVersion_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <pre>
+     * "org.testng:testng"
+     * </pre>
+     *
+     * <code>optional string test_ng_version = 33;</code>
+     * @param value The testNgVersion to set.
+     * @return This builder for chaining.
+     */
+    public Builder setTestNgVersion(
+        java.lang.String value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField1_ |= 0x00000001;
+      testNgVersion_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * "org.testng:testng"
+     * </pre>
+     *
+     * <code>optional string test_ng_version = 33;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearTestNgVersion() {
+      bitField1_ = (bitField1_ & ~0x00000001);
+      testNgVersion_ = getDefaultInstance().getTestNgVersion();
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * "org.testng:testng"
+     * </pre>
+     *
+     * <code>optional string test_ng_version = 33;</code>
+     * @param value The bytes for testNgVersion to set.
+     * @return This builder for chaining.
+     */
+    public Builder setTestNgVersionBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField1_ |= 0x00000001;
+      testNgVersion_ = value;
+      onChanged();
+      return this;
+    }
+
+    private java.lang.Object junitPlatformLauncherVersion_ = "";
+    /**
+     * <pre>
+     * "org.junit.platform:junit-platform-launcher"
+     * </pre>
+     *
+     * <code>optional string junit_platform_launcher_version = 34;</code>
+     * @return Whether the junitPlatformLauncherVersion field is set.
+     */
+    public boolean hasJunitPlatformLauncherVersion() {
+      return ((bitField1_ & 0x00000002) != 0);
+    }
+    /**
+     * <pre>
+     * "org.junit.platform:junit-platform-launcher"
+     * </pre>
+     *
+     * <code>optional string junit_platform_launcher_version = 34;</code>
+     * @return The junitPlatformLauncherVersion.
+     */
+    public java.lang.String getJunitPlatformLauncherVersion() {
+      java.lang.Object ref = junitPlatformLauncherVersion_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          junitPlatformLauncherVersion_ = s;
+        }
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <pre>
+     * "org.junit.platform:junit-platform-launcher"
+     * </pre>
+     *
+     * <code>optional string junit_platform_launcher_version = 34;</code>
+     * @return The bytes for junitPlatformLauncherVersion.
+     */
+    public com.google.protobuf.ByteString
+        getJunitPlatformLauncherVersionBytes() {
+      java.lang.Object ref = junitPlatformLauncherVersion_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        junitPlatformLauncherVersion_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <pre>
+     * "org.junit.platform:junit-platform-launcher"
+     * </pre>
+     *
+     * <code>optional string junit_platform_launcher_version = 34;</code>
+     * @param value The junitPlatformLauncherVersion to set.
+     * @return This builder for chaining.
+     */
+    public Builder setJunitPlatformLauncherVersion(
+        java.lang.String value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField1_ |= 0x00000002;
+      junitPlatformLauncherVersion_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * "org.junit.platform:junit-platform-launcher"
+     * </pre>
+     *
+     * <code>optional string junit_platform_launcher_version = 34;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearJunitPlatformLauncherVersion() {
+      bitField1_ = (bitField1_ & ~0x00000002);
+      junitPlatformLauncherVersion_ = getDefaultInstance().getJunitPlatformLauncherVersion();
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * "org.junit.platform:junit-platform-launcher"
+     * </pre>
+     *
+     * <code>optional string junit_platform_launcher_version = 34;</code>
+     * @param value The bytes for junitPlatformLauncherVersion to set.
+     * @return This builder for chaining.
+     */
+    public Builder setJunitPlatformLauncherVersionBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField1_ |= 0x00000002;
+      junitPlatformLauncherVersion_ = value;
+      onChanged();
+      return this;
+    }
+
+    private java.lang.Object junitPlatformRunnerVersion_ = "";
+    /**
+     * <pre>
+     * "org.junit.platform:junit-platform-runner"
+     * </pre>
+     *
+     * <code>optional string junit_platform_runner_version = 35;</code>
+     * @return Whether the junitPlatformRunnerVersion field is set.
+     */
+    public boolean hasJunitPlatformRunnerVersion() {
+      return ((bitField1_ & 0x00000004) != 0);
+    }
+    /**
+     * <pre>
+     * "org.junit.platform:junit-platform-runner"
+     * </pre>
+     *
+     * <code>optional string junit_platform_runner_version = 35;</code>
+     * @return The junitPlatformRunnerVersion.
+     */
+    public java.lang.String getJunitPlatformRunnerVersion() {
+      java.lang.Object ref = junitPlatformRunnerVersion_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          junitPlatformRunnerVersion_ = s;
+        }
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <pre>
+     * "org.junit.platform:junit-platform-runner"
+     * </pre>
+     *
+     * <code>optional string junit_platform_runner_version = 35;</code>
+     * @return The bytes for junitPlatformRunnerVersion.
+     */
+    public com.google.protobuf.ByteString
+        getJunitPlatformRunnerVersionBytes() {
+      java.lang.Object ref = junitPlatformRunnerVersion_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        junitPlatformRunnerVersion_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <pre>
+     * "org.junit.platform:junit-platform-runner"
+     * </pre>
+     *
+     * <code>optional string junit_platform_runner_version = 35;</code>
+     * @param value The junitPlatformRunnerVersion to set.
+     * @return This builder for chaining.
+     */
+    public Builder setJunitPlatformRunnerVersion(
+        java.lang.String value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField1_ |= 0x00000004;
+      junitPlatformRunnerVersion_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * "org.junit.platform:junit-platform-runner"
+     * </pre>
+     *
+     * <code>optional string junit_platform_runner_version = 35;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearJunitPlatformRunnerVersion() {
+      bitField1_ = (bitField1_ & ~0x00000004);
+      junitPlatformRunnerVersion_ = getDefaultInstance().getJunitPlatformRunnerVersion();
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * "org.junit.platform:junit-platform-runner"
+     * </pre>
+     *
+     * <code>optional string junit_platform_runner_version = 35;</code>
+     * @param value The bytes for junitPlatformRunnerVersion to set.
+     * @return This builder for chaining.
+     */
+    public Builder setJunitPlatformRunnerVersionBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField1_ |= 0x00000004;
+      junitPlatformRunnerVersion_ = value;
+      onChanged();
+      return this;
+    }
+
+    private java.lang.Object junitJupiterVersion_ = "";
+    /**
+     * <pre>
+     * "org.junit.jupiter:junit-jupiter"
+     * </pre>
+     *
+     * <code>optional string junit_jupiter_version = 36;</code>
+     * @return Whether the junitJupiterVersion field is set.
+     */
+    public boolean hasJunitJupiterVersion() {
+      return ((bitField1_ & 0x00000008) != 0);
+    }
+    /**
+     * <pre>
+     * "org.junit.jupiter:junit-jupiter"
+     * </pre>
+     *
+     * <code>optional string junit_jupiter_version = 36;</code>
+     * @return The junitJupiterVersion.
+     */
+    public java.lang.String getJunitJupiterVersion() {
+      java.lang.Object ref = junitJupiterVersion_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          junitJupiterVersion_ = s;
+        }
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <pre>
+     * "org.junit.jupiter:junit-jupiter"
+     * </pre>
+     *
+     * <code>optional string junit_jupiter_version = 36;</code>
+     * @return The bytes for junitJupiterVersion.
+     */
+    public com.google.protobuf.ByteString
+        getJunitJupiterVersionBytes() {
+      java.lang.Object ref = junitJupiterVersion_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        junitJupiterVersion_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <pre>
+     * "org.junit.jupiter:junit-jupiter"
+     * </pre>
+     *
+     * <code>optional string junit_jupiter_version = 36;</code>
+     * @param value The junitJupiterVersion to set.
+     * @return This builder for chaining.
+     */
+    public Builder setJunitJupiterVersion(
+        java.lang.String value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField1_ |= 0x00000008;
+      junitJupiterVersion_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * "org.junit.jupiter:junit-jupiter"
+     * </pre>
+     *
+     * <code>optional string junit_jupiter_version = 36;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearJunitJupiterVersion() {
+      bitField1_ = (bitField1_ & ~0x00000008);
+      junitJupiterVersion_ = getDefaultInstance().getJunitJupiterVersion();
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * "org.junit.jupiter:junit-jupiter"
+     * </pre>
+     *
+     * <code>optional string junit_jupiter_version = 36;</code>
+     * @param value The bytes for junitJupiterVersion to set.
+     * @return This builder for chaining.
+     */
+    public Builder setJunitJupiterVersionBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField1_ |= 0x00000008;
+      junitJupiterVersion_ = value;
+      onChanged();
+      return this;
+    }
+
+    private java.lang.Object junitVintageEngineVersion_ = "";
+    /**
+     * <pre>
+     * "org.junit.vintage:junit-vintage-engine"
+     * </pre>
+     *
+     * <code>optional string junit_vintage_engine_version = 37;</code>
+     * @return Whether the junitVintageEngineVersion field is set.
+     */
+    public boolean hasJunitVintageEngineVersion() {
+      return ((bitField1_ & 0x00000010) != 0);
+    }
+    /**
+     * <pre>
+     * "org.junit.vintage:junit-vintage-engine"
+     * </pre>
+     *
+     * <code>optional string junit_vintage_engine_version = 37;</code>
+     * @return The junitVintageEngineVersion.
+     */
+    public java.lang.String getJunitVintageEngineVersion() {
+      java.lang.Object ref = junitVintageEngineVersion_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          junitVintageEngineVersion_ = s;
+        }
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <pre>
+     * "org.junit.vintage:junit-vintage-engine"
+     * </pre>
+     *
+     * <code>optional string junit_vintage_engine_version = 37;</code>
+     * @return The bytes for junitVintageEngineVersion.
+     */
+    public com.google.protobuf.ByteString
+        getJunitVintageEngineVersionBytes() {
+      java.lang.Object ref = junitVintageEngineVersion_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        junitVintageEngineVersion_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <pre>
+     * "org.junit.vintage:junit-vintage-engine"
+     * </pre>
+     *
+     * <code>optional string junit_vintage_engine_version = 37;</code>
+     * @param value The junitVintageEngineVersion to set.
+     * @return This builder for chaining.
+     */
+    public Builder setJunitVintageEngineVersion(
+        java.lang.String value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField1_ |= 0x00000010;
+      junitVintageEngineVersion_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * "org.junit.vintage:junit-vintage-engine"
+     * </pre>
+     *
+     * <code>optional string junit_vintage_engine_version = 37;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearJunitVintageEngineVersion() {
+      bitField1_ = (bitField1_ & ~0x00000010);
+      junitVintageEngineVersion_ = getDefaultInstance().getJunitVintageEngineVersion();
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * "org.junit.vintage:junit-vintage-engine"
+     * </pre>
+     *
+     * <code>optional string junit_vintage_engine_version = 37;</code>
+     * @param value The bytes for junitVintageEngineVersion to set.
+     * @return This builder for chaining.
+     */
+    public Builder setJunitVintageEngineVersionBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField1_ |= 0x00000010;
+      junitVintageEngineVersion_ = value;
       onChanged();
       return this;
     }

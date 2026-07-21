@@ -33,6 +33,10 @@ public enum VariantMethodType
    */
   TARGET_SDK_VERSION_VALUE(5),
   /**
+   * <pre>
+   * deprecated
+   * </pre>
+   *
    * <code>DEPENDENCIES_ACTION = 6;</code>
    */
   DEPENDENCIES_ACTION(6),
@@ -48,6 +52,18 @@ public enum VariantMethodType
    * <code>ANDROID_TEST_ENABLED = 9;</code>
    */
   ANDROID_TEST_ENABLED(9),
+  /**
+   * <code>MIN_SDK_PREVIEW = 10;</code>
+   */
+  MIN_SDK_PREVIEW(10),
+  /**
+   * <code>TARGET_SDK_PREVIEW = 11;</code>
+   */
+  TARGET_SDK_PREVIEW(11),
+  /**
+   * <code>VARIANT_BUILDER_DEPENDENCIES_INFO = 12;</code>
+   */
+  VARIANT_BUILDER_DEPENDENCIES_INFO(12),
   UNRECOGNIZED(-1),
   ;
 
@@ -76,6 +92,10 @@ public enum VariantMethodType
    */
   public static final int TARGET_SDK_VERSION_VALUE_VALUE = 5;
   /**
+   * <pre>
+   * deprecated
+   * </pre>
+   *
    * <code>DEPENDENCIES_ACTION = 6;</code>
    */
   public static final int DEPENDENCIES_ACTION_VALUE = 6;
@@ -91,6 +111,18 @@ public enum VariantMethodType
    * <code>ANDROID_TEST_ENABLED = 9;</code>
    */
   public static final int ANDROID_TEST_ENABLED_VALUE = 9;
+  /**
+   * <code>MIN_SDK_PREVIEW = 10;</code>
+   */
+  public static final int MIN_SDK_PREVIEW_VALUE = 10;
+  /**
+   * <code>TARGET_SDK_PREVIEW = 11;</code>
+   */
+  public static final int TARGET_SDK_PREVIEW_VALUE = 11;
+  /**
+   * <code>VARIANT_BUILDER_DEPENDENCIES_INFO = 12;</code>
+   */
+  public static final int VARIANT_BUILDER_DEPENDENCIES_INFO_VALUE = 12;
 
 
   public final int getNumber() {
@@ -127,6 +159,9 @@ public enum VariantMethodType
       case 7: return REGISTER_EXTENSION;
       case 8: return UNIT_TEST_ENABLED;
       case 9: return ANDROID_TEST_ENABLED;
+      case 10: return MIN_SDK_PREVIEW;
+      case 11: return TARGET_SDK_PREVIEW;
+      case 12: return VARIANT_BUILDER_DEPENDENCIES_INFO;
       default: return null;
     }
   }
