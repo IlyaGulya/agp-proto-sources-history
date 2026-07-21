@@ -6271,6 +6271,33 @@ public interface AndroidStudioEventOrBuilder extends
 
   /**
    * <pre>
+   * set when kind = USER_ID_RESET_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.UserIdResetEvent user_id_reset_event = 225 [lazy = true];</code>
+   * @return Whether the userIdResetEvent field is set.
+   */
+  boolean hasUserIdResetEvent();
+  /**
+   * <pre>
+   * set when kind = USER_ID_RESET_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.UserIdResetEvent user_id_reset_event = 225 [lazy = true];</code>
+   * @return The userIdResetEvent.
+   */
+  com.google.wireless.android.sdk.stats.UserIdResetEvent getUserIdResetEvent();
+  /**
+   * <pre>
+   * set when kind = USER_ID_RESET_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.UserIdResetEvent user_id_reset_event = 225 [lazy = true];</code>
+   */
+  com.google.wireless.android.sdk.stats.UserIdResetEventOrBuilder getUserIdResetEventOrBuilder();
+
+  /**
+   * <pre>
    * set when kind = K2_MODE_EVENT
    * </pre>
    *
@@ -6295,4 +6322,85 @@ public interface AndroidStudioEventOrBuilder extends
    * <code>optional .android_studio.K2ModeEvent k2_mode_event = 226 [lazy = true];</code>
    */
   com.google.wireless.android.sdk.stats.K2ModeEventOrBuilder getK2ModeEventOrBuilder();
+
+  /**
+   * <pre>
+   * set when kind = JOURNEY_FINISHED_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.JourneyFinishedEvent journey_finished_event = 227 [lazy = true];</code>
+   * @return Whether the journeyFinishedEvent field is set.
+   */
+  boolean hasJourneyFinishedEvent();
+  /**
+   * <pre>
+   * set when kind = JOURNEY_FINISHED_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.JourneyFinishedEvent journey_finished_event = 227 [lazy = true];</code>
+   * @return The journeyFinishedEvent.
+   */
+  com.google.wireless.android.sdk.stats.JourneyFinishedEvent getJourneyFinishedEvent();
+  /**
+   * <pre>
+   * set when kind = JOURNEY_FINISHED_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.JourneyFinishedEvent journey_finished_event = 227 [lazy = true];</code>
+   */
+  com.google.wireless.android.sdk.stats.JourneyFinishedEventOrBuilder getJourneyFinishedEventOrBuilder();
+
+  /**
+   * <pre>
+   * set when kind = JOURNEY_ENGINE_ERROR_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.JourneyEngineErrorEvent journey_engine_error_event = 228 [lazy = true];</code>
+   * @return Whether the journeyEngineErrorEvent field is set.
+   */
+  boolean hasJourneyEngineErrorEvent();
+  /**
+   * <pre>
+   * set when kind = JOURNEY_ENGINE_ERROR_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.JourneyEngineErrorEvent journey_engine_error_event = 228 [lazy = true];</code>
+   * @return The journeyEngineErrorEvent.
+   */
+  com.google.wireless.android.sdk.stats.JourneyEngineErrorEvent getJourneyEngineErrorEvent();
+  /**
+   * <pre>
+   * set when kind = JOURNEY_ENGINE_ERROR_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.JourneyEngineErrorEvent journey_engine_error_event = 228 [lazy = true];</code>
+   */
+  com.google.wireless.android.sdk.stats.JourneyEngineErrorEventOrBuilder getJourneyEngineErrorEventOrBuilder();
+
+  /**
+   * <pre>
+   * set when kind = BACKUP_AND_SYNC_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.BackupAndSyncEvent backup_and_sync_event = 229 [lazy = true];</code>
+   * @return Whether the backupAndSyncEvent field is set.
+   */
+  boolean hasBackupAndSyncEvent();
+  /**
+   * <pre>
+   * set when kind = BACKUP_AND_SYNC_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.BackupAndSyncEvent backup_and_sync_event = 229 [lazy = true];</code>
+   * @return The backupAndSyncEvent.
+   */
+  com.google.wireless.android.sdk.stats.BackupAndSyncEvent getBackupAndSyncEvent();
+  /**
+   * <pre>
+   * set when kind = BACKUP_AND_SYNC_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.BackupAndSyncEvent backup_and_sync_event = 229 [lazy = true];</code>
+   */
+  com.google.wireless.android.sdk.stats.BackupAndSyncEventOrBuilder getBackupAndSyncEventOrBuilder();
 }

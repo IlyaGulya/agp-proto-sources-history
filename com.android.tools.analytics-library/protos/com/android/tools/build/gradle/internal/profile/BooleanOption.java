@@ -836,6 +836,14 @@ public enum BooleanOption
    * <code>TEST_SIMULATE_AGP_VERSION_BEHAVIOR = 203;</code>
    */
   TEST_SIMULATE_AGP_VERSION_BEHAVIOR(203),
+  /**
+   * <code>FUSED_LIBRARY_PUBLICATION_ONLY_MODE = 204;</code>
+   */
+  FUSED_LIBRARY_PUBLICATION_ONLY_MODE(204),
+  /**
+   * <code>ONLY_ENABLE_UNIT_TEST_BY_DEFAULT_FOR_THE_TESTED_BUILD_TYPE = 205;</code>
+   */
+  ONLY_ENABLE_UNIT_TEST_BY_DEFAULT_FOR_THE_TESTED_BUILD_TYPE(205),
   UNRECOGNIZED(-1),
   ;
 
@@ -1655,6 +1663,14 @@ public enum BooleanOption
    * <code>TEST_SIMULATE_AGP_VERSION_BEHAVIOR = 203;</code>
    */
   public static final int TEST_SIMULATE_AGP_VERSION_BEHAVIOR_VALUE = 203;
+  /**
+   * <code>FUSED_LIBRARY_PUBLICATION_ONLY_MODE = 204;</code>
+   */
+  public static final int FUSED_LIBRARY_PUBLICATION_ONLY_MODE_VALUE = 204;
+  /**
+   * <code>ONLY_ENABLE_UNIT_TEST_BY_DEFAULT_FOR_THE_TESTED_BUILD_TYPE = 205;</code>
+   */
+  public static final int ONLY_ENABLE_UNIT_TEST_BY_DEFAULT_FOR_THE_TESTED_BUILD_TYPE_VALUE = 205;
 
 
   public final int getNumber() {
@@ -1885,6 +1901,8 @@ public enum BooleanOption
       case 201: return ENABLE_PROBLEMS_API;
       case 202: return FAIL_ON_MISSING_PROGUARD_FILES;
       case 203: return TEST_SIMULATE_AGP_VERSION_BEHAVIOR;
+      case 204: return FUSED_LIBRARY_PUBLICATION_ONLY_MODE;
+      case 205: return ONLY_ENABLE_UNIT_TEST_BY_DEFAULT_FOR_THE_TESTED_BUILD_TYPE;
       default: return null;
     }
   }
