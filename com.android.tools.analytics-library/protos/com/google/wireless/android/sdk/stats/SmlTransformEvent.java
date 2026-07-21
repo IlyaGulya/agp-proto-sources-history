@@ -1772,19 +1772,11 @@ private static final long serialVersionUID = 0L;
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <pre>
-     * Status code mapped to HTTP codes (see go/http-canonical-mapping).
-     * </pre>
-     *
      * <code>optional int32 status_code = 1;</code>
      * @return Whether the statusCode field is set.
      */
     boolean hasStatusCode();
     /**
-     * <pre>
-     * Status code mapped to HTTP codes (see go/http-canonical-mapping).
-     * </pre>
-     *
      * <code>optional int32 status_code = 1;</code>
      * @return The statusCode.
      */
@@ -2049,10 +2041,6 @@ private static final long serialVersionUID = 0L;
     public static final int STATUS_CODE_FIELD_NUMBER = 1;
     private int statusCode_;
     /**
-     * <pre>
-     * Status code mapped to HTTP codes (see go/http-canonical-mapping).
-     * </pre>
-     *
      * <code>optional int32 status_code = 1;</code>
      * @return Whether the statusCode field is set.
      */
@@ -2061,10 +2049,6 @@ private static final long serialVersionUID = 0L;
       return ((bitField0_ & 0x00000001) != 0);
     }
     /**
-     * <pre>
-     * Status code mapped to HTTP codes (see go/http-canonical-mapping).
-     * </pre>
-     *
      * <code>optional int32 status_code = 1;</code>
      * @return The statusCode.
      */
@@ -2623,10 +2607,6 @@ private static final long serialVersionUID = 0L;
 
       private int statusCode_ ;
       /**
-       * <pre>
-       * Status code mapped to HTTP codes (see go/http-canonical-mapping).
-       * </pre>
-       *
        * <code>optional int32 status_code = 1;</code>
        * @return Whether the statusCode field is set.
        */
@@ -2635,10 +2615,6 @@ private static final long serialVersionUID = 0L;
         return ((bitField0_ & 0x00000001) != 0);
       }
       /**
-       * <pre>
-       * Status code mapped to HTTP codes (see go/http-canonical-mapping).
-       * </pre>
-       *
        * <code>optional int32 status_code = 1;</code>
        * @return The statusCode.
        */
@@ -2647,10 +2623,6 @@ private static final long serialVersionUID = 0L;
         return statusCode_;
       }
       /**
-       * <pre>
-       * Status code mapped to HTTP codes (see go/http-canonical-mapping).
-       * </pre>
-       *
        * <code>optional int32 status_code = 1;</code>
        * @param value The statusCode to set.
        * @return This builder for chaining.
@@ -2662,10 +2634,6 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <pre>
-       * Status code mapped to HTTP codes (see go/http-canonical-mapping).
-       * </pre>
-       *
        * <code>optional int32 status_code = 1;</code>
        * @return This builder for chaining.
        */

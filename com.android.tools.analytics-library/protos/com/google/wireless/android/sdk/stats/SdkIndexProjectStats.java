@@ -158,6 +158,25 @@ private static final long serialVersionUID = 0L;
     return numVulnerabilityIssues_;
   }
 
+  public static final int NUM_DEPRECATED_ISSUES_FIELD_NUMBER = 7;
+  private int numDeprecatedIssues_;
+  /**
+   * <code>optional uint32 num_deprecated_issues = 7;</code>
+   * @return Whether the numDeprecatedIssues field is set.
+   */
+  @java.lang.Override
+  public boolean hasNumDeprecatedIssues() {
+    return ((bitField0_ & 0x00000040) != 0);
+  }
+  /**
+   * <code>optional uint32 num_deprecated_issues = 7;</code>
+   * @return The numDeprecatedIssues.
+   */
+  @java.lang.Override
+  public int getNumDeprecatedIssues() {
+    return numDeprecatedIssues_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -189,6 +208,9 @@ private static final long serialVersionUID = 0L;
     }
     if (((bitField0_ & 0x00000020) != 0)) {
       output.writeUInt32(6, numVulnerabilityIssues_);
+    }
+    if (((bitField0_ & 0x00000040) != 0)) {
+      output.writeUInt32(7, numDeprecatedIssues_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -222,6 +244,10 @@ private static final long serialVersionUID = 0L;
     if (((bitField0_ & 0x00000020) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeUInt32Size(6, numVulnerabilityIssues_);
+    }
+    if (((bitField0_ & 0x00000040) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeUInt32Size(7, numDeprecatedIssues_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -268,6 +294,11 @@ private static final long serialVersionUID = 0L;
       if (getNumVulnerabilityIssues()
           != other.getNumVulnerabilityIssues()) return false;
     }
+    if (hasNumDeprecatedIssues() != other.hasNumDeprecatedIssues()) return false;
+    if (hasNumDeprecatedIssues()) {
+      if (getNumDeprecatedIssues()
+          != other.getNumDeprecatedIssues()) return false;
+    }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -302,6 +333,10 @@ private static final long serialVersionUID = 0L;
     if (hasNumVulnerabilityIssues()) {
       hash = (37 * hash) + NUM_VULNERABILITY_ISSUES_FIELD_NUMBER;
       hash = (53 * hash) + getNumVulnerabilityIssues();
+    }
+    if (hasNumDeprecatedIssues()) {
+      hash = (37 * hash) + NUM_DEPRECATED_ISSUES_FIELD_NUMBER;
+      hash = (53 * hash) + getNumDeprecatedIssues();
     }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
@@ -443,6 +478,8 @@ private static final long serialVersionUID = 0L;
       bitField0_ = (bitField0_ & ~0x00000010);
       numVulnerabilityIssues_ = 0;
       bitField0_ = (bitField0_ & ~0x00000020);
+      numDeprecatedIssues_ = 0;
+      bitField0_ = (bitField0_ & ~0x00000040);
       return this;
     }
 
@@ -494,6 +531,10 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000020) != 0)) {
         result.numVulnerabilityIssues_ = numVulnerabilityIssues_;
         to_bitField0_ |= 0x00000020;
+      }
+      if (((from_bitField0_ & 0x00000040) != 0)) {
+        result.numDeprecatedIssues_ = numDeprecatedIssues_;
+        to_bitField0_ |= 0x00000040;
       }
       result.bitField0_ = to_bitField0_;
       onBuilt();
@@ -562,6 +603,9 @@ private static final long serialVersionUID = 0L;
       if (other.hasNumVulnerabilityIssues()) {
         setNumVulnerabilityIssues(other.getNumVulnerabilityIssues());
       }
+      if (other.hasNumDeprecatedIssues()) {
+        setNumDeprecatedIssues(other.getNumDeprecatedIssues());
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -618,6 +662,11 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000020;
               break;
             } // case 48
+            case 56: {
+              numDeprecatedIssues_ = input.readUInt32();
+              bitField0_ |= 0x00000040;
+              break;
+            } // case 56
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -865,6 +914,45 @@ private static final long serialVersionUID = 0L;
     public Builder clearNumVulnerabilityIssues() {
       bitField0_ = (bitField0_ & ~0x00000020);
       numVulnerabilityIssues_ = 0;
+      onChanged();
+      return this;
+    }
+
+    private int numDeprecatedIssues_ ;
+    /**
+     * <code>optional uint32 num_deprecated_issues = 7;</code>
+     * @return Whether the numDeprecatedIssues field is set.
+     */
+    @java.lang.Override
+    public boolean hasNumDeprecatedIssues() {
+      return ((bitField0_ & 0x00000040) != 0);
+    }
+    /**
+     * <code>optional uint32 num_deprecated_issues = 7;</code>
+     * @return The numDeprecatedIssues.
+     */
+    @java.lang.Override
+    public int getNumDeprecatedIssues() {
+      return numDeprecatedIssues_;
+    }
+    /**
+     * <code>optional uint32 num_deprecated_issues = 7;</code>
+     * @param value The numDeprecatedIssues to set.
+     * @return This builder for chaining.
+     */
+    public Builder setNumDeprecatedIssues(int value) {
+      bitField0_ |= 0x00000040;
+      numDeprecatedIssues_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>optional uint32 num_deprecated_issues = 7;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearNumDeprecatedIssues() {
+      bitField0_ = (bitField0_ & ~0x00000040);
+      numDeprecatedIssues_ = 0;
       onChanged();
       return this;
     }

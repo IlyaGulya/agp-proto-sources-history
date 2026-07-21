@@ -172,7 +172,7 @@ private static final long serialVersionUID = 0L;
   private volatile java.lang.Object versionString_;
   /**
    * <pre>
-   * Version of library
+   * Version of library (can be empty for SDK_INDEX_LIBRARY_IS_DEPRECATED)
    * </pre>
    *
    * <code>optional string version_string = 3;</code>
@@ -184,7 +184,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Version of library
+   * Version of library (can be empty for SDK_INDEX_LIBRARY_IS_DEPRECATED)
    * </pre>
    *
    * <code>optional string version_string = 3;</code>
@@ -207,7 +207,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Version of library
+   * Version of library (can be empty for SDK_INDEX_LIBRARY_IS_DEPRECATED)
    * </pre>
    *
    * <code>optional string version_string = 3;</code>
@@ -986,7 +986,7 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object versionString_ = "";
     /**
      * <pre>
-     * Version of library
+     * Version of library (can be empty for SDK_INDEX_LIBRARY_IS_DEPRECATED)
      * </pre>
      *
      * <code>optional string version_string = 3;</code>
@@ -997,7 +997,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Version of library
+     * Version of library (can be empty for SDK_INDEX_LIBRARY_IS_DEPRECATED)
      * </pre>
      *
      * <code>optional string version_string = 3;</code>
@@ -1019,7 +1019,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Version of library
+     * Version of library (can be empty for SDK_INDEX_LIBRARY_IS_DEPRECATED)
      * </pre>
      *
      * <code>optional string version_string = 3;</code>
@@ -1040,7 +1040,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Version of library
+     * Version of library (can be empty for SDK_INDEX_LIBRARY_IS_DEPRECATED)
      * </pre>
      *
      * <code>optional string version_string = 3;</code>
@@ -1059,7 +1059,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Version of library
+     * Version of library (can be empty for SDK_INDEX_LIBRARY_IS_DEPRECATED)
      * </pre>
      *
      * <code>optional string version_string = 3;</code>
@@ -1073,7 +1073,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Version of library
+     * Version of library (can be empty for SDK_INDEX_LIBRARY_IS_DEPRECATED)
      * </pre>
      *
      * <code>optional string version_string = 3;</code>

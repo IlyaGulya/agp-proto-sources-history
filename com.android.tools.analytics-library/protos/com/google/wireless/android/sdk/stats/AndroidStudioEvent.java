@@ -3170,6 +3170,14 @@ private static final long serialVersionUID = 0L;
      * <code>PROMPT_LIBRARY_EVENT = 331;</code>
      */
     PROMPT_LIBRARY_EVENT(331),
+    /**
+     * <pre>
+     * Library is marked as deprecated in the SDK Index
+     * </pre>
+     *
+     * <code>SDK_INDEX_LIBRARY_IS_DEPRECATED = 332;</code>
+     */
+    SDK_INDEX_LIBRARY_IS_DEPRECATED(332),
     ;
 
     /**
@@ -5646,6 +5654,14 @@ private static final long serialVersionUID = 0L;
      * <code>PROMPT_LIBRARY_EVENT = 331;</code>
      */
     public static final int PROMPT_LIBRARY_EVENT_VALUE = 331;
+    /**
+     * <pre>
+     * Library is marked as deprecated in the SDK Index
+     * </pre>
+     *
+     * <code>SDK_INDEX_LIBRARY_IS_DEPRECATED = 332;</code>
+     */
+    public static final int SDK_INDEX_LIBRARY_IS_DEPRECATED_VALUE = 332;
 
 
     public final int getNumber() {
@@ -5995,6 +6011,7 @@ private static final long serialVersionUID = 0L;
         case 329: return SDK_INDEX_LIBRARY_UPDATED;
         case 330: return STUDIO_LABS_EVENT;
         case 331: return PROMPT_LIBRARY_EVENT;
+        case 332: return SDK_INDEX_LIBRARY_IS_DEPRECATED;
         default: return null;
       }
     }
@@ -21104,7 +21121,8 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * set when kind is SDK_INDEX_LIBRARY_HAS_CRITICAL_ISSUES,
    * SDK_INDEX_LIBRARY_IS_OUTDATED, SDK_INDEX_LIBRARY_IS_NON_COMPLIANT,
-   * SDK_INDEX_LIBRARY_HAS_VULNERABILITIES, SDK_INDEX_LIBRARY_UPDATED
+   * SDK_INDEX_LIBRARY_HAS_VULNERABILITIES, SDK_INDEX_LIBRARY_UPDATED,
+   * SDK_INDEX_LIBRARY_IS_DEPRECATED
    * </pre>
    *
    * <code>optional .android_studio.SdkIndexLibraryDetails sdk_index_library_details = 142 [lazy = true];</code>
@@ -21118,7 +21136,8 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * set when kind is SDK_INDEX_LIBRARY_HAS_CRITICAL_ISSUES,
    * SDK_INDEX_LIBRARY_IS_OUTDATED, SDK_INDEX_LIBRARY_IS_NON_COMPLIANT,
-   * SDK_INDEX_LIBRARY_HAS_VULNERABILITIES, SDK_INDEX_LIBRARY_UPDATED
+   * SDK_INDEX_LIBRARY_HAS_VULNERABILITIES, SDK_INDEX_LIBRARY_UPDATED,
+   * SDK_INDEX_LIBRARY_IS_DEPRECATED
    * </pre>
    *
    * <code>optional .android_studio.SdkIndexLibraryDetails sdk_index_library_details = 142 [lazy = true];</code>
@@ -21132,7 +21151,8 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * set when kind is SDK_INDEX_LIBRARY_HAS_CRITICAL_ISSUES,
    * SDK_INDEX_LIBRARY_IS_OUTDATED, SDK_INDEX_LIBRARY_IS_NON_COMPLIANT,
-   * SDK_INDEX_LIBRARY_HAS_VULNERABILITIES, SDK_INDEX_LIBRARY_UPDATED
+   * SDK_INDEX_LIBRARY_HAS_VULNERABILITIES, SDK_INDEX_LIBRARY_UPDATED,
+   * SDK_INDEX_LIBRARY_IS_DEPRECATED
    * </pre>
    *
    * <code>optional .android_studio.SdkIndexLibraryDetails sdk_index_library_details = 142 [lazy = true];</code>
@@ -54127,7 +54147,8 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * set when kind is SDK_INDEX_LIBRARY_HAS_CRITICAL_ISSUES,
      * SDK_INDEX_LIBRARY_IS_OUTDATED, SDK_INDEX_LIBRARY_IS_NON_COMPLIANT,
-     * SDK_INDEX_LIBRARY_HAS_VULNERABILITIES, SDK_INDEX_LIBRARY_UPDATED
+     * SDK_INDEX_LIBRARY_HAS_VULNERABILITIES, SDK_INDEX_LIBRARY_UPDATED,
+     * SDK_INDEX_LIBRARY_IS_DEPRECATED
      * </pre>
      *
      * <code>optional .android_studio.SdkIndexLibraryDetails sdk_index_library_details = 142 [lazy = true];</code>
@@ -54140,7 +54161,8 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * set when kind is SDK_INDEX_LIBRARY_HAS_CRITICAL_ISSUES,
      * SDK_INDEX_LIBRARY_IS_OUTDATED, SDK_INDEX_LIBRARY_IS_NON_COMPLIANT,
-     * SDK_INDEX_LIBRARY_HAS_VULNERABILITIES, SDK_INDEX_LIBRARY_UPDATED
+     * SDK_INDEX_LIBRARY_HAS_VULNERABILITIES, SDK_INDEX_LIBRARY_UPDATED,
+     * SDK_INDEX_LIBRARY_IS_DEPRECATED
      * </pre>
      *
      * <code>optional .android_studio.SdkIndexLibraryDetails sdk_index_library_details = 142 [lazy = true];</code>
@@ -54157,7 +54179,8 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * set when kind is SDK_INDEX_LIBRARY_HAS_CRITICAL_ISSUES,
      * SDK_INDEX_LIBRARY_IS_OUTDATED, SDK_INDEX_LIBRARY_IS_NON_COMPLIANT,
-     * SDK_INDEX_LIBRARY_HAS_VULNERABILITIES, SDK_INDEX_LIBRARY_UPDATED
+     * SDK_INDEX_LIBRARY_HAS_VULNERABILITIES, SDK_INDEX_LIBRARY_UPDATED,
+     * SDK_INDEX_LIBRARY_IS_DEPRECATED
      * </pre>
      *
      * <code>optional .android_studio.SdkIndexLibraryDetails sdk_index_library_details = 142 [lazy = true];</code>
@@ -54179,7 +54202,8 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * set when kind is SDK_INDEX_LIBRARY_HAS_CRITICAL_ISSUES,
      * SDK_INDEX_LIBRARY_IS_OUTDATED, SDK_INDEX_LIBRARY_IS_NON_COMPLIANT,
-     * SDK_INDEX_LIBRARY_HAS_VULNERABILITIES, SDK_INDEX_LIBRARY_UPDATED
+     * SDK_INDEX_LIBRARY_HAS_VULNERABILITIES, SDK_INDEX_LIBRARY_UPDATED,
+     * SDK_INDEX_LIBRARY_IS_DEPRECATED
      * </pre>
      *
      * <code>optional .android_studio.SdkIndexLibraryDetails sdk_index_library_details = 142 [lazy = true];</code>
@@ -54199,7 +54223,8 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * set when kind is SDK_INDEX_LIBRARY_HAS_CRITICAL_ISSUES,
      * SDK_INDEX_LIBRARY_IS_OUTDATED, SDK_INDEX_LIBRARY_IS_NON_COMPLIANT,
-     * SDK_INDEX_LIBRARY_HAS_VULNERABILITIES, SDK_INDEX_LIBRARY_UPDATED
+     * SDK_INDEX_LIBRARY_HAS_VULNERABILITIES, SDK_INDEX_LIBRARY_UPDATED,
+     * SDK_INDEX_LIBRARY_IS_DEPRECATED
      * </pre>
      *
      * <code>optional .android_studio.SdkIndexLibraryDetails sdk_index_library_details = 142 [lazy = true];</code>
@@ -54225,7 +54250,8 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * set when kind is SDK_INDEX_LIBRARY_HAS_CRITICAL_ISSUES,
      * SDK_INDEX_LIBRARY_IS_OUTDATED, SDK_INDEX_LIBRARY_IS_NON_COMPLIANT,
-     * SDK_INDEX_LIBRARY_HAS_VULNERABILITIES, SDK_INDEX_LIBRARY_UPDATED
+     * SDK_INDEX_LIBRARY_HAS_VULNERABILITIES, SDK_INDEX_LIBRARY_UPDATED,
+     * SDK_INDEX_LIBRARY_IS_DEPRECATED
      * </pre>
      *
      * <code>optional .android_studio.SdkIndexLibraryDetails sdk_index_library_details = 142 [lazy = true];</code>
@@ -54244,7 +54270,8 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * set when kind is SDK_INDEX_LIBRARY_HAS_CRITICAL_ISSUES,
      * SDK_INDEX_LIBRARY_IS_OUTDATED, SDK_INDEX_LIBRARY_IS_NON_COMPLIANT,
-     * SDK_INDEX_LIBRARY_HAS_VULNERABILITIES, SDK_INDEX_LIBRARY_UPDATED
+     * SDK_INDEX_LIBRARY_HAS_VULNERABILITIES, SDK_INDEX_LIBRARY_UPDATED,
+     * SDK_INDEX_LIBRARY_IS_DEPRECATED
      * </pre>
      *
      * <code>optional .android_studio.SdkIndexLibraryDetails sdk_index_library_details = 142 [lazy = true];</code>
@@ -54258,7 +54285,8 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * set when kind is SDK_INDEX_LIBRARY_HAS_CRITICAL_ISSUES,
      * SDK_INDEX_LIBRARY_IS_OUTDATED, SDK_INDEX_LIBRARY_IS_NON_COMPLIANT,
-     * SDK_INDEX_LIBRARY_HAS_VULNERABILITIES, SDK_INDEX_LIBRARY_UPDATED
+     * SDK_INDEX_LIBRARY_HAS_VULNERABILITIES, SDK_INDEX_LIBRARY_UPDATED,
+     * SDK_INDEX_LIBRARY_IS_DEPRECATED
      * </pre>
      *
      * <code>optional .android_studio.SdkIndexLibraryDetails sdk_index_library_details = 142 [lazy = true];</code>
@@ -54275,7 +54303,8 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * set when kind is SDK_INDEX_LIBRARY_HAS_CRITICAL_ISSUES,
      * SDK_INDEX_LIBRARY_IS_OUTDATED, SDK_INDEX_LIBRARY_IS_NON_COMPLIANT,
-     * SDK_INDEX_LIBRARY_HAS_VULNERABILITIES, SDK_INDEX_LIBRARY_UPDATED
+     * SDK_INDEX_LIBRARY_HAS_VULNERABILITIES, SDK_INDEX_LIBRARY_UPDATED,
+     * SDK_INDEX_LIBRARY_IS_DEPRECATED
      * </pre>
      *
      * <code>optional .android_studio.SdkIndexLibraryDetails sdk_index_library_details = 142 [lazy = true];</code>

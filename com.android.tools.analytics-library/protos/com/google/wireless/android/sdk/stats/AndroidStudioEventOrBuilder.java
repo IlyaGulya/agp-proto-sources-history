@@ -3996,7 +3996,8 @@ public interface AndroidStudioEventOrBuilder extends
    * <pre>
    * set when kind is SDK_INDEX_LIBRARY_HAS_CRITICAL_ISSUES,
    * SDK_INDEX_LIBRARY_IS_OUTDATED, SDK_INDEX_LIBRARY_IS_NON_COMPLIANT,
-   * SDK_INDEX_LIBRARY_HAS_VULNERABILITIES, SDK_INDEX_LIBRARY_UPDATED
+   * SDK_INDEX_LIBRARY_HAS_VULNERABILITIES, SDK_INDEX_LIBRARY_UPDATED,
+   * SDK_INDEX_LIBRARY_IS_DEPRECATED
    * </pre>
    *
    * <code>optional .android_studio.SdkIndexLibraryDetails sdk_index_library_details = 142 [lazy = true];</code>
@@ -4007,7 +4008,8 @@ public interface AndroidStudioEventOrBuilder extends
    * <pre>
    * set when kind is SDK_INDEX_LIBRARY_HAS_CRITICAL_ISSUES,
    * SDK_INDEX_LIBRARY_IS_OUTDATED, SDK_INDEX_LIBRARY_IS_NON_COMPLIANT,
-   * SDK_INDEX_LIBRARY_HAS_VULNERABILITIES, SDK_INDEX_LIBRARY_UPDATED
+   * SDK_INDEX_LIBRARY_HAS_VULNERABILITIES, SDK_INDEX_LIBRARY_UPDATED,
+   * SDK_INDEX_LIBRARY_IS_DEPRECATED
    * </pre>
    *
    * <code>optional .android_studio.SdkIndexLibraryDetails sdk_index_library_details = 142 [lazy = true];</code>
@@ -4018,7 +4020,8 @@ public interface AndroidStudioEventOrBuilder extends
    * <pre>
    * set when kind is SDK_INDEX_LIBRARY_HAS_CRITICAL_ISSUES,
    * SDK_INDEX_LIBRARY_IS_OUTDATED, SDK_INDEX_LIBRARY_IS_NON_COMPLIANT,
-   * SDK_INDEX_LIBRARY_HAS_VULNERABILITIES, SDK_INDEX_LIBRARY_UPDATED
+   * SDK_INDEX_LIBRARY_HAS_VULNERABILITIES, SDK_INDEX_LIBRARY_UPDATED,
+   * SDK_INDEX_LIBRARY_IS_DEPRECATED
    * </pre>
    *
    * <code>optional .android_studio.SdkIndexLibraryDetails sdk_index_library_details = 142 [lazy = true];</code>
