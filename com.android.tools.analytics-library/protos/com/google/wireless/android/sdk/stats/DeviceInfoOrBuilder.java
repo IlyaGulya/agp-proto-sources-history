@@ -334,4 +334,33 @@ public interface DeviceInfoOrBuilder extends
    */
   com.google.protobuf.ByteString
       getCharacteristicsBytes(int index);
+
+  /**
+   * <pre>
+   * ID of device provisioner plugin that created the device
+   * </pre>
+   *
+   * <code>optional string device_provisioner_id = 13;</code>
+   * @return Whether the deviceProvisionerId field is set.
+   */
+  boolean hasDeviceProvisionerId();
+  /**
+   * <pre>
+   * ID of device provisioner plugin that created the device
+   * </pre>
+   *
+   * <code>optional string device_provisioner_id = 13;</code>
+   * @return The deviceProvisionerId.
+   */
+  java.lang.String getDeviceProvisionerId();
+  /**
+   * <pre>
+   * ID of device provisioner plugin that created the device
+   * </pre>
+   *
+   * <code>optional string device_provisioner_id = 13;</code>
+   * @return The bytes for deviceProvisionerId.
+   */
+  com.google.protobuf.ByteString
+      getDeviceProvisionerIdBytes();
 }

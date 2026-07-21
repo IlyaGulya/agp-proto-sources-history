@@ -723,10 +723,6 @@ public enum BooleanOption
    * <code>LINT_USE_K2_UAST = 175;</code>
    */
   LINT_USE_K2_UAST(175),
-  /**
-   * <code>ANDROID_TEST_LEAVE_APKS_INSTALLED_AFTER_RUN = 177;</code>
-   */
-  ANDROID_TEST_LEAVE_APKS_INSTALLED_AFTER_RUN(177),
   UNRECOGNIZED(-1),
   ;
 
@@ -1434,10 +1430,6 @@ public enum BooleanOption
    * <code>LINT_USE_K2_UAST = 175;</code>
    */
   public static final int LINT_USE_K2_UAST_VALUE = 175;
-  /**
-   * <code>ANDROID_TEST_LEAVE_APKS_INSTALLED_AFTER_RUN = 177;</code>
-   */
-  public static final int ANDROID_TEST_LEAVE_APKS_INSTALLED_AFTER_RUN_VALUE = 177;
 
 
   public final int getNumber() {
@@ -1640,7 +1632,6 @@ public enum BooleanOption
       case 173: return ENABLE_VCS_INFO;
       case 174: return LINT_BASELINE_OMIT_LINE_NUMBERS;
       case 175: return LINT_USE_K2_UAST;
-      case 177: return ANDROID_TEST_LEAVE_APKS_INSTALLED_AFTER_RUN;
       default: return null;
     }
   }

@@ -1320,9 +1320,9 @@ public enum GradleTaskExecutionType
    */
   EXPAND_ART_PROFILE_WILDCARDS(325),
   /**
-   * <code>PREVIEW_SCREENSHOT_TEST = 326;</code>
+   * <code>PREVIEW_SCREENSHOT_VALIDATION = 326;</code>
    */
-  PREVIEW_SCREENSHOT_TEST(326),
+  PREVIEW_SCREENSHOT_VALIDATION(326),
   /**
    * <code>ASARS_TO_COMPAT_SPLITS = 327;</code>
    */
@@ -1331,6 +1331,14 @@ public enum GradleTaskExecutionType
    * <code>EXTRACT_PRIVACY_SANDBOX_COMPAT_APKS = 328;</code>
    */
   EXTRACT_PRIVACY_SANDBOX_COMPAT_APKS(328),
+  /**
+   * <code>GENERATE_RUNTIME_ENABLED_SDK_TABLE = 329;</code>
+   */
+  GENERATE_RUNTIME_ENABLED_SDK_TABLE(329),
+  /**
+   * <code>PREVIEW_SCREENSHOT_UPDATE = 330;</code>
+   */
+  PREVIEW_SCREENSHOT_UPDATE(330),
   UNRECOGNIZED(-1),
   ;
 
@@ -2639,9 +2647,9 @@ public enum GradleTaskExecutionType
    */
   public static final int EXPAND_ART_PROFILE_WILDCARDS_VALUE = 325;
   /**
-   * <code>PREVIEW_SCREENSHOT_TEST = 326;</code>
+   * <code>PREVIEW_SCREENSHOT_VALIDATION = 326;</code>
    */
-  public static final int PREVIEW_SCREENSHOT_TEST_VALUE = 326;
+  public static final int PREVIEW_SCREENSHOT_VALIDATION_VALUE = 326;
   /**
    * <code>ASARS_TO_COMPAT_SPLITS = 327;</code>
    */
@@ -2650,6 +2658,14 @@ public enum GradleTaskExecutionType
    * <code>EXTRACT_PRIVACY_SANDBOX_COMPAT_APKS = 328;</code>
    */
   public static final int EXTRACT_PRIVACY_SANDBOX_COMPAT_APKS_VALUE = 328;
+  /**
+   * <code>GENERATE_RUNTIME_ENABLED_SDK_TABLE = 329;</code>
+   */
+  public static final int GENERATE_RUNTIME_ENABLED_SDK_TABLE_VALUE = 329;
+  /**
+   * <code>PREVIEW_SCREENSHOT_UPDATE = 330;</code>
+   */
+  public static final int PREVIEW_SCREENSHOT_UPDATE_VALUE = 330;
 
 
   public final int getNumber() {
@@ -3002,9 +3018,11 @@ public enum GradleTaskExecutionType
       case 323: return VERIFY_LIBRARY_CLASSES;
       case 324: return EXTRACT_VERSION_CONTROL_INFO;
       case 325: return EXPAND_ART_PROFILE_WILDCARDS;
-      case 326: return PREVIEW_SCREENSHOT_TEST;
+      case 326: return PREVIEW_SCREENSHOT_VALIDATION;
       case 327: return ASARS_TO_COMPAT_SPLITS;
       case 328: return EXTRACT_PRIVACY_SANDBOX_COMPAT_APKS;
+      case 329: return GENERATE_RUNTIME_ENABLED_SDK_TABLE;
+      case 330: return PREVIEW_SCREENSHOT_UPDATE;
       default: return null;
     }
   }
