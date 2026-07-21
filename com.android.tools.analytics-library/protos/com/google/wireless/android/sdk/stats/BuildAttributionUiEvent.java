@@ -405,6 +405,10 @@ private static final long serialVersionUID = 0L;
      * <code>TOOL_WINDOW_BALLOON_DONT_SHOW_AGAIN_LINK_CLICKED = 30;</code>
      */
     TOOL_WINDOW_BALLOON_DONT_SHOW_AGAIN_LINK_CLICKED(30),
+    /**
+     * <code>MIGRATE_NON_TRANSITIVE_R_CLASS_ACTION_CLICKED = 31;</code>
+     */
+    MIGRATE_NON_TRANSITIVE_R_CLASS_ACTION_CLICKED(31),
     ;
 
     /**
@@ -609,6 +613,10 @@ private static final long serialVersionUID = 0L;
      * <code>TOOL_WINDOW_BALLOON_DONT_SHOW_AGAIN_LINK_CLICKED = 30;</code>
      */
     public static final int TOOL_WINDOW_BALLOON_DONT_SHOW_AGAIN_LINK_CLICKED_VALUE = 30;
+    /**
+     * <code>MIGRATE_NON_TRANSITIVE_R_CLASS_ACTION_CLICKED = 31;</code>
+     */
+    public static final int MIGRATE_NON_TRANSITIVE_R_CLASS_ACTION_CLICKED_VALUE = 31;
 
 
     public final int getNumber() {
@@ -662,6 +670,7 @@ private static final long serialVersionUID = 0L;
         case 28: return TOOL_WINDOW_BALLOON_SHOWN;
         case 29: return TOOL_WINDOW_BALLOON_DETAILS_LINK_CLICKED;
         case 30: return TOOL_WINDOW_BALLOON_DONT_SHOW_AGAIN_LINK_CLICKED;
+        case 31: return MIGRATE_NON_TRANSITIVE_R_CLASS_ACTION_CLICKED;
         default: return null;
       }
     }
@@ -764,6 +773,18 @@ private static final long serialVersionUID = 0L;
      * <code>DOWNLOADS_INFO = 10;</code>
      */
     DOWNLOADS_INFO(10),
+    /**
+     * <code>RENDERSCRIPT_MIGRATE = 11;</code>
+     */
+    RENDERSCRIPT_MIGRATE(11),
+    /**
+     * <code>AIDL_INFO = 12;</code>
+     */
+    AIDL_INFO(12),
+    /**
+     * <code>NON_TRANSITIVE_R_CLASS = 13;</code>
+     */
+    NON_TRANSITIVE_R_CLASS(13),
     ;
 
     /**
@@ -810,6 +831,18 @@ private static final long serialVersionUID = 0L;
      * <code>DOWNLOADS_INFO = 10;</code>
      */
     public static final int DOWNLOADS_INFO_VALUE = 10;
+    /**
+     * <code>RENDERSCRIPT_MIGRATE = 11;</code>
+     */
+    public static final int RENDERSCRIPT_MIGRATE_VALUE = 11;
+    /**
+     * <code>AIDL_INFO = 12;</code>
+     */
+    public static final int AIDL_INFO_VALUE = 12;
+    /**
+     * <code>NON_TRANSITIVE_R_CLASS = 13;</code>
+     */
+    public static final int NON_TRANSITIVE_R_CLASS_VALUE = 13;
 
 
     public final int getNumber() {
@@ -843,6 +876,9 @@ private static final long serialVersionUID = 0L;
         case 8: return CONFIGURATION_CACHING;
         case 9: return JETIFIER_MIGRATION;
         case 10: return DOWNLOADS_INFO;
+        case 11: return RENDERSCRIPT_MIGRATE;
+        case 12: return AIDL_INFO;
+        case 13: return NON_TRANSITIVE_R_CLASS;
         default: return null;
       }
     }
@@ -1402,6 +1438,14 @@ private static final long serialVersionUID = 0L;
        * <code>TASK_CATEGORY_CRITICAL_PATH_TASK_PAGE = 32;</code>
        */
       TASK_CATEGORY_CRITICAL_PATH_TASK_PAGE(32),
+      /**
+       * <pre>
+       * Task category warning on 'Warnings' page
+       * </pre>
+       *
+       * <code>TASK_CATEGORY_WARNING_ROOT = 33;</code>
+       */
+      TASK_CATEGORY_WARNING_ROOT(33),
       ;
 
       /**
@@ -1556,6 +1600,14 @@ private static final long serialVersionUID = 0L;
        * <code>TASK_CATEGORY_CRITICAL_PATH_TASK_PAGE = 32;</code>
        */
       public static final int TASK_CATEGORY_CRITICAL_PATH_TASK_PAGE_VALUE = 32;
+      /**
+       * <pre>
+       * Task category warning on 'Warnings' page
+       * </pre>
+       *
+       * <code>TASK_CATEGORY_WARNING_ROOT = 33;</code>
+       */
+      public static final int TASK_CATEGORY_WARNING_ROOT_VALUE = 33;
 
 
       public final int getNumber() {
@@ -1611,6 +1663,7 @@ private static final long serialVersionUID = 0L;
           case 30: return TASK_CATEGORY_PAGE;
           case 31: return TASK_CATEGORY_CRITICAL_PATH_TASKS_ROOT;
           case 32: return TASK_CATEGORY_CRITICAL_PATH_TASK_PAGE;
+          case 33: return TASK_CATEGORY_WARNING_ROOT;
           default: return null;
         }
       }

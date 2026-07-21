@@ -337,9 +337,10 @@ private static final long serialVersionUID = 0L;
      */
     SYSTEM_AS_ROOT(20),
     /**
-     * <code>IGNORE_HOST_OPENGL_ERRORS = 21;</code>
+     * <code>DEPRECATED_IGNORE_HOST_OPENGL_ERRORS = 21 [deprecated = true];</code>
      */
-    IGNORE_HOST_OPENGL_ERRORS(21),
+    @java.lang.Deprecated
+    DEPRECATED_IGNORE_HOST_OPENGL_ERRORS(21),
     /**
      * <code>GENERIC_SNAPSHOTS_UI = 22;</code>
      */
@@ -712,9 +713,9 @@ private static final long serialVersionUID = 0L;
      */
     public static final int SYSTEM_AS_ROOT_VALUE = 20;
     /**
-     * <code>IGNORE_HOST_OPENGL_ERRORS = 21;</code>
+     * <code>DEPRECATED_IGNORE_HOST_OPENGL_ERRORS = 21 [deprecated = true];</code>
      */
-    public static final int IGNORE_HOST_OPENGL_ERRORS_VALUE = 21;
+    @java.lang.Deprecated public static final int DEPRECATED_IGNORE_HOST_OPENGL_ERRORS_VALUE = 21;
     /**
      * <code>GENERIC_SNAPSHOTS_UI = 22;</code>
      */
@@ -1038,7 +1039,7 @@ private static final long serialVersionUID = 0L;
         case 18: return SCREEN_RECORDING;
         case 19: return VIRTUAL_SCENE;
         case 20: return SYSTEM_AS_ROOT;
-        case 21: return IGNORE_HOST_OPENGL_ERRORS;
+        case 21: return DEPRECATED_IGNORE_HOST_OPENGL_ERRORS;
         case 22: return GENERIC_SNAPSHOTS_UI;
         case 23: return ALLOW_SNAPSHOT_MIGRATION;
         case 24: return DEPRECATED_GENERIC_INCREMENTAL_SNAPSHOT;
