@@ -8,45 +8,45 @@ public interface EmulatorGpuVkInfoOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>optional uint32 api_version = 1;</code>
+   * <code>optional int32 api_version = 1;</code>
    * @return Whether the apiVersion field is set.
    */
   boolean hasApiVersion();
   /**
-   * <code>optional uint32 api_version = 1;</code>
+   * <code>optional int32 api_version = 1;</code>
    * @return The apiVersion.
    */
   int getApiVersion();
 
   /**
-   * <code>optional uint32 driver_version = 2;</code>
+   * <code>optional int32 driver_version = 2;</code>
    * @return Whether the driverVersion field is set.
    */
   boolean hasDriverVersion();
   /**
-   * <code>optional uint32 driver_version = 2;</code>
+   * <code>optional int32 driver_version = 2;</code>
    * @return The driverVersion.
    */
   int getDriverVersion();
 
   /**
-   * <code>optional uint32 vendor_id = 3;</code>
+   * <code>optional int32 vendor_id = 3;</code>
    * @return Whether the vendorId field is set.
    */
   boolean hasVendorId();
   /**
-   * <code>optional uint32 vendor_id = 3;</code>
+   * <code>optional int32 vendor_id = 3;</code>
    * @return The vendorId.
    */
   int getVendorId();
 
   /**
-   * <code>optional uint32 device_id = 4;</code>
+   * <code>optional int32 device_id = 4;</code>
    * @return Whether the deviceId field is set.
    */
   boolean hasDeviceId();
   /**
-   * <code>optional uint32 device_id = 4;</code>
+   * <code>optional int32 device_id = 4;</code>
    * @return The deviceId.
    */
   int getDeviceId();

@@ -186,7 +186,7 @@ private static final long serialVersionUID = 0L;
   public static final int API_VERSION_FIELD_NUMBER = 1;
   private int apiVersion_ = 0;
   /**
-   * <code>optional uint32 api_version = 1;</code>
+   * <code>optional int32 api_version = 1;</code>
    * @return Whether the apiVersion field is set.
    */
   @java.lang.Override
@@ -194,7 +194,7 @@ private static final long serialVersionUID = 0L;
     return ((bitField0_ & 0x00000001) != 0);
   }
   /**
-   * <code>optional uint32 api_version = 1;</code>
+   * <code>optional int32 api_version = 1;</code>
    * @return The apiVersion.
    */
   @java.lang.Override
@@ -205,7 +205,7 @@ private static final long serialVersionUID = 0L;
   public static final int DRIVER_VERSION_FIELD_NUMBER = 2;
   private int driverVersion_ = 0;
   /**
-   * <code>optional uint32 driver_version = 2;</code>
+   * <code>optional int32 driver_version = 2;</code>
    * @return Whether the driverVersion field is set.
    */
   @java.lang.Override
@@ -213,7 +213,7 @@ private static final long serialVersionUID = 0L;
     return ((bitField0_ & 0x00000002) != 0);
   }
   /**
-   * <code>optional uint32 driver_version = 2;</code>
+   * <code>optional int32 driver_version = 2;</code>
    * @return The driverVersion.
    */
   @java.lang.Override
@@ -224,7 +224,7 @@ private static final long serialVersionUID = 0L;
   public static final int VENDOR_ID_FIELD_NUMBER = 3;
   private int vendorId_ = 0;
   /**
-   * <code>optional uint32 vendor_id = 3;</code>
+   * <code>optional int32 vendor_id = 3;</code>
    * @return Whether the vendorId field is set.
    */
   @java.lang.Override
@@ -232,7 +232,7 @@ private static final long serialVersionUID = 0L;
     return ((bitField0_ & 0x00000004) != 0);
   }
   /**
-   * <code>optional uint32 vendor_id = 3;</code>
+   * <code>optional int32 vendor_id = 3;</code>
    * @return The vendorId.
    */
   @java.lang.Override
@@ -243,7 +243,7 @@ private static final long serialVersionUID = 0L;
   public static final int DEVICE_ID_FIELD_NUMBER = 4;
   private int deviceId_ = 0;
   /**
-   * <code>optional uint32 device_id = 4;</code>
+   * <code>optional int32 device_id = 4;</code>
    * @return Whether the deviceId field is set.
    */
   @java.lang.Override
@@ -251,7 +251,7 @@ private static final long serialVersionUID = 0L;
     return ((bitField0_ & 0x00000008) != 0);
   }
   /**
-   * <code>optional uint32 device_id = 4;</code>
+   * <code>optional int32 device_id = 4;</code>
    * @return The deviceId.
    */
   @java.lang.Override
@@ -425,16 +425,16 @@ private static final long serialVersionUID = 0L;
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
     if (((bitField0_ & 0x00000001) != 0)) {
-      output.writeUInt32(1, apiVersion_);
+      output.writeInt32(1, apiVersion_);
     }
     if (((bitField0_ & 0x00000002) != 0)) {
-      output.writeUInt32(2, driverVersion_);
+      output.writeInt32(2, driverVersion_);
     }
     if (((bitField0_ & 0x00000004) != 0)) {
-      output.writeUInt32(3, vendorId_);
+      output.writeInt32(3, vendorId_);
     }
     if (((bitField0_ & 0x00000008) != 0)) {
-      output.writeUInt32(4, deviceId_);
+      output.writeInt32(4, deviceId_);
     }
     if (((bitField0_ & 0x00000010) != 0)) {
       output.writeEnum(5, deviceType_);
@@ -459,19 +459,19 @@ private static final long serialVersionUID = 0L;
     size = 0;
     if (((bitField0_ & 0x00000001) != 0)) {
       size += com.google.protobuf.CodedOutputStream
-        .computeUInt32Size(1, apiVersion_);
+        .computeInt32Size(1, apiVersion_);
     }
     if (((bitField0_ & 0x00000002) != 0)) {
       size += com.google.protobuf.CodedOutputStream
-        .computeUInt32Size(2, driverVersion_);
+        .computeInt32Size(2, driverVersion_);
     }
     if (((bitField0_ & 0x00000004) != 0)) {
       size += com.google.protobuf.CodedOutputStream
-        .computeUInt32Size(3, vendorId_);
+        .computeInt32Size(3, vendorId_);
     }
     if (((bitField0_ & 0x00000008) != 0)) {
       size += com.google.protobuf.CodedOutputStream
-        .computeUInt32Size(4, deviceId_);
+        .computeInt32Size(4, deviceId_);
     }
     if (((bitField0_ & 0x00000010) != 0)) {
       size += com.google.protobuf.CodedOutputStream
@@ -862,22 +862,22 @@ private static final long serialVersionUID = 0L;
               done = true;
               break;
             case 8: {
-              apiVersion_ = input.readUInt32();
+              apiVersion_ = input.readInt32();
               bitField0_ |= 0x00000001;
               break;
             } // case 8
             case 16: {
-              driverVersion_ = input.readUInt32();
+              driverVersion_ = input.readInt32();
               bitField0_ |= 0x00000002;
               break;
             } // case 16
             case 24: {
-              vendorId_ = input.readUInt32();
+              vendorId_ = input.readInt32();
               bitField0_ |= 0x00000004;
               break;
             } // case 24
             case 32: {
-              deviceId_ = input.readUInt32();
+              deviceId_ = input.readInt32();
               bitField0_ |= 0x00000008;
               break;
             } // case 32
@@ -927,7 +927,7 @@ private static final long serialVersionUID = 0L;
 
     private int apiVersion_ ;
     /**
-     * <code>optional uint32 api_version = 1;</code>
+     * <code>optional int32 api_version = 1;</code>
      * @return Whether the apiVersion field is set.
      */
     @java.lang.Override
@@ -935,7 +935,7 @@ private static final long serialVersionUID = 0L;
       return ((bitField0_ & 0x00000001) != 0);
     }
     /**
-     * <code>optional uint32 api_version = 1;</code>
+     * <code>optional int32 api_version = 1;</code>
      * @return The apiVersion.
      */
     @java.lang.Override
@@ -943,7 +943,7 @@ private static final long serialVersionUID = 0L;
       return apiVersion_;
     }
     /**
-     * <code>optional uint32 api_version = 1;</code>
+     * <code>optional int32 api_version = 1;</code>
      * @param value The apiVersion to set.
      * @return This builder for chaining.
      */
@@ -955,7 +955,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>optional uint32 api_version = 1;</code>
+     * <code>optional int32 api_version = 1;</code>
      * @return This builder for chaining.
      */
     public Builder clearApiVersion() {
@@ -967,7 +967,7 @@ private static final long serialVersionUID = 0L;
 
     private int driverVersion_ ;
     /**
-     * <code>optional uint32 driver_version = 2;</code>
+     * <code>optional int32 driver_version = 2;</code>
      * @return Whether the driverVersion field is set.
      */
     @java.lang.Override
@@ -975,7 +975,7 @@ private static final long serialVersionUID = 0L;
       return ((bitField0_ & 0x00000002) != 0);
     }
     /**
-     * <code>optional uint32 driver_version = 2;</code>
+     * <code>optional int32 driver_version = 2;</code>
      * @return The driverVersion.
      */
     @java.lang.Override
@@ -983,7 +983,7 @@ private static final long serialVersionUID = 0L;
       return driverVersion_;
     }
     /**
-     * <code>optional uint32 driver_version = 2;</code>
+     * <code>optional int32 driver_version = 2;</code>
      * @param value The driverVersion to set.
      * @return This builder for chaining.
      */
@@ -995,7 +995,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>optional uint32 driver_version = 2;</code>
+     * <code>optional int32 driver_version = 2;</code>
      * @return This builder for chaining.
      */
     public Builder clearDriverVersion() {
@@ -1007,7 +1007,7 @@ private static final long serialVersionUID = 0L;
 
     private int vendorId_ ;
     /**
-     * <code>optional uint32 vendor_id = 3;</code>
+     * <code>optional int32 vendor_id = 3;</code>
      * @return Whether the vendorId field is set.
      */
     @java.lang.Override
@@ -1015,7 +1015,7 @@ private static final long serialVersionUID = 0L;
       return ((bitField0_ & 0x00000004) != 0);
     }
     /**
-     * <code>optional uint32 vendor_id = 3;</code>
+     * <code>optional int32 vendor_id = 3;</code>
      * @return The vendorId.
      */
     @java.lang.Override
@@ -1023,7 +1023,7 @@ private static final long serialVersionUID = 0L;
       return vendorId_;
     }
     /**
-     * <code>optional uint32 vendor_id = 3;</code>
+     * <code>optional int32 vendor_id = 3;</code>
      * @param value The vendorId to set.
      * @return This builder for chaining.
      */
@@ -1035,7 +1035,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>optional uint32 vendor_id = 3;</code>
+     * <code>optional int32 vendor_id = 3;</code>
      * @return This builder for chaining.
      */
     public Builder clearVendorId() {
@@ -1047,7 +1047,7 @@ private static final long serialVersionUID = 0L;
 
     private int deviceId_ ;
     /**
-     * <code>optional uint32 device_id = 4;</code>
+     * <code>optional int32 device_id = 4;</code>
      * @return Whether the deviceId field is set.
      */
     @java.lang.Override
@@ -1055,7 +1055,7 @@ private static final long serialVersionUID = 0L;
       return ((bitField0_ & 0x00000008) != 0);
     }
     /**
-     * <code>optional uint32 device_id = 4;</code>
+     * <code>optional int32 device_id = 4;</code>
      * @return The deviceId.
      */
     @java.lang.Override
@@ -1063,7 +1063,7 @@ private static final long serialVersionUID = 0L;
       return deviceId_;
     }
     /**
-     * <code>optional uint32 device_id = 4;</code>
+     * <code>optional int32 device_id = 4;</code>
      * @param value The deviceId to set.
      * @return This builder for chaining.
      */
@@ -1075,7 +1075,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>optional uint32 device_id = 4;</code>
+     * <code>optional int32 device_id = 4;</code>
      * @return This builder for chaining.
      */
     public Builder clearDeviceId() {
