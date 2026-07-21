@@ -2206,6 +2206,19 @@ private static final long serialVersionUID = 0L;
             bitField5_ |= 0x00000008;
             break;
           }
+          case 1370: {
+            com.google.wireless.android.sdk.stats.KotlinSupportDeclined.Builder subBuilder = null;
+            if (((bitField5_ & 0x00000010) != 0)) {
+              subBuilder = kotlinSupportDeclined_.toBuilder();
+            }
+            kotlinSupportDeclined_ = input.readMessage(com.google.wireless.android.sdk.stats.KotlinSupportDeclined.PARSER, extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(kotlinSupportDeclined_);
+              kotlinSupportDeclined_ = subBuilder.buildPartial();
+            }
+            bitField5_ |= 0x00000010;
+            break;
+          }
           default: {
             if (!parseUnknownField(
                 input, unknownFields, extensionRegistry, tag)) {
@@ -4992,6 +5005,14 @@ private static final long serialVersionUID = 0L;
      * <code>SML_CONFIGURATION_EVENT = 284;</code>
      */
     SML_CONFIGURATION_EVENT(284),
+    /**
+     * <pre>
+     * Event raised when user declines kotlin support for a project
+     * </pre>
+     *
+     * <code>KOTLIN_SUPPORT_DECLINED_EVENT = 285;</code>
+     */
+    KOTLIN_SUPPORT_DECLINED_EVENT(285),
     ;
 
     /**
@@ -7100,6 +7121,14 @@ private static final long serialVersionUID = 0L;
      * <code>SML_CONFIGURATION_EVENT = 284;</code>
      */
     public static final int SML_CONFIGURATION_EVENT_VALUE = 284;
+    /**
+     * <pre>
+     * Event raised when user declines kotlin support for a project
+     * </pre>
+     *
+     * <code>KOTLIN_SUPPORT_DECLINED_EVENT = 285;</code>
+     */
+    public static final int KOTLIN_SUPPORT_DECLINED_EVENT_VALUE = 285;
 
 
     public final int getNumber() {
@@ -7402,6 +7431,7 @@ private static final long serialVersionUID = 0L;
         case 282: return SML_CODE_TRANSFORMATION_EVENT;
         case 283: return SML_CHATBOT_EVENT;
         case 284: return SML_CONFIGURATION_EVENT;
+        case 285: return KOTLIN_SUPPORT_DECLINED_EVENT;
         default: return null;
       }
     }
@@ -22759,6 +22789,44 @@ private static final long serialVersionUID = 0L;
     return smlConfigurationEvent_ == null ? com.google.wireless.android.sdk.stats.SmlConfigurationEvent.getDefaultInstance() : smlConfigurationEvent_;
   }
 
+  public static final int KOTLIN_SUPPORT_DECLINED_FIELD_NUMBER = 171;
+  private com.google.wireless.android.sdk.stats.KotlinSupportDeclined kotlinSupportDeclined_;
+  /**
+   * <pre>
+   * set when kind = KOTLIN_SUPPORT_DECLINED
+   * </pre>
+   *
+   * <code>optional .android_studio.KotlinSupportDeclined kotlin_support_declined = 171;</code>
+   * @return Whether the kotlinSupportDeclined field is set.
+   */
+  @java.lang.Override
+  public boolean hasKotlinSupportDeclined() {
+    return ((bitField5_ & 0x00000010) != 0);
+  }
+  /**
+   * <pre>
+   * set when kind = KOTLIN_SUPPORT_DECLINED
+   * </pre>
+   *
+   * <code>optional .android_studio.KotlinSupportDeclined kotlin_support_declined = 171;</code>
+   * @return The kotlinSupportDeclined.
+   */
+  @java.lang.Override
+  public com.google.wireless.android.sdk.stats.KotlinSupportDeclined getKotlinSupportDeclined() {
+    return kotlinSupportDeclined_ == null ? com.google.wireless.android.sdk.stats.KotlinSupportDeclined.getDefaultInstance() : kotlinSupportDeclined_;
+  }
+  /**
+   * <pre>
+   * set when kind = KOTLIN_SUPPORT_DECLINED
+   * </pre>
+   *
+   * <code>optional .android_studio.KotlinSupportDeclined kotlin_support_declined = 171;</code>
+   */
+  @java.lang.Override
+  public com.google.wireless.android.sdk.stats.KotlinSupportDeclinedOrBuilder getKotlinSupportDeclinedOrBuilder() {
+    return kotlinSupportDeclined_ == null ? com.google.wireless.android.sdk.stats.KotlinSupportDeclined.getDefaultInstance() : kotlinSupportDeclined_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -23282,6 +23350,9 @@ private static final long serialVersionUID = 0L;
     }
     if (((bitField5_ & 0x00000008) != 0)) {
       output.writeMessage(170, getSmlConfigurationEvent());
+    }
+    if (((bitField5_ & 0x00000010) != 0)) {
+      output.writeMessage(171, getKotlinSupportDeclined());
     }
     unknownFields.writeTo(output);
   }
@@ -23977,6 +24048,10 @@ private static final long serialVersionUID = 0L;
     if (((bitField5_ & 0x00000008) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(170, getSmlConfigurationEvent());
+    }
+    if (((bitField5_ & 0x00000010) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(171, getKotlinSupportDeclined());
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -24814,6 +24889,11 @@ private static final long serialVersionUID = 0L;
       if (!getSmlConfigurationEvent()
           .equals(other.getSmlConfigurationEvent())) return false;
     }
+    if (hasKotlinSupportDeclined() != other.hasKotlinSupportDeclined()) return false;
+    if (hasKotlinSupportDeclined()) {
+      if (!getKotlinSupportDeclined()
+          .equals(other.getKotlinSupportDeclined())) return false;
+    }
     if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
@@ -25507,6 +25587,10 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + SML_CONFIGURATION_EVENT_FIELD_NUMBER;
       hash = (53 * hash) + getSmlConfigurationEvent().hashCode();
     }
+    if (hasKotlinSupportDeclined()) {
+      hash = (37 * hash) + KOTLIN_SUPPORT_DECLINED_FIELD_NUMBER;
+      hash = (53 * hash) + getKotlinSupportDeclined().hashCode();
+    }
     hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -25782,6 +25866,7 @@ private static final long serialVersionUID = 0L;
         getSmlTransformEventFieldBuilder();
         getSmlChatBotEventFieldBuilder();
         getSmlConfigurationEventFieldBuilder();
+        getKotlinSupportDeclinedFieldBuilder();
       }
     }
     @java.lang.Override
@@ -26715,6 +26800,12 @@ private static final long serialVersionUID = 0L;
         smlConfigurationEventBuilder_.clear();
       }
       bitField5_ = (bitField5_ & ~0x00000200);
+      if (kotlinSupportDeclinedBuilder_ == null) {
+        kotlinSupportDeclined_ = null;
+      } else {
+        kotlinSupportDeclinedBuilder_.clear();
+      }
+      bitField5_ = (bitField5_ & ~0x00000400);
       return this;
     }
 
@@ -28027,6 +28118,14 @@ private static final long serialVersionUID = 0L;
         }
         to_bitField5_ |= 0x00000008;
       }
+      if (((from_bitField5_ & 0x00000400) != 0)) {
+        if (kotlinSupportDeclinedBuilder_ == null) {
+          result.kotlinSupportDeclined_ = kotlinSupportDeclined_;
+        } else {
+          result.kotlinSupportDeclined_ = kotlinSupportDeclinedBuilder_.build();
+        }
+        to_bitField5_ |= 0x00000010;
+      }
       result.bitField0_ = to_bitField0_;
       result.bitField1_ = to_bitField1_;
       result.bitField2_ = to_bitField2_;
@@ -28694,6 +28793,9 @@ private static final long serialVersionUID = 0L;
       }
       if (other.hasSmlConfigurationEvent()) {
         mergeSmlConfigurationEvent(other.getSmlConfigurationEvent());
+      }
+      if (other.hasKotlinSupportDeclined()) {
+        mergeKotlinSupportDeclined(other.getKotlinSupportDeclined());
       }
       this.mergeUnknownFields(other.unknownFields);
       onChanged();
@@ -54529,6 +54631,162 @@ private static final long serialVersionUID = 0L;
         smlConfigurationEvent_ = null;
       }
       return smlConfigurationEventBuilder_;
+    }
+
+    private com.google.wireless.android.sdk.stats.KotlinSupportDeclined kotlinSupportDeclined_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.KotlinSupportDeclined, com.google.wireless.android.sdk.stats.KotlinSupportDeclined.Builder, com.google.wireless.android.sdk.stats.KotlinSupportDeclinedOrBuilder> kotlinSupportDeclinedBuilder_;
+    /**
+     * <pre>
+     * set when kind = KOTLIN_SUPPORT_DECLINED
+     * </pre>
+     *
+     * <code>optional .android_studio.KotlinSupportDeclined kotlin_support_declined = 171;</code>
+     * @return Whether the kotlinSupportDeclined field is set.
+     */
+    public boolean hasKotlinSupportDeclined() {
+      return ((bitField5_ & 0x00000400) != 0);
+    }
+    /**
+     * <pre>
+     * set when kind = KOTLIN_SUPPORT_DECLINED
+     * </pre>
+     *
+     * <code>optional .android_studio.KotlinSupportDeclined kotlin_support_declined = 171;</code>
+     * @return The kotlinSupportDeclined.
+     */
+    public com.google.wireless.android.sdk.stats.KotlinSupportDeclined getKotlinSupportDeclined() {
+      if (kotlinSupportDeclinedBuilder_ == null) {
+        return kotlinSupportDeclined_ == null ? com.google.wireless.android.sdk.stats.KotlinSupportDeclined.getDefaultInstance() : kotlinSupportDeclined_;
+      } else {
+        return kotlinSupportDeclinedBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * set when kind = KOTLIN_SUPPORT_DECLINED
+     * </pre>
+     *
+     * <code>optional .android_studio.KotlinSupportDeclined kotlin_support_declined = 171;</code>
+     */
+    public Builder setKotlinSupportDeclined(com.google.wireless.android.sdk.stats.KotlinSupportDeclined value) {
+      if (kotlinSupportDeclinedBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        kotlinSupportDeclined_ = value;
+        onChanged();
+      } else {
+        kotlinSupportDeclinedBuilder_.setMessage(value);
+      }
+      bitField5_ |= 0x00000400;
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = KOTLIN_SUPPORT_DECLINED
+     * </pre>
+     *
+     * <code>optional .android_studio.KotlinSupportDeclined kotlin_support_declined = 171;</code>
+     */
+    public Builder setKotlinSupportDeclined(
+        com.google.wireless.android.sdk.stats.KotlinSupportDeclined.Builder builderForValue) {
+      if (kotlinSupportDeclinedBuilder_ == null) {
+        kotlinSupportDeclined_ = builderForValue.build();
+        onChanged();
+      } else {
+        kotlinSupportDeclinedBuilder_.setMessage(builderForValue.build());
+      }
+      bitField5_ |= 0x00000400;
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = KOTLIN_SUPPORT_DECLINED
+     * </pre>
+     *
+     * <code>optional .android_studio.KotlinSupportDeclined kotlin_support_declined = 171;</code>
+     */
+    public Builder mergeKotlinSupportDeclined(com.google.wireless.android.sdk.stats.KotlinSupportDeclined value) {
+      if (kotlinSupportDeclinedBuilder_ == null) {
+        if (((bitField5_ & 0x00000400) != 0) &&
+            kotlinSupportDeclined_ != null &&
+            kotlinSupportDeclined_ != com.google.wireless.android.sdk.stats.KotlinSupportDeclined.getDefaultInstance()) {
+          kotlinSupportDeclined_ =
+            com.google.wireless.android.sdk.stats.KotlinSupportDeclined.newBuilder(kotlinSupportDeclined_).mergeFrom(value).buildPartial();
+        } else {
+          kotlinSupportDeclined_ = value;
+        }
+        onChanged();
+      } else {
+        kotlinSupportDeclinedBuilder_.mergeFrom(value);
+      }
+      bitField5_ |= 0x00000400;
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = KOTLIN_SUPPORT_DECLINED
+     * </pre>
+     *
+     * <code>optional .android_studio.KotlinSupportDeclined kotlin_support_declined = 171;</code>
+     */
+    public Builder clearKotlinSupportDeclined() {
+      if (kotlinSupportDeclinedBuilder_ == null) {
+        kotlinSupportDeclined_ = null;
+        onChanged();
+      } else {
+        kotlinSupportDeclinedBuilder_.clear();
+      }
+      bitField5_ = (bitField5_ & ~0x00000400);
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = KOTLIN_SUPPORT_DECLINED
+     * </pre>
+     *
+     * <code>optional .android_studio.KotlinSupportDeclined kotlin_support_declined = 171;</code>
+     */
+    public com.google.wireless.android.sdk.stats.KotlinSupportDeclined.Builder getKotlinSupportDeclinedBuilder() {
+      bitField5_ |= 0x00000400;
+      onChanged();
+      return getKotlinSupportDeclinedFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * set when kind = KOTLIN_SUPPORT_DECLINED
+     * </pre>
+     *
+     * <code>optional .android_studio.KotlinSupportDeclined kotlin_support_declined = 171;</code>
+     */
+    public com.google.wireless.android.sdk.stats.KotlinSupportDeclinedOrBuilder getKotlinSupportDeclinedOrBuilder() {
+      if (kotlinSupportDeclinedBuilder_ != null) {
+        return kotlinSupportDeclinedBuilder_.getMessageOrBuilder();
+      } else {
+        return kotlinSupportDeclined_ == null ?
+            com.google.wireless.android.sdk.stats.KotlinSupportDeclined.getDefaultInstance() : kotlinSupportDeclined_;
+      }
+    }
+    /**
+     * <pre>
+     * set when kind = KOTLIN_SUPPORT_DECLINED
+     * </pre>
+     *
+     * <code>optional .android_studio.KotlinSupportDeclined kotlin_support_declined = 171;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.KotlinSupportDeclined, com.google.wireless.android.sdk.stats.KotlinSupportDeclined.Builder, com.google.wireless.android.sdk.stats.KotlinSupportDeclinedOrBuilder> 
+        getKotlinSupportDeclinedFieldBuilder() {
+      if (kotlinSupportDeclinedBuilder_ == null) {
+        kotlinSupportDeclinedBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.wireless.android.sdk.stats.KotlinSupportDeclined, com.google.wireless.android.sdk.stats.KotlinSupportDeclined.Builder, com.google.wireless.android.sdk.stats.KotlinSupportDeclinedOrBuilder>(
+                getKotlinSupportDeclined(),
+                getParentForChildren(),
+                isClean());
+        kotlinSupportDeclined_ = null;
+      }
+      return kotlinSupportDeclinedBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

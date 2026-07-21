@@ -243,6 +243,14 @@ private static final long serialVersionUID = 0L;
      * <code>SELECT_REPOSITORY_ROW = 3;</code>
      */
     SELECT_REPOSITORY_ROW(3),
+    /**
+     * <code>NOTIFICATION_TRIGGERED = 4;</code>
+     */
+    NOTIFICATION_TRIGGERED(4),
+    /**
+     * <code>NOTIFICATION_LINK_CLICK = 5;</code>
+     */
+    NOTIFICATION_LINK_CLICK(5),
     ;
 
     /**
@@ -261,6 +269,14 @@ private static final long serialVersionUID = 0L;
      * <code>SELECT_REPOSITORY_ROW = 3;</code>
      */
     public static final int SELECT_REPOSITORY_ROW_VALUE = 3;
+    /**
+     * <code>NOTIFICATION_TRIGGERED = 4;</code>
+     */
+    public static final int NOTIFICATION_TRIGGERED_VALUE = 4;
+    /**
+     * <code>NOTIFICATION_LINK_CLICK = 5;</code>
+     */
+    public static final int NOTIFICATION_LINK_CLICK_VALUE = 5;
 
 
     public final int getNumber() {
@@ -287,6 +303,8 @@ private static final long serialVersionUID = 0L;
         case 1: return OPEN_DOWNLOADS_INFO_UI;
         case 2: return CLICK_LEARN_MORE_LINK;
         case 3: return SELECT_REPOSITORY_ROW;
+        case 4: return NOTIFICATION_TRIGGERED;
+        case 5: return NOTIFICATION_LINK_CLICK;
         default: return null;
       }
     }
