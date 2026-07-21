@@ -3508,6 +3508,10 @@ private static final long serialVersionUID = 0L;
      * <code>GRADLE_JVM_INCOMPATIBLE_DIALOG_CANCEL = 373;</code>
      */
     GRADLE_JVM_INCOMPATIBLE_DIALOG_CANCEL(373),
+    /**
+     * <code>ANDROID_CLI_INVOCATION = 374;</code>
+     */
+    ANDROID_CLI_INVOCATION(374),
     ;
 
     /**
@@ -6307,6 +6311,10 @@ private static final long serialVersionUID = 0L;
      * <code>GRADLE_JVM_INCOMPATIBLE_DIALOG_CANCEL = 373;</code>
      */
     public static final int GRADLE_JVM_INCOMPATIBLE_DIALOG_CANCEL_VALUE = 373;
+    /**
+     * <code>ANDROID_CLI_INVOCATION = 374;</code>
+     */
+    public static final int ANDROID_CLI_INVOCATION_VALUE = 374;
 
 
     public final int getNumber() {
@@ -6698,6 +6706,7 @@ private static final long serialVersionUID = 0L;
         case 371: return GRADLE_JVM_INCOMPATIBLE_DIALOG_APPLY_COMPATIBLE_JVM;
         case 372: return GRADLE_JVM_INCOMPATIBLE_DIALOG_OPEN_SETTINGS;
         case 373: return GRADLE_JVM_INCOMPATIBLE_DIALOG_CANCEL;
+        case 374: return ANDROID_CLI_INVOCATION;
         default: return null;
       }
     }
@@ -8977,6 +8986,14 @@ private static final long serialVersionUID = 0L;
      * <code>SHERLOCK = 9;</code>
      */
     SHERLOCK(9),
+    /**
+     * <pre>
+     * Android CLI
+     * </pre>
+     *
+     * <code>ANDROID_CLI = 10;</code>
+     */
+    ANDROID_CLI(10),
     ;
 
     /**
@@ -9035,6 +9052,14 @@ private static final long serialVersionUID = 0L;
      * <code>SHERLOCK = 9;</code>
      */
     public static final int SHERLOCK_VALUE = 9;
+    /**
+     * <pre>
+     * Android CLI
+     * </pre>
+     *
+     * <code>ANDROID_CLI = 10;</code>
+     */
+    public static final int ANDROID_CLI_VALUE = 10;
 
 
     public final int getNumber() {
@@ -9067,6 +9092,7 @@ private static final long serialVersionUID = 0L;
         case 7: return ANDROID_STUDIO_FOR_PLATFORM;
         case 8: return ANDROID_STUDIO_FOR_PLATFORM_INTERNAL;
         case 9: return SHERLOCK;
+        case 10: return ANDROID_CLI;
         default: return null;
       }
     }
@@ -13646,7 +13672,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional uint32 min_sdk = 2 [deprecated = true];</code>
        * @deprecated android_studio.AndroidStudioEvent.TemplatesUsage.TemplateModule.min_sdk is deprecated.
-       *     See studio_stats.proto;l=2175
+       *     See studio_stats.proto;l=2180
        * @return Whether the minSdk field is set.
        */
       @java.lang.Deprecated boolean hasMinSdk();
@@ -13657,7 +13683,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional uint32 min_sdk = 2 [deprecated = true];</code>
        * @deprecated android_studio.AndroidStudioEvent.TemplatesUsage.TemplateModule.min_sdk is deprecated.
-       *     See studio_stats.proto;l=2175
+       *     See studio_stats.proto;l=2180
        * @return The minSdk.
        */
       @java.lang.Deprecated int getMinSdk();
@@ -14188,7 +14214,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional uint32 min_sdk = 2 [deprecated = true];</code>
        * @deprecated android_studio.AndroidStudioEvent.TemplatesUsage.TemplateModule.min_sdk is deprecated.
-       *     See studio_stats.proto;l=2175
+       *     See studio_stats.proto;l=2180
        * @return Whether the minSdk field is set.
        */
       @java.lang.Override
@@ -14202,7 +14228,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional uint32 min_sdk = 2 [deprecated = true];</code>
        * @deprecated android_studio.AndroidStudioEvent.TemplatesUsage.TemplateModule.min_sdk is deprecated.
-       *     See studio_stats.proto;l=2175
+       *     See studio_stats.proto;l=2180
        * @return The minSdk.
        */
       @java.lang.Override
@@ -14840,7 +14866,7 @@ private static final long serialVersionUID = 0L;
          *
          * <code>optional uint32 min_sdk = 2 [deprecated = true];</code>
          * @deprecated android_studio.AndroidStudioEvent.TemplatesUsage.TemplateModule.min_sdk is deprecated.
-         *     See studio_stats.proto;l=2175
+         *     See studio_stats.proto;l=2180
          * @return Whether the minSdk field is set.
          */
         @java.lang.Override
@@ -14854,7 +14880,7 @@ private static final long serialVersionUID = 0L;
          *
          * <code>optional uint32 min_sdk = 2 [deprecated = true];</code>
          * @deprecated android_studio.AndroidStudioEvent.TemplatesUsage.TemplateModule.min_sdk is deprecated.
-         *     See studio_stats.proto;l=2175
+         *     See studio_stats.proto;l=2180
          * @return The minSdk.
          */
         @java.lang.Override
@@ -14868,7 +14894,7 @@ private static final long serialVersionUID = 0L;
          *
          * <code>optional uint32 min_sdk = 2 [deprecated = true];</code>
          * @deprecated android_studio.AndroidStudioEvent.TemplatesUsage.TemplateModule.min_sdk is deprecated.
-         *     See studio_stats.proto;l=2175
+         *     See studio_stats.proto;l=2180
          * @param value The minSdk to set.
          * @return This builder for chaining.
          */
@@ -14886,7 +14912,7 @@ private static final long serialVersionUID = 0L;
          *
          * <code>optional uint32 min_sdk = 2 [deprecated = true];</code>
          * @deprecated android_studio.AndroidStudioEvent.TemplatesUsage.TemplateModule.min_sdk is deprecated.
-         *     See studio_stats.proto;l=2175
+         *     See studio_stats.proto;l=2180
          * @return This builder for chaining.
          */
         @java.lang.Deprecated public Builder clearMinSdk() {
@@ -27113,6 +27139,44 @@ private static final long serialVersionUID = 0L;
     return emulatorWindowsHypervisorMigrationEvent_ == null ? com.google.wireless.android.sdk.stats.EmulatorWindowsHypervisorMigrationEvent.getDefaultInstance() : emulatorWindowsHypervisorMigrationEvent_;
   }
 
+  public static final int ANDROID_CLI_INVOCATION_FIELD_NUMBER = 251;
+  private com.google.wireless.android.sdk.stats.AndroidCliInvocation androidCliInvocation_;
+  /**
+   * <pre>
+   * set when kind = ANDROID_CLI_INVOCATION
+   * </pre>
+   *
+   * <code>optional .android_studio.AndroidCliInvocation android_cli_invocation = 251 [lazy = true];</code>
+   * @return Whether the androidCliInvocation field is set.
+   */
+  @java.lang.Override
+  public boolean hasAndroidCliInvocation() {
+    return ((bitField7_ & 0x00080000) != 0);
+  }
+  /**
+   * <pre>
+   * set when kind = ANDROID_CLI_INVOCATION
+   * </pre>
+   *
+   * <code>optional .android_studio.AndroidCliInvocation android_cli_invocation = 251 [lazy = true];</code>
+   * @return The androidCliInvocation.
+   */
+  @java.lang.Override
+  public com.google.wireless.android.sdk.stats.AndroidCliInvocation getAndroidCliInvocation() {
+    return androidCliInvocation_ == null ? com.google.wireless.android.sdk.stats.AndroidCliInvocation.getDefaultInstance() : androidCliInvocation_;
+  }
+  /**
+   * <pre>
+   * set when kind = ANDROID_CLI_INVOCATION
+   * </pre>
+   *
+   * <code>optional .android_studio.AndroidCliInvocation android_cli_invocation = 251 [lazy = true];</code>
+   */
+  @java.lang.Override
+  public com.google.wireless.android.sdk.stats.AndroidCliInvocationOrBuilder getAndroidCliInvocationOrBuilder() {
+    return androidCliInvocation_ == null ? com.google.wireless.android.sdk.stats.AndroidCliInvocation.getDefaultInstance() : androidCliInvocation_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -27876,6 +27940,9 @@ private static final long serialVersionUID = 0L;
     }
     if (((bitField7_ & 0x00040000) != 0)) {
       output.writeMessage(250, getEmulatorWindowsHypervisorMigrationEvent());
+    }
+    if (((bitField7_ & 0x00080000) != 0)) {
+      output.writeMessage(251, getAndroidCliInvocation());
     }
     getUnknownFields().writeTo(output);
   }
@@ -28891,6 +28958,10 @@ private static final long serialVersionUID = 0L;
     if (((bitField7_ & 0x00040000) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(250, getEmulatorWindowsHypervisorMigrationEvent());
+    }
+    if (((bitField7_ & 0x00080000) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(251, getAndroidCliInvocation());
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -30125,6 +30196,11 @@ private static final long serialVersionUID = 0L;
       if (!getEmulatorWindowsHypervisorMigrationEvent()
           .equals(other.getEmulatorWindowsHypervisorMigrationEvent())) return false;
     }
+    if (hasAndroidCliInvocation() != other.hasAndroidCliInvocation()) return false;
+    if (hasAndroidCliInvocation()) {
+      if (!getAndroidCliInvocation()
+          .equals(other.getAndroidCliInvocation())) return false;
+    }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -31138,6 +31214,10 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + EMULATOR_WINDOWS_HYPERVISOR_MIGRATION_EVENT_FIELD_NUMBER;
       hash = (53 * hash) + getEmulatorWindowsHypervisorMigrationEvent().hashCode();
     }
+    if (hasAndroidCliInvocation()) {
+      hash = (37 * hash) + ANDROID_CLI_INVOCATION_FIELD_NUMBER;
+      hash = (53 * hash) + getAndroidCliInvocation().hashCode();
+    }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -31493,6 +31573,7 @@ private static final long serialVersionUID = 0L;
         getStudioBotToolWindowAutoOpenEventFieldBuilder();
         getSkillsEventFieldBuilder();
         getEmulatorWindowsHypervisorMigrationEventFieldBuilder();
+        getAndroidCliInvocationFieldBuilder();
       }
     }
     @java.lang.Override
@@ -32674,6 +32755,11 @@ private static final long serialVersionUID = 0L;
       if (emulatorWindowsHypervisorMigrationEventBuilder_ != null) {
         emulatorWindowsHypervisorMigrationEventBuilder_.dispose();
         emulatorWindowsHypervisorMigrationEventBuilder_ = null;
+      }
+      androidCliInvocation_ = null;
+      if (androidCliInvocationBuilder_ != null) {
+        androidCliInvocationBuilder_.dispose();
+        androidCliInvocationBuilder_ = null;
       }
       return this;
     }
@@ -34238,6 +34324,12 @@ private static final long serialVersionUID = 0L;
             : emulatorWindowsHypervisorMigrationEventBuilder_.build();
         to_bitField7_ |= 0x00040000;
       }
+      if (((from_bitField7_ & 0x04000000) != 0)) {
+        result.androidCliInvocation_ = androidCliInvocationBuilder_ == null
+            ? androidCliInvocation_
+            : androidCliInvocationBuilder_.build();
+        to_bitField7_ |= 0x00080000;
+      }
       result.bitField6_ |= to_bitField6_;
       result.bitField7_ |= to_bitField7_;
     }
@@ -35130,6 +35222,9 @@ private static final long serialVersionUID = 0L;
       }
       if (other.hasEmulatorWindowsHypervisorMigrationEvent()) {
         mergeEmulatorWindowsHypervisorMigrationEvent(other.getEmulatorWindowsHypervisorMigrationEvent());
+      }
+      if (other.hasAndroidCliInvocation()) {
+        mergeAndroidCliInvocation(other.getAndroidCliInvocation());
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -36981,6 +37076,13 @@ private static final long serialVersionUID = 0L;
               bitField7_ |= 0x02000000;
               break;
             } // case 2002
+            case 2010: {
+              input.readMessage(
+                  getAndroidCliInvocationFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField7_ |= 0x04000000;
+              break;
+            } // case 2010
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -75248,6 +75350,161 @@ private static final long serialVersionUID = 0L;
         emulatorWindowsHypervisorMigrationEvent_ = null;
       }
       return emulatorWindowsHypervisorMigrationEventBuilder_;
+    }
+
+    private com.google.wireless.android.sdk.stats.AndroidCliInvocation androidCliInvocation_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.AndroidCliInvocation, com.google.wireless.android.sdk.stats.AndroidCliInvocation.Builder, com.google.wireless.android.sdk.stats.AndroidCliInvocationOrBuilder> androidCliInvocationBuilder_;
+    /**
+     * <pre>
+     * set when kind = ANDROID_CLI_INVOCATION
+     * </pre>
+     *
+     * <code>optional .android_studio.AndroidCliInvocation android_cli_invocation = 251 [lazy = true];</code>
+     * @return Whether the androidCliInvocation field is set.
+     */
+    public boolean hasAndroidCliInvocation() {
+      return ((bitField7_ & 0x04000000) != 0);
+    }
+    /**
+     * <pre>
+     * set when kind = ANDROID_CLI_INVOCATION
+     * </pre>
+     *
+     * <code>optional .android_studio.AndroidCliInvocation android_cli_invocation = 251 [lazy = true];</code>
+     * @return The androidCliInvocation.
+     */
+    public com.google.wireless.android.sdk.stats.AndroidCliInvocation getAndroidCliInvocation() {
+      if (androidCliInvocationBuilder_ == null) {
+        return androidCliInvocation_ == null ? com.google.wireless.android.sdk.stats.AndroidCliInvocation.getDefaultInstance() : androidCliInvocation_;
+      } else {
+        return androidCliInvocationBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * set when kind = ANDROID_CLI_INVOCATION
+     * </pre>
+     *
+     * <code>optional .android_studio.AndroidCliInvocation android_cli_invocation = 251 [lazy = true];</code>
+     */
+    public Builder setAndroidCliInvocation(com.google.wireless.android.sdk.stats.AndroidCliInvocation value) {
+      if (androidCliInvocationBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        androidCliInvocation_ = value;
+      } else {
+        androidCliInvocationBuilder_.setMessage(value);
+      }
+      bitField7_ |= 0x04000000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = ANDROID_CLI_INVOCATION
+     * </pre>
+     *
+     * <code>optional .android_studio.AndroidCliInvocation android_cli_invocation = 251 [lazy = true];</code>
+     */
+    public Builder setAndroidCliInvocation(
+        com.google.wireless.android.sdk.stats.AndroidCliInvocation.Builder builderForValue) {
+      if (androidCliInvocationBuilder_ == null) {
+        androidCliInvocation_ = builderForValue.build();
+      } else {
+        androidCliInvocationBuilder_.setMessage(builderForValue.build());
+      }
+      bitField7_ |= 0x04000000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = ANDROID_CLI_INVOCATION
+     * </pre>
+     *
+     * <code>optional .android_studio.AndroidCliInvocation android_cli_invocation = 251 [lazy = true];</code>
+     */
+    public Builder mergeAndroidCliInvocation(com.google.wireless.android.sdk.stats.AndroidCliInvocation value) {
+      if (androidCliInvocationBuilder_ == null) {
+        if (((bitField7_ & 0x04000000) != 0) &&
+          androidCliInvocation_ != null &&
+          androidCliInvocation_ != com.google.wireless.android.sdk.stats.AndroidCliInvocation.getDefaultInstance()) {
+          getAndroidCliInvocationBuilder().mergeFrom(value);
+        } else {
+          androidCliInvocation_ = value;
+        }
+      } else {
+        androidCliInvocationBuilder_.mergeFrom(value);
+      }
+      bitField7_ |= 0x04000000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = ANDROID_CLI_INVOCATION
+     * </pre>
+     *
+     * <code>optional .android_studio.AndroidCliInvocation android_cli_invocation = 251 [lazy = true];</code>
+     */
+    public Builder clearAndroidCliInvocation() {
+      bitField7_ = (bitField7_ & ~0x04000000);
+      androidCliInvocation_ = null;
+      if (androidCliInvocationBuilder_ != null) {
+        androidCliInvocationBuilder_.dispose();
+        androidCliInvocationBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = ANDROID_CLI_INVOCATION
+     * </pre>
+     *
+     * <code>optional .android_studio.AndroidCliInvocation android_cli_invocation = 251 [lazy = true];</code>
+     */
+    public com.google.wireless.android.sdk.stats.AndroidCliInvocation.Builder getAndroidCliInvocationBuilder() {
+      bitField7_ |= 0x04000000;
+      onChanged();
+      return getAndroidCliInvocationFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * set when kind = ANDROID_CLI_INVOCATION
+     * </pre>
+     *
+     * <code>optional .android_studio.AndroidCliInvocation android_cli_invocation = 251 [lazy = true];</code>
+     */
+    public com.google.wireless.android.sdk.stats.AndroidCliInvocationOrBuilder getAndroidCliInvocationOrBuilder() {
+      if (androidCliInvocationBuilder_ != null) {
+        return androidCliInvocationBuilder_.getMessageOrBuilder();
+      } else {
+        return androidCliInvocation_ == null ?
+            com.google.wireless.android.sdk.stats.AndroidCliInvocation.getDefaultInstance() : androidCliInvocation_;
+      }
+    }
+    /**
+     * <pre>
+     * set when kind = ANDROID_CLI_INVOCATION
+     * </pre>
+     *
+     * <code>optional .android_studio.AndroidCliInvocation android_cli_invocation = 251 [lazy = true];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.AndroidCliInvocation, com.google.wireless.android.sdk.stats.AndroidCliInvocation.Builder, com.google.wireless.android.sdk.stats.AndroidCliInvocationOrBuilder> 
+        getAndroidCliInvocationFieldBuilder() {
+      if (androidCliInvocationBuilder_ == null) {
+        androidCliInvocationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.wireless.android.sdk.stats.AndroidCliInvocation, com.google.wireless.android.sdk.stats.AndroidCliInvocation.Builder, com.google.wireless.android.sdk.stats.AndroidCliInvocationOrBuilder>(
+                getAndroidCliInvocation(),
+                getParentForChildren(),
+                isClean());
+        androidCliInvocation_ = null;
+      }
+      return androidCliInvocationBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(
