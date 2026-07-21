@@ -171,7 +171,7 @@ private static final long serialVersionUID = 0L;
      * modified and the value assigned to it.
      * </pre>
      *
-     * <code>.android_studio.EditorPickerEvent.EditorPickerAction.PreviewPickerModification preview_modification = 1;</code>
+     * <code>.android_studio.EditorPickerEvent.EditorPickerAction.PreviewPickerModification preview_modification = 1 [lazy = true];</code>
      * @return Whether the previewModification field is set.
      */
     boolean hasPreviewModification();
@@ -182,7 +182,7 @@ private static final long serialVersionUID = 0L;
      * modified and the value assigned to it.
      * </pre>
      *
-     * <code>.android_studio.EditorPickerEvent.EditorPickerAction.PreviewPickerModification preview_modification = 1;</code>
+     * <code>.android_studio.EditorPickerEvent.EditorPickerAction.PreviewPickerModification preview_modification = 1 [lazy = true];</code>
      * @return The previewModification.
      */
     com.google.wireless.android.sdk.stats.EditorPickerEvent.EditorPickerAction.PreviewPickerModification getPreviewModification();
@@ -193,7 +193,7 @@ private static final long serialVersionUID = 0L;
      * modified and the value assigned to it.
      * </pre>
      *
-     * <code>.android_studio.EditorPickerEvent.EditorPickerAction.PreviewPickerModification preview_modification = 1;</code>
+     * <code>.android_studio.EditorPickerEvent.EditorPickerAction.PreviewPickerModification preview_modification = 1 [lazy = true];</code>
      */
     com.google.wireless.android.sdk.stats.EditorPickerEvent.EditorPickerAction.PreviewPickerModificationOrBuilder getPreviewModificationOrBuilder();
 
@@ -2289,7 +2289,7 @@ private static final long serialVersionUID = 0L;
      * modified and the value assigned to it.
      * </pre>
      *
-     * <code>.android_studio.EditorPickerEvent.EditorPickerAction.PreviewPickerModification preview_modification = 1;</code>
+     * <code>.android_studio.EditorPickerEvent.EditorPickerAction.PreviewPickerModification preview_modification = 1 [lazy = true];</code>
      * @return Whether the previewModification field is set.
      */
     @java.lang.Override
@@ -2303,7 +2303,7 @@ private static final long serialVersionUID = 0L;
      * modified and the value assigned to it.
      * </pre>
      *
-     * <code>.android_studio.EditorPickerEvent.EditorPickerAction.PreviewPickerModification preview_modification = 1;</code>
+     * <code>.android_studio.EditorPickerEvent.EditorPickerAction.PreviewPickerModification preview_modification = 1 [lazy = true];</code>
      * @return The previewModification.
      */
     @java.lang.Override
@@ -2320,7 +2320,7 @@ private static final long serialVersionUID = 0L;
      * modified and the value assigned to it.
      * </pre>
      *
-     * <code>.android_studio.EditorPickerEvent.EditorPickerAction.PreviewPickerModification preview_modification = 1;</code>
+     * <code>.android_studio.EditorPickerEvent.EditorPickerAction.PreviewPickerModification preview_modification = 1 [lazy = true];</code>
      */
     @java.lang.Override
     public com.google.wireless.android.sdk.stats.EditorPickerEvent.EditorPickerAction.PreviewPickerModificationOrBuilder getPreviewModificationOrBuilder() {
@@ -2708,7 +2708,7 @@ private static final long serialVersionUID = 0L;
        * modified and the value assigned to it.
        * </pre>
        *
-       * <code>.android_studio.EditorPickerEvent.EditorPickerAction.PreviewPickerModification preview_modification = 1;</code>
+       * <code>.android_studio.EditorPickerEvent.EditorPickerAction.PreviewPickerModification preview_modification = 1 [lazy = true];</code>
        * @return Whether the previewModification field is set.
        */
       @java.lang.Override
@@ -2722,7 +2722,7 @@ private static final long serialVersionUID = 0L;
        * modified and the value assigned to it.
        * </pre>
        *
-       * <code>.android_studio.EditorPickerEvent.EditorPickerAction.PreviewPickerModification preview_modification = 1;</code>
+       * <code>.android_studio.EditorPickerEvent.EditorPickerAction.PreviewPickerModification preview_modification = 1 [lazy = true];</code>
        * @return The previewModification.
        */
       @java.lang.Override
@@ -2746,7 +2746,7 @@ private static final long serialVersionUID = 0L;
        * modified and the value assigned to it.
        * </pre>
        *
-       * <code>.android_studio.EditorPickerEvent.EditorPickerAction.PreviewPickerModification preview_modification = 1;</code>
+       * <code>.android_studio.EditorPickerEvent.EditorPickerAction.PreviewPickerModification preview_modification = 1 [lazy = true];</code>
        */
       public Builder setPreviewModification(com.google.wireless.android.sdk.stats.EditorPickerEvent.EditorPickerAction.PreviewPickerModification value) {
         if (previewModificationBuilder_ == null) {
@@ -2768,7 +2768,7 @@ private static final long serialVersionUID = 0L;
        * modified and the value assigned to it.
        * </pre>
        *
-       * <code>.android_studio.EditorPickerEvent.EditorPickerAction.PreviewPickerModification preview_modification = 1;</code>
+       * <code>.android_studio.EditorPickerEvent.EditorPickerAction.PreviewPickerModification preview_modification = 1 [lazy = true];</code>
        */
       public Builder setPreviewModification(
           com.google.wireless.android.sdk.stats.EditorPickerEvent.EditorPickerAction.PreviewPickerModification.Builder builderForValue) {
@@ -2788,7 +2788,7 @@ private static final long serialVersionUID = 0L;
        * modified and the value assigned to it.
        * </pre>
        *
-       * <code>.android_studio.EditorPickerEvent.EditorPickerAction.PreviewPickerModification preview_modification = 1;</code>
+       * <code>.android_studio.EditorPickerEvent.EditorPickerAction.PreviewPickerModification preview_modification = 1 [lazy = true];</code>
        */
       public Builder mergePreviewModification(com.google.wireless.android.sdk.stats.EditorPickerEvent.EditorPickerAction.PreviewPickerModification value) {
         if (previewModificationBuilder_ == null) {
@@ -2816,7 +2816,7 @@ private static final long serialVersionUID = 0L;
        * modified and the value assigned to it.
        * </pre>
        *
-       * <code>.android_studio.EditorPickerEvent.EditorPickerAction.PreviewPickerModification preview_modification = 1;</code>
+       * <code>.android_studio.EditorPickerEvent.EditorPickerAction.PreviewPickerModification preview_modification = 1 [lazy = true];</code>
        */
       public Builder clearPreviewModification() {
         if (previewModificationBuilder_ == null) {
@@ -2841,7 +2841,7 @@ private static final long serialVersionUID = 0L;
        * modified and the value assigned to it.
        * </pre>
        *
-       * <code>.android_studio.EditorPickerEvent.EditorPickerAction.PreviewPickerModification preview_modification = 1;</code>
+       * <code>.android_studio.EditorPickerEvent.EditorPickerAction.PreviewPickerModification preview_modification = 1 [lazy = true];</code>
        */
       public com.google.wireless.android.sdk.stats.EditorPickerEvent.EditorPickerAction.PreviewPickerModification.Builder getPreviewModificationBuilder() {
         return getPreviewModificationFieldBuilder().getBuilder();
@@ -2853,7 +2853,7 @@ private static final long serialVersionUID = 0L;
        * modified and the value assigned to it.
        * </pre>
        *
-       * <code>.android_studio.EditorPickerEvent.EditorPickerAction.PreviewPickerModification preview_modification = 1;</code>
+       * <code>.android_studio.EditorPickerEvent.EditorPickerAction.PreviewPickerModification preview_modification = 1 [lazy = true];</code>
        */
       @java.lang.Override
       public com.google.wireless.android.sdk.stats.EditorPickerEvent.EditorPickerAction.PreviewPickerModificationOrBuilder getPreviewModificationOrBuilder() {
@@ -2873,7 +2873,7 @@ private static final long serialVersionUID = 0L;
        * modified and the value assigned to it.
        * </pre>
        *
-       * <code>.android_studio.EditorPickerEvent.EditorPickerAction.PreviewPickerModification preview_modification = 1;</code>
+       * <code>.android_studio.EditorPickerEvent.EditorPickerAction.PreviewPickerModification preview_modification = 1 [lazy = true];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.wireless.android.sdk.stats.EditorPickerEvent.EditorPickerAction.PreviewPickerModification, com.google.wireless.android.sdk.stats.EditorPickerEvent.EditorPickerAction.PreviewPickerModification.Builder, com.google.wireless.android.sdk.stats.EditorPickerEvent.EditorPickerAction.PreviewPickerModificationOrBuilder> 
