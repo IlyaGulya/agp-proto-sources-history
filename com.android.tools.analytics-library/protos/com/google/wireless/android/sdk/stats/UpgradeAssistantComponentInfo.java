@@ -177,6 +177,10 @@ private static final long serialVersionUID = 0L;
      * <code>MIGRATE_TEST_COVERAGE_ENABLED = 31;</code>
      */
     MIGRATE_TEST_COVERAGE_ENABLED(31),
+    /**
+     * <code>USE_ANDROIDX_DEFAULT = 32;</code>
+     */
+    USE_ANDROIDX_DEFAULT(32),
     ;
 
     /**
@@ -307,6 +311,10 @@ private static final long serialVersionUID = 0L;
      * <code>MIGRATE_TEST_COVERAGE_ENABLED = 31;</code>
      */
     public static final int MIGRATE_TEST_COVERAGE_ENABLED_VALUE = 31;
+    /**
+     * <code>USE_ANDROIDX_DEFAULT = 32;</code>
+     */
+    public static final int USE_ANDROIDX_DEFAULT_VALUE = 32;
 
 
     public final int getNumber() {
@@ -361,6 +369,7 @@ private static final long serialVersionUID = 0L;
         case 29: return ANDROID_MANIFEST_USE_EMBEDDED_DEX;
         case 30: return SHADERS_DEFAULT;
         case 31: return MIGRATE_TEST_COVERAGE_ENABLED;
+        case 32: return USE_ANDROIDX_DEFAULT;
         default: return null;
       }
     }
