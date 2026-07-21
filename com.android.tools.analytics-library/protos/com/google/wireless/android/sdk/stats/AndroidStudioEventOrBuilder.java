@@ -3731,4 +3731,31 @@ public interface AndroidStudioEventOrBuilder extends
    * <code>optional .android_studio.OptOutOfMetrics opt_out_of_metrics = 134;</code>
    */
   com.google.wireless.android.sdk.stats.OptOutOfMetricsOrBuilder getOptOutOfMetricsOrBuilder();
+
+  /**
+   * <pre>
+   * set when kind = GRADLE_VERSION_CATALOG_DETECTOR
+   * </pre>
+   *
+   * <code>optional .android_studio.GradleVersionCatalogDetectorEvent gradle_version_catalog_detector_event = 135;</code>
+   * @return Whether the gradleVersionCatalogDetectorEvent field is set.
+   */
+  boolean hasGradleVersionCatalogDetectorEvent();
+  /**
+   * <pre>
+   * set when kind = GRADLE_VERSION_CATALOG_DETECTOR
+   * </pre>
+   *
+   * <code>optional .android_studio.GradleVersionCatalogDetectorEvent gradle_version_catalog_detector_event = 135;</code>
+   * @return The gradleVersionCatalogDetectorEvent.
+   */
+  com.google.wireless.android.sdk.stats.GradleVersionCatalogDetectorEvent getGradleVersionCatalogDetectorEvent();
+  /**
+   * <pre>
+   * set when kind = GRADLE_VERSION_CATALOG_DETECTOR
+   * </pre>
+   *
+   * <code>optional .android_studio.GradleVersionCatalogDetectorEvent gradle_version_catalog_detector_event = 135;</code>
+   */
+  com.google.wireless.android.sdk.stats.GradleVersionCatalogDetectorEventOrBuilder getGradleVersionCatalogDetectorEventOrBuilder();
 }
