@@ -232,5 +232,20 @@ public interface SmlChatBotEventOrBuilder extends
    */
   com.google.wireless.android.sdk.stats.SmlChatBotEvent.DeprecationShownOrBuilder getDeprecationShownOrBuilder();
 
+  /**
+   * <code>.android_studio.SmlChatBotEvent.BotResponseError bot_response_error = 16 [lazy = true];</code>
+   * @return Whether the botResponseError field is set.
+   */
+  boolean hasBotResponseError();
+  /**
+   * <code>.android_studio.SmlChatBotEvent.BotResponseError bot_response_error = 16 [lazy = true];</code>
+   * @return The botResponseError.
+   */
+  com.google.wireless.android.sdk.stats.SmlChatBotEvent.BotResponseError getBotResponseError();
+  /**
+   * <code>.android_studio.SmlChatBotEvent.BotResponseError bot_response_error = 16 [lazy = true];</code>
+   */
+  com.google.wireless.android.sdk.stats.SmlChatBotEvent.BotResponseErrorOrBuilder getBotResponseErrorOrBuilder();
+
   com.google.wireless.android.sdk.stats.SmlChatBotEvent.ContentCase getContentCase();
 }

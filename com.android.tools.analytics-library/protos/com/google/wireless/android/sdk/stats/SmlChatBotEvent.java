@@ -18880,6 +18880,887 @@ private static final long serialVersionUID = 0L;
 
   }
 
+  public interface BotResponseErrorOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:android_studio.SmlChatBotEvent.BotResponseError)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Metadata about a Bot conversation.
+     * </pre>
+     *
+     * <code>optional .android_studio.SmlResponseMetadata metadata = 1 [lazy = true];</code>
+     * @return Whether the metadata field is set.
+     */
+    boolean hasMetadata();
+    /**
+     * <pre>
+     * Metadata about a Bot conversation.
+     * </pre>
+     *
+     * <code>optional .android_studio.SmlResponseMetadata metadata = 1 [lazy = true];</code>
+     * @return The metadata.
+     */
+    com.google.wireless.android.sdk.stats.SmlResponseMetadata getMetadata();
+    /**
+     * <pre>
+     * Metadata about a Bot conversation.
+     * </pre>
+     *
+     * <code>optional .android_studio.SmlResponseMetadata metadata = 1 [lazy = true];</code>
+     */
+    com.google.wireless.android.sdk.stats.SmlResponseMetadataOrBuilder getMetadataOrBuilder();
+
+    /**
+     * <pre>
+     * The exception that caused the error. This is a fully qualified class
+     * name.
+     * </pre>
+     *
+     * <code>optional string exception_type = 2;</code>
+     * @return Whether the exceptionType field is set.
+     */
+    boolean hasExceptionType();
+    /**
+     * <pre>
+     * The exception that caused the error. This is a fully qualified class
+     * name.
+     * </pre>
+     *
+     * <code>optional string exception_type = 2;</code>
+     * @return The exceptionType.
+     */
+    java.lang.String getExceptionType();
+    /**
+     * <pre>
+     * The exception that caused the error. This is a fully qualified class
+     * name.
+     * </pre>
+     *
+     * <code>optional string exception_type = 2;</code>
+     * @return The bytes for exceptionType.
+     */
+    com.google.protobuf.ByteString
+        getExceptionTypeBytes();
+  }
+  /**
+   * <pre>
+   * The details about the error that occurred during bot conversation.
+   * </pre>
+   *
+   * Protobuf type {@code android_studio.SmlChatBotEvent.BotResponseError}
+   */
+  public static final class BotResponseError extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:android_studio.SmlChatBotEvent.BotResponseError)
+      BotResponseErrorOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use BotResponseError.newBuilder() to construct.
+    private BotResponseError(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private BotResponseError() {
+      exceptionType_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new BotResponseError();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_SmlChatBotEvent_BotResponseError_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_SmlChatBotEvent_BotResponseError_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.google.wireless.android.sdk.stats.SmlChatBotEvent.BotResponseError.class, com.google.wireless.android.sdk.stats.SmlChatBotEvent.BotResponseError.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int METADATA_FIELD_NUMBER = 1;
+    private com.google.wireless.android.sdk.stats.SmlResponseMetadata metadata_;
+    /**
+     * <pre>
+     * Metadata about a Bot conversation.
+     * </pre>
+     *
+     * <code>optional .android_studio.SmlResponseMetadata metadata = 1 [lazy = true];</code>
+     * @return Whether the metadata field is set.
+     */
+    @java.lang.Override
+    public boolean hasMetadata() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <pre>
+     * Metadata about a Bot conversation.
+     * </pre>
+     *
+     * <code>optional .android_studio.SmlResponseMetadata metadata = 1 [lazy = true];</code>
+     * @return The metadata.
+     */
+    @java.lang.Override
+    public com.google.wireless.android.sdk.stats.SmlResponseMetadata getMetadata() {
+      return metadata_ == null ? com.google.wireless.android.sdk.stats.SmlResponseMetadata.getDefaultInstance() : metadata_;
+    }
+    /**
+     * <pre>
+     * Metadata about a Bot conversation.
+     * </pre>
+     *
+     * <code>optional .android_studio.SmlResponseMetadata metadata = 1 [lazy = true];</code>
+     */
+    @java.lang.Override
+    public com.google.wireless.android.sdk.stats.SmlResponseMetadataOrBuilder getMetadataOrBuilder() {
+      return metadata_ == null ? com.google.wireless.android.sdk.stats.SmlResponseMetadata.getDefaultInstance() : metadata_;
+    }
+
+    public static final int EXCEPTION_TYPE_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object exceptionType_ = "";
+    /**
+     * <pre>
+     * The exception that caused the error. This is a fully qualified class
+     * name.
+     * </pre>
+     *
+     * <code>optional string exception_type = 2;</code>
+     * @return Whether the exceptionType field is set.
+     */
+    @java.lang.Override
+    public boolean hasExceptionType() {
+      return ((bitField0_ & 0x00000002) != 0);
+    }
+    /**
+     * <pre>
+     * The exception that caused the error. This is a fully qualified class
+     * name.
+     * </pre>
+     *
+     * <code>optional string exception_type = 2;</code>
+     * @return The exceptionType.
+     */
+    @java.lang.Override
+    public java.lang.String getExceptionType() {
+      java.lang.Object ref = exceptionType_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          exceptionType_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * The exception that caused the error. This is a fully qualified class
+     * name.
+     * </pre>
+     *
+     * <code>optional string exception_type = 2;</code>
+     * @return The bytes for exceptionType.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getExceptionTypeBytes() {
+      java.lang.Object ref = exceptionType_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        exceptionType_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (((bitField0_ & 0x00000001) != 0)) {
+        output.writeMessage(1, getMetadata());
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, exceptionType_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getMetadata());
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, exceptionType_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.google.wireless.android.sdk.stats.SmlChatBotEvent.BotResponseError)) {
+        return super.equals(obj);
+      }
+      com.google.wireless.android.sdk.stats.SmlChatBotEvent.BotResponseError other = (com.google.wireless.android.sdk.stats.SmlChatBotEvent.BotResponseError) obj;
+
+      if (hasMetadata() != other.hasMetadata()) return false;
+      if (hasMetadata()) {
+        if (!getMetadata()
+            .equals(other.getMetadata())) return false;
+      }
+      if (hasExceptionType() != other.hasExceptionType()) return false;
+      if (hasExceptionType()) {
+        if (!getExceptionType()
+            .equals(other.getExceptionType())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasMetadata()) {
+        hash = (37 * hash) + METADATA_FIELD_NUMBER;
+        hash = (53 * hash) + getMetadata().hashCode();
+      }
+      if (hasExceptionType()) {
+        hash = (37 * hash) + EXCEPTION_TYPE_FIELD_NUMBER;
+        hash = (53 * hash) + getExceptionType().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.google.wireless.android.sdk.stats.SmlChatBotEvent.BotResponseError parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.google.wireless.android.sdk.stats.SmlChatBotEvent.BotResponseError parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.google.wireless.android.sdk.stats.SmlChatBotEvent.BotResponseError parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.google.wireless.android.sdk.stats.SmlChatBotEvent.BotResponseError parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.google.wireless.android.sdk.stats.SmlChatBotEvent.BotResponseError parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.google.wireless.android.sdk.stats.SmlChatBotEvent.BotResponseError parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.google.wireless.android.sdk.stats.SmlChatBotEvent.BotResponseError parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.google.wireless.android.sdk.stats.SmlChatBotEvent.BotResponseError parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.google.wireless.android.sdk.stats.SmlChatBotEvent.BotResponseError parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.google.wireless.android.sdk.stats.SmlChatBotEvent.BotResponseError parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.google.wireless.android.sdk.stats.SmlChatBotEvent.BotResponseError parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.google.wireless.android.sdk.stats.SmlChatBotEvent.BotResponseError parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.google.wireless.android.sdk.stats.SmlChatBotEvent.BotResponseError prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * The details about the error that occurred during bot conversation.
+     * </pre>
+     *
+     * Protobuf type {@code android_studio.SmlChatBotEvent.BotResponseError}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:android_studio.SmlChatBotEvent.BotResponseError)
+        com.google.wireless.android.sdk.stats.SmlChatBotEvent.BotResponseErrorOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_SmlChatBotEvent_BotResponseError_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_SmlChatBotEvent_BotResponseError_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.google.wireless.android.sdk.stats.SmlChatBotEvent.BotResponseError.class, com.google.wireless.android.sdk.stats.SmlChatBotEvent.BotResponseError.Builder.class);
+      }
+
+      // Construct using com.google.wireless.android.sdk.stats.SmlChatBotEvent.BotResponseError.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getMetadataFieldBuilder();
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        metadata_ = null;
+        if (metadataBuilder_ != null) {
+          metadataBuilder_.dispose();
+          metadataBuilder_ = null;
+        }
+        exceptionType_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_SmlChatBotEvent_BotResponseError_descriptor;
+      }
+
+      @java.lang.Override
+      public com.google.wireless.android.sdk.stats.SmlChatBotEvent.BotResponseError getDefaultInstanceForType() {
+        return com.google.wireless.android.sdk.stats.SmlChatBotEvent.BotResponseError.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.google.wireless.android.sdk.stats.SmlChatBotEvent.BotResponseError build() {
+        com.google.wireless.android.sdk.stats.SmlChatBotEvent.BotResponseError result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.google.wireless.android.sdk.stats.SmlChatBotEvent.BotResponseError buildPartial() {
+        com.google.wireless.android.sdk.stats.SmlChatBotEvent.BotResponseError result = new com.google.wireless.android.sdk.stats.SmlChatBotEvent.BotResponseError(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.google.wireless.android.sdk.stats.SmlChatBotEvent.BotResponseError result) {
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.metadata_ = metadataBuilder_ == null
+              ? metadata_
+              : metadataBuilder_.build();
+          to_bitField0_ |= 0x00000001;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.exceptionType_ = exceptionType_;
+          to_bitField0_ |= 0x00000002;
+        }
+        result.bitField0_ |= to_bitField0_;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.google.wireless.android.sdk.stats.SmlChatBotEvent.BotResponseError) {
+          return mergeFrom((com.google.wireless.android.sdk.stats.SmlChatBotEvent.BotResponseError)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.google.wireless.android.sdk.stats.SmlChatBotEvent.BotResponseError other) {
+        if (other == com.google.wireless.android.sdk.stats.SmlChatBotEvent.BotResponseError.getDefaultInstance()) return this;
+        if (other.hasMetadata()) {
+          mergeMetadata(other.getMetadata());
+        }
+        if (other.hasExceptionType()) {
+          exceptionType_ = other.exceptionType_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getMetadataFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                exceptionType_ = input.readBytes();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.google.wireless.android.sdk.stats.SmlResponseMetadata metadata_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.wireless.android.sdk.stats.SmlResponseMetadata, com.google.wireless.android.sdk.stats.SmlResponseMetadata.Builder, com.google.wireless.android.sdk.stats.SmlResponseMetadataOrBuilder> metadataBuilder_;
+      /**
+       * <pre>
+       * Metadata about a Bot conversation.
+       * </pre>
+       *
+       * <code>optional .android_studio.SmlResponseMetadata metadata = 1 [lazy = true];</code>
+       * @return Whether the metadata field is set.
+       */
+      public boolean hasMetadata() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <pre>
+       * Metadata about a Bot conversation.
+       * </pre>
+       *
+       * <code>optional .android_studio.SmlResponseMetadata metadata = 1 [lazy = true];</code>
+       * @return The metadata.
+       */
+      public com.google.wireless.android.sdk.stats.SmlResponseMetadata getMetadata() {
+        if (metadataBuilder_ == null) {
+          return metadata_ == null ? com.google.wireless.android.sdk.stats.SmlResponseMetadata.getDefaultInstance() : metadata_;
+        } else {
+          return metadataBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Metadata about a Bot conversation.
+       * </pre>
+       *
+       * <code>optional .android_studio.SmlResponseMetadata metadata = 1 [lazy = true];</code>
+       */
+      public Builder setMetadata(com.google.wireless.android.sdk.stats.SmlResponseMetadata value) {
+        if (metadataBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          metadata_ = value;
+        } else {
+          metadataBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Metadata about a Bot conversation.
+       * </pre>
+       *
+       * <code>optional .android_studio.SmlResponseMetadata metadata = 1 [lazy = true];</code>
+       */
+      public Builder setMetadata(
+          com.google.wireless.android.sdk.stats.SmlResponseMetadata.Builder builderForValue) {
+        if (metadataBuilder_ == null) {
+          metadata_ = builderForValue.build();
+        } else {
+          metadataBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Metadata about a Bot conversation.
+       * </pre>
+       *
+       * <code>optional .android_studio.SmlResponseMetadata metadata = 1 [lazy = true];</code>
+       */
+      public Builder mergeMetadata(com.google.wireless.android.sdk.stats.SmlResponseMetadata value) {
+        if (metadataBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            metadata_ != null &&
+            metadata_ != com.google.wireless.android.sdk.stats.SmlResponseMetadata.getDefaultInstance()) {
+            getMetadataBuilder().mergeFrom(value);
+          } else {
+            metadata_ = value;
+          }
+        } else {
+          metadataBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Metadata about a Bot conversation.
+       * </pre>
+       *
+       * <code>optional .android_studio.SmlResponseMetadata metadata = 1 [lazy = true];</code>
+       */
+      public Builder clearMetadata() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        metadata_ = null;
+        if (metadataBuilder_ != null) {
+          metadataBuilder_.dispose();
+          metadataBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Metadata about a Bot conversation.
+       * </pre>
+       *
+       * <code>optional .android_studio.SmlResponseMetadata metadata = 1 [lazy = true];</code>
+       */
+      public com.google.wireless.android.sdk.stats.SmlResponseMetadata.Builder getMetadataBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getMetadataFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Metadata about a Bot conversation.
+       * </pre>
+       *
+       * <code>optional .android_studio.SmlResponseMetadata metadata = 1 [lazy = true];</code>
+       */
+      public com.google.wireless.android.sdk.stats.SmlResponseMetadataOrBuilder getMetadataOrBuilder() {
+        if (metadataBuilder_ != null) {
+          return metadataBuilder_.getMessageOrBuilder();
+        } else {
+          return metadata_ == null ?
+              com.google.wireless.android.sdk.stats.SmlResponseMetadata.getDefaultInstance() : metadata_;
+        }
+      }
+      /**
+       * <pre>
+       * Metadata about a Bot conversation.
+       * </pre>
+       *
+       * <code>optional .android_studio.SmlResponseMetadata metadata = 1 [lazy = true];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.wireless.android.sdk.stats.SmlResponseMetadata, com.google.wireless.android.sdk.stats.SmlResponseMetadata.Builder, com.google.wireless.android.sdk.stats.SmlResponseMetadataOrBuilder> 
+          getMetadataFieldBuilder() {
+        if (metadataBuilder_ == null) {
+          metadataBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.wireless.android.sdk.stats.SmlResponseMetadata, com.google.wireless.android.sdk.stats.SmlResponseMetadata.Builder, com.google.wireless.android.sdk.stats.SmlResponseMetadataOrBuilder>(
+                  getMetadata(),
+                  getParentForChildren(),
+                  isClean());
+          metadata_ = null;
+        }
+        return metadataBuilder_;
+      }
+
+      private java.lang.Object exceptionType_ = "";
+      /**
+       * <pre>
+       * The exception that caused the error. This is a fully qualified class
+       * name.
+       * </pre>
+       *
+       * <code>optional string exception_type = 2;</code>
+       * @return Whether the exceptionType field is set.
+       */
+      public boolean hasExceptionType() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <pre>
+       * The exception that caused the error. This is a fully qualified class
+       * name.
+       * </pre>
+       *
+       * <code>optional string exception_type = 2;</code>
+       * @return The exceptionType.
+       */
+      public java.lang.String getExceptionType() {
+        java.lang.Object ref = exceptionType_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            exceptionType_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The exception that caused the error. This is a fully qualified class
+       * name.
+       * </pre>
+       *
+       * <code>optional string exception_type = 2;</code>
+       * @return The bytes for exceptionType.
+       */
+      public com.google.protobuf.ByteString
+          getExceptionTypeBytes() {
+        java.lang.Object ref = exceptionType_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          exceptionType_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The exception that caused the error. This is a fully qualified class
+       * name.
+       * </pre>
+       *
+       * <code>optional string exception_type = 2;</code>
+       * @param value The exceptionType to set.
+       * @return This builder for chaining.
+       */
+      public Builder setExceptionType(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        exceptionType_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The exception that caused the error. This is a fully qualified class
+       * name.
+       * </pre>
+       *
+       * <code>optional string exception_type = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearExceptionType() {
+        exceptionType_ = getDefaultInstance().getExceptionType();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The exception that caused the error. This is a fully qualified class
+       * name.
+       * </pre>
+       *
+       * <code>optional string exception_type = 2;</code>
+       * @param value The bytes for exceptionType to set.
+       * @return This builder for chaining.
+       */
+      public Builder setExceptionTypeBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        exceptionType_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:android_studio.SmlChatBotEvent.BotResponseError)
+    }
+
+    // @@protoc_insertion_point(class_scope:android_studio.SmlChatBotEvent.BotResponseError)
+    private static final com.google.wireless.android.sdk.stats.SmlChatBotEvent.BotResponseError DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.google.wireless.android.sdk.stats.SmlChatBotEvent.BotResponseError();
+    }
+
+    public static com.google.wireless.android.sdk.stats.SmlChatBotEvent.BotResponseError getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<BotResponseError>
+        PARSER = new com.google.protobuf.AbstractParser<BotResponseError>() {
+      @java.lang.Override
+      public BotResponseError parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<BotResponseError> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<BotResponseError> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.wireless.android.sdk.stats.SmlChatBotEvent.BotResponseError getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private int bitField0_;
   private int contentCase_ = 0;
   @SuppressWarnings("serial")
@@ -18902,6 +19783,7 @@ private static final long serialVersionUID = 0L;
     TOOL_CALL_FOLLOW_UP_EVENT(13),
     TOOL_CALL_RESPONSE(14),
     DEPRECATION_SHOWN(15),
+    BOT_RESPONSE_ERROR(16),
     CONTENT_NOT_SET(0);
     private final int value;
     private ContentCase(int value) {
@@ -18934,6 +19816,7 @@ private static final long serialVersionUID = 0L;
         case 13: return TOOL_CALL_FOLLOW_UP_EVENT;
         case 14: return TOOL_CALL_RESPONSE;
         case 15: return DEPRECATION_SHOWN;
+        case 16: return BOT_RESPONSE_ERROR;
         case 0: return CONTENT_NOT_SET;
         default: return null;
       }
@@ -19414,6 +20297,37 @@ private static final long serialVersionUID = 0L;
     return com.google.wireless.android.sdk.stats.SmlChatBotEvent.DeprecationShown.getDefaultInstance();
   }
 
+  public static final int BOT_RESPONSE_ERROR_FIELD_NUMBER = 16;
+  /**
+   * <code>.android_studio.SmlChatBotEvent.BotResponseError bot_response_error = 16 [lazy = true];</code>
+   * @return Whether the botResponseError field is set.
+   */
+  @java.lang.Override
+  public boolean hasBotResponseError() {
+    return contentCase_ == 16;
+  }
+  /**
+   * <code>.android_studio.SmlChatBotEvent.BotResponseError bot_response_error = 16 [lazy = true];</code>
+   * @return The botResponseError.
+   */
+  @java.lang.Override
+  public com.google.wireless.android.sdk.stats.SmlChatBotEvent.BotResponseError getBotResponseError() {
+    if (contentCase_ == 16) {
+       return (com.google.wireless.android.sdk.stats.SmlChatBotEvent.BotResponseError) content_;
+    }
+    return com.google.wireless.android.sdk.stats.SmlChatBotEvent.BotResponseError.getDefaultInstance();
+  }
+  /**
+   * <code>.android_studio.SmlChatBotEvent.BotResponseError bot_response_error = 16 [lazy = true];</code>
+   */
+  @java.lang.Override
+  public com.google.wireless.android.sdk.stats.SmlChatBotEvent.BotResponseErrorOrBuilder getBotResponseErrorOrBuilder() {
+    if (contentCase_ == 16) {
+       return (com.google.wireless.android.sdk.stats.SmlChatBotEvent.BotResponseError) content_;
+    }
+    return com.google.wireless.android.sdk.stats.SmlChatBotEvent.BotResponseError.getDefaultInstance();
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -19472,6 +20386,9 @@ private static final long serialVersionUID = 0L;
     }
     if (contentCase_ == 15) {
       output.writeMessage(15, (com.google.wireless.android.sdk.stats.SmlChatBotEvent.DeprecationShown) content_);
+    }
+    if (contentCase_ == 16) {
+      output.writeMessage(16, (com.google.wireless.android.sdk.stats.SmlChatBotEvent.BotResponseError) content_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -19541,6 +20458,10 @@ private static final long serialVersionUID = 0L;
     if (contentCase_ == 15) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(15, (com.google.wireless.android.sdk.stats.SmlChatBotEvent.DeprecationShown) content_);
+    }
+    if (contentCase_ == 16) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(16, (com.google.wireless.android.sdk.stats.SmlChatBotEvent.BotResponseError) content_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -19619,6 +20540,10 @@ private static final long serialVersionUID = 0L;
         if (!getDeprecationShown()
             .equals(other.getDeprecationShown())) return false;
         break;
+      case 16:
+        if (!getBotResponseError()
+            .equals(other.getBotResponseError())) return false;
+        break;
       case 0:
       default:
     }
@@ -19693,6 +20618,10 @@ private static final long serialVersionUID = 0L;
       case 15:
         hash = (37 * hash) + DEPRECATION_SHOWN_FIELD_NUMBER;
         hash = (53 * hash) + getDeprecationShown().hashCode();
+        break;
+      case 16:
+        hash = (37 * hash) + BOT_RESPONSE_ERROR_FIELD_NUMBER;
+        hash = (53 * hash) + getBotResponseError().hashCode();
         break;
       case 0:
       default:
@@ -19871,6 +20800,9 @@ private static final long serialVersionUID = 0L;
       if (deprecationShownBuilder_ != null) {
         deprecationShownBuilder_.clear();
       }
+      if (botResponseErrorBuilder_ != null) {
+        botResponseErrorBuilder_.clear();
+      }
       contentCase_ = 0;
       content_ = null;
       return this;
@@ -19972,6 +20904,10 @@ private static final long serialVersionUID = 0L;
           deprecationShownBuilder_ != null) {
         result.content_ = deprecationShownBuilder_.build();
       }
+      if (contentCase_ == 16 &&
+          botResponseErrorBuilder_ != null) {
+        result.content_ = botResponseErrorBuilder_.build();
+      }
     }
 
     @java.lang.Override
@@ -20045,6 +20981,10 @@ private static final long serialVersionUID = 0L;
         }
         case DEPRECATION_SHOWN: {
           mergeDeprecationShown(other.getDeprecationShown());
+          break;
+        }
+        case BOT_RESPONSE_ERROR: {
+          mergeBotResponseError(other.getBotResponseError());
           break;
         }
         case CONTENT_NOT_SET: {
@@ -20182,6 +21122,13 @@ private static final long serialVersionUID = 0L;
               contentCase_ = 15;
               break;
             } // case 122
+            case 130: {
+              input.readMessage(
+                  getBotResponseErrorFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              contentCase_ = 16;
+              break;
+            } // case 130
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -22342,6 +23289,148 @@ private static final long serialVersionUID = 0L;
       contentCase_ = 15;
       onChanged();
       return deprecationShownBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.SmlChatBotEvent.BotResponseError, com.google.wireless.android.sdk.stats.SmlChatBotEvent.BotResponseError.Builder, com.google.wireless.android.sdk.stats.SmlChatBotEvent.BotResponseErrorOrBuilder> botResponseErrorBuilder_;
+    /**
+     * <code>.android_studio.SmlChatBotEvent.BotResponseError bot_response_error = 16 [lazy = true];</code>
+     * @return Whether the botResponseError field is set.
+     */
+    @java.lang.Override
+    public boolean hasBotResponseError() {
+      return contentCase_ == 16;
+    }
+    /**
+     * <code>.android_studio.SmlChatBotEvent.BotResponseError bot_response_error = 16 [lazy = true];</code>
+     * @return The botResponseError.
+     */
+    @java.lang.Override
+    public com.google.wireless.android.sdk.stats.SmlChatBotEvent.BotResponseError getBotResponseError() {
+      if (botResponseErrorBuilder_ == null) {
+        if (contentCase_ == 16) {
+          return (com.google.wireless.android.sdk.stats.SmlChatBotEvent.BotResponseError) content_;
+        }
+        return com.google.wireless.android.sdk.stats.SmlChatBotEvent.BotResponseError.getDefaultInstance();
+      } else {
+        if (contentCase_ == 16) {
+          return botResponseErrorBuilder_.getMessage();
+        }
+        return com.google.wireless.android.sdk.stats.SmlChatBotEvent.BotResponseError.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.android_studio.SmlChatBotEvent.BotResponseError bot_response_error = 16 [lazy = true];</code>
+     */
+    public Builder setBotResponseError(com.google.wireless.android.sdk.stats.SmlChatBotEvent.BotResponseError value) {
+      if (botResponseErrorBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        content_ = value;
+        onChanged();
+      } else {
+        botResponseErrorBuilder_.setMessage(value);
+      }
+      contentCase_ = 16;
+      return this;
+    }
+    /**
+     * <code>.android_studio.SmlChatBotEvent.BotResponseError bot_response_error = 16 [lazy = true];</code>
+     */
+    public Builder setBotResponseError(
+        com.google.wireless.android.sdk.stats.SmlChatBotEvent.BotResponseError.Builder builderForValue) {
+      if (botResponseErrorBuilder_ == null) {
+        content_ = builderForValue.build();
+        onChanged();
+      } else {
+        botResponseErrorBuilder_.setMessage(builderForValue.build());
+      }
+      contentCase_ = 16;
+      return this;
+    }
+    /**
+     * <code>.android_studio.SmlChatBotEvent.BotResponseError bot_response_error = 16 [lazy = true];</code>
+     */
+    public Builder mergeBotResponseError(com.google.wireless.android.sdk.stats.SmlChatBotEvent.BotResponseError value) {
+      if (botResponseErrorBuilder_ == null) {
+        if (contentCase_ == 16 &&
+            content_ != com.google.wireless.android.sdk.stats.SmlChatBotEvent.BotResponseError.getDefaultInstance()) {
+          content_ = com.google.wireless.android.sdk.stats.SmlChatBotEvent.BotResponseError.newBuilder((com.google.wireless.android.sdk.stats.SmlChatBotEvent.BotResponseError) content_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          content_ = value;
+        }
+        onChanged();
+      } else {
+        if (contentCase_ == 16) {
+          botResponseErrorBuilder_.mergeFrom(value);
+        } else {
+          botResponseErrorBuilder_.setMessage(value);
+        }
+      }
+      contentCase_ = 16;
+      return this;
+    }
+    /**
+     * <code>.android_studio.SmlChatBotEvent.BotResponseError bot_response_error = 16 [lazy = true];</code>
+     */
+    public Builder clearBotResponseError() {
+      if (botResponseErrorBuilder_ == null) {
+        if (contentCase_ == 16) {
+          contentCase_ = 0;
+          content_ = null;
+          onChanged();
+        }
+      } else {
+        if (contentCase_ == 16) {
+          contentCase_ = 0;
+          content_ = null;
+        }
+        botResponseErrorBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>.android_studio.SmlChatBotEvent.BotResponseError bot_response_error = 16 [lazy = true];</code>
+     */
+    public com.google.wireless.android.sdk.stats.SmlChatBotEvent.BotResponseError.Builder getBotResponseErrorBuilder() {
+      return getBotResponseErrorFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.android_studio.SmlChatBotEvent.BotResponseError bot_response_error = 16 [lazy = true];</code>
+     */
+    @java.lang.Override
+    public com.google.wireless.android.sdk.stats.SmlChatBotEvent.BotResponseErrorOrBuilder getBotResponseErrorOrBuilder() {
+      if ((contentCase_ == 16) && (botResponseErrorBuilder_ != null)) {
+        return botResponseErrorBuilder_.getMessageOrBuilder();
+      } else {
+        if (contentCase_ == 16) {
+          return (com.google.wireless.android.sdk.stats.SmlChatBotEvent.BotResponseError) content_;
+        }
+        return com.google.wireless.android.sdk.stats.SmlChatBotEvent.BotResponseError.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.android_studio.SmlChatBotEvent.BotResponseError bot_response_error = 16 [lazy = true];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.SmlChatBotEvent.BotResponseError, com.google.wireless.android.sdk.stats.SmlChatBotEvent.BotResponseError.Builder, com.google.wireless.android.sdk.stats.SmlChatBotEvent.BotResponseErrorOrBuilder> 
+        getBotResponseErrorFieldBuilder() {
+      if (botResponseErrorBuilder_ == null) {
+        if (!(contentCase_ == 16)) {
+          content_ = com.google.wireless.android.sdk.stats.SmlChatBotEvent.BotResponseError.getDefaultInstance();
+        }
+        botResponseErrorBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.wireless.android.sdk.stats.SmlChatBotEvent.BotResponseError, com.google.wireless.android.sdk.stats.SmlChatBotEvent.BotResponseError.Builder, com.google.wireless.android.sdk.stats.SmlChatBotEvent.BotResponseErrorOrBuilder>(
+                (com.google.wireless.android.sdk.stats.SmlChatBotEvent.BotResponseError) content_,
+                getParentForChildren(),
+                isClean());
+        content_ = null;
+      }
+      contentCase_ = 16;
+      onChanged();
+      return botResponseErrorBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(
