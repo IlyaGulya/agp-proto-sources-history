@@ -447,6 +447,14 @@ private static final long serialVersionUID = 0L;
     TRIGGER_QF_MIN_COMPILE_SDK_UPDATED(430),
     /**
      * <pre>
+     * Compose Compiler Gradle plugin is added using a quickfix
+     * </pre>
+     *
+     * <code>TRIGGER_QF_ADD_COMPOSE_COMPILER_GRADLE_PLUGIN = 431;</code>
+     */
+    TRIGGER_QF_ADD_COMPOSE_COMPILER_GRADLE_PLUGIN(431),
+    /**
+     * <pre>
      * Last marker for syncs caused by quickfixes
      * </pre>
      *
@@ -1388,6 +1396,14 @@ private static final long serialVersionUID = 0L;
     public static final int TRIGGER_QF_MIN_COMPILE_SDK_UPDATED_VALUE = 430;
     /**
      * <pre>
+     * Compose Compiler Gradle plugin is added using a quickfix
+     * </pre>
+     *
+     * <code>TRIGGER_QF_ADD_COMPOSE_COMPILER_GRADLE_PLUGIN = 431;</code>
+     */
+    public static final int TRIGGER_QF_ADD_COMPOSE_COMPILER_GRADLE_PLUGIN_VALUE = 431;
+    /**
+     * <pre>
      * Last marker for syncs caused by quickfixes
      * </pre>
      *
@@ -2015,6 +2031,7 @@ private static final long serialVersionUID = 0L;
         case 428: return TRIGGER_QF_SIGNING_CONFIG_SELECTED;
         case 429: return TRIGGER_QF_REMOVE_UNSUPPORTED_MODULES;
         case 430: return TRIGGER_QF_MIN_COMPILE_SDK_UPDATED;
+        case 431: return TRIGGER_QF_ADD_COMPOSE_COMPILER_GRADLE_PLUGIN;
         case 999: return TRIGGER_QF_LAST_MARKER;
         case 1200: return TRIGGER_REFACTOR_FIRST_MARKER;
         case 1201: return TRIGGER_REFACTOR_MIGRATE_TO_ANDROIDX;

@@ -8451,6 +8451,15 @@ private static final long serialVersionUID = 0L;
      * <code>TYPE_INCONSISTENT_BUILD_FEATURE_SETTING = 65;</code>
      */
     TYPE_INCONSISTENT_BUILD_FEATURE_SETTING(65),
+    /**
+     * <pre>
+     * Missing Compose Compiler Gradle plugin when compose is enabled and Kotlin version is 2.0
+     * or higher.
+     * </pre>
+     *
+     * <code>TYPE_MISSING_COMPOSE_COMPILER_GRADLE_PLUGIN = 66;</code>
+     */
+    TYPE_MISSING_COMPOSE_COMPILER_GRADLE_PLUGIN(66),
     ;
 
     /**
@@ -8923,6 +8932,15 @@ private static final long serialVersionUID = 0L;
      * <code>TYPE_INCONSISTENT_BUILD_FEATURE_SETTING = 65;</code>
      */
     public static final int TYPE_INCONSISTENT_BUILD_FEATURE_SETTING_VALUE = 65;
+    /**
+     * <pre>
+     * Missing Compose Compiler Gradle plugin when compose is enabled and Kotlin version is 2.0
+     * or higher.
+     * </pre>
+     *
+     * <code>TYPE_MISSING_COMPOSE_COMPILER_GRADLE_PLUGIN = 66;</code>
+     */
+    public static final int TYPE_MISSING_COMPOSE_COMPILER_GRADLE_PLUGIN_VALUE = 66;
 
 
     public final int getNumber() {
@@ -9011,6 +9029,7 @@ private static final long serialVersionUID = 0L;
         case 63: return TYPE_EXCEPTION;
         case 64: return TYPE_NAMESPACE_NOT_SET;
         case 65: return TYPE_INCONSISTENT_BUILD_FEATURE_SETTING;
+        case 66: return TYPE_MISSING_COMPOSE_COMPILER_GRADLE_PLUGIN;
         default: return null;
       }
     }
@@ -9277,6 +9296,10 @@ private static final long serialVersionUID = 0L;
      * <code>SUPPRESS_UNSUPPORTED_SDK_HYPERLINK = 51;</code>
      */
     SUPPRESS_UNSUPPORTED_SDK_HYPERLINK(51),
+    /**
+     * <code>ADD_COMPOSE_COMPILER_GRADLE_PLUGIN_HYPERLINK = 52;</code>
+     */
+    ADD_COMPOSE_COMPILER_GRADLE_PLUGIN_HYPERLINK(52),
     ;
 
     /**
@@ -9487,6 +9510,10 @@ private static final long serialVersionUID = 0L;
      * <code>SUPPRESS_UNSUPPORTED_SDK_HYPERLINK = 51;</code>
      */
     public static final int SUPPRESS_UNSUPPORTED_SDK_HYPERLINK_VALUE = 51;
+    /**
+     * <code>ADD_COMPOSE_COMPILER_GRADLE_PLUGIN_HYPERLINK = 52;</code>
+     */
+    public static final int ADD_COMPOSE_COMPILER_GRADLE_PLUGIN_HYPERLINK_VALUE = 52;
 
 
     public final int getNumber() {
@@ -9561,6 +9588,7 @@ private static final long serialVersionUID = 0L;
         case 49: return REMOVE_JCENTER_HYPERLINK;
         case 50: return OPEN_UPGRADE_ASSISTANT_HYPERLINK;
         case 51: return SUPPRESS_UNSUPPORTED_SDK_HYPERLINK;
+        case 52: return ADD_COMPOSE_COMPILER_GRADLE_PLUGIN_HYPERLINK;
         default: return null;
       }
     }
