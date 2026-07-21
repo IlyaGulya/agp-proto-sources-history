@@ -585,6 +585,10 @@ public enum BooleanOption
    * <code>USE_LINT_PARTIAL_ANALYSIS = 141;</code>
    */
   USE_LINT_PARTIAL_ANALYSIS(141),
+  /**
+   * <code>RELATIVE_COMPILE_LIB_RESOURCES = 142;</code>
+   */
+  RELATIVE_COMPILE_LIB_RESOURCES(142),
   UNRECOGNIZED(-1),
   ;
 
@@ -1156,6 +1160,10 @@ public enum BooleanOption
    * <code>USE_LINT_PARTIAL_ANALYSIS = 141;</code>
    */
   public static final int USE_LINT_PARTIAL_ANALYSIS_VALUE = 141;
+  /**
+   * <code>RELATIVE_COMPILE_LIB_RESOURCES = 142;</code>
+   */
+  public static final int RELATIVE_COMPILE_LIB_RESOURCES_VALUE = 142;
 
 
   public final int getNumber() {
@@ -1324,6 +1332,7 @@ public enum BooleanOption
       case 139: return ENABLE_DATABINDING_KTX;
       case 140: return RUN_LINT_IN_PROCESS;
       case 141: return USE_LINT_PARTIAL_ANALYSIS;
+      case 142: return RELATIVE_COMPILE_LIB_RESOURCES;
       default: return null;
     }
   }

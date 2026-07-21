@@ -74,6 +74,10 @@ public enum VariantPropertiesMethodType
    */
   AAPT_OPTIONS(15),
   /**
+   * <pre>
+   * deprecated
+   * </pre>
+   *
    * <code>AAPT_OPTIONS_ACTION = 16;</code>
    */
   AAPT_OPTIONS_ACTION(16),
@@ -110,6 +114,10 @@ public enum VariantPropertiesMethodType
    */
   SIGNING_CONFIG(24),
   /**
+   * <pre>
+   * deprecated
+   * </pre>
+   *
    * <code>SIGNING_CONFIG_ACTION = 25;</code>
    */
   SIGNING_CONFIG_ACTION(25),
@@ -122,6 +130,10 @@ public enum VariantPropertiesMethodType
    */
   PACKAGING_OPTIONS(27),
   /**
+   * <pre>
+   * deprecated
+   * </pre>
+   *
    * <code>PACKAGING_OPTIONS_ACTION = 28;</code>
    */
   PACKAGING_OPTIONS_ACTION(28),
@@ -206,6 +218,10 @@ public enum VariantPropertiesMethodType
    */
   DEX_PACKAGING_OPTIONS(48),
   /**
+   * <pre>
+   * deprecated
+   * </pre>
+   *
    * <code>DEX_PACKAGING_OPTIONS_ACTION = 49;</code>
    */
   DEX_PACKAGING_OPTIONS_ACTION(49),
@@ -270,6 +286,10 @@ public enum VariantPropertiesMethodType
    */
   DEXING(64),
   /**
+   * <pre>
+   * deprecated
+   * </pre>
+   *
    * <code>DEXING_ACTION = 65;</code>
    */
   DEXING_ACTION(65),
@@ -305,6 +325,30 @@ public enum VariantPropertiesMethodType
    * <code>ANDROID_TEST = 73;</code>
    */
   ANDROID_TEST(73),
+  /**
+   * <code>VARIANT_AAR_METADATA = 74;</code>
+   */
+  VARIANT_AAR_METADATA(74),
+  /**
+   * <code>VARIANT_AAR_METADATA_MIN_COMPILE_SDK = 75;</code>
+   */
+  VARIANT_AAR_METADATA_MIN_COMPILE_SDK(75),
+  /**
+   * <code>SIGNING_CONFIG_ENABLE_V1 = 76;</code>
+   */
+  SIGNING_CONFIG_ENABLE_V1(76),
+  /**
+   * <code>SIGNING_CONFIG_ENABLE_V2 = 77;</code>
+   */
+  SIGNING_CONFIG_ENABLE_V2(77),
+  /**
+   * <code>SIGNING_CONFIG_ENABLE_V3 = 78;</code>
+   */
+  SIGNING_CONFIG_ENABLE_V3(78),
+  /**
+   * <code>SIGNING_CONFIG_ENABLE_V4 = 79;</code>
+   */
+  SIGNING_CONFIG_ENABLE_V4(79),
   UNRECOGNIZED(-1),
   ;
 
@@ -373,6 +417,10 @@ public enum VariantPropertiesMethodType
    */
   public static final int AAPT_OPTIONS_VALUE = 15;
   /**
+   * <pre>
+   * deprecated
+   * </pre>
+   *
    * <code>AAPT_OPTIONS_ACTION = 16;</code>
    */
   public static final int AAPT_OPTIONS_ACTION_VALUE = 16;
@@ -409,6 +457,10 @@ public enum VariantPropertiesMethodType
    */
   public static final int SIGNING_CONFIG_VALUE = 24;
   /**
+   * <pre>
+   * deprecated
+   * </pre>
+   *
    * <code>SIGNING_CONFIG_ACTION = 25;</code>
    */
   public static final int SIGNING_CONFIG_ACTION_VALUE = 25;
@@ -421,6 +473,10 @@ public enum VariantPropertiesMethodType
    */
   public static final int PACKAGING_OPTIONS_VALUE = 27;
   /**
+   * <pre>
+   * deprecated
+   * </pre>
+   *
    * <code>PACKAGING_OPTIONS_ACTION = 28;</code>
    */
   public static final int PACKAGING_OPTIONS_ACTION_VALUE = 28;
@@ -505,6 +561,10 @@ public enum VariantPropertiesMethodType
    */
   public static final int DEX_PACKAGING_OPTIONS_VALUE = 48;
   /**
+   * <pre>
+   * deprecated
+   * </pre>
+   *
    * <code>DEX_PACKAGING_OPTIONS_ACTION = 49;</code>
    */
   public static final int DEX_PACKAGING_OPTIONS_ACTION_VALUE = 49;
@@ -569,6 +629,10 @@ public enum VariantPropertiesMethodType
    */
   public static final int DEXING_VALUE = 64;
   /**
+   * <pre>
+   * deprecated
+   * </pre>
+   *
    * <code>DEXING_ACTION = 65;</code>
    */
   public static final int DEXING_ACTION_VALUE = 65;
@@ -604,6 +668,30 @@ public enum VariantPropertiesMethodType
    * <code>ANDROID_TEST = 73;</code>
    */
   public static final int ANDROID_TEST_VALUE = 73;
+  /**
+   * <code>VARIANT_AAR_METADATA = 74;</code>
+   */
+  public static final int VARIANT_AAR_METADATA_VALUE = 74;
+  /**
+   * <code>VARIANT_AAR_METADATA_MIN_COMPILE_SDK = 75;</code>
+   */
+  public static final int VARIANT_AAR_METADATA_MIN_COMPILE_SDK_VALUE = 75;
+  /**
+   * <code>SIGNING_CONFIG_ENABLE_V1 = 76;</code>
+   */
+  public static final int SIGNING_CONFIG_ENABLE_V1_VALUE = 76;
+  /**
+   * <code>SIGNING_CONFIG_ENABLE_V2 = 77;</code>
+   */
+  public static final int SIGNING_CONFIG_ENABLE_V2_VALUE = 77;
+  /**
+   * <code>SIGNING_CONFIG_ENABLE_V3 = 78;</code>
+   */
+  public static final int SIGNING_CONFIG_ENABLE_V3_VALUE = 78;
+  /**
+   * <code>SIGNING_CONFIG_ENABLE_V4 = 79;</code>
+   */
+  public static final int SIGNING_CONFIG_ENABLE_V4_VALUE = 79;
 
 
   public final int getNumber() {
@@ -704,6 +792,12 @@ public enum VariantPropertiesMethodType
       case 71: return RENDERSCRIPT_NDK_MODE;
       case 72: return RENDERSCRIPT_OPTIMIZATION_LEVEL;
       case 73: return ANDROID_TEST;
+      case 74: return VARIANT_AAR_METADATA;
+      case 75: return VARIANT_AAR_METADATA_MIN_COMPILE_SDK;
+      case 76: return SIGNING_CONFIG_ENABLE_V1;
+      case 77: return SIGNING_CONFIG_ENABLE_V2;
+      case 78: return SIGNING_CONFIG_ENABLE_V3;
+      case 79: return SIGNING_CONFIG_ENABLE_V4;
       default: return null;
     }
   }

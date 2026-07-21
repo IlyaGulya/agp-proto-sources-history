@@ -552,4 +552,23 @@ public interface GradleBuildProfileOrBuilder extends
    * @return The configurationCachingEnabled.
    */
   boolean getConfigurationCachingEnabled();
+
+  /**
+   * <pre>
+   * If Gradle parallel task execution is enabled.
+   * </pre>
+   *
+   * <code>optional bool parallel_task_execution = 22;</code>
+   * @return Whether the parallelTaskExecution field is set.
+   */
+  boolean hasParallelTaskExecution();
+  /**
+   * <pre>
+   * If Gradle parallel task execution is enabled.
+   * </pre>
+   *
+   * <code>optional bool parallel_task_execution = 22;</code>
+   * @return The parallelTaskExecution.
+   */
+  boolean getParallelTaskExecution();
 }
