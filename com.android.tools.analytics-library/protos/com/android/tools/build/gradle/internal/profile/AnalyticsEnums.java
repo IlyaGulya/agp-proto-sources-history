@@ -530,7 +530,7 @@ public final class AnalyticsEnums {
       "REVIEW\020\n\022\026\n\022TARGET_SDK_PREVIEW\020\013\022%\n!VARI" +
       "ANT_BUILDER_DEPENDENCIES_INFO\020\014\022\031\n\025TEST_" +
       "FIXTURES_ENABLED\020\r\022\033\n\027CODE_MINIFICATION_" +
-      "VALUE\020\016\022\032\n\026SHRINK_RESOURCES_VALUE\020\017*\316\035\n\033" +
+      "VALUE\020\016\022\032\n\026SHRINK_RESOURCES_VALUE\020\017*\315\036\n\033" +
       "VariantPropertiesMethodType\022\"\n\036UNKNOWN_P" +
       "ROPERTIES_METHOD_TYPE\020\000\022\r\n\tARTIFACTS\020\001\022\031" +
       "\n\025ASM_TRANSFORM_CLASSES\020\002\022\037\n\033ASM_FRAMES_" +
@@ -625,9 +625,12 @@ public final class AnalyticsEnums {
       "\205\001\022%\n SOURCES_BASELINE_PROFILES_ACCESS\020\206" +
       "\001\022%\n INSTRUMENTATION_RUNNER_ARGUMENTS\020\207\001" +
       "\022\037\n\032MISSING_DIMENSION_STRATEGY\020\210\001\022\017\n\nDEB" +
-      "UGGABLE\020\211\001\022\020\n\013TESTED_APKS\020\212\001B3\n/com.andr" +
-      "oid.tools.build.gradle.internal.profileP" +
-      "\001b\006proto3"
+      "UGGABLE\020\211\001\022\020\n\013TESTED_APKS\020\212\001\022\030\n\023SINGLE_T" +
+      "O_LISTEN_TO\020\213\001\022\032\n\025MULTIPLE_TO_LISTEN_TO\020" +
+      "\214\001\022\030\n\023WIRED_WITH_MULTIPLE\020\215\001\022\024\n\017LIFECYCL" +
+      "E_TASKS\020\216\001\022\027\n\022REGISTER_PRE_BUILD\020\217\001B3\n/c" +
+      "om.android.tools.build.gradle.internal.p" +
+      "rofileP\001b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

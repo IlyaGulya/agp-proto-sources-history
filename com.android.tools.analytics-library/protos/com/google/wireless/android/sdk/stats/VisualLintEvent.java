@@ -22,6 +22,7 @@ private static final long serialVersionUID = 0L;
   private VisualLintEvent() {
     issueType_ = 0;
     issueEvent_ = 0;
+    eventOrigin_ = 0;
   }
 
   @java.lang.Override
@@ -402,6 +403,115 @@ private static final long serialVersionUID = 0L;
     // @@protoc_insertion_point(enum_scope:android_studio.VisualLintEvent.IssueEvent)
   }
 
+  /**
+   * <pre>
+   * Possible origins for visual lint event
+   * </pre>
+   *
+   * Protobuf enum {@code android_studio.VisualLintEvent.EventOrigin}
+   */
+  public enum EventOrigin
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <code>UNKNOWN_ORIGIN = 0;</code>
+     */
+    UNKNOWN_ORIGIN(0),
+    /**
+     * <code>XML_LINTING = 1;</code>
+     */
+    XML_LINTING(1),
+    /**
+     * <code>UI_CHECK = 2;</code>
+     */
+    UI_CHECK(2),
+    ;
+
+    /**
+     * <code>UNKNOWN_ORIGIN = 0;</code>
+     */
+    public static final int UNKNOWN_ORIGIN_VALUE = 0;
+    /**
+     * <code>XML_LINTING = 1;</code>
+     */
+    public static final int XML_LINTING_VALUE = 1;
+    /**
+     * <code>UI_CHECK = 2;</code>
+     */
+    public static final int UI_CHECK_VALUE = 2;
+
+
+    public final int getNumber() {
+      return value;
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     * @deprecated Use {@link #forNumber(int)} instead.
+     */
+    @java.lang.Deprecated
+    public static EventOrigin valueOf(int value) {
+      return forNumber(value);
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     */
+    public static EventOrigin forNumber(int value) {
+      switch (value) {
+        case 0: return UNKNOWN_ORIGIN;
+        case 1: return XML_LINTING;
+        case 2: return UI_CHECK;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<EventOrigin>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static final com.google.protobuf.Internal.EnumLiteMap<
+        EventOrigin> internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<EventOrigin>() {
+            public EventOrigin findValueByNumber(int number) {
+              return EventOrigin.forNumber(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      return getDescriptor().getValues().get(ordinal());
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return com.google.wireless.android.sdk.stats.VisualLintEvent.getDescriptor().getEnumTypes().get(2);
+    }
+
+    private static final EventOrigin[] VALUES = values();
+
+    public static EventOrigin valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int value;
+
+    private EventOrigin(int value) {
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:android_studio.VisualLintEvent.EventOrigin)
+  }
+
   private int bitField0_;
   public static final int ISSUE_TYPE_FIELD_NUMBER = 1;
   private int issueType_;
@@ -457,6 +567,87 @@ private static final long serialVersionUID = 0L;
     return result == null ? com.google.wireless.android.sdk.stats.VisualLintEvent.IssueEvent.UNKNOWN_EVENT : result;
   }
 
+  public static final int EVENT_ORIGIN_FIELD_NUMBER = 3;
+  private int eventOrigin_;
+  /**
+   * <pre>
+   * The origin that triggered the visual lint event
+   * </pre>
+   *
+   * <code>optional .android_studio.VisualLintEvent.EventOrigin event_origin = 3;</code>
+   * @return Whether the eventOrigin field is set.
+   */
+  @java.lang.Override public boolean hasEventOrigin() {
+    return ((bitField0_ & 0x00000004) != 0);
+  }
+  /**
+   * <pre>
+   * The origin that triggered the visual lint event
+   * </pre>
+   *
+   * <code>optional .android_studio.VisualLintEvent.EventOrigin event_origin = 3;</code>
+   * @return The eventOrigin.
+   */
+  @java.lang.Override public com.google.wireless.android.sdk.stats.VisualLintEvent.EventOrigin getEventOrigin() {
+    @SuppressWarnings("deprecation")
+    com.google.wireless.android.sdk.stats.VisualLintEvent.EventOrigin result = com.google.wireless.android.sdk.stats.VisualLintEvent.EventOrigin.valueOf(eventOrigin_);
+    return result == null ? com.google.wireless.android.sdk.stats.VisualLintEvent.EventOrigin.UNKNOWN_ORIGIN : result;
+  }
+
+  public static final int UI_CHECK_START_TIME_MS_FIELD_NUMBER = 4;
+  private long uiCheckStartTimeMs_;
+  /**
+   * <pre>
+   * The time it took for UI Check mode to start in ms
+   * </pre>
+   *
+   * <code>optional int64 ui_check_start_time_ms = 4;</code>
+   * @return Whether the uiCheckStartTimeMs field is set.
+   */
+  @java.lang.Override
+  public boolean hasUiCheckStartTimeMs() {
+    return ((bitField0_ & 0x00000008) != 0);
+  }
+  /**
+   * <pre>
+   * The time it took for UI Check mode to start in ms
+   * </pre>
+   *
+   * <code>optional int64 ui_check_start_time_ms = 4;</code>
+   * @return The uiCheckStartTimeMs.
+   */
+  @java.lang.Override
+  public long getUiCheckStartTimeMs() {
+    return uiCheckStartTimeMs_;
+  }
+
+  public static final int VISIBLE_PREVIEWS_NUMBER_FIELD_NUMBER = 5;
+  private int visiblePreviewsNumber_;
+  /**
+   * <pre>
+   * The number of visible previews in UI Check
+   * </pre>
+   *
+   * <code>optional int32 visible_previews_number = 5;</code>
+   * @return Whether the visiblePreviewsNumber field is set.
+   */
+  @java.lang.Override
+  public boolean hasVisiblePreviewsNumber() {
+    return ((bitField0_ & 0x00000010) != 0);
+  }
+  /**
+   * <pre>
+   * The number of visible previews in UI Check
+   * </pre>
+   *
+   * <code>optional int32 visible_previews_number = 5;</code>
+   * @return The visiblePreviewsNumber.
+   */
+  @java.lang.Override
+  public int getVisiblePreviewsNumber() {
+    return visiblePreviewsNumber_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -477,6 +668,15 @@ private static final long serialVersionUID = 0L;
     if (((bitField0_ & 0x00000002) != 0)) {
       output.writeEnum(2, issueEvent_);
     }
+    if (((bitField0_ & 0x00000004) != 0)) {
+      output.writeEnum(3, eventOrigin_);
+    }
+    if (((bitField0_ & 0x00000008) != 0)) {
+      output.writeInt64(4, uiCheckStartTimeMs_);
+    }
+    if (((bitField0_ & 0x00000010) != 0)) {
+      output.writeInt32(5, visiblePreviewsNumber_);
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -493,6 +693,18 @@ private static final long serialVersionUID = 0L;
     if (((bitField0_ & 0x00000002) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(2, issueEvent_);
+    }
+    if (((bitField0_ & 0x00000004) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeEnumSize(3, eventOrigin_);
+    }
+    if (((bitField0_ & 0x00000008) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeInt64Size(4, uiCheckStartTimeMs_);
+    }
+    if (((bitField0_ & 0x00000010) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeInt32Size(5, visiblePreviewsNumber_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -517,6 +729,20 @@ private static final long serialVersionUID = 0L;
     if (hasIssueEvent()) {
       if (issueEvent_ != other.issueEvent_) return false;
     }
+    if (hasEventOrigin() != other.hasEventOrigin()) return false;
+    if (hasEventOrigin()) {
+      if (eventOrigin_ != other.eventOrigin_) return false;
+    }
+    if (hasUiCheckStartTimeMs() != other.hasUiCheckStartTimeMs()) return false;
+    if (hasUiCheckStartTimeMs()) {
+      if (getUiCheckStartTimeMs()
+          != other.getUiCheckStartTimeMs()) return false;
+    }
+    if (hasVisiblePreviewsNumber() != other.hasVisiblePreviewsNumber()) return false;
+    if (hasVisiblePreviewsNumber()) {
+      if (getVisiblePreviewsNumber()
+          != other.getVisiblePreviewsNumber()) return false;
+    }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -535,6 +761,19 @@ private static final long serialVersionUID = 0L;
     if (hasIssueEvent()) {
       hash = (37 * hash) + ISSUE_EVENT_FIELD_NUMBER;
       hash = (53 * hash) + issueEvent_;
+    }
+    if (hasEventOrigin()) {
+      hash = (37 * hash) + EVENT_ORIGIN_FIELD_NUMBER;
+      hash = (53 * hash) + eventOrigin_;
+    }
+    if (hasUiCheckStartTimeMs()) {
+      hash = (37 * hash) + UI_CHECK_START_TIME_MS_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getUiCheckStartTimeMs());
+    }
+    if (hasVisiblePreviewsNumber()) {
+      hash = (37 * hash) + VISIBLE_PREVIEWS_NUMBER_FIELD_NUMBER;
+      hash = (53 * hash) + getVisiblePreviewsNumber();
     }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
@@ -672,6 +911,12 @@ private static final long serialVersionUID = 0L;
       bitField0_ = (bitField0_ & ~0x00000001);
       issueEvent_ = 0;
       bitField0_ = (bitField0_ & ~0x00000002);
+      eventOrigin_ = 0;
+      bitField0_ = (bitField0_ & ~0x00000004);
+      uiCheckStartTimeMs_ = 0L;
+      bitField0_ = (bitField0_ & ~0x00000008);
+      visiblePreviewsNumber_ = 0;
+      bitField0_ = (bitField0_ & ~0x00000010);
       return this;
     }
 
@@ -708,6 +953,18 @@ private static final long serialVersionUID = 0L;
         to_bitField0_ |= 0x00000002;
       }
       result.issueEvent_ = issueEvent_;
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        to_bitField0_ |= 0x00000004;
+      }
+      result.eventOrigin_ = eventOrigin_;
+      if (((from_bitField0_ & 0x00000008) != 0)) {
+        result.uiCheckStartTimeMs_ = uiCheckStartTimeMs_;
+        to_bitField0_ |= 0x00000008;
+      }
+      if (((from_bitField0_ & 0x00000010) != 0)) {
+        result.visiblePreviewsNumber_ = visiblePreviewsNumber_;
+        to_bitField0_ |= 0x00000010;
+      }
       result.bitField0_ = to_bitField0_;
       onBuilt();
       return result;
@@ -763,6 +1020,15 @@ private static final long serialVersionUID = 0L;
       if (other.hasIssueEvent()) {
         setIssueEvent(other.getIssueEvent());
       }
+      if (other.hasEventOrigin()) {
+        setEventOrigin(other.getEventOrigin());
+      }
+      if (other.hasUiCheckStartTimeMs()) {
+        setUiCheckStartTimeMs(other.getUiCheckStartTimeMs());
+      }
+      if (other.hasVisiblePreviewsNumber()) {
+        setVisiblePreviewsNumber(other.getVisiblePreviewsNumber());
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -813,6 +1079,28 @@ private static final long serialVersionUID = 0L;
               }
               break;
             } // case 16
+            case 24: {
+              int tmpRaw = input.readEnum();
+              com.google.wireless.android.sdk.stats.VisualLintEvent.EventOrigin tmpValue =
+                  com.google.wireless.android.sdk.stats.VisualLintEvent.EventOrigin.forNumber(tmpRaw);
+              if (tmpValue == null) {
+                mergeUnknownVarintField(3, tmpRaw);
+              } else {
+                eventOrigin_ = tmpRaw;
+                bitField0_ |= 0x00000004;
+              }
+              break;
+            } // case 24
+            case 32: {
+              uiCheckStartTimeMs_ = input.readInt64();
+              bitField0_ |= 0x00000008;
+              break;
+            } // case 32
+            case 40: {
+              visiblePreviewsNumber_ = input.readInt32();
+              bitField0_ |= 0x00000010;
+              break;
+            } // case 40
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -944,6 +1232,175 @@ private static final long serialVersionUID = 0L;
     public Builder clearIssueEvent() {
       bitField0_ = (bitField0_ & ~0x00000002);
       issueEvent_ = 0;
+      onChanged();
+      return this;
+    }
+
+    private int eventOrigin_ = 0;
+    /**
+     * <pre>
+     * The origin that triggered the visual lint event
+     * </pre>
+     *
+     * <code>optional .android_studio.VisualLintEvent.EventOrigin event_origin = 3;</code>
+     * @return Whether the eventOrigin field is set.
+     */
+    @java.lang.Override public boolean hasEventOrigin() {
+      return ((bitField0_ & 0x00000004) != 0);
+    }
+    /**
+     * <pre>
+     * The origin that triggered the visual lint event
+     * </pre>
+     *
+     * <code>optional .android_studio.VisualLintEvent.EventOrigin event_origin = 3;</code>
+     * @return The eventOrigin.
+     */
+    @java.lang.Override
+    public com.google.wireless.android.sdk.stats.VisualLintEvent.EventOrigin getEventOrigin() {
+      @SuppressWarnings("deprecation")
+      com.google.wireless.android.sdk.stats.VisualLintEvent.EventOrigin result = com.google.wireless.android.sdk.stats.VisualLintEvent.EventOrigin.valueOf(eventOrigin_);
+      return result == null ? com.google.wireless.android.sdk.stats.VisualLintEvent.EventOrigin.UNKNOWN_ORIGIN : result;
+    }
+    /**
+     * <pre>
+     * The origin that triggered the visual lint event
+     * </pre>
+     *
+     * <code>optional .android_studio.VisualLintEvent.EventOrigin event_origin = 3;</code>
+     * @param value The eventOrigin to set.
+     * @return This builder for chaining.
+     */
+    public Builder setEventOrigin(com.google.wireless.android.sdk.stats.VisualLintEvent.EventOrigin value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      bitField0_ |= 0x00000004;
+      eventOrigin_ = value.getNumber();
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The origin that triggered the visual lint event
+     * </pre>
+     *
+     * <code>optional .android_studio.VisualLintEvent.EventOrigin event_origin = 3;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearEventOrigin() {
+      bitField0_ = (bitField0_ & ~0x00000004);
+      eventOrigin_ = 0;
+      onChanged();
+      return this;
+    }
+
+    private long uiCheckStartTimeMs_ ;
+    /**
+     * <pre>
+     * The time it took for UI Check mode to start in ms
+     * </pre>
+     *
+     * <code>optional int64 ui_check_start_time_ms = 4;</code>
+     * @return Whether the uiCheckStartTimeMs field is set.
+     */
+    @java.lang.Override
+    public boolean hasUiCheckStartTimeMs() {
+      return ((bitField0_ & 0x00000008) != 0);
+    }
+    /**
+     * <pre>
+     * The time it took for UI Check mode to start in ms
+     * </pre>
+     *
+     * <code>optional int64 ui_check_start_time_ms = 4;</code>
+     * @return The uiCheckStartTimeMs.
+     */
+    @java.lang.Override
+    public long getUiCheckStartTimeMs() {
+      return uiCheckStartTimeMs_;
+    }
+    /**
+     * <pre>
+     * The time it took for UI Check mode to start in ms
+     * </pre>
+     *
+     * <code>optional int64 ui_check_start_time_ms = 4;</code>
+     * @param value The uiCheckStartTimeMs to set.
+     * @return This builder for chaining.
+     */
+    public Builder setUiCheckStartTimeMs(long value) {
+      bitField0_ |= 0x00000008;
+      uiCheckStartTimeMs_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The time it took for UI Check mode to start in ms
+     * </pre>
+     *
+     * <code>optional int64 ui_check_start_time_ms = 4;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearUiCheckStartTimeMs() {
+      bitField0_ = (bitField0_ & ~0x00000008);
+      uiCheckStartTimeMs_ = 0L;
+      onChanged();
+      return this;
+    }
+
+    private int visiblePreviewsNumber_ ;
+    /**
+     * <pre>
+     * The number of visible previews in UI Check
+     * </pre>
+     *
+     * <code>optional int32 visible_previews_number = 5;</code>
+     * @return Whether the visiblePreviewsNumber field is set.
+     */
+    @java.lang.Override
+    public boolean hasVisiblePreviewsNumber() {
+      return ((bitField0_ & 0x00000010) != 0);
+    }
+    /**
+     * <pre>
+     * The number of visible previews in UI Check
+     * </pre>
+     *
+     * <code>optional int32 visible_previews_number = 5;</code>
+     * @return The visiblePreviewsNumber.
+     */
+    @java.lang.Override
+    public int getVisiblePreviewsNumber() {
+      return visiblePreviewsNumber_;
+    }
+    /**
+     * <pre>
+     * The number of visible previews in UI Check
+     * </pre>
+     *
+     * <code>optional int32 visible_previews_number = 5;</code>
+     * @param value The visiblePreviewsNumber to set.
+     * @return This builder for chaining.
+     */
+    public Builder setVisiblePreviewsNumber(int value) {
+      bitField0_ |= 0x00000010;
+      visiblePreviewsNumber_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The number of visible previews in UI Check
+     * </pre>
+     *
+     * <code>optional int32 visible_previews_number = 5;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearVisiblePreviewsNumber() {
+      bitField0_ = (bitField0_ & ~0x00000010);
+      visiblePreviewsNumber_ = 0;
       onChanged();
       return this;
     }
