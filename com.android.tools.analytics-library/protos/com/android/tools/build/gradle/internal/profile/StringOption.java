@@ -157,6 +157,10 @@ public enum StringOption
    * <code>AAPT2_FROM_MAVEN_PLATFORM_OVERRIDE = 36;</code>
    */
   AAPT2_FROM_MAVEN_PLATFORM_OVERRIDE(36),
+  /**
+   * <code>IDE_AGDE_VERSION = 37;</code>
+   */
+  IDE_AGDE_VERSION(37),
   UNRECOGNIZED(-1),
   ;
 
@@ -308,6 +312,10 @@ public enum StringOption
    * <code>AAPT2_FROM_MAVEN_PLATFORM_OVERRIDE = 36;</code>
    */
   public static final int AAPT2_FROM_MAVEN_PLATFORM_OVERRIDE_VALUE = 36;
+  /**
+   * <code>IDE_AGDE_VERSION = 37;</code>
+   */
+  public static final int IDE_AGDE_VERSION_VALUE = 37;
 
 
   public final int getNumber() {
@@ -371,6 +379,7 @@ public enum StringOption
       case 34: return LINT_VERSION_OVERRIDE;
       case 35: return IDE_CHECK_JETIFIER_RESULT_FILE;
       case 36: return AAPT2_FROM_MAVEN_PLATFORM_OVERRIDE;
+      case 37: return IDE_AGDE_VERSION;
       default: return null;
     }
   }

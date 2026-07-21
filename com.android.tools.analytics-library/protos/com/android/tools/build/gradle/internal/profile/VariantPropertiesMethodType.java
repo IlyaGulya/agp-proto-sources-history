@@ -433,6 +433,10 @@ public enum VariantPropertiesMethodType
    * <code>NESTED_COMPONENTS = 96;</code>
    */
   NESTED_COMPONENTS(96),
+  /**
+   * <code>VARIANT_AAR_METADATA_MIN_AGP_VERSION = 97;</code>
+   */
+  VARIANT_AAR_METADATA_MIN_AGP_VERSION(97),
   UNRECOGNIZED(-1),
   ;
 
@@ -860,6 +864,10 @@ public enum VariantPropertiesMethodType
    * <code>NESTED_COMPONENTS = 96;</code>
    */
   public static final int NESTED_COMPONENTS_VALUE = 96;
+  /**
+   * <code>VARIANT_AAR_METADATA_MIN_AGP_VERSION = 97;</code>
+   */
+  public static final int VARIANT_AAR_METADATA_MIN_AGP_VERSION_VALUE = 97;
 
 
   public final int getNumber() {
@@ -983,6 +991,7 @@ public enum VariantPropertiesMethodType
       case 94: return ANNOTATION_PROCESSOR_ARGUMENTS;
       case 95: return ANNOTATION_PROCESSOR_ARGUMENT_PROVIDERS;
       case 96: return NESTED_COMPONENTS;
+      case 97: return VARIANT_AAR_METADATA_MIN_AGP_VERSION;
       default: return null;
     }
   }
