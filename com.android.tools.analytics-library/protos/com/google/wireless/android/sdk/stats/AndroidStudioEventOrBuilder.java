@@ -4288,4 +4288,31 @@ public interface AndroidStudioEventOrBuilder extends
    * <code>optional .android_studio.SdkIndexLoadingDetails sdk_index_loading_details = 152;</code>
    */
   com.google.wireless.android.sdk.stats.SdkIndexLoadingDetailsOrBuilder getSdkIndexLoadingDetailsOrBuilder();
+
+  /**
+   * <pre>
+   * set when kind = MANIFEST_MERGER_STATS
+   * </pre>
+   *
+   * <code>optional .android_studio.ManifestMergerStats manifest_merger_stats = 153;</code>
+   * @return Whether the manifestMergerStats field is set.
+   */
+  boolean hasManifestMergerStats();
+  /**
+   * <pre>
+   * set when kind = MANIFEST_MERGER_STATS
+   * </pre>
+   *
+   * <code>optional .android_studio.ManifestMergerStats manifest_merger_stats = 153;</code>
+   * @return The manifestMergerStats.
+   */
+  com.google.wireless.android.sdk.stats.ManifestMergerStats getManifestMergerStats();
+  /**
+   * <pre>
+   * set when kind = MANIFEST_MERGER_STATS
+   * </pre>
+   *
+   * <code>optional .android_studio.ManifestMergerStats manifest_merger_stats = 153;</code>
+   */
+  com.google.wireless.android.sdk.stats.ManifestMergerStatsOrBuilder getManifestMergerStatsOrBuilder();
 }
