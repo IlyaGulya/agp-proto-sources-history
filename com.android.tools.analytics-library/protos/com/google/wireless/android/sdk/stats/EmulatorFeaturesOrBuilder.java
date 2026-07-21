@@ -42,20 +42,31 @@ public interface EmulatorFeaturesOrBuilder extends
 
   /**
    * <pre>
-   * True if the emulator is running standalone.
+   * Use launch_type with "CONTAINER" instead.
    * </pre>
    *
-   * <code>optional bool container_launch = 4;</code>
+   * <code>optional bool container_launch = 4 [deprecated = true];</code>
    * @return Whether the containerLaunch field is set.
    */
-  boolean hasContainerLaunch();
+  @java.lang.Deprecated boolean hasContainerLaunch();
   /**
    * <pre>
-   * True if the emulator is running standalone.
+   * Use launch_type with "CONTAINER" instead.
    * </pre>
    *
-   * <code>optional bool container_launch = 4;</code>
+   * <code>optional bool container_launch = 4 [deprecated = true];</code>
    * @return The containerLaunch.
    */
-  boolean getContainerLaunch();
+  @java.lang.Deprecated boolean getContainerLaunch();
+
+  /**
+   * <code>optional .android_studio.EmulatorFeatures.EmulatorLaunchType launch_type = 5;</code>
+   * @return Whether the launchType field is set.
+   */
+  boolean hasLaunchType();
+  /**
+   * <code>optional .android_studio.EmulatorFeatures.EmulatorLaunchType launch_type = 5;</code>
+   * @return The launchType.
+   */
+  com.google.wireless.android.sdk.stats.EmulatorFeatures.EmulatorLaunchType getLaunchType();
 }

@@ -149,6 +149,10 @@ private static final long serialVersionUID = 0L;
      * <code>MIGRATE_TO_BUILD_FEATURES = 7;</code>
      */
     MIGRATE_TO_BUILD_FEATURES(7),
+    /**
+     * <code>REMOVE_SOURCE_SET_JNI = 8;</code>
+     */
+    REMOVE_SOURCE_SET_JNI(8),
     ;
 
     /**
@@ -183,6 +187,10 @@ private static final long serialVersionUID = 0L;
      * <code>MIGRATE_TO_BUILD_FEATURES = 7;</code>
      */
     public static final int MIGRATE_TO_BUILD_FEATURES_VALUE = 7;
+    /**
+     * <code>REMOVE_SOURCE_SET_JNI = 8;</code>
+     */
+    public static final int REMOVE_SOURCE_SET_JNI_VALUE = 8;
 
 
     public final int getNumber() {
@@ -213,6 +221,7 @@ private static final long serialVersionUID = 0L;
         case 5: return COMPILE_RUNTIME_CONFIGURATION;
         case 6: return FABRIC_CRASHLYTICS;
         case 7: return MIGRATE_TO_BUILD_FEATURES;
+        case 8: return REMOVE_SOURCE_SET_JNI;
         default: return null;
       }
     }

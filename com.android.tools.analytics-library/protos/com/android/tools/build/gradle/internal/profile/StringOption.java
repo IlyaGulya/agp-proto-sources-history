@@ -133,6 +133,10 @@ public enum StringOption
    * <code>NATIVE_BUILD_OUTPUT_LEVEL = 30;</code>
    */
   NATIVE_BUILD_OUTPUT_LEVEL(30),
+  /**
+   * <code>AAPT2_FROM_MAVEN_VERSION_OVERRIDE = 31;</code>
+   */
+  AAPT2_FROM_MAVEN_VERSION_OVERRIDE(31),
   UNRECOGNIZED(-1),
   ;
 
@@ -260,6 +264,10 @@ public enum StringOption
    * <code>NATIVE_BUILD_OUTPUT_LEVEL = 30;</code>
    */
   public static final int NATIVE_BUILD_OUTPUT_LEVEL_VALUE = 30;
+  /**
+   * <code>AAPT2_FROM_MAVEN_VERSION_OVERRIDE = 31;</code>
+   */
+  public static final int AAPT2_FROM_MAVEN_VERSION_OVERRIDE_VALUE = 31;
 
 
   public final int getNumber() {
@@ -317,6 +325,7 @@ public enum StringOption
       case 28: return IDE_INSTALL_DYNAMIC_MODULES_LIST;
       case 29: return JETIFIER_IGNORE_LIST;
       case 30: return NATIVE_BUILD_OUTPUT_LEVEL;
+      case 31: return AAPT2_FROM_MAVEN_VERSION_OVERRIDE;
       default: return null;
     }
   }
