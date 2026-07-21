@@ -4834,4 +4834,31 @@ public interface AndroidStudioEventOrBuilder extends
    * <code>optional .android_studio.DeviceScreenshotEvent device_screenshot_event = 172;</code>
    */
   com.google.wireless.android.sdk.stats.DeviceScreenshotEventOrBuilder getDeviceScreenshotEventOrBuilder();
+
+  /**
+   * <pre>
+   * set when kind = EDITOR_NOTIFICATION
+   * </pre>
+   *
+   * <code>optional .android_studio.EditorNotification editor_notification = 173;</code>
+   * @return Whether the editorNotification field is set.
+   */
+  boolean hasEditorNotification();
+  /**
+   * <pre>
+   * set when kind = EDITOR_NOTIFICATION
+   * </pre>
+   *
+   * <code>optional .android_studio.EditorNotification editor_notification = 173;</code>
+   * @return The editorNotification.
+   */
+  com.google.wireless.android.sdk.stats.EditorNotification getEditorNotification();
+  /**
+   * <pre>
+   * set when kind = EDITOR_NOTIFICATION
+   * </pre>
+   *
+   * <code>optional .android_studio.EditorNotification editor_notification = 173;</code>
+   */
+  com.google.wireless.android.sdk.stats.EditorNotificationOrBuilder getEditorNotificationOrBuilder();
 }

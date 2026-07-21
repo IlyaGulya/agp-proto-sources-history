@@ -2232,6 +2232,19 @@ private static final long serialVersionUID = 0L;
             bitField5_ |= 0x00000020;
             break;
           }
+          case 1386: {
+            com.google.wireless.android.sdk.stats.EditorNotification.Builder subBuilder = null;
+            if (((bitField5_ & 0x00000040) != 0)) {
+              subBuilder = editorNotification_.toBuilder();
+            }
+            editorNotification_ = input.readMessage(com.google.wireless.android.sdk.stats.EditorNotification.PARSER, extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(editorNotification_);
+              editorNotification_ = subBuilder.buildPartial();
+            }
+            bitField5_ |= 0x00000040;
+            break;
+          }
           default: {
             if (!parseUnknownField(
                 input, unknownFields, extensionRegistry, tag)) {
@@ -5050,6 +5063,14 @@ private static final long serialVersionUID = 0L;
      * <code>DEVICE_SCREENSHOT_EVENT = 288;</code>
      */
     DEVICE_SCREENSHOT_EVENT(288),
+    /**
+     * <pre>
+     * Event related to a notification being displayed to the user
+     * </pre>
+     *
+     * <code>EDITOR_NOTIFICATION = 289;</code>
+     */
+    EDITOR_NOTIFICATION(289),
     ;
 
     /**
@@ -7190,6 +7211,14 @@ private static final long serialVersionUID = 0L;
      * <code>DEVICE_SCREENSHOT_EVENT = 288;</code>
      */
     public static final int DEVICE_SCREENSHOT_EVENT_VALUE = 288;
+    /**
+     * <pre>
+     * Event related to a notification being displayed to the user
+     * </pre>
+     *
+     * <code>EDITOR_NOTIFICATION = 289;</code>
+     */
+    public static final int EDITOR_NOTIFICATION_VALUE = 289;
 
 
     public final int getNumber() {
@@ -7496,6 +7525,7 @@ private static final long serialVersionUID = 0L;
         case 286: return GRADLE_JDK_MIGRATE_TO_LOCAL_PROPERTIES_DIALOG_ACCEPTED;
         case 287: return GRADLE_JDK_MIGRATE_TO_LOCAL_PROPERTIES_DIALOG_CANCELED;
         case 288: return DEVICE_SCREENSHOT_EVENT;
+        case 289: return EDITOR_NOTIFICATION;
         default: return null;
       }
     }
@@ -22947,6 +22977,44 @@ private static final long serialVersionUID = 0L;
     return deviceScreenshotEvent_ == null ? com.google.wireless.android.sdk.stats.DeviceScreenshotEvent.getDefaultInstance() : deviceScreenshotEvent_;
   }
 
+  public static final int EDITOR_NOTIFICATION_FIELD_NUMBER = 173;
+  private com.google.wireless.android.sdk.stats.EditorNotification editorNotification_;
+  /**
+   * <pre>
+   * set when kind = EDITOR_NOTIFICATION
+   * </pre>
+   *
+   * <code>optional .android_studio.EditorNotification editor_notification = 173;</code>
+   * @return Whether the editorNotification field is set.
+   */
+  @java.lang.Override
+  public boolean hasEditorNotification() {
+    return ((bitField5_ & 0x00000040) != 0);
+  }
+  /**
+   * <pre>
+   * set when kind = EDITOR_NOTIFICATION
+   * </pre>
+   *
+   * <code>optional .android_studio.EditorNotification editor_notification = 173;</code>
+   * @return The editorNotification.
+   */
+  @java.lang.Override
+  public com.google.wireless.android.sdk.stats.EditorNotification getEditorNotification() {
+    return editorNotification_ == null ? com.google.wireless.android.sdk.stats.EditorNotification.getDefaultInstance() : editorNotification_;
+  }
+  /**
+   * <pre>
+   * set when kind = EDITOR_NOTIFICATION
+   * </pre>
+   *
+   * <code>optional .android_studio.EditorNotification editor_notification = 173;</code>
+   */
+  @java.lang.Override
+  public com.google.wireless.android.sdk.stats.EditorNotificationOrBuilder getEditorNotificationOrBuilder() {
+    return editorNotification_ == null ? com.google.wireless.android.sdk.stats.EditorNotification.getDefaultInstance() : editorNotification_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -23476,6 +23544,9 @@ private static final long serialVersionUID = 0L;
     }
     if (((bitField5_ & 0x00000020) != 0)) {
       output.writeMessage(172, getDeviceScreenshotEvent());
+    }
+    if (((bitField5_ & 0x00000040) != 0)) {
+      output.writeMessage(173, getEditorNotification());
     }
     unknownFields.writeTo(output);
   }
@@ -24179,6 +24250,10 @@ private static final long serialVersionUID = 0L;
     if (((bitField5_ & 0x00000020) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(172, getDeviceScreenshotEvent());
+    }
+    if (((bitField5_ & 0x00000040) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(173, getEditorNotification());
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -25026,6 +25101,11 @@ private static final long serialVersionUID = 0L;
       if (!getDeviceScreenshotEvent()
           .equals(other.getDeviceScreenshotEvent())) return false;
     }
+    if (hasEditorNotification() != other.hasEditorNotification()) return false;
+    if (hasEditorNotification()) {
+      if (!getEditorNotification()
+          .equals(other.getEditorNotification())) return false;
+    }
     if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
@@ -25727,6 +25807,10 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + DEVICE_SCREENSHOT_EVENT_FIELD_NUMBER;
       hash = (53 * hash) + getDeviceScreenshotEvent().hashCode();
     }
+    if (hasEditorNotification()) {
+      hash = (37 * hash) + EDITOR_NOTIFICATION_FIELD_NUMBER;
+      hash = (53 * hash) + getEditorNotification().hashCode();
+    }
     hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -26004,6 +26088,7 @@ private static final long serialVersionUID = 0L;
         getSmlConfigurationEventFieldBuilder();
         getKotlinSupportDeclinedFieldBuilder();
         getDeviceScreenshotEventFieldBuilder();
+        getEditorNotificationFieldBuilder();
       }
     }
     @java.lang.Override
@@ -26949,6 +27034,12 @@ private static final long serialVersionUID = 0L;
         deviceScreenshotEventBuilder_.clear();
       }
       bitField5_ = (bitField5_ & ~0x00000800);
+      if (editorNotificationBuilder_ == null) {
+        editorNotification_ = null;
+      } else {
+        editorNotificationBuilder_.clear();
+      }
+      bitField5_ = (bitField5_ & ~0x00001000);
       return this;
     }
 
@@ -28277,6 +28368,14 @@ private static final long serialVersionUID = 0L;
         }
         to_bitField5_ |= 0x00000020;
       }
+      if (((from_bitField5_ & 0x00001000) != 0)) {
+        if (editorNotificationBuilder_ == null) {
+          result.editorNotification_ = editorNotification_;
+        } else {
+          result.editorNotification_ = editorNotificationBuilder_.build();
+        }
+        to_bitField5_ |= 0x00000040;
+      }
       result.bitField0_ = to_bitField0_;
       result.bitField1_ = to_bitField1_;
       result.bitField2_ = to_bitField2_;
@@ -28950,6 +29049,9 @@ private static final long serialVersionUID = 0L;
       }
       if (other.hasDeviceScreenshotEvent()) {
         mergeDeviceScreenshotEvent(other.getDeviceScreenshotEvent());
+      }
+      if (other.hasEditorNotification()) {
+        mergeEditorNotification(other.getEditorNotification());
       }
       this.mergeUnknownFields(other.unknownFields);
       onChanged();
@@ -55097,6 +55199,162 @@ private static final long serialVersionUID = 0L;
         deviceScreenshotEvent_ = null;
       }
       return deviceScreenshotEventBuilder_;
+    }
+
+    private com.google.wireless.android.sdk.stats.EditorNotification editorNotification_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.EditorNotification, com.google.wireless.android.sdk.stats.EditorNotification.Builder, com.google.wireless.android.sdk.stats.EditorNotificationOrBuilder> editorNotificationBuilder_;
+    /**
+     * <pre>
+     * set when kind = EDITOR_NOTIFICATION
+     * </pre>
+     *
+     * <code>optional .android_studio.EditorNotification editor_notification = 173;</code>
+     * @return Whether the editorNotification field is set.
+     */
+    public boolean hasEditorNotification() {
+      return ((bitField5_ & 0x00001000) != 0);
+    }
+    /**
+     * <pre>
+     * set when kind = EDITOR_NOTIFICATION
+     * </pre>
+     *
+     * <code>optional .android_studio.EditorNotification editor_notification = 173;</code>
+     * @return The editorNotification.
+     */
+    public com.google.wireless.android.sdk.stats.EditorNotification getEditorNotification() {
+      if (editorNotificationBuilder_ == null) {
+        return editorNotification_ == null ? com.google.wireless.android.sdk.stats.EditorNotification.getDefaultInstance() : editorNotification_;
+      } else {
+        return editorNotificationBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * set when kind = EDITOR_NOTIFICATION
+     * </pre>
+     *
+     * <code>optional .android_studio.EditorNotification editor_notification = 173;</code>
+     */
+    public Builder setEditorNotification(com.google.wireless.android.sdk.stats.EditorNotification value) {
+      if (editorNotificationBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        editorNotification_ = value;
+        onChanged();
+      } else {
+        editorNotificationBuilder_.setMessage(value);
+      }
+      bitField5_ |= 0x00001000;
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = EDITOR_NOTIFICATION
+     * </pre>
+     *
+     * <code>optional .android_studio.EditorNotification editor_notification = 173;</code>
+     */
+    public Builder setEditorNotification(
+        com.google.wireless.android.sdk.stats.EditorNotification.Builder builderForValue) {
+      if (editorNotificationBuilder_ == null) {
+        editorNotification_ = builderForValue.build();
+        onChanged();
+      } else {
+        editorNotificationBuilder_.setMessage(builderForValue.build());
+      }
+      bitField5_ |= 0x00001000;
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = EDITOR_NOTIFICATION
+     * </pre>
+     *
+     * <code>optional .android_studio.EditorNotification editor_notification = 173;</code>
+     */
+    public Builder mergeEditorNotification(com.google.wireless.android.sdk.stats.EditorNotification value) {
+      if (editorNotificationBuilder_ == null) {
+        if (((bitField5_ & 0x00001000) != 0) &&
+            editorNotification_ != null &&
+            editorNotification_ != com.google.wireless.android.sdk.stats.EditorNotification.getDefaultInstance()) {
+          editorNotification_ =
+            com.google.wireless.android.sdk.stats.EditorNotification.newBuilder(editorNotification_).mergeFrom(value).buildPartial();
+        } else {
+          editorNotification_ = value;
+        }
+        onChanged();
+      } else {
+        editorNotificationBuilder_.mergeFrom(value);
+      }
+      bitField5_ |= 0x00001000;
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = EDITOR_NOTIFICATION
+     * </pre>
+     *
+     * <code>optional .android_studio.EditorNotification editor_notification = 173;</code>
+     */
+    public Builder clearEditorNotification() {
+      if (editorNotificationBuilder_ == null) {
+        editorNotification_ = null;
+        onChanged();
+      } else {
+        editorNotificationBuilder_.clear();
+      }
+      bitField5_ = (bitField5_ & ~0x00001000);
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = EDITOR_NOTIFICATION
+     * </pre>
+     *
+     * <code>optional .android_studio.EditorNotification editor_notification = 173;</code>
+     */
+    public com.google.wireless.android.sdk.stats.EditorNotification.Builder getEditorNotificationBuilder() {
+      bitField5_ |= 0x00001000;
+      onChanged();
+      return getEditorNotificationFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * set when kind = EDITOR_NOTIFICATION
+     * </pre>
+     *
+     * <code>optional .android_studio.EditorNotification editor_notification = 173;</code>
+     */
+    public com.google.wireless.android.sdk.stats.EditorNotificationOrBuilder getEditorNotificationOrBuilder() {
+      if (editorNotificationBuilder_ != null) {
+        return editorNotificationBuilder_.getMessageOrBuilder();
+      } else {
+        return editorNotification_ == null ?
+            com.google.wireless.android.sdk.stats.EditorNotification.getDefaultInstance() : editorNotification_;
+      }
+    }
+    /**
+     * <pre>
+     * set when kind = EDITOR_NOTIFICATION
+     * </pre>
+     *
+     * <code>optional .android_studio.EditorNotification editor_notification = 173;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.EditorNotification, com.google.wireless.android.sdk.stats.EditorNotification.Builder, com.google.wireless.android.sdk.stats.EditorNotificationOrBuilder> 
+        getEditorNotificationFieldBuilder() {
+      if (editorNotificationBuilder_ == null) {
+        editorNotificationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.wireless.android.sdk.stats.EditorNotification, com.google.wireless.android.sdk.stats.EditorNotification.Builder, com.google.wireless.android.sdk.stats.EditorNotificationOrBuilder>(
+                getEditorNotification(),
+                getParentForChildren(),
+                isClean());
+        editorNotification_ = null;
+      }
+      return editorNotificationBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(
