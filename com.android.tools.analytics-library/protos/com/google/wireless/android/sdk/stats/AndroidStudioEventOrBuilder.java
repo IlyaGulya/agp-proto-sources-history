@@ -6592,4 +6592,31 @@ public interface AndroidStudioEventOrBuilder extends
    * <code>optional .android_studio.PlayPolicyInsightsUsageEvent play_policy_insights_usage_event = 236 [lazy = true];</code>
    */
   com.google.wireless.android.sdk.stats.PlayPolicyInsightsUsageEventOrBuilder getPlayPolicyInsightsUsageEventOrBuilder();
+
+  /**
+   * <pre>
+   * set when kind = MODEL_PROVIDER_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.ModelProviderEvent model_provider_event = 237 [lazy = true];</code>
+   * @return Whether the modelProviderEvent field is set.
+   */
+  boolean hasModelProviderEvent();
+  /**
+   * <pre>
+   * set when kind = MODEL_PROVIDER_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.ModelProviderEvent model_provider_event = 237 [lazy = true];</code>
+   * @return The modelProviderEvent.
+   */
+  com.google.wireless.android.sdk.stats.ModelProviderEvent getModelProviderEvent();
+  /**
+   * <pre>
+   * set when kind = MODEL_PROVIDER_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.ModelProviderEvent model_provider_event = 237 [lazy = true];</code>
+   */
+  com.google.wireless.android.sdk.stats.ModelProviderEventOrBuilder getModelProviderEventOrBuilder();
 }

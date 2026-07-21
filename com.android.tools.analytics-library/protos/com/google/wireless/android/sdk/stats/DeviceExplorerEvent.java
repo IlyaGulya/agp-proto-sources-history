@@ -220,6 +220,22 @@ private static final long serialVersionUID = 0L;
      * <code>RESTORE_APP_DATA_CLICKED = 21;</code>
      */
     RESTORE_APP_DATA_CLICKED(21),
+    /**
+     * <pre>
+     * The user clicked on the "Clear App Data" button
+     * </pre>
+     *
+     * <code>CLEAR_APP_DATA_CLICKED = 22;</code>
+     */
+    CLEAR_APP_DATA_CLICKED(22),
+    /**
+     * <pre>
+     * The user clicked on the "Uninstall App" button
+     * </pre>
+     *
+     * <code>UNINSTALL_APP_CLICKED = 23;</code>
+     */
+    UNINSTALL_APP_CLICKED(23),
     ;
 
     /**
@@ -398,6 +414,22 @@ private static final long serialVersionUID = 0L;
      * <code>RESTORE_APP_DATA_CLICKED = 21;</code>
      */
     public static final int RESTORE_APP_DATA_CLICKED_VALUE = 21;
+    /**
+     * <pre>
+     * The user clicked on the "Clear App Data" button
+     * </pre>
+     *
+     * <code>CLEAR_APP_DATA_CLICKED = 22;</code>
+     */
+    public static final int CLEAR_APP_DATA_CLICKED_VALUE = 22;
+    /**
+     * <pre>
+     * The user clicked on the "Uninstall App" button
+     * </pre>
+     *
+     * <code>UNINSTALL_APP_CLICKED = 23;</code>
+     */
+    public static final int UNINSTALL_APP_CLICKED_VALUE = 23;
 
 
     public final int getNumber() {
@@ -442,6 +474,8 @@ private static final long serialVersionUID = 0L;
         case 19: return APPLICATION_ID_FILTER_TOGGLED_OFF;
         case 20: return BACKUP_APP_DATA_CLICKED;
         case 21: return RESTORE_APP_DATA_CLICKED;
+        case 22: return CLEAR_APP_DATA_CLICKED;
+        case 23: return UNINSTALL_APP_CLICKED;
         default: return null;
       }
     }
