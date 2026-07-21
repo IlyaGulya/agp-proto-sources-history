@@ -1207,6 +1207,14 @@ public enum GradleTaskExecutionType
    * <code>NON_INCREMENTAL_TRANSFORM = 297;</code>
    */
   NON_INCREMENTAL_TRANSFORM(297),
+  /**
+   * <code>FUSED_LIBRARY_MANIFEST_MERGER = 298;</code>
+   */
+  FUSED_LIBRARY_MANIFEST_MERGER(298),
+  /**
+   * <code>FUSED_LIBRARY_MERGE_RESOURCES = 299;</code>
+   */
+  FUSED_LIBRARY_MERGE_RESOURCES(299),
   UNRECOGNIZED(-1),
   ;
 
@@ -2402,6 +2410,14 @@ public enum GradleTaskExecutionType
    * <code>NON_INCREMENTAL_TRANSFORM = 297;</code>
    */
   public static final int NON_INCREMENTAL_TRANSFORM_VALUE = 297;
+  /**
+   * <code>FUSED_LIBRARY_MANIFEST_MERGER = 298;</code>
+   */
+  public static final int FUSED_LIBRARY_MANIFEST_MERGER_VALUE = 298;
+  /**
+   * <code>FUSED_LIBRARY_MERGE_RESOURCES = 299;</code>
+   */
+  public static final int FUSED_LIBRARY_MERGE_RESOURCES_VALUE = 299;
 
 
   public final int getNumber() {
@@ -2726,6 +2742,8 @@ public enum GradleTaskExecutionType
       case 295: return FUSED_LIBRARY_CLASSES_REWRITE;
       case 296: return INCREMENTAL_TRANSFORM;
       case 297: return NON_INCREMENTAL_TRANSFORM;
+      case 298: return FUSED_LIBRARY_MANIFEST_MERGER;
+      case 299: return FUSED_LIBRARY_MERGE_RESOURCES;
       default: return null;
     }
   }

@@ -4048,4 +4048,112 @@ public interface AndroidStudioEventOrBuilder extends
    * <code>optional .android_studio.ComposeMultiPreviewEvent compose_multi_preview_event = 144;</code>
    */
   com.google.wireless.android.sdk.stats.ComposeMultiPreviewEventOrBuilder getComposeMultiPreviewEventOrBuilder();
+
+  /**
+   * <pre>
+   * set when kind = LIVE_EDIT_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.LiveEditEvent live_edit_event = 145;</code>
+   * @return Whether the liveEditEvent field is set.
+   */
+  boolean hasLiveEditEvent();
+  /**
+   * <pre>
+   * set when kind = LIVE_EDIT_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.LiveEditEvent live_edit_event = 145;</code>
+   * @return The liveEditEvent.
+   */
+  com.google.wireless.android.sdk.stats.LiveEditEvent getLiveEditEvent();
+  /**
+   * <pre>
+   * set when kind = LIVE_EDIT_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.LiveEditEvent live_edit_event = 145;</code>
+   */
+  com.google.wireless.android.sdk.stats.LiveEditEventOrBuilder getLiveEditEventOrBuilder();
+
+  /**
+   * <pre>
+   * set when kind = STOP_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.StopEvent stop_event = 146;</code>
+   * @return Whether the stopEvent field is set.
+   */
+  boolean hasStopEvent();
+  /**
+   * <pre>
+   * set when kind = STOP_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.StopEvent stop_event = 146;</code>
+   * @return The stopEvent.
+   */
+  com.google.wireless.android.sdk.stats.StopEvent getStopEvent();
+  /**
+   * <pre>
+   * set when kind = STOP_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.StopEvent stop_event = 146;</code>
+   */
+  com.google.wireless.android.sdk.stats.StopEventOrBuilder getStopEventOrBuilder();
+
+  /**
+   * <pre>
+   * set when kind = APP_QUALITY_INSIGHTS_USAGE
+   * </pre>
+   *
+   * <code>optional .android_studio.AppQualityInsightsUsageEvent app_quality_insights_usage_event = 147;</code>
+   * @return Whether the appQualityInsightsUsageEvent field is set.
+   */
+  boolean hasAppQualityInsightsUsageEvent();
+  /**
+   * <pre>
+   * set when kind = APP_QUALITY_INSIGHTS_USAGE
+   * </pre>
+   *
+   * <code>optional .android_studio.AppQualityInsightsUsageEvent app_quality_insights_usage_event = 147;</code>
+   * @return The appQualityInsightsUsageEvent.
+   */
+  com.google.wireless.android.sdk.stats.AppQualityInsightsUsageEvent getAppQualityInsightsUsageEvent();
+  /**
+   * <pre>
+   * set when kind = APP_QUALITY_INSIGHTS_USAGE
+   * </pre>
+   *
+   * <code>optional .android_studio.AppQualityInsightsUsageEvent app_quality_insights_usage_event = 147;</code>
+   */
+  com.google.wireless.android.sdk.stats.AppQualityInsightsUsageEventOrBuilder getAppQualityInsightsUsageEventOrBuilder();
+
+  /**
+   * <pre>
+   * set when kind = GOOGLE_LOGIN_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.GoogleLoginPluginEvent google_login_event = 148;</code>
+   * @return Whether the googleLoginEvent field is set.
+   */
+  boolean hasGoogleLoginEvent();
+  /**
+   * <pre>
+   * set when kind = GOOGLE_LOGIN_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.GoogleLoginPluginEvent google_login_event = 148;</code>
+   * @return The googleLoginEvent.
+   */
+  com.google.wireless.android.sdk.stats.GoogleLoginPluginEvent getGoogleLoginEvent();
+  /**
+   * <pre>
+   * set when kind = GOOGLE_LOGIN_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.GoogleLoginPluginEvent google_login_event = 148;</code>
+   */
+  com.google.wireless.android.sdk.stats.GoogleLoginPluginEventOrBuilder getGoogleLoginEventOrBuilder();
 }
