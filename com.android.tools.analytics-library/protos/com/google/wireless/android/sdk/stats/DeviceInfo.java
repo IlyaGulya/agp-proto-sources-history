@@ -33,6 +33,7 @@ private static final long serialVersionUID = 0L;
     characteristics_ = com.google.protobuf.LazyStringArrayList.EMPTY;
     deviceProvisionerId_ = "";
     connectionId_ = "";
+    oemLabName_ = "";
   }
 
   @java.lang.Override
@@ -1231,6 +1232,69 @@ private static final long serialVersionUID = 0L;
     }
   }
 
+  public static final int OEM_LAB_NAME_FIELD_NUMBER = 15;
+  private volatile java.lang.Object oemLabName_;
+  /**
+   * <pre>
+   * If this is a remote physical device from a non-google lab, this is the
+   * name of the lab as reported in the device catalog.
+   * </pre>
+   *
+   * <code>optional string oem_lab_name = 15;</code>
+   * @return Whether the oemLabName field is set.
+   */
+  @java.lang.Override
+  public boolean hasOemLabName() {
+    return ((bitField0_ & 0x00002000) != 0);
+  }
+  /**
+   * <pre>
+   * If this is a remote physical device from a non-google lab, this is the
+   * name of the lab as reported in the device catalog.
+   * </pre>
+   *
+   * <code>optional string oem_lab_name = 15;</code>
+   * @return The oemLabName.
+   */
+  @java.lang.Override
+  public java.lang.String getOemLabName() {
+    java.lang.Object ref = oemLabName_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      if (bs.isValidUtf8()) {
+        oemLabName_ = s;
+      }
+      return s;
+    }
+  }
+  /**
+   * <pre>
+   * If this is a remote physical device from a non-google lab, this is the
+   * name of the lab as reported in the device catalog.
+   * </pre>
+   *
+   * <code>optional string oem_lab_name = 15;</code>
+   * @return The bytes for oemLabName.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getOemLabNameBytes() {
+    java.lang.Object ref = oemLabName_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      oemLabName_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -1286,6 +1350,9 @@ private static final long serialVersionUID = 0L;
     }
     if (((bitField0_ & 0x00001000) != 0)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 14, connectionId_);
+    }
+    if (((bitField0_ & 0x00002000) != 0)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 15, oemLabName_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -1346,6 +1413,9 @@ private static final long serialVersionUID = 0L;
     }
     if (((bitField0_ & 0x00001000) != 0)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(14, connectionId_);
+    }
+    if (((bitField0_ & 0x00002000) != 0)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(15, oemLabName_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -1426,6 +1496,11 @@ private static final long serialVersionUID = 0L;
       if (!getConnectionId()
           .equals(other.getConnectionId())) return false;
     }
+    if (hasOemLabName() != other.hasOemLabName()) return false;
+    if (hasOemLabName()) {
+      if (!getOemLabName()
+          .equals(other.getOemLabName())) return false;
+    }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -1492,6 +1567,10 @@ private static final long serialVersionUID = 0L;
     if (hasConnectionId()) {
       hash = (37 * hash) + CONNECTION_ID_FIELD_NUMBER;
       hash = (53 * hash) + getConnectionId().hashCode();
+    }
+    if (hasOemLabName()) {
+      hash = (37 * hash) + OEM_LAB_NAME_FIELD_NUMBER;
+      hash = (53 * hash) + getOemLabName().hashCode();
     }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
@@ -1653,6 +1732,8 @@ private static final long serialVersionUID = 0L;
       bitField0_ = (bitField0_ & ~0x00001000);
       connectionId_ = "";
       bitField0_ = (bitField0_ & ~0x00002000);
+      oemLabName_ = "";
+      bitField0_ = (bitField0_ & ~0x00004000);
       return this;
     }
 
@@ -1738,6 +1819,10 @@ private static final long serialVersionUID = 0L;
         to_bitField0_ |= 0x00001000;
       }
       result.connectionId_ = connectionId_;
+      if (((from_bitField0_ & 0x00004000) != 0)) {
+        to_bitField0_ |= 0x00002000;
+      }
+      result.oemLabName_ = oemLabName_;
       result.bitField0_ = to_bitField0_;
       onBuilt();
       return result;
@@ -1852,6 +1937,11 @@ private static final long serialVersionUID = 0L;
       if (other.hasConnectionId()) {
         bitField0_ |= 0x00002000;
         connectionId_ = other.connectionId_;
+        onChanged();
+      }
+      if (other.hasOemLabName()) {
+        bitField0_ |= 0x00004000;
+        oemLabName_ = other.oemLabName_;
         onChanged();
       }
       this.mergeUnknownFields(other.getUnknownFields());
@@ -1972,6 +2062,11 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00002000;
               break;
             } // case 114
+            case 122: {
+              oemLabName_ = input.readBytes();
+              bitField0_ |= 0x00004000;
+              break;
+            } // case 122
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -3362,6 +3457,120 @@ private static final long serialVersionUID = 0L;
   }
   bitField0_ |= 0x00002000;
       connectionId_ = value;
+      onChanged();
+      return this;
+    }
+
+    private java.lang.Object oemLabName_ = "";
+    /**
+     * <pre>
+     * If this is a remote physical device from a non-google lab, this is the
+     * name of the lab as reported in the device catalog.
+     * </pre>
+     *
+     * <code>optional string oem_lab_name = 15;</code>
+     * @return Whether the oemLabName field is set.
+     */
+    public boolean hasOemLabName() {
+      return ((bitField0_ & 0x00004000) != 0);
+    }
+    /**
+     * <pre>
+     * If this is a remote physical device from a non-google lab, this is the
+     * name of the lab as reported in the device catalog.
+     * </pre>
+     *
+     * <code>optional string oem_lab_name = 15;</code>
+     * @return The oemLabName.
+     */
+    public java.lang.String getOemLabName() {
+      java.lang.Object ref = oemLabName_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          oemLabName_ = s;
+        }
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <pre>
+     * If this is a remote physical device from a non-google lab, this is the
+     * name of the lab as reported in the device catalog.
+     * </pre>
+     *
+     * <code>optional string oem_lab_name = 15;</code>
+     * @return The bytes for oemLabName.
+     */
+    public com.google.protobuf.ByteString
+        getOemLabNameBytes() {
+      java.lang.Object ref = oemLabName_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        oemLabName_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <pre>
+     * If this is a remote physical device from a non-google lab, this is the
+     * name of the lab as reported in the device catalog.
+     * </pre>
+     *
+     * <code>optional string oem_lab_name = 15;</code>
+     * @param value The oemLabName to set.
+     * @return This builder for chaining.
+     */
+    public Builder setOemLabName(
+        java.lang.String value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00004000;
+      oemLabName_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * If this is a remote physical device from a non-google lab, this is the
+     * name of the lab as reported in the device catalog.
+     * </pre>
+     *
+     * <code>optional string oem_lab_name = 15;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearOemLabName() {
+      bitField0_ = (bitField0_ & ~0x00004000);
+      oemLabName_ = getDefaultInstance().getOemLabName();
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * If this is a remote physical device from a non-google lab, this is the
+     * name of the lab as reported in the device catalog.
+     * </pre>
+     *
+     * <code>optional string oem_lab_name = 15;</code>
+     * @param value The bytes for oemLabName to set.
+     * @return This builder for chaining.
+     */
+    public Builder setOemLabNameBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00004000;
+      oemLabName_ = value;
       onChanged();
       return this;
     }

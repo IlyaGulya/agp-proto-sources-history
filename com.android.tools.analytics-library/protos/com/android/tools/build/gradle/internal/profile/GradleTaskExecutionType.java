@@ -1391,6 +1391,10 @@ public enum GradleTaskExecutionType
    * <code>FUSED_LIBRARY_REPORT = 343;</code>
    */
   FUSED_LIBRARY_REPORT(343),
+  /**
+   * <code>FUSED_LIBRARY_DEPENDENCY_VALIDATION = 344;</code>
+   */
+  FUSED_LIBRARY_DEPENDENCY_VALIDATION(344),
   UNRECOGNIZED(-1),
   ;
 
@@ -2770,6 +2774,10 @@ public enum GradleTaskExecutionType
    * <code>FUSED_LIBRARY_REPORT = 343;</code>
    */
   public static final int FUSED_LIBRARY_REPORT_VALUE = 343;
+  /**
+   * <code>FUSED_LIBRARY_DEPENDENCY_VALIDATION = 344;</code>
+   */
+  public static final int FUSED_LIBRARY_DEPENDENCY_VALIDATION_VALUE = 344;
 
 
   public final int getNumber() {
@@ -3140,6 +3148,7 @@ public enum GradleTaskExecutionType
       case 341: return CONVERT_LINKED_RESOURCES_TO_PROTO;
       case 342: return FUSED_LIBRARY_MERGE_RESOURCE_COMPILE_SYMBOLS;
       case 343: return FUSED_LIBRARY_REPORT;
+      case 344: return FUSED_LIBRARY_DEPENDENCY_VALIDATION;
       default: return null;
     }
   }

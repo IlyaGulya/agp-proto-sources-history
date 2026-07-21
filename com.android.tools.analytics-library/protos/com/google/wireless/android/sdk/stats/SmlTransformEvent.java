@@ -1772,15 +1772,81 @@ private static final long serialVersionUID = 0L;
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * Status code mapped to HTTP codes (see go/http-canonical-mapping).
+     * </pre>
+     *
      * <code>optional int32 status_code = 1;</code>
      * @return Whether the statusCode field is set.
      */
     boolean hasStatusCode();
     /**
+     * <pre>
+     * Status code mapped to HTTP codes (see go/http-canonical-mapping).
+     * </pre>
+     *
      * <code>optional int32 status_code = 1;</code>
      * @return The statusCode.
      */
     int getStatusCode();
+
+    /**
+     * <code>optional .android_studio.SmlTransformEvent.TransformError.FailureCause cause = 2;</code>
+     * @return Whether the cause field is set.
+     */
+    boolean hasCause();
+    /**
+     * <code>optional .android_studio.SmlTransformEvent.TransformError.FailureCause cause = 2;</code>
+     * @return The cause.
+     */
+    com.google.wireless.android.sdk.stats.SmlTransformEvent.TransformError.FailureCause getCause();
+
+    /**
+     * <pre>
+     * The name of the exception class, used to identify RUNTIME_EXCEPTION.
+     * Exception class names only contain compile-time information.
+     * </pre>
+     *
+     * <code>optional string exception_class_name = 3;</code>
+     * @return Whether the exceptionClassName field is set.
+     */
+    boolean hasExceptionClassName();
+    /**
+     * <pre>
+     * The name of the exception class, used to identify RUNTIME_EXCEPTION.
+     * Exception class names only contain compile-time information.
+     * </pre>
+     *
+     * <code>optional string exception_class_name = 3;</code>
+     * @return The exceptionClassName.
+     */
+    java.lang.String getExceptionClassName();
+    /**
+     * <pre>
+     * The name of the exception class, used to identify RUNTIME_EXCEPTION.
+     * Exception class names only contain compile-time information.
+     * </pre>
+     *
+     * <code>optional string exception_class_name = 3;</code>
+     * @return The bytes for exceptionClassName.
+     */
+    com.google.protobuf.ByteString
+        getExceptionClassNameBytes();
+
+    /**
+     * <code>optional .android_studio.SmlResponseMetadata metadata = 4 [lazy = true];</code>
+     * @return Whether the metadata field is set.
+     */
+    boolean hasMetadata();
+    /**
+     * <code>optional .android_studio.SmlResponseMetadata metadata = 4 [lazy = true];</code>
+     * @return The metadata.
+     */
+    com.google.wireless.android.sdk.stats.SmlResponseMetadata getMetadata();
+    /**
+     * <code>optional .android_studio.SmlResponseMetadata metadata = 4 [lazy = true];</code>
+     */
+    com.google.wireless.android.sdk.stats.SmlResponseMetadataOrBuilder getMetadataOrBuilder();
   }
   /**
    * Protobuf type {@code android_studio.SmlTransformEvent.TransformError}
@@ -1795,6 +1861,8 @@ private static final long serialVersionUID = 0L;
       super(builder);
     }
     private TransformError() {
+      cause_ = 0;
+      exceptionClassName_ = "";
     }
 
     @java.lang.Override
@@ -1822,10 +1890,169 @@ private static final long serialVersionUID = 0L;
               com.google.wireless.android.sdk.stats.SmlTransformEvent.TransformError.class, com.google.wireless.android.sdk.stats.SmlTransformEvent.TransformError.Builder.class);
     }
 
+    /**
+     * Protobuf enum {@code android_studio.SmlTransformEvent.TransformError.FailureCause}
+     */
+    public enum FailureCause
+        implements com.google.protobuf.ProtocolMessageEnum {
+      /**
+       * <code>UNKNOWN_CAUSE = 0;</code>
+       */
+      UNKNOWN_CAUSE(0),
+      /**
+       * <pre>
+       * Unexpected errors; should be converted to more specific causes.
+       * </pre>
+       *
+       * <code>RUNTIME_EXCEPTION = 1;</code>
+       */
+      RUNTIME_EXCEPTION(1),
+      /**
+       * <pre>
+       * gRPC, HTTP, or other backend and network errors.
+       * </pre>
+       *
+       * <code>BACKEND_ERROR = 2;</code>
+       */
+      BACKEND_ERROR(2),
+      /**
+       * <pre>
+       * The response was empty or identical to the input.
+       * </pre>
+       *
+       * <code>EMPTY_RESPONSE = 3;</code>
+       */
+      EMPTY_RESPONSE(3),
+      /**
+       * <pre>
+       * The response doesn't contain expected elements or cannot be parsed.
+       * </pre>
+       *
+       * <code>INVALID_FORMAT = 4;</code>
+       */
+      INVALID_FORMAT(4),
+      ;
+
+      /**
+       * <code>UNKNOWN_CAUSE = 0;</code>
+       */
+      public static final int UNKNOWN_CAUSE_VALUE = 0;
+      /**
+       * <pre>
+       * Unexpected errors; should be converted to more specific causes.
+       * </pre>
+       *
+       * <code>RUNTIME_EXCEPTION = 1;</code>
+       */
+      public static final int RUNTIME_EXCEPTION_VALUE = 1;
+      /**
+       * <pre>
+       * gRPC, HTTP, or other backend and network errors.
+       * </pre>
+       *
+       * <code>BACKEND_ERROR = 2;</code>
+       */
+      public static final int BACKEND_ERROR_VALUE = 2;
+      /**
+       * <pre>
+       * The response was empty or identical to the input.
+       * </pre>
+       *
+       * <code>EMPTY_RESPONSE = 3;</code>
+       */
+      public static final int EMPTY_RESPONSE_VALUE = 3;
+      /**
+       * <pre>
+       * The response doesn't contain expected elements or cannot be parsed.
+       * </pre>
+       *
+       * <code>INVALID_FORMAT = 4;</code>
+       */
+      public static final int INVALID_FORMAT_VALUE = 4;
+
+
+      public final int getNumber() {
+        return value;
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static FailureCause valueOf(int value) {
+        return forNumber(value);
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       */
+      public static FailureCause forNumber(int value) {
+        switch (value) {
+          case 0: return UNKNOWN_CAUSE;
+          case 1: return RUNTIME_EXCEPTION;
+          case 2: return BACKEND_ERROR;
+          case 3: return EMPTY_RESPONSE;
+          case 4: return INVALID_FORMAT;
+          default: return null;
+        }
+      }
+
+      public static com.google.protobuf.Internal.EnumLiteMap<FailureCause>
+          internalGetValueMap() {
+        return internalValueMap;
+      }
+      private static final com.google.protobuf.Internal.EnumLiteMap<
+          FailureCause> internalValueMap =
+            new com.google.protobuf.Internal.EnumLiteMap<FailureCause>() {
+              public FailureCause findValueByNumber(int number) {
+                return FailureCause.forNumber(number);
+              }
+            };
+
+      public final com.google.protobuf.Descriptors.EnumValueDescriptor
+          getValueDescriptor() {
+        return getDescriptor().getValues().get(ordinal());
+      }
+      public final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptorForType() {
+        return getDescriptor();
+      }
+      public static final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptor() {
+        return com.google.wireless.android.sdk.stats.SmlTransformEvent.TransformError.getDescriptor().getEnumTypes().get(0);
+      }
+
+      private static final FailureCause[] VALUES = values();
+
+      public static FailureCause valueOf(
+          com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+        if (desc.getType() != getDescriptor()) {
+          throw new java.lang.IllegalArgumentException(
+            "EnumValueDescriptor is not for this type.");
+        }
+        return VALUES[desc.getIndex()];
+      }
+
+      private final int value;
+
+      private FailureCause(int value) {
+        this.value = value;
+      }
+
+      // @@protoc_insertion_point(enum_scope:android_studio.SmlTransformEvent.TransformError.FailureCause)
+    }
+
     private int bitField0_;
     public static final int STATUS_CODE_FIELD_NUMBER = 1;
     private int statusCode_;
     /**
+     * <pre>
+     * Status code mapped to HTTP codes (see go/http-canonical-mapping).
+     * </pre>
+     *
      * <code>optional int32 status_code = 1;</code>
      * @return Whether the statusCode field is set.
      */
@@ -1834,12 +2061,124 @@ private static final long serialVersionUID = 0L;
       return ((bitField0_ & 0x00000001) != 0);
     }
     /**
+     * <pre>
+     * Status code mapped to HTTP codes (see go/http-canonical-mapping).
+     * </pre>
+     *
      * <code>optional int32 status_code = 1;</code>
      * @return The statusCode.
      */
     @java.lang.Override
     public int getStatusCode() {
       return statusCode_;
+    }
+
+    public static final int CAUSE_FIELD_NUMBER = 2;
+    private int cause_;
+    /**
+     * <code>optional .android_studio.SmlTransformEvent.TransformError.FailureCause cause = 2;</code>
+     * @return Whether the cause field is set.
+     */
+    @java.lang.Override public boolean hasCause() {
+      return ((bitField0_ & 0x00000002) != 0);
+    }
+    /**
+     * <code>optional .android_studio.SmlTransformEvent.TransformError.FailureCause cause = 2;</code>
+     * @return The cause.
+     */
+    @java.lang.Override public com.google.wireless.android.sdk.stats.SmlTransformEvent.TransformError.FailureCause getCause() {
+      @SuppressWarnings("deprecation")
+      com.google.wireless.android.sdk.stats.SmlTransformEvent.TransformError.FailureCause result = com.google.wireless.android.sdk.stats.SmlTransformEvent.TransformError.FailureCause.valueOf(cause_);
+      return result == null ? com.google.wireless.android.sdk.stats.SmlTransformEvent.TransformError.FailureCause.UNKNOWN_CAUSE : result;
+    }
+
+    public static final int EXCEPTION_CLASS_NAME_FIELD_NUMBER = 3;
+    private volatile java.lang.Object exceptionClassName_;
+    /**
+     * <pre>
+     * The name of the exception class, used to identify RUNTIME_EXCEPTION.
+     * Exception class names only contain compile-time information.
+     * </pre>
+     *
+     * <code>optional string exception_class_name = 3;</code>
+     * @return Whether the exceptionClassName field is set.
+     */
+    @java.lang.Override
+    public boolean hasExceptionClassName() {
+      return ((bitField0_ & 0x00000004) != 0);
+    }
+    /**
+     * <pre>
+     * The name of the exception class, used to identify RUNTIME_EXCEPTION.
+     * Exception class names only contain compile-time information.
+     * </pre>
+     *
+     * <code>optional string exception_class_name = 3;</code>
+     * @return The exceptionClassName.
+     */
+    @java.lang.Override
+    public java.lang.String getExceptionClassName() {
+      java.lang.Object ref = exceptionClassName_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          exceptionClassName_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * The name of the exception class, used to identify RUNTIME_EXCEPTION.
+     * Exception class names only contain compile-time information.
+     * </pre>
+     *
+     * <code>optional string exception_class_name = 3;</code>
+     * @return The bytes for exceptionClassName.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getExceptionClassNameBytes() {
+      java.lang.Object ref = exceptionClassName_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        exceptionClassName_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int METADATA_FIELD_NUMBER = 4;
+    private com.google.wireless.android.sdk.stats.SmlResponseMetadata metadata_;
+    /**
+     * <code>optional .android_studio.SmlResponseMetadata metadata = 4 [lazy = true];</code>
+     * @return Whether the metadata field is set.
+     */
+    @java.lang.Override
+    public boolean hasMetadata() {
+      return ((bitField0_ & 0x00000008) != 0);
+    }
+    /**
+     * <code>optional .android_studio.SmlResponseMetadata metadata = 4 [lazy = true];</code>
+     * @return The metadata.
+     */
+    @java.lang.Override
+    public com.google.wireless.android.sdk.stats.SmlResponseMetadata getMetadata() {
+      return metadata_ == null ? com.google.wireless.android.sdk.stats.SmlResponseMetadata.getDefaultInstance() : metadata_;
+    }
+    /**
+     * <code>optional .android_studio.SmlResponseMetadata metadata = 4 [lazy = true];</code>
+     */
+    @java.lang.Override
+    public com.google.wireless.android.sdk.stats.SmlResponseMetadataOrBuilder getMetadataOrBuilder() {
+      return metadata_ == null ? com.google.wireless.android.sdk.stats.SmlResponseMetadata.getDefaultInstance() : metadata_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -1859,6 +2198,15 @@ private static final long serialVersionUID = 0L;
       if (((bitField0_ & 0x00000001) != 0)) {
         output.writeInt32(1, statusCode_);
       }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        output.writeEnum(2, cause_);
+      }
+      if (((bitField0_ & 0x00000004) != 0)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, exceptionClassName_);
+      }
+      if (((bitField0_ & 0x00000008) != 0)) {
+        output.writeMessage(4, getMetadata());
+      }
       getUnknownFields().writeTo(output);
     }
 
@@ -1871,6 +2219,17 @@ private static final long serialVersionUID = 0L;
       if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeInt32Size(1, statusCode_);
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(2, cause_);
+      }
+      if (((bitField0_ & 0x00000004) != 0)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, exceptionClassName_);
+      }
+      if (((bitField0_ & 0x00000008) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, getMetadata());
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -1892,6 +2251,20 @@ private static final long serialVersionUID = 0L;
         if (getStatusCode()
             != other.getStatusCode()) return false;
       }
+      if (hasCause() != other.hasCause()) return false;
+      if (hasCause()) {
+        if (cause_ != other.cause_) return false;
+      }
+      if (hasExceptionClassName() != other.hasExceptionClassName()) return false;
+      if (hasExceptionClassName()) {
+        if (!getExceptionClassName()
+            .equals(other.getExceptionClassName())) return false;
+      }
+      if (hasMetadata() != other.hasMetadata()) return false;
+      if (hasMetadata()) {
+        if (!getMetadata()
+            .equals(other.getMetadata())) return false;
+      }
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -1906,6 +2279,18 @@ private static final long serialVersionUID = 0L;
       if (hasStatusCode()) {
         hash = (37 * hash) + STATUS_CODE_FIELD_NUMBER;
         hash = (53 * hash) + getStatusCode();
+      }
+      if (hasCause()) {
+        hash = (37 * hash) + CAUSE_FIELD_NUMBER;
+        hash = (53 * hash) + cause_;
+      }
+      if (hasExceptionClassName()) {
+        hash = (37 * hash) + EXCEPTION_CLASS_NAME_FIELD_NUMBER;
+        hash = (53 * hash) + getExceptionClassName().hashCode();
+      }
+      if (hasMetadata()) {
+        hash = (37 * hash) + METADATA_FIELD_NUMBER;
+        hash = (53 * hash) + getMetadata().hashCode();
       }
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
@@ -2024,19 +2409,35 @@ private static final long serialVersionUID = 0L;
 
       // Construct using com.google.wireless.android.sdk.stats.SmlTransformEvent.TransformError.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getMetadataFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
         statusCode_ = 0;
         bitField0_ = (bitField0_ & ~0x00000001);
+        cause_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        exceptionClassName_ = "";
+        bitField0_ = (bitField0_ & ~0x00000004);
+        if (metadataBuilder_ == null) {
+          metadata_ = null;
+        } else {
+          metadataBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000008);
         return this;
       }
 
@@ -2068,6 +2469,22 @@ private static final long serialVersionUID = 0L;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.statusCode_ = statusCode_;
           to_bitField0_ |= 0x00000001;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          to_bitField0_ |= 0x00000002;
+        }
+        result.cause_ = cause_;
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          to_bitField0_ |= 0x00000004;
+        }
+        result.exceptionClassName_ = exceptionClassName_;
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          if (metadataBuilder_ == null) {
+            result.metadata_ = metadata_;
+          } else {
+            result.metadata_ = metadataBuilder_.build();
+          }
+          to_bitField0_ |= 0x00000008;
         }
         result.bitField0_ = to_bitField0_;
         onBuilt();
@@ -2121,6 +2538,17 @@ private static final long serialVersionUID = 0L;
         if (other.hasStatusCode()) {
           setStatusCode(other.getStatusCode());
         }
+        if (other.hasCause()) {
+          setCause(other.getCause());
+        }
+        if (other.hasExceptionClassName()) {
+          bitField0_ |= 0x00000004;
+          exceptionClassName_ = other.exceptionClassName_;
+          onChanged();
+        }
+        if (other.hasMetadata()) {
+          mergeMetadata(other.getMetadata());
+        }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
@@ -2152,6 +2580,30 @@ private static final long serialVersionUID = 0L;
                 bitField0_ |= 0x00000001;
                 break;
               } // case 8
+              case 16: {
+                int tmpRaw = input.readEnum();
+                com.google.wireless.android.sdk.stats.SmlTransformEvent.TransformError.FailureCause tmpValue =
+                    com.google.wireless.android.sdk.stats.SmlTransformEvent.TransformError.FailureCause.forNumber(tmpRaw);
+                if (tmpValue == null) {
+                  mergeUnknownVarintField(2, tmpRaw);
+                } else {
+                  cause_ = tmpRaw;
+                  bitField0_ |= 0x00000002;
+                }
+                break;
+              } // case 16
+              case 26: {
+                exceptionClassName_ = input.readBytes();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 34: {
+                input.readMessage(
+                    getMetadataFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -2171,6 +2623,10 @@ private static final long serialVersionUID = 0L;
 
       private int statusCode_ ;
       /**
+       * <pre>
+       * Status code mapped to HTTP codes (see go/http-canonical-mapping).
+       * </pre>
+       *
        * <code>optional int32 status_code = 1;</code>
        * @return Whether the statusCode field is set.
        */
@@ -2179,6 +2635,10 @@ private static final long serialVersionUID = 0L;
         return ((bitField0_ & 0x00000001) != 0);
       }
       /**
+       * <pre>
+       * Status code mapped to HTTP codes (see go/http-canonical-mapping).
+       * </pre>
+       *
        * <code>optional int32 status_code = 1;</code>
        * @return The statusCode.
        */
@@ -2187,6 +2647,10 @@ private static final long serialVersionUID = 0L;
         return statusCode_;
       }
       /**
+       * <pre>
+       * Status code mapped to HTTP codes (see go/http-canonical-mapping).
+       * </pre>
+       *
        * <code>optional int32 status_code = 1;</code>
        * @param value The statusCode to set.
        * @return This builder for chaining.
@@ -2198,6 +2662,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * Status code mapped to HTTP codes (see go/http-canonical-mapping).
+       * </pre>
+       *
        * <code>optional int32 status_code = 1;</code>
        * @return This builder for chaining.
        */
@@ -2206,6 +2674,283 @@ private static final long serialVersionUID = 0L;
         statusCode_ = 0;
         onChanged();
         return this;
+      }
+
+      private int cause_ = 0;
+      /**
+       * <code>optional .android_studio.SmlTransformEvent.TransformError.FailureCause cause = 2;</code>
+       * @return Whether the cause field is set.
+       */
+      @java.lang.Override public boolean hasCause() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <code>optional .android_studio.SmlTransformEvent.TransformError.FailureCause cause = 2;</code>
+       * @return The cause.
+       */
+      @java.lang.Override
+      public com.google.wireless.android.sdk.stats.SmlTransformEvent.TransformError.FailureCause getCause() {
+        @SuppressWarnings("deprecation")
+        com.google.wireless.android.sdk.stats.SmlTransformEvent.TransformError.FailureCause result = com.google.wireless.android.sdk.stats.SmlTransformEvent.TransformError.FailureCause.valueOf(cause_);
+        return result == null ? com.google.wireless.android.sdk.stats.SmlTransformEvent.TransformError.FailureCause.UNKNOWN_CAUSE : result;
+      }
+      /**
+       * <code>optional .android_studio.SmlTransformEvent.TransformError.FailureCause cause = 2;</code>
+       * @param value The cause to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCause(com.google.wireless.android.sdk.stats.SmlTransformEvent.TransformError.FailureCause value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x00000002;
+        cause_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional .android_studio.SmlTransformEvent.TransformError.FailureCause cause = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCause() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        cause_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object exceptionClassName_ = "";
+      /**
+       * <pre>
+       * The name of the exception class, used to identify RUNTIME_EXCEPTION.
+       * Exception class names only contain compile-time information.
+       * </pre>
+       *
+       * <code>optional string exception_class_name = 3;</code>
+       * @return Whether the exceptionClassName field is set.
+       */
+      public boolean hasExceptionClassName() {
+        return ((bitField0_ & 0x00000004) != 0);
+      }
+      /**
+       * <pre>
+       * The name of the exception class, used to identify RUNTIME_EXCEPTION.
+       * Exception class names only contain compile-time information.
+       * </pre>
+       *
+       * <code>optional string exception_class_name = 3;</code>
+       * @return The exceptionClassName.
+       */
+      public java.lang.String getExceptionClassName() {
+        java.lang.Object ref = exceptionClassName_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            exceptionClassName_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The name of the exception class, used to identify RUNTIME_EXCEPTION.
+       * Exception class names only contain compile-time information.
+       * </pre>
+       *
+       * <code>optional string exception_class_name = 3;</code>
+       * @return The bytes for exceptionClassName.
+       */
+      public com.google.protobuf.ByteString
+          getExceptionClassNameBytes() {
+        java.lang.Object ref = exceptionClassName_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          exceptionClassName_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The name of the exception class, used to identify RUNTIME_EXCEPTION.
+       * Exception class names only contain compile-time information.
+       * </pre>
+       *
+       * <code>optional string exception_class_name = 3;</code>
+       * @param value The exceptionClassName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setExceptionClassName(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000004;
+        exceptionClassName_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The name of the exception class, used to identify RUNTIME_EXCEPTION.
+       * Exception class names only contain compile-time information.
+       * </pre>
+       *
+       * <code>optional string exception_class_name = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearExceptionClassName() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        exceptionClassName_ = getDefaultInstance().getExceptionClassName();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The name of the exception class, used to identify RUNTIME_EXCEPTION.
+       * Exception class names only contain compile-time information.
+       * </pre>
+       *
+       * <code>optional string exception_class_name = 3;</code>
+       * @param value The bytes for exceptionClassName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setExceptionClassNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000004;
+        exceptionClassName_ = value;
+        onChanged();
+        return this;
+      }
+
+      private com.google.wireless.android.sdk.stats.SmlResponseMetadata metadata_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.wireless.android.sdk.stats.SmlResponseMetadata, com.google.wireless.android.sdk.stats.SmlResponseMetadata.Builder, com.google.wireless.android.sdk.stats.SmlResponseMetadataOrBuilder> metadataBuilder_;
+      /**
+       * <code>optional .android_studio.SmlResponseMetadata metadata = 4 [lazy = true];</code>
+       * @return Whether the metadata field is set.
+       */
+      public boolean hasMetadata() {
+        return ((bitField0_ & 0x00000008) != 0);
+      }
+      /**
+       * <code>optional .android_studio.SmlResponseMetadata metadata = 4 [lazy = true];</code>
+       * @return The metadata.
+       */
+      public com.google.wireless.android.sdk.stats.SmlResponseMetadata getMetadata() {
+        if (metadataBuilder_ == null) {
+          return metadata_ == null ? com.google.wireless.android.sdk.stats.SmlResponseMetadata.getDefaultInstance() : metadata_;
+        } else {
+          return metadataBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>optional .android_studio.SmlResponseMetadata metadata = 4 [lazy = true];</code>
+       */
+      public Builder setMetadata(com.google.wireless.android.sdk.stats.SmlResponseMetadata value) {
+        if (metadataBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          metadata_ = value;
+          onChanged();
+        } else {
+          metadataBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000008;
+        return this;
+      }
+      /**
+       * <code>optional .android_studio.SmlResponseMetadata metadata = 4 [lazy = true];</code>
+       */
+      public Builder setMetadata(
+          com.google.wireless.android.sdk.stats.SmlResponseMetadata.Builder builderForValue) {
+        if (metadataBuilder_ == null) {
+          metadata_ = builderForValue.build();
+          onChanged();
+        } else {
+          metadataBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000008;
+        return this;
+      }
+      /**
+       * <code>optional .android_studio.SmlResponseMetadata metadata = 4 [lazy = true];</code>
+       */
+      public Builder mergeMetadata(com.google.wireless.android.sdk.stats.SmlResponseMetadata value) {
+        if (metadataBuilder_ == null) {
+          if (((bitField0_ & 0x00000008) != 0) &&
+              metadata_ != null &&
+              metadata_ != com.google.wireless.android.sdk.stats.SmlResponseMetadata.getDefaultInstance()) {
+            metadata_ =
+              com.google.wireless.android.sdk.stats.SmlResponseMetadata.newBuilder(metadata_).mergeFrom(value).buildPartial();
+          } else {
+            metadata_ = value;
+          }
+          onChanged();
+        } else {
+          metadataBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000008;
+        return this;
+      }
+      /**
+       * <code>optional .android_studio.SmlResponseMetadata metadata = 4 [lazy = true];</code>
+       */
+      public Builder clearMetadata() {
+        if (metadataBuilder_ == null) {
+          metadata_ = null;
+          onChanged();
+        } else {
+          metadataBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000008);
+        return this;
+      }
+      /**
+       * <code>optional .android_studio.SmlResponseMetadata metadata = 4 [lazy = true];</code>
+       */
+      public com.google.wireless.android.sdk.stats.SmlResponseMetadata.Builder getMetadataBuilder() {
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return getMetadataFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>optional .android_studio.SmlResponseMetadata metadata = 4 [lazy = true];</code>
+       */
+      public com.google.wireless.android.sdk.stats.SmlResponseMetadataOrBuilder getMetadataOrBuilder() {
+        if (metadataBuilder_ != null) {
+          return metadataBuilder_.getMessageOrBuilder();
+        } else {
+          return metadata_ == null ?
+              com.google.wireless.android.sdk.stats.SmlResponseMetadata.getDefaultInstance() : metadata_;
+        }
+      }
+      /**
+       * <code>optional .android_studio.SmlResponseMetadata metadata = 4 [lazy = true];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.wireless.android.sdk.stats.SmlResponseMetadata, com.google.wireless.android.sdk.stats.SmlResponseMetadata.Builder, com.google.wireless.android.sdk.stats.SmlResponseMetadataOrBuilder> 
+          getMetadataFieldBuilder() {
+        if (metadataBuilder_ == null) {
+          metadataBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.wireless.android.sdk.stats.SmlResponseMetadata, com.google.wireless.android.sdk.stats.SmlResponseMetadata.Builder, com.google.wireless.android.sdk.stats.SmlResponseMetadataOrBuilder>(
+                  getMetadata(),
+                  getParentForChildren(),
+                  isClean());
+          metadata_ = null;
+        }
+        return metadataBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -2291,19 +3036,48 @@ private static final long serialVersionUID = 0L;
     com.google.wireless.android.sdk.stats.SmlTransformEvent.TransformResultOrBuilder getResultOrBuilder();
 
     /**
-     * <code>.android_studio.SmlTransformEvent.TransformError backend_error = 2 [lazy = true];</code>
+     * <pre>
+     * Use failure instead to represent both backend and parsing errors.
+     * </pre>
+     *
+     * <code>.android_studio.SmlTransformEvent.TransformError backend_error = 2 [deprecated = true, lazy = true];</code>
+     * @deprecated
      * @return Whether the backendError field is set.
      */
-    boolean hasBackendError();
+    @java.lang.Deprecated boolean hasBackendError();
     /**
-     * <code>.android_studio.SmlTransformEvent.TransformError backend_error = 2 [lazy = true];</code>
+     * <pre>
+     * Use failure instead to represent both backend and parsing errors.
+     * </pre>
+     *
+     * <code>.android_studio.SmlTransformEvent.TransformError backend_error = 2 [deprecated = true, lazy = true];</code>
+     * @deprecated
      * @return The backendError.
      */
-    com.google.wireless.android.sdk.stats.SmlTransformEvent.TransformError getBackendError();
+    @java.lang.Deprecated com.google.wireless.android.sdk.stats.SmlTransformEvent.TransformError getBackendError();
     /**
-     * <code>.android_studio.SmlTransformEvent.TransformError backend_error = 2 [lazy = true];</code>
+     * <pre>
+     * Use failure instead to represent both backend and parsing errors.
+     * </pre>
+     *
+     * <code>.android_studio.SmlTransformEvent.TransformError backend_error = 2 [deprecated = true, lazy = true];</code>
      */
-    com.google.wireless.android.sdk.stats.SmlTransformEvent.TransformErrorOrBuilder getBackendErrorOrBuilder();
+    @java.lang.Deprecated com.google.wireless.android.sdk.stats.SmlTransformEvent.TransformErrorOrBuilder getBackendErrorOrBuilder();
+
+    /**
+     * <code>.android_studio.SmlTransformEvent.TransformError failure = 3 [lazy = true];</code>
+     * @return Whether the failure field is set.
+     */
+    boolean hasFailure();
+    /**
+     * <code>.android_studio.SmlTransformEvent.TransformError failure = 3 [lazy = true];</code>
+     * @return The failure.
+     */
+    com.google.wireless.android.sdk.stats.SmlTransformEvent.TransformError getFailure();
+    /**
+     * <code>.android_studio.SmlTransformEvent.TransformError failure = 3 [lazy = true];</code>
+     */
+    com.google.wireless.android.sdk.stats.SmlTransformEvent.TransformErrorOrBuilder getFailureOrBuilder();
 
     public com.google.wireless.android.sdk.stats.SmlTransformEvent.TransformResponse.ResponseCase getResponseCase();
   }
@@ -2354,7 +3128,8 @@ private static final long serialVersionUID = 0L;
         implements com.google.protobuf.Internal.EnumLite,
             com.google.protobuf.AbstractMessage.InternalOneOfEnum {
       RESULT(1),
-      BACKEND_ERROR(2),
+      @java.lang.Deprecated BACKEND_ERROR(2),
+      FAILURE(3),
       RESPONSE_NOT_SET(0);
       private final int value;
       private ResponseCase(int value) {
@@ -2374,6 +3149,7 @@ private static final long serialVersionUID = 0L;
         switch (value) {
           case 1: return RESULT;
           case 2: return BACKEND_ERROR;
+          case 3: return FAILURE;
           case 0: return RESPONSE_NOT_SET;
           default: return null;
         }
@@ -2422,30 +3198,75 @@ private static final long serialVersionUID = 0L;
 
     public static final int BACKEND_ERROR_FIELD_NUMBER = 2;
     /**
-     * <code>.android_studio.SmlTransformEvent.TransformError backend_error = 2 [lazy = true];</code>
+     * <pre>
+     * Use failure instead to represent both backend and parsing errors.
+     * </pre>
+     *
+     * <code>.android_studio.SmlTransformEvent.TransformError backend_error = 2 [deprecated = true, lazy = true];</code>
+     * @deprecated
      * @return Whether the backendError field is set.
      */
     @java.lang.Override
-    public boolean hasBackendError() {
+    @java.lang.Deprecated public boolean hasBackendError() {
       return responseCase_ == 2;
     }
     /**
-     * <code>.android_studio.SmlTransformEvent.TransformError backend_error = 2 [lazy = true];</code>
+     * <pre>
+     * Use failure instead to represent both backend and parsing errors.
+     * </pre>
+     *
+     * <code>.android_studio.SmlTransformEvent.TransformError backend_error = 2 [deprecated = true, lazy = true];</code>
+     * @deprecated
      * @return The backendError.
      */
     @java.lang.Override
-    public com.google.wireless.android.sdk.stats.SmlTransformEvent.TransformError getBackendError() {
+    @java.lang.Deprecated public com.google.wireless.android.sdk.stats.SmlTransformEvent.TransformError getBackendError() {
       if (responseCase_ == 2) {
          return (com.google.wireless.android.sdk.stats.SmlTransformEvent.TransformError) response_;
       }
       return com.google.wireless.android.sdk.stats.SmlTransformEvent.TransformError.getDefaultInstance();
     }
     /**
-     * <code>.android_studio.SmlTransformEvent.TransformError backend_error = 2 [lazy = true];</code>
+     * <pre>
+     * Use failure instead to represent both backend and parsing errors.
+     * </pre>
+     *
+     * <code>.android_studio.SmlTransformEvent.TransformError backend_error = 2 [deprecated = true, lazy = true];</code>
      */
     @java.lang.Override
-    public com.google.wireless.android.sdk.stats.SmlTransformEvent.TransformErrorOrBuilder getBackendErrorOrBuilder() {
+    @java.lang.Deprecated public com.google.wireless.android.sdk.stats.SmlTransformEvent.TransformErrorOrBuilder getBackendErrorOrBuilder() {
       if (responseCase_ == 2) {
+         return (com.google.wireless.android.sdk.stats.SmlTransformEvent.TransformError) response_;
+      }
+      return com.google.wireless.android.sdk.stats.SmlTransformEvent.TransformError.getDefaultInstance();
+    }
+
+    public static final int FAILURE_FIELD_NUMBER = 3;
+    /**
+     * <code>.android_studio.SmlTransformEvent.TransformError failure = 3 [lazy = true];</code>
+     * @return Whether the failure field is set.
+     */
+    @java.lang.Override
+    public boolean hasFailure() {
+      return responseCase_ == 3;
+    }
+    /**
+     * <code>.android_studio.SmlTransformEvent.TransformError failure = 3 [lazy = true];</code>
+     * @return The failure.
+     */
+    @java.lang.Override
+    public com.google.wireless.android.sdk.stats.SmlTransformEvent.TransformError getFailure() {
+      if (responseCase_ == 3) {
+         return (com.google.wireless.android.sdk.stats.SmlTransformEvent.TransformError) response_;
+      }
+      return com.google.wireless.android.sdk.stats.SmlTransformEvent.TransformError.getDefaultInstance();
+    }
+    /**
+     * <code>.android_studio.SmlTransformEvent.TransformError failure = 3 [lazy = true];</code>
+     */
+    @java.lang.Override
+    public com.google.wireless.android.sdk.stats.SmlTransformEvent.TransformErrorOrBuilder getFailureOrBuilder() {
+      if (responseCase_ == 3) {
          return (com.google.wireless.android.sdk.stats.SmlTransformEvent.TransformError) response_;
       }
       return com.google.wireless.android.sdk.stats.SmlTransformEvent.TransformError.getDefaultInstance();
@@ -2471,6 +3292,9 @@ private static final long serialVersionUID = 0L;
       if (responseCase_ == 2) {
         output.writeMessage(2, (com.google.wireless.android.sdk.stats.SmlTransformEvent.TransformError) response_);
       }
+      if (responseCase_ == 3) {
+        output.writeMessage(3, (com.google.wireless.android.sdk.stats.SmlTransformEvent.TransformError) response_);
+      }
       getUnknownFields().writeTo(output);
     }
 
@@ -2487,6 +3311,10 @@ private static final long serialVersionUID = 0L;
       if (responseCase_ == 2) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, (com.google.wireless.android.sdk.stats.SmlTransformEvent.TransformError) response_);
+      }
+      if (responseCase_ == 3) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, (com.google.wireless.android.sdk.stats.SmlTransformEvent.TransformError) response_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -2513,6 +3341,10 @@ private static final long serialVersionUID = 0L;
           if (!getBackendError()
               .equals(other.getBackendError())) return false;
           break;
+        case 3:
+          if (!getFailure()
+              .equals(other.getFailure())) return false;
+          break;
         case 0:
         default:
       }
@@ -2535,6 +3367,10 @@ private static final long serialVersionUID = 0L;
         case 2:
           hash = (37 * hash) + BACKEND_ERROR_FIELD_NUMBER;
           hash = (53 * hash) + getBackendError().hashCode();
+          break;
+        case 3:
+          hash = (37 * hash) + FAILURE_FIELD_NUMBER;
+          hash = (53 * hash) + getFailure().hashCode();
           break;
         case 0:
         default:
@@ -2673,6 +3509,9 @@ private static final long serialVersionUID = 0L;
         if (backendErrorBuilder_ != null) {
           backendErrorBuilder_.clear();
         }
+        if (failureBuilder_ != null) {
+          failureBuilder_.clear();
+        }
         responseCase_ = 0;
         response_ = null;
         return this;
@@ -2715,6 +3554,13 @@ private static final long serialVersionUID = 0L;
             result.response_ = response_;
           } else {
             result.response_ = backendErrorBuilder_.build();
+          }
+        }
+        if (responseCase_ == 3) {
+          if (failureBuilder_ == null) {
+            result.response_ = response_;
+          } else {
+            result.response_ = failureBuilder_.build();
           }
         }
         result.bitField0_ = to_bitField0_;
@@ -2776,6 +3622,10 @@ private static final long serialVersionUID = 0L;
             mergeBackendError(other.getBackendError());
             break;
           }
+          case FAILURE: {
+            mergeFailure(other.getFailure());
+            break;
+          }
           case RESPONSE_NOT_SET: {
             break;
           }
@@ -2820,6 +3670,13 @@ private static final long serialVersionUID = 0L;
                 responseCase_ = 2;
                 break;
               } // case 18
+              case 26: {
+                input.readMessage(
+                    getFailureFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                responseCase_ = 3;
+                break;
+              } // case 26
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -2996,19 +3853,29 @@ private static final long serialVersionUID = 0L;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.wireless.android.sdk.stats.SmlTransformEvent.TransformError, com.google.wireless.android.sdk.stats.SmlTransformEvent.TransformError.Builder, com.google.wireless.android.sdk.stats.SmlTransformEvent.TransformErrorOrBuilder> backendErrorBuilder_;
       /**
-       * <code>.android_studio.SmlTransformEvent.TransformError backend_error = 2 [lazy = true];</code>
+       * <pre>
+       * Use failure instead to represent both backend and parsing errors.
+       * </pre>
+       *
+       * <code>.android_studio.SmlTransformEvent.TransformError backend_error = 2 [deprecated = true, lazy = true];</code>
+       * @deprecated
        * @return Whether the backendError field is set.
        */
       @java.lang.Override
-      public boolean hasBackendError() {
+      @java.lang.Deprecated public boolean hasBackendError() {
         return responseCase_ == 2;
       }
       /**
-       * <code>.android_studio.SmlTransformEvent.TransformError backend_error = 2 [lazy = true];</code>
+       * <pre>
+       * Use failure instead to represent both backend and parsing errors.
+       * </pre>
+       *
+       * <code>.android_studio.SmlTransformEvent.TransformError backend_error = 2 [deprecated = true, lazy = true];</code>
+       * @deprecated
        * @return The backendError.
        */
       @java.lang.Override
-      public com.google.wireless.android.sdk.stats.SmlTransformEvent.TransformError getBackendError() {
+      @java.lang.Deprecated public com.google.wireless.android.sdk.stats.SmlTransformEvent.TransformError getBackendError() {
         if (backendErrorBuilder_ == null) {
           if (responseCase_ == 2) {
             return (com.google.wireless.android.sdk.stats.SmlTransformEvent.TransformError) response_;
@@ -3022,9 +3889,13 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
-       * <code>.android_studio.SmlTransformEvent.TransformError backend_error = 2 [lazy = true];</code>
+       * <pre>
+       * Use failure instead to represent both backend and parsing errors.
+       * </pre>
+       *
+       * <code>.android_studio.SmlTransformEvent.TransformError backend_error = 2 [deprecated = true, lazy = true];</code>
        */
-      public Builder setBackendError(com.google.wireless.android.sdk.stats.SmlTransformEvent.TransformError value) {
+      @java.lang.Deprecated public Builder setBackendError(com.google.wireless.android.sdk.stats.SmlTransformEvent.TransformError value) {
         if (backendErrorBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -3038,9 +3909,13 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>.android_studio.SmlTransformEvent.TransformError backend_error = 2 [lazy = true];</code>
+       * <pre>
+       * Use failure instead to represent both backend and parsing errors.
+       * </pre>
+       *
+       * <code>.android_studio.SmlTransformEvent.TransformError backend_error = 2 [deprecated = true, lazy = true];</code>
        */
-      public Builder setBackendError(
+      @java.lang.Deprecated public Builder setBackendError(
           com.google.wireless.android.sdk.stats.SmlTransformEvent.TransformError.Builder builderForValue) {
         if (backendErrorBuilder_ == null) {
           response_ = builderForValue.build();
@@ -3052,9 +3927,13 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>.android_studio.SmlTransformEvent.TransformError backend_error = 2 [lazy = true];</code>
+       * <pre>
+       * Use failure instead to represent both backend and parsing errors.
+       * </pre>
+       *
+       * <code>.android_studio.SmlTransformEvent.TransformError backend_error = 2 [deprecated = true, lazy = true];</code>
        */
-      public Builder mergeBackendError(com.google.wireless.android.sdk.stats.SmlTransformEvent.TransformError value) {
+      @java.lang.Deprecated public Builder mergeBackendError(com.google.wireless.android.sdk.stats.SmlTransformEvent.TransformError value) {
         if (backendErrorBuilder_ == null) {
           if (responseCase_ == 2 &&
               response_ != com.google.wireless.android.sdk.stats.SmlTransformEvent.TransformError.getDefaultInstance()) {
@@ -3074,9 +3953,13 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>.android_studio.SmlTransformEvent.TransformError backend_error = 2 [lazy = true];</code>
+       * <pre>
+       * Use failure instead to represent both backend and parsing errors.
+       * </pre>
+       *
+       * <code>.android_studio.SmlTransformEvent.TransformError backend_error = 2 [deprecated = true, lazy = true];</code>
        */
-      public Builder clearBackendError() {
+      @java.lang.Deprecated public Builder clearBackendError() {
         if (backendErrorBuilder_ == null) {
           if (responseCase_ == 2) {
             responseCase_ = 0;
@@ -3093,16 +3976,24 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>.android_studio.SmlTransformEvent.TransformError backend_error = 2 [lazy = true];</code>
+       * <pre>
+       * Use failure instead to represent both backend and parsing errors.
+       * </pre>
+       *
+       * <code>.android_studio.SmlTransformEvent.TransformError backend_error = 2 [deprecated = true, lazy = true];</code>
        */
-      public com.google.wireless.android.sdk.stats.SmlTransformEvent.TransformError.Builder getBackendErrorBuilder() {
+      @java.lang.Deprecated public com.google.wireless.android.sdk.stats.SmlTransformEvent.TransformError.Builder getBackendErrorBuilder() {
         return getBackendErrorFieldBuilder().getBuilder();
       }
       /**
-       * <code>.android_studio.SmlTransformEvent.TransformError backend_error = 2 [lazy = true];</code>
+       * <pre>
+       * Use failure instead to represent both backend and parsing errors.
+       * </pre>
+       *
+       * <code>.android_studio.SmlTransformEvent.TransformError backend_error = 2 [deprecated = true, lazy = true];</code>
        */
       @java.lang.Override
-      public com.google.wireless.android.sdk.stats.SmlTransformEvent.TransformErrorOrBuilder getBackendErrorOrBuilder() {
+      @java.lang.Deprecated public com.google.wireless.android.sdk.stats.SmlTransformEvent.TransformErrorOrBuilder getBackendErrorOrBuilder() {
         if ((responseCase_ == 2) && (backendErrorBuilder_ != null)) {
           return backendErrorBuilder_.getMessageOrBuilder();
         } else {
@@ -3113,7 +4004,11 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
-       * <code>.android_studio.SmlTransformEvent.TransformError backend_error = 2 [lazy = true];</code>
+       * <pre>
+       * Use failure instead to represent both backend and parsing errors.
+       * </pre>
+       *
+       * <code>.android_studio.SmlTransformEvent.TransformError backend_error = 2 [deprecated = true, lazy = true];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.wireless.android.sdk.stats.SmlTransformEvent.TransformError, com.google.wireless.android.sdk.stats.SmlTransformEvent.TransformError.Builder, com.google.wireless.android.sdk.stats.SmlTransformEvent.TransformErrorOrBuilder> 
@@ -3132,6 +4027,147 @@ private static final long serialVersionUID = 0L;
         responseCase_ = 2;
         onChanged();;
         return backendErrorBuilder_;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.wireless.android.sdk.stats.SmlTransformEvent.TransformError, com.google.wireless.android.sdk.stats.SmlTransformEvent.TransformError.Builder, com.google.wireless.android.sdk.stats.SmlTransformEvent.TransformErrorOrBuilder> failureBuilder_;
+      /**
+       * <code>.android_studio.SmlTransformEvent.TransformError failure = 3 [lazy = true];</code>
+       * @return Whether the failure field is set.
+       */
+      @java.lang.Override
+      public boolean hasFailure() {
+        return responseCase_ == 3;
+      }
+      /**
+       * <code>.android_studio.SmlTransformEvent.TransformError failure = 3 [lazy = true];</code>
+       * @return The failure.
+       */
+      @java.lang.Override
+      public com.google.wireless.android.sdk.stats.SmlTransformEvent.TransformError getFailure() {
+        if (failureBuilder_ == null) {
+          if (responseCase_ == 3) {
+            return (com.google.wireless.android.sdk.stats.SmlTransformEvent.TransformError) response_;
+          }
+          return com.google.wireless.android.sdk.stats.SmlTransformEvent.TransformError.getDefaultInstance();
+        } else {
+          if (responseCase_ == 3) {
+            return failureBuilder_.getMessage();
+          }
+          return com.google.wireless.android.sdk.stats.SmlTransformEvent.TransformError.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.android_studio.SmlTransformEvent.TransformError failure = 3 [lazy = true];</code>
+       */
+      public Builder setFailure(com.google.wireless.android.sdk.stats.SmlTransformEvent.TransformError value) {
+        if (failureBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          response_ = value;
+          onChanged();
+        } else {
+          failureBuilder_.setMessage(value);
+        }
+        responseCase_ = 3;
+        return this;
+      }
+      /**
+       * <code>.android_studio.SmlTransformEvent.TransformError failure = 3 [lazy = true];</code>
+       */
+      public Builder setFailure(
+          com.google.wireless.android.sdk.stats.SmlTransformEvent.TransformError.Builder builderForValue) {
+        if (failureBuilder_ == null) {
+          response_ = builderForValue.build();
+          onChanged();
+        } else {
+          failureBuilder_.setMessage(builderForValue.build());
+        }
+        responseCase_ = 3;
+        return this;
+      }
+      /**
+       * <code>.android_studio.SmlTransformEvent.TransformError failure = 3 [lazy = true];</code>
+       */
+      public Builder mergeFailure(com.google.wireless.android.sdk.stats.SmlTransformEvent.TransformError value) {
+        if (failureBuilder_ == null) {
+          if (responseCase_ == 3 &&
+              response_ != com.google.wireless.android.sdk.stats.SmlTransformEvent.TransformError.getDefaultInstance()) {
+            response_ = com.google.wireless.android.sdk.stats.SmlTransformEvent.TransformError.newBuilder((com.google.wireless.android.sdk.stats.SmlTransformEvent.TransformError) response_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            response_ = value;
+          }
+          onChanged();
+        } else {
+          if (responseCase_ == 3) {
+            failureBuilder_.mergeFrom(value);
+          }
+          failureBuilder_.setMessage(value);
+        }
+        responseCase_ = 3;
+        return this;
+      }
+      /**
+       * <code>.android_studio.SmlTransformEvent.TransformError failure = 3 [lazy = true];</code>
+       */
+      public Builder clearFailure() {
+        if (failureBuilder_ == null) {
+          if (responseCase_ == 3) {
+            responseCase_ = 0;
+            response_ = null;
+            onChanged();
+          }
+        } else {
+          if (responseCase_ == 3) {
+            responseCase_ = 0;
+            response_ = null;
+          }
+          failureBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>.android_studio.SmlTransformEvent.TransformError failure = 3 [lazy = true];</code>
+       */
+      public com.google.wireless.android.sdk.stats.SmlTransformEvent.TransformError.Builder getFailureBuilder() {
+        return getFailureFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.android_studio.SmlTransformEvent.TransformError failure = 3 [lazy = true];</code>
+       */
+      @java.lang.Override
+      public com.google.wireless.android.sdk.stats.SmlTransformEvent.TransformErrorOrBuilder getFailureOrBuilder() {
+        if ((responseCase_ == 3) && (failureBuilder_ != null)) {
+          return failureBuilder_.getMessageOrBuilder();
+        } else {
+          if (responseCase_ == 3) {
+            return (com.google.wireless.android.sdk.stats.SmlTransformEvent.TransformError) response_;
+          }
+          return com.google.wireless.android.sdk.stats.SmlTransformEvent.TransformError.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.android_studio.SmlTransformEvent.TransformError failure = 3 [lazy = true];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.wireless.android.sdk.stats.SmlTransformEvent.TransformError, com.google.wireless.android.sdk.stats.SmlTransformEvent.TransformError.Builder, com.google.wireless.android.sdk.stats.SmlTransformEvent.TransformErrorOrBuilder> 
+          getFailureFieldBuilder() {
+        if (failureBuilder_ == null) {
+          if (!(responseCase_ == 3)) {
+            response_ = com.google.wireless.android.sdk.stats.SmlTransformEvent.TransformError.getDefaultInstance();
+          }
+          failureBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.wireless.android.sdk.stats.SmlTransformEvent.TransformError, com.google.wireless.android.sdk.stats.SmlTransformEvent.TransformError.Builder, com.google.wireless.android.sdk.stats.SmlTransformEvent.TransformErrorOrBuilder>(
+                  (com.google.wireless.android.sdk.stats.SmlTransformEvent.TransformError) response_,
+                  getParentForChildren(),
+                  isClean());
+          response_ = null;
+        }
+        responseCase_ = 3;
+        onChanged();;
+        return failureBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
