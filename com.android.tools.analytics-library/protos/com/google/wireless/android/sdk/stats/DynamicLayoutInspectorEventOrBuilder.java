@@ -79,4 +79,31 @@ public interface DynamicLayoutInspectorEventOrBuilder extends
    * <code>optional .android_studio.DynamicLayoutInspectorSnapshotInfo snapshot_info = 3;</code>
    */
   com.google.wireless.android.sdk.stats.DynamicLayoutInspectorSnapshotInfoOrBuilder getSnapshotInfoOrBuilder();
+
+  /**
+   * <pre>
+   * Extra info for error-related events
+   * </pre>
+   *
+   * <code>optional .android_studio.DynamicLayoutInspectorErrorInfo error_info = 4;</code>
+   * @return Whether the errorInfo field is set.
+   */
+  boolean hasErrorInfo();
+  /**
+   * <pre>
+   * Extra info for error-related events
+   * </pre>
+   *
+   * <code>optional .android_studio.DynamicLayoutInspectorErrorInfo error_info = 4;</code>
+   * @return The errorInfo.
+   */
+  com.google.wireless.android.sdk.stats.DynamicLayoutInspectorErrorInfo getErrorInfo();
+  /**
+   * <pre>
+   * Extra info for error-related events
+   * </pre>
+   *
+   * <code>optional .android_studio.DynamicLayoutInspectorErrorInfo error_info = 4;</code>
+   */
+  com.google.wireless.android.sdk.stats.DynamicLayoutInspectorErrorInfoOrBuilder getErrorInfoOrBuilder();
 }
