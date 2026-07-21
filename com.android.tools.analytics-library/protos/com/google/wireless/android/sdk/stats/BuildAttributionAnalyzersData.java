@@ -123,6 +123,19 @@ private static final long serialVersionUID = 0L;
             bitField0_ |= 0x00000020;
             break;
           }
+          case 58: {
+            com.google.wireless.android.sdk.stats.ConfigurationCacheCompatibilityData.Builder subBuilder = null;
+            if (((bitField0_ & 0x00000040) != 0)) {
+              subBuilder = configurationCacheCompatibilityData_.toBuilder();
+            }
+            configurationCacheCompatibilityData_ = input.readMessage(com.google.wireless.android.sdk.stats.ConfigurationCacheCompatibilityData.PARSER, extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(configurationCacheCompatibilityData_);
+              configurationCacheCompatibilityData_ = subBuilder.buildPartial();
+            }
+            bitField0_ |= 0x00000040;
+            break;
+          }
           default: {
             if (!parseUnknownField(
                 input, unknownFields, extensionRegistry, tag)) {
@@ -356,6 +369,41 @@ private static final long serialVersionUID = 0L;
     return tasksConfigurationIssuesAnalyzerData_ == null ? com.google.wireless.android.sdk.stats.TasksConfigurationIssuesAnalyzerData.getDefaultInstance() : tasksConfigurationIssuesAnalyzerData_;
   }
 
+  public static final int CONFIGURATION_CACHE_COMPATIBILITY_DATA_FIELD_NUMBER = 7;
+  private com.google.wireless.android.sdk.stats.ConfigurationCacheCompatibilityData configurationCacheCompatibilityData_;
+  /**
+   * <pre>
+   * Data from configuration caching compatibility analyzer
+   * </pre>
+   *
+   * <code>optional .android_studio.ConfigurationCacheCompatibilityData configuration_cache_compatibility_data = 7;</code>
+   * @return Whether the configurationCacheCompatibilityData field is set.
+   */
+  public boolean hasConfigurationCacheCompatibilityData() {
+    return ((bitField0_ & 0x00000040) != 0);
+  }
+  /**
+   * <pre>
+   * Data from configuration caching compatibility analyzer
+   * </pre>
+   *
+   * <code>optional .android_studio.ConfigurationCacheCompatibilityData configuration_cache_compatibility_data = 7;</code>
+   * @return The configurationCacheCompatibilityData.
+   */
+  public com.google.wireless.android.sdk.stats.ConfigurationCacheCompatibilityData getConfigurationCacheCompatibilityData() {
+    return configurationCacheCompatibilityData_ == null ? com.google.wireless.android.sdk.stats.ConfigurationCacheCompatibilityData.getDefaultInstance() : configurationCacheCompatibilityData_;
+  }
+  /**
+   * <pre>
+   * Data from configuration caching compatibility analyzer
+   * </pre>
+   *
+   * <code>optional .android_studio.ConfigurationCacheCompatibilityData configuration_cache_compatibility_data = 7;</code>
+   */
+  public com.google.wireless.android.sdk.stats.ConfigurationCacheCompatibilityDataOrBuilder getConfigurationCacheCompatibilityDataOrBuilder() {
+    return configurationCacheCompatibilityData_ == null ? com.google.wireless.android.sdk.stats.ConfigurationCacheCompatibilityData.getDefaultInstance() : configurationCacheCompatibilityData_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -387,6 +435,9 @@ private static final long serialVersionUID = 0L;
     }
     if (((bitField0_ & 0x00000020) != 0)) {
       output.writeMessage(6, getTasksConfigurationIssuesAnalyzerData());
+    }
+    if (((bitField0_ & 0x00000040) != 0)) {
+      output.writeMessage(7, getConfigurationCacheCompatibilityData());
     }
     unknownFields.writeTo(output);
   }
@@ -420,6 +471,10 @@ private static final long serialVersionUID = 0L;
     if (((bitField0_ & 0x00000020) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(6, getTasksConfigurationIssuesAnalyzerData());
+    }
+    if (((bitField0_ & 0x00000040) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(7, getConfigurationCacheCompatibilityData());
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -466,6 +521,11 @@ private static final long serialVersionUID = 0L;
       if (!getTasksConfigurationIssuesAnalyzerData()
           .equals(other.getTasksConfigurationIssuesAnalyzerData())) return false;
     }
+    if (hasConfigurationCacheCompatibilityData() != other.hasConfigurationCacheCompatibilityData()) return false;
+    if (hasConfigurationCacheCompatibilityData()) {
+      if (!getConfigurationCacheCompatibilityData()
+          .equals(other.getConfigurationCacheCompatibilityData())) return false;
+    }
     if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
@@ -501,6 +561,10 @@ private static final long serialVersionUID = 0L;
     if (hasTasksConfigurationIssuesAnalyzerData()) {
       hash = (37 * hash) + TASKS_CONFIGURATION_ISSUES_ANALYZER_DATA_FIELD_NUMBER;
       hash = (53 * hash) + getTasksConfigurationIssuesAnalyzerData().hashCode();
+    }
+    if (hasConfigurationCacheCompatibilityData()) {
+      hash = (37 * hash) + CONFIGURATION_CACHE_COMPATIBILITY_DATA_FIELD_NUMBER;
+      hash = (53 * hash) + getConfigurationCacheCompatibilityData().hashCode();
     }
     hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
@@ -639,6 +703,7 @@ private static final long serialVersionUID = 0L;
         getCriticalPathAnalyzerDataFieldBuilder();
         getProjectConfigurationAnalyzerDataFieldBuilder();
         getTasksConfigurationIssuesAnalyzerDataFieldBuilder();
+        getConfigurationCacheCompatibilityDataFieldBuilder();
       }
     }
     @java.lang.Override
@@ -676,6 +741,12 @@ private static final long serialVersionUID = 0L;
         tasksConfigurationIssuesAnalyzerDataBuilder_.clear();
       }
       bitField0_ = (bitField0_ & ~0x00000020);
+      if (configurationCacheCompatibilityDataBuilder_ == null) {
+        configurationCacheCompatibilityData_ = null;
+      } else {
+        configurationCacheCompatibilityDataBuilder_.clear();
+      }
+      bitField0_ = (bitField0_ & ~0x00000040);
       return this;
     }
 
@@ -748,6 +819,14 @@ private static final long serialVersionUID = 0L;
         }
         to_bitField0_ |= 0x00000020;
       }
+      if (((from_bitField0_ & 0x00000040) != 0)) {
+        if (configurationCacheCompatibilityDataBuilder_ == null) {
+          result.configurationCacheCompatibilityData_ = configurationCacheCompatibilityData_;
+        } else {
+          result.configurationCacheCompatibilityData_ = configurationCacheCompatibilityDataBuilder_.build();
+        }
+        to_bitField0_ |= 0x00000040;
+      }
       result.bitField0_ = to_bitField0_;
       onBuilt();
       return result;
@@ -814,6 +893,9 @@ private static final long serialVersionUID = 0L;
       }
       if (other.hasTasksConfigurationIssuesAnalyzerData()) {
         mergeTasksConfigurationIssuesAnalyzerData(other.getTasksConfigurationIssuesAnalyzerData());
+      }
+      if (other.hasConfigurationCacheCompatibilityData()) {
+        mergeConfigurationCacheCompatibilityData(other.getConfigurationCacheCompatibilityData());
       }
       this.mergeUnknownFields(other.unknownFields);
       onChanged();
@@ -1676,6 +1758,162 @@ private static final long serialVersionUID = 0L;
         tasksConfigurationIssuesAnalyzerData_ = null;
       }
       return tasksConfigurationIssuesAnalyzerDataBuilder_;
+    }
+
+    private com.google.wireless.android.sdk.stats.ConfigurationCacheCompatibilityData configurationCacheCompatibilityData_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.ConfigurationCacheCompatibilityData, com.google.wireless.android.sdk.stats.ConfigurationCacheCompatibilityData.Builder, com.google.wireless.android.sdk.stats.ConfigurationCacheCompatibilityDataOrBuilder> configurationCacheCompatibilityDataBuilder_;
+    /**
+     * <pre>
+     * Data from configuration caching compatibility analyzer
+     * </pre>
+     *
+     * <code>optional .android_studio.ConfigurationCacheCompatibilityData configuration_cache_compatibility_data = 7;</code>
+     * @return Whether the configurationCacheCompatibilityData field is set.
+     */
+    public boolean hasConfigurationCacheCompatibilityData() {
+      return ((bitField0_ & 0x00000040) != 0);
+    }
+    /**
+     * <pre>
+     * Data from configuration caching compatibility analyzer
+     * </pre>
+     *
+     * <code>optional .android_studio.ConfigurationCacheCompatibilityData configuration_cache_compatibility_data = 7;</code>
+     * @return The configurationCacheCompatibilityData.
+     */
+    public com.google.wireless.android.sdk.stats.ConfigurationCacheCompatibilityData getConfigurationCacheCompatibilityData() {
+      if (configurationCacheCompatibilityDataBuilder_ == null) {
+        return configurationCacheCompatibilityData_ == null ? com.google.wireless.android.sdk.stats.ConfigurationCacheCompatibilityData.getDefaultInstance() : configurationCacheCompatibilityData_;
+      } else {
+        return configurationCacheCompatibilityDataBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * Data from configuration caching compatibility analyzer
+     * </pre>
+     *
+     * <code>optional .android_studio.ConfigurationCacheCompatibilityData configuration_cache_compatibility_data = 7;</code>
+     */
+    public Builder setConfigurationCacheCompatibilityData(com.google.wireless.android.sdk.stats.ConfigurationCacheCompatibilityData value) {
+      if (configurationCacheCompatibilityDataBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        configurationCacheCompatibilityData_ = value;
+        onChanged();
+      } else {
+        configurationCacheCompatibilityDataBuilder_.setMessage(value);
+      }
+      bitField0_ |= 0x00000040;
+      return this;
+    }
+    /**
+     * <pre>
+     * Data from configuration caching compatibility analyzer
+     * </pre>
+     *
+     * <code>optional .android_studio.ConfigurationCacheCompatibilityData configuration_cache_compatibility_data = 7;</code>
+     */
+    public Builder setConfigurationCacheCompatibilityData(
+        com.google.wireless.android.sdk.stats.ConfigurationCacheCompatibilityData.Builder builderForValue) {
+      if (configurationCacheCompatibilityDataBuilder_ == null) {
+        configurationCacheCompatibilityData_ = builderForValue.build();
+        onChanged();
+      } else {
+        configurationCacheCompatibilityDataBuilder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x00000040;
+      return this;
+    }
+    /**
+     * <pre>
+     * Data from configuration caching compatibility analyzer
+     * </pre>
+     *
+     * <code>optional .android_studio.ConfigurationCacheCompatibilityData configuration_cache_compatibility_data = 7;</code>
+     */
+    public Builder mergeConfigurationCacheCompatibilityData(com.google.wireless.android.sdk.stats.ConfigurationCacheCompatibilityData value) {
+      if (configurationCacheCompatibilityDataBuilder_ == null) {
+        if (((bitField0_ & 0x00000040) != 0) &&
+            configurationCacheCompatibilityData_ != null &&
+            configurationCacheCompatibilityData_ != com.google.wireless.android.sdk.stats.ConfigurationCacheCompatibilityData.getDefaultInstance()) {
+          configurationCacheCompatibilityData_ =
+            com.google.wireless.android.sdk.stats.ConfigurationCacheCompatibilityData.newBuilder(configurationCacheCompatibilityData_).mergeFrom(value).buildPartial();
+        } else {
+          configurationCacheCompatibilityData_ = value;
+        }
+        onChanged();
+      } else {
+        configurationCacheCompatibilityDataBuilder_.mergeFrom(value);
+      }
+      bitField0_ |= 0x00000040;
+      return this;
+    }
+    /**
+     * <pre>
+     * Data from configuration caching compatibility analyzer
+     * </pre>
+     *
+     * <code>optional .android_studio.ConfigurationCacheCompatibilityData configuration_cache_compatibility_data = 7;</code>
+     */
+    public Builder clearConfigurationCacheCompatibilityData() {
+      if (configurationCacheCompatibilityDataBuilder_ == null) {
+        configurationCacheCompatibilityData_ = null;
+        onChanged();
+      } else {
+        configurationCacheCompatibilityDataBuilder_.clear();
+      }
+      bitField0_ = (bitField0_ & ~0x00000040);
+      return this;
+    }
+    /**
+     * <pre>
+     * Data from configuration caching compatibility analyzer
+     * </pre>
+     *
+     * <code>optional .android_studio.ConfigurationCacheCompatibilityData configuration_cache_compatibility_data = 7;</code>
+     */
+    public com.google.wireless.android.sdk.stats.ConfigurationCacheCompatibilityData.Builder getConfigurationCacheCompatibilityDataBuilder() {
+      bitField0_ |= 0x00000040;
+      onChanged();
+      return getConfigurationCacheCompatibilityDataFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * Data from configuration caching compatibility analyzer
+     * </pre>
+     *
+     * <code>optional .android_studio.ConfigurationCacheCompatibilityData configuration_cache_compatibility_data = 7;</code>
+     */
+    public com.google.wireless.android.sdk.stats.ConfigurationCacheCompatibilityDataOrBuilder getConfigurationCacheCompatibilityDataOrBuilder() {
+      if (configurationCacheCompatibilityDataBuilder_ != null) {
+        return configurationCacheCompatibilityDataBuilder_.getMessageOrBuilder();
+      } else {
+        return configurationCacheCompatibilityData_ == null ?
+            com.google.wireless.android.sdk.stats.ConfigurationCacheCompatibilityData.getDefaultInstance() : configurationCacheCompatibilityData_;
+      }
+    }
+    /**
+     * <pre>
+     * Data from configuration caching compatibility analyzer
+     * </pre>
+     *
+     * <code>optional .android_studio.ConfigurationCacheCompatibilityData configuration_cache_compatibility_data = 7;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.ConfigurationCacheCompatibilityData, com.google.wireless.android.sdk.stats.ConfigurationCacheCompatibilityData.Builder, com.google.wireless.android.sdk.stats.ConfigurationCacheCompatibilityDataOrBuilder> 
+        getConfigurationCacheCompatibilityDataFieldBuilder() {
+      if (configurationCacheCompatibilityDataBuilder_ == null) {
+        configurationCacheCompatibilityDataBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.wireless.android.sdk.stats.ConfigurationCacheCompatibilityData, com.google.wireless.android.sdk.stats.ConfigurationCacheCompatibilityData.Builder, com.google.wireless.android.sdk.stats.ConfigurationCacheCompatibilityDataOrBuilder>(
+                getConfigurationCacheCompatibilityData(),
+                getParentForChildren(),
+                isClean());
+        configurationCacheCompatibilityData_ = null;
+      }
+      return configurationCacheCompatibilityDataBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

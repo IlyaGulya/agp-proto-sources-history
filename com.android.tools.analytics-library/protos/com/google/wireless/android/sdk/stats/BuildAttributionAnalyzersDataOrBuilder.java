@@ -160,4 +160,31 @@ public interface BuildAttributionAnalyzersDataOrBuilder extends
    * <code>optional .android_studio.TasksConfigurationIssuesAnalyzerData tasks_configuration_issues_analyzer_data = 6;</code>
    */
   com.google.wireless.android.sdk.stats.TasksConfigurationIssuesAnalyzerDataOrBuilder getTasksConfigurationIssuesAnalyzerDataOrBuilder();
+
+  /**
+   * <pre>
+   * Data from configuration caching compatibility analyzer
+   * </pre>
+   *
+   * <code>optional .android_studio.ConfigurationCacheCompatibilityData configuration_cache_compatibility_data = 7;</code>
+   * @return Whether the configurationCacheCompatibilityData field is set.
+   */
+  boolean hasConfigurationCacheCompatibilityData();
+  /**
+   * <pre>
+   * Data from configuration caching compatibility analyzer
+   * </pre>
+   *
+   * <code>optional .android_studio.ConfigurationCacheCompatibilityData configuration_cache_compatibility_data = 7;</code>
+   * @return The configurationCacheCompatibilityData.
+   */
+  com.google.wireless.android.sdk.stats.ConfigurationCacheCompatibilityData getConfigurationCacheCompatibilityData();
+  /**
+   * <pre>
+   * Data from configuration caching compatibility analyzer
+   * </pre>
+   *
+   * <code>optional .android_studio.ConfigurationCacheCompatibilityData configuration_cache_compatibility_data = 7;</code>
+   */
+  com.google.wireless.android.sdk.stats.ConfigurationCacheCompatibilityDataOrBuilder getConfigurationCacheCompatibilityDataOrBuilder();
 }

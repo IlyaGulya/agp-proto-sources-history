@@ -593,6 +593,10 @@ public enum BooleanOption
    * <code>R8_FAIL_ON_MISSING_CLASSES = 143;</code>
    */
   R8_FAIL_ON_MISSING_CLASSES(143),
+  /**
+   * <code>ENABLE_TEST_FIXTURES = 144;</code>
+   */
+  ENABLE_TEST_FIXTURES(144),
   UNRECOGNIZED(-1),
   ;
 
@@ -1172,6 +1176,10 @@ public enum BooleanOption
    * <code>R8_FAIL_ON_MISSING_CLASSES = 143;</code>
    */
   public static final int R8_FAIL_ON_MISSING_CLASSES_VALUE = 143;
+  /**
+   * <code>ENABLE_TEST_FIXTURES = 144;</code>
+   */
+  public static final int ENABLE_TEST_FIXTURES_VALUE = 144;
 
 
   public final int getNumber() {
@@ -1342,6 +1350,7 @@ public enum BooleanOption
       case 141: return USE_LINT_PARTIAL_ANALYSIS;
       case 142: return RELATIVE_COMPILE_LIB_RESOURCES;
       case 143: return R8_FAIL_ON_MISSING_CLASSES;
+      case 144: return ENABLE_TEST_FIXTURES;
       default: return null;
     }
   }

@@ -6731,6 +6731,10 @@ private static final long serialVersionUID = 0L;
      * <code>ANDROID_NATIVE_MODULE = 62;</code>
      */
     ANDROID_NATIVE_MODULE(62),
+    /**
+     * <code>RESPONSIVE_ACTIVITY = 63;</code>
+     */
+    RESPONSIVE_ACTIVITY(63),
     ;
 
     /**
@@ -6989,6 +6993,10 @@ private static final long serialVersionUID = 0L;
      * <code>ANDROID_NATIVE_MODULE = 62;</code>
      */
     public static final int ANDROID_NATIVE_MODULE_VALUE = 62;
+    /**
+     * <code>RESPONSIVE_ACTIVITY = 63;</code>
+     */
+    public static final int RESPONSIVE_ACTIVITY_VALUE = 63;
 
 
     public final int getNumber() {
@@ -7074,6 +7082,7 @@ private static final long serialVersionUID = 0L;
         case 60: return ML_MODEL_BINDING_IMPORT_WIZARD;
         case 61: return ML_MODEL_BINDING_FEATURE_OFF_NOTIFICATION;
         case 62: return ANDROID_NATIVE_MODULE;
+        case 63: return RESPONSIVE_ACTIVITY;
         default: return null;
       }
     }
@@ -9507,6 +9516,7 @@ private static final long serialVersionUID = 0L;
        * <pre>
        * The different template components (eg Activities, Fragments, Services,
        * etc) the template engine could be asked to render
+       * Next ID: 58
        * </pre>
        *
        * Protobuf enum {@code android_studio.AndroidStudioEvent.TemplatesUsage.TemplateComponent.TemplateType}
@@ -9606,6 +9616,10 @@ private static final long serialVersionUID = 0L;
          * <code>CPP_EMPTY_ACTIVITY = 22;</code>
          */
         CPP_EMPTY_ACTIVITY(22),
+        /**
+         * <code>RESPONSIVE_ACTIVITY = 57;</code>
+         */
+        RESPONSIVE_ACTIVITY(57),
         /**
          * <code>FRAGMENT_LIST = 23;</code>
          */
@@ -9837,6 +9851,10 @@ private static final long serialVersionUID = 0L;
          */
         public static final int CPP_EMPTY_ACTIVITY_VALUE = 22;
         /**
+         * <code>RESPONSIVE_ACTIVITY = 57;</code>
+         */
+        public static final int RESPONSIVE_ACTIVITY_VALUE = 57;
+        /**
          * <code>FRAGMENT_LIST = 23;</code>
          */
         public static final int FRAGMENT_LIST_VALUE = 23;
@@ -10017,6 +10035,7 @@ private static final long serialVersionUID = 0L;
             case 20: return VIEW_MODEL_ACTIVITY;
             case 21: return BOTTOM_NAVIGATION_ACTIVITY;
             case 22: return CPP_EMPTY_ACTIVITY;
+            case 57: return RESPONSIVE_ACTIVITY;
             case 23: return FRAGMENT_LIST;
             case 24: return FRAGMENT_BLANK;
             case 25: return FRAGMENT_FULLSCREEN;

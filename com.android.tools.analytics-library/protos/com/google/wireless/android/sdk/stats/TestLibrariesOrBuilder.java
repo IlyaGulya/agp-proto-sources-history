@@ -763,6 +763,64 @@ public interface TestLibrariesOrBuilder extends
 
   /**
    * <pre>
+   * "androidx.benchmark:benchmark-macro".
+   * </pre>
+   *
+   * <code>optional string benchmark_macro_version = 31;</code>
+   * @return Whether the benchmarkMacroVersion field is set.
+   */
+  boolean hasBenchmarkMacroVersion();
+  /**
+   * <pre>
+   * "androidx.benchmark:benchmark-macro".
+   * </pre>
+   *
+   * <code>optional string benchmark_macro_version = 31;</code>
+   * @return The benchmarkMacroVersion.
+   */
+  java.lang.String getBenchmarkMacroVersion();
+  /**
+   * <pre>
+   * "androidx.benchmark:benchmark-macro".
+   * </pre>
+   *
+   * <code>optional string benchmark_macro_version = 31;</code>
+   * @return The bytes for benchmarkMacroVersion.
+   */
+  com.google.protobuf.ByteString
+      getBenchmarkMacroVersionBytes();
+
+  /**
+   * <pre>
+   * "androidx.benchmark:benchmark-macro-junit4".
+   * </pre>
+   *
+   * <code>optional string benchmark_macro_junit4_version = 32;</code>
+   * @return Whether the benchmarkMacroJunit4Version field is set.
+   */
+  boolean hasBenchmarkMacroJunit4Version();
+  /**
+   * <pre>
+   * "androidx.benchmark:benchmark-macro-junit4".
+   * </pre>
+   *
+   * <code>optional string benchmark_macro_junit4_version = 32;</code>
+   * @return The benchmarkMacroJunit4Version.
+   */
+  java.lang.String getBenchmarkMacroJunit4Version();
+  /**
+   * <pre>
+   * "androidx.benchmark:benchmark-macro-junit4".
+   * </pre>
+   *
+   * <code>optional string benchmark_macro_junit4_version = 32;</code>
+   * @return The bytes for benchmarkMacroJunit4Version.
+   */
+  com.google.protobuf.ByteString
+      getBenchmarkMacroJunit4VersionBytes();
+
+  /**
+   * <pre>
    * "org.robolectric:robolectric".
    * </pre>
    *
