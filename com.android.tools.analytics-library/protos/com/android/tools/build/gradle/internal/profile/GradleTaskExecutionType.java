@@ -1174,6 +1174,10 @@ public enum GradleTaskExecutionType
    * <code>APP_ID_LIST = 289;</code>
    */
   APP_ID_LIST(289),
+  /**
+   * <code>KOTLIN_COMPILE_WITH_WORKERS = 290;</code>
+   */
+  KOTLIN_COMPILE_WITH_WORKERS(290),
   UNRECOGNIZED(-1),
   ;
 
@@ -2337,6 +2341,10 @@ public enum GradleTaskExecutionType
    * <code>APP_ID_LIST = 289;</code>
    */
   public static final int APP_ID_LIST_VALUE = 289;
+  /**
+   * <code>KOTLIN_COMPILE_WITH_WORKERS = 290;</code>
+   */
+  public static final int KOTLIN_COMPILE_WITH_WORKERS_VALUE = 290;
 
 
   public final int getNumber() {
@@ -2653,6 +2661,7 @@ public enum GradleTaskExecutionType
       case 287: return TEST_MODULE_VARIANT_MODEL;
       case 288: return MANAGED_DEVICE_INSTRUMENTATION_TEST_RESULT_AGGREGATION;
       case 289: return APP_ID_LIST;
+      case 290: return KOTLIN_COMPILE_WITH_WORKERS;
       default: return null;
     }
   }
