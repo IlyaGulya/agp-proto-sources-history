@@ -7071,4 +7071,58 @@ public interface AndroidStudioEventOrBuilder extends
    * <code>optional .android_studio.SherlockEvent sherlock_event = 253 [lazy = true];</code>
    */
   com.google.wireless.android.sdk.stats.SherlockEventOrBuilder getSherlockEventOrBuilder();
+
+  /**
+   * <pre>
+   * set when kind = MCP_ENABLEMENT_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.McpEnablementEvent mcp_enablement_event = 254 [lazy = true];</code>
+   * @return Whether the mcpEnablementEvent field is set.
+   */
+  boolean hasMcpEnablementEvent();
+  /**
+   * <pre>
+   * set when kind = MCP_ENABLEMENT_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.McpEnablementEvent mcp_enablement_event = 254 [lazy = true];</code>
+   * @return The mcpEnablementEvent.
+   */
+  com.google.wireless.android.sdk.stats.McpEnablementEvent getMcpEnablementEvent();
+  /**
+   * <pre>
+   * set when kind = MCP_ENABLEMENT_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.McpEnablementEvent mcp_enablement_event = 254 [lazy = true];</code>
+   */
+  com.google.wireless.android.sdk.stats.McpEnablementEventOrBuilder getMcpEnablementEventOrBuilder();
+
+  /**
+   * <pre>
+   * set when kind = GEMINI_TELEMETRY_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.GeminiTelemetryEvent gemini_telemetry_event = 255 [lazy = true];</code>
+   * @return Whether the geminiTelemetryEvent field is set.
+   */
+  boolean hasGeminiTelemetryEvent();
+  /**
+   * <pre>
+   * set when kind = GEMINI_TELEMETRY_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.GeminiTelemetryEvent gemini_telemetry_event = 255 [lazy = true];</code>
+   * @return The geminiTelemetryEvent.
+   */
+  com.google.wireless.android.sdk.stats.GeminiTelemetryEvent getGeminiTelemetryEvent();
+  /**
+   * <pre>
+   * set when kind = GEMINI_TELEMETRY_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.GeminiTelemetryEvent gemini_telemetry_event = 255 [lazy = true];</code>
+   */
+  com.google.wireless.android.sdk.stats.GeminiTelemetryEventOrBuilder getGeminiTelemetryEventOrBuilder();
 }
