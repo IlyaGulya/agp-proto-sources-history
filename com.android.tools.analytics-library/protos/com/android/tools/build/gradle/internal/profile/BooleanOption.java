@@ -804,6 +804,10 @@ public enum BooleanOption
    * <code>R8_OPTIMIZED_SHRINKING = 195;</code>
    */
   R8_OPTIMIZED_SHRINKING(195),
+  /**
+   * <code>ENABLE_DEVICE_TARGETING_CONFIG_API = 196;</code>
+   */
+  ENABLE_DEVICE_TARGETING_CONFIG_API(196),
   UNRECOGNIZED(-1),
   ;
 
@@ -1591,6 +1595,10 @@ public enum BooleanOption
    * <code>R8_OPTIMIZED_SHRINKING = 195;</code>
    */
   public static final int R8_OPTIMIZED_SHRINKING_VALUE = 195;
+  /**
+   * <code>ENABLE_DEVICE_TARGETING_CONFIG_API = 196;</code>
+   */
+  public static final int ENABLE_DEVICE_TARGETING_CONFIG_API_VALUE = 196;
 
 
   public final int getNumber() {
@@ -1813,6 +1821,7 @@ public enum BooleanOption
       case 193: return SKIP_APKS_VIA_BUNDLE_IF_POSSIBLE;
       case 194: return DISABLE_INLINE_SCOPES_NUMBERS;
       case 195: return R8_OPTIMIZED_SHRINKING;
+      case 196: return ENABLE_DEVICE_TARGETING_CONFIG_API;
       default: return null;
     }
   }
