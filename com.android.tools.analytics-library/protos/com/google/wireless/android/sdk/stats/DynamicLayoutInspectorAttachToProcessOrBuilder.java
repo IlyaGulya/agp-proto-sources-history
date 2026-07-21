@@ -147,4 +147,23 @@ public interface DynamicLayoutInspectorAttachToProcessOrBuilder extends
    * @return The debuggerPausedDuringAttach.
    */
   boolean getDebuggerPausedDuringAttach();
+
+  /**
+   * <pre>
+   * Was auto connect enabled for this session
+   * </pre>
+   *
+   * <code>optional bool auto_connect_enabled = 8;</code>
+   * @return Whether the autoConnectEnabled field is set.
+   */
+  boolean hasAutoConnectEnabled();
+  /**
+   * <pre>
+   * Was auto connect enabled for this session
+   * </pre>
+   *
+   * <code>optional bool auto_connect_enabled = 8;</code>
+   * @return The autoConnectEnabled.
+   */
+  boolean getAutoConnectEnabled();
 }

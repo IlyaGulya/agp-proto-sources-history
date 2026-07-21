@@ -1287,6 +1287,10 @@ public enum GradleTaskExecutionType
    * <code>BUILD_ANALYZER = 317;</code>
    */
   BUILD_ANALYZER(317),
+  /**
+   * <code>SIGN_ASB = 318;</code>
+   */
+  SIGN_ASB(318),
   UNRECOGNIZED(-1),
   ;
 
@@ -2562,6 +2566,10 @@ public enum GradleTaskExecutionType
    * <code>BUILD_ANALYZER = 317;</code>
    */
   public static final int BUILD_ANALYZER_VALUE = 317;
+  /**
+   * <code>SIGN_ASB = 318;</code>
+   */
+  public static final int SIGN_ASB_VALUE = 318;
 
 
   public final int getNumber() {
@@ -2906,6 +2914,7 @@ public enum GradleTaskExecutionType
       case 315: return GLOBAL_SYNTHETICS_MERGE;
       case 316: return FEATURE_GLOBAL_SYNTHETICS_MERGE;
       case 317: return BUILD_ANALYZER;
+      case 318: return SIGN_ASB;
       default: return null;
     }
   }
