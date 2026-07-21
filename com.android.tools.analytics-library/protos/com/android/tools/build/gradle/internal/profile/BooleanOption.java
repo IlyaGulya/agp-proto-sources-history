@@ -606,8 +606,9 @@ public enum BooleanOption
    */
   ENABLE_ART_PROFILES(146),
   /**
-   * <code>ENABLE_JACOCO_TRANSFORM_INSTRUMENTATION = 147;</code>
+   * <code>ENABLE_JACOCO_TRANSFORM_INSTRUMENTATION = 147 [deprecated = true];</code>
    */
+  @java.lang.Deprecated
   ENABLE_JACOCO_TRANSFORM_INSTRUMENTATION(147),
   /**
    * <code>FORCE_DETERMINISTIC_APK = 148;</code>
@@ -633,6 +634,10 @@ public enum BooleanOption
    * <code>MISSING_LINT_BASELINE_IS_EMPTY_BASELINE = 153;</code>
    */
   MISSING_LINT_BASELINE_IS_EMPTY_BASELINE(153),
+  /**
+   * <code>LEGACY_TRANSFORM_TASK_FORCE_NON_INCREMENTAL = 154;</code>
+   */
+  LEGACY_TRANSFORM_TASK_FORCE_NON_INCREMENTAL(154),
   UNRECOGNIZED(-1),
   ;
 
@@ -1225,9 +1230,9 @@ public enum BooleanOption
    */
   public static final int ENABLE_ART_PROFILES_VALUE = 146;
   /**
-   * <code>ENABLE_JACOCO_TRANSFORM_INSTRUMENTATION = 147;</code>
+   * <code>ENABLE_JACOCO_TRANSFORM_INSTRUMENTATION = 147 [deprecated = true];</code>
    */
-  public static final int ENABLE_JACOCO_TRANSFORM_INSTRUMENTATION_VALUE = 147;
+  @java.lang.Deprecated public static final int ENABLE_JACOCO_TRANSFORM_INSTRUMENTATION_VALUE = 147;
   /**
    * <code>FORCE_DETERMINISTIC_APK = 148;</code>
    */
@@ -1252,6 +1257,10 @@ public enum BooleanOption
    * <code>MISSING_LINT_BASELINE_IS_EMPTY_BASELINE = 153;</code>
    */
   public static final int MISSING_LINT_BASELINE_IS_EMPTY_BASELINE_VALUE = 153;
+  /**
+   * <code>LEGACY_TRANSFORM_TASK_FORCE_NON_INCREMENTAL = 154;</code>
+   */
+  public static final int LEGACY_TRANSFORM_TASK_FORCE_NON_INCREMENTAL_VALUE = 154;
 
 
   public final int getNumber() {
@@ -1432,6 +1441,7 @@ public enum BooleanOption
       case 151: return GRADLE_MANAGED_DEVICE_EMULATOR_SHOW_KERNEL_LOGGING;
       case 152: return GRADLE_MANAGED_DEVICE_ALLOW_OLD_API_LEVEL_DEVICES;
       case 153: return MISSING_LINT_BASELINE_IS_EMPTY_BASELINE;
+      case 154: return LEGACY_TRANSFORM_TASK_FORCE_NON_INCREMENTAL;
       default: return null;
     }
   }

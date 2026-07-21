@@ -1199,6 +1199,14 @@ public enum GradleTaskExecutionType
    * <code>FUSED_LIBRARY_CLASSES_REWRITE = 295;</code>
    */
   FUSED_LIBRARY_CLASSES_REWRITE(295),
+  /**
+   * <code>INCREMENTAL_TRANSFORM = 296;</code>
+   */
+  INCREMENTAL_TRANSFORM(296),
+  /**
+   * <code>NON_INCREMENTAL_TRANSFORM = 297;</code>
+   */
+  NON_INCREMENTAL_TRANSFORM(297),
   UNRECOGNIZED(-1),
   ;
 
@@ -2386,6 +2394,14 @@ public enum GradleTaskExecutionType
    * <code>FUSED_LIBRARY_CLASSES_REWRITE = 295;</code>
    */
   public static final int FUSED_LIBRARY_CLASSES_REWRITE_VALUE = 295;
+  /**
+   * <code>INCREMENTAL_TRANSFORM = 296;</code>
+   */
+  public static final int INCREMENTAL_TRANSFORM_VALUE = 296;
+  /**
+   * <code>NON_INCREMENTAL_TRANSFORM = 297;</code>
+   */
+  public static final int NON_INCREMENTAL_TRANSFORM_VALUE = 297;
 
 
   public final int getNumber() {
@@ -2708,6 +2724,8 @@ public enum GradleTaskExecutionType
       case 293: return FUSED_LIBRARY_BUNDLE_CLASSES;
       case 294: return FUSED_LIBRARY_BUNDLE;
       case 295: return FUSED_LIBRARY_CLASSES_REWRITE;
+      case 296: return INCREMENTAL_TRANSFORM;
+      case 297: return NON_INCREMENTAL_TRANSFORM;
       default: return null;
     }
   }
