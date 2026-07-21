@@ -824,6 +824,10 @@ public enum BooleanOption
    * <code>GRADUAL_R8_SHRINKING = 200;</code>
    */
   GRADUAL_R8_SHRINKING(200),
+  /**
+   * <code>ENABLE_PROBLEMS_API = 201;</code>
+   */
+  ENABLE_PROBLEMS_API(201),
   UNRECOGNIZED(-1),
   ;
 
@@ -1631,6 +1635,10 @@ public enum BooleanOption
    * <code>GRADUAL_R8_SHRINKING = 200;</code>
    */
   public static final int GRADUAL_R8_SHRINKING_VALUE = 200;
+  /**
+   * <code>ENABLE_PROBLEMS_API = 201;</code>
+   */
+  public static final int ENABLE_PROBLEMS_API_VALUE = 201;
 
 
   public final int getNumber() {
@@ -1858,6 +1866,7 @@ public enum BooleanOption
       case 198: return R8_STRICT_FULL_MODE_FOR_KEEP_RULES;
       case 199: return GENERATE_SYNC_ISSUE_WHEN_LIBRARY_CONSTRAINTS_ARE_ENABLED;
       case 200: return GRADUAL_R8_SHRINKING;
+      case 201: return ENABLE_PROBLEMS_API;
       default: return null;
     }
   }
