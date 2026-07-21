@@ -145,6 +145,10 @@ public enum StringOption
    * <code>SUPPRESS_UNSUPPORTED_COMPILE_SDK = 33;</code>
    */
   SUPPRESS_UNSUPPORTED_COMPILE_SDK(33),
+  /**
+   * <code>LINT_VERSION_OVERRIDE = 34;</code>
+   */
+  LINT_VERSION_OVERRIDE(34),
   UNRECOGNIZED(-1),
   ;
 
@@ -284,6 +288,10 @@ public enum StringOption
    * <code>SUPPRESS_UNSUPPORTED_COMPILE_SDK = 33;</code>
    */
   public static final int SUPPRESS_UNSUPPORTED_COMPILE_SDK_VALUE = 33;
+  /**
+   * <code>LINT_VERSION_OVERRIDE = 34;</code>
+   */
+  public static final int LINT_VERSION_OVERRIDE_VALUE = 34;
 
 
   public final int getNumber() {
@@ -344,6 +352,7 @@ public enum StringOption
       case 31: return AAPT2_FROM_MAVEN_VERSION_OVERRIDE;
       case 32: return LINT_HEAP_SIZE;
       case 33: return SUPPRESS_UNSUPPORTED_COMPILE_SDK;
+      case 34: return LINT_VERSION_OVERRIDE;
       default: return null;
     }
   }
