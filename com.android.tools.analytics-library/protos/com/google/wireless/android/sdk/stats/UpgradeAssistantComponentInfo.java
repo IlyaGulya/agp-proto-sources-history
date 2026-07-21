@@ -308,6 +308,10 @@ private static final long serialVersionUID = 0L;
      * <code>REMOVE_EMULATOR_SNAPSHOTS = 64;</code>
      */
     REMOVE_EMULATOR_SNAPSHOTS(64),
+    /**
+     * <code>DYNAMIC_FEATURE_CONSUMER_PROGUARD_FILES = 65;</code>
+     */
+    DYNAMIC_FEATURE_CONSUMER_PROGUARD_FILES(65),
     ;
 
     /**
@@ -570,6 +574,10 @@ private static final long serialVersionUID = 0L;
      * <code>REMOVE_EMULATOR_SNAPSHOTS = 64;</code>
      */
     public static final int REMOVE_EMULATOR_SNAPSHOTS_VALUE = 64;
+    /**
+     * <code>DYNAMIC_FEATURE_CONSUMER_PROGUARD_FILES = 65;</code>
+     */
+    public static final int DYNAMIC_FEATURE_CONSUMER_PROGUARD_FILES_VALUE = 65;
 
 
     public final int getNumber() {
@@ -657,6 +665,7 @@ private static final long serialVersionUID = 0L;
         case 62: return NEWDSL_DEFAULT;
         case 63: return KOTLIN20_COMPOSE;
         case 64: return REMOVE_EMULATOR_SNAPSHOTS;
+        case 65: return DYNAMIC_FEATURE_CONSUMER_PROGUARD_FILES;
         default: return null;
       }
     }
