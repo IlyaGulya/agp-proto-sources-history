@@ -3841,6 +3841,44 @@ private static final long serialVersionUID = 0L;
      * @return The isFavorite.
      */
     boolean getIsFavorite();
+
+    /**
+     * <pre>
+     * Number of 'is:crash' search terms.
+     * </pre>
+     *
+     * <code>optional int32 crash_terms = 14;</code>
+     * @return Whether the crashTerms field is set.
+     */
+    boolean hasCrashTerms();
+    /**
+     * <pre>
+     * Number of 'is:crash' search terms.
+     * </pre>
+     *
+     * <code>optional int32 crash_terms = 14;</code>
+     * @return The crashTerms.
+     */
+    int getCrashTerms();
+
+    /**
+     * <pre>
+     * Number of 'is:stacktrace' search terms.
+     * </pre>
+     *
+     * <code>optional int32 stacktrace_terms = 15;</code>
+     * @return Whether the stacktraceTerms field is set.
+     */
+    boolean hasStacktraceTerms();
+    /**
+     * <pre>
+     * Number of 'is:stacktrace' search terms.
+     * </pre>
+     *
+     * <code>optional int32 stacktrace_terms = 15;</code>
+     * @return The stacktraceTerms.
+     */
+    int getStacktraceTerms();
   }
   /**
    * <pre>
@@ -3989,6 +4027,16 @@ private static final long serialVersionUID = 0L;
             case 104: {
               bitField0_ |= 0x00001000;
               isFavorite_ = input.readBool();
+              break;
+            }
+            case 112: {
+              bitField0_ |= 0x00002000;
+              crashTerms_ = input.readInt32();
+              break;
+            }
+            case 120: {
+              bitField0_ |= 0x00004000;
+              stacktraceTerms_ = input.readInt32();
               break;
             }
             default: {
@@ -5379,6 +5427,60 @@ private static final long serialVersionUID = 0L;
       return isFavorite_;
     }
 
+    public static final int CRASH_TERMS_FIELD_NUMBER = 14;
+    private int crashTerms_;
+    /**
+     * <pre>
+     * Number of 'is:crash' search terms.
+     * </pre>
+     *
+     * <code>optional int32 crash_terms = 14;</code>
+     * @return Whether the crashTerms field is set.
+     */
+    @java.lang.Override
+    public boolean hasCrashTerms() {
+      return ((bitField0_ & 0x00002000) != 0);
+    }
+    /**
+     * <pre>
+     * Number of 'is:crash' search terms.
+     * </pre>
+     *
+     * <code>optional int32 crash_terms = 14;</code>
+     * @return The crashTerms.
+     */
+    @java.lang.Override
+    public int getCrashTerms() {
+      return crashTerms_;
+    }
+
+    public static final int STACKTRACE_TERMS_FIELD_NUMBER = 15;
+    private int stacktraceTerms_;
+    /**
+     * <pre>
+     * Number of 'is:stacktrace' search terms.
+     * </pre>
+     *
+     * <code>optional int32 stacktrace_terms = 15;</code>
+     * @return Whether the stacktraceTerms field is set.
+     */
+    @java.lang.Override
+    public boolean hasStacktraceTerms() {
+      return ((bitField0_ & 0x00004000) != 0);
+    }
+    /**
+     * <pre>
+     * Number of 'is:stacktrace' search terms.
+     * </pre>
+     *
+     * <code>optional int32 stacktrace_terms = 15;</code>
+     * @return The stacktraceTerms.
+     */
+    @java.lang.Override
+    public int getStacktraceTerms() {
+      return stacktraceTerms_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -5431,6 +5533,12 @@ private static final long serialVersionUID = 0L;
       }
       if (((bitField0_ & 0x00001000) != 0)) {
         output.writeBool(13, isFavorite_);
+      }
+      if (((bitField0_ & 0x00002000) != 0)) {
+        output.writeInt32(14, crashTerms_);
+      }
+      if (((bitField0_ & 0x00004000) != 0)) {
+        output.writeInt32(15, stacktraceTerms_);
       }
       unknownFields.writeTo(output);
     }
@@ -5492,6 +5600,14 @@ private static final long serialVersionUID = 0L;
       if (((bitField0_ & 0x00001000) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(13, isFavorite_);
+      }
+      if (((bitField0_ & 0x00002000) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(14, crashTerms_);
+      }
+      if (((bitField0_ & 0x00004000) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(15, stacktraceTerms_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -5573,6 +5689,16 @@ private static final long serialVersionUID = 0L;
         if (getIsFavorite()
             != other.getIsFavorite()) return false;
       }
+      if (hasCrashTerms() != other.hasCrashTerms()) return false;
+      if (hasCrashTerms()) {
+        if (getCrashTerms()
+            != other.getCrashTerms()) return false;
+      }
+      if (hasStacktraceTerms() != other.hasStacktraceTerms()) return false;
+      if (hasStacktraceTerms()) {
+        if (getStacktraceTerms()
+            != other.getStacktraceTerms()) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -5637,6 +5763,14 @@ private static final long serialVersionUID = 0L;
         hash = (37 * hash) + IS_FAVORITE_FIELD_NUMBER;
         hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
             getIsFavorite());
+      }
+      if (hasCrashTerms()) {
+        hash = (37 * hash) + CRASH_TERMS_FIELD_NUMBER;
+        hash = (53 * hash) + getCrashTerms();
+      }
+      if (hasStacktraceTerms()) {
+        hash = (37 * hash) + STACKTRACE_TERMS_FIELD_NUMBER;
+        hash = (53 * hash) + getStacktraceTerms();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -5823,6 +5957,10 @@ private static final long serialVersionUID = 0L;
         bitField0_ = (bitField0_ & ~0x00000800);
         isFavorite_ = false;
         bitField0_ = (bitField0_ & ~0x00001000);
+        crashTerms_ = 0;
+        bitField0_ = (bitField0_ & ~0x00002000);
+        stacktraceTerms_ = 0;
+        bitField0_ = (bitField0_ & ~0x00004000);
         return this;
       }
 
@@ -5919,6 +6057,14 @@ private static final long serialVersionUID = 0L;
           result.isFavorite_ = isFavorite_;
           to_bitField0_ |= 0x00001000;
         }
+        if (((from_bitField0_ & 0x00002000) != 0)) {
+          result.crashTerms_ = crashTerms_;
+          to_bitField0_ |= 0x00002000;
+        }
+        if (((from_bitField0_ & 0x00004000) != 0)) {
+          result.stacktraceTerms_ = stacktraceTerms_;
+          to_bitField0_ |= 0x00004000;
+        }
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -6006,6 +6152,12 @@ private static final long serialVersionUID = 0L;
         }
         if (other.hasIsFavorite()) {
           setIsFavorite(other.getIsFavorite());
+        }
+        if (other.hasCrashTerms()) {
+          setCrashTerms(other.getCrashTerms());
+        }
+        if (other.hasStacktraceTerms()) {
+          setStacktraceTerms(other.getStacktraceTerms());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -7160,6 +7312,116 @@ private static final long serialVersionUID = 0L;
       public Builder clearIsFavorite() {
         bitField0_ = (bitField0_ & ~0x00001000);
         isFavorite_ = false;
+        onChanged();
+        return this;
+      }
+
+      private int crashTerms_ ;
+      /**
+       * <pre>
+       * Number of 'is:crash' search terms.
+       * </pre>
+       *
+       * <code>optional int32 crash_terms = 14;</code>
+       * @return Whether the crashTerms field is set.
+       */
+      @java.lang.Override
+      public boolean hasCrashTerms() {
+        return ((bitField0_ & 0x00002000) != 0);
+      }
+      /**
+       * <pre>
+       * Number of 'is:crash' search terms.
+       * </pre>
+       *
+       * <code>optional int32 crash_terms = 14;</code>
+       * @return The crashTerms.
+       */
+      @java.lang.Override
+      public int getCrashTerms() {
+        return crashTerms_;
+      }
+      /**
+       * <pre>
+       * Number of 'is:crash' search terms.
+       * </pre>
+       *
+       * <code>optional int32 crash_terms = 14;</code>
+       * @param value The crashTerms to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCrashTerms(int value) {
+        bitField0_ |= 0x00002000;
+        crashTerms_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Number of 'is:crash' search terms.
+       * </pre>
+       *
+       * <code>optional int32 crash_terms = 14;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCrashTerms() {
+        bitField0_ = (bitField0_ & ~0x00002000);
+        crashTerms_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int stacktraceTerms_ ;
+      /**
+       * <pre>
+       * Number of 'is:stacktrace' search terms.
+       * </pre>
+       *
+       * <code>optional int32 stacktrace_terms = 15;</code>
+       * @return Whether the stacktraceTerms field is set.
+       */
+      @java.lang.Override
+      public boolean hasStacktraceTerms() {
+        return ((bitField0_ & 0x00004000) != 0);
+      }
+      /**
+       * <pre>
+       * Number of 'is:stacktrace' search terms.
+       * </pre>
+       *
+       * <code>optional int32 stacktrace_terms = 15;</code>
+       * @return The stacktraceTerms.
+       */
+      @java.lang.Override
+      public int getStacktraceTerms() {
+        return stacktraceTerms_;
+      }
+      /**
+       * <pre>
+       * Number of 'is:stacktrace' search terms.
+       * </pre>
+       *
+       * <code>optional int32 stacktrace_terms = 15;</code>
+       * @param value The stacktraceTerms to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStacktraceTerms(int value) {
+        bitField0_ |= 0x00004000;
+        stacktraceTerms_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Number of 'is:stacktrace' search terms.
+       * </pre>
+       *
+       * <code>optional int32 stacktrace_terms = 15;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearStacktraceTerms() {
+        bitField0_ = (bitField0_ & ~0x00004000);
+        stacktraceTerms_ = 0;
         onChanged();
         return this;
       }

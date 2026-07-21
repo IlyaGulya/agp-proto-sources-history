@@ -1239,6 +1239,18 @@ public enum GradleTaskExecutionType
    * <code>PRIVACY_SANDBOX_SDK_MERGE_RESOURCES = 305;</code>
    */
   PRIVACY_SANDBOX_SDK_MERGE_RESOURCES(305),
+  /**
+   * <code>PRIVACY_SANDBOX_SDK_DEX = 306;</code>
+   */
+  PRIVACY_SANDBOX_SDK_DEX(306),
+  /**
+   * <code>PRIVACY_SANDBOX_SDK_MERGE_DEX = 307;</code>
+   */
+  PRIVACY_SANDBOX_SDK_MERGE_DEX(307),
+  /**
+   * <code>PACKAGE_PRIVACY_SANDBOX_SDK_BUNDLE = 308;</code>
+   */
+  PACKAGE_PRIVACY_SANDBOX_SDK_BUNDLE(308),
   UNRECOGNIZED(-1),
   ;
 
@@ -2466,6 +2478,18 @@ public enum GradleTaskExecutionType
    * <code>PRIVACY_SANDBOX_SDK_MERGE_RESOURCES = 305;</code>
    */
   public static final int PRIVACY_SANDBOX_SDK_MERGE_RESOURCES_VALUE = 305;
+  /**
+   * <code>PRIVACY_SANDBOX_SDK_DEX = 306;</code>
+   */
+  public static final int PRIVACY_SANDBOX_SDK_DEX_VALUE = 306;
+  /**
+   * <code>PRIVACY_SANDBOX_SDK_MERGE_DEX = 307;</code>
+   */
+  public static final int PRIVACY_SANDBOX_SDK_MERGE_DEX_VALUE = 307;
+  /**
+   * <code>PACKAGE_PRIVACY_SANDBOX_SDK_BUNDLE = 308;</code>
+   */
+  public static final int PACKAGE_PRIVACY_SANDBOX_SDK_BUNDLE_VALUE = 308;
 
 
   public final int getNumber() {
@@ -2798,6 +2822,9 @@ public enum GradleTaskExecutionType
       case 303: return PRIVACY_SANDBOX_SDK_MANIFEST_GENERATOR;
       case 304: return PRIVACY_SANDBOX_SDK_LINK_ANDROID_RESOURCES;
       case 305: return PRIVACY_SANDBOX_SDK_MERGE_RESOURCES;
+      case 306: return PRIVACY_SANDBOX_SDK_DEX;
+      case 307: return PRIVACY_SANDBOX_SDK_MERGE_DEX;
+      case 308: return PACKAGE_PRIVACY_SANDBOX_SDK_BUNDLE;
       default: return null;
     }
   }

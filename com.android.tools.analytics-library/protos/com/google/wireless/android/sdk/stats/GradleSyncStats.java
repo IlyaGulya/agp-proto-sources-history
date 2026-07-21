@@ -918,6 +918,14 @@ private static final long serialVersionUID = 0L;
     TRIGGER_AGP_VERSION_UPDATED(4501),
     /**
      * <pre>
+     * Rollback of Android Gradle plugin update was requested
+     * </pre>
+     *
+     * <code>TRIGGER_AGP_VERSION_UPDATE_ROLLED_BACK = 4502;</code>
+     */
+    TRIGGER_AGP_VERSION_UPDATE_ROLLED_BACK(4502),
+    /**
+     * <pre>
      * Last marker for changes in Android Gradle Plugin
      * </pre>
      *
@@ -1795,6 +1803,14 @@ private static final long serialVersionUID = 0L;
     public static final int TRIGGER_AGP_VERSION_UPDATED_VALUE = 4501;
     /**
      * <pre>
+     * Rollback of Android Gradle plugin update was requested
+     * </pre>
+     *
+     * <code>TRIGGER_AGP_VERSION_UPDATE_ROLLED_BACK = 4502;</code>
+     */
+    public static final int TRIGGER_AGP_VERSION_UPDATE_ROLLED_BACK_VALUE = 4502;
+    /**
+     * <pre>
      * Last marker for changes in Android Gradle Plugin
      * </pre>
      *
@@ -2042,6 +2058,7 @@ private static final long serialVersionUID = 0L;
         case 4299: return TRIGGER_RUN_LAST_MARKER;
         case 4500: return TRIGGER_AGP_FIRST_MARKER;
         case 4501: return TRIGGER_AGP_VERSION_UPDATED;
+        case 4502: return TRIGGER_AGP_VERSION_UPDATE_ROLLED_BACK;
         case 4599: return TRIGGER_AGP_LAST_MARKER;
         case 4800: return TRIGGER_PROJECT_LOADED_FIRST_MARKER;
         case 4801: return TRIGGER_PROJECT_NEW;
