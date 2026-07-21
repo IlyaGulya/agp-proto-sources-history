@@ -1700,6 +1700,10 @@ private static final long serialVersionUID = 0L;
        * <code>SEVEN_DAYS = 4;</code>
        */
       SEVEN_DAYS(4),
+      /**
+       * <code>TWENTYFOUR_HOURS = 5;</code>
+       */
+      TWENTYFOUR_HOURS(5),
       ;
 
       /**
@@ -1722,6 +1726,10 @@ private static final long serialVersionUID = 0L;
        * <code>SEVEN_DAYS = 4;</code>
        */
       public static final int SEVEN_DAYS_VALUE = 4;
+      /**
+       * <code>TWENTYFOUR_HOURS = 5;</code>
+       */
+      public static final int TWENTYFOUR_HOURS_VALUE = 5;
 
 
       public final int getNumber() {
@@ -1749,6 +1757,7 @@ private static final long serialVersionUID = 0L;
           case 2: return SIXTY_DAYS;
           case 3: return NINETY_DAYS;
           case 4: return SEVEN_DAYS;
+          case 5: return TWENTYFOUR_HOURS;
           default: return null;
         }
       }
