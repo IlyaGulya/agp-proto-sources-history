@@ -92,6 +92,19 @@ private static final long serialVersionUID = 0L;
             bitField0_ |= 0x00000004;
             break;
           }
+          case 34: {
+            com.google.wireless.android.sdk.stats.DynamicLayoutInspectorErrorInfo.Builder subBuilder = null;
+            if (((bitField0_ & 0x00000008) != 0)) {
+              subBuilder = errorInfo_.toBuilder();
+            }
+            errorInfo_ = input.readMessage(com.google.wireless.android.sdk.stats.DynamicLayoutInspectorErrorInfo.PARSER, extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(errorInfo_);
+              errorInfo_ = subBuilder.buildPartial();
+            }
+            bitField0_ |= 0x00000008;
+            break;
+          }
           default: {
             if (!parseUnknownField(
                 input, unknownFields, extensionRegistry, tag)) {
@@ -581,6 +594,41 @@ private static final long serialVersionUID = 0L;
     return snapshotInfo_ == null ? com.google.wireless.android.sdk.stats.DynamicLayoutInspectorSnapshotInfo.getDefaultInstance() : snapshotInfo_;
   }
 
+  public static final int ERROR_INFO_FIELD_NUMBER = 4;
+  private com.google.wireless.android.sdk.stats.DynamicLayoutInspectorErrorInfo errorInfo_;
+  /**
+   * <pre>
+   * Extra info for error-related events
+   * </pre>
+   *
+   * <code>optional .android_studio.DynamicLayoutInspectorErrorInfo error_info = 4;</code>
+   * @return Whether the errorInfo field is set.
+   */
+  public boolean hasErrorInfo() {
+    return ((bitField0_ & 0x00000008) != 0);
+  }
+  /**
+   * <pre>
+   * Extra info for error-related events
+   * </pre>
+   *
+   * <code>optional .android_studio.DynamicLayoutInspectorErrorInfo error_info = 4;</code>
+   * @return The errorInfo.
+   */
+  public com.google.wireless.android.sdk.stats.DynamicLayoutInspectorErrorInfo getErrorInfo() {
+    return errorInfo_ == null ? com.google.wireless.android.sdk.stats.DynamicLayoutInspectorErrorInfo.getDefaultInstance() : errorInfo_;
+  }
+  /**
+   * <pre>
+   * Extra info for error-related events
+   * </pre>
+   *
+   * <code>optional .android_studio.DynamicLayoutInspectorErrorInfo error_info = 4;</code>
+   */
+  public com.google.wireless.android.sdk.stats.DynamicLayoutInspectorErrorInfoOrBuilder getErrorInfoOrBuilder() {
+    return errorInfo_ == null ? com.google.wireless.android.sdk.stats.DynamicLayoutInspectorErrorInfo.getDefaultInstance() : errorInfo_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -604,6 +652,9 @@ private static final long serialVersionUID = 0L;
     if (((bitField0_ & 0x00000004) != 0)) {
       output.writeMessage(3, getSnapshotInfo());
     }
+    if (((bitField0_ & 0x00000008) != 0)) {
+      output.writeMessage(4, getErrorInfo());
+    }
     unknownFields.writeTo(output);
   }
 
@@ -624,6 +675,10 @@ private static final long serialVersionUID = 0L;
     if (((bitField0_ & 0x00000004) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(3, getSnapshotInfo());
+    }
+    if (((bitField0_ & 0x00000008) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(4, getErrorInfo());
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -654,6 +709,11 @@ private static final long serialVersionUID = 0L;
       if (!getSnapshotInfo()
           .equals(other.getSnapshotInfo())) return false;
     }
+    if (hasErrorInfo() != other.hasErrorInfo()) return false;
+    if (hasErrorInfo()) {
+      if (!getErrorInfo()
+          .equals(other.getErrorInfo())) return false;
+    }
     if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
@@ -676,6 +736,10 @@ private static final long serialVersionUID = 0L;
     if (hasSnapshotInfo()) {
       hash = (37 * hash) + SNAPSHOT_INFO_FIELD_NUMBER;
       hash = (53 * hash) + getSnapshotInfo().hashCode();
+    }
+    if (hasErrorInfo()) {
+      hash = (37 * hash) + ERROR_INFO_FIELD_NUMBER;
+      hash = (53 * hash) + getErrorInfo().hashCode();
     }
     hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
@@ -811,6 +875,7 @@ private static final long serialVersionUID = 0L;
               .alwaysUseFieldBuilders) {
         getSessionFieldBuilder();
         getSnapshotInfoFieldBuilder();
+        getErrorInfoFieldBuilder();
       }
     }
     @java.lang.Override
@@ -830,6 +895,12 @@ private static final long serialVersionUID = 0L;
         snapshotInfoBuilder_.clear();
       }
       bitField0_ = (bitField0_ & ~0x00000004);
+      if (errorInfoBuilder_ == null) {
+        errorInfo_ = null;
+      } else {
+        errorInfoBuilder_.clear();
+      }
+      bitField0_ = (bitField0_ & ~0x00000008);
       return this;
     }
 
@@ -877,6 +948,14 @@ private static final long serialVersionUID = 0L;
           result.snapshotInfo_ = snapshotInfoBuilder_.build();
         }
         to_bitField0_ |= 0x00000004;
+      }
+      if (((from_bitField0_ & 0x00000008) != 0)) {
+        if (errorInfoBuilder_ == null) {
+          result.errorInfo_ = errorInfo_;
+        } else {
+          result.errorInfo_ = errorInfoBuilder_.build();
+        }
+        to_bitField0_ |= 0x00000008;
       }
       result.bitField0_ = to_bitField0_;
       onBuilt();
@@ -935,6 +1014,9 @@ private static final long serialVersionUID = 0L;
       }
       if (other.hasSnapshotInfo()) {
         mergeSnapshotInfo(other.getSnapshotInfo());
+      }
+      if (other.hasErrorInfo()) {
+        mergeErrorInfo(other.getErrorInfo());
       }
       this.mergeUnknownFields(other.unknownFields);
       onChanged();
@@ -1334,6 +1416,162 @@ private static final long serialVersionUID = 0L;
         snapshotInfo_ = null;
       }
       return snapshotInfoBuilder_;
+    }
+
+    private com.google.wireless.android.sdk.stats.DynamicLayoutInspectorErrorInfo errorInfo_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.DynamicLayoutInspectorErrorInfo, com.google.wireless.android.sdk.stats.DynamicLayoutInspectorErrorInfo.Builder, com.google.wireless.android.sdk.stats.DynamicLayoutInspectorErrorInfoOrBuilder> errorInfoBuilder_;
+    /**
+     * <pre>
+     * Extra info for error-related events
+     * </pre>
+     *
+     * <code>optional .android_studio.DynamicLayoutInspectorErrorInfo error_info = 4;</code>
+     * @return Whether the errorInfo field is set.
+     */
+    public boolean hasErrorInfo() {
+      return ((bitField0_ & 0x00000008) != 0);
+    }
+    /**
+     * <pre>
+     * Extra info for error-related events
+     * </pre>
+     *
+     * <code>optional .android_studio.DynamicLayoutInspectorErrorInfo error_info = 4;</code>
+     * @return The errorInfo.
+     */
+    public com.google.wireless.android.sdk.stats.DynamicLayoutInspectorErrorInfo getErrorInfo() {
+      if (errorInfoBuilder_ == null) {
+        return errorInfo_ == null ? com.google.wireless.android.sdk.stats.DynamicLayoutInspectorErrorInfo.getDefaultInstance() : errorInfo_;
+      } else {
+        return errorInfoBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * Extra info for error-related events
+     * </pre>
+     *
+     * <code>optional .android_studio.DynamicLayoutInspectorErrorInfo error_info = 4;</code>
+     */
+    public Builder setErrorInfo(com.google.wireless.android.sdk.stats.DynamicLayoutInspectorErrorInfo value) {
+      if (errorInfoBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        errorInfo_ = value;
+        onChanged();
+      } else {
+        errorInfoBuilder_.setMessage(value);
+      }
+      bitField0_ |= 0x00000008;
+      return this;
+    }
+    /**
+     * <pre>
+     * Extra info for error-related events
+     * </pre>
+     *
+     * <code>optional .android_studio.DynamicLayoutInspectorErrorInfo error_info = 4;</code>
+     */
+    public Builder setErrorInfo(
+        com.google.wireless.android.sdk.stats.DynamicLayoutInspectorErrorInfo.Builder builderForValue) {
+      if (errorInfoBuilder_ == null) {
+        errorInfo_ = builderForValue.build();
+        onChanged();
+      } else {
+        errorInfoBuilder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x00000008;
+      return this;
+    }
+    /**
+     * <pre>
+     * Extra info for error-related events
+     * </pre>
+     *
+     * <code>optional .android_studio.DynamicLayoutInspectorErrorInfo error_info = 4;</code>
+     */
+    public Builder mergeErrorInfo(com.google.wireless.android.sdk.stats.DynamicLayoutInspectorErrorInfo value) {
+      if (errorInfoBuilder_ == null) {
+        if (((bitField0_ & 0x00000008) != 0) &&
+            errorInfo_ != null &&
+            errorInfo_ != com.google.wireless.android.sdk.stats.DynamicLayoutInspectorErrorInfo.getDefaultInstance()) {
+          errorInfo_ =
+            com.google.wireless.android.sdk.stats.DynamicLayoutInspectorErrorInfo.newBuilder(errorInfo_).mergeFrom(value).buildPartial();
+        } else {
+          errorInfo_ = value;
+        }
+        onChanged();
+      } else {
+        errorInfoBuilder_.mergeFrom(value);
+      }
+      bitField0_ |= 0x00000008;
+      return this;
+    }
+    /**
+     * <pre>
+     * Extra info for error-related events
+     * </pre>
+     *
+     * <code>optional .android_studio.DynamicLayoutInspectorErrorInfo error_info = 4;</code>
+     */
+    public Builder clearErrorInfo() {
+      if (errorInfoBuilder_ == null) {
+        errorInfo_ = null;
+        onChanged();
+      } else {
+        errorInfoBuilder_.clear();
+      }
+      bitField0_ = (bitField0_ & ~0x00000008);
+      return this;
+    }
+    /**
+     * <pre>
+     * Extra info for error-related events
+     * </pre>
+     *
+     * <code>optional .android_studio.DynamicLayoutInspectorErrorInfo error_info = 4;</code>
+     */
+    public com.google.wireless.android.sdk.stats.DynamicLayoutInspectorErrorInfo.Builder getErrorInfoBuilder() {
+      bitField0_ |= 0x00000008;
+      onChanged();
+      return getErrorInfoFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * Extra info for error-related events
+     * </pre>
+     *
+     * <code>optional .android_studio.DynamicLayoutInspectorErrorInfo error_info = 4;</code>
+     */
+    public com.google.wireless.android.sdk.stats.DynamicLayoutInspectorErrorInfoOrBuilder getErrorInfoOrBuilder() {
+      if (errorInfoBuilder_ != null) {
+        return errorInfoBuilder_.getMessageOrBuilder();
+      } else {
+        return errorInfo_ == null ?
+            com.google.wireless.android.sdk.stats.DynamicLayoutInspectorErrorInfo.getDefaultInstance() : errorInfo_;
+      }
+    }
+    /**
+     * <pre>
+     * Extra info for error-related events
+     * </pre>
+     *
+     * <code>optional .android_studio.DynamicLayoutInspectorErrorInfo error_info = 4;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.DynamicLayoutInspectorErrorInfo, com.google.wireless.android.sdk.stats.DynamicLayoutInspectorErrorInfo.Builder, com.google.wireless.android.sdk.stats.DynamicLayoutInspectorErrorInfoOrBuilder> 
+        getErrorInfoFieldBuilder() {
+      if (errorInfoBuilder_ == null) {
+        errorInfoBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.wireless.android.sdk.stats.DynamicLayoutInspectorErrorInfo, com.google.wireless.android.sdk.stats.DynamicLayoutInspectorErrorInfo.Builder, com.google.wireless.android.sdk.stats.DynamicLayoutInspectorErrorInfoOrBuilder>(
+                getErrorInfo(),
+                getParentForChildren(),
+                isClean());
+        errorInfo_ = null;
+      }
+      return errorInfoBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

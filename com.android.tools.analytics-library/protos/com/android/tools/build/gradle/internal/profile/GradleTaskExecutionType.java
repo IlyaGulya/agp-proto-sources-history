@@ -1130,6 +1130,10 @@ public enum GradleTaskExecutionType
    * <code>PREFAB_PACKAGE_CONFIGURATION = 278;</code>
    */
   PREFAB_PACKAGE_CONFIGURATION(278),
+  /**
+   * <code>APPLICATION_VARIANT_MODEL = 279;</code>
+   */
+  APPLICATION_VARIANT_MODEL(279),
   UNRECOGNIZED(-1),
   ;
 
@@ -2249,6 +2253,10 @@ public enum GradleTaskExecutionType
    * <code>PREFAB_PACKAGE_CONFIGURATION = 278;</code>
    */
   public static final int PREFAB_PACKAGE_CONFIGURATION_VALUE = 278;
+  /**
+   * <code>APPLICATION_VARIANT_MODEL = 279;</code>
+   */
+  public static final int APPLICATION_VARIANT_MODEL_VALUE = 279;
 
 
   public final int getNumber() {
@@ -2554,6 +2562,7 @@ public enum GradleTaskExecutionType
       case 276: return JAVA_DOC_JAR;
       case 277: return LISTING_FILE_REDIRECT;
       case 278: return PREFAB_PACKAGE_CONFIGURATION;
+      case 279: return APPLICATION_VARIANT_MODEL;
       default: return null;
     }
   }
