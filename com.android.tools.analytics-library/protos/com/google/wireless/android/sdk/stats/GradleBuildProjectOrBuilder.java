@@ -654,4 +654,23 @@ public interface GradleBuildProjectOrBuilder extends
    */
   com.google.protobuf.ByteString
       getNdkVersionBytes();
+
+  /**
+   * <pre>
+   * Set to true when user requests old variant api
+   * </pre>
+   *
+   * <code>optional bool old_variant_api_in_use = 22;</code>
+   * @return Whether the oldVariantApiInUse field is set.
+   */
+  boolean hasOldVariantApiInUse();
+  /**
+   * <pre>
+   * Set to true when user requests old variant api
+   * </pre>
+   *
+   * <code>optional bool old_variant_api_in_use = 22;</code>
+   * @return The oldVariantApiInUse.
+   */
+  boolean getOldVariantApiInUse();
 }

@@ -7497,6 +7497,31 @@ private static final long serialVersionUID = 0L;
      * <code>INVALID_TOML_DEFINITION = 47;</code>
      */
     INVALID_TOML_DEFINITION(47),
+    /**
+     * <pre>
+     * Missing com.android.tools.build:gradle dependency
+     * </pre>
+     *
+     * <code>MISSING_DEPENDENCY_COM_ANDROID_TOOLS_BUILD_GRADLE = 48;</code>
+     */
+    MISSING_DEPENDENCY_COM_ANDROID_TOOLS_BUILD_GRADLE(48),
+    /**
+     * <code>MISSING_DEPENDENCY_OTHER = 49;</code>
+     */
+    MISSING_DEPENDENCY_OTHER(49),
+    /**
+     * <pre>
+     * UNKNOWN_PLUGIN_* means org.gradle.api.plugins.UnknownPluginException when
+     * using plugins dsl.
+     * </pre>
+     *
+     * <code>UNKNOWN_PLUGIN_COM_ANDROID = 50;</code>
+     */
+    UNKNOWN_PLUGIN_COM_ANDROID(50),
+    /**
+     * <code>UNKNOWN_PLUGIN_OTHER = 51;</code>
+     */
+    UNKNOWN_PLUGIN_OTHER(51),
     ;
 
     /**
@@ -7717,6 +7742,31 @@ private static final long serialVersionUID = 0L;
      * <code>INVALID_TOML_DEFINITION = 47;</code>
      */
     public static final int INVALID_TOML_DEFINITION_VALUE = 47;
+    /**
+     * <pre>
+     * Missing com.android.tools.build:gradle dependency
+     * </pre>
+     *
+     * <code>MISSING_DEPENDENCY_COM_ANDROID_TOOLS_BUILD_GRADLE = 48;</code>
+     */
+    public static final int MISSING_DEPENDENCY_COM_ANDROID_TOOLS_BUILD_GRADLE_VALUE = 48;
+    /**
+     * <code>MISSING_DEPENDENCY_OTHER = 49;</code>
+     */
+    public static final int MISSING_DEPENDENCY_OTHER_VALUE = 49;
+    /**
+     * <pre>
+     * UNKNOWN_PLUGIN_* means org.gradle.api.plugins.UnknownPluginException when
+     * using plugins dsl.
+     * </pre>
+     *
+     * <code>UNKNOWN_PLUGIN_COM_ANDROID = 50;</code>
+     */
+    public static final int UNKNOWN_PLUGIN_COM_ANDROID_VALUE = 50;
+    /**
+     * <code>UNKNOWN_PLUGIN_OTHER = 51;</code>
+     */
+    public static final int UNKNOWN_PLUGIN_OTHER_VALUE = 51;
 
 
     public final int getNumber() {
@@ -7787,6 +7837,10 @@ private static final long serialVersionUID = 0L;
         case 45: return GROOVY_COMPILATION_ERROR;
         case 46: return JAVA_COMPILATION_ERROR;
         case 47: return INVALID_TOML_DEFINITION;
+        case 48: return MISSING_DEPENDENCY_COM_ANDROID_TOOLS_BUILD_GRADLE;
+        case 49: return MISSING_DEPENDENCY_OTHER;
+        case 50: return UNKNOWN_PLUGIN_COM_ANDROID;
+        case 51: return UNKNOWN_PLUGIN_OTHER;
         default: return null;
       }
     }

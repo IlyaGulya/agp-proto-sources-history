@@ -2898,6 +2898,33 @@ private static final long serialVersionUID = 0L;
     }
   }
 
+  public static final int OLD_VARIANT_API_IN_USE_FIELD_NUMBER = 22;
+  private boolean oldVariantApiInUse_;
+  /**
+   * <pre>
+   * Set to true when user requests old variant api
+   * </pre>
+   *
+   * <code>optional bool old_variant_api_in_use = 22;</code>
+   * @return Whether the oldVariantApiInUse field is set.
+   */
+  @java.lang.Override
+  public boolean hasOldVariantApiInUse() {
+    return ((bitField0_ & 0x00010000) != 0);
+  }
+  /**
+   * <pre>
+   * Set to true when user requests old variant api
+   * </pre>
+   *
+   * <code>optional bool old_variant_api_in_use = 22;</code>
+   * @return The oldVariantApiInUse.
+   */
+  @java.lang.Override
+  public boolean getOldVariantApiInUse() {
+    return oldVariantApiInUse_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -2974,6 +3001,9 @@ private static final long serialVersionUID = 0L;
     }
     if (((bitField0_ & 0x00008000) != 0)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 21, ndkVersion_);
+    }
+    if (((bitField0_ & 0x00010000) != 0)) {
+      output.writeBool(22, oldVariantApiInUse_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -3074,6 +3104,10 @@ private static final long serialVersionUID = 0L;
     }
     if (((bitField0_ & 0x00008000) != 0)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(21, ndkVersion_);
+    }
+    if (((bitField0_ & 0x00010000) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeBoolSize(22, oldVariantApiInUse_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -3177,6 +3211,11 @@ private static final long serialVersionUID = 0L;
       if (!getNdkVersion()
           .equals(other.getNdkVersion())) return false;
     }
+    if (hasOldVariantApiInUse() != other.hasOldVariantApiInUse()) return false;
+    if (hasOldVariantApiInUse()) {
+      if (getOldVariantApiInUse()
+          != other.getOldVariantApiInUse()) return false;
+    }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -3274,6 +3313,11 @@ private static final long serialVersionUID = 0L;
     if (hasNdkVersion()) {
       hash = (37 * hash) + NDK_VERSION_FIELD_NUMBER;
       hash = (53 * hash) + getNdkVersion().hashCode();
+    }
+    if (hasOldVariantApiInUse()) {
+      hash = (37 * hash) + OLD_VARIANT_API_IN_USE_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getOldVariantApiInUse());
     }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
@@ -3487,6 +3531,8 @@ private static final long serialVersionUID = 0L;
       bitField0_ = (bitField0_ & ~0x00080000);
       ndkVersion_ = "";
       bitField0_ = (bitField0_ & ~0x00100000);
+      oldVariantApiInUse_ = false;
+      bitField0_ = (bitField0_ & ~0x00200000);
       return this;
     }
 
@@ -3632,6 +3678,10 @@ private static final long serialVersionUID = 0L;
         to_bitField0_ |= 0x00008000;
       }
       result.ndkVersion_ = ndkVersion_;
+      if (((from_bitField0_ & 0x00200000) != 0)) {
+        result.oldVariantApiInUse_ = oldVariantApiInUse_;
+        to_bitField0_ |= 0x00010000;
+      }
       result.bitField0_ = to_bitField0_;
       onBuilt();
       return result;
@@ -3822,6 +3872,9 @@ private static final long serialVersionUID = 0L;
         bitField0_ |= 0x00100000;
         ndkVersion_ = other.ndkVersion_;
         onChanged();
+      }
+      if (other.hasOldVariantApiInUse()) {
+        setOldVariantApiInUse(other.getOldVariantApiInUse());
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -4020,6 +4073,11 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00100000;
               break;
             } // case 170
+            case 176: {
+              oldVariantApiInUse_ = input.readBool();
+              bitField0_ |= 0x00200000;
+              break;
+            } // case 176
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -6869,6 +6927,61 @@ private static final long serialVersionUID = 0L;
   }
   bitField0_ |= 0x00100000;
       ndkVersion_ = value;
+      onChanged();
+      return this;
+    }
+
+    private boolean oldVariantApiInUse_ ;
+    /**
+     * <pre>
+     * Set to true when user requests old variant api
+     * </pre>
+     *
+     * <code>optional bool old_variant_api_in_use = 22;</code>
+     * @return Whether the oldVariantApiInUse field is set.
+     */
+    @java.lang.Override
+    public boolean hasOldVariantApiInUse() {
+      return ((bitField0_ & 0x00200000) != 0);
+    }
+    /**
+     * <pre>
+     * Set to true when user requests old variant api
+     * </pre>
+     *
+     * <code>optional bool old_variant_api_in_use = 22;</code>
+     * @return The oldVariantApiInUse.
+     */
+    @java.lang.Override
+    public boolean getOldVariantApiInUse() {
+      return oldVariantApiInUse_;
+    }
+    /**
+     * <pre>
+     * Set to true when user requests old variant api
+     * </pre>
+     *
+     * <code>optional bool old_variant_api_in_use = 22;</code>
+     * @param value The oldVariantApiInUse to set.
+     * @return This builder for chaining.
+     */
+    public Builder setOldVariantApiInUse(boolean value) {
+      bitField0_ |= 0x00200000;
+      oldVariantApiInUse_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Set to true when user requests old variant api
+     * </pre>
+     *
+     * <code>optional bool old_variant_api_in_use = 22;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearOldVariantApiInUse() {
+      bitField0_ = (bitField0_ & ~0x00200000);
+      oldVariantApiInUse_ = false;
       onChanged();
       return this;
     }
