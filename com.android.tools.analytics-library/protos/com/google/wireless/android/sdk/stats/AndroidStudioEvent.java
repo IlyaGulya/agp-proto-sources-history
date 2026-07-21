@@ -2115,6 +2115,32 @@ private static final long serialVersionUID = 0L;
             bitField4_ |= 0x10000000;
             break;
           }
+          case 1314: {
+            com.google.wireless.android.sdk.stats.DeviceMirroringAbnormalAgentTermination.Builder subBuilder = null;
+            if (((bitField4_ & 0x20000000) != 0)) {
+              subBuilder = deviceMirroringAbnormalAgentTermination_.toBuilder();
+            }
+            deviceMirroringAbnormalAgentTermination_ = input.readMessage(com.google.wireless.android.sdk.stats.DeviceMirroringAbnormalAgentTermination.PARSER, extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(deviceMirroringAbnormalAgentTermination_);
+              deviceMirroringAbnormalAgentTermination_ = subBuilder.buildPartial();
+            }
+            bitField4_ |= 0x20000000;
+            break;
+          }
+          case 1322: {
+            com.google.wireless.android.sdk.stats.SystemHealthEvent.Builder subBuilder = null;
+            if (((bitField4_ & 0x40000000) != 0)) {
+              subBuilder = systemHealthEvent_.toBuilder();
+            }
+            systemHealthEvent_ = input.readMessage(com.google.wireless.android.sdk.stats.SystemHealthEvent.PARSER, extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(systemHealthEvent_);
+              systemHealthEvent_ = subBuilder.buildPartial();
+            }
+            bitField4_ |= 0x40000000;
+            break;
+          }
           default: {
             if (!parseUnknownField(
                 input, unknownFields, extensionRegistry, tag)) {
@@ -4845,6 +4871,22 @@ private static final long serialVersionUID = 0L;
      * <code>BUILD_OUTPUT_DOWNLOADS_INFO_USER_INTERACTION = 277;</code>
      */
     BUILD_OUTPUT_DOWNLOADS_INFO_USER_INTERACTION(277),
+    /**
+     * <pre>
+     * Event recording abnormal termination of the Screen Sharing Agent.
+     * </pre>
+     *
+     * <code>DEVICE_MIRRORING_ABNORMAL_AGENT_TERMINATION = 278;</code>
+     */
+    DEVICE_MIRRORING_ABNORMAL_AGENT_TERMINATION(278),
+    /**
+     * <pre>
+     * Event related to system health
+     * </pre>
+     *
+     * <code>SYSTEM_HEALTH_EVENT = 279;</code>
+     */
+    SYSTEM_HEALTH_EVENT(279),
     ;
 
     /**
@@ -6897,6 +6939,22 @@ private static final long serialVersionUID = 0L;
      * <code>BUILD_OUTPUT_DOWNLOADS_INFO_USER_INTERACTION = 277;</code>
      */
     public static final int BUILD_OUTPUT_DOWNLOADS_INFO_USER_INTERACTION_VALUE = 277;
+    /**
+     * <pre>
+     * Event recording abnormal termination of the Screen Sharing Agent.
+     * </pre>
+     *
+     * <code>DEVICE_MIRRORING_ABNORMAL_AGENT_TERMINATION = 278;</code>
+     */
+    public static final int DEVICE_MIRRORING_ABNORMAL_AGENT_TERMINATION_VALUE = 278;
+    /**
+     * <pre>
+     * Event related to system health
+     * </pre>
+     *
+     * <code>SYSTEM_HEALTH_EVENT = 279;</code>
+     */
+    public static final int SYSTEM_HEALTH_EVENT_VALUE = 279;
 
 
     public final int getNumber() {
@@ -7192,6 +7250,8 @@ private static final long serialVersionUID = 0L;
         case 275: return INTELLIJ_NEW_UI_STATE_EVENT;
         case 276: return KOTLIN_GRADLE_PERFORMANCE_EVENT;
         case 277: return BUILD_OUTPUT_DOWNLOADS_INFO_USER_INTERACTION;
+        case 278: return DEVICE_MIRRORING_ABNORMAL_AGENT_TERMINATION;
+        case 279: return SYSTEM_HEALTH_EVENT;
         default: return null;
       }
     }
@@ -9150,6 +9210,14 @@ private static final long serialVersionUID = 0L;
      * <code>AGDE = 6;</code>
      */
     AGDE(6),
+    /**
+     * <pre>
+     * Android Studio for Platform (ASfP)
+     * </pre>
+     *
+     * <code>ANDROID_STUDIO_FOR_PLATFORM = 7;</code>
+     */
+    ANDROID_STUDIO_FOR_PLATFORM(7),
     ;
 
     /**
@@ -9184,6 +9252,14 @@ private static final long serialVersionUID = 0L;
      * <code>AGDE = 6;</code>
      */
     public static final int AGDE_VALUE = 6;
+    /**
+     * <pre>
+     * Android Studio for Platform (ASfP)
+     * </pre>
+     *
+     * <code>ANDROID_STUDIO_FOR_PLATFORM = 7;</code>
+     */
+    public static final int ANDROID_STUDIO_FOR_PLATFORM_VALUE = 7;
 
 
     public final int getNumber() {
@@ -9213,6 +9289,7 @@ private static final long serialVersionUID = 0L;
         case 4: return ANDROID_STUDIO_TOOLKIT_2019_IO_PREVIEW;
         case 5: return GAME_TOOLS;
         case 6: return AGDE;
+        case 7: return ANDROID_STUDIO_FOR_PLATFORM;
         default: return null;
       }
     }
@@ -22248,6 +22325,82 @@ private static final long serialVersionUID = 0L;
     return buildOutputDownloadsInfoEvent_ == null ? com.google.wireless.android.sdk.stats.BuildOutputDownloadsInfoEvent.getDefaultInstance() : buildOutputDownloadsInfoEvent_;
   }
 
+  public static final int DEVICE_MIRRORING_ABNORMAL_AGENT_TERMINATION_FIELD_NUMBER = 164;
+  private com.google.wireless.android.sdk.stats.DeviceMirroringAbnormalAgentTermination deviceMirroringAbnormalAgentTermination_;
+  /**
+   * <pre>
+   * set when kind = DEVICE_MIRRORING_ABNORMAL_AGENT_TERMINATION
+   * </pre>
+   *
+   * <code>optional .android_studio.DeviceMirroringAbnormalAgentTermination device_mirroring_abnormal_agent_termination = 164;</code>
+   * @return Whether the deviceMirroringAbnormalAgentTermination field is set.
+   */
+  @java.lang.Override
+  public boolean hasDeviceMirroringAbnormalAgentTermination() {
+    return ((bitField4_ & 0x20000000) != 0);
+  }
+  /**
+   * <pre>
+   * set when kind = DEVICE_MIRRORING_ABNORMAL_AGENT_TERMINATION
+   * </pre>
+   *
+   * <code>optional .android_studio.DeviceMirroringAbnormalAgentTermination device_mirroring_abnormal_agent_termination = 164;</code>
+   * @return The deviceMirroringAbnormalAgentTermination.
+   */
+  @java.lang.Override
+  public com.google.wireless.android.sdk.stats.DeviceMirroringAbnormalAgentTermination getDeviceMirroringAbnormalAgentTermination() {
+    return deviceMirroringAbnormalAgentTermination_ == null ? com.google.wireless.android.sdk.stats.DeviceMirroringAbnormalAgentTermination.getDefaultInstance() : deviceMirroringAbnormalAgentTermination_;
+  }
+  /**
+   * <pre>
+   * set when kind = DEVICE_MIRRORING_ABNORMAL_AGENT_TERMINATION
+   * </pre>
+   *
+   * <code>optional .android_studio.DeviceMirroringAbnormalAgentTermination device_mirroring_abnormal_agent_termination = 164;</code>
+   */
+  @java.lang.Override
+  public com.google.wireless.android.sdk.stats.DeviceMirroringAbnormalAgentTerminationOrBuilder getDeviceMirroringAbnormalAgentTerminationOrBuilder() {
+    return deviceMirroringAbnormalAgentTermination_ == null ? com.google.wireless.android.sdk.stats.DeviceMirroringAbnormalAgentTermination.getDefaultInstance() : deviceMirroringAbnormalAgentTermination_;
+  }
+
+  public static final int SYSTEM_HEALTH_EVENT_FIELD_NUMBER = 165;
+  private com.google.wireless.android.sdk.stats.SystemHealthEvent systemHealthEvent_;
+  /**
+   * <pre>
+   * set when kind = SYSTEM_HEALTH_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.SystemHealthEvent system_health_event = 165;</code>
+   * @return Whether the systemHealthEvent field is set.
+   */
+  @java.lang.Override
+  public boolean hasSystemHealthEvent() {
+    return ((bitField4_ & 0x40000000) != 0);
+  }
+  /**
+   * <pre>
+   * set when kind = SYSTEM_HEALTH_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.SystemHealthEvent system_health_event = 165;</code>
+   * @return The systemHealthEvent.
+   */
+  @java.lang.Override
+  public com.google.wireless.android.sdk.stats.SystemHealthEvent getSystemHealthEvent() {
+    return systemHealthEvent_ == null ? com.google.wireless.android.sdk.stats.SystemHealthEvent.getDefaultInstance() : systemHealthEvent_;
+  }
+  /**
+   * <pre>
+   * set when kind = SYSTEM_HEALTH_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.SystemHealthEvent system_health_event = 165;</code>
+   */
+  @java.lang.Override
+  public com.google.wireless.android.sdk.stats.SystemHealthEventOrBuilder getSystemHealthEventOrBuilder() {
+    return systemHealthEvent_ == null ? com.google.wireless.android.sdk.stats.SystemHealthEvent.getDefaultInstance() : systemHealthEvent_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -22750,6 +22903,12 @@ private static final long serialVersionUID = 0L;
     }
     if (((bitField4_ & 0x10000000) != 0)) {
       output.writeMessage(163, getBuildOutputDownloadsInfoEvent());
+    }
+    if (((bitField4_ & 0x20000000) != 0)) {
+      output.writeMessage(164, getDeviceMirroringAbnormalAgentTermination());
+    }
+    if (((bitField4_ & 0x40000000) != 0)) {
+      output.writeMessage(165, getSystemHealthEvent());
     }
     unknownFields.writeTo(output);
   }
@@ -23417,6 +23576,14 @@ private static final long serialVersionUID = 0L;
     if (((bitField4_ & 0x10000000) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(163, getBuildOutputDownloadsInfoEvent());
+    }
+    if (((bitField4_ & 0x20000000) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(164, getDeviceMirroringAbnormalAgentTermination());
+    }
+    if (((bitField4_ & 0x40000000) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(165, getSystemHealthEvent());
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -24219,6 +24386,16 @@ private static final long serialVersionUID = 0L;
       if (!getBuildOutputDownloadsInfoEvent()
           .equals(other.getBuildOutputDownloadsInfoEvent())) return false;
     }
+    if (hasDeviceMirroringAbnormalAgentTermination() != other.hasDeviceMirroringAbnormalAgentTermination()) return false;
+    if (hasDeviceMirroringAbnormalAgentTermination()) {
+      if (!getDeviceMirroringAbnormalAgentTermination()
+          .equals(other.getDeviceMirroringAbnormalAgentTermination())) return false;
+    }
+    if (hasSystemHealthEvent() != other.hasSystemHealthEvent()) return false;
+    if (hasSystemHealthEvent()) {
+      if (!getSystemHealthEvent()
+          .equals(other.getSystemHealthEvent())) return false;
+    }
     if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
@@ -24884,6 +25061,14 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + BUILD_OUTPUT_DOWNLOADS_INFO_EVENT_FIELD_NUMBER;
       hash = (53 * hash) + getBuildOutputDownloadsInfoEvent().hashCode();
     }
+    if (hasDeviceMirroringAbnormalAgentTermination()) {
+      hash = (37 * hash) + DEVICE_MIRRORING_ABNORMAL_AGENT_TERMINATION_FIELD_NUMBER;
+      hash = (53 * hash) + getDeviceMirroringAbnormalAgentTermination().hashCode();
+    }
+    if (hasSystemHealthEvent()) {
+      hash = (37 * hash) + SYSTEM_HEALTH_EVENT_FIELD_NUMBER;
+      hash = (53 * hash) + getSystemHealthEvent().hashCode();
+    }
     hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -25152,6 +25337,8 @@ private static final long serialVersionUID = 0L;
         getIntellijNewUiStateEventFieldBuilder();
         getKotlinGradlePerformanceEventFieldBuilder();
         getBuildOutputDownloadsInfoEventFieldBuilder();
+        getDeviceMirroringAbnormalAgentTerminationFieldBuilder();
+        getSystemHealthEventFieldBuilder();
       }
     }
     @java.lang.Override
@@ -26043,6 +26230,18 @@ private static final long serialVersionUID = 0L;
         buildOutputDownloadsInfoEventBuilder_.clear();
       }
       bitField5_ = (bitField5_ & ~0x00000004);
+      if (deviceMirroringAbnormalAgentTerminationBuilder_ == null) {
+        deviceMirroringAbnormalAgentTermination_ = null;
+      } else {
+        deviceMirroringAbnormalAgentTerminationBuilder_.clear();
+      }
+      bitField5_ = (bitField5_ & ~0x00000008);
+      if (systemHealthEventBuilder_ == null) {
+        systemHealthEvent_ = null;
+      } else {
+        systemHealthEventBuilder_.clear();
+      }
+      bitField5_ = (bitField5_ & ~0x00000010);
       return this;
     }
 
@@ -27298,6 +27497,22 @@ private static final long serialVersionUID = 0L;
         }
         to_bitField4_ |= 0x10000000;
       }
+      if (((from_bitField5_ & 0x00000008) != 0)) {
+        if (deviceMirroringAbnormalAgentTerminationBuilder_ == null) {
+          result.deviceMirroringAbnormalAgentTermination_ = deviceMirroringAbnormalAgentTermination_;
+        } else {
+          result.deviceMirroringAbnormalAgentTermination_ = deviceMirroringAbnormalAgentTerminationBuilder_.build();
+        }
+        to_bitField4_ |= 0x20000000;
+      }
+      if (((from_bitField5_ & 0x00000010) != 0)) {
+        if (systemHealthEventBuilder_ == null) {
+          result.systemHealthEvent_ = systemHealthEvent_;
+        } else {
+          result.systemHealthEvent_ = systemHealthEventBuilder_.build();
+        }
+        to_bitField4_ |= 0x40000000;
+      }
       result.bitField0_ = to_bitField0_;
       result.bitField1_ = to_bitField1_;
       result.bitField2_ = to_bitField2_;
@@ -27943,6 +28158,12 @@ private static final long serialVersionUID = 0L;
       }
       if (other.hasBuildOutputDownloadsInfoEvent()) {
         mergeBuildOutputDownloadsInfoEvent(other.getBuildOutputDownloadsInfoEvent());
+      }
+      if (other.hasDeviceMirroringAbnormalAgentTermination()) {
+        mergeDeviceMirroringAbnormalAgentTermination(other.getDeviceMirroringAbnormalAgentTermination());
+      }
+      if (other.hasSystemHealthEvent()) {
+        mergeSystemHealthEvent(other.getSystemHealthEvent());
       }
       this.mergeUnknownFields(other.unknownFields);
       onChanged();
@@ -52686,6 +52907,318 @@ private static final long serialVersionUID = 0L;
         buildOutputDownloadsInfoEvent_ = null;
       }
       return buildOutputDownloadsInfoEventBuilder_;
+    }
+
+    private com.google.wireless.android.sdk.stats.DeviceMirroringAbnormalAgentTermination deviceMirroringAbnormalAgentTermination_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.DeviceMirroringAbnormalAgentTermination, com.google.wireless.android.sdk.stats.DeviceMirroringAbnormalAgentTermination.Builder, com.google.wireless.android.sdk.stats.DeviceMirroringAbnormalAgentTerminationOrBuilder> deviceMirroringAbnormalAgentTerminationBuilder_;
+    /**
+     * <pre>
+     * set when kind = DEVICE_MIRRORING_ABNORMAL_AGENT_TERMINATION
+     * </pre>
+     *
+     * <code>optional .android_studio.DeviceMirroringAbnormalAgentTermination device_mirroring_abnormal_agent_termination = 164;</code>
+     * @return Whether the deviceMirroringAbnormalAgentTermination field is set.
+     */
+    public boolean hasDeviceMirroringAbnormalAgentTermination() {
+      return ((bitField5_ & 0x00000008) != 0);
+    }
+    /**
+     * <pre>
+     * set when kind = DEVICE_MIRRORING_ABNORMAL_AGENT_TERMINATION
+     * </pre>
+     *
+     * <code>optional .android_studio.DeviceMirroringAbnormalAgentTermination device_mirroring_abnormal_agent_termination = 164;</code>
+     * @return The deviceMirroringAbnormalAgentTermination.
+     */
+    public com.google.wireless.android.sdk.stats.DeviceMirroringAbnormalAgentTermination getDeviceMirroringAbnormalAgentTermination() {
+      if (deviceMirroringAbnormalAgentTerminationBuilder_ == null) {
+        return deviceMirroringAbnormalAgentTermination_ == null ? com.google.wireless.android.sdk.stats.DeviceMirroringAbnormalAgentTermination.getDefaultInstance() : deviceMirroringAbnormalAgentTermination_;
+      } else {
+        return deviceMirroringAbnormalAgentTerminationBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * set when kind = DEVICE_MIRRORING_ABNORMAL_AGENT_TERMINATION
+     * </pre>
+     *
+     * <code>optional .android_studio.DeviceMirroringAbnormalAgentTermination device_mirroring_abnormal_agent_termination = 164;</code>
+     */
+    public Builder setDeviceMirroringAbnormalAgentTermination(com.google.wireless.android.sdk.stats.DeviceMirroringAbnormalAgentTermination value) {
+      if (deviceMirroringAbnormalAgentTerminationBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        deviceMirroringAbnormalAgentTermination_ = value;
+        onChanged();
+      } else {
+        deviceMirroringAbnormalAgentTerminationBuilder_.setMessage(value);
+      }
+      bitField5_ |= 0x00000008;
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = DEVICE_MIRRORING_ABNORMAL_AGENT_TERMINATION
+     * </pre>
+     *
+     * <code>optional .android_studio.DeviceMirroringAbnormalAgentTermination device_mirroring_abnormal_agent_termination = 164;</code>
+     */
+    public Builder setDeviceMirroringAbnormalAgentTermination(
+        com.google.wireless.android.sdk.stats.DeviceMirroringAbnormalAgentTermination.Builder builderForValue) {
+      if (deviceMirroringAbnormalAgentTerminationBuilder_ == null) {
+        deviceMirroringAbnormalAgentTermination_ = builderForValue.build();
+        onChanged();
+      } else {
+        deviceMirroringAbnormalAgentTerminationBuilder_.setMessage(builderForValue.build());
+      }
+      bitField5_ |= 0x00000008;
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = DEVICE_MIRRORING_ABNORMAL_AGENT_TERMINATION
+     * </pre>
+     *
+     * <code>optional .android_studio.DeviceMirroringAbnormalAgentTermination device_mirroring_abnormal_agent_termination = 164;</code>
+     */
+    public Builder mergeDeviceMirroringAbnormalAgentTermination(com.google.wireless.android.sdk.stats.DeviceMirroringAbnormalAgentTermination value) {
+      if (deviceMirroringAbnormalAgentTerminationBuilder_ == null) {
+        if (((bitField5_ & 0x00000008) != 0) &&
+            deviceMirroringAbnormalAgentTermination_ != null &&
+            deviceMirroringAbnormalAgentTermination_ != com.google.wireless.android.sdk.stats.DeviceMirroringAbnormalAgentTermination.getDefaultInstance()) {
+          deviceMirroringAbnormalAgentTermination_ =
+            com.google.wireless.android.sdk.stats.DeviceMirroringAbnormalAgentTermination.newBuilder(deviceMirroringAbnormalAgentTermination_).mergeFrom(value).buildPartial();
+        } else {
+          deviceMirroringAbnormalAgentTermination_ = value;
+        }
+        onChanged();
+      } else {
+        deviceMirroringAbnormalAgentTerminationBuilder_.mergeFrom(value);
+      }
+      bitField5_ |= 0x00000008;
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = DEVICE_MIRRORING_ABNORMAL_AGENT_TERMINATION
+     * </pre>
+     *
+     * <code>optional .android_studio.DeviceMirroringAbnormalAgentTermination device_mirroring_abnormal_agent_termination = 164;</code>
+     */
+    public Builder clearDeviceMirroringAbnormalAgentTermination() {
+      if (deviceMirroringAbnormalAgentTerminationBuilder_ == null) {
+        deviceMirroringAbnormalAgentTermination_ = null;
+        onChanged();
+      } else {
+        deviceMirroringAbnormalAgentTerminationBuilder_.clear();
+      }
+      bitField5_ = (bitField5_ & ~0x00000008);
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = DEVICE_MIRRORING_ABNORMAL_AGENT_TERMINATION
+     * </pre>
+     *
+     * <code>optional .android_studio.DeviceMirroringAbnormalAgentTermination device_mirroring_abnormal_agent_termination = 164;</code>
+     */
+    public com.google.wireless.android.sdk.stats.DeviceMirroringAbnormalAgentTermination.Builder getDeviceMirroringAbnormalAgentTerminationBuilder() {
+      bitField5_ |= 0x00000008;
+      onChanged();
+      return getDeviceMirroringAbnormalAgentTerminationFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * set when kind = DEVICE_MIRRORING_ABNORMAL_AGENT_TERMINATION
+     * </pre>
+     *
+     * <code>optional .android_studio.DeviceMirroringAbnormalAgentTermination device_mirroring_abnormal_agent_termination = 164;</code>
+     */
+    public com.google.wireless.android.sdk.stats.DeviceMirroringAbnormalAgentTerminationOrBuilder getDeviceMirroringAbnormalAgentTerminationOrBuilder() {
+      if (deviceMirroringAbnormalAgentTerminationBuilder_ != null) {
+        return deviceMirroringAbnormalAgentTerminationBuilder_.getMessageOrBuilder();
+      } else {
+        return deviceMirroringAbnormalAgentTermination_ == null ?
+            com.google.wireless.android.sdk.stats.DeviceMirroringAbnormalAgentTermination.getDefaultInstance() : deviceMirroringAbnormalAgentTermination_;
+      }
+    }
+    /**
+     * <pre>
+     * set when kind = DEVICE_MIRRORING_ABNORMAL_AGENT_TERMINATION
+     * </pre>
+     *
+     * <code>optional .android_studio.DeviceMirroringAbnormalAgentTermination device_mirroring_abnormal_agent_termination = 164;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.DeviceMirroringAbnormalAgentTermination, com.google.wireless.android.sdk.stats.DeviceMirroringAbnormalAgentTermination.Builder, com.google.wireless.android.sdk.stats.DeviceMirroringAbnormalAgentTerminationOrBuilder> 
+        getDeviceMirroringAbnormalAgentTerminationFieldBuilder() {
+      if (deviceMirroringAbnormalAgentTerminationBuilder_ == null) {
+        deviceMirroringAbnormalAgentTerminationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.wireless.android.sdk.stats.DeviceMirroringAbnormalAgentTermination, com.google.wireless.android.sdk.stats.DeviceMirroringAbnormalAgentTermination.Builder, com.google.wireless.android.sdk.stats.DeviceMirroringAbnormalAgentTerminationOrBuilder>(
+                getDeviceMirroringAbnormalAgentTermination(),
+                getParentForChildren(),
+                isClean());
+        deviceMirroringAbnormalAgentTermination_ = null;
+      }
+      return deviceMirroringAbnormalAgentTerminationBuilder_;
+    }
+
+    private com.google.wireless.android.sdk.stats.SystemHealthEvent systemHealthEvent_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.SystemHealthEvent, com.google.wireless.android.sdk.stats.SystemHealthEvent.Builder, com.google.wireless.android.sdk.stats.SystemHealthEventOrBuilder> systemHealthEventBuilder_;
+    /**
+     * <pre>
+     * set when kind = SYSTEM_HEALTH_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.SystemHealthEvent system_health_event = 165;</code>
+     * @return Whether the systemHealthEvent field is set.
+     */
+    public boolean hasSystemHealthEvent() {
+      return ((bitField5_ & 0x00000010) != 0);
+    }
+    /**
+     * <pre>
+     * set when kind = SYSTEM_HEALTH_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.SystemHealthEvent system_health_event = 165;</code>
+     * @return The systemHealthEvent.
+     */
+    public com.google.wireless.android.sdk.stats.SystemHealthEvent getSystemHealthEvent() {
+      if (systemHealthEventBuilder_ == null) {
+        return systemHealthEvent_ == null ? com.google.wireless.android.sdk.stats.SystemHealthEvent.getDefaultInstance() : systemHealthEvent_;
+      } else {
+        return systemHealthEventBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * set when kind = SYSTEM_HEALTH_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.SystemHealthEvent system_health_event = 165;</code>
+     */
+    public Builder setSystemHealthEvent(com.google.wireless.android.sdk.stats.SystemHealthEvent value) {
+      if (systemHealthEventBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        systemHealthEvent_ = value;
+        onChanged();
+      } else {
+        systemHealthEventBuilder_.setMessage(value);
+      }
+      bitField5_ |= 0x00000010;
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = SYSTEM_HEALTH_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.SystemHealthEvent system_health_event = 165;</code>
+     */
+    public Builder setSystemHealthEvent(
+        com.google.wireless.android.sdk.stats.SystemHealthEvent.Builder builderForValue) {
+      if (systemHealthEventBuilder_ == null) {
+        systemHealthEvent_ = builderForValue.build();
+        onChanged();
+      } else {
+        systemHealthEventBuilder_.setMessage(builderForValue.build());
+      }
+      bitField5_ |= 0x00000010;
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = SYSTEM_HEALTH_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.SystemHealthEvent system_health_event = 165;</code>
+     */
+    public Builder mergeSystemHealthEvent(com.google.wireless.android.sdk.stats.SystemHealthEvent value) {
+      if (systemHealthEventBuilder_ == null) {
+        if (((bitField5_ & 0x00000010) != 0) &&
+            systemHealthEvent_ != null &&
+            systemHealthEvent_ != com.google.wireless.android.sdk.stats.SystemHealthEvent.getDefaultInstance()) {
+          systemHealthEvent_ =
+            com.google.wireless.android.sdk.stats.SystemHealthEvent.newBuilder(systemHealthEvent_).mergeFrom(value).buildPartial();
+        } else {
+          systemHealthEvent_ = value;
+        }
+        onChanged();
+      } else {
+        systemHealthEventBuilder_.mergeFrom(value);
+      }
+      bitField5_ |= 0x00000010;
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = SYSTEM_HEALTH_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.SystemHealthEvent system_health_event = 165;</code>
+     */
+    public Builder clearSystemHealthEvent() {
+      if (systemHealthEventBuilder_ == null) {
+        systemHealthEvent_ = null;
+        onChanged();
+      } else {
+        systemHealthEventBuilder_.clear();
+      }
+      bitField5_ = (bitField5_ & ~0x00000010);
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = SYSTEM_HEALTH_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.SystemHealthEvent system_health_event = 165;</code>
+     */
+    public com.google.wireless.android.sdk.stats.SystemHealthEvent.Builder getSystemHealthEventBuilder() {
+      bitField5_ |= 0x00000010;
+      onChanged();
+      return getSystemHealthEventFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * set when kind = SYSTEM_HEALTH_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.SystemHealthEvent system_health_event = 165;</code>
+     */
+    public com.google.wireless.android.sdk.stats.SystemHealthEventOrBuilder getSystemHealthEventOrBuilder() {
+      if (systemHealthEventBuilder_ != null) {
+        return systemHealthEventBuilder_.getMessageOrBuilder();
+      } else {
+        return systemHealthEvent_ == null ?
+            com.google.wireless.android.sdk.stats.SystemHealthEvent.getDefaultInstance() : systemHealthEvent_;
+      }
+    }
+    /**
+     * <pre>
+     * set when kind = SYSTEM_HEALTH_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.SystemHealthEvent system_health_event = 165;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.SystemHealthEvent, com.google.wireless.android.sdk.stats.SystemHealthEvent.Builder, com.google.wireless.android.sdk.stats.SystemHealthEventOrBuilder> 
+        getSystemHealthEventFieldBuilder() {
+      if (systemHealthEventBuilder_ == null) {
+        systemHealthEventBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.wireless.android.sdk.stats.SystemHealthEvent, com.google.wireless.android.sdk.stats.SystemHealthEvent.Builder, com.google.wireless.android.sdk.stats.SystemHealthEventOrBuilder>(
+                getSystemHealthEvent(),
+                getParentForChildren(),
+                isClean());
+        systemHealthEvent_ = null;
+      }
+      return systemHealthEventBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

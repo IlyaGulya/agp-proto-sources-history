@@ -678,6 +678,10 @@ public enum BooleanOption
    * <code>DISABLE_COMPILE_SDK_CHECKS = 164;</code>
    */
   DISABLE_COMPILE_SDK_CHECKS(164),
+  /**
+   * <code>ADDITIONAL_ARTIFACTS_IN_MODEL = 165;</code>
+   */
+  ADDITIONAL_ARTIFACTS_IN_MODEL(165),
   UNRECOGNIZED(-1),
   ;
 
@@ -1341,6 +1345,10 @@ public enum BooleanOption
    * <code>DISABLE_COMPILE_SDK_CHECKS = 164;</code>
    */
   public static final int DISABLE_COMPILE_SDK_CHECKS_VALUE = 164;
+  /**
+   * <code>ADDITIONAL_ARTIFACTS_IN_MODEL = 165;</code>
+   */
+  public static final int ADDITIONAL_ARTIFACTS_IN_MODEL_VALUE = 165;
 
 
   public final int getNumber() {
@@ -1532,6 +1540,7 @@ public enum BooleanOption
       case 162: return PRIVACY_SANDBOX_SDK_REQUIRE_SERVICES;
       case 163: return VERIFY_AAR_CLASSES;
       case 164: return DISABLE_COMPILE_SDK_CHECKS;
+      case 165: return ADDITIONAL_ARTIFACTS_IN_MODEL;
       default: return null;
     }
   }

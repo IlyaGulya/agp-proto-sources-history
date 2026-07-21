@@ -4591,4 +4591,58 @@ public interface AndroidStudioEventOrBuilder extends
    * <code>optional .android_studio.BuildOutputDownloadsInfoEvent build_output_downloads_info_event = 163;</code>
    */
   com.google.wireless.android.sdk.stats.BuildOutputDownloadsInfoEventOrBuilder getBuildOutputDownloadsInfoEventOrBuilder();
+
+  /**
+   * <pre>
+   * set when kind = DEVICE_MIRRORING_ABNORMAL_AGENT_TERMINATION
+   * </pre>
+   *
+   * <code>optional .android_studio.DeviceMirroringAbnormalAgentTermination device_mirroring_abnormal_agent_termination = 164;</code>
+   * @return Whether the deviceMirroringAbnormalAgentTermination field is set.
+   */
+  boolean hasDeviceMirroringAbnormalAgentTermination();
+  /**
+   * <pre>
+   * set when kind = DEVICE_MIRRORING_ABNORMAL_AGENT_TERMINATION
+   * </pre>
+   *
+   * <code>optional .android_studio.DeviceMirroringAbnormalAgentTermination device_mirroring_abnormal_agent_termination = 164;</code>
+   * @return The deviceMirroringAbnormalAgentTermination.
+   */
+  com.google.wireless.android.sdk.stats.DeviceMirroringAbnormalAgentTermination getDeviceMirroringAbnormalAgentTermination();
+  /**
+   * <pre>
+   * set when kind = DEVICE_MIRRORING_ABNORMAL_AGENT_TERMINATION
+   * </pre>
+   *
+   * <code>optional .android_studio.DeviceMirroringAbnormalAgentTermination device_mirroring_abnormal_agent_termination = 164;</code>
+   */
+  com.google.wireless.android.sdk.stats.DeviceMirroringAbnormalAgentTerminationOrBuilder getDeviceMirroringAbnormalAgentTerminationOrBuilder();
+
+  /**
+   * <pre>
+   * set when kind = SYSTEM_HEALTH_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.SystemHealthEvent system_health_event = 165;</code>
+   * @return Whether the systemHealthEvent field is set.
+   */
+  boolean hasSystemHealthEvent();
+  /**
+   * <pre>
+   * set when kind = SYSTEM_HEALTH_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.SystemHealthEvent system_health_event = 165;</code>
+   * @return The systemHealthEvent.
+   */
+  com.google.wireless.android.sdk.stats.SystemHealthEvent getSystemHealthEvent();
+  /**
+   * <pre>
+   * set when kind = SYSTEM_HEALTH_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.SystemHealthEvent system_health_event = 165;</code>
+   */
+  com.google.wireless.android.sdk.stats.SystemHealthEventOrBuilder getSystemHealthEventOrBuilder();
 }
