@@ -3762,6 +3762,25 @@ private static final long serialVersionUID = 0L;
      * @return The containsErrors.
      */
     boolean getContainsErrors();
+
+    /**
+     * <pre>
+     * Is this filter saved as a favorite
+     * </pre>
+     *
+     * <code>optional bool is_favorite = 13;</code>
+     * @return Whether the isFavorite field is set.
+     */
+    boolean hasIsFavorite();
+    /**
+     * <pre>
+     * Is this filter saved as a favorite
+     * </pre>
+     *
+     * <code>optional bool is_favorite = 13;</code>
+     * @return The isFavorite.
+     */
+    boolean getIsFavorite();
   }
   /**
    * <pre>
@@ -3905,6 +3924,11 @@ private static final long serialVersionUID = 0L;
             case 96: {
               bitField0_ |= 0x00000800;
               containsErrors_ = input.readBool();
+              break;
+            }
+            case 104: {
+              bitField0_ |= 0x00001000;
+              isFavorite_ = input.readBool();
               break;
             }
             default: {
@@ -5224,6 +5248,31 @@ private static final long serialVersionUID = 0L;
       return containsErrors_;
     }
 
+    public static final int IS_FAVORITE_FIELD_NUMBER = 13;
+    private boolean isFavorite_;
+    /**
+     * <pre>
+     * Is this filter saved as a favorite
+     * </pre>
+     *
+     * <code>optional bool is_favorite = 13;</code>
+     * @return Whether the isFavorite field is set.
+     */
+    public boolean hasIsFavorite() {
+      return ((bitField0_ & 0x00001000) != 0);
+    }
+    /**
+     * <pre>
+     * Is this filter saved as a favorite
+     * </pre>
+     *
+     * <code>optional bool is_favorite = 13;</code>
+     * @return The isFavorite.
+     */
+    public boolean getIsFavorite() {
+      return isFavorite_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -5273,6 +5322,9 @@ private static final long serialVersionUID = 0L;
       }
       if (((bitField0_ & 0x00000800) != 0)) {
         output.writeBool(12, containsErrors_);
+      }
+      if (((bitField0_ & 0x00001000) != 0)) {
+        output.writeBool(13, isFavorite_);
       }
       unknownFields.writeTo(output);
     }
@@ -5330,6 +5382,10 @@ private static final long serialVersionUID = 0L;
       if (((bitField0_ & 0x00000800) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(12, containsErrors_);
+      }
+      if (((bitField0_ & 0x00001000) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(13, isFavorite_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -5406,6 +5462,11 @@ private static final long serialVersionUID = 0L;
         if (getContainsErrors()
             != other.getContainsErrors()) return false;
       }
+      if (hasIsFavorite() != other.hasIsFavorite()) return false;
+      if (hasIsFavorite()) {
+        if (getIsFavorite()
+            != other.getIsFavorite()) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -5465,6 +5526,11 @@ private static final long serialVersionUID = 0L;
         hash = (37 * hash) + CONTAINS_ERRORS_FIELD_NUMBER;
         hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
             getContainsErrors());
+      }
+      if (hasIsFavorite()) {
+        hash = (37 * hash) + IS_FAVORITE_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+            getIsFavorite());
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -5649,6 +5715,8 @@ private static final long serialVersionUID = 0L;
         bitField0_ = (bitField0_ & ~0x00000400);
         containsErrors_ = false;
         bitField0_ = (bitField0_ & ~0x00000800);
+        isFavorite_ = false;
+        bitField0_ = (bitField0_ & ~0x00001000);
         return this;
       }
 
@@ -5741,6 +5809,10 @@ private static final long serialVersionUID = 0L;
           result.containsErrors_ = containsErrors_;
           to_bitField0_ |= 0x00000800;
         }
+        if (((from_bitField0_ & 0x00001000) != 0)) {
+          result.isFavorite_ = isFavorite_;
+          to_bitField0_ |= 0x00001000;
+        }
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -5825,6 +5897,9 @@ private static final long serialVersionUID = 0L;
         }
         if (other.hasContainsErrors()) {
           setContainsErrors(other.getContainsErrors());
+        }
+        if (other.hasIsFavorite()) {
+          setIsFavorite(other.getIsFavorite());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -6908,6 +6983,59 @@ private static final long serialVersionUID = 0L;
       public Builder clearContainsErrors() {
         bitField0_ = (bitField0_ & ~0x00000800);
         containsErrors_ = false;
+        onChanged();
+        return this;
+      }
+
+      private boolean isFavorite_ ;
+      /**
+       * <pre>
+       * Is this filter saved as a favorite
+       * </pre>
+       *
+       * <code>optional bool is_favorite = 13;</code>
+       * @return Whether the isFavorite field is set.
+       */
+      public boolean hasIsFavorite() {
+        return ((bitField0_ & 0x00001000) != 0);
+      }
+      /**
+       * <pre>
+       * Is this filter saved as a favorite
+       * </pre>
+       *
+       * <code>optional bool is_favorite = 13;</code>
+       * @return The isFavorite.
+       */
+      public boolean getIsFavorite() {
+        return isFavorite_;
+      }
+      /**
+       * <pre>
+       * Is this filter saved as a favorite
+       * </pre>
+       *
+       * <code>optional bool is_favorite = 13;</code>
+       * @param value The isFavorite to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIsFavorite(boolean value) {
+        bitField0_ |= 0x00001000;
+        isFavorite_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Is this filter saved as a favorite
+       * </pre>
+       *
+       * <code>optional bool is_favorite = 13;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearIsFavorite() {
+        bitField0_ = (bitField0_ & ~0x00001000);
+        isFavorite_ = false;
         onChanged();
         return this;
       }

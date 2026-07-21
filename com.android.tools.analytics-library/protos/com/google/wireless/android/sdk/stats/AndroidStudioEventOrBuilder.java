@@ -3937,4 +3937,31 @@ public interface AndroidStudioEventOrBuilder extends
    */
   com.google.protobuf.ByteString
       getProjectIdsBytes(int index);
+
+  /**
+   * <pre>
+   * set when kind = OS_METRICS
+   * </pre>
+   *
+   * <code>optional .android_studio.OSMetrics os_metrics = 141;</code>
+   * @return Whether the osMetrics field is set.
+   */
+  boolean hasOsMetrics();
+  /**
+   * <pre>
+   * set when kind = OS_METRICS
+   * </pre>
+   *
+   * <code>optional .android_studio.OSMetrics os_metrics = 141;</code>
+   * @return The osMetrics.
+   */
+  com.google.wireless.android.sdk.stats.OSMetrics getOsMetrics();
+  /**
+   * <pre>
+   * set when kind = OS_METRICS
+   * </pre>
+   *
+   * <code>optional .android_studio.OSMetrics os_metrics = 141;</code>
+   */
+  com.google.wireless.android.sdk.stats.OSMetricsOrBuilder getOsMetricsOrBuilder();
 }
