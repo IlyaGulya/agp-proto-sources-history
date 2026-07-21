@@ -3312,6 +3312,40 @@ private static final long serialVersionUID = 0L;
      * <code>GEMINI_ADVERTISER_EVENT = 350;</code>
      */
     GEMINI_ADVERTISER_EVENT(350),
+    /**
+     * <pre>
+     * Studio deprecation notification events
+     * </pre>
+     *
+     * <code>STUDIO_DEPRECATION_NOTIFICATION_EVENT = 351;</code>
+     */
+    STUDIO_DEPRECATION_NOTIFICATION_EVENT(351),
+    /**
+     * <pre>
+     * Declarative watch face events
+     * </pre>
+     *
+     * <code>DECLARATIVE_WATCH_FACE_EVENT = 352;</code>
+     */
+    DECLARATIVE_WATCH_FACE_EVENT(352),
+    /**
+     * <pre>
+     * Event tracking usage of the default project view setting in advanced
+     * settings
+     * </pre>
+     *
+     * <code>PROJECT_VIEW_DEFAULT_VIEW_EVENT = 353;</code>
+     */
+    PROJECT_VIEW_DEFAULT_VIEW_EVENT(353),
+    /**
+     * <pre>
+     * Event tracking usage of setting to show build files in module in Android
+     * view
+     * </pre>
+     *
+     * <code>ANDROID_VIEW_SHOW_BUILD_FILES_IN_MODULE_EVENT = 354;</code>
+     */
+    ANDROID_VIEW_SHOW_BUILD_FILES_IN_MODULE_EVENT(354),
     ;
 
     /**
@@ -5933,6 +5967,40 @@ private static final long serialVersionUID = 0L;
      * <code>GEMINI_ADVERTISER_EVENT = 350;</code>
      */
     public static final int GEMINI_ADVERTISER_EVENT_VALUE = 350;
+    /**
+     * <pre>
+     * Studio deprecation notification events
+     * </pre>
+     *
+     * <code>STUDIO_DEPRECATION_NOTIFICATION_EVENT = 351;</code>
+     */
+    public static final int STUDIO_DEPRECATION_NOTIFICATION_EVENT_VALUE = 351;
+    /**
+     * <pre>
+     * Declarative watch face events
+     * </pre>
+     *
+     * <code>DECLARATIVE_WATCH_FACE_EVENT = 352;</code>
+     */
+    public static final int DECLARATIVE_WATCH_FACE_EVENT_VALUE = 352;
+    /**
+     * <pre>
+     * Event tracking usage of the default project view setting in advanced
+     * settings
+     * </pre>
+     *
+     * <code>PROJECT_VIEW_DEFAULT_VIEW_EVENT = 353;</code>
+     */
+    public static final int PROJECT_VIEW_DEFAULT_VIEW_EVENT_VALUE = 353;
+    /**
+     * <pre>
+     * Event tracking usage of setting to show build files in module in Android
+     * view
+     * </pre>
+     *
+     * <code>ANDROID_VIEW_SHOW_BUILD_FILES_IN_MODULE_EVENT = 354;</code>
+     */
+    public static final int ANDROID_VIEW_SHOW_BUILD_FILES_IN_MODULE_EVENT_VALUE = 354;
 
 
     public final int getNumber() {
@@ -6301,6 +6369,10 @@ private static final long serialVersionUID = 0L;
         case 348: return BACKUP_AND_SYNC_EVENT;
         case 349: return SENTIMENT_SURVEY_EVENT;
         case 350: return GEMINI_ADVERTISER_EVENT;
+        case 351: return STUDIO_DEPRECATION_NOTIFICATION_EVENT;
+        case 352: return DECLARATIVE_WATCH_FACE_EVENT;
+        case 353: return PROJECT_VIEW_DEFAULT_VIEW_EVENT;
+        case 354: return ANDROID_VIEW_SHOW_BUILD_FILES_IN_MODULE_EVENT;
         default: return null;
       }
     }
@@ -12070,7 +12142,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional uint32 min_sdk = 2 [deprecated = true];</code>
        * @deprecated android_studio.AndroidStudioEvent.TemplatesUsage.TemplateModule.min_sdk is deprecated.
-       *     See studio_stats.proto;l=2039
+       *     See studio_stats.proto;l=2069
        * @return Whether the minSdk field is set.
        */
       @java.lang.Deprecated boolean hasMinSdk();
@@ -12081,7 +12153,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional uint32 min_sdk = 2 [deprecated = true];</code>
        * @deprecated android_studio.AndroidStudioEvent.TemplatesUsage.TemplateModule.min_sdk is deprecated.
-       *     See studio_stats.proto;l=2039
+       *     See studio_stats.proto;l=2069
        * @return The minSdk.
        */
       @java.lang.Deprecated int getMinSdk();
@@ -12612,7 +12684,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional uint32 min_sdk = 2 [deprecated = true];</code>
        * @deprecated android_studio.AndroidStudioEvent.TemplatesUsage.TemplateModule.min_sdk is deprecated.
-       *     See studio_stats.proto;l=2039
+       *     See studio_stats.proto;l=2069
        * @return Whether the minSdk field is set.
        */
       @java.lang.Override
@@ -12626,7 +12698,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional uint32 min_sdk = 2 [deprecated = true];</code>
        * @deprecated android_studio.AndroidStudioEvent.TemplatesUsage.TemplateModule.min_sdk is deprecated.
-       *     See studio_stats.proto;l=2039
+       *     See studio_stats.proto;l=2069
        * @return The minSdk.
        */
       @java.lang.Override
@@ -13264,7 +13336,7 @@ private static final long serialVersionUID = 0L;
          *
          * <code>optional uint32 min_sdk = 2 [deprecated = true];</code>
          * @deprecated android_studio.AndroidStudioEvent.TemplatesUsage.TemplateModule.min_sdk is deprecated.
-         *     See studio_stats.proto;l=2039
+         *     See studio_stats.proto;l=2069
          * @return Whether the minSdk field is set.
          */
         @java.lang.Override
@@ -13278,7 +13350,7 @@ private static final long serialVersionUID = 0L;
          *
          * <code>optional uint32 min_sdk = 2 [deprecated = true];</code>
          * @deprecated android_studio.AndroidStudioEvent.TemplatesUsage.TemplateModule.min_sdk is deprecated.
-         *     See studio_stats.proto;l=2039
+         *     See studio_stats.proto;l=2069
          * @return The minSdk.
          */
         @java.lang.Override
@@ -13292,7 +13364,7 @@ private static final long serialVersionUID = 0L;
          *
          * <code>optional uint32 min_sdk = 2 [deprecated = true];</code>
          * @deprecated android_studio.AndroidStudioEvent.TemplatesUsage.TemplateModule.min_sdk is deprecated.
-         *     See studio_stats.proto;l=2039
+         *     See studio_stats.proto;l=2069
          * @param value The minSdk to set.
          * @return This builder for chaining.
          */
@@ -13310,7 +13382,7 @@ private static final long serialVersionUID = 0L;
          *
          * <code>optional uint32 min_sdk = 2 [deprecated = true];</code>
          * @deprecated android_studio.AndroidStudioEvent.TemplatesUsage.TemplateModule.min_sdk is deprecated.
-         *     See studio_stats.proto;l=2039
+         *     See studio_stats.proto;l=2069
          * @return This builder for chaining.
          */
         @java.lang.Deprecated public Builder clearMinSdk() {
@@ -24792,6 +24864,158 @@ private static final long serialVersionUID = 0L;
     return geminiAdvertiserEvent_ == null ? com.google.wireless.android.sdk.stats.GeminiAdvertiserEvent.getDefaultInstance() : geminiAdvertiserEvent_;
   }
 
+  public static final int STUDIO_DEPRECATION_NOTIFICATION_EVENT_FIELD_NUMBER = 232;
+  private com.google.wireless.android.sdk.stats.StudioDeprecationNotificationEvent studioDeprecationNotificationEvent_;
+  /**
+   * <pre>
+   * set when kind = STUDIO_DEPRECATION_NOTIFICATION_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.StudioDeprecationNotificationEvent studio_deprecation_notification_event = 232 [lazy = true];</code>
+   * @return Whether the studioDeprecationNotificationEvent field is set.
+   */
+  @java.lang.Override
+  public boolean hasStudioDeprecationNotificationEvent() {
+    return ((bitField7_ & 0x00000002) != 0);
+  }
+  /**
+   * <pre>
+   * set when kind = STUDIO_DEPRECATION_NOTIFICATION_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.StudioDeprecationNotificationEvent studio_deprecation_notification_event = 232 [lazy = true];</code>
+   * @return The studioDeprecationNotificationEvent.
+   */
+  @java.lang.Override
+  public com.google.wireless.android.sdk.stats.StudioDeprecationNotificationEvent getStudioDeprecationNotificationEvent() {
+    return studioDeprecationNotificationEvent_ == null ? com.google.wireless.android.sdk.stats.StudioDeprecationNotificationEvent.getDefaultInstance() : studioDeprecationNotificationEvent_;
+  }
+  /**
+   * <pre>
+   * set when kind = STUDIO_DEPRECATION_NOTIFICATION_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.StudioDeprecationNotificationEvent studio_deprecation_notification_event = 232 [lazy = true];</code>
+   */
+  @java.lang.Override
+  public com.google.wireless.android.sdk.stats.StudioDeprecationNotificationEventOrBuilder getStudioDeprecationNotificationEventOrBuilder() {
+    return studioDeprecationNotificationEvent_ == null ? com.google.wireless.android.sdk.stats.StudioDeprecationNotificationEvent.getDefaultInstance() : studioDeprecationNotificationEvent_;
+  }
+
+  public static final int DECLARATIVE_WATCH_FACE_EVENT_FIELD_NUMBER = 233;
+  private com.google.wireless.android.sdk.stats.DeclarativeWatchFaceEvent declarativeWatchFaceEvent_;
+  /**
+   * <pre>
+   * set when kind = DECLARATIVE_WATCH_FACE_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.DeclarativeWatchFaceEvent declarative_watch_face_event = 233 [lazy = true];</code>
+   * @return Whether the declarativeWatchFaceEvent field is set.
+   */
+  @java.lang.Override
+  public boolean hasDeclarativeWatchFaceEvent() {
+    return ((bitField7_ & 0x00000004) != 0);
+  }
+  /**
+   * <pre>
+   * set when kind = DECLARATIVE_WATCH_FACE_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.DeclarativeWatchFaceEvent declarative_watch_face_event = 233 [lazy = true];</code>
+   * @return The declarativeWatchFaceEvent.
+   */
+  @java.lang.Override
+  public com.google.wireless.android.sdk.stats.DeclarativeWatchFaceEvent getDeclarativeWatchFaceEvent() {
+    return declarativeWatchFaceEvent_ == null ? com.google.wireless.android.sdk.stats.DeclarativeWatchFaceEvent.getDefaultInstance() : declarativeWatchFaceEvent_;
+  }
+  /**
+   * <pre>
+   * set when kind = DECLARATIVE_WATCH_FACE_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.DeclarativeWatchFaceEvent declarative_watch_face_event = 233 [lazy = true];</code>
+   */
+  @java.lang.Override
+  public com.google.wireless.android.sdk.stats.DeclarativeWatchFaceEventOrBuilder getDeclarativeWatchFaceEventOrBuilder() {
+    return declarativeWatchFaceEvent_ == null ? com.google.wireless.android.sdk.stats.DeclarativeWatchFaceEvent.getDefaultInstance() : declarativeWatchFaceEvent_;
+  }
+
+  public static final int ANDROID_VIEW_SHOW_BUILD_FILES_IN_MODULE_EVENT_FIELD_NUMBER = 234;
+  private com.google.wireless.android.sdk.stats.AndroidViewShowBuildFilesInModuleEvent androidViewShowBuildFilesInModuleEvent_;
+  /**
+   * <pre>
+   * set when kind = ANDROID_VIEW_SHOW_BUILD_FILES_IN_MODULE_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.AndroidViewShowBuildFilesInModuleEvent android_view_show_build_files_in_module_event = 234 [lazy = true];</code>
+   * @return Whether the androidViewShowBuildFilesInModuleEvent field is set.
+   */
+  @java.lang.Override
+  public boolean hasAndroidViewShowBuildFilesInModuleEvent() {
+    return ((bitField7_ & 0x00000008) != 0);
+  }
+  /**
+   * <pre>
+   * set when kind = ANDROID_VIEW_SHOW_BUILD_FILES_IN_MODULE_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.AndroidViewShowBuildFilesInModuleEvent android_view_show_build_files_in_module_event = 234 [lazy = true];</code>
+   * @return The androidViewShowBuildFilesInModuleEvent.
+   */
+  @java.lang.Override
+  public com.google.wireless.android.sdk.stats.AndroidViewShowBuildFilesInModuleEvent getAndroidViewShowBuildFilesInModuleEvent() {
+    return androidViewShowBuildFilesInModuleEvent_ == null ? com.google.wireless.android.sdk.stats.AndroidViewShowBuildFilesInModuleEvent.getDefaultInstance() : androidViewShowBuildFilesInModuleEvent_;
+  }
+  /**
+   * <pre>
+   * set when kind = ANDROID_VIEW_SHOW_BUILD_FILES_IN_MODULE_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.AndroidViewShowBuildFilesInModuleEvent android_view_show_build_files_in_module_event = 234 [lazy = true];</code>
+   */
+  @java.lang.Override
+  public com.google.wireless.android.sdk.stats.AndroidViewShowBuildFilesInModuleEventOrBuilder getAndroidViewShowBuildFilesInModuleEventOrBuilder() {
+    return androidViewShowBuildFilesInModuleEvent_ == null ? com.google.wireless.android.sdk.stats.AndroidViewShowBuildFilesInModuleEvent.getDefaultInstance() : androidViewShowBuildFilesInModuleEvent_;
+  }
+
+  public static final int PROJECT_VIEW_DEFAULT_VIEW_EVENT_FIELD_NUMBER = 235;
+  private com.google.wireless.android.sdk.stats.ProjectViewDefaultViewEvent projectViewDefaultViewEvent_;
+  /**
+   * <pre>
+   * set when kind = PROJECT_VIEW_DEFAULT_VIEW_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.ProjectViewDefaultViewEvent project_view_default_view_event = 235 [lazy = true];</code>
+   * @return Whether the projectViewDefaultViewEvent field is set.
+   */
+  @java.lang.Override
+  public boolean hasProjectViewDefaultViewEvent() {
+    return ((bitField7_ & 0x00000010) != 0);
+  }
+  /**
+   * <pre>
+   * set when kind = PROJECT_VIEW_DEFAULT_VIEW_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.ProjectViewDefaultViewEvent project_view_default_view_event = 235 [lazy = true];</code>
+   * @return The projectViewDefaultViewEvent.
+   */
+  @java.lang.Override
+  public com.google.wireless.android.sdk.stats.ProjectViewDefaultViewEvent getProjectViewDefaultViewEvent() {
+    return projectViewDefaultViewEvent_ == null ? com.google.wireless.android.sdk.stats.ProjectViewDefaultViewEvent.getDefaultInstance() : projectViewDefaultViewEvent_;
+  }
+  /**
+   * <pre>
+   * set when kind = PROJECT_VIEW_DEFAULT_VIEW_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.ProjectViewDefaultViewEvent project_view_default_view_event = 235 [lazy = true];</code>
+   */
+  @java.lang.Override
+  public com.google.wireless.android.sdk.stats.ProjectViewDefaultViewEventOrBuilder getProjectViewDefaultViewEventOrBuilder() {
+    return projectViewDefaultViewEvent_ == null ? com.google.wireless.android.sdk.stats.ProjectViewDefaultViewEvent.getDefaultInstance() : projectViewDefaultViewEvent_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -25498,6 +25722,18 @@ private static final long serialVersionUID = 0L;
     }
     if (((bitField7_ & 0x00000001) != 0)) {
       output.writeMessage(231, getGeminiAdvertiserEvent());
+    }
+    if (((bitField7_ & 0x00000002) != 0)) {
+      output.writeMessage(232, getStudioDeprecationNotificationEvent());
+    }
+    if (((bitField7_ & 0x00000004) != 0)) {
+      output.writeMessage(233, getDeclarativeWatchFaceEvent());
+    }
+    if (((bitField7_ & 0x00000008) != 0)) {
+      output.writeMessage(234, getAndroidViewShowBuildFilesInModuleEvent());
+    }
+    if (((bitField7_ & 0x00000010) != 0)) {
+      output.writeMessage(235, getProjectViewDefaultViewEvent());
     }
     getUnknownFields().writeTo(output);
   }
@@ -26437,6 +26673,22 @@ private static final long serialVersionUID = 0L;
     if (((bitField7_ & 0x00000001) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(231, getGeminiAdvertiserEvent());
+    }
+    if (((bitField7_ & 0x00000002) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(232, getStudioDeprecationNotificationEvent());
+    }
+    if (((bitField7_ & 0x00000004) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(233, getDeclarativeWatchFaceEvent());
+    }
+    if (((bitField7_ & 0x00000008) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(234, getAndroidViewShowBuildFilesInModuleEvent());
+    }
+    if (((bitField7_ & 0x00000010) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(235, getProjectViewDefaultViewEvent());
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -27579,6 +27831,26 @@ private static final long serialVersionUID = 0L;
       if (!getGeminiAdvertiserEvent()
           .equals(other.getGeminiAdvertiserEvent())) return false;
     }
+    if (hasStudioDeprecationNotificationEvent() != other.hasStudioDeprecationNotificationEvent()) return false;
+    if (hasStudioDeprecationNotificationEvent()) {
+      if (!getStudioDeprecationNotificationEvent()
+          .equals(other.getStudioDeprecationNotificationEvent())) return false;
+    }
+    if (hasDeclarativeWatchFaceEvent() != other.hasDeclarativeWatchFaceEvent()) return false;
+    if (hasDeclarativeWatchFaceEvent()) {
+      if (!getDeclarativeWatchFaceEvent()
+          .equals(other.getDeclarativeWatchFaceEvent())) return false;
+    }
+    if (hasAndroidViewShowBuildFilesInModuleEvent() != other.hasAndroidViewShowBuildFilesInModuleEvent()) return false;
+    if (hasAndroidViewShowBuildFilesInModuleEvent()) {
+      if (!getAndroidViewShowBuildFilesInModuleEvent()
+          .equals(other.getAndroidViewShowBuildFilesInModuleEvent())) return false;
+    }
+    if (hasProjectViewDefaultViewEvent() != other.hasProjectViewDefaultViewEvent()) return false;
+    if (hasProjectViewDefaultViewEvent()) {
+      if (!getProjectViewDefaultViewEvent()
+          .equals(other.getProjectViewDefaultViewEvent())) return false;
+    }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -28516,6 +28788,22 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + GEMINI_ADVERTISER_EVENT_FIELD_NUMBER;
       hash = (53 * hash) + getGeminiAdvertiserEvent().hashCode();
     }
+    if (hasStudioDeprecationNotificationEvent()) {
+      hash = (37 * hash) + STUDIO_DEPRECATION_NOTIFICATION_EVENT_FIELD_NUMBER;
+      hash = (53 * hash) + getStudioDeprecationNotificationEvent().hashCode();
+    }
+    if (hasDeclarativeWatchFaceEvent()) {
+      hash = (37 * hash) + DECLARATIVE_WATCH_FACE_EVENT_FIELD_NUMBER;
+      hash = (53 * hash) + getDeclarativeWatchFaceEvent().hashCode();
+    }
+    if (hasAndroidViewShowBuildFilesInModuleEvent()) {
+      hash = (37 * hash) + ANDROID_VIEW_SHOW_BUILD_FILES_IN_MODULE_EVENT_FIELD_NUMBER;
+      hash = (53 * hash) + getAndroidViewShowBuildFilesInModuleEvent().hashCode();
+    }
+    if (hasProjectViewDefaultViewEvent()) {
+      hash = (37 * hash) + PROJECT_VIEW_DEFAULT_VIEW_EVENT_FIELD_NUMBER;
+      hash = (53 * hash) + getProjectViewDefaultViewEvent().hashCode();
+    }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -28852,6 +29140,10 @@ private static final long serialVersionUID = 0L;
         getBackupAndSyncEventFieldBuilder();
         getSentimentSurveyEventFieldBuilder();
         getGeminiAdvertiserEventFieldBuilder();
+        getStudioDeprecationNotificationEventFieldBuilder();
+        getDeclarativeWatchFaceEventFieldBuilder();
+        getAndroidViewShowBuildFilesInModuleEventFieldBuilder();
+        getProjectViewDefaultViewEventFieldBuilder();
       }
     }
     @java.lang.Override
@@ -29936,6 +30228,26 @@ private static final long serialVersionUID = 0L;
       if (geminiAdvertiserEventBuilder_ != null) {
         geminiAdvertiserEventBuilder_.dispose();
         geminiAdvertiserEventBuilder_ = null;
+      }
+      studioDeprecationNotificationEvent_ = null;
+      if (studioDeprecationNotificationEventBuilder_ != null) {
+        studioDeprecationNotificationEventBuilder_.dispose();
+        studioDeprecationNotificationEventBuilder_ = null;
+      }
+      declarativeWatchFaceEvent_ = null;
+      if (declarativeWatchFaceEventBuilder_ != null) {
+        declarativeWatchFaceEventBuilder_.dispose();
+        declarativeWatchFaceEventBuilder_ = null;
+      }
+      androidViewShowBuildFilesInModuleEvent_ = null;
+      if (androidViewShowBuildFilesInModuleEventBuilder_ != null) {
+        androidViewShowBuildFilesInModuleEventBuilder_.dispose();
+        androidViewShowBuildFilesInModuleEventBuilder_ = null;
+      }
+      projectViewDefaultViewEvent_ = null;
+      if (projectViewDefaultViewEventBuilder_ != null) {
+        projectViewDefaultViewEventBuilder_.dispose();
+        projectViewDefaultViewEventBuilder_ = null;
       }
       return this;
     }
@@ -31383,6 +31695,30 @@ private static final long serialVersionUID = 0L;
             : geminiAdvertiserEventBuilder_.build();
         to_bitField7_ |= 0x00000001;
       }
+      if (((from_bitField7_ & 0x00000080) != 0)) {
+        result.studioDeprecationNotificationEvent_ = studioDeprecationNotificationEventBuilder_ == null
+            ? studioDeprecationNotificationEvent_
+            : studioDeprecationNotificationEventBuilder_.build();
+        to_bitField7_ |= 0x00000002;
+      }
+      if (((from_bitField7_ & 0x00000100) != 0)) {
+        result.declarativeWatchFaceEvent_ = declarativeWatchFaceEventBuilder_ == null
+            ? declarativeWatchFaceEvent_
+            : declarativeWatchFaceEventBuilder_.build();
+        to_bitField7_ |= 0x00000004;
+      }
+      if (((from_bitField7_ & 0x00000200) != 0)) {
+        result.androidViewShowBuildFilesInModuleEvent_ = androidViewShowBuildFilesInModuleEventBuilder_ == null
+            ? androidViewShowBuildFilesInModuleEvent_
+            : androidViewShowBuildFilesInModuleEventBuilder_.build();
+        to_bitField7_ |= 0x00000008;
+      }
+      if (((from_bitField7_ & 0x00000400) != 0)) {
+        result.projectViewDefaultViewEvent_ = projectViewDefaultViewEventBuilder_ == null
+            ? projectViewDefaultViewEvent_
+            : projectViewDefaultViewEventBuilder_.build();
+        to_bitField7_ |= 0x00000010;
+      }
       result.bitField6_ |= to_bitField6_;
       result.bitField7_ |= to_bitField7_;
     }
@@ -32195,6 +32531,18 @@ private static final long serialVersionUID = 0L;
       }
       if (other.hasGeminiAdvertiserEvent()) {
         mergeGeminiAdvertiserEvent(other.getGeminiAdvertiserEvent());
+      }
+      if (other.hasStudioDeprecationNotificationEvent()) {
+        mergeStudioDeprecationNotificationEvent(other.getStudioDeprecationNotificationEvent());
+      }
+      if (other.hasDeclarativeWatchFaceEvent()) {
+        mergeDeclarativeWatchFaceEvent(other.getDeclarativeWatchFaceEvent());
+      }
+      if (other.hasAndroidViewShowBuildFilesInModuleEvent()) {
+        mergeAndroidViewShowBuildFilesInModuleEvent(other.getAndroidViewShowBuildFilesInModuleEvent());
+      }
+      if (other.hasProjectViewDefaultViewEvent()) {
+        mergeProjectViewDefaultViewEvent(other.getProjectViewDefaultViewEvent());
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -33907,6 +34255,34 @@ private static final long serialVersionUID = 0L;
               bitField7_ |= 0x00000040;
               break;
             } // case 1850
+            case 1858: {
+              input.readMessage(
+                  getStudioDeprecationNotificationEventFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField7_ |= 0x00000080;
+              break;
+            } // case 1858
+            case 1866: {
+              input.readMessage(
+                  getDeclarativeWatchFaceEventFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField7_ |= 0x00000100;
+              break;
+            } // case 1866
+            case 1874: {
+              input.readMessage(
+                  getAndroidViewShowBuildFilesInModuleEventFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField7_ |= 0x00000200;
+              break;
+            } // case 1874
+            case 1882: {
+              input.readMessage(
+                  getProjectViewDefaultViewEventFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField7_ |= 0x00000400;
+              break;
+            } // case 1882
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -69072,6 +69448,626 @@ private static final long serialVersionUID = 0L;
         geminiAdvertiserEvent_ = null;
       }
       return geminiAdvertiserEventBuilder_;
+    }
+
+    private com.google.wireless.android.sdk.stats.StudioDeprecationNotificationEvent studioDeprecationNotificationEvent_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.StudioDeprecationNotificationEvent, com.google.wireless.android.sdk.stats.StudioDeprecationNotificationEvent.Builder, com.google.wireless.android.sdk.stats.StudioDeprecationNotificationEventOrBuilder> studioDeprecationNotificationEventBuilder_;
+    /**
+     * <pre>
+     * set when kind = STUDIO_DEPRECATION_NOTIFICATION_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.StudioDeprecationNotificationEvent studio_deprecation_notification_event = 232 [lazy = true];</code>
+     * @return Whether the studioDeprecationNotificationEvent field is set.
+     */
+    public boolean hasStudioDeprecationNotificationEvent() {
+      return ((bitField7_ & 0x00000080) != 0);
+    }
+    /**
+     * <pre>
+     * set when kind = STUDIO_DEPRECATION_NOTIFICATION_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.StudioDeprecationNotificationEvent studio_deprecation_notification_event = 232 [lazy = true];</code>
+     * @return The studioDeprecationNotificationEvent.
+     */
+    public com.google.wireless.android.sdk.stats.StudioDeprecationNotificationEvent getStudioDeprecationNotificationEvent() {
+      if (studioDeprecationNotificationEventBuilder_ == null) {
+        return studioDeprecationNotificationEvent_ == null ? com.google.wireless.android.sdk.stats.StudioDeprecationNotificationEvent.getDefaultInstance() : studioDeprecationNotificationEvent_;
+      } else {
+        return studioDeprecationNotificationEventBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * set when kind = STUDIO_DEPRECATION_NOTIFICATION_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.StudioDeprecationNotificationEvent studio_deprecation_notification_event = 232 [lazy = true];</code>
+     */
+    public Builder setStudioDeprecationNotificationEvent(com.google.wireless.android.sdk.stats.StudioDeprecationNotificationEvent value) {
+      if (studioDeprecationNotificationEventBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        studioDeprecationNotificationEvent_ = value;
+      } else {
+        studioDeprecationNotificationEventBuilder_.setMessage(value);
+      }
+      bitField7_ |= 0x00000080;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = STUDIO_DEPRECATION_NOTIFICATION_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.StudioDeprecationNotificationEvent studio_deprecation_notification_event = 232 [lazy = true];</code>
+     */
+    public Builder setStudioDeprecationNotificationEvent(
+        com.google.wireless.android.sdk.stats.StudioDeprecationNotificationEvent.Builder builderForValue) {
+      if (studioDeprecationNotificationEventBuilder_ == null) {
+        studioDeprecationNotificationEvent_ = builderForValue.build();
+      } else {
+        studioDeprecationNotificationEventBuilder_.setMessage(builderForValue.build());
+      }
+      bitField7_ |= 0x00000080;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = STUDIO_DEPRECATION_NOTIFICATION_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.StudioDeprecationNotificationEvent studio_deprecation_notification_event = 232 [lazy = true];</code>
+     */
+    public Builder mergeStudioDeprecationNotificationEvent(com.google.wireless.android.sdk.stats.StudioDeprecationNotificationEvent value) {
+      if (studioDeprecationNotificationEventBuilder_ == null) {
+        if (((bitField7_ & 0x00000080) != 0) &&
+          studioDeprecationNotificationEvent_ != null &&
+          studioDeprecationNotificationEvent_ != com.google.wireless.android.sdk.stats.StudioDeprecationNotificationEvent.getDefaultInstance()) {
+          getStudioDeprecationNotificationEventBuilder().mergeFrom(value);
+        } else {
+          studioDeprecationNotificationEvent_ = value;
+        }
+      } else {
+        studioDeprecationNotificationEventBuilder_.mergeFrom(value);
+      }
+      bitField7_ |= 0x00000080;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = STUDIO_DEPRECATION_NOTIFICATION_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.StudioDeprecationNotificationEvent studio_deprecation_notification_event = 232 [lazy = true];</code>
+     */
+    public Builder clearStudioDeprecationNotificationEvent() {
+      bitField7_ = (bitField7_ & ~0x00000080);
+      studioDeprecationNotificationEvent_ = null;
+      if (studioDeprecationNotificationEventBuilder_ != null) {
+        studioDeprecationNotificationEventBuilder_.dispose();
+        studioDeprecationNotificationEventBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = STUDIO_DEPRECATION_NOTIFICATION_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.StudioDeprecationNotificationEvent studio_deprecation_notification_event = 232 [lazy = true];</code>
+     */
+    public com.google.wireless.android.sdk.stats.StudioDeprecationNotificationEvent.Builder getStudioDeprecationNotificationEventBuilder() {
+      bitField7_ |= 0x00000080;
+      onChanged();
+      return getStudioDeprecationNotificationEventFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * set when kind = STUDIO_DEPRECATION_NOTIFICATION_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.StudioDeprecationNotificationEvent studio_deprecation_notification_event = 232 [lazy = true];</code>
+     */
+    public com.google.wireless.android.sdk.stats.StudioDeprecationNotificationEventOrBuilder getStudioDeprecationNotificationEventOrBuilder() {
+      if (studioDeprecationNotificationEventBuilder_ != null) {
+        return studioDeprecationNotificationEventBuilder_.getMessageOrBuilder();
+      } else {
+        return studioDeprecationNotificationEvent_ == null ?
+            com.google.wireless.android.sdk.stats.StudioDeprecationNotificationEvent.getDefaultInstance() : studioDeprecationNotificationEvent_;
+      }
+    }
+    /**
+     * <pre>
+     * set when kind = STUDIO_DEPRECATION_NOTIFICATION_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.StudioDeprecationNotificationEvent studio_deprecation_notification_event = 232 [lazy = true];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.StudioDeprecationNotificationEvent, com.google.wireless.android.sdk.stats.StudioDeprecationNotificationEvent.Builder, com.google.wireless.android.sdk.stats.StudioDeprecationNotificationEventOrBuilder> 
+        getStudioDeprecationNotificationEventFieldBuilder() {
+      if (studioDeprecationNotificationEventBuilder_ == null) {
+        studioDeprecationNotificationEventBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.wireless.android.sdk.stats.StudioDeprecationNotificationEvent, com.google.wireless.android.sdk.stats.StudioDeprecationNotificationEvent.Builder, com.google.wireless.android.sdk.stats.StudioDeprecationNotificationEventOrBuilder>(
+                getStudioDeprecationNotificationEvent(),
+                getParentForChildren(),
+                isClean());
+        studioDeprecationNotificationEvent_ = null;
+      }
+      return studioDeprecationNotificationEventBuilder_;
+    }
+
+    private com.google.wireless.android.sdk.stats.DeclarativeWatchFaceEvent declarativeWatchFaceEvent_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.DeclarativeWatchFaceEvent, com.google.wireless.android.sdk.stats.DeclarativeWatchFaceEvent.Builder, com.google.wireless.android.sdk.stats.DeclarativeWatchFaceEventOrBuilder> declarativeWatchFaceEventBuilder_;
+    /**
+     * <pre>
+     * set when kind = DECLARATIVE_WATCH_FACE_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.DeclarativeWatchFaceEvent declarative_watch_face_event = 233 [lazy = true];</code>
+     * @return Whether the declarativeWatchFaceEvent field is set.
+     */
+    public boolean hasDeclarativeWatchFaceEvent() {
+      return ((bitField7_ & 0x00000100) != 0);
+    }
+    /**
+     * <pre>
+     * set when kind = DECLARATIVE_WATCH_FACE_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.DeclarativeWatchFaceEvent declarative_watch_face_event = 233 [lazy = true];</code>
+     * @return The declarativeWatchFaceEvent.
+     */
+    public com.google.wireless.android.sdk.stats.DeclarativeWatchFaceEvent getDeclarativeWatchFaceEvent() {
+      if (declarativeWatchFaceEventBuilder_ == null) {
+        return declarativeWatchFaceEvent_ == null ? com.google.wireless.android.sdk.stats.DeclarativeWatchFaceEvent.getDefaultInstance() : declarativeWatchFaceEvent_;
+      } else {
+        return declarativeWatchFaceEventBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * set when kind = DECLARATIVE_WATCH_FACE_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.DeclarativeWatchFaceEvent declarative_watch_face_event = 233 [lazy = true];</code>
+     */
+    public Builder setDeclarativeWatchFaceEvent(com.google.wireless.android.sdk.stats.DeclarativeWatchFaceEvent value) {
+      if (declarativeWatchFaceEventBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        declarativeWatchFaceEvent_ = value;
+      } else {
+        declarativeWatchFaceEventBuilder_.setMessage(value);
+      }
+      bitField7_ |= 0x00000100;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = DECLARATIVE_WATCH_FACE_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.DeclarativeWatchFaceEvent declarative_watch_face_event = 233 [lazy = true];</code>
+     */
+    public Builder setDeclarativeWatchFaceEvent(
+        com.google.wireless.android.sdk.stats.DeclarativeWatchFaceEvent.Builder builderForValue) {
+      if (declarativeWatchFaceEventBuilder_ == null) {
+        declarativeWatchFaceEvent_ = builderForValue.build();
+      } else {
+        declarativeWatchFaceEventBuilder_.setMessage(builderForValue.build());
+      }
+      bitField7_ |= 0x00000100;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = DECLARATIVE_WATCH_FACE_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.DeclarativeWatchFaceEvent declarative_watch_face_event = 233 [lazy = true];</code>
+     */
+    public Builder mergeDeclarativeWatchFaceEvent(com.google.wireless.android.sdk.stats.DeclarativeWatchFaceEvent value) {
+      if (declarativeWatchFaceEventBuilder_ == null) {
+        if (((bitField7_ & 0x00000100) != 0) &&
+          declarativeWatchFaceEvent_ != null &&
+          declarativeWatchFaceEvent_ != com.google.wireless.android.sdk.stats.DeclarativeWatchFaceEvent.getDefaultInstance()) {
+          getDeclarativeWatchFaceEventBuilder().mergeFrom(value);
+        } else {
+          declarativeWatchFaceEvent_ = value;
+        }
+      } else {
+        declarativeWatchFaceEventBuilder_.mergeFrom(value);
+      }
+      bitField7_ |= 0x00000100;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = DECLARATIVE_WATCH_FACE_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.DeclarativeWatchFaceEvent declarative_watch_face_event = 233 [lazy = true];</code>
+     */
+    public Builder clearDeclarativeWatchFaceEvent() {
+      bitField7_ = (bitField7_ & ~0x00000100);
+      declarativeWatchFaceEvent_ = null;
+      if (declarativeWatchFaceEventBuilder_ != null) {
+        declarativeWatchFaceEventBuilder_.dispose();
+        declarativeWatchFaceEventBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = DECLARATIVE_WATCH_FACE_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.DeclarativeWatchFaceEvent declarative_watch_face_event = 233 [lazy = true];</code>
+     */
+    public com.google.wireless.android.sdk.stats.DeclarativeWatchFaceEvent.Builder getDeclarativeWatchFaceEventBuilder() {
+      bitField7_ |= 0x00000100;
+      onChanged();
+      return getDeclarativeWatchFaceEventFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * set when kind = DECLARATIVE_WATCH_FACE_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.DeclarativeWatchFaceEvent declarative_watch_face_event = 233 [lazy = true];</code>
+     */
+    public com.google.wireless.android.sdk.stats.DeclarativeWatchFaceEventOrBuilder getDeclarativeWatchFaceEventOrBuilder() {
+      if (declarativeWatchFaceEventBuilder_ != null) {
+        return declarativeWatchFaceEventBuilder_.getMessageOrBuilder();
+      } else {
+        return declarativeWatchFaceEvent_ == null ?
+            com.google.wireless.android.sdk.stats.DeclarativeWatchFaceEvent.getDefaultInstance() : declarativeWatchFaceEvent_;
+      }
+    }
+    /**
+     * <pre>
+     * set when kind = DECLARATIVE_WATCH_FACE_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.DeclarativeWatchFaceEvent declarative_watch_face_event = 233 [lazy = true];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.DeclarativeWatchFaceEvent, com.google.wireless.android.sdk.stats.DeclarativeWatchFaceEvent.Builder, com.google.wireless.android.sdk.stats.DeclarativeWatchFaceEventOrBuilder> 
+        getDeclarativeWatchFaceEventFieldBuilder() {
+      if (declarativeWatchFaceEventBuilder_ == null) {
+        declarativeWatchFaceEventBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.wireless.android.sdk.stats.DeclarativeWatchFaceEvent, com.google.wireless.android.sdk.stats.DeclarativeWatchFaceEvent.Builder, com.google.wireless.android.sdk.stats.DeclarativeWatchFaceEventOrBuilder>(
+                getDeclarativeWatchFaceEvent(),
+                getParentForChildren(),
+                isClean());
+        declarativeWatchFaceEvent_ = null;
+      }
+      return declarativeWatchFaceEventBuilder_;
+    }
+
+    private com.google.wireless.android.sdk.stats.AndroidViewShowBuildFilesInModuleEvent androidViewShowBuildFilesInModuleEvent_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.AndroidViewShowBuildFilesInModuleEvent, com.google.wireless.android.sdk.stats.AndroidViewShowBuildFilesInModuleEvent.Builder, com.google.wireless.android.sdk.stats.AndroidViewShowBuildFilesInModuleEventOrBuilder> androidViewShowBuildFilesInModuleEventBuilder_;
+    /**
+     * <pre>
+     * set when kind = ANDROID_VIEW_SHOW_BUILD_FILES_IN_MODULE_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.AndroidViewShowBuildFilesInModuleEvent android_view_show_build_files_in_module_event = 234 [lazy = true];</code>
+     * @return Whether the androidViewShowBuildFilesInModuleEvent field is set.
+     */
+    public boolean hasAndroidViewShowBuildFilesInModuleEvent() {
+      return ((bitField7_ & 0x00000200) != 0);
+    }
+    /**
+     * <pre>
+     * set when kind = ANDROID_VIEW_SHOW_BUILD_FILES_IN_MODULE_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.AndroidViewShowBuildFilesInModuleEvent android_view_show_build_files_in_module_event = 234 [lazy = true];</code>
+     * @return The androidViewShowBuildFilesInModuleEvent.
+     */
+    public com.google.wireless.android.sdk.stats.AndroidViewShowBuildFilesInModuleEvent getAndroidViewShowBuildFilesInModuleEvent() {
+      if (androidViewShowBuildFilesInModuleEventBuilder_ == null) {
+        return androidViewShowBuildFilesInModuleEvent_ == null ? com.google.wireless.android.sdk.stats.AndroidViewShowBuildFilesInModuleEvent.getDefaultInstance() : androidViewShowBuildFilesInModuleEvent_;
+      } else {
+        return androidViewShowBuildFilesInModuleEventBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * set when kind = ANDROID_VIEW_SHOW_BUILD_FILES_IN_MODULE_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.AndroidViewShowBuildFilesInModuleEvent android_view_show_build_files_in_module_event = 234 [lazy = true];</code>
+     */
+    public Builder setAndroidViewShowBuildFilesInModuleEvent(com.google.wireless.android.sdk.stats.AndroidViewShowBuildFilesInModuleEvent value) {
+      if (androidViewShowBuildFilesInModuleEventBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        androidViewShowBuildFilesInModuleEvent_ = value;
+      } else {
+        androidViewShowBuildFilesInModuleEventBuilder_.setMessage(value);
+      }
+      bitField7_ |= 0x00000200;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = ANDROID_VIEW_SHOW_BUILD_FILES_IN_MODULE_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.AndroidViewShowBuildFilesInModuleEvent android_view_show_build_files_in_module_event = 234 [lazy = true];</code>
+     */
+    public Builder setAndroidViewShowBuildFilesInModuleEvent(
+        com.google.wireless.android.sdk.stats.AndroidViewShowBuildFilesInModuleEvent.Builder builderForValue) {
+      if (androidViewShowBuildFilesInModuleEventBuilder_ == null) {
+        androidViewShowBuildFilesInModuleEvent_ = builderForValue.build();
+      } else {
+        androidViewShowBuildFilesInModuleEventBuilder_.setMessage(builderForValue.build());
+      }
+      bitField7_ |= 0x00000200;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = ANDROID_VIEW_SHOW_BUILD_FILES_IN_MODULE_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.AndroidViewShowBuildFilesInModuleEvent android_view_show_build_files_in_module_event = 234 [lazy = true];</code>
+     */
+    public Builder mergeAndroidViewShowBuildFilesInModuleEvent(com.google.wireless.android.sdk.stats.AndroidViewShowBuildFilesInModuleEvent value) {
+      if (androidViewShowBuildFilesInModuleEventBuilder_ == null) {
+        if (((bitField7_ & 0x00000200) != 0) &&
+          androidViewShowBuildFilesInModuleEvent_ != null &&
+          androidViewShowBuildFilesInModuleEvent_ != com.google.wireless.android.sdk.stats.AndroidViewShowBuildFilesInModuleEvent.getDefaultInstance()) {
+          getAndroidViewShowBuildFilesInModuleEventBuilder().mergeFrom(value);
+        } else {
+          androidViewShowBuildFilesInModuleEvent_ = value;
+        }
+      } else {
+        androidViewShowBuildFilesInModuleEventBuilder_.mergeFrom(value);
+      }
+      bitField7_ |= 0x00000200;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = ANDROID_VIEW_SHOW_BUILD_FILES_IN_MODULE_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.AndroidViewShowBuildFilesInModuleEvent android_view_show_build_files_in_module_event = 234 [lazy = true];</code>
+     */
+    public Builder clearAndroidViewShowBuildFilesInModuleEvent() {
+      bitField7_ = (bitField7_ & ~0x00000200);
+      androidViewShowBuildFilesInModuleEvent_ = null;
+      if (androidViewShowBuildFilesInModuleEventBuilder_ != null) {
+        androidViewShowBuildFilesInModuleEventBuilder_.dispose();
+        androidViewShowBuildFilesInModuleEventBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = ANDROID_VIEW_SHOW_BUILD_FILES_IN_MODULE_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.AndroidViewShowBuildFilesInModuleEvent android_view_show_build_files_in_module_event = 234 [lazy = true];</code>
+     */
+    public com.google.wireless.android.sdk.stats.AndroidViewShowBuildFilesInModuleEvent.Builder getAndroidViewShowBuildFilesInModuleEventBuilder() {
+      bitField7_ |= 0x00000200;
+      onChanged();
+      return getAndroidViewShowBuildFilesInModuleEventFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * set when kind = ANDROID_VIEW_SHOW_BUILD_FILES_IN_MODULE_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.AndroidViewShowBuildFilesInModuleEvent android_view_show_build_files_in_module_event = 234 [lazy = true];</code>
+     */
+    public com.google.wireless.android.sdk.stats.AndroidViewShowBuildFilesInModuleEventOrBuilder getAndroidViewShowBuildFilesInModuleEventOrBuilder() {
+      if (androidViewShowBuildFilesInModuleEventBuilder_ != null) {
+        return androidViewShowBuildFilesInModuleEventBuilder_.getMessageOrBuilder();
+      } else {
+        return androidViewShowBuildFilesInModuleEvent_ == null ?
+            com.google.wireless.android.sdk.stats.AndroidViewShowBuildFilesInModuleEvent.getDefaultInstance() : androidViewShowBuildFilesInModuleEvent_;
+      }
+    }
+    /**
+     * <pre>
+     * set when kind = ANDROID_VIEW_SHOW_BUILD_FILES_IN_MODULE_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.AndroidViewShowBuildFilesInModuleEvent android_view_show_build_files_in_module_event = 234 [lazy = true];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.AndroidViewShowBuildFilesInModuleEvent, com.google.wireless.android.sdk.stats.AndroidViewShowBuildFilesInModuleEvent.Builder, com.google.wireless.android.sdk.stats.AndroidViewShowBuildFilesInModuleEventOrBuilder> 
+        getAndroidViewShowBuildFilesInModuleEventFieldBuilder() {
+      if (androidViewShowBuildFilesInModuleEventBuilder_ == null) {
+        androidViewShowBuildFilesInModuleEventBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.wireless.android.sdk.stats.AndroidViewShowBuildFilesInModuleEvent, com.google.wireless.android.sdk.stats.AndroidViewShowBuildFilesInModuleEvent.Builder, com.google.wireless.android.sdk.stats.AndroidViewShowBuildFilesInModuleEventOrBuilder>(
+                getAndroidViewShowBuildFilesInModuleEvent(),
+                getParentForChildren(),
+                isClean());
+        androidViewShowBuildFilesInModuleEvent_ = null;
+      }
+      return androidViewShowBuildFilesInModuleEventBuilder_;
+    }
+
+    private com.google.wireless.android.sdk.stats.ProjectViewDefaultViewEvent projectViewDefaultViewEvent_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.ProjectViewDefaultViewEvent, com.google.wireless.android.sdk.stats.ProjectViewDefaultViewEvent.Builder, com.google.wireless.android.sdk.stats.ProjectViewDefaultViewEventOrBuilder> projectViewDefaultViewEventBuilder_;
+    /**
+     * <pre>
+     * set when kind = PROJECT_VIEW_DEFAULT_VIEW_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.ProjectViewDefaultViewEvent project_view_default_view_event = 235 [lazy = true];</code>
+     * @return Whether the projectViewDefaultViewEvent field is set.
+     */
+    public boolean hasProjectViewDefaultViewEvent() {
+      return ((bitField7_ & 0x00000400) != 0);
+    }
+    /**
+     * <pre>
+     * set when kind = PROJECT_VIEW_DEFAULT_VIEW_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.ProjectViewDefaultViewEvent project_view_default_view_event = 235 [lazy = true];</code>
+     * @return The projectViewDefaultViewEvent.
+     */
+    public com.google.wireless.android.sdk.stats.ProjectViewDefaultViewEvent getProjectViewDefaultViewEvent() {
+      if (projectViewDefaultViewEventBuilder_ == null) {
+        return projectViewDefaultViewEvent_ == null ? com.google.wireless.android.sdk.stats.ProjectViewDefaultViewEvent.getDefaultInstance() : projectViewDefaultViewEvent_;
+      } else {
+        return projectViewDefaultViewEventBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * set when kind = PROJECT_VIEW_DEFAULT_VIEW_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.ProjectViewDefaultViewEvent project_view_default_view_event = 235 [lazy = true];</code>
+     */
+    public Builder setProjectViewDefaultViewEvent(com.google.wireless.android.sdk.stats.ProjectViewDefaultViewEvent value) {
+      if (projectViewDefaultViewEventBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        projectViewDefaultViewEvent_ = value;
+      } else {
+        projectViewDefaultViewEventBuilder_.setMessage(value);
+      }
+      bitField7_ |= 0x00000400;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = PROJECT_VIEW_DEFAULT_VIEW_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.ProjectViewDefaultViewEvent project_view_default_view_event = 235 [lazy = true];</code>
+     */
+    public Builder setProjectViewDefaultViewEvent(
+        com.google.wireless.android.sdk.stats.ProjectViewDefaultViewEvent.Builder builderForValue) {
+      if (projectViewDefaultViewEventBuilder_ == null) {
+        projectViewDefaultViewEvent_ = builderForValue.build();
+      } else {
+        projectViewDefaultViewEventBuilder_.setMessage(builderForValue.build());
+      }
+      bitField7_ |= 0x00000400;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = PROJECT_VIEW_DEFAULT_VIEW_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.ProjectViewDefaultViewEvent project_view_default_view_event = 235 [lazy = true];</code>
+     */
+    public Builder mergeProjectViewDefaultViewEvent(com.google.wireless.android.sdk.stats.ProjectViewDefaultViewEvent value) {
+      if (projectViewDefaultViewEventBuilder_ == null) {
+        if (((bitField7_ & 0x00000400) != 0) &&
+          projectViewDefaultViewEvent_ != null &&
+          projectViewDefaultViewEvent_ != com.google.wireless.android.sdk.stats.ProjectViewDefaultViewEvent.getDefaultInstance()) {
+          getProjectViewDefaultViewEventBuilder().mergeFrom(value);
+        } else {
+          projectViewDefaultViewEvent_ = value;
+        }
+      } else {
+        projectViewDefaultViewEventBuilder_.mergeFrom(value);
+      }
+      bitField7_ |= 0x00000400;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = PROJECT_VIEW_DEFAULT_VIEW_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.ProjectViewDefaultViewEvent project_view_default_view_event = 235 [lazy = true];</code>
+     */
+    public Builder clearProjectViewDefaultViewEvent() {
+      bitField7_ = (bitField7_ & ~0x00000400);
+      projectViewDefaultViewEvent_ = null;
+      if (projectViewDefaultViewEventBuilder_ != null) {
+        projectViewDefaultViewEventBuilder_.dispose();
+        projectViewDefaultViewEventBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = PROJECT_VIEW_DEFAULT_VIEW_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.ProjectViewDefaultViewEvent project_view_default_view_event = 235 [lazy = true];</code>
+     */
+    public com.google.wireless.android.sdk.stats.ProjectViewDefaultViewEvent.Builder getProjectViewDefaultViewEventBuilder() {
+      bitField7_ |= 0x00000400;
+      onChanged();
+      return getProjectViewDefaultViewEventFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * set when kind = PROJECT_VIEW_DEFAULT_VIEW_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.ProjectViewDefaultViewEvent project_view_default_view_event = 235 [lazy = true];</code>
+     */
+    public com.google.wireless.android.sdk.stats.ProjectViewDefaultViewEventOrBuilder getProjectViewDefaultViewEventOrBuilder() {
+      if (projectViewDefaultViewEventBuilder_ != null) {
+        return projectViewDefaultViewEventBuilder_.getMessageOrBuilder();
+      } else {
+        return projectViewDefaultViewEvent_ == null ?
+            com.google.wireless.android.sdk.stats.ProjectViewDefaultViewEvent.getDefaultInstance() : projectViewDefaultViewEvent_;
+      }
+    }
+    /**
+     * <pre>
+     * set when kind = PROJECT_VIEW_DEFAULT_VIEW_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.ProjectViewDefaultViewEvent project_view_default_view_event = 235 [lazy = true];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.ProjectViewDefaultViewEvent, com.google.wireless.android.sdk.stats.ProjectViewDefaultViewEvent.Builder, com.google.wireless.android.sdk.stats.ProjectViewDefaultViewEventOrBuilder> 
+        getProjectViewDefaultViewEventFieldBuilder() {
+      if (projectViewDefaultViewEventBuilder_ == null) {
+        projectViewDefaultViewEventBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.wireless.android.sdk.stats.ProjectViewDefaultViewEvent, com.google.wireless.android.sdk.stats.ProjectViewDefaultViewEvent.Builder, com.google.wireless.android.sdk.stats.ProjectViewDefaultViewEventOrBuilder>(
+                getProjectViewDefaultViewEvent(),
+                getParentForChildren(),
+                isClean());
+        projectViewDefaultViewEvent_ = null;
+      }
+      return projectViewDefaultViewEventBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

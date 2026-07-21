@@ -125,6 +125,14 @@ private static final long serialVersionUID = 0L;
      * <code>TRANSFORM_CODE = 9;</code>
      */
     TRANSFORM_CODE(9),
+    /**
+     * <pre>
+     * Use prompt library's prompts to invoke a built-in or custom action.
+     * </pre>
+     *
+     * <code>PROMPT_LIBRARY = 10;</code>
+     */
+    PROMPT_LIBRARY(10),
     ;
 
     /**
@@ -207,6 +215,14 @@ private static final long serialVersionUID = 0L;
      * <code>TRANSFORM_CODE = 9;</code>
      */
     public static final int TRANSFORM_CODE_VALUE = 9;
+    /**
+     * <pre>
+     * Use prompt library's prompts to invoke a built-in or custom action.
+     * </pre>
+     *
+     * <code>PROMPT_LIBRARY = 10;</code>
+     */
+    public static final int PROMPT_LIBRARY_VALUE = 10;
 
 
     public final int getNumber() {
@@ -239,6 +255,7 @@ private static final long serialVersionUID = 0L;
         case 7: return SUGGEST_COMMIT_MESSAGE;
         case 8: return ANALYZE_BUILD_ERRORS;
         case 9: return TRANSFORM_CODE;
+        case 10: return PROMPT_LIBRARY;
         default: return null;
       }
     }

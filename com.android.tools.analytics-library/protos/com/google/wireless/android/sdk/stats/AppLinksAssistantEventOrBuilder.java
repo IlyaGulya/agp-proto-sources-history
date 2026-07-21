@@ -323,4 +323,34 @@ public interface AppLinksAssistantEventOrBuilder extends
    * <code>optional .android_studio.AppLinksAssistantEvent.LinksRecord links_record = 14 [lazy = true];</code>
    */
   com.google.wireless.android.sdk.stats.AppLinksAssistantEvent.LinksRecordOrBuilder getLinksRecordOrBuilder();
+
+  /**
+   * <pre>
+   * Info on whether the services are deprecated / unsupported and if that info
+   * is shown to the user.
+   * </pre>
+   *
+   * <code>optional .android_studio.DevServiceDeprecationInfo service_deprecation_info = 15 [lazy = true];</code>
+   * @return Whether the serviceDeprecationInfo field is set.
+   */
+  boolean hasServiceDeprecationInfo();
+  /**
+   * <pre>
+   * Info on whether the services are deprecated / unsupported and if that info
+   * is shown to the user.
+   * </pre>
+   *
+   * <code>optional .android_studio.DevServiceDeprecationInfo service_deprecation_info = 15 [lazy = true];</code>
+   * @return The serviceDeprecationInfo.
+   */
+  com.google.wireless.android.sdk.stats.DevServiceDeprecationInfo getServiceDeprecationInfo();
+  /**
+   * <pre>
+   * Info on whether the services are deprecated / unsupported and if that info
+   * is shown to the user.
+   * </pre>
+   *
+   * <code>optional .android_studio.DevServiceDeprecationInfo service_deprecation_info = 15 [lazy = true];</code>
+   */
+  com.google.wireless.android.sdk.stats.DevServiceDeprecationInfoOrBuilder getServiceDeprecationInfoOrBuilder();
 }

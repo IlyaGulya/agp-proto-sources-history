@@ -229,12 +229,14 @@ private static final long serialVersionUID = 0L;
      */
     BLOCK_R8_INTEGRATED_RESOURCE_SHRINKING_PRESENT(45),
     /**
-     * <code>BLOCK_R8_OPTIMIZED_SHRINKING_PRESENT = 46;</code>
+     * <code>BLOCK_R8_OPTIMIZED_SHRINKING_PRESENT = 46 [deprecated = true];</code>
      */
+    @java.lang.Deprecated
     BLOCK_R8_OPTIMIZED_SHRINKING_PRESENT(46),
     /**
-     * <code>USE_R8_OPTIMIZED_SHRINKING_DEFAULT = 47;</code>
+     * <code>USE_R8_OPTIMIZED_SHRINKING_DEFAULT = 47 [deprecated = true];</code>
      */
+    @java.lang.Deprecated
     USE_R8_OPTIMIZED_SHRINKING_DEFAULT(47),
     /**
      * <code>DEFAULT_TARGET_SDK_TO_COMPILE_SDK_IF_UNSET = 48;</code>
@@ -244,6 +246,14 @@ private static final long serialVersionUID = 0L;
      * <code>ENABLE_APP_COMPILE_TIME_R_CLASS = 49;</code>
      */
     ENABLE_APP_COMPILE_TIME_R_CLASS(49),
+    /**
+     * <code>BLOCK_R8_OPTIMIZED_RESOURCE_SHRINKING_PRESENT = 50;</code>
+     */
+    BLOCK_R8_OPTIMIZED_RESOURCE_SHRINKING_PRESENT(50),
+    /**
+     * <code>USE_R8_OPTIMIZED_RESOURCE_SHRINKING_DEFAULT = 51;</code>
+     */
+    USE_R8_OPTIMIZED_RESOURCE_SHRINKING_DEFAULT(51),
     ;
 
     /**
@@ -431,13 +441,13 @@ private static final long serialVersionUID = 0L;
      */
     public static final int BLOCK_R8_INTEGRATED_RESOURCE_SHRINKING_PRESENT_VALUE = 45;
     /**
-     * <code>BLOCK_R8_OPTIMIZED_SHRINKING_PRESENT = 46;</code>
+     * <code>BLOCK_R8_OPTIMIZED_SHRINKING_PRESENT = 46 [deprecated = true];</code>
      */
-    public static final int BLOCK_R8_OPTIMIZED_SHRINKING_PRESENT_VALUE = 46;
+    @java.lang.Deprecated public static final int BLOCK_R8_OPTIMIZED_SHRINKING_PRESENT_VALUE = 46;
     /**
-     * <code>USE_R8_OPTIMIZED_SHRINKING_DEFAULT = 47;</code>
+     * <code>USE_R8_OPTIMIZED_SHRINKING_DEFAULT = 47 [deprecated = true];</code>
      */
-    public static final int USE_R8_OPTIMIZED_SHRINKING_DEFAULT_VALUE = 47;
+    @java.lang.Deprecated public static final int USE_R8_OPTIMIZED_SHRINKING_DEFAULT_VALUE = 47;
     /**
      * <code>DEFAULT_TARGET_SDK_TO_COMPILE_SDK_IF_UNSET = 48;</code>
      */
@@ -446,6 +456,14 @@ private static final long serialVersionUID = 0L;
      * <code>ENABLE_APP_COMPILE_TIME_R_CLASS = 49;</code>
      */
     public static final int ENABLE_APP_COMPILE_TIME_R_CLASS_VALUE = 49;
+    /**
+     * <code>BLOCK_R8_OPTIMIZED_RESOURCE_SHRINKING_PRESENT = 50;</code>
+     */
+    public static final int BLOCK_R8_OPTIMIZED_RESOURCE_SHRINKING_PRESENT_VALUE = 50;
+    /**
+     * <code>USE_R8_OPTIMIZED_RESOURCE_SHRINKING_DEFAULT = 51;</code>
+     */
+    public static final int USE_R8_OPTIMIZED_RESOURCE_SHRINKING_DEFAULT_VALUE = 51;
 
 
     public final int getNumber() {
@@ -518,6 +536,8 @@ private static final long serialVersionUID = 0L;
         case 47: return USE_R8_OPTIMIZED_SHRINKING_DEFAULT;
         case 48: return DEFAULT_TARGET_SDK_TO_COMPILE_SDK_IF_UNSET;
         case 49: return ENABLE_APP_COMPILE_TIME_R_CLASS;
+        case 50: return BLOCK_R8_OPTIMIZED_RESOURCE_SHRINKING_PRESENT;
+        case 51: return USE_R8_OPTIMIZED_RESOURCE_SHRINKING_DEFAULT;
         default: return null;
       }
     }

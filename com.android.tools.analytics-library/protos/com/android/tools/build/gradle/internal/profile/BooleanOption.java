@@ -852,6 +852,10 @@ public enum BooleanOption
    * <code>TEST_SUITE_SUPPORT = 207;</code>
    */
   TEST_SUITE_SUPPORT(207),
+  /**
+   * <code>R8_OPTIMIZED_RESOURCE_SHRINKING = 208;</code>
+   */
+  R8_OPTIMIZED_RESOURCE_SHRINKING(208),
   UNRECOGNIZED(-1),
   ;
 
@@ -1687,6 +1691,10 @@ public enum BooleanOption
    * <code>TEST_SUITE_SUPPORT = 207;</code>
    */
   public static final int TEST_SUITE_SUPPORT_VALUE = 207;
+  /**
+   * <code>R8_OPTIMIZED_RESOURCE_SHRINKING = 208;</code>
+   */
+  public static final int R8_OPTIMIZED_RESOURCE_SHRINKING_VALUE = 208;
 
 
   public final int getNumber() {
@@ -1921,6 +1929,7 @@ public enum BooleanOption
       case 205: return ONLY_ENABLE_UNIT_TEST_BY_DEFAULT_FOR_THE_TESTED_BUILD_TYPE;
       case 206: return DEFAULT_TARGET_SDK_TO_COMPILE_SDK_IF_UNSET;
       case 207: return TEST_SUITE_SUPPORT;
+      case 208: return R8_OPTIMIZED_RESOURCE_SHRINKING;
       default: return null;
     }
   }
