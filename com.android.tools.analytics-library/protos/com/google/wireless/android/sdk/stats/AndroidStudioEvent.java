@@ -7092,6 +7092,10 @@ private static final long serialVersionUID = 0L;
      * <code>KOTLIN_MULTIPLATFORM_LIBRARY_MODULE = 70;</code>
      */
     KOTLIN_MULTIPLATFORM_LIBRARY_MODULE(70),
+    /**
+     * <code>EXPERIMENTAL_ACTIVITY_2 = 71;</code>
+     */
+    EXPERIMENTAL_ACTIVITY_2(71),
     ;
 
     /**
@@ -7382,6 +7386,10 @@ private static final long serialVersionUID = 0L;
      * <code>KOTLIN_MULTIPLATFORM_LIBRARY_MODULE = 70;</code>
      */
     public static final int KOTLIN_MULTIPLATFORM_LIBRARY_MODULE_VALUE = 70;
+    /**
+     * <code>EXPERIMENTAL_ACTIVITY_2 = 71;</code>
+     */
+    public static final int EXPERIMENTAL_ACTIVITY_2_VALUE = 71;
 
 
     public final int getNumber() {
@@ -7475,6 +7483,7 @@ private static final long serialVersionUID = 0L;
         case 68: return BASELINE_PROFILES_MODULE;
         case 69: return EXPERIMENTAL_ACTIVITY;
         case 70: return KOTLIN_MULTIPLATFORM_LIBRARY_MODULE;
+        case 71: return EXPERIMENTAL_ACTIVITY_2;
         default: return null;
       }
     }
@@ -10254,7 +10263,7 @@ private static final long serialVersionUID = 0L;
        * <pre>
        * The different template components (eg Activities, Fragments, Services,
        * etc) the template engine could be asked to render
-       * Next ID: 63
+       * Next ID: 64
        * </pre>
        *
        * Protobuf enum {@code android_studio.AndroidStudioEvent.TemplatesUsage.TemplateComponent.TemplateType}
@@ -10515,6 +10524,10 @@ private static final long serialVersionUID = 0L;
          * <code>EXPERIMENTAL_ACTIVITY = 62;</code>
          */
         EXPERIMENTAL_ACTIVITY(62),
+        /**
+         * <code>EXPERIMENTAL_ACTIVITY_2 = 63;</code>
+         */
+        EXPERIMENTAL_ACTIVITY_2(63),
         ;
 
         /**
@@ -10769,6 +10782,10 @@ private static final long serialVersionUID = 0L;
          * <code>EXPERIMENTAL_ACTIVITY = 62;</code>
          */
         public static final int EXPERIMENTAL_ACTIVITY_VALUE = 62;
+        /**
+         * <code>EXPERIMENTAL_ACTIVITY_2 = 63;</code>
+         */
+        public static final int EXPERIMENTAL_ACTIVITY_2_VALUE = 63;
 
 
         public final int getNumber() {
@@ -10854,6 +10871,7 @@ private static final long serialVersionUID = 0L;
             case 55: return SLICE_PROVIDER;
             case 56: return CONTENT_PROVIDER;
             case 62: return EXPERIMENTAL_ACTIVITY;
+            case 63: return EXPERIMENTAL_ACTIVITY_2;
             default: return null;
           }
         }

@@ -189,6 +189,14 @@ private static final long serialVersionUID = 0L;
      * <code>RES_VALUES_DEFAULT = 34;</code>
      */
     RES_VALUES_DEFAULT(34),
+    /**
+     * <code>BLOCK_AIDL_PROPERTY_PRESENT = 35;</code>
+     */
+    BLOCK_AIDL_PROPERTY_PRESENT(35),
+    /**
+     * <code>BLOCK_RENDER_SCRIPT_PROPERTY_PRESENT = 36;</code>
+     */
+    BLOCK_RENDER_SCRIPT_PROPERTY_PRESENT(36),
     ;
 
     /**
@@ -331,6 +339,14 @@ private static final long serialVersionUID = 0L;
      * <code>RES_VALUES_DEFAULT = 34;</code>
      */
     public static final int RES_VALUES_DEFAULT_VALUE = 34;
+    /**
+     * <code>BLOCK_AIDL_PROPERTY_PRESENT = 35;</code>
+     */
+    public static final int BLOCK_AIDL_PROPERTY_PRESENT_VALUE = 35;
+    /**
+     * <code>BLOCK_RENDER_SCRIPT_PROPERTY_PRESENT = 36;</code>
+     */
+    public static final int BLOCK_RENDER_SCRIPT_PROPERTY_PRESENT_VALUE = 36;
 
 
     public final int getNumber() {
@@ -388,6 +404,8 @@ private static final long serialVersionUID = 0L;
         case 32: return USE_ANDROIDX_DEFAULT;
         case 33: return EXCLUDE_LIBRARY_COMPONENTS_FROM_CONSTRAINTS_DEFAULT;
         case 34: return RES_VALUES_DEFAULT;
+        case 35: return BLOCK_AIDL_PROPERTY_PRESENT;
+        case 36: return BLOCK_RENDER_SCRIPT_PROPERTY_PRESENT;
         default: return null;
       }
     }

@@ -683,7 +683,7 @@ public final class AnalyticsEnums {
       "ESTS\020\236\001\022$\n\037HOST_TEST_CODE_COVERAGE_ENABL" +
       "ED\020\237\001\022&\n!DEVICE_TEST_CODE_COVERAGE_ENABL" +
       "ED\020\240\001\022\037\n\032PROVIDE_APK_OUTPUT_TO_TASK\020\241\001\022\014" +
-      "\n\007MIN_SDK\020\242\001*\367\t\n\022ModulePropertyKeys\022\037\n\033U" +
+      "\n\007MIN_SDK\020\242\001*\253\013\n\022ModulePropertyKeys\022\037\n\033U" +
       "NKNOWN_MODULE_PROPERTY_KEY\020\000\022@\n<MODULE_A" +
       "NDROID_PRIVACY_SANDBOX_LOCAL_DEPLOYMENT_" +
       "SIGNING_NAME\020\001\022F\nBMODULE_ANDROID_PRIVACY" +
@@ -715,8 +715,13 @@ public final class AnalyticsEnums {
       "+\n\'MODULE_DTTV2_DEVICE_GROUP_DEFAULT_GRO" +
       "UP\020\026\022*\n&MODULE_DTTV2_DEVICE_GROUP_ENABLE" +
       "_SPLIT\020\027\022$\n MODULE_DTTV2_DEVICE_GROUP_CO" +
-      "NFIG\020\030B3\n/com.android.tools.build.gradle" +
-      ".internal.profileP\001b\006proto3"
+      "NFIG\020\030\0224\n0MODULE_R8_EXPERIMENTAL_PARTIAL" +
+      "_SHRINKING_ENABLED\020\031\022=\n9MODULE_R8_EXPERI" +
+      "MENTAL_PARTIAL_SHRINKING_INCLUDE_PATTERN" +
+      "S\020\032\022=\n9MODULE_R8_EXPERIMENTAL_PARTIAL_SH" +
+      "RINKING_EXCLUDE_PATTERNS\020\033B3\n/com.androi" +
+      "d.tools.build.gradle.internal.profileP\001b" +
+      "\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
