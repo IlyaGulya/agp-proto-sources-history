@@ -277,5 +277,20 @@ public interface SmlChatBotEventOrBuilder extends
    */
   com.google.wireless.android.sdk.stats.SmlChatBotEvent.RecentChatsEventOrBuilder getRecentChatsEventOrBuilder();
 
+  /**
+   * <code>.android_studio.SmlChatBotEvent.ChangesDrawerEvent changes_drawer_event = 19 [lazy = true];</code>
+   * @return Whether the changesDrawerEvent field is set.
+   */
+  boolean hasChangesDrawerEvent();
+  /**
+   * <code>.android_studio.SmlChatBotEvent.ChangesDrawerEvent changes_drawer_event = 19 [lazy = true];</code>
+   * @return The changesDrawerEvent.
+   */
+  com.google.wireless.android.sdk.stats.SmlChatBotEvent.ChangesDrawerEvent getChangesDrawerEvent();
+  /**
+   * <code>.android_studio.SmlChatBotEvent.ChangesDrawerEvent changes_drawer_event = 19 [lazy = true];</code>
+   */
+  com.google.wireless.android.sdk.stats.SmlChatBotEvent.ChangesDrawerEventOrBuilder getChangesDrawerEventOrBuilder();
+
   com.google.wireless.android.sdk.stats.SmlChatBotEvent.ContentCase getContentCase();
 }

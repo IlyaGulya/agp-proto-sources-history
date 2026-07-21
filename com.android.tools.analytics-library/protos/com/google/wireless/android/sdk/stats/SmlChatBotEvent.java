@@ -12960,6 +12960,2323 @@ private static final long serialVersionUID = 0L;
 
   }
 
+  public interface ChangeResolvedOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:android_studio.SmlChatBotEvent.ChangeResolved)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * The total number of chunks that were proposed in this change.
+     * Should be equal to:
+     * total_chunks_accepted + total_chunks_rejected + chunks_iterated
+     * </pre>
+     *
+     * <code>optional int32 total_chunks = 1;</code>
+     * @return Whether the totalChunks field is set.
+     */
+    boolean hasTotalChunks();
+    /**
+     * <pre>
+     * The total number of chunks that were proposed in this change.
+     * Should be equal to:
+     * total_chunks_accepted + total_chunks_rejected + chunks_iterated
+     * </pre>
+     *
+     * <code>optional int32 total_chunks = 1;</code>
+     * @return The totalChunks.
+     */
+    int getTotalChunks();
+
+    /**
+     * <pre>
+     * Chunks can be accepted/rejected either from the editor or from the
+     * drawer UI.
+     * </pre>
+     *
+     * <code>optional int32 chunks_rejected_in_editor_count = 2;</code>
+     * @return Whether the chunksRejectedInEditorCount field is set.
+     */
+    boolean hasChunksRejectedInEditorCount();
+    /**
+     * <pre>
+     * Chunks can be accepted/rejected either from the editor or from the
+     * drawer UI.
+     * </pre>
+     *
+     * <code>optional int32 chunks_rejected_in_editor_count = 2;</code>
+     * @return The chunksRejectedInEditorCount.
+     */
+    int getChunksRejectedInEditorCount();
+
+    /**
+     * <code>optional int32 chunks_rejected_in_drawer_count = 3;</code>
+     * @return Whether the chunksRejectedInDrawerCount field is set.
+     */
+    boolean hasChunksRejectedInDrawerCount();
+    /**
+     * <code>optional int32 chunks_rejected_in_drawer_count = 3;</code>
+     * @return The chunksRejectedInDrawerCount.
+     */
+    int getChunksRejectedInDrawerCount();
+
+    /**
+     * <code>optional int32 chunks_accepted_in_editor_count = 4;</code>
+     * @return Whether the chunksAcceptedInEditorCount field is set.
+     */
+    boolean hasChunksAcceptedInEditorCount();
+    /**
+     * <code>optional int32 chunks_accepted_in_editor_count = 4;</code>
+     * @return The chunksAcceptedInEditorCount.
+     */
+    int getChunksAcceptedInEditorCount();
+
+    /**
+     * <code>optional int32 chunks_accepted_in_drawer_count = 5;</code>
+     * @return Whether the chunksAcceptedInDrawerCount field is set.
+     */
+    boolean hasChunksAcceptedInDrawerCount();
+    /**
+     * <code>optional int32 chunks_accepted_in_drawer_count = 5;</code>
+     * @return The chunksAcceptedInDrawerCount.
+     */
+    int getChunksAcceptedInDrawerCount();
+
+    /**
+     * <pre>
+     * When multiple rounds of changes are made to a file, some chunks may
+     * be overwritten before they can be accepted or rejected. We count those
+     * in this field.
+     * </pre>
+     *
+     * <code>optional int32 chunks_iterated = 6;</code>
+     * @return Whether the chunksIterated field is set.
+     */
+    boolean hasChunksIterated();
+    /**
+     * <pre>
+     * When multiple rounds of changes are made to a file, some chunks may
+     * be overwritten before they can be accepted or rejected. We count those
+     * in this field.
+     * </pre>
+     *
+     * <code>optional int32 chunks_iterated = 6;</code>
+     * @return The chunksIterated.
+     */
+    int getChunksIterated();
+
+    /**
+     * <code>optional .android_studio.SmlChatBotEvent.ChangeResolved.FinalResolutionAction resolution_action = 7;</code>
+     * @return Whether the resolutionAction field is set.
+     */
+    boolean hasResolutionAction();
+    /**
+     * <code>optional .android_studio.SmlChatBotEvent.ChangeResolved.FinalResolutionAction resolution_action = 7;</code>
+     * @return The resolutionAction.
+     */
+    com.google.wireless.android.sdk.stats.SmlChatBotEvent.ChangeResolved.FinalResolutionAction getResolutionAction();
+
+    /**
+     * <pre>
+     * One change might be the result of more than one tool call, and
+     * this is the list of all of them.
+     * </pre>
+     *
+     * <code>repeated string tool_call_ids = 8;</code>
+     * @return A list containing the toolCallIds.
+     */
+    java.util.List<java.lang.String>
+        getToolCallIdsList();
+    /**
+     * <pre>
+     * One change might be the result of more than one tool call, and
+     * this is the list of all of them.
+     * </pre>
+     *
+     * <code>repeated string tool_call_ids = 8;</code>
+     * @return The count of toolCallIds.
+     */
+    int getToolCallIdsCount();
+    /**
+     * <pre>
+     * One change might be the result of more than one tool call, and
+     * this is the list of all of them.
+     * </pre>
+     *
+     * <code>repeated string tool_call_ids = 8;</code>
+     * @param index The index of the element to return.
+     * @return The toolCallIds at the given index.
+     */
+    java.lang.String getToolCallIds(int index);
+    /**
+     * <pre>
+     * One change might be the result of more than one tool call, and
+     * this is the list of all of them.
+     * </pre>
+     *
+     * <code>repeated string tool_call_ids = 8;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the toolCallIds at the given index.
+     */
+    com.google.protobuf.ByteString
+        getToolCallIdsBytes(int index);
+  }
+  /**
+   * <pre>
+   * A "change" is a diff to a file that is put up for review by the user.
+   * A change is made up of one or more diff chunks which can be resolved by
+   * accepting or rejecting them individually, or all at once.
+   * A change is "resolved" when all of the chunks are resolved, and this
+   * event should be logged when that happens.
+   * </pre>
+   *
+   * Protobuf type {@code android_studio.SmlChatBotEvent.ChangeResolved}
+   */
+  public static final class ChangeResolved extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:android_studio.SmlChatBotEvent.ChangeResolved)
+      ChangeResolvedOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use ChangeResolved.newBuilder() to construct.
+    private ChangeResolved(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ChangeResolved() {
+      resolutionAction_ = 0;
+      toolCallIds_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ChangeResolved();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_SmlChatBotEvent_ChangeResolved_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_SmlChatBotEvent_ChangeResolved_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.google.wireless.android.sdk.stats.SmlChatBotEvent.ChangeResolved.class, com.google.wireless.android.sdk.stats.SmlChatBotEvent.ChangeResolved.Builder.class);
+    }
+
+    /**
+     * <pre>
+     * Chunks can be resolved from the drawer UI, either on a file-by-file
+     * basis or en-masse.
+     * </pre>
+     *
+     * Protobuf enum {@code android_studio.SmlChatBotEvent.ChangeResolved.FinalResolutionAction}
+     */
+    public enum FinalResolutionAction
+        implements com.google.protobuf.ProtocolMessageEnum {
+      /**
+       * <code>UNKNOWN = 0;</code>
+       */
+      UNKNOWN(0),
+      /**
+       * <pre>
+       * This change was resolved from the editor.
+       * </pre>
+       *
+       * <code>RESOLVED_IN_EDITOR = 1;</code>
+       */
+      RESOLVED_IN_EDITOR(1),
+      /**
+       * <pre>
+       * This change was resolved by the user clicking the accept button
+       * for this change
+       * </pre>
+       *
+       * <code>ACCEPT_INDIVIDUAL = 2;</code>
+       */
+      ACCEPT_INDIVIDUAL(2),
+      /**
+       * <pre>
+       * This change was resolved by the user clicking the accept all button
+       * </pre>
+       *
+       * <code>ACCEPT_ALL = 3;</code>
+       */
+      ACCEPT_ALL(3),
+      /**
+       * <pre>
+       * This change was resolved by the user clicking the reject button
+       * for this change
+       * </pre>
+       *
+       * <code>REJECT_INDIVIDUAL = 4;</code>
+       */
+      REJECT_INDIVIDUAL(4),
+      /**
+       * <pre>
+       * This change was resolved by the user clicking the reject all button
+       * for this change
+       * </pre>
+       *
+       * <code>REJECT_ALL = 5;</code>
+       */
+      REJECT_ALL(5),
+      /**
+       * <pre>
+       * Switching sessions (threads) will accept all the changes
+       * </pre>
+       *
+       * <code>ACCEPT_ALL_SWITCHED_SESSION = 6;</code>
+       */
+      ACCEPT_ALL_SWITCHED_SESSION(6),
+      /**
+       * <pre>
+       * The user closed the IDE, which accepts all the pending changes
+       * </pre>
+       *
+       * <code>ACCEPT_ALL_CLOSED_IDE = 7;</code>
+       */
+      ACCEPT_ALL_CLOSED_IDE(7),
+      ;
+
+      /**
+       * <code>UNKNOWN = 0;</code>
+       */
+      public static final int UNKNOWN_VALUE = 0;
+      /**
+       * <pre>
+       * This change was resolved from the editor.
+       * </pre>
+       *
+       * <code>RESOLVED_IN_EDITOR = 1;</code>
+       */
+      public static final int RESOLVED_IN_EDITOR_VALUE = 1;
+      /**
+       * <pre>
+       * This change was resolved by the user clicking the accept button
+       * for this change
+       * </pre>
+       *
+       * <code>ACCEPT_INDIVIDUAL = 2;</code>
+       */
+      public static final int ACCEPT_INDIVIDUAL_VALUE = 2;
+      /**
+       * <pre>
+       * This change was resolved by the user clicking the accept all button
+       * </pre>
+       *
+       * <code>ACCEPT_ALL = 3;</code>
+       */
+      public static final int ACCEPT_ALL_VALUE = 3;
+      /**
+       * <pre>
+       * This change was resolved by the user clicking the reject button
+       * for this change
+       * </pre>
+       *
+       * <code>REJECT_INDIVIDUAL = 4;</code>
+       */
+      public static final int REJECT_INDIVIDUAL_VALUE = 4;
+      /**
+       * <pre>
+       * This change was resolved by the user clicking the reject all button
+       * for this change
+       * </pre>
+       *
+       * <code>REJECT_ALL = 5;</code>
+       */
+      public static final int REJECT_ALL_VALUE = 5;
+      /**
+       * <pre>
+       * Switching sessions (threads) will accept all the changes
+       * </pre>
+       *
+       * <code>ACCEPT_ALL_SWITCHED_SESSION = 6;</code>
+       */
+      public static final int ACCEPT_ALL_SWITCHED_SESSION_VALUE = 6;
+      /**
+       * <pre>
+       * The user closed the IDE, which accepts all the pending changes
+       * </pre>
+       *
+       * <code>ACCEPT_ALL_CLOSED_IDE = 7;</code>
+       */
+      public static final int ACCEPT_ALL_CLOSED_IDE_VALUE = 7;
+
+
+      public final int getNumber() {
+        return value;
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static FinalResolutionAction valueOf(int value) {
+        return forNumber(value);
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       */
+      public static FinalResolutionAction forNumber(int value) {
+        switch (value) {
+          case 0: return UNKNOWN;
+          case 1: return RESOLVED_IN_EDITOR;
+          case 2: return ACCEPT_INDIVIDUAL;
+          case 3: return ACCEPT_ALL;
+          case 4: return REJECT_INDIVIDUAL;
+          case 5: return REJECT_ALL;
+          case 6: return ACCEPT_ALL_SWITCHED_SESSION;
+          case 7: return ACCEPT_ALL_CLOSED_IDE;
+          default: return null;
+        }
+      }
+
+      public static com.google.protobuf.Internal.EnumLiteMap<FinalResolutionAction>
+          internalGetValueMap() {
+        return internalValueMap;
+      }
+      private static final com.google.protobuf.Internal.EnumLiteMap<
+          FinalResolutionAction> internalValueMap =
+            new com.google.protobuf.Internal.EnumLiteMap<FinalResolutionAction>() {
+              public FinalResolutionAction findValueByNumber(int number) {
+                return FinalResolutionAction.forNumber(number);
+              }
+            };
+
+      public final com.google.protobuf.Descriptors.EnumValueDescriptor
+          getValueDescriptor() {
+        return getDescriptor().getValues().get(ordinal());
+      }
+      public final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptorForType() {
+        return getDescriptor();
+      }
+      public static final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptor() {
+        return com.google.wireless.android.sdk.stats.SmlChatBotEvent.ChangeResolved.getDescriptor().getEnumTypes().get(0);
+      }
+
+      private static final FinalResolutionAction[] VALUES = values();
+
+      public static FinalResolutionAction valueOf(
+          com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+        if (desc.getType() != getDescriptor()) {
+          throw new java.lang.IllegalArgumentException(
+            "EnumValueDescriptor is not for this type.");
+        }
+        return VALUES[desc.getIndex()];
+      }
+
+      private final int value;
+
+      private FinalResolutionAction(int value) {
+        this.value = value;
+      }
+
+      // @@protoc_insertion_point(enum_scope:android_studio.SmlChatBotEvent.ChangeResolved.FinalResolutionAction)
+    }
+
+    private int bitField0_;
+    public static final int TOTAL_CHUNKS_FIELD_NUMBER = 1;
+    private int totalChunks_ = 0;
+    /**
+     * <pre>
+     * The total number of chunks that were proposed in this change.
+     * Should be equal to:
+     * total_chunks_accepted + total_chunks_rejected + chunks_iterated
+     * </pre>
+     *
+     * <code>optional int32 total_chunks = 1;</code>
+     * @return Whether the totalChunks field is set.
+     */
+    @java.lang.Override
+    public boolean hasTotalChunks() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <pre>
+     * The total number of chunks that were proposed in this change.
+     * Should be equal to:
+     * total_chunks_accepted + total_chunks_rejected + chunks_iterated
+     * </pre>
+     *
+     * <code>optional int32 total_chunks = 1;</code>
+     * @return The totalChunks.
+     */
+    @java.lang.Override
+    public int getTotalChunks() {
+      return totalChunks_;
+    }
+
+    public static final int CHUNKS_REJECTED_IN_EDITOR_COUNT_FIELD_NUMBER = 2;
+    private int chunksRejectedInEditorCount_ = 0;
+    /**
+     * <pre>
+     * Chunks can be accepted/rejected either from the editor or from the
+     * drawer UI.
+     * </pre>
+     *
+     * <code>optional int32 chunks_rejected_in_editor_count = 2;</code>
+     * @return Whether the chunksRejectedInEditorCount field is set.
+     */
+    @java.lang.Override
+    public boolean hasChunksRejectedInEditorCount() {
+      return ((bitField0_ & 0x00000002) != 0);
+    }
+    /**
+     * <pre>
+     * Chunks can be accepted/rejected either from the editor or from the
+     * drawer UI.
+     * </pre>
+     *
+     * <code>optional int32 chunks_rejected_in_editor_count = 2;</code>
+     * @return The chunksRejectedInEditorCount.
+     */
+    @java.lang.Override
+    public int getChunksRejectedInEditorCount() {
+      return chunksRejectedInEditorCount_;
+    }
+
+    public static final int CHUNKS_REJECTED_IN_DRAWER_COUNT_FIELD_NUMBER = 3;
+    private int chunksRejectedInDrawerCount_ = 0;
+    /**
+     * <code>optional int32 chunks_rejected_in_drawer_count = 3;</code>
+     * @return Whether the chunksRejectedInDrawerCount field is set.
+     */
+    @java.lang.Override
+    public boolean hasChunksRejectedInDrawerCount() {
+      return ((bitField0_ & 0x00000004) != 0);
+    }
+    /**
+     * <code>optional int32 chunks_rejected_in_drawer_count = 3;</code>
+     * @return The chunksRejectedInDrawerCount.
+     */
+    @java.lang.Override
+    public int getChunksRejectedInDrawerCount() {
+      return chunksRejectedInDrawerCount_;
+    }
+
+    public static final int CHUNKS_ACCEPTED_IN_EDITOR_COUNT_FIELD_NUMBER = 4;
+    private int chunksAcceptedInEditorCount_ = 0;
+    /**
+     * <code>optional int32 chunks_accepted_in_editor_count = 4;</code>
+     * @return Whether the chunksAcceptedInEditorCount field is set.
+     */
+    @java.lang.Override
+    public boolean hasChunksAcceptedInEditorCount() {
+      return ((bitField0_ & 0x00000008) != 0);
+    }
+    /**
+     * <code>optional int32 chunks_accepted_in_editor_count = 4;</code>
+     * @return The chunksAcceptedInEditorCount.
+     */
+    @java.lang.Override
+    public int getChunksAcceptedInEditorCount() {
+      return chunksAcceptedInEditorCount_;
+    }
+
+    public static final int CHUNKS_ACCEPTED_IN_DRAWER_COUNT_FIELD_NUMBER = 5;
+    private int chunksAcceptedInDrawerCount_ = 0;
+    /**
+     * <code>optional int32 chunks_accepted_in_drawer_count = 5;</code>
+     * @return Whether the chunksAcceptedInDrawerCount field is set.
+     */
+    @java.lang.Override
+    public boolean hasChunksAcceptedInDrawerCount() {
+      return ((bitField0_ & 0x00000010) != 0);
+    }
+    /**
+     * <code>optional int32 chunks_accepted_in_drawer_count = 5;</code>
+     * @return The chunksAcceptedInDrawerCount.
+     */
+    @java.lang.Override
+    public int getChunksAcceptedInDrawerCount() {
+      return chunksAcceptedInDrawerCount_;
+    }
+
+    public static final int CHUNKS_ITERATED_FIELD_NUMBER = 6;
+    private int chunksIterated_ = 0;
+    /**
+     * <pre>
+     * When multiple rounds of changes are made to a file, some chunks may
+     * be overwritten before they can be accepted or rejected. We count those
+     * in this field.
+     * </pre>
+     *
+     * <code>optional int32 chunks_iterated = 6;</code>
+     * @return Whether the chunksIterated field is set.
+     */
+    @java.lang.Override
+    public boolean hasChunksIterated() {
+      return ((bitField0_ & 0x00000020) != 0);
+    }
+    /**
+     * <pre>
+     * When multiple rounds of changes are made to a file, some chunks may
+     * be overwritten before they can be accepted or rejected. We count those
+     * in this field.
+     * </pre>
+     *
+     * <code>optional int32 chunks_iterated = 6;</code>
+     * @return The chunksIterated.
+     */
+    @java.lang.Override
+    public int getChunksIterated() {
+      return chunksIterated_;
+    }
+
+    public static final int RESOLUTION_ACTION_FIELD_NUMBER = 7;
+    private int resolutionAction_ = 0;
+    /**
+     * <code>optional .android_studio.SmlChatBotEvent.ChangeResolved.FinalResolutionAction resolution_action = 7;</code>
+     * @return Whether the resolutionAction field is set.
+     */
+    @java.lang.Override public boolean hasResolutionAction() {
+      return ((bitField0_ & 0x00000040) != 0);
+    }
+    /**
+     * <code>optional .android_studio.SmlChatBotEvent.ChangeResolved.FinalResolutionAction resolution_action = 7;</code>
+     * @return The resolutionAction.
+     */
+    @java.lang.Override public com.google.wireless.android.sdk.stats.SmlChatBotEvent.ChangeResolved.FinalResolutionAction getResolutionAction() {
+      com.google.wireless.android.sdk.stats.SmlChatBotEvent.ChangeResolved.FinalResolutionAction result = com.google.wireless.android.sdk.stats.SmlChatBotEvent.ChangeResolved.FinalResolutionAction.forNumber(resolutionAction_);
+      return result == null ? com.google.wireless.android.sdk.stats.SmlChatBotEvent.ChangeResolved.FinalResolutionAction.UNKNOWN : result;
+    }
+
+    public static final int TOOL_CALL_IDS_FIELD_NUMBER = 8;
+    @SuppressWarnings("serial")
+    private com.google.protobuf.LazyStringArrayList toolCallIds_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+    /**
+     * <pre>
+     * One change might be the result of more than one tool call, and
+     * this is the list of all of them.
+     * </pre>
+     *
+     * <code>repeated string tool_call_ids = 8;</code>
+     * @return A list containing the toolCallIds.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getToolCallIdsList() {
+      return toolCallIds_;
+    }
+    /**
+     * <pre>
+     * One change might be the result of more than one tool call, and
+     * this is the list of all of them.
+     * </pre>
+     *
+     * <code>repeated string tool_call_ids = 8;</code>
+     * @return The count of toolCallIds.
+     */
+    public int getToolCallIdsCount() {
+      return toolCallIds_.size();
+    }
+    /**
+     * <pre>
+     * One change might be the result of more than one tool call, and
+     * this is the list of all of them.
+     * </pre>
+     *
+     * <code>repeated string tool_call_ids = 8;</code>
+     * @param index The index of the element to return.
+     * @return The toolCallIds at the given index.
+     */
+    public java.lang.String getToolCallIds(int index) {
+      return toolCallIds_.get(index);
+    }
+    /**
+     * <pre>
+     * One change might be the result of more than one tool call, and
+     * this is the list of all of them.
+     * </pre>
+     *
+     * <code>repeated string tool_call_ids = 8;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the toolCallIds at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getToolCallIdsBytes(int index) {
+      return toolCallIds_.getByteString(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (((bitField0_ & 0x00000001) != 0)) {
+        output.writeInt32(1, totalChunks_);
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        output.writeInt32(2, chunksRejectedInEditorCount_);
+      }
+      if (((bitField0_ & 0x00000004) != 0)) {
+        output.writeInt32(3, chunksRejectedInDrawerCount_);
+      }
+      if (((bitField0_ & 0x00000008) != 0)) {
+        output.writeInt32(4, chunksAcceptedInEditorCount_);
+      }
+      if (((bitField0_ & 0x00000010) != 0)) {
+        output.writeInt32(5, chunksAcceptedInDrawerCount_);
+      }
+      if (((bitField0_ & 0x00000020) != 0)) {
+        output.writeInt32(6, chunksIterated_);
+      }
+      if (((bitField0_ & 0x00000040) != 0)) {
+        output.writeEnum(7, resolutionAction_);
+      }
+      for (int i = 0; i < toolCallIds_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 8, toolCallIds_.getRaw(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(1, totalChunks_);
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(2, chunksRejectedInEditorCount_);
+      }
+      if (((bitField0_ & 0x00000004) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(3, chunksRejectedInDrawerCount_);
+      }
+      if (((bitField0_ & 0x00000008) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(4, chunksAcceptedInEditorCount_);
+      }
+      if (((bitField0_ & 0x00000010) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(5, chunksAcceptedInDrawerCount_);
+      }
+      if (((bitField0_ & 0x00000020) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(6, chunksIterated_);
+      }
+      if (((bitField0_ & 0x00000040) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(7, resolutionAction_);
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < toolCallIds_.size(); i++) {
+          dataSize += computeStringSizeNoTag(toolCallIds_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getToolCallIdsList().size();
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.google.wireless.android.sdk.stats.SmlChatBotEvent.ChangeResolved)) {
+        return super.equals(obj);
+      }
+      com.google.wireless.android.sdk.stats.SmlChatBotEvent.ChangeResolved other = (com.google.wireless.android.sdk.stats.SmlChatBotEvent.ChangeResolved) obj;
+
+      if (hasTotalChunks() != other.hasTotalChunks()) return false;
+      if (hasTotalChunks()) {
+        if (getTotalChunks()
+            != other.getTotalChunks()) return false;
+      }
+      if (hasChunksRejectedInEditorCount() != other.hasChunksRejectedInEditorCount()) return false;
+      if (hasChunksRejectedInEditorCount()) {
+        if (getChunksRejectedInEditorCount()
+            != other.getChunksRejectedInEditorCount()) return false;
+      }
+      if (hasChunksRejectedInDrawerCount() != other.hasChunksRejectedInDrawerCount()) return false;
+      if (hasChunksRejectedInDrawerCount()) {
+        if (getChunksRejectedInDrawerCount()
+            != other.getChunksRejectedInDrawerCount()) return false;
+      }
+      if (hasChunksAcceptedInEditorCount() != other.hasChunksAcceptedInEditorCount()) return false;
+      if (hasChunksAcceptedInEditorCount()) {
+        if (getChunksAcceptedInEditorCount()
+            != other.getChunksAcceptedInEditorCount()) return false;
+      }
+      if (hasChunksAcceptedInDrawerCount() != other.hasChunksAcceptedInDrawerCount()) return false;
+      if (hasChunksAcceptedInDrawerCount()) {
+        if (getChunksAcceptedInDrawerCount()
+            != other.getChunksAcceptedInDrawerCount()) return false;
+      }
+      if (hasChunksIterated() != other.hasChunksIterated()) return false;
+      if (hasChunksIterated()) {
+        if (getChunksIterated()
+            != other.getChunksIterated()) return false;
+      }
+      if (hasResolutionAction() != other.hasResolutionAction()) return false;
+      if (hasResolutionAction()) {
+        if (resolutionAction_ != other.resolutionAction_) return false;
+      }
+      if (!getToolCallIdsList()
+          .equals(other.getToolCallIdsList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasTotalChunks()) {
+        hash = (37 * hash) + TOTAL_CHUNKS_FIELD_NUMBER;
+        hash = (53 * hash) + getTotalChunks();
+      }
+      if (hasChunksRejectedInEditorCount()) {
+        hash = (37 * hash) + CHUNKS_REJECTED_IN_EDITOR_COUNT_FIELD_NUMBER;
+        hash = (53 * hash) + getChunksRejectedInEditorCount();
+      }
+      if (hasChunksRejectedInDrawerCount()) {
+        hash = (37 * hash) + CHUNKS_REJECTED_IN_DRAWER_COUNT_FIELD_NUMBER;
+        hash = (53 * hash) + getChunksRejectedInDrawerCount();
+      }
+      if (hasChunksAcceptedInEditorCount()) {
+        hash = (37 * hash) + CHUNKS_ACCEPTED_IN_EDITOR_COUNT_FIELD_NUMBER;
+        hash = (53 * hash) + getChunksAcceptedInEditorCount();
+      }
+      if (hasChunksAcceptedInDrawerCount()) {
+        hash = (37 * hash) + CHUNKS_ACCEPTED_IN_DRAWER_COUNT_FIELD_NUMBER;
+        hash = (53 * hash) + getChunksAcceptedInDrawerCount();
+      }
+      if (hasChunksIterated()) {
+        hash = (37 * hash) + CHUNKS_ITERATED_FIELD_NUMBER;
+        hash = (53 * hash) + getChunksIterated();
+      }
+      if (hasResolutionAction()) {
+        hash = (37 * hash) + RESOLUTION_ACTION_FIELD_NUMBER;
+        hash = (53 * hash) + resolutionAction_;
+      }
+      if (getToolCallIdsCount() > 0) {
+        hash = (37 * hash) + TOOL_CALL_IDS_FIELD_NUMBER;
+        hash = (53 * hash) + getToolCallIdsList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.google.wireless.android.sdk.stats.SmlChatBotEvent.ChangeResolved parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.google.wireless.android.sdk.stats.SmlChatBotEvent.ChangeResolved parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.google.wireless.android.sdk.stats.SmlChatBotEvent.ChangeResolved parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.google.wireless.android.sdk.stats.SmlChatBotEvent.ChangeResolved parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.google.wireless.android.sdk.stats.SmlChatBotEvent.ChangeResolved parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.google.wireless.android.sdk.stats.SmlChatBotEvent.ChangeResolved parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.google.wireless.android.sdk.stats.SmlChatBotEvent.ChangeResolved parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.google.wireless.android.sdk.stats.SmlChatBotEvent.ChangeResolved parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.google.wireless.android.sdk.stats.SmlChatBotEvent.ChangeResolved parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.google.wireless.android.sdk.stats.SmlChatBotEvent.ChangeResolved parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.google.wireless.android.sdk.stats.SmlChatBotEvent.ChangeResolved parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.google.wireless.android.sdk.stats.SmlChatBotEvent.ChangeResolved parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.google.wireless.android.sdk.stats.SmlChatBotEvent.ChangeResolved prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * A "change" is a diff to a file that is put up for review by the user.
+     * A change is made up of one or more diff chunks which can be resolved by
+     * accepting or rejecting them individually, or all at once.
+     * A change is "resolved" when all of the chunks are resolved, and this
+     * event should be logged when that happens.
+     * </pre>
+     *
+     * Protobuf type {@code android_studio.SmlChatBotEvent.ChangeResolved}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:android_studio.SmlChatBotEvent.ChangeResolved)
+        com.google.wireless.android.sdk.stats.SmlChatBotEvent.ChangeResolvedOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_SmlChatBotEvent_ChangeResolved_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_SmlChatBotEvent_ChangeResolved_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.google.wireless.android.sdk.stats.SmlChatBotEvent.ChangeResolved.class, com.google.wireless.android.sdk.stats.SmlChatBotEvent.ChangeResolved.Builder.class);
+      }
+
+      // Construct using com.google.wireless.android.sdk.stats.SmlChatBotEvent.ChangeResolved.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        totalChunks_ = 0;
+        chunksRejectedInEditorCount_ = 0;
+        chunksRejectedInDrawerCount_ = 0;
+        chunksAcceptedInEditorCount_ = 0;
+        chunksAcceptedInDrawerCount_ = 0;
+        chunksIterated_ = 0;
+        resolutionAction_ = 0;
+        toolCallIds_ =
+            com.google.protobuf.LazyStringArrayList.emptyList();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_SmlChatBotEvent_ChangeResolved_descriptor;
+      }
+
+      @java.lang.Override
+      public com.google.wireless.android.sdk.stats.SmlChatBotEvent.ChangeResolved getDefaultInstanceForType() {
+        return com.google.wireless.android.sdk.stats.SmlChatBotEvent.ChangeResolved.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.google.wireless.android.sdk.stats.SmlChatBotEvent.ChangeResolved build() {
+        com.google.wireless.android.sdk.stats.SmlChatBotEvent.ChangeResolved result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.google.wireless.android.sdk.stats.SmlChatBotEvent.ChangeResolved buildPartial() {
+        com.google.wireless.android.sdk.stats.SmlChatBotEvent.ChangeResolved result = new com.google.wireless.android.sdk.stats.SmlChatBotEvent.ChangeResolved(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.google.wireless.android.sdk.stats.SmlChatBotEvent.ChangeResolved result) {
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.totalChunks_ = totalChunks_;
+          to_bitField0_ |= 0x00000001;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.chunksRejectedInEditorCount_ = chunksRejectedInEditorCount_;
+          to_bitField0_ |= 0x00000002;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.chunksRejectedInDrawerCount_ = chunksRejectedInDrawerCount_;
+          to_bitField0_ |= 0x00000004;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.chunksAcceptedInEditorCount_ = chunksAcceptedInEditorCount_;
+          to_bitField0_ |= 0x00000008;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.chunksAcceptedInDrawerCount_ = chunksAcceptedInDrawerCount_;
+          to_bitField0_ |= 0x00000010;
+        }
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          result.chunksIterated_ = chunksIterated_;
+          to_bitField0_ |= 0x00000020;
+        }
+        if (((from_bitField0_ & 0x00000040) != 0)) {
+          result.resolutionAction_ = resolutionAction_;
+          to_bitField0_ |= 0x00000040;
+        }
+        if (((from_bitField0_ & 0x00000080) != 0)) {
+          toolCallIds_.makeImmutable();
+          result.toolCallIds_ = toolCallIds_;
+        }
+        result.bitField0_ |= to_bitField0_;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.google.wireless.android.sdk.stats.SmlChatBotEvent.ChangeResolved) {
+          return mergeFrom((com.google.wireless.android.sdk.stats.SmlChatBotEvent.ChangeResolved)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.google.wireless.android.sdk.stats.SmlChatBotEvent.ChangeResolved other) {
+        if (other == com.google.wireless.android.sdk.stats.SmlChatBotEvent.ChangeResolved.getDefaultInstance()) return this;
+        if (other.hasTotalChunks()) {
+          setTotalChunks(other.getTotalChunks());
+        }
+        if (other.hasChunksRejectedInEditorCount()) {
+          setChunksRejectedInEditorCount(other.getChunksRejectedInEditorCount());
+        }
+        if (other.hasChunksRejectedInDrawerCount()) {
+          setChunksRejectedInDrawerCount(other.getChunksRejectedInDrawerCount());
+        }
+        if (other.hasChunksAcceptedInEditorCount()) {
+          setChunksAcceptedInEditorCount(other.getChunksAcceptedInEditorCount());
+        }
+        if (other.hasChunksAcceptedInDrawerCount()) {
+          setChunksAcceptedInDrawerCount(other.getChunksAcceptedInDrawerCount());
+        }
+        if (other.hasChunksIterated()) {
+          setChunksIterated(other.getChunksIterated());
+        }
+        if (other.hasResolutionAction()) {
+          setResolutionAction(other.getResolutionAction());
+        }
+        if (!other.toolCallIds_.isEmpty()) {
+          if (toolCallIds_.isEmpty()) {
+            toolCallIds_ = other.toolCallIds_;
+            bitField0_ |= 0x00000080;
+          } else {
+            ensureToolCallIdsIsMutable();
+            toolCallIds_.addAll(other.toolCallIds_);
+          }
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                totalChunks_ = input.readInt32();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              case 16: {
+                chunksRejectedInEditorCount_ = input.readInt32();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 16
+              case 24: {
+                chunksRejectedInDrawerCount_ = input.readInt32();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 24
+              case 32: {
+                chunksAcceptedInEditorCount_ = input.readInt32();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 32
+              case 40: {
+                chunksAcceptedInDrawerCount_ = input.readInt32();
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 40
+              case 48: {
+                chunksIterated_ = input.readInt32();
+                bitField0_ |= 0x00000020;
+                break;
+              } // case 48
+              case 56: {
+                int tmpRaw = input.readEnum();
+                com.google.wireless.android.sdk.stats.SmlChatBotEvent.ChangeResolved.FinalResolutionAction tmpValue =
+                    com.google.wireless.android.sdk.stats.SmlChatBotEvent.ChangeResolved.FinalResolutionAction.forNumber(tmpRaw);
+                if (tmpValue == null) {
+                  mergeUnknownVarintField(7, tmpRaw);
+                } else {
+                  resolutionAction_ = tmpRaw;
+                  bitField0_ |= 0x00000040;
+                }
+                break;
+              } // case 56
+              case 66: {
+                com.google.protobuf.ByteString bs = input.readBytes();
+                ensureToolCallIdsIsMutable();
+                toolCallIds_.add(bs);
+                break;
+              } // case 66
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private int totalChunks_ ;
+      /**
+       * <pre>
+       * The total number of chunks that were proposed in this change.
+       * Should be equal to:
+       * total_chunks_accepted + total_chunks_rejected + chunks_iterated
+       * </pre>
+       *
+       * <code>optional int32 total_chunks = 1;</code>
+       * @return Whether the totalChunks field is set.
+       */
+      @java.lang.Override
+      public boolean hasTotalChunks() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <pre>
+       * The total number of chunks that were proposed in this change.
+       * Should be equal to:
+       * total_chunks_accepted + total_chunks_rejected + chunks_iterated
+       * </pre>
+       *
+       * <code>optional int32 total_chunks = 1;</code>
+       * @return The totalChunks.
+       */
+      @java.lang.Override
+      public int getTotalChunks() {
+        return totalChunks_;
+      }
+      /**
+       * <pre>
+       * The total number of chunks that were proposed in this change.
+       * Should be equal to:
+       * total_chunks_accepted + total_chunks_rejected + chunks_iterated
+       * </pre>
+       *
+       * <code>optional int32 total_chunks = 1;</code>
+       * @param value The totalChunks to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTotalChunks(int value) {
+
+        totalChunks_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The total number of chunks that were proposed in this change.
+       * Should be equal to:
+       * total_chunks_accepted + total_chunks_rejected + chunks_iterated
+       * </pre>
+       *
+       * <code>optional int32 total_chunks = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTotalChunks() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        totalChunks_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int chunksRejectedInEditorCount_ ;
+      /**
+       * <pre>
+       * Chunks can be accepted/rejected either from the editor or from the
+       * drawer UI.
+       * </pre>
+       *
+       * <code>optional int32 chunks_rejected_in_editor_count = 2;</code>
+       * @return Whether the chunksRejectedInEditorCount field is set.
+       */
+      @java.lang.Override
+      public boolean hasChunksRejectedInEditorCount() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <pre>
+       * Chunks can be accepted/rejected either from the editor or from the
+       * drawer UI.
+       * </pre>
+       *
+       * <code>optional int32 chunks_rejected_in_editor_count = 2;</code>
+       * @return The chunksRejectedInEditorCount.
+       */
+      @java.lang.Override
+      public int getChunksRejectedInEditorCount() {
+        return chunksRejectedInEditorCount_;
+      }
+      /**
+       * <pre>
+       * Chunks can be accepted/rejected either from the editor or from the
+       * drawer UI.
+       * </pre>
+       *
+       * <code>optional int32 chunks_rejected_in_editor_count = 2;</code>
+       * @param value The chunksRejectedInEditorCount to set.
+       * @return This builder for chaining.
+       */
+      public Builder setChunksRejectedInEditorCount(int value) {
+
+        chunksRejectedInEditorCount_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Chunks can be accepted/rejected either from the editor or from the
+       * drawer UI.
+       * </pre>
+       *
+       * <code>optional int32 chunks_rejected_in_editor_count = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearChunksRejectedInEditorCount() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        chunksRejectedInEditorCount_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int chunksRejectedInDrawerCount_ ;
+      /**
+       * <code>optional int32 chunks_rejected_in_drawer_count = 3;</code>
+       * @return Whether the chunksRejectedInDrawerCount field is set.
+       */
+      @java.lang.Override
+      public boolean hasChunksRejectedInDrawerCount() {
+        return ((bitField0_ & 0x00000004) != 0);
+      }
+      /**
+       * <code>optional int32 chunks_rejected_in_drawer_count = 3;</code>
+       * @return The chunksRejectedInDrawerCount.
+       */
+      @java.lang.Override
+      public int getChunksRejectedInDrawerCount() {
+        return chunksRejectedInDrawerCount_;
+      }
+      /**
+       * <code>optional int32 chunks_rejected_in_drawer_count = 3;</code>
+       * @param value The chunksRejectedInDrawerCount to set.
+       * @return This builder for chaining.
+       */
+      public Builder setChunksRejectedInDrawerCount(int value) {
+
+        chunksRejectedInDrawerCount_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int32 chunks_rejected_in_drawer_count = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearChunksRejectedInDrawerCount() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        chunksRejectedInDrawerCount_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int chunksAcceptedInEditorCount_ ;
+      /**
+       * <code>optional int32 chunks_accepted_in_editor_count = 4;</code>
+       * @return Whether the chunksAcceptedInEditorCount field is set.
+       */
+      @java.lang.Override
+      public boolean hasChunksAcceptedInEditorCount() {
+        return ((bitField0_ & 0x00000008) != 0);
+      }
+      /**
+       * <code>optional int32 chunks_accepted_in_editor_count = 4;</code>
+       * @return The chunksAcceptedInEditorCount.
+       */
+      @java.lang.Override
+      public int getChunksAcceptedInEditorCount() {
+        return chunksAcceptedInEditorCount_;
+      }
+      /**
+       * <code>optional int32 chunks_accepted_in_editor_count = 4;</code>
+       * @param value The chunksAcceptedInEditorCount to set.
+       * @return This builder for chaining.
+       */
+      public Builder setChunksAcceptedInEditorCount(int value) {
+
+        chunksAcceptedInEditorCount_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int32 chunks_accepted_in_editor_count = 4;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearChunksAcceptedInEditorCount() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        chunksAcceptedInEditorCount_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int chunksAcceptedInDrawerCount_ ;
+      /**
+       * <code>optional int32 chunks_accepted_in_drawer_count = 5;</code>
+       * @return Whether the chunksAcceptedInDrawerCount field is set.
+       */
+      @java.lang.Override
+      public boolean hasChunksAcceptedInDrawerCount() {
+        return ((bitField0_ & 0x00000010) != 0);
+      }
+      /**
+       * <code>optional int32 chunks_accepted_in_drawer_count = 5;</code>
+       * @return The chunksAcceptedInDrawerCount.
+       */
+      @java.lang.Override
+      public int getChunksAcceptedInDrawerCount() {
+        return chunksAcceptedInDrawerCount_;
+      }
+      /**
+       * <code>optional int32 chunks_accepted_in_drawer_count = 5;</code>
+       * @param value The chunksAcceptedInDrawerCount to set.
+       * @return This builder for chaining.
+       */
+      public Builder setChunksAcceptedInDrawerCount(int value) {
+
+        chunksAcceptedInDrawerCount_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int32 chunks_accepted_in_drawer_count = 5;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearChunksAcceptedInDrawerCount() {
+        bitField0_ = (bitField0_ & ~0x00000010);
+        chunksAcceptedInDrawerCount_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int chunksIterated_ ;
+      /**
+       * <pre>
+       * When multiple rounds of changes are made to a file, some chunks may
+       * be overwritten before they can be accepted or rejected. We count those
+       * in this field.
+       * </pre>
+       *
+       * <code>optional int32 chunks_iterated = 6;</code>
+       * @return Whether the chunksIterated field is set.
+       */
+      @java.lang.Override
+      public boolean hasChunksIterated() {
+        return ((bitField0_ & 0x00000020) != 0);
+      }
+      /**
+       * <pre>
+       * When multiple rounds of changes are made to a file, some chunks may
+       * be overwritten before they can be accepted or rejected. We count those
+       * in this field.
+       * </pre>
+       *
+       * <code>optional int32 chunks_iterated = 6;</code>
+       * @return The chunksIterated.
+       */
+      @java.lang.Override
+      public int getChunksIterated() {
+        return chunksIterated_;
+      }
+      /**
+       * <pre>
+       * When multiple rounds of changes are made to a file, some chunks may
+       * be overwritten before they can be accepted or rejected. We count those
+       * in this field.
+       * </pre>
+       *
+       * <code>optional int32 chunks_iterated = 6;</code>
+       * @param value The chunksIterated to set.
+       * @return This builder for chaining.
+       */
+      public Builder setChunksIterated(int value) {
+
+        chunksIterated_ = value;
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * When multiple rounds of changes are made to a file, some chunks may
+       * be overwritten before they can be accepted or rejected. We count those
+       * in this field.
+       * </pre>
+       *
+       * <code>optional int32 chunks_iterated = 6;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearChunksIterated() {
+        bitField0_ = (bitField0_ & ~0x00000020);
+        chunksIterated_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int resolutionAction_ = 0;
+      /**
+       * <code>optional .android_studio.SmlChatBotEvent.ChangeResolved.FinalResolutionAction resolution_action = 7;</code>
+       * @return Whether the resolutionAction field is set.
+       */
+      @java.lang.Override public boolean hasResolutionAction() {
+        return ((bitField0_ & 0x00000040) != 0);
+      }
+      /**
+       * <code>optional .android_studio.SmlChatBotEvent.ChangeResolved.FinalResolutionAction resolution_action = 7;</code>
+       * @return The resolutionAction.
+       */
+      @java.lang.Override
+      public com.google.wireless.android.sdk.stats.SmlChatBotEvent.ChangeResolved.FinalResolutionAction getResolutionAction() {
+        com.google.wireless.android.sdk.stats.SmlChatBotEvent.ChangeResolved.FinalResolutionAction result = com.google.wireless.android.sdk.stats.SmlChatBotEvent.ChangeResolved.FinalResolutionAction.forNumber(resolutionAction_);
+        return result == null ? com.google.wireless.android.sdk.stats.SmlChatBotEvent.ChangeResolved.FinalResolutionAction.UNKNOWN : result;
+      }
+      /**
+       * <code>optional .android_studio.SmlChatBotEvent.ChangeResolved.FinalResolutionAction resolution_action = 7;</code>
+       * @param value The resolutionAction to set.
+       * @return This builder for chaining.
+       */
+      public Builder setResolutionAction(com.google.wireless.android.sdk.stats.SmlChatBotEvent.ChangeResolved.FinalResolutionAction value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x00000040;
+        resolutionAction_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional .android_studio.SmlChatBotEvent.ChangeResolved.FinalResolutionAction resolution_action = 7;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearResolutionAction() {
+        bitField0_ = (bitField0_ & ~0x00000040);
+        resolutionAction_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.LazyStringArrayList toolCallIds_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+      private void ensureToolCallIdsIsMutable() {
+        if (!toolCallIds_.isModifiable()) {
+          toolCallIds_ = new com.google.protobuf.LazyStringArrayList(toolCallIds_);
+        }
+        bitField0_ |= 0x00000080;
+      }
+      /**
+       * <pre>
+       * One change might be the result of more than one tool call, and
+       * this is the list of all of them.
+       * </pre>
+       *
+       * <code>repeated string tool_call_ids = 8;</code>
+       * @return A list containing the toolCallIds.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getToolCallIdsList() {
+        toolCallIds_.makeImmutable();
+        return toolCallIds_;
+      }
+      /**
+       * <pre>
+       * One change might be the result of more than one tool call, and
+       * this is the list of all of them.
+       * </pre>
+       *
+       * <code>repeated string tool_call_ids = 8;</code>
+       * @return The count of toolCallIds.
+       */
+      public int getToolCallIdsCount() {
+        return toolCallIds_.size();
+      }
+      /**
+       * <pre>
+       * One change might be the result of more than one tool call, and
+       * this is the list of all of them.
+       * </pre>
+       *
+       * <code>repeated string tool_call_ids = 8;</code>
+       * @param index The index of the element to return.
+       * @return The toolCallIds at the given index.
+       */
+      public java.lang.String getToolCallIds(int index) {
+        return toolCallIds_.get(index);
+      }
+      /**
+       * <pre>
+       * One change might be the result of more than one tool call, and
+       * this is the list of all of them.
+       * </pre>
+       *
+       * <code>repeated string tool_call_ids = 8;</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the toolCallIds at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getToolCallIdsBytes(int index) {
+        return toolCallIds_.getByteString(index);
+      }
+      /**
+       * <pre>
+       * One change might be the result of more than one tool call, and
+       * this is the list of all of them.
+       * </pre>
+       *
+       * <code>repeated string tool_call_ids = 8;</code>
+       * @param index The index to set the value at.
+       * @param value The toolCallIds to set.
+       * @return This builder for chaining.
+       */
+      public Builder setToolCallIds(
+          int index, java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensureToolCallIdsIsMutable();
+        toolCallIds_.set(index, value);
+        bitField0_ |= 0x00000080;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * One change might be the result of more than one tool call, and
+       * this is the list of all of them.
+       * </pre>
+       *
+       * <code>repeated string tool_call_ids = 8;</code>
+       * @param value The toolCallIds to add.
+       * @return This builder for chaining.
+       */
+      public Builder addToolCallIds(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensureToolCallIdsIsMutable();
+        toolCallIds_.add(value);
+        bitField0_ |= 0x00000080;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * One change might be the result of more than one tool call, and
+       * this is the list of all of them.
+       * </pre>
+       *
+       * <code>repeated string tool_call_ids = 8;</code>
+       * @param values The toolCallIds to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllToolCallIds(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureToolCallIdsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, toolCallIds_);
+        bitField0_ |= 0x00000080;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * One change might be the result of more than one tool call, and
+       * this is the list of all of them.
+       * </pre>
+       *
+       * <code>repeated string tool_call_ids = 8;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearToolCallIds() {
+        toolCallIds_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000080);;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * One change might be the result of more than one tool call, and
+       * this is the list of all of them.
+       * </pre>
+       *
+       * <code>repeated string tool_call_ids = 8;</code>
+       * @param value The bytes of the toolCallIds to add.
+       * @return This builder for chaining.
+       */
+      public Builder addToolCallIdsBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensureToolCallIdsIsMutable();
+        toolCallIds_.add(value);
+        bitField0_ |= 0x00000080;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:android_studio.SmlChatBotEvent.ChangeResolved)
+    }
+
+    // @@protoc_insertion_point(class_scope:android_studio.SmlChatBotEvent.ChangeResolved)
+    private static final com.google.wireless.android.sdk.stats.SmlChatBotEvent.ChangeResolved DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.google.wireless.android.sdk.stats.SmlChatBotEvent.ChangeResolved();
+    }
+
+    public static com.google.wireless.android.sdk.stats.SmlChatBotEvent.ChangeResolved getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<ChangeResolved>
+        PARSER = new com.google.protobuf.AbstractParser<ChangeResolved>() {
+      @java.lang.Override
+      public ChangeResolved parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<ChangeResolved> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ChangeResolved> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.wireless.android.sdk.stats.SmlChatBotEvent.ChangeResolved getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface ChangesDrawerEventOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:android_studio.SmlChatBotEvent.ChangesDrawerEvent)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>optional .android_studio.SmlChatBotEvent.ChangeResolved change_resolved = 1;</code>
+     * @return Whether the changeResolved field is set.
+     */
+    boolean hasChangeResolved();
+    /**
+     * <code>optional .android_studio.SmlChatBotEvent.ChangeResolved change_resolved = 1;</code>
+     * @return The changeResolved.
+     */
+    com.google.wireless.android.sdk.stats.SmlChatBotEvent.ChangeResolved getChangeResolved();
+    /**
+     * <code>optional .android_studio.SmlChatBotEvent.ChangeResolved change_resolved = 1;</code>
+     */
+    com.google.wireless.android.sdk.stats.SmlChatBotEvent.ChangeResolvedOrBuilder getChangeResolvedOrBuilder();
+  }
+  /**
+   * Protobuf type {@code android_studio.SmlChatBotEvent.ChangesDrawerEvent}
+   */
+  public static final class ChangesDrawerEvent extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:android_studio.SmlChatBotEvent.ChangesDrawerEvent)
+      ChangesDrawerEventOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use ChangesDrawerEvent.newBuilder() to construct.
+    private ChangesDrawerEvent(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ChangesDrawerEvent() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ChangesDrawerEvent();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_SmlChatBotEvent_ChangesDrawerEvent_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_SmlChatBotEvent_ChangesDrawerEvent_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.google.wireless.android.sdk.stats.SmlChatBotEvent.ChangesDrawerEvent.class, com.google.wireless.android.sdk.stats.SmlChatBotEvent.ChangesDrawerEvent.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int CHANGE_RESOLVED_FIELD_NUMBER = 1;
+    private com.google.wireless.android.sdk.stats.SmlChatBotEvent.ChangeResolved changeResolved_;
+    /**
+     * <code>optional .android_studio.SmlChatBotEvent.ChangeResolved change_resolved = 1;</code>
+     * @return Whether the changeResolved field is set.
+     */
+    @java.lang.Override
+    public boolean hasChangeResolved() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <code>optional .android_studio.SmlChatBotEvent.ChangeResolved change_resolved = 1;</code>
+     * @return The changeResolved.
+     */
+    @java.lang.Override
+    public com.google.wireless.android.sdk.stats.SmlChatBotEvent.ChangeResolved getChangeResolved() {
+      return changeResolved_ == null ? com.google.wireless.android.sdk.stats.SmlChatBotEvent.ChangeResolved.getDefaultInstance() : changeResolved_;
+    }
+    /**
+     * <code>optional .android_studio.SmlChatBotEvent.ChangeResolved change_resolved = 1;</code>
+     */
+    @java.lang.Override
+    public com.google.wireless.android.sdk.stats.SmlChatBotEvent.ChangeResolvedOrBuilder getChangeResolvedOrBuilder() {
+      return changeResolved_ == null ? com.google.wireless.android.sdk.stats.SmlChatBotEvent.ChangeResolved.getDefaultInstance() : changeResolved_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (((bitField0_ & 0x00000001) != 0)) {
+        output.writeMessage(1, getChangeResolved());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getChangeResolved());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.google.wireless.android.sdk.stats.SmlChatBotEvent.ChangesDrawerEvent)) {
+        return super.equals(obj);
+      }
+      com.google.wireless.android.sdk.stats.SmlChatBotEvent.ChangesDrawerEvent other = (com.google.wireless.android.sdk.stats.SmlChatBotEvent.ChangesDrawerEvent) obj;
+
+      if (hasChangeResolved() != other.hasChangeResolved()) return false;
+      if (hasChangeResolved()) {
+        if (!getChangeResolved()
+            .equals(other.getChangeResolved())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasChangeResolved()) {
+        hash = (37 * hash) + CHANGE_RESOLVED_FIELD_NUMBER;
+        hash = (53 * hash) + getChangeResolved().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.google.wireless.android.sdk.stats.SmlChatBotEvent.ChangesDrawerEvent parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.google.wireless.android.sdk.stats.SmlChatBotEvent.ChangesDrawerEvent parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.google.wireless.android.sdk.stats.SmlChatBotEvent.ChangesDrawerEvent parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.google.wireless.android.sdk.stats.SmlChatBotEvent.ChangesDrawerEvent parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.google.wireless.android.sdk.stats.SmlChatBotEvent.ChangesDrawerEvent parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.google.wireless.android.sdk.stats.SmlChatBotEvent.ChangesDrawerEvent parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.google.wireless.android.sdk.stats.SmlChatBotEvent.ChangesDrawerEvent parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.google.wireless.android.sdk.stats.SmlChatBotEvent.ChangesDrawerEvent parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.google.wireless.android.sdk.stats.SmlChatBotEvent.ChangesDrawerEvent parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.google.wireless.android.sdk.stats.SmlChatBotEvent.ChangesDrawerEvent parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.google.wireless.android.sdk.stats.SmlChatBotEvent.ChangesDrawerEvent parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.google.wireless.android.sdk.stats.SmlChatBotEvent.ChangesDrawerEvent parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.google.wireless.android.sdk.stats.SmlChatBotEvent.ChangesDrawerEvent prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code android_studio.SmlChatBotEvent.ChangesDrawerEvent}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:android_studio.SmlChatBotEvent.ChangesDrawerEvent)
+        com.google.wireless.android.sdk.stats.SmlChatBotEvent.ChangesDrawerEventOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_SmlChatBotEvent_ChangesDrawerEvent_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_SmlChatBotEvent_ChangesDrawerEvent_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.google.wireless.android.sdk.stats.SmlChatBotEvent.ChangesDrawerEvent.class, com.google.wireless.android.sdk.stats.SmlChatBotEvent.ChangesDrawerEvent.Builder.class);
+      }
+
+      // Construct using com.google.wireless.android.sdk.stats.SmlChatBotEvent.ChangesDrawerEvent.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getChangeResolvedFieldBuilder();
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        changeResolved_ = null;
+        if (changeResolvedBuilder_ != null) {
+          changeResolvedBuilder_.dispose();
+          changeResolvedBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_SmlChatBotEvent_ChangesDrawerEvent_descriptor;
+      }
+
+      @java.lang.Override
+      public com.google.wireless.android.sdk.stats.SmlChatBotEvent.ChangesDrawerEvent getDefaultInstanceForType() {
+        return com.google.wireless.android.sdk.stats.SmlChatBotEvent.ChangesDrawerEvent.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.google.wireless.android.sdk.stats.SmlChatBotEvent.ChangesDrawerEvent build() {
+        com.google.wireless.android.sdk.stats.SmlChatBotEvent.ChangesDrawerEvent result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.google.wireless.android.sdk.stats.SmlChatBotEvent.ChangesDrawerEvent buildPartial() {
+        com.google.wireless.android.sdk.stats.SmlChatBotEvent.ChangesDrawerEvent result = new com.google.wireless.android.sdk.stats.SmlChatBotEvent.ChangesDrawerEvent(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.google.wireless.android.sdk.stats.SmlChatBotEvent.ChangesDrawerEvent result) {
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.changeResolved_ = changeResolvedBuilder_ == null
+              ? changeResolved_
+              : changeResolvedBuilder_.build();
+          to_bitField0_ |= 0x00000001;
+        }
+        result.bitField0_ |= to_bitField0_;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.google.wireless.android.sdk.stats.SmlChatBotEvent.ChangesDrawerEvent) {
+          return mergeFrom((com.google.wireless.android.sdk.stats.SmlChatBotEvent.ChangesDrawerEvent)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.google.wireless.android.sdk.stats.SmlChatBotEvent.ChangesDrawerEvent other) {
+        if (other == com.google.wireless.android.sdk.stats.SmlChatBotEvent.ChangesDrawerEvent.getDefaultInstance()) return this;
+        if (other.hasChangeResolved()) {
+          mergeChangeResolved(other.getChangeResolved());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getChangeResolvedFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.google.wireless.android.sdk.stats.SmlChatBotEvent.ChangeResolved changeResolved_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.wireless.android.sdk.stats.SmlChatBotEvent.ChangeResolved, com.google.wireless.android.sdk.stats.SmlChatBotEvent.ChangeResolved.Builder, com.google.wireless.android.sdk.stats.SmlChatBotEvent.ChangeResolvedOrBuilder> changeResolvedBuilder_;
+      /**
+       * <code>optional .android_studio.SmlChatBotEvent.ChangeResolved change_resolved = 1;</code>
+       * @return Whether the changeResolved field is set.
+       */
+      public boolean hasChangeResolved() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>optional .android_studio.SmlChatBotEvent.ChangeResolved change_resolved = 1;</code>
+       * @return The changeResolved.
+       */
+      public com.google.wireless.android.sdk.stats.SmlChatBotEvent.ChangeResolved getChangeResolved() {
+        if (changeResolvedBuilder_ == null) {
+          return changeResolved_ == null ? com.google.wireless.android.sdk.stats.SmlChatBotEvent.ChangeResolved.getDefaultInstance() : changeResolved_;
+        } else {
+          return changeResolvedBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>optional .android_studio.SmlChatBotEvent.ChangeResolved change_resolved = 1;</code>
+       */
+      public Builder setChangeResolved(com.google.wireless.android.sdk.stats.SmlChatBotEvent.ChangeResolved value) {
+        if (changeResolvedBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          changeResolved_ = value;
+        } else {
+          changeResolvedBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional .android_studio.SmlChatBotEvent.ChangeResolved change_resolved = 1;</code>
+       */
+      public Builder setChangeResolved(
+          com.google.wireless.android.sdk.stats.SmlChatBotEvent.ChangeResolved.Builder builderForValue) {
+        if (changeResolvedBuilder_ == null) {
+          changeResolved_ = builderForValue.build();
+        } else {
+          changeResolvedBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional .android_studio.SmlChatBotEvent.ChangeResolved change_resolved = 1;</code>
+       */
+      public Builder mergeChangeResolved(com.google.wireless.android.sdk.stats.SmlChatBotEvent.ChangeResolved value) {
+        if (changeResolvedBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            changeResolved_ != null &&
+            changeResolved_ != com.google.wireless.android.sdk.stats.SmlChatBotEvent.ChangeResolved.getDefaultInstance()) {
+            getChangeResolvedBuilder().mergeFrom(value);
+          } else {
+            changeResolved_ = value;
+          }
+        } else {
+          changeResolvedBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional .android_studio.SmlChatBotEvent.ChangeResolved change_resolved = 1;</code>
+       */
+      public Builder clearChangeResolved() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        changeResolved_ = null;
+        if (changeResolvedBuilder_ != null) {
+          changeResolvedBuilder_.dispose();
+          changeResolvedBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional .android_studio.SmlChatBotEvent.ChangeResolved change_resolved = 1;</code>
+       */
+      public com.google.wireless.android.sdk.stats.SmlChatBotEvent.ChangeResolved.Builder getChangeResolvedBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getChangeResolvedFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>optional .android_studio.SmlChatBotEvent.ChangeResolved change_resolved = 1;</code>
+       */
+      public com.google.wireless.android.sdk.stats.SmlChatBotEvent.ChangeResolvedOrBuilder getChangeResolvedOrBuilder() {
+        if (changeResolvedBuilder_ != null) {
+          return changeResolvedBuilder_.getMessageOrBuilder();
+        } else {
+          return changeResolved_ == null ?
+              com.google.wireless.android.sdk.stats.SmlChatBotEvent.ChangeResolved.getDefaultInstance() : changeResolved_;
+        }
+      }
+      /**
+       * <code>optional .android_studio.SmlChatBotEvent.ChangeResolved change_resolved = 1;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.wireless.android.sdk.stats.SmlChatBotEvent.ChangeResolved, com.google.wireless.android.sdk.stats.SmlChatBotEvent.ChangeResolved.Builder, com.google.wireless.android.sdk.stats.SmlChatBotEvent.ChangeResolvedOrBuilder> 
+          getChangeResolvedFieldBuilder() {
+        if (changeResolvedBuilder_ == null) {
+          changeResolvedBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.wireless.android.sdk.stats.SmlChatBotEvent.ChangeResolved, com.google.wireless.android.sdk.stats.SmlChatBotEvent.ChangeResolved.Builder, com.google.wireless.android.sdk.stats.SmlChatBotEvent.ChangeResolvedOrBuilder>(
+                  getChangeResolved(),
+                  getParentForChildren(),
+                  isClean());
+          changeResolved_ = null;
+        }
+        return changeResolvedBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:android_studio.SmlChatBotEvent.ChangesDrawerEvent)
+    }
+
+    // @@protoc_insertion_point(class_scope:android_studio.SmlChatBotEvent.ChangesDrawerEvent)
+    private static final com.google.wireless.android.sdk.stats.SmlChatBotEvent.ChangesDrawerEvent DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.google.wireless.android.sdk.stats.SmlChatBotEvent.ChangesDrawerEvent();
+    }
+
+    public static com.google.wireless.android.sdk.stats.SmlChatBotEvent.ChangesDrawerEvent getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<ChangesDrawerEvent>
+        PARSER = new com.google.protobuf.AbstractParser<ChangesDrawerEvent>() {
+      @java.lang.Override
+      public ChangesDrawerEvent parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<ChangesDrawerEvent> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ChangesDrawerEvent> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.wireless.android.sdk.stats.SmlChatBotEvent.ChangesDrawerEvent getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   public interface ToolCallOrBuilder extends
       // @@protoc_insertion_point(interface_extends:android_studio.SmlChatBotEvent.ToolCall)
       com.google.protobuf.MessageOrBuilder {
@@ -26898,6 +29215,7 @@ private static final long serialVersionUID = 0L;
     BOT_RESPONSE_ERROR(16),
     SESSION_MANAGER_EVENT(17),
     RECENT_CHATS_EVENT(18),
+    CHANGES_DRAWER_EVENT(19),
     CONTENT_NOT_SET(0);
     private final int value;
     private ContentCase(int value) {
@@ -26933,6 +29251,7 @@ private static final long serialVersionUID = 0L;
         case 16: return BOT_RESPONSE_ERROR;
         case 17: return SESSION_MANAGER_EVENT;
         case 18: return RECENT_CHATS_EVENT;
+        case 19: return CHANGES_DRAWER_EVENT;
         case 0: return CONTENT_NOT_SET;
         default: return null;
       }
@@ -27506,6 +29825,37 @@ private static final long serialVersionUID = 0L;
     return com.google.wireless.android.sdk.stats.SmlChatBotEvent.RecentChatsEvent.getDefaultInstance();
   }
 
+  public static final int CHANGES_DRAWER_EVENT_FIELD_NUMBER = 19;
+  /**
+   * <code>.android_studio.SmlChatBotEvent.ChangesDrawerEvent changes_drawer_event = 19 [lazy = true];</code>
+   * @return Whether the changesDrawerEvent field is set.
+   */
+  @java.lang.Override
+  public boolean hasChangesDrawerEvent() {
+    return contentCase_ == 19;
+  }
+  /**
+   * <code>.android_studio.SmlChatBotEvent.ChangesDrawerEvent changes_drawer_event = 19 [lazy = true];</code>
+   * @return The changesDrawerEvent.
+   */
+  @java.lang.Override
+  public com.google.wireless.android.sdk.stats.SmlChatBotEvent.ChangesDrawerEvent getChangesDrawerEvent() {
+    if (contentCase_ == 19) {
+       return (com.google.wireless.android.sdk.stats.SmlChatBotEvent.ChangesDrawerEvent) content_;
+    }
+    return com.google.wireless.android.sdk.stats.SmlChatBotEvent.ChangesDrawerEvent.getDefaultInstance();
+  }
+  /**
+   * <code>.android_studio.SmlChatBotEvent.ChangesDrawerEvent changes_drawer_event = 19 [lazy = true];</code>
+   */
+  @java.lang.Override
+  public com.google.wireless.android.sdk.stats.SmlChatBotEvent.ChangesDrawerEventOrBuilder getChangesDrawerEventOrBuilder() {
+    if (contentCase_ == 19) {
+       return (com.google.wireless.android.sdk.stats.SmlChatBotEvent.ChangesDrawerEvent) content_;
+    }
+    return com.google.wireless.android.sdk.stats.SmlChatBotEvent.ChangesDrawerEvent.getDefaultInstance();
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -27573,6 +29923,9 @@ private static final long serialVersionUID = 0L;
     }
     if (contentCase_ == 18) {
       output.writeMessage(18, (com.google.wireless.android.sdk.stats.SmlChatBotEvent.RecentChatsEvent) content_);
+    }
+    if (contentCase_ == 19) {
+      output.writeMessage(19, (com.google.wireless.android.sdk.stats.SmlChatBotEvent.ChangesDrawerEvent) content_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -27654,6 +30007,10 @@ private static final long serialVersionUID = 0L;
     if (contentCase_ == 18) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(18, (com.google.wireless.android.sdk.stats.SmlChatBotEvent.RecentChatsEvent) content_);
+    }
+    if (contentCase_ == 19) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(19, (com.google.wireless.android.sdk.stats.SmlChatBotEvent.ChangesDrawerEvent) content_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -27744,6 +30101,10 @@ private static final long serialVersionUID = 0L;
         if (!getRecentChatsEvent()
             .equals(other.getRecentChatsEvent())) return false;
         break;
+      case 19:
+        if (!getChangesDrawerEvent()
+            .equals(other.getChangesDrawerEvent())) return false;
+        break;
       case 0:
       default:
     }
@@ -27830,6 +30191,10 @@ private static final long serialVersionUID = 0L;
       case 18:
         hash = (37 * hash) + RECENT_CHATS_EVENT_FIELD_NUMBER;
         hash = (53 * hash) + getRecentChatsEvent().hashCode();
+        break;
+      case 19:
+        hash = (37 * hash) + CHANGES_DRAWER_EVENT_FIELD_NUMBER;
+        hash = (53 * hash) + getChangesDrawerEvent().hashCode();
         break;
       case 0:
       default:
@@ -28017,6 +30382,9 @@ private static final long serialVersionUID = 0L;
       if (recentChatsEventBuilder_ != null) {
         recentChatsEventBuilder_.clear();
       }
+      if (changesDrawerEventBuilder_ != null) {
+        changesDrawerEventBuilder_.clear();
+      }
       contentCase_ = 0;
       content_ = null;
       return this;
@@ -28130,6 +30498,10 @@ private static final long serialVersionUID = 0L;
           recentChatsEventBuilder_ != null) {
         result.content_ = recentChatsEventBuilder_.build();
       }
+      if (contentCase_ == 19 &&
+          changesDrawerEventBuilder_ != null) {
+        result.content_ = changesDrawerEventBuilder_.build();
+      }
     }
 
     @java.lang.Override
@@ -28215,6 +30587,10 @@ private static final long serialVersionUID = 0L;
         }
         case RECENT_CHATS_EVENT: {
           mergeRecentChatsEvent(other.getRecentChatsEvent());
+          break;
+        }
+        case CHANGES_DRAWER_EVENT: {
+          mergeChangesDrawerEvent(other.getChangesDrawerEvent());
           break;
         }
         case CONTENT_NOT_SET: {
@@ -28373,6 +30749,13 @@ private static final long serialVersionUID = 0L;
               contentCase_ = 18;
               break;
             } // case 146
+            case 154: {
+              input.readMessage(
+                  getChangesDrawerEventFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              contentCase_ = 19;
+              break;
+            } // case 154
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -30959,6 +33342,148 @@ private static final long serialVersionUID = 0L;
       contentCase_ = 18;
       onChanged();
       return recentChatsEventBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.SmlChatBotEvent.ChangesDrawerEvent, com.google.wireless.android.sdk.stats.SmlChatBotEvent.ChangesDrawerEvent.Builder, com.google.wireless.android.sdk.stats.SmlChatBotEvent.ChangesDrawerEventOrBuilder> changesDrawerEventBuilder_;
+    /**
+     * <code>.android_studio.SmlChatBotEvent.ChangesDrawerEvent changes_drawer_event = 19 [lazy = true];</code>
+     * @return Whether the changesDrawerEvent field is set.
+     */
+    @java.lang.Override
+    public boolean hasChangesDrawerEvent() {
+      return contentCase_ == 19;
+    }
+    /**
+     * <code>.android_studio.SmlChatBotEvent.ChangesDrawerEvent changes_drawer_event = 19 [lazy = true];</code>
+     * @return The changesDrawerEvent.
+     */
+    @java.lang.Override
+    public com.google.wireless.android.sdk.stats.SmlChatBotEvent.ChangesDrawerEvent getChangesDrawerEvent() {
+      if (changesDrawerEventBuilder_ == null) {
+        if (contentCase_ == 19) {
+          return (com.google.wireless.android.sdk.stats.SmlChatBotEvent.ChangesDrawerEvent) content_;
+        }
+        return com.google.wireless.android.sdk.stats.SmlChatBotEvent.ChangesDrawerEvent.getDefaultInstance();
+      } else {
+        if (contentCase_ == 19) {
+          return changesDrawerEventBuilder_.getMessage();
+        }
+        return com.google.wireless.android.sdk.stats.SmlChatBotEvent.ChangesDrawerEvent.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.android_studio.SmlChatBotEvent.ChangesDrawerEvent changes_drawer_event = 19 [lazy = true];</code>
+     */
+    public Builder setChangesDrawerEvent(com.google.wireless.android.sdk.stats.SmlChatBotEvent.ChangesDrawerEvent value) {
+      if (changesDrawerEventBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        content_ = value;
+        onChanged();
+      } else {
+        changesDrawerEventBuilder_.setMessage(value);
+      }
+      contentCase_ = 19;
+      return this;
+    }
+    /**
+     * <code>.android_studio.SmlChatBotEvent.ChangesDrawerEvent changes_drawer_event = 19 [lazy = true];</code>
+     */
+    public Builder setChangesDrawerEvent(
+        com.google.wireless.android.sdk.stats.SmlChatBotEvent.ChangesDrawerEvent.Builder builderForValue) {
+      if (changesDrawerEventBuilder_ == null) {
+        content_ = builderForValue.build();
+        onChanged();
+      } else {
+        changesDrawerEventBuilder_.setMessage(builderForValue.build());
+      }
+      contentCase_ = 19;
+      return this;
+    }
+    /**
+     * <code>.android_studio.SmlChatBotEvent.ChangesDrawerEvent changes_drawer_event = 19 [lazy = true];</code>
+     */
+    public Builder mergeChangesDrawerEvent(com.google.wireless.android.sdk.stats.SmlChatBotEvent.ChangesDrawerEvent value) {
+      if (changesDrawerEventBuilder_ == null) {
+        if (contentCase_ == 19 &&
+            content_ != com.google.wireless.android.sdk.stats.SmlChatBotEvent.ChangesDrawerEvent.getDefaultInstance()) {
+          content_ = com.google.wireless.android.sdk.stats.SmlChatBotEvent.ChangesDrawerEvent.newBuilder((com.google.wireless.android.sdk.stats.SmlChatBotEvent.ChangesDrawerEvent) content_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          content_ = value;
+        }
+        onChanged();
+      } else {
+        if (contentCase_ == 19) {
+          changesDrawerEventBuilder_.mergeFrom(value);
+        } else {
+          changesDrawerEventBuilder_.setMessage(value);
+        }
+      }
+      contentCase_ = 19;
+      return this;
+    }
+    /**
+     * <code>.android_studio.SmlChatBotEvent.ChangesDrawerEvent changes_drawer_event = 19 [lazy = true];</code>
+     */
+    public Builder clearChangesDrawerEvent() {
+      if (changesDrawerEventBuilder_ == null) {
+        if (contentCase_ == 19) {
+          contentCase_ = 0;
+          content_ = null;
+          onChanged();
+        }
+      } else {
+        if (contentCase_ == 19) {
+          contentCase_ = 0;
+          content_ = null;
+        }
+        changesDrawerEventBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>.android_studio.SmlChatBotEvent.ChangesDrawerEvent changes_drawer_event = 19 [lazy = true];</code>
+     */
+    public com.google.wireless.android.sdk.stats.SmlChatBotEvent.ChangesDrawerEvent.Builder getChangesDrawerEventBuilder() {
+      return getChangesDrawerEventFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.android_studio.SmlChatBotEvent.ChangesDrawerEvent changes_drawer_event = 19 [lazy = true];</code>
+     */
+    @java.lang.Override
+    public com.google.wireless.android.sdk.stats.SmlChatBotEvent.ChangesDrawerEventOrBuilder getChangesDrawerEventOrBuilder() {
+      if ((contentCase_ == 19) && (changesDrawerEventBuilder_ != null)) {
+        return changesDrawerEventBuilder_.getMessageOrBuilder();
+      } else {
+        if (contentCase_ == 19) {
+          return (com.google.wireless.android.sdk.stats.SmlChatBotEvent.ChangesDrawerEvent) content_;
+        }
+        return com.google.wireless.android.sdk.stats.SmlChatBotEvent.ChangesDrawerEvent.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.android_studio.SmlChatBotEvent.ChangesDrawerEvent changes_drawer_event = 19 [lazy = true];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.SmlChatBotEvent.ChangesDrawerEvent, com.google.wireless.android.sdk.stats.SmlChatBotEvent.ChangesDrawerEvent.Builder, com.google.wireless.android.sdk.stats.SmlChatBotEvent.ChangesDrawerEventOrBuilder> 
+        getChangesDrawerEventFieldBuilder() {
+      if (changesDrawerEventBuilder_ == null) {
+        if (!(contentCase_ == 19)) {
+          content_ = com.google.wireless.android.sdk.stats.SmlChatBotEvent.ChangesDrawerEvent.getDefaultInstance();
+        }
+        changesDrawerEventBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.wireless.android.sdk.stats.SmlChatBotEvent.ChangesDrawerEvent, com.google.wireless.android.sdk.stats.SmlChatBotEvent.ChangesDrawerEvent.Builder, com.google.wireless.android.sdk.stats.SmlChatBotEvent.ChangesDrawerEventOrBuilder>(
+                (com.google.wireless.android.sdk.stats.SmlChatBotEvent.ChangesDrawerEvent) content_,
+                getParentForChildren(),
+                isClean());
+        content_ = null;
+      }
+      contentCase_ = 19;
+      onChanged();
+      return changesDrawerEventBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(
