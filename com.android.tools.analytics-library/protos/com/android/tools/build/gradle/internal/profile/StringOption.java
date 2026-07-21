@@ -222,6 +222,10 @@ public enum StringOption
    * <code>SUPPRESS_AGP_SYNC_WARNINGS = 52;</code>
    */
   SUPPRESS_AGP_SYNC_WARNINGS(52),
+  /**
+   * <code>NEW_DSL_OPT_OUT = 53;</code>
+   */
+  NEW_DSL_OPT_OUT(53),
   UNRECOGNIZED(-1),
   ;
 
@@ -437,6 +441,10 @@ public enum StringOption
    * <code>SUPPRESS_AGP_SYNC_WARNINGS = 52;</code>
    */
   public static final int SUPPRESS_AGP_SYNC_WARNINGS_VALUE = 52;
+  /**
+   * <code>NEW_DSL_OPT_OUT = 53;</code>
+   */
+  public static final int NEW_DSL_OPT_OUT_VALUE = 53;
 
 
   public final int getNumber() {
@@ -516,6 +524,7 @@ public enum StringOption
       case 50: return SIMULATE_AGP_VERSION_BEHAVIOR;
       case 51: return TEST_SUITE_TEST_TASK_ADDITIONAL_INPUTS_FILE;
       case 52: return SUPPRESS_AGP_SYNC_WARNINGS;
+      case 53: return NEW_DSL_OPT_OUT;
       default: return null;
     }
   }

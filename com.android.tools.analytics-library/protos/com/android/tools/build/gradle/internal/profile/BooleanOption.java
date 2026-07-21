@@ -976,6 +976,10 @@ public enum BooleanOption
    * <code>R8_ENABLE_KEEP_RADIUS_REPORT = 238;</code>
    */
   R8_ENABLE_KEEP_RADIUS_REPORT(238),
+  /**
+   * <code>USE_NEW_DSL_INTERFACES_FOR_KTS = 239;</code>
+   */
+  USE_NEW_DSL_INTERFACES_FOR_KTS(239),
   UNRECOGNIZED(-1),
   ;
 
@@ -1935,6 +1939,10 @@ public enum BooleanOption
    * <code>R8_ENABLE_KEEP_RADIUS_REPORT = 238;</code>
    */
   public static final int R8_ENABLE_KEEP_RADIUS_REPORT_VALUE = 238;
+  /**
+   * <code>USE_NEW_DSL_INTERFACES_FOR_KTS = 239;</code>
+   */
+  public static final int USE_NEW_DSL_INTERFACES_FOR_KTS_VALUE = 239;
 
 
   public final int getNumber() {
@@ -2200,6 +2208,7 @@ public enum BooleanOption
       case 236: return ENABLE_GLOBAL_SYNTHETICS_FOR_ALL_DEBUG_BUILDS;
       case 237: return ENABLE_ON_THE_FLY_CODE_COVERAGE;
       case 238: return R8_ENABLE_KEEP_RADIUS_REPORT;
+      case 239: return USE_NEW_DSL_INTERFACES_FOR_KTS;
       default: return null;
     }
   }
