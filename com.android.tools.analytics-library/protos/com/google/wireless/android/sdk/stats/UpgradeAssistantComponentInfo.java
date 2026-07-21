@@ -234,6 +234,10 @@ private static final long serialVersionUID = 0L;
      * <code>BUILD_CONFIG_DEFAULT = 25;</code>
      */
     BUILD_CONFIG_DEFAULT(25),
+    /**
+     * <code>PROJECT_JDK = 26;</code>
+     */
+    PROJECT_JDK(26),
     ;
 
     /**
@@ -340,6 +344,10 @@ private static final long serialVersionUID = 0L;
      * <code>BUILD_CONFIG_DEFAULT = 25;</code>
      */
     public static final int BUILD_CONFIG_DEFAULT_VALUE = 25;
+    /**
+     * <code>PROJECT_JDK = 26;</code>
+     */
+    public static final int PROJECT_JDK_VALUE = 26;
 
 
     public final int getNumber() {
@@ -388,6 +396,7 @@ private static final long serialVersionUID = 0L;
         case 23: return NON_TRANSITIVE_R_CLASS_DEFAULT;
         case 24: return AIDL_DEFAULT;
         case 25: return BUILD_CONFIG_DEFAULT;
+        case 26: return PROJECT_JDK;
         default: return null;
       }
     }

@@ -842,7 +842,7 @@ public interface AndroidStudioEventOrBuilder extends
 
   /**
    * <pre>
-   * Client-side salted (rotating every 28 days), sha256 of the project id.
+   * Client-side salted (rotating every 532 days), sha256 of the project id.
    * set when kind = PROJECT_STRUCTURE_* or kind = APK_ANALYZER_STATS
    * </pre>
    *
@@ -852,7 +852,7 @@ public interface AndroidStudioEventOrBuilder extends
   boolean hasProjectId();
   /**
    * <pre>
-   * Client-side salted (rotating every 28 days), sha256 of the project id.
+   * Client-side salted (rotating every 532 days), sha256 of the project id.
    * set when kind = PROJECT_STRUCTURE_* or kind = APK_ANALYZER_STATS
    * </pre>
    *
@@ -862,7 +862,7 @@ public interface AndroidStudioEventOrBuilder extends
   java.lang.String getProjectId();
   /**
    * <pre>
-   * Client-side salted (rotating every 28 days), sha256 of the project id.
+   * Client-side salted (rotating every 532 days), sha256 of the project id.
    * set when kind = PROJECT_STRUCTURE_* or kind = APK_ANALYZER_STATS
    * </pre>
    *
