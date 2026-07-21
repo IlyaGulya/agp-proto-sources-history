@@ -6,6 +6,7 @@ package com.google.wireless.android.sdk.stats;
 /**
  * <pre>
  * Event related to Glasses emulator pairing assistant
+ * Next ID: 24
  * </pre>
  *
  * Protobuf type {@code android_studio.GlassesPairingEvent}
@@ -118,6 +119,22 @@ private static final long serialVersionUID = 0L;
     PAIRING_AWAITING_AUTHORIZATION(7),
     /**
      * <pre>
+     * Wizard is connecting glassesto the glasses core on the phone
+     * </pre>
+     *
+     * <code>PAIRING_GLASSES_CORE_CONNECTING = 22;</code>
+     */
+    PAIRING_GLASSES_CORE_CONNECTING(22),
+    /**
+     * <pre>
+     * Wizard is connecting to the glasses core on the phone
+     * </pre>
+     *
+     * <code>PAIRING_GLASSES_CORE_CONNECTED = 23;</code>
+     */
+    PAIRING_GLASSES_CORE_CONNECTED(23),
+    /**
+     * <pre>
      * Error: Timeout waiting for devices to start
      * </pre>
      *
@@ -158,7 +175,7 @@ private static final long serialVersionUID = 0L;
     PAIRING_ERROR_BLUETOOTH_ADDRESS(12),
     /**
      * <pre>
-     * Error: Pairing bond failed
+     * Error: Pairing bluetooth bond failed
      * </pre>
      *
      * <code>PAIRING_ERROR_BOND_FAILED = 13;</code>
@@ -180,6 +197,54 @@ private static final long serialVersionUID = 0L;
      * <code>PAIRING_WARNING_PHONE_ALREADY_PAIRED = 15;</code>
      */
     PAIRING_WARNING_PHONE_ALREADY_PAIRED(15),
+    /**
+     * <pre>
+     * Error: Pairing worker cancelled
+     * </pre>
+     *
+     * <code>PAIRING_ERROR_WORKER_CANCELLED = 16;</code>
+     */
+    PAIRING_ERROR_WORKER_CANCELLED(16),
+    /**
+     * <pre>
+     * Error: Polling for pairing state failed (timeout)
+     * </pre>
+     *
+     * <code>PAIRING_ERROR_POLLING_FAILED = 17;</code>
+     */
+    PAIRING_ERROR_POLLING_FAILED(17),
+    /**
+     * <pre>
+     * Error: Companion CDM association failed
+     * </pre>
+     *
+     * <code>PAIRING_ERROR_COMPANION_CDM_FAILED = 18;</code>
+     */
+    PAIRING_ERROR_COMPANION_CDM_FAILED(18),
+    /**
+     * <pre>
+     * Error: Shell command failed execution (e.g., pm grant, am broadcast)
+     * </pre>
+     *
+     * <code>PAIRING_ERROR_SHELL_COMMAND = 19;</code>
+     */
+    PAIRING_ERROR_SHELL_COMMAND(19),
+    /**
+     * <pre>
+     * Error: IO error when interacting with the device
+     * </pre>
+     *
+     * <code>PAIRING_ERROR_IO_FAILED = 20;</code>
+     */
+    PAIRING_ERROR_IO_FAILED(20),
+    /**
+     * <pre>
+     * Error: Generic or unknown pairing error
+     * </pre>
+     *
+     * <code>PAIRING_ERROR_GENERIC = 21;</code>
+     */
+    PAIRING_ERROR_GENERIC(21),
     ;
 
     /**
@@ -248,6 +313,22 @@ private static final long serialVersionUID = 0L;
     public static final int PAIRING_AWAITING_AUTHORIZATION_VALUE = 7;
     /**
      * <pre>
+     * Wizard is connecting glassesto the glasses core on the phone
+     * </pre>
+     *
+     * <code>PAIRING_GLASSES_CORE_CONNECTING = 22;</code>
+     */
+    public static final int PAIRING_GLASSES_CORE_CONNECTING_VALUE = 22;
+    /**
+     * <pre>
+     * Wizard is connecting to the glasses core on the phone
+     * </pre>
+     *
+     * <code>PAIRING_GLASSES_CORE_CONNECTED = 23;</code>
+     */
+    public static final int PAIRING_GLASSES_CORE_CONNECTED_VALUE = 23;
+    /**
+     * <pre>
      * Error: Timeout waiting for devices to start
      * </pre>
      *
@@ -288,7 +369,7 @@ private static final long serialVersionUID = 0L;
     public static final int PAIRING_ERROR_BLUETOOTH_ADDRESS_VALUE = 12;
     /**
      * <pre>
-     * Error: Pairing bond failed
+     * Error: Pairing bluetooth bond failed
      * </pre>
      *
      * <code>PAIRING_ERROR_BOND_FAILED = 13;</code>
@@ -310,6 +391,54 @@ private static final long serialVersionUID = 0L;
      * <code>PAIRING_WARNING_PHONE_ALREADY_PAIRED = 15;</code>
      */
     public static final int PAIRING_WARNING_PHONE_ALREADY_PAIRED_VALUE = 15;
+    /**
+     * <pre>
+     * Error: Pairing worker cancelled
+     * </pre>
+     *
+     * <code>PAIRING_ERROR_WORKER_CANCELLED = 16;</code>
+     */
+    public static final int PAIRING_ERROR_WORKER_CANCELLED_VALUE = 16;
+    /**
+     * <pre>
+     * Error: Polling for pairing state failed (timeout)
+     * </pre>
+     *
+     * <code>PAIRING_ERROR_POLLING_FAILED = 17;</code>
+     */
+    public static final int PAIRING_ERROR_POLLING_FAILED_VALUE = 17;
+    /**
+     * <pre>
+     * Error: Companion CDM association failed
+     * </pre>
+     *
+     * <code>PAIRING_ERROR_COMPANION_CDM_FAILED = 18;</code>
+     */
+    public static final int PAIRING_ERROR_COMPANION_CDM_FAILED_VALUE = 18;
+    /**
+     * <pre>
+     * Error: Shell command failed execution (e.g., pm grant, am broadcast)
+     * </pre>
+     *
+     * <code>PAIRING_ERROR_SHELL_COMMAND = 19;</code>
+     */
+    public static final int PAIRING_ERROR_SHELL_COMMAND_VALUE = 19;
+    /**
+     * <pre>
+     * Error: IO error when interacting with the device
+     * </pre>
+     *
+     * <code>PAIRING_ERROR_IO_FAILED = 20;</code>
+     */
+    public static final int PAIRING_ERROR_IO_FAILED_VALUE = 20;
+    /**
+     * <pre>
+     * Error: Generic or unknown pairing error
+     * </pre>
+     *
+     * <code>PAIRING_ERROR_GENERIC = 21;</code>
+     */
+    public static final int PAIRING_ERROR_GENERIC_VALUE = 21;
 
 
     public final int getNumber() {
@@ -340,6 +469,8 @@ private static final long serialVersionUID = 0L;
         case 5: return PAIRING_INITIATED;
         case 6: return PAIRING_LAUNCH_STARTED;
         case 7: return PAIRING_AWAITING_AUTHORIZATION;
+        case 22: return PAIRING_GLASSES_CORE_CONNECTING;
+        case 23: return PAIRING_GLASSES_CORE_CONNECTED;
         case 8: return PAIRING_ERROR_TIMEOUT;
         case 9: return PAIRING_ERROR_LAUNCH_FAILED;
         case 10: return PAIRING_ERROR_ALREADY_PAIRED;
@@ -348,6 +479,12 @@ private static final long serialVersionUID = 0L;
         case 13: return PAIRING_ERROR_BOND_FAILED;
         case 14: return PAIRING_ERROR_CONNECTION_FAILED;
         case 15: return PAIRING_WARNING_PHONE_ALREADY_PAIRED;
+        case 16: return PAIRING_ERROR_WORKER_CANCELLED;
+        case 17: return PAIRING_ERROR_POLLING_FAILED;
+        case 18: return PAIRING_ERROR_COMPANION_CDM_FAILED;
+        case 19: return PAIRING_ERROR_SHELL_COMMAND;
+        case 20: return PAIRING_ERROR_IO_FAILED;
+        case 21: return PAIRING_ERROR_GENERIC;
         default: return null;
       }
     }
@@ -586,6 +723,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Event related to Glasses emulator pairing assistant
+   * Next ID: 24
    * </pre>
    *
    * Protobuf type {@code android_studio.GlassesPairingEvent}

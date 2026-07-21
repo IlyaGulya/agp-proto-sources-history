@@ -797,6 +797,10 @@ public enum VariantPropertiesMethodType
    * <code>TEST_SUITE_SOURCE_MANIFEST_FILE = 184;</code>
    */
   TEST_SUITE_SOURCE_MANIFEST_FILE(184),
+  /**
+   * <code>SOURCES_KEEP_RULES_ACCESS = 185;</code>
+   */
+  SOURCES_KEEP_RULES_ACCESS(185),
   UNRECOGNIZED(-1),
   ;
 
@@ -1588,6 +1592,10 @@ public enum VariantPropertiesMethodType
    * <code>TEST_SUITE_SOURCE_MANIFEST_FILE = 184;</code>
    */
   public static final int TEST_SUITE_SOURCE_MANIFEST_FILE_VALUE = 184;
+  /**
+   * <code>SOURCES_KEEP_RULES_ACCESS = 185;</code>
+   */
+  public static final int SOURCES_KEEP_RULES_ACCESS_VALUE = 185;
 
 
   public final int getNumber() {
@@ -1799,6 +1807,7 @@ public enum VariantPropertiesMethodType
       case 182: return TEST_SUITE_SOURCE_RESOURCES;
       case 183: return TEST_SUITE_SOURCE_ASSETS;
       case 184: return TEST_SUITE_SOURCE_MANIFEST_FILE;
+      case 185: return SOURCES_KEEP_RULES_ACCESS;
       default: return null;
     }
   }

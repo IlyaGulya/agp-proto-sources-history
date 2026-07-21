@@ -52,7 +52,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * UI event source.
-   * Next ID: 61
+   * Next ID: 67
    * Note: Not a properly sequentially incrementing ID (200 &amp; 201 are used)
    * </pre>
    *
@@ -376,6 +376,34 @@ private static final long serialVersionUID = 0L;
      * <code>DLLA_APP_SCREEN_OPEN_CONFIRMATION = 60;</code>
      */
     DLLA_APP_SCREEN_OPEN_CONFIRMATION(60),
+    /**
+     * <pre>
+     * The secondary tab for viewing missing URLs info.
+     * </pre>
+     *
+     * <code>MISSING_URL_OVERVIEW_TABLE = 61;</code>
+     */
+    MISSING_URL_OVERVIEW_TABLE(61),
+    /**
+     * <code>MISSING_URL_OVERVIEW_TABLE_DETAILS_BUTTON = 62;</code>
+     */
+    MISSING_URL_OVERVIEW_TABLE_DETAILS_BUTTON(62),
+    /**
+     * <code>MISSING_URL_OVERVIEW_TABLE_FIX_ALL_APP_CHECKS_BUTTON = 63;</code>
+     */
+    MISSING_URL_OVERVIEW_TABLE_FIX_ALL_APP_CHECKS_BUTTON(63),
+    /**
+     * <code>MISSING_URL_OVERVIEW_TABLE_FIX_ALL_WEB_CHECKS_BUTTON = 64;</code>
+     */
+    MISSING_URL_OVERVIEW_TABLE_FIX_ALL_WEB_CHECKS_BUTTON(64),
+    /**
+     * <code>MISSING_URL_OVERVIEW_TABLE_SEARCH_BOX = 65;</code>
+     */
+    MISSING_URL_OVERVIEW_TABLE_SEARCH_BOX(65),
+    /**
+     * <code>MISSING_URL_OVERVIEW_TABLE_FILTERS = 66;</code>
+     */
+    MISSING_URL_OVERVIEW_TABLE_FILTERS(66),
     ;
 
     /**
@@ -694,6 +722,34 @@ private static final long serialVersionUID = 0L;
      * <code>DLLA_APP_SCREEN_OPEN_CONFIRMATION = 60;</code>
      */
     public static final int DLLA_APP_SCREEN_OPEN_CONFIRMATION_VALUE = 60;
+    /**
+     * <pre>
+     * The secondary tab for viewing missing URLs info.
+     * </pre>
+     *
+     * <code>MISSING_URL_OVERVIEW_TABLE = 61;</code>
+     */
+    public static final int MISSING_URL_OVERVIEW_TABLE_VALUE = 61;
+    /**
+     * <code>MISSING_URL_OVERVIEW_TABLE_DETAILS_BUTTON = 62;</code>
+     */
+    public static final int MISSING_URL_OVERVIEW_TABLE_DETAILS_BUTTON_VALUE = 62;
+    /**
+     * <code>MISSING_URL_OVERVIEW_TABLE_FIX_ALL_APP_CHECKS_BUTTON = 63;</code>
+     */
+    public static final int MISSING_URL_OVERVIEW_TABLE_FIX_ALL_APP_CHECKS_BUTTON_VALUE = 63;
+    /**
+     * <code>MISSING_URL_OVERVIEW_TABLE_FIX_ALL_WEB_CHECKS_BUTTON = 64;</code>
+     */
+    public static final int MISSING_URL_OVERVIEW_TABLE_FIX_ALL_WEB_CHECKS_BUTTON_VALUE = 64;
+    /**
+     * <code>MISSING_URL_OVERVIEW_TABLE_SEARCH_BOX = 65;</code>
+     */
+    public static final int MISSING_URL_OVERVIEW_TABLE_SEARCH_BOX_VALUE = 65;
+    /**
+     * <code>MISSING_URL_OVERVIEW_TABLE_FILTERS = 66;</code>
+     */
+    public static final int MISSING_URL_OVERVIEW_TABLE_FILTERS_VALUE = 66;
 
 
     public final int getNumber() {
@@ -778,6 +834,12 @@ private static final long serialVersionUID = 0L;
         case 58: return SERVICES_COMPATIBILITY_WARNING_MORE_INFO_BUTTON;
         case 59: return CODE_INSERT_DIALOG_GEMINI_BUTTON;
         case 60: return DLLA_APP_SCREEN_OPEN_CONFIRMATION;
+        case 61: return MISSING_URL_OVERVIEW_TABLE;
+        case 62: return MISSING_URL_OVERVIEW_TABLE_DETAILS_BUTTON;
+        case 63: return MISSING_URL_OVERVIEW_TABLE_FIX_ALL_APP_CHECKS_BUTTON;
+        case 64: return MISSING_URL_OVERVIEW_TABLE_FIX_ALL_WEB_CHECKS_BUTTON;
+        case 65: return MISSING_URL_OVERVIEW_TABLE_SEARCH_BOX;
+        case 66: return MISSING_URL_OVERVIEW_TABLE_FILTERS;
         default: return null;
       }
     }
