@@ -3418,6 +3418,14 @@ private static final long serialVersionUID = 0L;
      * <code>SERVER_PUSH_NOTIFICATION_EVENT = 363;</code>
      */
     SERVER_PUSH_NOTIFICATION_EVENT(363),
+    /**
+     * <pre>
+     * Event related to consumer user tier upgrade flow.
+     * </pre>
+     *
+     * <code>USER_TIER_UPGRADE_EVENT = 364;</code>
+     */
+    USER_TIER_UPGRADE_EVENT(364),
     ;
 
     /**
@@ -6145,6 +6153,14 @@ private static final long serialVersionUID = 0L;
      * <code>SERVER_PUSH_NOTIFICATION_EVENT = 363;</code>
      */
     public static final int SERVER_PUSH_NOTIFICATION_EVENT_VALUE = 363;
+    /**
+     * <pre>
+     * Event related to consumer user tier upgrade flow.
+     * </pre>
+     *
+     * <code>USER_TIER_UPGRADE_EVENT = 364;</code>
+     */
+    public static final int USER_TIER_UPGRADE_EVENT_VALUE = 364;
 
 
     public final int getNumber() {
@@ -6526,6 +6542,7 @@ private static final long serialVersionUID = 0L;
         case 361: return SML_RAG_EVENT;
         case 362: return GLASSES_PAIRING_EVENT;
         case 363: return SERVER_PUSH_NOTIFICATION_EVENT;
+        case 364: return USER_TIER_UPGRADE_EVENT;
         default: return null;
       }
     }
@@ -12295,7 +12312,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional uint32 min_sdk = 2 [deprecated = true];</code>
        * @deprecated android_studio.AndroidStudioEvent.TemplatesUsage.TemplateModule.min_sdk is deprecated.
-       *     See studio_stats.proto;l=2127
+       *     See studio_stats.proto;l=2133
        * @return Whether the minSdk field is set.
        */
       @java.lang.Deprecated boolean hasMinSdk();
@@ -12306,7 +12323,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional uint32 min_sdk = 2 [deprecated = true];</code>
        * @deprecated android_studio.AndroidStudioEvent.TemplatesUsage.TemplateModule.min_sdk is deprecated.
-       *     See studio_stats.proto;l=2127
+       *     See studio_stats.proto;l=2133
        * @return The minSdk.
        */
       @java.lang.Deprecated int getMinSdk();
@@ -12837,7 +12854,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional uint32 min_sdk = 2 [deprecated = true];</code>
        * @deprecated android_studio.AndroidStudioEvent.TemplatesUsage.TemplateModule.min_sdk is deprecated.
-       *     See studio_stats.proto;l=2127
+       *     See studio_stats.proto;l=2133
        * @return Whether the minSdk field is set.
        */
       @java.lang.Override
@@ -12851,7 +12868,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional uint32 min_sdk = 2 [deprecated = true];</code>
        * @deprecated android_studio.AndroidStudioEvent.TemplatesUsage.TemplateModule.min_sdk is deprecated.
-       *     See studio_stats.proto;l=2127
+       *     See studio_stats.proto;l=2133
        * @return The minSdk.
        */
       @java.lang.Override
@@ -13489,7 +13506,7 @@ private static final long serialVersionUID = 0L;
          *
          * <code>optional uint32 min_sdk = 2 [deprecated = true];</code>
          * @deprecated android_studio.AndroidStudioEvent.TemplatesUsage.TemplateModule.min_sdk is deprecated.
-         *     See studio_stats.proto;l=2127
+         *     See studio_stats.proto;l=2133
          * @return Whether the minSdk field is set.
          */
         @java.lang.Override
@@ -13503,7 +13520,7 @@ private static final long serialVersionUID = 0L;
          *
          * <code>optional uint32 min_sdk = 2 [deprecated = true];</code>
          * @deprecated android_studio.AndroidStudioEvent.TemplatesUsage.TemplateModule.min_sdk is deprecated.
-         *     See studio_stats.proto;l=2127
+         *     See studio_stats.proto;l=2133
          * @return The minSdk.
          */
         @java.lang.Override
@@ -13517,7 +13534,7 @@ private static final long serialVersionUID = 0L;
          *
          * <code>optional uint32 min_sdk = 2 [deprecated = true];</code>
          * @deprecated android_studio.AndroidStudioEvent.TemplatesUsage.TemplateModule.min_sdk is deprecated.
-         *     See studio_stats.proto;l=2127
+         *     See studio_stats.proto;l=2133
          * @param value The minSdk to set.
          * @return This builder for chaining.
          */
@@ -13535,7 +13552,7 @@ private static final long serialVersionUID = 0L;
          *
          * <code>optional uint32 min_sdk = 2 [deprecated = true];</code>
          * @deprecated android_studio.AndroidStudioEvent.TemplatesUsage.TemplateModule.min_sdk is deprecated.
-         *     See studio_stats.proto;l=2127
+         *     See studio_stats.proto;l=2133
          * @return This builder for chaining.
          */
         @java.lang.Deprecated public Builder clearMinSdk() {
@@ -25511,6 +25528,44 @@ private static final long serialVersionUID = 0L;
     return serverPushNotificationEvent_ == null ? com.google.wireless.android.sdk.stats.ServerPushNotificationEvent.getDefaultInstance() : serverPushNotificationEvent_;
   }
 
+  public static final int USER_TIER_UPGRADE_EVENT_FIELD_NUMBER = 245;
+  private com.google.wireless.android.sdk.stats.UserTierUpgradeEvent userTierUpgradeEvent_;
+  /**
+   * <pre>
+   * set when kind = USER_TIER_UPGRADE_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.UserTierUpgradeEvent user_tier_upgrade_event = 245 [lazy = true];</code>
+   * @return Whether the userTierUpgradeEvent field is set.
+   */
+  @java.lang.Override
+  public boolean hasUserTierUpgradeEvent() {
+    return ((bitField7_ & 0x00004000) != 0);
+  }
+  /**
+   * <pre>
+   * set when kind = USER_TIER_UPGRADE_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.UserTierUpgradeEvent user_tier_upgrade_event = 245 [lazy = true];</code>
+   * @return The userTierUpgradeEvent.
+   */
+  @java.lang.Override
+  public com.google.wireless.android.sdk.stats.UserTierUpgradeEvent getUserTierUpgradeEvent() {
+    return userTierUpgradeEvent_ == null ? com.google.wireless.android.sdk.stats.UserTierUpgradeEvent.getDefaultInstance() : userTierUpgradeEvent_;
+  }
+  /**
+   * <pre>
+   * set when kind = USER_TIER_UPGRADE_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.UserTierUpgradeEvent user_tier_upgrade_event = 245 [lazy = true];</code>
+   */
+  @java.lang.Override
+  public com.google.wireless.android.sdk.stats.UserTierUpgradeEventOrBuilder getUserTierUpgradeEventOrBuilder() {
+    return userTierUpgradeEvent_ == null ? com.google.wireless.android.sdk.stats.UserTierUpgradeEvent.getDefaultInstance() : userTierUpgradeEvent_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -26256,6 +26311,9 @@ private static final long serialVersionUID = 0L;
     }
     if (((bitField7_ & 0x00002000) != 0)) {
       output.writeMessage(244, getServerPushNotificationEvent());
+    }
+    if (((bitField7_ & 0x00004000) != 0)) {
+      output.writeMessage(245, getUserTierUpgradeEvent());
     }
     getUnknownFields().writeTo(output);
   }
@@ -27247,6 +27305,10 @@ private static final long serialVersionUID = 0L;
     if (((bitField7_ & 0x00002000) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(244, getServerPushNotificationEvent());
+    }
+    if (((bitField7_ & 0x00004000) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(245, getUserTierUpgradeEvent());
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -28454,6 +28516,11 @@ private static final long serialVersionUID = 0L;
       if (!getServerPushNotificationEvent()
           .equals(other.getServerPushNotificationEvent())) return false;
     }
+    if (hasUserTierUpgradeEvent() != other.hasUserTierUpgradeEvent()) return false;
+    if (hasUserTierUpgradeEvent()) {
+      if (!getUserTierUpgradeEvent()
+          .equals(other.getUserTierUpgradeEvent())) return false;
+    }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -29443,6 +29510,10 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + SERVER_PUSH_NOTIFICATION_EVENT_FIELD_NUMBER;
       hash = (53 * hash) + getServerPushNotificationEvent().hashCode();
     }
+    if (hasUserTierUpgradeEvent()) {
+      hash = (37 * hash) + USER_TIER_UPGRADE_EVENT_FIELD_NUMBER;
+      hash = (53 * hash) + getUserTierUpgradeEvent().hashCode();
+    }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -29792,6 +29863,7 @@ private static final long serialVersionUID = 0L;
         getSmlRagEventFieldBuilder();
         getGlassesPairingEventFieldBuilder();
         getServerPushNotificationEventFieldBuilder();
+        getUserTierUpgradeEventFieldBuilder();
       }
     }
     @java.lang.Override
@@ -30941,6 +31013,11 @@ private static final long serialVersionUID = 0L;
       if (serverPushNotificationEventBuilder_ != null) {
         serverPushNotificationEventBuilder_.dispose();
         serverPushNotificationEventBuilder_ = null;
+      }
+      userTierUpgradeEvent_ = null;
+      if (userTierUpgradeEventBuilder_ != null) {
+        userTierUpgradeEventBuilder_.dispose();
+        userTierUpgradeEventBuilder_ = null;
       }
       return this;
     }
@@ -32466,6 +32543,12 @@ private static final long serialVersionUID = 0L;
             : serverPushNotificationEventBuilder_.build();
         to_bitField7_ |= 0x00002000;
       }
+      if (((from_bitField7_ & 0x00100000) != 0)) {
+        result.userTierUpgradeEvent_ = userTierUpgradeEventBuilder_ == null
+            ? userTierUpgradeEvent_
+            : userTierUpgradeEventBuilder_.build();
+        to_bitField7_ |= 0x00004000;
+      }
       result.bitField6_ |= to_bitField6_;
       result.bitField7_ |= to_bitField7_;
     }
@@ -33317,6 +33400,9 @@ private static final long serialVersionUID = 0L;
       }
       if (other.hasServerPushNotificationEvent()) {
         mergeServerPushNotificationEvent(other.getServerPushNotificationEvent());
+      }
+      if (other.hasUserTierUpgradeEvent()) {
+        mergeUserTierUpgradeEvent(other.getUserTierUpgradeEvent());
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -35120,6 +35206,13 @@ private static final long serialVersionUID = 0L;
               bitField7_ |= 0x00080000;
               break;
             } // case 1954
+            case 1962: {
+              input.readMessage(
+                  getUserTierUpgradeEventFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField7_ |= 0x00100000;
+              break;
+            } // case 1962
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -72300,6 +72393,161 @@ private static final long serialVersionUID = 0L;
         serverPushNotificationEvent_ = null;
       }
       return serverPushNotificationEventBuilder_;
+    }
+
+    private com.google.wireless.android.sdk.stats.UserTierUpgradeEvent userTierUpgradeEvent_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.UserTierUpgradeEvent, com.google.wireless.android.sdk.stats.UserTierUpgradeEvent.Builder, com.google.wireless.android.sdk.stats.UserTierUpgradeEventOrBuilder> userTierUpgradeEventBuilder_;
+    /**
+     * <pre>
+     * set when kind = USER_TIER_UPGRADE_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.UserTierUpgradeEvent user_tier_upgrade_event = 245 [lazy = true];</code>
+     * @return Whether the userTierUpgradeEvent field is set.
+     */
+    public boolean hasUserTierUpgradeEvent() {
+      return ((bitField7_ & 0x00100000) != 0);
+    }
+    /**
+     * <pre>
+     * set when kind = USER_TIER_UPGRADE_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.UserTierUpgradeEvent user_tier_upgrade_event = 245 [lazy = true];</code>
+     * @return The userTierUpgradeEvent.
+     */
+    public com.google.wireless.android.sdk.stats.UserTierUpgradeEvent getUserTierUpgradeEvent() {
+      if (userTierUpgradeEventBuilder_ == null) {
+        return userTierUpgradeEvent_ == null ? com.google.wireless.android.sdk.stats.UserTierUpgradeEvent.getDefaultInstance() : userTierUpgradeEvent_;
+      } else {
+        return userTierUpgradeEventBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * set when kind = USER_TIER_UPGRADE_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.UserTierUpgradeEvent user_tier_upgrade_event = 245 [lazy = true];</code>
+     */
+    public Builder setUserTierUpgradeEvent(com.google.wireless.android.sdk.stats.UserTierUpgradeEvent value) {
+      if (userTierUpgradeEventBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        userTierUpgradeEvent_ = value;
+      } else {
+        userTierUpgradeEventBuilder_.setMessage(value);
+      }
+      bitField7_ |= 0x00100000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = USER_TIER_UPGRADE_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.UserTierUpgradeEvent user_tier_upgrade_event = 245 [lazy = true];</code>
+     */
+    public Builder setUserTierUpgradeEvent(
+        com.google.wireless.android.sdk.stats.UserTierUpgradeEvent.Builder builderForValue) {
+      if (userTierUpgradeEventBuilder_ == null) {
+        userTierUpgradeEvent_ = builderForValue.build();
+      } else {
+        userTierUpgradeEventBuilder_.setMessage(builderForValue.build());
+      }
+      bitField7_ |= 0x00100000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = USER_TIER_UPGRADE_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.UserTierUpgradeEvent user_tier_upgrade_event = 245 [lazy = true];</code>
+     */
+    public Builder mergeUserTierUpgradeEvent(com.google.wireless.android.sdk.stats.UserTierUpgradeEvent value) {
+      if (userTierUpgradeEventBuilder_ == null) {
+        if (((bitField7_ & 0x00100000) != 0) &&
+          userTierUpgradeEvent_ != null &&
+          userTierUpgradeEvent_ != com.google.wireless.android.sdk.stats.UserTierUpgradeEvent.getDefaultInstance()) {
+          getUserTierUpgradeEventBuilder().mergeFrom(value);
+        } else {
+          userTierUpgradeEvent_ = value;
+        }
+      } else {
+        userTierUpgradeEventBuilder_.mergeFrom(value);
+      }
+      bitField7_ |= 0x00100000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = USER_TIER_UPGRADE_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.UserTierUpgradeEvent user_tier_upgrade_event = 245 [lazy = true];</code>
+     */
+    public Builder clearUserTierUpgradeEvent() {
+      bitField7_ = (bitField7_ & ~0x00100000);
+      userTierUpgradeEvent_ = null;
+      if (userTierUpgradeEventBuilder_ != null) {
+        userTierUpgradeEventBuilder_.dispose();
+        userTierUpgradeEventBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = USER_TIER_UPGRADE_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.UserTierUpgradeEvent user_tier_upgrade_event = 245 [lazy = true];</code>
+     */
+    public com.google.wireless.android.sdk.stats.UserTierUpgradeEvent.Builder getUserTierUpgradeEventBuilder() {
+      bitField7_ |= 0x00100000;
+      onChanged();
+      return getUserTierUpgradeEventFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * set when kind = USER_TIER_UPGRADE_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.UserTierUpgradeEvent user_tier_upgrade_event = 245 [lazy = true];</code>
+     */
+    public com.google.wireless.android.sdk.stats.UserTierUpgradeEventOrBuilder getUserTierUpgradeEventOrBuilder() {
+      if (userTierUpgradeEventBuilder_ != null) {
+        return userTierUpgradeEventBuilder_.getMessageOrBuilder();
+      } else {
+        return userTierUpgradeEvent_ == null ?
+            com.google.wireless.android.sdk.stats.UserTierUpgradeEvent.getDefaultInstance() : userTierUpgradeEvent_;
+      }
+    }
+    /**
+     * <pre>
+     * set when kind = USER_TIER_UPGRADE_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.UserTierUpgradeEvent user_tier_upgrade_event = 245 [lazy = true];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.UserTierUpgradeEvent, com.google.wireless.android.sdk.stats.UserTierUpgradeEvent.Builder, com.google.wireless.android.sdk.stats.UserTierUpgradeEventOrBuilder> 
+        getUserTierUpgradeEventFieldBuilder() {
+      if (userTierUpgradeEventBuilder_ == null) {
+        userTierUpgradeEventBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.wireless.android.sdk.stats.UserTierUpgradeEvent, com.google.wireless.android.sdk.stats.UserTierUpgradeEvent.Builder, com.google.wireless.android.sdk.stats.UserTierUpgradeEventOrBuilder>(
+                getUserTierUpgradeEvent(),
+                getParentForChildren(),
+                isClean());
+        userTierUpgradeEvent_ = null;
+      }
+      return userTierUpgradeEventBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

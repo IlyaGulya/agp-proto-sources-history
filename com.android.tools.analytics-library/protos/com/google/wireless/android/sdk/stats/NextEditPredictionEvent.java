@@ -1151,6 +1151,600 @@ private static final long serialVersionUID = 0L;
 
   }
 
+  public interface EnabledStatusOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:android_studio.NextEditPredictionEvent.EnabledStatus)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>optional .android_studio.NextEditPredictionEvent.EnabledStatus.Status status = 1;</code>
+     * @return Whether the status field is set.
+     */
+    boolean hasStatus();
+    /**
+     * <code>optional .android_studio.NextEditPredictionEvent.EnabledStatus.Status status = 1;</code>
+     * @return The status.
+     */
+    com.google.wireless.android.sdk.stats.NextEditPredictionEvent.EnabledStatus.Status getStatus();
+  }
+  /**
+   * Protobuf type {@code android_studio.NextEditPredictionEvent.EnabledStatus}
+   */
+  public static final class EnabledStatus extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:android_studio.NextEditPredictionEvent.EnabledStatus)
+      EnabledStatusOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use EnabledStatus.newBuilder() to construct.
+    private EnabledStatus(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private EnabledStatus() {
+      status_ = 0;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new EnabledStatus();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_NextEditPredictionEvent_EnabledStatus_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_NextEditPredictionEvent_EnabledStatus_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.google.wireless.android.sdk.stats.NextEditPredictionEvent.EnabledStatus.class, com.google.wireless.android.sdk.stats.NextEditPredictionEvent.EnabledStatus.Builder.class);
+    }
+
+    /**
+     * Protobuf enum {@code android_studio.NextEditPredictionEvent.EnabledStatus.Status}
+     */
+    public enum Status
+        implements com.google.protobuf.ProtocolMessageEnum {
+      /**
+       * <code>UNKNOWN_STATUS = 0;</code>
+       */
+      UNKNOWN_STATUS(0),
+      /**
+       * <code>ENABLED = 1;</code>
+       */
+      ENABLED(1),
+      /**
+       * <code>DISABLED = 2;</code>
+       */
+      DISABLED(2),
+      /**
+       * <code>PAUSED = 3;</code>
+       */
+      PAUSED(3),
+      ;
+
+      /**
+       * <code>UNKNOWN_STATUS = 0;</code>
+       */
+      public static final int UNKNOWN_STATUS_VALUE = 0;
+      /**
+       * <code>ENABLED = 1;</code>
+       */
+      public static final int ENABLED_VALUE = 1;
+      /**
+       * <code>DISABLED = 2;</code>
+       */
+      public static final int DISABLED_VALUE = 2;
+      /**
+       * <code>PAUSED = 3;</code>
+       */
+      public static final int PAUSED_VALUE = 3;
+
+
+      public final int getNumber() {
+        return value;
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static Status valueOf(int value) {
+        return forNumber(value);
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       */
+      public static Status forNumber(int value) {
+        switch (value) {
+          case 0: return UNKNOWN_STATUS;
+          case 1: return ENABLED;
+          case 2: return DISABLED;
+          case 3: return PAUSED;
+          default: return null;
+        }
+      }
+
+      public static com.google.protobuf.Internal.EnumLiteMap<Status>
+          internalGetValueMap() {
+        return internalValueMap;
+      }
+      private static final com.google.protobuf.Internal.EnumLiteMap<
+          Status> internalValueMap =
+            new com.google.protobuf.Internal.EnumLiteMap<Status>() {
+              public Status findValueByNumber(int number) {
+                return Status.forNumber(number);
+              }
+            };
+
+      public final com.google.protobuf.Descriptors.EnumValueDescriptor
+          getValueDescriptor() {
+        return getDescriptor().getValues().get(ordinal());
+      }
+      public final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptorForType() {
+        return getDescriptor();
+      }
+      public static final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptor() {
+        return com.google.wireless.android.sdk.stats.NextEditPredictionEvent.EnabledStatus.getDescriptor().getEnumTypes().get(0);
+      }
+
+      private static final Status[] VALUES = values();
+
+      public static Status valueOf(
+          com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+        if (desc.getType() != getDescriptor()) {
+          throw new java.lang.IllegalArgumentException(
+            "EnumValueDescriptor is not for this type.");
+        }
+        return VALUES[desc.getIndex()];
+      }
+
+      private final int value;
+
+      private Status(int value) {
+        this.value = value;
+      }
+
+      // @@protoc_insertion_point(enum_scope:android_studio.NextEditPredictionEvent.EnabledStatus.Status)
+    }
+
+    private int bitField0_;
+    public static final int STATUS_FIELD_NUMBER = 1;
+    private int status_ = 0;
+    /**
+     * <code>optional .android_studio.NextEditPredictionEvent.EnabledStatus.Status status = 1;</code>
+     * @return Whether the status field is set.
+     */
+    @java.lang.Override public boolean hasStatus() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <code>optional .android_studio.NextEditPredictionEvent.EnabledStatus.Status status = 1;</code>
+     * @return The status.
+     */
+    @java.lang.Override public com.google.wireless.android.sdk.stats.NextEditPredictionEvent.EnabledStatus.Status getStatus() {
+      com.google.wireless.android.sdk.stats.NextEditPredictionEvent.EnabledStatus.Status result = com.google.wireless.android.sdk.stats.NextEditPredictionEvent.EnabledStatus.Status.forNumber(status_);
+      return result == null ? com.google.wireless.android.sdk.stats.NextEditPredictionEvent.EnabledStatus.Status.UNKNOWN_STATUS : result;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (((bitField0_ & 0x00000001) != 0)) {
+        output.writeEnum(1, status_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(1, status_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.google.wireless.android.sdk.stats.NextEditPredictionEvent.EnabledStatus)) {
+        return super.equals(obj);
+      }
+      com.google.wireless.android.sdk.stats.NextEditPredictionEvent.EnabledStatus other = (com.google.wireless.android.sdk.stats.NextEditPredictionEvent.EnabledStatus) obj;
+
+      if (hasStatus() != other.hasStatus()) return false;
+      if (hasStatus()) {
+        if (status_ != other.status_) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasStatus()) {
+        hash = (37 * hash) + STATUS_FIELD_NUMBER;
+        hash = (53 * hash) + status_;
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.google.wireless.android.sdk.stats.NextEditPredictionEvent.EnabledStatus parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.google.wireless.android.sdk.stats.NextEditPredictionEvent.EnabledStatus parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.google.wireless.android.sdk.stats.NextEditPredictionEvent.EnabledStatus parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.google.wireless.android.sdk.stats.NextEditPredictionEvent.EnabledStatus parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.google.wireless.android.sdk.stats.NextEditPredictionEvent.EnabledStatus parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.google.wireless.android.sdk.stats.NextEditPredictionEvent.EnabledStatus parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.google.wireless.android.sdk.stats.NextEditPredictionEvent.EnabledStatus parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.google.wireless.android.sdk.stats.NextEditPredictionEvent.EnabledStatus parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.google.wireless.android.sdk.stats.NextEditPredictionEvent.EnabledStatus parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.google.wireless.android.sdk.stats.NextEditPredictionEvent.EnabledStatus parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.google.wireless.android.sdk.stats.NextEditPredictionEvent.EnabledStatus parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.google.wireless.android.sdk.stats.NextEditPredictionEvent.EnabledStatus parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.google.wireless.android.sdk.stats.NextEditPredictionEvent.EnabledStatus prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code android_studio.NextEditPredictionEvent.EnabledStatus}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:android_studio.NextEditPredictionEvent.EnabledStatus)
+        com.google.wireless.android.sdk.stats.NextEditPredictionEvent.EnabledStatusOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_NextEditPredictionEvent_EnabledStatus_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_NextEditPredictionEvent_EnabledStatus_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.google.wireless.android.sdk.stats.NextEditPredictionEvent.EnabledStatus.class, com.google.wireless.android.sdk.stats.NextEditPredictionEvent.EnabledStatus.Builder.class);
+      }
+
+      // Construct using com.google.wireless.android.sdk.stats.NextEditPredictionEvent.EnabledStatus.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        status_ = 0;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_NextEditPredictionEvent_EnabledStatus_descriptor;
+      }
+
+      @java.lang.Override
+      public com.google.wireless.android.sdk.stats.NextEditPredictionEvent.EnabledStatus getDefaultInstanceForType() {
+        return com.google.wireless.android.sdk.stats.NextEditPredictionEvent.EnabledStatus.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.google.wireless.android.sdk.stats.NextEditPredictionEvent.EnabledStatus build() {
+        com.google.wireless.android.sdk.stats.NextEditPredictionEvent.EnabledStatus result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.google.wireless.android.sdk.stats.NextEditPredictionEvent.EnabledStatus buildPartial() {
+        com.google.wireless.android.sdk.stats.NextEditPredictionEvent.EnabledStatus result = new com.google.wireless.android.sdk.stats.NextEditPredictionEvent.EnabledStatus(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.google.wireless.android.sdk.stats.NextEditPredictionEvent.EnabledStatus result) {
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.status_ = status_;
+          to_bitField0_ |= 0x00000001;
+        }
+        result.bitField0_ |= to_bitField0_;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.google.wireless.android.sdk.stats.NextEditPredictionEvent.EnabledStatus) {
+          return mergeFrom((com.google.wireless.android.sdk.stats.NextEditPredictionEvent.EnabledStatus)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.google.wireless.android.sdk.stats.NextEditPredictionEvent.EnabledStatus other) {
+        if (other == com.google.wireless.android.sdk.stats.NextEditPredictionEvent.EnabledStatus.getDefaultInstance()) return this;
+        if (other.hasStatus()) {
+          setStatus(other.getStatus());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                int tmpRaw = input.readEnum();
+                com.google.wireless.android.sdk.stats.NextEditPredictionEvent.EnabledStatus.Status tmpValue =
+                    com.google.wireless.android.sdk.stats.NextEditPredictionEvent.EnabledStatus.Status.forNumber(tmpRaw);
+                if (tmpValue == null) {
+                  mergeUnknownVarintField(1, tmpRaw);
+                } else {
+                  status_ = tmpRaw;
+                  bitField0_ |= 0x00000001;
+                }
+                break;
+              } // case 8
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private int status_ = 0;
+      /**
+       * <code>optional .android_studio.NextEditPredictionEvent.EnabledStatus.Status status = 1;</code>
+       * @return Whether the status field is set.
+       */
+      @java.lang.Override public boolean hasStatus() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>optional .android_studio.NextEditPredictionEvent.EnabledStatus.Status status = 1;</code>
+       * @return The status.
+       */
+      @java.lang.Override
+      public com.google.wireless.android.sdk.stats.NextEditPredictionEvent.EnabledStatus.Status getStatus() {
+        com.google.wireless.android.sdk.stats.NextEditPredictionEvent.EnabledStatus.Status result = com.google.wireless.android.sdk.stats.NextEditPredictionEvent.EnabledStatus.Status.forNumber(status_);
+        return result == null ? com.google.wireless.android.sdk.stats.NextEditPredictionEvent.EnabledStatus.Status.UNKNOWN_STATUS : result;
+      }
+      /**
+       * <code>optional .android_studio.NextEditPredictionEvent.EnabledStatus.Status status = 1;</code>
+       * @param value The status to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStatus(com.google.wireless.android.sdk.stats.NextEditPredictionEvent.EnabledStatus.Status value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x00000001;
+        status_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional .android_studio.NextEditPredictionEvent.EnabledStatus.Status status = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearStatus() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        status_ = 0;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:android_studio.NextEditPredictionEvent.EnabledStatus)
+    }
+
+    // @@protoc_insertion_point(class_scope:android_studio.NextEditPredictionEvent.EnabledStatus)
+    private static final com.google.wireless.android.sdk.stats.NextEditPredictionEvent.EnabledStatus DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.google.wireless.android.sdk.stats.NextEditPredictionEvent.EnabledStatus();
+    }
+
+    public static com.google.wireless.android.sdk.stats.NextEditPredictionEvent.EnabledStatus getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<EnabledStatus>
+        PARSER = new com.google.protobuf.AbstractParser<EnabledStatus>() {
+      @java.lang.Override
+      public EnabledStatus parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<EnabledStatus> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<EnabledStatus> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.wireless.android.sdk.stats.NextEditPredictionEvent.EnabledStatus getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private int bitField0_;
   private int nextEditPredictionCase_ = 0;
   @SuppressWarnings("serial")
@@ -1161,6 +1755,7 @@ private static final long serialVersionUID = 0L;
     SHOWN(1),
     ACCEPTED(2),
     REJECTED(3),
+    ENABLED_STATUS(4),
     NEXTEDITPREDICTION_NOT_SET(0);
     private final int value;
     private NextEditPredictionCase(int value) {
@@ -1181,6 +1776,7 @@ private static final long serialVersionUID = 0L;
         case 1: return SHOWN;
         case 2: return ACCEPTED;
         case 3: return REJECTED;
+        case 4: return ENABLED_STATUS;
         case 0: return NEXTEDITPREDICTION_NOT_SET;
         default: return null;
       }
@@ -1289,6 +1885,37 @@ private static final long serialVersionUID = 0L;
     return com.google.wireless.android.sdk.stats.NextEditPredictionEvent.PredictionRejected.getDefaultInstance();
   }
 
+  public static final int ENABLED_STATUS_FIELD_NUMBER = 4;
+  /**
+   * <code>.android_studio.NextEditPredictionEvent.EnabledStatus enabled_status = 4 [lazy = true];</code>
+   * @return Whether the enabledStatus field is set.
+   */
+  @java.lang.Override
+  public boolean hasEnabledStatus() {
+    return nextEditPredictionCase_ == 4;
+  }
+  /**
+   * <code>.android_studio.NextEditPredictionEvent.EnabledStatus enabled_status = 4 [lazy = true];</code>
+   * @return The enabledStatus.
+   */
+  @java.lang.Override
+  public com.google.wireless.android.sdk.stats.NextEditPredictionEvent.EnabledStatus getEnabledStatus() {
+    if (nextEditPredictionCase_ == 4) {
+       return (com.google.wireless.android.sdk.stats.NextEditPredictionEvent.EnabledStatus) nextEditPrediction_;
+    }
+    return com.google.wireless.android.sdk.stats.NextEditPredictionEvent.EnabledStatus.getDefaultInstance();
+  }
+  /**
+   * <code>.android_studio.NextEditPredictionEvent.EnabledStatus enabled_status = 4 [lazy = true];</code>
+   */
+  @java.lang.Override
+  public com.google.wireless.android.sdk.stats.NextEditPredictionEvent.EnabledStatusOrBuilder getEnabledStatusOrBuilder() {
+    if (nextEditPredictionCase_ == 4) {
+       return (com.google.wireless.android.sdk.stats.NextEditPredictionEvent.EnabledStatus) nextEditPrediction_;
+    }
+    return com.google.wireless.android.sdk.stats.NextEditPredictionEvent.EnabledStatus.getDefaultInstance();
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -1312,6 +1939,9 @@ private static final long serialVersionUID = 0L;
     if (nextEditPredictionCase_ == 3) {
       output.writeMessage(3, (com.google.wireless.android.sdk.stats.NextEditPredictionEvent.PredictionRejected) nextEditPrediction_);
     }
+    if (nextEditPredictionCase_ == 4) {
+      output.writeMessage(4, (com.google.wireless.android.sdk.stats.NextEditPredictionEvent.EnabledStatus) nextEditPrediction_);
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -1332,6 +1962,10 @@ private static final long serialVersionUID = 0L;
     if (nextEditPredictionCase_ == 3) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(3, (com.google.wireless.android.sdk.stats.NextEditPredictionEvent.PredictionRejected) nextEditPrediction_);
+    }
+    if (nextEditPredictionCase_ == 4) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(4, (com.google.wireless.android.sdk.stats.NextEditPredictionEvent.EnabledStatus) nextEditPrediction_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -1362,6 +1996,10 @@ private static final long serialVersionUID = 0L;
         if (!getRejected()
             .equals(other.getRejected())) return false;
         break;
+      case 4:
+        if (!getEnabledStatus()
+            .equals(other.getEnabledStatus())) return false;
+        break;
       case 0:
       default:
     }
@@ -1388,6 +2026,10 @@ private static final long serialVersionUID = 0L;
       case 3:
         hash = (37 * hash) + REJECTED_FIELD_NUMBER;
         hash = (53 * hash) + getRejected().hashCode();
+        break;
+      case 4:
+        hash = (37 * hash) + ENABLED_STATUS_FIELD_NUMBER;
+        hash = (53 * hash) + getEnabledStatus().hashCode();
         break;
       case 0:
       default:
@@ -1530,6 +2172,9 @@ private static final long serialVersionUID = 0L;
       if (rejectedBuilder_ != null) {
         rejectedBuilder_.clear();
       }
+      if (enabledStatusBuilder_ != null) {
+        enabledStatusBuilder_.clear();
+      }
       nextEditPredictionCase_ = 0;
       nextEditPrediction_ = null;
       return this;
@@ -1583,6 +2228,10 @@ private static final long serialVersionUID = 0L;
           rejectedBuilder_ != null) {
         result.nextEditPrediction_ = rejectedBuilder_.build();
       }
+      if (nextEditPredictionCase_ == 4 &&
+          enabledStatusBuilder_ != null) {
+        result.nextEditPrediction_ = enabledStatusBuilder_.build();
+      }
     }
 
     @java.lang.Override
@@ -1608,6 +2257,10 @@ private static final long serialVersionUID = 0L;
         }
         case REJECTED: {
           mergeRejected(other.getRejected());
+          break;
+        }
+        case ENABLED_STATUS: {
+          mergeEnabledStatus(other.getEnabledStatus());
           break;
         }
         case NEXTEDITPREDICTION_NOT_SET: {
@@ -1661,6 +2314,13 @@ private static final long serialVersionUID = 0L;
               nextEditPredictionCase_ = 3;
               break;
             } // case 26
+            case 34: {
+              input.readMessage(
+                  getEnabledStatusFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              nextEditPredictionCase_ = 4;
+              break;
+            } // case 34
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -2117,6 +2777,148 @@ private static final long serialVersionUID = 0L;
       nextEditPredictionCase_ = 3;
       onChanged();
       return rejectedBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.NextEditPredictionEvent.EnabledStatus, com.google.wireless.android.sdk.stats.NextEditPredictionEvent.EnabledStatus.Builder, com.google.wireless.android.sdk.stats.NextEditPredictionEvent.EnabledStatusOrBuilder> enabledStatusBuilder_;
+    /**
+     * <code>.android_studio.NextEditPredictionEvent.EnabledStatus enabled_status = 4 [lazy = true];</code>
+     * @return Whether the enabledStatus field is set.
+     */
+    @java.lang.Override
+    public boolean hasEnabledStatus() {
+      return nextEditPredictionCase_ == 4;
+    }
+    /**
+     * <code>.android_studio.NextEditPredictionEvent.EnabledStatus enabled_status = 4 [lazy = true];</code>
+     * @return The enabledStatus.
+     */
+    @java.lang.Override
+    public com.google.wireless.android.sdk.stats.NextEditPredictionEvent.EnabledStatus getEnabledStatus() {
+      if (enabledStatusBuilder_ == null) {
+        if (nextEditPredictionCase_ == 4) {
+          return (com.google.wireless.android.sdk.stats.NextEditPredictionEvent.EnabledStatus) nextEditPrediction_;
+        }
+        return com.google.wireless.android.sdk.stats.NextEditPredictionEvent.EnabledStatus.getDefaultInstance();
+      } else {
+        if (nextEditPredictionCase_ == 4) {
+          return enabledStatusBuilder_.getMessage();
+        }
+        return com.google.wireless.android.sdk.stats.NextEditPredictionEvent.EnabledStatus.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.android_studio.NextEditPredictionEvent.EnabledStatus enabled_status = 4 [lazy = true];</code>
+     */
+    public Builder setEnabledStatus(com.google.wireless.android.sdk.stats.NextEditPredictionEvent.EnabledStatus value) {
+      if (enabledStatusBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        nextEditPrediction_ = value;
+        onChanged();
+      } else {
+        enabledStatusBuilder_.setMessage(value);
+      }
+      nextEditPredictionCase_ = 4;
+      return this;
+    }
+    /**
+     * <code>.android_studio.NextEditPredictionEvent.EnabledStatus enabled_status = 4 [lazy = true];</code>
+     */
+    public Builder setEnabledStatus(
+        com.google.wireless.android.sdk.stats.NextEditPredictionEvent.EnabledStatus.Builder builderForValue) {
+      if (enabledStatusBuilder_ == null) {
+        nextEditPrediction_ = builderForValue.build();
+        onChanged();
+      } else {
+        enabledStatusBuilder_.setMessage(builderForValue.build());
+      }
+      nextEditPredictionCase_ = 4;
+      return this;
+    }
+    /**
+     * <code>.android_studio.NextEditPredictionEvent.EnabledStatus enabled_status = 4 [lazy = true];</code>
+     */
+    public Builder mergeEnabledStatus(com.google.wireless.android.sdk.stats.NextEditPredictionEvent.EnabledStatus value) {
+      if (enabledStatusBuilder_ == null) {
+        if (nextEditPredictionCase_ == 4 &&
+            nextEditPrediction_ != com.google.wireless.android.sdk.stats.NextEditPredictionEvent.EnabledStatus.getDefaultInstance()) {
+          nextEditPrediction_ = com.google.wireless.android.sdk.stats.NextEditPredictionEvent.EnabledStatus.newBuilder((com.google.wireless.android.sdk.stats.NextEditPredictionEvent.EnabledStatus) nextEditPrediction_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          nextEditPrediction_ = value;
+        }
+        onChanged();
+      } else {
+        if (nextEditPredictionCase_ == 4) {
+          enabledStatusBuilder_.mergeFrom(value);
+        } else {
+          enabledStatusBuilder_.setMessage(value);
+        }
+      }
+      nextEditPredictionCase_ = 4;
+      return this;
+    }
+    /**
+     * <code>.android_studio.NextEditPredictionEvent.EnabledStatus enabled_status = 4 [lazy = true];</code>
+     */
+    public Builder clearEnabledStatus() {
+      if (enabledStatusBuilder_ == null) {
+        if (nextEditPredictionCase_ == 4) {
+          nextEditPredictionCase_ = 0;
+          nextEditPrediction_ = null;
+          onChanged();
+        }
+      } else {
+        if (nextEditPredictionCase_ == 4) {
+          nextEditPredictionCase_ = 0;
+          nextEditPrediction_ = null;
+        }
+        enabledStatusBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>.android_studio.NextEditPredictionEvent.EnabledStatus enabled_status = 4 [lazy = true];</code>
+     */
+    public com.google.wireless.android.sdk.stats.NextEditPredictionEvent.EnabledStatus.Builder getEnabledStatusBuilder() {
+      return getEnabledStatusFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.android_studio.NextEditPredictionEvent.EnabledStatus enabled_status = 4 [lazy = true];</code>
+     */
+    @java.lang.Override
+    public com.google.wireless.android.sdk.stats.NextEditPredictionEvent.EnabledStatusOrBuilder getEnabledStatusOrBuilder() {
+      if ((nextEditPredictionCase_ == 4) && (enabledStatusBuilder_ != null)) {
+        return enabledStatusBuilder_.getMessageOrBuilder();
+      } else {
+        if (nextEditPredictionCase_ == 4) {
+          return (com.google.wireless.android.sdk.stats.NextEditPredictionEvent.EnabledStatus) nextEditPrediction_;
+        }
+        return com.google.wireless.android.sdk.stats.NextEditPredictionEvent.EnabledStatus.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.android_studio.NextEditPredictionEvent.EnabledStatus enabled_status = 4 [lazy = true];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.NextEditPredictionEvent.EnabledStatus, com.google.wireless.android.sdk.stats.NextEditPredictionEvent.EnabledStatus.Builder, com.google.wireless.android.sdk.stats.NextEditPredictionEvent.EnabledStatusOrBuilder> 
+        getEnabledStatusFieldBuilder() {
+      if (enabledStatusBuilder_ == null) {
+        if (!(nextEditPredictionCase_ == 4)) {
+          nextEditPrediction_ = com.google.wireless.android.sdk.stats.NextEditPredictionEvent.EnabledStatus.getDefaultInstance();
+        }
+        enabledStatusBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.wireless.android.sdk.stats.NextEditPredictionEvent.EnabledStatus, com.google.wireless.android.sdk.stats.NextEditPredictionEvent.EnabledStatus.Builder, com.google.wireless.android.sdk.stats.NextEditPredictionEvent.EnabledStatusOrBuilder>(
+                (com.google.wireless.android.sdk.stats.NextEditPredictionEvent.EnabledStatus) nextEditPrediction_,
+                getParentForChildren(),
+                isClean());
+        nextEditPrediction_ = null;
+      }
+      nextEditPredictionCase_ = 4;
+      onChanged();
+      return enabledStatusBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

@@ -123,22 +123,32 @@ public interface SmlConfigurationEventOrBuilder extends
 
   /**
    * <pre>
-   * The product variant that was fetched by the LoadCodeAssist API
+   * Deprecated. The existing SmlProductVariant was a combined enum to identify
+   * both user account type and license type. Use UserAccountType and
+   * LicenseType instead. The product variant that was fetched by the
+   * LoadCodeAssist API
    * </pre>
    *
-   * <code>optional .android_studio.SmlConfigurationEvent.SmlProductVariant product_variant = 7;</code>
+   * <code>optional .android_studio.SmlConfigurationEvent.SmlProductVariant product_variant = 7 [deprecated = true];</code>
+   * @deprecated android_studio.SmlConfigurationEvent.product_variant is deprecated.
+   *     See studio_stats.proto;l=16546
    * @return Whether the productVariant field is set.
    */
-  boolean hasProductVariant();
+  @java.lang.Deprecated boolean hasProductVariant();
   /**
    * <pre>
-   * The product variant that was fetched by the LoadCodeAssist API
+   * Deprecated. The existing SmlProductVariant was a combined enum to identify
+   * both user account type and license type. Use UserAccountType and
+   * LicenseType instead. The product variant that was fetched by the
+   * LoadCodeAssist API
    * </pre>
    *
-   * <code>optional .android_studio.SmlConfigurationEvent.SmlProductVariant product_variant = 7;</code>
+   * <code>optional .android_studio.SmlConfigurationEvent.SmlProductVariant product_variant = 7 [deprecated = true];</code>
+   * @deprecated android_studio.SmlConfigurationEvent.product_variant is deprecated.
+   *     See studio_stats.proto;l=16546
    * @return The productVariant.
    */
-  com.google.wireless.android.sdk.stats.SmlConfigurationEvent.SmlProductVariant getProductVariant();
+  @java.lang.Deprecated com.google.wireless.android.sdk.stats.SmlConfigurationEvent.SmlProductVariant getProductVariant();
 
   /**
    * <pre>
@@ -158,4 +168,71 @@ public interface SmlConfigurationEventOrBuilder extends
    * @return The agentAutoAcceptEnabled.
    */
   boolean getAgentAutoAcceptEnabled();
+
+  /**
+   * <pre>
+   * details.
+   * </pre>
+   *
+   * <code>optional string tier_name = 9;</code>
+   * @return Whether the tierName field is set.
+   */
+  boolean hasTierName();
+  /**
+   * <pre>
+   * details.
+   * </pre>
+   *
+   * <code>optional string tier_name = 9;</code>
+   * @return The tierName.
+   */
+  java.lang.String getTierName();
+  /**
+   * <pre>
+   * details.
+   * </pre>
+   *
+   * <code>optional string tier_name = 9;</code>
+   * @return The bytes for tierName.
+   */
+  com.google.protobuf.ByteString
+      getTierNameBytes();
+
+  /**
+   * <pre>
+   * The license type that was fetched by the LoadCodeAssist API.
+   * </pre>
+   *
+   * <code>optional .android_studio.SmlConfigurationEvent.LicenseType license_type = 10;</code>
+   * @return Whether the licenseType field is set.
+   */
+  boolean hasLicenseType();
+  /**
+   * <pre>
+   * The license type that was fetched by the LoadCodeAssist API.
+   * </pre>
+   *
+   * <code>optional .android_studio.SmlConfigurationEvent.LicenseType license_type = 10;</code>
+   * @return The licenseType.
+   */
+  com.google.wireless.android.sdk.stats.SmlConfigurationEvent.LicenseType getLicenseType();
+
+  /**
+   * <pre>
+   * The user account type that was fetched by the LoadCodeAssist API.
+   * </pre>
+   *
+   * <code>optional .android_studio.SmlConfigurationEvent.UserAccountType user_account_type = 11;</code>
+   * @return Whether the userAccountType field is set.
+   */
+  boolean hasUserAccountType();
+  /**
+   * <pre>
+   * The user account type that was fetched by the LoadCodeAssist API.
+   * </pre>
+   *
+   * <code>optional .android_studio.SmlConfigurationEvent.UserAccountType user_account_type = 11;</code>
+   * @return The userAccountType.
+   */
+  com.google.wireless.android.sdk.stats.SmlConfigurationEvent.UserAccountType getUserAccountType();
 }

@@ -6808,4 +6808,31 @@ public interface AndroidStudioEventOrBuilder extends
    * <code>optional .android_studio.ServerPushNotificationEvent server_push_notification_event = 244 [lazy = true];</code>
    */
   com.google.wireless.android.sdk.stats.ServerPushNotificationEventOrBuilder getServerPushNotificationEventOrBuilder();
+
+  /**
+   * <pre>
+   * set when kind = USER_TIER_UPGRADE_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.UserTierUpgradeEvent user_tier_upgrade_event = 245 [lazy = true];</code>
+   * @return Whether the userTierUpgradeEvent field is set.
+   */
+  boolean hasUserTierUpgradeEvent();
+  /**
+   * <pre>
+   * set when kind = USER_TIER_UPGRADE_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.UserTierUpgradeEvent user_tier_upgrade_event = 245 [lazy = true];</code>
+   * @return The userTierUpgradeEvent.
+   */
+  com.google.wireless.android.sdk.stats.UserTierUpgradeEvent getUserTierUpgradeEvent();
+  /**
+   * <pre>
+   * set when kind = USER_TIER_UPGRADE_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.UserTierUpgradeEvent user_tier_upgrade_event = 245 [lazy = true];</code>
+   */
+  com.google.wireless.android.sdk.stats.UserTierUpgradeEventOrBuilder getUserTierUpgradeEventOrBuilder();
 }

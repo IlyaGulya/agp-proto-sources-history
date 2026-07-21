@@ -52,5 +52,20 @@ public interface NextEditPredictionEventOrBuilder extends
    */
   com.google.wireless.android.sdk.stats.NextEditPredictionEvent.PredictionRejectedOrBuilder getRejectedOrBuilder();
 
+  /**
+   * <code>.android_studio.NextEditPredictionEvent.EnabledStatus enabled_status = 4 [lazy = true];</code>
+   * @return Whether the enabledStatus field is set.
+   */
+  boolean hasEnabledStatus();
+  /**
+   * <code>.android_studio.NextEditPredictionEvent.EnabledStatus enabled_status = 4 [lazy = true];</code>
+   * @return The enabledStatus.
+   */
+  com.google.wireless.android.sdk.stats.NextEditPredictionEvent.EnabledStatus getEnabledStatus();
+  /**
+   * <code>.android_studio.NextEditPredictionEvent.EnabledStatus enabled_status = 4 [lazy = true];</code>
+   */
+  com.google.wireless.android.sdk.stats.NextEditPredictionEvent.EnabledStatusOrBuilder getEnabledStatusOrBuilder();
+
   com.google.wireless.android.sdk.stats.NextEditPredictionEvent.NextEditPredictionCase getNextEditPredictionCase();
 }
