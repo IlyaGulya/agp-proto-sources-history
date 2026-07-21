@@ -7125,4 +7125,31 @@ public interface AndroidStudioEventOrBuilder extends
    * <code>optional .android_studio.GeminiTelemetryEvent gemini_telemetry_event = 255 [lazy = true];</code>
    */
   com.google.wireless.android.sdk.stats.GeminiTelemetryEventOrBuilder getGeminiTelemetryEventOrBuilder();
+
+  /**
+   * <pre>
+   * set when kind = PLAY_PUBLISHING_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.PlayPublishingEvent play_publishing_event = 256 [lazy = true];</code>
+   * @return Whether the playPublishingEvent field is set.
+   */
+  boolean hasPlayPublishingEvent();
+  /**
+   * <pre>
+   * set when kind = PLAY_PUBLISHING_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.PlayPublishingEvent play_publishing_event = 256 [lazy = true];</code>
+   * @return The playPublishingEvent.
+   */
+  com.google.wireless.android.sdk.stats.PlayPublishingEvent getPlayPublishingEvent();
+  /**
+   * <pre>
+   * set when kind = PLAY_PUBLISHING_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.PlayPublishingEvent play_publishing_event = 256 [lazy = true];</code>
+   */
+  com.google.wireless.android.sdk.stats.PlayPublishingEventOrBuilder getPlayPublishingEventOrBuilder();
 }

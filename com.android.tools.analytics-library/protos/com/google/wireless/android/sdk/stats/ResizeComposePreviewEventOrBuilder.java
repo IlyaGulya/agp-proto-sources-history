@@ -53,7 +53,7 @@ public interface ResizeComposePreviewEventOrBuilder extends
    *
    * <code>optional int32 stopped_device_width = 3 [deprecated = true];</code>
    * @deprecated android_studio.ResizeComposePreviewEvent.stopped_device_width is deprecated.
-   *     See studio_stats.proto;l=19387
+   *     See studio_stats.proto;l=19494
    * @return Whether the stoppedDeviceWidth field is set.
    */
   @java.lang.Deprecated boolean hasStoppedDeviceWidth();
@@ -65,7 +65,7 @@ public interface ResizeComposePreviewEventOrBuilder extends
    *
    * <code>optional int32 stopped_device_width = 3 [deprecated = true];</code>
    * @deprecated android_studio.ResizeComposePreviewEvent.stopped_device_width is deprecated.
-   *     See studio_stats.proto;l=19387
+   *     See studio_stats.proto;l=19494
    * @return The stoppedDeviceWidth.
    */
   @java.lang.Deprecated int getStoppedDeviceWidth();
@@ -73,14 +73,14 @@ public interface ResizeComposePreviewEventOrBuilder extends
   /**
    * <code>optional int32 stopped_device_height = 4 [deprecated = true];</code>
    * @deprecated android_studio.ResizeComposePreviewEvent.stopped_device_height is deprecated.
-   *     See studio_stats.proto;l=19388
+   *     See studio_stats.proto;l=19495
    * @return Whether the stoppedDeviceHeight field is set.
    */
   @java.lang.Deprecated boolean hasStoppedDeviceHeight();
   /**
    * <code>optional int32 stopped_device_height = 4 [deprecated = true];</code>
    * @deprecated android_studio.ResizeComposePreviewEvent.stopped_device_height is deprecated.
-   *     See studio_stats.proto;l=19388
+   *     See studio_stats.proto;l=19495
    * @return The stoppedDeviceHeight.
    */
   @java.lang.Deprecated int getStoppedDeviceHeight();
@@ -93,7 +93,7 @@ public interface ResizeComposePreviewEventOrBuilder extends
    *
    * <code>optional int32 saved_device_width = 5 [deprecated = true];</code>
    * @deprecated android_studio.ResizeComposePreviewEvent.saved_device_width is deprecated.
-   *     See studio_stats.proto;l=19392
+   *     See studio_stats.proto;l=19499
    * @return Whether the savedDeviceWidth field is set.
    */
   @java.lang.Deprecated boolean hasSavedDeviceWidth();
@@ -105,7 +105,7 @@ public interface ResizeComposePreviewEventOrBuilder extends
    *
    * <code>optional int32 saved_device_width = 5 [deprecated = true];</code>
    * @deprecated android_studio.ResizeComposePreviewEvent.saved_device_width is deprecated.
-   *     See studio_stats.proto;l=19392
+   *     See studio_stats.proto;l=19499
    * @return The savedDeviceWidth.
    */
   @java.lang.Deprecated int getSavedDeviceWidth();
@@ -113,14 +113,14 @@ public interface ResizeComposePreviewEventOrBuilder extends
   /**
    * <code>optional int32 saved_device_height = 6 [deprecated = true];</code>
    * @deprecated android_studio.ResizeComposePreviewEvent.saved_device_height is deprecated.
-   *     See studio_stats.proto;l=19393
+   *     See studio_stats.proto;l=19500
    * @return Whether the savedDeviceHeight field is set.
    */
   @java.lang.Deprecated boolean hasSavedDeviceHeight();
   /**
    * <code>optional int32 saved_device_height = 6 [deprecated = true];</code>
    * @deprecated android_studio.ResizeComposePreviewEvent.saved_device_height is deprecated.
-   *     See studio_stats.proto;l=19393
+   *     See studio_stats.proto;l=19500
    * @return The savedDeviceHeight.
    */
   @java.lang.Deprecated int getSavedDeviceHeight();

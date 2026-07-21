@@ -1708,6 +1708,641 @@ private static final long serialVersionUID = 0L;
 
   }
 
+  public interface SearchResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:android_studio.SmlRagEvent.SearchResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * The number of characters in the final response.
+     * </pre>
+     *
+     * <code>optional int32 response_length = 1;</code>
+     * @return Whether the responseLength field is set.
+     */
+    boolean hasResponseLength();
+    /**
+     * <pre>
+     * The number of characters in the final response.
+     * </pre>
+     *
+     * <code>optional int32 response_length = 1;</code>
+     * @return The responseLength.
+     */
+    int getResponseLength();
+
+    /**
+     * <pre>
+     * The number of characters in the search results before path deduplication.
+     * </pre>
+     *
+     * <code>optional int32 raw_result_length = 2;</code>
+     * @return Whether the rawResultLength field is set.
+     */
+    boolean hasRawResultLength();
+    /**
+     * <pre>
+     * The number of characters in the search results before path deduplication.
+     * </pre>
+     *
+     * <code>optional int32 raw_result_length = 2;</code>
+     * @return The rawResultLength.
+     */
+    int getRawResultLength();
+  }
+  /**
+   * Protobuf type {@code android_studio.SmlRagEvent.SearchResponse}
+   */
+  public static final class SearchResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:android_studio.SmlRagEvent.SearchResponse)
+      SearchResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use SearchResponse.newBuilder() to construct.
+    private SearchResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private SearchResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new SearchResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_SmlRagEvent_SearchResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_SmlRagEvent_SearchResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.google.wireless.android.sdk.stats.SmlRagEvent.SearchResponse.class, com.google.wireless.android.sdk.stats.SmlRagEvent.SearchResponse.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int RESPONSE_LENGTH_FIELD_NUMBER = 1;
+    private int responseLength_ = 0;
+    /**
+     * <pre>
+     * The number of characters in the final response.
+     * </pre>
+     *
+     * <code>optional int32 response_length = 1;</code>
+     * @return Whether the responseLength field is set.
+     */
+    @java.lang.Override
+    public boolean hasResponseLength() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <pre>
+     * The number of characters in the final response.
+     * </pre>
+     *
+     * <code>optional int32 response_length = 1;</code>
+     * @return The responseLength.
+     */
+    @java.lang.Override
+    public int getResponseLength() {
+      return responseLength_;
+    }
+
+    public static final int RAW_RESULT_LENGTH_FIELD_NUMBER = 2;
+    private int rawResultLength_ = 0;
+    /**
+     * <pre>
+     * The number of characters in the search results before path deduplication.
+     * </pre>
+     *
+     * <code>optional int32 raw_result_length = 2;</code>
+     * @return Whether the rawResultLength field is set.
+     */
+    @java.lang.Override
+    public boolean hasRawResultLength() {
+      return ((bitField0_ & 0x00000002) != 0);
+    }
+    /**
+     * <pre>
+     * The number of characters in the search results before path deduplication.
+     * </pre>
+     *
+     * <code>optional int32 raw_result_length = 2;</code>
+     * @return The rawResultLength.
+     */
+    @java.lang.Override
+    public int getRawResultLength() {
+      return rawResultLength_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (((bitField0_ & 0x00000001) != 0)) {
+        output.writeInt32(1, responseLength_);
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        output.writeInt32(2, rawResultLength_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(1, responseLength_);
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(2, rawResultLength_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.google.wireless.android.sdk.stats.SmlRagEvent.SearchResponse)) {
+        return super.equals(obj);
+      }
+      com.google.wireless.android.sdk.stats.SmlRagEvent.SearchResponse other = (com.google.wireless.android.sdk.stats.SmlRagEvent.SearchResponse) obj;
+
+      if (hasResponseLength() != other.hasResponseLength()) return false;
+      if (hasResponseLength()) {
+        if (getResponseLength()
+            != other.getResponseLength()) return false;
+      }
+      if (hasRawResultLength() != other.hasRawResultLength()) return false;
+      if (hasRawResultLength()) {
+        if (getRawResultLength()
+            != other.getRawResultLength()) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasResponseLength()) {
+        hash = (37 * hash) + RESPONSE_LENGTH_FIELD_NUMBER;
+        hash = (53 * hash) + getResponseLength();
+      }
+      if (hasRawResultLength()) {
+        hash = (37 * hash) + RAW_RESULT_LENGTH_FIELD_NUMBER;
+        hash = (53 * hash) + getRawResultLength();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.google.wireless.android.sdk.stats.SmlRagEvent.SearchResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.google.wireless.android.sdk.stats.SmlRagEvent.SearchResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.google.wireless.android.sdk.stats.SmlRagEvent.SearchResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.google.wireless.android.sdk.stats.SmlRagEvent.SearchResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.google.wireless.android.sdk.stats.SmlRagEvent.SearchResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.google.wireless.android.sdk.stats.SmlRagEvent.SearchResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.google.wireless.android.sdk.stats.SmlRagEvent.SearchResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.google.wireless.android.sdk.stats.SmlRagEvent.SearchResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.google.wireless.android.sdk.stats.SmlRagEvent.SearchResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.google.wireless.android.sdk.stats.SmlRagEvent.SearchResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.google.wireless.android.sdk.stats.SmlRagEvent.SearchResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.google.wireless.android.sdk.stats.SmlRagEvent.SearchResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.google.wireless.android.sdk.stats.SmlRagEvent.SearchResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code android_studio.SmlRagEvent.SearchResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:android_studio.SmlRagEvent.SearchResponse)
+        com.google.wireless.android.sdk.stats.SmlRagEvent.SearchResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_SmlRagEvent_SearchResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_SmlRagEvent_SearchResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.google.wireless.android.sdk.stats.SmlRagEvent.SearchResponse.class, com.google.wireless.android.sdk.stats.SmlRagEvent.SearchResponse.Builder.class);
+      }
+
+      // Construct using com.google.wireless.android.sdk.stats.SmlRagEvent.SearchResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        responseLength_ = 0;
+        rawResultLength_ = 0;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_SmlRagEvent_SearchResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.google.wireless.android.sdk.stats.SmlRagEvent.SearchResponse getDefaultInstanceForType() {
+        return com.google.wireless.android.sdk.stats.SmlRagEvent.SearchResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.google.wireless.android.sdk.stats.SmlRagEvent.SearchResponse build() {
+        com.google.wireless.android.sdk.stats.SmlRagEvent.SearchResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.google.wireless.android.sdk.stats.SmlRagEvent.SearchResponse buildPartial() {
+        com.google.wireless.android.sdk.stats.SmlRagEvent.SearchResponse result = new com.google.wireless.android.sdk.stats.SmlRagEvent.SearchResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.google.wireless.android.sdk.stats.SmlRagEvent.SearchResponse result) {
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.responseLength_ = responseLength_;
+          to_bitField0_ |= 0x00000001;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.rawResultLength_ = rawResultLength_;
+          to_bitField0_ |= 0x00000002;
+        }
+        result.bitField0_ |= to_bitField0_;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.google.wireless.android.sdk.stats.SmlRagEvent.SearchResponse) {
+          return mergeFrom((com.google.wireless.android.sdk.stats.SmlRagEvent.SearchResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.google.wireless.android.sdk.stats.SmlRagEvent.SearchResponse other) {
+        if (other == com.google.wireless.android.sdk.stats.SmlRagEvent.SearchResponse.getDefaultInstance()) return this;
+        if (other.hasResponseLength()) {
+          setResponseLength(other.getResponseLength());
+        }
+        if (other.hasRawResultLength()) {
+          setRawResultLength(other.getRawResultLength());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                responseLength_ = input.readInt32();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              case 16: {
+                rawResultLength_ = input.readInt32();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 16
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private int responseLength_ ;
+      /**
+       * <pre>
+       * The number of characters in the final response.
+       * </pre>
+       *
+       * <code>optional int32 response_length = 1;</code>
+       * @return Whether the responseLength field is set.
+       */
+      @java.lang.Override
+      public boolean hasResponseLength() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <pre>
+       * The number of characters in the final response.
+       * </pre>
+       *
+       * <code>optional int32 response_length = 1;</code>
+       * @return The responseLength.
+       */
+      @java.lang.Override
+      public int getResponseLength() {
+        return responseLength_;
+      }
+      /**
+       * <pre>
+       * The number of characters in the final response.
+       * </pre>
+       *
+       * <code>optional int32 response_length = 1;</code>
+       * @param value The responseLength to set.
+       * @return This builder for chaining.
+       */
+      public Builder setResponseLength(int value) {
+
+        responseLength_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The number of characters in the final response.
+       * </pre>
+       *
+       * <code>optional int32 response_length = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearResponseLength() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        responseLength_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int rawResultLength_ ;
+      /**
+       * <pre>
+       * The number of characters in the search results before path deduplication.
+       * </pre>
+       *
+       * <code>optional int32 raw_result_length = 2;</code>
+       * @return Whether the rawResultLength field is set.
+       */
+      @java.lang.Override
+      public boolean hasRawResultLength() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <pre>
+       * The number of characters in the search results before path deduplication.
+       * </pre>
+       *
+       * <code>optional int32 raw_result_length = 2;</code>
+       * @return The rawResultLength.
+       */
+      @java.lang.Override
+      public int getRawResultLength() {
+        return rawResultLength_;
+      }
+      /**
+       * <pre>
+       * The number of characters in the search results before path deduplication.
+       * </pre>
+       *
+       * <code>optional int32 raw_result_length = 2;</code>
+       * @param value The rawResultLength to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRawResultLength(int value) {
+
+        rawResultLength_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The number of characters in the search results before path deduplication.
+       * </pre>
+       *
+       * <code>optional int32 raw_result_length = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRawResultLength() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        rawResultLength_ = 0;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:android_studio.SmlRagEvent.SearchResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:android_studio.SmlRagEvent.SearchResponse)
+    private static final com.google.wireless.android.sdk.stats.SmlRagEvent.SearchResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.google.wireless.android.sdk.stats.SmlRagEvent.SearchResponse();
+    }
+
+    public static com.google.wireless.android.sdk.stats.SmlRagEvent.SearchResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<SearchResponse>
+        PARSER = new com.google.protobuf.AbstractParser<SearchResponse>() {
+      @java.lang.Override
+      public SearchResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<SearchResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<SearchResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.wireless.android.sdk.stats.SmlRagEvent.SearchResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   public interface RagIndexerMetricsOrBuilder extends
       // @@protoc_insertion_point(interface_extends:android_studio.SmlRagEvent.RagIndexerMetrics)
       com.google.protobuf.MessageOrBuilder {
@@ -3386,6 +4021,33 @@ private static final long serialVersionUID = 0L;
      * @return The totalIndexedDocs.
      */
     int getTotalIndexedDocs();
+
+    /**
+     * <pre>
+     * The search response.
+     * </pre>
+     *
+     * <code>optional .android_studio.SmlRagEvent.SearchResponse response = 7;</code>
+     * @return Whether the response field is set.
+     */
+    boolean hasResponse();
+    /**
+     * <pre>
+     * The search response.
+     * </pre>
+     *
+     * <code>optional .android_studio.SmlRagEvent.SearchResponse response = 7;</code>
+     * @return The response.
+     */
+    com.google.wireless.android.sdk.stats.SmlRagEvent.SearchResponse getResponse();
+    /**
+     * <pre>
+     * The search response.
+     * </pre>
+     *
+     * <code>optional .android_studio.SmlRagEvent.SearchResponse response = 7;</code>
+     */
+    com.google.wireless.android.sdk.stats.SmlRagEvent.SearchResponseOrBuilder getResponseOrBuilder();
   }
   /**
    * Protobuf type {@code android_studio.SmlRagEvent.RagToolMetrics}
@@ -3625,6 +4287,44 @@ private static final long serialVersionUID = 0L;
       return totalIndexedDocs_;
     }
 
+    public static final int RESPONSE_FIELD_NUMBER = 7;
+    private com.google.wireless.android.sdk.stats.SmlRagEvent.SearchResponse response_;
+    /**
+     * <pre>
+     * The search response.
+     * </pre>
+     *
+     * <code>optional .android_studio.SmlRagEvent.SearchResponse response = 7;</code>
+     * @return Whether the response field is set.
+     */
+    @java.lang.Override
+    public boolean hasResponse() {
+      return ((bitField0_ & 0x00000040) != 0);
+    }
+    /**
+     * <pre>
+     * The search response.
+     * </pre>
+     *
+     * <code>optional .android_studio.SmlRagEvent.SearchResponse response = 7;</code>
+     * @return The response.
+     */
+    @java.lang.Override
+    public com.google.wireless.android.sdk.stats.SmlRagEvent.SearchResponse getResponse() {
+      return response_ == null ? com.google.wireless.android.sdk.stats.SmlRagEvent.SearchResponse.getDefaultInstance() : response_;
+    }
+    /**
+     * <pre>
+     * The search response.
+     * </pre>
+     *
+     * <code>optional .android_studio.SmlRagEvent.SearchResponse response = 7;</code>
+     */
+    @java.lang.Override
+    public com.google.wireless.android.sdk.stats.SmlRagEvent.SearchResponseOrBuilder getResponseOrBuilder() {
+      return response_ == null ? com.google.wireless.android.sdk.stats.SmlRagEvent.SearchResponse.getDefaultInstance() : response_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -3657,6 +4357,9 @@ private static final long serialVersionUID = 0L;
       if (((bitField0_ & 0x00000020) != 0)) {
         output.writeInt32(6, totalIndexedDocs_);
       }
+      if (((bitField0_ & 0x00000040) != 0)) {
+        output.writeMessage(7, getResponse());
+      }
       getUnknownFields().writeTo(output);
     }
 
@@ -3688,6 +4391,10 @@ private static final long serialVersionUID = 0L;
       if (((bitField0_ & 0x00000020) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeInt32Size(6, totalIndexedDocs_);
+      }
+      if (((bitField0_ & 0x00000040) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(7, getResponse());
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -3734,6 +4441,11 @@ private static final long serialVersionUID = 0L;
         if (getTotalIndexedDocs()
             != other.getTotalIndexedDocs()) return false;
       }
+      if (hasResponse() != other.hasResponse()) return false;
+      if (hasResponse()) {
+        if (!getResponse()
+            .equals(other.getResponse())) return false;
+      }
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -3769,6 +4481,10 @@ private static final long serialVersionUID = 0L;
       if (hasTotalIndexedDocs()) {
         hash = (37 * hash) + TOTAL_INDEXED_DOCS_FIELD_NUMBER;
         hash = (53 * hash) + getTotalIndexedDocs();
+      }
+      if (hasResponse()) {
+        hash = (37 * hash) + RESPONSE_FIELD_NUMBER;
+        hash = (53 * hash) + getResponse().hashCode();
       }
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
@@ -3887,13 +4603,19 @@ private static final long serialVersionUID = 0L;
 
       // Construct using com.google.wireless.android.sdk.stats.SmlRagEvent.RagToolMetrics.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getResponseFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -3905,6 +4627,11 @@ private static final long serialVersionUID = 0L;
         generatedFiles_ = 0;
         searchTimeMs_ = 0L;
         totalIndexedDocs_ = 0;
+        response_ = null;
+        if (responseBuilder_ != null) {
+          responseBuilder_.dispose();
+          responseBuilder_ = null;
+        }
         return this;
       }
 
@@ -3963,6 +4690,12 @@ private static final long serialVersionUID = 0L;
           result.totalIndexedDocs_ = totalIndexedDocs_;
           to_bitField0_ |= 0x00000020;
         }
+        if (((from_bitField0_ & 0x00000040) != 0)) {
+          result.response_ = responseBuilder_ == null
+              ? response_
+              : responseBuilder_.build();
+          to_bitField0_ |= 0x00000040;
+        }
         result.bitField0_ |= to_bitField0_;
       }
 
@@ -3997,6 +4730,9 @@ private static final long serialVersionUID = 0L;
         }
         if (other.hasTotalIndexedDocs()) {
           setTotalIndexedDocs(other.getTotalIndexedDocs());
+        }
+        if (other.hasResponse()) {
+          mergeResponse(other.getResponse());
         }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
@@ -4054,6 +4790,13 @@ private static final long serialVersionUID = 0L;
                 bitField0_ |= 0x00000020;
                 break;
               } // case 48
+              case 58: {
+                input.readMessage(
+                    getResponseFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000040;
+                break;
+              } // case 58
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -4464,6 +5207,161 @@ private static final long serialVersionUID = 0L;
         onChanged();
         return this;
       }
+
+      private com.google.wireless.android.sdk.stats.SmlRagEvent.SearchResponse response_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.wireless.android.sdk.stats.SmlRagEvent.SearchResponse, com.google.wireless.android.sdk.stats.SmlRagEvent.SearchResponse.Builder, com.google.wireless.android.sdk.stats.SmlRagEvent.SearchResponseOrBuilder> responseBuilder_;
+      /**
+       * <pre>
+       * The search response.
+       * </pre>
+       *
+       * <code>optional .android_studio.SmlRagEvent.SearchResponse response = 7;</code>
+       * @return Whether the response field is set.
+       */
+      public boolean hasResponse() {
+        return ((bitField0_ & 0x00000040) != 0);
+      }
+      /**
+       * <pre>
+       * The search response.
+       * </pre>
+       *
+       * <code>optional .android_studio.SmlRagEvent.SearchResponse response = 7;</code>
+       * @return The response.
+       */
+      public com.google.wireless.android.sdk.stats.SmlRagEvent.SearchResponse getResponse() {
+        if (responseBuilder_ == null) {
+          return response_ == null ? com.google.wireless.android.sdk.stats.SmlRagEvent.SearchResponse.getDefaultInstance() : response_;
+        } else {
+          return responseBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * The search response.
+       * </pre>
+       *
+       * <code>optional .android_studio.SmlRagEvent.SearchResponse response = 7;</code>
+       */
+      public Builder setResponse(com.google.wireless.android.sdk.stats.SmlRagEvent.SearchResponse value) {
+        if (responseBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          response_ = value;
+        } else {
+          responseBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000040;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The search response.
+       * </pre>
+       *
+       * <code>optional .android_studio.SmlRagEvent.SearchResponse response = 7;</code>
+       */
+      public Builder setResponse(
+          com.google.wireless.android.sdk.stats.SmlRagEvent.SearchResponse.Builder builderForValue) {
+        if (responseBuilder_ == null) {
+          response_ = builderForValue.build();
+        } else {
+          responseBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000040;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The search response.
+       * </pre>
+       *
+       * <code>optional .android_studio.SmlRagEvent.SearchResponse response = 7;</code>
+       */
+      public Builder mergeResponse(com.google.wireless.android.sdk.stats.SmlRagEvent.SearchResponse value) {
+        if (responseBuilder_ == null) {
+          if (((bitField0_ & 0x00000040) != 0) &&
+            response_ != null &&
+            response_ != com.google.wireless.android.sdk.stats.SmlRagEvent.SearchResponse.getDefaultInstance()) {
+            getResponseBuilder().mergeFrom(value);
+          } else {
+            response_ = value;
+          }
+        } else {
+          responseBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000040;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The search response.
+       * </pre>
+       *
+       * <code>optional .android_studio.SmlRagEvent.SearchResponse response = 7;</code>
+       */
+      public Builder clearResponse() {
+        bitField0_ = (bitField0_ & ~0x00000040);
+        response_ = null;
+        if (responseBuilder_ != null) {
+          responseBuilder_.dispose();
+          responseBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The search response.
+       * </pre>
+       *
+       * <code>optional .android_studio.SmlRagEvent.SearchResponse response = 7;</code>
+       */
+      public com.google.wireless.android.sdk.stats.SmlRagEvent.SearchResponse.Builder getResponseBuilder() {
+        bitField0_ |= 0x00000040;
+        onChanged();
+        return getResponseFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * The search response.
+       * </pre>
+       *
+       * <code>optional .android_studio.SmlRagEvent.SearchResponse response = 7;</code>
+       */
+      public com.google.wireless.android.sdk.stats.SmlRagEvent.SearchResponseOrBuilder getResponseOrBuilder() {
+        if (responseBuilder_ != null) {
+          return responseBuilder_.getMessageOrBuilder();
+        } else {
+          return response_ == null ?
+              com.google.wireless.android.sdk.stats.SmlRagEvent.SearchResponse.getDefaultInstance() : response_;
+        }
+      }
+      /**
+       * <pre>
+       * The search response.
+       * </pre>
+       *
+       * <code>optional .android_studio.SmlRagEvent.SearchResponse response = 7;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.wireless.android.sdk.stats.SmlRagEvent.SearchResponse, com.google.wireless.android.sdk.stats.SmlRagEvent.SearchResponse.Builder, com.google.wireless.android.sdk.stats.SmlRagEvent.SearchResponseOrBuilder> 
+          getResponseFieldBuilder() {
+        if (responseBuilder_ == null) {
+          responseBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.wireless.android.sdk.stats.SmlRagEvent.SearchResponse, com.google.wireless.android.sdk.stats.SmlRagEvent.SearchResponse.Builder, com.google.wireless.android.sdk.stats.SmlRagEvent.SearchResponseOrBuilder>(
+                  getResponse(),
+                  getParentForChildren(),
+                  isClean());
+          response_ = null;
+        }
+        return responseBuilder_;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -4625,6 +5523,33 @@ private static final long serialVersionUID = 0L;
      * <code>optional .android_studio.SmlRagEvent.SearchArguments search_arguments = 4;</code>
      */
     com.google.wireless.android.sdk.stats.SmlRagEvent.SearchArgumentsOrBuilder getSearchArgumentsOrBuilder();
+
+    /**
+     * <pre>
+     * The search response.
+     * </pre>
+     *
+     * <code>optional .android_studio.SmlRagEvent.SearchResponse response = 5;</code>
+     * @return Whether the response field is set.
+     */
+    boolean hasResponse();
+    /**
+     * <pre>
+     * The search response.
+     * </pre>
+     *
+     * <code>optional .android_studio.SmlRagEvent.SearchResponse response = 5;</code>
+     * @return The response.
+     */
+    com.google.wireless.android.sdk.stats.SmlRagEvent.SearchResponse getResponse();
+    /**
+     * <pre>
+     * The search response.
+     * </pre>
+     *
+     * <code>optional .android_studio.SmlRagEvent.SearchResponse response = 5;</code>
+     */
+    com.google.wireless.android.sdk.stats.SmlRagEvent.SearchResponseOrBuilder getResponseOrBuilder();
   }
   /**
    * Protobuf type {@code android_studio.SmlRagEvent.FindDeclarationMetrics}
@@ -4816,6 +5741,44 @@ private static final long serialVersionUID = 0L;
       return searchArguments_ == null ? com.google.wireless.android.sdk.stats.SmlRagEvent.SearchArguments.getDefaultInstance() : searchArguments_;
     }
 
+    public static final int RESPONSE_FIELD_NUMBER = 5;
+    private com.google.wireless.android.sdk.stats.SmlRagEvent.SearchResponse response_;
+    /**
+     * <pre>
+     * The search response.
+     * </pre>
+     *
+     * <code>optional .android_studio.SmlRagEvent.SearchResponse response = 5;</code>
+     * @return Whether the response field is set.
+     */
+    @java.lang.Override
+    public boolean hasResponse() {
+      return ((bitField0_ & 0x00000010) != 0);
+    }
+    /**
+     * <pre>
+     * The search response.
+     * </pre>
+     *
+     * <code>optional .android_studio.SmlRagEvent.SearchResponse response = 5;</code>
+     * @return The response.
+     */
+    @java.lang.Override
+    public com.google.wireless.android.sdk.stats.SmlRagEvent.SearchResponse getResponse() {
+      return response_ == null ? com.google.wireless.android.sdk.stats.SmlRagEvent.SearchResponse.getDefaultInstance() : response_;
+    }
+    /**
+     * <pre>
+     * The search response.
+     * </pre>
+     *
+     * <code>optional .android_studio.SmlRagEvent.SearchResponse response = 5;</code>
+     */
+    @java.lang.Override
+    public com.google.wireless.android.sdk.stats.SmlRagEvent.SearchResponseOrBuilder getResponseOrBuilder() {
+      return response_ == null ? com.google.wireless.android.sdk.stats.SmlRagEvent.SearchResponse.getDefaultInstance() : response_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -4842,6 +5805,9 @@ private static final long serialVersionUID = 0L;
       if (((bitField0_ & 0x00000008) != 0)) {
         output.writeMessage(4, getSearchArguments());
       }
+      if (((bitField0_ & 0x00000010) != 0)) {
+        output.writeMessage(5, getResponse());
+      }
       getUnknownFields().writeTo(output);
     }
 
@@ -4865,6 +5831,10 @@ private static final long serialVersionUID = 0L;
       if (((bitField0_ & 0x00000008) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, getSearchArguments());
+      }
+      if (((bitField0_ & 0x00000010) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(5, getResponse());
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -4901,6 +5871,11 @@ private static final long serialVersionUID = 0L;
         if (!getSearchArguments()
             .equals(other.getSearchArguments())) return false;
       }
+      if (hasResponse() != other.hasResponse()) return false;
+      if (hasResponse()) {
+        if (!getResponse()
+            .equals(other.getResponse())) return false;
+      }
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -4928,6 +5903,10 @@ private static final long serialVersionUID = 0L;
       if (hasSearchArguments()) {
         hash = (37 * hash) + SEARCH_ARGUMENTS_FIELD_NUMBER;
         hash = (53 * hash) + getSearchArguments().hashCode();
+      }
+      if (hasResponse()) {
+        hash = (37 * hash) + RESPONSE_FIELD_NUMBER;
+        hash = (53 * hash) + getResponse().hashCode();
       }
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
@@ -5058,6 +6037,7 @@ private static final long serialVersionUID = 0L;
         if (com.google.protobuf.GeneratedMessageV3
                 .alwaysUseFieldBuilders) {
           getSearchArgumentsFieldBuilder();
+          getResponseFieldBuilder();
         }
       }
       @java.lang.Override
@@ -5071,6 +6051,11 @@ private static final long serialVersionUID = 0L;
         if (searchArgumentsBuilder_ != null) {
           searchArgumentsBuilder_.dispose();
           searchArgumentsBuilder_ = null;
+        }
+        response_ = null;
+        if (responseBuilder_ != null) {
+          responseBuilder_.dispose();
+          responseBuilder_ = null;
         }
         return this;
       }
@@ -5124,6 +6109,12 @@ private static final long serialVersionUID = 0L;
               : searchArgumentsBuilder_.build();
           to_bitField0_ |= 0x00000008;
         }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.response_ = responseBuilder_ == null
+              ? response_
+              : responseBuilder_.build();
+          to_bitField0_ |= 0x00000010;
+        }
         result.bitField0_ |= to_bitField0_;
       }
 
@@ -5152,6 +6143,9 @@ private static final long serialVersionUID = 0L;
         }
         if (other.hasSearchArguments()) {
           mergeSearchArguments(other.getSearchArguments());
+        }
+        if (other.hasResponse()) {
+          mergeResponse(other.getResponse());
         }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
@@ -5201,6 +6195,13 @@ private static final long serialVersionUID = 0L;
                 bitField0_ |= 0x00000008;
                 break;
               } // case 34
+              case 42: {
+                input.readMessage(
+                    getResponseFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 42
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -5588,6 +6589,161 @@ private static final long serialVersionUID = 0L;
         }
         return searchArgumentsBuilder_;
       }
+
+      private com.google.wireless.android.sdk.stats.SmlRagEvent.SearchResponse response_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.wireless.android.sdk.stats.SmlRagEvent.SearchResponse, com.google.wireless.android.sdk.stats.SmlRagEvent.SearchResponse.Builder, com.google.wireless.android.sdk.stats.SmlRagEvent.SearchResponseOrBuilder> responseBuilder_;
+      /**
+       * <pre>
+       * The search response.
+       * </pre>
+       *
+       * <code>optional .android_studio.SmlRagEvent.SearchResponse response = 5;</code>
+       * @return Whether the response field is set.
+       */
+      public boolean hasResponse() {
+        return ((bitField0_ & 0x00000010) != 0);
+      }
+      /**
+       * <pre>
+       * The search response.
+       * </pre>
+       *
+       * <code>optional .android_studio.SmlRagEvent.SearchResponse response = 5;</code>
+       * @return The response.
+       */
+      public com.google.wireless.android.sdk.stats.SmlRagEvent.SearchResponse getResponse() {
+        if (responseBuilder_ == null) {
+          return response_ == null ? com.google.wireless.android.sdk.stats.SmlRagEvent.SearchResponse.getDefaultInstance() : response_;
+        } else {
+          return responseBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * The search response.
+       * </pre>
+       *
+       * <code>optional .android_studio.SmlRagEvent.SearchResponse response = 5;</code>
+       */
+      public Builder setResponse(com.google.wireless.android.sdk.stats.SmlRagEvent.SearchResponse value) {
+        if (responseBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          response_ = value;
+        } else {
+          responseBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The search response.
+       * </pre>
+       *
+       * <code>optional .android_studio.SmlRagEvent.SearchResponse response = 5;</code>
+       */
+      public Builder setResponse(
+          com.google.wireless.android.sdk.stats.SmlRagEvent.SearchResponse.Builder builderForValue) {
+        if (responseBuilder_ == null) {
+          response_ = builderForValue.build();
+        } else {
+          responseBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The search response.
+       * </pre>
+       *
+       * <code>optional .android_studio.SmlRagEvent.SearchResponse response = 5;</code>
+       */
+      public Builder mergeResponse(com.google.wireless.android.sdk.stats.SmlRagEvent.SearchResponse value) {
+        if (responseBuilder_ == null) {
+          if (((bitField0_ & 0x00000010) != 0) &&
+            response_ != null &&
+            response_ != com.google.wireless.android.sdk.stats.SmlRagEvent.SearchResponse.getDefaultInstance()) {
+            getResponseBuilder().mergeFrom(value);
+          } else {
+            response_ = value;
+          }
+        } else {
+          responseBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The search response.
+       * </pre>
+       *
+       * <code>optional .android_studio.SmlRagEvent.SearchResponse response = 5;</code>
+       */
+      public Builder clearResponse() {
+        bitField0_ = (bitField0_ & ~0x00000010);
+        response_ = null;
+        if (responseBuilder_ != null) {
+          responseBuilder_.dispose();
+          responseBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The search response.
+       * </pre>
+       *
+       * <code>optional .android_studio.SmlRagEvent.SearchResponse response = 5;</code>
+       */
+      public com.google.wireless.android.sdk.stats.SmlRagEvent.SearchResponse.Builder getResponseBuilder() {
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return getResponseFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * The search response.
+       * </pre>
+       *
+       * <code>optional .android_studio.SmlRagEvent.SearchResponse response = 5;</code>
+       */
+      public com.google.wireless.android.sdk.stats.SmlRagEvent.SearchResponseOrBuilder getResponseOrBuilder() {
+        if (responseBuilder_ != null) {
+          return responseBuilder_.getMessageOrBuilder();
+        } else {
+          return response_ == null ?
+              com.google.wireless.android.sdk.stats.SmlRagEvent.SearchResponse.getDefaultInstance() : response_;
+        }
+      }
+      /**
+       * <pre>
+       * The search response.
+       * </pre>
+       *
+       * <code>optional .android_studio.SmlRagEvent.SearchResponse response = 5;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.wireless.android.sdk.stats.SmlRagEvent.SearchResponse, com.google.wireless.android.sdk.stats.SmlRagEvent.SearchResponse.Builder, com.google.wireless.android.sdk.stats.SmlRagEvent.SearchResponseOrBuilder> 
+          getResponseFieldBuilder() {
+        if (responseBuilder_ == null) {
+          responseBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.wireless.android.sdk.stats.SmlRagEvent.SearchResponse, com.google.wireless.android.sdk.stats.SmlRagEvent.SearchResponse.Builder, com.google.wireless.android.sdk.stats.SmlRagEvent.SearchResponseOrBuilder>(
+                  getResponse(),
+                  getParentForChildren(),
+                  isClean());
+          response_ = null;
+        }
+        return responseBuilder_;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -5768,6 +6924,33 @@ private static final long serialVersionUID = 0L;
      * @return The totalIndexedDocs.
      */
     int getTotalIndexedDocs();
+
+    /**
+     * <pre>
+     * The search response.
+     * </pre>
+     *
+     * <code>optional .android_studio.SmlRagEvent.SearchResponse response = 6;</code>
+     * @return Whether the response field is set.
+     */
+    boolean hasResponse();
+    /**
+     * <pre>
+     * The search response.
+     * </pre>
+     *
+     * <code>optional .android_studio.SmlRagEvent.SearchResponse response = 6;</code>
+     * @return The response.
+     */
+    com.google.wireless.android.sdk.stats.SmlRagEvent.SearchResponse getResponse();
+    /**
+     * <pre>
+     * The search response.
+     * </pre>
+     *
+     * <code>optional .android_studio.SmlRagEvent.SearchResponse response = 6;</code>
+     */
+    com.google.wireless.android.sdk.stats.SmlRagEvent.SearchResponseOrBuilder getResponseOrBuilder();
   }
   /**
    * <pre>
@@ -5989,6 +7172,44 @@ private static final long serialVersionUID = 0L;
       return totalIndexedDocs_;
     }
 
+    public static final int RESPONSE_FIELD_NUMBER = 6;
+    private com.google.wireless.android.sdk.stats.SmlRagEvent.SearchResponse response_;
+    /**
+     * <pre>
+     * The search response.
+     * </pre>
+     *
+     * <code>optional .android_studio.SmlRagEvent.SearchResponse response = 6;</code>
+     * @return Whether the response field is set.
+     */
+    @java.lang.Override
+    public boolean hasResponse() {
+      return ((bitField0_ & 0x00000020) != 0);
+    }
+    /**
+     * <pre>
+     * The search response.
+     * </pre>
+     *
+     * <code>optional .android_studio.SmlRagEvent.SearchResponse response = 6;</code>
+     * @return The response.
+     */
+    @java.lang.Override
+    public com.google.wireless.android.sdk.stats.SmlRagEvent.SearchResponse getResponse() {
+      return response_ == null ? com.google.wireless.android.sdk.stats.SmlRagEvent.SearchResponse.getDefaultInstance() : response_;
+    }
+    /**
+     * <pre>
+     * The search response.
+     * </pre>
+     *
+     * <code>optional .android_studio.SmlRagEvent.SearchResponse response = 6;</code>
+     */
+    @java.lang.Override
+    public com.google.wireless.android.sdk.stats.SmlRagEvent.SearchResponseOrBuilder getResponseOrBuilder() {
+      return response_ == null ? com.google.wireless.android.sdk.stats.SmlRagEvent.SearchResponse.getDefaultInstance() : response_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -6018,6 +7239,9 @@ private static final long serialVersionUID = 0L;
       if (((bitField0_ & 0x00000010) != 0)) {
         output.writeInt32(5, totalIndexedDocs_);
       }
+      if (((bitField0_ & 0x00000020) != 0)) {
+        output.writeMessage(6, getResponse());
+      }
       getUnknownFields().writeTo(output);
     }
 
@@ -6045,6 +7269,10 @@ private static final long serialVersionUID = 0L;
       if (((bitField0_ & 0x00000010) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeInt32Size(5, totalIndexedDocs_);
+      }
+      if (((bitField0_ & 0x00000020) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(6, getResponse());
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -6086,6 +7314,11 @@ private static final long serialVersionUID = 0L;
         if (getTotalIndexedDocs()
             != other.getTotalIndexedDocs()) return false;
       }
+      if (hasResponse() != other.hasResponse()) return false;
+      if (hasResponse()) {
+        if (!getResponse()
+            .equals(other.getResponse())) return false;
+      }
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -6116,6 +7349,10 @@ private static final long serialVersionUID = 0L;
       if (hasTotalIndexedDocs()) {
         hash = (37 * hash) + TOTAL_INDEXED_DOCS_FIELD_NUMBER;
         hash = (53 * hash) + getTotalIndexedDocs();
+      }
+      if (hasResponse()) {
+        hash = (37 * hash) + RESPONSE_FIELD_NUMBER;
+        hash = (53 * hash) + getResponse().hashCode();
       }
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
@@ -6240,13 +7477,19 @@ private static final long serialVersionUID = 0L;
 
       // Construct using com.google.wireless.android.sdk.stats.SmlRagEvent.FindFileMetrics.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getResponseFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -6257,6 +7500,11 @@ private static final long serialVersionUID = 0L;
         bm25SearchCount_ = 0;
         foundFilesCount_ = 0;
         totalIndexedDocs_ = 0;
+        response_ = null;
+        if (responseBuilder_ != null) {
+          responseBuilder_.dispose();
+          responseBuilder_ = null;
+        }
         return this;
       }
 
@@ -6311,6 +7559,12 @@ private static final long serialVersionUID = 0L;
           result.totalIndexedDocs_ = totalIndexedDocs_;
           to_bitField0_ |= 0x00000010;
         }
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          result.response_ = responseBuilder_ == null
+              ? response_
+              : responseBuilder_.build();
+          to_bitField0_ |= 0x00000020;
+        }
         result.bitField0_ |= to_bitField0_;
       }
 
@@ -6342,6 +7596,9 @@ private static final long serialVersionUID = 0L;
         }
         if (other.hasTotalIndexedDocs()) {
           setTotalIndexedDocs(other.getTotalIndexedDocs());
+        }
+        if (other.hasResponse()) {
+          mergeResponse(other.getResponse());
         }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
@@ -6394,6 +7651,13 @@ private static final long serialVersionUID = 0L;
                 bitField0_ |= 0x00000010;
                 break;
               } // case 40
+              case 50: {
+                input.readMessage(
+                    getResponseFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000020;
+                break;
+              } // case 50
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -6754,6 +8018,161 @@ private static final long serialVersionUID = 0L;
         onChanged();
         return this;
       }
+
+      private com.google.wireless.android.sdk.stats.SmlRagEvent.SearchResponse response_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.wireless.android.sdk.stats.SmlRagEvent.SearchResponse, com.google.wireless.android.sdk.stats.SmlRagEvent.SearchResponse.Builder, com.google.wireless.android.sdk.stats.SmlRagEvent.SearchResponseOrBuilder> responseBuilder_;
+      /**
+       * <pre>
+       * The search response.
+       * </pre>
+       *
+       * <code>optional .android_studio.SmlRagEvent.SearchResponse response = 6;</code>
+       * @return Whether the response field is set.
+       */
+      public boolean hasResponse() {
+        return ((bitField0_ & 0x00000020) != 0);
+      }
+      /**
+       * <pre>
+       * The search response.
+       * </pre>
+       *
+       * <code>optional .android_studio.SmlRagEvent.SearchResponse response = 6;</code>
+       * @return The response.
+       */
+      public com.google.wireless.android.sdk.stats.SmlRagEvent.SearchResponse getResponse() {
+        if (responseBuilder_ == null) {
+          return response_ == null ? com.google.wireless.android.sdk.stats.SmlRagEvent.SearchResponse.getDefaultInstance() : response_;
+        } else {
+          return responseBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * The search response.
+       * </pre>
+       *
+       * <code>optional .android_studio.SmlRagEvent.SearchResponse response = 6;</code>
+       */
+      public Builder setResponse(com.google.wireless.android.sdk.stats.SmlRagEvent.SearchResponse value) {
+        if (responseBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          response_ = value;
+        } else {
+          responseBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The search response.
+       * </pre>
+       *
+       * <code>optional .android_studio.SmlRagEvent.SearchResponse response = 6;</code>
+       */
+      public Builder setResponse(
+          com.google.wireless.android.sdk.stats.SmlRagEvent.SearchResponse.Builder builderForValue) {
+        if (responseBuilder_ == null) {
+          response_ = builderForValue.build();
+        } else {
+          responseBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The search response.
+       * </pre>
+       *
+       * <code>optional .android_studio.SmlRagEvent.SearchResponse response = 6;</code>
+       */
+      public Builder mergeResponse(com.google.wireless.android.sdk.stats.SmlRagEvent.SearchResponse value) {
+        if (responseBuilder_ == null) {
+          if (((bitField0_ & 0x00000020) != 0) &&
+            response_ != null &&
+            response_ != com.google.wireless.android.sdk.stats.SmlRagEvent.SearchResponse.getDefaultInstance()) {
+            getResponseBuilder().mergeFrom(value);
+          } else {
+            response_ = value;
+          }
+        } else {
+          responseBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The search response.
+       * </pre>
+       *
+       * <code>optional .android_studio.SmlRagEvent.SearchResponse response = 6;</code>
+       */
+      public Builder clearResponse() {
+        bitField0_ = (bitField0_ & ~0x00000020);
+        response_ = null;
+        if (responseBuilder_ != null) {
+          responseBuilder_.dispose();
+          responseBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The search response.
+       * </pre>
+       *
+       * <code>optional .android_studio.SmlRagEvent.SearchResponse response = 6;</code>
+       */
+      public com.google.wireless.android.sdk.stats.SmlRagEvent.SearchResponse.Builder getResponseBuilder() {
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return getResponseFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * The search response.
+       * </pre>
+       *
+       * <code>optional .android_studio.SmlRagEvent.SearchResponse response = 6;</code>
+       */
+      public com.google.wireless.android.sdk.stats.SmlRagEvent.SearchResponseOrBuilder getResponseOrBuilder() {
+        if (responseBuilder_ != null) {
+          return responseBuilder_.getMessageOrBuilder();
+        } else {
+          return response_ == null ?
+              com.google.wireless.android.sdk.stats.SmlRagEvent.SearchResponse.getDefaultInstance() : response_;
+        }
+      }
+      /**
+       * <pre>
+       * The search response.
+       * </pre>
+       *
+       * <code>optional .android_studio.SmlRagEvent.SearchResponse response = 6;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.wireless.android.sdk.stats.SmlRagEvent.SearchResponse, com.google.wireless.android.sdk.stats.SmlRagEvent.SearchResponse.Builder, com.google.wireless.android.sdk.stats.SmlRagEvent.SearchResponseOrBuilder> 
+          getResponseFieldBuilder() {
+        if (responseBuilder_ == null) {
+          responseBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.wireless.android.sdk.stats.SmlRagEvent.SearchResponse, com.google.wireless.android.sdk.stats.SmlRagEvent.SearchResponse.Builder, com.google.wireless.android.sdk.stats.SmlRagEvent.SearchResponseOrBuilder>(
+                  getResponse(),
+                  getParentForChildren(),
+                  isClean());
+          response_ = null;
+        }
+        return responseBuilder_;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -6915,6 +8334,33 @@ private static final long serialVersionUID = 0L;
      * <code>optional .android_studio.SmlRagEvent.SearchArguments search_arguments = 4;</code>
      */
     com.google.wireless.android.sdk.stats.SmlRagEvent.SearchArgumentsOrBuilder getSearchArgumentsOrBuilder();
+
+    /**
+     * <pre>
+     * The search response.
+     * </pre>
+     *
+     * <code>optional .android_studio.SmlRagEvent.SearchResponse response = 5;</code>
+     * @return Whether the response field is set.
+     */
+    boolean hasResponse();
+    /**
+     * <pre>
+     * The search response.
+     * </pre>
+     *
+     * <code>optional .android_studio.SmlRagEvent.SearchResponse response = 5;</code>
+     * @return The response.
+     */
+    com.google.wireless.android.sdk.stats.SmlRagEvent.SearchResponse getResponse();
+    /**
+     * <pre>
+     * The search response.
+     * </pre>
+     *
+     * <code>optional .android_studio.SmlRagEvent.SearchResponse response = 5;</code>
+     */
+    com.google.wireless.android.sdk.stats.SmlRagEvent.SearchResponseOrBuilder getResponseOrBuilder();
   }
   /**
    * Protobuf type {@code android_studio.SmlRagEvent.FindUsagesMetrics}
@@ -7106,6 +8552,44 @@ private static final long serialVersionUID = 0L;
       return searchArguments_ == null ? com.google.wireless.android.sdk.stats.SmlRagEvent.SearchArguments.getDefaultInstance() : searchArguments_;
     }
 
+    public static final int RESPONSE_FIELD_NUMBER = 5;
+    private com.google.wireless.android.sdk.stats.SmlRagEvent.SearchResponse response_;
+    /**
+     * <pre>
+     * The search response.
+     * </pre>
+     *
+     * <code>optional .android_studio.SmlRagEvent.SearchResponse response = 5;</code>
+     * @return Whether the response field is set.
+     */
+    @java.lang.Override
+    public boolean hasResponse() {
+      return ((bitField0_ & 0x00000010) != 0);
+    }
+    /**
+     * <pre>
+     * The search response.
+     * </pre>
+     *
+     * <code>optional .android_studio.SmlRagEvent.SearchResponse response = 5;</code>
+     * @return The response.
+     */
+    @java.lang.Override
+    public com.google.wireless.android.sdk.stats.SmlRagEvent.SearchResponse getResponse() {
+      return response_ == null ? com.google.wireless.android.sdk.stats.SmlRagEvent.SearchResponse.getDefaultInstance() : response_;
+    }
+    /**
+     * <pre>
+     * The search response.
+     * </pre>
+     *
+     * <code>optional .android_studio.SmlRagEvent.SearchResponse response = 5;</code>
+     */
+    @java.lang.Override
+    public com.google.wireless.android.sdk.stats.SmlRagEvent.SearchResponseOrBuilder getResponseOrBuilder() {
+      return response_ == null ? com.google.wireless.android.sdk.stats.SmlRagEvent.SearchResponse.getDefaultInstance() : response_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -7132,6 +8616,9 @@ private static final long serialVersionUID = 0L;
       if (((bitField0_ & 0x00000008) != 0)) {
         output.writeMessage(4, getSearchArguments());
       }
+      if (((bitField0_ & 0x00000010) != 0)) {
+        output.writeMessage(5, getResponse());
+      }
       getUnknownFields().writeTo(output);
     }
 
@@ -7155,6 +8642,10 @@ private static final long serialVersionUID = 0L;
       if (((bitField0_ & 0x00000008) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, getSearchArguments());
+      }
+      if (((bitField0_ & 0x00000010) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(5, getResponse());
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -7191,6 +8682,11 @@ private static final long serialVersionUID = 0L;
         if (!getSearchArguments()
             .equals(other.getSearchArguments())) return false;
       }
+      if (hasResponse() != other.hasResponse()) return false;
+      if (hasResponse()) {
+        if (!getResponse()
+            .equals(other.getResponse())) return false;
+      }
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -7218,6 +8714,10 @@ private static final long serialVersionUID = 0L;
       if (hasSearchArguments()) {
         hash = (37 * hash) + SEARCH_ARGUMENTS_FIELD_NUMBER;
         hash = (53 * hash) + getSearchArguments().hashCode();
+      }
+      if (hasResponse()) {
+        hash = (37 * hash) + RESPONSE_FIELD_NUMBER;
+        hash = (53 * hash) + getResponse().hashCode();
       }
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
@@ -7348,6 +8848,7 @@ private static final long serialVersionUID = 0L;
         if (com.google.protobuf.GeneratedMessageV3
                 .alwaysUseFieldBuilders) {
           getSearchArgumentsFieldBuilder();
+          getResponseFieldBuilder();
         }
       }
       @java.lang.Override
@@ -7361,6 +8862,11 @@ private static final long serialVersionUID = 0L;
         if (searchArgumentsBuilder_ != null) {
           searchArgumentsBuilder_.dispose();
           searchArgumentsBuilder_ = null;
+        }
+        response_ = null;
+        if (responseBuilder_ != null) {
+          responseBuilder_.dispose();
+          responseBuilder_ = null;
         }
         return this;
       }
@@ -7414,6 +8920,12 @@ private static final long serialVersionUID = 0L;
               : searchArgumentsBuilder_.build();
           to_bitField0_ |= 0x00000008;
         }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.response_ = responseBuilder_ == null
+              ? response_
+              : responseBuilder_.build();
+          to_bitField0_ |= 0x00000010;
+        }
         result.bitField0_ |= to_bitField0_;
       }
 
@@ -7442,6 +8954,9 @@ private static final long serialVersionUID = 0L;
         }
         if (other.hasSearchArguments()) {
           mergeSearchArguments(other.getSearchArguments());
+        }
+        if (other.hasResponse()) {
+          mergeResponse(other.getResponse());
         }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
@@ -7491,6 +9006,13 @@ private static final long serialVersionUID = 0L;
                 bitField0_ |= 0x00000008;
                 break;
               } // case 34
+              case 42: {
+                input.readMessage(
+                    getResponseFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 42
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -7878,6 +9400,161 @@ private static final long serialVersionUID = 0L;
         }
         return searchArgumentsBuilder_;
       }
+
+      private com.google.wireless.android.sdk.stats.SmlRagEvent.SearchResponse response_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.wireless.android.sdk.stats.SmlRagEvent.SearchResponse, com.google.wireless.android.sdk.stats.SmlRagEvent.SearchResponse.Builder, com.google.wireless.android.sdk.stats.SmlRagEvent.SearchResponseOrBuilder> responseBuilder_;
+      /**
+       * <pre>
+       * The search response.
+       * </pre>
+       *
+       * <code>optional .android_studio.SmlRagEvent.SearchResponse response = 5;</code>
+       * @return Whether the response field is set.
+       */
+      public boolean hasResponse() {
+        return ((bitField0_ & 0x00000010) != 0);
+      }
+      /**
+       * <pre>
+       * The search response.
+       * </pre>
+       *
+       * <code>optional .android_studio.SmlRagEvent.SearchResponse response = 5;</code>
+       * @return The response.
+       */
+      public com.google.wireless.android.sdk.stats.SmlRagEvent.SearchResponse getResponse() {
+        if (responseBuilder_ == null) {
+          return response_ == null ? com.google.wireless.android.sdk.stats.SmlRagEvent.SearchResponse.getDefaultInstance() : response_;
+        } else {
+          return responseBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * The search response.
+       * </pre>
+       *
+       * <code>optional .android_studio.SmlRagEvent.SearchResponse response = 5;</code>
+       */
+      public Builder setResponse(com.google.wireless.android.sdk.stats.SmlRagEvent.SearchResponse value) {
+        if (responseBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          response_ = value;
+        } else {
+          responseBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The search response.
+       * </pre>
+       *
+       * <code>optional .android_studio.SmlRagEvent.SearchResponse response = 5;</code>
+       */
+      public Builder setResponse(
+          com.google.wireless.android.sdk.stats.SmlRagEvent.SearchResponse.Builder builderForValue) {
+        if (responseBuilder_ == null) {
+          response_ = builderForValue.build();
+        } else {
+          responseBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The search response.
+       * </pre>
+       *
+       * <code>optional .android_studio.SmlRagEvent.SearchResponse response = 5;</code>
+       */
+      public Builder mergeResponse(com.google.wireless.android.sdk.stats.SmlRagEvent.SearchResponse value) {
+        if (responseBuilder_ == null) {
+          if (((bitField0_ & 0x00000010) != 0) &&
+            response_ != null &&
+            response_ != com.google.wireless.android.sdk.stats.SmlRagEvent.SearchResponse.getDefaultInstance()) {
+            getResponseBuilder().mergeFrom(value);
+          } else {
+            response_ = value;
+          }
+        } else {
+          responseBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The search response.
+       * </pre>
+       *
+       * <code>optional .android_studio.SmlRagEvent.SearchResponse response = 5;</code>
+       */
+      public Builder clearResponse() {
+        bitField0_ = (bitField0_ & ~0x00000010);
+        response_ = null;
+        if (responseBuilder_ != null) {
+          responseBuilder_.dispose();
+          responseBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The search response.
+       * </pre>
+       *
+       * <code>optional .android_studio.SmlRagEvent.SearchResponse response = 5;</code>
+       */
+      public com.google.wireless.android.sdk.stats.SmlRagEvent.SearchResponse.Builder getResponseBuilder() {
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return getResponseFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * The search response.
+       * </pre>
+       *
+       * <code>optional .android_studio.SmlRagEvent.SearchResponse response = 5;</code>
+       */
+      public com.google.wireless.android.sdk.stats.SmlRagEvent.SearchResponseOrBuilder getResponseOrBuilder() {
+        if (responseBuilder_ != null) {
+          return responseBuilder_.getMessageOrBuilder();
+        } else {
+          return response_ == null ?
+              com.google.wireless.android.sdk.stats.SmlRagEvent.SearchResponse.getDefaultInstance() : response_;
+        }
+      }
+      /**
+       * <pre>
+       * The search response.
+       * </pre>
+       *
+       * <code>optional .android_studio.SmlRagEvent.SearchResponse response = 5;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.wireless.android.sdk.stats.SmlRagEvent.SearchResponse, com.google.wireless.android.sdk.stats.SmlRagEvent.SearchResponse.Builder, com.google.wireless.android.sdk.stats.SmlRagEvent.SearchResponseOrBuilder> 
+          getResponseFieldBuilder() {
+        if (responseBuilder_ == null) {
+          responseBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.wireless.android.sdk.stats.SmlRagEvent.SearchResponse, com.google.wireless.android.sdk.stats.SmlRagEvent.SearchResponse.Builder, com.google.wireless.android.sdk.stats.SmlRagEvent.SearchResponseOrBuilder>(
+                  getResponse(),
+                  getParentForChildren(),
+                  isClean());
+          response_ = null;
+        }
+        return responseBuilder_;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -8069,6 +9746,33 @@ private static final long serialVersionUID = 0L;
      * <code>optional .android_studio.SmlRagEvent.SearchArguments search_arguments = 6;</code>
      */
     com.google.wireless.android.sdk.stats.SmlRagEvent.SearchArgumentsOrBuilder getSearchArgumentsOrBuilder();
+
+    /**
+     * <pre>
+     * The search response.
+     * </pre>
+     *
+     * <code>optional .android_studio.SmlRagEvent.SearchResponse response = 7;</code>
+     * @return Whether the response field is set.
+     */
+    boolean hasResponse();
+    /**
+     * <pre>
+     * The search response.
+     * </pre>
+     *
+     * <code>optional .android_studio.SmlRagEvent.SearchResponse response = 7;</code>
+     * @return The response.
+     */
+    com.google.wireless.android.sdk.stats.SmlRagEvent.SearchResponse getResponse();
+    /**
+     * <pre>
+     * The search response.
+     * </pre>
+     *
+     * <code>optional .android_studio.SmlRagEvent.SearchResponse response = 7;</code>
+     */
+    com.google.wireless.android.sdk.stats.SmlRagEvent.SearchResponseOrBuilder getResponseOrBuilder();
   }
   /**
    * Protobuf type {@code android_studio.SmlRagEvent.GrepMetrics}
@@ -8281,6 +9985,44 @@ private static final long serialVersionUID = 0L;
       return searchArguments_ == null ? com.google.wireless.android.sdk.stats.SmlRagEvent.SearchArguments.getDefaultInstance() : searchArguments_;
     }
 
+    public static final int RESPONSE_FIELD_NUMBER = 7;
+    private com.google.wireless.android.sdk.stats.SmlRagEvent.SearchResponse response_;
+    /**
+     * <pre>
+     * The search response.
+     * </pre>
+     *
+     * <code>optional .android_studio.SmlRagEvent.SearchResponse response = 7;</code>
+     * @return Whether the response field is set.
+     */
+    @java.lang.Override
+    public boolean hasResponse() {
+      return ((bitField0_ & 0x00000040) != 0);
+    }
+    /**
+     * <pre>
+     * The search response.
+     * </pre>
+     *
+     * <code>optional .android_studio.SmlRagEvent.SearchResponse response = 7;</code>
+     * @return The response.
+     */
+    @java.lang.Override
+    public com.google.wireless.android.sdk.stats.SmlRagEvent.SearchResponse getResponse() {
+      return response_ == null ? com.google.wireless.android.sdk.stats.SmlRagEvent.SearchResponse.getDefaultInstance() : response_;
+    }
+    /**
+     * <pre>
+     * The search response.
+     * </pre>
+     *
+     * <code>optional .android_studio.SmlRagEvent.SearchResponse response = 7;</code>
+     */
+    @java.lang.Override
+    public com.google.wireless.android.sdk.stats.SmlRagEvent.SearchResponseOrBuilder getResponseOrBuilder() {
+      return response_ == null ? com.google.wireless.android.sdk.stats.SmlRagEvent.SearchResponse.getDefaultInstance() : response_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -8312,6 +10054,9 @@ private static final long serialVersionUID = 0L;
       }
       if (((bitField0_ & 0x00000020) != 0)) {
         output.writeMessage(6, getSearchArguments());
+      }
+      if (((bitField0_ & 0x00000040) != 0)) {
+        output.writeMessage(7, getResponse());
       }
       getUnknownFields().writeTo(output);
     }
@@ -8345,6 +10090,10 @@ private static final long serialVersionUID = 0L;
       if (((bitField0_ & 0x00000020) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(6, getSearchArguments());
+      }
+      if (((bitField0_ & 0x00000040) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(7, getResponse());
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -8391,6 +10140,11 @@ private static final long serialVersionUID = 0L;
         if (!getSearchArguments()
             .equals(other.getSearchArguments())) return false;
       }
+      if (hasResponse() != other.hasResponse()) return false;
+      if (hasResponse()) {
+        if (!getResponse()
+            .equals(other.getResponse())) return false;
+      }
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -8426,6 +10180,10 @@ private static final long serialVersionUID = 0L;
       if (hasSearchArguments()) {
         hash = (37 * hash) + SEARCH_ARGUMENTS_FIELD_NUMBER;
         hash = (53 * hash) + getSearchArguments().hashCode();
+      }
+      if (hasResponse()) {
+        hash = (37 * hash) + RESPONSE_FIELD_NUMBER;
+        hash = (53 * hash) + getResponse().hashCode();
       }
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
@@ -8556,6 +10314,7 @@ private static final long serialVersionUID = 0L;
         if (com.google.protobuf.GeneratedMessageV3
                 .alwaysUseFieldBuilders) {
           getSearchArgumentsFieldBuilder();
+          getResponseFieldBuilder();
         }
       }
       @java.lang.Override
@@ -8571,6 +10330,11 @@ private static final long serialVersionUID = 0L;
         if (searchArgumentsBuilder_ != null) {
           searchArgumentsBuilder_.dispose();
           searchArgumentsBuilder_ = null;
+        }
+        response_ = null;
+        if (responseBuilder_ != null) {
+          responseBuilder_.dispose();
+          responseBuilder_ = null;
         }
         return this;
       }
@@ -8632,6 +10396,12 @@ private static final long serialVersionUID = 0L;
               : searchArgumentsBuilder_.build();
           to_bitField0_ |= 0x00000020;
         }
+        if (((from_bitField0_ & 0x00000040) != 0)) {
+          result.response_ = responseBuilder_ == null
+              ? response_
+              : responseBuilder_.build();
+          to_bitField0_ |= 0x00000040;
+        }
         result.bitField0_ |= to_bitField0_;
       }
 
@@ -8664,6 +10434,9 @@ private static final long serialVersionUID = 0L;
         }
         if (other.hasSearchArguments()) {
           mergeSearchArguments(other.getSearchArguments());
+        }
+        if (other.hasResponse()) {
+          mergeResponse(other.getResponse());
         }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
@@ -8723,6 +10496,13 @@ private static final long serialVersionUID = 0L;
                 bitField0_ |= 0x00000020;
                 break;
               } // case 50
+              case 58: {
+                input.readMessage(
+                    getResponseFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000040;
+                break;
+              } // case 58
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -9177,6 +10957,161 @@ private static final long serialVersionUID = 0L;
           searchArguments_ = null;
         }
         return searchArgumentsBuilder_;
+      }
+
+      private com.google.wireless.android.sdk.stats.SmlRagEvent.SearchResponse response_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.wireless.android.sdk.stats.SmlRagEvent.SearchResponse, com.google.wireless.android.sdk.stats.SmlRagEvent.SearchResponse.Builder, com.google.wireless.android.sdk.stats.SmlRagEvent.SearchResponseOrBuilder> responseBuilder_;
+      /**
+       * <pre>
+       * The search response.
+       * </pre>
+       *
+       * <code>optional .android_studio.SmlRagEvent.SearchResponse response = 7;</code>
+       * @return Whether the response field is set.
+       */
+      public boolean hasResponse() {
+        return ((bitField0_ & 0x00000040) != 0);
+      }
+      /**
+       * <pre>
+       * The search response.
+       * </pre>
+       *
+       * <code>optional .android_studio.SmlRagEvent.SearchResponse response = 7;</code>
+       * @return The response.
+       */
+      public com.google.wireless.android.sdk.stats.SmlRagEvent.SearchResponse getResponse() {
+        if (responseBuilder_ == null) {
+          return response_ == null ? com.google.wireless.android.sdk.stats.SmlRagEvent.SearchResponse.getDefaultInstance() : response_;
+        } else {
+          return responseBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * The search response.
+       * </pre>
+       *
+       * <code>optional .android_studio.SmlRagEvent.SearchResponse response = 7;</code>
+       */
+      public Builder setResponse(com.google.wireless.android.sdk.stats.SmlRagEvent.SearchResponse value) {
+        if (responseBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          response_ = value;
+        } else {
+          responseBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000040;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The search response.
+       * </pre>
+       *
+       * <code>optional .android_studio.SmlRagEvent.SearchResponse response = 7;</code>
+       */
+      public Builder setResponse(
+          com.google.wireless.android.sdk.stats.SmlRagEvent.SearchResponse.Builder builderForValue) {
+        if (responseBuilder_ == null) {
+          response_ = builderForValue.build();
+        } else {
+          responseBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000040;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The search response.
+       * </pre>
+       *
+       * <code>optional .android_studio.SmlRagEvent.SearchResponse response = 7;</code>
+       */
+      public Builder mergeResponse(com.google.wireless.android.sdk.stats.SmlRagEvent.SearchResponse value) {
+        if (responseBuilder_ == null) {
+          if (((bitField0_ & 0x00000040) != 0) &&
+            response_ != null &&
+            response_ != com.google.wireless.android.sdk.stats.SmlRagEvent.SearchResponse.getDefaultInstance()) {
+            getResponseBuilder().mergeFrom(value);
+          } else {
+            response_ = value;
+          }
+        } else {
+          responseBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000040;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The search response.
+       * </pre>
+       *
+       * <code>optional .android_studio.SmlRagEvent.SearchResponse response = 7;</code>
+       */
+      public Builder clearResponse() {
+        bitField0_ = (bitField0_ & ~0x00000040);
+        response_ = null;
+        if (responseBuilder_ != null) {
+          responseBuilder_.dispose();
+          responseBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The search response.
+       * </pre>
+       *
+       * <code>optional .android_studio.SmlRagEvent.SearchResponse response = 7;</code>
+       */
+      public com.google.wireless.android.sdk.stats.SmlRagEvent.SearchResponse.Builder getResponseBuilder() {
+        bitField0_ |= 0x00000040;
+        onChanged();
+        return getResponseFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * The search response.
+       * </pre>
+       *
+       * <code>optional .android_studio.SmlRagEvent.SearchResponse response = 7;</code>
+       */
+      public com.google.wireless.android.sdk.stats.SmlRagEvent.SearchResponseOrBuilder getResponseOrBuilder() {
+        if (responseBuilder_ != null) {
+          return responseBuilder_.getMessageOrBuilder();
+        } else {
+          return response_ == null ?
+              com.google.wireless.android.sdk.stats.SmlRagEvent.SearchResponse.getDefaultInstance() : response_;
+        }
+      }
+      /**
+       * <pre>
+       * The search response.
+       * </pre>
+       *
+       * <code>optional .android_studio.SmlRagEvent.SearchResponse response = 7;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.wireless.android.sdk.stats.SmlRagEvent.SearchResponse, com.google.wireless.android.sdk.stats.SmlRagEvent.SearchResponse.Builder, com.google.wireless.android.sdk.stats.SmlRagEvent.SearchResponseOrBuilder> 
+          getResponseFieldBuilder() {
+        if (responseBuilder_ == null) {
+          responseBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.wireless.android.sdk.stats.SmlRagEvent.SearchResponse, com.google.wireless.android.sdk.stats.SmlRagEvent.SearchResponse.Builder, com.google.wireless.android.sdk.stats.SmlRagEvent.SearchResponseOrBuilder>(
+                  getResponse(),
+                  getParentForChildren(),
+                  isClean());
+          response_ = null;
+        }
+        return responseBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -10104,6 +12039,5866 @@ private static final long serialVersionUID = 0L;
 
   }
 
+  public interface LuceneIndexMetricsOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:android_studio.SmlRagEvent.LuceneIndexMetrics)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * The type of the active RAG indexer (see RagIndexerMetrics)
+     * </pre>
+     *
+     * <code>optional string indexer_type = 1;</code>
+     * @return Whether the indexerType field is set.
+     */
+    boolean hasIndexerType();
+    /**
+     * <pre>
+     * The type of the active RAG indexer (see RagIndexerMetrics)
+     * </pre>
+     *
+     * <code>optional string indexer_type = 1;</code>
+     * @return The indexerType.
+     */
+    java.lang.String getIndexerType();
+    /**
+     * <pre>
+     * The type of the active RAG indexer (see RagIndexerMetrics)
+     * </pre>
+     *
+     * <code>optional string indexer_type = 1;</code>
+     * @return The bytes for indexerType.
+     */
+    com.google.protobuf.ByteString
+        getIndexerTypeBytes();
+
+    /**
+     * <pre>
+     * Whether the RAG indexer that owns this index is the active RAG indexer.
+     * </pre>
+     *
+     * <code>optional bool is_active = 2;</code>
+     * @return Whether the isActive field is set.
+     */
+    boolean hasIsActive();
+    /**
+     * <pre>
+     * Whether the RAG indexer that owns this index is the active RAG indexer.
+     * </pre>
+     *
+     * <code>optional bool is_active = 2;</code>
+     * @return The isActive.
+     */
+    boolean getIsActive();
+
+    /**
+     * <pre>
+     * Stats for all changes applied to the index since the last flush.
+     * </pre>
+     *
+     * <code>optional .android_studio.SmlRagEvent.LuceneIndexMetrics.UpdateStats overall_stats = 3;</code>
+     * @return Whether the overallStats field is set.
+     */
+    boolean hasOverallStats();
+    /**
+     * <pre>
+     * Stats for all changes applied to the index since the last flush.
+     * </pre>
+     *
+     * <code>optional .android_studio.SmlRagEvent.LuceneIndexMetrics.UpdateStats overall_stats = 3;</code>
+     * @return The overallStats.
+     */
+    com.google.wireless.android.sdk.stats.SmlRagEvent.LuceneIndexMetrics.UpdateStats getOverallStats();
+    /**
+     * <pre>
+     * Stats for all changes applied to the index since the last flush.
+     * </pre>
+     *
+     * <code>optional .android_studio.SmlRagEvent.LuceneIndexMetrics.UpdateStats overall_stats = 3;</code>
+     */
+    com.google.wireless.android.sdk.stats.SmlRagEvent.LuceneIndexMetrics.UpdateStatsOrBuilder getOverallStatsOrBuilder();
+
+    /**
+     * <pre>
+     * The amount of wall time, in milliseconds, that the current flush
+     * operation spent waiting for pending writes to finish.
+     * </pre>
+     *
+     * <code>optional int64 index_flush_time_ms = 4;</code>
+     * @return Whether the indexFlushTimeMs field is set.
+     */
+    boolean hasIndexFlushTimeMs();
+    /**
+     * <pre>
+     * The amount of wall time, in milliseconds, that the current flush
+     * operation spent waiting for pending writes to finish.
+     * </pre>
+     *
+     * <code>optional int64 index_flush_time_ms = 4;</code>
+     * @return The indexFlushTimeMs.
+     */
+    long getIndexFlushTimeMs();
+
+    /**
+     * <pre>
+     * The amount of wall time, in milliseconds, that the current flush
+     * operation spent waiting for Lucene to commit the index to disk.
+     * </pre>
+     *
+     * <code>optional int64 index_commit_time_ms = 5;</code>
+     * @return Whether the indexCommitTimeMs field is set.
+     */
+    boolean hasIndexCommitTimeMs();
+    /**
+     * <pre>
+     * The amount of wall time, in milliseconds, that the current flush
+     * operation spent waiting for Lucene to commit the index to disk.
+     * </pre>
+     *
+     * <code>optional int64 index_commit_time_ms = 5;</code>
+     * @return The indexCommitTimeMs.
+     */
+    long getIndexCommitTimeMs();
+
+    /**
+     * <pre>
+     * Stats for the update operations that have been applied to the index since
+     * the last flush, broken down by the IntelliJ file type. Key is the unique
+     * name of the file type, as reported by FileType#getName.
+     * </pre>
+     *
+     * <code>map&lt;string, .android_studio.SmlRagEvent.LuceneIndexMetrics.UpdateStats&gt; stats_by_file_type = 6;</code>
+     */
+    int getStatsByFileTypeCount();
+    /**
+     * <pre>
+     * Stats for the update operations that have been applied to the index since
+     * the last flush, broken down by the IntelliJ file type. Key is the unique
+     * name of the file type, as reported by FileType#getName.
+     * </pre>
+     *
+     * <code>map&lt;string, .android_studio.SmlRagEvent.LuceneIndexMetrics.UpdateStats&gt; stats_by_file_type = 6;</code>
+     */
+    boolean containsStatsByFileType(
+        java.lang.String key);
+    /**
+     * Use {@link #getStatsByFileTypeMap()} instead.
+     */
+    @java.lang.Deprecated
+    java.util.Map<java.lang.String, com.google.wireless.android.sdk.stats.SmlRagEvent.LuceneIndexMetrics.UpdateStats>
+    getStatsByFileType();
+    /**
+     * <pre>
+     * Stats for the update operations that have been applied to the index since
+     * the last flush, broken down by the IntelliJ file type. Key is the unique
+     * name of the file type, as reported by FileType#getName.
+     * </pre>
+     *
+     * <code>map&lt;string, .android_studio.SmlRagEvent.LuceneIndexMetrics.UpdateStats&gt; stats_by_file_type = 6;</code>
+     */
+    java.util.Map<java.lang.String, com.google.wireless.android.sdk.stats.SmlRagEvent.LuceneIndexMetrics.UpdateStats>
+    getStatsByFileTypeMap();
+    /**
+     * <pre>
+     * Stats for the update operations that have been applied to the index since
+     * the last flush, broken down by the IntelliJ file type. Key is the unique
+     * name of the file type, as reported by FileType#getName.
+     * </pre>
+     *
+     * <code>map&lt;string, .android_studio.SmlRagEvent.LuceneIndexMetrics.UpdateStats&gt; stats_by_file_type = 6;</code>
+     */
+    /* nullable */
+com.google.wireless.android.sdk.stats.SmlRagEvent.LuceneIndexMetrics.UpdateStats getStatsByFileTypeOrDefault(
+        java.lang.String key,
+        /* nullable */
+com.google.wireless.android.sdk.stats.SmlRagEvent.LuceneIndexMetrics.UpdateStats defaultValue);
+    /**
+     * <pre>
+     * Stats for the update operations that have been applied to the index since
+     * the last flush, broken down by the IntelliJ file type. Key is the unique
+     * name of the file type, as reported by FileType#getName.
+     * </pre>
+     *
+     * <code>map&lt;string, .android_studio.SmlRagEvent.LuceneIndexMetrics.UpdateStats&gt; stats_by_file_type = 6;</code>
+     */
+    com.google.wireless.android.sdk.stats.SmlRagEvent.LuceneIndexMetrics.UpdateStats getStatsByFileTypeOrThrow(
+        java.lang.String key);
+
+    /**
+     * <pre>
+     * Stats for the update operations that have been applied to the index since
+     * the last flush, broken down by the base language. Key is the unique ID of
+     * the language, as reported by Language#getId. Since languages can have
+     * dialects and base languages, the total count in this map may differ from
+     * the total count in overall_stats.
+     * </pre>
+     *
+     * <code>map&lt;string, .android_studio.SmlRagEvent.LuceneIndexMetrics.UpdateStats&gt; stats_by_language = 7;</code>
+     */
+    int getStatsByLanguageCount();
+    /**
+     * <pre>
+     * Stats for the update operations that have been applied to the index since
+     * the last flush, broken down by the base language. Key is the unique ID of
+     * the language, as reported by Language#getId. Since languages can have
+     * dialects and base languages, the total count in this map may differ from
+     * the total count in overall_stats.
+     * </pre>
+     *
+     * <code>map&lt;string, .android_studio.SmlRagEvent.LuceneIndexMetrics.UpdateStats&gt; stats_by_language = 7;</code>
+     */
+    boolean containsStatsByLanguage(
+        java.lang.String key);
+    /**
+     * Use {@link #getStatsByLanguageMap()} instead.
+     */
+    @java.lang.Deprecated
+    java.util.Map<java.lang.String, com.google.wireless.android.sdk.stats.SmlRagEvent.LuceneIndexMetrics.UpdateStats>
+    getStatsByLanguage();
+    /**
+     * <pre>
+     * Stats for the update operations that have been applied to the index since
+     * the last flush, broken down by the base language. Key is the unique ID of
+     * the language, as reported by Language#getId. Since languages can have
+     * dialects and base languages, the total count in this map may differ from
+     * the total count in overall_stats.
+     * </pre>
+     *
+     * <code>map&lt;string, .android_studio.SmlRagEvent.LuceneIndexMetrics.UpdateStats&gt; stats_by_language = 7;</code>
+     */
+    java.util.Map<java.lang.String, com.google.wireless.android.sdk.stats.SmlRagEvent.LuceneIndexMetrics.UpdateStats>
+    getStatsByLanguageMap();
+    /**
+     * <pre>
+     * Stats for the update operations that have been applied to the index since
+     * the last flush, broken down by the base language. Key is the unique ID of
+     * the language, as reported by Language#getId. Since languages can have
+     * dialects and base languages, the total count in this map may differ from
+     * the total count in overall_stats.
+     * </pre>
+     *
+     * <code>map&lt;string, .android_studio.SmlRagEvent.LuceneIndexMetrics.UpdateStats&gt; stats_by_language = 7;</code>
+     */
+    /* nullable */
+com.google.wireless.android.sdk.stats.SmlRagEvent.LuceneIndexMetrics.UpdateStats getStatsByLanguageOrDefault(
+        java.lang.String key,
+        /* nullable */
+com.google.wireless.android.sdk.stats.SmlRagEvent.LuceneIndexMetrics.UpdateStats defaultValue);
+    /**
+     * <pre>
+     * Stats for the update operations that have been applied to the index since
+     * the last flush, broken down by the base language. Key is the unique ID of
+     * the language, as reported by Language#getId. Since languages can have
+     * dialects and base languages, the total count in this map may differ from
+     * the total count in overall_stats.
+     * </pre>
+     *
+     * <code>map&lt;string, .android_studio.SmlRagEvent.LuceneIndexMetrics.UpdateStats&gt; stats_by_language = 7;</code>
+     */
+    com.google.wireless.android.sdk.stats.SmlRagEvent.LuceneIndexMetrics.UpdateStats getStatsByLanguageOrThrow(
+        java.lang.String key);
+
+    /**
+     * <pre>
+     * The total number of documents in the index, across all projects.
+     * </pre>
+     *
+     * <code>optional int32 index_document_count = 8;</code>
+     * @return Whether the indexDocumentCount field is set.
+     */
+    boolean hasIndexDocumentCount();
+    /**
+     * <pre>
+     * The total number of documents in the index, across all projects.
+     * </pre>
+     *
+     * <code>optional int32 index_document_count = 8;</code>
+     * @return The indexDocumentCount.
+     */
+    int getIndexDocumentCount();
+
+    /**
+     * <pre>
+     * The total size of the index on disk, across all projects.
+     * </pre>
+     *
+     * <code>optional int64 index_size_bytes = 9;</code>
+     * @return Whether the indexSizeBytes field is set.
+     */
+    boolean hasIndexSizeBytes();
+    /**
+     * <pre>
+     * The total size of the index on disk, across all projects.
+     * </pre>
+     *
+     * <code>optional int64 index_size_bytes = 9;</code>
+     * @return The indexSizeBytes.
+     */
+    long getIndexSizeBytes();
+  }
+  /**
+   * Protobuf type {@code android_studio.SmlRagEvent.LuceneIndexMetrics}
+   */
+  public static final class LuceneIndexMetrics extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:android_studio.SmlRagEvent.LuceneIndexMetrics)
+      LuceneIndexMetricsOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use LuceneIndexMetrics.newBuilder() to construct.
+    private LuceneIndexMetrics(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private LuceneIndexMetrics() {
+      indexerType_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new LuceneIndexMetrics();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_SmlRagEvent_LuceneIndexMetrics_descriptor;
+    }
+
+    @SuppressWarnings({"rawtypes"})
+    @java.lang.Override
+    protected com.google.protobuf.MapField internalGetMapField(
+        int number) {
+      switch (number) {
+        case 6:
+          return internalGetStatsByFileType();
+        case 7:
+          return internalGetStatsByLanguage();
+        default:
+          throw new RuntimeException(
+              "Invalid map field number: " + number);
+      }
+    }
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_SmlRagEvent_LuceneIndexMetrics_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.google.wireless.android.sdk.stats.SmlRagEvent.LuceneIndexMetrics.class, com.google.wireless.android.sdk.stats.SmlRagEvent.LuceneIndexMetrics.Builder.class);
+    }
+
+    public interface UpdateStatsOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:android_studio.SmlRagEvent.LuceneIndexMetrics.UpdateStats)
+        com.google.protobuf.MessageOrBuilder {
+
+      /**
+       * <pre>
+       * The number of update operations that have been applied to the index
+       * since the last flush.
+       * </pre>
+       *
+       * <code>optional int32 update_count = 1;</code>
+       * @return Whether the updateCount field is set.
+       */
+      boolean hasUpdateCount();
+      /**
+       * <pre>
+       * The number of update operations that have been applied to the index
+       * since the last flush.
+       * </pre>
+       *
+       * <code>optional int32 update_count = 1;</code>
+       * @return The updateCount.
+       */
+      int getUpdateCount();
+
+      /**
+       * <pre>
+       * The amount of CPU time, in milliseconds, that all update operations
+       * spent waiting to begin execution since the last flush.
+       * </pre>
+       *
+       * <code>optional int64 index_queue_time_ms = 2;</code>
+       * @return Whether the indexQueueTimeMs field is set.
+       */
+      boolean hasIndexQueueTimeMs();
+      /**
+       * <pre>
+       * The amount of CPU time, in milliseconds, that all update operations
+       * spent waiting to begin execution since the last flush.
+       * </pre>
+       *
+       * <code>optional int64 index_queue_time_ms = 2;</code>
+       * @return The indexQueueTimeMs.
+       */
+      long getIndexQueueTimeMs();
+
+      /**
+       * <pre>
+       * The amount of CPU time, in milliseconds, that all update operations
+       * spent executing since the last flush.
+       * </pre>
+       *
+       * <code>optional int64 index_write_time_ms = 3;</code>
+       * @return Whether the indexWriteTimeMs field is set.
+       */
+      boolean hasIndexWriteTimeMs();
+      /**
+       * <pre>
+       * The amount of CPU time, in milliseconds, that all update operations
+       * spent executing since the last flush.
+       * </pre>
+       *
+       * <code>optional int64 index_write_time_ms = 3;</code>
+       * @return The indexWriteTimeMs.
+       */
+      long getIndexWriteTimeMs();
+    }
+    /**
+     * Protobuf type {@code android_studio.SmlRagEvent.LuceneIndexMetrics.UpdateStats}
+     */
+    public static final class UpdateStats extends
+        com.google.protobuf.GeneratedMessageV3 implements
+        // @@protoc_insertion_point(message_implements:android_studio.SmlRagEvent.LuceneIndexMetrics.UpdateStats)
+        UpdateStatsOrBuilder {
+    private static final long serialVersionUID = 0L;
+      // Use UpdateStats.newBuilder() to construct.
+      private UpdateStats(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+        super(builder);
+      }
+      private UpdateStats() {
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new UpdateStats();
+      }
+
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_SmlRagEvent_LuceneIndexMetrics_UpdateStats_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_SmlRagEvent_LuceneIndexMetrics_UpdateStats_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.google.wireless.android.sdk.stats.SmlRagEvent.LuceneIndexMetrics.UpdateStats.class, com.google.wireless.android.sdk.stats.SmlRagEvent.LuceneIndexMetrics.UpdateStats.Builder.class);
+      }
+
+      private int bitField0_;
+      public static final int UPDATE_COUNT_FIELD_NUMBER = 1;
+      private int updateCount_ = 0;
+      /**
+       * <pre>
+       * The number of update operations that have been applied to the index
+       * since the last flush.
+       * </pre>
+       *
+       * <code>optional int32 update_count = 1;</code>
+       * @return Whether the updateCount field is set.
+       */
+      @java.lang.Override
+      public boolean hasUpdateCount() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <pre>
+       * The number of update operations that have been applied to the index
+       * since the last flush.
+       * </pre>
+       *
+       * <code>optional int32 update_count = 1;</code>
+       * @return The updateCount.
+       */
+      @java.lang.Override
+      public int getUpdateCount() {
+        return updateCount_;
+      }
+
+      public static final int INDEX_QUEUE_TIME_MS_FIELD_NUMBER = 2;
+      private long indexQueueTimeMs_ = 0L;
+      /**
+       * <pre>
+       * The amount of CPU time, in milliseconds, that all update operations
+       * spent waiting to begin execution since the last flush.
+       * </pre>
+       *
+       * <code>optional int64 index_queue_time_ms = 2;</code>
+       * @return Whether the indexQueueTimeMs field is set.
+       */
+      @java.lang.Override
+      public boolean hasIndexQueueTimeMs() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <pre>
+       * The amount of CPU time, in milliseconds, that all update operations
+       * spent waiting to begin execution since the last flush.
+       * </pre>
+       *
+       * <code>optional int64 index_queue_time_ms = 2;</code>
+       * @return The indexQueueTimeMs.
+       */
+      @java.lang.Override
+      public long getIndexQueueTimeMs() {
+        return indexQueueTimeMs_;
+      }
+
+      public static final int INDEX_WRITE_TIME_MS_FIELD_NUMBER = 3;
+      private long indexWriteTimeMs_ = 0L;
+      /**
+       * <pre>
+       * The amount of CPU time, in milliseconds, that all update operations
+       * spent executing since the last flush.
+       * </pre>
+       *
+       * <code>optional int64 index_write_time_ms = 3;</code>
+       * @return Whether the indexWriteTimeMs field is set.
+       */
+      @java.lang.Override
+      public boolean hasIndexWriteTimeMs() {
+        return ((bitField0_ & 0x00000004) != 0);
+      }
+      /**
+       * <pre>
+       * The amount of CPU time, in milliseconds, that all update operations
+       * spent executing since the last flush.
+       * </pre>
+       *
+       * <code>optional int64 index_write_time_ms = 3;</code>
+       * @return The indexWriteTimeMs.
+       */
+      @java.lang.Override
+      public long getIndexWriteTimeMs() {
+        return indexWriteTimeMs_;
+      }
+
+      private byte memoizedIsInitialized = -1;
+      @java.lang.Override
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      @java.lang.Override
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        if (((bitField0_ & 0x00000001) != 0)) {
+          output.writeInt32(1, updateCount_);
+        }
+        if (((bitField0_ & 0x00000002) != 0)) {
+          output.writeInt64(2, indexQueueTimeMs_);
+        }
+        if (((bitField0_ & 0x00000004) != 0)) {
+          output.writeInt64(3, indexWriteTimeMs_);
+        }
+        getUnknownFields().writeTo(output);
+      }
+
+      @java.lang.Override
+      public int getSerializedSize() {
+        int size = memoizedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        if (((bitField0_ & 0x00000001) != 0)) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeInt32Size(1, updateCount_);
+        }
+        if (((bitField0_ & 0x00000002) != 0)) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeInt64Size(2, indexQueueTimeMs_);
+        }
+        if (((bitField0_ & 0x00000004) != 0)) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeInt64Size(3, indexWriteTimeMs_);
+        }
+        size += getUnknownFields().getSerializedSize();
+        memoizedSize = size;
+        return size;
+      }
+
+      @java.lang.Override
+      public boolean equals(final java.lang.Object obj) {
+        if (obj == this) {
+         return true;
+        }
+        if (!(obj instanceof com.google.wireless.android.sdk.stats.SmlRagEvent.LuceneIndexMetrics.UpdateStats)) {
+          return super.equals(obj);
+        }
+        com.google.wireless.android.sdk.stats.SmlRagEvent.LuceneIndexMetrics.UpdateStats other = (com.google.wireless.android.sdk.stats.SmlRagEvent.LuceneIndexMetrics.UpdateStats) obj;
+
+        if (hasUpdateCount() != other.hasUpdateCount()) return false;
+        if (hasUpdateCount()) {
+          if (getUpdateCount()
+              != other.getUpdateCount()) return false;
+        }
+        if (hasIndexQueueTimeMs() != other.hasIndexQueueTimeMs()) return false;
+        if (hasIndexQueueTimeMs()) {
+          if (getIndexQueueTimeMs()
+              != other.getIndexQueueTimeMs()) return false;
+        }
+        if (hasIndexWriteTimeMs() != other.hasIndexWriteTimeMs()) return false;
+        if (hasIndexWriteTimeMs()) {
+          if (getIndexWriteTimeMs()
+              != other.getIndexWriteTimeMs()) return false;
+        }
+        if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+        return true;
+      }
+
+      @java.lang.Override
+      public int hashCode() {
+        if (memoizedHashCode != 0) {
+          return memoizedHashCode;
+        }
+        int hash = 41;
+        hash = (19 * hash) + getDescriptor().hashCode();
+        if (hasUpdateCount()) {
+          hash = (37 * hash) + UPDATE_COUNT_FIELD_NUMBER;
+          hash = (53 * hash) + getUpdateCount();
+        }
+        if (hasIndexQueueTimeMs()) {
+          hash = (37 * hash) + INDEX_QUEUE_TIME_MS_FIELD_NUMBER;
+          hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+              getIndexQueueTimeMs());
+        }
+        if (hasIndexWriteTimeMs()) {
+          hash = (37 * hash) + INDEX_WRITE_TIME_MS_FIELD_NUMBER;
+          hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+              getIndexWriteTimeMs());
+        }
+        hash = (29 * hash) + getUnknownFields().hashCode();
+        memoizedHashCode = hash;
+        return hash;
+      }
+
+      public static com.google.wireless.android.sdk.stats.SmlRagEvent.LuceneIndexMetrics.UpdateStats parseFrom(
+          java.nio.ByteBuffer data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static com.google.wireless.android.sdk.stats.SmlRagEvent.LuceneIndexMetrics.UpdateStats parseFrom(
+          java.nio.ByteBuffer data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static com.google.wireless.android.sdk.stats.SmlRagEvent.LuceneIndexMetrics.UpdateStats parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static com.google.wireless.android.sdk.stats.SmlRagEvent.LuceneIndexMetrics.UpdateStats parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static com.google.wireless.android.sdk.stats.SmlRagEvent.LuceneIndexMetrics.UpdateStats parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static com.google.wireless.android.sdk.stats.SmlRagEvent.LuceneIndexMetrics.UpdateStats parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static com.google.wireless.android.sdk.stats.SmlRagEvent.LuceneIndexMetrics.UpdateStats parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static com.google.wireless.android.sdk.stats.SmlRagEvent.LuceneIndexMetrics.UpdateStats parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static com.google.wireless.android.sdk.stats.SmlRagEvent.LuceneIndexMetrics.UpdateStats parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input);
+      }
+      public static com.google.wireless.android.sdk.stats.SmlRagEvent.LuceneIndexMetrics.UpdateStats parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static com.google.wireless.android.sdk.stats.SmlRagEvent.LuceneIndexMetrics.UpdateStats parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static com.google.wireless.android.sdk.stats.SmlRagEvent.LuceneIndexMetrics.UpdateStats parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      @java.lang.Override
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder() {
+        return DEFAULT_INSTANCE.toBuilder();
+      }
+      public static Builder newBuilder(com.google.wireless.android.sdk.stats.SmlRagEvent.LuceneIndexMetrics.UpdateStats prototype) {
+        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+      }
+      @java.lang.Override
+      public Builder toBuilder() {
+        return this == DEFAULT_INSTANCE
+            ? new Builder() : new Builder().mergeFrom(this);
+      }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * Protobuf type {@code android_studio.SmlRagEvent.LuceneIndexMetrics.UpdateStats}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:android_studio.SmlRagEvent.LuceneIndexMetrics.UpdateStats)
+          com.google.wireless.android.sdk.stats.SmlRagEvent.LuceneIndexMetrics.UpdateStatsOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_SmlRagEvent_LuceneIndexMetrics_UpdateStats_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_SmlRagEvent_LuceneIndexMetrics_UpdateStats_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  com.google.wireless.android.sdk.stats.SmlRagEvent.LuceneIndexMetrics.UpdateStats.class, com.google.wireless.android.sdk.stats.SmlRagEvent.LuceneIndexMetrics.UpdateStats.Builder.class);
+        }
+
+        // Construct using com.google.wireless.android.sdk.stats.SmlRagEvent.LuceneIndexMetrics.UpdateStats.newBuilder()
+        private Builder() {
+
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          super(parent);
+
+        }
+        @java.lang.Override
+        public Builder clear() {
+          super.clear();
+          bitField0_ = 0;
+          updateCount_ = 0;
+          indexQueueTimeMs_ = 0L;
+          indexWriteTimeMs_ = 0L;
+          return this;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_SmlRagEvent_LuceneIndexMetrics_UpdateStats_descriptor;
+        }
+
+        @java.lang.Override
+        public com.google.wireless.android.sdk.stats.SmlRagEvent.LuceneIndexMetrics.UpdateStats getDefaultInstanceForType() {
+          return com.google.wireless.android.sdk.stats.SmlRagEvent.LuceneIndexMetrics.UpdateStats.getDefaultInstance();
+        }
+
+        @java.lang.Override
+        public com.google.wireless.android.sdk.stats.SmlRagEvent.LuceneIndexMetrics.UpdateStats build() {
+          com.google.wireless.android.sdk.stats.SmlRagEvent.LuceneIndexMetrics.UpdateStats result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        @java.lang.Override
+        public com.google.wireless.android.sdk.stats.SmlRagEvent.LuceneIndexMetrics.UpdateStats buildPartial() {
+          com.google.wireless.android.sdk.stats.SmlRagEvent.LuceneIndexMetrics.UpdateStats result = new com.google.wireless.android.sdk.stats.SmlRagEvent.LuceneIndexMetrics.UpdateStats(this);
+          if (bitField0_ != 0) { buildPartial0(result); }
+          onBuilt();
+          return result;
+        }
+
+        private void buildPartial0(com.google.wireless.android.sdk.stats.SmlRagEvent.LuceneIndexMetrics.UpdateStats result) {
+          int from_bitField0_ = bitField0_;
+          int to_bitField0_ = 0;
+          if (((from_bitField0_ & 0x00000001) != 0)) {
+            result.updateCount_ = updateCount_;
+            to_bitField0_ |= 0x00000001;
+          }
+          if (((from_bitField0_ & 0x00000002) != 0)) {
+            result.indexQueueTimeMs_ = indexQueueTimeMs_;
+            to_bitField0_ |= 0x00000002;
+          }
+          if (((from_bitField0_ & 0x00000004) != 0)) {
+            result.indexWriteTimeMs_ = indexWriteTimeMs_;
+            to_bitField0_ |= 0x00000004;
+          }
+          result.bitField0_ |= to_bitField0_;
+        }
+
+        @java.lang.Override
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof com.google.wireless.android.sdk.stats.SmlRagEvent.LuceneIndexMetrics.UpdateStats) {
+            return mergeFrom((com.google.wireless.android.sdk.stats.SmlRagEvent.LuceneIndexMetrics.UpdateStats)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(com.google.wireless.android.sdk.stats.SmlRagEvent.LuceneIndexMetrics.UpdateStats other) {
+          if (other == com.google.wireless.android.sdk.stats.SmlRagEvent.LuceneIndexMetrics.UpdateStats.getDefaultInstance()) return this;
+          if (other.hasUpdateCount()) {
+            setUpdateCount(other.getUpdateCount());
+          }
+          if (other.hasIndexQueueTimeMs()) {
+            setIndexQueueTimeMs(other.getIndexQueueTimeMs());
+          }
+          if (other.hasIndexWriteTimeMs()) {
+            setIndexWriteTimeMs(other.getIndexWriteTimeMs());
+          }
+          this.mergeUnknownFields(other.getUnknownFields());
+          onChanged();
+          return this;
+        }
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        @java.lang.Override
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          if (extensionRegistry == null) {
+            throw new java.lang.NullPointerException();
+          }
+          try {
+            boolean done = false;
+            while (!done) {
+              int tag = input.readTag();
+              switch (tag) {
+                case 0:
+                  done = true;
+                  break;
+                case 8: {
+                  updateCount_ = input.readInt32();
+                  bitField0_ |= 0x00000001;
+                  break;
+                } // case 8
+                case 16: {
+                  indexQueueTimeMs_ = input.readInt64();
+                  bitField0_ |= 0x00000002;
+                  break;
+                } // case 16
+                case 24: {
+                  indexWriteTimeMs_ = input.readInt64();
+                  bitField0_ |= 0x00000004;
+                  break;
+                } // case 24
+                default: {
+                  if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                    done = true; // was an endgroup tag
+                  }
+                  break;
+                } // default:
+              } // switch (tag)
+            } // while (!done)
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            throw e.unwrapIOException();
+          } finally {
+            onChanged();
+          } // finally
+          return this;
+        }
+        private int bitField0_;
+
+        private int updateCount_ ;
+        /**
+         * <pre>
+         * The number of update operations that have been applied to the index
+         * since the last flush.
+         * </pre>
+         *
+         * <code>optional int32 update_count = 1;</code>
+         * @return Whether the updateCount field is set.
+         */
+        @java.lang.Override
+        public boolean hasUpdateCount() {
+          return ((bitField0_ & 0x00000001) != 0);
+        }
+        /**
+         * <pre>
+         * The number of update operations that have been applied to the index
+         * since the last flush.
+         * </pre>
+         *
+         * <code>optional int32 update_count = 1;</code>
+         * @return The updateCount.
+         */
+        @java.lang.Override
+        public int getUpdateCount() {
+          return updateCount_;
+        }
+        /**
+         * <pre>
+         * The number of update operations that have been applied to the index
+         * since the last flush.
+         * </pre>
+         *
+         * <code>optional int32 update_count = 1;</code>
+         * @param value The updateCount to set.
+         * @return This builder for chaining.
+         */
+        public Builder setUpdateCount(int value) {
+
+          updateCount_ = value;
+          bitField0_ |= 0x00000001;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * The number of update operations that have been applied to the index
+         * since the last flush.
+         * </pre>
+         *
+         * <code>optional int32 update_count = 1;</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearUpdateCount() {
+          bitField0_ = (bitField0_ & ~0x00000001);
+          updateCount_ = 0;
+          onChanged();
+          return this;
+        }
+
+        private long indexQueueTimeMs_ ;
+        /**
+         * <pre>
+         * The amount of CPU time, in milliseconds, that all update operations
+         * spent waiting to begin execution since the last flush.
+         * </pre>
+         *
+         * <code>optional int64 index_queue_time_ms = 2;</code>
+         * @return Whether the indexQueueTimeMs field is set.
+         */
+        @java.lang.Override
+        public boolean hasIndexQueueTimeMs() {
+          return ((bitField0_ & 0x00000002) != 0);
+        }
+        /**
+         * <pre>
+         * The amount of CPU time, in milliseconds, that all update operations
+         * spent waiting to begin execution since the last flush.
+         * </pre>
+         *
+         * <code>optional int64 index_queue_time_ms = 2;</code>
+         * @return The indexQueueTimeMs.
+         */
+        @java.lang.Override
+        public long getIndexQueueTimeMs() {
+          return indexQueueTimeMs_;
+        }
+        /**
+         * <pre>
+         * The amount of CPU time, in milliseconds, that all update operations
+         * spent waiting to begin execution since the last flush.
+         * </pre>
+         *
+         * <code>optional int64 index_queue_time_ms = 2;</code>
+         * @param value The indexQueueTimeMs to set.
+         * @return This builder for chaining.
+         */
+        public Builder setIndexQueueTimeMs(long value) {
+
+          indexQueueTimeMs_ = value;
+          bitField0_ |= 0x00000002;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * The amount of CPU time, in milliseconds, that all update operations
+         * spent waiting to begin execution since the last flush.
+         * </pre>
+         *
+         * <code>optional int64 index_queue_time_ms = 2;</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearIndexQueueTimeMs() {
+          bitField0_ = (bitField0_ & ~0x00000002);
+          indexQueueTimeMs_ = 0L;
+          onChanged();
+          return this;
+        }
+
+        private long indexWriteTimeMs_ ;
+        /**
+         * <pre>
+         * The amount of CPU time, in milliseconds, that all update operations
+         * spent executing since the last flush.
+         * </pre>
+         *
+         * <code>optional int64 index_write_time_ms = 3;</code>
+         * @return Whether the indexWriteTimeMs field is set.
+         */
+        @java.lang.Override
+        public boolean hasIndexWriteTimeMs() {
+          return ((bitField0_ & 0x00000004) != 0);
+        }
+        /**
+         * <pre>
+         * The amount of CPU time, in milliseconds, that all update operations
+         * spent executing since the last flush.
+         * </pre>
+         *
+         * <code>optional int64 index_write_time_ms = 3;</code>
+         * @return The indexWriteTimeMs.
+         */
+        @java.lang.Override
+        public long getIndexWriteTimeMs() {
+          return indexWriteTimeMs_;
+        }
+        /**
+         * <pre>
+         * The amount of CPU time, in milliseconds, that all update operations
+         * spent executing since the last flush.
+         * </pre>
+         *
+         * <code>optional int64 index_write_time_ms = 3;</code>
+         * @param value The indexWriteTimeMs to set.
+         * @return This builder for chaining.
+         */
+        public Builder setIndexWriteTimeMs(long value) {
+
+          indexWriteTimeMs_ = value;
+          bitField0_ |= 0x00000004;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * The amount of CPU time, in milliseconds, that all update operations
+         * spent executing since the last flush.
+         * </pre>
+         *
+         * <code>optional int64 index_write_time_ms = 3;</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearIndexWriteTimeMs() {
+          bitField0_ = (bitField0_ & ~0x00000004);
+          indexWriteTimeMs_ = 0L;
+          onChanged();
+          return this;
+        }
+        @java.lang.Override
+        public final Builder setUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.setUnknownFields(unknownFields);
+        }
+
+        @java.lang.Override
+        public final Builder mergeUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.mergeUnknownFields(unknownFields);
+        }
+
+
+        // @@protoc_insertion_point(builder_scope:android_studio.SmlRagEvent.LuceneIndexMetrics.UpdateStats)
+      }
+
+      // @@protoc_insertion_point(class_scope:android_studio.SmlRagEvent.LuceneIndexMetrics.UpdateStats)
+      private static final com.google.wireless.android.sdk.stats.SmlRagEvent.LuceneIndexMetrics.UpdateStats DEFAULT_INSTANCE;
+      static {
+        DEFAULT_INSTANCE = new com.google.wireless.android.sdk.stats.SmlRagEvent.LuceneIndexMetrics.UpdateStats();
+      }
+
+      public static com.google.wireless.android.sdk.stats.SmlRagEvent.LuceneIndexMetrics.UpdateStats getDefaultInstance() {
+        return DEFAULT_INSTANCE;
+      }
+
+      @java.lang.Deprecated public static final com.google.protobuf.Parser<UpdateStats>
+          PARSER = new com.google.protobuf.AbstractParser<UpdateStats>() {
+        @java.lang.Override
+        public UpdateStats parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          Builder builder = newBuilder();
+          try {
+            builder.mergeFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            throw e.setUnfinishedMessage(builder.buildPartial());
+          } catch (com.google.protobuf.UninitializedMessageException e) {
+            throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+          } catch (java.io.IOException e) {
+            throw new com.google.protobuf.InvalidProtocolBufferException(e)
+                .setUnfinishedMessage(builder.buildPartial());
+          }
+          return builder.buildPartial();
+        }
+      };
+
+      public static com.google.protobuf.Parser<UpdateStats> parser() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<UpdateStats> getParserForType() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.wireless.android.sdk.stats.SmlRagEvent.LuceneIndexMetrics.UpdateStats getDefaultInstanceForType() {
+        return DEFAULT_INSTANCE;
+      }
+
+    }
+
+    private int bitField0_;
+    public static final int INDEXER_TYPE_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object indexerType_ = "";
+    /**
+     * <pre>
+     * The type of the active RAG indexer (see RagIndexerMetrics)
+     * </pre>
+     *
+     * <code>optional string indexer_type = 1;</code>
+     * @return Whether the indexerType field is set.
+     */
+    @java.lang.Override
+    public boolean hasIndexerType() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <pre>
+     * The type of the active RAG indexer (see RagIndexerMetrics)
+     * </pre>
+     *
+     * <code>optional string indexer_type = 1;</code>
+     * @return The indexerType.
+     */
+    @java.lang.Override
+    public java.lang.String getIndexerType() {
+      java.lang.Object ref = indexerType_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          indexerType_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * The type of the active RAG indexer (see RagIndexerMetrics)
+     * </pre>
+     *
+     * <code>optional string indexer_type = 1;</code>
+     * @return The bytes for indexerType.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getIndexerTypeBytes() {
+      java.lang.Object ref = indexerType_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        indexerType_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int IS_ACTIVE_FIELD_NUMBER = 2;
+    private boolean isActive_ = false;
+    /**
+     * <pre>
+     * Whether the RAG indexer that owns this index is the active RAG indexer.
+     * </pre>
+     *
+     * <code>optional bool is_active = 2;</code>
+     * @return Whether the isActive field is set.
+     */
+    @java.lang.Override
+    public boolean hasIsActive() {
+      return ((bitField0_ & 0x00000002) != 0);
+    }
+    /**
+     * <pre>
+     * Whether the RAG indexer that owns this index is the active RAG indexer.
+     * </pre>
+     *
+     * <code>optional bool is_active = 2;</code>
+     * @return The isActive.
+     */
+    @java.lang.Override
+    public boolean getIsActive() {
+      return isActive_;
+    }
+
+    public static final int OVERALL_STATS_FIELD_NUMBER = 3;
+    private com.google.wireless.android.sdk.stats.SmlRagEvent.LuceneIndexMetrics.UpdateStats overallStats_;
+    /**
+     * <pre>
+     * Stats for all changes applied to the index since the last flush.
+     * </pre>
+     *
+     * <code>optional .android_studio.SmlRagEvent.LuceneIndexMetrics.UpdateStats overall_stats = 3;</code>
+     * @return Whether the overallStats field is set.
+     */
+    @java.lang.Override
+    public boolean hasOverallStats() {
+      return ((bitField0_ & 0x00000004) != 0);
+    }
+    /**
+     * <pre>
+     * Stats for all changes applied to the index since the last flush.
+     * </pre>
+     *
+     * <code>optional .android_studio.SmlRagEvent.LuceneIndexMetrics.UpdateStats overall_stats = 3;</code>
+     * @return The overallStats.
+     */
+    @java.lang.Override
+    public com.google.wireless.android.sdk.stats.SmlRagEvent.LuceneIndexMetrics.UpdateStats getOverallStats() {
+      return overallStats_ == null ? com.google.wireless.android.sdk.stats.SmlRagEvent.LuceneIndexMetrics.UpdateStats.getDefaultInstance() : overallStats_;
+    }
+    /**
+     * <pre>
+     * Stats for all changes applied to the index since the last flush.
+     * </pre>
+     *
+     * <code>optional .android_studio.SmlRagEvent.LuceneIndexMetrics.UpdateStats overall_stats = 3;</code>
+     */
+    @java.lang.Override
+    public com.google.wireless.android.sdk.stats.SmlRagEvent.LuceneIndexMetrics.UpdateStatsOrBuilder getOverallStatsOrBuilder() {
+      return overallStats_ == null ? com.google.wireless.android.sdk.stats.SmlRagEvent.LuceneIndexMetrics.UpdateStats.getDefaultInstance() : overallStats_;
+    }
+
+    public static final int INDEX_FLUSH_TIME_MS_FIELD_NUMBER = 4;
+    private long indexFlushTimeMs_ = 0L;
+    /**
+     * <pre>
+     * The amount of wall time, in milliseconds, that the current flush
+     * operation spent waiting for pending writes to finish.
+     * </pre>
+     *
+     * <code>optional int64 index_flush_time_ms = 4;</code>
+     * @return Whether the indexFlushTimeMs field is set.
+     */
+    @java.lang.Override
+    public boolean hasIndexFlushTimeMs() {
+      return ((bitField0_ & 0x00000008) != 0);
+    }
+    /**
+     * <pre>
+     * The amount of wall time, in milliseconds, that the current flush
+     * operation spent waiting for pending writes to finish.
+     * </pre>
+     *
+     * <code>optional int64 index_flush_time_ms = 4;</code>
+     * @return The indexFlushTimeMs.
+     */
+    @java.lang.Override
+    public long getIndexFlushTimeMs() {
+      return indexFlushTimeMs_;
+    }
+
+    public static final int INDEX_COMMIT_TIME_MS_FIELD_NUMBER = 5;
+    private long indexCommitTimeMs_ = 0L;
+    /**
+     * <pre>
+     * The amount of wall time, in milliseconds, that the current flush
+     * operation spent waiting for Lucene to commit the index to disk.
+     * </pre>
+     *
+     * <code>optional int64 index_commit_time_ms = 5;</code>
+     * @return Whether the indexCommitTimeMs field is set.
+     */
+    @java.lang.Override
+    public boolean hasIndexCommitTimeMs() {
+      return ((bitField0_ & 0x00000010) != 0);
+    }
+    /**
+     * <pre>
+     * The amount of wall time, in milliseconds, that the current flush
+     * operation spent waiting for Lucene to commit the index to disk.
+     * </pre>
+     *
+     * <code>optional int64 index_commit_time_ms = 5;</code>
+     * @return The indexCommitTimeMs.
+     */
+    @java.lang.Override
+    public long getIndexCommitTimeMs() {
+      return indexCommitTimeMs_;
+    }
+
+    public static final int STATS_BY_FILE_TYPE_FIELD_NUMBER = 6;
+    private static final class StatsByFileTypeDefaultEntryHolder {
+      static final com.google.protobuf.MapEntry<
+          java.lang.String, com.google.wireless.android.sdk.stats.SmlRagEvent.LuceneIndexMetrics.UpdateStats> defaultEntry =
+              com.google.protobuf.MapEntry
+              .<java.lang.String, com.google.wireless.android.sdk.stats.SmlRagEvent.LuceneIndexMetrics.UpdateStats>newDefaultInstance(
+                  com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_SmlRagEvent_LuceneIndexMetrics_StatsByFileTypeEntry_descriptor, 
+                  com.google.protobuf.WireFormat.FieldType.STRING,
+                  "",
+                  com.google.protobuf.WireFormat.FieldType.MESSAGE,
+                  com.google.wireless.android.sdk.stats.SmlRagEvent.LuceneIndexMetrics.UpdateStats.getDefaultInstance());
+    }
+    @SuppressWarnings("serial")
+    private com.google.protobuf.MapField<
+        java.lang.String, com.google.wireless.android.sdk.stats.SmlRagEvent.LuceneIndexMetrics.UpdateStats> statsByFileType_;
+    private com.google.protobuf.MapField<java.lang.String, com.google.wireless.android.sdk.stats.SmlRagEvent.LuceneIndexMetrics.UpdateStats>
+    internalGetStatsByFileType() {
+      if (statsByFileType_ == null) {
+        return com.google.protobuf.MapField.emptyMapField(
+            StatsByFileTypeDefaultEntryHolder.defaultEntry);
+      }
+      return statsByFileType_;
+    }
+    public int getStatsByFileTypeCount() {
+      return internalGetStatsByFileType().getMap().size();
+    }
+    /**
+     * <pre>
+     * Stats for the update operations that have been applied to the index since
+     * the last flush, broken down by the IntelliJ file type. Key is the unique
+     * name of the file type, as reported by FileType#getName.
+     * </pre>
+     *
+     * <code>map&lt;string, .android_studio.SmlRagEvent.LuceneIndexMetrics.UpdateStats&gt; stats_by_file_type = 6;</code>
+     */
+    @java.lang.Override
+    public boolean containsStatsByFileType(
+        java.lang.String key) {
+      if (key == null) { throw new NullPointerException("map key"); }
+      return internalGetStatsByFileType().getMap().containsKey(key);
+    }
+    /**
+     * Use {@link #getStatsByFileTypeMap()} instead.
+     */
+    @java.lang.Override
+    @java.lang.Deprecated
+    public java.util.Map<java.lang.String, com.google.wireless.android.sdk.stats.SmlRagEvent.LuceneIndexMetrics.UpdateStats> getStatsByFileType() {
+      return getStatsByFileTypeMap();
+    }
+    /**
+     * <pre>
+     * Stats for the update operations that have been applied to the index since
+     * the last flush, broken down by the IntelliJ file type. Key is the unique
+     * name of the file type, as reported by FileType#getName.
+     * </pre>
+     *
+     * <code>map&lt;string, .android_studio.SmlRagEvent.LuceneIndexMetrics.UpdateStats&gt; stats_by_file_type = 6;</code>
+     */
+    @java.lang.Override
+    public java.util.Map<java.lang.String, com.google.wireless.android.sdk.stats.SmlRagEvent.LuceneIndexMetrics.UpdateStats> getStatsByFileTypeMap() {
+      return internalGetStatsByFileType().getMap();
+    }
+    /**
+     * <pre>
+     * Stats for the update operations that have been applied to the index since
+     * the last flush, broken down by the IntelliJ file type. Key is the unique
+     * name of the file type, as reported by FileType#getName.
+     * </pre>
+     *
+     * <code>map&lt;string, .android_studio.SmlRagEvent.LuceneIndexMetrics.UpdateStats&gt; stats_by_file_type = 6;</code>
+     */
+    @java.lang.Override
+    public /* nullable */
+com.google.wireless.android.sdk.stats.SmlRagEvent.LuceneIndexMetrics.UpdateStats getStatsByFileTypeOrDefault(
+        java.lang.String key,
+        /* nullable */
+com.google.wireless.android.sdk.stats.SmlRagEvent.LuceneIndexMetrics.UpdateStats defaultValue) {
+      if (key == null) { throw new NullPointerException("map key"); }
+      java.util.Map<java.lang.String, com.google.wireless.android.sdk.stats.SmlRagEvent.LuceneIndexMetrics.UpdateStats> map =
+          internalGetStatsByFileType().getMap();
+      return map.containsKey(key) ? map.get(key) : defaultValue;
+    }
+    /**
+     * <pre>
+     * Stats for the update operations that have been applied to the index since
+     * the last flush, broken down by the IntelliJ file type. Key is the unique
+     * name of the file type, as reported by FileType#getName.
+     * </pre>
+     *
+     * <code>map&lt;string, .android_studio.SmlRagEvent.LuceneIndexMetrics.UpdateStats&gt; stats_by_file_type = 6;</code>
+     */
+    @java.lang.Override
+    public com.google.wireless.android.sdk.stats.SmlRagEvent.LuceneIndexMetrics.UpdateStats getStatsByFileTypeOrThrow(
+        java.lang.String key) {
+      if (key == null) { throw new NullPointerException("map key"); }
+      java.util.Map<java.lang.String, com.google.wireless.android.sdk.stats.SmlRagEvent.LuceneIndexMetrics.UpdateStats> map =
+          internalGetStatsByFileType().getMap();
+      if (!map.containsKey(key)) {
+        throw new java.lang.IllegalArgumentException();
+      }
+      return map.get(key);
+    }
+
+    public static final int STATS_BY_LANGUAGE_FIELD_NUMBER = 7;
+    private static final class StatsByLanguageDefaultEntryHolder {
+      static final com.google.protobuf.MapEntry<
+          java.lang.String, com.google.wireless.android.sdk.stats.SmlRagEvent.LuceneIndexMetrics.UpdateStats> defaultEntry =
+              com.google.protobuf.MapEntry
+              .<java.lang.String, com.google.wireless.android.sdk.stats.SmlRagEvent.LuceneIndexMetrics.UpdateStats>newDefaultInstance(
+                  com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_SmlRagEvent_LuceneIndexMetrics_StatsByLanguageEntry_descriptor, 
+                  com.google.protobuf.WireFormat.FieldType.STRING,
+                  "",
+                  com.google.protobuf.WireFormat.FieldType.MESSAGE,
+                  com.google.wireless.android.sdk.stats.SmlRagEvent.LuceneIndexMetrics.UpdateStats.getDefaultInstance());
+    }
+    @SuppressWarnings("serial")
+    private com.google.protobuf.MapField<
+        java.lang.String, com.google.wireless.android.sdk.stats.SmlRagEvent.LuceneIndexMetrics.UpdateStats> statsByLanguage_;
+    private com.google.protobuf.MapField<java.lang.String, com.google.wireless.android.sdk.stats.SmlRagEvent.LuceneIndexMetrics.UpdateStats>
+    internalGetStatsByLanguage() {
+      if (statsByLanguage_ == null) {
+        return com.google.protobuf.MapField.emptyMapField(
+            StatsByLanguageDefaultEntryHolder.defaultEntry);
+      }
+      return statsByLanguage_;
+    }
+    public int getStatsByLanguageCount() {
+      return internalGetStatsByLanguage().getMap().size();
+    }
+    /**
+     * <pre>
+     * Stats for the update operations that have been applied to the index since
+     * the last flush, broken down by the base language. Key is the unique ID of
+     * the language, as reported by Language#getId. Since languages can have
+     * dialects and base languages, the total count in this map may differ from
+     * the total count in overall_stats.
+     * </pre>
+     *
+     * <code>map&lt;string, .android_studio.SmlRagEvent.LuceneIndexMetrics.UpdateStats&gt; stats_by_language = 7;</code>
+     */
+    @java.lang.Override
+    public boolean containsStatsByLanguage(
+        java.lang.String key) {
+      if (key == null) { throw new NullPointerException("map key"); }
+      return internalGetStatsByLanguage().getMap().containsKey(key);
+    }
+    /**
+     * Use {@link #getStatsByLanguageMap()} instead.
+     */
+    @java.lang.Override
+    @java.lang.Deprecated
+    public java.util.Map<java.lang.String, com.google.wireless.android.sdk.stats.SmlRagEvent.LuceneIndexMetrics.UpdateStats> getStatsByLanguage() {
+      return getStatsByLanguageMap();
+    }
+    /**
+     * <pre>
+     * Stats for the update operations that have been applied to the index since
+     * the last flush, broken down by the base language. Key is the unique ID of
+     * the language, as reported by Language#getId. Since languages can have
+     * dialects and base languages, the total count in this map may differ from
+     * the total count in overall_stats.
+     * </pre>
+     *
+     * <code>map&lt;string, .android_studio.SmlRagEvent.LuceneIndexMetrics.UpdateStats&gt; stats_by_language = 7;</code>
+     */
+    @java.lang.Override
+    public java.util.Map<java.lang.String, com.google.wireless.android.sdk.stats.SmlRagEvent.LuceneIndexMetrics.UpdateStats> getStatsByLanguageMap() {
+      return internalGetStatsByLanguage().getMap();
+    }
+    /**
+     * <pre>
+     * Stats for the update operations that have been applied to the index since
+     * the last flush, broken down by the base language. Key is the unique ID of
+     * the language, as reported by Language#getId. Since languages can have
+     * dialects and base languages, the total count in this map may differ from
+     * the total count in overall_stats.
+     * </pre>
+     *
+     * <code>map&lt;string, .android_studio.SmlRagEvent.LuceneIndexMetrics.UpdateStats&gt; stats_by_language = 7;</code>
+     */
+    @java.lang.Override
+    public /* nullable */
+com.google.wireless.android.sdk.stats.SmlRagEvent.LuceneIndexMetrics.UpdateStats getStatsByLanguageOrDefault(
+        java.lang.String key,
+        /* nullable */
+com.google.wireless.android.sdk.stats.SmlRagEvent.LuceneIndexMetrics.UpdateStats defaultValue) {
+      if (key == null) { throw new NullPointerException("map key"); }
+      java.util.Map<java.lang.String, com.google.wireless.android.sdk.stats.SmlRagEvent.LuceneIndexMetrics.UpdateStats> map =
+          internalGetStatsByLanguage().getMap();
+      return map.containsKey(key) ? map.get(key) : defaultValue;
+    }
+    /**
+     * <pre>
+     * Stats for the update operations that have been applied to the index since
+     * the last flush, broken down by the base language. Key is the unique ID of
+     * the language, as reported by Language#getId. Since languages can have
+     * dialects and base languages, the total count in this map may differ from
+     * the total count in overall_stats.
+     * </pre>
+     *
+     * <code>map&lt;string, .android_studio.SmlRagEvent.LuceneIndexMetrics.UpdateStats&gt; stats_by_language = 7;</code>
+     */
+    @java.lang.Override
+    public com.google.wireless.android.sdk.stats.SmlRagEvent.LuceneIndexMetrics.UpdateStats getStatsByLanguageOrThrow(
+        java.lang.String key) {
+      if (key == null) { throw new NullPointerException("map key"); }
+      java.util.Map<java.lang.String, com.google.wireless.android.sdk.stats.SmlRagEvent.LuceneIndexMetrics.UpdateStats> map =
+          internalGetStatsByLanguage().getMap();
+      if (!map.containsKey(key)) {
+        throw new java.lang.IllegalArgumentException();
+      }
+      return map.get(key);
+    }
+
+    public static final int INDEX_DOCUMENT_COUNT_FIELD_NUMBER = 8;
+    private int indexDocumentCount_ = 0;
+    /**
+     * <pre>
+     * The total number of documents in the index, across all projects.
+     * </pre>
+     *
+     * <code>optional int32 index_document_count = 8;</code>
+     * @return Whether the indexDocumentCount field is set.
+     */
+    @java.lang.Override
+    public boolean hasIndexDocumentCount() {
+      return ((bitField0_ & 0x00000020) != 0);
+    }
+    /**
+     * <pre>
+     * The total number of documents in the index, across all projects.
+     * </pre>
+     *
+     * <code>optional int32 index_document_count = 8;</code>
+     * @return The indexDocumentCount.
+     */
+    @java.lang.Override
+    public int getIndexDocumentCount() {
+      return indexDocumentCount_;
+    }
+
+    public static final int INDEX_SIZE_BYTES_FIELD_NUMBER = 9;
+    private long indexSizeBytes_ = 0L;
+    /**
+     * <pre>
+     * The total size of the index on disk, across all projects.
+     * </pre>
+     *
+     * <code>optional int64 index_size_bytes = 9;</code>
+     * @return Whether the indexSizeBytes field is set.
+     */
+    @java.lang.Override
+    public boolean hasIndexSizeBytes() {
+      return ((bitField0_ & 0x00000040) != 0);
+    }
+    /**
+     * <pre>
+     * The total size of the index on disk, across all projects.
+     * </pre>
+     *
+     * <code>optional int64 index_size_bytes = 9;</code>
+     * @return The indexSizeBytes.
+     */
+    @java.lang.Override
+    public long getIndexSizeBytes() {
+      return indexSizeBytes_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (((bitField0_ & 0x00000001) != 0)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, indexerType_);
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        output.writeBool(2, isActive_);
+      }
+      if (((bitField0_ & 0x00000004) != 0)) {
+        output.writeMessage(3, getOverallStats());
+      }
+      if (((bitField0_ & 0x00000008) != 0)) {
+        output.writeInt64(4, indexFlushTimeMs_);
+      }
+      if (((bitField0_ & 0x00000010) != 0)) {
+        output.writeInt64(5, indexCommitTimeMs_);
+      }
+      com.google.protobuf.GeneratedMessageV3
+        .serializeStringMapTo(
+          output,
+          internalGetStatsByFileType(),
+          StatsByFileTypeDefaultEntryHolder.defaultEntry,
+          6);
+      com.google.protobuf.GeneratedMessageV3
+        .serializeStringMapTo(
+          output,
+          internalGetStatsByLanguage(),
+          StatsByLanguageDefaultEntryHolder.defaultEntry,
+          7);
+      if (((bitField0_ & 0x00000020) != 0)) {
+        output.writeInt32(8, indexDocumentCount_);
+      }
+      if (((bitField0_ & 0x00000040) != 0)) {
+        output.writeInt64(9, indexSizeBytes_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) != 0)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, indexerType_);
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(2, isActive_);
+      }
+      if (((bitField0_ & 0x00000004) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getOverallStats());
+      }
+      if (((bitField0_ & 0x00000008) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(4, indexFlushTimeMs_);
+      }
+      if (((bitField0_ & 0x00000010) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(5, indexCommitTimeMs_);
+      }
+      for (java.util.Map.Entry<java.lang.String, com.google.wireless.android.sdk.stats.SmlRagEvent.LuceneIndexMetrics.UpdateStats> entry
+           : internalGetStatsByFileType().getMap().entrySet()) {
+        com.google.protobuf.MapEntry<java.lang.String, com.google.wireless.android.sdk.stats.SmlRagEvent.LuceneIndexMetrics.UpdateStats>
+        statsByFileType__ = StatsByFileTypeDefaultEntryHolder.defaultEntry.newBuilderForType()
+            .setKey(entry.getKey())
+            .setValue(entry.getValue())
+            .build();
+        size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(6, statsByFileType__);
+      }
+      for (java.util.Map.Entry<java.lang.String, com.google.wireless.android.sdk.stats.SmlRagEvent.LuceneIndexMetrics.UpdateStats> entry
+           : internalGetStatsByLanguage().getMap().entrySet()) {
+        com.google.protobuf.MapEntry<java.lang.String, com.google.wireless.android.sdk.stats.SmlRagEvent.LuceneIndexMetrics.UpdateStats>
+        statsByLanguage__ = StatsByLanguageDefaultEntryHolder.defaultEntry.newBuilderForType()
+            .setKey(entry.getKey())
+            .setValue(entry.getValue())
+            .build();
+        size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(7, statsByLanguage__);
+      }
+      if (((bitField0_ & 0x00000020) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(8, indexDocumentCount_);
+      }
+      if (((bitField0_ & 0x00000040) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(9, indexSizeBytes_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.google.wireless.android.sdk.stats.SmlRagEvent.LuceneIndexMetrics)) {
+        return super.equals(obj);
+      }
+      com.google.wireless.android.sdk.stats.SmlRagEvent.LuceneIndexMetrics other = (com.google.wireless.android.sdk.stats.SmlRagEvent.LuceneIndexMetrics) obj;
+
+      if (hasIndexerType() != other.hasIndexerType()) return false;
+      if (hasIndexerType()) {
+        if (!getIndexerType()
+            .equals(other.getIndexerType())) return false;
+      }
+      if (hasIsActive() != other.hasIsActive()) return false;
+      if (hasIsActive()) {
+        if (getIsActive()
+            != other.getIsActive()) return false;
+      }
+      if (hasOverallStats() != other.hasOverallStats()) return false;
+      if (hasOverallStats()) {
+        if (!getOverallStats()
+            .equals(other.getOverallStats())) return false;
+      }
+      if (hasIndexFlushTimeMs() != other.hasIndexFlushTimeMs()) return false;
+      if (hasIndexFlushTimeMs()) {
+        if (getIndexFlushTimeMs()
+            != other.getIndexFlushTimeMs()) return false;
+      }
+      if (hasIndexCommitTimeMs() != other.hasIndexCommitTimeMs()) return false;
+      if (hasIndexCommitTimeMs()) {
+        if (getIndexCommitTimeMs()
+            != other.getIndexCommitTimeMs()) return false;
+      }
+      if (!internalGetStatsByFileType().equals(
+          other.internalGetStatsByFileType())) return false;
+      if (!internalGetStatsByLanguage().equals(
+          other.internalGetStatsByLanguage())) return false;
+      if (hasIndexDocumentCount() != other.hasIndexDocumentCount()) return false;
+      if (hasIndexDocumentCount()) {
+        if (getIndexDocumentCount()
+            != other.getIndexDocumentCount()) return false;
+      }
+      if (hasIndexSizeBytes() != other.hasIndexSizeBytes()) return false;
+      if (hasIndexSizeBytes()) {
+        if (getIndexSizeBytes()
+            != other.getIndexSizeBytes()) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasIndexerType()) {
+        hash = (37 * hash) + INDEXER_TYPE_FIELD_NUMBER;
+        hash = (53 * hash) + getIndexerType().hashCode();
+      }
+      if (hasIsActive()) {
+        hash = (37 * hash) + IS_ACTIVE_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+            getIsActive());
+      }
+      if (hasOverallStats()) {
+        hash = (37 * hash) + OVERALL_STATS_FIELD_NUMBER;
+        hash = (53 * hash) + getOverallStats().hashCode();
+      }
+      if (hasIndexFlushTimeMs()) {
+        hash = (37 * hash) + INDEX_FLUSH_TIME_MS_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            getIndexFlushTimeMs());
+      }
+      if (hasIndexCommitTimeMs()) {
+        hash = (37 * hash) + INDEX_COMMIT_TIME_MS_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            getIndexCommitTimeMs());
+      }
+      if (!internalGetStatsByFileType().getMap().isEmpty()) {
+        hash = (37 * hash) + STATS_BY_FILE_TYPE_FIELD_NUMBER;
+        hash = (53 * hash) + internalGetStatsByFileType().hashCode();
+      }
+      if (!internalGetStatsByLanguage().getMap().isEmpty()) {
+        hash = (37 * hash) + STATS_BY_LANGUAGE_FIELD_NUMBER;
+        hash = (53 * hash) + internalGetStatsByLanguage().hashCode();
+      }
+      if (hasIndexDocumentCount()) {
+        hash = (37 * hash) + INDEX_DOCUMENT_COUNT_FIELD_NUMBER;
+        hash = (53 * hash) + getIndexDocumentCount();
+      }
+      if (hasIndexSizeBytes()) {
+        hash = (37 * hash) + INDEX_SIZE_BYTES_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            getIndexSizeBytes());
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.google.wireless.android.sdk.stats.SmlRagEvent.LuceneIndexMetrics parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.google.wireless.android.sdk.stats.SmlRagEvent.LuceneIndexMetrics parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.google.wireless.android.sdk.stats.SmlRagEvent.LuceneIndexMetrics parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.google.wireless.android.sdk.stats.SmlRagEvent.LuceneIndexMetrics parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.google.wireless.android.sdk.stats.SmlRagEvent.LuceneIndexMetrics parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.google.wireless.android.sdk.stats.SmlRagEvent.LuceneIndexMetrics parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.google.wireless.android.sdk.stats.SmlRagEvent.LuceneIndexMetrics parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.google.wireless.android.sdk.stats.SmlRagEvent.LuceneIndexMetrics parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.google.wireless.android.sdk.stats.SmlRagEvent.LuceneIndexMetrics parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.google.wireless.android.sdk.stats.SmlRagEvent.LuceneIndexMetrics parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.google.wireless.android.sdk.stats.SmlRagEvent.LuceneIndexMetrics parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.google.wireless.android.sdk.stats.SmlRagEvent.LuceneIndexMetrics parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.google.wireless.android.sdk.stats.SmlRagEvent.LuceneIndexMetrics prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code android_studio.SmlRagEvent.LuceneIndexMetrics}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:android_studio.SmlRagEvent.LuceneIndexMetrics)
+        com.google.wireless.android.sdk.stats.SmlRagEvent.LuceneIndexMetricsOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_SmlRagEvent_LuceneIndexMetrics_descriptor;
+      }
+
+      @SuppressWarnings({"rawtypes"})
+      protected com.google.protobuf.MapField internalGetMapField(
+          int number) {
+        switch (number) {
+          case 6:
+            return internalGetStatsByFileType();
+          case 7:
+            return internalGetStatsByLanguage();
+          default:
+            throw new RuntimeException(
+                "Invalid map field number: " + number);
+        }
+      }
+      @SuppressWarnings({"rawtypes"})
+      protected com.google.protobuf.MapField internalGetMutableMapField(
+          int number) {
+        switch (number) {
+          case 6:
+            return internalGetMutableStatsByFileType();
+          case 7:
+            return internalGetMutableStatsByLanguage();
+          default:
+            throw new RuntimeException(
+                "Invalid map field number: " + number);
+        }
+      }
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_SmlRagEvent_LuceneIndexMetrics_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.google.wireless.android.sdk.stats.SmlRagEvent.LuceneIndexMetrics.class, com.google.wireless.android.sdk.stats.SmlRagEvent.LuceneIndexMetrics.Builder.class);
+      }
+
+      // Construct using com.google.wireless.android.sdk.stats.SmlRagEvent.LuceneIndexMetrics.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getOverallStatsFieldBuilder();
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        indexerType_ = "";
+        isActive_ = false;
+        overallStats_ = null;
+        if (overallStatsBuilder_ != null) {
+          overallStatsBuilder_.dispose();
+          overallStatsBuilder_ = null;
+        }
+        indexFlushTimeMs_ = 0L;
+        indexCommitTimeMs_ = 0L;
+        internalGetMutableStatsByFileType().clear();
+        internalGetMutableStatsByLanguage().clear();
+        indexDocumentCount_ = 0;
+        indexSizeBytes_ = 0L;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_SmlRagEvent_LuceneIndexMetrics_descriptor;
+      }
+
+      @java.lang.Override
+      public com.google.wireless.android.sdk.stats.SmlRagEvent.LuceneIndexMetrics getDefaultInstanceForType() {
+        return com.google.wireless.android.sdk.stats.SmlRagEvent.LuceneIndexMetrics.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.google.wireless.android.sdk.stats.SmlRagEvent.LuceneIndexMetrics build() {
+        com.google.wireless.android.sdk.stats.SmlRagEvent.LuceneIndexMetrics result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.google.wireless.android.sdk.stats.SmlRagEvent.LuceneIndexMetrics buildPartial() {
+        com.google.wireless.android.sdk.stats.SmlRagEvent.LuceneIndexMetrics result = new com.google.wireless.android.sdk.stats.SmlRagEvent.LuceneIndexMetrics(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.google.wireless.android.sdk.stats.SmlRagEvent.LuceneIndexMetrics result) {
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.indexerType_ = indexerType_;
+          to_bitField0_ |= 0x00000001;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.isActive_ = isActive_;
+          to_bitField0_ |= 0x00000002;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.overallStats_ = overallStatsBuilder_ == null
+              ? overallStats_
+              : overallStatsBuilder_.build();
+          to_bitField0_ |= 0x00000004;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.indexFlushTimeMs_ = indexFlushTimeMs_;
+          to_bitField0_ |= 0x00000008;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.indexCommitTimeMs_ = indexCommitTimeMs_;
+          to_bitField0_ |= 0x00000010;
+        }
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          result.statsByFileType_ = internalGetStatsByFileType();
+          result.statsByFileType_.makeImmutable();
+        }
+        if (((from_bitField0_ & 0x00000040) != 0)) {
+          result.statsByLanguage_ = internalGetStatsByLanguage();
+          result.statsByLanguage_.makeImmutable();
+        }
+        if (((from_bitField0_ & 0x00000080) != 0)) {
+          result.indexDocumentCount_ = indexDocumentCount_;
+          to_bitField0_ |= 0x00000020;
+        }
+        if (((from_bitField0_ & 0x00000100) != 0)) {
+          result.indexSizeBytes_ = indexSizeBytes_;
+          to_bitField0_ |= 0x00000040;
+        }
+        result.bitField0_ |= to_bitField0_;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.google.wireless.android.sdk.stats.SmlRagEvent.LuceneIndexMetrics) {
+          return mergeFrom((com.google.wireless.android.sdk.stats.SmlRagEvent.LuceneIndexMetrics)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.google.wireless.android.sdk.stats.SmlRagEvent.LuceneIndexMetrics other) {
+        if (other == com.google.wireless.android.sdk.stats.SmlRagEvent.LuceneIndexMetrics.getDefaultInstance()) return this;
+        if (other.hasIndexerType()) {
+          indexerType_ = other.indexerType_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (other.hasIsActive()) {
+          setIsActive(other.getIsActive());
+        }
+        if (other.hasOverallStats()) {
+          mergeOverallStats(other.getOverallStats());
+        }
+        if (other.hasIndexFlushTimeMs()) {
+          setIndexFlushTimeMs(other.getIndexFlushTimeMs());
+        }
+        if (other.hasIndexCommitTimeMs()) {
+          setIndexCommitTimeMs(other.getIndexCommitTimeMs());
+        }
+        internalGetMutableStatsByFileType().mergeFrom(
+            other.internalGetStatsByFileType());
+        bitField0_ |= 0x00000020;
+        internalGetMutableStatsByLanguage().mergeFrom(
+            other.internalGetStatsByLanguage());
+        bitField0_ |= 0x00000040;
+        if (other.hasIndexDocumentCount()) {
+          setIndexDocumentCount(other.getIndexDocumentCount());
+        }
+        if (other.hasIndexSizeBytes()) {
+          setIndexSizeBytes(other.getIndexSizeBytes());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                indexerType_ = input.readBytes();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 16: {
+                isActive_ = input.readBool();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 16
+              case 26: {
+                input.readMessage(
+                    getOverallStatsFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 32: {
+                indexFlushTimeMs_ = input.readInt64();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 32
+              case 40: {
+                indexCommitTimeMs_ = input.readInt64();
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 40
+              case 50: {
+                com.google.protobuf.MapEntry<java.lang.String, com.google.wireless.android.sdk.stats.SmlRagEvent.LuceneIndexMetrics.UpdateStats>
+                statsByFileType__ = input.readMessage(
+                    StatsByFileTypeDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+                internalGetMutableStatsByFileType().getMutableMap().put(
+                    statsByFileType__.getKey(), statsByFileType__.getValue());
+                bitField0_ |= 0x00000020;
+                break;
+              } // case 50
+              case 58: {
+                com.google.protobuf.MapEntry<java.lang.String, com.google.wireless.android.sdk.stats.SmlRagEvent.LuceneIndexMetrics.UpdateStats>
+                statsByLanguage__ = input.readMessage(
+                    StatsByLanguageDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+                internalGetMutableStatsByLanguage().getMutableMap().put(
+                    statsByLanguage__.getKey(), statsByLanguage__.getValue());
+                bitField0_ |= 0x00000040;
+                break;
+              } // case 58
+              case 64: {
+                indexDocumentCount_ = input.readInt32();
+                bitField0_ |= 0x00000080;
+                break;
+              } // case 64
+              case 72: {
+                indexSizeBytes_ = input.readInt64();
+                bitField0_ |= 0x00000100;
+                break;
+              } // case 72
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object indexerType_ = "";
+      /**
+       * <pre>
+       * The type of the active RAG indexer (see RagIndexerMetrics)
+       * </pre>
+       *
+       * <code>optional string indexer_type = 1;</code>
+       * @return Whether the indexerType field is set.
+       */
+      public boolean hasIndexerType() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <pre>
+       * The type of the active RAG indexer (see RagIndexerMetrics)
+       * </pre>
+       *
+       * <code>optional string indexer_type = 1;</code>
+       * @return The indexerType.
+       */
+      public java.lang.String getIndexerType() {
+        java.lang.Object ref = indexerType_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            indexerType_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The type of the active RAG indexer (see RagIndexerMetrics)
+       * </pre>
+       *
+       * <code>optional string indexer_type = 1;</code>
+       * @return The bytes for indexerType.
+       */
+      public com.google.protobuf.ByteString
+          getIndexerTypeBytes() {
+        java.lang.Object ref = indexerType_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          indexerType_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The type of the active RAG indexer (see RagIndexerMetrics)
+       * </pre>
+       *
+       * <code>optional string indexer_type = 1;</code>
+       * @param value The indexerType to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIndexerType(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        indexerType_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The type of the active RAG indexer (see RagIndexerMetrics)
+       * </pre>
+       *
+       * <code>optional string indexer_type = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearIndexerType() {
+        indexerType_ = getDefaultInstance().getIndexerType();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The type of the active RAG indexer (see RagIndexerMetrics)
+       * </pre>
+       *
+       * <code>optional string indexer_type = 1;</code>
+       * @param value The bytes for indexerType to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIndexerTypeBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        indexerType_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private boolean isActive_ ;
+      /**
+       * <pre>
+       * Whether the RAG indexer that owns this index is the active RAG indexer.
+       * </pre>
+       *
+       * <code>optional bool is_active = 2;</code>
+       * @return Whether the isActive field is set.
+       */
+      @java.lang.Override
+      public boolean hasIsActive() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <pre>
+       * Whether the RAG indexer that owns this index is the active RAG indexer.
+       * </pre>
+       *
+       * <code>optional bool is_active = 2;</code>
+       * @return The isActive.
+       */
+      @java.lang.Override
+      public boolean getIsActive() {
+        return isActive_;
+      }
+      /**
+       * <pre>
+       * Whether the RAG indexer that owns this index is the active RAG indexer.
+       * </pre>
+       *
+       * <code>optional bool is_active = 2;</code>
+       * @param value The isActive to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIsActive(boolean value) {
+
+        isActive_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Whether the RAG indexer that owns this index is the active RAG indexer.
+       * </pre>
+       *
+       * <code>optional bool is_active = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearIsActive() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        isActive_ = false;
+        onChanged();
+        return this;
+      }
+
+      private com.google.wireless.android.sdk.stats.SmlRagEvent.LuceneIndexMetrics.UpdateStats overallStats_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.wireless.android.sdk.stats.SmlRagEvent.LuceneIndexMetrics.UpdateStats, com.google.wireless.android.sdk.stats.SmlRagEvent.LuceneIndexMetrics.UpdateStats.Builder, com.google.wireless.android.sdk.stats.SmlRagEvent.LuceneIndexMetrics.UpdateStatsOrBuilder> overallStatsBuilder_;
+      /**
+       * <pre>
+       * Stats for all changes applied to the index since the last flush.
+       * </pre>
+       *
+       * <code>optional .android_studio.SmlRagEvent.LuceneIndexMetrics.UpdateStats overall_stats = 3;</code>
+       * @return Whether the overallStats field is set.
+       */
+      public boolean hasOverallStats() {
+        return ((bitField0_ & 0x00000004) != 0);
+      }
+      /**
+       * <pre>
+       * Stats for all changes applied to the index since the last flush.
+       * </pre>
+       *
+       * <code>optional .android_studio.SmlRagEvent.LuceneIndexMetrics.UpdateStats overall_stats = 3;</code>
+       * @return The overallStats.
+       */
+      public com.google.wireless.android.sdk.stats.SmlRagEvent.LuceneIndexMetrics.UpdateStats getOverallStats() {
+        if (overallStatsBuilder_ == null) {
+          return overallStats_ == null ? com.google.wireless.android.sdk.stats.SmlRagEvent.LuceneIndexMetrics.UpdateStats.getDefaultInstance() : overallStats_;
+        } else {
+          return overallStatsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Stats for all changes applied to the index since the last flush.
+       * </pre>
+       *
+       * <code>optional .android_studio.SmlRagEvent.LuceneIndexMetrics.UpdateStats overall_stats = 3;</code>
+       */
+      public Builder setOverallStats(com.google.wireless.android.sdk.stats.SmlRagEvent.LuceneIndexMetrics.UpdateStats value) {
+        if (overallStatsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          overallStats_ = value;
+        } else {
+          overallStatsBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Stats for all changes applied to the index since the last flush.
+       * </pre>
+       *
+       * <code>optional .android_studio.SmlRagEvent.LuceneIndexMetrics.UpdateStats overall_stats = 3;</code>
+       */
+      public Builder setOverallStats(
+          com.google.wireless.android.sdk.stats.SmlRagEvent.LuceneIndexMetrics.UpdateStats.Builder builderForValue) {
+        if (overallStatsBuilder_ == null) {
+          overallStats_ = builderForValue.build();
+        } else {
+          overallStatsBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Stats for all changes applied to the index since the last flush.
+       * </pre>
+       *
+       * <code>optional .android_studio.SmlRagEvent.LuceneIndexMetrics.UpdateStats overall_stats = 3;</code>
+       */
+      public Builder mergeOverallStats(com.google.wireless.android.sdk.stats.SmlRagEvent.LuceneIndexMetrics.UpdateStats value) {
+        if (overallStatsBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) != 0) &&
+            overallStats_ != null &&
+            overallStats_ != com.google.wireless.android.sdk.stats.SmlRagEvent.LuceneIndexMetrics.UpdateStats.getDefaultInstance()) {
+            getOverallStatsBuilder().mergeFrom(value);
+          } else {
+            overallStats_ = value;
+          }
+        } else {
+          overallStatsBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Stats for all changes applied to the index since the last flush.
+       * </pre>
+       *
+       * <code>optional .android_studio.SmlRagEvent.LuceneIndexMetrics.UpdateStats overall_stats = 3;</code>
+       */
+      public Builder clearOverallStats() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        overallStats_ = null;
+        if (overallStatsBuilder_ != null) {
+          overallStatsBuilder_.dispose();
+          overallStatsBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Stats for all changes applied to the index since the last flush.
+       * </pre>
+       *
+       * <code>optional .android_studio.SmlRagEvent.LuceneIndexMetrics.UpdateStats overall_stats = 3;</code>
+       */
+      public com.google.wireless.android.sdk.stats.SmlRagEvent.LuceneIndexMetrics.UpdateStats.Builder getOverallStatsBuilder() {
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return getOverallStatsFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Stats for all changes applied to the index since the last flush.
+       * </pre>
+       *
+       * <code>optional .android_studio.SmlRagEvent.LuceneIndexMetrics.UpdateStats overall_stats = 3;</code>
+       */
+      public com.google.wireless.android.sdk.stats.SmlRagEvent.LuceneIndexMetrics.UpdateStatsOrBuilder getOverallStatsOrBuilder() {
+        if (overallStatsBuilder_ != null) {
+          return overallStatsBuilder_.getMessageOrBuilder();
+        } else {
+          return overallStats_ == null ?
+              com.google.wireless.android.sdk.stats.SmlRagEvent.LuceneIndexMetrics.UpdateStats.getDefaultInstance() : overallStats_;
+        }
+      }
+      /**
+       * <pre>
+       * Stats for all changes applied to the index since the last flush.
+       * </pre>
+       *
+       * <code>optional .android_studio.SmlRagEvent.LuceneIndexMetrics.UpdateStats overall_stats = 3;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.wireless.android.sdk.stats.SmlRagEvent.LuceneIndexMetrics.UpdateStats, com.google.wireless.android.sdk.stats.SmlRagEvent.LuceneIndexMetrics.UpdateStats.Builder, com.google.wireless.android.sdk.stats.SmlRagEvent.LuceneIndexMetrics.UpdateStatsOrBuilder> 
+          getOverallStatsFieldBuilder() {
+        if (overallStatsBuilder_ == null) {
+          overallStatsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.wireless.android.sdk.stats.SmlRagEvent.LuceneIndexMetrics.UpdateStats, com.google.wireless.android.sdk.stats.SmlRagEvent.LuceneIndexMetrics.UpdateStats.Builder, com.google.wireless.android.sdk.stats.SmlRagEvent.LuceneIndexMetrics.UpdateStatsOrBuilder>(
+                  getOverallStats(),
+                  getParentForChildren(),
+                  isClean());
+          overallStats_ = null;
+        }
+        return overallStatsBuilder_;
+      }
+
+      private long indexFlushTimeMs_ ;
+      /**
+       * <pre>
+       * The amount of wall time, in milliseconds, that the current flush
+       * operation spent waiting for pending writes to finish.
+       * </pre>
+       *
+       * <code>optional int64 index_flush_time_ms = 4;</code>
+       * @return Whether the indexFlushTimeMs field is set.
+       */
+      @java.lang.Override
+      public boolean hasIndexFlushTimeMs() {
+        return ((bitField0_ & 0x00000008) != 0);
+      }
+      /**
+       * <pre>
+       * The amount of wall time, in milliseconds, that the current flush
+       * operation spent waiting for pending writes to finish.
+       * </pre>
+       *
+       * <code>optional int64 index_flush_time_ms = 4;</code>
+       * @return The indexFlushTimeMs.
+       */
+      @java.lang.Override
+      public long getIndexFlushTimeMs() {
+        return indexFlushTimeMs_;
+      }
+      /**
+       * <pre>
+       * The amount of wall time, in milliseconds, that the current flush
+       * operation spent waiting for pending writes to finish.
+       * </pre>
+       *
+       * <code>optional int64 index_flush_time_ms = 4;</code>
+       * @param value The indexFlushTimeMs to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIndexFlushTimeMs(long value) {
+
+        indexFlushTimeMs_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The amount of wall time, in milliseconds, that the current flush
+       * operation spent waiting for pending writes to finish.
+       * </pre>
+       *
+       * <code>optional int64 index_flush_time_ms = 4;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearIndexFlushTimeMs() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        indexFlushTimeMs_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long indexCommitTimeMs_ ;
+      /**
+       * <pre>
+       * The amount of wall time, in milliseconds, that the current flush
+       * operation spent waiting for Lucene to commit the index to disk.
+       * </pre>
+       *
+       * <code>optional int64 index_commit_time_ms = 5;</code>
+       * @return Whether the indexCommitTimeMs field is set.
+       */
+      @java.lang.Override
+      public boolean hasIndexCommitTimeMs() {
+        return ((bitField0_ & 0x00000010) != 0);
+      }
+      /**
+       * <pre>
+       * The amount of wall time, in milliseconds, that the current flush
+       * operation spent waiting for Lucene to commit the index to disk.
+       * </pre>
+       *
+       * <code>optional int64 index_commit_time_ms = 5;</code>
+       * @return The indexCommitTimeMs.
+       */
+      @java.lang.Override
+      public long getIndexCommitTimeMs() {
+        return indexCommitTimeMs_;
+      }
+      /**
+       * <pre>
+       * The amount of wall time, in milliseconds, that the current flush
+       * operation spent waiting for Lucene to commit the index to disk.
+       * </pre>
+       *
+       * <code>optional int64 index_commit_time_ms = 5;</code>
+       * @param value The indexCommitTimeMs to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIndexCommitTimeMs(long value) {
+
+        indexCommitTimeMs_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The amount of wall time, in milliseconds, that the current flush
+       * operation spent waiting for Lucene to commit the index to disk.
+       * </pre>
+       *
+       * <code>optional int64 index_commit_time_ms = 5;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearIndexCommitTimeMs() {
+        bitField0_ = (bitField0_ & ~0x00000010);
+        indexCommitTimeMs_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.MapField<
+          java.lang.String, com.google.wireless.android.sdk.stats.SmlRagEvent.LuceneIndexMetrics.UpdateStats> statsByFileType_;
+      private com.google.protobuf.MapField<java.lang.String, com.google.wireless.android.sdk.stats.SmlRagEvent.LuceneIndexMetrics.UpdateStats>
+          internalGetStatsByFileType() {
+        if (statsByFileType_ == null) {
+          return com.google.protobuf.MapField.emptyMapField(
+              StatsByFileTypeDefaultEntryHolder.defaultEntry);
+        }
+        return statsByFileType_;
+      }
+      private com.google.protobuf.MapField<java.lang.String, com.google.wireless.android.sdk.stats.SmlRagEvent.LuceneIndexMetrics.UpdateStats>
+          internalGetMutableStatsByFileType() {
+        if (statsByFileType_ == null) {
+          statsByFileType_ = com.google.protobuf.MapField.newMapField(
+              StatsByFileTypeDefaultEntryHolder.defaultEntry);
+        }
+        if (!statsByFileType_.isMutable()) {
+          statsByFileType_ = statsByFileType_.copy();
+        }
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return statsByFileType_;
+      }
+      public int getStatsByFileTypeCount() {
+        return internalGetStatsByFileType().getMap().size();
+      }
+      /**
+       * <pre>
+       * Stats for the update operations that have been applied to the index since
+       * the last flush, broken down by the IntelliJ file type. Key is the unique
+       * name of the file type, as reported by FileType#getName.
+       * </pre>
+       *
+       * <code>map&lt;string, .android_studio.SmlRagEvent.LuceneIndexMetrics.UpdateStats&gt; stats_by_file_type = 6;</code>
+       */
+      @java.lang.Override
+      public boolean containsStatsByFileType(
+          java.lang.String key) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        return internalGetStatsByFileType().getMap().containsKey(key);
+      }
+      /**
+       * Use {@link #getStatsByFileTypeMap()} instead.
+       */
+      @java.lang.Override
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.String, com.google.wireless.android.sdk.stats.SmlRagEvent.LuceneIndexMetrics.UpdateStats> getStatsByFileType() {
+        return getStatsByFileTypeMap();
+      }
+      /**
+       * <pre>
+       * Stats for the update operations that have been applied to the index since
+       * the last flush, broken down by the IntelliJ file type. Key is the unique
+       * name of the file type, as reported by FileType#getName.
+       * </pre>
+       *
+       * <code>map&lt;string, .android_studio.SmlRagEvent.LuceneIndexMetrics.UpdateStats&gt; stats_by_file_type = 6;</code>
+       */
+      @java.lang.Override
+      public java.util.Map<java.lang.String, com.google.wireless.android.sdk.stats.SmlRagEvent.LuceneIndexMetrics.UpdateStats> getStatsByFileTypeMap() {
+        return internalGetStatsByFileType().getMap();
+      }
+      /**
+       * <pre>
+       * Stats for the update operations that have been applied to the index since
+       * the last flush, broken down by the IntelliJ file type. Key is the unique
+       * name of the file type, as reported by FileType#getName.
+       * </pre>
+       *
+       * <code>map&lt;string, .android_studio.SmlRagEvent.LuceneIndexMetrics.UpdateStats&gt; stats_by_file_type = 6;</code>
+       */
+      @java.lang.Override
+      public /* nullable */
+com.google.wireless.android.sdk.stats.SmlRagEvent.LuceneIndexMetrics.UpdateStats getStatsByFileTypeOrDefault(
+          java.lang.String key,
+          /* nullable */
+com.google.wireless.android.sdk.stats.SmlRagEvent.LuceneIndexMetrics.UpdateStats defaultValue) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        java.util.Map<java.lang.String, com.google.wireless.android.sdk.stats.SmlRagEvent.LuceneIndexMetrics.UpdateStats> map =
+            internalGetStatsByFileType().getMap();
+        return map.containsKey(key) ? map.get(key) : defaultValue;
+      }
+      /**
+       * <pre>
+       * Stats for the update operations that have been applied to the index since
+       * the last flush, broken down by the IntelliJ file type. Key is the unique
+       * name of the file type, as reported by FileType#getName.
+       * </pre>
+       *
+       * <code>map&lt;string, .android_studio.SmlRagEvent.LuceneIndexMetrics.UpdateStats&gt; stats_by_file_type = 6;</code>
+       */
+      @java.lang.Override
+      public com.google.wireless.android.sdk.stats.SmlRagEvent.LuceneIndexMetrics.UpdateStats getStatsByFileTypeOrThrow(
+          java.lang.String key) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        java.util.Map<java.lang.String, com.google.wireless.android.sdk.stats.SmlRagEvent.LuceneIndexMetrics.UpdateStats> map =
+            internalGetStatsByFileType().getMap();
+        if (!map.containsKey(key)) {
+          throw new java.lang.IllegalArgumentException();
+        }
+        return map.get(key);
+      }
+      public Builder clearStatsByFileType() {
+        bitField0_ = (bitField0_ & ~0x00000020);
+        internalGetMutableStatsByFileType().getMutableMap()
+            .clear();
+        return this;
+      }
+      /**
+       * <pre>
+       * Stats for the update operations that have been applied to the index since
+       * the last flush, broken down by the IntelliJ file type. Key is the unique
+       * name of the file type, as reported by FileType#getName.
+       * </pre>
+       *
+       * <code>map&lt;string, .android_studio.SmlRagEvent.LuceneIndexMetrics.UpdateStats&gt; stats_by_file_type = 6;</code>
+       */
+      public Builder removeStatsByFileType(
+          java.lang.String key) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        internalGetMutableStatsByFileType().getMutableMap()
+            .remove(key);
+        return this;
+      }
+      /**
+       * Use alternate mutation accessors instead.
+       */
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.String, com.google.wireless.android.sdk.stats.SmlRagEvent.LuceneIndexMetrics.UpdateStats>
+          getMutableStatsByFileType() {
+        bitField0_ |= 0x00000020;
+        return internalGetMutableStatsByFileType().getMutableMap();
+      }
+      /**
+       * <pre>
+       * Stats for the update operations that have been applied to the index since
+       * the last flush, broken down by the IntelliJ file type. Key is the unique
+       * name of the file type, as reported by FileType#getName.
+       * </pre>
+       *
+       * <code>map&lt;string, .android_studio.SmlRagEvent.LuceneIndexMetrics.UpdateStats&gt; stats_by_file_type = 6;</code>
+       */
+      public Builder putStatsByFileType(
+          java.lang.String key,
+          com.google.wireless.android.sdk.stats.SmlRagEvent.LuceneIndexMetrics.UpdateStats value) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        if (value == null) { throw new NullPointerException("map value"); }
+        internalGetMutableStatsByFileType().getMutableMap()
+            .put(key, value);
+        bitField0_ |= 0x00000020;
+        return this;
+      }
+      /**
+       * <pre>
+       * Stats for the update operations that have been applied to the index since
+       * the last flush, broken down by the IntelliJ file type. Key is the unique
+       * name of the file type, as reported by FileType#getName.
+       * </pre>
+       *
+       * <code>map&lt;string, .android_studio.SmlRagEvent.LuceneIndexMetrics.UpdateStats&gt; stats_by_file_type = 6;</code>
+       */
+      public Builder putAllStatsByFileType(
+          java.util.Map<java.lang.String, com.google.wireless.android.sdk.stats.SmlRagEvent.LuceneIndexMetrics.UpdateStats> values) {
+        internalGetMutableStatsByFileType().getMutableMap()
+            .putAll(values);
+        bitField0_ |= 0x00000020;
+        return this;
+      }
+
+      private com.google.protobuf.MapField<
+          java.lang.String, com.google.wireless.android.sdk.stats.SmlRagEvent.LuceneIndexMetrics.UpdateStats> statsByLanguage_;
+      private com.google.protobuf.MapField<java.lang.String, com.google.wireless.android.sdk.stats.SmlRagEvent.LuceneIndexMetrics.UpdateStats>
+          internalGetStatsByLanguage() {
+        if (statsByLanguage_ == null) {
+          return com.google.protobuf.MapField.emptyMapField(
+              StatsByLanguageDefaultEntryHolder.defaultEntry);
+        }
+        return statsByLanguage_;
+      }
+      private com.google.protobuf.MapField<java.lang.String, com.google.wireless.android.sdk.stats.SmlRagEvent.LuceneIndexMetrics.UpdateStats>
+          internalGetMutableStatsByLanguage() {
+        if (statsByLanguage_ == null) {
+          statsByLanguage_ = com.google.protobuf.MapField.newMapField(
+              StatsByLanguageDefaultEntryHolder.defaultEntry);
+        }
+        if (!statsByLanguage_.isMutable()) {
+          statsByLanguage_ = statsByLanguage_.copy();
+        }
+        bitField0_ |= 0x00000040;
+        onChanged();
+        return statsByLanguage_;
+      }
+      public int getStatsByLanguageCount() {
+        return internalGetStatsByLanguage().getMap().size();
+      }
+      /**
+       * <pre>
+       * Stats for the update operations that have been applied to the index since
+       * the last flush, broken down by the base language. Key is the unique ID of
+       * the language, as reported by Language#getId. Since languages can have
+       * dialects and base languages, the total count in this map may differ from
+       * the total count in overall_stats.
+       * </pre>
+       *
+       * <code>map&lt;string, .android_studio.SmlRagEvent.LuceneIndexMetrics.UpdateStats&gt; stats_by_language = 7;</code>
+       */
+      @java.lang.Override
+      public boolean containsStatsByLanguage(
+          java.lang.String key) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        return internalGetStatsByLanguage().getMap().containsKey(key);
+      }
+      /**
+       * Use {@link #getStatsByLanguageMap()} instead.
+       */
+      @java.lang.Override
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.String, com.google.wireless.android.sdk.stats.SmlRagEvent.LuceneIndexMetrics.UpdateStats> getStatsByLanguage() {
+        return getStatsByLanguageMap();
+      }
+      /**
+       * <pre>
+       * Stats for the update operations that have been applied to the index since
+       * the last flush, broken down by the base language. Key is the unique ID of
+       * the language, as reported by Language#getId. Since languages can have
+       * dialects and base languages, the total count in this map may differ from
+       * the total count in overall_stats.
+       * </pre>
+       *
+       * <code>map&lt;string, .android_studio.SmlRagEvent.LuceneIndexMetrics.UpdateStats&gt; stats_by_language = 7;</code>
+       */
+      @java.lang.Override
+      public java.util.Map<java.lang.String, com.google.wireless.android.sdk.stats.SmlRagEvent.LuceneIndexMetrics.UpdateStats> getStatsByLanguageMap() {
+        return internalGetStatsByLanguage().getMap();
+      }
+      /**
+       * <pre>
+       * Stats for the update operations that have been applied to the index since
+       * the last flush, broken down by the base language. Key is the unique ID of
+       * the language, as reported by Language#getId. Since languages can have
+       * dialects and base languages, the total count in this map may differ from
+       * the total count in overall_stats.
+       * </pre>
+       *
+       * <code>map&lt;string, .android_studio.SmlRagEvent.LuceneIndexMetrics.UpdateStats&gt; stats_by_language = 7;</code>
+       */
+      @java.lang.Override
+      public /* nullable */
+com.google.wireless.android.sdk.stats.SmlRagEvent.LuceneIndexMetrics.UpdateStats getStatsByLanguageOrDefault(
+          java.lang.String key,
+          /* nullable */
+com.google.wireless.android.sdk.stats.SmlRagEvent.LuceneIndexMetrics.UpdateStats defaultValue) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        java.util.Map<java.lang.String, com.google.wireless.android.sdk.stats.SmlRagEvent.LuceneIndexMetrics.UpdateStats> map =
+            internalGetStatsByLanguage().getMap();
+        return map.containsKey(key) ? map.get(key) : defaultValue;
+      }
+      /**
+       * <pre>
+       * Stats for the update operations that have been applied to the index since
+       * the last flush, broken down by the base language. Key is the unique ID of
+       * the language, as reported by Language#getId. Since languages can have
+       * dialects and base languages, the total count in this map may differ from
+       * the total count in overall_stats.
+       * </pre>
+       *
+       * <code>map&lt;string, .android_studio.SmlRagEvent.LuceneIndexMetrics.UpdateStats&gt; stats_by_language = 7;</code>
+       */
+      @java.lang.Override
+      public com.google.wireless.android.sdk.stats.SmlRagEvent.LuceneIndexMetrics.UpdateStats getStatsByLanguageOrThrow(
+          java.lang.String key) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        java.util.Map<java.lang.String, com.google.wireless.android.sdk.stats.SmlRagEvent.LuceneIndexMetrics.UpdateStats> map =
+            internalGetStatsByLanguage().getMap();
+        if (!map.containsKey(key)) {
+          throw new java.lang.IllegalArgumentException();
+        }
+        return map.get(key);
+      }
+      public Builder clearStatsByLanguage() {
+        bitField0_ = (bitField0_ & ~0x00000040);
+        internalGetMutableStatsByLanguage().getMutableMap()
+            .clear();
+        return this;
+      }
+      /**
+       * <pre>
+       * Stats for the update operations that have been applied to the index since
+       * the last flush, broken down by the base language. Key is the unique ID of
+       * the language, as reported by Language#getId. Since languages can have
+       * dialects and base languages, the total count in this map may differ from
+       * the total count in overall_stats.
+       * </pre>
+       *
+       * <code>map&lt;string, .android_studio.SmlRagEvent.LuceneIndexMetrics.UpdateStats&gt; stats_by_language = 7;</code>
+       */
+      public Builder removeStatsByLanguage(
+          java.lang.String key) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        internalGetMutableStatsByLanguage().getMutableMap()
+            .remove(key);
+        return this;
+      }
+      /**
+       * Use alternate mutation accessors instead.
+       */
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.String, com.google.wireless.android.sdk.stats.SmlRagEvent.LuceneIndexMetrics.UpdateStats>
+          getMutableStatsByLanguage() {
+        bitField0_ |= 0x00000040;
+        return internalGetMutableStatsByLanguage().getMutableMap();
+      }
+      /**
+       * <pre>
+       * Stats for the update operations that have been applied to the index since
+       * the last flush, broken down by the base language. Key is the unique ID of
+       * the language, as reported by Language#getId. Since languages can have
+       * dialects and base languages, the total count in this map may differ from
+       * the total count in overall_stats.
+       * </pre>
+       *
+       * <code>map&lt;string, .android_studio.SmlRagEvent.LuceneIndexMetrics.UpdateStats&gt; stats_by_language = 7;</code>
+       */
+      public Builder putStatsByLanguage(
+          java.lang.String key,
+          com.google.wireless.android.sdk.stats.SmlRagEvent.LuceneIndexMetrics.UpdateStats value) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        if (value == null) { throw new NullPointerException("map value"); }
+        internalGetMutableStatsByLanguage().getMutableMap()
+            .put(key, value);
+        bitField0_ |= 0x00000040;
+        return this;
+      }
+      /**
+       * <pre>
+       * Stats for the update operations that have been applied to the index since
+       * the last flush, broken down by the base language. Key is the unique ID of
+       * the language, as reported by Language#getId. Since languages can have
+       * dialects and base languages, the total count in this map may differ from
+       * the total count in overall_stats.
+       * </pre>
+       *
+       * <code>map&lt;string, .android_studio.SmlRagEvent.LuceneIndexMetrics.UpdateStats&gt; stats_by_language = 7;</code>
+       */
+      public Builder putAllStatsByLanguage(
+          java.util.Map<java.lang.String, com.google.wireless.android.sdk.stats.SmlRagEvent.LuceneIndexMetrics.UpdateStats> values) {
+        internalGetMutableStatsByLanguage().getMutableMap()
+            .putAll(values);
+        bitField0_ |= 0x00000040;
+        return this;
+      }
+
+      private int indexDocumentCount_ ;
+      /**
+       * <pre>
+       * The total number of documents in the index, across all projects.
+       * </pre>
+       *
+       * <code>optional int32 index_document_count = 8;</code>
+       * @return Whether the indexDocumentCount field is set.
+       */
+      @java.lang.Override
+      public boolean hasIndexDocumentCount() {
+        return ((bitField0_ & 0x00000080) != 0);
+      }
+      /**
+       * <pre>
+       * The total number of documents in the index, across all projects.
+       * </pre>
+       *
+       * <code>optional int32 index_document_count = 8;</code>
+       * @return The indexDocumentCount.
+       */
+      @java.lang.Override
+      public int getIndexDocumentCount() {
+        return indexDocumentCount_;
+      }
+      /**
+       * <pre>
+       * The total number of documents in the index, across all projects.
+       * </pre>
+       *
+       * <code>optional int32 index_document_count = 8;</code>
+       * @param value The indexDocumentCount to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIndexDocumentCount(int value) {
+
+        indexDocumentCount_ = value;
+        bitField0_ |= 0x00000080;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The total number of documents in the index, across all projects.
+       * </pre>
+       *
+       * <code>optional int32 index_document_count = 8;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearIndexDocumentCount() {
+        bitField0_ = (bitField0_ & ~0x00000080);
+        indexDocumentCount_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private long indexSizeBytes_ ;
+      /**
+       * <pre>
+       * The total size of the index on disk, across all projects.
+       * </pre>
+       *
+       * <code>optional int64 index_size_bytes = 9;</code>
+       * @return Whether the indexSizeBytes field is set.
+       */
+      @java.lang.Override
+      public boolean hasIndexSizeBytes() {
+        return ((bitField0_ & 0x00000100) != 0);
+      }
+      /**
+       * <pre>
+       * The total size of the index on disk, across all projects.
+       * </pre>
+       *
+       * <code>optional int64 index_size_bytes = 9;</code>
+       * @return The indexSizeBytes.
+       */
+      @java.lang.Override
+      public long getIndexSizeBytes() {
+        return indexSizeBytes_;
+      }
+      /**
+       * <pre>
+       * The total size of the index on disk, across all projects.
+       * </pre>
+       *
+       * <code>optional int64 index_size_bytes = 9;</code>
+       * @param value The indexSizeBytes to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIndexSizeBytes(long value) {
+
+        indexSizeBytes_ = value;
+        bitField0_ |= 0x00000100;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The total size of the index on disk, across all projects.
+       * </pre>
+       *
+       * <code>optional int64 index_size_bytes = 9;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearIndexSizeBytes() {
+        bitField0_ = (bitField0_ & ~0x00000100);
+        indexSizeBytes_ = 0L;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:android_studio.SmlRagEvent.LuceneIndexMetrics)
+    }
+
+    // @@protoc_insertion_point(class_scope:android_studio.SmlRagEvent.LuceneIndexMetrics)
+    private static final com.google.wireless.android.sdk.stats.SmlRagEvent.LuceneIndexMetrics DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.google.wireless.android.sdk.stats.SmlRagEvent.LuceneIndexMetrics();
+    }
+
+    public static com.google.wireless.android.sdk.stats.SmlRagEvent.LuceneIndexMetrics getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<LuceneIndexMetrics>
+        PARSER = new com.google.protobuf.AbstractParser<LuceneIndexMetrics>() {
+      @java.lang.Override
+      public LuceneIndexMetrics parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<LuceneIndexMetrics> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<LuceneIndexMetrics> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.wireless.android.sdk.stats.SmlRagEvent.LuceneIndexMetrics getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface IntellijScanMetricsOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:android_studio.SmlRagEvent.IntellijScanMetrics)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * The type of the active RAG indexer (see RagIndexerMetrics)
+     * </pre>
+     *
+     * <code>optional string indexer_type = 1;</code>
+     * @return Whether the indexerType field is set.
+     */
+    boolean hasIndexerType();
+    /**
+     * <pre>
+     * The type of the active RAG indexer (see RagIndexerMetrics)
+     * </pre>
+     *
+     * <code>optional string indexer_type = 1;</code>
+     * @return The indexerType.
+     */
+    java.lang.String getIndexerType();
+    /**
+     * <pre>
+     * The type of the active RAG indexer (see RagIndexerMetrics)
+     * </pre>
+     *
+     * <code>optional string indexer_type = 1;</code>
+     * @return The bytes for indexerType.
+     */
+    com.google.protobuf.ByteString
+        getIndexerTypeBytes();
+
+    /**
+     * <pre>
+     * The number of files scanned in this scan pass.
+     * </pre>
+     *
+     * <code>optional int32 files_scanned = 2;</code>
+     * @return Whether the filesScanned field is set.
+     */
+    boolean hasFilesScanned();
+    /**
+     * <pre>
+     * The number of files scanned in this scan pass.
+     * </pre>
+     *
+     * <code>optional int32 files_scanned = 2;</code>
+     * @return The filesScanned.
+     */
+    int getFilesScanned();
+
+    /**
+     * <pre>
+     * The amount of CPU time, in milliseconds, to perform the full scan pass.
+     * Includes vfs_iteration_time, file_status_check_time, and overhead.
+     * </pre>
+     *
+     * <code>optional int64 total_scan_time_ms = 3;</code>
+     * @return Whether the totalScanTimeMs field is set.
+     */
+    boolean hasTotalScanTimeMs();
+    /**
+     * <pre>
+     * The amount of CPU time, in milliseconds, to perform the full scan pass.
+     * Includes vfs_iteration_time, file_status_check_time, and overhead.
+     * </pre>
+     *
+     * <code>optional int64 total_scan_time_ms = 3;</code>
+     * @return The totalScanTimeMs.
+     */
+    long getTotalScanTimeMs();
+
+    /**
+     * <pre>
+     * The amount of CPU time, in milliseconds, to iterate the VFS during
+     * scanning.
+     * </pre>
+     *
+     * <code>optional int64 vfs_iteration_time_ms = 4;</code>
+     * @return Whether the vfsIterationTimeMs field is set.
+     */
+    boolean hasVfsIterationTimeMs();
+    /**
+     * <pre>
+     * The amount of CPU time, in milliseconds, to iterate the VFS during
+     * scanning.
+     * </pre>
+     *
+     * <code>optional int64 vfs_iteration_time_ms = 4;</code>
+     * @return The vfsIterationTimeMs.
+     */
+    long getVfsIterationTimeMs();
+
+    /**
+     * <pre>
+     * The amount of CPU time, in milliseconds, to check the statuses of files
+     * during indexing. Slowdowns in index filters will appear here.
+     * </pre>
+     *
+     * <code>optional int64 file_status_check_time_ms = 5;</code>
+     * @return Whether the fileStatusCheckTimeMs field is set.
+     */
+    boolean hasFileStatusCheckTimeMs();
+    /**
+     * <pre>
+     * The amount of CPU time, in milliseconds, to check the statuses of files
+     * during indexing. Slowdowns in index filters will appear here.
+     * </pre>
+     *
+     * <code>optional int64 file_status_check_time_ms = 5;</code>
+     * @return The fileStatusCheckTimeMs.
+     */
+    long getFileStatusCheckTimeMs();
+
+    /**
+     * <pre>
+     * The amount of wall time, in milliseconds, that the scanning pass spent in
+     * dumb mode.
+     * </pre>
+     *
+     * <code>optional int64 dumb_mode_time_ms = 6;</code>
+     * @return Whether the dumbModeTimeMs field is set.
+     */
+    boolean hasDumbModeTimeMs();
+    /**
+     * <pre>
+     * The amount of wall time, in milliseconds, that the scanning pass spent in
+     * dumb mode.
+     * </pre>
+     *
+     * <code>optional int64 dumb_mode_time_ms = 6;</code>
+     * @return The dumbModeTimeMs.
+     */
+    long getDumbModeTimeMs();
+
+    /**
+     * <pre>
+     * The amount of wall time, in milliseconds, that the scanning pass spent
+     * paused.
+     * </pre>
+     *
+     * <code>optional int64 paused_time_ms = 7;</code>
+     * @return Whether the pausedTimeMs field is set.
+     */
+    boolean hasPausedTimeMs();
+    /**
+     * <pre>
+     * The amount of wall time, in milliseconds, that the scanning pass spent
+     * paused.
+     * </pre>
+     *
+     * <code>optional int64 paused_time_ms = 7;</code>
+     * @return The pausedTimeMs.
+     */
+    long getPausedTimeMs();
+  }
+  /**
+   * Protobuf type {@code android_studio.SmlRagEvent.IntellijScanMetrics}
+   */
+  public static final class IntellijScanMetrics extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:android_studio.SmlRagEvent.IntellijScanMetrics)
+      IntellijScanMetricsOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use IntellijScanMetrics.newBuilder() to construct.
+    private IntellijScanMetrics(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private IntellijScanMetrics() {
+      indexerType_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new IntellijScanMetrics();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_SmlRagEvent_IntellijScanMetrics_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_SmlRagEvent_IntellijScanMetrics_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.google.wireless.android.sdk.stats.SmlRagEvent.IntellijScanMetrics.class, com.google.wireless.android.sdk.stats.SmlRagEvent.IntellijScanMetrics.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int INDEXER_TYPE_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object indexerType_ = "";
+    /**
+     * <pre>
+     * The type of the active RAG indexer (see RagIndexerMetrics)
+     * </pre>
+     *
+     * <code>optional string indexer_type = 1;</code>
+     * @return Whether the indexerType field is set.
+     */
+    @java.lang.Override
+    public boolean hasIndexerType() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <pre>
+     * The type of the active RAG indexer (see RagIndexerMetrics)
+     * </pre>
+     *
+     * <code>optional string indexer_type = 1;</code>
+     * @return The indexerType.
+     */
+    @java.lang.Override
+    public java.lang.String getIndexerType() {
+      java.lang.Object ref = indexerType_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          indexerType_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * The type of the active RAG indexer (see RagIndexerMetrics)
+     * </pre>
+     *
+     * <code>optional string indexer_type = 1;</code>
+     * @return The bytes for indexerType.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getIndexerTypeBytes() {
+      java.lang.Object ref = indexerType_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        indexerType_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int FILES_SCANNED_FIELD_NUMBER = 2;
+    private int filesScanned_ = 0;
+    /**
+     * <pre>
+     * The number of files scanned in this scan pass.
+     * </pre>
+     *
+     * <code>optional int32 files_scanned = 2;</code>
+     * @return Whether the filesScanned field is set.
+     */
+    @java.lang.Override
+    public boolean hasFilesScanned() {
+      return ((bitField0_ & 0x00000002) != 0);
+    }
+    /**
+     * <pre>
+     * The number of files scanned in this scan pass.
+     * </pre>
+     *
+     * <code>optional int32 files_scanned = 2;</code>
+     * @return The filesScanned.
+     */
+    @java.lang.Override
+    public int getFilesScanned() {
+      return filesScanned_;
+    }
+
+    public static final int TOTAL_SCAN_TIME_MS_FIELD_NUMBER = 3;
+    private long totalScanTimeMs_ = 0L;
+    /**
+     * <pre>
+     * The amount of CPU time, in milliseconds, to perform the full scan pass.
+     * Includes vfs_iteration_time, file_status_check_time, and overhead.
+     * </pre>
+     *
+     * <code>optional int64 total_scan_time_ms = 3;</code>
+     * @return Whether the totalScanTimeMs field is set.
+     */
+    @java.lang.Override
+    public boolean hasTotalScanTimeMs() {
+      return ((bitField0_ & 0x00000004) != 0);
+    }
+    /**
+     * <pre>
+     * The amount of CPU time, in milliseconds, to perform the full scan pass.
+     * Includes vfs_iteration_time, file_status_check_time, and overhead.
+     * </pre>
+     *
+     * <code>optional int64 total_scan_time_ms = 3;</code>
+     * @return The totalScanTimeMs.
+     */
+    @java.lang.Override
+    public long getTotalScanTimeMs() {
+      return totalScanTimeMs_;
+    }
+
+    public static final int VFS_ITERATION_TIME_MS_FIELD_NUMBER = 4;
+    private long vfsIterationTimeMs_ = 0L;
+    /**
+     * <pre>
+     * The amount of CPU time, in milliseconds, to iterate the VFS during
+     * scanning.
+     * </pre>
+     *
+     * <code>optional int64 vfs_iteration_time_ms = 4;</code>
+     * @return Whether the vfsIterationTimeMs field is set.
+     */
+    @java.lang.Override
+    public boolean hasVfsIterationTimeMs() {
+      return ((bitField0_ & 0x00000008) != 0);
+    }
+    /**
+     * <pre>
+     * The amount of CPU time, in milliseconds, to iterate the VFS during
+     * scanning.
+     * </pre>
+     *
+     * <code>optional int64 vfs_iteration_time_ms = 4;</code>
+     * @return The vfsIterationTimeMs.
+     */
+    @java.lang.Override
+    public long getVfsIterationTimeMs() {
+      return vfsIterationTimeMs_;
+    }
+
+    public static final int FILE_STATUS_CHECK_TIME_MS_FIELD_NUMBER = 5;
+    private long fileStatusCheckTimeMs_ = 0L;
+    /**
+     * <pre>
+     * The amount of CPU time, in milliseconds, to check the statuses of files
+     * during indexing. Slowdowns in index filters will appear here.
+     * </pre>
+     *
+     * <code>optional int64 file_status_check_time_ms = 5;</code>
+     * @return Whether the fileStatusCheckTimeMs field is set.
+     */
+    @java.lang.Override
+    public boolean hasFileStatusCheckTimeMs() {
+      return ((bitField0_ & 0x00000010) != 0);
+    }
+    /**
+     * <pre>
+     * The amount of CPU time, in milliseconds, to check the statuses of files
+     * during indexing. Slowdowns in index filters will appear here.
+     * </pre>
+     *
+     * <code>optional int64 file_status_check_time_ms = 5;</code>
+     * @return The fileStatusCheckTimeMs.
+     */
+    @java.lang.Override
+    public long getFileStatusCheckTimeMs() {
+      return fileStatusCheckTimeMs_;
+    }
+
+    public static final int DUMB_MODE_TIME_MS_FIELD_NUMBER = 6;
+    private long dumbModeTimeMs_ = 0L;
+    /**
+     * <pre>
+     * The amount of wall time, in milliseconds, that the scanning pass spent in
+     * dumb mode.
+     * </pre>
+     *
+     * <code>optional int64 dumb_mode_time_ms = 6;</code>
+     * @return Whether the dumbModeTimeMs field is set.
+     */
+    @java.lang.Override
+    public boolean hasDumbModeTimeMs() {
+      return ((bitField0_ & 0x00000020) != 0);
+    }
+    /**
+     * <pre>
+     * The amount of wall time, in milliseconds, that the scanning pass spent in
+     * dumb mode.
+     * </pre>
+     *
+     * <code>optional int64 dumb_mode_time_ms = 6;</code>
+     * @return The dumbModeTimeMs.
+     */
+    @java.lang.Override
+    public long getDumbModeTimeMs() {
+      return dumbModeTimeMs_;
+    }
+
+    public static final int PAUSED_TIME_MS_FIELD_NUMBER = 7;
+    private long pausedTimeMs_ = 0L;
+    /**
+     * <pre>
+     * The amount of wall time, in milliseconds, that the scanning pass spent
+     * paused.
+     * </pre>
+     *
+     * <code>optional int64 paused_time_ms = 7;</code>
+     * @return Whether the pausedTimeMs field is set.
+     */
+    @java.lang.Override
+    public boolean hasPausedTimeMs() {
+      return ((bitField0_ & 0x00000040) != 0);
+    }
+    /**
+     * <pre>
+     * The amount of wall time, in milliseconds, that the scanning pass spent
+     * paused.
+     * </pre>
+     *
+     * <code>optional int64 paused_time_ms = 7;</code>
+     * @return The pausedTimeMs.
+     */
+    @java.lang.Override
+    public long getPausedTimeMs() {
+      return pausedTimeMs_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (((bitField0_ & 0x00000001) != 0)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, indexerType_);
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        output.writeInt32(2, filesScanned_);
+      }
+      if (((bitField0_ & 0x00000004) != 0)) {
+        output.writeInt64(3, totalScanTimeMs_);
+      }
+      if (((bitField0_ & 0x00000008) != 0)) {
+        output.writeInt64(4, vfsIterationTimeMs_);
+      }
+      if (((bitField0_ & 0x00000010) != 0)) {
+        output.writeInt64(5, fileStatusCheckTimeMs_);
+      }
+      if (((bitField0_ & 0x00000020) != 0)) {
+        output.writeInt64(6, dumbModeTimeMs_);
+      }
+      if (((bitField0_ & 0x00000040) != 0)) {
+        output.writeInt64(7, pausedTimeMs_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) != 0)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, indexerType_);
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(2, filesScanned_);
+      }
+      if (((bitField0_ & 0x00000004) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(3, totalScanTimeMs_);
+      }
+      if (((bitField0_ & 0x00000008) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(4, vfsIterationTimeMs_);
+      }
+      if (((bitField0_ & 0x00000010) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(5, fileStatusCheckTimeMs_);
+      }
+      if (((bitField0_ & 0x00000020) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(6, dumbModeTimeMs_);
+      }
+      if (((bitField0_ & 0x00000040) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(7, pausedTimeMs_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.google.wireless.android.sdk.stats.SmlRagEvent.IntellijScanMetrics)) {
+        return super.equals(obj);
+      }
+      com.google.wireless.android.sdk.stats.SmlRagEvent.IntellijScanMetrics other = (com.google.wireless.android.sdk.stats.SmlRagEvent.IntellijScanMetrics) obj;
+
+      if (hasIndexerType() != other.hasIndexerType()) return false;
+      if (hasIndexerType()) {
+        if (!getIndexerType()
+            .equals(other.getIndexerType())) return false;
+      }
+      if (hasFilesScanned() != other.hasFilesScanned()) return false;
+      if (hasFilesScanned()) {
+        if (getFilesScanned()
+            != other.getFilesScanned()) return false;
+      }
+      if (hasTotalScanTimeMs() != other.hasTotalScanTimeMs()) return false;
+      if (hasTotalScanTimeMs()) {
+        if (getTotalScanTimeMs()
+            != other.getTotalScanTimeMs()) return false;
+      }
+      if (hasVfsIterationTimeMs() != other.hasVfsIterationTimeMs()) return false;
+      if (hasVfsIterationTimeMs()) {
+        if (getVfsIterationTimeMs()
+            != other.getVfsIterationTimeMs()) return false;
+      }
+      if (hasFileStatusCheckTimeMs() != other.hasFileStatusCheckTimeMs()) return false;
+      if (hasFileStatusCheckTimeMs()) {
+        if (getFileStatusCheckTimeMs()
+            != other.getFileStatusCheckTimeMs()) return false;
+      }
+      if (hasDumbModeTimeMs() != other.hasDumbModeTimeMs()) return false;
+      if (hasDumbModeTimeMs()) {
+        if (getDumbModeTimeMs()
+            != other.getDumbModeTimeMs()) return false;
+      }
+      if (hasPausedTimeMs() != other.hasPausedTimeMs()) return false;
+      if (hasPausedTimeMs()) {
+        if (getPausedTimeMs()
+            != other.getPausedTimeMs()) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasIndexerType()) {
+        hash = (37 * hash) + INDEXER_TYPE_FIELD_NUMBER;
+        hash = (53 * hash) + getIndexerType().hashCode();
+      }
+      if (hasFilesScanned()) {
+        hash = (37 * hash) + FILES_SCANNED_FIELD_NUMBER;
+        hash = (53 * hash) + getFilesScanned();
+      }
+      if (hasTotalScanTimeMs()) {
+        hash = (37 * hash) + TOTAL_SCAN_TIME_MS_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            getTotalScanTimeMs());
+      }
+      if (hasVfsIterationTimeMs()) {
+        hash = (37 * hash) + VFS_ITERATION_TIME_MS_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            getVfsIterationTimeMs());
+      }
+      if (hasFileStatusCheckTimeMs()) {
+        hash = (37 * hash) + FILE_STATUS_CHECK_TIME_MS_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            getFileStatusCheckTimeMs());
+      }
+      if (hasDumbModeTimeMs()) {
+        hash = (37 * hash) + DUMB_MODE_TIME_MS_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            getDumbModeTimeMs());
+      }
+      if (hasPausedTimeMs()) {
+        hash = (37 * hash) + PAUSED_TIME_MS_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            getPausedTimeMs());
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.google.wireless.android.sdk.stats.SmlRagEvent.IntellijScanMetrics parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.google.wireless.android.sdk.stats.SmlRagEvent.IntellijScanMetrics parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.google.wireless.android.sdk.stats.SmlRagEvent.IntellijScanMetrics parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.google.wireless.android.sdk.stats.SmlRagEvent.IntellijScanMetrics parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.google.wireless.android.sdk.stats.SmlRagEvent.IntellijScanMetrics parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.google.wireless.android.sdk.stats.SmlRagEvent.IntellijScanMetrics parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.google.wireless.android.sdk.stats.SmlRagEvent.IntellijScanMetrics parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.google.wireless.android.sdk.stats.SmlRagEvent.IntellijScanMetrics parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.google.wireless.android.sdk.stats.SmlRagEvent.IntellijScanMetrics parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.google.wireless.android.sdk.stats.SmlRagEvent.IntellijScanMetrics parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.google.wireless.android.sdk.stats.SmlRagEvent.IntellijScanMetrics parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.google.wireless.android.sdk.stats.SmlRagEvent.IntellijScanMetrics parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.google.wireless.android.sdk.stats.SmlRagEvent.IntellijScanMetrics prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code android_studio.SmlRagEvent.IntellijScanMetrics}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:android_studio.SmlRagEvent.IntellijScanMetrics)
+        com.google.wireless.android.sdk.stats.SmlRagEvent.IntellijScanMetricsOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_SmlRagEvent_IntellijScanMetrics_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_SmlRagEvent_IntellijScanMetrics_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.google.wireless.android.sdk.stats.SmlRagEvent.IntellijScanMetrics.class, com.google.wireless.android.sdk.stats.SmlRagEvent.IntellijScanMetrics.Builder.class);
+      }
+
+      // Construct using com.google.wireless.android.sdk.stats.SmlRagEvent.IntellijScanMetrics.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        indexerType_ = "";
+        filesScanned_ = 0;
+        totalScanTimeMs_ = 0L;
+        vfsIterationTimeMs_ = 0L;
+        fileStatusCheckTimeMs_ = 0L;
+        dumbModeTimeMs_ = 0L;
+        pausedTimeMs_ = 0L;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_SmlRagEvent_IntellijScanMetrics_descriptor;
+      }
+
+      @java.lang.Override
+      public com.google.wireless.android.sdk.stats.SmlRagEvent.IntellijScanMetrics getDefaultInstanceForType() {
+        return com.google.wireless.android.sdk.stats.SmlRagEvent.IntellijScanMetrics.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.google.wireless.android.sdk.stats.SmlRagEvent.IntellijScanMetrics build() {
+        com.google.wireless.android.sdk.stats.SmlRagEvent.IntellijScanMetrics result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.google.wireless.android.sdk.stats.SmlRagEvent.IntellijScanMetrics buildPartial() {
+        com.google.wireless.android.sdk.stats.SmlRagEvent.IntellijScanMetrics result = new com.google.wireless.android.sdk.stats.SmlRagEvent.IntellijScanMetrics(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.google.wireless.android.sdk.stats.SmlRagEvent.IntellijScanMetrics result) {
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.indexerType_ = indexerType_;
+          to_bitField0_ |= 0x00000001;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.filesScanned_ = filesScanned_;
+          to_bitField0_ |= 0x00000002;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.totalScanTimeMs_ = totalScanTimeMs_;
+          to_bitField0_ |= 0x00000004;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.vfsIterationTimeMs_ = vfsIterationTimeMs_;
+          to_bitField0_ |= 0x00000008;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.fileStatusCheckTimeMs_ = fileStatusCheckTimeMs_;
+          to_bitField0_ |= 0x00000010;
+        }
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          result.dumbModeTimeMs_ = dumbModeTimeMs_;
+          to_bitField0_ |= 0x00000020;
+        }
+        if (((from_bitField0_ & 0x00000040) != 0)) {
+          result.pausedTimeMs_ = pausedTimeMs_;
+          to_bitField0_ |= 0x00000040;
+        }
+        result.bitField0_ |= to_bitField0_;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.google.wireless.android.sdk.stats.SmlRagEvent.IntellijScanMetrics) {
+          return mergeFrom((com.google.wireless.android.sdk.stats.SmlRagEvent.IntellijScanMetrics)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.google.wireless.android.sdk.stats.SmlRagEvent.IntellijScanMetrics other) {
+        if (other == com.google.wireless.android.sdk.stats.SmlRagEvent.IntellijScanMetrics.getDefaultInstance()) return this;
+        if (other.hasIndexerType()) {
+          indexerType_ = other.indexerType_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (other.hasFilesScanned()) {
+          setFilesScanned(other.getFilesScanned());
+        }
+        if (other.hasTotalScanTimeMs()) {
+          setTotalScanTimeMs(other.getTotalScanTimeMs());
+        }
+        if (other.hasVfsIterationTimeMs()) {
+          setVfsIterationTimeMs(other.getVfsIterationTimeMs());
+        }
+        if (other.hasFileStatusCheckTimeMs()) {
+          setFileStatusCheckTimeMs(other.getFileStatusCheckTimeMs());
+        }
+        if (other.hasDumbModeTimeMs()) {
+          setDumbModeTimeMs(other.getDumbModeTimeMs());
+        }
+        if (other.hasPausedTimeMs()) {
+          setPausedTimeMs(other.getPausedTimeMs());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                indexerType_ = input.readBytes();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 16: {
+                filesScanned_ = input.readInt32();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 16
+              case 24: {
+                totalScanTimeMs_ = input.readInt64();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 24
+              case 32: {
+                vfsIterationTimeMs_ = input.readInt64();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 32
+              case 40: {
+                fileStatusCheckTimeMs_ = input.readInt64();
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 40
+              case 48: {
+                dumbModeTimeMs_ = input.readInt64();
+                bitField0_ |= 0x00000020;
+                break;
+              } // case 48
+              case 56: {
+                pausedTimeMs_ = input.readInt64();
+                bitField0_ |= 0x00000040;
+                break;
+              } // case 56
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object indexerType_ = "";
+      /**
+       * <pre>
+       * The type of the active RAG indexer (see RagIndexerMetrics)
+       * </pre>
+       *
+       * <code>optional string indexer_type = 1;</code>
+       * @return Whether the indexerType field is set.
+       */
+      public boolean hasIndexerType() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <pre>
+       * The type of the active RAG indexer (see RagIndexerMetrics)
+       * </pre>
+       *
+       * <code>optional string indexer_type = 1;</code>
+       * @return The indexerType.
+       */
+      public java.lang.String getIndexerType() {
+        java.lang.Object ref = indexerType_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            indexerType_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The type of the active RAG indexer (see RagIndexerMetrics)
+       * </pre>
+       *
+       * <code>optional string indexer_type = 1;</code>
+       * @return The bytes for indexerType.
+       */
+      public com.google.protobuf.ByteString
+          getIndexerTypeBytes() {
+        java.lang.Object ref = indexerType_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          indexerType_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The type of the active RAG indexer (see RagIndexerMetrics)
+       * </pre>
+       *
+       * <code>optional string indexer_type = 1;</code>
+       * @param value The indexerType to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIndexerType(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        indexerType_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The type of the active RAG indexer (see RagIndexerMetrics)
+       * </pre>
+       *
+       * <code>optional string indexer_type = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearIndexerType() {
+        indexerType_ = getDefaultInstance().getIndexerType();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The type of the active RAG indexer (see RagIndexerMetrics)
+       * </pre>
+       *
+       * <code>optional string indexer_type = 1;</code>
+       * @param value The bytes for indexerType to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIndexerTypeBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        indexerType_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private int filesScanned_ ;
+      /**
+       * <pre>
+       * The number of files scanned in this scan pass.
+       * </pre>
+       *
+       * <code>optional int32 files_scanned = 2;</code>
+       * @return Whether the filesScanned field is set.
+       */
+      @java.lang.Override
+      public boolean hasFilesScanned() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <pre>
+       * The number of files scanned in this scan pass.
+       * </pre>
+       *
+       * <code>optional int32 files_scanned = 2;</code>
+       * @return The filesScanned.
+       */
+      @java.lang.Override
+      public int getFilesScanned() {
+        return filesScanned_;
+      }
+      /**
+       * <pre>
+       * The number of files scanned in this scan pass.
+       * </pre>
+       *
+       * <code>optional int32 files_scanned = 2;</code>
+       * @param value The filesScanned to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFilesScanned(int value) {
+
+        filesScanned_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The number of files scanned in this scan pass.
+       * </pre>
+       *
+       * <code>optional int32 files_scanned = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearFilesScanned() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        filesScanned_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private long totalScanTimeMs_ ;
+      /**
+       * <pre>
+       * The amount of CPU time, in milliseconds, to perform the full scan pass.
+       * Includes vfs_iteration_time, file_status_check_time, and overhead.
+       * </pre>
+       *
+       * <code>optional int64 total_scan_time_ms = 3;</code>
+       * @return Whether the totalScanTimeMs field is set.
+       */
+      @java.lang.Override
+      public boolean hasTotalScanTimeMs() {
+        return ((bitField0_ & 0x00000004) != 0);
+      }
+      /**
+       * <pre>
+       * The amount of CPU time, in milliseconds, to perform the full scan pass.
+       * Includes vfs_iteration_time, file_status_check_time, and overhead.
+       * </pre>
+       *
+       * <code>optional int64 total_scan_time_ms = 3;</code>
+       * @return The totalScanTimeMs.
+       */
+      @java.lang.Override
+      public long getTotalScanTimeMs() {
+        return totalScanTimeMs_;
+      }
+      /**
+       * <pre>
+       * The amount of CPU time, in milliseconds, to perform the full scan pass.
+       * Includes vfs_iteration_time, file_status_check_time, and overhead.
+       * </pre>
+       *
+       * <code>optional int64 total_scan_time_ms = 3;</code>
+       * @param value The totalScanTimeMs to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTotalScanTimeMs(long value) {
+
+        totalScanTimeMs_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The amount of CPU time, in milliseconds, to perform the full scan pass.
+       * Includes vfs_iteration_time, file_status_check_time, and overhead.
+       * </pre>
+       *
+       * <code>optional int64 total_scan_time_ms = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTotalScanTimeMs() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        totalScanTimeMs_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long vfsIterationTimeMs_ ;
+      /**
+       * <pre>
+       * The amount of CPU time, in milliseconds, to iterate the VFS during
+       * scanning.
+       * </pre>
+       *
+       * <code>optional int64 vfs_iteration_time_ms = 4;</code>
+       * @return Whether the vfsIterationTimeMs field is set.
+       */
+      @java.lang.Override
+      public boolean hasVfsIterationTimeMs() {
+        return ((bitField0_ & 0x00000008) != 0);
+      }
+      /**
+       * <pre>
+       * The amount of CPU time, in milliseconds, to iterate the VFS during
+       * scanning.
+       * </pre>
+       *
+       * <code>optional int64 vfs_iteration_time_ms = 4;</code>
+       * @return The vfsIterationTimeMs.
+       */
+      @java.lang.Override
+      public long getVfsIterationTimeMs() {
+        return vfsIterationTimeMs_;
+      }
+      /**
+       * <pre>
+       * The amount of CPU time, in milliseconds, to iterate the VFS during
+       * scanning.
+       * </pre>
+       *
+       * <code>optional int64 vfs_iteration_time_ms = 4;</code>
+       * @param value The vfsIterationTimeMs to set.
+       * @return This builder for chaining.
+       */
+      public Builder setVfsIterationTimeMs(long value) {
+
+        vfsIterationTimeMs_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The amount of CPU time, in milliseconds, to iterate the VFS during
+       * scanning.
+       * </pre>
+       *
+       * <code>optional int64 vfs_iteration_time_ms = 4;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearVfsIterationTimeMs() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        vfsIterationTimeMs_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long fileStatusCheckTimeMs_ ;
+      /**
+       * <pre>
+       * The amount of CPU time, in milliseconds, to check the statuses of files
+       * during indexing. Slowdowns in index filters will appear here.
+       * </pre>
+       *
+       * <code>optional int64 file_status_check_time_ms = 5;</code>
+       * @return Whether the fileStatusCheckTimeMs field is set.
+       */
+      @java.lang.Override
+      public boolean hasFileStatusCheckTimeMs() {
+        return ((bitField0_ & 0x00000010) != 0);
+      }
+      /**
+       * <pre>
+       * The amount of CPU time, in milliseconds, to check the statuses of files
+       * during indexing. Slowdowns in index filters will appear here.
+       * </pre>
+       *
+       * <code>optional int64 file_status_check_time_ms = 5;</code>
+       * @return The fileStatusCheckTimeMs.
+       */
+      @java.lang.Override
+      public long getFileStatusCheckTimeMs() {
+        return fileStatusCheckTimeMs_;
+      }
+      /**
+       * <pre>
+       * The amount of CPU time, in milliseconds, to check the statuses of files
+       * during indexing. Slowdowns in index filters will appear here.
+       * </pre>
+       *
+       * <code>optional int64 file_status_check_time_ms = 5;</code>
+       * @param value The fileStatusCheckTimeMs to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFileStatusCheckTimeMs(long value) {
+
+        fileStatusCheckTimeMs_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The amount of CPU time, in milliseconds, to check the statuses of files
+       * during indexing. Slowdowns in index filters will appear here.
+       * </pre>
+       *
+       * <code>optional int64 file_status_check_time_ms = 5;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearFileStatusCheckTimeMs() {
+        bitField0_ = (bitField0_ & ~0x00000010);
+        fileStatusCheckTimeMs_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long dumbModeTimeMs_ ;
+      /**
+       * <pre>
+       * The amount of wall time, in milliseconds, that the scanning pass spent in
+       * dumb mode.
+       * </pre>
+       *
+       * <code>optional int64 dumb_mode_time_ms = 6;</code>
+       * @return Whether the dumbModeTimeMs field is set.
+       */
+      @java.lang.Override
+      public boolean hasDumbModeTimeMs() {
+        return ((bitField0_ & 0x00000020) != 0);
+      }
+      /**
+       * <pre>
+       * The amount of wall time, in milliseconds, that the scanning pass spent in
+       * dumb mode.
+       * </pre>
+       *
+       * <code>optional int64 dumb_mode_time_ms = 6;</code>
+       * @return The dumbModeTimeMs.
+       */
+      @java.lang.Override
+      public long getDumbModeTimeMs() {
+        return dumbModeTimeMs_;
+      }
+      /**
+       * <pre>
+       * The amount of wall time, in milliseconds, that the scanning pass spent in
+       * dumb mode.
+       * </pre>
+       *
+       * <code>optional int64 dumb_mode_time_ms = 6;</code>
+       * @param value The dumbModeTimeMs to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDumbModeTimeMs(long value) {
+
+        dumbModeTimeMs_ = value;
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The amount of wall time, in milliseconds, that the scanning pass spent in
+       * dumb mode.
+       * </pre>
+       *
+       * <code>optional int64 dumb_mode_time_ms = 6;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDumbModeTimeMs() {
+        bitField0_ = (bitField0_ & ~0x00000020);
+        dumbModeTimeMs_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long pausedTimeMs_ ;
+      /**
+       * <pre>
+       * The amount of wall time, in milliseconds, that the scanning pass spent
+       * paused.
+       * </pre>
+       *
+       * <code>optional int64 paused_time_ms = 7;</code>
+       * @return Whether the pausedTimeMs field is set.
+       */
+      @java.lang.Override
+      public boolean hasPausedTimeMs() {
+        return ((bitField0_ & 0x00000040) != 0);
+      }
+      /**
+       * <pre>
+       * The amount of wall time, in milliseconds, that the scanning pass spent
+       * paused.
+       * </pre>
+       *
+       * <code>optional int64 paused_time_ms = 7;</code>
+       * @return The pausedTimeMs.
+       */
+      @java.lang.Override
+      public long getPausedTimeMs() {
+        return pausedTimeMs_;
+      }
+      /**
+       * <pre>
+       * The amount of wall time, in milliseconds, that the scanning pass spent
+       * paused.
+       * </pre>
+       *
+       * <code>optional int64 paused_time_ms = 7;</code>
+       * @param value The pausedTimeMs to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPausedTimeMs(long value) {
+
+        pausedTimeMs_ = value;
+        bitField0_ |= 0x00000040;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The amount of wall time, in milliseconds, that the scanning pass spent
+       * paused.
+       * </pre>
+       *
+       * <code>optional int64 paused_time_ms = 7;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPausedTimeMs() {
+        bitField0_ = (bitField0_ & ~0x00000040);
+        pausedTimeMs_ = 0L;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:android_studio.SmlRagEvent.IntellijScanMetrics)
+    }
+
+    // @@protoc_insertion_point(class_scope:android_studio.SmlRagEvent.IntellijScanMetrics)
+    private static final com.google.wireless.android.sdk.stats.SmlRagEvent.IntellijScanMetrics DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.google.wireless.android.sdk.stats.SmlRagEvent.IntellijScanMetrics();
+    }
+
+    public static com.google.wireless.android.sdk.stats.SmlRagEvent.IntellijScanMetrics getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<IntellijScanMetrics>
+        PARSER = new com.google.protobuf.AbstractParser<IntellijScanMetrics>() {
+      @java.lang.Override
+      public IntellijScanMetrics parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<IntellijScanMetrics> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<IntellijScanMetrics> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.wireless.android.sdk.stats.SmlRagEvent.IntellijScanMetrics getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface IntellijIndexMetricsOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:android_studio.SmlRagEvent.IntellijIndexMetrics)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * The type of the RAG indexer that owns this index (see RagIndexerMetrics)
+     * </pre>
+     *
+     * <code>optional string indexer_type = 1;</code>
+     * @return Whether the indexerType field is set.
+     */
+    boolean hasIndexerType();
+    /**
+     * <pre>
+     * The type of the RAG indexer that owns this index (see RagIndexerMetrics)
+     * </pre>
+     *
+     * <code>optional string indexer_type = 1;</code>
+     * @return The indexerType.
+     */
+    java.lang.String getIndexerType();
+    /**
+     * <pre>
+     * The type of the RAG indexer that owns this index (see RagIndexerMetrics)
+     * </pre>
+     *
+     * <code>optional string indexer_type = 1;</code>
+     * @return The bytes for indexerType.
+     */
+    com.google.protobuf.ByteString
+        getIndexerTypeBytes();
+
+    /**
+     * <pre>
+     * The number of files indexed by the RAG indexer in this index pass.
+     * </pre>
+     *
+     * <code>optional int32 files_indexed = 2;</code>
+     * @return Whether the filesIndexed field is set.
+     */
+    boolean hasFilesIndexed();
+    /**
+     * <pre>
+     * The number of files indexed by the RAG indexer in this index pass.
+     * </pre>
+     *
+     * <code>optional int32 files_indexed = 2;</code>
+     * @return The filesIndexed.
+     */
+    int getFilesIndexed();
+
+    /**
+     * <pre>
+     * The total number of bytes indexed by the RAG indexer in this index pass.
+     * </pre>
+     *
+     * <code>optional int64 bytes_indexed = 3;</code>
+     * @return Whether the bytesIndexed field is set.
+     */
+    boolean hasBytesIndexed();
+    /**
+     * <pre>
+     * The total number of bytes indexed by the RAG indexer in this index pass.
+     * </pre>
+     *
+     * <code>optional int64 bytes_indexed = 3;</code>
+     * @return The bytesIndexed.
+     */
+    long getBytesIndexed();
+
+    /**
+     * <pre>
+     * The amount of CPU time, in milliseconds, that the RAG indexer spent
+     * generating updated index values during this index pass.
+     * </pre>
+     *
+     * <code>optional int64 index_evaluation_time_ms = 4;</code>
+     * @return Whether the indexEvaluationTimeMs field is set.
+     */
+    boolean hasIndexEvaluationTimeMs();
+    /**
+     * <pre>
+     * The amount of CPU time, in milliseconds, that the RAG indexer spent
+     * generating updated index values during this index pass.
+     * </pre>
+     *
+     * <code>optional int64 index_evaluation_time_ms = 4;</code>
+     * @return The indexEvaluationTimeMs.
+     */
+    long getIndexEvaluationTimeMs();
+
+    /**
+     * <pre>
+     * The amount of wall time, in milliseconds, that the indexing pass spent in
+     * dumb mode.
+     * </pre>
+     *
+     * <code>optional int64 dumb_mode_time_ms = 5;</code>
+     * @return Whether the dumbModeTimeMs field is set.
+     */
+    boolean hasDumbModeTimeMs();
+    /**
+     * <pre>
+     * The amount of wall time, in milliseconds, that the indexing pass spent in
+     * dumb mode.
+     * </pre>
+     *
+     * <code>optional int64 dumb_mode_time_ms = 5;</code>
+     * @return The dumbModeTimeMs.
+     */
+    long getDumbModeTimeMs();
+
+    /**
+     * <pre>
+     * The amount of wall time, in milliseconds, that the indexing pass spent
+     * paused.
+     * </pre>
+     *
+     * <code>optional int64 paused_time_ms = 6;</code>
+     * @return Whether the pausedTimeMs field is set.
+     */
+    boolean hasPausedTimeMs();
+    /**
+     * <pre>
+     * The amount of wall time, in milliseconds, that the indexing pass spent
+     * paused.
+     * </pre>
+     *
+     * <code>optional int64 paused_time_ms = 6;</code>
+     * @return The pausedTimeMs.
+     */
+    long getPausedTimeMs();
+  }
+  /**
+   * Protobuf type {@code android_studio.SmlRagEvent.IntellijIndexMetrics}
+   */
+  public static final class IntellijIndexMetrics extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:android_studio.SmlRagEvent.IntellijIndexMetrics)
+      IntellijIndexMetricsOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use IntellijIndexMetrics.newBuilder() to construct.
+    private IntellijIndexMetrics(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private IntellijIndexMetrics() {
+      indexerType_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new IntellijIndexMetrics();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_SmlRagEvent_IntellijIndexMetrics_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_SmlRagEvent_IntellijIndexMetrics_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.google.wireless.android.sdk.stats.SmlRagEvent.IntellijIndexMetrics.class, com.google.wireless.android.sdk.stats.SmlRagEvent.IntellijIndexMetrics.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int INDEXER_TYPE_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object indexerType_ = "";
+    /**
+     * <pre>
+     * The type of the RAG indexer that owns this index (see RagIndexerMetrics)
+     * </pre>
+     *
+     * <code>optional string indexer_type = 1;</code>
+     * @return Whether the indexerType field is set.
+     */
+    @java.lang.Override
+    public boolean hasIndexerType() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <pre>
+     * The type of the RAG indexer that owns this index (see RagIndexerMetrics)
+     * </pre>
+     *
+     * <code>optional string indexer_type = 1;</code>
+     * @return The indexerType.
+     */
+    @java.lang.Override
+    public java.lang.String getIndexerType() {
+      java.lang.Object ref = indexerType_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          indexerType_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * The type of the RAG indexer that owns this index (see RagIndexerMetrics)
+     * </pre>
+     *
+     * <code>optional string indexer_type = 1;</code>
+     * @return The bytes for indexerType.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getIndexerTypeBytes() {
+      java.lang.Object ref = indexerType_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        indexerType_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int FILES_INDEXED_FIELD_NUMBER = 2;
+    private int filesIndexed_ = 0;
+    /**
+     * <pre>
+     * The number of files indexed by the RAG indexer in this index pass.
+     * </pre>
+     *
+     * <code>optional int32 files_indexed = 2;</code>
+     * @return Whether the filesIndexed field is set.
+     */
+    @java.lang.Override
+    public boolean hasFilesIndexed() {
+      return ((bitField0_ & 0x00000002) != 0);
+    }
+    /**
+     * <pre>
+     * The number of files indexed by the RAG indexer in this index pass.
+     * </pre>
+     *
+     * <code>optional int32 files_indexed = 2;</code>
+     * @return The filesIndexed.
+     */
+    @java.lang.Override
+    public int getFilesIndexed() {
+      return filesIndexed_;
+    }
+
+    public static final int BYTES_INDEXED_FIELD_NUMBER = 3;
+    private long bytesIndexed_ = 0L;
+    /**
+     * <pre>
+     * The total number of bytes indexed by the RAG indexer in this index pass.
+     * </pre>
+     *
+     * <code>optional int64 bytes_indexed = 3;</code>
+     * @return Whether the bytesIndexed field is set.
+     */
+    @java.lang.Override
+    public boolean hasBytesIndexed() {
+      return ((bitField0_ & 0x00000004) != 0);
+    }
+    /**
+     * <pre>
+     * The total number of bytes indexed by the RAG indexer in this index pass.
+     * </pre>
+     *
+     * <code>optional int64 bytes_indexed = 3;</code>
+     * @return The bytesIndexed.
+     */
+    @java.lang.Override
+    public long getBytesIndexed() {
+      return bytesIndexed_;
+    }
+
+    public static final int INDEX_EVALUATION_TIME_MS_FIELD_NUMBER = 4;
+    private long indexEvaluationTimeMs_ = 0L;
+    /**
+     * <pre>
+     * The amount of CPU time, in milliseconds, that the RAG indexer spent
+     * generating updated index values during this index pass.
+     * </pre>
+     *
+     * <code>optional int64 index_evaluation_time_ms = 4;</code>
+     * @return Whether the indexEvaluationTimeMs field is set.
+     */
+    @java.lang.Override
+    public boolean hasIndexEvaluationTimeMs() {
+      return ((bitField0_ & 0x00000008) != 0);
+    }
+    /**
+     * <pre>
+     * The amount of CPU time, in milliseconds, that the RAG indexer spent
+     * generating updated index values during this index pass.
+     * </pre>
+     *
+     * <code>optional int64 index_evaluation_time_ms = 4;</code>
+     * @return The indexEvaluationTimeMs.
+     */
+    @java.lang.Override
+    public long getIndexEvaluationTimeMs() {
+      return indexEvaluationTimeMs_;
+    }
+
+    public static final int DUMB_MODE_TIME_MS_FIELD_NUMBER = 5;
+    private long dumbModeTimeMs_ = 0L;
+    /**
+     * <pre>
+     * The amount of wall time, in milliseconds, that the indexing pass spent in
+     * dumb mode.
+     * </pre>
+     *
+     * <code>optional int64 dumb_mode_time_ms = 5;</code>
+     * @return Whether the dumbModeTimeMs field is set.
+     */
+    @java.lang.Override
+    public boolean hasDumbModeTimeMs() {
+      return ((bitField0_ & 0x00000010) != 0);
+    }
+    /**
+     * <pre>
+     * The amount of wall time, in milliseconds, that the indexing pass spent in
+     * dumb mode.
+     * </pre>
+     *
+     * <code>optional int64 dumb_mode_time_ms = 5;</code>
+     * @return The dumbModeTimeMs.
+     */
+    @java.lang.Override
+    public long getDumbModeTimeMs() {
+      return dumbModeTimeMs_;
+    }
+
+    public static final int PAUSED_TIME_MS_FIELD_NUMBER = 6;
+    private long pausedTimeMs_ = 0L;
+    /**
+     * <pre>
+     * The amount of wall time, in milliseconds, that the indexing pass spent
+     * paused.
+     * </pre>
+     *
+     * <code>optional int64 paused_time_ms = 6;</code>
+     * @return Whether the pausedTimeMs field is set.
+     */
+    @java.lang.Override
+    public boolean hasPausedTimeMs() {
+      return ((bitField0_ & 0x00000020) != 0);
+    }
+    /**
+     * <pre>
+     * The amount of wall time, in milliseconds, that the indexing pass spent
+     * paused.
+     * </pre>
+     *
+     * <code>optional int64 paused_time_ms = 6;</code>
+     * @return The pausedTimeMs.
+     */
+    @java.lang.Override
+    public long getPausedTimeMs() {
+      return pausedTimeMs_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (((bitField0_ & 0x00000001) != 0)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, indexerType_);
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        output.writeInt32(2, filesIndexed_);
+      }
+      if (((bitField0_ & 0x00000004) != 0)) {
+        output.writeInt64(3, bytesIndexed_);
+      }
+      if (((bitField0_ & 0x00000008) != 0)) {
+        output.writeInt64(4, indexEvaluationTimeMs_);
+      }
+      if (((bitField0_ & 0x00000010) != 0)) {
+        output.writeInt64(5, dumbModeTimeMs_);
+      }
+      if (((bitField0_ & 0x00000020) != 0)) {
+        output.writeInt64(6, pausedTimeMs_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) != 0)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, indexerType_);
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(2, filesIndexed_);
+      }
+      if (((bitField0_ & 0x00000004) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(3, bytesIndexed_);
+      }
+      if (((bitField0_ & 0x00000008) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(4, indexEvaluationTimeMs_);
+      }
+      if (((bitField0_ & 0x00000010) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(5, dumbModeTimeMs_);
+      }
+      if (((bitField0_ & 0x00000020) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(6, pausedTimeMs_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.google.wireless.android.sdk.stats.SmlRagEvent.IntellijIndexMetrics)) {
+        return super.equals(obj);
+      }
+      com.google.wireless.android.sdk.stats.SmlRagEvent.IntellijIndexMetrics other = (com.google.wireless.android.sdk.stats.SmlRagEvent.IntellijIndexMetrics) obj;
+
+      if (hasIndexerType() != other.hasIndexerType()) return false;
+      if (hasIndexerType()) {
+        if (!getIndexerType()
+            .equals(other.getIndexerType())) return false;
+      }
+      if (hasFilesIndexed() != other.hasFilesIndexed()) return false;
+      if (hasFilesIndexed()) {
+        if (getFilesIndexed()
+            != other.getFilesIndexed()) return false;
+      }
+      if (hasBytesIndexed() != other.hasBytesIndexed()) return false;
+      if (hasBytesIndexed()) {
+        if (getBytesIndexed()
+            != other.getBytesIndexed()) return false;
+      }
+      if (hasIndexEvaluationTimeMs() != other.hasIndexEvaluationTimeMs()) return false;
+      if (hasIndexEvaluationTimeMs()) {
+        if (getIndexEvaluationTimeMs()
+            != other.getIndexEvaluationTimeMs()) return false;
+      }
+      if (hasDumbModeTimeMs() != other.hasDumbModeTimeMs()) return false;
+      if (hasDumbModeTimeMs()) {
+        if (getDumbModeTimeMs()
+            != other.getDumbModeTimeMs()) return false;
+      }
+      if (hasPausedTimeMs() != other.hasPausedTimeMs()) return false;
+      if (hasPausedTimeMs()) {
+        if (getPausedTimeMs()
+            != other.getPausedTimeMs()) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasIndexerType()) {
+        hash = (37 * hash) + INDEXER_TYPE_FIELD_NUMBER;
+        hash = (53 * hash) + getIndexerType().hashCode();
+      }
+      if (hasFilesIndexed()) {
+        hash = (37 * hash) + FILES_INDEXED_FIELD_NUMBER;
+        hash = (53 * hash) + getFilesIndexed();
+      }
+      if (hasBytesIndexed()) {
+        hash = (37 * hash) + BYTES_INDEXED_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            getBytesIndexed());
+      }
+      if (hasIndexEvaluationTimeMs()) {
+        hash = (37 * hash) + INDEX_EVALUATION_TIME_MS_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            getIndexEvaluationTimeMs());
+      }
+      if (hasDumbModeTimeMs()) {
+        hash = (37 * hash) + DUMB_MODE_TIME_MS_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            getDumbModeTimeMs());
+      }
+      if (hasPausedTimeMs()) {
+        hash = (37 * hash) + PAUSED_TIME_MS_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            getPausedTimeMs());
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.google.wireless.android.sdk.stats.SmlRagEvent.IntellijIndexMetrics parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.google.wireless.android.sdk.stats.SmlRagEvent.IntellijIndexMetrics parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.google.wireless.android.sdk.stats.SmlRagEvent.IntellijIndexMetrics parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.google.wireless.android.sdk.stats.SmlRagEvent.IntellijIndexMetrics parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.google.wireless.android.sdk.stats.SmlRagEvent.IntellijIndexMetrics parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.google.wireless.android.sdk.stats.SmlRagEvent.IntellijIndexMetrics parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.google.wireless.android.sdk.stats.SmlRagEvent.IntellijIndexMetrics parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.google.wireless.android.sdk.stats.SmlRagEvent.IntellijIndexMetrics parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.google.wireless.android.sdk.stats.SmlRagEvent.IntellijIndexMetrics parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.google.wireless.android.sdk.stats.SmlRagEvent.IntellijIndexMetrics parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.google.wireless.android.sdk.stats.SmlRagEvent.IntellijIndexMetrics parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.google.wireless.android.sdk.stats.SmlRagEvent.IntellijIndexMetrics parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.google.wireless.android.sdk.stats.SmlRagEvent.IntellijIndexMetrics prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code android_studio.SmlRagEvent.IntellijIndexMetrics}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:android_studio.SmlRagEvent.IntellijIndexMetrics)
+        com.google.wireless.android.sdk.stats.SmlRagEvent.IntellijIndexMetricsOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_SmlRagEvent_IntellijIndexMetrics_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_SmlRagEvent_IntellijIndexMetrics_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.google.wireless.android.sdk.stats.SmlRagEvent.IntellijIndexMetrics.class, com.google.wireless.android.sdk.stats.SmlRagEvent.IntellijIndexMetrics.Builder.class);
+      }
+
+      // Construct using com.google.wireless.android.sdk.stats.SmlRagEvent.IntellijIndexMetrics.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        indexerType_ = "";
+        filesIndexed_ = 0;
+        bytesIndexed_ = 0L;
+        indexEvaluationTimeMs_ = 0L;
+        dumbModeTimeMs_ = 0L;
+        pausedTimeMs_ = 0L;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_SmlRagEvent_IntellijIndexMetrics_descriptor;
+      }
+
+      @java.lang.Override
+      public com.google.wireless.android.sdk.stats.SmlRagEvent.IntellijIndexMetrics getDefaultInstanceForType() {
+        return com.google.wireless.android.sdk.stats.SmlRagEvent.IntellijIndexMetrics.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.google.wireless.android.sdk.stats.SmlRagEvent.IntellijIndexMetrics build() {
+        com.google.wireless.android.sdk.stats.SmlRagEvent.IntellijIndexMetrics result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.google.wireless.android.sdk.stats.SmlRagEvent.IntellijIndexMetrics buildPartial() {
+        com.google.wireless.android.sdk.stats.SmlRagEvent.IntellijIndexMetrics result = new com.google.wireless.android.sdk.stats.SmlRagEvent.IntellijIndexMetrics(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.google.wireless.android.sdk.stats.SmlRagEvent.IntellijIndexMetrics result) {
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.indexerType_ = indexerType_;
+          to_bitField0_ |= 0x00000001;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.filesIndexed_ = filesIndexed_;
+          to_bitField0_ |= 0x00000002;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.bytesIndexed_ = bytesIndexed_;
+          to_bitField0_ |= 0x00000004;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.indexEvaluationTimeMs_ = indexEvaluationTimeMs_;
+          to_bitField0_ |= 0x00000008;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.dumbModeTimeMs_ = dumbModeTimeMs_;
+          to_bitField0_ |= 0x00000010;
+        }
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          result.pausedTimeMs_ = pausedTimeMs_;
+          to_bitField0_ |= 0x00000020;
+        }
+        result.bitField0_ |= to_bitField0_;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.google.wireless.android.sdk.stats.SmlRagEvent.IntellijIndexMetrics) {
+          return mergeFrom((com.google.wireless.android.sdk.stats.SmlRagEvent.IntellijIndexMetrics)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.google.wireless.android.sdk.stats.SmlRagEvent.IntellijIndexMetrics other) {
+        if (other == com.google.wireless.android.sdk.stats.SmlRagEvent.IntellijIndexMetrics.getDefaultInstance()) return this;
+        if (other.hasIndexerType()) {
+          indexerType_ = other.indexerType_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (other.hasFilesIndexed()) {
+          setFilesIndexed(other.getFilesIndexed());
+        }
+        if (other.hasBytesIndexed()) {
+          setBytesIndexed(other.getBytesIndexed());
+        }
+        if (other.hasIndexEvaluationTimeMs()) {
+          setIndexEvaluationTimeMs(other.getIndexEvaluationTimeMs());
+        }
+        if (other.hasDumbModeTimeMs()) {
+          setDumbModeTimeMs(other.getDumbModeTimeMs());
+        }
+        if (other.hasPausedTimeMs()) {
+          setPausedTimeMs(other.getPausedTimeMs());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                indexerType_ = input.readBytes();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 16: {
+                filesIndexed_ = input.readInt32();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 16
+              case 24: {
+                bytesIndexed_ = input.readInt64();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 24
+              case 32: {
+                indexEvaluationTimeMs_ = input.readInt64();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 32
+              case 40: {
+                dumbModeTimeMs_ = input.readInt64();
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 40
+              case 48: {
+                pausedTimeMs_ = input.readInt64();
+                bitField0_ |= 0x00000020;
+                break;
+              } // case 48
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object indexerType_ = "";
+      /**
+       * <pre>
+       * The type of the RAG indexer that owns this index (see RagIndexerMetrics)
+       * </pre>
+       *
+       * <code>optional string indexer_type = 1;</code>
+       * @return Whether the indexerType field is set.
+       */
+      public boolean hasIndexerType() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <pre>
+       * The type of the RAG indexer that owns this index (see RagIndexerMetrics)
+       * </pre>
+       *
+       * <code>optional string indexer_type = 1;</code>
+       * @return The indexerType.
+       */
+      public java.lang.String getIndexerType() {
+        java.lang.Object ref = indexerType_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            indexerType_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The type of the RAG indexer that owns this index (see RagIndexerMetrics)
+       * </pre>
+       *
+       * <code>optional string indexer_type = 1;</code>
+       * @return The bytes for indexerType.
+       */
+      public com.google.protobuf.ByteString
+          getIndexerTypeBytes() {
+        java.lang.Object ref = indexerType_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          indexerType_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The type of the RAG indexer that owns this index (see RagIndexerMetrics)
+       * </pre>
+       *
+       * <code>optional string indexer_type = 1;</code>
+       * @param value The indexerType to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIndexerType(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        indexerType_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The type of the RAG indexer that owns this index (see RagIndexerMetrics)
+       * </pre>
+       *
+       * <code>optional string indexer_type = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearIndexerType() {
+        indexerType_ = getDefaultInstance().getIndexerType();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The type of the RAG indexer that owns this index (see RagIndexerMetrics)
+       * </pre>
+       *
+       * <code>optional string indexer_type = 1;</code>
+       * @param value The bytes for indexerType to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIndexerTypeBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        indexerType_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private int filesIndexed_ ;
+      /**
+       * <pre>
+       * The number of files indexed by the RAG indexer in this index pass.
+       * </pre>
+       *
+       * <code>optional int32 files_indexed = 2;</code>
+       * @return Whether the filesIndexed field is set.
+       */
+      @java.lang.Override
+      public boolean hasFilesIndexed() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <pre>
+       * The number of files indexed by the RAG indexer in this index pass.
+       * </pre>
+       *
+       * <code>optional int32 files_indexed = 2;</code>
+       * @return The filesIndexed.
+       */
+      @java.lang.Override
+      public int getFilesIndexed() {
+        return filesIndexed_;
+      }
+      /**
+       * <pre>
+       * The number of files indexed by the RAG indexer in this index pass.
+       * </pre>
+       *
+       * <code>optional int32 files_indexed = 2;</code>
+       * @param value The filesIndexed to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFilesIndexed(int value) {
+
+        filesIndexed_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The number of files indexed by the RAG indexer in this index pass.
+       * </pre>
+       *
+       * <code>optional int32 files_indexed = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearFilesIndexed() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        filesIndexed_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private long bytesIndexed_ ;
+      /**
+       * <pre>
+       * The total number of bytes indexed by the RAG indexer in this index pass.
+       * </pre>
+       *
+       * <code>optional int64 bytes_indexed = 3;</code>
+       * @return Whether the bytesIndexed field is set.
+       */
+      @java.lang.Override
+      public boolean hasBytesIndexed() {
+        return ((bitField0_ & 0x00000004) != 0);
+      }
+      /**
+       * <pre>
+       * The total number of bytes indexed by the RAG indexer in this index pass.
+       * </pre>
+       *
+       * <code>optional int64 bytes_indexed = 3;</code>
+       * @return The bytesIndexed.
+       */
+      @java.lang.Override
+      public long getBytesIndexed() {
+        return bytesIndexed_;
+      }
+      /**
+       * <pre>
+       * The total number of bytes indexed by the RAG indexer in this index pass.
+       * </pre>
+       *
+       * <code>optional int64 bytes_indexed = 3;</code>
+       * @param value The bytesIndexed to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBytesIndexed(long value) {
+
+        bytesIndexed_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The total number of bytes indexed by the RAG indexer in this index pass.
+       * </pre>
+       *
+       * <code>optional int64 bytes_indexed = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearBytesIndexed() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        bytesIndexed_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long indexEvaluationTimeMs_ ;
+      /**
+       * <pre>
+       * The amount of CPU time, in milliseconds, that the RAG indexer spent
+       * generating updated index values during this index pass.
+       * </pre>
+       *
+       * <code>optional int64 index_evaluation_time_ms = 4;</code>
+       * @return Whether the indexEvaluationTimeMs field is set.
+       */
+      @java.lang.Override
+      public boolean hasIndexEvaluationTimeMs() {
+        return ((bitField0_ & 0x00000008) != 0);
+      }
+      /**
+       * <pre>
+       * The amount of CPU time, in milliseconds, that the RAG indexer spent
+       * generating updated index values during this index pass.
+       * </pre>
+       *
+       * <code>optional int64 index_evaluation_time_ms = 4;</code>
+       * @return The indexEvaluationTimeMs.
+       */
+      @java.lang.Override
+      public long getIndexEvaluationTimeMs() {
+        return indexEvaluationTimeMs_;
+      }
+      /**
+       * <pre>
+       * The amount of CPU time, in milliseconds, that the RAG indexer spent
+       * generating updated index values during this index pass.
+       * </pre>
+       *
+       * <code>optional int64 index_evaluation_time_ms = 4;</code>
+       * @param value The indexEvaluationTimeMs to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIndexEvaluationTimeMs(long value) {
+
+        indexEvaluationTimeMs_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The amount of CPU time, in milliseconds, that the RAG indexer spent
+       * generating updated index values during this index pass.
+       * </pre>
+       *
+       * <code>optional int64 index_evaluation_time_ms = 4;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearIndexEvaluationTimeMs() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        indexEvaluationTimeMs_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long dumbModeTimeMs_ ;
+      /**
+       * <pre>
+       * The amount of wall time, in milliseconds, that the indexing pass spent in
+       * dumb mode.
+       * </pre>
+       *
+       * <code>optional int64 dumb_mode_time_ms = 5;</code>
+       * @return Whether the dumbModeTimeMs field is set.
+       */
+      @java.lang.Override
+      public boolean hasDumbModeTimeMs() {
+        return ((bitField0_ & 0x00000010) != 0);
+      }
+      /**
+       * <pre>
+       * The amount of wall time, in milliseconds, that the indexing pass spent in
+       * dumb mode.
+       * </pre>
+       *
+       * <code>optional int64 dumb_mode_time_ms = 5;</code>
+       * @return The dumbModeTimeMs.
+       */
+      @java.lang.Override
+      public long getDumbModeTimeMs() {
+        return dumbModeTimeMs_;
+      }
+      /**
+       * <pre>
+       * The amount of wall time, in milliseconds, that the indexing pass spent in
+       * dumb mode.
+       * </pre>
+       *
+       * <code>optional int64 dumb_mode_time_ms = 5;</code>
+       * @param value The dumbModeTimeMs to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDumbModeTimeMs(long value) {
+
+        dumbModeTimeMs_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The amount of wall time, in milliseconds, that the indexing pass spent in
+       * dumb mode.
+       * </pre>
+       *
+       * <code>optional int64 dumb_mode_time_ms = 5;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDumbModeTimeMs() {
+        bitField0_ = (bitField0_ & ~0x00000010);
+        dumbModeTimeMs_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long pausedTimeMs_ ;
+      /**
+       * <pre>
+       * The amount of wall time, in milliseconds, that the indexing pass spent
+       * paused.
+       * </pre>
+       *
+       * <code>optional int64 paused_time_ms = 6;</code>
+       * @return Whether the pausedTimeMs field is set.
+       */
+      @java.lang.Override
+      public boolean hasPausedTimeMs() {
+        return ((bitField0_ & 0x00000020) != 0);
+      }
+      /**
+       * <pre>
+       * The amount of wall time, in milliseconds, that the indexing pass spent
+       * paused.
+       * </pre>
+       *
+       * <code>optional int64 paused_time_ms = 6;</code>
+       * @return The pausedTimeMs.
+       */
+      @java.lang.Override
+      public long getPausedTimeMs() {
+        return pausedTimeMs_;
+      }
+      /**
+       * <pre>
+       * The amount of wall time, in milliseconds, that the indexing pass spent
+       * paused.
+       * </pre>
+       *
+       * <code>optional int64 paused_time_ms = 6;</code>
+       * @param value The pausedTimeMs to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPausedTimeMs(long value) {
+
+        pausedTimeMs_ = value;
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The amount of wall time, in milliseconds, that the indexing pass spent
+       * paused.
+       * </pre>
+       *
+       * <code>optional int64 paused_time_ms = 6;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPausedTimeMs() {
+        bitField0_ = (bitField0_ & ~0x00000020);
+        pausedTimeMs_ = 0L;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:android_studio.SmlRagEvent.IntellijIndexMetrics)
+    }
+
+    // @@protoc_insertion_point(class_scope:android_studio.SmlRagEvent.IntellijIndexMetrics)
+    private static final com.google.wireless.android.sdk.stats.SmlRagEvent.IntellijIndexMetrics DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.google.wireless.android.sdk.stats.SmlRagEvent.IntellijIndexMetrics();
+    }
+
+    public static com.google.wireless.android.sdk.stats.SmlRagEvent.IntellijIndexMetrics getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<IntellijIndexMetrics>
+        PARSER = new com.google.protobuf.AbstractParser<IntellijIndexMetrics>() {
+      @java.lang.Override
+      public IntellijIndexMetrics parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<IntellijIndexMetrics> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<IntellijIndexMetrics> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.wireless.android.sdk.stats.SmlRagEvent.IntellijIndexMetrics getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private int bitField0_;
   private int contentCase_ = 0;
   @SuppressWarnings("serial")
@@ -10118,6 +17913,9 @@ private static final long serialVersionUID = 0L;
     KB_RAG(5),
     FIND_DECLARATION(6),
     FIND_USAGES(7),
+    LUCENE_METRICS(8),
+    INTELLIJ_SCAN(9),
+    INTELLIJ_INDEX(10),
     CONTENT_NOT_SET(0);
     private final int value;
     private ContentCase(int value) {
@@ -10142,6 +17940,9 @@ private static final long serialVersionUID = 0L;
         case 5: return KB_RAG;
         case 6: return FIND_DECLARATION;
         case 7: return FIND_USAGES;
+        case 8: return LUCENE_METRICS;
+        case 9: return INTELLIJ_SCAN;
+        case 10: return INTELLIJ_INDEX;
         case 0: return CONTENT_NOT_SET;
         default: return null;
       }
@@ -10374,6 +18175,99 @@ private static final long serialVersionUID = 0L;
     return com.google.wireless.android.sdk.stats.SmlRagEvent.FindUsagesMetrics.getDefaultInstance();
   }
 
+  public static final int LUCENE_METRICS_FIELD_NUMBER = 8;
+  /**
+   * <code>.android_studio.SmlRagEvent.LuceneIndexMetrics lucene_metrics = 8 [lazy = true];</code>
+   * @return Whether the luceneMetrics field is set.
+   */
+  @java.lang.Override
+  public boolean hasLuceneMetrics() {
+    return contentCase_ == 8;
+  }
+  /**
+   * <code>.android_studio.SmlRagEvent.LuceneIndexMetrics lucene_metrics = 8 [lazy = true];</code>
+   * @return The luceneMetrics.
+   */
+  @java.lang.Override
+  public com.google.wireless.android.sdk.stats.SmlRagEvent.LuceneIndexMetrics getLuceneMetrics() {
+    if (contentCase_ == 8) {
+       return (com.google.wireless.android.sdk.stats.SmlRagEvent.LuceneIndexMetrics) content_;
+    }
+    return com.google.wireless.android.sdk.stats.SmlRagEvent.LuceneIndexMetrics.getDefaultInstance();
+  }
+  /**
+   * <code>.android_studio.SmlRagEvent.LuceneIndexMetrics lucene_metrics = 8 [lazy = true];</code>
+   */
+  @java.lang.Override
+  public com.google.wireless.android.sdk.stats.SmlRagEvent.LuceneIndexMetricsOrBuilder getLuceneMetricsOrBuilder() {
+    if (contentCase_ == 8) {
+       return (com.google.wireless.android.sdk.stats.SmlRagEvent.LuceneIndexMetrics) content_;
+    }
+    return com.google.wireless.android.sdk.stats.SmlRagEvent.LuceneIndexMetrics.getDefaultInstance();
+  }
+
+  public static final int INTELLIJ_SCAN_FIELD_NUMBER = 9;
+  /**
+   * <code>.android_studio.SmlRagEvent.IntellijScanMetrics intellij_scan = 9 [lazy = true];</code>
+   * @return Whether the intellijScan field is set.
+   */
+  @java.lang.Override
+  public boolean hasIntellijScan() {
+    return contentCase_ == 9;
+  }
+  /**
+   * <code>.android_studio.SmlRagEvent.IntellijScanMetrics intellij_scan = 9 [lazy = true];</code>
+   * @return The intellijScan.
+   */
+  @java.lang.Override
+  public com.google.wireless.android.sdk.stats.SmlRagEvent.IntellijScanMetrics getIntellijScan() {
+    if (contentCase_ == 9) {
+       return (com.google.wireless.android.sdk.stats.SmlRagEvent.IntellijScanMetrics) content_;
+    }
+    return com.google.wireless.android.sdk.stats.SmlRagEvent.IntellijScanMetrics.getDefaultInstance();
+  }
+  /**
+   * <code>.android_studio.SmlRagEvent.IntellijScanMetrics intellij_scan = 9 [lazy = true];</code>
+   */
+  @java.lang.Override
+  public com.google.wireless.android.sdk.stats.SmlRagEvent.IntellijScanMetricsOrBuilder getIntellijScanOrBuilder() {
+    if (contentCase_ == 9) {
+       return (com.google.wireless.android.sdk.stats.SmlRagEvent.IntellijScanMetrics) content_;
+    }
+    return com.google.wireless.android.sdk.stats.SmlRagEvent.IntellijScanMetrics.getDefaultInstance();
+  }
+
+  public static final int INTELLIJ_INDEX_FIELD_NUMBER = 10;
+  /**
+   * <code>.android_studio.SmlRagEvent.IntellijIndexMetrics intellij_index = 10 [lazy = true];</code>
+   * @return Whether the intellijIndex field is set.
+   */
+  @java.lang.Override
+  public boolean hasIntellijIndex() {
+    return contentCase_ == 10;
+  }
+  /**
+   * <code>.android_studio.SmlRagEvent.IntellijIndexMetrics intellij_index = 10 [lazy = true];</code>
+   * @return The intellijIndex.
+   */
+  @java.lang.Override
+  public com.google.wireless.android.sdk.stats.SmlRagEvent.IntellijIndexMetrics getIntellijIndex() {
+    if (contentCase_ == 10) {
+       return (com.google.wireless.android.sdk.stats.SmlRagEvent.IntellijIndexMetrics) content_;
+    }
+    return com.google.wireless.android.sdk.stats.SmlRagEvent.IntellijIndexMetrics.getDefaultInstance();
+  }
+  /**
+   * <code>.android_studio.SmlRagEvent.IntellijIndexMetrics intellij_index = 10 [lazy = true];</code>
+   */
+  @java.lang.Override
+  public com.google.wireless.android.sdk.stats.SmlRagEvent.IntellijIndexMetricsOrBuilder getIntellijIndexOrBuilder() {
+    if (contentCase_ == 10) {
+       return (com.google.wireless.android.sdk.stats.SmlRagEvent.IntellijIndexMetrics) content_;
+    }
+    return com.google.wireless.android.sdk.stats.SmlRagEvent.IntellijIndexMetrics.getDefaultInstance();
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -10408,6 +18302,15 @@ private static final long serialVersionUID = 0L;
     }
     if (contentCase_ == 7) {
       output.writeMessage(7, (com.google.wireless.android.sdk.stats.SmlRagEvent.FindUsagesMetrics) content_);
+    }
+    if (contentCase_ == 8) {
+      output.writeMessage(8, (com.google.wireless.android.sdk.stats.SmlRagEvent.LuceneIndexMetrics) content_);
+    }
+    if (contentCase_ == 9) {
+      output.writeMessage(9, (com.google.wireless.android.sdk.stats.SmlRagEvent.IntellijScanMetrics) content_);
+    }
+    if (contentCase_ == 10) {
+      output.writeMessage(10, (com.google.wireless.android.sdk.stats.SmlRagEvent.IntellijIndexMetrics) content_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -10445,6 +18348,18 @@ private static final long serialVersionUID = 0L;
     if (contentCase_ == 7) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(7, (com.google.wireless.android.sdk.stats.SmlRagEvent.FindUsagesMetrics) content_);
+    }
+    if (contentCase_ == 8) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(8, (com.google.wireless.android.sdk.stats.SmlRagEvent.LuceneIndexMetrics) content_);
+    }
+    if (contentCase_ == 9) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(9, (com.google.wireless.android.sdk.stats.SmlRagEvent.IntellijScanMetrics) content_);
+    }
+    if (contentCase_ == 10) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(10, (com.google.wireless.android.sdk.stats.SmlRagEvent.IntellijIndexMetrics) content_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -10491,6 +18406,18 @@ private static final long serialVersionUID = 0L;
         if (!getFindUsages()
             .equals(other.getFindUsages())) return false;
         break;
+      case 8:
+        if (!getLuceneMetrics()
+            .equals(other.getLuceneMetrics())) return false;
+        break;
+      case 9:
+        if (!getIntellijScan()
+            .equals(other.getIntellijScan())) return false;
+        break;
+      case 10:
+        if (!getIntellijIndex()
+            .equals(other.getIntellijIndex())) return false;
+        break;
       case 0:
       default:
     }
@@ -10533,6 +18460,18 @@ private static final long serialVersionUID = 0L;
       case 7:
         hash = (37 * hash) + FIND_USAGES_FIELD_NUMBER;
         hash = (53 * hash) + getFindUsages().hashCode();
+        break;
+      case 8:
+        hash = (37 * hash) + LUCENE_METRICS_FIELD_NUMBER;
+        hash = (53 * hash) + getLuceneMetrics().hashCode();
+        break;
+      case 9:
+        hash = (37 * hash) + INTELLIJ_SCAN_FIELD_NUMBER;
+        hash = (53 * hash) + getIntellijScan().hashCode();
+        break;
+      case 10:
+        hash = (37 * hash) + INTELLIJ_INDEX_FIELD_NUMBER;
+        hash = (53 * hash) + getIntellijIndex().hashCode();
         break;
       case 0:
       default:
@@ -10691,6 +18630,15 @@ private static final long serialVersionUID = 0L;
       if (findUsagesBuilder_ != null) {
         findUsagesBuilder_.clear();
       }
+      if (luceneMetricsBuilder_ != null) {
+        luceneMetricsBuilder_.clear();
+      }
+      if (intellijScanBuilder_ != null) {
+        intellijScanBuilder_.clear();
+      }
+      if (intellijIndexBuilder_ != null) {
+        intellijIndexBuilder_.clear();
+      }
       contentCase_ = 0;
       content_ = null;
       return this;
@@ -10760,6 +18708,18 @@ private static final long serialVersionUID = 0L;
           findUsagesBuilder_ != null) {
         result.content_ = findUsagesBuilder_.build();
       }
+      if (contentCase_ == 8 &&
+          luceneMetricsBuilder_ != null) {
+        result.content_ = luceneMetricsBuilder_.build();
+      }
+      if (contentCase_ == 9 &&
+          intellijScanBuilder_ != null) {
+        result.content_ = intellijScanBuilder_.build();
+      }
+      if (contentCase_ == 10 &&
+          intellijIndexBuilder_ != null) {
+        result.content_ = intellijIndexBuilder_.build();
+      }
     }
 
     @java.lang.Override
@@ -10801,6 +18761,18 @@ private static final long serialVersionUID = 0L;
         }
         case FIND_USAGES: {
           mergeFindUsages(other.getFindUsages());
+          break;
+        }
+        case LUCENE_METRICS: {
+          mergeLuceneMetrics(other.getLuceneMetrics());
+          break;
+        }
+        case INTELLIJ_SCAN: {
+          mergeIntellijScan(other.getIntellijScan());
+          break;
+        }
+        case INTELLIJ_INDEX: {
+          mergeIntellijIndex(other.getIntellijIndex());
           break;
         }
         case CONTENT_NOT_SET: {
@@ -10882,6 +18854,27 @@ private static final long serialVersionUID = 0L;
               contentCase_ = 7;
               break;
             } // case 58
+            case 66: {
+              input.readMessage(
+                  getLuceneMetricsFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              contentCase_ = 8;
+              break;
+            } // case 66
+            case 74: {
+              input.readMessage(
+                  getIntellijScanFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              contentCase_ = 9;
+              break;
+            } // case 74
+            case 82: {
+              input.readMessage(
+                  getIntellijIndexFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              contentCase_ = 10;
+              break;
+            } // case 82
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -11906,6 +19899,432 @@ private static final long serialVersionUID = 0L;
       contentCase_ = 7;
       onChanged();
       return findUsagesBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.SmlRagEvent.LuceneIndexMetrics, com.google.wireless.android.sdk.stats.SmlRagEvent.LuceneIndexMetrics.Builder, com.google.wireless.android.sdk.stats.SmlRagEvent.LuceneIndexMetricsOrBuilder> luceneMetricsBuilder_;
+    /**
+     * <code>.android_studio.SmlRagEvent.LuceneIndexMetrics lucene_metrics = 8 [lazy = true];</code>
+     * @return Whether the luceneMetrics field is set.
+     */
+    @java.lang.Override
+    public boolean hasLuceneMetrics() {
+      return contentCase_ == 8;
+    }
+    /**
+     * <code>.android_studio.SmlRagEvent.LuceneIndexMetrics lucene_metrics = 8 [lazy = true];</code>
+     * @return The luceneMetrics.
+     */
+    @java.lang.Override
+    public com.google.wireless.android.sdk.stats.SmlRagEvent.LuceneIndexMetrics getLuceneMetrics() {
+      if (luceneMetricsBuilder_ == null) {
+        if (contentCase_ == 8) {
+          return (com.google.wireless.android.sdk.stats.SmlRagEvent.LuceneIndexMetrics) content_;
+        }
+        return com.google.wireless.android.sdk.stats.SmlRagEvent.LuceneIndexMetrics.getDefaultInstance();
+      } else {
+        if (contentCase_ == 8) {
+          return luceneMetricsBuilder_.getMessage();
+        }
+        return com.google.wireless.android.sdk.stats.SmlRagEvent.LuceneIndexMetrics.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.android_studio.SmlRagEvent.LuceneIndexMetrics lucene_metrics = 8 [lazy = true];</code>
+     */
+    public Builder setLuceneMetrics(com.google.wireless.android.sdk.stats.SmlRagEvent.LuceneIndexMetrics value) {
+      if (luceneMetricsBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        content_ = value;
+        onChanged();
+      } else {
+        luceneMetricsBuilder_.setMessage(value);
+      }
+      contentCase_ = 8;
+      return this;
+    }
+    /**
+     * <code>.android_studio.SmlRagEvent.LuceneIndexMetrics lucene_metrics = 8 [lazy = true];</code>
+     */
+    public Builder setLuceneMetrics(
+        com.google.wireless.android.sdk.stats.SmlRagEvent.LuceneIndexMetrics.Builder builderForValue) {
+      if (luceneMetricsBuilder_ == null) {
+        content_ = builderForValue.build();
+        onChanged();
+      } else {
+        luceneMetricsBuilder_.setMessage(builderForValue.build());
+      }
+      contentCase_ = 8;
+      return this;
+    }
+    /**
+     * <code>.android_studio.SmlRagEvent.LuceneIndexMetrics lucene_metrics = 8 [lazy = true];</code>
+     */
+    public Builder mergeLuceneMetrics(com.google.wireless.android.sdk.stats.SmlRagEvent.LuceneIndexMetrics value) {
+      if (luceneMetricsBuilder_ == null) {
+        if (contentCase_ == 8 &&
+            content_ != com.google.wireless.android.sdk.stats.SmlRagEvent.LuceneIndexMetrics.getDefaultInstance()) {
+          content_ = com.google.wireless.android.sdk.stats.SmlRagEvent.LuceneIndexMetrics.newBuilder((com.google.wireless.android.sdk.stats.SmlRagEvent.LuceneIndexMetrics) content_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          content_ = value;
+        }
+        onChanged();
+      } else {
+        if (contentCase_ == 8) {
+          luceneMetricsBuilder_.mergeFrom(value);
+        } else {
+          luceneMetricsBuilder_.setMessage(value);
+        }
+      }
+      contentCase_ = 8;
+      return this;
+    }
+    /**
+     * <code>.android_studio.SmlRagEvent.LuceneIndexMetrics lucene_metrics = 8 [lazy = true];</code>
+     */
+    public Builder clearLuceneMetrics() {
+      if (luceneMetricsBuilder_ == null) {
+        if (contentCase_ == 8) {
+          contentCase_ = 0;
+          content_ = null;
+          onChanged();
+        }
+      } else {
+        if (contentCase_ == 8) {
+          contentCase_ = 0;
+          content_ = null;
+        }
+        luceneMetricsBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>.android_studio.SmlRagEvent.LuceneIndexMetrics lucene_metrics = 8 [lazy = true];</code>
+     */
+    public com.google.wireless.android.sdk.stats.SmlRagEvent.LuceneIndexMetrics.Builder getLuceneMetricsBuilder() {
+      return getLuceneMetricsFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.android_studio.SmlRagEvent.LuceneIndexMetrics lucene_metrics = 8 [lazy = true];</code>
+     */
+    @java.lang.Override
+    public com.google.wireless.android.sdk.stats.SmlRagEvent.LuceneIndexMetricsOrBuilder getLuceneMetricsOrBuilder() {
+      if ((contentCase_ == 8) && (luceneMetricsBuilder_ != null)) {
+        return luceneMetricsBuilder_.getMessageOrBuilder();
+      } else {
+        if (contentCase_ == 8) {
+          return (com.google.wireless.android.sdk.stats.SmlRagEvent.LuceneIndexMetrics) content_;
+        }
+        return com.google.wireless.android.sdk.stats.SmlRagEvent.LuceneIndexMetrics.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.android_studio.SmlRagEvent.LuceneIndexMetrics lucene_metrics = 8 [lazy = true];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.SmlRagEvent.LuceneIndexMetrics, com.google.wireless.android.sdk.stats.SmlRagEvent.LuceneIndexMetrics.Builder, com.google.wireless.android.sdk.stats.SmlRagEvent.LuceneIndexMetricsOrBuilder> 
+        getLuceneMetricsFieldBuilder() {
+      if (luceneMetricsBuilder_ == null) {
+        if (!(contentCase_ == 8)) {
+          content_ = com.google.wireless.android.sdk.stats.SmlRagEvent.LuceneIndexMetrics.getDefaultInstance();
+        }
+        luceneMetricsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.wireless.android.sdk.stats.SmlRagEvent.LuceneIndexMetrics, com.google.wireless.android.sdk.stats.SmlRagEvent.LuceneIndexMetrics.Builder, com.google.wireless.android.sdk.stats.SmlRagEvent.LuceneIndexMetricsOrBuilder>(
+                (com.google.wireless.android.sdk.stats.SmlRagEvent.LuceneIndexMetrics) content_,
+                getParentForChildren(),
+                isClean());
+        content_ = null;
+      }
+      contentCase_ = 8;
+      onChanged();
+      return luceneMetricsBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.SmlRagEvent.IntellijScanMetrics, com.google.wireless.android.sdk.stats.SmlRagEvent.IntellijScanMetrics.Builder, com.google.wireless.android.sdk.stats.SmlRagEvent.IntellijScanMetricsOrBuilder> intellijScanBuilder_;
+    /**
+     * <code>.android_studio.SmlRagEvent.IntellijScanMetrics intellij_scan = 9 [lazy = true];</code>
+     * @return Whether the intellijScan field is set.
+     */
+    @java.lang.Override
+    public boolean hasIntellijScan() {
+      return contentCase_ == 9;
+    }
+    /**
+     * <code>.android_studio.SmlRagEvent.IntellijScanMetrics intellij_scan = 9 [lazy = true];</code>
+     * @return The intellijScan.
+     */
+    @java.lang.Override
+    public com.google.wireless.android.sdk.stats.SmlRagEvent.IntellijScanMetrics getIntellijScan() {
+      if (intellijScanBuilder_ == null) {
+        if (contentCase_ == 9) {
+          return (com.google.wireless.android.sdk.stats.SmlRagEvent.IntellijScanMetrics) content_;
+        }
+        return com.google.wireless.android.sdk.stats.SmlRagEvent.IntellijScanMetrics.getDefaultInstance();
+      } else {
+        if (contentCase_ == 9) {
+          return intellijScanBuilder_.getMessage();
+        }
+        return com.google.wireless.android.sdk.stats.SmlRagEvent.IntellijScanMetrics.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.android_studio.SmlRagEvent.IntellijScanMetrics intellij_scan = 9 [lazy = true];</code>
+     */
+    public Builder setIntellijScan(com.google.wireless.android.sdk.stats.SmlRagEvent.IntellijScanMetrics value) {
+      if (intellijScanBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        content_ = value;
+        onChanged();
+      } else {
+        intellijScanBuilder_.setMessage(value);
+      }
+      contentCase_ = 9;
+      return this;
+    }
+    /**
+     * <code>.android_studio.SmlRagEvent.IntellijScanMetrics intellij_scan = 9 [lazy = true];</code>
+     */
+    public Builder setIntellijScan(
+        com.google.wireless.android.sdk.stats.SmlRagEvent.IntellijScanMetrics.Builder builderForValue) {
+      if (intellijScanBuilder_ == null) {
+        content_ = builderForValue.build();
+        onChanged();
+      } else {
+        intellijScanBuilder_.setMessage(builderForValue.build());
+      }
+      contentCase_ = 9;
+      return this;
+    }
+    /**
+     * <code>.android_studio.SmlRagEvent.IntellijScanMetrics intellij_scan = 9 [lazy = true];</code>
+     */
+    public Builder mergeIntellijScan(com.google.wireless.android.sdk.stats.SmlRagEvent.IntellijScanMetrics value) {
+      if (intellijScanBuilder_ == null) {
+        if (contentCase_ == 9 &&
+            content_ != com.google.wireless.android.sdk.stats.SmlRagEvent.IntellijScanMetrics.getDefaultInstance()) {
+          content_ = com.google.wireless.android.sdk.stats.SmlRagEvent.IntellijScanMetrics.newBuilder((com.google.wireless.android.sdk.stats.SmlRagEvent.IntellijScanMetrics) content_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          content_ = value;
+        }
+        onChanged();
+      } else {
+        if (contentCase_ == 9) {
+          intellijScanBuilder_.mergeFrom(value);
+        } else {
+          intellijScanBuilder_.setMessage(value);
+        }
+      }
+      contentCase_ = 9;
+      return this;
+    }
+    /**
+     * <code>.android_studio.SmlRagEvent.IntellijScanMetrics intellij_scan = 9 [lazy = true];</code>
+     */
+    public Builder clearIntellijScan() {
+      if (intellijScanBuilder_ == null) {
+        if (contentCase_ == 9) {
+          contentCase_ = 0;
+          content_ = null;
+          onChanged();
+        }
+      } else {
+        if (contentCase_ == 9) {
+          contentCase_ = 0;
+          content_ = null;
+        }
+        intellijScanBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>.android_studio.SmlRagEvent.IntellijScanMetrics intellij_scan = 9 [lazy = true];</code>
+     */
+    public com.google.wireless.android.sdk.stats.SmlRagEvent.IntellijScanMetrics.Builder getIntellijScanBuilder() {
+      return getIntellijScanFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.android_studio.SmlRagEvent.IntellijScanMetrics intellij_scan = 9 [lazy = true];</code>
+     */
+    @java.lang.Override
+    public com.google.wireless.android.sdk.stats.SmlRagEvent.IntellijScanMetricsOrBuilder getIntellijScanOrBuilder() {
+      if ((contentCase_ == 9) && (intellijScanBuilder_ != null)) {
+        return intellijScanBuilder_.getMessageOrBuilder();
+      } else {
+        if (contentCase_ == 9) {
+          return (com.google.wireless.android.sdk.stats.SmlRagEvent.IntellijScanMetrics) content_;
+        }
+        return com.google.wireless.android.sdk.stats.SmlRagEvent.IntellijScanMetrics.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.android_studio.SmlRagEvent.IntellijScanMetrics intellij_scan = 9 [lazy = true];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.SmlRagEvent.IntellijScanMetrics, com.google.wireless.android.sdk.stats.SmlRagEvent.IntellijScanMetrics.Builder, com.google.wireless.android.sdk.stats.SmlRagEvent.IntellijScanMetricsOrBuilder> 
+        getIntellijScanFieldBuilder() {
+      if (intellijScanBuilder_ == null) {
+        if (!(contentCase_ == 9)) {
+          content_ = com.google.wireless.android.sdk.stats.SmlRagEvent.IntellijScanMetrics.getDefaultInstance();
+        }
+        intellijScanBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.wireless.android.sdk.stats.SmlRagEvent.IntellijScanMetrics, com.google.wireless.android.sdk.stats.SmlRagEvent.IntellijScanMetrics.Builder, com.google.wireless.android.sdk.stats.SmlRagEvent.IntellijScanMetricsOrBuilder>(
+                (com.google.wireless.android.sdk.stats.SmlRagEvent.IntellijScanMetrics) content_,
+                getParentForChildren(),
+                isClean());
+        content_ = null;
+      }
+      contentCase_ = 9;
+      onChanged();
+      return intellijScanBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.SmlRagEvent.IntellijIndexMetrics, com.google.wireless.android.sdk.stats.SmlRagEvent.IntellijIndexMetrics.Builder, com.google.wireless.android.sdk.stats.SmlRagEvent.IntellijIndexMetricsOrBuilder> intellijIndexBuilder_;
+    /**
+     * <code>.android_studio.SmlRagEvent.IntellijIndexMetrics intellij_index = 10 [lazy = true];</code>
+     * @return Whether the intellijIndex field is set.
+     */
+    @java.lang.Override
+    public boolean hasIntellijIndex() {
+      return contentCase_ == 10;
+    }
+    /**
+     * <code>.android_studio.SmlRagEvent.IntellijIndexMetrics intellij_index = 10 [lazy = true];</code>
+     * @return The intellijIndex.
+     */
+    @java.lang.Override
+    public com.google.wireless.android.sdk.stats.SmlRagEvent.IntellijIndexMetrics getIntellijIndex() {
+      if (intellijIndexBuilder_ == null) {
+        if (contentCase_ == 10) {
+          return (com.google.wireless.android.sdk.stats.SmlRagEvent.IntellijIndexMetrics) content_;
+        }
+        return com.google.wireless.android.sdk.stats.SmlRagEvent.IntellijIndexMetrics.getDefaultInstance();
+      } else {
+        if (contentCase_ == 10) {
+          return intellijIndexBuilder_.getMessage();
+        }
+        return com.google.wireless.android.sdk.stats.SmlRagEvent.IntellijIndexMetrics.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.android_studio.SmlRagEvent.IntellijIndexMetrics intellij_index = 10 [lazy = true];</code>
+     */
+    public Builder setIntellijIndex(com.google.wireless.android.sdk.stats.SmlRagEvent.IntellijIndexMetrics value) {
+      if (intellijIndexBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        content_ = value;
+        onChanged();
+      } else {
+        intellijIndexBuilder_.setMessage(value);
+      }
+      contentCase_ = 10;
+      return this;
+    }
+    /**
+     * <code>.android_studio.SmlRagEvent.IntellijIndexMetrics intellij_index = 10 [lazy = true];</code>
+     */
+    public Builder setIntellijIndex(
+        com.google.wireless.android.sdk.stats.SmlRagEvent.IntellijIndexMetrics.Builder builderForValue) {
+      if (intellijIndexBuilder_ == null) {
+        content_ = builderForValue.build();
+        onChanged();
+      } else {
+        intellijIndexBuilder_.setMessage(builderForValue.build());
+      }
+      contentCase_ = 10;
+      return this;
+    }
+    /**
+     * <code>.android_studio.SmlRagEvent.IntellijIndexMetrics intellij_index = 10 [lazy = true];</code>
+     */
+    public Builder mergeIntellijIndex(com.google.wireless.android.sdk.stats.SmlRagEvent.IntellijIndexMetrics value) {
+      if (intellijIndexBuilder_ == null) {
+        if (contentCase_ == 10 &&
+            content_ != com.google.wireless.android.sdk.stats.SmlRagEvent.IntellijIndexMetrics.getDefaultInstance()) {
+          content_ = com.google.wireless.android.sdk.stats.SmlRagEvent.IntellijIndexMetrics.newBuilder((com.google.wireless.android.sdk.stats.SmlRagEvent.IntellijIndexMetrics) content_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          content_ = value;
+        }
+        onChanged();
+      } else {
+        if (contentCase_ == 10) {
+          intellijIndexBuilder_.mergeFrom(value);
+        } else {
+          intellijIndexBuilder_.setMessage(value);
+        }
+      }
+      contentCase_ = 10;
+      return this;
+    }
+    /**
+     * <code>.android_studio.SmlRagEvent.IntellijIndexMetrics intellij_index = 10 [lazy = true];</code>
+     */
+    public Builder clearIntellijIndex() {
+      if (intellijIndexBuilder_ == null) {
+        if (contentCase_ == 10) {
+          contentCase_ = 0;
+          content_ = null;
+          onChanged();
+        }
+      } else {
+        if (contentCase_ == 10) {
+          contentCase_ = 0;
+          content_ = null;
+        }
+        intellijIndexBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>.android_studio.SmlRagEvent.IntellijIndexMetrics intellij_index = 10 [lazy = true];</code>
+     */
+    public com.google.wireless.android.sdk.stats.SmlRagEvent.IntellijIndexMetrics.Builder getIntellijIndexBuilder() {
+      return getIntellijIndexFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.android_studio.SmlRagEvent.IntellijIndexMetrics intellij_index = 10 [lazy = true];</code>
+     */
+    @java.lang.Override
+    public com.google.wireless.android.sdk.stats.SmlRagEvent.IntellijIndexMetricsOrBuilder getIntellijIndexOrBuilder() {
+      if ((contentCase_ == 10) && (intellijIndexBuilder_ != null)) {
+        return intellijIndexBuilder_.getMessageOrBuilder();
+      } else {
+        if (contentCase_ == 10) {
+          return (com.google.wireless.android.sdk.stats.SmlRagEvent.IntellijIndexMetrics) content_;
+        }
+        return com.google.wireless.android.sdk.stats.SmlRagEvent.IntellijIndexMetrics.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.android_studio.SmlRagEvent.IntellijIndexMetrics intellij_index = 10 [lazy = true];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.SmlRagEvent.IntellijIndexMetrics, com.google.wireless.android.sdk.stats.SmlRagEvent.IntellijIndexMetrics.Builder, com.google.wireless.android.sdk.stats.SmlRagEvent.IntellijIndexMetricsOrBuilder> 
+        getIntellijIndexFieldBuilder() {
+      if (intellijIndexBuilder_ == null) {
+        if (!(contentCase_ == 10)) {
+          content_ = com.google.wireless.android.sdk.stats.SmlRagEvent.IntellijIndexMetrics.getDefaultInstance();
+        }
+        intellijIndexBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.wireless.android.sdk.stats.SmlRagEvent.IntellijIndexMetrics, com.google.wireless.android.sdk.stats.SmlRagEvent.IntellijIndexMetrics.Builder, com.google.wireless.android.sdk.stats.SmlRagEvent.IntellijIndexMetricsOrBuilder>(
+                (com.google.wireless.android.sdk.stats.SmlRagEvent.IntellijIndexMetrics) content_,
+                getParentForChildren(),
+                isClean());
+        content_ = null;
+      }
+      contentCase_ = 10;
+      onChanged();
+      return intellijIndexBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(
