@@ -16461,8 +16461,9 @@ private static final long serialVersionUID = 0L;
   private com.google.wireless.android.sdk.stats.GradleSyncStats gradleSyncStats_;
   /**
    * <pre>
-   * set when kind = GRADLE_SYNC_ENDED, GRADLE_SYNC_FAILURE or
-   * GRADLE_SYNC_SETUP_STARTED
+   * set when kind = GRADLE_SYNC_STARTED, GRADLE_SYNC_SETUP_STARTED,
+   * GRADLE_SYNC_ENDED, GRADLE_SYNC_FAILURE, GRADLE_SYNC_CANCELLED,
+   * GRADLE_SYNC_SKIPPED, GRADLE_SYNC_FAILURE_DETAILS, GRADLE_SYNC_ISSUES
    * </pre>
    *
    * <code>optional .android_studio.GradleSyncStats gradle_sync_stats = 50;</code>
@@ -16474,8 +16475,9 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * set when kind = GRADLE_SYNC_ENDED, GRADLE_SYNC_FAILURE or
-   * GRADLE_SYNC_SETUP_STARTED
+   * set when kind = GRADLE_SYNC_STARTED, GRADLE_SYNC_SETUP_STARTED,
+   * GRADLE_SYNC_ENDED, GRADLE_SYNC_FAILURE, GRADLE_SYNC_CANCELLED,
+   * GRADLE_SYNC_SKIPPED, GRADLE_SYNC_FAILURE_DETAILS, GRADLE_SYNC_ISSUES
    * </pre>
    *
    * <code>optional .android_studio.GradleSyncStats gradle_sync_stats = 50;</code>
@@ -16487,8 +16489,9 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * set when kind = GRADLE_SYNC_ENDED, GRADLE_SYNC_FAILURE or
-   * GRADLE_SYNC_SETUP_STARTED
+   * set when kind = GRADLE_SYNC_STARTED, GRADLE_SYNC_SETUP_STARTED,
+   * GRADLE_SYNC_ENDED, GRADLE_SYNC_FAILURE, GRADLE_SYNC_CANCELLED,
+   * GRADLE_SYNC_SKIPPED, GRADLE_SYNC_FAILURE_DETAILS, GRADLE_SYNC_ISSUES
    * </pre>
    *
    * <code>optional .android_studio.GradleSyncStats gradle_sync_stats = 50;</code>
@@ -37047,8 +37050,9 @@ private static final long serialVersionUID = 0L;
         com.google.wireless.android.sdk.stats.GradleSyncStats, com.google.wireless.android.sdk.stats.GradleSyncStats.Builder, com.google.wireless.android.sdk.stats.GradleSyncStatsOrBuilder> gradleSyncStatsBuilder_;
     /**
      * <pre>
-     * set when kind = GRADLE_SYNC_ENDED, GRADLE_SYNC_FAILURE or
-     * GRADLE_SYNC_SETUP_STARTED
+     * set when kind = GRADLE_SYNC_STARTED, GRADLE_SYNC_SETUP_STARTED,
+     * GRADLE_SYNC_ENDED, GRADLE_SYNC_FAILURE, GRADLE_SYNC_CANCELLED,
+     * GRADLE_SYNC_SKIPPED, GRADLE_SYNC_FAILURE_DETAILS, GRADLE_SYNC_ISSUES
      * </pre>
      *
      * <code>optional .android_studio.GradleSyncStats gradle_sync_stats = 50;</code>
@@ -37059,8 +37063,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * set when kind = GRADLE_SYNC_ENDED, GRADLE_SYNC_FAILURE or
-     * GRADLE_SYNC_SETUP_STARTED
+     * set when kind = GRADLE_SYNC_STARTED, GRADLE_SYNC_SETUP_STARTED,
+     * GRADLE_SYNC_ENDED, GRADLE_SYNC_FAILURE, GRADLE_SYNC_CANCELLED,
+     * GRADLE_SYNC_SKIPPED, GRADLE_SYNC_FAILURE_DETAILS, GRADLE_SYNC_ISSUES
      * </pre>
      *
      * <code>optional .android_studio.GradleSyncStats gradle_sync_stats = 50;</code>
@@ -37075,8 +37080,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * set when kind = GRADLE_SYNC_ENDED, GRADLE_SYNC_FAILURE or
-     * GRADLE_SYNC_SETUP_STARTED
+     * set when kind = GRADLE_SYNC_STARTED, GRADLE_SYNC_SETUP_STARTED,
+     * GRADLE_SYNC_ENDED, GRADLE_SYNC_FAILURE, GRADLE_SYNC_CANCELLED,
+     * GRADLE_SYNC_SKIPPED, GRADLE_SYNC_FAILURE_DETAILS, GRADLE_SYNC_ISSUES
      * </pre>
      *
      * <code>optional .android_studio.GradleSyncStats gradle_sync_stats = 50;</code>
@@ -37096,8 +37102,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * set when kind = GRADLE_SYNC_ENDED, GRADLE_SYNC_FAILURE or
-     * GRADLE_SYNC_SETUP_STARTED
+     * set when kind = GRADLE_SYNC_STARTED, GRADLE_SYNC_SETUP_STARTED,
+     * GRADLE_SYNC_ENDED, GRADLE_SYNC_FAILURE, GRADLE_SYNC_CANCELLED,
+     * GRADLE_SYNC_SKIPPED, GRADLE_SYNC_FAILURE_DETAILS, GRADLE_SYNC_ISSUES
      * </pre>
      *
      * <code>optional .android_studio.GradleSyncStats gradle_sync_stats = 50;</code>
@@ -37115,8 +37122,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * set when kind = GRADLE_SYNC_ENDED, GRADLE_SYNC_FAILURE or
-     * GRADLE_SYNC_SETUP_STARTED
+     * set when kind = GRADLE_SYNC_STARTED, GRADLE_SYNC_SETUP_STARTED,
+     * GRADLE_SYNC_ENDED, GRADLE_SYNC_FAILURE, GRADLE_SYNC_CANCELLED,
+     * GRADLE_SYNC_SKIPPED, GRADLE_SYNC_FAILURE_DETAILS, GRADLE_SYNC_ISSUES
      * </pre>
      *
      * <code>optional .android_studio.GradleSyncStats gradle_sync_stats = 50;</code>
@@ -37140,8 +37148,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * set when kind = GRADLE_SYNC_ENDED, GRADLE_SYNC_FAILURE or
-     * GRADLE_SYNC_SETUP_STARTED
+     * set when kind = GRADLE_SYNC_STARTED, GRADLE_SYNC_SETUP_STARTED,
+     * GRADLE_SYNC_ENDED, GRADLE_SYNC_FAILURE, GRADLE_SYNC_CANCELLED,
+     * GRADLE_SYNC_SKIPPED, GRADLE_SYNC_FAILURE_DETAILS, GRADLE_SYNC_ISSUES
      * </pre>
      *
      * <code>optional .android_studio.GradleSyncStats gradle_sync_stats = 50;</code>
@@ -37158,8 +37167,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * set when kind = GRADLE_SYNC_ENDED, GRADLE_SYNC_FAILURE or
-     * GRADLE_SYNC_SETUP_STARTED
+     * set when kind = GRADLE_SYNC_STARTED, GRADLE_SYNC_SETUP_STARTED,
+     * GRADLE_SYNC_ENDED, GRADLE_SYNC_FAILURE, GRADLE_SYNC_CANCELLED,
+     * GRADLE_SYNC_SKIPPED, GRADLE_SYNC_FAILURE_DETAILS, GRADLE_SYNC_ISSUES
      * </pre>
      *
      * <code>optional .android_studio.GradleSyncStats gradle_sync_stats = 50;</code>
@@ -37171,8 +37181,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * set when kind = GRADLE_SYNC_ENDED, GRADLE_SYNC_FAILURE or
-     * GRADLE_SYNC_SETUP_STARTED
+     * set when kind = GRADLE_SYNC_STARTED, GRADLE_SYNC_SETUP_STARTED,
+     * GRADLE_SYNC_ENDED, GRADLE_SYNC_FAILURE, GRADLE_SYNC_CANCELLED,
+     * GRADLE_SYNC_SKIPPED, GRADLE_SYNC_FAILURE_DETAILS, GRADLE_SYNC_ISSUES
      * </pre>
      *
      * <code>optional .android_studio.GradleSyncStats gradle_sync_stats = 50;</code>
@@ -37187,8 +37198,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * set when kind = GRADLE_SYNC_ENDED, GRADLE_SYNC_FAILURE or
-     * GRADLE_SYNC_SETUP_STARTED
+     * set when kind = GRADLE_SYNC_STARTED, GRADLE_SYNC_SETUP_STARTED,
+     * GRADLE_SYNC_ENDED, GRADLE_SYNC_FAILURE, GRADLE_SYNC_CANCELLED,
+     * GRADLE_SYNC_SKIPPED, GRADLE_SYNC_FAILURE_DETAILS, GRADLE_SYNC_ISSUES
      * </pre>
      *
      * <code>optional .android_studio.GradleSyncStats gradle_sync_stats = 50;</code>
