@@ -5347,4 +5347,31 @@ public interface AndroidStudioEventOrBuilder extends
    * <code>optional .android_studio.DeviceConnectedNotificationEvent device_connected = 191;</code>
    */
   com.google.wireless.android.sdk.stats.DeviceConnectedNotificationEventOrBuilder getDeviceConnectedOrBuilder();
+
+  /**
+   * <pre>
+   * set when kind = SCREENSHOT_TEST_COMPOSE_PREVIEW
+   * </pre>
+   *
+   * <code>optional .android_studio.ScreenshotTestComposePreviewEvent screenshot_test_compose_preview_event = 192;</code>
+   * @return Whether the screenshotTestComposePreviewEvent field is set.
+   */
+  boolean hasScreenshotTestComposePreviewEvent();
+  /**
+   * <pre>
+   * set when kind = SCREENSHOT_TEST_COMPOSE_PREVIEW
+   * </pre>
+   *
+   * <code>optional .android_studio.ScreenshotTestComposePreviewEvent screenshot_test_compose_preview_event = 192;</code>
+   * @return The screenshotTestComposePreviewEvent.
+   */
+  com.google.wireless.android.sdk.stats.ScreenshotTestComposePreviewEvent getScreenshotTestComposePreviewEvent();
+  /**
+   * <pre>
+   * set when kind = SCREENSHOT_TEST_COMPOSE_PREVIEW
+   * </pre>
+   *
+   * <code>optional .android_studio.ScreenshotTestComposePreviewEvent screenshot_test_compose_preview_event = 192;</code>
+   */
+  com.google.wireless.android.sdk.stats.ScreenshotTestComposePreviewEventOrBuilder getScreenshotTestComposePreviewEventOrBuilder();
 }
