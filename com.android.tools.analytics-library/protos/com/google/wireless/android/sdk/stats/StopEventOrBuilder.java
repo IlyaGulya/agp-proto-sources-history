@@ -76,54 +76,10 @@ public interface StopEventOrBuilder extends
 
   /**
    * <pre>
-   * List of devices on which the command was called
-   * </pre>
-   *
-   * <code>repeated .android_studio.RunDeviceInfo devices = 4;</code>
-   */
-  java.util.List<com.google.wireless.android.sdk.stats.RunDeviceInfo> 
-      getDevicesList();
-  /**
-   * <pre>
-   * List of devices on which the command was called
-   * </pre>
-   *
-   * <code>repeated .android_studio.RunDeviceInfo devices = 4;</code>
-   */
-  com.google.wireless.android.sdk.stats.RunDeviceInfo getDevices(int index);
-  /**
-   * <pre>
-   * List of devices on which the command was called
-   * </pre>
-   *
-   * <code>repeated .android_studio.RunDeviceInfo devices = 4;</code>
-   */
-  int getDevicesCount();
-  /**
-   * <pre>
-   * List of devices on which the command was called
-   * </pre>
-   *
-   * <code>repeated .android_studio.RunDeviceInfo devices = 4;</code>
-   */
-  java.util.List<? extends com.google.wireless.android.sdk.stats.RunDeviceInfoOrBuilder> 
-      getDevicesOrBuilderList();
-  /**
-   * <pre>
-   * List of devices on which the command was called
-   * </pre>
-   *
-   * <code>repeated .android_studio.RunDeviceInfo devices = 4;</code>
-   */
-  com.google.wireless.android.sdk.stats.RunDeviceInfoOrBuilder getDevicesOrBuilder(
-      int index);
-
-  /**
-   * <pre>
    * The stop cycle begins
    * </pre>
    *
-   * <code>optional int64 begin_timestamp_ms = 5;</code>
+   * <code>optional int64 begin_timestamp_ms = 4;</code>
    * @return Whether the beginTimestampMs field is set.
    */
   boolean hasBeginTimestampMs();
@@ -132,7 +88,7 @@ public interface StopEventOrBuilder extends
    * The stop cycle begins
    * </pre>
    *
-   * <code>optional int64 begin_timestamp_ms = 5;</code>
+   * <code>optional int64 begin_timestamp_ms = 4;</code>
    * @return The beginTimestampMs.
    */
   long getBeginTimestampMs();
@@ -142,7 +98,7 @@ public interface StopEventOrBuilder extends
    * The stop cycle finished
    * </pre>
    *
-   * <code>optional int64 end_timestamp_ms = 6;</code>
+   * <code>optional int64 end_timestamp_ms = 5;</code>
    * @return Whether the endTimestampMs field is set.
    */
   boolean hasEndTimestampMs();
@@ -151,7 +107,7 @@ public interface StopEventOrBuilder extends
    * The stop cycle finished
    * </pre>
    *
-   * <code>optional int64 end_timestamp_ms = 6;</code>
+   * <code>optional int64 end_timestamp_ms = 5;</code>
    * @return The endTimestampMs.
    */
   long getEndTimestampMs();
@@ -161,7 +117,7 @@ public interface StopEventOrBuilder extends
    * Type of AppComponent user wants to stop
    * </pre>
    *
-   * <code>optional .android_studio.RunEvent.AppComponent app_component_type = 7;</code>
+   * <code>optional .android_studio.RunEvent.AppComponent app_component_type = 6;</code>
    * @return Whether the appComponentType field is set.
    */
   boolean hasAppComponentType();
@@ -170,7 +126,7 @@ public interface StopEventOrBuilder extends
    * Type of AppComponent user wants to stop
    * </pre>
    *
-   * <code>optional .android_studio.RunEvent.AppComponent app_component_type = 7;</code>
+   * <code>optional .android_studio.RunEvent.AppComponent app_component_type = 6;</code>
    * @return The appComponentType.
    */
   com.google.wireless.android.sdk.stats.RunEvent.AppComponent getAppComponentType();

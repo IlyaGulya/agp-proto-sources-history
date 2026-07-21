@@ -145,6 +145,10 @@ private static final long serialVersionUID = 0L;
      * <code>INTERNAL_ERROR = 8;</code>
      */
     INTERNAL_ERROR(8),
+    /**
+     * <code>BLOCKED = 9;</code>
+     */
+    BLOCKED(9),
     ;
 
     /**
@@ -183,6 +187,10 @@ private static final long serialVersionUID = 0L;
      * <code>INTERNAL_ERROR = 8;</code>
      */
     public static final int INTERNAL_ERROR_VALUE = 8;
+    /**
+     * <code>BLOCKED = 9;</code>
+     */
+    public static final int BLOCKED_VALUE = 9;
 
 
     public final int getNumber() {
@@ -214,6 +222,7 @@ private static final long serialVersionUID = 0L;
         case 6: return SYNC_FAILED;
         case 7: return SYNC_SUCCEEDED;
         case 8: return INTERNAL_ERROR;
+        case 9: return BLOCKED;
         default: return null;
       }
     }

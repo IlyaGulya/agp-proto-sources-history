@@ -18,7 +18,6 @@ private static final long serialVersionUID = 0L;
   private StopEvent() {
     status_ = 0;
     executor_ = "";
-    devices_ = java.util.Collections.emptyList();
     appComponentType_ = 0;
   }
 
@@ -76,31 +75,22 @@ private static final long serialVersionUID = 0L;
             debuggable_ = input.readBool();
             break;
           }
-          case 34: {
-            if (!((mutable_bitField0_ & 0x00000008) != 0)) {
-              devices_ = new java.util.ArrayList<com.google.wireless.android.sdk.stats.RunDeviceInfo>();
-              mutable_bitField0_ |= 0x00000008;
-            }
-            devices_.add(
-                input.readMessage(com.google.wireless.android.sdk.stats.RunDeviceInfo.PARSER, extensionRegistry));
-            break;
-          }
-          case 40: {
+          case 32: {
             bitField0_ |= 0x00000008;
             beginTimestampMs_ = input.readInt64();
             break;
           }
-          case 48: {
+          case 40: {
             bitField0_ |= 0x00000010;
             endTimestampMs_ = input.readInt64();
             break;
           }
-          case 56: {
+          case 48: {
             int rawValue = input.readEnum();
               @SuppressWarnings("deprecation")
             com.google.wireless.android.sdk.stats.RunEvent.AppComponent value = com.google.wireless.android.sdk.stats.RunEvent.AppComponent.valueOf(rawValue);
             if (value == null) {
-              unknownFields.mergeVarintField(7, rawValue);
+              unknownFields.mergeVarintField(6, rawValue);
             } else {
               bitField0_ |= 0x00000020;
               appComponentType_ = rawValue;
@@ -122,9 +112,6 @@ private static final long serialVersionUID = 0L;
       throw new com.google.protobuf.InvalidProtocolBufferException(
           e).setUnfinishedMessage(this);
     } finally {
-      if (((mutable_bitField0_ & 0x00000008) != 0)) {
-        devices_ = java.util.Collections.unmodifiableList(devices_);
-      }
       this.unknownFields = unknownFields.build();
       makeExtensionsImmutable();
     }
@@ -257,74 +244,14 @@ private static final long serialVersionUID = 0L;
     return debuggable_;
   }
 
-  public static final int DEVICES_FIELD_NUMBER = 4;
-  private java.util.List<com.google.wireless.android.sdk.stats.RunDeviceInfo> devices_;
-  /**
-   * <pre>
-   * List of devices on which the command was called
-   * </pre>
-   *
-   * <code>repeated .android_studio.RunDeviceInfo devices = 4;</code>
-   */
-  @java.lang.Override
-  public java.util.List<com.google.wireless.android.sdk.stats.RunDeviceInfo> getDevicesList() {
-    return devices_;
-  }
-  /**
-   * <pre>
-   * List of devices on which the command was called
-   * </pre>
-   *
-   * <code>repeated .android_studio.RunDeviceInfo devices = 4;</code>
-   */
-  @java.lang.Override
-  public java.util.List<? extends com.google.wireless.android.sdk.stats.RunDeviceInfoOrBuilder> 
-      getDevicesOrBuilderList() {
-    return devices_;
-  }
-  /**
-   * <pre>
-   * List of devices on which the command was called
-   * </pre>
-   *
-   * <code>repeated .android_studio.RunDeviceInfo devices = 4;</code>
-   */
-  @java.lang.Override
-  public int getDevicesCount() {
-    return devices_.size();
-  }
-  /**
-   * <pre>
-   * List of devices on which the command was called
-   * </pre>
-   *
-   * <code>repeated .android_studio.RunDeviceInfo devices = 4;</code>
-   */
-  @java.lang.Override
-  public com.google.wireless.android.sdk.stats.RunDeviceInfo getDevices(int index) {
-    return devices_.get(index);
-  }
-  /**
-   * <pre>
-   * List of devices on which the command was called
-   * </pre>
-   *
-   * <code>repeated .android_studio.RunDeviceInfo devices = 4;</code>
-   */
-  @java.lang.Override
-  public com.google.wireless.android.sdk.stats.RunDeviceInfoOrBuilder getDevicesOrBuilder(
-      int index) {
-    return devices_.get(index);
-  }
-
-  public static final int BEGIN_TIMESTAMP_MS_FIELD_NUMBER = 5;
+  public static final int BEGIN_TIMESTAMP_MS_FIELD_NUMBER = 4;
   private long beginTimestampMs_;
   /**
    * <pre>
    * The stop cycle begins
    * </pre>
    *
-   * <code>optional int64 begin_timestamp_ms = 5;</code>
+   * <code>optional int64 begin_timestamp_ms = 4;</code>
    * @return Whether the beginTimestampMs field is set.
    */
   @java.lang.Override
@@ -336,7 +263,7 @@ private static final long serialVersionUID = 0L;
    * The stop cycle begins
    * </pre>
    *
-   * <code>optional int64 begin_timestamp_ms = 5;</code>
+   * <code>optional int64 begin_timestamp_ms = 4;</code>
    * @return The beginTimestampMs.
    */
   @java.lang.Override
@@ -344,14 +271,14 @@ private static final long serialVersionUID = 0L;
     return beginTimestampMs_;
   }
 
-  public static final int END_TIMESTAMP_MS_FIELD_NUMBER = 6;
+  public static final int END_TIMESTAMP_MS_FIELD_NUMBER = 5;
   private long endTimestampMs_;
   /**
    * <pre>
    * The stop cycle finished
    * </pre>
    *
-   * <code>optional int64 end_timestamp_ms = 6;</code>
+   * <code>optional int64 end_timestamp_ms = 5;</code>
    * @return Whether the endTimestampMs field is set.
    */
   @java.lang.Override
@@ -363,7 +290,7 @@ private static final long serialVersionUID = 0L;
    * The stop cycle finished
    * </pre>
    *
-   * <code>optional int64 end_timestamp_ms = 6;</code>
+   * <code>optional int64 end_timestamp_ms = 5;</code>
    * @return The endTimestampMs.
    */
   @java.lang.Override
@@ -371,14 +298,14 @@ private static final long serialVersionUID = 0L;
     return endTimestampMs_;
   }
 
-  public static final int APP_COMPONENT_TYPE_FIELD_NUMBER = 7;
+  public static final int APP_COMPONENT_TYPE_FIELD_NUMBER = 6;
   private int appComponentType_;
   /**
    * <pre>
    * Type of AppComponent user wants to stop
    * </pre>
    *
-   * <code>optional .android_studio.RunEvent.AppComponent app_component_type = 7;</code>
+   * <code>optional .android_studio.RunEvent.AppComponent app_component_type = 6;</code>
    * @return Whether the appComponentType field is set.
    */
   @java.lang.Override public boolean hasAppComponentType() {
@@ -389,7 +316,7 @@ private static final long serialVersionUID = 0L;
    * Type of AppComponent user wants to stop
    * </pre>
    *
-   * <code>optional .android_studio.RunEvent.AppComponent app_component_type = 7;</code>
+   * <code>optional .android_studio.RunEvent.AppComponent app_component_type = 6;</code>
    * @return The appComponentType.
    */
   @java.lang.Override public com.google.wireless.android.sdk.stats.RunEvent.AppComponent getAppComponentType() {
@@ -421,17 +348,14 @@ private static final long serialVersionUID = 0L;
     if (((bitField0_ & 0x00000004) != 0)) {
       output.writeBool(3, debuggable_);
     }
-    for (int i = 0; i < devices_.size(); i++) {
-      output.writeMessage(4, devices_.get(i));
-    }
     if (((bitField0_ & 0x00000008) != 0)) {
-      output.writeInt64(5, beginTimestampMs_);
+      output.writeInt64(4, beginTimestampMs_);
     }
     if (((bitField0_ & 0x00000010) != 0)) {
-      output.writeInt64(6, endTimestampMs_);
+      output.writeInt64(5, endTimestampMs_);
     }
     if (((bitField0_ & 0x00000020) != 0)) {
-      output.writeEnum(7, appComponentType_);
+      output.writeEnum(6, appComponentType_);
     }
     unknownFields.writeTo(output);
   }
@@ -453,21 +377,17 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeBoolSize(3, debuggable_);
     }
-    for (int i = 0; i < devices_.size(); i++) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(4, devices_.get(i));
-    }
     if (((bitField0_ & 0x00000008) != 0)) {
       size += com.google.protobuf.CodedOutputStream
-        .computeInt64Size(5, beginTimestampMs_);
+        .computeInt64Size(4, beginTimestampMs_);
     }
     if (((bitField0_ & 0x00000010) != 0)) {
       size += com.google.protobuf.CodedOutputStream
-        .computeInt64Size(6, endTimestampMs_);
+        .computeInt64Size(5, endTimestampMs_);
     }
     if (((bitField0_ & 0x00000020) != 0)) {
       size += com.google.protobuf.CodedOutputStream
-        .computeEnumSize(7, appComponentType_);
+        .computeEnumSize(6, appComponentType_);
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -498,8 +418,6 @@ private static final long serialVersionUID = 0L;
       if (getDebuggable()
           != other.getDebuggable()) return false;
     }
-    if (!getDevicesList()
-        .equals(other.getDevicesList())) return false;
     if (hasBeginTimestampMs() != other.hasBeginTimestampMs()) return false;
     if (hasBeginTimestampMs()) {
       if (getBeginTimestampMs()
@@ -537,10 +455,6 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + DEBUGGABLE_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
           getDebuggable());
-    }
-    if (getDevicesCount() > 0) {
-      hash = (37 * hash) + DEVICES_FIELD_NUMBER;
-      hash = (53 * hash) + getDevicesList().hashCode();
     }
     if (hasBeginTimestampMs()) {
       hash = (37 * hash) + BEGIN_TIMESTAMP_MS_FIELD_NUMBER;
@@ -684,7 +598,6 @@ private static final long serialVersionUID = 0L;
     private void maybeForceBuilderInitialization() {
       if (com.google.protobuf.GeneratedMessageV3
               .alwaysUseFieldBuilders) {
-        getDevicesFieldBuilder();
       }
     }
     @java.lang.Override
@@ -696,18 +609,12 @@ private static final long serialVersionUID = 0L;
       bitField0_ = (bitField0_ & ~0x00000002);
       debuggable_ = false;
       bitField0_ = (bitField0_ & ~0x00000004);
-      if (devicesBuilder_ == null) {
-        devices_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000008);
-      } else {
-        devicesBuilder_.clear();
-      }
       beginTimestampMs_ = 0L;
-      bitField0_ = (bitField0_ & ~0x00000010);
+      bitField0_ = (bitField0_ & ~0x00000008);
       endTimestampMs_ = 0L;
-      bitField0_ = (bitField0_ & ~0x00000020);
+      bitField0_ = (bitField0_ & ~0x00000010);
       appComponentType_ = 0;
-      bitField0_ = (bitField0_ & ~0x00000040);
+      bitField0_ = (bitField0_ & ~0x00000020);
       return this;
     }
 
@@ -748,24 +655,15 @@ private static final long serialVersionUID = 0L;
         result.debuggable_ = debuggable_;
         to_bitField0_ |= 0x00000004;
       }
-      if (devicesBuilder_ == null) {
-        if (((bitField0_ & 0x00000008) != 0)) {
-          devices_ = java.util.Collections.unmodifiableList(devices_);
-          bitField0_ = (bitField0_ & ~0x00000008);
-        }
-        result.devices_ = devices_;
-      } else {
-        result.devices_ = devicesBuilder_.build();
-      }
-      if (((from_bitField0_ & 0x00000010) != 0)) {
+      if (((from_bitField0_ & 0x00000008) != 0)) {
         result.beginTimestampMs_ = beginTimestampMs_;
         to_bitField0_ |= 0x00000008;
       }
-      if (((from_bitField0_ & 0x00000020) != 0)) {
+      if (((from_bitField0_ & 0x00000010) != 0)) {
         result.endTimestampMs_ = endTimestampMs_;
         to_bitField0_ |= 0x00000010;
       }
-      if (((from_bitField0_ & 0x00000040) != 0)) {
+      if (((from_bitField0_ & 0x00000020) != 0)) {
         to_bitField0_ |= 0x00000020;
       }
       result.appComponentType_ = appComponentType_;
@@ -828,32 +726,6 @@ private static final long serialVersionUID = 0L;
       }
       if (other.hasDebuggable()) {
         setDebuggable(other.getDebuggable());
-      }
-      if (devicesBuilder_ == null) {
-        if (!other.devices_.isEmpty()) {
-          if (devices_.isEmpty()) {
-            devices_ = other.devices_;
-            bitField0_ = (bitField0_ & ~0x00000008);
-          } else {
-            ensureDevicesIsMutable();
-            devices_.addAll(other.devices_);
-          }
-          onChanged();
-        }
-      } else {
-        if (!other.devices_.isEmpty()) {
-          if (devicesBuilder_.isEmpty()) {
-            devicesBuilder_.dispose();
-            devicesBuilder_ = null;
-            devices_ = other.devices_;
-            bitField0_ = (bitField0_ & ~0x00000008);
-            devicesBuilder_ = 
-              com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
-                 getDevicesFieldBuilder() : null;
-          } else {
-            devicesBuilder_.addAllMessages(other.devices_);
-          }
-        }
       }
       if (other.hasBeginTimestampMs()) {
         setBeginTimestampMs(other.getBeginTimestampMs());
@@ -1116,337 +988,25 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private java.util.List<com.google.wireless.android.sdk.stats.RunDeviceInfo> devices_ =
-      java.util.Collections.emptyList();
-    private void ensureDevicesIsMutable() {
-      if (!((bitField0_ & 0x00000008) != 0)) {
-        devices_ = new java.util.ArrayList<com.google.wireless.android.sdk.stats.RunDeviceInfo>(devices_);
-        bitField0_ |= 0x00000008;
-       }
-    }
-
-    private com.google.protobuf.RepeatedFieldBuilderV3<
-        com.google.wireless.android.sdk.stats.RunDeviceInfo, com.google.wireless.android.sdk.stats.RunDeviceInfo.Builder, com.google.wireless.android.sdk.stats.RunDeviceInfoOrBuilder> devicesBuilder_;
-
-    /**
-     * <pre>
-     * List of devices on which the command was called
-     * </pre>
-     *
-     * <code>repeated .android_studio.RunDeviceInfo devices = 4;</code>
-     */
-    public java.util.List<com.google.wireless.android.sdk.stats.RunDeviceInfo> getDevicesList() {
-      if (devicesBuilder_ == null) {
-        return java.util.Collections.unmodifiableList(devices_);
-      } else {
-        return devicesBuilder_.getMessageList();
-      }
-    }
-    /**
-     * <pre>
-     * List of devices on which the command was called
-     * </pre>
-     *
-     * <code>repeated .android_studio.RunDeviceInfo devices = 4;</code>
-     */
-    public int getDevicesCount() {
-      if (devicesBuilder_ == null) {
-        return devices_.size();
-      } else {
-        return devicesBuilder_.getCount();
-      }
-    }
-    /**
-     * <pre>
-     * List of devices on which the command was called
-     * </pre>
-     *
-     * <code>repeated .android_studio.RunDeviceInfo devices = 4;</code>
-     */
-    public com.google.wireless.android.sdk.stats.RunDeviceInfo getDevices(int index) {
-      if (devicesBuilder_ == null) {
-        return devices_.get(index);
-      } else {
-        return devicesBuilder_.getMessage(index);
-      }
-    }
-    /**
-     * <pre>
-     * List of devices on which the command was called
-     * </pre>
-     *
-     * <code>repeated .android_studio.RunDeviceInfo devices = 4;</code>
-     */
-    public Builder setDevices(
-        int index, com.google.wireless.android.sdk.stats.RunDeviceInfo value) {
-      if (devicesBuilder_ == null) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        ensureDevicesIsMutable();
-        devices_.set(index, value);
-        onChanged();
-      } else {
-        devicesBuilder_.setMessage(index, value);
-      }
-      return this;
-    }
-    /**
-     * <pre>
-     * List of devices on which the command was called
-     * </pre>
-     *
-     * <code>repeated .android_studio.RunDeviceInfo devices = 4;</code>
-     */
-    public Builder setDevices(
-        int index, com.google.wireless.android.sdk.stats.RunDeviceInfo.Builder builderForValue) {
-      if (devicesBuilder_ == null) {
-        ensureDevicesIsMutable();
-        devices_.set(index, builderForValue.build());
-        onChanged();
-      } else {
-        devicesBuilder_.setMessage(index, builderForValue.build());
-      }
-      return this;
-    }
-    /**
-     * <pre>
-     * List of devices on which the command was called
-     * </pre>
-     *
-     * <code>repeated .android_studio.RunDeviceInfo devices = 4;</code>
-     */
-    public Builder addDevices(com.google.wireless.android.sdk.stats.RunDeviceInfo value) {
-      if (devicesBuilder_ == null) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        ensureDevicesIsMutable();
-        devices_.add(value);
-        onChanged();
-      } else {
-        devicesBuilder_.addMessage(value);
-      }
-      return this;
-    }
-    /**
-     * <pre>
-     * List of devices on which the command was called
-     * </pre>
-     *
-     * <code>repeated .android_studio.RunDeviceInfo devices = 4;</code>
-     */
-    public Builder addDevices(
-        int index, com.google.wireless.android.sdk.stats.RunDeviceInfo value) {
-      if (devicesBuilder_ == null) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        ensureDevicesIsMutable();
-        devices_.add(index, value);
-        onChanged();
-      } else {
-        devicesBuilder_.addMessage(index, value);
-      }
-      return this;
-    }
-    /**
-     * <pre>
-     * List of devices on which the command was called
-     * </pre>
-     *
-     * <code>repeated .android_studio.RunDeviceInfo devices = 4;</code>
-     */
-    public Builder addDevices(
-        com.google.wireless.android.sdk.stats.RunDeviceInfo.Builder builderForValue) {
-      if (devicesBuilder_ == null) {
-        ensureDevicesIsMutable();
-        devices_.add(builderForValue.build());
-        onChanged();
-      } else {
-        devicesBuilder_.addMessage(builderForValue.build());
-      }
-      return this;
-    }
-    /**
-     * <pre>
-     * List of devices on which the command was called
-     * </pre>
-     *
-     * <code>repeated .android_studio.RunDeviceInfo devices = 4;</code>
-     */
-    public Builder addDevices(
-        int index, com.google.wireless.android.sdk.stats.RunDeviceInfo.Builder builderForValue) {
-      if (devicesBuilder_ == null) {
-        ensureDevicesIsMutable();
-        devices_.add(index, builderForValue.build());
-        onChanged();
-      } else {
-        devicesBuilder_.addMessage(index, builderForValue.build());
-      }
-      return this;
-    }
-    /**
-     * <pre>
-     * List of devices on which the command was called
-     * </pre>
-     *
-     * <code>repeated .android_studio.RunDeviceInfo devices = 4;</code>
-     */
-    public Builder addAllDevices(
-        java.lang.Iterable<? extends com.google.wireless.android.sdk.stats.RunDeviceInfo> values) {
-      if (devicesBuilder_ == null) {
-        ensureDevicesIsMutable();
-        com.google.protobuf.AbstractMessageLite.Builder.addAll(
-            values, devices_);
-        onChanged();
-      } else {
-        devicesBuilder_.addAllMessages(values);
-      }
-      return this;
-    }
-    /**
-     * <pre>
-     * List of devices on which the command was called
-     * </pre>
-     *
-     * <code>repeated .android_studio.RunDeviceInfo devices = 4;</code>
-     */
-    public Builder clearDevices() {
-      if (devicesBuilder_ == null) {
-        devices_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000008);
-        onChanged();
-      } else {
-        devicesBuilder_.clear();
-      }
-      return this;
-    }
-    /**
-     * <pre>
-     * List of devices on which the command was called
-     * </pre>
-     *
-     * <code>repeated .android_studio.RunDeviceInfo devices = 4;</code>
-     */
-    public Builder removeDevices(int index) {
-      if (devicesBuilder_ == null) {
-        ensureDevicesIsMutable();
-        devices_.remove(index);
-        onChanged();
-      } else {
-        devicesBuilder_.remove(index);
-      }
-      return this;
-    }
-    /**
-     * <pre>
-     * List of devices on which the command was called
-     * </pre>
-     *
-     * <code>repeated .android_studio.RunDeviceInfo devices = 4;</code>
-     */
-    public com.google.wireless.android.sdk.stats.RunDeviceInfo.Builder getDevicesBuilder(
-        int index) {
-      return getDevicesFieldBuilder().getBuilder(index);
-    }
-    /**
-     * <pre>
-     * List of devices on which the command was called
-     * </pre>
-     *
-     * <code>repeated .android_studio.RunDeviceInfo devices = 4;</code>
-     */
-    public com.google.wireless.android.sdk.stats.RunDeviceInfoOrBuilder getDevicesOrBuilder(
-        int index) {
-      if (devicesBuilder_ == null) {
-        return devices_.get(index);  } else {
-        return devicesBuilder_.getMessageOrBuilder(index);
-      }
-    }
-    /**
-     * <pre>
-     * List of devices on which the command was called
-     * </pre>
-     *
-     * <code>repeated .android_studio.RunDeviceInfo devices = 4;</code>
-     */
-    public java.util.List<? extends com.google.wireless.android.sdk.stats.RunDeviceInfoOrBuilder> 
-         getDevicesOrBuilderList() {
-      if (devicesBuilder_ != null) {
-        return devicesBuilder_.getMessageOrBuilderList();
-      } else {
-        return java.util.Collections.unmodifiableList(devices_);
-      }
-    }
-    /**
-     * <pre>
-     * List of devices on which the command was called
-     * </pre>
-     *
-     * <code>repeated .android_studio.RunDeviceInfo devices = 4;</code>
-     */
-    public com.google.wireless.android.sdk.stats.RunDeviceInfo.Builder addDevicesBuilder() {
-      return getDevicesFieldBuilder().addBuilder(
-          com.google.wireless.android.sdk.stats.RunDeviceInfo.getDefaultInstance());
-    }
-    /**
-     * <pre>
-     * List of devices on which the command was called
-     * </pre>
-     *
-     * <code>repeated .android_studio.RunDeviceInfo devices = 4;</code>
-     */
-    public com.google.wireless.android.sdk.stats.RunDeviceInfo.Builder addDevicesBuilder(
-        int index) {
-      return getDevicesFieldBuilder().addBuilder(
-          index, com.google.wireless.android.sdk.stats.RunDeviceInfo.getDefaultInstance());
-    }
-    /**
-     * <pre>
-     * List of devices on which the command was called
-     * </pre>
-     *
-     * <code>repeated .android_studio.RunDeviceInfo devices = 4;</code>
-     */
-    public java.util.List<com.google.wireless.android.sdk.stats.RunDeviceInfo.Builder> 
-         getDevicesBuilderList() {
-      return getDevicesFieldBuilder().getBuilderList();
-    }
-    private com.google.protobuf.RepeatedFieldBuilderV3<
-        com.google.wireless.android.sdk.stats.RunDeviceInfo, com.google.wireless.android.sdk.stats.RunDeviceInfo.Builder, com.google.wireless.android.sdk.stats.RunDeviceInfoOrBuilder> 
-        getDevicesFieldBuilder() {
-      if (devicesBuilder_ == null) {
-        devicesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-            com.google.wireless.android.sdk.stats.RunDeviceInfo, com.google.wireless.android.sdk.stats.RunDeviceInfo.Builder, com.google.wireless.android.sdk.stats.RunDeviceInfoOrBuilder>(
-                devices_,
-                ((bitField0_ & 0x00000008) != 0),
-                getParentForChildren(),
-                isClean());
-        devices_ = null;
-      }
-      return devicesBuilder_;
-    }
-
     private long beginTimestampMs_ ;
     /**
      * <pre>
      * The stop cycle begins
      * </pre>
      *
-     * <code>optional int64 begin_timestamp_ms = 5;</code>
+     * <code>optional int64 begin_timestamp_ms = 4;</code>
      * @return Whether the beginTimestampMs field is set.
      */
     @java.lang.Override
     public boolean hasBeginTimestampMs() {
-      return ((bitField0_ & 0x00000010) != 0);
+      return ((bitField0_ & 0x00000008) != 0);
     }
     /**
      * <pre>
      * The stop cycle begins
      * </pre>
      *
-     * <code>optional int64 begin_timestamp_ms = 5;</code>
+     * <code>optional int64 begin_timestamp_ms = 4;</code>
      * @return The beginTimestampMs.
      */
     @java.lang.Override
@@ -1458,12 +1018,12 @@ private static final long serialVersionUID = 0L;
      * The stop cycle begins
      * </pre>
      *
-     * <code>optional int64 begin_timestamp_ms = 5;</code>
+     * <code>optional int64 begin_timestamp_ms = 4;</code>
      * @param value The beginTimestampMs to set.
      * @return This builder for chaining.
      */
     public Builder setBeginTimestampMs(long value) {
-      bitField0_ |= 0x00000010;
+      bitField0_ |= 0x00000008;
       beginTimestampMs_ = value;
       onChanged();
       return this;
@@ -1473,11 +1033,11 @@ private static final long serialVersionUID = 0L;
      * The stop cycle begins
      * </pre>
      *
-     * <code>optional int64 begin_timestamp_ms = 5;</code>
+     * <code>optional int64 begin_timestamp_ms = 4;</code>
      * @return This builder for chaining.
      */
     public Builder clearBeginTimestampMs() {
-      bitField0_ = (bitField0_ & ~0x00000010);
+      bitField0_ = (bitField0_ & ~0x00000008);
       beginTimestampMs_ = 0L;
       onChanged();
       return this;
@@ -1489,19 +1049,19 @@ private static final long serialVersionUID = 0L;
      * The stop cycle finished
      * </pre>
      *
-     * <code>optional int64 end_timestamp_ms = 6;</code>
+     * <code>optional int64 end_timestamp_ms = 5;</code>
      * @return Whether the endTimestampMs field is set.
      */
     @java.lang.Override
     public boolean hasEndTimestampMs() {
-      return ((bitField0_ & 0x00000020) != 0);
+      return ((bitField0_ & 0x00000010) != 0);
     }
     /**
      * <pre>
      * The stop cycle finished
      * </pre>
      *
-     * <code>optional int64 end_timestamp_ms = 6;</code>
+     * <code>optional int64 end_timestamp_ms = 5;</code>
      * @return The endTimestampMs.
      */
     @java.lang.Override
@@ -1513,12 +1073,12 @@ private static final long serialVersionUID = 0L;
      * The stop cycle finished
      * </pre>
      *
-     * <code>optional int64 end_timestamp_ms = 6;</code>
+     * <code>optional int64 end_timestamp_ms = 5;</code>
      * @param value The endTimestampMs to set.
      * @return This builder for chaining.
      */
     public Builder setEndTimestampMs(long value) {
-      bitField0_ |= 0x00000020;
+      bitField0_ |= 0x00000010;
       endTimestampMs_ = value;
       onChanged();
       return this;
@@ -1528,11 +1088,11 @@ private static final long serialVersionUID = 0L;
      * The stop cycle finished
      * </pre>
      *
-     * <code>optional int64 end_timestamp_ms = 6;</code>
+     * <code>optional int64 end_timestamp_ms = 5;</code>
      * @return This builder for chaining.
      */
     public Builder clearEndTimestampMs() {
-      bitField0_ = (bitField0_ & ~0x00000020);
+      bitField0_ = (bitField0_ & ~0x00000010);
       endTimestampMs_ = 0L;
       onChanged();
       return this;
@@ -1544,18 +1104,18 @@ private static final long serialVersionUID = 0L;
      * Type of AppComponent user wants to stop
      * </pre>
      *
-     * <code>optional .android_studio.RunEvent.AppComponent app_component_type = 7;</code>
+     * <code>optional .android_studio.RunEvent.AppComponent app_component_type = 6;</code>
      * @return Whether the appComponentType field is set.
      */
     @java.lang.Override public boolean hasAppComponentType() {
-      return ((bitField0_ & 0x00000040) != 0);
+      return ((bitField0_ & 0x00000020) != 0);
     }
     /**
      * <pre>
      * Type of AppComponent user wants to stop
      * </pre>
      *
-     * <code>optional .android_studio.RunEvent.AppComponent app_component_type = 7;</code>
+     * <code>optional .android_studio.RunEvent.AppComponent app_component_type = 6;</code>
      * @return The appComponentType.
      */
     @java.lang.Override
@@ -1569,7 +1129,7 @@ private static final long serialVersionUID = 0L;
      * Type of AppComponent user wants to stop
      * </pre>
      *
-     * <code>optional .android_studio.RunEvent.AppComponent app_component_type = 7;</code>
+     * <code>optional .android_studio.RunEvent.AppComponent app_component_type = 6;</code>
      * @param value The appComponentType to set.
      * @return This builder for chaining.
      */
@@ -1577,7 +1137,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      bitField0_ |= 0x00000040;
+      bitField0_ |= 0x00000020;
       appComponentType_ = value.getNumber();
       onChanged();
       return this;
@@ -1587,11 +1147,11 @@ private static final long serialVersionUID = 0L;
      * Type of AppComponent user wants to stop
      * </pre>
      *
-     * <code>optional .android_studio.RunEvent.AppComponent app_component_type = 7;</code>
+     * <code>optional .android_studio.RunEvent.AppComponent app_component_type = 6;</code>
      * @return This builder for chaining.
      */
     public Builder clearAppComponentType() {
-      bitField0_ = (bitField0_ & ~0x00000040);
+      bitField0_ = (bitField0_ & ~0x00000020);
       appComponentType_ = 0;
       onChanged();
       return this;
