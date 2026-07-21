@@ -812,6 +812,10 @@ public enum BooleanOption
    * <code>DUMP_ARTIFACTS_LOCATIONS = 197;</code>
    */
   DUMP_ARTIFACTS_LOCATIONS(197),
+  /**
+   * <code>R8_STRICT_FULL_MODE_FOR_KEEP_RULES = 198;</code>
+   */
+  R8_STRICT_FULL_MODE_FOR_KEEP_RULES(198),
   UNRECOGNIZED(-1),
   ;
 
@@ -1607,6 +1611,10 @@ public enum BooleanOption
    * <code>DUMP_ARTIFACTS_LOCATIONS = 197;</code>
    */
   public static final int DUMP_ARTIFACTS_LOCATIONS_VALUE = 197;
+  /**
+   * <code>R8_STRICT_FULL_MODE_FOR_KEEP_RULES = 198;</code>
+   */
+  public static final int R8_STRICT_FULL_MODE_FOR_KEEP_RULES_VALUE = 198;
 
 
   public final int getNumber() {
@@ -1831,6 +1839,7 @@ public enum BooleanOption
       case 195: return R8_OPTIMIZED_SHRINKING;
       case 196: return ENABLE_DEVICE_TARGETING_CONFIG_API;
       case 197: return DUMP_ARTIFACTS_LOCATIONS;
+      case 198: return R8_STRICT_FULL_MODE_FOR_KEEP_RULES;
       default: return null;
     }
   }

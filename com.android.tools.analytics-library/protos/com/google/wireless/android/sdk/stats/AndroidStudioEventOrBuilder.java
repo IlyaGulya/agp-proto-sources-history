@@ -6106,4 +6106,31 @@ public interface AndroidStudioEventOrBuilder extends
    * <code>optional .android_studio.Align16kbEvent align16kb_event = 218 [lazy = true];</code>
    */
   com.google.wireless.android.sdk.stats.Align16kbEventOrBuilder getAlign16KbEventOrBuilder();
+
+  /**
+   * <pre>
+   * set when kind = GC_PAUSE_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.GcPauseEvent gc_pause_event = 219 [lazy = true];</code>
+   * @return Whether the gcPauseEvent field is set.
+   */
+  boolean hasGcPauseEvent();
+  /**
+   * <pre>
+   * set when kind = GC_PAUSE_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.GcPauseEvent gc_pause_event = 219 [lazy = true];</code>
+   * @return The gcPauseEvent.
+   */
+  com.google.wireless.android.sdk.stats.GcPauseEvent getGcPauseEvent();
+  /**
+   * <pre>
+   * set when kind = GC_PAUSE_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.GcPauseEvent gc_pause_event = 219 [lazy = true];</code>
+   */
+  com.google.wireless.android.sdk.stats.GcPauseEventOrBuilder getGcPauseEventOrBuilder();
 }
