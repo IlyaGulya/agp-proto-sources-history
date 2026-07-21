@@ -33,7 +33,7 @@ public interface LogcatUsageEventOrBuilder extends
    *
    * <code>optional .android_studio.LogcatUsageEvent.LogcatFormatConfiguration format_dialog = 2 [deprecated = true, lazy = true];</code>
    * @deprecated android_studio.LogcatUsageEvent.format_dialog is deprecated.
-   *     See studio_stats.proto;l=13864
+   *     See studio_stats.proto;l=13892
    * @return Whether the formatDialog field is set.
    */
   @java.lang.Deprecated boolean hasFormatDialog();
@@ -44,7 +44,7 @@ public interface LogcatUsageEventOrBuilder extends
    *
    * <code>optional .android_studio.LogcatUsageEvent.LogcatFormatConfiguration format_dialog = 2 [deprecated = true, lazy = true];</code>
    * @deprecated android_studio.LogcatUsageEvent.format_dialog is deprecated.
-   *     See studio_stats.proto;l=13864
+   *     See studio_stats.proto;l=13892
    * @return The formatDialog.
    */
   @java.lang.Deprecated com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatConfiguration getFormatDialog();
@@ -137,4 +137,31 @@ public interface LogcatUsageEventOrBuilder extends
    * <code>optional .android_studio.LogcatUsageEvent.LogcatPanelEvent panel_added = 5 [lazy = true];</code>
    */
   com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatPanelEventOrBuilder getPanelAddedOrBuilder();
+
+  /**
+   * <pre>
+   * A stack trace was (or was attempted) to retrace automatically
+   * </pre>
+   *
+   * <code>optional .android_studio.LogcatUsageEvent.StackRetraceEvent stack_retrace = 6 [lazy = true];</code>
+   * @return Whether the stackRetrace field is set.
+   */
+  boolean hasStackRetrace();
+  /**
+   * <pre>
+   * A stack trace was (or was attempted) to retrace automatically
+   * </pre>
+   *
+   * <code>optional .android_studio.LogcatUsageEvent.StackRetraceEvent stack_retrace = 6 [lazy = true];</code>
+   * @return The stackRetrace.
+   */
+  com.google.wireless.android.sdk.stats.LogcatUsageEvent.StackRetraceEvent getStackRetrace();
+  /**
+   * <pre>
+   * A stack trace was (or was attempted) to retrace automatically
+   * </pre>
+   *
+   * <code>optional .android_studio.LogcatUsageEvent.StackRetraceEvent stack_retrace = 6 [lazy = true];</code>
+   */
+  com.google.wireless.android.sdk.stats.LogcatUsageEvent.StackRetraceEventOrBuilder getStackRetraceOrBuilder();
 }

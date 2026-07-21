@@ -90,4 +90,19 @@ public interface EmulatorQuickbootSaveOrBuilder extends
    * @return The sesionUptimeMs.
    */
   long getSesionUptimeMs();
+
+  /**
+   * <code>optional .android_studio.EmulatorDownloadableSnapshotSave downloadable_save = 5;</code>
+   * @return Whether the downloadableSave field is set.
+   */
+  boolean hasDownloadableSave();
+  /**
+   * <code>optional .android_studio.EmulatorDownloadableSnapshotSave downloadable_save = 5;</code>
+   * @return The downloadableSave.
+   */
+  com.google.wireless.android.sdk.stats.EmulatorDownloadableSnapshotSave getDownloadableSave();
+  /**
+   * <code>optional .android_studio.EmulatorDownloadableSnapshotSave downloadable_save = 5;</code>
+   */
+  com.google.wireless.android.sdk.stats.EmulatorDownloadableSnapshotSaveOrBuilder getDownloadableSaveOrBuilder();
 }

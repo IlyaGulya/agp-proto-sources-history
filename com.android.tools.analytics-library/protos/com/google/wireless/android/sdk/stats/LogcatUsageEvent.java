@@ -85,6 +85,14 @@ private static final long serialVersionUID = 0L;
      * <code>PANEL_ADDED = 3;</code>
      */
     PANEL_ADDED(3),
+    /**
+     * <pre>
+     * A stack trace was (or was attempted) to retrace automatically
+     * </pre>
+     *
+     * <code>STACK_RETRACED = 4;</code>
+     */
+    STACK_RETRACED(4),
     ;
 
     /**
@@ -120,6 +128,14 @@ private static final long serialVersionUID = 0L;
      * <code>PANEL_ADDED = 3;</code>
      */
     public static final int PANEL_ADDED_VALUE = 3;
+    /**
+     * <pre>
+     * A stack trace was (or was attempted) to retrace automatically
+     * </pre>
+     *
+     * <code>STACK_RETRACED = 4;</code>
+     */
+    public static final int STACK_RETRACED_VALUE = 4;
 
 
     public final int getNumber() {
@@ -146,6 +162,7 @@ private static final long serialVersionUID = 0L;
         case 1: return FORMAT_DIALOG;
         case 2: return FILTER_ADDED_TO_HISTORY;
         case 3: return PANEL_ADDED;
+        case 4: return STACK_RETRACED;
         default: return null;
       }
     }
@@ -1323,7 +1340,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional bool is_default_preset = 12 [deprecated = true];</code>
      * @deprecated android_studio.LogcatUsageEvent.LogcatFormatConfiguration.is_default_preset is deprecated.
-     *     See studio_stats.proto;l=13940
+     *     See studio_stats.proto;l=13974
      * @return Whether the isDefaultPreset field is set.
      */
     @java.lang.Deprecated boolean hasIsDefaultPreset();
@@ -1334,7 +1351,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional bool is_default_preset = 12 [deprecated = true];</code>
      * @deprecated android_studio.LogcatUsageEvent.LogcatFormatConfiguration.is_default_preset is deprecated.
-     *     See studio_stats.proto;l=13940
+     *     See studio_stats.proto;l=13974
      * @return The isDefaultPreset.
      */
     @java.lang.Deprecated boolean getIsDefaultPreset();
@@ -1346,7 +1363,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional bool is_apply_button_used = 13 [deprecated = true];</code>
      * @deprecated android_studio.LogcatUsageEvent.LogcatFormatConfiguration.is_apply_button_used is deprecated.
-     *     See studio_stats.proto;l=13943
+     *     See studio_stats.proto;l=13977
      * @return Whether the isApplyButtonUsed field is set.
      */
     @java.lang.Deprecated boolean hasIsApplyButtonUsed();
@@ -1357,7 +1374,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional bool is_apply_button_used = 13 [deprecated = true];</code>
      * @deprecated android_studio.LogcatUsageEvent.LogcatFormatConfiguration.is_apply_button_used is deprecated.
-     *     See studio_stats.proto;l=13943
+     *     See studio_stats.proto;l=13977
      * @return The isApplyButtonUsed.
      */
     @java.lang.Deprecated boolean getIsApplyButtonUsed();
@@ -1841,7 +1858,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional bool is_default_preset = 12 [deprecated = true];</code>
      * @deprecated android_studio.LogcatUsageEvent.LogcatFormatConfiguration.is_default_preset is deprecated.
-     *     See studio_stats.proto;l=13940
+     *     See studio_stats.proto;l=13974
      * @return Whether the isDefaultPreset field is set.
      */
     @java.lang.Override
@@ -1855,7 +1872,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional bool is_default_preset = 12 [deprecated = true];</code>
      * @deprecated android_studio.LogcatUsageEvent.LogcatFormatConfiguration.is_default_preset is deprecated.
-     *     See studio_stats.proto;l=13940
+     *     See studio_stats.proto;l=13974
      * @return The isDefaultPreset.
      */
     @java.lang.Override
@@ -1872,7 +1889,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional bool is_apply_button_used = 13 [deprecated = true];</code>
      * @deprecated android_studio.LogcatUsageEvent.LogcatFormatConfiguration.is_apply_button_used is deprecated.
-     *     See studio_stats.proto;l=13943
+     *     See studio_stats.proto;l=13977
      * @return Whether the isApplyButtonUsed field is set.
      */
     @java.lang.Override
@@ -1886,7 +1903,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional bool is_apply_button_used = 13 [deprecated = true];</code>
      * @deprecated android_studio.LogcatUsageEvent.LogcatFormatConfiguration.is_apply_button_used is deprecated.
-     *     See studio_stats.proto;l=13943
+     *     See studio_stats.proto;l=13977
      * @return The isApplyButtonUsed.
      */
     @java.lang.Override
@@ -3187,7 +3204,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional bool is_default_preset = 12 [deprecated = true];</code>
        * @deprecated android_studio.LogcatUsageEvent.LogcatFormatConfiguration.is_default_preset is deprecated.
-       *     See studio_stats.proto;l=13940
+       *     See studio_stats.proto;l=13974
        * @return Whether the isDefaultPreset field is set.
        */
       @java.lang.Override
@@ -3201,7 +3218,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional bool is_default_preset = 12 [deprecated = true];</code>
        * @deprecated android_studio.LogcatUsageEvent.LogcatFormatConfiguration.is_default_preset is deprecated.
-       *     See studio_stats.proto;l=13940
+       *     See studio_stats.proto;l=13974
        * @return The isDefaultPreset.
        */
       @java.lang.Override
@@ -3215,7 +3232,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional bool is_default_preset = 12 [deprecated = true];</code>
        * @deprecated android_studio.LogcatUsageEvent.LogcatFormatConfiguration.is_default_preset is deprecated.
-       *     See studio_stats.proto;l=13940
+       *     See studio_stats.proto;l=13974
        * @param value The isDefaultPreset to set.
        * @return This builder for chaining.
        */
@@ -3233,7 +3250,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional bool is_default_preset = 12 [deprecated = true];</code>
        * @deprecated android_studio.LogcatUsageEvent.LogcatFormatConfiguration.is_default_preset is deprecated.
-       *     See studio_stats.proto;l=13940
+       *     See studio_stats.proto;l=13974
        * @return This builder for chaining.
        */
       @java.lang.Deprecated public Builder clearIsDefaultPreset() {
@@ -3251,7 +3268,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional bool is_apply_button_used = 13 [deprecated = true];</code>
        * @deprecated android_studio.LogcatUsageEvent.LogcatFormatConfiguration.is_apply_button_used is deprecated.
-       *     See studio_stats.proto;l=13943
+       *     See studio_stats.proto;l=13977
        * @return Whether the isApplyButtonUsed field is set.
        */
       @java.lang.Override
@@ -3265,7 +3282,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional bool is_apply_button_used = 13 [deprecated = true];</code>
        * @deprecated android_studio.LogcatUsageEvent.LogcatFormatConfiguration.is_apply_button_used is deprecated.
-       *     See studio_stats.proto;l=13943
+       *     See studio_stats.proto;l=13977
        * @return The isApplyButtonUsed.
        */
       @java.lang.Override
@@ -3279,7 +3296,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional bool is_apply_button_used = 13 [deprecated = true];</code>
        * @deprecated android_studio.LogcatUsageEvent.LogcatFormatConfiguration.is_apply_button_used is deprecated.
-       *     See studio_stats.proto;l=13943
+       *     See studio_stats.proto;l=13977
        * @param value The isApplyButtonUsed to set.
        * @return This builder for chaining.
        */
@@ -3297,7 +3314,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional bool is_apply_button_used = 13 [deprecated = true];</code>
        * @deprecated android_studio.LogcatUsageEvent.LogcatFormatConfiguration.is_apply_button_used is deprecated.
-       *     See studio_stats.proto;l=13943
+       *     See studio_stats.proto;l=13977
        * @return This builder for chaining.
        */
       @java.lang.Deprecated public Builder clearIsApplyButtonUsed() {
@@ -8579,6 +8596,1032 @@ private static final long serialVersionUID = 0L;
 
   }
 
+  public interface StackRetraceEventOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:android_studio.LogcatUsageEvent.StackRetraceEvent)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * A string representing the result of the retrace operation.
+     * This can be a constant (SUCCESS, FAIL etc) or a class name of an
+     * exception thrown by the code.
+     * </pre>
+     *
+     * <code>optional string result_string = 1;</code>
+     * @return Whether the resultString field is set.
+     */
+    boolean hasResultString();
+    /**
+     * <pre>
+     * A string representing the result of the retrace operation.
+     * This can be a constant (SUCCESS, FAIL etc) or a class name of an
+     * exception thrown by the code.
+     * </pre>
+     *
+     * <code>optional string result_string = 1;</code>
+     * @return The resultString.
+     */
+    java.lang.String getResultString();
+    /**
+     * <pre>
+     * A string representing the result of the retrace operation.
+     * This can be a constant (SUCCESS, FAIL etc) or a class name of an
+     * exception thrown by the code.
+     * </pre>
+     *
+     * <code>optional string result_string = 1;</code>
+     * @return The bytes for resultString.
+     */
+    com.google.protobuf.ByteString
+        getResultStringBytes();
+
+    /**
+     * <pre>
+     * Time in milliseconds it took to retrace
+     * </pre>
+     *
+     * <code>optional int64 retrace_time_ms = 2;</code>
+     * @return Whether the retraceTimeMs field is set.
+     */
+    boolean hasRetraceTimeMs();
+    /**
+     * <pre>
+     * Time in milliseconds it took to retrace
+     * </pre>
+     *
+     * <code>optional int64 retrace_time_ms = 2;</code>
+     * @return The retraceTimeMs.
+     */
+    long getRetraceTimeMs();
+
+    /**
+     * <pre>
+     * Size in bytes of the mapping file
+     * </pre>
+     *
+     * <code>optional int64 mapping_file_size = 3;</code>
+     * @return Whether the mappingFileSize field is set.
+     */
+    boolean hasMappingFileSize();
+    /**
+     * <pre>
+     * Size in bytes of the mapping file
+     * </pre>
+     *
+     * <code>optional int64 mapping_file_size = 3;</code>
+     * @return The mappingFileSize.
+     */
+    long getMappingFileSize();
+
+    /**
+     * <pre>
+     * true if the mapping file was cached. Implies that retrace_time_ms
+     * includes initializing the retrace data structures from the file.
+     * </pre>
+     *
+     * <code>optional bool is_mapping_cached = 4;</code>
+     * @return Whether the isMappingCached field is set.
+     */
+    boolean hasIsMappingCached();
+    /**
+     * <pre>
+     * true if the mapping file was cached. Implies that retrace_time_ms
+     * includes initializing the retrace data structures from the file.
+     * </pre>
+     *
+     * <code>optional bool is_mapping_cached = 4;</code>
+     * @return The isMappingCached.
+     */
+    boolean getIsMappingCached();
+  }
+  /**
+   * Protobuf type {@code android_studio.LogcatUsageEvent.StackRetraceEvent}
+   */
+  public static final class StackRetraceEvent extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:android_studio.LogcatUsageEvent.StackRetraceEvent)
+      StackRetraceEventOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use StackRetraceEvent.newBuilder() to construct.
+    private StackRetraceEvent(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private StackRetraceEvent() {
+      resultString_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new StackRetraceEvent();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_LogcatUsageEvent_StackRetraceEvent_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_LogcatUsageEvent_StackRetraceEvent_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.google.wireless.android.sdk.stats.LogcatUsageEvent.StackRetraceEvent.class, com.google.wireless.android.sdk.stats.LogcatUsageEvent.StackRetraceEvent.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int RESULT_STRING_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object resultString_ = "";
+    /**
+     * <pre>
+     * A string representing the result of the retrace operation.
+     * This can be a constant (SUCCESS, FAIL etc) or a class name of an
+     * exception thrown by the code.
+     * </pre>
+     *
+     * <code>optional string result_string = 1;</code>
+     * @return Whether the resultString field is set.
+     */
+    @java.lang.Override
+    public boolean hasResultString() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <pre>
+     * A string representing the result of the retrace operation.
+     * This can be a constant (SUCCESS, FAIL etc) or a class name of an
+     * exception thrown by the code.
+     * </pre>
+     *
+     * <code>optional string result_string = 1;</code>
+     * @return The resultString.
+     */
+    @java.lang.Override
+    public java.lang.String getResultString() {
+      java.lang.Object ref = resultString_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          resultString_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * A string representing the result of the retrace operation.
+     * This can be a constant (SUCCESS, FAIL etc) or a class name of an
+     * exception thrown by the code.
+     * </pre>
+     *
+     * <code>optional string result_string = 1;</code>
+     * @return The bytes for resultString.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getResultStringBytes() {
+      java.lang.Object ref = resultString_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        resultString_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int RETRACE_TIME_MS_FIELD_NUMBER = 2;
+    private long retraceTimeMs_ = 0L;
+    /**
+     * <pre>
+     * Time in milliseconds it took to retrace
+     * </pre>
+     *
+     * <code>optional int64 retrace_time_ms = 2;</code>
+     * @return Whether the retraceTimeMs field is set.
+     */
+    @java.lang.Override
+    public boolean hasRetraceTimeMs() {
+      return ((bitField0_ & 0x00000002) != 0);
+    }
+    /**
+     * <pre>
+     * Time in milliseconds it took to retrace
+     * </pre>
+     *
+     * <code>optional int64 retrace_time_ms = 2;</code>
+     * @return The retraceTimeMs.
+     */
+    @java.lang.Override
+    public long getRetraceTimeMs() {
+      return retraceTimeMs_;
+    }
+
+    public static final int MAPPING_FILE_SIZE_FIELD_NUMBER = 3;
+    private long mappingFileSize_ = 0L;
+    /**
+     * <pre>
+     * Size in bytes of the mapping file
+     * </pre>
+     *
+     * <code>optional int64 mapping_file_size = 3;</code>
+     * @return Whether the mappingFileSize field is set.
+     */
+    @java.lang.Override
+    public boolean hasMappingFileSize() {
+      return ((bitField0_ & 0x00000004) != 0);
+    }
+    /**
+     * <pre>
+     * Size in bytes of the mapping file
+     * </pre>
+     *
+     * <code>optional int64 mapping_file_size = 3;</code>
+     * @return The mappingFileSize.
+     */
+    @java.lang.Override
+    public long getMappingFileSize() {
+      return mappingFileSize_;
+    }
+
+    public static final int IS_MAPPING_CACHED_FIELD_NUMBER = 4;
+    private boolean isMappingCached_ = false;
+    /**
+     * <pre>
+     * true if the mapping file was cached. Implies that retrace_time_ms
+     * includes initializing the retrace data structures from the file.
+     * </pre>
+     *
+     * <code>optional bool is_mapping_cached = 4;</code>
+     * @return Whether the isMappingCached field is set.
+     */
+    @java.lang.Override
+    public boolean hasIsMappingCached() {
+      return ((bitField0_ & 0x00000008) != 0);
+    }
+    /**
+     * <pre>
+     * true if the mapping file was cached. Implies that retrace_time_ms
+     * includes initializing the retrace data structures from the file.
+     * </pre>
+     *
+     * <code>optional bool is_mapping_cached = 4;</code>
+     * @return The isMappingCached.
+     */
+    @java.lang.Override
+    public boolean getIsMappingCached() {
+      return isMappingCached_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (((bitField0_ & 0x00000001) != 0)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, resultString_);
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        output.writeInt64(2, retraceTimeMs_);
+      }
+      if (((bitField0_ & 0x00000004) != 0)) {
+        output.writeInt64(3, mappingFileSize_);
+      }
+      if (((bitField0_ & 0x00000008) != 0)) {
+        output.writeBool(4, isMappingCached_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) != 0)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, resultString_);
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(2, retraceTimeMs_);
+      }
+      if (((bitField0_ & 0x00000004) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(3, mappingFileSize_);
+      }
+      if (((bitField0_ & 0x00000008) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(4, isMappingCached_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.google.wireless.android.sdk.stats.LogcatUsageEvent.StackRetraceEvent)) {
+        return super.equals(obj);
+      }
+      com.google.wireless.android.sdk.stats.LogcatUsageEvent.StackRetraceEvent other = (com.google.wireless.android.sdk.stats.LogcatUsageEvent.StackRetraceEvent) obj;
+
+      if (hasResultString() != other.hasResultString()) return false;
+      if (hasResultString()) {
+        if (!getResultString()
+            .equals(other.getResultString())) return false;
+      }
+      if (hasRetraceTimeMs() != other.hasRetraceTimeMs()) return false;
+      if (hasRetraceTimeMs()) {
+        if (getRetraceTimeMs()
+            != other.getRetraceTimeMs()) return false;
+      }
+      if (hasMappingFileSize() != other.hasMappingFileSize()) return false;
+      if (hasMappingFileSize()) {
+        if (getMappingFileSize()
+            != other.getMappingFileSize()) return false;
+      }
+      if (hasIsMappingCached() != other.hasIsMappingCached()) return false;
+      if (hasIsMappingCached()) {
+        if (getIsMappingCached()
+            != other.getIsMappingCached()) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasResultString()) {
+        hash = (37 * hash) + RESULT_STRING_FIELD_NUMBER;
+        hash = (53 * hash) + getResultString().hashCode();
+      }
+      if (hasRetraceTimeMs()) {
+        hash = (37 * hash) + RETRACE_TIME_MS_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            getRetraceTimeMs());
+      }
+      if (hasMappingFileSize()) {
+        hash = (37 * hash) + MAPPING_FILE_SIZE_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            getMappingFileSize());
+      }
+      if (hasIsMappingCached()) {
+        hash = (37 * hash) + IS_MAPPING_CACHED_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+            getIsMappingCached());
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.google.wireless.android.sdk.stats.LogcatUsageEvent.StackRetraceEvent parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.google.wireless.android.sdk.stats.LogcatUsageEvent.StackRetraceEvent parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.google.wireless.android.sdk.stats.LogcatUsageEvent.StackRetraceEvent parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.google.wireless.android.sdk.stats.LogcatUsageEvent.StackRetraceEvent parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.google.wireless.android.sdk.stats.LogcatUsageEvent.StackRetraceEvent parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.google.wireless.android.sdk.stats.LogcatUsageEvent.StackRetraceEvent parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.google.wireless.android.sdk.stats.LogcatUsageEvent.StackRetraceEvent parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.google.wireless.android.sdk.stats.LogcatUsageEvent.StackRetraceEvent parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.google.wireless.android.sdk.stats.LogcatUsageEvent.StackRetraceEvent parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.google.wireless.android.sdk.stats.LogcatUsageEvent.StackRetraceEvent parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.google.wireless.android.sdk.stats.LogcatUsageEvent.StackRetraceEvent parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.google.wireless.android.sdk.stats.LogcatUsageEvent.StackRetraceEvent parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.google.wireless.android.sdk.stats.LogcatUsageEvent.StackRetraceEvent prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code android_studio.LogcatUsageEvent.StackRetraceEvent}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:android_studio.LogcatUsageEvent.StackRetraceEvent)
+        com.google.wireless.android.sdk.stats.LogcatUsageEvent.StackRetraceEventOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_LogcatUsageEvent_StackRetraceEvent_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_LogcatUsageEvent_StackRetraceEvent_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.google.wireless.android.sdk.stats.LogcatUsageEvent.StackRetraceEvent.class, com.google.wireless.android.sdk.stats.LogcatUsageEvent.StackRetraceEvent.Builder.class);
+      }
+
+      // Construct using com.google.wireless.android.sdk.stats.LogcatUsageEvent.StackRetraceEvent.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        resultString_ = "";
+        retraceTimeMs_ = 0L;
+        mappingFileSize_ = 0L;
+        isMappingCached_ = false;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_LogcatUsageEvent_StackRetraceEvent_descriptor;
+      }
+
+      @java.lang.Override
+      public com.google.wireless.android.sdk.stats.LogcatUsageEvent.StackRetraceEvent getDefaultInstanceForType() {
+        return com.google.wireless.android.sdk.stats.LogcatUsageEvent.StackRetraceEvent.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.google.wireless.android.sdk.stats.LogcatUsageEvent.StackRetraceEvent build() {
+        com.google.wireless.android.sdk.stats.LogcatUsageEvent.StackRetraceEvent result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.google.wireless.android.sdk.stats.LogcatUsageEvent.StackRetraceEvent buildPartial() {
+        com.google.wireless.android.sdk.stats.LogcatUsageEvent.StackRetraceEvent result = new com.google.wireless.android.sdk.stats.LogcatUsageEvent.StackRetraceEvent(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.google.wireless.android.sdk.stats.LogcatUsageEvent.StackRetraceEvent result) {
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.resultString_ = resultString_;
+          to_bitField0_ |= 0x00000001;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.retraceTimeMs_ = retraceTimeMs_;
+          to_bitField0_ |= 0x00000002;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.mappingFileSize_ = mappingFileSize_;
+          to_bitField0_ |= 0x00000004;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.isMappingCached_ = isMappingCached_;
+          to_bitField0_ |= 0x00000008;
+        }
+        result.bitField0_ |= to_bitField0_;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.google.wireless.android.sdk.stats.LogcatUsageEvent.StackRetraceEvent) {
+          return mergeFrom((com.google.wireless.android.sdk.stats.LogcatUsageEvent.StackRetraceEvent)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.google.wireless.android.sdk.stats.LogcatUsageEvent.StackRetraceEvent other) {
+        if (other == com.google.wireless.android.sdk.stats.LogcatUsageEvent.StackRetraceEvent.getDefaultInstance()) return this;
+        if (other.hasResultString()) {
+          resultString_ = other.resultString_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (other.hasRetraceTimeMs()) {
+          setRetraceTimeMs(other.getRetraceTimeMs());
+        }
+        if (other.hasMappingFileSize()) {
+          setMappingFileSize(other.getMappingFileSize());
+        }
+        if (other.hasIsMappingCached()) {
+          setIsMappingCached(other.getIsMappingCached());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                resultString_ = input.readBytes();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 16: {
+                retraceTimeMs_ = input.readInt64();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 16
+              case 24: {
+                mappingFileSize_ = input.readInt64();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 24
+              case 32: {
+                isMappingCached_ = input.readBool();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 32
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object resultString_ = "";
+      /**
+       * <pre>
+       * A string representing the result of the retrace operation.
+       * This can be a constant (SUCCESS, FAIL etc) or a class name of an
+       * exception thrown by the code.
+       * </pre>
+       *
+       * <code>optional string result_string = 1;</code>
+       * @return Whether the resultString field is set.
+       */
+      public boolean hasResultString() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <pre>
+       * A string representing the result of the retrace operation.
+       * This can be a constant (SUCCESS, FAIL etc) or a class name of an
+       * exception thrown by the code.
+       * </pre>
+       *
+       * <code>optional string result_string = 1;</code>
+       * @return The resultString.
+       */
+      public java.lang.String getResultString() {
+        java.lang.Object ref = resultString_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            resultString_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * A string representing the result of the retrace operation.
+       * This can be a constant (SUCCESS, FAIL etc) or a class name of an
+       * exception thrown by the code.
+       * </pre>
+       *
+       * <code>optional string result_string = 1;</code>
+       * @return The bytes for resultString.
+       */
+      public com.google.protobuf.ByteString
+          getResultStringBytes() {
+        java.lang.Object ref = resultString_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          resultString_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * A string representing the result of the retrace operation.
+       * This can be a constant (SUCCESS, FAIL etc) or a class name of an
+       * exception thrown by the code.
+       * </pre>
+       *
+       * <code>optional string result_string = 1;</code>
+       * @param value The resultString to set.
+       * @return This builder for chaining.
+       */
+      public Builder setResultString(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        resultString_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * A string representing the result of the retrace operation.
+       * This can be a constant (SUCCESS, FAIL etc) or a class name of an
+       * exception thrown by the code.
+       * </pre>
+       *
+       * <code>optional string result_string = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearResultString() {
+        resultString_ = getDefaultInstance().getResultString();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * A string representing the result of the retrace operation.
+       * This can be a constant (SUCCESS, FAIL etc) or a class name of an
+       * exception thrown by the code.
+       * </pre>
+       *
+       * <code>optional string result_string = 1;</code>
+       * @param value The bytes for resultString to set.
+       * @return This builder for chaining.
+       */
+      public Builder setResultStringBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        resultString_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private long retraceTimeMs_ ;
+      /**
+       * <pre>
+       * Time in milliseconds it took to retrace
+       * </pre>
+       *
+       * <code>optional int64 retrace_time_ms = 2;</code>
+       * @return Whether the retraceTimeMs field is set.
+       */
+      @java.lang.Override
+      public boolean hasRetraceTimeMs() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <pre>
+       * Time in milliseconds it took to retrace
+       * </pre>
+       *
+       * <code>optional int64 retrace_time_ms = 2;</code>
+       * @return The retraceTimeMs.
+       */
+      @java.lang.Override
+      public long getRetraceTimeMs() {
+        return retraceTimeMs_;
+      }
+      /**
+       * <pre>
+       * Time in milliseconds it took to retrace
+       * </pre>
+       *
+       * <code>optional int64 retrace_time_ms = 2;</code>
+       * @param value The retraceTimeMs to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRetraceTimeMs(long value) {
+
+        retraceTimeMs_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Time in milliseconds it took to retrace
+       * </pre>
+       *
+       * <code>optional int64 retrace_time_ms = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRetraceTimeMs() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        retraceTimeMs_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long mappingFileSize_ ;
+      /**
+       * <pre>
+       * Size in bytes of the mapping file
+       * </pre>
+       *
+       * <code>optional int64 mapping_file_size = 3;</code>
+       * @return Whether the mappingFileSize field is set.
+       */
+      @java.lang.Override
+      public boolean hasMappingFileSize() {
+        return ((bitField0_ & 0x00000004) != 0);
+      }
+      /**
+       * <pre>
+       * Size in bytes of the mapping file
+       * </pre>
+       *
+       * <code>optional int64 mapping_file_size = 3;</code>
+       * @return The mappingFileSize.
+       */
+      @java.lang.Override
+      public long getMappingFileSize() {
+        return mappingFileSize_;
+      }
+      /**
+       * <pre>
+       * Size in bytes of the mapping file
+       * </pre>
+       *
+       * <code>optional int64 mapping_file_size = 3;</code>
+       * @param value The mappingFileSize to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMappingFileSize(long value) {
+
+        mappingFileSize_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Size in bytes of the mapping file
+       * </pre>
+       *
+       * <code>optional int64 mapping_file_size = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMappingFileSize() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        mappingFileSize_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private boolean isMappingCached_ ;
+      /**
+       * <pre>
+       * true if the mapping file was cached. Implies that retrace_time_ms
+       * includes initializing the retrace data structures from the file.
+       * </pre>
+       *
+       * <code>optional bool is_mapping_cached = 4;</code>
+       * @return Whether the isMappingCached field is set.
+       */
+      @java.lang.Override
+      public boolean hasIsMappingCached() {
+        return ((bitField0_ & 0x00000008) != 0);
+      }
+      /**
+       * <pre>
+       * true if the mapping file was cached. Implies that retrace_time_ms
+       * includes initializing the retrace data structures from the file.
+       * </pre>
+       *
+       * <code>optional bool is_mapping_cached = 4;</code>
+       * @return The isMappingCached.
+       */
+      @java.lang.Override
+      public boolean getIsMappingCached() {
+        return isMappingCached_;
+      }
+      /**
+       * <pre>
+       * true if the mapping file was cached. Implies that retrace_time_ms
+       * includes initializing the retrace data structures from the file.
+       * </pre>
+       *
+       * <code>optional bool is_mapping_cached = 4;</code>
+       * @param value The isMappingCached to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIsMappingCached(boolean value) {
+
+        isMappingCached_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * true if the mapping file was cached. Implies that retrace_time_ms
+       * includes initializing the retrace data structures from the file.
+       * </pre>
+       *
+       * <code>optional bool is_mapping_cached = 4;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearIsMappingCached() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        isMappingCached_ = false;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:android_studio.LogcatUsageEvent.StackRetraceEvent)
+    }
+
+    // @@protoc_insertion_point(class_scope:android_studio.LogcatUsageEvent.StackRetraceEvent)
+    private static final com.google.wireless.android.sdk.stats.LogcatUsageEvent.StackRetraceEvent DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.google.wireless.android.sdk.stats.LogcatUsageEvent.StackRetraceEvent();
+    }
+
+    public static com.google.wireless.android.sdk.stats.LogcatUsageEvent.StackRetraceEvent getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<StackRetraceEvent>
+        PARSER = new com.google.protobuf.AbstractParser<StackRetraceEvent>() {
+      @java.lang.Override
+      public StackRetraceEvent parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<StackRetraceEvent> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<StackRetraceEvent> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.wireless.android.sdk.stats.LogcatUsageEvent.StackRetraceEvent getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private int bitField0_;
   public static final int TYPE_FIELD_NUMBER = 1;
   private int type_ = 0;
@@ -8615,7 +9658,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>optional .android_studio.LogcatUsageEvent.LogcatFormatConfiguration format_dialog = 2 [deprecated = true, lazy = true];</code>
    * @deprecated android_studio.LogcatUsageEvent.format_dialog is deprecated.
-   *     See studio_stats.proto;l=13864
+   *     See studio_stats.proto;l=13892
    * @return Whether the formatDialog field is set.
    */
   @java.lang.Override
@@ -8629,7 +9672,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>optional .android_studio.LogcatUsageEvent.LogcatFormatConfiguration format_dialog = 2 [deprecated = true, lazy = true];</code>
    * @deprecated android_studio.LogcatUsageEvent.format_dialog is deprecated.
-   *     See studio_stats.proto;l=13864
+   *     See studio_stats.proto;l=13892
    * @return The formatDialog.
    */
   @java.lang.Override
@@ -8762,6 +9805,44 @@ private static final long serialVersionUID = 0L;
     return panelAdded_ == null ? com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatPanelEvent.getDefaultInstance() : panelAdded_;
   }
 
+  public static final int STACK_RETRACE_FIELD_NUMBER = 6;
+  private com.google.wireless.android.sdk.stats.LogcatUsageEvent.StackRetraceEvent stackRetrace_;
+  /**
+   * <pre>
+   * A stack trace was (or was attempted) to retrace automatically
+   * </pre>
+   *
+   * <code>optional .android_studio.LogcatUsageEvent.StackRetraceEvent stack_retrace = 6 [lazy = true];</code>
+   * @return Whether the stackRetrace field is set.
+   */
+  @java.lang.Override
+  public boolean hasStackRetrace() {
+    return ((bitField0_ & 0x00000020) != 0);
+  }
+  /**
+   * <pre>
+   * A stack trace was (or was attempted) to retrace automatically
+   * </pre>
+   *
+   * <code>optional .android_studio.LogcatUsageEvent.StackRetraceEvent stack_retrace = 6 [lazy = true];</code>
+   * @return The stackRetrace.
+   */
+  @java.lang.Override
+  public com.google.wireless.android.sdk.stats.LogcatUsageEvent.StackRetraceEvent getStackRetrace() {
+    return stackRetrace_ == null ? com.google.wireless.android.sdk.stats.LogcatUsageEvent.StackRetraceEvent.getDefaultInstance() : stackRetrace_;
+  }
+  /**
+   * <pre>
+   * A stack trace was (or was attempted) to retrace automatically
+   * </pre>
+   *
+   * <code>optional .android_studio.LogcatUsageEvent.StackRetraceEvent stack_retrace = 6 [lazy = true];</code>
+   */
+  @java.lang.Override
+  public com.google.wireless.android.sdk.stats.LogcatUsageEvent.StackRetraceEventOrBuilder getStackRetraceOrBuilder() {
+    return stackRetrace_ == null ? com.google.wireless.android.sdk.stats.LogcatUsageEvent.StackRetraceEvent.getDefaultInstance() : stackRetrace_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -8791,6 +9872,9 @@ private static final long serialVersionUID = 0L;
     if (((bitField0_ & 0x00000010) != 0)) {
       output.writeMessage(5, getPanelAdded());
     }
+    if (((bitField0_ & 0x00000020) != 0)) {
+      output.writeMessage(6, getStackRetrace());
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -8819,6 +9903,10 @@ private static final long serialVersionUID = 0L;
     if (((bitField0_ & 0x00000010) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(5, getPanelAdded());
+    }
+    if (((bitField0_ & 0x00000020) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(6, getStackRetrace());
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -8859,6 +9947,11 @@ private static final long serialVersionUID = 0L;
       if (!getPanelAdded()
           .equals(other.getPanelAdded())) return false;
     }
+    if (hasStackRetrace() != other.hasStackRetrace()) return false;
+    if (hasStackRetrace()) {
+      if (!getStackRetrace()
+          .equals(other.getStackRetrace())) return false;
+    }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -8889,6 +9982,10 @@ private static final long serialVersionUID = 0L;
     if (hasPanelAdded()) {
       hash = (37 * hash) + PANEL_ADDED_FIELD_NUMBER;
       hash = (53 * hash) + getPanelAdded().hashCode();
+    }
+    if (hasStackRetrace()) {
+      hash = (37 * hash) + STACK_RETRACE_FIELD_NUMBER;
+      hash = (53 * hash) + getStackRetrace().hashCode();
     }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
@@ -9026,6 +10123,7 @@ private static final long serialVersionUID = 0L;
         getLogcatFilterFieldBuilder();
         getFormatDialogAppliedFieldBuilder();
         getPanelAddedFieldBuilder();
+        getStackRetraceFieldBuilder();
       }
     }
     @java.lang.Override
@@ -9052,6 +10150,11 @@ private static final long serialVersionUID = 0L;
       if (panelAddedBuilder_ != null) {
         panelAddedBuilder_.dispose();
         panelAddedBuilder_ = null;
+      }
+      stackRetrace_ = null;
+      if (stackRetraceBuilder_ != null) {
+        stackRetraceBuilder_.dispose();
+        stackRetraceBuilder_ = null;
       }
       return this;
     }
@@ -9115,6 +10218,12 @@ private static final long serialVersionUID = 0L;
             : panelAddedBuilder_.build();
         to_bitField0_ |= 0x00000010;
       }
+      if (((from_bitField0_ & 0x00000020) != 0)) {
+        result.stackRetrace_ = stackRetraceBuilder_ == null
+            ? stackRetrace_
+            : stackRetraceBuilder_.build();
+        to_bitField0_ |= 0x00000020;
+      }
       result.bitField0_ |= to_bitField0_;
     }
 
@@ -9144,6 +10253,9 @@ private static final long serialVersionUID = 0L;
       }
       if (other.hasPanelAdded()) {
         mergePanelAdded(other.getPanelAdded());
+      }
+      if (other.hasStackRetrace()) {
+        mergeStackRetrace(other.getStackRetrace());
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -9211,6 +10323,13 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000010;
               break;
             } // case 42
+            case 50: {
+              input.readMessage(
+                  getStackRetraceFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000020;
+              break;
+            } // case 50
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -9296,7 +10415,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional .android_studio.LogcatUsageEvent.LogcatFormatConfiguration format_dialog = 2 [deprecated = true, lazy = true];</code>
      * @deprecated android_studio.LogcatUsageEvent.format_dialog is deprecated.
-     *     See studio_stats.proto;l=13864
+     *     See studio_stats.proto;l=13892
      * @return Whether the formatDialog field is set.
      */
     @java.lang.Deprecated public boolean hasFormatDialog() {
@@ -9309,7 +10428,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional .android_studio.LogcatUsageEvent.LogcatFormatConfiguration format_dialog = 2 [deprecated = true, lazy = true];</code>
      * @deprecated android_studio.LogcatUsageEvent.format_dialog is deprecated.
-     *     See studio_stats.proto;l=13864
+     *     See studio_stats.proto;l=13892
      * @return The formatDialog.
      */
     @java.lang.Deprecated public com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatConfiguration getFormatDialog() {
@@ -9908,6 +11027,161 @@ private static final long serialVersionUID = 0L;
         panelAdded_ = null;
       }
       return panelAddedBuilder_;
+    }
+
+    private com.google.wireless.android.sdk.stats.LogcatUsageEvent.StackRetraceEvent stackRetrace_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.LogcatUsageEvent.StackRetraceEvent, com.google.wireless.android.sdk.stats.LogcatUsageEvent.StackRetraceEvent.Builder, com.google.wireless.android.sdk.stats.LogcatUsageEvent.StackRetraceEventOrBuilder> stackRetraceBuilder_;
+    /**
+     * <pre>
+     * A stack trace was (or was attempted) to retrace automatically
+     * </pre>
+     *
+     * <code>optional .android_studio.LogcatUsageEvent.StackRetraceEvent stack_retrace = 6 [lazy = true];</code>
+     * @return Whether the stackRetrace field is set.
+     */
+    public boolean hasStackRetrace() {
+      return ((bitField0_ & 0x00000020) != 0);
+    }
+    /**
+     * <pre>
+     * A stack trace was (or was attempted) to retrace automatically
+     * </pre>
+     *
+     * <code>optional .android_studio.LogcatUsageEvent.StackRetraceEvent stack_retrace = 6 [lazy = true];</code>
+     * @return The stackRetrace.
+     */
+    public com.google.wireless.android.sdk.stats.LogcatUsageEvent.StackRetraceEvent getStackRetrace() {
+      if (stackRetraceBuilder_ == null) {
+        return stackRetrace_ == null ? com.google.wireless.android.sdk.stats.LogcatUsageEvent.StackRetraceEvent.getDefaultInstance() : stackRetrace_;
+      } else {
+        return stackRetraceBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * A stack trace was (or was attempted) to retrace automatically
+     * </pre>
+     *
+     * <code>optional .android_studio.LogcatUsageEvent.StackRetraceEvent stack_retrace = 6 [lazy = true];</code>
+     */
+    public Builder setStackRetrace(com.google.wireless.android.sdk.stats.LogcatUsageEvent.StackRetraceEvent value) {
+      if (stackRetraceBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        stackRetrace_ = value;
+      } else {
+        stackRetraceBuilder_.setMessage(value);
+      }
+      bitField0_ |= 0x00000020;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * A stack trace was (or was attempted) to retrace automatically
+     * </pre>
+     *
+     * <code>optional .android_studio.LogcatUsageEvent.StackRetraceEvent stack_retrace = 6 [lazy = true];</code>
+     */
+    public Builder setStackRetrace(
+        com.google.wireless.android.sdk.stats.LogcatUsageEvent.StackRetraceEvent.Builder builderForValue) {
+      if (stackRetraceBuilder_ == null) {
+        stackRetrace_ = builderForValue.build();
+      } else {
+        stackRetraceBuilder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x00000020;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * A stack trace was (or was attempted) to retrace automatically
+     * </pre>
+     *
+     * <code>optional .android_studio.LogcatUsageEvent.StackRetraceEvent stack_retrace = 6 [lazy = true];</code>
+     */
+    public Builder mergeStackRetrace(com.google.wireless.android.sdk.stats.LogcatUsageEvent.StackRetraceEvent value) {
+      if (stackRetraceBuilder_ == null) {
+        if (((bitField0_ & 0x00000020) != 0) &&
+          stackRetrace_ != null &&
+          stackRetrace_ != com.google.wireless.android.sdk.stats.LogcatUsageEvent.StackRetraceEvent.getDefaultInstance()) {
+          getStackRetraceBuilder().mergeFrom(value);
+        } else {
+          stackRetrace_ = value;
+        }
+      } else {
+        stackRetraceBuilder_.mergeFrom(value);
+      }
+      bitField0_ |= 0x00000020;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * A stack trace was (or was attempted) to retrace automatically
+     * </pre>
+     *
+     * <code>optional .android_studio.LogcatUsageEvent.StackRetraceEvent stack_retrace = 6 [lazy = true];</code>
+     */
+    public Builder clearStackRetrace() {
+      bitField0_ = (bitField0_ & ~0x00000020);
+      stackRetrace_ = null;
+      if (stackRetraceBuilder_ != null) {
+        stackRetraceBuilder_.dispose();
+        stackRetraceBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * A stack trace was (or was attempted) to retrace automatically
+     * </pre>
+     *
+     * <code>optional .android_studio.LogcatUsageEvent.StackRetraceEvent stack_retrace = 6 [lazy = true];</code>
+     */
+    public com.google.wireless.android.sdk.stats.LogcatUsageEvent.StackRetraceEvent.Builder getStackRetraceBuilder() {
+      bitField0_ |= 0x00000020;
+      onChanged();
+      return getStackRetraceFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * A stack trace was (or was attempted) to retrace automatically
+     * </pre>
+     *
+     * <code>optional .android_studio.LogcatUsageEvent.StackRetraceEvent stack_retrace = 6 [lazy = true];</code>
+     */
+    public com.google.wireless.android.sdk.stats.LogcatUsageEvent.StackRetraceEventOrBuilder getStackRetraceOrBuilder() {
+      if (stackRetraceBuilder_ != null) {
+        return stackRetraceBuilder_.getMessageOrBuilder();
+      } else {
+        return stackRetrace_ == null ?
+            com.google.wireless.android.sdk.stats.LogcatUsageEvent.StackRetraceEvent.getDefaultInstance() : stackRetrace_;
+      }
+    }
+    /**
+     * <pre>
+     * A stack trace was (or was attempted) to retrace automatically
+     * </pre>
+     *
+     * <code>optional .android_studio.LogcatUsageEvent.StackRetraceEvent stack_retrace = 6 [lazy = true];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.LogcatUsageEvent.StackRetraceEvent, com.google.wireless.android.sdk.stats.LogcatUsageEvent.StackRetraceEvent.Builder, com.google.wireless.android.sdk.stats.LogcatUsageEvent.StackRetraceEventOrBuilder> 
+        getStackRetraceFieldBuilder() {
+      if (stackRetraceBuilder_ == null) {
+        stackRetraceBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.wireless.android.sdk.stats.LogcatUsageEvent.StackRetraceEvent, com.google.wireless.android.sdk.stats.LogcatUsageEvent.StackRetraceEvent.Builder, com.google.wireless.android.sdk.stats.LogcatUsageEvent.StackRetraceEventOrBuilder>(
+                getStackRetrace(),
+                getParentForChildren(),
+                isClean());
+        stackRetrace_ = null;
+      }
+      return stackRetraceBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

@@ -943,6 +943,14 @@ private static final long serialVersionUID = 0L;
      * <code>MOLTEN_VK = 3;</code>
      */
     MOLTEN_VK(3),
+    /**
+     * <pre>
+     * Lavapipe software renderer
+     * </pre>
+     *
+     * <code>LAVAPIPE_VK = 4;</code>
+     */
+    LAVAPIPE_VK(4),
     ;
 
     /**
@@ -969,6 +977,14 @@ private static final long serialVersionUID = 0L;
      * <code>MOLTEN_VK = 3;</code>
      */
     public static final int MOLTEN_VK_VALUE = 3;
+    /**
+     * <pre>
+     * Lavapipe software renderer
+     * </pre>
+     *
+     * <code>LAVAPIPE_VK = 4;</code>
+     */
+    public static final int LAVAPIPE_VK_VALUE = 4;
 
 
     public final int getNumber() {
@@ -995,6 +1011,7 @@ private static final long serialVersionUID = 0L;
         case 1: return HARDWARE_VK;
         case 2: return SWIFTSHADER_VK;
         case 3: return MOLTEN_VK;
+        case 4: return LAVAPIPE_VK;
         default: return null;
       }
     }
