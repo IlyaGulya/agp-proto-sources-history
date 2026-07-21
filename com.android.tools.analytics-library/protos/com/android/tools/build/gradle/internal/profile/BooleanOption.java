@@ -674,6 +674,10 @@ public enum BooleanOption
    * <code>VERIFY_AAR_CLASSES = 163;</code>
    */
   VERIFY_AAR_CLASSES(163),
+  /**
+   * <code>DISABLE_COMPILE_SDK_CHECKS = 164;</code>
+   */
+  DISABLE_COMPILE_SDK_CHECKS(164),
   UNRECOGNIZED(-1),
   ;
 
@@ -1333,6 +1337,10 @@ public enum BooleanOption
    * <code>VERIFY_AAR_CLASSES = 163;</code>
    */
   public static final int VERIFY_AAR_CLASSES_VALUE = 163;
+  /**
+   * <code>DISABLE_COMPILE_SDK_CHECKS = 164;</code>
+   */
+  public static final int DISABLE_COMPILE_SDK_CHECKS_VALUE = 164;
 
 
   public final int getNumber() {
@@ -1523,6 +1531,7 @@ public enum BooleanOption
       case 161: return PRINT_LINT_STACK_TRACE;
       case 162: return PRIVACY_SANDBOX_SDK_REQUIRE_SERVICES;
       case 163: return VERIFY_AAR_CLASSES;
+      case 164: return DISABLE_COMPILE_SDK_CHECKS;
       default: return null;
     }
   }

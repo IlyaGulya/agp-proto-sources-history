@@ -4510,4 +4510,85 @@ public interface AndroidStudioEventOrBuilder extends
    * <code>optional .android_studio.TSdkUAEvent tsdk_ua_event = 160;</code>
    */
   com.google.wireless.android.sdk.stats.TSdkUAEventOrBuilder getTsdkUaEventOrBuilder();
+
+  /**
+   * <pre>
+   * set when kind = INTELLIJ_NEW_UI_STATE_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.IntelliJNewUIState intellij_new_ui_state_event = 161;</code>
+   * @return Whether the intellijNewUiStateEvent field is set.
+   */
+  boolean hasIntellijNewUiStateEvent();
+  /**
+   * <pre>
+   * set when kind = INTELLIJ_NEW_UI_STATE_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.IntelliJNewUIState intellij_new_ui_state_event = 161;</code>
+   * @return The intellijNewUiStateEvent.
+   */
+  com.google.wireless.android.sdk.stats.IntelliJNewUIState getIntellijNewUiStateEvent();
+  /**
+   * <pre>
+   * set when kind = INTELLIJ_NEW_UI_STATE_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.IntelliJNewUIState intellij_new_ui_state_event = 161;</code>
+   */
+  com.google.wireless.android.sdk.stats.IntelliJNewUIStateOrBuilder getIntellijNewUiStateEventOrBuilder();
+
+  /**
+   * <pre>
+   * set when kind = KOTLIN_GRADLE_PERFORMANCE
+   * </pre>
+   *
+   * <code>optional .android_studio.KotlinGradlePerformance kotlin_gradle_performance_event = 162;</code>
+   * @return Whether the kotlinGradlePerformanceEvent field is set.
+   */
+  boolean hasKotlinGradlePerformanceEvent();
+  /**
+   * <pre>
+   * set when kind = KOTLIN_GRADLE_PERFORMANCE
+   * </pre>
+   *
+   * <code>optional .android_studio.KotlinGradlePerformance kotlin_gradle_performance_event = 162;</code>
+   * @return The kotlinGradlePerformanceEvent.
+   */
+  com.google.wireless.android.sdk.stats.KotlinGradlePerformance getKotlinGradlePerformanceEvent();
+  /**
+   * <pre>
+   * set when kind = KOTLIN_GRADLE_PERFORMANCE
+   * </pre>
+   *
+   * <code>optional .android_studio.KotlinGradlePerformance kotlin_gradle_performance_event = 162;</code>
+   */
+  com.google.wireless.android.sdk.stats.KotlinGradlePerformanceOrBuilder getKotlinGradlePerformanceEventOrBuilder();
+
+  /**
+   * <pre>
+   * set when kind = BUILD_OUTPUT_DOWNLOADS_INFO_USER_INTERACTION
+   * </pre>
+   *
+   * <code>optional .android_studio.BuildOutputDownloadsInfoEvent build_output_downloads_info_event = 163;</code>
+   * @return Whether the buildOutputDownloadsInfoEvent field is set.
+   */
+  boolean hasBuildOutputDownloadsInfoEvent();
+  /**
+   * <pre>
+   * set when kind = BUILD_OUTPUT_DOWNLOADS_INFO_USER_INTERACTION
+   * </pre>
+   *
+   * <code>optional .android_studio.BuildOutputDownloadsInfoEvent build_output_downloads_info_event = 163;</code>
+   * @return The buildOutputDownloadsInfoEvent.
+   */
+  com.google.wireless.android.sdk.stats.BuildOutputDownloadsInfoEvent getBuildOutputDownloadsInfoEvent();
+  /**
+   * <pre>
+   * set when kind = BUILD_OUTPUT_DOWNLOADS_INFO_USER_INTERACTION
+   * </pre>
+   *
+   * <code>optional .android_studio.BuildOutputDownloadsInfoEvent build_output_downloads_info_event = 163;</code>
+   */
+  com.google.wireless.android.sdk.stats.BuildOutputDownloadsInfoEventOrBuilder getBuildOutputDownloadsInfoEventOrBuilder();
 }
