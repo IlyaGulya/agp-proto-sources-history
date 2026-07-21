@@ -19,6 +19,7 @@ private static final long serialVersionUID = 0L;
     appId_ = "";
     type_ = 0;
     modeTransitionDetails_ = 0;
+    productType_ = 0;
   }
 
   @java.lang.Override
@@ -201,6 +202,18 @@ private static final long serialVersionUID = 0L;
             } else {
               bitField0_ |= 0x00001000;
               modeTransitionDetails_ = rawValue;
+            }
+            break;
+          }
+          case 112: {
+            int rawValue = input.readEnum();
+              @SuppressWarnings("deprecation")
+            com.google.wireless.android.sdk.stats.AppQualityInsightsUsageEvent.AppQualityInsightsProductType value = com.google.wireless.android.sdk.stats.AppQualityInsightsUsageEvent.AppQualityInsightsProductType.valueOf(rawValue);
+            if (value == null) {
+              unknownFields.mergeVarintField(14, rawValue);
+            } else {
+              bitField0_ |= 0x00002000;
+              productType_ = rawValue;
             }
             break;
           }
@@ -938,6 +951,111 @@ private static final long serialVersionUID = 0L;
     }
 
     // @@protoc_insertion_point(enum_scope:android_studio.AppQualityInsightsUsageEvent.AppQualityInsightsModeTransitionDetails)
+  }
+
+  /**
+   * Protobuf enum {@code android_studio.AppQualityInsightsUsageEvent.AppQualityInsightsProductType}
+   */
+  public enum AppQualityInsightsProductType
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <code>UNKNOWN_PRODUCT_TYPE = 0;</code>
+     */
+    UNKNOWN_PRODUCT_TYPE(0),
+    /**
+     * <code>CRASHLYTICS = 1;</code>
+     */
+    CRASHLYTICS(1),
+    /**
+     * <code>PLAY_VITALS = 2;</code>
+     */
+    PLAY_VITALS(2),
+    ;
+
+    /**
+     * <code>UNKNOWN_PRODUCT_TYPE = 0;</code>
+     */
+    public static final int UNKNOWN_PRODUCT_TYPE_VALUE = 0;
+    /**
+     * <code>CRASHLYTICS = 1;</code>
+     */
+    public static final int CRASHLYTICS_VALUE = 1;
+    /**
+     * <code>PLAY_VITALS = 2;</code>
+     */
+    public static final int PLAY_VITALS_VALUE = 2;
+
+
+    public final int getNumber() {
+      return value;
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     * @deprecated Use {@link #forNumber(int)} instead.
+     */
+    @java.lang.Deprecated
+    public static AppQualityInsightsProductType valueOf(int value) {
+      return forNumber(value);
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     */
+    public static AppQualityInsightsProductType forNumber(int value) {
+      switch (value) {
+        case 0: return UNKNOWN_PRODUCT_TYPE;
+        case 1: return CRASHLYTICS;
+        case 2: return PLAY_VITALS;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<AppQualityInsightsProductType>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static final com.google.protobuf.Internal.EnumLiteMap<
+        AppQualityInsightsProductType> internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<AppQualityInsightsProductType>() {
+            public AppQualityInsightsProductType findValueByNumber(int number) {
+              return AppQualityInsightsProductType.forNumber(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      return getDescriptor().getValues().get(ordinal());
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return com.google.wireless.android.sdk.stats.AppQualityInsightsUsageEvent.getDescriptor().getEnumTypes().get(5);
+    }
+
+    private static final AppQualityInsightsProductType[] VALUES = values();
+
+    public static AppQualityInsightsProductType valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int value;
+
+    private AppQualityInsightsProductType(int value) {
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:android_studio.AppQualityInsightsUsageEvent.AppQualityInsightsProductType)
   }
 
   public interface AppQualityInsightsZeroStateDetailsOrBuilder extends
@@ -10120,6 +10238,33 @@ private static final long serialVersionUID = 0L;
     return result == null ? com.google.wireless.android.sdk.stats.AppQualityInsightsUsageEvent.AppQualityInsightsModeTransitionDetails.UNKNOWN_TRANSITION : result;
   }
 
+  public static final int PRODUCT_TYPE_FIELD_NUMBER = 14;
+  private int productType_;
+  /**
+   * <pre>
+   * Required for all event types.
+   * </pre>
+   *
+   * <code>optional .android_studio.AppQualityInsightsUsageEvent.AppQualityInsightsProductType product_type = 14;</code>
+   * @return Whether the productType field is set.
+   */
+  @java.lang.Override public boolean hasProductType() {
+    return ((bitField0_ & 0x00002000) != 0);
+  }
+  /**
+   * <pre>
+   * Required for all event types.
+   * </pre>
+   *
+   * <code>optional .android_studio.AppQualityInsightsUsageEvent.AppQualityInsightsProductType product_type = 14;</code>
+   * @return The productType.
+   */
+  @java.lang.Override public com.google.wireless.android.sdk.stats.AppQualityInsightsUsageEvent.AppQualityInsightsProductType getProductType() {
+    @SuppressWarnings("deprecation")
+    com.google.wireless.android.sdk.stats.AppQualityInsightsUsageEvent.AppQualityInsightsProductType result = com.google.wireless.android.sdk.stats.AppQualityInsightsUsageEvent.AppQualityInsightsProductType.valueOf(productType_);
+    return result == null ? com.google.wireless.android.sdk.stats.AppQualityInsightsUsageEvent.AppQualityInsightsProductType.UNKNOWN_PRODUCT_TYPE : result;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -10172,6 +10317,9 @@ private static final long serialVersionUID = 0L;
     }
     if (((bitField0_ & 0x00001000) != 0)) {
       output.writeEnum(13, modeTransitionDetails_);
+    }
+    if (((bitField0_ & 0x00002000) != 0)) {
+      output.writeEnum(14, productType_);
     }
     unknownFields.writeTo(output);
   }
@@ -10232,6 +10380,10 @@ private static final long serialVersionUID = 0L;
     if (((bitField0_ & 0x00001000) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(13, modeTransitionDetails_);
+    }
+    if (((bitField0_ & 0x00002000) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeEnumSize(14, productType_);
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -10311,6 +10463,10 @@ private static final long serialVersionUID = 0L;
     if (hasModeTransitionDetails()) {
       if (modeTransitionDetails_ != other.modeTransitionDetails_) return false;
     }
+    if (hasProductType() != other.hasProductType()) return false;
+    if (hasProductType()) {
+      if (productType_ != other.productType_) return false;
+    }
     if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
@@ -10374,6 +10530,10 @@ private static final long serialVersionUID = 0L;
     if (hasModeTransitionDetails()) {
       hash = (37 * hash) + MODE_TRANSITION_DETAILS_FIELD_NUMBER;
       hash = (53 * hash) + modeTransitionDetails_;
+    }
+    if (hasProductType()) {
+      hash = (37 * hash) + PRODUCT_TYPE_FIELD_NUMBER;
+      hash = (53 * hash) + productType_;
     }
     hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
@@ -10579,6 +10739,8 @@ private static final long serialVersionUID = 0L;
       bitField0_ = (bitField0_ & ~0x00000800);
       modeTransitionDetails_ = 0;
       bitField0_ = (bitField0_ & ~0x00001000);
+      productType_ = 0;
+      bitField0_ = (bitField0_ & ~0x00002000);
       return this;
     }
 
@@ -10695,6 +10857,10 @@ private static final long serialVersionUID = 0L;
         to_bitField0_ |= 0x00001000;
       }
       result.modeTransitionDetails_ = modeTransitionDetails_;
+      if (((from_bitField0_ & 0x00002000) != 0)) {
+        to_bitField0_ |= 0x00002000;
+      }
+      result.productType_ = productType_;
       result.bitField0_ = to_bitField0_;
       onBuilt();
       return result;
@@ -10784,6 +10950,9 @@ private static final long serialVersionUID = 0L;
       }
       if (other.hasModeTransitionDetails()) {
         setModeTransitionDetails(other.getModeTransitionDetails());
+      }
+      if (other.hasProductType()) {
+        setProductType(other.getProductType());
       }
       this.mergeUnknownFields(other.unknownFields);
       onChanged();
@@ -12508,6 +12677,65 @@ private static final long serialVersionUID = 0L;
     public Builder clearModeTransitionDetails() {
       bitField0_ = (bitField0_ & ~0x00001000);
       modeTransitionDetails_ = 0;
+      onChanged();
+      return this;
+    }
+
+    private int productType_ = 0;
+    /**
+     * <pre>
+     * Required for all event types.
+     * </pre>
+     *
+     * <code>optional .android_studio.AppQualityInsightsUsageEvent.AppQualityInsightsProductType product_type = 14;</code>
+     * @return Whether the productType field is set.
+     */
+    @java.lang.Override public boolean hasProductType() {
+      return ((bitField0_ & 0x00002000) != 0);
+    }
+    /**
+     * <pre>
+     * Required for all event types.
+     * </pre>
+     *
+     * <code>optional .android_studio.AppQualityInsightsUsageEvent.AppQualityInsightsProductType product_type = 14;</code>
+     * @return The productType.
+     */
+    @java.lang.Override
+    public com.google.wireless.android.sdk.stats.AppQualityInsightsUsageEvent.AppQualityInsightsProductType getProductType() {
+      @SuppressWarnings("deprecation")
+      com.google.wireless.android.sdk.stats.AppQualityInsightsUsageEvent.AppQualityInsightsProductType result = com.google.wireless.android.sdk.stats.AppQualityInsightsUsageEvent.AppQualityInsightsProductType.valueOf(productType_);
+      return result == null ? com.google.wireless.android.sdk.stats.AppQualityInsightsUsageEvent.AppQualityInsightsProductType.UNKNOWN_PRODUCT_TYPE : result;
+    }
+    /**
+     * <pre>
+     * Required for all event types.
+     * </pre>
+     *
+     * <code>optional .android_studio.AppQualityInsightsUsageEvent.AppQualityInsightsProductType product_type = 14;</code>
+     * @param value The productType to set.
+     * @return This builder for chaining.
+     */
+    public Builder setProductType(com.google.wireless.android.sdk.stats.AppQualityInsightsUsageEvent.AppQualityInsightsProductType value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      bitField0_ |= 0x00002000;
+      productType_ = value.getNumber();
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Required for all event types.
+     * </pre>
+     *
+     * <code>optional .android_studio.AppQualityInsightsUsageEvent.AppQualityInsightsProductType product_type = 14;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearProductType() {
+      bitField0_ = (bitField0_ & ~0x00002000);
+      productType_ = 0;
       onChanged();
       return this;
     }
