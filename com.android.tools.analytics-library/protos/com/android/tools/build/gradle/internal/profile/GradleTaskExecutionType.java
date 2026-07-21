@@ -1094,6 +1094,10 @@ public enum GradleTaskExecutionType
    * <code>PROCESS_LIBRARY_ART_PROFILE = 269;</code>
    */
   PROCESS_LIBRARY_ART_PROFILE(269),
+  /**
+   * <code>COMPILE_ART_PROFILE = 270;</code>
+   */
+  COMPILE_ART_PROFILE(270),
   UNRECOGNIZED(-1),
   ;
 
@@ -2177,6 +2181,10 @@ public enum GradleTaskExecutionType
    * <code>PROCESS_LIBRARY_ART_PROFILE = 269;</code>
    */
   public static final int PROCESS_LIBRARY_ART_PROFILE_VALUE = 269;
+  /**
+   * <code>COMPILE_ART_PROFILE = 270;</code>
+   */
+  public static final int COMPILE_ART_PROFILE_VALUE = 270;
 
 
   public final int getNumber() {
@@ -2473,6 +2481,7 @@ public enum GradleTaskExecutionType
       case 267: return LINT_MODEL_METADATA;
       case 268: return MERGE_ART_PROFILE;
       case 269: return PROCESS_LIBRARY_ART_PROFILE;
+      case 270: return COMPILE_ART_PROFILE;
       default: return null;
     }
   }
