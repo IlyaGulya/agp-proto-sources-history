@@ -132,6 +132,14 @@ public enum VariantApiArtifactType
    * <code>TEST_SUITE_RESULT_FILE = 29;</code>
    */
   TEST_SUITE_RESULT_FILE(29),
+  /**
+   * <code>R8_REPORT_HTML = 30;</code>
+   */
+  R8_REPORT_HTML(30),
+  /**
+   * <code>R8_REPORT_PB = 31;</code>
+   */
+  R8_REPORT_PB(31),
   UNRECOGNIZED(-1),
   ;
 
@@ -259,6 +267,14 @@ public enum VariantApiArtifactType
    * <code>TEST_SUITE_RESULT_FILE = 29;</code>
    */
   public static final int TEST_SUITE_RESULT_FILE_VALUE = 29;
+  /**
+   * <code>R8_REPORT_HTML = 30;</code>
+   */
+  public static final int R8_REPORT_HTML_VALUE = 30;
+  /**
+   * <code>R8_REPORT_PB = 31;</code>
+   */
+  public static final int R8_REPORT_PB_VALUE = 31;
 
 
   public final int getNumber() {
@@ -315,6 +331,8 @@ public enum VariantApiArtifactType
       case 27: return LINT_TEXT_REPORT;
       case 28: return LINT_XML_REPORT;
       case 29: return TEST_SUITE_RESULT_FILE;
+      case 30: return R8_REPORT_HTML;
+      case 31: return R8_REPORT_PB;
       default: return null;
     }
   }

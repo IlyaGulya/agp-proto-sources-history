@@ -44,4 +44,23 @@ public interface MarketingEmailEventOrBuilder extends
    * @return The eventSource.
    */
   com.google.wireless.android.sdk.stats.MarketingEmailEvent.EventSource getEventSource();
+
+  /**
+   * <pre>
+   * User clicked "Do not show again for one year" in the dialog
+   * </pre>
+   *
+   * <code>optional bool do_not_show_again_clicked = 3;</code>
+   * @return Whether the doNotShowAgainClicked field is set.
+   */
+  boolean hasDoNotShowAgainClicked();
+  /**
+   * <pre>
+   * User clicked "Do not show again for one year" in the dialog
+   * </pre>
+   *
+   * <code>optional bool do_not_show_again_clicked = 3;</code>
+   * @return The doNotShowAgainClicked.
+   */
+  boolean getDoNotShowAgainClicked();
 }

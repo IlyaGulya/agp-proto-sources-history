@@ -1480,6 +1480,10 @@ public enum GradleTaskExecutionType
    * <code>MERGE_COMPRESSED_JAVA_RES = 365;</code>
    */
   MERGE_COMPRESSED_JAVA_RES(365),
+  /**
+   * <code>R8_ANALYSIS = 366;</code>
+   */
+  R8_ANALYSIS(366),
   UNRECOGNIZED(-1),
   ;
 
@@ -2947,6 +2951,10 @@ public enum GradleTaskExecutionType
    * <code>MERGE_COMPRESSED_JAVA_RES = 365;</code>
    */
   public static final int MERGE_COMPRESSED_JAVA_RES_VALUE = 365;
+  /**
+   * <code>R8_ANALYSIS = 366;</code>
+   */
+  public static final int R8_ANALYSIS_VALUE = 366;
 
 
   public final int getNumber() {
@@ -3339,6 +3347,7 @@ public enum GradleTaskExecutionType
       case 363: return ANDROID_TEST_DISCOVERY;
       case 364: return PROCESS_TEST_MANIFEST_PACKAGING;
       case 365: return MERGE_COMPRESSED_JAVA_RES;
+      case 366: return R8_ANALYSIS;
       default: return null;
     }
   }

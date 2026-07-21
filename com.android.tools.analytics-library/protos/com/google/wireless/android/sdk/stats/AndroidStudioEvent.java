@@ -3568,6 +3568,14 @@ private static final long serialVersionUID = 0L;
      * <code>ROLLBACK_TOOL_CALL_EVENT = 381;</code>
      */
     ROLLBACK_TOOL_CALL_EVENT(381),
+    /**
+     * <pre>
+     * Change review event.
+     * </pre>
+     *
+     * <code>CHANGE_REVIEW_EVENT = 382;</code>
+     */
+    CHANGE_REVIEW_EVENT(382),
     ;
 
     /**
@@ -6427,6 +6435,14 @@ private static final long serialVersionUID = 0L;
      * <code>ROLLBACK_TOOL_CALL_EVENT = 381;</code>
      */
     public static final int ROLLBACK_TOOL_CALL_EVENT_VALUE = 381;
+    /**
+     * <pre>
+     * Change review event.
+     * </pre>
+     *
+     * <code>CHANGE_REVIEW_EVENT = 382;</code>
+     */
+    public static final int CHANGE_REVIEW_EVENT_VALUE = 382;
 
 
     public final int getNumber() {
@@ -6826,6 +6842,7 @@ private static final long serialVersionUID = 0L;
         case 379: return GEMINI_TELEMETRY_EVENT;
         case 380: return PLAY_PUBLISHING_EVENT;
         case 381: return ROLLBACK_TOOL_CALL_EVENT;
+        case 382: return CHANGE_REVIEW_EVENT;
         default: return null;
       }
     }
@@ -13791,7 +13808,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional uint32 min_sdk = 2 [deprecated = true];</code>
        * @deprecated android_studio.AndroidStudioEvent.TemplatesUsage.TemplateModule.min_sdk is deprecated.
-       *     See studio_stats.proto;l=2221
+       *     See studio_stats.proto;l=2227
        * @return Whether the minSdk field is set.
        */
       @java.lang.Deprecated boolean hasMinSdk();
@@ -13802,7 +13819,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional uint32 min_sdk = 2 [deprecated = true];</code>
        * @deprecated android_studio.AndroidStudioEvent.TemplatesUsage.TemplateModule.min_sdk is deprecated.
-       *     See studio_stats.proto;l=2221
+       *     See studio_stats.proto;l=2227
        * @return The minSdk.
        */
       @java.lang.Deprecated int getMinSdk();
@@ -14333,7 +14350,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional uint32 min_sdk = 2 [deprecated = true];</code>
        * @deprecated android_studio.AndroidStudioEvent.TemplatesUsage.TemplateModule.min_sdk is deprecated.
-       *     See studio_stats.proto;l=2221
+       *     See studio_stats.proto;l=2227
        * @return Whether the minSdk field is set.
        */
       @java.lang.Override
@@ -14347,7 +14364,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional uint32 min_sdk = 2 [deprecated = true];</code>
        * @deprecated android_studio.AndroidStudioEvent.TemplatesUsage.TemplateModule.min_sdk is deprecated.
-       *     See studio_stats.proto;l=2221
+       *     See studio_stats.proto;l=2227
        * @return The minSdk.
        */
       @java.lang.Override
@@ -14985,7 +15002,7 @@ private static final long serialVersionUID = 0L;
          *
          * <code>optional uint32 min_sdk = 2 [deprecated = true];</code>
          * @deprecated android_studio.AndroidStudioEvent.TemplatesUsage.TemplateModule.min_sdk is deprecated.
-         *     See studio_stats.proto;l=2221
+         *     See studio_stats.proto;l=2227
          * @return Whether the minSdk field is set.
          */
         @java.lang.Override
@@ -14999,7 +15016,7 @@ private static final long serialVersionUID = 0L;
          *
          * <code>optional uint32 min_sdk = 2 [deprecated = true];</code>
          * @deprecated android_studio.AndroidStudioEvent.TemplatesUsage.TemplateModule.min_sdk is deprecated.
-         *     See studio_stats.proto;l=2221
+         *     See studio_stats.proto;l=2227
          * @return The minSdk.
          */
         @java.lang.Override
@@ -15013,7 +15030,7 @@ private static final long serialVersionUID = 0L;
          *
          * <code>optional uint32 min_sdk = 2 [deprecated = true];</code>
          * @deprecated android_studio.AndroidStudioEvent.TemplatesUsage.TemplateModule.min_sdk is deprecated.
-         *     See studio_stats.proto;l=2221
+         *     See studio_stats.proto;l=2227
          * @param value The minSdk to set.
          * @return This builder for chaining.
          */
@@ -15031,7 +15048,7 @@ private static final long serialVersionUID = 0L;
          *
          * <code>optional uint32 min_sdk = 2 [deprecated = true];</code>
          * @deprecated android_studio.AndroidStudioEvent.TemplatesUsage.TemplateModule.min_sdk is deprecated.
-         *     See studio_stats.proto;l=2221
+         *     See studio_stats.proto;l=2227
          * @return This builder for chaining.
          */
         @java.lang.Deprecated public Builder clearMinSdk() {
@@ -27527,6 +27544,44 @@ private static final long serialVersionUID = 0L;
     return playPublishingEvent_ == null ? com.google.wireless.android.sdk.stats.PlayPublishingEvent.getDefaultInstance() : playPublishingEvent_;
   }
 
+  public static final int CHANGE_REVIEW_EVENT_FIELD_NUMBER = 258;
+  private com.google.wireless.android.sdk.stats.ChangeReviewEvent changeReviewEvent_;
+  /**
+   * <pre>
+   * set when kind = CHANGE_REVIEW_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.ChangeReviewEvent change_review_event = 258 [lazy = true];</code>
+   * @return Whether the changeReviewEvent field is set.
+   */
+  @java.lang.Override
+  public boolean hasChangeReviewEvent() {
+    return ((bitField7_ & 0x04000000) != 0);
+  }
+  /**
+   * <pre>
+   * set when kind = CHANGE_REVIEW_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.ChangeReviewEvent change_review_event = 258 [lazy = true];</code>
+   * @return The changeReviewEvent.
+   */
+  @java.lang.Override
+  public com.google.wireless.android.sdk.stats.ChangeReviewEvent getChangeReviewEvent() {
+    return changeReviewEvent_ == null ? com.google.wireless.android.sdk.stats.ChangeReviewEvent.getDefaultInstance() : changeReviewEvent_;
+  }
+  /**
+   * <pre>
+   * set when kind = CHANGE_REVIEW_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.ChangeReviewEvent change_review_event = 258 [lazy = true];</code>
+   */
+  @java.lang.Override
+  public com.google.wireless.android.sdk.stats.ChangeReviewEventOrBuilder getChangeReviewEventOrBuilder() {
+    return changeReviewEvent_ == null ? com.google.wireless.android.sdk.stats.ChangeReviewEvent.getDefaultInstance() : changeReviewEvent_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -28311,6 +28366,9 @@ private static final long serialVersionUID = 0L;
     }
     if (((bitField1_ & 0x20000000) != 0)) {
       output.writeMessage(257, getRollbackToolCallEvent());
+    }
+    if (((bitField7_ & 0x04000000) != 0)) {
+      output.writeMessage(258, getChangeReviewEvent());
     }
     getUnknownFields().writeTo(output);
   }
@@ -29354,6 +29412,10 @@ private static final long serialVersionUID = 0L;
     if (((bitField1_ & 0x20000000) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(257, getRollbackToolCallEvent());
+    }
+    if (((bitField7_ & 0x04000000) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(258, getChangeReviewEvent());
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -30623,6 +30685,11 @@ private static final long serialVersionUID = 0L;
       if (!getPlayPublishingEvent()
           .equals(other.getPlayPublishingEvent())) return false;
     }
+    if (hasChangeReviewEvent() != other.hasChangeReviewEvent()) return false;
+    if (hasChangeReviewEvent()) {
+      if (!getChangeReviewEvent()
+          .equals(other.getChangeReviewEvent())) return false;
+    }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -31664,6 +31731,10 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + PLAY_PUBLISHING_EVENT_FIELD_NUMBER;
       hash = (53 * hash) + getPlayPublishingEvent().hashCode();
     }
+    if (hasChangeReviewEvent()) {
+      hash = (37 * hash) + CHANGE_REVIEW_EVENT_FIELD_NUMBER;
+      hash = (53 * hash) + getChangeReviewEvent().hashCode();
+    }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -32026,6 +32097,7 @@ private static final long serialVersionUID = 0L;
         getMcpEnablementEventFieldBuilder();
         getGeminiTelemetryEventFieldBuilder();
         getPlayPublishingEventFieldBuilder();
+        getChangeReviewEventFieldBuilder();
       }
     }
     @java.lang.Override
@@ -33243,6 +33315,11 @@ private static final long serialVersionUID = 0L;
       if (playPublishingEventBuilder_ != null) {
         playPublishingEventBuilder_.dispose();
         playPublishingEventBuilder_ = null;
+      }
+      changeReviewEvent_ = null;
+      if (changeReviewEventBuilder_ != null) {
+        changeReviewEventBuilder_.dispose();
+        changeReviewEventBuilder_ = null;
       }
       return this;
     }
@@ -34857,6 +34934,12 @@ private static final long serialVersionUID = 0L;
             : playPublishingEventBuilder_.build();
         to_bitField7_ |= 0x02000000;
       }
+      if (((from_bitField8_ & 0x00000002) != 0)) {
+        result.changeReviewEvent_ = changeReviewEventBuilder_ == null
+            ? changeReviewEvent_
+            : changeReviewEventBuilder_.build();
+        to_bitField7_ |= 0x04000000;
+      }
       result.bitField7_ |= to_bitField7_;
     }
 
@@ -35769,6 +35852,9 @@ private static final long serialVersionUID = 0L;
       }
       if (other.hasPlayPublishingEvent()) {
         mergePlayPublishingEvent(other.getPlayPublishingEvent());
+      }
+      if (other.hasChangeReviewEvent()) {
+        mergeChangeReviewEvent(other.getChangeReviewEvent());
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -37669,6 +37755,13 @@ private static final long serialVersionUID = 0L;
               bitField1_ |= 0x20000000;
               break;
             } // case 2058
+            case 2066: {
+              input.readMessage(
+                  getChangeReviewEventFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField8_ |= 0x00000002;
+              break;
+            } // case 2066
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -77031,6 +77124,161 @@ private static final long serialVersionUID = 0L;
         playPublishingEvent_ = null;
       }
       return playPublishingEventBuilder_;
+    }
+
+    private com.google.wireless.android.sdk.stats.ChangeReviewEvent changeReviewEvent_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.ChangeReviewEvent, com.google.wireless.android.sdk.stats.ChangeReviewEvent.Builder, com.google.wireless.android.sdk.stats.ChangeReviewEventOrBuilder> changeReviewEventBuilder_;
+    /**
+     * <pre>
+     * set when kind = CHANGE_REVIEW_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.ChangeReviewEvent change_review_event = 258 [lazy = true];</code>
+     * @return Whether the changeReviewEvent field is set.
+     */
+    public boolean hasChangeReviewEvent() {
+      return ((bitField8_ & 0x00000002) != 0);
+    }
+    /**
+     * <pre>
+     * set when kind = CHANGE_REVIEW_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.ChangeReviewEvent change_review_event = 258 [lazy = true];</code>
+     * @return The changeReviewEvent.
+     */
+    public com.google.wireless.android.sdk.stats.ChangeReviewEvent getChangeReviewEvent() {
+      if (changeReviewEventBuilder_ == null) {
+        return changeReviewEvent_ == null ? com.google.wireless.android.sdk.stats.ChangeReviewEvent.getDefaultInstance() : changeReviewEvent_;
+      } else {
+        return changeReviewEventBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * set when kind = CHANGE_REVIEW_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.ChangeReviewEvent change_review_event = 258 [lazy = true];</code>
+     */
+    public Builder setChangeReviewEvent(com.google.wireless.android.sdk.stats.ChangeReviewEvent value) {
+      if (changeReviewEventBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        changeReviewEvent_ = value;
+      } else {
+        changeReviewEventBuilder_.setMessage(value);
+      }
+      bitField8_ |= 0x00000002;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = CHANGE_REVIEW_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.ChangeReviewEvent change_review_event = 258 [lazy = true];</code>
+     */
+    public Builder setChangeReviewEvent(
+        com.google.wireless.android.sdk.stats.ChangeReviewEvent.Builder builderForValue) {
+      if (changeReviewEventBuilder_ == null) {
+        changeReviewEvent_ = builderForValue.build();
+      } else {
+        changeReviewEventBuilder_.setMessage(builderForValue.build());
+      }
+      bitField8_ |= 0x00000002;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = CHANGE_REVIEW_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.ChangeReviewEvent change_review_event = 258 [lazy = true];</code>
+     */
+    public Builder mergeChangeReviewEvent(com.google.wireless.android.sdk.stats.ChangeReviewEvent value) {
+      if (changeReviewEventBuilder_ == null) {
+        if (((bitField8_ & 0x00000002) != 0) &&
+          changeReviewEvent_ != null &&
+          changeReviewEvent_ != com.google.wireless.android.sdk.stats.ChangeReviewEvent.getDefaultInstance()) {
+          getChangeReviewEventBuilder().mergeFrom(value);
+        } else {
+          changeReviewEvent_ = value;
+        }
+      } else {
+        changeReviewEventBuilder_.mergeFrom(value);
+      }
+      bitField8_ |= 0x00000002;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = CHANGE_REVIEW_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.ChangeReviewEvent change_review_event = 258 [lazy = true];</code>
+     */
+    public Builder clearChangeReviewEvent() {
+      bitField8_ = (bitField8_ & ~0x00000002);
+      changeReviewEvent_ = null;
+      if (changeReviewEventBuilder_ != null) {
+        changeReviewEventBuilder_.dispose();
+        changeReviewEventBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = CHANGE_REVIEW_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.ChangeReviewEvent change_review_event = 258 [lazy = true];</code>
+     */
+    public com.google.wireless.android.sdk.stats.ChangeReviewEvent.Builder getChangeReviewEventBuilder() {
+      bitField8_ |= 0x00000002;
+      onChanged();
+      return getChangeReviewEventFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * set when kind = CHANGE_REVIEW_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.ChangeReviewEvent change_review_event = 258 [lazy = true];</code>
+     */
+    public com.google.wireless.android.sdk.stats.ChangeReviewEventOrBuilder getChangeReviewEventOrBuilder() {
+      if (changeReviewEventBuilder_ != null) {
+        return changeReviewEventBuilder_.getMessageOrBuilder();
+      } else {
+        return changeReviewEvent_ == null ?
+            com.google.wireless.android.sdk.stats.ChangeReviewEvent.getDefaultInstance() : changeReviewEvent_;
+      }
+    }
+    /**
+     * <pre>
+     * set when kind = CHANGE_REVIEW_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.ChangeReviewEvent change_review_event = 258 [lazy = true];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.ChangeReviewEvent, com.google.wireless.android.sdk.stats.ChangeReviewEvent.Builder, com.google.wireless.android.sdk.stats.ChangeReviewEventOrBuilder> 
+        getChangeReviewEventFieldBuilder() {
+      if (changeReviewEventBuilder_ == null) {
+        changeReviewEventBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.wireless.android.sdk.stats.ChangeReviewEvent, com.google.wireless.android.sdk.stats.ChangeReviewEvent.Builder, com.google.wireless.android.sdk.stats.ChangeReviewEventOrBuilder>(
+                getChangeReviewEvent(),
+                getParentForChildren(),
+                isClean());
+        changeReviewEvent_ = null;
+      }
+      return changeReviewEventBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(
