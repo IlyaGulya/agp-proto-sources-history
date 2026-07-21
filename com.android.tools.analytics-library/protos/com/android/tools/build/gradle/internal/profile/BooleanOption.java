@@ -904,6 +904,22 @@ public enum BooleanOption
    * <code>REPORT_AGGREGATION_SUPPORT = 220;</code>
    */
   REPORT_AGGREGATION_SUPPORT(220),
+  /**
+   * <code>R8_PROGUARD_ANDROID_TXT_DISALLOWED = 221;</code>
+   */
+  R8_PROGUARD_ANDROID_TXT_DISALLOWED(221),
+  /**
+   * <code>USE_NEW_DSL = 222;</code>
+   */
+  USE_NEW_DSL(222),
+  /**
+   * <code>ENABLE_IDENTITY_TRANSFORMS_FOR_PROCESSED_ARTIFACTS = 223;</code>
+   */
+  ENABLE_IDENTITY_TRANSFORMS_FOR_PROCESSED_ARTIFACTS(223),
+  /**
+   * <code>DEFAULT_ANDROIDX_TEST_RUNNER = 224;</code>
+   */
+  DEFAULT_ANDROIDX_TEST_RUNNER(224),
   UNRECOGNIZED(-1),
   ;
 
@@ -1791,6 +1807,22 @@ public enum BooleanOption
    * <code>REPORT_AGGREGATION_SUPPORT = 220;</code>
    */
   public static final int REPORT_AGGREGATION_SUPPORT_VALUE = 220;
+  /**
+   * <code>R8_PROGUARD_ANDROID_TXT_DISALLOWED = 221;</code>
+   */
+  public static final int R8_PROGUARD_ANDROID_TXT_DISALLOWED_VALUE = 221;
+  /**
+   * <code>USE_NEW_DSL = 222;</code>
+   */
+  public static final int USE_NEW_DSL_VALUE = 222;
+  /**
+   * <code>ENABLE_IDENTITY_TRANSFORMS_FOR_PROCESSED_ARTIFACTS = 223;</code>
+   */
+  public static final int ENABLE_IDENTITY_TRANSFORMS_FOR_PROCESSED_ARTIFACTS_VALUE = 223;
+  /**
+   * <code>DEFAULT_ANDROIDX_TEST_RUNNER = 224;</code>
+   */
+  public static final int DEFAULT_ANDROIDX_TEST_RUNNER_VALUE = 224;
 
 
   public final int getNumber() {
@@ -2038,6 +2070,10 @@ public enum BooleanOption
       case 218: return ENABLE_CLASSPATH_CHECK_TASKS;
       case 219: return DEFAULT_MIN_COMPILE_SDK_IN_AAR_METADATA;
       case 220: return REPORT_AGGREGATION_SUPPORT;
+      case 221: return R8_PROGUARD_ANDROID_TXT_DISALLOWED;
+      case 222: return USE_NEW_DSL;
+      case 223: return ENABLE_IDENTITY_TRANSFORMS_FOR_PROCESSED_ARTIFACTS;
+      case 224: return DEFAULT_ANDROIDX_TEST_RUNNER;
       default: return null;
     }
   }

@@ -109,4 +109,31 @@ public interface EmulatorQuickbootLoadOrBuilder extends
    * @return The adbConnectionRetries.
    */
   int getAdbConnectionRetries();
+
+  /**
+   * <pre>
+   * Next tag: 8
+   * </pre>
+   *
+   * <code>optional .android_studio.EmulatorDownloadableSnapshotLoad downloadable_load = 7;</code>
+   * @return Whether the downloadableLoad field is set.
+   */
+  boolean hasDownloadableLoad();
+  /**
+   * <pre>
+   * Next tag: 8
+   * </pre>
+   *
+   * <code>optional .android_studio.EmulatorDownloadableSnapshotLoad downloadable_load = 7;</code>
+   * @return The downloadableLoad.
+   */
+  com.google.wireless.android.sdk.stats.EmulatorDownloadableSnapshotLoad getDownloadableLoad();
+  /**
+   * <pre>
+   * Next tag: 8
+   * </pre>
+   *
+   * <code>optional .android_studio.EmulatorDownloadableSnapshotLoad downloadable_load = 7;</code>
+   */
+  com.google.wireless.android.sdk.stats.EmulatorDownloadableSnapshotLoadOrBuilder getDownloadableLoadOrBuilder();
 }

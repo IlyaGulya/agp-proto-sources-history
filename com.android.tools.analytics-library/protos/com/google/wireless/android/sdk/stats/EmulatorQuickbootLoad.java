@@ -443,6 +443,44 @@ private static final long serialVersionUID = 0L;
     return adbConnectionRetries_;
   }
 
+  public static final int DOWNLOADABLE_LOAD_FIELD_NUMBER = 7;
+  private com.google.wireless.android.sdk.stats.EmulatorDownloadableSnapshotLoad downloadableLoad_;
+  /**
+   * <pre>
+   * Next tag: 8
+   * </pre>
+   *
+   * <code>optional .android_studio.EmulatorDownloadableSnapshotLoad downloadable_load = 7;</code>
+   * @return Whether the downloadableLoad field is set.
+   */
+  @java.lang.Override
+  public boolean hasDownloadableLoad() {
+    return ((bitField0_ & 0x00000020) != 0);
+  }
+  /**
+   * <pre>
+   * Next tag: 8
+   * </pre>
+   *
+   * <code>optional .android_studio.EmulatorDownloadableSnapshotLoad downloadable_load = 7;</code>
+   * @return The downloadableLoad.
+   */
+  @java.lang.Override
+  public com.google.wireless.android.sdk.stats.EmulatorDownloadableSnapshotLoad getDownloadableLoad() {
+    return downloadableLoad_ == null ? com.google.wireless.android.sdk.stats.EmulatorDownloadableSnapshotLoad.getDefaultInstance() : downloadableLoad_;
+  }
+  /**
+   * <pre>
+   * Next tag: 8
+   * </pre>
+   *
+   * <code>optional .android_studio.EmulatorDownloadableSnapshotLoad downloadable_load = 7;</code>
+   */
+  @java.lang.Override
+  public com.google.wireless.android.sdk.stats.EmulatorDownloadableSnapshotLoadOrBuilder getDownloadableLoadOrBuilder() {
+    return downloadableLoad_ == null ? com.google.wireless.android.sdk.stats.EmulatorDownloadableSnapshotLoad.getDefaultInstance() : downloadableLoad_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -472,6 +510,9 @@ private static final long serialVersionUID = 0L;
     if (((bitField0_ & 0x00000010) != 0)) {
       output.writeUInt32(6, adbConnectionRetries_);
     }
+    if (((bitField0_ & 0x00000020) != 0)) {
+      output.writeMessage(7, getDownloadableLoad());
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -500,6 +541,10 @@ private static final long serialVersionUID = 0L;
     if (((bitField0_ & 0x00000010) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeUInt32Size(6, adbConnectionRetries_);
+    }
+    if (((bitField0_ & 0x00000020) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(7, getDownloadableLoad());
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -540,6 +585,11 @@ private static final long serialVersionUID = 0L;
       if (getAdbConnectionRetries()
           != other.getAdbConnectionRetries()) return false;
     }
+    if (hasDownloadableLoad() != other.hasDownloadableLoad()) return false;
+    if (hasDownloadableLoad()) {
+      if (!getDownloadableLoad()
+          .equals(other.getDownloadableLoad())) return false;
+    }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -572,6 +622,10 @@ private static final long serialVersionUID = 0L;
     if (hasAdbConnectionRetries()) {
       hash = (37 * hash) + ADB_CONNECTION_RETRIES_FIELD_NUMBER;
       hash = (53 * hash) + getAdbConnectionRetries();
+    }
+    if (hasDownloadableLoad()) {
+      hash = (37 * hash) + DOWNLOADABLE_LOAD_FIELD_NUMBER;
+      hash = (53 * hash) + getDownloadableLoad().hashCode();
     }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
@@ -706,6 +760,7 @@ private static final long serialVersionUID = 0L;
       if (com.google.protobuf.GeneratedMessageV3
               .alwaysUseFieldBuilders) {
         getSnapshotFieldBuilder();
+        getDownloadableLoadFieldBuilder();
       }
     }
     @java.lang.Override
@@ -721,6 +776,11 @@ private static final long serialVersionUID = 0L;
       }
       onDemandRamEnabled_ = false;
       adbConnectionRetries_ = 0;
+      downloadableLoad_ = null;
+      if (downloadableLoadBuilder_ != null) {
+        downloadableLoadBuilder_.dispose();
+        downloadableLoadBuilder_ = null;
+      }
       return this;
     }
 
@@ -777,6 +837,12 @@ private static final long serialVersionUID = 0L;
         result.adbConnectionRetries_ = adbConnectionRetries_;
         to_bitField0_ |= 0x00000010;
       }
+      if (((from_bitField0_ & 0x00000020) != 0)) {
+        result.downloadableLoad_ = downloadableLoadBuilder_ == null
+            ? downloadableLoad_
+            : downloadableLoadBuilder_.build();
+        to_bitField0_ |= 0x00000020;
+      }
       result.bitField0_ |= to_bitField0_;
     }
 
@@ -806,6 +872,9 @@ private static final long serialVersionUID = 0L;
       }
       if (other.hasAdbConnectionRetries()) {
         setAdbConnectionRetries(other.getAdbConnectionRetries());
+      }
+      if (other.hasDownloadableLoad()) {
+        mergeDownloadableLoad(other.getDownloadableLoad());
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -867,6 +936,13 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000010;
               break;
             } // case 48
+            case 58: {
+              input.readMessage(
+                  getDownloadableLoadFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000020;
+              break;
+            } // case 58
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -1263,6 +1339,161 @@ private static final long serialVersionUID = 0L;
       adbConnectionRetries_ = 0;
       onChanged();
       return this;
+    }
+
+    private com.google.wireless.android.sdk.stats.EmulatorDownloadableSnapshotLoad downloadableLoad_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.EmulatorDownloadableSnapshotLoad, com.google.wireless.android.sdk.stats.EmulatorDownloadableSnapshotLoad.Builder, com.google.wireless.android.sdk.stats.EmulatorDownloadableSnapshotLoadOrBuilder> downloadableLoadBuilder_;
+    /**
+     * <pre>
+     * Next tag: 8
+     * </pre>
+     *
+     * <code>optional .android_studio.EmulatorDownloadableSnapshotLoad downloadable_load = 7;</code>
+     * @return Whether the downloadableLoad field is set.
+     */
+    public boolean hasDownloadableLoad() {
+      return ((bitField0_ & 0x00000020) != 0);
+    }
+    /**
+     * <pre>
+     * Next tag: 8
+     * </pre>
+     *
+     * <code>optional .android_studio.EmulatorDownloadableSnapshotLoad downloadable_load = 7;</code>
+     * @return The downloadableLoad.
+     */
+    public com.google.wireless.android.sdk.stats.EmulatorDownloadableSnapshotLoad getDownloadableLoad() {
+      if (downloadableLoadBuilder_ == null) {
+        return downloadableLoad_ == null ? com.google.wireless.android.sdk.stats.EmulatorDownloadableSnapshotLoad.getDefaultInstance() : downloadableLoad_;
+      } else {
+        return downloadableLoadBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * Next tag: 8
+     * </pre>
+     *
+     * <code>optional .android_studio.EmulatorDownloadableSnapshotLoad downloadable_load = 7;</code>
+     */
+    public Builder setDownloadableLoad(com.google.wireless.android.sdk.stats.EmulatorDownloadableSnapshotLoad value) {
+      if (downloadableLoadBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        downloadableLoad_ = value;
+      } else {
+        downloadableLoadBuilder_.setMessage(value);
+      }
+      bitField0_ |= 0x00000020;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Next tag: 8
+     * </pre>
+     *
+     * <code>optional .android_studio.EmulatorDownloadableSnapshotLoad downloadable_load = 7;</code>
+     */
+    public Builder setDownloadableLoad(
+        com.google.wireless.android.sdk.stats.EmulatorDownloadableSnapshotLoad.Builder builderForValue) {
+      if (downloadableLoadBuilder_ == null) {
+        downloadableLoad_ = builderForValue.build();
+      } else {
+        downloadableLoadBuilder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x00000020;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Next tag: 8
+     * </pre>
+     *
+     * <code>optional .android_studio.EmulatorDownloadableSnapshotLoad downloadable_load = 7;</code>
+     */
+    public Builder mergeDownloadableLoad(com.google.wireless.android.sdk.stats.EmulatorDownloadableSnapshotLoad value) {
+      if (downloadableLoadBuilder_ == null) {
+        if (((bitField0_ & 0x00000020) != 0) &&
+          downloadableLoad_ != null &&
+          downloadableLoad_ != com.google.wireless.android.sdk.stats.EmulatorDownloadableSnapshotLoad.getDefaultInstance()) {
+          getDownloadableLoadBuilder().mergeFrom(value);
+        } else {
+          downloadableLoad_ = value;
+        }
+      } else {
+        downloadableLoadBuilder_.mergeFrom(value);
+      }
+      bitField0_ |= 0x00000020;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Next tag: 8
+     * </pre>
+     *
+     * <code>optional .android_studio.EmulatorDownloadableSnapshotLoad downloadable_load = 7;</code>
+     */
+    public Builder clearDownloadableLoad() {
+      bitField0_ = (bitField0_ & ~0x00000020);
+      downloadableLoad_ = null;
+      if (downloadableLoadBuilder_ != null) {
+        downloadableLoadBuilder_.dispose();
+        downloadableLoadBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Next tag: 8
+     * </pre>
+     *
+     * <code>optional .android_studio.EmulatorDownloadableSnapshotLoad downloadable_load = 7;</code>
+     */
+    public com.google.wireless.android.sdk.stats.EmulatorDownloadableSnapshotLoad.Builder getDownloadableLoadBuilder() {
+      bitField0_ |= 0x00000020;
+      onChanged();
+      return getDownloadableLoadFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * Next tag: 8
+     * </pre>
+     *
+     * <code>optional .android_studio.EmulatorDownloadableSnapshotLoad downloadable_load = 7;</code>
+     */
+    public com.google.wireless.android.sdk.stats.EmulatorDownloadableSnapshotLoadOrBuilder getDownloadableLoadOrBuilder() {
+      if (downloadableLoadBuilder_ != null) {
+        return downloadableLoadBuilder_.getMessageOrBuilder();
+      } else {
+        return downloadableLoad_ == null ?
+            com.google.wireless.android.sdk.stats.EmulatorDownloadableSnapshotLoad.getDefaultInstance() : downloadableLoad_;
+      }
+    }
+    /**
+     * <pre>
+     * Next tag: 8
+     * </pre>
+     *
+     * <code>optional .android_studio.EmulatorDownloadableSnapshotLoad downloadable_load = 7;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.EmulatorDownloadableSnapshotLoad, com.google.wireless.android.sdk.stats.EmulatorDownloadableSnapshotLoad.Builder, com.google.wireless.android.sdk.stats.EmulatorDownloadableSnapshotLoadOrBuilder> 
+        getDownloadableLoadFieldBuilder() {
+      if (downloadableLoadBuilder_ == null) {
+        downloadableLoadBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.wireless.android.sdk.stats.EmulatorDownloadableSnapshotLoad, com.google.wireless.android.sdk.stats.EmulatorDownloadableSnapshotLoad.Builder, com.google.wireless.android.sdk.stats.EmulatorDownloadableSnapshotLoadOrBuilder>(
+                getDownloadableLoad(),
+                getParentForChildren(),
+                isClean());
+        downloadableLoad_ = null;
+      }
+      return downloadableLoadBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(
