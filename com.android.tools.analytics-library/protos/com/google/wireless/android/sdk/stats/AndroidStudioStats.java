@@ -5816,8 +5816,11 @@ public final class AndroidStudioStats {
       "\022\023\n\017APK_FROM_BUNDLE\020\010\"i\n\nDeployTask\022\020\n\014U" +
       "NKNOWN_TASK\020\000\022\016\n\nDEPLOY_APK\020\001\022\026\n\022DEPLOY_" +
       "INSTANT_APP\020\002\022\013\n\007HOTSWAP\020\003\022\024\n\020SPLIT_APK_" +
-      "DEPLOY\020\004:\002\030\001\"\036\n\016ArtifactDetail\022\014\n\004size\030\001" +
-      " \001(\004\"\305\002\n\030IntellijProjectSizeStats\022?\n\004typ" +
+      "DEPLOY\020\004:\002\030\001\"\225\001\n\016ArtifactDetail\022\014\n\004size\030" +
+      "\001 \001(\004\0229\n\004type\030\002 \001(\0162+.android_studio.Art" +
+      "ifactDetail.ArtifactType\":\n\014ArtifactType" +
+      "\022\013\n\007UNKNOWN\020\000\022\007\n\003APK\020\001\022\024\n\020BASELINE_PROFI" +
+      "LE\020\002\"\305\002\n\030IntellijProjectSizeStats\022?\n\004typ" +
       "e\030\001 \001(\01621.android_studio.IntellijProject" +
       "SizeStats.FileType\022=\n\005scope\030\002 \001(\0162..andr" +
       "oid_studio.IntellijProjectSizeStats.Scop" +
@@ -5954,10 +5957,10 @@ public final class AndroidStudioStats {
       "STRUCTURE_DIALOG_FIELD_MODULE_BUILDTYPE_" +
       "PSEUDO_LOCAL_ENABLED\020\273\001\022B\n=PROJECT_STRUC" +
       "TURE_DIALOG_FIELD_MODULE_BUILDTYPE_PROGU" +
-      "ARD_FILE\020\274\001\022J\nEPROJECT_STRUCTURE_DIALOG_" +
+      "ARD_FILE\020\274\001\022J\nEPROJECT_STRUCTURE_DIALOG_",
       "FIELD_MODULE_BUILDTYPE_APPLICATION_ID_SU" +
       "FFIX\020\275\001\022H\nCPROJECT_STRUCTURE_DIALOG_FIEL" +
-      "D_MODULE_BUILDTYPE_VERSION_NAME_SUFFIX\020\276",
+      "D_MODULE_BUILDTYPE_VERSION_NAME_SUFFIX\020\276" +
       "\001\022G\nBPROJECT_STRUCTURE_DIALOG_FIELD_MODU" +
       "LE_BUILDTYPE_ZIP_ALLIGN_ENABLED\020\277\001\022B\n=PR" +
       "OJECT_STRUCTURE_DIALOG_FIELD_MODULE_DEPE" +
@@ -6354,10 +6357,10 @@ public final class AndroidStudioStats {
       "ewType\022A\n\006result\030\002 \001(\01621.android_studio." +
       "PreviewRefreshEvent.RefreshResult\022\034\n\024in_" +
       "queue_time_millis\030\003 \001(\005\022\033\n\023refresh_time_" +
-      "millis\030\004 \001(\005\022\026\n\016previews_count\030\005 \001(\005\022\033\n\023" +
+      "millis\030\004 \001(\005\022\026\n\016previews_count\030\005 \001(\005\022\033\n\023",
       "previews_to_refresh\030\006 \001(\005\022P\n\017preview_ren" +
       "ders\030\007 \003(\01327.android_studio.PreviewRefre" +
-      "shEvent.SinglePreviewRender\032\354\001\n\023SinglePr",
+      "shEvent.SinglePreviewRender\032\354\001\n\023SinglePr" +
       "eviewRender\022T\n\006result\030\001 \001(\0162D.android_st" +
       "udio.PreviewRefreshEvent.SinglePreviewRe" +
       "nder.RenderResult\022\017\n\007inflate\030\002 \001(\010\022\026\n\016re" +
@@ -6754,10 +6757,10 @@ public final class AndroidStudioStats {
       "eInspectorEvent.ExportOperationCompleted" +
       "Event\032X\n\023OfflineModeMetadata\022\036\n\026total_do" +
       "wnload_time_ms\030\001 \001(\005\022!\n\031total_download_s" +
-      "ize_bytes\030\002 \001(\003\032\242\002\n\027ExportDialogOpenedEv" +
+      "ize_bytes\030\002 \001(\003\032\242\002\n\027ExportDialogOpenedEv",
       "ent\022h\n\006origin\030\001 \001(\0162X.android_studio.App" +
       "InspectionEvent.DatabaseInspectorEvent.E" +
-      "xportDialogOpenedEvent.Origin\"\234\001\n\006Origin",
+      "xportDialogOpenedEvent.Origin\"\234\001\n\006Origin" +
       "\022\022\n\016UNKNOWN_ORIGIN\020\000\022\034\n\030SCHEMA_TREE_CONT" +
       "EXT_MENU\020\001\022\035\n\031SCHEMA_TREE_EXPORT_BUTTON\020" +
       "\002\022\037\n\033QUERY_RESULTS_EXPORT_BUTTON\020\003\022 \n\034TA" +
@@ -7154,10 +7157,10 @@ public final class AndroidStudioStats {
       "IPE_DATA_ACTION\020\007\022 \n\034VIRTUAL_COLD_BOOT_N" +
       "OW_ACTION\020\010\022\037\n\033VIRTUAL_SHOW_ON_DISK_ACTI" +
       "ON\020\t\022\031\n\025VIRTUAL_DELETE_ACTION\020\n\022\027\n\023VIRTU" +
-      "AL_STOP_ACTION\020\013\022(\n$PHYSICAL_DEVICE_FILE" +
+      "AL_STOP_ACTION\020\013\022(\n$PHYSICAL_DEVICE_FILE",
       "_EXPLORER_ACTION\020\014\022\037\n\033PHYSICAL_PAIR_DEVI" +
       "CE_ACTION\020\r\022\032\n\026PHYSICAL_DELETE_ACTION\020\016\022" +
-      " \n\034VIRTUAL_UNPAIR_DEVICE_ACTION\020\017\022!\n\035PHY",
+      " \n\034VIRTUAL_UNPAIR_DEVICE_ACTION\020\017\022!\n\035PHY" +
       "SICAL_UNPAIR_DEVICE_ACTION\020\020\"\212\002\n\020WearPai" +
       "ringEvent\0228\n\004kind\030\001 \001(\0162*.android_studio" +
       ".WearPairingEvent.EventKind\"\273\001\n\tEventKin" +
@@ -7554,10 +7557,10 @@ public final class AndroidStudioStats {
       "sUsageEvent.AppQualityInsightsNotesDetai" +
       "ls.NoteEvent\"6\n\tNoteEvent\022\021\n\rUNKNOWN_EVE" +
       "NT\020\000\022\t\n\005ADDED\020\001\022\013\n\007REMOVED\020\002\032\274\002\n\020Perform" +
-      "anceStats\022\227\001\n$vc_based_line_number_mappi" +
+      "anceStats\022\227\001\n$vc_based_line_number_mappi",
       "ng_latency\030\001 \001(\0132i.android_studio.AppQua" +
       "lityInsightsUsageEvent.PerformanceStats." +
-      "VersionControlBasedLineNumberMappingLate",
+      "VersionControlBasedLineNumberMappingLate" +
       "ncy\032\215\001\n+VersionControlBasedLineNumberMap" +
       "pingLatency\022\026\n\016min_latency_ms\030\001 \001(\003\022\026\n\016p" +
       "50_latency_ms\030\002 \001(\003\022\026\n\016p90_latency_ms\030\003 " +
@@ -7954,10 +7957,10 @@ public final class AndroidStudioStats {
       "_UNDO\020\n\022\014\n\010CMD_REDO\020\013\022\016\n\nCMD_FORMAT\020\014\022\016\n" +
       "\nCMD_RENAME\020\r\022\r\n\tCMD_BUILD\020\016\022\013\n\007CMD_RUN\020" +
       "\017\022\r\n\tCMD_DEBUG\020\020\022\017\n\013CMD_PROFILE\020\021\022\014\n\010CMD" +
-      "_TEST\020\022\022\014\n\010CMD_STOP\020\023\022\014\n\010CMD_SYNC\020\024\022\020\n\014C" +
+      "_TEST\020\022\022\014\n\010CMD_STOP\020\023\022\014\n\010CMD_SYNC\020\024\022\020\n\014C",
       "MD_TERMINAL\020\025\022\r\n\tCMD_SPLIT\020\026\022\017\n\013CMD_UNSP" +
       "LIT\020\027\022\014\n\010CMD_OPEN\020\030\022\020\n\014CMD_GOTOTEST\020\031\"(\n" +
-      "\nCodeDomain\022\r\n\tUNDEFINED\020\000\022\013\n\007COMPOSE\020\001\"",
+      "\nCodeDomain\022\r\n\tUNDEFINED\020\000\022\013\n\007COMPOSE\020\001\"" +
       "B\n\021HallucinationType\022\t\n\005OTHER\020\000\022\013\n\007BAD_A" +
       "PI\020\001\022\025\n\021COMPOSE_SEMANTICS\020\002B\t\n\007content\"\310" +
       "\001\n\025SmlConfigurationEvent\022\025\n\rsml_availabl" +
@@ -9466,7 +9469,7 @@ public final class AndroidStudioStats {
     internal_static_android_studio_ArtifactDetail_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_android_studio_ArtifactDetail_descriptor,
-        new java.lang.String[] { "Size", });
+        new java.lang.String[] { "Size", "Type", });
     internal_static_android_studio_IntellijProjectSizeStats_descriptor =
       getDescriptor().getMessageTypes().get(186);
     internal_static_android_studio_IntellijProjectSizeStats_fieldAccessorTable = new

@@ -96,6 +96,10 @@ public enum VariantMethodType
    * <code>GENERATE_LOCALE_CONFIG_BUILDER = 20;</code>
    */
   GENERATE_LOCALE_CONFIG_BUILDER(20),
+  /**
+   * <code>DEVICE_TESTS_BUILDER = 21;</code>
+   */
+  DEVICE_TESTS_BUILDER(21),
   UNRECOGNIZED(-1),
   ;
 
@@ -187,6 +191,10 @@ public enum VariantMethodType
    * <code>GENERATE_LOCALE_CONFIG_BUILDER = 20;</code>
    */
   public static final int GENERATE_LOCALE_CONFIG_BUILDER_VALUE = 20;
+  /**
+   * <code>DEVICE_TESTS_BUILDER = 21;</code>
+   */
+  public static final int DEVICE_TESTS_BUILDER_VALUE = 21;
 
 
   public final int getNumber() {
@@ -234,6 +242,7 @@ public enum VariantMethodType
       case 18: return PROFILEABLE_ENABLED;
       case 19: return ANDROID_RESOURCES_BUILDER;
       case 20: return GENERATE_LOCALE_CONFIG_BUILDER;
+      case 21: return DEVICE_TESTS_BUILDER;
       default: return null;
     }
   }

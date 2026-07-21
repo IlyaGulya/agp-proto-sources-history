@@ -1367,6 +1367,10 @@ public enum GradleTaskExecutionType
    * <code>MERGE_STARTUP_PROFILE = 337;</code>
    */
   MERGE_STARTUP_PROFILE(337),
+  /**
+   * <code>GENERATE_PRIVACY_SANDBOX_PROGUARD_RULES = 338;</code>
+   */
+  GENERATE_PRIVACY_SANDBOX_PROGUARD_RULES(338),
   UNRECOGNIZED(-1),
   ;
 
@@ -2722,6 +2726,10 @@ public enum GradleTaskExecutionType
    * <code>MERGE_STARTUP_PROFILE = 337;</code>
    */
   public static final int MERGE_STARTUP_PROFILE_VALUE = 337;
+  /**
+   * <code>GENERATE_PRIVACY_SANDBOX_PROGUARD_RULES = 338;</code>
+   */
+  public static final int GENERATE_PRIVACY_SANDBOX_PROGUARD_RULES_VALUE = 338;
 
 
   public final int getNumber() {
@@ -3086,6 +3094,7 @@ public enum GradleTaskExecutionType
       case 335: return SCREENSHOT_TEST_REPORT;
       case 336: return SIMPLIFIED_MERGED_MANIFESTS_PRODUCER;
       case 337: return MERGE_STARTUP_PROFILE;
+      case 338: return GENERATE_PRIVACY_SANDBOX_PROGUARD_RULES;
       default: return null;
     }
   }

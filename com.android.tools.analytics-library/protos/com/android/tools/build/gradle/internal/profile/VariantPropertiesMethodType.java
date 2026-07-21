@@ -669,6 +669,22 @@ public enum VariantPropertiesMethodType
    * <code>NO_COMPRESS = 153;</code>
    */
   NO_COMPRESS(153),
+  /**
+   * <code>VIEW_BINDING = 154;</code>
+   */
+  VIEW_BINDING(154),
+  /**
+   * <code>DATA_BINDING = 155;</code>
+   */
+  DATA_BINDING(155),
+  /**
+   * <code>DEVICE_TESTS = 156;</code>
+   */
+  DEVICE_TESTS(156),
+  /**
+   * <code>DEFAULT_DEVICE_TEST = 157;</code>
+   */
+  DEFAULT_DEVICE_TEST(157),
   UNRECOGNIZED(-1),
   ;
 
@@ -1332,6 +1348,22 @@ public enum VariantPropertiesMethodType
    * <code>NO_COMPRESS = 153;</code>
    */
   public static final int NO_COMPRESS_VALUE = 153;
+  /**
+   * <code>VIEW_BINDING = 154;</code>
+   */
+  public static final int VIEW_BINDING_VALUE = 154;
+  /**
+   * <code>DATA_BINDING = 155;</code>
+   */
+  public static final int DATA_BINDING_VALUE = 155;
+  /**
+   * <code>DEVICE_TESTS = 156;</code>
+   */
+  public static final int DEVICE_TESTS_VALUE = 156;
+  /**
+   * <code>DEFAULT_DEVICE_TEST = 157;</code>
+   */
+  public static final int DEFAULT_DEVICE_TEST_VALUE = 157;
 
 
   public final int getNumber() {
@@ -1512,6 +1544,10 @@ public enum VariantPropertiesMethodType
       case 151: return IGNORE_ASSETS_PATTERN;
       case 152: return AAPT_ADDITIONAL_PARAMETERS;
       case 153: return NO_COMPRESS;
+      case 154: return VIEW_BINDING;
+      case 155: return DATA_BINDING;
+      case 156: return DEVICE_TESTS;
+      case 157: return DEFAULT_DEVICE_TEST;
       default: return null;
     }
   }

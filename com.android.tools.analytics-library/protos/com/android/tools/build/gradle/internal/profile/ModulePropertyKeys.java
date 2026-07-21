@@ -84,6 +84,10 @@ public enum ModulePropertyKeys
    * <code>MODULE_D8_DEX_STARTUP_OPTIMIZATION = 18;</code>
    */
   MODULE_D8_DEX_STARTUP_OPTIMIZATION(18),
+  /**
+   * <code>MODULE_ANDROID_PRIVACY_SANDBOX_R8_OPTIMIZATION = 19;</code>
+   */
+  MODULE_ANDROID_PRIVACY_SANDBOX_R8_OPTIMIZATION(19),
   UNRECOGNIZED(-1),
   ;
 
@@ -163,6 +167,10 @@ public enum ModulePropertyKeys
    * <code>MODULE_D8_DEX_STARTUP_OPTIMIZATION = 18;</code>
    */
   public static final int MODULE_D8_DEX_STARTUP_OPTIMIZATION_VALUE = 18;
+  /**
+   * <code>MODULE_ANDROID_PRIVACY_SANDBOX_R8_OPTIMIZATION = 19;</code>
+   */
+  public static final int MODULE_ANDROID_PRIVACY_SANDBOX_R8_OPTIMIZATION_VALUE = 19;
 
 
   public final int getNumber() {
@@ -208,6 +216,7 @@ public enum ModulePropertyKeys
       case 16: return MODULE_SCREENSHOT_TEST;
       case 17: return MODULE_FORCE_AOT_COMPILATION;
       case 18: return MODULE_D8_DEX_STARTUP_OPTIMIZATION;
+      case 19: return MODULE_ANDROID_PRIVACY_SANDBOX_R8_OPTIMIZATION;
       default: return null;
     }
   }
