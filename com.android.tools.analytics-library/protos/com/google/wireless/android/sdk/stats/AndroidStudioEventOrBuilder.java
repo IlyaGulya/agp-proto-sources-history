@@ -4210,4 +4210,31 @@ public interface AndroidStudioEventOrBuilder extends
    * <code>optional .android_studio.FastPreviewEvent fast_preview_event = 150;</code>
    */
   com.google.wireless.android.sdk.stats.FastPreviewEventOrBuilder getFastPreviewEventOrBuilder();
+
+  /**
+   * <pre>
+   * set when kind = MEMORY_USAGE_REPORT_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.MemoryUsageReportEvent memory_usage_report_event = 151;</code>
+   * @return Whether the memoryUsageReportEvent field is set.
+   */
+  boolean hasMemoryUsageReportEvent();
+  /**
+   * <pre>
+   * set when kind = MEMORY_USAGE_REPORT_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.MemoryUsageReportEvent memory_usage_report_event = 151;</code>
+   * @return The memoryUsageReportEvent.
+   */
+  com.google.wireless.android.sdk.stats.MemoryUsageReportEvent getMemoryUsageReportEvent();
+  /**
+   * <pre>
+   * set when kind = MEMORY_USAGE_REPORT_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.MemoryUsageReportEvent memory_usage_report_event = 151;</code>
+   */
+  com.google.wireless.android.sdk.stats.MemoryUsageReportEventOrBuilder getMemoryUsageReportEventOrBuilder();
 }

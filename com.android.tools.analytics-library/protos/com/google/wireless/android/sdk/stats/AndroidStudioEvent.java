@@ -1945,6 +1945,19 @@ private static final long serialVersionUID = 0L;
             bitField4_ |= 0x00008000;
             break;
           }
+          case 1210: {
+            com.google.wireless.android.sdk.stats.MemoryUsageReportEvent.Builder subBuilder = null;
+            if (((bitField4_ & 0x00010000) != 0)) {
+              subBuilder = memoryUsageReportEvent_.toBuilder();
+            }
+            memoryUsageReportEvent_ = input.readMessage(com.google.wireless.android.sdk.stats.MemoryUsageReportEvent.PARSER, extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(memoryUsageReportEvent_);
+              memoryUsageReportEvent_ = subBuilder.buildPartial();
+            }
+            bitField4_ |= 0x00010000;
+            break;
+          }
           default: {
             if (!parseUnknownField(
                 input, unknownFields, extensionRegistry, tag)) {
@@ -4563,6 +4576,14 @@ private static final long serialVersionUID = 0L;
      * <code>FAST_PREVIEW_EVENT = 263;</code>
      */
     FAST_PREVIEW_EVENT(263),
+    /**
+     * <pre>
+     * Event containing a per-component memory usage report
+     * </pre>
+     *
+     * <code>MEMORY_USAGE_REPORT_EVENT = 264;</code>
+     */
+    MEMORY_USAGE_REPORT_EVENT(264),
     ;
 
     /**
@@ -6503,6 +6524,14 @@ private static final long serialVersionUID = 0L;
      * <code>FAST_PREVIEW_EVENT = 263;</code>
      */
     public static final int FAST_PREVIEW_EVENT_VALUE = 263;
+    /**
+     * <pre>
+     * Event containing a per-component memory usage report
+     * </pre>
+     *
+     * <code>MEMORY_USAGE_REPORT_EVENT = 264;</code>
+     */
+    public static final int MEMORY_USAGE_REPORT_EVENT_VALUE = 264;
 
 
     public final int getNumber() {
@@ -6784,6 +6813,7 @@ private static final long serialVersionUID = 0L;
         case 261: return GOOGLE_LOGIN_EVENT;
         case 262: return DEVICE_MIRRORING_SESSION;
         case 263: return FAST_PREVIEW_EVENT;
+        case 264: return MEMORY_USAGE_REPORT_EVENT;
         default: return null;
       }
     }
@@ -21233,6 +21263,44 @@ private static final long serialVersionUID = 0L;
     return fastPreviewEvent_ == null ? com.google.wireless.android.sdk.stats.FastPreviewEvent.getDefaultInstance() : fastPreviewEvent_;
   }
 
+  public static final int MEMORY_USAGE_REPORT_EVENT_FIELD_NUMBER = 151;
+  private com.google.wireless.android.sdk.stats.MemoryUsageReportEvent memoryUsageReportEvent_;
+  /**
+   * <pre>
+   * set when kind = MEMORY_USAGE_REPORT_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.MemoryUsageReportEvent memory_usage_report_event = 151;</code>
+   * @return Whether the memoryUsageReportEvent field is set.
+   */
+  @java.lang.Override
+  public boolean hasMemoryUsageReportEvent() {
+    return ((bitField4_ & 0x00010000) != 0);
+  }
+  /**
+   * <pre>
+   * set when kind = MEMORY_USAGE_REPORT_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.MemoryUsageReportEvent memory_usage_report_event = 151;</code>
+   * @return The memoryUsageReportEvent.
+   */
+  @java.lang.Override
+  public com.google.wireless.android.sdk.stats.MemoryUsageReportEvent getMemoryUsageReportEvent() {
+    return memoryUsageReportEvent_ == null ? com.google.wireless.android.sdk.stats.MemoryUsageReportEvent.getDefaultInstance() : memoryUsageReportEvent_;
+  }
+  /**
+   * <pre>
+   * set when kind = MEMORY_USAGE_REPORT_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.MemoryUsageReportEvent memory_usage_report_event = 151;</code>
+   */
+  @java.lang.Override
+  public com.google.wireless.android.sdk.stats.MemoryUsageReportEventOrBuilder getMemoryUsageReportEventOrBuilder() {
+    return memoryUsageReportEvent_ == null ? com.google.wireless.android.sdk.stats.MemoryUsageReportEvent.getDefaultInstance() : memoryUsageReportEvent_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -21696,6 +21764,9 @@ private static final long serialVersionUID = 0L;
     }
     if (((bitField4_ & 0x00008000) != 0)) {
       output.writeMessage(150, getFastPreviewEvent());
+    }
+    if (((bitField4_ & 0x00010000) != 0)) {
+      output.writeMessage(151, getMemoryUsageReportEvent());
     }
     unknownFields.writeTo(output);
   }
@@ -22311,6 +22382,10 @@ private static final long serialVersionUID = 0L;
     if (((bitField4_ & 0x00008000) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(150, getFastPreviewEvent());
+    }
+    if (((bitField4_ & 0x00010000) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(151, getMemoryUsageReportEvent());
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -23048,6 +23123,11 @@ private static final long serialVersionUID = 0L;
       if (!getFastPreviewEvent()
           .equals(other.getFastPreviewEvent())) return false;
     }
+    if (hasMemoryUsageReportEvent() != other.hasMemoryUsageReportEvent()) return false;
+    if (hasMemoryUsageReportEvent()) {
+      if (!getMemoryUsageReportEvent()
+          .equals(other.getMemoryUsageReportEvent())) return false;
+    }
     if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
@@ -23661,6 +23741,10 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + FAST_PREVIEW_EVENT_FIELD_NUMBER;
       hash = (53 * hash) + getFastPreviewEvent().hashCode();
     }
+    if (hasMemoryUsageReportEvent()) {
+      hash = (37 * hash) + MEMORY_USAGE_REPORT_EVENT_FIELD_NUMBER;
+      hash = (53 * hash) + getMemoryUsageReportEvent().hashCode();
+    }
     hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -23916,6 +24000,7 @@ private static final long serialVersionUID = 0L;
         getGoogleLoginEventFieldBuilder();
         getDeviceMirroringSessionFieldBuilder();
         getFastPreviewEventFieldBuilder();
+        getMemoryUsageReportEventFieldBuilder();
       }
     }
     @java.lang.Override
@@ -24729,6 +24814,12 @@ private static final long serialVersionUID = 0L;
         fastPreviewEventBuilder_.clear();
       }
       bitField4_ = (bitField4_ & ~0x00200000);
+      if (memoryUsageReportEventBuilder_ == null) {
+        memoryUsageReportEvent_ = null;
+      } else {
+        memoryUsageReportEventBuilder_.clear();
+      }
+      bitField4_ = (bitField4_ & ~0x00400000);
       return this;
     }
 
@@ -25879,6 +25970,14 @@ private static final long serialVersionUID = 0L;
         }
         to_bitField4_ |= 0x00008000;
       }
+      if (((from_bitField4_ & 0x00400000) != 0)) {
+        if (memoryUsageReportEventBuilder_ == null) {
+          result.memoryUsageReportEvent_ = memoryUsageReportEvent_;
+        } else {
+          result.memoryUsageReportEvent_ = memoryUsageReportEventBuilder_.build();
+        }
+        to_bitField4_ |= 0x00010000;
+      }
       result.bitField0_ = to_bitField0_;
       result.bitField1_ = to_bitField1_;
       result.bitField2_ = to_bitField2_;
@@ -26485,6 +26584,9 @@ private static final long serialVersionUID = 0L;
       }
       if (other.hasFastPreviewEvent()) {
         mergeFastPreviewEvent(other.getFastPreviewEvent());
+      }
+      if (other.hasMemoryUsageReportEvent()) {
+        mergeMemoryUsageReportEvent(other.getMemoryUsageReportEvent());
       }
       this.mergeUnknownFields(other.unknownFields);
       onChanged();
@@ -49141,6 +49243,162 @@ private static final long serialVersionUID = 0L;
         fastPreviewEvent_ = null;
       }
       return fastPreviewEventBuilder_;
+    }
+
+    private com.google.wireless.android.sdk.stats.MemoryUsageReportEvent memoryUsageReportEvent_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.MemoryUsageReportEvent, com.google.wireless.android.sdk.stats.MemoryUsageReportEvent.Builder, com.google.wireless.android.sdk.stats.MemoryUsageReportEventOrBuilder> memoryUsageReportEventBuilder_;
+    /**
+     * <pre>
+     * set when kind = MEMORY_USAGE_REPORT_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.MemoryUsageReportEvent memory_usage_report_event = 151;</code>
+     * @return Whether the memoryUsageReportEvent field is set.
+     */
+    public boolean hasMemoryUsageReportEvent() {
+      return ((bitField4_ & 0x00400000) != 0);
+    }
+    /**
+     * <pre>
+     * set when kind = MEMORY_USAGE_REPORT_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.MemoryUsageReportEvent memory_usage_report_event = 151;</code>
+     * @return The memoryUsageReportEvent.
+     */
+    public com.google.wireless.android.sdk.stats.MemoryUsageReportEvent getMemoryUsageReportEvent() {
+      if (memoryUsageReportEventBuilder_ == null) {
+        return memoryUsageReportEvent_ == null ? com.google.wireless.android.sdk.stats.MemoryUsageReportEvent.getDefaultInstance() : memoryUsageReportEvent_;
+      } else {
+        return memoryUsageReportEventBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * set when kind = MEMORY_USAGE_REPORT_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.MemoryUsageReportEvent memory_usage_report_event = 151;</code>
+     */
+    public Builder setMemoryUsageReportEvent(com.google.wireless.android.sdk.stats.MemoryUsageReportEvent value) {
+      if (memoryUsageReportEventBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        memoryUsageReportEvent_ = value;
+        onChanged();
+      } else {
+        memoryUsageReportEventBuilder_.setMessage(value);
+      }
+      bitField4_ |= 0x00400000;
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = MEMORY_USAGE_REPORT_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.MemoryUsageReportEvent memory_usage_report_event = 151;</code>
+     */
+    public Builder setMemoryUsageReportEvent(
+        com.google.wireless.android.sdk.stats.MemoryUsageReportEvent.Builder builderForValue) {
+      if (memoryUsageReportEventBuilder_ == null) {
+        memoryUsageReportEvent_ = builderForValue.build();
+        onChanged();
+      } else {
+        memoryUsageReportEventBuilder_.setMessage(builderForValue.build());
+      }
+      bitField4_ |= 0x00400000;
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = MEMORY_USAGE_REPORT_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.MemoryUsageReportEvent memory_usage_report_event = 151;</code>
+     */
+    public Builder mergeMemoryUsageReportEvent(com.google.wireless.android.sdk.stats.MemoryUsageReportEvent value) {
+      if (memoryUsageReportEventBuilder_ == null) {
+        if (((bitField4_ & 0x00400000) != 0) &&
+            memoryUsageReportEvent_ != null &&
+            memoryUsageReportEvent_ != com.google.wireless.android.sdk.stats.MemoryUsageReportEvent.getDefaultInstance()) {
+          memoryUsageReportEvent_ =
+            com.google.wireless.android.sdk.stats.MemoryUsageReportEvent.newBuilder(memoryUsageReportEvent_).mergeFrom(value).buildPartial();
+        } else {
+          memoryUsageReportEvent_ = value;
+        }
+        onChanged();
+      } else {
+        memoryUsageReportEventBuilder_.mergeFrom(value);
+      }
+      bitField4_ |= 0x00400000;
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = MEMORY_USAGE_REPORT_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.MemoryUsageReportEvent memory_usage_report_event = 151;</code>
+     */
+    public Builder clearMemoryUsageReportEvent() {
+      if (memoryUsageReportEventBuilder_ == null) {
+        memoryUsageReportEvent_ = null;
+        onChanged();
+      } else {
+        memoryUsageReportEventBuilder_.clear();
+      }
+      bitField4_ = (bitField4_ & ~0x00400000);
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = MEMORY_USAGE_REPORT_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.MemoryUsageReportEvent memory_usage_report_event = 151;</code>
+     */
+    public com.google.wireless.android.sdk.stats.MemoryUsageReportEvent.Builder getMemoryUsageReportEventBuilder() {
+      bitField4_ |= 0x00400000;
+      onChanged();
+      return getMemoryUsageReportEventFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * set when kind = MEMORY_USAGE_REPORT_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.MemoryUsageReportEvent memory_usage_report_event = 151;</code>
+     */
+    public com.google.wireless.android.sdk.stats.MemoryUsageReportEventOrBuilder getMemoryUsageReportEventOrBuilder() {
+      if (memoryUsageReportEventBuilder_ != null) {
+        return memoryUsageReportEventBuilder_.getMessageOrBuilder();
+      } else {
+        return memoryUsageReportEvent_ == null ?
+            com.google.wireless.android.sdk.stats.MemoryUsageReportEvent.getDefaultInstance() : memoryUsageReportEvent_;
+      }
+    }
+    /**
+     * <pre>
+     * set when kind = MEMORY_USAGE_REPORT_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.MemoryUsageReportEvent memory_usage_report_event = 151;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.MemoryUsageReportEvent, com.google.wireless.android.sdk.stats.MemoryUsageReportEvent.Builder, com.google.wireless.android.sdk.stats.MemoryUsageReportEventOrBuilder> 
+        getMemoryUsageReportEventFieldBuilder() {
+      if (memoryUsageReportEventBuilder_ == null) {
+        memoryUsageReportEventBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.wireless.android.sdk.stats.MemoryUsageReportEvent, com.google.wireless.android.sdk.stats.MemoryUsageReportEvent.Builder, com.google.wireless.android.sdk.stats.MemoryUsageReportEventOrBuilder>(
+                getMemoryUsageReportEvent(),
+                getParentForChildren(),
+                isClean());
+        memoryUsageReportEvent_ = null;
+      }
+      return memoryUsageReportEventBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(
