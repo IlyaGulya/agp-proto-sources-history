@@ -3785,4 +3785,58 @@ public interface AndroidStudioEventOrBuilder extends
    * <code>optional .android_studio.CoroutineDebuggerEvent coroutine_debugger_event = 136;</code>
    */
   com.google.wireless.android.sdk.stats.CoroutineDebuggerEventOrBuilder getCoroutineDebuggerEventOrBuilder();
+
+  /**
+   * <pre>
+   * set when kind = SPLITTING_TABS_USAGE
+   * </pre>
+   *
+   * <code>optional .android_studio.SplittingTabsUsageEvent splitting_tabs_usage_event = 137;</code>
+   * @return Whether the splittingTabsUsageEvent field is set.
+   */
+  boolean hasSplittingTabsUsageEvent();
+  /**
+   * <pre>
+   * set when kind = SPLITTING_TABS_USAGE
+   * </pre>
+   *
+   * <code>optional .android_studio.SplittingTabsUsageEvent splitting_tabs_usage_event = 137;</code>
+   * @return The splittingTabsUsageEvent.
+   */
+  com.google.wireless.android.sdk.stats.SplittingTabsUsageEvent getSplittingTabsUsageEvent();
+  /**
+   * <pre>
+   * set when kind = SPLITTING_TABS_USAGE
+   * </pre>
+   *
+   * <code>optional .android_studio.SplittingTabsUsageEvent splitting_tabs_usage_event = 137;</code>
+   */
+  com.google.wireless.android.sdk.stats.SplittingTabsUsageEventOrBuilder getSplittingTabsUsageEventOrBuilder();
+
+  /**
+   * <pre>
+   * set when kind = LOGCAT_USAGE
+   * </pre>
+   *
+   * <code>optional .android_studio.LogcatUsageEvent logcat_usage_event = 138;</code>
+   * @return Whether the logcatUsageEvent field is set.
+   */
+  boolean hasLogcatUsageEvent();
+  /**
+   * <pre>
+   * set when kind = LOGCAT_USAGE
+   * </pre>
+   *
+   * <code>optional .android_studio.LogcatUsageEvent logcat_usage_event = 138;</code>
+   * @return The logcatUsageEvent.
+   */
+  com.google.wireless.android.sdk.stats.LogcatUsageEvent getLogcatUsageEvent();
+  /**
+   * <pre>
+   * set when kind = LOGCAT_USAGE
+   * </pre>
+   *
+   * <code>optional .android_studio.LogcatUsageEvent logcat_usage_event = 138;</code>
+   */
+  com.google.wireless.android.sdk.stats.LogcatUsageEventOrBuilder getLogcatUsageEventOrBuilder();
 }

@@ -1769,6 +1769,32 @@ private static final long serialVersionUID = 0L;
             bitField4_ |= 0x00000008;
             break;
           }
+          case 1098: {
+            com.google.wireless.android.sdk.stats.SplittingTabsUsageEvent.Builder subBuilder = null;
+            if (((bitField4_ & 0x00000010) != 0)) {
+              subBuilder = splittingTabsUsageEvent_.toBuilder();
+            }
+            splittingTabsUsageEvent_ = input.readMessage(com.google.wireless.android.sdk.stats.SplittingTabsUsageEvent.PARSER, extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(splittingTabsUsageEvent_);
+              splittingTabsUsageEvent_ = subBuilder.buildPartial();
+            }
+            bitField4_ |= 0x00000010;
+            break;
+          }
+          case 1106: {
+            com.google.wireless.android.sdk.stats.LogcatUsageEvent.Builder subBuilder = null;
+            if (((bitField4_ & 0x00000020) != 0)) {
+              subBuilder = logcatUsageEvent_.toBuilder();
+            }
+            logcatUsageEvent_ = input.readMessage(com.google.wireless.android.sdk.stats.LogcatUsageEvent.PARSER, extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(logcatUsageEvent_);
+              logcatUsageEvent_ = subBuilder.buildPartial();
+            }
+            bitField4_ |= 0x00000020;
+            break;
+          }
           default: {
             if (!parseUnknownField(
                 input, unknownFields, extensionRegistry, tag)) {
@@ -2048,6 +2074,22 @@ private static final long serialVersionUID = 0L;
      * <code>PROJECT_SYSTEM = 27;</code>
      */
     PROJECT_SYSTEM(27),
+    /**
+     * <pre>
+     * The event is related to Splitting Tabs tool windows
+     * </pre>
+     *
+     * <code>SPLITTING_TABS = 28;</code>
+     */
+    SPLITTING_TABS(28),
+    /**
+     * <pre>
+     * The event is related to Logcat tool window
+     * </pre>
+     *
+     * <code>LOGCAT = 29;</code>
+     */
+    LOGCAT(29),
     ;
 
     /**
@@ -2275,6 +2317,22 @@ private static final long serialVersionUID = 0L;
      * <code>PROJECT_SYSTEM = 27;</code>
      */
     public static final int PROJECT_SYSTEM_VALUE = 27;
+    /**
+     * <pre>
+     * The event is related to Splitting Tabs tool windows
+     * </pre>
+     *
+     * <code>SPLITTING_TABS = 28;</code>
+     */
+    public static final int SPLITTING_TABS_VALUE = 28;
+    /**
+     * <pre>
+     * The event is related to Logcat tool window
+     * </pre>
+     *
+     * <code>LOGCAT = 29;</code>
+     */
+    public static final int LOGCAT_VALUE = 29;
 
 
     public final int getNumber() {
@@ -2325,6 +2383,8 @@ private static final long serialVersionUID = 0L;
         case 25: return APK_DEBUG;
         case 26: return DEPRECATED_CMAKE_EDITING_EVENT;
         case 27: return PROJECT_SYSTEM;
+        case 28: return SPLITTING_TABS;
+        case 29: return LOGCAT;
         default: return null;
       }
     }
@@ -4177,6 +4237,22 @@ private static final long serialVersionUID = 0L;
      * <code>COROUTINE_DEBUGGER = 244;</code>
      */
     COROUTINE_DEBUGGER(244),
+    /**
+     * <pre>
+     * Event related to usage of Splitting Tabs tool windows
+     * </pre>
+     *
+     * <code>SPLITTING_TABS_USAGE = 245;</code>
+     */
+    SPLITTING_TABS_USAGE(245),
+    /**
+     * <pre>
+     * Event related to usage of the Logcat tool window
+     * </pre>
+     *
+     * <code>LOGCAT_USAGE = 246;</code>
+     */
+    LOGCAT_USAGE(246),
     ;
 
     /**
@@ -5964,6 +6040,22 @@ private static final long serialVersionUID = 0L;
      * <code>COROUTINE_DEBUGGER = 244;</code>
      */
     public static final int COROUTINE_DEBUGGER_VALUE = 244;
+    /**
+     * <pre>
+     * Event related to usage of Splitting Tabs tool windows
+     * </pre>
+     *
+     * <code>SPLITTING_TABS_USAGE = 245;</code>
+     */
+    public static final int SPLITTING_TABS_USAGE_VALUE = 245;
+    /**
+     * <pre>
+     * Event related to usage of the Logcat tool window
+     * </pre>
+     *
+     * <code>LOGCAT_USAGE = 246;</code>
+     */
+    public static final int LOGCAT_USAGE_VALUE = 246;
 
 
     public final int getNumber() {
@@ -6226,6 +6318,8 @@ private static final long serialVersionUID = 0L;
         case 242: return OPTOUT_METRICS;
         case 243: return GRADLE_VERSION_CATALOG_DETECTOR;
         case 244: return COROUTINE_DEBUGGER;
+        case 245: return SPLITTING_TABS_USAGE;
+        case 246: return LOGCAT_USAGE;
         default: return null;
       }
     }
@@ -19636,6 +19730,76 @@ private static final long serialVersionUID = 0L;
     return coroutineDebuggerEvent_ == null ? com.google.wireless.android.sdk.stats.CoroutineDebuggerEvent.getDefaultInstance() : coroutineDebuggerEvent_;
   }
 
+  public static final int SPLITTING_TABS_USAGE_EVENT_FIELD_NUMBER = 137;
+  private com.google.wireless.android.sdk.stats.SplittingTabsUsageEvent splittingTabsUsageEvent_;
+  /**
+   * <pre>
+   * set when kind = SPLITTING_TABS_USAGE
+   * </pre>
+   *
+   * <code>optional .android_studio.SplittingTabsUsageEvent splitting_tabs_usage_event = 137;</code>
+   * @return Whether the splittingTabsUsageEvent field is set.
+   */
+  public boolean hasSplittingTabsUsageEvent() {
+    return ((bitField4_ & 0x00000010) != 0);
+  }
+  /**
+   * <pre>
+   * set when kind = SPLITTING_TABS_USAGE
+   * </pre>
+   *
+   * <code>optional .android_studio.SplittingTabsUsageEvent splitting_tabs_usage_event = 137;</code>
+   * @return The splittingTabsUsageEvent.
+   */
+  public com.google.wireless.android.sdk.stats.SplittingTabsUsageEvent getSplittingTabsUsageEvent() {
+    return splittingTabsUsageEvent_ == null ? com.google.wireless.android.sdk.stats.SplittingTabsUsageEvent.getDefaultInstance() : splittingTabsUsageEvent_;
+  }
+  /**
+   * <pre>
+   * set when kind = SPLITTING_TABS_USAGE
+   * </pre>
+   *
+   * <code>optional .android_studio.SplittingTabsUsageEvent splitting_tabs_usage_event = 137;</code>
+   */
+  public com.google.wireless.android.sdk.stats.SplittingTabsUsageEventOrBuilder getSplittingTabsUsageEventOrBuilder() {
+    return splittingTabsUsageEvent_ == null ? com.google.wireless.android.sdk.stats.SplittingTabsUsageEvent.getDefaultInstance() : splittingTabsUsageEvent_;
+  }
+
+  public static final int LOGCAT_USAGE_EVENT_FIELD_NUMBER = 138;
+  private com.google.wireless.android.sdk.stats.LogcatUsageEvent logcatUsageEvent_;
+  /**
+   * <pre>
+   * set when kind = LOGCAT_USAGE
+   * </pre>
+   *
+   * <code>optional .android_studio.LogcatUsageEvent logcat_usage_event = 138;</code>
+   * @return Whether the logcatUsageEvent field is set.
+   */
+  public boolean hasLogcatUsageEvent() {
+    return ((bitField4_ & 0x00000020) != 0);
+  }
+  /**
+   * <pre>
+   * set when kind = LOGCAT_USAGE
+   * </pre>
+   *
+   * <code>optional .android_studio.LogcatUsageEvent logcat_usage_event = 138;</code>
+   * @return The logcatUsageEvent.
+   */
+  public com.google.wireless.android.sdk.stats.LogcatUsageEvent getLogcatUsageEvent() {
+    return logcatUsageEvent_ == null ? com.google.wireless.android.sdk.stats.LogcatUsageEvent.getDefaultInstance() : logcatUsageEvent_;
+  }
+  /**
+   * <pre>
+   * set when kind = LOGCAT_USAGE
+   * </pre>
+   *
+   * <code>optional .android_studio.LogcatUsageEvent logcat_usage_event = 138;</code>
+   */
+  public com.google.wireless.android.sdk.stats.LogcatUsageEventOrBuilder getLogcatUsageEventOrBuilder() {
+    return logcatUsageEvent_ == null ? com.google.wireless.android.sdk.stats.LogcatUsageEvent.getDefaultInstance() : logcatUsageEvent_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -20057,6 +20221,12 @@ private static final long serialVersionUID = 0L;
     }
     if (((bitField4_ & 0x00000008) != 0)) {
       output.writeMessage(136, getCoroutineDebuggerEvent());
+    }
+    if (((bitField4_ & 0x00000010) != 0)) {
+      output.writeMessage(137, getSplittingTabsUsageEvent());
+    }
+    if (((bitField4_ & 0x00000020) != 0)) {
+      output.writeMessage(138, getLogcatUsageEvent());
     }
     unknownFields.writeTo(output);
   }
@@ -20608,6 +20778,14 @@ private static final long serialVersionUID = 0L;
     if (((bitField4_ & 0x00000008) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(136, getCoroutineDebuggerEvent());
+    }
+    if (((bitField4_ & 0x00000010) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(137, getSplittingTabsUsageEvent());
+    }
+    if (((bitField4_ & 0x00000020) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(138, getLogcatUsageEvent());
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -21281,6 +21459,16 @@ private static final long serialVersionUID = 0L;
       if (!getCoroutineDebuggerEvent()
           .equals(other.getCoroutineDebuggerEvent())) return false;
     }
+    if (hasSplittingTabsUsageEvent() != other.hasSplittingTabsUsageEvent()) return false;
+    if (hasSplittingTabsUsageEvent()) {
+      if (!getSplittingTabsUsageEvent()
+          .equals(other.getSplittingTabsUsageEvent())) return false;
+    }
+    if (hasLogcatUsageEvent() != other.hasLogcatUsageEvent()) return false;
+    if (hasLogcatUsageEvent()) {
+      if (!getLogcatUsageEvent()
+          .equals(other.getLogcatUsageEvent())) return false;
+    }
     if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
@@ -21838,6 +22026,14 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + COROUTINE_DEBUGGER_EVENT_FIELD_NUMBER;
       hash = (53 * hash) + getCoroutineDebuggerEvent().hashCode();
     }
+    if (hasSplittingTabsUsageEvent()) {
+      hash = (37 * hash) + SPLITTING_TABS_USAGE_EVENT_FIELD_NUMBER;
+      hash = (53 * hash) + getSplittingTabsUsageEvent().hashCode();
+    }
+    if (hasLogcatUsageEvent()) {
+      hash = (37 * hash) + LOGCAT_USAGE_EVENT_FIELD_NUMBER;
+      hash = (53 * hash) + getLogcatUsageEvent().hashCode();
+    }
     hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -22081,6 +22277,8 @@ private static final long serialVersionUID = 0L;
         getOptOutOfMetricsFieldBuilder();
         getGradleVersionCatalogDetectorEventFieldBuilder();
         getCoroutineDebuggerEventFieldBuilder();
+        getSplittingTabsUsageEventFieldBuilder();
+        getLogcatUsageEventFieldBuilder();
       }
     }
     @java.lang.Override
@@ -22818,6 +23016,18 @@ private static final long serialVersionUID = 0L;
         coroutineDebuggerEventBuilder_.clear();
       }
       bitField4_ = (bitField4_ & ~0x00000080);
+      if (splittingTabsUsageEventBuilder_ == null) {
+        splittingTabsUsageEvent_ = null;
+      } else {
+        splittingTabsUsageEventBuilder_.clear();
+      }
+      bitField4_ = (bitField4_ & ~0x00000100);
+      if (logcatUsageEventBuilder_ == null) {
+        logcatUsageEvent_ = null;
+      } else {
+        logcatUsageEventBuilder_.clear();
+      }
+      bitField4_ = (bitField4_ & ~0x00000200);
       return this;
     }
 
@@ -23862,6 +24072,22 @@ private static final long serialVersionUID = 0L;
         }
         to_bitField4_ |= 0x00000008;
       }
+      if (((from_bitField4_ & 0x00000100) != 0)) {
+        if (splittingTabsUsageEventBuilder_ == null) {
+          result.splittingTabsUsageEvent_ = splittingTabsUsageEvent_;
+        } else {
+          result.splittingTabsUsageEvent_ = splittingTabsUsageEventBuilder_.build();
+        }
+        to_bitField4_ |= 0x00000010;
+      }
+      if (((from_bitField4_ & 0x00000200) != 0)) {
+        if (logcatUsageEventBuilder_ == null) {
+          result.logcatUsageEvent_ = logcatUsageEvent_;
+        } else {
+          result.logcatUsageEvent_ = logcatUsageEventBuilder_.build();
+        }
+        to_bitField4_ |= 0x00000020;
+      }
       result.bitField0_ = to_bitField0_;
       result.bitField1_ = to_bitField1_;
       result.bitField2_ = to_bitField2_;
@@ -24412,6 +24638,12 @@ private static final long serialVersionUID = 0L;
       }
       if (other.hasCoroutineDebuggerEvent()) {
         mergeCoroutineDebuggerEvent(other.getCoroutineDebuggerEvent());
+      }
+      if (other.hasSplittingTabsUsageEvent()) {
+        mergeSplittingTabsUsageEvent(other.getSplittingTabsUsageEvent());
+      }
+      if (other.hasLogcatUsageEvent()) {
+        mergeLogcatUsageEvent(other.getLogcatUsageEvent());
       }
       this.mergeUnknownFields(other.unknownFields);
       onChanged();
@@ -44845,6 +45077,318 @@ private static final long serialVersionUID = 0L;
         coroutineDebuggerEvent_ = null;
       }
       return coroutineDebuggerEventBuilder_;
+    }
+
+    private com.google.wireless.android.sdk.stats.SplittingTabsUsageEvent splittingTabsUsageEvent_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.SplittingTabsUsageEvent, com.google.wireless.android.sdk.stats.SplittingTabsUsageEvent.Builder, com.google.wireless.android.sdk.stats.SplittingTabsUsageEventOrBuilder> splittingTabsUsageEventBuilder_;
+    /**
+     * <pre>
+     * set when kind = SPLITTING_TABS_USAGE
+     * </pre>
+     *
+     * <code>optional .android_studio.SplittingTabsUsageEvent splitting_tabs_usage_event = 137;</code>
+     * @return Whether the splittingTabsUsageEvent field is set.
+     */
+    public boolean hasSplittingTabsUsageEvent() {
+      return ((bitField4_ & 0x00000100) != 0);
+    }
+    /**
+     * <pre>
+     * set when kind = SPLITTING_TABS_USAGE
+     * </pre>
+     *
+     * <code>optional .android_studio.SplittingTabsUsageEvent splitting_tabs_usage_event = 137;</code>
+     * @return The splittingTabsUsageEvent.
+     */
+    public com.google.wireless.android.sdk.stats.SplittingTabsUsageEvent getSplittingTabsUsageEvent() {
+      if (splittingTabsUsageEventBuilder_ == null) {
+        return splittingTabsUsageEvent_ == null ? com.google.wireless.android.sdk.stats.SplittingTabsUsageEvent.getDefaultInstance() : splittingTabsUsageEvent_;
+      } else {
+        return splittingTabsUsageEventBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * set when kind = SPLITTING_TABS_USAGE
+     * </pre>
+     *
+     * <code>optional .android_studio.SplittingTabsUsageEvent splitting_tabs_usage_event = 137;</code>
+     */
+    public Builder setSplittingTabsUsageEvent(com.google.wireless.android.sdk.stats.SplittingTabsUsageEvent value) {
+      if (splittingTabsUsageEventBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        splittingTabsUsageEvent_ = value;
+        onChanged();
+      } else {
+        splittingTabsUsageEventBuilder_.setMessage(value);
+      }
+      bitField4_ |= 0x00000100;
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = SPLITTING_TABS_USAGE
+     * </pre>
+     *
+     * <code>optional .android_studio.SplittingTabsUsageEvent splitting_tabs_usage_event = 137;</code>
+     */
+    public Builder setSplittingTabsUsageEvent(
+        com.google.wireless.android.sdk.stats.SplittingTabsUsageEvent.Builder builderForValue) {
+      if (splittingTabsUsageEventBuilder_ == null) {
+        splittingTabsUsageEvent_ = builderForValue.build();
+        onChanged();
+      } else {
+        splittingTabsUsageEventBuilder_.setMessage(builderForValue.build());
+      }
+      bitField4_ |= 0x00000100;
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = SPLITTING_TABS_USAGE
+     * </pre>
+     *
+     * <code>optional .android_studio.SplittingTabsUsageEvent splitting_tabs_usage_event = 137;</code>
+     */
+    public Builder mergeSplittingTabsUsageEvent(com.google.wireless.android.sdk.stats.SplittingTabsUsageEvent value) {
+      if (splittingTabsUsageEventBuilder_ == null) {
+        if (((bitField4_ & 0x00000100) != 0) &&
+            splittingTabsUsageEvent_ != null &&
+            splittingTabsUsageEvent_ != com.google.wireless.android.sdk.stats.SplittingTabsUsageEvent.getDefaultInstance()) {
+          splittingTabsUsageEvent_ =
+            com.google.wireless.android.sdk.stats.SplittingTabsUsageEvent.newBuilder(splittingTabsUsageEvent_).mergeFrom(value).buildPartial();
+        } else {
+          splittingTabsUsageEvent_ = value;
+        }
+        onChanged();
+      } else {
+        splittingTabsUsageEventBuilder_.mergeFrom(value);
+      }
+      bitField4_ |= 0x00000100;
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = SPLITTING_TABS_USAGE
+     * </pre>
+     *
+     * <code>optional .android_studio.SplittingTabsUsageEvent splitting_tabs_usage_event = 137;</code>
+     */
+    public Builder clearSplittingTabsUsageEvent() {
+      if (splittingTabsUsageEventBuilder_ == null) {
+        splittingTabsUsageEvent_ = null;
+        onChanged();
+      } else {
+        splittingTabsUsageEventBuilder_.clear();
+      }
+      bitField4_ = (bitField4_ & ~0x00000100);
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = SPLITTING_TABS_USAGE
+     * </pre>
+     *
+     * <code>optional .android_studio.SplittingTabsUsageEvent splitting_tabs_usage_event = 137;</code>
+     */
+    public com.google.wireless.android.sdk.stats.SplittingTabsUsageEvent.Builder getSplittingTabsUsageEventBuilder() {
+      bitField4_ |= 0x00000100;
+      onChanged();
+      return getSplittingTabsUsageEventFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * set when kind = SPLITTING_TABS_USAGE
+     * </pre>
+     *
+     * <code>optional .android_studio.SplittingTabsUsageEvent splitting_tabs_usage_event = 137;</code>
+     */
+    public com.google.wireless.android.sdk.stats.SplittingTabsUsageEventOrBuilder getSplittingTabsUsageEventOrBuilder() {
+      if (splittingTabsUsageEventBuilder_ != null) {
+        return splittingTabsUsageEventBuilder_.getMessageOrBuilder();
+      } else {
+        return splittingTabsUsageEvent_ == null ?
+            com.google.wireless.android.sdk.stats.SplittingTabsUsageEvent.getDefaultInstance() : splittingTabsUsageEvent_;
+      }
+    }
+    /**
+     * <pre>
+     * set when kind = SPLITTING_TABS_USAGE
+     * </pre>
+     *
+     * <code>optional .android_studio.SplittingTabsUsageEvent splitting_tabs_usage_event = 137;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.SplittingTabsUsageEvent, com.google.wireless.android.sdk.stats.SplittingTabsUsageEvent.Builder, com.google.wireless.android.sdk.stats.SplittingTabsUsageEventOrBuilder> 
+        getSplittingTabsUsageEventFieldBuilder() {
+      if (splittingTabsUsageEventBuilder_ == null) {
+        splittingTabsUsageEventBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.wireless.android.sdk.stats.SplittingTabsUsageEvent, com.google.wireless.android.sdk.stats.SplittingTabsUsageEvent.Builder, com.google.wireless.android.sdk.stats.SplittingTabsUsageEventOrBuilder>(
+                getSplittingTabsUsageEvent(),
+                getParentForChildren(),
+                isClean());
+        splittingTabsUsageEvent_ = null;
+      }
+      return splittingTabsUsageEventBuilder_;
+    }
+
+    private com.google.wireless.android.sdk.stats.LogcatUsageEvent logcatUsageEvent_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.LogcatUsageEvent, com.google.wireless.android.sdk.stats.LogcatUsageEvent.Builder, com.google.wireless.android.sdk.stats.LogcatUsageEventOrBuilder> logcatUsageEventBuilder_;
+    /**
+     * <pre>
+     * set when kind = LOGCAT_USAGE
+     * </pre>
+     *
+     * <code>optional .android_studio.LogcatUsageEvent logcat_usage_event = 138;</code>
+     * @return Whether the logcatUsageEvent field is set.
+     */
+    public boolean hasLogcatUsageEvent() {
+      return ((bitField4_ & 0x00000200) != 0);
+    }
+    /**
+     * <pre>
+     * set when kind = LOGCAT_USAGE
+     * </pre>
+     *
+     * <code>optional .android_studio.LogcatUsageEvent logcat_usage_event = 138;</code>
+     * @return The logcatUsageEvent.
+     */
+    public com.google.wireless.android.sdk.stats.LogcatUsageEvent getLogcatUsageEvent() {
+      if (logcatUsageEventBuilder_ == null) {
+        return logcatUsageEvent_ == null ? com.google.wireless.android.sdk.stats.LogcatUsageEvent.getDefaultInstance() : logcatUsageEvent_;
+      } else {
+        return logcatUsageEventBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * set when kind = LOGCAT_USAGE
+     * </pre>
+     *
+     * <code>optional .android_studio.LogcatUsageEvent logcat_usage_event = 138;</code>
+     */
+    public Builder setLogcatUsageEvent(com.google.wireless.android.sdk.stats.LogcatUsageEvent value) {
+      if (logcatUsageEventBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        logcatUsageEvent_ = value;
+        onChanged();
+      } else {
+        logcatUsageEventBuilder_.setMessage(value);
+      }
+      bitField4_ |= 0x00000200;
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = LOGCAT_USAGE
+     * </pre>
+     *
+     * <code>optional .android_studio.LogcatUsageEvent logcat_usage_event = 138;</code>
+     */
+    public Builder setLogcatUsageEvent(
+        com.google.wireless.android.sdk.stats.LogcatUsageEvent.Builder builderForValue) {
+      if (logcatUsageEventBuilder_ == null) {
+        logcatUsageEvent_ = builderForValue.build();
+        onChanged();
+      } else {
+        logcatUsageEventBuilder_.setMessage(builderForValue.build());
+      }
+      bitField4_ |= 0x00000200;
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = LOGCAT_USAGE
+     * </pre>
+     *
+     * <code>optional .android_studio.LogcatUsageEvent logcat_usage_event = 138;</code>
+     */
+    public Builder mergeLogcatUsageEvent(com.google.wireless.android.sdk.stats.LogcatUsageEvent value) {
+      if (logcatUsageEventBuilder_ == null) {
+        if (((bitField4_ & 0x00000200) != 0) &&
+            logcatUsageEvent_ != null &&
+            logcatUsageEvent_ != com.google.wireless.android.sdk.stats.LogcatUsageEvent.getDefaultInstance()) {
+          logcatUsageEvent_ =
+            com.google.wireless.android.sdk.stats.LogcatUsageEvent.newBuilder(logcatUsageEvent_).mergeFrom(value).buildPartial();
+        } else {
+          logcatUsageEvent_ = value;
+        }
+        onChanged();
+      } else {
+        logcatUsageEventBuilder_.mergeFrom(value);
+      }
+      bitField4_ |= 0x00000200;
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = LOGCAT_USAGE
+     * </pre>
+     *
+     * <code>optional .android_studio.LogcatUsageEvent logcat_usage_event = 138;</code>
+     */
+    public Builder clearLogcatUsageEvent() {
+      if (logcatUsageEventBuilder_ == null) {
+        logcatUsageEvent_ = null;
+        onChanged();
+      } else {
+        logcatUsageEventBuilder_.clear();
+      }
+      bitField4_ = (bitField4_ & ~0x00000200);
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = LOGCAT_USAGE
+     * </pre>
+     *
+     * <code>optional .android_studio.LogcatUsageEvent logcat_usage_event = 138;</code>
+     */
+    public com.google.wireless.android.sdk.stats.LogcatUsageEvent.Builder getLogcatUsageEventBuilder() {
+      bitField4_ |= 0x00000200;
+      onChanged();
+      return getLogcatUsageEventFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * set when kind = LOGCAT_USAGE
+     * </pre>
+     *
+     * <code>optional .android_studio.LogcatUsageEvent logcat_usage_event = 138;</code>
+     */
+    public com.google.wireless.android.sdk.stats.LogcatUsageEventOrBuilder getLogcatUsageEventOrBuilder() {
+      if (logcatUsageEventBuilder_ != null) {
+        return logcatUsageEventBuilder_.getMessageOrBuilder();
+      } else {
+        return logcatUsageEvent_ == null ?
+            com.google.wireless.android.sdk.stats.LogcatUsageEvent.getDefaultInstance() : logcatUsageEvent_;
+      }
+    }
+    /**
+     * <pre>
+     * set when kind = LOGCAT_USAGE
+     * </pre>
+     *
+     * <code>optional .android_studio.LogcatUsageEvent logcat_usage_event = 138;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.LogcatUsageEvent, com.google.wireless.android.sdk.stats.LogcatUsageEvent.Builder, com.google.wireless.android.sdk.stats.LogcatUsageEventOrBuilder> 
+        getLogcatUsageEventFieldBuilder() {
+      if (logcatUsageEventBuilder_ == null) {
+        logcatUsageEventBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.wireless.android.sdk.stats.LogcatUsageEvent, com.google.wireless.android.sdk.stats.LogcatUsageEvent.Builder, com.google.wireless.android.sdk.stats.LogcatUsageEventOrBuilder>(
+                getLogcatUsageEvent(),
+                getParentForChildren(),
+                isClean());
+        logcatUsageEvent_ = null;
+      }
+      return logcatUsageEventBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(
