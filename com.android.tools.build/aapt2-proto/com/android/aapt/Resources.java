@@ -14993,6 +14993,50 @@ public final class Resources {
      */
     com.android.aapt.Resources.ConfigValueOrBuilder getFlagDisabledConfigValueOrBuilder(
         int index);
+
+    /**
+     * <pre>
+     * The set of values defined for this entry which are behind read/write flags
+     * </pre>
+     *
+     * <code>repeated .aapt.pb.ConfigValue readwrite_flag_config_value = 9;</code>
+     */
+    java.util.List<com.android.aapt.Resources.ConfigValue> 
+        getReadwriteFlagConfigValueList();
+    /**
+     * <pre>
+     * The set of values defined for this entry which are behind read/write flags
+     * </pre>
+     *
+     * <code>repeated .aapt.pb.ConfigValue readwrite_flag_config_value = 9;</code>
+     */
+    com.android.aapt.Resources.ConfigValue getReadwriteFlagConfigValue(int index);
+    /**
+     * <pre>
+     * The set of values defined for this entry which are behind read/write flags
+     * </pre>
+     *
+     * <code>repeated .aapt.pb.ConfigValue readwrite_flag_config_value = 9;</code>
+     */
+    int getReadwriteFlagConfigValueCount();
+    /**
+     * <pre>
+     * The set of values defined for this entry which are behind read/write flags
+     * </pre>
+     *
+     * <code>repeated .aapt.pb.ConfigValue readwrite_flag_config_value = 9;</code>
+     */
+    java.util.List<? extends com.android.aapt.Resources.ConfigValueOrBuilder> 
+        getReadwriteFlagConfigValueOrBuilderList();
+    /**
+     * <pre>
+     * The set of values defined for this entry which are behind read/write flags
+     * </pre>
+     *
+     * <code>repeated .aapt.pb.ConfigValue readwrite_flag_config_value = 9;</code>
+     */
+    com.android.aapt.Resources.ConfigValueOrBuilder getReadwriteFlagConfigValueOrBuilder(
+        int index);
   }
   /**
    * <pre>
@@ -15016,6 +15060,7 @@ public final class Resources {
       name_ = "";
       configValue_ = java.util.Collections.emptyList();
       flagDisabledConfigValue_ = java.util.Collections.emptyList();
+      readwriteFlagConfigValue_ = java.util.Collections.emptyList();
     }
 
     @java.lang.Override
@@ -15416,6 +15461,67 @@ public final class Resources {
       return flagDisabledConfigValue_.get(index);
     }
 
+    public static final int READWRITE_FLAG_CONFIG_VALUE_FIELD_NUMBER = 9;
+    @SuppressWarnings("serial")
+    private java.util.List<com.android.aapt.Resources.ConfigValue> readwriteFlagConfigValue_;
+    /**
+     * <pre>
+     * The set of values defined for this entry which are behind read/write flags
+     * </pre>
+     *
+     * <code>repeated .aapt.pb.ConfigValue readwrite_flag_config_value = 9;</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.android.aapt.Resources.ConfigValue> getReadwriteFlagConfigValueList() {
+      return readwriteFlagConfigValue_;
+    }
+    /**
+     * <pre>
+     * The set of values defined for this entry which are behind read/write flags
+     * </pre>
+     *
+     * <code>repeated .aapt.pb.ConfigValue readwrite_flag_config_value = 9;</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.android.aapt.Resources.ConfigValueOrBuilder> 
+        getReadwriteFlagConfigValueOrBuilderList() {
+      return readwriteFlagConfigValue_;
+    }
+    /**
+     * <pre>
+     * The set of values defined for this entry which are behind read/write flags
+     * </pre>
+     *
+     * <code>repeated .aapt.pb.ConfigValue readwrite_flag_config_value = 9;</code>
+     */
+    @java.lang.Override
+    public int getReadwriteFlagConfigValueCount() {
+      return readwriteFlagConfigValue_.size();
+    }
+    /**
+     * <pre>
+     * The set of values defined for this entry which are behind read/write flags
+     * </pre>
+     *
+     * <code>repeated .aapt.pb.ConfigValue readwrite_flag_config_value = 9;</code>
+     */
+    @java.lang.Override
+    public com.android.aapt.Resources.ConfigValue getReadwriteFlagConfigValue(int index) {
+      return readwriteFlagConfigValue_.get(index);
+    }
+    /**
+     * <pre>
+     * The set of values defined for this entry which are behind read/write flags
+     * </pre>
+     *
+     * <code>repeated .aapt.pb.ConfigValue readwrite_flag_config_value = 9;</code>
+     */
+    @java.lang.Override
+    public com.android.aapt.Resources.ConfigValueOrBuilder getReadwriteFlagConfigValueOrBuilder(
+        int index) {
+      return readwriteFlagConfigValue_.get(index);
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -15453,6 +15559,9 @@ public final class Resources {
       }
       for (int i = 0; i < flagDisabledConfigValue_.size(); i++) {
         output.writeMessage(8, flagDisabledConfigValue_.get(i));
+      }
+      for (int i = 0; i < readwriteFlagConfigValue_.size(); i++) {
+        output.writeMessage(9, readwriteFlagConfigValue_.get(i));
       }
       getUnknownFields().writeTo(output);
     }
@@ -15493,6 +15602,10 @@ public final class Resources {
       for (int i = 0; i < flagDisabledConfigValue_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(8, flagDisabledConfigValue_.get(i));
+      }
+      for (int i = 0; i < readwriteFlagConfigValue_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(9, readwriteFlagConfigValue_.get(i));
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -15540,6 +15653,8 @@ public final class Resources {
       }
       if (!getFlagDisabledConfigValueList()
           .equals(other.getFlagDisabledConfigValueList())) return false;
+      if (!getReadwriteFlagConfigValueList()
+          .equals(other.getReadwriteFlagConfigValueList())) return false;
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -15580,6 +15695,10 @@ public final class Resources {
       if (getFlagDisabledConfigValueCount() > 0) {
         hash = (37 * hash) + FLAG_DISABLED_CONFIG_VALUE_FIELD_NUMBER;
         hash = (53 * hash) + getFlagDisabledConfigValueList().hashCode();
+      }
+      if (getReadwriteFlagConfigValueCount() > 0) {
+        hash = (37 * hash) + READWRITE_FLAG_CONFIG_VALUE_FIELD_NUMBER;
+        hash = (53 * hash) + getReadwriteFlagConfigValueList().hashCode();
       }
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
@@ -15756,6 +15875,13 @@ public final class Resources {
           flagDisabledConfigValueBuilder_.clear();
         }
         bitField0_ = (bitField0_ & ~0x00000080);
+        if (readwriteFlagConfigValueBuilder_ == null) {
+          readwriteFlagConfigValue_ = java.util.Collections.emptyList();
+        } else {
+          readwriteFlagConfigValue_ = null;
+          readwriteFlagConfigValueBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000100);
         return this;
       }
 
@@ -15806,6 +15932,15 @@ public final class Resources {
           result.flagDisabledConfigValue_ = flagDisabledConfigValue_;
         } else {
           result.flagDisabledConfigValue_ = flagDisabledConfigValueBuilder_.build();
+        }
+        if (readwriteFlagConfigValueBuilder_ == null) {
+          if (((bitField0_ & 0x00000100) != 0)) {
+            readwriteFlagConfigValue_ = java.util.Collections.unmodifiableList(readwriteFlagConfigValue_);
+            bitField0_ = (bitField0_ & ~0x00000100);
+          }
+          result.readwriteFlagConfigValue_ = readwriteFlagConfigValue_;
+        } else {
+          result.readwriteFlagConfigValue_ = readwriteFlagConfigValueBuilder_.build();
         }
       }
 
@@ -15925,6 +16060,32 @@ public final class Resources {
             }
           }
         }
+        if (readwriteFlagConfigValueBuilder_ == null) {
+          if (!other.readwriteFlagConfigValue_.isEmpty()) {
+            if (readwriteFlagConfigValue_.isEmpty()) {
+              readwriteFlagConfigValue_ = other.readwriteFlagConfigValue_;
+              bitField0_ = (bitField0_ & ~0x00000100);
+            } else {
+              ensureReadwriteFlagConfigValueIsMutable();
+              readwriteFlagConfigValue_.addAll(other.readwriteFlagConfigValue_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.readwriteFlagConfigValue_.isEmpty()) {
+            if (readwriteFlagConfigValueBuilder_.isEmpty()) {
+              readwriteFlagConfigValueBuilder_.dispose();
+              readwriteFlagConfigValueBuilder_ = null;
+              readwriteFlagConfigValue_ = other.readwriteFlagConfigValue_;
+              bitField0_ = (bitField0_ & ~0x00000100);
+              readwriteFlagConfigValueBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getReadwriteFlagConfigValueFieldBuilder() : null;
+            } else {
+              readwriteFlagConfigValueBuilder_.addAllMessages(other.readwriteFlagConfigValue_);
+            }
+          }
+        }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
@@ -16017,6 +16178,19 @@ public final class Resources {
                 }
                 break;
               } // case 66
+              case 74: {
+                com.android.aapt.Resources.ConfigValue m =
+                    input.readMessage(
+                        com.android.aapt.Resources.ConfigValue.parser(),
+                        extensionRegistry);
+                if (readwriteFlagConfigValueBuilder_ == null) {
+                  ensureReadwriteFlagConfigValueIsMutable();
+                  readwriteFlagConfigValue_.add(m);
+                } else {
+                  readwriteFlagConfigValueBuilder_.addMessage(m);
+                }
+                break;
+              } // case 74
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -17582,6 +17756,318 @@ public final class Resources {
           flagDisabledConfigValue_ = null;
         }
         return flagDisabledConfigValueBuilder_;
+      }
+
+      private java.util.List<com.android.aapt.Resources.ConfigValue> readwriteFlagConfigValue_ =
+        java.util.Collections.emptyList();
+      private void ensureReadwriteFlagConfigValueIsMutable() {
+        if (!((bitField0_ & 0x00000100) != 0)) {
+          readwriteFlagConfigValue_ = new java.util.ArrayList<com.android.aapt.Resources.ConfigValue>(readwriteFlagConfigValue_);
+          bitField0_ |= 0x00000100;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.android.aapt.Resources.ConfigValue, com.android.aapt.Resources.ConfigValue.Builder, com.android.aapt.Resources.ConfigValueOrBuilder> readwriteFlagConfigValueBuilder_;
+
+      /**
+       * <pre>
+       * The set of values defined for this entry which are behind read/write flags
+       * </pre>
+       *
+       * <code>repeated .aapt.pb.ConfigValue readwrite_flag_config_value = 9;</code>
+       */
+      public java.util.List<com.android.aapt.Resources.ConfigValue> getReadwriteFlagConfigValueList() {
+        if (readwriteFlagConfigValueBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(readwriteFlagConfigValue_);
+        } else {
+          return readwriteFlagConfigValueBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * The set of values defined for this entry which are behind read/write flags
+       * </pre>
+       *
+       * <code>repeated .aapt.pb.ConfigValue readwrite_flag_config_value = 9;</code>
+       */
+      public int getReadwriteFlagConfigValueCount() {
+        if (readwriteFlagConfigValueBuilder_ == null) {
+          return readwriteFlagConfigValue_.size();
+        } else {
+          return readwriteFlagConfigValueBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * The set of values defined for this entry which are behind read/write flags
+       * </pre>
+       *
+       * <code>repeated .aapt.pb.ConfigValue readwrite_flag_config_value = 9;</code>
+       */
+      public com.android.aapt.Resources.ConfigValue getReadwriteFlagConfigValue(int index) {
+        if (readwriteFlagConfigValueBuilder_ == null) {
+          return readwriteFlagConfigValue_.get(index);
+        } else {
+          return readwriteFlagConfigValueBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * The set of values defined for this entry which are behind read/write flags
+       * </pre>
+       *
+       * <code>repeated .aapt.pb.ConfigValue readwrite_flag_config_value = 9;</code>
+       */
+      public Builder setReadwriteFlagConfigValue(
+          int index, com.android.aapt.Resources.ConfigValue value) {
+        if (readwriteFlagConfigValueBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureReadwriteFlagConfigValueIsMutable();
+          readwriteFlagConfigValue_.set(index, value);
+          onChanged();
+        } else {
+          readwriteFlagConfigValueBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * The set of values defined for this entry which are behind read/write flags
+       * </pre>
+       *
+       * <code>repeated .aapt.pb.ConfigValue readwrite_flag_config_value = 9;</code>
+       */
+      public Builder setReadwriteFlagConfigValue(
+          int index, com.android.aapt.Resources.ConfigValue.Builder builderForValue) {
+        if (readwriteFlagConfigValueBuilder_ == null) {
+          ensureReadwriteFlagConfigValueIsMutable();
+          readwriteFlagConfigValue_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          readwriteFlagConfigValueBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * The set of values defined for this entry which are behind read/write flags
+       * </pre>
+       *
+       * <code>repeated .aapt.pb.ConfigValue readwrite_flag_config_value = 9;</code>
+       */
+      public Builder addReadwriteFlagConfigValue(com.android.aapt.Resources.ConfigValue value) {
+        if (readwriteFlagConfigValueBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureReadwriteFlagConfigValueIsMutable();
+          readwriteFlagConfigValue_.add(value);
+          onChanged();
+        } else {
+          readwriteFlagConfigValueBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * The set of values defined for this entry which are behind read/write flags
+       * </pre>
+       *
+       * <code>repeated .aapt.pb.ConfigValue readwrite_flag_config_value = 9;</code>
+       */
+      public Builder addReadwriteFlagConfigValue(
+          int index, com.android.aapt.Resources.ConfigValue value) {
+        if (readwriteFlagConfigValueBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureReadwriteFlagConfigValueIsMutable();
+          readwriteFlagConfigValue_.add(index, value);
+          onChanged();
+        } else {
+          readwriteFlagConfigValueBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * The set of values defined for this entry which are behind read/write flags
+       * </pre>
+       *
+       * <code>repeated .aapt.pb.ConfigValue readwrite_flag_config_value = 9;</code>
+       */
+      public Builder addReadwriteFlagConfigValue(
+          com.android.aapt.Resources.ConfigValue.Builder builderForValue) {
+        if (readwriteFlagConfigValueBuilder_ == null) {
+          ensureReadwriteFlagConfigValueIsMutable();
+          readwriteFlagConfigValue_.add(builderForValue.build());
+          onChanged();
+        } else {
+          readwriteFlagConfigValueBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * The set of values defined for this entry which are behind read/write flags
+       * </pre>
+       *
+       * <code>repeated .aapt.pb.ConfigValue readwrite_flag_config_value = 9;</code>
+       */
+      public Builder addReadwriteFlagConfigValue(
+          int index, com.android.aapt.Resources.ConfigValue.Builder builderForValue) {
+        if (readwriteFlagConfigValueBuilder_ == null) {
+          ensureReadwriteFlagConfigValueIsMutable();
+          readwriteFlagConfigValue_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          readwriteFlagConfigValueBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * The set of values defined for this entry which are behind read/write flags
+       * </pre>
+       *
+       * <code>repeated .aapt.pb.ConfigValue readwrite_flag_config_value = 9;</code>
+       */
+      public Builder addAllReadwriteFlagConfigValue(
+          java.lang.Iterable<? extends com.android.aapt.Resources.ConfigValue> values) {
+        if (readwriteFlagConfigValueBuilder_ == null) {
+          ensureReadwriteFlagConfigValueIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, readwriteFlagConfigValue_);
+          onChanged();
+        } else {
+          readwriteFlagConfigValueBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * The set of values defined for this entry which are behind read/write flags
+       * </pre>
+       *
+       * <code>repeated .aapt.pb.ConfigValue readwrite_flag_config_value = 9;</code>
+       */
+      public Builder clearReadwriteFlagConfigValue() {
+        if (readwriteFlagConfigValueBuilder_ == null) {
+          readwriteFlagConfigValue_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000100);
+          onChanged();
+        } else {
+          readwriteFlagConfigValueBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * The set of values defined for this entry which are behind read/write flags
+       * </pre>
+       *
+       * <code>repeated .aapt.pb.ConfigValue readwrite_flag_config_value = 9;</code>
+       */
+      public Builder removeReadwriteFlagConfigValue(int index) {
+        if (readwriteFlagConfigValueBuilder_ == null) {
+          ensureReadwriteFlagConfigValueIsMutable();
+          readwriteFlagConfigValue_.remove(index);
+          onChanged();
+        } else {
+          readwriteFlagConfigValueBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * The set of values defined for this entry which are behind read/write flags
+       * </pre>
+       *
+       * <code>repeated .aapt.pb.ConfigValue readwrite_flag_config_value = 9;</code>
+       */
+      public com.android.aapt.Resources.ConfigValue.Builder getReadwriteFlagConfigValueBuilder(
+          int index) {
+        return getReadwriteFlagConfigValueFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * The set of values defined for this entry which are behind read/write flags
+       * </pre>
+       *
+       * <code>repeated .aapt.pb.ConfigValue readwrite_flag_config_value = 9;</code>
+       */
+      public com.android.aapt.Resources.ConfigValueOrBuilder getReadwriteFlagConfigValueOrBuilder(
+          int index) {
+        if (readwriteFlagConfigValueBuilder_ == null) {
+          return readwriteFlagConfigValue_.get(index);  } else {
+          return readwriteFlagConfigValueBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * The set of values defined for this entry which are behind read/write flags
+       * </pre>
+       *
+       * <code>repeated .aapt.pb.ConfigValue readwrite_flag_config_value = 9;</code>
+       */
+      public java.util.List<? extends com.android.aapt.Resources.ConfigValueOrBuilder> 
+           getReadwriteFlagConfigValueOrBuilderList() {
+        if (readwriteFlagConfigValueBuilder_ != null) {
+          return readwriteFlagConfigValueBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(readwriteFlagConfigValue_);
+        }
+      }
+      /**
+       * <pre>
+       * The set of values defined for this entry which are behind read/write flags
+       * </pre>
+       *
+       * <code>repeated .aapt.pb.ConfigValue readwrite_flag_config_value = 9;</code>
+       */
+      public com.android.aapt.Resources.ConfigValue.Builder addReadwriteFlagConfigValueBuilder() {
+        return getReadwriteFlagConfigValueFieldBuilder().addBuilder(
+            com.android.aapt.Resources.ConfigValue.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * The set of values defined for this entry which are behind read/write flags
+       * </pre>
+       *
+       * <code>repeated .aapt.pb.ConfigValue readwrite_flag_config_value = 9;</code>
+       */
+      public com.android.aapt.Resources.ConfigValue.Builder addReadwriteFlagConfigValueBuilder(
+          int index) {
+        return getReadwriteFlagConfigValueFieldBuilder().addBuilder(
+            index, com.android.aapt.Resources.ConfigValue.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * The set of values defined for this entry which are behind read/write flags
+       * </pre>
+       *
+       * <code>repeated .aapt.pb.ConfigValue readwrite_flag_config_value = 9;</code>
+       */
+      public java.util.List<com.android.aapt.Resources.ConfigValue.Builder> 
+           getReadwriteFlagConfigValueBuilderList() {
+        return getReadwriteFlagConfigValueFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.android.aapt.Resources.ConfigValue, com.android.aapt.Resources.ConfigValue.Builder, com.android.aapt.Resources.ConfigValueOrBuilder> 
+          getReadwriteFlagConfigValueFieldBuilder() {
+        if (readwriteFlagConfigValueBuilder_ == null) {
+          readwriteFlagConfigValueBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.android.aapt.Resources.ConfigValue, com.android.aapt.Resources.ConfigValue.Builder, com.android.aapt.Resources.ConfigValueOrBuilder>(
+                  readwriteFlagConfigValue_,
+                  ((bitField0_ & 0x00000100) != 0),
+                  getParentForChildren(),
+                  isClean());
+          readwriteFlagConfigValue_ = null;
+        }
+        return readwriteFlagConfigValueBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -30276,14 +30762,14 @@ public final class Resources {
     /**
      * <code>float dimension_value_deprecated = 4 [deprecated = true];</code>
      * @deprecated aapt.pb.Primitive.dimension_value_deprecated is deprecated.
-     *     See Resources.proto;l=423
+     *     See Resources.proto;l=426
      * @return Whether the dimensionValueDeprecated field is set.
      */
     @java.lang.Deprecated boolean hasDimensionValueDeprecated();
     /**
      * <code>float dimension_value_deprecated = 4 [deprecated = true];</code>
      * @deprecated aapt.pb.Primitive.dimension_value_deprecated is deprecated.
-     *     See Resources.proto;l=423
+     *     See Resources.proto;l=426
      * @return The dimensionValueDeprecated.
      */
     @java.lang.Deprecated float getDimensionValueDeprecated();
@@ -30291,14 +30777,14 @@ public final class Resources {
     /**
      * <code>float fraction_value_deprecated = 5 [deprecated = true];</code>
      * @deprecated aapt.pb.Primitive.fraction_value_deprecated is deprecated.
-     *     See Resources.proto;l=424
+     *     See Resources.proto;l=427
      * @return Whether the fractionValueDeprecated field is set.
      */
     @java.lang.Deprecated boolean hasFractionValueDeprecated();
     /**
      * <code>float fraction_value_deprecated = 5 [deprecated = true];</code>
      * @deprecated aapt.pb.Primitive.fraction_value_deprecated is deprecated.
-     *     See Resources.proto;l=424
+     *     See Resources.proto;l=427
      * @return The fractionValueDeprecated.
      */
     @java.lang.Deprecated float getFractionValueDeprecated();
@@ -31413,7 +31899,7 @@ public final class Resources {
     /**
      * <code>float dimension_value_deprecated = 4 [deprecated = true];</code>
      * @deprecated aapt.pb.Primitive.dimension_value_deprecated is deprecated.
-     *     See Resources.proto;l=423
+     *     See Resources.proto;l=426
      * @return Whether the dimensionValueDeprecated field is set.
      */
     @java.lang.Override
@@ -31423,7 +31909,7 @@ public final class Resources {
     /**
      * <code>float dimension_value_deprecated = 4 [deprecated = true];</code>
      * @deprecated aapt.pb.Primitive.dimension_value_deprecated is deprecated.
-     *     See Resources.proto;l=423
+     *     See Resources.proto;l=426
      * @return The dimensionValueDeprecated.
      */
     @java.lang.Override
@@ -31438,7 +31924,7 @@ public final class Resources {
     /**
      * <code>float fraction_value_deprecated = 5 [deprecated = true];</code>
      * @deprecated aapt.pb.Primitive.fraction_value_deprecated is deprecated.
-     *     See Resources.proto;l=424
+     *     See Resources.proto;l=427
      * @return Whether the fractionValueDeprecated field is set.
      */
     @java.lang.Override
@@ -31448,7 +31934,7 @@ public final class Resources {
     /**
      * <code>float fraction_value_deprecated = 5 [deprecated = true];</code>
      * @deprecated aapt.pb.Primitive.fraction_value_deprecated is deprecated.
-     *     See Resources.proto;l=424
+     *     See Resources.proto;l=427
      * @return The fractionValueDeprecated.
      */
     @java.lang.Override
@@ -32861,7 +33347,7 @@ public final class Resources {
       /**
        * <code>float dimension_value_deprecated = 4 [deprecated = true];</code>
        * @deprecated aapt.pb.Primitive.dimension_value_deprecated is deprecated.
-       *     See Resources.proto;l=423
+       *     See Resources.proto;l=426
        * @return Whether the dimensionValueDeprecated field is set.
        */
       @java.lang.Deprecated public boolean hasDimensionValueDeprecated() {
@@ -32870,7 +33356,7 @@ public final class Resources {
       /**
        * <code>float dimension_value_deprecated = 4 [deprecated = true];</code>
        * @deprecated aapt.pb.Primitive.dimension_value_deprecated is deprecated.
-       *     See Resources.proto;l=423
+       *     See Resources.proto;l=426
        * @return The dimensionValueDeprecated.
        */
       @java.lang.Deprecated public float getDimensionValueDeprecated() {
@@ -32882,7 +33368,7 @@ public final class Resources {
       /**
        * <code>float dimension_value_deprecated = 4 [deprecated = true];</code>
        * @deprecated aapt.pb.Primitive.dimension_value_deprecated is deprecated.
-       *     See Resources.proto;l=423
+       *     See Resources.proto;l=426
        * @param value The dimensionValueDeprecated to set.
        * @return This builder for chaining.
        */
@@ -32896,7 +33382,7 @@ public final class Resources {
       /**
        * <code>float dimension_value_deprecated = 4 [deprecated = true];</code>
        * @deprecated aapt.pb.Primitive.dimension_value_deprecated is deprecated.
-       *     See Resources.proto;l=423
+       *     See Resources.proto;l=426
        * @return This builder for chaining.
        */
       @java.lang.Deprecated public Builder clearDimensionValueDeprecated() {
@@ -32911,7 +33397,7 @@ public final class Resources {
       /**
        * <code>float fraction_value_deprecated = 5 [deprecated = true];</code>
        * @deprecated aapt.pb.Primitive.fraction_value_deprecated is deprecated.
-       *     See Resources.proto;l=424
+       *     See Resources.proto;l=427
        * @return Whether the fractionValueDeprecated field is set.
        */
       @java.lang.Deprecated public boolean hasFractionValueDeprecated() {
@@ -32920,7 +33406,7 @@ public final class Resources {
       /**
        * <code>float fraction_value_deprecated = 5 [deprecated = true];</code>
        * @deprecated aapt.pb.Primitive.fraction_value_deprecated is deprecated.
-       *     See Resources.proto;l=424
+       *     See Resources.proto;l=427
        * @return The fractionValueDeprecated.
        */
       @java.lang.Deprecated public float getFractionValueDeprecated() {
@@ -32932,7 +33418,7 @@ public final class Resources {
       /**
        * <code>float fraction_value_deprecated = 5 [deprecated = true];</code>
        * @deprecated aapt.pb.Primitive.fraction_value_deprecated is deprecated.
-       *     See Resources.proto;l=424
+       *     See Resources.proto;l=427
        * @param value The fractionValueDeprecated to set.
        * @return This builder for chaining.
        */
@@ -32946,7 +33432,7 @@ public final class Resources {
       /**
        * <code>float fraction_value_deprecated = 5 [deprecated = true];</code>
        * @deprecated aapt.pb.Primitive.fraction_value_deprecated is deprecated.
-       *     See Resources.proto;l=424
+       *     See Resources.proto;l=427
        * @return This builder for chaining.
        */
       @java.lang.Deprecated public Builder clearFractionValueDeprecated() {
@@ -55072,7 +55558,7 @@ public final class Resources {
       "\022\007\n\003ODM\020\006\022\007\n\003OEM\020\007\022\t\n\005ACTOR\020\010\022\024\n\020CONFIG_" +
       "SIGNATURE\020\t\">\n\010StagedId\022\037\n\006source\030\001 \001(\0132" +
       "\017.aapt.pb.Source\022\021\n\tstaged_id\030\002 \001(\r\"\025\n\007E" +
-      "ntryId\022\n\n\002id\030\001 \001(\r\"\310\002\n\005Entry\022\"\n\010entry_id" +
+      "ntryId\022\n\n\002id\030\001 \001(\r\"\203\003\n\005Entry\022\"\n\010entry_id" +
       "\030\001 \001(\0132\020.aapt.pb.EntryId\022\014\n\004name\030\002 \001(\t\022\'" +
       "\n\nvisibility\030\003 \001(\0132\023.aapt.pb.Visibility\022" +
       "$\n\tallow_new\030\004 \001(\0132\021.aapt.pb.AllowNew\0222\n" +
@@ -55080,113 +55566,115 @@ public final class Resources {
       "yableItem\022*\n\014config_value\030\006 \003(\0132\024.aapt.p" +
       "b.ConfigValue\022$\n\tstaged_id\030\007 \001(\0132\021.aapt." +
       "pb.StagedId\0228\n\032flag_disabled_config_valu" +
-      "e\030\010 \003(\0132\024.aapt.pb.ConfigValue\"Z\n\013ConfigV" +
-      "alue\022&\n\006config\030\001 \001(\0132\026.aapt.pb.Configura" +
-      "tion\022\035\n\005value\030\002 \001(\0132\016.aapt.pb.ValueJ\004\010\003\020" +
-      "\004\"\241\001\n\005Value\022\037\n\006source\030\001 \001(\0132\017.aapt.pb.So" +
-      "urce\022\017\n\007comment\030\002 \001(\t\022\014\n\004weak\030\003 \001(\010\022\035\n\004i" +
-      "tem\030\004 \001(\0132\r.aapt.pb.ItemH\000\0220\n\016compound_v" +
-      "alue\030\005 \001(\0132\026.aapt.pb.CompoundValueH\000B\007\n\005" +
-      "value\"\313\002\n\004Item\022!\n\003ref\030\001 \001(\0132\022.aapt.pb.Re" +
-      "ferenceH\000\022\036\n\003str\030\002 \001(\0132\017.aapt.pb.StringH" +
-      "\000\022%\n\007raw_str\030\003 \001(\0132\022.aapt.pb.RawStringH\000" +
-      "\022+\n\nstyled_str\030\004 \001(\0132\025.aapt.pb.StyledStr" +
-      "ingH\000\022&\n\004file\030\005 \001(\0132\026.aapt.pb.FileRefere" +
-      "nceH\000\022\031\n\002id\030\006 \001(\0132\013.aapt.pb.IdH\000\022\"\n\004prim" +
-      "\030\007 \001(\0132\022.aapt.pb.PrimitiveH\000\022\023\n\013flag_sta" +
-      "tus\030\010 \001(\r\022\024\n\014flag_negated\030\t \001(\010\022\021\n\tflag_" +
-      "name\030\n \001(\tB\007\n\005value\"\255\002\n\rCompoundValue\022\"\n" +
-      "\004attr\030\001 \001(\0132\022.aapt.pb.AttributeH\000\022\037\n\005sty" +
-      "le\030\002 \001(\0132\016.aapt.pb.StyleH\000\022\'\n\tstyleable\030" +
-      "\003 \001(\0132\022.aapt.pb.StyleableH\000\022\037\n\005array\030\004 \001" +
-      "(\0132\016.aapt.pb.ArrayH\000\022!\n\006plural\030\005 \001(\0132\017.a" +
-      "apt.pb.PluralH\000\022#\n\005macro\030\006 \001(\0132\022.aapt.pb" +
-      ".MacroBodyH\000\022\023\n\013flag_status\030\007 \001(\r\022\024\n\014fla" +
-      "g_negated\030\010 \001(\010\022\021\n\tflag_name\030\t \001(\tB\007\n\005va" +
-      "lue\"\030\n\007Boolean\022\r\n\005value\030\001 \001(\010\"\320\001\n\tRefere" +
-      "nce\022%\n\004type\030\001 \001(\0162\027.aapt.pb.Reference.Ty" +
-      "pe\022\n\n\002id\030\002 \001(\r\022\014\n\004name\030\003 \001(\t\022\017\n\007private\030" +
-      "\004 \001(\010\022$\n\nis_dynamic\030\005 \001(\0132\020.aapt.pb.Bool" +
-      "ean\022\022\n\ntype_flags\030\006 \001(\r\022\021\n\tallow_raw\030\007 \001" +
-      "(\010\"$\n\004Type\022\r\n\tREFERENCE\020\000\022\r\n\tATTRIBUTE\020\001" +
-      "\"\004\n\002Id\"\027\n\006String\022\r\n\005value\030\001 \001(\t\"\032\n\tRawSt" +
-      "ring\022\r\n\005value\030\001 \001(\t\"\203\001\n\014StyledString\022\r\n\005" +
-      "value\030\001 \001(\t\022(\n\004span\030\002 \003(\0132\032.aapt.pb.Styl" +
-      "edString.Span\032:\n\004Span\022\013\n\003tag\030\001 \001(\t\022\022\n\nfi" +
-      "rst_char\030\002 \001(\r\022\021\n\tlast_char\030\003 \001(\r\"\205\001\n\rFi" +
-      "leReference\022\014\n\004path\030\001 \001(\t\022)\n\004type\030\002 \001(\0162" +
-      "\033.aapt.pb.FileReference.Type\";\n\004Type\022\013\n\007" +
-      "UNKNOWN\020\000\022\007\n\003PNG\020\001\022\016\n\nBINARY_XML\020\002\022\r\n\tPR" +
-      "OTO_XML\020\003\"\203\004\n\tPrimitive\0221\n\nnull_value\030\001 " +
-      "\001(\0132\033.aapt.pb.Primitive.NullTypeH\000\0223\n\013em" +
-      "pty_value\030\002 \001(\0132\034.aapt.pb.Primitive.Empt" +
-      "yTypeH\000\022\025\n\013float_value\030\003 \001(\002H\000\022\031\n\017dimens" +
-      "ion_value\030\r \001(\rH\000\022\030\n\016fraction_value\030\016 \001(" +
-      "\rH\000\022\033\n\021int_decimal_value\030\006 \001(\005H\000\022\037\n\025int_" +
-      "hexadecimal_value\030\007 \001(\rH\000\022\027\n\rboolean_val" +
-      "ue\030\010 \001(\010H\000\022\033\n\021color_argb8_value\030\t \001(\rH\000\022" +
-      "\032\n\020color_rgb8_value\030\n \001(\rH\000\022\033\n\021color_arg" +
-      "b4_value\030\013 \001(\rH\000\022\032\n\020color_rgb4_value\030\014 \001" +
-      "(\rH\000\022(\n\032dimension_value_deprecated\030\004 \001(\002" +
-      "B\002\030\001H\000\022\'\n\031fraction_value_deprecated\030\005 \001(" +
-      "\002B\002\030\001H\000\032\n\n\010NullType\032\013\n\tEmptyTypeB\r\n\013oneo" +
-      "f_value\"\220\003\n\tAttribute\022\024\n\014format_flags\030\001 " +
-      "\001(\r\022\017\n\007min_int\030\002 \001(\005\022\017\n\007max_int\030\003 \001(\005\022)\n" +
-      "\006symbol\030\004 \003(\0132\031.aapt.pb.Attribute.Symbol" +
-      "\032y\n\006Symbol\022\037\n\006source\030\001 \001(\0132\017.aapt.pb.Sou" +
-      "rce\022\017\n\007comment\030\002 \001(\t\022 \n\004name\030\003 \001(\0132\022.aap" +
-      "t.pb.Reference\022\r\n\005value\030\004 \001(\r\022\014\n\004type\030\005 " +
-      "\001(\r\"\244\001\n\013FormatFlags\022\010\n\004NONE\020\000\022\t\n\003ANY\020\377\377\003" +
-      "\022\r\n\tREFERENCE\020\001\022\n\n\006STRING\020\002\022\013\n\007INTEGER\020\004" +
-      "\022\013\n\007BOOLEAN\020\010\022\t\n\005COLOR\020\020\022\t\n\005FLOAT\020 \022\r\n\tD" +
-      "IMENSION\020@\022\r\n\010FRACTION\020\200\001\022\n\n\004ENUM\020\200\200\004\022\013\n" +
-      "\005FLAGS\020\200\200\010\"\361\001\n\005Style\022\"\n\006parent\030\001 \001(\0132\022.a" +
-      "apt.pb.Reference\022&\n\rparent_source\030\002 \001(\0132" +
-      "\017.aapt.pb.Source\022#\n\005entry\030\003 \003(\0132\024.aapt.p" +
-      "b.Style.Entry\032w\n\005Entry\022\037\n\006source\030\001 \001(\0132\017" +
-      ".aapt.pb.Source\022\017\n\007comment\030\002 \001(\t\022\037\n\003key\030" +
-      "\003 \001(\0132\022.aapt.pb.Reference\022\033\n\004item\030\004 \001(\0132" +
-      "\r.aapt.pb.Item\"\221\001\n\tStyleable\022\'\n\005entry\030\001 " +
-      "\003(\0132\030.aapt.pb.Styleable.Entry\032[\n\005Entry\022\037" +
-      "\n\006source\030\001 \001(\0132\017.aapt.pb.Source\022\017\n\007comme" +
-      "nt\030\002 \001(\t\022 \n\004attr\030\003 \001(\0132\022.aapt.pb.Referen" +
-      "ce\"\212\001\n\005Array\022\'\n\007element\030\001 \003(\0132\026.aapt.pb." +
-      "Array.Element\032X\n\007Element\022\037\n\006source\030\001 \001(\013" +
-      "2\017.aapt.pb.Source\022\017\n\007comment\030\002 \001(\t\022\033\n\004it" +
-      "em\030\003 \001(\0132\r.aapt.pb.Item\"\357\001\n\006Plural\022$\n\005en" +
-      "try\030\001 \003(\0132\025.aapt.pb.Plural.Entry\032|\n\005Entr" +
+      "e\030\010 \003(\0132\024.aapt.pb.ConfigValue\0229\n\033readwri" +
+      "te_flag_config_value\030\t \003(\0132\024.aapt.pb.Con" +
+      "figValue\"Z\n\013ConfigValue\022&\n\006config\030\001 \001(\0132" +
+      "\026.aapt.pb.Configuration\022\035\n\005value\030\002 \001(\0132\016" +
+      ".aapt.pb.ValueJ\004\010\003\020\004\"\241\001\n\005Value\022\037\n\006source" +
+      "\030\001 \001(\0132\017.aapt.pb.Source\022\017\n\007comment\030\002 \001(\t" +
+      "\022\014\n\004weak\030\003 \001(\010\022\035\n\004item\030\004 \001(\0132\r.aapt.pb.I" +
+      "temH\000\0220\n\016compound_value\030\005 \001(\0132\026.aapt.pb." +
+      "CompoundValueH\000B\007\n\005value\"\313\002\n\004Item\022!\n\003ref" +
+      "\030\001 \001(\0132\022.aapt.pb.ReferenceH\000\022\036\n\003str\030\002 \001(" +
+      "\0132\017.aapt.pb.StringH\000\022%\n\007raw_str\030\003 \001(\0132\022." +
+      "aapt.pb.RawStringH\000\022+\n\nstyled_str\030\004 \001(\0132" +
+      "\025.aapt.pb.StyledStringH\000\022&\n\004file\030\005 \001(\0132\026" +
+      ".aapt.pb.FileReferenceH\000\022\031\n\002id\030\006 \001(\0132\013.a" +
+      "apt.pb.IdH\000\022\"\n\004prim\030\007 \001(\0132\022.aapt.pb.Prim" +
+      "itiveH\000\022\023\n\013flag_status\030\010 \001(\r\022\024\n\014flag_neg" +
+      "ated\030\t \001(\010\022\021\n\tflag_name\030\n \001(\tB\007\n\005value\"\255" +
+      "\002\n\rCompoundValue\022\"\n\004attr\030\001 \001(\0132\022.aapt.pb" +
+      ".AttributeH\000\022\037\n\005style\030\002 \001(\0132\016.aapt.pb.St" +
+      "yleH\000\022\'\n\tstyleable\030\003 \001(\0132\022.aapt.pb.Style" +
+      "ableH\000\022\037\n\005array\030\004 \001(\0132\016.aapt.pb.ArrayH\000\022" +
+      "!\n\006plural\030\005 \001(\0132\017.aapt.pb.PluralH\000\022#\n\005ma" +
+      "cro\030\006 \001(\0132\022.aapt.pb.MacroBodyH\000\022\023\n\013flag_" +
+      "status\030\007 \001(\r\022\024\n\014flag_negated\030\010 \001(\010\022\021\n\tfl" +
+      "ag_name\030\t \001(\tB\007\n\005value\"\030\n\007Boolean\022\r\n\005val" +
+      "ue\030\001 \001(\010\"\320\001\n\tReference\022%\n\004type\030\001 \001(\0162\027.a" +
+      "apt.pb.Reference.Type\022\n\n\002id\030\002 \001(\r\022\014\n\004nam" +
+      "e\030\003 \001(\t\022\017\n\007private\030\004 \001(\010\022$\n\nis_dynamic\030\005" +
+      " \001(\0132\020.aapt.pb.Boolean\022\022\n\ntype_flags\030\006 \001" +
+      "(\r\022\021\n\tallow_raw\030\007 \001(\010\"$\n\004Type\022\r\n\tREFEREN" +
+      "CE\020\000\022\r\n\tATTRIBUTE\020\001\"\004\n\002Id\"\027\n\006String\022\r\n\005v" +
+      "alue\030\001 \001(\t\"\032\n\tRawString\022\r\n\005value\030\001 \001(\t\"\203" +
+      "\001\n\014StyledString\022\r\n\005value\030\001 \001(\t\022(\n\004span\030\002" +
+      " \003(\0132\032.aapt.pb.StyledString.Span\032:\n\004Span" +
+      "\022\013\n\003tag\030\001 \001(\t\022\022\n\nfirst_char\030\002 \001(\r\022\021\n\tlas" +
+      "t_char\030\003 \001(\r\"\205\001\n\rFileReference\022\014\n\004path\030\001" +
+      " \001(\t\022)\n\004type\030\002 \001(\0162\033.aapt.pb.FileReferen" +
+      "ce.Type\";\n\004Type\022\013\n\007UNKNOWN\020\000\022\007\n\003PNG\020\001\022\016\n" +
+      "\nBINARY_XML\020\002\022\r\n\tPROTO_XML\020\003\"\203\004\n\tPrimiti" +
+      "ve\0221\n\nnull_value\030\001 \001(\0132\033.aapt.pb.Primiti" +
+      "ve.NullTypeH\000\0223\n\013empty_value\030\002 \001(\0132\034.aap" +
+      "t.pb.Primitive.EmptyTypeH\000\022\025\n\013float_valu" +
+      "e\030\003 \001(\002H\000\022\031\n\017dimension_value\030\r \001(\rH\000\022\030\n\016" +
+      "fraction_value\030\016 \001(\rH\000\022\033\n\021int_decimal_va" +
+      "lue\030\006 \001(\005H\000\022\037\n\025int_hexadecimal_value\030\007 \001" +
+      "(\rH\000\022\027\n\rboolean_value\030\010 \001(\010H\000\022\033\n\021color_a" +
+      "rgb8_value\030\t \001(\rH\000\022\032\n\020color_rgb8_value\030\n" +
+      " \001(\rH\000\022\033\n\021color_argb4_value\030\013 \001(\rH\000\022\032\n\020c" +
+      "olor_rgb4_value\030\014 \001(\rH\000\022(\n\032dimension_val" +
+      "ue_deprecated\030\004 \001(\002B\002\030\001H\000\022\'\n\031fraction_va" +
+      "lue_deprecated\030\005 \001(\002B\002\030\001H\000\032\n\n\010NullType\032\013" +
+      "\n\tEmptyTypeB\r\n\013oneof_value\"\220\003\n\tAttribute" +
+      "\022\024\n\014format_flags\030\001 \001(\r\022\017\n\007min_int\030\002 \001(\005\022" +
+      "\017\n\007max_int\030\003 \001(\005\022)\n\006symbol\030\004 \003(\0132\031.aapt." +
+      "pb.Attribute.Symbol\032y\n\006Symbol\022\037\n\006source\030" +
+      "\001 \001(\0132\017.aapt.pb.Source\022\017\n\007comment\030\002 \001(\t\022" +
+      " \n\004name\030\003 \001(\0132\022.aapt.pb.Reference\022\r\n\005val" +
+      "ue\030\004 \001(\r\022\014\n\004type\030\005 \001(\r\"\244\001\n\013FormatFlags\022\010" +
+      "\n\004NONE\020\000\022\t\n\003ANY\020\377\377\003\022\r\n\tREFERENCE\020\001\022\n\n\006ST" +
+      "RING\020\002\022\013\n\007INTEGER\020\004\022\013\n\007BOOLEAN\020\010\022\t\n\005COLO" +
+      "R\020\020\022\t\n\005FLOAT\020 \022\r\n\tDIMENSION\020@\022\r\n\010FRACTIO" +
+      "N\020\200\001\022\n\n\004ENUM\020\200\200\004\022\013\n\005FLAGS\020\200\200\010\"\361\001\n\005Style\022" +
+      "\"\n\006parent\030\001 \001(\0132\022.aapt.pb.Reference\022&\n\rp" +
+      "arent_source\030\002 \001(\0132\017.aapt.pb.Source\022#\n\005e" +
+      "ntry\030\003 \003(\0132\024.aapt.pb.Style.Entry\032w\n\005Entr" +
       "y\022\037\n\006source\030\001 \001(\0132\017.aapt.pb.Source\022\017\n\007co" +
-      "mment\030\002 \001(\t\022$\n\005arity\030\003 \001(\0162\025.aapt.pb.Plu" +
-      "ral.Arity\022\033\n\004item\030\004 \001(\0132\r.aapt.pb.Item\"A" +
-      "\n\005Arity\022\010\n\004ZERO\020\000\022\007\n\003ONE\020\001\022\007\n\003TWO\020\002\022\007\n\003F" +
-      "EW\020\003\022\010\n\004MANY\020\004\022\t\n\005OTHER\020\005\"r\n\007XmlNode\022&\n\007" +
-      "element\030\001 \001(\0132\023.aapt.pb.XmlElementH\000\022\016\n\004" +
-      "text\030\002 \001(\tH\000\022\'\n\006source\030\003 \001(\0132\027.aapt.pb.S" +
-      "ourcePositionB\006\n\004node\"\262\001\n\nXmlElement\0224\n\025" +
-      "namespace_declaration\030\001 \003(\0132\025.aapt.pb.Xm" +
-      "lNamespace\022\025\n\rnamespace_uri\030\002 \001(\t\022\014\n\004nam" +
-      "e\030\003 \001(\t\022(\n\tattribute\030\004 \003(\0132\025.aapt.pb.Xml" +
-      "Attribute\022\037\n\005child\030\005 \003(\0132\020.aapt.pb.XmlNo" +
-      "de\"T\n\014XmlNamespace\022\016\n\006prefix\030\001 \001(\t\022\013\n\003ur" +
-      "i\030\002 \001(\t\022\'\n\006source\030\003 \001(\0132\027.aapt.pb.Source" +
-      "Position\"\246\001\n\014XmlAttribute\022\025\n\rnamespace_u" +
-      "ri\030\001 \001(\t\022\014\n\004name\030\002 \001(\t\022\r\n\005value\030\003 \001(\t\022\'\n" +
-      "\006source\030\004 \001(\0132\027.aapt.pb.SourcePosition\022\023" +
-      "\n\013resource_id\030\005 \001(\r\022$\n\rcompiled_item\030\006 \001" +
-      "(\0132\r.aapt.pb.Item\"\347\001\n\tMacroBody\022\022\n\nraw_s" +
-      "tring\030\001 \001(\t\022*\n\014style_string\030\002 \001(\0132\024.aapt" +
-      ".pb.StyleString\022?\n\027untranslatable_sectio" +
-      "ns\030\003 \003(\0132\036.aapt.pb.UntranslatableSection" +
-      "\0220\n\017namespace_stack\030\004 \003(\0132\027.aapt.pb.Name" +
-      "spaceAlias\022\'\n\006source\030\005 \001(\0132\027.aapt.pb.Sou" +
-      "rcePosition\"J\n\016NamespaceAlias\022\016\n\006prefix\030" +
-      "\001 \001(\t\022\024\n\014package_name\030\002 \001(\t\022\022\n\nis_privat" +
-      "e\030\003 \001(\010\"\202\001\n\013StyleString\022\013\n\003str\030\001 \001(\t\022(\n\005" +
-      "spans\030\002 \003(\0132\031.aapt.pb.StyleString.Span\032<" +
-      "\n\004Span\022\014\n\004name\030\001 \001(\t\022\023\n\013start_index\030\002 \001(" +
-      "\r\022\021\n\tend_index\030\003 \001(\r\"?\n\025UntranslatableSe" +
-      "ction\022\023\n\013start_index\030\001 \001(\004\022\021\n\tend_index\030" +
-      "\002 \001(\004B\022\n\020com.android.aaptb\006proto3"
+      "mment\030\002 \001(\t\022\037\n\003key\030\003 \001(\0132\022.aapt.pb.Refer" +
+      "ence\022\033\n\004item\030\004 \001(\0132\r.aapt.pb.Item\"\221\001\n\tSt" +
+      "yleable\022\'\n\005entry\030\001 \003(\0132\030.aapt.pb.Styleab" +
+      "le.Entry\032[\n\005Entry\022\037\n\006source\030\001 \001(\0132\017.aapt" +
+      ".pb.Source\022\017\n\007comment\030\002 \001(\t\022 \n\004attr\030\003 \001(" +
+      "\0132\022.aapt.pb.Reference\"\212\001\n\005Array\022\'\n\007eleme" +
+      "nt\030\001 \003(\0132\026.aapt.pb.Array.Element\032X\n\007Elem" +
+      "ent\022\037\n\006source\030\001 \001(\0132\017.aapt.pb.Source\022\017\n\007" +
+      "comment\030\002 \001(\t\022\033\n\004item\030\003 \001(\0132\r.aapt.pb.It" +
+      "em\"\357\001\n\006Plural\022$\n\005entry\030\001 \003(\0132\025.aapt.pb.P" +
+      "lural.Entry\032|\n\005Entry\022\037\n\006source\030\001 \001(\0132\017.a" +
+      "apt.pb.Source\022\017\n\007comment\030\002 \001(\t\022$\n\005arity\030" +
+      "\003 \001(\0162\025.aapt.pb.Plural.Arity\022\033\n\004item\030\004 \001" +
+      "(\0132\r.aapt.pb.Item\"A\n\005Arity\022\010\n\004ZERO\020\000\022\007\n\003" +
+      "ONE\020\001\022\007\n\003TWO\020\002\022\007\n\003FEW\020\003\022\010\n\004MANY\020\004\022\t\n\005OTH" +
+      "ER\020\005\"r\n\007XmlNode\022&\n\007element\030\001 \001(\0132\023.aapt." +
+      "pb.XmlElementH\000\022\016\n\004text\030\002 \001(\tH\000\022\'\n\006sourc" +
+      "e\030\003 \001(\0132\027.aapt.pb.SourcePositionB\006\n\004node" +
+      "\"\262\001\n\nXmlElement\0224\n\025namespace_declaration" +
+      "\030\001 \003(\0132\025.aapt.pb.XmlNamespace\022\025\n\rnamespa" +
+      "ce_uri\030\002 \001(\t\022\014\n\004name\030\003 \001(\t\022(\n\tattribute\030" +
+      "\004 \003(\0132\025.aapt.pb.XmlAttribute\022\037\n\005child\030\005 " +
+      "\003(\0132\020.aapt.pb.XmlNode\"T\n\014XmlNamespace\022\016\n" +
+      "\006prefix\030\001 \001(\t\022\013\n\003uri\030\002 \001(\t\022\'\n\006source\030\003 \001" +
+      "(\0132\027.aapt.pb.SourcePosition\"\246\001\n\014XmlAttri" +
+      "bute\022\025\n\rnamespace_uri\030\001 \001(\t\022\014\n\004name\030\002 \001(" +
+      "\t\022\r\n\005value\030\003 \001(\t\022\'\n\006source\030\004 \001(\0132\027.aapt." +
+      "pb.SourcePosition\022\023\n\013resource_id\030\005 \001(\r\022$" +
+      "\n\rcompiled_item\030\006 \001(\0132\r.aapt.pb.Item\"\347\001\n" +
+      "\tMacroBody\022\022\n\nraw_string\030\001 \001(\t\022*\n\014style_" +
+      "string\030\002 \001(\0132\024.aapt.pb.StyleString\022?\n\027un" +
+      "translatable_sections\030\003 \003(\0132\036.aapt.pb.Un" +
+      "translatableSection\0220\n\017namespace_stack\030\004" +
+      " \003(\0132\027.aapt.pb.NamespaceAlias\022\'\n\006source\030" +
+      "\005 \001(\0132\027.aapt.pb.SourcePosition\"J\n\016Namesp" +
+      "aceAlias\022\016\n\006prefix\030\001 \001(\t\022\024\n\014package_name" +
+      "\030\002 \001(\t\022\022\n\nis_private\030\003 \001(\010\"\202\001\n\013StyleStri" +
+      "ng\022\013\n\003str\030\001 \001(\t\022(\n\005spans\030\002 \003(\0132\031.aapt.pb" +
+      ".StyleString.Span\032<\n\004Span\022\014\n\004name\030\001 \001(\t\022" +
+      "\023\n\013start_index\030\002 \001(\r\022\021\n\tend_index\030\003 \001(\r\"" +
+      "?\n\025UntranslatableSection\022\023\n\013start_index\030" +
+      "\001 \001(\004\022\021\n\tend_index\030\002 \001(\004B\022\n\020com.android." +
+      "aaptb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -55294,7 +55782,7 @@ public final class Resources {
     internal_static_aapt_pb_Entry_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_aapt_pb_Entry_descriptor,
-        new java.lang.String[] { "EntryId", "Name", "Visibility", "AllowNew", "OverlayableItem", "ConfigValue", "StagedId", "FlagDisabledConfigValue", });
+        new java.lang.String[] { "EntryId", "Name", "Visibility", "AllowNew", "OverlayableItem", "ConfigValue", "StagedId", "FlagDisabledConfigValue", "ReadwriteFlagConfigValue", });
     internal_static_aapt_pb_ConfigValue_descriptor =
       getDescriptor().getMessageTypes().get(17);
     internal_static_aapt_pb_ConfigValue_fieldAccessorTable = new
