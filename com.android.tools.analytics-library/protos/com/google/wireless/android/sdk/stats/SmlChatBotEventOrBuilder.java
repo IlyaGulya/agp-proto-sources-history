@@ -292,5 +292,20 @@ public interface SmlChatBotEventOrBuilder extends
    */
   com.google.wireless.android.sdk.stats.SmlChatBotEvent.ChangesDrawerEventOrBuilder getChangesDrawerEventOrBuilder();
 
+  /**
+   * <code>.android_studio.SmlChatBotEvent.ConversationActionInvoked conversation_action_invoked = 20 [lazy = true];</code>
+   * @return Whether the conversationActionInvoked field is set.
+   */
+  boolean hasConversationActionInvoked();
+  /**
+   * <code>.android_studio.SmlChatBotEvent.ConversationActionInvoked conversation_action_invoked = 20 [lazy = true];</code>
+   * @return The conversationActionInvoked.
+   */
+  com.google.wireless.android.sdk.stats.SmlChatBotEvent.ConversationActionInvoked getConversationActionInvoked();
+  /**
+   * <code>.android_studio.SmlChatBotEvent.ConversationActionInvoked conversation_action_invoked = 20 [lazy = true];</code>
+   */
+  com.google.wireless.android.sdk.stats.SmlChatBotEvent.ConversationActionInvokedOrBuilder getConversationActionInvokedOrBuilder();
+
   com.google.wireless.android.sdk.stats.SmlChatBotEvent.ContentCase getContentCase();
 }
