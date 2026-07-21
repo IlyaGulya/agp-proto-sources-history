@@ -2723,6 +2723,10 @@ private static final long serialVersionUID = 0L;
        * <code>SIXTY_MINUTES = 2;</code>
        */
       SIXTY_MINUTES(2),
+      /**
+       * <code>FIFTEEN_MINUTES = 3;</code>
+       */
+      FIFTEEN_MINUTES(3),
       ;
 
       /**
@@ -2737,6 +2741,10 @@ private static final long serialVersionUID = 0L;
        * <code>SIXTY_MINUTES = 2;</code>
        */
       public static final int SIXTY_MINUTES_VALUE = 2;
+      /**
+       * <code>FIFTEEN_MINUTES = 3;</code>
+       */
+      public static final int FIFTEEN_MINUTES_VALUE = 3;
 
 
       public final int getNumber() {
@@ -2762,6 +2770,7 @@ private static final long serialVersionUID = 0L;
           case 0: return NONE;
           case 1: return THIRTY_MINUTES;
           case 2: return SIXTY_MINUTES;
+          case 3: return FIFTEEN_MINUTES;
           default: return null;
         }
       }
