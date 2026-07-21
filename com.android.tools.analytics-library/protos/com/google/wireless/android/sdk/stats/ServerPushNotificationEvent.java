@@ -63,6 +63,14 @@ private static final long serialVersionUID = 0L;
      * <code>ACTION_CLICKED = 3;</code>
      */
     ACTION_CLICKED(3),
+    /**
+     * <pre>
+     * Logged when all requirements for a notification are met.
+     * </pre>
+     *
+     * <code>IS_ELIGIBLE = 4;</code>
+     */
+    IS_ELIGIBLE(4),
     ;
 
     /**
@@ -81,6 +89,14 @@ private static final long serialVersionUID = 0L;
      * <code>ACTION_CLICKED = 3;</code>
      */
     public static final int ACTION_CLICKED_VALUE = 3;
+    /**
+     * <pre>
+     * Logged when all requirements for a notification are met.
+     * </pre>
+     *
+     * <code>IS_ELIGIBLE = 4;</code>
+     */
+    public static final int IS_ELIGIBLE_VALUE = 4;
 
 
     public final int getNumber() {
@@ -107,6 +123,7 @@ private static final long serialVersionUID = 0L;
         case 1: return SHOWN;
         case 2: return DISMISSED;
         case 3: return ACTION_CLICKED;
+        case 4: return IS_ELIGIBLE;
         default: return null;
       }
     }

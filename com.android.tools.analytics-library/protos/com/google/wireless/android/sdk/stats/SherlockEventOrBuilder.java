@@ -295,4 +295,85 @@ public interface SherlockEventOrBuilder extends
    * <code>optional .android_studio.SherlockEvent.CaptureEventMetadata capture_event_metadata = 11 [lazy = true];</code>
    */
   com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadataOrBuilder getCaptureEventMetadataOrBuilder();
+
+  /**
+   * <pre>
+   * Set if |type| is |NEW_CAPTURE_FRAME_PROFILER_DIALOG_PROCEED|
+   * </pre>
+   *
+   * <code>optional .android_studio.SherlockEvent.NewCaptureFrameProfilerDialogMetadata new_capture_frame_profiler_dialog_metadata = 12 [lazy = true];</code>
+   * @return Whether the newCaptureFrameProfilerDialogMetadata field is set.
+   */
+  boolean hasNewCaptureFrameProfilerDialogMetadata();
+  /**
+   * <pre>
+   * Set if |type| is |NEW_CAPTURE_FRAME_PROFILER_DIALOG_PROCEED|
+   * </pre>
+   *
+   * <code>optional .android_studio.SherlockEvent.NewCaptureFrameProfilerDialogMetadata new_capture_frame_profiler_dialog_metadata = 12 [lazy = true];</code>
+   * @return The newCaptureFrameProfilerDialogMetadata.
+   */
+  com.google.wireless.android.sdk.stats.SherlockEvent.NewCaptureFrameProfilerDialogMetadata getNewCaptureFrameProfilerDialogMetadata();
+  /**
+   * <pre>
+   * Set if |type| is |NEW_CAPTURE_FRAME_PROFILER_DIALOG_PROCEED|
+   * </pre>
+   *
+   * <code>optional .android_studio.SherlockEvent.NewCaptureFrameProfilerDialogMetadata new_capture_frame_profiler_dialog_metadata = 12 [lazy = true];</code>
+   */
+  com.google.wireless.android.sdk.stats.SherlockEvent.NewCaptureFrameProfilerDialogMetadataOrBuilder getNewCaptureFrameProfilerDialogMetadataOrBuilder();
+
+  /**
+   * <pre>
+   * Set if |type| is |GFXR_TRACE_LOADED|
+   * </pre>
+   *
+   * <code>optional .android_studio.SherlockEvent.GfxrTraceLoadedMetadata gfxr_trace_loaded_metadata = 13 [lazy = true];</code>
+   * @return Whether the gfxrTraceLoadedMetadata field is set.
+   */
+  boolean hasGfxrTraceLoadedMetadata();
+  /**
+   * <pre>
+   * Set if |type| is |GFXR_TRACE_LOADED|
+   * </pre>
+   *
+   * <code>optional .android_studio.SherlockEvent.GfxrTraceLoadedMetadata gfxr_trace_loaded_metadata = 13 [lazy = true];</code>
+   * @return The gfxrTraceLoadedMetadata.
+   */
+  com.google.wireless.android.sdk.stats.SherlockEvent.GfxrTraceLoadedMetadata getGfxrTraceLoadedMetadata();
+  /**
+   * <pre>
+   * Set if |type| is |GFXR_TRACE_LOADED|
+   * </pre>
+   *
+   * <code>optional .android_studio.SherlockEvent.GfxrTraceLoadedMetadata gfxr_trace_loaded_metadata = 13 [lazy = true];</code>
+   */
+  com.google.wireless.android.sdk.stats.SherlockEvent.GfxrTraceLoadedMetadataOrBuilder getGfxrTraceLoadedMetadataOrBuilder();
+
+  /**
+   * <pre>
+   * Set if |type| is |DEVICE_TASK_EVENT|
+   * </pre>
+   *
+   * <code>optional .android_studio.SherlockEvent.DeviceTaskEventMetadata device_task_event_metadata = 14 [lazy = true];</code>
+   * @return Whether the deviceTaskEventMetadata field is set.
+   */
+  boolean hasDeviceTaskEventMetadata();
+  /**
+   * <pre>
+   * Set if |type| is |DEVICE_TASK_EVENT|
+   * </pre>
+   *
+   * <code>optional .android_studio.SherlockEvent.DeviceTaskEventMetadata device_task_event_metadata = 14 [lazy = true];</code>
+   * @return The deviceTaskEventMetadata.
+   */
+  com.google.wireless.android.sdk.stats.SherlockEvent.DeviceTaskEventMetadata getDeviceTaskEventMetadata();
+  /**
+   * <pre>
+   * Set if |type| is |DEVICE_TASK_EVENT|
+   * </pre>
+   *
+   * <code>optional .android_studio.SherlockEvent.DeviceTaskEventMetadata device_task_event_metadata = 14 [lazy = true];</code>
+   */
+  com.google.wireless.android.sdk.stats.SherlockEvent.DeviceTaskEventMetadataOrBuilder getDeviceTaskEventMetadataOrBuilder();
 }

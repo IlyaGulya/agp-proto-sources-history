@@ -3639,6 +3639,14 @@ private static final long serialVersionUID = 0L;
      * <code>LIGHTBUILD_SYNC_FINISHED_EVENT = 389;</code>
      */
     LIGHTBUILD_SYNC_FINISHED_EVENT(389),
+    /**
+     * <pre>
+     * Studio Bot configuration event.
+     * </pre>
+     *
+     * <code>STUDIO_BOT_CONFIGURATION_EVENT = 390;</code>
+     */
+    STUDIO_BOT_CONFIGURATION_EVENT(390),
     ;
 
     /**
@@ -6550,6 +6558,14 @@ private static final long serialVersionUID = 0L;
      * <code>LIGHTBUILD_SYNC_FINISHED_EVENT = 389;</code>
      */
     public static final int LIGHTBUILD_SYNC_FINISHED_EVENT_VALUE = 389;
+    /**
+     * <pre>
+     * Studio Bot configuration event.
+     * </pre>
+     *
+     * <code>STUDIO_BOT_CONFIGURATION_EVENT = 390;</code>
+     */
+    public static final int STUDIO_BOT_CONFIGURATION_EVENT_VALUE = 390;
 
 
     public final int getNumber() {
@@ -6957,6 +6973,7 @@ private static final long serialVersionUID = 0L;
         case 387: return MARKETING_METRICS_EVENT;
         case 388: return LIGHTBUILD_SYNC_REQUESTED_EVENT;
         case 389: return LIGHTBUILD_SYNC_FINISHED_EVENT;
+        case 390: return STUDIO_BOT_CONFIGURATION_EVENT;
         default: return null;
       }
     }
@@ -13922,7 +13939,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional uint32 min_sdk = 2 [deprecated = true];</code>
        * @deprecated android_studio.AndroidStudioEvent.TemplatesUsage.TemplateModule.min_sdk is deprecated.
-       *     See studio_stats.proto;l=2259
+       *     See studio_stats.proto;l=2266
        * @return Whether the minSdk field is set.
        */
       @java.lang.Deprecated boolean hasMinSdk();
@@ -13933,7 +13950,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional uint32 min_sdk = 2 [deprecated = true];</code>
        * @deprecated android_studio.AndroidStudioEvent.TemplatesUsage.TemplateModule.min_sdk is deprecated.
-       *     See studio_stats.proto;l=2259
+       *     See studio_stats.proto;l=2266
        * @return The minSdk.
        */
       @java.lang.Deprecated int getMinSdk();
@@ -14464,7 +14481,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional uint32 min_sdk = 2 [deprecated = true];</code>
        * @deprecated android_studio.AndroidStudioEvent.TemplatesUsage.TemplateModule.min_sdk is deprecated.
-       *     See studio_stats.proto;l=2259
+       *     See studio_stats.proto;l=2266
        * @return Whether the minSdk field is set.
        */
       @java.lang.Override
@@ -14478,7 +14495,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional uint32 min_sdk = 2 [deprecated = true];</code>
        * @deprecated android_studio.AndroidStudioEvent.TemplatesUsage.TemplateModule.min_sdk is deprecated.
-       *     See studio_stats.proto;l=2259
+       *     See studio_stats.proto;l=2266
        * @return The minSdk.
        */
       @java.lang.Override
@@ -15116,7 +15133,7 @@ private static final long serialVersionUID = 0L;
          *
          * <code>optional uint32 min_sdk = 2 [deprecated = true];</code>
          * @deprecated android_studio.AndroidStudioEvent.TemplatesUsage.TemplateModule.min_sdk is deprecated.
-         *     See studio_stats.proto;l=2259
+         *     See studio_stats.proto;l=2266
          * @return Whether the minSdk field is set.
          */
         @java.lang.Override
@@ -15130,7 +15147,7 @@ private static final long serialVersionUID = 0L;
          *
          * <code>optional uint32 min_sdk = 2 [deprecated = true];</code>
          * @deprecated android_studio.AndroidStudioEvent.TemplatesUsage.TemplateModule.min_sdk is deprecated.
-         *     See studio_stats.proto;l=2259
+         *     See studio_stats.proto;l=2266
          * @return The minSdk.
          */
         @java.lang.Override
@@ -15144,7 +15161,7 @@ private static final long serialVersionUID = 0L;
          *
          * <code>optional uint32 min_sdk = 2 [deprecated = true];</code>
          * @deprecated android_studio.AndroidStudioEvent.TemplatesUsage.TemplateModule.min_sdk is deprecated.
-         *     See studio_stats.proto;l=2259
+         *     See studio_stats.proto;l=2266
          * @param value The minSdk to set.
          * @return This builder for chaining.
          */
@@ -15162,7 +15179,7 @@ private static final long serialVersionUID = 0L;
          *
          * <code>optional uint32 min_sdk = 2 [deprecated = true];</code>
          * @deprecated android_studio.AndroidStudioEvent.TemplatesUsage.TemplateModule.min_sdk is deprecated.
-         *     See studio_stats.proto;l=2259
+         *     See studio_stats.proto;l=2266
          * @return This builder for chaining.
          */
         @java.lang.Deprecated public Builder clearMinSdk() {
@@ -15644,6 +15661,46 @@ private static final long serialVersionUID = 0L;
        * @return The usesBuildGradleKts.
        */
       boolean getUsesBuildGradleKts();
+
+      /**
+       * <pre>
+       * Whether or not the project uses Declarative build files
+       * ("build.gradle.dcl")
+       * </pre>
+       *
+       * <code>optional bool uses_build_gradle_dcl = 3;</code>
+       * @return Whether the usesBuildGradleDcl field is set.
+       */
+      boolean hasUsesBuildGradleDcl();
+      /**
+       * <pre>
+       * Whether or not the project uses Declarative build files
+       * ("build.gradle.dcl")
+       * </pre>
+       *
+       * <code>optional bool uses_build_gradle_dcl = 3;</code>
+       * @return The usesBuildGradleDcl.
+       */
+      boolean getUsesBuildGradleDcl();
+
+      /**
+       * <pre>
+       * Whether or not the project uses Lightbuild
+       * </pre>
+       *
+       * <code>optional bool uses_lightbuild = 4;</code>
+       * @return Whether the usesLightbuild field is set.
+       */
+      boolean hasUsesLightbuild();
+      /**
+       * <pre>
+       * Whether or not the project uses Lightbuild
+       * </pre>
+       *
+       * <code>optional bool uses_lightbuild = 4;</code>
+       * @return The usesLightbuild.
+       */
+      boolean getUsesLightbuild();
     }
     /**
      * <pre>
@@ -15739,6 +15796,62 @@ private static final long serialVersionUID = 0L;
         return usesBuildGradleKts_;
       }
 
+      public static final int USES_BUILD_GRADLE_DCL_FIELD_NUMBER = 3;
+      private boolean usesBuildGradleDcl_ = false;
+      /**
+       * <pre>
+       * Whether or not the project uses Declarative build files
+       * ("build.gradle.dcl")
+       * </pre>
+       *
+       * <code>optional bool uses_build_gradle_dcl = 3;</code>
+       * @return Whether the usesBuildGradleDcl field is set.
+       */
+      @java.lang.Override
+      public boolean hasUsesBuildGradleDcl() {
+        return ((bitField0_ & 0x00000004) != 0);
+      }
+      /**
+       * <pre>
+       * Whether or not the project uses Declarative build files
+       * ("build.gradle.dcl")
+       * </pre>
+       *
+       * <code>optional bool uses_build_gradle_dcl = 3;</code>
+       * @return The usesBuildGradleDcl.
+       */
+      @java.lang.Override
+      public boolean getUsesBuildGradleDcl() {
+        return usesBuildGradleDcl_;
+      }
+
+      public static final int USES_LIGHTBUILD_FIELD_NUMBER = 4;
+      private boolean usesLightbuild_ = false;
+      /**
+       * <pre>
+       * Whether or not the project uses Lightbuild
+       * </pre>
+       *
+       * <code>optional bool uses_lightbuild = 4;</code>
+       * @return Whether the usesLightbuild field is set.
+       */
+      @java.lang.Override
+      public boolean hasUsesLightbuild() {
+        return ((bitField0_ & 0x00000008) != 0);
+      }
+      /**
+       * <pre>
+       * Whether or not the project uses Lightbuild
+       * </pre>
+       *
+       * <code>optional bool uses_lightbuild = 4;</code>
+       * @return The usesLightbuild.
+       */
+      @java.lang.Override
+      public boolean getUsesLightbuild() {
+        return usesLightbuild_;
+      }
+
       private byte memoizedIsInitialized = -1;
       @java.lang.Override
       public final boolean isInitialized() {
@@ -15759,6 +15872,12 @@ private static final long serialVersionUID = 0L;
         if (((bitField0_ & 0x00000002) != 0)) {
           output.writeBool(2, usesBuildGradleKts_);
         }
+        if (((bitField0_ & 0x00000004) != 0)) {
+          output.writeBool(3, usesBuildGradleDcl_);
+        }
+        if (((bitField0_ & 0x00000008) != 0)) {
+          output.writeBool(4, usesLightbuild_);
+        }
         getUnknownFields().writeTo(output);
       }
 
@@ -15775,6 +15894,14 @@ private static final long serialVersionUID = 0L;
         if (((bitField0_ & 0x00000002) != 0)) {
           size += com.google.protobuf.CodedOutputStream
             .computeBoolSize(2, usesBuildGradleKts_);
+        }
+        if (((bitField0_ & 0x00000004) != 0)) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeBoolSize(3, usesBuildGradleDcl_);
+        }
+        if (((bitField0_ & 0x00000008) != 0)) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeBoolSize(4, usesLightbuild_);
         }
         size += getUnknownFields().getSerializedSize();
         memoizedSize = size;
@@ -15801,6 +15928,16 @@ private static final long serialVersionUID = 0L;
           if (getUsesBuildGradleKts()
               != other.getUsesBuildGradleKts()) return false;
         }
+        if (hasUsesBuildGradleDcl() != other.hasUsesBuildGradleDcl()) return false;
+        if (hasUsesBuildGradleDcl()) {
+          if (getUsesBuildGradleDcl()
+              != other.getUsesBuildGradleDcl()) return false;
+        }
+        if (hasUsesLightbuild() != other.hasUsesLightbuild()) return false;
+        if (hasUsesLightbuild()) {
+          if (getUsesLightbuild()
+              != other.getUsesLightbuild()) return false;
+        }
         if (!getUnknownFields().equals(other.getUnknownFields())) return false;
         return true;
       }
@@ -15821,6 +15958,16 @@ private static final long serialVersionUID = 0L;
           hash = (37 * hash) + USES_BUILD_GRADLE_KTS_FIELD_NUMBER;
           hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
               getUsesBuildGradleKts());
+        }
+        if (hasUsesBuildGradleDcl()) {
+          hash = (37 * hash) + USES_BUILD_GRADLE_DCL_FIELD_NUMBER;
+          hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+              getUsesBuildGradleDcl());
+        }
+        if (hasUsesLightbuild()) {
+          hash = (37 * hash) + USES_LIGHTBUILD_FIELD_NUMBER;
+          hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+              getUsesLightbuild());
         }
         hash = (29 * hash) + getUnknownFields().hashCode();
         memoizedHashCode = hash;
@@ -15957,6 +16104,8 @@ private static final long serialVersionUID = 0L;
           bitField0_ = 0;
           usesLegacySupport_ = false;
           usesBuildGradleKts_ = false;
+          usesBuildGradleDcl_ = false;
+          usesLightbuild_ = false;
           return this;
         }
 
@@ -15999,6 +16148,14 @@ private static final long serialVersionUID = 0L;
             result.usesBuildGradleKts_ = usesBuildGradleKts_;
             to_bitField0_ |= 0x00000002;
           }
+          if (((from_bitField0_ & 0x00000004) != 0)) {
+            result.usesBuildGradleDcl_ = usesBuildGradleDcl_;
+            to_bitField0_ |= 0x00000004;
+          }
+          if (((from_bitField0_ & 0x00000008) != 0)) {
+            result.usesLightbuild_ = usesLightbuild_;
+            to_bitField0_ |= 0x00000008;
+          }
           result.bitField0_ |= to_bitField0_;
         }
 
@@ -16019,6 +16176,12 @@ private static final long serialVersionUID = 0L;
           }
           if (other.hasUsesBuildGradleKts()) {
             setUsesBuildGradleKts(other.getUsesBuildGradleKts());
+          }
+          if (other.hasUsesBuildGradleDcl()) {
+            setUsesBuildGradleDcl(other.getUsesBuildGradleDcl());
+          }
+          if (other.hasUsesLightbuild()) {
+            setUsesLightbuild(other.getUsesLightbuild());
           }
           this.mergeUnknownFields(other.getUnknownFields());
           onChanged();
@@ -16056,6 +16219,16 @@ private static final long serialVersionUID = 0L;
                   bitField0_ |= 0x00000002;
                   break;
                 } // case 16
+                case 24: {
+                  usesBuildGradleDcl_ = input.readBool();
+                  bitField0_ |= 0x00000004;
+                  break;
+                } // case 24
+                case 32: {
+                  usesLightbuild_ = input.readBool();
+                  bitField0_ |= 0x00000008;
+                  break;
+                } // case 32
                 default: {
                   if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                     done = true; // was an endgroup tag
@@ -16181,6 +16354,122 @@ private static final long serialVersionUID = 0L;
         public Builder clearUsesBuildGradleKts() {
           bitField0_ = (bitField0_ & ~0x00000002);
           usesBuildGradleKts_ = false;
+          onChanged();
+          return this;
+        }
+
+        private boolean usesBuildGradleDcl_ ;
+        /**
+         * <pre>
+         * Whether or not the project uses Declarative build files
+         * ("build.gradle.dcl")
+         * </pre>
+         *
+         * <code>optional bool uses_build_gradle_dcl = 3;</code>
+         * @return Whether the usesBuildGradleDcl field is set.
+         */
+        @java.lang.Override
+        public boolean hasUsesBuildGradleDcl() {
+          return ((bitField0_ & 0x00000004) != 0);
+        }
+        /**
+         * <pre>
+         * Whether or not the project uses Declarative build files
+         * ("build.gradle.dcl")
+         * </pre>
+         *
+         * <code>optional bool uses_build_gradle_dcl = 3;</code>
+         * @return The usesBuildGradleDcl.
+         */
+        @java.lang.Override
+        public boolean getUsesBuildGradleDcl() {
+          return usesBuildGradleDcl_;
+        }
+        /**
+         * <pre>
+         * Whether or not the project uses Declarative build files
+         * ("build.gradle.dcl")
+         * </pre>
+         *
+         * <code>optional bool uses_build_gradle_dcl = 3;</code>
+         * @param value The usesBuildGradleDcl to set.
+         * @return This builder for chaining.
+         */
+        public Builder setUsesBuildGradleDcl(boolean value) {
+
+          usesBuildGradleDcl_ = value;
+          bitField0_ |= 0x00000004;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Whether or not the project uses Declarative build files
+         * ("build.gradle.dcl")
+         * </pre>
+         *
+         * <code>optional bool uses_build_gradle_dcl = 3;</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearUsesBuildGradleDcl() {
+          bitField0_ = (bitField0_ & ~0x00000004);
+          usesBuildGradleDcl_ = false;
+          onChanged();
+          return this;
+        }
+
+        private boolean usesLightbuild_ ;
+        /**
+         * <pre>
+         * Whether or not the project uses Lightbuild
+         * </pre>
+         *
+         * <code>optional bool uses_lightbuild = 4;</code>
+         * @return Whether the usesLightbuild field is set.
+         */
+        @java.lang.Override
+        public boolean hasUsesLightbuild() {
+          return ((bitField0_ & 0x00000008) != 0);
+        }
+        /**
+         * <pre>
+         * Whether or not the project uses Lightbuild
+         * </pre>
+         *
+         * <code>optional bool uses_lightbuild = 4;</code>
+         * @return The usesLightbuild.
+         */
+        @java.lang.Override
+        public boolean getUsesLightbuild() {
+          return usesLightbuild_;
+        }
+        /**
+         * <pre>
+         * Whether or not the project uses Lightbuild
+         * </pre>
+         *
+         * <code>optional bool uses_lightbuild = 4;</code>
+         * @param value The usesLightbuild to set.
+         * @return This builder for chaining.
+         */
+        public Builder setUsesLightbuild(boolean value) {
+
+          usesLightbuild_ = value;
+          bitField0_ |= 0x00000008;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Whether or not the project uses Lightbuild
+         * </pre>
+         *
+         * <code>optional bool uses_lightbuild = 4;</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearUsesLightbuild() {
+          bitField0_ = (bitField0_ & ~0x00000008);
+          usesLightbuild_ = false;
           onChanged();
           return this;
         }
@@ -27848,6 +28137,44 @@ private static final long serialVersionUID = 0L;
     return lightbuildSyncFinishedEvent_ == null ? com.google.wireless.android.sdk.stats.LightbuildSyncFinishedEvent.getDefaultInstance() : lightbuildSyncFinishedEvent_;
   }
 
+  public static final int STUDIO_BOT_CONFIGURATION_EVENT_FIELD_NUMBER = 263;
+  private com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent studioBotConfigurationEvent_;
+  /**
+   * <pre>
+   * set when kind = STUDIO_BOT_CONFIGURATION_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.StudioBotConfigurationEvent studio_bot_configuration_event = 263 [lazy = true];</code>
+   * @return Whether the studioBotConfigurationEvent field is set.
+   */
+  @java.lang.Override
+  public boolean hasStudioBotConfigurationEvent() {
+    return ((bitField7_ & 0x80000000) != 0);
+  }
+  /**
+   * <pre>
+   * set when kind = STUDIO_BOT_CONFIGURATION_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.StudioBotConfigurationEvent studio_bot_configuration_event = 263 [lazy = true];</code>
+   * @return The studioBotConfigurationEvent.
+   */
+  @java.lang.Override
+  public com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent getStudioBotConfigurationEvent() {
+    return studioBotConfigurationEvent_ == null ? com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.getDefaultInstance() : studioBotConfigurationEvent_;
+  }
+  /**
+   * <pre>
+   * set when kind = STUDIO_BOT_CONFIGURATION_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.StudioBotConfigurationEvent studio_bot_configuration_event = 263 [lazy = true];</code>
+   */
+  @java.lang.Override
+  public com.google.wireless.android.sdk.stats.StudioBotConfigurationEventOrBuilder getStudioBotConfigurationEventOrBuilder() {
+    return studioBotConfigurationEvent_ == null ? com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.getDefaultInstance() : studioBotConfigurationEvent_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -28647,6 +28974,9 @@ private static final long serialVersionUID = 0L;
     }
     if (((bitField7_ & 0x40000000) != 0)) {
       output.writeMessage(262, getLightbuildSyncFinishedEvent());
+    }
+    if (((bitField7_ & 0x80000000) != 0)) {
+      output.writeMessage(263, getStudioBotConfigurationEvent());
     }
     getUnknownFields().writeTo(output);
   }
@@ -29710,6 +30040,10 @@ private static final long serialVersionUID = 0L;
     if (((bitField7_ & 0x40000000) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(262, getLightbuildSyncFinishedEvent());
+    }
+    if (((bitField7_ & 0x80000000) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(263, getStudioBotConfigurationEvent());
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -31004,6 +31338,11 @@ private static final long serialVersionUID = 0L;
       if (!getLightbuildSyncFinishedEvent()
           .equals(other.getLightbuildSyncFinishedEvent())) return false;
     }
+    if (hasStudioBotConfigurationEvent() != other.hasStudioBotConfigurationEvent()) return false;
+    if (hasStudioBotConfigurationEvent()) {
+      if (!getStudioBotConfigurationEvent()
+          .equals(other.getStudioBotConfigurationEvent())) return false;
+    }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -32065,6 +32404,10 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + LIGHTBUILD_SYNC_FINISHED_EVENT_FIELD_NUMBER;
       hash = (53 * hash) + getLightbuildSyncFinishedEvent().hashCode();
     }
+    if (hasStudioBotConfigurationEvent()) {
+      hash = (37 * hash) + STUDIO_BOT_CONFIGURATION_EVENT_FIELD_NUMBER;
+      hash = (53 * hash) + getStudioBotConfigurationEvent().hashCode();
+    }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -32432,6 +32775,7 @@ private static final long serialVersionUID = 0L;
         getRenderDiffViewerEventFieldBuilder();
         getLightbuildSyncRequestedEventFieldBuilder();
         getLightbuildSyncFinishedEventFieldBuilder();
+        getStudioBotConfigurationEventFieldBuilder();
       }
     }
     @java.lang.Override
@@ -33674,6 +34018,11 @@ private static final long serialVersionUID = 0L;
       if (lightbuildSyncFinishedEventBuilder_ != null) {
         lightbuildSyncFinishedEventBuilder_.dispose();
         lightbuildSyncFinishedEventBuilder_ = null;
+      }
+      studioBotConfigurationEvent_ = null;
+      if (studioBotConfigurationEventBuilder_ != null) {
+        studioBotConfigurationEventBuilder_.dispose();
+        studioBotConfigurationEventBuilder_ = null;
       }
       return this;
     }
@@ -35318,6 +35667,12 @@ private static final long serialVersionUID = 0L;
             : lightbuildSyncFinishedEventBuilder_.build();
         to_bitField7_ |= 0x40000000;
       }
+      if (((from_bitField8_ & 0x00000040) != 0)) {
+        result.studioBotConfigurationEvent_ = studioBotConfigurationEventBuilder_ == null
+            ? studioBotConfigurationEvent_
+            : studioBotConfigurationEventBuilder_.build();
+        to_bitField7_ |= 0x80000000;
+      }
       result.bitField7_ |= to_bitField7_;
     }
 
@@ -36245,6 +36600,9 @@ private static final long serialVersionUID = 0L;
       }
       if (other.hasLightbuildSyncFinishedEvent()) {
         mergeLightbuildSyncFinishedEvent(other.getLightbuildSyncFinishedEvent());
+      }
+      if (other.hasStudioBotConfigurationEvent()) {
+        mergeStudioBotConfigurationEvent(other.getStudioBotConfigurationEvent());
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -38180,6 +38538,13 @@ private static final long serialVersionUID = 0L;
               bitField8_ |= 0x00000020;
               break;
             } // case 2098
+            case 2106: {
+              input.readMessage(
+                  getStudioBotConfigurationEventFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField8_ |= 0x00000040;
+              break;
+            } // case 2106
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -78317,6 +78682,161 @@ private static final long serialVersionUID = 0L;
         lightbuildSyncFinishedEvent_ = null;
       }
       return lightbuildSyncFinishedEventBuilder_;
+    }
+
+    private com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent studioBotConfigurationEvent_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent, com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.Builder, com.google.wireless.android.sdk.stats.StudioBotConfigurationEventOrBuilder> studioBotConfigurationEventBuilder_;
+    /**
+     * <pre>
+     * set when kind = STUDIO_BOT_CONFIGURATION_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.StudioBotConfigurationEvent studio_bot_configuration_event = 263 [lazy = true];</code>
+     * @return Whether the studioBotConfigurationEvent field is set.
+     */
+    public boolean hasStudioBotConfigurationEvent() {
+      return ((bitField8_ & 0x00000040) != 0);
+    }
+    /**
+     * <pre>
+     * set when kind = STUDIO_BOT_CONFIGURATION_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.StudioBotConfigurationEvent studio_bot_configuration_event = 263 [lazy = true];</code>
+     * @return The studioBotConfigurationEvent.
+     */
+    public com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent getStudioBotConfigurationEvent() {
+      if (studioBotConfigurationEventBuilder_ == null) {
+        return studioBotConfigurationEvent_ == null ? com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.getDefaultInstance() : studioBotConfigurationEvent_;
+      } else {
+        return studioBotConfigurationEventBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * set when kind = STUDIO_BOT_CONFIGURATION_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.StudioBotConfigurationEvent studio_bot_configuration_event = 263 [lazy = true];</code>
+     */
+    public Builder setStudioBotConfigurationEvent(com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent value) {
+      if (studioBotConfigurationEventBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        studioBotConfigurationEvent_ = value;
+      } else {
+        studioBotConfigurationEventBuilder_.setMessage(value);
+      }
+      bitField8_ |= 0x00000040;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = STUDIO_BOT_CONFIGURATION_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.StudioBotConfigurationEvent studio_bot_configuration_event = 263 [lazy = true];</code>
+     */
+    public Builder setStudioBotConfigurationEvent(
+        com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.Builder builderForValue) {
+      if (studioBotConfigurationEventBuilder_ == null) {
+        studioBotConfigurationEvent_ = builderForValue.build();
+      } else {
+        studioBotConfigurationEventBuilder_.setMessage(builderForValue.build());
+      }
+      bitField8_ |= 0x00000040;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = STUDIO_BOT_CONFIGURATION_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.StudioBotConfigurationEvent studio_bot_configuration_event = 263 [lazy = true];</code>
+     */
+    public Builder mergeStudioBotConfigurationEvent(com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent value) {
+      if (studioBotConfigurationEventBuilder_ == null) {
+        if (((bitField8_ & 0x00000040) != 0) &&
+          studioBotConfigurationEvent_ != null &&
+          studioBotConfigurationEvent_ != com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.getDefaultInstance()) {
+          getStudioBotConfigurationEventBuilder().mergeFrom(value);
+        } else {
+          studioBotConfigurationEvent_ = value;
+        }
+      } else {
+        studioBotConfigurationEventBuilder_.mergeFrom(value);
+      }
+      bitField8_ |= 0x00000040;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = STUDIO_BOT_CONFIGURATION_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.StudioBotConfigurationEvent studio_bot_configuration_event = 263 [lazy = true];</code>
+     */
+    public Builder clearStudioBotConfigurationEvent() {
+      bitField8_ = (bitField8_ & ~0x00000040);
+      studioBotConfigurationEvent_ = null;
+      if (studioBotConfigurationEventBuilder_ != null) {
+        studioBotConfigurationEventBuilder_.dispose();
+        studioBotConfigurationEventBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = STUDIO_BOT_CONFIGURATION_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.StudioBotConfigurationEvent studio_bot_configuration_event = 263 [lazy = true];</code>
+     */
+    public com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.Builder getStudioBotConfigurationEventBuilder() {
+      bitField8_ |= 0x00000040;
+      onChanged();
+      return getStudioBotConfigurationEventFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * set when kind = STUDIO_BOT_CONFIGURATION_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.StudioBotConfigurationEvent studio_bot_configuration_event = 263 [lazy = true];</code>
+     */
+    public com.google.wireless.android.sdk.stats.StudioBotConfigurationEventOrBuilder getStudioBotConfigurationEventOrBuilder() {
+      if (studioBotConfigurationEventBuilder_ != null) {
+        return studioBotConfigurationEventBuilder_.getMessageOrBuilder();
+      } else {
+        return studioBotConfigurationEvent_ == null ?
+            com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.getDefaultInstance() : studioBotConfigurationEvent_;
+      }
+    }
+    /**
+     * <pre>
+     * set when kind = STUDIO_BOT_CONFIGURATION_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.StudioBotConfigurationEvent studio_bot_configuration_event = 263 [lazy = true];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent, com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.Builder, com.google.wireless.android.sdk.stats.StudioBotConfigurationEventOrBuilder> 
+        getStudioBotConfigurationEventFieldBuilder() {
+      if (studioBotConfigurationEventBuilder_ == null) {
+        studioBotConfigurationEventBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent, com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.Builder, com.google.wireless.android.sdk.stats.StudioBotConfigurationEventOrBuilder>(
+                getStudioBotConfigurationEvent(),
+                getParentForChildren(),
+                isClean());
+        studioBotConfigurationEvent_ = null;
+      }
+      return studioBotConfigurationEventBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

@@ -7314,4 +7314,31 @@ public interface AndroidStudioEventOrBuilder extends
    * <code>optional .android_studio.LightbuildSyncFinishedEvent lightbuild_sync_finished_event = 262 [lazy = true];</code>
    */
   com.google.wireless.android.sdk.stats.LightbuildSyncFinishedEventOrBuilder getLightbuildSyncFinishedEventOrBuilder();
+
+  /**
+   * <pre>
+   * set when kind = STUDIO_BOT_CONFIGURATION_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.StudioBotConfigurationEvent studio_bot_configuration_event = 263 [lazy = true];</code>
+   * @return Whether the studioBotConfigurationEvent field is set.
+   */
+  boolean hasStudioBotConfigurationEvent();
+  /**
+   * <pre>
+   * set when kind = STUDIO_BOT_CONFIGURATION_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.StudioBotConfigurationEvent studio_bot_configuration_event = 263 [lazy = true];</code>
+   * @return The studioBotConfigurationEvent.
+   */
+  com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent getStudioBotConfigurationEvent();
+  /**
+   * <pre>
+   * set when kind = STUDIO_BOT_CONFIGURATION_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.StudioBotConfigurationEvent studio_bot_configuration_event = 263 [lazy = true];</code>
+   */
+  com.google.wireless.android.sdk.stats.StudioBotConfigurationEventOrBuilder getStudioBotConfigurationEventOrBuilder();
 }

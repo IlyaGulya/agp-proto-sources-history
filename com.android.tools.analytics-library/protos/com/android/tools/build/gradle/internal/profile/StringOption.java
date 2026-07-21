@@ -226,6 +226,10 @@ public enum StringOption
    * <code>NEW_DSL_OPT_OUT = 53;</code>
    */
   NEW_DSL_OPT_OUT(53),
+  /**
+   * <code>PROJECT_CREATOR_TOOL = 54;</code>
+   */
+  PROJECT_CREATOR_TOOL(54),
   UNRECOGNIZED(-1),
   ;
 
@@ -445,6 +449,10 @@ public enum StringOption
    * <code>NEW_DSL_OPT_OUT = 53;</code>
    */
   public static final int NEW_DSL_OPT_OUT_VALUE = 53;
+  /**
+   * <code>PROJECT_CREATOR_TOOL = 54;</code>
+   */
+  public static final int PROJECT_CREATOR_TOOL_VALUE = 54;
 
 
   public final int getNumber() {
@@ -525,6 +533,7 @@ public enum StringOption
       case 51: return TEST_SUITE_TEST_TASK_ADDITIONAL_INPUTS_FILE;
       case 52: return SUPPRESS_AGP_SYNC_WARNINGS;
       case 53: return NEW_DSL_OPT_OUT;
+      case 54: return PROJECT_CREATOR_TOOL;
       default: return null;
     }
   }

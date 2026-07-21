@@ -980,6 +980,10 @@ public enum BooleanOption
    * <code>USE_NEW_DSL_INTERFACES_FOR_KTS = 239;</code>
    */
   USE_NEW_DSL_INTERFACES_FOR_KTS(239),
+  /**
+   * <code>TEST_SUITE_NEW_REPORT_FORMAT = 240;</code>
+   */
+  TEST_SUITE_NEW_REPORT_FORMAT(240),
   UNRECOGNIZED(-1),
   ;
 
@@ -1943,6 +1947,10 @@ public enum BooleanOption
    * <code>USE_NEW_DSL_INTERFACES_FOR_KTS = 239;</code>
    */
   public static final int USE_NEW_DSL_INTERFACES_FOR_KTS_VALUE = 239;
+  /**
+   * <code>TEST_SUITE_NEW_REPORT_FORMAT = 240;</code>
+   */
+  public static final int TEST_SUITE_NEW_REPORT_FORMAT_VALUE = 240;
 
 
   public final int getNumber() {
@@ -2209,6 +2217,7 @@ public enum BooleanOption
       case 237: return ENABLE_ON_THE_FLY_CODE_COVERAGE;
       case 238: return R8_ENABLE_KEEP_RADIUS_REPORT;
       case 239: return USE_NEW_DSL_INTERFACES_FOR_KTS;
+      case 240: return TEST_SUITE_NEW_REPORT_FORMAT;
       default: return null;
     }
   }
