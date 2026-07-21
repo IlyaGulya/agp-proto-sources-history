@@ -1428,6 +1428,18 @@ public enum GradleTaskExecutionType
    * <code>PROCESS_NAVIGATION_XML = 352;</code>
    */
   PROCESS_NAVIGATION_XML(352),
+  /**
+   * <code>MANIFEST_PROCESSOR_GLOBAL = 353;</code>
+   */
+  MANIFEST_PROCESSOR_GLOBAL(353),
+  /**
+   * <code>MERGE_JAVA_RESOURCES_GLOBAL = 354;</code>
+   */
+  MERGE_JAVA_RESOURCES_GLOBAL(354),
+  /**
+   * <code>NEW_INCREMENTAL_GLOBAL = 355;</code>
+   */
+  NEW_INCREMENTAL_GLOBAL(355),
   UNRECOGNIZED(-1),
   ;
 
@@ -2843,6 +2855,18 @@ public enum GradleTaskExecutionType
    * <code>PROCESS_NAVIGATION_XML = 352;</code>
    */
   public static final int PROCESS_NAVIGATION_XML_VALUE = 352;
+  /**
+   * <code>MANIFEST_PROCESSOR_GLOBAL = 353;</code>
+   */
+  public static final int MANIFEST_PROCESSOR_GLOBAL_VALUE = 353;
+  /**
+   * <code>MERGE_JAVA_RESOURCES_GLOBAL = 354;</code>
+   */
+  public static final int MERGE_JAVA_RESOURCES_GLOBAL_VALUE = 354;
+  /**
+   * <code>NEW_INCREMENTAL_GLOBAL = 355;</code>
+   */
+  public static final int NEW_INCREMENTAL_GLOBAL_VALUE = 355;
 
 
   public final int getNumber() {
@@ -3222,6 +3246,9 @@ public enum GradleTaskExecutionType
       case 350: return TEST_SUITE_TEST;
       case 351: return COMPILE_NAVIGATION_XML;
       case 352: return PROCESS_NAVIGATION_XML;
+      case 353: return MANIFEST_PROCESSOR_GLOBAL;
+      case 354: return MERGE_JAVA_RESOURCES_GLOBAL;
+      case 355: return NEW_INCREMENTAL_GLOBAL;
       default: return null;
     }
   }
