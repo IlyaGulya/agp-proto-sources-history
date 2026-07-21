@@ -47,7 +47,7 @@ private static final long serialVersionUID = 0L;
       implements com.google.protobuf.ProtocolMessageEnum {
     /**
      * <pre>
-     * Generic feature
+     * Unknown feature.
      * </pre>
      *
      * <code>UNKNOWN = 0;</code>
@@ -133,11 +133,27 @@ private static final long serialVersionUID = 0L;
      * <code>PROMPT_LIBRARY = 10;</code>
      */
     PROMPT_LIBRARY(10),
+    /**
+     * <pre>
+     * Run or record Journey tests.
+     * </pre>
+     *
+     * <code>JOURNEYS = 11;</code>
+     */
+    JOURNEYS(11),
+    /**
+     * <pre>
+     * Generic feature.
+     * </pre>
+     *
+     * <code>GENERIC = 12;</code>
+     */
+    GENERIC(12),
     ;
 
     /**
      * <pre>
-     * Generic feature
+     * Unknown feature.
      * </pre>
      *
      * <code>UNKNOWN = 0;</code>
@@ -223,6 +239,22 @@ private static final long serialVersionUID = 0L;
      * <code>PROMPT_LIBRARY = 10;</code>
      */
     public static final int PROMPT_LIBRARY_VALUE = 10;
+    /**
+     * <pre>
+     * Run or record Journey tests.
+     * </pre>
+     *
+     * <code>JOURNEYS = 11;</code>
+     */
+    public static final int JOURNEYS_VALUE = 11;
+    /**
+     * <pre>
+     * Generic feature.
+     * </pre>
+     *
+     * <code>GENERIC = 12;</code>
+     */
+    public static final int GENERIC_VALUE = 12;
 
 
     public final int getNumber() {
@@ -256,6 +288,8 @@ private static final long serialVersionUID = 0L;
         case 8: return ANALYZE_BUILD_ERRORS;
         case 9: return TRANSFORM_CODE;
         case 10: return PROMPT_LIBRARY;
+        case 11: return JOURNEYS;
+        case 12: return GENERIC;
         default: return null;
       }
     }
