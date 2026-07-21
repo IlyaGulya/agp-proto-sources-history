@@ -816,6 +816,10 @@ public enum BooleanOption
    * <code>R8_STRICT_FULL_MODE_FOR_KEEP_RULES = 198;</code>
    */
   R8_STRICT_FULL_MODE_FOR_KEEP_RULES(198),
+  /**
+   * <code>GENERATE_SYNC_ISSUE_WHEN_LIBRARY_CONSTRAINTS_ARE_ENABLED = 199;</code>
+   */
+  GENERATE_SYNC_ISSUE_WHEN_LIBRARY_CONSTRAINTS_ARE_ENABLED(199),
   UNRECOGNIZED(-1),
   ;
 
@@ -1615,6 +1619,10 @@ public enum BooleanOption
    * <code>R8_STRICT_FULL_MODE_FOR_KEEP_RULES = 198;</code>
    */
   public static final int R8_STRICT_FULL_MODE_FOR_KEEP_RULES_VALUE = 198;
+  /**
+   * <code>GENERATE_SYNC_ISSUE_WHEN_LIBRARY_CONSTRAINTS_ARE_ENABLED = 199;</code>
+   */
+  public static final int GENERATE_SYNC_ISSUE_WHEN_LIBRARY_CONSTRAINTS_ARE_ENABLED_VALUE = 199;
 
 
   public final int getNumber() {
@@ -1840,6 +1848,7 @@ public enum BooleanOption
       case 196: return ENABLE_DEVICE_TARGETING_CONFIG_API;
       case 197: return DUMP_ARTIFACTS_LOCATIONS;
       case 198: return R8_STRICT_FULL_MODE_FOR_KEEP_RULES;
+      case 199: return GENERATE_SYNC_ISSUE_WHEN_LIBRARY_CONSTRAINTS_ARE_ENABLED;
       default: return null;
     }
   }
