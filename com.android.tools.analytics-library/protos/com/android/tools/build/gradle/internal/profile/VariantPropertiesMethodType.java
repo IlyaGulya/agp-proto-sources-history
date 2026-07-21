@@ -649,6 +649,26 @@ public enum VariantPropertiesMethodType
    * <code>TRANSFORM_WITH_NAME = 148;</code>
    */
   TRANSFORM_WITH_NAME(148),
+  /**
+   * <code>CONFIGURE_TEST_TASK = 149;</code>
+   */
+  CONFIGURE_TEST_TASK(149),
+  /**
+   * <code>GENERATE_LOCALE_CONFIG_FLAG = 150;</code>
+   */
+  GENERATE_LOCALE_CONFIG_FLAG(150),
+  /**
+   * <code>IGNORE_ASSETS_PATTERN = 151;</code>
+   */
+  IGNORE_ASSETS_PATTERN(151),
+  /**
+   * <code>AAPT_ADDITIONAL_PARAMETERS = 152;</code>
+   */
+  AAPT_ADDITIONAL_PARAMETERS(152),
+  /**
+   * <code>NO_COMPRESS = 153;</code>
+   */
+  NO_COMPRESS(153),
   UNRECOGNIZED(-1),
   ;
 
@@ -1292,6 +1312,26 @@ public enum VariantPropertiesMethodType
    * <code>TRANSFORM_WITH_NAME = 148;</code>
    */
   public static final int TRANSFORM_WITH_NAME_VALUE = 148;
+  /**
+   * <code>CONFIGURE_TEST_TASK = 149;</code>
+   */
+  public static final int CONFIGURE_TEST_TASK_VALUE = 149;
+  /**
+   * <code>GENERATE_LOCALE_CONFIG_FLAG = 150;</code>
+   */
+  public static final int GENERATE_LOCALE_CONFIG_FLAG_VALUE = 150;
+  /**
+   * <code>IGNORE_ASSETS_PATTERN = 151;</code>
+   */
+  public static final int IGNORE_ASSETS_PATTERN_VALUE = 151;
+  /**
+   * <code>AAPT_ADDITIONAL_PARAMETERS = 152;</code>
+   */
+  public static final int AAPT_ADDITIONAL_PARAMETERS_VALUE = 152;
+  /**
+   * <code>NO_COMPRESS = 153;</code>
+   */
+  public static final int NO_COMPRESS_VALUE = 153;
 
 
   public final int getNumber() {
@@ -1467,6 +1507,11 @@ public enum VariantPropertiesMethodType
       case 146: return COMPUTE_TASK_NAME;
       case 147: return ADD_STATIC_DIRECTORY;
       case 148: return TRANSFORM_WITH_NAME;
+      case 149: return CONFIGURE_TEST_TASK;
+      case 150: return GENERATE_LOCALE_CONFIG_FLAG;
+      case 151: return IGNORE_ASSETS_PATTERN;
+      case 152: return AAPT_ADDITIONAL_PARAMETERS;
+      case 153: return NO_COMPRESS;
       default: return null;
     }
   }

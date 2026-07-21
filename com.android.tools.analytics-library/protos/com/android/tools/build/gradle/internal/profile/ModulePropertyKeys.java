@@ -76,6 +76,14 @@ public enum ModulePropertyKeys
    * <code>MODULE_SCREENSHOT_TEST = 16;</code>
    */
   MODULE_SCREENSHOT_TEST(16),
+  /**
+   * <code>MODULE_FORCE_AOT_COMPILATION = 17;</code>
+   */
+  MODULE_FORCE_AOT_COMPILATION(17),
+  /**
+   * <code>MODULE_D8_DEX_STARTUP_OPTIMIZATION = 18;</code>
+   */
+  MODULE_D8_DEX_STARTUP_OPTIMIZATION(18),
   UNRECOGNIZED(-1),
   ;
 
@@ -147,6 +155,14 @@ public enum ModulePropertyKeys
    * <code>MODULE_SCREENSHOT_TEST = 16;</code>
    */
   public static final int MODULE_SCREENSHOT_TEST_VALUE = 16;
+  /**
+   * <code>MODULE_FORCE_AOT_COMPILATION = 17;</code>
+   */
+  public static final int MODULE_FORCE_AOT_COMPILATION_VALUE = 17;
+  /**
+   * <code>MODULE_D8_DEX_STARTUP_OPTIMIZATION = 18;</code>
+   */
+  public static final int MODULE_D8_DEX_STARTUP_OPTIMIZATION_VALUE = 18;
 
 
   public final int getNumber() {
@@ -190,6 +206,8 @@ public enum ModulePropertyKeys
       case 14: return MODULE_VERIFY_AAR_CLASSES;
       case 15: return MODULE_LINT_USE_K2_UAST;
       case 16: return MODULE_SCREENSHOT_TEST;
+      case 17: return MODULE_FORCE_AOT_COMPILATION;
+      case 18: return MODULE_D8_DEX_STARTUP_OPTIMIZATION;
       default: return null;
     }
   }
