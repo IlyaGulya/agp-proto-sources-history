@@ -10,7 +10,7 @@ package com.google.wireless.android.sdk.stats;
  *
  * Protobuf type {@code android_studio.BuildAttributionUiEvent}
  */
-public  final class BuildAttributionUiEvent extends
+public final class BuildAttributionUiEvent extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:android_studio.BuildAttributionUiEvent)
     BuildAttributionUiEventOrBuilder {
@@ -1139,7 +1139,7 @@ private static final long serialVersionUID = 0L;
   /**
    * Protobuf type {@code android_studio.BuildAttributionUiEvent.Page}
    */
-  public  static final class Page extends
+  public static final class Page extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:android_studio.BuildAttributionUiEvent.Page)
       PageOrBuilder {
@@ -1602,7 +1602,7 @@ private static final long serialVersionUID = 0L;
      * <code>optional .android_studio.BuildAttributionUiEvent.Page.PageType page_type = 1;</code>
      * @return Whether the pageType field is set.
      */
-    public boolean hasPageType() {
+    @java.lang.Override public boolean hasPageType() {
       return ((bitField0_ & 0x00000001) != 0);
     }
     /**
@@ -1613,7 +1613,7 @@ private static final long serialVersionUID = 0L;
      * <code>optional .android_studio.BuildAttributionUiEvent.Page.PageType page_type = 1;</code>
      * @return The pageType.
      */
-    public com.google.wireless.android.sdk.stats.BuildAttributionUiEvent.Page.PageType getPageType() {
+    @java.lang.Override public com.google.wireless.android.sdk.stats.BuildAttributionUiEvent.Page.PageType getPageType() {
       @SuppressWarnings("deprecation")
       com.google.wireless.android.sdk.stats.BuildAttributionUiEvent.Page.PageType result = com.google.wireless.android.sdk.stats.BuildAttributionUiEvent.Page.PageType.valueOf(pageType_);
       return result == null ? com.google.wireless.android.sdk.stats.BuildAttributionUiEvent.Page.PageType.UNKNOWN_PAGE : result;
@@ -1631,6 +1631,7 @@ private static final long serialVersionUID = 0L;
      * <code>optional int32 page_entry_index = 2;</code>
      * @return Whether the pageEntryIndex field is set.
      */
+    @java.lang.Override
     public boolean hasPageEntryIndex() {
       return ((bitField0_ & 0x00000002) != 0);
     }
@@ -1644,6 +1645,7 @@ private static final long serialVersionUID = 0L;
      * <code>optional int32 page_entry_index = 2;</code>
      * @return The pageEntryIndex.
      */
+    @java.lang.Override
     public int getPageEntryIndex() {
       return pageEntryIndex_;
     }
@@ -1995,7 +1997,7 @@ private static final long serialVersionUID = 0L;
        * <code>optional .android_studio.BuildAttributionUiEvent.Page.PageType page_type = 1;</code>
        * @return Whether the pageType field is set.
        */
-      public boolean hasPageType() {
+      @java.lang.Override public boolean hasPageType() {
         return ((bitField0_ & 0x00000001) != 0);
       }
       /**
@@ -2006,6 +2008,7 @@ private static final long serialVersionUID = 0L;
        * <code>optional .android_studio.BuildAttributionUiEvent.Page.PageType page_type = 1;</code>
        * @return The pageType.
        */
+      @java.lang.Override
       public com.google.wireless.android.sdk.stats.BuildAttributionUiEvent.Page.PageType getPageType() {
         @SuppressWarnings("deprecation")
         com.google.wireless.android.sdk.stats.BuildAttributionUiEvent.Page.PageType result = com.google.wireless.android.sdk.stats.BuildAttributionUiEvent.Page.PageType.valueOf(pageType_);
@@ -2055,6 +2058,7 @@ private static final long serialVersionUID = 0L;
        * <code>optional int32 page_entry_index = 2;</code>
        * @return Whether the pageEntryIndex field is set.
        */
+      @java.lang.Override
       public boolean hasPageEntryIndex() {
         return ((bitField0_ & 0x00000002) != 0);
       }
@@ -2068,6 +2072,7 @@ private static final long serialVersionUID = 0L;
        * <code>optional int32 page_entry_index = 2;</code>
        * @return The pageEntryIndex.
        */
+      @java.lang.Override
       public int getPageEntryIndex() {
         return pageEntryIndex_;
       }
@@ -2168,7 +2173,7 @@ private static final long serialVersionUID = 0L;
    * <code>optional .android_studio.BuildAttributionUiEvent.EventType event_type = 1;</code>
    * @return Whether the eventType field is set.
    */
-  public boolean hasEventType() {
+  @java.lang.Override public boolean hasEventType() {
     return ((bitField0_ & 0x00000001) != 0);
   }
   /**
@@ -2179,7 +2184,7 @@ private static final long serialVersionUID = 0L;
    * <code>optional .android_studio.BuildAttributionUiEvent.EventType event_type = 1;</code>
    * @return The eventType.
    */
-  public com.google.wireless.android.sdk.stats.BuildAttributionUiEvent.EventType getEventType() {
+  @java.lang.Override public com.google.wireless.android.sdk.stats.BuildAttributionUiEvent.EventType getEventType() {
     @SuppressWarnings("deprecation")
     com.google.wireless.android.sdk.stats.BuildAttributionUiEvent.EventType result = com.google.wireless.android.sdk.stats.BuildAttributionUiEvent.EventType.valueOf(eventType_);
     return result == null ? com.google.wireless.android.sdk.stats.BuildAttributionUiEvent.EventType.UNKNOWN_TYPE : result;
@@ -2195,6 +2200,7 @@ private static final long serialVersionUID = 0L;
    * <code>optional .android_studio.BuildAttributionUiEvent.Page current_page = 2;</code>
    * @return Whether the currentPage field is set.
    */
+  @java.lang.Override
   public boolean hasCurrentPage() {
     return ((bitField0_ & 0x00000002) != 0);
   }
@@ -2206,6 +2212,7 @@ private static final long serialVersionUID = 0L;
    * <code>optional .android_studio.BuildAttributionUiEvent.Page current_page = 2;</code>
    * @return The currentPage.
    */
+  @java.lang.Override
   public com.google.wireless.android.sdk.stats.BuildAttributionUiEvent.Page getCurrentPage() {
     return currentPage_ == null ? com.google.wireless.android.sdk.stats.BuildAttributionUiEvent.Page.getDefaultInstance() : currentPage_;
   }
@@ -2216,6 +2223,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>optional .android_studio.BuildAttributionUiEvent.Page current_page = 2;</code>
    */
+  @java.lang.Override
   public com.google.wireless.android.sdk.stats.BuildAttributionUiEvent.PageOrBuilder getCurrentPageOrBuilder() {
     return currentPage_ == null ? com.google.wireless.android.sdk.stats.BuildAttributionUiEvent.Page.getDefaultInstance() : currentPage_;
   }
@@ -2230,6 +2238,7 @@ private static final long serialVersionUID = 0L;
    * <code>optional .android_studio.BuildAttributionUiEvent.Page target_page = 3;</code>
    * @return Whether the targetPage field is set.
    */
+  @java.lang.Override
   public boolean hasTargetPage() {
     return ((bitField0_ & 0x00000004) != 0);
   }
@@ -2241,6 +2250,7 @@ private static final long serialVersionUID = 0L;
    * <code>optional .android_studio.BuildAttributionUiEvent.Page target_page = 3;</code>
    * @return The targetPage.
    */
+  @java.lang.Override
   public com.google.wireless.android.sdk.stats.BuildAttributionUiEvent.Page getTargetPage() {
     return targetPage_ == null ? com.google.wireless.android.sdk.stats.BuildAttributionUiEvent.Page.getDefaultInstance() : targetPage_;
   }
@@ -2251,6 +2261,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>optional .android_studio.BuildAttributionUiEvent.Page target_page = 3;</code>
    */
+  @java.lang.Override
   public com.google.wireless.android.sdk.stats.BuildAttributionUiEvent.PageOrBuilder getTargetPageOrBuilder() {
     return targetPage_ == null ? com.google.wireless.android.sdk.stats.BuildAttributionUiEvent.Page.getDefaultInstance() : targetPage_;
   }
@@ -2266,6 +2277,7 @@ private static final long serialVersionUID = 0L;
    * <code>optional string build_attribution_report_session_id = 4;</code>
    * @return Whether the buildAttributionReportSessionId field is set.
    */
+  @java.lang.Override
   public boolean hasBuildAttributionReportSessionId() {
     return ((bitField0_ & 0x00000008) != 0);
   }
@@ -2278,6 +2290,7 @@ private static final long serialVersionUID = 0L;
    * <code>optional string build_attribution_report_session_id = 4;</code>
    * @return The buildAttributionReportSessionId.
    */
+  @java.lang.Override
   public java.lang.String getBuildAttributionReportSessionId() {
     java.lang.Object ref = buildAttributionReportSessionId_;
     if (ref instanceof java.lang.String) {
@@ -2301,6 +2314,7 @@ private static final long serialVersionUID = 0L;
    * <code>optional string build_attribution_report_session_id = 4;</code>
    * @return The bytes for buildAttributionReportSessionId.
    */
+  @java.lang.Override
   public com.google.protobuf.ByteString
       getBuildAttributionReportSessionIdBytes() {
     java.lang.Object ref = buildAttributionReportSessionId_;
@@ -2325,7 +2339,7 @@ private static final long serialVersionUID = 0L;
    * <code>optional .android_studio.BuildAttributionUiEvent.OutgoingLinkTarget link_target = 5;</code>
    * @return Whether the linkTarget field is set.
    */
-  public boolean hasLinkTarget() {
+  @java.lang.Override public boolean hasLinkTarget() {
     return ((bitField0_ & 0x00000010) != 0);
   }
   /**
@@ -2336,7 +2350,7 @@ private static final long serialVersionUID = 0L;
    * <code>optional .android_studio.BuildAttributionUiEvent.OutgoingLinkTarget link_target = 5;</code>
    * @return The linkTarget.
    */
-  public com.google.wireless.android.sdk.stats.BuildAttributionUiEvent.OutgoingLinkTarget getLinkTarget() {
+  @java.lang.Override public com.google.wireless.android.sdk.stats.BuildAttributionUiEvent.OutgoingLinkTarget getLinkTarget() {
     @SuppressWarnings("deprecation")
     com.google.wireless.android.sdk.stats.BuildAttributionUiEvent.OutgoingLinkTarget result = com.google.wireless.android.sdk.stats.BuildAttributionUiEvent.OutgoingLinkTarget.valueOf(linkTarget_);
     return result == null ? com.google.wireless.android.sdk.stats.BuildAttributionUiEvent.OutgoingLinkTarget.UNKNOWN_OUTGOING_LINK_TARGET : result;
@@ -2362,6 +2376,7 @@ private static final long serialVersionUID = 0L;
    * <code>repeated .android_studio.BuildAttributionUiEvent.FilterItem applied_filters = 6;</code>
    * @return A list containing the appliedFilters.
    */
+  @java.lang.Override
   public java.util.List<com.google.wireless.android.sdk.stats.BuildAttributionUiEvent.FilterItem> getAppliedFiltersList() {
     return new com.google.protobuf.Internal.ListAdapter<
         java.lang.Integer, com.google.wireless.android.sdk.stats.BuildAttributionUiEvent.FilterItem>(appliedFilters_, appliedFilters_converter_);
@@ -2372,8 +2387,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>repeated .android_studio.BuildAttributionUiEvent.FilterItem applied_filters = 6;</code>
-   * @param value The appliedFilters to add.
+   * @return The count of appliedFilters.
    */
+  @java.lang.Override
   public int getAppliedFiltersCount() {
     return appliedFilters_.size();
   }
@@ -2386,6 +2402,7 @@ private static final long serialVersionUID = 0L;
    * @param index The index of the element to return.
    * @return The appliedFilters at the given index.
    */
+  @java.lang.Override
   public com.google.wireless.android.sdk.stats.BuildAttributionUiEvent.FilterItem getAppliedFilters(int index) {
     return appliedFilters_converter_.convert(appliedFilters_.get(index));
   }
@@ -2400,6 +2417,7 @@ private static final long serialVersionUID = 0L;
    * <code>optional int64 event_processing_time_ms = 7;</code>
    * @return Whether the eventProcessingTimeMs field is set.
    */
+  @java.lang.Override
   public boolean hasEventProcessingTimeMs() {
     return ((bitField0_ & 0x00000020) != 0);
   }
@@ -2411,6 +2429,7 @@ private static final long serialVersionUID = 0L;
    * <code>optional int64 event_processing_time_ms = 7;</code>
    * @return The eventProcessingTimeMs.
    */
+  @java.lang.Override
   public long getEventProcessingTimeMs() {
     return eventProcessingTimeMs_;
   }
@@ -2425,6 +2444,7 @@ private static final long serialVersionUID = 0L;
    * <code>optional int64 width = 8;</code>
    * @return Whether the width field is set.
    */
+  @java.lang.Override
   public boolean hasWidth() {
     return ((bitField0_ & 0x00000040) != 0);
   }
@@ -2436,6 +2456,7 @@ private static final long serialVersionUID = 0L;
    * <code>optional int64 width = 8;</code>
    * @return The width.
    */
+  @java.lang.Override
   public long getWidth() {
     return width_;
   }
@@ -2450,6 +2471,7 @@ private static final long serialVersionUID = 0L;
    * <code>optional int64 height = 9;</code>
    * @return Whether the height field is set.
    */
+  @java.lang.Override
   public boolean hasHeight() {
     return ((bitField0_ & 0x00000080) != 0);
   }
@@ -2461,6 +2483,7 @@ private static final long serialVersionUID = 0L;
    * <code>optional int64 height = 9;</code>
    * @return The height.
    */
+  @java.lang.Override
   public long getHeight() {
     return height_;
   }
@@ -3021,7 +3044,7 @@ private static final long serialVersionUID = 0L;
      * <code>optional .android_studio.BuildAttributionUiEvent.EventType event_type = 1;</code>
      * @return Whether the eventType field is set.
      */
-    public boolean hasEventType() {
+    @java.lang.Override public boolean hasEventType() {
       return ((bitField0_ & 0x00000001) != 0);
     }
     /**
@@ -3032,6 +3055,7 @@ private static final long serialVersionUID = 0L;
      * <code>optional .android_studio.BuildAttributionUiEvent.EventType event_type = 1;</code>
      * @return The eventType.
      */
+    @java.lang.Override
     public com.google.wireless.android.sdk.stats.BuildAttributionUiEvent.EventType getEventType() {
       @SuppressWarnings("deprecation")
       com.google.wireless.android.sdk.stats.BuildAttributionUiEvent.EventType result = com.google.wireless.android.sdk.stats.BuildAttributionUiEvent.EventType.valueOf(eventType_);
@@ -3505,7 +3529,7 @@ private static final long serialVersionUID = 0L;
      * <code>optional .android_studio.BuildAttributionUiEvent.OutgoingLinkTarget link_target = 5;</code>
      * @return Whether the linkTarget field is set.
      */
-    public boolean hasLinkTarget() {
+    @java.lang.Override public boolean hasLinkTarget() {
       return ((bitField0_ & 0x00000010) != 0);
     }
     /**
@@ -3516,6 +3540,7 @@ private static final long serialVersionUID = 0L;
      * <code>optional .android_studio.BuildAttributionUiEvent.OutgoingLinkTarget link_target = 5;</code>
      * @return The linkTarget.
      */
+    @java.lang.Override
     public com.google.wireless.android.sdk.stats.BuildAttributionUiEvent.OutgoingLinkTarget getLinkTarget() {
       @SuppressWarnings("deprecation")
       com.google.wireless.android.sdk.stats.BuildAttributionUiEvent.OutgoingLinkTarget result = com.google.wireless.android.sdk.stats.BuildAttributionUiEvent.OutgoingLinkTarget.valueOf(linkTarget_);
@@ -3677,6 +3702,7 @@ private static final long serialVersionUID = 0L;
      * <code>optional int64 event_processing_time_ms = 7;</code>
      * @return Whether the eventProcessingTimeMs field is set.
      */
+    @java.lang.Override
     public boolean hasEventProcessingTimeMs() {
       return ((bitField0_ & 0x00000040) != 0);
     }
@@ -3688,6 +3714,7 @@ private static final long serialVersionUID = 0L;
      * <code>optional int64 event_processing_time_ms = 7;</code>
      * @return The eventProcessingTimeMs.
      */
+    @java.lang.Override
     public long getEventProcessingTimeMs() {
       return eventProcessingTimeMs_;
     }
@@ -3730,6 +3757,7 @@ private static final long serialVersionUID = 0L;
      * <code>optional int64 width = 8;</code>
      * @return Whether the width field is set.
      */
+    @java.lang.Override
     public boolean hasWidth() {
       return ((bitField0_ & 0x00000080) != 0);
     }
@@ -3741,6 +3769,7 @@ private static final long serialVersionUID = 0L;
      * <code>optional int64 width = 8;</code>
      * @return The width.
      */
+    @java.lang.Override
     public long getWidth() {
       return width_;
     }
@@ -3783,6 +3812,7 @@ private static final long serialVersionUID = 0L;
      * <code>optional int64 height = 9;</code>
      * @return Whether the height field is set.
      */
+    @java.lang.Override
     public boolean hasHeight() {
       return ((bitField0_ & 0x00000100) != 0);
     }
@@ -3794,6 +3824,7 @@ private static final long serialVersionUID = 0L;
      * <code>optional int64 height = 9;</code>
      * @return The height.
      */
+    @java.lang.Override
     public long getHeight() {
       return height_;
     }

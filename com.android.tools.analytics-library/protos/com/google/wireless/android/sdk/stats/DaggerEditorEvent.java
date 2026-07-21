@@ -10,7 +10,7 @@ package com.google.wireless.android.sdk.stats;
  *
  * Protobuf type {@code android_studio.DaggerEditorEvent}
  */
-public  final class DaggerEditorEvent extends
+public final class DaggerEditorEvent extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:android_studio.DaggerEditorEvent)
     DaggerEditorEventOrBuilder {
@@ -506,7 +506,7 @@ private static final long serialVersionUID = 0L;
    *
    * Protobuf type {@code android_studio.DaggerEditorEvent.NavigationMetadata}
    */
-  public  static final class NavigationMetadata extends
+  public static final class NavigationMetadata extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:android_studio.DaggerEditorEvent.NavigationMetadata)
       NavigationMetadataOrBuilder {
@@ -736,7 +736,7 @@ private static final long serialVersionUID = 0L;
      * <code>optional .android_studio.DaggerEditorEvent.NavigationMetadata.NavigationContext context = 1;</code>
      * @return Whether the context field is set.
      */
-    public boolean hasContext() {
+    @java.lang.Override public boolean hasContext() {
       return ((bitField0_ & 0x00000001) != 0);
     }
     /**
@@ -747,7 +747,7 @@ private static final long serialVersionUID = 0L;
      * <code>optional .android_studio.DaggerEditorEvent.NavigationMetadata.NavigationContext context = 1;</code>
      * @return The context.
      */
-    public com.google.wireless.android.sdk.stats.DaggerEditorEvent.NavigationMetadata.NavigationContext getContext() {
+    @java.lang.Override public com.google.wireless.android.sdk.stats.DaggerEditorEvent.NavigationMetadata.NavigationContext getContext() {
       @SuppressWarnings("deprecation")
       com.google.wireless.android.sdk.stats.DaggerEditorEvent.NavigationMetadata.NavigationContext result = com.google.wireless.android.sdk.stats.DaggerEditorEvent.NavigationMetadata.NavigationContext.valueOf(context_);
       return result == null ? com.google.wireless.android.sdk.stats.DaggerEditorEvent.NavigationMetadata.NavigationContext.UNKNOWN_CONTEXT : result;
@@ -763,7 +763,7 @@ private static final long serialVersionUID = 0L;
      * <code>optional .android_studio.DaggerEditorEvent.ElementType from_element = 2;</code>
      * @return Whether the fromElement field is set.
      */
-    public boolean hasFromElement() {
+    @java.lang.Override public boolean hasFromElement() {
       return ((bitField0_ & 0x00000002) != 0);
     }
     /**
@@ -774,7 +774,7 @@ private static final long serialVersionUID = 0L;
      * <code>optional .android_studio.DaggerEditorEvent.ElementType from_element = 2;</code>
      * @return The fromElement.
      */
-    public com.google.wireless.android.sdk.stats.DaggerEditorEvent.ElementType getFromElement() {
+    @java.lang.Override public com.google.wireless.android.sdk.stats.DaggerEditorEvent.ElementType getFromElement() {
       @SuppressWarnings("deprecation")
       com.google.wireless.android.sdk.stats.DaggerEditorEvent.ElementType result = com.google.wireless.android.sdk.stats.DaggerEditorEvent.ElementType.valueOf(fromElement_);
       return result == null ? com.google.wireless.android.sdk.stats.DaggerEditorEvent.ElementType.UNKNOWN_ELEMENT_TYPE : result;
@@ -790,7 +790,7 @@ private static final long serialVersionUID = 0L;
      * <code>optional .android_studio.DaggerEditorEvent.ElementType to_element = 3;</code>
      * @return Whether the toElement field is set.
      */
-    public boolean hasToElement() {
+    @java.lang.Override public boolean hasToElement() {
       return ((bitField0_ & 0x00000004) != 0);
     }
     /**
@@ -801,7 +801,7 @@ private static final long serialVersionUID = 0L;
      * <code>optional .android_studio.DaggerEditorEvent.ElementType to_element = 3;</code>
      * @return The toElement.
      */
-    public com.google.wireless.android.sdk.stats.DaggerEditorEvent.ElementType getToElement() {
+    @java.lang.Override public com.google.wireless.android.sdk.stats.DaggerEditorEvent.ElementType getToElement() {
       @SuppressWarnings("deprecation")
       com.google.wireless.android.sdk.stats.DaggerEditorEvent.ElementType result = com.google.wireless.android.sdk.stats.DaggerEditorEvent.ElementType.valueOf(toElement_);
       return result == null ? com.google.wireless.android.sdk.stats.DaggerEditorEvent.ElementType.UNKNOWN_ELEMENT_TYPE : result;
@@ -1181,7 +1181,7 @@ private static final long serialVersionUID = 0L;
        * <code>optional .android_studio.DaggerEditorEvent.NavigationMetadata.NavigationContext context = 1;</code>
        * @return Whether the context field is set.
        */
-      public boolean hasContext() {
+      @java.lang.Override public boolean hasContext() {
         return ((bitField0_ & 0x00000001) != 0);
       }
       /**
@@ -1192,6 +1192,7 @@ private static final long serialVersionUID = 0L;
        * <code>optional .android_studio.DaggerEditorEvent.NavigationMetadata.NavigationContext context = 1;</code>
        * @return The context.
        */
+      @java.lang.Override
       public com.google.wireless.android.sdk.stats.DaggerEditorEvent.NavigationMetadata.NavigationContext getContext() {
         @SuppressWarnings("deprecation")
         com.google.wireless.android.sdk.stats.DaggerEditorEvent.NavigationMetadata.NavigationContext result = com.google.wireless.android.sdk.stats.DaggerEditorEvent.NavigationMetadata.NavigationContext.valueOf(context_);
@@ -1239,7 +1240,7 @@ private static final long serialVersionUID = 0L;
        * <code>optional .android_studio.DaggerEditorEvent.ElementType from_element = 2;</code>
        * @return Whether the fromElement field is set.
        */
-      public boolean hasFromElement() {
+      @java.lang.Override public boolean hasFromElement() {
         return ((bitField0_ & 0x00000002) != 0);
       }
       /**
@@ -1250,6 +1251,7 @@ private static final long serialVersionUID = 0L;
        * <code>optional .android_studio.DaggerEditorEvent.ElementType from_element = 2;</code>
        * @return The fromElement.
        */
+      @java.lang.Override
       public com.google.wireless.android.sdk.stats.DaggerEditorEvent.ElementType getFromElement() {
         @SuppressWarnings("deprecation")
         com.google.wireless.android.sdk.stats.DaggerEditorEvent.ElementType result = com.google.wireless.android.sdk.stats.DaggerEditorEvent.ElementType.valueOf(fromElement_);
@@ -1297,7 +1299,7 @@ private static final long serialVersionUID = 0L;
        * <code>optional .android_studio.DaggerEditorEvent.ElementType to_element = 3;</code>
        * @return Whether the toElement field is set.
        */
-      public boolean hasToElement() {
+      @java.lang.Override public boolean hasToElement() {
         return ((bitField0_ & 0x00000004) != 0);
       }
       /**
@@ -1308,6 +1310,7 @@ private static final long serialVersionUID = 0L;
        * <code>optional .android_studio.DaggerEditorEvent.ElementType to_element = 3;</code>
        * @return The toElement.
        */
+      @java.lang.Override
       public com.google.wireless.android.sdk.stats.DaggerEditorEvent.ElementType getToElement() {
         @SuppressWarnings("deprecation")
         com.google.wireless.android.sdk.stats.DaggerEditorEvent.ElementType result = com.google.wireless.android.sdk.stats.DaggerEditorEvent.ElementType.valueOf(toElement_);
@@ -1409,7 +1412,7 @@ private static final long serialVersionUID = 0L;
    * <code>optional .android_studio.DaggerEditorEvent.Type type = 1;</code>
    * @return Whether the type field is set.
    */
-  public boolean hasType() {
+  @java.lang.Override public boolean hasType() {
     return ((bitField0_ & 0x00000001) != 0);
   }
   /**
@@ -1420,7 +1423,7 @@ private static final long serialVersionUID = 0L;
    * <code>optional .android_studio.DaggerEditorEvent.Type type = 1;</code>
    * @return The type.
    */
-  public com.google.wireless.android.sdk.stats.DaggerEditorEvent.Type getType() {
+  @java.lang.Override public com.google.wireless.android.sdk.stats.DaggerEditorEvent.Type getType() {
     @SuppressWarnings("deprecation")
     com.google.wireless.android.sdk.stats.DaggerEditorEvent.Type result = com.google.wireless.android.sdk.stats.DaggerEditorEvent.Type.valueOf(type_);
     return result == null ? com.google.wireless.android.sdk.stats.DaggerEditorEvent.Type.UNKNOWN_EVENT_TYPE : result;
@@ -1436,6 +1439,7 @@ private static final long serialVersionUID = 0L;
    * <code>optional .android_studio.DaggerEditorEvent.NavigationMetadata navigation_metadata = 2;</code>
    * @return Whether the navigationMetadata field is set.
    */
+  @java.lang.Override
   public boolean hasNavigationMetadata() {
     return ((bitField0_ & 0x00000002) != 0);
   }
@@ -1447,6 +1451,7 @@ private static final long serialVersionUID = 0L;
    * <code>optional .android_studio.DaggerEditorEvent.NavigationMetadata navigation_metadata = 2;</code>
    * @return The navigationMetadata.
    */
+  @java.lang.Override
   public com.google.wireless.android.sdk.stats.DaggerEditorEvent.NavigationMetadata getNavigationMetadata() {
     return navigationMetadata_ == null ? com.google.wireless.android.sdk.stats.DaggerEditorEvent.NavigationMetadata.getDefaultInstance() : navigationMetadata_;
   }
@@ -1457,6 +1462,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>optional .android_studio.DaggerEditorEvent.NavigationMetadata navigation_metadata = 2;</code>
    */
+  @java.lang.Override
   public com.google.wireless.android.sdk.stats.DaggerEditorEvent.NavigationMetadataOrBuilder getNavigationMetadataOrBuilder() {
     return navigationMetadata_ == null ? com.google.wireless.android.sdk.stats.DaggerEditorEvent.NavigationMetadata.getDefaultInstance() : navigationMetadata_;
   }
@@ -1472,7 +1478,7 @@ private static final long serialVersionUID = 0L;
    * <code>optional .android_studio.DaggerEditorEvent.ElementType owner_element_type = 3;</code>
    * @return Whether the ownerElementType field is set.
    */
-  public boolean hasOwnerElementType() {
+  @java.lang.Override public boolean hasOwnerElementType() {
     return ((bitField0_ & 0x00000004) != 0);
   }
   /**
@@ -1484,7 +1490,7 @@ private static final long serialVersionUID = 0L;
    * <code>optional .android_studio.DaggerEditorEvent.ElementType owner_element_type = 3;</code>
    * @return The ownerElementType.
    */
-  public com.google.wireless.android.sdk.stats.DaggerEditorEvent.ElementType getOwnerElementType() {
+  @java.lang.Override public com.google.wireless.android.sdk.stats.DaggerEditorEvent.ElementType getOwnerElementType() {
     @SuppressWarnings("deprecation")
     com.google.wireless.android.sdk.stats.DaggerEditorEvent.ElementType result = com.google.wireless.android.sdk.stats.DaggerEditorEvent.ElementType.valueOf(ownerElementType_);
     return result == null ? com.google.wireless.android.sdk.stats.DaggerEditorEvent.ElementType.UNKNOWN_ELEMENT_TYPE : result;
@@ -1500,6 +1506,7 @@ private static final long serialVersionUID = 0L;
    * <code>optional int64 calculation_time_ms = 4;</code>
    * @return Whether the calculationTimeMs field is set.
    */
+  @java.lang.Override
   public boolean hasCalculationTimeMs() {
     return ((bitField0_ & 0x00000008) != 0);
   }
@@ -1511,6 +1518,7 @@ private static final long serialVersionUID = 0L;
    * <code>optional int64 calculation_time_ms = 4;</code>
    * @return The calculationTimeMs.
    */
+  @java.lang.Override
   public long getCalculationTimeMs() {
     return calculationTimeMs_;
   }
@@ -1925,7 +1933,7 @@ private static final long serialVersionUID = 0L;
      * <code>optional .android_studio.DaggerEditorEvent.Type type = 1;</code>
      * @return Whether the type field is set.
      */
-    public boolean hasType() {
+    @java.lang.Override public boolean hasType() {
       return ((bitField0_ & 0x00000001) != 0);
     }
     /**
@@ -1936,6 +1944,7 @@ private static final long serialVersionUID = 0L;
      * <code>optional .android_studio.DaggerEditorEvent.Type type = 1;</code>
      * @return The type.
      */
+    @java.lang.Override
     public com.google.wireless.android.sdk.stats.DaggerEditorEvent.Type getType() {
       @SuppressWarnings("deprecation")
       com.google.wireless.android.sdk.stats.DaggerEditorEvent.Type result = com.google.wireless.android.sdk.stats.DaggerEditorEvent.Type.valueOf(type_);
@@ -2140,7 +2149,7 @@ private static final long serialVersionUID = 0L;
      * <code>optional .android_studio.DaggerEditorEvent.ElementType owner_element_type = 3;</code>
      * @return Whether the ownerElementType field is set.
      */
-    public boolean hasOwnerElementType() {
+    @java.lang.Override public boolean hasOwnerElementType() {
       return ((bitField0_ & 0x00000004) != 0);
     }
     /**
@@ -2152,6 +2161,7 @@ private static final long serialVersionUID = 0L;
      * <code>optional .android_studio.DaggerEditorEvent.ElementType owner_element_type = 3;</code>
      * @return The ownerElementType.
      */
+    @java.lang.Override
     public com.google.wireless.android.sdk.stats.DaggerEditorEvent.ElementType getOwnerElementType() {
       @SuppressWarnings("deprecation")
       com.google.wireless.android.sdk.stats.DaggerEditorEvent.ElementType result = com.google.wireless.android.sdk.stats.DaggerEditorEvent.ElementType.valueOf(ownerElementType_);
@@ -2201,6 +2211,7 @@ private static final long serialVersionUID = 0L;
      * <code>optional int64 calculation_time_ms = 4;</code>
      * @return Whether the calculationTimeMs field is set.
      */
+    @java.lang.Override
     public boolean hasCalculationTimeMs() {
       return ((bitField0_ & 0x00000008) != 0);
     }
@@ -2212,6 +2223,7 @@ private static final long serialVersionUID = 0L;
      * <code>optional int64 calculation_time_ms = 4;</code>
      * @return The calculationTimeMs.
      */
+    @java.lang.Override
     public long getCalculationTimeMs() {
       return calculationTimeMs_;
     }

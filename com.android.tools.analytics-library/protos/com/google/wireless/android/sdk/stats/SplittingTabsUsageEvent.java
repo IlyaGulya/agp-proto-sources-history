@@ -10,7 +10,7 @@ package com.google.wireless.android.sdk.stats;
  *
  * Protobuf type {@code android_studio.SplittingTabsUsageEvent}
  */
-public  final class SplittingTabsUsageEvent extends
+public final class SplittingTabsUsageEvent extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:android_studio.SplittingTabsUsageEvent)
     SplittingTabsUsageEventOrBuilder {
@@ -490,7 +490,7 @@ private static final long serialVersionUID = 0L;
    *
    * Protobuf type {@code android_studio.SplittingTabsUsageEvent.SplitType}
    */
-  public  static final class SplitType extends
+  public static final class SplitType extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:android_studio.SplittingTabsUsageEvent.SplitType)
       SplitTypeOrBuilder {
@@ -868,7 +868,7 @@ private static final long serialVersionUID = 0L;
      * <code>optional .android_studio.SplittingTabsUsageEvent.SplitType.Orientation orientation = 1;</code>
      * @return Whether the orientation field is set.
      */
-    public boolean hasOrientation() {
+    @java.lang.Override public boolean hasOrientation() {
       return ((bitField0_ & 0x00000001) != 0);
     }
     /**
@@ -879,7 +879,7 @@ private static final long serialVersionUID = 0L;
      * <code>optional .android_studio.SplittingTabsUsageEvent.SplitType.Orientation orientation = 1;</code>
      * @return The orientation.
      */
-    public com.google.wireless.android.sdk.stats.SplittingTabsUsageEvent.SplitType.Orientation getOrientation() {
+    @java.lang.Override public com.google.wireless.android.sdk.stats.SplittingTabsUsageEvent.SplitType.Orientation getOrientation() {
       @SuppressWarnings("deprecation")
       com.google.wireless.android.sdk.stats.SplittingTabsUsageEvent.SplitType.Orientation result = com.google.wireless.android.sdk.stats.SplittingTabsUsageEvent.SplitType.Orientation.valueOf(orientation_);
       return result == null ? com.google.wireless.android.sdk.stats.SplittingTabsUsageEvent.SplitType.Orientation.UNKNOWN_ORIENTATION : result;
@@ -895,7 +895,7 @@ private static final long serialVersionUID = 0L;
      * <code>optional .android_studio.SplittingTabsUsageEvent.SplitType.Source source = 2;</code>
      * @return Whether the source field is set.
      */
-    public boolean hasSource() {
+    @java.lang.Override public boolean hasSource() {
       return ((bitField0_ & 0x00000002) != 0);
     }
     /**
@@ -906,7 +906,7 @@ private static final long serialVersionUID = 0L;
      * <code>optional .android_studio.SplittingTabsUsageEvent.SplitType.Source source = 2;</code>
      * @return The source.
      */
-    public com.google.wireless.android.sdk.stats.SplittingTabsUsageEvent.SplitType.Source getSource() {
+    @java.lang.Override public com.google.wireless.android.sdk.stats.SplittingTabsUsageEvent.SplitType.Source getSource() {
       @SuppressWarnings("deprecation")
       com.google.wireless.android.sdk.stats.SplittingTabsUsageEvent.SplitType.Source result = com.google.wireless.android.sdk.stats.SplittingTabsUsageEvent.SplitType.Source.valueOf(source_);
       return result == null ? com.google.wireless.android.sdk.stats.SplittingTabsUsageEvent.SplitType.Source.UNKNOWN_SOURCE : result;
@@ -1262,7 +1262,7 @@ private static final long serialVersionUID = 0L;
        * <code>optional .android_studio.SplittingTabsUsageEvent.SplitType.Orientation orientation = 1;</code>
        * @return Whether the orientation field is set.
        */
-      public boolean hasOrientation() {
+      @java.lang.Override public boolean hasOrientation() {
         return ((bitField0_ & 0x00000001) != 0);
       }
       /**
@@ -1273,6 +1273,7 @@ private static final long serialVersionUID = 0L;
        * <code>optional .android_studio.SplittingTabsUsageEvent.SplitType.Orientation orientation = 1;</code>
        * @return The orientation.
        */
+      @java.lang.Override
       public com.google.wireless.android.sdk.stats.SplittingTabsUsageEvent.SplitType.Orientation getOrientation() {
         @SuppressWarnings("deprecation")
         com.google.wireless.android.sdk.stats.SplittingTabsUsageEvent.SplitType.Orientation result = com.google.wireless.android.sdk.stats.SplittingTabsUsageEvent.SplitType.Orientation.valueOf(orientation_);
@@ -1320,7 +1321,7 @@ private static final long serialVersionUID = 0L;
        * <code>optional .android_studio.SplittingTabsUsageEvent.SplitType.Source source = 2;</code>
        * @return Whether the source field is set.
        */
-      public boolean hasSource() {
+      @java.lang.Override public boolean hasSource() {
         return ((bitField0_ & 0x00000002) != 0);
       }
       /**
@@ -1331,6 +1332,7 @@ private static final long serialVersionUID = 0L;
        * <code>optional .android_studio.SplittingTabsUsageEvent.SplitType.Source source = 2;</code>
        * @return The source.
        */
+      @java.lang.Override
       public com.google.wireless.android.sdk.stats.SplittingTabsUsageEvent.SplitType.Source getSource() {
         @SuppressWarnings("deprecation")
         com.google.wireless.android.sdk.stats.SplittingTabsUsageEvent.SplitType.Source result = com.google.wireless.android.sdk.stats.SplittingTabsUsageEvent.SplitType.Source.valueOf(source_);
@@ -1432,7 +1434,7 @@ private static final long serialVersionUID = 0L;
    * <code>optional .android_studio.SplittingTabsUsageEvent.ToolWindowType tool_window_type = 1;</code>
    * @return Whether the toolWindowType field is set.
    */
-  public boolean hasToolWindowType() {
+  @java.lang.Override public boolean hasToolWindowType() {
     return ((bitField0_ & 0x00000001) != 0);
   }
   /**
@@ -1443,7 +1445,7 @@ private static final long serialVersionUID = 0L;
    * <code>optional .android_studio.SplittingTabsUsageEvent.ToolWindowType tool_window_type = 1;</code>
    * @return The toolWindowType.
    */
-  public com.google.wireless.android.sdk.stats.SplittingTabsUsageEvent.ToolWindowType getToolWindowType() {
+  @java.lang.Override public com.google.wireless.android.sdk.stats.SplittingTabsUsageEvent.ToolWindowType getToolWindowType() {
     @SuppressWarnings("deprecation")
     com.google.wireless.android.sdk.stats.SplittingTabsUsageEvent.ToolWindowType result = com.google.wireless.android.sdk.stats.SplittingTabsUsageEvent.ToolWindowType.valueOf(toolWindowType_);
     return result == null ? com.google.wireless.android.sdk.stats.SplittingTabsUsageEvent.ToolWindowType.UNKNOWN_TOOL_WINDOW_TYPE : result;
@@ -1459,7 +1461,7 @@ private static final long serialVersionUID = 0L;
    * <code>optional .android_studio.SplittingTabsUsageEvent.EventType event_type = 2;</code>
    * @return Whether the eventType field is set.
    */
-  public boolean hasEventType() {
+  @java.lang.Override public boolean hasEventType() {
     return ((bitField0_ & 0x00000002) != 0);
   }
   /**
@@ -1470,7 +1472,7 @@ private static final long serialVersionUID = 0L;
    * <code>optional .android_studio.SplittingTabsUsageEvent.EventType event_type = 2;</code>
    * @return The eventType.
    */
-  public com.google.wireless.android.sdk.stats.SplittingTabsUsageEvent.EventType getEventType() {
+  @java.lang.Override public com.google.wireless.android.sdk.stats.SplittingTabsUsageEvent.EventType getEventType() {
     @SuppressWarnings("deprecation")
     com.google.wireless.android.sdk.stats.SplittingTabsUsageEvent.EventType result = com.google.wireless.android.sdk.stats.SplittingTabsUsageEvent.EventType.valueOf(eventType_);
     return result == null ? com.google.wireless.android.sdk.stats.SplittingTabsUsageEvent.EventType.UNKNOWN_EVENT_TYPE : result;
@@ -1486,6 +1488,7 @@ private static final long serialVersionUID = 0L;
    * <code>optional .android_studio.SplittingTabsUsageEvent.SplitType split_type = 3;</code>
    * @return Whether the splitType field is set.
    */
+  @java.lang.Override
   public boolean hasSplitType() {
     return ((bitField0_ & 0x00000004) != 0);
   }
@@ -1497,6 +1500,7 @@ private static final long serialVersionUID = 0L;
    * <code>optional .android_studio.SplittingTabsUsageEvent.SplitType split_type = 3;</code>
    * @return The splitType.
    */
+  @java.lang.Override
   public com.google.wireless.android.sdk.stats.SplittingTabsUsageEvent.SplitType getSplitType() {
     return splitType_ == null ? com.google.wireless.android.sdk.stats.SplittingTabsUsageEvent.SplitType.getDefaultInstance() : splitType_;
   }
@@ -1507,6 +1511,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>optional .android_studio.SplittingTabsUsageEvent.SplitType split_type = 3;</code>
    */
+  @java.lang.Override
   public com.google.wireless.android.sdk.stats.SplittingTabsUsageEvent.SplitTypeOrBuilder getSplitTypeOrBuilder() {
     return splitType_ == null ? com.google.wireless.android.sdk.stats.SplittingTabsUsageEvent.SplitType.getDefaultInstance() : splitType_;
   }
@@ -1895,7 +1900,7 @@ private static final long serialVersionUID = 0L;
      * <code>optional .android_studio.SplittingTabsUsageEvent.ToolWindowType tool_window_type = 1;</code>
      * @return Whether the toolWindowType field is set.
      */
-    public boolean hasToolWindowType() {
+    @java.lang.Override public boolean hasToolWindowType() {
       return ((bitField0_ & 0x00000001) != 0);
     }
     /**
@@ -1906,6 +1911,7 @@ private static final long serialVersionUID = 0L;
      * <code>optional .android_studio.SplittingTabsUsageEvent.ToolWindowType tool_window_type = 1;</code>
      * @return The toolWindowType.
      */
+    @java.lang.Override
     public com.google.wireless.android.sdk.stats.SplittingTabsUsageEvent.ToolWindowType getToolWindowType() {
       @SuppressWarnings("deprecation")
       com.google.wireless.android.sdk.stats.SplittingTabsUsageEvent.ToolWindowType result = com.google.wireless.android.sdk.stats.SplittingTabsUsageEvent.ToolWindowType.valueOf(toolWindowType_);
@@ -1953,7 +1959,7 @@ private static final long serialVersionUID = 0L;
      * <code>optional .android_studio.SplittingTabsUsageEvent.EventType event_type = 2;</code>
      * @return Whether the eventType field is set.
      */
-    public boolean hasEventType() {
+    @java.lang.Override public boolean hasEventType() {
       return ((bitField0_ & 0x00000002) != 0);
     }
     /**
@@ -1964,6 +1970,7 @@ private static final long serialVersionUID = 0L;
      * <code>optional .android_studio.SplittingTabsUsageEvent.EventType event_type = 2;</code>
      * @return The eventType.
      */
+    @java.lang.Override
     public com.google.wireless.android.sdk.stats.SplittingTabsUsageEvent.EventType getEventType() {
       @SuppressWarnings("deprecation")
       com.google.wireless.android.sdk.stats.SplittingTabsUsageEvent.EventType result = com.google.wireless.android.sdk.stats.SplittingTabsUsageEvent.EventType.valueOf(eventType_);

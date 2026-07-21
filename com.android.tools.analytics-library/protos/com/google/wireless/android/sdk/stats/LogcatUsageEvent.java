@@ -10,7 +10,7 @@ package com.google.wireless.android.sdk.stats;
  *
  * Protobuf type {@code android_studio.LogcatUsageEvent}
  */
-public  final class LogcatUsageEvent extends
+public final class LogcatUsageEvent extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:android_studio.LogcatUsageEvent)
     LogcatUsageEventOrBuilder {
@@ -378,7 +378,7 @@ private static final long serialVersionUID = 0L;
    *
    * Protobuf type {@code android_studio.LogcatUsageEvent.LogcatFormatDialog}
    */
-  public  static final class LogcatFormatDialog extends
+  public static final class LogcatFormatDialog extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:android_studio.LogcatUsageEvent.LogcatFormatDialog)
       LogcatFormatDialogOrBuilder {
@@ -487,6 +487,7 @@ private static final long serialVersionUID = 0L;
      * <code>optional .android_studio.LogcatUsageEvent.LogcatFormatConfiguration configuration = 1;</code>
      * @return Whether the configuration field is set.
      */
+    @java.lang.Override
     public boolean hasConfiguration() {
       return ((bitField0_ & 0x00000001) != 0);
     }
@@ -498,6 +499,7 @@ private static final long serialVersionUID = 0L;
      * <code>optional .android_studio.LogcatUsageEvent.LogcatFormatConfiguration configuration = 1;</code>
      * @return The configuration.
      */
+    @java.lang.Override
     public com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatConfiguration getConfiguration() {
       return configuration_ == null ? com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatConfiguration.getDefaultInstance() : configuration_;
     }
@@ -508,6 +510,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional .android_studio.LogcatUsageEvent.LogcatFormatConfiguration configuration = 1;</code>
      */
+    @java.lang.Override
     public com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatConfigurationOrBuilder getConfigurationOrBuilder() {
       return configuration_ == null ? com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatConfiguration.getDefaultInstance() : configuration_;
     }
@@ -522,6 +525,7 @@ private static final long serialVersionUID = 0L;
      * <code>optional bool is_default_preset = 2;</code>
      * @return Whether the isDefaultPreset field is set.
      */
+    @java.lang.Override
     public boolean hasIsDefaultPreset() {
       return ((bitField0_ & 0x00000002) != 0);
     }
@@ -533,6 +537,7 @@ private static final long serialVersionUID = 0L;
      * <code>optional bool is_default_preset = 2;</code>
      * @return The isDefaultPreset.
      */
+    @java.lang.Override
     public boolean getIsDefaultPreset() {
       return isDefaultPreset_;
     }
@@ -547,6 +552,7 @@ private static final long serialVersionUID = 0L;
      * <code>optional bool is_apply_button_used = 3;</code>
      * @return Whether the isApplyButtonUsed field is set.
      */
+    @java.lang.Override
     public boolean hasIsApplyButtonUsed() {
       return ((bitField0_ & 0x00000004) != 0);
     }
@@ -558,6 +564,7 @@ private static final long serialVersionUID = 0L;
      * <code>optional bool is_apply_button_used = 3;</code>
      * @return The isApplyButtonUsed.
      */
+    @java.lang.Override
     public boolean getIsApplyButtonUsed() {
       return isApplyButtonUsed_;
     }
@@ -1106,6 +1113,7 @@ private static final long serialVersionUID = 0L;
        * <code>optional bool is_default_preset = 2;</code>
        * @return Whether the isDefaultPreset field is set.
        */
+      @java.lang.Override
       public boolean hasIsDefaultPreset() {
         return ((bitField0_ & 0x00000002) != 0);
       }
@@ -1117,6 +1125,7 @@ private static final long serialVersionUID = 0L;
        * <code>optional bool is_default_preset = 2;</code>
        * @return The isDefaultPreset.
        */
+      @java.lang.Override
       public boolean getIsDefaultPreset() {
         return isDefaultPreset_;
       }
@@ -1159,6 +1168,7 @@ private static final long serialVersionUID = 0L;
        * <code>optional bool is_apply_button_used = 3;</code>
        * @return Whether the isApplyButtonUsed field is set.
        */
+      @java.lang.Override
       public boolean hasIsApplyButtonUsed() {
         return ((bitField0_ & 0x00000004) != 0);
       }
@@ -1170,6 +1180,7 @@ private static final long serialVersionUID = 0L;
        * <code>optional bool is_apply_button_used = 3;</code>
        * @return The isApplyButtonUsed.
        */
+      @java.lang.Override
       public boolean getIsApplyButtonUsed() {
         return isApplyButtonUsed_;
       }
@@ -1513,7 +1524,7 @@ private static final long serialVersionUID = 0L;
    *
    * Protobuf type {@code android_studio.LogcatUsageEvent.LogcatFormatConfiguration}
    */
-  public  static final class LogcatFormatConfiguration extends
+  public static final class LogcatFormatConfiguration extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:android_studio.LogcatUsageEvent.LogcatFormatConfiguration)
       LogcatFormatConfigurationOrBuilder {
@@ -1805,6 +1816,7 @@ private static final long serialVersionUID = 0L;
      * <code>optional bool is_show_timestamp = 1;</code>
      * @return Whether the isShowTimestamp field is set.
      */
+    @java.lang.Override
     public boolean hasIsShowTimestamp() {
       return ((bitField0_ & 0x00000001) != 0);
     }
@@ -1816,6 +1828,7 @@ private static final long serialVersionUID = 0L;
      * <code>optional bool is_show_timestamp = 1;</code>
      * @return The isShowTimestamp.
      */
+    @java.lang.Override
     public boolean getIsShowTimestamp() {
       return isShowTimestamp_;
     }
@@ -1830,6 +1843,7 @@ private static final long serialVersionUID = 0L;
      * <code>optional bool is_show_date = 2;</code>
      * @return Whether the isShowDate field is set.
      */
+    @java.lang.Override
     public boolean hasIsShowDate() {
       return ((bitField0_ & 0x00000002) != 0);
     }
@@ -1841,6 +1855,7 @@ private static final long serialVersionUID = 0L;
      * <code>optional bool is_show_date = 2;</code>
      * @return The isShowDate.
      */
+    @java.lang.Override
     public boolean getIsShowDate() {
       return isShowDate_;
     }
@@ -1855,6 +1870,7 @@ private static final long serialVersionUID = 0L;
      * <code>optional bool is_show_process_id = 3;</code>
      * @return Whether the isShowProcessId field is set.
      */
+    @java.lang.Override
     public boolean hasIsShowProcessId() {
       return ((bitField0_ & 0x00000004) != 0);
     }
@@ -1866,6 +1882,7 @@ private static final long serialVersionUID = 0L;
      * <code>optional bool is_show_process_id = 3;</code>
      * @return The isShowProcessId.
      */
+    @java.lang.Override
     public boolean getIsShowProcessId() {
       return isShowProcessId_;
     }
@@ -1880,6 +1897,7 @@ private static final long serialVersionUID = 0L;
      * <code>optional bool is_show_thread_id = 4;</code>
      * @return Whether the isShowThreadId field is set.
      */
+    @java.lang.Override
     public boolean hasIsShowThreadId() {
       return ((bitField0_ & 0x00000008) != 0);
     }
@@ -1891,6 +1909,7 @@ private static final long serialVersionUID = 0L;
      * <code>optional bool is_show_thread_id = 4;</code>
      * @return The isShowThreadId.
      */
+    @java.lang.Override
     public boolean getIsShowThreadId() {
       return isShowThreadId_;
     }
@@ -1905,6 +1924,7 @@ private static final long serialVersionUID = 0L;
      * <code>optional bool is_show_tags = 5;</code>
      * @return Whether the isShowTags field is set.
      */
+    @java.lang.Override
     public boolean hasIsShowTags() {
       return ((bitField0_ & 0x00000010) != 0);
     }
@@ -1916,6 +1936,7 @@ private static final long serialVersionUID = 0L;
      * <code>optional bool is_show_tags = 5;</code>
      * @return The isShowTags.
      */
+    @java.lang.Override
     public boolean getIsShowTags() {
       return isShowTags_;
     }
@@ -1930,6 +1951,7 @@ private static final long serialVersionUID = 0L;
      * <code>optional bool is_show_repeated_tags = 6;</code>
      * @return Whether the isShowRepeatedTags field is set.
      */
+    @java.lang.Override
     public boolean hasIsShowRepeatedTags() {
       return ((bitField0_ & 0x00000020) != 0);
     }
@@ -1941,6 +1963,7 @@ private static final long serialVersionUID = 0L;
      * <code>optional bool is_show_repeated_tags = 6;</code>
      * @return The isShowRepeatedTags.
      */
+    @java.lang.Override
     public boolean getIsShowRepeatedTags() {
       return isShowRepeatedTags_;
     }
@@ -1955,6 +1978,7 @@ private static final long serialVersionUID = 0L;
      * <code>optional int32 tag_width = 7;</code>
      * @return Whether the tagWidth field is set.
      */
+    @java.lang.Override
     public boolean hasTagWidth() {
       return ((bitField0_ & 0x00000040) != 0);
     }
@@ -1966,6 +1990,7 @@ private static final long serialVersionUID = 0L;
      * <code>optional int32 tag_width = 7;</code>
      * @return The tagWidth.
      */
+    @java.lang.Override
     public int getTagWidth() {
       return tagWidth_;
     }
@@ -1980,6 +2005,7 @@ private static final long serialVersionUID = 0L;
      * <code>optional bool is_show_packages = 8;</code>
      * @return Whether the isShowPackages field is set.
      */
+    @java.lang.Override
     public boolean hasIsShowPackages() {
       return ((bitField0_ & 0x00000080) != 0);
     }
@@ -1991,6 +2017,7 @@ private static final long serialVersionUID = 0L;
      * <code>optional bool is_show_packages = 8;</code>
      * @return The isShowPackages.
      */
+    @java.lang.Override
     public boolean getIsShowPackages() {
       return isShowPackages_;
     }
@@ -2005,6 +2032,7 @@ private static final long serialVersionUID = 0L;
      * <code>optional bool is_show_repeated_packages = 9;</code>
      * @return Whether the isShowRepeatedPackages field is set.
      */
+    @java.lang.Override
     public boolean hasIsShowRepeatedPackages() {
       return ((bitField0_ & 0x00000100) != 0);
     }
@@ -2016,6 +2044,7 @@ private static final long serialVersionUID = 0L;
      * <code>optional bool is_show_repeated_packages = 9;</code>
      * @return The isShowRepeatedPackages.
      */
+    @java.lang.Override
     public boolean getIsShowRepeatedPackages() {
       return isShowRepeatedPackages_;
     }
@@ -2030,6 +2059,7 @@ private static final long serialVersionUID = 0L;
      * <code>optional int32 package_width = 10;</code>
      * @return Whether the packageWidth field is set.
      */
+    @java.lang.Override
     public boolean hasPackageWidth() {
       return ((bitField0_ & 0x00000200) != 0);
     }
@@ -2041,6 +2071,7 @@ private static final long serialVersionUID = 0L;
      * <code>optional int32 package_width = 10;</code>
      * @return The packageWidth.
      */
+    @java.lang.Override
     public int getPackageWidth() {
       return packageWidth_;
     }
@@ -2055,7 +2086,7 @@ private static final long serialVersionUID = 0L;
      * <code>optional .android_studio.LogcatUsageEvent.LogcatFormatConfiguration.Preset preset = 11;</code>
      * @return Whether the preset field is set.
      */
-    public boolean hasPreset() {
+    @java.lang.Override public boolean hasPreset() {
       return ((bitField0_ & 0x00000400) != 0);
     }
     /**
@@ -2066,7 +2097,7 @@ private static final long serialVersionUID = 0L;
      * <code>optional .android_studio.LogcatUsageEvent.LogcatFormatConfiguration.Preset preset = 11;</code>
      * @return The preset.
      */
-    public com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatConfiguration.Preset getPreset() {
+    @java.lang.Override public com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatConfiguration.Preset getPreset() {
       @SuppressWarnings("deprecation")
       com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatConfiguration.Preset result = com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatConfiguration.Preset.valueOf(preset_);
       return result == null ? com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatConfiguration.Preset.UNKNOWN_PRESET : result;
@@ -2082,6 +2113,7 @@ private static final long serialVersionUID = 0L;
      * <code>optional bool is_default_preset = 12 [deprecated = true];</code>
      * @return Whether the isDefaultPreset field is set.
      */
+    @java.lang.Override
     @java.lang.Deprecated public boolean hasIsDefaultPreset() {
       return ((bitField0_ & 0x00000800) != 0);
     }
@@ -2093,6 +2125,7 @@ private static final long serialVersionUID = 0L;
      * <code>optional bool is_default_preset = 12 [deprecated = true];</code>
      * @return The isDefaultPreset.
      */
+    @java.lang.Override
     @java.lang.Deprecated public boolean getIsDefaultPreset() {
       return isDefaultPreset_;
     }
@@ -2107,6 +2140,7 @@ private static final long serialVersionUID = 0L;
      * <code>optional bool is_apply_button_used = 13 [deprecated = true];</code>
      * @return Whether the isApplyButtonUsed field is set.
      */
+    @java.lang.Override
     @java.lang.Deprecated public boolean hasIsApplyButtonUsed() {
       return ((bitField0_ & 0x00001000) != 0);
     }
@@ -2118,6 +2152,7 @@ private static final long serialVersionUID = 0L;
      * <code>optional bool is_apply_button_used = 13 [deprecated = true];</code>
      * @return The isApplyButtonUsed.
      */
+    @java.lang.Override
     @java.lang.Deprecated public boolean getIsApplyButtonUsed() {
       return isApplyButtonUsed_;
     }
@@ -2758,6 +2793,7 @@ private static final long serialVersionUID = 0L;
        * <code>optional bool is_show_timestamp = 1;</code>
        * @return Whether the isShowTimestamp field is set.
        */
+      @java.lang.Override
       public boolean hasIsShowTimestamp() {
         return ((bitField0_ & 0x00000001) != 0);
       }
@@ -2769,6 +2805,7 @@ private static final long serialVersionUID = 0L;
        * <code>optional bool is_show_timestamp = 1;</code>
        * @return The isShowTimestamp.
        */
+      @java.lang.Override
       public boolean getIsShowTimestamp() {
         return isShowTimestamp_;
       }
@@ -2811,6 +2848,7 @@ private static final long serialVersionUID = 0L;
        * <code>optional bool is_show_date = 2;</code>
        * @return Whether the isShowDate field is set.
        */
+      @java.lang.Override
       public boolean hasIsShowDate() {
         return ((bitField0_ & 0x00000002) != 0);
       }
@@ -2822,6 +2860,7 @@ private static final long serialVersionUID = 0L;
        * <code>optional bool is_show_date = 2;</code>
        * @return The isShowDate.
        */
+      @java.lang.Override
       public boolean getIsShowDate() {
         return isShowDate_;
       }
@@ -2864,6 +2903,7 @@ private static final long serialVersionUID = 0L;
        * <code>optional bool is_show_process_id = 3;</code>
        * @return Whether the isShowProcessId field is set.
        */
+      @java.lang.Override
       public boolean hasIsShowProcessId() {
         return ((bitField0_ & 0x00000004) != 0);
       }
@@ -2875,6 +2915,7 @@ private static final long serialVersionUID = 0L;
        * <code>optional bool is_show_process_id = 3;</code>
        * @return The isShowProcessId.
        */
+      @java.lang.Override
       public boolean getIsShowProcessId() {
         return isShowProcessId_;
       }
@@ -2917,6 +2958,7 @@ private static final long serialVersionUID = 0L;
        * <code>optional bool is_show_thread_id = 4;</code>
        * @return Whether the isShowThreadId field is set.
        */
+      @java.lang.Override
       public boolean hasIsShowThreadId() {
         return ((bitField0_ & 0x00000008) != 0);
       }
@@ -2928,6 +2970,7 @@ private static final long serialVersionUID = 0L;
        * <code>optional bool is_show_thread_id = 4;</code>
        * @return The isShowThreadId.
        */
+      @java.lang.Override
       public boolean getIsShowThreadId() {
         return isShowThreadId_;
       }
@@ -2970,6 +3013,7 @@ private static final long serialVersionUID = 0L;
        * <code>optional bool is_show_tags = 5;</code>
        * @return Whether the isShowTags field is set.
        */
+      @java.lang.Override
       public boolean hasIsShowTags() {
         return ((bitField0_ & 0x00000010) != 0);
       }
@@ -2981,6 +3025,7 @@ private static final long serialVersionUID = 0L;
        * <code>optional bool is_show_tags = 5;</code>
        * @return The isShowTags.
        */
+      @java.lang.Override
       public boolean getIsShowTags() {
         return isShowTags_;
       }
@@ -3023,6 +3068,7 @@ private static final long serialVersionUID = 0L;
        * <code>optional bool is_show_repeated_tags = 6;</code>
        * @return Whether the isShowRepeatedTags field is set.
        */
+      @java.lang.Override
       public boolean hasIsShowRepeatedTags() {
         return ((bitField0_ & 0x00000020) != 0);
       }
@@ -3034,6 +3080,7 @@ private static final long serialVersionUID = 0L;
        * <code>optional bool is_show_repeated_tags = 6;</code>
        * @return The isShowRepeatedTags.
        */
+      @java.lang.Override
       public boolean getIsShowRepeatedTags() {
         return isShowRepeatedTags_;
       }
@@ -3076,6 +3123,7 @@ private static final long serialVersionUID = 0L;
        * <code>optional int32 tag_width = 7;</code>
        * @return Whether the tagWidth field is set.
        */
+      @java.lang.Override
       public boolean hasTagWidth() {
         return ((bitField0_ & 0x00000040) != 0);
       }
@@ -3087,6 +3135,7 @@ private static final long serialVersionUID = 0L;
        * <code>optional int32 tag_width = 7;</code>
        * @return The tagWidth.
        */
+      @java.lang.Override
       public int getTagWidth() {
         return tagWidth_;
       }
@@ -3129,6 +3178,7 @@ private static final long serialVersionUID = 0L;
        * <code>optional bool is_show_packages = 8;</code>
        * @return Whether the isShowPackages field is set.
        */
+      @java.lang.Override
       public boolean hasIsShowPackages() {
         return ((bitField0_ & 0x00000080) != 0);
       }
@@ -3140,6 +3190,7 @@ private static final long serialVersionUID = 0L;
        * <code>optional bool is_show_packages = 8;</code>
        * @return The isShowPackages.
        */
+      @java.lang.Override
       public boolean getIsShowPackages() {
         return isShowPackages_;
       }
@@ -3182,6 +3233,7 @@ private static final long serialVersionUID = 0L;
        * <code>optional bool is_show_repeated_packages = 9;</code>
        * @return Whether the isShowRepeatedPackages field is set.
        */
+      @java.lang.Override
       public boolean hasIsShowRepeatedPackages() {
         return ((bitField0_ & 0x00000100) != 0);
       }
@@ -3193,6 +3245,7 @@ private static final long serialVersionUID = 0L;
        * <code>optional bool is_show_repeated_packages = 9;</code>
        * @return The isShowRepeatedPackages.
        */
+      @java.lang.Override
       public boolean getIsShowRepeatedPackages() {
         return isShowRepeatedPackages_;
       }
@@ -3235,6 +3288,7 @@ private static final long serialVersionUID = 0L;
        * <code>optional int32 package_width = 10;</code>
        * @return Whether the packageWidth field is set.
        */
+      @java.lang.Override
       public boolean hasPackageWidth() {
         return ((bitField0_ & 0x00000200) != 0);
       }
@@ -3246,6 +3300,7 @@ private static final long serialVersionUID = 0L;
        * <code>optional int32 package_width = 10;</code>
        * @return The packageWidth.
        */
+      @java.lang.Override
       public int getPackageWidth() {
         return packageWidth_;
       }
@@ -3288,7 +3343,7 @@ private static final long serialVersionUID = 0L;
        * <code>optional .android_studio.LogcatUsageEvent.LogcatFormatConfiguration.Preset preset = 11;</code>
        * @return Whether the preset field is set.
        */
-      public boolean hasPreset() {
+      @java.lang.Override public boolean hasPreset() {
         return ((bitField0_ & 0x00000400) != 0);
       }
       /**
@@ -3299,6 +3354,7 @@ private static final long serialVersionUID = 0L;
        * <code>optional .android_studio.LogcatUsageEvent.LogcatFormatConfiguration.Preset preset = 11;</code>
        * @return The preset.
        */
+      @java.lang.Override
       public com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatConfiguration.Preset getPreset() {
         @SuppressWarnings("deprecation")
         com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatConfiguration.Preset result = com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatConfiguration.Preset.valueOf(preset_);
@@ -3346,6 +3402,7 @@ private static final long serialVersionUID = 0L;
        * <code>optional bool is_default_preset = 12 [deprecated = true];</code>
        * @return Whether the isDefaultPreset field is set.
        */
+      @java.lang.Override
       @java.lang.Deprecated public boolean hasIsDefaultPreset() {
         return ((bitField0_ & 0x00000800) != 0);
       }
@@ -3357,6 +3414,7 @@ private static final long serialVersionUID = 0L;
        * <code>optional bool is_default_preset = 12 [deprecated = true];</code>
        * @return The isDefaultPreset.
        */
+      @java.lang.Override
       @java.lang.Deprecated public boolean getIsDefaultPreset() {
         return isDefaultPreset_;
       }
@@ -3399,6 +3457,7 @@ private static final long serialVersionUID = 0L;
        * <code>optional bool is_apply_button_used = 13 [deprecated = true];</code>
        * @return Whether the isApplyButtonUsed field is set.
        */
+      @java.lang.Override
       @java.lang.Deprecated public boolean hasIsApplyButtonUsed() {
         return ((bitField0_ & 0x00001000) != 0);
       }
@@ -3410,6 +3469,7 @@ private static final long serialVersionUID = 0L;
        * <code>optional bool is_apply_button_used = 13 [deprecated = true];</code>
        * @return The isApplyButtonUsed.
        */
+      @java.lang.Override
       @java.lang.Deprecated public boolean getIsApplyButtonUsed() {
         return isApplyButtonUsed_;
       }
@@ -3791,7 +3851,7 @@ private static final long serialVersionUID = 0L;
    *
    * Protobuf type {@code android_studio.LogcatUsageEvent.LogcatFilterEvent}
    */
-  public  static final class LogcatFilterEvent extends
+  public static final class LogcatFilterEvent extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:android_studio.LogcatUsageEvent.LogcatFilterEvent)
       LogcatFilterEventOrBuilder {
@@ -4050,7 +4110,7 @@ private static final long serialVersionUID = 0L;
      *
      * Protobuf type {@code android_studio.LogcatUsageEvent.LogcatFilterEvent.TermVariants}
      */
-    public  static final class TermVariants extends
+    public static final class TermVariants extends
         com.google.protobuf.GeneratedMessageV3 implements
         // @@protoc_insertion_point(message_implements:android_studio.LogcatUsageEvent.LogcatFilterEvent.TermVariants)
         TermVariantsOrBuilder {
@@ -4156,6 +4216,7 @@ private static final long serialVersionUID = 0L;
        * <code>optional int32 count = 1;</code>
        * @return Whether the count field is set.
        */
+      @java.lang.Override
       public boolean hasCount() {
         return ((bitField0_ & 0x00000001) != 0);
       }
@@ -4167,6 +4228,7 @@ private static final long serialVersionUID = 0L;
        * <code>optional int32 count = 1;</code>
        * @return The count.
        */
+      @java.lang.Override
       public int getCount() {
         return count_;
       }
@@ -4181,6 +4243,7 @@ private static final long serialVersionUID = 0L;
        * <code>optional int32 count_negated = 2;</code>
        * @return Whether the countNegated field is set.
        */
+      @java.lang.Override
       public boolean hasCountNegated() {
         return ((bitField0_ & 0x00000002) != 0);
       }
@@ -4192,6 +4255,7 @@ private static final long serialVersionUID = 0L;
        * <code>optional int32 count_negated = 2;</code>
        * @return The countNegated.
        */
+      @java.lang.Override
       public int getCountNegated() {
         return countNegated_;
       }
@@ -4206,6 +4270,7 @@ private static final long serialVersionUID = 0L;
        * <code>optional int32 count_regex = 3;</code>
        * @return Whether the countRegex field is set.
        */
+      @java.lang.Override
       public boolean hasCountRegex() {
         return ((bitField0_ & 0x00000004) != 0);
       }
@@ -4217,6 +4282,7 @@ private static final long serialVersionUID = 0L;
        * <code>optional int32 count_regex = 3;</code>
        * @return The countRegex.
        */
+      @java.lang.Override
       public int getCountRegex() {
         return countRegex_;
       }
@@ -4231,6 +4297,7 @@ private static final long serialVersionUID = 0L;
        * <code>optional int32 count_negated_regex = 4;</code>
        * @return Whether the countNegatedRegex field is set.
        */
+      @java.lang.Override
       public boolean hasCountNegatedRegex() {
         return ((bitField0_ & 0x00000008) != 0);
       }
@@ -4242,6 +4309,7 @@ private static final long serialVersionUID = 0L;
        * <code>optional int32 count_negated_regex = 4;</code>
        * @return The countNegatedRegex.
        */
+      @java.lang.Override
       public int getCountNegatedRegex() {
         return countNegatedRegex_;
       }
@@ -4648,6 +4716,7 @@ private static final long serialVersionUID = 0L;
          * <code>optional int32 count = 1;</code>
          * @return Whether the count field is set.
          */
+        @java.lang.Override
         public boolean hasCount() {
           return ((bitField0_ & 0x00000001) != 0);
         }
@@ -4659,6 +4728,7 @@ private static final long serialVersionUID = 0L;
          * <code>optional int32 count = 1;</code>
          * @return The count.
          */
+        @java.lang.Override
         public int getCount() {
           return count_;
         }
@@ -4701,6 +4771,7 @@ private static final long serialVersionUID = 0L;
          * <code>optional int32 count_negated = 2;</code>
          * @return Whether the countNegated field is set.
          */
+        @java.lang.Override
         public boolean hasCountNegated() {
           return ((bitField0_ & 0x00000002) != 0);
         }
@@ -4712,6 +4783,7 @@ private static final long serialVersionUID = 0L;
          * <code>optional int32 count_negated = 2;</code>
          * @return The countNegated.
          */
+        @java.lang.Override
         public int getCountNegated() {
           return countNegated_;
         }
@@ -4754,6 +4826,7 @@ private static final long serialVersionUID = 0L;
          * <code>optional int32 count_regex = 3;</code>
          * @return Whether the countRegex field is set.
          */
+        @java.lang.Override
         public boolean hasCountRegex() {
           return ((bitField0_ & 0x00000004) != 0);
         }
@@ -4765,6 +4838,7 @@ private static final long serialVersionUID = 0L;
          * <code>optional int32 count_regex = 3;</code>
          * @return The countRegex.
          */
+        @java.lang.Override
         public int getCountRegex() {
           return countRegex_;
         }
@@ -4807,6 +4881,7 @@ private static final long serialVersionUID = 0L;
          * <code>optional int32 count_negated_regex = 4;</code>
          * @return Whether the countNegatedRegex field is set.
          */
+        @java.lang.Override
         public boolean hasCountNegatedRegex() {
           return ((bitField0_ & 0x00000008) != 0);
         }
@@ -4818,6 +4893,7 @@ private static final long serialVersionUID = 0L;
          * <code>optional int32 count_negated_regex = 4;</code>
          * @return The countNegatedRegex.
          */
+        @java.lang.Override
         public int getCountNegatedRegex() {
           return countNegatedRegex_;
         }
@@ -4914,6 +4990,7 @@ private static final long serialVersionUID = 0L;
      * <code>optional .android_studio.LogcatUsageEvent.LogcatFilterEvent.TermVariants tag_terms = 1;</code>
      * @return Whether the tagTerms field is set.
      */
+    @java.lang.Override
     public boolean hasTagTerms() {
       return ((bitField0_ & 0x00000001) != 0);
     }
@@ -4925,6 +5002,7 @@ private static final long serialVersionUID = 0L;
      * <code>optional .android_studio.LogcatUsageEvent.LogcatFilterEvent.TermVariants tag_terms = 1;</code>
      * @return The tagTerms.
      */
+    @java.lang.Override
     public com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFilterEvent.TermVariants getTagTerms() {
       return tagTerms_ == null ? com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFilterEvent.TermVariants.getDefaultInstance() : tagTerms_;
     }
@@ -4935,6 +5013,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional .android_studio.LogcatUsageEvent.LogcatFilterEvent.TermVariants tag_terms = 1;</code>
      */
+    @java.lang.Override
     public com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFilterEvent.TermVariantsOrBuilder getTagTermsOrBuilder() {
       return tagTerms_ == null ? com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFilterEvent.TermVariants.getDefaultInstance() : tagTerms_;
     }
@@ -4949,6 +5028,7 @@ private static final long serialVersionUID = 0L;
      * <code>optional .android_studio.LogcatUsageEvent.LogcatFilterEvent.TermVariants package_terms = 2;</code>
      * @return Whether the packageTerms field is set.
      */
+    @java.lang.Override
     public boolean hasPackageTerms() {
       return ((bitField0_ & 0x00000002) != 0);
     }
@@ -4960,6 +5040,7 @@ private static final long serialVersionUID = 0L;
      * <code>optional .android_studio.LogcatUsageEvent.LogcatFilterEvent.TermVariants package_terms = 2;</code>
      * @return The packageTerms.
      */
+    @java.lang.Override
     public com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFilterEvent.TermVariants getPackageTerms() {
       return packageTerms_ == null ? com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFilterEvent.TermVariants.getDefaultInstance() : packageTerms_;
     }
@@ -4970,6 +5051,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional .android_studio.LogcatUsageEvent.LogcatFilterEvent.TermVariants package_terms = 2;</code>
      */
+    @java.lang.Override
     public com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFilterEvent.TermVariantsOrBuilder getPackageTermsOrBuilder() {
       return packageTerms_ == null ? com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFilterEvent.TermVariants.getDefaultInstance() : packageTerms_;
     }
@@ -4984,6 +5066,7 @@ private static final long serialVersionUID = 0L;
      * <code>optional .android_studio.LogcatUsageEvent.LogcatFilterEvent.TermVariants message_terms = 3;</code>
      * @return Whether the messageTerms field is set.
      */
+    @java.lang.Override
     public boolean hasMessageTerms() {
       return ((bitField0_ & 0x00000004) != 0);
     }
@@ -4995,6 +5078,7 @@ private static final long serialVersionUID = 0L;
      * <code>optional .android_studio.LogcatUsageEvent.LogcatFilterEvent.TermVariants message_terms = 3;</code>
      * @return The messageTerms.
      */
+    @java.lang.Override
     public com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFilterEvent.TermVariants getMessageTerms() {
       return messageTerms_ == null ? com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFilterEvent.TermVariants.getDefaultInstance() : messageTerms_;
     }
@@ -5005,6 +5089,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional .android_studio.LogcatUsageEvent.LogcatFilterEvent.TermVariants message_terms = 3;</code>
      */
+    @java.lang.Override
     public com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFilterEvent.TermVariantsOrBuilder getMessageTermsOrBuilder() {
       return messageTerms_ == null ? com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFilterEvent.TermVariants.getDefaultInstance() : messageTerms_;
     }
@@ -5019,6 +5104,7 @@ private static final long serialVersionUID = 0L;
      * <code>optional .android_studio.LogcatUsageEvent.LogcatFilterEvent.TermVariants line_terms = 4;</code>
      * @return Whether the lineTerms field is set.
      */
+    @java.lang.Override
     public boolean hasLineTerms() {
       return ((bitField0_ & 0x00000008) != 0);
     }
@@ -5030,6 +5116,7 @@ private static final long serialVersionUID = 0L;
      * <code>optional .android_studio.LogcatUsageEvent.LogcatFilterEvent.TermVariants line_terms = 4;</code>
      * @return The lineTerms.
      */
+    @java.lang.Override
     public com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFilterEvent.TermVariants getLineTerms() {
       return lineTerms_ == null ? com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFilterEvent.TermVariants.getDefaultInstance() : lineTerms_;
     }
@@ -5040,6 +5127,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional .android_studio.LogcatUsageEvent.LogcatFilterEvent.TermVariants line_terms = 4;</code>
      */
+    @java.lang.Override
     public com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFilterEvent.TermVariantsOrBuilder getLineTermsOrBuilder() {
       return lineTerms_ == null ? com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFilterEvent.TermVariants.getDefaultInstance() : lineTerms_;
     }
@@ -5055,6 +5143,7 @@ private static final long serialVersionUID = 0L;
      * <code>optional int32 implicit_line_terms = 5;</code>
      * @return Whether the implicitLineTerms field is set.
      */
+    @java.lang.Override
     public boolean hasImplicitLineTerms() {
       return ((bitField0_ & 0x00000010) != 0);
     }
@@ -5067,6 +5156,7 @@ private static final long serialVersionUID = 0L;
      * <code>optional int32 implicit_line_terms = 5;</code>
      * @return The implicitLineTerms.
      */
+    @java.lang.Override
     public int getImplicitLineTerms() {
       return implicitLineTerms_;
     }
@@ -5081,6 +5171,7 @@ private static final long serialVersionUID = 0L;
      * <code>optional int32 level_terms = 6;</code>
      * @return Whether the levelTerms field is set.
      */
+    @java.lang.Override
     public boolean hasLevelTerms() {
       return ((bitField0_ & 0x00000020) != 0);
     }
@@ -5092,6 +5183,7 @@ private static final long serialVersionUID = 0L;
      * <code>optional int32 level_terms = 6;</code>
      * @return The levelTerms.
      */
+    @java.lang.Override
     public int getLevelTerms() {
       return levelTerms_;
     }
@@ -5107,6 +5199,7 @@ private static final long serialVersionUID = 0L;
      * <code>optional int32 age_terms = 7;</code>
      * @return Whether the ageTerms field is set.
      */
+    @java.lang.Override
     public boolean hasAgeTerms() {
       return ((bitField0_ & 0x00000040) != 0);
     }
@@ -5119,6 +5212,7 @@ private static final long serialVersionUID = 0L;
      * <code>optional int32 age_terms = 7;</code>
      * @return The ageTerms.
      */
+    @java.lang.Override
     public int getAgeTerms() {
       return ageTerms_;
     }
@@ -5133,6 +5227,7 @@ private static final long serialVersionUID = 0L;
      * <code>optional int32 package_project_terms = 8;</code>
      * @return Whether the packageProjectTerms field is set.
      */
+    @java.lang.Override
     public boolean hasPackageProjectTerms() {
       return ((bitField0_ & 0x00000080) != 0);
     }
@@ -5144,6 +5239,7 @@ private static final long serialVersionUID = 0L;
      * <code>optional int32 package_project_terms = 8;</code>
      * @return The packageProjectTerms.
      */
+    @java.lang.Override
     public int getPackageProjectTerms() {
       return packageProjectTerms_;
     }
@@ -5158,6 +5254,7 @@ private static final long serialVersionUID = 0L;
      * <code>optional int32 or_operators = 9;</code>
      * @return Whether the orOperators field is set.
      */
+    @java.lang.Override
     public boolean hasOrOperators() {
       return ((bitField0_ & 0x00000100) != 0);
     }
@@ -5169,6 +5266,7 @@ private static final long serialVersionUID = 0L;
      * <code>optional int32 or_operators = 9;</code>
      * @return The orOperators.
      */
+    @java.lang.Override
     public int getOrOperators() {
       return orOperators_;
     }
@@ -5183,6 +5281,7 @@ private static final long serialVersionUID = 0L;
      * <code>optional int32 and_operators = 10;</code>
      * @return Whether the andOperators field is set.
      */
+    @java.lang.Override
     public boolean hasAndOperators() {
       return ((bitField0_ & 0x00000200) != 0);
     }
@@ -5194,6 +5293,7 @@ private static final long serialVersionUID = 0L;
      * <code>optional int32 and_operators = 10;</code>
      * @return The andOperators.
      */
+    @java.lang.Override
     public int getAndOperators() {
       return andOperators_;
     }
@@ -5208,6 +5308,7 @@ private static final long serialVersionUID = 0L;
      * <code>optional int32 parentheses = 11;</code>
      * @return Whether the parentheses field is set.
      */
+    @java.lang.Override
     public boolean hasParentheses() {
       return ((bitField0_ & 0x00000400) != 0);
     }
@@ -5219,6 +5320,7 @@ private static final long serialVersionUID = 0L;
      * <code>optional int32 parentheses = 11;</code>
      * @return The parentheses.
      */
+    @java.lang.Override
     public int getParentheses() {
       return parentheses_;
     }
@@ -5233,6 +5335,7 @@ private static final long serialVersionUID = 0L;
      * <code>optional bool contains_errors = 12;</code>
      * @return Whether the containsErrors field is set.
      */
+    @java.lang.Override
     public boolean hasContainsErrors() {
       return ((bitField0_ & 0x00000800) != 0);
     }
@@ -5244,6 +5347,7 @@ private static final long serialVersionUID = 0L;
      * <code>optional bool contains_errors = 12;</code>
      * @return The containsErrors.
      */
+    @java.lang.Override
     public boolean getContainsErrors() {
       return containsErrors_;
     }
@@ -5258,6 +5362,7 @@ private static final long serialVersionUID = 0L;
      * <code>optional bool is_favorite = 13;</code>
      * @return Whether the isFavorite field is set.
      */
+    @java.lang.Override
     public boolean hasIsFavorite() {
       return ((bitField0_ & 0x00001000) != 0);
     }
@@ -5269,6 +5374,7 @@ private static final long serialVersionUID = 0L;
      * <code>optional bool is_favorite = 13;</code>
      * @return The isFavorite.
      */
+    @java.lang.Override
     public boolean getIsFavorite() {
       return isFavorite_;
     }
@@ -6565,6 +6671,7 @@ private static final long serialVersionUID = 0L;
        * <code>optional int32 implicit_line_terms = 5;</code>
        * @return Whether the implicitLineTerms field is set.
        */
+      @java.lang.Override
       public boolean hasImplicitLineTerms() {
         return ((bitField0_ & 0x00000010) != 0);
       }
@@ -6577,6 +6684,7 @@ private static final long serialVersionUID = 0L;
        * <code>optional int32 implicit_line_terms = 5;</code>
        * @return The implicitLineTerms.
        */
+      @java.lang.Override
       public int getImplicitLineTerms() {
         return implicitLineTerms_;
       }
@@ -6621,6 +6729,7 @@ private static final long serialVersionUID = 0L;
        * <code>optional int32 level_terms = 6;</code>
        * @return Whether the levelTerms field is set.
        */
+      @java.lang.Override
       public boolean hasLevelTerms() {
         return ((bitField0_ & 0x00000020) != 0);
       }
@@ -6632,6 +6741,7 @@ private static final long serialVersionUID = 0L;
        * <code>optional int32 level_terms = 6;</code>
        * @return The levelTerms.
        */
+      @java.lang.Override
       public int getLevelTerms() {
         return levelTerms_;
       }
@@ -6675,6 +6785,7 @@ private static final long serialVersionUID = 0L;
        * <code>optional int32 age_terms = 7;</code>
        * @return Whether the ageTerms field is set.
        */
+      @java.lang.Override
       public boolean hasAgeTerms() {
         return ((bitField0_ & 0x00000040) != 0);
       }
@@ -6687,6 +6798,7 @@ private static final long serialVersionUID = 0L;
        * <code>optional int32 age_terms = 7;</code>
        * @return The ageTerms.
        */
+      @java.lang.Override
       public int getAgeTerms() {
         return ageTerms_;
       }
@@ -6731,6 +6843,7 @@ private static final long serialVersionUID = 0L;
        * <code>optional int32 package_project_terms = 8;</code>
        * @return Whether the packageProjectTerms field is set.
        */
+      @java.lang.Override
       public boolean hasPackageProjectTerms() {
         return ((bitField0_ & 0x00000080) != 0);
       }
@@ -6742,6 +6855,7 @@ private static final long serialVersionUID = 0L;
        * <code>optional int32 package_project_terms = 8;</code>
        * @return The packageProjectTerms.
        */
+      @java.lang.Override
       public int getPackageProjectTerms() {
         return packageProjectTerms_;
       }
@@ -6784,6 +6898,7 @@ private static final long serialVersionUID = 0L;
        * <code>optional int32 or_operators = 9;</code>
        * @return Whether the orOperators field is set.
        */
+      @java.lang.Override
       public boolean hasOrOperators() {
         return ((bitField0_ & 0x00000100) != 0);
       }
@@ -6795,6 +6910,7 @@ private static final long serialVersionUID = 0L;
        * <code>optional int32 or_operators = 9;</code>
        * @return The orOperators.
        */
+      @java.lang.Override
       public int getOrOperators() {
         return orOperators_;
       }
@@ -6837,6 +6953,7 @@ private static final long serialVersionUID = 0L;
        * <code>optional int32 and_operators = 10;</code>
        * @return Whether the andOperators field is set.
        */
+      @java.lang.Override
       public boolean hasAndOperators() {
         return ((bitField0_ & 0x00000200) != 0);
       }
@@ -6848,6 +6965,7 @@ private static final long serialVersionUID = 0L;
        * <code>optional int32 and_operators = 10;</code>
        * @return The andOperators.
        */
+      @java.lang.Override
       public int getAndOperators() {
         return andOperators_;
       }
@@ -6890,6 +7008,7 @@ private static final long serialVersionUID = 0L;
        * <code>optional int32 parentheses = 11;</code>
        * @return Whether the parentheses field is set.
        */
+      @java.lang.Override
       public boolean hasParentheses() {
         return ((bitField0_ & 0x00000400) != 0);
       }
@@ -6901,6 +7020,7 @@ private static final long serialVersionUID = 0L;
        * <code>optional int32 parentheses = 11;</code>
        * @return The parentheses.
        */
+      @java.lang.Override
       public int getParentheses() {
         return parentheses_;
       }
@@ -6943,6 +7063,7 @@ private static final long serialVersionUID = 0L;
        * <code>optional bool contains_errors = 12;</code>
        * @return Whether the containsErrors field is set.
        */
+      @java.lang.Override
       public boolean hasContainsErrors() {
         return ((bitField0_ & 0x00000800) != 0);
       }
@@ -6954,6 +7075,7 @@ private static final long serialVersionUID = 0L;
        * <code>optional bool contains_errors = 12;</code>
        * @return The containsErrors.
        */
+      @java.lang.Override
       public boolean getContainsErrors() {
         return containsErrors_;
       }
@@ -6996,6 +7118,7 @@ private static final long serialVersionUID = 0L;
        * <code>optional bool is_favorite = 13;</code>
        * @return Whether the isFavorite field is set.
        */
+      @java.lang.Override
       public boolean hasIsFavorite() {
         return ((bitField0_ & 0x00001000) != 0);
       }
@@ -7007,6 +7130,7 @@ private static final long serialVersionUID = 0L;
        * <code>optional bool is_favorite = 13;</code>
        * @return The isFavorite.
        */
+      @java.lang.Override
       public boolean getIsFavorite() {
         return isFavorite_;
       }
@@ -7176,7 +7300,7 @@ private static final long serialVersionUID = 0L;
    *
    * Protobuf type {@code android_studio.LogcatUsageEvent.LogcatPanelEvent}
    */
-  public  static final class LogcatPanelEvent extends
+  public static final class LogcatPanelEvent extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:android_studio.LogcatUsageEvent.LogcatPanelEvent)
       LogcatPanelEventOrBuilder {
@@ -7293,6 +7417,7 @@ private static final long serialVersionUID = 0L;
      * <code>optional bool is_restored = 1;</code>
      * @return Whether the isRestored field is set.
      */
+    @java.lang.Override
     public boolean hasIsRestored() {
       return ((bitField0_ & 0x00000001) != 0);
     }
@@ -7304,6 +7429,7 @@ private static final long serialVersionUID = 0L;
      * <code>optional bool is_restored = 1;</code>
      * @return The isRestored.
      */
+    @java.lang.Override
     public boolean getIsRestored() {
       return isRestored_;
     }
@@ -7318,6 +7444,7 @@ private static final long serialVersionUID = 0L;
      * <code>optional .android_studio.LogcatUsageEvent.LogcatFormatConfiguration format_configuration = 2;</code>
      * @return Whether the formatConfiguration field is set.
      */
+    @java.lang.Override
     public boolean hasFormatConfiguration() {
       return ((bitField0_ & 0x00000002) != 0);
     }
@@ -7329,6 +7456,7 @@ private static final long serialVersionUID = 0L;
      * <code>optional .android_studio.LogcatUsageEvent.LogcatFormatConfiguration format_configuration = 2;</code>
      * @return The formatConfiguration.
      */
+    @java.lang.Override
     public com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatConfiguration getFormatConfiguration() {
       return formatConfiguration_ == null ? com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatConfiguration.getDefaultInstance() : formatConfiguration_;
     }
@@ -7339,6 +7467,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional .android_studio.LogcatUsageEvent.LogcatFormatConfiguration format_configuration = 2;</code>
      */
+    @java.lang.Override
     public com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatConfigurationOrBuilder getFormatConfigurationOrBuilder() {
       return formatConfiguration_ == null ? com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatConfiguration.getDefaultInstance() : formatConfiguration_;
     }
@@ -7353,6 +7482,7 @@ private static final long serialVersionUID = 0L;
      * <code>optional .android_studio.LogcatUsageEvent.LogcatFilterEvent filter = 3;</code>
      * @return Whether the filter field is set.
      */
+    @java.lang.Override
     public boolean hasFilter() {
       return ((bitField0_ & 0x00000004) != 0);
     }
@@ -7364,6 +7494,7 @@ private static final long serialVersionUID = 0L;
      * <code>optional .android_studio.LogcatUsageEvent.LogcatFilterEvent filter = 3;</code>
      * @return The filter.
      */
+    @java.lang.Override
     public com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFilterEvent getFilter() {
       return filter_ == null ? com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFilterEvent.getDefaultInstance() : filter_;
     }
@@ -7374,6 +7505,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional .android_studio.LogcatUsageEvent.LogcatFilterEvent filter = 3;</code>
      */
+    @java.lang.Override
     public com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFilterEventOrBuilder getFilterOrBuilder() {
       return filter_ == null ? com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFilterEvent.getDefaultInstance() : filter_;
     }
@@ -7774,6 +7906,7 @@ private static final long serialVersionUID = 0L;
        * <code>optional bool is_restored = 1;</code>
        * @return Whether the isRestored field is set.
        */
+      @java.lang.Override
       public boolean hasIsRestored() {
         return ((bitField0_ & 0x00000001) != 0);
       }
@@ -7785,6 +7918,7 @@ private static final long serialVersionUID = 0L;
        * <code>optional bool is_restored = 1;</code>
        * @return The isRestored.
        */
+      @java.lang.Override
       public boolean getIsRestored() {
         return isRestored_;
       }
@@ -8193,7 +8327,7 @@ private static final long serialVersionUID = 0L;
    * <code>optional .android_studio.LogcatUsageEvent.Type type = 1;</code>
    * @return Whether the type field is set.
    */
-  public boolean hasType() {
+  @java.lang.Override public boolean hasType() {
     return ((bitField0_ & 0x00000001) != 0);
   }
   /**
@@ -8204,7 +8338,7 @@ private static final long serialVersionUID = 0L;
    * <code>optional .android_studio.LogcatUsageEvent.Type type = 1;</code>
    * @return The type.
    */
-  public com.google.wireless.android.sdk.stats.LogcatUsageEvent.Type getType() {
+  @java.lang.Override public com.google.wireless.android.sdk.stats.LogcatUsageEvent.Type getType() {
     @SuppressWarnings("deprecation")
     com.google.wireless.android.sdk.stats.LogcatUsageEvent.Type result = com.google.wireless.android.sdk.stats.LogcatUsageEvent.Type.valueOf(type_);
     return result == null ? com.google.wireless.android.sdk.stats.LogcatUsageEvent.Type.UNKNOWN_EVENT_TYPE : result;
@@ -8220,6 +8354,7 @@ private static final long serialVersionUID = 0L;
    * <code>optional .android_studio.LogcatUsageEvent.LogcatFormatConfiguration format_dialog = 2 [deprecated = true];</code>
    * @return Whether the formatDialog field is set.
    */
+  @java.lang.Override
   @java.lang.Deprecated public boolean hasFormatDialog() {
     return ((bitField0_ & 0x00000002) != 0);
   }
@@ -8231,6 +8366,7 @@ private static final long serialVersionUID = 0L;
    * <code>optional .android_studio.LogcatUsageEvent.LogcatFormatConfiguration format_dialog = 2 [deprecated = true];</code>
    * @return The formatDialog.
    */
+  @java.lang.Override
   @java.lang.Deprecated public com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatConfiguration getFormatDialog() {
     return formatDialog_ == null ? com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatConfiguration.getDefaultInstance() : formatDialog_;
   }
@@ -8241,6 +8377,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>optional .android_studio.LogcatUsageEvent.LogcatFormatConfiguration format_dialog = 2 [deprecated = true];</code>
    */
+  @java.lang.Override
   @java.lang.Deprecated public com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatConfigurationOrBuilder getFormatDialogOrBuilder() {
     return formatDialog_ == null ? com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatConfiguration.getDefaultInstance() : formatDialog_;
   }
@@ -8255,6 +8392,7 @@ private static final long serialVersionUID = 0L;
    * <code>optional .android_studio.LogcatUsageEvent.LogcatFilterEvent logcat_filter = 3;</code>
    * @return Whether the logcatFilter field is set.
    */
+  @java.lang.Override
   public boolean hasLogcatFilter() {
     return ((bitField0_ & 0x00000004) != 0);
   }
@@ -8266,6 +8404,7 @@ private static final long serialVersionUID = 0L;
    * <code>optional .android_studio.LogcatUsageEvent.LogcatFilterEvent logcat_filter = 3;</code>
    * @return The logcatFilter.
    */
+  @java.lang.Override
   public com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFilterEvent getLogcatFilter() {
     return logcatFilter_ == null ? com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFilterEvent.getDefaultInstance() : logcatFilter_;
   }
@@ -8276,6 +8415,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>optional .android_studio.LogcatUsageEvent.LogcatFilterEvent logcat_filter = 3;</code>
    */
+  @java.lang.Override
   public com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFilterEventOrBuilder getLogcatFilterOrBuilder() {
     return logcatFilter_ == null ? com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFilterEvent.getDefaultInstance() : logcatFilter_;
   }
@@ -8290,6 +8430,7 @@ private static final long serialVersionUID = 0L;
    * <code>optional .android_studio.LogcatUsageEvent.LogcatFormatDialog format_dialog_applied = 4;</code>
    * @return Whether the formatDialogApplied field is set.
    */
+  @java.lang.Override
   public boolean hasFormatDialogApplied() {
     return ((bitField0_ & 0x00000008) != 0);
   }
@@ -8301,6 +8442,7 @@ private static final long serialVersionUID = 0L;
    * <code>optional .android_studio.LogcatUsageEvent.LogcatFormatDialog format_dialog_applied = 4;</code>
    * @return The formatDialogApplied.
    */
+  @java.lang.Override
   public com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatDialog getFormatDialogApplied() {
     return formatDialogApplied_ == null ? com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatDialog.getDefaultInstance() : formatDialogApplied_;
   }
@@ -8311,6 +8453,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>optional .android_studio.LogcatUsageEvent.LogcatFormatDialog format_dialog_applied = 4;</code>
    */
+  @java.lang.Override
   public com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatDialogOrBuilder getFormatDialogAppliedOrBuilder() {
     return formatDialogApplied_ == null ? com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatFormatDialog.getDefaultInstance() : formatDialogApplied_;
   }
@@ -8325,6 +8468,7 @@ private static final long serialVersionUID = 0L;
    * <code>optional .android_studio.LogcatUsageEvent.LogcatPanelEvent panel_added = 5;</code>
    * @return Whether the panelAdded field is set.
    */
+  @java.lang.Override
   public boolean hasPanelAdded() {
     return ((bitField0_ & 0x00000010) != 0);
   }
@@ -8336,6 +8480,7 @@ private static final long serialVersionUID = 0L;
    * <code>optional .android_studio.LogcatUsageEvent.LogcatPanelEvent panel_added = 5;</code>
    * @return The panelAdded.
    */
+  @java.lang.Override
   public com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatPanelEvent getPanelAdded() {
     return panelAdded_ == null ? com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatPanelEvent.getDefaultInstance() : panelAdded_;
   }
@@ -8346,6 +8491,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>optional .android_studio.LogcatUsageEvent.LogcatPanelEvent panel_added = 5;</code>
    */
+  @java.lang.Override
   public com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatPanelEventOrBuilder getPanelAddedOrBuilder() {
     return panelAdded_ == null ? com.google.wireless.android.sdk.stats.LogcatUsageEvent.LogcatPanelEvent.getDefaultInstance() : panelAdded_;
   }
@@ -8812,7 +8958,7 @@ private static final long serialVersionUID = 0L;
      * <code>optional .android_studio.LogcatUsageEvent.Type type = 1;</code>
      * @return Whether the type field is set.
      */
-    public boolean hasType() {
+    @java.lang.Override public boolean hasType() {
       return ((bitField0_ & 0x00000001) != 0);
     }
     /**
@@ -8823,6 +8969,7 @@ private static final long serialVersionUID = 0L;
      * <code>optional .android_studio.LogcatUsageEvent.Type type = 1;</code>
      * @return The type.
      */
+    @java.lang.Override
     public com.google.wireless.android.sdk.stats.LogcatUsageEvent.Type getType() {
       @SuppressWarnings("deprecation")
       com.google.wireless.android.sdk.stats.LogcatUsageEvent.Type result = com.google.wireless.android.sdk.stats.LogcatUsageEvent.Type.valueOf(type_);
