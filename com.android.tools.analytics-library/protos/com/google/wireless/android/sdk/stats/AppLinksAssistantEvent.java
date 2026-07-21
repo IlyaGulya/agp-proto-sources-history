@@ -1286,6 +1286,25 @@ private static final long serialVersionUID = 0L;
      * @return The domainsWebCheckFailed.
      */
     long getDomainsWebCheckFailed();
+
+    /**
+     * <pre>
+     * Time taken to perform validation
+     * </pre>
+     *
+     * <code>optional uint64 validation_runtime_millis = 10;</code>
+     * @return Whether the validationRuntimeMillis field is set.
+     */
+    boolean hasValidationRuntimeMillis();
+    /**
+     * <pre>
+     * Time taken to perform validation
+     * </pre>
+     *
+     * <code>optional uint64 validation_runtime_millis = 10;</code>
+     * @return The validationRuntimeMillis.
+     */
+    long getValidationRuntimeMillis();
   }
   /**
    * <pre>
@@ -1380,6 +1399,11 @@ private static final long serialVersionUID = 0L;
             case 72: {
               bitField0_ |= 0x00000100;
               domainsWebCheckFailed_ = input.readInt64();
+              break;
+            }
+            case 80: {
+              bitField0_ |= 0x00000200;
+              validationRuntimeMillis_ = input.readUInt64();
               break;
             }
             default: {
@@ -1650,6 +1674,33 @@ private static final long serialVersionUID = 0L;
       return domainsWebCheckFailed_;
     }
 
+    public static final int VALIDATION_RUNTIME_MILLIS_FIELD_NUMBER = 10;
+    private long validationRuntimeMillis_;
+    /**
+     * <pre>
+     * Time taken to perform validation
+     * </pre>
+     *
+     * <code>optional uint64 validation_runtime_millis = 10;</code>
+     * @return Whether the validationRuntimeMillis field is set.
+     */
+    @java.lang.Override
+    public boolean hasValidationRuntimeMillis() {
+      return ((bitField0_ & 0x00000200) != 0);
+    }
+    /**
+     * <pre>
+     * Time taken to perform validation
+     * </pre>
+     *
+     * <code>optional uint64 validation_runtime_millis = 10;</code>
+     * @return The validationRuntimeMillis.
+     */
+    @java.lang.Override
+    public long getValidationRuntimeMillis() {
+      return validationRuntimeMillis_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -1690,6 +1741,9 @@ private static final long serialVersionUID = 0L;
       }
       if (((bitField0_ & 0x00000100) != 0)) {
         output.writeInt64(9, domainsWebCheckFailed_);
+      }
+      if (((bitField0_ & 0x00000200) != 0)) {
+        output.writeUInt64(10, validationRuntimeMillis_);
       }
       unknownFields.writeTo(output);
     }
@@ -1735,6 +1789,10 @@ private static final long serialVersionUID = 0L;
       if (((bitField0_ & 0x00000100) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeInt64Size(9, domainsWebCheckFailed_);
+      }
+      if (((bitField0_ & 0x00000200) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(10, validationRuntimeMillis_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -1796,6 +1854,11 @@ private static final long serialVersionUID = 0L;
         if (getDomainsWebCheckFailed()
             != other.getDomainsWebCheckFailed()) return false;
       }
+      if (hasValidationRuntimeMillis() != other.hasValidationRuntimeMillis()) return false;
+      if (hasValidationRuntimeMillis()) {
+        if (getValidationRuntimeMillis()
+            != other.getValidationRuntimeMillis()) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -1851,6 +1914,11 @@ private static final long serialVersionUID = 0L;
         hash = (37 * hash) + DOMAINS_WEB_CHECK_FAILED_FIELD_NUMBER;
         hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
             getDomainsWebCheckFailed());
+      }
+      if (hasValidationRuntimeMillis()) {
+        hash = (37 * hash) + VALIDATION_RUNTIME_MILLIS_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            getValidationRuntimeMillis());
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -2007,6 +2075,8 @@ private static final long serialVersionUID = 0L;
         bitField0_ = (bitField0_ & ~0x00000080);
         domainsWebCheckFailed_ = 0L;
         bitField0_ = (bitField0_ & ~0x00000100);
+        validationRuntimeMillis_ = 0L;
+        bitField0_ = (bitField0_ & ~0x00000200);
         return this;
       }
 
@@ -2070,6 +2140,10 @@ private static final long serialVersionUID = 0L;
         if (((from_bitField0_ & 0x00000100) != 0)) {
           result.domainsWebCheckFailed_ = domainsWebCheckFailed_;
           to_bitField0_ |= 0x00000100;
+        }
+        if (((from_bitField0_ & 0x00000200) != 0)) {
+          result.validationRuntimeMillis_ = validationRuntimeMillis_;
+          to_bitField0_ |= 0x00000200;
         }
         result.bitField0_ = to_bitField0_;
         onBuilt();
@@ -2146,6 +2220,9 @@ private static final long serialVersionUID = 0L;
         }
         if (other.hasDomainsWebCheckFailed()) {
           setDomainsWebCheckFailed(other.getDomainsWebCheckFailed());
+        }
+        if (other.hasValidationRuntimeMillis()) {
+          setValidationRuntimeMillis(other.getValidationRuntimeMillis());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -2652,6 +2729,61 @@ private static final long serialVersionUID = 0L;
       public Builder clearDomainsWebCheckFailed() {
         bitField0_ = (bitField0_ & ~0x00000100);
         domainsWebCheckFailed_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long validationRuntimeMillis_ ;
+      /**
+       * <pre>
+       * Time taken to perform validation
+       * </pre>
+       *
+       * <code>optional uint64 validation_runtime_millis = 10;</code>
+       * @return Whether the validationRuntimeMillis field is set.
+       */
+      @java.lang.Override
+      public boolean hasValidationRuntimeMillis() {
+        return ((bitField0_ & 0x00000200) != 0);
+      }
+      /**
+       * <pre>
+       * Time taken to perform validation
+       * </pre>
+       *
+       * <code>optional uint64 validation_runtime_millis = 10;</code>
+       * @return The validationRuntimeMillis.
+       */
+      @java.lang.Override
+      public long getValidationRuntimeMillis() {
+        return validationRuntimeMillis_;
+      }
+      /**
+       * <pre>
+       * Time taken to perform validation
+       * </pre>
+       *
+       * <code>optional uint64 validation_runtime_millis = 10;</code>
+       * @param value The validationRuntimeMillis to set.
+       * @return This builder for chaining.
+       */
+      public Builder setValidationRuntimeMillis(long value) {
+        bitField0_ |= 0x00000200;
+        validationRuntimeMillis_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Time taken to perform validation
+       * </pre>
+       *
+       * <code>optional uint64 validation_runtime_millis = 10;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearValidationRuntimeMillis() {
+        bitField0_ = (bitField0_ & ~0x00000200);
+        validationRuntimeMillis_ = 0L;
         onChanged();
         return this;
       }

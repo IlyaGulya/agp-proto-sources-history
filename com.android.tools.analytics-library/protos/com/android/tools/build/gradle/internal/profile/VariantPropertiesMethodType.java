@@ -597,6 +597,10 @@ public enum VariantPropertiesMethodType
    * <code>INSTRUMENTATION_RUNNER_ARGUMENTS = 135;</code>
    */
   INSTRUMENTATION_RUNNER_ARGUMENTS(135),
+  /**
+   * <code>MISSING_DIMENSION_STRATEGY = 136;</code>
+   */
+  MISSING_DIMENSION_STRATEGY(136),
   UNRECOGNIZED(-1),
   ;
 
@@ -1188,6 +1192,10 @@ public enum VariantPropertiesMethodType
    * <code>INSTRUMENTATION_RUNNER_ARGUMENTS = 135;</code>
    */
   public static final int INSTRUMENTATION_RUNNER_ARGUMENTS_VALUE = 135;
+  /**
+   * <code>MISSING_DIMENSION_STRATEGY = 136;</code>
+   */
+  public static final int MISSING_DIMENSION_STRATEGY_VALUE = 136;
 
 
   public final int getNumber() {
@@ -1350,6 +1358,7 @@ public enum VariantPropertiesMethodType
       case 133: return ADD_ARTIFACTS;
       case 134: return SOURCES_BASELINE_PROFILES_ACCESS;
       case 135: return INSTRUMENTATION_RUNNER_ARGUMENTS;
+      case 136: return MISSING_DIMENSION_STRATEGY;
       default: return null;
     }
   }

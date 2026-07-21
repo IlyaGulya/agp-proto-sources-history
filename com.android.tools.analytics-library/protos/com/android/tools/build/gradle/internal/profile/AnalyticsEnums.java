@@ -523,7 +523,7 @@ public final class AnalyticsEnums {
       "\013\022%\n!VARIANT_BUILDER_DEPENDENCIES_INFO\020\014" +
       "\022\031\n\025TEST_FIXTURES_ENABLED\020\r\022\033\n\027CODE_MINI" +
       "FICATION_VALUE\020\016\022\032\n\026SHRINK_RESOURCES_VAL" +
-      "UE\020\017*\212\035\n\033VariantPropertiesMethodType\022\"\n\036" +
+      "UE\020\017*\253\035\n\033VariantPropertiesMethodType\022\"\n\036" +
       "UNKNOWN_PROPERTIES_METHOD_TYPE\020\000\022\r\n\tARTI" +
       "FACTS\020\001\022\031\n\025ASM_TRANSFORM_CLASSES\020\002\022\037\n\033AS" +
       "M_FRAMES_COMPUTATION_NODE\020\003\022\016\n\nBUILD_TYP" +
@@ -616,8 +616,9 @@ public final class AnalyticsEnums {
       "\022\035\n\030SOURCES_RESOURCES_ACCESS\020\204\001\022\022\n\rADD_A" +
       "RTIFACTS\020\205\001\022%\n SOURCES_BASELINE_PROFILES" +
       "_ACCESS\020\206\001\022%\n INSTRUMENTATION_RUNNER_ARG" +
-      "UMENTS\020\207\001B3\n/com.android.tools.build.gra" +
-      "dle.internal.profileP\001b\006proto3"
+      "UMENTS\020\207\001\022\037\n\032MISSING_DIMENSION_STRATEGY\020" +
+      "\210\001B3\n/com.android.tools.build.gradle.int" +
+      "ernal.profileP\001b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

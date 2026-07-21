@@ -4168,6 +4168,823 @@ private static final long serialVersionUID = 0L;
 
   }
 
+  public interface ConnectionMetricsOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:android_studio.DirectAccessUsageEvent.ConnectionMetrics)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Maximum observed latency
+     * </pre>
+     *
+     * <code>optional uint32 max_latency_ms = 1;</code>
+     * @return Whether the maxLatencyMs field is set.
+     */
+    boolean hasMaxLatencyMs();
+    /**
+     * <pre>
+     * Maximum observed latency
+     * </pre>
+     *
+     * <code>optional uint32 max_latency_ms = 1;</code>
+     * @return The maxLatencyMs.
+     */
+    int getMaxLatencyMs();
+
+    /**
+     * <pre>
+     * p50 latency
+     * </pre>
+     *
+     * <code>optional uint32 p50_latency_ms = 2;</code>
+     * @return Whether the p50LatencyMs field is set.
+     */
+    boolean hasP50LatencyMs();
+    /**
+     * <pre>
+     * p50 latency
+     * </pre>
+     *
+     * <code>optional uint32 p50_latency_ms = 2;</code>
+     * @return The p50LatencyMs.
+     */
+    int getP50LatencyMs();
+
+    /**
+     * <pre>
+     * p90 latency
+     * </pre>
+     *
+     * <code>optional uint32 p90_latency_ms = 3;</code>
+     * @return Whether the p90LatencyMs field is set.
+     */
+    boolean hasP90LatencyMs();
+    /**
+     * <pre>
+     * p90 latency
+     * </pre>
+     *
+     * <code>optional uint32 p90_latency_ms = 3;</code>
+     * @return The p90LatencyMs.
+     */
+    int getP90LatencyMs();
+  }
+  /**
+   * Protobuf type {@code android_studio.DirectAccessUsageEvent.ConnectionMetrics}
+   */
+  public static final class ConnectionMetrics extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:android_studio.DirectAccessUsageEvent.ConnectionMetrics)
+      ConnectionMetricsOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use ConnectionMetrics.newBuilder() to construct.
+    private ConnectionMetrics(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ConnectionMetrics() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ConnectionMetrics();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private ConnectionMetrics(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+              bitField0_ |= 0x00000001;
+              maxLatencyMs_ = input.readUInt32();
+              break;
+            }
+            case 16: {
+              bitField0_ |= 0x00000002;
+              p50LatencyMs_ = input.readUInt32();
+              break;
+            }
+            case 24: {
+              bitField0_ |= 0x00000004;
+              p90LatencyMs_ = input.readUInt32();
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_DirectAccessUsageEvent_ConnectionMetrics_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_DirectAccessUsageEvent_ConnectionMetrics_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.google.wireless.android.sdk.stats.DirectAccessUsageEvent.ConnectionMetrics.class, com.google.wireless.android.sdk.stats.DirectAccessUsageEvent.ConnectionMetrics.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int MAX_LATENCY_MS_FIELD_NUMBER = 1;
+    private int maxLatencyMs_;
+    /**
+     * <pre>
+     * Maximum observed latency
+     * </pre>
+     *
+     * <code>optional uint32 max_latency_ms = 1;</code>
+     * @return Whether the maxLatencyMs field is set.
+     */
+    @java.lang.Override
+    public boolean hasMaxLatencyMs() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <pre>
+     * Maximum observed latency
+     * </pre>
+     *
+     * <code>optional uint32 max_latency_ms = 1;</code>
+     * @return The maxLatencyMs.
+     */
+    @java.lang.Override
+    public int getMaxLatencyMs() {
+      return maxLatencyMs_;
+    }
+
+    public static final int P50_LATENCY_MS_FIELD_NUMBER = 2;
+    private int p50LatencyMs_;
+    /**
+     * <pre>
+     * p50 latency
+     * </pre>
+     *
+     * <code>optional uint32 p50_latency_ms = 2;</code>
+     * @return Whether the p50LatencyMs field is set.
+     */
+    @java.lang.Override
+    public boolean hasP50LatencyMs() {
+      return ((bitField0_ & 0x00000002) != 0);
+    }
+    /**
+     * <pre>
+     * p50 latency
+     * </pre>
+     *
+     * <code>optional uint32 p50_latency_ms = 2;</code>
+     * @return The p50LatencyMs.
+     */
+    @java.lang.Override
+    public int getP50LatencyMs() {
+      return p50LatencyMs_;
+    }
+
+    public static final int P90_LATENCY_MS_FIELD_NUMBER = 3;
+    private int p90LatencyMs_;
+    /**
+     * <pre>
+     * p90 latency
+     * </pre>
+     *
+     * <code>optional uint32 p90_latency_ms = 3;</code>
+     * @return Whether the p90LatencyMs field is set.
+     */
+    @java.lang.Override
+    public boolean hasP90LatencyMs() {
+      return ((bitField0_ & 0x00000004) != 0);
+    }
+    /**
+     * <pre>
+     * p90 latency
+     * </pre>
+     *
+     * <code>optional uint32 p90_latency_ms = 3;</code>
+     * @return The p90LatencyMs.
+     */
+    @java.lang.Override
+    public int getP90LatencyMs() {
+      return p90LatencyMs_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (((bitField0_ & 0x00000001) != 0)) {
+        output.writeUInt32(1, maxLatencyMs_);
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        output.writeUInt32(2, p50LatencyMs_);
+      }
+      if (((bitField0_ & 0x00000004) != 0)) {
+        output.writeUInt32(3, p90LatencyMs_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(1, maxLatencyMs_);
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(2, p50LatencyMs_);
+      }
+      if (((bitField0_ & 0x00000004) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(3, p90LatencyMs_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.google.wireless.android.sdk.stats.DirectAccessUsageEvent.ConnectionMetrics)) {
+        return super.equals(obj);
+      }
+      com.google.wireless.android.sdk.stats.DirectAccessUsageEvent.ConnectionMetrics other = (com.google.wireless.android.sdk.stats.DirectAccessUsageEvent.ConnectionMetrics) obj;
+
+      if (hasMaxLatencyMs() != other.hasMaxLatencyMs()) return false;
+      if (hasMaxLatencyMs()) {
+        if (getMaxLatencyMs()
+            != other.getMaxLatencyMs()) return false;
+      }
+      if (hasP50LatencyMs() != other.hasP50LatencyMs()) return false;
+      if (hasP50LatencyMs()) {
+        if (getP50LatencyMs()
+            != other.getP50LatencyMs()) return false;
+      }
+      if (hasP90LatencyMs() != other.hasP90LatencyMs()) return false;
+      if (hasP90LatencyMs()) {
+        if (getP90LatencyMs()
+            != other.getP90LatencyMs()) return false;
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasMaxLatencyMs()) {
+        hash = (37 * hash) + MAX_LATENCY_MS_FIELD_NUMBER;
+        hash = (53 * hash) + getMaxLatencyMs();
+      }
+      if (hasP50LatencyMs()) {
+        hash = (37 * hash) + P50_LATENCY_MS_FIELD_NUMBER;
+        hash = (53 * hash) + getP50LatencyMs();
+      }
+      if (hasP90LatencyMs()) {
+        hash = (37 * hash) + P90_LATENCY_MS_FIELD_NUMBER;
+        hash = (53 * hash) + getP90LatencyMs();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.google.wireless.android.sdk.stats.DirectAccessUsageEvent.ConnectionMetrics parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.google.wireless.android.sdk.stats.DirectAccessUsageEvent.ConnectionMetrics parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.google.wireless.android.sdk.stats.DirectAccessUsageEvent.ConnectionMetrics parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.google.wireless.android.sdk.stats.DirectAccessUsageEvent.ConnectionMetrics parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.google.wireless.android.sdk.stats.DirectAccessUsageEvent.ConnectionMetrics parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.google.wireless.android.sdk.stats.DirectAccessUsageEvent.ConnectionMetrics parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.google.wireless.android.sdk.stats.DirectAccessUsageEvent.ConnectionMetrics parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.google.wireless.android.sdk.stats.DirectAccessUsageEvent.ConnectionMetrics parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.google.wireless.android.sdk.stats.DirectAccessUsageEvent.ConnectionMetrics parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.google.wireless.android.sdk.stats.DirectAccessUsageEvent.ConnectionMetrics parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.google.wireless.android.sdk.stats.DirectAccessUsageEvent.ConnectionMetrics parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.google.wireless.android.sdk.stats.DirectAccessUsageEvent.ConnectionMetrics parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.google.wireless.android.sdk.stats.DirectAccessUsageEvent.ConnectionMetrics prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code android_studio.DirectAccessUsageEvent.ConnectionMetrics}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:android_studio.DirectAccessUsageEvent.ConnectionMetrics)
+        com.google.wireless.android.sdk.stats.DirectAccessUsageEvent.ConnectionMetricsOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_DirectAccessUsageEvent_ConnectionMetrics_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_DirectAccessUsageEvent_ConnectionMetrics_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.google.wireless.android.sdk.stats.DirectAccessUsageEvent.ConnectionMetrics.class, com.google.wireless.android.sdk.stats.DirectAccessUsageEvent.ConnectionMetrics.Builder.class);
+      }
+
+      // Construct using com.google.wireless.android.sdk.stats.DirectAccessUsageEvent.ConnectionMetrics.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        maxLatencyMs_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        p50LatencyMs_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        p90LatencyMs_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000004);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_DirectAccessUsageEvent_ConnectionMetrics_descriptor;
+      }
+
+      @java.lang.Override
+      public com.google.wireless.android.sdk.stats.DirectAccessUsageEvent.ConnectionMetrics getDefaultInstanceForType() {
+        return com.google.wireless.android.sdk.stats.DirectAccessUsageEvent.ConnectionMetrics.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.google.wireless.android.sdk.stats.DirectAccessUsageEvent.ConnectionMetrics build() {
+        com.google.wireless.android.sdk.stats.DirectAccessUsageEvent.ConnectionMetrics result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.google.wireless.android.sdk.stats.DirectAccessUsageEvent.ConnectionMetrics buildPartial() {
+        com.google.wireless.android.sdk.stats.DirectAccessUsageEvent.ConnectionMetrics result = new com.google.wireless.android.sdk.stats.DirectAccessUsageEvent.ConnectionMetrics(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.maxLatencyMs_ = maxLatencyMs_;
+          to_bitField0_ |= 0x00000001;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.p50LatencyMs_ = p50LatencyMs_;
+          to_bitField0_ |= 0x00000002;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.p90LatencyMs_ = p90LatencyMs_;
+          to_bitField0_ |= 0x00000004;
+        }
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.google.wireless.android.sdk.stats.DirectAccessUsageEvent.ConnectionMetrics) {
+          return mergeFrom((com.google.wireless.android.sdk.stats.DirectAccessUsageEvent.ConnectionMetrics)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.google.wireless.android.sdk.stats.DirectAccessUsageEvent.ConnectionMetrics other) {
+        if (other == com.google.wireless.android.sdk.stats.DirectAccessUsageEvent.ConnectionMetrics.getDefaultInstance()) return this;
+        if (other.hasMaxLatencyMs()) {
+          setMaxLatencyMs(other.getMaxLatencyMs());
+        }
+        if (other.hasP50LatencyMs()) {
+          setP50LatencyMs(other.getP50LatencyMs());
+        }
+        if (other.hasP90LatencyMs()) {
+          setP90LatencyMs(other.getP90LatencyMs());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.google.wireless.android.sdk.stats.DirectAccessUsageEvent.ConnectionMetrics parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.google.wireless.android.sdk.stats.DirectAccessUsageEvent.ConnectionMetrics) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private int maxLatencyMs_ ;
+      /**
+       * <pre>
+       * Maximum observed latency
+       * </pre>
+       *
+       * <code>optional uint32 max_latency_ms = 1;</code>
+       * @return Whether the maxLatencyMs field is set.
+       */
+      @java.lang.Override
+      public boolean hasMaxLatencyMs() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <pre>
+       * Maximum observed latency
+       * </pre>
+       *
+       * <code>optional uint32 max_latency_ms = 1;</code>
+       * @return The maxLatencyMs.
+       */
+      @java.lang.Override
+      public int getMaxLatencyMs() {
+        return maxLatencyMs_;
+      }
+      /**
+       * <pre>
+       * Maximum observed latency
+       * </pre>
+       *
+       * <code>optional uint32 max_latency_ms = 1;</code>
+       * @param value The maxLatencyMs to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMaxLatencyMs(int value) {
+        bitField0_ |= 0x00000001;
+        maxLatencyMs_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Maximum observed latency
+       * </pre>
+       *
+       * <code>optional uint32 max_latency_ms = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMaxLatencyMs() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        maxLatencyMs_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int p50LatencyMs_ ;
+      /**
+       * <pre>
+       * p50 latency
+       * </pre>
+       *
+       * <code>optional uint32 p50_latency_ms = 2;</code>
+       * @return Whether the p50LatencyMs field is set.
+       */
+      @java.lang.Override
+      public boolean hasP50LatencyMs() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <pre>
+       * p50 latency
+       * </pre>
+       *
+       * <code>optional uint32 p50_latency_ms = 2;</code>
+       * @return The p50LatencyMs.
+       */
+      @java.lang.Override
+      public int getP50LatencyMs() {
+        return p50LatencyMs_;
+      }
+      /**
+       * <pre>
+       * p50 latency
+       * </pre>
+       *
+       * <code>optional uint32 p50_latency_ms = 2;</code>
+       * @param value The p50LatencyMs to set.
+       * @return This builder for chaining.
+       */
+      public Builder setP50LatencyMs(int value) {
+        bitField0_ |= 0x00000002;
+        p50LatencyMs_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * p50 latency
+       * </pre>
+       *
+       * <code>optional uint32 p50_latency_ms = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearP50LatencyMs() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        p50LatencyMs_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int p90LatencyMs_ ;
+      /**
+       * <pre>
+       * p90 latency
+       * </pre>
+       *
+       * <code>optional uint32 p90_latency_ms = 3;</code>
+       * @return Whether the p90LatencyMs field is set.
+       */
+      @java.lang.Override
+      public boolean hasP90LatencyMs() {
+        return ((bitField0_ & 0x00000004) != 0);
+      }
+      /**
+       * <pre>
+       * p90 latency
+       * </pre>
+       *
+       * <code>optional uint32 p90_latency_ms = 3;</code>
+       * @return The p90LatencyMs.
+       */
+      @java.lang.Override
+      public int getP90LatencyMs() {
+        return p90LatencyMs_;
+      }
+      /**
+       * <pre>
+       * p90 latency
+       * </pre>
+       *
+       * <code>optional uint32 p90_latency_ms = 3;</code>
+       * @param value The p90LatencyMs to set.
+       * @return This builder for chaining.
+       */
+      public Builder setP90LatencyMs(int value) {
+        bitField0_ |= 0x00000004;
+        p90LatencyMs_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * p90 latency
+       * </pre>
+       *
+       * <code>optional uint32 p90_latency_ms = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearP90LatencyMs() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        p90LatencyMs_ = 0;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:android_studio.DirectAccessUsageEvent.ConnectionMetrics)
+    }
+
+    // @@protoc_insertion_point(class_scope:android_studio.DirectAccessUsageEvent.ConnectionMetrics)
+    private static final com.google.wireless.android.sdk.stats.DirectAccessUsageEvent.ConnectionMetrics DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.google.wireless.android.sdk.stats.DirectAccessUsageEvent.ConnectionMetrics();
+    }
+
+    public static com.google.wireless.android.sdk.stats.DirectAccessUsageEvent.ConnectionMetrics getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<ConnectionMetrics>
+        PARSER = new com.google.protobuf.AbstractParser<ConnectionMetrics>() {
+      @java.lang.Override
+      public ConnectionMetrics parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new ConnectionMetrics(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<ConnectionMetrics> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ConnectionMetrics> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.wireless.android.sdk.stats.DirectAccessUsageEvent.ConnectionMetrics getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   public interface EndReservationDetailsOrBuilder extends
       // @@protoc_insertion_point(interface_extends:android_studio.DirectAccessUsageEvent.EndReservationDetails)
       com.google.protobuf.MessageOrBuilder {
@@ -4238,21 +5055,25 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Average connection latency calculated over the entire session
+     * Deprecated by ConnectionMetrics
      * </pre>
      *
-     * <code>optional uint32 average_connection_latency_ms = 4;</code>
+     * <code>optional uint32 average_connection_latency_ms = 4 [deprecated = true];</code>
+     * @deprecated
      * @return Whether the averageConnectionLatencyMs field is set.
      */
-    boolean hasAverageConnectionLatencyMs();
+    @java.lang.Deprecated boolean hasAverageConnectionLatencyMs();
     /**
      * <pre>
      * Average connection latency calculated over the entire session
+     * Deprecated by ConnectionMetrics
      * </pre>
      *
-     * <code>optional uint32 average_connection_latency_ms = 4;</code>
+     * <code>optional uint32 average_connection_latency_ms = 4 [deprecated = true];</code>
+     * @deprecated
      * @return The averageConnectionLatencyMs.
      */
-    int getAverageConnectionLatencyMs();
+    @java.lang.Deprecated int getAverageConnectionLatencyMs();
 
     /**
      * <pre>
@@ -4272,6 +5093,33 @@ private static final long serialVersionUID = 0L;
      * @return The endReservationType.
      */
     com.google.wireless.android.sdk.stats.DirectAccessUsageEvent.EndReservationDetails.EndReservationType getEndReservationType();
+
+    /**
+     * <pre>
+     * Connection metrics measured during the reservation
+     * </pre>
+     *
+     * <code>optional .android_studio.DirectAccessUsageEvent.ConnectionMetrics connection_metrics = 6;</code>
+     * @return Whether the connectionMetrics field is set.
+     */
+    boolean hasConnectionMetrics();
+    /**
+     * <pre>
+     * Connection metrics measured during the reservation
+     * </pre>
+     *
+     * <code>optional .android_studio.DirectAccessUsageEvent.ConnectionMetrics connection_metrics = 6;</code>
+     * @return The connectionMetrics.
+     */
+    com.google.wireless.android.sdk.stats.DirectAccessUsageEvent.ConnectionMetrics getConnectionMetrics();
+    /**
+     * <pre>
+     * Connection metrics measured during the reservation
+     * </pre>
+     *
+     * <code>optional .android_studio.DirectAccessUsageEvent.ConnectionMetrics connection_metrics = 6;</code>
+     */
+    com.google.wireless.android.sdk.stats.DirectAccessUsageEvent.ConnectionMetricsOrBuilder getConnectionMetricsOrBuilder();
   }
   /**
    * Protobuf type {@code android_studio.DirectAccessUsageEvent.EndReservationDetails}
@@ -4350,6 +5198,19 @@ private static final long serialVersionUID = 0L;
                 bitField0_ |= 0x00000010;
                 endReservationType_ = rawValue;
               }
+              break;
+            }
+            case 50: {
+              com.google.wireless.android.sdk.stats.DirectAccessUsageEvent.ConnectionMetrics.Builder subBuilder = null;
+              if (((bitField0_ & 0x00000020) != 0)) {
+                subBuilder = connectionMetrics_.toBuilder();
+              }
+              connectionMetrics_ = input.readMessage(com.google.wireless.android.sdk.stats.DirectAccessUsageEvent.ConnectionMetrics.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(connectionMetrics_);
+                connectionMetrics_ = subBuilder.buildPartial();
+              }
+              bitField0_ |= 0x00000020;
               break;
             }
             default: {
@@ -4615,25 +5476,29 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Average connection latency calculated over the entire session
+     * Deprecated by ConnectionMetrics
      * </pre>
      *
-     * <code>optional uint32 average_connection_latency_ms = 4;</code>
+     * <code>optional uint32 average_connection_latency_ms = 4 [deprecated = true];</code>
+     * @deprecated
      * @return Whether the averageConnectionLatencyMs field is set.
      */
     @java.lang.Override
-    public boolean hasAverageConnectionLatencyMs() {
+    @java.lang.Deprecated public boolean hasAverageConnectionLatencyMs() {
       return ((bitField0_ & 0x00000008) != 0);
     }
     /**
      * <pre>
      * Average connection latency calculated over the entire session
+     * Deprecated by ConnectionMetrics
      * </pre>
      *
-     * <code>optional uint32 average_connection_latency_ms = 4;</code>
+     * <code>optional uint32 average_connection_latency_ms = 4 [deprecated = true];</code>
+     * @deprecated
      * @return The averageConnectionLatencyMs.
      */
     @java.lang.Override
-    public int getAverageConnectionLatencyMs() {
+    @java.lang.Deprecated public int getAverageConnectionLatencyMs() {
       return averageConnectionLatencyMs_;
     }
 
@@ -4662,6 +5527,44 @@ private static final long serialVersionUID = 0L;
       @SuppressWarnings("deprecation")
       com.google.wireless.android.sdk.stats.DirectAccessUsageEvent.EndReservationDetails.EndReservationType result = com.google.wireless.android.sdk.stats.DirectAccessUsageEvent.EndReservationDetails.EndReservationType.valueOf(endReservationType_);
       return result == null ? com.google.wireless.android.sdk.stats.DirectAccessUsageEvent.EndReservationDetails.EndReservationType.UNKNOWN : result;
+    }
+
+    public static final int CONNECTION_METRICS_FIELD_NUMBER = 6;
+    private com.google.wireless.android.sdk.stats.DirectAccessUsageEvent.ConnectionMetrics connectionMetrics_;
+    /**
+     * <pre>
+     * Connection metrics measured during the reservation
+     * </pre>
+     *
+     * <code>optional .android_studio.DirectAccessUsageEvent.ConnectionMetrics connection_metrics = 6;</code>
+     * @return Whether the connectionMetrics field is set.
+     */
+    @java.lang.Override
+    public boolean hasConnectionMetrics() {
+      return ((bitField0_ & 0x00000020) != 0);
+    }
+    /**
+     * <pre>
+     * Connection metrics measured during the reservation
+     * </pre>
+     *
+     * <code>optional .android_studio.DirectAccessUsageEvent.ConnectionMetrics connection_metrics = 6;</code>
+     * @return The connectionMetrics.
+     */
+    @java.lang.Override
+    public com.google.wireless.android.sdk.stats.DirectAccessUsageEvent.ConnectionMetrics getConnectionMetrics() {
+      return connectionMetrics_ == null ? com.google.wireless.android.sdk.stats.DirectAccessUsageEvent.ConnectionMetrics.getDefaultInstance() : connectionMetrics_;
+    }
+    /**
+     * <pre>
+     * Connection metrics measured during the reservation
+     * </pre>
+     *
+     * <code>optional .android_studio.DirectAccessUsageEvent.ConnectionMetrics connection_metrics = 6;</code>
+     */
+    @java.lang.Override
+    public com.google.wireless.android.sdk.stats.DirectAccessUsageEvent.ConnectionMetricsOrBuilder getConnectionMetricsOrBuilder() {
+      return connectionMetrics_ == null ? com.google.wireless.android.sdk.stats.DirectAccessUsageEvent.ConnectionMetrics.getDefaultInstance() : connectionMetrics_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -4693,6 +5596,9 @@ private static final long serialVersionUID = 0L;
       if (((bitField0_ & 0x00000010) != 0)) {
         output.writeEnum(5, endReservationType_);
       }
+      if (((bitField0_ & 0x00000020) != 0)) {
+        output.writeMessage(6, getConnectionMetrics());
+      }
       unknownFields.writeTo(output);
     }
 
@@ -4721,6 +5627,10 @@ private static final long serialVersionUID = 0L;
       if (((bitField0_ & 0x00000010) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(5, endReservationType_);
+      }
+      if (((bitField0_ & 0x00000020) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(6, getConnectionMetrics());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -4761,6 +5671,11 @@ private static final long serialVersionUID = 0L;
       if (hasEndReservationType()) {
         if (endReservationType_ != other.endReservationType_) return false;
       }
+      if (hasConnectionMetrics() != other.hasConnectionMetrics()) return false;
+      if (hasConnectionMetrics()) {
+        if (!getConnectionMetrics()
+            .equals(other.getConnectionMetrics())) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -4793,6 +5708,10 @@ private static final long serialVersionUID = 0L;
       if (hasEndReservationType()) {
         hash = (37 * hash) + END_RESERVATION_TYPE_FIELD_NUMBER;
         hash = (53 * hash) + endReservationType_;
+      }
+      if (hasConnectionMetrics()) {
+        hash = (37 * hash) + CONNECTION_METRICS_FIELD_NUMBER;
+        hash = (53 * hash) + getConnectionMetrics().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -4922,6 +5841,7 @@ private static final long serialVersionUID = 0L;
       private void maybeForceBuilderInitialization() {
         if (com.google.protobuf.GeneratedMessageV3
                 .alwaysUseFieldBuilders) {
+          getConnectionMetricsFieldBuilder();
         }
       }
       @java.lang.Override
@@ -4937,6 +5857,12 @@ private static final long serialVersionUID = 0L;
         bitField0_ = (bitField0_ & ~0x00000008);
         endReservationType_ = 0;
         bitField0_ = (bitField0_ & ~0x00000010);
+        if (connectionMetricsBuilder_ == null) {
+          connectionMetrics_ = null;
+        } else {
+          connectionMetricsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000020);
         return this;
       }
 
@@ -4985,6 +5911,14 @@ private static final long serialVersionUID = 0L;
           to_bitField0_ |= 0x00000010;
         }
         result.endReservationType_ = endReservationType_;
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          if (connectionMetricsBuilder_ == null) {
+            result.connectionMetrics_ = connectionMetrics_;
+          } else {
+            result.connectionMetrics_ = connectionMetricsBuilder_.build();
+          }
+          to_bitField0_ |= 0x00000020;
+        }
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -5048,6 +5982,9 @@ private static final long serialVersionUID = 0L;
         }
         if (other.hasEndReservationType()) {
           setEndReservationType(other.getEndReservationType());
+        }
+        if (other.hasConnectionMetrics()) {
+          mergeConnectionMetrics(other.getConnectionMetrics());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -5260,37 +6197,43 @@ private static final long serialVersionUID = 0L;
       /**
        * <pre>
        * Average connection latency calculated over the entire session
+       * Deprecated by ConnectionMetrics
        * </pre>
        *
-       * <code>optional uint32 average_connection_latency_ms = 4;</code>
+       * <code>optional uint32 average_connection_latency_ms = 4 [deprecated = true];</code>
+       * @deprecated
        * @return Whether the averageConnectionLatencyMs field is set.
        */
       @java.lang.Override
-      public boolean hasAverageConnectionLatencyMs() {
+      @java.lang.Deprecated public boolean hasAverageConnectionLatencyMs() {
         return ((bitField0_ & 0x00000008) != 0);
       }
       /**
        * <pre>
        * Average connection latency calculated over the entire session
+       * Deprecated by ConnectionMetrics
        * </pre>
        *
-       * <code>optional uint32 average_connection_latency_ms = 4;</code>
+       * <code>optional uint32 average_connection_latency_ms = 4 [deprecated = true];</code>
+       * @deprecated
        * @return The averageConnectionLatencyMs.
        */
       @java.lang.Override
-      public int getAverageConnectionLatencyMs() {
+      @java.lang.Deprecated public int getAverageConnectionLatencyMs() {
         return averageConnectionLatencyMs_;
       }
       /**
        * <pre>
        * Average connection latency calculated over the entire session
+       * Deprecated by ConnectionMetrics
        * </pre>
        *
-       * <code>optional uint32 average_connection_latency_ms = 4;</code>
+       * <code>optional uint32 average_connection_latency_ms = 4 [deprecated = true];</code>
+       * @deprecated
        * @param value The averageConnectionLatencyMs to set.
        * @return This builder for chaining.
        */
-      public Builder setAverageConnectionLatencyMs(int value) {
+      @java.lang.Deprecated public Builder setAverageConnectionLatencyMs(int value) {
         bitField0_ |= 0x00000008;
         averageConnectionLatencyMs_ = value;
         onChanged();
@@ -5299,12 +6242,14 @@ private static final long serialVersionUID = 0L;
       /**
        * <pre>
        * Average connection latency calculated over the entire session
+       * Deprecated by ConnectionMetrics
        * </pre>
        *
-       * <code>optional uint32 average_connection_latency_ms = 4;</code>
+       * <code>optional uint32 average_connection_latency_ms = 4 [deprecated = true];</code>
+       * @deprecated
        * @return This builder for chaining.
        */
-      public Builder clearAverageConnectionLatencyMs() {
+      @java.lang.Deprecated public Builder clearAverageConnectionLatencyMs() {
         bitField0_ = (bitField0_ & ~0x00000008);
         averageConnectionLatencyMs_ = 0;
         onChanged();
@@ -5368,6 +6313,162 @@ private static final long serialVersionUID = 0L;
         endReservationType_ = 0;
         onChanged();
         return this;
+      }
+
+      private com.google.wireless.android.sdk.stats.DirectAccessUsageEvent.ConnectionMetrics connectionMetrics_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.wireless.android.sdk.stats.DirectAccessUsageEvent.ConnectionMetrics, com.google.wireless.android.sdk.stats.DirectAccessUsageEvent.ConnectionMetrics.Builder, com.google.wireless.android.sdk.stats.DirectAccessUsageEvent.ConnectionMetricsOrBuilder> connectionMetricsBuilder_;
+      /**
+       * <pre>
+       * Connection metrics measured during the reservation
+       * </pre>
+       *
+       * <code>optional .android_studio.DirectAccessUsageEvent.ConnectionMetrics connection_metrics = 6;</code>
+       * @return Whether the connectionMetrics field is set.
+       */
+      public boolean hasConnectionMetrics() {
+        return ((bitField0_ & 0x00000020) != 0);
+      }
+      /**
+       * <pre>
+       * Connection metrics measured during the reservation
+       * </pre>
+       *
+       * <code>optional .android_studio.DirectAccessUsageEvent.ConnectionMetrics connection_metrics = 6;</code>
+       * @return The connectionMetrics.
+       */
+      public com.google.wireless.android.sdk.stats.DirectAccessUsageEvent.ConnectionMetrics getConnectionMetrics() {
+        if (connectionMetricsBuilder_ == null) {
+          return connectionMetrics_ == null ? com.google.wireless.android.sdk.stats.DirectAccessUsageEvent.ConnectionMetrics.getDefaultInstance() : connectionMetrics_;
+        } else {
+          return connectionMetricsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Connection metrics measured during the reservation
+       * </pre>
+       *
+       * <code>optional .android_studio.DirectAccessUsageEvent.ConnectionMetrics connection_metrics = 6;</code>
+       */
+      public Builder setConnectionMetrics(com.google.wireless.android.sdk.stats.DirectAccessUsageEvent.ConnectionMetrics value) {
+        if (connectionMetricsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          connectionMetrics_ = value;
+          onChanged();
+        } else {
+          connectionMetricsBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000020;
+        return this;
+      }
+      /**
+       * <pre>
+       * Connection metrics measured during the reservation
+       * </pre>
+       *
+       * <code>optional .android_studio.DirectAccessUsageEvent.ConnectionMetrics connection_metrics = 6;</code>
+       */
+      public Builder setConnectionMetrics(
+          com.google.wireless.android.sdk.stats.DirectAccessUsageEvent.ConnectionMetrics.Builder builderForValue) {
+        if (connectionMetricsBuilder_ == null) {
+          connectionMetrics_ = builderForValue.build();
+          onChanged();
+        } else {
+          connectionMetricsBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000020;
+        return this;
+      }
+      /**
+       * <pre>
+       * Connection metrics measured during the reservation
+       * </pre>
+       *
+       * <code>optional .android_studio.DirectAccessUsageEvent.ConnectionMetrics connection_metrics = 6;</code>
+       */
+      public Builder mergeConnectionMetrics(com.google.wireless.android.sdk.stats.DirectAccessUsageEvent.ConnectionMetrics value) {
+        if (connectionMetricsBuilder_ == null) {
+          if (((bitField0_ & 0x00000020) != 0) &&
+              connectionMetrics_ != null &&
+              connectionMetrics_ != com.google.wireless.android.sdk.stats.DirectAccessUsageEvent.ConnectionMetrics.getDefaultInstance()) {
+            connectionMetrics_ =
+              com.google.wireless.android.sdk.stats.DirectAccessUsageEvent.ConnectionMetrics.newBuilder(connectionMetrics_).mergeFrom(value).buildPartial();
+          } else {
+            connectionMetrics_ = value;
+          }
+          onChanged();
+        } else {
+          connectionMetricsBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000020;
+        return this;
+      }
+      /**
+       * <pre>
+       * Connection metrics measured during the reservation
+       * </pre>
+       *
+       * <code>optional .android_studio.DirectAccessUsageEvent.ConnectionMetrics connection_metrics = 6;</code>
+       */
+      public Builder clearConnectionMetrics() {
+        if (connectionMetricsBuilder_ == null) {
+          connectionMetrics_ = null;
+          onChanged();
+        } else {
+          connectionMetricsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000020);
+        return this;
+      }
+      /**
+       * <pre>
+       * Connection metrics measured during the reservation
+       * </pre>
+       *
+       * <code>optional .android_studio.DirectAccessUsageEvent.ConnectionMetrics connection_metrics = 6;</code>
+       */
+      public com.google.wireless.android.sdk.stats.DirectAccessUsageEvent.ConnectionMetrics.Builder getConnectionMetricsBuilder() {
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return getConnectionMetricsFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Connection metrics measured during the reservation
+       * </pre>
+       *
+       * <code>optional .android_studio.DirectAccessUsageEvent.ConnectionMetrics connection_metrics = 6;</code>
+       */
+      public com.google.wireless.android.sdk.stats.DirectAccessUsageEvent.ConnectionMetricsOrBuilder getConnectionMetricsOrBuilder() {
+        if (connectionMetricsBuilder_ != null) {
+          return connectionMetricsBuilder_.getMessageOrBuilder();
+        } else {
+          return connectionMetrics_ == null ?
+              com.google.wireless.android.sdk.stats.DirectAccessUsageEvent.ConnectionMetrics.getDefaultInstance() : connectionMetrics_;
+        }
+      }
+      /**
+       * <pre>
+       * Connection metrics measured during the reservation
+       * </pre>
+       *
+       * <code>optional .android_studio.DirectAccessUsageEvent.ConnectionMetrics connection_metrics = 6;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.wireless.android.sdk.stats.DirectAccessUsageEvent.ConnectionMetrics, com.google.wireless.android.sdk.stats.DirectAccessUsageEvent.ConnectionMetrics.Builder, com.google.wireless.android.sdk.stats.DirectAccessUsageEvent.ConnectionMetricsOrBuilder> 
+          getConnectionMetricsFieldBuilder() {
+        if (connectionMetricsBuilder_ == null) {
+          connectionMetricsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.wireless.android.sdk.stats.DirectAccessUsageEvent.ConnectionMetrics, com.google.wireless.android.sdk.stats.DirectAccessUsageEvent.ConnectionMetrics.Builder, com.google.wireless.android.sdk.stats.DirectAccessUsageEvent.ConnectionMetricsOrBuilder>(
+                  getConnectionMetrics(),
+                  getParentForChildren(),
+                  isClean());
+          connectionMetrics_ = null;
+        }
+        return connectionMetricsBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(

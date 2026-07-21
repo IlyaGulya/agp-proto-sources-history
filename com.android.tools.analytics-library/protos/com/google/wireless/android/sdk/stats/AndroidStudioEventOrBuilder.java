@@ -4861,4 +4861,31 @@ public interface AndroidStudioEventOrBuilder extends
    * <code>optional .android_studio.EditorNotification editor_notification = 173;</code>
    */
   com.google.wireless.android.sdk.stats.EditorNotificationOrBuilder getEditorNotificationOrBuilder();
+
+  /**
+   * <pre>
+   * set when kind = COMPOSE_PREVIEW_LITE_MODE
+   * </pre>
+   *
+   * <code>optional .android_studio.ComposePreviewLiteModeEvent compose_preview_lite_mode_event = 174;</code>
+   * @return Whether the composePreviewLiteModeEvent field is set.
+   */
+  boolean hasComposePreviewLiteModeEvent();
+  /**
+   * <pre>
+   * set when kind = COMPOSE_PREVIEW_LITE_MODE
+   * </pre>
+   *
+   * <code>optional .android_studio.ComposePreviewLiteModeEvent compose_preview_lite_mode_event = 174;</code>
+   * @return The composePreviewLiteModeEvent.
+   */
+  com.google.wireless.android.sdk.stats.ComposePreviewLiteModeEvent getComposePreviewLiteModeEvent();
+  /**
+   * <pre>
+   * set when kind = COMPOSE_PREVIEW_LITE_MODE
+   * </pre>
+   *
+   * <code>optional .android_studio.ComposePreviewLiteModeEvent compose_preview_lite_mode_event = 174;</code>
+   */
+  com.google.wireless.android.sdk.stats.ComposePreviewLiteModeEventOrBuilder getComposePreviewLiteModeEventOrBuilder();
 }
