@@ -85,6 +85,10 @@ public enum IntegerOption
    * <code>R8_THREAD_POOL_SIZE = 18;</code>
    */
   R8_THREAD_POOL_SIZE(18),
+  /**
+   * <code>GRADLE_MANAGED_DEVICE_LOCK_TIMEOUT_MINUTES = 19;</code>
+   */
+  GRADLE_MANAGED_DEVICE_LOCK_TIMEOUT_MINUTES(19),
   UNRECOGNIZED(-1),
   ;
 
@@ -164,6 +168,10 @@ public enum IntegerOption
    * <code>R8_THREAD_POOL_SIZE = 18;</code>
    */
   public static final int R8_THREAD_POOL_SIZE_VALUE = 18;
+  /**
+   * <code>GRADLE_MANAGED_DEVICE_LOCK_TIMEOUT_MINUTES = 19;</code>
+   */
+  public static final int GRADLE_MANAGED_DEVICE_LOCK_TIMEOUT_MINUTES_VALUE = 19;
 
 
   public final int getNumber() {
@@ -209,6 +217,7 @@ public enum IntegerOption
       case 16: return GRADLE_MANAGED_DEVICE_MAX_CONCURRENT_DEVICES;
       case 17: return INSTALL_APK_TIMEOUT;
       case 18: return R8_THREAD_POOL_SIZE;
+      case 19: return GRADLE_MANAGED_DEVICE_LOCK_TIMEOUT_MINUTES;
       default: return null;
     }
   }

@@ -864,6 +864,10 @@ public enum BooleanOption
    * <code>BUILT_IN_KOTLIN = 210;</code>
    */
   BUILT_IN_KOTLIN(210),
+  /**
+   * <code>USE_NEW_DSL_IMPLEMENTATIONS = 211;</code>
+   */
+  USE_NEW_DSL_IMPLEMENTATIONS(211),
   UNRECOGNIZED(-1),
   ;
 
@@ -1711,6 +1715,10 @@ public enum BooleanOption
    * <code>BUILT_IN_KOTLIN = 210;</code>
    */
   public static final int BUILT_IN_KOTLIN_VALUE = 210;
+  /**
+   * <code>USE_NEW_DSL_IMPLEMENTATIONS = 211;</code>
+   */
+  public static final int USE_NEW_DSL_IMPLEMENTATIONS_VALUE = 211;
 
 
   public final int getNumber() {
@@ -1948,6 +1956,7 @@ public enum BooleanOption
       case 208: return R8_OPTIMIZED_RESOURCE_SHRINKING;
       case 209: return R8_MAIN_DEX_LIST_DISALLOWED;
       case 210: return BUILT_IN_KOTLIN;
+      case 211: return USE_NEW_DSL_IMPLEMENTATIONS;
       default: return null;
     }
   }
