@@ -2988,7 +2988,7 @@ private static final long serialVersionUID = 0L;
     SML_COMPLETION_REQUEST_ERROR(307),
     /**
      * <pre>
-     * Event fired every time a device is connects to Studio
+     * Event fired every time Studio detects a new device (via adb)
      * </pre>
      *
      * <code>ADB_DEVICE_CONNECTED = 308;</code>
@@ -5288,7 +5288,7 @@ private static final long serialVersionUID = 0L;
     public static final int SML_COMPLETION_REQUEST_ERROR_VALUE = 307;
     /**
      * <pre>
-     * Event fired every time a device is connects to Studio
+     * Event fired every time Studio detects a new device (via adb)
      * </pre>
      *
      * <code>ADB_DEVICE_CONNECTED = 308;</code>

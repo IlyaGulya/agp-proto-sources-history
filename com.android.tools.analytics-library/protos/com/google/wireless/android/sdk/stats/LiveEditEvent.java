@@ -123,10 +123,13 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * LiveEdit failed because the user changed the class hierarchy
+     * DEPRECATED
+     * USE UNSUPPORTED_SUPER_CLASS or UNSUPPORTED_INTERFACE
      * </pre>
      *
-     * <code>UNSUPPORTED_MODIFY_INHERITANCE = 9;</code>
+     * <code>UNSUPPORTED_MODIFY_INHERITANCE = 9 [deprecated = true];</code>
      */
+    @java.lang.Deprecated
     UNSUPPORTED_MODIFY_INHERITANCE(9),
     /**
      * <pre>
@@ -168,12 +171,22 @@ private static final long serialVersionUID = 0L;
      */
     UNSUPPORTED_BUILD_SRC_CHANGE(16),
     /**
-     * <code>UNSUPPORTED_SRC_CHANGE_RECOVERABLE = 17;</code>
+     * <pre>
+     * DEPRECATED
+     * </pre>
+     *
+     * <code>UNSUPPORTED_SRC_CHANGE_RECOVERABLE = 17 [deprecated = true];</code>
      */
+    @java.lang.Deprecated
     UNSUPPORTED_SRC_CHANGE_RECOVERABLE(17),
     /**
-     * <code>UNSUPPORTED_SRC_CHANGE_UNRECOVERABLE = 18;</code>
+     * <pre>
+     * DEPRECATED
+     * </pre>
+     *
+     * <code>UNSUPPORTED_SRC_CHANGE_UNRECOVERABLE = 18 [deprecated = true];</code>
      */
+    @java.lang.Deprecated
     UNSUPPORTED_SRC_CHANGE_UNRECOVERABLE(18),
     /**
      * <code>UNSUPPORTED_TEST_SRC_CHANGE = 19;</code>
@@ -215,6 +228,66 @@ private static final long serialVersionUID = 0L;
      * <code>UNKNOWN_LIVE_UPDATE_DEPLOYER_ERROR = 27;</code>
      */
     UNKNOWN_LIVE_UPDATE_DEPLOYER_ERROR(27),
+    /**
+     * <code>UNSUPPORTED_ADDED_ACCESS = 28;</code>
+     */
+    UNSUPPORTED_ADDED_ACCESS(28),
+    /**
+     * <code>UNSUPPORTED_REMOVED_ACCESS = 29;</code>
+     */
+    UNSUPPORTED_REMOVED_ACCESS(29),
+    /**
+     * <code>UNSUPPORTED_MODIFIED_FIELD = 30;</code>
+     */
+    UNSUPPORTED_MODIFIED_FIELD(30),
+    /**
+     * <code>UNSUPPORTED_CONSTRUCTOR = 31;</code>
+     */
+    UNSUPPORTED_CONSTRUCTOR(31),
+    /**
+     * <code>UNSUPPORTED_CLINIT = 32;</code>
+     */
+    UNSUPPORTED_CLINIT(32),
+    /**
+     * <code>UNSUPPORTED_INIT = 33;</code>
+     */
+    UNSUPPORTED_INIT(33),
+    /**
+     * <code>UNSUPPORTED_ENCLOSING_METHOD = 34;</code>
+     */
+    UNSUPPORTED_ENCLOSING_METHOD(34),
+    /**
+     * <code>UNSUPPORTED_INTERFACE = 35;</code>
+     */
+    UNSUPPORTED_INTERFACE(35),
+    /**
+     * <code>UNSUPPORTED_SUPER_CLASS = 36;</code>
+     */
+    UNSUPPORTED_SUPER_CLASS(36),
+    /**
+     * <code>UNSUPPORTED_SIGNATURE = 37;</code>
+     */
+    UNSUPPORTED_SIGNATURE(37),
+    /**
+     * <code>UNSUPPORTED_USER_CLASS_ADDED = 38;</code>
+     */
+    UNSUPPORTED_USER_CLASS_ADDED(38),
+    /**
+     * <code>UNSUPPORTED_WHEN_ENUM_PATH = 39;</code>
+     */
+    UNSUPPORTED_WHEN_ENUM_PATH(39),
+    /**
+     * <code>KOTLIN_EAP = 40;</code>
+     */
+    KOTLIN_EAP(40),
+    /**
+     * <code>VIRTUAL_FILE_NOT_EXIST = 41;</code>
+     */
+    VIRTUAL_FILE_NOT_EXIST(41),
+    /**
+     * <code>INTERNAL_ERROR_NO_BINDING_CONTEXT = 42;</code>
+     */
+    INTERNAL_ERROR_NO_BINDING_CONTEXT(42),
     ;
 
     /**
@@ -288,11 +361,13 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * LiveEdit failed because the user changed the class hierarchy
+     * DEPRECATED
+     * USE UNSUPPORTED_SUPER_CLASS or UNSUPPORTED_INTERFACE
      * </pre>
      *
-     * <code>UNSUPPORTED_MODIFY_INHERITANCE = 9;</code>
+     * <code>UNSUPPORTED_MODIFY_INHERITANCE = 9 [deprecated = true];</code>
      */
-    public static final int UNSUPPORTED_MODIFY_INHERITANCE_VALUE = 9;
+    @java.lang.Deprecated public static final int UNSUPPORTED_MODIFY_INHERITANCE_VALUE = 9;
     /**
      * <pre>
      * The following are from LiveEditUpdateException.Error
@@ -333,13 +408,21 @@ private static final long serialVersionUID = 0L;
      */
     public static final int UNSUPPORTED_BUILD_SRC_CHANGE_VALUE = 16;
     /**
-     * <code>UNSUPPORTED_SRC_CHANGE_RECOVERABLE = 17;</code>
+     * <pre>
+     * DEPRECATED
+     * </pre>
+     *
+     * <code>UNSUPPORTED_SRC_CHANGE_RECOVERABLE = 17 [deprecated = true];</code>
      */
-    public static final int UNSUPPORTED_SRC_CHANGE_RECOVERABLE_VALUE = 17;
+    @java.lang.Deprecated public static final int UNSUPPORTED_SRC_CHANGE_RECOVERABLE_VALUE = 17;
     /**
-     * <code>UNSUPPORTED_SRC_CHANGE_UNRECOVERABLE = 18;</code>
+     * <pre>
+     * DEPRECATED
+     * </pre>
+     *
+     * <code>UNSUPPORTED_SRC_CHANGE_UNRECOVERABLE = 18 [deprecated = true];</code>
      */
-    public static final int UNSUPPORTED_SRC_CHANGE_UNRECOVERABLE_VALUE = 18;
+    @java.lang.Deprecated public static final int UNSUPPORTED_SRC_CHANGE_UNRECOVERABLE_VALUE = 18;
     /**
      * <code>UNSUPPORTED_TEST_SRC_CHANGE = 19;</code>
      */
@@ -380,6 +463,66 @@ private static final long serialVersionUID = 0L;
      * <code>UNKNOWN_LIVE_UPDATE_DEPLOYER_ERROR = 27;</code>
      */
     public static final int UNKNOWN_LIVE_UPDATE_DEPLOYER_ERROR_VALUE = 27;
+    /**
+     * <code>UNSUPPORTED_ADDED_ACCESS = 28;</code>
+     */
+    public static final int UNSUPPORTED_ADDED_ACCESS_VALUE = 28;
+    /**
+     * <code>UNSUPPORTED_REMOVED_ACCESS = 29;</code>
+     */
+    public static final int UNSUPPORTED_REMOVED_ACCESS_VALUE = 29;
+    /**
+     * <code>UNSUPPORTED_MODIFIED_FIELD = 30;</code>
+     */
+    public static final int UNSUPPORTED_MODIFIED_FIELD_VALUE = 30;
+    /**
+     * <code>UNSUPPORTED_CONSTRUCTOR = 31;</code>
+     */
+    public static final int UNSUPPORTED_CONSTRUCTOR_VALUE = 31;
+    /**
+     * <code>UNSUPPORTED_CLINIT = 32;</code>
+     */
+    public static final int UNSUPPORTED_CLINIT_VALUE = 32;
+    /**
+     * <code>UNSUPPORTED_INIT = 33;</code>
+     */
+    public static final int UNSUPPORTED_INIT_VALUE = 33;
+    /**
+     * <code>UNSUPPORTED_ENCLOSING_METHOD = 34;</code>
+     */
+    public static final int UNSUPPORTED_ENCLOSING_METHOD_VALUE = 34;
+    /**
+     * <code>UNSUPPORTED_INTERFACE = 35;</code>
+     */
+    public static final int UNSUPPORTED_INTERFACE_VALUE = 35;
+    /**
+     * <code>UNSUPPORTED_SUPER_CLASS = 36;</code>
+     */
+    public static final int UNSUPPORTED_SUPER_CLASS_VALUE = 36;
+    /**
+     * <code>UNSUPPORTED_SIGNATURE = 37;</code>
+     */
+    public static final int UNSUPPORTED_SIGNATURE_VALUE = 37;
+    /**
+     * <code>UNSUPPORTED_USER_CLASS_ADDED = 38;</code>
+     */
+    public static final int UNSUPPORTED_USER_CLASS_ADDED_VALUE = 38;
+    /**
+     * <code>UNSUPPORTED_WHEN_ENUM_PATH = 39;</code>
+     */
+    public static final int UNSUPPORTED_WHEN_ENUM_PATH_VALUE = 39;
+    /**
+     * <code>KOTLIN_EAP = 40;</code>
+     */
+    public static final int KOTLIN_EAP_VALUE = 40;
+    /**
+     * <code>VIRTUAL_FILE_NOT_EXIST = 41;</code>
+     */
+    public static final int VIRTUAL_FILE_NOT_EXIST_VALUE = 41;
+    /**
+     * <code>INTERNAL_ERROR_NO_BINDING_CONTEXT = 42;</code>
+     */
+    public static final int INTERNAL_ERROR_NO_BINDING_CONTEXT_VALUE = 42;
 
 
     public final int getNumber() {
@@ -430,6 +573,21 @@ private static final long serialVersionUID = 0L;
         case 25: return BAD_MIN_API;
         case 26: return UNSUPPORTED_COMPOSE_RUNTIME_VERSION;
         case 27: return UNKNOWN_LIVE_UPDATE_DEPLOYER_ERROR;
+        case 28: return UNSUPPORTED_ADDED_ACCESS;
+        case 29: return UNSUPPORTED_REMOVED_ACCESS;
+        case 30: return UNSUPPORTED_MODIFIED_FIELD;
+        case 31: return UNSUPPORTED_CONSTRUCTOR;
+        case 32: return UNSUPPORTED_CLINIT;
+        case 33: return UNSUPPORTED_INIT;
+        case 34: return UNSUPPORTED_ENCLOSING_METHOD;
+        case 35: return UNSUPPORTED_INTERFACE;
+        case 36: return UNSUPPORTED_SUPER_CLASS;
+        case 37: return UNSUPPORTED_SIGNATURE;
+        case 38: return UNSUPPORTED_USER_CLASS_ADDED;
+        case 39: return UNSUPPORTED_WHEN_ENUM_PATH;
+        case 40: return KOTLIN_EAP;
+        case 41: return VIRTUAL_FILE_NOT_EXIST;
+        case 42: return INTERNAL_ERROR_NO_BINDING_CONTEXT;
         default: return null;
       }
     }
