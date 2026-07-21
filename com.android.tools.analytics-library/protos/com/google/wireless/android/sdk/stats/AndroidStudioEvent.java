@@ -38,6 +38,7 @@ private static final long serialVersionUID = 0L;
     offeredQuickFixes_ = java.util.Collections.emptyList();
     emulatorUiEvents_ = java.util.Collections.emptyList();
     rawProjectIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    projectIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
   }
 
   @java.lang.Override
@@ -1805,6 +1806,15 @@ private static final long serialVersionUID = 0L;
             rawProjectIds_.add(bs);
             break;
           }
+          case 1122: {
+            com.google.protobuf.ByteString bs = input.readBytes();
+            if (!((mutable_bitField4_ & 0x00000800) != 0)) {
+              projectIds_ = new com.google.protobuf.LazyStringArrayList();
+              mutable_bitField4_ |= 0x00000800;
+            }
+            projectIds_.add(bs);
+            break;
+          }
           default: {
             if (!parseUnknownField(
                 input, unknownFields, extensionRegistry, tag)) {
@@ -1834,6 +1844,9 @@ private static final long serialVersionUID = 0L;
       }
       if (((mutable_bitField4_ & 0x00000400) != 0)) {
         rawProjectIds_ = rawProjectIds_.getUnmodifiableView();
+      }
+      if (((mutable_bitField4_ & 0x00000800) != 0)) {
+        projectIds_ = projectIds_.getUnmodifiableView();
       }
       this.unknownFields = unknownFields.build();
       makeExtensionsImmutable();
@@ -19893,6 +19906,61 @@ private static final long serialVersionUID = 0L;
     return rawProjectIds_.getByteString(index);
   }
 
+  public static final int PROJECT_IDS_FIELD_NUMBER = 140;
+  private com.google.protobuf.LazyStringList projectIds_;
+  /**
+   * <pre>
+   * Client-side salted (rotating every 28 days), sha256 of the project id.
+   * set when kind = PROJECT_STRUCTURE_* or kind = APK_ANALYZER_STATS
+   * </pre>
+   *
+   * <code>repeated string project_ids = 140;</code>
+   * @return A list containing the projectIds.
+   */
+  public com.google.protobuf.ProtocolStringList
+      getProjectIdsList() {
+    return projectIds_;
+  }
+  /**
+   * <pre>
+   * Client-side salted (rotating every 28 days), sha256 of the project id.
+   * set when kind = PROJECT_STRUCTURE_* or kind = APK_ANALYZER_STATS
+   * </pre>
+   *
+   * <code>repeated string project_ids = 140;</code>
+   * @return The count of projectIds.
+   */
+  public int getProjectIdsCount() {
+    return projectIds_.size();
+  }
+  /**
+   * <pre>
+   * Client-side salted (rotating every 28 days), sha256 of the project id.
+   * set when kind = PROJECT_STRUCTURE_* or kind = APK_ANALYZER_STATS
+   * </pre>
+   *
+   * <code>repeated string project_ids = 140;</code>
+   * @param index The index of the element to return.
+   * @return The projectIds at the given index.
+   */
+  public java.lang.String getProjectIds(int index) {
+    return projectIds_.get(index);
+  }
+  /**
+   * <pre>
+   * Client-side salted (rotating every 28 days), sha256 of the project id.
+   * set when kind = PROJECT_STRUCTURE_* or kind = APK_ANALYZER_STATS
+   * </pre>
+   *
+   * <code>repeated string project_ids = 140;</code>
+   * @param index The index of the value to return.
+   * @return The bytes of the projectIds at the given index.
+   */
+  public com.google.protobuf.ByteString
+      getProjectIdsBytes(int index) {
+    return projectIds_.getByteString(index);
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -20323,6 +20391,9 @@ private static final long serialVersionUID = 0L;
     }
     for (int i = 0; i < rawProjectIds_.size(); i++) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 139, rawProjectIds_.getRaw(i));
+    }
+    for (int i = 0; i < projectIds_.size(); i++) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 140, projectIds_.getRaw(i));
     }
     unknownFields.writeTo(output);
   }
@@ -20890,6 +20961,14 @@ private static final long serialVersionUID = 0L;
       }
       size += dataSize;
       size += 2 * getRawProjectIdsList().size();
+    }
+    {
+      int dataSize = 0;
+      for (int i = 0; i < projectIds_.size(); i++) {
+        dataSize += computeStringSizeNoTag(projectIds_.getRaw(i));
+      }
+      size += dataSize;
+      size += 2 * getProjectIdsList().size();
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -21575,6 +21654,8 @@ private static final long serialVersionUID = 0L;
     }
     if (!getRawProjectIdsList()
         .equals(other.getRawProjectIdsList())) return false;
+    if (!getProjectIdsList()
+        .equals(other.getProjectIdsList())) return false;
     if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
@@ -22143,6 +22224,10 @@ private static final long serialVersionUID = 0L;
     if (getRawProjectIdsCount() > 0) {
       hash = (37 * hash) + RAW_PROJECT_IDS_FIELD_NUMBER;
       hash = (53 * hash) + getRawProjectIdsList().hashCode();
+    }
+    if (getProjectIdsCount() > 0) {
+      hash = (37 * hash) + PROJECT_IDS_FIELD_NUMBER;
+      hash = (53 * hash) + getProjectIdsList().hashCode();
     }
     hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
@@ -23140,6 +23225,8 @@ private static final long serialVersionUID = 0L;
       bitField4_ = (bitField4_ & ~0x00000200);
       rawProjectIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       bitField4_ = (bitField4_ & ~0x00000400);
+      projectIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      bitField4_ = (bitField4_ & ~0x00000800);
       return this;
     }
 
@@ -24205,6 +24292,11 @@ private static final long serialVersionUID = 0L;
         bitField4_ = (bitField4_ & ~0x00000400);
       }
       result.rawProjectIds_ = rawProjectIds_;
+      if (((bitField4_ & 0x00000800) != 0)) {
+        projectIds_ = projectIds_.getUnmodifiableView();
+        bitField4_ = (bitField4_ & ~0x00000800);
+      }
+      result.projectIds_ = projectIds_;
       result.bitField0_ = to_bitField0_;
       result.bitField1_ = to_bitField1_;
       result.bitField2_ = to_bitField2_;
@@ -24769,6 +24861,16 @@ private static final long serialVersionUID = 0L;
         } else {
           ensureRawProjectIdsIsMutable();
           rawProjectIds_.addAll(other.rawProjectIds_);
+        }
+        onChanged();
+      }
+      if (!other.projectIds_.isEmpty()) {
+        if (projectIds_.isEmpty()) {
+          projectIds_ = other.projectIds_;
+          bitField4_ = (bitField4_ & ~0x00000800);
+        } else {
+          ensureProjectIdsIsMutable();
+          projectIds_.addAll(other.projectIds_);
         }
         onChanged();
       }
@@ -45686,6 +45788,160 @@ private static final long serialVersionUID = 0L;
   }
   ensureRawProjectIdsIsMutable();
       rawProjectIds_.add(value);
+      onChanged();
+      return this;
+    }
+
+    private com.google.protobuf.LazyStringList projectIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    private void ensureProjectIdsIsMutable() {
+      if (!((bitField4_ & 0x00000800) != 0)) {
+        projectIds_ = new com.google.protobuf.LazyStringArrayList(projectIds_);
+        bitField4_ |= 0x00000800;
+       }
+    }
+    /**
+     * <pre>
+     * Client-side salted (rotating every 28 days), sha256 of the project id.
+     * set when kind = PROJECT_STRUCTURE_* or kind = APK_ANALYZER_STATS
+     * </pre>
+     *
+     * <code>repeated string project_ids = 140;</code>
+     * @return A list containing the projectIds.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getProjectIdsList() {
+      return projectIds_.getUnmodifiableView();
+    }
+    /**
+     * <pre>
+     * Client-side salted (rotating every 28 days), sha256 of the project id.
+     * set when kind = PROJECT_STRUCTURE_* or kind = APK_ANALYZER_STATS
+     * </pre>
+     *
+     * <code>repeated string project_ids = 140;</code>
+     * @return The count of projectIds.
+     */
+    public int getProjectIdsCount() {
+      return projectIds_.size();
+    }
+    /**
+     * <pre>
+     * Client-side salted (rotating every 28 days), sha256 of the project id.
+     * set when kind = PROJECT_STRUCTURE_* or kind = APK_ANALYZER_STATS
+     * </pre>
+     *
+     * <code>repeated string project_ids = 140;</code>
+     * @param index The index of the element to return.
+     * @return The projectIds at the given index.
+     */
+    public java.lang.String getProjectIds(int index) {
+      return projectIds_.get(index);
+    }
+    /**
+     * <pre>
+     * Client-side salted (rotating every 28 days), sha256 of the project id.
+     * set when kind = PROJECT_STRUCTURE_* or kind = APK_ANALYZER_STATS
+     * </pre>
+     *
+     * <code>repeated string project_ids = 140;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the projectIds at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getProjectIdsBytes(int index) {
+      return projectIds_.getByteString(index);
+    }
+    /**
+     * <pre>
+     * Client-side salted (rotating every 28 days), sha256 of the project id.
+     * set when kind = PROJECT_STRUCTURE_* or kind = APK_ANALYZER_STATS
+     * </pre>
+     *
+     * <code>repeated string project_ids = 140;</code>
+     * @param index The index to set the value at.
+     * @param value The projectIds to set.
+     * @return This builder for chaining.
+     */
+    public Builder setProjectIds(
+        int index, java.lang.String value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureProjectIdsIsMutable();
+      projectIds_.set(index, value);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Client-side salted (rotating every 28 days), sha256 of the project id.
+     * set when kind = PROJECT_STRUCTURE_* or kind = APK_ANALYZER_STATS
+     * </pre>
+     *
+     * <code>repeated string project_ids = 140;</code>
+     * @param value The projectIds to add.
+     * @return This builder for chaining.
+     */
+    public Builder addProjectIds(
+        java.lang.String value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureProjectIdsIsMutable();
+      projectIds_.add(value);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Client-side salted (rotating every 28 days), sha256 of the project id.
+     * set when kind = PROJECT_STRUCTURE_* or kind = APK_ANALYZER_STATS
+     * </pre>
+     *
+     * <code>repeated string project_ids = 140;</code>
+     * @param values The projectIds to add.
+     * @return This builder for chaining.
+     */
+    public Builder addAllProjectIds(
+        java.lang.Iterable<java.lang.String> values) {
+      ensureProjectIdsIsMutable();
+      com.google.protobuf.AbstractMessageLite.Builder.addAll(
+          values, projectIds_);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Client-side salted (rotating every 28 days), sha256 of the project id.
+     * set when kind = PROJECT_STRUCTURE_* or kind = APK_ANALYZER_STATS
+     * </pre>
+     *
+     * <code>repeated string project_ids = 140;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearProjectIds() {
+      projectIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      bitField4_ = (bitField4_ & ~0x00000800);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Client-side salted (rotating every 28 days), sha256 of the project id.
+     * set when kind = PROJECT_STRUCTURE_* or kind = APK_ANALYZER_STATS
+     * </pre>
+     *
+     * <code>repeated string project_ids = 140;</code>
+     * @param value The bytes of the projectIds to add.
+     * @return This builder for chaining.
+     */
+    public Builder addProjectIdsBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureProjectIdsIsMutable();
+      projectIds_.add(value);
       onChanged();
       return this;
     }
