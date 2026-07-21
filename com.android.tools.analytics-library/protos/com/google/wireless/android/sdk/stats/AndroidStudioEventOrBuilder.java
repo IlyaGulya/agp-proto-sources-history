@@ -5374,4 +5374,85 @@ public interface AndroidStudioEventOrBuilder extends
    * <code>optional .android_studio.ScreenshotTestComposePreviewEvent screenshot_test_compose_preview_event = 192;</code>
    */
   com.google.wireless.android.sdk.stats.ScreenshotTestComposePreviewEventOrBuilder getScreenshotTestComposePreviewEventOrBuilder();
+
+  /**
+   * <pre>
+   * set when kind = TEST_SCENARIO_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.TestScenarioEvent test_scenario_event = 193;</code>
+   * @return Whether the testScenarioEvent field is set.
+   */
+  boolean hasTestScenarioEvent();
+  /**
+   * <pre>
+   * set when kind = TEST_SCENARIO_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.TestScenarioEvent test_scenario_event = 193;</code>
+   * @return The testScenarioEvent.
+   */
+  com.google.wireless.android.sdk.stats.TestScenarioEvent getTestScenarioEvent();
+  /**
+   * <pre>
+   * set when kind = TEST_SCENARIO_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.TestScenarioEvent test_scenario_event = 193;</code>
+   */
+  com.google.wireless.android.sdk.stats.TestScenarioEventOrBuilder getTestScenarioEventOrBuilder();
+
+  /**
+   * <pre>
+   * set when kind = ADB_SERVER_STATE
+   * </pre>
+   *
+   * <code>optional .android_studio.AdbServerState adb_server_state = 194;</code>
+   * @return Whether the adbServerState field is set.
+   */
+  boolean hasAdbServerState();
+  /**
+   * <pre>
+   * set when kind = ADB_SERVER_STATE
+   * </pre>
+   *
+   * <code>optional .android_studio.AdbServerState adb_server_state = 194;</code>
+   * @return The adbServerState.
+   */
+  com.google.wireless.android.sdk.stats.AdbServerState getAdbServerState();
+  /**
+   * <pre>
+   * set when kind = ADB_SERVER_STATE
+   * </pre>
+   *
+   * <code>optional .android_studio.AdbServerState adb_server_state = 194;</code>
+   */
+  com.google.wireless.android.sdk.stats.AdbServerStateOrBuilder getAdbServerStateOrBuilder();
+
+  /**
+   * <pre>
+   * set when kind = FIREBASE_MANAGEMENT_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.FirebaseManagementEvent firebase_management_event = 195;</code>
+   * @return Whether the firebaseManagementEvent field is set.
+   */
+  boolean hasFirebaseManagementEvent();
+  /**
+   * <pre>
+   * set when kind = FIREBASE_MANAGEMENT_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.FirebaseManagementEvent firebase_management_event = 195;</code>
+   * @return The firebaseManagementEvent.
+   */
+  com.google.wireless.android.sdk.stats.FirebaseManagementEvent getFirebaseManagementEvent();
+  /**
+   * <pre>
+   * set when kind = FIREBASE_MANAGEMENT_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.FirebaseManagementEvent firebase_management_event = 195;</code>
+   */
+  com.google.wireless.android.sdk.stats.FirebaseManagementEventOrBuilder getFirebaseManagementEventOrBuilder();
 }
