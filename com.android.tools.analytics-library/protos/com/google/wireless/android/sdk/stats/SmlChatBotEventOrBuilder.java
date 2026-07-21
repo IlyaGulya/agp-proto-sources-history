@@ -217,5 +217,20 @@ public interface SmlChatBotEventOrBuilder extends
    */
   com.google.wireless.android.sdk.stats.SmlChatBotEvent.ToolCallResponseOrBuilder getToolCallResponseOrBuilder();
 
+  /**
+   * <code>.android_studio.SmlChatBotEvent.DeprecationShown deprecation_shown = 15 [lazy = true];</code>
+   * @return Whether the deprecationShown field is set.
+   */
+  boolean hasDeprecationShown();
+  /**
+   * <code>.android_studio.SmlChatBotEvent.DeprecationShown deprecation_shown = 15 [lazy = true];</code>
+   * @return The deprecationShown.
+   */
+  com.google.wireless.android.sdk.stats.SmlChatBotEvent.DeprecationShown getDeprecationShown();
+  /**
+   * <code>.android_studio.SmlChatBotEvent.DeprecationShown deprecation_shown = 15 [lazy = true];</code>
+   */
+  com.google.wireless.android.sdk.stats.SmlChatBotEvent.DeprecationShownOrBuilder getDeprecationShownOrBuilder();
+
   com.google.wireless.android.sdk.stats.SmlChatBotEvent.ContentCase getContentCase();
 }
