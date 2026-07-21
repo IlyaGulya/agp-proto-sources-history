@@ -900,6 +900,10 @@ public enum BooleanOption
    * <code>DEFAULT_MIN_COMPILE_SDK_IN_AAR_METADATA = 219;</code>
    */
   DEFAULT_MIN_COMPILE_SDK_IN_AAR_METADATA(219),
+  /**
+   * <code>REPORT_AGGREGATION_SUPPORT = 220;</code>
+   */
+  REPORT_AGGREGATION_SUPPORT(220),
   UNRECOGNIZED(-1),
   ;
 
@@ -1783,6 +1787,10 @@ public enum BooleanOption
    * <code>DEFAULT_MIN_COMPILE_SDK_IN_AAR_METADATA = 219;</code>
    */
   public static final int DEFAULT_MIN_COMPILE_SDK_IN_AAR_METADATA_VALUE = 219;
+  /**
+   * <code>REPORT_AGGREGATION_SUPPORT = 220;</code>
+   */
+  public static final int REPORT_AGGREGATION_SUPPORT_VALUE = 220;
 
 
   public final int getNumber() {
@@ -2029,6 +2037,7 @@ public enum BooleanOption
       case 217: return DISABLE_ALL_CONSTRAINTS;
       case 218: return ENABLE_CLASSPATH_CHECK_TASKS;
       case 219: return DEFAULT_MIN_COMPILE_SDK_IN_AAR_METADATA;
+      case 220: return REPORT_AGGREGATION_SUPPORT;
       default: return null;
     }
   }

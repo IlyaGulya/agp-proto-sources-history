@@ -149,6 +149,15 @@ private static final long serialVersionUID = 0L;
      * <code>GENERIC = 12;</code>
      */
     GENERIC(12),
+    /**
+     * <pre>
+     * Features related to UI tools, such as compose preview generation, fix
+     * render issues, transform preview, etc.
+     * </pre>
+     *
+     * <code>UI_TOOLS = 13;</code>
+     */
+    UI_TOOLS(13),
     ;
 
     /**
@@ -255,6 +264,15 @@ private static final long serialVersionUID = 0L;
      * <code>GENERIC = 12;</code>
      */
     public static final int GENERIC_VALUE = 12;
+    /**
+     * <pre>
+     * Features related to UI tools, such as compose preview generation, fix
+     * render issues, transform preview, etc.
+     * </pre>
+     *
+     * <code>UI_TOOLS = 13;</code>
+     */
+    public static final int UI_TOOLS_VALUE = 13;
 
 
     public final int getNumber() {
@@ -290,6 +308,7 @@ private static final long serialVersionUID = 0L;
         case 10: return PROMPT_LIBRARY;
         case 11: return JOURNEYS;
         case 12: return GENERIC;
+        case 13: return UI_TOOLS;
         default: return null;
       }
     }

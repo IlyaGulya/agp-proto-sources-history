@@ -6619,4 +6619,31 @@ public interface AndroidStudioEventOrBuilder extends
    * <code>optional .android_studio.ModelProviderEvent model_provider_event = 237 [lazy = true];</code>
    */
   com.google.wireless.android.sdk.stats.ModelProviderEventOrBuilder getModelProviderEventOrBuilder();
+
+  /**
+   * <pre>
+   * set when kind = MARKETING_EMAIL_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.MarketingEmailEvent marketing_email_event = 238 [lazy = true];</code>
+   * @return Whether the marketingEmailEvent field is set.
+   */
+  boolean hasMarketingEmailEvent();
+  /**
+   * <pre>
+   * set when kind = MARKETING_EMAIL_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.MarketingEmailEvent marketing_email_event = 238 [lazy = true];</code>
+   * @return The marketingEmailEvent.
+   */
+  com.google.wireless.android.sdk.stats.MarketingEmailEvent getMarketingEmailEvent();
+  /**
+   * <pre>
+   * set when kind = MARKETING_EMAIL_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.MarketingEmailEvent marketing_email_event = 238 [lazy = true];</code>
+   */
+  com.google.wireless.android.sdk.stats.MarketingEmailEventOrBuilder getMarketingEmailEventOrBuilder();
 }

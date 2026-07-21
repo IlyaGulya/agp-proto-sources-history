@@ -172,6 +172,14 @@ public enum EditorFileType
    * <code>RUST = 32;</code>
    */
   RUST(32),
+  /**
+   * <code>TYPESCRIPT = 33;</code>
+   */
+  TYPESCRIPT(33),
+  /**
+   * <code>JAVASCRIPT = 34;</code>
+   */
+  JAVASCRIPT(34),
   ;
 
   /**
@@ -338,6 +346,14 @@ public enum EditorFileType
    * <code>RUST = 32;</code>
    */
   public static final int RUST_VALUE = 32;
+  /**
+   * <code>TYPESCRIPT = 33;</code>
+   */
+  public static final int TYPESCRIPT_VALUE = 33;
+  /**
+   * <code>JAVASCRIPT = 34;</code>
+   */
+  public static final int JAVASCRIPT_VALUE = 34;
 
 
   public final int getNumber() {
@@ -393,6 +409,8 @@ public enum EditorFileType
       case 30: return PYTHON;
       case 31: return GO;
       case 32: return RUST;
+      case 33: return TYPESCRIPT;
+      case 34: return JAVASCRIPT;
       default: return null;
     }
   }

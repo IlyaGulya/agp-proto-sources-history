@@ -214,6 +214,10 @@ public enum StringOption
    * <code>SIMULATE_AGP_VERSION_BEHAVIOR = 50;</code>
    */
   SIMULATE_AGP_VERSION_BEHAVIOR(50),
+  /**
+   * <code>TEST_SUITE_TEST_TASK_ADDITIONAL_INPUTS_FILE = 51;</code>
+   */
+  TEST_SUITE_TEST_TASK_ADDITIONAL_INPUTS_FILE(51),
   UNRECOGNIZED(-1),
   ;
 
@@ -421,6 +425,10 @@ public enum StringOption
    * <code>SIMULATE_AGP_VERSION_BEHAVIOR = 50;</code>
    */
   public static final int SIMULATE_AGP_VERSION_BEHAVIOR_VALUE = 50;
+  /**
+   * <code>TEST_SUITE_TEST_TASK_ADDITIONAL_INPUTS_FILE = 51;</code>
+   */
+  public static final int TEST_SUITE_TEST_TASK_ADDITIONAL_INPUTS_FILE_VALUE = 51;
 
 
   public final int getNumber() {
@@ -498,6 +506,7 @@ public enum StringOption
       case 48: return VALIDATION_ENGINE_VERSION;
       case 49: return IDE_APK_SELECT_MULTIPLE_DEVICE_SPECS;
       case 50: return SIMULATE_AGP_VERSION_BEHAVIOR;
+      case 51: return TEST_SUITE_TEST_TASK_ADDITIONAL_INPUTS_FILE;
       default: return null;
     }
   }
