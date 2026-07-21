@@ -92,6 +92,10 @@ public enum VariantApiArtifactType
    * <code>PRE_COMPILATION_CLASSES = 19;</code>
    */
   PRE_COMPILATION_CLASSES(19),
+  /**
+   * <code>POST_COMPILATION_CLASSES = 20;</code>
+   */
+  POST_COMPILATION_CLASSES(20),
   UNRECOGNIZED(-1),
   ;
 
@@ -179,6 +183,10 @@ public enum VariantApiArtifactType
    * <code>PRE_COMPILATION_CLASSES = 19;</code>
    */
   public static final int PRE_COMPILATION_CLASSES_VALUE = 19;
+  /**
+   * <code>POST_COMPILATION_CLASSES = 20;</code>
+   */
+  public static final int POST_COMPILATION_CLASSES_VALUE = 20;
 
 
   public final int getNumber() {
@@ -225,6 +233,7 @@ public enum VariantApiArtifactType
       case 17: return NATIVE_DEBUG_METADATA;
       case 18: return NATIVE_SYMBOL_TABLES;
       case 19: return PRE_COMPILATION_CLASSES;
+      case 20: return POST_COMPILATION_CLASSES;
       default: return null;
     }
   }
