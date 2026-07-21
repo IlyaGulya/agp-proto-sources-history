@@ -39,6 +39,120 @@ private static final long serialVersionUID = 0L;
   }
 
   /**
+   * Protobuf enum {@code android_studio.SmlChatBotEvent.ChatMode}
+   */
+  public enum ChatMode
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <code>OTHER_MODE = 0;</code>
+     */
+    OTHER_MODE(0),
+    /**
+     * <code>CHAT = 1;</code>
+     */
+    CHAT(1),
+    /**
+     * <code>AGENT_MODE = 2;</code>
+     */
+    AGENT_MODE(2),
+    /**
+     * <code>VERSION_UPGRADE_AGENT = 3;</code>
+     */
+    VERSION_UPGRADE_AGENT(3),
+    ;
+
+    /**
+     * <code>OTHER_MODE = 0;</code>
+     */
+    public static final int OTHER_MODE_VALUE = 0;
+    /**
+     * <code>CHAT = 1;</code>
+     */
+    public static final int CHAT_VALUE = 1;
+    /**
+     * <code>AGENT_MODE = 2;</code>
+     */
+    public static final int AGENT_MODE_VALUE = 2;
+    /**
+     * <code>VERSION_UPGRADE_AGENT = 3;</code>
+     */
+    public static final int VERSION_UPGRADE_AGENT_VALUE = 3;
+
+
+    public final int getNumber() {
+      return value;
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     * @deprecated Use {@link #forNumber(int)} instead.
+     */
+    @java.lang.Deprecated
+    public static ChatMode valueOf(int value) {
+      return forNumber(value);
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     */
+    public static ChatMode forNumber(int value) {
+      switch (value) {
+        case 0: return OTHER_MODE;
+        case 1: return CHAT;
+        case 2: return AGENT_MODE;
+        case 3: return VERSION_UPGRADE_AGENT;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<ChatMode>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static final com.google.protobuf.Internal.EnumLiteMap<
+        ChatMode> internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<ChatMode>() {
+            public ChatMode findValueByNumber(int number) {
+              return ChatMode.forNumber(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      return getDescriptor().getValues().get(ordinal());
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return com.google.wireless.android.sdk.stats.SmlChatBotEvent.getDescriptor().getEnumTypes().get(0);
+    }
+
+    private static final ChatMode[] VALUES = values();
+
+    public static ChatMode valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int value;
+
+    private ChatMode(int value) {
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:android_studio.SmlChatBotEvent.ChatMode)
+  }
+
+  /**
    * Protobuf enum {@code android_studio.SmlChatBotEvent.EntryPoint}
    */
   public enum EntryPoint
@@ -201,7 +315,7 @@ private static final long serialVersionUID = 0L;
     }
     public static final com.google.protobuf.Descriptors.EnumDescriptor
         getDescriptor() {
-      return com.google.wireless.android.sdk.stats.SmlChatBotEvent.getDescriptor().getEnumTypes().get(0);
+      return com.google.wireless.android.sdk.stats.SmlChatBotEvent.getDescriptor().getEnumTypes().get(1);
     }
 
     private static final EntryPoint[] VALUES = values();
@@ -396,7 +510,7 @@ private static final long serialVersionUID = 0L;
     }
     public static final com.google.protobuf.Descriptors.EnumDescriptor
         getDescriptor() {
-      return com.google.wireless.android.sdk.stats.SmlChatBotEvent.getDescriptor().getEnumTypes().get(1);
+      return com.google.wireless.android.sdk.stats.SmlChatBotEvent.getDescriptor().getEnumTypes().get(2);
     }
 
     private static final Action[] VALUES = values();
@@ -708,7 +822,7 @@ private static final long serialVersionUID = 0L;
     }
     public static final com.google.protobuf.Descriptors.EnumDescriptor
         getDescriptor() {
-      return com.google.wireless.android.sdk.stats.SmlChatBotEvent.getDescriptor().getEnumTypes().get(2);
+      return com.google.wireless.android.sdk.stats.SmlChatBotEvent.getDescriptor().getEnumTypes().get(3);
     }
 
     private static final Command[] VALUES = values();
@@ -804,7 +918,7 @@ private static final long serialVersionUID = 0L;
     }
     public static final com.google.protobuf.Descriptors.EnumDescriptor
         getDescriptor() {
-      return com.google.wireless.android.sdk.stats.SmlChatBotEvent.getDescriptor().getEnumTypes().get(3);
+      return com.google.wireless.android.sdk.stats.SmlChatBotEvent.getDescriptor().getEnumTypes().get(4);
     }
 
     private static final CodeDomain[] VALUES = values();
@@ -931,7 +1045,7 @@ private static final long serialVersionUID = 0L;
     }
     public static final com.google.protobuf.Descriptors.EnumDescriptor
         getDescriptor() {
-      return com.google.wireless.android.sdk.stats.SmlChatBotEvent.getDescriptor().getEnumTypes().get(4);
+      return com.google.wireless.android.sdk.stats.SmlChatBotEvent.getDescriptor().getEnumTypes().get(5);
     }
 
     private static final HallucinationType[] VALUES = values();
@@ -1072,7 +1186,7 @@ private static final long serialVersionUID = 0L;
     }
     public static final com.google.protobuf.Descriptors.EnumDescriptor
         getDescriptor() {
-      return com.google.wireless.android.sdk.stats.SmlChatBotEvent.getDescriptor().getEnumTypes().get(5);
+      return com.google.wireless.android.sdk.stats.SmlChatBotEvent.getDescriptor().getEnumTypes().get(6);
     }
 
     private static final QueryBoxEventType[] VALUES = values();
@@ -1177,7 +1291,7 @@ private static final long serialVersionUID = 0L;
     }
     public static final com.google.protobuf.Descriptors.EnumDescriptor
         getDescriptor() {
-      return com.google.wireless.android.sdk.stats.SmlChatBotEvent.getDescriptor().getEnumTypes().get(6);
+      return com.google.wireless.android.sdk.stats.SmlChatBotEvent.getDescriptor().getEnumTypes().get(7);
     }
 
     private static final ContextDrawerEventType[] VALUES = values();
@@ -1198,6 +1312,184 @@ private static final long serialVersionUID = 0L;
     }
 
     // @@protoc_insertion_point(enum_scope:android_studio.SmlChatBotEvent.ContextDrawerEventType)
+  }
+
+  /**
+   * Protobuf enum {@code android_studio.SmlChatBotEvent.ToolCallStatus}
+   */
+  public enum ToolCallStatus
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <code>OTHER_STATUS = 0;</code>
+     */
+    OTHER_STATUS(0),
+    /**
+     * <pre>
+     * The tool requires permission, but the user had auto-accept
+     * on so it was automatically executed
+     * </pre>
+     *
+     * <code>AUTO_ACCEPTED = 1;</code>
+     */
+    AUTO_ACCEPTED(1),
+    /**
+     * <pre>
+     * The tool requires permission, and the user does not have auto-accept
+     * on for this tool, so it was proposed.
+     * </pre>
+     *
+     * <code>PROPOSED = 2;</code>
+     */
+    PROPOSED(2),
+    /**
+     * <pre>
+     * After being proposed, the tool call was accepted.
+     * </pre>
+     *
+     * <code>ACCEPTED_MANUALLY = 3;</code>
+     */
+    ACCEPTED_MANUALLY(3),
+    /**
+     * <pre>
+     * After being proposed, the tool call was rejected.
+     * </pre>
+     *
+     * <code>REJECTED = 4;</code>
+     */
+    REJECTED(4),
+    /**
+     * <pre>
+     * After being accepted either manually or automatically, the tool
+     * call was reverted.
+     * </pre>
+     *
+     * <code>REVERTED = 5;</code>
+     */
+    REVERTED(5),
+    ;
+
+    /**
+     * <code>OTHER_STATUS = 0;</code>
+     */
+    public static final int OTHER_STATUS_VALUE = 0;
+    /**
+     * <pre>
+     * The tool requires permission, but the user had auto-accept
+     * on so it was automatically executed
+     * </pre>
+     *
+     * <code>AUTO_ACCEPTED = 1;</code>
+     */
+    public static final int AUTO_ACCEPTED_VALUE = 1;
+    /**
+     * <pre>
+     * The tool requires permission, and the user does not have auto-accept
+     * on for this tool, so it was proposed.
+     * </pre>
+     *
+     * <code>PROPOSED = 2;</code>
+     */
+    public static final int PROPOSED_VALUE = 2;
+    /**
+     * <pre>
+     * After being proposed, the tool call was accepted.
+     * </pre>
+     *
+     * <code>ACCEPTED_MANUALLY = 3;</code>
+     */
+    public static final int ACCEPTED_MANUALLY_VALUE = 3;
+    /**
+     * <pre>
+     * After being proposed, the tool call was rejected.
+     * </pre>
+     *
+     * <code>REJECTED = 4;</code>
+     */
+    public static final int REJECTED_VALUE = 4;
+    /**
+     * <pre>
+     * After being accepted either manually or automatically, the tool
+     * call was reverted.
+     * </pre>
+     *
+     * <code>REVERTED = 5;</code>
+     */
+    public static final int REVERTED_VALUE = 5;
+
+
+    public final int getNumber() {
+      return value;
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     * @deprecated Use {@link #forNumber(int)} instead.
+     */
+    @java.lang.Deprecated
+    public static ToolCallStatus valueOf(int value) {
+      return forNumber(value);
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     */
+    public static ToolCallStatus forNumber(int value) {
+      switch (value) {
+        case 0: return OTHER_STATUS;
+        case 1: return AUTO_ACCEPTED;
+        case 2: return PROPOSED;
+        case 3: return ACCEPTED_MANUALLY;
+        case 4: return REJECTED;
+        case 5: return REVERTED;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<ToolCallStatus>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static final com.google.protobuf.Internal.EnumLiteMap<
+        ToolCallStatus> internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<ToolCallStatus>() {
+            public ToolCallStatus findValueByNumber(int number) {
+              return ToolCallStatus.forNumber(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      return getDescriptor().getValues().get(ordinal());
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return com.google.wireless.android.sdk.stats.SmlChatBotEvent.getDescriptor().getEnumTypes().get(8);
+    }
+
+    private static final ToolCallStatus[] VALUES = values();
+
+    public static ToolCallStatus valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int value;
+
+    private ToolCallStatus(int value) {
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:android_studio.SmlChatBotEvent.ToolCallStatus)
   }
 
   public interface BotResponseOrBuilder extends
@@ -1258,6 +1550,17 @@ private static final long serialVersionUID = 0L;
      * @return The retrievalLatencyMs.
      */
     long getRetrievalLatencyMs();
+
+    /**
+     * <code>optional .android_studio.SmlChatBotEvent.ChatMode chat_mode = 4;</code>
+     * @return Whether the chatMode field is set.
+     */
+    boolean hasChatMode();
+    /**
+     * <code>optional .android_studio.SmlChatBotEvent.ChatMode chat_mode = 4;</code>
+     * @return The chatMode.
+     */
+    com.google.wireless.android.sdk.stats.SmlChatBotEvent.ChatMode getChatMode();
   }
   /**
    * Protobuf type {@code android_studio.SmlChatBotEvent.BotResponse}
@@ -1272,6 +1575,7 @@ private static final long serialVersionUID = 0L;
       super(builder);
     }
     private BotResponse() {
+      chatMode_ = 0;
     }
 
     @java.lang.Override
@@ -1377,6 +1681,24 @@ private static final long serialVersionUID = 0L;
       return retrievalLatencyMs_;
     }
 
+    public static final int CHAT_MODE_FIELD_NUMBER = 4;
+    private int chatMode_ = 0;
+    /**
+     * <code>optional .android_studio.SmlChatBotEvent.ChatMode chat_mode = 4;</code>
+     * @return Whether the chatMode field is set.
+     */
+    @java.lang.Override public boolean hasChatMode() {
+      return ((bitField0_ & 0x00000008) != 0);
+    }
+    /**
+     * <code>optional .android_studio.SmlChatBotEvent.ChatMode chat_mode = 4;</code>
+     * @return The chatMode.
+     */
+    @java.lang.Override public com.google.wireless.android.sdk.stats.SmlChatBotEvent.ChatMode getChatMode() {
+      com.google.wireless.android.sdk.stats.SmlChatBotEvent.ChatMode result = com.google.wireless.android.sdk.stats.SmlChatBotEvent.ChatMode.forNumber(chatMode_);
+      return result == null ? com.google.wireless.android.sdk.stats.SmlChatBotEvent.ChatMode.OTHER_MODE : result;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -1400,6 +1722,9 @@ private static final long serialVersionUID = 0L;
       if (((bitField0_ & 0x00000004) != 0)) {
         output.writeUInt64(3, retrievalLatencyMs_);
       }
+      if (((bitField0_ & 0x00000008) != 0)) {
+        output.writeEnum(4, chatMode_);
+      }
       getUnknownFields().writeTo(output);
     }
 
@@ -1420,6 +1745,10 @@ private static final long serialVersionUID = 0L;
       if (((bitField0_ & 0x00000004) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt64Size(3, retrievalLatencyMs_);
+      }
+      if (((bitField0_ & 0x00000008) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(4, chatMode_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -1451,6 +1780,10 @@ private static final long serialVersionUID = 0L;
         if (getRetrievalLatencyMs()
             != other.getRetrievalLatencyMs()) return false;
       }
+      if (hasChatMode() != other.hasChatMode()) return false;
+      if (hasChatMode()) {
+        if (chatMode_ != other.chatMode_) return false;
+      }
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -1475,6 +1808,10 @@ private static final long serialVersionUID = 0L;
         hash = (37 * hash) + RETRIEVAL_LATENCY_MS_FIELD_NUMBER;
         hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
             getRetrievalLatencyMs());
+      }
+      if (hasChatMode()) {
+        hash = (37 * hash) + CHAT_MODE_FIELD_NUMBER;
+        hash = (53 * hash) + chatMode_;
       }
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
@@ -1618,6 +1955,7 @@ private static final long serialVersionUID = 0L;
         }
         latencyMs_ = 0L;
         retrievalLatencyMs_ = 0L;
+        chatMode_ = 0;
         return this;
       }
 
@@ -1666,6 +2004,10 @@ private static final long serialVersionUID = 0L;
           result.retrievalLatencyMs_ = retrievalLatencyMs_;
           to_bitField0_ |= 0x00000004;
         }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.chatMode_ = chatMode_;
+          to_bitField0_ |= 0x00000008;
+        }
         result.bitField0_ |= to_bitField0_;
       }
 
@@ -1689,6 +2031,9 @@ private static final long serialVersionUID = 0L;
         }
         if (other.hasRetrievalLatencyMs()) {
           setRetrievalLatencyMs(other.getRetrievalLatencyMs());
+        }
+        if (other.hasChatMode()) {
+          setChatMode(other.getChatMode());
         }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
@@ -1733,6 +2078,18 @@ private static final long serialVersionUID = 0L;
                 bitField0_ |= 0x00000004;
                 break;
               } // case 24
+              case 32: {
+                int tmpRaw = input.readEnum();
+                com.google.wireless.android.sdk.stats.SmlChatBotEvent.ChatMode tmpValue =
+                    com.google.wireless.android.sdk.stats.SmlChatBotEvent.ChatMode.forNumber(tmpRaw);
+                if (tmpValue == null) {
+                  mergeUnknownVarintField(4, tmpRaw);
+                } else {
+                  chatMode_ = tmpRaw;
+                  bitField0_ |= 0x00000008;
+                }
+                break;
+              } // case 32
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -1981,6 +2338,48 @@ private static final long serialVersionUID = 0L;
       public Builder clearRetrievalLatencyMs() {
         bitField0_ = (bitField0_ & ~0x00000004);
         retrievalLatencyMs_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private int chatMode_ = 0;
+      /**
+       * <code>optional .android_studio.SmlChatBotEvent.ChatMode chat_mode = 4;</code>
+       * @return Whether the chatMode field is set.
+       */
+      @java.lang.Override public boolean hasChatMode() {
+        return ((bitField0_ & 0x00000008) != 0);
+      }
+      /**
+       * <code>optional .android_studio.SmlChatBotEvent.ChatMode chat_mode = 4;</code>
+       * @return The chatMode.
+       */
+      @java.lang.Override
+      public com.google.wireless.android.sdk.stats.SmlChatBotEvent.ChatMode getChatMode() {
+        com.google.wireless.android.sdk.stats.SmlChatBotEvent.ChatMode result = com.google.wireless.android.sdk.stats.SmlChatBotEvent.ChatMode.forNumber(chatMode_);
+        return result == null ? com.google.wireless.android.sdk.stats.SmlChatBotEvent.ChatMode.OTHER_MODE : result;
+      }
+      /**
+       * <code>optional .android_studio.SmlChatBotEvent.ChatMode chat_mode = 4;</code>
+       * @param value The chatMode to set.
+       * @return This builder for chaining.
+       */
+      public Builder setChatMode(com.google.wireless.android.sdk.stats.SmlChatBotEvent.ChatMode value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x00000008;
+        chatMode_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional .android_studio.SmlChatBotEvent.ChatMode chat_mode = 4;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearChatMode() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        chatMode_ = 0;
         onChanged();
         return this;
       }
@@ -6393,7 +6792,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional bool success = 3 [deprecated = true];</code>
      * @deprecated android_studio.SmlChatBotEvent.ParseResult.success is deprecated.
-     *     See studio_stats.proto;l=15711
+     *     See studio_stats.proto;l=15723
      * @return Whether the success field is set.
      */
     @java.lang.Deprecated boolean hasSuccess();
@@ -6405,7 +6804,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional bool success = 3 [deprecated = true];</code>
      * @deprecated android_studio.SmlChatBotEvent.ParseResult.success is deprecated.
-     *     See studio_stats.proto;l=15711
+     *     See studio_stats.proto;l=15723
      * @return The success.
      */
     @java.lang.Deprecated boolean getSuccess();
@@ -6533,7 +6932,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional bool success = 3 [deprecated = true];</code>
      * @deprecated android_studio.SmlChatBotEvent.ParseResult.success is deprecated.
-     *     See studio_stats.proto;l=15711
+     *     See studio_stats.proto;l=15723
      * @return Whether the success field is set.
      */
     @java.lang.Override
@@ -6548,7 +6947,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional bool success = 3 [deprecated = true];</code>
      * @deprecated android_studio.SmlChatBotEvent.ParseResult.success is deprecated.
-     *     See studio_stats.proto;l=15711
+     *     See studio_stats.proto;l=15723
      * @return The success.
      */
     @java.lang.Override
@@ -7212,7 +7611,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional bool success = 3 [deprecated = true];</code>
        * @deprecated android_studio.SmlChatBotEvent.ParseResult.success is deprecated.
-       *     See studio_stats.proto;l=15711
+       *     See studio_stats.proto;l=15723
        * @return Whether the success field is set.
        */
       @java.lang.Override
@@ -7227,7 +7626,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional bool success = 3 [deprecated = true];</code>
        * @deprecated android_studio.SmlChatBotEvent.ParseResult.success is deprecated.
-       *     See studio_stats.proto;l=15711
+       *     See studio_stats.proto;l=15723
        * @return The success.
        */
       @java.lang.Override
@@ -7242,7 +7641,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional bool success = 3 [deprecated = true];</code>
        * @deprecated android_studio.SmlChatBotEvent.ParseResult.success is deprecated.
-       *     See studio_stats.proto;l=15711
+       *     See studio_stats.proto;l=15723
        * @param value The success to set.
        * @return This builder for chaining.
        */
@@ -7261,7 +7660,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional bool success = 3 [deprecated = true];</code>
        * @deprecated android_studio.SmlChatBotEvent.ParseResult.success is deprecated.
-       *     See studio_stats.proto;l=15711
+       *     See studio_stats.proto;l=15723
        * @return This builder for chaining.
        */
       @java.lang.Deprecated public Builder clearSuccess() {
@@ -9814,6 +10213,1213 @@ private static final long serialVersionUID = 0L;
 
   }
 
+  public interface ToolCallOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:android_studio.SmlChatBotEvent.ToolCall)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>optional string tool_name = 1;</code>
+     * @return Whether the toolName field is set.
+     */
+    boolean hasToolName();
+    /**
+     * <code>optional string tool_name = 1;</code>
+     * @return The toolName.
+     */
+    java.lang.String getToolName();
+    /**
+     * <code>optional string tool_name = 1;</code>
+     * @return The bytes for toolName.
+     */
+    com.google.protobuf.ByteString
+        getToolNameBytes();
+  }
+  /**
+   * Protobuf type {@code android_studio.SmlChatBotEvent.ToolCall}
+   */
+  public static final class ToolCall extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:android_studio.SmlChatBotEvent.ToolCall)
+      ToolCallOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use ToolCall.newBuilder() to construct.
+    private ToolCall(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ToolCall() {
+      toolName_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ToolCall();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_SmlChatBotEvent_ToolCall_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_SmlChatBotEvent_ToolCall_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.google.wireless.android.sdk.stats.SmlChatBotEvent.ToolCall.class, com.google.wireless.android.sdk.stats.SmlChatBotEvent.ToolCall.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int TOOL_NAME_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object toolName_ = "";
+    /**
+     * <code>optional string tool_name = 1;</code>
+     * @return Whether the toolName field is set.
+     */
+    @java.lang.Override
+    public boolean hasToolName() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <code>optional string tool_name = 1;</code>
+     * @return The toolName.
+     */
+    @java.lang.Override
+    public java.lang.String getToolName() {
+      java.lang.Object ref = toolName_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          toolName_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string tool_name = 1;</code>
+     * @return The bytes for toolName.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getToolNameBytes() {
+      java.lang.Object ref = toolName_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        toolName_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (((bitField0_ & 0x00000001) != 0)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, toolName_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) != 0)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, toolName_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.google.wireless.android.sdk.stats.SmlChatBotEvent.ToolCall)) {
+        return super.equals(obj);
+      }
+      com.google.wireless.android.sdk.stats.SmlChatBotEvent.ToolCall other = (com.google.wireless.android.sdk.stats.SmlChatBotEvent.ToolCall) obj;
+
+      if (hasToolName() != other.hasToolName()) return false;
+      if (hasToolName()) {
+        if (!getToolName()
+            .equals(other.getToolName())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasToolName()) {
+        hash = (37 * hash) + TOOL_NAME_FIELD_NUMBER;
+        hash = (53 * hash) + getToolName().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.google.wireless.android.sdk.stats.SmlChatBotEvent.ToolCall parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.google.wireless.android.sdk.stats.SmlChatBotEvent.ToolCall parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.google.wireless.android.sdk.stats.SmlChatBotEvent.ToolCall parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.google.wireless.android.sdk.stats.SmlChatBotEvent.ToolCall parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.google.wireless.android.sdk.stats.SmlChatBotEvent.ToolCall parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.google.wireless.android.sdk.stats.SmlChatBotEvent.ToolCall parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.google.wireless.android.sdk.stats.SmlChatBotEvent.ToolCall parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.google.wireless.android.sdk.stats.SmlChatBotEvent.ToolCall parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.google.wireless.android.sdk.stats.SmlChatBotEvent.ToolCall parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.google.wireless.android.sdk.stats.SmlChatBotEvent.ToolCall parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.google.wireless.android.sdk.stats.SmlChatBotEvent.ToolCall parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.google.wireless.android.sdk.stats.SmlChatBotEvent.ToolCall parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.google.wireless.android.sdk.stats.SmlChatBotEvent.ToolCall prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code android_studio.SmlChatBotEvent.ToolCall}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:android_studio.SmlChatBotEvent.ToolCall)
+        com.google.wireless.android.sdk.stats.SmlChatBotEvent.ToolCallOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_SmlChatBotEvent_ToolCall_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_SmlChatBotEvent_ToolCall_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.google.wireless.android.sdk.stats.SmlChatBotEvent.ToolCall.class, com.google.wireless.android.sdk.stats.SmlChatBotEvent.ToolCall.Builder.class);
+      }
+
+      // Construct using com.google.wireless.android.sdk.stats.SmlChatBotEvent.ToolCall.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        toolName_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_SmlChatBotEvent_ToolCall_descriptor;
+      }
+
+      @java.lang.Override
+      public com.google.wireless.android.sdk.stats.SmlChatBotEvent.ToolCall getDefaultInstanceForType() {
+        return com.google.wireless.android.sdk.stats.SmlChatBotEvent.ToolCall.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.google.wireless.android.sdk.stats.SmlChatBotEvent.ToolCall build() {
+        com.google.wireless.android.sdk.stats.SmlChatBotEvent.ToolCall result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.google.wireless.android.sdk.stats.SmlChatBotEvent.ToolCall buildPartial() {
+        com.google.wireless.android.sdk.stats.SmlChatBotEvent.ToolCall result = new com.google.wireless.android.sdk.stats.SmlChatBotEvent.ToolCall(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.google.wireless.android.sdk.stats.SmlChatBotEvent.ToolCall result) {
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.toolName_ = toolName_;
+          to_bitField0_ |= 0x00000001;
+        }
+        result.bitField0_ |= to_bitField0_;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.google.wireless.android.sdk.stats.SmlChatBotEvent.ToolCall) {
+          return mergeFrom((com.google.wireless.android.sdk.stats.SmlChatBotEvent.ToolCall)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.google.wireless.android.sdk.stats.SmlChatBotEvent.ToolCall other) {
+        if (other == com.google.wireless.android.sdk.stats.SmlChatBotEvent.ToolCall.getDefaultInstance()) return this;
+        if (other.hasToolName()) {
+          toolName_ = other.toolName_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                toolName_ = input.readBytes();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object toolName_ = "";
+      /**
+       * <code>optional string tool_name = 1;</code>
+       * @return Whether the toolName field is set.
+       */
+      public boolean hasToolName() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>optional string tool_name = 1;</code>
+       * @return The toolName.
+       */
+      public java.lang.String getToolName() {
+        java.lang.Object ref = toolName_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            toolName_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string tool_name = 1;</code>
+       * @return The bytes for toolName.
+       */
+      public com.google.protobuf.ByteString
+          getToolNameBytes() {
+        java.lang.Object ref = toolName_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          toolName_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string tool_name = 1;</code>
+       * @param value The toolName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setToolName(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        toolName_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string tool_name = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearToolName() {
+        toolName_ = getDefaultInstance().getToolName();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string tool_name = 1;</code>
+       * @param value The bytes for toolName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setToolNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        toolName_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:android_studio.SmlChatBotEvent.ToolCall)
+    }
+
+    // @@protoc_insertion_point(class_scope:android_studio.SmlChatBotEvent.ToolCall)
+    private static final com.google.wireless.android.sdk.stats.SmlChatBotEvent.ToolCall DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.google.wireless.android.sdk.stats.SmlChatBotEvent.ToolCall();
+    }
+
+    public static com.google.wireless.android.sdk.stats.SmlChatBotEvent.ToolCall getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<ToolCall>
+        PARSER = new com.google.protobuf.AbstractParser<ToolCall>() {
+      @java.lang.Override
+      public ToolCall parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<ToolCall> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ToolCall> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.wireless.android.sdk.stats.SmlChatBotEvent.ToolCall getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface ToolCallFollowUpEventOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:android_studio.SmlChatBotEvent.ToolCallFollowUpEvent)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>optional string tool_name = 1;</code>
+     * @return Whether the toolName field is set.
+     */
+    boolean hasToolName();
+    /**
+     * <code>optional string tool_name = 1;</code>
+     * @return The toolName.
+     */
+    java.lang.String getToolName();
+    /**
+     * <code>optional string tool_name = 1;</code>
+     * @return The bytes for toolName.
+     */
+    com.google.protobuf.ByteString
+        getToolNameBytes();
+
+    /**
+     * <code>optional .android_studio.SmlChatBotEvent.ToolCallStatus status = 2;</code>
+     * @return Whether the status field is set.
+     */
+    boolean hasStatus();
+    /**
+     * <code>optional .android_studio.SmlChatBotEvent.ToolCallStatus status = 2;</code>
+     * @return The status.
+     */
+    com.google.wireless.android.sdk.stats.SmlChatBotEvent.ToolCallStatus getStatus();
+  }
+  /**
+   * Protobuf type {@code android_studio.SmlChatBotEvent.ToolCallFollowUpEvent}
+   */
+  public static final class ToolCallFollowUpEvent extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:android_studio.SmlChatBotEvent.ToolCallFollowUpEvent)
+      ToolCallFollowUpEventOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use ToolCallFollowUpEvent.newBuilder() to construct.
+    private ToolCallFollowUpEvent(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ToolCallFollowUpEvent() {
+      toolName_ = "";
+      status_ = 0;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ToolCallFollowUpEvent();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_SmlChatBotEvent_ToolCallFollowUpEvent_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_SmlChatBotEvent_ToolCallFollowUpEvent_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.google.wireless.android.sdk.stats.SmlChatBotEvent.ToolCallFollowUpEvent.class, com.google.wireless.android.sdk.stats.SmlChatBotEvent.ToolCallFollowUpEvent.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int TOOL_NAME_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object toolName_ = "";
+    /**
+     * <code>optional string tool_name = 1;</code>
+     * @return Whether the toolName field is set.
+     */
+    @java.lang.Override
+    public boolean hasToolName() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <code>optional string tool_name = 1;</code>
+     * @return The toolName.
+     */
+    @java.lang.Override
+    public java.lang.String getToolName() {
+      java.lang.Object ref = toolName_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          toolName_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string tool_name = 1;</code>
+     * @return The bytes for toolName.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getToolNameBytes() {
+      java.lang.Object ref = toolName_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        toolName_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int STATUS_FIELD_NUMBER = 2;
+    private int status_ = 0;
+    /**
+     * <code>optional .android_studio.SmlChatBotEvent.ToolCallStatus status = 2;</code>
+     * @return Whether the status field is set.
+     */
+    @java.lang.Override public boolean hasStatus() {
+      return ((bitField0_ & 0x00000002) != 0);
+    }
+    /**
+     * <code>optional .android_studio.SmlChatBotEvent.ToolCallStatus status = 2;</code>
+     * @return The status.
+     */
+    @java.lang.Override public com.google.wireless.android.sdk.stats.SmlChatBotEvent.ToolCallStatus getStatus() {
+      com.google.wireless.android.sdk.stats.SmlChatBotEvent.ToolCallStatus result = com.google.wireless.android.sdk.stats.SmlChatBotEvent.ToolCallStatus.forNumber(status_);
+      return result == null ? com.google.wireless.android.sdk.stats.SmlChatBotEvent.ToolCallStatus.OTHER_STATUS : result;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (((bitField0_ & 0x00000001) != 0)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, toolName_);
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        output.writeEnum(2, status_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) != 0)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, toolName_);
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(2, status_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.google.wireless.android.sdk.stats.SmlChatBotEvent.ToolCallFollowUpEvent)) {
+        return super.equals(obj);
+      }
+      com.google.wireless.android.sdk.stats.SmlChatBotEvent.ToolCallFollowUpEvent other = (com.google.wireless.android.sdk.stats.SmlChatBotEvent.ToolCallFollowUpEvent) obj;
+
+      if (hasToolName() != other.hasToolName()) return false;
+      if (hasToolName()) {
+        if (!getToolName()
+            .equals(other.getToolName())) return false;
+      }
+      if (hasStatus() != other.hasStatus()) return false;
+      if (hasStatus()) {
+        if (status_ != other.status_) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasToolName()) {
+        hash = (37 * hash) + TOOL_NAME_FIELD_NUMBER;
+        hash = (53 * hash) + getToolName().hashCode();
+      }
+      if (hasStatus()) {
+        hash = (37 * hash) + STATUS_FIELD_NUMBER;
+        hash = (53 * hash) + status_;
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.google.wireless.android.sdk.stats.SmlChatBotEvent.ToolCallFollowUpEvent parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.google.wireless.android.sdk.stats.SmlChatBotEvent.ToolCallFollowUpEvent parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.google.wireless.android.sdk.stats.SmlChatBotEvent.ToolCallFollowUpEvent parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.google.wireless.android.sdk.stats.SmlChatBotEvent.ToolCallFollowUpEvent parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.google.wireless.android.sdk.stats.SmlChatBotEvent.ToolCallFollowUpEvent parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.google.wireless.android.sdk.stats.SmlChatBotEvent.ToolCallFollowUpEvent parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.google.wireless.android.sdk.stats.SmlChatBotEvent.ToolCallFollowUpEvent parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.google.wireless.android.sdk.stats.SmlChatBotEvent.ToolCallFollowUpEvent parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.google.wireless.android.sdk.stats.SmlChatBotEvent.ToolCallFollowUpEvent parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.google.wireless.android.sdk.stats.SmlChatBotEvent.ToolCallFollowUpEvent parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.google.wireless.android.sdk.stats.SmlChatBotEvent.ToolCallFollowUpEvent parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.google.wireless.android.sdk.stats.SmlChatBotEvent.ToolCallFollowUpEvent parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.google.wireless.android.sdk.stats.SmlChatBotEvent.ToolCallFollowUpEvent prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code android_studio.SmlChatBotEvent.ToolCallFollowUpEvent}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:android_studio.SmlChatBotEvent.ToolCallFollowUpEvent)
+        com.google.wireless.android.sdk.stats.SmlChatBotEvent.ToolCallFollowUpEventOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_SmlChatBotEvent_ToolCallFollowUpEvent_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_SmlChatBotEvent_ToolCallFollowUpEvent_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.google.wireless.android.sdk.stats.SmlChatBotEvent.ToolCallFollowUpEvent.class, com.google.wireless.android.sdk.stats.SmlChatBotEvent.ToolCallFollowUpEvent.Builder.class);
+      }
+
+      // Construct using com.google.wireless.android.sdk.stats.SmlChatBotEvent.ToolCallFollowUpEvent.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        toolName_ = "";
+        status_ = 0;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_SmlChatBotEvent_ToolCallFollowUpEvent_descriptor;
+      }
+
+      @java.lang.Override
+      public com.google.wireless.android.sdk.stats.SmlChatBotEvent.ToolCallFollowUpEvent getDefaultInstanceForType() {
+        return com.google.wireless.android.sdk.stats.SmlChatBotEvent.ToolCallFollowUpEvent.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.google.wireless.android.sdk.stats.SmlChatBotEvent.ToolCallFollowUpEvent build() {
+        com.google.wireless.android.sdk.stats.SmlChatBotEvent.ToolCallFollowUpEvent result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.google.wireless.android.sdk.stats.SmlChatBotEvent.ToolCallFollowUpEvent buildPartial() {
+        com.google.wireless.android.sdk.stats.SmlChatBotEvent.ToolCallFollowUpEvent result = new com.google.wireless.android.sdk.stats.SmlChatBotEvent.ToolCallFollowUpEvent(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.google.wireless.android.sdk.stats.SmlChatBotEvent.ToolCallFollowUpEvent result) {
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.toolName_ = toolName_;
+          to_bitField0_ |= 0x00000001;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.status_ = status_;
+          to_bitField0_ |= 0x00000002;
+        }
+        result.bitField0_ |= to_bitField0_;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.google.wireless.android.sdk.stats.SmlChatBotEvent.ToolCallFollowUpEvent) {
+          return mergeFrom((com.google.wireless.android.sdk.stats.SmlChatBotEvent.ToolCallFollowUpEvent)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.google.wireless.android.sdk.stats.SmlChatBotEvent.ToolCallFollowUpEvent other) {
+        if (other == com.google.wireless.android.sdk.stats.SmlChatBotEvent.ToolCallFollowUpEvent.getDefaultInstance()) return this;
+        if (other.hasToolName()) {
+          toolName_ = other.toolName_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (other.hasStatus()) {
+          setStatus(other.getStatus());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                toolName_ = input.readBytes();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 16: {
+                int tmpRaw = input.readEnum();
+                com.google.wireless.android.sdk.stats.SmlChatBotEvent.ToolCallStatus tmpValue =
+                    com.google.wireless.android.sdk.stats.SmlChatBotEvent.ToolCallStatus.forNumber(tmpRaw);
+                if (tmpValue == null) {
+                  mergeUnknownVarintField(2, tmpRaw);
+                } else {
+                  status_ = tmpRaw;
+                  bitField0_ |= 0x00000002;
+                }
+                break;
+              } // case 16
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object toolName_ = "";
+      /**
+       * <code>optional string tool_name = 1;</code>
+       * @return Whether the toolName field is set.
+       */
+      public boolean hasToolName() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>optional string tool_name = 1;</code>
+       * @return The toolName.
+       */
+      public java.lang.String getToolName() {
+        java.lang.Object ref = toolName_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            toolName_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string tool_name = 1;</code>
+       * @return The bytes for toolName.
+       */
+      public com.google.protobuf.ByteString
+          getToolNameBytes() {
+        java.lang.Object ref = toolName_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          toolName_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string tool_name = 1;</code>
+       * @param value The toolName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setToolName(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        toolName_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string tool_name = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearToolName() {
+        toolName_ = getDefaultInstance().getToolName();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string tool_name = 1;</code>
+       * @param value The bytes for toolName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setToolNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        toolName_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private int status_ = 0;
+      /**
+       * <code>optional .android_studio.SmlChatBotEvent.ToolCallStatus status = 2;</code>
+       * @return Whether the status field is set.
+       */
+      @java.lang.Override public boolean hasStatus() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <code>optional .android_studio.SmlChatBotEvent.ToolCallStatus status = 2;</code>
+       * @return The status.
+       */
+      @java.lang.Override
+      public com.google.wireless.android.sdk.stats.SmlChatBotEvent.ToolCallStatus getStatus() {
+        com.google.wireless.android.sdk.stats.SmlChatBotEvent.ToolCallStatus result = com.google.wireless.android.sdk.stats.SmlChatBotEvent.ToolCallStatus.forNumber(status_);
+        return result == null ? com.google.wireless.android.sdk.stats.SmlChatBotEvent.ToolCallStatus.OTHER_STATUS : result;
+      }
+      /**
+       * <code>optional .android_studio.SmlChatBotEvent.ToolCallStatus status = 2;</code>
+       * @param value The status to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStatus(com.google.wireless.android.sdk.stats.SmlChatBotEvent.ToolCallStatus value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x00000002;
+        status_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional .android_studio.SmlChatBotEvent.ToolCallStatus status = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearStatus() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        status_ = 0;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:android_studio.SmlChatBotEvent.ToolCallFollowUpEvent)
+    }
+
+    // @@protoc_insertion_point(class_scope:android_studio.SmlChatBotEvent.ToolCallFollowUpEvent)
+    private static final com.google.wireless.android.sdk.stats.SmlChatBotEvent.ToolCallFollowUpEvent DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.google.wireless.android.sdk.stats.SmlChatBotEvent.ToolCallFollowUpEvent();
+    }
+
+    public static com.google.wireless.android.sdk.stats.SmlChatBotEvent.ToolCallFollowUpEvent getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<ToolCallFollowUpEvent>
+        PARSER = new com.google.protobuf.AbstractParser<ToolCallFollowUpEvent>() {
+      @java.lang.Override
+      public ToolCallFollowUpEvent parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<ToolCallFollowUpEvent> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ToolCallFollowUpEvent> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.wireless.android.sdk.stats.SmlChatBotEvent.ToolCallFollowUpEvent getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private int bitField0_;
   private int contentCase_ = 0;
   @SuppressWarnings("serial")
@@ -9832,6 +11438,8 @@ private static final long serialVersionUID = 0L;
     HALLUCINATION_DETECTOR_RESULT(9),
     QUERY_BOX_EVENT(10),
     CONTEXT_DRAWER_EVENT(11),
+    TOOL_CALL(12),
+    TOOL_CALL_FOLLOW_UP_EVENT(13),
     CONTENT_NOT_SET(0);
     private final int value;
     private ContentCase(int value) {
@@ -9860,6 +11468,8 @@ private static final long serialVersionUID = 0L;
         case 9: return HALLUCINATION_DETECTOR_RESULT;
         case 10: return QUERY_BOX_EVENT;
         case 11: return CONTEXT_DRAWER_EVENT;
+        case 12: return TOOL_CALL;
+        case 13: return TOOL_CALL_FOLLOW_UP_EVENT;
         case 0: return CONTENT_NOT_SET;
         default: return null;
       }
@@ -10216,6 +11826,68 @@ private static final long serialVersionUID = 0L;
     return com.google.wireless.android.sdk.stats.SmlChatBotEvent.ContextDrawerEvent.getDefaultInstance();
   }
 
+  public static final int TOOL_CALL_FIELD_NUMBER = 12;
+  /**
+   * <code>.android_studio.SmlChatBotEvent.ToolCall tool_call = 12 [lazy = true];</code>
+   * @return Whether the toolCall field is set.
+   */
+  @java.lang.Override
+  public boolean hasToolCall() {
+    return contentCase_ == 12;
+  }
+  /**
+   * <code>.android_studio.SmlChatBotEvent.ToolCall tool_call = 12 [lazy = true];</code>
+   * @return The toolCall.
+   */
+  @java.lang.Override
+  public com.google.wireless.android.sdk.stats.SmlChatBotEvent.ToolCall getToolCall() {
+    if (contentCase_ == 12) {
+       return (com.google.wireless.android.sdk.stats.SmlChatBotEvent.ToolCall) content_;
+    }
+    return com.google.wireless.android.sdk.stats.SmlChatBotEvent.ToolCall.getDefaultInstance();
+  }
+  /**
+   * <code>.android_studio.SmlChatBotEvent.ToolCall tool_call = 12 [lazy = true];</code>
+   */
+  @java.lang.Override
+  public com.google.wireless.android.sdk.stats.SmlChatBotEvent.ToolCallOrBuilder getToolCallOrBuilder() {
+    if (contentCase_ == 12) {
+       return (com.google.wireless.android.sdk.stats.SmlChatBotEvent.ToolCall) content_;
+    }
+    return com.google.wireless.android.sdk.stats.SmlChatBotEvent.ToolCall.getDefaultInstance();
+  }
+
+  public static final int TOOL_CALL_FOLLOW_UP_EVENT_FIELD_NUMBER = 13;
+  /**
+   * <code>.android_studio.SmlChatBotEvent.ToolCallFollowUpEvent tool_call_follow_up_event = 13 [lazy = true];</code>
+   * @return Whether the toolCallFollowUpEvent field is set.
+   */
+  @java.lang.Override
+  public boolean hasToolCallFollowUpEvent() {
+    return contentCase_ == 13;
+  }
+  /**
+   * <code>.android_studio.SmlChatBotEvent.ToolCallFollowUpEvent tool_call_follow_up_event = 13 [lazy = true];</code>
+   * @return The toolCallFollowUpEvent.
+   */
+  @java.lang.Override
+  public com.google.wireless.android.sdk.stats.SmlChatBotEvent.ToolCallFollowUpEvent getToolCallFollowUpEvent() {
+    if (contentCase_ == 13) {
+       return (com.google.wireless.android.sdk.stats.SmlChatBotEvent.ToolCallFollowUpEvent) content_;
+    }
+    return com.google.wireless.android.sdk.stats.SmlChatBotEvent.ToolCallFollowUpEvent.getDefaultInstance();
+  }
+  /**
+   * <code>.android_studio.SmlChatBotEvent.ToolCallFollowUpEvent tool_call_follow_up_event = 13 [lazy = true];</code>
+   */
+  @java.lang.Override
+  public com.google.wireless.android.sdk.stats.SmlChatBotEvent.ToolCallFollowUpEventOrBuilder getToolCallFollowUpEventOrBuilder() {
+    if (contentCase_ == 13) {
+       return (com.google.wireless.android.sdk.stats.SmlChatBotEvent.ToolCallFollowUpEvent) content_;
+    }
+    return com.google.wireless.android.sdk.stats.SmlChatBotEvent.ToolCallFollowUpEvent.getDefaultInstance();
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -10262,6 +11934,12 @@ private static final long serialVersionUID = 0L;
     }
     if (contentCase_ == 11) {
       output.writeMessage(11, (com.google.wireless.android.sdk.stats.SmlChatBotEvent.ContextDrawerEvent) content_);
+    }
+    if (contentCase_ == 12) {
+      output.writeMessage(12, (com.google.wireless.android.sdk.stats.SmlChatBotEvent.ToolCall) content_);
+    }
+    if (contentCase_ == 13) {
+      output.writeMessage(13, (com.google.wireless.android.sdk.stats.SmlChatBotEvent.ToolCallFollowUpEvent) content_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -10315,6 +11993,14 @@ private static final long serialVersionUID = 0L;
     if (contentCase_ == 11) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(11, (com.google.wireless.android.sdk.stats.SmlChatBotEvent.ContextDrawerEvent) content_);
+    }
+    if (contentCase_ == 12) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(12, (com.google.wireless.android.sdk.stats.SmlChatBotEvent.ToolCall) content_);
+    }
+    if (contentCase_ == 13) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(13, (com.google.wireless.android.sdk.stats.SmlChatBotEvent.ToolCallFollowUpEvent) content_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -10377,6 +12063,14 @@ private static final long serialVersionUID = 0L;
         if (!getContextDrawerEvent()
             .equals(other.getContextDrawerEvent())) return false;
         break;
+      case 12:
+        if (!getToolCall()
+            .equals(other.getToolCall())) return false;
+        break;
+      case 13:
+        if (!getToolCallFollowUpEvent()
+            .equals(other.getToolCallFollowUpEvent())) return false;
+        break;
       case 0:
       default:
     }
@@ -10435,6 +12129,14 @@ private static final long serialVersionUID = 0L;
       case 11:
         hash = (37 * hash) + CONTEXT_DRAWER_EVENT_FIELD_NUMBER;
         hash = (53 * hash) + getContextDrawerEvent().hashCode();
+        break;
+      case 12:
+        hash = (37 * hash) + TOOL_CALL_FIELD_NUMBER;
+        hash = (53 * hash) + getToolCall().hashCode();
+        break;
+      case 13:
+        hash = (37 * hash) + TOOL_CALL_FOLLOW_UP_EVENT_FIELD_NUMBER;
+        hash = (53 * hash) + getToolCallFollowUpEvent().hashCode();
         break;
       case 0:
       default:
@@ -10601,6 +12303,12 @@ private static final long serialVersionUID = 0L;
       if (contextDrawerEventBuilder_ != null) {
         contextDrawerEventBuilder_.clear();
       }
+      if (toolCallBuilder_ != null) {
+        toolCallBuilder_.clear();
+      }
+      if (toolCallFollowUpEventBuilder_ != null) {
+        toolCallFollowUpEventBuilder_.clear();
+      }
       contentCase_ = 0;
       content_ = null;
       return this;
@@ -10686,6 +12394,14 @@ private static final long serialVersionUID = 0L;
           contextDrawerEventBuilder_ != null) {
         result.content_ = contextDrawerEventBuilder_.build();
       }
+      if (contentCase_ == 12 &&
+          toolCallBuilder_ != null) {
+        result.content_ = toolCallBuilder_.build();
+      }
+      if (contentCase_ == 13 &&
+          toolCallFollowUpEventBuilder_ != null) {
+        result.content_ = toolCallFollowUpEventBuilder_.build();
+      }
     }
 
     @java.lang.Override
@@ -10743,6 +12459,14 @@ private static final long serialVersionUID = 0L;
         }
         case CONTEXT_DRAWER_EVENT: {
           mergeContextDrawerEvent(other.getContextDrawerEvent());
+          break;
+        }
+        case TOOL_CALL: {
+          mergeToolCall(other.getToolCall());
+          break;
+        }
+        case TOOL_CALL_FOLLOW_UP_EVENT: {
+          mergeToolCallFollowUpEvent(other.getToolCallFollowUpEvent());
           break;
         }
         case CONTENT_NOT_SET: {
@@ -10852,6 +12576,20 @@ private static final long serialVersionUID = 0L;
               contentCase_ = 11;
               break;
             } // case 90
+            case 98: {
+              input.readMessage(
+                  getToolCallFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              contentCase_ = 12;
+              break;
+            } // case 98
+            case 106: {
+              input.readMessage(
+                  getToolCallFollowUpEventFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              contentCase_ = 13;
+              break;
+            } // case 106
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -12444,6 +14182,290 @@ private static final long serialVersionUID = 0L;
       contentCase_ = 11;
       onChanged();
       return contextDrawerEventBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.SmlChatBotEvent.ToolCall, com.google.wireless.android.sdk.stats.SmlChatBotEvent.ToolCall.Builder, com.google.wireless.android.sdk.stats.SmlChatBotEvent.ToolCallOrBuilder> toolCallBuilder_;
+    /**
+     * <code>.android_studio.SmlChatBotEvent.ToolCall tool_call = 12 [lazy = true];</code>
+     * @return Whether the toolCall field is set.
+     */
+    @java.lang.Override
+    public boolean hasToolCall() {
+      return contentCase_ == 12;
+    }
+    /**
+     * <code>.android_studio.SmlChatBotEvent.ToolCall tool_call = 12 [lazy = true];</code>
+     * @return The toolCall.
+     */
+    @java.lang.Override
+    public com.google.wireless.android.sdk.stats.SmlChatBotEvent.ToolCall getToolCall() {
+      if (toolCallBuilder_ == null) {
+        if (contentCase_ == 12) {
+          return (com.google.wireless.android.sdk.stats.SmlChatBotEvent.ToolCall) content_;
+        }
+        return com.google.wireless.android.sdk.stats.SmlChatBotEvent.ToolCall.getDefaultInstance();
+      } else {
+        if (contentCase_ == 12) {
+          return toolCallBuilder_.getMessage();
+        }
+        return com.google.wireless.android.sdk.stats.SmlChatBotEvent.ToolCall.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.android_studio.SmlChatBotEvent.ToolCall tool_call = 12 [lazy = true];</code>
+     */
+    public Builder setToolCall(com.google.wireless.android.sdk.stats.SmlChatBotEvent.ToolCall value) {
+      if (toolCallBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        content_ = value;
+        onChanged();
+      } else {
+        toolCallBuilder_.setMessage(value);
+      }
+      contentCase_ = 12;
+      return this;
+    }
+    /**
+     * <code>.android_studio.SmlChatBotEvent.ToolCall tool_call = 12 [lazy = true];</code>
+     */
+    public Builder setToolCall(
+        com.google.wireless.android.sdk.stats.SmlChatBotEvent.ToolCall.Builder builderForValue) {
+      if (toolCallBuilder_ == null) {
+        content_ = builderForValue.build();
+        onChanged();
+      } else {
+        toolCallBuilder_.setMessage(builderForValue.build());
+      }
+      contentCase_ = 12;
+      return this;
+    }
+    /**
+     * <code>.android_studio.SmlChatBotEvent.ToolCall tool_call = 12 [lazy = true];</code>
+     */
+    public Builder mergeToolCall(com.google.wireless.android.sdk.stats.SmlChatBotEvent.ToolCall value) {
+      if (toolCallBuilder_ == null) {
+        if (contentCase_ == 12 &&
+            content_ != com.google.wireless.android.sdk.stats.SmlChatBotEvent.ToolCall.getDefaultInstance()) {
+          content_ = com.google.wireless.android.sdk.stats.SmlChatBotEvent.ToolCall.newBuilder((com.google.wireless.android.sdk.stats.SmlChatBotEvent.ToolCall) content_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          content_ = value;
+        }
+        onChanged();
+      } else {
+        if (contentCase_ == 12) {
+          toolCallBuilder_.mergeFrom(value);
+        } else {
+          toolCallBuilder_.setMessage(value);
+        }
+      }
+      contentCase_ = 12;
+      return this;
+    }
+    /**
+     * <code>.android_studio.SmlChatBotEvent.ToolCall tool_call = 12 [lazy = true];</code>
+     */
+    public Builder clearToolCall() {
+      if (toolCallBuilder_ == null) {
+        if (contentCase_ == 12) {
+          contentCase_ = 0;
+          content_ = null;
+          onChanged();
+        }
+      } else {
+        if (contentCase_ == 12) {
+          contentCase_ = 0;
+          content_ = null;
+        }
+        toolCallBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>.android_studio.SmlChatBotEvent.ToolCall tool_call = 12 [lazy = true];</code>
+     */
+    public com.google.wireless.android.sdk.stats.SmlChatBotEvent.ToolCall.Builder getToolCallBuilder() {
+      return getToolCallFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.android_studio.SmlChatBotEvent.ToolCall tool_call = 12 [lazy = true];</code>
+     */
+    @java.lang.Override
+    public com.google.wireless.android.sdk.stats.SmlChatBotEvent.ToolCallOrBuilder getToolCallOrBuilder() {
+      if ((contentCase_ == 12) && (toolCallBuilder_ != null)) {
+        return toolCallBuilder_.getMessageOrBuilder();
+      } else {
+        if (contentCase_ == 12) {
+          return (com.google.wireless.android.sdk.stats.SmlChatBotEvent.ToolCall) content_;
+        }
+        return com.google.wireless.android.sdk.stats.SmlChatBotEvent.ToolCall.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.android_studio.SmlChatBotEvent.ToolCall tool_call = 12 [lazy = true];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.SmlChatBotEvent.ToolCall, com.google.wireless.android.sdk.stats.SmlChatBotEvent.ToolCall.Builder, com.google.wireless.android.sdk.stats.SmlChatBotEvent.ToolCallOrBuilder> 
+        getToolCallFieldBuilder() {
+      if (toolCallBuilder_ == null) {
+        if (!(contentCase_ == 12)) {
+          content_ = com.google.wireless.android.sdk.stats.SmlChatBotEvent.ToolCall.getDefaultInstance();
+        }
+        toolCallBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.wireless.android.sdk.stats.SmlChatBotEvent.ToolCall, com.google.wireless.android.sdk.stats.SmlChatBotEvent.ToolCall.Builder, com.google.wireless.android.sdk.stats.SmlChatBotEvent.ToolCallOrBuilder>(
+                (com.google.wireless.android.sdk.stats.SmlChatBotEvent.ToolCall) content_,
+                getParentForChildren(),
+                isClean());
+        content_ = null;
+      }
+      contentCase_ = 12;
+      onChanged();
+      return toolCallBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.SmlChatBotEvent.ToolCallFollowUpEvent, com.google.wireless.android.sdk.stats.SmlChatBotEvent.ToolCallFollowUpEvent.Builder, com.google.wireless.android.sdk.stats.SmlChatBotEvent.ToolCallFollowUpEventOrBuilder> toolCallFollowUpEventBuilder_;
+    /**
+     * <code>.android_studio.SmlChatBotEvent.ToolCallFollowUpEvent tool_call_follow_up_event = 13 [lazy = true];</code>
+     * @return Whether the toolCallFollowUpEvent field is set.
+     */
+    @java.lang.Override
+    public boolean hasToolCallFollowUpEvent() {
+      return contentCase_ == 13;
+    }
+    /**
+     * <code>.android_studio.SmlChatBotEvent.ToolCallFollowUpEvent tool_call_follow_up_event = 13 [lazy = true];</code>
+     * @return The toolCallFollowUpEvent.
+     */
+    @java.lang.Override
+    public com.google.wireless.android.sdk.stats.SmlChatBotEvent.ToolCallFollowUpEvent getToolCallFollowUpEvent() {
+      if (toolCallFollowUpEventBuilder_ == null) {
+        if (contentCase_ == 13) {
+          return (com.google.wireless.android.sdk.stats.SmlChatBotEvent.ToolCallFollowUpEvent) content_;
+        }
+        return com.google.wireless.android.sdk.stats.SmlChatBotEvent.ToolCallFollowUpEvent.getDefaultInstance();
+      } else {
+        if (contentCase_ == 13) {
+          return toolCallFollowUpEventBuilder_.getMessage();
+        }
+        return com.google.wireless.android.sdk.stats.SmlChatBotEvent.ToolCallFollowUpEvent.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.android_studio.SmlChatBotEvent.ToolCallFollowUpEvent tool_call_follow_up_event = 13 [lazy = true];</code>
+     */
+    public Builder setToolCallFollowUpEvent(com.google.wireless.android.sdk.stats.SmlChatBotEvent.ToolCallFollowUpEvent value) {
+      if (toolCallFollowUpEventBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        content_ = value;
+        onChanged();
+      } else {
+        toolCallFollowUpEventBuilder_.setMessage(value);
+      }
+      contentCase_ = 13;
+      return this;
+    }
+    /**
+     * <code>.android_studio.SmlChatBotEvent.ToolCallFollowUpEvent tool_call_follow_up_event = 13 [lazy = true];</code>
+     */
+    public Builder setToolCallFollowUpEvent(
+        com.google.wireless.android.sdk.stats.SmlChatBotEvent.ToolCallFollowUpEvent.Builder builderForValue) {
+      if (toolCallFollowUpEventBuilder_ == null) {
+        content_ = builderForValue.build();
+        onChanged();
+      } else {
+        toolCallFollowUpEventBuilder_.setMessage(builderForValue.build());
+      }
+      contentCase_ = 13;
+      return this;
+    }
+    /**
+     * <code>.android_studio.SmlChatBotEvent.ToolCallFollowUpEvent tool_call_follow_up_event = 13 [lazy = true];</code>
+     */
+    public Builder mergeToolCallFollowUpEvent(com.google.wireless.android.sdk.stats.SmlChatBotEvent.ToolCallFollowUpEvent value) {
+      if (toolCallFollowUpEventBuilder_ == null) {
+        if (contentCase_ == 13 &&
+            content_ != com.google.wireless.android.sdk.stats.SmlChatBotEvent.ToolCallFollowUpEvent.getDefaultInstance()) {
+          content_ = com.google.wireless.android.sdk.stats.SmlChatBotEvent.ToolCallFollowUpEvent.newBuilder((com.google.wireless.android.sdk.stats.SmlChatBotEvent.ToolCallFollowUpEvent) content_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          content_ = value;
+        }
+        onChanged();
+      } else {
+        if (contentCase_ == 13) {
+          toolCallFollowUpEventBuilder_.mergeFrom(value);
+        } else {
+          toolCallFollowUpEventBuilder_.setMessage(value);
+        }
+      }
+      contentCase_ = 13;
+      return this;
+    }
+    /**
+     * <code>.android_studio.SmlChatBotEvent.ToolCallFollowUpEvent tool_call_follow_up_event = 13 [lazy = true];</code>
+     */
+    public Builder clearToolCallFollowUpEvent() {
+      if (toolCallFollowUpEventBuilder_ == null) {
+        if (contentCase_ == 13) {
+          contentCase_ = 0;
+          content_ = null;
+          onChanged();
+        }
+      } else {
+        if (contentCase_ == 13) {
+          contentCase_ = 0;
+          content_ = null;
+        }
+        toolCallFollowUpEventBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>.android_studio.SmlChatBotEvent.ToolCallFollowUpEvent tool_call_follow_up_event = 13 [lazy = true];</code>
+     */
+    public com.google.wireless.android.sdk.stats.SmlChatBotEvent.ToolCallFollowUpEvent.Builder getToolCallFollowUpEventBuilder() {
+      return getToolCallFollowUpEventFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.android_studio.SmlChatBotEvent.ToolCallFollowUpEvent tool_call_follow_up_event = 13 [lazy = true];</code>
+     */
+    @java.lang.Override
+    public com.google.wireless.android.sdk.stats.SmlChatBotEvent.ToolCallFollowUpEventOrBuilder getToolCallFollowUpEventOrBuilder() {
+      if ((contentCase_ == 13) && (toolCallFollowUpEventBuilder_ != null)) {
+        return toolCallFollowUpEventBuilder_.getMessageOrBuilder();
+      } else {
+        if (contentCase_ == 13) {
+          return (com.google.wireless.android.sdk.stats.SmlChatBotEvent.ToolCallFollowUpEvent) content_;
+        }
+        return com.google.wireless.android.sdk.stats.SmlChatBotEvent.ToolCallFollowUpEvent.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.android_studio.SmlChatBotEvent.ToolCallFollowUpEvent tool_call_follow_up_event = 13 [lazy = true];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.SmlChatBotEvent.ToolCallFollowUpEvent, com.google.wireless.android.sdk.stats.SmlChatBotEvent.ToolCallFollowUpEvent.Builder, com.google.wireless.android.sdk.stats.SmlChatBotEvent.ToolCallFollowUpEventOrBuilder> 
+        getToolCallFollowUpEventFieldBuilder() {
+      if (toolCallFollowUpEventBuilder_ == null) {
+        if (!(contentCase_ == 13)) {
+          content_ = com.google.wireless.android.sdk.stats.SmlChatBotEvent.ToolCallFollowUpEvent.getDefaultInstance();
+        }
+        toolCallFollowUpEventBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.wireless.android.sdk.stats.SmlChatBotEvent.ToolCallFollowUpEvent, com.google.wireless.android.sdk.stats.SmlChatBotEvent.ToolCallFollowUpEvent.Builder, com.google.wireless.android.sdk.stats.SmlChatBotEvent.ToolCallFollowUpEventOrBuilder>(
+                (com.google.wireless.android.sdk.stats.SmlChatBotEvent.ToolCallFollowUpEvent) content_,
+                getParentForChildren(),
+                isClean());
+        content_ = null;
+      }
+      contentCase_ = 13;
+      onChanged();
+      return toolCallFollowUpEventBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

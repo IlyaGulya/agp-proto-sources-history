@@ -172,5 +172,35 @@ public interface SmlChatBotEventOrBuilder extends
    */
   com.google.wireless.android.sdk.stats.SmlChatBotEvent.ContextDrawerEventOrBuilder getContextDrawerEventOrBuilder();
 
+  /**
+   * <code>.android_studio.SmlChatBotEvent.ToolCall tool_call = 12 [lazy = true];</code>
+   * @return Whether the toolCall field is set.
+   */
+  boolean hasToolCall();
+  /**
+   * <code>.android_studio.SmlChatBotEvent.ToolCall tool_call = 12 [lazy = true];</code>
+   * @return The toolCall.
+   */
+  com.google.wireless.android.sdk.stats.SmlChatBotEvent.ToolCall getToolCall();
+  /**
+   * <code>.android_studio.SmlChatBotEvent.ToolCall tool_call = 12 [lazy = true];</code>
+   */
+  com.google.wireless.android.sdk.stats.SmlChatBotEvent.ToolCallOrBuilder getToolCallOrBuilder();
+
+  /**
+   * <code>.android_studio.SmlChatBotEvent.ToolCallFollowUpEvent tool_call_follow_up_event = 13 [lazy = true];</code>
+   * @return Whether the toolCallFollowUpEvent field is set.
+   */
+  boolean hasToolCallFollowUpEvent();
+  /**
+   * <code>.android_studio.SmlChatBotEvent.ToolCallFollowUpEvent tool_call_follow_up_event = 13 [lazy = true];</code>
+   * @return The toolCallFollowUpEvent.
+   */
+  com.google.wireless.android.sdk.stats.SmlChatBotEvent.ToolCallFollowUpEvent getToolCallFollowUpEvent();
+  /**
+   * <code>.android_studio.SmlChatBotEvent.ToolCallFollowUpEvent tool_call_follow_up_event = 13 [lazy = true];</code>
+   */
+  com.google.wireless.android.sdk.stats.SmlChatBotEvent.ToolCallFollowUpEventOrBuilder getToolCallFollowUpEventOrBuilder();
+
   com.google.wireless.android.sdk.stats.SmlChatBotEvent.ContentCase getContentCase();
 }
