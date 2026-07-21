@@ -478,190 +478,6 @@ public final class ConfigurationOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private Configuration(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 8: {
-
-              mcc_ = input.readUInt32();
-              break;
-            }
-            case 16: {
-
-              mnc_ = input.readUInt32();
-              break;
-            }
-            case 26: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              locale_ = s;
-              break;
-            }
-            case 32: {
-              int rawValue = input.readEnum();
-
-              layoutDirection_ = rawValue;
-              break;
-            }
-            case 40: {
-
-              screenWidth_ = input.readUInt32();
-              break;
-            }
-            case 48: {
-
-              screenHeight_ = input.readUInt32();
-              break;
-            }
-            case 56: {
-
-              screenWidthDp_ = input.readUInt32();
-              break;
-            }
-            case 64: {
-
-              screenHeightDp_ = input.readUInt32();
-              break;
-            }
-            case 72: {
-
-              smallestScreenWidthDp_ = input.readUInt32();
-              break;
-            }
-            case 80: {
-              int rawValue = input.readEnum();
-
-              screenLayoutSize_ = rawValue;
-              break;
-            }
-            case 88: {
-              int rawValue = input.readEnum();
-
-              screenLayoutLong_ = rawValue;
-              break;
-            }
-            case 96: {
-              int rawValue = input.readEnum();
-
-              screenRound_ = rawValue;
-              break;
-            }
-            case 104: {
-              int rawValue = input.readEnum();
-
-              wideColorGamut_ = rawValue;
-              break;
-            }
-            case 112: {
-              int rawValue = input.readEnum();
-
-              hdr_ = rawValue;
-              break;
-            }
-            case 120: {
-              int rawValue = input.readEnum();
-
-              orientation_ = rawValue;
-              break;
-            }
-            case 128: {
-              int rawValue = input.readEnum();
-
-              uiModeType_ = rawValue;
-              break;
-            }
-            case 136: {
-              int rawValue = input.readEnum();
-
-              uiModeNight_ = rawValue;
-              break;
-            }
-            case 144: {
-
-              density_ = input.readUInt32();
-              break;
-            }
-            case 152: {
-              int rawValue = input.readEnum();
-
-              touchscreen_ = rawValue;
-              break;
-            }
-            case 160: {
-              int rawValue = input.readEnum();
-
-              keysHidden_ = rawValue;
-              break;
-            }
-            case 168: {
-              int rawValue = input.readEnum();
-
-              keyboard_ = rawValue;
-              break;
-            }
-            case 176: {
-              int rawValue = input.readEnum();
-
-              navHidden_ = rawValue;
-              break;
-            }
-            case 184: {
-              int rawValue = input.readEnum();
-
-              navigation_ = rawValue;
-              break;
-            }
-            case 192: {
-
-              sdkVersion_ = input.readUInt32();
-              break;
-            }
-            case 202: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              product_ = s;
-              break;
-            }
-            case 208: {
-              int rawValue = input.readEnum();
-
-              grammaticalGender_ = rawValue;
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.android.aapt.ConfigurationOuterClass.internal_static_aapt_pb_Configuration_descriptor;
@@ -3276,7 +3092,7 @@ public final class ConfigurationOuterClass {
       if (grammaticalGender_ != com.android.aapt.ConfigurationOuterClass.Configuration.GrammaticalGender.GRAM_GENDER_USET.getNumber()) {
         output.writeEnum(26, grammaticalGender_);
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -3387,7 +3203,7 @@ public final class ConfigurationOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(26, grammaticalGender_);
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -3439,7 +3255,7 @@ public final class ConfigurationOuterClass {
       if (grammaticalGender_ != other.grammaticalGender_) return false;
       if (!getProduct()
           .equals(other.getProduct())) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -3502,7 +3318,7 @@ public final class ConfigurationOuterClass {
       hash = (53 * hash) + grammaticalGender_;
       hash = (37 * hash) + PRODUCT_FIELD_NUMBER;
       hash = (53 * hash) + getProduct().hashCode();
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -3624,18 +3440,13 @@ public final class ConfigurationOuterClass {
 
       // Construct using com.android.aapt.ConfigurationOuterClass.Configuration.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -3872,7 +3683,7 @@ public final class ConfigurationOuterClass {
           product_ = other.product_;
           onChanged();
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -3887,17 +3698,160 @@ public final class ConfigurationOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.android.aapt.ConfigurationOuterClass.Configuration parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                mcc_ = input.readUInt32();
+
+                break;
+              } // case 8
+              case 16: {
+                mnc_ = input.readUInt32();
+
+                break;
+              } // case 16
+              case 26: {
+                locale_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 26
+              case 32: {
+                layoutDirection_ = input.readEnum();
+
+                break;
+              } // case 32
+              case 40: {
+                screenWidth_ = input.readUInt32();
+
+                break;
+              } // case 40
+              case 48: {
+                screenHeight_ = input.readUInt32();
+
+                break;
+              } // case 48
+              case 56: {
+                screenWidthDp_ = input.readUInt32();
+
+                break;
+              } // case 56
+              case 64: {
+                screenHeightDp_ = input.readUInt32();
+
+                break;
+              } // case 64
+              case 72: {
+                smallestScreenWidthDp_ = input.readUInt32();
+
+                break;
+              } // case 72
+              case 80: {
+                screenLayoutSize_ = input.readEnum();
+
+                break;
+              } // case 80
+              case 88: {
+                screenLayoutLong_ = input.readEnum();
+
+                break;
+              } // case 88
+              case 96: {
+                screenRound_ = input.readEnum();
+
+                break;
+              } // case 96
+              case 104: {
+                wideColorGamut_ = input.readEnum();
+
+                break;
+              } // case 104
+              case 112: {
+                hdr_ = input.readEnum();
+
+                break;
+              } // case 112
+              case 120: {
+                orientation_ = input.readEnum();
+
+                break;
+              } // case 120
+              case 128: {
+                uiModeType_ = input.readEnum();
+
+                break;
+              } // case 128
+              case 136: {
+                uiModeNight_ = input.readEnum();
+
+                break;
+              } // case 136
+              case 144: {
+                density_ = input.readUInt32();
+
+                break;
+              } // case 144
+              case 152: {
+                touchscreen_ = input.readEnum();
+
+                break;
+              } // case 152
+              case 160: {
+                keysHidden_ = input.readEnum();
+
+                break;
+              } // case 160
+              case 168: {
+                keyboard_ = input.readEnum();
+
+                break;
+              } // case 168
+              case 176: {
+                navHidden_ = input.readEnum();
+
+                break;
+              } // case 176
+              case 184: {
+                navigation_ = input.readEnum();
+
+                break;
+              } // case 184
+              case 192: {
+                sdkVersion_ = input.readUInt32();
+
+                break;
+              } // case 192
+              case 202: {
+                product_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 202
+              case 208: {
+                grammaticalGender_ = input.readEnum();
+
+                break;
+              } // case 208
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.android.aapt.ConfigurationOuterClass.Configuration) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
 
@@ -5612,7 +5566,18 @@ public final class ConfigurationOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new Configuration(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 
