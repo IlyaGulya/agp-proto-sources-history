@@ -1828,6 +1828,19 @@ private static final long serialVersionUID = 0L;
             bitField4_ |= 0x00000040;
             break;
           }
+          case 1138: {
+            com.google.wireless.android.sdk.stats.SdkIndexLibraryDetails.Builder subBuilder = null;
+            if (((bitField4_ & 0x00000080) != 0)) {
+              subBuilder = sdkIndexLibraryDetails_.toBuilder();
+            }
+            sdkIndexLibraryDetails_ = input.readMessage(com.google.wireless.android.sdk.stats.SdkIndexLibraryDetails.PARSER, extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(sdkIndexLibraryDetails_);
+              sdkIndexLibraryDetails_ = subBuilder.buildPartial();
+            }
+            bitField4_ |= 0x00000080;
+            break;
+          }
           default: {
             if (!parseUnknownField(
                 input, unknownFields, extensionRegistry, tag)) {
@@ -2129,6 +2142,14 @@ private static final long serialVersionUID = 0L;
      * <code>LOGCAT = 29;</code>
      */
     LOGCAT(29),
+    /**
+     * <pre>
+     * The event is related to Google Play SDK Index
+     * </pre>
+     *
+     * <code>GOOGLE_PLAY_SDK_INDEX = 30;</code>
+     */
+    GOOGLE_PLAY_SDK_INDEX(30),
     ;
 
     /**
@@ -2372,6 +2393,14 @@ private static final long serialVersionUID = 0L;
      * <code>LOGCAT = 29;</code>
      */
     public static final int LOGCAT_VALUE = 29;
+    /**
+     * <pre>
+     * The event is related to Google Play SDK Index
+     * </pre>
+     *
+     * <code>GOOGLE_PLAY_SDK_INDEX = 30;</code>
+     */
+    public static final int GOOGLE_PLAY_SDK_INDEX_VALUE = 30;
 
 
     public final int getNumber() {
@@ -2424,6 +2453,7 @@ private static final long serialVersionUID = 0L;
         case 27: return PROJECT_SYSTEM;
         case 28: return SPLITTING_TABS;
         case 29: return LOGCAT;
+        case 30: return GOOGLE_PLAY_SDK_INDEX;
         default: return null;
       }
     }
@@ -4300,6 +4330,63 @@ private static final long serialVersionUID = 0L;
      * <code>OS_METRICS = 247;</code>
      */
     OS_METRICS(247),
+    /**
+     * <pre>
+     * Events related to Google Play SDK Index
+     * SDK Index was loaded correctly
+     * </pre>
+     *
+     * <code>SDK_INDEX_LOADED_CORRECTLY = 248;</code>
+     */
+    SDK_INDEX_LOADED_CORRECTLY(248),
+    /**
+     * <pre>
+     * Error while reading SDK Index from cache or network
+     * </pre>
+     *
+     * <code>SDK_INDEX_CACHING_ERROR = 249;</code>
+     */
+    SDK_INDEX_CACHING_ERROR(249),
+    /**
+     * <pre>
+     * Error while reading SDK Index from default resource
+     * </pre>
+     *
+     * <code>SDK_INDEX_DEFAULT_DATA_ERROR = 250;</code>
+     */
+    SDK_INDEX_DEFAULT_DATA_ERROR(250),
+    /**
+     * <pre>
+     * Link provided by the SDK Index was used
+     * </pre>
+     *
+     * <code>SDK_INDEX_LINK_FOLLOWED = 251;</code>
+     */
+    SDK_INDEX_LINK_FOLLOWED(251),
+    /**
+     * <pre>
+     * Library has critical issues in the SDK Index
+     * </pre>
+     *
+     * <code>SDK_INDEX_LIBRARY_HAS_CRITICAL_ISSUES = 252;</code>
+     */
+    SDK_INDEX_LIBRARY_HAS_CRITICAL_ISSUES(252),
+    /**
+     * <pre>
+     * Library has is marked as outdated in the SDK Index
+     * </pre>
+     *
+     * <code>SDK_INDEX_LIBRARY_IS_OUTDATED = 253;</code>
+     */
+    SDK_INDEX_LIBRARY_IS_OUTDATED(253),
+    /**
+     * <pre>
+     * Library has is marked as non compliant in the SDK Index
+     * </pre>
+     *
+     * <code>SDK_INDEX_LIBRARY_IS_NON_COMPLIANT = 254;</code>
+     */
+    SDK_INDEX_LIBRARY_IS_NON_COMPLIANT(254),
     ;
 
     /**
@@ -6111,6 +6198,63 @@ private static final long serialVersionUID = 0L;
      * <code>OS_METRICS = 247;</code>
      */
     public static final int OS_METRICS_VALUE = 247;
+    /**
+     * <pre>
+     * Events related to Google Play SDK Index
+     * SDK Index was loaded correctly
+     * </pre>
+     *
+     * <code>SDK_INDEX_LOADED_CORRECTLY = 248;</code>
+     */
+    public static final int SDK_INDEX_LOADED_CORRECTLY_VALUE = 248;
+    /**
+     * <pre>
+     * Error while reading SDK Index from cache or network
+     * </pre>
+     *
+     * <code>SDK_INDEX_CACHING_ERROR = 249;</code>
+     */
+    public static final int SDK_INDEX_CACHING_ERROR_VALUE = 249;
+    /**
+     * <pre>
+     * Error while reading SDK Index from default resource
+     * </pre>
+     *
+     * <code>SDK_INDEX_DEFAULT_DATA_ERROR = 250;</code>
+     */
+    public static final int SDK_INDEX_DEFAULT_DATA_ERROR_VALUE = 250;
+    /**
+     * <pre>
+     * Link provided by the SDK Index was used
+     * </pre>
+     *
+     * <code>SDK_INDEX_LINK_FOLLOWED = 251;</code>
+     */
+    public static final int SDK_INDEX_LINK_FOLLOWED_VALUE = 251;
+    /**
+     * <pre>
+     * Library has critical issues in the SDK Index
+     * </pre>
+     *
+     * <code>SDK_INDEX_LIBRARY_HAS_CRITICAL_ISSUES = 252;</code>
+     */
+    public static final int SDK_INDEX_LIBRARY_HAS_CRITICAL_ISSUES_VALUE = 252;
+    /**
+     * <pre>
+     * Library has is marked as outdated in the SDK Index
+     * </pre>
+     *
+     * <code>SDK_INDEX_LIBRARY_IS_OUTDATED = 253;</code>
+     */
+    public static final int SDK_INDEX_LIBRARY_IS_OUTDATED_VALUE = 253;
+    /**
+     * <pre>
+     * Library has is marked as non compliant in the SDK Index
+     * </pre>
+     *
+     * <code>SDK_INDEX_LIBRARY_IS_NON_COMPLIANT = 254;</code>
+     */
+    public static final int SDK_INDEX_LIBRARY_IS_NON_COMPLIANT_VALUE = 254;
 
 
     public final int getNumber() {
@@ -6376,6 +6520,13 @@ private static final long serialVersionUID = 0L;
         case 245: return SPLITTING_TABS_USAGE;
         case 246: return LOGCAT_USAGE;
         case 247: return OS_METRICS;
+        case 248: return SDK_INDEX_LOADED_CORRECTLY;
+        case 249: return SDK_INDEX_CACHING_ERROR;
+        case 250: return SDK_INDEX_DEFAULT_DATA_ERROR;
+        case 251: return SDK_INDEX_LINK_FOLLOWED;
+        case 252: return SDK_INDEX_LIBRARY_HAS_CRITICAL_ISSUES;
+        case 253: return SDK_INDEX_LIBRARY_IS_OUTDATED;
+        case 254: return SDK_INDEX_LIBRARY_IS_NON_COMPLIANT;
         default: return null;
       }
     }
@@ -20026,6 +20177,44 @@ private static final long serialVersionUID = 0L;
     return osMetrics_ == null ? com.google.wireless.android.sdk.stats.OSMetrics.getDefaultInstance() : osMetrics_;
   }
 
+  public static final int SDK_INDEX_LIBRARY_DETAILS_FIELD_NUMBER = 142;
+  private com.google.wireless.android.sdk.stats.SdkIndexLibraryDetails sdkIndexLibraryDetails_;
+  /**
+   * <pre>
+   * set when kind is SDK_INDEX_LIBRARY_HAS_CRITICAL_ISSUES,
+   * SDK_INDEX_LIBRARY_IS_OUTDATED or SDK_INDEX_LIBRARY_IS_NON_COMPLIANT
+   * </pre>
+   *
+   * <code>optional .android_studio.SdkIndexLibraryDetails sdk_index_library_details = 142;</code>
+   * @return Whether the sdkIndexLibraryDetails field is set.
+   */
+  public boolean hasSdkIndexLibraryDetails() {
+    return ((bitField4_ & 0x00000080) != 0);
+  }
+  /**
+   * <pre>
+   * set when kind is SDK_INDEX_LIBRARY_HAS_CRITICAL_ISSUES,
+   * SDK_INDEX_LIBRARY_IS_OUTDATED or SDK_INDEX_LIBRARY_IS_NON_COMPLIANT
+   * </pre>
+   *
+   * <code>optional .android_studio.SdkIndexLibraryDetails sdk_index_library_details = 142;</code>
+   * @return The sdkIndexLibraryDetails.
+   */
+  public com.google.wireless.android.sdk.stats.SdkIndexLibraryDetails getSdkIndexLibraryDetails() {
+    return sdkIndexLibraryDetails_ == null ? com.google.wireless.android.sdk.stats.SdkIndexLibraryDetails.getDefaultInstance() : sdkIndexLibraryDetails_;
+  }
+  /**
+   * <pre>
+   * set when kind is SDK_INDEX_LIBRARY_HAS_CRITICAL_ISSUES,
+   * SDK_INDEX_LIBRARY_IS_OUTDATED or SDK_INDEX_LIBRARY_IS_NON_COMPLIANT
+   * </pre>
+   *
+   * <code>optional .android_studio.SdkIndexLibraryDetails sdk_index_library_details = 142;</code>
+   */
+  public com.google.wireless.android.sdk.stats.SdkIndexLibraryDetailsOrBuilder getSdkIndexLibraryDetailsOrBuilder() {
+    return sdkIndexLibraryDetails_ == null ? com.google.wireless.android.sdk.stats.SdkIndexLibraryDetails.getDefaultInstance() : sdkIndexLibraryDetails_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -20462,6 +20651,9 @@ private static final long serialVersionUID = 0L;
     }
     if (((bitField4_ & 0x00000040) != 0)) {
       output.writeMessage(141, getOsMetrics());
+    }
+    if (((bitField4_ & 0x00000080) != 0)) {
+      output.writeMessage(142, getSdkIndexLibraryDetails());
     }
     unknownFields.writeTo(output);
   }
@@ -21041,6 +21233,10 @@ private static final long serialVersionUID = 0L;
     if (((bitField4_ & 0x00000040) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(141, getOsMetrics());
+    }
+    if (((bitField4_ & 0x00000080) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(142, getSdkIndexLibraryDetails());
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -21733,6 +21929,11 @@ private static final long serialVersionUID = 0L;
       if (!getOsMetrics()
           .equals(other.getOsMetrics())) return false;
     }
+    if (hasSdkIndexLibraryDetails() != other.hasSdkIndexLibraryDetails()) return false;
+    if (hasSdkIndexLibraryDetails()) {
+      if (!getSdkIndexLibraryDetails()
+          .equals(other.getSdkIndexLibraryDetails())) return false;
+    }
     if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
@@ -22310,6 +22511,10 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + OS_METRICS_FIELD_NUMBER;
       hash = (53 * hash) + getOsMetrics().hashCode();
     }
+    if (hasSdkIndexLibraryDetails()) {
+      hash = (37 * hash) + SDK_INDEX_LIBRARY_DETAILS_FIELD_NUMBER;
+      hash = (53 * hash) + getSdkIndexLibraryDetails().hashCode();
+    }
     hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -22556,6 +22761,7 @@ private static final long serialVersionUID = 0L;
         getSplittingTabsUsageEventFieldBuilder();
         getLogcatUsageEventFieldBuilder();
         getOsMetricsFieldBuilder();
+        getSdkIndexLibraryDetailsFieldBuilder();
       }
     }
     @java.lang.Override
@@ -23315,6 +23521,12 @@ private static final long serialVersionUID = 0L;
         osMetricsBuilder_.clear();
       }
       bitField4_ = (bitField4_ & ~0x00001000);
+      if (sdkIndexLibraryDetailsBuilder_ == null) {
+        sdkIndexLibraryDetails_ = null;
+      } else {
+        sdkIndexLibraryDetailsBuilder_.clear();
+      }
+      bitField4_ = (bitField4_ & ~0x00002000);
       return this;
     }
 
@@ -24393,6 +24605,14 @@ private static final long serialVersionUID = 0L;
         }
         to_bitField4_ |= 0x00000040;
       }
+      if (((from_bitField4_ & 0x00002000) != 0)) {
+        if (sdkIndexLibraryDetailsBuilder_ == null) {
+          result.sdkIndexLibraryDetails_ = sdkIndexLibraryDetails_;
+        } else {
+          result.sdkIndexLibraryDetails_ = sdkIndexLibraryDetailsBuilder_.build();
+        }
+        to_bitField4_ |= 0x00000080;
+      }
       result.bitField0_ = to_bitField0_;
       result.bitField1_ = to_bitField1_;
       result.bitField2_ = to_bitField2_;
@@ -24972,6 +25192,9 @@ private static final long serialVersionUID = 0L;
       }
       if (other.hasOsMetrics()) {
         mergeOsMetrics(other.getOsMetrics());
+      }
+      if (other.hasSdkIndexLibraryDetails()) {
+        mergeSdkIndexLibraryDetails(other.getSdkIndexLibraryDetails());
       }
       this.mergeUnknownFields(other.unknownFields);
       onChanged();
@@ -46199,6 +46422,171 @@ private static final long serialVersionUID = 0L;
         osMetrics_ = null;
       }
       return osMetricsBuilder_;
+    }
+
+    private com.google.wireless.android.sdk.stats.SdkIndexLibraryDetails sdkIndexLibraryDetails_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.SdkIndexLibraryDetails, com.google.wireless.android.sdk.stats.SdkIndexLibraryDetails.Builder, com.google.wireless.android.sdk.stats.SdkIndexLibraryDetailsOrBuilder> sdkIndexLibraryDetailsBuilder_;
+    /**
+     * <pre>
+     * set when kind is SDK_INDEX_LIBRARY_HAS_CRITICAL_ISSUES,
+     * SDK_INDEX_LIBRARY_IS_OUTDATED or SDK_INDEX_LIBRARY_IS_NON_COMPLIANT
+     * </pre>
+     *
+     * <code>optional .android_studio.SdkIndexLibraryDetails sdk_index_library_details = 142;</code>
+     * @return Whether the sdkIndexLibraryDetails field is set.
+     */
+    public boolean hasSdkIndexLibraryDetails() {
+      return ((bitField4_ & 0x00002000) != 0);
+    }
+    /**
+     * <pre>
+     * set when kind is SDK_INDEX_LIBRARY_HAS_CRITICAL_ISSUES,
+     * SDK_INDEX_LIBRARY_IS_OUTDATED or SDK_INDEX_LIBRARY_IS_NON_COMPLIANT
+     * </pre>
+     *
+     * <code>optional .android_studio.SdkIndexLibraryDetails sdk_index_library_details = 142;</code>
+     * @return The sdkIndexLibraryDetails.
+     */
+    public com.google.wireless.android.sdk.stats.SdkIndexLibraryDetails getSdkIndexLibraryDetails() {
+      if (sdkIndexLibraryDetailsBuilder_ == null) {
+        return sdkIndexLibraryDetails_ == null ? com.google.wireless.android.sdk.stats.SdkIndexLibraryDetails.getDefaultInstance() : sdkIndexLibraryDetails_;
+      } else {
+        return sdkIndexLibraryDetailsBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * set when kind is SDK_INDEX_LIBRARY_HAS_CRITICAL_ISSUES,
+     * SDK_INDEX_LIBRARY_IS_OUTDATED or SDK_INDEX_LIBRARY_IS_NON_COMPLIANT
+     * </pre>
+     *
+     * <code>optional .android_studio.SdkIndexLibraryDetails sdk_index_library_details = 142;</code>
+     */
+    public Builder setSdkIndexLibraryDetails(com.google.wireless.android.sdk.stats.SdkIndexLibraryDetails value) {
+      if (sdkIndexLibraryDetailsBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        sdkIndexLibraryDetails_ = value;
+        onChanged();
+      } else {
+        sdkIndexLibraryDetailsBuilder_.setMessage(value);
+      }
+      bitField4_ |= 0x00002000;
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind is SDK_INDEX_LIBRARY_HAS_CRITICAL_ISSUES,
+     * SDK_INDEX_LIBRARY_IS_OUTDATED or SDK_INDEX_LIBRARY_IS_NON_COMPLIANT
+     * </pre>
+     *
+     * <code>optional .android_studio.SdkIndexLibraryDetails sdk_index_library_details = 142;</code>
+     */
+    public Builder setSdkIndexLibraryDetails(
+        com.google.wireless.android.sdk.stats.SdkIndexLibraryDetails.Builder builderForValue) {
+      if (sdkIndexLibraryDetailsBuilder_ == null) {
+        sdkIndexLibraryDetails_ = builderForValue.build();
+        onChanged();
+      } else {
+        sdkIndexLibraryDetailsBuilder_.setMessage(builderForValue.build());
+      }
+      bitField4_ |= 0x00002000;
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind is SDK_INDEX_LIBRARY_HAS_CRITICAL_ISSUES,
+     * SDK_INDEX_LIBRARY_IS_OUTDATED or SDK_INDEX_LIBRARY_IS_NON_COMPLIANT
+     * </pre>
+     *
+     * <code>optional .android_studio.SdkIndexLibraryDetails sdk_index_library_details = 142;</code>
+     */
+    public Builder mergeSdkIndexLibraryDetails(com.google.wireless.android.sdk.stats.SdkIndexLibraryDetails value) {
+      if (sdkIndexLibraryDetailsBuilder_ == null) {
+        if (((bitField4_ & 0x00002000) != 0) &&
+            sdkIndexLibraryDetails_ != null &&
+            sdkIndexLibraryDetails_ != com.google.wireless.android.sdk.stats.SdkIndexLibraryDetails.getDefaultInstance()) {
+          sdkIndexLibraryDetails_ =
+            com.google.wireless.android.sdk.stats.SdkIndexLibraryDetails.newBuilder(sdkIndexLibraryDetails_).mergeFrom(value).buildPartial();
+        } else {
+          sdkIndexLibraryDetails_ = value;
+        }
+        onChanged();
+      } else {
+        sdkIndexLibraryDetailsBuilder_.mergeFrom(value);
+      }
+      bitField4_ |= 0x00002000;
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind is SDK_INDEX_LIBRARY_HAS_CRITICAL_ISSUES,
+     * SDK_INDEX_LIBRARY_IS_OUTDATED or SDK_INDEX_LIBRARY_IS_NON_COMPLIANT
+     * </pre>
+     *
+     * <code>optional .android_studio.SdkIndexLibraryDetails sdk_index_library_details = 142;</code>
+     */
+    public Builder clearSdkIndexLibraryDetails() {
+      if (sdkIndexLibraryDetailsBuilder_ == null) {
+        sdkIndexLibraryDetails_ = null;
+        onChanged();
+      } else {
+        sdkIndexLibraryDetailsBuilder_.clear();
+      }
+      bitField4_ = (bitField4_ & ~0x00002000);
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind is SDK_INDEX_LIBRARY_HAS_CRITICAL_ISSUES,
+     * SDK_INDEX_LIBRARY_IS_OUTDATED or SDK_INDEX_LIBRARY_IS_NON_COMPLIANT
+     * </pre>
+     *
+     * <code>optional .android_studio.SdkIndexLibraryDetails sdk_index_library_details = 142;</code>
+     */
+    public com.google.wireless.android.sdk.stats.SdkIndexLibraryDetails.Builder getSdkIndexLibraryDetailsBuilder() {
+      bitField4_ |= 0x00002000;
+      onChanged();
+      return getSdkIndexLibraryDetailsFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * set when kind is SDK_INDEX_LIBRARY_HAS_CRITICAL_ISSUES,
+     * SDK_INDEX_LIBRARY_IS_OUTDATED or SDK_INDEX_LIBRARY_IS_NON_COMPLIANT
+     * </pre>
+     *
+     * <code>optional .android_studio.SdkIndexLibraryDetails sdk_index_library_details = 142;</code>
+     */
+    public com.google.wireless.android.sdk.stats.SdkIndexLibraryDetailsOrBuilder getSdkIndexLibraryDetailsOrBuilder() {
+      if (sdkIndexLibraryDetailsBuilder_ != null) {
+        return sdkIndexLibraryDetailsBuilder_.getMessageOrBuilder();
+      } else {
+        return sdkIndexLibraryDetails_ == null ?
+            com.google.wireless.android.sdk.stats.SdkIndexLibraryDetails.getDefaultInstance() : sdkIndexLibraryDetails_;
+      }
+    }
+    /**
+     * <pre>
+     * set when kind is SDK_INDEX_LIBRARY_HAS_CRITICAL_ISSUES,
+     * SDK_INDEX_LIBRARY_IS_OUTDATED or SDK_INDEX_LIBRARY_IS_NON_COMPLIANT
+     * </pre>
+     *
+     * <code>optional .android_studio.SdkIndexLibraryDetails sdk_index_library_details = 142;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.SdkIndexLibraryDetails, com.google.wireless.android.sdk.stats.SdkIndexLibraryDetails.Builder, com.google.wireless.android.sdk.stats.SdkIndexLibraryDetailsOrBuilder> 
+        getSdkIndexLibraryDetailsFieldBuilder() {
+      if (sdkIndexLibraryDetailsBuilder_ == null) {
+        sdkIndexLibraryDetailsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.wireless.android.sdk.stats.SdkIndexLibraryDetails, com.google.wireless.android.sdk.stats.SdkIndexLibraryDetails.Builder, com.google.wireless.android.sdk.stats.SdkIndexLibraryDetailsOrBuilder>(
+                getSdkIndexLibraryDetails(),
+                getParentForChildren(),
+                isClean());
+        sdkIndexLibraryDetails_ = null;
+      }
+      return sdkIndexLibraryDetailsBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

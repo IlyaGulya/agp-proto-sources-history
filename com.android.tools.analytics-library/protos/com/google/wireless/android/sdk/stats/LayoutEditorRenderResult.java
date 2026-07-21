@@ -21,6 +21,7 @@ private static final long serialVersionUID = 0L;
   }
   private LayoutEditorRenderResult() {
     trigger_ = 0;
+    deviceId_ = "";
   }
 
   @java.lang.Override
@@ -94,6 +95,12 @@ private static final long serialVersionUID = 0L;
           case 64: {
             bitField0_ |= 0x00000040;
             fidelityWarningCount_ = input.readInt32();
+            break;
+          }
+          case 74: {
+            com.google.protobuf.ByteString bs = input.readBytes();
+            bitField0_ |= 0x00000080;
+            deviceId_ = bs;
             break;
           }
           default: {
@@ -461,6 +468,75 @@ private static final long serialVersionUID = 0L;
     return fidelityWarningCount_;
   }
 
+  public static final int DEVICE_ID_FIELD_NUMBER = 9;
+  private volatile java.lang.Object deviceId_;
+  /**
+   * <pre>
+   * The id of rendered device, such as "pixel", "pixel_3", "pixel_3_xl",
+   * "wearos_square", "tv_4k".
+   * Device ids are built-in in the sdk and studio. There is no enum or list of
+   * them. For all custom android virtual devices (AVDs), they should be
+   * recorded as "_custom_avd".
+   * </pre>
+   *
+   * <code>optional string device_id = 9;</code>
+   * @return Whether the deviceId field is set.
+   */
+  public boolean hasDeviceId() {
+    return ((bitField0_ & 0x00000080) != 0);
+  }
+  /**
+   * <pre>
+   * The id of rendered device, such as "pixel", "pixel_3", "pixel_3_xl",
+   * "wearos_square", "tv_4k".
+   * Device ids are built-in in the sdk and studio. There is no enum or list of
+   * them. For all custom android virtual devices (AVDs), they should be
+   * recorded as "_custom_avd".
+   * </pre>
+   *
+   * <code>optional string device_id = 9;</code>
+   * @return The deviceId.
+   */
+  public java.lang.String getDeviceId() {
+    java.lang.Object ref = deviceId_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      if (bs.isValidUtf8()) {
+        deviceId_ = s;
+      }
+      return s;
+    }
+  }
+  /**
+   * <pre>
+   * The id of rendered device, such as "pixel", "pixel_3", "pixel_3_xl",
+   * "wearos_square", "tv_4k".
+   * Device ids are built-in in the sdk and studio. There is no enum or list of
+   * them. For all custom android virtual devices (AVDs), they should be
+   * recorded as "_custom_avd".
+   * </pre>
+   *
+   * <code>optional string device_id = 9;</code>
+   * @return The bytes for deviceId.
+   */
+  public com.google.protobuf.ByteString
+      getDeviceIdBytes() {
+    java.lang.Object ref = deviceId_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      deviceId_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -495,6 +571,9 @@ private static final long serialVersionUID = 0L;
     }
     if (((bitField0_ & 0x00000040) != 0)) {
       output.writeInt32(8, fidelityWarningCount_);
+    }
+    if (((bitField0_ & 0x00000080) != 0)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 9, deviceId_);
     }
     unknownFields.writeTo(output);
   }
@@ -532,6 +611,9 @@ private static final long serialVersionUID = 0L;
     if (((bitField0_ & 0x00000040) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeInt32Size(8, fidelityWarningCount_);
+    }
+    if (((bitField0_ & 0x00000080) != 0)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(9, deviceId_);
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -582,6 +664,11 @@ private static final long serialVersionUID = 0L;
       if (getFidelityWarningCount()
           != other.getFidelityWarningCount()) return false;
     }
+    if (hasDeviceId() != other.hasDeviceId()) return false;
+    if (hasDeviceId()) {
+      if (!getDeviceId()
+          .equals(other.getDeviceId())) return false;
+    }
     if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
@@ -621,6 +708,10 @@ private static final long serialVersionUID = 0L;
     if (hasFidelityWarningCount()) {
       hash = (37 * hash) + FIDELITY_WARNING_COUNT_FIELD_NUMBER;
       hash = (53 * hash) + getFidelityWarningCount();
+    }
+    if (hasDeviceId()) {
+      hash = (37 * hash) + DEVICE_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getDeviceId().hashCode();
     }
     hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
@@ -773,6 +864,8 @@ private static final long serialVersionUID = 0L;
       bitField0_ = (bitField0_ & ~0x00000020);
       fidelityWarningCount_ = 0;
       bitField0_ = (bitField0_ & ~0x00000040);
+      deviceId_ = "";
+      bitField0_ = (bitField0_ & ~0x00000080);
       return this;
     }
 
@@ -829,6 +922,10 @@ private static final long serialVersionUID = 0L;
         result.fidelityWarningCount_ = fidelityWarningCount_;
         to_bitField0_ |= 0x00000040;
       }
+      if (((from_bitField0_ & 0x00000080) != 0)) {
+        to_bitField0_ |= 0x00000080;
+      }
+      result.deviceId_ = deviceId_;
       result.bitField0_ = to_bitField0_;
       onBuilt();
       return result;
@@ -898,6 +995,11 @@ private static final long serialVersionUID = 0L;
       }
       if (other.hasFidelityWarningCount()) {
         setFidelityWarningCount(other.getFidelityWarningCount());
+      }
+      if (other.hasDeviceId()) {
+        bitField0_ |= 0x00000080;
+        deviceId_ = other.deviceId_;
+        onChanged();
       }
       this.mergeUnknownFields(other.unknownFields);
       onChanged();
@@ -1301,6 +1403,138 @@ private static final long serialVersionUID = 0L;
     public Builder clearFidelityWarningCount() {
       bitField0_ = (bitField0_ & ~0x00000040);
       fidelityWarningCount_ = 0;
+      onChanged();
+      return this;
+    }
+
+    private java.lang.Object deviceId_ = "";
+    /**
+     * <pre>
+     * The id of rendered device, such as "pixel", "pixel_3", "pixel_3_xl",
+     * "wearos_square", "tv_4k".
+     * Device ids are built-in in the sdk and studio. There is no enum or list of
+     * them. For all custom android virtual devices (AVDs), they should be
+     * recorded as "_custom_avd".
+     * </pre>
+     *
+     * <code>optional string device_id = 9;</code>
+     * @return Whether the deviceId field is set.
+     */
+    public boolean hasDeviceId() {
+      return ((bitField0_ & 0x00000080) != 0);
+    }
+    /**
+     * <pre>
+     * The id of rendered device, such as "pixel", "pixel_3", "pixel_3_xl",
+     * "wearos_square", "tv_4k".
+     * Device ids are built-in in the sdk and studio. There is no enum or list of
+     * them. For all custom android virtual devices (AVDs), they should be
+     * recorded as "_custom_avd".
+     * </pre>
+     *
+     * <code>optional string device_id = 9;</code>
+     * @return The deviceId.
+     */
+    public java.lang.String getDeviceId() {
+      java.lang.Object ref = deviceId_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          deviceId_ = s;
+        }
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <pre>
+     * The id of rendered device, such as "pixel", "pixel_3", "pixel_3_xl",
+     * "wearos_square", "tv_4k".
+     * Device ids are built-in in the sdk and studio. There is no enum or list of
+     * them. For all custom android virtual devices (AVDs), they should be
+     * recorded as "_custom_avd".
+     * </pre>
+     *
+     * <code>optional string device_id = 9;</code>
+     * @return The bytes for deviceId.
+     */
+    public com.google.protobuf.ByteString
+        getDeviceIdBytes() {
+      java.lang.Object ref = deviceId_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        deviceId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <pre>
+     * The id of rendered device, such as "pixel", "pixel_3", "pixel_3_xl",
+     * "wearos_square", "tv_4k".
+     * Device ids are built-in in the sdk and studio. There is no enum or list of
+     * them. For all custom android virtual devices (AVDs), they should be
+     * recorded as "_custom_avd".
+     * </pre>
+     *
+     * <code>optional string device_id = 9;</code>
+     * @param value The deviceId to set.
+     * @return This builder for chaining.
+     */
+    public Builder setDeviceId(
+        java.lang.String value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000080;
+      deviceId_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The id of rendered device, such as "pixel", "pixel_3", "pixel_3_xl",
+     * "wearos_square", "tv_4k".
+     * Device ids are built-in in the sdk and studio. There is no enum or list of
+     * them. For all custom android virtual devices (AVDs), they should be
+     * recorded as "_custom_avd".
+     * </pre>
+     *
+     * <code>optional string device_id = 9;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearDeviceId() {
+      bitField0_ = (bitField0_ & ~0x00000080);
+      deviceId_ = getDefaultInstance().getDeviceId();
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The id of rendered device, such as "pixel", "pixel_3", "pixel_3_xl",
+     * "wearos_square", "tv_4k".
+     * Device ids are built-in in the sdk and studio. There is no enum or list of
+     * them. For all custom android virtual devices (AVDs), they should be
+     * recorded as "_custom_avd".
+     * </pre>
+     *
+     * <code>optional string device_id = 9;</code>
+     * @param value The bytes for deviceId to set.
+     * @return This builder for chaining.
+     */
+    public Builder setDeviceIdBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000080;
+      deviceId_ = value;
       onChanged();
       return this;
     }
