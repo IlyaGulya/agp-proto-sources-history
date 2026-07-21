@@ -52,7 +52,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * UI event source.
-   * Next ID: 67
+   * Next ID: 71
    * Note: Not a properly sequentially incrementing ID (200 &amp; 201 are used)
    * </pre>
    *
@@ -121,6 +121,18 @@ private static final long serialVersionUID = 0L;
      */
     CODE_INSERT_DIALOG_LIST_SELECTION(11),
     /**
+     * <code>CODE_INSERT_DIALOG_V2 = 67;</code>
+     */
+    CODE_INSERT_DIALOG_V2(67),
+    /**
+     * <code>CODE_INSERT_DIALOG_INSERT_BUTTON_V2 = 68;</code>
+     */
+    CODE_INSERT_DIALOG_INSERT_BUTTON_V2(68),
+    /**
+     * <code>CODE_INSERT_DIALOG_LIST_SELECTION_V2 = 69;</code>
+     */
+    CODE_INSERT_DIALOG_LIST_SELECTION_V2(69),
+    /**
      * <pre>
      * UI elements of DAL generation panel.
      * </pre>
@@ -176,6 +188,10 @@ private static final long serialVersionUID = 0L;
      * <code>NEW_LINK_CREATION_SIDE_PANEL = 20;</code>
      */
     NEW_LINK_CREATION_SIDE_PANEL(20),
+    /**
+     * <code>NEW_LINK_CREATION_SIDE_PANEL_V2 = 70;</code>
+     */
+    NEW_LINK_CREATION_SIDE_PANEL_V2(70),
     /**
      * <pre>
      * The main page of the new App Links Assistant.
@@ -467,6 +483,18 @@ private static final long serialVersionUID = 0L;
      */
     public static final int CODE_INSERT_DIALOG_LIST_SELECTION_VALUE = 11;
     /**
+     * <code>CODE_INSERT_DIALOG_V2 = 67;</code>
+     */
+    public static final int CODE_INSERT_DIALOG_V2_VALUE = 67;
+    /**
+     * <code>CODE_INSERT_DIALOG_INSERT_BUTTON_V2 = 68;</code>
+     */
+    public static final int CODE_INSERT_DIALOG_INSERT_BUTTON_V2_VALUE = 68;
+    /**
+     * <code>CODE_INSERT_DIALOG_LIST_SELECTION_V2 = 69;</code>
+     */
+    public static final int CODE_INSERT_DIALOG_LIST_SELECTION_V2_VALUE = 69;
+    /**
      * <pre>
      * UI elements of DAL generation panel.
      * </pre>
@@ -522,6 +550,10 @@ private static final long serialVersionUID = 0L;
      * <code>NEW_LINK_CREATION_SIDE_PANEL = 20;</code>
      */
     public static final int NEW_LINK_CREATION_SIDE_PANEL_VALUE = 20;
+    /**
+     * <code>NEW_LINK_CREATION_SIDE_PANEL_V2 = 70;</code>
+     */
+    public static final int NEW_LINK_CREATION_SIDE_PANEL_V2_VALUE = 70;
     /**
      * <pre>
      * The main page of the new App Links Assistant.
@@ -784,6 +816,9 @@ private static final long serialVersionUID = 0L;
         case 9: return CODE_INSERT_DIALOG;
         case 10: return CODE_INSERT_DIALOG_INSERT_BUTTON;
         case 11: return CODE_INSERT_DIALOG_LIST_SELECTION;
+        case 67: return CODE_INSERT_DIALOG_V2;
+        case 68: return CODE_INSERT_DIALOG_INSERT_BUTTON_V2;
+        case 69: return CODE_INSERT_DIALOG_LIST_SELECTION_V2;
         case 12: return DAL_PANEL;
         case 13: return DAL_PANEL_BROWSE_KEYSTORE_BUTTON;
         case 14: return DAL_PANEL_GENERATE_BUTTON;
@@ -795,6 +830,7 @@ private static final long serialVersionUID = 0L;
         case 18: return APP_LINKS_TEST_PANEL_MODULE_SELECTION;
         case 19: return APP_LINKS_TEST_PANEL_RUN_TEST_BUTTON;
         case 20: return NEW_LINK_CREATION_SIDE_PANEL;
+        case 70: return NEW_LINK_CREATION_SIDE_PANEL_V2;
         case 22: return OVERVIEW_TABLE;
         case 23: return OVERVIEW_TABLE_FIX_ALL_APP_CHECKS_BUTTON;
         case 24: return OVERVIEW_TABLE_FIX_ALL_WEB_CHECKS_BUTTON;

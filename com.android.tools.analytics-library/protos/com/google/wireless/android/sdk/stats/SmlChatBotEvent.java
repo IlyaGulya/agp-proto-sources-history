@@ -7567,7 +7567,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional bool success = 3 [deprecated = true];</code>
      * @deprecated android_studio.SmlChatBotEvent.ParseResult.success is deprecated.
-     *     See studio_stats.proto;l=17040
+     *     See studio_stats.proto;l=17049
      * @return Whether the success field is set.
      */
     @java.lang.Deprecated boolean hasSuccess();
@@ -7579,7 +7579,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional bool success = 3 [deprecated = true];</code>
      * @deprecated android_studio.SmlChatBotEvent.ParseResult.success is deprecated.
-     *     See studio_stats.proto;l=17040
+     *     See studio_stats.proto;l=17049
      * @return The success.
      */
     @java.lang.Deprecated boolean getSuccess();
@@ -7707,7 +7707,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional bool success = 3 [deprecated = true];</code>
      * @deprecated android_studio.SmlChatBotEvent.ParseResult.success is deprecated.
-     *     See studio_stats.proto;l=17040
+     *     See studio_stats.proto;l=17049
      * @return Whether the success field is set.
      */
     @java.lang.Override
@@ -7722,7 +7722,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional bool success = 3 [deprecated = true];</code>
      * @deprecated android_studio.SmlChatBotEvent.ParseResult.success is deprecated.
-     *     See studio_stats.proto;l=17040
+     *     See studio_stats.proto;l=17049
      * @return The success.
      */
     @java.lang.Override
@@ -8386,7 +8386,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional bool success = 3 [deprecated = true];</code>
        * @deprecated android_studio.SmlChatBotEvent.ParseResult.success is deprecated.
-       *     See studio_stats.proto;l=17040
+       *     See studio_stats.proto;l=17049
        * @return Whether the success field is set.
        */
       @java.lang.Override
@@ -8401,7 +8401,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional bool success = 3 [deprecated = true];</code>
        * @deprecated android_studio.SmlChatBotEvent.ParseResult.success is deprecated.
-       *     See studio_stats.proto;l=17040
+       *     See studio_stats.proto;l=17049
        * @return The success.
        */
       @java.lang.Override
@@ -8416,7 +8416,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional bool success = 3 [deprecated = true];</code>
        * @deprecated android_studio.SmlChatBotEvent.ParseResult.success is deprecated.
-       *     See studio_stats.proto;l=17040
+       *     See studio_stats.proto;l=17049
        * @param value The success to set.
        * @return This builder for chaining.
        */
@@ -8435,7 +8435,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional bool success = 3 [deprecated = true];</code>
        * @deprecated android_studio.SmlChatBotEvent.ParseResult.success is deprecated.
-       *     See studio_stats.proto;l=17040
+       *     See studio_stats.proto;l=17049
        * @return This builder for chaining.
        */
       @java.lang.Deprecated public Builder clearSuccess() {
@@ -33757,6 +33757,1081 @@ private static final long serialVersionUID = 0L;
 
   }
 
+  public interface TimelineBannerEventOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:android_studio.SmlChatBotEvent.TimelineBannerEvent)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Metadata about a Bot conversation.
+     * </pre>
+     *
+     * <code>optional .android_studio.SmlResponseMetadata metadata = 1 [lazy = true];</code>
+     * @return Whether the metadata field is set.
+     */
+    boolean hasMetadata();
+    /**
+     * <pre>
+     * Metadata about a Bot conversation.
+     * </pre>
+     *
+     * <code>optional .android_studio.SmlResponseMetadata metadata = 1 [lazy = true];</code>
+     * @return The metadata.
+     */
+    com.google.wireless.android.sdk.stats.SmlResponseMetadata getMetadata();
+    /**
+     * <pre>
+     * Metadata about a Bot conversation.
+     * </pre>
+     *
+     * <code>optional .android_studio.SmlResponseMetadata metadata = 1 [lazy = true];</code>
+     */
+    com.google.wireless.android.sdk.stats.SmlResponseMetadataOrBuilder getMetadataOrBuilder();
+
+    /**
+     * <code>optional .android_studio.SmlChatBotEvent.TimelineBannerEvent.BannerType banner_type = 2;</code>
+     * @return Whether the bannerType field is set.
+     */
+    boolean hasBannerType();
+    /**
+     * <code>optional .android_studio.SmlChatBotEvent.TimelineBannerEvent.BannerType banner_type = 2;</code>
+     * @return The bannerType.
+     */
+    com.google.wireless.android.sdk.stats.SmlChatBotEvent.TimelineBannerEvent.BannerType getBannerType();
+
+    /**
+     * <code>optional .android_studio.SmlChatBotEvent.TimelineBannerEvent.EventType event_type = 3;</code>
+     * @return Whether the eventType field is set.
+     */
+    boolean hasEventType();
+    /**
+     * <code>optional .android_studio.SmlChatBotEvent.TimelineBannerEvent.EventType event_type = 3;</code>
+     * @return The eventType.
+     */
+    com.google.wireless.android.sdk.stats.SmlChatBotEvent.TimelineBannerEvent.EventType getEventType();
+  }
+  /**
+   * <pre>
+   * Event related to banners displayed in the chat timeline.
+   * </pre>
+   *
+   * Protobuf type {@code android_studio.SmlChatBotEvent.TimelineBannerEvent}
+   */
+  public static final class TimelineBannerEvent extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:android_studio.SmlChatBotEvent.TimelineBannerEvent)
+      TimelineBannerEventOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use TimelineBannerEvent.newBuilder() to construct.
+    private TimelineBannerEvent(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private TimelineBannerEvent() {
+      bannerType_ = 0;
+      eventType_ = 0;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new TimelineBannerEvent();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_SmlChatBotEvent_TimelineBannerEvent_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_SmlChatBotEvent_TimelineBannerEvent_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.google.wireless.android.sdk.stats.SmlChatBotEvent.TimelineBannerEvent.class, com.google.wireless.android.sdk.stats.SmlChatBotEvent.TimelineBannerEvent.Builder.class);
+    }
+
+    /**
+     * Protobuf enum {@code android_studio.SmlChatBotEvent.TimelineBannerEvent.BannerType}
+     */
+    public enum BannerType
+        implements com.google.protobuf.ProtocolMessageEnum {
+      /**
+       * <code>BANNER_TYPE_UNKNOWN = 0;</code>
+       */
+      BANNER_TYPE_UNKNOWN(0),
+      /**
+       * <code>RESOURCE_EXHAUSTED_ERROR_BANNER = 1;</code>
+       */
+      RESOURCE_EXHAUSTED_ERROR_BANNER(1),
+      ;
+
+      /**
+       * <code>BANNER_TYPE_UNKNOWN = 0;</code>
+       */
+      public static final int BANNER_TYPE_UNKNOWN_VALUE = 0;
+      /**
+       * <code>RESOURCE_EXHAUSTED_ERROR_BANNER = 1;</code>
+       */
+      public static final int RESOURCE_EXHAUSTED_ERROR_BANNER_VALUE = 1;
+
+
+      public final int getNumber() {
+        return value;
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static BannerType valueOf(int value) {
+        return forNumber(value);
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       */
+      public static BannerType forNumber(int value) {
+        switch (value) {
+          case 0: return BANNER_TYPE_UNKNOWN;
+          case 1: return RESOURCE_EXHAUSTED_ERROR_BANNER;
+          default: return null;
+        }
+      }
+
+      public static com.google.protobuf.Internal.EnumLiteMap<BannerType>
+          internalGetValueMap() {
+        return internalValueMap;
+      }
+      private static final com.google.protobuf.Internal.EnumLiteMap<
+          BannerType> internalValueMap =
+            new com.google.protobuf.Internal.EnumLiteMap<BannerType>() {
+              public BannerType findValueByNumber(int number) {
+                return BannerType.forNumber(number);
+              }
+            };
+
+      public final com.google.protobuf.Descriptors.EnumValueDescriptor
+          getValueDescriptor() {
+        return getDescriptor().getValues().get(ordinal());
+      }
+      public final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptorForType() {
+        return getDescriptor();
+      }
+      public static final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptor() {
+        return com.google.wireless.android.sdk.stats.SmlChatBotEvent.TimelineBannerEvent.getDescriptor().getEnumTypes().get(0);
+      }
+
+      private static final BannerType[] VALUES = values();
+
+      public static BannerType valueOf(
+          com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+        if (desc.getType() != getDescriptor()) {
+          throw new java.lang.IllegalArgumentException(
+            "EnumValueDescriptor is not for this type.");
+        }
+        return VALUES[desc.getIndex()];
+      }
+
+      private final int value;
+
+      private BannerType(int value) {
+        this.value = value;
+      }
+
+      // @@protoc_insertion_point(enum_scope:android_studio.SmlChatBotEvent.TimelineBannerEvent.BannerType)
+    }
+
+    /**
+     * Protobuf enum {@code android_studio.SmlChatBotEvent.TimelineBannerEvent.EventType}
+     */
+    public enum EventType
+        implements com.google.protobuf.ProtocolMessageEnum {
+      /**
+       * <code>UNKNOWN_EVENT = 0;</code>
+       */
+      UNKNOWN_EVENT(0),
+      /**
+       * <pre>
+       * The banner was shown.
+       * </pre>
+       *
+       * <code>SHOWN = 1;</code>
+       */
+      SHOWN(1),
+      /**
+       * <pre>
+       * User dismissed the banner.
+       * </pre>
+       *
+       * <code>DISMISSED = 2;</code>
+       */
+      DISMISSED(2),
+      ;
+
+      /**
+       * <code>UNKNOWN_EVENT = 0;</code>
+       */
+      public static final int UNKNOWN_EVENT_VALUE = 0;
+      /**
+       * <pre>
+       * The banner was shown.
+       * </pre>
+       *
+       * <code>SHOWN = 1;</code>
+       */
+      public static final int SHOWN_VALUE = 1;
+      /**
+       * <pre>
+       * User dismissed the banner.
+       * </pre>
+       *
+       * <code>DISMISSED = 2;</code>
+       */
+      public static final int DISMISSED_VALUE = 2;
+
+
+      public final int getNumber() {
+        return value;
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static EventType valueOf(int value) {
+        return forNumber(value);
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       */
+      public static EventType forNumber(int value) {
+        switch (value) {
+          case 0: return UNKNOWN_EVENT;
+          case 1: return SHOWN;
+          case 2: return DISMISSED;
+          default: return null;
+        }
+      }
+
+      public static com.google.protobuf.Internal.EnumLiteMap<EventType>
+          internalGetValueMap() {
+        return internalValueMap;
+      }
+      private static final com.google.protobuf.Internal.EnumLiteMap<
+          EventType> internalValueMap =
+            new com.google.protobuf.Internal.EnumLiteMap<EventType>() {
+              public EventType findValueByNumber(int number) {
+                return EventType.forNumber(number);
+              }
+            };
+
+      public final com.google.protobuf.Descriptors.EnumValueDescriptor
+          getValueDescriptor() {
+        return getDescriptor().getValues().get(ordinal());
+      }
+      public final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptorForType() {
+        return getDescriptor();
+      }
+      public static final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptor() {
+        return com.google.wireless.android.sdk.stats.SmlChatBotEvent.TimelineBannerEvent.getDescriptor().getEnumTypes().get(1);
+      }
+
+      private static final EventType[] VALUES = values();
+
+      public static EventType valueOf(
+          com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+        if (desc.getType() != getDescriptor()) {
+          throw new java.lang.IllegalArgumentException(
+            "EnumValueDescriptor is not for this type.");
+        }
+        return VALUES[desc.getIndex()];
+      }
+
+      private final int value;
+
+      private EventType(int value) {
+        this.value = value;
+      }
+
+      // @@protoc_insertion_point(enum_scope:android_studio.SmlChatBotEvent.TimelineBannerEvent.EventType)
+    }
+
+    private int bitField0_;
+    public static final int METADATA_FIELD_NUMBER = 1;
+    private com.google.wireless.android.sdk.stats.SmlResponseMetadata metadata_;
+    /**
+     * <pre>
+     * Metadata about a Bot conversation.
+     * </pre>
+     *
+     * <code>optional .android_studio.SmlResponseMetadata metadata = 1 [lazy = true];</code>
+     * @return Whether the metadata field is set.
+     */
+    @java.lang.Override
+    public boolean hasMetadata() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <pre>
+     * Metadata about a Bot conversation.
+     * </pre>
+     *
+     * <code>optional .android_studio.SmlResponseMetadata metadata = 1 [lazy = true];</code>
+     * @return The metadata.
+     */
+    @java.lang.Override
+    public com.google.wireless.android.sdk.stats.SmlResponseMetadata getMetadata() {
+      return metadata_ == null ? com.google.wireless.android.sdk.stats.SmlResponseMetadata.getDefaultInstance() : metadata_;
+    }
+    /**
+     * <pre>
+     * Metadata about a Bot conversation.
+     * </pre>
+     *
+     * <code>optional .android_studio.SmlResponseMetadata metadata = 1 [lazy = true];</code>
+     */
+    @java.lang.Override
+    public com.google.wireless.android.sdk.stats.SmlResponseMetadataOrBuilder getMetadataOrBuilder() {
+      return metadata_ == null ? com.google.wireless.android.sdk.stats.SmlResponseMetadata.getDefaultInstance() : metadata_;
+    }
+
+    public static final int BANNER_TYPE_FIELD_NUMBER = 2;
+    private int bannerType_ = 0;
+    /**
+     * <code>optional .android_studio.SmlChatBotEvent.TimelineBannerEvent.BannerType banner_type = 2;</code>
+     * @return Whether the bannerType field is set.
+     */
+    @java.lang.Override public boolean hasBannerType() {
+      return ((bitField0_ & 0x00000002) != 0);
+    }
+    /**
+     * <code>optional .android_studio.SmlChatBotEvent.TimelineBannerEvent.BannerType banner_type = 2;</code>
+     * @return The bannerType.
+     */
+    @java.lang.Override public com.google.wireless.android.sdk.stats.SmlChatBotEvent.TimelineBannerEvent.BannerType getBannerType() {
+      com.google.wireless.android.sdk.stats.SmlChatBotEvent.TimelineBannerEvent.BannerType result = com.google.wireless.android.sdk.stats.SmlChatBotEvent.TimelineBannerEvent.BannerType.forNumber(bannerType_);
+      return result == null ? com.google.wireless.android.sdk.stats.SmlChatBotEvent.TimelineBannerEvent.BannerType.BANNER_TYPE_UNKNOWN : result;
+    }
+
+    public static final int EVENT_TYPE_FIELD_NUMBER = 3;
+    private int eventType_ = 0;
+    /**
+     * <code>optional .android_studio.SmlChatBotEvent.TimelineBannerEvent.EventType event_type = 3;</code>
+     * @return Whether the eventType field is set.
+     */
+    @java.lang.Override public boolean hasEventType() {
+      return ((bitField0_ & 0x00000004) != 0);
+    }
+    /**
+     * <code>optional .android_studio.SmlChatBotEvent.TimelineBannerEvent.EventType event_type = 3;</code>
+     * @return The eventType.
+     */
+    @java.lang.Override public com.google.wireless.android.sdk.stats.SmlChatBotEvent.TimelineBannerEvent.EventType getEventType() {
+      com.google.wireless.android.sdk.stats.SmlChatBotEvent.TimelineBannerEvent.EventType result = com.google.wireless.android.sdk.stats.SmlChatBotEvent.TimelineBannerEvent.EventType.forNumber(eventType_);
+      return result == null ? com.google.wireless.android.sdk.stats.SmlChatBotEvent.TimelineBannerEvent.EventType.UNKNOWN_EVENT : result;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (((bitField0_ & 0x00000001) != 0)) {
+        output.writeMessage(1, getMetadata());
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        output.writeEnum(2, bannerType_);
+      }
+      if (((bitField0_ & 0x00000004) != 0)) {
+        output.writeEnum(3, eventType_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getMetadata());
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(2, bannerType_);
+      }
+      if (((bitField0_ & 0x00000004) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(3, eventType_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.google.wireless.android.sdk.stats.SmlChatBotEvent.TimelineBannerEvent)) {
+        return super.equals(obj);
+      }
+      com.google.wireless.android.sdk.stats.SmlChatBotEvent.TimelineBannerEvent other = (com.google.wireless.android.sdk.stats.SmlChatBotEvent.TimelineBannerEvent) obj;
+
+      if (hasMetadata() != other.hasMetadata()) return false;
+      if (hasMetadata()) {
+        if (!getMetadata()
+            .equals(other.getMetadata())) return false;
+      }
+      if (hasBannerType() != other.hasBannerType()) return false;
+      if (hasBannerType()) {
+        if (bannerType_ != other.bannerType_) return false;
+      }
+      if (hasEventType() != other.hasEventType()) return false;
+      if (hasEventType()) {
+        if (eventType_ != other.eventType_) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasMetadata()) {
+        hash = (37 * hash) + METADATA_FIELD_NUMBER;
+        hash = (53 * hash) + getMetadata().hashCode();
+      }
+      if (hasBannerType()) {
+        hash = (37 * hash) + BANNER_TYPE_FIELD_NUMBER;
+        hash = (53 * hash) + bannerType_;
+      }
+      if (hasEventType()) {
+        hash = (37 * hash) + EVENT_TYPE_FIELD_NUMBER;
+        hash = (53 * hash) + eventType_;
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.google.wireless.android.sdk.stats.SmlChatBotEvent.TimelineBannerEvent parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.google.wireless.android.sdk.stats.SmlChatBotEvent.TimelineBannerEvent parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.google.wireless.android.sdk.stats.SmlChatBotEvent.TimelineBannerEvent parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.google.wireless.android.sdk.stats.SmlChatBotEvent.TimelineBannerEvent parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.google.wireless.android.sdk.stats.SmlChatBotEvent.TimelineBannerEvent parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.google.wireless.android.sdk.stats.SmlChatBotEvent.TimelineBannerEvent parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.google.wireless.android.sdk.stats.SmlChatBotEvent.TimelineBannerEvent parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.google.wireless.android.sdk.stats.SmlChatBotEvent.TimelineBannerEvent parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.google.wireless.android.sdk.stats.SmlChatBotEvent.TimelineBannerEvent parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.google.wireless.android.sdk.stats.SmlChatBotEvent.TimelineBannerEvent parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.google.wireless.android.sdk.stats.SmlChatBotEvent.TimelineBannerEvent parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.google.wireless.android.sdk.stats.SmlChatBotEvent.TimelineBannerEvent parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.google.wireless.android.sdk.stats.SmlChatBotEvent.TimelineBannerEvent prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Event related to banners displayed in the chat timeline.
+     * </pre>
+     *
+     * Protobuf type {@code android_studio.SmlChatBotEvent.TimelineBannerEvent}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:android_studio.SmlChatBotEvent.TimelineBannerEvent)
+        com.google.wireless.android.sdk.stats.SmlChatBotEvent.TimelineBannerEventOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_SmlChatBotEvent_TimelineBannerEvent_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_SmlChatBotEvent_TimelineBannerEvent_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.google.wireless.android.sdk.stats.SmlChatBotEvent.TimelineBannerEvent.class, com.google.wireless.android.sdk.stats.SmlChatBotEvent.TimelineBannerEvent.Builder.class);
+      }
+
+      // Construct using com.google.wireless.android.sdk.stats.SmlChatBotEvent.TimelineBannerEvent.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getMetadataFieldBuilder();
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        metadata_ = null;
+        if (metadataBuilder_ != null) {
+          metadataBuilder_.dispose();
+          metadataBuilder_ = null;
+        }
+        bannerType_ = 0;
+        eventType_ = 0;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_SmlChatBotEvent_TimelineBannerEvent_descriptor;
+      }
+
+      @java.lang.Override
+      public com.google.wireless.android.sdk.stats.SmlChatBotEvent.TimelineBannerEvent getDefaultInstanceForType() {
+        return com.google.wireless.android.sdk.stats.SmlChatBotEvent.TimelineBannerEvent.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.google.wireless.android.sdk.stats.SmlChatBotEvent.TimelineBannerEvent build() {
+        com.google.wireless.android.sdk.stats.SmlChatBotEvent.TimelineBannerEvent result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.google.wireless.android.sdk.stats.SmlChatBotEvent.TimelineBannerEvent buildPartial() {
+        com.google.wireless.android.sdk.stats.SmlChatBotEvent.TimelineBannerEvent result = new com.google.wireless.android.sdk.stats.SmlChatBotEvent.TimelineBannerEvent(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.google.wireless.android.sdk.stats.SmlChatBotEvent.TimelineBannerEvent result) {
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.metadata_ = metadataBuilder_ == null
+              ? metadata_
+              : metadataBuilder_.build();
+          to_bitField0_ |= 0x00000001;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.bannerType_ = bannerType_;
+          to_bitField0_ |= 0x00000002;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.eventType_ = eventType_;
+          to_bitField0_ |= 0x00000004;
+        }
+        result.bitField0_ |= to_bitField0_;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.google.wireless.android.sdk.stats.SmlChatBotEvent.TimelineBannerEvent) {
+          return mergeFrom((com.google.wireless.android.sdk.stats.SmlChatBotEvent.TimelineBannerEvent)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.google.wireless.android.sdk.stats.SmlChatBotEvent.TimelineBannerEvent other) {
+        if (other == com.google.wireless.android.sdk.stats.SmlChatBotEvent.TimelineBannerEvent.getDefaultInstance()) return this;
+        if (other.hasMetadata()) {
+          mergeMetadata(other.getMetadata());
+        }
+        if (other.hasBannerType()) {
+          setBannerType(other.getBannerType());
+        }
+        if (other.hasEventType()) {
+          setEventType(other.getEventType());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getMetadataFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 16: {
+                int tmpRaw = input.readEnum();
+                com.google.wireless.android.sdk.stats.SmlChatBotEvent.TimelineBannerEvent.BannerType tmpValue =
+                    com.google.wireless.android.sdk.stats.SmlChatBotEvent.TimelineBannerEvent.BannerType.forNumber(tmpRaw);
+                if (tmpValue == null) {
+                  mergeUnknownVarintField(2, tmpRaw);
+                } else {
+                  bannerType_ = tmpRaw;
+                  bitField0_ |= 0x00000002;
+                }
+                break;
+              } // case 16
+              case 24: {
+                int tmpRaw = input.readEnum();
+                com.google.wireless.android.sdk.stats.SmlChatBotEvent.TimelineBannerEvent.EventType tmpValue =
+                    com.google.wireless.android.sdk.stats.SmlChatBotEvent.TimelineBannerEvent.EventType.forNumber(tmpRaw);
+                if (tmpValue == null) {
+                  mergeUnknownVarintField(3, tmpRaw);
+                } else {
+                  eventType_ = tmpRaw;
+                  bitField0_ |= 0x00000004;
+                }
+                break;
+              } // case 24
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.google.wireless.android.sdk.stats.SmlResponseMetadata metadata_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.wireless.android.sdk.stats.SmlResponseMetadata, com.google.wireless.android.sdk.stats.SmlResponseMetadata.Builder, com.google.wireless.android.sdk.stats.SmlResponseMetadataOrBuilder> metadataBuilder_;
+      /**
+       * <pre>
+       * Metadata about a Bot conversation.
+       * </pre>
+       *
+       * <code>optional .android_studio.SmlResponseMetadata metadata = 1 [lazy = true];</code>
+       * @return Whether the metadata field is set.
+       */
+      public boolean hasMetadata() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <pre>
+       * Metadata about a Bot conversation.
+       * </pre>
+       *
+       * <code>optional .android_studio.SmlResponseMetadata metadata = 1 [lazy = true];</code>
+       * @return The metadata.
+       */
+      public com.google.wireless.android.sdk.stats.SmlResponseMetadata getMetadata() {
+        if (metadataBuilder_ == null) {
+          return metadata_ == null ? com.google.wireless.android.sdk.stats.SmlResponseMetadata.getDefaultInstance() : metadata_;
+        } else {
+          return metadataBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Metadata about a Bot conversation.
+       * </pre>
+       *
+       * <code>optional .android_studio.SmlResponseMetadata metadata = 1 [lazy = true];</code>
+       */
+      public Builder setMetadata(com.google.wireless.android.sdk.stats.SmlResponseMetadata value) {
+        if (metadataBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          metadata_ = value;
+        } else {
+          metadataBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Metadata about a Bot conversation.
+       * </pre>
+       *
+       * <code>optional .android_studio.SmlResponseMetadata metadata = 1 [lazy = true];</code>
+       */
+      public Builder setMetadata(
+          com.google.wireless.android.sdk.stats.SmlResponseMetadata.Builder builderForValue) {
+        if (metadataBuilder_ == null) {
+          metadata_ = builderForValue.build();
+        } else {
+          metadataBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Metadata about a Bot conversation.
+       * </pre>
+       *
+       * <code>optional .android_studio.SmlResponseMetadata metadata = 1 [lazy = true];</code>
+       */
+      public Builder mergeMetadata(com.google.wireless.android.sdk.stats.SmlResponseMetadata value) {
+        if (metadataBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            metadata_ != null &&
+            metadata_ != com.google.wireless.android.sdk.stats.SmlResponseMetadata.getDefaultInstance()) {
+            getMetadataBuilder().mergeFrom(value);
+          } else {
+            metadata_ = value;
+          }
+        } else {
+          metadataBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Metadata about a Bot conversation.
+       * </pre>
+       *
+       * <code>optional .android_studio.SmlResponseMetadata metadata = 1 [lazy = true];</code>
+       */
+      public Builder clearMetadata() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        metadata_ = null;
+        if (metadataBuilder_ != null) {
+          metadataBuilder_.dispose();
+          metadataBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Metadata about a Bot conversation.
+       * </pre>
+       *
+       * <code>optional .android_studio.SmlResponseMetadata metadata = 1 [lazy = true];</code>
+       */
+      public com.google.wireless.android.sdk.stats.SmlResponseMetadata.Builder getMetadataBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getMetadataFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Metadata about a Bot conversation.
+       * </pre>
+       *
+       * <code>optional .android_studio.SmlResponseMetadata metadata = 1 [lazy = true];</code>
+       */
+      public com.google.wireless.android.sdk.stats.SmlResponseMetadataOrBuilder getMetadataOrBuilder() {
+        if (metadataBuilder_ != null) {
+          return metadataBuilder_.getMessageOrBuilder();
+        } else {
+          return metadata_ == null ?
+              com.google.wireless.android.sdk.stats.SmlResponseMetadata.getDefaultInstance() : metadata_;
+        }
+      }
+      /**
+       * <pre>
+       * Metadata about a Bot conversation.
+       * </pre>
+       *
+       * <code>optional .android_studio.SmlResponseMetadata metadata = 1 [lazy = true];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.wireless.android.sdk.stats.SmlResponseMetadata, com.google.wireless.android.sdk.stats.SmlResponseMetadata.Builder, com.google.wireless.android.sdk.stats.SmlResponseMetadataOrBuilder> 
+          getMetadataFieldBuilder() {
+        if (metadataBuilder_ == null) {
+          metadataBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.wireless.android.sdk.stats.SmlResponseMetadata, com.google.wireless.android.sdk.stats.SmlResponseMetadata.Builder, com.google.wireless.android.sdk.stats.SmlResponseMetadataOrBuilder>(
+                  getMetadata(),
+                  getParentForChildren(),
+                  isClean());
+          metadata_ = null;
+        }
+        return metadataBuilder_;
+      }
+
+      private int bannerType_ = 0;
+      /**
+       * <code>optional .android_studio.SmlChatBotEvent.TimelineBannerEvent.BannerType banner_type = 2;</code>
+       * @return Whether the bannerType field is set.
+       */
+      @java.lang.Override public boolean hasBannerType() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <code>optional .android_studio.SmlChatBotEvent.TimelineBannerEvent.BannerType banner_type = 2;</code>
+       * @return The bannerType.
+       */
+      @java.lang.Override
+      public com.google.wireless.android.sdk.stats.SmlChatBotEvent.TimelineBannerEvent.BannerType getBannerType() {
+        com.google.wireless.android.sdk.stats.SmlChatBotEvent.TimelineBannerEvent.BannerType result = com.google.wireless.android.sdk.stats.SmlChatBotEvent.TimelineBannerEvent.BannerType.forNumber(bannerType_);
+        return result == null ? com.google.wireless.android.sdk.stats.SmlChatBotEvent.TimelineBannerEvent.BannerType.BANNER_TYPE_UNKNOWN : result;
+      }
+      /**
+       * <code>optional .android_studio.SmlChatBotEvent.TimelineBannerEvent.BannerType banner_type = 2;</code>
+       * @param value The bannerType to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBannerType(com.google.wireless.android.sdk.stats.SmlChatBotEvent.TimelineBannerEvent.BannerType value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x00000002;
+        bannerType_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional .android_studio.SmlChatBotEvent.TimelineBannerEvent.BannerType banner_type = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearBannerType() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        bannerType_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int eventType_ = 0;
+      /**
+       * <code>optional .android_studio.SmlChatBotEvent.TimelineBannerEvent.EventType event_type = 3;</code>
+       * @return Whether the eventType field is set.
+       */
+      @java.lang.Override public boolean hasEventType() {
+        return ((bitField0_ & 0x00000004) != 0);
+      }
+      /**
+       * <code>optional .android_studio.SmlChatBotEvent.TimelineBannerEvent.EventType event_type = 3;</code>
+       * @return The eventType.
+       */
+      @java.lang.Override
+      public com.google.wireless.android.sdk.stats.SmlChatBotEvent.TimelineBannerEvent.EventType getEventType() {
+        com.google.wireless.android.sdk.stats.SmlChatBotEvent.TimelineBannerEvent.EventType result = com.google.wireless.android.sdk.stats.SmlChatBotEvent.TimelineBannerEvent.EventType.forNumber(eventType_);
+        return result == null ? com.google.wireless.android.sdk.stats.SmlChatBotEvent.TimelineBannerEvent.EventType.UNKNOWN_EVENT : result;
+      }
+      /**
+       * <code>optional .android_studio.SmlChatBotEvent.TimelineBannerEvent.EventType event_type = 3;</code>
+       * @param value The eventType to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEventType(com.google.wireless.android.sdk.stats.SmlChatBotEvent.TimelineBannerEvent.EventType value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x00000004;
+        eventType_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional .android_studio.SmlChatBotEvent.TimelineBannerEvent.EventType event_type = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearEventType() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        eventType_ = 0;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:android_studio.SmlChatBotEvent.TimelineBannerEvent)
+    }
+
+    // @@protoc_insertion_point(class_scope:android_studio.SmlChatBotEvent.TimelineBannerEvent)
+    private static final com.google.wireless.android.sdk.stats.SmlChatBotEvent.TimelineBannerEvent DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.google.wireless.android.sdk.stats.SmlChatBotEvent.TimelineBannerEvent();
+    }
+
+    public static com.google.wireless.android.sdk.stats.SmlChatBotEvent.TimelineBannerEvent getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<TimelineBannerEvent>
+        PARSER = new com.google.protobuf.AbstractParser<TimelineBannerEvent>() {
+      @java.lang.Override
+      public TimelineBannerEvent parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<TimelineBannerEvent> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<TimelineBannerEvent> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.wireless.android.sdk.stats.SmlChatBotEvent.TimelineBannerEvent getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private int bitField0_;
   private int contentCase_ = 0;
   @SuppressWarnings("serial")
@@ -33785,6 +34860,7 @@ private static final long serialVersionUID = 0L;
     CHANGES_DRAWER_EVENT(19),
     CONVERSATION_ACTION_INVOKED(20),
     PLANNING_MODE_EVENT(21),
+    TIMELINE_BANNER_EVENT(22),
     CONTENT_NOT_SET(0);
     private final int value;
     private ContentCase(int value) {
@@ -33823,6 +34899,7 @@ private static final long serialVersionUID = 0L;
         case 19: return CHANGES_DRAWER_EVENT;
         case 20: return CONVERSATION_ACTION_INVOKED;
         case 21: return PLANNING_MODE_EVENT;
+        case 22: return TIMELINE_BANNER_EVENT;
         case 0: return CONTENT_NOT_SET;
         default: return null;
       }
@@ -34489,6 +35566,37 @@ private static final long serialVersionUID = 0L;
     return com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent.getDefaultInstance();
   }
 
+  public static final int TIMELINE_BANNER_EVENT_FIELD_NUMBER = 22;
+  /**
+   * <code>.android_studio.SmlChatBotEvent.TimelineBannerEvent timeline_banner_event = 22 [lazy = true];</code>
+   * @return Whether the timelineBannerEvent field is set.
+   */
+  @java.lang.Override
+  public boolean hasTimelineBannerEvent() {
+    return contentCase_ == 22;
+  }
+  /**
+   * <code>.android_studio.SmlChatBotEvent.TimelineBannerEvent timeline_banner_event = 22 [lazy = true];</code>
+   * @return The timelineBannerEvent.
+   */
+  @java.lang.Override
+  public com.google.wireless.android.sdk.stats.SmlChatBotEvent.TimelineBannerEvent getTimelineBannerEvent() {
+    if (contentCase_ == 22) {
+       return (com.google.wireless.android.sdk.stats.SmlChatBotEvent.TimelineBannerEvent) content_;
+    }
+    return com.google.wireless.android.sdk.stats.SmlChatBotEvent.TimelineBannerEvent.getDefaultInstance();
+  }
+  /**
+   * <code>.android_studio.SmlChatBotEvent.TimelineBannerEvent timeline_banner_event = 22 [lazy = true];</code>
+   */
+  @java.lang.Override
+  public com.google.wireless.android.sdk.stats.SmlChatBotEvent.TimelineBannerEventOrBuilder getTimelineBannerEventOrBuilder() {
+    if (contentCase_ == 22) {
+       return (com.google.wireless.android.sdk.stats.SmlChatBotEvent.TimelineBannerEvent) content_;
+    }
+    return com.google.wireless.android.sdk.stats.SmlChatBotEvent.TimelineBannerEvent.getDefaultInstance();
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -34565,6 +35673,9 @@ private static final long serialVersionUID = 0L;
     }
     if (contentCase_ == 21) {
       output.writeMessage(21, (com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent) content_);
+    }
+    if (contentCase_ == 22) {
+      output.writeMessage(22, (com.google.wireless.android.sdk.stats.SmlChatBotEvent.TimelineBannerEvent) content_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -34658,6 +35769,10 @@ private static final long serialVersionUID = 0L;
     if (contentCase_ == 21) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(21, (com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEvent) content_);
+    }
+    if (contentCase_ == 22) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(22, (com.google.wireless.android.sdk.stats.SmlChatBotEvent.TimelineBannerEvent) content_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -34760,6 +35875,10 @@ private static final long serialVersionUID = 0L;
         if (!getPlanningModeEvent()
             .equals(other.getPlanningModeEvent())) return false;
         break;
+      case 22:
+        if (!getTimelineBannerEvent()
+            .equals(other.getTimelineBannerEvent())) return false;
+        break;
       case 0:
       default:
     }
@@ -34858,6 +35977,10 @@ private static final long serialVersionUID = 0L;
       case 21:
         hash = (37 * hash) + PLANNING_MODE_EVENT_FIELD_NUMBER;
         hash = (53 * hash) + getPlanningModeEvent().hashCode();
+        break;
+      case 22:
+        hash = (37 * hash) + TIMELINE_BANNER_EVENT_FIELD_NUMBER;
+        hash = (53 * hash) + getTimelineBannerEvent().hashCode();
         break;
       case 0:
       default:
@@ -35054,6 +36177,9 @@ private static final long serialVersionUID = 0L;
       if (planningModeEventBuilder_ != null) {
         planningModeEventBuilder_.clear();
       }
+      if (timelineBannerEventBuilder_ != null) {
+        timelineBannerEventBuilder_.clear();
+      }
       contentCase_ = 0;
       content_ = null;
       return this;
@@ -35179,6 +36305,10 @@ private static final long serialVersionUID = 0L;
           planningModeEventBuilder_ != null) {
         result.content_ = planningModeEventBuilder_.build();
       }
+      if (contentCase_ == 22 &&
+          timelineBannerEventBuilder_ != null) {
+        result.content_ = timelineBannerEventBuilder_.build();
+      }
     }
 
     @java.lang.Override
@@ -35276,6 +36406,10 @@ private static final long serialVersionUID = 0L;
         }
         case PLANNING_MODE_EVENT: {
           mergePlanningModeEvent(other.getPlanningModeEvent());
+          break;
+        }
+        case TIMELINE_BANNER_EVENT: {
+          mergeTimelineBannerEvent(other.getTimelineBannerEvent());
           break;
         }
         case CONTENT_NOT_SET: {
@@ -35455,6 +36589,13 @@ private static final long serialVersionUID = 0L;
               contentCase_ = 21;
               break;
             } // case 170
+            case 178: {
+              input.readMessage(
+                  getTimelineBannerEventFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              contentCase_ = 22;
+              break;
+            } // case 178
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -38467,6 +39608,148 @@ private static final long serialVersionUID = 0L;
       contentCase_ = 21;
       onChanged();
       return planningModeEventBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.SmlChatBotEvent.TimelineBannerEvent, com.google.wireless.android.sdk.stats.SmlChatBotEvent.TimelineBannerEvent.Builder, com.google.wireless.android.sdk.stats.SmlChatBotEvent.TimelineBannerEventOrBuilder> timelineBannerEventBuilder_;
+    /**
+     * <code>.android_studio.SmlChatBotEvent.TimelineBannerEvent timeline_banner_event = 22 [lazy = true];</code>
+     * @return Whether the timelineBannerEvent field is set.
+     */
+    @java.lang.Override
+    public boolean hasTimelineBannerEvent() {
+      return contentCase_ == 22;
+    }
+    /**
+     * <code>.android_studio.SmlChatBotEvent.TimelineBannerEvent timeline_banner_event = 22 [lazy = true];</code>
+     * @return The timelineBannerEvent.
+     */
+    @java.lang.Override
+    public com.google.wireless.android.sdk.stats.SmlChatBotEvent.TimelineBannerEvent getTimelineBannerEvent() {
+      if (timelineBannerEventBuilder_ == null) {
+        if (contentCase_ == 22) {
+          return (com.google.wireless.android.sdk.stats.SmlChatBotEvent.TimelineBannerEvent) content_;
+        }
+        return com.google.wireless.android.sdk.stats.SmlChatBotEvent.TimelineBannerEvent.getDefaultInstance();
+      } else {
+        if (contentCase_ == 22) {
+          return timelineBannerEventBuilder_.getMessage();
+        }
+        return com.google.wireless.android.sdk.stats.SmlChatBotEvent.TimelineBannerEvent.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.android_studio.SmlChatBotEvent.TimelineBannerEvent timeline_banner_event = 22 [lazy = true];</code>
+     */
+    public Builder setTimelineBannerEvent(com.google.wireless.android.sdk.stats.SmlChatBotEvent.TimelineBannerEvent value) {
+      if (timelineBannerEventBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        content_ = value;
+        onChanged();
+      } else {
+        timelineBannerEventBuilder_.setMessage(value);
+      }
+      contentCase_ = 22;
+      return this;
+    }
+    /**
+     * <code>.android_studio.SmlChatBotEvent.TimelineBannerEvent timeline_banner_event = 22 [lazy = true];</code>
+     */
+    public Builder setTimelineBannerEvent(
+        com.google.wireless.android.sdk.stats.SmlChatBotEvent.TimelineBannerEvent.Builder builderForValue) {
+      if (timelineBannerEventBuilder_ == null) {
+        content_ = builderForValue.build();
+        onChanged();
+      } else {
+        timelineBannerEventBuilder_.setMessage(builderForValue.build());
+      }
+      contentCase_ = 22;
+      return this;
+    }
+    /**
+     * <code>.android_studio.SmlChatBotEvent.TimelineBannerEvent timeline_banner_event = 22 [lazy = true];</code>
+     */
+    public Builder mergeTimelineBannerEvent(com.google.wireless.android.sdk.stats.SmlChatBotEvent.TimelineBannerEvent value) {
+      if (timelineBannerEventBuilder_ == null) {
+        if (contentCase_ == 22 &&
+            content_ != com.google.wireless.android.sdk.stats.SmlChatBotEvent.TimelineBannerEvent.getDefaultInstance()) {
+          content_ = com.google.wireless.android.sdk.stats.SmlChatBotEvent.TimelineBannerEvent.newBuilder((com.google.wireless.android.sdk.stats.SmlChatBotEvent.TimelineBannerEvent) content_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          content_ = value;
+        }
+        onChanged();
+      } else {
+        if (contentCase_ == 22) {
+          timelineBannerEventBuilder_.mergeFrom(value);
+        } else {
+          timelineBannerEventBuilder_.setMessage(value);
+        }
+      }
+      contentCase_ = 22;
+      return this;
+    }
+    /**
+     * <code>.android_studio.SmlChatBotEvent.TimelineBannerEvent timeline_banner_event = 22 [lazy = true];</code>
+     */
+    public Builder clearTimelineBannerEvent() {
+      if (timelineBannerEventBuilder_ == null) {
+        if (contentCase_ == 22) {
+          contentCase_ = 0;
+          content_ = null;
+          onChanged();
+        }
+      } else {
+        if (contentCase_ == 22) {
+          contentCase_ = 0;
+          content_ = null;
+        }
+        timelineBannerEventBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>.android_studio.SmlChatBotEvent.TimelineBannerEvent timeline_banner_event = 22 [lazy = true];</code>
+     */
+    public com.google.wireless.android.sdk.stats.SmlChatBotEvent.TimelineBannerEvent.Builder getTimelineBannerEventBuilder() {
+      return getTimelineBannerEventFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.android_studio.SmlChatBotEvent.TimelineBannerEvent timeline_banner_event = 22 [lazy = true];</code>
+     */
+    @java.lang.Override
+    public com.google.wireless.android.sdk.stats.SmlChatBotEvent.TimelineBannerEventOrBuilder getTimelineBannerEventOrBuilder() {
+      if ((contentCase_ == 22) && (timelineBannerEventBuilder_ != null)) {
+        return timelineBannerEventBuilder_.getMessageOrBuilder();
+      } else {
+        if (contentCase_ == 22) {
+          return (com.google.wireless.android.sdk.stats.SmlChatBotEvent.TimelineBannerEvent) content_;
+        }
+        return com.google.wireless.android.sdk.stats.SmlChatBotEvent.TimelineBannerEvent.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.android_studio.SmlChatBotEvent.TimelineBannerEvent timeline_banner_event = 22 [lazy = true];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.SmlChatBotEvent.TimelineBannerEvent, com.google.wireless.android.sdk.stats.SmlChatBotEvent.TimelineBannerEvent.Builder, com.google.wireless.android.sdk.stats.SmlChatBotEvent.TimelineBannerEventOrBuilder> 
+        getTimelineBannerEventFieldBuilder() {
+      if (timelineBannerEventBuilder_ == null) {
+        if (!(contentCase_ == 22)) {
+          content_ = com.google.wireless.android.sdk.stats.SmlChatBotEvent.TimelineBannerEvent.getDefaultInstance();
+        }
+        timelineBannerEventBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.wireless.android.sdk.stats.SmlChatBotEvent.TimelineBannerEvent, com.google.wireless.android.sdk.stats.SmlChatBotEvent.TimelineBannerEvent.Builder, com.google.wireless.android.sdk.stats.SmlChatBotEvent.TimelineBannerEventOrBuilder>(
+                (com.google.wireless.android.sdk.stats.SmlChatBotEvent.TimelineBannerEvent) content_,
+                getParentForChildren(),
+                isClean());
+        content_ = null;
+      }
+      contentCase_ = 22;
+      onChanged();
+      return timelineBannerEventBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

@@ -322,5 +322,20 @@ public interface SmlChatBotEventOrBuilder extends
    */
   com.google.wireless.android.sdk.stats.SmlChatBotEvent.PlanningModeEventOrBuilder getPlanningModeEventOrBuilder();
 
+  /**
+   * <code>.android_studio.SmlChatBotEvent.TimelineBannerEvent timeline_banner_event = 22 [lazy = true];</code>
+   * @return Whether the timelineBannerEvent field is set.
+   */
+  boolean hasTimelineBannerEvent();
+  /**
+   * <code>.android_studio.SmlChatBotEvent.TimelineBannerEvent timeline_banner_event = 22 [lazy = true];</code>
+   * @return The timelineBannerEvent.
+   */
+  com.google.wireless.android.sdk.stats.SmlChatBotEvent.TimelineBannerEvent getTimelineBannerEvent();
+  /**
+   * <code>.android_studio.SmlChatBotEvent.TimelineBannerEvent timeline_banner_event = 22 [lazy = true];</code>
+   */
+  com.google.wireless.android.sdk.stats.SmlChatBotEvent.TimelineBannerEventOrBuilder getTimelineBannerEventOrBuilder();
+
   com.google.wireless.android.sdk.stats.SmlChatBotEvent.ContentCase getContentCase();
 }
