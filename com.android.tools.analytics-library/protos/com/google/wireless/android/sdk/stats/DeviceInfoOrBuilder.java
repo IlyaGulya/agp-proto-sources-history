@@ -398,4 +398,36 @@ public interface DeviceInfoOrBuilder extends
    */
   com.google.protobuf.ByteString
       getConnectionIdBytes();
+
+  /**
+   * <pre>
+   * If this is a remote physical device from a non-google lab, this is the
+   * name of the lab as reported in the device catalog.
+   * </pre>
+   *
+   * <code>optional string oem_lab_name = 15;</code>
+   * @return Whether the oemLabName field is set.
+   */
+  boolean hasOemLabName();
+  /**
+   * <pre>
+   * If this is a remote physical device from a non-google lab, this is the
+   * name of the lab as reported in the device catalog.
+   * </pre>
+   *
+   * <code>optional string oem_lab_name = 15;</code>
+   * @return The oemLabName.
+   */
+  java.lang.String getOemLabName();
+  /**
+   * <pre>
+   * If this is a remote physical device from a non-google lab, this is the
+   * name of the lab as reported in the device catalog.
+   * </pre>
+   *
+   * <code>optional string oem_lab_name = 15;</code>
+   * @return The bytes for oemLabName.
+   */
+  com.google.protobuf.ByteString
+      getOemLabNameBytes();
 }

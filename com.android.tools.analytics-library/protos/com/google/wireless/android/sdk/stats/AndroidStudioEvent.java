@@ -11719,22 +11719,24 @@ private static final long serialVersionUID = 0L;
 
       /**
        * <pre>
-       * Android Min SDK.
+       * Android Min SDK, superseded by min_sdk_version which includes preview
        * </pre>
        *
-       * <code>optional uint32 min_sdk = 2;</code>
+       * <code>optional uint32 min_sdk = 2 [deprecated = true];</code>
+       * @deprecated
        * @return Whether the minSdk field is set.
        */
-      boolean hasMinSdk();
+      @java.lang.Deprecated boolean hasMinSdk();
       /**
        * <pre>
-       * Android Min SDK.
+       * Android Min SDK, superseded by min_sdk_version which includes preview
        * </pre>
        *
-       * <code>optional uint32 min_sdk = 2;</code>
+       * <code>optional uint32 min_sdk = 2 [deprecated = true];</code>
+       * @deprecated
        * @return The minSdk.
        */
-      int getMinSdk();
+      @java.lang.Deprecated int getMinSdk();
 
       /**
        * <pre>
@@ -11754,6 +11756,60 @@ private static final long serialVersionUID = 0L;
        * @return The bytecodeLevel.
        */
       com.google.wireless.android.sdk.stats.AndroidStudioEvent.TemplatesUsage.TemplateModule.BytecodeLevel getBytecodeLevel();
+
+      /**
+       * <pre>
+       * Android min sdk version (including preview)
+       * </pre>
+       *
+       * <code>optional .android_studio.ApiVersion min_sdk_version = 4 [lazy = true];</code>
+       * @return Whether the minSdkVersion field is set.
+       */
+      boolean hasMinSdkVersion();
+      /**
+       * <pre>
+       * Android min sdk version (including preview)
+       * </pre>
+       *
+       * <code>optional .android_studio.ApiVersion min_sdk_version = 4 [lazy = true];</code>
+       * @return The minSdkVersion.
+       */
+      com.google.wireless.android.sdk.stats.ApiVersion getMinSdkVersion();
+      /**
+       * <pre>
+       * Android min sdk version (including preview)
+       * </pre>
+       *
+       * <code>optional .android_studio.ApiVersion min_sdk_version = 4 [lazy = true];</code>
+       */
+      com.google.wireless.android.sdk.stats.ApiVersionOrBuilder getMinSdkVersionOrBuilder();
+
+      /**
+       * <pre>
+       * Android target sdk version (including preview)
+       * </pre>
+       *
+       * <code>optional .android_studio.ApiVersion target_sdk_version = 5 [lazy = true];</code>
+       * @return Whether the targetSdkVersion field is set.
+       */
+      boolean hasTargetSdkVersion();
+      /**
+       * <pre>
+       * Android target sdk version (including preview)
+       * </pre>
+       *
+       * <code>optional .android_studio.ApiVersion target_sdk_version = 5 [lazy = true];</code>
+       * @return The targetSdkVersion.
+       */
+      com.google.wireless.android.sdk.stats.ApiVersion getTargetSdkVersion();
+      /**
+       * <pre>
+       * Android target sdk version (including preview)
+       * </pre>
+       *
+       * <code>optional .android_studio.ApiVersion target_sdk_version = 5 [lazy = true];</code>
+       */
+      com.google.wireless.android.sdk.stats.ApiVersionOrBuilder getTargetSdkVersionOrBuilder();
     }
     /**
      * <pre>
@@ -12209,26 +12265,28 @@ private static final long serialVersionUID = 0L;
       private int minSdk_;
       /**
        * <pre>
-       * Android Min SDK.
+       * Android Min SDK, superseded by min_sdk_version which includes preview
        * </pre>
        *
-       * <code>optional uint32 min_sdk = 2;</code>
+       * <code>optional uint32 min_sdk = 2 [deprecated = true];</code>
+       * @deprecated
        * @return Whether the minSdk field is set.
        */
       @java.lang.Override
-      public boolean hasMinSdk() {
+      @java.lang.Deprecated public boolean hasMinSdk() {
         return ((bitField0_ & 0x00000002) != 0);
       }
       /**
        * <pre>
-       * Android Min SDK.
+       * Android Min SDK, superseded by min_sdk_version which includes preview
        * </pre>
        *
-       * <code>optional uint32 min_sdk = 2;</code>
+       * <code>optional uint32 min_sdk = 2 [deprecated = true];</code>
+       * @deprecated
        * @return The minSdk.
        */
       @java.lang.Override
-      public int getMinSdk() {
+      @java.lang.Deprecated public int getMinSdk() {
         return minSdk_;
       }
 
@@ -12259,6 +12317,82 @@ private static final long serialVersionUID = 0L;
         return result == null ? com.google.wireless.android.sdk.stats.AndroidStudioEvent.TemplatesUsage.TemplateModule.BytecodeLevel.LEVEL_6 : result;
       }
 
+      public static final int MIN_SDK_VERSION_FIELD_NUMBER = 4;
+      private com.google.wireless.android.sdk.stats.ApiVersion minSdkVersion_;
+      /**
+       * <pre>
+       * Android min sdk version (including preview)
+       * </pre>
+       *
+       * <code>optional .android_studio.ApiVersion min_sdk_version = 4 [lazy = true];</code>
+       * @return Whether the minSdkVersion field is set.
+       */
+      @java.lang.Override
+      public boolean hasMinSdkVersion() {
+        return ((bitField0_ & 0x00000008) != 0);
+      }
+      /**
+       * <pre>
+       * Android min sdk version (including preview)
+       * </pre>
+       *
+       * <code>optional .android_studio.ApiVersion min_sdk_version = 4 [lazy = true];</code>
+       * @return The minSdkVersion.
+       */
+      @java.lang.Override
+      public com.google.wireless.android.sdk.stats.ApiVersion getMinSdkVersion() {
+        return minSdkVersion_ == null ? com.google.wireless.android.sdk.stats.ApiVersion.getDefaultInstance() : minSdkVersion_;
+      }
+      /**
+       * <pre>
+       * Android min sdk version (including preview)
+       * </pre>
+       *
+       * <code>optional .android_studio.ApiVersion min_sdk_version = 4 [lazy = true];</code>
+       */
+      @java.lang.Override
+      public com.google.wireless.android.sdk.stats.ApiVersionOrBuilder getMinSdkVersionOrBuilder() {
+        return minSdkVersion_ == null ? com.google.wireless.android.sdk.stats.ApiVersion.getDefaultInstance() : minSdkVersion_;
+      }
+
+      public static final int TARGET_SDK_VERSION_FIELD_NUMBER = 5;
+      private com.google.wireless.android.sdk.stats.ApiVersion targetSdkVersion_;
+      /**
+       * <pre>
+       * Android target sdk version (including preview)
+       * </pre>
+       *
+       * <code>optional .android_studio.ApiVersion target_sdk_version = 5 [lazy = true];</code>
+       * @return Whether the targetSdkVersion field is set.
+       */
+      @java.lang.Override
+      public boolean hasTargetSdkVersion() {
+        return ((bitField0_ & 0x00000010) != 0);
+      }
+      /**
+       * <pre>
+       * Android target sdk version (including preview)
+       * </pre>
+       *
+       * <code>optional .android_studio.ApiVersion target_sdk_version = 5 [lazy = true];</code>
+       * @return The targetSdkVersion.
+       */
+      @java.lang.Override
+      public com.google.wireless.android.sdk.stats.ApiVersion getTargetSdkVersion() {
+        return targetSdkVersion_ == null ? com.google.wireless.android.sdk.stats.ApiVersion.getDefaultInstance() : targetSdkVersion_;
+      }
+      /**
+       * <pre>
+       * Android target sdk version (including preview)
+       * </pre>
+       *
+       * <code>optional .android_studio.ApiVersion target_sdk_version = 5 [lazy = true];</code>
+       */
+      @java.lang.Override
+      public com.google.wireless.android.sdk.stats.ApiVersionOrBuilder getTargetSdkVersionOrBuilder() {
+        return targetSdkVersion_ == null ? com.google.wireless.android.sdk.stats.ApiVersion.getDefaultInstance() : targetSdkVersion_;
+      }
+
       private byte memoizedIsInitialized = -1;
       @java.lang.Override
       public final boolean isInitialized() {
@@ -12282,6 +12416,12 @@ private static final long serialVersionUID = 0L;
         if (((bitField0_ & 0x00000004) != 0)) {
           output.writeEnum(3, bytecodeLevel_);
         }
+        if (((bitField0_ & 0x00000008) != 0)) {
+          output.writeMessage(4, getMinSdkVersion());
+        }
+        if (((bitField0_ & 0x00000010) != 0)) {
+          output.writeMessage(5, getTargetSdkVersion());
+        }
         getUnknownFields().writeTo(output);
       }
 
@@ -12302,6 +12442,14 @@ private static final long serialVersionUID = 0L;
         if (((bitField0_ & 0x00000004) != 0)) {
           size += com.google.protobuf.CodedOutputStream
             .computeEnumSize(3, bytecodeLevel_);
+        }
+        if (((bitField0_ & 0x00000008) != 0)) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(4, getMinSdkVersion());
+        }
+        if (((bitField0_ & 0x00000010) != 0)) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(5, getTargetSdkVersion());
         }
         size += getUnknownFields().getSerializedSize();
         memoizedSize = size;
@@ -12331,6 +12479,16 @@ private static final long serialVersionUID = 0L;
         if (hasBytecodeLevel()) {
           if (bytecodeLevel_ != other.bytecodeLevel_) return false;
         }
+        if (hasMinSdkVersion() != other.hasMinSdkVersion()) return false;
+        if (hasMinSdkVersion()) {
+          if (!getMinSdkVersion()
+              .equals(other.getMinSdkVersion())) return false;
+        }
+        if (hasTargetSdkVersion() != other.hasTargetSdkVersion()) return false;
+        if (hasTargetSdkVersion()) {
+          if (!getTargetSdkVersion()
+              .equals(other.getTargetSdkVersion())) return false;
+        }
         if (!getUnknownFields().equals(other.getUnknownFields())) return false;
         return true;
       }
@@ -12353,6 +12511,14 @@ private static final long serialVersionUID = 0L;
         if (hasBytecodeLevel()) {
           hash = (37 * hash) + BYTECODE_LEVEL_FIELD_NUMBER;
           hash = (53 * hash) + bytecodeLevel_;
+        }
+        if (hasMinSdkVersion()) {
+          hash = (37 * hash) + MIN_SDK_VERSION_FIELD_NUMBER;
+          hash = (53 * hash) + getMinSdkVersion().hashCode();
+        }
+        if (hasTargetSdkVersion()) {
+          hash = (37 * hash) + TARGET_SDK_VERSION_FIELD_NUMBER;
+          hash = (53 * hash) + getTargetSdkVersion().hashCode();
         }
         hash = (29 * hash) + getUnknownFields().hashCode();
         memoizedHashCode = hash;
@@ -12475,13 +12641,20 @@ private static final long serialVersionUID = 0L;
 
         // Construct using com.google.wireless.android.sdk.stats.AndroidStudioEvent.TemplatesUsage.TemplateModule.newBuilder()
         private Builder() {
-
+          maybeForceBuilderInitialization();
         }
 
         private Builder(
             com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
           super(parent);
-
+          maybeForceBuilderInitialization();
+        }
+        private void maybeForceBuilderInitialization() {
+          if (com.google.protobuf.GeneratedMessageV3
+                  .alwaysUseFieldBuilders) {
+            getMinSdkVersionFieldBuilder();
+            getTargetSdkVersionFieldBuilder();
+          }
         }
         @java.lang.Override
         public Builder clear() {
@@ -12492,6 +12665,18 @@ private static final long serialVersionUID = 0L;
           bitField0_ = (bitField0_ & ~0x00000002);
           bytecodeLevel_ = 0;
           bitField0_ = (bitField0_ & ~0x00000004);
+          if (minSdkVersionBuilder_ == null) {
+            minSdkVersion_ = null;
+          } else {
+            minSdkVersionBuilder_.clear();
+          }
+          bitField0_ = (bitField0_ & ~0x00000008);
+          if (targetSdkVersionBuilder_ == null) {
+            targetSdkVersion_ = null;
+          } else {
+            targetSdkVersionBuilder_.clear();
+          }
+          bitField0_ = (bitField0_ & ~0x00000010);
           return this;
         }
 
@@ -12532,6 +12717,22 @@ private static final long serialVersionUID = 0L;
             to_bitField0_ |= 0x00000004;
           }
           result.bytecodeLevel_ = bytecodeLevel_;
+          if (((from_bitField0_ & 0x00000008) != 0)) {
+            if (minSdkVersionBuilder_ == null) {
+              result.minSdkVersion_ = minSdkVersion_;
+            } else {
+              result.minSdkVersion_ = minSdkVersionBuilder_.build();
+            }
+            to_bitField0_ |= 0x00000008;
+          }
+          if (((from_bitField0_ & 0x00000010) != 0)) {
+            if (targetSdkVersionBuilder_ == null) {
+              result.targetSdkVersion_ = targetSdkVersion_;
+            } else {
+              result.targetSdkVersion_ = targetSdkVersionBuilder_.build();
+            }
+            to_bitField0_ |= 0x00000010;
+          }
           result.bitField0_ = to_bitField0_;
           onBuilt();
           return result;
@@ -12590,6 +12791,12 @@ private static final long serialVersionUID = 0L;
           if (other.hasBytecodeLevel()) {
             setBytecodeLevel(other.getBytecodeLevel());
           }
+          if (other.hasMinSdkVersion()) {
+            mergeMinSdkVersion(other.getMinSdkVersion());
+          }
+          if (other.hasTargetSdkVersion()) {
+            mergeTargetSdkVersion(other.getTargetSdkVersion());
+          }
           this.mergeUnknownFields(other.getUnknownFields());
           onChanged();
           return this;
@@ -12645,6 +12852,20 @@ private static final long serialVersionUID = 0L;
                   }
                   break;
                 } // case 24
+                case 34: {
+                  input.readMessage(
+                      getMinSdkVersionFieldBuilder().getBuilder(),
+                      extensionRegistry);
+                  bitField0_ |= 0x00000008;
+                  break;
+                } // case 34
+                case 42: {
+                  input.readMessage(
+                      getTargetSdkVersionFieldBuilder().getBuilder(),
+                      extensionRegistry);
+                  bitField0_ |= 0x00000010;
+                  break;
+                } // case 42
                 default: {
                   if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                     done = true; // was an endgroup tag
@@ -12732,38 +12953,41 @@ private static final long serialVersionUID = 0L;
         private int minSdk_ ;
         /**
          * <pre>
-         * Android Min SDK.
+         * Android Min SDK, superseded by min_sdk_version which includes preview
          * </pre>
          *
-         * <code>optional uint32 min_sdk = 2;</code>
+         * <code>optional uint32 min_sdk = 2 [deprecated = true];</code>
+         * @deprecated
          * @return Whether the minSdk field is set.
          */
         @java.lang.Override
-        public boolean hasMinSdk() {
+        @java.lang.Deprecated public boolean hasMinSdk() {
           return ((bitField0_ & 0x00000002) != 0);
         }
         /**
          * <pre>
-         * Android Min SDK.
+         * Android Min SDK, superseded by min_sdk_version which includes preview
          * </pre>
          *
-         * <code>optional uint32 min_sdk = 2;</code>
+         * <code>optional uint32 min_sdk = 2 [deprecated = true];</code>
+         * @deprecated
          * @return The minSdk.
          */
         @java.lang.Override
-        public int getMinSdk() {
+        @java.lang.Deprecated public int getMinSdk() {
           return minSdk_;
         }
         /**
          * <pre>
-         * Android Min SDK.
+         * Android Min SDK, superseded by min_sdk_version which includes preview
          * </pre>
          *
-         * <code>optional uint32 min_sdk = 2;</code>
+         * <code>optional uint32 min_sdk = 2 [deprecated = true];</code>
+         * @deprecated
          * @param value The minSdk to set.
          * @return This builder for chaining.
          */
-        public Builder setMinSdk(int value) {
+        @java.lang.Deprecated public Builder setMinSdk(int value) {
           bitField0_ |= 0x00000002;
           minSdk_ = value;
           onChanged();
@@ -12771,13 +12995,14 @@ private static final long serialVersionUID = 0L;
         }
         /**
          * <pre>
-         * Android Min SDK.
+         * Android Min SDK, superseded by min_sdk_version which includes preview
          * </pre>
          *
-         * <code>optional uint32 min_sdk = 2;</code>
+         * <code>optional uint32 min_sdk = 2 [deprecated = true];</code>
+         * @deprecated
          * @return This builder for chaining.
          */
-        public Builder clearMinSdk() {
+        @java.lang.Deprecated public Builder clearMinSdk() {
           bitField0_ = (bitField0_ & ~0x00000002);
           minSdk_ = 0;
           onChanged();
@@ -12841,6 +13066,318 @@ private static final long serialVersionUID = 0L;
           bytecodeLevel_ = 0;
           onChanged();
           return this;
+        }
+
+        private com.google.wireless.android.sdk.stats.ApiVersion minSdkVersion_;
+        private com.google.protobuf.SingleFieldBuilderV3<
+            com.google.wireless.android.sdk.stats.ApiVersion, com.google.wireless.android.sdk.stats.ApiVersion.Builder, com.google.wireless.android.sdk.stats.ApiVersionOrBuilder> minSdkVersionBuilder_;
+        /**
+         * <pre>
+         * Android min sdk version (including preview)
+         * </pre>
+         *
+         * <code>optional .android_studio.ApiVersion min_sdk_version = 4 [lazy = true];</code>
+         * @return Whether the minSdkVersion field is set.
+         */
+        public boolean hasMinSdkVersion() {
+          return ((bitField0_ & 0x00000008) != 0);
+        }
+        /**
+         * <pre>
+         * Android min sdk version (including preview)
+         * </pre>
+         *
+         * <code>optional .android_studio.ApiVersion min_sdk_version = 4 [lazy = true];</code>
+         * @return The minSdkVersion.
+         */
+        public com.google.wireless.android.sdk.stats.ApiVersion getMinSdkVersion() {
+          if (minSdkVersionBuilder_ == null) {
+            return minSdkVersion_ == null ? com.google.wireless.android.sdk.stats.ApiVersion.getDefaultInstance() : minSdkVersion_;
+          } else {
+            return minSdkVersionBuilder_.getMessage();
+          }
+        }
+        /**
+         * <pre>
+         * Android min sdk version (including preview)
+         * </pre>
+         *
+         * <code>optional .android_studio.ApiVersion min_sdk_version = 4 [lazy = true];</code>
+         */
+        public Builder setMinSdkVersion(com.google.wireless.android.sdk.stats.ApiVersion value) {
+          if (minSdkVersionBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            minSdkVersion_ = value;
+            onChanged();
+          } else {
+            minSdkVersionBuilder_.setMessage(value);
+          }
+          bitField0_ |= 0x00000008;
+          return this;
+        }
+        /**
+         * <pre>
+         * Android min sdk version (including preview)
+         * </pre>
+         *
+         * <code>optional .android_studio.ApiVersion min_sdk_version = 4 [lazy = true];</code>
+         */
+        public Builder setMinSdkVersion(
+            com.google.wireless.android.sdk.stats.ApiVersion.Builder builderForValue) {
+          if (minSdkVersionBuilder_ == null) {
+            minSdkVersion_ = builderForValue.build();
+            onChanged();
+          } else {
+            minSdkVersionBuilder_.setMessage(builderForValue.build());
+          }
+          bitField0_ |= 0x00000008;
+          return this;
+        }
+        /**
+         * <pre>
+         * Android min sdk version (including preview)
+         * </pre>
+         *
+         * <code>optional .android_studio.ApiVersion min_sdk_version = 4 [lazy = true];</code>
+         */
+        public Builder mergeMinSdkVersion(com.google.wireless.android.sdk.stats.ApiVersion value) {
+          if (minSdkVersionBuilder_ == null) {
+            if (((bitField0_ & 0x00000008) != 0) &&
+                minSdkVersion_ != null &&
+                minSdkVersion_ != com.google.wireless.android.sdk.stats.ApiVersion.getDefaultInstance()) {
+              minSdkVersion_ =
+                com.google.wireless.android.sdk.stats.ApiVersion.newBuilder(minSdkVersion_).mergeFrom(value).buildPartial();
+            } else {
+              minSdkVersion_ = value;
+            }
+            onChanged();
+          } else {
+            minSdkVersionBuilder_.mergeFrom(value);
+          }
+          bitField0_ |= 0x00000008;
+          return this;
+        }
+        /**
+         * <pre>
+         * Android min sdk version (including preview)
+         * </pre>
+         *
+         * <code>optional .android_studio.ApiVersion min_sdk_version = 4 [lazy = true];</code>
+         */
+        public Builder clearMinSdkVersion() {
+          if (minSdkVersionBuilder_ == null) {
+            minSdkVersion_ = null;
+            onChanged();
+          } else {
+            minSdkVersionBuilder_.clear();
+          }
+          bitField0_ = (bitField0_ & ~0x00000008);
+          return this;
+        }
+        /**
+         * <pre>
+         * Android min sdk version (including preview)
+         * </pre>
+         *
+         * <code>optional .android_studio.ApiVersion min_sdk_version = 4 [lazy = true];</code>
+         */
+        public com.google.wireless.android.sdk.stats.ApiVersion.Builder getMinSdkVersionBuilder() {
+          bitField0_ |= 0x00000008;
+          onChanged();
+          return getMinSdkVersionFieldBuilder().getBuilder();
+        }
+        /**
+         * <pre>
+         * Android min sdk version (including preview)
+         * </pre>
+         *
+         * <code>optional .android_studio.ApiVersion min_sdk_version = 4 [lazy = true];</code>
+         */
+        public com.google.wireless.android.sdk.stats.ApiVersionOrBuilder getMinSdkVersionOrBuilder() {
+          if (minSdkVersionBuilder_ != null) {
+            return minSdkVersionBuilder_.getMessageOrBuilder();
+          } else {
+            return minSdkVersion_ == null ?
+                com.google.wireless.android.sdk.stats.ApiVersion.getDefaultInstance() : minSdkVersion_;
+          }
+        }
+        /**
+         * <pre>
+         * Android min sdk version (including preview)
+         * </pre>
+         *
+         * <code>optional .android_studio.ApiVersion min_sdk_version = 4 [lazy = true];</code>
+         */
+        private com.google.protobuf.SingleFieldBuilderV3<
+            com.google.wireless.android.sdk.stats.ApiVersion, com.google.wireless.android.sdk.stats.ApiVersion.Builder, com.google.wireless.android.sdk.stats.ApiVersionOrBuilder> 
+            getMinSdkVersionFieldBuilder() {
+          if (minSdkVersionBuilder_ == null) {
+            minSdkVersionBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                com.google.wireless.android.sdk.stats.ApiVersion, com.google.wireless.android.sdk.stats.ApiVersion.Builder, com.google.wireless.android.sdk.stats.ApiVersionOrBuilder>(
+                    getMinSdkVersion(),
+                    getParentForChildren(),
+                    isClean());
+            minSdkVersion_ = null;
+          }
+          return minSdkVersionBuilder_;
+        }
+
+        private com.google.wireless.android.sdk.stats.ApiVersion targetSdkVersion_;
+        private com.google.protobuf.SingleFieldBuilderV3<
+            com.google.wireless.android.sdk.stats.ApiVersion, com.google.wireless.android.sdk.stats.ApiVersion.Builder, com.google.wireless.android.sdk.stats.ApiVersionOrBuilder> targetSdkVersionBuilder_;
+        /**
+         * <pre>
+         * Android target sdk version (including preview)
+         * </pre>
+         *
+         * <code>optional .android_studio.ApiVersion target_sdk_version = 5 [lazy = true];</code>
+         * @return Whether the targetSdkVersion field is set.
+         */
+        public boolean hasTargetSdkVersion() {
+          return ((bitField0_ & 0x00000010) != 0);
+        }
+        /**
+         * <pre>
+         * Android target sdk version (including preview)
+         * </pre>
+         *
+         * <code>optional .android_studio.ApiVersion target_sdk_version = 5 [lazy = true];</code>
+         * @return The targetSdkVersion.
+         */
+        public com.google.wireless.android.sdk.stats.ApiVersion getTargetSdkVersion() {
+          if (targetSdkVersionBuilder_ == null) {
+            return targetSdkVersion_ == null ? com.google.wireless.android.sdk.stats.ApiVersion.getDefaultInstance() : targetSdkVersion_;
+          } else {
+            return targetSdkVersionBuilder_.getMessage();
+          }
+        }
+        /**
+         * <pre>
+         * Android target sdk version (including preview)
+         * </pre>
+         *
+         * <code>optional .android_studio.ApiVersion target_sdk_version = 5 [lazy = true];</code>
+         */
+        public Builder setTargetSdkVersion(com.google.wireless.android.sdk.stats.ApiVersion value) {
+          if (targetSdkVersionBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            targetSdkVersion_ = value;
+            onChanged();
+          } else {
+            targetSdkVersionBuilder_.setMessage(value);
+          }
+          bitField0_ |= 0x00000010;
+          return this;
+        }
+        /**
+         * <pre>
+         * Android target sdk version (including preview)
+         * </pre>
+         *
+         * <code>optional .android_studio.ApiVersion target_sdk_version = 5 [lazy = true];</code>
+         */
+        public Builder setTargetSdkVersion(
+            com.google.wireless.android.sdk.stats.ApiVersion.Builder builderForValue) {
+          if (targetSdkVersionBuilder_ == null) {
+            targetSdkVersion_ = builderForValue.build();
+            onChanged();
+          } else {
+            targetSdkVersionBuilder_.setMessage(builderForValue.build());
+          }
+          bitField0_ |= 0x00000010;
+          return this;
+        }
+        /**
+         * <pre>
+         * Android target sdk version (including preview)
+         * </pre>
+         *
+         * <code>optional .android_studio.ApiVersion target_sdk_version = 5 [lazy = true];</code>
+         */
+        public Builder mergeTargetSdkVersion(com.google.wireless.android.sdk.stats.ApiVersion value) {
+          if (targetSdkVersionBuilder_ == null) {
+            if (((bitField0_ & 0x00000010) != 0) &&
+                targetSdkVersion_ != null &&
+                targetSdkVersion_ != com.google.wireless.android.sdk.stats.ApiVersion.getDefaultInstance()) {
+              targetSdkVersion_ =
+                com.google.wireless.android.sdk.stats.ApiVersion.newBuilder(targetSdkVersion_).mergeFrom(value).buildPartial();
+            } else {
+              targetSdkVersion_ = value;
+            }
+            onChanged();
+          } else {
+            targetSdkVersionBuilder_.mergeFrom(value);
+          }
+          bitField0_ |= 0x00000010;
+          return this;
+        }
+        /**
+         * <pre>
+         * Android target sdk version (including preview)
+         * </pre>
+         *
+         * <code>optional .android_studio.ApiVersion target_sdk_version = 5 [lazy = true];</code>
+         */
+        public Builder clearTargetSdkVersion() {
+          if (targetSdkVersionBuilder_ == null) {
+            targetSdkVersion_ = null;
+            onChanged();
+          } else {
+            targetSdkVersionBuilder_.clear();
+          }
+          bitField0_ = (bitField0_ & ~0x00000010);
+          return this;
+        }
+        /**
+         * <pre>
+         * Android target sdk version (including preview)
+         * </pre>
+         *
+         * <code>optional .android_studio.ApiVersion target_sdk_version = 5 [lazy = true];</code>
+         */
+        public com.google.wireless.android.sdk.stats.ApiVersion.Builder getTargetSdkVersionBuilder() {
+          bitField0_ |= 0x00000010;
+          onChanged();
+          return getTargetSdkVersionFieldBuilder().getBuilder();
+        }
+        /**
+         * <pre>
+         * Android target sdk version (including preview)
+         * </pre>
+         *
+         * <code>optional .android_studio.ApiVersion target_sdk_version = 5 [lazy = true];</code>
+         */
+        public com.google.wireless.android.sdk.stats.ApiVersionOrBuilder getTargetSdkVersionOrBuilder() {
+          if (targetSdkVersionBuilder_ != null) {
+            return targetSdkVersionBuilder_.getMessageOrBuilder();
+          } else {
+            return targetSdkVersion_ == null ?
+                com.google.wireless.android.sdk.stats.ApiVersion.getDefaultInstance() : targetSdkVersion_;
+          }
+        }
+        /**
+         * <pre>
+         * Android target sdk version (including preview)
+         * </pre>
+         *
+         * <code>optional .android_studio.ApiVersion target_sdk_version = 5 [lazy = true];</code>
+         */
+        private com.google.protobuf.SingleFieldBuilderV3<
+            com.google.wireless.android.sdk.stats.ApiVersion, com.google.wireless.android.sdk.stats.ApiVersion.Builder, com.google.wireless.android.sdk.stats.ApiVersionOrBuilder> 
+            getTargetSdkVersionFieldBuilder() {
+          if (targetSdkVersionBuilder_ == null) {
+            targetSdkVersionBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                com.google.wireless.android.sdk.stats.ApiVersion, com.google.wireless.android.sdk.stats.ApiVersion.Builder, com.google.wireless.android.sdk.stats.ApiVersionOrBuilder>(
+                    getTargetSdkVersion(),
+                    getParentForChildren(),
+                    isClean());
+            targetSdkVersion_ = null;
+          }
+          return targetSdkVersionBuilder_;
         }
         @java.lang.Override
         public final Builder setUnknownFields(
