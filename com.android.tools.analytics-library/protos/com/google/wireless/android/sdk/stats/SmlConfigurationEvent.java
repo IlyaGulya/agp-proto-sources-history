@@ -57,9 +57,18 @@ private static final long serialVersionUID = 0L;
      */
     PRODUCT_VARIANT_BUSINESS(2),
     /**
-     * <code>PRODUCT_VARIANT_DASHER_USER_CHOICE = 3;</code>
+     * <code>PRODUCT_VARIANT_DASHER_USER_CHOICE = 3 [deprecated = true];</code>
      */
+    @java.lang.Deprecated
     PRODUCT_VARIANT_DASHER_USER_CHOICE(3),
+    /**
+     * <code>PRODUCT_VARIANT_DASHER_FREE = 4;</code>
+     */
+    PRODUCT_VARIANT_DASHER_FREE(4),
+    /**
+     * <code>PRODUCT_VARIANT_DASHER_BUSINESS = 5;</code>
+     */
+    PRODUCT_VARIANT_DASHER_BUSINESS(5),
     ;
 
     /**
@@ -75,9 +84,17 @@ private static final long serialVersionUID = 0L;
      */
     public static final int PRODUCT_VARIANT_BUSINESS_VALUE = 2;
     /**
-     * <code>PRODUCT_VARIANT_DASHER_USER_CHOICE = 3;</code>
+     * <code>PRODUCT_VARIANT_DASHER_USER_CHOICE = 3 [deprecated = true];</code>
      */
-    public static final int PRODUCT_VARIANT_DASHER_USER_CHOICE_VALUE = 3;
+    @java.lang.Deprecated public static final int PRODUCT_VARIANT_DASHER_USER_CHOICE_VALUE = 3;
+    /**
+     * <code>PRODUCT_VARIANT_DASHER_FREE = 4;</code>
+     */
+    public static final int PRODUCT_VARIANT_DASHER_FREE_VALUE = 4;
+    /**
+     * <code>PRODUCT_VARIANT_DASHER_BUSINESS = 5;</code>
+     */
+    public static final int PRODUCT_VARIANT_DASHER_BUSINESS_VALUE = 5;
 
 
     public final int getNumber() {
@@ -104,6 +121,8 @@ private static final long serialVersionUID = 0L;
         case 1: return PRODUCT_VARIANT_FREE;
         case 2: return PRODUCT_VARIANT_BUSINESS;
         case 3: return PRODUCT_VARIANT_DASHER_USER_CHOICE;
+        case 4: return PRODUCT_VARIANT_DASHER_FREE;
+        case 5: return PRODUCT_VARIANT_DASHER_BUSINESS;
         default: return null;
       }
     }

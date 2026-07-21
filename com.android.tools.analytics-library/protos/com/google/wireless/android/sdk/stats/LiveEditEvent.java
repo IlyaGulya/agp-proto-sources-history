@@ -746,6 +746,22 @@ private static final long serialVersionUID = 0L;
      * <code>ON_SAVE = 3;</code>
      */
     ON_SAVE(3),
+    /**
+     * <pre>
+     * The LiveEdit push was triggered by an AI agent without a prompt.
+     * </pre>
+     *
+     * <code>AGENT = 4;</code>
+     */
+    AGENT(4),
+    /**
+     * <pre>
+     * The LiveEdit push was triggered by an AI agent with a prompt.
+     * </pre>
+     *
+     * <code>AGENT_VIBE = 5;</code>
+     */
+    AGENT_VIBE(5),
     ;
 
     /**
@@ -776,6 +792,22 @@ private static final long serialVersionUID = 0L;
      * <code>ON_SAVE = 3;</code>
      */
     public static final int ON_SAVE_VALUE = 3;
+    /**
+     * <pre>
+     * The LiveEdit push was triggered by an AI agent without a prompt.
+     * </pre>
+     *
+     * <code>AGENT = 4;</code>
+     */
+    public static final int AGENT_VALUE = 4;
+    /**
+     * <pre>
+     * The LiveEdit push was triggered by an AI agent with a prompt.
+     * </pre>
+     *
+     * <code>AGENT_VIBE = 5;</code>
+     */
+    public static final int AGENT_VIBE_VALUE = 5;
 
 
     public final int getNumber() {
@@ -802,6 +834,8 @@ private static final long serialVersionUID = 0L;
         case 1: return AUTO;
         case 2: return MANUAL;
         case 3: return ON_SAVE;
+        case 4: return AGENT;
+        case 5: return AGENT_VIBE;
         default: return null;
       }
     }

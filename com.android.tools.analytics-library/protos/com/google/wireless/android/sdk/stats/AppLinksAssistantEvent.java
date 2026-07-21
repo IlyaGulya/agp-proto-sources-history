@@ -52,6 +52,8 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * UI event source.
+   * Next ID: 60
+   * Note: Not a properly sequentially incrementing ID (200 &amp; 201 are used)
    * </pre>
    *
    * Protobuf enum {@code android_studio.AppLinksAssistantEvent.EventSource}
@@ -118,6 +120,10 @@ private static final long serialVersionUID = 0L;
      * <code>CODE_INSERT_DIALOG_LIST_SELECTION = 11;</code>
      */
     CODE_INSERT_DIALOG_LIST_SELECTION(11),
+    /**
+     * <code>CODE_INSERT_DIALOG_GEMINI_BUTTON = 59;</code>
+     */
+    CODE_INSERT_DIALOG_GEMINI_BUTTON(59),
     /**
      * <pre>
      * UI elements of DAL generation panel.
@@ -425,6 +431,10 @@ private static final long serialVersionUID = 0L;
      */
     public static final int CODE_INSERT_DIALOG_LIST_SELECTION_VALUE = 11;
     /**
+     * <code>CODE_INSERT_DIALOG_GEMINI_BUTTON = 59;</code>
+     */
+    public static final int CODE_INSERT_DIALOG_GEMINI_BUTTON_VALUE = 59;
+    /**
      * <pre>
      * UI elements of DAL generation panel.
      * </pre>
@@ -702,6 +712,7 @@ private static final long serialVersionUID = 0L;
         case 9: return CODE_INSERT_DIALOG;
         case 10: return CODE_INSERT_DIALOG_INSERT_BUTTON;
         case 11: return CODE_INSERT_DIALOG_LIST_SELECTION;
+        case 59: return CODE_INSERT_DIALOG_GEMINI_BUTTON;
         case 12: return DAL_PANEL;
         case 13: return DAL_PANEL_BROWSE_KEYSTORE_BUTTON;
         case 14: return DAL_PANEL_GENERATE_BUTTON;
