@@ -1323,6 +1323,14 @@ public enum GradleTaskExecutionType
    * <code>SCREENSHOT_TEST = 326;</code>
    */
   SCREENSHOT_TEST(326),
+  /**
+   * <code>ASARS_TO_COMPAT_SPLITS = 327;</code>
+   */
+  ASARS_TO_COMPAT_SPLITS(327),
+  /**
+   * <code>EXTRACT_PRIVACY_SANDBOX_COMPAT_APKS = 328;</code>
+   */
+  EXTRACT_PRIVACY_SANDBOX_COMPAT_APKS(328),
   UNRECOGNIZED(-1),
   ;
 
@@ -2634,6 +2642,14 @@ public enum GradleTaskExecutionType
    * <code>SCREENSHOT_TEST = 326;</code>
    */
   public static final int SCREENSHOT_TEST_VALUE = 326;
+  /**
+   * <code>ASARS_TO_COMPAT_SPLITS = 327;</code>
+   */
+  public static final int ASARS_TO_COMPAT_SPLITS_VALUE = 327;
+  /**
+   * <code>EXTRACT_PRIVACY_SANDBOX_COMPAT_APKS = 328;</code>
+   */
+  public static final int EXTRACT_PRIVACY_SANDBOX_COMPAT_APKS_VALUE = 328;
 
 
   public final int getNumber() {
@@ -2987,6 +3003,8 @@ public enum GradleTaskExecutionType
       case 324: return EXTRACT_VERSION_CONTROL_INFO;
       case 325: return EXPAND_ART_PROFILE_WILDCARDS;
       case 326: return SCREENSHOT_TEST;
+      case 327: return ASARS_TO_COMPAT_SPLITS;
+      case 328: return EXTRACT_PRIVACY_SANDBOX_COMPAT_APKS;
       default: return null;
     }
   }
