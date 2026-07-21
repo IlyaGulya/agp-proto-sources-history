@@ -100,6 +100,18 @@ public enum VariantMethodType
    * <code>DEVICE_TESTS_BUILDER = 21;</code>
    */
   DEVICE_TESTS_BUILDER(21),
+  /**
+   * <code>HOST_TESTS_BUILDER = 22;</code>
+   */
+  HOST_TESTS_BUILDER(22),
+  /**
+   * <code>HOST_TEST_TYPE = 23;</code>
+   */
+  HOST_TEST_TYPE(23),
+  /**
+   * <code>HOST_TEST_ENABLE_CODE_COVERAGE = 24;</code>
+   */
+  HOST_TEST_ENABLE_CODE_COVERAGE(24),
   UNRECOGNIZED(-1),
   ;
 
@@ -195,6 +207,18 @@ public enum VariantMethodType
    * <code>DEVICE_TESTS_BUILDER = 21;</code>
    */
   public static final int DEVICE_TESTS_BUILDER_VALUE = 21;
+  /**
+   * <code>HOST_TESTS_BUILDER = 22;</code>
+   */
+  public static final int HOST_TESTS_BUILDER_VALUE = 22;
+  /**
+   * <code>HOST_TEST_TYPE = 23;</code>
+   */
+  public static final int HOST_TEST_TYPE_VALUE = 23;
+  /**
+   * <code>HOST_TEST_ENABLE_CODE_COVERAGE = 24;</code>
+   */
+  public static final int HOST_TEST_ENABLE_CODE_COVERAGE_VALUE = 24;
 
 
   public final int getNumber() {
@@ -243,6 +267,9 @@ public enum VariantMethodType
       case 19: return ANDROID_RESOURCES_BUILDER;
       case 20: return GENERATE_LOCALE_CONFIG_BUILDER;
       case 21: return DEVICE_TESTS_BUILDER;
+      case 22: return HOST_TESTS_BUILDER;
+      case 23: return HOST_TEST_TYPE;
+      case 24: return HOST_TEST_ENABLE_CODE_COVERAGE;
       default: return null;
     }
   }

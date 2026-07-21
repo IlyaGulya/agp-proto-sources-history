@@ -288,6 +288,34 @@ private static final long serialVersionUID = 0L;
      * <code>INTERNAL_ERROR_NO_BINDING_CONTEXT = 42;</code>
      */
     INTERNAL_ERROR_NO_BINDING_CONTEXT(42),
+    /**
+     * <code>INTERNAL_ERROR_NO_COMPILER_OUTPUT = 43;</code>
+     */
+    INTERNAL_ERROR_NO_COMPILER_OUTPUT(43),
+    /**
+     * <code>INTERNAL_ERROR_FILE_OUTSIDE_MODULE = 44;</code>
+     */
+    INTERNAL_ERROR_FILE_OUTSIDE_MODULE(44),
+    /**
+     * <code>INTERNAL_ERROR_FILE_CODE_GEN = 45;</code>
+     */
+    INTERNAL_ERROR_FILE_CODE_GEN(45),
+    /**
+     * <code>INTERNAL_ERROR_FILE_COMPILE_COMMAND_EXCEPTION = 46;</code>
+     */
+    INTERNAL_ERROR_FILE_COMPILE_COMMAND_EXCEPTION(46),
+    /**
+     * <code>INTERNAL_ERROR_FILE_MULTI_MODULE = 47;</code>
+     */
+    INTERNAL_ERROR_FILE_MULTI_MODULE(47),
+    /**
+     * <code>NO_COMPOSE_PLUGIN = 48;</code>
+     */
+    NO_COMPOSE_PLUGIN(48),
+    /**
+     * <code>NO_IWI = 49;</code>
+     */
+    NO_IWI(49),
     ;
 
     /**
@@ -523,6 +551,34 @@ private static final long serialVersionUID = 0L;
      * <code>INTERNAL_ERROR_NO_BINDING_CONTEXT = 42;</code>
      */
     public static final int INTERNAL_ERROR_NO_BINDING_CONTEXT_VALUE = 42;
+    /**
+     * <code>INTERNAL_ERROR_NO_COMPILER_OUTPUT = 43;</code>
+     */
+    public static final int INTERNAL_ERROR_NO_COMPILER_OUTPUT_VALUE = 43;
+    /**
+     * <code>INTERNAL_ERROR_FILE_OUTSIDE_MODULE = 44;</code>
+     */
+    public static final int INTERNAL_ERROR_FILE_OUTSIDE_MODULE_VALUE = 44;
+    /**
+     * <code>INTERNAL_ERROR_FILE_CODE_GEN = 45;</code>
+     */
+    public static final int INTERNAL_ERROR_FILE_CODE_GEN_VALUE = 45;
+    /**
+     * <code>INTERNAL_ERROR_FILE_COMPILE_COMMAND_EXCEPTION = 46;</code>
+     */
+    public static final int INTERNAL_ERROR_FILE_COMPILE_COMMAND_EXCEPTION_VALUE = 46;
+    /**
+     * <code>INTERNAL_ERROR_FILE_MULTI_MODULE = 47;</code>
+     */
+    public static final int INTERNAL_ERROR_FILE_MULTI_MODULE_VALUE = 47;
+    /**
+     * <code>NO_COMPOSE_PLUGIN = 48;</code>
+     */
+    public static final int NO_COMPOSE_PLUGIN_VALUE = 48;
+    /**
+     * <code>NO_IWI = 49;</code>
+     */
+    public static final int NO_IWI_VALUE = 49;
 
 
     public final int getNumber() {
@@ -588,6 +644,13 @@ private static final long serialVersionUID = 0L;
         case 40: return KOTLIN_EAP;
         case 41: return VIRTUAL_FILE_NOT_EXIST;
         case 42: return INTERNAL_ERROR_NO_BINDING_CONTEXT;
+        case 43: return INTERNAL_ERROR_NO_COMPILER_OUTPUT;
+        case 44: return INTERNAL_ERROR_FILE_OUTSIDE_MODULE;
+        case 45: return INTERNAL_ERROR_FILE_CODE_GEN;
+        case 46: return INTERNAL_ERROR_FILE_COMPILE_COMMAND_EXCEPTION;
+        case 47: return INTERNAL_ERROR_FILE_MULTI_MODULE;
+        case 48: return NO_COMPOSE_PLUGIN;
+        case 49: return NO_IWI;
         default: return null;
       }
     }
