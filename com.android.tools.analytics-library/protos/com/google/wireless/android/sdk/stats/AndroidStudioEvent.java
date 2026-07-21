@@ -3128,6 +3128,16 @@ private static final long serialVersionUID = 0L;
      * <code>VIRTUALIZATION_EVENT = 326;</code>
      */
     VIRTUALIZATION_EVENT(326),
+    /**
+     * <pre>
+     * Event related to finishing of the DaemonCodeAnalyzer iteration.
+     * DaemonCodeAnalyzer manages the background highlighting and auto-import
+     * for files displayed in editors.
+     * </pre>
+     *
+     * <code>DAEMON_CODE_ANALYZER_FINISHED_EVENT = 327;</code>
+     */
+    DAEMON_CODE_ANALYZER_FINISHED_EVENT(327),
     ;
 
     /**
@@ -5562,6 +5572,16 @@ private static final long serialVersionUID = 0L;
      * <code>VIRTUALIZATION_EVENT = 326;</code>
      */
     public static final int VIRTUALIZATION_EVENT_VALUE = 326;
+    /**
+     * <pre>
+     * Event related to finishing of the DaemonCodeAnalyzer iteration.
+     * DaemonCodeAnalyzer manages the background highlighting and auto-import
+     * for files displayed in editors.
+     * </pre>
+     *
+     * <code>DAEMON_CODE_ANALYZER_FINISHED_EVENT = 327;</code>
+     */
+    public static final int DAEMON_CODE_ANALYZER_FINISHED_EVENT_VALUE = 327;
 
 
     public final int getNumber() {
@@ -5906,6 +5926,7 @@ private static final long serialVersionUID = 0L;
         case 324: return SOONG_RUN_EVENT;
         case 325: return STUDIO_CORE_GEMINI_ACTIONS;
         case 326: return VIRTUALIZATION_EVENT;
+        case 327: return DAEMON_CODE_ANALYZER_FINISHED_EVENT;
         default: return null;
       }
     }
@@ -23015,6 +23036,44 @@ private static final long serialVersionUID = 0L;
     return virtualizationEvent_ == null ? com.google.wireless.android.sdk.stats.VirtualizationEvent.getDefaultInstance() : virtualizationEvent_;
   }
 
+  public static final int DAEMON_CODE_ANALYZER_FINISHED_EVENT_FIELD_NUMBER = 209;
+  private com.google.wireless.android.sdk.stats.DaemonCodeAnalyzerFinishedEvent daemonCodeAnalyzerFinishedEvent_;
+  /**
+   * <pre>
+   * set when kind = DAEMON_CODE_ANALYZER_FINISHED_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.DaemonCodeAnalyzerFinishedEvent daemon_code_analyzer_finished_event = 209 [lazy = true];</code>
+   * @return Whether the daemonCodeAnalyzerFinishedEvent field is set.
+   */
+  @java.lang.Override
+  public boolean hasDaemonCodeAnalyzerFinishedEvent() {
+    return ((bitField6_ & 0x00000400) != 0);
+  }
+  /**
+   * <pre>
+   * set when kind = DAEMON_CODE_ANALYZER_FINISHED_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.DaemonCodeAnalyzerFinishedEvent daemon_code_analyzer_finished_event = 209 [lazy = true];</code>
+   * @return The daemonCodeAnalyzerFinishedEvent.
+   */
+  @java.lang.Override
+  public com.google.wireless.android.sdk.stats.DaemonCodeAnalyzerFinishedEvent getDaemonCodeAnalyzerFinishedEvent() {
+    return daemonCodeAnalyzerFinishedEvent_ == null ? com.google.wireless.android.sdk.stats.DaemonCodeAnalyzerFinishedEvent.getDefaultInstance() : daemonCodeAnalyzerFinishedEvent_;
+  }
+  /**
+   * <pre>
+   * set when kind = DAEMON_CODE_ANALYZER_FINISHED_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.DaemonCodeAnalyzerFinishedEvent daemon_code_analyzer_finished_event = 209 [lazy = true];</code>
+   */
+  @java.lang.Override
+  public com.google.wireless.android.sdk.stats.DaemonCodeAnalyzerFinishedEventOrBuilder getDaemonCodeAnalyzerFinishedEventOrBuilder() {
+    return daemonCodeAnalyzerFinishedEvent_ == null ? com.google.wireless.android.sdk.stats.DaemonCodeAnalyzerFinishedEvent.getDefaultInstance() : daemonCodeAnalyzerFinishedEvent_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -23652,6 +23711,9 @@ private static final long serialVersionUID = 0L;
     }
     if (((bitField6_ & 0x00000200) != 0)) {
       output.writeMessage(208, getVirtualizationEvent());
+    }
+    if (((bitField6_ & 0x00000400) != 0)) {
+      output.writeMessage(209, getDaemonCodeAnalyzerFinishedEvent());
     }
     getUnknownFields().writeTo(output);
   }
@@ -24499,6 +24561,10 @@ private static final long serialVersionUID = 0L;
     if (((bitField6_ & 0x00000200) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(208, getVirtualizationEvent());
+    }
+    if (((bitField6_ & 0x00000400) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(209, getDaemonCodeAnalyzerFinishedEvent());
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -25526,6 +25592,11 @@ private static final long serialVersionUID = 0L;
       if (!getVirtualizationEvent()
           .equals(other.getVirtualizationEvent())) return false;
     }
+    if (hasDaemonCodeAnalyzerFinishedEvent() != other.hasDaemonCodeAnalyzerFinishedEvent()) return false;
+    if (hasDaemonCodeAnalyzerFinishedEvent()) {
+      if (!getDaemonCodeAnalyzerFinishedEvent()
+          .equals(other.getDaemonCodeAnalyzerFinishedEvent())) return false;
+    }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -26371,6 +26442,10 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + VIRTUALIZATION_EVENT_FIELD_NUMBER;
       hash = (53 * hash) + getVirtualizationEvent().hashCode();
     }
+    if (hasDaemonCodeAnalyzerFinishedEvent()) {
+      hash = (37 * hash) + DAEMON_CODE_ANALYZER_FINISHED_EVENT_FIELD_NUMBER;
+      hash = (53 * hash) + getDaemonCodeAnalyzerFinishedEvent().hashCode();
+    }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -26684,6 +26759,7 @@ private static final long serialVersionUID = 0L;
         getSoongRunEventFieldBuilder();
         getAndroidStudioCoreGeminiActionsEventFieldBuilder();
         getVirtualizationEventFieldBuilder();
+        getDaemonCodeAnalyzerFinishedEventFieldBuilder();
       }
     }
     @java.lang.Override
@@ -27848,6 +27924,12 @@ private static final long serialVersionUID = 0L;
         virtualizationEventBuilder_.clear();
       }
       bitField6_ = (bitField6_ & ~0x00008000);
+      if (daemonCodeAnalyzerFinishedEventBuilder_ == null) {
+        daemonCodeAnalyzerFinishedEvent_ = null;
+      } else {
+        daemonCodeAnalyzerFinishedEventBuilder_.clear();
+      }
+      bitField6_ = (bitField6_ & ~0x00010000);
       return this;
     }
 
@@ -29466,6 +29548,14 @@ private static final long serialVersionUID = 0L;
         }
         to_bitField6_ |= 0x00000200;
       }
+      if (((from_bitField6_ & 0x00010000) != 0)) {
+        if (daemonCodeAnalyzerFinishedEventBuilder_ == null) {
+          result.daemonCodeAnalyzerFinishedEvent_ = daemonCodeAnalyzerFinishedEvent_;
+        } else {
+          result.daemonCodeAnalyzerFinishedEvent_ = daemonCodeAnalyzerFinishedEventBuilder_.build();
+        }
+        to_bitField6_ |= 0x00000400;
+      }
       result.bitField0_ = to_bitField0_;
       result.bitField1_ = to_bitField1_;
       result.bitField2_ = to_bitField2_;
@@ -30248,6 +30338,9 @@ private static final long serialVersionUID = 0L;
       }
       if (other.hasVirtualizationEvent()) {
         mergeVirtualizationEvent(other.getVirtualizationEvent());
+      }
+      if (other.hasDaemonCodeAnalyzerFinishedEvent()) {
+        mergeDaemonCodeAnalyzerFinishedEvent(other.getDaemonCodeAnalyzerFinishedEvent());
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -31799,6 +31892,13 @@ private static final long serialVersionUID = 0L;
               bitField6_ |= 0x00008000;
               break;
             } // case 1666
+            case 1674: {
+              input.readMessage(
+                  getDaemonCodeAnalyzerFinishedEventFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField6_ |= 0x00010000;
+              break;
+            } // case 1674
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -63576,6 +63676,162 @@ private static final long serialVersionUID = 0L;
         virtualizationEvent_ = null;
       }
       return virtualizationEventBuilder_;
+    }
+
+    private com.google.wireless.android.sdk.stats.DaemonCodeAnalyzerFinishedEvent daemonCodeAnalyzerFinishedEvent_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.DaemonCodeAnalyzerFinishedEvent, com.google.wireless.android.sdk.stats.DaemonCodeAnalyzerFinishedEvent.Builder, com.google.wireless.android.sdk.stats.DaemonCodeAnalyzerFinishedEventOrBuilder> daemonCodeAnalyzerFinishedEventBuilder_;
+    /**
+     * <pre>
+     * set when kind = DAEMON_CODE_ANALYZER_FINISHED_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.DaemonCodeAnalyzerFinishedEvent daemon_code_analyzer_finished_event = 209 [lazy = true];</code>
+     * @return Whether the daemonCodeAnalyzerFinishedEvent field is set.
+     */
+    public boolean hasDaemonCodeAnalyzerFinishedEvent() {
+      return ((bitField6_ & 0x00010000) != 0);
+    }
+    /**
+     * <pre>
+     * set when kind = DAEMON_CODE_ANALYZER_FINISHED_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.DaemonCodeAnalyzerFinishedEvent daemon_code_analyzer_finished_event = 209 [lazy = true];</code>
+     * @return The daemonCodeAnalyzerFinishedEvent.
+     */
+    public com.google.wireless.android.sdk.stats.DaemonCodeAnalyzerFinishedEvent getDaemonCodeAnalyzerFinishedEvent() {
+      if (daemonCodeAnalyzerFinishedEventBuilder_ == null) {
+        return daemonCodeAnalyzerFinishedEvent_ == null ? com.google.wireless.android.sdk.stats.DaemonCodeAnalyzerFinishedEvent.getDefaultInstance() : daemonCodeAnalyzerFinishedEvent_;
+      } else {
+        return daemonCodeAnalyzerFinishedEventBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * set when kind = DAEMON_CODE_ANALYZER_FINISHED_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.DaemonCodeAnalyzerFinishedEvent daemon_code_analyzer_finished_event = 209 [lazy = true];</code>
+     */
+    public Builder setDaemonCodeAnalyzerFinishedEvent(com.google.wireless.android.sdk.stats.DaemonCodeAnalyzerFinishedEvent value) {
+      if (daemonCodeAnalyzerFinishedEventBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        daemonCodeAnalyzerFinishedEvent_ = value;
+        onChanged();
+      } else {
+        daemonCodeAnalyzerFinishedEventBuilder_.setMessage(value);
+      }
+      bitField6_ |= 0x00010000;
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = DAEMON_CODE_ANALYZER_FINISHED_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.DaemonCodeAnalyzerFinishedEvent daemon_code_analyzer_finished_event = 209 [lazy = true];</code>
+     */
+    public Builder setDaemonCodeAnalyzerFinishedEvent(
+        com.google.wireless.android.sdk.stats.DaemonCodeAnalyzerFinishedEvent.Builder builderForValue) {
+      if (daemonCodeAnalyzerFinishedEventBuilder_ == null) {
+        daemonCodeAnalyzerFinishedEvent_ = builderForValue.build();
+        onChanged();
+      } else {
+        daemonCodeAnalyzerFinishedEventBuilder_.setMessage(builderForValue.build());
+      }
+      bitField6_ |= 0x00010000;
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = DAEMON_CODE_ANALYZER_FINISHED_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.DaemonCodeAnalyzerFinishedEvent daemon_code_analyzer_finished_event = 209 [lazy = true];</code>
+     */
+    public Builder mergeDaemonCodeAnalyzerFinishedEvent(com.google.wireless.android.sdk.stats.DaemonCodeAnalyzerFinishedEvent value) {
+      if (daemonCodeAnalyzerFinishedEventBuilder_ == null) {
+        if (((bitField6_ & 0x00010000) != 0) &&
+            daemonCodeAnalyzerFinishedEvent_ != null &&
+            daemonCodeAnalyzerFinishedEvent_ != com.google.wireless.android.sdk.stats.DaemonCodeAnalyzerFinishedEvent.getDefaultInstance()) {
+          daemonCodeAnalyzerFinishedEvent_ =
+            com.google.wireless.android.sdk.stats.DaemonCodeAnalyzerFinishedEvent.newBuilder(daemonCodeAnalyzerFinishedEvent_).mergeFrom(value).buildPartial();
+        } else {
+          daemonCodeAnalyzerFinishedEvent_ = value;
+        }
+        onChanged();
+      } else {
+        daemonCodeAnalyzerFinishedEventBuilder_.mergeFrom(value);
+      }
+      bitField6_ |= 0x00010000;
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = DAEMON_CODE_ANALYZER_FINISHED_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.DaemonCodeAnalyzerFinishedEvent daemon_code_analyzer_finished_event = 209 [lazy = true];</code>
+     */
+    public Builder clearDaemonCodeAnalyzerFinishedEvent() {
+      if (daemonCodeAnalyzerFinishedEventBuilder_ == null) {
+        daemonCodeAnalyzerFinishedEvent_ = null;
+        onChanged();
+      } else {
+        daemonCodeAnalyzerFinishedEventBuilder_.clear();
+      }
+      bitField6_ = (bitField6_ & ~0x00010000);
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = DAEMON_CODE_ANALYZER_FINISHED_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.DaemonCodeAnalyzerFinishedEvent daemon_code_analyzer_finished_event = 209 [lazy = true];</code>
+     */
+    public com.google.wireless.android.sdk.stats.DaemonCodeAnalyzerFinishedEvent.Builder getDaemonCodeAnalyzerFinishedEventBuilder() {
+      bitField6_ |= 0x00010000;
+      onChanged();
+      return getDaemonCodeAnalyzerFinishedEventFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * set when kind = DAEMON_CODE_ANALYZER_FINISHED_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.DaemonCodeAnalyzerFinishedEvent daemon_code_analyzer_finished_event = 209 [lazy = true];</code>
+     */
+    public com.google.wireless.android.sdk.stats.DaemonCodeAnalyzerFinishedEventOrBuilder getDaemonCodeAnalyzerFinishedEventOrBuilder() {
+      if (daemonCodeAnalyzerFinishedEventBuilder_ != null) {
+        return daemonCodeAnalyzerFinishedEventBuilder_.getMessageOrBuilder();
+      } else {
+        return daemonCodeAnalyzerFinishedEvent_ == null ?
+            com.google.wireless.android.sdk.stats.DaemonCodeAnalyzerFinishedEvent.getDefaultInstance() : daemonCodeAnalyzerFinishedEvent_;
+      }
+    }
+    /**
+     * <pre>
+     * set when kind = DAEMON_CODE_ANALYZER_FINISHED_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.DaemonCodeAnalyzerFinishedEvent daemon_code_analyzer_finished_event = 209 [lazy = true];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.DaemonCodeAnalyzerFinishedEvent, com.google.wireless.android.sdk.stats.DaemonCodeAnalyzerFinishedEvent.Builder, com.google.wireless.android.sdk.stats.DaemonCodeAnalyzerFinishedEventOrBuilder> 
+        getDaemonCodeAnalyzerFinishedEventFieldBuilder() {
+      if (daemonCodeAnalyzerFinishedEventBuilder_ == null) {
+        daemonCodeAnalyzerFinishedEventBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.wireless.android.sdk.stats.DaemonCodeAnalyzerFinishedEvent, com.google.wireless.android.sdk.stats.DaemonCodeAnalyzerFinishedEvent.Builder, com.google.wireless.android.sdk.stats.DaemonCodeAnalyzerFinishedEventOrBuilder>(
+                getDaemonCodeAnalyzerFinishedEvent(),
+                getParentForChildren(),
+                isClean());
+        daemonCodeAnalyzerFinishedEvent_ = null;
+      }
+      return daemonCodeAnalyzerFinishedEventBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(
