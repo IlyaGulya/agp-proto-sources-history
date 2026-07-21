@@ -3183,6 +3183,15 @@ private static final long serialVersionUID = 0L;
      * <code>ADB_DELEGATE_USAGE_EVENT = 333;</code>
      */
     ADB_DELEGATE_USAGE_EVENT(333),
+    /**
+     * <pre>
+     * Event for tracking usages of the various setup Wizards (first run,
+     * AEHD configuration, etc)
+     * </pre>
+     *
+     * <code>SETUP_WIZARD_EVENT = 334;</code>
+     */
+    SETUP_WIZARD_EVENT(334),
     ;
 
     /**
@@ -5675,6 +5684,15 @@ private static final long serialVersionUID = 0L;
      * <code>ADB_DELEGATE_USAGE_EVENT = 333;</code>
      */
     public static final int ADB_DELEGATE_USAGE_EVENT_VALUE = 333;
+    /**
+     * <pre>
+     * Event for tracking usages of the various setup Wizards (first run,
+     * AEHD configuration, etc)
+     * </pre>
+     *
+     * <code>SETUP_WIZARD_EVENT = 334;</code>
+     */
+    public static final int SETUP_WIZARD_EVENT_VALUE = 334;
 
 
     public final int getNumber() {
@@ -6026,6 +6044,7 @@ private static final long serialVersionUID = 0L;
         case 331: return PROMPT_LIBRARY_EVENT;
         case 332: return SDK_INDEX_LIBRARY_IS_DEPRECATED;
         case 333: return ADB_DELEGATE_USAGE_EVENT;
+        case 334: return SETUP_WIZARD_EVENT;
         default: return null;
       }
     }
@@ -11712,7 +11731,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional uint32 min_sdk = 2 [deprecated = true];</code>
        * @deprecated android_studio.AndroidStudioEvent.TemplatesUsage.TemplateModule.min_sdk is deprecated.
-       *     See studio_stats.proto;l=1929
+       *     See studio_stats.proto;l=1936
        * @return Whether the minSdk field is set.
        */
       @java.lang.Deprecated boolean hasMinSdk();
@@ -11723,7 +11742,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional uint32 min_sdk = 2 [deprecated = true];</code>
        * @deprecated android_studio.AndroidStudioEvent.TemplatesUsage.TemplateModule.min_sdk is deprecated.
-       *     See studio_stats.proto;l=1929
+       *     See studio_stats.proto;l=1936
        * @return The minSdk.
        */
       @java.lang.Deprecated int getMinSdk();
@@ -12254,7 +12273,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional uint32 min_sdk = 2 [deprecated = true];</code>
        * @deprecated android_studio.AndroidStudioEvent.TemplatesUsage.TemplateModule.min_sdk is deprecated.
-       *     See studio_stats.proto;l=1929
+       *     See studio_stats.proto;l=1936
        * @return Whether the minSdk field is set.
        */
       @java.lang.Override
@@ -12268,7 +12287,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional uint32 min_sdk = 2 [deprecated = true];</code>
        * @deprecated android_studio.AndroidStudioEvent.TemplatesUsage.TemplateModule.min_sdk is deprecated.
-       *     See studio_stats.proto;l=1929
+       *     See studio_stats.proto;l=1936
        * @return The minSdk.
        */
       @java.lang.Override
@@ -12906,7 +12925,7 @@ private static final long serialVersionUID = 0L;
          *
          * <code>optional uint32 min_sdk = 2 [deprecated = true];</code>
          * @deprecated android_studio.AndroidStudioEvent.TemplatesUsage.TemplateModule.min_sdk is deprecated.
-         *     See studio_stats.proto;l=1929
+         *     See studio_stats.proto;l=1936
          * @return Whether the minSdk field is set.
          */
         @java.lang.Override
@@ -12920,7 +12939,7 @@ private static final long serialVersionUID = 0L;
          *
          * <code>optional uint32 min_sdk = 2 [deprecated = true];</code>
          * @deprecated android_studio.AndroidStudioEvent.TemplatesUsage.TemplateModule.min_sdk is deprecated.
-         *     See studio_stats.proto;l=1929
+         *     See studio_stats.proto;l=1936
          * @return The minSdk.
          */
         @java.lang.Override
@@ -12934,7 +12953,7 @@ private static final long serialVersionUID = 0L;
          *
          * <code>optional uint32 min_sdk = 2 [deprecated = true];</code>
          * @deprecated android_studio.AndroidStudioEvent.TemplatesUsage.TemplateModule.min_sdk is deprecated.
-         *     See studio_stats.proto;l=1929
+         *     See studio_stats.proto;l=1936
          * @param value The minSdk to set.
          * @return This builder for chaining.
          */
@@ -12952,7 +12971,7 @@ private static final long serialVersionUID = 0L;
          *
          * <code>optional uint32 min_sdk = 2 [deprecated = true];</code>
          * @deprecated android_studio.AndroidStudioEvent.TemplatesUsage.TemplateModule.min_sdk is deprecated.
-         *     See studio_stats.proto;l=1929
+         *     See studio_stats.proto;l=1936
          * @return This builder for chaining.
          */
         @java.lang.Deprecated public Builder clearMinSdk() {
@@ -23787,6 +23806,44 @@ private static final long serialVersionUID = 0L;
     return adbDelegateUsageEvent_ == null ? com.google.wireless.android.sdk.stats.AdbDelegateUsageEvent.getDefaultInstance() : adbDelegateUsageEvent_;
   }
 
+  public static final int SETUP_WIZARD_EVENT_FIELD_NUMBER = 215;
+  private com.google.wireless.android.sdk.stats.SetupWizardEvent setupWizardEvent_;
+  /**
+   * <pre>
+   * set when kind = SETUP_WIZARD_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.SetupWizardEvent setup_wizard_event = 215 [lazy = true];</code>
+   * @return Whether the setupWizardEvent field is set.
+   */
+  @java.lang.Override
+  public boolean hasSetupWizardEvent() {
+    return ((bitField6_ & 0x00010000) != 0);
+  }
+  /**
+   * <pre>
+   * set when kind = SETUP_WIZARD_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.SetupWizardEvent setup_wizard_event = 215 [lazy = true];</code>
+   * @return The setupWizardEvent.
+   */
+  @java.lang.Override
+  public com.google.wireless.android.sdk.stats.SetupWizardEvent getSetupWizardEvent() {
+    return setupWizardEvent_ == null ? com.google.wireless.android.sdk.stats.SetupWizardEvent.getDefaultInstance() : setupWizardEvent_;
+  }
+  /**
+   * <pre>
+   * set when kind = SETUP_WIZARD_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.SetupWizardEvent setup_wizard_event = 215 [lazy = true];</code>
+   */
+  @java.lang.Override
+  public com.google.wireless.android.sdk.stats.SetupWizardEventOrBuilder getSetupWizardEventOrBuilder() {
+    return setupWizardEvent_ == null ? com.google.wireless.android.sdk.stats.SetupWizardEvent.getDefaultInstance() : setupWizardEvent_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -24442,6 +24499,9 @@ private static final long serialVersionUID = 0L;
     }
     if (((bitField6_ & 0x00008000) != 0)) {
       output.writeMessage(214, getAdbDelegateUsageEvent());
+    }
+    if (((bitField6_ & 0x00010000) != 0)) {
+      output.writeMessage(215, getSetupWizardEvent());
     }
     getUnknownFields().writeTo(output);
   }
@@ -25313,6 +25373,10 @@ private static final long serialVersionUID = 0L;
     if (((bitField6_ & 0x00008000) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(214, getAdbDelegateUsageEvent());
+    }
+    if (((bitField6_ & 0x00010000) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(215, getSetupWizardEvent());
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -26370,6 +26434,11 @@ private static final long serialVersionUID = 0L;
       if (!getAdbDelegateUsageEvent()
           .equals(other.getAdbDelegateUsageEvent())) return false;
     }
+    if (hasSetupWizardEvent() != other.hasSetupWizardEvent()) return false;
+    if (hasSetupWizardEvent()) {
+      if (!getSetupWizardEvent()
+          .equals(other.getSetupWizardEvent())) return false;
+    }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -27239,6 +27308,10 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + ADB_DELEGATE_USAGE_EVENT_FIELD_NUMBER;
       hash = (53 * hash) + getAdbDelegateUsageEvent().hashCode();
     }
+    if (hasSetupWizardEvent()) {
+      hash = (37 * hash) + SETUP_WIZARD_EVENT_FIELD_NUMBER;
+      hash = (53 * hash) + getSetupWizardEvent().hashCode();
+    }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -27558,6 +27631,7 @@ private static final long serialVersionUID = 0L;
         getPromptLibraryEventFieldBuilder();
         getGradleFailureDetailsFieldBuilder();
         getAdbDelegateUsageEventFieldBuilder();
+        getSetupWizardEventFieldBuilder();
       }
     }
     @java.lang.Override
@@ -28556,6 +28630,11 @@ private static final long serialVersionUID = 0L;
       if (adbDelegateUsageEventBuilder_ != null) {
         adbDelegateUsageEventBuilder_.dispose();
         adbDelegateUsageEventBuilder_ = null;
+      }
+      setupWizardEvent_ = null;
+      if (setupWizardEventBuilder_ != null) {
+        setupWizardEventBuilder_.dispose();
+        setupWizardEventBuilder_ = null;
       }
       return this;
     }
@@ -29892,6 +29971,12 @@ private static final long serialVersionUID = 0L;
             : adbDelegateUsageEventBuilder_.build();
         to_bitField6_ |= 0x00008000;
       }
+      if (((from_bitField6_ & 0x00400000) != 0)) {
+        result.setupWizardEvent_ = setupWizardEventBuilder_ == null
+            ? setupWizardEvent_
+            : setupWizardEventBuilder_.build();
+        to_bitField6_ |= 0x00010000;
+      }
       result.bitField5_ |= to_bitField5_;
       result.bitField6_ |= to_bitField6_;
     }
@@ -30653,6 +30738,9 @@ private static final long serialVersionUID = 0L;
       }
       if (other.hasAdbDelegateUsageEvent()) {
         mergeAdbDelegateUsageEvent(other.getAdbDelegateUsageEvent());
+      }
+      if (other.hasSetupWizardEvent()) {
+        mergeSetupWizardEvent(other.getSetupWizardEvent());
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -32246,6 +32334,13 @@ private static final long serialVersionUID = 0L;
               bitField6_ |= 0x00200000;
               break;
             } // case 1714
+            case 1722: {
+              input.readMessage(
+                  getSetupWizardEventFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField6_ |= 0x00400000;
+              break;
+            } // case 1722
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -64775,6 +64870,161 @@ private static final long serialVersionUID = 0L;
         adbDelegateUsageEvent_ = null;
       }
       return adbDelegateUsageEventBuilder_;
+    }
+
+    private com.google.wireless.android.sdk.stats.SetupWizardEvent setupWizardEvent_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.SetupWizardEvent, com.google.wireless.android.sdk.stats.SetupWizardEvent.Builder, com.google.wireless.android.sdk.stats.SetupWizardEventOrBuilder> setupWizardEventBuilder_;
+    /**
+     * <pre>
+     * set when kind = SETUP_WIZARD_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.SetupWizardEvent setup_wizard_event = 215 [lazy = true];</code>
+     * @return Whether the setupWizardEvent field is set.
+     */
+    public boolean hasSetupWizardEvent() {
+      return ((bitField6_ & 0x00400000) != 0);
+    }
+    /**
+     * <pre>
+     * set when kind = SETUP_WIZARD_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.SetupWizardEvent setup_wizard_event = 215 [lazy = true];</code>
+     * @return The setupWizardEvent.
+     */
+    public com.google.wireless.android.sdk.stats.SetupWizardEvent getSetupWizardEvent() {
+      if (setupWizardEventBuilder_ == null) {
+        return setupWizardEvent_ == null ? com.google.wireless.android.sdk.stats.SetupWizardEvent.getDefaultInstance() : setupWizardEvent_;
+      } else {
+        return setupWizardEventBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * set when kind = SETUP_WIZARD_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.SetupWizardEvent setup_wizard_event = 215 [lazy = true];</code>
+     */
+    public Builder setSetupWizardEvent(com.google.wireless.android.sdk.stats.SetupWizardEvent value) {
+      if (setupWizardEventBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        setupWizardEvent_ = value;
+      } else {
+        setupWizardEventBuilder_.setMessage(value);
+      }
+      bitField6_ |= 0x00400000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = SETUP_WIZARD_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.SetupWizardEvent setup_wizard_event = 215 [lazy = true];</code>
+     */
+    public Builder setSetupWizardEvent(
+        com.google.wireless.android.sdk.stats.SetupWizardEvent.Builder builderForValue) {
+      if (setupWizardEventBuilder_ == null) {
+        setupWizardEvent_ = builderForValue.build();
+      } else {
+        setupWizardEventBuilder_.setMessage(builderForValue.build());
+      }
+      bitField6_ |= 0x00400000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = SETUP_WIZARD_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.SetupWizardEvent setup_wizard_event = 215 [lazy = true];</code>
+     */
+    public Builder mergeSetupWizardEvent(com.google.wireless.android.sdk.stats.SetupWizardEvent value) {
+      if (setupWizardEventBuilder_ == null) {
+        if (((bitField6_ & 0x00400000) != 0) &&
+          setupWizardEvent_ != null &&
+          setupWizardEvent_ != com.google.wireless.android.sdk.stats.SetupWizardEvent.getDefaultInstance()) {
+          getSetupWizardEventBuilder().mergeFrom(value);
+        } else {
+          setupWizardEvent_ = value;
+        }
+      } else {
+        setupWizardEventBuilder_.mergeFrom(value);
+      }
+      bitField6_ |= 0x00400000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = SETUP_WIZARD_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.SetupWizardEvent setup_wizard_event = 215 [lazy = true];</code>
+     */
+    public Builder clearSetupWizardEvent() {
+      bitField6_ = (bitField6_ & ~0x00400000);
+      setupWizardEvent_ = null;
+      if (setupWizardEventBuilder_ != null) {
+        setupWizardEventBuilder_.dispose();
+        setupWizardEventBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = SETUP_WIZARD_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.SetupWizardEvent setup_wizard_event = 215 [lazy = true];</code>
+     */
+    public com.google.wireless.android.sdk.stats.SetupWizardEvent.Builder getSetupWizardEventBuilder() {
+      bitField6_ |= 0x00400000;
+      onChanged();
+      return getSetupWizardEventFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * set when kind = SETUP_WIZARD_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.SetupWizardEvent setup_wizard_event = 215 [lazy = true];</code>
+     */
+    public com.google.wireless.android.sdk.stats.SetupWizardEventOrBuilder getSetupWizardEventOrBuilder() {
+      if (setupWizardEventBuilder_ != null) {
+        return setupWizardEventBuilder_.getMessageOrBuilder();
+      } else {
+        return setupWizardEvent_ == null ?
+            com.google.wireless.android.sdk.stats.SetupWizardEvent.getDefaultInstance() : setupWizardEvent_;
+      }
+    }
+    /**
+     * <pre>
+     * set when kind = SETUP_WIZARD_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.SetupWizardEvent setup_wizard_event = 215 [lazy = true];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.SetupWizardEvent, com.google.wireless.android.sdk.stats.SetupWizardEvent.Builder, com.google.wireless.android.sdk.stats.SetupWizardEventOrBuilder> 
+        getSetupWizardEventFieldBuilder() {
+      if (setupWizardEventBuilder_ == null) {
+        setupWizardEventBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.wireless.android.sdk.stats.SetupWizardEvent, com.google.wireless.android.sdk.stats.SetupWizardEvent.Builder, com.google.wireless.android.sdk.stats.SetupWizardEventOrBuilder>(
+                getSetupWizardEvent(),
+                getParentForChildren(),
+                isClean());
+        setupWizardEvent_ = null;
+      }
+      return setupWizardEventBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

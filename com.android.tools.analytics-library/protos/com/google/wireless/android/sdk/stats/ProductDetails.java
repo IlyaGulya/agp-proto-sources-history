@@ -28,6 +28,7 @@ private static final long serialVersionUID = 0L;
     theme_ = 0;
     experimentId_ =
         com.google.protobuf.LazyStringArrayList.emptyList();
+    activeExperiments_ = java.util.Collections.emptyList();
   }
 
   @java.lang.Override
@@ -630,6 +631,665 @@ private static final long serialVersionUID = 0L;
     // @@protoc_insertion_point(enum_scope:android_studio.ProductDetails.IdeTheme)
   }
 
+  public interface ActiveExperimentOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:android_studio.ProductDetails.ActiveExperiment)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>optional string experiment_id = 1;</code>
+     * @return Whether the experimentId field is set.
+     */
+    boolean hasExperimentId();
+    /**
+     * <code>optional string experiment_id = 1;</code>
+     * @return The experimentId.
+     */
+    java.lang.String getExperimentId();
+    /**
+     * <code>optional string experiment_id = 1;</code>
+     * @return The bytes for experimentId.
+     */
+    com.google.protobuf.ByteString
+        getExperimentIdBytes();
+
+    /**
+     * <code>optional int32 value_index = 2;</code>
+     * @return Whether the valueIndex field is set.
+     */
+    boolean hasValueIndex();
+    /**
+     * <code>optional int32 value_index = 2;</code>
+     * @return The valueIndex.
+     */
+    int getValueIndex();
+  }
+  /**
+   * <pre>
+   * The active experiment (server flag) and its assigned value's index as
+   * defined in the server configuration.
+   * </pre>
+   *
+   * Protobuf type {@code android_studio.ProductDetails.ActiveExperiment}
+   */
+  public static final class ActiveExperiment extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:android_studio.ProductDetails.ActiveExperiment)
+      ActiveExperimentOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use ActiveExperiment.newBuilder() to construct.
+    private ActiveExperiment(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ActiveExperiment() {
+      experimentId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ActiveExperiment();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_ProductDetails_ActiveExperiment_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_ProductDetails_ActiveExperiment_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.google.wireless.android.sdk.stats.ProductDetails.ActiveExperiment.class, com.google.wireless.android.sdk.stats.ProductDetails.ActiveExperiment.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int EXPERIMENT_ID_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object experimentId_ = "";
+    /**
+     * <code>optional string experiment_id = 1;</code>
+     * @return Whether the experimentId field is set.
+     */
+    @java.lang.Override
+    public boolean hasExperimentId() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <code>optional string experiment_id = 1;</code>
+     * @return The experimentId.
+     */
+    @java.lang.Override
+    public java.lang.String getExperimentId() {
+      java.lang.Object ref = experimentId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          experimentId_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string experiment_id = 1;</code>
+     * @return The bytes for experimentId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getExperimentIdBytes() {
+      java.lang.Object ref = experimentId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        experimentId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int VALUE_INDEX_FIELD_NUMBER = 2;
+    private int valueIndex_ = 0;
+    /**
+     * <code>optional int32 value_index = 2;</code>
+     * @return Whether the valueIndex field is set.
+     */
+    @java.lang.Override
+    public boolean hasValueIndex() {
+      return ((bitField0_ & 0x00000002) != 0);
+    }
+    /**
+     * <code>optional int32 value_index = 2;</code>
+     * @return The valueIndex.
+     */
+    @java.lang.Override
+    public int getValueIndex() {
+      return valueIndex_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (((bitField0_ & 0x00000001) != 0)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, experimentId_);
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        output.writeInt32(2, valueIndex_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) != 0)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, experimentId_);
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(2, valueIndex_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.google.wireless.android.sdk.stats.ProductDetails.ActiveExperiment)) {
+        return super.equals(obj);
+      }
+      com.google.wireless.android.sdk.stats.ProductDetails.ActiveExperiment other = (com.google.wireless.android.sdk.stats.ProductDetails.ActiveExperiment) obj;
+
+      if (hasExperimentId() != other.hasExperimentId()) return false;
+      if (hasExperimentId()) {
+        if (!getExperimentId()
+            .equals(other.getExperimentId())) return false;
+      }
+      if (hasValueIndex() != other.hasValueIndex()) return false;
+      if (hasValueIndex()) {
+        if (getValueIndex()
+            != other.getValueIndex()) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasExperimentId()) {
+        hash = (37 * hash) + EXPERIMENT_ID_FIELD_NUMBER;
+        hash = (53 * hash) + getExperimentId().hashCode();
+      }
+      if (hasValueIndex()) {
+        hash = (37 * hash) + VALUE_INDEX_FIELD_NUMBER;
+        hash = (53 * hash) + getValueIndex();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.google.wireless.android.sdk.stats.ProductDetails.ActiveExperiment parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.google.wireless.android.sdk.stats.ProductDetails.ActiveExperiment parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.google.wireless.android.sdk.stats.ProductDetails.ActiveExperiment parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.google.wireless.android.sdk.stats.ProductDetails.ActiveExperiment parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.google.wireless.android.sdk.stats.ProductDetails.ActiveExperiment parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.google.wireless.android.sdk.stats.ProductDetails.ActiveExperiment parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.google.wireless.android.sdk.stats.ProductDetails.ActiveExperiment parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.google.wireless.android.sdk.stats.ProductDetails.ActiveExperiment parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.google.wireless.android.sdk.stats.ProductDetails.ActiveExperiment parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.google.wireless.android.sdk.stats.ProductDetails.ActiveExperiment parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.google.wireless.android.sdk.stats.ProductDetails.ActiveExperiment parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.google.wireless.android.sdk.stats.ProductDetails.ActiveExperiment parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.google.wireless.android.sdk.stats.ProductDetails.ActiveExperiment prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * The active experiment (server flag) and its assigned value's index as
+     * defined in the server configuration.
+     * </pre>
+     *
+     * Protobuf type {@code android_studio.ProductDetails.ActiveExperiment}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:android_studio.ProductDetails.ActiveExperiment)
+        com.google.wireless.android.sdk.stats.ProductDetails.ActiveExperimentOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_ProductDetails_ActiveExperiment_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_ProductDetails_ActiveExperiment_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.google.wireless.android.sdk.stats.ProductDetails.ActiveExperiment.class, com.google.wireless.android.sdk.stats.ProductDetails.ActiveExperiment.Builder.class);
+      }
+
+      // Construct using com.google.wireless.android.sdk.stats.ProductDetails.ActiveExperiment.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        experimentId_ = "";
+        valueIndex_ = 0;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_ProductDetails_ActiveExperiment_descriptor;
+      }
+
+      @java.lang.Override
+      public com.google.wireless.android.sdk.stats.ProductDetails.ActiveExperiment getDefaultInstanceForType() {
+        return com.google.wireless.android.sdk.stats.ProductDetails.ActiveExperiment.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.google.wireless.android.sdk.stats.ProductDetails.ActiveExperiment build() {
+        com.google.wireless.android.sdk.stats.ProductDetails.ActiveExperiment result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.google.wireless.android.sdk.stats.ProductDetails.ActiveExperiment buildPartial() {
+        com.google.wireless.android.sdk.stats.ProductDetails.ActiveExperiment result = new com.google.wireless.android.sdk.stats.ProductDetails.ActiveExperiment(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.google.wireless.android.sdk.stats.ProductDetails.ActiveExperiment result) {
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.experimentId_ = experimentId_;
+          to_bitField0_ |= 0x00000001;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.valueIndex_ = valueIndex_;
+          to_bitField0_ |= 0x00000002;
+        }
+        result.bitField0_ |= to_bitField0_;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.google.wireless.android.sdk.stats.ProductDetails.ActiveExperiment) {
+          return mergeFrom((com.google.wireless.android.sdk.stats.ProductDetails.ActiveExperiment)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.google.wireless.android.sdk.stats.ProductDetails.ActiveExperiment other) {
+        if (other == com.google.wireless.android.sdk.stats.ProductDetails.ActiveExperiment.getDefaultInstance()) return this;
+        if (other.hasExperimentId()) {
+          experimentId_ = other.experimentId_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (other.hasValueIndex()) {
+          setValueIndex(other.getValueIndex());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                experimentId_ = input.readBytes();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 16: {
+                valueIndex_ = input.readInt32();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 16
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object experimentId_ = "";
+      /**
+       * <code>optional string experiment_id = 1;</code>
+       * @return Whether the experimentId field is set.
+       */
+      public boolean hasExperimentId() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>optional string experiment_id = 1;</code>
+       * @return The experimentId.
+       */
+      public java.lang.String getExperimentId() {
+        java.lang.Object ref = experimentId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            experimentId_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string experiment_id = 1;</code>
+       * @return The bytes for experimentId.
+       */
+      public com.google.protobuf.ByteString
+          getExperimentIdBytes() {
+        java.lang.Object ref = experimentId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          experimentId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string experiment_id = 1;</code>
+       * @param value The experimentId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setExperimentId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        experimentId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string experiment_id = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearExperimentId() {
+        experimentId_ = getDefaultInstance().getExperimentId();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string experiment_id = 1;</code>
+       * @param value The bytes for experimentId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setExperimentIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        experimentId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private int valueIndex_ ;
+      /**
+       * <code>optional int32 value_index = 2;</code>
+       * @return Whether the valueIndex field is set.
+       */
+      @java.lang.Override
+      public boolean hasValueIndex() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <code>optional int32 value_index = 2;</code>
+       * @return The valueIndex.
+       */
+      @java.lang.Override
+      public int getValueIndex() {
+        return valueIndex_;
+      }
+      /**
+       * <code>optional int32 value_index = 2;</code>
+       * @param value The valueIndex to set.
+       * @return This builder for chaining.
+       */
+      public Builder setValueIndex(int value) {
+
+        valueIndex_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int32 value_index = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearValueIndex() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        valueIndex_ = 0;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:android_studio.ProductDetails.ActiveExperiment)
+    }
+
+    // @@protoc_insertion_point(class_scope:android_studio.ProductDetails.ActiveExperiment)
+    private static final com.google.wireless.android.sdk.stats.ProductDetails.ActiveExperiment DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.google.wireless.android.sdk.stats.ProductDetails.ActiveExperiment();
+    }
+
+    public static com.google.wireless.android.sdk.stats.ProductDetails.ActiveExperiment getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<ActiveExperiment>
+        PARSER = new com.google.protobuf.AbstractParser<ActiveExperiment>() {
+      @java.lang.Override
+      public ActiveExperiment parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<ActiveExperiment> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ActiveExperiment> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.wireless.android.sdk.stats.ProductDetails.ActiveExperiment getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private int bitField0_;
   public static final int PRODUCT_FIELD_NUMBER = 1;
   private int product_ = 0;
@@ -789,7 +1449,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>optional bool preview = 4 [deprecated = true];</code>
    * @deprecated android_studio.ProductDetails.preview is deprecated.
-   *     See studio_stats.proto;l=2342
+   *     See studio_stats.proto;l=2349
    * @return Whether the preview field is set.
    */
   @java.lang.Override
@@ -804,7 +1464,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>optional bool preview = 4 [deprecated = true];</code>
    * @deprecated android_studio.ProductDetails.preview is deprecated.
-   *     See studio_stats.proto;l=2342
+   *     See studio_stats.proto;l=2349
    * @return The preview.
    */
   @java.lang.Override
@@ -900,6 +1560,8 @@ private static final long serialVersionUID = 0L;
    * the installation of Android Studio this log is sent for.
    * experiment_id Strings are generated by the Android Studio team and do not
    * contain user data.
+   * New readers of this field should prefer the active_experiments field
+   * below because it provides the index in multi-arm experiments.
    * </pre>
    *
    * <code>repeated string experiment_id = 8;</code>
@@ -915,6 +1577,8 @@ private static final long serialVersionUID = 0L;
    * the installation of Android Studio this log is sent for.
    * experiment_id Strings are generated by the Android Studio team and do not
    * contain user data.
+   * New readers of this field should prefer the active_experiments field
+   * below because it provides the index in multi-arm experiments.
    * </pre>
    *
    * <code>repeated string experiment_id = 8;</code>
@@ -929,6 +1593,8 @@ private static final long serialVersionUID = 0L;
    * the installation of Android Studio this log is sent for.
    * experiment_id Strings are generated by the Android Studio team and do not
    * contain user data.
+   * New readers of this field should prefer the active_experiments field
+   * below because it provides the index in multi-arm experiments.
    * </pre>
    *
    * <code>repeated string experiment_id = 8;</code>
@@ -944,6 +1610,8 @@ private static final long serialVersionUID = 0L;
    * the installation of Android Studio this log is sent for.
    * experiment_id Strings are generated by the Android Studio team and do not
    * contain user data.
+   * New readers of this field should prefer the active_experiments field
+   * below because it provides the index in multi-arm experiments.
    * </pre>
    *
    * <code>repeated string experiment_id = 8;</code>
@@ -1009,6 +1677,72 @@ private static final long serialVersionUID = 0L;
     return runningInsideIdx_;
   }
 
+  public static final int ACTIVE_EXPERIMENTS_FIELD_NUMBER = 11;
+  @SuppressWarnings("serial")
+  private java.util.List<com.google.wireless.android.sdk.stats.ProductDetails.ActiveExperiment> activeExperiments_;
+  /**
+   * <pre>
+   * List of experiments turned on for the installation of Android Studio this
+   * log is sent for.
+   * </pre>
+   *
+   * <code>repeated .android_studio.ProductDetails.ActiveExperiment active_experiments = 11;</code>
+   */
+  @java.lang.Override
+  public java.util.List<com.google.wireless.android.sdk.stats.ProductDetails.ActiveExperiment> getActiveExperimentsList() {
+    return activeExperiments_;
+  }
+  /**
+   * <pre>
+   * List of experiments turned on for the installation of Android Studio this
+   * log is sent for.
+   * </pre>
+   *
+   * <code>repeated .android_studio.ProductDetails.ActiveExperiment active_experiments = 11;</code>
+   */
+  @java.lang.Override
+  public java.util.List<? extends com.google.wireless.android.sdk.stats.ProductDetails.ActiveExperimentOrBuilder> 
+      getActiveExperimentsOrBuilderList() {
+    return activeExperiments_;
+  }
+  /**
+   * <pre>
+   * List of experiments turned on for the installation of Android Studio this
+   * log is sent for.
+   * </pre>
+   *
+   * <code>repeated .android_studio.ProductDetails.ActiveExperiment active_experiments = 11;</code>
+   */
+  @java.lang.Override
+  public int getActiveExperimentsCount() {
+    return activeExperiments_.size();
+  }
+  /**
+   * <pre>
+   * List of experiments turned on for the installation of Android Studio this
+   * log is sent for.
+   * </pre>
+   *
+   * <code>repeated .android_studio.ProductDetails.ActiveExperiment active_experiments = 11;</code>
+   */
+  @java.lang.Override
+  public com.google.wireless.android.sdk.stats.ProductDetails.ActiveExperiment getActiveExperiments(int index) {
+    return activeExperiments_.get(index);
+  }
+  /**
+   * <pre>
+   * List of experiments turned on for the installation of Android Studio this
+   * log is sent for.
+   * </pre>
+   *
+   * <code>repeated .android_studio.ProductDetails.ActiveExperiment active_experiments = 11;</code>
+   */
+  @java.lang.Override
+  public com.google.wireless.android.sdk.stats.ProductDetails.ActiveExperimentOrBuilder getActiveExperimentsOrBuilder(
+      int index) {
+    return activeExperiments_.get(index);
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -1052,6 +1786,9 @@ private static final long serialVersionUID = 0L;
     }
     if (((bitField0_ & 0x00000100) != 0)) {
       output.writeBool(10, runningInsideIdx_);
+    }
+    for (int i = 0; i < activeExperiments_.size(); i++) {
+      output.writeMessage(11, activeExperiments_.get(i));
     }
     getUnknownFields().writeTo(output);
   }
@@ -1103,6 +1840,10 @@ private static final long serialVersionUID = 0L;
     if (((bitField0_ & 0x00000100) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeBoolSize(10, runningInsideIdx_);
+    }
+    for (int i = 0; i < activeExperiments_.size(); i++) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(11, activeExperiments_.get(i));
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -1162,6 +1903,8 @@ private static final long serialVersionUID = 0L;
       if (getRunningInsideIdx()
           != other.getRunningInsideIdx()) return false;
     }
+    if (!getActiveExperimentsList()
+        .equals(other.getActiveExperimentsList())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -1215,6 +1958,10 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + RUNNING_INSIDE_IDX_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
           getRunningInsideIdx());
+    }
+    if (getActiveExperimentsCount() > 0) {
+      hash = (37 * hash) + ACTIVE_EXPERIMENTS_FIELD_NUMBER;
+      hash = (53 * hash) + getActiveExperimentsList().hashCode();
     }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
@@ -1360,6 +2107,13 @@ private static final long serialVersionUID = 0L;
           com.google.protobuf.LazyStringArrayList.emptyList();
       serverFlagsChangelist_ = 0L;
       runningInsideIdx_ = false;
+      if (activeExperimentsBuilder_ == null) {
+        activeExperiments_ = java.util.Collections.emptyList();
+      } else {
+        activeExperiments_ = null;
+        activeExperimentsBuilder_.clear();
+      }
+      bitField0_ = (bitField0_ & ~0x00000400);
       return this;
     }
 
@@ -1386,9 +2140,22 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.wireless.android.sdk.stats.ProductDetails buildPartial() {
       com.google.wireless.android.sdk.stats.ProductDetails result = new com.google.wireless.android.sdk.stats.ProductDetails(this);
+      buildPartialRepeatedFields(result);
       if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
+    }
+
+    private void buildPartialRepeatedFields(com.google.wireless.android.sdk.stats.ProductDetails result) {
+      if (activeExperimentsBuilder_ == null) {
+        if (((bitField0_ & 0x00000400) != 0)) {
+          activeExperiments_ = java.util.Collections.unmodifiableList(activeExperiments_);
+          bitField0_ = (bitField0_ & ~0x00000400);
+        }
+        result.activeExperiments_ = activeExperiments_;
+      } else {
+        result.activeExperiments_ = activeExperimentsBuilder_.build();
+      }
     }
 
     private void buildPartial0(com.google.wireless.android.sdk.stats.ProductDetails result) {
@@ -1489,6 +2256,32 @@ private static final long serialVersionUID = 0L;
       }
       if (other.hasRunningInsideIdx()) {
         setRunningInsideIdx(other.getRunningInsideIdx());
+      }
+      if (activeExperimentsBuilder_ == null) {
+        if (!other.activeExperiments_.isEmpty()) {
+          if (activeExperiments_.isEmpty()) {
+            activeExperiments_ = other.activeExperiments_;
+            bitField0_ = (bitField0_ & ~0x00000400);
+          } else {
+            ensureActiveExperimentsIsMutable();
+            activeExperiments_.addAll(other.activeExperiments_);
+          }
+          onChanged();
+        }
+      } else {
+        if (!other.activeExperiments_.isEmpty()) {
+          if (activeExperimentsBuilder_.isEmpty()) {
+            activeExperimentsBuilder_.dispose();
+            activeExperimentsBuilder_ = null;
+            activeExperiments_ = other.activeExperiments_;
+            bitField0_ = (bitField0_ & ~0x00000400);
+            activeExperimentsBuilder_ = 
+              com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                 getActiveExperimentsFieldBuilder() : null;
+          } else {
+            activeExperimentsBuilder_.addAllMessages(other.activeExperiments_);
+          }
+        }
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -1595,6 +2388,19 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000200;
               break;
             } // case 80
+            case 90: {
+              com.google.wireless.android.sdk.stats.ProductDetails.ActiveExperiment m =
+                  input.readMessage(
+                      com.google.wireless.android.sdk.stats.ProductDetails.ActiveExperiment.PARSER,
+                      extensionRegistry);
+              if (activeExperimentsBuilder_ == null) {
+                ensureActiveExperimentsIsMutable();
+                activeExperiments_.add(m);
+              } else {
+                activeExperimentsBuilder_.addMessage(m);
+              }
+              break;
+            } // case 90
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -1887,7 +2693,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional bool preview = 4 [deprecated = true];</code>
      * @deprecated android_studio.ProductDetails.preview is deprecated.
-     *     See studio_stats.proto;l=2342
+     *     See studio_stats.proto;l=2349
      * @return Whether the preview field is set.
      */
     @java.lang.Override
@@ -1902,7 +2708,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional bool preview = 4 [deprecated = true];</code>
      * @deprecated android_studio.ProductDetails.preview is deprecated.
-     *     See studio_stats.proto;l=2342
+     *     See studio_stats.proto;l=2349
      * @return The preview.
      */
     @java.lang.Override
@@ -1917,7 +2723,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional bool preview = 4 [deprecated = true];</code>
      * @deprecated android_studio.ProductDetails.preview is deprecated.
-     *     See studio_stats.proto;l=2342
+     *     See studio_stats.proto;l=2349
      * @param value The preview to set.
      * @return This builder for chaining.
      */
@@ -1936,7 +2742,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional bool preview = 4 [deprecated = true];</code>
      * @deprecated android_studio.ProductDetails.preview is deprecated.
-     *     See studio_stats.proto;l=2342
+     *     See studio_stats.proto;l=2349
      * @return This builder for chaining.
      */
     @java.lang.Deprecated public Builder clearPreview() {
@@ -2134,6 +2940,8 @@ private static final long serialVersionUID = 0L;
      * the installation of Android Studio this log is sent for.
      * experiment_id Strings are generated by the Android Studio team and do not
      * contain user data.
+     * New readers of this field should prefer the active_experiments field
+     * below because it provides the index in multi-arm experiments.
      * </pre>
      *
      * <code>repeated string experiment_id = 8;</code>
@@ -2150,6 +2958,8 @@ private static final long serialVersionUID = 0L;
      * the installation of Android Studio this log is sent for.
      * experiment_id Strings are generated by the Android Studio team and do not
      * contain user data.
+     * New readers of this field should prefer the active_experiments field
+     * below because it provides the index in multi-arm experiments.
      * </pre>
      *
      * <code>repeated string experiment_id = 8;</code>
@@ -2164,6 +2974,8 @@ private static final long serialVersionUID = 0L;
      * the installation of Android Studio this log is sent for.
      * experiment_id Strings are generated by the Android Studio team and do not
      * contain user data.
+     * New readers of this field should prefer the active_experiments field
+     * below because it provides the index in multi-arm experiments.
      * </pre>
      *
      * <code>repeated string experiment_id = 8;</code>
@@ -2179,6 +2991,8 @@ private static final long serialVersionUID = 0L;
      * the installation of Android Studio this log is sent for.
      * experiment_id Strings are generated by the Android Studio team and do not
      * contain user data.
+     * New readers of this field should prefer the active_experiments field
+     * below because it provides the index in multi-arm experiments.
      * </pre>
      *
      * <code>repeated string experiment_id = 8;</code>
@@ -2195,6 +3009,8 @@ private static final long serialVersionUID = 0L;
      * the installation of Android Studio this log is sent for.
      * experiment_id Strings are generated by the Android Studio team and do not
      * contain user data.
+     * New readers of this field should prefer the active_experiments field
+     * below because it provides the index in multi-arm experiments.
      * </pre>
      *
      * <code>repeated string experiment_id = 8;</code>
@@ -2217,6 +3033,8 @@ private static final long serialVersionUID = 0L;
      * the installation of Android Studio this log is sent for.
      * experiment_id Strings are generated by the Android Studio team and do not
      * contain user data.
+     * New readers of this field should prefer the active_experiments field
+     * below because it provides the index in multi-arm experiments.
      * </pre>
      *
      * <code>repeated string experiment_id = 8;</code>
@@ -2238,6 +3056,8 @@ private static final long serialVersionUID = 0L;
      * the installation of Android Studio this log is sent for.
      * experiment_id Strings are generated by the Android Studio team and do not
      * contain user data.
+     * New readers of this field should prefer the active_experiments field
+     * below because it provides the index in multi-arm experiments.
      * </pre>
      *
      * <code>repeated string experiment_id = 8;</code>
@@ -2259,6 +3079,8 @@ private static final long serialVersionUID = 0L;
      * the installation of Android Studio this log is sent for.
      * experiment_id Strings are generated by the Android Studio team and do not
      * contain user data.
+     * New readers of this field should prefer the active_experiments field
+     * below because it provides the index in multi-arm experiments.
      * </pre>
      *
      * <code>repeated string experiment_id = 8;</code>
@@ -2277,6 +3099,8 @@ private static final long serialVersionUID = 0L;
      * the installation of Android Studio this log is sent for.
      * experiment_id Strings are generated by the Android Studio team and do not
      * contain user data.
+     * New readers of this field should prefer the active_experiments field
+     * below because it provides the index in multi-arm experiments.
      * </pre>
      *
      * <code>repeated string experiment_id = 8;</code>
@@ -2403,6 +3227,336 @@ private static final long serialVersionUID = 0L;
       runningInsideIdx_ = false;
       onChanged();
       return this;
+    }
+
+    private java.util.List<com.google.wireless.android.sdk.stats.ProductDetails.ActiveExperiment> activeExperiments_ =
+      java.util.Collections.emptyList();
+    private void ensureActiveExperimentsIsMutable() {
+      if (!((bitField0_ & 0x00000400) != 0)) {
+        activeExperiments_ = new java.util.ArrayList<com.google.wireless.android.sdk.stats.ProductDetails.ActiveExperiment>(activeExperiments_);
+        bitField0_ |= 0x00000400;
+       }
+    }
+
+    private com.google.protobuf.RepeatedFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.ProductDetails.ActiveExperiment, com.google.wireless.android.sdk.stats.ProductDetails.ActiveExperiment.Builder, com.google.wireless.android.sdk.stats.ProductDetails.ActiveExperimentOrBuilder> activeExperimentsBuilder_;
+
+    /**
+     * <pre>
+     * List of experiments turned on for the installation of Android Studio this
+     * log is sent for.
+     * </pre>
+     *
+     * <code>repeated .android_studio.ProductDetails.ActiveExperiment active_experiments = 11;</code>
+     */
+    public java.util.List<com.google.wireless.android.sdk.stats.ProductDetails.ActiveExperiment> getActiveExperimentsList() {
+      if (activeExperimentsBuilder_ == null) {
+        return java.util.Collections.unmodifiableList(activeExperiments_);
+      } else {
+        return activeExperimentsBuilder_.getMessageList();
+      }
+    }
+    /**
+     * <pre>
+     * List of experiments turned on for the installation of Android Studio this
+     * log is sent for.
+     * </pre>
+     *
+     * <code>repeated .android_studio.ProductDetails.ActiveExperiment active_experiments = 11;</code>
+     */
+    public int getActiveExperimentsCount() {
+      if (activeExperimentsBuilder_ == null) {
+        return activeExperiments_.size();
+      } else {
+        return activeExperimentsBuilder_.getCount();
+      }
+    }
+    /**
+     * <pre>
+     * List of experiments turned on for the installation of Android Studio this
+     * log is sent for.
+     * </pre>
+     *
+     * <code>repeated .android_studio.ProductDetails.ActiveExperiment active_experiments = 11;</code>
+     */
+    public com.google.wireless.android.sdk.stats.ProductDetails.ActiveExperiment getActiveExperiments(int index) {
+      if (activeExperimentsBuilder_ == null) {
+        return activeExperiments_.get(index);
+      } else {
+        return activeExperimentsBuilder_.getMessage(index);
+      }
+    }
+    /**
+     * <pre>
+     * List of experiments turned on for the installation of Android Studio this
+     * log is sent for.
+     * </pre>
+     *
+     * <code>repeated .android_studio.ProductDetails.ActiveExperiment active_experiments = 11;</code>
+     */
+    public Builder setActiveExperiments(
+        int index, com.google.wireless.android.sdk.stats.ProductDetails.ActiveExperiment value) {
+      if (activeExperimentsBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureActiveExperimentsIsMutable();
+        activeExperiments_.set(index, value);
+        onChanged();
+      } else {
+        activeExperimentsBuilder_.setMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * List of experiments turned on for the installation of Android Studio this
+     * log is sent for.
+     * </pre>
+     *
+     * <code>repeated .android_studio.ProductDetails.ActiveExperiment active_experiments = 11;</code>
+     */
+    public Builder setActiveExperiments(
+        int index, com.google.wireless.android.sdk.stats.ProductDetails.ActiveExperiment.Builder builderForValue) {
+      if (activeExperimentsBuilder_ == null) {
+        ensureActiveExperimentsIsMutable();
+        activeExperiments_.set(index, builderForValue.build());
+        onChanged();
+      } else {
+        activeExperimentsBuilder_.setMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * List of experiments turned on for the installation of Android Studio this
+     * log is sent for.
+     * </pre>
+     *
+     * <code>repeated .android_studio.ProductDetails.ActiveExperiment active_experiments = 11;</code>
+     */
+    public Builder addActiveExperiments(com.google.wireless.android.sdk.stats.ProductDetails.ActiveExperiment value) {
+      if (activeExperimentsBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureActiveExperimentsIsMutable();
+        activeExperiments_.add(value);
+        onChanged();
+      } else {
+        activeExperimentsBuilder_.addMessage(value);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * List of experiments turned on for the installation of Android Studio this
+     * log is sent for.
+     * </pre>
+     *
+     * <code>repeated .android_studio.ProductDetails.ActiveExperiment active_experiments = 11;</code>
+     */
+    public Builder addActiveExperiments(
+        int index, com.google.wireless.android.sdk.stats.ProductDetails.ActiveExperiment value) {
+      if (activeExperimentsBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureActiveExperimentsIsMutable();
+        activeExperiments_.add(index, value);
+        onChanged();
+      } else {
+        activeExperimentsBuilder_.addMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * List of experiments turned on for the installation of Android Studio this
+     * log is sent for.
+     * </pre>
+     *
+     * <code>repeated .android_studio.ProductDetails.ActiveExperiment active_experiments = 11;</code>
+     */
+    public Builder addActiveExperiments(
+        com.google.wireless.android.sdk.stats.ProductDetails.ActiveExperiment.Builder builderForValue) {
+      if (activeExperimentsBuilder_ == null) {
+        ensureActiveExperimentsIsMutable();
+        activeExperiments_.add(builderForValue.build());
+        onChanged();
+      } else {
+        activeExperimentsBuilder_.addMessage(builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * List of experiments turned on for the installation of Android Studio this
+     * log is sent for.
+     * </pre>
+     *
+     * <code>repeated .android_studio.ProductDetails.ActiveExperiment active_experiments = 11;</code>
+     */
+    public Builder addActiveExperiments(
+        int index, com.google.wireless.android.sdk.stats.ProductDetails.ActiveExperiment.Builder builderForValue) {
+      if (activeExperimentsBuilder_ == null) {
+        ensureActiveExperimentsIsMutable();
+        activeExperiments_.add(index, builderForValue.build());
+        onChanged();
+      } else {
+        activeExperimentsBuilder_.addMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * List of experiments turned on for the installation of Android Studio this
+     * log is sent for.
+     * </pre>
+     *
+     * <code>repeated .android_studio.ProductDetails.ActiveExperiment active_experiments = 11;</code>
+     */
+    public Builder addAllActiveExperiments(
+        java.lang.Iterable<? extends com.google.wireless.android.sdk.stats.ProductDetails.ActiveExperiment> values) {
+      if (activeExperimentsBuilder_ == null) {
+        ensureActiveExperimentsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, activeExperiments_);
+        onChanged();
+      } else {
+        activeExperimentsBuilder_.addAllMessages(values);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * List of experiments turned on for the installation of Android Studio this
+     * log is sent for.
+     * </pre>
+     *
+     * <code>repeated .android_studio.ProductDetails.ActiveExperiment active_experiments = 11;</code>
+     */
+    public Builder clearActiveExperiments() {
+      if (activeExperimentsBuilder_ == null) {
+        activeExperiments_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000400);
+        onChanged();
+      } else {
+        activeExperimentsBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * List of experiments turned on for the installation of Android Studio this
+     * log is sent for.
+     * </pre>
+     *
+     * <code>repeated .android_studio.ProductDetails.ActiveExperiment active_experiments = 11;</code>
+     */
+    public Builder removeActiveExperiments(int index) {
+      if (activeExperimentsBuilder_ == null) {
+        ensureActiveExperimentsIsMutable();
+        activeExperiments_.remove(index);
+        onChanged();
+      } else {
+        activeExperimentsBuilder_.remove(index);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * List of experiments turned on for the installation of Android Studio this
+     * log is sent for.
+     * </pre>
+     *
+     * <code>repeated .android_studio.ProductDetails.ActiveExperiment active_experiments = 11;</code>
+     */
+    public com.google.wireless.android.sdk.stats.ProductDetails.ActiveExperiment.Builder getActiveExperimentsBuilder(
+        int index) {
+      return getActiveExperimentsFieldBuilder().getBuilder(index);
+    }
+    /**
+     * <pre>
+     * List of experiments turned on for the installation of Android Studio this
+     * log is sent for.
+     * </pre>
+     *
+     * <code>repeated .android_studio.ProductDetails.ActiveExperiment active_experiments = 11;</code>
+     */
+    public com.google.wireless.android.sdk.stats.ProductDetails.ActiveExperimentOrBuilder getActiveExperimentsOrBuilder(
+        int index) {
+      if (activeExperimentsBuilder_ == null) {
+        return activeExperiments_.get(index);  } else {
+        return activeExperimentsBuilder_.getMessageOrBuilder(index);
+      }
+    }
+    /**
+     * <pre>
+     * List of experiments turned on for the installation of Android Studio this
+     * log is sent for.
+     * </pre>
+     *
+     * <code>repeated .android_studio.ProductDetails.ActiveExperiment active_experiments = 11;</code>
+     */
+    public java.util.List<? extends com.google.wireless.android.sdk.stats.ProductDetails.ActiveExperimentOrBuilder> 
+         getActiveExperimentsOrBuilderList() {
+      if (activeExperimentsBuilder_ != null) {
+        return activeExperimentsBuilder_.getMessageOrBuilderList();
+      } else {
+        return java.util.Collections.unmodifiableList(activeExperiments_);
+      }
+    }
+    /**
+     * <pre>
+     * List of experiments turned on for the installation of Android Studio this
+     * log is sent for.
+     * </pre>
+     *
+     * <code>repeated .android_studio.ProductDetails.ActiveExperiment active_experiments = 11;</code>
+     */
+    public com.google.wireless.android.sdk.stats.ProductDetails.ActiveExperiment.Builder addActiveExperimentsBuilder() {
+      return getActiveExperimentsFieldBuilder().addBuilder(
+          com.google.wireless.android.sdk.stats.ProductDetails.ActiveExperiment.getDefaultInstance());
+    }
+    /**
+     * <pre>
+     * List of experiments turned on for the installation of Android Studio this
+     * log is sent for.
+     * </pre>
+     *
+     * <code>repeated .android_studio.ProductDetails.ActiveExperiment active_experiments = 11;</code>
+     */
+    public com.google.wireless.android.sdk.stats.ProductDetails.ActiveExperiment.Builder addActiveExperimentsBuilder(
+        int index) {
+      return getActiveExperimentsFieldBuilder().addBuilder(
+          index, com.google.wireless.android.sdk.stats.ProductDetails.ActiveExperiment.getDefaultInstance());
+    }
+    /**
+     * <pre>
+     * List of experiments turned on for the installation of Android Studio this
+     * log is sent for.
+     * </pre>
+     *
+     * <code>repeated .android_studio.ProductDetails.ActiveExperiment active_experiments = 11;</code>
+     */
+    public java.util.List<com.google.wireless.android.sdk.stats.ProductDetails.ActiveExperiment.Builder> 
+         getActiveExperimentsBuilderList() {
+      return getActiveExperimentsFieldBuilder().getBuilderList();
+    }
+    private com.google.protobuf.RepeatedFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.ProductDetails.ActiveExperiment, com.google.wireless.android.sdk.stats.ProductDetails.ActiveExperiment.Builder, com.google.wireless.android.sdk.stats.ProductDetails.ActiveExperimentOrBuilder> 
+        getActiveExperimentsFieldBuilder() {
+      if (activeExperimentsBuilder_ == null) {
+        activeExperimentsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+            com.google.wireless.android.sdk.stats.ProductDetails.ActiveExperiment, com.google.wireless.android.sdk.stats.ProductDetails.ActiveExperiment.Builder, com.google.wireless.android.sdk.stats.ProductDetails.ActiveExperimentOrBuilder>(
+                activeExperiments_,
+                ((bitField0_ & 0x00000400) != 0),
+                getParentForChildren(),
+                isClean());
+        activeExperiments_ = null;
+      }
+      return activeExperimentsBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(
