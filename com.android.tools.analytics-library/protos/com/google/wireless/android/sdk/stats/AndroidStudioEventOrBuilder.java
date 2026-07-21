@@ -6214,4 +6214,31 @@ public interface AndroidStudioEventOrBuilder extends
    * <code>optional .android_studio.ResizeComposePreviewEvent resize_compose_preview_event = 222 [lazy = true];</code>
    */
   com.google.wireless.android.sdk.stats.ResizeComposePreviewEventOrBuilder getResizeComposePreviewEventOrBuilder();
+
+  /**
+   * <pre>
+   * set when kind = WIFI_PAIRING_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.WifiPairingEvent wifi_pairing_event = 223 [lazy = true];</code>
+   * @return Whether the wifiPairingEvent field is set.
+   */
+  boolean hasWifiPairingEvent();
+  /**
+   * <pre>
+   * set when kind = WIFI_PAIRING_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.WifiPairingEvent wifi_pairing_event = 223 [lazy = true];</code>
+   * @return The wifiPairingEvent.
+   */
+  com.google.wireless.android.sdk.stats.WifiPairingEvent getWifiPairingEvent();
+  /**
+   * <pre>
+   * set when kind = WIFI_PAIRING_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.WifiPairingEvent wifi_pairing_event = 223 [lazy = true];</code>
+   */
+  com.google.wireless.android.sdk.stats.WifiPairingEventOrBuilder getWifiPairingEventOrBuilder();
 }
