@@ -7462,7 +7462,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional bool success = 3 [deprecated = true];</code>
      * @deprecated android_studio.SmlChatBotEvent.ParseResult.success is deprecated.
-     *     See studio_stats.proto;l=16212
+     *     See studio_stats.proto;l=16235
      * @return Whether the success field is set.
      */
     @java.lang.Deprecated boolean hasSuccess();
@@ -7474,7 +7474,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional bool success = 3 [deprecated = true];</code>
      * @deprecated android_studio.SmlChatBotEvent.ParseResult.success is deprecated.
-     *     See studio_stats.proto;l=16212
+     *     See studio_stats.proto;l=16235
      * @return The success.
      */
     @java.lang.Deprecated boolean getSuccess();
@@ -7602,7 +7602,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional bool success = 3 [deprecated = true];</code>
      * @deprecated android_studio.SmlChatBotEvent.ParseResult.success is deprecated.
-     *     See studio_stats.proto;l=16212
+     *     See studio_stats.proto;l=16235
      * @return Whether the success field is set.
      */
     @java.lang.Override
@@ -7617,7 +7617,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional bool success = 3 [deprecated = true];</code>
      * @deprecated android_studio.SmlChatBotEvent.ParseResult.success is deprecated.
-     *     See studio_stats.proto;l=16212
+     *     See studio_stats.proto;l=16235
      * @return The success.
      */
     @java.lang.Override
@@ -8281,7 +8281,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional bool success = 3 [deprecated = true];</code>
        * @deprecated android_studio.SmlChatBotEvent.ParseResult.success is deprecated.
-       *     See studio_stats.proto;l=16212
+       *     See studio_stats.proto;l=16235
        * @return Whether the success field is set.
        */
       @java.lang.Override
@@ -8296,7 +8296,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional bool success = 3 [deprecated = true];</code>
        * @deprecated android_studio.SmlChatBotEvent.ParseResult.success is deprecated.
-       *     See studio_stats.proto;l=16212
+       *     See studio_stats.proto;l=16235
        * @return The success.
        */
       @java.lang.Override
@@ -8311,7 +8311,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional bool success = 3 [deprecated = true];</code>
        * @deprecated android_studio.SmlChatBotEvent.ParseResult.success is deprecated.
-       *     See studio_stats.proto;l=16212
+       *     See studio_stats.proto;l=16235
        * @param value The success to set.
        * @return This builder for chaining.
        */
@@ -8330,7 +8330,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional bool success = 3 [deprecated = true];</code>
        * @deprecated android_studio.SmlChatBotEvent.ParseResult.success is deprecated.
-       *     See studio_stats.proto;l=16212
+       *     See studio_stats.proto;l=16235
        * @return This builder for chaining.
        */
       @java.lang.Deprecated public Builder clearSuccess() {
@@ -9930,7 +9930,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The type of attachment, e.g. "FILES, FOLDERS, TOOLS, PROMPT_LIBRARY,
-     * REMOTE_CONTEXT"
+     * REMOTE_CONTEXT, SKILLS"
      * </pre>
      *
      * <code>optional .android_studio.SmlChatBotEvent.QueryBoxEventMetadata.AttachmentType attachment_type = 1;</code>
@@ -9940,7 +9940,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The type of attachment, e.g. "FILES, FOLDERS, TOOLS, PROMPT_LIBRARY,
-     * REMOTE_CONTEXT"
+     * REMOTE_CONTEXT, SKILLS"
      * </pre>
      *
      * <code>optional .android_studio.SmlChatBotEvent.QueryBoxEventMetadata.AttachmentType attachment_type = 1;</code>
@@ -10077,6 +10077,10 @@ private static final long serialVersionUID = 0L;
        * <code>REMOTE_CONTEXT = 5;</code>
        */
       REMOTE_CONTEXT(5),
+      /**
+       * <code>SKILLS = 6;</code>
+       */
+      SKILLS(6),
       ;
 
       /**
@@ -10103,6 +10107,10 @@ private static final long serialVersionUID = 0L;
        * <code>REMOTE_CONTEXT = 5;</code>
        */
       public static final int REMOTE_CONTEXT_VALUE = 5;
+      /**
+       * <code>SKILLS = 6;</code>
+       */
+      public static final int SKILLS_VALUE = 6;
 
 
       public final int getNumber() {
@@ -10131,6 +10139,7 @@ private static final long serialVersionUID = 0L;
           case 3: return TOOLS;
           case 4: return PROMPT_LIBRARY;
           case 5: return REMOTE_CONTEXT;
+          case 6: return SKILLS;
           default: return null;
         }
       }
@@ -10961,7 +10970,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The type of attachment, e.g. "FILES, FOLDERS, TOOLS, PROMPT_LIBRARY,
-     * REMOTE_CONTEXT"
+     * REMOTE_CONTEXT, SKILLS"
      * </pre>
      *
      * <code>optional .android_studio.SmlChatBotEvent.QueryBoxEventMetadata.AttachmentType attachment_type = 1;</code>
@@ -10973,7 +10982,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The type of attachment, e.g. "FILES, FOLDERS, TOOLS, PROMPT_LIBRARY,
-     * REMOTE_CONTEXT"
+     * REMOTE_CONTEXT, SKILLS"
      * </pre>
      *
      * <code>optional .android_studio.SmlChatBotEvent.QueryBoxEventMetadata.AttachmentType attachment_type = 1;</code>
@@ -11482,7 +11491,7 @@ private static final long serialVersionUID = 0L;
       /**
        * <pre>
        * The type of attachment, e.g. "FILES, FOLDERS, TOOLS, PROMPT_LIBRARY,
-       * REMOTE_CONTEXT"
+       * REMOTE_CONTEXT, SKILLS"
        * </pre>
        *
        * <code>optional .android_studio.SmlChatBotEvent.QueryBoxEventMetadata.AttachmentType attachment_type = 1;</code>
@@ -11494,7 +11503,7 @@ private static final long serialVersionUID = 0L;
       /**
        * <pre>
        * The type of attachment, e.g. "FILES, FOLDERS, TOOLS, PROMPT_LIBRARY,
-       * REMOTE_CONTEXT"
+       * REMOTE_CONTEXT, SKILLS"
        * </pre>
        *
        * <code>optional .android_studio.SmlChatBotEvent.QueryBoxEventMetadata.AttachmentType attachment_type = 1;</code>
@@ -11508,7 +11517,7 @@ private static final long serialVersionUID = 0L;
       /**
        * <pre>
        * The type of attachment, e.g. "FILES, FOLDERS, TOOLS, PROMPT_LIBRARY,
-       * REMOTE_CONTEXT"
+       * REMOTE_CONTEXT, SKILLS"
        * </pre>
        *
        * <code>optional .android_studio.SmlChatBotEvent.QueryBoxEventMetadata.AttachmentType attachment_type = 1;</code>
@@ -11527,7 +11536,7 @@ private static final long serialVersionUID = 0L;
       /**
        * <pre>
        * The type of attachment, e.g. "FILES, FOLDERS, TOOLS, PROMPT_LIBRARY,
-       * REMOTE_CONTEXT"
+       * REMOTE_CONTEXT, SKILLS"
        * </pre>
        *
        * <code>optional .android_studio.SmlChatBotEvent.QueryBoxEventMetadata.AttachmentType attachment_type = 1;</code>

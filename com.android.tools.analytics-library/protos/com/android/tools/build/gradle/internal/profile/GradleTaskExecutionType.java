@@ -1448,6 +1448,14 @@ public enum GradleTaskExecutionType
    * <code>CODE_COVERAGE_REPORT = 357;</code>
    */
   CODE_COVERAGE_REPORT(357),
+  /**
+   * <code>TEST_REPORT = 358;</code>
+   */
+  TEST_REPORT(358),
+  /**
+   * <code>TEST_RESULTS_COLLECTION = 359;</code>
+   */
+  TEST_RESULTS_COLLECTION(359),
   UNRECOGNIZED(-1),
   ;
 
@@ -2883,6 +2891,14 @@ public enum GradleTaskExecutionType
    * <code>CODE_COVERAGE_REPORT = 357;</code>
    */
   public static final int CODE_COVERAGE_REPORT_VALUE = 357;
+  /**
+   * <code>TEST_REPORT = 358;</code>
+   */
+  public static final int TEST_REPORT_VALUE = 358;
+  /**
+   * <code>TEST_RESULTS_COLLECTION = 359;</code>
+   */
+  public static final int TEST_RESULTS_COLLECTION_VALUE = 359;
 
 
   public final int getNumber() {
@@ -3267,6 +3283,8 @@ public enum GradleTaskExecutionType
       case 355: return NEW_INCREMENTAL_GLOBAL;
       case 356: return CODE_COVERAGE_COLLECTION;
       case 357: return CODE_COVERAGE_REPORT;
+      case 358: return TEST_REPORT;
+      case 359: return TEST_RESULTS_COLLECTION;
       default: return null;
     }
   }

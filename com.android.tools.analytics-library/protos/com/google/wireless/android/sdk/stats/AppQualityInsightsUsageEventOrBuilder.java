@@ -522,4 +522,31 @@ public interface AppQualityInsightsUsageEventOrBuilder extends
    * <code>optional .android_studio.AppQualityInsightsUsageEvent.ServiceDeprecationInfo service_deprecation_info = 20 [lazy = true];</code>
    */
   com.google.wireless.android.sdk.stats.AppQualityInsightsUsageEvent.ServiceDeprecationInfoOrBuilder getServiceDeprecationInfoOrBuilder();
+
+  /**
+   * <pre>
+   * set when type = AGENT_ACTION
+   * </pre>
+   *
+   * <code>optional .android_studio.AppQualityInsightsUsageEvent.AgentActionDetails agent_action_details = 21 [lazy = true];</code>
+   * @return Whether the agentActionDetails field is set.
+   */
+  boolean hasAgentActionDetails();
+  /**
+   * <pre>
+   * set when type = AGENT_ACTION
+   * </pre>
+   *
+   * <code>optional .android_studio.AppQualityInsightsUsageEvent.AgentActionDetails agent_action_details = 21 [lazy = true];</code>
+   * @return The agentActionDetails.
+   */
+  com.google.wireless.android.sdk.stats.AppQualityInsightsUsageEvent.AgentActionDetails getAgentActionDetails();
+  /**
+   * <pre>
+   * set when type = AGENT_ACTION
+   * </pre>
+   *
+   * <code>optional .android_studio.AppQualityInsightsUsageEvent.AgentActionDetails agent_action_details = 21 [lazy = true];</code>
+   */
+  com.google.wireless.android.sdk.stats.AppQualityInsightsUsageEvent.AgentActionDetailsOrBuilder getAgentActionDetailsOrBuilder();
 }

@@ -87,6 +87,14 @@ private static final long serialVersionUID = 0L;
      * <code>EMULATOR_CAMERA_TYPE_VIDEO_PLAYBACK = 3;</code>
      */
     EMULATOR_CAMERA_TYPE_VIDEO_PLAYBACK(3),
+    /**
+     * <pre>
+     * Camera source is the virtual scene defined by the environment.
+     * </pre>
+     *
+     * <code>EMULATOR_CAMERA_TYPE_ENVIRONMENT = 4;</code>
+     */
+    EMULATOR_CAMERA_TYPE_ENVIRONMENT(4),
     ;
 
     /**
@@ -121,6 +129,14 @@ private static final long serialVersionUID = 0L;
      * <code>EMULATOR_CAMERA_TYPE_VIDEO_PLAYBACK = 3;</code>
      */
     public static final int EMULATOR_CAMERA_TYPE_VIDEO_PLAYBACK_VALUE = 3;
+    /**
+     * <pre>
+     * Camera source is the virtual scene defined by the environment.
+     * </pre>
+     *
+     * <code>EMULATOR_CAMERA_TYPE_ENVIRONMENT = 4;</code>
+     */
+    public static final int EMULATOR_CAMERA_TYPE_ENVIRONMENT_VALUE = 4;
 
 
     public final int getNumber() {
@@ -147,6 +163,7 @@ private static final long serialVersionUID = 0L;
         case 1: return EMULATOR_CAMERA_TYPE_WEBCAM;
         case 2: return EMULATOR_CAMERA_TYPE_VIRTUAL_SCENE;
         case 3: return EMULATOR_CAMERA_TYPE_VIDEO_PLAYBACK;
+        case 4: return EMULATOR_CAMERA_TYPE_ENVIRONMENT;
         default: return null;
       }
     }

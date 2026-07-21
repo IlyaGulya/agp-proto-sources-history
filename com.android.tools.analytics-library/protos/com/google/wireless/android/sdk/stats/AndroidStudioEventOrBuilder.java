@@ -6933,4 +6933,31 @@ public interface AndroidStudioEventOrBuilder extends
    * <code>optional .android_studio.StudioBotToolWindowAutoOpenEvent studio_bot_tool_window_auto_open_event = 248 [lazy = true];</code>
    */
   com.google.wireless.android.sdk.stats.StudioBotToolWindowAutoOpenEventOrBuilder getStudioBotToolWindowAutoOpenEventOrBuilder();
+
+  /**
+   * <pre>
+   * set when kind = SKILLS_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.SkillsEvent skills_event = 249 [lazy = true];</code>
+   * @return Whether the skillsEvent field is set.
+   */
+  boolean hasSkillsEvent();
+  /**
+   * <pre>
+   * set when kind = SKILLS_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.SkillsEvent skills_event = 249 [lazy = true];</code>
+   * @return The skillsEvent.
+   */
+  com.google.wireless.android.sdk.stats.SkillsEvent getSkillsEvent();
+  /**
+   * <pre>
+   * set when kind = SKILLS_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.SkillsEvent skills_event = 249 [lazy = true];</code>
+   */
+  com.google.wireless.android.sdk.stats.SkillsEventOrBuilder getSkillsEventOrBuilder();
 }
