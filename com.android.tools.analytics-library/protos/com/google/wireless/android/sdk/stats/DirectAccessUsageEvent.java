@@ -270,6 +270,14 @@ private static final long serialVersionUID = 0L;
     PROJECT_CLOSING(3),
     /**
      * <pre>
+     * Quota exhausted for the cloud project
+     * </pre>
+     *
+     * <code>RESOURCE_EXHAUSTED = 4;</code>
+     */
+    RESOURCE_EXHAUSTED(4),
+    /**
+     * <pre>
      * Disconnect Reasons
      * Device failed to connect to ADB
      * </pre>
@@ -350,6 +358,14 @@ private static final long serialVersionUID = 0L;
     public static final int PROJECT_CLOSING_VALUE = 3;
     /**
      * <pre>
+     * Quota exhausted for the cloud project
+     * </pre>
+     *
+     * <code>RESOURCE_EXHAUSTED = 4;</code>
+     */
+    public static final int RESOURCE_EXHAUSTED_VALUE = 4;
+    /**
+     * <pre>
      * Disconnect Reasons
      * Device failed to connect to ADB
      * </pre>
@@ -424,6 +440,7 @@ private static final long serialVersionUID = 0L;
         case 1: return USER_LOGGED_OUT;
         case 2: return SCOPE_CANCELLED;
         case 3: return PROJECT_CLOSING;
+        case 4: return RESOURCE_EXHAUSTED;
         case 11: return CONNECTION_FAILED;
         case 12: return ADB_DISCONNECTED;
         case 13: return LATENCY_DISCONNECT;

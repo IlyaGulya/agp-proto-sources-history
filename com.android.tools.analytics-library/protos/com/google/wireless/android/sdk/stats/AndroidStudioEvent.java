@@ -3043,6 +3043,14 @@ private static final long serialVersionUID = 0L;
      * <code>WEAR_TILE_ANIMATION_TOOLING = 314;</code>
      */
     WEAR_TILE_ANIMATION_TOOLING(314),
+    /**
+     * <pre>
+     * Event related to usage of the Backup/Restore App State feature
+     * </pre>
+     *
+     * <code>BACKUP_USAGE = 315;</code>
+     */
+    BACKUP_USAGE(315),
     ;
 
     /**
@@ -5392,6 +5400,14 @@ private static final long serialVersionUID = 0L;
      * <code>WEAR_TILE_ANIMATION_TOOLING = 314;</code>
      */
     public static final int WEAR_TILE_ANIMATION_TOOLING_VALUE = 314;
+    /**
+     * <pre>
+     * Event related to usage of the Backup/Restore App State feature
+     * </pre>
+     *
+     * <code>BACKUP_USAGE = 315;</code>
+     */
+    public static final int BACKUP_USAGE_VALUE = 315;
 
 
     public final int getNumber() {
@@ -5724,6 +5740,7 @@ private static final long serialVersionUID = 0L;
         case 312: return FIREBASE_MANAGEMENT_EVENT;
         case 313: return ADB_SERVER_STATUS;
         case 314: return WEAR_TILE_ANIMATION_TOOLING;
+        case 315: return BACKUP_USAGE;
         default: return null;
       }
     }
@@ -22357,6 +22374,44 @@ private static final long serialVersionUID = 0L;
     return wearTileAnimationToolingEvent_ == null ? com.google.wireless.android.sdk.stats.WearTileAnimationToolingEvent.getDefaultInstance() : wearTileAnimationToolingEvent_;
   }
 
+  public static final int BACKUP_USAGE_EVENT_FIELD_NUMBER = 198;
+  private com.google.wireless.android.sdk.stats.BackupUsageEvent backupUsageEvent_;
+  /**
+   * <pre>
+   * set when kind = BACKUP_USAGE
+   * </pre>
+   *
+   * <code>optional .android_studio.BackupUsageEvent backup_usage_event = 198 [lazy = true];</code>
+   * @return Whether the backupUsageEvent field is set.
+   */
+  @java.lang.Override
+  public boolean hasBackupUsageEvent() {
+    return ((bitField5_ & 0x80000000) != 0);
+  }
+  /**
+   * <pre>
+   * set when kind = BACKUP_USAGE
+   * </pre>
+   *
+   * <code>optional .android_studio.BackupUsageEvent backup_usage_event = 198 [lazy = true];</code>
+   * @return The backupUsageEvent.
+   */
+  @java.lang.Override
+  public com.google.wireless.android.sdk.stats.BackupUsageEvent getBackupUsageEvent() {
+    return backupUsageEvent_ == null ? com.google.wireless.android.sdk.stats.BackupUsageEvent.getDefaultInstance() : backupUsageEvent_;
+  }
+  /**
+   * <pre>
+   * set when kind = BACKUP_USAGE
+   * </pre>
+   *
+   * <code>optional .android_studio.BackupUsageEvent backup_usage_event = 198 [lazy = true];</code>
+   */
+  @java.lang.Override
+  public com.google.wireless.android.sdk.stats.BackupUsageEventOrBuilder getBackupUsageEventOrBuilder() {
+    return backupUsageEvent_ == null ? com.google.wireless.android.sdk.stats.BackupUsageEvent.getDefaultInstance() : backupUsageEvent_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -22961,6 +23016,9 @@ private static final long serialVersionUID = 0L;
     }
     if (((bitField5_ & 0x40000000) != 0)) {
       output.writeMessage(197, getWearTileAnimationToolingEvent());
+    }
+    if (((bitField5_ & 0x80000000) != 0)) {
+      output.writeMessage(198, getBackupUsageEvent());
     }
     getUnknownFields().writeTo(output);
   }
@@ -23764,6 +23822,10 @@ private static final long serialVersionUID = 0L;
     if (((bitField5_ & 0x40000000) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(197, getWearTileAnimationToolingEvent());
+    }
+    if (((bitField5_ & 0x80000000) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(198, getBackupUsageEvent());
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -24736,6 +24798,11 @@ private static final long serialVersionUID = 0L;
       if (!getWearTileAnimationToolingEvent()
           .equals(other.getWearTileAnimationToolingEvent())) return false;
     }
+    if (hasBackupUsageEvent() != other.hasBackupUsageEvent()) return false;
+    if (hasBackupUsageEvent()) {
+      if (!getBackupUsageEvent()
+          .equals(other.getBackupUsageEvent())) return false;
+    }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -25537,6 +25604,10 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + WEAR_TILE_ANIMATION_TOOLING_EVENT_FIELD_NUMBER;
       hash = (53 * hash) + getWearTileAnimationToolingEvent().hashCode();
     }
+    if (hasBackupUsageEvent()) {
+      hash = (37 * hash) + BACKUP_USAGE_EVENT_FIELD_NUMBER;
+      hash = (53 * hash) + getBackupUsageEvent().hashCode();
+    }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -25839,6 +25910,7 @@ private static final long serialVersionUID = 0L;
         getFirebaseManagementEventFieldBuilder();
         getAdbServerStatusFieldBuilder();
         getWearTileAnimationToolingEventFieldBuilder();
+        getBackupUsageEventFieldBuilder();
       }
     }
     @java.lang.Override
@@ -26937,6 +27009,12 @@ private static final long serialVersionUID = 0L;
         wearTileAnimationToolingEventBuilder_.clear();
       }
       bitField6_ = (bitField6_ & ~0x00000010);
+      if (backupUsageEventBuilder_ == null) {
+        backupUsageEvent_ = null;
+      } else {
+        backupUsageEventBuilder_.clear();
+      }
+      bitField6_ = (bitField6_ & ~0x00000020);
       return this;
     }
 
@@ -28466,6 +28544,14 @@ private static final long serialVersionUID = 0L;
         }
         to_bitField5_ |= 0x40000000;
       }
+      if (((from_bitField6_ & 0x00000020) != 0)) {
+        if (backupUsageEventBuilder_ == null) {
+          result.backupUsageEvent_ = backupUsageEvent_;
+        } else {
+          result.backupUsageEvent_ = backupUsageEventBuilder_.build();
+        }
+        to_bitField5_ |= 0x80000000;
+      }
       result.bitField0_ = to_bitField0_;
       result.bitField1_ = to_bitField1_;
       result.bitField2_ = to_bitField2_;
@@ -29214,6 +29300,9 @@ private static final long serialVersionUID = 0L;
       }
       if (other.hasWearTileAnimationToolingEvent()) {
         mergeWearTileAnimationToolingEvent(other.getWearTileAnimationToolingEvent());
+      }
+      if (other.hasBackupUsageEvent()) {
+        mergeBackupUsageEvent(other.getBackupUsageEvent());
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -30688,6 +30777,13 @@ private static final long serialVersionUID = 0L;
               bitField6_ |= 0x00000010;
               break;
             } // case 1578
+            case 1586: {
+              input.readMessage(
+                  getBackupUsageEventFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField6_ |= 0x00000020;
+              break;
+            } // case 1586
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -60740,6 +60836,162 @@ private static final long serialVersionUID = 0L;
         wearTileAnimationToolingEvent_ = null;
       }
       return wearTileAnimationToolingEventBuilder_;
+    }
+
+    private com.google.wireless.android.sdk.stats.BackupUsageEvent backupUsageEvent_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.BackupUsageEvent, com.google.wireless.android.sdk.stats.BackupUsageEvent.Builder, com.google.wireless.android.sdk.stats.BackupUsageEventOrBuilder> backupUsageEventBuilder_;
+    /**
+     * <pre>
+     * set when kind = BACKUP_USAGE
+     * </pre>
+     *
+     * <code>optional .android_studio.BackupUsageEvent backup_usage_event = 198 [lazy = true];</code>
+     * @return Whether the backupUsageEvent field is set.
+     */
+    public boolean hasBackupUsageEvent() {
+      return ((bitField6_ & 0x00000020) != 0);
+    }
+    /**
+     * <pre>
+     * set when kind = BACKUP_USAGE
+     * </pre>
+     *
+     * <code>optional .android_studio.BackupUsageEvent backup_usage_event = 198 [lazy = true];</code>
+     * @return The backupUsageEvent.
+     */
+    public com.google.wireless.android.sdk.stats.BackupUsageEvent getBackupUsageEvent() {
+      if (backupUsageEventBuilder_ == null) {
+        return backupUsageEvent_ == null ? com.google.wireless.android.sdk.stats.BackupUsageEvent.getDefaultInstance() : backupUsageEvent_;
+      } else {
+        return backupUsageEventBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * set when kind = BACKUP_USAGE
+     * </pre>
+     *
+     * <code>optional .android_studio.BackupUsageEvent backup_usage_event = 198 [lazy = true];</code>
+     */
+    public Builder setBackupUsageEvent(com.google.wireless.android.sdk.stats.BackupUsageEvent value) {
+      if (backupUsageEventBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        backupUsageEvent_ = value;
+        onChanged();
+      } else {
+        backupUsageEventBuilder_.setMessage(value);
+      }
+      bitField6_ |= 0x00000020;
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = BACKUP_USAGE
+     * </pre>
+     *
+     * <code>optional .android_studio.BackupUsageEvent backup_usage_event = 198 [lazy = true];</code>
+     */
+    public Builder setBackupUsageEvent(
+        com.google.wireless.android.sdk.stats.BackupUsageEvent.Builder builderForValue) {
+      if (backupUsageEventBuilder_ == null) {
+        backupUsageEvent_ = builderForValue.build();
+        onChanged();
+      } else {
+        backupUsageEventBuilder_.setMessage(builderForValue.build());
+      }
+      bitField6_ |= 0x00000020;
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = BACKUP_USAGE
+     * </pre>
+     *
+     * <code>optional .android_studio.BackupUsageEvent backup_usage_event = 198 [lazy = true];</code>
+     */
+    public Builder mergeBackupUsageEvent(com.google.wireless.android.sdk.stats.BackupUsageEvent value) {
+      if (backupUsageEventBuilder_ == null) {
+        if (((bitField6_ & 0x00000020) != 0) &&
+            backupUsageEvent_ != null &&
+            backupUsageEvent_ != com.google.wireless.android.sdk.stats.BackupUsageEvent.getDefaultInstance()) {
+          backupUsageEvent_ =
+            com.google.wireless.android.sdk.stats.BackupUsageEvent.newBuilder(backupUsageEvent_).mergeFrom(value).buildPartial();
+        } else {
+          backupUsageEvent_ = value;
+        }
+        onChanged();
+      } else {
+        backupUsageEventBuilder_.mergeFrom(value);
+      }
+      bitField6_ |= 0x00000020;
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = BACKUP_USAGE
+     * </pre>
+     *
+     * <code>optional .android_studio.BackupUsageEvent backup_usage_event = 198 [lazy = true];</code>
+     */
+    public Builder clearBackupUsageEvent() {
+      if (backupUsageEventBuilder_ == null) {
+        backupUsageEvent_ = null;
+        onChanged();
+      } else {
+        backupUsageEventBuilder_.clear();
+      }
+      bitField6_ = (bitField6_ & ~0x00000020);
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = BACKUP_USAGE
+     * </pre>
+     *
+     * <code>optional .android_studio.BackupUsageEvent backup_usage_event = 198 [lazy = true];</code>
+     */
+    public com.google.wireless.android.sdk.stats.BackupUsageEvent.Builder getBackupUsageEventBuilder() {
+      bitField6_ |= 0x00000020;
+      onChanged();
+      return getBackupUsageEventFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * set when kind = BACKUP_USAGE
+     * </pre>
+     *
+     * <code>optional .android_studio.BackupUsageEvent backup_usage_event = 198 [lazy = true];</code>
+     */
+    public com.google.wireless.android.sdk.stats.BackupUsageEventOrBuilder getBackupUsageEventOrBuilder() {
+      if (backupUsageEventBuilder_ != null) {
+        return backupUsageEventBuilder_.getMessageOrBuilder();
+      } else {
+        return backupUsageEvent_ == null ?
+            com.google.wireless.android.sdk.stats.BackupUsageEvent.getDefaultInstance() : backupUsageEvent_;
+      }
+    }
+    /**
+     * <pre>
+     * set when kind = BACKUP_USAGE
+     * </pre>
+     *
+     * <code>optional .android_studio.BackupUsageEvent backup_usage_event = 198 [lazy = true];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.BackupUsageEvent, com.google.wireless.android.sdk.stats.BackupUsageEvent.Builder, com.google.wireless.android.sdk.stats.BackupUsageEventOrBuilder> 
+        getBackupUsageEventFieldBuilder() {
+      if (backupUsageEventBuilder_ == null) {
+        backupUsageEventBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.wireless.android.sdk.stats.BackupUsageEvent, com.google.wireless.android.sdk.stats.BackupUsageEvent.Builder, com.google.wireless.android.sdk.stats.BackupUsageEventOrBuilder>(
+                getBackupUsageEvent(),
+                getParentForChildren(),
+                isClean());
+        backupUsageEvent_ = null;
+      }
+      return backupUsageEventBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(
