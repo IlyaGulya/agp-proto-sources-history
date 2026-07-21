@@ -5164,7 +5164,7 @@ public final class AndroidStudioStats {
       "eLocationMetadata\022\024\n\014result_count\030\001 \001(\005\"" +
       "W\n\034PowerProfilerCaptureMetadata\022\030\n\020power" +
       "_rail_count\030\001 \001(\005\022\035\n\025battery_counter_cou" +
-      "nt\030\002 \001(\005\"\300\014\n\014TaskMetadata\022@\n\ttask_type\030\001" +
+      "nt\030\002 \001(\005\"\352\014\n\014TaskMetadata\022@\n\ttask_type\030\001" +
       " \001(\0162-.android_studio.TaskMetadata.Profi" +
       "lerTaskType\022\017\n\007task_id\030\002 \001(\003\022E\n\020task_dat" +
       "a_origin\030\003 \001(\0162+.android_studio.TaskMeta" +
@@ -5191,3144 +5191,3146 @@ public final class AndroidStudioStats {
       "inMethodSampleTaskConfig\022\032\n\022sample_inter" +
       "val_us\030\001 \001(\005\022\026\n\016buffer_size_mb\030\002 \001(\005\032<\n\033" +
       "NativeAllocationsTaskConfig\022\035\n\025sample_in" +
-      "terval_bytes\030\001 \001(\005\"\356\001\n\020ProfilerTaskType\022" +
+      "terval_bytes\030\001 \001(\005\"\230\002\n\020ProfilerTaskType\022" +
       "\"\n\036PROFILER_TASK_TYPE_UNSPECIFIED\020\000\022\024\n\020C" +
-      "ALLSTACK_SAMPLE\020\001\022\020\n\014SYSTEM_TRACE\020\002\022\034\n\030J" +
-      "AVA_KOTLIN_METHOD_TRACE\020\003\022\035\n\031JAVA_KOTLIN" +
-      "_METHOD_SAMPLE\020\004\022\r\n\tHEAP_DUMP\020\005\022\026\n\022NATIV" +
-      "E_ALLOCATIONS\020\006\022\033\n\027JAVA_KOTLIN_ALLOCATIO" +
-      "NS\020\007\022\r\n\tLIVE_VIEW\020\010\"]\n\016TaskDataOrigin\022 \n" +
-      "\034TASK_DATA_ORIGIN_UNSPECIFIED\020\000\022\007\n\003NEW\020\001" +
-      "\022\022\n\016PAST_RECORDING\020\002\022\014\n\010IMPORTED\020\003\"c\n\023Ta" +
-      "skAttachmentPoint\022%\n!TASK_ATTACHMENT_POI" +
-      "NT_UNSPECIFIED\020\000\022\017\n\013NEW_PROCESS\020\001\022\024\n\020EXI" +
-      "STING_PROCESS\020\002\"J\n\rExposureLevel\022\013\n\007UNKN" +
-      "OWN\020\000\022\013\n\007RELEASE\020\001\022\017\n\013PROFILEABLE\020\002\022\016\n\nD" +
-      "EBUGGABLE\020\003\"F\n\023TaskEnteredMetadata\022/\n\tta" +
-      "sk_data\030\001 \001(\0132\034.android_studio.TaskMetad" +
-      "ata\"\371\001\n\024TaskFinishedMetadata\022/\n\ttask_dat" +
-      "a\030\001 \001(\0132\034.android_studio.TaskMetadata\022S\n" +
-      "\023task_finished_state\030\002 \001(\01626.android_stu" +
-      "dio.TaskFinishedMetadata.TaskFinishedSta" +
-      "te\"[\n\021TaskFinishedState\022#\n\037TASK_FINISHED" +
-      "_STATE_UNSPECIFIED\020\000\022\r\n\tCOMPLETED\020\001\022\022\n\016U" +
-      "SER_CANCELLED\020\002\"\337\036\n\022TaskFailedMetadata\022/" +
-      "\n\ttask_data\030\001 \001(\0132\034.android_studio.TaskM" +
-      "etadata\022F\n\rfailing_point\030\002 \001(\0162/.android" +
-      "_studio.TaskFailedMetadata.FailingPoint\022" +
-      "a\n\033task_start_failure_metadata\030\003 \001(\0132:.a" +
-      "ndroid_studio.TaskFailedMetadata.TaskSta",
-      "rtFailedMetadataH\000\022_\n\032task_stop_failure_" +
-      "metadata\030\004 \001(\01329.android_studio.TaskFail" +
-      "edMetadata.TaskStopFailedMetadataH\000\022k\n t" +
-      "ask_processing_failure_metadata\030\005 \001(\0132?." +
-      "android_studio.TaskFailedMetadata.TaskPr" +
-      "ocessingFailedMetadataH\000\032\234\002\n\027TaskStartFa" +
-      "iledMetadata\022Q\n\022trace_start_status\030\001 \001(\013" +
-      "23.android_studio.TaskFailedMetadata.Tra" +
-      "ceStartStatusH\000\022P\n\014track_status\030\002 \001(\01328." +
-      "android_studio.TaskFailedMetadata.Alloca" +
-      "tionTrackStatusH\000\022S\n\026heap_dump_start_sta" +
-      "tus\030\003 \001(\01321.android_studio.TaskFailedMet" +
-      "adata.HeapDumpStatusH\000B\007\n\005union\032\210\002\n\026Task" +
-      "StopFailedMetadata\022B\n\024cpu_capture_metada" +
-      "ta\030\001 \001(\0132\".android_studio.CpuCaptureMeta" +
-      "dataH\000\022O\n\021trace_stop_status\030\002 \001(\01322.andr" +
-      "oid_studio.TaskFailedMetadata.TraceStopS" +
-      "tatusH\000\022P\n\014track_status\030\003 \001(\01328.android_" +
-      "studio.TaskFailedMetadata.AllocationTrac" +
-      "kStatusH\000B\007\n\005union\032`\n\034TaskProcessingFail" +
-      "edMetadata\022@\n\024cpu_capture_metadata\030\001 \001(\013" +
-      "2\".android_studio.CpuCaptureMetadata\032\230\007\n" +
-      "\020TraceStartStatus\022J\n\006status\030\001 \001(\0162:.andr" +
-      "oid_studio.TaskFailedMetadata.TraceStart" +
-      "Status.Status\022\022\n\nerror_code\030\002 \001(\003\022\025\n\rsta" +
-      "rt_time_ns\030\003 \001(\003\"L\n\006Status\022\026\n\022STATUS_UNS" +
-      "PECIFIED\020\000\022\013\n\007SUCCESS\020\001\022\013\n\007FAILURE\020\002\022\020\n\014" +
-      "UNRECOGNIZED\020\003\"\276\005\n\tErrorCode\022\030\n\024NO_ERROR" +
-      "_TRACE_START\020\000\022\033\n\027NO_TRACE_TYPE_SPECIFIE" +
-      "D\020\001\022!\n\035APP_ALREADY_PROFILED_WITH_ART\020\002\022\037" +
-      "\n\033UNABLE_TO_RUN_PROFILE_START\020\004\022#\n\037REQUE" +
-      "STED_BUFFER_SIZE_TOO_SMALL\020\010\022\036\n\032FAILED_T" +
-      "O_RUN_ATRACE_START\020\020\022.\n*ATRACE_NOT_ALLOC" +
-      "ATE_MEMORY_TO_RECORD_TRACE\020 \0223\n/PERFETTO" +
-      "_ALREADY_RUNNING_UNABLE_START_NEW_TRACE\020" +
-      "@\022/\n*TRACER_ALREADY_RUNNING_UNABLE_RUN_P" +
-      "ERFETTO\020\200\001\022\036\n\031FAILED_TO_LAUNCH_PERFETTO\020" +
-      "\200\002\022\034\n\027FAILED_TO_LAUNCH_TRACER\020\200\004\022\034\n\027FAIL" +
-      "ED_TO_LAUNCH_TRACED\020\200\010\022#\n\036FAILED_TO_LAUN" +
-      "CH_TRACED_PROBES\020\200\020\022\037\n\032SIMPLEPREF_ALREAD" +
-      "Y_RUNNING\020\200 \022(\n#UNABLE_TO_GET_PROCESS_ID" +
-      "_TO_PROFILE\020\200@\022+\n%UNABLE_TO_SETPROP_TO_E" +
-      "NABLE_PROFILING\020\200\200\001\022&\n UNABLE_TO_CREATE_" +
-      "FORK_SIMPLEPREF\020\200\200\002\022\034\n\026ONGOING_CAPTURE_E" +
-      "XISTS\020\200\200\004\022\034\n\026NO_TRACING_OPTIONS_SET\020\200\200\010\032" +
-      "\366\t\n\017TraceStopStatus\022I\n\006status\030\001 \001(\01629.an" +
+      "ALLSTACK_SAMPLE\020\001\022\020\n\014SYSTEM_TRACE\020\002\022 \n\030J" +
+      "AVA_KOTLIN_METHOD_TRACE\020\003\032\002\010\001\022!\n\031JAVA_KO" +
+      "TLIN_METHOD_SAMPLE\020\004\032\002\010\001\022\r\n\tHEAP_DUMP\020\005\022" +
+      "\026\n\022NATIVE_ALLOCATIONS\020\006\022\033\n\027JAVA_KOTLIN_A" +
+      "LLOCATIONS\020\007\022\r\n\tLIVE_VIEW\020\010\022 \n\034JAVA_KOTL" +
+      "IN_METHOD_RECORDING\020\t\"]\n\016TaskDataOrigin\022" +
+      " \n\034TASK_DATA_ORIGIN_UNSPECIFIED\020\000\022\007\n\003NEW" +
+      "\020\001\022\022\n\016PAST_RECORDING\020\002\022\014\n\010IMPORTED\020\003\"c\n\023" +
+      "TaskAttachmentPoint\022%\n!TASK_ATTACHMENT_P" +
+      "OINT_UNSPECIFIED\020\000\022\017\n\013NEW_PROCESS\020\001\022\024\n\020E" +
+      "XISTING_PROCESS\020\002\"J\n\rExposureLevel\022\013\n\007UN" +
+      "KNOWN\020\000\022\013\n\007RELEASE\020\001\022\017\n\013PROFILEABLE\020\002\022\016\n" +
+      "\nDEBUGGABLE\020\003\"F\n\023TaskEnteredMetadata\022/\n\t" +
+      "task_data\030\001 \001(\0132\034.android_studio.TaskMet" +
+      "adata\"\371\001\n\024TaskFinishedMetadata\022/\n\ttask_d" +
+      "ata\030\001 \001(\0132\034.android_studio.TaskMetadata\022" +
+      "S\n\023task_finished_state\030\002 \001(\01626.android_s" +
+      "tudio.TaskFinishedMetadata.TaskFinishedS" +
+      "tate\"[\n\021TaskFinishedState\022#\n\037TASK_FINISH" +
+      "ED_STATE_UNSPECIFIED\020\000\022\r\n\tCOMPLETED\020\001\022\022\n" +
+      "\016USER_CANCELLED\020\002\"\337\036\n\022TaskFailedMetadata" +
+      "\022/\n\ttask_data\030\001 \001(\0132\034.android_studio.Tas" +
+      "kMetadata\022F\n\rfailing_point\030\002 \001(\0162/.andro" +
+      "id_studio.TaskFailedMetadata.FailingPoin" +
+      "t\022a\n\033task_start_failure_metadata\030\003 \001(\0132:",
+      ".android_studio.TaskFailedMetadata.TaskS" +
+      "tartFailedMetadataH\000\022_\n\032task_stop_failur" +
+      "e_metadata\030\004 \001(\01329.android_studio.TaskFa" +
+      "iledMetadata.TaskStopFailedMetadataH\000\022k\n" +
+      " task_processing_failure_metadata\030\005 \001(\0132" +
+      "?.android_studio.TaskFailedMetadata.Task" +
+      "ProcessingFailedMetadataH\000\032\234\002\n\027TaskStart" +
+      "FailedMetadata\022Q\n\022trace_start_status\030\001 \001" +
+      "(\01323.android_studio.TaskFailedMetadata.T" +
+      "raceStartStatusH\000\022P\n\014track_status\030\002 \001(\0132" +
+      "8.android_studio.TaskFailedMetadata.Allo" +
+      "cationTrackStatusH\000\022S\n\026heap_dump_start_s" +
+      "tatus\030\003 \001(\01321.android_studio.TaskFailedM" +
+      "etadata.HeapDumpStatusH\000B\007\n\005union\032\210\002\n\026Ta" +
+      "skStopFailedMetadata\022B\n\024cpu_capture_meta" +
+      "data\030\001 \001(\0132\".android_studio.CpuCaptureMe" +
+      "tadataH\000\022O\n\021trace_stop_status\030\002 \001(\01322.an" +
       "droid_studio.TaskFailedMetadata.TraceSto" +
-      "pStatus.Status\022\022\n\nerror_code\030\002 \001(\003\022\034\n\024st" +
-      "opping_duration_ns\030\003 \001(\003\"\206\003\n\006Status\022\026\n\022S" +
-      "TATUS_UNSPECIFIED\020\000\022\013\n\007SUCCESS\020\001\022\030\n\024NO_O" +
-      "NGOING_PROFILING\020\002\022\024\n\020APP_PROCESS_DIED\020\003" +
-      "\022\023\n\017APP_PID_CHANGED\020\004\022\031\n\025PROFILER_PROCES" +
-      "S_DIED\020\005\022\027\n\023STOP_COMMAND_FAILED\020\006\022\036\n\032STI" +
-      "LL_PROFILING_AFTER_STOP\020\007\022\030\n\024CANNOT_STAR" +
-      "T_WAITING\020\010\022\020\n\014WAIT_TIMEOUT\020\t\022\017\n\013WAIT_FA" +
-      "ILED\020\n\022\032\n\026CANNOT_READ_WAIT_EVENT\020\013\022\024\n\020CA" +
-      "NNOT_COPY_FILE\020\014\022\024\n\020CANNOT_FORM_FILE\020\r\022\024" +
-      "\n\020CANNOT_READ_FILE\020\016\022\021\n\rOTHER_FAILURE\020\017\022" +
-      "\020\n\014UNRECOGNIZED\020\020\"\334\005\n\tErrorCode\022\027\n\023NO_ER" +
-      "ROR_TRACE_STOP\020\000\022$\n FAILED_TO_READ_TRACE" +
-      "_FROM_DEVICE\020\001\022/\n+UNABLE_TO_MONITOR_TRAC" +
-      "E_FILE_FOR_COMPLETION\020\002\022\036\n\032UNABLE_TO_RUN" +
-      "_PROFILE_STOP\020\004\0220\n,CANNOT_READ_WHILE_WAI" +
-      "TING_FOR_ART_TRACE_FILE\020\010\022\"\n\036WAIT_FOR_AR" +
-      "T_TRACE_FILE_FAILED\020\020\022%\n!WAIT_FOR_ART_TR" +
-      "ACE_FILE_TIMED_OUT\020 \022\031\n\025FAILED_TO_STOP_A" +
-      "TRACE\020@\022\032\n\025FAILED_TO_STOP_TRACER\020\200\001\022\034\n\027F" +
-      "AILED_TO_STOP_PERFETTO\020\200\002\022\037\n\032APP_WAS_NOT" +
-      "_BEING_PROFILED\020\200\004\022&\n!APP_DIED_SINCE_PRO" +
-      "FILEING_STARTED\020\200\010\0222\n-RECORDED_PIP_AND_C" +
-      "URRENT_APP_PID_DO_NOT_MATCH\020\200\020\022)\n$FAILED" +
-      "_TO_SEND_SIGTERM_TO_SIMPLEPREF\020\200 \022(\n#UNA" +
-      "BLE_TO_COPY_SIMPLEPREF_RAW_TRACE\020\200@\022\025\n\017W" +
-      "AIT_PID_FAILED\020\200\200\001\022&\n SIMPLE_PREF_NOT_EX" +
-      "IT_AS_EXPECTED\020\200\200\002\022\030\n\022NO_ONGOING_CAPTURE" +
-      "\020\200\200\004\022\036\n\030NO_TRACING_OPTIONS_FOUND\020\200\200\010\022\"\n\034" +
-      "NO_TRACE_TYPE_SPECIFIED_STOP\020\200\200\020\032\244\002\n\025All" +
-      "ocationTrackStatus\022O\n\006status\030\001 \001(\0162?.and" +
-      "roid_studio.TaskFailedMetadata.Allocatio" +
-      "nTrackStatus.Status\022\025\n\rstart_time_ns\030\002 \001" +
-      "(\003\"\242\001\n\006Status\022\026\n\022STATUS_UNSPECIFIED\020\000\022\013\n" +
-      "\007SUCCESS\020\001\022\017\n\013IN_PROGRESS\020\002\022\017\n\013NOT_ENABL" +
-      "ED\020\003\022\021\n\rNOT_PROFILING\020\004\022\023\n\017FAILURE_UNKNO" +
-      "WN\020\005\022\020\n\014UNRECOGNIZED\020\006\022\027\n\023AGENT_UN_ATTAC" +
-      "HABLE\020\007\032\353\001\n\016HeapDumpStatus\022H\n\006status\030\001 \001" +
-      "(\01628.android_studio.TaskFailedMetadata.H" +
-      "eapDumpStatus.Status\022\025\n\rstart_time_ns\030\002 " +
-      "\001(\003\"x\n\006Status\022\026\n\022STATUS_UNSPECIFIED\020\000\022\013\n" +
-      "\007SUCCESS\020\001\022\017\n\013IN_PROGRESS\020\002\022\021\n\rNOT_PROFI" +
-      "LING\020\003\022\023\n\017FAILURE_UNKNOWN\020\004\022\020\n\014UNRECOGNI" +
-      "ZED\020\005\"a\n\014FailingPoint\022\035\n\031FAILING_POINT_U" +
-      "NSPECIFIED\020\000\022\016\n\nTASK_START\020\001\022\r\n\tTASK_STO" +
-      "P\020\002\022\023\n\017TASK_PROCESSING\020\003B\007\n\005union\"\274)\n\024An" +
-      "droidProfilerEvent\0229\n\005stage\030\001 \001(\0162*.andr" +
-      "oid_studio.AndroidProfilerEvent.Stage\0227\n" +
-      "\004type\030\002 \001(\0162).android_studio.AndroidProf" +
-      "ilerEvent.Type\022:\n\ncpu_config\030\003 \001(\0132\".and" +
-      "roid_studio.CpuProfilingConfigB\002\030\001\022@\n\024cp" +
-      "u_capture_metadata\030\004 \001(\0132\".android_studi" +
-      "o.CpuCaptureMetadata\0227\n\017filter_metadata\030" +
-      "\005 \001(\0132\036.android_studio.FilterMetadata\022D\n" +
-      "\013memory_heap\030\006 \001(\0162/.android_studio.Andr" +
-      "oidProfilerEvent.MemoryHeap\022O\n\026session_s" +
-      "tart_metadata\030\007 \001(\0132/.android_studio.Pro" +
-      "filerSessionCreationMetaData\022S\n\031session_" +
-      "artifact_metadata\030\010 \001(\01320.android_studio" +
-      ".ProfilerSessionSelectionMetaData\022S\n\036cpu" +
-      "_startup_profiling_metadata\030\t \001(\0132+.andr" +
-      "oid_studio.CpuStartupProfilingMetadata\022I" +
-      "\n\031cpu_import_trace_metadata\030\n \001(\0132&.andr" +
-      "oid_studio.CpuImportTraceMetadata\022G\n\030cpu" +
-      "_api_tracing_metadata\030\013 \001(\0132%.android_st" +
-      "udio.CpuApiTracingMetadata\022B\n\025energy_ran" +
-      "ge_metadata\030\014 \001(\0132#.android_studio.Energ" +
-      "yRangeMetadata\022B\n\025energy_event_metadata\030" +
-      "\r \001(\0132#.android_studio.EnergyEventMetada" +
-      "ta\0228\n\020perfd_crash_info\030\016 \001(\0132\036.android_s" +
-      "tudio.PerfdCrashInfo\022L\n\032transport_failur" +
-      "e_metadata\030\017 \001(\0132(.android_studio.Transp" +
-      "ortFailureMetadata\022U\n\037memory_instance_fi" +
-      "lter_metadata\030\020 \001(\0132,.android_studio.Mem" +
-      "oryInstanceFilterMetadata\022Q\n\035transport_d" +
-      "aemon_started_info\030\021 \001(\0132*.android_studi" +
-      "o.TransportDaemonStartedInfo\022K\n\021tpd_mana" +
-      "ger_stats\030\022 \001(\01320.android_studio.TracePr" +
-      "ocessorDaemonManagerStats\022G\n\017tpd_query_s" +
-      "tats\030\023 \001(\0132..android_studio.TraceProcess" +
-      "orDaemonQueryStats\022I\n\026box_selection_meta" +
-      "data\030\024 \001(\0132).android_studio.AdtUiBoxSele" +
-      "ctionMetadata\022E\n\024track_group_metadata\030\025 " +
-      "\001(\0132\'.android_studio.AdtUiTrackGroupMeta" +
-      "data\022\023\n\013event_count\030\026 \001(\r\022=\n\007loading\030\027 \001" +
-      "(\0132,.android_studio.AndroidProfilerEvent" +
-      ".Loading\022M\n\033run_with_profiling_metadata\030" +
-      "\030 \001(\0132(.android_studio.RunWithProfilingM" +
-      "etadata\022U\n\037perfetto_sdk_handshake_metada" +
-      "ta\030\031 \001(\0132,.android_studio.PerfettoSdkHan" +
-      "dshakeMetadata\022q\n.resolve_compose_tracin" +
-      "g_code_location_metadata\030\032 \001(\01329.android" +
-      "_studio.ResolveComposeTracingCodeLocatio" +
-      "nMetadata\022U\n\037power_profiler_capture_meta" +
-      "data\030\033 \001(\0132,.android_studio.PowerProfile" +
-      "rCaptureMetadata\022B\n\025task_entered_metadat" +
-      "a\030\034 \001(\0132#.android_studio.TaskEnteredMeta" +
-      "data\022D\n\026task_finished_metadata\030\035 \001(\0132$.a" +
-      "ndroid_studio.TaskFinishedMetadata\022@\n\024ta" +
-      "sk_failed_metadata\030\036 \001(\0132\".android_studi" +
-      "o.TaskFailedMetadata\022 \n\030is_task_settings" +
-      "_changed\030\037 \001(\010\032\245\003\n\007Loading\022?\n\004type\030\001 \001(\016" +
-      "21.android_studio.AndroidProfilerEvent.L" +
-      "oading.Type\022\022\n\nis_success\030\002 \001(\010\022\017\n\007size_" +
-      "kb\030\003 \001(\r\022\023\n\013event_count\030\004 \001(\004\022\022\n\nelapsed" +
-      "_ms\030\005 \001(\r\022\022\n\ncore_count\030\006 \001(\r\022\031\n\021machine" +
-      "_memory_mb\030\007 \001(\r\022\034\n\024studio_max_memory_mb" +
-      "\030\010 \001(\r\022\035\n\025studio_free_memory_mb\030\t \001(\r\"\236\001" +
-      "\n\004Type\022\017\n\013UNSPECIFIED\020\000\022\t\n\005HPROF\020\001\022\016\n\nHE" +
-      "AP_PROFD\020\002\022\020\n\014LEGACY_ALLOC\020\003\022\016\n\nLIVE_ALL" +
-      "OC\020\004\022\031\n\025PERFETTO_PROCESS_LIST\020\005\022\024\n\020PERFE" +
-      "TTO_PROCESS\020\006\022\016\n\nSIMPLEPERF\020\007\022\007\n\003ART\020\010\"\212" +
-      "\002\n\005Stage\022\021\n\rUNKNOWN_STAGE\020\000\022\016\n\nNULL_STAG" +
-      "E\020\001\022\022\n\016OVERVIEW_STAGE\020\002\022\r\n\tCPU_STAGE\020\003\022\020" +
-      "\n\014MEMORY_STAGE\020\004\022\021\n\rNETWORK_STAGE\020\005\022\020\n\014E" +
-      "NERGY_STAGE\020\006\022\025\n\021CPU_CAPTURE_STAGE\020\007\022\032\n\026" +
-      "MEMORY_HEAP_DUMP_STAGE\020\010\022!\n\035MEMORY_NATIV" +
-      "E_RECORDING_STAGE\020\t\022\036\n\032MEMORY_JVM_RECORD" +
-      "ING_STAGE\020\n\022\016\n\nLIVE_STAGE\020\013\"\214\001\n\nMemoryHe" +
-      "ap\022\020\n\014UNKNOWN_HEAP\020\000\022\020\n\014DEFAULT_HEAP\020\001\022\016" +
-      "\n\nIMAGE_HEAP\020\002\022\017\n\013ZYGOTE_HEAP\020\003\022\014\n\010APP_H" +
-      "EAP\020\004\022\014\n\010JNI_HEAP\020\005\022\017\n\013NATIVE_HEAP\020\006\022\014\n\010" +
-      "ALL_HEAP\020\007\"\313\021\n\004Type\022\020\n\014UNKNOWN_TYPE\020\000\022\025\n" +
-      "\021PROFILING_STARTED\020\001\022\036\n\032ADVANCED_PROFILI" +
-      "NG_STARTED\020\002\022\021\n\rSTAGE_ENTERED\020\003\022\026\n\022RUN_W" +
-      "ITH_PROFILING\020\004\022\021\n\rPERFD_CRASHED\020\005\022\037\n\033PR" +
-      "E_TRANSPORT_DAEMON_STARTS\020\006\022\033\n\027TRANSPORT" +
-      "_DAEMON_FAILED\020\007\022\032\n\026TRANSPORT_PROXY_FAIL" +
-      "ED\020\010\022\"\n\036PROFILER_INITIALIZATION_FAILED\020\t" +
-      "\022\034\n\030TRANSPORT_DAEMON_STARTED\020\n\022\021\n\rCHANGE" +
-      "_DEVICE\020e\022\022\n\016CHANGE_PROCESS\020f\022\013\n\007GO_BACK" +
-      "\020g\022\022\n\016SELECT_MONITOR\020h\022\013\n\007ZOOM_IN\020i\022\014\n\010Z" +
-      "OOM_OUT\020j\022\016\n\nZOOM_RESET\020k\022\025\n\021ZOOM_TO_SEL" +
-      "ECTION\020r\022\013\n\007GO_LIVE\020l\022\024\n\020NAVIGATE_TO_COD" +
-      "E\020m\022\020\n\014SELECT_RANGE\020n\022\n\n\006FILTER\020o\022\034\n\030AUT" +
-      "O_PROFILING_REQUESTED\020p\022\034\n\030AUTO_PROFILIN" +
-      "G_SUCCEEDED\020q\022\016\n\nSELECT_BOX\020s\022\026\n\022TRACK_G" +
-      "ROUP_ACTION\020t\022\013\n\007LOADING\020u\022)\n%RESOLVE_CO" +
-      "MPOSE_TRACING_CODE_LOCATION\020v\022\022\n\rTRACE_S" +
-      "AMPLED\020\311\001\022\027\n\022TRACE_INSTRUMENTED\020\312\001\022\022\n\rSE" +
-      "LECT_THREAD\020\314\001\022\024\n\017SELECT_TOP_DOWN\020\315\001\022\025\n\020" +
-      "SELECT_BOTTOM_UP\020\316\001\022\027\n\022SELECT_FLAME_CHAR" +
-      "T\020\317\001\022\026\n\021SELECT_CALL_CHART\020\322\001\022\033\n\026OPEN_CPU" +
-      "_CONFIG_DIALOG\020\320\001\022\026\n\021CREATE_CPU_CONFIG\020\321" +
-      "\001\022\016\n\tTRACE_CPU\020\323\001\022\022\n\rCAPTURE_TRACE\020\324\001\022\026\n" +
-      "\021THREADS_REORDERED\020\325\001\022\030\n\023KERNEL_VIEW_CLI" +
-      "CKED\020\326\001\022\030\n\023KERNEL_VIEW_TOGGLED\020\327\001\022\031\n\024THR" +
-      "EADS_VIEW_TOGGLED\020\330\001\022\032\n\025CPU_STARTUP_PROF" +
-      "ILING\020\331\001\022\025\n\020CPU_IMPORT_TRACE\020\332\001\022\024\n\017CPU_A" +
-      "PI_TRACING\020\333\001\022\021\n\014SELECT_FRAME\020\334\001\022\026\n\021TOGG" +
-      "LE_ALL_FRAMES\020\335\001\022\025\n\020TOGGLE_LIFECYCLE\020\336\001\022" +
-      "\033\n\026PERFETTO_SDK_HANDSHAKE\020\337\001\022\r\n\010FORCE_GC" +
-      "\020\255\002\022\023\n\016SNAPSHOT_HPROF\020\256\002\022\030\n\023CAPTURE_ALLO" +
-      "CATIONS\020\257\002\022\030\n\023SELECT_MEMORY_CHART\020\260\002\022\021\n\014" +
-      "EXPORT_HPROF\020\261\002\022\026\n\021EXPORT_ALLOCATION\020\262\002\022" +
-      "\024\n\017ARRANGE_CLASSES\020\263\002\022\030\n\023SELECT_MEMORY_S" +
-      "TACK\020\264\002\022\035\n\030SELECT_MEMORY_REFERENCES\020\265\002\022\027" +
-      "\n\022SELECT_MEMORY_HEAP\020\266\002\022\033\n\026MEMORY_INSTAN" +
-      "CE_FILTER\020\267\002\022\026\n\021SELECT_CONNECTION\020\222\003\022\034\n\027" +
-      "SELECT_DETAILS_RESPONSE\020\223\003\022\033\n\026SELECT_DET" +
-      "AILS_HEADERS\020\224\003\022\031\n\024SELECT_DETAILS_STACK\020" +
-      "\225\003\022\034\n\027SELECT_DETAILS_OVERVIEW\020\226\003\022\033\n\026SELE" +
-      "CT_DETAILS_REQUEST\020\227\003\022\031\n\024SELECT_DETAILS_" +
-      "ERROR\020\230\003\022\'\n\"SELECT_CONNECTIONS_CONNECTIO" +
-      "N_VIEW\020\231\003\022$\n\037SELECT_CONNECTIONS_THREADS_" +
-      "VIEW\020\232\003\022\030\n\023SELECT_ENERGY_RANGE\020\331\004\022\030\n\023SEL" +
-      "ECT_ENERGY_EVENT\020\332\004\022!\n\034POWER_PROFILER_DA" +
-      "TA_CAPTURED\020\333\004\022\024\n\017SESSION_CREATED\020\365\003\022\024\n\017" +
-      "SESSION_STOPPED\020\366\003\022\030\n\023SESSION_UI_EXPANDE" +
-      "D\020\367\003\022\031\n\024SESSION_UI_COLLAPSED\020\370\003\022\027\n\022SESSI" +
-      "ON_UI_RESIZED\020\371\003\022\036\n\031SESSION_ARTIFACT_SEL" +
-      "ECTED\020\372\003\022\035\n\030SESSION_DROPDOWN_CLICKED\020\373\003\022" +
-      "\031\n\024TPD_MANAGER_SPAWN_OK\020\274\005\022\035\n\030TPD_MANAGE" +
-      "R_SPAWN_FAILED\020\275\005\022\031\n\024TPD_QUERY_LOAD_TRAC" +
-      "E\020\306\005\022\037\n\032TPD_QUERY_PROCESS_METADATA\020\307\005\022\034\n" +
-      "\027TPD_QUERY_LOAD_CPU_DATA\020\310\005\022\037\n\032TPD_QUERY" +
-      "_LOAD_MEMORY_DATA\020\311\005\022\021\n\014TASK_ENTERED\020\240\006\022" +
-      "\022\n\rTASK_FINISHED\020\241\006\022\020\n\013TASK_FAILED\020\242\006\022\031\n" +
-      "\024TASK_SETTINGS_OPENED\020\252\006\";\n\026AndroidProfi" +
-      "lerDbTable\022\014\n\004name\030\001 \001(\t\022\023\n\013num_records\030" +
-      "\002 \001(\r\"x\n\026AndroidProfilerDbStats\022\017\n\007age_s" +
-      "ec\030\001 \001(\r\022\025\n\rtotal_disk_mb\030\002 \001(\r\0226\n\006table" +
-      "s\030\003 \003(\0132&.android_studio.AndroidProfiler" +
-      "DbTable\"F\n\020ApkAnalyzerStats\022\031\n\021uncompres" +
-      "sed_size\030\001 \001(\004\022\027\n\017compressed_size\030\002 \001(\004\"" +
-      "\377\002\n\036GradlePluginUpgradeDialogStats\022\036\n\026cu" +
-      "rrent_gradle_version\030\001 \001(\t\022-\n%current_an" +
-      "droid_gradle_plugin_version\030\002 \001(\t\022\"\n\032rec" +
-      "ommended_gradle_version\030\003 \001(\t\0221\n)recomme" +
-      "nded_android_gradle_plugin_version\030\004 \001(\t" +
-      "\022N\n\013user_action\030\005 \001(\01629.android_studio.G" +
-      "radlePluginUpgradeDialogStats.UserAction" +
-      "\"g\n\nUserAction\022\027\n\023UNKNOWN_USER_ACTION\020\000\022" +
-      "\n\n\006CANCEL\020\001\022\024\n\020DO_NOT_ASK_AGAIN\020\002\022\026\n\022REM" +
-      "IND_ME_TOMORROW\020\003\022\006\n\002OK\020\004\"\211.\n\017GradleSync" +
-      "Stats\0228\n\007trigger\030\001 \001(\0162\'.android_studio." +
-      "GradleSyncStats.Trigger\022\025\n\rtotal_time_ms" +
-      "\030\002 \001(\003\022\026\n\016gradle_time_ms\030\003 \001(\003\022\023\n\013ide_ti" +
-      "me_ms\030\004 \001(\003\022\035\n\025embedded_repo_enabled\030\005 \001" +
-      "(\010\022A\n\tsync_type\030\006 \001(\0162..android_studio.G" +
-      "radleSyncStats.GradleSyncType\022H\n\020actual_" +
-      "sync_type\030\007 \001(\0162..android_studio.GradleS" +
-      "yncStats.GradleSyncType\0220\n(last_known_an" +
-      "droid_gradle_plugin_version\030\010 \001(\t\022%\n\035and" +
-      "roid_gradle_plugin_version\030\t \001(\t\022\031\n\021uses" +
-      "_build_gradle\030\n \001(\010\022\035\n\025uses_build_gradle" +
-      "_kts\030\013 \001(\010\022X\n\023sync_execution_type\030\014 \001(\0162" +
-      "7.android_studio.GradleSyncStats.GradleS" +
-      "yncExecutionTypeB\002\030\001\022X\n\030user_requested_s" +
-      "ync_type\030\r \001(\01626.android_studio.GradleSy" +
-      "ncStats.UserRequestedExecution\022\\\n\032studio" +
-      "_requested_sync_type\030\016 \001(\01628.android_stu" +
-      "dio.GradleSyncStats.StudioRequestedExecu" +
-      "tion\022B\n\016downloads_data\030\017 \001(\0132*.android_s" +
-      "tudio.BuildDownloadsAnalysisData\022_\n\036vers" +
-      "ion_catalog_detector_state\030\020 \001(\01627.andro" +
-      "id_studio.GradleVersionCatalogDetectorEv" +
-      "ent.State\"\307\"\n\007Trigger\022\023\n\017TRIGGER_UNKNOWN" +
-      "\020\000\022\032\n\026TRIGGER_PROJECT_LOADED\020\001\022\034\n\030TRIGGE" +
-      "R_PROJECT_MODIFIED\020\002\022\030\n\024TRIGGER_USER_REQ" +
-      "UEST\020\003\022-\n)TRIGGER_EMBEDDED_REPO_ENABLED_" +
-      "BY_QUICKFIX\020\004\022-\n)TRIGGER_VARIANT_SELECTI" +
-      "ON_CHANGED_BY_USER\020\005\022\027\n\023TRIGGER_PSD_CHAN" +
-      "GES\020\006\022\032\n\026TRIGGER_TEST_REQUESTED\020\007\022\035\n\031TRI" +
-      "GGER_USER_FIRST_MARKER\020d\022\036\n\032TRIGGER_USER" +
-      "_STALE_CHANGES\020e\022\032\n\026TRIGGER_USER_TRY_AGA" +
-      "IN\020f\022\034\n\030TRIGGER_USER_SYNC_ACTION\020g\022,\n(TR" +
-      "IGGER_USER_REFRESH_LINKED_CPP_PROJECTS\020h" +
-      "\022\'\n#TRIGGER_USER_REQUEST_WHILE_BUILDING\020" +
-      "i\0226\n2TRIGGER_USER_REQUEST_RERUN_WITH_ADD" +
-      "ITIONAL_OPTIONS\020j\022\035\n\030TRIGGER_USER_LAST_M" +
-      "ARKER\020\307\001\022\034\n\027TRIGGER_QF_FIRST_MARKER\020\220\003\022*" +
-      "\n%TRIGGER_QF_APPENGINE_VERSION_UPGRADED\020" +
-      "\221\003\022\"\n\035TRIGGER_QF_ARTIFACT_INSTALLED\020\222\003\022%" +
-      "\n TRIGGER_QF_BUILD_TOOLS_INSTALLED\020\223\003\022+\n" +
-      "&TRIGGER_QF_BUILD_TOOLS_VERISON_REMOVED\020" +
-      "\224\003\022+\n&TRIGGER_QF_BUILD_TOOLS_VERSION_CHA" +
-      "NGED\020\225\003\022\037\n\032TRIGGER_QF_CMAKE_INSTALLED\020\226\003" +
-      "\022&\n!TRIGGER_QF_JDK_CHANGED_TO_CURRENT\020\227\003" +
-      "\022\'\n\"TRIGGER_QF_JDK_CHANGED_TO_EMBEDDED\020\230" +
-      "\003\022\035\n\030TRIGGER_QF_NDK_INSTALLED\020\231\003\022.\n)TRIG" +
-      "GER_QF_NDK_INTEGRATION_DEPRECATED_SET\020\232\003" +
-      "\022%\n TRIGGER_QF_OFFLINE_MODE_DISABLED\020\233\003\022" +
-      "$\n\037TRIGGER_QF_OFFLINE_MODE_ENABLED\020\234\003\022\"\n" +
-      "\035TRIGGER_QF_PLATFORM_INSTALLED\020\235\003\022$\n\037TRI" +
-      "GGER_QF_REFRESH_DEPENDENCIES\020\236\003\022 \n\033TRIGG" +
-      "ER_QF_REPOSITORY_ADDED\020\237\003\022$\n\037TRIGGER_QF_" +
-      "REPOSITORY_INSTALLED\020\240\003\022%\n TRIGGER_QF_SD" +
-      "K_PACKAGE_INSTALLED\020\241\003\022 \n\033TRIGGER_QF_SDK" +
-      "_PATH_CHANGED\020\242\003\022%\n TRIGGER_QF_SDK_VERSI" +
-      "ON_INSTALLED\020\243\003\022\037\n\032TRIGGER_QF_WRAPPER_CR" +
-      "EATED\020\244\003\022,\n\'TRIGGER_QF_WRAPPER_GRADLE_VE" +
-      "RSION_FIXED\020\245\003\022)\n$TRIGGER_QF_SDK_REMOVED" +
-      "_FROM_MANIFEST\020\246\003\022+\n&TRIGGER_QF_GRADLE_D" +
-      "ISTRIBUTION_DELETED\020\247\003\022:\n5TRIGGER_QF_DIS" +
-      "TRIBUTIONSHA256SUM_REMOVED_FROM_WRAPPER\020" +
-      "\250\003\0227\n2TRIGGER_QF_DISTRIBUTIONSHA256SUM_C" +
-      "ONFIRMED_BY_USER\020\251\003\022,\n\'TRIGGER_QF_GRADLE" +
-      "JVM_TO_USE_PROJECT_JDK\020\252\003\0220\n+TRIGGER_QF_" +
-      "REMOVE_JCENTER_FROM_REPOSITORIES\020\253\003\022\'\n\"T" +
-      "RIGGER_QF_SIGNING_CONFIG_SELECTED\020\254\003\022*\n%" +
-      "TRIGGER_QF_REMOVE_UNSUPPORTED_MODULES\020\255\003" +
-      "\022\'\n\"TRIGGER_QF_MIN_COMPILE_SDK_UPDATED\020\256" +
-      "\003\022\033\n\026TRIGGER_QF_LAST_MARKER\020\347\007\022\"\n\035TRIGGE" +
-      "R_REFACTOR_FIRST_MARKER\020\260\t\022)\n$TRIGGER_RE" +
-      "FACTOR_MIGRATE_TO_ANDROIDX\020\261\t\0224\n/TRIGGER" +
-      "_REFACTOR_MIGRATE_TO_RESOURCE_NAMESPACES" +
-      "\020\262\t\022$\n\037TRIGGER_REFACTOR_MODULE_RENAMED\020\263" +
-      "\t\0229\n4TRIGGER_REFACTOR_MIGRATE_TO_NON_TRA" +
-      "NSITIVE_R_CLASSES\020\264\t\022A\n<TRIGGER_REFACTOR" +
-      "_MIGRATE_BUILD_CONFIG_FROM_GRADLE_PROPER" +
-      "TIES\020\265\t\022!\n\034TRIGGER_REFACTOR_LAST_MARKER\020" +
-      "\223\n\022\035\n\030TRIGGER_PSD_FIRST_MARKER\020\334\013\022#\n\036TRI" +
-      "GGER_PSD_DEPENDENCY_REMOVED\020\335\013\022\037\n\032TRIGGE" +
-      "R_PSD_MODULE_REMOVED\020\336\013\022\034\n\027TRIGGER_PSD_L" +
-      "AST_MARKER\020\277\014\022\035\n\030TRIGGER_SDK_FIRST_MARKE" +
-      "R\020\210\016\022\035\n\030TRIGGER_SDK_PATH_CHANGED\020\211\016\022\034\n\027T" +
-      "RIGGER_SDK_LAST_MARKER\020\353\016\022\"\n\035TRIGGER_MOD" +
-      "IFIER_FIRST_MARKER\020\264\020\022#\n\036TRIGGER_MODIFIE" +
-      "R_ACTION_REDONE\020\265\020\022#\n\036TRIGGER_MODIFIER_A" +
-      "CTION_UNDONE\020\266\020\022+\n&TRIGGER_MODIFIER_ADD_" +
-      "MODULE_DEPENDENCY\020\267\020\022,\n\'TRIGGER_MODIFIER" +
-      "_ADD_LIBRARY_DEPENDENCY\020\270\020\022,\n\'TRIGGER_MO" +
-      "DIFIER_LANGUAGE_LEVEL_CHANGED\020\271\020\022!\n\034TRIG" +
-      "GER_MODIFIER_LAST_MARKER\020\227\021\022\"\n\035TRIGGER_L" +
-      "ANGUAGE_FIRST_MARKER\020\340\022\022(\n#TRIGGER_LANGU" +
-      "AGE_JAVA_LEVEL_CHANGED\020\341\022\022\'\n\"TRIGGER_LAN" +
-      "GUAGE_KOTLIN_CONFIGURED\020\342\022\022!\n\034TRIGGER_LA" +
-      "NGUAGE_LAST_MARKER\020\303\023\022\035\n\030TRIGGER_SVS_FIR" +
-      "ST_MARKER\020\214\025\022\036\n\031TRIGGER_SVS_NOT_SUPPORTE" +
-      "D\020\215\025\022\034\n\027TRIGGER_SVS_LAST_MARKER\020\357\025\022\035\n\030TR" +
-      "IGGER_CPP_FIRST_MARKER\020\270\027\022(\n#TRIGGER_CPP" +
-      "_EXTERNAL_PROJECT_LINKED\020\271\027\022\034\n\027TRIGGER_C" +
-      "PP_LAST_MARKER\020\233\030\022-\n(TRIGGER_ADDDEPENDEN" +
-      "CYACTION_FIRST_MARKER\020\344\031\022\'\n\"TRIGGER_ADDD" +
-      "EPENDENCYACTION_CALLED\020\345\031\022,\n\'TRIGGER_ADD" +
-      "DEPENDENCYACTION_LAST_MARKER\020\307\032\022\"\n\035TRIGG" +
-      "ER_ESPRESSO_FIRST_MARKER\020\220\034\022\033\n\026TRIGGER_E" +
-      "SPRESSO_SETUP\020\221\034\022!\n\034TRIGGER_ESPRESSO_LAS" +
-      "T_MARKER\020\363\034\022\037\n\032TRIGGER_BUILD_FIRST_MARKE" +
-      "R\020\274\036\022&\n!TRIGGER_BUILD_BEFORE_BUILDING_AP" +
-      "K\020\275\036\022*\n%TRIGGER_BUILD_SYNC_NEEDED_AFTER_" +
-      "BUILD\020\276\036\022\036\n\031TRIGGER_BUILD_LAST_MARKER\020\237\037" +
-      "\022\035\n\030TRIGGER_RUN_FIRST_MARKER\020\350 \022 \n\033TRIGG" +
-      "ER_RUN_NATIVE_UNSYNCED\020\351 \022+\n&TRIGGER_RUN" +
-      "_SYNC_NEEDED_BEFORE_RUNNING\020\352 \022\034\n\027TRIGGE" +
-      "R_RUN_LAST_MARKER\020\313!\022\035\n\030TRIGGER_AGP_FIRS" +
-      "T_MARKER\020\224#\022 \n\033TRIGGER_AGP_VERSION_UPDAT" +
-      "ED\020\225#\022+\n&TRIGGER_AGP_VERSION_UPDATE_ROLL" +
-      "ED_BACK\020\226#\022\034\n\027TRIGGER_AGP_LAST_MARKER\020\367#" +
-      "\022(\n#TRIGGER_PROJECT_LOADED_FIRST_MARKER\020" +
-      "\300%\022\030\n\023TRIGGER_PROJECT_NEW\020\301%\022\033\n\026TRIGGER_" +
-      "PROJECT_REOPEN\020\302%\022(\n#TRIGGER_PROJECT_CAC" +
-      "HED_SETUP_FAILED\020\303%\022\'\n\"TRIGGER_PROJECT_L" +
-      "OADED_LAST_MARKER\020\243&\022 \n\033TRIGGER_IMPORT_F" +
-      "IRST_MARKER\020\354\'\022\036\n\031TRIGGER_IMPORT_ADT_MOD" +
-      "ULE\020\355\'\022\"\n\035TRIGGER_IMPORT_MODULES_COPIED\020" +
-      "\356\'\022\037\n\032TRIGGER_IMPORT_LAST_MARKER\020\317(\022!\n\034T" +
-      "RIGGER_VARIANT_FIRST_MARKER\020\230*\022(\n#TRIGGE" +
-      "R_VARIANT_SELECTION_FULL_SYNC\020\231*\022 \n\033TRIG" +
-      "GER_VARIANT_LAST_MARKER\020\373*\022*\n%TRIGGER_GR" +
-      "ADLEDEPENDENCY_FIRST_MARKER\020\304,\022#\n\036TRIGGE" +
-      "R_GRADLEDEPENDENCY_ADDED\020\305,\022%\n TRIGGER_G" +
-      "RADLEDEPENDENCY_UPDATED\020\306,\022)\n$TRIGGER_GR" +
-      "ADLEDEPENDENCY_LAST_MARKER\020\247-\022)\n$TRIGGER" +
-      "_VERSION_CATALOG_FIRST_MARKER\020\360.\022\'\n\"TRIG" +
-      "GER_VERSION_CATALOG_FILE_ADDED\020\361.\022(\n#TRI" +
-      "GGER_VERSION_CATALOG_LAST_MARKER\020\323/\"\312\001\n\016" +
-      "GradleSyncType\022\034\n\030GRADLE_SYNC_TYPE_UNKNO" +
-      "WN\020\000\022\031\n\025GRADLE_SYNC_TYPE_IDEA\020\001\022#\n\037GRADL" +
-      "E_SYNC_TYPE_SINGLE_VARIANT\020\002\022\035\n\031GRADLE_S" +
-      "YNC_TYPE_COMPOUND\020\003\022\034\n\030GRADLE_SYNC_TYPE_" +
-      "SHIPPED\020\004\022\035\n\031GRADLE_SYNC_TYPE_NEW_SYNC\020\005" +
-      "\"b\n\027GradleSyncExecutionType\022!\n\035GRADLE_SY" +
-      "NC_RUNS_SEQUENTIALLY\020\000\022 \n\034GRADLE_SYNC_RU" +
-      "NS_IN_PARALLEL\020\001\032\002\030\001\"\177\n\026UserRequestedExe" +
-      "cution\022)\n%UNKNOWN_USER_REQUESTED_EXECUTI" +
-      "ON_TYPE\020\000\022\035\n\031USER_REQUESTED_SEQUENTIAL\020\001" +
-      "\022\033\n\027USER_REQUESTED_PARALLEL\020\002\"\205\001\n\030Studio" +
-      "RequestedExecution\022+\n\'UNKNOWN_STUDIO_REQ" +
-      "UESTED_EXECUTION_TYPE\020\000\022\036\n\032STUDIO_REQUES" +
-      "TD_SEQUENTIAL\020\001\022\034\n\030STUDIO_REQUESTD_PARAL" +
-      "LEL\020\002\"\253\001\n\017GradleSyncIssue\022D\n\004type\030\001 \001(\0162" +
-      "6.android_studio.AndroidStudioEvent.Grad" +
-      "leSyncIssueType\022R\n\023offered_quick_fixes\030\002" +
-      " \003(\01625.android_studio.AndroidStudioEvent" +
-      ".GradleSyncQuickFix\"\322\002\n\022GradleCppSyncSta" +
-      "ts\022%\n\035native_workspace_sync_time_ms\030\001 \001(" +
-      "\003\022X\n\032synced_native_module_stats\030\002 \003(\01324." +
-      "android_studio.GradleCppSyncStats.Native" +
-      "ModuleStats\022\033\n\023cidr_workspace_size\030\003 \001(\005" +
-      "\032\235\001\n\021NativeModuleStats\022\033\n\023c_source_file_" +
-      "count\030\001 \001(\005\022\035\n\025cpp_source_file_count\030\002 \001",
-      "(\005\022*\n\"distinct_compiler_flag_lists_count" +
-      "\030\003 \001(\005\022 \n\030cidr_configuration_count\030\004 \001(\005" +
-      "\"%\n\017ApkDebugProject\022\022\n\npackage_id\030\001 \001(\t\"" +
-      "\326\002\n\024LayoutInspectorEvent\022K\n\004type\030\001 \001(\0162=" +
-      ".android_studio.LayoutInspectorEvent.Lay" +
-      "outInspectorEventType\022\026\n\016duration_in_ms\030" +
-      "\002 \001(\003\022\021\n\tdata_size\030\003 \001(\003\022\017\n\007version\030\004 \001(" +
-      "\r\"\264\001\n\030LayoutInspectorEventType\022\026\n\022UNKNOW" +
-      "N_EVENT_TYPE\020\000\022\013\n\007CAPTURE\020\001\022\010\n\004OPEN\020\002\022\024\n" +
-      "\020DUMP_DISPLAYLIST\020\003\022\021\n\rOVERLAY_IMAGE\020\004\022\023" +
-      "\n\017RENDER_SUB_VIEW\020\005\022\025\n\021GO_TO_DECLARATION" +
-      "\020\006\022\024\n\020CAPTURE_TIME_OUT\020\007\"\336\007\n\033DynamicLayo" +
-      "utInspectorEvent\022Y\n\004type\030\001 \001(\0162K.android" +
-      "_studio.DynamicLayoutInspectorEvent.Dyna" +
-      "micLayoutInspectorEventType\022>\n\007session\030\002" +
-      " \001(\0132-.android_studio.DynamicLayoutInspe" +
-      "ctorSession\022I\n\rsnapshot_info\030\003 \001(\01322.and" +
-      "roid_studio.DynamicLayoutInspectorSnapsh" +
-      "otInfo\022C\n\nerror_info\030\004 \001(\0132/.android_stu" +
-      "dio.DynamicLayoutInspectorErrorInfo\022P\n\021a" +
-      "uto_connect_info\030\005 \001(\01325.android_studio." +
-      "DynamicLayoutInspectorAutoConnectInfo\022M\n" +
-      "\017transport_error\030\006 \001(\01324.android_studio." +
-      "DynamicLayoutInspectorTransportError\"\362\003\n" +
-      "\037DynamicLayoutInspectorEventType\022\026\n\022UNKN" +
-      "OWN_EVENT_TYPE\020\000\022\010\n\004OPEN\020\001\022\022\n\016ATTACH_REQ" +
-      "UEST\020\002\022\022\n\016ATTACH_SUCCESS\020\003\022\022\n\016INITIAL_RE" +
-      "NDER\020\004\022\035\n\031INITIAL_RENDER_NO_PICTURE\020\005\022\032\n" +
-      "\026INITIAL_RENDER_BITMAPS\020\006\022\031\n\025COMPATIBILI" +
-      "TY_REQUEST\020\007\022\031\n\025COMPATIBILITY_SUCCESS\020\010\022" +
-      "\030\n\024COMPATIBILITY_RENDER\020\t\022#\n\037COMPATIBILI" +
-      "TY_RENDER_NO_PICTURE\020\n\022\020\n\014SESSION_DATA\020\013" +
-      "\022\025\n\021SNAPSHOT_CAPTURED\020\014\022\023\n\017SNAPSHOT_LOAD" +
-      "ED\020\r\022\027\n\023SNAPSHOT_LOAD_ERROR\020\016\022\026\n\022SNAPSHO" +
-      "T_CANCELLED\020\017\022\020\n\014ATTACH_ERROR\020\020\022\024\n\020ATTAC" +
-      "H_CANCELLED\020\021\022\025\n\021AUTO_CONNECT_INFO\020\022\022\023\n\017" +
-      "TRANSPORT_ERROR\020\023\"\353\001\n$DynamicLayoutInspe" +
-      "ctorTransportError\022G\n\004type\030\001 \001(\01629.andro" +
-      "id_studio.DynamicLayoutInspectorTranspor" +
-      "tError.Type\"z\n\004Type\022\025\n\021UNSPECIFIED_STATE" +
-      "\020\000\022$\n TRANSPORT_FAILED_TO_START_DAEMON\020\001" +
-      "\0225\n1TRANSPORT_OLD_TIMESTAMP_BIGGER_THAN_" +
-      "NEW_TIMESTAMP\020\002\"\332\010\n%DynamicLayoutInspect" +
-      "orAutoConnectInfo\022_\n\020handshake_result\030\001 " +
-      "\001(\0162E.android_studio.DynamicLayoutInspec" +
-      "torAutoConnectInfo.HandshakeResult\022r\n\024ha" +
-      "ndshake_conversion\030\002 \001(\0162P.android_studi" +
-      "o.DynamicLayoutInspectorAutoConnectInfo." +
-      "HandshakeUnknownConversionB\002\030\001\022q\n\024reason" +
-      "_not_supported\030\003 \001(\0162S.android_studio.Dy" +
-      "namicLayoutInspectorAutoConnectInfo.Auto" +
-      "ConnectReasonNotSupported\022l\n\031handshake_c" +
-      "onversion_info\030\004 \001(\0162I.android_studio.Dy" +
-      "namicLayoutInspectorAutoConnectInfo.Hand" +
-      "shakeConversion\022\035\n\025is_recovery_handshake" +
-      "\030\005 \001(\010\"`\n\017HandshakeResult\022\026\n\022UNSPECIFIED" +
-      "_RESULT\020\000\022\023\n\017SUPPORT_UNKNOWN\020\001\022\r\n\tSUPPOR" +
-      "TED\020\002\022\021\n\rNOT_SUPPORTED\020\003\"n\n\032HandshakeUnk" +
-      "nownConversion\022\030\n\024UNKNOWN_TO_SUPPORTED\020\000" +
-      "\022\034\n\030UNKNOWN_TO_NOT_SUPPORTED\020\001\022\030\n\024UNKNOW" +
-      "N_NOT_RESOLVED\020\002\"\272\001\n\023HandshakeConversion" +
-      "\022\032\n\026UNSPECIFIED_CONVERSION\020\000\022\035\n\031FROM_UNK" +
-      "NOWN_TO_SUPPORTED\020\001\022!\n\035FROM_UNKNOWN_TO_N" +
-      "OT_SUPPORTED\020\002\022 \n\034FROM_UNKNOWN_TO_DISCON" +
-      "NECTED\020\003\022#\n\037FROM_NOT_SUPPORTED_TO_SUPPOR" +
-      "TED\020\004\"\314\001\n\035AutoConnectReasonNotSupported\022" +
-      "\026\n\022UNSPECIFIED_REASON\020\000\022\025\n\021DUMPSYS_NOT_F" +
-      "OUND\020\001\022\022\n\016GREP_NOT_FOUND\020\002\0222\n.DUMPSYS_NO" +
-      "_TOP_ACTIVITY_NO_SLEEPING_ACTIVITIES\020\003\0224" +
-      "\n0DUMPSYS_NO_TOP_ACTIVITY_BUT_HAS_AWAKE_" +
-      "ACTIVITIES\020\004\"\264\014\n\037DynamicLayoutInspectorE" +
-      "rrorInfo\022\\\n\022attach_error_state\030\001 \001(\0162@.a" +
-      "ndroid_studio.DynamicLayoutInspectorErro" +
-      "rInfo.AttachErrorState\022Z\n\021attach_error_c" +
-      "ode\030\002 \001(\0162?.android_studio.DynamicLayout" +
-      "InspectorErrorInfo.AttachErrorCode\"\205\005\n\020A" +
-      "ttachErrorState\022\036\n\032UNKNOWN_ATTACH_ERROR_" +
-      "STATE\020\000\022\017\n\013NOT_STARTED\020\001\022\014\n\010ADB_PING\020\004\022\022" +
-      "\n\016ATTACH_SUCCESS\020\007\022\026\n\022START_REQUEST_SENT" +
-      "\020\n\022\022\n\016START_RECEIVED\020\024\022\013\n\007STARTED\020\036\022\024\n\020R" +
-      "OOTS_EVENT_SENT\020(\022\030\n\024ROOTS_EVENT_RECEIVE" +
-      "D\0202\022\036\n\032VIEW_INVALIDATION_CALLBACK\020<\022\027\n\023S" +
-      "CREENSHOT_CAPTURED\020F\022\033\n\027VIEW_HIERARCHY_C" +
-      "APTURED\020P\022\021\n\rRESPONSE_SENT\020Z\022\031\n\025LAYOUT_E" +
-      "VENT_RECEIVED\020d\022\030\n\024COMPOSE_REQUEST_SENT\020" +
-      "n\022\036\n\031COMPOSE_RESPONSE_RECEIVED\020\310\001\022!\n\034LEG" +
-      "ACY_WINDOW_LIST_REQUESTED\020\322\001\022 \n\033LEGACY_W" +
-      "INDOW_LIST_RECEIVED\020\334\001\022\037\n\032LEGACY_HIERARC" +
-      "HY_REQUESTED\020\346\001\022\036\n\031LEGACY_HIERARCHY_RECE" +
-      "IVED\020\360\001\022 \n\033LEGACY_SCREENSHOT_REQUESTED\020\372" +
-      "\001\022\037\n\032LEGACY_SCREENSHOT_RECEIVED\020\204\002\022\032\n\025PA" +
-      "RSED_COMPONENT_TREE\020\216\002\022\022\n\rMODEL_UPDATED\020" +
-      "\230\002\"\316\005\n\017AttachErrorCode\022\026\n\022UNKNOWN_ERROR_" +
-      "CODE\020\000\022\021\n\rLOW_API_LEVEL\020\001\022\023\n\017CONNECT_TIM" +
-      "EOUT\020\002\022\034\n\030UNKNOWN_VIEW_AGENT_ERROR\020e\022\034\n\030" +
-      "NO_HARDWARE_ACCELERATION\020f\022\027\n\023NO_ROOT_VI" +
-      "EWS_FOUND\020g\022!\n\034UNKNOWN_APP_INSPECTION_ER" +
-      "ROR\020\311\001\022&\n!APP_INSPECTION_CANNOT_FIND_DEV" +
-      "ICE\020\312\001\022,\n\'APP_INSPECTION_PROCESS_NO_LONG" +
-      "ER_EXISTS\020\313\001\022(\n#APP_INSPECTION_INCOMPATI" +
-      "BLE_VERSION\020\314\001\022#\n\036APP_INSPECTION_MISSING" +
-      "_LIBRARY\020\315\001\022\"\n\035APP_INSPECTION_PROGUARDED" +
-      "_APP\020\316\001\022&\n!APP_INSPECTION_ARTIFACT_NOT_F" +
-      "OUND\020\317\001\022*\n%APP_INSPECTION_VERSION_FILE_N" +
-      "OT_FOUND\020\320\001\022*\n%APP_INSPECTION_SNAPSHOT_N" +
-      "OT_SPECIFIED\020\321\001\022/\n*APP_INSPECTION_COMPOS" +
-      "E_INSPECTOR_NOT_FOUND\020\322\001\022)\n$APP_INSPECTI" +
-      "ON_FAILED_MAVEN_DOWNLOAD\020\323\001\022\034\n\027TRANSPORT" +
-      "_UNKNOWN_ERROR\020\255\002\022)\n$TRANSPORT_PUSH_FAIL" +
-      "ED_FILE_NOT_FOUND\020\256\002\022\025\n\020UNEXPECTED_ERROR" +
-      "\020\221\003\"\234\002\n\"DynamicLayoutInspectorSnapshotIn" +
-      "fo\022\030\n\020snapshot_version\030\001 \001(\005\022R\n\013save_sou" +
-      "rce\030\002 \001(\0162=.android_studio.DynamicLayout" +
-      "InspectorSnapshotInfo.SaveSource\022\024\n\014save" +
-      "_version\030\003 \001(\t\022\027\n\017live_when_saved\030\004 \001(\010\022" +
-      "\030\n\020save_duration_ms\030\005 \001(\r\022\030\n\020load_durati" +
-      "on_ms\030\006 \001(\r\"%\n\nSaveSource\022\013\n\007UNKNOWN\020\000\022\n" +
-      "\n\006STUDIO\020\001\"\367\003\n\035DynamicLayoutInspectorSes" +
-      "sion\022<\n\004live\030\001 \001(\0132..android_studio.Dyna" +
-      "micLayoutInspectorLiveMode\022@\n\010rotation\030\002" +
-      " \001(\0132..android_studio.DynamicLayoutInspe" +
-      "ctorRotation\022<\n\006memory\030\003 \001(\0132,.android_s" +
-      "tudio.DynamicLayoutInspectorMemory\022>\n\007co" +
-      "mpose\030\004 \001(\0132-.android_studio.DynamicLayo" +
-      "utInspectorCompose\022@\n\006system\030\005 \001(\01320.and" +
-      "roid_studio.DynamicLayoutInspectorSystem" +
-      "Node\022O\n\020goto_declaration\030\006 \001(\01325.android" +
-      "_studio.DynamicLayoutInspectorGotoDeclar" +
-      "ation\022E\n\006attach\030\007 \001(\01325.android_studio.D" +
-      "ynamicLayoutInspectorAttachToProcess\"\206\001\n" +
-      "\036DynamicLayoutInspectorLiveMode\022\035\n\025refre" +
-      "sh_button_clicks\030\001 \001(\r\022 \n\030clicks_with_li" +
-      "ve_updates\030\002 \001(\r\022#\n\033clicks_without_live_" +
-      "updates\030\003 \001(\r\"\242\001\n\036DynamicLayoutInspector" +
-      "Rotation\022\032\n\022image_clicks_in_3d\030\001 \001(\r\022\032\n\022" +
-      "image_clicks_in_2d\030\002 \001(\r\022#\n\033component_tr" +
-      "ee_clicks_in_3d\030\003 \001(\r\022#\n\033component_tree_" +
-      "clicks_in_2d\030\004 \001(\r\"\374\004\n\035DynamicLayoutInsp" +
-      "ectorCompose\022#\n\033kotlin_reflection_availa" +
-      "ble\030\001 \001(\010\022\024\n\014image_clicks\030\002 \001(\r\022\035\n\025compo" +
-      "nent_tree_clicks\030\003 \001(\r\022/\n\'go_to_source_f" +
-      "rom_property_value_clicks\030\004 \001(\r\022\037\n\027max_r" +
-      "ecomposition_count\030\005 \001(\r\022\037\n\027max_recompos" +
-      "ition_skips\030\006 \001(\r\022#\n\033max_recomposition_h" +
-      "ighlight\030\007 \001(\002\022\"\n\032recomposition_reset_cl" +
-      "icks\030\010 \001(\r\022+\n#frames_with_recomposition_" +
-      "counts_on\030\t \001(\r\022+\n#frames_with_recomposi" +
-      "tion_color_red\030\n \001(\r\022,\n$frames_with_reco" +
-      "mposition_color_blue\030\013 \001(\r\022-\n%frames_wit" +
-      "h_recomposition_color_green\030\014 \001(\r\022.\n&fra" +
-      "mes_with_recomposition_color_yellow\030\r \001(" +
-      "\r\022.\n&frames_with_recomposition_color_pur" +
-      "ple\030\016 \001(\r\022.\n&frames_with_recomposition_c" +
-      "olor_orange\030\017 \001(\r\"u\n DynamicLayoutInspec" +
-      "torSystemNode\022\'\n\037clicks_with_hidden_syst" +
-      "em_views\030\001 \001(\r\022(\n clicks_with_visible_sy" +
-      "stem_views\030\002 \001(\r\"\232\002\n\034DynamicLayoutInspec" +
-      "torMemory\022O\n\020initial_snapshot\030\001 \001(\01325.an" +
-      "droid_studio.DynamicLayoutInspectorMemor" +
-      "y.Snapshot\022O\n\020largest_snapshot\030\002 \001(\01325.a" +
-      "ndroid_studio.DynamicLayoutInspectorMemo" +
-      "ry.Snapshot\032X\n\010Snapshot\022\022\n\nskia_image\030\001 " +
-      "\001(\010\022\027\n\017capture_size_mb\030\002 \001(\004\022\037\n\027measurem" +
-      "ent_duration_ms\030\003 \001(\004\"\233\001\n%DynamicLayoutI" +
-      "nspectorGotoDeclaration\022\032\n\022clicks_menu_a" +
-      "ction\030\001 \001(\r\022\034\n\024key_strokes_shortcut\030\002 \001(" +
-      "\r\022\025\n\rdouble_clicks\030\003 \001(\r\022!\n\031double_click" +
-      "s_from_render\030\004 \001(\r\"\335\004\n%DynamicLayoutIns" +
-      "pectorAttachToProcess\022U\n\013client_type\030\001 \001" +
-      "(\0162@.android_studio.DynamicLayoutInspect" +
-      "orAttachToProcess.ClientType\022\017\n\007success\030" +
-      "\002 \001(\010\022C\n\nerror_info\030\003 \001(\0132/.android_stud" +
-      "io.DynamicLayoutInspectorErrorInfo\022[\n\022co" +
-      "mpose_error_code\030\004 \001(\0162?.android_studio." +
-      "DynamicLayoutInspectorErrorInfo.AttachEr" +
-      "rorCode\022\036\n\026multiple_projects_open\030\005 \001(\010\022" +
-      "\031\n\021debugger_attached\030\006 \001(\010\022%\n\035debugger_p" +
-      "aused_during_attach\030\007 \001(\010\022\034\n\024auto_connec" +
-      "t_enabled\030\010 \001(\010\022$\n\034is_embedded_layout_in" +
-      "spector\030\t \001(\010\022\032\n\022attach_duration_ms\030\n \001(" +
-      "\003\"h\n\nClientType\022\027\n\023UNKNOWN_CLIENT_TYPE\020\000" +
-      "\022\021\n\rLEGACY_CLIENT\020\001\022\031\n\025APP_INSPECTION_CL" +
-      "IENT\020\002\022\023\n\017SNAPSHOT_CLIENT\020\003\"l\n\rKotlinSup" +
-      "port\022\036\n\026include_kotlin_support\030\001 \001(\010\022\036\n\026" +
-      "kotlin_support_version\030\002 \001(\t\022\033\n\023android_" +
-      "ktx_version\030\003 \001(\t\"\207\003\n\030ConnectionAssistan" +
-      "tEvent\022S\n\004type\030\001 \001(\0162E.android_studio.Co" +
-      "nnectionAssistantEvent.ConnectionAssista" +
-      "ntEventType\022\034\n\024usb_devices_detected\030\002 \001(" +
-      "\005\022\034\n\024adb_devices_detected\030\003 \001(\005\"\331\001\n\034Conn" +
-      "ectionAssistantEventType\022\026\n\022UNKNOWN_EVEN" +
-      "T_TYPE\020\000\022\010\n\004OPEN\020\001\022\034\n\030SCAN_USB_DEVICES_C" +
-      "LICKED\020\002\022\030\n\024USB_DEVICES_DETECTED\020\003\022\027\n\023RE" +
-      "START_ADB_CLICKED\020\004\022\030\n\024ADB_DEVICES_DETEC" +
-      "TED\020\005\022\030\n\024REPORT_ISSUE_CLICKED\020\006\022\022\n\016ISSUE" +
-      "_REPORTED\020\007\"\317\001\n\037UpgradeAndroidStudioDial" +
-      "ogStats\022O\n\013user_action\030\001 \001(\0162:.android_s" +
-      "tudio.UpgradeAndroidStudioDialogStats.Us" +
-      "erAction\"[\n\nUserAction\022\027\n\023UNKNOWN_USER_A" +
-      "CTION\020\000\022\n\n\006CANCEL\020\001\022\022\n\016UPGRADE_STUDIO\020\002\022" +
-      "\024\n\020DO_NOT_ASK_AGAIN\020\003\"\313\004\n\016OomDialogEvent" +
-      "\022E\n\nevent_type\030\001 \001(\01621.android_studio.Oo" +
-      "mDialogEvent.OomDialogEventType\022\031\n\021initi" +
-      "al_heap_size\030\002 \001(\005\022\036\n\026initial_metaspace_" +
-      "size\030\003 \001(\005\022\036\n\026initial_codecache_size\030\004 \001" +
-      "(\005\022\027\n\017saved_heap_size\030\005 \001(\005\022\034\n\024saved_met" +
-      "aspace_size\030\006 \001(\005\022\034\n\024saved_codecache_siz" +
-      "e\030\007 \001(\005\022\027\n\017editing_enabled\030\010 \001(\010\022F\n\017sele" +
-      "cted_action\030\t \001(\0162-.android_studio.OomDi" +
-      "alogEvent.SelectedAction\"\201\001\n\022OomDialogEv" +
-      "entType\022\026\n\022UNKNOWN_EVENT_TYPE\020\000\022\014\n\010OOM_H" +
-      "EAP\020\001\022\020\n\014OOM_PERM_GEN\020\002\022\021\n\rOOM_METASPACE" +
-      "\020\003\022\022\n\016OOM_CODE_CACHE\020\004\022\014\n\010LOW_HEAP\020\005\"]\n\016" +
-      "SelectedAction\022\022\n\016UNKNOWN_ACTION\020\000\022\023\n\017CO" +
-      "NTINUE_ACTION\020\001\022\017\n\013QUIT_ACTION\020\002\022\021\n\rCANC" +
-      "EL_ACTION\020\003\"\364\001\n\026WhatsNewAssistantEvent\022O" +
-      "\n\004type\030\001 \001(\0162A.android_studio.WhatsNewAs" +
-      "sistantEvent.WhatsNewAssistantEventType\"" +
-      "\204\001\n\032WhatsNewAssistantEventType\022\026\n\022UNKNOW" +
-      "N_EVENT_TYPE\020\000\022\010\n\004OPEN\020\001\022\r\n\tAUTO_OPEN\020\002\022" +
-      "\025\n\021FIRST_INTERACTION\020\003\022\n\n\006CLOSED\020\004\022\022\n\016BU" +
-      "TTON_CLICKED\020\005:\002\030\001\"\236\010\n\034WhatsNewAssistant" +
-      "UpdateEvent\022\023\n\013auto_opened\030\001 \001(\010\022\023\n\013upda" +
-      "te_flow\030\002 \001(\010\022\032\n\022scrolled_to_bottom\030\003 \001(" +
-      "\010\022\"\n\032time_to_scrolled_to_bottom\030\007 \001(\003\022\021\n" +
-      "\tdismissed\030\004 \001(\010\022\031\n\021time_to_update_ms\030\005 " +
-      "\001(\003\022\030\n\020time_to_close_ms\030\006 \001(\003\022\\\n\024action_" +
-      "button_events\030\010 \003(\0132>.android_studio.Wha" +
+      "pStatusH\000\022P\n\014track_status\030\003 \001(\01328.androi" +
+      "d_studio.TaskFailedMetadata.AllocationTr" +
+      "ackStatusH\000B\007\n\005union\032`\n\034TaskProcessingFa" +
+      "iledMetadata\022@\n\024cpu_capture_metadata\030\001 \001" +
+      "(\0132\".android_studio.CpuCaptureMetadata\032\230" +
+      "\007\n\020TraceStartStatus\022J\n\006status\030\001 \001(\0162:.an" +
+      "droid_studio.TaskFailedMetadata.TraceSta" +
+      "rtStatus.Status\022\022\n\nerror_code\030\002 \001(\003\022\025\n\rs" +
+      "tart_time_ns\030\003 \001(\003\"L\n\006Status\022\026\n\022STATUS_U" +
+      "NSPECIFIED\020\000\022\013\n\007SUCCESS\020\001\022\013\n\007FAILURE\020\002\022\020" +
+      "\n\014UNRECOGNIZED\020\003\"\276\005\n\tErrorCode\022\030\n\024NO_ERR" +
+      "OR_TRACE_START\020\000\022\033\n\027NO_TRACE_TYPE_SPECIF" +
+      "IED\020\001\022!\n\035APP_ALREADY_PROFILED_WITH_ART\020\002" +
+      "\022\037\n\033UNABLE_TO_RUN_PROFILE_START\020\004\022#\n\037REQ" +
+      "UESTED_BUFFER_SIZE_TOO_SMALL\020\010\022\036\n\032FAILED" +
+      "_TO_RUN_ATRACE_START\020\020\022.\n*ATRACE_NOT_ALL" +
+      "OCATE_MEMORY_TO_RECORD_TRACE\020 \0223\n/PERFET" +
+      "TO_ALREADY_RUNNING_UNABLE_START_NEW_TRAC" +
+      "E\020@\022/\n*TRACER_ALREADY_RUNNING_UNABLE_RUN" +
+      "_PERFETTO\020\200\001\022\036\n\031FAILED_TO_LAUNCH_PERFETT" +
+      "O\020\200\002\022\034\n\027FAILED_TO_LAUNCH_TRACER\020\200\004\022\034\n\027FA" +
+      "ILED_TO_LAUNCH_TRACED\020\200\010\022#\n\036FAILED_TO_LA" +
+      "UNCH_TRACED_PROBES\020\200\020\022\037\n\032SIMPLEPREF_ALRE" +
+      "ADY_RUNNING\020\200 \022(\n#UNABLE_TO_GET_PROCESS_" +
+      "ID_TO_PROFILE\020\200@\022+\n%UNABLE_TO_SETPROP_TO" +
+      "_ENABLE_PROFILING\020\200\200\001\022&\n UNABLE_TO_CREAT" +
+      "E_FORK_SIMPLEPREF\020\200\200\002\022\034\n\026ONGOING_CAPTURE" +
+      "_EXISTS\020\200\200\004\022\034\n\026NO_TRACING_OPTIONS_SET\020\200\200" +
+      "\010\032\366\t\n\017TraceStopStatus\022I\n\006status\030\001 \001(\01629." +
+      "android_studio.TaskFailedMetadata.TraceS" +
+      "topStatus.Status\022\022\n\nerror_code\030\002 \001(\003\022\034\n\024" +
+      "stopping_duration_ns\030\003 \001(\003\"\206\003\n\006Status\022\026\n" +
+      "\022STATUS_UNSPECIFIED\020\000\022\013\n\007SUCCESS\020\001\022\030\n\024NO" +
+      "_ONGOING_PROFILING\020\002\022\024\n\020APP_PROCESS_DIED" +
+      "\020\003\022\023\n\017APP_PID_CHANGED\020\004\022\031\n\025PROFILER_PROC" +
+      "ESS_DIED\020\005\022\027\n\023STOP_COMMAND_FAILED\020\006\022\036\n\032S" +
+      "TILL_PROFILING_AFTER_STOP\020\007\022\030\n\024CANNOT_ST" +
+      "ART_WAITING\020\010\022\020\n\014WAIT_TIMEOUT\020\t\022\017\n\013WAIT_" +
+      "FAILED\020\n\022\032\n\026CANNOT_READ_WAIT_EVENT\020\013\022\024\n\020" +
+      "CANNOT_COPY_FILE\020\014\022\024\n\020CANNOT_FORM_FILE\020\r" +
+      "\022\024\n\020CANNOT_READ_FILE\020\016\022\021\n\rOTHER_FAILURE\020" +
+      "\017\022\020\n\014UNRECOGNIZED\020\020\"\334\005\n\tErrorCode\022\027\n\023NO_" +
+      "ERROR_TRACE_STOP\020\000\022$\n FAILED_TO_READ_TRA" +
+      "CE_FROM_DEVICE\020\001\022/\n+UNABLE_TO_MONITOR_TR" +
+      "ACE_FILE_FOR_COMPLETION\020\002\022\036\n\032UNABLE_TO_R" +
+      "UN_PROFILE_STOP\020\004\0220\n,CANNOT_READ_WHILE_W" +
+      "AITING_FOR_ART_TRACE_FILE\020\010\022\"\n\036WAIT_FOR_" +
+      "ART_TRACE_FILE_FAILED\020\020\022%\n!WAIT_FOR_ART_" +
+      "TRACE_FILE_TIMED_OUT\020 \022\031\n\025FAILED_TO_STOP" +
+      "_ATRACE\020@\022\032\n\025FAILED_TO_STOP_TRACER\020\200\001\022\034\n" +
+      "\027FAILED_TO_STOP_PERFETTO\020\200\002\022\037\n\032APP_WAS_N" +
+      "OT_BEING_PROFILED\020\200\004\022&\n!APP_DIED_SINCE_P" +
+      "ROFILEING_STARTED\020\200\010\0222\n-RECORDED_PIP_AND" +
+      "_CURRENT_APP_PID_DO_NOT_MATCH\020\200\020\022)\n$FAIL" +
+      "ED_TO_SEND_SIGTERM_TO_SIMPLEPREF\020\200 \022(\n#U" +
+      "NABLE_TO_COPY_SIMPLEPREF_RAW_TRACE\020\200@\022\025\n" +
+      "\017WAIT_PID_FAILED\020\200\200\001\022&\n SIMPLE_PREF_NOT_" +
+      "EXIT_AS_EXPECTED\020\200\200\002\022\030\n\022NO_ONGOING_CAPTU" +
+      "RE\020\200\200\004\022\036\n\030NO_TRACING_OPTIONS_FOUND\020\200\200\010\022\"" +
+      "\n\034NO_TRACE_TYPE_SPECIFIED_STOP\020\200\200\020\032\244\002\n\025A" +
+      "llocationTrackStatus\022O\n\006status\030\001 \001(\0162?.a" +
+      "ndroid_studio.TaskFailedMetadata.Allocat" +
+      "ionTrackStatus.Status\022\025\n\rstart_time_ns\030\002" +
+      " \001(\003\"\242\001\n\006Status\022\026\n\022STATUS_UNSPECIFIED\020\000\022" +
+      "\013\n\007SUCCESS\020\001\022\017\n\013IN_PROGRESS\020\002\022\017\n\013NOT_ENA" +
+      "BLED\020\003\022\021\n\rNOT_PROFILING\020\004\022\023\n\017FAILURE_UNK" +
+      "NOWN\020\005\022\020\n\014UNRECOGNIZED\020\006\022\027\n\023AGENT_UN_ATT" +
+      "ACHABLE\020\007\032\353\001\n\016HeapDumpStatus\022H\n\006status\030\001" +
+      " \001(\01628.android_studio.TaskFailedMetadata" +
+      ".HeapDumpStatus.Status\022\025\n\rstart_time_ns\030" +
+      "\002 \001(\003\"x\n\006Status\022\026\n\022STATUS_UNSPECIFIED\020\000\022" +
+      "\013\n\007SUCCESS\020\001\022\017\n\013IN_PROGRESS\020\002\022\021\n\rNOT_PRO" +
+      "FILING\020\003\022\023\n\017FAILURE_UNKNOWN\020\004\022\020\n\014UNRECOG" +
+      "NIZED\020\005\"a\n\014FailingPoint\022\035\n\031FAILING_POINT" +
+      "_UNSPECIFIED\020\000\022\016\n\nTASK_START\020\001\022\r\n\tTASK_S" +
+      "TOP\020\002\022\023\n\017TASK_PROCESSING\020\003B\007\n\005union\"\274)\n\024" +
+      "AndroidProfilerEvent\0229\n\005stage\030\001 \001(\0162*.an" +
+      "droid_studio.AndroidProfilerEvent.Stage\022" +
+      "7\n\004type\030\002 \001(\0162).android_studio.AndroidPr" +
+      "ofilerEvent.Type\022:\n\ncpu_config\030\003 \001(\0132\".a" +
+      "ndroid_studio.CpuProfilingConfigB\002\030\001\022@\n\024" +
+      "cpu_capture_metadata\030\004 \001(\0132\".android_stu" +
+      "dio.CpuCaptureMetadata\0227\n\017filter_metadat" +
+      "a\030\005 \001(\0132\036.android_studio.FilterMetadata\022" +
+      "D\n\013memory_heap\030\006 \001(\0162/.android_studio.An" +
+      "droidProfilerEvent.MemoryHeap\022O\n\026session" +
+      "_start_metadata\030\007 \001(\0132/.android_studio.P" +
+      "rofilerSessionCreationMetaData\022S\n\031sessio" +
+      "n_artifact_metadata\030\010 \001(\01320.android_stud" +
+      "io.ProfilerSessionSelectionMetaData\022S\n\036c" +
+      "pu_startup_profiling_metadata\030\t \001(\0132+.an" +
+      "droid_studio.CpuStartupProfilingMetadata" +
+      "\022I\n\031cpu_import_trace_metadata\030\n \001(\0132&.an" +
+      "droid_studio.CpuImportTraceMetadata\022G\n\030c" +
+      "pu_api_tracing_metadata\030\013 \001(\0132%.android_" +
+      "studio.CpuApiTracingMetadata\022B\n\025energy_r" +
+      "ange_metadata\030\014 \001(\0132#.android_studio.Ene" +
+      "rgyRangeMetadata\022B\n\025energy_event_metadat" +
+      "a\030\r \001(\0132#.android_studio.EnergyEventMeta" +
+      "data\0228\n\020perfd_crash_info\030\016 \001(\0132\036.android" +
+      "_studio.PerfdCrashInfo\022L\n\032transport_fail" +
+      "ure_metadata\030\017 \001(\0132(.android_studio.Tran" +
+      "sportFailureMetadata\022U\n\037memory_instance_" +
+      "filter_metadata\030\020 \001(\0132,.android_studio.M" +
+      "emoryInstanceFilterMetadata\022Q\n\035transport" +
+      "_daemon_started_info\030\021 \001(\0132*.android_stu" +
+      "dio.TransportDaemonStartedInfo\022K\n\021tpd_ma" +
+      "nager_stats\030\022 \001(\01320.android_studio.Trace" +
+      "ProcessorDaemonManagerStats\022G\n\017tpd_query" +
+      "_stats\030\023 \001(\0132..android_studio.TraceProce" +
+      "ssorDaemonQueryStats\022I\n\026box_selection_me" +
+      "tadata\030\024 \001(\0132).android_studio.AdtUiBoxSe" +
+      "lectionMetadata\022E\n\024track_group_metadata\030" +
+      "\025 \001(\0132\'.android_studio.AdtUiTrackGroupMe" +
+      "tadata\022\023\n\013event_count\030\026 \001(\r\022=\n\007loading\030\027" +
+      " \001(\0132,.android_studio.AndroidProfilerEve" +
+      "nt.Loading\022M\n\033run_with_profiling_metadat" +
+      "a\030\030 \001(\0132(.android_studio.RunWithProfilin" +
+      "gMetadata\022U\n\037perfetto_sdk_handshake_meta" +
+      "data\030\031 \001(\0132,.android_studio.PerfettoSdkH" +
+      "andshakeMetadata\022q\n.resolve_compose_trac" +
+      "ing_code_location_metadata\030\032 \001(\01329.andro" +
+      "id_studio.ResolveComposeTracingCodeLocat" +
+      "ionMetadata\022U\n\037power_profiler_capture_me" +
+      "tadata\030\033 \001(\0132,.android_studio.PowerProfi" +
+      "lerCaptureMetadata\022B\n\025task_entered_metad" +
+      "ata\030\034 \001(\0132#.android_studio.TaskEnteredMe" +
+      "tadata\022D\n\026task_finished_metadata\030\035 \001(\0132$" +
+      ".android_studio.TaskFinishedMetadata\022@\n\024" +
+      "task_failed_metadata\030\036 \001(\0132\".android_stu" +
+      "dio.TaskFailedMetadata\022 \n\030is_task_settin" +
+      "gs_changed\030\037 \001(\010\032\245\003\n\007Loading\022?\n\004type\030\001 \001" +
+      "(\01621.android_studio.AndroidProfilerEvent" +
+      ".Loading.Type\022\022\n\nis_success\030\002 \001(\010\022\017\n\007siz" +
+      "e_kb\030\003 \001(\r\022\023\n\013event_count\030\004 \001(\004\022\022\n\nelaps" +
+      "ed_ms\030\005 \001(\r\022\022\n\ncore_count\030\006 \001(\r\022\031\n\021machi" +
+      "ne_memory_mb\030\007 \001(\r\022\034\n\024studio_max_memory_" +
+      "mb\030\010 \001(\r\022\035\n\025studio_free_memory_mb\030\t \001(\r\"" +
+      "\236\001\n\004Type\022\017\n\013UNSPECIFIED\020\000\022\t\n\005HPROF\020\001\022\016\n\n" +
+      "HEAP_PROFD\020\002\022\020\n\014LEGACY_ALLOC\020\003\022\016\n\nLIVE_A" +
+      "LLOC\020\004\022\031\n\025PERFETTO_PROCESS_LIST\020\005\022\024\n\020PER" +
+      "FETTO_PROCESS\020\006\022\016\n\nSIMPLEPERF\020\007\022\007\n\003ART\020\010" +
+      "\"\212\002\n\005Stage\022\021\n\rUNKNOWN_STAGE\020\000\022\016\n\nNULL_ST" +
+      "AGE\020\001\022\022\n\016OVERVIEW_STAGE\020\002\022\r\n\tCPU_STAGE\020\003" +
+      "\022\020\n\014MEMORY_STAGE\020\004\022\021\n\rNETWORK_STAGE\020\005\022\020\n" +
+      "\014ENERGY_STAGE\020\006\022\025\n\021CPU_CAPTURE_STAGE\020\007\022\032" +
+      "\n\026MEMORY_HEAP_DUMP_STAGE\020\010\022!\n\035MEMORY_NAT" +
+      "IVE_RECORDING_STAGE\020\t\022\036\n\032MEMORY_JVM_RECO" +
+      "RDING_STAGE\020\n\022\016\n\nLIVE_STAGE\020\013\"\214\001\n\nMemory" +
+      "Heap\022\020\n\014UNKNOWN_HEAP\020\000\022\020\n\014DEFAULT_HEAP\020\001" +
+      "\022\016\n\nIMAGE_HEAP\020\002\022\017\n\013ZYGOTE_HEAP\020\003\022\014\n\010APP" +
+      "_HEAP\020\004\022\014\n\010JNI_HEAP\020\005\022\017\n\013NATIVE_HEAP\020\006\022\014" +
+      "\n\010ALL_HEAP\020\007\"\313\021\n\004Type\022\020\n\014UNKNOWN_TYPE\020\000\022" +
+      "\025\n\021PROFILING_STARTED\020\001\022\036\n\032ADVANCED_PROFI" +
+      "LING_STARTED\020\002\022\021\n\rSTAGE_ENTERED\020\003\022\026\n\022RUN" +
+      "_WITH_PROFILING\020\004\022\021\n\rPERFD_CRASHED\020\005\022\037\n\033" +
+      "PRE_TRANSPORT_DAEMON_STARTS\020\006\022\033\n\027TRANSPO" +
+      "RT_DAEMON_FAILED\020\007\022\032\n\026TRANSPORT_PROXY_FA" +
+      "ILED\020\010\022\"\n\036PROFILER_INITIALIZATION_FAILED" +
+      "\020\t\022\034\n\030TRANSPORT_DAEMON_STARTED\020\n\022\021\n\rCHAN" +
+      "GE_DEVICE\020e\022\022\n\016CHANGE_PROCESS\020f\022\013\n\007GO_BA" +
+      "CK\020g\022\022\n\016SELECT_MONITOR\020h\022\013\n\007ZOOM_IN\020i\022\014\n" +
+      "\010ZOOM_OUT\020j\022\016\n\nZOOM_RESET\020k\022\025\n\021ZOOM_TO_S" +
+      "ELECTION\020r\022\013\n\007GO_LIVE\020l\022\024\n\020NAVIGATE_TO_C" +
+      "ODE\020m\022\020\n\014SELECT_RANGE\020n\022\n\n\006FILTER\020o\022\034\n\030A" +
+      "UTO_PROFILING_REQUESTED\020p\022\034\n\030AUTO_PROFIL" +
+      "ING_SUCCEEDED\020q\022\016\n\nSELECT_BOX\020s\022\026\n\022TRACK" +
+      "_GROUP_ACTION\020t\022\013\n\007LOADING\020u\022)\n%RESOLVE_" +
+      "COMPOSE_TRACING_CODE_LOCATION\020v\022\022\n\rTRACE" +
+      "_SAMPLED\020\311\001\022\027\n\022TRACE_INSTRUMENTED\020\312\001\022\022\n\r" +
+      "SELECT_THREAD\020\314\001\022\024\n\017SELECT_TOP_DOWN\020\315\001\022\025" +
+      "\n\020SELECT_BOTTOM_UP\020\316\001\022\027\n\022SELECT_FLAME_CH" +
+      "ART\020\317\001\022\026\n\021SELECT_CALL_CHART\020\322\001\022\033\n\026OPEN_C" +
+      "PU_CONFIG_DIALOG\020\320\001\022\026\n\021CREATE_CPU_CONFIG" +
+      "\020\321\001\022\016\n\tTRACE_CPU\020\323\001\022\022\n\rCAPTURE_TRACE\020\324\001\022" +
+      "\026\n\021THREADS_REORDERED\020\325\001\022\030\n\023KERNEL_VIEW_C" +
+      "LICKED\020\326\001\022\030\n\023KERNEL_VIEW_TOGGLED\020\327\001\022\031\n\024T" +
+      "HREADS_VIEW_TOGGLED\020\330\001\022\032\n\025CPU_STARTUP_PR" +
+      "OFILING\020\331\001\022\025\n\020CPU_IMPORT_TRACE\020\332\001\022\024\n\017CPU" +
+      "_API_TRACING\020\333\001\022\021\n\014SELECT_FRAME\020\334\001\022\026\n\021TO" +
+      "GGLE_ALL_FRAMES\020\335\001\022\025\n\020TOGGLE_LIFECYCLE\020\336" +
+      "\001\022\033\n\026PERFETTO_SDK_HANDSHAKE\020\337\001\022\r\n\010FORCE_" +
+      "GC\020\255\002\022\023\n\016SNAPSHOT_HPROF\020\256\002\022\030\n\023CAPTURE_AL" +
+      "LOCATIONS\020\257\002\022\030\n\023SELECT_MEMORY_CHART\020\260\002\022\021" +
+      "\n\014EXPORT_HPROF\020\261\002\022\026\n\021EXPORT_ALLOCATION\020\262" +
+      "\002\022\024\n\017ARRANGE_CLASSES\020\263\002\022\030\n\023SELECT_MEMORY" +
+      "_STACK\020\264\002\022\035\n\030SELECT_MEMORY_REFERENCES\020\265\002" +
+      "\022\027\n\022SELECT_MEMORY_HEAP\020\266\002\022\033\n\026MEMORY_INST" +
+      "ANCE_FILTER\020\267\002\022\026\n\021SELECT_CONNECTION\020\222\003\022\034" +
+      "\n\027SELECT_DETAILS_RESPONSE\020\223\003\022\033\n\026SELECT_D" +
+      "ETAILS_HEADERS\020\224\003\022\031\n\024SELECT_DETAILS_STAC" +
+      "K\020\225\003\022\034\n\027SELECT_DETAILS_OVERVIEW\020\226\003\022\033\n\026SE" +
+      "LECT_DETAILS_REQUEST\020\227\003\022\031\n\024SELECT_DETAIL" +
+      "S_ERROR\020\230\003\022\'\n\"SELECT_CONNECTIONS_CONNECT" +
+      "ION_VIEW\020\231\003\022$\n\037SELECT_CONNECTIONS_THREAD" +
+      "S_VIEW\020\232\003\022\030\n\023SELECT_ENERGY_RANGE\020\331\004\022\030\n\023S" +
+      "ELECT_ENERGY_EVENT\020\332\004\022!\n\034POWER_PROFILER_" +
+      "DATA_CAPTURED\020\333\004\022\024\n\017SESSION_CREATED\020\365\003\022\024" +
+      "\n\017SESSION_STOPPED\020\366\003\022\030\n\023SESSION_UI_EXPAN" +
+      "DED\020\367\003\022\031\n\024SESSION_UI_COLLAPSED\020\370\003\022\027\n\022SES" +
+      "SION_UI_RESIZED\020\371\003\022\036\n\031SESSION_ARTIFACT_S" +
+      "ELECTED\020\372\003\022\035\n\030SESSION_DROPDOWN_CLICKED\020\373" +
+      "\003\022\031\n\024TPD_MANAGER_SPAWN_OK\020\274\005\022\035\n\030TPD_MANA" +
+      "GER_SPAWN_FAILED\020\275\005\022\031\n\024TPD_QUERY_LOAD_TR" +
+      "ACE\020\306\005\022\037\n\032TPD_QUERY_PROCESS_METADATA\020\307\005\022" +
+      "\034\n\027TPD_QUERY_LOAD_CPU_DATA\020\310\005\022\037\n\032TPD_QUE" +
+      "RY_LOAD_MEMORY_DATA\020\311\005\022\021\n\014TASK_ENTERED\020\240" +
+      "\006\022\022\n\rTASK_FINISHED\020\241\006\022\020\n\013TASK_FAILED\020\242\006\022" +
+      "\031\n\024TASK_SETTINGS_OPENED\020\252\006\";\n\026AndroidPro" +
+      "filerDbTable\022\014\n\004name\030\001 \001(\t\022\023\n\013num_record" +
+      "s\030\002 \001(\r\"x\n\026AndroidProfilerDbStats\022\017\n\007age" +
+      "_sec\030\001 \001(\r\022\025\n\rtotal_disk_mb\030\002 \001(\r\0226\n\006tab" +
+      "les\030\003 \003(\0132&.android_studio.AndroidProfil" +
+      "erDbTable\"F\n\020ApkAnalyzerStats\022\031\n\021uncompr" +
+      "essed_size\030\001 \001(\004\022\027\n\017compressed_size\030\002 \001(" +
+      "\004\"\377\002\n\036GradlePluginUpgradeDialogStats\022\036\n\026" +
+      "current_gradle_version\030\001 \001(\t\022-\n%current_" +
+      "android_gradle_plugin_version\030\002 \001(\t\022\"\n\032r" +
+      "ecommended_gradle_version\030\003 \001(\t\0221\n)recom" +
+      "mended_android_gradle_plugin_version\030\004 \001" +
+      "(\t\022N\n\013user_action\030\005 \001(\01629.android_studio" +
+      ".GradlePluginUpgradeDialogStats.UserActi" +
+      "on\"g\n\nUserAction\022\027\n\023UNKNOWN_USER_ACTION\020" +
+      "\000\022\n\n\006CANCEL\020\001\022\024\n\020DO_NOT_ASK_AGAIN\020\002\022\026\n\022R" +
+      "EMIND_ME_TOMORROW\020\003\022\006\n\002OK\020\004\"\211.\n\017GradleSy" +
+      "ncStats\0228\n\007trigger\030\001 \001(\0162\'.android_studi" +
+      "o.GradleSyncStats.Trigger\022\025\n\rtotal_time_" +
+      "ms\030\002 \001(\003\022\026\n\016gradle_time_ms\030\003 \001(\003\022\023\n\013ide_" +
+      "time_ms\030\004 \001(\003\022\035\n\025embedded_repo_enabled\030\005" +
+      " \001(\010\022A\n\tsync_type\030\006 \001(\0162..android_studio" +
+      ".GradleSyncStats.GradleSyncType\022H\n\020actua" +
+      "l_sync_type\030\007 \001(\0162..android_studio.Gradl" +
+      "eSyncStats.GradleSyncType\0220\n(last_known_" +
+      "android_gradle_plugin_version\030\010 \001(\t\022%\n\035a" +
+      "ndroid_gradle_plugin_version\030\t \001(\t\022\031\n\021us" +
+      "es_build_gradle\030\n \001(\010\022\035\n\025uses_build_grad" +
+      "le_kts\030\013 \001(\010\022X\n\023sync_execution_type\030\014 \001(" +
+      "\01627.android_studio.GradleSyncStats.Gradl" +
+      "eSyncExecutionTypeB\002\030\001\022X\n\030user_requested" +
+      "_sync_type\030\r \001(\01626.android_studio.Gradle" +
+      "SyncStats.UserRequestedExecution\022\\\n\032stud" +
+      "io_requested_sync_type\030\016 \001(\01628.android_s" +
+      "tudio.GradleSyncStats.StudioRequestedExe" +
+      "cution\022B\n\016downloads_data\030\017 \001(\0132*.android" +
+      "_studio.BuildDownloadsAnalysisData\022_\n\036ve" +
+      "rsion_catalog_detector_state\030\020 \001(\01627.and" +
+      "roid_studio.GradleVersionCatalogDetector" +
+      "Event.State\"\307\"\n\007Trigger\022\023\n\017TRIGGER_UNKNO" +
+      "WN\020\000\022\032\n\026TRIGGER_PROJECT_LOADED\020\001\022\034\n\030TRIG" +
+      "GER_PROJECT_MODIFIED\020\002\022\030\n\024TRIGGER_USER_R" +
+      "EQUEST\020\003\022-\n)TRIGGER_EMBEDDED_REPO_ENABLE" +
+      "D_BY_QUICKFIX\020\004\022-\n)TRIGGER_VARIANT_SELEC" +
+      "TION_CHANGED_BY_USER\020\005\022\027\n\023TRIGGER_PSD_CH" +
+      "ANGES\020\006\022\032\n\026TRIGGER_TEST_REQUESTED\020\007\022\035\n\031T" +
+      "RIGGER_USER_FIRST_MARKER\020d\022\036\n\032TRIGGER_US" +
+      "ER_STALE_CHANGES\020e\022\032\n\026TRIGGER_USER_TRY_A" +
+      "GAIN\020f\022\034\n\030TRIGGER_USER_SYNC_ACTION\020g\022,\n(" +
+      "TRIGGER_USER_REFRESH_LINKED_CPP_PROJECTS" +
+      "\020h\022\'\n#TRIGGER_USER_REQUEST_WHILE_BUILDIN" +
+      "G\020i\0226\n2TRIGGER_USER_REQUEST_RERUN_WITH_A" +
+      "DDITIONAL_OPTIONS\020j\022\035\n\030TRIGGER_USER_LAST" +
+      "_MARKER\020\307\001\022\034\n\027TRIGGER_QF_FIRST_MARKER\020\220\003" +
+      "\022*\n%TRIGGER_QF_APPENGINE_VERSION_UPGRADE" +
+      "D\020\221\003\022\"\n\035TRIGGER_QF_ARTIFACT_INSTALLED\020\222\003" +
+      "\022%\n TRIGGER_QF_BUILD_TOOLS_INSTALLED\020\223\003\022" +
+      "+\n&TRIGGER_QF_BUILD_TOOLS_VERISON_REMOVE" +
+      "D\020\224\003\022+\n&TRIGGER_QF_BUILD_TOOLS_VERSION_C" +
+      "HANGED\020\225\003\022\037\n\032TRIGGER_QF_CMAKE_INSTALLED\020" +
+      "\226\003\022&\n!TRIGGER_QF_JDK_CHANGED_TO_CURRENT\020" +
+      "\227\003\022\'\n\"TRIGGER_QF_JDK_CHANGED_TO_EMBEDDED" +
+      "\020\230\003\022\035\n\030TRIGGER_QF_NDK_INSTALLED\020\231\003\022.\n)TR" +
+      "IGGER_QF_NDK_INTEGRATION_DEPRECATED_SET\020" +
+      "\232\003\022%\n TRIGGER_QF_OFFLINE_MODE_DISABLED\020\233" +
+      "\003\022$\n\037TRIGGER_QF_OFFLINE_MODE_ENABLED\020\234\003\022" +
+      "\"\n\035TRIGGER_QF_PLATFORM_INSTALLED\020\235\003\022$\n\037T" +
+      "RIGGER_QF_REFRESH_DEPENDENCIES\020\236\003\022 \n\033TRI" +
+      "GGER_QF_REPOSITORY_ADDED\020\237\003\022$\n\037TRIGGER_Q" +
+      "F_REPOSITORY_INSTALLED\020\240\003\022%\n TRIGGER_QF_" +
+      "SDK_PACKAGE_INSTALLED\020\241\003\022 \n\033TRIGGER_QF_S" +
+      "DK_PATH_CHANGED\020\242\003\022%\n TRIGGER_QF_SDK_VER" +
+      "SION_INSTALLED\020\243\003\022\037\n\032TRIGGER_QF_WRAPPER_" +
+      "CREATED\020\244\003\022,\n\'TRIGGER_QF_WRAPPER_GRADLE_" +
+      "VERSION_FIXED\020\245\003\022)\n$TRIGGER_QF_SDK_REMOV" +
+      "ED_FROM_MANIFEST\020\246\003\022+\n&TRIGGER_QF_GRADLE" +
+      "_DISTRIBUTION_DELETED\020\247\003\022:\n5TRIGGER_QF_D" +
+      "ISTRIBUTIONSHA256SUM_REMOVED_FROM_WRAPPE" +
+      "R\020\250\003\0227\n2TRIGGER_QF_DISTRIBUTIONSHA256SUM" +
+      "_CONFIRMED_BY_USER\020\251\003\022,\n\'TRIGGER_QF_GRAD" +
+      "LEJVM_TO_USE_PROJECT_JDK\020\252\003\0220\n+TRIGGER_Q" +
+      "F_REMOVE_JCENTER_FROM_REPOSITORIES\020\253\003\022\'\n" +
+      "\"TRIGGER_QF_SIGNING_CONFIG_SELECTED\020\254\003\022*" +
+      "\n%TRIGGER_QF_REMOVE_UNSUPPORTED_MODULES\020" +
+      "\255\003\022\'\n\"TRIGGER_QF_MIN_COMPILE_SDK_UPDATED" +
+      "\020\256\003\022\033\n\026TRIGGER_QF_LAST_MARKER\020\347\007\022\"\n\035TRIG" +
+      "GER_REFACTOR_FIRST_MARKER\020\260\t\022)\n$TRIGGER_" +
+      "REFACTOR_MIGRATE_TO_ANDROIDX\020\261\t\0224\n/TRIGG" +
+      "ER_REFACTOR_MIGRATE_TO_RESOURCE_NAMESPAC" +
+      "ES\020\262\t\022$\n\037TRIGGER_REFACTOR_MODULE_RENAMED" +
+      "\020\263\t\0229\n4TRIGGER_REFACTOR_MIGRATE_TO_NON_T" +
+      "RANSITIVE_R_CLASSES\020\264\t\022A\n<TRIGGER_REFACT" +
+      "OR_MIGRATE_BUILD_CONFIG_FROM_GRADLE_PROP" +
+      "ERTIES\020\265\t\022!\n\034TRIGGER_REFACTOR_LAST_MARKE" +
+      "R\020\223\n\022\035\n\030TRIGGER_PSD_FIRST_MARKER\020\334\013\022#\n\036T" +
+      "RIGGER_PSD_DEPENDENCY_REMOVED\020\335\013\022\037\n\032TRIG" +
+      "GER_PSD_MODULE_REMOVED\020\336\013\022\034\n\027TRIGGER_PSD" +
+      "_LAST_MARKER\020\277\014\022\035\n\030TRIGGER_SDK_FIRST_MAR" +
+      "KER\020\210\016\022\035\n\030TRIGGER_SDK_PATH_CHANGED\020\211\016\022\034\n" +
+      "\027TRIGGER_SDK_LAST_MARKER\020\353\016\022\"\n\035TRIGGER_M" +
+      "ODIFIER_FIRST_MARKER\020\264\020\022#\n\036TRIGGER_MODIF" +
+      "IER_ACTION_REDONE\020\265\020\022#\n\036TRIGGER_MODIFIER" +
+      "_ACTION_UNDONE\020\266\020\022+\n&TRIGGER_MODIFIER_AD" +
+      "D_MODULE_DEPENDENCY\020\267\020\022,\n\'TRIGGER_MODIFI" +
+      "ER_ADD_LIBRARY_DEPENDENCY\020\270\020\022,\n\'TRIGGER_" +
+      "MODIFIER_LANGUAGE_LEVEL_CHANGED\020\271\020\022!\n\034TR" +
+      "IGGER_MODIFIER_LAST_MARKER\020\227\021\022\"\n\035TRIGGER" +
+      "_LANGUAGE_FIRST_MARKER\020\340\022\022(\n#TRIGGER_LAN" +
+      "GUAGE_JAVA_LEVEL_CHANGED\020\341\022\022\'\n\"TRIGGER_L" +
+      "ANGUAGE_KOTLIN_CONFIGURED\020\342\022\022!\n\034TRIGGER_" +
+      "LANGUAGE_LAST_MARKER\020\303\023\022\035\n\030TRIGGER_SVS_F" +
+      "IRST_MARKER\020\214\025\022\036\n\031TRIGGER_SVS_NOT_SUPPOR" +
+      "TED\020\215\025\022\034\n\027TRIGGER_SVS_LAST_MARKER\020\357\025\022\035\n\030" +
+      "TRIGGER_CPP_FIRST_MARKER\020\270\027\022(\n#TRIGGER_C" +
+      "PP_EXTERNAL_PROJECT_LINKED\020\271\027\022\034\n\027TRIGGER" +
+      "_CPP_LAST_MARKER\020\233\030\022-\n(TRIGGER_ADDDEPEND" +
+      "ENCYACTION_FIRST_MARKER\020\344\031\022\'\n\"TRIGGER_AD" +
+      "DDEPENDENCYACTION_CALLED\020\345\031\022,\n\'TRIGGER_A" +
+      "DDDEPENDENCYACTION_LAST_MARKER\020\307\032\022\"\n\035TRI" +
+      "GGER_ESPRESSO_FIRST_MARKER\020\220\034\022\033\n\026TRIGGER" +
+      "_ESPRESSO_SETUP\020\221\034\022!\n\034TRIGGER_ESPRESSO_L" +
+      "AST_MARKER\020\363\034\022\037\n\032TRIGGER_BUILD_FIRST_MAR" +
+      "KER\020\274\036\022&\n!TRIGGER_BUILD_BEFORE_BUILDING_" +
+      "APK\020\275\036\022*\n%TRIGGER_BUILD_SYNC_NEEDED_AFTE" +
+      "R_BUILD\020\276\036\022\036\n\031TRIGGER_BUILD_LAST_MARKER\020" +
+      "\237\037\022\035\n\030TRIGGER_RUN_FIRST_MARKER\020\350 \022 \n\033TRI" +
+      "GGER_RUN_NATIVE_UNSYNCED\020\351 \022+\n&TRIGGER_R" +
+      "UN_SYNC_NEEDED_BEFORE_RUNNING\020\352 \022\034\n\027TRIG" +
+      "GER_RUN_LAST_MARKER\020\313!\022\035\n\030TRIGGER_AGP_FI" +
+      "RST_MARKER\020\224#\022 \n\033TRIGGER_AGP_VERSION_UPD" +
+      "ATED\020\225#\022+\n&TRIGGER_AGP_VERSION_UPDATE_RO" +
+      "LLED_BACK\020\226#\022\034\n\027TRIGGER_AGP_LAST_MARKER\020" +
+      "\367#\022(\n#TRIGGER_PROJECT_LOADED_FIRST_MARKE" +
+      "R\020\300%\022\030\n\023TRIGGER_PROJECT_NEW\020\301%\022\033\n\026TRIGGE" +
+      "R_PROJECT_REOPEN\020\302%\022(\n#TRIGGER_PROJECT_C" +
+      "ACHED_SETUP_FAILED\020\303%\022\'\n\"TRIGGER_PROJECT" +
+      "_LOADED_LAST_MARKER\020\243&\022 \n\033TRIGGER_IMPORT" +
+      "_FIRST_MARKER\020\354\'\022\036\n\031TRIGGER_IMPORT_ADT_M" +
+      "ODULE\020\355\'\022\"\n\035TRIGGER_IMPORT_MODULES_COPIE" +
+      "D\020\356\'\022\037\n\032TRIGGER_IMPORT_LAST_MARKER\020\317(\022!\n" +
+      "\034TRIGGER_VARIANT_FIRST_MARKER\020\230*\022(\n#TRIG" +
+      "GER_VARIANT_SELECTION_FULL_SYNC\020\231*\022 \n\033TR" +
+      "IGGER_VARIANT_LAST_MARKER\020\373*\022*\n%TRIGGER_" +
+      "GRADLEDEPENDENCY_FIRST_MARKER\020\304,\022#\n\036TRIG" +
+      "GER_GRADLEDEPENDENCY_ADDED\020\305,\022%\n TRIGGER" +
+      "_GRADLEDEPENDENCY_UPDATED\020\306,\022)\n$TRIGGER_" +
+      "GRADLEDEPENDENCY_LAST_MARKER\020\247-\022)\n$TRIGG" +
+      "ER_VERSION_CATALOG_FIRST_MARKER\020\360.\022\'\n\"TR" +
+      "IGGER_VERSION_CATALOG_FILE_ADDED\020\361.\022(\n#T" +
+      "RIGGER_VERSION_CATALOG_LAST_MARKER\020\323/\"\312\001" +
+      "\n\016GradleSyncType\022\034\n\030GRADLE_SYNC_TYPE_UNK" +
+      "NOWN\020\000\022\031\n\025GRADLE_SYNC_TYPE_IDEA\020\001\022#\n\037GRA" +
+      "DLE_SYNC_TYPE_SINGLE_VARIANT\020\002\022\035\n\031GRADLE" +
+      "_SYNC_TYPE_COMPOUND\020\003\022\034\n\030GRADLE_SYNC_TYP" +
+      "E_SHIPPED\020\004\022\035\n\031GRADLE_SYNC_TYPE_NEW_SYNC" +
+      "\020\005\"b\n\027GradleSyncExecutionType\022!\n\035GRADLE_" +
+      "SYNC_RUNS_SEQUENTIALLY\020\000\022 \n\034GRADLE_SYNC_" +
+      "RUNS_IN_PARALLEL\020\001\032\002\030\001\"\177\n\026UserRequestedE" +
+      "xecution\022)\n%UNKNOWN_USER_REQUESTED_EXECU" +
+      "TION_TYPE\020\000\022\035\n\031USER_REQUESTED_SEQUENTIAL" +
+      "\020\001\022\033\n\027USER_REQUESTED_PARALLEL\020\002\"\205\001\n\030Stud" +
+      "ioRequestedExecution\022+\n\'UNKNOWN_STUDIO_R" +
+      "EQUESTED_EXECUTION_TYPE\020\000\022\036\n\032STUDIO_REQU" +
+      "ESTD_SEQUENTIAL\020\001\022\034\n\030STUDIO_REQUESTD_PAR" +
+      "ALLEL\020\002\"\253\001\n\017GradleSyncIssue\022D\n\004type\030\001 \001(" +
+      "\01626.android_studio.AndroidStudioEvent.Gr" +
+      "adleSyncIssueType\022R\n\023offered_quick_fixes" +
+      "\030\002 \003(\01625.android_studio.AndroidStudioEve" +
+      "nt.GradleSyncQuickFix\"\322\002\n\022GradleCppSyncS" +
+      "tats\022%\n\035native_workspace_sync_time_ms\030\001 " +
+      "\001(\003\022X\n\032synced_native_module_stats\030\002 \003(\0132" +
+      "4.android_studio.GradleCppSyncStats.Nati" +
+      "veModuleStats\022\033\n\023cidr_workspace_size\030\003 \001" +
+      "(\005\032\235\001\n\021NativeModuleStats\022\033\n\023c_source_fil",
+      "e_count\030\001 \001(\005\022\035\n\025cpp_source_file_count\030\002" +
+      " \001(\005\022*\n\"distinct_compiler_flag_lists_cou" +
+      "nt\030\003 \001(\005\022 \n\030cidr_configuration_count\030\004 \001" +
+      "(\005\"%\n\017ApkDebugProject\022\022\n\npackage_id\030\001 \001(" +
+      "\t\"\326\002\n\024LayoutInspectorEvent\022K\n\004type\030\001 \001(\016" +
+      "2=.android_studio.LayoutInspectorEvent.L" +
+      "ayoutInspectorEventType\022\026\n\016duration_in_m" +
+      "s\030\002 \001(\003\022\021\n\tdata_size\030\003 \001(\003\022\017\n\007version\030\004 " +
+      "\001(\r\"\264\001\n\030LayoutInspectorEventType\022\026\n\022UNKN" +
+      "OWN_EVENT_TYPE\020\000\022\013\n\007CAPTURE\020\001\022\010\n\004OPEN\020\002\022" +
+      "\024\n\020DUMP_DISPLAYLIST\020\003\022\021\n\rOVERLAY_IMAGE\020\004" +
+      "\022\023\n\017RENDER_SUB_VIEW\020\005\022\025\n\021GO_TO_DECLARATI" +
+      "ON\020\006\022\024\n\020CAPTURE_TIME_OUT\020\007\"\336\007\n\033DynamicLa" +
+      "youtInspectorEvent\022Y\n\004type\030\001 \001(\0162K.andro" +
+      "id_studio.DynamicLayoutInspectorEvent.Dy" +
+      "namicLayoutInspectorEventType\022>\n\007session" +
+      "\030\002 \001(\0132-.android_studio.DynamicLayoutIns" +
+      "pectorSession\022I\n\rsnapshot_info\030\003 \001(\01322.a" +
+      "ndroid_studio.DynamicLayoutInspectorSnap" +
+      "shotInfo\022C\n\nerror_info\030\004 \001(\0132/.android_s" +
+      "tudio.DynamicLayoutInspectorErrorInfo\022P\n" +
+      "\021auto_connect_info\030\005 \001(\01325.android_studi" +
+      "o.DynamicLayoutInspectorAutoConnectInfo\022" +
+      "M\n\017transport_error\030\006 \001(\01324.android_studi" +
+      "o.DynamicLayoutInspectorTransportError\"\362" +
+      "\003\n\037DynamicLayoutInspectorEventType\022\026\n\022UN" +
+      "KNOWN_EVENT_TYPE\020\000\022\010\n\004OPEN\020\001\022\022\n\016ATTACH_R" +
+      "EQUEST\020\002\022\022\n\016ATTACH_SUCCESS\020\003\022\022\n\016INITIAL_" +
+      "RENDER\020\004\022\035\n\031INITIAL_RENDER_NO_PICTURE\020\005\022" +
+      "\032\n\026INITIAL_RENDER_BITMAPS\020\006\022\031\n\025COMPATIBI" +
+      "LITY_REQUEST\020\007\022\031\n\025COMPATIBILITY_SUCCESS\020" +
+      "\010\022\030\n\024COMPATIBILITY_RENDER\020\t\022#\n\037COMPATIBI" +
+      "LITY_RENDER_NO_PICTURE\020\n\022\020\n\014SESSION_DATA" +
+      "\020\013\022\025\n\021SNAPSHOT_CAPTURED\020\014\022\023\n\017SNAPSHOT_LO" +
+      "ADED\020\r\022\027\n\023SNAPSHOT_LOAD_ERROR\020\016\022\026\n\022SNAPS" +
+      "HOT_CANCELLED\020\017\022\020\n\014ATTACH_ERROR\020\020\022\024\n\020ATT" +
+      "ACH_CANCELLED\020\021\022\025\n\021AUTO_CONNECT_INFO\020\022\022\023" +
+      "\n\017TRANSPORT_ERROR\020\023\"\353\001\n$DynamicLayoutIns" +
+      "pectorTransportError\022G\n\004type\030\001 \001(\01629.and" +
+      "roid_studio.DynamicLayoutInspectorTransp" +
+      "ortError.Type\"z\n\004Type\022\025\n\021UNSPECIFIED_STA" +
+      "TE\020\000\022$\n TRANSPORT_FAILED_TO_START_DAEMON" +
+      "\020\001\0225\n1TRANSPORT_OLD_TIMESTAMP_BIGGER_THA" +
+      "N_NEW_TIMESTAMP\020\002\"\332\010\n%DynamicLayoutInspe" +
+      "ctorAutoConnectInfo\022_\n\020handshake_result\030" +
+      "\001 \001(\0162E.android_studio.DynamicLayoutInsp" +
+      "ectorAutoConnectInfo.HandshakeResult\022r\n\024" +
+      "handshake_conversion\030\002 \001(\0162P.android_stu" +
+      "dio.DynamicLayoutInspectorAutoConnectInf" +
+      "o.HandshakeUnknownConversionB\002\030\001\022q\n\024reas" +
+      "on_not_supported\030\003 \001(\0162S.android_studio." +
+      "DynamicLayoutInspectorAutoConnectInfo.Au" +
+      "toConnectReasonNotSupported\022l\n\031handshake" +
+      "_conversion_info\030\004 \001(\0162I.android_studio." +
+      "DynamicLayoutInspectorAutoConnectInfo.Ha" +
+      "ndshakeConversion\022\035\n\025is_recovery_handsha" +
+      "ke\030\005 \001(\010\"`\n\017HandshakeResult\022\026\n\022UNSPECIFI" +
+      "ED_RESULT\020\000\022\023\n\017SUPPORT_UNKNOWN\020\001\022\r\n\tSUPP" +
+      "ORTED\020\002\022\021\n\rNOT_SUPPORTED\020\003\"n\n\032HandshakeU" +
+      "nknownConversion\022\030\n\024UNKNOWN_TO_SUPPORTED" +
+      "\020\000\022\034\n\030UNKNOWN_TO_NOT_SUPPORTED\020\001\022\030\n\024UNKN" +
+      "OWN_NOT_RESOLVED\020\002\"\272\001\n\023HandshakeConversi" +
+      "on\022\032\n\026UNSPECIFIED_CONVERSION\020\000\022\035\n\031FROM_U" +
+      "NKNOWN_TO_SUPPORTED\020\001\022!\n\035FROM_UNKNOWN_TO" +
+      "_NOT_SUPPORTED\020\002\022 \n\034FROM_UNKNOWN_TO_DISC" +
+      "ONNECTED\020\003\022#\n\037FROM_NOT_SUPPORTED_TO_SUPP" +
+      "ORTED\020\004\"\314\001\n\035AutoConnectReasonNotSupporte" +
+      "d\022\026\n\022UNSPECIFIED_REASON\020\000\022\025\n\021DUMPSYS_NOT" +
+      "_FOUND\020\001\022\022\n\016GREP_NOT_FOUND\020\002\0222\n.DUMPSYS_" +
+      "NO_TOP_ACTIVITY_NO_SLEEPING_ACTIVITIES\020\003" +
+      "\0224\n0DUMPSYS_NO_TOP_ACTIVITY_BUT_HAS_AWAK" +
+      "E_ACTIVITIES\020\004\"\264\014\n\037DynamicLayoutInspecto" +
+      "rErrorInfo\022\\\n\022attach_error_state\030\001 \001(\0162@" +
+      ".android_studio.DynamicLayoutInspectorEr" +
+      "rorInfo.AttachErrorState\022Z\n\021attach_error" +
+      "_code\030\002 \001(\0162?.android_studio.DynamicLayo" +
+      "utInspectorErrorInfo.AttachErrorCode\"\205\005\n" +
+      "\020AttachErrorState\022\036\n\032UNKNOWN_ATTACH_ERRO" +
+      "R_STATE\020\000\022\017\n\013NOT_STARTED\020\001\022\014\n\010ADB_PING\020\004" +
+      "\022\022\n\016ATTACH_SUCCESS\020\007\022\026\n\022START_REQUEST_SE" +
+      "NT\020\n\022\022\n\016START_RECEIVED\020\024\022\013\n\007STARTED\020\036\022\024\n" +
+      "\020ROOTS_EVENT_SENT\020(\022\030\n\024ROOTS_EVENT_RECEI" +
+      "VED\0202\022\036\n\032VIEW_INVALIDATION_CALLBACK\020<\022\027\n" +
+      "\023SCREENSHOT_CAPTURED\020F\022\033\n\027VIEW_HIERARCHY" +
+      "_CAPTURED\020P\022\021\n\rRESPONSE_SENT\020Z\022\031\n\025LAYOUT" +
+      "_EVENT_RECEIVED\020d\022\030\n\024COMPOSE_REQUEST_SEN" +
+      "T\020n\022\036\n\031COMPOSE_RESPONSE_RECEIVED\020\310\001\022!\n\034L" +
+      "EGACY_WINDOW_LIST_REQUESTED\020\322\001\022 \n\033LEGACY" +
+      "_WINDOW_LIST_RECEIVED\020\334\001\022\037\n\032LEGACY_HIERA" +
+      "RCHY_REQUESTED\020\346\001\022\036\n\031LEGACY_HIERARCHY_RE" +
+      "CEIVED\020\360\001\022 \n\033LEGACY_SCREENSHOT_REQUESTED" +
+      "\020\372\001\022\037\n\032LEGACY_SCREENSHOT_RECEIVED\020\204\002\022\032\n\025" +
+      "PARSED_COMPONENT_TREE\020\216\002\022\022\n\rMODEL_UPDATE" +
+      "D\020\230\002\"\316\005\n\017AttachErrorCode\022\026\n\022UNKNOWN_ERRO" +
+      "R_CODE\020\000\022\021\n\rLOW_API_LEVEL\020\001\022\023\n\017CONNECT_T" +
+      "IMEOUT\020\002\022\034\n\030UNKNOWN_VIEW_AGENT_ERROR\020e\022\034" +
+      "\n\030NO_HARDWARE_ACCELERATION\020f\022\027\n\023NO_ROOT_" +
+      "VIEWS_FOUND\020g\022!\n\034UNKNOWN_APP_INSPECTION_" +
+      "ERROR\020\311\001\022&\n!APP_INSPECTION_CANNOT_FIND_D" +
+      "EVICE\020\312\001\022,\n\'APP_INSPECTION_PROCESS_NO_LO" +
+      "NGER_EXISTS\020\313\001\022(\n#APP_INSPECTION_INCOMPA" +
+      "TIBLE_VERSION\020\314\001\022#\n\036APP_INSPECTION_MISSI" +
+      "NG_LIBRARY\020\315\001\022\"\n\035APP_INSPECTION_PROGUARD" +
+      "ED_APP\020\316\001\022&\n!APP_INSPECTION_ARTIFACT_NOT" +
+      "_FOUND\020\317\001\022*\n%APP_INSPECTION_VERSION_FILE" +
+      "_NOT_FOUND\020\320\001\022*\n%APP_INSPECTION_SNAPSHOT" +
+      "_NOT_SPECIFIED\020\321\001\022/\n*APP_INSPECTION_COMP" +
+      "OSE_INSPECTOR_NOT_FOUND\020\322\001\022)\n$APP_INSPEC" +
+      "TION_FAILED_MAVEN_DOWNLOAD\020\323\001\022\034\n\027TRANSPO" +
+      "RT_UNKNOWN_ERROR\020\255\002\022)\n$TRANSPORT_PUSH_FA" +
+      "ILED_FILE_NOT_FOUND\020\256\002\022\025\n\020UNEXPECTED_ERR" +
+      "OR\020\221\003\"\234\002\n\"DynamicLayoutInspectorSnapshot" +
+      "Info\022\030\n\020snapshot_version\030\001 \001(\005\022R\n\013save_s" +
+      "ource\030\002 \001(\0162=.android_studio.DynamicLayo" +
+      "utInspectorSnapshotInfo.SaveSource\022\024\n\014sa" +
+      "ve_version\030\003 \001(\t\022\027\n\017live_when_saved\030\004 \001(" +
+      "\010\022\030\n\020save_duration_ms\030\005 \001(\r\022\030\n\020load_dura" +
+      "tion_ms\030\006 \001(\r\"%\n\nSaveSource\022\013\n\007UNKNOWN\020\000" +
+      "\022\n\n\006STUDIO\020\001\"\367\003\n\035DynamicLayoutInspectorS" +
+      "ession\022<\n\004live\030\001 \001(\0132..android_studio.Dy" +
+      "namicLayoutInspectorLiveMode\022@\n\010rotation" +
+      "\030\002 \001(\0132..android_studio.DynamicLayoutIns" +
+      "pectorRotation\022<\n\006memory\030\003 \001(\0132,.android" +
+      "_studio.DynamicLayoutInspectorMemory\022>\n\007" +
+      "compose\030\004 \001(\0132-.android_studio.DynamicLa" +
+      "youtInspectorCompose\022@\n\006system\030\005 \001(\01320.a" +
+      "ndroid_studio.DynamicLayoutInspectorSyst" +
+      "emNode\022O\n\020goto_declaration\030\006 \001(\01325.andro" +
+      "id_studio.DynamicLayoutInspectorGotoDecl" +
+      "aration\022E\n\006attach\030\007 \001(\01325.android_studio" +
+      ".DynamicLayoutInspectorAttachToProcess\"\206" +
+      "\001\n\036DynamicLayoutInspectorLiveMode\022\035\n\025ref" +
+      "resh_button_clicks\030\001 \001(\r\022 \n\030clicks_with_" +
+      "live_updates\030\002 \001(\r\022#\n\033clicks_without_liv" +
+      "e_updates\030\003 \001(\r\"\242\001\n\036DynamicLayoutInspect" +
+      "orRotation\022\032\n\022image_clicks_in_3d\030\001 \001(\r\022\032" +
+      "\n\022image_clicks_in_2d\030\002 \001(\r\022#\n\033component_" +
+      "tree_clicks_in_3d\030\003 \001(\r\022#\n\033component_tre" +
+      "e_clicks_in_2d\030\004 \001(\r\"\374\004\n\035DynamicLayoutIn" +
+      "spectorCompose\022#\n\033kotlin_reflection_avai" +
+      "lable\030\001 \001(\010\022\024\n\014image_clicks\030\002 \001(\r\022\035\n\025com" +
+      "ponent_tree_clicks\030\003 \001(\r\022/\n\'go_to_source" +
+      "_from_property_value_clicks\030\004 \001(\r\022\037\n\027max" +
+      "_recomposition_count\030\005 \001(\r\022\037\n\027max_recomp" +
+      "osition_skips\030\006 \001(\r\022#\n\033max_recomposition" +
+      "_highlight\030\007 \001(\002\022\"\n\032recomposition_reset_" +
+      "clicks\030\010 \001(\r\022+\n#frames_with_recompositio" +
+      "n_counts_on\030\t \001(\r\022+\n#frames_with_recompo" +
+      "sition_color_red\030\n \001(\r\022,\n$frames_with_re" +
+      "composition_color_blue\030\013 \001(\r\022-\n%frames_w" +
+      "ith_recomposition_color_green\030\014 \001(\r\022.\n&f" +
+      "rames_with_recomposition_color_yellow\030\r " +
+      "\001(\r\022.\n&frames_with_recomposition_color_p" +
+      "urple\030\016 \001(\r\022.\n&frames_with_recomposition" +
+      "_color_orange\030\017 \001(\r\"u\n DynamicLayoutInsp" +
+      "ectorSystemNode\022\'\n\037clicks_with_hidden_sy" +
+      "stem_views\030\001 \001(\r\022(\n clicks_with_visible_" +
+      "system_views\030\002 \001(\r\"\232\002\n\034DynamicLayoutInsp" +
+      "ectorMemory\022O\n\020initial_snapshot\030\001 \001(\01325." +
+      "android_studio.DynamicLayoutInspectorMem" +
+      "ory.Snapshot\022O\n\020largest_snapshot\030\002 \001(\01325" +
+      ".android_studio.DynamicLayoutInspectorMe" +
+      "mory.Snapshot\032X\n\010Snapshot\022\022\n\nskia_image\030" +
+      "\001 \001(\010\022\027\n\017capture_size_mb\030\002 \001(\004\022\037\n\027measur" +
+      "ement_duration_ms\030\003 \001(\004\"\233\001\n%DynamicLayou" +
+      "tInspectorGotoDeclaration\022\032\n\022clicks_menu" +
+      "_action\030\001 \001(\r\022\034\n\024key_strokes_shortcut\030\002 " +
+      "\001(\r\022\025\n\rdouble_clicks\030\003 \001(\r\022!\n\031double_cli" +
+      "cks_from_render\030\004 \001(\r\"\335\004\n%DynamicLayoutI" +
+      "nspectorAttachToProcess\022U\n\013client_type\030\001" +
+      " \001(\0162@.android_studio.DynamicLayoutInspe" +
+      "ctorAttachToProcess.ClientType\022\017\n\007succes" +
+      "s\030\002 \001(\010\022C\n\nerror_info\030\003 \001(\0132/.android_st" +
+      "udio.DynamicLayoutInspectorErrorInfo\022[\n\022" +
+      "compose_error_code\030\004 \001(\0162?.android_studi" +
+      "o.DynamicLayoutInspectorErrorInfo.Attach" +
+      "ErrorCode\022\036\n\026multiple_projects_open\030\005 \001(" +
+      "\010\022\031\n\021debugger_attached\030\006 \001(\010\022%\n\035debugger" +
+      "_paused_during_attach\030\007 \001(\010\022\034\n\024auto_conn" +
+      "ect_enabled\030\010 \001(\010\022$\n\034is_embedded_layout_" +
+      "inspector\030\t \001(\010\022\032\n\022attach_duration_ms\030\n " +
+      "\001(\003\"h\n\nClientType\022\027\n\023UNKNOWN_CLIENT_TYPE" +
+      "\020\000\022\021\n\rLEGACY_CLIENT\020\001\022\031\n\025APP_INSPECTION_" +
+      "CLIENT\020\002\022\023\n\017SNAPSHOT_CLIENT\020\003\"l\n\rKotlinS" +
+      "upport\022\036\n\026include_kotlin_support\030\001 \001(\010\022\036" +
+      "\n\026kotlin_support_version\030\002 \001(\t\022\033\n\023androi" +
+      "d_ktx_version\030\003 \001(\t\"\207\003\n\030ConnectionAssist" +
+      "antEvent\022S\n\004type\030\001 \001(\0162E.android_studio." +
+      "ConnectionAssistantEvent.ConnectionAssis" +
+      "tantEventType\022\034\n\024usb_devices_detected\030\002 " +
+      "\001(\005\022\034\n\024adb_devices_detected\030\003 \001(\005\"\331\001\n\034Co" +
+      "nnectionAssistantEventType\022\026\n\022UNKNOWN_EV" +
+      "ENT_TYPE\020\000\022\010\n\004OPEN\020\001\022\034\n\030SCAN_USB_DEVICES" +
+      "_CLICKED\020\002\022\030\n\024USB_DEVICES_DETECTED\020\003\022\027\n\023" +
+      "RESTART_ADB_CLICKED\020\004\022\030\n\024ADB_DEVICES_DET" +
+      "ECTED\020\005\022\030\n\024REPORT_ISSUE_CLICKED\020\006\022\022\n\016ISS" +
+      "UE_REPORTED\020\007\"\317\001\n\037UpgradeAndroidStudioDi" +
+      "alogStats\022O\n\013user_action\030\001 \001(\0162:.android" +
+      "_studio.UpgradeAndroidStudioDialogStats." +
+      "UserAction\"[\n\nUserAction\022\027\n\023UNKNOWN_USER" +
+      "_ACTION\020\000\022\n\n\006CANCEL\020\001\022\022\n\016UPGRADE_STUDIO\020" +
+      "\002\022\024\n\020DO_NOT_ASK_AGAIN\020\003\"\313\004\n\016OomDialogEve" +
+      "nt\022E\n\nevent_type\030\001 \001(\01621.android_studio." +
+      "OomDialogEvent.OomDialogEventType\022\031\n\021ini" +
+      "tial_heap_size\030\002 \001(\005\022\036\n\026initial_metaspac" +
+      "e_size\030\003 \001(\005\022\036\n\026initial_codecache_size\030\004" +
+      " \001(\005\022\027\n\017saved_heap_size\030\005 \001(\005\022\034\n\024saved_m" +
+      "etaspace_size\030\006 \001(\005\022\034\n\024saved_codecache_s" +
+      "ize\030\007 \001(\005\022\027\n\017editing_enabled\030\010 \001(\010\022F\n\017se" +
+      "lected_action\030\t \001(\0162-.android_studio.Oom" +
+      "DialogEvent.SelectedAction\"\201\001\n\022OomDialog" +
+      "EventType\022\026\n\022UNKNOWN_EVENT_TYPE\020\000\022\014\n\010OOM" +
+      "_HEAP\020\001\022\020\n\014OOM_PERM_GEN\020\002\022\021\n\rOOM_METASPA" +
+      "CE\020\003\022\022\n\016OOM_CODE_CACHE\020\004\022\014\n\010LOW_HEAP\020\005\"]" +
+      "\n\016SelectedAction\022\022\n\016UNKNOWN_ACTION\020\000\022\023\n\017" +
+      "CONTINUE_ACTION\020\001\022\017\n\013QUIT_ACTION\020\002\022\021\n\rCA" +
+      "NCEL_ACTION\020\003\"\364\001\n\026WhatsNewAssistantEvent" +
+      "\022O\n\004type\030\001 \001(\0162A.android_studio.WhatsNew" +
+      "AssistantEvent.WhatsNewAssistantEventTyp" +
+      "e\"\204\001\n\032WhatsNewAssistantEventType\022\026\n\022UNKN" +
+      "OWN_EVENT_TYPE\020\000\022\010\n\004OPEN\020\001\022\r\n\tAUTO_OPEN\020" +
+      "\002\022\025\n\021FIRST_INTERACTION\020\003\022\n\n\006CLOSED\020\004\022\022\n\016" +
+      "BUTTON_CLICKED\020\005:\002\030\001\"\236\010\n\034WhatsNewAssista" +
+      "ntUpdateEvent\022\023\n\013auto_opened\030\001 \001(\010\022\023\n\013up" +
+      "date_flow\030\002 \001(\010\022\032\n\022scrolled_to_bottom\030\003 " +
+      "\001(\010\022\"\n\032time_to_scrolled_to_bottom\030\007 \001(\003\022" +
+      "\021\n\tdismissed\030\004 \001(\010\022\031\n\021time_to_update_ms\030" +
+      "\005 \001(\003\022\030\n\020time_to_close_ms\030\006 \001(\003\022\\\n\024actio" +
+      "n_button_events\030\010 \003(\0132>.android_studio.W" +
+      "hatsNewAssistantUpdateEvent.ActionButton" +
+      "Event\032\355\005\n\021ActionButtonEvent\022k\n\022action_bu" +
+      "tton_type\030\001 \001(\0162O.android_studio.WhatsNe" +
+      "wAssistantUpdateEvent.ActionButtonEvent." +
+      "ActionButtonType\022\\\n\nevent_type\030\002 \001(\0162H.a" +
+      "ndroid_studio.WhatsNewAssistantUpdateEve" +
+      "nt.ActionButtonEvent.EventType\022m\n\023action" +
+      "_button_state\030\003 \001(\0162P.android_studio.Wha" +
       "tsNewAssistantUpdateEvent.ActionButtonEv" +
-      "ent\032\355\005\n\021ActionButtonEvent\022k\n\022action_butt" +
-      "on_type\030\001 \001(\0162O.android_studio.WhatsNewA" +
-      "ssistantUpdateEvent.ActionButtonEvent.Ac" +
-      "tionButtonType\022\\\n\nevent_type\030\002 \001(\0162H.and" +
-      "roid_studio.WhatsNewAssistantUpdateEvent" +
-      ".ActionButtonEvent.EventType\022m\n\023action_b" +
-      "utton_state\030\003 \001(\0162P.android_studio.Whats" +
-      "NewAssistantUpdateEvent.ActionButtonEven" +
-      "t.ActionButtonState\022\032\n\022time_from_wna_ope" +
-      "n\030\004 \001(\003\"X\n\020ActionButtonType\022\022\n\016UNKNOWN_B" +
-      "UTTON\020\000\022\027\n\023BUILD_ANALYZER_SHOW\020\001\022\027\n\023APP_" +
-      "INSPECTION_SHOW\020\002\"\310\001\n\021ActionButtonState\022" +
-      "\021\n\rUNKNOWN_STATE\020\000\022\"\n\036BUILD_ANALYZER_AGP" +
-      "_VERSION_LOW\020\001\022\032\n\026BUILD_ANALYZER_NO_DATA" +
-      "\020\002\022 \n\034BUILD_ANALYZER_BUILD_RUNNING\020\003\022\037\n\033" +
-      "BUILD_ANALYZER_BUILD_FAILED\020\004\022\035\n\031BUILD_A" +
-      "NALYZER_DATA_READY\020\005\"]\n\tEventType\022\020\n\014UNK" +
-      "NOWN_TYPE\020\000\022\022\n\016BUTTON_CREATED\020\001\022\020\n\014BUTTO" +
-      "N_CLICK\020\002\022\030\n\024BUTTON_STATE_UPDATED\020\003\"\264\003\n\032" +
-      "DesignEditorHelpPanelEvent\022J\n\006action\030\001 \001" +
-      "(\0162:.android_studio.DesignEditorHelpPane" +
-      "lEvent.HelpPanelAction\022Q\n\017help_panel_typ" +
-      "e\030\002 \001(\01628.android_studio.DesignEditorHel" +
-      "pPanelEvent.HelpPanelType\022\030\n\020time_to_clo" +
-      "se_ms\030\003 \001(\003\"_\n\017HelpPanelAction\022\022\n\016UNKNOW" +
-      "N_ACTION\020\000\022\010\n\004OPEN\020\001\022\022\n\016BUTTON_CLICKED\020\002" +
-      "\022\t\n\005CLOSE\020\003\022\017\n\013REACHED_END\020\004\"|\n\rHelpPane" +
-      "lType\022\026\n\022UNKNOWN_PANEL_TYPE\020\000\022\014\n\010FULL_AL" +
-      "L\020\001\022\025\n\021CONSTRAINT_LAYOUT\020\002\022\021\n\rMOTION_LAY" +
-      "OUT\020\003\022\016\n\nNAV_EDITOR\020\004\022\013\n\007COMPOSE\020\005\"\217\004\n\013L" +
-      "intSession\022?\n\ranalysis_type\030\001 \001(\0162(.andr" +
-      "oid_studio.LintSession.AnalysisType\0229\n\020l" +
-      "int_performance\030\002 \001(\0132\037.android_studio.L" +
-      "intPerformance\022.\n\tissue_ids\030\003 \003(\0132\033.andr" +
-      "oid_studio.LintIssueId\022\022\n\nproject_id\030\004 \001" +
-      "(\t\022\030\n\020baseline_enabled\030\005 \001(\010\022\036\n\026includin" +
-      "g_test_sources\030\006 \001(\010\022#\n\033including_genera" +
-      "ted_sources\030\007 \001(\010\022\036\n\026including_dependenc" +
-      "ies\030\010 \001(\010\022\026\n\016abort_on_error\030\t \001(\010\022\027\n\017ign" +
-      "ore_warnings\030\n \001(\010\022\032\n\022warnings_as_errors" +
-      "\030\013 \001(\010\"t\n\014AnalysisType\022\031\n\025UNKNOWN_ANALYS" +
-      "IS_TYPE\020\000\022\t\n\005BUILD\020\001\022\t\n\005VITAL\020\002\022\r\n\tIDE_B" +
-      "ATCH\020\003\022\014\n\010IDE_FILE\020\004\022\026\n\022BUILD_ALL_VARIAN" +
-      "TS\020\005\"\256\002\n\013LintIssueId\022\020\n\010issue_id\030\001 \001(\t\022\r" +
-      "\n\005count\030\002 \001(\003\022:\n\010severity\030\003 \001(\0162(.androi" +
-      "d_studio.LintIssueId.LintSeverity\"\301\001\n\014Li" +
-      "ntSeverity\022\024\n\020UNKNOWN_SEVERITY\020\000\022\024\n\020DEFA" +
-      "ULT_SEVERITY\020\001\022\022\n\016FATAL_SEVERITY\020\002\022\022\n\016ER" +
-      "ROR_SEVERITY\020\003\022\024\n\020WARNING_SEVERITY\020\004\022\032\n\026" +
-      "INFORMATIONAL_SEVERITY\020\005\022\023\n\017IGNORE_SEVER" +
-      "ITY\020\006\022\026\n\022SUPPRESSED_LOCALLY\020\007\"\331\003\n\017LintPe" +
-      "rformance\022\030\n\020analysis_time_ms\030\001 \001(\003\022\022\n\nf" +
-      "ile_count\030\002 \001(\003\022\024\n\014module_count\030\003 \001(\003\022\031\n" +
-      "\021java_source_count\030\004 \001(\003\022\033\n\023kotlin_sourc" +
-      "e_count\030\005 \001(\003\022\033\n\023resource_file_count\030\006 \001" +
-      "(\003\022\031\n\021test_source_count\030\007 \001(\003\022\032\n\022initial" +
-      "ize_time_ms\030\010 \001(\003\022)\n!register_custom_det" +
-      "ectors_time_ms\030\t \001(\003\022!\n\031compute_detector" +
-      "s_time_ms\030\n \001(\003\022\035\n\025check_project_time_ms" +
-      "\030\013 \001(\003\022\034\n\024extra_phases_time_ms\030\014 \001(\003\022&\n\036" +
-      "report_baseline_issues_time_ms\030\r \001(\003\022 \n\030" +
-      "dispose_projects_time_ms\030\016 \001(\003\022!\n\031report" +
-      "_generation_time_ms\030\017 \001(\003\"\336\001\n\nLintAction" +
-      "\022\020\n\010issue_id\030\001 \001(\t\022\022\n\nproject_id\030\002 \001(\t\022\016" +
-      "\n\006fix_id\030\003 \001(\t\022>\n\rlint_feedback\030\004 \001(\0162\'." +
-      "android_studio.LintAction.LintFeedback\"Z" +
-      "\n\014LintFeedback\022\024\n\020UNKNOWN_FEEDBACK\020\000\022\022\n\016" +
-      "FALSE_POSITIVE\020\001\022\023\n\017UNCLEAR_MESSAGE\020\002\022\013\n" +
-      "\007LOVE_IT\020\003\"\352\010\n\010RunEvent\022/\n\006status\030\001 \001(\0162" +
-      "\037.android_studio.RunEvent.Status\022\020\n\010exec" +
-      "utor\030\002 \001(\t\022\022\n\ndebuggable\030\003 \001(\010\022\033\n\023instan" +
-      "t_run_enabled\030\004 \001(\010\022\025\n\rapply_changes\030\005 \001" +
-      "(\010\022\034\n\024user_selected_target\030\006 \001(\010\022\030\n\020laun" +
-      "ched_devices\030\007 \001(\010\022\024\n\014device_count\030\010 \001(\005" +
-      "\022\017\n\007partial\030\t \001(\010\022<\n\022launch_task_detail\030" +
-      "\n \003(\0132 .android_studio.LaunchTaskDetail\022" +
-      "\032\n\022begin_timestamp_ms\030\013 \001(\003\022+\n#begin_bef" +
-      "ore_run_tasks_timestamp_ms\030\014 \001(\003\022)\n!end_" +
-      "before_run_tasks_timestamp_ms\030\r \001(\003\022*\n\"b" +
-      "egin_wait_for_device_timestamp_ms\030\016 \001(\003\022" +
-      "(\n end_wait_for_device_timestamp_ms\030\017 \001(" +
-      "\003\022\'\n\037begin_launch_tasks_timestamp_ms\030\020 \001" +
-      "(\003\022%\n\035end_launch_tasks_timestamp_ms\030\021 \001(" +
-      "\003\022\030\n\020end_timestamp_ms\030\022 \001(\003\022\033\n\023deployed_" +
-      "as_instant\030\023 \001(\010\022\034\n\024deployed_from_bundle" +
-      "\030\024 \001(\010\022\031\n\021deploy_failure_id\030\025 \001(\t\022%\n\035app" +
-      "ly_changes_fallback_to_run\030\026 \001(\010\022*\n\"appl" +
-      "y_code_changes_fallback_to_run\030\027 \001(\010\022\"\n\032" +
-      "run_always_install_with_pm\030\030 \001(\010\022A\n\022app_" +
-      "component_type\030\031 \001(\0162%.android_studio.Ru" +
-      "nEvent.AppComponent\022\032\n\022is_compose_projec" +
-      "t\030\032 \001(\010\022\022\n\nproject_id\030\033 \001(\t\"k\n\006Status\022\022\n" +
-      "\016UNKNOWN_STATUS\020\000\022\013\n\007SUCCESS\020\001\022\010\n\004FAIL\020\002" +
-      "\022\t\n\005ABORT\020\003\022\034\n\024BEFORE_RUN_TASK_FAIL\020\004\032\002\010" +
-      "\001\022\r\n\tABANDONED\020\005\"U\n\014AppComponent\022\013\n\007UNKN" +
-      "OWN\020\000\022\014\n\010ACTIVITY\020\001\022\016\n\nWATCH_FACE\020\002\022\010\n\004T" +
-      "ILE\020\003\022\020\n\014COMPLICATION\020\004\"\243\001\n\020LaunchTaskDe" +
-      "tail\022\n\n\002id\030\001 \001(\t\022\032\n\022start_timestamp_ms\030\002" +
-      " \001(\003\022\030\n\020end_timestamp_ms\030\003 \001(\003\0220\n\010artifa" +
-      "ct\030\004 \003(\0132\036.android_studio.ArtifactDetail" +
-      "\022\013\n\003tid\030\005 \001(\005\022\016\n\006status\030\006 \001(\t\"\333\001\n\tStopEv" +
-      "ent\022/\n\006status\030\001 \001(\0162\037.android_studio.Run" +
-      "Event.Status\022\020\n\010executor\030\002 \001(\t\022\022\n\ndebugg" +
-      "able\030\003 \001(\010\022\032\n\022begin_timestamp_ms\030\004 \001(\003\022\030" +
-      "\n\020end_timestamp_ms\030\005 \001(\003\022A\n\022app_componen" +
-      "t_type\030\006 \001(\0162%.android_studio.RunEvent.A" +
-      "ppComponent\"\206\t\n\016StudioRunEvent\022\016\n\006run_id" +
-      "\030\001 \001(\t\0228\n\010run_type\030\002 \001(\0162&.android_studi" +
-      "o.StudioRunEvent.RunType\022@\n\014section_type" +
-      "\030\003 \001(\0162*.android_studio.StudioRunEvent.S" +
-      "ectionType\022<\n\nevent_type\030\004 \001(\0162(.android" +
-      "_studio.StudioRunEvent.EventType\022\023\n\013dura" +
-      "tion_ms\030\005 \001(\r\022<\n\nbuild_mode\030\006 \001(\0162(.andr" +
-      "oid_studio.StudioRunEvent.BuildMode\022\025\n\ri" +
-      "s_successful\030\007 \001(\010\022\026\n\016artifact_count\030\010 \001" +
-      "(\r\022>\n\013deploy_task\030\t \001(\0162).android_studio" +
-      ".StudioRunEvent.DeployTask\022\'\n\037disabled_d" +
-      "ynamic_features_count\030\013 \001(\r\022\023\n\013instant_r" +
-      "un\030\014 \001(\010\022\023\n\013patch_build\030\r \001(\010\022\026\n\016do_not_" +
-      "restart\030\016 \001(\010\022\022\n\ndebuggable\030\017 \001(\010\022\034\n\024use" +
-      "r_selected_target\030\020 \001(\010\0228\n\020artifact_deta" +
-      "ils\030\021 \003(\0132\036.android_studio.ArtifactDetai" +
-      "l\022\026\n\016force_coldswap\030\022 \001(\010\022\033\n\023instant_run" +
-      "_enabled\030\023 \001(\010\"7\n\007RunType\022\013\n\007UNKNOWN\020\000\022\007" +
-      "\n\003RUN\020\001\022\t\n\005DEBUG\020\002\022\013\n\007PROFILE\020\003\"_\n\013Secti" +
-      "onType\022\023\n\017UNKNOWN_SECTION\020\000\022\t\n\005TOTAL\020\001\022\n" +
-      "\n\006STUDIO\020\002\022\n\n\006GRADLE\020\003\022\014\n\010EMULATOR\020\004\022\n\n\006" +
-      "DEPLOY\020\005\",\n\tEventType\022\010\n\004NONE\020\000\022\t\n\005START" +
-      "\020\001\022\n\n\006FINISH\020\002\"\244\001\n\tBuildMode\022\026\n\022UNKNOWN_" +
-      "BUILD_MODE\020\000\022\t\n\005CLEAN\020\001\022\014\n\010ASSEMBLE\020\002\022\013\n" +
-      "\007REBUILD\020\003\022\020\n\014COMPILE_JAVA\020\004\022\016\n\nSOURCE_G" +
-      "EN\020\005\022\026\n\022ASSEMBLE_TRANSLATE\020\006\022\n\n\006BUNDLE\020\007" +
-      "\022\023\n\017APK_FROM_BUNDLE\020\010\"i\n\nDeployTask\022\020\n\014U" +
-      "NKNOWN_TASK\020\000\022\016\n\nDEPLOY_APK\020\001\022\026\n\022DEPLOY_" +
-      "INSTANT_APP\020\002\022\013\n\007HOTSWAP\020\003\022\024\n\020SPLIT_APK_" +
-      "DEPLOY\020\004:\002\030\001\"\225\001\n\016ArtifactDetail\022\014\n\004size\030" +
-      "\001 \001(\004\0229\n\004type\030\002 \001(\0162+.android_studio.Art" +
-      "ifactDetail.ArtifactType\":\n\014ArtifactType" +
-      "\022\013\n\007UNKNOWN\020\000\022\007\n\003APK\020\001\022\024\n\020BASELINE_PROFI" +
-      "LE\020\002\"\305\002\n\030IntellijProjectSizeStats\022?\n\004typ" +
-      "e\030\001 \001(\01621.android_studio.IntellijProject" +
-      "SizeStats.FileType\022=\n\005scope\030\002 \001(\0162..andr" +
-      "oid_studio.IntellijProjectSizeStats.Scop" +
-      "e\022\r\n\005count\030\003 \001(\005\"[\n\010FileType\022\025\n\021UNKNOWN_" +
-      "FILE_TYPE\020\000\022\010\n\004JAVA\020\001\022\007\n\003XML\020\002\022\r\n\tDOT_CL" +
-      "ASS\020\003\022\n\n\006KOTLIN\020\004\022\n\n\006NATIVE\020\005\"=\n\005Scope\022\021" +
-      "\n\rUNKNOWN_SCOPE\020\000\022\007\n\003ALL\020\001\022\013\n\007LIBRARY\020\002\022" +
-      "\013\n\007PROJECT\020\003\"\354\003\n\033StudioToolWindowActionS" +
-      "tats\022\026\n\016tool_window_id\030\001 \001(\t\022I\n\nevent_ty" +
-      "pe\030\002 \001(\01625.android_studio.StudioToolWind" +
-      "owActionStats.EventType\022T\n\020tool_window_t" +
-      "ype\030\003 \001(\0162:.android_studio.StudioToolWin" +
-      "dowActionStats.ToolWindowType\"j\n\tEventTy" +
-      "pe\022\026\n\022UNKNOWN_EVENT_TYPE\020\000\022\031\n\025REGISTERED" +
-      "_EVENT_TYPE\020\001\022\023\n\017OPEN_EVENT_TYPE\020\002\022\025\n\021CL" +
-      "OSED_EVENT_TYPE\020\003\"\247\001\n\016ToolWindowType\022\034\n\030" +
-      "UNKNOWN_TOOL_WINDOW_TYPE\020\000\022\033\n\027DOCKED_TOO" +
-      "L_WINDOW_TYPE\020\001\022\035\n\031FLOATING_TOOL_WINDOW_" +
-      "TYPE\020\002\022\034\n\030SLIDING_TOOL_WINDOW_TYPE\020\003\022\035\n\031" +
-      "WINDOWED_TOOL_WINDOW_TYPE\020\004\"\221E\n\010PSDEvent" +
-      "\022:\n\ngeneration\030\001 \001(\0162&.android_studio.PS" +
-      "DEvent.PSDGeneration\022G\n\021left_configurabl" +
-      "e\030\002 \001(\0162,.android_studio.PSDEvent.PSDLef" +
-      "tConfigurable\0223\n\007top_tab\030\003 \001(\0162\".android" +
-      "_studio.PSDEvent.PSDTopTab\022\023\n\013duration_m" +
-      "s\030\004 \001(\004\022:\n\017modified_fields\030\005 \003(\0162!.andro" +
-      "id_studio.PSDEvent.PSDField\022J\n\025repositor" +
-      "ies_searched\030\006 \003(\0132+.android_studio.PSDE" +
-      "vent.PSDRepositoryUsage\032\261\003\n\022PSDRepositor" +
-      "yUsage\022M\n\nrepository\030\001 \001(\01629.android_stu" +
-      "dio.PSDEvent.PSDRepositoryUsage.PSDRepos",
-      "itory\022\023\n\013duration_ms\030\002 \001(\004\"\266\002\n\rPSDReposi" +
-      "tory\022/\n+PROJECT_STRUCTURE_DIALOG_REPOSIT" +
-      "ORY_UNKNOWN\020\000\022.\n*PROJECT_STRUCTURE_DIALO" +
-      "G_REPOSITORY_GOOGLE\020\001\0225\n1PROJECT_STRUCTU" +
-      "RE_DIALOG_REPOSITORY_MAVEN_CENTRAL\020\002\022/\n+" +
-      "PROJECT_STRUCTURE_DIALOG_REPOSITORY_JCEN" +
-      "TER\020\003\022-\n)PROJECT_STRUCTURE_DIALOG_REPOSI" +
-      "TORY_LOCAL\020\004\022-\n)PROJECT_STRUCTURE_DIALOG" +
-      "_REPOSITORY_OTHER\020\005\"\232\001\n\rPSDGeneration\022/\n" +
-      "+PROJECT_STRUCTURE_DIALOG_GENERATION_UNK" +
-      "NOWN\020\000\022+\n\'PROJECT_STRUCTURE_DIALOG_GENER" +
-      "ATION_001\020\001\022+\n\'PROJECT_STRUCTURE_DIALOG_" +
-      "GENERATION_002\020\002\"\322\004\n\023PSDLeftConfigurable" +
-      "\0226\n2PROJECT_STRUCTURE_DIALOG_LEFT_CONFIG" +
-      "URABLE_UNKNOWN\020\000\0222\n.PROJECT_STRUCTURE_DI" +
-      "ALOG_LEFT_CONFIGURABLE_SDK\020\001\0226\n2PROJECT_" +
-      "STRUCTURE_DIALOG_LEFT_CONFIGURABLE_PROJE" +
-      "CT\020\002\0226\n2PROJECT_STRUCTURE_DIALOG_LEFT_CO" +
-      "NFIGURABLE_SERVICE\020\003\0225\n1PROJECT_STRUCTUR" +
-      "E_DIALOG_LEFT_CONFIGURABLE_MODULE\020\004\0228\n4P" +
+      "ent.ActionButtonState\022\032\n\022time_from_wna_o" +
+      "pen\030\004 \001(\003\"X\n\020ActionButtonType\022\022\n\016UNKNOWN" +
+      "_BUTTON\020\000\022\027\n\023BUILD_ANALYZER_SHOW\020\001\022\027\n\023AP" +
+      "P_INSPECTION_SHOW\020\002\"\310\001\n\021ActionButtonStat" +
+      "e\022\021\n\rUNKNOWN_STATE\020\000\022\"\n\036BUILD_ANALYZER_A" +
+      "GP_VERSION_LOW\020\001\022\032\n\026BUILD_ANALYZER_NO_DA" +
+      "TA\020\002\022 \n\034BUILD_ANALYZER_BUILD_RUNNING\020\003\022\037" +
+      "\n\033BUILD_ANALYZER_BUILD_FAILED\020\004\022\035\n\031BUILD" +
+      "_ANALYZER_DATA_READY\020\005\"]\n\tEventType\022\020\n\014U" +
+      "NKNOWN_TYPE\020\000\022\022\n\016BUTTON_CREATED\020\001\022\020\n\014BUT" +
+      "TON_CLICK\020\002\022\030\n\024BUTTON_STATE_UPDATED\020\003\"\264\003" +
+      "\n\032DesignEditorHelpPanelEvent\022J\n\006action\030\001" +
+      " \001(\0162:.android_studio.DesignEditorHelpPa" +
+      "nelEvent.HelpPanelAction\022Q\n\017help_panel_t" +
+      "ype\030\002 \001(\01628.android_studio.DesignEditorH" +
+      "elpPanelEvent.HelpPanelType\022\030\n\020time_to_c" +
+      "lose_ms\030\003 \001(\003\"_\n\017HelpPanelAction\022\022\n\016UNKN" +
+      "OWN_ACTION\020\000\022\010\n\004OPEN\020\001\022\022\n\016BUTTON_CLICKED" +
+      "\020\002\022\t\n\005CLOSE\020\003\022\017\n\013REACHED_END\020\004\"|\n\rHelpPa" +
+      "nelType\022\026\n\022UNKNOWN_PANEL_TYPE\020\000\022\014\n\010FULL_" +
+      "ALL\020\001\022\025\n\021CONSTRAINT_LAYOUT\020\002\022\021\n\rMOTION_L" +
+      "AYOUT\020\003\022\016\n\nNAV_EDITOR\020\004\022\013\n\007COMPOSE\020\005\"\217\004\n" +
+      "\013LintSession\022?\n\ranalysis_type\030\001 \001(\0162(.an" +
+      "droid_studio.LintSession.AnalysisType\0229\n" +
+      "\020lint_performance\030\002 \001(\0132\037.android_studio" +
+      ".LintPerformance\022.\n\tissue_ids\030\003 \003(\0132\033.an" +
+      "droid_studio.LintIssueId\022\022\n\nproject_id\030\004" +
+      " \001(\t\022\030\n\020baseline_enabled\030\005 \001(\010\022\036\n\026includ" +
+      "ing_test_sources\030\006 \001(\010\022#\n\033including_gene" +
+      "rated_sources\030\007 \001(\010\022\036\n\026including_depende" +
+      "ncies\030\010 \001(\010\022\026\n\016abort_on_error\030\t \001(\010\022\027\n\017i" +
+      "gnore_warnings\030\n \001(\010\022\032\n\022warnings_as_erro" +
+      "rs\030\013 \001(\010\"t\n\014AnalysisType\022\031\n\025UNKNOWN_ANAL" +
+      "YSIS_TYPE\020\000\022\t\n\005BUILD\020\001\022\t\n\005VITAL\020\002\022\r\n\tIDE" +
+      "_BATCH\020\003\022\014\n\010IDE_FILE\020\004\022\026\n\022BUILD_ALL_VARI" +
+      "ANTS\020\005\"\256\002\n\013LintIssueId\022\020\n\010issue_id\030\001 \001(\t" +
+      "\022\r\n\005count\030\002 \001(\003\022:\n\010severity\030\003 \001(\0162(.andr" +
+      "oid_studio.LintIssueId.LintSeverity\"\301\001\n\014" +
+      "LintSeverity\022\024\n\020UNKNOWN_SEVERITY\020\000\022\024\n\020DE" +
+      "FAULT_SEVERITY\020\001\022\022\n\016FATAL_SEVERITY\020\002\022\022\n\016" +
+      "ERROR_SEVERITY\020\003\022\024\n\020WARNING_SEVERITY\020\004\022\032" +
+      "\n\026INFORMATIONAL_SEVERITY\020\005\022\023\n\017IGNORE_SEV" +
+      "ERITY\020\006\022\026\n\022SUPPRESSED_LOCALLY\020\007\"\331\003\n\017Lint" +
+      "Performance\022\030\n\020analysis_time_ms\030\001 \001(\003\022\022\n" +
+      "\nfile_count\030\002 \001(\003\022\024\n\014module_count\030\003 \001(\003\022" +
+      "\031\n\021java_source_count\030\004 \001(\003\022\033\n\023kotlin_sou" +
+      "rce_count\030\005 \001(\003\022\033\n\023resource_file_count\030\006" +
+      " \001(\003\022\031\n\021test_source_count\030\007 \001(\003\022\032\n\022initi" +
+      "alize_time_ms\030\010 \001(\003\022)\n!register_custom_d" +
+      "etectors_time_ms\030\t \001(\003\022!\n\031compute_detect" +
+      "ors_time_ms\030\n \001(\003\022\035\n\025check_project_time_" +
+      "ms\030\013 \001(\003\022\034\n\024extra_phases_time_ms\030\014 \001(\003\022&" +
+      "\n\036report_baseline_issues_time_ms\030\r \001(\003\022 " +
+      "\n\030dispose_projects_time_ms\030\016 \001(\003\022!\n\031repo" +
+      "rt_generation_time_ms\030\017 \001(\003\"\336\001\n\nLintActi" +
+      "on\022\020\n\010issue_id\030\001 \001(\t\022\022\n\nproject_id\030\002 \001(\t" +
+      "\022\016\n\006fix_id\030\003 \001(\t\022>\n\rlint_feedback\030\004 \001(\0162" +
+      "\'.android_studio.LintAction.LintFeedback" +
+      "\"Z\n\014LintFeedback\022\024\n\020UNKNOWN_FEEDBACK\020\000\022\022" +
+      "\n\016FALSE_POSITIVE\020\001\022\023\n\017UNCLEAR_MESSAGE\020\002\022" +
+      "\013\n\007LOVE_IT\020\003\"\352\010\n\010RunEvent\022/\n\006status\030\001 \001(" +
+      "\0162\037.android_studio.RunEvent.Status\022\020\n\010ex" +
+      "ecutor\030\002 \001(\t\022\022\n\ndebuggable\030\003 \001(\010\022\033\n\023inst" +
+      "ant_run_enabled\030\004 \001(\010\022\025\n\rapply_changes\030\005" +
+      " \001(\010\022\034\n\024user_selected_target\030\006 \001(\010\022\030\n\020la" +
+      "unched_devices\030\007 \001(\010\022\024\n\014device_count\030\010 \001" +
+      "(\005\022\017\n\007partial\030\t \001(\010\022<\n\022launch_task_detai" +
+      "l\030\n \003(\0132 .android_studio.LaunchTaskDetai" +
+      "l\022\032\n\022begin_timestamp_ms\030\013 \001(\003\022+\n#begin_b" +
+      "efore_run_tasks_timestamp_ms\030\014 \001(\003\022)\n!en" +
+      "d_before_run_tasks_timestamp_ms\030\r \001(\003\022*\n" +
+      "\"begin_wait_for_device_timestamp_ms\030\016 \001(" +
+      "\003\022(\n end_wait_for_device_timestamp_ms\030\017 " +
+      "\001(\003\022\'\n\037begin_launch_tasks_timestamp_ms\030\020" +
+      " \001(\003\022%\n\035end_launch_tasks_timestamp_ms\030\021 " +
+      "\001(\003\022\030\n\020end_timestamp_ms\030\022 \001(\003\022\033\n\023deploye" +
+      "d_as_instant\030\023 \001(\010\022\034\n\024deployed_from_bund" +
+      "le\030\024 \001(\010\022\031\n\021deploy_failure_id\030\025 \001(\t\022%\n\035a" +
+      "pply_changes_fallback_to_run\030\026 \001(\010\022*\n\"ap" +
+      "ply_code_changes_fallback_to_run\030\027 \001(\010\022\"" +
+      "\n\032run_always_install_with_pm\030\030 \001(\010\022A\n\022ap" +
+      "p_component_type\030\031 \001(\0162%.android_studio." +
+      "RunEvent.AppComponent\022\032\n\022is_compose_proj" +
+      "ect\030\032 \001(\010\022\022\n\nproject_id\030\033 \001(\t\"k\n\006Status\022" +
+      "\022\n\016UNKNOWN_STATUS\020\000\022\013\n\007SUCCESS\020\001\022\010\n\004FAIL" +
+      "\020\002\022\t\n\005ABORT\020\003\022\034\n\024BEFORE_RUN_TASK_FAIL\020\004\032" +
+      "\002\010\001\022\r\n\tABANDONED\020\005\"U\n\014AppComponent\022\013\n\007UN" +
+      "KNOWN\020\000\022\014\n\010ACTIVITY\020\001\022\016\n\nWATCH_FACE\020\002\022\010\n" +
+      "\004TILE\020\003\022\020\n\014COMPLICATION\020\004\"\243\001\n\020LaunchTask" +
+      "Detail\022\n\n\002id\030\001 \001(\t\022\032\n\022start_timestamp_ms" +
+      "\030\002 \001(\003\022\030\n\020end_timestamp_ms\030\003 \001(\003\0220\n\010arti" +
+      "fact\030\004 \003(\0132\036.android_studio.ArtifactDeta" +
+      "il\022\013\n\003tid\030\005 \001(\005\022\016\n\006status\030\006 \001(\t\"\333\001\n\tStop" +
+      "Event\022/\n\006status\030\001 \001(\0162\037.android_studio.R" +
+      "unEvent.Status\022\020\n\010executor\030\002 \001(\t\022\022\n\ndebu" +
+      "ggable\030\003 \001(\010\022\032\n\022begin_timestamp_ms\030\004 \001(\003" +
+      "\022\030\n\020end_timestamp_ms\030\005 \001(\003\022A\n\022app_compon" +
+      "ent_type\030\006 \001(\0162%.android_studio.RunEvent" +
+      ".AppComponent\"\206\t\n\016StudioRunEvent\022\016\n\006run_" +
+      "id\030\001 \001(\t\0228\n\010run_type\030\002 \001(\0162&.android_stu" +
+      "dio.StudioRunEvent.RunType\022@\n\014section_ty" +
+      "pe\030\003 \001(\0162*.android_studio.StudioRunEvent" +
+      ".SectionType\022<\n\nevent_type\030\004 \001(\0162(.andro" +
+      "id_studio.StudioRunEvent.EventType\022\023\n\013du" +
+      "ration_ms\030\005 \001(\r\022<\n\nbuild_mode\030\006 \001(\0162(.an" +
+      "droid_studio.StudioRunEvent.BuildMode\022\025\n" +
+      "\ris_successful\030\007 \001(\010\022\026\n\016artifact_count\030\010" +
+      " \001(\r\022>\n\013deploy_task\030\t \001(\0162).android_stud" +
+      "io.StudioRunEvent.DeployTask\022\'\n\037disabled" +
+      "_dynamic_features_count\030\013 \001(\r\022\023\n\013instant" +
+      "_run\030\014 \001(\010\022\023\n\013patch_build\030\r \001(\010\022\026\n\016do_no" +
+      "t_restart\030\016 \001(\010\022\022\n\ndebuggable\030\017 \001(\010\022\034\n\024u" +
+      "ser_selected_target\030\020 \001(\010\0228\n\020artifact_de" +
+      "tails\030\021 \003(\0132\036.android_studio.ArtifactDet" +
+      "ail\022\026\n\016force_coldswap\030\022 \001(\010\022\033\n\023instant_r" +
+      "un_enabled\030\023 \001(\010\"7\n\007RunType\022\013\n\007UNKNOWN\020\000" +
+      "\022\007\n\003RUN\020\001\022\t\n\005DEBUG\020\002\022\013\n\007PROFILE\020\003\"_\n\013Sec" +
+      "tionType\022\023\n\017UNKNOWN_SECTION\020\000\022\t\n\005TOTAL\020\001" +
+      "\022\n\n\006STUDIO\020\002\022\n\n\006GRADLE\020\003\022\014\n\010EMULATOR\020\004\022\n" +
+      "\n\006DEPLOY\020\005\",\n\tEventType\022\010\n\004NONE\020\000\022\t\n\005STA" +
+      "RT\020\001\022\n\n\006FINISH\020\002\"\244\001\n\tBuildMode\022\026\n\022UNKNOW" +
+      "N_BUILD_MODE\020\000\022\t\n\005CLEAN\020\001\022\014\n\010ASSEMBLE\020\002\022" +
+      "\013\n\007REBUILD\020\003\022\020\n\014COMPILE_JAVA\020\004\022\016\n\nSOURCE" +
+      "_GEN\020\005\022\026\n\022ASSEMBLE_TRANSLATE\020\006\022\n\n\006BUNDLE" +
+      "\020\007\022\023\n\017APK_FROM_BUNDLE\020\010\"i\n\nDeployTask\022\020\n" +
+      "\014UNKNOWN_TASK\020\000\022\016\n\nDEPLOY_APK\020\001\022\026\n\022DEPLO" +
+      "Y_INSTANT_APP\020\002\022\013\n\007HOTSWAP\020\003\022\024\n\020SPLIT_AP" +
+      "K_DEPLOY\020\004:\002\030\001\"\225\001\n\016ArtifactDetail\022\014\n\004siz" +
+      "e\030\001 \001(\004\0229\n\004type\030\002 \001(\0162+.android_studio.A" +
+      "rtifactDetail.ArtifactType\":\n\014ArtifactTy" +
+      "pe\022\013\n\007UNKNOWN\020\000\022\007\n\003APK\020\001\022\024\n\020BASELINE_PRO" +
+      "FILE\020\002\"\305\002\n\030IntellijProjectSizeStats\022?\n\004t" +
+      "ype\030\001 \001(\01621.android_studio.IntellijProje" +
+      "ctSizeStats.FileType\022=\n\005scope\030\002 \001(\0162..an" +
+      "droid_studio.IntellijProjectSizeStats.Sc" +
+      "ope\022\r\n\005count\030\003 \001(\005\"[\n\010FileType\022\025\n\021UNKNOW" +
+      "N_FILE_TYPE\020\000\022\010\n\004JAVA\020\001\022\007\n\003XML\020\002\022\r\n\tDOT_" +
+      "CLASS\020\003\022\n\n\006KOTLIN\020\004\022\n\n\006NATIVE\020\005\"=\n\005Scope" +
+      "\022\021\n\rUNKNOWN_SCOPE\020\000\022\007\n\003ALL\020\001\022\013\n\007LIBRARY\020" +
+      "\002\022\013\n\007PROJECT\020\003\"\354\003\n\033StudioToolWindowActio" +
+      "nStats\022\026\n\016tool_window_id\030\001 \001(\t\022I\n\nevent_" +
+      "type\030\002 \001(\01625.android_studio.StudioToolWi" +
+      "ndowActionStats.EventType\022T\n\020tool_window" +
+      "_type\030\003 \001(\0162:.android_studio.StudioToolW" +
+      "indowActionStats.ToolWindowType\"j\n\tEvent" +
+      "Type\022\026\n\022UNKNOWN_EVENT_TYPE\020\000\022\031\n\025REGISTER" +
+      "ED_EVENT_TYPE\020\001\022\023\n\017OPEN_EVENT_TYPE\020\002\022\025\n\021" +
+      "CLOSED_EVENT_TYPE\020\003\"\247\001\n\016ToolWindowType\022\034" +
+      "\n\030UNKNOWN_TOOL_WINDOW_TYPE\020\000\022\033\n\027DOCKED_T" +
+      "OOL_WINDOW_TYPE\020\001\022\035\n\031FLOATING_TOOL_WINDO" +
+      "W_TYPE\020\002\022\034\n\030SLIDING_TOOL_WINDOW_TYPE\020\003\022\035" +
+      "\n\031WINDOWED_TOOL_WINDOW_TYPE\020\004\"\221E\n\010PSDEve" +
+      "nt\022:\n\ngeneration\030\001 \001(\0162&.android_studio." +
+      "PSDEvent.PSDGeneration\022G\n\021left_configura" +
+      "ble\030\002 \001(\0162,.android_studio.PSDEvent.PSDL" +
+      "eftConfigurable\0223\n\007top_tab\030\003 \001(\0162\".andro" +
+      "id_studio.PSDEvent.PSDTopTab\022\023\n\013duration" +
+      "_ms\030\004 \001(\004\022:\n\017modified_fields\030\005 \003(\0162!.and" +
+      "roid_studio.PSDEvent.PSDField\022J\n\025reposit" +
+      "ories_searched\030\006 \003(\0132+.android_studio.PS" +
+      "DEvent.PSDRepositoryUsage\032\261\003\n\022PSDReposit" +
+      "oryUsage\022M\n\nrepository\030\001 \001(\01629.android_s",
+      "tudio.PSDEvent.PSDRepositoryUsage.PSDRep" +
+      "ository\022\023\n\013duration_ms\030\002 \001(\004\"\266\002\n\rPSDRepo" +
+      "sitory\022/\n+PROJECT_STRUCTURE_DIALOG_REPOS" +
+      "ITORY_UNKNOWN\020\000\022.\n*PROJECT_STRUCTURE_DIA" +
+      "LOG_REPOSITORY_GOOGLE\020\001\0225\n1PROJECT_STRUC" +
+      "TURE_DIALOG_REPOSITORY_MAVEN_CENTRAL\020\002\022/" +
+      "\n+PROJECT_STRUCTURE_DIALOG_REPOSITORY_JC" +
+      "ENTER\020\003\022-\n)PROJECT_STRUCTURE_DIALOG_REPO" +
+      "SITORY_LOCAL\020\004\022-\n)PROJECT_STRUCTURE_DIAL" +
+      "OG_REPOSITORY_OTHER\020\005\"\232\001\n\rPSDGeneration\022" +
+      "/\n+PROJECT_STRUCTURE_DIALOG_GENERATION_U" +
+      "NKNOWN\020\000\022+\n\'PROJECT_STRUCTURE_DIALOG_GEN" +
+      "ERATION_001\020\001\022+\n\'PROJECT_STRUCTURE_DIALO" +
+      "G_GENERATION_002\020\002\"\322\004\n\023PSDLeftConfigurab" +
+      "le\0226\n2PROJECT_STRUCTURE_DIALOG_LEFT_CONF" +
+      "IGURABLE_UNKNOWN\020\000\0222\n.PROJECT_STRUCTURE_" +
+      "DIALOG_LEFT_CONFIGURABLE_SDK\020\001\0226\n2PROJEC" +
+      "T_STRUCTURE_DIALOG_LEFT_CONFIGURABLE_PRO" +
+      "JECT\020\002\0226\n2PROJECT_STRUCTURE_DIALOG_LEFT_" +
+      "CONFIGURABLE_SERVICE\020\003\0225\n1PROJECT_STRUCT" +
+      "URE_DIALOG_LEFT_CONFIGURABLE_MODULE\020\004\0228\n" +
+      "4PROJECT_STRUCTURE_DIALOG_LEFT_CONFIGURA" +
+      "BLE_VARIABLES\020d\0226\n2PROJECT_STRUCTURE_DIA" +
+      "LOG_LEFT_CONFIGURABLE_MODULES\020e\022;\n7PROJE" +
+      "CT_STRUCTURE_DIALOG_LEFT_CONFIGURABLE_DE" +
+      "PENDENCIES\020f\022=\n9PROJECT_STRUCTURE_DIALOG" +
+      "_LEFT_CONFIGURABLE_BUILD_VARIANTS\020g\022:\n6P" +
       "ROJECT_STRUCTURE_DIALOG_LEFT_CONFIGURABL" +
-      "E_VARIABLES\020d\0226\n2PROJECT_STRUCTURE_DIALO" +
-      "G_LEFT_CONFIGURABLE_MODULES\020e\022;\n7PROJECT" +
-      "_STRUCTURE_DIALOG_LEFT_CONFIGURABLE_DEPE" +
-      "NDENCIES\020f\022=\n9PROJECT_STRUCTURE_DIALOG_L" +
-      "EFT_CONFIGURABLE_BUILD_VARIANTS\020g\022:\n6PRO" +
-      "JECT_STRUCTURE_DIALOG_LEFT_CONFIGURABLE_" +
-      "SUGGESTIONS\020h\"\310\003\n\tPSDTopTab\022,\n(PROJECT_S" +
-      "TRUCTURE_DIALOG_TOP_TAB_UNKNOWN\020\000\0220\n,PRO" +
-      "JECT_STRUCTURE_DIALOG_TOP_TAB_INFORMATIO" +
-      "N\020\001\022/\n+PROJECT_STRUCTURE_DIALOG_TOP_TAB_" +
-      "PROPERTIES\020\002\022,\n(PROJECT_STRUCTURE_DIALOG" +
-      "_TOP_TAB_SIGNING\020\003\022,\n(PROJECT_STRUCTURE_" +
-      "DIALOG_TOP_TAB_FLAVORS\020\004\0220\n,PROJECT_STRU" +
-      "CTURE_DIALOG_TOP_TAB_BUILD_TYPES\020\005\0221\n-PR" +
-      "OJECT_STRUCTURE_DIALOG_TOP_TAB_DEPENDENC" +
-      "IES\020\006\0223\n/PROJECT_STRUCTURE_DIALOG_TOP_TA" +
-      "B_DEFAULT_CONFIG\020d\0224\n0PROJECT_STRUCTURE_" +
-      "DIALOG_TOP_TAB_SIGNING_CONFIGS\020e\"\2745\n\010PSD" +
-      "Field\022*\n&PROJECT_STRUCTURE_DIALOG_FIELD_" +
-      "UNKNOWN\020\000\022D\n@PROJECT_STRUCTURE_DIALOG_FI" +
-      "ELD_SDK_LOCATION_ANDROID_SDK_LOCATION\020\024\022" +
-      "<\n8PROJECT_STRUCTURE_DIALOG_FIELD_SDK_LO" +
-      "CATION_JDK_LOCATION\020\025\022D\n@PROJECT_STRUCTU" +
-      "RE_DIALOG_FIELD_SDK_LOCATION_ANDROID_NDK" +
-      "_LOCATION\020\026\0229\n5PROJECT_STRUCTURE_DIALOG_" +
-      "FIELD_PROJECT_GRADLE_VERSION\020(\022A\n=PROJEC" +
-      "T_STRUCTURE_DIALOG_FIELD_PROJECT_ANDROID" +
-      "_PLUGIN_VERSION\020)\022D\n@PROJECT_STRUCTURE_D" +
-      "IALOG_FIELD_PROJECT_ANDROID_PLUGIN_REPOS" +
-      "ITORY\020*\022E\nAPROJECT_STRUCTURE_DIALOG_FIEL" +
-      "D_PROJECT_DEFAULT_LIBRARY_REPOSITORY\020+\022H" +
-      "\nDPROJECT_STRUCTURE_DIALOG_FIELD_MODULE_" +
-      "PROPERTIES_COMPILE_SDK_VERSION\020x\022G\nCPROJ" +
-      "ECT_STRUCTURE_DIALOG_FIELD_MODULE_PROPER" +
-      "TIES_BUILD_TOLS_VERSION\020y\022G\nCPROJECT_STR" +
-      "UCTURE_DIALOG_FIELD_MODULE_PROPERTIES_LI" +
-      "BRARY_REPOSITORY\020z\022J\nFPROJECT_STRUCTURE_" +
-      "DIALOG_FIELD_MODULE_PROPERTIES_IGNORE_AS" +
-      "SETS_PATTERN\020{\022D\n@PROJECT_STRUCTURE_DIAL" +
-      "OG_FIELD_MODULE_PROPERTIES_INCREMENTAL_D" +
-      "EX\020|\022I\nEPROJECT_STRUCTURE_DIALOG_FIELD_M" +
-      "ODULE_PROPERTIES_SOURCE_COMPATIBILITY\020}\022" +
-      "I\nEPROJECT_STRUCTURE_DIALOG_FIELD_MODULE" +
-      "_PROPERTIES_TARGET_COMPATIBILITY\020~\0227\n2PR" +
-      "OJECT_STRUCTURE_DIALOG_FIELD_MODULE_SIGN" +
-      "ING_NAME\020\214\001\022<\n7PROJECT_STRUCTURE_DIALOG_" +
-      "FIELD_MODULE_SIGNING_KEY_ALIAS\020\215\001\022?\n:PRO" +
-      "JECT_STRUCTURE_DIALOG_FIELD_MODULE_SIGNI" +
-      "NG_KEY_PASSWORD\020\216\001\022=\n8PROJECT_STRUCTURE_" +
-      "DIALOG_FIELD_MODULE_SIGNING_STORE_FILE\020\217" +
-      "\001\022A\n<PROJECT_STRUCTURE_DIALOG_FIELD_MODU" +
-      "LE_SIGNING_STORE_PASSWORD\020\220\001\0226\n1PROJECT_" +
-      "STRUCTURE_DIALOG_FIELD_MODULE_FLAVOR_NAM" +
-      "E\020\240\001\022@\n;PROJECT_STRUCTURE_DIALOG_FIELD_M" +
-      "ODULE_FLAVOR_APPLICATION_ID\020\241\001\022?\n:PROJEC" +
-      "T_STRUCTURE_DIALOG_FIELD_MODULE_FLAVOR_P" +
-      "ROGUARD_FILE\020\242\001\022@\n;PROJECT_STRUCTURE_DIA" +
-      "LOG_FIELD_MODULE_FLAVOR_SIGNING_CONFIG\020\243" +
-      "\001\022D\n?PROJECT_STRUCTURE_DIALOG_FIELD_MODU" +
-      "LE_FLAVOR_TARGET_SDK_VERSION\020\244\001\022M\nHPROJE" +
+      "E_SUGGESTIONS\020h\"\310\003\n\tPSDTopTab\022,\n(PROJECT" +
+      "_STRUCTURE_DIALOG_TOP_TAB_UNKNOWN\020\000\0220\n,P" +
+      "ROJECT_STRUCTURE_DIALOG_TOP_TAB_INFORMAT" +
+      "ION\020\001\022/\n+PROJECT_STRUCTURE_DIALOG_TOP_TA" +
+      "B_PROPERTIES\020\002\022,\n(PROJECT_STRUCTURE_DIAL" +
+      "OG_TOP_TAB_SIGNING\020\003\022,\n(PROJECT_STRUCTUR" +
+      "E_DIALOG_TOP_TAB_FLAVORS\020\004\0220\n,PROJECT_ST" +
+      "RUCTURE_DIALOG_TOP_TAB_BUILD_TYPES\020\005\0221\n-" +
+      "PROJECT_STRUCTURE_DIALOG_TOP_TAB_DEPENDE" +
+      "NCIES\020\006\0223\n/PROJECT_STRUCTURE_DIALOG_TOP_" +
+      "TAB_DEFAULT_CONFIG\020d\0224\n0PROJECT_STRUCTUR" +
+      "E_DIALOG_TOP_TAB_SIGNING_CONFIGS\020e\"\2745\n\010P" +
+      "SDField\022*\n&PROJECT_STRUCTURE_DIALOG_FIEL" +
+      "D_UNKNOWN\020\000\022D\n@PROJECT_STRUCTURE_DIALOG_" +
+      "FIELD_SDK_LOCATION_ANDROID_SDK_LOCATION\020" +
+      "\024\022<\n8PROJECT_STRUCTURE_DIALOG_FIELD_SDK_" +
+      "LOCATION_JDK_LOCATION\020\025\022D\n@PROJECT_STRUC" +
+      "TURE_DIALOG_FIELD_SDK_LOCATION_ANDROID_N" +
+      "DK_LOCATION\020\026\0229\n5PROJECT_STRUCTURE_DIALO" +
+      "G_FIELD_PROJECT_GRADLE_VERSION\020(\022A\n=PROJ" +
+      "ECT_STRUCTURE_DIALOG_FIELD_PROJECT_ANDRO" +
+      "ID_PLUGIN_VERSION\020)\022D\n@PROJECT_STRUCTURE" +
+      "_DIALOG_FIELD_PROJECT_ANDROID_PLUGIN_REP" +
+      "OSITORY\020*\022E\nAPROJECT_STRUCTURE_DIALOG_FI" +
+      "ELD_PROJECT_DEFAULT_LIBRARY_REPOSITORY\020+" +
+      "\022H\nDPROJECT_STRUCTURE_DIALOG_FIELD_MODUL" +
+      "E_PROPERTIES_COMPILE_SDK_VERSION\020x\022G\nCPR" +
+      "OJECT_STRUCTURE_DIALOG_FIELD_MODULE_PROP" +
+      "ERTIES_BUILD_TOLS_VERSION\020y\022G\nCPROJECT_S" +
+      "TRUCTURE_DIALOG_FIELD_MODULE_PROPERTIES_" +
+      "LIBRARY_REPOSITORY\020z\022J\nFPROJECT_STRUCTUR" +
+      "E_DIALOG_FIELD_MODULE_PROPERTIES_IGNORE_" +
+      "ASSETS_PATTERN\020{\022D\n@PROJECT_STRUCTURE_DI" +
+      "ALOG_FIELD_MODULE_PROPERTIES_INCREMENTAL" +
+      "_DEX\020|\022I\nEPROJECT_STRUCTURE_DIALOG_FIELD" +
+      "_MODULE_PROPERTIES_SOURCE_COMPATIBILITY\020" +
+      "}\022I\nEPROJECT_STRUCTURE_DIALOG_FIELD_MODU" +
+      "LE_PROPERTIES_TARGET_COMPATIBILITY\020~\0227\n2" +
+      "PROJECT_STRUCTURE_DIALOG_FIELD_MODULE_SI" +
+      "GNING_NAME\020\214\001\022<\n7PROJECT_STRUCTURE_DIALO" +
+      "G_FIELD_MODULE_SIGNING_KEY_ALIAS\020\215\001\022?\n:P" +
+      "ROJECT_STRUCTURE_DIALOG_FIELD_MODULE_SIG" +
+      "NING_KEY_PASSWORD\020\216\001\022=\n8PROJECT_STRUCTUR" +
+      "E_DIALOG_FIELD_MODULE_SIGNING_STORE_FILE" +
+      "\020\217\001\022A\n<PROJECT_STRUCTURE_DIALOG_FIELD_MO" +
+      "DULE_SIGNING_STORE_PASSWORD\020\220\001\0226\n1PROJEC" +
+      "T_STRUCTURE_DIALOG_FIELD_MODULE_FLAVOR_N" +
+      "AME\020\240\001\022@\n;PROJECT_STRUCTURE_DIALOG_FIELD" +
+      "_MODULE_FLAVOR_APPLICATION_ID\020\241\001\022?\n:PROJ" +
+      "ECT_STRUCTURE_DIALOG_FIELD_MODULE_FLAVOR" +
+      "_PROGUARD_FILE\020\242\001\022@\n;PROJECT_STRUCTURE_D" +
+      "IALOG_FIELD_MODULE_FLAVOR_SIGNING_CONFIG" +
+      "\020\243\001\022D\n?PROJECT_STRUCTURE_DIALOG_FIELD_MO" +
+      "DULE_FLAVOR_TARGET_SDK_VERSION\020\244\001\022M\nHPRO" +
+      "JECT_STRUCTURE_DIALOG_FIELD_MODULE_FLAVO" +
+      "R_TEST_INSTRUMENTATION_RUNNER\020\245\001\022E\n@PROJ" +
+      "ECT_STRUCTURE_DIALOG_FIELD_MODULE_FLAVOR" +
+      "_TEST_APPLICATION_ID\020\246\001\022>\n9PROJECT_STRUC" +
+      "TURE_DIALOG_FIELD_MODULE_FLAVOR_VERSION_" +
+      "CODE\020\247\001\022>\n9PROJECT_STRUCTURE_DIALOG_FIEL" +
+      "D_MODULE_FLAVOR_VERSION_NAME\020\250\001\022E\n@PROJE" +
       "CT_STRUCTURE_DIALOG_FIELD_MODULE_FLAVOR_" +
-      "TEST_INSTRUMENTATION_RUNNER\020\245\001\022E\n@PROJEC" +
-      "T_STRUCTURE_DIALOG_FIELD_MODULE_FLAVOR_T" +
-      "EST_APPLICATION_ID\020\246\001\022>\n9PROJECT_STRUCTU" +
-      "RE_DIALOG_FIELD_MODULE_FLAVOR_VERSION_CO" +
-      "DE\020\247\001\022>\n9PROJECT_STRUCTURE_DIALOG_FIELD_" +
-      "MODULE_FLAVOR_VERSION_NAME\020\250\001\022E\n@PROJECT" +
-      "_STRUCTURE_DIALOG_FIELD_MODULE_FLAVOR_VE" +
-      "RSION_NAME_SUFFIX\020\251\001\0229\n4PROJECT_STRUCTUR" +
-      "E_DIALOG_FIELD_MODULE_BUILDTYPE_NAME\020\264\001\022" +
-      "?\n:PROJECT_STRUCTURE_DIALOG_FIELD_MODULE" +
-      "_BUILDTYPE_DEBUGGABLE\020\265\001\022C\n>PROJECT_STRU" +
-      "CTURE_DIALOG_FIELD_MODULE_BUILDTYPE_JNI_" +
-      "DEBUGGABLE\020\266\001\022C\n>PROJECT_STRUCTURE_DIALO" +
-      "G_FIELD_MODULE_BUILDTYPE_SIGNING_CONFIG\020" +
-      "\267\001\022L\nGPROJECT_STRUCTURE_DIALOG_FIELD_MOD" +
-      "ULE_BUILDTYPE_RENDERSCRIPT_DEBUGGABLE\020\270\001" +
-      "\022M\nHPROJECT_STRUCTURE_DIALOG_FIELD_MODUL" +
-      "E_BUILDTYPE_RENDERSCRIPT_OPTIM_LEVEL\020\271\001\022" +
-      "C\n>PROJECT_STRUCTURE_DIALOG_FIELD_MODULE" +
-      "_BUILDTYPE_MINIFY_ENABLED\020\272\001\022I\nDPROJECT_" +
-      "STRUCTURE_DIALOG_FIELD_MODULE_BUILDTYPE_" +
-      "PSEUDO_LOCAL_ENABLED\020\273\001\022B\n=PROJECT_STRUC" +
-      "TURE_DIALOG_FIELD_MODULE_BUILDTYPE_PROGU" +
-      "ARD_FILE\020\274\001\022J\nEPROJECT_STRUCTURE_DIALOG_" +
-      "FIELD_MODULE_BUILDTYPE_APPLICATION_ID_SU" +
-      "FFIX\020\275\001\022H\nCPROJECT_STRUCTURE_DIALOG_FIEL" +
-      "D_MODULE_BUILDTYPE_VERSION_NAME_SUFFIX\020\276" +
-      "\001\022G\nBPROJECT_STRUCTURE_DIALOG_FIELD_MODU" +
-      "LE_BUILDTYPE_ZIP_ALLIGN_ENABLED\020\277\001\022B\n=PR" +
-      "OJECT_STRUCTURE_DIALOG_FIELD_MODULE_DEPE" +
-      "NDENCIES_DEPENDENCY\020\310\001\022=\n8PROJECT_STRUCT" +
-      "URE_DIALOG_FIELD_MODULE_DEPENDENCIES_SCO" +
-      "PE\020\311\001\0222\n-PROJECT_STRUCTURE_DIALOG_FIELD_" +
-      "VARIABLES_NAME\020\254\002\0223\n.PROJECT_STRUCTURE_D" +
-      "IALOG_FIELD_VARIABLES_VALUE\020\255\002\022H\nCPROJEC" +
-      "T_STRUCTURE_DIALOG_FIELD_MODULES_DEFAULT" +
-      "CONFIG_APPLICATION_ID\020\220\003\022L\nGPROJECT_STRU" +
+      "VERSION_NAME_SUFFIX\020\251\001\0229\n4PROJECT_STRUCT" +
+      "URE_DIALOG_FIELD_MODULE_BUILDTYPE_NAME\020\264" +
+      "\001\022?\n:PROJECT_STRUCTURE_DIALOG_FIELD_MODU" +
+      "LE_BUILDTYPE_DEBUGGABLE\020\265\001\022C\n>PROJECT_ST" +
+      "RUCTURE_DIALOG_FIELD_MODULE_BUILDTYPE_JN" +
+      "I_DEBUGGABLE\020\266\001\022C\n>PROJECT_STRUCTURE_DIA" +
+      "LOG_FIELD_MODULE_BUILDTYPE_SIGNING_CONFI" +
+      "G\020\267\001\022L\nGPROJECT_STRUCTURE_DIALOG_FIELD_M" +
+      "ODULE_BUILDTYPE_RENDERSCRIPT_DEBUGGABLE\020" +
+      "\270\001\022M\nHPROJECT_STRUCTURE_DIALOG_FIELD_MOD" +
+      "ULE_BUILDTYPE_RENDERSCRIPT_OPTIM_LEVEL\020\271" +
+      "\001\022C\n>PROJECT_STRUCTURE_DIALOG_FIELD_MODU" +
+      "LE_BUILDTYPE_MINIFY_ENABLED\020\272\001\022I\nDPROJEC" +
+      "T_STRUCTURE_DIALOG_FIELD_MODULE_BUILDTYP" +
+      "E_PSEUDO_LOCAL_ENABLED\020\273\001\022B\n=PROJECT_STR" +
+      "UCTURE_DIALOG_FIELD_MODULE_BUILDTYPE_PRO" +
+      "GUARD_FILE\020\274\001\022J\nEPROJECT_STRUCTURE_DIALO" +
+      "G_FIELD_MODULE_BUILDTYPE_APPLICATION_ID_" +
+      "SUFFIX\020\275\001\022H\nCPROJECT_STRUCTURE_DIALOG_FI" +
+      "ELD_MODULE_BUILDTYPE_VERSION_NAME_SUFFIX" +
+      "\020\276\001\022G\nBPROJECT_STRUCTURE_DIALOG_FIELD_MO" +
+      "DULE_BUILDTYPE_ZIP_ALLIGN_ENABLED\020\277\001\022B\n=" +
+      "PROJECT_STRUCTURE_DIALOG_FIELD_MODULE_DE" +
+      "PENDENCIES_DEPENDENCY\020\310\001\022=\n8PROJECT_STRU" +
+      "CTURE_DIALOG_FIELD_MODULE_DEPENDENCIES_S" +
+      "COPE\020\311\001\0222\n-PROJECT_STRUCTURE_DIALOG_FIEL" +
+      "D_VARIABLES_NAME\020\254\002\0223\n.PROJECT_STRUCTURE" +
+      "_DIALOG_FIELD_VARIABLES_VALUE\020\255\002\022H\nCPROJ" +
+      "ECT_STRUCTURE_DIALOG_FIELD_MODULES_DEFAU" +
+      "LTCONFIG_APPLICATION_ID\020\220\003\022L\nGPROJECT_ST" +
+      "RUCTURE_DIALOG_FIELD_MODULES_DEFAULTCONF" +
+      "IG_TARGET_SDK_VERSION\020\221\003\022I\nDPROJECT_STRU" +
       "CTURE_DIALOG_FIELD_MODULES_DEFAULTCONFIG" +
-      "_TARGET_SDK_VERSION\020\221\003\022I\nDPROJECT_STRUCT" +
-      "URE_DIALOG_FIELD_MODULES_DEFAULTCONFIG_M" +
-      "IN_SDK_VERSION\020\222\003\022I\nDPROJECT_STRUCTURE_D" +
-      "IALOG_FIELD_MODULES_DEFAULTCONFIG_MAX_SD" +
-      "K_VERSION\020\223\003\022H\nCPROJECT_STRUCTURE_DIALOG" +
-      "_FIELD_MODULES_DEFAULTCONFIG_SIGNING_CON" +
-      "FIG\020\224\003\022H\nCPROJECT_STRUCTURE_DIALOG_FIELD" +
-      "_MODULES_DEFAULTCONFIG_PROGUARD_FILES\020\225\003" +
-      "\022O\nJPROJECT_STRUCTURE_DIALOG_FIELD_MODUL" +
-      "ES_DEFAULTCONFIG_MANIFEST_PLACEHOLDERS\020\226" +
-      "\003\022K\nFPROJECT_STRUCTURE_DIALOG_FIELD_MODU" +
-      "LES_DEFAULTCONFIG_MULTI_DEX_ENABLED\020\227\003\022`" +
-      "\n[PROJECT_STRUCTURE_DIALOG_FIELD_MODULES" +
-      "_DEFAULTCONFIG_TEST_INSTRUMENTATION_RUNN" +
-      "ER_CLASS_NAME\020\230\003\022c\n^PROJECT_STRUCTURE_DI" +
-      "ALOG_FIELD_MODULES_DEFAULTCONFIG_TEST_IN" +
-      "STRUMENTATION_RUNNER_ARGUMENTS_KEY\020\231\003\022e\n" +
-      "`PROJECT_STRUCTURE_DIALOG_FIELD_MODULES_" +
-      "DEFAULTCONFIG_TEST_INSTRUMENTATION_RUNNE" +
-      "R_ARGUMENTS_VALUE\020\232\003\022M\nHPROJECT_STRUCTUR" +
-      "E_DIALOG_FIELD_MODULES_DEFAULTCONFIG_TES" +
-      "T_APPLICATION_ID\020\233\003\022F\nAPROJECT_STRUCTURE" +
-      "_DIALOG_FIELD_MODULES_DEFAULTCONFIG_VERS" +
-      "ION_CODE\020\234\003\022F\nAPROJECT_STRUCTURE_DIALOG_" +
-      "FIELD_MODULES_DEFAULTCONFIG_VERSION_NAME" +
-      "\020\235\003\022?\n:PROJECT_STRUCTURE_DIALOG_FIELD_MO" +
-      "DULES_SIGNINGCONFIGS_NAME\020\244\003\022E\n@PROJECT_" +
-      "STRUCTURE_DIALOG_FIELD_MODULES_SIGNINGCO" +
-      "NFIGS_STORE_FILE\020\245\003\022I\nDPROJECT_STRUCTURE" +
-      "_DIALOG_FIELD_MODULES_SIGNINGCONFIGS_STO" +
-      "RE_PASSWORD\020\246\003\022D\n?PROJECT_STRUCTURE_DIAL" +
-      "OG_FIELD_MODULES_SIGNINGCONFIGS_KEY_ALIA" +
-      "S\020\247\003\022G\nBPROJECT_STRUCTURE_DIALOG_FIELD_M" +
-      "ODULES_SIGNINGCONFIGS_KEY_PASSWORD\020\250\003\022B\n" +
-      "=PROJECT_STRUCTURE_DIALOG_FIELD_DEPENDEN" +
-      "CIES_REQUESTED_VERSION\020\364\003\022G\nBPROJECT_STR" +
-      "UCTURE_DIALOG_FIELD_BUILDVARIANTS_BUILDT" +
-      "YPES_DEBUGGABLE\020\330\004\022K\nFPROJECT_STRUCTURE_" +
-      "DIALOG_FIELD_BUILDVARIANTS_BUILDTYPES_JN" +
-      "I_DEBUGGABLE\020\331\004\022T\nOPROJECT_STRUCTURE_DIA" +
-      "LOG_FIELD_BUILDVARIANTS_BUILDTYPES_RENDE" +
-      "RSCRIPT_DEBUGGABLE\020\332\004\022\\\nWPROJECT_STRUCTU" +
-      "RE_DIALOG_FIELD_BUILDVARIANTS_BUILDTYPES" +
-      "_RENDERSCRIPT_OPTIMIZATION_LEVEL\020\333\004\022K\nFP" +
-      "ROJECT_STRUCTURE_DIALOG_FIELD_BUILDVARIA" +
-      "NTS_BUILDTYPES_SIGNING_CONFIG\020\334\004\022K\nFPROJ" +
-      "ECT_STRUCTURE_DIALOG_FIELD_BUILDVARIANTS" +
-      "_BUILDTYPES_PROGUARD_FILES\020\335\004\022R\nMPROJECT" +
-      "_STRUCTURE_DIALOG_FIELD_BUILDVARIANTS_BU" +
-      "ILDTYPES_MANIFEST_PLACEHOLDERS\020\336\004\022K\nFPRO" +
-      "JECT_STRUCTURE_DIALOG_FIELD_BUILDVARIANT" +
-      "S_BUILDTYPES_MINIFY_ENABLED\020\337\004\022N\nIPROJEC" +
-      "T_STRUCTURE_DIALOG_FIELD_BUILDVARIANTS_B" +
-      "UILDTYPES_MULTI_DEX_ENABLED\020\340\004\022S\nNPROJEC" +
-      "T_STRUCTURE_DIALOG_FIELD_BUILDVARIANTS_B" +
-      "UILDTYPES_APPLICATIOND_ID_SUFFIX\020\341\004\022P\nKP" +
-      "ROJECT_STRUCTURE_DIALOG_FIELD_BUILDVARIA" +
-      "NTS_BUILDTYPES_VERSION_NAME_SUFFIX\020\342\004\022N\n" +
-      "IPROJECT_STRUCTURE_DIALOG_FIELD_BUILDVAR" +
-      "IANTS_BUILDTYPES_ZIP_ALIGN_ENABLED\020\343\004\022C\n" +
-      ">PROJECT_STRUCTURE_DIALOG_FIELD_BUILDVAR" +
-      "IANTS_FLAVORS_DIMENSION\020\354\004\022H\nCPROJECT_ST" +
-      "RUCTURE_DIALOG_FIELD_BUILDVARIANTS_FLAVO" +
-      "RS_APPLICATION_ID\020\355\004\022L\nGPROJECT_STRUCTUR" +
-      "E_DIALOG_FIELD_BUILDVARIANTS_FLAVORS_TAR" +
-      "GET_SDK_VERSION\020\356\004\022I\nDPROJECT_STRUCTURE_" +
-      "DIALOG_FIELD_BUILDVARIANTS_FLAVORS_MIN_S" +
-      "DK_VERSION\020\357\004\022I\nDPROJECT_STRUCTURE_DIALO" +
-      "G_FIELD_BUILDVARIANTS_FLAVORS_MAX_SDK_VE" +
-      "RSION\020\360\004\022H\nCPROJECT_STRUCTURE_DIALOG_FIE" +
-      "LD_BUILDVARIANTS_FLAVORS_SIGNING_CONFIG\020" +
-      "\361\004\022H\nCPROJECT_STRUCTURE_DIALOG_FIELD_BUI" +
-      "LDVARIANTS_FLAVORS_PROGUARD_FILES\020\362\004\022O\nJ" +
-      "PROJECT_STRUCTURE_DIALOG_FIELD_BUILDVARI" +
-      "ANTS_FLAVORS_MANIFEST_PLACEHOLDERS\020\363\004\022K\n" +
+      "_MIN_SDK_VERSION\020\222\003\022I\nDPROJECT_STRUCTURE" +
+      "_DIALOG_FIELD_MODULES_DEFAULTCONFIG_MAX_" +
+      "SDK_VERSION\020\223\003\022H\nCPROJECT_STRUCTURE_DIAL" +
+      "OG_FIELD_MODULES_DEFAULTCONFIG_SIGNING_C" +
+      "ONFIG\020\224\003\022H\nCPROJECT_STRUCTURE_DIALOG_FIE" +
+      "LD_MODULES_DEFAULTCONFIG_PROGUARD_FILES\020" +
+      "\225\003\022O\nJPROJECT_STRUCTURE_DIALOG_FIELD_MOD" +
+      "ULES_DEFAULTCONFIG_MANIFEST_PLACEHOLDERS" +
+      "\020\226\003\022K\nFPROJECT_STRUCTURE_DIALOG_FIELD_MO" +
+      "DULES_DEFAULTCONFIG_MULTI_DEX_ENABLED\020\227\003" +
+      "\022`\n[PROJECT_STRUCTURE_DIALOG_FIELD_MODUL" +
+      "ES_DEFAULTCONFIG_TEST_INSTRUMENTATION_RU" +
+      "NNER_CLASS_NAME\020\230\003\022c\n^PROJECT_STRUCTURE_" +
+      "DIALOG_FIELD_MODULES_DEFAULTCONFIG_TEST_" +
+      "INSTRUMENTATION_RUNNER_ARGUMENTS_KEY\020\231\003\022" +
+      "e\n`PROJECT_STRUCTURE_DIALOG_FIELD_MODULE" +
+      "S_DEFAULTCONFIG_TEST_INSTRUMENTATION_RUN" +
+      "NER_ARGUMENTS_VALUE\020\232\003\022M\nHPROJECT_STRUCT" +
+      "URE_DIALOG_FIELD_MODULES_DEFAULTCONFIG_T" +
+      "EST_APPLICATION_ID\020\233\003\022F\nAPROJECT_STRUCTU" +
+      "RE_DIALOG_FIELD_MODULES_DEFAULTCONFIG_VE" +
+      "RSION_CODE\020\234\003\022F\nAPROJECT_STRUCTURE_DIALO" +
+      "G_FIELD_MODULES_DEFAULTCONFIG_VERSION_NA" +
+      "ME\020\235\003\022?\n:PROJECT_STRUCTURE_DIALOG_FIELD_" +
+      "MODULES_SIGNINGCONFIGS_NAME\020\244\003\022E\n@PROJEC" +
+      "T_STRUCTURE_DIALOG_FIELD_MODULES_SIGNING" +
+      "CONFIGS_STORE_FILE\020\245\003\022I\nDPROJECT_STRUCTU" +
+      "RE_DIALOG_FIELD_MODULES_SIGNINGCONFIGS_S" +
+      "TORE_PASSWORD\020\246\003\022D\n?PROJECT_STRUCTURE_DI" +
+      "ALOG_FIELD_MODULES_SIGNINGCONFIGS_KEY_AL" +
+      "IAS\020\247\003\022G\nBPROJECT_STRUCTURE_DIALOG_FIELD" +
+      "_MODULES_SIGNINGCONFIGS_KEY_PASSWORD\020\250\003\022" +
+      "B\n=PROJECT_STRUCTURE_DIALOG_FIELD_DEPEND" +
+      "ENCIES_REQUESTED_VERSION\020\364\003\022G\nBPROJECT_S" +
+      "TRUCTURE_DIALOG_FIELD_BUILDVARIANTS_BUIL" +
+      "DTYPES_DEBUGGABLE\020\330\004\022K\nFPROJECT_STRUCTUR" +
+      "E_DIALOG_FIELD_BUILDVARIANTS_BUILDTYPES_" +
+      "JNI_DEBUGGABLE\020\331\004\022T\nOPROJECT_STRUCTURE_D" +
+      "IALOG_FIELD_BUILDVARIANTS_BUILDTYPES_REN" +
+      "DERSCRIPT_DEBUGGABLE\020\332\004\022\\\nWPROJECT_STRUC" +
+      "TURE_DIALOG_FIELD_BUILDVARIANTS_BUILDTYP" +
+      "ES_RENDERSCRIPT_OPTIMIZATION_LEVEL\020\333\004\022K\n" +
       "FPROJECT_STRUCTURE_DIALOG_FIELD_BUILDVAR" +
-      "IANTS_FLAVORS_MULTI_DEX_ENABLED\020\364\004\022`\n[PR" +
+      "IANTS_BUILDTYPES_SIGNING_CONFIG\020\334\004\022K\nFPR" +
       "OJECT_STRUCTURE_DIALOG_FIELD_BUILDVARIAN" +
-      "TS_FLAVORS_TEST_INSTRUMENTATION_RUNNER_C" +
-      "LASS_NAME\020\365\004\022c\n^PROJECT_STRUCTURE_DIALOG" +
-      "_FIELD_BUILDVARIANTS_FLAVORS_TEST_INSTRU" +
-      "MENTATION_RUNNER_ARGUMENTS_KEY\020\366\004\022e\n`PRO" +
-      "JECT_STRUCTURE_DIALOG_FIELD_BUILDVARIANT" +
-      "S_FLAVORS_TEST_INSTRUMENTATION_RUNNER_AR" +
-      "GUMENTS_VALUE\020\367\004\022M\nHPROJECT_STRUCTURE_DI" +
-      "ALOG_FIELD_BUILDVARIANTS_FLAVORS_TEST_AP" +
-      "PLICATION_ID\020\370\004\022F\nAPROJECT_STRUCTURE_DIA" +
-      "LOG_FIELD_BUILDVARIANTS_FLAVORS_VERSION_" +
-      "CODE\020\371\004\022F\nAPROJECT_STRUCTURE_DIALOG_FIEL" +
-      "D_BUILDVARIANTS_FLAVORS_VERSION_NAME\020\372\004\"" +
-      "\210\003\n\rUserSentiment\022;\n\005state\030\001 \001(\0162,.andro" +
-      "id_studio.UserSentiment.SentimentState\022>" +
-      "\n\005level\030\002 \001(\0162/.android_studio.UserSenti" +
-      "ment.SatisfactionLevel\"k\n\016SentimentState" +
-      "\022\033\n\027UNKNOWN_SENTIMENT_STATE\020\000\022\014\n\010POSITIV" +
-      "E\020\001\022\014\n\010NEGATIVE\020\002\022\014\n\010FILE_BUG\020\003\022\022\n\016POPUP" +
-      "_QUESTION\020\004\"\214\001\n\021SatisfactionLevel\022\036\n\032UNK" +
-      "NOWN_SATISFACTION_LEVEL\020\000\022\025\n\021VERY_DISSAT" +
-      "ISFIED\020\001\022\020\n\014DISSATISFIED\020\002\022\013\n\007NEUTRAL\020\003\022" +
-      "\r\n\tSATISFIED\020\004\022\022\n\016VERY_SATISFIED\020\005\"\260\001\n\020E" +
-      "mulatorBootInfo\022@\n\013boot_status\030\001 \001(\0162+.a" +
-      "ndroid_studio.EmulatorBootInfo.BootStatu" +
-      "s\022\023\n\013duration_ms\030\002 \001(\004\"E\n\nBootStatus\022\022\n\016" +
-      "UNKNOWN_STATUS\020\000\022\022\n\016BOOT_COMPLETED\020\001\022\017\n\013" +
-      "BOOT_FAILED\020\002\"\300\001\n\013DialogStats\022\031\n\021dialog_" +
-      "class_name\030\001 \001(\t\0226\n\005state\030\002 \001(\0162\'.androi" +
-      "d_studio.DialogStats.DialogState\"^\n\013Dial" +
-      "ogState\022\030\n\024UNKNOWN_DIALOG_STATE\020\000\022\010\n\004SHO" +
-      "W\020\001\022\n\n\006SELECT\020\002\022\t\n\005APPLY\020\003\022\t\n\005RESET\020\004\022\t\n" +
-      "\005CLOSE\020\005\"\224\014\n\020DataBindingEvent\0228\n\004type\030\001 " +
-      "\001(\0162*.android_studio.DataBindingEvent.Ev" +
-      "entType\022D\n\007context\030\002 \001(\01623.android_studi" +
-      "o.DataBindingEvent.DataBindingContext\022O\n" +
-      "\rpoll_metadata\030\003 \001(\01328.android_studio.Da" +
-      "taBindingEvent.DataBindingPollMetadata\022W" +
-      "\n\025view_binding_metadata\030\004 \001(\01328.android_" +
-      "studio.DataBindingEvent.ViewBindingPollM" +
-      "etadata\032\232\006\n\027DataBindingPollMetadata\022\034\n\024d" +
-      "ata_binding_enabled\030\001 \001(\010\022\030\n\020layout_xml_" +
-      "count\030\002 \001(\r\022\024\n\014import_count\030\003 \001(\r\022\026\n\016var" +
-      "iable_count\030\004 \001(\r\022\030\n\020expression_count\030\005 " +
-      "\001(\r\022\023\n\013error_count\030\006 \001(\r\022\024\n\014module_count" +
-      "\030\007 \001(\r\022)\n!data_binding_enabled_module_co" +
-      "unt\030\010 \001(\r\022f\n\022observable_metrics\030e \001(\0132J." +
-      "android_studio.DataBindingEvent.DataBind" +
-      "ingPollMetadata.ObservableMetrics\022o\n\027bin" +
-      "ding_adapter_metrics\030f \001(\0132N.android_stu" +
-      "dio.DataBindingEvent.DataBindingPollMeta" +
-      "data.BindingAdapterMetrics\022c\n\021live_data_" +
-      "metrics\030g \001(\0132H.android_studio.DataBindi" +
-      "ngEvent.DataBindingPollMetadata.LiveData" +
-      "Metrics\032g\n\021ObservableMetrics\022\027\n\017primitiv" +
-      "e_count\030\001 \001(\r\022\030\n\020collection_count\030\002 \001(\r\022" +
-      "\037\n\027observable_object_count\030\003 \001(\r\032O\n\025Bind" +
-      "ingAdapterMetrics\022\025\n\radapter_count\030\001 \001(\r" +
-      "\022\037\n\027adapter_reference_count\030\002 \001(\r\0321\n\017Liv" +
-      "eDataMetrics\022\036\n\026live_data_object_count\030\001" +
-      " \001(\r\032Q\n\027ViewBindingPollMetadata\022\034\n\024view_" +
-      "binding_enabled\030\001 \001(\010\022\030\n\020layout_xml_coun" +
-      "t\030\002 \001(\r\"\313\001\n\tEventType\022\020\n\014UNKNOWN_TYPE\020\000\022" +
-      "\033\n\027DATA_BINDING_SYNC_EVENT\020\001\022\034\n\030DATA_BIN" +
-      "DING_BUILD_EVENT\020\002\022%\n!DATA_BINDING_COMPL" +
-      "ETION_SUGGESTED\020e\022$\n DATA_BINDING_COMPLE" +
-      "TION_ACCEPTED\020f\022$\n DATA_BINDING_COMPLETI" +
-      "ON_DECLINED\020g\"\227\001\n\022DataBindingContext\022\023\n\017" +
-      "UNKNOWN_CONTEXT\020\000\022\037\n\033DATA_BINDING_CONTEX" +
-      "T_LAMBDA\020\001\022)\n%DATA_BINDING_CONTEXT_METHO" +
-      "D_REFERENCE\020\002\022 \n\034DATA_BINDING_CONTEXT_XM" +
-      "L_TAG\020\003\"\276\002\n\022TypingLatencyStats\022I\n\017latenc" +
-      "y_records\030\001 \003(\01320.android_studio.TypingL" +
-      "atencyStats.LatencyRecord\022\036\n\026essential_h" +
-      "ighlighting\030\002 \001(\010\032\274\001\n\rLatencyRecord\0221\n\tf" +
-      "ile_type\030\001 \001(\0162\036.android_studio.EditorFi" +
-      "leType\022\030\n\020total_keys_typed\030\002 \001(\003\022\030\n\020tota" +
-      "l_latency_ms\030\003 \001(\003\022\026\n\016max_latency_ms\030\004 \001" +
-      "(\003\022,\n\thistogram\030\005 \001(\0132\031.android_studio.H" +
-      "istogram\"\310\001\n\027EditorHighlightingStats\022C\n\014" +
-      "by_file_type\030\001 \003(\0132-.android_studio.Edit" +
-      "orHighlightingStats.Stats\032h\n\005Stats\0221\n\tfi" +
-      "le_type\030\001 \001(\0162\036.android_studio.EditorFil" +
-      "eType\022,\n\thistogram\030\002 \001(\0132\031.android_studi" +
-      "o.Histogram\"\273\002\n\025EditorCompletionStats\022A\n" +
-      "\014by_file_type\030\001 \003(\0132+.android_studio.Edi" +
-      "torCompletionStats.Stats\032\336\001\n\005Stats\0221\n\tfi" +
-      "le_type\030\001 \001(\0162\036.android_studio.EditorFil" +
-      "eType\0220\n\rpopup_latency\030\002 \001(\0132\031.android_s" +
-      "tudio.Histogram\022:\n\027full_completion_laten" +
-      "cy\030\003 \001(\0132\031.android_studio.Histogram\0224\n\021i" +
-      "nsertion_latency\030\004 \001(\0132\031.android_studio." +
-      "Histogram\"\204\r\n\027StudioPatchUpdaterEvent\022:\n" +
-      "\004kind\030\001 \001(\0162,.android_studio.StudioPatch" +
-      "UpdaterEvent.Kind\022<\n\005patch\030\002 \001(\0132-.andro" +
-      "id_studio.StudioPatchUpdaterEvent.Patch\022" +
-      "I\n\014issue_dialog\030\003 \001(\01323.android_studio.S" +
-      "tudioPatchUpdaterEvent.IssueDialog\022X\n\024is" +
-      "sue_dialog_choices\030\004 \001(\0132:.android_studi" +
-      "o.StudioPatchUpdaterEvent.IssueDialogCho" +
-      "ices\032?\n\005Patch\022\033\n\023studio_version_from\030\001 \001" +
-      "(\t\022\031\n\021studio_version_to\030\002 \001(\t\032\361\003\n\013IssueD" +
-      "ialog\022H\n\005issue\030\001 \003(\01329.android_studio.St" +
-      "udioPatchUpdaterEvent.IssueDialog.Issue\032" +
-      "\227\003\n\005Issue\022L\n\004kind\030\001 \001(\0162>.android_studio" +
-      ".StudioPatchUpdaterEvent.IssueDialog.Iss" +
-      "ue.Kind\022P\n\006action\030\002 \001(\0162@.android_studio" +
-      ".StudioPatchUpdaterEvent.IssueDialog.Iss" +
-      "ue.Action\022R\n\020presented_option\030\003 \003(\01628.an" +
-      "droid_studio.StudioPatchUpdaterEvent.Val" +
-      "idationOption\";\n\004Kind\022\020\n\014UNKNOWN_KIND\020\000\022" +
-      "\010\n\004INFO\020\001\022\014\n\010CONFLICT\020\002\022\t\n\005ERROR\020\003\"]\n\006Ac" +
-      "tion\022\022\n\016UNKNOWN_ACTION\020\000\022\n\n\006CREATE\020\001\022\n\n\006" +
-      "UPDATE\020\002\022\n\n\006DELETE\020\003\022\r\n\tNO_ACTION\020\004\022\014\n\010V" +
-      "ALIDATE\020\005\032\302\001\n\022IssueDialogChoices\022Q\n\006choi" +
-      "ce\030\001 \003(\0132A.android_studio.StudioPatchUpd" +
-      "aterEvent.IssueDialogChoices.Choice\032Y\n\006C" +
-      "hoice\022O\n\rchosen_option\030\001 \001(\01628.android_s" +
-      "tudio.StudioPatchUpdaterEvent.Validation" +
-      "Option\"\321\003\n\004Kind\022\026\n\022UNKNOWN_EVENT_KIND\020\000\022" +
-      "\t\n\005START\020\001\022\026\n\022PATCH_DETAILS_SHOW\020\002\022\037\n\033RE" +
-      "TRYABLE_ERROR_DIALOG_SHOW\020\003\022\033\n\027FATAL_ERR" +
-      "OR_DIALOG_SHOW\020\004\022#\n\037VALIDATION_PROBLEMS_" +
-      "DIALOG_SHOW\020\005\022$\n VALIDATION_PROBLEMS_DIA" +
-      "LOG_CLOSE\020\006\022\021\n\rPHASE_UNKNOWN\020\007\022 \n\034PHASE_" +
-      "EXTRACTING_PATCH_FILES\020\010\022!\n\035PHASE_VALIDA" +
-      "TING_INSTALLATION\020\t\022\032\n\026PHASE_BACKING_UP_" +
-      "FILES\020\n\022\032\n\026PHASE_PREPARING_UPDATE\020\013\022\030\n\024P" +
-      "HASE_APPLYING_PATCH\020\014\022\023\n\017PHASE_REVERTING" +
-      "\020\r\022\025\n\021PHASE_CLEANING_UP\020\016\022\013\n\007EXIT_OK\020\017\022\016" +
-      "\n\nEXIT_ABORT\020\020\022\022\n\016EXIT_EXCEPTION\020\021\"|\n\020Va" +
-      "lidationOption\022\035\n\031UNKNOWN_VALIDATION_OPT" +
-      "ION\020\000\022\010\n\004NONE\020\001\022\n\n\006IGNORE\020\002\022\010\n\004KEEP\020\003\022\013\n" +
-      "\007REPLACE\020\004\022\n\n\006DELETE\020\005\022\020\n\014KILL_PROCESS\020\006" +
-      "\"\367\007\n\024ResourceManagerEvent\0227\n\004kind\030\001 \001(\0162" +
-      ").android_studio.ResourceManagerEvent.Ki" +
-      "nd\022H\n\rresource_type\030\002 \001(\01621.android_stud" +
-      "io.ResourceManagerEvent.ResourceType\"\245\005\n" +
-      "\004Kind\022\026\n\022UNKNOWN_EVENT_KIND\020\000\022\024\n\020TOOL_WI" +
-      "NDOW_OPEN\020\001\022\037\n\033RESOURCE_PICKER_DIALOG_OP" +
-      "EN\020\021\022\032\n\026ASSET_ADDED_VIA_BUTTON\020\002\022\027\n\023ASSE" +
-      "T_ADDED_VIA_DND\020\003\022\026\n\022DETAIL_VIEW_OPENED\020" +
-      "\004\022\020\n\014ASSET_OPENED\020\005\022\025\n\021LIST_MODE_CHANGED" +
-      "\020\006\022\033\n\027DEPENDENT_MODULES_SHOWN\020\022\022\034\n\030DEPEN" +
-      "DENT_MODULES_HIDDEN\020\023\022\023\n\017LIBRARIES_SHOWN" +
-      "\020\007\022\024\n\020LIBRARIES_HIDDEN\020\010\022\023\n\017FRAMEWORK_SH" +
-      "OWN\020\024\022\024\n\020FRAMEWORK_HIDDEN\020\025\022\024\n\020THEME_ATT" +
-      "R_SHOWN\020\026\022\025\n\021THEME_ATTR_HIDDEN\020\027\022\031\n\025ENAB" +
-      "LE_FILTER_BY_TYPE\020\030\022\023\n\017DENSITY_INFERED\020\t" +
-      "\022\033\n\027DROP_ON_XML_BLANK_SPACE\020\n\022\023\n\017DROP_ON" +
-      "_XML_TAG\020\013\022\031\n\025DROP_ON_XML_ATTRIBUTE\020\014\022\027\n" +
-      "\023DROP_ON_LAYOUT_VIEW\020\r\022\034\n\030DROP_ON_LAYOUT" +
-      "_VIEWGROUP\020\016\022\020\n\014DROP_AS_TEXT\020\017\022\030\n\024IMPORT" +
-      "_LIMIT_REACHED\020\020\022\027\n\023REFRESH_RES_PREVIEW\020" +
-      "\031\022!\n\035REFRESH_ALL_RES_TYPE_PREVIEWS\020\032\"\263\001\n" +
-      "\014ResourceType\022\013\n\007UNKNOWN\020\000\022\014\n\010DRAWABLE\020\001" +
-      "\022\t\n\005COLOR\020\002\022\n\n\006LAYOUT\020\003\022\n\n\006STRING\020\004\022\010\n\004F" +
-      "ONT\020\005\022\007\n\003SVG\020\006\022\n\n\006RASTER\020\007\022\016\n\nNAVIGATION" +
-      "\020\010\022\010\n\004MENU\020\t\022\r\n\tANIMATION\020\n\022\t\n\005STYLE\020\013\022\t" +
-      "\n\005VALUE\020\014\022\007\n\003XML\020\r\";\n\rIdePluginInfo\022*\n\007p" +
-      "lugins\030\001 \003(\0132\031.android_studio.IdePlugin\"" +
-      "9\n\tIdePlugin\022\n\n\002id\030\001 \001(\t\022\017\n\007version\030\002 \001(" +
-      "\t\022\017\n\007bundled\030\003 \001(\010\"\246\002\n\025WindowsDefenderSt" +
-      "atus\022<\n\006status\030\001 \001(\0162,.android_studio.Wi" +
-      "ndowsDefenderStatus.Status\022\034\n\024project_di" +
-      "r_excluded\030\002 \001(\010\"\260\001\n\006Status\022\022\n\016UNKNOWN_S" +
-      "TATUS\020\000\022\025\n\021SCANNING_DISABLED\020\001\022\024\n\014ALL_EX" +
-      "CLUDED\020\002\032\002\010\001\022\025\n\rSOME_EXCLUDED\020\003\032\002\010\001\022\025\n\rN" +
-      "ONE_EXCLUDED\020\004\032\002\010\001\022\021\n\rCHECK_IGNORED\020\005\022\020\n" +
-      "\014ENABLED_AUTO\020\006\022\022\n\016ENABLED_MANUAL\020\007\"\207\004\n\023" +
-      "MemorySettingsEvent\022;\n\004kind\030\001 \001(\0162-.andr" +
-      "oid_studio.MemorySettingsEvent.EventKind" +
-      "\022/\n\007current\030\002 \001(\0132\036.android_studio.Memor" +
-      "ySettings\0223\n\013recommended\030\003 \001(\0132\036.android" +
-      "_studio.MemorySettings\022/\n\007changed\030\004 \001(\0132" +
-      "\036.android_studio.MemorySettings\"\233\002\n\tEven" +
-      "tKind\022\013\n\007UNKNOWN\020\000\022\026\n\022SHOW_CONFIG_DIALOG" +
-      "\020\001\022\031\n\025SETTINGS_CHANGE_SAVED\020\002\022\035\n\031SETTING" +
-      "S_CHANGE_CANCELLED\020\003\022#\n\037NON_DEFAULT_RECO" +
-      "MMENDATION_USED\020\004\022\'\n#APPLY_RECOMMENDATIO" +
-      "N_BUTTON_CLICKED\020\005\022\027\n\023SHOW_RECOMMENDATIO" +
-      "N\020\006\022\024\n\020SAVE_AND_RESTART\020\007\022\r\n\tCONFIGURE\020\010" +
-      "\022\023\n\017REMIND_ME_LATER\020\t\022\016\n\nDO_NOT_ASK\020\n\"W\n" +
-      "\016MemorySettings\022\017\n\007ide_xmx\030\001 \001(\005\022\031\n\021grad" +
-      "le_daemon_xmx\030\002 \001(\005\022\031\n\021kotlin_daemon_xmx" +
-      "\030\003 \001(\005\"\244\004\n\025StudioUpdateFlowEvent\022>\n\neven" +
-      "t_kind\030\001 \001(\0162*.android_studio.StudioUpda" +
-      "teFlowEvent.Kind\022\032\n\022studio_new_version\030\002" +
-      " \001(\t\022K\n\016dialog_trigger\030\003 \001(\01623.android_s" +
-      "tudio.StudioUpdateFlowEvent.DialogTrigge" +
-      "r\022\023\n\013action_name\030\004 \001(\t\"\202\002\n\004Kind\022\020\n\014UNKNO" +
-      "WN_KIND\020\000\022\026\n\022NOTIFICATION_SHOWN\020\001\022$\n NOT" +
-      "IFICATION_UPDATE_LINK_CLICKED\020\002\022\017\n\013DIALO" +
-      "G_OPEN\020\003\022\027\n\023DIALOG_CLICK_UPDATE\020\004\022\027\n\023DIA" +
-      "LOG_CLICK_IGNORE\020\005\022\026\n\022DIALOG_CLICK_LATER" +
-      "\020\006\022\027\n\023DIALOG_CLICK_ACTION\020\007\022\032\n\026PATCH_DOW" +
-      "NLOAD_SUCCESS\020\010\022\032\n\026PATCH_DOWNLOAD_FAILUR" +
-      "E\020\t\"H\n\rDialogTrigger\022\031\n\025UNKNOWN_DIALOG_T" +
-      "RIGER\020\000\022\n\n\006MANUAL\020\001\022\020\n\014NOTIFICATION\020\002\"\311\004" +
-      "\n\021BuildErrorMessage\022E\n\020error_shown_type\030" +
-      "\001 \001(\0162+.android_studio.BuildErrorMessage" +
-      ".ErrorType\022\036\n\026file_location_included\030\002 \001" +
-      "(\010\022F\n\022file_included_type\030\003 \001(\0162*.android",
-      "_studio.BuildErrorMessage.FileType\022\036\n\026li" +
-      "ne_location_included\030\004 \001(\010\"\225\002\n\tErrorType" +
-      "\022\026\n\022UNKNOWN_ERROR_TYPE\020\000\022\021\n\rJAVA_COMPILE" +
-      "R\020\001\022\023\n\017KOTLIN_COMPILER\020\002\022\t\n\005CLANG\020\003\022\t\n\005C" +
-      "MAKE\020\004\022\020\n\014DATA_BINDING\020\005\022\016\n\nXML_PARSER\020\006" +
-      "\022\010\n\004AAPT\020\007\022\006\n\002D8\020\010\022\006\n\002R8\020\t\022\035\n\031RESOURCE_A" +
-      "ND_ASSET_MERGER\020\n\022!\n\035GENERAL_ANDROID_GRA" +
-      "DLE_PLUGIN\020\013\022\033\n\027INVALID_TOML_DEFINITION\020" +
-      "\014\022\027\n\023CONFIGURATION_CACHE\020\r\"M\n\010FileType\022\025" +
-      "\n\021UNKNOWN_FILE_TYPE\020\000\022\030\n\024BUILD_GENERATED" +
-      "_FILE\020\001\022\020\n\014PROJECT_FILE\020\002\"Y\n\026BuildOutput" +
-      "WindowStats\022?\n\024build_error_messages\030\001 \003(" +
-      "\0132!.android_studio.BuildErrorMessage\"\233\001\n" +
-      "\031GradlePluginDslUsageStats\022P\n\017dsl_elemen" +
-      "t_use\030\001 \003(\01327.android_studio.GradlePlugi" +
-      "nDslUsageStats.DslElementUse\032,\n\rDslEleme" +
-      "ntUse\022\014\n\004type\030\001 \001(\005\022\r\n\005count\030\002 \001(\005\"\211\001\n\033D" +
-      "efaultActivityLocatorStats\022\030\n\020blocks_ui_" +
-      "thread\030\001 \001(\010\022\023\n\013index_based\030\002 \001(\010\022\'\n\037use" +
-      "d_potentially_stale_manifest\030\003 \001(\010\022\022\n\nla" +
-      "tency_ms\030\004 \001(\004\"\252\005\n\027MotionLayoutEditorEve" +
-      "nt\022Q\n\004type\030\001 \001(\0162C.android_studio.Motion" +
-      "LayoutEditorEvent.MotionLayoutEditorEven" +
-      "tType\"\273\004\n\033MotionLayoutEditorEventType\022\026\n" +
-      "\022UNKNOWN_EVENT_TYPE\020\000\022\025\n\021CREATE_CONSTRAI" +
-      "NT\020\001\022\025\n\021CREATE_TRANSITION\020\002\022\022\n\016CREATE_ON" +
-      "CLICK\020\003\022\021\n\rTOGGLE_LAYOUT\020\004\022\027\n\023CREATE_KEY" +
-      "_POSITION\020\005\022\031\n\025CREATE_KEY_ATTRIBUTES\020\006\022\024" +
-      "\n\020CREATE_KEY_CYCLE\020\007\022\026\n\022CREATE_KEY_TRIGG" +
-      "ER\020\010\022\031\n\025CREATE_KEY_TIME_CYCLE\020\t\022\031\n\025CONVE" +
-      "RT_TO_CONSTRAINT\020\n\022#\n\037CONVERT_TO_SECTION" +
-      "ED_CONSTRAINT\020\013\022\024\n\020CLEAR_CONSTRAINT\020\014\022\021\n" +
-      "\rSHOW_TIMELINE\020\r\022\026\n\022SHOW_CONSTRAINTSET\020\016" +
-      "\022\017\n\013SHOW_LAYOUT\020\017\022\033\n\027CONSTRAINT_TABLE_SE" +
-      "LECT\020\020\022\027\n\023LAYOUT_TABLE_SELECT\020\021\022\031\n\025TIMEL" +
-      "INE_TABLE_SELECT\020\022\022\017\n\013MOTION_PLAY\020\023\022\020\n\014M" +
-      "OTION_SPEED\020\024\022\020\n\014MOTION_PAUSE\020\025\022\032\n\026MOTIO" +
-      "N_DIRETION_TOGGLE\020\026\"\330\005\n\016MultiViewEvent\022?" +
-      "\n\004type\030\001 \001(\01621.android_studio.MultiViewE" +
-      "vent.MultiViewEventType\022^\n\034associated_sp" +
-      "lit_editor_mode\030\002 \001(\01628.android_studio.M" +
-      "ultiViewEvent.AssociatedSplitEditorMode\022" +
-      "K\n\022toggle_issue_panel\030\003 \001(\0162/.android_st" +
-      "udio.MultiViewEvent.ToggleIssuePanel\"\240\002\n" +
-      "\022MultiViewEventType\022\026\n\022UNKNOWN_EVENT_TYP" +
-      "E\020\000\022\026\n\022OPEN_PIXEL_DEVICES\020\001\022\030\n\024OPEN_PROJ" +
-      "ECT_LOCALES\020\002\022\"\n\036OPEN_CUSTOM_CONFIGURATI" +
-      "ON_SETS\020\003\022\031\n\025OPEN_COLOR_BLIND_MODE\020\004\022\023\n\017" +
-      "OPEN_LARGE_FONT\020\005\022\026\n\022OPEN_LARGE_DISPLAY\020" +
-      "\006\022\025\n\021OPEN_WEAR_DEVICES\020\007\022\032\n\026OPEN_REFEREN" +
-      "CE_DEVICES\020\010\022!\n\035OPEN_USER_DEFINED_CUSTOM" +
-      "_SETS\020\t\"]\n\031AssociatedSplitEditorMode\022\020\n\014" +
-      "UNKNOWN_MODE\020\000\022\r\n\tTEXT_MODE\020\001\022\016\n\nSPLIT_M" +
-      "ODE\020\002\022\017\n\013VISUAL_MODE\020\003\"V\n\020ToggleIssuePan" +
-      "el\022\025\n\021UNKNOWN_OPERATION\020\000\022\024\n\020OPEN_ISSUE_" +
-      "PANEL\020\001\022\025\n\021CLOSE_ISSUE_PANEL\020\002\"\356\006\n\034Compo" +
-      "seAnimationToolingEvent\022[\n\004type\030\001 \001(\0162M." +
-      "android_studio.ComposeAnimationToolingEv" +
-      "ent.ComposeAnimationToolingEventType\022\"\n\032" +
-      "animation_speed_multiplier\030\002 \001(\002\"\314\005\n Com" +
-      "poseAnimationToolingEventType\022\026\n\022UNKNOWN" +
-      "_EVENT_TYPE\020\000\022\034\n\030OPEN_ANIMATION_INSPECTO" +
-      "R\020\001\022\035\n\031CLOSE_ANIMATION_INSPECTOR\020\002\022!\n\035AN" +
-      "IMATION_INSPECTOR_AVAILABLE\020\003\022\027\n\023TRIGGER" +
-      "_PLAY_ACTION\020\004\022\030\n\024TRIGGER_PAUSE_ACTION\020\005" +
-      "\022\026\n\022ENABLE_LOOP_ACTION\020\006\022\027\n\023DISABLE_LOOP" +
-      "_ACTION\020\007\022\032\n\026CHANGE_ANIMATION_SPEED\020\010\022 \n" +
-      "\034TRIGGER_JUMP_TO_START_ACTION\020\t\022\036\n\032TRIGG" +
-      "ER_JUMP_TO_END_ACTION\020\n\022\026\n\022CHANGE_START_" +
-      "STATE\020\013\022\024\n\020CHANGE_END_STATE\020\014\022\036\n\032TRIGGER" +
-      "_SWAP_STATES_ACTION\020\r\022&\n\"CLICK_ANIMATION" +
-      "_INSPECTOR_TIMELINE\020\016\022%\n!DRAG_ANIMATION_" +
-      "INSPECTOR_TIMELINE\020\017\022\031\n\025EXPAND_ANIMATION" +
-      "_CARD\020\020\022\033\n\027COLLAPSE_ANIMATION_CARD\020\021\022\031\n\025" +
-      "OPEN_ANIMATION_IN_TAB\020\022\022\027\n\023CLOSE_ANIMATI" +
-      "ON_TAB\020\023\022\022\n\016LOCK_ANIMATION\020\024\022\024\n\020UNLOCK_A" +
-      "NIMATION\020\025\022\022\n\016RESET_TIMELINE\020\026\022\026\n\022DRAG_T" +
-      "IMELINE_LINE\020\027\022\017\n\013OPEN_PICKER\020\030\"\370\004\n\030Comp" +
-      "oseMultiPreviewEvent\022a\n\023multi_preview_no" +
-      "des\030\001 \003(\0132D.android_studio.ComposeMultiP" +
-      "reviewEvent.ComposeMultiPreviewNodeInfo\022" +
-      "$\n\034is_compose_preview_lite_mode\030\002 \001(\010\032\322\003" +
-      "\n\033ComposeMultiPreviewNodeInfo\022`\n\tnode_ty" +
-      "pe\030\001 \001(\0162M.android_studio.ComposeMultiPr" +
-      "eviewEvent.ComposeMultiPreviewNodeInfo.N" +
-      "odeType\022 \n\030anonymized_composable_id\030\002 \001(" +
-      "\003\022\034\n\024preview_childs_count\030\003 \001(\005\022\"\n\032multi" +
-      "_preview_childs_count\030\004 \001(\005\022\036\n\026subtree_p" +
-      "reviews_count\030\005 \001(\005\022$\n\034subtree_multi_pre" +
-      "views_count\030\006 \001(\005\022#\n\033subtree_useless_nod" +
-      "es_count\030\007 \001(\005\022\023\n\013depth_level\030\010 \001(\005\"m\n\010N" +
-      "odeType\022\025\n\021UNKNOWN_NODE_TYPE\020\000\022!\n\035ROOT_C" +
-      "OMPOSABLE_FUNCTION_NODE\020\001\022\025\n\021MULTIPREVIE" +
-      "W_NODE\020\002\022\020\n\014PREVIEW_NODE\020\003\"\260\002\n\033ComposePr" +
-      "eviewLiteModeEvent\022Y\n\004type\030\001 \001(\0162K.andro" +
-      "id_studio.ComposePreviewLiteModeEvent.Co" +
-      "mposePreviewLiteModeEventType\022$\n\034is_comp" +
-      "ose_preview_lite_mode\030\002 \001(\010\"\217\001\n\037ComposeP" +
-      "reviewLiteModeEventType\022\026\n\022UNKNOWN_EVENT" +
-      "_TYPE\020\000\022\023\n\017OPEN_AND_RENDER\020\001\022\034\n\030PREVIEW_" +
-      "LITE_MODE_SWITCH\020\002\022!\n\035STUDIO_ESSENTIALS_" +
-      "MODE_SWITCH\020\003\"\231\006\n\023PreviewRefreshEvent\022=\n" +
-      "\004type\030\001 \001(\0162/.android_studio.PreviewRefr" +
-      "eshEvent.PreviewType\022A\n\006result\030\002 \001(\01621.a" +
-      "ndroid_studio.PreviewRefreshEvent.Refres" +
-      "hResult\022\034\n\024in_queue_time_millis\030\003 \001(\005\022\033\n" +
-      "\023refresh_time_millis\030\004 \001(\005\022\026\n\016previews_c" +
-      "ount\030\005 \001(\005\022\033\n\023previews_to_refresh\030\006 \001(\005\022" +
-      "P\n\017preview_renders\030\007 \003(\01327.android_studi" +
-      "o.PreviewRefreshEvent.SinglePreviewRende" +
-      "r\032\354\001\n\023SinglePreviewRender\022T\n\006result\030\001 \001(" +
-      "\0162D.android_studio.PreviewRefreshEvent.S" +
-      "inglePreviewRender.RenderResult\022\017\n\007infla" +
-      "te\030\002 \001(\010\022\026\n\016render_quality\030\003 \001(\002\022\032\n\022rend" +
-      "er_time_millis\030\004 \001(\005\":\n\014RenderResult\022\022\n\016" +
-      "UNKNOWN_RESULT\020\000\022\013\n\007SUCCESS\020\001\022\t\n\005ERROR\020\002" +
-      "\"S\n\013PreviewType\022\020\n\014UNKNOWN_TYPE\020\000\022\013\n\007COM" +
-      "POSE\020\001\022\010\n\004WEAR\020\002\022\n\n\006GLANCE\020\003\022\017\n\013CUSTOM_V" +
-      "IEW\020\004\"z\n\rRefreshResult\022\022\n\016UNKNOWN_RESULT" +
-      "\020\000\022\013\n\007SUCCESS\020\001\022\013\n\007SKIPPED\020\002\022\022\n\016USER_CAN" +
-      "CELLED\020\003\022\033\n\027AUTOMATICALLY_CANCELLED\020\004\022\n\n" +
-      "\006FAILED\020\005\"\300\001\n\022ComposeDeployEvent\022G\n\004type" +
-      "\030\001 \001(\01629.android_studio.ComposeDeployEve" +
-      "nt.ComposeDeployEventType\"a\n\026ComposeDepl" +
-      "oyEventType\022\026\n\022UNKNOWN_EVENT_TYPE\020\000\022\026\n\022D" +
-      "EPLOY_FROM_GUTTER\020\001\022\027\n\023DEPLOY_FROM_TOOLB" +
-      "AR\020\002\"\231\001\n\022ComposeSampleEvent\022G\n\004type\030\001 \001(" +
-      "\01629.android_studio.ComposeSampleEvent.Co" +
-      "mposeSampleEventType\":\n\026ComposeSampleEve" +
-      "ntType\022\026\n\022UNKNOWN_EVENT_TYPE\020\000\022\010\n\004OPEN\020\001" +
-      "\"-\n\021ImportSampleEvent\022\030\n\020import_sample_i" +
-      "d\030\001 \001(\t\"\217\002\n BuildAttributionPluginIdenti" +
-      "fier\022I\n\004type\030\001 \001(\0162;.android_studio.Buil" +
-      "dAttributionPluginIdentifier.PluginType\022" +
-      "\033\n\023plugin_display_name\030\002 \001(\t\022\031\n\021plugin_c" +
-      "lass_name\030\003 \001(\t\"h\n\nPluginType\022\020\n\014UNKNOWN" +
-      "_TYPE\020\000\022\020\n\014BUILD_SCRIPT\020\001\022\025\n\rBINARY_PLUG" +
-      "IN\020\002\032\002\010\001\022\r\n\tBUILD_SRC\020\003\022\020\n\014OTHER_PLUGIN\020" +
-      "\004\"\203\001\n\037BuildAttribuitionTaskIdentifier\022\027\n" +
-      "\017task_class_name\030\001 \001(\t\022G\n\rorigin_plugin\030" +
-      "\002 \001(\01320.android_studio.BuildAttributionP" +
-      "luginIdentifier\"\366\003\n\032AlwaysRunTasksAnalyz" +
-      "erData\022R\n\020always_run_tasks\030\001 \003(\01328.andro" +
-      "id_studio.AlwaysRunTasksAnalyzerData.Alw" +
-      "aysRunTask\032\203\003\n\rAlwaysRunTask\022X\n\006reason\030\001" +
-      " \001(\0162H.android_studio.AlwaysRunTasksAnal" +
-      "yzerData.AlwaysRunTask.AlwaysRunReason\022O" +
-      "\n\021plugin_identifier\030\002 \001(\01320.android_stud" +
-      "io.BuildAttributionPluginIdentifierB\002\030\001\022" +
-      "H\n\017task_identifier\030\003 \001(\0132/.android_studi" +
-      "o.BuildAttribuitionTaskIdentifier\"}\n\017Alw" +
-      "aysRunReason\022\022\n\016UNKNOWN_REASON\020\000\022\036\n\032NO_O" +
-      "UTPUTS_WITHOUT_ACTIONS\020\001\022\033\n\027NO_OUTPUTS_W" +
-      "ITH_ACTIONS\020\002\022\031\n\025UP_TO_DATE_WHEN_FALSE\020\003" +
-      "\"\225\002\n AnnotationProcessorsAnalyzerData\022\201\001" +
-      "\n%non_incremental_annotation_processors\030" +
-      "\001 \003(\0132R.android_studio.AnnotationProcess" +
-      "orsAnalyzerData.NonIncrementalAnnotation" +
-      "Processor\032m\n!NonIncrementalAnnotationPro" +
-      "cessor\022\037\n\027compilation_duration_ms\030\001 \001(\003\022" +
-      "\'\n\037annotation_processor_class_name\030\002 \001(\t" +
-      "\"\234\003\n\030CriticalPathAnalyzerData\022!\n\031critica" +
-      "l_path_duration_ms\030\001 \001(\003\022(\n number_of_ta" +
-      "sks_on_critical_path\030\002 \001(\005\022W\n\025plugins_cr" +
-      "itical_path\030\003 \003(\01328.android_studio.Criti" +
-      "calPathAnalyzerData.PluginBuildData\022+\n#t" +
-      "asks_determining_build_duration_ms\030\004 \001(\003" +
-      "\0222\n*number_of_tasks_determining_build_du" +
-      "ration\030\005 \001(\005\032y\n\017PluginBuildData\022\031\n\021build" +
-      "_duration_ms\030\001 \001(\003\022K\n\021plugin_identifier\030" +
-      "\002 \001(\01320.android_studio.BuildAttributionP" +
-      "luginIdentifier\"\317\007\n ProjectConfiguration" +
-      "AnalyzerData\022m\n\032project_configuration_da" +
-      "ta\030\001 \003(\0132I.android_studio.ProjectConfigu" +
-      "rationAnalyzerData.ProjectConfigurationD" +
-      "ata\022m\n\032overall_configuration_data\030\002 \001(\0132" +
-      "I.android_studio.ProjectConfigurationAna" +
-      "lyzerData.ProjectConfigurationData\032\214\001\n\027P" +
-      "luginConfigurationData\022$\n\034plugin_configu" +
-      "ration_time_ms\030\001 \001(\003\022K\n\021plugin_identifie" +
+      "TS_BUILDTYPES_PROGUARD_FILES\020\335\004\022R\nMPROJE" +
+      "CT_STRUCTURE_DIALOG_FIELD_BUILDVARIANTS_" +
+      "BUILDTYPES_MANIFEST_PLACEHOLDERS\020\336\004\022K\nFP" +
+      "ROJECT_STRUCTURE_DIALOG_FIELD_BUILDVARIA" +
+      "NTS_BUILDTYPES_MINIFY_ENABLED\020\337\004\022N\nIPROJ" +
+      "ECT_STRUCTURE_DIALOG_FIELD_BUILDVARIANTS" +
+      "_BUILDTYPES_MULTI_DEX_ENABLED\020\340\004\022S\nNPROJ" +
+      "ECT_STRUCTURE_DIALOG_FIELD_BUILDVARIANTS" +
+      "_BUILDTYPES_APPLICATIOND_ID_SUFFIX\020\341\004\022P\n" +
+      "KPROJECT_STRUCTURE_DIALOG_FIELD_BUILDVAR" +
+      "IANTS_BUILDTYPES_VERSION_NAME_SUFFIX\020\342\004\022" +
+      "N\nIPROJECT_STRUCTURE_DIALOG_FIELD_BUILDV" +
+      "ARIANTS_BUILDTYPES_ZIP_ALIGN_ENABLED\020\343\004\022" +
+      "C\n>PROJECT_STRUCTURE_DIALOG_FIELD_BUILDV" +
+      "ARIANTS_FLAVORS_DIMENSION\020\354\004\022H\nCPROJECT_" +
+      "STRUCTURE_DIALOG_FIELD_BUILDVARIANTS_FLA" +
+      "VORS_APPLICATION_ID\020\355\004\022L\nGPROJECT_STRUCT" +
+      "URE_DIALOG_FIELD_BUILDVARIANTS_FLAVORS_T" +
+      "ARGET_SDK_VERSION\020\356\004\022I\nDPROJECT_STRUCTUR" +
+      "E_DIALOG_FIELD_BUILDVARIANTS_FLAVORS_MIN" +
+      "_SDK_VERSION\020\357\004\022I\nDPROJECT_STRUCTURE_DIA" +
+      "LOG_FIELD_BUILDVARIANTS_FLAVORS_MAX_SDK_" +
+      "VERSION\020\360\004\022H\nCPROJECT_STRUCTURE_DIALOG_F" +
+      "IELD_BUILDVARIANTS_FLAVORS_SIGNING_CONFI" +
+      "G\020\361\004\022H\nCPROJECT_STRUCTURE_DIALOG_FIELD_B" +
+      "UILDVARIANTS_FLAVORS_PROGUARD_FILES\020\362\004\022O" +
+      "\nJPROJECT_STRUCTURE_DIALOG_FIELD_BUILDVA" +
+      "RIANTS_FLAVORS_MANIFEST_PLACEHOLDERS\020\363\004\022" +
+      "K\nFPROJECT_STRUCTURE_DIALOG_FIELD_BUILDV" +
+      "ARIANTS_FLAVORS_MULTI_DEX_ENABLED\020\364\004\022`\n[" +
+      "PROJECT_STRUCTURE_DIALOG_FIELD_BUILDVARI" +
+      "ANTS_FLAVORS_TEST_INSTRUMENTATION_RUNNER" +
+      "_CLASS_NAME\020\365\004\022c\n^PROJECT_STRUCTURE_DIAL" +
+      "OG_FIELD_BUILDVARIANTS_FLAVORS_TEST_INST" +
+      "RUMENTATION_RUNNER_ARGUMENTS_KEY\020\366\004\022e\n`P" +
+      "ROJECT_STRUCTURE_DIALOG_FIELD_BUILDVARIA" +
+      "NTS_FLAVORS_TEST_INSTRUMENTATION_RUNNER_" +
+      "ARGUMENTS_VALUE\020\367\004\022M\nHPROJECT_STRUCTURE_" +
+      "DIALOG_FIELD_BUILDVARIANTS_FLAVORS_TEST_" +
+      "APPLICATION_ID\020\370\004\022F\nAPROJECT_STRUCTURE_D" +
+      "IALOG_FIELD_BUILDVARIANTS_FLAVORS_VERSIO" +
+      "N_CODE\020\371\004\022F\nAPROJECT_STRUCTURE_DIALOG_FI" +
+      "ELD_BUILDVARIANTS_FLAVORS_VERSION_NAME\020\372" +
+      "\004\"\210\003\n\rUserSentiment\022;\n\005state\030\001 \001(\0162,.and" +
+      "roid_studio.UserSentiment.SentimentState" +
+      "\022>\n\005level\030\002 \001(\0162/.android_studio.UserSen" +
+      "timent.SatisfactionLevel\"k\n\016SentimentSta" +
+      "te\022\033\n\027UNKNOWN_SENTIMENT_STATE\020\000\022\014\n\010POSIT" +
+      "IVE\020\001\022\014\n\010NEGATIVE\020\002\022\014\n\010FILE_BUG\020\003\022\022\n\016POP" +
+      "UP_QUESTION\020\004\"\214\001\n\021SatisfactionLevel\022\036\n\032U" +
+      "NKNOWN_SATISFACTION_LEVEL\020\000\022\025\n\021VERY_DISS" +
+      "ATISFIED\020\001\022\020\n\014DISSATISFIED\020\002\022\013\n\007NEUTRAL\020" +
+      "\003\022\r\n\tSATISFIED\020\004\022\022\n\016VERY_SATISFIED\020\005\"\260\001\n" +
+      "\020EmulatorBootInfo\022@\n\013boot_status\030\001 \001(\0162+" +
+      ".android_studio.EmulatorBootInfo.BootSta" +
+      "tus\022\023\n\013duration_ms\030\002 \001(\004\"E\n\nBootStatus\022\022" +
+      "\n\016UNKNOWN_STATUS\020\000\022\022\n\016BOOT_COMPLETED\020\001\022\017" +
+      "\n\013BOOT_FAILED\020\002\"\300\001\n\013DialogStats\022\031\n\021dialo" +
+      "g_class_name\030\001 \001(\t\0226\n\005state\030\002 \001(\0162\'.andr" +
+      "oid_studio.DialogStats.DialogState\"^\n\013Di" +
+      "alogState\022\030\n\024UNKNOWN_DIALOG_STATE\020\000\022\010\n\004S" +
+      "HOW\020\001\022\n\n\006SELECT\020\002\022\t\n\005APPLY\020\003\022\t\n\005RESET\020\004\022" +
+      "\t\n\005CLOSE\020\005\"\224\014\n\020DataBindingEvent\0228\n\004type\030" +
+      "\001 \001(\0162*.android_studio.DataBindingEvent." +
+      "EventType\022D\n\007context\030\002 \001(\01623.android_stu" +
+      "dio.DataBindingEvent.DataBindingContext\022" +
+      "O\n\rpoll_metadata\030\003 \001(\01328.android_studio." +
+      "DataBindingEvent.DataBindingPollMetadata" +
+      "\022W\n\025view_binding_metadata\030\004 \001(\01328.androi" +
+      "d_studio.DataBindingEvent.ViewBindingPol" +
+      "lMetadata\032\232\006\n\027DataBindingPollMetadata\022\034\n" +
+      "\024data_binding_enabled\030\001 \001(\010\022\030\n\020layout_xm" +
+      "l_count\030\002 \001(\r\022\024\n\014import_count\030\003 \001(\r\022\026\n\016v" +
+      "ariable_count\030\004 \001(\r\022\030\n\020expression_count\030" +
+      "\005 \001(\r\022\023\n\013error_count\030\006 \001(\r\022\024\n\014module_cou" +
+      "nt\030\007 \001(\r\022)\n!data_binding_enabled_module_" +
+      "count\030\010 \001(\r\022f\n\022observable_metrics\030e \001(\0132" +
+      "J.android_studio.DataBindingEvent.DataBi" +
+      "ndingPollMetadata.ObservableMetrics\022o\n\027b" +
+      "inding_adapter_metrics\030f \001(\0132N.android_s" +
+      "tudio.DataBindingEvent.DataBindingPollMe" +
+      "tadata.BindingAdapterMetrics\022c\n\021live_dat" +
+      "a_metrics\030g \001(\0132H.android_studio.DataBin" +
+      "dingEvent.DataBindingPollMetadata.LiveDa" +
+      "taMetrics\032g\n\021ObservableMetrics\022\027\n\017primit" +
+      "ive_count\030\001 \001(\r\022\030\n\020collection_count\030\002 \001(" +
+      "\r\022\037\n\027observable_object_count\030\003 \001(\r\032O\n\025Bi" +
+      "ndingAdapterMetrics\022\025\n\radapter_count\030\001 \001" +
+      "(\r\022\037\n\027adapter_reference_count\030\002 \001(\r\0321\n\017L" +
+      "iveDataMetrics\022\036\n\026live_data_object_count" +
+      "\030\001 \001(\r\032Q\n\027ViewBindingPollMetadata\022\034\n\024vie" +
+      "w_binding_enabled\030\001 \001(\010\022\030\n\020layout_xml_co" +
+      "unt\030\002 \001(\r\"\313\001\n\tEventType\022\020\n\014UNKNOWN_TYPE\020" +
+      "\000\022\033\n\027DATA_BINDING_SYNC_EVENT\020\001\022\034\n\030DATA_B" +
+      "INDING_BUILD_EVENT\020\002\022%\n!DATA_BINDING_COM" +
+      "PLETION_SUGGESTED\020e\022$\n DATA_BINDING_COMP" +
+      "LETION_ACCEPTED\020f\022$\n DATA_BINDING_COMPLE" +
+      "TION_DECLINED\020g\"\227\001\n\022DataBindingContext\022\023" +
+      "\n\017UNKNOWN_CONTEXT\020\000\022\037\n\033DATA_BINDING_CONT" +
+      "EXT_LAMBDA\020\001\022)\n%DATA_BINDING_CONTEXT_MET" +
+      "HOD_REFERENCE\020\002\022 \n\034DATA_BINDING_CONTEXT_" +
+      "XML_TAG\020\003\"\276\002\n\022TypingLatencyStats\022I\n\017late" +
+      "ncy_records\030\001 \003(\01320.android_studio.Typin" +
+      "gLatencyStats.LatencyRecord\022\036\n\026essential" +
+      "_highlighting\030\002 \001(\010\032\274\001\n\rLatencyRecord\0221\n" +
+      "\tfile_type\030\001 \001(\0162\036.android_studio.Editor" +
+      "FileType\022\030\n\020total_keys_typed\030\002 \001(\003\022\030\n\020to" +
+      "tal_latency_ms\030\003 \001(\003\022\026\n\016max_latency_ms\030\004" +
+      " \001(\003\022,\n\thistogram\030\005 \001(\0132\031.android_studio" +
+      ".Histogram\"\310\001\n\027EditorHighlightingStats\022C" +
+      "\n\014by_file_type\030\001 \003(\0132-.android_studio.Ed" +
+      "itorHighlightingStats.Stats\032h\n\005Stats\0221\n\t" +
+      "file_type\030\001 \001(\0162\036.android_studio.EditorF" +
+      "ileType\022,\n\thistogram\030\002 \001(\0132\031.android_stu" +
+      "dio.Histogram\"\273\002\n\025EditorCompletionStats\022" +
+      "A\n\014by_file_type\030\001 \003(\0132+.android_studio.E" +
+      "ditorCompletionStats.Stats\032\336\001\n\005Stats\0221\n\t" +
+      "file_type\030\001 \001(\0162\036.android_studio.EditorF" +
+      "ileType\0220\n\rpopup_latency\030\002 \001(\0132\031.android" +
+      "_studio.Histogram\022:\n\027full_completion_lat" +
+      "ency\030\003 \001(\0132\031.android_studio.Histogram\0224\n" +
+      "\021insertion_latency\030\004 \001(\0132\031.android_studi" +
+      "o.Histogram\"\204\r\n\027StudioPatchUpdaterEvent\022" +
+      ":\n\004kind\030\001 \001(\0162,.android_studio.StudioPat" +
+      "chUpdaterEvent.Kind\022<\n\005patch\030\002 \001(\0132-.and" +
+      "roid_studio.StudioPatchUpdaterEvent.Patc" +
+      "h\022I\n\014issue_dialog\030\003 \001(\01323.android_studio" +
+      ".StudioPatchUpdaterEvent.IssueDialog\022X\n\024" +
+      "issue_dialog_choices\030\004 \001(\0132:.android_stu" +
+      "dio.StudioPatchUpdaterEvent.IssueDialogC" +
+      "hoices\032?\n\005Patch\022\033\n\023studio_version_from\030\001" +
+      " \001(\t\022\031\n\021studio_version_to\030\002 \001(\t\032\361\003\n\013Issu" +
+      "eDialog\022H\n\005issue\030\001 \003(\01329.android_studio." +
+      "StudioPatchUpdaterEvent.IssueDialog.Issu" +
+      "e\032\227\003\n\005Issue\022L\n\004kind\030\001 \001(\0162>.android_stud" +
+      "io.StudioPatchUpdaterEvent.IssueDialog.I" +
+      "ssue.Kind\022P\n\006action\030\002 \001(\0162@.android_stud" +
+      "io.StudioPatchUpdaterEvent.IssueDialog.I" +
+      "ssue.Action\022R\n\020presented_option\030\003 \003(\01628." +
+      "android_studio.StudioPatchUpdaterEvent.V" +
+      "alidationOption\";\n\004Kind\022\020\n\014UNKNOWN_KIND\020" +
+      "\000\022\010\n\004INFO\020\001\022\014\n\010CONFLICT\020\002\022\t\n\005ERROR\020\003\"]\n\006" +
+      "Action\022\022\n\016UNKNOWN_ACTION\020\000\022\n\n\006CREATE\020\001\022\n" +
+      "\n\006UPDATE\020\002\022\n\n\006DELETE\020\003\022\r\n\tNO_ACTION\020\004\022\014\n" +
+      "\010VALIDATE\020\005\032\302\001\n\022IssueDialogChoices\022Q\n\006ch" +
+      "oice\030\001 \003(\0132A.android_studio.StudioPatchU" +
+      "pdaterEvent.IssueDialogChoices.Choice\032Y\n" +
+      "\006Choice\022O\n\rchosen_option\030\001 \001(\01628.android" +
+      "_studio.StudioPatchUpdaterEvent.Validati" +
+      "onOption\"\321\003\n\004Kind\022\026\n\022UNKNOWN_EVENT_KIND\020" +
+      "\000\022\t\n\005START\020\001\022\026\n\022PATCH_DETAILS_SHOW\020\002\022\037\n\033" +
+      "RETRYABLE_ERROR_DIALOG_SHOW\020\003\022\033\n\027FATAL_E" +
+      "RROR_DIALOG_SHOW\020\004\022#\n\037VALIDATION_PROBLEM" +
+      "S_DIALOG_SHOW\020\005\022$\n VALIDATION_PROBLEMS_D" +
+      "IALOG_CLOSE\020\006\022\021\n\rPHASE_UNKNOWN\020\007\022 \n\034PHAS" +
+      "E_EXTRACTING_PATCH_FILES\020\010\022!\n\035PHASE_VALI" +
+      "DATING_INSTALLATION\020\t\022\032\n\026PHASE_BACKING_U" +
+      "P_FILES\020\n\022\032\n\026PHASE_PREPARING_UPDATE\020\013\022\030\n" +
+      "\024PHASE_APPLYING_PATCH\020\014\022\023\n\017PHASE_REVERTI" +
+      "NG\020\r\022\025\n\021PHASE_CLEANING_UP\020\016\022\013\n\007EXIT_OK\020\017" +
+      "\022\016\n\nEXIT_ABORT\020\020\022\022\n\016EXIT_EXCEPTION\020\021\"|\n\020" +
+      "ValidationOption\022\035\n\031UNKNOWN_VALIDATION_O" +
+      "PTION\020\000\022\010\n\004NONE\020\001\022\n\n\006IGNORE\020\002\022\010\n\004KEEP\020\003\022" +
+      "\013\n\007REPLACE\020\004\022\n\n\006DELETE\020\005\022\020\n\014KILL_PROCESS" +
+      "\020\006\"\367\007\n\024ResourceManagerEvent\0227\n\004kind\030\001 \001(" +
+      "\0162).android_studio.ResourceManagerEvent." +
+      "Kind\022H\n\rresource_type\030\002 \001(\01621.android_st" +
+      "udio.ResourceManagerEvent.ResourceType\"\245" +
+      "\005\n\004Kind\022\026\n\022UNKNOWN_EVENT_KIND\020\000\022\024\n\020TOOL_" +
+      "WINDOW_OPEN\020\001\022\037\n\033RESOURCE_PICKER_DIALOG_" +
+      "OPEN\020\021\022\032\n\026ASSET_ADDED_VIA_BUTTON\020\002\022\027\n\023AS" +
+      "SET_ADDED_VIA_DND\020\003\022\026\n\022DETAIL_VIEW_OPENE" +
+      "D\020\004\022\020\n\014ASSET_OPENED\020\005\022\025\n\021LIST_MODE_CHANG" +
+      "ED\020\006\022\033\n\027DEPENDENT_MODULES_SHOWN\020\022\022\034\n\030DEP" +
+      "ENDENT_MODULES_HIDDEN\020\023\022\023\n\017LIBRARIES_SHO" +
+      "WN\020\007\022\024\n\020LIBRARIES_HIDDEN\020\010\022\023\n\017FRAMEWORK_" +
+      "SHOWN\020\024\022\024\n\020FRAMEWORK_HIDDEN\020\025\022\024\n\020THEME_A" +
+      "TTR_SHOWN\020\026\022\025\n\021THEME_ATTR_HIDDEN\020\027\022\031\n\025EN" +
+      "ABLE_FILTER_BY_TYPE\020\030\022\023\n\017DENSITY_INFERED" +
+      "\020\t\022\033\n\027DROP_ON_XML_BLANK_SPACE\020\n\022\023\n\017DROP_" +
+      "ON_XML_TAG\020\013\022\031\n\025DROP_ON_XML_ATTRIBUTE\020\014\022" +
+      "\027\n\023DROP_ON_LAYOUT_VIEW\020\r\022\034\n\030DROP_ON_LAYO" +
+      "UT_VIEWGROUP\020\016\022\020\n\014DROP_AS_TEXT\020\017\022\030\n\024IMPO" +
+      "RT_LIMIT_REACHED\020\020\022\027\n\023REFRESH_RES_PREVIE" +
+      "W\020\031\022!\n\035REFRESH_ALL_RES_TYPE_PREVIEWS\020\032\"\263" +
+      "\001\n\014ResourceType\022\013\n\007UNKNOWN\020\000\022\014\n\010DRAWABLE" +
+      "\020\001\022\t\n\005COLOR\020\002\022\n\n\006LAYOUT\020\003\022\n\n\006STRING\020\004\022\010\n" +
+      "\004FONT\020\005\022\007\n\003SVG\020\006\022\n\n\006RASTER\020\007\022\016\n\nNAVIGATI" +
+      "ON\020\010\022\010\n\004MENU\020\t\022\r\n\tANIMATION\020\n\022\t\n\005STYLE\020\013" +
+      "\022\t\n\005VALUE\020\014\022\007\n\003XML\020\r\";\n\rIdePluginInfo\022*\n" +
+      "\007plugins\030\001 \003(\0132\031.android_studio.IdePlugi" +
+      "n\"9\n\tIdePlugin\022\n\n\002id\030\001 \001(\t\022\017\n\007version\030\002 " +
+      "\001(\t\022\017\n\007bundled\030\003 \001(\010\"\246\002\n\025WindowsDefender" +
+      "Status\022<\n\006status\030\001 \001(\0162,.android_studio." +
+      "WindowsDefenderStatus.Status\022\034\n\024project_" +
+      "dir_excluded\030\002 \001(\010\"\260\001\n\006Status\022\022\n\016UNKNOWN" +
+      "_STATUS\020\000\022\025\n\021SCANNING_DISABLED\020\001\022\024\n\014ALL_" +
+      "EXCLUDED\020\002\032\002\010\001\022\025\n\rSOME_EXCLUDED\020\003\032\002\010\001\022\025\n" +
+      "\rNONE_EXCLUDED\020\004\032\002\010\001\022\021\n\rCHECK_IGNORED\020\005\022" +
+      "\020\n\014ENABLED_AUTO\020\006\022\022\n\016ENABLED_MANUAL\020\007\"\207\004" +
+      "\n\023MemorySettingsEvent\022;\n\004kind\030\001 \001(\0162-.an" +
+      "droid_studio.MemorySettingsEvent.EventKi" +
+      "nd\022/\n\007current\030\002 \001(\0132\036.android_studio.Mem" +
+      "orySettings\0223\n\013recommended\030\003 \001(\0132\036.andro" +
+      "id_studio.MemorySettings\022/\n\007changed\030\004 \001(" +
+      "\0132\036.android_studio.MemorySettings\"\233\002\n\tEv" +
+      "entKind\022\013\n\007UNKNOWN\020\000\022\026\n\022SHOW_CONFIG_DIAL" +
+      "OG\020\001\022\031\n\025SETTINGS_CHANGE_SAVED\020\002\022\035\n\031SETTI" +
+      "NGS_CHANGE_CANCELLED\020\003\022#\n\037NON_DEFAULT_RE" +
+      "COMMENDATION_USED\020\004\022\'\n#APPLY_RECOMMENDAT" +
+      "ION_BUTTON_CLICKED\020\005\022\027\n\023SHOW_RECOMMENDAT" +
+      "ION\020\006\022\024\n\020SAVE_AND_RESTART\020\007\022\r\n\tCONFIGURE" +
+      "\020\010\022\023\n\017REMIND_ME_LATER\020\t\022\016\n\nDO_NOT_ASK\020\n\"" +
+      "W\n\016MemorySettings\022\017\n\007ide_xmx\030\001 \001(\005\022\031\n\021gr" +
+      "adle_daemon_xmx\030\002 \001(\005\022\031\n\021kotlin_daemon_x" +
+      "mx\030\003 \001(\005\"\244\004\n\025StudioUpdateFlowEvent\022>\n\nev" +
+      "ent_kind\030\001 \001(\0162*.android_studio.StudioUp" +
+      "dateFlowEvent.Kind\022\032\n\022studio_new_version" +
+      "\030\002 \001(\t\022K\n\016dialog_trigger\030\003 \001(\01623.android" +
+      "_studio.StudioUpdateFlowEvent.DialogTrig" +
+      "ger\022\023\n\013action_name\030\004 \001(\t\"\202\002\n\004Kind\022\020\n\014UNK" +
+      "NOWN_KIND\020\000\022\026\n\022NOTIFICATION_SHOWN\020\001\022$\n N" +
+      "OTIFICATION_UPDATE_LINK_CLICKED\020\002\022\017\n\013DIA" +
+      "LOG_OPEN\020\003\022\027\n\023DIALOG_CLICK_UPDATE\020\004\022\027\n\023D" +
+      "IALOG_CLICK_IGNORE\020\005\022\026\n\022DIALOG_CLICK_LAT" +
+      "ER\020\006\022\027\n\023DIALOG_CLICK_ACTION\020\007\022\032\n\026PATCH_D" +
+      "OWNLOAD_SUCCESS\020\010\022\032\n\026PATCH_DOWNLOAD_FAIL" +
+      "URE\020\t\"H\n\rDialogTrigger\022\031\n\025UNKNOWN_DIALOG" +
+      "_TRIGER\020\000\022\n\n\006MANUAL\020\001\022\020\n\014NOTIFICATION\020\002\"" +
+      "\311\004\n\021BuildErrorMessage\022E\n\020error_shown_typ" +
+      "e\030\001 \001(\0162+.android_studio.BuildErrorMessa" +
+      "ge.ErrorType\022\036\n\026file_location_included\030\002",
+      " \001(\010\022F\n\022file_included_type\030\003 \001(\0162*.andro" +
+      "id_studio.BuildErrorMessage.FileType\022\036\n\026" +
+      "line_location_included\030\004 \001(\010\"\225\002\n\tErrorTy" +
+      "pe\022\026\n\022UNKNOWN_ERROR_TYPE\020\000\022\021\n\rJAVA_COMPI" +
+      "LER\020\001\022\023\n\017KOTLIN_COMPILER\020\002\022\t\n\005CLANG\020\003\022\t\n" +
+      "\005CMAKE\020\004\022\020\n\014DATA_BINDING\020\005\022\016\n\nXML_PARSER" +
+      "\020\006\022\010\n\004AAPT\020\007\022\006\n\002D8\020\010\022\006\n\002R8\020\t\022\035\n\031RESOURCE" +
+      "_AND_ASSET_MERGER\020\n\022!\n\035GENERAL_ANDROID_G" +
+      "RADLE_PLUGIN\020\013\022\033\n\027INVALID_TOML_DEFINITIO" +
+      "N\020\014\022\027\n\023CONFIGURATION_CACHE\020\r\"M\n\010FileType" +
+      "\022\025\n\021UNKNOWN_FILE_TYPE\020\000\022\030\n\024BUILD_GENERAT" +
+      "ED_FILE\020\001\022\020\n\014PROJECT_FILE\020\002\"Y\n\026BuildOutp" +
+      "utWindowStats\022?\n\024build_error_messages\030\001 " +
+      "\003(\0132!.android_studio.BuildErrorMessage\"\233" +
+      "\001\n\031GradlePluginDslUsageStats\022P\n\017dsl_elem" +
+      "ent_use\030\001 \003(\01327.android_studio.GradlePlu" +
+      "ginDslUsageStats.DslElementUse\032,\n\rDslEle" +
+      "mentUse\022\014\n\004type\030\001 \001(\005\022\r\n\005count\030\002 \001(\005\"\211\001\n" +
+      "\033DefaultActivityLocatorStats\022\030\n\020blocks_u" +
+      "i_thread\030\001 \001(\010\022\023\n\013index_based\030\002 \001(\010\022\'\n\037u" +
+      "sed_potentially_stale_manifest\030\003 \001(\010\022\022\n\n" +
+      "latency_ms\030\004 \001(\004\"\252\005\n\027MotionLayoutEditorE" +
+      "vent\022Q\n\004type\030\001 \001(\0162C.android_studio.Moti" +
+      "onLayoutEditorEvent.MotionLayoutEditorEv" +
+      "entType\"\273\004\n\033MotionLayoutEditorEventType\022" +
+      "\026\n\022UNKNOWN_EVENT_TYPE\020\000\022\025\n\021CREATE_CONSTR" +
+      "AINT\020\001\022\025\n\021CREATE_TRANSITION\020\002\022\022\n\016CREATE_" +
+      "ONCLICK\020\003\022\021\n\rTOGGLE_LAYOUT\020\004\022\027\n\023CREATE_K" +
+      "EY_POSITION\020\005\022\031\n\025CREATE_KEY_ATTRIBUTES\020\006" +
+      "\022\024\n\020CREATE_KEY_CYCLE\020\007\022\026\n\022CREATE_KEY_TRI" +
+      "GGER\020\010\022\031\n\025CREATE_KEY_TIME_CYCLE\020\t\022\031\n\025CON" +
+      "VERT_TO_CONSTRAINT\020\n\022#\n\037CONVERT_TO_SECTI" +
+      "ONED_CONSTRAINT\020\013\022\024\n\020CLEAR_CONSTRAINT\020\014\022" +
+      "\021\n\rSHOW_TIMELINE\020\r\022\026\n\022SHOW_CONSTRAINTSET" +
+      "\020\016\022\017\n\013SHOW_LAYOUT\020\017\022\033\n\027CONSTRAINT_TABLE_" +
+      "SELECT\020\020\022\027\n\023LAYOUT_TABLE_SELECT\020\021\022\031\n\025TIM" +
+      "ELINE_TABLE_SELECT\020\022\022\017\n\013MOTION_PLAY\020\023\022\020\n" +
+      "\014MOTION_SPEED\020\024\022\020\n\014MOTION_PAUSE\020\025\022\032\n\026MOT" +
+      "ION_DIRETION_TOGGLE\020\026\"\330\005\n\016MultiViewEvent" +
+      "\022?\n\004type\030\001 \001(\01621.android_studio.MultiVie" +
+      "wEvent.MultiViewEventType\022^\n\034associated_" +
+      "split_editor_mode\030\002 \001(\01628.android_studio" +
+      ".MultiViewEvent.AssociatedSplitEditorMod" +
+      "e\022K\n\022toggle_issue_panel\030\003 \001(\0162/.android_" +
+      "studio.MultiViewEvent.ToggleIssuePanel\"\240" +
+      "\002\n\022MultiViewEventType\022\026\n\022UNKNOWN_EVENT_T" +
+      "YPE\020\000\022\026\n\022OPEN_PIXEL_DEVICES\020\001\022\030\n\024OPEN_PR" +
+      "OJECT_LOCALES\020\002\022\"\n\036OPEN_CUSTOM_CONFIGURA" +
+      "TION_SETS\020\003\022\031\n\025OPEN_COLOR_BLIND_MODE\020\004\022\023" +
+      "\n\017OPEN_LARGE_FONT\020\005\022\026\n\022OPEN_LARGE_DISPLA" +
+      "Y\020\006\022\025\n\021OPEN_WEAR_DEVICES\020\007\022\032\n\026OPEN_REFER" +
+      "ENCE_DEVICES\020\010\022!\n\035OPEN_USER_DEFINED_CUST" +
+      "OM_SETS\020\t\"]\n\031AssociatedSplitEditorMode\022\020" +
+      "\n\014UNKNOWN_MODE\020\000\022\r\n\tTEXT_MODE\020\001\022\016\n\nSPLIT" +
+      "_MODE\020\002\022\017\n\013VISUAL_MODE\020\003\"V\n\020ToggleIssueP" +
+      "anel\022\025\n\021UNKNOWN_OPERATION\020\000\022\024\n\020OPEN_ISSU" +
+      "E_PANEL\020\001\022\025\n\021CLOSE_ISSUE_PANEL\020\002\"\356\006\n\034Com" +
+      "poseAnimationToolingEvent\022[\n\004type\030\001 \001(\0162" +
+      "M.android_studio.ComposeAnimationTooling" +
+      "Event.ComposeAnimationToolingEventType\022\"" +
+      "\n\032animation_speed_multiplier\030\002 \001(\002\"\314\005\n C" +
+      "omposeAnimationToolingEventType\022\026\n\022UNKNO" +
+      "WN_EVENT_TYPE\020\000\022\034\n\030OPEN_ANIMATION_INSPEC" +
+      "TOR\020\001\022\035\n\031CLOSE_ANIMATION_INSPECTOR\020\002\022!\n\035" +
+      "ANIMATION_INSPECTOR_AVAILABLE\020\003\022\027\n\023TRIGG" +
+      "ER_PLAY_ACTION\020\004\022\030\n\024TRIGGER_PAUSE_ACTION" +
+      "\020\005\022\026\n\022ENABLE_LOOP_ACTION\020\006\022\027\n\023DISABLE_LO" +
+      "OP_ACTION\020\007\022\032\n\026CHANGE_ANIMATION_SPEED\020\010\022" +
+      " \n\034TRIGGER_JUMP_TO_START_ACTION\020\t\022\036\n\032TRI" +
+      "GGER_JUMP_TO_END_ACTION\020\n\022\026\n\022CHANGE_STAR" +
+      "T_STATE\020\013\022\024\n\020CHANGE_END_STATE\020\014\022\036\n\032TRIGG" +
+      "ER_SWAP_STATES_ACTION\020\r\022&\n\"CLICK_ANIMATI" +
+      "ON_INSPECTOR_TIMELINE\020\016\022%\n!DRAG_ANIMATIO" +
+      "N_INSPECTOR_TIMELINE\020\017\022\031\n\025EXPAND_ANIMATI" +
+      "ON_CARD\020\020\022\033\n\027COLLAPSE_ANIMATION_CARD\020\021\022\031" +
+      "\n\025OPEN_ANIMATION_IN_TAB\020\022\022\027\n\023CLOSE_ANIMA" +
+      "TION_TAB\020\023\022\022\n\016LOCK_ANIMATION\020\024\022\024\n\020UNLOCK" +
+      "_ANIMATION\020\025\022\022\n\016RESET_TIMELINE\020\026\022\026\n\022DRAG" +
+      "_TIMELINE_LINE\020\027\022\017\n\013OPEN_PICKER\020\030\"\370\004\n\030Co" +
+      "mposeMultiPreviewEvent\022a\n\023multi_preview_" +
+      "nodes\030\001 \003(\0132D.android_studio.ComposeMult" +
+      "iPreviewEvent.ComposeMultiPreviewNodeInf" +
+      "o\022$\n\034is_compose_preview_lite_mode\030\002 \001(\010\032" +
+      "\322\003\n\033ComposeMultiPreviewNodeInfo\022`\n\tnode_" +
+      "type\030\001 \001(\0162M.android_studio.ComposeMulti" +
+      "PreviewEvent.ComposeMultiPreviewNodeInfo" +
+      ".NodeType\022 \n\030anonymized_composable_id\030\002 " +
+      "\001(\003\022\034\n\024preview_childs_count\030\003 \001(\005\022\"\n\032mul" +
+      "ti_preview_childs_count\030\004 \001(\005\022\036\n\026subtree" +
+      "_previews_count\030\005 \001(\005\022$\n\034subtree_multi_p" +
+      "reviews_count\030\006 \001(\005\022#\n\033subtree_useless_n" +
+      "odes_count\030\007 \001(\005\022\023\n\013depth_level\030\010 \001(\005\"m\n" +
+      "\010NodeType\022\025\n\021UNKNOWN_NODE_TYPE\020\000\022!\n\035ROOT" +
+      "_COMPOSABLE_FUNCTION_NODE\020\001\022\025\n\021MULTIPREV" +
+      "IEW_NODE\020\002\022\020\n\014PREVIEW_NODE\020\003\"\260\002\n\033Compose" +
+      "PreviewLiteModeEvent\022Y\n\004type\030\001 \001(\0162K.and" +
+      "roid_studio.ComposePreviewLiteModeEvent." +
+      "ComposePreviewLiteModeEventType\022$\n\034is_co" +
+      "mpose_preview_lite_mode\030\002 \001(\010\"\217\001\n\037Compos" +
+      "ePreviewLiteModeEventType\022\026\n\022UNKNOWN_EVE" +
+      "NT_TYPE\020\000\022\023\n\017OPEN_AND_RENDER\020\001\022\034\n\030PREVIE" +
+      "W_LITE_MODE_SWITCH\020\002\022!\n\035STUDIO_ESSENTIAL" +
+      "S_MODE_SWITCH\020\003\"\231\006\n\023PreviewRefreshEvent\022" +
+      "=\n\004type\030\001 \001(\0162/.android_studio.PreviewRe" +
+      "freshEvent.PreviewType\022A\n\006result\030\002 \001(\01621" +
+      ".android_studio.PreviewRefreshEvent.Refr" +
+      "eshResult\022\034\n\024in_queue_time_millis\030\003 \001(\005\022" +
+      "\033\n\023refresh_time_millis\030\004 \001(\005\022\026\n\016previews" +
+      "_count\030\005 \001(\005\022\033\n\023previews_to_refresh\030\006 \001(" +
+      "\005\022P\n\017preview_renders\030\007 \003(\01327.android_stu" +
+      "dio.PreviewRefreshEvent.SinglePreviewRen" +
+      "der\032\354\001\n\023SinglePreviewRender\022T\n\006result\030\001 " +
+      "\001(\0162D.android_studio.PreviewRefreshEvent" +
+      ".SinglePreviewRender.RenderResult\022\017\n\007inf" +
+      "late\030\002 \001(\010\022\026\n\016render_quality\030\003 \001(\002\022\032\n\022re" +
+      "nder_time_millis\030\004 \001(\005\":\n\014RenderResult\022\022" +
+      "\n\016UNKNOWN_RESULT\020\000\022\013\n\007SUCCESS\020\001\022\t\n\005ERROR" +
+      "\020\002\"S\n\013PreviewType\022\020\n\014UNKNOWN_TYPE\020\000\022\013\n\007C" +
+      "OMPOSE\020\001\022\010\n\004WEAR\020\002\022\n\n\006GLANCE\020\003\022\017\n\013CUSTOM" +
+      "_VIEW\020\004\"z\n\rRefreshResult\022\022\n\016UNKNOWN_RESU" +
+      "LT\020\000\022\013\n\007SUCCESS\020\001\022\013\n\007SKIPPED\020\002\022\022\n\016USER_C" +
+      "ANCELLED\020\003\022\033\n\027AUTOMATICALLY_CANCELLED\020\004\022" +
+      "\n\n\006FAILED\020\005\"\300\001\n\022ComposeDeployEvent\022G\n\004ty" +
+      "pe\030\001 \001(\01629.android_studio.ComposeDeployE" +
+      "vent.ComposeDeployEventType\"a\n\026ComposeDe" +
+      "ployEventType\022\026\n\022UNKNOWN_EVENT_TYPE\020\000\022\026\n" +
+      "\022DEPLOY_FROM_GUTTER\020\001\022\027\n\023DEPLOY_FROM_TOO" +
+      "LBAR\020\002\"\231\001\n\022ComposeSampleEvent\022G\n\004type\030\001 " +
+      "\001(\01629.android_studio.ComposeSampleEvent." +
+      "ComposeSampleEventType\":\n\026ComposeSampleE" +
+      "ventType\022\026\n\022UNKNOWN_EVENT_TYPE\020\000\022\010\n\004OPEN" +
+      "\020\001\"-\n\021ImportSampleEvent\022\030\n\020import_sample" +
+      "_id\030\001 \001(\t\"\217\002\n BuildAttributionPluginIden" +
+      "tifier\022I\n\004type\030\001 \001(\0162;.android_studio.Bu" +
+      "ildAttributionPluginIdentifier.PluginTyp" +
+      "e\022\033\n\023plugin_display_name\030\002 \001(\t\022\031\n\021plugin" +
+      "_class_name\030\003 \001(\t\"h\n\nPluginType\022\020\n\014UNKNO" +
+      "WN_TYPE\020\000\022\020\n\014BUILD_SCRIPT\020\001\022\025\n\rBINARY_PL" +
+      "UGIN\020\002\032\002\010\001\022\r\n\tBUILD_SRC\020\003\022\020\n\014OTHER_PLUGI" +
+      "N\020\004\"\203\001\n\037BuildAttribuitionTaskIdentifier\022" +
+      "\027\n\017task_class_name\030\001 \001(\t\022G\n\rorigin_plugi" +
+      "n\030\002 \001(\01320.android_studio.BuildAttributio" +
+      "nPluginIdentifier\"\366\003\n\032AlwaysRunTasksAnal" +
+      "yzerData\022R\n\020always_run_tasks\030\001 \003(\01328.and" +
+      "roid_studio.AlwaysRunTasksAnalyzerData.A" +
+      "lwaysRunTask\032\203\003\n\rAlwaysRunTask\022X\n\006reason" +
+      "\030\001 \001(\0162H.android_studio.AlwaysRunTasksAn" +
+      "alyzerData.AlwaysRunTask.AlwaysRunReason" +
+      "\022O\n\021plugin_identifier\030\002 \001(\01320.android_st" +
+      "udio.BuildAttributionPluginIdentifierB\002\030" +
+      "\001\022H\n\017task_identifier\030\003 \001(\0132/.android_stu" +
+      "dio.BuildAttribuitionTaskIdentifier\"}\n\017A" +
+      "lwaysRunReason\022\022\n\016UNKNOWN_REASON\020\000\022\036\n\032NO" +
+      "_OUTPUTS_WITHOUT_ACTIONS\020\001\022\033\n\027NO_OUTPUTS" +
+      "_WITH_ACTIONS\020\002\022\031\n\025UP_TO_DATE_WHEN_FALSE" +
+      "\020\003\"\225\002\n AnnotationProcessorsAnalyzerData\022" +
+      "\201\001\n%non_incremental_annotation_processor" +
+      "s\030\001 \003(\0132R.android_studio.AnnotationProce" +
+      "ssorsAnalyzerData.NonIncrementalAnnotati" +
+      "onProcessor\032m\n!NonIncrementalAnnotationP" +
+      "rocessor\022\037\n\027compilation_duration_ms\030\001 \001(" +
+      "\003\022\'\n\037annotation_processor_class_name\030\002 \001" +
+      "(\t\"\234\003\n\030CriticalPathAnalyzerData\022!\n\031criti" +
+      "cal_path_duration_ms\030\001 \001(\003\022(\n number_of_" +
+      "tasks_on_critical_path\030\002 \001(\005\022W\n\025plugins_" +
+      "critical_path\030\003 \003(\01328.android_studio.Cri" +
+      "ticalPathAnalyzerData.PluginBuildData\022+\n" +
+      "#tasks_determining_build_duration_ms\030\004 \001" +
+      "(\003\0222\n*number_of_tasks_determining_build_" +
+      "duration\030\005 \001(\005\032y\n\017PluginBuildData\022\031\n\021bui" +
+      "ld_duration_ms\030\001 \001(\003\022K\n\021plugin_identifie" +
       "r\030\002 \001(\01320.android_studio.BuildAttributio" +
-      "nPluginIdentifier\032\262\002\n\021ConfigurationStep\022" +
-      "Y\n\004type\030\001 \001(\0162K.android_studio.ProjectCo" +
-      "nfigurationAnalyzerData.ConfigurationSte" +
-      "p.StepType\022\035\n\025configuration_time_ms\030\002 \001(" +
-      "\003\"\242\001\n\010StepType\022\020\n\014UNKNOWN_STEP\020\000\022\035\n\031NOTI" +
-      "FYING_BUILD_LISTENERS\020\001\022\032\n\026RESOLVING_DEP" +
-      "ENDENCIES\020\002\022\033\n\027COMPILING_BUILD_SCRIPTS\020\003" +
-      "\022!\n\035EXECUTING_BUILD_SCRIPT_BLOCKS\020\004\022\t\n\005O" +
-      "THER\020\005\032\210\002\n\030ProjectConfigurationData\022\035\n\025c" +
-      "onfiguration_time_ms\030\001 \001(\003\022l\n\032plugins_co" +
-      "nfiguration_data\030\002 \003(\0132H.android_studio." +
-      "ProjectConfigurationAnalyzerData.PluginC" +
-      "onfigurationData\022_\n\023configuration_steps\030" +
-      "\003 \003(\0132B.android_studio.ProjectConfigurat" +
-      "ionAnalyzerData.ConfigurationStep\"\344\002\n$Ta" +
-      "sksConfigurationIssuesAnalyzerData\022n\n\031ta" +
-      "sks_sharing_output_data\030\001 \003(\0132K.android_" +
-      "studio.TasksConfigurationIssuesAnalyzerD" +
-      "ata.TasksSharingOutputData\032\313\001\n\026TasksShar" +
-      "ingOutputData\022b\n$plugins_created_sharing" +
-      "_output_tasks\030\001 \003(\01320.android_studio.Bui" +
-      "ldAttributionPluginIdentifierB\002\030\001\022M\n\024tas" +
-      "ks_sharing_output\030\002 \003(\0132/.android_studio" +
-      ".BuildAttribuitionTaskIdentifier\"\376\003\n#Con" +
-      "figurationCacheCompatibilityData\022c\n\023comp" +
-      "atibility_state\030\001 \001(\0162F.android_studio.C" +
-      "onfigurationCacheCompatibilityData.Compa" +
-      "tibilityState\022N\n\024incompatible_plugins\030\002 " +
-      "\003(\01320.android_studio.BuildAttributionPlu" +
-      "ginIdentifier\"\241\002\n\022CompatibilityState\022\021\n\r" +
-      "UNKNOWN_STATE\020\000\022\026\n\022AGP_NOT_COMPATIBLE\020\001\022" +
-      "%\n!AGP_DOES_NOT_PROVIDE_PLUGINS_DATA\020\002\022!" +
-      "\n\035INCOMPATIBLE_PLUGINS_DETECTED\020\003\022%\n!INC" +
-      "OMPATIBLE_PLUGINS_NOT_DETECTED\020\004\022!\n\035CONF" +
-      "IGURATION_CACHE_TURNED_ON\020\005\022(\n$CONFIGURA" +
-      "TION_CACHE_TRIAL_FLOW_BUILD\020\006\022\"\n\036CONFIGU" +
-      "RATION_CACHE_TURNED_OFF\020\007\"\335\002\n\021JetifierUs" +
-      "ageData\022R\n\024jetifier_usage_state\030\001 \001(\01624." +
-      "android_studio.JetifierUsageData.Jetifie" +
-      "rUsageState\022,\n$number_of_libraries_requi" +
-      "re_jetifier\030\002 \001(\005\022!\n\031check_jetifier_task" +
-      "_build\030\003 \001(\010\"\242\001\n\022JetifierUsageState\022\021\n\rU" +
-      "NKNOWN_STATE\020\000\022\025\n\021JETIFIER_NOT_USED\020\001\022 \n" +
-      "\034JETIFIER_USED_CHECK_REQUIRED\020\002\022\033\n\027JETIF" +
-      "IER_CAN_BE_REMOVED\020\003\022#\n\037JETIFIER_REQUIRE" +
-      "D_FOR_LIBRARIES\020\004\"\207\005\n\032BuildDownloadsAnal" +
-      "ysisData\022P\n\014repositories\030\001 \003(\0132:.android" +
-      "_studio.BuildDownloadsAnalysisData.Repos" +
-      "itoryStats\032\226\004\n\017RepositoryStats\022b\n\017reposi" +
-      "tory_type\030\001 \001(\0162I.android_studio.BuildDo" +
-      "wnloadsAnalysisData.RepositoryStats.Repo" +
-      "sitoryType\022\036\n\026success_requests_count\030\002 \001" +
-      "(\005\022&\n\036success_requests_total_time_ms\030\003 \001" +
-      "(\003\022/\n\'success_requests_total_bytes_downl" +
-      "oaded\030\004 \001(\003\022\035\n\025failed_requests_count\030\005 \001" +
-      "(\005\022%\n\035failed_requests_total_time_ms\030\006 \001(" +
-      "\003\022.\n&failed_requests_total_bytes_downloa" +
-      "ded\030\007 \001(\003\022\035\n\025missed_requests_count\030\010 \001(\005" +
-      "\022%\n\035missed_requests_total_time_ms\030\t \001(\003\"" +
-      "j\n\016RepositoryType\022\026\n\022UNKNOWN_REPOSITORY\020" +
-      "\000\022\n\n\006GOOGLE\020\001\022\021\n\rMAVEN_CENTRAL\020\002\022\013\n\007JCEN" +
-      "TER\020\003\022\024\n\020OTHER_REPOSITORY\020\004\"\247\002\n\026TaskCate" +
-      "goryIssuesData\022U\n\017reported_issues\030\001 \003(\0162" +
-      "8.android_studio.TaskCategoryIssuesData." +
-      "TaskCategoryIssueB\002\020\001\"\265\001\n\021TaskCategoryIs" +
-      "sue\022\021\n\rUNKNOWN_ISSUE\020\000\022\036\n\032NON_FINAL_RES_" +
-      "IDS_DISABLED\020\001\022#\n\037NON_TRANSITIVE_R_CLASS" +
-      "_DISABLED\020\002\022\037\n\033RESOURCE_VALIDATION_ENABL" +
-      "ED\020\003\022\'\n#MINIFICATION_ENABLED_IN_DEBUG_BU" +
-      "ILD\020\004\"\302\006\n\035BuildAttributionAnalyzersData\022" +
-      "\033\n\023total_build_time_ms\030\001 \001(\003\022R\n\036always_r" +
-      "un_tasks_analyzer_data\030\002 \001(\0132*.android_s" +
-      "tudio.AlwaysRunTasksAnalyzerData\022]\n#anno" +
-      "tation_processors_analyzer_data\030\003 \001(\01320." +
-      "android_studio.AnnotationProcessorsAnaly" +
-      "zerData\022M\n\033critical_path_analyzer_data\030\004" +
-      " \001(\0132(.android_studio.CriticalPathAnalyz" +
-      "erData\022]\n#project_configuration_analyzer" +
-      "_data\030\005 \001(\01320.android_studio.ProjectConf" +
-      "igurationAnalyzerData\022f\n(tasks_configura" +
-      "tion_issues_analyzer_data\030\006 \001(\01324.androi" +
+      "nPluginIdentifier\"\317\007\n ProjectConfigurati" +
+      "onAnalyzerData\022m\n\032project_configuration_" +
+      "data\030\001 \003(\0132I.android_studio.ProjectConfi" +
+      "gurationAnalyzerData.ProjectConfiguratio" +
+      "nData\022m\n\032overall_configuration_data\030\002 \001(" +
+      "\0132I.android_studio.ProjectConfigurationA" +
+      "nalyzerData.ProjectConfigurationData\032\214\001\n" +
+      "\027PluginConfigurationData\022$\n\034plugin_confi" +
+      "guration_time_ms\030\001 \001(\003\022K\n\021plugin_identif" +
+      "ier\030\002 \001(\01320.android_studio.BuildAttribut" +
+      "ionPluginIdentifier\032\262\002\n\021ConfigurationSte" +
+      "p\022Y\n\004type\030\001 \001(\0162K.android_studio.Project" +
+      "ConfigurationAnalyzerData.ConfigurationS" +
+      "tep.StepType\022\035\n\025configuration_time_ms\030\002 " +
+      "\001(\003\"\242\001\n\010StepType\022\020\n\014UNKNOWN_STEP\020\000\022\035\n\031NO" +
+      "TIFYING_BUILD_LISTENERS\020\001\022\032\n\026RESOLVING_D" +
+      "EPENDENCIES\020\002\022\033\n\027COMPILING_BUILD_SCRIPTS" +
+      "\020\003\022!\n\035EXECUTING_BUILD_SCRIPT_BLOCKS\020\004\022\t\n" +
+      "\005OTHER\020\005\032\210\002\n\030ProjectConfigurationData\022\035\n" +
+      "\025configuration_time_ms\030\001 \001(\003\022l\n\032plugins_" +
+      "configuration_data\030\002 \003(\0132H.android_studi" +
+      "o.ProjectConfigurationAnalyzerData.Plugi" +
+      "nConfigurationData\022_\n\023configuration_step" +
+      "s\030\003 \003(\0132B.android_studio.ProjectConfigur" +
+      "ationAnalyzerData.ConfigurationStep\"\344\002\n$" +
+      "TasksConfigurationIssuesAnalyzerData\022n\n\031" +
+      "tasks_sharing_output_data\030\001 \003(\0132K.androi" +
       "d_studio.TasksConfigurationIssuesAnalyze" +
-      "rData\022c\n&configuration_cache_compatibili" +
-      "ty_data\030\007 \001(\01323.android_studio.Configura" +
-      "tionCacheCompatibilityData\022>\n\023jetifier_u" +
-      "sage_data\030\010 \001(\0132!.android_studio.Jetifie" +
-      "rUsageData\022K\n\027downloads_analysis_data\030\t " +
-      "\001(\0132*.android_studio.BuildDownloadsAnaly" +
-      "sisData\022I\n\031task_category_issues_data\030\n \001" +
-      "(\0132&.android_studio.TaskCategoryIssuesDa" +
-      "ta\"\316\001\n BuildAttributionPerformanceStats\022" +
-      "\'\n\037post_build_analysis_duration_ms\030\001 \001(\003" +
-      "\022\037\n\027ui_creation_duration_ms\030\002 \001(\003\0223\n+too" +
-      "ling_api_build_finished_event_latency_ms" +
-      "\030\003 \001(\003\022+\n#number_of_generated_partial_re" +
-      "sults\030\004 \001(\005\"\370\004\n\025BuildAttributionStats\022W\n" +
-      " build_attribution_analyzers_data\030\001 \001(\0132" +
-      "-.android_studio.BuildAttributionAnalyze" +
-      "rsData\022]\n#build_attribution_performance_" +
-      "stats\030\002 \001(\01320.android_studio.BuildAttrib" +
-      "utionPerformanceStats\022+\n#build_attributi" +
-      "on_report_session_id\030\003 \001(\t\022X\n\025build_anal" +
-      "ysis_status\030\004 \001(\01629.android_studio.Build" +
-      "AttributionStats.BuildAnalysisStatus\022C\n\n" +
-      "build_type\030\005 \001(\0162/.android_studio.BuildA" +
-      "ttributionStats.BuildType\"_\n\023BuildAnalys" +
-      "isStatus\022\022\n\016UNKNOWN_STATUS\020\000\022\013\n\007SUCCESS\020" +
-      "\001\022\021\n\rBUILD_FAILURE\020\002\022\024\n\020ANALYSIS_FAILURE" +
-      "\020\003\"z\n\tBuildType\022\026\n\022UNKNOWN_BUILD_TYPE\020\000\022" +
-      "\021\n\rREGULAR_BUILD\020\001\022(\n$CONFIGURATION_CACH" +
-      "E_TRIAL_FLOW_BUILD\020\002\022\030\n\024CHECK_JETIFIER_B" +
-      "UILD\020\003\"\320\036\n\027BuildAttributionUiEvent\022E\n\nev" +
-      "ent_type\030\001 \001(\01621.android_studio.BuildAtt" +
-      "ributionUiEvent.EventType\022B\n\014current_pag" +
-      "e\030\002 \001(\0132,.android_studio.BuildAttributio" +
-      "nUiEvent.Page\022A\n\013target_page\030\003 \001(\0132,.and" +
-      "roid_studio.BuildAttributionUiEvent.Page" +
-      "\022+\n#build_attribution_report_session_id\030" +
-      "\004 \001(\t\022O\n\013link_target\030\005 \001(\0162:.android_stu" +
-      "dio.BuildAttributionUiEvent.OutgoingLink" +
-      "Target\022K\n\017applied_filters\030\006 \003(\01622.androi" +
-      "d_studio.BuildAttributionUiEvent.FilterI" +
-      "tem\022 \n\030event_processing_time_ms\030\007 \001(\003\022\r\n" +
-      "\005width\030\010 \001(\003\022\016\n\006height\030\t \001(\003\032\307\t\n\004Page\022H\n" +
-      "\tpage_type\030\001 \001(\01625.android_studio.BuildA" +
-      "ttributionUiEvent.Page.PageType\022\030\n\020page_" +
-      "entry_index\030\002 \001(\005\"\332\010\n\010PageType\022\020\n\014UNKNOW" +
-      "N_PAGE\020\000\022\021\n\rBUILD_SUMMARY\020\001\022\034\n\030CRITICAL_" +
-      "PATH_TASKS_ROOT\020\002\022\033\n\027CRITICAL_PATH_TASK_" +
-      "PAGE\020\003\022\020\n\014PLUGINS_ROOT\020\004\022\017\n\013PLUGIN_PAGE\020" +
-      "\005\022#\n\037PLUGIN_CRITICAL_PATH_TASKS_ROOT\020\006\022\"" +
-      "\n\036PLUGIN_CRITICAL_PATH_TASK_PAGE\020\007\022 \n\034PL" +
-      "UGIN_TASK_SETUP_ISSUE_ROOT\020\010\022 \n\034PLUGIN_T" +
-      "ASK_SETUP_ISSUE_PAGE\020\t\022 \n\034PLUGIN_ALWAYS_" +
-      "RUN_ISSUE_ROOT\020\n\022%\n!PLUGIN_ALWAYS_RUN_NO" +
-      "_OUTPUTS_PAGE\020\013\022.\n*PLUGIN_ALWAYS_RUN_UP_" +
-      "TO_DATE_OVERRIDE_PAGE\020\014\022\031\n\025TASK_SETUP_IS" +
-      "SUE_ROOT\020\r\022\031\n\025TASK_SETUP_ISSUE_PAGE\020\016\022\031\n" +
-      "\025ALWAYS_RUN_ISSUE_ROOT\020\017\022\036\n\032ALWAYS_RUN_N" +
-      "O_OUTPUTS_PAGE\020\020\022\'\n#ALWAYS_RUN_UP_TO_DAT" +
-      "E_OVERRIDE_PAGE\020\021\022\036\n\032ANNOTATION_PROCESSO" +
-      "RS_ROOT\020\022\022\035\n\031ANNOTATION_PROCESSOR_PAGE\020\023" +
-      "\022\033\n\027CONFIGURATION_TIME_ROOT\020\024\022\036\n\032CONFIGU" +
-      "RATION_TIME_PROJECT\020\025\022\035\n\031CONFIGURATION_T" +
-      "IME_PLUGIN\020\026\022\030\n\024PLUGIN_WARNINGS_ROOT\020\027\022\021" +
-      "\n\rWARNINGS_ROOT\020\030\022\030\n\024PLUGIN_TASK_WARNING" +
-      "S\020\031\022\034\n\030CONFIGURATION_CACHE_ROOT\020\032\022&\n\"CON" +
-      "FIGURATION_CACHE_PLUGIN_WARNING\020\033\022\032\n\026JET" +
-      "IFIER_USAGE_WARNING\020\034\022\022\n\016DOWNLOADS_INFO\020" +
-      "\035\022\026\n\022TASK_CATEGORY_PAGE\020\036\022*\n&TASK_CATEGO" +
-      "RY_CRITICAL_PATH_TASKS_ROOT\020\037\022)\n%TASK_CA" +
-      "TEGORY_CRITICAL_PATH_TASK_PAGE\020 \022\036\n\032TASK" +
-      "_CATEGORY_WARNING_ROOT\020!\022!\n\035WINDOWS_DEFE" +
-      "NDER_WARNING_PAGE\020\"\022!\n\035WINDOWS_DEFENDER_" +
-      "NOTIFICATION\020#\"\236\n\n\tEventType\022\020\n\014UNKNOWN_" +
-      "TYPE\020\000\022\017\n\013TAB_CREATED\020\001\022\035\n\031TAB_OPENED_WI" +
-      "TH_TAB_CLICK\020\002\022%\n!TAB_OPENED_WITH_BUILD_" +
-      "OUTPUT_LINK\020\003\022\016\n\nTAB_CLOSED\020\004\022\016\n\nTAB_HID" +
-      "DEN\020\005\022\024\n\020CONTENT_REPLACED\020\006\022\025\n\021HELP_LINK" +
-      "_CLICKED\020\007\022\032\n\026PAGE_CHANGE_TREE_CLICK\020\010\022\035" +
-      "\n\031PAGE_CHANGE_TREE_KEYBOARD\020\t\022\032\n\026PAGE_CH" +
-      "ANGE_LINK_CLICK\020\n\022 \n\034GENERATE_REPORT_LIN" +
-      "K_CLICKED\020\013\022#\n\037REPORT_DIALOG_TEXT_COPY_C" +
-      "LICKED\020\014\022\030\n\024REPORT_DIALOG_CLOSED\020\r\022\026\n\022US" +
-      "AGE_SESSION_OVER\020\016\022\036\n\032TAB_OPENED_WITH_WN" +
-      "A_BUTTON\020\017\022\034\n\030DATA_VIEW_COMBO_SELECTED\020\020" +
-      "\022\024\n\020GROUPING_CHANGED\020\021\022\'\n#OPEN_MEMORY_SE" +
-      "TTINGS_BUTTON_CLICKED\020\022\022\022\n\016FILTER_APPLIE" +
-      "D\020\023\022(\n$CONFIGURE_GC_WARNING_SUSPEND_CLIC" +
-      "KED\020\024\022\036\n\032UPGRADE_AGP_BUTTON_CLICKED\020\025\0220\n" +
-      ",RERUN_BUILD_WITH_CONFIGURATION_CACHE_CL" +
-      "ICKED\020\026\022:\n6TURN_ON_CONFIGURATION_CACHE_I" +
-      "N_PROPERTIES_LINK_CLICKED\020\027\022 \n\034UPDATE_PL" +
-      "UGIN_BUTTON_CLICKED\020\030\022#\n\037RUN_CHECK_JETIF" +
-      "IER_TASK_CLICKED\020\031\022$\n REMOVE_JETIFIER_PR" +
-      "OPERTY_CLICKED\020\032\022$\n FIND_LIBRARY_DECLARA" +
-      "TION_CLICKED\020\033\022\035\n\031TOOL_WINDOW_BALLOON_SH" +
-      "OWN\020\034\022,\n(TOOL_WINDOW_BALLOON_DETAILS_LIN" +
-      "K_CLICKED\020\035\0224\n0TOOL_WINDOW_BALLOON_DONT_" +
-      "SHOW_AGAIN_LINK_CLICKED\020\036\0221\n-MIGRATE_NON" +
-      "_TRANSITIVE_R_CLASS_ACTION_CLICKED\020\037\022\032\n\026" +
-      "TAB_OPENED_WITH_ACTION\020 \022%\n!DEFENDER_WAR" +
-      "NING_SUPPRESS_CLICKED\020!\022)\n%DEFENDER_WARN" +
-      "ING_AUTO_EXCLUDE_SUCCESS\020\"\022)\n%DEFENDER_W" +
-      "ARNING_AUTO_EXCLUDE_FAILURE\020#\022.\n*DEFENDE" +
-      "R_WARNING_SUPPRESS_GLOBALLY_CLICKED\020$\0220\n" +
-      ",DEFENDER_WARNING_MANUAL_INSTRUCTIONS_CL" +
-      "ICKED\020%\"\332\003\n\022OutgoingLinkTarget\022 \n\034UNKNOW" +
-      "N_OUTGOING_LINK_TARGET\020\000\022\026\n\022CRITICAL_PAT" +
-      "H_HELP\020\001\022&\n\"DUPLICATE_OUTPUT_FOLDER_ISSU" +
-      "E_HELP\020\002\022\"\n\036NO_OUTPUTS_DECLARED_ISSUE_HE" +
-      "LP\020\003\022&\n\"UP_TO_DATE_EQUALS_FALSE_ISSUE_HE" +
-      "LP\020\004\022.\n*NON_INCREMENTAL_ANNOTATION_PROCE" +
-      "SSORS_HELP\020\005\022%\n!OPTIMIZE_CONFIGURATION_P" +
-      "HASE_HELP\020\006\022\020\n\014CONFIGURE_GC\020\007\022\031\n\025CONFIGU" +
-      "RATION_CACHING\020\010\022\026\n\022JETIFIER_MIGRATION\020\t" +
-      "\022\022\n\016DOWNLOADS_INFO\020\n\022\030\n\024RENDERSCRIPT_MIG" +
-      "RATE\020\013\022\r\n\tAIDL_INFO\020\014\022\032\n\026NON_TRANSITIVE_" +
-      "R_CLASS\020\r\022!\n\035WINDOWS_DEFENDER_INSTRUCTIO" +
-      "NS\020\016\"\222\003\n\nFilterItem\022\027\n\023UNKNOWN_FILTER_IT" +
-      "EM\020\000\022\035\n\031SHOW_ANDROID_PLUGIN_TASKS\020\001\022\032\n\026S" +
-      "HOW_THIRD_PARTY_TASKS\020\002\022$\n SHOW_PROJECT_" +
-      "CUSTOMIZATION_TASKS\020\003\022!\n\035SHOW_ALWAYS_RUN" +
-      "_TASK_WARNINGS\020\004\022\"\n\036SHOW_TASK_SETUP_ISSU" +
-      "E_WARNINGS\020\005\022&\n\"SHOW_ANNOTATION_PROCESSO" +
-      "R_WARNINGS\020\006\022%\n!SHOW_CONFIGURATION_CACHE" +
-      "_WARNINGS\020\t\022 \n\034SHOW_JETIFIER_USAGE_WARNI" +
-      "NGS\020\n\0221\n-SHOW_WARNINGS_FOR_TASK_NOT_FROM" +
-      "_CRITICAL_PATH\020\007\022\037\n\033SHOW_TASKS_WITHOUT_W" +
-      "ARNINGS\020\010\"\266\027\n\rVsPluginEvent\022=\n\004type\030\001 \001(" +
-      "\0162/.android_studio.VsPluginEvent.VsPlugi" +
-      "nEventType\022=\n\013build_event\030\002 \001(\0132(.androi" +
-      "d_studio.VsPluginEvent.BuildEvent\022=\n\013deb" +
-      "ug_event\030\003 \001(\0132(.android_studio.VsPlugin" +
-      "Event.DebugEvent\032\330\020\n\nBuildEvent\022\025\n\rbuild" +
-      "_session\030\001 \001(\t\022\027\n\017msbuild_version\030\002 \001(\t\022" +
-      "G\n\010platform\030\003 \001(\01625.android_studio.Devic" +
-      "eInfo.ApplicationBinaryInterface\022\023\n\013ndk_" +
-      "version\030\004 \001(\t\022\026\n\016is_debug_build\030\005 \001(\010\022\023\n",
-      "\013duration_ms\030\006 \001(\003\022\035\n\025is_using_incredibu" +
-      "ild\030\007 \001(\010\022\034\n\024msbuild_project_path\030\014 \001(\t\022" +
-      "E\n\004type\030\010 \001(\01627.android_studio.VsPluginE" +
-      "vent.BuildEvent.BuildEventType\022W\n\023build_" +
-      "complete_info\030\t \001(\0132:.android_studio.VsP" +
-      "luginEvent.BuildEvent.BuildCompleteInfo\022" +
-      "[\n\025compile_complete_info\030\n \001(\0132<.android" +
-      "_studio.VsPluginEvent.BuildEvent.Compile" +
-      "CompleteInfo\022U\n\022link_complete_info\030\013 \001(\013" +
-      "29.android_studio.VsPluginEvent.BuildEve" +
-      "nt.LinkCompleteInfo\022Y\n\024native_build_back" +
-      "end\030\r \001(\0162;.android_studio.VsPluginEvent" +
-      ".BuildEvent.NativeBuildBackend\032b\n\021BuildC" +
-      "ompleteInfo\022\021\n\tsucceeded\030\001 \001(\010\022\033\n\023c_sour" +
-      "ce_file_count\030\003 \001(\005\022\035\n\025cpp_source_file_c" +
-      "ount\030\004 \001(\005\032\356\002\n\023CompileCompleteInfo\022N\n\016la" +
+      "rData.TasksSharingOutputData\032\313\001\n\026TasksSh" +
+      "aringOutputData\022b\n$plugins_created_shari" +
+      "ng_output_tasks\030\001 \003(\01320.android_studio.B" +
+      "uildAttributionPluginIdentifierB\002\030\001\022M\n\024t" +
+      "asks_sharing_output\030\002 \003(\0132/.android_stud" +
+      "io.BuildAttribuitionTaskIdentifier\"\376\003\n#C" +
+      "onfigurationCacheCompatibilityData\022c\n\023co" +
+      "mpatibility_state\030\001 \001(\0162F.android_studio" +
+      ".ConfigurationCacheCompatibilityData.Com" +
+      "patibilityState\022N\n\024incompatible_plugins\030" +
+      "\002 \003(\01320.android_studio.BuildAttributionP" +
+      "luginIdentifier\"\241\002\n\022CompatibilityState\022\021" +
+      "\n\rUNKNOWN_STATE\020\000\022\026\n\022AGP_NOT_COMPATIBLE\020" +
+      "\001\022%\n!AGP_DOES_NOT_PROVIDE_PLUGINS_DATA\020\002" +
+      "\022!\n\035INCOMPATIBLE_PLUGINS_DETECTED\020\003\022%\n!I" +
+      "NCOMPATIBLE_PLUGINS_NOT_DETECTED\020\004\022!\n\035CO" +
+      "NFIGURATION_CACHE_TURNED_ON\020\005\022(\n$CONFIGU" +
+      "RATION_CACHE_TRIAL_FLOW_BUILD\020\006\022\"\n\036CONFI" +
+      "GURATION_CACHE_TURNED_OFF\020\007\"\335\002\n\021Jetifier" +
+      "UsageData\022R\n\024jetifier_usage_state\030\001 \001(\0162" +
+      "4.android_studio.JetifierUsageData.Jetif" +
+      "ierUsageState\022,\n$number_of_libraries_req" +
+      "uire_jetifier\030\002 \001(\005\022!\n\031check_jetifier_ta" +
+      "sk_build\030\003 \001(\010\"\242\001\n\022JetifierUsageState\022\021\n" +
+      "\rUNKNOWN_STATE\020\000\022\025\n\021JETIFIER_NOT_USED\020\001\022" +
+      " \n\034JETIFIER_USED_CHECK_REQUIRED\020\002\022\033\n\027JET" +
+      "IFIER_CAN_BE_REMOVED\020\003\022#\n\037JETIFIER_REQUI" +
+      "RED_FOR_LIBRARIES\020\004\"\207\005\n\032BuildDownloadsAn" +
+      "alysisData\022P\n\014repositories\030\001 \003(\0132:.andro" +
+      "id_studio.BuildDownloadsAnalysisData.Rep" +
+      "ositoryStats\032\226\004\n\017RepositoryStats\022b\n\017repo" +
+      "sitory_type\030\001 \001(\0162I.android_studio.Build" +
+      "DownloadsAnalysisData.RepositoryStats.Re" +
+      "positoryType\022\036\n\026success_requests_count\030\002" +
+      " \001(\005\022&\n\036success_requests_total_time_ms\030\003" +
+      " \001(\003\022/\n\'success_requests_total_bytes_dow" +
+      "nloaded\030\004 \001(\003\022\035\n\025failed_requests_count\030\005" +
+      " \001(\005\022%\n\035failed_requests_total_time_ms\030\006 " +
+      "\001(\003\022.\n&failed_requests_total_bytes_downl" +
+      "oaded\030\007 \001(\003\022\035\n\025missed_requests_count\030\010 \001" +
+      "(\005\022%\n\035missed_requests_total_time_ms\030\t \001(" +
+      "\003\"j\n\016RepositoryType\022\026\n\022UNKNOWN_REPOSITOR" +
+      "Y\020\000\022\n\n\006GOOGLE\020\001\022\021\n\rMAVEN_CENTRAL\020\002\022\013\n\007JC" +
+      "ENTER\020\003\022\024\n\020OTHER_REPOSITORY\020\004\"\247\002\n\026TaskCa" +
+      "tegoryIssuesData\022U\n\017reported_issues\030\001 \003(" +
+      "\01628.android_studio.TaskCategoryIssuesDat" +
+      "a.TaskCategoryIssueB\002\020\001\"\265\001\n\021TaskCategory" +
+      "Issue\022\021\n\rUNKNOWN_ISSUE\020\000\022\036\n\032NON_FINAL_RE" +
+      "S_IDS_DISABLED\020\001\022#\n\037NON_TRANSITIVE_R_CLA" +
+      "SS_DISABLED\020\002\022\037\n\033RESOURCE_VALIDATION_ENA" +
+      "BLED\020\003\022\'\n#MINIFICATION_ENABLED_IN_DEBUG_" +
+      "BUILD\020\004\"\302\006\n\035BuildAttributionAnalyzersDat" +
+      "a\022\033\n\023total_build_time_ms\030\001 \001(\003\022R\n\036always" +
+      "_run_tasks_analyzer_data\030\002 \001(\0132*.android" +
+      "_studio.AlwaysRunTasksAnalyzerData\022]\n#an" +
+      "notation_processors_analyzer_data\030\003 \001(\0132" +
+      "0.android_studio.AnnotationProcessorsAna" +
+      "lyzerData\022M\n\033critical_path_analyzer_data" +
+      "\030\004 \001(\0132(.android_studio.CriticalPathAnal" +
+      "yzerData\022]\n#project_configuration_analyz" +
+      "er_data\030\005 \001(\01320.android_studio.ProjectCo" +
+      "nfigurationAnalyzerData\022f\n(tasks_configu" +
+      "ration_issues_analyzer_data\030\006 \001(\01324.andr" +
+      "oid_studio.TasksConfigurationIssuesAnaly" +
+      "zerData\022c\n&configuration_cache_compatibi" +
+      "lity_data\030\007 \001(\01323.android_studio.Configu" +
+      "rationCacheCompatibilityData\022>\n\023jetifier" +
+      "_usage_data\030\010 \001(\0132!.android_studio.Jetif" +
+      "ierUsageData\022K\n\027downloads_analysis_data\030" +
+      "\t \001(\0132*.android_studio.BuildDownloadsAna" +
+      "lysisData\022I\n\031task_category_issues_data\030\n" +
+      " \001(\0132&.android_studio.TaskCategoryIssues" +
+      "Data\"\316\001\n BuildAttributionPerformanceStat" +
+      "s\022\'\n\037post_build_analysis_duration_ms\030\001 \001" +
+      "(\003\022\037\n\027ui_creation_duration_ms\030\002 \001(\003\0223\n+t" +
+      "ooling_api_build_finished_event_latency_" +
+      "ms\030\003 \001(\003\022+\n#number_of_generated_partial_" +
+      "results\030\004 \001(\005\"\370\004\n\025BuildAttributionStats\022" +
+      "W\n build_attribution_analyzers_data\030\001 \001(" +
+      "\0132-.android_studio.BuildAttributionAnaly" +
+      "zersData\022]\n#build_attribution_performanc" +
+      "e_stats\030\002 \001(\01320.android_studio.BuildAttr" +
+      "ibutionPerformanceStats\022+\n#build_attribu" +
+      "tion_report_session_id\030\003 \001(\t\022X\n\025build_an" +
+      "alysis_status\030\004 \001(\01629.android_studio.Bui" +
+      "ldAttributionStats.BuildAnalysisStatus\022C" +
+      "\n\nbuild_type\030\005 \001(\0162/.android_studio.Buil" +
+      "dAttributionStats.BuildType\"_\n\023BuildAnal" +
+      "ysisStatus\022\022\n\016UNKNOWN_STATUS\020\000\022\013\n\007SUCCES" +
+      "S\020\001\022\021\n\rBUILD_FAILURE\020\002\022\024\n\020ANALYSIS_FAILU" +
+      "RE\020\003\"z\n\tBuildType\022\026\n\022UNKNOWN_BUILD_TYPE\020" +
+      "\000\022\021\n\rREGULAR_BUILD\020\001\022(\n$CONFIGURATION_CA" +
+      "CHE_TRIAL_FLOW_BUILD\020\002\022\030\n\024CHECK_JETIFIER" +
+      "_BUILD\020\003\"\320\036\n\027BuildAttributionUiEvent\022E\n\n" +
+      "event_type\030\001 \001(\01621.android_studio.BuildA" +
+      "ttributionUiEvent.EventType\022B\n\014current_p" +
+      "age\030\002 \001(\0132,.android_studio.BuildAttribut" +
+      "ionUiEvent.Page\022A\n\013target_page\030\003 \001(\0132,.a" +
+      "ndroid_studio.BuildAttributionUiEvent.Pa" +
+      "ge\022+\n#build_attribution_report_session_i" +
+      "d\030\004 \001(\t\022O\n\013link_target\030\005 \001(\0162:.android_s" +
+      "tudio.BuildAttributionUiEvent.OutgoingLi" +
+      "nkTarget\022K\n\017applied_filters\030\006 \003(\01622.andr" +
+      "oid_studio.BuildAttributionUiEvent.Filte" +
+      "rItem\022 \n\030event_processing_time_ms\030\007 \001(\003\022" +
+      "\r\n\005width\030\010 \001(\003\022\016\n\006height\030\t \001(\003\032\307\t\n\004Page\022" +
+      "H\n\tpage_type\030\001 \001(\01625.android_studio.Buil" +
+      "dAttributionUiEvent.Page.PageType\022\030\n\020pag" +
+      "e_entry_index\030\002 \001(\005\"\332\010\n\010PageType\022\020\n\014UNKN" +
+      "OWN_PAGE\020\000\022\021\n\rBUILD_SUMMARY\020\001\022\034\n\030CRITICA" +
+      "L_PATH_TASKS_ROOT\020\002\022\033\n\027CRITICAL_PATH_TAS" +
+      "K_PAGE\020\003\022\020\n\014PLUGINS_ROOT\020\004\022\017\n\013PLUGIN_PAG" +
+      "E\020\005\022#\n\037PLUGIN_CRITICAL_PATH_TASKS_ROOT\020\006" +
+      "\022\"\n\036PLUGIN_CRITICAL_PATH_TASK_PAGE\020\007\022 \n\034" +
+      "PLUGIN_TASK_SETUP_ISSUE_ROOT\020\010\022 \n\034PLUGIN" +
+      "_TASK_SETUP_ISSUE_PAGE\020\t\022 \n\034PLUGIN_ALWAY" +
+      "S_RUN_ISSUE_ROOT\020\n\022%\n!PLUGIN_ALWAYS_RUN_" +
+      "NO_OUTPUTS_PAGE\020\013\022.\n*PLUGIN_ALWAYS_RUN_U" +
+      "P_TO_DATE_OVERRIDE_PAGE\020\014\022\031\n\025TASK_SETUP_" +
+      "ISSUE_ROOT\020\r\022\031\n\025TASK_SETUP_ISSUE_PAGE\020\016\022" +
+      "\031\n\025ALWAYS_RUN_ISSUE_ROOT\020\017\022\036\n\032ALWAYS_RUN" +
+      "_NO_OUTPUTS_PAGE\020\020\022\'\n#ALWAYS_RUN_UP_TO_D" +
+      "ATE_OVERRIDE_PAGE\020\021\022\036\n\032ANNOTATION_PROCES" +
+      "SORS_ROOT\020\022\022\035\n\031ANNOTATION_PROCESSOR_PAGE" +
+      "\020\023\022\033\n\027CONFIGURATION_TIME_ROOT\020\024\022\036\n\032CONFI" +
+      "GURATION_TIME_PROJECT\020\025\022\035\n\031CONFIGURATION" +
+      "_TIME_PLUGIN\020\026\022\030\n\024PLUGIN_WARNINGS_ROOT\020\027" +
+      "\022\021\n\rWARNINGS_ROOT\020\030\022\030\n\024PLUGIN_TASK_WARNI" +
+      "NGS\020\031\022\034\n\030CONFIGURATION_CACHE_ROOT\020\032\022&\n\"C" +
+      "ONFIGURATION_CACHE_PLUGIN_WARNING\020\033\022\032\n\026J" +
+      "ETIFIER_USAGE_WARNING\020\034\022\022\n\016DOWNLOADS_INF" +
+      "O\020\035\022\026\n\022TASK_CATEGORY_PAGE\020\036\022*\n&TASK_CATE" +
+      "GORY_CRITICAL_PATH_TASKS_ROOT\020\037\022)\n%TASK_" +
+      "CATEGORY_CRITICAL_PATH_TASK_PAGE\020 \022\036\n\032TA" +
+      "SK_CATEGORY_WARNING_ROOT\020!\022!\n\035WINDOWS_DE" +
+      "FENDER_WARNING_PAGE\020\"\022!\n\035WINDOWS_DEFENDE" +
+      "R_NOTIFICATION\020#\"\236\n\n\tEventType\022\020\n\014UNKNOW" +
+      "N_TYPE\020\000\022\017\n\013TAB_CREATED\020\001\022\035\n\031TAB_OPENED_" +
+      "WITH_TAB_CLICK\020\002\022%\n!TAB_OPENED_WITH_BUIL" +
+      "D_OUTPUT_LINK\020\003\022\016\n\nTAB_CLOSED\020\004\022\016\n\nTAB_H" +
+      "IDDEN\020\005\022\024\n\020CONTENT_REPLACED\020\006\022\025\n\021HELP_LI" +
+      "NK_CLICKED\020\007\022\032\n\026PAGE_CHANGE_TREE_CLICK\020\010" +
+      "\022\035\n\031PAGE_CHANGE_TREE_KEYBOARD\020\t\022\032\n\026PAGE_" +
+      "CHANGE_LINK_CLICK\020\n\022 \n\034GENERATE_REPORT_L" +
+      "INK_CLICKED\020\013\022#\n\037REPORT_DIALOG_TEXT_COPY" +
+      "_CLICKED\020\014\022\030\n\024REPORT_DIALOG_CLOSED\020\r\022\026\n\022" +
+      "USAGE_SESSION_OVER\020\016\022\036\n\032TAB_OPENED_WITH_" +
+      "WNA_BUTTON\020\017\022\034\n\030DATA_VIEW_COMBO_SELECTED" +
+      "\020\020\022\024\n\020GROUPING_CHANGED\020\021\022\'\n#OPEN_MEMORY_" +
+      "SETTINGS_BUTTON_CLICKED\020\022\022\022\n\016FILTER_APPL" +
+      "IED\020\023\022(\n$CONFIGURE_GC_WARNING_SUSPEND_CL" +
+      "ICKED\020\024\022\036\n\032UPGRADE_AGP_BUTTON_CLICKED\020\025\022" +
+      "0\n,RERUN_BUILD_WITH_CONFIGURATION_CACHE_" +
+      "CLICKED\020\026\022:\n6TURN_ON_CONFIGURATION_CACHE" +
+      "_IN_PROPERTIES_LINK_CLICKED\020\027\022 \n\034UPDATE_" +
+      "PLUGIN_BUTTON_CLICKED\020\030\022#\n\037RUN_CHECK_JET" +
+      "IFIER_TASK_CLICKED\020\031\022$\n REMOVE_JETIFIER_" +
+      "PROPERTY_CLICKED\020\032\022$\n FIND_LIBRARY_DECLA" +
+      "RATION_CLICKED\020\033\022\035\n\031TOOL_WINDOW_BALLOON_" +
+      "SHOWN\020\034\022,\n(TOOL_WINDOW_BALLOON_DETAILS_L" +
+      "INK_CLICKED\020\035\0224\n0TOOL_WINDOW_BALLOON_DON" +
+      "T_SHOW_AGAIN_LINK_CLICKED\020\036\0221\n-MIGRATE_N" +
+      "ON_TRANSITIVE_R_CLASS_ACTION_CLICKED\020\037\022\032" +
+      "\n\026TAB_OPENED_WITH_ACTION\020 \022%\n!DEFENDER_W" +
+      "ARNING_SUPPRESS_CLICKED\020!\022)\n%DEFENDER_WA" +
+      "RNING_AUTO_EXCLUDE_SUCCESS\020\"\022)\n%DEFENDER" +
+      "_WARNING_AUTO_EXCLUDE_FAILURE\020#\022.\n*DEFEN" +
+      "DER_WARNING_SUPPRESS_GLOBALLY_CLICKED\020$\022" +
+      "0\n,DEFENDER_WARNING_MANUAL_INSTRUCTIONS_" +
+      "CLICKED\020%\"\332\003\n\022OutgoingLinkTarget\022 \n\034UNKN" +
+      "OWN_OUTGOING_LINK_TARGET\020\000\022\026\n\022CRITICAL_P" +
+      "ATH_HELP\020\001\022&\n\"DUPLICATE_OUTPUT_FOLDER_IS" +
+      "SUE_HELP\020\002\022\"\n\036NO_OUTPUTS_DECLARED_ISSUE_" +
+      "HELP\020\003\022&\n\"UP_TO_DATE_EQUALS_FALSE_ISSUE_" +
+      "HELP\020\004\022.\n*NON_INCREMENTAL_ANNOTATION_PRO" +
+      "CESSORS_HELP\020\005\022%\n!OPTIMIZE_CONFIGURATION" +
+      "_PHASE_HELP\020\006\022\020\n\014CONFIGURE_GC\020\007\022\031\n\025CONFI" +
+      "GURATION_CACHING\020\010\022\026\n\022JETIFIER_MIGRATION" +
+      "\020\t\022\022\n\016DOWNLOADS_INFO\020\n\022\030\n\024RENDERSCRIPT_M" +
+      "IGRATE\020\013\022\r\n\tAIDL_INFO\020\014\022\032\n\026NON_TRANSITIV" +
+      "E_R_CLASS\020\r\022!\n\035WINDOWS_DEFENDER_INSTRUCT" +
+      "IONS\020\016\"\222\003\n\nFilterItem\022\027\n\023UNKNOWN_FILTER_" +
+      "ITEM\020\000\022\035\n\031SHOW_ANDROID_PLUGIN_TASKS\020\001\022\032\n" +
+      "\026SHOW_THIRD_PARTY_TASKS\020\002\022$\n SHOW_PROJEC" +
+      "T_CUSTOMIZATION_TASKS\020\003\022!\n\035SHOW_ALWAYS_R" +
+      "UN_TASK_WARNINGS\020\004\022\"\n\036SHOW_TASK_SETUP_IS" +
+      "SUE_WARNINGS\020\005\022&\n\"SHOW_ANNOTATION_PROCES" +
+      "SOR_WARNINGS\020\006\022%\n!SHOW_CONFIGURATION_CAC" +
+      "HE_WARNINGS\020\t\022 \n\034SHOW_JETIFIER_USAGE_WAR" +
+      "NINGS\020\n\0221\n-SHOW_WARNINGS_FOR_TASK_NOT_FR" +
+      "OM_CRITICAL_PATH\020\007\022\037\n\033SHOW_TASKS_WITHOUT" +
+      "_WARNINGS\020\010\"\266\027\n\rVsPluginEvent\022=\n\004type\030\001 " +
+      "\001(\0162/.android_studio.VsPluginEvent.VsPlu" +
+      "ginEventType\022=\n\013build_event\030\002 \001(\0132(.andr" +
+      "oid_studio.VsPluginEvent.BuildEvent\022=\n\013d" +
+      "ebug_event\030\003 \001(\0132(.android_studio.VsPlug" +
+      "inEvent.DebugEvent\032\330\020\n\nBuildEvent\022\025\n\rbui" +
+      "ld_session\030\001 \001(\t\022\027\n\017msbuild_version\030\002 \001(" +
+      "\t\022G\n\010platform\030\003 \001(\01625.android_studio.Dev" +
+      "iceInfo.ApplicationBinaryInterface\022\023\n\013nd",
+      "k_version\030\004 \001(\t\022\026\n\016is_debug_build\030\005 \001(\010\022" +
+      "\023\n\013duration_ms\030\006 \001(\003\022\035\n\025is_using_incredi" +
+      "build\030\007 \001(\010\022\034\n\024msbuild_project_path\030\014 \001(" +
+      "\t\022E\n\004type\030\010 \001(\01627.android_studio.VsPlugi" +
+      "nEvent.BuildEvent.BuildEventType\022W\n\023buil" +
+      "d_complete_info\030\t \001(\0132:.android_studio.V" +
+      "sPluginEvent.BuildEvent.BuildCompleteInf" +
+      "o\022[\n\025compile_complete_info\030\n \001(\0132<.andro" +
+      "id_studio.VsPluginEvent.BuildEvent.Compi" +
+      "leCompleteInfo\022U\n\022link_complete_info\030\013 \001" +
+      "(\01329.android_studio.VsPluginEvent.BuildE" +
+      "vent.LinkCompleteInfo\022Y\n\024native_build_ba" +
+      "ckend\030\r \001(\0162;.android_studio.VsPluginEve" +
+      "nt.BuildEvent.NativeBuildBackend\032b\n\021Buil" +
+      "dCompleteInfo\022\021\n\tsucceeded\030\001 \001(\010\022\033\n\023c_so" +
+      "urce_file_count\030\003 \001(\005\022\035\n\025cpp_source_file" +
+      "_count\030\004 \001(\005\032\356\002\n\023CompileCompleteInfo\022N\n\016" +
+      "language_level\030\001 \001(\01626.android_studio.Vs" +
+      "PluginEvent.BuildEvent.LanguageLevel\022\031\n\021" +
+      "source_file_count\030\002 \001(\005\022k\n\022all_languge_l" +
+      "evels\030\003 \003(\0132O.android_studio.VsPluginEve" +
+      "nt.BuildEvent.CompileCompleteInfo.Langua" +
+      "geLevelBatch\032\177\n\022LanguageLevelBatch\022N\n\016la" +
       "nguage_level\030\001 \001(\01626.android_studio.VsPl" +
       "uginEvent.BuildEvent.LanguageLevel\022\031\n\021so" +
-      "urce_file_count\030\002 \001(\005\022k\n\022all_languge_lev" +
-      "els\030\003 \003(\0132O.android_studio.VsPluginEvent" +
-      ".BuildEvent.CompileCompleteInfo.Language" +
-      "LevelBatch\032\177\n\022LanguageLevelBatch\022N\n\016lang" +
-      "uage_level\030\001 \001(\01626.android_studio.VsPlug" +
-      "inEvent.BuildEvent.LanguageLevel\022\031\n\021sour" +
-      "ce_file_count\030\002 \001(\005\032\324\003\n\020LinkCompleteInfo" +
-      "\022j\n\024library_dependencies\030\001 \003(\0162L.android" +
-      "_studio.VsPluginEvent.BuildEvent.LinkCom" +
-      "pleteInfo.WellKnownLibraries\"\323\002\n\022WellKno" +
-      "wnLibraries\022$\n UNSPECIFIED_WELL_KNOWN_LI" +
-      "BRARIES\020\000\022\t\n\005ANGLE\020\001\022\r\n\tBORINGSSL\020\002\022\020\n\014C" +
-      "ARTOGRAPHER\020\003\022\013\n\007COCOS2D\020\004\022\014\n\010DAYDREAM\020\005" +
-      "\022\016\n\nFLATBUFFER\020\006\022\014\n\010FREEGLUT\020\007\022\013\n\007GAMESD" +
-      "K\020\010\022\017\n\013GAUSSIANLIB\020\t\022\010\n\004OGRE\020\n\022\n\n\006OPENCV" +
-      "\020\013\022\n\n\006OPENVR\020\014\022\013\n\007OPEN_GL\020\r\022\014\n\010OPEN_SSL\020" +
-      "\016\022\007\n\003QT5\020\017\022\010\n\004SDL2\020\020\022\010\n\004SDL3\020\021\022\013\n\007SHADER" +
-      "C\020\022\022\n\n\006SQLITE\020\023\022\t\n\005UNITY\020\024\022\n\n\006UNREAL\020\025\022\n" +
-      "\n\006VULKAN\020\026\"\204\001\n\016BuildEventType\022 \n\034UNSPECI" +
-      "FIED_BUILD_EVENT_TYPE\020\000\022\022\n\016BUILD_COMPLET" +
-      "E\020\001\022\024\n\020COMPILE_COMPLETE\020\002\022\021\n\rLINK_COMPLE" +
-      "TE\020\003\022\023\n\017GRADLE_COMPLETE\020\004\"\367\001\n\rLanguageLe" +
-      "vel\022\036\n\032UNSPECIFIED_LANGUAGE_LEVEL\020\000\022\007\n\003C" +
-      "89\020\001\022\t\n\005GNU89\020\002\022\t\n\005CPP98\020\003\022\013\n\007GNUPP98\020\004\022" +
-      "\007\n\003C99\020\005\022\t\n\005GNU99\020\006\022\007\n\003C11\020\007\022\t\n\005GNU11\020\010\022" +
-      "\t\n\005CPP11\020\t\022\013\n\007GNUPP11\020\n\022\t\n\005CPP14\020\013\022\013\n\007GN" +
-      "UPP14\020\014\022\007\n\003C17\020\r\022\t\n\005GNU17\020\016\022\t\n\005CPP17\020\017\022\013" +
-      "\n\007GNUPP17\020\020\022\t\n\005CPP20\020\021\022\013\n\007GNUPP20\020\022\"v\n\022N" +
-      "ativeBuildBackend\022$\n UNSPECIFIED_NATIVE_" +
-      "BUILD_BACKEND\020\000\022\024\n\020ORIGINAL_MSBUILD\020\001\022\031\n" +
-      "\025MULTITOOLTASK_MSBUILD\020\002\022\t\n\005NINJA\020\003\032\273\004\n\n" +
-      "DebugEvent\022\017\n\007session\030\001 \001(\t\022\022\n\nvs_versio" +
-      "n\030\002 \001(\t\022G\n\010platform\030\003 \001(\01625.android_stud" +
-      "io.DeviceInfo.ApplicationBinaryInterface" +
-      "\022\031\n\021is_using_emulator\030\004 \001(\010\022\026\n\016is_debug_" +
-      "build\030\005 \001(\010\022\023\n\013duration_ms\030\006 \001(\003\022E\n\004type" +
-      "\030\007 \001(\01627.android_studio.VsPluginEvent.De" +
-      "bugEvent.DebugEventType\"\257\002\n\016DebugEventTy" +
-      "pe\022 \n\034UNSPECIFIED_DEBUG_EVENT_TYPE\020\000\022\033\n\027" +
-      "START_WITHOUT_DEBUGGING\020\001\022\030\n\024START_WITH_" +
-      "DEBUGGING\020\002\022\n\n\006CANCEL\020\003\022\023\n\017DEVICE_ATTACH" +
-      "ED\020\004\022\022\n\016ADD_BREAKPOINT\020\005\022\025\n\021REMOVE_BREAK" +
-      "POINT\020\006\022\022\n\016HIT_BREAKPOINT\020\007\022\r\n\tSTEP_OVER" +
-      "\020\010\022\r\n\tSTEP_INTO\020\t\022\014\n\010STEP_OUT\020\n\022\013\n\007SUSPE" +
-      "ND\020\013\022\010\n\004STOP\020\014\022\014\n\010CONTINUE\020\r\022\023\n\017EXECUTE_" +
-      "COMMAND\020\016\"O\n\021VsPluginEventType\022$\n UNSPEC" +
-      "IFIED_VS_PLUGIN_EVENT_TYPE\020\000\022\t\n\005BUILD\020\001\022" +
-      "\t\n\005DEBUG\020\002\"\2405\n\022AppInspectionEvent\0225\n\004typ" +
-      "e\030\001 \001(\0162\'.android_studio.AppInspectionEv" +
-      "ent.Type\022]\n\030database_inspector_event\030\002 \001" +
-      "(\01329.android_studio.AppInspectionEvent.D" +
-      "atabaseInspectorEventH\000\022d\n\034work_manager_" +
-      "inspector_event\030\003 \001(\0132<.android_studio.A" +
-      "ppInspectionEvent.WorkManagerInspectorEv" +
-      "entH\000\022[\n\027network_inspector_event\030\004 \001(\01328" +
-      ".android_studio.AppInspectionEvent.Netwo" +
-      "rkInspectorEventH\000\022j\n\037background_task_in" +
-      "spector_event\030\005 \001(\0132?.android_studio.App" +
-      "InspectionEvent.BackgroundTaskInspectorE" +
-      "ventH\000\022@\n\nerror_kind\030e \001(\0162,.android_stu" +
-      "dio.AppInspectionEvent.ErrorKind\022T\n\024envi" +
-      "ronment_metadata\030f \001(\01326.android_studio." +
-      "AppInspectionEvent.EnvironmentMetadata\032A" +
-      "\n\023EnvironmentMetadata\022\025\n\rnum_processes\030\001" +
-      " \001(\r\022\023\n\013num_devices\030\002 \001(\r\032\321\027\n\026DatabaseIn" +
-      "spectorEvent\022L\n\004type\030\001 \001(\0162>.android_stu" +
-      "dio.AppInspectionEvent.DatabaseInspector" +
-      "Event.Type\022W\n\nerror_kind\030\002 \001(\0162C.android" +
-      "_studio.AppInspectionEvent.DatabaseInspe" +
-      "ctorEvent.ErrorKind\022Y\n\013target_type\030\003 \001(\016" +
-      "2D.android_studio.AppInspectionEvent.Dat" +
-      "abaseInspectorEvent.TargetType\022e\n\021statem" +
-      "ent_context\030\004 \001(\0162J.android_studio.AppIn" +
-      "spectionEvent.DatabaseInspectorEvent.Sta" +
-      "tementContext\022\035\n\025live_updating_enabled\030\005" +
-      " \001(\010\022g\n\022connectivity_state\030\006 \001(\0162K.andro" +
+      "urce_file_count\030\002 \001(\005\032\324\003\n\020LinkCompleteIn" +
+      "fo\022j\n\024library_dependencies\030\001 \003(\0162L.andro" +
+      "id_studio.VsPluginEvent.BuildEvent.LinkC" +
+      "ompleteInfo.WellKnownLibraries\"\323\002\n\022WellK" +
+      "nownLibraries\022$\n UNSPECIFIED_WELL_KNOWN_" +
+      "LIBRARIES\020\000\022\t\n\005ANGLE\020\001\022\r\n\tBORINGSSL\020\002\022\020\n" +
+      "\014CARTOGRAPHER\020\003\022\013\n\007COCOS2D\020\004\022\014\n\010DAYDREAM" +
+      "\020\005\022\016\n\nFLATBUFFER\020\006\022\014\n\010FREEGLUT\020\007\022\013\n\007GAME" +
+      "SDK\020\010\022\017\n\013GAUSSIANLIB\020\t\022\010\n\004OGRE\020\n\022\n\n\006OPEN" +
+      "CV\020\013\022\n\n\006OPENVR\020\014\022\013\n\007OPEN_GL\020\r\022\014\n\010OPEN_SS" +
+      "L\020\016\022\007\n\003QT5\020\017\022\010\n\004SDL2\020\020\022\010\n\004SDL3\020\021\022\013\n\007SHAD" +
+      "ERC\020\022\022\n\n\006SQLITE\020\023\022\t\n\005UNITY\020\024\022\n\n\006UNREAL\020\025" +
+      "\022\n\n\006VULKAN\020\026\"\204\001\n\016BuildEventType\022 \n\034UNSPE" +
+      "CIFIED_BUILD_EVENT_TYPE\020\000\022\022\n\016BUILD_COMPL" +
+      "ETE\020\001\022\024\n\020COMPILE_COMPLETE\020\002\022\021\n\rLINK_COMP" +
+      "LETE\020\003\022\023\n\017GRADLE_COMPLETE\020\004\"\367\001\n\rLanguage" +
+      "Level\022\036\n\032UNSPECIFIED_LANGUAGE_LEVEL\020\000\022\007\n" +
+      "\003C89\020\001\022\t\n\005GNU89\020\002\022\t\n\005CPP98\020\003\022\013\n\007GNUPP98\020" +
+      "\004\022\007\n\003C99\020\005\022\t\n\005GNU99\020\006\022\007\n\003C11\020\007\022\t\n\005GNU11\020" +
+      "\010\022\t\n\005CPP11\020\t\022\013\n\007GNUPP11\020\n\022\t\n\005CPP14\020\013\022\013\n\007" +
+      "GNUPP14\020\014\022\007\n\003C17\020\r\022\t\n\005GNU17\020\016\022\t\n\005CPP17\020\017" +
+      "\022\013\n\007GNUPP17\020\020\022\t\n\005CPP20\020\021\022\013\n\007GNUPP20\020\022\"v\n" +
+      "\022NativeBuildBackend\022$\n UNSPECIFIED_NATIV" +
+      "E_BUILD_BACKEND\020\000\022\024\n\020ORIGINAL_MSBUILD\020\001\022" +
+      "\031\n\025MULTITOOLTASK_MSBUILD\020\002\022\t\n\005NINJA\020\003\032\273\004" +
+      "\n\nDebugEvent\022\017\n\007session\030\001 \001(\t\022\022\n\nvs_vers" +
+      "ion\030\002 \001(\t\022G\n\010platform\030\003 \001(\01625.android_st" +
+      "udio.DeviceInfo.ApplicationBinaryInterfa" +
+      "ce\022\031\n\021is_using_emulator\030\004 \001(\010\022\026\n\016is_debu" +
+      "g_build\030\005 \001(\010\022\023\n\013duration_ms\030\006 \001(\003\022E\n\004ty" +
+      "pe\030\007 \001(\01627.android_studio.VsPluginEvent." +
+      "DebugEvent.DebugEventType\"\257\002\n\016DebugEvent" +
+      "Type\022 \n\034UNSPECIFIED_DEBUG_EVENT_TYPE\020\000\022\033" +
+      "\n\027START_WITHOUT_DEBUGGING\020\001\022\030\n\024START_WIT" +
+      "H_DEBUGGING\020\002\022\n\n\006CANCEL\020\003\022\023\n\017DEVICE_ATTA" +
+      "CHED\020\004\022\022\n\016ADD_BREAKPOINT\020\005\022\025\n\021REMOVE_BRE" +
+      "AKPOINT\020\006\022\022\n\016HIT_BREAKPOINT\020\007\022\r\n\tSTEP_OV" +
+      "ER\020\010\022\r\n\tSTEP_INTO\020\t\022\014\n\010STEP_OUT\020\n\022\013\n\007SUS" +
+      "PEND\020\013\022\010\n\004STOP\020\014\022\014\n\010CONTINUE\020\r\022\023\n\017EXECUT" +
+      "E_COMMAND\020\016\"O\n\021VsPluginEventType\022$\n UNSP" +
+      "ECIFIED_VS_PLUGIN_EVENT_TYPE\020\000\022\t\n\005BUILD\020" +
+      "\001\022\t\n\005DEBUG\020\002\"\2405\n\022AppInspectionEvent\0225\n\004t" +
+      "ype\030\001 \001(\0162\'.android_studio.AppInspection" +
+      "Event.Type\022]\n\030database_inspector_event\030\002" +
+      " \001(\01329.android_studio.AppInspectionEvent" +
+      ".DatabaseInspectorEventH\000\022d\n\034work_manage" +
+      "r_inspector_event\030\003 \001(\0132<.android_studio" +
+      ".AppInspectionEvent.WorkManagerInspector" +
+      "EventH\000\022[\n\027network_inspector_event\030\004 \001(\013" +
+      "28.android_studio.AppInspectionEvent.Net" +
+      "workInspectorEventH\000\022j\n\037background_task_" +
+      "inspector_event\030\005 \001(\0132?.android_studio.A" +
+      "ppInspectionEvent.BackgroundTaskInspecto" +
+      "rEventH\000\022@\n\nerror_kind\030e \001(\0162,.android_s" +
+      "tudio.AppInspectionEvent.ErrorKind\022T\n\024en" +
+      "vironment_metadata\030f \001(\01326.android_studi" +
+      "o.AppInspectionEvent.EnvironmentMetadata" +
+      "\032A\n\023EnvironmentMetadata\022\025\n\rnum_processes" +
+      "\030\001 \001(\r\022\023\n\013num_devices\030\002 \001(\r\032\321\027\n\026Database" +
+      "InspectorEvent\022L\n\004type\030\001 \001(\0162>.android_s" +
+      "tudio.AppInspectionEvent.DatabaseInspect" +
+      "orEvent.Type\022W\n\nerror_kind\030\002 \001(\0162C.andro" +
       "id_studio.AppInspectionEvent.DatabaseIns" +
-      "pectorEvent.ConnectivityState\022l\n\025offline" +
-      "_mode_metadata\030\007 \001(\0132M.android_studio.Ap" +
-      "pInspectionEvent.DatabaseInspectorEvent." +
-      "OfflineModeMetadata\022u\n\032export_dialog_ope" +
-      "ned_event\030\010 \001(\0132Q.android_studio.AppInsp" +
-      "ectionEvent.DatabaseInspectorEvent.Expor" +
-      "tDialogOpenedEvent\022w\n\026export_completed_e" +
-      "vent\030\t \001(\0132W.android_studio.AppInspectio" +
-      "nEvent.DatabaseInspectorEvent.ExportOper" +
-      "ationCompletedEvent\032X\n\023OfflineModeMetada" +
-      "ta\022\036\n\026total_download_time_ms\030\001 \001(\005\022!\n\031to" +
-      "tal_download_size_bytes\030\002 \001(\003\032\242\002\n\027Export" +
-      "DialogOpenedEvent\022h\n\006origin\030\001 \001(\0162X.andr" +
-      "oid_studio.AppInspectionEvent.DatabaseIn" +
-      "spectorEvent.ExportDialogOpenedEvent.Ori" +
-      "gin\"\234\001\n\006Origin\022\022\n\016UNKNOWN_ORIGIN\020\000\022\034\n\030SC" +
-      "HEMA_TREE_CONTEXT_MENU\020\001\022\035\n\031SCHEMA_TREE_" +
-      "EXPORT_BUTTON\020\002\022\037\n\033QUERY_RESULTS_EXPORT_" +
-      "BUTTON\020\003\022 \n\034TABLE_CONTENTS_EXPORT_BUTTON" +
-      "\020\004\032\326\007\n\035ExportOperationCompletedEvent\022n\n\006" +
-      "source\030\001 \001(\0162^.android_studio.AppInspect" +
+      "pectorEvent.ErrorKind\022Y\n\013target_type\030\003 \001" +
+      "(\0162D.android_studio.AppInspectionEvent.D" +
+      "atabaseInspectorEvent.TargetType\022e\n\021stat" +
+      "ement_context\030\004 \001(\0162J.android_studio.App" +
+      "InspectionEvent.DatabaseInspectorEvent.S" +
+      "tatementContext\022\035\n\025live_updating_enabled" +
+      "\030\005 \001(\010\022g\n\022connectivity_state\030\006 \001(\0162K.and" +
+      "roid_studio.AppInspectionEvent.DatabaseI" +
+      "nspectorEvent.ConnectivityState\022l\n\025offli" +
+      "ne_mode_metadata\030\007 \001(\0132M.android_studio." +
+      "AppInspectionEvent.DatabaseInspectorEven" +
+      "t.OfflineModeMetadata\022u\n\032export_dialog_o" +
+      "pened_event\030\010 \001(\0132Q.android_studio.AppIn" +
+      "spectionEvent.DatabaseInspectorEvent.Exp" +
+      "ortDialogOpenedEvent\022w\n\026export_completed" +
+      "_event\030\t \001(\0132W.android_studio.AppInspect" +
       "ionEvent.DatabaseInspectorEvent.ExportOp" +
-      "erationCompletedEvent.Source\022{\n\rsource_f" +
-      "ormat\030\002 \001(\0162d.android_studio.AppInspecti" +
-      "onEvent.DatabaseInspectorEvent.ExportOpe" +
-      "rationCompletedEvent.SourceFormat\022x\n\013des" +
-      "tination\030\003 \001(\0162c.android_studio.AppInspe" +
+      "erationCompletedEvent\032X\n\023OfflineModeMeta" +
+      "data\022\036\n\026total_download_time_ms\030\001 \001(\005\022!\n\031" +
+      "total_download_size_bytes\030\002 \001(\003\032\242\002\n\027Expo" +
+      "rtDialogOpenedEvent\022h\n\006origin\030\001 \001(\0162X.an" +
+      "droid_studio.AppInspectionEvent.Database" +
+      "InspectorEvent.ExportDialogOpenedEvent.O" +
+      "rigin\"\234\001\n\006Origin\022\022\n\016UNKNOWN_ORIGIN\020\000\022\034\n\030" +
+      "SCHEMA_TREE_CONTEXT_MENU\020\001\022\035\n\031SCHEMA_TRE" +
+      "E_EXPORT_BUTTON\020\002\022\037\n\033QUERY_RESULTS_EXPOR" +
+      "T_BUTTON\020\003\022 \n\034TABLE_CONTENTS_EXPORT_BUTT" +
+      "ON\020\004\032\326\007\n\035ExportOperationCompletedEvent\022n" +
+      "\n\006source\030\001 \001(\0162^.android_studio.AppInspe" +
       "ctionEvent.DatabaseInspectorEvent.Export" +
-      "OperationCompletedEvent.Destination\022\032\n\022e" +
-      "xport_duration_ms\030\004 \001(\005\022p\n\007outcome\030\005 \001(\016" +
-      "2_.android_studio.AppInspectionEvent.Dat" +
-      "abaseInspectorEvent.ExportOperationCompl" +
-      "etedEvent.Outcome\"U\n\006Source\022\022\n\016UNKNOWN_S" +
-      "OURCE\020\000\022\023\n\017DATABASE_SOURCE\020\001\022\020\n\014TABLE_SO" +
-      "URCE\020\002\022\020\n\014QUERY_SOURCE\020\003\"P\n\014SourceFormat" +
-      "\022\031\n\025UNKNOWN_SOURCE_FORMAT\020\000\022\017\n\013FILE_FORM" +
-      "AT\020\001\022\024\n\020IN_MEMORY_FORMAT\020\002\"d\n\013Destinatio" +
-      "n\022\027\n\023UNKNOWN_DESTINATION\020\000\022\022\n\016DB_DESTINA" +
-      "TION\020\001\022\023\n\017SQL_DESTINATION\020\002\022\023\n\017CSV_DESTI" +
-      "NATION\020\003\"\260\001\n\007Outcome\022\023\n\017UNKNOWN_OUTCOME\020" +
-      "\000\022\023\n\017SUCCESS_OUTCOME\020\001\022\035\n\031CANCELLED_BY_U" +
-      "SER_OUTCOME\020\002\022,\n(CANCELLED_BY_OFFLINE_MO" +
-      "DE_CHANGE_OUTCOME\020\003\022\033\n\027CANCELLED_OTHER_O" +
-      "UTCOME\020\004\022\021\n\rERROR_OUTCOME\020\005\"\323\002\n\004Type\022\026\n\022" +
-      "UNKNOWN_EVENT_TYPE\020\000\022\022\n\016ERROR_OCCURRED\020\001" +
-      "\022\025\n\021TABLE_CELL_EDITED\020\002\022\024\n\020TARGET_REFRES" +
-      "HED\020\003\022\026\n\022STATEMENT_EXECUTED\020\004\022 \n\034STATEME" +
-      "NT_EXECUTION_CANCELED\020\005\022\030\n\024LIVE_UPDATES_" +
-      "TOGGLED\020\010\022\030\n\024OFFLINE_MODE_ENTERED\020\t\022$\n E" +
-      "NTER_OFFLINE_MODE_USER_CANCELED\020\n\022$\n OFF" +
-      "LINE_DATABASE_DOWNLOAD_FAILED\020\013\022\030\n\024EXPOR" +
-      "T_DIALOG_OPENED\020\014\022\036\n\032EXPORT_OPERATION_CO" +
-      "MPLETED\020\r\"r\n\tErrorKind\022\026\n\022UNKNOWN_ERROR_" +
-      "KIND\020\000\022\027\n\023IS_RECOVERABLE_TRUE\020\001\022\030\n\024IS_RE" +
-      "COVERABLE_FALSE\020\002\022\032\n\026IS_RECOVERABLE_UNKN" +
-      "OWN\020\003\"J\n\nTargetType\022\027\n\023UNKNOWN_TARGET_TY" +
-      "PE\020\000\022\021\n\rSCHEMA_TARGET\020\001\022\020\n\014TABLE_TARGET\020" +
-      "\002\"\221\001\n\020StatementContext\022\035\n\031UNKNOWN_STATEM" +
-      "ENT_CONTEXT\020\000\022\034\n\030SCHEMA_STATEMENT_CONTEX" +
-      "T\020\001\022\034\n\030GUTTER_STATEMENT_CONTEXT\020\002\022\"\n\036USE" +
-      "R_DEFINED_STATEMENT_CONTEXT\020\003\"f\n\021Connect" +
-      "ivityState\022\036\n\032UNKNOWN_CONNECTIVITY_STATE" +
-      "\020\000\022\027\n\023CONNECTIVITY_ONLINE\020\001\022\030\n\024CONNECTIV" +
-      "ITY_OFFLINE\020\002\032\220\006\n\031WorkManagerInspectorEv" +
-      "ent\022O\n\004type\030\001 \001(\0162A.android_studio.AppIn" +
-      "spectionEvent.WorkManagerInspectorEvent." +
-      "Type\022U\n\007context\030\002 \001(\0162D.android_studio.A" +
-      "ppInspectionEvent.WorkManagerInspectorEv" +
-      "ent.Context\022O\n\004mode\030\003 \001(\0162A.android_stud" +
-      "io.AppInspectionEvent.WorkManagerInspect" +
-      "orEvent.Mode\022Z\n\nchain_info\030\004 \001(\0132F.andro" +
-      "id_studio.AppInspectionEvent.WorkManager" +
-      "InspectorEvent.ChainInfo\032a\n\tChainInfo\022\024\n" +
-      "\014worker_count\030\001 \001(\005\022\030\n\020dependency_count\030" +
-      "\002 \001(\005\022\021\n\tmax_depth\030\003 \001(\005\022\021\n\tmax_width\030\004 " +
-      "\001(\005\"\214\001\n\004Type\022\026\n\022UNKNOWN_EVENT_TYPE\020\000\022\027\n\023" +
-      "TABLE_MODE_SELECTED\020\001\022\027\n\023GRAPH_MODE_SELE" +
-      "CTED\020\002\022\021\n\rWORK_SELECTED\020e\022\024\n\020JUMPED_TO_S" +
-      "OURCE\020f\022\021\n\rWORK_CANCELED\020g\"r\n\007Context\022\023\n" +
-      "\017UNKNOWN_CONTEXT\020\000\022\021\n\rTABLE_CONTEXT\020\001\022\021\n" +
-      "\rGRAPH_CONTEXT\020\002\022\023\n\017DETAILS_CONTEXT\020\003\022\027\n" +
-      "\023TOOL_BUTTON_CONTEXT\020\004\"8\n\004Mode\022\020\n\014UNKNOW" +
-      "N_MODE\020\000\022\016\n\nTABLE_MODE\020\001\022\016\n\nGRAPH_MODE\020\002" +
-      "\032\236\010\n\025NetworkInspectorEvent\022K\n\004type\030\001 \001(\016" +
-      "2=.android_studio.AppInspectionEvent.Net" +
-      "workInspectorEvent.Type\022f\n\023rule_detail_u" +
-      "pdated\030\002 \001(\0132I.android_studio.AppInspect" +
-      "ionEvent.NetworkInspectorEvent.RuleUpdat" +
-      "edEvent\022o\n\024response_intercepted\030\003 \001(\0132Q." +
-      "android_studio.AppInspectionEvent.Networ" +
-      "kInspectorEvent.ResponseInterceptedEvent" +
-      "\032\342\002\n\020RuleUpdatedEvent\022f\n\tcomponent\030\001 \001(\016" +
-      "2S.android_studio.AppInspectionEvent.Net" +
-      "workInspectorEvent.RuleUpdatedEvent.Comp" +
-      "onent\"\345\001\n\tComponent\022\025\n\021UNKNOWN_COMPONENT" +
-      "\020\000\022\020\n\014URL_PROTOCOL\020\001\022\014\n\010URL_HOST\020\002\022\014\n\010UR" +
-      "L_PORT\020\003\022\014\n\010URL_PATH\020\004\022\r\n\tURL_QUERY\020\005\022\r\n" +
-      "\tFIND_CODE\020\006\022\025\n\021FIND_REPLACE_CODE\020\007\022\016\n\nA" +
-      "DD_HEADER\020\010\022\027\n\023FIND_REPLACE_HEADER\020\t\022\025\n\021" +
-      "FIND_REPLACE_BODY\020\n\022\020\n\014REPLACE_BODY\020\013\032\214\001" +
-      "\n\030ResponseInterceptedEvent\022\023\n\013status_cod" +
-      "e\030\001 \001(\010\022\024\n\014header_added\030\002 \001(\010\022\027\n\017header_" +
-      "replaced\030\003 \001(\010\022\025\n\rbody_replaced\030\004 \001(\010\022\025\n" +
-      "\rbody_modified\030\005 \001(\010\"\352\001\n\004Type\022\026\n\022UNKNOWN" +
-      "_EVENT_TYPE\020\000\022\033\n\027MIGRATION_LINK_SELECTED" +
-      "\020\001\022\036\n\032CONNECTION_DETAIL_SELECTED\020\002\022\030\n\024RE" +
-      "QUEST_TAB_SELECTED\020\003\022\031\n\025RESPONSE_TAB_SEL" +
-      "ECTED\020\004\022\032\n\026CALLSTACK_TAB_SELECTED\020\005\022\020\n\014R" +
-      "ULE_CREATED\020\006\022\020\n\014RULE_UPDATED\020\007\022\030\n\024RESPO" +
-      "NSE_INTERCEPTED\020\010\032\272\007\n\034BackgroundTaskInsp" +
-      "ectorEvent\022R\n\004type\030\001 \001(\0162D.android_studi" +
-      "o.AppInspectionEvent.BackgroundTaskInspe" +
-      "ctorEvent.Type\022X\n\007context\030\002 \001(\0162G.androi" +
-      "d_studio.AppInspectionEvent.BackgroundTa" +
-      "skInspectorEvent.Context\022R\n\004mode\030\003 \001(\0162D" +
-      ".android_studio.AppInspectionEvent.Backg" +
-      "roundTaskInspectorEvent.Mode\022]\n\nchain_in" +
-      "fo\030\004 \001(\0132I.android_studio.AppInspectionE" +
-      "vent.BackgroundTaskInspectorEvent.ChainI" +
-      "nfo\032a\n\tChainInfo\022\024\n\014worker_count\030\001 \001(\005\022\030" +
-      "\n\020dependency_count\030\002 \001(\005\022\021\n\tmax_depth\030\003 " +
-      "\001(\005\022\021\n\tmax_width\030\004 \001(\005\"\247\002\n\004Type\022\026\n\022UNKNO" +
+      "OperationCompletedEvent.Source\022{\n\rsource" +
+      "_format\030\002 \001(\0162d.android_studio.AppInspec" +
+      "tionEvent.DatabaseInspectorEvent.ExportO" +
+      "perationCompletedEvent.SourceFormat\022x\n\013d" +
+      "estination\030\003 \001(\0162c.android_studio.AppIns" +
+      "pectionEvent.DatabaseInspectorEvent.Expo" +
+      "rtOperationCompletedEvent.Destination\022\032\n" +
+      "\022export_duration_ms\030\004 \001(\005\022p\n\007outcome\030\005 \001" +
+      "(\0162_.android_studio.AppInspectionEvent.D" +
+      "atabaseInspectorEvent.ExportOperationCom" +
+      "pletedEvent.Outcome\"U\n\006Source\022\022\n\016UNKNOWN" +
+      "_SOURCE\020\000\022\023\n\017DATABASE_SOURCE\020\001\022\020\n\014TABLE_" +
+      "SOURCE\020\002\022\020\n\014QUERY_SOURCE\020\003\"P\n\014SourceForm" +
+      "at\022\031\n\025UNKNOWN_SOURCE_FORMAT\020\000\022\017\n\013FILE_FO" +
+      "RMAT\020\001\022\024\n\020IN_MEMORY_FORMAT\020\002\"d\n\013Destinat" +
+      "ion\022\027\n\023UNKNOWN_DESTINATION\020\000\022\022\n\016DB_DESTI" +
+      "NATION\020\001\022\023\n\017SQL_DESTINATION\020\002\022\023\n\017CSV_DES" +
+      "TINATION\020\003\"\260\001\n\007Outcome\022\023\n\017UNKNOWN_OUTCOM" +
+      "E\020\000\022\023\n\017SUCCESS_OUTCOME\020\001\022\035\n\031CANCELLED_BY" +
+      "_USER_OUTCOME\020\002\022,\n(CANCELLED_BY_OFFLINE_" +
+      "MODE_CHANGE_OUTCOME\020\003\022\033\n\027CANCELLED_OTHER" +
+      "_OUTCOME\020\004\022\021\n\rERROR_OUTCOME\020\005\"\323\002\n\004Type\022\026" +
+      "\n\022UNKNOWN_EVENT_TYPE\020\000\022\022\n\016ERROR_OCCURRED" +
+      "\020\001\022\025\n\021TABLE_CELL_EDITED\020\002\022\024\n\020TARGET_REFR" +
+      "ESHED\020\003\022\026\n\022STATEMENT_EXECUTED\020\004\022 \n\034STATE" +
+      "MENT_EXECUTION_CANCELED\020\005\022\030\n\024LIVE_UPDATE" +
+      "S_TOGGLED\020\010\022\030\n\024OFFLINE_MODE_ENTERED\020\t\022$\n" +
+      " ENTER_OFFLINE_MODE_USER_CANCELED\020\n\022$\n O" +
+      "FFLINE_DATABASE_DOWNLOAD_FAILED\020\013\022\030\n\024EXP" +
+      "ORT_DIALOG_OPENED\020\014\022\036\n\032EXPORT_OPERATION_" +
+      "COMPLETED\020\r\"r\n\tErrorKind\022\026\n\022UNKNOWN_ERRO" +
+      "R_KIND\020\000\022\027\n\023IS_RECOVERABLE_TRUE\020\001\022\030\n\024IS_" +
+      "RECOVERABLE_FALSE\020\002\022\032\n\026IS_RECOVERABLE_UN" +
+      "KNOWN\020\003\"J\n\nTargetType\022\027\n\023UNKNOWN_TARGET_" +
+      "TYPE\020\000\022\021\n\rSCHEMA_TARGET\020\001\022\020\n\014TABLE_TARGE" +
+      "T\020\002\"\221\001\n\020StatementContext\022\035\n\031UNKNOWN_STAT" +
+      "EMENT_CONTEXT\020\000\022\034\n\030SCHEMA_STATEMENT_CONT" +
+      "EXT\020\001\022\034\n\030GUTTER_STATEMENT_CONTEXT\020\002\022\"\n\036U" +
+      "SER_DEFINED_STATEMENT_CONTEXT\020\003\"f\n\021Conne" +
+      "ctivityState\022\036\n\032UNKNOWN_CONNECTIVITY_STA" +
+      "TE\020\000\022\027\n\023CONNECTIVITY_ONLINE\020\001\022\030\n\024CONNECT" +
+      "IVITY_OFFLINE\020\002\032\220\006\n\031WorkManagerInspector" +
+      "Event\022O\n\004type\030\001 \001(\0162A.android_studio.App" +
+      "InspectionEvent.WorkManagerInspectorEven" +
+      "t.Type\022U\n\007context\030\002 \001(\0162D.android_studio" +
+      ".AppInspectionEvent.WorkManagerInspector" +
+      "Event.Context\022O\n\004mode\030\003 \001(\0162A.android_st" +
+      "udio.AppInspectionEvent.WorkManagerInspe" +
+      "ctorEvent.Mode\022Z\n\nchain_info\030\004 \001(\0132F.and" +
+      "roid_studio.AppInspectionEvent.WorkManag" +
+      "erInspectorEvent.ChainInfo\032a\n\tChainInfo\022" +
+      "\024\n\014worker_count\030\001 \001(\005\022\030\n\020dependency_coun" +
+      "t\030\002 \001(\005\022\021\n\tmax_depth\030\003 \001(\005\022\021\n\tmax_width\030" +
+      "\004 \001(\005\"\214\001\n\004Type\022\026\n\022UNKNOWN_EVENT_TYPE\020\000\022\027" +
+      "\n\023TABLE_MODE_SELECTED\020\001\022\027\n\023GRAPH_MODE_SE" +
+      "LECTED\020\002\022\021\n\rWORK_SELECTED\020e\022\024\n\020JUMPED_TO" +
+      "_SOURCE\020f\022\021\n\rWORK_CANCELED\020g\"r\n\007Context\022" +
+      "\023\n\017UNKNOWN_CONTEXT\020\000\022\021\n\rTABLE_CONTEXT\020\001\022" +
+      "\021\n\rGRAPH_CONTEXT\020\002\022\023\n\017DETAILS_CONTEXT\020\003\022" +
+      "\027\n\023TOOL_BUTTON_CONTEXT\020\004\"8\n\004Mode\022\020\n\014UNKN" +
+      "OWN_MODE\020\000\022\016\n\nTABLE_MODE\020\001\022\016\n\nGRAPH_MODE" +
+      "\020\002\032\236\010\n\025NetworkInspectorEvent\022K\n\004type\030\001 \001" +
+      "(\0162=.android_studio.AppInspectionEvent.N" +
+      "etworkInspectorEvent.Type\022f\n\023rule_detail" +
+      "_updated\030\002 \001(\0132I.android_studio.AppInspe" +
+      "ctionEvent.NetworkInspectorEvent.RuleUpd" +
+      "atedEvent\022o\n\024response_intercepted\030\003 \001(\0132" +
+      "Q.android_studio.AppInspectionEvent.Netw" +
+      "orkInspectorEvent.ResponseInterceptedEve" +
+      "nt\032\342\002\n\020RuleUpdatedEvent\022f\n\tcomponent\030\001 \001" +
+      "(\0162S.android_studio.AppInspectionEvent.N" +
+      "etworkInspectorEvent.RuleUpdatedEvent.Co" +
+      "mponent\"\345\001\n\tComponent\022\025\n\021UNKNOWN_COMPONE" +
+      "NT\020\000\022\020\n\014URL_PROTOCOL\020\001\022\014\n\010URL_HOST\020\002\022\014\n\010" +
+      "URL_PORT\020\003\022\014\n\010URL_PATH\020\004\022\r\n\tURL_QUERY\020\005\022" +
+      "\r\n\tFIND_CODE\020\006\022\025\n\021FIND_REPLACE_CODE\020\007\022\016\n" +
+      "\nADD_HEADER\020\010\022\027\n\023FIND_REPLACE_HEADER\020\t\022\025" +
+      "\n\021FIND_REPLACE_BODY\020\n\022\020\n\014REPLACE_BODY\020\013\032" +
+      "\214\001\n\030ResponseInterceptedEvent\022\023\n\013status_c" +
+      "ode\030\001 \001(\010\022\024\n\014header_added\030\002 \001(\010\022\027\n\017heade" +
+      "r_replaced\030\003 \001(\010\022\025\n\rbody_replaced\030\004 \001(\010\022" +
+      "\025\n\rbody_modified\030\005 \001(\010\"\352\001\n\004Type\022\026\n\022UNKNO" +
       "WN_EVENT_TYPE\020\000\022\033\n\027MIGRATION_LINK_SELECT" +
-      "ED\020\001\022\027\n\023TABLE_MODE_SELECTED\020\002\022\027\n\023GRAPH_M" +
-      "ODE_SELECTED\020\003\022\024\n\020JUMPED_TO_SOURCE\020\004\022\020\n\014" +
-      "JOB_SELECTED\020e\022\033\n\027JOB_UNDER_WORK_SELECTE" +
-      "D\020f\022\022\n\016ALARM_SELECTED\020g\022\026\n\022WAKE_LOCK_SEL" +
-      "ECTED\020h\022 \n\034WAKE_LOCK_UNDER_JOB_SELECTED\020" +
-      "i\022\021\n\rWORK_SELECTED\020j\022\022\n\rWORK_CANCELED\020\311\001" +
-      "\"r\n\007Context\022\023\n\017UNKNOWN_CONTEXT\020\000\022\021\n\rTABL" +
-      "E_CONTEXT\020\001\022\021\n\rGRAPH_CONTEXT\020\002\022\023\n\017DETAIL" +
-      "S_CONTEXT\020\003\022\027\n\023TOOL_BUTTON_CONTEXT\020\004\"8\n\004" +
-      "Mode\022\020\n\014UNKNOWN_MODE\020\000\022\016\n\nTABLE_MODE\020\001\022\016" +
-      "\n\nGRAPH_MODE\020\002\"\277\001\n\004Type\022\026\n\022UNKNOWN_EVENT" +
-      "_TYPE\020\000\022\023\n\017INSPECTOR_EVENT\020\001\022\022\n\016ERROR_OC" +
-      "CURRED\020\002\022\026\n\022TOOL_WINDOW_OPENED\020\003\022\026\n\022TOOL" +
-      "_WINDOW_HIDDEN\020\004\022\024\n\020PROCESS_SELECTED\020\005\022\026" +
-      "\n\022INSPECTION_STOPPED\020\006\022\030\n\024INSPECTION_RES" +
-      "TARTED\020\007\"P\n\tErrorKind\022\026\n\022UNKNOWN_ERROR_K" +
-      "IND\020\000\022\025\n\021INSPECTOR_CRASHED\020\001\022\024\n\020APP_DISC" +
-      "ONNECTED\020\002B\021\n\017inspector_event\"\273\002\n\016AvdLau" +
-      "nchEvent\022>\n\013launch_type\030\001 \001(\0162).android_" +
-      "studio.AvdLaunchEvent.LaunchType\022:\n\tavd_" +
-      "class\030\002 \001(\0162\'.android_studio.AvdLaunchEv" +
-      "ent.AvdClass\"I\n\nLaunchType\022\027\n\023UNKNOWN_LA" +
-      "UNCH_TYPE\020\000\022\016\n\nSTANDALONE\020\001\022\022\n\016IN_TOOL_W" +
-      "INDOW\020\002\"b\n\010AvdClass\022\025\n\021UNKNOWN_AVD_CLASS" +
-      "\020\000\022\013\n\007GENERIC\020\001\022\014\n\010FOLDABLE\020\002\022\006\n\002TV\020\003\022\016\n" +
-      "\nAUTOMOTIVE\020\004\022\014\n\010WEARABLE\020\005\"\213\010\n\021DaggerEd" +
-      "itorEvent\0224\n\004type\030\001 \001(\0162&.android_studio" +
-      ".DaggerEditorEvent.Type\022Q\n\023navigation_me" +
-      "tadata\030\002 \001(\01324.android_studio.DaggerEdit" +
-      "orEvent.NavigationMetadata\022I\n\022owner_elem" +
-      "ent_type\030\003 \001(\0162-.android_studio.DaggerEd" +
-      "itorEvent.ElementType\022\033\n\023calculation_tim" +
-      "e_ms\030\004 \001(\003\022(\n using_built_in_annotation_" +
-      "search\030\005 \001(\010\032\307\002\n\022NavigationMetadata\022W\n\007c" +
-      "ontext\030\001 \001(\0162F.android_studio.DaggerEdit" +
-      "orEvent.NavigationMetadata.NavigationCon" +
-      "text\022C\n\014from_element\030\002 \001(\0162-.android_stu" +
-      "dio.DaggerEditorEvent.ElementType\022A\n\nto_" +
-      "element\030\003 \001(\0162-.android_studio.DaggerEdi" +
-      "torEvent.ElementType\"P\n\021NavigationContex" +
-      "t\022\023\n\017UNKNOWN_CONTEXT\020\000\022\022\n\016CONTEXT_GUTTER" +
-      "\020\001\022\022\n\016CONTEXT_USAGES\020\002\"\236\001\n\004Type\022\026\n\022UNKNO" +
-      "WN_EVENT_TYPE\020\000\022\r\n\tNAVIGATED\020\001\022\032\n\026OPENED" +
-      "_LINK_FROM_ERROR\020\002\022\"\n\036FIND_USAGES_NODE_W" +
-      "AS_DISPLAYED\020\003\022\025\n\021CLICKED_ON_GUTTER\020\004\022\030\n" +
-      "\024GUTTER_WAS_DISPLAYED\020\005\"\357\001\n\013ElementType\022" +
-      "\030\n\024UNKNOWN_ELEMENT_TYPE\020\000\022\014\n\010PROVIDER\020\001\022" +
-      "\014\n\010CONSUMER\020\002\022\r\n\tCOMPONENT\020\003\022\020\n\014SUBCOMPO" +
-      "NENT\020\004\022\n\n\006MODULE\020\005\022\017\n\013ENTRY_POINT\020\006\022\024\n\020C" +
-      "OMPONENT_METHOD\020\007\022\026\n\022ENTRY_POINT_METHOD\020" +
-      "\010\022!\n\035ASSISTED_INJECTED_CONSTRUCTOR\020\t\022\033\n\027" +
-      "ASSISTED_FACTORY_METHOD\020\n\"\364\003\n\031AndroidTes" +
-      "tRetentionEvent\022_\n\026snapshot_compatibilit" +
-      "y\030\001 \001(\0132?.android_studio.AndroidTestRete" +
-      "ntionEvent.SnapshotCompatibility\032\365\002\n\025Sna" +
-      "pshotCompatibility\022V\n\006result\030\001 \001(\0162F.and" +
-      "roid_studio.AndroidTestRetentionEvent.Sn" +
-      "apshotCompatibility.Result\022T\n\035emulator_c" +
-      "heck_failure_reason\030\002 \001(\0162-.android_stud" +
-      "io.EmulatorSnapshotFailureReason\"\255\001\n\006Res" +
-      "ult\022\023\n\017UNKNOWN_FAILURE\020\000\022\014\n\010LOADABLE\020\001\022\033" +
-      "\n\027SNAPSHOT_FILE_NOT_FOUND\020\002\022\033\n\027EMULATOR_" +
-      "EXEC_NOT_FOUND\020\003\022!\n\035SNAPSHOT_PROTO_FILE_" +
-      "NOT_FOUND\020\004\022#\n\037EMULATOR_LOADABLE_CHECK_F" +
-      "AILURE\020\005\"\343\007\n ParallelAndroidTestReportUi" +
-      "Event\022O\n\013impressions\030\001 \003(\0162:.android_stu" +
-      "dio.ParallelAndroidTestReportUiEvent.UiE" +
-      "lement\022V\n\014interactions\030\002 \003(\0132@.android_s" +
+      "ED\020\001\022\036\n\032CONNECTION_DETAIL_SELECTED\020\002\022\030\n\024" +
+      "REQUEST_TAB_SELECTED\020\003\022\031\n\025RESPONSE_TAB_S" +
+      "ELECTED\020\004\022\032\n\026CALLSTACK_TAB_SELECTED\020\005\022\020\n" +
+      "\014RULE_CREATED\020\006\022\020\n\014RULE_UPDATED\020\007\022\030\n\024RES" +
+      "PONSE_INTERCEPTED\020\010\032\272\007\n\034BackgroundTaskIn" +
+      "spectorEvent\022R\n\004type\030\001 \001(\0162D.android_stu" +
+      "dio.AppInspectionEvent.BackgroundTaskIns" +
+      "pectorEvent.Type\022X\n\007context\030\002 \001(\0162G.andr" +
+      "oid_studio.AppInspectionEvent.Background" +
+      "TaskInspectorEvent.Context\022R\n\004mode\030\003 \001(\016" +
+      "2D.android_studio.AppInspectionEvent.Bac" +
+      "kgroundTaskInspectorEvent.Mode\022]\n\nchain_" +
+      "info\030\004 \001(\0132I.android_studio.AppInspectio" +
+      "nEvent.BackgroundTaskInspectorEvent.Chai" +
+      "nInfo\032a\n\tChainInfo\022\024\n\014worker_count\030\001 \001(\005" +
+      "\022\030\n\020dependency_count\030\002 \001(\005\022\021\n\tmax_depth\030" +
+      "\003 \001(\005\022\021\n\tmax_width\030\004 \001(\005\"\247\002\n\004Type\022\026\n\022UNK" +
+      "NOWN_EVENT_TYPE\020\000\022\033\n\027MIGRATION_LINK_SELE" +
+      "CTED\020\001\022\027\n\023TABLE_MODE_SELECTED\020\002\022\027\n\023GRAPH" +
+      "_MODE_SELECTED\020\003\022\024\n\020JUMPED_TO_SOURCE\020\004\022\020" +
+      "\n\014JOB_SELECTED\020e\022\033\n\027JOB_UNDER_WORK_SELEC" +
+      "TED\020f\022\022\n\016ALARM_SELECTED\020g\022\026\n\022WAKE_LOCK_S" +
+      "ELECTED\020h\022 \n\034WAKE_LOCK_UNDER_JOB_SELECTE" +
+      "D\020i\022\021\n\rWORK_SELECTED\020j\022\022\n\rWORK_CANCELED\020" +
+      "\311\001\"r\n\007Context\022\023\n\017UNKNOWN_CONTEXT\020\000\022\021\n\rTA" +
+      "BLE_CONTEXT\020\001\022\021\n\rGRAPH_CONTEXT\020\002\022\023\n\017DETA" +
+      "ILS_CONTEXT\020\003\022\027\n\023TOOL_BUTTON_CONTEXT\020\004\"8" +
+      "\n\004Mode\022\020\n\014UNKNOWN_MODE\020\000\022\016\n\nTABLE_MODE\020\001" +
+      "\022\016\n\nGRAPH_MODE\020\002\"\277\001\n\004Type\022\026\n\022UNKNOWN_EVE" +
+      "NT_TYPE\020\000\022\023\n\017INSPECTOR_EVENT\020\001\022\022\n\016ERROR_" +
+      "OCCURRED\020\002\022\026\n\022TOOL_WINDOW_OPENED\020\003\022\026\n\022TO" +
+      "OL_WINDOW_HIDDEN\020\004\022\024\n\020PROCESS_SELECTED\020\005" +
+      "\022\026\n\022INSPECTION_STOPPED\020\006\022\030\n\024INSPECTION_R" +
+      "ESTARTED\020\007\"P\n\tErrorKind\022\026\n\022UNKNOWN_ERROR" +
+      "_KIND\020\000\022\025\n\021INSPECTOR_CRASHED\020\001\022\024\n\020APP_DI" +
+      "SCONNECTED\020\002B\021\n\017inspector_event\"\273\002\n\016AvdL" +
+      "aunchEvent\022>\n\013launch_type\030\001 \001(\0162).androi" +
+      "d_studio.AvdLaunchEvent.LaunchType\022:\n\tav" +
+      "d_class\030\002 \001(\0162\'.android_studio.AvdLaunch" +
+      "Event.AvdClass\"I\n\nLaunchType\022\027\n\023UNKNOWN_" +
+      "LAUNCH_TYPE\020\000\022\016\n\nSTANDALONE\020\001\022\022\n\016IN_TOOL" +
+      "_WINDOW\020\002\"b\n\010AvdClass\022\025\n\021UNKNOWN_AVD_CLA" +
+      "SS\020\000\022\013\n\007GENERIC\020\001\022\014\n\010FOLDABLE\020\002\022\006\n\002TV\020\003\022" +
+      "\016\n\nAUTOMOTIVE\020\004\022\014\n\010WEARABLE\020\005\"\213\010\n\021Dagger" +
+      "EditorEvent\0224\n\004type\030\001 \001(\0162&.android_stud" +
+      "io.DaggerEditorEvent.Type\022Q\n\023navigation_" +
+      "metadata\030\002 \001(\01324.android_studio.DaggerEd" +
+      "itorEvent.NavigationMetadata\022I\n\022owner_el" +
+      "ement_type\030\003 \001(\0162-.android_studio.Dagger" +
+      "EditorEvent.ElementType\022\033\n\023calculation_t" +
+      "ime_ms\030\004 \001(\003\022(\n using_built_in_annotatio" +
+      "n_search\030\005 \001(\010\032\307\002\n\022NavigationMetadata\022W\n" +
+      "\007context\030\001 \001(\0162F.android_studio.DaggerEd" +
+      "itorEvent.NavigationMetadata.NavigationC" +
+      "ontext\022C\n\014from_element\030\002 \001(\0162-.android_s" +
+      "tudio.DaggerEditorEvent.ElementType\022A\n\nt" +
+      "o_element\030\003 \001(\0162-.android_studio.DaggerE" +
+      "ditorEvent.ElementType\"P\n\021NavigationCont" +
+      "ext\022\023\n\017UNKNOWN_CONTEXT\020\000\022\022\n\016CONTEXT_GUTT" +
+      "ER\020\001\022\022\n\016CONTEXT_USAGES\020\002\"\236\001\n\004Type\022\026\n\022UNK" +
+      "NOWN_EVENT_TYPE\020\000\022\r\n\tNAVIGATED\020\001\022\032\n\026OPEN" +
+      "ED_LINK_FROM_ERROR\020\002\022\"\n\036FIND_USAGES_NODE" +
+      "_WAS_DISPLAYED\020\003\022\025\n\021CLICKED_ON_GUTTER\020\004\022" +
+      "\030\n\024GUTTER_WAS_DISPLAYED\020\005\"\357\001\n\013ElementTyp" +
+      "e\022\030\n\024UNKNOWN_ELEMENT_TYPE\020\000\022\014\n\010PROVIDER\020" +
+      "\001\022\014\n\010CONSUMER\020\002\022\r\n\tCOMPONENT\020\003\022\020\n\014SUBCOM" +
+      "PONENT\020\004\022\n\n\006MODULE\020\005\022\017\n\013ENTRY_POINT\020\006\022\024\n" +
+      "\020COMPONENT_METHOD\020\007\022\026\n\022ENTRY_POINT_METHO" +
+      "D\020\010\022!\n\035ASSISTED_INJECTED_CONSTRUCTOR\020\t\022\033" +
+      "\n\027ASSISTED_FACTORY_METHOD\020\n\"\364\003\n\031AndroidT" +
+      "estRetentionEvent\022_\n\026snapshot_compatibil" +
+      "ity\030\001 \001(\0132?.android_studio.AndroidTestRe" +
+      "tentionEvent.SnapshotCompatibility\032\365\002\n\025S" +
+      "napshotCompatibility\022V\n\006result\030\001 \001(\0162F.a" +
+      "ndroid_studio.AndroidTestRetentionEvent." +
+      "SnapshotCompatibility.Result\022T\n\035emulator" +
+      "_check_failure_reason\030\002 \001(\0162-.android_st" +
+      "udio.EmulatorSnapshotFailureReason\"\255\001\n\006R" +
+      "esult\022\023\n\017UNKNOWN_FAILURE\020\000\022\014\n\010LOADABLE\020\001" +
+      "\022\033\n\027SNAPSHOT_FILE_NOT_FOUND\020\002\022\033\n\027EMULATO" +
+      "R_EXEC_NOT_FOUND\020\003\022!\n\035SNAPSHOT_PROTO_FIL" +
+      "E_NOT_FOUND\020\004\022#\n\037EMULATOR_LOADABLE_CHECK" +
+      "_FAILURE\020\005\"\343\007\n ParallelAndroidTestReport" +
+      "UiEvent\022O\n\013impressions\030\001 \003(\0162:.android_s" +
       "tudio.ParallelAndroidTestReportUiEvent.U" +
-      "serInteraction\032\310\003\n\017UserInteraction\022b\n\004ty" +
-      "pe\030\001 \001(\0162T.android_studio.ParallelAndroi" +
-      "dTestReportUiEvent.UserInteraction.UserI" +
-      "nteractionType\022N\n\nui_element\030\002 \001(\0162:.and" +
-      "roid_studio.ParallelAndroidTestReportUiE" +
-      "vent.UiElement\022j\n\006result\030\003 \001(\0162Z.android" +
+      "iElement\022V\n\014interactions\030\002 \003(\0132@.android" +
       "_studio.ParallelAndroidTestReportUiEvent" +
-      ".UserInteraction.UserInteractionResultTy" +
-      "pe\"<\n\023UserInteractionType\022\032\n\026UNKNOWN_UI_" +
-      "INTERACTION\020\000\022\t\n\005CLICK\020\001\"W\n\031UserInteract" +
-      "ionResultType\022!\n\035UNKNOWN_UI_INTERACTION_" +
-      "RESULT\020\000\022\n\n\006ACCEPT\020\001\022\013\n\007DISMISS\020\002\"\312\002\n\tUi" +
-      "Element\022\026\n\022UNKNOWN_UI_ELEMENT\020\000\022\023\n\017TEST_" +
-      "SUITE_VIEW\020\001\022\035\n\031TEST_SUITE_VIEW_TABLE_RO" +
-      "W\020\002\022&\n\"TEST_SUITE_DETAILS_HORIZONTAL_VIE" +
-      "W\020\003\022$\n TEST_SUITE_DETAILS_VERTICAL_VIEW\020" +
-      "\004\022\027\n\023TEST_SUITE_LOG_VIEW\020\005\022\037\n\033TEST_SUITE" +
-      "_DEVICE_INFO_VIEW\020\006\022\034\n\030TEST_SUITE_OPT_IN" +
-      "_BANNER\020\007\022\035\n\031TEST_SUITE_RETENTION_VIEW\020\010" +
-      "\022,\n(GRADLE_ANDROID_TEST_RUNNER_OPT_IN_DI" +
-      "ALOG\020\t\"\364\003\n\026ApplyChangesAgentError\022\034\n\024age" +
-      "nt_attach_time_ms\030\001 \001(\003\022\032\n\022agent_attach_" +
-      "count\030\002 \001(\005\022\025\n\revent_time_ms\030\003 \001(\003\022J\n\rag" +
-      "ent_purpose\030\004 \001(\01623.android_studio.Apply" +
-      "ChangesAgentError.AgentPurpose\022J\n\016target" +
-      "_classes\030\005 \003(\01622.android_studio.ApplyCha" +
-      "ngesAgentError.TargetClass\"a\n\014AgentPurpo" +
-      "se\022\023\n\017UNKNOWN_PURPOSE\020\000\022\021\n\rSTARTUP_AGENT" +
-      "\020\001\022\021\n\rAPPLY_CHANGES\020\002\022\026\n\022APPLY_CODE_CHAN" +
-      "GES\020\003\"\215\001\n\013TargetClass\022\030\n\024UNKNOWN_TARGET_" +
-      "CLASS\020\000\022\023\n\017ACTIVITY_THREAD\020\001\022\031\n\025DEX_PATH" +
-      "_LIST_ELEMENT\020\002\022\021\n\rDEX_PATH_LIST\020\003\022\025\n\021RE" +
-      "SOURCES_MANAGER\020\004\022\n\n\006THREAD\020\005\"\315\001\n\017Varian" +
-      "tApiUsage\0225\n\016variant_access\030\001 \003(\0132\035.andr" +
-      "oid_studio.VariantAccess\022J\n\031variant_prop" +
-      "erties_access\030\002 \003(\0132\'.android_studio.Var" +
-      "iantPropertiesAccess\0227\n\017artifact_access\030" +
-      "\003 \003(\0132\036.android_studio.ArtifactAccess\"\374\001" +
-      "\n\016ArtifactAccess\0227\n\004type\030\001 \001(\0162).android" +
-      "_studio.ArtifactAccess.AccessType\022\033\n\023inp" +
-      "ut_artifact_type\030\002 \001(\005\022\034\n\024output_artifac" +
-      "t_type\030\003 \001(\005\"v\n\nAccessType\022\027\n\023UNKNOWN_AC" +
-      "CESS_TYPE\020\000\022\007\n\003GET\020\001\022\013\n\007GET_ALL\020\002\022\n\n\006CRE" +
-      "ATE\020\003\022\n\n\006APPEND\020\004\022\r\n\tTRANSFORM\020\005\022\022\n\016TRAN" +
-      "SFORM_MANY\020\006\"\035\n\rVariantAccess\022\014\n\004type\030\001 " +
-      "\001(\005\"\'\n\027VariantPropertiesAccess\022\014\n\004type\030\001" +
-      " \001(\005\"\327\016\n\035UpgradeAssistantComponentInfo\022Y" +
-      "\n\004kind\030\001 \001(\0162K.android_studio.UpgradeAss" +
-      "istantComponentInfo.UpgradeAssistantComp" +
-      "onentKind\022\022\n\nis_enabled\030\002 \001(\010\022k\n\026java8_d" +
-      "efault_settings\030\003 \001(\0132K.android_studio.U" +
-      "pgradeAssistantComponentInfo.Java8Defaul" +
-      "tProcessorSettings\022w\n\035r8_full_mode_defau" +
-      "lt_settings\030\004 \001(\0132P.android_studio.Upgra" +
-      "deAssistantComponentInfo.R8FullModeDefau" +
-      "ltProcessorSettings\032\224\002\n\035Java8DefaultProc" +
-      "essorSettings\022\203\001\n\030no_language_level_acti" +
-      "on\030\001 \001(\0162a.android_studio.UpgradeAssista" +
-      "ntComponentInfo.Java8DefaultProcessorSet" +
-      "tings.NoLanguageLevelAction\"m\n\025NoLanguag" +
-      "eLevelAction\022$\n UNKNOWN_NO_LANGUAGE_LEVE" +
-      "L_ACTION\020\000\022\026\n\022ACCEPT_NEW_DEFAULT\020\001\022\026\n\022IN" +
-      "SERT_OLD_DEFAULT\020\002\032\246\002\n\"R8FullModeDefault" +
-      "ProcessorSettings\022\214\001\n\032no_property_presen" +
-      "t_action\030\001 \001(\0162h.android_studio.UpgradeA" +
-      "ssistantComponentInfo.R8FullModeDefaultP" +
-      "rocessorSettings.NoPropertyPresentAction" +
-      "\"q\n\027NoPropertyPresentAction\022&\n\"UNKNOWN_N" +
-      "O_PROPERTY_PRESENT_ACTION\020\000\022\026\n\022ACCEPT_NE" +
-      "W_DEFAULT\020\001\022\026\n\022INSERT_OLD_DEFAULT\020\002\"\240\007\n\035" +
-      "UpgradeAssistantComponentKind\022$\n UNKNOWN" +
-      "_ASSISTANT_COMPONENT_KIND\020\000\022\034\n\030AGP_CLASS" +
-      "PATH_DEPENDENCY\020\001\022\025\n\021GMAVEN_REPOSITORY\020\002" +
-      "\022\022\n\016GRADLE_VERSION\020\003\022\021\n\rJAVA8_DEFAULT\020\004\022" +
-      "!\n\035COMPILE_RUNTIME_CONFIGURATION\020\005\022\026\n\022FA" +
-      "BRIC_CRASHLYTICS\020\006\022\035\n\031MIGRATE_TO_BUILD_F" +
-      "EATURES\020\007\022\031\n\025REMOVE_SOURCE_SET_JNI\020\010\022 \n\034" +
-      "MIGRATE_TO_ANDROID_RESOURCES\020\t\022\"\n\036REMOVE" +
-      "_BUILD_TYPE_USE_PROGUARD\020\n\022$\n REMOVE_IMP" +
-      "LEMENTATION_PROPERTIES\020\013\022\022\n\016GRADLE_PLUGI" +
-      "NS\020\014\022\033\n\027MIGRATE_TO_INSTALLATION\020\r\022!\n\035MIG" +
-      "RATE_TO_EMULATOR_SNAPSHOTS\020\016\022\034\n\030MIGRATE_" +
-      "TO_TEST_COVERAGE\020\017\022\035\n\031MIGRATE_PACKAGING_" +
-      "OPTIONS\020\020\022\023\n\017MIGRATE_TO_LINT\020\021\022 \n\034REWRIT" +
-      "E_DEPRECATED_OPERATORS\020\022\022\030\n\024REDUNDANT_PR" +
-      "OPERTIES\020\023\022\034\n\030ANDROID_MANIFEST_PACKAGE\020\024" +
-      "\022\030\n\024R8_FULL_MODE_DEFAULT\020\025\022\031\n\025RENDER_SCR" +
-      "IPT_DEFAULT\020\026\022\"\n\036NON_TRANSITIVE_R_CLASS_" +
-      "DEFAULT\020\027\022\020\n\014AIDL_DEFAULT\020\030\022\030\n\024BUILD_CON" +
-      "FIG_DEFAULT\020\031\022\017\n\013PROJECT_JDK\020\032\022 \n\034NON_CO" +
-      "NSTANT_R_CLASS_DEFAULT\020\033\022(\n$ANDROID_MANI" +
-      "FEST_EXTRACT_NATIVE_LIBS\020\034\022%\n!ANDROID_MA" +
-      "NIFEST_USE_EMBEDDED_DEX\020\035\022\023\n\017SHADERS_DEF" +
-      "AULT\020\036\"\373\002\n\031UpgradeAssistantEventInfo\022Q\n\004" +
-      "kind\030\001 \001(\0162C.android_studio.UpgradeAssis" +
-      "tantEventInfo.UpgradeAssistantEventKind\022" +
-      "\016\n\006usages\030\002 \001(\005\022\r\n\005files\030\003 \001(\005\"\353\001\n\031Upgra" +
-      "deAssistantEventKind\022(\n$UNKNOWN_UPGRADE_" +
-      "ASSISTANT_EVENT_KIND\020\000\022\017\n\013FIND_USAGES\020\001\022" +
-      "\027\n\023PREVIEW_REFACTORING\020\002\022\013\n\007EXECUTE\020\003\022\025\n" +
-      "\021FAILURE_PREDICTED\020\004\022\020\n\014SYNC_SKIPPED\020\005\022\017" +
-      "\n\013SYNC_FAILED\020\006\022\022\n\016SYNC_SUCCEEDED\020\007\022\022\n\016I" +
-      "NTERNAL_ERROR\020\010\022\013\n\007BLOCKED\020\t\"\256\002\n\036Upgrade" +
-      "AssistantComponentEvent\022\024\n\014upgrade_uuid\030" +
-      "\001 \001(\t\022\033\n\023current_agp_version\030\002 \001(\t\022\027\n\017ne" +
-      "w_agp_version\030\003 \001(\t\022\036\n\026current_gradle_ve" +
-      "rsion\030\004 \001(\t\022\032\n\022new_gradle_version\030\005 \001(\t\022" +
-      "E\n\016component_info\030\006 \001(\0132-.android_studio" +
-      ".UpgradeAssistantComponentInfo\022=\n\nevent_" +
-      "info\030\007 \001(\0132).android_studio.UpgradeAssis" +
-      "tantEventInfo\"\256\002\n\036UpgradeAssistantProces" +
-      "sorEvent\022\024\n\014upgrade_uuid\030\001 \001(\t\022\033\n\023curren" +
-      "t_agp_version\030\002 \001(\t\022\027\n\017new_agp_version\030\003",
-      " \001(\t\022\036\n\026current_gradle_version\030\004 \001(\t\022\032\n\022" +
-      "new_gradle_version\030\005 \001(\t\022E\n\016component_in" +
-      "fo\030\006 \003(\0132-.android_studio.UpgradeAssista" +
-      "ntComponentInfo\022=\n\nevent_info\030\007 \001(\0132).an" +
-      "droid_studio.UpgradeAssistantEventInfo\"\257" +
-      "\002\n\027InteractivePreviewEvent\022Q\n\004type\030\001 \001(\016" +
-      "2C.android_studio.InteractivePreviewEven" +
-      "t.InteractivePreviewEventType\022\013\n\003fps\030\002 \001" +
-      "(\005\022\023\n\013duration_ms\030\003 \001(\005\022\017\n\007actions\030\004 \001(\005" +
-      "\022\027\n\017startup_time_ms\030\005 \001(\005\022\025\n\rpeer_previe" +
-      "ws\030\006 \001(\005\"^\n\033InteractivePreviewEventType\022" +
-      "\026\n\022UNKNOWN_EVENT_TYPE\020\000\022\016\n\nREPORT_FPS\020\001\022" +
-      "\027\n\023REPORT_STARTUP_TIME\020\002\"1\n\016SurveyRespon" +
-      "se\022\014\n\004name\030\001 \001(\t\022\021\n\tresponses\030\002 \003(\005\"\303\001\n\037" +
-      "AsmClassesTransformRegistration\022(\n class" +
-      "_visitor_factory_class_name\030\001 \001(\t\022D\n\005sco" +
-      "pe\030\002 \001(\01625.android_studio.AsmClassesTran" +
-      "sformRegistration.Scope\"0\n\005Scope\022\021\n\rUNKN" +
-      "OWN_SCOPE\020\000\022\013\n\007PROJECT\020\001\022\007\n\003ALL\020\002\"\215\002\n\036As" +
-      "mFramesComputationModeUpdate\022A\n\004mode\030\001 \001" +
-      "(\01623.android_studio.AsmFramesComputation" +
-      "ModeUpdate.Mode\"\247\001\n\004Mode\022\020\n\014UNKNOWN_MODE" +
-      "\020\000\022\017\n\013COPY_FRAMES\020\001\022+\n\'COMPUTE_FRAMES_FO" +
-      "R_INSTRUMENTED_METHODS\020\002\022+\n\'COMPUTE_FRAM" +
-      "ES_FOR_INSTRUMENTED_CLASSES\020\003\022\"\n\036COMPUTE" +
-      "_FRAMES_FOR_ALL_CLASSES\020\004\"*\n\017AutoImportE" +
-      "vent\022\023\n\013artifact_id\030\001 \001(\t:\002\030\001\"\341\001\n\tFileUs" +
-      "age\022\021\n\tfile_path\030\001 \001(\t\022\021\n\tfile_type\030\002 \001(" +
-      "\t\022\023\n\013plugin_type\030\003 \001(\t\022\026\n\016plugin_version" +
-      "\030\004 \001(\t\0227\n\nevent_type\030\005 \001(\0162#.android_stu" +
-      "dio.FileUsage.EventType\"H\n\tEventType\022\020\n\014" +
-      "UNKNOWN_TYPE\020\000\022\n\n\006SELECT\020\001\022\010\n\004EDIT\020\002\022\010\n\004" +
-      "OPEN\020\003\022\t\n\005CLOSE\020\004\"\227\006\n\021LiveLiteralsEvent\022" +
-      "K\n\nevent_type\030\001 \001(\01627.android_studio.Liv" +
-      "eLiteralsEvent.LiveLiteralsEventType\022M\n\013" +
-      "device_type\030\002 \001(\01628.android_studio.LiveL" +
-      "iteralsEvent.LiveLiteralsDeviceType\022O\n\014d" +
-      "eploy_stats\030\003 \003(\01329.android_studio.LiveL" +
-      "iteralsEvent.LiveLiteralsDeployStats\032\275\002\n" +
-      "\027LiveLiteralsDeployStats\022M\n\013device_type\030" +
-      "\001 \001(\01628.android_studio.LiveLiteralsEvent" +
-      ".LiveLiteralsDeviceType\022\025\n\rdevices_count" +
-      "\030\002 \001(\r\022\036\n\026successful_deployments\030\003 \001(\r\022\032" +
-      "\n\022failed_deployments\030\004 \001(\r\022?\n\022number_of_" +
-      "problems\030\005 \001(\0132#.android_studio.Percenti" +
-      "leEstimator\022?\n\022deployment_time_ms\030\006 \001(\0132" +
-      "#.android_studio.PercentileEstimator\"y\n\025" +
-      "LiveLiteralsEventType\022\026\n\022UNKNOWN_EVENT_T" +
-      "YPE\020\000\022\017\n\013USER_ENABLE\020\001\022\020\n\014USER_DISABLE\020\002" +
-      "\022\t\n\005START\020\003\022\010\n\004STOP\020\004\022\020\n\014DEPLOY_STATS\020\005\"" +
-      "Z\n\026LiveLiteralsDeviceType\022\027\n\023UNKNOWN_DEV" +
-      "ICE_TYPE\020\000\022\014\n\010PHYSICAL\020\001\022\014\n\010EMULATOR\020\002\022\013" +
-      "\n\007PREVIEW\020\003\"\354\002\n!NonTransitiveRClassMigra" +
-      "tionEvent\022\026\n\016migration_uuid\030\001 \001(\t\022e\n\004kin" +
-      "d\030\002 \001(\0162W.android_studio.NonTransitiveRC" +
-      "lassMigrationEvent.NonTransitiveRClassMi" +
-      "grationEventKind\022\016\n\006usages\030\003 \001(\005\"\267\001\n%Non" +
-      "TransitiveRClassMigrationEventKind\022 \n\034UN" +
-      "KNOWN_MIGRATION_EVENT_KIND\020\000\022\017\n\013FIND_USA" +
-      "GES\020\001\022\027\n\023PREVIEW_REFACTORING\020\002\022\013\n\007EXECUT" +
-      "E\020\003\022\020\n\014SYNC_SKIPPED\020\004\022\017\n\013SYNC_FAILED\020\005\022\022" +
-      "\n\016SYNC_SUCCEEDED\020\006\"+\n\024SuggestedImportEve" +
-      "nt\022\023\n\013artifact_id\030\001 \001(\t\"!\n\nVfsRefresh\022\023\n" +
-      "\013duration_ms\030\001 \001(\004\"\347\005\n\022SigningWizardEven" +
-      "t\022S\n\rfailure_cause\030\001 \001(\0162<.android_studi" +
-      "o.SigningWizardEvent.SigningWizardFailur" +
-      "eCause\022I\n\013target_type\030\002 \001(\01624.android_st" +
-      "udio.SigningWizardEvent.SigningTargetTyp" +
-      "e\022\031\n\021number_of_modules\030\003 \001(\r\022\032\n\022number_o" +
-      "f_variants\030\004 \001(\r\022\037\n\027is_private_key_expor" +
-      "ted\030\005 \001(\010\"\375\002\n\031SigningWizardFailureCause\022" +
-      "\031\n\025FAILURE_CAUSE_UNKNOWN\020\000\022!\n\035FAILURE_CA" +
-      "USE_NO_MODULE_FACET\020\001\022%\n!FAILURE_CAUSE_N" +
-      "O_MODULE_ROOT_PATH\020\002\022\"\n\036FAILURE_CAUSE_NO" +
-      "_ANDROID_MODEL\020\003\022&\n\"FAILURE_CAUSE_NO_VAR" +
-      "IANTS_SELECTED\020\004\022\"\n\036FAILURE_CAUSE_ENCRYP" +
-      "TION_ERROR\020\005\022!\n\035FAILURE_CAUSE_COMPILE_AB" +
-      "ORTED\020\006\022 \n\034FAILURE_CAUSE_COMPILE_ERRORS\020" +
-      "\007\022#\n\037FAILURE_CAUSE_CANNOT_CREATE_APK\020\010\022!" +
-      "\n\035FAILURE_CAUSE_ZIP_ALIGN_ERROR\020\t\"Y\n\021Sig" +
-      "ningTargetType\022\027\n\023TARGET_TYPE_UNKNOWN\020\000\022" +
-      "\023\n\017TARGET_TYPE_APK\020\001\022\026\n\022TARGET_TYPE_BUND" +
-      "LE\020\002\"K\n\010FileType\022\021\n\tfile_type\030\001 \001(\t\022\023\n\013p" +
-      "lugin_type\030\002 \001(\t\022\027\n\017number_of_files\030\003 \001(" +
-      "\r\"\236\002\n\032KotlinProjectConfiguration\022\016\n\006syst" +
-      "em\030\001 \001(\t\022\026\n\016plugin_version\030\002 \001(\t\022\016\n\006plug" +
-      "in\030\003 \001(\t\022\023\n\013plugin_type\030\004 \001(\t\022\020\n\010platfor" +
-      "m\030\005 \001(\t\022\030\n\020is_multiplatform\030\006 \001(\010\022H\n\neve" +
-      "nt_type\030\007 \001(\01624.android_studio.KotlinPro" +
-      "jectConfiguration.EventType\022\023\n\013event_fla" +
-      "gs\030\010 \001(\004\"(\n\tEventType\022\020\n\014TYPE_UNKNOWN\020\000\022" +
-      "\t\n\005BUILD\020\001\"T\n\014RunStartData\022\027\n\017ide_activi" +
-      "ty_id\030\001 \001(\005\022\020\n\010executor\030\002 \001(\t\022\031\n\021run_con" +
-      "figuration\030\003 \001(\t\":\n\rRunFinishData\022\023\n\013dur" +
-      "ation_ms\030\001 \001(\003\022\024\n\014ide_activity\030\002 \001(\005\"\203\005\n" +
-      "\022DeviceManagerEvent\022:\n\004kind\030\001 \001(\0162,.andr" +
-      "oid_studio.DeviceManagerEvent.EventKind\022" +
-      "\034\n\024virtual_device_count\030\002 \001(\005\"\222\004\n\tEventK" +
-      "ind\022\017\n\013UNSPECIFIED\020\000\022\030\n\024VIRTUAL_DEVICE_C" +
-      "OUNT\020\001\022\031\n\025VIRTUAL_LAUNCH_ACTION\020\002\022\'\n#VIR" +
-      "TUAL_DEVICE_FILE_EXPLORER_ACTION\020\003\022\027\n\023VI" +
-      "RTUAL_EDIT_ACTION\020\004\022\036\n\032VIRTUAL_PAIR_DEVI" +
-      "CE_ACTION\020\005\022\034\n\030VIRTUAL_DUPLICATE_ACTION\020" +
-      "\006\022\034\n\030VIRTUAL_WIPE_DATA_ACTION\020\007\022 \n\034VIRTU" +
-      "AL_COLD_BOOT_NOW_ACTION\020\010\022\037\n\033VIRTUAL_SHO" +
-      "W_ON_DISK_ACTION\020\t\022\031\n\025VIRTUAL_DELETE_ACT" +
-      "ION\020\n\022\027\n\023VIRTUAL_STOP_ACTION\020\013\022(\n$PHYSIC" +
-      "AL_DEVICE_FILE_EXPLORER_ACTION\020\014\022\037\n\033PHYS" +
-      "ICAL_PAIR_DEVICE_ACTION\020\r\022\032\n\026PHYSICAL_DE" +
-      "LETE_ACTION\020\016\022 \n\034VIRTUAL_UNPAIR_DEVICE_A" +
-      "CTION\020\017\022!\n\035PHYSICAL_UNPAIR_DEVICE_ACTION" +
-      "\020\020\"\212\002\n\020WearPairingEvent\0228\n\004kind\030\001 \001(\0162*." +
-      "android_studio.WearPairingEvent.EventKin" +
-      "d\"\273\001\n\tEventKind\022\017\n\013UNSPECIFIED\020\000\022!\n\035SHOW" +
-      "_ASSISTANT_FULL_SELECTION\020\001\022 \n\034SHOW_ASSI" +
-      "STANT_PRE_SELECTION\020\002\022\033\n\027SHOW_SUCCESSFUL" +
-      "_PAIRING\020\003\022\"\n\036SHOW_INSTALL_WEAR_OS_COMPA" +
-      "NION\020\004\022\027\n\023AUTOMATIC_RECONNECT\020\005\"\330\001\n\027Wear" +
-      "HealthServicesEvent\022?\n\004kind\030\001 \001(\01621.andr" +
-      "oid_studio.WearHealthServicesEvent.Event" +
-      "Kind\"|\n\tEventKind\022\017\n\013UNSPECIFIED\020\000\022\022\n\016EM" +
-      "ULATOR_BOUND\020\001\022\024\n\020CONNECTION_ERROR\020\002\022\031\n\025" +
-      "APPLY_CHANGES_SUCCESS\020\003\022\031\n\025APPLY_CHANGES" +
-      "_FAILURE\020\004\"\365\001\n\025UiDeviceSettingsEvent\022F\n\t" +
-      "operation\030\001 \001(\01623.android_studio.UiDevic" +
-      "eSettingsEvent.OperationKind\"\223\001\n\rOperati" +
-      "onKind\022\017\n\013UNSPECIFIED\020\000\022\016\n\nDARK_THEME\020\001\022" +
-      "\020\n\014APP_LANGUAGE\020\002\022\014\n\010TALKBACK\020\003\022\023\n\017SELEC" +
-      "T_TO_SPEAK\020\004\022\r\n\tFONT_SIZE\020\005\022\022\n\016SCREEN_DE" +
-      "NSITY\020\006\022\t\n\005RESET\020\007\"\277\007\n\025GradleJdkInvalidE" +
-      "vent\022F\n\006reason\030\001 \001(\01626.android_studio.Gr" +
-      "adleJdkInvalidEvent.InvalidJdkReason\"\335\006\n" +
-      "\020InvalidJdkReason\022\"\n\036INVALID_JDK_UNSPECI" +
-      "FIED_REASON\020\000\022\035\n\031INVALID_JDK_UNDEFINED_J" +
-      "DK\020\001\022%\n!INVALID_JDK_PROJECT_JDK_UNDEFINE" +
-      "D\020\002\022!\n\035INVALID_JDK_JAVA_HOME_INVALID\020\003\022%" +
-      "\n!INVALID_JDK_INTERNAL_JAVA_INVALID\020\004\022!\n" +
-      "\035INVALID_JDK_NAME_NOT_IN_TABLE\020\005\022%\n!INVA" +
-      "LID_JDK_HOME_PATH_NOT_DEFINED\020\006\022\030\n\024INVAL" +
-      "ID_JDK_NO_JAVAC\020\007\022\035\n\031INVALID_JDK_MISSING" +
-      "_FILES\020\010\022$\n UNDEFINED_GRADLE_LOCAL_JAVA_" +
-      "HOME\020\t\022\"\n\036INVALID_GRADLE_LOCAL_JAVA_HOME" +
-      "\020\n\022)\n%UNDEFINED_GRADLE_PROPERTIES_JAVA_H" +
-      "OME\020\013\022\'\n#INVALID_GRADLE_PROPERTIES_JAVA_" +
-      "HOME\020\014\022,\n(UNDEFINED_ENVIRONMENT_VARIABLE" +
-      "_JAVA_HOME\020\r\022*\n&INVALID_ENVIRONMENT_VARI" +
-      "ABLE_JAVA_HOME\020\016\0224\n0UNDEFINED_ENVIRONMEN" +
-      "T_VARIABLE_STUDIO_GRADLE_JDK\020\017\0222\n.INVALI" +
-      "D_ENVIRONMENT_VARIABLE_STUDIO_GRADLE_JDK" +
-      "\020\020\022$\n UNDEFINED_GRADLE_JVM_TABLE_ENTRY\020\021" +
-      "\022.\n*UNDEFINED_GRADLE_JVM_TABLE_ENTRY_JAV" +
-      "A_HOME\020\022\022,\n(INVALID_GRADLE_JVM_TABLE_ENT" +
-      "RY_JAVA_HOME\020\023\022,\n(UNSUPPORTED_GRADLE_LOC" +
-      "AL_JAVA_HOME_MACRO\020\024\"\264\002\n\033GradleJdkConfig" +
-      "urationEvent\022Y\n\rconfiguration\030\001 \001(\0162B.an" +
-      "droid_studio.GradleJdkConfigurationEvent" +
-      ".GradleJdkConfiguration\"\271\001\n\026GradleJdkCon" +
-      "figuration\022\037\n\033UNDEFINED_JDK_CONFIGURATIO" +
-      "N\020\000\022\021\n\rJAVA_INTERNAL\020\001\022\r\n\tJAVA_HOME\020\002\022\024\n" +
-      "\020GRADLE_JAVA_HOME\020\003\022\032\n\026GRADLE_LOCAL_JAVA" +
-      "_HOME\020\004\022\025\n\021STUDIO_GRADLE_JDK\020\005\022\023\n\017JDK_TA" +
-      "BLE_ENTRY\020\006\"\270\004\n\023DeviceExplorerEvent\022:\n\006a" +
-      "ction\030\001 \001(\0162*.android_studio.DeviceExplo" +
-      "rerEvent.Action\022\033\n\023transfer_file_count\030\002" +
-      " \001(\005\022\033\n\023transfer_total_size\030\003 \001(\005\022\030\n\020tra" +
-      "nsfer_time_ms\030\004 \001(\005\"\220\003\n\006Action\022\017\n\013UNSPEC" +
-      "IFIED\020\000\022\021\n\rDEVICE_CHANGE\020\001\022\014\n\010NEW_FILE\020\002" +
-      "\022\021\n\rNEW_DIRECTORY\020\003\022\013\n\007SAVE_AS\020\004\022\n\n\006UPLO" +
-      "AD\020\005\022\010\n\004DROP\020\006\022\n\n\006DELETE\020\007\022\010\n\004SYNC\020\010\022\r\n\t" +
-      "COPY_PATH\020\t\022\023\n\017EXPAND_APP_DATA\020\n\022\016\n\nFORC" +
-      "E_STOP\020\013\022\010\n\004KILL\020\014\022\023\n\017ATTACH_DEBUGGER\020\r\022" +
-      "\025\n\021REFRESH_PROCESSES\020\016\022!\n\035APPLICATION_ID" +
-      "_FILTER_TOGGLED\020\017\022\025\n\021FILES_TAB_CLICKED\020\020" +
-      "\022\027\n\023PROCESS_TAB_CLICKED\020\021\022$\n APPLICATION" +
-      "_ID_FILTER_TOGGLED_ON\020\022\022%\n!APPLICATION_I" +
-      "D_FILTER_TOGGLED_OFF\020\023\"\020\n\016OptInToMetrics" +
-      "\"\021\n\017OptOutOfMetrics\"\336\001\n!GradleVersionCat" +
-      "alogDetectorEvent\022F\n\005state\030\001 \001(\01627.andro" +
-      "id_studio.GradleVersionCatalogDetectorEv" +
-      "ent.State\"q\n\005State\0221\n-UNKNOWN_GRADLE_VER" +
-      "SION_CATALOG_DETECTOR_STATE\020\000\022\017\n\013UNSUPPO" +
-      "RTED\020\001\022\010\n\004NONE\020\002\022\014\n\010EXPLICIT\020\003\022\014\n\010IMPLIC" +
-      "IT\020\004\"\243\001\n\026CoroutineDebuggerEvent\0229\n\004type\030" +
-      "\001 \001(\0162+.android_studio.CoroutineDebugger" +
-      "Event.Type\022\034\n\024disabled_in_settings\030\002 \001(\010" +
-      "\"0\n\004Type\022\026\n\022UNKNOWN_EVENT_TYPE\020\000\022\020\n\014LAUN" +
-      "CH_EVENT\020\001\"\366\005\n\027SplittingTabsUsageEvent\022P" +
-      "\n\020tool_window_type\030\001 \001(\01626.android_studi" +
-      "o.SplittingTabsUsageEvent.ToolWindowType" +
-      "\022E\n\nevent_type\030\002 \001(\01621.android_studio.Sp" +
-      "littingTabsUsageEvent.EventType\022E\n\nsplit" +
-      "_type\030\003 \001(\01321.android_studio.SplittingTa" +
-      "bsUsageEvent.SplitType\032\241\002\n\tSplitType\022R\n\013" +
-      "orientation\030\001 \001(\0162=.android_studio.Split" +
-      "tingTabsUsageEvent.SplitType.Orientation" +
-      "\022H\n\006source\030\002 \001(\01628.android_studio.Splitt" +
-      "ingTabsUsageEvent.SplitType.Source\"D\n\013Or" +
-      "ientation\022\027\n\023UNKNOWN_ORIENTATION\020\000\022\016\n\nHO" +
-      "RIZONTAL\020\001\022\014\n\010VERTICAL\020\002\"0\n\006Source\022\022\n\016UN" +
-      "KNOWN_SOURCE\020\000\022\007\n\003TAB\020\001\022\t\n\005PANEL\020\002\"F\n\016To" +
-      "olWindowType\022\034\n\030UNKNOWN_TOOL_WINDOW_TYPE" +
-      "\020\000\022\026\n\022LOGCAT_TOOL_WINDOW\020\001\"\216\001\n\tEventType" +
-      "\022\026\n\022UNKNOWN_EVENT_TYPE\020\000\022\021\n\rPANEL_CREATE" +
-      "D\020\001\022\017\n\013TAB_CREATED\020\002\022\017\n\013PANEL_SPLIT\020\003\022\017\n" +
-      "\013PANEL_MOVED\020\004\022\021\n\rPANEL_RENAMED\020\005\022\020\n\014PAN" +
-      "EL_CLOSED\020\006\"\207\021\n\020LogcatUsageEvent\0223\n\004type" +
-      "\030\001 \001(\0162%.android_studio.LogcatUsageEvent" +
-      ".Type\022U\n\rformat_dialog\030\002 \001(\0132:.android_s" +
-      "tudio.LogcatUsageEvent.LogcatFormatConfi" +
-      "gurationB\002\030\001\022I\n\rlogcat_filter\030\003 \001(\01322.an" +
+      ".UserInteraction\032\310\003\n\017UserInteraction\022b\n\004" +
+      "type\030\001 \001(\0162T.android_studio.ParallelAndr" +
+      "oidTestReportUiEvent.UserInteraction.Use" +
+      "rInteractionType\022N\n\nui_element\030\002 \001(\0162:.a" +
+      "ndroid_studio.ParallelAndroidTestReportU" +
+      "iEvent.UiElement\022j\n\006result\030\003 \001(\0162Z.andro" +
+      "id_studio.ParallelAndroidTestReportUiEve" +
+      "nt.UserInteraction.UserInteractionResult" +
+      "Type\"<\n\023UserInteractionType\022\032\n\026UNKNOWN_U" +
+      "I_INTERACTION\020\000\022\t\n\005CLICK\020\001\"W\n\031UserIntera" +
+      "ctionResultType\022!\n\035UNKNOWN_UI_INTERACTIO" +
+      "N_RESULT\020\000\022\n\n\006ACCEPT\020\001\022\013\n\007DISMISS\020\002\"\312\002\n\t" +
+      "UiElement\022\026\n\022UNKNOWN_UI_ELEMENT\020\000\022\023\n\017TES" +
+      "T_SUITE_VIEW\020\001\022\035\n\031TEST_SUITE_VIEW_TABLE_" +
+      "ROW\020\002\022&\n\"TEST_SUITE_DETAILS_HORIZONTAL_V" +
+      "IEW\020\003\022$\n TEST_SUITE_DETAILS_VERTICAL_VIE" +
+      "W\020\004\022\027\n\023TEST_SUITE_LOG_VIEW\020\005\022\037\n\033TEST_SUI" +
+      "TE_DEVICE_INFO_VIEW\020\006\022\034\n\030TEST_SUITE_OPT_" +
+      "IN_BANNER\020\007\022\035\n\031TEST_SUITE_RETENTION_VIEW" +
+      "\020\010\022,\n(GRADLE_ANDROID_TEST_RUNNER_OPT_IN_" +
+      "DIALOG\020\t\"\364\003\n\026ApplyChangesAgentError\022\034\n\024a" +
+      "gent_attach_time_ms\030\001 \001(\003\022\032\n\022agent_attac" +
+      "h_count\030\002 \001(\005\022\025\n\revent_time_ms\030\003 \001(\003\022J\n\r" +
+      "agent_purpose\030\004 \001(\01623.android_studio.App" +
+      "lyChangesAgentError.AgentPurpose\022J\n\016targ" +
+      "et_classes\030\005 \003(\01622.android_studio.ApplyC" +
+      "hangesAgentError.TargetClass\"a\n\014AgentPur" +
+      "pose\022\023\n\017UNKNOWN_PURPOSE\020\000\022\021\n\rSTARTUP_AGE" +
+      "NT\020\001\022\021\n\rAPPLY_CHANGES\020\002\022\026\n\022APPLY_CODE_CH" +
+      "ANGES\020\003\"\215\001\n\013TargetClass\022\030\n\024UNKNOWN_TARGE" +
+      "T_CLASS\020\000\022\023\n\017ACTIVITY_THREAD\020\001\022\031\n\025DEX_PA" +
+      "TH_LIST_ELEMENT\020\002\022\021\n\rDEX_PATH_LIST\020\003\022\025\n\021" +
+      "RESOURCES_MANAGER\020\004\022\n\n\006THREAD\020\005\"\315\001\n\017Vari" +
+      "antApiUsage\0225\n\016variant_access\030\001 \003(\0132\035.an" +
+      "droid_studio.VariantAccess\022J\n\031variant_pr" +
+      "operties_access\030\002 \003(\0132\'.android_studio.V" +
+      "ariantPropertiesAccess\0227\n\017artifact_acces" +
+      "s\030\003 \003(\0132\036.android_studio.ArtifactAccess\"" +
+      "\374\001\n\016ArtifactAccess\0227\n\004type\030\001 \001(\0162).andro" +
+      "id_studio.ArtifactAccess.AccessType\022\033\n\023i" +
+      "nput_artifact_type\030\002 \001(\005\022\034\n\024output_artif" +
+      "act_type\030\003 \001(\005\"v\n\nAccessType\022\027\n\023UNKNOWN_" +
+      "ACCESS_TYPE\020\000\022\007\n\003GET\020\001\022\013\n\007GET_ALL\020\002\022\n\n\006C" +
+      "REATE\020\003\022\n\n\006APPEND\020\004\022\r\n\tTRANSFORM\020\005\022\022\n\016TR" +
+      "ANSFORM_MANY\020\006\"\035\n\rVariantAccess\022\014\n\004type\030" +
+      "\001 \001(\005\"\'\n\027VariantPropertiesAccess\022\014\n\004type" +
+      "\030\001 \001(\005\"\372\016\n\035UpgradeAssistantComponentInfo" +
+      "\022Y\n\004kind\030\001 \001(\0162K.android_studio.UpgradeA" +
+      "ssistantComponentInfo.UpgradeAssistantCo" +
+      "mponentKind\022\022\n\nis_enabled\030\002 \001(\010\022k\n\026java8" +
+      "_default_settings\030\003 \001(\0132K.android_studio" +
+      ".UpgradeAssistantComponentInfo.Java8Defa" +
+      "ultProcessorSettings\022w\n\035r8_full_mode_def" +
+      "ault_settings\030\004 \001(\0132P.android_studio.Upg" +
+      "radeAssistantComponentInfo.R8FullModeDef" +
+      "aultProcessorSettings\032\224\002\n\035Java8DefaultPr" +
+      "ocessorSettings\022\203\001\n\030no_language_level_ac" +
+      "tion\030\001 \001(\0162a.android_studio.UpgradeAssis" +
+      "tantComponentInfo.Java8DefaultProcessorS" +
+      "ettings.NoLanguageLevelAction\"m\n\025NoLangu" +
+      "ageLevelAction\022$\n UNKNOWN_NO_LANGUAGE_LE" +
+      "VEL_ACTION\020\000\022\026\n\022ACCEPT_NEW_DEFAULT\020\001\022\026\n\022" +
+      "INSERT_OLD_DEFAULT\020\002\032\246\002\n\"R8FullModeDefau" +
+      "ltProcessorSettings\022\214\001\n\032no_property_pres" +
+      "ent_action\030\001 \001(\0162h.android_studio.Upgrad" +
+      "eAssistantComponentInfo.R8FullModeDefaul" +
+      "tProcessorSettings.NoPropertyPresentActi" +
+      "on\"q\n\027NoPropertyPresentAction\022&\n\"UNKNOWN" +
+      "_NO_PROPERTY_PRESENT_ACTION\020\000\022\026\n\022ACCEPT_" +
+      "NEW_DEFAULT\020\001\022\026\n\022INSERT_OLD_DEFAULT\020\002\"\303\007" +
+      "\n\035UpgradeAssistantComponentKind\022$\n UNKNO" +
+      "WN_ASSISTANT_COMPONENT_KIND\020\000\022\034\n\030AGP_CLA" +
+      "SSPATH_DEPENDENCY\020\001\022\025\n\021GMAVEN_REPOSITORY" +
+      "\020\002\022\022\n\016GRADLE_VERSION\020\003\022\021\n\rJAVA8_DEFAULT\020" +
+      "\004\022!\n\035COMPILE_RUNTIME_CONFIGURATION\020\005\022\026\n\022" +
+      "FABRIC_CRASHLYTICS\020\006\022\035\n\031MIGRATE_TO_BUILD" +
+      "_FEATURES\020\007\022\031\n\025REMOVE_SOURCE_SET_JNI\020\010\022 " +
+      "\n\034MIGRATE_TO_ANDROID_RESOURCES\020\t\022\"\n\036REMO" +
+      "VE_BUILD_TYPE_USE_PROGUARD\020\n\022$\n REMOVE_I" +
+      "MPLEMENTATION_PROPERTIES\020\013\022\022\n\016GRADLE_PLU" +
+      "GINS\020\014\022\033\n\027MIGRATE_TO_INSTALLATION\020\r\022!\n\035M" +
+      "IGRATE_TO_EMULATOR_SNAPSHOTS\020\016\022\034\n\030MIGRAT" +
+      "E_TO_TEST_COVERAGE\020\017\022\035\n\031MIGRATE_PACKAGIN" +
+      "G_OPTIONS\020\020\022\023\n\017MIGRATE_TO_LINT\020\021\022 \n\034REWR" +
+      "ITE_DEPRECATED_OPERATORS\020\022\022\030\n\024REDUNDANT_" +
+      "PROPERTIES\020\023\022\034\n\030ANDROID_MANIFEST_PACKAGE" +
+      "\020\024\022\030\n\024R8_FULL_MODE_DEFAULT\020\025\022\031\n\025RENDER_S" +
+      "CRIPT_DEFAULT\020\026\022\"\n\036NON_TRANSITIVE_R_CLAS" +
+      "S_DEFAULT\020\027\022\020\n\014AIDL_DEFAULT\020\030\022\030\n\024BUILD_C" +
+      "ONFIG_DEFAULT\020\031\022\017\n\013PROJECT_JDK\020\032\022 \n\034NON_" +
+      "CONSTANT_R_CLASS_DEFAULT\020\033\022(\n$ANDROID_MA" +
+      "NIFEST_EXTRACT_NATIVE_LIBS\020\034\022%\n!ANDROID_" +
+      "MANIFEST_USE_EMBEDDED_DEX\020\035\022\023\n\017SHADERS_D" +
+      "EFAULT\020\036\022!\n\035MIGRATE_TEST_COVERAGE_ENABLE" +
+      "D\020\037\"\373\002\n\031UpgradeAssistantEventInfo\022Q\n\004kin" +
+      "d\030\001 \001(\0162C.android_studio.UpgradeAssistan" +
+      "tEventInfo.UpgradeAssistantEventKind\022\016\n\006" +
+      "usages\030\002 \001(\005\022\r\n\005files\030\003 \001(\005\"\353\001\n\031UpgradeA" +
+      "ssistantEventKind\022(\n$UNKNOWN_UPGRADE_ASS" +
+      "ISTANT_EVENT_KIND\020\000\022\017\n\013FIND_USAGES\020\001\022\027\n\023" +
+      "PREVIEW_REFACTORING\020\002\022\013\n\007EXECUTE\020\003\022\025\n\021FA" +
+      "ILURE_PREDICTED\020\004\022\020\n\014SYNC_SKIPPED\020\005\022\017\n\013S" +
+      "YNC_FAILED\020\006\022\022\n\016SYNC_SUCCEEDED\020\007\022\022\n\016INTE" +
+      "RNAL_ERROR\020\010\022\013\n\007BLOCKED\020\t\"\256\002\n\036UpgradeAss" +
+      "istantComponentEvent\022\024\n\014upgrade_uuid\030\001 \001" +
+      "(\t\022\033\n\023current_agp_version\030\002 \001(\t\022\027\n\017new_a" +
+      "gp_version\030\003 \001(\t\022\036\n\026current_gradle_versi" +
+      "on\030\004 \001(\t\022\032\n\022new_gradle_version\030\005 \001(\t\022E\n\016" +
+      "component_info\030\006 \001(\0132-.android_studio.Up" +
+      "gradeAssistantComponentInfo\022=\n\nevent_inf" +
+      "o\030\007 \001(\0132).android_studio.UpgradeAssistan" +
+      "tEventInfo\"\256\002\n\036UpgradeAssistantProcessor",
+      "Event\022\024\n\014upgrade_uuid\030\001 \001(\t\022\033\n\023current_a" +
+      "gp_version\030\002 \001(\t\022\027\n\017new_agp_version\030\003 \001(" +
+      "\t\022\036\n\026current_gradle_version\030\004 \001(\t\022\032\n\022new" +
+      "_gradle_version\030\005 \001(\t\022E\n\016component_info\030" +
+      "\006 \003(\0132-.android_studio.UpgradeAssistantC" +
+      "omponentInfo\022=\n\nevent_info\030\007 \001(\0132).andro" +
+      "id_studio.UpgradeAssistantEventInfo\"\257\002\n\027" +
+      "InteractivePreviewEvent\022Q\n\004type\030\001 \001(\0162C." +
+      "android_studio.InteractivePreviewEvent.I" +
+      "nteractivePreviewEventType\022\013\n\003fps\030\002 \001(\005\022" +
+      "\023\n\013duration_ms\030\003 \001(\005\022\017\n\007actions\030\004 \001(\005\022\027\n" +
+      "\017startup_time_ms\030\005 \001(\005\022\025\n\rpeer_previews\030" +
+      "\006 \001(\005\"^\n\033InteractivePreviewEventType\022\026\n\022" +
+      "UNKNOWN_EVENT_TYPE\020\000\022\016\n\nREPORT_FPS\020\001\022\027\n\023" +
+      "REPORT_STARTUP_TIME\020\002\"1\n\016SurveyResponse\022" +
+      "\014\n\004name\030\001 \001(\t\022\021\n\tresponses\030\002 \003(\005\"\303\001\n\037Asm" +
+      "ClassesTransformRegistration\022(\n class_vi" +
+      "sitor_factory_class_name\030\001 \001(\t\022D\n\005scope\030" +
+      "\002 \001(\01625.android_studio.AsmClassesTransfo" +
+      "rmRegistration.Scope\"0\n\005Scope\022\021\n\rUNKNOWN" +
+      "_SCOPE\020\000\022\013\n\007PROJECT\020\001\022\007\n\003ALL\020\002\"\215\002\n\036AsmFr" +
+      "amesComputationModeUpdate\022A\n\004mode\030\001 \001(\0162" +
+      "3.android_studio.AsmFramesComputationMod" +
+      "eUpdate.Mode\"\247\001\n\004Mode\022\020\n\014UNKNOWN_MODE\020\000\022" +
+      "\017\n\013COPY_FRAMES\020\001\022+\n\'COMPUTE_FRAMES_FOR_I" +
+      "NSTRUMENTED_METHODS\020\002\022+\n\'COMPUTE_FRAMES_" +
+      "FOR_INSTRUMENTED_CLASSES\020\003\022\"\n\036COMPUTE_FR" +
+      "AMES_FOR_ALL_CLASSES\020\004\"*\n\017AutoImportEven" +
+      "t\022\023\n\013artifact_id\030\001 \001(\t:\002\030\001\"\341\001\n\tFileUsage" +
+      "\022\021\n\tfile_path\030\001 \001(\t\022\021\n\tfile_type\030\002 \001(\t\022\023" +
+      "\n\013plugin_type\030\003 \001(\t\022\026\n\016plugin_version\030\004 " +
+      "\001(\t\0227\n\nevent_type\030\005 \001(\0162#.android_studio" +
+      ".FileUsage.EventType\"H\n\tEventType\022\020\n\014UNK" +
+      "NOWN_TYPE\020\000\022\n\n\006SELECT\020\001\022\010\n\004EDIT\020\002\022\010\n\004OPE" +
+      "N\020\003\022\t\n\005CLOSE\020\004\"\227\006\n\021LiveLiteralsEvent\022K\n\n" +
+      "event_type\030\001 \001(\01627.android_studio.LiveLi" +
+      "teralsEvent.LiveLiteralsEventType\022M\n\013dev" +
+      "ice_type\030\002 \001(\01628.android_studio.LiveLite" +
+      "ralsEvent.LiveLiteralsDeviceType\022O\n\014depl" +
+      "oy_stats\030\003 \003(\01329.android_studio.LiveLite" +
+      "ralsEvent.LiveLiteralsDeployStats\032\275\002\n\027Li" +
+      "veLiteralsDeployStats\022M\n\013device_type\030\001 \001" +
+      "(\01628.android_studio.LiveLiteralsEvent.Li" +
+      "veLiteralsDeviceType\022\025\n\rdevices_count\030\002 " +
+      "\001(\r\022\036\n\026successful_deployments\030\003 \001(\r\022\032\n\022f" +
+      "ailed_deployments\030\004 \001(\r\022?\n\022number_of_pro" +
+      "blems\030\005 \001(\0132#.android_studio.PercentileE" +
+      "stimator\022?\n\022deployment_time_ms\030\006 \001(\0132#.a" +
+      "ndroid_studio.PercentileEstimator\"y\n\025Liv" +
+      "eLiteralsEventType\022\026\n\022UNKNOWN_EVENT_TYPE" +
+      "\020\000\022\017\n\013USER_ENABLE\020\001\022\020\n\014USER_DISABLE\020\002\022\t\n" +
+      "\005START\020\003\022\010\n\004STOP\020\004\022\020\n\014DEPLOY_STATS\020\005\"Z\n\026" +
+      "LiveLiteralsDeviceType\022\027\n\023UNKNOWN_DEVICE" +
+      "_TYPE\020\000\022\014\n\010PHYSICAL\020\001\022\014\n\010EMULATOR\020\002\022\013\n\007P" +
+      "REVIEW\020\003\"\354\002\n!NonTransitiveRClassMigratio" +
+      "nEvent\022\026\n\016migration_uuid\030\001 \001(\t\022e\n\004kind\030\002" +
+      " \001(\0162W.android_studio.NonTransitiveRClas" +
+      "sMigrationEvent.NonTransitiveRClassMigra" +
+      "tionEventKind\022\016\n\006usages\030\003 \001(\005\"\267\001\n%NonTra" +
+      "nsitiveRClassMigrationEventKind\022 \n\034UNKNO" +
+      "WN_MIGRATION_EVENT_KIND\020\000\022\017\n\013FIND_USAGES" +
+      "\020\001\022\027\n\023PREVIEW_REFACTORING\020\002\022\013\n\007EXECUTE\020\003" +
+      "\022\020\n\014SYNC_SKIPPED\020\004\022\017\n\013SYNC_FAILED\020\005\022\022\n\016S" +
+      "YNC_SUCCEEDED\020\006\"+\n\024SuggestedImportEvent\022" +
+      "\023\n\013artifact_id\030\001 \001(\t\"!\n\nVfsRefresh\022\023\n\013du" +
+      "ration_ms\030\001 \001(\004\"\347\005\n\022SigningWizardEvent\022S" +
+      "\n\rfailure_cause\030\001 \001(\0162<.android_studio.S" +
+      "igningWizardEvent.SigningWizardFailureCa" +
+      "use\022I\n\013target_type\030\002 \001(\01624.android_studi" +
+      "o.SigningWizardEvent.SigningTargetType\022\031" +
+      "\n\021number_of_modules\030\003 \001(\r\022\032\n\022number_of_v" +
+      "ariants\030\004 \001(\r\022\037\n\027is_private_key_exported" +
+      "\030\005 \001(\010\"\375\002\n\031SigningWizardFailureCause\022\031\n\025" +
+      "FAILURE_CAUSE_UNKNOWN\020\000\022!\n\035FAILURE_CAUSE" +
+      "_NO_MODULE_FACET\020\001\022%\n!FAILURE_CAUSE_NO_M" +
+      "ODULE_ROOT_PATH\020\002\022\"\n\036FAILURE_CAUSE_NO_AN" +
+      "DROID_MODEL\020\003\022&\n\"FAILURE_CAUSE_NO_VARIAN" +
+      "TS_SELECTED\020\004\022\"\n\036FAILURE_CAUSE_ENCRYPTIO" +
+      "N_ERROR\020\005\022!\n\035FAILURE_CAUSE_COMPILE_ABORT" +
+      "ED\020\006\022 \n\034FAILURE_CAUSE_COMPILE_ERRORS\020\007\022#" +
+      "\n\037FAILURE_CAUSE_CANNOT_CREATE_APK\020\010\022!\n\035F" +
+      "AILURE_CAUSE_ZIP_ALIGN_ERROR\020\t\"Y\n\021Signin" +
+      "gTargetType\022\027\n\023TARGET_TYPE_UNKNOWN\020\000\022\023\n\017" +
+      "TARGET_TYPE_APK\020\001\022\026\n\022TARGET_TYPE_BUNDLE\020" +
+      "\002\"K\n\010FileType\022\021\n\tfile_type\030\001 \001(\t\022\023\n\013plug" +
+      "in_type\030\002 \001(\t\022\027\n\017number_of_files\030\003 \001(\r\"\236" +
+      "\002\n\032KotlinProjectConfiguration\022\016\n\006system\030" +
+      "\001 \001(\t\022\026\n\016plugin_version\030\002 \001(\t\022\016\n\006plugin\030" +
+      "\003 \001(\t\022\023\n\013plugin_type\030\004 \001(\t\022\020\n\010platform\030\005" +
+      " \001(\t\022\030\n\020is_multiplatform\030\006 \001(\010\022H\n\nevent_" +
+      "type\030\007 \001(\01624.android_studio.KotlinProjec" +
+      "tConfiguration.EventType\022\023\n\013event_flags\030" +
+      "\010 \001(\004\"(\n\tEventType\022\020\n\014TYPE_UNKNOWN\020\000\022\t\n\005" +
+      "BUILD\020\001\"T\n\014RunStartData\022\027\n\017ide_activity_" +
+      "id\030\001 \001(\005\022\020\n\010executor\030\002 \001(\t\022\031\n\021run_config" +
+      "uration\030\003 \001(\t\":\n\rRunFinishData\022\023\n\013durati" +
+      "on_ms\030\001 \001(\003\022\024\n\014ide_activity\030\002 \001(\005\"\203\005\n\022De" +
+      "viceManagerEvent\022:\n\004kind\030\001 \001(\0162,.android" +
+      "_studio.DeviceManagerEvent.EventKind\022\034\n\024" +
+      "virtual_device_count\030\002 \001(\005\"\222\004\n\tEventKind" +
+      "\022\017\n\013UNSPECIFIED\020\000\022\030\n\024VIRTUAL_DEVICE_COUN" +
+      "T\020\001\022\031\n\025VIRTUAL_LAUNCH_ACTION\020\002\022\'\n#VIRTUA" +
+      "L_DEVICE_FILE_EXPLORER_ACTION\020\003\022\027\n\023VIRTU" +
+      "AL_EDIT_ACTION\020\004\022\036\n\032VIRTUAL_PAIR_DEVICE_" +
+      "ACTION\020\005\022\034\n\030VIRTUAL_DUPLICATE_ACTION\020\006\022\034" +
+      "\n\030VIRTUAL_WIPE_DATA_ACTION\020\007\022 \n\034VIRTUAL_" +
+      "COLD_BOOT_NOW_ACTION\020\010\022\037\n\033VIRTUAL_SHOW_O" +
+      "N_DISK_ACTION\020\t\022\031\n\025VIRTUAL_DELETE_ACTION" +
+      "\020\n\022\027\n\023VIRTUAL_STOP_ACTION\020\013\022(\n$PHYSICAL_" +
+      "DEVICE_FILE_EXPLORER_ACTION\020\014\022\037\n\033PHYSICA" +
+      "L_PAIR_DEVICE_ACTION\020\r\022\032\n\026PHYSICAL_DELET" +
+      "E_ACTION\020\016\022 \n\034VIRTUAL_UNPAIR_DEVICE_ACTI" +
+      "ON\020\017\022!\n\035PHYSICAL_UNPAIR_DEVICE_ACTION\020\020\"" +
+      "\212\002\n\020WearPairingEvent\0228\n\004kind\030\001 \001(\0162*.and" +
+      "roid_studio.WearPairingEvent.EventKind\"\273" +
+      "\001\n\tEventKind\022\017\n\013UNSPECIFIED\020\000\022!\n\035SHOW_AS" +
+      "SISTANT_FULL_SELECTION\020\001\022 \n\034SHOW_ASSISTA" +
+      "NT_PRE_SELECTION\020\002\022\033\n\027SHOW_SUCCESSFUL_PA" +
+      "IRING\020\003\022\"\n\036SHOW_INSTALL_WEAR_OS_COMPANIO" +
+      "N\020\004\022\027\n\023AUTOMATIC_RECONNECT\020\005\"\330\001\n\027WearHea" +
+      "lthServicesEvent\022?\n\004kind\030\001 \001(\01621.android" +
+      "_studio.WearHealthServicesEvent.EventKin" +
+      "d\"|\n\tEventKind\022\017\n\013UNSPECIFIED\020\000\022\022\n\016EMULA" +
+      "TOR_BOUND\020\001\022\024\n\020CONNECTION_ERROR\020\002\022\031\n\025APP" +
+      "LY_CHANGES_SUCCESS\020\003\022\031\n\025APPLY_CHANGES_FA" +
+      "ILURE\020\004\"\365\001\n\025UiDeviceSettingsEvent\022F\n\tope" +
+      "ration\030\001 \001(\01623.android_studio.UiDeviceSe" +
+      "ttingsEvent.OperationKind\"\223\001\n\rOperationK" +
+      "ind\022\017\n\013UNSPECIFIED\020\000\022\016\n\nDARK_THEME\020\001\022\020\n\014" +
+      "APP_LANGUAGE\020\002\022\014\n\010TALKBACK\020\003\022\023\n\017SELECT_T" +
+      "O_SPEAK\020\004\022\r\n\tFONT_SIZE\020\005\022\022\n\016SCREEN_DENSI" +
+      "TY\020\006\022\t\n\005RESET\020\007\"\277\007\n\025GradleJdkInvalidEven" +
+      "t\022F\n\006reason\030\001 \001(\01626.android_studio.Gradl" +
+      "eJdkInvalidEvent.InvalidJdkReason\"\335\006\n\020In" +
+      "validJdkReason\022\"\n\036INVALID_JDK_UNSPECIFIE" +
+      "D_REASON\020\000\022\035\n\031INVALID_JDK_UNDEFINED_JDK\020" +
+      "\001\022%\n!INVALID_JDK_PROJECT_JDK_UNDEFINED\020\002" +
+      "\022!\n\035INVALID_JDK_JAVA_HOME_INVALID\020\003\022%\n!I" +
+      "NVALID_JDK_INTERNAL_JAVA_INVALID\020\004\022!\n\035IN" +
+      "VALID_JDK_NAME_NOT_IN_TABLE\020\005\022%\n!INVALID" +
+      "_JDK_HOME_PATH_NOT_DEFINED\020\006\022\030\n\024INVALID_" +
+      "JDK_NO_JAVAC\020\007\022\035\n\031INVALID_JDK_MISSING_FI" +
+      "LES\020\010\022$\n UNDEFINED_GRADLE_LOCAL_JAVA_HOM" +
+      "E\020\t\022\"\n\036INVALID_GRADLE_LOCAL_JAVA_HOME\020\n\022" +
+      ")\n%UNDEFINED_GRADLE_PROPERTIES_JAVA_HOME" +
+      "\020\013\022\'\n#INVALID_GRADLE_PROPERTIES_JAVA_HOM" +
+      "E\020\014\022,\n(UNDEFINED_ENVIRONMENT_VARIABLE_JA" +
+      "VA_HOME\020\r\022*\n&INVALID_ENVIRONMENT_VARIABL" +
+      "E_JAVA_HOME\020\016\0224\n0UNDEFINED_ENVIRONMENT_V" +
+      "ARIABLE_STUDIO_GRADLE_JDK\020\017\0222\n.INVALID_E" +
+      "NVIRONMENT_VARIABLE_STUDIO_GRADLE_JDK\020\020\022" +
+      "$\n UNDEFINED_GRADLE_JVM_TABLE_ENTRY\020\021\022.\n" +
+      "*UNDEFINED_GRADLE_JVM_TABLE_ENTRY_JAVA_H" +
+      "OME\020\022\022,\n(INVALID_GRADLE_JVM_TABLE_ENTRY_" +
+      "JAVA_HOME\020\023\022,\n(UNSUPPORTED_GRADLE_LOCAL_" +
+      "JAVA_HOME_MACRO\020\024\"\264\002\n\033GradleJdkConfigura" +
+      "tionEvent\022Y\n\rconfiguration\030\001 \001(\0162B.andro" +
+      "id_studio.GradleJdkConfigurationEvent.Gr" +
+      "adleJdkConfiguration\"\271\001\n\026GradleJdkConfig" +
+      "uration\022\037\n\033UNDEFINED_JDK_CONFIGURATION\020\000" +
+      "\022\021\n\rJAVA_INTERNAL\020\001\022\r\n\tJAVA_HOME\020\002\022\024\n\020GR" +
+      "ADLE_JAVA_HOME\020\003\022\032\n\026GRADLE_LOCAL_JAVA_HO" +
+      "ME\020\004\022\025\n\021STUDIO_GRADLE_JDK\020\005\022\023\n\017JDK_TABLE" +
+      "_ENTRY\020\006\"\270\004\n\023DeviceExplorerEvent\022:\n\006acti" +
+      "on\030\001 \001(\0162*.android_studio.DeviceExplorer" +
+      "Event.Action\022\033\n\023transfer_file_count\030\002 \001(" +
+      "\005\022\033\n\023transfer_total_size\030\003 \001(\005\022\030\n\020transf" +
+      "er_time_ms\030\004 \001(\005\"\220\003\n\006Action\022\017\n\013UNSPECIFI" +
+      "ED\020\000\022\021\n\rDEVICE_CHANGE\020\001\022\014\n\010NEW_FILE\020\002\022\021\n" +
+      "\rNEW_DIRECTORY\020\003\022\013\n\007SAVE_AS\020\004\022\n\n\006UPLOAD\020" +
+      "\005\022\010\n\004DROP\020\006\022\n\n\006DELETE\020\007\022\010\n\004SYNC\020\010\022\r\n\tCOP" +
+      "Y_PATH\020\t\022\023\n\017EXPAND_APP_DATA\020\n\022\016\n\nFORCE_S" +
+      "TOP\020\013\022\010\n\004KILL\020\014\022\023\n\017ATTACH_DEBUGGER\020\r\022\025\n\021" +
+      "REFRESH_PROCESSES\020\016\022!\n\035APPLICATION_ID_FI" +
+      "LTER_TOGGLED\020\017\022\025\n\021FILES_TAB_CLICKED\020\020\022\027\n" +
+      "\023PROCESS_TAB_CLICKED\020\021\022$\n APPLICATION_ID" +
+      "_FILTER_TOGGLED_ON\020\022\022%\n!APPLICATION_ID_F" +
+      "ILTER_TOGGLED_OFF\020\023\"\020\n\016OptInToMetrics\"\021\n" +
+      "\017OptOutOfMetrics\"\336\001\n!GradleVersionCatalo" +
+      "gDetectorEvent\022F\n\005state\030\001 \001(\01627.android_" +
+      "studio.GradleVersionCatalogDetectorEvent" +
+      ".State\"q\n\005State\0221\n-UNKNOWN_GRADLE_VERSIO" +
+      "N_CATALOG_DETECTOR_STATE\020\000\022\017\n\013UNSUPPORTE" +
+      "D\020\001\022\010\n\004NONE\020\002\022\014\n\010EXPLICIT\020\003\022\014\n\010IMPLICIT\020" +
+      "\004\"\243\001\n\026CoroutineDebuggerEvent\0229\n\004type\030\001 \001" +
+      "(\0162+.android_studio.CoroutineDebuggerEve" +
+      "nt.Type\022\034\n\024disabled_in_settings\030\002 \001(\010\"0\n" +
+      "\004Type\022\026\n\022UNKNOWN_EVENT_TYPE\020\000\022\020\n\014LAUNCH_" +
+      "EVENT\020\001\"\366\005\n\027SplittingTabsUsageEvent\022P\n\020t" +
+      "ool_window_type\030\001 \001(\01626.android_studio.S" +
+      "plittingTabsUsageEvent.ToolWindowType\022E\n" +
+      "\nevent_type\030\002 \001(\01621.android_studio.Split" +
+      "tingTabsUsageEvent.EventType\022E\n\nsplit_ty" +
+      "pe\030\003 \001(\01321.android_studio.SplittingTabsU" +
+      "sageEvent.SplitType\032\241\002\n\tSplitType\022R\n\013ori" +
+      "entation\030\001 \001(\0162=.android_studio.Splittin" +
+      "gTabsUsageEvent.SplitType.Orientation\022H\n" +
+      "\006source\030\002 \001(\01628.android_studio.Splitting" +
+      "TabsUsageEvent.SplitType.Source\"D\n\013Orien" +
+      "tation\022\027\n\023UNKNOWN_ORIENTATION\020\000\022\016\n\nHORIZ" +
+      "ONTAL\020\001\022\014\n\010VERTICAL\020\002\"0\n\006Source\022\022\n\016UNKNO" +
+      "WN_SOURCE\020\000\022\007\n\003TAB\020\001\022\t\n\005PANEL\020\002\"F\n\016ToolW" +
+      "indowType\022\034\n\030UNKNOWN_TOOL_WINDOW_TYPE\020\000\022" +
+      "\026\n\022LOGCAT_TOOL_WINDOW\020\001\"\216\001\n\tEventType\022\026\n" +
+      "\022UNKNOWN_EVENT_TYPE\020\000\022\021\n\rPANEL_CREATED\020\001" +
+      "\022\017\n\013TAB_CREATED\020\002\022\017\n\013PANEL_SPLIT\020\003\022\017\n\013PA" +
+      "NEL_MOVED\020\004\022\021\n\rPANEL_RENAMED\020\005\022\020\n\014PANEL_" +
+      "CLOSED\020\006\"\207\021\n\020LogcatUsageEvent\0223\n\004type\030\001 " +
+      "\001(\0162%.android_studio.LogcatUsageEvent.Ty" +
+      "pe\022U\n\rformat_dialog\030\002 \001(\0132:.android_stud" +
+      "io.LogcatUsageEvent.LogcatFormatConfigur" +
+      "ationB\002\030\001\022I\n\rlogcat_filter\030\003 \001(\01322.andro" +
+      "id_studio.LogcatUsageEvent.LogcatFilterE" +
+      "vent\022R\n\025format_dialog_applied\030\004 \001(\01323.an" +
+      "droid_studio.LogcatUsageEvent.LogcatForm" +
+      "atDialog\022F\n\013panel_added\030\005 \001(\01321.android_" +
+      "studio.LogcatUsageEvent.LogcatPanelEvent" +
+      "\032\240\001\n\022LogcatFormatDialog\022Q\n\rconfiguration" +
+      "\030\001 \001(\0132:.android_studio.LogcatUsageEvent" +
+      ".LogcatFormatConfiguration\022\031\n\021is_default" +
+      "_preset\030\002 \001(\010\022\034\n\024is_apply_button_used\030\003 " +
+      "\001(\010\032\354\003\n\031LogcatFormatConfiguration\022\031\n\021is_" +
+      "show_timestamp\030\001 \001(\010\022\024\n\014is_show_date\030\002 \001" +
+      "(\010\022\032\n\022is_show_process_id\030\003 \001(\010\022\031\n\021is_sho" +
+      "w_thread_id\030\004 \001(\010\022\024\n\014is_show_tags\030\005 \001(\010\022" +
+      "\035\n\025is_show_repeated_tags\030\006 \001(\010\022\021\n\ttag_wi" +
+      "dth\030\007 \001(\005\022\030\n\020is_show_packages\030\010 \001(\010\022!\n\031i" +
+      "s_show_repeated_packages\030\t \001(\010\022\025\n\rpackag" +
+      "e_width\030\n \001(\005\022Q\n\006preset\030\013 \001(\0162A.android_" +
+      "studio.LogcatUsageEvent.LogcatFormatConf" +
+      "iguration.Preset\022\035\n\021is_default_preset\030\014 " +
+      "\001(\010B\002\030\001\022 \n\024is_apply_button_used\030\r \001(\010B\002\030" +
+      "\001\"7\n\006Preset\022\022\n\016UNKNOWN_PRESET\020\000\022\014\n\010STAND" +
+      "ARD\020\001\022\013\n\007COMPACT\020\002\032\257\006\n\021LogcatFilterEvent" +
+      "\022R\n\ttag_terms\030\001 \001(\0132?.android_studio.Log" +
+      "catUsageEvent.LogcatFilterEvent.TermVari" +
+      "ants\022V\n\rpackage_terms\030\002 \001(\0132?.android_st" +
+      "udio.LogcatUsageEvent.LogcatFilterEvent." +
+      "TermVariants\022V\n\rmessage_terms\030\003 \001(\0132?.an" +
       "droid_studio.LogcatUsageEvent.LogcatFilt" +
-      "erEvent\022R\n\025format_dialog_applied\030\004 \001(\01323" +
-      ".android_studio.LogcatUsageEvent.LogcatF" +
-      "ormatDialog\022F\n\013panel_added\030\005 \001(\01321.andro" +
-      "id_studio.LogcatUsageEvent.LogcatPanelEv" +
-      "ent\032\240\001\n\022LogcatFormatDialog\022Q\n\rconfigurat" +
-      "ion\030\001 \001(\0132:.android_studio.LogcatUsageEv" +
-      "ent.LogcatFormatConfiguration\022\031\n\021is_defa" +
-      "ult_preset\030\002 \001(\010\022\034\n\024is_apply_button_used" +
-      "\030\003 \001(\010\032\354\003\n\031LogcatFormatConfiguration\022\031\n\021" +
-      "is_show_timestamp\030\001 \001(\010\022\024\n\014is_show_date\030" +
-      "\002 \001(\010\022\032\n\022is_show_process_id\030\003 \001(\010\022\031\n\021is_" +
-      "show_thread_id\030\004 \001(\010\022\024\n\014is_show_tags\030\005 \001" +
-      "(\010\022\035\n\025is_show_repeated_tags\030\006 \001(\010\022\021\n\ttag" +
-      "_width\030\007 \001(\005\022\030\n\020is_show_packages\030\010 \001(\010\022!" +
-      "\n\031is_show_repeated_packages\030\t \001(\010\022\025\n\rpac" +
-      "kage_width\030\n \001(\005\022Q\n\006preset\030\013 \001(\0162A.andro" +
-      "id_studio.LogcatUsageEvent.LogcatFormatC" +
-      "onfiguration.Preset\022\035\n\021is_default_preset" +
-      "\030\014 \001(\010B\002\030\001\022 \n\024is_apply_button_used\030\r \001(\010" +
-      "B\002\030\001\"7\n\006Preset\022\022\n\016UNKNOWN_PRESET\020\000\022\014\n\010ST" +
-      "ANDARD\020\001\022\013\n\007COMPACT\020\002\032\257\006\n\021LogcatFilterEv" +
-      "ent\022R\n\ttag_terms\030\001 \001(\0132?.android_studio." +
-      "LogcatUsageEvent.LogcatFilterEvent.TermV" +
-      "ariants\022V\n\rpackage_terms\030\002 \001(\0132?.android" +
-      "_studio.LogcatUsageEvent.LogcatFilterEve" +
-      "nt.TermVariants\022V\n\rmessage_terms\030\003 \001(\0132?" +
-      ".android_studio.LogcatUsageEvent.LogcatF" +
-      "ilterEvent.TermVariants\022S\n\nline_terms\030\004 " +
-      "\001(\0132?.android_studio.LogcatUsageEvent.Lo" +
-      "gcatFilterEvent.TermVariants\022\033\n\023implicit" +
-      "_line_terms\030\005 \001(\005\022\023\n\013level_terms\030\006 \001(\005\022\021" +
-      "\n\tage_terms\030\007 \001(\005\022\035\n\025package_project_ter" +
-      "ms\030\010 \001(\005\022\024\n\014or_operators\030\t \001(\005\022\025\n\rand_op" +
-      "erators\030\n \001(\005\022\023\n\013parentheses\030\013 \001(\005\022\027\n\017co" +
-      "ntains_errors\030\014 \001(\010\022\023\n\013is_favorite\030\r \001(\010" +
-      "\022\023\n\013crash_terms\030\016 \001(\005\022\030\n\020stacktrace_term" +
-      "s\030\017 \001(\005\022V\n\rprocess_terms\030\020 \001(\0132?.android" +
-      "_studio.LogcatUsageEvent.LogcatFilterEve" +
-      "nt.TermVariants\032f\n\014TermVariants\022\r\n\005count" +
-      "\030\001 \001(\005\022\025\n\rcount_negated\030\002 \001(\005\022\023\n\013count_r" +
-      "egex\030\003 \001(\005\022\033\n\023count_negated_regex\030\004 \001(\005\032" +
-      "\332\001\n\020LogcatPanelEvent\022\023\n\013is_restored\030\001 \001(" +
-      "\010\022X\n\024format_configuration\030\002 \001(\0132:.androi" +
-      "d_studio.LogcatUsageEvent.LogcatFormatCo" +
-      "nfiguration\022B\n\006filter\030\003 \001(\01322.android_st" +
-      "udio.LogcatUsageEvent.LogcatFilterEvent\022" +
-      "\023\n\013buffer_size\030\004 \001(\005\"_\n\004Type\022\026\n\022UNKNOWN_" +
-      "EVENT_TYPE\020\000\022\021\n\rFORMAT_DIALOG\020\001\022\033\n\027FILTE" +
-      "R_ADDED_TO_HISTORY\020\002\022\017\n\013PANEL_ADDED\020\003\"\202\004" +
-      "\n\tOSMetrics\0224\n\tprocesses\030\001 \003(\0132!.android" +
-      "_studio.OSMetrics.Process\032\251\002\n\007Process\022\013\n" +
-      "\003pid\030\001 \001(\005\022\022\n\nparent_pid\030\002 \001(\005\022\032\n\022start_" +
-      "timestamp_ms\030\003 \001(\003\022\"\n\032total_cpu_use_mill" +
-      "iseconds\030\004 \001(\003\0223\n\004type\030\005 \001(\0162%.android_s" +
-      "tudio.OSMetrics.ProcessType\022E\n\026last_know" +
-      "n_parent_type\030\006 \001(\0162%.android_studio.OSM" +
-      "etrics.ProcessType\022\013\n\003rss\030\007 \001(\003\022\030\n\020worki" +
-      "ng_set_size\030\010 \001(\003\022\032\n\022private_page_count\030" +
-      "\t \001(\003\"\222\001\n\013ProcessType\022\030\n\024UNKNOWN_PROCESS" +
-      "_TYPE\020\000\022\022\n\016ANDROID_STUDIO\020\001\022\017\n\013FS_NOTIFI" +
-      "ER\020\002\022\021\n\rGRADLE_DAEMON\020\003\022\014\n\010EMULATOR\020\004\022\021\n" +
-      "\rKOTLIN_DAEMON\020\005\022\020\n\014CONSOLE_HOST\020\006\"l\n\026Sd" +
-      "kIndexLibraryDetails\022\020\n\010group_id\030\001 \001(\t\022\023" +
-      "\n\013artifact_id\030\002 \001(\t\022\026\n\016version_string\030\003 " +
-      "\001(\t\022\023\n\013is_blocking\030\004 \001(\010\"\312\004\n\026SdkIndexLoa" +
-      "dingDetails\022F\n\013source_type\030\001 \001(\01621.andro" +
-      "id_studio.SdkIndexLoadingDetails.SourceT" +
-      "ype\022M\n\017read_error_type\030\002 \001(\01624.android_s" +
-      "tudio.SdkIndexLoadingDetails.ReadErrorTy" +
-      "pe\"\362\001\n\nSourceType\022\022\n\016UNKNOWN_SOURCE\020\000\022\r\n" +
-      "\tTEST_DATA\020\001\022!\n\035CACHE_FILE_EXPIRED_NO_NE" +
-      "TWORK\020\002\022$\n CACHE_FILE_EXPIRED_NETWORK_ER" +
-      "ROR\020\003\022\036\n\032CACHE_FILE_EXPIRED_UNKNOWN\020\004\022\025\n" +
-      "\021CACHE_FILE_RECENT\020\005\022\022\n\016CACHE_FILE_NEW\020\006" +
-      "\022\020\n\014DEFAULT_DATA\020\007\022\033\n\027CACHE_FILE_NOT_MOD" +
-      "IFIED\020\010\"\243\001\n\rReadErrorType\022\014\n\010NO_ERROR\020\000\022" +
-      "\033\n\027DATA_FUNCTION_EXCEPTION\020\001\022\034\n\030DATA_FUN" +
-      "CTION_NULL_ERROR\020\002\022\022\n\016GZIP_EXCEPTION\020\003\022\031" +
-      "\n\025INDEX_PARSE_EXCEPTION\020\004\022\032\n\026INDEX_PARSE" +
-      "_NULL_ERROR\020\005\"\275\t\n\rLiveEditEvent\0224\n\006statu" +
-      "s\030\001 \001(\0162$.android_studio.LiveEditEvent.S" +
-      "tatus\022\027\n\017has_non_compose\030\002 \001(\010\022\033\n\023compil" +
-      "e_duration_ms\030\003 \001(\003\022\030\n\020push_duration_ms\030" +
-      "\004 \001(\003\0220\n\004mode\030\005 \001(\0162\".android_studio.Liv" +
-      "eEditEvent.Mode\022\022\n\nproject_id\030\006 \001(\t\022;\n\rt" +
-      "arget_device\030\007 \001(\0162$.android_studio.Live" +
-      "EditEvent.Device\"\252\006\n\006Status\022\013\n\007UNKNOWN\020\000" +
-      "\022\013\n\007SUCCESS\020\001\022\017\n\013PUSH_FAILED\020\002\022\034\n\030UNSUPP" +
-      "ORTED_ADDED_METHOD\020\003\022\036\n\032UNSUPPORTED_REMO" +
-      "VED_METHOD\020\004\022\033\n\027UNSUPPORTED_ADDED_CLASS\020" +
-      "\005\022\033\n\027UNSUPPORTED_ADDED_FIELD\020\006\022\035\n\031UNSUPP" +
-      "ORTED_REMOVED_FIELD\020\007\022\035\n\031UNSUPPORTED_MOD" +
-      "IFY_INLINE\020\010\022\"\n\036UNSUPPORTED_MODIFY_INHER" +
-      "ITANCE\020\t\022\022\n\016ANALYSIS_ERROR\020\n\022\025\n\021COMPILAT" +
-      "ION_ERROR\020\013\022\016\n\nNON_KOTLIN\020\014\022\037\n\033NON_PRIVA" +
-      "TE_INLINE_FUNCTION\020\r\022\024\n\020UNABLE_TO_INLINE" +
-      "\020\016\022\"\n\036UNABLE_TO_LOCATE_COMPOSE_GROUP\020\017\022 " +
-      "\n\034UNSUPPORTED_BUILD_SRC_CHANGE\020\020\022&\n\"UNSU" +
-      "PPORTED_SRC_CHANGE_RECOVERABLE\020\021\022(\n$UNSU" +
-      "PPORTED_SRC_CHANGE_UNRECOVERABLE\020\022\022\037\n\033UN" +
-      "SUPPORTED_TEST_SRC_CHANGE\020\023\022\025\n\021UNABLE_TO" +
-      "_DESUGAR\020\024\022\022\n\016INTERNAL_ERROR\020\025\022\017\n\013KNOWN_" +
-      "ISSUE\020\026\022+\n\'PENDING_ERROR_IN_ANOTHER_FILE" +
-      "_AUTO_MODE\020\027\022%\n!UNSUPPORTED_BUILD_LIBRAR" +
-      "Y_DESUGAR\020\030\022\017\n\013BAD_MIN_API\020\031\022\'\n#UNSUPPOR" +
-      "TED_COMPOSE_RUNTIME_VERSION\020\032\022&\n\"UNKNOWN" +
-      "_LIVE_UPDATE_DEPLOYER_ERROR\020\033\";\n\004Mode\022\020\n" +
-      "\014UNKNOWN_MODE\020\000\022\010\n\004AUTO\020\001\022\n\n\006MANUAL\020\002\022\013\n" +
-      "\007ON_SAVE\020\003\"9\n\006Device\022\010\n\004NONE\020\000\022\014\n\010PHYSIC" +
-      "AL\020\001\022\014\n\010EMULATOR\020\002\022\t\n\005MULTI\020\003\"\222\002\n\026Google" +
-      "LoginPluginEvent\022?\n\005event\030\001 \001(\01620.androi" +
-      "d_studio.GoogleLoginPluginEvent.EventKin" +
-      "d\"\266\001\n\tEventKind\022\026\n\022UNKNOWN_EVENT_TYPE\020\000\022" +
-      "\026\n\022LOGIN_WITH_SUCCESS\020\001\022\026\n\022LOGIN_WITH_FA" +
-      "ILURE\020\002\022\020\n\014FORCE_LOGOUT\020\003\022\027\n\023LOGOUT_WITH" +
-      "_SUCCESS\020\005\022\027\n\023LOGOUT_WITH_FAILURE\020\006\022\035\n\031L" +
-      "OGGED_IN_ON_STUDIO_START\020\007\"\372\001\n\026DeviceMir" +
-      "roringSession\022F\n\013device_kind\030\001 \001(\01621.and" +
-      "roid_studio.DeviceMirroringSession.Devic" +
-      "eKind\022\024\n\014duration_sec\030\002 \001(\003\022\036\n\026agent_pus" +
-      "h_time_millis\030\003 \001(\003\022 \n\030first_frame_delay" +
-      "_millis\030\004 \001(\003\"@\n\nDeviceKind\022\027\n\023UNKNOWN_D" +
-      "EVICE_KIND\020\000\022\014\n\010PHYSICAL\020\001\022\013\n\007VIRTUAL\020\002\"" +
-      "Y\n\'DeviceMirroringAbnormalAgentTerminati" +
-      "on\022\021\n\texit_code\030\001 \001(\005\022\033\n\023run_duration_mi" +
-      "llis\030\002 \001(\003\"\374\t\n\021SystemHealthEvent\022K\n\neven" +
-      "t_type\030\001 \001(\01627.android_studio.SystemHeal" +
-      "thEvent.SystemHealthEventType\022=\n\tui_free" +
-      "ze\030\002 \001(\0132*.android_studio.SystemHealthEv" +
-      "ent.UIFreeze\0224\n\004exit\030\003 \001(\0132&.android_stu" +
-      "dio.SystemHealthEvent.Exit\0228\n\006memory\030\004 \001" +
-      "(\0132(.android_studio.SystemHealthEvent.Me" +
-      "mory\022>\n\texception\030\005 \001(\0132+.android_studio" +
-      ".SystemHealthEvent.Exception\022\027\n\017essentia" +
-      "ls_mode\030\006 \001(\010\032v\n\010UIFreeze\022\021\n\tfreeze_id\030\001" +
-      " \001(\003\022\023\n\013duration_ms\030\002 \001(\003\022B\n\010deadlock\030\003 " +
-      "\001(\01620.android_studio.SystemHealthEvent.D" +
-      "eadlockStatus\032<\n\004Exit\022\031\n\021studio_session_" +
-      "id\030\001 \001(\t\022\031\n\021jvm_signal_number\030\002 \001(\005\032\243\001\n\006" +
-      "Memory\022W\n\027low_memory_warning_type\030\001 \001(\0162" +
-      "6.android_studio.SystemHealthEvent.LowMe" +
-      "moryWarningType\022$\n\034period_cumulative_gc_" +
-      "time_ms\030\002 \001(\003\022\032\n\022period_duration_ms\030\003 \001(" +
-      "\003\032\223\001\n\tException\022\030\n\020stable_signature\030\001 \001(" +
-      "\t\022\027\n\017crash_report_id\030\002 \001(\t\022\027\n\017exception_" +
-      "index\030\003 \001(\003\022\027\n\017signature_index\030\004 \001(\003\022!\n\031" +
-      "signature_reports_skipped\030\005 \001(\003\"\212\002\n\025Syst" +
-      "emHealthEventType\022\021\n\rUNKNOWN_EVENT\020\000\022\025\n\021" +
-      "UI_FREEZE_STARTED\020\001\022\024\n\020UI_FREEZE_UPDATE\020" +
-      "\002\022\026\n\022UI_FREEZE_FINISHED\020\003\022\022\n\016EXIT_JVM_CR" +
-      "ASH\020\004\022\021\n\rEXIT_GRACEFUL\020\005\022\024\n\020EXIT_NONGRAC" +
-      "EFUL\020\006\022\035\n\031MEMORY_LOW_MEMORY_WARNING\020\007\022\030\n" +
-      "\024MEMORY_LONG_GC_PAUSE\020\010\022\024\n\020MEMORY_OOM_ER" +
-      "ROR\020\t\022\r\n\tEXCEPTION\020\n\"L\n\016DeadlockStatus\022\013" +
-      "\n\007UNKNOWN\020\000\022\017\n\013NO_DEADLOCK\020\001\022\r\n\tSUSPECTE" +
-      "D\020\002\022\r\n\tCONFIRMED\020\003\"E\n\024LowMemoryWarningTy" +
-      "pe\022\020\n\014UNKNOWN_TYPE\020\000\022\r\n\tBEFORE_GC\020\001\022\014\n\010A" +
-      "FTER_GC\020\002\"\323\002\n\031ComposePreviewCanvasEvent\022" +
-      "G\n\nevent_type\030\001 \001(\01623.android_studio.Com" +
-      "posePreviewCanvasEvent.EventType\022I\n\013layo" +
-      "ut_name\030\002 \001(\01624.android_studio.ComposePr" +
-      "eviewCanvasEvent.LayoutName\"6\n\tEventType" +
-      "\022\026\n\022UNKNOWN_EVENT_TYPE\020\000\022\021\n\rSELECT_LAYOU" +
-      "T\020\001\"j\n\nLayoutName\022\027\n\023UNKNOWN_LAYOUT_NAME" +
-      "\020\000\022\010\n\004LIST\020\001\022\010\n\004GRID\020\002\022\020\n\014GROUPED_LIST\020\003" +
-      "\022\020\n\014GROUPED_GRID\020\004\022\013\n\007GALLERY\020\005\"\3222\n\034AppQ" +
-      "ualityInsightsUsageEvent\022\016\n\006app_id\030\001 \001(\t" +
-      "\022[\n\004type\030\002 \001(\0162M.android_studio.AppQuali" +
-      "tyInsightsUsageEvent.AppQualityInsightsU" +
-      "sageEventType\022k\n\022zero_state_details\030\003 \001(" +
-      "\0132O.android_studio.AppQualityInsightsUsa" +
-      "geEvent.AppQualityInsightsZeroStateDetai" +
-      "ls\022b\n\rfetch_details\030\004 \001(\0132K.android_stud" +
-      "io.AppQualityInsightsUsageEvent.AppQuali" +
-      "tyInsightsFetchDetails\022k\n\022crash_open_det" +
-      "ails\030\005 \001(\0132O.android_studio.AppQualityIn" +
-      "sightsUsageEvent.AppQualityInsightsCrash" +
-      "OpenDetails\022l\n\022stacktrace_details\030\006 \001(\0132" +
-      "P.android_studio.AppQualityInsightsUsage" +
-      "Event.AppQualityInsightsStacktraceDetail" +
-      "s\022o\n\024console_link_details\030\007 \001(\0132Q.androi" +
-      "d_studio.AppQualityInsightsUsageEvent.Ap" +
-      "pQualityInsightsConsoleLinkDetails\022f\n\017ma" +
-      "tcher_details\030\010 \001(\0132M.android_studio.App" +
-      "QualityInsightsUsageEvent.AppQualityInsi" +
-      "ghtsMatcherDetails\022b\n\rerror_details\030\t \001(" +
-      "\0132K.android_studio.AppQualityInsightsUsa" +
-      "geEvent.AppQualityInsightsErrorDetails\022q" +
-      "\n\025issue_changed_details\030\n \001(\0132R.android_",
-      "studio.AppQualityInsightsUsageEvent.AppQ" +
-      "ualityInsightsIssueChangedDetails\022b\n\rnot" +
-      "es_details\030\013 \001(\0132K.android_studio.AppQua" +
-      "lityInsightsUsageEvent.AppQualityInsight" +
-      "sNotesDetails\022\022\n\nis_offline\030\014 \001(\010\022u\n\027mod" +
-      "e_transition_details\030\r \001(\0162T.android_stu" +
-      "dio.AppQualityInsightsUsageEvent.AppQual" +
-      "ityInsightsModeTransitionDetails\022`\n\014prod" +
-      "uct_type\030\016 \001(\0162J.android_studio.AppQuali" +
-      "tyInsightsUsageEvent.AppQualityInsightsP" +
-      "roductType\022X\n\021performance_stats\030\017 \001(\0132=." +
-      "android_studio.AppQualityInsightsUsageEv" +
-      "ent.PerformanceStats\032\350\001\n\"AppQualityInsig" +
-      "htsZeroStateDetails\022o\n\013empty_state\030\001 \001(\016" +
-      "2Z.android_studio.AppQualityInsightsUsag" +
-      "eEvent.AppQualityInsightsZeroStateDetail" +
-      "s.EmptyState\"Q\n\nEmptyState\022\021\n\rUNKNOWN_ST" +
-      "ATE\020\000\022\014\n\010NO_LOGIN\020\001\022\023\n\013NO_FIREBASE\020\002\032\002\010\001" +
-      "\022\r\n\tNO_ACCESS\020\003\032\225\013\n\036AppQualityInsightsFe" +
-      "tchDetails\022k\n\013time_filter\030\001 \001(\0162V.androi" +
-      "d_studio.AppQualityInsightsUsageEvent.Ap" +
-      "pQualityInsightsFetchDetails.TimeFilter\022" +
-      "\026\n\016version_filter\030\002 \001(\010\022s\n\017severity_filt" +
-      "er\030\003 \001(\0162Z.android_studio.AppQualityInsi" +
-      "ghtsUsageEvent.AppQualityInsightsFetchDe" +
-      "tails.SeverityFilter\022\027\n\017default_project\030" +
-      "\004 \001(\010\022m\n\014fetch_source\030\005 \001(\0162W.android_st" +
-      "udio.AppQualityInsightsUsageEvent.AppQua" +
-      "lityInsightsFetchDetails.FetchSource\022\023\n\013" +
-      "num_retries\030\006 \001(\005\022\r\n\005cache\030\007 \001(\010\022o\n\rsign" +
-      "al_filter\030\010 \001(\0162X.android_studio.AppQual" +
-      "ityInsightsUsageEvent.AppQualityInsights" +
-      "FetchDetails.SignalFilter\022\021\n\tos_filter\030\t" +
-      " \001(\010\022\025\n\rdevice_filter\030\n \001(\010\022w\n\021visibilit" +
-      "y_filter\030\013 \001(\0162\\.android_studio.AppQuali" +
-      "tyInsightsUsageEvent.AppQualityInsightsF" +
-      "etchDetails.VisibilityFilter\022\202\001\n\027vcs_int" +
-      "egration_details\030\014 \001(\0132a.android_studio." +
+      "erEvent.TermVariants\022S\n\nline_terms\030\004 \001(\013" +
+      "2?.android_studio.LogcatUsageEvent.Logca" +
+      "tFilterEvent.TermVariants\022\033\n\023implicit_li" +
+      "ne_terms\030\005 \001(\005\022\023\n\013level_terms\030\006 \001(\005\022\021\n\ta" +
+      "ge_terms\030\007 \001(\005\022\035\n\025package_project_terms\030" +
+      "\010 \001(\005\022\024\n\014or_operators\030\t \001(\005\022\025\n\rand_opera" +
+      "tors\030\n \001(\005\022\023\n\013parentheses\030\013 \001(\005\022\027\n\017conta" +
+      "ins_errors\030\014 \001(\010\022\023\n\013is_favorite\030\r \001(\010\022\023\n" +
+      "\013crash_terms\030\016 \001(\005\022\030\n\020stacktrace_terms\030\017" +
+      " \001(\005\022V\n\rprocess_terms\030\020 \001(\0132?.android_st" +
+      "udio.LogcatUsageEvent.LogcatFilterEvent." +
+      "TermVariants\032f\n\014TermVariants\022\r\n\005count\030\001 " +
+      "\001(\005\022\025\n\rcount_negated\030\002 \001(\005\022\023\n\013count_rege" +
+      "x\030\003 \001(\005\022\033\n\023count_negated_regex\030\004 \001(\005\032\332\001\n" +
+      "\020LogcatPanelEvent\022\023\n\013is_restored\030\001 \001(\010\022X" +
+      "\n\024format_configuration\030\002 \001(\0132:.android_s" +
+      "tudio.LogcatUsageEvent.LogcatFormatConfi" +
+      "guration\022B\n\006filter\030\003 \001(\01322.android_studi" +
+      "o.LogcatUsageEvent.LogcatFilterEvent\022\023\n\013" +
+      "buffer_size\030\004 \001(\005\"_\n\004Type\022\026\n\022UNKNOWN_EVE" +
+      "NT_TYPE\020\000\022\021\n\rFORMAT_DIALOG\020\001\022\033\n\027FILTER_A" +
+      "DDED_TO_HISTORY\020\002\022\017\n\013PANEL_ADDED\020\003\"\202\004\n\tO" +
+      "SMetrics\0224\n\tprocesses\030\001 \003(\0132!.android_st" +
+      "udio.OSMetrics.Process\032\251\002\n\007Process\022\013\n\003pi" +
+      "d\030\001 \001(\005\022\022\n\nparent_pid\030\002 \001(\005\022\032\n\022start_tim" +
+      "estamp_ms\030\003 \001(\003\022\"\n\032total_cpu_use_millise" +
+      "conds\030\004 \001(\003\0223\n\004type\030\005 \001(\0162%.android_stud" +
+      "io.OSMetrics.ProcessType\022E\n\026last_known_p" +
+      "arent_type\030\006 \001(\0162%.android_studio.OSMetr" +
+      "ics.ProcessType\022\013\n\003rss\030\007 \001(\003\022\030\n\020working_" +
+      "set_size\030\010 \001(\003\022\032\n\022private_page_count\030\t \001" +
+      "(\003\"\222\001\n\013ProcessType\022\030\n\024UNKNOWN_PROCESS_TY" +
+      "PE\020\000\022\022\n\016ANDROID_STUDIO\020\001\022\017\n\013FS_NOTIFIER\020" +
+      "\002\022\021\n\rGRADLE_DAEMON\020\003\022\014\n\010EMULATOR\020\004\022\021\n\rKO" +
+      "TLIN_DAEMON\020\005\022\020\n\014CONSOLE_HOST\020\006\"l\n\026SdkIn" +
+      "dexLibraryDetails\022\020\n\010group_id\030\001 \001(\t\022\023\n\013a" +
+      "rtifact_id\030\002 \001(\t\022\026\n\016version_string\030\003 \001(\t" +
+      "\022\023\n\013is_blocking\030\004 \001(\010\"\312\004\n\026SdkIndexLoadin" +
+      "gDetails\022F\n\013source_type\030\001 \001(\01621.android_" +
+      "studio.SdkIndexLoadingDetails.SourceType" +
+      "\022M\n\017read_error_type\030\002 \001(\01624.android_stud" +
+      "io.SdkIndexLoadingDetails.ReadErrorType\"" +
+      "\362\001\n\nSourceType\022\022\n\016UNKNOWN_SOURCE\020\000\022\r\n\tTE" +
+      "ST_DATA\020\001\022!\n\035CACHE_FILE_EXPIRED_NO_NETWO" +
+      "RK\020\002\022$\n CACHE_FILE_EXPIRED_NETWORK_ERROR" +
+      "\020\003\022\036\n\032CACHE_FILE_EXPIRED_UNKNOWN\020\004\022\025\n\021CA" +
+      "CHE_FILE_RECENT\020\005\022\022\n\016CACHE_FILE_NEW\020\006\022\020\n" +
+      "\014DEFAULT_DATA\020\007\022\033\n\027CACHE_FILE_NOT_MODIFI" +
+      "ED\020\010\"\243\001\n\rReadErrorType\022\014\n\010NO_ERROR\020\000\022\033\n\027" +
+      "DATA_FUNCTION_EXCEPTION\020\001\022\034\n\030DATA_FUNCTI" +
+      "ON_NULL_ERROR\020\002\022\022\n\016GZIP_EXCEPTION\020\003\022\031\n\025I" +
+      "NDEX_PARSE_EXCEPTION\020\004\022\032\n\026INDEX_PARSE_NU" +
+      "LL_ERROR\020\005\"\275\t\n\rLiveEditEvent\0224\n\006status\030\001" +
+      " \001(\0162$.android_studio.LiveEditEvent.Stat" +
+      "us\022\027\n\017has_non_compose\030\002 \001(\010\022\033\n\023compile_d" +
+      "uration_ms\030\003 \001(\003\022\030\n\020push_duration_ms\030\004 \001" +
+      "(\003\0220\n\004mode\030\005 \001(\0162\".android_studio.LiveEd" +
+      "itEvent.Mode\022\022\n\nproject_id\030\006 \001(\t\022;\n\rtarg" +
+      "et_device\030\007 \001(\0162$.android_studio.LiveEdi" +
+      "tEvent.Device\"\252\006\n\006Status\022\013\n\007UNKNOWN\020\000\022\013\n" +
+      "\007SUCCESS\020\001\022\017\n\013PUSH_FAILED\020\002\022\034\n\030UNSUPPORT" +
+      "ED_ADDED_METHOD\020\003\022\036\n\032UNSUPPORTED_REMOVED" +
+      "_METHOD\020\004\022\033\n\027UNSUPPORTED_ADDED_CLASS\020\005\022\033" +
+      "\n\027UNSUPPORTED_ADDED_FIELD\020\006\022\035\n\031UNSUPPORT" +
+      "ED_REMOVED_FIELD\020\007\022\035\n\031UNSUPPORTED_MODIFY" +
+      "_INLINE\020\010\022\"\n\036UNSUPPORTED_MODIFY_INHERITA" +
+      "NCE\020\t\022\022\n\016ANALYSIS_ERROR\020\n\022\025\n\021COMPILATION" +
+      "_ERROR\020\013\022\016\n\nNON_KOTLIN\020\014\022\037\n\033NON_PRIVATE_" +
+      "INLINE_FUNCTION\020\r\022\024\n\020UNABLE_TO_INLINE\020\016\022" +
+      "\"\n\036UNABLE_TO_LOCATE_COMPOSE_GROUP\020\017\022 \n\034U" +
+      "NSUPPORTED_BUILD_SRC_CHANGE\020\020\022&\n\"UNSUPPO" +
+      "RTED_SRC_CHANGE_RECOVERABLE\020\021\022(\n$UNSUPPO" +
+      "RTED_SRC_CHANGE_UNRECOVERABLE\020\022\022\037\n\033UNSUP" +
+      "PORTED_TEST_SRC_CHANGE\020\023\022\025\n\021UNABLE_TO_DE" +
+      "SUGAR\020\024\022\022\n\016INTERNAL_ERROR\020\025\022\017\n\013KNOWN_ISS" +
+      "UE\020\026\022+\n\'PENDING_ERROR_IN_ANOTHER_FILE_AU" +
+      "TO_MODE\020\027\022%\n!UNSUPPORTED_BUILD_LIBRARY_D" +
+      "ESUGAR\020\030\022\017\n\013BAD_MIN_API\020\031\022\'\n#UNSUPPORTED" +
+      "_COMPOSE_RUNTIME_VERSION\020\032\022&\n\"UNKNOWN_LI" +
+      "VE_UPDATE_DEPLOYER_ERROR\020\033\";\n\004Mode\022\020\n\014UN" +
+      "KNOWN_MODE\020\000\022\010\n\004AUTO\020\001\022\n\n\006MANUAL\020\002\022\013\n\007ON" +
+      "_SAVE\020\003\"9\n\006Device\022\010\n\004NONE\020\000\022\014\n\010PHYSICAL\020" +
+      "\001\022\014\n\010EMULATOR\020\002\022\t\n\005MULTI\020\003\"\222\002\n\026GoogleLog" +
+      "inPluginEvent\022?\n\005event\030\001 \001(\01620.android_s" +
+      "tudio.GoogleLoginPluginEvent.EventKind\"\266" +
+      "\001\n\tEventKind\022\026\n\022UNKNOWN_EVENT_TYPE\020\000\022\026\n\022" +
+      "LOGIN_WITH_SUCCESS\020\001\022\026\n\022LOGIN_WITH_FAILU" +
+      "RE\020\002\022\020\n\014FORCE_LOGOUT\020\003\022\027\n\023LOGOUT_WITH_SU" +
+      "CCESS\020\005\022\027\n\023LOGOUT_WITH_FAILURE\020\006\022\035\n\031LOGG" +
+      "ED_IN_ON_STUDIO_START\020\007\"\372\001\n\026DeviceMirror" +
+      "ingSession\022F\n\013device_kind\030\001 \001(\01621.androi" +
+      "d_studio.DeviceMirroringSession.DeviceKi" +
+      "nd\022\024\n\014duration_sec\030\002 \001(\003\022\036\n\026agent_push_t" +
+      "ime_millis\030\003 \001(\003\022 \n\030first_frame_delay_mi" +
+      "llis\030\004 \001(\003\"@\n\nDeviceKind\022\027\n\023UNKNOWN_DEVI" +
+      "CE_KIND\020\000\022\014\n\010PHYSICAL\020\001\022\013\n\007VIRTUAL\020\002\"Y\n\'" +
+      "DeviceMirroringAbnormalAgentTermination\022" +
+      "\021\n\texit_code\030\001 \001(\005\022\033\n\023run_duration_milli" +
+      "s\030\002 \001(\003\"\374\t\n\021SystemHealthEvent\022K\n\nevent_t" +
+      "ype\030\001 \001(\01627.android_studio.SystemHealthE" +
+      "vent.SystemHealthEventType\022=\n\tui_freeze\030" +
+      "\002 \001(\0132*.android_studio.SystemHealthEvent" +
+      ".UIFreeze\0224\n\004exit\030\003 \001(\0132&.android_studio" +
+      ".SystemHealthEvent.Exit\0228\n\006memory\030\004 \001(\0132" +
+      "(.android_studio.SystemHealthEvent.Memor" +
+      "y\022>\n\texception\030\005 \001(\0132+.android_studio.Sy" +
+      "stemHealthEvent.Exception\022\027\n\017essentials_" +
+      "mode\030\006 \001(\010\032v\n\010UIFreeze\022\021\n\tfreeze_id\030\001 \001(" +
+      "\003\022\023\n\013duration_ms\030\002 \001(\003\022B\n\010deadlock\030\003 \001(\016" +
+      "20.android_studio.SystemHealthEvent.Dead" +
+      "lockStatus\032<\n\004Exit\022\031\n\021studio_session_id\030" +
+      "\001 \001(\t\022\031\n\021jvm_signal_number\030\002 \001(\005\032\243\001\n\006Mem" +
+      "ory\022W\n\027low_memory_warning_type\030\001 \001(\01626.a" +
+      "ndroid_studio.SystemHealthEvent.LowMemor" +
+      "yWarningType\022$\n\034period_cumulative_gc_tim" +
+      "e_ms\030\002 \001(\003\022\032\n\022period_duration_ms\030\003 \001(\003\032\223" +
+      "\001\n\tException\022\030\n\020stable_signature\030\001 \001(\t\022\027" +
+      "\n\017crash_report_id\030\002 \001(\t\022\027\n\017exception_ind" +
+      "ex\030\003 \001(\003\022\027\n\017signature_index\030\004 \001(\003\022!\n\031sig" +
+      "nature_reports_skipped\030\005 \001(\003\"\212\002\n\025SystemH" +
+      "ealthEventType\022\021\n\rUNKNOWN_EVENT\020\000\022\025\n\021UI_" +
+      "FREEZE_STARTED\020\001\022\024\n\020UI_FREEZE_UPDATE\020\002\022\026" +
+      "\n\022UI_FREEZE_FINISHED\020\003\022\022\n\016EXIT_JVM_CRASH" +
+      "\020\004\022\021\n\rEXIT_GRACEFUL\020\005\022\024\n\020EXIT_NONGRACEFU" +
+      "L\020\006\022\035\n\031MEMORY_LOW_MEMORY_WARNING\020\007\022\030\n\024ME" +
+      "MORY_LONG_GC_PAUSE\020\010\022\024\n\020MEMORY_OOM_ERROR" +
+      "\020\t\022\r\n\tEXCEPTION\020\n\"L\n\016DeadlockStatus\022\013\n\007U" +
+      "NKNOWN\020\000\022\017\n\013NO_DEADLOCK\020\001\022\r\n\tSUSPECTED\020\002" +
+      "\022\r\n\tCONFIRMED\020\003\"E\n\024LowMemoryWarningType\022" +
+      "\020\n\014UNKNOWN_TYPE\020\000\022\r\n\tBEFORE_GC\020\001\022\014\n\010AFTE" +
+      "R_GC\020\002\"\323\002\n\031ComposePreviewCanvasEvent\022G\n\n" +
+      "event_type\030\001 \001(\01623.android_studio.Compos" +
+      "ePreviewCanvasEvent.EventType\022I\n\013layout_" +
+      "name\030\002 \001(\01624.android_studio.ComposePrevi" +
+      "ewCanvasEvent.LayoutName\"6\n\tEventType\022\026\n" +
+      "\022UNKNOWN_EVENT_TYPE\020\000\022\021\n\rSELECT_LAYOUT\020\001" +
+      "\"j\n\nLayoutName\022\027\n\023UNKNOWN_LAYOUT_NAME\020\000\022" +
+      "\010\n\004LIST\020\001\022\010\n\004GRID\020\002\022\020\n\014GROUPED_LIST\020\003\022\020\n" +
+      "\014GROUPED_GRID\020\004\022\013\n\007GALLERY\020\005\"\3222\n\034AppQual" +
+      "ityInsightsUsageEvent\022\016\n\006app_id\030\001 \001(\t\022[\n" +
+      "\004type\030\002 \001(\0162M.android_studio.AppQualityI" +
+      "nsightsUsageEvent.AppQualityInsightsUsag" +
+      "eEventType\022k\n\022zero_state_details\030\003 \001(\0132O" +
+      ".android_studio.AppQualityInsightsUsageE" +
+      "vent.AppQualityInsightsZeroStateDetails\022" +
+      "b\n\rfetch_details\030\004 \001(\0132K.android_studio." +
       "AppQualityInsightsUsageEvent.AppQualityI" +
-      "nsightsFetchDetails.VcsIntegrationDetail" +
-      "s\0321\n\025VcsIntegrationDetails\022\030\n\020has_app_vc" +
-      "s_info\030\001 \001(\010\"x\n\nTimeFilter\022\022\n\016UNKNOWN_FI" +
-      "LTER\020\000\022\017\n\013THIRTY_DAYS\020\001\022\016\n\nSIXTY_DAYS\020\002\022" +
-      "\017\n\013NINETY_DAYS\020\003\022\016\n\nSEVEN_DAYS\020\004\022\024\n\020TWEN" +
-      "TYFOUR_HOURS\020\005\"a\n\013FetchSource\022\022\n\016UNKNOWN" +
-      "_SOURCE\020\000\022\016\n\nBACKGROUND\020\001\022\013\n\007REFRESH\020\002\022\n" +
-      "\n\006FILTER\020\003\022\025\n\021PROJECT_SELECTION\020\004\"I\n\016Sev" +
-      "erityFilter\022\024\n\020UNKNOWN_SEVERITY\020\000\022\t\n\005FAT" +
-      "AL\020\001\022\r\n\tNON_FATAL\020\002\022\007\n\003ALL\020\003\"\204\001\n\014SignalF" +
-      "ilter\022\022\n\016UNKNOWN_SIGNAL\020\000\022\016\n\nALL_SIGNAL\020" +
-      "\001\022\020\n\014EARLY_SIGNAL\020\002\022\020\n\014FRESH_SIGNAL\020\003\022\025\n" +
-      "\021REGRESSIVE_SIGNAL\020\004\022\025\n\021REPETITIVE_SIGNA" +
-      "L\020\005\"R\n\020VisibilityFilter\022\026\n\022UNKNOWN_VISIB" +
-      "ILITY\020\000\022\022\n\016ALL_VISIBILITY\020\001\022\022\n\016USER_PERC" +
-      "EIVED\020\002\032\242\002\n\"AppQualityInsightsCrashOpenD" +
-      "etails\022J\n\ncrash_type\030\001 \001(\01626.android_stu" +
-      "dio.AppQualityInsightsUsageEvent.CrashTy" +
-      "pe\022o\n\006source\030\002 \001(\0162_.android_studio.AppQ" +
-      "ualityInsightsUsageEvent.AppQualityInsig" +
-      "htsCrashOpenDetails.CrashOpenSource\"?\n\017C" +
-      "rashOpenSource\022\022\n\016UNKNOWN_SOURCE\020\000\022\010\n\004LI" +
-      "ST\020\001\022\016\n\nINSPECTION\020\002\032\352\003\n#AppQualityInsig" +
-      "htsStacktraceDetails\022J\n\ncrash_type\030\001 \001(\016" +
-      "26.android_studio.AppQualityInsightsUsag" +
-      "eEvent.CrashType\022\022\n\nlocal_file\030\002 \001(\010\022K\n\n" +
-      "confidence\030\003 \001(\01627.android_studio.AppQua" +
-      "lityInsightsUsageEvent.Confidence\022K\n\nres" +
-      "olution\030\004 \001(\01627.android_studio.AppQualit" +
-      "yInsightsUsageEvent.Resolution\022v\n\016click_" +
-      "location\030\005 \001(\0162^.android_studio.AppQuali" +
-      "tyInsightsUsageEvent.AppQualityInsightsS" +
-      "tacktraceDetails.ClickLocation\"Q\n\rClickL" +
-      "ocation\022\024\n\020UNKNOWN_LOCATION\020\000\022\032\n\026TARGET_" +
-      "FILE_HYPER_LINK\020\001\022\016\n\nDIFF_INLAY\020\002\032\307\003\n$Ap" +
-      "pQualityInsightsConsoleLinkDetails\022J\n\ncr" +
-      "ash_type\030\001 \001(\01626.android_studio.AppQuali" +
-      "tyInsightsUsageEvent.CrashType\022s\n\006source" +
-      "\030\002 \001(\0162c.android_studio.AppQualityInsigh" +
-      "tsUsageEvent.AppQualityInsightsConsoleLi" +
-      "nkDetails.ConsoleOpenSource\022K\n\nconfidenc" +
-      "e\030\003 \001(\01627.android_studio.AppQualityInsig" +
-      "htsUsageEvent.Confidence\022K\n\nresolution\030\004" +
-      " \001(\01627.android_studio.AppQualityInsights" +
-      "UsageEvent.Resolution\"D\n\021ConsoleOpenSour" +
-      "ce\022\022\n\016UNKNOWN_SOURCE\020\000\022\013\n\007DETAILS\020\001\022\016\n\nI" +
-      "NSPECTION\020\002\032\267\003\n AppQualityInsightsMatche" +
-      "rDetails\022K\n\nconfidence\030\001 \001(\01627.android_s" +
-      "tudio.AppQualityInsightsUsageEvent.Confi" +
-      "dence\022K\n\nresolution\030\002 \001(\01627.android_stud" +
-      "io.AppQualityInsightsUsageEvent.Resoluti" +
-      "on\022k\n\006source\030\003 \001(\0162[.android_studio.AppQ" +
-      "ualityInsightsUsageEvent.AppQualityInsig" +
-      "htsMatcherDetails.MatcherSource\022J\n\ncrash" +
-      "_type\030\004 \001(\01626.android_studio.AppQualityI" +
-      "nsightsUsageEvent.CrashType\"@\n\rMatcherSo" +
-      "urce\022\022\n\016UNKNOWN_SOURCE\020\000\022\013\n\007DETAILS\020\001\022\016\n" +
-      "\nINSPECTION\020\002\032\200\002\n\036AppQualityInsightsErro" +
-      "rDetails\022g\n\006source\030\001 \001(\0162W.android_studi" +
+      "nsightsFetchDetails\022k\n\022crash_open_detail" +
+      "s\030\005 \001(\0132O.android_studio.AppQualityInsig" +
+      "htsUsageEvent.AppQualityInsightsCrashOpe" +
+      "nDetails\022l\n\022stacktrace_details\030\006 \001(\0132P.a" +
+      "ndroid_studio.AppQualityInsightsUsageEve" +
+      "nt.AppQualityInsightsStacktraceDetails\022o" +
+      "\n\024console_link_details\030\007 \001(\0132Q.android_s" +
+      "tudio.AppQualityInsightsUsageEvent.AppQu" +
+      "alityInsightsConsoleLinkDetails\022f\n\017match" +
+      "er_details\030\010 \001(\0132M.android_studio.AppQua" +
+      "lityInsightsUsageEvent.AppQualityInsight" +
+      "sMatcherDetails\022b\n\rerror_details\030\t \001(\0132K" +
+      ".android_studio.AppQualityInsightsUsageE",
+      "vent.AppQualityInsightsErrorDetails\022q\n\025i" +
+      "ssue_changed_details\030\n \001(\0132R.android_stu" +
+      "dio.AppQualityInsightsUsageEvent.AppQual" +
+      "ityInsightsIssueChangedDetails\022b\n\rnotes_" +
+      "details\030\013 \001(\0132K.android_studio.AppQualit" +
+      "yInsightsUsageEvent.AppQualityInsightsNo" +
+      "tesDetails\022\022\n\nis_offline\030\014 \001(\010\022u\n\027mode_t" +
+      "ransition_details\030\r \001(\0162T.android_studio" +
+      ".AppQualityInsightsUsageEvent.AppQuality" +
+      "InsightsModeTransitionDetails\022`\n\014product" +
+      "_type\030\016 \001(\0162J.android_studio.AppQualityI" +
+      "nsightsUsageEvent.AppQualityInsightsProd" +
+      "uctType\022X\n\021performance_stats\030\017 \001(\0132=.and" +
+      "roid_studio.AppQualityInsightsUsageEvent" +
+      ".PerformanceStats\032\350\001\n\"AppQualityInsights" +
+      "ZeroStateDetails\022o\n\013empty_state\030\001 \001(\0162Z." +
+      "android_studio.AppQualityInsightsUsageEv" +
+      "ent.AppQualityInsightsZeroStateDetails.E" +
+      "mptyState\"Q\n\nEmptyState\022\021\n\rUNKNOWN_STATE" +
+      "\020\000\022\014\n\010NO_LOGIN\020\001\022\023\n\013NO_FIREBASE\020\002\032\002\010\001\022\r\n" +
+      "\tNO_ACCESS\020\003\032\225\013\n\036AppQualityInsightsFetch" +
+      "Details\022k\n\013time_filter\030\001 \001(\0162V.android_s" +
+      "tudio.AppQualityInsightsUsageEvent.AppQu" +
+      "alityInsightsFetchDetails.TimeFilter\022\026\n\016" +
+      "version_filter\030\002 \001(\010\022s\n\017severity_filter\030" +
+      "\003 \001(\0162Z.android_studio.AppQualityInsight" +
+      "sUsageEvent.AppQualityInsightsFetchDetai" +
+      "ls.SeverityFilter\022\027\n\017default_project\030\004 \001" +
+      "(\010\022m\n\014fetch_source\030\005 \001(\0162W.android_studi" +
       "o.AppQualityInsightsUsageEvent.AppQualit" +
-      "yInsightsErrorDetails.ErrorSource\022\026\n\016api" +
-      "_error_code\030\002 \001(\005\"]\n\013ErrorSource\022\022\n\016UNKN" +
-      "OWN_SOURCE\020\000\022\017\n\013CONFIG_SCAN\020\001\022\007\n\003RPC\020\002\022\014" +
-      "\n\010MATCHERS\020\003\022\022\n\016AUTHENTICATION\020\004\032\333\001\n%App" +
-      "QualityInsightsIssueChangedDetails\022v\n\rst" +
-      "atus_change\030\001 \001(\0162_.android_studio.AppQu" +
-      "alityInsightsUsageEvent.AppQualityInsigh" +
-      "tsIssueChangedDetails.StatusChange\":\n\014St" +
-      "atusChange\022\022\n\016UNKNOWN_CHANGE\020\000\022\n\n\006OPENED" +
-      "\020\001\022\n\n\006CLOSED\020\002\032\303\001\n\036AppQualityInsightsNot" +
-      "esDetails\022i\n\nnote_event\030\001 \001(\0162U.android_" +
-      "studio.AppQualityInsightsUsageEvent.AppQ" +
-      "ualityInsightsNotesDetails.NoteEvent\"6\n\t" +
-      "NoteEvent\022\021\n\rUNKNOWN_EVENT\020\000\022\t\n\005ADDED\020\001\022" +
-      "\013\n\007REMOVED\020\002\032\274\002\n\020PerformanceStats\022\227\001\n$vc" +
-      "_based_line_number_mapping_latency\030\001 \001(\013" +
-      "2i.android_studio.AppQualityInsightsUsag" +
-      "eEvent.PerformanceStats.VersionControlBa" +
-      "sedLineNumberMappingLatency\032\215\001\n+VersionC" +
-      "ontrolBasedLineNumberMappingLatency\022\026\n\016m" +
-      "in_latency_ms\030\001 \001(\003\022\026\n\016p50_latency_ms\030\002 " +
-      "\001(\003\022\026\n\016p90_latency_ms\030\003 \001(\003\022\026\n\016max_laten" +
-      "cy_ms\030\004 \001(\003\"\237\002\n AppQualityInsightsUsageE" +
-      "ventType\022\021\n\rUNKNOWN_EVENT\020\000\022\016\n\nZERO_STAT" +
-      "E\020\001\022\023\n\017CRASHES_FETCHED\020\002\022\033\n\027CRASH_LIST_D" +
-      "ETAILS_VIEW\020\003\022\026\n\022STACKTRACE_CLICKED\020\004\022\033\n" +
-      "\027FB_CONSOLE_LINK_CLICKED\020\005\022\026\n\022MATCHERS_I" +
-      "NITIATED\020\006\022\t\n\005ERROR\020\007\022\030\n\024ISSUE_STATUS_CH" +
-      "ANGED\020\010\022\010\n\004NOTE\020\t\022\023\n\017MODE_TRANSITION\020\n\022\025" +
-      "\n\021PERFORMANCE_STATS\020\013\"7\n\tCrashType\022\020\n\014UN" +
-      "KNOWN_TYPE\020\000\022\t\n\005FATAL\020\001\022\r\n\tNON_FATAL\020\002\"C" +
-      "\n\nConfidence\022\026\n\022UNKNOWN_CONFIDENCE\020\000\022\007\n\003" +
-      "LOW\020\001\022\n\n\006MEDIUM\020\002\022\010\n\004HIGH\020\003\"Q\n\nResolutio" +
-      "n\022\026\n\022UNKNOWN_RESOLUTION\020\000\022\010\n\004LINE\020\001\022\n\n\006M" +
-      "ETHOD\020\002\022\t\n\005CLASS\020\003\022\n\n\006FAILED\020\004\"o\n\'AppQua" +
-      "lityInsightsModeTransitionDetails\022\026\n\022UNK" +
-      "NOWN_TRANSITION\020\000\022\025\n\021ONLINE_TO_OFFLINE\020\001" +
-      "\022\025\n\021OFFLINE_TO_ONLINE\020\002\"[\n\035AppQualityIns" +
-      "ightsProductType\022\030\n\024UNKNOWN_PRODUCT_TYPE" +
-      "\020\000\022\017\n\013CRASHLYTICS\020\001\022\017\n\013PLAY_VITALS\020\002\"\354\003\n" +
-      "\020FastPreviewEvent\0223\n\004type\030\001 \001(\0162%.androi" +
-      "d_studio.FastPreviewEvent.Type\022N\n\022compil" +
-      "ation_result\030\002 \001(\01322.android_studio.Fast" +
-      "PreviewEvent.CompilationResult\032\370\001\n\021Compi" +
-      "lationResult\022I\n\006status\030\001 \001(\01629.android_s" +
-      "tudio.FastPreviewEvent.CompilationResult" +
-      ".Status\022\026\n\016compiled_files\030\002 \001(\003\022\033\n\023compi" +
-      "le_duration_ms\030\003 \001(\003\022\033\n\023refresh_duration" +
-      "_ms\030\004 \001(\003\"F\n\006Status\022\013\n\007UNKNOWN\020\000\022\013\n\007SUCC" +
-      "ESS\020\001\022\026\n\022DAEMON_START_ERROR\020\002\022\n\n\006FAILED\020" +
-      "\003\"X\n\004Type\022\013\n\007UNKNOWN\020\000\022\020\n\014USER_ENABLED\020\001" +
-      "\022\021\n\rUSER_DISABLED\020\002\022\021\n\rAUTO_DISABLED\020\003\022\013" +
-      "\n\007COMPILE\020\004\"\305\022\n\026MemoryUsageReportEvent\022R" +
-      "\n\017component_stats\030\001 \003(\01329.android_studio" +
-      ".MemoryUsageReportEvent.ClusterMemoryUsa" +
-      "ge\022_\n\026shared_component_stats\030\002 \003(\0132?.and" +
-      "roid_studio.MemoryUsageReportEvent.Share" +
-      "dClusterMemoryUsage\022[\n\030component_categor" +
-      "y_stats\030\004 \003(\01329.android_studio.MemoryUsa" +
-      "geReportEvent.ClusterMemoryUsage\022V\n\010meta" +
-      "data\030\006 \001(\0132D.android_studio.MemoryUsageR" +
+      "yInsightsFetchDetails.FetchSource\022\023\n\013num" +
+      "_retries\030\006 \001(\005\022\r\n\005cache\030\007 \001(\010\022o\n\rsignal_" +
+      "filter\030\010 \001(\0162X.android_studio.AppQuality" +
+      "InsightsUsageEvent.AppQualityInsightsFet" +
+      "chDetails.SignalFilter\022\021\n\tos_filter\030\t \001(" +
+      "\010\022\025\n\rdevice_filter\030\n \001(\010\022w\n\021visibility_f" +
+      "ilter\030\013 \001(\0162\\.android_studio.AppQualityI" +
+      "nsightsUsageEvent.AppQualityInsightsFetc" +
+      "hDetails.VisibilityFilter\022\202\001\n\027vcs_integr" +
+      "ation_details\030\014 \001(\0132a.android_studio.App" +
+      "QualityInsightsUsageEvent.AppQualityInsi" +
+      "ghtsFetchDetails.VcsIntegrationDetails\0321" +
+      "\n\025VcsIntegrationDetails\022\030\n\020has_app_vcs_i" +
+      "nfo\030\001 \001(\010\"x\n\nTimeFilter\022\022\n\016UNKNOWN_FILTE" +
+      "R\020\000\022\017\n\013THIRTY_DAYS\020\001\022\016\n\nSIXTY_DAYS\020\002\022\017\n\013" +
+      "NINETY_DAYS\020\003\022\016\n\nSEVEN_DAYS\020\004\022\024\n\020TWENTYF" +
+      "OUR_HOURS\020\005\"a\n\013FetchSource\022\022\n\016UNKNOWN_SO" +
+      "URCE\020\000\022\016\n\nBACKGROUND\020\001\022\013\n\007REFRESH\020\002\022\n\n\006F" +
+      "ILTER\020\003\022\025\n\021PROJECT_SELECTION\020\004\"I\n\016Severi" +
+      "tyFilter\022\024\n\020UNKNOWN_SEVERITY\020\000\022\t\n\005FATAL\020" +
+      "\001\022\r\n\tNON_FATAL\020\002\022\007\n\003ALL\020\003\"\204\001\n\014SignalFilt" +
+      "er\022\022\n\016UNKNOWN_SIGNAL\020\000\022\016\n\nALL_SIGNAL\020\001\022\020" +
+      "\n\014EARLY_SIGNAL\020\002\022\020\n\014FRESH_SIGNAL\020\003\022\025\n\021RE" +
+      "GRESSIVE_SIGNAL\020\004\022\025\n\021REPETITIVE_SIGNAL\020\005" +
+      "\"R\n\020VisibilityFilter\022\026\n\022UNKNOWN_VISIBILI" +
+      "TY\020\000\022\022\n\016ALL_VISIBILITY\020\001\022\022\n\016USER_PERCEIV" +
+      "ED\020\002\032\242\002\n\"AppQualityInsightsCrashOpenDeta" +
+      "ils\022J\n\ncrash_type\030\001 \001(\01626.android_studio" +
+      ".AppQualityInsightsUsageEvent.CrashType\022" +
+      "o\n\006source\030\002 \001(\0162_.android_studio.AppQual" +
+      "ityInsightsUsageEvent.AppQualityInsights" +
+      "CrashOpenDetails.CrashOpenSource\"?\n\017Cras" +
+      "hOpenSource\022\022\n\016UNKNOWN_SOURCE\020\000\022\010\n\004LIST\020" +
+      "\001\022\016\n\nINSPECTION\020\002\032\352\003\n#AppQualityInsights" +
+      "StacktraceDetails\022J\n\ncrash_type\030\001 \001(\01626." +
+      "android_studio.AppQualityInsightsUsageEv" +
+      "ent.CrashType\022\022\n\nlocal_file\030\002 \001(\010\022K\n\ncon" +
+      "fidence\030\003 \001(\01627.android_studio.AppQualit" +
+      "yInsightsUsageEvent.Confidence\022K\n\nresolu" +
+      "tion\030\004 \001(\01627.android_studio.AppQualityIn" +
+      "sightsUsageEvent.Resolution\022v\n\016click_loc" +
+      "ation\030\005 \001(\0162^.android_studio.AppQualityI" +
+      "nsightsUsageEvent.AppQualityInsightsStac" +
+      "ktraceDetails.ClickLocation\"Q\n\rClickLoca" +
+      "tion\022\024\n\020UNKNOWN_LOCATION\020\000\022\032\n\026TARGET_FIL" +
+      "E_HYPER_LINK\020\001\022\016\n\nDIFF_INLAY\020\002\032\307\003\n$AppQu" +
+      "alityInsightsConsoleLinkDetails\022J\n\ncrash" +
+      "_type\030\001 \001(\01626.android_studio.AppQualityI" +
+      "nsightsUsageEvent.CrashType\022s\n\006source\030\002 " +
+      "\001(\0162c.android_studio.AppQualityInsightsU" +
+      "sageEvent.AppQualityInsightsConsoleLinkD" +
+      "etails.ConsoleOpenSource\022K\n\nconfidence\030\003" +
+      " \001(\01627.android_studio.AppQualityInsights" +
+      "UsageEvent.Confidence\022K\n\nresolution\030\004 \001(" +
+      "\01627.android_studio.AppQualityInsightsUsa" +
+      "geEvent.Resolution\"D\n\021ConsoleOpenSource\022" +
+      "\022\n\016UNKNOWN_SOURCE\020\000\022\013\n\007DETAILS\020\001\022\016\n\nINSP" +
+      "ECTION\020\002\032\267\003\n AppQualityInsightsMatcherDe" +
+      "tails\022K\n\nconfidence\030\001 \001(\01627.android_stud" +
+      "io.AppQualityInsightsUsageEvent.Confiden" +
+      "ce\022K\n\nresolution\030\002 \001(\01627.android_studio." +
+      "AppQualityInsightsUsageEvent.Resolution\022" +
+      "k\n\006source\030\003 \001(\0162[.android_studio.AppQual" +
+      "ityInsightsUsageEvent.AppQualityInsights" +
+      "MatcherDetails.MatcherSource\022J\n\ncrash_ty" +
+      "pe\030\004 \001(\01626.android_studio.AppQualityInsi" +
+      "ghtsUsageEvent.CrashType\"@\n\rMatcherSourc" +
+      "e\022\022\n\016UNKNOWN_SOURCE\020\000\022\013\n\007DETAILS\020\001\022\016\n\nIN" +
+      "SPECTION\020\002\032\200\002\n\036AppQualityInsightsErrorDe" +
+      "tails\022g\n\006source\030\001 \001(\0162W.android_studio.A" +
+      "ppQualityInsightsUsageEvent.AppQualityIn" +
+      "sightsErrorDetails.ErrorSource\022\026\n\016api_er" +
+      "ror_code\030\002 \001(\005\"]\n\013ErrorSource\022\022\n\016UNKNOWN" +
+      "_SOURCE\020\000\022\017\n\013CONFIG_SCAN\020\001\022\007\n\003RPC\020\002\022\014\n\010M" +
+      "ATCHERS\020\003\022\022\n\016AUTHENTICATION\020\004\032\333\001\n%AppQua" +
+      "lityInsightsIssueChangedDetails\022v\n\rstatu" +
+      "s_change\030\001 \001(\0162_.android_studio.AppQuali" +
+      "tyInsightsUsageEvent.AppQualityInsightsI" +
+      "ssueChangedDetails.StatusChange\":\n\014Statu" +
+      "sChange\022\022\n\016UNKNOWN_CHANGE\020\000\022\n\n\006OPENED\020\001\022" +
+      "\n\n\006CLOSED\020\002\032\303\001\n\036AppQualityInsightsNotesD" +
+      "etails\022i\n\nnote_event\030\001 \001(\0162U.android_stu" +
+      "dio.AppQualityInsightsUsageEvent.AppQual" +
+      "ityInsightsNotesDetails.NoteEvent\"6\n\tNot" +
+      "eEvent\022\021\n\rUNKNOWN_EVENT\020\000\022\t\n\005ADDED\020\001\022\013\n\007" +
+      "REMOVED\020\002\032\274\002\n\020PerformanceStats\022\227\001\n$vc_ba" +
+      "sed_line_number_mapping_latency\030\001 \001(\0132i." +
+      "android_studio.AppQualityInsightsUsageEv" +
+      "ent.PerformanceStats.VersionControlBased" +
+      "LineNumberMappingLatency\032\215\001\n+VersionCont" +
+      "rolBasedLineNumberMappingLatency\022\026\n\016min_" +
+      "latency_ms\030\001 \001(\003\022\026\n\016p50_latency_ms\030\002 \001(\003" +
+      "\022\026\n\016p90_latency_ms\030\003 \001(\003\022\026\n\016max_latency_" +
+      "ms\030\004 \001(\003\"\237\002\n AppQualityInsightsUsageEven" +
+      "tType\022\021\n\rUNKNOWN_EVENT\020\000\022\016\n\nZERO_STATE\020\001" +
+      "\022\023\n\017CRASHES_FETCHED\020\002\022\033\n\027CRASH_LIST_DETA" +
+      "ILS_VIEW\020\003\022\026\n\022STACKTRACE_CLICKED\020\004\022\033\n\027FB" +
+      "_CONSOLE_LINK_CLICKED\020\005\022\026\n\022MATCHERS_INIT" +
+      "IATED\020\006\022\t\n\005ERROR\020\007\022\030\n\024ISSUE_STATUS_CHANG" +
+      "ED\020\010\022\010\n\004NOTE\020\t\022\023\n\017MODE_TRANSITION\020\n\022\025\n\021P" +
+      "ERFORMANCE_STATS\020\013\"7\n\tCrashType\022\020\n\014UNKNO" +
+      "WN_TYPE\020\000\022\t\n\005FATAL\020\001\022\r\n\tNON_FATAL\020\002\"C\n\nC" +
+      "onfidence\022\026\n\022UNKNOWN_CONFIDENCE\020\000\022\007\n\003LOW" +
+      "\020\001\022\n\n\006MEDIUM\020\002\022\010\n\004HIGH\020\003\"Q\n\nResolution\022\026" +
+      "\n\022UNKNOWN_RESOLUTION\020\000\022\010\n\004LINE\020\001\022\n\n\006METH" +
+      "OD\020\002\022\t\n\005CLASS\020\003\022\n\n\006FAILED\020\004\"o\n\'AppQualit" +
+      "yInsightsModeTransitionDetails\022\026\n\022UNKNOW" +
+      "N_TRANSITION\020\000\022\025\n\021ONLINE_TO_OFFLINE\020\001\022\025\n" +
+      "\021OFFLINE_TO_ONLINE\020\002\"[\n\035AppQualityInsigh" +
+      "tsProductType\022\030\n\024UNKNOWN_PRODUCT_TYPE\020\000\022" +
+      "\017\n\013CRASHLYTICS\020\001\022\017\n\013PLAY_VITALS\020\002\"\354\003\n\020Fa" +
+      "stPreviewEvent\0223\n\004type\030\001 \001(\0162%.android_s" +
+      "tudio.FastPreviewEvent.Type\022N\n\022compilati" +
+      "on_result\030\002 \001(\01322.android_studio.FastPre" +
+      "viewEvent.CompilationResult\032\370\001\n\021Compilat" +
+      "ionResult\022I\n\006status\030\001 \001(\01629.android_stud" +
+      "io.FastPreviewEvent.CompilationResult.St" +
+      "atus\022\026\n\016compiled_files\030\002 \001(\003\022\033\n\023compile_" +
+      "duration_ms\030\003 \001(\003\022\033\n\023refresh_duration_ms" +
+      "\030\004 \001(\003\"F\n\006Status\022\013\n\007UNKNOWN\020\000\022\013\n\007SUCCESS" +
+      "\020\001\022\026\n\022DAEMON_START_ERROR\020\002\022\n\n\006FAILED\020\003\"X" +
+      "\n\004Type\022\013\n\007UNKNOWN\020\000\022\020\n\014USER_ENABLED\020\001\022\021\n" +
+      "\rUSER_DISABLED\020\002\022\021\n\rAUTO_DISABLED\020\003\022\013\n\007C" +
+      "OMPILE\020\004\"\305\022\n\026MemoryUsageReportEvent\022R\n\017c" +
+      "omponent_stats\030\001 \003(\01329.android_studio.Me" +
+      "moryUsageReportEvent.ClusterMemoryUsage\022" +
+      "_\n\026shared_component_stats\030\002 \003(\0132?.androi" +
+      "d_studio.MemoryUsageReportEvent.SharedCl" +
+      "usterMemoryUsage\022[\n\030component_category_s" +
+      "tats\030\004 \003(\01329.android_studio.MemoryUsageR" +
+      "eportEvent.ClusterMemoryUsage\022V\n\010metadat" +
+      "a\030\006 \001(\0132D.android_studio.MemoryUsageRepo" +
+      "rtEvent.MemoryUsageCollectionMetadata\032D\n" +
+      "\021ObjectsStatistics\022\025\n\robjects_count\030\001 \001(" +
+      "\r\022\030\n\020total_size_bytes\030\002 \001(\004\032\326\003\n\027MemoryTr" +
+      "afficStatistics\022M\n\013total_stats\030\001 \001(\01328.a" +
+      "ndroid_studio.MemoryUsageReportEvent.Obj" +
+      "ectsStatistics\022Z\n\024new_generation_stats\030\002" +
+      " \001(\01328.android_studio.MemoryUsageReportE" +
+      "vent.ObjectsStatisticsB\002\030\001\022[\n\025old_genera" +
+      "tions_stats\030\003 \003(\01328.android_studio.Memor" +
+      "yUsageReportEvent.ObjectsStatisticsB\002\030\001\022" +
+      "X\n\026platform_objects_stats\030\004 \001(\01328.androi" +
+      "d_studio.MemoryUsageReportEvent.ObjectsS" +
+      "tatistics\022Y\n\027platform_retained_stats\030\005 \001" +
+      "(\01328.android_studio.MemoryUsageReportEve" +
+      "nt.ObjectsStatistics\032\327\001\n\030ClusterObjectsS" +
+      "tatistics\022[\n\023owned_cluster_stats\030\001 \001(\0132>" +
+      ".android_studio.MemoryUsageReportEvent.M" +
+      "emoryTrafficStatistics\022^\n\026retained_clust" +
+      "er_stats\030\002 \001(\0132>.android_studio.MemoryUs" +
+      "ageReportEvent.MemoryTrafficStatistics\032\266" +
+      "\002\n\022ClusterMemoryUsage\022\r\n\005label\030\001 \001(\t\022N\n\005" +
+      "stats\030\002 \001(\0132?.android_studio.MemoryUsage" +
+      "ReportEvent.ClusterObjectsStatistics\022\177\n\035" +
+      "instance_count_per_class_name\030\003 \003(\0132X.an" +
+      "droid_studio.MemoryUsageReportEvent.Clus" +
+      "terMemoryUsage.InstanceCountPerClassName" +
+      "Entry\032@\n\036InstanceCountPerClassNameEntry\022" +
+      "\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\005:\0028\001\032z\n\030Share" +
+      "dClusterMemoryUsage\022\017\n\003ids\030\001 \003(\005B\002\020\001\022M\n\005" +
+      "stats\030\002 \001(\0132>.android_studio.MemoryUsage" +
+      "ReportEvent.MemoryTrafficStatistics\032\222\006\n\035" +
+      "MemoryUsageCollectionMetadata\022d\n\013status_" +
+      "code\030\001 \001(\0162O.android_studio.MemoryUsageR" +
       "eportEvent.MemoryUsageCollectionMetadata" +
-      "\032D\n\021ObjectsStatistics\022\025\n\robjects_count\030\001" +
-      " \001(\r\022\030\n\020total_size_bytes\030\002 \001(\004\032\326\003\n\027Memor" +
-      "yTrafficStatistics\022M\n\013total_stats\030\001 \001(\0132" +
-      "8.android_studio.MemoryUsageReportEvent." +
-      "ObjectsStatistics\022Z\n\024new_generation_stat" +
-      "s\030\002 \001(\01328.android_studio.MemoryUsageRepo" +
-      "rtEvent.ObjectsStatisticsB\002\030\001\022[\n\025old_gen" +
-      "erations_stats\030\003 \003(\01328.android_studio.Me" +
-      "moryUsageReportEvent.ObjectsStatisticsB\002" +
-      "\030\001\022X\n\026platform_objects_stats\030\004 \001(\01328.and" +
-      "roid_studio.MemoryUsageReportEvent.Objec" +
-      "tsStatistics\022Y\n\027platform_retained_stats\030" +
-      "\005 \001(\01328.android_studio.MemoryUsageReport" +
-      "Event.ObjectsStatistics\032\327\001\n\030ClusterObjec" +
-      "tsStatistics\022[\n\023owned_cluster_stats\030\001 \001(" +
-      "\0132>.android_studio.MemoryUsageReportEven" +
-      "t.MemoryTrafficStatistics\022^\n\026retained_cl" +
-      "uster_stats\030\002 \001(\0132>.android_studio.Memor" +
-      "yUsageReportEvent.MemoryTrafficStatistic" +
-      "s\032\266\002\n\022ClusterMemoryUsage\022\r\n\005label\030\001 \001(\t\022" +
-      "N\n\005stats\030\002 \001(\0132?.android_studio.MemoryUs" +
-      "ageReportEvent.ClusterObjectsStatistics\022" +
-      "\177\n\035instance_count_per_class_name\030\003 \003(\0132X" +
-      ".android_studio.MemoryUsageReportEvent.C" +
-      "lusterMemoryUsage.InstanceCountPerClassN" +
-      "ameEntry\032@\n\036InstanceCountPerClassNameEnt" +
-      "ry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\005:\0028\001\032z\n\030Sh" +
-      "aredClusterMemoryUsage\022\017\n\003ids\030\001 \003(\005B\002\020\001\022" +
-      "M\n\005stats\030\002 \001(\0132>.android_studio.MemoryUs" +
-      "ageReportEvent.MemoryTrafficStatistics\032\222" +
-      "\006\n\035MemoryUsageCollectionMetadata\022d\n\013stat" +
-      "us_code\030\001 \001(\0162O.android_studio.MemoryUsa" +
-      "geReportEvent.MemoryUsageCollectionMetad" +
-      "ata.StatusCode\022`\n\030total_heap_objects_sta" +
-      "ts\030\002 \001(\0132>.android_studio.MemoryUsageRep" +
-      "ortEvent.MemoryTrafficStatistics\022\036\n\026fiel" +
-      "d_cache_count_peak\030\003 \001(\r\022 \n\030object_queue" +
-      "_length_peak\030\004 \001(\r\022,\n$garbage_collected_" +
-      "before_2pass_count\030\005 \001(\r\022\037\n\027collection_t" +
-      "ime_seconds\030\006 \001(\001\022\035\n\025is_in_power_save_mo" +
-      "de\030\007 \001(\010\022)\n!unsuccessful_field_accesses_" +
-      "count\030\010 \001(\r\022*\n\"collection_start_timestam" +
-      "p_seconds\030\t \001(\001\022\034\n\024collection_iteration\030" +
-      "\n \001(\005\022\035\n\025is_in_essentials_mode\030\013 \001(\010\"\344\001\n" +
-      "\nStatusCode\022\014\n\010NO_ERROR\020\000\022\023\n\017HEAP_IS_TOO" +
-      "_BIG\020\001\022\024\n\020CANT_TAG_OBJECTS\020\002\022\032\n\026OBJECTS_" +
-      "MAP_IS_TOO_BIG\020\003\022!\n\035CLASS_FIELDS_CACHE_I" +
-      "S_TOO_BIG\020\004\022\030\n\024WRONG_ROOT_OBJECT_ID\020\005\022\016\n" +
-      "\nLOW_MEMORY\020\006\022\025\n\021AGENT_LOAD_FAILED\020\007\022\035\n\031" +
-      "POWER_SAVING_MODE_ENABLED\020\010\"\275\001\n\023Manifest" +
-      "MergerStats\0226\n\023success_run_time_ms\030\001 \001(\013" +
-      "2\031.android_studio.Histogram\0227\n\024canceled_" +
-      "run_time_ms\030\002 \001(\0132\031.android_studio.Histo" +
-      "gram\0225\n\022failed_run_time_ms\030\003 \001(\0132\031.andro" +
-      "id_studio.Histogram\"^\n\030ThreadingAgentUsa" +
-      "geEvent\022\036\n\026verify_ui_thread_count\030\001 \001(\003\022" +
-      "\"\n\032verify_worker_thread_count\030\002 \001(\003\"\250\002\n\037" +
-      "ProjectViewSelectionChangeEvent\022^\n\022view_" +
-      "before_change\030\001 \001(\0162B.android_studio.Pro" +
-      "jectViewSelectionChangeEvent.ProjectView" +
-      "Content\022]\n\021view_after_change\030\002 \001(\0162B.and" +
-      "roid_studio.ProjectViewSelectionChangeEv" +
-      "ent.ProjectViewContent\"F\n\022ProjectViewCon" +
-      "tent\022\013\n\007UNKNOWN\020\000\022\013\n\007ANDROID\020\001\022\013\n\007PROJEC" +
-      "T\020\002\022\t\n\005OTHER\020\003\"\316\005\n\017HeapReportEvent\0226\n\006st" +
-      "atus\030\001 \001(\0162&.android_studio.HeapReportEv" +
-      "ent.Status\0226\n\006reason\030\002 \001(\0162&.android_stu" +
-      "dio.HeapReportEvent.Reason\022\024\n\014freed_memo" +
-      "ry\030\003 \001(\003\"\251\003\n\006Status\022\013\n\007UNKNOWN\020\000\022\024\n\020LOW_" +
-      "MEMORY_EVENT\020\001\022\033\n\027INSUFFICIENT_DISK_SPAC" +
-      "E\020\002\022\022\n\016HEAP_TOO_SMALL\020\003\022\020\n\014RATE_LIMITED\020" +
-      "\004\022\026\n\022EXCESS_FREE_MEMORY\020\005\022\r\n\tFORCED_GC\020\006" +
-      "\022\037\n\033EXCESS_FREE_MEMORY_AFTER_GC\020\007\022\032\n\026REP" +
-      "ORT_ALREADY_PENDING\020\010\022\033\n\027CAPTURE_SNAPSHO" +
-      "T_FAILED\020\t\022\024\n\020ANALYSIS_STARTED\020\n\022\031\n\025ERRO" +
-      "R_DURING_ANALYSIS\020\013\022\025\n\021ANALYSIS_FINISHED" +
-      "\020\014\022\027\n\023REVIEW_DIALOG_SHOWN\020\r\022\023\n\017REVIEW_AC" +
-      "CEPTED\020\016\022\023\n\017REVIEW_DECLINED\020\017\022\023\n\017REPORT_" +
-      "UPLOADED\020\020\022\030\n\024REPORT_UPLOAD_FAILED\020\021\"\210\001\n" +
-      "\006Reason\022\010\n\004NONE\020\000\022\020\n\014USER_INVOKED\020\001\022\031\n\025I" +
-      "NTERNAL_USER_INVOKED\020\002\022$\n FREQUENT_LOW_M" +
-      "EMORY_NOTIFICATION\020\003\022\016\n\nLOW_MEMORY\020\004\022\021\n\r" +
-      "OUT_OF_MEMORY\020\005\"\257\001\n\034CreateDiagnosticRepo" +
-      "rtAction\022L\n\013action_type\030\001 \001(\01627.android_" +
-      "studio.CreateDiagnosticReportAction.Acti" +
-      "onType\"A\n\nActionType\022\027\n\023UNKNOWN_ACTION_T" +
-      "YPE\020\000\022\r\n\tCANCELLED\020\001\022\013\n\007CREATED\020\002\"\356\021\n\026Di" +
-      "rectAccessUsageEvent\022O\n\004type\030\001 \001(\0162A.and" +
-      "roid_studio.DirectAccessUsageEvent.Direc" +
-      "tAccessUsageEventType\022\031\n\021device_session_" +
-      "id\030\002 \001(\t\022[\n\026reserve_device_details\030\003 \001(\013" +
-      "2;.android_studio.DirectAccessUsageEvent" +
-      ".ReserveDeviceDetails\022[\n\026connect_device_" +
-      "details\030\004 \001(\0132;.android_studio.DirectAcc" +
-      "essUsageEvent.ConnectDeviceDetails\022[\n\026st" +
-      "ream_started_details\030\005 \001(\0132;.android_stu" +
-      "dio.DirectAccessUsageEvent.StreamStarted" +
-      "Details\022c\n\032extend_reservation_details\030\006 " +
-      "\001(\0132?.android_studio.DirectAccessUsageEv" +
-      "ent.ExtendReservationDetails\022]\n\027end_rese" +
-      "rvation_details\030\007 \001(\0132<.android_studio.D" +
-      "irectAccessUsageEvent.EndReservationDeta" +
-      "ils\022L\n\016failure_reason\030\010 \001(\01624.android_st" +
-      "udio.DirectAccessUsageEvent.FailureReaso" +
-      "n\022a\n\031disconnect_device_details\030\t \001(\0132>.a" +
-      "ndroid_studio.DirectAccessUsageEvent.Dis" +
-      "connectDeviceDetails\032@\n\024ReserveDeviceDet" +
-      "ails\022\017\n\007success\030\001 \001(\010\022\027\n\017reserve_time_ms" +
-      "\030\002 \001(\r\032S\n\024ConnectDeviceDetails\022\017\n\007succes" +
-      "s\030\001 \001(\010\022\021\n\treconnect\030\002 \001(\010\022\027\n\017connect_ti" +
-      "me_ms\030\003 \001(\r\032;\n\024StreamStartedDetails\022\017\n\007s" +
-      "uccess\030\001 \001(\010\022\022\n\nlatency_ms\030\002 \001(\r\032\216\002\n\030Ext" +
-      "endReservationDetails\022\017\n\007success\030\001 \001(\010\022~" +
-      "\n\033extend_reservation_duration\030\002 \001(\0162Y.an" +
-      "droid_studio.DirectAccessUsageEvent.Exte" +
-      "ndReservationDetails.ExtendReservationDu" +
-      "ration\"a\n\031ExtendReservationDuration\022\010\n\004N" +
-      "ONE\020\000\022\022\n\016THIRTY_MINUTES\020\001\022\021\n\rSIXTY_MINUT" +
-      "ES\020\002\022\023\n\017FIFTEEN_MINUTES\020\003\032E\n\027DisconnectD" +
-      "eviceDetails\022\017\n\007success\030\001 \001(\010\022\031\n\021user_di" +
-      "sconnected\030\002 \001(\010\032[\n\021ConnectionMetrics\022\026\n" +
-      "\016max_latency_ms\030\001 \001(\r\022\026\n\016p50_latency_ms\030" +
-      "\002 \001(\r\022\026\n\016p90_latency_ms\030\003 \001(\r\032\242\003\n\025EndRes" +
-      "ervationDetails\022\017\n\007success\030\001 \001(\010\022\026\n\nuser" +
-      "_ended\030\002 \001(\010B\002\030\001\022\"\n\032total_reservation_ti" +
-      "me_sec\030\003 \001(\r\022)\n\035average_connection_laten" +
-      "cy_ms\030\004 \001(\rB\002\030\001\022m\n\024end_reservation_type\030" +
-      "\005 \001(\0162O.android_studio.DirectAccessUsage" +
-      "Event.EndReservationDetails.EndReservati" +
-      "onType\022T\n\022connection_metrics\030\006 \001(\01328.and" +
-      "roid_studio.DirectAccessUsageEvent.Conne" +
-      "ctionMetrics\"L\n\022EndReservationType\022\013\n\007UN" +
-      "KNOWN\020\000\022\t\n\005ERROR\020\001\022\n\n\006EXPIRE\020\002\022\022\n\016FORCE_" +
-      "CHECK_IN\020\003\"\257\001\n\032DirectAccessUsageEventTyp" +
-      "e\022\021\n\rUNKNOWN_EVENT\020\000\022\022\n\016RESERVE_DEVICE\020\001" +
-      "\022\022\n\016CONNECT_DEVICE\020\002\022\022\n\016STREAM_STARTED\020\003" +
-      "\022\026\n\022EXTEND_RESERVATION\020\004\022\023\n\017END_RESERVAT" +
-      "ION\020\005\022\025\n\021DISCONNECT_DEVICE\020\006\"\373\001\n\rFailure" +
-      "Reason\022\023\n\017UNKNOWN_FAILURE\020\000\022\023\n\017USER_LOGG" +
-      "ED_OUT\020\001\022\023\n\017SCOPE_CANCELLED\020\002\022\023\n\017PROJECT" +
-      "_CLOSING\020\003\022\025\n\021CONNECTION_FAILED\020\013\022\024\n\020ADB" +
-      "_DISCONNECTED\020\014\022\026\n\022LATENCY_DISCONNECT\020\r\022" +
-      "\021\n\rSESSION_ENDED\020\016\022\037\n\033DISCONNECT_BEFORE_" +
-      "CONNECTED\020\017\022\035\n\031FAILED_TO_ALLOCATE_DEVICE" +
-      "\020\025\"\275\005\n\022SafeModeStatsEvent\0221\n\002os\030\001 \001(\0162%." +
-      "android_studio.SafeModeStatsEvent.OS\022B\n\013" +
-      "entry_point\030\002 \001(\0162-.android_studio.SafeM" +
-      "odeStatsEvent.EntryPoint\022;\n\007trigger\030\003 \001(" +
-      "\0162*.android_studio.SafeModeStatsEvent.Tr" +
-      "igger\022I\n\017start_up_result\030\004 \001(\01620.android" +
-      "_studio.SafeModeStatsEvent.StartUpResult" +
-      "\022\026\n\016studio_version\030\005 \001(\t\022\024\n\014jdk_modified" +
-      "\030\006 \001(\t\022\027\n\017kotlin_modified\030\007 \001(\t\022\030\n\020disab" +
-      "led_plugins\030\010 \003(\t\022\032\n\022vmoptions_modified\030" +
-      "\t \003(\t\"5\n\002OS\022\016\n\nUNKNOWN_OS\020\000\022\013\n\007WINDOWS\020\001" +
-      "\022\007\n\003MAC\020\002\022\t\n\005LINUX\020\003\"W\n\nEntryPoint\022\027\n\023UN" +
-      "KNOWN_ENTRY_POINT\020\000\022\n\n\006SCRIPT\020\001\022\007\n\003IDE\020\002" +
-      "\022\020\n\014CONTEXT_MENU\020\003\022\t\n\005POPUP\020\004\"2\n\007Trigger" +
-      "\022\023\n\017UNKNOWN_TRIGGER\020\000\022\022\n\016STARTUP_FAILED\020" +
-      "\001\"g\n\rStartUpResult\022\032\n\026UNKNOWN_STARTUP_RE" +
-      "SULT\020\000\022\025\n\021SAFE_MODE_SUCCESS\020\001\022#\n\037STARTUP" +
-      "_SUCCESS_AFTER_SAFE_MODE\020\002\"\352\007\n\013TSdkUAEve" +
-      "nt\022?\n\014state_update\030\001 \001(\0132\'.android_studi" +
-      "o.TSdkUAEvent.StateUpdateH\000\022;\n\nfilter_ru" +
-      "n\030\002 \001(\0132%.android_studio.TSdkUAEvent.Fil" +
-      "terRunH\000\022=\n\013user_motion\030\003 \001(\0132&.android_" +
-      "studio.TSdkUAEvent.UserMotionH\000\032\301\001\n\013Stat" +
-      "eUpdate\022\024\n\014timestamp_ms\030\001 \001(\004\022\027\n\017mapping" +
-      "_version\030\002 \001(\r\022\024\n\014active_steps\030\003 \001(\014\022:\n\004" +
-      "type\030\004 \001(\0162,.android_studio.TSdkUAEvent." +
-      "StateUpdate.Type\"1\n\004Type\022\024\n\020UNSPECIFIED_" +
-      "TYPE\020\000\022\010\n\004INIT\020\001\022\t\n\005DELTA\020\002\032\347\002\n\tFilterRu" +
-      "n\022\021\n\tfilter_id\030\001 \001(\r\022\026\n\016filter_version\030\002" +
-      " \001(\r\022\022\n\nelapsed_ms\030\003 \001(\r\022\017\n\005count\030\004 \001(\rH" +
-      "\000\022@\n\007problem\030\005 \001(\0162-.android_studio.TSdk" +
-      "UAEvent.FilterRun.ProblemH\000\022<\n\006origin\030\006 " +
-      "\001(\0162,.android_studio.TSdkUAEvent.FilterR" +
-      "un.Origin\":\n\007Problem\022\027\n\023UNSPECIFIED_PROB" +
-      "LEM\020\000\022\013\n\007TIMEOUT\020\001\022\t\n\005ERROR\020\002\"D\n\006Origin\022" +
-      "\026\n\022UNSPECIFIED_ORIGIN\020\000\022\020\n\014RUN_ON_START\020" +
-      "\001\022\020\n\014RERUN_BUTTON\020\002B\010\n\006result\032\344\001\n\nUserMo" +
-      "tion\022?\n\006opened\030\001 \001(\0132-.android_studio.TS" +
-      "dkUAEvent.UserMotion.OpenedH\000\022?\n\006closed\030" +
-      "\002 \001(\0132-.android_studio.TSdkUAEvent.UserM" +
-      "otion.ClosedH\000\032\032\n\006Opened\022\020\n\010block_id\030\001 \001" +
-      "(\t\032.\n\006Closed\022\020\n\010block_id\030\001 \001(\t\022\022\n\nelapse" +
-      "d_ms\030\002 \001(\004B\010\n\006motionB\t\n\007content\"(\n\022Intel" +
-      "liJNewUIState\022\022\n\nis_enabled\030\001 \001(\010\"\361\004\n\027Ko" +
-      "tlinGradlePerformance\022A\n\007use_fir\030\001 \001(\01620" +
-      ".android_studio.KotlinGradlePerformance." +
-      "FirUsage\022\032\n\022kotlin_api_version\030\002 \001(\t\022\037\n\027" +
-      "kotlin_compiler_version\030\003 \001(\t\022\037\n\027kotlin_" +
-      "language_version\030\004 \001(\t\022\035\n\025kotlin_stdlib_" +
-      "version\030\005 \001(\t\022\026\n\016plugin_version\030\006 \001(\t\022(\n" +
-      " enabled_compiler_plugin_all_open\030\007 \001(\010\022" +
-      "(\n enabled_compiler_plugin_atomicfu\030\010 \001(" +
-      "\010\022+\n#enabled_compiler_plugin_jpa_support" +
-      "\030\t \001(\010\022&\n\036enabled_compiler_plugin_lombok" +
-      "\030\n \001(\010\022&\n\036enabled_compiler_plugin_no_arg" +
-      "\030\013 \001(\010\022)\n!enabled_compiler_plugin_parcel" +
-      "ize\030\014 \001(\010\0221\n)enabled_compiler_plugin_sam" +
-      "_with_receiver\030\r \001(\010\022\020\n\010kts_used\030\016 \001(\010\"=" +
-      "\n\010FirUsage\022\017\n\013UNSPECIFIED\020\000\022\010\n\004NONE\020\001\022\013\n" +
-      "\007PARTIAL\020\002\022\t\n\005TOTAL\020\003\"\324\003\n\035BuildOutputDow" +
-      "nloadsInfoEvent\022@\n\004view\030\001 \001(\01622.android_" +
-      "studio.BuildOutputDownloadsInfoEvent.Vie" +
-      "w\022N\n\013interaction\030\002 \001(\01629.android_studio." +
-      "BuildOutputDownloadsInfoEvent.Interactio" +
-      "n\022\026\n\016build_finished\030\003 \001(\010\022\034\n\024ms_since_bu" +
-      "ild_start\030\004 \001(\r\"7\n\004View\022\020\n\014UNKNOWN_VIEW\020" +
-      "\000\022\r\n\tSYNC_VIEW\020\001\022\016\n\nBUILD_VIEW\020\002\"\261\001\n\013Int" +
-      "eraction\022\027\n\023UNKNOWN_INTERACTION\020\000\022\032\n\026OPE" +
-      "N_DOWNLOADS_INFO_UI\020\001\022\031\n\025CLICK_LEARN_MOR" +
-      "E_LINK\020\002\022\031\n\025SELECT_REPOSITORY_ROW\020\003\022\032\n\026N" +
-      "OTIFICATION_TRIGGERED\020\004\022\033\n\027NOTIFICATION_" +
-      "LINK_CLICK\020\005\"K\n\023SmlResponseMetadata\022\025\n\rr" +
-      "pc_global_id\030\001 \001(\003\022\035\n\025server_experiment_" +
-      "ids\030\002 \003(\005\"\335\r\n\022SmlCompletionEvent\022K\n\007requ" +
-      "est\030\001 \001(\01324.android_studio.SmlCompletion" +
-      "Event.CompletionRequestB\002\030\001H\000\022M\n\010respons" +
-      "e\030\002 \001(\01325.android_studio.SmlCompletionEv" +
-      "ent.CompletionResponseB\002\030\001H\000\022G\n\005shown\030\003 " +
-      "\001(\01322.android_studio.SmlCompletionEvent." +
-      "CompletionShownB\002\030\001H\000\022M\n\010accepted\030\004 \001(\0132" +
-      "5.android_studio.SmlCompletionEvent.Comp" +
-      "letionAcceptedB\002\030\001H\000\022P\n\taggregate\030\005 \001(\0132" +
-      ";.android_studio.SmlCompletionEvent.Comp" +
-      "letionAggregateEventH\000\032\224\002\n\021CompletionReq" +
-      "uest\022Q\n\007trigger\030\001 \001(\0162<.android_studio.S" +
-      "mlCompletionEvent.CompletionRequest.Trig" +
-      "gerB\002\030\001\0225\n\tfile_type\030\002 \001(\0162\036.android_stu" +
-      "dio.EditorFileTypeB\002\030\001\022\031\n\rprefix_length\030" +
-      "\003 \001(\rB\002\030\001\022\031\n\rsuffix_length\030\004 \001(\rB\002\030\001\";\n\007" +
-      "Trigger\022\017\n\007UNKNOWN\020\000\032\002\010\001\022\014\n\004USER\020\001\032\002\010\001\022\021" +
-      "\n\tAUTOMATIC\020\002\032\002\010\001:\002\030\001\032.\n\017CompletionError" +
-      "\022\027\n\013status_code\030\001 \001(\005B\002\030\001:\002\030\001\032\206\001\n\020Comple" +
-      "tionResult\0229\n\010metadata\030\001 \001(\0132#.android_s" +
-      "tudio.SmlResponseMetadataB\002\030\001\022\026\n\nlatency" +
-      "_ms\030\002 \001(\004B\002\030\001\022\033\n\017num_completions\030\003 \001(\005B\002",
-      "\030\001:\002\030\001\032\260\001\n\022CompletionResponse\022G\n\006result\030" +
-      "\001 \001(\01323.android_studio.SmlCompletionEven" +
-      "t.CompletionResultB\002\030\001\022M\n\rbackend_error\030" +
-      "\002 \001(\01322.android_studio.SmlCompletionEven" +
-      "t.CompletionErrorB\002\030\001:\002\030\001\032t\n\017CompletionS" +
-      "hown\0229\n\010metadata\030\001 \001(\0132#.android_studio." +
-      "SmlResponseMetadataB\002\030\001\022\"\n\026shown_suggest" +
-      "ion_index\030\002 \001(\005B\002\030\001:\002\030\001\032\242\001\n\022CompletionAc" +
-      "cepted\0229\n\010metadata\030\001 \001(\0132#.android_studi" +
-      "o.SmlResponseMetadataB\002\030\001\022%\n\031accepted_su" +
-      "ggestion_index\030\002 \001(\005B\002\030\001\022&\n\032accepted_sug" +
-      "gestion_length\030\003 \001(\005B\002\030\001:\002\030\001\032\224\003\n\030Complet" +
-      "ionAggregateEvent\022\020\n\010model_id\030\001 \001(\t\022T\n\007t" +
-      "rigger\030\002 \001(\0162C.android_studio.SmlComplet" +
-      "ionEvent.CompletionAggregateEvent.Trigge" +
-      "r\0221\n\tfile_type\030\003 \001(\0162\036.android_studio.Ed" +
-      "itorFileType\022\031\n\021completions_shown\030\004 \001(\r\022" +
-      "\034\n\024completions_accepted\030\005 \001(\r\022/\n\014latenci" +
-      "es_ms\030\006 \001(\0132\031.android_studio.Histogram\022B" +
-      "\n\037not_accepted_shown_durations_ms\030\007 \001(\0132" +
-      "\031.android_studio.Histogram\"/\n\007Trigger\022\013\n" +
-      "\007UNKNOWN\020\000\022\010\n\004USER\020\001\022\r\n\tAUTOMATIC\020\002B\014\n\nc" +
-      "ompletion\"\321\006\n\021SmlTransformEvent\022E\n\007reque" +
-      "st\030\001 \001(\01322.android_studio.SmlTransformEv" +
-      "ent.TransformRequestH\000\022G\n\010response\030\002 \001(\013" +
-      "23.android_studio.SmlTransformEvent.Tran" +
-      "sformResponseH\000\022A\n\005shown\030\003 \001(\01320.android" +
-      "_studio.SmlTransformEvent.TransformShown" +
-      "H\000\022G\n\010accepted\030\004 \001(\01323.android_studio.Sm" +
-      "lTransformEvent.TransformAcceptedH\000\032*\n\020T" +
-      "ransformRequest\022\026\n\016context_length\030\001 \001(\r\032" +
-      "y\n\017TransformResult\0225\n\010metadata\030\001 \001(\0132#.a" +
-      "ndroid_studio.SmlResponseMetadata\022\022\n\nlat" +
-      "ency_ms\030\002 \001(\004\022\033\n\023num_transformations\030\003 \001" +
-      "(\005\032%\n\016TransformError\022\023\n\013status_code\030\001 \001(" +
-      "\005\032\257\001\n\021TransformResponse\022C\n\006result\030\001 \001(\0132" +
-      "1.android_studio.SmlTransformEvent.Trans" +
-      "formResultH\000\022I\n\rbackend_error\030\002 \001(\01320.an" +
-      "droid_studio.SmlTransformEvent.Transform" +
-      "ErrorH\000B\n\n\010response\032G\n\016TransformShown\0225\n" +
-      "\010metadata\030\001 \001(\0132#.android_studio.SmlResp" +
-      "onseMetadata\032J\n\021TransformAccepted\0225\n\010met" +
-      "adata\030\001 \001(\0132#.android_studio.SmlResponse" +
-      "MetadataB\013\n\ttransform\"\267\030\n\017SmlChatBotEven" +
-      "t\022?\n\010response\030\001 \001(\0132+.android_studio.Sml" +
-      "ChatBotEvent.BotResponseH\000\022E\n\ruser_feedb" +
-      "ack\030\002 \001(\0132,.android_studio.SmlChatBotEve" +
-      "nt.UserFeedbackH\000\022G\n\016action_invoked\030\003 \001(" +
-      "\0132-.android_studio.SmlChatBotEvent.Actio" +
-      "nInvokedH\000\022E\n\raction_result\030\004 \001(\0132,.andr" +
-      "oid_studio.SmlChatBotEvent.ActionResultH" +
-      "\000\022C\n\014parse_result\030\005 \001(\0132+.android_studio" +
-      ".SmlChatBotEvent.ParseResultH\000\022A\n\013bot_in" +
-      "voked\030\006 \001(\0132*.android_studio.SmlChatBotE" +
-      "vent.BotInvokedH\000\022C\n\014slash_action\030\007 \001(\0132" +
-      "+.android_studio.SmlChatBotEvent.SlashAc" +
-      "tionH\000\022U\n\025dependency_suggestion\030\010 \001(\01324." +
-      "android_studio.SmlChatBotEvent.Dependenc" +
-      "ySuggestionH\000\022d\n\035hallucination_detector_" +
-      "result\030\t \001(\0132;.android_studio.SmlChatBot" +
-      "Event.HallucinationDetectorResultH\000\032v\n\013B" +
-      "otResponse\0225\n\010metadata\030\001 \001(\0132#.android_s" +
-      "tudio.SmlResponseMetadata\022\022\n\nlatency_ms\030" +
-      "\002 \001(\004\022\034\n\024retrieval_latency_ms\030\003 \001(\004\032\306\001\n\014" +
-      "UserFeedback\0225\n\010metadata\030\001 \001(\0132#.android" +
-      "_studio.SmlResponseMetadata\022I\n\tsentiment" +
-      "\030\002 \001(\01626.android_studio.SmlChatBotEvent." +
-      "UserFeedback.Sentiment\"4\n\tSentiment\022\013\n\007U" +
-      "NKNOWN\020\000\022\014\n\010POSITIVE\020\001\022\014\n\010NEGATIVE\020\002\032\204\001\n" +
-      "\nBotInvoked\0225\n\010metadata\030\001 \001(\0132#.android_" +
-      "studio.SmlResponseMetadata\022?\n\013entry_poin" +
-      "t\030\002 \001(\0162*.android_studio.SmlChatBotEvent" +
-      ".EntryPoint\032\261\001\n\rActionInvoked\0225\n\010metadat" +
-      "a\030\001 \001(\0132#.android_studio.SmlResponseMeta" +
-      "data\0226\n\006action\030\002 \001(\0162&.android_studio.Sm" +
-      "lChatBotEvent.Action\0221\n\tfile_type\030\003 \001(\0162" +
-      "\036.android_studio.EditorFileType\032\301\001\n\014Acti" +
-      "onResult\0225\n\010metadata\030\001 \001(\0132#.android_stu" +
-      "dio.SmlResponseMetadata\0226\n\006action\030\002 \001(\0162" +
-      "&.android_studio.SmlChatBotEvent.Action\022" +
-      "1\n\tfile_type\030\003 \001(\0162\036.android_studio.Edit" +
-      "orFileType\022\017\n\007success\030\004 \001(\010\032_\n\024Dependenc" +
-      "ySuggestion\0225\n\010metadata\030\001 \001(\0132#.android_" +
-      "studio.SmlResponseMetadata\022\020\n\010accepted\030\002" +
-      " \001(\010\032G\n\013SlashAction\0228\n\007command\030\001 \001(\0162\'.a" +
-      "ndroid_studio.SmlChatBotEvent.Command\032\237\001" +
-      "\n\013ParseResult\0225\n\010metadata\030\001 \001(\0132#.androi" +
-      "d_studio.SmlResponseMetadata\0221\n\tfile_typ" +
-      "e\030\002 \001(\0162\036.android_studio.EditorFileType\022" +
-      "\023\n\007success\030\003 \001(\010B\002\030\001\022\021\n\thas_error\030\004 \001(\010\032" +
-      "\274\002\n\033HallucinationDetectorResult\0225\n\010metad" +
-      "ata\030\001 \001(\0132#.android_studio.SmlResponseMe" +
-      "tadata\022\031\n\021has_hallucination\030\002 \001(\010\0221\n\tfil" +
-      "e_type\030\003 \001(\0162\036.android_studio.EditorFile" +
-      "Type\022D\n\014code_domains\030\004 \003(\0162*.android_stu" +
-      "dio.SmlChatBotEvent.CodeDomainB\002\020\001\022R\n\023ha" +
-      "llucination_types\030\005 \003(\01621.android_studio" +
-      ".SmlChatBotEvent.HallucinationTypeB\002\020\001\"\263" +
-      "\001\n\nEntryPoint\022\013\n\007UNKNOWN\020\000\022\014\n\010DOCUMENT\020\001" +
-      "\022\013\n\007COMMENT\020\002\022\014\n\010SIMPLIFY\020\003\022\013\n\007EXPLAIN\020\004" +
-      "\022\020\n\014OTHER_EDITOR\020\005\022\r\n\tIDE_ERROR\020\006\022\010\n\004SYN" +
-      "C\020\007\022\t\n\005BUILD\020\010\022\017\n\013CRASHLYTICS\020\t\022\017\n\013PLAY_" +
-      "VITALS\020\n\022\n\n\006LOGCAT\020\013\"\360\001\n\006Action\022\013\n\007INVAL" +
-      "ID\020\000\022\022\n\016MOVE_TO_EDITOR\020\001\022\021\n\rMOVE_TO_CARE" +
-      "T\020\002\022\024\n\020MOVE_TO_NEW_FILE\020\003\022\022\n\016ADD_DEPENDE" +
-      "NCY\020\004\022\020\n\014BROWSE_TOPIC\020\005\022\031\n\025EXPLORE_IN_PL" +
-      "AYGROUND\020\006\022\022\n\016MERGE_MANIFEST\020\007\022\024\n\020MERGE_" +
-      "SUGGESTION\020\t\022\024\n\020INSERT_RESOURCES\020\n\022\033\n\027IN" +
-      "SERT_NAME_SUGGESTIONS\020\013\"\224\003\n\007Command\022\r\n\tC" +
-      "MD_OTHER\020\000\022\r\n\tCMD_ABOUT\020\001\022\014\n\010CMD_HELP\020\002\022" +
-      "\r\n\tCMD_CLEAR\020\003\022\017\n\013CMD_HISTORY\020\004\022\r\n\tCMD_C" +
-      "LOSE\020\005\022\022\n\016CMD_SCREENSHOT\020\006\022\014\n\010CMD_SAVE\020\007" +
-      "\022\n\n\006CMD_ME\020\010\022\014\n\010CMD_EDIT\020\t\022\014\n\010CMD_UNDO\020\n" +
-      "\022\014\n\010CMD_REDO\020\013\022\016\n\nCMD_FORMAT\020\014\022\016\n\nCMD_RE" +
-      "NAME\020\r\022\r\n\tCMD_BUILD\020\016\022\013\n\007CMD_RUN\020\017\022\r\n\tCM" +
-      "D_DEBUG\020\020\022\017\n\013CMD_PROFILE\020\021\022\014\n\010CMD_TEST\020\022" +
-      "\022\014\n\010CMD_STOP\020\023\022\014\n\010CMD_SYNC\020\024\022\020\n\014CMD_TERM" +
-      "INAL\020\025\022\r\n\tCMD_SPLIT\020\026\022\017\n\013CMD_UNSPLIT\020\027\022\014" +
-      "\n\010CMD_OPEN\020\030\022\020\n\014CMD_GOTOTEST\020\031\"(\n\nCodeDo" +
-      "main\022\r\n\tUNDEFINED\020\000\022\013\n\007COMPOSE\020\001\"B\n\021Hall" +
-      "ucinationType\022\t\n\005OTHER\020\000\022\013\n\007BAD_API\020\001\022\025\n" +
-      "\021COMPOSE_SEMANTICS\020\002B\t\n\007content\"\310\001\n\025SmlC" +
-      "onfigurationEvent\022\025\n\rsml_available\030\001 \001(\010" +
-      "\022\036\n\026bot_onboarding_started\030\004 \001(\010\022 \n\030bot_" +
-      "onboarding_completed\030\005 \001(\010\022\032\n\022completion" +
-      "_enabled\030\002 \001(\010\022\031\n\021transform_enabled\030\003 \001(" +
-      "\010\022\037\n\027project_context_enabled\030\006 \001(\010\"\205\001\n\021S" +
-      "mlAiExcludeEvent\022\025\n\rpaste_blocked\030\001 \001(\010\022" +
-      " \n\030intention_action_blocked\030\002 \001(\010\022\036\n\026pas" +
-      "sive_action_blocked\030\003 \001(\010\022\027\n\017context_blo" +
-      "cked\030\004 \001(\010\"c\n\023SmlGeolocationEvent\022\020\n\010mod" +
-      "el_id\030\001 \001(\t\022\030\n\020check_successful\030\002 \001(\010\022 \n" +
-      "\030grpc_error_response_code\030\003 \001(\005\"T\n\036SmlCo" +
-      "mpletionRequestErrorEvent\022\020\n\010model_id\030\001 " +
-      "\001(\t\022 \n\030grpc_error_response_code\030\003 \001(\005\"\252\014" +
-      "\n\021IDeviceUsageEvent\0228\n\006method\030\001 \001(\0162(.an" +
-      "droid_studio.IDeviceUsageEvent.Method\022A\n" +
-      "\013source_type\030\002 \001(\0162,.android_studio.IDev" +
-      "iceUsageEvent.SourceType\022\024\n\014is_exception" +
-      "\030\003 \001(\010\"\250\n\n\006Method\022\026\n\022METHOD_UNSPECIFIED\020" +
-      "\000\022\014\n\010GET_NAME\020\001\022\033\n\027EXECUTE_SHELL_COMMAND" +
-      "_1\020\002\022\033\n\027EXECUTE_SHELL_COMMAND_2\020\003\022\033\n\027EXE" +
-      "CUTE_SHELL_COMMAND_3\020\004\022\033\n\027EXECUTE_SHELL_" +
-      "COMMAND_4\020\005\022\033\n\027EXECUTE_SHELL_COMMAND_5\020\006" +
-      "\022\027\n\023GET_SYSTEM_PROPERTY\020\007\022\025\n\021GET_SERIAL_" +
-      "NUMBER\020\010\022\020\n\014GET_AVD_NAME\020\t\022\020\n\014GET_AVD_PA" +
-      "TH\020\n\022\020\n\014GET_AVD_DATA\020\013\022\023\n\017CREATE_AVD_DAT" +
-      "A\020\014\022\r\n\tGET_STATE\020\r\022\022\n\016GET_PROPERTIES\020\016\022\026" +
-      "\n\022GET_PROPERTY_COUNT\020\017\022\020\n\014GET_PROPERTY\020\020" +
-      "\022\026\n\022ARE_PROPERTIES_SET\020\021\022\026\n\022SUPPORTS_FEA" +
-      "TURE_1\020\022\022\026\n\022SUPPORTS_FEATURE_2\020\023\022\014\n\010SERV" +
-      "ICES\020\024\022\r\n\tTO_STRING\020\025\022\r\n\tIS_ONLINE\020\026\022\017\n\013" +
-      "IS_EMULATOR\020\027\022\016\n\nIS_OFFLINE\020\030\022\022\n\016IS_BOOT" +
-      "_LOADER\020\031\022\017\n\013GET_CLIENTS\020\032\022\016\n\nGET_CLIENT" +
-      "\020\033\022\033\n\027GET_PROFILEABLE_CLIENTS\020\034\022\024\n\020CREAT" +
-      "E_FORWARD_1\020\035\022\024\n\020CREATE_FORWARD_2\020\036\022\022\n\016R" +
-      "EMOVE_FORWARD\020\037\022\023\n\017GET_CLIENT_NAME\020 \022\r\n\t" +
-      "PUSH_FILE\020!\022\r\n\tPULL_FILE\020\"\022\025\n\021INSTALL_PA" +
-      "CKAGE_1\020#\022\025\n\021INSTALL_PACKAGE_2\020$\022\025\n\021INST" +
-      "ALL_PACKAGE_3\020%\022\026\n\022INSTALL_PACKAGES_1\020&\022" +
-      "\026\n\022INSTALL_PACKAGES_2\020\'\022\034\n\030GET_LAST_INST" +
-      "ALL_METRICS\020(\022\032\n\026SYNC_PACKAGE_TO_DEVICE\020" +
-      ")\022\032\n\026INSTALL_REMOTE_PACKAGE\020*\022\031\n\025REMOVE_" +
-      "REMOTE_PACKAGE\020+\022\025\n\021UNINSTALL_PACKAGE\020,\022" +
-      "\021\n\rUNINSTALL_APP\020-\022\010\n\004ROOT\020.\022\016\n\nFORCE_ST" +
-      "OP\020/\022\010\n\004KILL\0200\022\013\n\007IS_ROOT\0201\022\014\n\010GET_ABIS\020" +
-      "2\022\017\n\013GET_DENSITY\0203\022\017\n\013GET_VERSION\0204\022\034\n\030E" +
-      "XECUTE_REMOTE_COMMAND_1\0205\022\034\n\030EXECUTE_REM" +
-      "OTE_COMMAND_2\0206\022\034\n\030EXECUTE_REMOTE_COMMAN" +
-      "D_3\0207\022\034\n\030EXECUTE_REMOTE_COMMAND_4\0208\022\r\n\tR" +
-      "AW_EXEC2\0209\022\r\n\tSTAT_FILE\020:\022\026\n\022UNSUPPORTED" +
-      "_METHOD\020;\022\022\n\016CREATE_REVERSE\020<\022\022\n\016REMOVE_" +
-      "REVERSE\020=\"W\n\nSourceType\022\033\n\027SOURCE_TYPE_U" +
-      "NSPECIFIED\020\000\022\017\n\013DEVICE_IMPL\020\001\022\033\n\027ADBLIB_" +
-      "I_DEVICE_WRAPPER\020\002\"\311\004\n\rAdbUsageEvent\022e\n\030" +
-      "process_properties_event\030\001 \001(\0132A.android" +
-      "_studio.AdbUsageEvent.JdwpProcessPropert" +
-      "iesCollectorEventH\000\032\307\003\n#JdwpProcessPrope" +
-      "rtiesCollectorEvent\022\017\n\007success\030\001 \001(\010\022c\n\014" +
-      "failure_type\030\002 \001(\0162M.android_studio.AdbU" +
-      "sageEvent.JdwpProcessPropertiesCollector" +
-      "Event.FailureType\022\037\n\027previously_failed_c" +
-      "ount\030\003 \001(\005\022l\n\025previous_failure_type\030\004 \001(" +
-      "\0162M.android_studio.AdbUsageEvent.JdwpPro" +
-      "cessPropertiesCollectorEvent.FailureType" +
-      "\"\232\001\n\013FailureType\022\034\n\030FAILURE_TYPE_UNSPECI" +
-      "FIED\020\000\022\017\n\013NO_RESPONSE\020\001\022\034\n\030CLOSED_CHANNE" +
-      "L_EXCEPTION\020\002\022\033\n\027CONNECTION_CLOSED_ERROR" +
-      "\020\003\022\020\n\014IO_EXCEPTION\020\005\022\017\n\013OTHER_ERROR\020\004B\007\n" +
-      "\005event\"g\n\025KotlinSupportDeclined\022N\n\021templ" +
-      "ate_renderer\030\001 \001(\01623.android_studio.Andr" +
-      "oidStudioEvent.TemplateRenderer\"\362\002\n\025Devi" +
-      "ceScreenshotEvent\022E\n\013device_type\030\001 \001(\01620" +
-      ".android_studio.DeviceScreenshotEvent.De" +
-      "viceType\022Q\n\021decoration_option\030\002 \001(\01626.an" +
-      "droid_studio.DeviceScreenshotEvent.Decor" +
-      "ationOption\"B\n\nDeviceType\022\027\n\023UNKNOWN_DEV" +
-      "ICE_TYPE\020\000\022\t\n\005PHONE\020\001\022\010\n\004WEAR\020\002\022\006\n\002TV\020\003\"" +
-      "{\n\020DecorationOption\022\035\n\031UNKNOWN_DECORATIO" +
-      "N_OPTION\020\000\022\017\n\013RECTANGULAR\020\001\022\026\n\022DISPLAY_S" +
-      "HAPE_CLIP\020\002\022\023\n\017PLAY_COMPATIBLE\020\003\022\n\n\006FRAM" +
-      "ED\020\004\"\232\001\n\022EditorNotification\022N\n\021notificat" +
-      "ion_type\030\001 \001(\01623.android_studio.EditorNo" +
-      "tification.NotificationType\"4\n\020Notificat" +
-      "ionType\022\013\n\007UNKNOWN\020\000\022\023\n\017ESSENTIALS_MODE\020" +
-      "\001\"\273\004\n\rDebuggerEvent\0220\n\004type\030\001 \001(\0162\".andr" +
-      "oid_studio.DebuggerEvent.Type\022G\n\020breakpo" +
-      "int_added\030\002 \001(\0132-.android_studio.Debugge" +
-      "rEvent.BreakpointAdded\022L\n\023frames_view_up" +
-      "dated\030\003 \001(\0132/.android_studio.DebuggerEve" +
-      "nt.FramesViewUpdated\032H\n\017BreakpointAdded\022" +
-      "\014\n\004type\030\001 \001(\t\022\023\n\013plugin_type\030\002 \001(\t\022\022\n\nin" +
-      "_session\030\003 \001(\010\032\314\001\n\021FramesViewUpdated\022\023\n\013" +
-      "duration_ms\030\001 \001(\004\022\024\n\014total_frames\030\002 \001(\005\022" +
-      "U\n\017file_type_infos\030\003 \003(\0132<.android_studi" +
-      "o.DebuggerEvent.FramesViewUpdated.FileTy" +
-      "peInfo\0325\n\014FileTypeInfo\022\021\n\tfile_type\030\001 \001(" +
-      "\t\022\022\n\nnum_frames\030\002 \001(\005\"H\n\004Type\022\013\n\007UNKNOWN" +
-      "\020\000\022\032\n\026BREAKPOINT_ADDED_EVENT\020\001\022\027\n\023FRAMES" +
-      "_VIEW_UPDATED\020\002\"\317\002\n\016SoongSyncStats\0227\n\007tr" +
-      "igger\030\001 \001(\0162&.android_studio.SoongSyncSt" +
-      "ats.Trigger\0225\n\006status\030\002 \001(\0162%.android_st" +
-      "udio.SoongSyncStats.Status\022\025\n\rtotal_time" +
-      "_ms\030\003 \001(\003\022\024\n\014lunch_target\030\004 \001(\t\022\024\n\014modul" +
-      "e_paths\030\005 \003(\t\"F\n\007Trigger\022\023\n\017TRIGGER_UNKN" +
-      "OWN\020\000\022\020\n\014PROJECT_OPEN\020\001\022\024\n\020USER_SYNC_ACT" +
-      "ION\020\002\"B\n\006Status\022\022\n\016STATUS_UNKNOWN\020\000\022\013\n\007S" +
-      "UCCESS\020\001\022\010\n\004FAIL\020\002\022\r\n\tCANCELLED\020\003\"\202\002\n\023In" +
-      "telliJNewUISwitch\022G\n\rswitch_source\030\001 \001(\016" +
-      "20.android_studio.IntelliJNewUISwitch.Sw" +
-      "itchSource\022\016\n\006new_ui\030\002 \001(\010\"\221\001\n\014SwitchSou" +
-      "rce\022\022\n\016SOURCE_UNKNOWN\020\000\022\030\n\024ENABLE_NEW_UI" +
-      "_ACTION\020\001\022\031\n\025DISABLE_NEW_UI_ACTION\020\002\022\021\n\r" +
-      "WELCOME_PROMO\020\003\022\022\n\016WHATS_NEW_PAGE\020\004\022\021\n\rS" +
-      "ETTINGS_PAGE\020\005\"&\n\023EssentialsModeEvent\022\017\n" +
-      "\007enabled\030\001 \001(\010\"5\n\024LintTooltipLinkEvent\022\020" +
-      "\n\010issue_id\030\001 \001(\t\022\013\n\003url\030\002 \001(\t\"\321\001\n\032Render" +
-      "SecurityManagerEvent\022=\n\004type\030\001 \001(\0162/.and" +
-      "roid_studio.RenderSecurityManagerEvent.T" +
-      "ype\022\020\n\010resource\030\002 \001(\t\"b\n\004Type\022\020\n\014TYPE_UN" +
-      "KNOWN\020\000\022\021\n\rUSER_DISABLED\020\001\022\031\n\025RESOURCE_U" +
-      "SAGE_DENIED\020\002\022\032\n\026RESOURCE_USAGE_WARNING\020" +
-      "\003*\237\001\n\025EmulatorSnapshotFlags\022\027\n\023SNAPSHOT_" +
-      "FLAGS_NONE\020\000\022%\n!SNAPSHOT_FLAGS_RAM_COMPR" +
-      "ESSED_BIT\020\001\022*\n&SNAPSHOT_FLAGS_TEXTURES_C" +
-      "OMPRESSED_BIT\020\002\022\032\n\026SNAPSHOT_FLAGS_HDD_BI" +
-      "T\020\003*\254\002\n\031EmulatorSnapshotSaveState\022+\n\'EMU" +
-      "LATOR_SNAPSHOT_SAVE_SUCCEEDED_NORMAL\020\000\022!" +
-      "\n\035EMULATOR_SNAPSHOT_SAVE_FAILED\020\001\022.\n*EMU" +
-      "LATOR_SNAPSHOT_SAVE_SKIPPED_UNSUPPORTED\020" +
-      "\002\022-\n)EMULATOR_SNAPSHOT_SAVE_SKIPPED_NOT_" +
-      "BOOTED\020\003\022.\n*EMULATOR_SNAPSHOT_SAVE_SKIPP" +
-      "ED_NO_SNAPSHOT\020\004\0220\n,EMULATOR_SNAPSHOT_SA" +
-      "VE_SKIPPED_DISK_PRESSURE\020\005*\215\002\n\031EmulatorS" +
-      "napshotLoadState\022+\n\'EMULATOR_SNAPSHOT_LO" +
-      "AD_SUCCEEDED_NORMAL\020\000\022!\n\035EMULATOR_SNAPSH" +
-      "OT_LOAD_FAILED\020\001\022.\n*EMULATOR_SNAPSHOT_LO" +
-      "AD_SKIPPED_UNSUPPORTED\020\002\022&\n\"EMULATOR_SNA" +
-      "PSHOT_LOAD_NO_SNAPSHOT\020\003\022\'\n#EMULATOR_SNA" +
-      "PSHOT_LOAD_OLD_SNAPSHOT\020\004\022\037\n\033EMULATOR_SN" +
-      "APSHOT_LOAD_HUNG\020\005*\335\n\n\035EmulatorSnapshotF" +
-      "ailureReason\0220\n,EMULATOR_SNAPSHOT_FAILUR" +
-      "E_REASON_UNSPECIFIED\020\000\0223\n/EMULATOR_SNAPS" +
-      "HOT_FAILURE_REASON_CORRUPTED_DATA\020\001\0223\n/E" +
-      "MULATOR_SNAPSHOT_FAILURE_REASON_NO_SNAPS" +
-      "HOT_PB\020\002\0224\n0EMULATOR_SNAPSHOT_FAILURE_RE" +
-      "ASON_BAD_SNAPSHOT_PB\020\003\0229\n5EMULATOR_SNAPS" +
-      "HOT_FAILURE_REASON_INCOMPATIBLE_VERSION\020" +
-      "\004\0220\n,EMULATOR_SNAPSHOT_FAILURE_REASON_NO" +
-      "_RAM_FILE\020\005\0225\n1EMULATOR_SNAPSHOT_FAILURE" +
-      "_REASON_NO_TEXTURES_FILE\020\006\022<\n8EMULATOR_S" +
-      "NAPSHOT_FAILURE_REASON_SNAPSHOTS_NOT_SUP" +
-      "PORTED\020\007\022?\n:EMULATOR_SNAPSHOT_FAILURE_RE" +
-      "ASON_UNRECOVERABLE_ERROR_LIMIT\020\220N\022:\n5EMU" +
-      "LATOR_SNAPSHOT_FAILURE_REASON_NO_SNAPSHO" +
-      "T_IN_IMAGE\020\221N\022E\n@EMULATOR_SNAPSHOT_FAILU" +
-      "RE_REASON_CONFIG_MISMATCH_HOST_HYPERVISO" +
-      "R\020\222N\022>\n9EMULATOR_SNAPSHOT_FAILURE_REASON" +
-      "_CONFIG_MISMATCH_HOST_GPU\020\223N\022>\n9EMULATOR" +
-      "_SNAPSHOT_FAILURE_REASON_CONFIG_MISMATCH" +
-      "_RENDERER\020\224N\022>\n9EMULATOR_SNAPSHOT_FAILUR" +
-      "E_REASON_CONFIG_MISMATCH_FEATURES\020\225N\0229\n4" +
-      "EMULATOR_SNAPSHOT_FAILURE_REASON_CONFIG_" +
-      "MISMATCH_AVD\020\226N\022:\n5EMULATOR_SNAPSHOT_FAI" +
-      "LURE_REASON_SYSTEM_IMAGE_CHANGED\020\227N\022=\n7E" +
-      "MULATOR_SNAPSHOT_FAILURE_REASON_VALIDATI" +
-      "ON_ERROR_LIMIT\020\240\234\001\0225\n/EMULATOR_SNAPSHOT_" +
-      "FAILURE_REASON_INTERNAL_ERROR\020\241\234\001\022>\n8EMU" +
-      "LATOR_SNAPSHOT_FAILURE_REASON_EMULATION_" +
-      "ENGINE_FAILED\020\242\234\001\0221\n+EMULATOR_SNAPSHOT_F" +
-      "AILURE_REASON_RAM_FAILED\020\243\234\001\0226\n0EMULATOR" +
-      "_SNAPSHOT_FAILURE_REASON_TEXTURES_FAILED" +
-      "\020\244\234\001\0222\n,EMULATOR_SNAPSHOT_FAILURE_REASON" +
-      "_ADB_OFFLINE\020\245\234\001\0228\n2EMULATOR_SNAPSHOT_FA" +
-      "ILURE_REASON_IN_PROGRESS_LIMIT\020\260\352\001*[\n\014Se" +
-      "archOption\022\031\n\025UNKNOWN_SEARCH_OPTION\020\000\022\010\n" +
-      "\004NONE\020\001\022\024\n\020MULTIPLE_MATCHES\020\002\022\020\n\014SINGLE_" +
-      "MATCH\020\003*\316\003\n\016EditorFileType\022\013\n\007UNKNOWN\020\000\022" +
-      "\010\n\004JAVA\020\001\022\n\n\006KOTLIN\020\002\022\007\n\003XML\020\003\022\n\n\006GROOVY" +
-      "\020\004\022\016\n\nPROPERTIES\020\005\022\010\n\004JSON\020\006\022\021\n\rKOTLIN_S" +
-      "CRIPT\020\007\022\n\n\006NATIVE\020\010\022\020\n\014XML_MANIFEST\020\t\022\020\n" +
-      "\014XML_RES_ANIM\020\n\022\024\n\020XML_RES_ANIMATOR\020\013\022\021\n" +
-      "\rXML_RES_COLOR\020\014\022\024\n\020XML_RES_DRAWABLE\020\r\022\020" +
-      "\n\014XML_RES_FONT\020\016\022\030\n\024XML_RES_INTERPOLATOR" +
-      "\020\017\022\022\n\016XML_RES_LAYOUT\020\020\022\020\n\014XML_RES_MENU\020\021" +
-      "\022\022\n\016XML_RES_MIPMAP\020\022\022\026\n\022XML_RES_NAVIGATI" +
-      "ON\020\023\022\017\n\013XML_RES_RAW\020\024\022\026\n\022XML_RES_TRANSIT" +
-      "ION\020\025\022\022\n\016XML_RES_VALUES\020\026\022\017\n\013XML_RES_XML" +
-      "\020\027\022\022\n\016KOTLIN_COMPOSE\020\030\022\010\n\004TOML\020\031B=\n%com." +
-      "google.wireless.android.sdk.statsB\022Andro" +
-      "idStudioStatsP\001"
+      ".StatusCode\022`\n\030total_heap_objects_stats\030" +
+      "\002 \001(\0132>.android_studio.MemoryUsageReport" +
+      "Event.MemoryTrafficStatistics\022\036\n\026field_c" +
+      "ache_count_peak\030\003 \001(\r\022 \n\030object_queue_le" +
+      "ngth_peak\030\004 \001(\r\022,\n$garbage_collected_bef" +
+      "ore_2pass_count\030\005 \001(\r\022\037\n\027collection_time" +
+      "_seconds\030\006 \001(\001\022\035\n\025is_in_power_save_mode\030" +
+      "\007 \001(\010\022)\n!unsuccessful_field_accesses_cou" +
+      "nt\030\010 \001(\r\022*\n\"collection_start_timestamp_s" +
+      "econds\030\t \001(\001\022\034\n\024collection_iteration\030\n \001" +
+      "(\005\022\035\n\025is_in_essentials_mode\030\013 \001(\010\"\344\001\n\nSt" +
+      "atusCode\022\014\n\010NO_ERROR\020\000\022\023\n\017HEAP_IS_TOO_BI" +
+      "G\020\001\022\024\n\020CANT_TAG_OBJECTS\020\002\022\032\n\026OBJECTS_MAP" +
+      "_IS_TOO_BIG\020\003\022!\n\035CLASS_FIELDS_CACHE_IS_T" +
+      "OO_BIG\020\004\022\030\n\024WRONG_ROOT_OBJECT_ID\020\005\022\016\n\nLO" +
+      "W_MEMORY\020\006\022\025\n\021AGENT_LOAD_FAILED\020\007\022\035\n\031POW" +
+      "ER_SAVING_MODE_ENABLED\020\010\"\275\001\n\023ManifestMer" +
+      "gerStats\0226\n\023success_run_time_ms\030\001 \001(\0132\031." +
+      "android_studio.Histogram\0227\n\024canceled_run" +
+      "_time_ms\030\002 \001(\0132\031.android_studio.Histogra" +
+      "m\0225\n\022failed_run_time_ms\030\003 \001(\0132\031.android_" +
+      "studio.Histogram\"^\n\030ThreadingAgentUsageE" +
+      "vent\022\036\n\026verify_ui_thread_count\030\001 \001(\003\022\"\n\032" +
+      "verify_worker_thread_count\030\002 \001(\003\"\250\002\n\037Pro" +
+      "jectViewSelectionChangeEvent\022^\n\022view_bef" +
+      "ore_change\030\001 \001(\0162B.android_studio.Projec" +
+      "tViewSelectionChangeEvent.ProjectViewCon" +
+      "tent\022]\n\021view_after_change\030\002 \001(\0162B.androi" +
+      "d_studio.ProjectViewSelectionChangeEvent" +
+      ".ProjectViewContent\"F\n\022ProjectViewConten" +
+      "t\022\013\n\007UNKNOWN\020\000\022\013\n\007ANDROID\020\001\022\013\n\007PROJECT\020\002" +
+      "\022\t\n\005OTHER\020\003\"\316\005\n\017HeapReportEvent\0226\n\006statu" +
+      "s\030\001 \001(\0162&.android_studio.HeapReportEvent" +
+      ".Status\0226\n\006reason\030\002 \001(\0162&.android_studio" +
+      ".HeapReportEvent.Reason\022\024\n\014freed_memory\030" +
+      "\003 \001(\003\"\251\003\n\006Status\022\013\n\007UNKNOWN\020\000\022\024\n\020LOW_MEM" +
+      "ORY_EVENT\020\001\022\033\n\027INSUFFICIENT_DISK_SPACE\020\002" +
+      "\022\022\n\016HEAP_TOO_SMALL\020\003\022\020\n\014RATE_LIMITED\020\004\022\026" +
+      "\n\022EXCESS_FREE_MEMORY\020\005\022\r\n\tFORCED_GC\020\006\022\037\n" +
+      "\033EXCESS_FREE_MEMORY_AFTER_GC\020\007\022\032\n\026REPORT" +
+      "_ALREADY_PENDING\020\010\022\033\n\027CAPTURE_SNAPSHOT_F" +
+      "AILED\020\t\022\024\n\020ANALYSIS_STARTED\020\n\022\031\n\025ERROR_D" +
+      "URING_ANALYSIS\020\013\022\025\n\021ANALYSIS_FINISHED\020\014\022" +
+      "\027\n\023REVIEW_DIALOG_SHOWN\020\r\022\023\n\017REVIEW_ACCEP" +
+      "TED\020\016\022\023\n\017REVIEW_DECLINED\020\017\022\023\n\017REPORT_UPL" +
+      "OADED\020\020\022\030\n\024REPORT_UPLOAD_FAILED\020\021\"\210\001\n\006Re" +
+      "ason\022\010\n\004NONE\020\000\022\020\n\014USER_INVOKED\020\001\022\031\n\025INTE" +
+      "RNAL_USER_INVOKED\020\002\022$\n FREQUENT_LOW_MEMO" +
+      "RY_NOTIFICATION\020\003\022\016\n\nLOW_MEMORY\020\004\022\021\n\rOUT" +
+      "_OF_MEMORY\020\005\"\257\001\n\034CreateDiagnosticReportA" +
+      "ction\022L\n\013action_type\030\001 \001(\01627.android_stu" +
+      "dio.CreateDiagnosticReportAction.ActionT" +
+      "ype\"A\n\nActionType\022\027\n\023UNKNOWN_ACTION_TYPE" +
+      "\020\000\022\r\n\tCANCELLED\020\001\022\013\n\007CREATED\020\002\"\356\021\n\026Direc" +
+      "tAccessUsageEvent\022O\n\004type\030\001 \001(\0162A.androi" +
+      "d_studio.DirectAccessUsageEvent.DirectAc" +
+      "cessUsageEventType\022\031\n\021device_session_id\030" +
+      "\002 \001(\t\022[\n\026reserve_device_details\030\003 \001(\0132;." +
+      "android_studio.DirectAccessUsageEvent.Re" +
+      "serveDeviceDetails\022[\n\026connect_device_det" +
+      "ails\030\004 \001(\0132;.android_studio.DirectAccess" +
+      "UsageEvent.ConnectDeviceDetails\022[\n\026strea" +
+      "m_started_details\030\005 \001(\0132;.android_studio" +
+      ".DirectAccessUsageEvent.StreamStartedDet" +
+      "ails\022c\n\032extend_reservation_details\030\006 \001(\013" +
+      "2?.android_studio.DirectAccessUsageEvent" +
+      ".ExtendReservationDetails\022]\n\027end_reserva" +
+      "tion_details\030\007 \001(\0132<.android_studio.Dire" +
+      "ctAccessUsageEvent.EndReservationDetails" +
+      "\022L\n\016failure_reason\030\010 \001(\01624.android_studi" +
+      "o.DirectAccessUsageEvent.FailureReason\022a" +
+      "\n\031disconnect_device_details\030\t \001(\0132>.andr" +
+      "oid_studio.DirectAccessUsageEvent.Discon" +
+      "nectDeviceDetails\032@\n\024ReserveDeviceDetail" +
+      "s\022\017\n\007success\030\001 \001(\010\022\027\n\017reserve_time_ms\030\002 " +
+      "\001(\r\032S\n\024ConnectDeviceDetails\022\017\n\007success\030\001" +
+      " \001(\010\022\021\n\treconnect\030\002 \001(\010\022\027\n\017connect_time_" +
+      "ms\030\003 \001(\r\032;\n\024StreamStartedDetails\022\017\n\007succ" +
+      "ess\030\001 \001(\010\022\022\n\nlatency_ms\030\002 \001(\r\032\216\002\n\030Extend" +
+      "ReservationDetails\022\017\n\007success\030\001 \001(\010\022~\n\033e" +
+      "xtend_reservation_duration\030\002 \001(\0162Y.andro" +
+      "id_studio.DirectAccessUsageEvent.ExtendR" +
+      "eservationDetails.ExtendReservationDurat" +
+      "ion\"a\n\031ExtendReservationDuration\022\010\n\004NONE" +
+      "\020\000\022\022\n\016THIRTY_MINUTES\020\001\022\021\n\rSIXTY_MINUTES\020" +
+      "\002\022\023\n\017FIFTEEN_MINUTES\020\003\032E\n\027DisconnectDevi" +
+      "ceDetails\022\017\n\007success\030\001 \001(\010\022\031\n\021user_disco" +
+      "nnected\030\002 \001(\010\032[\n\021ConnectionMetrics\022\026\n\016ma" +
+      "x_latency_ms\030\001 \001(\r\022\026\n\016p50_latency_ms\030\002 \001" +
+      "(\r\022\026\n\016p90_latency_ms\030\003 \001(\r\032\242\003\n\025EndReserv" +
+      "ationDetails\022\017\n\007success\030\001 \001(\010\022\026\n\nuser_en" +
+      "ded\030\002 \001(\010B\002\030\001\022\"\n\032total_reservation_time_" +
+      "sec\030\003 \001(\r\022)\n\035average_connection_latency_" +
+      "ms\030\004 \001(\rB\002\030\001\022m\n\024end_reservation_type\030\005 \001" +
+      "(\0162O.android_studio.DirectAccessUsageEve" +
+      "nt.EndReservationDetails.EndReservationT" +
+      "ype\022T\n\022connection_metrics\030\006 \001(\01328.androi" +
+      "d_studio.DirectAccessUsageEvent.Connecti" +
+      "onMetrics\"L\n\022EndReservationType\022\013\n\007UNKNO" +
+      "WN\020\000\022\t\n\005ERROR\020\001\022\n\n\006EXPIRE\020\002\022\022\n\016FORCE_CHE" +
+      "CK_IN\020\003\"\257\001\n\032DirectAccessUsageEventType\022\021" +
+      "\n\rUNKNOWN_EVENT\020\000\022\022\n\016RESERVE_DEVICE\020\001\022\022\n" +
+      "\016CONNECT_DEVICE\020\002\022\022\n\016STREAM_STARTED\020\003\022\026\n" +
+      "\022EXTEND_RESERVATION\020\004\022\023\n\017END_RESERVATION" +
+      "\020\005\022\025\n\021DISCONNECT_DEVICE\020\006\"\373\001\n\rFailureRea" +
+      "son\022\023\n\017UNKNOWN_FAILURE\020\000\022\023\n\017USER_LOGGED_" +
+      "OUT\020\001\022\023\n\017SCOPE_CANCELLED\020\002\022\023\n\017PROJECT_CL" +
+      "OSING\020\003\022\025\n\021CONNECTION_FAILED\020\013\022\024\n\020ADB_DI" +
+      "SCONNECTED\020\014\022\026\n\022LATENCY_DISCONNECT\020\r\022\021\n\r" +
+      "SESSION_ENDED\020\016\022\037\n\033DISCONNECT_BEFORE_CON" +
+      "NECTED\020\017\022\035\n\031FAILED_TO_ALLOCATE_DEVICE\020\025\"" +
+      "\275\005\n\022SafeModeStatsEvent\0221\n\002os\030\001 \001(\0162%.and" +
+      "roid_studio.SafeModeStatsEvent.OS\022B\n\013ent" +
+      "ry_point\030\002 \001(\0162-.android_studio.SafeMode" +
+      "StatsEvent.EntryPoint\022;\n\007trigger\030\003 \001(\0162*" +
+      ".android_studio.SafeModeStatsEvent.Trigg" +
+      "er\022I\n\017start_up_result\030\004 \001(\01620.android_st" +
+      "udio.SafeModeStatsEvent.StartUpResult\022\026\n" +
+      "\016studio_version\030\005 \001(\t\022\024\n\014jdk_modified\030\006 " +
+      "\001(\t\022\027\n\017kotlin_modified\030\007 \001(\t\022\030\n\020disabled" +
+      "_plugins\030\010 \003(\t\022\032\n\022vmoptions_modified\030\t \003" +
+      "(\t\"5\n\002OS\022\016\n\nUNKNOWN_OS\020\000\022\013\n\007WINDOWS\020\001\022\007\n" +
+      "\003MAC\020\002\022\t\n\005LINUX\020\003\"W\n\nEntryPoint\022\027\n\023UNKNO" +
+      "WN_ENTRY_POINT\020\000\022\n\n\006SCRIPT\020\001\022\007\n\003IDE\020\002\022\020\n" +
+      "\014CONTEXT_MENU\020\003\022\t\n\005POPUP\020\004\"2\n\007Trigger\022\023\n" +
+      "\017UNKNOWN_TRIGGER\020\000\022\022\n\016STARTUP_FAILED\020\001\"g" +
+      "\n\rStartUpResult\022\032\n\026UNKNOWN_STARTUP_RESUL" +
+      "T\020\000\022\025\n\021SAFE_MODE_SUCCESS\020\001\022#\n\037STARTUP_SU" +
+      "CCESS_AFTER_SAFE_MODE\020\002\"\352\007\n\013TSdkUAEvent\022" +
+      "?\n\014state_update\030\001 \001(\0132\'.android_studio.T" +
+      "SdkUAEvent.StateUpdateH\000\022;\n\nfilter_run\030\002" +
+      " \001(\0132%.android_studio.TSdkUAEvent.Filter" +
+      "RunH\000\022=\n\013user_motion\030\003 \001(\0132&.android_stu" +
+      "dio.TSdkUAEvent.UserMotionH\000\032\301\001\n\013StateUp" +
+      "date\022\024\n\014timestamp_ms\030\001 \001(\004\022\027\n\017mapping_ve" +
+      "rsion\030\002 \001(\r\022\024\n\014active_steps\030\003 \001(\014\022:\n\004typ" +
+      "e\030\004 \001(\0162,.android_studio.TSdkUAEvent.Sta" +
+      "teUpdate.Type\"1\n\004Type\022\024\n\020UNSPECIFIED_TYP" +
+      "E\020\000\022\010\n\004INIT\020\001\022\t\n\005DELTA\020\002\032\347\002\n\tFilterRun\022\021" +
+      "\n\tfilter_id\030\001 \001(\r\022\026\n\016filter_version\030\002 \001(" +
+      "\r\022\022\n\nelapsed_ms\030\003 \001(\r\022\017\n\005count\030\004 \001(\rH\000\022@" +
+      "\n\007problem\030\005 \001(\0162-.android_studio.TSdkUAE" +
+      "vent.FilterRun.ProblemH\000\022<\n\006origin\030\006 \001(\016" +
+      "2,.android_studio.TSdkUAEvent.FilterRun." +
+      "Origin\":\n\007Problem\022\027\n\023UNSPECIFIED_PROBLEM" +
+      "\020\000\022\013\n\007TIMEOUT\020\001\022\t\n\005ERROR\020\002\"D\n\006Origin\022\026\n\022" +
+      "UNSPECIFIED_ORIGIN\020\000\022\020\n\014RUN_ON_START\020\001\022\020" +
+      "\n\014RERUN_BUTTON\020\002B\010\n\006result\032\344\001\n\nUserMotio" +
+      "n\022?\n\006opened\030\001 \001(\0132-.android_studio.TSdkU" +
+      "AEvent.UserMotion.OpenedH\000\022?\n\006closed\030\002 \001" +
+      "(\0132-.android_studio.TSdkUAEvent.UserMoti" +
+      "on.ClosedH\000\032\032\n\006Opened\022\020\n\010block_id\030\001 \001(\t\032" +
+      ".\n\006Closed\022\020\n\010block_id\030\001 \001(\t\022\022\n\nelapsed_m" +
+      "s\030\002 \001(\004B\010\n\006motionB\t\n\007content\"(\n\022IntelliJ" +
+      "NewUIState\022\022\n\nis_enabled\030\001 \001(\010\"\361\004\n\027Kotli" +
+      "nGradlePerformance\022A\n\007use_fir\030\001 \001(\01620.an" +
+      "droid_studio.KotlinGradlePerformance.Fir" +
+      "Usage\022\032\n\022kotlin_api_version\030\002 \001(\t\022\037\n\027kot" +
+      "lin_compiler_version\030\003 \001(\t\022\037\n\027kotlin_lan" +
+      "guage_version\030\004 \001(\t\022\035\n\025kotlin_stdlib_ver" +
+      "sion\030\005 \001(\t\022\026\n\016plugin_version\030\006 \001(\t\022(\n en" +
+      "abled_compiler_plugin_all_open\030\007 \001(\010\022(\n " +
+      "enabled_compiler_plugin_atomicfu\030\010 \001(\010\022+" +
+      "\n#enabled_compiler_plugin_jpa_support\030\t " +
+      "\001(\010\022&\n\036enabled_compiler_plugin_lombok\030\n " +
+      "\001(\010\022&\n\036enabled_compiler_plugin_no_arg\030\013 " +
+      "\001(\010\022)\n!enabled_compiler_plugin_parcelize" +
+      "\030\014 \001(\010\0221\n)enabled_compiler_plugin_sam_wi" +
+      "th_receiver\030\r \001(\010\022\020\n\010kts_used\030\016 \001(\010\"=\n\010F" +
+      "irUsage\022\017\n\013UNSPECIFIED\020\000\022\010\n\004NONE\020\001\022\013\n\007PA" +
+      "RTIAL\020\002\022\t\n\005TOTAL\020\003\"\324\003\n\035BuildOutputDownlo" +
+      "adsInfoEvent\022@\n\004view\030\001 \001(\01622.android_stu" +
+      "dio.BuildOutputDownloadsInfoEvent.View\022N" +
+      "\n\013interaction\030\002 \001(\01629.android_studio.Bui" +
+      "ldOutputDownloadsInfoEvent.Interaction\022\026" +
+      "\n\016build_finished\030\003 \001(\010\022\034\n\024ms_since_build" +
+      "_start\030\004 \001(\r\"7\n\004View\022\020\n\014UNKNOWN_VIEW\020\000\022\r" +
+      "\n\tSYNC_VIEW\020\001\022\016\n\nBUILD_VIEW\020\002\"\261\001\n\013Intera" +
+      "ction\022\027\n\023UNKNOWN_INTERACTION\020\000\022\032\n\026OPEN_D" +
+      "OWNLOADS_INFO_UI\020\001\022\031\n\025CLICK_LEARN_MORE_L" +
+      "INK\020\002\022\031\n\025SELECT_REPOSITORY_ROW\020\003\022\032\n\026NOTI" +
+      "FICATION_TRIGGERED\020\004\022\033\n\027NOTIFICATION_LIN" +
+      "K_CLICK\020\005\"K\n\023SmlResponseMetadata\022\025\n\rrpc_" +
+      "global_id\030\001 \001(\003\022\035\n\025server_experiment_ids" +
+      "\030\002 \003(\005\"\335\r\n\022SmlCompletionEvent\022K\n\007request" +
+      "\030\001 \001(\01324.android_studio.SmlCompletionEve" +
+      "nt.CompletionRequestB\002\030\001H\000\022M\n\010response\030\002" +
+      " \001(\01325.android_studio.SmlCompletionEvent" +
+      ".CompletionResponseB\002\030\001H\000\022G\n\005shown\030\003 \001(\013" +
+      "22.android_studio.SmlCompletionEvent.Com" +
+      "pletionShownB\002\030\001H\000\022M\n\010accepted\030\004 \001(\01325.a" +
+      "ndroid_studio.SmlCompletionEvent.Complet" +
+      "ionAcceptedB\002\030\001H\000\022P\n\taggregate\030\005 \001(\0132;.a" +
+      "ndroid_studio.SmlCompletionEvent.Complet" +
+      "ionAggregateEventH\000\032\224\002\n\021CompletionReques" +
+      "t\022Q\n\007trigger\030\001 \001(\0162<.android_studio.SmlC" +
+      "ompletionEvent.CompletionRequest.Trigger" +
+      "B\002\030\001\0225\n\tfile_type\030\002 \001(\0162\036.android_studio" +
+      ".EditorFileTypeB\002\030\001\022\031\n\rprefix_length\030\003 \001" +
+      "(\rB\002\030\001\022\031\n\rsuffix_length\030\004 \001(\rB\002\030\001\";\n\007Tri" +
+      "gger\022\017\n\007UNKNOWN\020\000\032\002\010\001\022\014\n\004USER\020\001\032\002\010\001\022\021\n\tA" +
+      "UTOMATIC\020\002\032\002\010\001:\002\030\001\032.\n\017CompletionError\022\027\n" +
+      "\013status_code\030\001 \001(\005B\002\030\001:\002\030\001\032\206\001\n\020Completio" +
+      "nResult\0229\n\010metadata\030\001 \001(\0132#.android_stud",
+      "io.SmlResponseMetadataB\002\030\001\022\026\n\nlatency_ms" +
+      "\030\002 \001(\004B\002\030\001\022\033\n\017num_completions\030\003 \001(\005B\002\030\001:" +
+      "\002\030\001\032\260\001\n\022CompletionResponse\022G\n\006result\030\001 \001" +
+      "(\01323.android_studio.SmlCompletionEvent.C" +
+      "ompletionResultB\002\030\001\022M\n\rbackend_error\030\002 \001" +
+      "(\01322.android_studio.SmlCompletionEvent.C" +
+      "ompletionErrorB\002\030\001:\002\030\001\032t\n\017CompletionShow" +
+      "n\0229\n\010metadata\030\001 \001(\0132#.android_studio.Sml" +
+      "ResponseMetadataB\002\030\001\022\"\n\026shown_suggestion" +
+      "_index\030\002 \001(\005B\002\030\001:\002\030\001\032\242\001\n\022CompletionAccep" +
+      "ted\0229\n\010metadata\030\001 \001(\0132#.android_studio.S" +
+      "mlResponseMetadataB\002\030\001\022%\n\031accepted_sugge" +
+      "stion_index\030\002 \001(\005B\002\030\001\022&\n\032accepted_sugges" +
+      "tion_length\030\003 \001(\005B\002\030\001:\002\030\001\032\224\003\n\030Completion" +
+      "AggregateEvent\022\020\n\010model_id\030\001 \001(\t\022T\n\007trig" +
+      "ger\030\002 \001(\0162C.android_studio.SmlCompletion" +
+      "Event.CompletionAggregateEvent.Trigger\0221" +
+      "\n\tfile_type\030\003 \001(\0162\036.android_studio.Edito" +
+      "rFileType\022\031\n\021completions_shown\030\004 \001(\r\022\034\n\024" +
+      "completions_accepted\030\005 \001(\r\022/\n\014latencies_" +
+      "ms\030\006 \001(\0132\031.android_studio.Histogram\022B\n\037n" +
+      "ot_accepted_shown_durations_ms\030\007 \001(\0132\031.a" +
+      "ndroid_studio.Histogram\"/\n\007Trigger\022\013\n\007UN" +
+      "KNOWN\020\000\022\010\n\004USER\020\001\022\r\n\tAUTOMATIC\020\002B\014\n\ncomp" +
+      "letion\"\321\006\n\021SmlTransformEvent\022E\n\007request\030" +
+      "\001 \001(\01322.android_studio.SmlTransformEvent" +
+      ".TransformRequestH\000\022G\n\010response\030\002 \001(\01323." +
+      "android_studio.SmlTransformEvent.Transfo" +
+      "rmResponseH\000\022A\n\005shown\030\003 \001(\01320.android_st" +
+      "udio.SmlTransformEvent.TransformShownH\000\022" +
+      "G\n\010accepted\030\004 \001(\01323.android_studio.SmlTr" +
+      "ansformEvent.TransformAcceptedH\000\032*\n\020Tran" +
+      "sformRequest\022\026\n\016context_length\030\001 \001(\r\032y\n\017" +
+      "TransformResult\0225\n\010metadata\030\001 \001(\0132#.andr" +
+      "oid_studio.SmlResponseMetadata\022\022\n\nlatenc" +
+      "y_ms\030\002 \001(\004\022\033\n\023num_transformations\030\003 \001(\005\032" +
+      "%\n\016TransformError\022\023\n\013status_code\030\001 \001(\005\032\257" +
+      "\001\n\021TransformResponse\022C\n\006result\030\001 \001(\01321.a" +
+      "ndroid_studio.SmlTransformEvent.Transfor" +
+      "mResultH\000\022I\n\rbackend_error\030\002 \001(\01320.andro" +
+      "id_studio.SmlTransformEvent.TransformErr" +
+      "orH\000B\n\n\010response\032G\n\016TransformShown\0225\n\010me" +
+      "tadata\030\001 \001(\0132#.android_studio.SmlRespons" +
+      "eMetadata\032J\n\021TransformAccepted\0225\n\010metada" +
+      "ta\030\001 \001(\0132#.android_studio.SmlResponseMet" +
+      "adataB\013\n\ttransform\"\267\030\n\017SmlChatBotEvent\022?" +
+      "\n\010response\030\001 \001(\0132+.android_studio.SmlCha" +
+      "tBotEvent.BotResponseH\000\022E\n\ruser_feedback" +
+      "\030\002 \001(\0132,.android_studio.SmlChatBotEvent." +
+      "UserFeedbackH\000\022G\n\016action_invoked\030\003 \001(\0132-" +
+      ".android_studio.SmlChatBotEvent.ActionIn" +
+      "vokedH\000\022E\n\raction_result\030\004 \001(\0132,.android" +
+      "_studio.SmlChatBotEvent.ActionResultH\000\022C" +
+      "\n\014parse_result\030\005 \001(\0132+.android_studio.Sm" +
+      "lChatBotEvent.ParseResultH\000\022A\n\013bot_invok" +
+      "ed\030\006 \001(\0132*.android_studio.SmlChatBotEven" +
+      "t.BotInvokedH\000\022C\n\014slash_action\030\007 \001(\0132+.a" +
+      "ndroid_studio.SmlChatBotEvent.SlashActio" +
+      "nH\000\022U\n\025dependency_suggestion\030\010 \001(\01324.and" +
+      "roid_studio.SmlChatBotEvent.DependencySu" +
+      "ggestionH\000\022d\n\035hallucination_detector_res" +
+      "ult\030\t \001(\0132;.android_studio.SmlChatBotEve" +
+      "nt.HallucinationDetectorResultH\000\032v\n\013BotR" +
+      "esponse\0225\n\010metadata\030\001 \001(\0132#.android_stud" +
+      "io.SmlResponseMetadata\022\022\n\nlatency_ms\030\002 \001" +
+      "(\004\022\034\n\024retrieval_latency_ms\030\003 \001(\004\032\306\001\n\014Use" +
+      "rFeedback\0225\n\010metadata\030\001 \001(\0132#.android_st" +
+      "udio.SmlResponseMetadata\022I\n\tsentiment\030\002 " +
+      "\001(\01626.android_studio.SmlChatBotEvent.Use" +
+      "rFeedback.Sentiment\"4\n\tSentiment\022\013\n\007UNKN" +
+      "OWN\020\000\022\014\n\010POSITIVE\020\001\022\014\n\010NEGATIVE\020\002\032\204\001\n\nBo" +
+      "tInvoked\0225\n\010metadata\030\001 \001(\0132#.android_stu" +
+      "dio.SmlResponseMetadata\022?\n\013entry_point\030\002" +
+      " \001(\0162*.android_studio.SmlChatBotEvent.En" +
+      "tryPoint\032\261\001\n\rActionInvoked\0225\n\010metadata\030\001" +
+      " \001(\0132#.android_studio.SmlResponseMetadat" +
+      "a\0226\n\006action\030\002 \001(\0162&.android_studio.SmlCh" +
+      "atBotEvent.Action\0221\n\tfile_type\030\003 \001(\0162\036.a" +
+      "ndroid_studio.EditorFileType\032\301\001\n\014ActionR" +
+      "esult\0225\n\010metadata\030\001 \001(\0132#.android_studio" +
+      ".SmlResponseMetadata\0226\n\006action\030\002 \001(\0162&.a" +
+      "ndroid_studio.SmlChatBotEvent.Action\0221\n\t" +
+      "file_type\030\003 \001(\0162\036.android_studio.EditorF" +
+      "ileType\022\017\n\007success\030\004 \001(\010\032_\n\024DependencySu" +
+      "ggestion\0225\n\010metadata\030\001 \001(\0132#.android_stu" +
+      "dio.SmlResponseMetadata\022\020\n\010accepted\030\002 \001(" +
+      "\010\032G\n\013SlashAction\0228\n\007command\030\001 \001(\0162\'.andr" +
+      "oid_studio.SmlChatBotEvent.Command\032\237\001\n\013P" +
+      "arseResult\0225\n\010metadata\030\001 \001(\0132#.android_s" +
+      "tudio.SmlResponseMetadata\0221\n\tfile_type\030\002" +
+      " \001(\0162\036.android_studio.EditorFileType\022\023\n\007" +
+      "success\030\003 \001(\010B\002\030\001\022\021\n\thas_error\030\004 \001(\010\032\274\002\n" +
+      "\033HallucinationDetectorResult\0225\n\010metadata" +
+      "\030\001 \001(\0132#.android_studio.SmlResponseMetad" +
+      "ata\022\031\n\021has_hallucination\030\002 \001(\010\0221\n\tfile_t" +
+      "ype\030\003 \001(\0162\036.android_studio.EditorFileTyp" +
+      "e\022D\n\014code_domains\030\004 \003(\0162*.android_studio" +
+      ".SmlChatBotEvent.CodeDomainB\002\020\001\022R\n\023hallu" +
+      "cination_types\030\005 \003(\01621.android_studio.Sm" +
+      "lChatBotEvent.HallucinationTypeB\002\020\001\"\263\001\n\n" +
+      "EntryPoint\022\013\n\007UNKNOWN\020\000\022\014\n\010DOCUMENT\020\001\022\013\n" +
+      "\007COMMENT\020\002\022\014\n\010SIMPLIFY\020\003\022\013\n\007EXPLAIN\020\004\022\020\n" +
+      "\014OTHER_EDITOR\020\005\022\r\n\tIDE_ERROR\020\006\022\010\n\004SYNC\020\007" +
+      "\022\t\n\005BUILD\020\010\022\017\n\013CRASHLYTICS\020\t\022\017\n\013PLAY_VIT" +
+      "ALS\020\n\022\n\n\006LOGCAT\020\013\"\360\001\n\006Action\022\013\n\007INVALID\020" +
+      "\000\022\022\n\016MOVE_TO_EDITOR\020\001\022\021\n\rMOVE_TO_CARET\020\002" +
+      "\022\024\n\020MOVE_TO_NEW_FILE\020\003\022\022\n\016ADD_DEPENDENCY" +
+      "\020\004\022\020\n\014BROWSE_TOPIC\020\005\022\031\n\025EXPLORE_IN_PLAYG" +
+      "ROUND\020\006\022\022\n\016MERGE_MANIFEST\020\007\022\024\n\020MERGE_SUG" +
+      "GESTION\020\t\022\024\n\020INSERT_RESOURCES\020\n\022\033\n\027INSER" +
+      "T_NAME_SUGGESTIONS\020\013\"\224\003\n\007Command\022\r\n\tCMD_" +
+      "OTHER\020\000\022\r\n\tCMD_ABOUT\020\001\022\014\n\010CMD_HELP\020\002\022\r\n\t" +
+      "CMD_CLEAR\020\003\022\017\n\013CMD_HISTORY\020\004\022\r\n\tCMD_CLOS" +
+      "E\020\005\022\022\n\016CMD_SCREENSHOT\020\006\022\014\n\010CMD_SAVE\020\007\022\n\n" +
+      "\006CMD_ME\020\010\022\014\n\010CMD_EDIT\020\t\022\014\n\010CMD_UNDO\020\n\022\014\n" +
+      "\010CMD_REDO\020\013\022\016\n\nCMD_FORMAT\020\014\022\016\n\nCMD_RENAM" +
+      "E\020\r\022\r\n\tCMD_BUILD\020\016\022\013\n\007CMD_RUN\020\017\022\r\n\tCMD_D" +
+      "EBUG\020\020\022\017\n\013CMD_PROFILE\020\021\022\014\n\010CMD_TEST\020\022\022\014\n" +
+      "\010CMD_STOP\020\023\022\014\n\010CMD_SYNC\020\024\022\020\n\014CMD_TERMINA" +
+      "L\020\025\022\r\n\tCMD_SPLIT\020\026\022\017\n\013CMD_UNSPLIT\020\027\022\014\n\010C" +
+      "MD_OPEN\020\030\022\020\n\014CMD_GOTOTEST\020\031\"(\n\nCodeDomai" +
+      "n\022\r\n\tUNDEFINED\020\000\022\013\n\007COMPOSE\020\001\"B\n\021Halluci" +
+      "nationType\022\t\n\005OTHER\020\000\022\013\n\007BAD_API\020\001\022\025\n\021CO" +
+      "MPOSE_SEMANTICS\020\002B\t\n\007content\"\310\001\n\025SmlConf" +
+      "igurationEvent\022\025\n\rsml_available\030\001 \001(\010\022\036\n" +
+      "\026bot_onboarding_started\030\004 \001(\010\022 \n\030bot_onb" +
+      "oarding_completed\030\005 \001(\010\022\032\n\022completion_en" +
+      "abled\030\002 \001(\010\022\031\n\021transform_enabled\030\003 \001(\010\022\037" +
+      "\n\027project_context_enabled\030\006 \001(\010\"\205\001\n\021SmlA" +
+      "iExcludeEvent\022\025\n\rpaste_blocked\030\001 \001(\010\022 \n\030" +
+      "intention_action_blocked\030\002 \001(\010\022\036\n\026passiv" +
+      "e_action_blocked\030\003 \001(\010\022\027\n\017context_blocke" +
+      "d\030\004 \001(\010\"c\n\023SmlGeolocationEvent\022\020\n\010model_" +
+      "id\030\001 \001(\t\022\030\n\020check_successful\030\002 \001(\010\022 \n\030gr" +
+      "pc_error_response_code\030\003 \001(\005\"T\n\036SmlCompl" +
+      "etionRequestErrorEvent\022\020\n\010model_id\030\001 \001(\t" +
+      "\022 \n\030grpc_error_response_code\030\003 \001(\005\"\252\014\n\021I" +
+      "DeviceUsageEvent\0228\n\006method\030\001 \001(\0162(.andro" +
+      "id_studio.IDeviceUsageEvent.Method\022A\n\013so" +
+      "urce_type\030\002 \001(\0162,.android_studio.IDevice" +
+      "UsageEvent.SourceType\022\024\n\014is_exception\030\003 " +
+      "\001(\010\"\250\n\n\006Method\022\026\n\022METHOD_UNSPECIFIED\020\000\022\014" +
+      "\n\010GET_NAME\020\001\022\033\n\027EXECUTE_SHELL_COMMAND_1\020" +
+      "\002\022\033\n\027EXECUTE_SHELL_COMMAND_2\020\003\022\033\n\027EXECUT" +
+      "E_SHELL_COMMAND_3\020\004\022\033\n\027EXECUTE_SHELL_COM" +
+      "MAND_4\020\005\022\033\n\027EXECUTE_SHELL_COMMAND_5\020\006\022\027\n" +
+      "\023GET_SYSTEM_PROPERTY\020\007\022\025\n\021GET_SERIAL_NUM" +
+      "BER\020\010\022\020\n\014GET_AVD_NAME\020\t\022\020\n\014GET_AVD_PATH\020" +
+      "\n\022\020\n\014GET_AVD_DATA\020\013\022\023\n\017CREATE_AVD_DATA\020\014" +
+      "\022\r\n\tGET_STATE\020\r\022\022\n\016GET_PROPERTIES\020\016\022\026\n\022G" +
+      "ET_PROPERTY_COUNT\020\017\022\020\n\014GET_PROPERTY\020\020\022\026\n" +
+      "\022ARE_PROPERTIES_SET\020\021\022\026\n\022SUPPORTS_FEATUR" +
+      "E_1\020\022\022\026\n\022SUPPORTS_FEATURE_2\020\023\022\014\n\010SERVICE" +
+      "S\020\024\022\r\n\tTO_STRING\020\025\022\r\n\tIS_ONLINE\020\026\022\017\n\013IS_" +
+      "EMULATOR\020\027\022\016\n\nIS_OFFLINE\020\030\022\022\n\016IS_BOOT_LO" +
+      "ADER\020\031\022\017\n\013GET_CLIENTS\020\032\022\016\n\nGET_CLIENT\020\033\022" +
+      "\033\n\027GET_PROFILEABLE_CLIENTS\020\034\022\024\n\020CREATE_F" +
+      "ORWARD_1\020\035\022\024\n\020CREATE_FORWARD_2\020\036\022\022\n\016REMO" +
+      "VE_FORWARD\020\037\022\023\n\017GET_CLIENT_NAME\020 \022\r\n\tPUS" +
+      "H_FILE\020!\022\r\n\tPULL_FILE\020\"\022\025\n\021INSTALL_PACKA" +
+      "GE_1\020#\022\025\n\021INSTALL_PACKAGE_2\020$\022\025\n\021INSTALL" +
+      "_PACKAGE_3\020%\022\026\n\022INSTALL_PACKAGES_1\020&\022\026\n\022" +
+      "INSTALL_PACKAGES_2\020\'\022\034\n\030GET_LAST_INSTALL" +
+      "_METRICS\020(\022\032\n\026SYNC_PACKAGE_TO_DEVICE\020)\022\032" +
+      "\n\026INSTALL_REMOTE_PACKAGE\020*\022\031\n\025REMOVE_REM" +
+      "OTE_PACKAGE\020+\022\025\n\021UNINSTALL_PACKAGE\020,\022\021\n\r" +
+      "UNINSTALL_APP\020-\022\010\n\004ROOT\020.\022\016\n\nFORCE_STOP\020" +
+      "/\022\010\n\004KILL\0200\022\013\n\007IS_ROOT\0201\022\014\n\010GET_ABIS\0202\022\017" +
+      "\n\013GET_DENSITY\0203\022\017\n\013GET_VERSION\0204\022\034\n\030EXEC" +
+      "UTE_REMOTE_COMMAND_1\0205\022\034\n\030EXECUTE_REMOTE" +
+      "_COMMAND_2\0206\022\034\n\030EXECUTE_REMOTE_COMMAND_3" +
+      "\0207\022\034\n\030EXECUTE_REMOTE_COMMAND_4\0208\022\r\n\tRAW_" +
+      "EXEC2\0209\022\r\n\tSTAT_FILE\020:\022\026\n\022UNSUPPORTED_ME" +
+      "THOD\020;\022\022\n\016CREATE_REVERSE\020<\022\022\n\016REMOVE_REV" +
+      "ERSE\020=\"W\n\nSourceType\022\033\n\027SOURCE_TYPE_UNSP" +
+      "ECIFIED\020\000\022\017\n\013DEVICE_IMPL\020\001\022\033\n\027ADBLIB_I_D" +
+      "EVICE_WRAPPER\020\002\"\311\004\n\rAdbUsageEvent\022e\n\030pro" +
+      "cess_properties_event\030\001 \001(\0132A.android_st" +
+      "udio.AdbUsageEvent.JdwpProcessProperties" +
+      "CollectorEventH\000\032\307\003\n#JdwpProcessProperti" +
+      "esCollectorEvent\022\017\n\007success\030\001 \001(\010\022c\n\014fai" +
+      "lure_type\030\002 \001(\0162M.android_studio.AdbUsag" +
+      "eEvent.JdwpProcessPropertiesCollectorEve" +
+      "nt.FailureType\022\037\n\027previously_failed_coun" +
+      "t\030\003 \001(\005\022l\n\025previous_failure_type\030\004 \001(\0162M" +
+      ".android_studio.AdbUsageEvent.JdwpProces" +
+      "sPropertiesCollectorEvent.FailureType\"\232\001" +
+      "\n\013FailureType\022\034\n\030FAILURE_TYPE_UNSPECIFIE" +
+      "D\020\000\022\017\n\013NO_RESPONSE\020\001\022\034\n\030CLOSED_CHANNEL_E" +
+      "XCEPTION\020\002\022\033\n\027CONNECTION_CLOSED_ERROR\020\003\022" +
+      "\020\n\014IO_EXCEPTION\020\005\022\017\n\013OTHER_ERROR\020\004B\007\n\005ev" +
+      "ent\"g\n\025KotlinSupportDeclined\022N\n\021template" +
+      "_renderer\030\001 \001(\01623.android_studio.Android" +
+      "StudioEvent.TemplateRenderer\"\362\002\n\025DeviceS" +
+      "creenshotEvent\022E\n\013device_type\030\001 \001(\01620.an" +
+      "droid_studio.DeviceScreenshotEvent.Devic" +
+      "eType\022Q\n\021decoration_option\030\002 \001(\01626.andro" +
+      "id_studio.DeviceScreenshotEvent.Decorati" +
+      "onOption\"B\n\nDeviceType\022\027\n\023UNKNOWN_DEVICE" +
+      "_TYPE\020\000\022\t\n\005PHONE\020\001\022\010\n\004WEAR\020\002\022\006\n\002TV\020\003\"{\n\020" +
+      "DecorationOption\022\035\n\031UNKNOWN_DECORATION_O" +
+      "PTION\020\000\022\017\n\013RECTANGULAR\020\001\022\026\n\022DISPLAY_SHAP" +
+      "E_CLIP\020\002\022\023\n\017PLAY_COMPATIBLE\020\003\022\n\n\006FRAMED\020" +
+      "\004\"\232\001\n\022EditorNotification\022N\n\021notification" +
+      "_type\030\001 \001(\01623.android_studio.EditorNotif" +
+      "ication.NotificationType\"4\n\020Notification" +
+      "Type\022\013\n\007UNKNOWN\020\000\022\023\n\017ESSENTIALS_MODE\020\001\"\273" +
+      "\004\n\rDebuggerEvent\0220\n\004type\030\001 \001(\0162\".android" +
+      "_studio.DebuggerEvent.Type\022G\n\020breakpoint" +
+      "_added\030\002 \001(\0132-.android_studio.DebuggerEv" +
+      "ent.BreakpointAdded\022L\n\023frames_view_updat" +
+      "ed\030\003 \001(\0132/.android_studio.DebuggerEvent." +
+      "FramesViewUpdated\032H\n\017BreakpointAdded\022\014\n\004" +
+      "type\030\001 \001(\t\022\023\n\013plugin_type\030\002 \001(\t\022\022\n\nin_se" +
+      "ssion\030\003 \001(\010\032\314\001\n\021FramesViewUpdated\022\023\n\013dur" +
+      "ation_ms\030\001 \001(\004\022\024\n\014total_frames\030\002 \001(\005\022U\n\017" +
+      "file_type_infos\030\003 \003(\0132<.android_studio.D" +
+      "ebuggerEvent.FramesViewUpdated.FileTypeI" +
+      "nfo\0325\n\014FileTypeInfo\022\021\n\tfile_type\030\001 \001(\t\022\022" +
+      "\n\nnum_frames\030\002 \001(\005\"H\n\004Type\022\013\n\007UNKNOWN\020\000\022" +
+      "\032\n\026BREAKPOINT_ADDED_EVENT\020\001\022\027\n\023FRAMES_VI" +
+      "EW_UPDATED\020\002\"\317\002\n\016SoongSyncStats\0227\n\007trigg" +
+      "er\030\001 \001(\0162&.android_studio.SoongSyncStats" +
+      ".Trigger\0225\n\006status\030\002 \001(\0162%.android_studi" +
+      "o.SoongSyncStats.Status\022\025\n\rtotal_time_ms" +
+      "\030\003 \001(\003\022\024\n\014lunch_target\030\004 \001(\t\022\024\n\014module_p" +
+      "aths\030\005 \003(\t\"F\n\007Trigger\022\023\n\017TRIGGER_UNKNOWN" +
+      "\020\000\022\020\n\014PROJECT_OPEN\020\001\022\024\n\020USER_SYNC_ACTION" +
+      "\020\002\"B\n\006Status\022\022\n\016STATUS_UNKNOWN\020\000\022\013\n\007SUCC" +
+      "ESS\020\001\022\010\n\004FAIL\020\002\022\r\n\tCANCELLED\020\003\"\202\002\n\023Intel" +
+      "liJNewUISwitch\022G\n\rswitch_source\030\001 \001(\01620." +
+      "android_studio.IntelliJNewUISwitch.Switc" +
+      "hSource\022\016\n\006new_ui\030\002 \001(\010\"\221\001\n\014SwitchSource" +
+      "\022\022\n\016SOURCE_UNKNOWN\020\000\022\030\n\024ENABLE_NEW_UI_AC" +
+      "TION\020\001\022\031\n\025DISABLE_NEW_UI_ACTION\020\002\022\021\n\rWEL" +
+      "COME_PROMO\020\003\022\022\n\016WHATS_NEW_PAGE\020\004\022\021\n\rSETT" +
+      "INGS_PAGE\020\005\"&\n\023EssentialsModeEvent\022\017\n\007en" +
+      "abled\030\001 \001(\010\"5\n\024LintTooltipLinkEvent\022\020\n\010i" +
+      "ssue_id\030\001 \001(\t\022\013\n\003url\030\002 \001(\t\"\321\001\n\032RenderSec" +
+      "urityManagerEvent\022=\n\004type\030\001 \001(\0162/.androi" +
+      "d_studio.RenderSecurityManagerEvent.Type" +
+      "\022\020\n\010resource\030\002 \001(\t\"b\n\004Type\022\020\n\014TYPE_UNKNO" +
+      "WN\020\000\022\021\n\rUSER_DISABLED\020\001\022\031\n\025RESOURCE_USAG" +
+      "E_DENIED\020\002\022\032\n\026RESOURCE_USAGE_WARNING\020\003*\237" +
+      "\001\n\025EmulatorSnapshotFlags\022\027\n\023SNAPSHOT_FLA" +
+      "GS_NONE\020\000\022%\n!SNAPSHOT_FLAGS_RAM_COMPRESS" +
+      "ED_BIT\020\001\022*\n&SNAPSHOT_FLAGS_TEXTURES_COMP" +
+      "RESSED_BIT\020\002\022\032\n\026SNAPSHOT_FLAGS_HDD_BIT\020\003" +
+      "*\254\002\n\031EmulatorSnapshotSaveState\022+\n\'EMULAT" +
+      "OR_SNAPSHOT_SAVE_SUCCEEDED_NORMAL\020\000\022!\n\035E" +
+      "MULATOR_SNAPSHOT_SAVE_FAILED\020\001\022.\n*EMULAT" +
+      "OR_SNAPSHOT_SAVE_SKIPPED_UNSUPPORTED\020\002\022-" +
+      "\n)EMULATOR_SNAPSHOT_SAVE_SKIPPED_NOT_BOO" +
+      "TED\020\003\022.\n*EMULATOR_SNAPSHOT_SAVE_SKIPPED_" +
+      "NO_SNAPSHOT\020\004\0220\n,EMULATOR_SNAPSHOT_SAVE_" +
+      "SKIPPED_DISK_PRESSURE\020\005*\215\002\n\031EmulatorSnap" +
+      "shotLoadState\022+\n\'EMULATOR_SNAPSHOT_LOAD_" +
+      "SUCCEEDED_NORMAL\020\000\022!\n\035EMULATOR_SNAPSHOT_" +
+      "LOAD_FAILED\020\001\022.\n*EMULATOR_SNAPSHOT_LOAD_" +
+      "SKIPPED_UNSUPPORTED\020\002\022&\n\"EMULATOR_SNAPSH" +
+      "OT_LOAD_NO_SNAPSHOT\020\003\022\'\n#EMULATOR_SNAPSH" +
+      "OT_LOAD_OLD_SNAPSHOT\020\004\022\037\n\033EMULATOR_SNAPS" +
+      "HOT_LOAD_HUNG\020\005*\335\n\n\035EmulatorSnapshotFail" +
+      "ureReason\0220\n,EMULATOR_SNAPSHOT_FAILURE_R" +
+      "EASON_UNSPECIFIED\020\000\0223\n/EMULATOR_SNAPSHOT" +
+      "_FAILURE_REASON_CORRUPTED_DATA\020\001\0223\n/EMUL" +
+      "ATOR_SNAPSHOT_FAILURE_REASON_NO_SNAPSHOT" +
+      "_PB\020\002\0224\n0EMULATOR_SNAPSHOT_FAILURE_REASO" +
+      "N_BAD_SNAPSHOT_PB\020\003\0229\n5EMULATOR_SNAPSHOT" +
+      "_FAILURE_REASON_INCOMPATIBLE_VERSION\020\004\0220" +
+      "\n,EMULATOR_SNAPSHOT_FAILURE_REASON_NO_RA" +
+      "M_FILE\020\005\0225\n1EMULATOR_SNAPSHOT_FAILURE_RE" +
+      "ASON_NO_TEXTURES_FILE\020\006\022<\n8EMULATOR_SNAP" +
+      "SHOT_FAILURE_REASON_SNAPSHOTS_NOT_SUPPOR" +
+      "TED\020\007\022?\n:EMULATOR_SNAPSHOT_FAILURE_REASO" +
+      "N_UNRECOVERABLE_ERROR_LIMIT\020\220N\022:\n5EMULAT" +
+      "OR_SNAPSHOT_FAILURE_REASON_NO_SNAPSHOT_I" +
+      "N_IMAGE\020\221N\022E\n@EMULATOR_SNAPSHOT_FAILURE_" +
+      "REASON_CONFIG_MISMATCH_HOST_HYPERVISOR\020\222" +
+      "N\022>\n9EMULATOR_SNAPSHOT_FAILURE_REASON_CO" +
+      "NFIG_MISMATCH_HOST_GPU\020\223N\022>\n9EMULATOR_SN" +
+      "APSHOT_FAILURE_REASON_CONFIG_MISMATCH_RE" +
+      "NDERER\020\224N\022>\n9EMULATOR_SNAPSHOT_FAILURE_R" +
+      "EASON_CONFIG_MISMATCH_FEATURES\020\225N\0229\n4EMU" +
+      "LATOR_SNAPSHOT_FAILURE_REASON_CONFIG_MIS" +
+      "MATCH_AVD\020\226N\022:\n5EMULATOR_SNAPSHOT_FAILUR" +
+      "E_REASON_SYSTEM_IMAGE_CHANGED\020\227N\022=\n7EMUL" +
+      "ATOR_SNAPSHOT_FAILURE_REASON_VALIDATION_" +
+      "ERROR_LIMIT\020\240\234\001\0225\n/EMULATOR_SNAPSHOT_FAI" +
+      "LURE_REASON_INTERNAL_ERROR\020\241\234\001\022>\n8EMULAT" +
+      "OR_SNAPSHOT_FAILURE_REASON_EMULATION_ENG" +
+      "INE_FAILED\020\242\234\001\0221\n+EMULATOR_SNAPSHOT_FAIL" +
+      "URE_REASON_RAM_FAILED\020\243\234\001\0226\n0EMULATOR_SN" +
+      "APSHOT_FAILURE_REASON_TEXTURES_FAILED\020\244\234" +
+      "\001\0222\n,EMULATOR_SNAPSHOT_FAILURE_REASON_AD" +
+      "B_OFFLINE\020\245\234\001\0228\n2EMULATOR_SNAPSHOT_FAILU" +
+      "RE_REASON_IN_PROGRESS_LIMIT\020\260\352\001*[\n\014Searc" +
+      "hOption\022\031\n\025UNKNOWN_SEARCH_OPTION\020\000\022\010\n\004NO" +
+      "NE\020\001\022\024\n\020MULTIPLE_MATCHES\020\002\022\020\n\014SINGLE_MAT" +
+      "CH\020\003*\316\003\n\016EditorFileType\022\013\n\007UNKNOWN\020\000\022\010\n\004" +
+      "JAVA\020\001\022\n\n\006KOTLIN\020\002\022\007\n\003XML\020\003\022\n\n\006GROOVY\020\004\022" +
+      "\016\n\nPROPERTIES\020\005\022\010\n\004JSON\020\006\022\021\n\rKOTLIN_SCRI" +
+      "PT\020\007\022\n\n\006NATIVE\020\010\022\020\n\014XML_MANIFEST\020\t\022\020\n\014XM" +
+      "L_RES_ANIM\020\n\022\024\n\020XML_RES_ANIMATOR\020\013\022\021\n\rXM" +
+      "L_RES_COLOR\020\014\022\024\n\020XML_RES_DRAWABLE\020\r\022\020\n\014X" +
+      "ML_RES_FONT\020\016\022\030\n\024XML_RES_INTERPOLATOR\020\017\022" +
+      "\022\n\016XML_RES_LAYOUT\020\020\022\020\n\014XML_RES_MENU\020\021\022\022\n" +
+      "\016XML_RES_MIPMAP\020\022\022\026\n\022XML_RES_NAVIGATION\020" +
+      "\023\022\017\n\013XML_RES_RAW\020\024\022\026\n\022XML_RES_TRANSITION" +
+      "\020\025\022\022\n\016XML_RES_VALUES\020\026\022\017\n\013XML_RES_XML\020\027\022" +
+      "\022\n\016KOTLIN_COMPOSE\020\030\022\010\n\004TOML\020\031B=\n%com.goo" +
+      "gle.wireless.android.sdk.statsB\022AndroidS" +
+      "tudioStatsP\001"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
