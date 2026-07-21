@@ -2548,7 +2548,7 @@ private static final long serialVersionUID = 0L;
     SDK_INDEX_LIBRARY_HAS_CRITICAL_ISSUES(252),
     /**
      * <pre>
-     * Library has is marked as outdated in the SDK Index
+     * Library is marked as outdated in the SDK Index
      * </pre>
      *
      * <code>SDK_INDEX_LIBRARY_IS_OUTDATED = 253;</code>
@@ -2556,7 +2556,7 @@ private static final long serialVersionUID = 0L;
     SDK_INDEX_LIBRARY_IS_OUTDATED(253),
     /**
      * <pre>
-     * Library has is marked as non compliant in the SDK Index
+     * Library is marked as non compliant in the SDK Index
      * </pre>
      *
      * <code>SDK_INDEX_LIBRARY_IS_NON_COMPLIANT = 254;</code>
@@ -3060,6 +3060,58 @@ private static final long serialVersionUID = 0L;
      * <code>STARTUP_EVENT = 316;</code>
      */
     STARTUP_EVENT(316),
+    /**
+     * <pre>
+     * Startup performance metrics
+     * </pre>
+     *
+     * <code>STARTUP_PERFORMANCE_FIRST_UI_SHOWN = 317;</code>
+     */
+    STARTUP_PERFORMANCE_FIRST_UI_SHOWN(317),
+    /**
+     * <code>STARTUP_PERFORMANCE_FRAME_BECAME_VISIBLE = 318;</code>
+     */
+    STARTUP_PERFORMANCE_FRAME_BECAME_VISIBLE(318),
+    /**
+     * <code>STARTUP_PERFORMANCE_FRAME_BECAME_INTERACTIVE = 319;</code>
+     */
+    STARTUP_PERFORMANCE_FRAME_BECAME_INTERACTIVE(319),
+    /**
+     * <code>STARTUP_PERFORMANCE_CODE_LOADED_AND_VISIBLE_IN_EDITOR = 320;</code>
+     */
+    STARTUP_PERFORMANCE_CODE_LOADED_AND_VISIBLE_IN_EDITOR(320),
+    /**
+     * <pre>
+     * Event related to UI tools preferences
+     * </pre>
+     *
+     * <code>UI_TOOLS_PREFERENCES = 321;</code>
+     */
+    UI_TOOLS_PREFERENCES(321),
+    /**
+     * <pre>
+     * Library has vulnerability issues in the SDK Index
+     * </pre>
+     *
+     * <code>SDK_INDEX_LIBRARY_HAS_VULNERABILITY_ISSUES = 322;</code>
+     */
+    SDK_INDEX_LIBRARY_HAS_VULNERABILITY_ISSUES(322),
+    /**
+     * <pre>
+     * Event used to track SDK Index stats for a project
+     * </pre>
+     *
+     * <code>SDK_INDEX_PROJECT_STATS = 323;</code>
+     */
+    SDK_INDEX_PROJECT_STATS(323),
+    /**
+     * <pre>
+     * Soong run event (in ASfP)
+     * </pre>
+     *
+     * <code>SOONG_RUN_EVENT = 324;</code>
+     */
+    SOONG_RUN_EVENT(324),
     ;
 
     /**
@@ -4914,7 +4966,7 @@ private static final long serialVersionUID = 0L;
     public static final int SDK_INDEX_LIBRARY_HAS_CRITICAL_ISSUES_VALUE = 252;
     /**
      * <pre>
-     * Library has is marked as outdated in the SDK Index
+     * Library is marked as outdated in the SDK Index
      * </pre>
      *
      * <code>SDK_INDEX_LIBRARY_IS_OUTDATED = 253;</code>
@@ -4922,7 +4974,7 @@ private static final long serialVersionUID = 0L;
     public static final int SDK_INDEX_LIBRARY_IS_OUTDATED_VALUE = 253;
     /**
      * <pre>
-     * Library has is marked as non compliant in the SDK Index
+     * Library is marked as non compliant in the SDK Index
      * </pre>
      *
      * <code>SDK_INDEX_LIBRARY_IS_NON_COMPLIANT = 254;</code>
@@ -5426,6 +5478,58 @@ private static final long serialVersionUID = 0L;
      * <code>STARTUP_EVENT = 316;</code>
      */
     public static final int STARTUP_EVENT_VALUE = 316;
+    /**
+     * <pre>
+     * Startup performance metrics
+     * </pre>
+     *
+     * <code>STARTUP_PERFORMANCE_FIRST_UI_SHOWN = 317;</code>
+     */
+    public static final int STARTUP_PERFORMANCE_FIRST_UI_SHOWN_VALUE = 317;
+    /**
+     * <code>STARTUP_PERFORMANCE_FRAME_BECAME_VISIBLE = 318;</code>
+     */
+    public static final int STARTUP_PERFORMANCE_FRAME_BECAME_VISIBLE_VALUE = 318;
+    /**
+     * <code>STARTUP_PERFORMANCE_FRAME_BECAME_INTERACTIVE = 319;</code>
+     */
+    public static final int STARTUP_PERFORMANCE_FRAME_BECAME_INTERACTIVE_VALUE = 319;
+    /**
+     * <code>STARTUP_PERFORMANCE_CODE_LOADED_AND_VISIBLE_IN_EDITOR = 320;</code>
+     */
+    public static final int STARTUP_PERFORMANCE_CODE_LOADED_AND_VISIBLE_IN_EDITOR_VALUE = 320;
+    /**
+     * <pre>
+     * Event related to UI tools preferences
+     * </pre>
+     *
+     * <code>UI_TOOLS_PREFERENCES = 321;</code>
+     */
+    public static final int UI_TOOLS_PREFERENCES_VALUE = 321;
+    /**
+     * <pre>
+     * Library has vulnerability issues in the SDK Index
+     * </pre>
+     *
+     * <code>SDK_INDEX_LIBRARY_HAS_VULNERABILITY_ISSUES = 322;</code>
+     */
+    public static final int SDK_INDEX_LIBRARY_HAS_VULNERABILITY_ISSUES_VALUE = 322;
+    /**
+     * <pre>
+     * Event used to track SDK Index stats for a project
+     * </pre>
+     *
+     * <code>SDK_INDEX_PROJECT_STATS = 323;</code>
+     */
+    public static final int SDK_INDEX_PROJECT_STATS_VALUE = 323;
+    /**
+     * <pre>
+     * Soong run event (in ASfP)
+     * </pre>
+     *
+     * <code>SOONG_RUN_EVENT = 324;</code>
+     */
+    public static final int SOONG_RUN_EVENT_VALUE = 324;
 
 
     public final int getNumber() {
@@ -5760,6 +5864,14 @@ private static final long serialVersionUID = 0L;
         case 314: return WEAR_TILE_ANIMATION_TOOLING;
         case 315: return BACKUP_USAGE;
         case 316: return STARTUP_EVENT;
+        case 317: return STARTUP_PERFORMANCE_FIRST_UI_SHOWN;
+        case 318: return STARTUP_PERFORMANCE_FRAME_BECAME_VISIBLE;
+        case 319: return STARTUP_PERFORMANCE_FRAME_BECAME_INTERACTIVE;
+        case 320: return STARTUP_PERFORMANCE_CODE_LOADED_AND_VISIBLE_IN_EDITOR;
+        case 321: return UI_TOOLS_PREFERENCES;
+        case 322: return SDK_INDEX_LIBRARY_HAS_VULNERABILITY_ISSUES;
+        case 323: return SDK_INDEX_PROJECT_STATS;
+        case 324: return SOONG_RUN_EVENT;
         default: return null;
       }
     }
@@ -20313,7 +20425,8 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * set when kind is SDK_INDEX_LIBRARY_HAS_CRITICAL_ISSUES,
-   * SDK_INDEX_LIBRARY_IS_OUTDATED or SDK_INDEX_LIBRARY_IS_NON_COMPLIANT
+   * SDK_INDEX_LIBRARY_IS_OUTDATED, SDK_INDEX_LIBRARY_IS_NON_COMPLIANT
+   * or SDK_INDEX_LIBRARY_HAS_VULNERABILITIES
    * </pre>
    *
    * <code>optional .android_studio.SdkIndexLibraryDetails sdk_index_library_details = 142 [lazy = true];</code>
@@ -20326,7 +20439,8 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * set when kind is SDK_INDEX_LIBRARY_HAS_CRITICAL_ISSUES,
-   * SDK_INDEX_LIBRARY_IS_OUTDATED or SDK_INDEX_LIBRARY_IS_NON_COMPLIANT
+   * SDK_INDEX_LIBRARY_IS_OUTDATED, SDK_INDEX_LIBRARY_IS_NON_COMPLIANT
+   * or SDK_INDEX_LIBRARY_HAS_VULNERABILITIES
    * </pre>
    *
    * <code>optional .android_studio.SdkIndexLibraryDetails sdk_index_library_details = 142 [lazy = true];</code>
@@ -20339,7 +20453,8 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * set when kind is SDK_INDEX_LIBRARY_HAS_CRITICAL_ISSUES,
-   * SDK_INDEX_LIBRARY_IS_OUTDATED or SDK_INDEX_LIBRARY_IS_NON_COMPLIANT
+   * SDK_INDEX_LIBRARY_IS_OUTDATED, SDK_INDEX_LIBRARY_IS_NON_COMPLIANT
+   * or SDK_INDEX_LIBRARY_HAS_VULNERABILITIES
    * </pre>
    *
    * <code>optional .android_studio.SdkIndexLibraryDetails sdk_index_library_details = 142 [lazy = true];</code>
@@ -22524,6 +22639,272 @@ private static final long serialVersionUID = 0L;
     return startupEvent_ == null ? com.google.wireless.android.sdk.stats.StartupEvent.getDefaultInstance() : startupEvent_;
   }
 
+  public static final int STARTUP_PERFORMANCE_FIRST_UI_SHOWN_EVENT_FIELD_NUMBER = 200;
+  private com.google.wireless.android.sdk.stats.StartupPerformanceFirstUiShownEvent startupPerformanceFirstUiShownEvent_;
+  /**
+   * <pre>
+   * set when kind = STARTUP_PERFORMANCE_FIRST_UI_SHOWN
+   * </pre>
+   *
+   * <code>optional .android_studio.StartupPerformanceFirstUiShownEvent startup_performance_first_ui_shown_event = 200 [lazy = true];</code>
+   * @return Whether the startupPerformanceFirstUiShownEvent field is set.
+   */
+  @java.lang.Override
+  public boolean hasStartupPerformanceFirstUiShownEvent() {
+    return ((bitField6_ & 0x00000002) != 0);
+  }
+  /**
+   * <pre>
+   * set when kind = STARTUP_PERFORMANCE_FIRST_UI_SHOWN
+   * </pre>
+   *
+   * <code>optional .android_studio.StartupPerformanceFirstUiShownEvent startup_performance_first_ui_shown_event = 200 [lazy = true];</code>
+   * @return The startupPerformanceFirstUiShownEvent.
+   */
+  @java.lang.Override
+  public com.google.wireless.android.sdk.stats.StartupPerformanceFirstUiShownEvent getStartupPerformanceFirstUiShownEvent() {
+    return startupPerformanceFirstUiShownEvent_ == null ? com.google.wireless.android.sdk.stats.StartupPerformanceFirstUiShownEvent.getDefaultInstance() : startupPerformanceFirstUiShownEvent_;
+  }
+  /**
+   * <pre>
+   * set when kind = STARTUP_PERFORMANCE_FIRST_UI_SHOWN
+   * </pre>
+   *
+   * <code>optional .android_studio.StartupPerformanceFirstUiShownEvent startup_performance_first_ui_shown_event = 200 [lazy = true];</code>
+   */
+  @java.lang.Override
+  public com.google.wireless.android.sdk.stats.StartupPerformanceFirstUiShownEventOrBuilder getStartupPerformanceFirstUiShownEventOrBuilder() {
+    return startupPerformanceFirstUiShownEvent_ == null ? com.google.wireless.android.sdk.stats.StartupPerformanceFirstUiShownEvent.getDefaultInstance() : startupPerformanceFirstUiShownEvent_;
+  }
+
+  public static final int STARTUP_PERFORMANCE_FRAME_BECAME_VISIBLE_EVENT_FIELD_NUMBER = 201;
+  private com.google.wireless.android.sdk.stats.StartupPerformanceFrameBecameVisibleEvent startupPerformanceFrameBecameVisibleEvent_;
+  /**
+   * <pre>
+   * set when kind = STARTUP_PERFORMANCE_FRAME_BECAME_VISIBLE
+   * </pre>
+   *
+   * <code>optional .android_studio.StartupPerformanceFrameBecameVisibleEvent startup_performance_frame_became_visible_event = 201 [lazy = true];</code>
+   * @return Whether the startupPerformanceFrameBecameVisibleEvent field is set.
+   */
+  @java.lang.Override
+  public boolean hasStartupPerformanceFrameBecameVisibleEvent() {
+    return ((bitField6_ & 0x00000004) != 0);
+  }
+  /**
+   * <pre>
+   * set when kind = STARTUP_PERFORMANCE_FRAME_BECAME_VISIBLE
+   * </pre>
+   *
+   * <code>optional .android_studio.StartupPerformanceFrameBecameVisibleEvent startup_performance_frame_became_visible_event = 201 [lazy = true];</code>
+   * @return The startupPerformanceFrameBecameVisibleEvent.
+   */
+  @java.lang.Override
+  public com.google.wireless.android.sdk.stats.StartupPerformanceFrameBecameVisibleEvent getStartupPerformanceFrameBecameVisibleEvent() {
+    return startupPerformanceFrameBecameVisibleEvent_ == null ? com.google.wireless.android.sdk.stats.StartupPerformanceFrameBecameVisibleEvent.getDefaultInstance() : startupPerformanceFrameBecameVisibleEvent_;
+  }
+  /**
+   * <pre>
+   * set when kind = STARTUP_PERFORMANCE_FRAME_BECAME_VISIBLE
+   * </pre>
+   *
+   * <code>optional .android_studio.StartupPerformanceFrameBecameVisibleEvent startup_performance_frame_became_visible_event = 201 [lazy = true];</code>
+   */
+  @java.lang.Override
+  public com.google.wireless.android.sdk.stats.StartupPerformanceFrameBecameVisibleEventOrBuilder getStartupPerformanceFrameBecameVisibleEventOrBuilder() {
+    return startupPerformanceFrameBecameVisibleEvent_ == null ? com.google.wireless.android.sdk.stats.StartupPerformanceFrameBecameVisibleEvent.getDefaultInstance() : startupPerformanceFrameBecameVisibleEvent_;
+  }
+
+  public static final int STARTUP_PERFORMANCE_FRAME_BECAME_INTERACTIVE_EVENT_FIELD_NUMBER = 202;
+  private com.google.wireless.android.sdk.stats.StartupPerformanceFrameBecameInteractiveEvent startupPerformanceFrameBecameInteractiveEvent_;
+  /**
+   * <pre>
+   * set when kind = STARTUP_PERFORMANCE_FRAME_BECAME_INTERACTIVE
+   * </pre>
+   *
+   * <code>optional .android_studio.StartupPerformanceFrameBecameInteractiveEvent startup_performance_frame_became_interactive_event = 202 [lazy = true];</code>
+   * @return Whether the startupPerformanceFrameBecameInteractiveEvent field is set.
+   */
+  @java.lang.Override
+  public boolean hasStartupPerformanceFrameBecameInteractiveEvent() {
+    return ((bitField6_ & 0x00000008) != 0);
+  }
+  /**
+   * <pre>
+   * set when kind = STARTUP_PERFORMANCE_FRAME_BECAME_INTERACTIVE
+   * </pre>
+   *
+   * <code>optional .android_studio.StartupPerformanceFrameBecameInteractiveEvent startup_performance_frame_became_interactive_event = 202 [lazy = true];</code>
+   * @return The startupPerformanceFrameBecameInteractiveEvent.
+   */
+  @java.lang.Override
+  public com.google.wireless.android.sdk.stats.StartupPerformanceFrameBecameInteractiveEvent getStartupPerformanceFrameBecameInteractiveEvent() {
+    return startupPerformanceFrameBecameInteractiveEvent_ == null ? com.google.wireless.android.sdk.stats.StartupPerformanceFrameBecameInteractiveEvent.getDefaultInstance() : startupPerformanceFrameBecameInteractiveEvent_;
+  }
+  /**
+   * <pre>
+   * set when kind = STARTUP_PERFORMANCE_FRAME_BECAME_INTERACTIVE
+   * </pre>
+   *
+   * <code>optional .android_studio.StartupPerformanceFrameBecameInteractiveEvent startup_performance_frame_became_interactive_event = 202 [lazy = true];</code>
+   */
+  @java.lang.Override
+  public com.google.wireless.android.sdk.stats.StartupPerformanceFrameBecameInteractiveEventOrBuilder getStartupPerformanceFrameBecameInteractiveEventOrBuilder() {
+    return startupPerformanceFrameBecameInteractiveEvent_ == null ? com.google.wireless.android.sdk.stats.StartupPerformanceFrameBecameInteractiveEvent.getDefaultInstance() : startupPerformanceFrameBecameInteractiveEvent_;
+  }
+
+  public static final int STARTUP_PERFORMANCE_CODE_LOADED_AND_VISIBLE_IN_EDITOR_FIELD_NUMBER = 203;
+  private com.google.wireless.android.sdk.stats.StartupPerformanceCodeLoadedAndVisibleInEditor startupPerformanceCodeLoadedAndVisibleInEditor_;
+  /**
+   * <pre>
+   * set when kind = STARTUP_PERFORMANCE_CODE_LOADED_AND_VISIBLE_IN_EDITOR
+   * </pre>
+   *
+   * <code>optional .android_studio.StartupPerformanceCodeLoadedAndVisibleInEditor startup_performance_code_loaded_and_visible_in_editor = 203 [lazy = true];</code>
+   * @return Whether the startupPerformanceCodeLoadedAndVisibleInEditor field is set.
+   */
+  @java.lang.Override
+  public boolean hasStartupPerformanceCodeLoadedAndVisibleInEditor() {
+    return ((bitField6_ & 0x00000010) != 0);
+  }
+  /**
+   * <pre>
+   * set when kind = STARTUP_PERFORMANCE_CODE_LOADED_AND_VISIBLE_IN_EDITOR
+   * </pre>
+   *
+   * <code>optional .android_studio.StartupPerformanceCodeLoadedAndVisibleInEditor startup_performance_code_loaded_and_visible_in_editor = 203 [lazy = true];</code>
+   * @return The startupPerformanceCodeLoadedAndVisibleInEditor.
+   */
+  @java.lang.Override
+  public com.google.wireless.android.sdk.stats.StartupPerformanceCodeLoadedAndVisibleInEditor getStartupPerformanceCodeLoadedAndVisibleInEditor() {
+    return startupPerformanceCodeLoadedAndVisibleInEditor_ == null ? com.google.wireless.android.sdk.stats.StartupPerformanceCodeLoadedAndVisibleInEditor.getDefaultInstance() : startupPerformanceCodeLoadedAndVisibleInEditor_;
+  }
+  /**
+   * <pre>
+   * set when kind = STARTUP_PERFORMANCE_CODE_LOADED_AND_VISIBLE_IN_EDITOR
+   * </pre>
+   *
+   * <code>optional .android_studio.StartupPerformanceCodeLoadedAndVisibleInEditor startup_performance_code_loaded_and_visible_in_editor = 203 [lazy = true];</code>
+   */
+  @java.lang.Override
+  public com.google.wireless.android.sdk.stats.StartupPerformanceCodeLoadedAndVisibleInEditorOrBuilder getStartupPerformanceCodeLoadedAndVisibleInEditorOrBuilder() {
+    return startupPerformanceCodeLoadedAndVisibleInEditor_ == null ? com.google.wireless.android.sdk.stats.StartupPerformanceCodeLoadedAndVisibleInEditor.getDefaultInstance() : startupPerformanceCodeLoadedAndVisibleInEditor_;
+  }
+
+  public static final int UI_TOOLS_PREFERENCES_EVENT_FIELD_NUMBER = 204;
+  private com.google.wireless.android.sdk.stats.UiToolsPreferencesEvent uiToolsPreferencesEvent_;
+  /**
+   * <pre>
+   * set when kind = UI_TOOLS_PREFERENCES
+   * </pre>
+   *
+   * <code>optional .android_studio.UiToolsPreferencesEvent ui_tools_preferences_event = 204 [lazy = true];</code>
+   * @return Whether the uiToolsPreferencesEvent field is set.
+   */
+  @java.lang.Override
+  public boolean hasUiToolsPreferencesEvent() {
+    return ((bitField6_ & 0x00000020) != 0);
+  }
+  /**
+   * <pre>
+   * set when kind = UI_TOOLS_PREFERENCES
+   * </pre>
+   *
+   * <code>optional .android_studio.UiToolsPreferencesEvent ui_tools_preferences_event = 204 [lazy = true];</code>
+   * @return The uiToolsPreferencesEvent.
+   */
+  @java.lang.Override
+  public com.google.wireless.android.sdk.stats.UiToolsPreferencesEvent getUiToolsPreferencesEvent() {
+    return uiToolsPreferencesEvent_ == null ? com.google.wireless.android.sdk.stats.UiToolsPreferencesEvent.getDefaultInstance() : uiToolsPreferencesEvent_;
+  }
+  /**
+   * <pre>
+   * set when kind = UI_TOOLS_PREFERENCES
+   * </pre>
+   *
+   * <code>optional .android_studio.UiToolsPreferencesEvent ui_tools_preferences_event = 204 [lazy = true];</code>
+   */
+  @java.lang.Override
+  public com.google.wireless.android.sdk.stats.UiToolsPreferencesEventOrBuilder getUiToolsPreferencesEventOrBuilder() {
+    return uiToolsPreferencesEvent_ == null ? com.google.wireless.android.sdk.stats.UiToolsPreferencesEvent.getDefaultInstance() : uiToolsPreferencesEvent_;
+  }
+
+  public static final int SDK_INDEX_PROJECT_STATS_FIELD_NUMBER = 205;
+  private com.google.wireless.android.sdk.stats.SdkIndexProjectStats sdkIndexProjectStats_;
+  /**
+   * <pre>
+   * set when kind = SDK_INDEX_PROJECT_STATS
+   * </pre>
+   *
+   * <code>optional .android_studio.SdkIndexProjectStats sdk_index_project_stats = 205 [lazy = true];</code>
+   * @return Whether the sdkIndexProjectStats field is set.
+   */
+  @java.lang.Override
+  public boolean hasSdkIndexProjectStats() {
+    return ((bitField6_ & 0x00000040) != 0);
+  }
+  /**
+   * <pre>
+   * set when kind = SDK_INDEX_PROJECT_STATS
+   * </pre>
+   *
+   * <code>optional .android_studio.SdkIndexProjectStats sdk_index_project_stats = 205 [lazy = true];</code>
+   * @return The sdkIndexProjectStats.
+   */
+  @java.lang.Override
+  public com.google.wireless.android.sdk.stats.SdkIndexProjectStats getSdkIndexProjectStats() {
+    return sdkIndexProjectStats_ == null ? com.google.wireless.android.sdk.stats.SdkIndexProjectStats.getDefaultInstance() : sdkIndexProjectStats_;
+  }
+  /**
+   * <pre>
+   * set when kind = SDK_INDEX_PROJECT_STATS
+   * </pre>
+   *
+   * <code>optional .android_studio.SdkIndexProjectStats sdk_index_project_stats = 205 [lazy = true];</code>
+   */
+  @java.lang.Override
+  public com.google.wireless.android.sdk.stats.SdkIndexProjectStatsOrBuilder getSdkIndexProjectStatsOrBuilder() {
+    return sdkIndexProjectStats_ == null ? com.google.wireless.android.sdk.stats.SdkIndexProjectStats.getDefaultInstance() : sdkIndexProjectStats_;
+  }
+
+  public static final int SOONG_RUN_EVENT_FIELD_NUMBER = 206;
+  private com.google.wireless.android.sdk.stats.SoongRunEvent soongRunEvent_;
+  /**
+   * <pre>
+   * set when kind = SOONG_RUN_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.SoongRunEvent soong_run_event = 206 [lazy = true];</code>
+   * @return Whether the soongRunEvent field is set.
+   */
+  @java.lang.Override
+  public boolean hasSoongRunEvent() {
+    return ((bitField6_ & 0x00000080) != 0);
+  }
+  /**
+   * <pre>
+   * set when kind = SOONG_RUN_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.SoongRunEvent soong_run_event = 206 [lazy = true];</code>
+   * @return The soongRunEvent.
+   */
+  @java.lang.Override
+  public com.google.wireless.android.sdk.stats.SoongRunEvent getSoongRunEvent() {
+    return soongRunEvent_ == null ? com.google.wireless.android.sdk.stats.SoongRunEvent.getDefaultInstance() : soongRunEvent_;
+  }
+  /**
+   * <pre>
+   * set when kind = SOONG_RUN_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.SoongRunEvent soong_run_event = 206 [lazy = true];</code>
+   */
+  @java.lang.Override
+  public com.google.wireless.android.sdk.stats.SoongRunEventOrBuilder getSoongRunEventOrBuilder() {
+    return soongRunEvent_ == null ? com.google.wireless.android.sdk.stats.SoongRunEvent.getDefaultInstance() : soongRunEvent_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -23134,6 +23515,27 @@ private static final long serialVersionUID = 0L;
     }
     if (((bitField6_ & 0x00000001) != 0)) {
       output.writeMessage(199, getStartupEvent());
+    }
+    if (((bitField6_ & 0x00000002) != 0)) {
+      output.writeMessage(200, getStartupPerformanceFirstUiShownEvent());
+    }
+    if (((bitField6_ & 0x00000004) != 0)) {
+      output.writeMessage(201, getStartupPerformanceFrameBecameVisibleEvent());
+    }
+    if (((bitField6_ & 0x00000008) != 0)) {
+      output.writeMessage(202, getStartupPerformanceFrameBecameInteractiveEvent());
+    }
+    if (((bitField6_ & 0x00000010) != 0)) {
+      output.writeMessage(203, getStartupPerformanceCodeLoadedAndVisibleInEditor());
+    }
+    if (((bitField6_ & 0x00000020) != 0)) {
+      output.writeMessage(204, getUiToolsPreferencesEvent());
+    }
+    if (((bitField6_ & 0x00000040) != 0)) {
+      output.writeMessage(205, getSdkIndexProjectStats());
+    }
+    if (((bitField6_ & 0x00000080) != 0)) {
+      output.writeMessage(206, getSoongRunEvent());
     }
     getUnknownFields().writeTo(output);
   }
@@ -23945,6 +24347,34 @@ private static final long serialVersionUID = 0L;
     if (((bitField6_ & 0x00000001) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(199, getStartupEvent());
+    }
+    if (((bitField6_ & 0x00000002) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(200, getStartupPerformanceFirstUiShownEvent());
+    }
+    if (((bitField6_ & 0x00000004) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(201, getStartupPerformanceFrameBecameVisibleEvent());
+    }
+    if (((bitField6_ & 0x00000008) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(202, getStartupPerformanceFrameBecameInteractiveEvent());
+    }
+    if (((bitField6_ & 0x00000010) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(203, getStartupPerformanceCodeLoadedAndVisibleInEditor());
+    }
+    if (((bitField6_ & 0x00000020) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(204, getUiToolsPreferencesEvent());
+    }
+    if (((bitField6_ & 0x00000040) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(205, getSdkIndexProjectStats());
+    }
+    if (((bitField6_ & 0x00000080) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(206, getSoongRunEvent());
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -24927,6 +25357,41 @@ private static final long serialVersionUID = 0L;
       if (!getStartupEvent()
           .equals(other.getStartupEvent())) return false;
     }
+    if (hasStartupPerformanceFirstUiShownEvent() != other.hasStartupPerformanceFirstUiShownEvent()) return false;
+    if (hasStartupPerformanceFirstUiShownEvent()) {
+      if (!getStartupPerformanceFirstUiShownEvent()
+          .equals(other.getStartupPerformanceFirstUiShownEvent())) return false;
+    }
+    if (hasStartupPerformanceFrameBecameVisibleEvent() != other.hasStartupPerformanceFrameBecameVisibleEvent()) return false;
+    if (hasStartupPerformanceFrameBecameVisibleEvent()) {
+      if (!getStartupPerformanceFrameBecameVisibleEvent()
+          .equals(other.getStartupPerformanceFrameBecameVisibleEvent())) return false;
+    }
+    if (hasStartupPerformanceFrameBecameInteractiveEvent() != other.hasStartupPerformanceFrameBecameInteractiveEvent()) return false;
+    if (hasStartupPerformanceFrameBecameInteractiveEvent()) {
+      if (!getStartupPerformanceFrameBecameInteractiveEvent()
+          .equals(other.getStartupPerformanceFrameBecameInteractiveEvent())) return false;
+    }
+    if (hasStartupPerformanceCodeLoadedAndVisibleInEditor() != other.hasStartupPerformanceCodeLoadedAndVisibleInEditor()) return false;
+    if (hasStartupPerformanceCodeLoadedAndVisibleInEditor()) {
+      if (!getStartupPerformanceCodeLoadedAndVisibleInEditor()
+          .equals(other.getStartupPerformanceCodeLoadedAndVisibleInEditor())) return false;
+    }
+    if (hasUiToolsPreferencesEvent() != other.hasUiToolsPreferencesEvent()) return false;
+    if (hasUiToolsPreferencesEvent()) {
+      if (!getUiToolsPreferencesEvent()
+          .equals(other.getUiToolsPreferencesEvent())) return false;
+    }
+    if (hasSdkIndexProjectStats() != other.hasSdkIndexProjectStats()) return false;
+    if (hasSdkIndexProjectStats()) {
+      if (!getSdkIndexProjectStats()
+          .equals(other.getSdkIndexProjectStats())) return false;
+    }
+    if (hasSoongRunEvent() != other.hasSoongRunEvent()) return false;
+    if (hasSoongRunEvent()) {
+      if (!getSoongRunEvent()
+          .equals(other.getSoongRunEvent())) return false;
+    }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -25736,6 +26201,34 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + STARTUP_EVENT_FIELD_NUMBER;
       hash = (53 * hash) + getStartupEvent().hashCode();
     }
+    if (hasStartupPerformanceFirstUiShownEvent()) {
+      hash = (37 * hash) + STARTUP_PERFORMANCE_FIRST_UI_SHOWN_EVENT_FIELD_NUMBER;
+      hash = (53 * hash) + getStartupPerformanceFirstUiShownEvent().hashCode();
+    }
+    if (hasStartupPerformanceFrameBecameVisibleEvent()) {
+      hash = (37 * hash) + STARTUP_PERFORMANCE_FRAME_BECAME_VISIBLE_EVENT_FIELD_NUMBER;
+      hash = (53 * hash) + getStartupPerformanceFrameBecameVisibleEvent().hashCode();
+    }
+    if (hasStartupPerformanceFrameBecameInteractiveEvent()) {
+      hash = (37 * hash) + STARTUP_PERFORMANCE_FRAME_BECAME_INTERACTIVE_EVENT_FIELD_NUMBER;
+      hash = (53 * hash) + getStartupPerformanceFrameBecameInteractiveEvent().hashCode();
+    }
+    if (hasStartupPerformanceCodeLoadedAndVisibleInEditor()) {
+      hash = (37 * hash) + STARTUP_PERFORMANCE_CODE_LOADED_AND_VISIBLE_IN_EDITOR_FIELD_NUMBER;
+      hash = (53 * hash) + getStartupPerformanceCodeLoadedAndVisibleInEditor().hashCode();
+    }
+    if (hasUiToolsPreferencesEvent()) {
+      hash = (37 * hash) + UI_TOOLS_PREFERENCES_EVENT_FIELD_NUMBER;
+      hash = (53 * hash) + getUiToolsPreferencesEvent().hashCode();
+    }
+    if (hasSdkIndexProjectStats()) {
+      hash = (37 * hash) + SDK_INDEX_PROJECT_STATS_FIELD_NUMBER;
+      hash = (53 * hash) + getSdkIndexProjectStats().hashCode();
+    }
+    if (hasSoongRunEvent()) {
+      hash = (37 * hash) + SOONG_RUN_EVENT_FIELD_NUMBER;
+      hash = (53 * hash) + getSoongRunEvent().hashCode();
+    }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -26040,6 +26533,13 @@ private static final long serialVersionUID = 0L;
         getWearTileAnimationToolingEventFieldBuilder();
         getBackupUsageEventFieldBuilder();
         getStartupEventFieldBuilder();
+        getStartupPerformanceFirstUiShownEventFieldBuilder();
+        getStartupPerformanceFrameBecameVisibleEventFieldBuilder();
+        getStartupPerformanceFrameBecameInteractiveEventFieldBuilder();
+        getStartupPerformanceCodeLoadedAndVisibleInEditorFieldBuilder();
+        getUiToolsPreferencesEventFieldBuilder();
+        getSdkIndexProjectStatsFieldBuilder();
+        getSoongRunEventFieldBuilder();
       }
     }
     @java.lang.Override
@@ -27150,6 +27650,48 @@ private static final long serialVersionUID = 0L;
         startupEventBuilder_.clear();
       }
       bitField6_ = (bitField6_ & ~0x00000040);
+      if (startupPerformanceFirstUiShownEventBuilder_ == null) {
+        startupPerformanceFirstUiShownEvent_ = null;
+      } else {
+        startupPerformanceFirstUiShownEventBuilder_.clear();
+      }
+      bitField6_ = (bitField6_ & ~0x00000080);
+      if (startupPerformanceFrameBecameVisibleEventBuilder_ == null) {
+        startupPerformanceFrameBecameVisibleEvent_ = null;
+      } else {
+        startupPerformanceFrameBecameVisibleEventBuilder_.clear();
+      }
+      bitField6_ = (bitField6_ & ~0x00000100);
+      if (startupPerformanceFrameBecameInteractiveEventBuilder_ == null) {
+        startupPerformanceFrameBecameInteractiveEvent_ = null;
+      } else {
+        startupPerformanceFrameBecameInteractiveEventBuilder_.clear();
+      }
+      bitField6_ = (bitField6_ & ~0x00000200);
+      if (startupPerformanceCodeLoadedAndVisibleInEditorBuilder_ == null) {
+        startupPerformanceCodeLoadedAndVisibleInEditor_ = null;
+      } else {
+        startupPerformanceCodeLoadedAndVisibleInEditorBuilder_.clear();
+      }
+      bitField6_ = (bitField6_ & ~0x00000400);
+      if (uiToolsPreferencesEventBuilder_ == null) {
+        uiToolsPreferencesEvent_ = null;
+      } else {
+        uiToolsPreferencesEventBuilder_.clear();
+      }
+      bitField6_ = (bitField6_ & ~0x00000800);
+      if (sdkIndexProjectStatsBuilder_ == null) {
+        sdkIndexProjectStats_ = null;
+      } else {
+        sdkIndexProjectStatsBuilder_.clear();
+      }
+      bitField6_ = (bitField6_ & ~0x00001000);
+      if (soongRunEventBuilder_ == null) {
+        soongRunEvent_ = null;
+      } else {
+        soongRunEventBuilder_.clear();
+      }
+      bitField6_ = (bitField6_ & ~0x00002000);
       return this;
     }
 
@@ -28696,6 +29238,62 @@ private static final long serialVersionUID = 0L;
         }
         to_bitField6_ |= 0x00000001;
       }
+      if (((from_bitField6_ & 0x00000080) != 0)) {
+        if (startupPerformanceFirstUiShownEventBuilder_ == null) {
+          result.startupPerformanceFirstUiShownEvent_ = startupPerformanceFirstUiShownEvent_;
+        } else {
+          result.startupPerformanceFirstUiShownEvent_ = startupPerformanceFirstUiShownEventBuilder_.build();
+        }
+        to_bitField6_ |= 0x00000002;
+      }
+      if (((from_bitField6_ & 0x00000100) != 0)) {
+        if (startupPerformanceFrameBecameVisibleEventBuilder_ == null) {
+          result.startupPerformanceFrameBecameVisibleEvent_ = startupPerformanceFrameBecameVisibleEvent_;
+        } else {
+          result.startupPerformanceFrameBecameVisibleEvent_ = startupPerformanceFrameBecameVisibleEventBuilder_.build();
+        }
+        to_bitField6_ |= 0x00000004;
+      }
+      if (((from_bitField6_ & 0x00000200) != 0)) {
+        if (startupPerformanceFrameBecameInteractiveEventBuilder_ == null) {
+          result.startupPerformanceFrameBecameInteractiveEvent_ = startupPerformanceFrameBecameInteractiveEvent_;
+        } else {
+          result.startupPerformanceFrameBecameInteractiveEvent_ = startupPerformanceFrameBecameInteractiveEventBuilder_.build();
+        }
+        to_bitField6_ |= 0x00000008;
+      }
+      if (((from_bitField6_ & 0x00000400) != 0)) {
+        if (startupPerformanceCodeLoadedAndVisibleInEditorBuilder_ == null) {
+          result.startupPerformanceCodeLoadedAndVisibleInEditor_ = startupPerformanceCodeLoadedAndVisibleInEditor_;
+        } else {
+          result.startupPerformanceCodeLoadedAndVisibleInEditor_ = startupPerformanceCodeLoadedAndVisibleInEditorBuilder_.build();
+        }
+        to_bitField6_ |= 0x00000010;
+      }
+      if (((from_bitField6_ & 0x00000800) != 0)) {
+        if (uiToolsPreferencesEventBuilder_ == null) {
+          result.uiToolsPreferencesEvent_ = uiToolsPreferencesEvent_;
+        } else {
+          result.uiToolsPreferencesEvent_ = uiToolsPreferencesEventBuilder_.build();
+        }
+        to_bitField6_ |= 0x00000020;
+      }
+      if (((from_bitField6_ & 0x00001000) != 0)) {
+        if (sdkIndexProjectStatsBuilder_ == null) {
+          result.sdkIndexProjectStats_ = sdkIndexProjectStats_;
+        } else {
+          result.sdkIndexProjectStats_ = sdkIndexProjectStatsBuilder_.build();
+        }
+        to_bitField6_ |= 0x00000040;
+      }
+      if (((from_bitField6_ & 0x00002000) != 0)) {
+        if (soongRunEventBuilder_ == null) {
+          result.soongRunEvent_ = soongRunEvent_;
+        } else {
+          result.soongRunEvent_ = soongRunEventBuilder_.build();
+        }
+        to_bitField6_ |= 0x00000080;
+      }
       result.bitField0_ = to_bitField0_;
       result.bitField1_ = to_bitField1_;
       result.bitField2_ = to_bitField2_;
@@ -29451,6 +30049,27 @@ private static final long serialVersionUID = 0L;
       }
       if (other.hasStartupEvent()) {
         mergeStartupEvent(other.getStartupEvent());
+      }
+      if (other.hasStartupPerformanceFirstUiShownEvent()) {
+        mergeStartupPerformanceFirstUiShownEvent(other.getStartupPerformanceFirstUiShownEvent());
+      }
+      if (other.hasStartupPerformanceFrameBecameVisibleEvent()) {
+        mergeStartupPerformanceFrameBecameVisibleEvent(other.getStartupPerformanceFrameBecameVisibleEvent());
+      }
+      if (other.hasStartupPerformanceFrameBecameInteractiveEvent()) {
+        mergeStartupPerformanceFrameBecameInteractiveEvent(other.getStartupPerformanceFrameBecameInteractiveEvent());
+      }
+      if (other.hasStartupPerformanceCodeLoadedAndVisibleInEditor()) {
+        mergeStartupPerformanceCodeLoadedAndVisibleInEditor(other.getStartupPerformanceCodeLoadedAndVisibleInEditor());
+      }
+      if (other.hasUiToolsPreferencesEvent()) {
+        mergeUiToolsPreferencesEvent(other.getUiToolsPreferencesEvent());
+      }
+      if (other.hasSdkIndexProjectStats()) {
+        mergeSdkIndexProjectStats(other.getSdkIndexProjectStats());
+      }
+      if (other.hasSoongRunEvent()) {
+        mergeSoongRunEvent(other.getSoongRunEvent());
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -30939,6 +31558,55 @@ private static final long serialVersionUID = 0L;
               bitField6_ |= 0x00000040;
               break;
             } // case 1594
+            case 1602: {
+              input.readMessage(
+                  getStartupPerformanceFirstUiShownEventFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField6_ |= 0x00000080;
+              break;
+            } // case 1602
+            case 1610: {
+              input.readMessage(
+                  getStartupPerformanceFrameBecameVisibleEventFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField6_ |= 0x00000100;
+              break;
+            } // case 1610
+            case 1618: {
+              input.readMessage(
+                  getStartupPerformanceFrameBecameInteractiveEventFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField6_ |= 0x00000200;
+              break;
+            } // case 1618
+            case 1626: {
+              input.readMessage(
+                  getStartupPerformanceCodeLoadedAndVisibleInEditorFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField6_ |= 0x00000400;
+              break;
+            } // case 1626
+            case 1634: {
+              input.readMessage(
+                  getUiToolsPreferencesEventFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField6_ |= 0x00000800;
+              break;
+            } // case 1634
+            case 1642: {
+              input.readMessage(
+                  getSdkIndexProjectStatsFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField6_ |= 0x00001000;
+              break;
+            } // case 1642
+            case 1650: {
+              input.readMessage(
+                  getSoongRunEventFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField6_ |= 0x00002000;
+              break;
+            } // case 1650
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -52227,7 +52895,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * set when kind is SDK_INDEX_LIBRARY_HAS_CRITICAL_ISSUES,
-     * SDK_INDEX_LIBRARY_IS_OUTDATED or SDK_INDEX_LIBRARY_IS_NON_COMPLIANT
+     * SDK_INDEX_LIBRARY_IS_OUTDATED, SDK_INDEX_LIBRARY_IS_NON_COMPLIANT
+     * or SDK_INDEX_LIBRARY_HAS_VULNERABILITIES
      * </pre>
      *
      * <code>optional .android_studio.SdkIndexLibraryDetails sdk_index_library_details = 142 [lazy = true];</code>
@@ -52239,7 +52908,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * set when kind is SDK_INDEX_LIBRARY_HAS_CRITICAL_ISSUES,
-     * SDK_INDEX_LIBRARY_IS_OUTDATED or SDK_INDEX_LIBRARY_IS_NON_COMPLIANT
+     * SDK_INDEX_LIBRARY_IS_OUTDATED, SDK_INDEX_LIBRARY_IS_NON_COMPLIANT
+     * or SDK_INDEX_LIBRARY_HAS_VULNERABILITIES
      * </pre>
      *
      * <code>optional .android_studio.SdkIndexLibraryDetails sdk_index_library_details = 142 [lazy = true];</code>
@@ -52255,7 +52925,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * set when kind is SDK_INDEX_LIBRARY_HAS_CRITICAL_ISSUES,
-     * SDK_INDEX_LIBRARY_IS_OUTDATED or SDK_INDEX_LIBRARY_IS_NON_COMPLIANT
+     * SDK_INDEX_LIBRARY_IS_OUTDATED, SDK_INDEX_LIBRARY_IS_NON_COMPLIANT
+     * or SDK_INDEX_LIBRARY_HAS_VULNERABILITIES
      * </pre>
      *
      * <code>optional .android_studio.SdkIndexLibraryDetails sdk_index_library_details = 142 [lazy = true];</code>
@@ -52276,7 +52947,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * set when kind is SDK_INDEX_LIBRARY_HAS_CRITICAL_ISSUES,
-     * SDK_INDEX_LIBRARY_IS_OUTDATED or SDK_INDEX_LIBRARY_IS_NON_COMPLIANT
+     * SDK_INDEX_LIBRARY_IS_OUTDATED, SDK_INDEX_LIBRARY_IS_NON_COMPLIANT
+     * or SDK_INDEX_LIBRARY_HAS_VULNERABILITIES
      * </pre>
      *
      * <code>optional .android_studio.SdkIndexLibraryDetails sdk_index_library_details = 142 [lazy = true];</code>
@@ -52295,7 +52967,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * set when kind is SDK_INDEX_LIBRARY_HAS_CRITICAL_ISSUES,
-     * SDK_INDEX_LIBRARY_IS_OUTDATED or SDK_INDEX_LIBRARY_IS_NON_COMPLIANT
+     * SDK_INDEX_LIBRARY_IS_OUTDATED, SDK_INDEX_LIBRARY_IS_NON_COMPLIANT
+     * or SDK_INDEX_LIBRARY_HAS_VULNERABILITIES
      * </pre>
      *
      * <code>optional .android_studio.SdkIndexLibraryDetails sdk_index_library_details = 142 [lazy = true];</code>
@@ -52320,7 +52993,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * set when kind is SDK_INDEX_LIBRARY_HAS_CRITICAL_ISSUES,
-     * SDK_INDEX_LIBRARY_IS_OUTDATED or SDK_INDEX_LIBRARY_IS_NON_COMPLIANT
+     * SDK_INDEX_LIBRARY_IS_OUTDATED, SDK_INDEX_LIBRARY_IS_NON_COMPLIANT
+     * or SDK_INDEX_LIBRARY_HAS_VULNERABILITIES
      * </pre>
      *
      * <code>optional .android_studio.SdkIndexLibraryDetails sdk_index_library_details = 142 [lazy = true];</code>
@@ -52338,7 +53012,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * set when kind is SDK_INDEX_LIBRARY_HAS_CRITICAL_ISSUES,
-     * SDK_INDEX_LIBRARY_IS_OUTDATED or SDK_INDEX_LIBRARY_IS_NON_COMPLIANT
+     * SDK_INDEX_LIBRARY_IS_OUTDATED, SDK_INDEX_LIBRARY_IS_NON_COMPLIANT
+     * or SDK_INDEX_LIBRARY_HAS_VULNERABILITIES
      * </pre>
      *
      * <code>optional .android_studio.SdkIndexLibraryDetails sdk_index_library_details = 142 [lazy = true];</code>
@@ -52351,7 +53026,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * set when kind is SDK_INDEX_LIBRARY_HAS_CRITICAL_ISSUES,
-     * SDK_INDEX_LIBRARY_IS_OUTDATED or SDK_INDEX_LIBRARY_IS_NON_COMPLIANT
+     * SDK_INDEX_LIBRARY_IS_OUTDATED, SDK_INDEX_LIBRARY_IS_NON_COMPLIANT
+     * or SDK_INDEX_LIBRARY_HAS_VULNERABILITIES
      * </pre>
      *
      * <code>optional .android_studio.SdkIndexLibraryDetails sdk_index_library_details = 142 [lazy = true];</code>
@@ -52367,7 +53043,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * set when kind is SDK_INDEX_LIBRARY_HAS_CRITICAL_ISSUES,
-     * SDK_INDEX_LIBRARY_IS_OUTDATED or SDK_INDEX_LIBRARY_IS_NON_COMPLIANT
+     * SDK_INDEX_LIBRARY_IS_OUTDATED, SDK_INDEX_LIBRARY_IS_NON_COMPLIANT
+     * or SDK_INDEX_LIBRARY_HAS_VULNERABILITIES
      * </pre>
      *
      * <code>optional .android_studio.SdkIndexLibraryDetails sdk_index_library_details = 142 [lazy = true];</code>
@@ -61303,6 +61980,1098 @@ private static final long serialVersionUID = 0L;
         startupEvent_ = null;
       }
       return startupEventBuilder_;
+    }
+
+    private com.google.wireless.android.sdk.stats.StartupPerformanceFirstUiShownEvent startupPerformanceFirstUiShownEvent_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.StartupPerformanceFirstUiShownEvent, com.google.wireless.android.sdk.stats.StartupPerformanceFirstUiShownEvent.Builder, com.google.wireless.android.sdk.stats.StartupPerformanceFirstUiShownEventOrBuilder> startupPerformanceFirstUiShownEventBuilder_;
+    /**
+     * <pre>
+     * set when kind = STARTUP_PERFORMANCE_FIRST_UI_SHOWN
+     * </pre>
+     *
+     * <code>optional .android_studio.StartupPerformanceFirstUiShownEvent startup_performance_first_ui_shown_event = 200 [lazy = true];</code>
+     * @return Whether the startupPerformanceFirstUiShownEvent field is set.
+     */
+    public boolean hasStartupPerformanceFirstUiShownEvent() {
+      return ((bitField6_ & 0x00000080) != 0);
+    }
+    /**
+     * <pre>
+     * set when kind = STARTUP_PERFORMANCE_FIRST_UI_SHOWN
+     * </pre>
+     *
+     * <code>optional .android_studio.StartupPerformanceFirstUiShownEvent startup_performance_first_ui_shown_event = 200 [lazy = true];</code>
+     * @return The startupPerformanceFirstUiShownEvent.
+     */
+    public com.google.wireless.android.sdk.stats.StartupPerformanceFirstUiShownEvent getStartupPerformanceFirstUiShownEvent() {
+      if (startupPerformanceFirstUiShownEventBuilder_ == null) {
+        return startupPerformanceFirstUiShownEvent_ == null ? com.google.wireless.android.sdk.stats.StartupPerformanceFirstUiShownEvent.getDefaultInstance() : startupPerformanceFirstUiShownEvent_;
+      } else {
+        return startupPerformanceFirstUiShownEventBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * set when kind = STARTUP_PERFORMANCE_FIRST_UI_SHOWN
+     * </pre>
+     *
+     * <code>optional .android_studio.StartupPerformanceFirstUiShownEvent startup_performance_first_ui_shown_event = 200 [lazy = true];</code>
+     */
+    public Builder setStartupPerformanceFirstUiShownEvent(com.google.wireless.android.sdk.stats.StartupPerformanceFirstUiShownEvent value) {
+      if (startupPerformanceFirstUiShownEventBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        startupPerformanceFirstUiShownEvent_ = value;
+        onChanged();
+      } else {
+        startupPerformanceFirstUiShownEventBuilder_.setMessage(value);
+      }
+      bitField6_ |= 0x00000080;
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = STARTUP_PERFORMANCE_FIRST_UI_SHOWN
+     * </pre>
+     *
+     * <code>optional .android_studio.StartupPerformanceFirstUiShownEvent startup_performance_first_ui_shown_event = 200 [lazy = true];</code>
+     */
+    public Builder setStartupPerformanceFirstUiShownEvent(
+        com.google.wireless.android.sdk.stats.StartupPerformanceFirstUiShownEvent.Builder builderForValue) {
+      if (startupPerformanceFirstUiShownEventBuilder_ == null) {
+        startupPerformanceFirstUiShownEvent_ = builderForValue.build();
+        onChanged();
+      } else {
+        startupPerformanceFirstUiShownEventBuilder_.setMessage(builderForValue.build());
+      }
+      bitField6_ |= 0x00000080;
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = STARTUP_PERFORMANCE_FIRST_UI_SHOWN
+     * </pre>
+     *
+     * <code>optional .android_studio.StartupPerformanceFirstUiShownEvent startup_performance_first_ui_shown_event = 200 [lazy = true];</code>
+     */
+    public Builder mergeStartupPerformanceFirstUiShownEvent(com.google.wireless.android.sdk.stats.StartupPerformanceFirstUiShownEvent value) {
+      if (startupPerformanceFirstUiShownEventBuilder_ == null) {
+        if (((bitField6_ & 0x00000080) != 0) &&
+            startupPerformanceFirstUiShownEvent_ != null &&
+            startupPerformanceFirstUiShownEvent_ != com.google.wireless.android.sdk.stats.StartupPerformanceFirstUiShownEvent.getDefaultInstance()) {
+          startupPerformanceFirstUiShownEvent_ =
+            com.google.wireless.android.sdk.stats.StartupPerformanceFirstUiShownEvent.newBuilder(startupPerformanceFirstUiShownEvent_).mergeFrom(value).buildPartial();
+        } else {
+          startupPerformanceFirstUiShownEvent_ = value;
+        }
+        onChanged();
+      } else {
+        startupPerformanceFirstUiShownEventBuilder_.mergeFrom(value);
+      }
+      bitField6_ |= 0x00000080;
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = STARTUP_PERFORMANCE_FIRST_UI_SHOWN
+     * </pre>
+     *
+     * <code>optional .android_studio.StartupPerformanceFirstUiShownEvent startup_performance_first_ui_shown_event = 200 [lazy = true];</code>
+     */
+    public Builder clearStartupPerformanceFirstUiShownEvent() {
+      if (startupPerformanceFirstUiShownEventBuilder_ == null) {
+        startupPerformanceFirstUiShownEvent_ = null;
+        onChanged();
+      } else {
+        startupPerformanceFirstUiShownEventBuilder_.clear();
+      }
+      bitField6_ = (bitField6_ & ~0x00000080);
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = STARTUP_PERFORMANCE_FIRST_UI_SHOWN
+     * </pre>
+     *
+     * <code>optional .android_studio.StartupPerformanceFirstUiShownEvent startup_performance_first_ui_shown_event = 200 [lazy = true];</code>
+     */
+    public com.google.wireless.android.sdk.stats.StartupPerformanceFirstUiShownEvent.Builder getStartupPerformanceFirstUiShownEventBuilder() {
+      bitField6_ |= 0x00000080;
+      onChanged();
+      return getStartupPerformanceFirstUiShownEventFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * set when kind = STARTUP_PERFORMANCE_FIRST_UI_SHOWN
+     * </pre>
+     *
+     * <code>optional .android_studio.StartupPerformanceFirstUiShownEvent startup_performance_first_ui_shown_event = 200 [lazy = true];</code>
+     */
+    public com.google.wireless.android.sdk.stats.StartupPerformanceFirstUiShownEventOrBuilder getStartupPerformanceFirstUiShownEventOrBuilder() {
+      if (startupPerformanceFirstUiShownEventBuilder_ != null) {
+        return startupPerformanceFirstUiShownEventBuilder_.getMessageOrBuilder();
+      } else {
+        return startupPerformanceFirstUiShownEvent_ == null ?
+            com.google.wireless.android.sdk.stats.StartupPerformanceFirstUiShownEvent.getDefaultInstance() : startupPerformanceFirstUiShownEvent_;
+      }
+    }
+    /**
+     * <pre>
+     * set when kind = STARTUP_PERFORMANCE_FIRST_UI_SHOWN
+     * </pre>
+     *
+     * <code>optional .android_studio.StartupPerformanceFirstUiShownEvent startup_performance_first_ui_shown_event = 200 [lazy = true];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.StartupPerformanceFirstUiShownEvent, com.google.wireless.android.sdk.stats.StartupPerformanceFirstUiShownEvent.Builder, com.google.wireless.android.sdk.stats.StartupPerformanceFirstUiShownEventOrBuilder> 
+        getStartupPerformanceFirstUiShownEventFieldBuilder() {
+      if (startupPerformanceFirstUiShownEventBuilder_ == null) {
+        startupPerformanceFirstUiShownEventBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.wireless.android.sdk.stats.StartupPerformanceFirstUiShownEvent, com.google.wireless.android.sdk.stats.StartupPerformanceFirstUiShownEvent.Builder, com.google.wireless.android.sdk.stats.StartupPerformanceFirstUiShownEventOrBuilder>(
+                getStartupPerformanceFirstUiShownEvent(),
+                getParentForChildren(),
+                isClean());
+        startupPerformanceFirstUiShownEvent_ = null;
+      }
+      return startupPerformanceFirstUiShownEventBuilder_;
+    }
+
+    private com.google.wireless.android.sdk.stats.StartupPerformanceFrameBecameVisibleEvent startupPerformanceFrameBecameVisibleEvent_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.StartupPerformanceFrameBecameVisibleEvent, com.google.wireless.android.sdk.stats.StartupPerformanceFrameBecameVisibleEvent.Builder, com.google.wireless.android.sdk.stats.StartupPerformanceFrameBecameVisibleEventOrBuilder> startupPerformanceFrameBecameVisibleEventBuilder_;
+    /**
+     * <pre>
+     * set when kind = STARTUP_PERFORMANCE_FRAME_BECAME_VISIBLE
+     * </pre>
+     *
+     * <code>optional .android_studio.StartupPerformanceFrameBecameVisibleEvent startup_performance_frame_became_visible_event = 201 [lazy = true];</code>
+     * @return Whether the startupPerformanceFrameBecameVisibleEvent field is set.
+     */
+    public boolean hasStartupPerformanceFrameBecameVisibleEvent() {
+      return ((bitField6_ & 0x00000100) != 0);
+    }
+    /**
+     * <pre>
+     * set when kind = STARTUP_PERFORMANCE_FRAME_BECAME_VISIBLE
+     * </pre>
+     *
+     * <code>optional .android_studio.StartupPerformanceFrameBecameVisibleEvent startup_performance_frame_became_visible_event = 201 [lazy = true];</code>
+     * @return The startupPerformanceFrameBecameVisibleEvent.
+     */
+    public com.google.wireless.android.sdk.stats.StartupPerformanceFrameBecameVisibleEvent getStartupPerformanceFrameBecameVisibleEvent() {
+      if (startupPerformanceFrameBecameVisibleEventBuilder_ == null) {
+        return startupPerformanceFrameBecameVisibleEvent_ == null ? com.google.wireless.android.sdk.stats.StartupPerformanceFrameBecameVisibleEvent.getDefaultInstance() : startupPerformanceFrameBecameVisibleEvent_;
+      } else {
+        return startupPerformanceFrameBecameVisibleEventBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * set when kind = STARTUP_PERFORMANCE_FRAME_BECAME_VISIBLE
+     * </pre>
+     *
+     * <code>optional .android_studio.StartupPerformanceFrameBecameVisibleEvent startup_performance_frame_became_visible_event = 201 [lazy = true];</code>
+     */
+    public Builder setStartupPerformanceFrameBecameVisibleEvent(com.google.wireless.android.sdk.stats.StartupPerformanceFrameBecameVisibleEvent value) {
+      if (startupPerformanceFrameBecameVisibleEventBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        startupPerformanceFrameBecameVisibleEvent_ = value;
+        onChanged();
+      } else {
+        startupPerformanceFrameBecameVisibleEventBuilder_.setMessage(value);
+      }
+      bitField6_ |= 0x00000100;
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = STARTUP_PERFORMANCE_FRAME_BECAME_VISIBLE
+     * </pre>
+     *
+     * <code>optional .android_studio.StartupPerformanceFrameBecameVisibleEvent startup_performance_frame_became_visible_event = 201 [lazy = true];</code>
+     */
+    public Builder setStartupPerformanceFrameBecameVisibleEvent(
+        com.google.wireless.android.sdk.stats.StartupPerformanceFrameBecameVisibleEvent.Builder builderForValue) {
+      if (startupPerformanceFrameBecameVisibleEventBuilder_ == null) {
+        startupPerformanceFrameBecameVisibleEvent_ = builderForValue.build();
+        onChanged();
+      } else {
+        startupPerformanceFrameBecameVisibleEventBuilder_.setMessage(builderForValue.build());
+      }
+      bitField6_ |= 0x00000100;
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = STARTUP_PERFORMANCE_FRAME_BECAME_VISIBLE
+     * </pre>
+     *
+     * <code>optional .android_studio.StartupPerformanceFrameBecameVisibleEvent startup_performance_frame_became_visible_event = 201 [lazy = true];</code>
+     */
+    public Builder mergeStartupPerformanceFrameBecameVisibleEvent(com.google.wireless.android.sdk.stats.StartupPerformanceFrameBecameVisibleEvent value) {
+      if (startupPerformanceFrameBecameVisibleEventBuilder_ == null) {
+        if (((bitField6_ & 0x00000100) != 0) &&
+            startupPerformanceFrameBecameVisibleEvent_ != null &&
+            startupPerformanceFrameBecameVisibleEvent_ != com.google.wireless.android.sdk.stats.StartupPerformanceFrameBecameVisibleEvent.getDefaultInstance()) {
+          startupPerformanceFrameBecameVisibleEvent_ =
+            com.google.wireless.android.sdk.stats.StartupPerformanceFrameBecameVisibleEvent.newBuilder(startupPerformanceFrameBecameVisibleEvent_).mergeFrom(value).buildPartial();
+        } else {
+          startupPerformanceFrameBecameVisibleEvent_ = value;
+        }
+        onChanged();
+      } else {
+        startupPerformanceFrameBecameVisibleEventBuilder_.mergeFrom(value);
+      }
+      bitField6_ |= 0x00000100;
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = STARTUP_PERFORMANCE_FRAME_BECAME_VISIBLE
+     * </pre>
+     *
+     * <code>optional .android_studio.StartupPerformanceFrameBecameVisibleEvent startup_performance_frame_became_visible_event = 201 [lazy = true];</code>
+     */
+    public Builder clearStartupPerformanceFrameBecameVisibleEvent() {
+      if (startupPerformanceFrameBecameVisibleEventBuilder_ == null) {
+        startupPerformanceFrameBecameVisibleEvent_ = null;
+        onChanged();
+      } else {
+        startupPerformanceFrameBecameVisibleEventBuilder_.clear();
+      }
+      bitField6_ = (bitField6_ & ~0x00000100);
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = STARTUP_PERFORMANCE_FRAME_BECAME_VISIBLE
+     * </pre>
+     *
+     * <code>optional .android_studio.StartupPerformanceFrameBecameVisibleEvent startup_performance_frame_became_visible_event = 201 [lazy = true];</code>
+     */
+    public com.google.wireless.android.sdk.stats.StartupPerformanceFrameBecameVisibleEvent.Builder getStartupPerformanceFrameBecameVisibleEventBuilder() {
+      bitField6_ |= 0x00000100;
+      onChanged();
+      return getStartupPerformanceFrameBecameVisibleEventFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * set when kind = STARTUP_PERFORMANCE_FRAME_BECAME_VISIBLE
+     * </pre>
+     *
+     * <code>optional .android_studio.StartupPerformanceFrameBecameVisibleEvent startup_performance_frame_became_visible_event = 201 [lazy = true];</code>
+     */
+    public com.google.wireless.android.sdk.stats.StartupPerformanceFrameBecameVisibleEventOrBuilder getStartupPerformanceFrameBecameVisibleEventOrBuilder() {
+      if (startupPerformanceFrameBecameVisibleEventBuilder_ != null) {
+        return startupPerformanceFrameBecameVisibleEventBuilder_.getMessageOrBuilder();
+      } else {
+        return startupPerformanceFrameBecameVisibleEvent_ == null ?
+            com.google.wireless.android.sdk.stats.StartupPerformanceFrameBecameVisibleEvent.getDefaultInstance() : startupPerformanceFrameBecameVisibleEvent_;
+      }
+    }
+    /**
+     * <pre>
+     * set when kind = STARTUP_PERFORMANCE_FRAME_BECAME_VISIBLE
+     * </pre>
+     *
+     * <code>optional .android_studio.StartupPerformanceFrameBecameVisibleEvent startup_performance_frame_became_visible_event = 201 [lazy = true];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.StartupPerformanceFrameBecameVisibleEvent, com.google.wireless.android.sdk.stats.StartupPerformanceFrameBecameVisibleEvent.Builder, com.google.wireless.android.sdk.stats.StartupPerformanceFrameBecameVisibleEventOrBuilder> 
+        getStartupPerformanceFrameBecameVisibleEventFieldBuilder() {
+      if (startupPerformanceFrameBecameVisibleEventBuilder_ == null) {
+        startupPerformanceFrameBecameVisibleEventBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.wireless.android.sdk.stats.StartupPerformanceFrameBecameVisibleEvent, com.google.wireless.android.sdk.stats.StartupPerformanceFrameBecameVisibleEvent.Builder, com.google.wireless.android.sdk.stats.StartupPerformanceFrameBecameVisibleEventOrBuilder>(
+                getStartupPerformanceFrameBecameVisibleEvent(),
+                getParentForChildren(),
+                isClean());
+        startupPerformanceFrameBecameVisibleEvent_ = null;
+      }
+      return startupPerformanceFrameBecameVisibleEventBuilder_;
+    }
+
+    private com.google.wireless.android.sdk.stats.StartupPerformanceFrameBecameInteractiveEvent startupPerformanceFrameBecameInteractiveEvent_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.StartupPerformanceFrameBecameInteractiveEvent, com.google.wireless.android.sdk.stats.StartupPerformanceFrameBecameInteractiveEvent.Builder, com.google.wireless.android.sdk.stats.StartupPerformanceFrameBecameInteractiveEventOrBuilder> startupPerformanceFrameBecameInteractiveEventBuilder_;
+    /**
+     * <pre>
+     * set when kind = STARTUP_PERFORMANCE_FRAME_BECAME_INTERACTIVE
+     * </pre>
+     *
+     * <code>optional .android_studio.StartupPerformanceFrameBecameInteractiveEvent startup_performance_frame_became_interactive_event = 202 [lazy = true];</code>
+     * @return Whether the startupPerformanceFrameBecameInteractiveEvent field is set.
+     */
+    public boolean hasStartupPerformanceFrameBecameInteractiveEvent() {
+      return ((bitField6_ & 0x00000200) != 0);
+    }
+    /**
+     * <pre>
+     * set when kind = STARTUP_PERFORMANCE_FRAME_BECAME_INTERACTIVE
+     * </pre>
+     *
+     * <code>optional .android_studio.StartupPerformanceFrameBecameInteractiveEvent startup_performance_frame_became_interactive_event = 202 [lazy = true];</code>
+     * @return The startupPerformanceFrameBecameInteractiveEvent.
+     */
+    public com.google.wireless.android.sdk.stats.StartupPerformanceFrameBecameInteractiveEvent getStartupPerformanceFrameBecameInteractiveEvent() {
+      if (startupPerformanceFrameBecameInteractiveEventBuilder_ == null) {
+        return startupPerformanceFrameBecameInteractiveEvent_ == null ? com.google.wireless.android.sdk.stats.StartupPerformanceFrameBecameInteractiveEvent.getDefaultInstance() : startupPerformanceFrameBecameInteractiveEvent_;
+      } else {
+        return startupPerformanceFrameBecameInteractiveEventBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * set when kind = STARTUP_PERFORMANCE_FRAME_BECAME_INTERACTIVE
+     * </pre>
+     *
+     * <code>optional .android_studio.StartupPerformanceFrameBecameInteractiveEvent startup_performance_frame_became_interactive_event = 202 [lazy = true];</code>
+     */
+    public Builder setStartupPerformanceFrameBecameInteractiveEvent(com.google.wireless.android.sdk.stats.StartupPerformanceFrameBecameInteractiveEvent value) {
+      if (startupPerformanceFrameBecameInteractiveEventBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        startupPerformanceFrameBecameInteractiveEvent_ = value;
+        onChanged();
+      } else {
+        startupPerformanceFrameBecameInteractiveEventBuilder_.setMessage(value);
+      }
+      bitField6_ |= 0x00000200;
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = STARTUP_PERFORMANCE_FRAME_BECAME_INTERACTIVE
+     * </pre>
+     *
+     * <code>optional .android_studio.StartupPerformanceFrameBecameInteractiveEvent startup_performance_frame_became_interactive_event = 202 [lazy = true];</code>
+     */
+    public Builder setStartupPerformanceFrameBecameInteractiveEvent(
+        com.google.wireless.android.sdk.stats.StartupPerformanceFrameBecameInteractiveEvent.Builder builderForValue) {
+      if (startupPerformanceFrameBecameInteractiveEventBuilder_ == null) {
+        startupPerformanceFrameBecameInteractiveEvent_ = builderForValue.build();
+        onChanged();
+      } else {
+        startupPerformanceFrameBecameInteractiveEventBuilder_.setMessage(builderForValue.build());
+      }
+      bitField6_ |= 0x00000200;
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = STARTUP_PERFORMANCE_FRAME_BECAME_INTERACTIVE
+     * </pre>
+     *
+     * <code>optional .android_studio.StartupPerformanceFrameBecameInteractiveEvent startup_performance_frame_became_interactive_event = 202 [lazy = true];</code>
+     */
+    public Builder mergeStartupPerformanceFrameBecameInteractiveEvent(com.google.wireless.android.sdk.stats.StartupPerformanceFrameBecameInteractiveEvent value) {
+      if (startupPerformanceFrameBecameInteractiveEventBuilder_ == null) {
+        if (((bitField6_ & 0x00000200) != 0) &&
+            startupPerformanceFrameBecameInteractiveEvent_ != null &&
+            startupPerformanceFrameBecameInteractiveEvent_ != com.google.wireless.android.sdk.stats.StartupPerformanceFrameBecameInteractiveEvent.getDefaultInstance()) {
+          startupPerformanceFrameBecameInteractiveEvent_ =
+            com.google.wireless.android.sdk.stats.StartupPerformanceFrameBecameInteractiveEvent.newBuilder(startupPerformanceFrameBecameInteractiveEvent_).mergeFrom(value).buildPartial();
+        } else {
+          startupPerformanceFrameBecameInteractiveEvent_ = value;
+        }
+        onChanged();
+      } else {
+        startupPerformanceFrameBecameInteractiveEventBuilder_.mergeFrom(value);
+      }
+      bitField6_ |= 0x00000200;
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = STARTUP_PERFORMANCE_FRAME_BECAME_INTERACTIVE
+     * </pre>
+     *
+     * <code>optional .android_studio.StartupPerformanceFrameBecameInteractiveEvent startup_performance_frame_became_interactive_event = 202 [lazy = true];</code>
+     */
+    public Builder clearStartupPerformanceFrameBecameInteractiveEvent() {
+      if (startupPerformanceFrameBecameInteractiveEventBuilder_ == null) {
+        startupPerformanceFrameBecameInteractiveEvent_ = null;
+        onChanged();
+      } else {
+        startupPerformanceFrameBecameInteractiveEventBuilder_.clear();
+      }
+      bitField6_ = (bitField6_ & ~0x00000200);
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = STARTUP_PERFORMANCE_FRAME_BECAME_INTERACTIVE
+     * </pre>
+     *
+     * <code>optional .android_studio.StartupPerformanceFrameBecameInteractiveEvent startup_performance_frame_became_interactive_event = 202 [lazy = true];</code>
+     */
+    public com.google.wireless.android.sdk.stats.StartupPerformanceFrameBecameInteractiveEvent.Builder getStartupPerformanceFrameBecameInteractiveEventBuilder() {
+      bitField6_ |= 0x00000200;
+      onChanged();
+      return getStartupPerformanceFrameBecameInteractiveEventFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * set when kind = STARTUP_PERFORMANCE_FRAME_BECAME_INTERACTIVE
+     * </pre>
+     *
+     * <code>optional .android_studio.StartupPerformanceFrameBecameInteractiveEvent startup_performance_frame_became_interactive_event = 202 [lazy = true];</code>
+     */
+    public com.google.wireless.android.sdk.stats.StartupPerformanceFrameBecameInteractiveEventOrBuilder getStartupPerformanceFrameBecameInteractiveEventOrBuilder() {
+      if (startupPerformanceFrameBecameInteractiveEventBuilder_ != null) {
+        return startupPerformanceFrameBecameInteractiveEventBuilder_.getMessageOrBuilder();
+      } else {
+        return startupPerformanceFrameBecameInteractiveEvent_ == null ?
+            com.google.wireless.android.sdk.stats.StartupPerformanceFrameBecameInteractiveEvent.getDefaultInstance() : startupPerformanceFrameBecameInteractiveEvent_;
+      }
+    }
+    /**
+     * <pre>
+     * set when kind = STARTUP_PERFORMANCE_FRAME_BECAME_INTERACTIVE
+     * </pre>
+     *
+     * <code>optional .android_studio.StartupPerformanceFrameBecameInteractiveEvent startup_performance_frame_became_interactive_event = 202 [lazy = true];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.StartupPerformanceFrameBecameInteractiveEvent, com.google.wireless.android.sdk.stats.StartupPerformanceFrameBecameInteractiveEvent.Builder, com.google.wireless.android.sdk.stats.StartupPerformanceFrameBecameInteractiveEventOrBuilder> 
+        getStartupPerformanceFrameBecameInteractiveEventFieldBuilder() {
+      if (startupPerformanceFrameBecameInteractiveEventBuilder_ == null) {
+        startupPerformanceFrameBecameInteractiveEventBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.wireless.android.sdk.stats.StartupPerformanceFrameBecameInteractiveEvent, com.google.wireless.android.sdk.stats.StartupPerformanceFrameBecameInteractiveEvent.Builder, com.google.wireless.android.sdk.stats.StartupPerformanceFrameBecameInteractiveEventOrBuilder>(
+                getStartupPerformanceFrameBecameInteractiveEvent(),
+                getParentForChildren(),
+                isClean());
+        startupPerformanceFrameBecameInteractiveEvent_ = null;
+      }
+      return startupPerformanceFrameBecameInteractiveEventBuilder_;
+    }
+
+    private com.google.wireless.android.sdk.stats.StartupPerformanceCodeLoadedAndVisibleInEditor startupPerformanceCodeLoadedAndVisibleInEditor_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.StartupPerformanceCodeLoadedAndVisibleInEditor, com.google.wireless.android.sdk.stats.StartupPerformanceCodeLoadedAndVisibleInEditor.Builder, com.google.wireless.android.sdk.stats.StartupPerformanceCodeLoadedAndVisibleInEditorOrBuilder> startupPerformanceCodeLoadedAndVisibleInEditorBuilder_;
+    /**
+     * <pre>
+     * set when kind = STARTUP_PERFORMANCE_CODE_LOADED_AND_VISIBLE_IN_EDITOR
+     * </pre>
+     *
+     * <code>optional .android_studio.StartupPerformanceCodeLoadedAndVisibleInEditor startup_performance_code_loaded_and_visible_in_editor = 203 [lazy = true];</code>
+     * @return Whether the startupPerformanceCodeLoadedAndVisibleInEditor field is set.
+     */
+    public boolean hasStartupPerformanceCodeLoadedAndVisibleInEditor() {
+      return ((bitField6_ & 0x00000400) != 0);
+    }
+    /**
+     * <pre>
+     * set when kind = STARTUP_PERFORMANCE_CODE_LOADED_AND_VISIBLE_IN_EDITOR
+     * </pre>
+     *
+     * <code>optional .android_studio.StartupPerformanceCodeLoadedAndVisibleInEditor startup_performance_code_loaded_and_visible_in_editor = 203 [lazy = true];</code>
+     * @return The startupPerformanceCodeLoadedAndVisibleInEditor.
+     */
+    public com.google.wireless.android.sdk.stats.StartupPerformanceCodeLoadedAndVisibleInEditor getStartupPerformanceCodeLoadedAndVisibleInEditor() {
+      if (startupPerformanceCodeLoadedAndVisibleInEditorBuilder_ == null) {
+        return startupPerformanceCodeLoadedAndVisibleInEditor_ == null ? com.google.wireless.android.sdk.stats.StartupPerformanceCodeLoadedAndVisibleInEditor.getDefaultInstance() : startupPerformanceCodeLoadedAndVisibleInEditor_;
+      } else {
+        return startupPerformanceCodeLoadedAndVisibleInEditorBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * set when kind = STARTUP_PERFORMANCE_CODE_LOADED_AND_VISIBLE_IN_EDITOR
+     * </pre>
+     *
+     * <code>optional .android_studio.StartupPerformanceCodeLoadedAndVisibleInEditor startup_performance_code_loaded_and_visible_in_editor = 203 [lazy = true];</code>
+     */
+    public Builder setStartupPerformanceCodeLoadedAndVisibleInEditor(com.google.wireless.android.sdk.stats.StartupPerformanceCodeLoadedAndVisibleInEditor value) {
+      if (startupPerformanceCodeLoadedAndVisibleInEditorBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        startupPerformanceCodeLoadedAndVisibleInEditor_ = value;
+        onChanged();
+      } else {
+        startupPerformanceCodeLoadedAndVisibleInEditorBuilder_.setMessage(value);
+      }
+      bitField6_ |= 0x00000400;
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = STARTUP_PERFORMANCE_CODE_LOADED_AND_VISIBLE_IN_EDITOR
+     * </pre>
+     *
+     * <code>optional .android_studio.StartupPerformanceCodeLoadedAndVisibleInEditor startup_performance_code_loaded_and_visible_in_editor = 203 [lazy = true];</code>
+     */
+    public Builder setStartupPerformanceCodeLoadedAndVisibleInEditor(
+        com.google.wireless.android.sdk.stats.StartupPerformanceCodeLoadedAndVisibleInEditor.Builder builderForValue) {
+      if (startupPerformanceCodeLoadedAndVisibleInEditorBuilder_ == null) {
+        startupPerformanceCodeLoadedAndVisibleInEditor_ = builderForValue.build();
+        onChanged();
+      } else {
+        startupPerformanceCodeLoadedAndVisibleInEditorBuilder_.setMessage(builderForValue.build());
+      }
+      bitField6_ |= 0x00000400;
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = STARTUP_PERFORMANCE_CODE_LOADED_AND_VISIBLE_IN_EDITOR
+     * </pre>
+     *
+     * <code>optional .android_studio.StartupPerformanceCodeLoadedAndVisibleInEditor startup_performance_code_loaded_and_visible_in_editor = 203 [lazy = true];</code>
+     */
+    public Builder mergeStartupPerformanceCodeLoadedAndVisibleInEditor(com.google.wireless.android.sdk.stats.StartupPerformanceCodeLoadedAndVisibleInEditor value) {
+      if (startupPerformanceCodeLoadedAndVisibleInEditorBuilder_ == null) {
+        if (((bitField6_ & 0x00000400) != 0) &&
+            startupPerformanceCodeLoadedAndVisibleInEditor_ != null &&
+            startupPerformanceCodeLoadedAndVisibleInEditor_ != com.google.wireless.android.sdk.stats.StartupPerformanceCodeLoadedAndVisibleInEditor.getDefaultInstance()) {
+          startupPerformanceCodeLoadedAndVisibleInEditor_ =
+            com.google.wireless.android.sdk.stats.StartupPerformanceCodeLoadedAndVisibleInEditor.newBuilder(startupPerformanceCodeLoadedAndVisibleInEditor_).mergeFrom(value).buildPartial();
+        } else {
+          startupPerformanceCodeLoadedAndVisibleInEditor_ = value;
+        }
+        onChanged();
+      } else {
+        startupPerformanceCodeLoadedAndVisibleInEditorBuilder_.mergeFrom(value);
+      }
+      bitField6_ |= 0x00000400;
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = STARTUP_PERFORMANCE_CODE_LOADED_AND_VISIBLE_IN_EDITOR
+     * </pre>
+     *
+     * <code>optional .android_studio.StartupPerformanceCodeLoadedAndVisibleInEditor startup_performance_code_loaded_and_visible_in_editor = 203 [lazy = true];</code>
+     */
+    public Builder clearStartupPerformanceCodeLoadedAndVisibleInEditor() {
+      if (startupPerformanceCodeLoadedAndVisibleInEditorBuilder_ == null) {
+        startupPerformanceCodeLoadedAndVisibleInEditor_ = null;
+        onChanged();
+      } else {
+        startupPerformanceCodeLoadedAndVisibleInEditorBuilder_.clear();
+      }
+      bitField6_ = (bitField6_ & ~0x00000400);
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = STARTUP_PERFORMANCE_CODE_LOADED_AND_VISIBLE_IN_EDITOR
+     * </pre>
+     *
+     * <code>optional .android_studio.StartupPerformanceCodeLoadedAndVisibleInEditor startup_performance_code_loaded_and_visible_in_editor = 203 [lazy = true];</code>
+     */
+    public com.google.wireless.android.sdk.stats.StartupPerformanceCodeLoadedAndVisibleInEditor.Builder getStartupPerformanceCodeLoadedAndVisibleInEditorBuilder() {
+      bitField6_ |= 0x00000400;
+      onChanged();
+      return getStartupPerformanceCodeLoadedAndVisibleInEditorFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * set when kind = STARTUP_PERFORMANCE_CODE_LOADED_AND_VISIBLE_IN_EDITOR
+     * </pre>
+     *
+     * <code>optional .android_studio.StartupPerformanceCodeLoadedAndVisibleInEditor startup_performance_code_loaded_and_visible_in_editor = 203 [lazy = true];</code>
+     */
+    public com.google.wireless.android.sdk.stats.StartupPerformanceCodeLoadedAndVisibleInEditorOrBuilder getStartupPerformanceCodeLoadedAndVisibleInEditorOrBuilder() {
+      if (startupPerformanceCodeLoadedAndVisibleInEditorBuilder_ != null) {
+        return startupPerformanceCodeLoadedAndVisibleInEditorBuilder_.getMessageOrBuilder();
+      } else {
+        return startupPerformanceCodeLoadedAndVisibleInEditor_ == null ?
+            com.google.wireless.android.sdk.stats.StartupPerformanceCodeLoadedAndVisibleInEditor.getDefaultInstance() : startupPerformanceCodeLoadedAndVisibleInEditor_;
+      }
+    }
+    /**
+     * <pre>
+     * set when kind = STARTUP_PERFORMANCE_CODE_LOADED_AND_VISIBLE_IN_EDITOR
+     * </pre>
+     *
+     * <code>optional .android_studio.StartupPerformanceCodeLoadedAndVisibleInEditor startup_performance_code_loaded_and_visible_in_editor = 203 [lazy = true];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.StartupPerformanceCodeLoadedAndVisibleInEditor, com.google.wireless.android.sdk.stats.StartupPerformanceCodeLoadedAndVisibleInEditor.Builder, com.google.wireless.android.sdk.stats.StartupPerformanceCodeLoadedAndVisibleInEditorOrBuilder> 
+        getStartupPerformanceCodeLoadedAndVisibleInEditorFieldBuilder() {
+      if (startupPerformanceCodeLoadedAndVisibleInEditorBuilder_ == null) {
+        startupPerformanceCodeLoadedAndVisibleInEditorBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.wireless.android.sdk.stats.StartupPerformanceCodeLoadedAndVisibleInEditor, com.google.wireless.android.sdk.stats.StartupPerformanceCodeLoadedAndVisibleInEditor.Builder, com.google.wireless.android.sdk.stats.StartupPerformanceCodeLoadedAndVisibleInEditorOrBuilder>(
+                getStartupPerformanceCodeLoadedAndVisibleInEditor(),
+                getParentForChildren(),
+                isClean());
+        startupPerformanceCodeLoadedAndVisibleInEditor_ = null;
+      }
+      return startupPerformanceCodeLoadedAndVisibleInEditorBuilder_;
+    }
+
+    private com.google.wireless.android.sdk.stats.UiToolsPreferencesEvent uiToolsPreferencesEvent_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.UiToolsPreferencesEvent, com.google.wireless.android.sdk.stats.UiToolsPreferencesEvent.Builder, com.google.wireless.android.sdk.stats.UiToolsPreferencesEventOrBuilder> uiToolsPreferencesEventBuilder_;
+    /**
+     * <pre>
+     * set when kind = UI_TOOLS_PREFERENCES
+     * </pre>
+     *
+     * <code>optional .android_studio.UiToolsPreferencesEvent ui_tools_preferences_event = 204 [lazy = true];</code>
+     * @return Whether the uiToolsPreferencesEvent field is set.
+     */
+    public boolean hasUiToolsPreferencesEvent() {
+      return ((bitField6_ & 0x00000800) != 0);
+    }
+    /**
+     * <pre>
+     * set when kind = UI_TOOLS_PREFERENCES
+     * </pre>
+     *
+     * <code>optional .android_studio.UiToolsPreferencesEvent ui_tools_preferences_event = 204 [lazy = true];</code>
+     * @return The uiToolsPreferencesEvent.
+     */
+    public com.google.wireless.android.sdk.stats.UiToolsPreferencesEvent getUiToolsPreferencesEvent() {
+      if (uiToolsPreferencesEventBuilder_ == null) {
+        return uiToolsPreferencesEvent_ == null ? com.google.wireless.android.sdk.stats.UiToolsPreferencesEvent.getDefaultInstance() : uiToolsPreferencesEvent_;
+      } else {
+        return uiToolsPreferencesEventBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * set when kind = UI_TOOLS_PREFERENCES
+     * </pre>
+     *
+     * <code>optional .android_studio.UiToolsPreferencesEvent ui_tools_preferences_event = 204 [lazy = true];</code>
+     */
+    public Builder setUiToolsPreferencesEvent(com.google.wireless.android.sdk.stats.UiToolsPreferencesEvent value) {
+      if (uiToolsPreferencesEventBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        uiToolsPreferencesEvent_ = value;
+        onChanged();
+      } else {
+        uiToolsPreferencesEventBuilder_.setMessage(value);
+      }
+      bitField6_ |= 0x00000800;
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = UI_TOOLS_PREFERENCES
+     * </pre>
+     *
+     * <code>optional .android_studio.UiToolsPreferencesEvent ui_tools_preferences_event = 204 [lazy = true];</code>
+     */
+    public Builder setUiToolsPreferencesEvent(
+        com.google.wireless.android.sdk.stats.UiToolsPreferencesEvent.Builder builderForValue) {
+      if (uiToolsPreferencesEventBuilder_ == null) {
+        uiToolsPreferencesEvent_ = builderForValue.build();
+        onChanged();
+      } else {
+        uiToolsPreferencesEventBuilder_.setMessage(builderForValue.build());
+      }
+      bitField6_ |= 0x00000800;
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = UI_TOOLS_PREFERENCES
+     * </pre>
+     *
+     * <code>optional .android_studio.UiToolsPreferencesEvent ui_tools_preferences_event = 204 [lazy = true];</code>
+     */
+    public Builder mergeUiToolsPreferencesEvent(com.google.wireless.android.sdk.stats.UiToolsPreferencesEvent value) {
+      if (uiToolsPreferencesEventBuilder_ == null) {
+        if (((bitField6_ & 0x00000800) != 0) &&
+            uiToolsPreferencesEvent_ != null &&
+            uiToolsPreferencesEvent_ != com.google.wireless.android.sdk.stats.UiToolsPreferencesEvent.getDefaultInstance()) {
+          uiToolsPreferencesEvent_ =
+            com.google.wireless.android.sdk.stats.UiToolsPreferencesEvent.newBuilder(uiToolsPreferencesEvent_).mergeFrom(value).buildPartial();
+        } else {
+          uiToolsPreferencesEvent_ = value;
+        }
+        onChanged();
+      } else {
+        uiToolsPreferencesEventBuilder_.mergeFrom(value);
+      }
+      bitField6_ |= 0x00000800;
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = UI_TOOLS_PREFERENCES
+     * </pre>
+     *
+     * <code>optional .android_studio.UiToolsPreferencesEvent ui_tools_preferences_event = 204 [lazy = true];</code>
+     */
+    public Builder clearUiToolsPreferencesEvent() {
+      if (uiToolsPreferencesEventBuilder_ == null) {
+        uiToolsPreferencesEvent_ = null;
+        onChanged();
+      } else {
+        uiToolsPreferencesEventBuilder_.clear();
+      }
+      bitField6_ = (bitField6_ & ~0x00000800);
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = UI_TOOLS_PREFERENCES
+     * </pre>
+     *
+     * <code>optional .android_studio.UiToolsPreferencesEvent ui_tools_preferences_event = 204 [lazy = true];</code>
+     */
+    public com.google.wireless.android.sdk.stats.UiToolsPreferencesEvent.Builder getUiToolsPreferencesEventBuilder() {
+      bitField6_ |= 0x00000800;
+      onChanged();
+      return getUiToolsPreferencesEventFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * set when kind = UI_TOOLS_PREFERENCES
+     * </pre>
+     *
+     * <code>optional .android_studio.UiToolsPreferencesEvent ui_tools_preferences_event = 204 [lazy = true];</code>
+     */
+    public com.google.wireless.android.sdk.stats.UiToolsPreferencesEventOrBuilder getUiToolsPreferencesEventOrBuilder() {
+      if (uiToolsPreferencesEventBuilder_ != null) {
+        return uiToolsPreferencesEventBuilder_.getMessageOrBuilder();
+      } else {
+        return uiToolsPreferencesEvent_ == null ?
+            com.google.wireless.android.sdk.stats.UiToolsPreferencesEvent.getDefaultInstance() : uiToolsPreferencesEvent_;
+      }
+    }
+    /**
+     * <pre>
+     * set when kind = UI_TOOLS_PREFERENCES
+     * </pre>
+     *
+     * <code>optional .android_studio.UiToolsPreferencesEvent ui_tools_preferences_event = 204 [lazy = true];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.UiToolsPreferencesEvent, com.google.wireless.android.sdk.stats.UiToolsPreferencesEvent.Builder, com.google.wireless.android.sdk.stats.UiToolsPreferencesEventOrBuilder> 
+        getUiToolsPreferencesEventFieldBuilder() {
+      if (uiToolsPreferencesEventBuilder_ == null) {
+        uiToolsPreferencesEventBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.wireless.android.sdk.stats.UiToolsPreferencesEvent, com.google.wireless.android.sdk.stats.UiToolsPreferencesEvent.Builder, com.google.wireless.android.sdk.stats.UiToolsPreferencesEventOrBuilder>(
+                getUiToolsPreferencesEvent(),
+                getParentForChildren(),
+                isClean());
+        uiToolsPreferencesEvent_ = null;
+      }
+      return uiToolsPreferencesEventBuilder_;
+    }
+
+    private com.google.wireless.android.sdk.stats.SdkIndexProjectStats sdkIndexProjectStats_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.SdkIndexProjectStats, com.google.wireless.android.sdk.stats.SdkIndexProjectStats.Builder, com.google.wireless.android.sdk.stats.SdkIndexProjectStatsOrBuilder> sdkIndexProjectStatsBuilder_;
+    /**
+     * <pre>
+     * set when kind = SDK_INDEX_PROJECT_STATS
+     * </pre>
+     *
+     * <code>optional .android_studio.SdkIndexProjectStats sdk_index_project_stats = 205 [lazy = true];</code>
+     * @return Whether the sdkIndexProjectStats field is set.
+     */
+    public boolean hasSdkIndexProjectStats() {
+      return ((bitField6_ & 0x00001000) != 0);
+    }
+    /**
+     * <pre>
+     * set when kind = SDK_INDEX_PROJECT_STATS
+     * </pre>
+     *
+     * <code>optional .android_studio.SdkIndexProjectStats sdk_index_project_stats = 205 [lazy = true];</code>
+     * @return The sdkIndexProjectStats.
+     */
+    public com.google.wireless.android.sdk.stats.SdkIndexProjectStats getSdkIndexProjectStats() {
+      if (sdkIndexProjectStatsBuilder_ == null) {
+        return sdkIndexProjectStats_ == null ? com.google.wireless.android.sdk.stats.SdkIndexProjectStats.getDefaultInstance() : sdkIndexProjectStats_;
+      } else {
+        return sdkIndexProjectStatsBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * set when kind = SDK_INDEX_PROJECT_STATS
+     * </pre>
+     *
+     * <code>optional .android_studio.SdkIndexProjectStats sdk_index_project_stats = 205 [lazy = true];</code>
+     */
+    public Builder setSdkIndexProjectStats(com.google.wireless.android.sdk.stats.SdkIndexProjectStats value) {
+      if (sdkIndexProjectStatsBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        sdkIndexProjectStats_ = value;
+        onChanged();
+      } else {
+        sdkIndexProjectStatsBuilder_.setMessage(value);
+      }
+      bitField6_ |= 0x00001000;
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = SDK_INDEX_PROJECT_STATS
+     * </pre>
+     *
+     * <code>optional .android_studio.SdkIndexProjectStats sdk_index_project_stats = 205 [lazy = true];</code>
+     */
+    public Builder setSdkIndexProjectStats(
+        com.google.wireless.android.sdk.stats.SdkIndexProjectStats.Builder builderForValue) {
+      if (sdkIndexProjectStatsBuilder_ == null) {
+        sdkIndexProjectStats_ = builderForValue.build();
+        onChanged();
+      } else {
+        sdkIndexProjectStatsBuilder_.setMessage(builderForValue.build());
+      }
+      bitField6_ |= 0x00001000;
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = SDK_INDEX_PROJECT_STATS
+     * </pre>
+     *
+     * <code>optional .android_studio.SdkIndexProjectStats sdk_index_project_stats = 205 [lazy = true];</code>
+     */
+    public Builder mergeSdkIndexProjectStats(com.google.wireless.android.sdk.stats.SdkIndexProjectStats value) {
+      if (sdkIndexProjectStatsBuilder_ == null) {
+        if (((bitField6_ & 0x00001000) != 0) &&
+            sdkIndexProjectStats_ != null &&
+            sdkIndexProjectStats_ != com.google.wireless.android.sdk.stats.SdkIndexProjectStats.getDefaultInstance()) {
+          sdkIndexProjectStats_ =
+            com.google.wireless.android.sdk.stats.SdkIndexProjectStats.newBuilder(sdkIndexProjectStats_).mergeFrom(value).buildPartial();
+        } else {
+          sdkIndexProjectStats_ = value;
+        }
+        onChanged();
+      } else {
+        sdkIndexProjectStatsBuilder_.mergeFrom(value);
+      }
+      bitField6_ |= 0x00001000;
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = SDK_INDEX_PROJECT_STATS
+     * </pre>
+     *
+     * <code>optional .android_studio.SdkIndexProjectStats sdk_index_project_stats = 205 [lazy = true];</code>
+     */
+    public Builder clearSdkIndexProjectStats() {
+      if (sdkIndexProjectStatsBuilder_ == null) {
+        sdkIndexProjectStats_ = null;
+        onChanged();
+      } else {
+        sdkIndexProjectStatsBuilder_.clear();
+      }
+      bitField6_ = (bitField6_ & ~0x00001000);
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = SDK_INDEX_PROJECT_STATS
+     * </pre>
+     *
+     * <code>optional .android_studio.SdkIndexProjectStats sdk_index_project_stats = 205 [lazy = true];</code>
+     */
+    public com.google.wireless.android.sdk.stats.SdkIndexProjectStats.Builder getSdkIndexProjectStatsBuilder() {
+      bitField6_ |= 0x00001000;
+      onChanged();
+      return getSdkIndexProjectStatsFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * set when kind = SDK_INDEX_PROJECT_STATS
+     * </pre>
+     *
+     * <code>optional .android_studio.SdkIndexProjectStats sdk_index_project_stats = 205 [lazy = true];</code>
+     */
+    public com.google.wireless.android.sdk.stats.SdkIndexProjectStatsOrBuilder getSdkIndexProjectStatsOrBuilder() {
+      if (sdkIndexProjectStatsBuilder_ != null) {
+        return sdkIndexProjectStatsBuilder_.getMessageOrBuilder();
+      } else {
+        return sdkIndexProjectStats_ == null ?
+            com.google.wireless.android.sdk.stats.SdkIndexProjectStats.getDefaultInstance() : sdkIndexProjectStats_;
+      }
+    }
+    /**
+     * <pre>
+     * set when kind = SDK_INDEX_PROJECT_STATS
+     * </pre>
+     *
+     * <code>optional .android_studio.SdkIndexProjectStats sdk_index_project_stats = 205 [lazy = true];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.SdkIndexProjectStats, com.google.wireless.android.sdk.stats.SdkIndexProjectStats.Builder, com.google.wireless.android.sdk.stats.SdkIndexProjectStatsOrBuilder> 
+        getSdkIndexProjectStatsFieldBuilder() {
+      if (sdkIndexProjectStatsBuilder_ == null) {
+        sdkIndexProjectStatsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.wireless.android.sdk.stats.SdkIndexProjectStats, com.google.wireless.android.sdk.stats.SdkIndexProjectStats.Builder, com.google.wireless.android.sdk.stats.SdkIndexProjectStatsOrBuilder>(
+                getSdkIndexProjectStats(),
+                getParentForChildren(),
+                isClean());
+        sdkIndexProjectStats_ = null;
+      }
+      return sdkIndexProjectStatsBuilder_;
+    }
+
+    private com.google.wireless.android.sdk.stats.SoongRunEvent soongRunEvent_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.SoongRunEvent, com.google.wireless.android.sdk.stats.SoongRunEvent.Builder, com.google.wireless.android.sdk.stats.SoongRunEventOrBuilder> soongRunEventBuilder_;
+    /**
+     * <pre>
+     * set when kind = SOONG_RUN_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.SoongRunEvent soong_run_event = 206 [lazy = true];</code>
+     * @return Whether the soongRunEvent field is set.
+     */
+    public boolean hasSoongRunEvent() {
+      return ((bitField6_ & 0x00002000) != 0);
+    }
+    /**
+     * <pre>
+     * set when kind = SOONG_RUN_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.SoongRunEvent soong_run_event = 206 [lazy = true];</code>
+     * @return The soongRunEvent.
+     */
+    public com.google.wireless.android.sdk.stats.SoongRunEvent getSoongRunEvent() {
+      if (soongRunEventBuilder_ == null) {
+        return soongRunEvent_ == null ? com.google.wireless.android.sdk.stats.SoongRunEvent.getDefaultInstance() : soongRunEvent_;
+      } else {
+        return soongRunEventBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * set when kind = SOONG_RUN_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.SoongRunEvent soong_run_event = 206 [lazy = true];</code>
+     */
+    public Builder setSoongRunEvent(com.google.wireless.android.sdk.stats.SoongRunEvent value) {
+      if (soongRunEventBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        soongRunEvent_ = value;
+        onChanged();
+      } else {
+        soongRunEventBuilder_.setMessage(value);
+      }
+      bitField6_ |= 0x00002000;
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = SOONG_RUN_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.SoongRunEvent soong_run_event = 206 [lazy = true];</code>
+     */
+    public Builder setSoongRunEvent(
+        com.google.wireless.android.sdk.stats.SoongRunEvent.Builder builderForValue) {
+      if (soongRunEventBuilder_ == null) {
+        soongRunEvent_ = builderForValue.build();
+        onChanged();
+      } else {
+        soongRunEventBuilder_.setMessage(builderForValue.build());
+      }
+      bitField6_ |= 0x00002000;
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = SOONG_RUN_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.SoongRunEvent soong_run_event = 206 [lazy = true];</code>
+     */
+    public Builder mergeSoongRunEvent(com.google.wireless.android.sdk.stats.SoongRunEvent value) {
+      if (soongRunEventBuilder_ == null) {
+        if (((bitField6_ & 0x00002000) != 0) &&
+            soongRunEvent_ != null &&
+            soongRunEvent_ != com.google.wireless.android.sdk.stats.SoongRunEvent.getDefaultInstance()) {
+          soongRunEvent_ =
+            com.google.wireless.android.sdk.stats.SoongRunEvent.newBuilder(soongRunEvent_).mergeFrom(value).buildPartial();
+        } else {
+          soongRunEvent_ = value;
+        }
+        onChanged();
+      } else {
+        soongRunEventBuilder_.mergeFrom(value);
+      }
+      bitField6_ |= 0x00002000;
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = SOONG_RUN_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.SoongRunEvent soong_run_event = 206 [lazy = true];</code>
+     */
+    public Builder clearSoongRunEvent() {
+      if (soongRunEventBuilder_ == null) {
+        soongRunEvent_ = null;
+        onChanged();
+      } else {
+        soongRunEventBuilder_.clear();
+      }
+      bitField6_ = (bitField6_ & ~0x00002000);
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = SOONG_RUN_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.SoongRunEvent soong_run_event = 206 [lazy = true];</code>
+     */
+    public com.google.wireless.android.sdk.stats.SoongRunEvent.Builder getSoongRunEventBuilder() {
+      bitField6_ |= 0x00002000;
+      onChanged();
+      return getSoongRunEventFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * set when kind = SOONG_RUN_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.SoongRunEvent soong_run_event = 206 [lazy = true];</code>
+     */
+    public com.google.wireless.android.sdk.stats.SoongRunEventOrBuilder getSoongRunEventOrBuilder() {
+      if (soongRunEventBuilder_ != null) {
+        return soongRunEventBuilder_.getMessageOrBuilder();
+      } else {
+        return soongRunEvent_ == null ?
+            com.google.wireless.android.sdk.stats.SoongRunEvent.getDefaultInstance() : soongRunEvent_;
+      }
+    }
+    /**
+     * <pre>
+     * set when kind = SOONG_RUN_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.SoongRunEvent soong_run_event = 206 [lazy = true];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.SoongRunEvent, com.google.wireless.android.sdk.stats.SoongRunEvent.Builder, com.google.wireless.android.sdk.stats.SoongRunEventOrBuilder> 
+        getSoongRunEventFieldBuilder() {
+      if (soongRunEventBuilder_ == null) {
+        soongRunEventBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.wireless.android.sdk.stats.SoongRunEvent, com.google.wireless.android.sdk.stats.SoongRunEvent.Builder, com.google.wireless.android.sdk.stats.SoongRunEventOrBuilder>(
+                getSoongRunEvent(),
+                getParentForChildren(),
+                isClean());
+        soongRunEvent_ = null;
+      }
+      return soongRunEventBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

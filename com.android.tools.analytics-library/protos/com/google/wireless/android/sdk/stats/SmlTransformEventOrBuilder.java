@@ -88,5 +88,56 @@ public interface SmlTransformEventOrBuilder extends
    */
   com.google.wireless.android.sdk.stats.SmlTransformEvent.TransformKind getTransformKind();
 
+  /**
+   * <pre>
+   * Session id is used to group all the events for a single transform session
+   * which could contain an initial transform and multiple refinements.
+   * </pre>
+   *
+   * <code>optional string session_id = 7;</code>
+   * @return Whether the sessionId field is set.
+   */
+  boolean hasSessionId();
+  /**
+   * <pre>
+   * Session id is used to group all the events for a single transform session
+   * which could contain an initial transform and multiple refinements.
+   * </pre>
+   *
+   * <code>optional string session_id = 7;</code>
+   * @return The sessionId.
+   */
+  java.lang.String getSessionId();
+  /**
+   * <pre>
+   * Session id is used to group all the events for a single transform session
+   * which could contain an initial transform and multiple refinements.
+   * </pre>
+   *
+   * <code>optional string session_id = 7;</code>
+   * @return The bytes for sessionId.
+   */
+  com.google.protobuf.ByteString
+      getSessionIdBytes();
+
+  /**
+   * <pre>
+   * used to differentiate the initial transfrom and follow ups
+   * </pre>
+   *
+   * <code>optional .android_studio.SmlTransformEvent.TransformPhase transform_phase = 8;</code>
+   * @return Whether the transformPhase field is set.
+   */
+  boolean hasTransformPhase();
+  /**
+   * <pre>
+   * used to differentiate the initial transfrom and follow ups
+   * </pre>
+   *
+   * <code>optional .android_studio.SmlTransformEvent.TransformPhase transform_phase = 8;</code>
+   * @return The transformPhase.
+   */
+  com.google.wireless.android.sdk.stats.SmlTransformEvent.TransformPhase getTransformPhase();
+
   public com.google.wireless.android.sdk.stats.SmlTransformEvent.TransformCase getTransformCase();
 }
