@@ -67,6 +67,16 @@ private static final long serialVersionUID = 0L;
             durationSec_ = input.readInt64();
             break;
           }
+          case 24: {
+            bitField0_ |= 0x00000004;
+            agentPushTimeMillis_ = input.readInt64();
+            break;
+          }
+          case 32: {
+            bitField0_ |= 0x00000008;
+            firstFrameDelayMillis_ = input.readInt64();
+            break;
+          }
           default: {
             if (!parseUnknownField(
                 input, unknownFields, extensionRegistry, tag)) {
@@ -243,6 +253,60 @@ private static final long serialVersionUID = 0L;
     return durationSec_;
   }
 
+  public static final int AGENT_PUSH_TIME_MILLIS_FIELD_NUMBER = 3;
+  private long agentPushTimeMillis_;
+  /**
+   * <pre>
+   * Time it took to push the Screen Sharing Agent to the device.
+   * </pre>
+   *
+   * <code>optional int64 agent_push_time_millis = 3;</code>
+   * @return Whether the agentPushTimeMillis field is set.
+   */
+  @java.lang.Override
+  public boolean hasAgentPushTimeMillis() {
+    return ((bitField0_ & 0x00000004) != 0);
+  }
+  /**
+   * <pre>
+   * Time it took to push the Screen Sharing Agent to the device.
+   * </pre>
+   *
+   * <code>optional int64 agent_push_time_millis = 3;</code>
+   * @return The agentPushTimeMillis.
+   */
+  @java.lang.Override
+  public long getAgentPushTimeMillis() {
+    return agentPushTimeMillis_;
+  }
+
+  public static final int FIRST_FRAME_DELAY_MILLIS_FIELD_NUMBER = 4;
+  private long firstFrameDelayMillis_;
+  /**
+   * <pre>
+   * Time between the end of agent push and the arrival of the first frame.
+   * </pre>
+   *
+   * <code>optional int64 first_frame_delay_millis = 4;</code>
+   * @return Whether the firstFrameDelayMillis field is set.
+   */
+  @java.lang.Override
+  public boolean hasFirstFrameDelayMillis() {
+    return ((bitField0_ & 0x00000008) != 0);
+  }
+  /**
+   * <pre>
+   * Time between the end of agent push and the arrival of the first frame.
+   * </pre>
+   *
+   * <code>optional int64 first_frame_delay_millis = 4;</code>
+   * @return The firstFrameDelayMillis.
+   */
+  @java.lang.Override
+  public long getFirstFrameDelayMillis() {
+    return firstFrameDelayMillis_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -263,6 +327,12 @@ private static final long serialVersionUID = 0L;
     if (((bitField0_ & 0x00000002) != 0)) {
       output.writeInt64(2, durationSec_);
     }
+    if (((bitField0_ & 0x00000004) != 0)) {
+      output.writeInt64(3, agentPushTimeMillis_);
+    }
+    if (((bitField0_ & 0x00000008) != 0)) {
+      output.writeInt64(4, firstFrameDelayMillis_);
+    }
     unknownFields.writeTo(output);
   }
 
@@ -279,6 +349,14 @@ private static final long serialVersionUID = 0L;
     if (((bitField0_ & 0x00000002) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(2, durationSec_);
+    }
+    if (((bitField0_ & 0x00000004) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeInt64Size(3, agentPushTimeMillis_);
+    }
+    if (((bitField0_ & 0x00000008) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeInt64Size(4, firstFrameDelayMillis_);
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -304,6 +382,16 @@ private static final long serialVersionUID = 0L;
       if (getDurationSec()
           != other.getDurationSec()) return false;
     }
+    if (hasAgentPushTimeMillis() != other.hasAgentPushTimeMillis()) return false;
+    if (hasAgentPushTimeMillis()) {
+      if (getAgentPushTimeMillis()
+          != other.getAgentPushTimeMillis()) return false;
+    }
+    if (hasFirstFrameDelayMillis() != other.hasFirstFrameDelayMillis()) return false;
+    if (hasFirstFrameDelayMillis()) {
+      if (getFirstFrameDelayMillis()
+          != other.getFirstFrameDelayMillis()) return false;
+    }
     if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
@@ -323,6 +411,16 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + DURATION_SEC_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
           getDurationSec());
+    }
+    if (hasAgentPushTimeMillis()) {
+      hash = (37 * hash) + AGENT_PUSH_TIME_MILLIS_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getAgentPushTimeMillis());
+    }
+    if (hasFirstFrameDelayMillis()) {
+      hash = (37 * hash) + FIRST_FRAME_DELAY_MILLIS_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getFirstFrameDelayMillis());
     }
     hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
@@ -461,6 +559,10 @@ private static final long serialVersionUID = 0L;
       bitField0_ = (bitField0_ & ~0x00000001);
       durationSec_ = 0L;
       bitField0_ = (bitField0_ & ~0x00000002);
+      agentPushTimeMillis_ = 0L;
+      bitField0_ = (bitField0_ & ~0x00000004);
+      firstFrameDelayMillis_ = 0L;
+      bitField0_ = (bitField0_ & ~0x00000008);
       return this;
     }
 
@@ -496,6 +598,14 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000002) != 0)) {
         result.durationSec_ = durationSec_;
         to_bitField0_ |= 0x00000002;
+      }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.agentPushTimeMillis_ = agentPushTimeMillis_;
+        to_bitField0_ |= 0x00000004;
+      }
+      if (((from_bitField0_ & 0x00000008) != 0)) {
+        result.firstFrameDelayMillis_ = firstFrameDelayMillis_;
+        to_bitField0_ |= 0x00000008;
       }
       result.bitField0_ = to_bitField0_;
       onBuilt();
@@ -551,6 +661,12 @@ private static final long serialVersionUID = 0L;
       }
       if (other.hasDurationSec()) {
         setDurationSec(other.getDurationSec());
+      }
+      if (other.hasAgentPushTimeMillis()) {
+        setAgentPushTimeMillis(other.getAgentPushTimeMillis());
+      }
+      if (other.hasFirstFrameDelayMillis()) {
+        setFirstFrameDelayMillis(other.getFirstFrameDelayMillis());
       }
       this.mergeUnknownFields(other.unknownFields);
       onChanged();
@@ -660,6 +776,116 @@ private static final long serialVersionUID = 0L;
     public Builder clearDurationSec() {
       bitField0_ = (bitField0_ & ~0x00000002);
       durationSec_ = 0L;
+      onChanged();
+      return this;
+    }
+
+    private long agentPushTimeMillis_ ;
+    /**
+     * <pre>
+     * Time it took to push the Screen Sharing Agent to the device.
+     * </pre>
+     *
+     * <code>optional int64 agent_push_time_millis = 3;</code>
+     * @return Whether the agentPushTimeMillis field is set.
+     */
+    @java.lang.Override
+    public boolean hasAgentPushTimeMillis() {
+      return ((bitField0_ & 0x00000004) != 0);
+    }
+    /**
+     * <pre>
+     * Time it took to push the Screen Sharing Agent to the device.
+     * </pre>
+     *
+     * <code>optional int64 agent_push_time_millis = 3;</code>
+     * @return The agentPushTimeMillis.
+     */
+    @java.lang.Override
+    public long getAgentPushTimeMillis() {
+      return agentPushTimeMillis_;
+    }
+    /**
+     * <pre>
+     * Time it took to push the Screen Sharing Agent to the device.
+     * </pre>
+     *
+     * <code>optional int64 agent_push_time_millis = 3;</code>
+     * @param value The agentPushTimeMillis to set.
+     * @return This builder for chaining.
+     */
+    public Builder setAgentPushTimeMillis(long value) {
+      bitField0_ |= 0x00000004;
+      agentPushTimeMillis_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Time it took to push the Screen Sharing Agent to the device.
+     * </pre>
+     *
+     * <code>optional int64 agent_push_time_millis = 3;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearAgentPushTimeMillis() {
+      bitField0_ = (bitField0_ & ~0x00000004);
+      agentPushTimeMillis_ = 0L;
+      onChanged();
+      return this;
+    }
+
+    private long firstFrameDelayMillis_ ;
+    /**
+     * <pre>
+     * Time between the end of agent push and the arrival of the first frame.
+     * </pre>
+     *
+     * <code>optional int64 first_frame_delay_millis = 4;</code>
+     * @return Whether the firstFrameDelayMillis field is set.
+     */
+    @java.lang.Override
+    public boolean hasFirstFrameDelayMillis() {
+      return ((bitField0_ & 0x00000008) != 0);
+    }
+    /**
+     * <pre>
+     * Time between the end of agent push and the arrival of the first frame.
+     * </pre>
+     *
+     * <code>optional int64 first_frame_delay_millis = 4;</code>
+     * @return The firstFrameDelayMillis.
+     */
+    @java.lang.Override
+    public long getFirstFrameDelayMillis() {
+      return firstFrameDelayMillis_;
+    }
+    /**
+     * <pre>
+     * Time between the end of agent push and the arrival of the first frame.
+     * </pre>
+     *
+     * <code>optional int64 first_frame_delay_millis = 4;</code>
+     * @param value The firstFrameDelayMillis to set.
+     * @return This builder for chaining.
+     */
+    public Builder setFirstFrameDelayMillis(long value) {
+      bitField0_ |= 0x00000008;
+      firstFrameDelayMillis_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Time between the end of agent push and the arrival of the first frame.
+     * </pre>
+     *
+     * <code>optional int64 first_frame_delay_millis = 4;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearFirstFrameDelayMillis() {
+      bitField0_ = (bitField0_ & ~0x00000008);
+      firstFrameDelayMillis_ = 0L;
       onChanged();
       return this;
     }
