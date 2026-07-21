@@ -138,6 +138,7 @@ public interface AndroidStudioEventOrBuilder extends
    * </pre>
    *
    * <code>optional .android_studio.AndroidStudioEvent.MonitorType monitor_type = 5 [deprecated = true];</code>
+   * @deprecated
    * @return Whether the monitorType field is set.
    */
   @java.lang.Deprecated boolean hasMonitorType();
@@ -148,6 +149,7 @@ public interface AndroidStudioEventOrBuilder extends
    * </pre>
    *
    * <code>optional .android_studio.AndroidStudioEvent.MonitorType monitor_type = 5 [deprecated = true];</code>
+   * @deprecated
    * @return The monitorType.
    */
   @java.lang.Deprecated com.google.wireless.android.sdk.stats.AndroidStudioEvent.MonitorType getMonitorType();
@@ -159,6 +161,7 @@ public interface AndroidStudioEventOrBuilder extends
    * </pre>
    *
    * <code>optional bool monitor_paused = 6 [deprecated = true];</code>
+   * @deprecated
    * @return Whether the monitorPaused field is set.
    */
   @java.lang.Deprecated boolean hasMonitorPaused();
@@ -169,6 +172,7 @@ public interface AndroidStudioEventOrBuilder extends
    * </pre>
    *
    * <code>optional bool monitor_paused = 6 [deprecated = true];</code>
+   * @deprecated
    * @return The monitorPaused.
    */
   @java.lang.Deprecated boolean getMonitorPaused();
@@ -180,6 +184,7 @@ public interface AndroidStudioEventOrBuilder extends
    * </pre>
    *
    * <code>optional .android_studio.AndroidStudioEvent.ProfilerCaptureType profiler_capture_type = 7 [deprecated = true];</code>
+   * @deprecated
    * @return Whether the profilerCaptureType field is set.
    */
   @java.lang.Deprecated boolean hasProfilerCaptureType();
@@ -190,6 +195,7 @@ public interface AndroidStudioEventOrBuilder extends
    * </pre>
    *
    * <code>optional .android_studio.AndroidStudioEvent.ProfilerCaptureType profiler_capture_type = 7 [deprecated = true];</code>
+   * @deprecated
    * @return The profilerCaptureType.
    */
   @java.lang.Deprecated com.google.wireless.android.sdk.stats.AndroidStudioEvent.ProfilerCaptureType getProfilerCaptureType();
@@ -249,6 +255,7 @@ public interface AndroidStudioEventOrBuilder extends
    * </pre>
    *
    * <code>optional .android_studio.AndroidStudioEvent.RunConfigurationType run_configuration_type = 10 [deprecated = true];</code>
+   * @deprecated
    * @return Whether the runConfigurationType field is set.
    */
   @java.lang.Deprecated boolean hasRunConfigurationType();
@@ -259,6 +266,7 @@ public interface AndroidStudioEventOrBuilder extends
    * </pre>
    *
    * <code>optional .android_studio.AndroidStudioEvent.RunConfigurationType run_configuration_type = 10 [deprecated = true];</code>
+   * @deprecated
    * @return The runConfigurationType.
    */
   @java.lang.Deprecated com.google.wireless.android.sdk.stats.AndroidStudioEvent.RunConfigurationType getRunConfigurationType();
@@ -270,6 +278,7 @@ public interface AndroidStudioEventOrBuilder extends
    * </pre>
    *
    * <code>optional .android_studio.AndroidStudioEvent.DebuggerType debugger_type = 11 [deprecated = true];</code>
+   * @deprecated
    * @return Whether the debuggerType field is set.
    */
   @java.lang.Deprecated boolean hasDebuggerType();
@@ -280,6 +289,7 @@ public interface AndroidStudioEventOrBuilder extends
    * </pre>
    *
    * <code>optional .android_studio.AndroidStudioEvent.DebuggerType debugger_type = 11 [deprecated = true];</code>
+   * @deprecated
    * @return The debuggerType.
    */
   @java.lang.Deprecated com.google.wireless.android.sdk.stats.AndroidStudioEvent.DebuggerType getDebuggerType();
@@ -667,6 +677,7 @@ public interface AndroidStudioEventOrBuilder extends
    * </pre>
    *
    * <code>optional .android_studio.EmulatorUiEvent emulator_ui_event = 25 [deprecated = true];</code>
+   * @deprecated
    * @return Whether the emulatorUiEvent field is set.
    */
   @java.lang.Deprecated boolean hasEmulatorUiEvent();
@@ -677,6 +688,7 @@ public interface AndroidStudioEventOrBuilder extends
    * </pre>
    *
    * <code>optional .android_studio.EmulatorUiEvent emulator_ui_event = 25 [deprecated = true];</code>
+   * @deprecated
    * @return The emulatorUiEvent.
    */
   @java.lang.Deprecated com.google.wireless.android.sdk.stats.EmulatorUiEvent getEmulatorUiEvent();
@@ -1657,6 +1669,7 @@ public interface AndroidStudioEventOrBuilder extends
    * </pre>
    *
    * <code>optional .android_studio.WhatsNewAssistantEvent whats_new_assistant_event = 60 [deprecated = true];</code>
+   * @deprecated
    * @return Whether the whatsNewAssistantEvent field is set.
    */
   @java.lang.Deprecated boolean hasWhatsNewAssistantEvent();
@@ -1667,6 +1680,7 @@ public interface AndroidStudioEventOrBuilder extends
    * </pre>
    *
    * <code>optional .android_studio.WhatsNewAssistantEvent whats_new_assistant_event = 60 [deprecated = true];</code>
+   * @deprecated
    * @return The whatsNewAssistantEvent.
    */
   @java.lang.Deprecated com.google.wireless.android.sdk.stats.WhatsNewAssistantEvent getWhatsNewAssistantEvent();
@@ -1805,6 +1819,7 @@ public interface AndroidStudioEventOrBuilder extends
    * </pre>
    *
    * <code>optional .android_studio.StudioRunEvent studio_run_event = 65 [deprecated = true];</code>
+   * @deprecated
    * @return Whether the studioRunEvent field is set.
    */
   @java.lang.Deprecated boolean hasStudioRunEvent();
@@ -1814,6 +1829,7 @@ public interface AndroidStudioEventOrBuilder extends
    * </pre>
    *
    * <code>optional .android_studio.StudioRunEvent studio_run_event = 65 [deprecated = true];</code>
+   * @deprecated
    * @return The studioRunEvent.
    */
   @java.lang.Deprecated com.google.wireless.android.sdk.stats.StudioRunEvent getStudioRunEvent();
@@ -3250,6 +3266,7 @@ public interface AndroidStudioEventOrBuilder extends
    * </pre>
    *
    * <code>optional .android_studio.AutoImportEvent auto_import_event = 117 [deprecated = true];</code>
+   * @deprecated
    * @return Whether the autoImportEvent field is set.
    */
   @java.lang.Deprecated boolean hasAutoImportEvent();
@@ -3260,6 +3277,7 @@ public interface AndroidStudioEventOrBuilder extends
    * </pre>
    *
    * <code>optional .android_studio.AutoImportEvent auto_import_event = 117 [deprecated = true];</code>
+   * @deprecated
    * @return The autoImportEvent.
    */
   @java.lang.Deprecated com.google.wireless.android.sdk.stats.AutoImportEvent getAutoImportEvent();

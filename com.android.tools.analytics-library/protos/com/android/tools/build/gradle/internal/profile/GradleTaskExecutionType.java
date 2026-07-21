@@ -1283,6 +1283,10 @@ public enum GradleTaskExecutionType
    * <code>FEATURE_GLOBAL_SYNTHETICS_MERGE = 316;</code>
    */
   FEATURE_GLOBAL_SYNTHETICS_MERGE(316),
+  /**
+   * <code>BUILD_ANALYZER = 317;</code>
+   */
+  BUILD_ANALYZER(317),
   UNRECOGNIZED(-1),
   ;
 
@@ -2554,6 +2558,10 @@ public enum GradleTaskExecutionType
    * <code>FEATURE_GLOBAL_SYNTHETICS_MERGE = 316;</code>
    */
   public static final int FEATURE_GLOBAL_SYNTHETICS_MERGE_VALUE = 316;
+  /**
+   * <code>BUILD_ANALYZER = 317;</code>
+   */
+  public static final int BUILD_ANALYZER_VALUE = 317;
 
 
   public final int getNumber() {
@@ -2897,6 +2905,7 @@ public enum GradleTaskExecutionType
       case 314: return PRIVACY_SANDBOX_SDK_GENERATE_R_PACKAGE_DEX;
       case 315: return GLOBAL_SYNTHETICS_MERGE;
       case 316: return FEATURE_GLOBAL_SYNTHETICS_MERGE;
+      case 317: return BUILD_ANALYZER;
       default: return null;
     }
   }
