@@ -7295,6 +7295,10 @@ private static final long serialVersionUID = 0L;
      * <code>COMPOSE_NAVIGATION_UI_ACTIVITY = 72;</code>
      */
     COMPOSE_NAVIGATION_UI_ACTIVITY(72),
+    /**
+     * <code>JOURNEY_XML_FILE = 73;</code>
+     */
+    JOURNEY_XML_FILE(73),
     ;
 
     /**
@@ -7593,6 +7597,10 @@ private static final long serialVersionUID = 0L;
      * <code>COMPOSE_NAVIGATION_UI_ACTIVITY = 72;</code>
      */
     public static final int COMPOSE_NAVIGATION_UI_ACTIVITY_VALUE = 72;
+    /**
+     * <code>JOURNEY_XML_FILE = 73;</code>
+     */
+    public static final int JOURNEY_XML_FILE_VALUE = 73;
 
 
     public final int getNumber() {
@@ -7688,6 +7696,7 @@ private static final long serialVersionUID = 0L;
         case 70: return KOTLIN_MULTIPLATFORM_LIBRARY_MODULE;
         case 71: return EXPERIMENTAL_ACTIVITY_2;
         case 72: return COMPOSE_NAVIGATION_UI_ACTIVITY;
+        case 73: return JOURNEY_XML_FILE;
         default: return null;
       }
     }
@@ -10504,7 +10513,7 @@ private static final long serialVersionUID = 0L;
        * <pre>
        * The different template components (eg Activities, Fragments, Services,
        * etc) the template engine could be asked to render
-       * Next ID: 65
+       * Next ID: 66
        * </pre>
        *
        * Protobuf enum {@code android_studio.AndroidStudioEvent.TemplatesUsage.TemplateComponent.TemplateType}
@@ -10737,6 +10746,10 @@ private static final long serialVersionUID = 0L;
          * <code>SHORTCUTS_XML_FILE = 59;</code>
          */
         SHORTCUTS_XML_FILE(59),
+        /**
+         * <code>JOURNEY_XML_FILE = 65;</code>
+         */
+        JOURNEY_XML_FILE(65),
         /**
          * <code>CUSTOM_VIEW = 50;</code>
          */
@@ -11000,6 +11013,10 @@ private static final long serialVersionUID = 0L;
          */
         public static final int SHORTCUTS_XML_FILE_VALUE = 59;
         /**
+         * <code>JOURNEY_XML_FILE = 65;</code>
+         */
+        public static final int JOURNEY_XML_FILE_VALUE = 65;
+        /**
          * <code>CUSTOM_VIEW = 50;</code>
          */
         public static final int CUSTOM_VIEW_VALUE = 50;
@@ -11113,6 +11130,7 @@ private static final long serialVersionUID = 0L;
             case 48: return LAYOUT_XML_FILE;
             case 49: return VALUES_XML_FILE;
             case 59: return SHORTCUTS_XML_FILE;
+            case 65: return JOURNEY_XML_FILE;
             case 50: return CUSTOM_VIEW;
             case 51: return BROADCAST_RECEIVER;
             case 52: return INTENT_SERVICE;
@@ -11941,7 +11959,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional uint32 min_sdk = 2 [deprecated = true];</code>
        * @deprecated android_studio.AndroidStudioEvent.TemplatesUsage.TemplateModule.min_sdk is deprecated.
-       *     See studio_stats.proto;l=1996
+       *     See studio_stats.proto;l=1998
        * @return Whether the minSdk field is set.
        */
       @java.lang.Deprecated boolean hasMinSdk();
@@ -11952,7 +11970,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional uint32 min_sdk = 2 [deprecated = true];</code>
        * @deprecated android_studio.AndroidStudioEvent.TemplatesUsage.TemplateModule.min_sdk is deprecated.
-       *     See studio_stats.proto;l=1996
+       *     See studio_stats.proto;l=1998
        * @return The minSdk.
        */
       @java.lang.Deprecated int getMinSdk();
@@ -12483,7 +12501,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional uint32 min_sdk = 2 [deprecated = true];</code>
        * @deprecated android_studio.AndroidStudioEvent.TemplatesUsage.TemplateModule.min_sdk is deprecated.
-       *     See studio_stats.proto;l=1996
+       *     See studio_stats.proto;l=1998
        * @return Whether the minSdk field is set.
        */
       @java.lang.Override
@@ -12497,7 +12515,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional uint32 min_sdk = 2 [deprecated = true];</code>
        * @deprecated android_studio.AndroidStudioEvent.TemplatesUsage.TemplateModule.min_sdk is deprecated.
-       *     See studio_stats.proto;l=1996
+       *     See studio_stats.proto;l=1998
        * @return The minSdk.
        */
       @java.lang.Override
@@ -13135,7 +13153,7 @@ private static final long serialVersionUID = 0L;
          *
          * <code>optional uint32 min_sdk = 2 [deprecated = true];</code>
          * @deprecated android_studio.AndroidStudioEvent.TemplatesUsage.TemplateModule.min_sdk is deprecated.
-         *     See studio_stats.proto;l=1996
+         *     See studio_stats.proto;l=1998
          * @return Whether the minSdk field is set.
          */
         @java.lang.Override
@@ -13149,7 +13167,7 @@ private static final long serialVersionUID = 0L;
          *
          * <code>optional uint32 min_sdk = 2 [deprecated = true];</code>
          * @deprecated android_studio.AndroidStudioEvent.TemplatesUsage.TemplateModule.min_sdk is deprecated.
-         *     See studio_stats.proto;l=1996
+         *     See studio_stats.proto;l=1998
          * @return The minSdk.
          */
         @java.lang.Override
@@ -13163,7 +13181,7 @@ private static final long serialVersionUID = 0L;
          *
          * <code>optional uint32 min_sdk = 2 [deprecated = true];</code>
          * @deprecated android_studio.AndroidStudioEvent.TemplatesUsage.TemplateModule.min_sdk is deprecated.
-         *     See studio_stats.proto;l=1996
+         *     See studio_stats.proto;l=1998
          * @param value The minSdk to set.
          * @return This builder for chaining.
          */
@@ -13181,7 +13199,7 @@ private static final long serialVersionUID = 0L;
          *
          * <code>optional uint32 min_sdk = 2 [deprecated = true];</code>
          * @deprecated android_studio.AndroidStudioEvent.TemplatesUsage.TemplateModule.min_sdk is deprecated.
-         *     See studio_stats.proto;l=1996
+         *     See studio_stats.proto;l=1998
          * @return This builder for chaining.
          */
         @java.lang.Deprecated public Builder clearMinSdk() {
