@@ -10829,6 +10829,14 @@ private static final long serialVersionUID = 0L;
      * <code>REMOVE_JCENTER_HYPERLINK = 49;</code>
      */
     REMOVE_JCENTER_HYPERLINK(49),
+    /**
+     * <code>OPEN_UPGRADE_ASSISTANT_HYPERLINK = 50;</code>
+     */
+    OPEN_UPGRADE_ASSISTANT_HYPERLINK(50),
+    /**
+     * <code>SUPPRESS_UNSUPPORTED_SDK_HYPERLINK = 51;</code>
+     */
+    SUPPRESS_UNSUPPORTED_SDK_HYPERLINK(51),
     ;
 
     /**
@@ -11031,6 +11039,14 @@ private static final long serialVersionUID = 0L;
      * <code>REMOVE_JCENTER_HYPERLINK = 49;</code>
      */
     public static final int REMOVE_JCENTER_HYPERLINK_VALUE = 49;
+    /**
+     * <code>OPEN_UPGRADE_ASSISTANT_HYPERLINK = 50;</code>
+     */
+    public static final int OPEN_UPGRADE_ASSISTANT_HYPERLINK_VALUE = 50;
+    /**
+     * <code>SUPPRESS_UNSUPPORTED_SDK_HYPERLINK = 51;</code>
+     */
+    public static final int SUPPRESS_UNSUPPORTED_SDK_HYPERLINK_VALUE = 51;
 
 
     public final int getNumber() {
@@ -11103,6 +11119,8 @@ private static final long serialVersionUID = 0L;
         case 47: return CONFIRM_DISTRIBUTIONSHA256SUM_FROM_WRAPPER_HYPERLINK;
         case 48: return ENABLE_ANDROIDX_HYPERLINK;
         case 49: return REMOVE_JCENTER_HYPERLINK;
+        case 50: return OPEN_UPGRADE_ASSISTANT_HYPERLINK;
+        case 51: return SUPPRESS_UNSUPPORTED_SDK_HYPERLINK;
         default: return null;
       }
     }

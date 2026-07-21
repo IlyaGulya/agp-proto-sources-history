@@ -1184,11 +1184,21 @@ private static final long serialVersionUID = 0L;
       /**
        * <pre>
        * User doesn't have a google-services.json in the module
+       * Deprecated by NO_ACCESS below
        * </pre>
        *
-       * <code>NO_FIREBASE = 2;</code>
+       * <code>NO_FIREBASE = 2 [deprecated = true];</code>
        */
+      @java.lang.Deprecated
       NO_FIREBASE(2),
+      /**
+       * <pre>
+       * User doesn't have access to any apps
+       * </pre>
+       *
+       * <code>NO_ACCESS = 3;</code>
+       */
+      NO_ACCESS(3),
       ;
 
       /**
@@ -1206,11 +1216,20 @@ private static final long serialVersionUID = 0L;
       /**
        * <pre>
        * User doesn't have a google-services.json in the module
+       * Deprecated by NO_ACCESS below
        * </pre>
        *
-       * <code>NO_FIREBASE = 2;</code>
+       * <code>NO_FIREBASE = 2 [deprecated = true];</code>
        */
-      public static final int NO_FIREBASE_VALUE = 2;
+      @java.lang.Deprecated public static final int NO_FIREBASE_VALUE = 2;
+      /**
+       * <pre>
+       * User doesn't have access to any apps
+       * </pre>
+       *
+       * <code>NO_ACCESS = 3;</code>
+       */
+      public static final int NO_ACCESS_VALUE = 3;
 
 
       public final int getNumber() {
@@ -1236,6 +1255,7 @@ private static final long serialVersionUID = 0L;
           case 0: return UNKNOWN_STATE;
           case 1: return NO_LOGIN;
           case 2: return NO_FIREBASE;
+          case 3: return NO_ACCESS;
           default: return null;
         }
       }
