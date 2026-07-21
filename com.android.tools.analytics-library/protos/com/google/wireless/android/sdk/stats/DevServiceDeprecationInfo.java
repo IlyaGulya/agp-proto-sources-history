@@ -66,6 +66,14 @@ private static final long serialVersionUID = 0L;
      * <code>UNSUPPORTED = 1;</code>
      */
     UNSUPPORTED(1),
+    /**
+     * <pre>
+     * The dev service is deprecated and will soon be UNSUPPORTED
+     * </pre>
+     *
+     * <code>DEPRECATED = 2;</code>
+     */
+    DEPRECATED(2),
     ;
 
     /**
@@ -80,6 +88,14 @@ private static final long serialVersionUID = 0L;
      * <code>UNSUPPORTED = 1;</code>
      */
     public static final int UNSUPPORTED_VALUE = 1;
+    /**
+     * <pre>
+     * The dev service is deprecated and will soon be UNSUPPORTED
+     * </pre>
+     *
+     * <code>DEPRECATED = 2;</code>
+     */
+    public static final int DEPRECATED_VALUE = 2;
 
 
     public final int getNumber() {
@@ -104,6 +120,7 @@ private static final long serialVersionUID = 0L;
       switch (value) {
         case 0: return UNKNOWN_STATUS;
         case 1: return UNSUPPORTED;
+        case 2: return DEPRECATED;
         default: return null;
       }
     }
@@ -452,6 +469,33 @@ private static final long serialVersionUID = 0L;
     return isDeprecationUnplanned_;
   }
 
+  public static final int DELIVERY_DISMISSED_FIELD_NUMBER = 7;
+  private boolean deliveryDismissed_ = false;
+  /**
+   * <pre>
+   * Whether the user dismissed the delivery type
+   * </pre>
+   *
+   * <code>optional bool delivery_dismissed = 7;</code>
+   * @return Whether the deliveryDismissed field is set.
+   */
+  @java.lang.Override
+  public boolean hasDeliveryDismissed() {
+    return ((bitField0_ & 0x00000040) != 0);
+  }
+  /**
+   * <pre>
+   * Whether the user dismissed the delivery type
+   * </pre>
+   *
+   * <code>optional bool delivery_dismissed = 7;</code>
+   * @return The deliveryDismissed.
+   */
+  @java.lang.Override
+  public boolean getDeliveryDismissed() {
+    return deliveryDismissed_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -483,6 +527,9 @@ private static final long serialVersionUID = 0L;
     }
     if (((bitField0_ & 0x00000020) != 0)) {
       output.writeBool(6, isDeprecationUnplanned_);
+    }
+    if (((bitField0_ & 0x00000040) != 0)) {
+      output.writeBool(7, deliveryDismissed_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -516,6 +563,10 @@ private static final long serialVersionUID = 0L;
     if (((bitField0_ & 0x00000020) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeBoolSize(6, isDeprecationUnplanned_);
+    }
+    if (((bitField0_ & 0x00000040) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeBoolSize(7, deliveryDismissed_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -560,6 +611,11 @@ private static final long serialVersionUID = 0L;
       if (getIsDeprecationUnplanned()
           != other.getIsDeprecationUnplanned()) return false;
     }
+    if (hasDeliveryDismissed() != other.hasDeliveryDismissed()) return false;
+    if (hasDeliveryDismissed()) {
+      if (getDeliveryDismissed()
+          != other.getDeliveryDismissed()) return false;
+    }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -598,6 +654,11 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + IS_DEPRECATION_UNPLANNED_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
           getIsDeprecationUnplanned());
+    }
+    if (hasDeliveryDismissed()) {
+      hash = (37 * hash) + DELIVERY_DISMISSED_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getDeliveryDismissed());
     }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
@@ -743,6 +804,7 @@ private static final long serialVersionUID = 0L;
       moreInfoClicked_ = false;
       updateClicked_ = false;
       isDeprecationUnplanned_ = false;
+      deliveryDismissed_ = false;
       return this;
     }
 
@@ -801,6 +863,10 @@ private static final long serialVersionUID = 0L;
         result.isDeprecationUnplanned_ = isDeprecationUnplanned_;
         to_bitField0_ |= 0x00000020;
       }
+      if (((from_bitField0_ & 0x00000040) != 0)) {
+        result.deliveryDismissed_ = deliveryDismissed_;
+        to_bitField0_ |= 0x00000040;
+      }
       result.bitField0_ |= to_bitField0_;
     }
 
@@ -833,6 +899,9 @@ private static final long serialVersionUID = 0L;
       }
       if (other.hasIsDeprecationUnplanned()) {
         setIsDeprecationUnplanned(other.getIsDeprecationUnplanned());
+      }
+      if (other.hasDeliveryDismissed()) {
+        setDeliveryDismissed(other.getDeliveryDismissed());
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -904,6 +973,11 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000020;
               break;
             } // case 48
+            case 56: {
+              deliveryDismissed_ = input.readBool();
+              bitField0_ |= 0x00000040;
+              break;
+            } // case 56
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -1257,6 +1331,62 @@ private static final long serialVersionUID = 0L;
     public Builder clearIsDeprecationUnplanned() {
       bitField0_ = (bitField0_ & ~0x00000020);
       isDeprecationUnplanned_ = false;
+      onChanged();
+      return this;
+    }
+
+    private boolean deliveryDismissed_ ;
+    /**
+     * <pre>
+     * Whether the user dismissed the delivery type
+     * </pre>
+     *
+     * <code>optional bool delivery_dismissed = 7;</code>
+     * @return Whether the deliveryDismissed field is set.
+     */
+    @java.lang.Override
+    public boolean hasDeliveryDismissed() {
+      return ((bitField0_ & 0x00000040) != 0);
+    }
+    /**
+     * <pre>
+     * Whether the user dismissed the delivery type
+     * </pre>
+     *
+     * <code>optional bool delivery_dismissed = 7;</code>
+     * @return The deliveryDismissed.
+     */
+    @java.lang.Override
+    public boolean getDeliveryDismissed() {
+      return deliveryDismissed_;
+    }
+    /**
+     * <pre>
+     * Whether the user dismissed the delivery type
+     * </pre>
+     *
+     * <code>optional bool delivery_dismissed = 7;</code>
+     * @param value The deliveryDismissed to set.
+     * @return This builder for chaining.
+     */
+    public Builder setDeliveryDismissed(boolean value) {
+
+      deliveryDismissed_ = value;
+      bitField0_ |= 0x00000040;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Whether the user dismissed the delivery type
+     * </pre>
+     *
+     * <code>optional bool delivery_dismissed = 7;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearDeliveryDismissed() {
+      bitField0_ = (bitField0_ & ~0x00000040);
+      deliveryDismissed_ = false;
       onChanged();
       return this;
     }

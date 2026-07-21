@@ -120,4 +120,23 @@ public interface DevServiceDeprecationInfoOrBuilder extends
    * @return The isDeprecationUnplanned.
    */
   boolean getIsDeprecationUnplanned();
+
+  /**
+   * <pre>
+   * Whether the user dismissed the delivery type
+   * </pre>
+   *
+   * <code>optional bool delivery_dismissed = 7;</code>
+   * @return Whether the deliveryDismissed field is set.
+   */
+  boolean hasDeliveryDismissed();
+  /**
+   * <pre>
+   * Whether the user dismissed the delivery type
+   * </pre>
+   *
+   * <code>optional bool delivery_dismissed = 7;</code>
+   * @return The deliveryDismissed.
+   */
+  boolean getDeliveryDismissed();
 }
