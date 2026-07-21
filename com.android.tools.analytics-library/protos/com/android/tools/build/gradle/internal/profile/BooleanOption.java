@@ -589,6 +589,10 @@ public enum BooleanOption
    * <code>RELATIVE_COMPILE_LIB_RESOURCES = 142;</code>
    */
   RELATIVE_COMPILE_LIB_RESOURCES(142),
+  /**
+   * <code>R8_FAIL_ON_MISSING_CLASSES = 143;</code>
+   */
+  R8_FAIL_ON_MISSING_CLASSES(143),
   UNRECOGNIZED(-1),
   ;
 
@@ -1164,6 +1168,10 @@ public enum BooleanOption
    * <code>RELATIVE_COMPILE_LIB_RESOURCES = 142;</code>
    */
   public static final int RELATIVE_COMPILE_LIB_RESOURCES_VALUE = 142;
+  /**
+   * <code>R8_FAIL_ON_MISSING_CLASSES = 143;</code>
+   */
+  public static final int R8_FAIL_ON_MISSING_CLASSES_VALUE = 143;
 
 
   public final int getNumber() {
@@ -1333,6 +1341,7 @@ public enum BooleanOption
       case 140: return RUN_LINT_IN_PROCESS;
       case 141: return USE_LINT_PARTIAL_ANALYSIS;
       case 142: return RELATIVE_COMPILE_LIB_RESOURCES;
+      case 143: return R8_FAIL_ON_MISSING_CLASSES;
       default: return null;
     }
   }

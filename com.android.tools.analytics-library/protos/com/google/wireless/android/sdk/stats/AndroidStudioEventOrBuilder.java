@@ -3323,4 +3323,58 @@ public interface AndroidStudioEventOrBuilder extends
    * <code>optional .android_studio.LiveLiteralsEvent live_literals_event = 119;</code>
    */
   com.google.wireless.android.sdk.stats.LiveLiteralsEventOrBuilder getLiveLiteralsEventOrBuilder();
+
+  /**
+   * <pre>
+   * set when kind = MIGRATE_TO_NON_TRANSITIVE_R_CLASS
+   * </pre>
+   *
+   * <code>optional .android_studio.NonTransitiveRClassMigrationEvent non_transitive_r_class_migration_event = 120;</code>
+   * @return Whether the nonTransitiveRClassMigrationEvent field is set.
+   */
+  boolean hasNonTransitiveRClassMigrationEvent();
+  /**
+   * <pre>
+   * set when kind = MIGRATE_TO_NON_TRANSITIVE_R_CLASS
+   * </pre>
+   *
+   * <code>optional .android_studio.NonTransitiveRClassMigrationEvent non_transitive_r_class_migration_event = 120;</code>
+   * @return The nonTransitiveRClassMigrationEvent.
+   */
+  com.google.wireless.android.sdk.stats.NonTransitiveRClassMigrationEvent getNonTransitiveRClassMigrationEvent();
+  /**
+   * <pre>
+   * set when kind = MIGRATE_TO_NON_TRANSITIVE_R_CLASS
+   * </pre>
+   *
+   * <code>optional .android_studio.NonTransitiveRClassMigrationEvent non_transitive_r_class_migration_event = 120;</code>
+   */
+  com.google.wireless.android.sdk.stats.NonTransitiveRClassMigrationEventOrBuilder getNonTransitiveRClassMigrationEventOrBuilder();
+
+  /**
+   * <pre>
+   * set when kind = ANDROID_TEST_RETENTION_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.AndroidTestRetentionEvent android_test_retention_event = 121;</code>
+   * @return Whether the androidTestRetentionEvent field is set.
+   */
+  boolean hasAndroidTestRetentionEvent();
+  /**
+   * <pre>
+   * set when kind = ANDROID_TEST_RETENTION_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.AndroidTestRetentionEvent android_test_retention_event = 121;</code>
+   * @return The androidTestRetentionEvent.
+   */
+  com.google.wireless.android.sdk.stats.AndroidTestRetentionEvent getAndroidTestRetentionEvent();
+  /**
+   * <pre>
+   * set when kind = ANDROID_TEST_RETENTION_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.AndroidTestRetentionEvent android_test_retention_event = 121;</code>
+   */
+  com.google.wireless.android.sdk.stats.AndroidTestRetentionEventOrBuilder getAndroidTestRetentionEventOrBuilder();
 }

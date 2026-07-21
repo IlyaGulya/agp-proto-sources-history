@@ -1547,6 +1547,32 @@ private static final long serialVersionUID = 0L;
             bitField3_ |= 0x00040000;
             break;
           }
+          case 962: {
+            com.google.wireless.android.sdk.stats.NonTransitiveRClassMigrationEvent.Builder subBuilder = null;
+            if (((bitField3_ & 0x00080000) != 0)) {
+              subBuilder = nonTransitiveRClassMigrationEvent_.toBuilder();
+            }
+            nonTransitiveRClassMigrationEvent_ = input.readMessage(com.google.wireless.android.sdk.stats.NonTransitiveRClassMigrationEvent.PARSER, extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(nonTransitiveRClassMigrationEvent_);
+              nonTransitiveRClassMigrationEvent_ = subBuilder.buildPartial();
+            }
+            bitField3_ |= 0x00080000;
+            break;
+          }
+          case 970: {
+            com.google.wireless.android.sdk.stats.AndroidTestRetentionEvent.Builder subBuilder = null;
+            if (((bitField3_ & 0x00100000) != 0)) {
+              subBuilder = androidTestRetentionEvent_.toBuilder();
+            }
+            androidTestRetentionEvent_ = input.readMessage(com.google.wireless.android.sdk.stats.AndroidTestRetentionEvent.PARSER, extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(androidTestRetentionEvent_);
+              androidTestRetentionEvent_ = subBuilder.buildPartial();
+            }
+            bitField3_ |= 0x00100000;
+            break;
+          }
           default: {
             if (!parseUnknownField(
                 input, unknownFields, extensionRegistry, tag)) {
@@ -3767,6 +3793,22 @@ private static final long serialVersionUID = 0L;
      * <code>LIVE_LITERALS_EVENT = 221;</code>
      */
     LIVE_LITERALS_EVENT(221),
+    /**
+     * <pre>
+     * Event related to Non-Transitive R class migration.
+     * </pre>
+     *
+     * <code>MIGRATE_TO_NON_TRANSITIVE_R_CLASS = 222;</code>
+     */
+    MIGRATE_TO_NON_TRANSITIVE_R_CLASS(222),
+    /**
+     * <pre>
+     * Event related to Android Test Retention
+     * </pre>
+     *
+     * <code>ANDROID_TEST_RETENTION_EVENT = 223;</code>
+     */
+    ANDROID_TEST_RETENTION_EVENT(223),
     ;
 
     /**
@@ -5367,6 +5409,22 @@ private static final long serialVersionUID = 0L;
      * <code>LIVE_LITERALS_EVENT = 221;</code>
      */
     public static final int LIVE_LITERALS_EVENT_VALUE = 221;
+    /**
+     * <pre>
+     * Event related to Non-Transitive R class migration.
+     * </pre>
+     *
+     * <code>MIGRATE_TO_NON_TRANSITIVE_R_CLASS = 222;</code>
+     */
+    public static final int MIGRATE_TO_NON_TRANSITIVE_R_CLASS_VALUE = 222;
+    /**
+     * <pre>
+     * Event related to Android Test Retention
+     * </pre>
+     *
+     * <code>ANDROID_TEST_RETENTION_EVENT = 223;</code>
+     */
+    public static final int ANDROID_TEST_RETENTION_EVENT_VALUE = 223;
 
 
     public final int getNumber() {
@@ -5606,6 +5664,8 @@ private static final long serialVersionUID = 0L;
         case 219: return AUTO_IMPORT_EVENT;
         case 220: return FILE_USAGE;
         case 221: return LIVE_LITERALS_EVENT;
+        case 222: return MIGRATE_TO_NON_TRANSITIVE_R_CLASS;
+        case 223: return ANDROID_TEST_RETENTION_EVENT;
         default: return null;
       }
     }
@@ -8713,6 +8773,10 @@ private static final long serialVersionUID = 0L;
      * <code>ENABLE_ANDROIDX_HYPERLINK = 48;</code>
      */
     ENABLE_ANDROIDX_HYPERLINK(48),
+    /**
+     * <code>REMOVE_JCENTER_HYPERLINK = 49;</code>
+     */
+    REMOVE_JCENTER_HYPERLINK(49),
     ;
 
     /**
@@ -8911,6 +8975,10 @@ private static final long serialVersionUID = 0L;
      * <code>ENABLE_ANDROIDX_HYPERLINK = 48;</code>
      */
     public static final int ENABLE_ANDROIDX_HYPERLINK_VALUE = 48;
+    /**
+     * <code>REMOVE_JCENTER_HYPERLINK = 49;</code>
+     */
+    public static final int REMOVE_JCENTER_HYPERLINK_VALUE = 49;
 
 
     public final int getNumber() {
@@ -8982,6 +9050,7 @@ private static final long serialVersionUID = 0L;
         case 46: return REMOVE_DISTRIBUTIONSHA256SUM_FROM_WRAPPER_HYPERLINK;
         case 47: return CONFIRM_DISTRIBUTIONSHA256SUM_FROM_WRAPPER_HYPERLINK;
         case 48: return ENABLE_ANDROIDX_HYPERLINK;
+        case 49: return REMOVE_JCENTER_HYPERLINK;
         default: return null;
       }
     }
@@ -18300,6 +18369,76 @@ private static final long serialVersionUID = 0L;
     return liveLiteralsEvent_ == null ? com.google.wireless.android.sdk.stats.LiveLiteralsEvent.getDefaultInstance() : liveLiteralsEvent_;
   }
 
+  public static final int NON_TRANSITIVE_R_CLASS_MIGRATION_EVENT_FIELD_NUMBER = 120;
+  private com.google.wireless.android.sdk.stats.NonTransitiveRClassMigrationEvent nonTransitiveRClassMigrationEvent_;
+  /**
+   * <pre>
+   * set when kind = MIGRATE_TO_NON_TRANSITIVE_R_CLASS
+   * </pre>
+   *
+   * <code>optional .android_studio.NonTransitiveRClassMigrationEvent non_transitive_r_class_migration_event = 120;</code>
+   * @return Whether the nonTransitiveRClassMigrationEvent field is set.
+   */
+  public boolean hasNonTransitiveRClassMigrationEvent() {
+    return ((bitField3_ & 0x00080000) != 0);
+  }
+  /**
+   * <pre>
+   * set when kind = MIGRATE_TO_NON_TRANSITIVE_R_CLASS
+   * </pre>
+   *
+   * <code>optional .android_studio.NonTransitiveRClassMigrationEvent non_transitive_r_class_migration_event = 120;</code>
+   * @return The nonTransitiveRClassMigrationEvent.
+   */
+  public com.google.wireless.android.sdk.stats.NonTransitiveRClassMigrationEvent getNonTransitiveRClassMigrationEvent() {
+    return nonTransitiveRClassMigrationEvent_ == null ? com.google.wireless.android.sdk.stats.NonTransitiveRClassMigrationEvent.getDefaultInstance() : nonTransitiveRClassMigrationEvent_;
+  }
+  /**
+   * <pre>
+   * set when kind = MIGRATE_TO_NON_TRANSITIVE_R_CLASS
+   * </pre>
+   *
+   * <code>optional .android_studio.NonTransitiveRClassMigrationEvent non_transitive_r_class_migration_event = 120;</code>
+   */
+  public com.google.wireless.android.sdk.stats.NonTransitiveRClassMigrationEventOrBuilder getNonTransitiveRClassMigrationEventOrBuilder() {
+    return nonTransitiveRClassMigrationEvent_ == null ? com.google.wireless.android.sdk.stats.NonTransitiveRClassMigrationEvent.getDefaultInstance() : nonTransitiveRClassMigrationEvent_;
+  }
+
+  public static final int ANDROID_TEST_RETENTION_EVENT_FIELD_NUMBER = 121;
+  private com.google.wireless.android.sdk.stats.AndroidTestRetentionEvent androidTestRetentionEvent_;
+  /**
+   * <pre>
+   * set when kind = ANDROID_TEST_RETENTION_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.AndroidTestRetentionEvent android_test_retention_event = 121;</code>
+   * @return Whether the androidTestRetentionEvent field is set.
+   */
+  public boolean hasAndroidTestRetentionEvent() {
+    return ((bitField3_ & 0x00100000) != 0);
+  }
+  /**
+   * <pre>
+   * set when kind = ANDROID_TEST_RETENTION_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.AndroidTestRetentionEvent android_test_retention_event = 121;</code>
+   * @return The androidTestRetentionEvent.
+   */
+  public com.google.wireless.android.sdk.stats.AndroidTestRetentionEvent getAndroidTestRetentionEvent() {
+    return androidTestRetentionEvent_ == null ? com.google.wireless.android.sdk.stats.AndroidTestRetentionEvent.getDefaultInstance() : androidTestRetentionEvent_;
+  }
+  /**
+   * <pre>
+   * set when kind = ANDROID_TEST_RETENTION_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.AndroidTestRetentionEvent android_test_retention_event = 121;</code>
+   */
+  public com.google.wireless.android.sdk.stats.AndroidTestRetentionEventOrBuilder getAndroidTestRetentionEventOrBuilder() {
+    return androidTestRetentionEvent_ == null ? com.google.wireless.android.sdk.stats.AndroidTestRetentionEvent.getDefaultInstance() : androidTestRetentionEvent_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -18670,6 +18809,12 @@ private static final long serialVersionUID = 0L;
     }
     if (((bitField3_ & 0x00040000) != 0)) {
       output.writeMessage(119, getLiveLiteralsEvent());
+    }
+    if (((bitField3_ & 0x00080000) != 0)) {
+      output.writeMessage(120, getNonTransitiveRClassMigrationEvent());
+    }
+    if (((bitField3_ & 0x00100000) != 0)) {
+      output.writeMessage(121, getAndroidTestRetentionEvent());
     }
     unknownFields.writeTo(output);
   }
@@ -19153,6 +19298,14 @@ private static final long serialVersionUID = 0L;
     if (((bitField3_ & 0x00040000) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(119, getLiveLiteralsEvent());
+    }
+    if (((bitField3_ & 0x00080000) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(120, getNonTransitiveRClassMigrationEvent());
+    }
+    if (((bitField3_ & 0x00100000) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(121, getAndroidTestRetentionEvent());
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -19741,6 +19894,16 @@ private static final long serialVersionUID = 0L;
       if (!getLiveLiteralsEvent()
           .equals(other.getLiveLiteralsEvent())) return false;
     }
+    if (hasNonTransitiveRClassMigrationEvent() != other.hasNonTransitiveRClassMigrationEvent()) return false;
+    if (hasNonTransitiveRClassMigrationEvent()) {
+      if (!getNonTransitiveRClassMigrationEvent()
+          .equals(other.getNonTransitiveRClassMigrationEvent())) return false;
+    }
+    if (hasAndroidTestRetentionEvent() != other.hasAndroidTestRetentionEvent()) return false;
+    if (hasAndroidTestRetentionEvent()) {
+      if (!getAndroidTestRetentionEvent()
+          .equals(other.getAndroidTestRetentionEvent())) return false;
+    }
     if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
@@ -20230,6 +20393,14 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + LIVE_LITERALS_EVENT_FIELD_NUMBER;
       hash = (53 * hash) + getLiveLiteralsEvent().hashCode();
     }
+    if (hasNonTransitiveRClassMigrationEvent()) {
+      hash = (37 * hash) + NON_TRANSITIVE_R_CLASS_MIGRATION_EVENT_FIELD_NUMBER;
+      hash = (53 * hash) + getNonTransitiveRClassMigrationEvent().hashCode();
+    }
+    if (hasAndroidTestRetentionEvent()) {
+      hash = (37 * hash) + ANDROID_TEST_RETENTION_EVENT_FIELD_NUMBER;
+      hash = (53 * hash) + getAndroidTestRetentionEvent().hashCode();
+    }
     hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -20456,6 +20627,8 @@ private static final long serialVersionUID = 0L;
         getAutoImportEventFieldBuilder();
         getFileUsageFieldBuilder();
         getLiveLiteralsEventFieldBuilder();
+        getNonTransitiveRClassMigrationEventFieldBuilder();
+        getAndroidTestRetentionEventFieldBuilder();
       }
     }
     @java.lang.Override
@@ -21091,6 +21264,18 @@ private static final long serialVersionUID = 0L;
         liveLiteralsEventBuilder_.clear();
       }
       bitField3_ = (bitField3_ & ~0x00400000);
+      if (nonTransitiveRClassMigrationEventBuilder_ == null) {
+        nonTransitiveRClassMigrationEvent_ = null;
+      } else {
+        nonTransitiveRClassMigrationEventBuilder_.clear();
+      }
+      bitField3_ = (bitField3_ & ~0x00800000);
+      if (androidTestRetentionEventBuilder_ == null) {
+        androidTestRetentionEvent_ = null;
+      } else {
+        androidTestRetentionEventBuilder_.clear();
+      }
+      bitField3_ = (bitField3_ & ~0x01000000);
       return this;
     }
 
@@ -21997,6 +22182,22 @@ private static final long serialVersionUID = 0L;
         }
         to_bitField3_ |= 0x00040000;
       }
+      if (((from_bitField3_ & 0x00800000) != 0)) {
+        if (nonTransitiveRClassMigrationEventBuilder_ == null) {
+          result.nonTransitiveRClassMigrationEvent_ = nonTransitiveRClassMigrationEvent_;
+        } else {
+          result.nonTransitiveRClassMigrationEvent_ = nonTransitiveRClassMigrationEventBuilder_.build();
+        }
+        to_bitField3_ |= 0x00080000;
+      }
+      if (((from_bitField3_ & 0x01000000) != 0)) {
+        if (androidTestRetentionEventBuilder_ == null) {
+          result.androidTestRetentionEvent_ = androidTestRetentionEvent_;
+        } else {
+          result.androidTestRetentionEvent_ = androidTestRetentionEventBuilder_.build();
+        }
+        to_bitField3_ |= 0x00100000;
+      }
       result.bitField0_ = to_bitField0_;
       result.bitField1_ = to_bitField1_;
       result.bitField2_ = to_bitField2_;
@@ -22495,6 +22696,12 @@ private static final long serialVersionUID = 0L;
       }
       if (other.hasLiveLiteralsEvent()) {
         mergeLiveLiteralsEvent(other.getLiveLiteralsEvent());
+      }
+      if (other.hasNonTransitiveRClassMigrationEvent()) {
+        mergeNonTransitiveRClassMigrationEvent(other.getNonTransitiveRClassMigrationEvent());
+      }
+      if (other.hasAndroidTestRetentionEvent()) {
+        mergeAndroidTestRetentionEvent(other.getAndroidTestRetentionEvent());
       }
       this.mergeUnknownFields(other.unknownFields);
       onChanged();
@@ -40266,6 +40473,318 @@ private static final long serialVersionUID = 0L;
         liveLiteralsEvent_ = null;
       }
       return liveLiteralsEventBuilder_;
+    }
+
+    private com.google.wireless.android.sdk.stats.NonTransitiveRClassMigrationEvent nonTransitiveRClassMigrationEvent_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.NonTransitiveRClassMigrationEvent, com.google.wireless.android.sdk.stats.NonTransitiveRClassMigrationEvent.Builder, com.google.wireless.android.sdk.stats.NonTransitiveRClassMigrationEventOrBuilder> nonTransitiveRClassMigrationEventBuilder_;
+    /**
+     * <pre>
+     * set when kind = MIGRATE_TO_NON_TRANSITIVE_R_CLASS
+     * </pre>
+     *
+     * <code>optional .android_studio.NonTransitiveRClassMigrationEvent non_transitive_r_class_migration_event = 120;</code>
+     * @return Whether the nonTransitiveRClassMigrationEvent field is set.
+     */
+    public boolean hasNonTransitiveRClassMigrationEvent() {
+      return ((bitField3_ & 0x00800000) != 0);
+    }
+    /**
+     * <pre>
+     * set when kind = MIGRATE_TO_NON_TRANSITIVE_R_CLASS
+     * </pre>
+     *
+     * <code>optional .android_studio.NonTransitiveRClassMigrationEvent non_transitive_r_class_migration_event = 120;</code>
+     * @return The nonTransitiveRClassMigrationEvent.
+     */
+    public com.google.wireless.android.sdk.stats.NonTransitiveRClassMigrationEvent getNonTransitiveRClassMigrationEvent() {
+      if (nonTransitiveRClassMigrationEventBuilder_ == null) {
+        return nonTransitiveRClassMigrationEvent_ == null ? com.google.wireless.android.sdk.stats.NonTransitiveRClassMigrationEvent.getDefaultInstance() : nonTransitiveRClassMigrationEvent_;
+      } else {
+        return nonTransitiveRClassMigrationEventBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * set when kind = MIGRATE_TO_NON_TRANSITIVE_R_CLASS
+     * </pre>
+     *
+     * <code>optional .android_studio.NonTransitiveRClassMigrationEvent non_transitive_r_class_migration_event = 120;</code>
+     */
+    public Builder setNonTransitiveRClassMigrationEvent(com.google.wireless.android.sdk.stats.NonTransitiveRClassMigrationEvent value) {
+      if (nonTransitiveRClassMigrationEventBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        nonTransitiveRClassMigrationEvent_ = value;
+        onChanged();
+      } else {
+        nonTransitiveRClassMigrationEventBuilder_.setMessage(value);
+      }
+      bitField3_ |= 0x00800000;
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = MIGRATE_TO_NON_TRANSITIVE_R_CLASS
+     * </pre>
+     *
+     * <code>optional .android_studio.NonTransitiveRClassMigrationEvent non_transitive_r_class_migration_event = 120;</code>
+     */
+    public Builder setNonTransitiveRClassMigrationEvent(
+        com.google.wireless.android.sdk.stats.NonTransitiveRClassMigrationEvent.Builder builderForValue) {
+      if (nonTransitiveRClassMigrationEventBuilder_ == null) {
+        nonTransitiveRClassMigrationEvent_ = builderForValue.build();
+        onChanged();
+      } else {
+        nonTransitiveRClassMigrationEventBuilder_.setMessage(builderForValue.build());
+      }
+      bitField3_ |= 0x00800000;
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = MIGRATE_TO_NON_TRANSITIVE_R_CLASS
+     * </pre>
+     *
+     * <code>optional .android_studio.NonTransitiveRClassMigrationEvent non_transitive_r_class_migration_event = 120;</code>
+     */
+    public Builder mergeNonTransitiveRClassMigrationEvent(com.google.wireless.android.sdk.stats.NonTransitiveRClassMigrationEvent value) {
+      if (nonTransitiveRClassMigrationEventBuilder_ == null) {
+        if (((bitField3_ & 0x00800000) != 0) &&
+            nonTransitiveRClassMigrationEvent_ != null &&
+            nonTransitiveRClassMigrationEvent_ != com.google.wireless.android.sdk.stats.NonTransitiveRClassMigrationEvent.getDefaultInstance()) {
+          nonTransitiveRClassMigrationEvent_ =
+            com.google.wireless.android.sdk.stats.NonTransitiveRClassMigrationEvent.newBuilder(nonTransitiveRClassMigrationEvent_).mergeFrom(value).buildPartial();
+        } else {
+          nonTransitiveRClassMigrationEvent_ = value;
+        }
+        onChanged();
+      } else {
+        nonTransitiveRClassMigrationEventBuilder_.mergeFrom(value);
+      }
+      bitField3_ |= 0x00800000;
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = MIGRATE_TO_NON_TRANSITIVE_R_CLASS
+     * </pre>
+     *
+     * <code>optional .android_studio.NonTransitiveRClassMigrationEvent non_transitive_r_class_migration_event = 120;</code>
+     */
+    public Builder clearNonTransitiveRClassMigrationEvent() {
+      if (nonTransitiveRClassMigrationEventBuilder_ == null) {
+        nonTransitiveRClassMigrationEvent_ = null;
+        onChanged();
+      } else {
+        nonTransitiveRClassMigrationEventBuilder_.clear();
+      }
+      bitField3_ = (bitField3_ & ~0x00800000);
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = MIGRATE_TO_NON_TRANSITIVE_R_CLASS
+     * </pre>
+     *
+     * <code>optional .android_studio.NonTransitiveRClassMigrationEvent non_transitive_r_class_migration_event = 120;</code>
+     */
+    public com.google.wireless.android.sdk.stats.NonTransitiveRClassMigrationEvent.Builder getNonTransitiveRClassMigrationEventBuilder() {
+      bitField3_ |= 0x00800000;
+      onChanged();
+      return getNonTransitiveRClassMigrationEventFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * set when kind = MIGRATE_TO_NON_TRANSITIVE_R_CLASS
+     * </pre>
+     *
+     * <code>optional .android_studio.NonTransitiveRClassMigrationEvent non_transitive_r_class_migration_event = 120;</code>
+     */
+    public com.google.wireless.android.sdk.stats.NonTransitiveRClassMigrationEventOrBuilder getNonTransitiveRClassMigrationEventOrBuilder() {
+      if (nonTransitiveRClassMigrationEventBuilder_ != null) {
+        return nonTransitiveRClassMigrationEventBuilder_.getMessageOrBuilder();
+      } else {
+        return nonTransitiveRClassMigrationEvent_ == null ?
+            com.google.wireless.android.sdk.stats.NonTransitiveRClassMigrationEvent.getDefaultInstance() : nonTransitiveRClassMigrationEvent_;
+      }
+    }
+    /**
+     * <pre>
+     * set when kind = MIGRATE_TO_NON_TRANSITIVE_R_CLASS
+     * </pre>
+     *
+     * <code>optional .android_studio.NonTransitiveRClassMigrationEvent non_transitive_r_class_migration_event = 120;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.NonTransitiveRClassMigrationEvent, com.google.wireless.android.sdk.stats.NonTransitiveRClassMigrationEvent.Builder, com.google.wireless.android.sdk.stats.NonTransitiveRClassMigrationEventOrBuilder> 
+        getNonTransitiveRClassMigrationEventFieldBuilder() {
+      if (nonTransitiveRClassMigrationEventBuilder_ == null) {
+        nonTransitiveRClassMigrationEventBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.wireless.android.sdk.stats.NonTransitiveRClassMigrationEvent, com.google.wireless.android.sdk.stats.NonTransitiveRClassMigrationEvent.Builder, com.google.wireless.android.sdk.stats.NonTransitiveRClassMigrationEventOrBuilder>(
+                getNonTransitiveRClassMigrationEvent(),
+                getParentForChildren(),
+                isClean());
+        nonTransitiveRClassMigrationEvent_ = null;
+      }
+      return nonTransitiveRClassMigrationEventBuilder_;
+    }
+
+    private com.google.wireless.android.sdk.stats.AndroidTestRetentionEvent androidTestRetentionEvent_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.AndroidTestRetentionEvent, com.google.wireless.android.sdk.stats.AndroidTestRetentionEvent.Builder, com.google.wireless.android.sdk.stats.AndroidTestRetentionEventOrBuilder> androidTestRetentionEventBuilder_;
+    /**
+     * <pre>
+     * set when kind = ANDROID_TEST_RETENTION_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.AndroidTestRetentionEvent android_test_retention_event = 121;</code>
+     * @return Whether the androidTestRetentionEvent field is set.
+     */
+    public boolean hasAndroidTestRetentionEvent() {
+      return ((bitField3_ & 0x01000000) != 0);
+    }
+    /**
+     * <pre>
+     * set when kind = ANDROID_TEST_RETENTION_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.AndroidTestRetentionEvent android_test_retention_event = 121;</code>
+     * @return The androidTestRetentionEvent.
+     */
+    public com.google.wireless.android.sdk.stats.AndroidTestRetentionEvent getAndroidTestRetentionEvent() {
+      if (androidTestRetentionEventBuilder_ == null) {
+        return androidTestRetentionEvent_ == null ? com.google.wireless.android.sdk.stats.AndroidTestRetentionEvent.getDefaultInstance() : androidTestRetentionEvent_;
+      } else {
+        return androidTestRetentionEventBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * set when kind = ANDROID_TEST_RETENTION_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.AndroidTestRetentionEvent android_test_retention_event = 121;</code>
+     */
+    public Builder setAndroidTestRetentionEvent(com.google.wireless.android.sdk.stats.AndroidTestRetentionEvent value) {
+      if (androidTestRetentionEventBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        androidTestRetentionEvent_ = value;
+        onChanged();
+      } else {
+        androidTestRetentionEventBuilder_.setMessage(value);
+      }
+      bitField3_ |= 0x01000000;
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = ANDROID_TEST_RETENTION_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.AndroidTestRetentionEvent android_test_retention_event = 121;</code>
+     */
+    public Builder setAndroidTestRetentionEvent(
+        com.google.wireless.android.sdk.stats.AndroidTestRetentionEvent.Builder builderForValue) {
+      if (androidTestRetentionEventBuilder_ == null) {
+        androidTestRetentionEvent_ = builderForValue.build();
+        onChanged();
+      } else {
+        androidTestRetentionEventBuilder_.setMessage(builderForValue.build());
+      }
+      bitField3_ |= 0x01000000;
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = ANDROID_TEST_RETENTION_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.AndroidTestRetentionEvent android_test_retention_event = 121;</code>
+     */
+    public Builder mergeAndroidTestRetentionEvent(com.google.wireless.android.sdk.stats.AndroidTestRetentionEvent value) {
+      if (androidTestRetentionEventBuilder_ == null) {
+        if (((bitField3_ & 0x01000000) != 0) &&
+            androidTestRetentionEvent_ != null &&
+            androidTestRetentionEvent_ != com.google.wireless.android.sdk.stats.AndroidTestRetentionEvent.getDefaultInstance()) {
+          androidTestRetentionEvent_ =
+            com.google.wireless.android.sdk.stats.AndroidTestRetentionEvent.newBuilder(androidTestRetentionEvent_).mergeFrom(value).buildPartial();
+        } else {
+          androidTestRetentionEvent_ = value;
+        }
+        onChanged();
+      } else {
+        androidTestRetentionEventBuilder_.mergeFrom(value);
+      }
+      bitField3_ |= 0x01000000;
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = ANDROID_TEST_RETENTION_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.AndroidTestRetentionEvent android_test_retention_event = 121;</code>
+     */
+    public Builder clearAndroidTestRetentionEvent() {
+      if (androidTestRetentionEventBuilder_ == null) {
+        androidTestRetentionEvent_ = null;
+        onChanged();
+      } else {
+        androidTestRetentionEventBuilder_.clear();
+      }
+      bitField3_ = (bitField3_ & ~0x01000000);
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = ANDROID_TEST_RETENTION_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.AndroidTestRetentionEvent android_test_retention_event = 121;</code>
+     */
+    public com.google.wireless.android.sdk.stats.AndroidTestRetentionEvent.Builder getAndroidTestRetentionEventBuilder() {
+      bitField3_ |= 0x01000000;
+      onChanged();
+      return getAndroidTestRetentionEventFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * set when kind = ANDROID_TEST_RETENTION_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.AndroidTestRetentionEvent android_test_retention_event = 121;</code>
+     */
+    public com.google.wireless.android.sdk.stats.AndroidTestRetentionEventOrBuilder getAndroidTestRetentionEventOrBuilder() {
+      if (androidTestRetentionEventBuilder_ != null) {
+        return androidTestRetentionEventBuilder_.getMessageOrBuilder();
+      } else {
+        return androidTestRetentionEvent_ == null ?
+            com.google.wireless.android.sdk.stats.AndroidTestRetentionEvent.getDefaultInstance() : androidTestRetentionEvent_;
+      }
+    }
+    /**
+     * <pre>
+     * set when kind = ANDROID_TEST_RETENTION_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.AndroidTestRetentionEvent android_test_retention_event = 121;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.AndroidTestRetentionEvent, com.google.wireless.android.sdk.stats.AndroidTestRetentionEvent.Builder, com.google.wireless.android.sdk.stats.AndroidTestRetentionEventOrBuilder> 
+        getAndroidTestRetentionEventFieldBuilder() {
+      if (androidTestRetentionEventBuilder_ == null) {
+        androidTestRetentionEventBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.wireless.android.sdk.stats.AndroidTestRetentionEvent, com.google.wireless.android.sdk.stats.AndroidTestRetentionEvent.Builder, com.google.wireless.android.sdk.stats.AndroidTestRetentionEventOrBuilder>(
+                getAndroidTestRetentionEvent(),
+                getParentForChildren(),
+                isClean());
+        androidTestRetentionEvent_ = null;
+      }
+      return androidTestRetentionEventBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

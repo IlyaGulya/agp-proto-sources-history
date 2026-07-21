@@ -26,6 +26,7 @@ private static final long serialVersionUID = 0L;
     plugin_ = java.util.Collections.emptyList();
     firebasePerformancePluginVersion_ = "";
     pluginNames_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    taskNames_ = com.google.protobuf.LazyStringArrayList.EMPTY;
   }
 
   @java.lang.Override
@@ -220,6 +221,15 @@ private static final long serialVersionUID = 0L;
             pluginNames_.add(bs);
             break;
           }
+          case 138: {
+            com.google.protobuf.ByteString bs = input.readBytes();
+            if (!((mutable_bitField0_ & 0x00010000) != 0)) {
+              taskNames_ = new com.google.protobuf.LazyStringArrayList();
+              mutable_bitField0_ |= 0x00010000;
+            }
+            taskNames_.add(bs);
+            break;
+          }
           default: {
             if (!parseUnknownField(
                 input, unknownFields, extensionRegistry, tag)) {
@@ -243,6 +253,9 @@ private static final long serialVersionUID = 0L;
       }
       if (((mutable_bitField0_ & 0x00008000) != 0)) {
         pluginNames_ = pluginNames_.getUnmodifiableView();
+      }
+      if (((mutable_bitField0_ & 0x00010000) != 0)) {
+        taskNames_ = taskNames_.getUnmodifiableView();
       }
       this.unknownFields = unknownFields.build();
       makeExtensionsImmutable();
@@ -1949,6 +1962,61 @@ private static final long serialVersionUID = 0L;
     return pluginNames_.getByteString(index);
   }
 
+  public static final int TASK_NAMES_FIELD_NUMBER = 17;
+  private com.google.protobuf.LazyStringList taskNames_;
+  /**
+   * <pre>
+   * Record all of the task class names applied to the project
+   * e.g an example is ORG_GRADLE_API_TASKS_WRAPPER_WRAPPER_DECORATED
+   * </pre>
+   *
+   * <code>repeated string task_names = 17;</code>
+   * @return A list containing the taskNames.
+   */
+  public com.google.protobuf.ProtocolStringList
+      getTaskNamesList() {
+    return taskNames_;
+  }
+  /**
+   * <pre>
+   * Record all of the task class names applied to the project
+   * e.g an example is ORG_GRADLE_API_TASKS_WRAPPER_WRAPPER_DECORATED
+   * </pre>
+   *
+   * <code>repeated string task_names = 17;</code>
+   * @return The count of taskNames.
+   */
+  public int getTaskNamesCount() {
+    return taskNames_.size();
+  }
+  /**
+   * <pre>
+   * Record all of the task class names applied to the project
+   * e.g an example is ORG_GRADLE_API_TASKS_WRAPPER_WRAPPER_DECORATED
+   * </pre>
+   *
+   * <code>repeated string task_names = 17;</code>
+   * @param index The index of the element to return.
+   * @return The taskNames at the given index.
+   */
+  public java.lang.String getTaskNames(int index) {
+    return taskNames_.get(index);
+  }
+  /**
+   * <pre>
+   * Record all of the task class names applied to the project
+   * e.g an example is ORG_GRADLE_API_TASKS_WRAPPER_WRAPPER_DECORATED
+   * </pre>
+   *
+   * <code>repeated string task_names = 17;</code>
+   * @param index The index of the value to return.
+   * @return The bytes of the taskNames at the given index.
+   */
+  public com.google.protobuf.ByteString
+      getTaskNamesBytes(int index) {
+    return taskNames_.getByteString(index);
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -2010,6 +2078,9 @@ private static final long serialVersionUID = 0L;
     }
     for (int i = 0; i < pluginNames_.size(); i++) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 16, pluginNames_.getRaw(i));
+    }
+    for (int i = 0; i < taskNames_.size(); i++) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 17, taskNames_.getRaw(i));
     }
     unknownFields.writeTo(output);
   }
@@ -2087,6 +2158,14 @@ private static final long serialVersionUID = 0L;
       }
       size += dataSize;
       size += 2 * getPluginNamesList().size();
+    }
+    {
+      int dataSize = 0;
+      for (int i = 0; i < taskNames_.size(); i++) {
+        dataSize += computeStringSizeNoTag(taskNames_.getRaw(i));
+      }
+      size += dataSize;
+      size += 2 * getTaskNamesList().size();
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -2171,6 +2250,8 @@ private static final long serialVersionUID = 0L;
     }
     if (!getPluginNamesList()
         .equals(other.getPluginNamesList())) return false;
+    if (!getTaskNamesList()
+        .equals(other.getTaskNamesList())) return false;
     if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
@@ -2248,6 +2329,10 @@ private static final long serialVersionUID = 0L;
     if (getPluginNamesCount() > 0) {
       hash = (37 * hash) + PLUGIN_NAMES_FIELD_NUMBER;
       hash = (53 * hash) + getPluginNamesList().hashCode();
+    }
+    if (getTaskNamesCount() > 0) {
+      hash = (37 * hash) + TASK_NAMES_FIELD_NUMBER;
+      hash = (53 * hash) + getTaskNamesList().hashCode();
     }
     hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
@@ -2434,6 +2519,8 @@ private static final long serialVersionUID = 0L;
       bitField0_ = (bitField0_ & ~0x00004000);
       pluginNames_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       bitField0_ = (bitField0_ & ~0x00008000);
+      taskNames_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      bitField0_ = (bitField0_ & ~0x00010000);
       return this;
     }
 
@@ -2545,6 +2632,11 @@ private static final long serialVersionUID = 0L;
         bitField0_ = (bitField0_ & ~0x00008000);
       }
       result.pluginNames_ = pluginNames_;
+      if (((bitField0_ & 0x00010000) != 0)) {
+        taskNames_ = taskNames_.getUnmodifiableView();
+        bitField0_ = (bitField0_ & ~0x00010000);
+      }
+      result.taskNames_ = taskNames_;
       result.bitField0_ = to_bitField0_;
       onBuilt();
       return result;
@@ -2686,6 +2778,16 @@ private static final long serialVersionUID = 0L;
         } else {
           ensurePluginNamesIsMutable();
           pluginNames_.addAll(other.pluginNames_);
+        }
+        onChanged();
+      }
+      if (!other.taskNames_.isEmpty()) {
+        if (taskNames_.isEmpty()) {
+          taskNames_ = other.taskNames_;
+          bitField0_ = (bitField0_ & ~0x00010000);
+        } else {
+          ensureTaskNamesIsMutable();
+          taskNames_.addAll(other.taskNames_);
         }
         onChanged();
       }
@@ -4639,6 +4741,160 @@ private static final long serialVersionUID = 0L;
   }
   ensurePluginNamesIsMutable();
       pluginNames_.add(value);
+      onChanged();
+      return this;
+    }
+
+    private com.google.protobuf.LazyStringList taskNames_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    private void ensureTaskNamesIsMutable() {
+      if (!((bitField0_ & 0x00010000) != 0)) {
+        taskNames_ = new com.google.protobuf.LazyStringArrayList(taskNames_);
+        bitField0_ |= 0x00010000;
+       }
+    }
+    /**
+     * <pre>
+     * Record all of the task class names applied to the project
+     * e.g an example is ORG_GRADLE_API_TASKS_WRAPPER_WRAPPER_DECORATED
+     * </pre>
+     *
+     * <code>repeated string task_names = 17;</code>
+     * @return A list containing the taskNames.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getTaskNamesList() {
+      return taskNames_.getUnmodifiableView();
+    }
+    /**
+     * <pre>
+     * Record all of the task class names applied to the project
+     * e.g an example is ORG_GRADLE_API_TASKS_WRAPPER_WRAPPER_DECORATED
+     * </pre>
+     *
+     * <code>repeated string task_names = 17;</code>
+     * @return The count of taskNames.
+     */
+    public int getTaskNamesCount() {
+      return taskNames_.size();
+    }
+    /**
+     * <pre>
+     * Record all of the task class names applied to the project
+     * e.g an example is ORG_GRADLE_API_TASKS_WRAPPER_WRAPPER_DECORATED
+     * </pre>
+     *
+     * <code>repeated string task_names = 17;</code>
+     * @param index The index of the element to return.
+     * @return The taskNames at the given index.
+     */
+    public java.lang.String getTaskNames(int index) {
+      return taskNames_.get(index);
+    }
+    /**
+     * <pre>
+     * Record all of the task class names applied to the project
+     * e.g an example is ORG_GRADLE_API_TASKS_WRAPPER_WRAPPER_DECORATED
+     * </pre>
+     *
+     * <code>repeated string task_names = 17;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the taskNames at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getTaskNamesBytes(int index) {
+      return taskNames_.getByteString(index);
+    }
+    /**
+     * <pre>
+     * Record all of the task class names applied to the project
+     * e.g an example is ORG_GRADLE_API_TASKS_WRAPPER_WRAPPER_DECORATED
+     * </pre>
+     *
+     * <code>repeated string task_names = 17;</code>
+     * @param index The index to set the value at.
+     * @param value The taskNames to set.
+     * @return This builder for chaining.
+     */
+    public Builder setTaskNames(
+        int index, java.lang.String value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureTaskNamesIsMutable();
+      taskNames_.set(index, value);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Record all of the task class names applied to the project
+     * e.g an example is ORG_GRADLE_API_TASKS_WRAPPER_WRAPPER_DECORATED
+     * </pre>
+     *
+     * <code>repeated string task_names = 17;</code>
+     * @param value The taskNames to add.
+     * @return This builder for chaining.
+     */
+    public Builder addTaskNames(
+        java.lang.String value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureTaskNamesIsMutable();
+      taskNames_.add(value);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Record all of the task class names applied to the project
+     * e.g an example is ORG_GRADLE_API_TASKS_WRAPPER_WRAPPER_DECORATED
+     * </pre>
+     *
+     * <code>repeated string task_names = 17;</code>
+     * @param values The taskNames to add.
+     * @return This builder for chaining.
+     */
+    public Builder addAllTaskNames(
+        java.lang.Iterable<java.lang.String> values) {
+      ensureTaskNamesIsMutable();
+      com.google.protobuf.AbstractMessageLite.Builder.addAll(
+          values, taskNames_);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Record all of the task class names applied to the project
+     * e.g an example is ORG_GRADLE_API_TASKS_WRAPPER_WRAPPER_DECORATED
+     * </pre>
+     *
+     * <code>repeated string task_names = 17;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearTaskNames() {
+      taskNames_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      bitField0_ = (bitField0_ & ~0x00010000);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Record all of the task class names applied to the project
+     * e.g an example is ORG_GRADLE_API_TASKS_WRAPPER_WRAPPER_DECORATED
+     * </pre>
+     *
+     * <code>repeated string task_names = 17;</code>
+     * @param value The bytes of the taskNames to add.
+     * @return This builder for chaining.
+     */
+    public Builder addTaskNamesBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureTaskNamesIsMutable();
+      taskNames_.add(value);
       onChanged();
       return this;
     }

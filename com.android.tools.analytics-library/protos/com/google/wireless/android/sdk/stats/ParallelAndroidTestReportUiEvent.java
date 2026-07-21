@@ -178,6 +178,10 @@ private static final long serialVersionUID = 0L;
      * <code>TEST_SUITE_OPT_IN_BANNER = 7;</code>
      */
     TEST_SUITE_OPT_IN_BANNER(7),
+    /**
+     * <code>TEST_SUITE_RETENTION_VIEW = 8;</code>
+     */
+    TEST_SUITE_RETENTION_VIEW(8),
     ;
 
     /**
@@ -212,6 +216,10 @@ private static final long serialVersionUID = 0L;
      * <code>TEST_SUITE_OPT_IN_BANNER = 7;</code>
      */
     public static final int TEST_SUITE_OPT_IN_BANNER_VALUE = 7;
+    /**
+     * <code>TEST_SUITE_RETENTION_VIEW = 8;</code>
+     */
+    public static final int TEST_SUITE_RETENTION_VIEW_VALUE = 8;
 
 
     public final int getNumber() {
@@ -242,6 +250,7 @@ private static final long serialVersionUID = 0L;
         case 5: return TEST_SUITE_LOG_VIEW;
         case 6: return TEST_SUITE_DEVICE_INFO_VIEW;
         case 7: return TEST_SUITE_OPT_IN_BANNER;
+        case 8: return TEST_SUITE_RETENTION_VIEW;
         default: return null;
       }
     }
