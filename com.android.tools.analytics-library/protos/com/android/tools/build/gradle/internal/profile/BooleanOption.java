@@ -720,9 +720,10 @@ public enum BooleanOption
    */
   LINT_BASELINE_OMIT_LINE_NUMBERS(174),
   /**
-   * <code>LINT_USE_K2_UAST = 175;</code>
+   * <code>DEPRECATED_LINT_USE_K2_UAST = 175 [deprecated = true];</code>
    */
-  LINT_USE_K2_UAST(175),
+  @java.lang.Deprecated
+  DEPRECATED_LINT_USE_K2_UAST(175),
   /**
    * <code>USE_FULL_CLASSPATH_FOR_DEXING_TRANSFORM = 176;</code>
    */
@@ -1471,9 +1472,9 @@ public enum BooleanOption
    */
   public static final int LINT_BASELINE_OMIT_LINE_NUMBERS_VALUE = 174;
   /**
-   * <code>LINT_USE_K2_UAST = 175;</code>
+   * <code>DEPRECATED_LINT_USE_K2_UAST = 175 [deprecated = true];</code>
    */
-  public static final int LINT_USE_K2_UAST_VALUE = 175;
+  @java.lang.Deprecated public static final int DEPRECATED_LINT_USE_K2_UAST_VALUE = 175;
   /**
    * <code>USE_FULL_CLASSPATH_FOR_DEXING_TRANSFORM = 176;</code>
    */
@@ -1719,7 +1720,7 @@ public enum BooleanOption
       case 172: return LINT_ANALYSIS_PER_COMPONENT;
       case 173: return ENABLE_VCS_INFO;
       case 174: return LINT_BASELINE_OMIT_LINE_NUMBERS;
-      case 175: return LINT_USE_K2_UAST;
+      case 175: return DEPRECATED_LINT_USE_K2_UAST;
       case 176: return USE_FULL_CLASSPATH_FOR_DEXING_TRANSFORM;
       case 177: return ANDROID_TEST_LEAVE_APKS_INSTALLED_AFTER_RUN;
       case 178: return IDE_AVOID_TASK_REGISTRATION;
