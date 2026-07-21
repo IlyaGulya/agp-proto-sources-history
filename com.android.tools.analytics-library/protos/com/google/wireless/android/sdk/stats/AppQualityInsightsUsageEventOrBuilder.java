@@ -414,4 +414,31 @@ public interface AppQualityInsightsUsageEventOrBuilder extends
    * <code>optional .android_studio.AppQualityInsightsUsageEvent.EventDetails event_details = 16 [lazy = true];</code>
    */
   com.google.wireless.android.sdk.stats.AppQualityInsightsUsageEvent.EventDetailsOrBuilder getEventDetailsOrBuilder();
+
+  /**
+   * <pre>
+   * set when type = INSIGHT_SENTIMENT
+   * </pre>
+   *
+   * <code>optional .android_studio.AppQualityInsightsUsageEvent.InsightSentiment insight_sentiment = 17 [lazy = true];</code>
+   * @return Whether the insightSentiment field is set.
+   */
+  boolean hasInsightSentiment();
+  /**
+   * <pre>
+   * set when type = INSIGHT_SENTIMENT
+   * </pre>
+   *
+   * <code>optional .android_studio.AppQualityInsightsUsageEvent.InsightSentiment insight_sentiment = 17 [lazy = true];</code>
+   * @return The insightSentiment.
+   */
+  com.google.wireless.android.sdk.stats.AppQualityInsightsUsageEvent.InsightSentiment getInsightSentiment();
+  /**
+   * <pre>
+   * set when type = INSIGHT_SENTIMENT
+   * </pre>
+   *
+   * <code>optional .android_studio.AppQualityInsightsUsageEvent.InsightSentiment insight_sentiment = 17 [lazy = true];</code>
+   */
+  com.google.wireless.android.sdk.stats.AppQualityInsightsUsageEvent.InsightSentimentOrBuilder getInsightSentimentOrBuilder();
 }

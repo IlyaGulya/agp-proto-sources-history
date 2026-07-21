@@ -152,6 +152,14 @@ private static final long serialVersionUID = 0L;
      * <code>EVENT_VIEWED = 12;</code>
      */
     EVENT_VIEWED(12),
+    /**
+     * <pre>
+     * Track user sentiment of AQI insights.
+     * </pre>
+     *
+     * <code>INSIGHT_SENTIMENT = 13;</code>
+     */
+    INSIGHT_SENTIMENT(13),
     ;
 
     /**
@@ -254,6 +262,14 @@ private static final long serialVersionUID = 0L;
      * <code>EVENT_VIEWED = 12;</code>
      */
     public static final int EVENT_VIEWED_VALUE = 12;
+    /**
+     * <pre>
+     * Track user sentiment of AQI insights.
+     * </pre>
+     *
+     * <code>INSIGHT_SENTIMENT = 13;</code>
+     */
+    public static final int INSIGHT_SENTIMENT_VALUE = 13;
 
 
     public final int getNumber() {
@@ -289,6 +305,7 @@ private static final long serialVersionUID = 0L;
         case 10: return MODE_TRANSITION;
         case 11: return PERFORMANCE_STATS;
         case 12: return EVENT_VIEWED;
+        case 13: return INSIGHT_SENTIMENT;
         default: return null;
       }
     }
@@ -13129,6 +13146,969 @@ private static final long serialVersionUID = 0L;
 
   }
 
+  public interface InsightSentimentOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:android_studio.AppQualityInsightsUsageEvent.InsightSentiment)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>optional .android_studio.AppQualityInsightsUsageEvent.InsightSentiment.Sentiment sentiment = 1;</code>
+     * @return Whether the sentiment field is set.
+     */
+    boolean hasSentiment();
+    /**
+     * <code>optional .android_studio.AppQualityInsightsUsageEvent.InsightSentiment.Sentiment sentiment = 1;</code>
+     * @return The sentiment.
+     */
+    com.google.wireless.android.sdk.stats.AppQualityInsightsUsageEvent.InsightSentiment.Sentiment getSentiment();
+
+    /**
+     * <code>optional .android_studio.AppQualityInsightsUsageEvent.InsightSentiment.Experiment experiment = 2;</code>
+     * @return Whether the experiment field is set.
+     */
+    boolean hasExperiment();
+    /**
+     * <code>optional .android_studio.AppQualityInsightsUsageEvent.InsightSentiment.Experiment experiment = 2;</code>
+     * @return The experiment.
+     */
+    com.google.wireless.android.sdk.stats.AppQualityInsightsUsageEvent.InsightSentiment.Experiment getExperiment();
+
+    /**
+     * <code>optional .android_studio.AppQualityInsightsUsageEvent.CrashType crash_type = 3;</code>
+     * @return Whether the crashType field is set.
+     */
+    boolean hasCrashType();
+    /**
+     * <code>optional .android_studio.AppQualityInsightsUsageEvent.CrashType crash_type = 3;</code>
+     * @return The crashType.
+     */
+    com.google.wireless.android.sdk.stats.AppQualityInsightsUsageEvent.CrashType getCrashType();
+  }
+  /**
+   * Protobuf type {@code android_studio.AppQualityInsightsUsageEvent.InsightSentiment}
+   */
+  public static final class InsightSentiment extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:android_studio.AppQualityInsightsUsageEvent.InsightSentiment)
+      InsightSentimentOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use InsightSentiment.newBuilder() to construct.
+    private InsightSentiment(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private InsightSentiment() {
+      sentiment_ = 0;
+      experiment_ = 0;
+      crashType_ = 0;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new InsightSentiment();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_AppQualityInsightsUsageEvent_InsightSentiment_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_AppQualityInsightsUsageEvent_InsightSentiment_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.google.wireless.android.sdk.stats.AppQualityInsightsUsageEvent.InsightSentiment.class, com.google.wireless.android.sdk.stats.AppQualityInsightsUsageEvent.InsightSentiment.Builder.class);
+    }
+
+    /**
+     * Protobuf enum {@code android_studio.AppQualityInsightsUsageEvent.InsightSentiment.Sentiment}
+     */
+    public enum Sentiment
+        implements com.google.protobuf.ProtocolMessageEnum {
+      /**
+       * <code>UNKNOWN_SENTIMENT = 0;</code>
+       */
+      UNKNOWN_SENTIMENT(0),
+      /**
+       * <code>THUMBS_UP = 1;</code>
+       */
+      THUMBS_UP(1),
+      /**
+       * <code>THUMBS_DOWN = 2;</code>
+       */
+      THUMBS_DOWN(2),
+      ;
+
+      /**
+       * <code>UNKNOWN_SENTIMENT = 0;</code>
+       */
+      public static final int UNKNOWN_SENTIMENT_VALUE = 0;
+      /**
+       * <code>THUMBS_UP = 1;</code>
+       */
+      public static final int THUMBS_UP_VALUE = 1;
+      /**
+       * <code>THUMBS_DOWN = 2;</code>
+       */
+      public static final int THUMBS_DOWN_VALUE = 2;
+
+
+      public final int getNumber() {
+        return value;
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static Sentiment valueOf(int value) {
+        return forNumber(value);
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       */
+      public static Sentiment forNumber(int value) {
+        switch (value) {
+          case 0: return UNKNOWN_SENTIMENT;
+          case 1: return THUMBS_UP;
+          case 2: return THUMBS_DOWN;
+          default: return null;
+        }
+      }
+
+      public static com.google.protobuf.Internal.EnumLiteMap<Sentiment>
+          internalGetValueMap() {
+        return internalValueMap;
+      }
+      private static final com.google.protobuf.Internal.EnumLiteMap<
+          Sentiment> internalValueMap =
+            new com.google.protobuf.Internal.EnumLiteMap<Sentiment>() {
+              public Sentiment findValueByNumber(int number) {
+                return Sentiment.forNumber(number);
+              }
+            };
+
+      public final com.google.protobuf.Descriptors.EnumValueDescriptor
+          getValueDescriptor() {
+        return getDescriptor().getValues().get(ordinal());
+      }
+      public final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptorForType() {
+        return getDescriptor();
+      }
+      public static final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptor() {
+        return com.google.wireless.android.sdk.stats.AppQualityInsightsUsageEvent.InsightSentiment.getDescriptor().getEnumTypes().get(0);
+      }
+
+      private static final Sentiment[] VALUES = values();
+
+      public static Sentiment valueOf(
+          com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+        if (desc.getType() != getDescriptor()) {
+          throw new java.lang.IllegalArgumentException(
+            "EnumValueDescriptor is not for this type.");
+        }
+        return VALUES[desc.getIndex()];
+      }
+
+      private final int value;
+
+      private Sentiment(int value) {
+        this.value = value;
+      }
+
+      // @@protoc_insertion_point(enum_scope:android_studio.AppQualityInsightsUsageEvent.InsightSentiment.Sentiment)
+    }
+
+    /**
+     * Protobuf enum {@code android_studio.AppQualityInsightsUsageEvent.InsightSentiment.Experiment}
+     */
+    public enum Experiment
+        implements com.google.protobuf.ProtocolMessageEnum {
+      /**
+       * <code>UNKNOWN_EXPERIMENT = 0;</code>
+       */
+      UNKNOWN_EXPERIMENT(0),
+      /**
+       * <code>CONTROL = 1;</code>
+       */
+      CONTROL(1),
+      /**
+       * <code>TOP_SOURCE = 2;</code>
+       */
+      TOP_SOURCE(2),
+      /**
+       * <code>TOP_THREE_SOURCES = 3;</code>
+       */
+      TOP_THREE_SOURCES(3),
+      /**
+       * <code>ALL_SOURCES = 4;</code>
+       */
+      ALL_SOURCES(4),
+      ;
+
+      /**
+       * <code>UNKNOWN_EXPERIMENT = 0;</code>
+       */
+      public static final int UNKNOWN_EXPERIMENT_VALUE = 0;
+      /**
+       * <code>CONTROL = 1;</code>
+       */
+      public static final int CONTROL_VALUE = 1;
+      /**
+       * <code>TOP_SOURCE = 2;</code>
+       */
+      public static final int TOP_SOURCE_VALUE = 2;
+      /**
+       * <code>TOP_THREE_SOURCES = 3;</code>
+       */
+      public static final int TOP_THREE_SOURCES_VALUE = 3;
+      /**
+       * <code>ALL_SOURCES = 4;</code>
+       */
+      public static final int ALL_SOURCES_VALUE = 4;
+
+
+      public final int getNumber() {
+        return value;
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static Experiment valueOf(int value) {
+        return forNumber(value);
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       */
+      public static Experiment forNumber(int value) {
+        switch (value) {
+          case 0: return UNKNOWN_EXPERIMENT;
+          case 1: return CONTROL;
+          case 2: return TOP_SOURCE;
+          case 3: return TOP_THREE_SOURCES;
+          case 4: return ALL_SOURCES;
+          default: return null;
+        }
+      }
+
+      public static com.google.protobuf.Internal.EnumLiteMap<Experiment>
+          internalGetValueMap() {
+        return internalValueMap;
+      }
+      private static final com.google.protobuf.Internal.EnumLiteMap<
+          Experiment> internalValueMap =
+            new com.google.protobuf.Internal.EnumLiteMap<Experiment>() {
+              public Experiment findValueByNumber(int number) {
+                return Experiment.forNumber(number);
+              }
+            };
+
+      public final com.google.protobuf.Descriptors.EnumValueDescriptor
+          getValueDescriptor() {
+        return getDescriptor().getValues().get(ordinal());
+      }
+      public final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptorForType() {
+        return getDescriptor();
+      }
+      public static final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptor() {
+        return com.google.wireless.android.sdk.stats.AppQualityInsightsUsageEvent.InsightSentiment.getDescriptor().getEnumTypes().get(1);
+      }
+
+      private static final Experiment[] VALUES = values();
+
+      public static Experiment valueOf(
+          com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+        if (desc.getType() != getDescriptor()) {
+          throw new java.lang.IllegalArgumentException(
+            "EnumValueDescriptor is not for this type.");
+        }
+        return VALUES[desc.getIndex()];
+      }
+
+      private final int value;
+
+      private Experiment(int value) {
+        this.value = value;
+      }
+
+      // @@protoc_insertion_point(enum_scope:android_studio.AppQualityInsightsUsageEvent.InsightSentiment.Experiment)
+    }
+
+    private int bitField0_;
+    public static final int SENTIMENT_FIELD_NUMBER = 1;
+    private int sentiment_;
+    /**
+     * <code>optional .android_studio.AppQualityInsightsUsageEvent.InsightSentiment.Sentiment sentiment = 1;</code>
+     * @return Whether the sentiment field is set.
+     */
+    @java.lang.Override public boolean hasSentiment() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <code>optional .android_studio.AppQualityInsightsUsageEvent.InsightSentiment.Sentiment sentiment = 1;</code>
+     * @return The sentiment.
+     */
+    @java.lang.Override public com.google.wireless.android.sdk.stats.AppQualityInsightsUsageEvent.InsightSentiment.Sentiment getSentiment() {
+      @SuppressWarnings("deprecation")
+      com.google.wireless.android.sdk.stats.AppQualityInsightsUsageEvent.InsightSentiment.Sentiment result = com.google.wireless.android.sdk.stats.AppQualityInsightsUsageEvent.InsightSentiment.Sentiment.valueOf(sentiment_);
+      return result == null ? com.google.wireless.android.sdk.stats.AppQualityInsightsUsageEvent.InsightSentiment.Sentiment.UNKNOWN_SENTIMENT : result;
+    }
+
+    public static final int EXPERIMENT_FIELD_NUMBER = 2;
+    private int experiment_;
+    /**
+     * <code>optional .android_studio.AppQualityInsightsUsageEvent.InsightSentiment.Experiment experiment = 2;</code>
+     * @return Whether the experiment field is set.
+     */
+    @java.lang.Override public boolean hasExperiment() {
+      return ((bitField0_ & 0x00000002) != 0);
+    }
+    /**
+     * <code>optional .android_studio.AppQualityInsightsUsageEvent.InsightSentiment.Experiment experiment = 2;</code>
+     * @return The experiment.
+     */
+    @java.lang.Override public com.google.wireless.android.sdk.stats.AppQualityInsightsUsageEvent.InsightSentiment.Experiment getExperiment() {
+      @SuppressWarnings("deprecation")
+      com.google.wireless.android.sdk.stats.AppQualityInsightsUsageEvent.InsightSentiment.Experiment result = com.google.wireless.android.sdk.stats.AppQualityInsightsUsageEvent.InsightSentiment.Experiment.valueOf(experiment_);
+      return result == null ? com.google.wireless.android.sdk.stats.AppQualityInsightsUsageEvent.InsightSentiment.Experiment.UNKNOWN_EXPERIMENT : result;
+    }
+
+    public static final int CRASH_TYPE_FIELD_NUMBER = 3;
+    private int crashType_;
+    /**
+     * <code>optional .android_studio.AppQualityInsightsUsageEvent.CrashType crash_type = 3;</code>
+     * @return Whether the crashType field is set.
+     */
+    @java.lang.Override public boolean hasCrashType() {
+      return ((bitField0_ & 0x00000004) != 0);
+    }
+    /**
+     * <code>optional .android_studio.AppQualityInsightsUsageEvent.CrashType crash_type = 3;</code>
+     * @return The crashType.
+     */
+    @java.lang.Override public com.google.wireless.android.sdk.stats.AppQualityInsightsUsageEvent.CrashType getCrashType() {
+      @SuppressWarnings("deprecation")
+      com.google.wireless.android.sdk.stats.AppQualityInsightsUsageEvent.CrashType result = com.google.wireless.android.sdk.stats.AppQualityInsightsUsageEvent.CrashType.valueOf(crashType_);
+      return result == null ? com.google.wireless.android.sdk.stats.AppQualityInsightsUsageEvent.CrashType.UNKNOWN_TYPE : result;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (((bitField0_ & 0x00000001) != 0)) {
+        output.writeEnum(1, sentiment_);
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        output.writeEnum(2, experiment_);
+      }
+      if (((bitField0_ & 0x00000004) != 0)) {
+        output.writeEnum(3, crashType_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(1, sentiment_);
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(2, experiment_);
+      }
+      if (((bitField0_ & 0x00000004) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(3, crashType_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.google.wireless.android.sdk.stats.AppQualityInsightsUsageEvent.InsightSentiment)) {
+        return super.equals(obj);
+      }
+      com.google.wireless.android.sdk.stats.AppQualityInsightsUsageEvent.InsightSentiment other = (com.google.wireless.android.sdk.stats.AppQualityInsightsUsageEvent.InsightSentiment) obj;
+
+      if (hasSentiment() != other.hasSentiment()) return false;
+      if (hasSentiment()) {
+        if (sentiment_ != other.sentiment_) return false;
+      }
+      if (hasExperiment() != other.hasExperiment()) return false;
+      if (hasExperiment()) {
+        if (experiment_ != other.experiment_) return false;
+      }
+      if (hasCrashType() != other.hasCrashType()) return false;
+      if (hasCrashType()) {
+        if (crashType_ != other.crashType_) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasSentiment()) {
+        hash = (37 * hash) + SENTIMENT_FIELD_NUMBER;
+        hash = (53 * hash) + sentiment_;
+      }
+      if (hasExperiment()) {
+        hash = (37 * hash) + EXPERIMENT_FIELD_NUMBER;
+        hash = (53 * hash) + experiment_;
+      }
+      if (hasCrashType()) {
+        hash = (37 * hash) + CRASH_TYPE_FIELD_NUMBER;
+        hash = (53 * hash) + crashType_;
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.google.wireless.android.sdk.stats.AppQualityInsightsUsageEvent.InsightSentiment parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.google.wireless.android.sdk.stats.AppQualityInsightsUsageEvent.InsightSentiment parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.google.wireless.android.sdk.stats.AppQualityInsightsUsageEvent.InsightSentiment parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.google.wireless.android.sdk.stats.AppQualityInsightsUsageEvent.InsightSentiment parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.google.wireless.android.sdk.stats.AppQualityInsightsUsageEvent.InsightSentiment parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.google.wireless.android.sdk.stats.AppQualityInsightsUsageEvent.InsightSentiment parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.google.wireless.android.sdk.stats.AppQualityInsightsUsageEvent.InsightSentiment parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.google.wireless.android.sdk.stats.AppQualityInsightsUsageEvent.InsightSentiment parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.google.wireless.android.sdk.stats.AppQualityInsightsUsageEvent.InsightSentiment parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.google.wireless.android.sdk.stats.AppQualityInsightsUsageEvent.InsightSentiment parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.google.wireless.android.sdk.stats.AppQualityInsightsUsageEvent.InsightSentiment parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.google.wireless.android.sdk.stats.AppQualityInsightsUsageEvent.InsightSentiment parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.google.wireless.android.sdk.stats.AppQualityInsightsUsageEvent.InsightSentiment prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code android_studio.AppQualityInsightsUsageEvent.InsightSentiment}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:android_studio.AppQualityInsightsUsageEvent.InsightSentiment)
+        com.google.wireless.android.sdk.stats.AppQualityInsightsUsageEvent.InsightSentimentOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_AppQualityInsightsUsageEvent_InsightSentiment_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_AppQualityInsightsUsageEvent_InsightSentiment_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.google.wireless.android.sdk.stats.AppQualityInsightsUsageEvent.InsightSentiment.class, com.google.wireless.android.sdk.stats.AppQualityInsightsUsageEvent.InsightSentiment.Builder.class);
+      }
+
+      // Construct using com.google.wireless.android.sdk.stats.AppQualityInsightsUsageEvent.InsightSentiment.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        sentiment_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        experiment_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        crashType_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000004);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_AppQualityInsightsUsageEvent_InsightSentiment_descriptor;
+      }
+
+      @java.lang.Override
+      public com.google.wireless.android.sdk.stats.AppQualityInsightsUsageEvent.InsightSentiment getDefaultInstanceForType() {
+        return com.google.wireless.android.sdk.stats.AppQualityInsightsUsageEvent.InsightSentiment.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.google.wireless.android.sdk.stats.AppQualityInsightsUsageEvent.InsightSentiment build() {
+        com.google.wireless.android.sdk.stats.AppQualityInsightsUsageEvent.InsightSentiment result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.google.wireless.android.sdk.stats.AppQualityInsightsUsageEvent.InsightSentiment buildPartial() {
+        com.google.wireless.android.sdk.stats.AppQualityInsightsUsageEvent.InsightSentiment result = new com.google.wireless.android.sdk.stats.AppQualityInsightsUsageEvent.InsightSentiment(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          to_bitField0_ |= 0x00000001;
+        }
+        result.sentiment_ = sentiment_;
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          to_bitField0_ |= 0x00000002;
+        }
+        result.experiment_ = experiment_;
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          to_bitField0_ |= 0x00000004;
+        }
+        result.crashType_ = crashType_;
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.google.wireless.android.sdk.stats.AppQualityInsightsUsageEvent.InsightSentiment) {
+          return mergeFrom((com.google.wireless.android.sdk.stats.AppQualityInsightsUsageEvent.InsightSentiment)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.google.wireless.android.sdk.stats.AppQualityInsightsUsageEvent.InsightSentiment other) {
+        if (other == com.google.wireless.android.sdk.stats.AppQualityInsightsUsageEvent.InsightSentiment.getDefaultInstance()) return this;
+        if (other.hasSentiment()) {
+          setSentiment(other.getSentiment());
+        }
+        if (other.hasExperiment()) {
+          setExperiment(other.getExperiment());
+        }
+        if (other.hasCrashType()) {
+          setCrashType(other.getCrashType());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                int tmpRaw = input.readEnum();
+                com.google.wireless.android.sdk.stats.AppQualityInsightsUsageEvent.InsightSentiment.Sentiment tmpValue =
+                    com.google.wireless.android.sdk.stats.AppQualityInsightsUsageEvent.InsightSentiment.Sentiment.forNumber(tmpRaw);
+                if (tmpValue == null) {
+                  mergeUnknownVarintField(1, tmpRaw);
+                } else {
+                  sentiment_ = tmpRaw;
+                  bitField0_ |= 0x00000001;
+                }
+                break;
+              } // case 8
+              case 16: {
+                int tmpRaw = input.readEnum();
+                com.google.wireless.android.sdk.stats.AppQualityInsightsUsageEvent.InsightSentiment.Experiment tmpValue =
+                    com.google.wireless.android.sdk.stats.AppQualityInsightsUsageEvent.InsightSentiment.Experiment.forNumber(tmpRaw);
+                if (tmpValue == null) {
+                  mergeUnknownVarintField(2, tmpRaw);
+                } else {
+                  experiment_ = tmpRaw;
+                  bitField0_ |= 0x00000002;
+                }
+                break;
+              } // case 16
+              case 24: {
+                int tmpRaw = input.readEnum();
+                com.google.wireless.android.sdk.stats.AppQualityInsightsUsageEvent.CrashType tmpValue =
+                    com.google.wireless.android.sdk.stats.AppQualityInsightsUsageEvent.CrashType.forNumber(tmpRaw);
+                if (tmpValue == null) {
+                  mergeUnknownVarintField(3, tmpRaw);
+                } else {
+                  crashType_ = tmpRaw;
+                  bitField0_ |= 0x00000004;
+                }
+                break;
+              } // case 24
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private int sentiment_ = 0;
+      /**
+       * <code>optional .android_studio.AppQualityInsightsUsageEvent.InsightSentiment.Sentiment sentiment = 1;</code>
+       * @return Whether the sentiment field is set.
+       */
+      @java.lang.Override public boolean hasSentiment() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>optional .android_studio.AppQualityInsightsUsageEvent.InsightSentiment.Sentiment sentiment = 1;</code>
+       * @return The sentiment.
+       */
+      @java.lang.Override
+      public com.google.wireless.android.sdk.stats.AppQualityInsightsUsageEvent.InsightSentiment.Sentiment getSentiment() {
+        @SuppressWarnings("deprecation")
+        com.google.wireless.android.sdk.stats.AppQualityInsightsUsageEvent.InsightSentiment.Sentiment result = com.google.wireless.android.sdk.stats.AppQualityInsightsUsageEvent.InsightSentiment.Sentiment.valueOf(sentiment_);
+        return result == null ? com.google.wireless.android.sdk.stats.AppQualityInsightsUsageEvent.InsightSentiment.Sentiment.UNKNOWN_SENTIMENT : result;
+      }
+      /**
+       * <code>optional .android_studio.AppQualityInsightsUsageEvent.InsightSentiment.Sentiment sentiment = 1;</code>
+       * @param value The sentiment to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSentiment(com.google.wireless.android.sdk.stats.AppQualityInsightsUsageEvent.InsightSentiment.Sentiment value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x00000001;
+        sentiment_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional .android_studio.AppQualityInsightsUsageEvent.InsightSentiment.Sentiment sentiment = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSentiment() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        sentiment_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int experiment_ = 0;
+      /**
+       * <code>optional .android_studio.AppQualityInsightsUsageEvent.InsightSentiment.Experiment experiment = 2;</code>
+       * @return Whether the experiment field is set.
+       */
+      @java.lang.Override public boolean hasExperiment() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <code>optional .android_studio.AppQualityInsightsUsageEvent.InsightSentiment.Experiment experiment = 2;</code>
+       * @return The experiment.
+       */
+      @java.lang.Override
+      public com.google.wireless.android.sdk.stats.AppQualityInsightsUsageEvent.InsightSentiment.Experiment getExperiment() {
+        @SuppressWarnings("deprecation")
+        com.google.wireless.android.sdk.stats.AppQualityInsightsUsageEvent.InsightSentiment.Experiment result = com.google.wireless.android.sdk.stats.AppQualityInsightsUsageEvent.InsightSentiment.Experiment.valueOf(experiment_);
+        return result == null ? com.google.wireless.android.sdk.stats.AppQualityInsightsUsageEvent.InsightSentiment.Experiment.UNKNOWN_EXPERIMENT : result;
+      }
+      /**
+       * <code>optional .android_studio.AppQualityInsightsUsageEvent.InsightSentiment.Experiment experiment = 2;</code>
+       * @param value The experiment to set.
+       * @return This builder for chaining.
+       */
+      public Builder setExperiment(com.google.wireless.android.sdk.stats.AppQualityInsightsUsageEvent.InsightSentiment.Experiment value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x00000002;
+        experiment_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional .android_studio.AppQualityInsightsUsageEvent.InsightSentiment.Experiment experiment = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearExperiment() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        experiment_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int crashType_ = 0;
+      /**
+       * <code>optional .android_studio.AppQualityInsightsUsageEvent.CrashType crash_type = 3;</code>
+       * @return Whether the crashType field is set.
+       */
+      @java.lang.Override public boolean hasCrashType() {
+        return ((bitField0_ & 0x00000004) != 0);
+      }
+      /**
+       * <code>optional .android_studio.AppQualityInsightsUsageEvent.CrashType crash_type = 3;</code>
+       * @return The crashType.
+       */
+      @java.lang.Override
+      public com.google.wireless.android.sdk.stats.AppQualityInsightsUsageEvent.CrashType getCrashType() {
+        @SuppressWarnings("deprecation")
+        com.google.wireless.android.sdk.stats.AppQualityInsightsUsageEvent.CrashType result = com.google.wireless.android.sdk.stats.AppQualityInsightsUsageEvent.CrashType.valueOf(crashType_);
+        return result == null ? com.google.wireless.android.sdk.stats.AppQualityInsightsUsageEvent.CrashType.UNKNOWN_TYPE : result;
+      }
+      /**
+       * <code>optional .android_studio.AppQualityInsightsUsageEvent.CrashType crash_type = 3;</code>
+       * @param value The crashType to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCrashType(com.google.wireless.android.sdk.stats.AppQualityInsightsUsageEvent.CrashType value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x00000004;
+        crashType_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional .android_studio.AppQualityInsightsUsageEvent.CrashType crash_type = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCrashType() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        crashType_ = 0;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:android_studio.AppQualityInsightsUsageEvent.InsightSentiment)
+    }
+
+    // @@protoc_insertion_point(class_scope:android_studio.AppQualityInsightsUsageEvent.InsightSentiment)
+    private static final com.google.wireless.android.sdk.stats.AppQualityInsightsUsageEvent.InsightSentiment DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.google.wireless.android.sdk.stats.AppQualityInsightsUsageEvent.InsightSentiment();
+    }
+
+    public static com.google.wireless.android.sdk.stats.AppQualityInsightsUsageEvent.InsightSentiment getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<InsightSentiment>
+        PARSER = new com.google.protobuf.AbstractParser<InsightSentiment>() {
+      @java.lang.Override
+      public InsightSentiment parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<InsightSentiment> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<InsightSentiment> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.wireless.android.sdk.stats.AppQualityInsightsUsageEvent.InsightSentiment getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private int bitField0_;
   public static final int APP_ID_FIELD_NUMBER = 1;
   private volatile java.lang.Object appId_;
@@ -13722,6 +14702,44 @@ private static final long serialVersionUID = 0L;
     return eventDetails_ == null ? com.google.wireless.android.sdk.stats.AppQualityInsightsUsageEvent.EventDetails.getDefaultInstance() : eventDetails_;
   }
 
+  public static final int INSIGHT_SENTIMENT_FIELD_NUMBER = 17;
+  private com.google.wireless.android.sdk.stats.AppQualityInsightsUsageEvent.InsightSentiment insightSentiment_;
+  /**
+   * <pre>
+   * set when type = INSIGHT_SENTIMENT
+   * </pre>
+   *
+   * <code>optional .android_studio.AppQualityInsightsUsageEvent.InsightSentiment insight_sentiment = 17 [lazy = true];</code>
+   * @return Whether the insightSentiment field is set.
+   */
+  @java.lang.Override
+  public boolean hasInsightSentiment() {
+    return ((bitField0_ & 0x00010000) != 0);
+  }
+  /**
+   * <pre>
+   * set when type = INSIGHT_SENTIMENT
+   * </pre>
+   *
+   * <code>optional .android_studio.AppQualityInsightsUsageEvent.InsightSentiment insight_sentiment = 17 [lazy = true];</code>
+   * @return The insightSentiment.
+   */
+  @java.lang.Override
+  public com.google.wireless.android.sdk.stats.AppQualityInsightsUsageEvent.InsightSentiment getInsightSentiment() {
+    return insightSentiment_ == null ? com.google.wireless.android.sdk.stats.AppQualityInsightsUsageEvent.InsightSentiment.getDefaultInstance() : insightSentiment_;
+  }
+  /**
+   * <pre>
+   * set when type = INSIGHT_SENTIMENT
+   * </pre>
+   *
+   * <code>optional .android_studio.AppQualityInsightsUsageEvent.InsightSentiment insight_sentiment = 17 [lazy = true];</code>
+   */
+  @java.lang.Override
+  public com.google.wireless.android.sdk.stats.AppQualityInsightsUsageEvent.InsightSentimentOrBuilder getInsightSentimentOrBuilder() {
+    return insightSentiment_ == null ? com.google.wireless.android.sdk.stats.AppQualityInsightsUsageEvent.InsightSentiment.getDefaultInstance() : insightSentiment_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -13783,6 +14801,9 @@ private static final long serialVersionUID = 0L;
     }
     if (((bitField0_ & 0x00008000) != 0)) {
       output.writeMessage(16, getEventDetails());
+    }
+    if (((bitField0_ & 0x00010000) != 0)) {
+      output.writeMessage(17, getInsightSentiment());
     }
     getUnknownFields().writeTo(output);
   }
@@ -13855,6 +14876,10 @@ private static final long serialVersionUID = 0L;
     if (((bitField0_ & 0x00008000) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(16, getEventDetails());
+    }
+    if (((bitField0_ & 0x00010000) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(17, getInsightSentiment());
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -13948,6 +14973,11 @@ private static final long serialVersionUID = 0L;
       if (!getEventDetails()
           .equals(other.getEventDetails())) return false;
     }
+    if (hasInsightSentiment() != other.hasInsightSentiment()) return false;
+    if (hasInsightSentiment()) {
+      if (!getInsightSentiment()
+          .equals(other.getInsightSentiment())) return false;
+    }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -14023,6 +15053,10 @@ private static final long serialVersionUID = 0L;
     if (hasEventDetails()) {
       hash = (37 * hash) + EVENT_DETAILS_FIELD_NUMBER;
       hash = (53 * hash) + getEventDetails().hashCode();
+    }
+    if (hasInsightSentiment()) {
+      hash = (37 * hash) + INSIGHT_SENTIMENT_FIELD_NUMBER;
+      hash = (53 * hash) + getInsightSentiment().hashCode();
     }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
@@ -14163,6 +15197,7 @@ private static final long serialVersionUID = 0L;
         getNotesDetailsFieldBuilder();
         getPerformanceStatsFieldBuilder();
         getEventDetailsFieldBuilder();
+        getInsightSentimentFieldBuilder();
       }
     }
     @java.lang.Override
@@ -14244,6 +15279,12 @@ private static final long serialVersionUID = 0L;
         eventDetailsBuilder_.clear();
       }
       bitField0_ = (bitField0_ & ~0x00008000);
+      if (insightSentimentBuilder_ == null) {
+        insightSentiment_ = null;
+      } else {
+        insightSentimentBuilder_.clear();
+      }
+      bitField0_ = (bitField0_ & ~0x00010000);
       return this;
     }
 
@@ -14380,6 +15421,14 @@ private static final long serialVersionUID = 0L;
         }
         to_bitField0_ |= 0x00008000;
       }
+      if (((from_bitField0_ & 0x00010000) != 0)) {
+        if (insightSentimentBuilder_ == null) {
+          result.insightSentiment_ = insightSentiment_;
+        } else {
+          result.insightSentiment_ = insightSentimentBuilder_.build();
+        }
+        to_bitField0_ |= 0x00010000;
+      }
       result.bitField0_ = to_bitField0_;
       onBuilt();
       return result;
@@ -14478,6 +15527,9 @@ private static final long serialVersionUID = 0L;
       }
       if (other.hasEventDetails()) {
         mergeEventDetails(other.getEventDetails());
+      }
+      if (other.hasInsightSentiment()) {
+        mergeInsightSentiment(other.getInsightSentiment());
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -14628,6 +15680,13 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00008000;
               break;
             } // case 130
+            case 138: {
+              input.readMessage(
+                  getInsightSentimentFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00010000;
+              break;
+            } // case 138
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -16711,6 +17770,162 @@ private static final long serialVersionUID = 0L;
         eventDetails_ = null;
       }
       return eventDetailsBuilder_;
+    }
+
+    private com.google.wireless.android.sdk.stats.AppQualityInsightsUsageEvent.InsightSentiment insightSentiment_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.AppQualityInsightsUsageEvent.InsightSentiment, com.google.wireless.android.sdk.stats.AppQualityInsightsUsageEvent.InsightSentiment.Builder, com.google.wireless.android.sdk.stats.AppQualityInsightsUsageEvent.InsightSentimentOrBuilder> insightSentimentBuilder_;
+    /**
+     * <pre>
+     * set when type = INSIGHT_SENTIMENT
+     * </pre>
+     *
+     * <code>optional .android_studio.AppQualityInsightsUsageEvent.InsightSentiment insight_sentiment = 17 [lazy = true];</code>
+     * @return Whether the insightSentiment field is set.
+     */
+    public boolean hasInsightSentiment() {
+      return ((bitField0_ & 0x00010000) != 0);
+    }
+    /**
+     * <pre>
+     * set when type = INSIGHT_SENTIMENT
+     * </pre>
+     *
+     * <code>optional .android_studio.AppQualityInsightsUsageEvent.InsightSentiment insight_sentiment = 17 [lazy = true];</code>
+     * @return The insightSentiment.
+     */
+    public com.google.wireless.android.sdk.stats.AppQualityInsightsUsageEvent.InsightSentiment getInsightSentiment() {
+      if (insightSentimentBuilder_ == null) {
+        return insightSentiment_ == null ? com.google.wireless.android.sdk.stats.AppQualityInsightsUsageEvent.InsightSentiment.getDefaultInstance() : insightSentiment_;
+      } else {
+        return insightSentimentBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * set when type = INSIGHT_SENTIMENT
+     * </pre>
+     *
+     * <code>optional .android_studio.AppQualityInsightsUsageEvent.InsightSentiment insight_sentiment = 17 [lazy = true];</code>
+     */
+    public Builder setInsightSentiment(com.google.wireless.android.sdk.stats.AppQualityInsightsUsageEvent.InsightSentiment value) {
+      if (insightSentimentBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        insightSentiment_ = value;
+        onChanged();
+      } else {
+        insightSentimentBuilder_.setMessage(value);
+      }
+      bitField0_ |= 0x00010000;
+      return this;
+    }
+    /**
+     * <pre>
+     * set when type = INSIGHT_SENTIMENT
+     * </pre>
+     *
+     * <code>optional .android_studio.AppQualityInsightsUsageEvent.InsightSentiment insight_sentiment = 17 [lazy = true];</code>
+     */
+    public Builder setInsightSentiment(
+        com.google.wireless.android.sdk.stats.AppQualityInsightsUsageEvent.InsightSentiment.Builder builderForValue) {
+      if (insightSentimentBuilder_ == null) {
+        insightSentiment_ = builderForValue.build();
+        onChanged();
+      } else {
+        insightSentimentBuilder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x00010000;
+      return this;
+    }
+    /**
+     * <pre>
+     * set when type = INSIGHT_SENTIMENT
+     * </pre>
+     *
+     * <code>optional .android_studio.AppQualityInsightsUsageEvent.InsightSentiment insight_sentiment = 17 [lazy = true];</code>
+     */
+    public Builder mergeInsightSentiment(com.google.wireless.android.sdk.stats.AppQualityInsightsUsageEvent.InsightSentiment value) {
+      if (insightSentimentBuilder_ == null) {
+        if (((bitField0_ & 0x00010000) != 0) &&
+            insightSentiment_ != null &&
+            insightSentiment_ != com.google.wireless.android.sdk.stats.AppQualityInsightsUsageEvent.InsightSentiment.getDefaultInstance()) {
+          insightSentiment_ =
+            com.google.wireless.android.sdk.stats.AppQualityInsightsUsageEvent.InsightSentiment.newBuilder(insightSentiment_).mergeFrom(value).buildPartial();
+        } else {
+          insightSentiment_ = value;
+        }
+        onChanged();
+      } else {
+        insightSentimentBuilder_.mergeFrom(value);
+      }
+      bitField0_ |= 0x00010000;
+      return this;
+    }
+    /**
+     * <pre>
+     * set when type = INSIGHT_SENTIMENT
+     * </pre>
+     *
+     * <code>optional .android_studio.AppQualityInsightsUsageEvent.InsightSentiment insight_sentiment = 17 [lazy = true];</code>
+     */
+    public Builder clearInsightSentiment() {
+      if (insightSentimentBuilder_ == null) {
+        insightSentiment_ = null;
+        onChanged();
+      } else {
+        insightSentimentBuilder_.clear();
+      }
+      bitField0_ = (bitField0_ & ~0x00010000);
+      return this;
+    }
+    /**
+     * <pre>
+     * set when type = INSIGHT_SENTIMENT
+     * </pre>
+     *
+     * <code>optional .android_studio.AppQualityInsightsUsageEvent.InsightSentiment insight_sentiment = 17 [lazy = true];</code>
+     */
+    public com.google.wireless.android.sdk.stats.AppQualityInsightsUsageEvent.InsightSentiment.Builder getInsightSentimentBuilder() {
+      bitField0_ |= 0x00010000;
+      onChanged();
+      return getInsightSentimentFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * set when type = INSIGHT_SENTIMENT
+     * </pre>
+     *
+     * <code>optional .android_studio.AppQualityInsightsUsageEvent.InsightSentiment insight_sentiment = 17 [lazy = true];</code>
+     */
+    public com.google.wireless.android.sdk.stats.AppQualityInsightsUsageEvent.InsightSentimentOrBuilder getInsightSentimentOrBuilder() {
+      if (insightSentimentBuilder_ != null) {
+        return insightSentimentBuilder_.getMessageOrBuilder();
+      } else {
+        return insightSentiment_ == null ?
+            com.google.wireless.android.sdk.stats.AppQualityInsightsUsageEvent.InsightSentiment.getDefaultInstance() : insightSentiment_;
+      }
+    }
+    /**
+     * <pre>
+     * set when type = INSIGHT_SENTIMENT
+     * </pre>
+     *
+     * <code>optional .android_studio.AppQualityInsightsUsageEvent.InsightSentiment insight_sentiment = 17 [lazy = true];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.AppQualityInsightsUsageEvent.InsightSentiment, com.google.wireless.android.sdk.stats.AppQualityInsightsUsageEvent.InsightSentiment.Builder, com.google.wireless.android.sdk.stats.AppQualityInsightsUsageEvent.InsightSentimentOrBuilder> 
+        getInsightSentimentFieldBuilder() {
+      if (insightSentimentBuilder_ == null) {
+        insightSentimentBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.wireless.android.sdk.stats.AppQualityInsightsUsageEvent.InsightSentiment, com.google.wireless.android.sdk.stats.AppQualityInsightsUsageEvent.InsightSentiment.Builder, com.google.wireless.android.sdk.stats.AppQualityInsightsUsageEvent.InsightSentimentOrBuilder>(
+                getInsightSentiment(),
+                getParentForChildren(),
+                isClean());
+        insightSentiment_ = null;
+      }
+      return insightSentimentBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(
