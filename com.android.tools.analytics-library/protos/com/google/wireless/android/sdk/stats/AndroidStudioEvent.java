@@ -2271,6 +2271,32 @@ private static final long serialVersionUID = 0L;
             bitField5_ |= 0x00000100;
             break;
           }
+          case 1410: {
+            com.google.wireless.android.sdk.stats.DebuggerEvent.Builder subBuilder = null;
+            if (((bitField5_ & 0x00000200) != 0)) {
+              subBuilder = debuggerEvent_.toBuilder();
+            }
+            debuggerEvent_ = input.readMessage(com.google.wireless.android.sdk.stats.DebuggerEvent.PARSER, extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(debuggerEvent_);
+              debuggerEvent_ = subBuilder.buildPartial();
+            }
+            bitField5_ |= 0x00000200;
+            break;
+          }
+          case 1418: {
+            com.google.wireless.android.sdk.stats.SoongSyncStats.Builder subBuilder = null;
+            if (((bitField5_ & 0x00000400) != 0)) {
+              subBuilder = soongSyncStats_.toBuilder();
+            }
+            soongSyncStats_ = input.readMessage(com.google.wireless.android.sdk.stats.SoongSyncStats.PARSER, extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(soongSyncStats_);
+              soongSyncStats_ = subBuilder.buildPartial();
+            }
+            bitField5_ |= 0x00000400;
+            break;
+          }
           default: {
             if (!parseUnknownField(
                 input, unknownFields, extensionRegistry, tag)) {
@@ -5113,6 +5139,22 @@ private static final long serialVersionUID = 0L;
      * <code>UPGRADE_ANDROID_STUDIO_DIALOG = 291;</code>
      */
     UPGRADE_ANDROID_STUDIO_DIALOG(291),
+    /**
+     * <pre>
+     * Event related to the Debugger tool window
+     * </pre>
+     *
+     * <code>DEBUGGER_EVENT = 292;</code>
+     */
+    DEBUGGER_EVENT(292),
+    /**
+     * <pre>
+     * Soong sync event
+     * </pre>
+     *
+     * <code>SOONG_SYNC_EVENT = 293;</code>
+     */
+    SOONG_SYNC_EVENT(293),
     ;
 
     /**
@@ -7277,6 +7319,22 @@ private static final long serialVersionUID = 0L;
      * <code>UPGRADE_ANDROID_STUDIO_DIALOG = 291;</code>
      */
     public static final int UPGRADE_ANDROID_STUDIO_DIALOG_VALUE = 291;
+    /**
+     * <pre>
+     * Event related to the Debugger tool window
+     * </pre>
+     *
+     * <code>DEBUGGER_EVENT = 292;</code>
+     */
+    public static final int DEBUGGER_EVENT_VALUE = 292;
+    /**
+     * <pre>
+     * Soong sync event
+     * </pre>
+     *
+     * <code>SOONG_SYNC_EVENT = 293;</code>
+     */
+    public static final int SOONG_SYNC_EVENT_VALUE = 293;
 
 
     public final int getNumber() {
@@ -7586,6 +7644,8 @@ private static final long serialVersionUID = 0L;
         case 289: return EDITOR_NOTIFICATION;
         case 290: return COMPOSE_PREVIEW_LITE_MODE;
         case 291: return UPGRADE_ANDROID_STUDIO_DIALOG;
+        case 292: return DEBUGGER_EVENT;
+        case 293: return SOONG_SYNC_EVENT;
         default: return null;
       }
     }
@@ -23151,6 +23211,82 @@ private static final long serialVersionUID = 0L;
     return upgradeAndroidStudioDialog_ == null ? com.google.wireless.android.sdk.stats.UpgradeAndroidStudioDialogStats.getDefaultInstance() : upgradeAndroidStudioDialog_;
   }
 
+  public static final int DEBUGGER_EVENT_FIELD_NUMBER = 176;
+  private com.google.wireless.android.sdk.stats.DebuggerEvent debuggerEvent_;
+  /**
+   * <pre>
+   * set when kind = DEBUGGER_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.DebuggerEvent debugger_event = 176;</code>
+   * @return Whether the debuggerEvent field is set.
+   */
+  @java.lang.Override
+  public boolean hasDebuggerEvent() {
+    return ((bitField5_ & 0x00000200) != 0);
+  }
+  /**
+   * <pre>
+   * set when kind = DEBUGGER_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.DebuggerEvent debugger_event = 176;</code>
+   * @return The debuggerEvent.
+   */
+  @java.lang.Override
+  public com.google.wireless.android.sdk.stats.DebuggerEvent getDebuggerEvent() {
+    return debuggerEvent_ == null ? com.google.wireless.android.sdk.stats.DebuggerEvent.getDefaultInstance() : debuggerEvent_;
+  }
+  /**
+   * <pre>
+   * set when kind = DEBUGGER_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.DebuggerEvent debugger_event = 176;</code>
+   */
+  @java.lang.Override
+  public com.google.wireless.android.sdk.stats.DebuggerEventOrBuilder getDebuggerEventOrBuilder() {
+    return debuggerEvent_ == null ? com.google.wireless.android.sdk.stats.DebuggerEvent.getDefaultInstance() : debuggerEvent_;
+  }
+
+  public static final int SOONG_SYNC_STATS_FIELD_NUMBER = 177;
+  private com.google.wireless.android.sdk.stats.SoongSyncStats soongSyncStats_;
+  /**
+   * <pre>
+   * set when kind = SOONG_SYNC_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.SoongSyncStats soong_sync_stats = 177;</code>
+   * @return Whether the soongSyncStats field is set.
+   */
+  @java.lang.Override
+  public boolean hasSoongSyncStats() {
+    return ((bitField5_ & 0x00000400) != 0);
+  }
+  /**
+   * <pre>
+   * set when kind = SOONG_SYNC_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.SoongSyncStats soong_sync_stats = 177;</code>
+   * @return The soongSyncStats.
+   */
+  @java.lang.Override
+  public com.google.wireless.android.sdk.stats.SoongSyncStats getSoongSyncStats() {
+    return soongSyncStats_ == null ? com.google.wireless.android.sdk.stats.SoongSyncStats.getDefaultInstance() : soongSyncStats_;
+  }
+  /**
+   * <pre>
+   * set when kind = SOONG_SYNC_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.SoongSyncStats soong_sync_stats = 177;</code>
+   */
+  @java.lang.Override
+  public com.google.wireless.android.sdk.stats.SoongSyncStatsOrBuilder getSoongSyncStatsOrBuilder() {
+    return soongSyncStats_ == null ? com.google.wireless.android.sdk.stats.SoongSyncStats.getDefaultInstance() : soongSyncStats_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -23689,6 +23825,12 @@ private static final long serialVersionUID = 0L;
     }
     if (((bitField5_ & 0x00000100) != 0)) {
       output.writeMessage(175, getUpgradeAndroidStudioDialog());
+    }
+    if (((bitField5_ & 0x00000200) != 0)) {
+      output.writeMessage(176, getDebuggerEvent());
+    }
+    if (((bitField5_ & 0x00000400) != 0)) {
+      output.writeMessage(177, getSoongSyncStats());
     }
     unknownFields.writeTo(output);
   }
@@ -24404,6 +24546,14 @@ private static final long serialVersionUID = 0L;
     if (((bitField5_ & 0x00000100) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(175, getUpgradeAndroidStudioDialog());
+    }
+    if (((bitField5_ & 0x00000200) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(176, getDebuggerEvent());
+    }
+    if (((bitField5_ & 0x00000400) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(177, getSoongSyncStats());
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -25266,6 +25416,16 @@ private static final long serialVersionUID = 0L;
       if (!getUpgradeAndroidStudioDialog()
           .equals(other.getUpgradeAndroidStudioDialog())) return false;
     }
+    if (hasDebuggerEvent() != other.hasDebuggerEvent()) return false;
+    if (hasDebuggerEvent()) {
+      if (!getDebuggerEvent()
+          .equals(other.getDebuggerEvent())) return false;
+    }
+    if (hasSoongSyncStats() != other.hasSoongSyncStats()) return false;
+    if (hasSoongSyncStats()) {
+      if (!getSoongSyncStats()
+          .equals(other.getSoongSyncStats())) return false;
+    }
     if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
@@ -25979,6 +26139,14 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + UPGRADE_ANDROID_STUDIO_DIALOG_FIELD_NUMBER;
       hash = (53 * hash) + getUpgradeAndroidStudioDialog().hashCode();
     }
+    if (hasDebuggerEvent()) {
+      hash = (37 * hash) + DEBUGGER_EVENT_FIELD_NUMBER;
+      hash = (53 * hash) + getDebuggerEvent().hashCode();
+    }
+    if (hasSoongSyncStats()) {
+      hash = (37 * hash) + SOONG_SYNC_STATS_FIELD_NUMBER;
+      hash = (53 * hash) + getSoongSyncStats().hashCode();
+    }
     hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -26259,6 +26427,8 @@ private static final long serialVersionUID = 0L;
         getEditorNotificationFieldBuilder();
         getComposePreviewLiteModeEventFieldBuilder();
         getUpgradeAndroidStudioDialogFieldBuilder();
+        getDebuggerEventFieldBuilder();
+        getSoongSyncStatsFieldBuilder();
       }
     }
     @java.lang.Override
@@ -27222,6 +27392,18 @@ private static final long serialVersionUID = 0L;
         upgradeAndroidStudioDialogBuilder_.clear();
       }
       bitField5_ = (bitField5_ & ~0x00004000);
+      if (debuggerEventBuilder_ == null) {
+        debuggerEvent_ = null;
+      } else {
+        debuggerEventBuilder_.clear();
+      }
+      bitField5_ = (bitField5_ & ~0x00008000);
+      if (soongSyncStatsBuilder_ == null) {
+        soongSyncStats_ = null;
+      } else {
+        soongSyncStatsBuilder_.clear();
+      }
+      bitField5_ = (bitField5_ & ~0x00010000);
       return this;
     }
 
@@ -28574,6 +28756,22 @@ private static final long serialVersionUID = 0L;
         }
         to_bitField5_ |= 0x00000100;
       }
+      if (((from_bitField5_ & 0x00008000) != 0)) {
+        if (debuggerEventBuilder_ == null) {
+          result.debuggerEvent_ = debuggerEvent_;
+        } else {
+          result.debuggerEvent_ = debuggerEventBuilder_.build();
+        }
+        to_bitField5_ |= 0x00000200;
+      }
+      if (((from_bitField5_ & 0x00010000) != 0)) {
+        if (soongSyncStatsBuilder_ == null) {
+          result.soongSyncStats_ = soongSyncStats_;
+        } else {
+          result.soongSyncStats_ = soongSyncStatsBuilder_.build();
+        }
+        to_bitField5_ |= 0x00000400;
+      }
       result.bitField0_ = to_bitField0_;
       result.bitField1_ = to_bitField1_;
       result.bitField2_ = to_bitField2_;
@@ -29256,6 +29454,12 @@ private static final long serialVersionUID = 0L;
       }
       if (other.hasUpgradeAndroidStudioDialog()) {
         mergeUpgradeAndroidStudioDialog(other.getUpgradeAndroidStudioDialog());
+      }
+      if (other.hasDebuggerEvent()) {
+        mergeDebuggerEvent(other.getDebuggerEvent());
+      }
+      if (other.hasSoongSyncStats()) {
+        mergeSoongSyncStats(other.getSoongSyncStats());
       }
       this.mergeUnknownFields(other.unknownFields);
       onChanged();
@@ -55871,6 +56075,318 @@ private static final long serialVersionUID = 0L;
         upgradeAndroidStudioDialog_ = null;
       }
       return upgradeAndroidStudioDialogBuilder_;
+    }
+
+    private com.google.wireless.android.sdk.stats.DebuggerEvent debuggerEvent_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.DebuggerEvent, com.google.wireless.android.sdk.stats.DebuggerEvent.Builder, com.google.wireless.android.sdk.stats.DebuggerEventOrBuilder> debuggerEventBuilder_;
+    /**
+     * <pre>
+     * set when kind = DEBUGGER_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.DebuggerEvent debugger_event = 176;</code>
+     * @return Whether the debuggerEvent field is set.
+     */
+    public boolean hasDebuggerEvent() {
+      return ((bitField5_ & 0x00008000) != 0);
+    }
+    /**
+     * <pre>
+     * set when kind = DEBUGGER_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.DebuggerEvent debugger_event = 176;</code>
+     * @return The debuggerEvent.
+     */
+    public com.google.wireless.android.sdk.stats.DebuggerEvent getDebuggerEvent() {
+      if (debuggerEventBuilder_ == null) {
+        return debuggerEvent_ == null ? com.google.wireless.android.sdk.stats.DebuggerEvent.getDefaultInstance() : debuggerEvent_;
+      } else {
+        return debuggerEventBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * set when kind = DEBUGGER_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.DebuggerEvent debugger_event = 176;</code>
+     */
+    public Builder setDebuggerEvent(com.google.wireless.android.sdk.stats.DebuggerEvent value) {
+      if (debuggerEventBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        debuggerEvent_ = value;
+        onChanged();
+      } else {
+        debuggerEventBuilder_.setMessage(value);
+      }
+      bitField5_ |= 0x00008000;
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = DEBUGGER_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.DebuggerEvent debugger_event = 176;</code>
+     */
+    public Builder setDebuggerEvent(
+        com.google.wireless.android.sdk.stats.DebuggerEvent.Builder builderForValue) {
+      if (debuggerEventBuilder_ == null) {
+        debuggerEvent_ = builderForValue.build();
+        onChanged();
+      } else {
+        debuggerEventBuilder_.setMessage(builderForValue.build());
+      }
+      bitField5_ |= 0x00008000;
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = DEBUGGER_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.DebuggerEvent debugger_event = 176;</code>
+     */
+    public Builder mergeDebuggerEvent(com.google.wireless.android.sdk.stats.DebuggerEvent value) {
+      if (debuggerEventBuilder_ == null) {
+        if (((bitField5_ & 0x00008000) != 0) &&
+            debuggerEvent_ != null &&
+            debuggerEvent_ != com.google.wireless.android.sdk.stats.DebuggerEvent.getDefaultInstance()) {
+          debuggerEvent_ =
+            com.google.wireless.android.sdk.stats.DebuggerEvent.newBuilder(debuggerEvent_).mergeFrom(value).buildPartial();
+        } else {
+          debuggerEvent_ = value;
+        }
+        onChanged();
+      } else {
+        debuggerEventBuilder_.mergeFrom(value);
+      }
+      bitField5_ |= 0x00008000;
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = DEBUGGER_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.DebuggerEvent debugger_event = 176;</code>
+     */
+    public Builder clearDebuggerEvent() {
+      if (debuggerEventBuilder_ == null) {
+        debuggerEvent_ = null;
+        onChanged();
+      } else {
+        debuggerEventBuilder_.clear();
+      }
+      bitField5_ = (bitField5_ & ~0x00008000);
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = DEBUGGER_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.DebuggerEvent debugger_event = 176;</code>
+     */
+    public com.google.wireless.android.sdk.stats.DebuggerEvent.Builder getDebuggerEventBuilder() {
+      bitField5_ |= 0x00008000;
+      onChanged();
+      return getDebuggerEventFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * set when kind = DEBUGGER_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.DebuggerEvent debugger_event = 176;</code>
+     */
+    public com.google.wireless.android.sdk.stats.DebuggerEventOrBuilder getDebuggerEventOrBuilder() {
+      if (debuggerEventBuilder_ != null) {
+        return debuggerEventBuilder_.getMessageOrBuilder();
+      } else {
+        return debuggerEvent_ == null ?
+            com.google.wireless.android.sdk.stats.DebuggerEvent.getDefaultInstance() : debuggerEvent_;
+      }
+    }
+    /**
+     * <pre>
+     * set when kind = DEBUGGER_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.DebuggerEvent debugger_event = 176;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.DebuggerEvent, com.google.wireless.android.sdk.stats.DebuggerEvent.Builder, com.google.wireless.android.sdk.stats.DebuggerEventOrBuilder> 
+        getDebuggerEventFieldBuilder() {
+      if (debuggerEventBuilder_ == null) {
+        debuggerEventBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.wireless.android.sdk.stats.DebuggerEvent, com.google.wireless.android.sdk.stats.DebuggerEvent.Builder, com.google.wireless.android.sdk.stats.DebuggerEventOrBuilder>(
+                getDebuggerEvent(),
+                getParentForChildren(),
+                isClean());
+        debuggerEvent_ = null;
+      }
+      return debuggerEventBuilder_;
+    }
+
+    private com.google.wireless.android.sdk.stats.SoongSyncStats soongSyncStats_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.SoongSyncStats, com.google.wireless.android.sdk.stats.SoongSyncStats.Builder, com.google.wireless.android.sdk.stats.SoongSyncStatsOrBuilder> soongSyncStatsBuilder_;
+    /**
+     * <pre>
+     * set when kind = SOONG_SYNC_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.SoongSyncStats soong_sync_stats = 177;</code>
+     * @return Whether the soongSyncStats field is set.
+     */
+    public boolean hasSoongSyncStats() {
+      return ((bitField5_ & 0x00010000) != 0);
+    }
+    /**
+     * <pre>
+     * set when kind = SOONG_SYNC_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.SoongSyncStats soong_sync_stats = 177;</code>
+     * @return The soongSyncStats.
+     */
+    public com.google.wireless.android.sdk.stats.SoongSyncStats getSoongSyncStats() {
+      if (soongSyncStatsBuilder_ == null) {
+        return soongSyncStats_ == null ? com.google.wireless.android.sdk.stats.SoongSyncStats.getDefaultInstance() : soongSyncStats_;
+      } else {
+        return soongSyncStatsBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * set when kind = SOONG_SYNC_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.SoongSyncStats soong_sync_stats = 177;</code>
+     */
+    public Builder setSoongSyncStats(com.google.wireless.android.sdk.stats.SoongSyncStats value) {
+      if (soongSyncStatsBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        soongSyncStats_ = value;
+        onChanged();
+      } else {
+        soongSyncStatsBuilder_.setMessage(value);
+      }
+      bitField5_ |= 0x00010000;
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = SOONG_SYNC_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.SoongSyncStats soong_sync_stats = 177;</code>
+     */
+    public Builder setSoongSyncStats(
+        com.google.wireless.android.sdk.stats.SoongSyncStats.Builder builderForValue) {
+      if (soongSyncStatsBuilder_ == null) {
+        soongSyncStats_ = builderForValue.build();
+        onChanged();
+      } else {
+        soongSyncStatsBuilder_.setMessage(builderForValue.build());
+      }
+      bitField5_ |= 0x00010000;
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = SOONG_SYNC_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.SoongSyncStats soong_sync_stats = 177;</code>
+     */
+    public Builder mergeSoongSyncStats(com.google.wireless.android.sdk.stats.SoongSyncStats value) {
+      if (soongSyncStatsBuilder_ == null) {
+        if (((bitField5_ & 0x00010000) != 0) &&
+            soongSyncStats_ != null &&
+            soongSyncStats_ != com.google.wireless.android.sdk.stats.SoongSyncStats.getDefaultInstance()) {
+          soongSyncStats_ =
+            com.google.wireless.android.sdk.stats.SoongSyncStats.newBuilder(soongSyncStats_).mergeFrom(value).buildPartial();
+        } else {
+          soongSyncStats_ = value;
+        }
+        onChanged();
+      } else {
+        soongSyncStatsBuilder_.mergeFrom(value);
+      }
+      bitField5_ |= 0x00010000;
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = SOONG_SYNC_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.SoongSyncStats soong_sync_stats = 177;</code>
+     */
+    public Builder clearSoongSyncStats() {
+      if (soongSyncStatsBuilder_ == null) {
+        soongSyncStats_ = null;
+        onChanged();
+      } else {
+        soongSyncStatsBuilder_.clear();
+      }
+      bitField5_ = (bitField5_ & ~0x00010000);
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = SOONG_SYNC_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.SoongSyncStats soong_sync_stats = 177;</code>
+     */
+    public com.google.wireless.android.sdk.stats.SoongSyncStats.Builder getSoongSyncStatsBuilder() {
+      bitField5_ |= 0x00010000;
+      onChanged();
+      return getSoongSyncStatsFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * set when kind = SOONG_SYNC_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.SoongSyncStats soong_sync_stats = 177;</code>
+     */
+    public com.google.wireless.android.sdk.stats.SoongSyncStatsOrBuilder getSoongSyncStatsOrBuilder() {
+      if (soongSyncStatsBuilder_ != null) {
+        return soongSyncStatsBuilder_.getMessageOrBuilder();
+      } else {
+        return soongSyncStats_ == null ?
+            com.google.wireless.android.sdk.stats.SoongSyncStats.getDefaultInstance() : soongSyncStats_;
+      }
+    }
+    /**
+     * <pre>
+     * set when kind = SOONG_SYNC_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.SoongSyncStats soong_sync_stats = 177;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.SoongSyncStats, com.google.wireless.android.sdk.stats.SoongSyncStats.Builder, com.google.wireless.android.sdk.stats.SoongSyncStatsOrBuilder> 
+        getSoongSyncStatsFieldBuilder() {
+      if (soongSyncStatsBuilder_ == null) {
+        soongSyncStatsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.wireless.android.sdk.stats.SoongSyncStats, com.google.wireless.android.sdk.stats.SoongSyncStats.Builder, com.google.wireless.android.sdk.stats.SoongSyncStatsOrBuilder>(
+                getSoongSyncStats(),
+                getParentForChildren(),
+                isClean());
+        soongSyncStats_ = null;
+      }
+      return soongSyncStatsBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

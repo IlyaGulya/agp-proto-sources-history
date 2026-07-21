@@ -6307,6 +6307,25 @@ private static final long serialVersionUID = 0L;
      * @return The collectionIteration.
      */
     int getCollectionIteration();
+
+    /**
+     * <pre>
+     * Was essentials mode enabled at the time of sending the report
+     * </pre>
+     *
+     * <code>optional bool is_in_essentials_mode = 11;</code>
+     * @return Whether the isInEssentialsMode field is set.
+     */
+    boolean hasIsInEssentialsMode();
+    /**
+     * <pre>
+     * Was essentials mode enabled at the time of sending the report
+     * </pre>
+     *
+     * <code>optional bool is_in_essentials_mode = 11;</code>
+     * @return The isInEssentialsMode.
+     */
+    boolean getIsInEssentialsMode();
   }
   /**
    * <pre>
@@ -6422,6 +6441,11 @@ private static final long serialVersionUID = 0L;
             case 80: {
               bitField0_ |= 0x00000200;
               collectionIteration_ = input.readInt32();
+              break;
+            }
+            case 88: {
+              bitField0_ |= 0x00000400;
+              isInEssentialsMode_ = input.readBool();
               break;
             }
             default: {
@@ -6965,6 +6989,33 @@ private static final long serialVersionUID = 0L;
       return collectionIteration_;
     }
 
+    public static final int IS_IN_ESSENTIALS_MODE_FIELD_NUMBER = 11;
+    private boolean isInEssentialsMode_;
+    /**
+     * <pre>
+     * Was essentials mode enabled at the time of sending the report
+     * </pre>
+     *
+     * <code>optional bool is_in_essentials_mode = 11;</code>
+     * @return Whether the isInEssentialsMode field is set.
+     */
+    @java.lang.Override
+    public boolean hasIsInEssentialsMode() {
+      return ((bitField0_ & 0x00000400) != 0);
+    }
+    /**
+     * <pre>
+     * Was essentials mode enabled at the time of sending the report
+     * </pre>
+     *
+     * <code>optional bool is_in_essentials_mode = 11;</code>
+     * @return The isInEssentialsMode.
+     */
+    @java.lang.Override
+    public boolean getIsInEssentialsMode() {
+      return isInEssentialsMode_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -7008,6 +7059,9 @@ private static final long serialVersionUID = 0L;
       }
       if (((bitField0_ & 0x00000200) != 0)) {
         output.writeInt32(10, collectionIteration_);
+      }
+      if (((bitField0_ & 0x00000400) != 0)) {
+        output.writeBool(11, isInEssentialsMode_);
       }
       unknownFields.writeTo(output);
     }
@@ -7057,6 +7111,10 @@ private static final long serialVersionUID = 0L;
       if (((bitField0_ & 0x00000200) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeInt32Size(10, collectionIteration_);
+      }
+      if (((bitField0_ & 0x00000400) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(11, isInEssentialsMode_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -7124,6 +7182,11 @@ private static final long serialVersionUID = 0L;
         if (getCollectionIteration()
             != other.getCollectionIteration()) return false;
       }
+      if (hasIsInEssentialsMode() != other.hasIsInEssentialsMode()) return false;
+      if (hasIsInEssentialsMode()) {
+        if (getIsInEssentialsMode()
+            != other.getIsInEssentialsMode()) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -7177,6 +7240,11 @@ private static final long serialVersionUID = 0L;
       if (hasCollectionIteration()) {
         hash = (37 * hash) + COLLECTION_ITERATION_FIELD_NUMBER;
         hash = (53 * hash) + getCollectionIteration();
+      }
+      if (hasIsInEssentialsMode()) {
+        hash = (37 * hash) + IS_IN_ESSENTIALS_MODE_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+            getIsInEssentialsMode());
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -7340,6 +7408,8 @@ private static final long serialVersionUID = 0L;
         bitField0_ = (bitField0_ & ~0x00000100);
         collectionIteration_ = 0;
         bitField0_ = (bitField0_ & ~0x00000200);
+        isInEssentialsMode_ = false;
+        bitField0_ = (bitField0_ & ~0x00000400);
         return this;
       }
 
@@ -7411,6 +7481,10 @@ private static final long serialVersionUID = 0L;
         if (((from_bitField0_ & 0x00000200) != 0)) {
           result.collectionIteration_ = collectionIteration_;
           to_bitField0_ |= 0x00000200;
+        }
+        if (((from_bitField0_ & 0x00000400) != 0)) {
+          result.isInEssentialsMode_ = isInEssentialsMode_;
+          to_bitField0_ |= 0x00000400;
         }
         result.bitField0_ = to_bitField0_;
         onBuilt();
@@ -7490,6 +7564,9 @@ private static final long serialVersionUID = 0L;
         }
         if (other.hasCollectionIteration()) {
           setCollectionIteration(other.getCollectionIteration());
+        }
+        if (other.hasIsInEssentialsMode()) {
+          setIsInEssentialsMode(other.getIsInEssentialsMode());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -8188,6 +8265,61 @@ private static final long serialVersionUID = 0L;
       public Builder clearCollectionIteration() {
         bitField0_ = (bitField0_ & ~0x00000200);
         collectionIteration_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private boolean isInEssentialsMode_ ;
+      /**
+       * <pre>
+       * Was essentials mode enabled at the time of sending the report
+       * </pre>
+       *
+       * <code>optional bool is_in_essentials_mode = 11;</code>
+       * @return Whether the isInEssentialsMode field is set.
+       */
+      @java.lang.Override
+      public boolean hasIsInEssentialsMode() {
+        return ((bitField0_ & 0x00000400) != 0);
+      }
+      /**
+       * <pre>
+       * Was essentials mode enabled at the time of sending the report
+       * </pre>
+       *
+       * <code>optional bool is_in_essentials_mode = 11;</code>
+       * @return The isInEssentialsMode.
+       */
+      @java.lang.Override
+      public boolean getIsInEssentialsMode() {
+        return isInEssentialsMode_;
+      }
+      /**
+       * <pre>
+       * Was essentials mode enabled at the time of sending the report
+       * </pre>
+       *
+       * <code>optional bool is_in_essentials_mode = 11;</code>
+       * @param value The isInEssentialsMode to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIsInEssentialsMode(boolean value) {
+        bitField0_ |= 0x00000400;
+        isInEssentialsMode_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Was essentials mode enabled at the time of sending the report
+       * </pre>
+       *
+       * <code>optional bool is_in_essentials_mode = 11;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearIsInEssentialsMode() {
+        bitField0_ = (bitField0_ & ~0x00000400);
+        isInEssentialsMode_ = false;
         onChanged();
         return this;
       }
