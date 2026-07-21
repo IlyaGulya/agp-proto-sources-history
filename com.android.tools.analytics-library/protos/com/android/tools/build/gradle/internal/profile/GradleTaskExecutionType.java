@@ -1376,9 +1376,13 @@ public enum GradleTaskExecutionType
    */
   PRIVACY_SANDBOX_VALIDATE_CONFIGURATION(339),
   /**
-   * <code>CONVERT_PROTO_RESOURCES = 340;</code>
+   * <code>CONVERT_SHRUNK_RESOURCES_TO_BINARY = 340;</code>
    */
-  CONVERT_PROTO_RESOURCES(340),
+  CONVERT_SHRUNK_RESOURCES_TO_BINARY(340),
+  /**
+   * <code>CONVERT_LINKED_RESOURCES_TO_PROTO = 341;</code>
+   */
+  CONVERT_LINKED_RESOURCES_TO_PROTO(341),
   UNRECOGNIZED(-1),
   ;
 
@@ -2743,9 +2747,13 @@ public enum GradleTaskExecutionType
    */
   public static final int PRIVACY_SANDBOX_VALIDATE_CONFIGURATION_VALUE = 339;
   /**
-   * <code>CONVERT_PROTO_RESOURCES = 340;</code>
+   * <code>CONVERT_SHRUNK_RESOURCES_TO_BINARY = 340;</code>
    */
-  public static final int CONVERT_PROTO_RESOURCES_VALUE = 340;
+  public static final int CONVERT_SHRUNK_RESOURCES_TO_BINARY_VALUE = 340;
+  /**
+   * <code>CONVERT_LINKED_RESOURCES_TO_PROTO = 341;</code>
+   */
+  public static final int CONVERT_LINKED_RESOURCES_TO_PROTO_VALUE = 341;
 
 
   public final int getNumber() {
@@ -3112,7 +3120,8 @@ public enum GradleTaskExecutionType
       case 337: return MERGE_STARTUP_PROFILE;
       case 338: return GENERATE_PRIVACY_SANDBOX_PROGUARD_RULES;
       case 339: return PRIVACY_SANDBOX_VALIDATE_CONFIGURATION;
-      case 340: return CONVERT_PROTO_RESOURCES;
+      case 340: return CONVERT_SHRUNK_RESOURCES_TO_BINARY;
+      case 341: return CONVERT_LINKED_RESOURCES_TO_PROTO;
       default: return null;
     }
   }

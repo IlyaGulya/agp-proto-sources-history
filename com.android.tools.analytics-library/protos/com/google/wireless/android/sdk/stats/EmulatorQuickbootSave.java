@@ -129,6 +129,14 @@ private static final long serialVersionUID = 0L;
      * <code>EMULATOR_QUICKBOOT_SAVE_SKIPPED_NOT_BOOTED = 8;</code>
      */
     EMULATOR_QUICKBOOT_SAVE_SKIPPED_NOT_BOOTED(8),
+    /**
+     * <pre>
+     * Successful saving with Vulkan.
+     * </pre>
+     *
+     * <code>EMULATOR_QUICKBOOT_SAVE_SUCCEEDED_WITH_VULKAN = 9;</code>
+     */
+    EMULATOR_QUICKBOOT_SAVE_SUCCEEDED_WITH_VULKAN(9),
     ;
 
     /**
@@ -203,6 +211,14 @@ private static final long serialVersionUID = 0L;
      * <code>EMULATOR_QUICKBOOT_SAVE_SKIPPED_NOT_BOOTED = 8;</code>
      */
     public static final int EMULATOR_QUICKBOOT_SAVE_SKIPPED_NOT_BOOTED_VALUE = 8;
+    /**
+     * <pre>
+     * Successful saving with Vulkan.
+     * </pre>
+     *
+     * <code>EMULATOR_QUICKBOOT_SAVE_SUCCEEDED_WITH_VULKAN = 9;</code>
+     */
+    public static final int EMULATOR_QUICKBOOT_SAVE_SUCCEEDED_WITH_VULKAN_VALUE = 9;
 
 
     public final int getNumber() {
@@ -234,6 +250,7 @@ private static final long serialVersionUID = 0L;
         case 6: return EMULATOR_QUICKBOOT_SAVE_SKIPPED_LOW_UPTIME;
         case 7: return EMULATOR_QUICKBOOT_SAVE_DISABLED_UI;
         case 8: return EMULATOR_QUICKBOOT_SAVE_SKIPPED_NOT_BOOTED;
+        case 9: return EMULATOR_QUICKBOOT_SAVE_SUCCEEDED_WITH_VULKAN;
         default: return null;
       }
     }
