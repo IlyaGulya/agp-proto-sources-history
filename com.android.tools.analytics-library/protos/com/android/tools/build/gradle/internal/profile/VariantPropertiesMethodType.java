@@ -353,6 +353,10 @@ public enum VariantPropertiesMethodType
    * <code>VARIANT_PSEUDOLOCALES_ENABLED = 80;</code>
    */
   VARIANT_PSEUDOLOCALES_ENABLED(80),
+  /**
+   * <code>PROGUARD_FILES = 81;</code>
+   */
+  PROGUARD_FILES(81),
   UNRECOGNIZED(-1),
   ;
 
@@ -700,6 +704,10 @@ public enum VariantPropertiesMethodType
    * <code>VARIANT_PSEUDOLOCALES_ENABLED = 80;</code>
    */
   public static final int VARIANT_PSEUDOLOCALES_ENABLED_VALUE = 80;
+  /**
+   * <code>PROGUARD_FILES = 81;</code>
+   */
+  public static final int PROGUARD_FILES_VALUE = 81;
 
 
   public final int getNumber() {
@@ -807,6 +815,7 @@ public enum VariantPropertiesMethodType
       case 78: return SIGNING_CONFIG_ENABLE_V3;
       case 79: return SIGNING_CONFIG_ENABLE_V4;
       case 80: return VARIANT_PSEUDOLOCALES_ENABLED;
+      case 81: return PROGUARD_FILES;
       default: return null;
     }
   }

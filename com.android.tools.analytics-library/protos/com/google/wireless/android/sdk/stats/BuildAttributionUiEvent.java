@@ -352,6 +352,18 @@ private static final long serialVersionUID = 0L;
      * <code>CONFIGURE_GC_WARNING_SUSPEND_CLICKED = 20;</code>
      */
     CONFIGURE_GC_WARNING_SUSPEND_CLICKED(20),
+    /**
+     * <code>UPGRADE_AGP_BUTTON_CLICKED = 21;</code>
+     */
+    UPGRADE_AGP_BUTTON_CLICKED(21),
+    /**
+     * <code>RERUN_BUILD_WITH_CONFIGURATION_CACHE_CLICKED = 22;</code>
+     */
+    RERUN_BUILD_WITH_CONFIGURATION_CACHE_CLICKED(22),
+    /**
+     * <code>TURN_ON_CONFIGURATION_CACHE_IN_PROPERTIES_LINK_CLICKED = 23;</code>
+     */
+    TURN_ON_CONFIGURATION_CACHE_IN_PROPERTIES_LINK_CLICKED(23),
     ;
 
     /**
@@ -503,6 +515,18 @@ private static final long serialVersionUID = 0L;
      * <code>CONFIGURE_GC_WARNING_SUSPEND_CLICKED = 20;</code>
      */
     public static final int CONFIGURE_GC_WARNING_SUSPEND_CLICKED_VALUE = 20;
+    /**
+     * <code>UPGRADE_AGP_BUTTON_CLICKED = 21;</code>
+     */
+    public static final int UPGRADE_AGP_BUTTON_CLICKED_VALUE = 21;
+    /**
+     * <code>RERUN_BUILD_WITH_CONFIGURATION_CACHE_CLICKED = 22;</code>
+     */
+    public static final int RERUN_BUILD_WITH_CONFIGURATION_CACHE_CLICKED_VALUE = 22;
+    /**
+     * <code>TURN_ON_CONFIGURATION_CACHE_IN_PROPERTIES_LINK_CLICKED = 23;</code>
+     */
+    public static final int TURN_ON_CONFIGURATION_CACHE_IN_PROPERTIES_LINK_CLICKED_VALUE = 23;
 
 
     public final int getNumber() {
@@ -546,6 +570,9 @@ private static final long serialVersionUID = 0L;
         case 18: return OPEN_MEMORY_SETTINGS_BUTTON_CLICKED;
         case 19: return FILTER_APPLIED;
         case 20: return CONFIGURE_GC_WARNING_SUSPEND_CLICKED;
+        case 21: return UPGRADE_AGP_BUTTON_CLICKED;
+        case 22: return RERUN_BUILD_WITH_CONFIGURATION_CACHE_CLICKED;
+        case 23: return TURN_ON_CONFIGURATION_CACHE_IN_PROPERTIES_LINK_CLICKED;
         default: return null;
       }
     }

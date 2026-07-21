@@ -22,6 +22,7 @@ private static final long serialVersionUID = 0L;
   private BuildAttributionPluginIdentifier() {
     type_ = 0;
     pluginDisplayName_ = "";
+    pluginClassName_ = "";
   }
 
   @java.lang.Override
@@ -71,6 +72,12 @@ private static final long serialVersionUID = 0L;
             com.google.protobuf.ByteString bs = input.readBytes();
             bitField0_ |= 0x00000002;
             pluginDisplayName_ = bs;
+            break;
+          }
+          case 26: {
+            com.google.protobuf.ByteString bs = input.readBytes();
+            bitField0_ |= 0x00000004;
+            pluginClassName_ = bs;
             break;
           }
           default: {
@@ -328,6 +335,66 @@ private static final long serialVersionUID = 0L;
     }
   }
 
+  public static final int PLUGIN_CLASS_NAME_FIELD_NUMBER = 3;
+  private volatile java.lang.Object pluginClassName_;
+  /**
+   * <pre>
+   * The class name of the gradle plugin.
+   * ex: org.jetbrains.kotlin.gradle.plugin.KotlinAndroidPluginWrapper
+   * </pre>
+   *
+   * <code>optional string plugin_class_name = 3;</code>
+   * @return Whether the pluginClassName field is set.
+   */
+  public boolean hasPluginClassName() {
+    return ((bitField0_ & 0x00000004) != 0);
+  }
+  /**
+   * <pre>
+   * The class name of the gradle plugin.
+   * ex: org.jetbrains.kotlin.gradle.plugin.KotlinAndroidPluginWrapper
+   * </pre>
+   *
+   * <code>optional string plugin_class_name = 3;</code>
+   * @return The pluginClassName.
+   */
+  public java.lang.String getPluginClassName() {
+    java.lang.Object ref = pluginClassName_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      if (bs.isValidUtf8()) {
+        pluginClassName_ = s;
+      }
+      return s;
+    }
+  }
+  /**
+   * <pre>
+   * The class name of the gradle plugin.
+   * ex: org.jetbrains.kotlin.gradle.plugin.KotlinAndroidPluginWrapper
+   * </pre>
+   *
+   * <code>optional string plugin_class_name = 3;</code>
+   * @return The bytes for pluginClassName.
+   */
+  public com.google.protobuf.ByteString
+      getPluginClassNameBytes() {
+    java.lang.Object ref = pluginClassName_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      pluginClassName_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -348,6 +415,9 @@ private static final long serialVersionUID = 0L;
     if (((bitField0_ & 0x00000002) != 0)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 2, pluginDisplayName_);
     }
+    if (((bitField0_ & 0x00000004) != 0)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 3, pluginClassName_);
+    }
     unknownFields.writeTo(output);
   }
 
@@ -363,6 +433,9 @@ private static final long serialVersionUID = 0L;
     }
     if (((bitField0_ & 0x00000002) != 0)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, pluginDisplayName_);
+    }
+    if (((bitField0_ & 0x00000004) != 0)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, pluginClassName_);
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -388,6 +461,11 @@ private static final long serialVersionUID = 0L;
       if (!getPluginDisplayName()
           .equals(other.getPluginDisplayName())) return false;
     }
+    if (hasPluginClassName() != other.hasPluginClassName()) return false;
+    if (hasPluginClassName()) {
+      if (!getPluginClassName()
+          .equals(other.getPluginClassName())) return false;
+    }
     if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
@@ -406,6 +484,10 @@ private static final long serialVersionUID = 0L;
     if (hasPluginDisplayName()) {
       hash = (37 * hash) + PLUGIN_DISPLAY_NAME_FIELD_NUMBER;
       hash = (53 * hash) + getPluginDisplayName().hashCode();
+    }
+    if (hasPluginClassName()) {
+      hash = (37 * hash) + PLUGIN_CLASS_NAME_FIELD_NUMBER;
+      hash = (53 * hash) + getPluginClassName().hashCode();
     }
     hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
@@ -548,6 +630,8 @@ private static final long serialVersionUID = 0L;
       bitField0_ = (bitField0_ & ~0x00000001);
       pluginDisplayName_ = "";
       bitField0_ = (bitField0_ & ~0x00000002);
+      pluginClassName_ = "";
+      bitField0_ = (bitField0_ & ~0x00000004);
       return this;
     }
 
@@ -584,6 +668,10 @@ private static final long serialVersionUID = 0L;
         to_bitField0_ |= 0x00000002;
       }
       result.pluginDisplayName_ = pluginDisplayName_;
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        to_bitField0_ |= 0x00000004;
+      }
+      result.pluginClassName_ = pluginClassName_;
       result.bitField0_ = to_bitField0_;
       onBuilt();
       return result;
@@ -639,6 +727,11 @@ private static final long serialVersionUID = 0L;
       if (other.hasPluginDisplayName()) {
         bitField0_ |= 0x00000002;
         pluginDisplayName_ = other.pluginDisplayName_;
+        onChanged();
+      }
+      if (other.hasPluginClassName()) {
+        bitField0_ |= 0x00000004;
+        pluginClassName_ = other.pluginClassName_;
         onChanged();
       }
       this.mergeUnknownFields(other.unknownFields);
@@ -845,6 +938,120 @@ private static final long serialVersionUID = 0L;
   }
   bitField0_ |= 0x00000002;
       pluginDisplayName_ = value;
+      onChanged();
+      return this;
+    }
+
+    private java.lang.Object pluginClassName_ = "";
+    /**
+     * <pre>
+     * The class name of the gradle plugin.
+     * ex: org.jetbrains.kotlin.gradle.plugin.KotlinAndroidPluginWrapper
+     * </pre>
+     *
+     * <code>optional string plugin_class_name = 3;</code>
+     * @return Whether the pluginClassName field is set.
+     */
+    public boolean hasPluginClassName() {
+      return ((bitField0_ & 0x00000004) != 0);
+    }
+    /**
+     * <pre>
+     * The class name of the gradle plugin.
+     * ex: org.jetbrains.kotlin.gradle.plugin.KotlinAndroidPluginWrapper
+     * </pre>
+     *
+     * <code>optional string plugin_class_name = 3;</code>
+     * @return The pluginClassName.
+     */
+    public java.lang.String getPluginClassName() {
+      java.lang.Object ref = pluginClassName_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          pluginClassName_ = s;
+        }
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <pre>
+     * The class name of the gradle plugin.
+     * ex: org.jetbrains.kotlin.gradle.plugin.KotlinAndroidPluginWrapper
+     * </pre>
+     *
+     * <code>optional string plugin_class_name = 3;</code>
+     * @return The bytes for pluginClassName.
+     */
+    public com.google.protobuf.ByteString
+        getPluginClassNameBytes() {
+      java.lang.Object ref = pluginClassName_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        pluginClassName_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <pre>
+     * The class name of the gradle plugin.
+     * ex: org.jetbrains.kotlin.gradle.plugin.KotlinAndroidPluginWrapper
+     * </pre>
+     *
+     * <code>optional string plugin_class_name = 3;</code>
+     * @param value The pluginClassName to set.
+     * @return This builder for chaining.
+     */
+    public Builder setPluginClassName(
+        java.lang.String value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000004;
+      pluginClassName_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The class name of the gradle plugin.
+     * ex: org.jetbrains.kotlin.gradle.plugin.KotlinAndroidPluginWrapper
+     * </pre>
+     *
+     * <code>optional string plugin_class_name = 3;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearPluginClassName() {
+      bitField0_ = (bitField0_ & ~0x00000004);
+      pluginClassName_ = getDefaultInstance().getPluginClassName();
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The class name of the gradle plugin.
+     * ex: org.jetbrains.kotlin.gradle.plugin.KotlinAndroidPluginWrapper
+     * </pre>
+     *
+     * <code>optional string plugin_class_name = 3;</code>
+     * @param value The bytes for pluginClassName to set.
+     * @return This builder for chaining.
+     */
+    public Builder setPluginClassNameBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000004;
+      pluginClassName_ = value;
       onChanged();
       return this;
     }

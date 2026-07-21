@@ -416,7 +416,7 @@ public final class AnalyticsEnums {
       "\031\n\025MAX_SDK_VERSION_VALUE\020\004\022\034\n\030TARGET_SDK" +
       "_VERSION_VALUE\020\005\022\027\n\023DEPENDENCIES_ACTION\020" +
       "\006\022\026\n\022REGISTER_EXTENSION\020\007\022\025\n\021UNIT_TEST_E" +
-      "NABLED\020\010\022\030\n\024ANDROID_TEST_ENABLED\020\t*\267\020\n\033V" +
+      "NABLED\020\010\022\030\n\024ANDROID_TEST_ENABLED\020\t*\313\020\n\033V" +
       "ariantPropertiesMethodType\022\"\n\036UNKNOWN_PR" +
       "OPERTIES_METHOD_TYPE\020\000\022\r\n\tARTIFACTS\020\001\022\031\n" +
       "\025ASM_TRANSFORM_CLASSES\020\002\022\037\n\033ASM_FRAMES_C" +
@@ -469,9 +469,9 @@ public final class AnalyticsEnums {
       "FIG_ENABLE_V1\020L\022\034\n\030SIGNING_CONFIG_ENABLE" +
       "_V2\020M\022\034\n\030SIGNING_CONFIG_ENABLE_V3\020N\022\034\n\030S" +
       "IGNING_CONFIG_ENABLE_V4\020O\022!\n\035VARIANT_PSE" +
-      "UDOLOCALES_ENABLED\020PB3\n/com.android.tool" +
-      "s.build.gradle.internal.profileP\001b\006proto" +
-      "3"
+      "UDOLOCALES_ENABLED\020P\022\022\n\016PROGUARD_FILES\020Q" +
+      "B3\n/com.android.tools.build.gradle.inter" +
+      "nal.profileP\001b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
