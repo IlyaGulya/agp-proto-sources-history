@@ -150,7 +150,7 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * Server request/response cycle identifier.
+     * Server request/response cycle identifier, used with ServerEvents.
      * </pre>
      *
      * <code>optional string request_id = 5;</code>
@@ -159,7 +159,7 @@ private static final long serialVersionUID = 0L;
     boolean hasRequestId();
     /**
      * <pre>
-     * Server request/response cycle identifier.
+     * Server request/response cycle identifier, used with ServerEvents.
      * </pre>
      *
      * <code>optional string request_id = 5;</code>
@@ -168,7 +168,7 @@ private static final long serialVersionUID = 0L;
     java.lang.String getRequestId();
     /**
      * <pre>
-     * Server request/response cycle identifier.
+     * Server request/response cycle identifier, used with ServerEvents.
      * </pre>
      *
      * <code>optional string request_id = 5;</code>
@@ -179,7 +179,7 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * Backend trace identifier
+     * Backend trace identifier, used with ServerEvents.
      * </pre>
      *
      * <code>optional string server_trace_id = 6;</code>
@@ -188,7 +188,7 @@ private static final long serialVersionUID = 0L;
     boolean hasServerTraceId();
     /**
      * <pre>
-     * Backend trace identifier
+     * Backend trace identifier, used with ServerEvents.
      * </pre>
      *
      * <code>optional string server_trace_id = 6;</code>
@@ -197,7 +197,7 @@ private static final long serialVersionUID = 0L;
     java.lang.String getServerTraceId();
     /**
      * <pre>
-     * Backend trace identifier
+     * Backend trace identifier, used with ServerEvents.
      * </pre>
      *
      * <code>optional string server_trace_id = 6;</code>
@@ -284,6 +284,17 @@ private static final long serialVersionUID = 0L;
     boolean getIsDefaultModel();
   }
   /**
+   * <pre>
+   * The envelope holds metadata about the event and information to link related
+   * events together.
+   * For ServerEvents, the request_id field in the EventEnvelope ties
+   * together the request and response events.
+   * For all events, the root_trajectory_id in the EventEnvelope
+   * ties together events belonging to the same conversation.
+   * For all events, the trajectory_id in the EventEnvelope ties together
+   * events belonging to the same agent (or sub-agent) interaction.
+   * </pre>
+   *
    * Protobuf type {@code android_studio.GeminiTelemetryEvent.EventEnvelope}
    */
   public static final class EventEnvelope extends
@@ -541,7 +552,7 @@ private static final long serialVersionUID = 0L;
     private volatile java.lang.Object requestId_ = "";
     /**
      * <pre>
-     * Server request/response cycle identifier.
+     * Server request/response cycle identifier, used with ServerEvents.
      * </pre>
      *
      * <code>optional string request_id = 5;</code>
@@ -553,7 +564,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Server request/response cycle identifier.
+     * Server request/response cycle identifier, used with ServerEvents.
      * </pre>
      *
      * <code>optional string request_id = 5;</code>
@@ -576,7 +587,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Server request/response cycle identifier.
+     * Server request/response cycle identifier, used with ServerEvents.
      * </pre>
      *
      * <code>optional string request_id = 5;</code>
@@ -602,7 +613,7 @@ private static final long serialVersionUID = 0L;
     private volatile java.lang.Object serverTraceId_ = "";
     /**
      * <pre>
-     * Backend trace identifier
+     * Backend trace identifier, used with ServerEvents.
      * </pre>
      *
      * <code>optional string server_trace_id = 6;</code>
@@ -614,7 +625,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Backend trace identifier
+     * Backend trace identifier, used with ServerEvents.
      * </pre>
      *
      * <code>optional string server_trace_id = 6;</code>
@@ -637,7 +648,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Backend trace identifier
+     * Backend trace identifier, used with ServerEvents.
      * </pre>
      *
      * <code>optional string server_trace_id = 6;</code>
@@ -1091,6 +1102,17 @@ private static final long serialVersionUID = 0L;
       return builder;
     }
     /**
+     * <pre>
+     * The envelope holds metadata about the event and information to link related
+     * events together.
+     * For ServerEvents, the request_id field in the EventEnvelope ties
+     * together the request and response events.
+     * For all events, the root_trajectory_id in the EventEnvelope
+     * ties together events belonging to the same conversation.
+     * For all events, the trajectory_id in the EventEnvelope ties together
+     * events belonging to the same agent (or sub-agent) interaction.
+     * </pre>
+     *
      * Protobuf type {@code android_studio.GeminiTelemetryEvent.EventEnvelope}
      */
     public static final class Builder extends
@@ -1718,7 +1740,7 @@ private static final long serialVersionUID = 0L;
       private java.lang.Object requestId_ = "";
       /**
        * <pre>
-       * Server request/response cycle identifier.
+       * Server request/response cycle identifier, used with ServerEvents.
        * </pre>
        *
        * <code>optional string request_id = 5;</code>
@@ -1729,7 +1751,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Server request/response cycle identifier.
+       * Server request/response cycle identifier, used with ServerEvents.
        * </pre>
        *
        * <code>optional string request_id = 5;</code>
@@ -1751,7 +1773,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Server request/response cycle identifier.
+       * Server request/response cycle identifier, used with ServerEvents.
        * </pre>
        *
        * <code>optional string request_id = 5;</code>
@@ -1772,7 +1794,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Server request/response cycle identifier.
+       * Server request/response cycle identifier, used with ServerEvents.
        * </pre>
        *
        * <code>optional string request_id = 5;</code>
@@ -1789,7 +1811,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Server request/response cycle identifier.
+       * Server request/response cycle identifier, used with ServerEvents.
        * </pre>
        *
        * <code>optional string request_id = 5;</code>
@@ -1803,7 +1825,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Server request/response cycle identifier.
+       * Server request/response cycle identifier, used with ServerEvents.
        * </pre>
        *
        * <code>optional string request_id = 5;</code>
@@ -1822,7 +1844,7 @@ private static final long serialVersionUID = 0L;
       private java.lang.Object serverTraceId_ = "";
       /**
        * <pre>
-       * Backend trace identifier
+       * Backend trace identifier, used with ServerEvents.
        * </pre>
        *
        * <code>optional string server_trace_id = 6;</code>
@@ -1833,7 +1855,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Backend trace identifier
+       * Backend trace identifier, used with ServerEvents.
        * </pre>
        *
        * <code>optional string server_trace_id = 6;</code>
@@ -1855,7 +1877,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Backend trace identifier
+       * Backend trace identifier, used with ServerEvents.
        * </pre>
        *
        * <code>optional string server_trace_id = 6;</code>
@@ -1876,7 +1898,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Backend trace identifier
+       * Backend trace identifier, used with ServerEvents.
        * </pre>
        *
        * <code>optional string server_trace_id = 6;</code>
@@ -1893,7 +1915,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Backend trace identifier
+       * Backend trace identifier, used with ServerEvents.
        * </pre>
        *
        * <code>optional string server_trace_id = 6;</code>
@@ -1907,7 +1929,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Backend trace identifier
+       * Backend trace identifier, used with ServerEvents.
        * </pre>
        *
        * <code>optional string server_trace_id = 6;</code>
@@ -2253,6 +2275,36 @@ private static final long serialVersionUID = 0L;
   public interface ServerEventOrBuilder extends
       // @@protoc_insertion_point(interface_extends:android_studio.GeminiTelemetryEvent.ServerEvent)
       com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>optional .android_studio.GeminiTelemetryEvent.ServerEvent.RequestEvent request_event = 1;</code>
+     * @return Whether the requestEvent field is set.
+     */
+    boolean hasRequestEvent();
+    /**
+     * <code>optional .android_studio.GeminiTelemetryEvent.ServerEvent.RequestEvent request_event = 1;</code>
+     * @return The requestEvent.
+     */
+    com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.ServerEvent.RequestEvent getRequestEvent();
+    /**
+     * <code>optional .android_studio.GeminiTelemetryEvent.ServerEvent.RequestEvent request_event = 1;</code>
+     */
+    com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.ServerEvent.RequestEventOrBuilder getRequestEventOrBuilder();
+
+    /**
+     * <code>optional .android_studio.GeminiTelemetryEvent.ServerEvent.ResponseEvent response_event = 2;</code>
+     * @return Whether the responseEvent field is set.
+     */
+    boolean hasResponseEvent();
+    /**
+     * <code>optional .android_studio.GeminiTelemetryEvent.ServerEvent.ResponseEvent response_event = 2;</code>
+     * @return The responseEvent.
+     */
+    com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.ServerEvent.ResponseEvent getResponseEvent();
+    /**
+     * <code>optional .android_studio.GeminiTelemetryEvent.ServerEvent.ResponseEvent response_event = 2;</code>
+     */
+    com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.ServerEvent.ResponseEventOrBuilder getResponseEventOrBuilder();
   }
   /**
    * Protobuf type {@code android_studio.GeminiTelemetryEvent.ServerEvent}
@@ -2289,6 +2341,3192 @@ private static final long serialVersionUID = 0L;
               com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.ServerEvent.class, com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.ServerEvent.Builder.class);
     }
 
+    public interface RequestEventOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:android_studio.GeminiTelemetryEvent.ServerEvent.RequestEvent)
+        com.google.protobuf.MessageOrBuilder {
+
+      /**
+       * <pre>
+       * Number of messages in the history, including the user message and
+       * system instructions.
+       * </pre>
+       *
+       * <code>optional int32 history_message_count = 1;</code>
+       * @return Whether the historyMessageCount field is set.
+       */
+      boolean hasHistoryMessageCount();
+      /**
+       * <pre>
+       * Number of messages in the history, including the user message and
+       * system instructions.
+       * </pre>
+       *
+       * <code>optional int32 history_message_count = 1;</code>
+       * @return The historyMessageCount.
+       */
+      int getHistoryMessageCount();
+
+      /**
+       * <pre>
+       * The character length of the system instructions.
+       * </pre>
+       *
+       * <code>optional int32 system_instruction_length_chars = 2;</code>
+       * @return Whether the systemInstructionLengthChars field is set.
+       */
+      boolean hasSystemInstructionLengthChars();
+      /**
+       * <pre>
+       * The character length of the system instructions.
+       * </pre>
+       *
+       * <code>optional int32 system_instruction_length_chars = 2;</code>
+       * @return The systemInstructionLengthChars.
+       */
+      int getSystemInstructionLengthChars();
+
+      /**
+       * <pre>
+       * The total request size in bytes, accounting
+       * for the system prompt, tool definitions (including schemas), and the
+       * full message history (text, thought blocks, and multimodal content).
+       * </pre>
+       *
+       * <code>optional int64 request_size_bytes = 3;</code>
+       * @return Whether the requestSizeBytes field is set.
+       */
+      boolean hasRequestSizeBytes();
+      /**
+       * <pre>
+       * The total request size in bytes, accounting
+       * for the system prompt, tool definitions (including schemas), and the
+       * full message history (text, thought blocks, and multimodal content).
+       * </pre>
+       *
+       * <code>optional int64 request_size_bytes = 3;</code>
+       * @return The requestSizeBytes.
+       */
+      long getRequestSizeBytes();
+    }
+    /**
+     * <pre>
+     * Captures metrics for a Request in a step.
+     * </pre>
+     *
+     * Protobuf type {@code android_studio.GeminiTelemetryEvent.ServerEvent.RequestEvent}
+     */
+    public static final class RequestEvent extends
+        com.google.protobuf.GeneratedMessageV3 implements
+        // @@protoc_insertion_point(message_implements:android_studio.GeminiTelemetryEvent.ServerEvent.RequestEvent)
+        RequestEventOrBuilder {
+    private static final long serialVersionUID = 0L;
+      // Use RequestEvent.newBuilder() to construct.
+      private RequestEvent(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+        super(builder);
+      }
+      private RequestEvent() {
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new RequestEvent();
+      }
+
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_GeminiTelemetryEvent_ServerEvent_RequestEvent_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_GeminiTelemetryEvent_ServerEvent_RequestEvent_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.ServerEvent.RequestEvent.class, com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.ServerEvent.RequestEvent.Builder.class);
+      }
+
+      private int bitField0_;
+      public static final int HISTORY_MESSAGE_COUNT_FIELD_NUMBER = 1;
+      private int historyMessageCount_ = 0;
+      /**
+       * <pre>
+       * Number of messages in the history, including the user message and
+       * system instructions.
+       * </pre>
+       *
+       * <code>optional int32 history_message_count = 1;</code>
+       * @return Whether the historyMessageCount field is set.
+       */
+      @java.lang.Override
+      public boolean hasHistoryMessageCount() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <pre>
+       * Number of messages in the history, including the user message and
+       * system instructions.
+       * </pre>
+       *
+       * <code>optional int32 history_message_count = 1;</code>
+       * @return The historyMessageCount.
+       */
+      @java.lang.Override
+      public int getHistoryMessageCount() {
+        return historyMessageCount_;
+      }
+
+      public static final int SYSTEM_INSTRUCTION_LENGTH_CHARS_FIELD_NUMBER = 2;
+      private int systemInstructionLengthChars_ = 0;
+      /**
+       * <pre>
+       * The character length of the system instructions.
+       * </pre>
+       *
+       * <code>optional int32 system_instruction_length_chars = 2;</code>
+       * @return Whether the systemInstructionLengthChars field is set.
+       */
+      @java.lang.Override
+      public boolean hasSystemInstructionLengthChars() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <pre>
+       * The character length of the system instructions.
+       * </pre>
+       *
+       * <code>optional int32 system_instruction_length_chars = 2;</code>
+       * @return The systemInstructionLengthChars.
+       */
+      @java.lang.Override
+      public int getSystemInstructionLengthChars() {
+        return systemInstructionLengthChars_;
+      }
+
+      public static final int REQUEST_SIZE_BYTES_FIELD_NUMBER = 3;
+      private long requestSizeBytes_ = 0L;
+      /**
+       * <pre>
+       * The total request size in bytes, accounting
+       * for the system prompt, tool definitions (including schemas), and the
+       * full message history (text, thought blocks, and multimodal content).
+       * </pre>
+       *
+       * <code>optional int64 request_size_bytes = 3;</code>
+       * @return Whether the requestSizeBytes field is set.
+       */
+      @java.lang.Override
+      public boolean hasRequestSizeBytes() {
+        return ((bitField0_ & 0x00000004) != 0);
+      }
+      /**
+       * <pre>
+       * The total request size in bytes, accounting
+       * for the system prompt, tool definitions (including schemas), and the
+       * full message history (text, thought blocks, and multimodal content).
+       * </pre>
+       *
+       * <code>optional int64 request_size_bytes = 3;</code>
+       * @return The requestSizeBytes.
+       */
+      @java.lang.Override
+      public long getRequestSizeBytes() {
+        return requestSizeBytes_;
+      }
+
+      private byte memoizedIsInitialized = -1;
+      @java.lang.Override
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      @java.lang.Override
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        if (((bitField0_ & 0x00000001) != 0)) {
+          output.writeInt32(1, historyMessageCount_);
+        }
+        if (((bitField0_ & 0x00000002) != 0)) {
+          output.writeInt32(2, systemInstructionLengthChars_);
+        }
+        if (((bitField0_ & 0x00000004) != 0)) {
+          output.writeInt64(3, requestSizeBytes_);
+        }
+        getUnknownFields().writeTo(output);
+      }
+
+      @java.lang.Override
+      public int getSerializedSize() {
+        int size = memoizedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        if (((bitField0_ & 0x00000001) != 0)) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeInt32Size(1, historyMessageCount_);
+        }
+        if (((bitField0_ & 0x00000002) != 0)) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeInt32Size(2, systemInstructionLengthChars_);
+        }
+        if (((bitField0_ & 0x00000004) != 0)) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeInt64Size(3, requestSizeBytes_);
+        }
+        size += getUnknownFields().getSerializedSize();
+        memoizedSize = size;
+        return size;
+      }
+
+      @java.lang.Override
+      public boolean equals(final java.lang.Object obj) {
+        if (obj == this) {
+         return true;
+        }
+        if (!(obj instanceof com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.ServerEvent.RequestEvent)) {
+          return super.equals(obj);
+        }
+        com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.ServerEvent.RequestEvent other = (com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.ServerEvent.RequestEvent) obj;
+
+        if (hasHistoryMessageCount() != other.hasHistoryMessageCount()) return false;
+        if (hasHistoryMessageCount()) {
+          if (getHistoryMessageCount()
+              != other.getHistoryMessageCount()) return false;
+        }
+        if (hasSystemInstructionLengthChars() != other.hasSystemInstructionLengthChars()) return false;
+        if (hasSystemInstructionLengthChars()) {
+          if (getSystemInstructionLengthChars()
+              != other.getSystemInstructionLengthChars()) return false;
+        }
+        if (hasRequestSizeBytes() != other.hasRequestSizeBytes()) return false;
+        if (hasRequestSizeBytes()) {
+          if (getRequestSizeBytes()
+              != other.getRequestSizeBytes()) return false;
+        }
+        if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+        return true;
+      }
+
+      @java.lang.Override
+      public int hashCode() {
+        if (memoizedHashCode != 0) {
+          return memoizedHashCode;
+        }
+        int hash = 41;
+        hash = (19 * hash) + getDescriptor().hashCode();
+        if (hasHistoryMessageCount()) {
+          hash = (37 * hash) + HISTORY_MESSAGE_COUNT_FIELD_NUMBER;
+          hash = (53 * hash) + getHistoryMessageCount();
+        }
+        if (hasSystemInstructionLengthChars()) {
+          hash = (37 * hash) + SYSTEM_INSTRUCTION_LENGTH_CHARS_FIELD_NUMBER;
+          hash = (53 * hash) + getSystemInstructionLengthChars();
+        }
+        if (hasRequestSizeBytes()) {
+          hash = (37 * hash) + REQUEST_SIZE_BYTES_FIELD_NUMBER;
+          hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+              getRequestSizeBytes());
+        }
+        hash = (29 * hash) + getUnknownFields().hashCode();
+        memoizedHashCode = hash;
+        return hash;
+      }
+
+      public static com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.ServerEvent.RequestEvent parseFrom(
+          java.nio.ByteBuffer data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.ServerEvent.RequestEvent parseFrom(
+          java.nio.ByteBuffer data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.ServerEvent.RequestEvent parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.ServerEvent.RequestEvent parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.ServerEvent.RequestEvent parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.ServerEvent.RequestEvent parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.ServerEvent.RequestEvent parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.ServerEvent.RequestEvent parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.ServerEvent.RequestEvent parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input);
+      }
+      public static com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.ServerEvent.RequestEvent parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.ServerEvent.RequestEvent parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.ServerEvent.RequestEvent parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      @java.lang.Override
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder() {
+        return DEFAULT_INSTANCE.toBuilder();
+      }
+      public static Builder newBuilder(com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.ServerEvent.RequestEvent prototype) {
+        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+      }
+      @java.lang.Override
+      public Builder toBuilder() {
+        return this == DEFAULT_INSTANCE
+            ? new Builder() : new Builder().mergeFrom(this);
+      }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * <pre>
+       * Captures metrics for a Request in a step.
+       * </pre>
+       *
+       * Protobuf type {@code android_studio.GeminiTelemetryEvent.ServerEvent.RequestEvent}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:android_studio.GeminiTelemetryEvent.ServerEvent.RequestEvent)
+          com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.ServerEvent.RequestEventOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_GeminiTelemetryEvent_ServerEvent_RequestEvent_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_GeminiTelemetryEvent_ServerEvent_RequestEvent_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.ServerEvent.RequestEvent.class, com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.ServerEvent.RequestEvent.Builder.class);
+        }
+
+        // Construct using com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.ServerEvent.RequestEvent.newBuilder()
+        private Builder() {
+
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          super(parent);
+
+        }
+        @java.lang.Override
+        public Builder clear() {
+          super.clear();
+          bitField0_ = 0;
+          historyMessageCount_ = 0;
+          systemInstructionLengthChars_ = 0;
+          requestSizeBytes_ = 0L;
+          return this;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_GeminiTelemetryEvent_ServerEvent_RequestEvent_descriptor;
+        }
+
+        @java.lang.Override
+        public com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.ServerEvent.RequestEvent getDefaultInstanceForType() {
+          return com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.ServerEvent.RequestEvent.getDefaultInstance();
+        }
+
+        @java.lang.Override
+        public com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.ServerEvent.RequestEvent build() {
+          com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.ServerEvent.RequestEvent result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        @java.lang.Override
+        public com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.ServerEvent.RequestEvent buildPartial() {
+          com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.ServerEvent.RequestEvent result = new com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.ServerEvent.RequestEvent(this);
+          if (bitField0_ != 0) { buildPartial0(result); }
+          onBuilt();
+          return result;
+        }
+
+        private void buildPartial0(com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.ServerEvent.RequestEvent result) {
+          int from_bitField0_ = bitField0_;
+          int to_bitField0_ = 0;
+          if (((from_bitField0_ & 0x00000001) != 0)) {
+            result.historyMessageCount_ = historyMessageCount_;
+            to_bitField0_ |= 0x00000001;
+          }
+          if (((from_bitField0_ & 0x00000002) != 0)) {
+            result.systemInstructionLengthChars_ = systemInstructionLengthChars_;
+            to_bitField0_ |= 0x00000002;
+          }
+          if (((from_bitField0_ & 0x00000004) != 0)) {
+            result.requestSizeBytes_ = requestSizeBytes_;
+            to_bitField0_ |= 0x00000004;
+          }
+          result.bitField0_ |= to_bitField0_;
+        }
+
+        @java.lang.Override
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.ServerEvent.RequestEvent) {
+            return mergeFrom((com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.ServerEvent.RequestEvent)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.ServerEvent.RequestEvent other) {
+          if (other == com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.ServerEvent.RequestEvent.getDefaultInstance()) return this;
+          if (other.hasHistoryMessageCount()) {
+            setHistoryMessageCount(other.getHistoryMessageCount());
+          }
+          if (other.hasSystemInstructionLengthChars()) {
+            setSystemInstructionLengthChars(other.getSystemInstructionLengthChars());
+          }
+          if (other.hasRequestSizeBytes()) {
+            setRequestSizeBytes(other.getRequestSizeBytes());
+          }
+          this.mergeUnknownFields(other.getUnknownFields());
+          onChanged();
+          return this;
+        }
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        @java.lang.Override
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          if (extensionRegistry == null) {
+            throw new java.lang.NullPointerException();
+          }
+          try {
+            boolean done = false;
+            while (!done) {
+              int tag = input.readTag();
+              switch (tag) {
+                case 0:
+                  done = true;
+                  break;
+                case 8: {
+                  historyMessageCount_ = input.readInt32();
+                  bitField0_ |= 0x00000001;
+                  break;
+                } // case 8
+                case 16: {
+                  systemInstructionLengthChars_ = input.readInt32();
+                  bitField0_ |= 0x00000002;
+                  break;
+                } // case 16
+                case 24: {
+                  requestSizeBytes_ = input.readInt64();
+                  bitField0_ |= 0x00000004;
+                  break;
+                } // case 24
+                default: {
+                  if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                    done = true; // was an endgroup tag
+                  }
+                  break;
+                } // default:
+              } // switch (tag)
+            } // while (!done)
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            throw e.unwrapIOException();
+          } finally {
+            onChanged();
+          } // finally
+          return this;
+        }
+        private int bitField0_;
+
+        private int historyMessageCount_ ;
+        /**
+         * <pre>
+         * Number of messages in the history, including the user message and
+         * system instructions.
+         * </pre>
+         *
+         * <code>optional int32 history_message_count = 1;</code>
+         * @return Whether the historyMessageCount field is set.
+         */
+        @java.lang.Override
+        public boolean hasHistoryMessageCount() {
+          return ((bitField0_ & 0x00000001) != 0);
+        }
+        /**
+         * <pre>
+         * Number of messages in the history, including the user message and
+         * system instructions.
+         * </pre>
+         *
+         * <code>optional int32 history_message_count = 1;</code>
+         * @return The historyMessageCount.
+         */
+        @java.lang.Override
+        public int getHistoryMessageCount() {
+          return historyMessageCount_;
+        }
+        /**
+         * <pre>
+         * Number of messages in the history, including the user message and
+         * system instructions.
+         * </pre>
+         *
+         * <code>optional int32 history_message_count = 1;</code>
+         * @param value The historyMessageCount to set.
+         * @return This builder for chaining.
+         */
+        public Builder setHistoryMessageCount(int value) {
+
+          historyMessageCount_ = value;
+          bitField0_ |= 0x00000001;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Number of messages in the history, including the user message and
+         * system instructions.
+         * </pre>
+         *
+         * <code>optional int32 history_message_count = 1;</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearHistoryMessageCount() {
+          bitField0_ = (bitField0_ & ~0x00000001);
+          historyMessageCount_ = 0;
+          onChanged();
+          return this;
+        }
+
+        private int systemInstructionLengthChars_ ;
+        /**
+         * <pre>
+         * The character length of the system instructions.
+         * </pre>
+         *
+         * <code>optional int32 system_instruction_length_chars = 2;</code>
+         * @return Whether the systemInstructionLengthChars field is set.
+         */
+        @java.lang.Override
+        public boolean hasSystemInstructionLengthChars() {
+          return ((bitField0_ & 0x00000002) != 0);
+        }
+        /**
+         * <pre>
+         * The character length of the system instructions.
+         * </pre>
+         *
+         * <code>optional int32 system_instruction_length_chars = 2;</code>
+         * @return The systemInstructionLengthChars.
+         */
+        @java.lang.Override
+        public int getSystemInstructionLengthChars() {
+          return systemInstructionLengthChars_;
+        }
+        /**
+         * <pre>
+         * The character length of the system instructions.
+         * </pre>
+         *
+         * <code>optional int32 system_instruction_length_chars = 2;</code>
+         * @param value The systemInstructionLengthChars to set.
+         * @return This builder for chaining.
+         */
+        public Builder setSystemInstructionLengthChars(int value) {
+
+          systemInstructionLengthChars_ = value;
+          bitField0_ |= 0x00000002;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * The character length of the system instructions.
+         * </pre>
+         *
+         * <code>optional int32 system_instruction_length_chars = 2;</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearSystemInstructionLengthChars() {
+          bitField0_ = (bitField0_ & ~0x00000002);
+          systemInstructionLengthChars_ = 0;
+          onChanged();
+          return this;
+        }
+
+        private long requestSizeBytes_ ;
+        /**
+         * <pre>
+         * The total request size in bytes, accounting
+         * for the system prompt, tool definitions (including schemas), and the
+         * full message history (text, thought blocks, and multimodal content).
+         * </pre>
+         *
+         * <code>optional int64 request_size_bytes = 3;</code>
+         * @return Whether the requestSizeBytes field is set.
+         */
+        @java.lang.Override
+        public boolean hasRequestSizeBytes() {
+          return ((bitField0_ & 0x00000004) != 0);
+        }
+        /**
+         * <pre>
+         * The total request size in bytes, accounting
+         * for the system prompt, tool definitions (including schemas), and the
+         * full message history (text, thought blocks, and multimodal content).
+         * </pre>
+         *
+         * <code>optional int64 request_size_bytes = 3;</code>
+         * @return The requestSizeBytes.
+         */
+        @java.lang.Override
+        public long getRequestSizeBytes() {
+          return requestSizeBytes_;
+        }
+        /**
+         * <pre>
+         * The total request size in bytes, accounting
+         * for the system prompt, tool definitions (including schemas), and the
+         * full message history (text, thought blocks, and multimodal content).
+         * </pre>
+         *
+         * <code>optional int64 request_size_bytes = 3;</code>
+         * @param value The requestSizeBytes to set.
+         * @return This builder for chaining.
+         */
+        public Builder setRequestSizeBytes(long value) {
+
+          requestSizeBytes_ = value;
+          bitField0_ |= 0x00000004;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * The total request size in bytes, accounting
+         * for the system prompt, tool definitions (including schemas), and the
+         * full message history (text, thought blocks, and multimodal content).
+         * </pre>
+         *
+         * <code>optional int64 request_size_bytes = 3;</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearRequestSizeBytes() {
+          bitField0_ = (bitField0_ & ~0x00000004);
+          requestSizeBytes_ = 0L;
+          onChanged();
+          return this;
+        }
+        @java.lang.Override
+        public final Builder setUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.setUnknownFields(unknownFields);
+        }
+
+        @java.lang.Override
+        public final Builder mergeUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.mergeUnknownFields(unknownFields);
+        }
+
+
+        // @@protoc_insertion_point(builder_scope:android_studio.GeminiTelemetryEvent.ServerEvent.RequestEvent)
+      }
+
+      // @@protoc_insertion_point(class_scope:android_studio.GeminiTelemetryEvent.ServerEvent.RequestEvent)
+      private static final com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.ServerEvent.RequestEvent DEFAULT_INSTANCE;
+      static {
+        DEFAULT_INSTANCE = new com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.ServerEvent.RequestEvent();
+      }
+
+      public static com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.ServerEvent.RequestEvent getDefaultInstance() {
+        return DEFAULT_INSTANCE;
+      }
+
+      @java.lang.Deprecated public static final com.google.protobuf.Parser<RequestEvent>
+          PARSER = new com.google.protobuf.AbstractParser<RequestEvent>() {
+        @java.lang.Override
+        public RequestEvent parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          Builder builder = newBuilder();
+          try {
+            builder.mergeFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            throw e.setUnfinishedMessage(builder.buildPartial());
+          } catch (com.google.protobuf.UninitializedMessageException e) {
+            throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+          } catch (java.io.IOException e) {
+            throw new com.google.protobuf.InvalidProtocolBufferException(e)
+                .setUnfinishedMessage(builder.buildPartial());
+          }
+          return builder.buildPartial();
+        }
+      };
+
+      public static com.google.protobuf.Parser<RequestEvent> parser() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<RequestEvent> getParserForType() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.ServerEvent.RequestEvent getDefaultInstanceForType() {
+        return DEFAULT_INSTANCE;
+      }
+
+    }
+
+    public interface ResponseEventOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:android_studio.GeminiTelemetryEvent.ServerEvent.ResponseEvent)
+        com.google.protobuf.MessageOrBuilder {
+
+      /**
+       * <pre>
+       * Network &amp; Lifecycle
+       * HTTP status code of the response.
+       * </pre>
+       *
+       * <code>optional int32 http_status_code = 1;</code>
+       * @return Whether the httpStatusCode field is set.
+       */
+      boolean hasHttpStatusCode();
+      /**
+       * <pre>
+       * Network &amp; Lifecycle
+       * HTTP status code of the response.
+       * </pre>
+       *
+       * <code>optional int32 http_status_code = 1;</code>
+       * @return The httpStatusCode.
+       */
+      int getHttpStatusCode();
+
+      /**
+       * <pre>
+       * Latency from the start of the request to the moment it finishes
+       * receiving the very last streamed chunk of the response.
+       * </pre>
+       *
+       * <code>optional int64 latency_ms = 2;</code>
+       * @return Whether the latencyMs field is set.
+       */
+      boolean hasLatencyMs();
+      /**
+       * <pre>
+       * Latency from the start of the request to the moment it finishes
+       * receiving the very last streamed chunk of the response.
+       * </pre>
+       *
+       * <code>optional int64 latency_ms = 2;</code>
+       * @return The latencyMs.
+       */
+      long getLatencyMs();
+
+      /**
+       * <pre>
+       * Latency from the start of the request to reading the first streamed
+       * chunk of the response.
+       * </pre>
+       *
+       * <code>optional int64 ttfc_ms = 3;</code>
+       * @return Whether the ttfcMs field is set.
+       */
+      boolean hasTtfcMs();
+      /**
+       * <pre>
+       * Latency from the start of the request to reading the first streamed
+       * chunk of the response.
+       * </pre>
+       *
+       * <code>optional int64 ttfc_ms = 3;</code>
+       * @return The ttfcMs.
+       */
+      long getTtfcMs();
+
+      /**
+       * <pre>
+       * Size of the response in bytes.
+       * </pre>
+       *
+       * <code>optional int64 response_size_bytes = 4;</code>
+       * @return Whether the responseSizeBytes field is set.
+       */
+      boolean hasResponseSizeBytes();
+      /**
+       * <pre>
+       * Size of the response in bytes.
+       * </pre>
+       *
+       * <code>optional int64 response_size_bytes = 4;</code>
+       * @return The responseSizeBytes.
+       */
+      long getResponseSizeBytes();
+
+      /**
+       * <pre>
+       * Token Usage
+       * The number of tokens in the prompt.
+       * </pre>
+       *
+       * <code>optional int32 input_token_count = 5;</code>
+       * @return Whether the inputTokenCount field is set.
+       */
+      boolean hasInputTokenCount();
+      /**
+       * <pre>
+       * Token Usage
+       * The number of tokens in the prompt.
+       * </pre>
+       *
+       * <code>optional int32 input_token_count = 5;</code>
+       * @return The inputTokenCount.
+       */
+      int getInputTokenCount();
+
+      /**
+       * <pre>
+       * Number of output tokens generated in the response.
+       * </pre>
+       *
+       * <code>optional int32 output_token_count = 6;</code>
+       * @return Whether the outputTokenCount field is set.
+       */
+      boolean hasOutputTokenCount();
+      /**
+       * <pre>
+       * Number of output tokens generated in the response.
+       * </pre>
+       *
+       * <code>optional int32 output_token_count = 6;</code>
+       * @return The outputTokenCount.
+       */
+      int getOutputTokenCount();
+
+      /**
+       * <pre>
+       *  The number of tokens successfully read from the cache.
+       * </pre>
+       *
+       * <code>optional int32 cache_read_token_count = 7;</code>
+       * @return Whether the cacheReadTokenCount field is set.
+       */
+      boolean hasCacheReadTokenCount();
+      /**
+       * <pre>
+       *  The number of tokens successfully read from the cache.
+       * </pre>
+       *
+       * <code>optional int32 cache_read_token_count = 7;</code>
+       * @return The cacheReadTokenCount.
+       */
+      int getCacheReadTokenCount();
+
+      /**
+       * <pre>
+       * Model Information
+       * The actual model ID that generated the response. This may be different
+       * from the model ID requested by the user (e.g., if the user requested a
+       * specific version of a model).
+       * </pre>
+       *
+       * <code>optional string actual_model_id = 8;</code>
+       * @return Whether the actualModelId field is set.
+       */
+      boolean hasActualModelId();
+      /**
+       * <pre>
+       * Model Information
+       * The actual model ID that generated the response. This may be different
+       * from the model ID requested by the user (e.g., if the user requested a
+       * specific version of a model).
+       * </pre>
+       *
+       * <code>optional string actual_model_id = 8;</code>
+       * @return The actualModelId.
+       */
+      java.lang.String getActualModelId();
+      /**
+       * <pre>
+       * Model Information
+       * The actual model ID that generated the response. This may be different
+       * from the model ID requested by the user (e.g., if the user requested a
+       * specific version of a model).
+       * </pre>
+       *
+       * <code>optional string actual_model_id = 8;</code>
+       * @return The bytes for actualModelId.
+       */
+      com.google.protobuf.ByteString
+          getActualModelIdBytes();
+
+      /**
+       * <code>optional .android_studio.GeminiTelemetryEvent.ServerEvent.ResponseEvent.FinishReason finish_reason = 9;</code>
+       * @return Whether the finishReason field is set.
+       */
+      boolean hasFinishReason();
+      /**
+       * <code>optional .android_studio.GeminiTelemetryEvent.ServerEvent.ResponseEvent.FinishReason finish_reason = 9;</code>
+       * @return The finishReason.
+       */
+      com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.ServerEvent.ResponseEvent.FinishReason getFinishReason();
+
+      /**
+       * <code>optional .android_studio.GeminiTelemetryEvent.ServerEvent.ResponseEvent.ModelApiStatus status = 10;</code>
+       * @return Whether the status field is set.
+       */
+      boolean hasStatus();
+      /**
+       * <code>optional .android_studio.GeminiTelemetryEvent.ServerEvent.ResponseEvent.ModelApiStatus status = 10;</code>
+       * @return The status.
+       */
+      com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.ServerEvent.ResponseEvent.ModelApiStatus getStatus();
+    }
+    /**
+     * <pre>
+     * Captures metrics for a Response in a step.
+     * </pre>
+     *
+     * Protobuf type {@code android_studio.GeminiTelemetryEvent.ServerEvent.ResponseEvent}
+     */
+    public static final class ResponseEvent extends
+        com.google.protobuf.GeneratedMessageV3 implements
+        // @@protoc_insertion_point(message_implements:android_studio.GeminiTelemetryEvent.ServerEvent.ResponseEvent)
+        ResponseEventOrBuilder {
+    private static final long serialVersionUID = 0L;
+      // Use ResponseEvent.newBuilder() to construct.
+      private ResponseEvent(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+        super(builder);
+      }
+      private ResponseEvent() {
+        actualModelId_ = "";
+        finishReason_ = 0;
+        status_ = 0;
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new ResponseEvent();
+      }
+
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_GeminiTelemetryEvent_ServerEvent_ResponseEvent_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_GeminiTelemetryEvent_ServerEvent_ResponseEvent_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.ServerEvent.ResponseEvent.class, com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.ServerEvent.ResponseEvent.Builder.class);
+      }
+
+      /**
+       * <pre>
+       * List from https://ai.google.dev/api/generate-content#FinishReason
+       * Represents the semantic reason of why the model stopped generating
+       * content.
+       * </pre>
+       *
+       * Protobuf enum {@code android_studio.GeminiTelemetryEvent.ServerEvent.ResponseEvent.FinishReason}
+       */
+      public enum FinishReason
+          implements com.google.protobuf.ProtocolMessageEnum {
+        /**
+         * <code>FINISH_REASON_UNSPECIFIED = 0;</code>
+         */
+        FINISH_REASON_UNSPECIFIED(0),
+        /**
+         * <code>STOP = 1;</code>
+         */
+        STOP(1),
+        /**
+         * <code>MAX_TOKENS = 2;</code>
+         */
+        MAX_TOKENS(2),
+        /**
+         * <code>SAFETY = 3;</code>
+         */
+        SAFETY(3),
+        /**
+         * <code>RECITATION = 4;</code>
+         */
+        RECITATION(4),
+        /**
+         * <code>MISSING_THOUGHT_SIGNATURE = 5;</code>
+         */
+        MISSING_THOUGHT_SIGNATURE(5),
+        /**
+         * <code>LANGUAGE = 6;</code>
+         */
+        LANGUAGE(6),
+        /**
+         * <code>OTHER = 7;</code>
+         */
+        OTHER(7),
+        /**
+         * <code>BLOCKLIST = 8;</code>
+         */
+        BLOCKLIST(8),
+        /**
+         * <code>PROHIBITED_CONTENT = 9;</code>
+         */
+        PROHIBITED_CONTENT(9),
+        /**
+         * <code>SPII = 10;</code>
+         */
+        SPII(10),
+        /**
+         * <code>MALFORMED_FUNCTION_CALL = 11;</code>
+         */
+        MALFORMED_FUNCTION_CALL(11),
+        /**
+         * <code>IMAGE_SAFETY = 12;</code>
+         */
+        IMAGE_SAFETY(12),
+        /**
+         * <code>IMAGE_PROHIBITED_CONTENT = 13;</code>
+         */
+        IMAGE_PROHIBITED_CONTENT(13),
+        /**
+         * <code>IMAGE_OTHER = 14;</code>
+         */
+        IMAGE_OTHER(14),
+        /**
+         * <code>NO_IMAGE = 15;</code>
+         */
+        NO_IMAGE(15),
+        /**
+         * <code>IMAGE_RECITATION = 16;</code>
+         */
+        IMAGE_RECITATION(16),
+        /**
+         * <code>UNEXPECTED_TOOL_CALL = 17;</code>
+         */
+        UNEXPECTED_TOOL_CALL(17),
+        /**
+         * <code>TOO_MANY_TOOL_CALLS = 18;</code>
+         */
+        TOO_MANY_TOOL_CALLS(18),
+        /**
+         * <code>MALFORMED_RESPONSE = 19;</code>
+         */
+        MALFORMED_RESPONSE(19),
+        ;
+
+        /**
+         * <code>FINISH_REASON_UNSPECIFIED = 0;</code>
+         */
+        public static final int FINISH_REASON_UNSPECIFIED_VALUE = 0;
+        /**
+         * <code>STOP = 1;</code>
+         */
+        public static final int STOP_VALUE = 1;
+        /**
+         * <code>MAX_TOKENS = 2;</code>
+         */
+        public static final int MAX_TOKENS_VALUE = 2;
+        /**
+         * <code>SAFETY = 3;</code>
+         */
+        public static final int SAFETY_VALUE = 3;
+        /**
+         * <code>RECITATION = 4;</code>
+         */
+        public static final int RECITATION_VALUE = 4;
+        /**
+         * <code>MISSING_THOUGHT_SIGNATURE = 5;</code>
+         */
+        public static final int MISSING_THOUGHT_SIGNATURE_VALUE = 5;
+        /**
+         * <code>LANGUAGE = 6;</code>
+         */
+        public static final int LANGUAGE_VALUE = 6;
+        /**
+         * <code>OTHER = 7;</code>
+         */
+        public static final int OTHER_VALUE = 7;
+        /**
+         * <code>BLOCKLIST = 8;</code>
+         */
+        public static final int BLOCKLIST_VALUE = 8;
+        /**
+         * <code>PROHIBITED_CONTENT = 9;</code>
+         */
+        public static final int PROHIBITED_CONTENT_VALUE = 9;
+        /**
+         * <code>SPII = 10;</code>
+         */
+        public static final int SPII_VALUE = 10;
+        /**
+         * <code>MALFORMED_FUNCTION_CALL = 11;</code>
+         */
+        public static final int MALFORMED_FUNCTION_CALL_VALUE = 11;
+        /**
+         * <code>IMAGE_SAFETY = 12;</code>
+         */
+        public static final int IMAGE_SAFETY_VALUE = 12;
+        /**
+         * <code>IMAGE_PROHIBITED_CONTENT = 13;</code>
+         */
+        public static final int IMAGE_PROHIBITED_CONTENT_VALUE = 13;
+        /**
+         * <code>IMAGE_OTHER = 14;</code>
+         */
+        public static final int IMAGE_OTHER_VALUE = 14;
+        /**
+         * <code>NO_IMAGE = 15;</code>
+         */
+        public static final int NO_IMAGE_VALUE = 15;
+        /**
+         * <code>IMAGE_RECITATION = 16;</code>
+         */
+        public static final int IMAGE_RECITATION_VALUE = 16;
+        /**
+         * <code>UNEXPECTED_TOOL_CALL = 17;</code>
+         */
+        public static final int UNEXPECTED_TOOL_CALL_VALUE = 17;
+        /**
+         * <code>TOO_MANY_TOOL_CALLS = 18;</code>
+         */
+        public static final int TOO_MANY_TOOL_CALLS_VALUE = 18;
+        /**
+         * <code>MALFORMED_RESPONSE = 19;</code>
+         */
+        public static final int MALFORMED_RESPONSE_VALUE = 19;
+
+
+        public final int getNumber() {
+          return value;
+        }
+
+        /**
+         * @param value The numeric wire value of the corresponding enum entry.
+         * @return The enum associated with the given numeric wire value.
+         * @deprecated Use {@link #forNumber(int)} instead.
+         */
+        @java.lang.Deprecated
+        public static FinishReason valueOf(int value) {
+          return forNumber(value);
+        }
+
+        /**
+         * @param value The numeric wire value of the corresponding enum entry.
+         * @return The enum associated with the given numeric wire value.
+         */
+        public static FinishReason forNumber(int value) {
+          switch (value) {
+            case 0: return FINISH_REASON_UNSPECIFIED;
+            case 1: return STOP;
+            case 2: return MAX_TOKENS;
+            case 3: return SAFETY;
+            case 4: return RECITATION;
+            case 5: return MISSING_THOUGHT_SIGNATURE;
+            case 6: return LANGUAGE;
+            case 7: return OTHER;
+            case 8: return BLOCKLIST;
+            case 9: return PROHIBITED_CONTENT;
+            case 10: return SPII;
+            case 11: return MALFORMED_FUNCTION_CALL;
+            case 12: return IMAGE_SAFETY;
+            case 13: return IMAGE_PROHIBITED_CONTENT;
+            case 14: return IMAGE_OTHER;
+            case 15: return NO_IMAGE;
+            case 16: return IMAGE_RECITATION;
+            case 17: return UNEXPECTED_TOOL_CALL;
+            case 18: return TOO_MANY_TOOL_CALLS;
+            case 19: return MALFORMED_RESPONSE;
+            default: return null;
+          }
+        }
+
+        public static com.google.protobuf.Internal.EnumLiteMap<FinishReason>
+            internalGetValueMap() {
+          return internalValueMap;
+        }
+        private static final com.google.protobuf.Internal.EnumLiteMap<
+            FinishReason> internalValueMap =
+              new com.google.protobuf.Internal.EnumLiteMap<FinishReason>() {
+                public FinishReason findValueByNumber(int number) {
+                  return FinishReason.forNumber(number);
+                }
+              };
+
+        public final com.google.protobuf.Descriptors.EnumValueDescriptor
+            getValueDescriptor() {
+          return getDescriptor().getValues().get(ordinal());
+        }
+        public final com.google.protobuf.Descriptors.EnumDescriptor
+            getDescriptorForType() {
+          return getDescriptor();
+        }
+        public static final com.google.protobuf.Descriptors.EnumDescriptor
+            getDescriptor() {
+          return com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.ServerEvent.ResponseEvent.getDescriptor().getEnumTypes().get(0);
+        }
+
+        private static final FinishReason[] VALUES = values();
+
+        public static FinishReason valueOf(
+            com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+          if (desc.getType() != getDescriptor()) {
+            throw new java.lang.IllegalArgumentException(
+              "EnumValueDescriptor is not for this type.");
+          }
+          return VALUES[desc.getIndex()];
+        }
+
+        private final int value;
+
+        private FinishReason(int value) {
+          this.value = value;
+        }
+
+        // @@protoc_insertion_point(enum_scope:android_studio.GeminiTelemetryEvent.ServerEvent.ResponseEvent.FinishReason)
+      }
+
+      /**
+       * <pre>
+       * Status of the model API call.
+       * </pre>
+       *
+       * Protobuf enum {@code android_studio.GeminiTelemetryEvent.ServerEvent.ResponseEvent.ModelApiStatus}
+       */
+      public enum ModelApiStatus
+          implements com.google.protobuf.ProtocolMessageEnum {
+        /**
+         * <code>MODEL_API_STATUS_UNSPECIFIED = 0;</code>
+         */
+        MODEL_API_STATUS_UNSPECIFIED(0),
+        /**
+         * <code>MODEL_API_STATUS_OK = 1;</code>
+         */
+        MODEL_API_STATUS_OK(1),
+        /**
+         * <code>MODEL_API_STATUS_CANCELLED = 2;</code>
+         */
+        MODEL_API_STATUS_CANCELLED(2),
+        /**
+         * <code>MODEL_API_STATUS_UNKNOWN = 3;</code>
+         */
+        MODEL_API_STATUS_UNKNOWN(3),
+        /**
+         * <code>MODEL_API_STATUS_INVALID_ARGUMENT = 4;</code>
+         */
+        MODEL_API_STATUS_INVALID_ARGUMENT(4),
+        /**
+         * <code>MODEL_API_STATUS_DEADLINE_EXCEEDED = 5;</code>
+         */
+        MODEL_API_STATUS_DEADLINE_EXCEEDED(5),
+        /**
+         * <code>MODEL_API_STATUS_NOT_FOUND = 6;</code>
+         */
+        MODEL_API_STATUS_NOT_FOUND(6),
+        /**
+         * <code>MODEL_API_STATUS_ALREADY_EXISTS = 7;</code>
+         */
+        MODEL_API_STATUS_ALREADY_EXISTS(7),
+        /**
+         * <code>MODEL_API_STATUS_PERMISSION_DENIED = 8;</code>
+         */
+        MODEL_API_STATUS_PERMISSION_DENIED(8),
+        /**
+         * <code>MODEL_API_STATUS_UNAUTHENTICATED = 9;</code>
+         */
+        MODEL_API_STATUS_UNAUTHENTICATED(9),
+        /**
+         * <code>MODEL_API_STATUS_RESOURCE_EXHAUSTED = 10;</code>
+         */
+        MODEL_API_STATUS_RESOURCE_EXHAUSTED(10),
+        /**
+         * <code>MODEL_API_STATUS_CLIENT_SIDE_RATE_LIMIT = 11;</code>
+         */
+        MODEL_API_STATUS_CLIENT_SIDE_RATE_LIMIT(11),
+        /**
+         * <code>MODEL_API_STATUS_FAILED_PRECONDITION = 12;</code>
+         */
+        MODEL_API_STATUS_FAILED_PRECONDITION(12),
+        /**
+         * <code>MODEL_API_STATUS_ABORTED = 13;</code>
+         */
+        MODEL_API_STATUS_ABORTED(13),
+        /**
+         * <code>MODEL_API_STATUS_OUT_OF_RANGE = 14;</code>
+         */
+        MODEL_API_STATUS_OUT_OF_RANGE(14),
+        /**
+         * <code>MODEL_API_STATUS_UNIMPLEMENTED = 15;</code>
+         */
+        MODEL_API_STATUS_UNIMPLEMENTED(15),
+        /**
+         * <code>MODEL_API_STATUS_INTERNAL = 16;</code>
+         */
+        MODEL_API_STATUS_INTERNAL(16),
+        /**
+         * <code>MODEL_API_STATUS_UNAVAILABLE = 17;</code>
+         */
+        MODEL_API_STATUS_UNAVAILABLE(17),
+        /**
+         * <code>MODEL_API_STATUS_DATA_LOSS = 18;</code>
+         */
+        MODEL_API_STATUS_DATA_LOSS(18),
+        /**
+         * <code>MODEL_API_STATUS_MALFORMED_FUNCTION_CALL = 19;</code>
+         */
+        MODEL_API_STATUS_MALFORMED_FUNCTION_CALL(19),
+        ;
+
+        /**
+         * <code>MODEL_API_STATUS_UNSPECIFIED = 0;</code>
+         */
+        public static final int MODEL_API_STATUS_UNSPECIFIED_VALUE = 0;
+        /**
+         * <code>MODEL_API_STATUS_OK = 1;</code>
+         */
+        public static final int MODEL_API_STATUS_OK_VALUE = 1;
+        /**
+         * <code>MODEL_API_STATUS_CANCELLED = 2;</code>
+         */
+        public static final int MODEL_API_STATUS_CANCELLED_VALUE = 2;
+        /**
+         * <code>MODEL_API_STATUS_UNKNOWN = 3;</code>
+         */
+        public static final int MODEL_API_STATUS_UNKNOWN_VALUE = 3;
+        /**
+         * <code>MODEL_API_STATUS_INVALID_ARGUMENT = 4;</code>
+         */
+        public static final int MODEL_API_STATUS_INVALID_ARGUMENT_VALUE = 4;
+        /**
+         * <code>MODEL_API_STATUS_DEADLINE_EXCEEDED = 5;</code>
+         */
+        public static final int MODEL_API_STATUS_DEADLINE_EXCEEDED_VALUE = 5;
+        /**
+         * <code>MODEL_API_STATUS_NOT_FOUND = 6;</code>
+         */
+        public static final int MODEL_API_STATUS_NOT_FOUND_VALUE = 6;
+        /**
+         * <code>MODEL_API_STATUS_ALREADY_EXISTS = 7;</code>
+         */
+        public static final int MODEL_API_STATUS_ALREADY_EXISTS_VALUE = 7;
+        /**
+         * <code>MODEL_API_STATUS_PERMISSION_DENIED = 8;</code>
+         */
+        public static final int MODEL_API_STATUS_PERMISSION_DENIED_VALUE = 8;
+        /**
+         * <code>MODEL_API_STATUS_UNAUTHENTICATED = 9;</code>
+         */
+        public static final int MODEL_API_STATUS_UNAUTHENTICATED_VALUE = 9;
+        /**
+         * <code>MODEL_API_STATUS_RESOURCE_EXHAUSTED = 10;</code>
+         */
+        public static final int MODEL_API_STATUS_RESOURCE_EXHAUSTED_VALUE = 10;
+        /**
+         * <code>MODEL_API_STATUS_CLIENT_SIDE_RATE_LIMIT = 11;</code>
+         */
+        public static final int MODEL_API_STATUS_CLIENT_SIDE_RATE_LIMIT_VALUE = 11;
+        /**
+         * <code>MODEL_API_STATUS_FAILED_PRECONDITION = 12;</code>
+         */
+        public static final int MODEL_API_STATUS_FAILED_PRECONDITION_VALUE = 12;
+        /**
+         * <code>MODEL_API_STATUS_ABORTED = 13;</code>
+         */
+        public static final int MODEL_API_STATUS_ABORTED_VALUE = 13;
+        /**
+         * <code>MODEL_API_STATUS_OUT_OF_RANGE = 14;</code>
+         */
+        public static final int MODEL_API_STATUS_OUT_OF_RANGE_VALUE = 14;
+        /**
+         * <code>MODEL_API_STATUS_UNIMPLEMENTED = 15;</code>
+         */
+        public static final int MODEL_API_STATUS_UNIMPLEMENTED_VALUE = 15;
+        /**
+         * <code>MODEL_API_STATUS_INTERNAL = 16;</code>
+         */
+        public static final int MODEL_API_STATUS_INTERNAL_VALUE = 16;
+        /**
+         * <code>MODEL_API_STATUS_UNAVAILABLE = 17;</code>
+         */
+        public static final int MODEL_API_STATUS_UNAVAILABLE_VALUE = 17;
+        /**
+         * <code>MODEL_API_STATUS_DATA_LOSS = 18;</code>
+         */
+        public static final int MODEL_API_STATUS_DATA_LOSS_VALUE = 18;
+        /**
+         * <code>MODEL_API_STATUS_MALFORMED_FUNCTION_CALL = 19;</code>
+         */
+        public static final int MODEL_API_STATUS_MALFORMED_FUNCTION_CALL_VALUE = 19;
+
+
+        public final int getNumber() {
+          return value;
+        }
+
+        /**
+         * @param value The numeric wire value of the corresponding enum entry.
+         * @return The enum associated with the given numeric wire value.
+         * @deprecated Use {@link #forNumber(int)} instead.
+         */
+        @java.lang.Deprecated
+        public static ModelApiStatus valueOf(int value) {
+          return forNumber(value);
+        }
+
+        /**
+         * @param value The numeric wire value of the corresponding enum entry.
+         * @return The enum associated with the given numeric wire value.
+         */
+        public static ModelApiStatus forNumber(int value) {
+          switch (value) {
+            case 0: return MODEL_API_STATUS_UNSPECIFIED;
+            case 1: return MODEL_API_STATUS_OK;
+            case 2: return MODEL_API_STATUS_CANCELLED;
+            case 3: return MODEL_API_STATUS_UNKNOWN;
+            case 4: return MODEL_API_STATUS_INVALID_ARGUMENT;
+            case 5: return MODEL_API_STATUS_DEADLINE_EXCEEDED;
+            case 6: return MODEL_API_STATUS_NOT_FOUND;
+            case 7: return MODEL_API_STATUS_ALREADY_EXISTS;
+            case 8: return MODEL_API_STATUS_PERMISSION_DENIED;
+            case 9: return MODEL_API_STATUS_UNAUTHENTICATED;
+            case 10: return MODEL_API_STATUS_RESOURCE_EXHAUSTED;
+            case 11: return MODEL_API_STATUS_CLIENT_SIDE_RATE_LIMIT;
+            case 12: return MODEL_API_STATUS_FAILED_PRECONDITION;
+            case 13: return MODEL_API_STATUS_ABORTED;
+            case 14: return MODEL_API_STATUS_OUT_OF_RANGE;
+            case 15: return MODEL_API_STATUS_UNIMPLEMENTED;
+            case 16: return MODEL_API_STATUS_INTERNAL;
+            case 17: return MODEL_API_STATUS_UNAVAILABLE;
+            case 18: return MODEL_API_STATUS_DATA_LOSS;
+            case 19: return MODEL_API_STATUS_MALFORMED_FUNCTION_CALL;
+            default: return null;
+          }
+        }
+
+        public static com.google.protobuf.Internal.EnumLiteMap<ModelApiStatus>
+            internalGetValueMap() {
+          return internalValueMap;
+        }
+        private static final com.google.protobuf.Internal.EnumLiteMap<
+            ModelApiStatus> internalValueMap =
+              new com.google.protobuf.Internal.EnumLiteMap<ModelApiStatus>() {
+                public ModelApiStatus findValueByNumber(int number) {
+                  return ModelApiStatus.forNumber(number);
+                }
+              };
+
+        public final com.google.protobuf.Descriptors.EnumValueDescriptor
+            getValueDescriptor() {
+          return getDescriptor().getValues().get(ordinal());
+        }
+        public final com.google.protobuf.Descriptors.EnumDescriptor
+            getDescriptorForType() {
+          return getDescriptor();
+        }
+        public static final com.google.protobuf.Descriptors.EnumDescriptor
+            getDescriptor() {
+          return com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.ServerEvent.ResponseEvent.getDescriptor().getEnumTypes().get(1);
+        }
+
+        private static final ModelApiStatus[] VALUES = values();
+
+        public static ModelApiStatus valueOf(
+            com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+          if (desc.getType() != getDescriptor()) {
+            throw new java.lang.IllegalArgumentException(
+              "EnumValueDescriptor is not for this type.");
+          }
+          return VALUES[desc.getIndex()];
+        }
+
+        private final int value;
+
+        private ModelApiStatus(int value) {
+          this.value = value;
+        }
+
+        // @@protoc_insertion_point(enum_scope:android_studio.GeminiTelemetryEvent.ServerEvent.ResponseEvent.ModelApiStatus)
+      }
+
+      private int bitField0_;
+      public static final int HTTP_STATUS_CODE_FIELD_NUMBER = 1;
+      private int httpStatusCode_ = 0;
+      /**
+       * <pre>
+       * Network &amp; Lifecycle
+       * HTTP status code of the response.
+       * </pre>
+       *
+       * <code>optional int32 http_status_code = 1;</code>
+       * @return Whether the httpStatusCode field is set.
+       */
+      @java.lang.Override
+      public boolean hasHttpStatusCode() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <pre>
+       * Network &amp; Lifecycle
+       * HTTP status code of the response.
+       * </pre>
+       *
+       * <code>optional int32 http_status_code = 1;</code>
+       * @return The httpStatusCode.
+       */
+      @java.lang.Override
+      public int getHttpStatusCode() {
+        return httpStatusCode_;
+      }
+
+      public static final int LATENCY_MS_FIELD_NUMBER = 2;
+      private long latencyMs_ = 0L;
+      /**
+       * <pre>
+       * Latency from the start of the request to the moment it finishes
+       * receiving the very last streamed chunk of the response.
+       * </pre>
+       *
+       * <code>optional int64 latency_ms = 2;</code>
+       * @return Whether the latencyMs field is set.
+       */
+      @java.lang.Override
+      public boolean hasLatencyMs() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <pre>
+       * Latency from the start of the request to the moment it finishes
+       * receiving the very last streamed chunk of the response.
+       * </pre>
+       *
+       * <code>optional int64 latency_ms = 2;</code>
+       * @return The latencyMs.
+       */
+      @java.lang.Override
+      public long getLatencyMs() {
+        return latencyMs_;
+      }
+
+      public static final int TTFC_MS_FIELD_NUMBER = 3;
+      private long ttfcMs_ = 0L;
+      /**
+       * <pre>
+       * Latency from the start of the request to reading the first streamed
+       * chunk of the response.
+       * </pre>
+       *
+       * <code>optional int64 ttfc_ms = 3;</code>
+       * @return Whether the ttfcMs field is set.
+       */
+      @java.lang.Override
+      public boolean hasTtfcMs() {
+        return ((bitField0_ & 0x00000004) != 0);
+      }
+      /**
+       * <pre>
+       * Latency from the start of the request to reading the first streamed
+       * chunk of the response.
+       * </pre>
+       *
+       * <code>optional int64 ttfc_ms = 3;</code>
+       * @return The ttfcMs.
+       */
+      @java.lang.Override
+      public long getTtfcMs() {
+        return ttfcMs_;
+      }
+
+      public static final int RESPONSE_SIZE_BYTES_FIELD_NUMBER = 4;
+      private long responseSizeBytes_ = 0L;
+      /**
+       * <pre>
+       * Size of the response in bytes.
+       * </pre>
+       *
+       * <code>optional int64 response_size_bytes = 4;</code>
+       * @return Whether the responseSizeBytes field is set.
+       */
+      @java.lang.Override
+      public boolean hasResponseSizeBytes() {
+        return ((bitField0_ & 0x00000008) != 0);
+      }
+      /**
+       * <pre>
+       * Size of the response in bytes.
+       * </pre>
+       *
+       * <code>optional int64 response_size_bytes = 4;</code>
+       * @return The responseSizeBytes.
+       */
+      @java.lang.Override
+      public long getResponseSizeBytes() {
+        return responseSizeBytes_;
+      }
+
+      public static final int INPUT_TOKEN_COUNT_FIELD_NUMBER = 5;
+      private int inputTokenCount_ = 0;
+      /**
+       * <pre>
+       * Token Usage
+       * The number of tokens in the prompt.
+       * </pre>
+       *
+       * <code>optional int32 input_token_count = 5;</code>
+       * @return Whether the inputTokenCount field is set.
+       */
+      @java.lang.Override
+      public boolean hasInputTokenCount() {
+        return ((bitField0_ & 0x00000010) != 0);
+      }
+      /**
+       * <pre>
+       * Token Usage
+       * The number of tokens in the prompt.
+       * </pre>
+       *
+       * <code>optional int32 input_token_count = 5;</code>
+       * @return The inputTokenCount.
+       */
+      @java.lang.Override
+      public int getInputTokenCount() {
+        return inputTokenCount_;
+      }
+
+      public static final int OUTPUT_TOKEN_COUNT_FIELD_NUMBER = 6;
+      private int outputTokenCount_ = 0;
+      /**
+       * <pre>
+       * Number of output tokens generated in the response.
+       * </pre>
+       *
+       * <code>optional int32 output_token_count = 6;</code>
+       * @return Whether the outputTokenCount field is set.
+       */
+      @java.lang.Override
+      public boolean hasOutputTokenCount() {
+        return ((bitField0_ & 0x00000020) != 0);
+      }
+      /**
+       * <pre>
+       * Number of output tokens generated in the response.
+       * </pre>
+       *
+       * <code>optional int32 output_token_count = 6;</code>
+       * @return The outputTokenCount.
+       */
+      @java.lang.Override
+      public int getOutputTokenCount() {
+        return outputTokenCount_;
+      }
+
+      public static final int CACHE_READ_TOKEN_COUNT_FIELD_NUMBER = 7;
+      private int cacheReadTokenCount_ = 0;
+      /**
+       * <pre>
+       *  The number of tokens successfully read from the cache.
+       * </pre>
+       *
+       * <code>optional int32 cache_read_token_count = 7;</code>
+       * @return Whether the cacheReadTokenCount field is set.
+       */
+      @java.lang.Override
+      public boolean hasCacheReadTokenCount() {
+        return ((bitField0_ & 0x00000040) != 0);
+      }
+      /**
+       * <pre>
+       *  The number of tokens successfully read from the cache.
+       * </pre>
+       *
+       * <code>optional int32 cache_read_token_count = 7;</code>
+       * @return The cacheReadTokenCount.
+       */
+      @java.lang.Override
+      public int getCacheReadTokenCount() {
+        return cacheReadTokenCount_;
+      }
+
+      public static final int ACTUAL_MODEL_ID_FIELD_NUMBER = 8;
+      @SuppressWarnings("serial")
+      private volatile java.lang.Object actualModelId_ = "";
+      /**
+       * <pre>
+       * Model Information
+       * The actual model ID that generated the response. This may be different
+       * from the model ID requested by the user (e.g., if the user requested a
+       * specific version of a model).
+       * </pre>
+       *
+       * <code>optional string actual_model_id = 8;</code>
+       * @return Whether the actualModelId field is set.
+       */
+      @java.lang.Override
+      public boolean hasActualModelId() {
+        return ((bitField0_ & 0x00000080) != 0);
+      }
+      /**
+       * <pre>
+       * Model Information
+       * The actual model ID that generated the response. This may be different
+       * from the model ID requested by the user (e.g., if the user requested a
+       * specific version of a model).
+       * </pre>
+       *
+       * <code>optional string actual_model_id = 8;</code>
+       * @return The actualModelId.
+       */
+      @java.lang.Override
+      public java.lang.String getActualModelId() {
+        java.lang.Object ref = actualModelId_;
+        if (ref instanceof java.lang.String) {
+          return (java.lang.String) ref;
+        } else {
+          com.google.protobuf.ByteString bs = 
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            actualModelId_ = s;
+          }
+          return s;
+        }
+      }
+      /**
+       * <pre>
+       * Model Information
+       * The actual model ID that generated the response. This may be different
+       * from the model ID requested by the user (e.g., if the user requested a
+       * specific version of a model).
+       * </pre>
+       *
+       * <code>optional string actual_model_id = 8;</code>
+       * @return The bytes for actualModelId.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getActualModelIdBytes() {
+        java.lang.Object ref = actualModelId_;
+        if (ref instanceof java.lang.String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          actualModelId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+
+      public static final int FINISH_REASON_FIELD_NUMBER = 9;
+      private int finishReason_ = 0;
+      /**
+       * <code>optional .android_studio.GeminiTelemetryEvent.ServerEvent.ResponseEvent.FinishReason finish_reason = 9;</code>
+       * @return Whether the finishReason field is set.
+       */
+      @java.lang.Override public boolean hasFinishReason() {
+        return ((bitField0_ & 0x00000100) != 0);
+      }
+      /**
+       * <code>optional .android_studio.GeminiTelemetryEvent.ServerEvent.ResponseEvent.FinishReason finish_reason = 9;</code>
+       * @return The finishReason.
+       */
+      @java.lang.Override public com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.ServerEvent.ResponseEvent.FinishReason getFinishReason() {
+        com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.ServerEvent.ResponseEvent.FinishReason result = com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.ServerEvent.ResponseEvent.FinishReason.forNumber(finishReason_);
+        return result == null ? com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.ServerEvent.ResponseEvent.FinishReason.FINISH_REASON_UNSPECIFIED : result;
+      }
+
+      public static final int STATUS_FIELD_NUMBER = 10;
+      private int status_ = 0;
+      /**
+       * <code>optional .android_studio.GeminiTelemetryEvent.ServerEvent.ResponseEvent.ModelApiStatus status = 10;</code>
+       * @return Whether the status field is set.
+       */
+      @java.lang.Override public boolean hasStatus() {
+        return ((bitField0_ & 0x00000200) != 0);
+      }
+      /**
+       * <code>optional .android_studio.GeminiTelemetryEvent.ServerEvent.ResponseEvent.ModelApiStatus status = 10;</code>
+       * @return The status.
+       */
+      @java.lang.Override public com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.ServerEvent.ResponseEvent.ModelApiStatus getStatus() {
+        com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.ServerEvent.ResponseEvent.ModelApiStatus result = com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.ServerEvent.ResponseEvent.ModelApiStatus.forNumber(status_);
+        return result == null ? com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.ServerEvent.ResponseEvent.ModelApiStatus.MODEL_API_STATUS_UNSPECIFIED : result;
+      }
+
+      private byte memoizedIsInitialized = -1;
+      @java.lang.Override
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      @java.lang.Override
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        if (((bitField0_ & 0x00000001) != 0)) {
+          output.writeInt32(1, httpStatusCode_);
+        }
+        if (((bitField0_ & 0x00000002) != 0)) {
+          output.writeInt64(2, latencyMs_);
+        }
+        if (((bitField0_ & 0x00000004) != 0)) {
+          output.writeInt64(3, ttfcMs_);
+        }
+        if (((bitField0_ & 0x00000008) != 0)) {
+          output.writeInt64(4, responseSizeBytes_);
+        }
+        if (((bitField0_ & 0x00000010) != 0)) {
+          output.writeInt32(5, inputTokenCount_);
+        }
+        if (((bitField0_ & 0x00000020) != 0)) {
+          output.writeInt32(6, outputTokenCount_);
+        }
+        if (((bitField0_ & 0x00000040) != 0)) {
+          output.writeInt32(7, cacheReadTokenCount_);
+        }
+        if (((bitField0_ & 0x00000080) != 0)) {
+          com.google.protobuf.GeneratedMessageV3.writeString(output, 8, actualModelId_);
+        }
+        if (((bitField0_ & 0x00000100) != 0)) {
+          output.writeEnum(9, finishReason_);
+        }
+        if (((bitField0_ & 0x00000200) != 0)) {
+          output.writeEnum(10, status_);
+        }
+        getUnknownFields().writeTo(output);
+      }
+
+      @java.lang.Override
+      public int getSerializedSize() {
+        int size = memoizedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        if (((bitField0_ & 0x00000001) != 0)) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeInt32Size(1, httpStatusCode_);
+        }
+        if (((bitField0_ & 0x00000002) != 0)) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeInt64Size(2, latencyMs_);
+        }
+        if (((bitField0_ & 0x00000004) != 0)) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeInt64Size(3, ttfcMs_);
+        }
+        if (((bitField0_ & 0x00000008) != 0)) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeInt64Size(4, responseSizeBytes_);
+        }
+        if (((bitField0_ & 0x00000010) != 0)) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeInt32Size(5, inputTokenCount_);
+        }
+        if (((bitField0_ & 0x00000020) != 0)) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeInt32Size(6, outputTokenCount_);
+        }
+        if (((bitField0_ & 0x00000040) != 0)) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeInt32Size(7, cacheReadTokenCount_);
+        }
+        if (((bitField0_ & 0x00000080) != 0)) {
+          size += com.google.protobuf.GeneratedMessageV3.computeStringSize(8, actualModelId_);
+        }
+        if (((bitField0_ & 0x00000100) != 0)) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeEnumSize(9, finishReason_);
+        }
+        if (((bitField0_ & 0x00000200) != 0)) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeEnumSize(10, status_);
+        }
+        size += getUnknownFields().getSerializedSize();
+        memoizedSize = size;
+        return size;
+      }
+
+      @java.lang.Override
+      public boolean equals(final java.lang.Object obj) {
+        if (obj == this) {
+         return true;
+        }
+        if (!(obj instanceof com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.ServerEvent.ResponseEvent)) {
+          return super.equals(obj);
+        }
+        com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.ServerEvent.ResponseEvent other = (com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.ServerEvent.ResponseEvent) obj;
+
+        if (hasHttpStatusCode() != other.hasHttpStatusCode()) return false;
+        if (hasHttpStatusCode()) {
+          if (getHttpStatusCode()
+              != other.getHttpStatusCode()) return false;
+        }
+        if (hasLatencyMs() != other.hasLatencyMs()) return false;
+        if (hasLatencyMs()) {
+          if (getLatencyMs()
+              != other.getLatencyMs()) return false;
+        }
+        if (hasTtfcMs() != other.hasTtfcMs()) return false;
+        if (hasTtfcMs()) {
+          if (getTtfcMs()
+              != other.getTtfcMs()) return false;
+        }
+        if (hasResponseSizeBytes() != other.hasResponseSizeBytes()) return false;
+        if (hasResponseSizeBytes()) {
+          if (getResponseSizeBytes()
+              != other.getResponseSizeBytes()) return false;
+        }
+        if (hasInputTokenCount() != other.hasInputTokenCount()) return false;
+        if (hasInputTokenCount()) {
+          if (getInputTokenCount()
+              != other.getInputTokenCount()) return false;
+        }
+        if (hasOutputTokenCount() != other.hasOutputTokenCount()) return false;
+        if (hasOutputTokenCount()) {
+          if (getOutputTokenCount()
+              != other.getOutputTokenCount()) return false;
+        }
+        if (hasCacheReadTokenCount() != other.hasCacheReadTokenCount()) return false;
+        if (hasCacheReadTokenCount()) {
+          if (getCacheReadTokenCount()
+              != other.getCacheReadTokenCount()) return false;
+        }
+        if (hasActualModelId() != other.hasActualModelId()) return false;
+        if (hasActualModelId()) {
+          if (!getActualModelId()
+              .equals(other.getActualModelId())) return false;
+        }
+        if (hasFinishReason() != other.hasFinishReason()) return false;
+        if (hasFinishReason()) {
+          if (finishReason_ != other.finishReason_) return false;
+        }
+        if (hasStatus() != other.hasStatus()) return false;
+        if (hasStatus()) {
+          if (status_ != other.status_) return false;
+        }
+        if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+        return true;
+      }
+
+      @java.lang.Override
+      public int hashCode() {
+        if (memoizedHashCode != 0) {
+          return memoizedHashCode;
+        }
+        int hash = 41;
+        hash = (19 * hash) + getDescriptor().hashCode();
+        if (hasHttpStatusCode()) {
+          hash = (37 * hash) + HTTP_STATUS_CODE_FIELD_NUMBER;
+          hash = (53 * hash) + getHttpStatusCode();
+        }
+        if (hasLatencyMs()) {
+          hash = (37 * hash) + LATENCY_MS_FIELD_NUMBER;
+          hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+              getLatencyMs());
+        }
+        if (hasTtfcMs()) {
+          hash = (37 * hash) + TTFC_MS_FIELD_NUMBER;
+          hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+              getTtfcMs());
+        }
+        if (hasResponseSizeBytes()) {
+          hash = (37 * hash) + RESPONSE_SIZE_BYTES_FIELD_NUMBER;
+          hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+              getResponseSizeBytes());
+        }
+        if (hasInputTokenCount()) {
+          hash = (37 * hash) + INPUT_TOKEN_COUNT_FIELD_NUMBER;
+          hash = (53 * hash) + getInputTokenCount();
+        }
+        if (hasOutputTokenCount()) {
+          hash = (37 * hash) + OUTPUT_TOKEN_COUNT_FIELD_NUMBER;
+          hash = (53 * hash) + getOutputTokenCount();
+        }
+        if (hasCacheReadTokenCount()) {
+          hash = (37 * hash) + CACHE_READ_TOKEN_COUNT_FIELD_NUMBER;
+          hash = (53 * hash) + getCacheReadTokenCount();
+        }
+        if (hasActualModelId()) {
+          hash = (37 * hash) + ACTUAL_MODEL_ID_FIELD_NUMBER;
+          hash = (53 * hash) + getActualModelId().hashCode();
+        }
+        if (hasFinishReason()) {
+          hash = (37 * hash) + FINISH_REASON_FIELD_NUMBER;
+          hash = (53 * hash) + finishReason_;
+        }
+        if (hasStatus()) {
+          hash = (37 * hash) + STATUS_FIELD_NUMBER;
+          hash = (53 * hash) + status_;
+        }
+        hash = (29 * hash) + getUnknownFields().hashCode();
+        memoizedHashCode = hash;
+        return hash;
+      }
+
+      public static com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.ServerEvent.ResponseEvent parseFrom(
+          java.nio.ByteBuffer data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.ServerEvent.ResponseEvent parseFrom(
+          java.nio.ByteBuffer data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.ServerEvent.ResponseEvent parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.ServerEvent.ResponseEvent parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.ServerEvent.ResponseEvent parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.ServerEvent.ResponseEvent parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.ServerEvent.ResponseEvent parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.ServerEvent.ResponseEvent parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.ServerEvent.ResponseEvent parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input);
+      }
+      public static com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.ServerEvent.ResponseEvent parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.ServerEvent.ResponseEvent parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.ServerEvent.ResponseEvent parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      @java.lang.Override
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder() {
+        return DEFAULT_INSTANCE.toBuilder();
+      }
+      public static Builder newBuilder(com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.ServerEvent.ResponseEvent prototype) {
+        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+      }
+      @java.lang.Override
+      public Builder toBuilder() {
+        return this == DEFAULT_INSTANCE
+            ? new Builder() : new Builder().mergeFrom(this);
+      }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * <pre>
+       * Captures metrics for a Response in a step.
+       * </pre>
+       *
+       * Protobuf type {@code android_studio.GeminiTelemetryEvent.ServerEvent.ResponseEvent}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:android_studio.GeminiTelemetryEvent.ServerEvent.ResponseEvent)
+          com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.ServerEvent.ResponseEventOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_GeminiTelemetryEvent_ServerEvent_ResponseEvent_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_GeminiTelemetryEvent_ServerEvent_ResponseEvent_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.ServerEvent.ResponseEvent.class, com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.ServerEvent.ResponseEvent.Builder.class);
+        }
+
+        // Construct using com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.ServerEvent.ResponseEvent.newBuilder()
+        private Builder() {
+
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          super(parent);
+
+        }
+        @java.lang.Override
+        public Builder clear() {
+          super.clear();
+          bitField0_ = 0;
+          httpStatusCode_ = 0;
+          latencyMs_ = 0L;
+          ttfcMs_ = 0L;
+          responseSizeBytes_ = 0L;
+          inputTokenCount_ = 0;
+          outputTokenCount_ = 0;
+          cacheReadTokenCount_ = 0;
+          actualModelId_ = "";
+          finishReason_ = 0;
+          status_ = 0;
+          return this;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_GeminiTelemetryEvent_ServerEvent_ResponseEvent_descriptor;
+        }
+
+        @java.lang.Override
+        public com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.ServerEvent.ResponseEvent getDefaultInstanceForType() {
+          return com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.ServerEvent.ResponseEvent.getDefaultInstance();
+        }
+
+        @java.lang.Override
+        public com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.ServerEvent.ResponseEvent build() {
+          com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.ServerEvent.ResponseEvent result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        @java.lang.Override
+        public com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.ServerEvent.ResponseEvent buildPartial() {
+          com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.ServerEvent.ResponseEvent result = new com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.ServerEvent.ResponseEvent(this);
+          if (bitField0_ != 0) { buildPartial0(result); }
+          onBuilt();
+          return result;
+        }
+
+        private void buildPartial0(com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.ServerEvent.ResponseEvent result) {
+          int from_bitField0_ = bitField0_;
+          int to_bitField0_ = 0;
+          if (((from_bitField0_ & 0x00000001) != 0)) {
+            result.httpStatusCode_ = httpStatusCode_;
+            to_bitField0_ |= 0x00000001;
+          }
+          if (((from_bitField0_ & 0x00000002) != 0)) {
+            result.latencyMs_ = latencyMs_;
+            to_bitField0_ |= 0x00000002;
+          }
+          if (((from_bitField0_ & 0x00000004) != 0)) {
+            result.ttfcMs_ = ttfcMs_;
+            to_bitField0_ |= 0x00000004;
+          }
+          if (((from_bitField0_ & 0x00000008) != 0)) {
+            result.responseSizeBytes_ = responseSizeBytes_;
+            to_bitField0_ |= 0x00000008;
+          }
+          if (((from_bitField0_ & 0x00000010) != 0)) {
+            result.inputTokenCount_ = inputTokenCount_;
+            to_bitField0_ |= 0x00000010;
+          }
+          if (((from_bitField0_ & 0x00000020) != 0)) {
+            result.outputTokenCount_ = outputTokenCount_;
+            to_bitField0_ |= 0x00000020;
+          }
+          if (((from_bitField0_ & 0x00000040) != 0)) {
+            result.cacheReadTokenCount_ = cacheReadTokenCount_;
+            to_bitField0_ |= 0x00000040;
+          }
+          if (((from_bitField0_ & 0x00000080) != 0)) {
+            result.actualModelId_ = actualModelId_;
+            to_bitField0_ |= 0x00000080;
+          }
+          if (((from_bitField0_ & 0x00000100) != 0)) {
+            result.finishReason_ = finishReason_;
+            to_bitField0_ |= 0x00000100;
+          }
+          if (((from_bitField0_ & 0x00000200) != 0)) {
+            result.status_ = status_;
+            to_bitField0_ |= 0x00000200;
+          }
+          result.bitField0_ |= to_bitField0_;
+        }
+
+        @java.lang.Override
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.ServerEvent.ResponseEvent) {
+            return mergeFrom((com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.ServerEvent.ResponseEvent)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.ServerEvent.ResponseEvent other) {
+          if (other == com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.ServerEvent.ResponseEvent.getDefaultInstance()) return this;
+          if (other.hasHttpStatusCode()) {
+            setHttpStatusCode(other.getHttpStatusCode());
+          }
+          if (other.hasLatencyMs()) {
+            setLatencyMs(other.getLatencyMs());
+          }
+          if (other.hasTtfcMs()) {
+            setTtfcMs(other.getTtfcMs());
+          }
+          if (other.hasResponseSizeBytes()) {
+            setResponseSizeBytes(other.getResponseSizeBytes());
+          }
+          if (other.hasInputTokenCount()) {
+            setInputTokenCount(other.getInputTokenCount());
+          }
+          if (other.hasOutputTokenCount()) {
+            setOutputTokenCount(other.getOutputTokenCount());
+          }
+          if (other.hasCacheReadTokenCount()) {
+            setCacheReadTokenCount(other.getCacheReadTokenCount());
+          }
+          if (other.hasActualModelId()) {
+            actualModelId_ = other.actualModelId_;
+            bitField0_ |= 0x00000080;
+            onChanged();
+          }
+          if (other.hasFinishReason()) {
+            setFinishReason(other.getFinishReason());
+          }
+          if (other.hasStatus()) {
+            setStatus(other.getStatus());
+          }
+          this.mergeUnknownFields(other.getUnknownFields());
+          onChanged();
+          return this;
+        }
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        @java.lang.Override
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          if (extensionRegistry == null) {
+            throw new java.lang.NullPointerException();
+          }
+          try {
+            boolean done = false;
+            while (!done) {
+              int tag = input.readTag();
+              switch (tag) {
+                case 0:
+                  done = true;
+                  break;
+                case 8: {
+                  httpStatusCode_ = input.readInt32();
+                  bitField0_ |= 0x00000001;
+                  break;
+                } // case 8
+                case 16: {
+                  latencyMs_ = input.readInt64();
+                  bitField0_ |= 0x00000002;
+                  break;
+                } // case 16
+                case 24: {
+                  ttfcMs_ = input.readInt64();
+                  bitField0_ |= 0x00000004;
+                  break;
+                } // case 24
+                case 32: {
+                  responseSizeBytes_ = input.readInt64();
+                  bitField0_ |= 0x00000008;
+                  break;
+                } // case 32
+                case 40: {
+                  inputTokenCount_ = input.readInt32();
+                  bitField0_ |= 0x00000010;
+                  break;
+                } // case 40
+                case 48: {
+                  outputTokenCount_ = input.readInt32();
+                  bitField0_ |= 0x00000020;
+                  break;
+                } // case 48
+                case 56: {
+                  cacheReadTokenCount_ = input.readInt32();
+                  bitField0_ |= 0x00000040;
+                  break;
+                } // case 56
+                case 66: {
+                  actualModelId_ = input.readBytes();
+                  bitField0_ |= 0x00000080;
+                  break;
+                } // case 66
+                case 72: {
+                  int tmpRaw = input.readEnum();
+                  com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.ServerEvent.ResponseEvent.FinishReason tmpValue =
+                      com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.ServerEvent.ResponseEvent.FinishReason.forNumber(tmpRaw);
+                  if (tmpValue == null) {
+                    mergeUnknownVarintField(9, tmpRaw);
+                  } else {
+                    finishReason_ = tmpRaw;
+                    bitField0_ |= 0x00000100;
+                  }
+                  break;
+                } // case 72
+                case 80: {
+                  int tmpRaw = input.readEnum();
+                  com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.ServerEvent.ResponseEvent.ModelApiStatus tmpValue =
+                      com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.ServerEvent.ResponseEvent.ModelApiStatus.forNumber(tmpRaw);
+                  if (tmpValue == null) {
+                    mergeUnknownVarintField(10, tmpRaw);
+                  } else {
+                    status_ = tmpRaw;
+                    bitField0_ |= 0x00000200;
+                  }
+                  break;
+                } // case 80
+                default: {
+                  if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                    done = true; // was an endgroup tag
+                  }
+                  break;
+                } // default:
+              } // switch (tag)
+            } // while (!done)
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            throw e.unwrapIOException();
+          } finally {
+            onChanged();
+          } // finally
+          return this;
+        }
+        private int bitField0_;
+
+        private int httpStatusCode_ ;
+        /**
+         * <pre>
+         * Network &amp; Lifecycle
+         * HTTP status code of the response.
+         * </pre>
+         *
+         * <code>optional int32 http_status_code = 1;</code>
+         * @return Whether the httpStatusCode field is set.
+         */
+        @java.lang.Override
+        public boolean hasHttpStatusCode() {
+          return ((bitField0_ & 0x00000001) != 0);
+        }
+        /**
+         * <pre>
+         * Network &amp; Lifecycle
+         * HTTP status code of the response.
+         * </pre>
+         *
+         * <code>optional int32 http_status_code = 1;</code>
+         * @return The httpStatusCode.
+         */
+        @java.lang.Override
+        public int getHttpStatusCode() {
+          return httpStatusCode_;
+        }
+        /**
+         * <pre>
+         * Network &amp; Lifecycle
+         * HTTP status code of the response.
+         * </pre>
+         *
+         * <code>optional int32 http_status_code = 1;</code>
+         * @param value The httpStatusCode to set.
+         * @return This builder for chaining.
+         */
+        public Builder setHttpStatusCode(int value) {
+
+          httpStatusCode_ = value;
+          bitField0_ |= 0x00000001;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Network &amp; Lifecycle
+         * HTTP status code of the response.
+         * </pre>
+         *
+         * <code>optional int32 http_status_code = 1;</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearHttpStatusCode() {
+          bitField0_ = (bitField0_ & ~0x00000001);
+          httpStatusCode_ = 0;
+          onChanged();
+          return this;
+        }
+
+        private long latencyMs_ ;
+        /**
+         * <pre>
+         * Latency from the start of the request to the moment it finishes
+         * receiving the very last streamed chunk of the response.
+         * </pre>
+         *
+         * <code>optional int64 latency_ms = 2;</code>
+         * @return Whether the latencyMs field is set.
+         */
+        @java.lang.Override
+        public boolean hasLatencyMs() {
+          return ((bitField0_ & 0x00000002) != 0);
+        }
+        /**
+         * <pre>
+         * Latency from the start of the request to the moment it finishes
+         * receiving the very last streamed chunk of the response.
+         * </pre>
+         *
+         * <code>optional int64 latency_ms = 2;</code>
+         * @return The latencyMs.
+         */
+        @java.lang.Override
+        public long getLatencyMs() {
+          return latencyMs_;
+        }
+        /**
+         * <pre>
+         * Latency from the start of the request to the moment it finishes
+         * receiving the very last streamed chunk of the response.
+         * </pre>
+         *
+         * <code>optional int64 latency_ms = 2;</code>
+         * @param value The latencyMs to set.
+         * @return This builder for chaining.
+         */
+        public Builder setLatencyMs(long value) {
+
+          latencyMs_ = value;
+          bitField0_ |= 0x00000002;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Latency from the start of the request to the moment it finishes
+         * receiving the very last streamed chunk of the response.
+         * </pre>
+         *
+         * <code>optional int64 latency_ms = 2;</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearLatencyMs() {
+          bitField0_ = (bitField0_ & ~0x00000002);
+          latencyMs_ = 0L;
+          onChanged();
+          return this;
+        }
+
+        private long ttfcMs_ ;
+        /**
+         * <pre>
+         * Latency from the start of the request to reading the first streamed
+         * chunk of the response.
+         * </pre>
+         *
+         * <code>optional int64 ttfc_ms = 3;</code>
+         * @return Whether the ttfcMs field is set.
+         */
+        @java.lang.Override
+        public boolean hasTtfcMs() {
+          return ((bitField0_ & 0x00000004) != 0);
+        }
+        /**
+         * <pre>
+         * Latency from the start of the request to reading the first streamed
+         * chunk of the response.
+         * </pre>
+         *
+         * <code>optional int64 ttfc_ms = 3;</code>
+         * @return The ttfcMs.
+         */
+        @java.lang.Override
+        public long getTtfcMs() {
+          return ttfcMs_;
+        }
+        /**
+         * <pre>
+         * Latency from the start of the request to reading the first streamed
+         * chunk of the response.
+         * </pre>
+         *
+         * <code>optional int64 ttfc_ms = 3;</code>
+         * @param value The ttfcMs to set.
+         * @return This builder for chaining.
+         */
+        public Builder setTtfcMs(long value) {
+
+          ttfcMs_ = value;
+          bitField0_ |= 0x00000004;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Latency from the start of the request to reading the first streamed
+         * chunk of the response.
+         * </pre>
+         *
+         * <code>optional int64 ttfc_ms = 3;</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearTtfcMs() {
+          bitField0_ = (bitField0_ & ~0x00000004);
+          ttfcMs_ = 0L;
+          onChanged();
+          return this;
+        }
+
+        private long responseSizeBytes_ ;
+        /**
+         * <pre>
+         * Size of the response in bytes.
+         * </pre>
+         *
+         * <code>optional int64 response_size_bytes = 4;</code>
+         * @return Whether the responseSizeBytes field is set.
+         */
+        @java.lang.Override
+        public boolean hasResponseSizeBytes() {
+          return ((bitField0_ & 0x00000008) != 0);
+        }
+        /**
+         * <pre>
+         * Size of the response in bytes.
+         * </pre>
+         *
+         * <code>optional int64 response_size_bytes = 4;</code>
+         * @return The responseSizeBytes.
+         */
+        @java.lang.Override
+        public long getResponseSizeBytes() {
+          return responseSizeBytes_;
+        }
+        /**
+         * <pre>
+         * Size of the response in bytes.
+         * </pre>
+         *
+         * <code>optional int64 response_size_bytes = 4;</code>
+         * @param value The responseSizeBytes to set.
+         * @return This builder for chaining.
+         */
+        public Builder setResponseSizeBytes(long value) {
+
+          responseSizeBytes_ = value;
+          bitField0_ |= 0x00000008;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Size of the response in bytes.
+         * </pre>
+         *
+         * <code>optional int64 response_size_bytes = 4;</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearResponseSizeBytes() {
+          bitField0_ = (bitField0_ & ~0x00000008);
+          responseSizeBytes_ = 0L;
+          onChanged();
+          return this;
+        }
+
+        private int inputTokenCount_ ;
+        /**
+         * <pre>
+         * Token Usage
+         * The number of tokens in the prompt.
+         * </pre>
+         *
+         * <code>optional int32 input_token_count = 5;</code>
+         * @return Whether the inputTokenCount field is set.
+         */
+        @java.lang.Override
+        public boolean hasInputTokenCount() {
+          return ((bitField0_ & 0x00000010) != 0);
+        }
+        /**
+         * <pre>
+         * Token Usage
+         * The number of tokens in the prompt.
+         * </pre>
+         *
+         * <code>optional int32 input_token_count = 5;</code>
+         * @return The inputTokenCount.
+         */
+        @java.lang.Override
+        public int getInputTokenCount() {
+          return inputTokenCount_;
+        }
+        /**
+         * <pre>
+         * Token Usage
+         * The number of tokens in the prompt.
+         * </pre>
+         *
+         * <code>optional int32 input_token_count = 5;</code>
+         * @param value The inputTokenCount to set.
+         * @return This builder for chaining.
+         */
+        public Builder setInputTokenCount(int value) {
+
+          inputTokenCount_ = value;
+          bitField0_ |= 0x00000010;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Token Usage
+         * The number of tokens in the prompt.
+         * </pre>
+         *
+         * <code>optional int32 input_token_count = 5;</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearInputTokenCount() {
+          bitField0_ = (bitField0_ & ~0x00000010);
+          inputTokenCount_ = 0;
+          onChanged();
+          return this;
+        }
+
+        private int outputTokenCount_ ;
+        /**
+         * <pre>
+         * Number of output tokens generated in the response.
+         * </pre>
+         *
+         * <code>optional int32 output_token_count = 6;</code>
+         * @return Whether the outputTokenCount field is set.
+         */
+        @java.lang.Override
+        public boolean hasOutputTokenCount() {
+          return ((bitField0_ & 0x00000020) != 0);
+        }
+        /**
+         * <pre>
+         * Number of output tokens generated in the response.
+         * </pre>
+         *
+         * <code>optional int32 output_token_count = 6;</code>
+         * @return The outputTokenCount.
+         */
+        @java.lang.Override
+        public int getOutputTokenCount() {
+          return outputTokenCount_;
+        }
+        /**
+         * <pre>
+         * Number of output tokens generated in the response.
+         * </pre>
+         *
+         * <code>optional int32 output_token_count = 6;</code>
+         * @param value The outputTokenCount to set.
+         * @return This builder for chaining.
+         */
+        public Builder setOutputTokenCount(int value) {
+
+          outputTokenCount_ = value;
+          bitField0_ |= 0x00000020;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Number of output tokens generated in the response.
+         * </pre>
+         *
+         * <code>optional int32 output_token_count = 6;</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearOutputTokenCount() {
+          bitField0_ = (bitField0_ & ~0x00000020);
+          outputTokenCount_ = 0;
+          onChanged();
+          return this;
+        }
+
+        private int cacheReadTokenCount_ ;
+        /**
+         * <pre>
+         *  The number of tokens successfully read from the cache.
+         * </pre>
+         *
+         * <code>optional int32 cache_read_token_count = 7;</code>
+         * @return Whether the cacheReadTokenCount field is set.
+         */
+        @java.lang.Override
+        public boolean hasCacheReadTokenCount() {
+          return ((bitField0_ & 0x00000040) != 0);
+        }
+        /**
+         * <pre>
+         *  The number of tokens successfully read from the cache.
+         * </pre>
+         *
+         * <code>optional int32 cache_read_token_count = 7;</code>
+         * @return The cacheReadTokenCount.
+         */
+        @java.lang.Override
+        public int getCacheReadTokenCount() {
+          return cacheReadTokenCount_;
+        }
+        /**
+         * <pre>
+         *  The number of tokens successfully read from the cache.
+         * </pre>
+         *
+         * <code>optional int32 cache_read_token_count = 7;</code>
+         * @param value The cacheReadTokenCount to set.
+         * @return This builder for chaining.
+         */
+        public Builder setCacheReadTokenCount(int value) {
+
+          cacheReadTokenCount_ = value;
+          bitField0_ |= 0x00000040;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         *  The number of tokens successfully read from the cache.
+         * </pre>
+         *
+         * <code>optional int32 cache_read_token_count = 7;</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearCacheReadTokenCount() {
+          bitField0_ = (bitField0_ & ~0x00000040);
+          cacheReadTokenCount_ = 0;
+          onChanged();
+          return this;
+        }
+
+        private java.lang.Object actualModelId_ = "";
+        /**
+         * <pre>
+         * Model Information
+         * The actual model ID that generated the response. This may be different
+         * from the model ID requested by the user (e.g., if the user requested a
+         * specific version of a model).
+         * </pre>
+         *
+         * <code>optional string actual_model_id = 8;</code>
+         * @return Whether the actualModelId field is set.
+         */
+        public boolean hasActualModelId() {
+          return ((bitField0_ & 0x00000080) != 0);
+        }
+        /**
+         * <pre>
+         * Model Information
+         * The actual model ID that generated the response. This may be different
+         * from the model ID requested by the user (e.g., if the user requested a
+         * specific version of a model).
+         * </pre>
+         *
+         * <code>optional string actual_model_id = 8;</code>
+         * @return The actualModelId.
+         */
+        public java.lang.String getActualModelId() {
+          java.lang.Object ref = actualModelId_;
+          if (!(ref instanceof java.lang.String)) {
+            com.google.protobuf.ByteString bs =
+                (com.google.protobuf.ByteString) ref;
+            java.lang.String s = bs.toStringUtf8();
+            if (bs.isValidUtf8()) {
+              actualModelId_ = s;
+            }
+            return s;
+          } else {
+            return (java.lang.String) ref;
+          }
+        }
+        /**
+         * <pre>
+         * Model Information
+         * The actual model ID that generated the response. This may be different
+         * from the model ID requested by the user (e.g., if the user requested a
+         * specific version of a model).
+         * </pre>
+         *
+         * <code>optional string actual_model_id = 8;</code>
+         * @return The bytes for actualModelId.
+         */
+        public com.google.protobuf.ByteString
+            getActualModelIdBytes() {
+          java.lang.Object ref = actualModelId_;
+          if (ref instanceof String) {
+            com.google.protobuf.ByteString b = 
+                com.google.protobuf.ByteString.copyFromUtf8(
+                    (java.lang.String) ref);
+            actualModelId_ = b;
+            return b;
+          } else {
+            return (com.google.protobuf.ByteString) ref;
+          }
+        }
+        /**
+         * <pre>
+         * Model Information
+         * The actual model ID that generated the response. This may be different
+         * from the model ID requested by the user (e.g., if the user requested a
+         * specific version of a model).
+         * </pre>
+         *
+         * <code>optional string actual_model_id = 8;</code>
+         * @param value The actualModelId to set.
+         * @return This builder for chaining.
+         */
+        public Builder setActualModelId(
+            java.lang.String value) {
+          if (value == null) { throw new NullPointerException(); }
+          actualModelId_ = value;
+          bitField0_ |= 0x00000080;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Model Information
+         * The actual model ID that generated the response. This may be different
+         * from the model ID requested by the user (e.g., if the user requested a
+         * specific version of a model).
+         * </pre>
+         *
+         * <code>optional string actual_model_id = 8;</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearActualModelId() {
+          actualModelId_ = getDefaultInstance().getActualModelId();
+          bitField0_ = (bitField0_ & ~0x00000080);
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Model Information
+         * The actual model ID that generated the response. This may be different
+         * from the model ID requested by the user (e.g., if the user requested a
+         * specific version of a model).
+         * </pre>
+         *
+         * <code>optional string actual_model_id = 8;</code>
+         * @param value The bytes for actualModelId to set.
+         * @return This builder for chaining.
+         */
+        public Builder setActualModelIdBytes(
+            com.google.protobuf.ByteString value) {
+          if (value == null) { throw new NullPointerException(); }
+          actualModelId_ = value;
+          bitField0_ |= 0x00000080;
+          onChanged();
+          return this;
+        }
+
+        private int finishReason_ = 0;
+        /**
+         * <code>optional .android_studio.GeminiTelemetryEvent.ServerEvent.ResponseEvent.FinishReason finish_reason = 9;</code>
+         * @return Whether the finishReason field is set.
+         */
+        @java.lang.Override public boolean hasFinishReason() {
+          return ((bitField0_ & 0x00000100) != 0);
+        }
+        /**
+         * <code>optional .android_studio.GeminiTelemetryEvent.ServerEvent.ResponseEvent.FinishReason finish_reason = 9;</code>
+         * @return The finishReason.
+         */
+        @java.lang.Override
+        public com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.ServerEvent.ResponseEvent.FinishReason getFinishReason() {
+          com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.ServerEvent.ResponseEvent.FinishReason result = com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.ServerEvent.ResponseEvent.FinishReason.forNumber(finishReason_);
+          return result == null ? com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.ServerEvent.ResponseEvent.FinishReason.FINISH_REASON_UNSPECIFIED : result;
+        }
+        /**
+         * <code>optional .android_studio.GeminiTelemetryEvent.ServerEvent.ResponseEvent.FinishReason finish_reason = 9;</code>
+         * @param value The finishReason to set.
+         * @return This builder for chaining.
+         */
+        public Builder setFinishReason(com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.ServerEvent.ResponseEvent.FinishReason value) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          bitField0_ |= 0x00000100;
+          finishReason_ = value.getNumber();
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>optional .android_studio.GeminiTelemetryEvent.ServerEvent.ResponseEvent.FinishReason finish_reason = 9;</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearFinishReason() {
+          bitField0_ = (bitField0_ & ~0x00000100);
+          finishReason_ = 0;
+          onChanged();
+          return this;
+        }
+
+        private int status_ = 0;
+        /**
+         * <code>optional .android_studio.GeminiTelemetryEvent.ServerEvent.ResponseEvent.ModelApiStatus status = 10;</code>
+         * @return Whether the status field is set.
+         */
+        @java.lang.Override public boolean hasStatus() {
+          return ((bitField0_ & 0x00000200) != 0);
+        }
+        /**
+         * <code>optional .android_studio.GeminiTelemetryEvent.ServerEvent.ResponseEvent.ModelApiStatus status = 10;</code>
+         * @return The status.
+         */
+        @java.lang.Override
+        public com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.ServerEvent.ResponseEvent.ModelApiStatus getStatus() {
+          com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.ServerEvent.ResponseEvent.ModelApiStatus result = com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.ServerEvent.ResponseEvent.ModelApiStatus.forNumber(status_);
+          return result == null ? com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.ServerEvent.ResponseEvent.ModelApiStatus.MODEL_API_STATUS_UNSPECIFIED : result;
+        }
+        /**
+         * <code>optional .android_studio.GeminiTelemetryEvent.ServerEvent.ResponseEvent.ModelApiStatus status = 10;</code>
+         * @param value The status to set.
+         * @return This builder for chaining.
+         */
+        public Builder setStatus(com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.ServerEvent.ResponseEvent.ModelApiStatus value) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          bitField0_ |= 0x00000200;
+          status_ = value.getNumber();
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>optional .android_studio.GeminiTelemetryEvent.ServerEvent.ResponseEvent.ModelApiStatus status = 10;</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearStatus() {
+          bitField0_ = (bitField0_ & ~0x00000200);
+          status_ = 0;
+          onChanged();
+          return this;
+        }
+        @java.lang.Override
+        public final Builder setUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.setUnknownFields(unknownFields);
+        }
+
+        @java.lang.Override
+        public final Builder mergeUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.mergeUnknownFields(unknownFields);
+        }
+
+
+        // @@protoc_insertion_point(builder_scope:android_studio.GeminiTelemetryEvent.ServerEvent.ResponseEvent)
+      }
+
+      // @@protoc_insertion_point(class_scope:android_studio.GeminiTelemetryEvent.ServerEvent.ResponseEvent)
+      private static final com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.ServerEvent.ResponseEvent DEFAULT_INSTANCE;
+      static {
+        DEFAULT_INSTANCE = new com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.ServerEvent.ResponseEvent();
+      }
+
+      public static com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.ServerEvent.ResponseEvent getDefaultInstance() {
+        return DEFAULT_INSTANCE;
+      }
+
+      @java.lang.Deprecated public static final com.google.protobuf.Parser<ResponseEvent>
+          PARSER = new com.google.protobuf.AbstractParser<ResponseEvent>() {
+        @java.lang.Override
+        public ResponseEvent parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          Builder builder = newBuilder();
+          try {
+            builder.mergeFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            throw e.setUnfinishedMessage(builder.buildPartial());
+          } catch (com.google.protobuf.UninitializedMessageException e) {
+            throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+          } catch (java.io.IOException e) {
+            throw new com.google.protobuf.InvalidProtocolBufferException(e)
+                .setUnfinishedMessage(builder.buildPartial());
+          }
+          return builder.buildPartial();
+        }
+      };
+
+      public static com.google.protobuf.Parser<ResponseEvent> parser() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<ResponseEvent> getParserForType() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.ServerEvent.ResponseEvent getDefaultInstanceForType() {
+        return DEFAULT_INSTANCE;
+      }
+
+    }
+
+    private int bitField0_;
+    public static final int REQUEST_EVENT_FIELD_NUMBER = 1;
+    private com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.ServerEvent.RequestEvent requestEvent_;
+    /**
+     * <code>optional .android_studio.GeminiTelemetryEvent.ServerEvent.RequestEvent request_event = 1;</code>
+     * @return Whether the requestEvent field is set.
+     */
+    @java.lang.Override
+    public boolean hasRequestEvent() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <code>optional .android_studio.GeminiTelemetryEvent.ServerEvent.RequestEvent request_event = 1;</code>
+     * @return The requestEvent.
+     */
+    @java.lang.Override
+    public com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.ServerEvent.RequestEvent getRequestEvent() {
+      return requestEvent_ == null ? com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.ServerEvent.RequestEvent.getDefaultInstance() : requestEvent_;
+    }
+    /**
+     * <code>optional .android_studio.GeminiTelemetryEvent.ServerEvent.RequestEvent request_event = 1;</code>
+     */
+    @java.lang.Override
+    public com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.ServerEvent.RequestEventOrBuilder getRequestEventOrBuilder() {
+      return requestEvent_ == null ? com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.ServerEvent.RequestEvent.getDefaultInstance() : requestEvent_;
+    }
+
+    public static final int RESPONSE_EVENT_FIELD_NUMBER = 2;
+    private com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.ServerEvent.ResponseEvent responseEvent_;
+    /**
+     * <code>optional .android_studio.GeminiTelemetryEvent.ServerEvent.ResponseEvent response_event = 2;</code>
+     * @return Whether the responseEvent field is set.
+     */
+    @java.lang.Override
+    public boolean hasResponseEvent() {
+      return ((bitField0_ & 0x00000002) != 0);
+    }
+    /**
+     * <code>optional .android_studio.GeminiTelemetryEvent.ServerEvent.ResponseEvent response_event = 2;</code>
+     * @return The responseEvent.
+     */
+    @java.lang.Override
+    public com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.ServerEvent.ResponseEvent getResponseEvent() {
+      return responseEvent_ == null ? com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.ServerEvent.ResponseEvent.getDefaultInstance() : responseEvent_;
+    }
+    /**
+     * <code>optional .android_studio.GeminiTelemetryEvent.ServerEvent.ResponseEvent response_event = 2;</code>
+     */
+    @java.lang.Override
+    public com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.ServerEvent.ResponseEventOrBuilder getResponseEventOrBuilder() {
+      return responseEvent_ == null ? com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.ServerEvent.ResponseEvent.getDefaultInstance() : responseEvent_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -2303,6 +5541,12 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
+      if (((bitField0_ & 0x00000001) != 0)) {
+        output.writeMessage(1, getRequestEvent());
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        output.writeMessage(2, getResponseEvent());
+      }
       getUnknownFields().writeTo(output);
     }
 
@@ -2312,6 +5556,14 @@ private static final long serialVersionUID = 0L;
       if (size != -1) return size;
 
       size = 0;
+      if (((bitField0_ & 0x00000001) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getRequestEvent());
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getResponseEvent());
+      }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
@@ -2327,6 +5579,16 @@ private static final long serialVersionUID = 0L;
       }
       com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.ServerEvent other = (com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.ServerEvent) obj;
 
+      if (hasRequestEvent() != other.hasRequestEvent()) return false;
+      if (hasRequestEvent()) {
+        if (!getRequestEvent()
+            .equals(other.getRequestEvent())) return false;
+      }
+      if (hasResponseEvent() != other.hasResponseEvent()) return false;
+      if (hasResponseEvent()) {
+        if (!getResponseEvent()
+            .equals(other.getResponseEvent())) return false;
+      }
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -2338,6 +5600,14 @@ private static final long serialVersionUID = 0L;
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasRequestEvent()) {
+        hash = (37 * hash) + REQUEST_EVENT_FIELD_NUMBER;
+        hash = (53 * hash) + getRequestEvent().hashCode();
+      }
+      if (hasResponseEvent()) {
+        hash = (37 * hash) + RESPONSE_EVENT_FIELD_NUMBER;
+        hash = (53 * hash) + getResponseEvent().hashCode();
+      }
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -2455,17 +5725,35 @@ private static final long serialVersionUID = 0L;
 
       // Construct using com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.ServerEvent.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getRequestEventFieldBuilder();
+          getResponseEventFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
+        requestEvent_ = null;
+        if (requestEventBuilder_ != null) {
+          requestEventBuilder_.dispose();
+          requestEventBuilder_ = null;
+        }
+        responseEvent_ = null;
+        if (responseEventBuilder_ != null) {
+          responseEventBuilder_.dispose();
+          responseEventBuilder_ = null;
+        }
         return this;
       }
 
@@ -2492,8 +5780,27 @@ private static final long serialVersionUID = 0L;
       @java.lang.Override
       public com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.ServerEvent buildPartial() {
         com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.ServerEvent result = new com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.ServerEvent(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
+      }
+
+      private void buildPartial0(com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.ServerEvent result) {
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.requestEvent_ = requestEventBuilder_ == null
+              ? requestEvent_
+              : requestEventBuilder_.build();
+          to_bitField0_ |= 0x00000001;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.responseEvent_ = responseEventBuilder_ == null
+              ? responseEvent_
+              : responseEventBuilder_.build();
+          to_bitField0_ |= 0x00000002;
+        }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -2508,6 +5815,12 @@ private static final long serialVersionUID = 0L;
 
       public Builder mergeFrom(com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.ServerEvent other) {
         if (other == com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.ServerEvent.getDefaultInstance()) return this;
+        if (other.hasRequestEvent()) {
+          mergeRequestEvent(other.getRequestEvent());
+        }
+        if (other.hasResponseEvent()) {
+          mergeResponseEvent(other.getResponseEvent());
+        }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
@@ -2534,6 +5847,20 @@ private static final long serialVersionUID = 0L;
               case 0:
                 done = true;
                 break;
+              case 10: {
+                input.readMessage(
+                    getRequestEventFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                input.readMessage(
+                    getResponseEventFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -2548,6 +5875,245 @@ private static final long serialVersionUID = 0L;
           onChanged();
         } // finally
         return this;
+      }
+      private int bitField0_;
+
+      private com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.ServerEvent.RequestEvent requestEvent_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.ServerEvent.RequestEvent, com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.ServerEvent.RequestEvent.Builder, com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.ServerEvent.RequestEventOrBuilder> requestEventBuilder_;
+      /**
+       * <code>optional .android_studio.GeminiTelemetryEvent.ServerEvent.RequestEvent request_event = 1;</code>
+       * @return Whether the requestEvent field is set.
+       */
+      public boolean hasRequestEvent() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>optional .android_studio.GeminiTelemetryEvent.ServerEvent.RequestEvent request_event = 1;</code>
+       * @return The requestEvent.
+       */
+      public com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.ServerEvent.RequestEvent getRequestEvent() {
+        if (requestEventBuilder_ == null) {
+          return requestEvent_ == null ? com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.ServerEvent.RequestEvent.getDefaultInstance() : requestEvent_;
+        } else {
+          return requestEventBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>optional .android_studio.GeminiTelemetryEvent.ServerEvent.RequestEvent request_event = 1;</code>
+       */
+      public Builder setRequestEvent(com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.ServerEvent.RequestEvent value) {
+        if (requestEventBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          requestEvent_ = value;
+        } else {
+          requestEventBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional .android_studio.GeminiTelemetryEvent.ServerEvent.RequestEvent request_event = 1;</code>
+       */
+      public Builder setRequestEvent(
+          com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.ServerEvent.RequestEvent.Builder builderForValue) {
+        if (requestEventBuilder_ == null) {
+          requestEvent_ = builderForValue.build();
+        } else {
+          requestEventBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional .android_studio.GeminiTelemetryEvent.ServerEvent.RequestEvent request_event = 1;</code>
+       */
+      public Builder mergeRequestEvent(com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.ServerEvent.RequestEvent value) {
+        if (requestEventBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            requestEvent_ != null &&
+            requestEvent_ != com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.ServerEvent.RequestEvent.getDefaultInstance()) {
+            getRequestEventBuilder().mergeFrom(value);
+          } else {
+            requestEvent_ = value;
+          }
+        } else {
+          requestEventBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional .android_studio.GeminiTelemetryEvent.ServerEvent.RequestEvent request_event = 1;</code>
+       */
+      public Builder clearRequestEvent() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        requestEvent_ = null;
+        if (requestEventBuilder_ != null) {
+          requestEventBuilder_.dispose();
+          requestEventBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional .android_studio.GeminiTelemetryEvent.ServerEvent.RequestEvent request_event = 1;</code>
+       */
+      public com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.ServerEvent.RequestEvent.Builder getRequestEventBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getRequestEventFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>optional .android_studio.GeminiTelemetryEvent.ServerEvent.RequestEvent request_event = 1;</code>
+       */
+      public com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.ServerEvent.RequestEventOrBuilder getRequestEventOrBuilder() {
+        if (requestEventBuilder_ != null) {
+          return requestEventBuilder_.getMessageOrBuilder();
+        } else {
+          return requestEvent_ == null ?
+              com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.ServerEvent.RequestEvent.getDefaultInstance() : requestEvent_;
+        }
+      }
+      /**
+       * <code>optional .android_studio.GeminiTelemetryEvent.ServerEvent.RequestEvent request_event = 1;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.ServerEvent.RequestEvent, com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.ServerEvent.RequestEvent.Builder, com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.ServerEvent.RequestEventOrBuilder> 
+          getRequestEventFieldBuilder() {
+        if (requestEventBuilder_ == null) {
+          requestEventBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.ServerEvent.RequestEvent, com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.ServerEvent.RequestEvent.Builder, com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.ServerEvent.RequestEventOrBuilder>(
+                  getRequestEvent(),
+                  getParentForChildren(),
+                  isClean());
+          requestEvent_ = null;
+        }
+        return requestEventBuilder_;
+      }
+
+      private com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.ServerEvent.ResponseEvent responseEvent_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.ServerEvent.ResponseEvent, com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.ServerEvent.ResponseEvent.Builder, com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.ServerEvent.ResponseEventOrBuilder> responseEventBuilder_;
+      /**
+       * <code>optional .android_studio.GeminiTelemetryEvent.ServerEvent.ResponseEvent response_event = 2;</code>
+       * @return Whether the responseEvent field is set.
+       */
+      public boolean hasResponseEvent() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <code>optional .android_studio.GeminiTelemetryEvent.ServerEvent.ResponseEvent response_event = 2;</code>
+       * @return The responseEvent.
+       */
+      public com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.ServerEvent.ResponseEvent getResponseEvent() {
+        if (responseEventBuilder_ == null) {
+          return responseEvent_ == null ? com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.ServerEvent.ResponseEvent.getDefaultInstance() : responseEvent_;
+        } else {
+          return responseEventBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>optional .android_studio.GeminiTelemetryEvent.ServerEvent.ResponseEvent response_event = 2;</code>
+       */
+      public Builder setResponseEvent(com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.ServerEvent.ResponseEvent value) {
+        if (responseEventBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          responseEvent_ = value;
+        } else {
+          responseEventBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional .android_studio.GeminiTelemetryEvent.ServerEvent.ResponseEvent response_event = 2;</code>
+       */
+      public Builder setResponseEvent(
+          com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.ServerEvent.ResponseEvent.Builder builderForValue) {
+        if (responseEventBuilder_ == null) {
+          responseEvent_ = builderForValue.build();
+        } else {
+          responseEventBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional .android_studio.GeminiTelemetryEvent.ServerEvent.ResponseEvent response_event = 2;</code>
+       */
+      public Builder mergeResponseEvent(com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.ServerEvent.ResponseEvent value) {
+        if (responseEventBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0) &&
+            responseEvent_ != null &&
+            responseEvent_ != com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.ServerEvent.ResponseEvent.getDefaultInstance()) {
+            getResponseEventBuilder().mergeFrom(value);
+          } else {
+            responseEvent_ = value;
+          }
+        } else {
+          responseEventBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional .android_studio.GeminiTelemetryEvent.ServerEvent.ResponseEvent response_event = 2;</code>
+       */
+      public Builder clearResponseEvent() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        responseEvent_ = null;
+        if (responseEventBuilder_ != null) {
+          responseEventBuilder_.dispose();
+          responseEventBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional .android_studio.GeminiTelemetryEvent.ServerEvent.ResponseEvent response_event = 2;</code>
+       */
+      public com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.ServerEvent.ResponseEvent.Builder getResponseEventBuilder() {
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return getResponseEventFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>optional .android_studio.GeminiTelemetryEvent.ServerEvent.ResponseEvent response_event = 2;</code>
+       */
+      public com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.ServerEvent.ResponseEventOrBuilder getResponseEventOrBuilder() {
+        if (responseEventBuilder_ != null) {
+          return responseEventBuilder_.getMessageOrBuilder();
+        } else {
+          return responseEvent_ == null ?
+              com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.ServerEvent.ResponseEvent.getDefaultInstance() : responseEvent_;
+        }
+      }
+      /**
+       * <code>optional .android_studio.GeminiTelemetryEvent.ServerEvent.ResponseEvent response_event = 2;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.ServerEvent.ResponseEvent, com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.ServerEvent.ResponseEvent.Builder, com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.ServerEvent.ResponseEventOrBuilder> 
+          getResponseEventFieldBuilder() {
+        if (responseEventBuilder_ == null) {
+          responseEventBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.ServerEvent.ResponseEvent, com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.ServerEvent.ResponseEvent.Builder, com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.ServerEvent.ResponseEventOrBuilder>(
+                  getResponseEvent(),
+                  getParentForChildren(),
+                  isClean());
+          responseEvent_ = null;
+        }
+        return responseEventBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
