@@ -160,6 +160,18 @@ public enum EditorFileType
    * <code>DART = 29;</code>
    */
   DART(29),
+  /**
+   * <code>PYTHON = 30;</code>
+   */
+  PYTHON(30),
+  /**
+   * <code>GO = 31;</code>
+   */
+  GO(31),
+  /**
+   * <code>RUST = 32;</code>
+   */
+  RUST(32),
   ;
 
   /**
@@ -314,6 +326,18 @@ public enum EditorFileType
    * <code>DART = 29;</code>
    */
   public static final int DART_VALUE = 29;
+  /**
+   * <code>PYTHON = 30;</code>
+   */
+  public static final int PYTHON_VALUE = 30;
+  /**
+   * <code>GO = 31;</code>
+   */
+  public static final int GO_VALUE = 31;
+  /**
+   * <code>RUST = 32;</code>
+   */
+  public static final int RUST_VALUE = 32;
 
 
   public final int getNumber() {
@@ -366,6 +390,9 @@ public enum EditorFileType
       case 27: return PROTO;
       case 28: return PROTO_WITHOUT_PLUGIN;
       case 29: return DART;
+      case 30: return PYTHON;
+      case 31: return GO;
+      case 32: return RUST;
       default: return null;
     }
   }

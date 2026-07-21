@@ -268,4 +268,31 @@ public interface DirectAccessUsageEventOrBuilder extends
    * <code>optional .android_studio.DevServiceDeprecationInfo dev_service_deprecation_info = 10 [lazy = true];</code>
    */
   com.google.wireless.android.sdk.stats.DevServiceDeprecationInfoOrBuilder getDevServiceDeprecationInfoOrBuilder();
+
+  /**
+   * <pre>
+   * set when type = OEM_LAB_DIALOG
+   * </pre>
+   *
+   * <code>optional .android_studio.DirectAccessUsageEvent.OemLabDialogDetails oem_lab_dialog_details = 11 [lazy = true];</code>
+   * @return Whether the oemLabDialogDetails field is set.
+   */
+  boolean hasOemLabDialogDetails();
+  /**
+   * <pre>
+   * set when type = OEM_LAB_DIALOG
+   * </pre>
+   *
+   * <code>optional .android_studio.DirectAccessUsageEvent.OemLabDialogDetails oem_lab_dialog_details = 11 [lazy = true];</code>
+   * @return The oemLabDialogDetails.
+   */
+  com.google.wireless.android.sdk.stats.DirectAccessUsageEvent.OemLabDialogDetails getOemLabDialogDetails();
+  /**
+   * <pre>
+   * set when type = OEM_LAB_DIALOG
+   * </pre>
+   *
+   * <code>optional .android_studio.DirectAccessUsageEvent.OemLabDialogDetails oem_lab_dialog_details = 11 [lazy = true];</code>
+   */
+  com.google.wireless.android.sdk.stats.DirectAccessUsageEvent.OemLabDialogDetailsOrBuilder getOemLabDialogDetailsOrBuilder();
 }

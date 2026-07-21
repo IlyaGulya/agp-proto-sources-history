@@ -1420,6 +1420,14 @@ public enum GradleTaskExecutionType
    * <code>TEST_SUITE_TEST = 350;</code>
    */
   TEST_SUITE_TEST(350),
+  /**
+   * <code>COMPILE_NAVIGATION_XML = 351;</code>
+   */
+  COMPILE_NAVIGATION_XML(351),
+  /**
+   * <code>PROCESS_NAVIGATION_XML = 352;</code>
+   */
+  PROCESS_NAVIGATION_XML(352),
   UNRECOGNIZED(-1),
   ;
 
@@ -2827,6 +2835,14 @@ public enum GradleTaskExecutionType
    * <code>TEST_SUITE_TEST = 350;</code>
    */
   public static final int TEST_SUITE_TEST_VALUE = 350;
+  /**
+   * <code>COMPILE_NAVIGATION_XML = 351;</code>
+   */
+  public static final int COMPILE_NAVIGATION_XML_VALUE = 351;
+  /**
+   * <code>PROCESS_NAVIGATION_XML = 352;</code>
+   */
+  public static final int PROCESS_NAVIGATION_XML_VALUE = 352;
 
 
   public final int getNumber() {
@@ -3204,6 +3220,8 @@ public enum GradleTaskExecutionType
       case 348: return COLLECT_PACKAGES_FOR_R8;
       case 349: return MERGE_PACKAGE_LISTS_FOR_R8;
       case 350: return TEST_SUITE_TEST;
+      case 351: return COMPILE_NAVIGATION_XML;
+      case 352: return PROCESS_NAVIGATION_XML;
       default: return null;
     }
   }

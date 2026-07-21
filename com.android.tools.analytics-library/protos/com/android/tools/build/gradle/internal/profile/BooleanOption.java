@@ -868,6 +868,18 @@ public enum BooleanOption
    * <code>USE_NEW_DSL_IMPLEMENTATIONS = 211;</code>
    */
   USE_NEW_DSL_IMPLEMENTATIONS(211),
+  /**
+   * <code>ANDROID_BUILTIN_TEST_PLATFORM = 212;</code>
+   */
+  ANDROID_BUILTIN_TEST_PLATFORM(212),
+  /**
+   * <code>R8_GRADUAL_API = 213;</code>
+   */
+  R8_GRADUAL_API(213),
+  /**
+   * <code>ENABLE_LEGACY_VARIANT_API = 214;</code>
+   */
+  ENABLE_LEGACY_VARIANT_API(214),
   UNRECOGNIZED(-1),
   ;
 
@@ -1719,6 +1731,18 @@ public enum BooleanOption
    * <code>USE_NEW_DSL_IMPLEMENTATIONS = 211;</code>
    */
   public static final int USE_NEW_DSL_IMPLEMENTATIONS_VALUE = 211;
+  /**
+   * <code>ANDROID_BUILTIN_TEST_PLATFORM = 212;</code>
+   */
+  public static final int ANDROID_BUILTIN_TEST_PLATFORM_VALUE = 212;
+  /**
+   * <code>R8_GRADUAL_API = 213;</code>
+   */
+  public static final int R8_GRADUAL_API_VALUE = 213;
+  /**
+   * <code>ENABLE_LEGACY_VARIANT_API = 214;</code>
+   */
+  public static final int ENABLE_LEGACY_VARIANT_API_VALUE = 214;
 
 
   public final int getNumber() {
@@ -1957,6 +1981,9 @@ public enum BooleanOption
       case 209: return R8_MAIN_DEX_LIST_DISALLOWED;
       case 210: return BUILT_IN_KOTLIN;
       case 211: return USE_NEW_DSL_IMPLEMENTATIONS;
+      case 212: return ANDROID_BUILTIN_TEST_PLATFORM;
+      case 213: return R8_GRADUAL_API;
+      case 214: return ENABLE_LEGACY_VARIANT_API;
       default: return null;
     }
   }
