@@ -139,4 +139,23 @@ public interface SmlConfigurationEventOrBuilder extends
    * @return The productVariant.
    */
   com.google.wireless.android.sdk.stats.SmlConfigurationEvent.SmlProductVariant getProductVariant();
+
+  /**
+   * <pre>
+   * User has auto-approve enabled for tool calls in agent mode
+   * </pre>
+   *
+   * <code>optional bool agent_auto_accept_enabled = 8;</code>
+   * @return Whether the agentAutoAcceptEnabled field is set.
+   */
+  boolean hasAgentAutoAcceptEnabled();
+  /**
+   * <pre>
+   * User has auto-approve enabled for tool calls in agent mode
+   * </pre>
+   *
+   * <code>optional bool agent_auto_accept_enabled = 8;</code>
+   * @return The agentAutoAcceptEnabled.
+   */
+  boolean getAgentAutoAcceptEnabled();
 }

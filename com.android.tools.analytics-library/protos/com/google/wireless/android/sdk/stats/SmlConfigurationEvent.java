@@ -342,6 +342,33 @@ private static final long serialVersionUID = 0L;
     return result == null ? com.google.wireless.android.sdk.stats.SmlConfigurationEvent.SmlProductVariant.PRODUCT_VARIANT_UNKNOWN : result;
   }
 
+  public static final int AGENT_AUTO_ACCEPT_ENABLED_FIELD_NUMBER = 8;
+  private boolean agentAutoAcceptEnabled_ = false;
+  /**
+   * <pre>
+   * User has auto-approve enabled for tool calls in agent mode
+   * </pre>
+   *
+   * <code>optional bool agent_auto_accept_enabled = 8;</code>
+   * @return Whether the agentAutoAcceptEnabled field is set.
+   */
+  @java.lang.Override
+  public boolean hasAgentAutoAcceptEnabled() {
+    return ((bitField0_ & 0x00000080) != 0);
+  }
+  /**
+   * <pre>
+   * User has auto-approve enabled for tool calls in agent mode
+   * </pre>
+   *
+   * <code>optional bool agent_auto_accept_enabled = 8;</code>
+   * @return The agentAutoAcceptEnabled.
+   */
+  @java.lang.Override
+  public boolean getAgentAutoAcceptEnabled() {
+    return agentAutoAcceptEnabled_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -376,6 +403,9 @@ private static final long serialVersionUID = 0L;
     }
     if (((bitField0_ & 0x00000040) != 0)) {
       output.writeEnum(7, productVariant_);
+    }
+    if (((bitField0_ & 0x00000080) != 0)) {
+      output.writeBool(8, agentAutoAcceptEnabled_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -413,6 +443,10 @@ private static final long serialVersionUID = 0L;
     if (((bitField0_ & 0x00000040) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(7, productVariant_);
+    }
+    if (((bitField0_ & 0x00000080) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeBoolSize(8, agentAutoAcceptEnabled_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -463,6 +497,11 @@ private static final long serialVersionUID = 0L;
     if (hasProductVariant()) {
       if (productVariant_ != other.productVariant_) return false;
     }
+    if (hasAgentAutoAcceptEnabled() != other.hasAgentAutoAcceptEnabled()) return false;
+    if (hasAgentAutoAcceptEnabled()) {
+      if (getAgentAutoAcceptEnabled()
+          != other.getAgentAutoAcceptEnabled()) return false;
+    }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -507,6 +546,11 @@ private static final long serialVersionUID = 0L;
     if (hasProductVariant()) {
       hash = (37 * hash) + PRODUCT_VARIANT_FIELD_NUMBER;
       hash = (53 * hash) + productVariant_;
+    }
+    if (hasAgentAutoAcceptEnabled()) {
+      hash = (37 * hash) + AGENT_AUTO_ACCEPT_ENABLED_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getAgentAutoAcceptEnabled());
     }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
@@ -644,6 +688,7 @@ private static final long serialVersionUID = 0L;
       transformEnabled_ = false;
       projectContextEnabled_ = false;
       productVariant_ = 0;
+      agentAutoAcceptEnabled_ = false;
       return this;
     }
 
@@ -706,6 +751,10 @@ private static final long serialVersionUID = 0L;
         result.productVariant_ = productVariant_;
         to_bitField0_ |= 0x00000040;
       }
+      if (((from_bitField0_ & 0x00000080) != 0)) {
+        result.agentAutoAcceptEnabled_ = agentAutoAcceptEnabled_;
+        to_bitField0_ |= 0x00000080;
+      }
       result.bitField0_ |= to_bitField0_;
     }
 
@@ -741,6 +790,9 @@ private static final long serialVersionUID = 0L;
       }
       if (other.hasProductVariant()) {
         setProductVariant(other.getProductVariant());
+      }
+      if (other.hasAgentAutoAcceptEnabled()) {
+        setAgentAutoAcceptEnabled(other.getAgentAutoAcceptEnabled());
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -810,6 +862,11 @@ private static final long serialVersionUID = 0L;
               }
               break;
             } // case 56
+            case 64: {
+              agentAutoAcceptEnabled_ = input.readBool();
+              bitField0_ |= 0x00000080;
+              break;
+            } // case 64
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -1217,6 +1274,62 @@ private static final long serialVersionUID = 0L;
     public Builder clearProductVariant() {
       bitField0_ = (bitField0_ & ~0x00000040);
       productVariant_ = 0;
+      onChanged();
+      return this;
+    }
+
+    private boolean agentAutoAcceptEnabled_ ;
+    /**
+     * <pre>
+     * User has auto-approve enabled for tool calls in agent mode
+     * </pre>
+     *
+     * <code>optional bool agent_auto_accept_enabled = 8;</code>
+     * @return Whether the agentAutoAcceptEnabled field is set.
+     */
+    @java.lang.Override
+    public boolean hasAgentAutoAcceptEnabled() {
+      return ((bitField0_ & 0x00000080) != 0);
+    }
+    /**
+     * <pre>
+     * User has auto-approve enabled for tool calls in agent mode
+     * </pre>
+     *
+     * <code>optional bool agent_auto_accept_enabled = 8;</code>
+     * @return The agentAutoAcceptEnabled.
+     */
+    @java.lang.Override
+    public boolean getAgentAutoAcceptEnabled() {
+      return agentAutoAcceptEnabled_;
+    }
+    /**
+     * <pre>
+     * User has auto-approve enabled for tool calls in agent mode
+     * </pre>
+     *
+     * <code>optional bool agent_auto_accept_enabled = 8;</code>
+     * @param value The agentAutoAcceptEnabled to set.
+     * @return This builder for chaining.
+     */
+    public Builder setAgentAutoAcceptEnabled(boolean value) {
+
+      agentAutoAcceptEnabled_ = value;
+      bitField0_ |= 0x00000080;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * User has auto-approve enabled for tool calls in agent mode
+     * </pre>
+     *
+     * <code>optional bool agent_auto_accept_enabled = 8;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearAgentAutoAcceptEnabled() {
+      bitField0_ = (bitField0_ & ~0x00000080);
+      agentAutoAcceptEnabled_ = false;
       onChanged();
       return this;
     }

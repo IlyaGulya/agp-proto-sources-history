@@ -60,6 +60,63 @@ private static final long serialVersionUID = 0L;
      * @return The promptsInLibrary.
      */
     int getPromptsInLibrary();
+
+    /**
+     * <pre>
+     * Number of rules in the library.
+     * </pre>
+     *
+     * <code>optional int32 rules_count = 2;</code>
+     * @return Whether the rulesCount field is set.
+     */
+    boolean hasRulesCount();
+    /**
+     * <pre>
+     * Number of rules in the library.
+     * </pre>
+     *
+     * <code>optional int32 rules_count = 2;</code>
+     * @return The rulesCount.
+     */
+    int getRulesCount();
+
+    /**
+     * <pre>
+     * Number of overrides for built-in prompts.
+     * </pre>
+     *
+     * <code>optional int32 builtins_overrides_count = 3;</code>
+     * @return Whether the builtinsOverridesCount field is set.
+     */
+    boolean hasBuiltinsOverridesCount();
+    /**
+     * <pre>
+     * Number of overrides for built-in prompts.
+     * </pre>
+     *
+     * <code>optional int32 builtins_overrides_count = 3;</code>
+     * @return The builtinsOverridesCount.
+     */
+    int getBuiltinsOverridesCount();
+
+    /**
+     * <pre>
+     * Number of "Saved Prompts"
+     * </pre>
+     *
+     * <code>optional int32 user_prompts_count = 4;</code>
+     * @return Whether the userPromptsCount field is set.
+     */
+    boolean hasUserPromptsCount();
+    /**
+     * <pre>
+     * Number of "Saved Prompts"
+     * </pre>
+     *
+     * <code>optional int32 user_prompts_count = 4;</code>
+     * @return The userPromptsCount.
+     */
+    int getUserPromptsCount();
   }
   /**
    * <pre>
@@ -128,6 +185,87 @@ private static final long serialVersionUID = 0L;
       return promptsInLibrary_;
     }
 
+    public static final int RULES_COUNT_FIELD_NUMBER = 2;
+    private int rulesCount_ = 0;
+    /**
+     * <pre>
+     * Number of rules in the library.
+     * </pre>
+     *
+     * <code>optional int32 rules_count = 2;</code>
+     * @return Whether the rulesCount field is set.
+     */
+    @java.lang.Override
+    public boolean hasRulesCount() {
+      return ((bitField0_ & 0x00000002) != 0);
+    }
+    /**
+     * <pre>
+     * Number of rules in the library.
+     * </pre>
+     *
+     * <code>optional int32 rules_count = 2;</code>
+     * @return The rulesCount.
+     */
+    @java.lang.Override
+    public int getRulesCount() {
+      return rulesCount_;
+    }
+
+    public static final int BUILTINS_OVERRIDES_COUNT_FIELD_NUMBER = 3;
+    private int builtinsOverridesCount_ = 0;
+    /**
+     * <pre>
+     * Number of overrides for built-in prompts.
+     * </pre>
+     *
+     * <code>optional int32 builtins_overrides_count = 3;</code>
+     * @return Whether the builtinsOverridesCount field is set.
+     */
+    @java.lang.Override
+    public boolean hasBuiltinsOverridesCount() {
+      return ((bitField0_ & 0x00000004) != 0);
+    }
+    /**
+     * <pre>
+     * Number of overrides for built-in prompts.
+     * </pre>
+     *
+     * <code>optional int32 builtins_overrides_count = 3;</code>
+     * @return The builtinsOverridesCount.
+     */
+    @java.lang.Override
+    public int getBuiltinsOverridesCount() {
+      return builtinsOverridesCount_;
+    }
+
+    public static final int USER_PROMPTS_COUNT_FIELD_NUMBER = 4;
+    private int userPromptsCount_ = 0;
+    /**
+     * <pre>
+     * Number of "Saved Prompts"
+     * </pre>
+     *
+     * <code>optional int32 user_prompts_count = 4;</code>
+     * @return Whether the userPromptsCount field is set.
+     */
+    @java.lang.Override
+    public boolean hasUserPromptsCount() {
+      return ((bitField0_ & 0x00000008) != 0);
+    }
+    /**
+     * <pre>
+     * Number of "Saved Prompts"
+     * </pre>
+     *
+     * <code>optional int32 user_prompts_count = 4;</code>
+     * @return The userPromptsCount.
+     */
+    @java.lang.Override
+    public int getUserPromptsCount() {
+      return userPromptsCount_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -145,6 +283,15 @@ private static final long serialVersionUID = 0L;
       if (((bitField0_ & 0x00000001) != 0)) {
         output.writeUInt32(1, promptsInLibrary_);
       }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        output.writeInt32(2, rulesCount_);
+      }
+      if (((bitField0_ & 0x00000004) != 0)) {
+        output.writeInt32(3, builtinsOverridesCount_);
+      }
+      if (((bitField0_ & 0x00000008) != 0)) {
+        output.writeInt32(4, userPromptsCount_);
+      }
       getUnknownFields().writeTo(output);
     }
 
@@ -157,6 +304,18 @@ private static final long serialVersionUID = 0L;
       if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt32Size(1, promptsInLibrary_);
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(2, rulesCount_);
+      }
+      if (((bitField0_ & 0x00000004) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(3, builtinsOverridesCount_);
+      }
+      if (((bitField0_ & 0x00000008) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(4, userPromptsCount_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -178,6 +337,21 @@ private static final long serialVersionUID = 0L;
         if (getPromptsInLibrary()
             != other.getPromptsInLibrary()) return false;
       }
+      if (hasRulesCount() != other.hasRulesCount()) return false;
+      if (hasRulesCount()) {
+        if (getRulesCount()
+            != other.getRulesCount()) return false;
+      }
+      if (hasBuiltinsOverridesCount() != other.hasBuiltinsOverridesCount()) return false;
+      if (hasBuiltinsOverridesCount()) {
+        if (getBuiltinsOverridesCount()
+            != other.getBuiltinsOverridesCount()) return false;
+      }
+      if (hasUserPromptsCount() != other.hasUserPromptsCount()) return false;
+      if (hasUserPromptsCount()) {
+        if (getUserPromptsCount()
+            != other.getUserPromptsCount()) return false;
+      }
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -192,6 +366,18 @@ private static final long serialVersionUID = 0L;
       if (hasPromptsInLibrary()) {
         hash = (37 * hash) + PROMPTS_IN_LIBRARY_FIELD_NUMBER;
         hash = (53 * hash) + getPromptsInLibrary();
+      }
+      if (hasRulesCount()) {
+        hash = (37 * hash) + RULES_COUNT_FIELD_NUMBER;
+        hash = (53 * hash) + getRulesCount();
+      }
+      if (hasBuiltinsOverridesCount()) {
+        hash = (37 * hash) + BUILTINS_OVERRIDES_COUNT_FIELD_NUMBER;
+        hash = (53 * hash) + getBuiltinsOverridesCount();
+      }
+      if (hasUserPromptsCount()) {
+        hash = (37 * hash) + USER_PROMPTS_COUNT_FIELD_NUMBER;
+        hash = (53 * hash) + getUserPromptsCount();
       }
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
@@ -327,6 +513,9 @@ private static final long serialVersionUID = 0L;
         super.clear();
         bitField0_ = 0;
         promptsInLibrary_ = 0;
+        rulesCount_ = 0;
+        builtinsOverridesCount_ = 0;
+        userPromptsCount_ = 0;
         return this;
       }
 
@@ -365,6 +554,18 @@ private static final long serialVersionUID = 0L;
           result.promptsInLibrary_ = promptsInLibrary_;
           to_bitField0_ |= 0x00000001;
         }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.rulesCount_ = rulesCount_;
+          to_bitField0_ |= 0x00000002;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.builtinsOverridesCount_ = builtinsOverridesCount_;
+          to_bitField0_ |= 0x00000004;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.userPromptsCount_ = userPromptsCount_;
+          to_bitField0_ |= 0x00000008;
+        }
         result.bitField0_ |= to_bitField0_;
       }
 
@@ -382,6 +583,15 @@ private static final long serialVersionUID = 0L;
         if (other == com.google.wireless.android.sdk.stats.PromptLibraryEvent.Update.getDefaultInstance()) return this;
         if (other.hasPromptsInLibrary()) {
           setPromptsInLibrary(other.getPromptsInLibrary());
+        }
+        if (other.hasRulesCount()) {
+          setRulesCount(other.getRulesCount());
+        }
+        if (other.hasBuiltinsOverridesCount()) {
+          setBuiltinsOverridesCount(other.getBuiltinsOverridesCount());
+        }
+        if (other.hasUserPromptsCount()) {
+          setUserPromptsCount(other.getUserPromptsCount());
         }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
@@ -414,6 +624,21 @@ private static final long serialVersionUID = 0L;
                 bitField0_ |= 0x00000001;
                 break;
               } // case 8
+              case 16: {
+                rulesCount_ = input.readInt32();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 16
+              case 24: {
+                builtinsOverridesCount_ = input.readInt32();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 24
+              case 32: {
+                userPromptsCount_ = input.readInt32();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 32
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -483,6 +708,174 @@ private static final long serialVersionUID = 0L;
       public Builder clearPromptsInLibrary() {
         bitField0_ = (bitField0_ & ~0x00000001);
         promptsInLibrary_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int rulesCount_ ;
+      /**
+       * <pre>
+       * Number of rules in the library.
+       * </pre>
+       *
+       * <code>optional int32 rules_count = 2;</code>
+       * @return Whether the rulesCount field is set.
+       */
+      @java.lang.Override
+      public boolean hasRulesCount() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <pre>
+       * Number of rules in the library.
+       * </pre>
+       *
+       * <code>optional int32 rules_count = 2;</code>
+       * @return The rulesCount.
+       */
+      @java.lang.Override
+      public int getRulesCount() {
+        return rulesCount_;
+      }
+      /**
+       * <pre>
+       * Number of rules in the library.
+       * </pre>
+       *
+       * <code>optional int32 rules_count = 2;</code>
+       * @param value The rulesCount to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRulesCount(int value) {
+
+        rulesCount_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Number of rules in the library.
+       * </pre>
+       *
+       * <code>optional int32 rules_count = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRulesCount() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        rulesCount_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int builtinsOverridesCount_ ;
+      /**
+       * <pre>
+       * Number of overrides for built-in prompts.
+       * </pre>
+       *
+       * <code>optional int32 builtins_overrides_count = 3;</code>
+       * @return Whether the builtinsOverridesCount field is set.
+       */
+      @java.lang.Override
+      public boolean hasBuiltinsOverridesCount() {
+        return ((bitField0_ & 0x00000004) != 0);
+      }
+      /**
+       * <pre>
+       * Number of overrides for built-in prompts.
+       * </pre>
+       *
+       * <code>optional int32 builtins_overrides_count = 3;</code>
+       * @return The builtinsOverridesCount.
+       */
+      @java.lang.Override
+      public int getBuiltinsOverridesCount() {
+        return builtinsOverridesCount_;
+      }
+      /**
+       * <pre>
+       * Number of overrides for built-in prompts.
+       * </pre>
+       *
+       * <code>optional int32 builtins_overrides_count = 3;</code>
+       * @param value The builtinsOverridesCount to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBuiltinsOverridesCount(int value) {
+
+        builtinsOverridesCount_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Number of overrides for built-in prompts.
+       * </pre>
+       *
+       * <code>optional int32 builtins_overrides_count = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearBuiltinsOverridesCount() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        builtinsOverridesCount_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int userPromptsCount_ ;
+      /**
+       * <pre>
+       * Number of "Saved Prompts"
+       * </pre>
+       *
+       * <code>optional int32 user_prompts_count = 4;</code>
+       * @return Whether the userPromptsCount field is set.
+       */
+      @java.lang.Override
+      public boolean hasUserPromptsCount() {
+        return ((bitField0_ & 0x00000008) != 0);
+      }
+      /**
+       * <pre>
+       * Number of "Saved Prompts"
+       * </pre>
+       *
+       * <code>optional int32 user_prompts_count = 4;</code>
+       * @return The userPromptsCount.
+       */
+      @java.lang.Override
+      public int getUserPromptsCount() {
+        return userPromptsCount_;
+      }
+      /**
+       * <pre>
+       * Number of "Saved Prompts"
+       * </pre>
+       *
+       * <code>optional int32 user_prompts_count = 4;</code>
+       * @param value The userPromptsCount to set.
+       * @return This builder for chaining.
+       */
+      public Builder setUserPromptsCount(int value) {
+
+        userPromptsCount_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Number of "Saved Prompts"
+       * </pre>
+       *
+       * <code>optional int32 user_prompts_count = 4;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearUserPromptsCount() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        userPromptsCount_ = 0;
         onChanged();
         return this;
       }

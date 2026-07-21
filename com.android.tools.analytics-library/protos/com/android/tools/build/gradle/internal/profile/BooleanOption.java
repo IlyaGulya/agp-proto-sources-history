@@ -844,6 +844,14 @@ public enum BooleanOption
    * <code>ONLY_ENABLE_UNIT_TEST_BY_DEFAULT_FOR_THE_TESTED_BUILD_TYPE = 205;</code>
    */
   ONLY_ENABLE_UNIT_TEST_BY_DEFAULT_FOR_THE_TESTED_BUILD_TYPE(205),
+  /**
+   * <code>DEFAULT_TARGET_SDK_TO_COMPILE_SDK_IF_UNSET = 206;</code>
+   */
+  DEFAULT_TARGET_SDK_TO_COMPILE_SDK_IF_UNSET(206),
+  /**
+   * <code>TEST_SUITE_SUPPORT = 207;</code>
+   */
+  TEST_SUITE_SUPPORT(207),
   UNRECOGNIZED(-1),
   ;
 
@@ -1671,6 +1679,14 @@ public enum BooleanOption
    * <code>ONLY_ENABLE_UNIT_TEST_BY_DEFAULT_FOR_THE_TESTED_BUILD_TYPE = 205;</code>
    */
   public static final int ONLY_ENABLE_UNIT_TEST_BY_DEFAULT_FOR_THE_TESTED_BUILD_TYPE_VALUE = 205;
+  /**
+   * <code>DEFAULT_TARGET_SDK_TO_COMPILE_SDK_IF_UNSET = 206;</code>
+   */
+  public static final int DEFAULT_TARGET_SDK_TO_COMPILE_SDK_IF_UNSET_VALUE = 206;
+  /**
+   * <code>TEST_SUITE_SUPPORT = 207;</code>
+   */
+  public static final int TEST_SUITE_SUPPORT_VALUE = 207;
 
 
   public final int getNumber() {
@@ -1903,6 +1919,8 @@ public enum BooleanOption
       case 203: return TEST_SIMULATE_AGP_VERSION_BEHAVIOR;
       case 204: return FUSED_LIBRARY_PUBLICATION_ONLY_MODE;
       case 205: return ONLY_ENABLE_UNIT_TEST_BY_DEFAULT_FOR_THE_TESTED_BUILD_TYPE;
+      case 206: return DEFAULT_TARGET_SDK_TO_COMPILE_SDK_IF_UNSET;
+      case 207: return TEST_SUITE_SUPPORT;
       default: return null;
     }
   }

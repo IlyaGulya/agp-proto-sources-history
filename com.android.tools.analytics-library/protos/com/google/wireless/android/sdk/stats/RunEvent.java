@@ -242,6 +242,10 @@ private static final long serialVersionUID = 0L;
      * <code>COMPLICATION = 4;</code>
      */
     COMPLICATION(4),
+    /**
+     * <code>DECLARATIVE_WATCH_FACE = 5;</code>
+     */
+    DECLARATIVE_WATCH_FACE(5),
     ;
 
     /**
@@ -264,6 +268,10 @@ private static final long serialVersionUID = 0L;
      * <code>COMPLICATION = 4;</code>
      */
     public static final int COMPLICATION_VALUE = 4;
+    /**
+     * <code>DECLARATIVE_WATCH_FACE = 5;</code>
+     */
+    public static final int DECLARATIVE_WATCH_FACE_VALUE = 5;
 
 
     public final int getNumber() {
@@ -291,6 +299,7 @@ private static final long serialVersionUID = 0L;
         case 2: return WATCH_FACE;
         case 3: return TILE;
         case 4: return COMPLICATION;
+        case 5: return DECLARATIVE_WATCH_FACE;
         default: return null;
       }
     }
