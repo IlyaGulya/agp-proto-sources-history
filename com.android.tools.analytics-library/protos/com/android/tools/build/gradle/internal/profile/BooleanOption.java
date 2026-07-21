@@ -638,6 +638,10 @@ public enum BooleanOption
    * <code>LEGACY_TRANSFORM_TASK_FORCE_NON_INCREMENTAL = 154;</code>
    */
   LEGACY_TRANSFORM_TASK_FORCE_NON_INCREMENTAL(154),
+  /**
+   * <code>PRIVACY_SANDBOX_SDK_SUPPORT = 155;</code>
+   */
+  PRIVACY_SANDBOX_SDK_SUPPORT(155),
   UNRECOGNIZED(-1),
   ;
 
@@ -1261,6 +1265,10 @@ public enum BooleanOption
    * <code>LEGACY_TRANSFORM_TASK_FORCE_NON_INCREMENTAL = 154;</code>
    */
   public static final int LEGACY_TRANSFORM_TASK_FORCE_NON_INCREMENTAL_VALUE = 154;
+  /**
+   * <code>PRIVACY_SANDBOX_SDK_SUPPORT = 155;</code>
+   */
+  public static final int PRIVACY_SANDBOX_SDK_SUPPORT_VALUE = 155;
 
 
   public final int getNumber() {
@@ -1442,6 +1450,7 @@ public enum BooleanOption
       case 152: return GRADLE_MANAGED_DEVICE_ALLOW_OLD_API_LEVEL_DEVICES;
       case 153: return MISSING_LINT_BASELINE_IS_EMPTY_BASELINE;
       case 154: return LEGACY_TRANSFORM_TASK_FORCE_NON_INCREMENTAL;
+      case 155: return PRIVACY_SANDBOX_SDK_SUPPORT;
       default: return null;
     }
   }

@@ -1365,6 +1365,10 @@ private static final long serialVersionUID = 0L;
        * <code>JETIFIER_USAGE_WARNING = 28;</code>
        */
       JETIFIER_USAGE_WARNING(28),
+      /**
+       * <code>DOWNLOADS_INFO = 29;</code>
+       */
+      DOWNLOADS_INFO(29),
       ;
 
       /**
@@ -1491,6 +1495,10 @@ private static final long serialVersionUID = 0L;
        * <code>JETIFIER_USAGE_WARNING = 28;</code>
        */
       public static final int JETIFIER_USAGE_WARNING_VALUE = 28;
+      /**
+       * <code>DOWNLOADS_INFO = 29;</code>
+       */
+      public static final int DOWNLOADS_INFO_VALUE = 29;
 
 
       public final int getNumber() {
@@ -1542,6 +1550,7 @@ private static final long serialVersionUID = 0L;
           case 26: return CONFIGURATION_CACHE_ROOT;
           case 27: return CONFIGURATION_CACHE_PLUGIN_WARNING;
           case 28: return JETIFIER_USAGE_WARNING;
+          case 29: return DOWNLOADS_INFO;
           default: return null;
         }
       }
