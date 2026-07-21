@@ -666,6 +666,10 @@ public enum BooleanOption
    * <code>PRINT_LINT_STACK_TRACE = 161;</code>
    */
   PRINT_LINT_STACK_TRACE(161),
+  /**
+   * <code>PRIVACY_SANDBOX_SDK_REQUIRE_SERVICES = 162;</code>
+   */
+  PRIVACY_SANDBOX_SDK_REQUIRE_SERVICES(162),
   UNRECOGNIZED(-1),
   ;
 
@@ -1317,6 +1321,10 @@ public enum BooleanOption
    * <code>PRINT_LINT_STACK_TRACE = 161;</code>
    */
   public static final int PRINT_LINT_STACK_TRACE_VALUE = 161;
+  /**
+   * <code>PRIVACY_SANDBOX_SDK_REQUIRE_SERVICES = 162;</code>
+   */
+  public static final int PRIVACY_SANDBOX_SDK_REQUIRE_SERVICES_VALUE = 162;
 
 
   public final int getNumber() {
@@ -1505,6 +1513,7 @@ public enum BooleanOption
       case 159: return GRADLE_MANAGED_DEVICE_CUSTOM_DEVICE;
       case 160: return ENABLE_GLOBAL_SYNTHETICS;
       case 161: return PRINT_LINT_STACK_TRACE;
+      case 162: return PRIVACY_SANDBOX_SDK_REQUIRE_SERVICES;
       default: return null;
     }
   }

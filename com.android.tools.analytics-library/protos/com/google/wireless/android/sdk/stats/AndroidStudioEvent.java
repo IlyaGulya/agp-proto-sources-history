@@ -1984,6 +1984,32 @@ private static final long serialVersionUID = 0L;
             bitField4_ |= 0x00040000;
             break;
           }
+          case 1234: {
+            com.google.wireless.android.sdk.stats.ThreadingAgentUsageEvent.Builder subBuilder = null;
+            if (((bitField4_ & 0x00080000) != 0)) {
+              subBuilder = threadingAgentUsageEvent_.toBuilder();
+            }
+            threadingAgentUsageEvent_ = input.readMessage(com.google.wireless.android.sdk.stats.ThreadingAgentUsageEvent.PARSER, extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(threadingAgentUsageEvent_);
+              threadingAgentUsageEvent_ = subBuilder.buildPartial();
+            }
+            bitField4_ |= 0x00080000;
+            break;
+          }
+          case 1242: {
+            com.google.wireless.android.sdk.stats.ProjectViewSelectionChangeEvent.Builder subBuilder = null;
+            if (((bitField4_ & 0x00100000) != 0)) {
+              subBuilder = projectViewSelectionChangeEvent_.toBuilder();
+            }
+            projectViewSelectionChangeEvent_ = input.readMessage(com.google.wireless.android.sdk.stats.ProjectViewSelectionChangeEvent.PARSER, extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(projectViewSelectionChangeEvent_);
+              projectViewSelectionChangeEvent_ = subBuilder.buildPartial();
+            }
+            bitField4_ |= 0x00100000;
+            break;
+          }
           default: {
             if (!parseUnknownField(
                 input, unknownFields, extensionRegistry, tag)) {
@@ -4626,6 +4652,22 @@ private static final long serialVersionUID = 0L;
      * <code>MANIFEST_MERGER_STATS = 266;</code>
      */
     MANIFEST_MERGER_STATS(266),
+    /**
+     * <pre>
+     * Event related to the usage of the threading agent
+     * </pre>
+     *
+     * <code>THREADING_AGENT_STATS = 267;</code>
+     */
+    THREADING_AGENT_STATS(267),
+    /**
+     * <pre>
+     * Event marking a change of view selected in the Project tool window
+     * </pre>
+     *
+     * <code>PROJECT_VIEW_SELECTION_CHANGE_EVENT = 268;</code>
+     */
+    PROJECT_VIEW_SELECTION_CHANGE_EVENT(268),
     ;
 
     /**
@@ -6590,6 +6632,22 @@ private static final long serialVersionUID = 0L;
      * <code>MANIFEST_MERGER_STATS = 266;</code>
      */
     public static final int MANIFEST_MERGER_STATS_VALUE = 266;
+    /**
+     * <pre>
+     * Event related to the usage of the threading agent
+     * </pre>
+     *
+     * <code>THREADING_AGENT_STATS = 267;</code>
+     */
+    public static final int THREADING_AGENT_STATS_VALUE = 267;
+    /**
+     * <pre>
+     * Event marking a change of view selected in the Project tool window
+     * </pre>
+     *
+     * <code>PROJECT_VIEW_SELECTION_CHANGE_EVENT = 268;</code>
+     */
+    public static final int PROJECT_VIEW_SELECTION_CHANGE_EVENT_VALUE = 268;
 
 
     public final int getNumber() {
@@ -6874,6 +6932,8 @@ private static final long serialVersionUID = 0L;
         case 264: return MEMORY_USAGE_REPORT_EVENT;
         case 265: return GRADLE_SYNC_CANCELLED;
         case 266: return MANIFEST_MERGER_STATS;
+        case 267: return THREADING_AGENT_STATS;
+        case 268: return PROJECT_VIEW_SELECTION_CHANGE_EVENT;
         default: return null;
       }
     }
@@ -21517,6 +21577,82 @@ private static final long serialVersionUID = 0L;
     return manifestMergerStats_ == null ? com.google.wireless.android.sdk.stats.ManifestMergerStats.getDefaultInstance() : manifestMergerStats_;
   }
 
+  public static final int THREADING_AGENT_USAGE_EVENT_FIELD_NUMBER = 154;
+  private com.google.wireless.android.sdk.stats.ThreadingAgentUsageEvent threadingAgentUsageEvent_;
+  /**
+   * <pre>
+   * set when kind = THREADING_AGENT_STATS
+   * </pre>
+   *
+   * <code>optional .android_studio.ThreadingAgentUsageEvent threading_agent_usage_event = 154;</code>
+   * @return Whether the threadingAgentUsageEvent field is set.
+   */
+  @java.lang.Override
+  public boolean hasThreadingAgentUsageEvent() {
+    return ((bitField4_ & 0x00080000) != 0);
+  }
+  /**
+   * <pre>
+   * set when kind = THREADING_AGENT_STATS
+   * </pre>
+   *
+   * <code>optional .android_studio.ThreadingAgentUsageEvent threading_agent_usage_event = 154;</code>
+   * @return The threadingAgentUsageEvent.
+   */
+  @java.lang.Override
+  public com.google.wireless.android.sdk.stats.ThreadingAgentUsageEvent getThreadingAgentUsageEvent() {
+    return threadingAgentUsageEvent_ == null ? com.google.wireless.android.sdk.stats.ThreadingAgentUsageEvent.getDefaultInstance() : threadingAgentUsageEvent_;
+  }
+  /**
+   * <pre>
+   * set when kind = THREADING_AGENT_STATS
+   * </pre>
+   *
+   * <code>optional .android_studio.ThreadingAgentUsageEvent threading_agent_usage_event = 154;</code>
+   */
+  @java.lang.Override
+  public com.google.wireless.android.sdk.stats.ThreadingAgentUsageEventOrBuilder getThreadingAgentUsageEventOrBuilder() {
+    return threadingAgentUsageEvent_ == null ? com.google.wireless.android.sdk.stats.ThreadingAgentUsageEvent.getDefaultInstance() : threadingAgentUsageEvent_;
+  }
+
+  public static final int PROJECT_VIEW_SELECTION_CHANGE_EVENT_FIELD_NUMBER = 155;
+  private com.google.wireless.android.sdk.stats.ProjectViewSelectionChangeEvent projectViewSelectionChangeEvent_;
+  /**
+   * <pre>
+   * set when kind = PROJECT_VIEW_SELECTION_CHANGE_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.ProjectViewSelectionChangeEvent project_view_selection_change_event = 155;</code>
+   * @return Whether the projectViewSelectionChangeEvent field is set.
+   */
+  @java.lang.Override
+  public boolean hasProjectViewSelectionChangeEvent() {
+    return ((bitField4_ & 0x00100000) != 0);
+  }
+  /**
+   * <pre>
+   * set when kind = PROJECT_VIEW_SELECTION_CHANGE_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.ProjectViewSelectionChangeEvent project_view_selection_change_event = 155;</code>
+   * @return The projectViewSelectionChangeEvent.
+   */
+  @java.lang.Override
+  public com.google.wireless.android.sdk.stats.ProjectViewSelectionChangeEvent getProjectViewSelectionChangeEvent() {
+    return projectViewSelectionChangeEvent_ == null ? com.google.wireless.android.sdk.stats.ProjectViewSelectionChangeEvent.getDefaultInstance() : projectViewSelectionChangeEvent_;
+  }
+  /**
+   * <pre>
+   * set when kind = PROJECT_VIEW_SELECTION_CHANGE_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.ProjectViewSelectionChangeEvent project_view_selection_change_event = 155;</code>
+   */
+  @java.lang.Override
+  public com.google.wireless.android.sdk.stats.ProjectViewSelectionChangeEventOrBuilder getProjectViewSelectionChangeEventOrBuilder() {
+    return projectViewSelectionChangeEvent_ == null ? com.google.wireless.android.sdk.stats.ProjectViewSelectionChangeEvent.getDefaultInstance() : projectViewSelectionChangeEvent_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -21989,6 +22125,12 @@ private static final long serialVersionUID = 0L;
     }
     if (((bitField4_ & 0x00040000) != 0)) {
       output.writeMessage(153, getManifestMergerStats());
+    }
+    if (((bitField4_ & 0x00080000) != 0)) {
+      output.writeMessage(154, getThreadingAgentUsageEvent());
+    }
+    if (((bitField4_ & 0x00100000) != 0)) {
+      output.writeMessage(155, getProjectViewSelectionChangeEvent());
     }
     unknownFields.writeTo(output);
   }
@@ -22616,6 +22758,14 @@ private static final long serialVersionUID = 0L;
     if (((bitField4_ & 0x00040000) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(153, getManifestMergerStats());
+    }
+    if (((bitField4_ & 0x00080000) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(154, getThreadingAgentUsageEvent());
+    }
+    if (((bitField4_ & 0x00100000) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(155, getProjectViewSelectionChangeEvent());
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -23368,6 +23518,16 @@ private static final long serialVersionUID = 0L;
       if (!getManifestMergerStats()
           .equals(other.getManifestMergerStats())) return false;
     }
+    if (hasThreadingAgentUsageEvent() != other.hasThreadingAgentUsageEvent()) return false;
+    if (hasThreadingAgentUsageEvent()) {
+      if (!getThreadingAgentUsageEvent()
+          .equals(other.getThreadingAgentUsageEvent())) return false;
+    }
+    if (hasProjectViewSelectionChangeEvent() != other.hasProjectViewSelectionChangeEvent()) return false;
+    if (hasProjectViewSelectionChangeEvent()) {
+      if (!getProjectViewSelectionChangeEvent()
+          .equals(other.getProjectViewSelectionChangeEvent())) return false;
+    }
     if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
@@ -23993,6 +24153,14 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + MANIFEST_MERGER_STATS_FIELD_NUMBER;
       hash = (53 * hash) + getManifestMergerStats().hashCode();
     }
+    if (hasThreadingAgentUsageEvent()) {
+      hash = (37 * hash) + THREADING_AGENT_USAGE_EVENT_FIELD_NUMBER;
+      hash = (53 * hash) + getThreadingAgentUsageEvent().hashCode();
+    }
+    if (hasProjectViewSelectionChangeEvent()) {
+      hash = (37 * hash) + PROJECT_VIEW_SELECTION_CHANGE_EVENT_FIELD_NUMBER;
+      hash = (53 * hash) + getProjectViewSelectionChangeEvent().hashCode();
+    }
     hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -24251,6 +24419,8 @@ private static final long serialVersionUID = 0L;
         getMemoryUsageReportEventFieldBuilder();
         getSdkIndexLoadingDetailsFieldBuilder();
         getManifestMergerStatsFieldBuilder();
+        getThreadingAgentUsageEventFieldBuilder();
+        getProjectViewSelectionChangeEventFieldBuilder();
       }
     }
     @java.lang.Override
@@ -25082,6 +25252,18 @@ private static final long serialVersionUID = 0L;
         manifestMergerStatsBuilder_.clear();
       }
       bitField4_ = (bitField4_ & ~0x01000000);
+      if (threadingAgentUsageEventBuilder_ == null) {
+        threadingAgentUsageEvent_ = null;
+      } else {
+        threadingAgentUsageEventBuilder_.clear();
+      }
+      bitField4_ = (bitField4_ & ~0x02000000);
+      if (projectViewSelectionChangeEventBuilder_ == null) {
+        projectViewSelectionChangeEvent_ = null;
+      } else {
+        projectViewSelectionChangeEventBuilder_.clear();
+      }
+      bitField4_ = (bitField4_ & ~0x04000000);
       return this;
     }
 
@@ -26256,6 +26438,22 @@ private static final long serialVersionUID = 0L;
         }
         to_bitField4_ |= 0x00040000;
       }
+      if (((from_bitField4_ & 0x02000000) != 0)) {
+        if (threadingAgentUsageEventBuilder_ == null) {
+          result.threadingAgentUsageEvent_ = threadingAgentUsageEvent_;
+        } else {
+          result.threadingAgentUsageEvent_ = threadingAgentUsageEventBuilder_.build();
+        }
+        to_bitField4_ |= 0x00080000;
+      }
+      if (((from_bitField4_ & 0x04000000) != 0)) {
+        if (projectViewSelectionChangeEventBuilder_ == null) {
+          result.projectViewSelectionChangeEvent_ = projectViewSelectionChangeEvent_;
+        } else {
+          result.projectViewSelectionChangeEvent_ = projectViewSelectionChangeEventBuilder_.build();
+        }
+        to_bitField4_ |= 0x00100000;
+      }
       result.bitField0_ = to_bitField0_;
       result.bitField1_ = to_bitField1_;
       result.bitField2_ = to_bitField2_;
@@ -26871,6 +27069,12 @@ private static final long serialVersionUID = 0L;
       }
       if (other.hasManifestMergerStats()) {
         mergeManifestMergerStats(other.getManifestMergerStats());
+      }
+      if (other.hasThreadingAgentUsageEvent()) {
+        mergeThreadingAgentUsageEvent(other.getThreadingAgentUsageEvent());
+      }
+      if (other.hasProjectViewSelectionChangeEvent()) {
+        mergeProjectViewSelectionChangeEvent(other.getProjectViewSelectionChangeEvent());
       }
       this.mergeUnknownFields(other.unknownFields);
       onChanged();
@@ -50041,6 +50245,318 @@ private static final long serialVersionUID = 0L;
         manifestMergerStats_ = null;
       }
       return manifestMergerStatsBuilder_;
+    }
+
+    private com.google.wireless.android.sdk.stats.ThreadingAgentUsageEvent threadingAgentUsageEvent_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.ThreadingAgentUsageEvent, com.google.wireless.android.sdk.stats.ThreadingAgentUsageEvent.Builder, com.google.wireless.android.sdk.stats.ThreadingAgentUsageEventOrBuilder> threadingAgentUsageEventBuilder_;
+    /**
+     * <pre>
+     * set when kind = THREADING_AGENT_STATS
+     * </pre>
+     *
+     * <code>optional .android_studio.ThreadingAgentUsageEvent threading_agent_usage_event = 154;</code>
+     * @return Whether the threadingAgentUsageEvent field is set.
+     */
+    public boolean hasThreadingAgentUsageEvent() {
+      return ((bitField4_ & 0x02000000) != 0);
+    }
+    /**
+     * <pre>
+     * set when kind = THREADING_AGENT_STATS
+     * </pre>
+     *
+     * <code>optional .android_studio.ThreadingAgentUsageEvent threading_agent_usage_event = 154;</code>
+     * @return The threadingAgentUsageEvent.
+     */
+    public com.google.wireless.android.sdk.stats.ThreadingAgentUsageEvent getThreadingAgentUsageEvent() {
+      if (threadingAgentUsageEventBuilder_ == null) {
+        return threadingAgentUsageEvent_ == null ? com.google.wireless.android.sdk.stats.ThreadingAgentUsageEvent.getDefaultInstance() : threadingAgentUsageEvent_;
+      } else {
+        return threadingAgentUsageEventBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * set when kind = THREADING_AGENT_STATS
+     * </pre>
+     *
+     * <code>optional .android_studio.ThreadingAgentUsageEvent threading_agent_usage_event = 154;</code>
+     */
+    public Builder setThreadingAgentUsageEvent(com.google.wireless.android.sdk.stats.ThreadingAgentUsageEvent value) {
+      if (threadingAgentUsageEventBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        threadingAgentUsageEvent_ = value;
+        onChanged();
+      } else {
+        threadingAgentUsageEventBuilder_.setMessage(value);
+      }
+      bitField4_ |= 0x02000000;
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = THREADING_AGENT_STATS
+     * </pre>
+     *
+     * <code>optional .android_studio.ThreadingAgentUsageEvent threading_agent_usage_event = 154;</code>
+     */
+    public Builder setThreadingAgentUsageEvent(
+        com.google.wireless.android.sdk.stats.ThreadingAgentUsageEvent.Builder builderForValue) {
+      if (threadingAgentUsageEventBuilder_ == null) {
+        threadingAgentUsageEvent_ = builderForValue.build();
+        onChanged();
+      } else {
+        threadingAgentUsageEventBuilder_.setMessage(builderForValue.build());
+      }
+      bitField4_ |= 0x02000000;
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = THREADING_AGENT_STATS
+     * </pre>
+     *
+     * <code>optional .android_studio.ThreadingAgentUsageEvent threading_agent_usage_event = 154;</code>
+     */
+    public Builder mergeThreadingAgentUsageEvent(com.google.wireless.android.sdk.stats.ThreadingAgentUsageEvent value) {
+      if (threadingAgentUsageEventBuilder_ == null) {
+        if (((bitField4_ & 0x02000000) != 0) &&
+            threadingAgentUsageEvent_ != null &&
+            threadingAgentUsageEvent_ != com.google.wireless.android.sdk.stats.ThreadingAgentUsageEvent.getDefaultInstance()) {
+          threadingAgentUsageEvent_ =
+            com.google.wireless.android.sdk.stats.ThreadingAgentUsageEvent.newBuilder(threadingAgentUsageEvent_).mergeFrom(value).buildPartial();
+        } else {
+          threadingAgentUsageEvent_ = value;
+        }
+        onChanged();
+      } else {
+        threadingAgentUsageEventBuilder_.mergeFrom(value);
+      }
+      bitField4_ |= 0x02000000;
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = THREADING_AGENT_STATS
+     * </pre>
+     *
+     * <code>optional .android_studio.ThreadingAgentUsageEvent threading_agent_usage_event = 154;</code>
+     */
+    public Builder clearThreadingAgentUsageEvent() {
+      if (threadingAgentUsageEventBuilder_ == null) {
+        threadingAgentUsageEvent_ = null;
+        onChanged();
+      } else {
+        threadingAgentUsageEventBuilder_.clear();
+      }
+      bitField4_ = (bitField4_ & ~0x02000000);
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = THREADING_AGENT_STATS
+     * </pre>
+     *
+     * <code>optional .android_studio.ThreadingAgentUsageEvent threading_agent_usage_event = 154;</code>
+     */
+    public com.google.wireless.android.sdk.stats.ThreadingAgentUsageEvent.Builder getThreadingAgentUsageEventBuilder() {
+      bitField4_ |= 0x02000000;
+      onChanged();
+      return getThreadingAgentUsageEventFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * set when kind = THREADING_AGENT_STATS
+     * </pre>
+     *
+     * <code>optional .android_studio.ThreadingAgentUsageEvent threading_agent_usage_event = 154;</code>
+     */
+    public com.google.wireless.android.sdk.stats.ThreadingAgentUsageEventOrBuilder getThreadingAgentUsageEventOrBuilder() {
+      if (threadingAgentUsageEventBuilder_ != null) {
+        return threadingAgentUsageEventBuilder_.getMessageOrBuilder();
+      } else {
+        return threadingAgentUsageEvent_ == null ?
+            com.google.wireless.android.sdk.stats.ThreadingAgentUsageEvent.getDefaultInstance() : threadingAgentUsageEvent_;
+      }
+    }
+    /**
+     * <pre>
+     * set when kind = THREADING_AGENT_STATS
+     * </pre>
+     *
+     * <code>optional .android_studio.ThreadingAgentUsageEvent threading_agent_usage_event = 154;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.ThreadingAgentUsageEvent, com.google.wireless.android.sdk.stats.ThreadingAgentUsageEvent.Builder, com.google.wireless.android.sdk.stats.ThreadingAgentUsageEventOrBuilder> 
+        getThreadingAgentUsageEventFieldBuilder() {
+      if (threadingAgentUsageEventBuilder_ == null) {
+        threadingAgentUsageEventBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.wireless.android.sdk.stats.ThreadingAgentUsageEvent, com.google.wireless.android.sdk.stats.ThreadingAgentUsageEvent.Builder, com.google.wireless.android.sdk.stats.ThreadingAgentUsageEventOrBuilder>(
+                getThreadingAgentUsageEvent(),
+                getParentForChildren(),
+                isClean());
+        threadingAgentUsageEvent_ = null;
+      }
+      return threadingAgentUsageEventBuilder_;
+    }
+
+    private com.google.wireless.android.sdk.stats.ProjectViewSelectionChangeEvent projectViewSelectionChangeEvent_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.ProjectViewSelectionChangeEvent, com.google.wireless.android.sdk.stats.ProjectViewSelectionChangeEvent.Builder, com.google.wireless.android.sdk.stats.ProjectViewSelectionChangeEventOrBuilder> projectViewSelectionChangeEventBuilder_;
+    /**
+     * <pre>
+     * set when kind = PROJECT_VIEW_SELECTION_CHANGE_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.ProjectViewSelectionChangeEvent project_view_selection_change_event = 155;</code>
+     * @return Whether the projectViewSelectionChangeEvent field is set.
+     */
+    public boolean hasProjectViewSelectionChangeEvent() {
+      return ((bitField4_ & 0x04000000) != 0);
+    }
+    /**
+     * <pre>
+     * set when kind = PROJECT_VIEW_SELECTION_CHANGE_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.ProjectViewSelectionChangeEvent project_view_selection_change_event = 155;</code>
+     * @return The projectViewSelectionChangeEvent.
+     */
+    public com.google.wireless.android.sdk.stats.ProjectViewSelectionChangeEvent getProjectViewSelectionChangeEvent() {
+      if (projectViewSelectionChangeEventBuilder_ == null) {
+        return projectViewSelectionChangeEvent_ == null ? com.google.wireless.android.sdk.stats.ProjectViewSelectionChangeEvent.getDefaultInstance() : projectViewSelectionChangeEvent_;
+      } else {
+        return projectViewSelectionChangeEventBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * set when kind = PROJECT_VIEW_SELECTION_CHANGE_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.ProjectViewSelectionChangeEvent project_view_selection_change_event = 155;</code>
+     */
+    public Builder setProjectViewSelectionChangeEvent(com.google.wireless.android.sdk.stats.ProjectViewSelectionChangeEvent value) {
+      if (projectViewSelectionChangeEventBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        projectViewSelectionChangeEvent_ = value;
+        onChanged();
+      } else {
+        projectViewSelectionChangeEventBuilder_.setMessage(value);
+      }
+      bitField4_ |= 0x04000000;
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = PROJECT_VIEW_SELECTION_CHANGE_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.ProjectViewSelectionChangeEvent project_view_selection_change_event = 155;</code>
+     */
+    public Builder setProjectViewSelectionChangeEvent(
+        com.google.wireless.android.sdk.stats.ProjectViewSelectionChangeEvent.Builder builderForValue) {
+      if (projectViewSelectionChangeEventBuilder_ == null) {
+        projectViewSelectionChangeEvent_ = builderForValue.build();
+        onChanged();
+      } else {
+        projectViewSelectionChangeEventBuilder_.setMessage(builderForValue.build());
+      }
+      bitField4_ |= 0x04000000;
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = PROJECT_VIEW_SELECTION_CHANGE_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.ProjectViewSelectionChangeEvent project_view_selection_change_event = 155;</code>
+     */
+    public Builder mergeProjectViewSelectionChangeEvent(com.google.wireless.android.sdk.stats.ProjectViewSelectionChangeEvent value) {
+      if (projectViewSelectionChangeEventBuilder_ == null) {
+        if (((bitField4_ & 0x04000000) != 0) &&
+            projectViewSelectionChangeEvent_ != null &&
+            projectViewSelectionChangeEvent_ != com.google.wireless.android.sdk.stats.ProjectViewSelectionChangeEvent.getDefaultInstance()) {
+          projectViewSelectionChangeEvent_ =
+            com.google.wireless.android.sdk.stats.ProjectViewSelectionChangeEvent.newBuilder(projectViewSelectionChangeEvent_).mergeFrom(value).buildPartial();
+        } else {
+          projectViewSelectionChangeEvent_ = value;
+        }
+        onChanged();
+      } else {
+        projectViewSelectionChangeEventBuilder_.mergeFrom(value);
+      }
+      bitField4_ |= 0x04000000;
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = PROJECT_VIEW_SELECTION_CHANGE_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.ProjectViewSelectionChangeEvent project_view_selection_change_event = 155;</code>
+     */
+    public Builder clearProjectViewSelectionChangeEvent() {
+      if (projectViewSelectionChangeEventBuilder_ == null) {
+        projectViewSelectionChangeEvent_ = null;
+        onChanged();
+      } else {
+        projectViewSelectionChangeEventBuilder_.clear();
+      }
+      bitField4_ = (bitField4_ & ~0x04000000);
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = PROJECT_VIEW_SELECTION_CHANGE_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.ProjectViewSelectionChangeEvent project_view_selection_change_event = 155;</code>
+     */
+    public com.google.wireless.android.sdk.stats.ProjectViewSelectionChangeEvent.Builder getProjectViewSelectionChangeEventBuilder() {
+      bitField4_ |= 0x04000000;
+      onChanged();
+      return getProjectViewSelectionChangeEventFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * set when kind = PROJECT_VIEW_SELECTION_CHANGE_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.ProjectViewSelectionChangeEvent project_view_selection_change_event = 155;</code>
+     */
+    public com.google.wireless.android.sdk.stats.ProjectViewSelectionChangeEventOrBuilder getProjectViewSelectionChangeEventOrBuilder() {
+      if (projectViewSelectionChangeEventBuilder_ != null) {
+        return projectViewSelectionChangeEventBuilder_.getMessageOrBuilder();
+      } else {
+        return projectViewSelectionChangeEvent_ == null ?
+            com.google.wireless.android.sdk.stats.ProjectViewSelectionChangeEvent.getDefaultInstance() : projectViewSelectionChangeEvent_;
+      }
+    }
+    /**
+     * <pre>
+     * set when kind = PROJECT_VIEW_SELECTION_CHANGE_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.ProjectViewSelectionChangeEvent project_view_selection_change_event = 155;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.ProjectViewSelectionChangeEvent, com.google.wireless.android.sdk.stats.ProjectViewSelectionChangeEvent.Builder, com.google.wireless.android.sdk.stats.ProjectViewSelectionChangeEventOrBuilder> 
+        getProjectViewSelectionChangeEventFieldBuilder() {
+      if (projectViewSelectionChangeEventBuilder_ == null) {
+        projectViewSelectionChangeEventBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.wireless.android.sdk.stats.ProjectViewSelectionChangeEvent, com.google.wireless.android.sdk.stats.ProjectViewSelectionChangeEvent.Builder, com.google.wireless.android.sdk.stats.ProjectViewSelectionChangeEventOrBuilder>(
+                getProjectViewSelectionChangeEvent(),
+                getParentForChildren(),
+                isClean());
+        projectViewSelectionChangeEvent_ = null;
+      }
+      return projectViewSelectionChangeEventBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(
