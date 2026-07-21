@@ -247,5 +247,35 @@ public interface SmlChatBotEventOrBuilder extends
    */
   com.google.wireless.android.sdk.stats.SmlChatBotEvent.BotResponseErrorOrBuilder getBotResponseErrorOrBuilder();
 
+  /**
+   * <code>.android_studio.SmlChatBotEvent.SessionManagerEvent session_manager_event = 17 [lazy = true];</code>
+   * @return Whether the sessionManagerEvent field is set.
+   */
+  boolean hasSessionManagerEvent();
+  /**
+   * <code>.android_studio.SmlChatBotEvent.SessionManagerEvent session_manager_event = 17 [lazy = true];</code>
+   * @return The sessionManagerEvent.
+   */
+  com.google.wireless.android.sdk.stats.SmlChatBotEvent.SessionManagerEvent getSessionManagerEvent();
+  /**
+   * <code>.android_studio.SmlChatBotEvent.SessionManagerEvent session_manager_event = 17 [lazy = true];</code>
+   */
+  com.google.wireless.android.sdk.stats.SmlChatBotEvent.SessionManagerEventOrBuilder getSessionManagerEventOrBuilder();
+
+  /**
+   * <code>.android_studio.SmlChatBotEvent.RecentChatsEvent recent_chats_event = 18 [lazy = true];</code>
+   * @return Whether the recentChatsEvent field is set.
+   */
+  boolean hasRecentChatsEvent();
+  /**
+   * <code>.android_studio.SmlChatBotEvent.RecentChatsEvent recent_chats_event = 18 [lazy = true];</code>
+   * @return The recentChatsEvent.
+   */
+  com.google.wireless.android.sdk.stats.SmlChatBotEvent.RecentChatsEvent getRecentChatsEvent();
+  /**
+   * <code>.android_studio.SmlChatBotEvent.RecentChatsEvent recent_chats_event = 18 [lazy = true];</code>
+   */
+  com.google.wireless.android.sdk.stats.SmlChatBotEvent.RecentChatsEventOrBuilder getRecentChatsEventOrBuilder();
+
   com.google.wireless.android.sdk.stats.SmlChatBotEvent.ContentCase getContentCase();
 }

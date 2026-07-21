@@ -6754,4 +6754,31 @@ public interface AndroidStudioEventOrBuilder extends
    * <code>optional .android_studio.SmlRagEvent sml_rag_event = 242 [lazy = true];</code>
    */
   com.google.wireless.android.sdk.stats.SmlRagEventOrBuilder getSmlRagEventOrBuilder();
+
+  /**
+   * <pre>
+   * set when kind = GLASSES_PAIRING_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.GlassesPairingEvent glasses_pairing_event = 243 [lazy = true];</code>
+   * @return Whether the glassesPairingEvent field is set.
+   */
+  boolean hasGlassesPairingEvent();
+  /**
+   * <pre>
+   * set when kind = GLASSES_PAIRING_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.GlassesPairingEvent glasses_pairing_event = 243 [lazy = true];</code>
+   * @return The glassesPairingEvent.
+   */
+  com.google.wireless.android.sdk.stats.GlassesPairingEvent getGlassesPairingEvent();
+  /**
+   * <pre>
+   * set when kind = GLASSES_PAIRING_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.GlassesPairingEvent glasses_pairing_event = 243 [lazy = true];</code>
+   */
+  com.google.wireless.android.sdk.stats.GlassesPairingEventOrBuilder getGlassesPairingEventOrBuilder();
 }

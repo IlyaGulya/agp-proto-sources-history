@@ -932,6 +932,10 @@ public enum BooleanOption
    * <code>DISABLE_KMP_RUNTIME_CLASSPATH = 227;</code>
    */
   DISABLE_KMP_RUNTIME_CLASSPATH(227),
+  /**
+   * <code>KMP_USE_JVM_PLATFORM_TYPE = 228;</code>
+   */
+  KMP_USE_JVM_PLATFORM_TYPE(228),
   UNRECOGNIZED(-1),
   ;
 
@@ -1847,6 +1851,10 @@ public enum BooleanOption
    * <code>DISABLE_KMP_RUNTIME_CLASSPATH = 227;</code>
    */
   public static final int DISABLE_KMP_RUNTIME_CLASSPATH_VALUE = 227;
+  /**
+   * <code>KMP_USE_JVM_PLATFORM_TYPE = 228;</code>
+   */
+  public static final int KMP_USE_JVM_PLATFORM_TYPE_VALUE = 228;
 
 
   public final int getNumber() {
@@ -2101,6 +2109,7 @@ public enum BooleanOption
       case 225: return DISALLOW_PROVIDER_IN_ANDROID_SOURCE_SET;
       case 226: return R8_GLOBAL_OPTIONS_IN_CONSUMER_RULES_DISALLOWED;
       case 227: return DISABLE_KMP_RUNTIME_CLASSPATH;
+      case 228: return KMP_USE_JVM_PLATFORM_TYPE;
       default: return null;
     }
   }

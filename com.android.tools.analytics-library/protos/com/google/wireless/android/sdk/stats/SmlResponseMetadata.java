@@ -20,6 +20,7 @@ private static final long serialVersionUID = 0L;
     agentTaskId_ = "";
     modelProviderId_ = "";
     modelId_ = "";
+    threadId_ = "";
   }
 
   @java.lang.Override
@@ -293,6 +294,70 @@ private static final long serialVersionUID = 0L;
     }
   }
 
+  public static final int THREAD_ID_FIELD_NUMBER = 6;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object threadId_ = "";
+  /**
+   * <pre>
+   * If the response was generated within the Chat Timeline, the ID of the
+   * thread/session the response was generated for.
+   * </pre>
+   *
+   * <code>optional string thread_id = 6;</code>
+   * @return Whether the threadId field is set.
+   */
+  @java.lang.Override
+  public boolean hasThreadId() {
+    return ((bitField0_ & 0x00000010) != 0);
+  }
+  /**
+   * <pre>
+   * If the response was generated within the Chat Timeline, the ID of the
+   * thread/session the response was generated for.
+   * </pre>
+   *
+   * <code>optional string thread_id = 6;</code>
+   * @return The threadId.
+   */
+  @java.lang.Override
+  public java.lang.String getThreadId() {
+    java.lang.Object ref = threadId_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      if (bs.isValidUtf8()) {
+        threadId_ = s;
+      }
+      return s;
+    }
+  }
+  /**
+   * <pre>
+   * If the response was generated within the Chat Timeline, the ID of the
+   * thread/session the response was generated for.
+   * </pre>
+   *
+   * <code>optional string thread_id = 6;</code>
+   * @return The bytes for threadId.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getThreadIdBytes() {
+    java.lang.Object ref = threadId_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      threadId_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -321,6 +386,9 @@ private static final long serialVersionUID = 0L;
     }
     if (((bitField0_ & 0x00000008) != 0)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 5, modelId_);
+    }
+    if (((bitField0_ & 0x00000010) != 0)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 6, threadId_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -352,6 +420,9 @@ private static final long serialVersionUID = 0L;
     }
     if (((bitField0_ & 0x00000008) != 0)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, modelId_);
+    }
+    if (((bitField0_ & 0x00000010) != 0)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, threadId_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -390,6 +461,11 @@ private static final long serialVersionUID = 0L;
       if (!getModelId()
           .equals(other.getModelId())) return false;
     }
+    if (hasThreadId() != other.hasThreadId()) return false;
+    if (hasThreadId()) {
+      if (!getThreadId()
+          .equals(other.getThreadId())) return false;
+    }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -421,6 +497,10 @@ private static final long serialVersionUID = 0L;
     if (hasModelId()) {
       hash = (37 * hash) + MODEL_ID_FIELD_NUMBER;
       hash = (53 * hash) + getModelId().hashCode();
+    }
+    if (hasThreadId()) {
+      hash = (37 * hash) + THREAD_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getThreadId().hashCode();
     }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
@@ -556,6 +636,7 @@ private static final long serialVersionUID = 0L;
       agentTaskId_ = "";
       modelProviderId_ = "";
       modelId_ = "";
+      threadId_ = "";
       return this;
     }
 
@@ -615,6 +696,10 @@ private static final long serialVersionUID = 0L;
         result.modelId_ = modelId_;
         to_bitField0_ |= 0x00000008;
       }
+      if (((from_bitField0_ & 0x00000020) != 0)) {
+        result.threadId_ = threadId_;
+        to_bitField0_ |= 0x00000010;
+      }
       result.bitField0_ |= to_bitField0_;
     }
 
@@ -656,6 +741,11 @@ private static final long serialVersionUID = 0L;
       if (other.hasModelId()) {
         modelId_ = other.modelId_;
         bitField0_ |= 0x00000010;
+        onChanged();
+      }
+      if (other.hasThreadId()) {
+        threadId_ = other.threadId_;
+        bitField0_ |= 0x00000020;
         onChanged();
       }
       this.mergeUnknownFields(other.getUnknownFields());
@@ -720,6 +810,11 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000010;
               break;
             } // case 42
+            case 50: {
+              threadId_ = input.readBytes();
+              bitField0_ |= 0x00000020;
+              break;
+            } // case 50
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -1210,6 +1305,116 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       modelId_ = value;
       bitField0_ |= 0x00000010;
+      onChanged();
+      return this;
+    }
+
+    private java.lang.Object threadId_ = "";
+    /**
+     * <pre>
+     * If the response was generated within the Chat Timeline, the ID of the
+     * thread/session the response was generated for.
+     * </pre>
+     *
+     * <code>optional string thread_id = 6;</code>
+     * @return Whether the threadId field is set.
+     */
+    public boolean hasThreadId() {
+      return ((bitField0_ & 0x00000020) != 0);
+    }
+    /**
+     * <pre>
+     * If the response was generated within the Chat Timeline, the ID of the
+     * thread/session the response was generated for.
+     * </pre>
+     *
+     * <code>optional string thread_id = 6;</code>
+     * @return The threadId.
+     */
+    public java.lang.String getThreadId() {
+      java.lang.Object ref = threadId_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          threadId_ = s;
+        }
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <pre>
+     * If the response was generated within the Chat Timeline, the ID of the
+     * thread/session the response was generated for.
+     * </pre>
+     *
+     * <code>optional string thread_id = 6;</code>
+     * @return The bytes for threadId.
+     */
+    public com.google.protobuf.ByteString
+        getThreadIdBytes() {
+      java.lang.Object ref = threadId_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        threadId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <pre>
+     * If the response was generated within the Chat Timeline, the ID of the
+     * thread/session the response was generated for.
+     * </pre>
+     *
+     * <code>optional string thread_id = 6;</code>
+     * @param value The threadId to set.
+     * @return This builder for chaining.
+     */
+    public Builder setThreadId(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      threadId_ = value;
+      bitField0_ |= 0x00000020;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * If the response was generated within the Chat Timeline, the ID of the
+     * thread/session the response was generated for.
+     * </pre>
+     *
+     * <code>optional string thread_id = 6;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearThreadId() {
+      threadId_ = getDefaultInstance().getThreadId();
+      bitField0_ = (bitField0_ & ~0x00000020);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * If the response was generated within the Chat Timeline, the ID of the
+     * thread/session the response was generated for.
+     * </pre>
+     *
+     * <code>optional string thread_id = 6;</code>
+     * @param value The bytes for threadId to set.
+     * @return This builder for chaining.
+     */
+    public Builder setThreadIdBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      threadId_ = value;
+      bitField0_ |= 0x00000020;
       onChanged();
       return this;
     }
