@@ -570,13 +570,21 @@ private static final long serialVersionUID = 0L;
      */
     FORCE_LAVAPIPE(134),
     /**
-     * <pre>
-     * Next tag: 136
-     * </pre>
-     *
      * <code>FORCE_LAVAPIPE_FOR_SOFTWARE_RENDERING = 135;</code>
      */
     FORCE_LAVAPIPE_FOR_SOFTWARE_RENDERING(135),
+    /**
+     * <code>FORCE_GPU_HOST = 136;</code>
+     */
+    FORCE_GPU_HOST(136),
+    /**
+     * <pre>
+     * Next tag: 138
+     * </pre>
+     *
+     * <code>FORCE_GPU_SOFTWARE = 137;</code>
+     */
+    FORCE_GPU_SOFTWARE(137),
     ;
 
     /**
@@ -1092,13 +1100,21 @@ private static final long serialVersionUID = 0L;
      */
     public static final int FORCE_LAVAPIPE_VALUE = 134;
     /**
-     * <pre>
-     * Next tag: 136
-     * </pre>
-     *
      * <code>FORCE_LAVAPIPE_FOR_SOFTWARE_RENDERING = 135;</code>
      */
     public static final int FORCE_LAVAPIPE_FOR_SOFTWARE_RENDERING_VALUE = 135;
+    /**
+     * <code>FORCE_GPU_HOST = 136;</code>
+     */
+    public static final int FORCE_GPU_HOST_VALUE = 136;
+    /**
+     * <pre>
+     * Next tag: 138
+     * </pre>
+     *
+     * <code>FORCE_GPU_SOFTWARE = 137;</code>
+     */
+    public static final int FORCE_GPU_SOFTWARE_VALUE = 137;
 
 
     public final int getNumber() {
@@ -1247,6 +1263,8 @@ private static final long serialVersionUID = 0L;
         case 133: return ALL_APPS_FOR_HOME_TRAY;
         case 134: return FORCE_LAVAPIPE;
         case 135: return FORCE_LAVAPIPE_FOR_SOFTWARE_RENDERING;
+        case 136: return FORCE_GPU_HOST;
+        case 137: return FORCE_GPU_SOFTWARE;
         default: return null;
       }
     }

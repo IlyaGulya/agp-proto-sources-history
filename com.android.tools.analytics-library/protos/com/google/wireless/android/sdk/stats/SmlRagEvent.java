@@ -1699,6 +1699,27 @@ private static final long serialVersionUID = 0L;
      * @return The searchTimeMs.
      */
     long getSearchTimeMs();
+
+    /**
+     * <pre>
+     * The number of docs (a doc is a file in the current RAG indexer) that are
+     * indexed.
+     * </pre>
+     *
+     * <code>optional int32 total_indexed_docs = 6;</code>
+     * @return Whether the totalIndexedDocs field is set.
+     */
+    boolean hasTotalIndexedDocs();
+    /**
+     * <pre>
+     * The number of docs (a doc is a file in the current RAG indexer) that are
+     * indexed.
+     * </pre>
+     *
+     * <code>optional int32 total_indexed_docs = 6;</code>
+     * @return The totalIndexedDocs.
+     */
+    int getTotalIndexedDocs();
   }
   /**
    * Protobuf type {@code android_studio.SmlRagEvent.RagToolMetrics}
@@ -1909,6 +1930,35 @@ private static final long serialVersionUID = 0L;
       return searchTimeMs_;
     }
 
+    public static final int TOTAL_INDEXED_DOCS_FIELD_NUMBER = 6;
+    private int totalIndexedDocs_ = 0;
+    /**
+     * <pre>
+     * The number of docs (a doc is a file in the current RAG indexer) that are
+     * indexed.
+     * </pre>
+     *
+     * <code>optional int32 total_indexed_docs = 6;</code>
+     * @return Whether the totalIndexedDocs field is set.
+     */
+    @java.lang.Override
+    public boolean hasTotalIndexedDocs() {
+      return ((bitField0_ & 0x00000020) != 0);
+    }
+    /**
+     * <pre>
+     * The number of docs (a doc is a file in the current RAG indexer) that are
+     * indexed.
+     * </pre>
+     *
+     * <code>optional int32 total_indexed_docs = 6;</code>
+     * @return The totalIndexedDocs.
+     */
+    @java.lang.Override
+    public int getTotalIndexedDocs() {
+      return totalIndexedDocs_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -1938,6 +1988,9 @@ private static final long serialVersionUID = 0L;
       if (((bitField0_ & 0x00000010) != 0)) {
         output.writeInt64(5, searchTimeMs_);
       }
+      if (((bitField0_ & 0x00000020) != 0)) {
+        output.writeInt32(6, totalIndexedDocs_);
+      }
       getUnknownFields().writeTo(output);
     }
 
@@ -1965,6 +2018,10 @@ private static final long serialVersionUID = 0L;
       if (((bitField0_ & 0x00000010) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeInt64Size(5, searchTimeMs_);
+      }
+      if (((bitField0_ & 0x00000020) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(6, totalIndexedDocs_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -2006,6 +2063,11 @@ private static final long serialVersionUID = 0L;
         if (getSearchTimeMs()
             != other.getSearchTimeMs()) return false;
       }
+      if (hasTotalIndexedDocs() != other.hasTotalIndexedDocs()) return false;
+      if (hasTotalIndexedDocs()) {
+        if (getTotalIndexedDocs()
+            != other.getTotalIndexedDocs()) return false;
+      }
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -2037,6 +2099,10 @@ private static final long serialVersionUID = 0L;
         hash = (37 * hash) + SEARCH_TIME_MS_FIELD_NUMBER;
         hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
             getSearchTimeMs());
+      }
+      if (hasTotalIndexedDocs()) {
+        hash = (37 * hash) + TOTAL_INDEXED_DOCS_FIELD_NUMBER;
+        hash = (53 * hash) + getTotalIndexedDocs();
       }
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
@@ -2172,6 +2238,7 @@ private static final long serialVersionUID = 0L;
         resourceCount_ = 0;
         generatedFiles_ = 0;
         searchTimeMs_ = 0L;
+        totalIndexedDocs_ = 0;
         return this;
       }
 
@@ -2226,6 +2293,10 @@ private static final long serialVersionUID = 0L;
           result.searchTimeMs_ = searchTimeMs_;
           to_bitField0_ |= 0x00000010;
         }
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          result.totalIndexedDocs_ = totalIndexedDocs_;
+          to_bitField0_ |= 0x00000020;
+        }
         result.bitField0_ |= to_bitField0_;
       }
 
@@ -2257,6 +2328,9 @@ private static final long serialVersionUID = 0L;
         }
         if (other.hasSearchTimeMs()) {
           setSearchTimeMs(other.getSearchTimeMs());
+        }
+        if (other.hasTotalIndexedDocs()) {
+          setTotalIndexedDocs(other.getTotalIndexedDocs());
         }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
@@ -2309,6 +2383,11 @@ private static final long serialVersionUID = 0L;
                 bitField0_ |= 0x00000010;
                 break;
               } // case 40
+              case 48: {
+                totalIndexedDocs_ = input.readInt32();
+                bitField0_ |= 0x00000020;
+                break;
+              } // case 48
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -2659,6 +2738,66 @@ private static final long serialVersionUID = 0L;
         onChanged();
         return this;
       }
+
+      private int totalIndexedDocs_ ;
+      /**
+       * <pre>
+       * The number of docs (a doc is a file in the current RAG indexer) that are
+       * indexed.
+       * </pre>
+       *
+       * <code>optional int32 total_indexed_docs = 6;</code>
+       * @return Whether the totalIndexedDocs field is set.
+       */
+      @java.lang.Override
+      public boolean hasTotalIndexedDocs() {
+        return ((bitField0_ & 0x00000020) != 0);
+      }
+      /**
+       * <pre>
+       * The number of docs (a doc is a file in the current RAG indexer) that are
+       * indexed.
+       * </pre>
+       *
+       * <code>optional int32 total_indexed_docs = 6;</code>
+       * @return The totalIndexedDocs.
+       */
+      @java.lang.Override
+      public int getTotalIndexedDocs() {
+        return totalIndexedDocs_;
+      }
+      /**
+       * <pre>
+       * The number of docs (a doc is a file in the current RAG indexer) that are
+       * indexed.
+       * </pre>
+       *
+       * <code>optional int32 total_indexed_docs = 6;</code>
+       * @param value The totalIndexedDocs to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTotalIndexedDocs(int value) {
+
+        totalIndexedDocs_ = value;
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The number of docs (a doc is a file in the current RAG indexer) that are
+       * indexed.
+       * </pre>
+       *
+       * <code>optional int32 total_indexed_docs = 6;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTotalIndexedDocs() {
+        bitField0_ = (bitField0_ & ~0x00000020);
+        totalIndexedDocs_ = 0;
+        onChanged();
+        return this;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -2818,6 +2957,27 @@ private static final long serialVersionUID = 0L;
      * @return The foundFilesCount.
      */
     int getFoundFilesCount();
+
+    /**
+     * <pre>
+     * The number of docs (a doc is a file in the current RAG indexer) that are
+     * indexed.
+     * </pre>
+     *
+     * <code>optional int32 total_indexed_docs = 5;</code>
+     * @return Whether the totalIndexedDocs field is set.
+     */
+    boolean hasTotalIndexedDocs();
+    /**
+     * <pre>
+     * The number of docs (a doc is a file in the current RAG indexer) that are
+     * indexed.
+     * </pre>
+     *
+     * <code>optional int32 total_indexed_docs = 5;</code>
+     * @return The totalIndexedDocs.
+     */
+    int getTotalIndexedDocs();
   }
   /**
    * <pre>
@@ -3010,6 +3170,35 @@ private static final long serialVersionUID = 0L;
       return foundFilesCount_;
     }
 
+    public static final int TOTAL_INDEXED_DOCS_FIELD_NUMBER = 5;
+    private int totalIndexedDocs_ = 0;
+    /**
+     * <pre>
+     * The number of docs (a doc is a file in the current RAG indexer) that are
+     * indexed.
+     * </pre>
+     *
+     * <code>optional int32 total_indexed_docs = 5;</code>
+     * @return Whether the totalIndexedDocs field is set.
+     */
+    @java.lang.Override
+    public boolean hasTotalIndexedDocs() {
+      return ((bitField0_ & 0x00000010) != 0);
+    }
+    /**
+     * <pre>
+     * The number of docs (a doc is a file in the current RAG indexer) that are
+     * indexed.
+     * </pre>
+     *
+     * <code>optional int32 total_indexed_docs = 5;</code>
+     * @return The totalIndexedDocs.
+     */
+    @java.lang.Override
+    public int getTotalIndexedDocs() {
+      return totalIndexedDocs_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -3036,6 +3225,9 @@ private static final long serialVersionUID = 0L;
       if (((bitField0_ & 0x00000008) != 0)) {
         output.writeInt32(4, foundFilesCount_);
       }
+      if (((bitField0_ & 0x00000010) != 0)) {
+        output.writeInt32(5, totalIndexedDocs_);
+      }
       getUnknownFields().writeTo(output);
     }
 
@@ -3059,6 +3251,10 @@ private static final long serialVersionUID = 0L;
       if (((bitField0_ & 0x00000008) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeInt32Size(4, foundFilesCount_);
+      }
+      if (((bitField0_ & 0x00000010) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(5, totalIndexedDocs_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -3095,6 +3291,11 @@ private static final long serialVersionUID = 0L;
         if (getFoundFilesCount()
             != other.getFoundFilesCount()) return false;
       }
+      if (hasTotalIndexedDocs() != other.hasTotalIndexedDocs()) return false;
+      if (hasTotalIndexedDocs()) {
+        if (getTotalIndexedDocs()
+            != other.getTotalIndexedDocs()) return false;
+      }
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -3121,6 +3322,10 @@ private static final long serialVersionUID = 0L;
       if (hasFoundFilesCount()) {
         hash = (37 * hash) + FOUND_FILES_COUNT_FIELD_NUMBER;
         hash = (53 * hash) + getFoundFilesCount();
+      }
+      if (hasTotalIndexedDocs()) {
+        hash = (37 * hash) + TOTAL_INDEXED_DOCS_FIELD_NUMBER;
+        hash = (53 * hash) + getTotalIndexedDocs();
       }
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
@@ -3261,6 +3466,7 @@ private static final long serialVersionUID = 0L;
         combinedResultCount_ = 0;
         bm25SearchCount_ = 0;
         foundFilesCount_ = 0;
+        totalIndexedDocs_ = 0;
         return this;
       }
 
@@ -3311,6 +3517,10 @@ private static final long serialVersionUID = 0L;
           result.foundFilesCount_ = foundFilesCount_;
           to_bitField0_ |= 0x00000008;
         }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.totalIndexedDocs_ = totalIndexedDocs_;
+          to_bitField0_ |= 0x00000010;
+        }
         result.bitField0_ |= to_bitField0_;
       }
 
@@ -3339,6 +3549,9 @@ private static final long serialVersionUID = 0L;
         }
         if (other.hasFoundFilesCount()) {
           setFoundFilesCount(other.getFoundFilesCount());
+        }
+        if (other.hasTotalIndexedDocs()) {
+          setTotalIndexedDocs(other.getTotalIndexedDocs());
         }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
@@ -3386,6 +3599,11 @@ private static final long serialVersionUID = 0L;
                 bitField0_ |= 0x00000008;
                 break;
               } // case 32
+              case 40: {
+                totalIndexedDocs_ = input.readInt32();
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 40
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -3686,6 +3904,66 @@ private static final long serialVersionUID = 0L;
         onChanged();
         return this;
       }
+
+      private int totalIndexedDocs_ ;
+      /**
+       * <pre>
+       * The number of docs (a doc is a file in the current RAG indexer) that are
+       * indexed.
+       * </pre>
+       *
+       * <code>optional int32 total_indexed_docs = 5;</code>
+       * @return Whether the totalIndexedDocs field is set.
+       */
+      @java.lang.Override
+      public boolean hasTotalIndexedDocs() {
+        return ((bitField0_ & 0x00000010) != 0);
+      }
+      /**
+       * <pre>
+       * The number of docs (a doc is a file in the current RAG indexer) that are
+       * indexed.
+       * </pre>
+       *
+       * <code>optional int32 total_indexed_docs = 5;</code>
+       * @return The totalIndexedDocs.
+       */
+      @java.lang.Override
+      public int getTotalIndexedDocs() {
+        return totalIndexedDocs_;
+      }
+      /**
+       * <pre>
+       * The number of docs (a doc is a file in the current RAG indexer) that are
+       * indexed.
+       * </pre>
+       *
+       * <code>optional int32 total_indexed_docs = 5;</code>
+       * @param value The totalIndexedDocs to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTotalIndexedDocs(int value) {
+
+        totalIndexedDocs_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The number of docs (a doc is a file in the current RAG indexer) that are
+       * indexed.
+       * </pre>
+       *
+       * <code>optional int32 total_indexed_docs = 5;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTotalIndexedDocs() {
+        bitField0_ = (bitField0_ & ~0x00000010);
+        totalIndexedDocs_ = 0;
+        onChanged();
+        return this;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -3829,6 +4107,27 @@ private static final long serialVersionUID = 0L;
      * @return The grepResultCount.
      */
     int getGrepResultCount();
+
+    /**
+     * <pre>
+     * The number of docs (a doc is a file in the current RAG indexer) that are
+     * indexed.
+     * </pre>
+     *
+     * <code>optional int32 total_indexed_docs = 5;</code>
+     * @return Whether the totalIndexedDocs field is set.
+     */
+    boolean hasTotalIndexedDocs();
+    /**
+     * <pre>
+     * The number of docs (a doc is a file in the current RAG indexer) that are
+     * indexed.
+     * </pre>
+     *
+     * <code>optional int32 total_indexed_docs = 5;</code>
+     * @return The totalIndexedDocs.
+     */
+    int getTotalIndexedDocs();
   }
   /**
    * Protobuf type {@code android_studio.SmlRagEvent.GrepMetrics}
@@ -3974,6 +4273,35 @@ private static final long serialVersionUID = 0L;
       return grepResultCount_;
     }
 
+    public static final int TOTAL_INDEXED_DOCS_FIELD_NUMBER = 5;
+    private int totalIndexedDocs_ = 0;
+    /**
+     * <pre>
+     * The number of docs (a doc is a file in the current RAG indexer) that are
+     * indexed.
+     * </pre>
+     *
+     * <code>optional int32 total_indexed_docs = 5;</code>
+     * @return Whether the totalIndexedDocs field is set.
+     */
+    @java.lang.Override
+    public boolean hasTotalIndexedDocs() {
+      return ((bitField0_ & 0x00000010) != 0);
+    }
+    /**
+     * <pre>
+     * The number of docs (a doc is a file in the current RAG indexer) that are
+     * indexed.
+     * </pre>
+     *
+     * <code>optional int32 total_indexed_docs = 5;</code>
+     * @return The totalIndexedDocs.
+     */
+    @java.lang.Override
+    public int getTotalIndexedDocs() {
+      return totalIndexedDocs_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -4000,6 +4328,9 @@ private static final long serialVersionUID = 0L;
       if (((bitField0_ & 0x00000008) != 0)) {
         output.writeInt32(4, grepResultCount_);
       }
+      if (((bitField0_ & 0x00000010) != 0)) {
+        output.writeInt32(5, totalIndexedDocs_);
+      }
       getUnknownFields().writeTo(output);
     }
 
@@ -4024,6 +4355,10 @@ private static final long serialVersionUID = 0L;
       if (((bitField0_ & 0x00000008) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeInt32Size(4, grepResultCount_);
+      }
+      if (((bitField0_ & 0x00000010) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(5, totalIndexedDocs_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -4060,6 +4395,11 @@ private static final long serialVersionUID = 0L;
         if (getGrepResultCount()
             != other.getGrepResultCount()) return false;
       }
+      if (hasTotalIndexedDocs() != other.hasTotalIndexedDocs()) return false;
+      if (hasTotalIndexedDocs()) {
+        if (getTotalIndexedDocs()
+            != other.getTotalIndexedDocs()) return false;
+      }
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -4087,6 +4427,10 @@ private static final long serialVersionUID = 0L;
       if (hasGrepResultCount()) {
         hash = (37 * hash) + GREP_RESULT_COUNT_FIELD_NUMBER;
         hash = (53 * hash) + getGrepResultCount();
+      }
+      if (hasTotalIndexedDocs()) {
+        hash = (37 * hash) + TOTAL_INDEXED_DOCS_FIELD_NUMBER;
+        hash = (53 * hash) + getTotalIndexedDocs();
       }
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
@@ -4221,6 +4565,7 @@ private static final long serialVersionUID = 0L;
         regexQuery_ = false;
         bm25ResultCount_ = 0;
         grepResultCount_ = 0;
+        totalIndexedDocs_ = 0;
         return this;
       }
 
@@ -4271,6 +4616,10 @@ private static final long serialVersionUID = 0L;
           result.grepResultCount_ = grepResultCount_;
           to_bitField0_ |= 0x00000008;
         }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.totalIndexedDocs_ = totalIndexedDocs_;
+          to_bitField0_ |= 0x00000010;
+        }
         result.bitField0_ |= to_bitField0_;
       }
 
@@ -4297,6 +4646,9 @@ private static final long serialVersionUID = 0L;
         }
         if (other.hasGrepResultCount()) {
           setGrepResultCount(other.getGrepResultCount());
+        }
+        if (other.hasTotalIndexedDocs()) {
+          setTotalIndexedDocs(other.getTotalIndexedDocs());
         }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
@@ -4344,6 +4696,11 @@ private static final long serialVersionUID = 0L;
                 bitField0_ |= 0x00000008;
                 break;
               } // case 32
+              case 40: {
+                totalIndexedDocs_ = input.readInt32();
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 40
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -4581,6 +4938,66 @@ private static final long serialVersionUID = 0L;
       public Builder clearGrepResultCount() {
         bitField0_ = (bitField0_ & ~0x00000008);
         grepResultCount_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int totalIndexedDocs_ ;
+      /**
+       * <pre>
+       * The number of docs (a doc is a file in the current RAG indexer) that are
+       * indexed.
+       * </pre>
+       *
+       * <code>optional int32 total_indexed_docs = 5;</code>
+       * @return Whether the totalIndexedDocs field is set.
+       */
+      @java.lang.Override
+      public boolean hasTotalIndexedDocs() {
+        return ((bitField0_ & 0x00000010) != 0);
+      }
+      /**
+       * <pre>
+       * The number of docs (a doc is a file in the current RAG indexer) that are
+       * indexed.
+       * </pre>
+       *
+       * <code>optional int32 total_indexed_docs = 5;</code>
+       * @return The totalIndexedDocs.
+       */
+      @java.lang.Override
+      public int getTotalIndexedDocs() {
+        return totalIndexedDocs_;
+      }
+      /**
+       * <pre>
+       * The number of docs (a doc is a file in the current RAG indexer) that are
+       * indexed.
+       * </pre>
+       *
+       * <code>optional int32 total_indexed_docs = 5;</code>
+       * @param value The totalIndexedDocs to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTotalIndexedDocs(int value) {
+
+        totalIndexedDocs_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The number of docs (a doc is a file in the current RAG indexer) that are
+       * indexed.
+       * </pre>
+       *
+       * <code>optional int32 total_indexed_docs = 5;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTotalIndexedDocs() {
+        bitField0_ = (bitField0_ & ~0x00000010);
+        totalIndexedDocs_ = 0;
         onChanged();
         return this;
       }

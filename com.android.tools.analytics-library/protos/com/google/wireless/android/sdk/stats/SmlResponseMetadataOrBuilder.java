@@ -173,4 +173,23 @@ public interface SmlResponseMetadataOrBuilder extends
    */
   com.google.protobuf.ByteString
       getThreadIdBytes();
+
+  /**
+   * <pre>
+   * The type of the agent that generated the response.
+   * </pre>
+   *
+   * <code>optional .android_studio.SmlAgentType agent_type = 7;</code>
+   * @return Whether the agentType field is set.
+   */
+  boolean hasAgentType();
+  /**
+   * <pre>
+   * The type of the agent that generated the response.
+   * </pre>
+   *
+   * <code>optional .android_studio.SmlAgentType agent_type = 7;</code>
+   * @return The agentType.
+   */
+  com.google.wireless.android.sdk.stats.SmlAgentType getAgentType();
 }
