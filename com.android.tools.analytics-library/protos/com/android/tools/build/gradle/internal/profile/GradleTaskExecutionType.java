@@ -1319,6 +1319,10 @@ public enum GradleTaskExecutionType
    * <code>EXPAND_ART_PROFILE_WILDCARDS = 325;</code>
    */
   EXPAND_ART_PROFILE_WILDCARDS(325),
+  /**
+   * <code>SCREENSHOT_TEST = 326;</code>
+   */
+  SCREENSHOT_TEST(326),
   UNRECOGNIZED(-1),
   ;
 
@@ -2626,6 +2630,10 @@ public enum GradleTaskExecutionType
    * <code>EXPAND_ART_PROFILE_WILDCARDS = 325;</code>
    */
   public static final int EXPAND_ART_PROFILE_WILDCARDS_VALUE = 325;
+  /**
+   * <code>SCREENSHOT_TEST = 326;</code>
+   */
+  public static final int SCREENSHOT_TEST_VALUE = 326;
 
 
   public final int getNumber() {
@@ -2978,6 +2986,7 @@ public enum GradleTaskExecutionType
       case 323: return VERIFY_LIBRARY_CLASSES;
       case 324: return EXTRACT_VERSION_CONTROL_INFO;
       case 325: return EXPAND_ART_PROFILE_WILDCARDS;
+      case 326: return SCREENSHOT_TEST;
       default: return null;
     }
   }

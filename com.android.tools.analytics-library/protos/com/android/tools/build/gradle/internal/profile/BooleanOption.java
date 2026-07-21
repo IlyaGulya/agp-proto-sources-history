@@ -38,8 +38,9 @@ public enum BooleanOption
    */
   ENABLE_SDK_DOWNLOAD(6),
   /**
-   * <code>ENABLE_TEST_SHARDING = 7;</code>
+   * <code>ENABLE_TEST_SHARDING = 7 [deprecated = true];</code>
    */
+  @java.lang.Deprecated
   ENABLE_TEST_SHARDING(7),
   /**
    * <code>ENABLE_DEX_ARCHIVE = 8;</code>
@@ -746,9 +747,9 @@ public enum BooleanOption
    */
   public static final int ENABLE_SDK_DOWNLOAD_VALUE = 6;
   /**
-   * <code>ENABLE_TEST_SHARDING = 7;</code>
+   * <code>ENABLE_TEST_SHARDING = 7 [deprecated = true];</code>
    */
-  public static final int ENABLE_TEST_SHARDING_VALUE = 7;
+  @java.lang.Deprecated public static final int ENABLE_TEST_SHARDING_VALUE = 7;
   /**
    * <code>ENABLE_DEX_ARCHIVE = 8;</code>
    */
