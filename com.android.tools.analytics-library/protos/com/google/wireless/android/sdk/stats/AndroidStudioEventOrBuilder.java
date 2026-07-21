@@ -6025,4 +6025,31 @@ public interface AndroidStudioEventOrBuilder extends
    * <code>optional .android_studio.SetupWizardEvent setup_wizard_event = 215 [lazy = true];</code>
    */
   com.google.wireless.android.sdk.stats.SetupWizardEventOrBuilder getSetupWizardEventOrBuilder();
+
+  /**
+   * <pre>
+   * set when kind = BROWSER_SURVEY_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.BrowserSurveyEvent browser_survey_event = 216 [lazy = true];</code>
+   * @return Whether the browserSurveyEvent field is set.
+   */
+  boolean hasBrowserSurveyEvent();
+  /**
+   * <pre>
+   * set when kind = BROWSER_SURVEY_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.BrowserSurveyEvent browser_survey_event = 216 [lazy = true];</code>
+   * @return The browserSurveyEvent.
+   */
+  com.google.wireless.android.sdk.stats.BrowserSurveyEvent getBrowserSurveyEvent();
+  /**
+   * <pre>
+   * set when kind = BROWSER_SURVEY_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.BrowserSurveyEvent browser_survey_event = 216 [lazy = true];</code>
+   */
+  com.google.wireless.android.sdk.stats.BrowserSurveyEventOrBuilder getBrowserSurveyEventOrBuilder();
 }

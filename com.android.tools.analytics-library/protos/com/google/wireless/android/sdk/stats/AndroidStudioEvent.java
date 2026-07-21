@@ -3192,6 +3192,14 @@ private static final long serialVersionUID = 0L;
      * <code>SETUP_WIZARD_EVENT = 334;</code>
      */
     SETUP_WIZARD_EVENT(334),
+    /**
+     * <pre>
+     * Event for tracking invocations of browser surveys
+     * </pre>
+     *
+     * <code>BROWSER_SURVEY_EVENT = 335;</code>
+     */
+    BROWSER_SURVEY_EVENT(335),
     ;
 
     /**
@@ -5693,6 +5701,14 @@ private static final long serialVersionUID = 0L;
      * <code>SETUP_WIZARD_EVENT = 334;</code>
      */
     public static final int SETUP_WIZARD_EVENT_VALUE = 334;
+    /**
+     * <pre>
+     * Event for tracking invocations of browser surveys
+     * </pre>
+     *
+     * <code>BROWSER_SURVEY_EVENT = 335;</code>
+     */
+    public static final int BROWSER_SURVEY_EVENT_VALUE = 335;
 
 
     public final int getNumber() {
@@ -6045,6 +6061,7 @@ private static final long serialVersionUID = 0L;
         case 332: return SDK_INDEX_LIBRARY_IS_DEPRECATED;
         case 333: return ADB_DELEGATE_USAGE_EVENT;
         case 334: return SETUP_WIZARD_EVENT;
+        case 335: return BROWSER_SURVEY_EVENT;
         default: return null;
       }
     }
@@ -11731,7 +11748,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional uint32 min_sdk = 2 [deprecated = true];</code>
        * @deprecated android_studio.AndroidStudioEvent.TemplatesUsage.TemplateModule.min_sdk is deprecated.
-       *     See studio_stats.proto;l=1936
+       *     See studio_stats.proto;l=1942
        * @return Whether the minSdk field is set.
        */
       @java.lang.Deprecated boolean hasMinSdk();
@@ -11742,7 +11759,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional uint32 min_sdk = 2 [deprecated = true];</code>
        * @deprecated android_studio.AndroidStudioEvent.TemplatesUsage.TemplateModule.min_sdk is deprecated.
-       *     See studio_stats.proto;l=1936
+       *     See studio_stats.proto;l=1942
        * @return The minSdk.
        */
       @java.lang.Deprecated int getMinSdk();
@@ -12273,7 +12290,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional uint32 min_sdk = 2 [deprecated = true];</code>
        * @deprecated android_studio.AndroidStudioEvent.TemplatesUsage.TemplateModule.min_sdk is deprecated.
-       *     See studio_stats.proto;l=1936
+       *     See studio_stats.proto;l=1942
        * @return Whether the minSdk field is set.
        */
       @java.lang.Override
@@ -12287,7 +12304,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional uint32 min_sdk = 2 [deprecated = true];</code>
        * @deprecated android_studio.AndroidStudioEvent.TemplatesUsage.TemplateModule.min_sdk is deprecated.
-       *     See studio_stats.proto;l=1936
+       *     See studio_stats.proto;l=1942
        * @return The minSdk.
        */
       @java.lang.Override
@@ -12925,7 +12942,7 @@ private static final long serialVersionUID = 0L;
          *
          * <code>optional uint32 min_sdk = 2 [deprecated = true];</code>
          * @deprecated android_studio.AndroidStudioEvent.TemplatesUsage.TemplateModule.min_sdk is deprecated.
-         *     See studio_stats.proto;l=1936
+         *     See studio_stats.proto;l=1942
          * @return Whether the minSdk field is set.
          */
         @java.lang.Override
@@ -12939,7 +12956,7 @@ private static final long serialVersionUID = 0L;
          *
          * <code>optional uint32 min_sdk = 2 [deprecated = true];</code>
          * @deprecated android_studio.AndroidStudioEvent.TemplatesUsage.TemplateModule.min_sdk is deprecated.
-         *     See studio_stats.proto;l=1936
+         *     See studio_stats.proto;l=1942
          * @return The minSdk.
          */
         @java.lang.Override
@@ -12953,7 +12970,7 @@ private static final long serialVersionUID = 0L;
          *
          * <code>optional uint32 min_sdk = 2 [deprecated = true];</code>
          * @deprecated android_studio.AndroidStudioEvent.TemplatesUsage.TemplateModule.min_sdk is deprecated.
-         *     See studio_stats.proto;l=1936
+         *     See studio_stats.proto;l=1942
          * @param value The minSdk to set.
          * @return This builder for chaining.
          */
@@ -12971,7 +12988,7 @@ private static final long serialVersionUID = 0L;
          *
          * <code>optional uint32 min_sdk = 2 [deprecated = true];</code>
          * @deprecated android_studio.AndroidStudioEvent.TemplatesUsage.TemplateModule.min_sdk is deprecated.
-         *     See studio_stats.proto;l=1936
+         *     See studio_stats.proto;l=1942
          * @return This builder for chaining.
          */
         @java.lang.Deprecated public Builder clearMinSdk() {
@@ -23844,6 +23861,44 @@ private static final long serialVersionUID = 0L;
     return setupWizardEvent_ == null ? com.google.wireless.android.sdk.stats.SetupWizardEvent.getDefaultInstance() : setupWizardEvent_;
   }
 
+  public static final int BROWSER_SURVEY_EVENT_FIELD_NUMBER = 216;
+  private com.google.wireless.android.sdk.stats.BrowserSurveyEvent browserSurveyEvent_;
+  /**
+   * <pre>
+   * set when kind = BROWSER_SURVEY_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.BrowserSurveyEvent browser_survey_event = 216 [lazy = true];</code>
+   * @return Whether the browserSurveyEvent field is set.
+   */
+  @java.lang.Override
+  public boolean hasBrowserSurveyEvent() {
+    return ((bitField6_ & 0x00020000) != 0);
+  }
+  /**
+   * <pre>
+   * set when kind = BROWSER_SURVEY_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.BrowserSurveyEvent browser_survey_event = 216 [lazy = true];</code>
+   * @return The browserSurveyEvent.
+   */
+  @java.lang.Override
+  public com.google.wireless.android.sdk.stats.BrowserSurveyEvent getBrowserSurveyEvent() {
+    return browserSurveyEvent_ == null ? com.google.wireless.android.sdk.stats.BrowserSurveyEvent.getDefaultInstance() : browserSurveyEvent_;
+  }
+  /**
+   * <pre>
+   * set when kind = BROWSER_SURVEY_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.BrowserSurveyEvent browser_survey_event = 216 [lazy = true];</code>
+   */
+  @java.lang.Override
+  public com.google.wireless.android.sdk.stats.BrowserSurveyEventOrBuilder getBrowserSurveyEventOrBuilder() {
+    return browserSurveyEvent_ == null ? com.google.wireless.android.sdk.stats.BrowserSurveyEvent.getDefaultInstance() : browserSurveyEvent_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -24502,6 +24557,9 @@ private static final long serialVersionUID = 0L;
     }
     if (((bitField6_ & 0x00010000) != 0)) {
       output.writeMessage(215, getSetupWizardEvent());
+    }
+    if (((bitField6_ & 0x00020000) != 0)) {
+      output.writeMessage(216, getBrowserSurveyEvent());
     }
     getUnknownFields().writeTo(output);
   }
@@ -25377,6 +25435,10 @@ private static final long serialVersionUID = 0L;
     if (((bitField6_ & 0x00010000) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(215, getSetupWizardEvent());
+    }
+    if (((bitField6_ & 0x00020000) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(216, getBrowserSurveyEvent());
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -26439,6 +26501,11 @@ private static final long serialVersionUID = 0L;
       if (!getSetupWizardEvent()
           .equals(other.getSetupWizardEvent())) return false;
     }
+    if (hasBrowserSurveyEvent() != other.hasBrowserSurveyEvent()) return false;
+    if (hasBrowserSurveyEvent()) {
+      if (!getBrowserSurveyEvent()
+          .equals(other.getBrowserSurveyEvent())) return false;
+    }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -27312,6 +27379,10 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + SETUP_WIZARD_EVENT_FIELD_NUMBER;
       hash = (53 * hash) + getSetupWizardEvent().hashCode();
     }
+    if (hasBrowserSurveyEvent()) {
+      hash = (37 * hash) + BROWSER_SURVEY_EVENT_FIELD_NUMBER;
+      hash = (53 * hash) + getBrowserSurveyEvent().hashCode();
+    }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -27632,6 +27703,7 @@ private static final long serialVersionUID = 0L;
         getGradleFailureDetailsFieldBuilder();
         getAdbDelegateUsageEventFieldBuilder();
         getSetupWizardEventFieldBuilder();
+        getBrowserSurveyEventFieldBuilder();
       }
     }
     @java.lang.Override
@@ -28635,6 +28707,11 @@ private static final long serialVersionUID = 0L;
       if (setupWizardEventBuilder_ != null) {
         setupWizardEventBuilder_.dispose();
         setupWizardEventBuilder_ = null;
+      }
+      browserSurveyEvent_ = null;
+      if (browserSurveyEventBuilder_ != null) {
+        browserSurveyEventBuilder_.dispose();
+        browserSurveyEventBuilder_ = null;
       }
       return this;
     }
@@ -29977,6 +30054,12 @@ private static final long serialVersionUID = 0L;
             : setupWizardEventBuilder_.build();
         to_bitField6_ |= 0x00010000;
       }
+      if (((from_bitField6_ & 0x00800000) != 0)) {
+        result.browserSurveyEvent_ = browserSurveyEventBuilder_ == null
+            ? browserSurveyEvent_
+            : browserSurveyEventBuilder_.build();
+        to_bitField6_ |= 0x00020000;
+      }
       result.bitField5_ |= to_bitField5_;
       result.bitField6_ |= to_bitField6_;
     }
@@ -30741,6 +30824,9 @@ private static final long serialVersionUID = 0L;
       }
       if (other.hasSetupWizardEvent()) {
         mergeSetupWizardEvent(other.getSetupWizardEvent());
+      }
+      if (other.hasBrowserSurveyEvent()) {
+        mergeBrowserSurveyEvent(other.getBrowserSurveyEvent());
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -32341,6 +32427,13 @@ private static final long serialVersionUID = 0L;
               bitField6_ |= 0x00400000;
               break;
             } // case 1722
+            case 1730: {
+              input.readMessage(
+                  getBrowserSurveyEventFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField6_ |= 0x00800000;
+              break;
+            } // case 1730
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -65025,6 +65118,161 @@ private static final long serialVersionUID = 0L;
         setupWizardEvent_ = null;
       }
       return setupWizardEventBuilder_;
+    }
+
+    private com.google.wireless.android.sdk.stats.BrowserSurveyEvent browserSurveyEvent_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.BrowserSurveyEvent, com.google.wireless.android.sdk.stats.BrowserSurveyEvent.Builder, com.google.wireless.android.sdk.stats.BrowserSurveyEventOrBuilder> browserSurveyEventBuilder_;
+    /**
+     * <pre>
+     * set when kind = BROWSER_SURVEY_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.BrowserSurveyEvent browser_survey_event = 216 [lazy = true];</code>
+     * @return Whether the browserSurveyEvent field is set.
+     */
+    public boolean hasBrowserSurveyEvent() {
+      return ((bitField6_ & 0x00800000) != 0);
+    }
+    /**
+     * <pre>
+     * set when kind = BROWSER_SURVEY_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.BrowserSurveyEvent browser_survey_event = 216 [lazy = true];</code>
+     * @return The browserSurveyEvent.
+     */
+    public com.google.wireless.android.sdk.stats.BrowserSurveyEvent getBrowserSurveyEvent() {
+      if (browserSurveyEventBuilder_ == null) {
+        return browserSurveyEvent_ == null ? com.google.wireless.android.sdk.stats.BrowserSurveyEvent.getDefaultInstance() : browserSurveyEvent_;
+      } else {
+        return browserSurveyEventBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * set when kind = BROWSER_SURVEY_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.BrowserSurveyEvent browser_survey_event = 216 [lazy = true];</code>
+     */
+    public Builder setBrowserSurveyEvent(com.google.wireless.android.sdk.stats.BrowserSurveyEvent value) {
+      if (browserSurveyEventBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        browserSurveyEvent_ = value;
+      } else {
+        browserSurveyEventBuilder_.setMessage(value);
+      }
+      bitField6_ |= 0x00800000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = BROWSER_SURVEY_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.BrowserSurveyEvent browser_survey_event = 216 [lazy = true];</code>
+     */
+    public Builder setBrowserSurveyEvent(
+        com.google.wireless.android.sdk.stats.BrowserSurveyEvent.Builder builderForValue) {
+      if (browserSurveyEventBuilder_ == null) {
+        browserSurveyEvent_ = builderForValue.build();
+      } else {
+        browserSurveyEventBuilder_.setMessage(builderForValue.build());
+      }
+      bitField6_ |= 0x00800000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = BROWSER_SURVEY_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.BrowserSurveyEvent browser_survey_event = 216 [lazy = true];</code>
+     */
+    public Builder mergeBrowserSurveyEvent(com.google.wireless.android.sdk.stats.BrowserSurveyEvent value) {
+      if (browserSurveyEventBuilder_ == null) {
+        if (((bitField6_ & 0x00800000) != 0) &&
+          browserSurveyEvent_ != null &&
+          browserSurveyEvent_ != com.google.wireless.android.sdk.stats.BrowserSurveyEvent.getDefaultInstance()) {
+          getBrowserSurveyEventBuilder().mergeFrom(value);
+        } else {
+          browserSurveyEvent_ = value;
+        }
+      } else {
+        browserSurveyEventBuilder_.mergeFrom(value);
+      }
+      bitField6_ |= 0x00800000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = BROWSER_SURVEY_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.BrowserSurveyEvent browser_survey_event = 216 [lazy = true];</code>
+     */
+    public Builder clearBrowserSurveyEvent() {
+      bitField6_ = (bitField6_ & ~0x00800000);
+      browserSurveyEvent_ = null;
+      if (browserSurveyEventBuilder_ != null) {
+        browserSurveyEventBuilder_.dispose();
+        browserSurveyEventBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = BROWSER_SURVEY_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.BrowserSurveyEvent browser_survey_event = 216 [lazy = true];</code>
+     */
+    public com.google.wireless.android.sdk.stats.BrowserSurveyEvent.Builder getBrowserSurveyEventBuilder() {
+      bitField6_ |= 0x00800000;
+      onChanged();
+      return getBrowserSurveyEventFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * set when kind = BROWSER_SURVEY_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.BrowserSurveyEvent browser_survey_event = 216 [lazy = true];</code>
+     */
+    public com.google.wireless.android.sdk.stats.BrowserSurveyEventOrBuilder getBrowserSurveyEventOrBuilder() {
+      if (browserSurveyEventBuilder_ != null) {
+        return browserSurveyEventBuilder_.getMessageOrBuilder();
+      } else {
+        return browserSurveyEvent_ == null ?
+            com.google.wireless.android.sdk.stats.BrowserSurveyEvent.getDefaultInstance() : browserSurveyEvent_;
+      }
+    }
+    /**
+     * <pre>
+     * set when kind = BROWSER_SURVEY_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.BrowserSurveyEvent browser_survey_event = 216 [lazy = true];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.BrowserSurveyEvent, com.google.wireless.android.sdk.stats.BrowserSurveyEvent.Builder, com.google.wireless.android.sdk.stats.BrowserSurveyEventOrBuilder> 
+        getBrowserSurveyEventFieldBuilder() {
+      if (browserSurveyEventBuilder_ == null) {
+        browserSurveyEventBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.wireless.android.sdk.stats.BrowserSurveyEvent, com.google.wireless.android.sdk.stats.BrowserSurveyEvent.Builder, com.google.wireless.android.sdk.stats.BrowserSurveyEventOrBuilder>(
+                getBrowserSurveyEvent(),
+                getParentForChildren(),
+                isClean());
+        browserSurveyEvent_ = null;
+      }
+      return browserSurveyEventBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(
