@@ -41,6 +41,7 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.LazyStringArrayList.emptyList();
     projectIds_ =
         com.google.protobuf.LazyStringArrayList.emptyList();
+    emulatorConsoleEvents_ = java.util.Collections.emptyList();
   }
 
   @java.lang.Override
@@ -3426,6 +3427,38 @@ private static final long serialVersionUID = 0L;
      * <code>USER_TIER_UPGRADE_EVENT = 364;</code>
      */
     USER_TIER_UPGRADE_EVENT(364),
+    /**
+     * <pre>
+     * Event related to the Render Tool API.
+     * </pre>
+     *
+     * <code>RENDER_TOOL_EVENT = 365;</code>
+     */
+    RENDER_TOOL_EVENT(365),
+    /**
+     * <pre>
+     * Event related to onboarding triggered by the quick-edit feature.
+     * </pre>
+     *
+     * <code>QUICK_EDIT_ONBOARDING = 366;</code>
+     */
+    QUICK_EDIT_ONBOARDING(366),
+    /**
+     * <pre>
+     * Event related to console emulator events.
+     * </pre>
+     *
+     * <code>EMULATOR_CONSOLE_EVENTS = 367;</code>
+     */
+    EMULATOR_CONSOLE_EVENTS(367),
+    /**
+     * <pre>
+     * Event related to auto opening the Studio Bot tool window on first run.
+     * </pre>
+     *
+     * <code>STUDIO_BOT_TOOL_WINDOW_AUTO_OPEN_EVENT = 368;</code>
+     */
+    STUDIO_BOT_TOOL_WINDOW_AUTO_OPEN_EVENT(368),
     ;
 
     /**
@@ -6161,6 +6194,38 @@ private static final long serialVersionUID = 0L;
      * <code>USER_TIER_UPGRADE_EVENT = 364;</code>
      */
     public static final int USER_TIER_UPGRADE_EVENT_VALUE = 364;
+    /**
+     * <pre>
+     * Event related to the Render Tool API.
+     * </pre>
+     *
+     * <code>RENDER_TOOL_EVENT = 365;</code>
+     */
+    public static final int RENDER_TOOL_EVENT_VALUE = 365;
+    /**
+     * <pre>
+     * Event related to onboarding triggered by the quick-edit feature.
+     * </pre>
+     *
+     * <code>QUICK_EDIT_ONBOARDING = 366;</code>
+     */
+    public static final int QUICK_EDIT_ONBOARDING_VALUE = 366;
+    /**
+     * <pre>
+     * Event related to console emulator events.
+     * </pre>
+     *
+     * <code>EMULATOR_CONSOLE_EVENTS = 367;</code>
+     */
+    public static final int EMULATOR_CONSOLE_EVENTS_VALUE = 367;
+    /**
+     * <pre>
+     * Event related to auto opening the Studio Bot tool window on first run.
+     * </pre>
+     *
+     * <code>STUDIO_BOT_TOOL_WINDOW_AUTO_OPEN_EVENT = 368;</code>
+     */
+    public static final int STUDIO_BOT_TOOL_WINDOW_AUTO_OPEN_EVENT_VALUE = 368;
 
 
     public final int getNumber() {
@@ -6543,6 +6608,10 @@ private static final long serialVersionUID = 0L;
         case 362: return GLASSES_PAIRING_EVENT;
         case 363: return SERVER_PUSH_NOTIFICATION_EVENT;
         case 364: return USER_TIER_UPGRADE_EVENT;
+        case 365: return RENDER_TOOL_EVENT;
+        case 366: return QUICK_EDIT_ONBOARDING;
+        case 367: return EMULATOR_CONSOLE_EVENTS;
+        case 368: return STUDIO_BOT_TOOL_WINDOW_AUTO_OPEN_EVENT;
         default: return null;
       }
     }
@@ -12312,7 +12381,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional uint32 min_sdk = 2 [deprecated = true];</code>
        * @deprecated android_studio.AndroidStudioEvent.TemplatesUsage.TemplateModule.min_sdk is deprecated.
-       *     See studio_stats.proto;l=2133
+       *     See studio_stats.proto;l=2155
        * @return Whether the minSdk field is set.
        */
       @java.lang.Deprecated boolean hasMinSdk();
@@ -12323,7 +12392,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional uint32 min_sdk = 2 [deprecated = true];</code>
        * @deprecated android_studio.AndroidStudioEvent.TemplatesUsage.TemplateModule.min_sdk is deprecated.
-       *     See studio_stats.proto;l=2133
+       *     See studio_stats.proto;l=2155
        * @return The minSdk.
        */
       @java.lang.Deprecated int getMinSdk();
@@ -12854,7 +12923,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional uint32 min_sdk = 2 [deprecated = true];</code>
        * @deprecated android_studio.AndroidStudioEvent.TemplatesUsage.TemplateModule.min_sdk is deprecated.
-       *     See studio_stats.proto;l=2133
+       *     See studio_stats.proto;l=2155
        * @return Whether the minSdk field is set.
        */
       @java.lang.Override
@@ -12868,7 +12937,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional uint32 min_sdk = 2 [deprecated = true];</code>
        * @deprecated android_studio.AndroidStudioEvent.TemplatesUsage.TemplateModule.min_sdk is deprecated.
-       *     See studio_stats.proto;l=2133
+       *     See studio_stats.proto;l=2155
        * @return The minSdk.
        */
       @java.lang.Override
@@ -13506,7 +13575,7 @@ private static final long serialVersionUID = 0L;
          *
          * <code>optional uint32 min_sdk = 2 [deprecated = true];</code>
          * @deprecated android_studio.AndroidStudioEvent.TemplatesUsage.TemplateModule.min_sdk is deprecated.
-         *     See studio_stats.proto;l=2133
+         *     See studio_stats.proto;l=2155
          * @return Whether the minSdk field is set.
          */
         @java.lang.Override
@@ -13520,7 +13589,7 @@ private static final long serialVersionUID = 0L;
          *
          * <code>optional uint32 min_sdk = 2 [deprecated = true];</code>
          * @deprecated android_studio.AndroidStudioEvent.TemplatesUsage.TemplateModule.min_sdk is deprecated.
-         *     See studio_stats.proto;l=2133
+         *     See studio_stats.proto;l=2155
          * @return The minSdk.
          */
         @java.lang.Override
@@ -13534,7 +13603,7 @@ private static final long serialVersionUID = 0L;
          *
          * <code>optional uint32 min_sdk = 2 [deprecated = true];</code>
          * @deprecated android_studio.AndroidStudioEvent.TemplatesUsage.TemplateModule.min_sdk is deprecated.
-         *     See studio_stats.proto;l=2133
+         *     See studio_stats.proto;l=2155
          * @param value The minSdk to set.
          * @return This builder for chaining.
          */
@@ -13552,7 +13621,7 @@ private static final long serialVersionUID = 0L;
          *
          * <code>optional uint32 min_sdk = 2 [deprecated = true];</code>
          * @deprecated android_studio.AndroidStudioEvent.TemplatesUsage.TemplateModule.min_sdk is deprecated.
-         *     See studio_stats.proto;l=2133
+         *     See studio_stats.proto;l=2155
          * @return This builder for chaining.
          */
         @java.lang.Deprecated public Builder clearMinSdk() {
@@ -25566,6 +25635,143 @@ private static final long serialVersionUID = 0L;
     return userTierUpgradeEvent_ == null ? com.google.wireless.android.sdk.stats.UserTierUpgradeEvent.getDefaultInstance() : userTierUpgradeEvent_;
   }
 
+  public static final int RENDER_TOOL_EVENT_FIELD_NUMBER = 246;
+  private com.google.wireless.android.sdk.stats.RenderToolEvent renderToolEvent_;
+  /**
+   * <pre>
+   * set when kind = RENDER_TOOL_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.RenderToolEvent render_tool_event = 246 [lazy = true];</code>
+   * @return Whether the renderToolEvent field is set.
+   */
+  @java.lang.Override
+  public boolean hasRenderToolEvent() {
+    return ((bitField7_ & 0x00008000) != 0);
+  }
+  /**
+   * <pre>
+   * set when kind = RENDER_TOOL_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.RenderToolEvent render_tool_event = 246 [lazy = true];</code>
+   * @return The renderToolEvent.
+   */
+  @java.lang.Override
+  public com.google.wireless.android.sdk.stats.RenderToolEvent getRenderToolEvent() {
+    return renderToolEvent_ == null ? com.google.wireless.android.sdk.stats.RenderToolEvent.getDefaultInstance() : renderToolEvent_;
+  }
+  /**
+   * <pre>
+   * set when kind = RENDER_TOOL_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.RenderToolEvent render_tool_event = 246 [lazy = true];</code>
+   */
+  @java.lang.Override
+  public com.google.wireless.android.sdk.stats.RenderToolEventOrBuilder getRenderToolEventOrBuilder() {
+    return renderToolEvent_ == null ? com.google.wireless.android.sdk.stats.RenderToolEvent.getDefaultInstance() : renderToolEvent_;
+  }
+
+  public static final int EMULATOR_CONSOLE_EVENTS_FIELD_NUMBER = 247;
+  @SuppressWarnings("serial")
+  private java.util.List<com.google.wireless.android.sdk.stats.EmulatorConsoleEvent> emulatorConsoleEvents_;
+  /**
+   * <pre>
+   * set when kind = EMULATOR_CONSOLE_EVENTS
+   * </pre>
+   *
+   * <code>repeated .android_studio.EmulatorConsoleEvent emulator_console_events = 247;</code>
+   */
+  @java.lang.Override
+  public java.util.List<com.google.wireless.android.sdk.stats.EmulatorConsoleEvent> getEmulatorConsoleEventsList() {
+    return emulatorConsoleEvents_;
+  }
+  /**
+   * <pre>
+   * set when kind = EMULATOR_CONSOLE_EVENTS
+   * </pre>
+   *
+   * <code>repeated .android_studio.EmulatorConsoleEvent emulator_console_events = 247;</code>
+   */
+  @java.lang.Override
+  public java.util.List<? extends com.google.wireless.android.sdk.stats.EmulatorConsoleEventOrBuilder> 
+      getEmulatorConsoleEventsOrBuilderList() {
+    return emulatorConsoleEvents_;
+  }
+  /**
+   * <pre>
+   * set when kind = EMULATOR_CONSOLE_EVENTS
+   * </pre>
+   *
+   * <code>repeated .android_studio.EmulatorConsoleEvent emulator_console_events = 247;</code>
+   */
+  @java.lang.Override
+  public int getEmulatorConsoleEventsCount() {
+    return emulatorConsoleEvents_.size();
+  }
+  /**
+   * <pre>
+   * set when kind = EMULATOR_CONSOLE_EVENTS
+   * </pre>
+   *
+   * <code>repeated .android_studio.EmulatorConsoleEvent emulator_console_events = 247;</code>
+   */
+  @java.lang.Override
+  public com.google.wireless.android.sdk.stats.EmulatorConsoleEvent getEmulatorConsoleEvents(int index) {
+    return emulatorConsoleEvents_.get(index);
+  }
+  /**
+   * <pre>
+   * set when kind = EMULATOR_CONSOLE_EVENTS
+   * </pre>
+   *
+   * <code>repeated .android_studio.EmulatorConsoleEvent emulator_console_events = 247;</code>
+   */
+  @java.lang.Override
+  public com.google.wireless.android.sdk.stats.EmulatorConsoleEventOrBuilder getEmulatorConsoleEventsOrBuilder(
+      int index) {
+    return emulatorConsoleEvents_.get(index);
+  }
+
+  public static final int STUDIO_BOT_TOOL_WINDOW_AUTO_OPEN_EVENT_FIELD_NUMBER = 248;
+  private com.google.wireless.android.sdk.stats.StudioBotToolWindowAutoOpenEvent studioBotToolWindowAutoOpenEvent_;
+  /**
+   * <pre>
+   * set when kind = STUDIO_BOT_TOOL_WINDOW_AUTO_OPEN_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.StudioBotToolWindowAutoOpenEvent studio_bot_tool_window_auto_open_event = 248 [lazy = true];</code>
+   * @return Whether the studioBotToolWindowAutoOpenEvent field is set.
+   */
+  @java.lang.Override
+  public boolean hasStudioBotToolWindowAutoOpenEvent() {
+    return ((bitField7_ & 0x00010000) != 0);
+  }
+  /**
+   * <pre>
+   * set when kind = STUDIO_BOT_TOOL_WINDOW_AUTO_OPEN_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.StudioBotToolWindowAutoOpenEvent studio_bot_tool_window_auto_open_event = 248 [lazy = true];</code>
+   * @return The studioBotToolWindowAutoOpenEvent.
+   */
+  @java.lang.Override
+  public com.google.wireless.android.sdk.stats.StudioBotToolWindowAutoOpenEvent getStudioBotToolWindowAutoOpenEvent() {
+    return studioBotToolWindowAutoOpenEvent_ == null ? com.google.wireless.android.sdk.stats.StudioBotToolWindowAutoOpenEvent.getDefaultInstance() : studioBotToolWindowAutoOpenEvent_;
+  }
+  /**
+   * <pre>
+   * set when kind = STUDIO_BOT_TOOL_WINDOW_AUTO_OPEN_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.StudioBotToolWindowAutoOpenEvent studio_bot_tool_window_auto_open_event = 248 [lazy = true];</code>
+   */
+  @java.lang.Override
+  public com.google.wireless.android.sdk.stats.StudioBotToolWindowAutoOpenEventOrBuilder getStudioBotToolWindowAutoOpenEventOrBuilder() {
+    return studioBotToolWindowAutoOpenEvent_ == null ? com.google.wireless.android.sdk.stats.StudioBotToolWindowAutoOpenEvent.getDefaultInstance() : studioBotToolWindowAutoOpenEvent_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -26314,6 +26520,15 @@ private static final long serialVersionUID = 0L;
     }
     if (((bitField7_ & 0x00004000) != 0)) {
       output.writeMessage(245, getUserTierUpgradeEvent());
+    }
+    if (((bitField7_ & 0x00008000) != 0)) {
+      output.writeMessage(246, getRenderToolEvent());
+    }
+    for (int i = 0; i < emulatorConsoleEvents_.size(); i++) {
+      output.writeMessage(247, emulatorConsoleEvents_.get(i));
+    }
+    if (((bitField7_ & 0x00010000) != 0)) {
+      output.writeMessage(248, getStudioBotToolWindowAutoOpenEvent());
     }
     getUnknownFields().writeTo(output);
   }
@@ -27309,6 +27524,18 @@ private static final long serialVersionUID = 0L;
     if (((bitField7_ & 0x00004000) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(245, getUserTierUpgradeEvent());
+    }
+    if (((bitField7_ & 0x00008000) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(246, getRenderToolEvent());
+    }
+    for (int i = 0; i < emulatorConsoleEvents_.size(); i++) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(247, emulatorConsoleEvents_.get(i));
+    }
+    if (((bitField7_ & 0x00010000) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(248, getStudioBotToolWindowAutoOpenEvent());
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -28521,6 +28748,18 @@ private static final long serialVersionUID = 0L;
       if (!getUserTierUpgradeEvent()
           .equals(other.getUserTierUpgradeEvent())) return false;
     }
+    if (hasRenderToolEvent() != other.hasRenderToolEvent()) return false;
+    if (hasRenderToolEvent()) {
+      if (!getRenderToolEvent()
+          .equals(other.getRenderToolEvent())) return false;
+    }
+    if (!getEmulatorConsoleEventsList()
+        .equals(other.getEmulatorConsoleEventsList())) return false;
+    if (hasStudioBotToolWindowAutoOpenEvent() != other.hasStudioBotToolWindowAutoOpenEvent()) return false;
+    if (hasStudioBotToolWindowAutoOpenEvent()) {
+      if (!getStudioBotToolWindowAutoOpenEvent()
+          .equals(other.getStudioBotToolWindowAutoOpenEvent())) return false;
+    }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -29514,6 +29753,18 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + USER_TIER_UPGRADE_EVENT_FIELD_NUMBER;
       hash = (53 * hash) + getUserTierUpgradeEvent().hashCode();
     }
+    if (hasRenderToolEvent()) {
+      hash = (37 * hash) + RENDER_TOOL_EVENT_FIELD_NUMBER;
+      hash = (53 * hash) + getRenderToolEvent().hashCode();
+    }
+    if (getEmulatorConsoleEventsCount() > 0) {
+      hash = (37 * hash) + EMULATOR_CONSOLE_EVENTS_FIELD_NUMBER;
+      hash = (53 * hash) + getEmulatorConsoleEventsList().hashCode();
+    }
+    if (hasStudioBotToolWindowAutoOpenEvent()) {
+      hash = (37 * hash) + STUDIO_BOT_TOOL_WINDOW_AUTO_OPEN_EVENT_FIELD_NUMBER;
+      hash = (53 * hash) + getStudioBotToolWindowAutoOpenEvent().hashCode();
+    }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -29864,6 +30115,9 @@ private static final long serialVersionUID = 0L;
         getGlassesPairingEventFieldBuilder();
         getServerPushNotificationEventFieldBuilder();
         getUserTierUpgradeEventFieldBuilder();
+        getRenderToolEventFieldBuilder();
+        getEmulatorConsoleEventsFieldBuilder();
+        getStudioBotToolWindowAutoOpenEventFieldBuilder();
       }
     }
     @java.lang.Override
@@ -31019,6 +31273,23 @@ private static final long serialVersionUID = 0L;
         userTierUpgradeEventBuilder_.dispose();
         userTierUpgradeEventBuilder_ = null;
       }
+      renderToolEvent_ = null;
+      if (renderToolEventBuilder_ != null) {
+        renderToolEventBuilder_.dispose();
+        renderToolEventBuilder_ = null;
+      }
+      if (emulatorConsoleEventsBuilder_ == null) {
+        emulatorConsoleEvents_ = java.util.Collections.emptyList();
+      } else {
+        emulatorConsoleEvents_ = null;
+        emulatorConsoleEventsBuilder_.clear();
+      }
+      bitField7_ = (bitField7_ & ~0x00400000);
+      studioBotToolWindowAutoOpenEvent_ = null;
+      if (studioBotToolWindowAutoOpenEventBuilder_ != null) {
+        studioBotToolWindowAutoOpenEventBuilder_.dispose();
+        studioBotToolWindowAutoOpenEventBuilder_ = null;
+      }
       return this;
     }
 
@@ -31090,6 +31361,15 @@ private static final long serialVersionUID = 0L;
         result.emulatorUiEvents_ = emulatorUiEvents_;
       } else {
         result.emulatorUiEvents_ = emulatorUiEventsBuilder_.build();
+      }
+      if (emulatorConsoleEventsBuilder_ == null) {
+        if (((bitField7_ & 0x00400000) != 0)) {
+          emulatorConsoleEvents_ = java.util.Collections.unmodifiableList(emulatorConsoleEvents_);
+          bitField7_ = (bitField7_ & ~0x00400000);
+        }
+        result.emulatorConsoleEvents_ = emulatorConsoleEvents_;
+      } else {
+        result.emulatorConsoleEvents_ = emulatorConsoleEventsBuilder_.build();
       }
     }
 
@@ -32549,6 +32829,18 @@ private static final long serialVersionUID = 0L;
             : userTierUpgradeEventBuilder_.build();
         to_bitField7_ |= 0x00004000;
       }
+      if (((from_bitField7_ & 0x00200000) != 0)) {
+        result.renderToolEvent_ = renderToolEventBuilder_ == null
+            ? renderToolEvent_
+            : renderToolEventBuilder_.build();
+        to_bitField7_ |= 0x00008000;
+      }
+      if (((from_bitField7_ & 0x00800000) != 0)) {
+        result.studioBotToolWindowAutoOpenEvent_ = studioBotToolWindowAutoOpenEventBuilder_ == null
+            ? studioBotToolWindowAutoOpenEvent_
+            : studioBotToolWindowAutoOpenEventBuilder_.build();
+        to_bitField7_ |= 0x00010000;
+      }
       result.bitField6_ |= to_bitField6_;
       result.bitField7_ |= to_bitField7_;
     }
@@ -33403,6 +33695,38 @@ private static final long serialVersionUID = 0L;
       }
       if (other.hasUserTierUpgradeEvent()) {
         mergeUserTierUpgradeEvent(other.getUserTierUpgradeEvent());
+      }
+      if (other.hasRenderToolEvent()) {
+        mergeRenderToolEvent(other.getRenderToolEvent());
+      }
+      if (emulatorConsoleEventsBuilder_ == null) {
+        if (!other.emulatorConsoleEvents_.isEmpty()) {
+          if (emulatorConsoleEvents_.isEmpty()) {
+            emulatorConsoleEvents_ = other.emulatorConsoleEvents_;
+            bitField7_ = (bitField7_ & ~0x00400000);
+          } else {
+            ensureEmulatorConsoleEventsIsMutable();
+            emulatorConsoleEvents_.addAll(other.emulatorConsoleEvents_);
+          }
+          onChanged();
+        }
+      } else {
+        if (!other.emulatorConsoleEvents_.isEmpty()) {
+          if (emulatorConsoleEventsBuilder_.isEmpty()) {
+            emulatorConsoleEventsBuilder_.dispose();
+            emulatorConsoleEventsBuilder_ = null;
+            emulatorConsoleEvents_ = other.emulatorConsoleEvents_;
+            bitField7_ = (bitField7_ & ~0x00400000);
+            emulatorConsoleEventsBuilder_ = 
+              com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                 getEmulatorConsoleEventsFieldBuilder() : null;
+          } else {
+            emulatorConsoleEventsBuilder_.addAllMessages(other.emulatorConsoleEvents_);
+          }
+        }
+      }
+      if (other.hasStudioBotToolWindowAutoOpenEvent()) {
+        mergeStudioBotToolWindowAutoOpenEvent(other.getStudioBotToolWindowAutoOpenEvent());
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -35213,6 +35537,33 @@ private static final long serialVersionUID = 0L;
               bitField7_ |= 0x00100000;
               break;
             } // case 1962
+            case 1970: {
+              input.readMessage(
+                  getRenderToolEventFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField7_ |= 0x00200000;
+              break;
+            } // case 1970
+            case 1978: {
+              com.google.wireless.android.sdk.stats.EmulatorConsoleEvent m =
+                  input.readMessage(
+                      com.google.wireless.android.sdk.stats.EmulatorConsoleEvent.PARSER,
+                      extensionRegistry);
+              if (emulatorConsoleEventsBuilder_ == null) {
+                ensureEmulatorConsoleEventsIsMutable();
+                emulatorConsoleEvents_.add(m);
+              } else {
+                emulatorConsoleEventsBuilder_.addMessage(m);
+              }
+              break;
+            } // case 1978
+            case 1986: {
+              input.readMessage(
+                  getStudioBotToolWindowAutoOpenEventFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField7_ |= 0x00800000;
+              break;
+            } // case 1986
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -72548,6 +72899,628 @@ private static final long serialVersionUID = 0L;
         userTierUpgradeEvent_ = null;
       }
       return userTierUpgradeEventBuilder_;
+    }
+
+    private com.google.wireless.android.sdk.stats.RenderToolEvent renderToolEvent_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.RenderToolEvent, com.google.wireless.android.sdk.stats.RenderToolEvent.Builder, com.google.wireless.android.sdk.stats.RenderToolEventOrBuilder> renderToolEventBuilder_;
+    /**
+     * <pre>
+     * set when kind = RENDER_TOOL_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.RenderToolEvent render_tool_event = 246 [lazy = true];</code>
+     * @return Whether the renderToolEvent field is set.
+     */
+    public boolean hasRenderToolEvent() {
+      return ((bitField7_ & 0x00200000) != 0);
+    }
+    /**
+     * <pre>
+     * set when kind = RENDER_TOOL_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.RenderToolEvent render_tool_event = 246 [lazy = true];</code>
+     * @return The renderToolEvent.
+     */
+    public com.google.wireless.android.sdk.stats.RenderToolEvent getRenderToolEvent() {
+      if (renderToolEventBuilder_ == null) {
+        return renderToolEvent_ == null ? com.google.wireless.android.sdk.stats.RenderToolEvent.getDefaultInstance() : renderToolEvent_;
+      } else {
+        return renderToolEventBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * set when kind = RENDER_TOOL_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.RenderToolEvent render_tool_event = 246 [lazy = true];</code>
+     */
+    public Builder setRenderToolEvent(com.google.wireless.android.sdk.stats.RenderToolEvent value) {
+      if (renderToolEventBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        renderToolEvent_ = value;
+      } else {
+        renderToolEventBuilder_.setMessage(value);
+      }
+      bitField7_ |= 0x00200000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = RENDER_TOOL_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.RenderToolEvent render_tool_event = 246 [lazy = true];</code>
+     */
+    public Builder setRenderToolEvent(
+        com.google.wireless.android.sdk.stats.RenderToolEvent.Builder builderForValue) {
+      if (renderToolEventBuilder_ == null) {
+        renderToolEvent_ = builderForValue.build();
+      } else {
+        renderToolEventBuilder_.setMessage(builderForValue.build());
+      }
+      bitField7_ |= 0x00200000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = RENDER_TOOL_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.RenderToolEvent render_tool_event = 246 [lazy = true];</code>
+     */
+    public Builder mergeRenderToolEvent(com.google.wireless.android.sdk.stats.RenderToolEvent value) {
+      if (renderToolEventBuilder_ == null) {
+        if (((bitField7_ & 0x00200000) != 0) &&
+          renderToolEvent_ != null &&
+          renderToolEvent_ != com.google.wireless.android.sdk.stats.RenderToolEvent.getDefaultInstance()) {
+          getRenderToolEventBuilder().mergeFrom(value);
+        } else {
+          renderToolEvent_ = value;
+        }
+      } else {
+        renderToolEventBuilder_.mergeFrom(value);
+      }
+      bitField7_ |= 0x00200000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = RENDER_TOOL_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.RenderToolEvent render_tool_event = 246 [lazy = true];</code>
+     */
+    public Builder clearRenderToolEvent() {
+      bitField7_ = (bitField7_ & ~0x00200000);
+      renderToolEvent_ = null;
+      if (renderToolEventBuilder_ != null) {
+        renderToolEventBuilder_.dispose();
+        renderToolEventBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = RENDER_TOOL_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.RenderToolEvent render_tool_event = 246 [lazy = true];</code>
+     */
+    public com.google.wireless.android.sdk.stats.RenderToolEvent.Builder getRenderToolEventBuilder() {
+      bitField7_ |= 0x00200000;
+      onChanged();
+      return getRenderToolEventFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * set when kind = RENDER_TOOL_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.RenderToolEvent render_tool_event = 246 [lazy = true];</code>
+     */
+    public com.google.wireless.android.sdk.stats.RenderToolEventOrBuilder getRenderToolEventOrBuilder() {
+      if (renderToolEventBuilder_ != null) {
+        return renderToolEventBuilder_.getMessageOrBuilder();
+      } else {
+        return renderToolEvent_ == null ?
+            com.google.wireless.android.sdk.stats.RenderToolEvent.getDefaultInstance() : renderToolEvent_;
+      }
+    }
+    /**
+     * <pre>
+     * set when kind = RENDER_TOOL_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.RenderToolEvent render_tool_event = 246 [lazy = true];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.RenderToolEvent, com.google.wireless.android.sdk.stats.RenderToolEvent.Builder, com.google.wireless.android.sdk.stats.RenderToolEventOrBuilder> 
+        getRenderToolEventFieldBuilder() {
+      if (renderToolEventBuilder_ == null) {
+        renderToolEventBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.wireless.android.sdk.stats.RenderToolEvent, com.google.wireless.android.sdk.stats.RenderToolEvent.Builder, com.google.wireless.android.sdk.stats.RenderToolEventOrBuilder>(
+                getRenderToolEvent(),
+                getParentForChildren(),
+                isClean());
+        renderToolEvent_ = null;
+      }
+      return renderToolEventBuilder_;
+    }
+
+    private java.util.List<com.google.wireless.android.sdk.stats.EmulatorConsoleEvent> emulatorConsoleEvents_ =
+      java.util.Collections.emptyList();
+    private void ensureEmulatorConsoleEventsIsMutable() {
+      if (!((bitField7_ & 0x00400000) != 0)) {
+        emulatorConsoleEvents_ = new java.util.ArrayList<com.google.wireless.android.sdk.stats.EmulatorConsoleEvent>(emulatorConsoleEvents_);
+        bitField7_ |= 0x00400000;
+       }
+    }
+
+    private com.google.protobuf.RepeatedFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.EmulatorConsoleEvent, com.google.wireless.android.sdk.stats.EmulatorConsoleEvent.Builder, com.google.wireless.android.sdk.stats.EmulatorConsoleEventOrBuilder> emulatorConsoleEventsBuilder_;
+
+    /**
+     * <pre>
+     * set when kind = EMULATOR_CONSOLE_EVENTS
+     * </pre>
+     *
+     * <code>repeated .android_studio.EmulatorConsoleEvent emulator_console_events = 247;</code>
+     */
+    public java.util.List<com.google.wireless.android.sdk.stats.EmulatorConsoleEvent> getEmulatorConsoleEventsList() {
+      if (emulatorConsoleEventsBuilder_ == null) {
+        return java.util.Collections.unmodifiableList(emulatorConsoleEvents_);
+      } else {
+        return emulatorConsoleEventsBuilder_.getMessageList();
+      }
+    }
+    /**
+     * <pre>
+     * set when kind = EMULATOR_CONSOLE_EVENTS
+     * </pre>
+     *
+     * <code>repeated .android_studio.EmulatorConsoleEvent emulator_console_events = 247;</code>
+     */
+    public int getEmulatorConsoleEventsCount() {
+      if (emulatorConsoleEventsBuilder_ == null) {
+        return emulatorConsoleEvents_.size();
+      } else {
+        return emulatorConsoleEventsBuilder_.getCount();
+      }
+    }
+    /**
+     * <pre>
+     * set when kind = EMULATOR_CONSOLE_EVENTS
+     * </pre>
+     *
+     * <code>repeated .android_studio.EmulatorConsoleEvent emulator_console_events = 247;</code>
+     */
+    public com.google.wireless.android.sdk.stats.EmulatorConsoleEvent getEmulatorConsoleEvents(int index) {
+      if (emulatorConsoleEventsBuilder_ == null) {
+        return emulatorConsoleEvents_.get(index);
+      } else {
+        return emulatorConsoleEventsBuilder_.getMessage(index);
+      }
+    }
+    /**
+     * <pre>
+     * set when kind = EMULATOR_CONSOLE_EVENTS
+     * </pre>
+     *
+     * <code>repeated .android_studio.EmulatorConsoleEvent emulator_console_events = 247;</code>
+     */
+    public Builder setEmulatorConsoleEvents(
+        int index, com.google.wireless.android.sdk.stats.EmulatorConsoleEvent value) {
+      if (emulatorConsoleEventsBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureEmulatorConsoleEventsIsMutable();
+        emulatorConsoleEvents_.set(index, value);
+        onChanged();
+      } else {
+        emulatorConsoleEventsBuilder_.setMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = EMULATOR_CONSOLE_EVENTS
+     * </pre>
+     *
+     * <code>repeated .android_studio.EmulatorConsoleEvent emulator_console_events = 247;</code>
+     */
+    public Builder setEmulatorConsoleEvents(
+        int index, com.google.wireless.android.sdk.stats.EmulatorConsoleEvent.Builder builderForValue) {
+      if (emulatorConsoleEventsBuilder_ == null) {
+        ensureEmulatorConsoleEventsIsMutable();
+        emulatorConsoleEvents_.set(index, builderForValue.build());
+        onChanged();
+      } else {
+        emulatorConsoleEventsBuilder_.setMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = EMULATOR_CONSOLE_EVENTS
+     * </pre>
+     *
+     * <code>repeated .android_studio.EmulatorConsoleEvent emulator_console_events = 247;</code>
+     */
+    public Builder addEmulatorConsoleEvents(com.google.wireless.android.sdk.stats.EmulatorConsoleEvent value) {
+      if (emulatorConsoleEventsBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureEmulatorConsoleEventsIsMutable();
+        emulatorConsoleEvents_.add(value);
+        onChanged();
+      } else {
+        emulatorConsoleEventsBuilder_.addMessage(value);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = EMULATOR_CONSOLE_EVENTS
+     * </pre>
+     *
+     * <code>repeated .android_studio.EmulatorConsoleEvent emulator_console_events = 247;</code>
+     */
+    public Builder addEmulatorConsoleEvents(
+        int index, com.google.wireless.android.sdk.stats.EmulatorConsoleEvent value) {
+      if (emulatorConsoleEventsBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureEmulatorConsoleEventsIsMutable();
+        emulatorConsoleEvents_.add(index, value);
+        onChanged();
+      } else {
+        emulatorConsoleEventsBuilder_.addMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = EMULATOR_CONSOLE_EVENTS
+     * </pre>
+     *
+     * <code>repeated .android_studio.EmulatorConsoleEvent emulator_console_events = 247;</code>
+     */
+    public Builder addEmulatorConsoleEvents(
+        com.google.wireless.android.sdk.stats.EmulatorConsoleEvent.Builder builderForValue) {
+      if (emulatorConsoleEventsBuilder_ == null) {
+        ensureEmulatorConsoleEventsIsMutable();
+        emulatorConsoleEvents_.add(builderForValue.build());
+        onChanged();
+      } else {
+        emulatorConsoleEventsBuilder_.addMessage(builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = EMULATOR_CONSOLE_EVENTS
+     * </pre>
+     *
+     * <code>repeated .android_studio.EmulatorConsoleEvent emulator_console_events = 247;</code>
+     */
+    public Builder addEmulatorConsoleEvents(
+        int index, com.google.wireless.android.sdk.stats.EmulatorConsoleEvent.Builder builderForValue) {
+      if (emulatorConsoleEventsBuilder_ == null) {
+        ensureEmulatorConsoleEventsIsMutable();
+        emulatorConsoleEvents_.add(index, builderForValue.build());
+        onChanged();
+      } else {
+        emulatorConsoleEventsBuilder_.addMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = EMULATOR_CONSOLE_EVENTS
+     * </pre>
+     *
+     * <code>repeated .android_studio.EmulatorConsoleEvent emulator_console_events = 247;</code>
+     */
+    public Builder addAllEmulatorConsoleEvents(
+        java.lang.Iterable<? extends com.google.wireless.android.sdk.stats.EmulatorConsoleEvent> values) {
+      if (emulatorConsoleEventsBuilder_ == null) {
+        ensureEmulatorConsoleEventsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, emulatorConsoleEvents_);
+        onChanged();
+      } else {
+        emulatorConsoleEventsBuilder_.addAllMessages(values);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = EMULATOR_CONSOLE_EVENTS
+     * </pre>
+     *
+     * <code>repeated .android_studio.EmulatorConsoleEvent emulator_console_events = 247;</code>
+     */
+    public Builder clearEmulatorConsoleEvents() {
+      if (emulatorConsoleEventsBuilder_ == null) {
+        emulatorConsoleEvents_ = java.util.Collections.emptyList();
+        bitField7_ = (bitField7_ & ~0x00400000);
+        onChanged();
+      } else {
+        emulatorConsoleEventsBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = EMULATOR_CONSOLE_EVENTS
+     * </pre>
+     *
+     * <code>repeated .android_studio.EmulatorConsoleEvent emulator_console_events = 247;</code>
+     */
+    public Builder removeEmulatorConsoleEvents(int index) {
+      if (emulatorConsoleEventsBuilder_ == null) {
+        ensureEmulatorConsoleEventsIsMutable();
+        emulatorConsoleEvents_.remove(index);
+        onChanged();
+      } else {
+        emulatorConsoleEventsBuilder_.remove(index);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = EMULATOR_CONSOLE_EVENTS
+     * </pre>
+     *
+     * <code>repeated .android_studio.EmulatorConsoleEvent emulator_console_events = 247;</code>
+     */
+    public com.google.wireless.android.sdk.stats.EmulatorConsoleEvent.Builder getEmulatorConsoleEventsBuilder(
+        int index) {
+      return getEmulatorConsoleEventsFieldBuilder().getBuilder(index);
+    }
+    /**
+     * <pre>
+     * set when kind = EMULATOR_CONSOLE_EVENTS
+     * </pre>
+     *
+     * <code>repeated .android_studio.EmulatorConsoleEvent emulator_console_events = 247;</code>
+     */
+    public com.google.wireless.android.sdk.stats.EmulatorConsoleEventOrBuilder getEmulatorConsoleEventsOrBuilder(
+        int index) {
+      if (emulatorConsoleEventsBuilder_ == null) {
+        return emulatorConsoleEvents_.get(index);  } else {
+        return emulatorConsoleEventsBuilder_.getMessageOrBuilder(index);
+      }
+    }
+    /**
+     * <pre>
+     * set when kind = EMULATOR_CONSOLE_EVENTS
+     * </pre>
+     *
+     * <code>repeated .android_studio.EmulatorConsoleEvent emulator_console_events = 247;</code>
+     */
+    public java.util.List<? extends com.google.wireless.android.sdk.stats.EmulatorConsoleEventOrBuilder> 
+         getEmulatorConsoleEventsOrBuilderList() {
+      if (emulatorConsoleEventsBuilder_ != null) {
+        return emulatorConsoleEventsBuilder_.getMessageOrBuilderList();
+      } else {
+        return java.util.Collections.unmodifiableList(emulatorConsoleEvents_);
+      }
+    }
+    /**
+     * <pre>
+     * set when kind = EMULATOR_CONSOLE_EVENTS
+     * </pre>
+     *
+     * <code>repeated .android_studio.EmulatorConsoleEvent emulator_console_events = 247;</code>
+     */
+    public com.google.wireless.android.sdk.stats.EmulatorConsoleEvent.Builder addEmulatorConsoleEventsBuilder() {
+      return getEmulatorConsoleEventsFieldBuilder().addBuilder(
+          com.google.wireless.android.sdk.stats.EmulatorConsoleEvent.getDefaultInstance());
+    }
+    /**
+     * <pre>
+     * set when kind = EMULATOR_CONSOLE_EVENTS
+     * </pre>
+     *
+     * <code>repeated .android_studio.EmulatorConsoleEvent emulator_console_events = 247;</code>
+     */
+    public com.google.wireless.android.sdk.stats.EmulatorConsoleEvent.Builder addEmulatorConsoleEventsBuilder(
+        int index) {
+      return getEmulatorConsoleEventsFieldBuilder().addBuilder(
+          index, com.google.wireless.android.sdk.stats.EmulatorConsoleEvent.getDefaultInstance());
+    }
+    /**
+     * <pre>
+     * set when kind = EMULATOR_CONSOLE_EVENTS
+     * </pre>
+     *
+     * <code>repeated .android_studio.EmulatorConsoleEvent emulator_console_events = 247;</code>
+     */
+    public java.util.List<com.google.wireless.android.sdk.stats.EmulatorConsoleEvent.Builder> 
+         getEmulatorConsoleEventsBuilderList() {
+      return getEmulatorConsoleEventsFieldBuilder().getBuilderList();
+    }
+    private com.google.protobuf.RepeatedFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.EmulatorConsoleEvent, com.google.wireless.android.sdk.stats.EmulatorConsoleEvent.Builder, com.google.wireless.android.sdk.stats.EmulatorConsoleEventOrBuilder> 
+        getEmulatorConsoleEventsFieldBuilder() {
+      if (emulatorConsoleEventsBuilder_ == null) {
+        emulatorConsoleEventsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+            com.google.wireless.android.sdk.stats.EmulatorConsoleEvent, com.google.wireless.android.sdk.stats.EmulatorConsoleEvent.Builder, com.google.wireless.android.sdk.stats.EmulatorConsoleEventOrBuilder>(
+                emulatorConsoleEvents_,
+                ((bitField7_ & 0x00400000) != 0),
+                getParentForChildren(),
+                isClean());
+        emulatorConsoleEvents_ = null;
+      }
+      return emulatorConsoleEventsBuilder_;
+    }
+
+    private com.google.wireless.android.sdk.stats.StudioBotToolWindowAutoOpenEvent studioBotToolWindowAutoOpenEvent_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.StudioBotToolWindowAutoOpenEvent, com.google.wireless.android.sdk.stats.StudioBotToolWindowAutoOpenEvent.Builder, com.google.wireless.android.sdk.stats.StudioBotToolWindowAutoOpenEventOrBuilder> studioBotToolWindowAutoOpenEventBuilder_;
+    /**
+     * <pre>
+     * set when kind = STUDIO_BOT_TOOL_WINDOW_AUTO_OPEN_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.StudioBotToolWindowAutoOpenEvent studio_bot_tool_window_auto_open_event = 248 [lazy = true];</code>
+     * @return Whether the studioBotToolWindowAutoOpenEvent field is set.
+     */
+    public boolean hasStudioBotToolWindowAutoOpenEvent() {
+      return ((bitField7_ & 0x00800000) != 0);
+    }
+    /**
+     * <pre>
+     * set when kind = STUDIO_BOT_TOOL_WINDOW_AUTO_OPEN_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.StudioBotToolWindowAutoOpenEvent studio_bot_tool_window_auto_open_event = 248 [lazy = true];</code>
+     * @return The studioBotToolWindowAutoOpenEvent.
+     */
+    public com.google.wireless.android.sdk.stats.StudioBotToolWindowAutoOpenEvent getStudioBotToolWindowAutoOpenEvent() {
+      if (studioBotToolWindowAutoOpenEventBuilder_ == null) {
+        return studioBotToolWindowAutoOpenEvent_ == null ? com.google.wireless.android.sdk.stats.StudioBotToolWindowAutoOpenEvent.getDefaultInstance() : studioBotToolWindowAutoOpenEvent_;
+      } else {
+        return studioBotToolWindowAutoOpenEventBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * set when kind = STUDIO_BOT_TOOL_WINDOW_AUTO_OPEN_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.StudioBotToolWindowAutoOpenEvent studio_bot_tool_window_auto_open_event = 248 [lazy = true];</code>
+     */
+    public Builder setStudioBotToolWindowAutoOpenEvent(com.google.wireless.android.sdk.stats.StudioBotToolWindowAutoOpenEvent value) {
+      if (studioBotToolWindowAutoOpenEventBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        studioBotToolWindowAutoOpenEvent_ = value;
+      } else {
+        studioBotToolWindowAutoOpenEventBuilder_.setMessage(value);
+      }
+      bitField7_ |= 0x00800000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = STUDIO_BOT_TOOL_WINDOW_AUTO_OPEN_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.StudioBotToolWindowAutoOpenEvent studio_bot_tool_window_auto_open_event = 248 [lazy = true];</code>
+     */
+    public Builder setStudioBotToolWindowAutoOpenEvent(
+        com.google.wireless.android.sdk.stats.StudioBotToolWindowAutoOpenEvent.Builder builderForValue) {
+      if (studioBotToolWindowAutoOpenEventBuilder_ == null) {
+        studioBotToolWindowAutoOpenEvent_ = builderForValue.build();
+      } else {
+        studioBotToolWindowAutoOpenEventBuilder_.setMessage(builderForValue.build());
+      }
+      bitField7_ |= 0x00800000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = STUDIO_BOT_TOOL_WINDOW_AUTO_OPEN_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.StudioBotToolWindowAutoOpenEvent studio_bot_tool_window_auto_open_event = 248 [lazy = true];</code>
+     */
+    public Builder mergeStudioBotToolWindowAutoOpenEvent(com.google.wireless.android.sdk.stats.StudioBotToolWindowAutoOpenEvent value) {
+      if (studioBotToolWindowAutoOpenEventBuilder_ == null) {
+        if (((bitField7_ & 0x00800000) != 0) &&
+          studioBotToolWindowAutoOpenEvent_ != null &&
+          studioBotToolWindowAutoOpenEvent_ != com.google.wireless.android.sdk.stats.StudioBotToolWindowAutoOpenEvent.getDefaultInstance()) {
+          getStudioBotToolWindowAutoOpenEventBuilder().mergeFrom(value);
+        } else {
+          studioBotToolWindowAutoOpenEvent_ = value;
+        }
+      } else {
+        studioBotToolWindowAutoOpenEventBuilder_.mergeFrom(value);
+      }
+      bitField7_ |= 0x00800000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = STUDIO_BOT_TOOL_WINDOW_AUTO_OPEN_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.StudioBotToolWindowAutoOpenEvent studio_bot_tool_window_auto_open_event = 248 [lazy = true];</code>
+     */
+    public Builder clearStudioBotToolWindowAutoOpenEvent() {
+      bitField7_ = (bitField7_ & ~0x00800000);
+      studioBotToolWindowAutoOpenEvent_ = null;
+      if (studioBotToolWindowAutoOpenEventBuilder_ != null) {
+        studioBotToolWindowAutoOpenEventBuilder_.dispose();
+        studioBotToolWindowAutoOpenEventBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = STUDIO_BOT_TOOL_WINDOW_AUTO_OPEN_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.StudioBotToolWindowAutoOpenEvent studio_bot_tool_window_auto_open_event = 248 [lazy = true];</code>
+     */
+    public com.google.wireless.android.sdk.stats.StudioBotToolWindowAutoOpenEvent.Builder getStudioBotToolWindowAutoOpenEventBuilder() {
+      bitField7_ |= 0x00800000;
+      onChanged();
+      return getStudioBotToolWindowAutoOpenEventFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * set when kind = STUDIO_BOT_TOOL_WINDOW_AUTO_OPEN_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.StudioBotToolWindowAutoOpenEvent studio_bot_tool_window_auto_open_event = 248 [lazy = true];</code>
+     */
+    public com.google.wireless.android.sdk.stats.StudioBotToolWindowAutoOpenEventOrBuilder getStudioBotToolWindowAutoOpenEventOrBuilder() {
+      if (studioBotToolWindowAutoOpenEventBuilder_ != null) {
+        return studioBotToolWindowAutoOpenEventBuilder_.getMessageOrBuilder();
+      } else {
+        return studioBotToolWindowAutoOpenEvent_ == null ?
+            com.google.wireless.android.sdk.stats.StudioBotToolWindowAutoOpenEvent.getDefaultInstance() : studioBotToolWindowAutoOpenEvent_;
+      }
+    }
+    /**
+     * <pre>
+     * set when kind = STUDIO_BOT_TOOL_WINDOW_AUTO_OPEN_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.StudioBotToolWindowAutoOpenEvent studio_bot_tool_window_auto_open_event = 248 [lazy = true];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.StudioBotToolWindowAutoOpenEvent, com.google.wireless.android.sdk.stats.StudioBotToolWindowAutoOpenEvent.Builder, com.google.wireless.android.sdk.stats.StudioBotToolWindowAutoOpenEventOrBuilder> 
+        getStudioBotToolWindowAutoOpenEventFieldBuilder() {
+      if (studioBotToolWindowAutoOpenEventBuilder_ == null) {
+        studioBotToolWindowAutoOpenEventBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.wireless.android.sdk.stats.StudioBotToolWindowAutoOpenEvent, com.google.wireless.android.sdk.stats.StudioBotToolWindowAutoOpenEvent.Builder, com.google.wireless.android.sdk.stats.StudioBotToolWindowAutoOpenEventOrBuilder>(
+                getStudioBotToolWindowAutoOpenEvent(),
+                getParentForChildren(),
+                isClean());
+        studioBotToolWindowAutoOpenEvent_ = null;
+      }
+      return studioBotToolWindowAutoOpenEventBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

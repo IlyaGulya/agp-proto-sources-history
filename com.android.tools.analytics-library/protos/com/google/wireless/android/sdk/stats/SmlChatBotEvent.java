@@ -59,6 +59,10 @@ private static final long serialVersionUID = 0L;
      * <code>VERSION_UPGRADE_AGENT = 3;</code>
      */
     VERSION_UPGRADE_AGENT(3),
+    /**
+     * <code>QUICK_EDIT = 4;</code>
+     */
+    QUICK_EDIT(4),
     ;
 
     /**
@@ -77,6 +81,10 @@ private static final long serialVersionUID = 0L;
      * <code>VERSION_UPGRADE_AGENT = 3;</code>
      */
     public static final int VERSION_UPGRADE_AGENT_VALUE = 3;
+    /**
+     * <code>QUICK_EDIT = 4;</code>
+     */
+    public static final int QUICK_EDIT_VALUE = 4;
 
 
     public final int getNumber() {
@@ -103,6 +111,7 @@ private static final long serialVersionUID = 0L;
         case 1: return CHAT;
         case 2: return AGENT_MODE;
         case 3: return VERSION_UPGRADE_AGENT;
+        case 4: return QUICK_EDIT;
         default: return null;
       }
     }
@@ -7453,7 +7462,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional bool success = 3 [deprecated = true];</code>
      * @deprecated android_studio.SmlChatBotEvent.ParseResult.success is deprecated.
-     *     See studio_stats.proto;l=16147
+     *     See studio_stats.proto;l=16212
      * @return Whether the success field is set.
      */
     @java.lang.Deprecated boolean hasSuccess();
@@ -7465,7 +7474,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional bool success = 3 [deprecated = true];</code>
      * @deprecated android_studio.SmlChatBotEvent.ParseResult.success is deprecated.
-     *     See studio_stats.proto;l=16147
+     *     See studio_stats.proto;l=16212
      * @return The success.
      */
     @java.lang.Deprecated boolean getSuccess();
@@ -7593,7 +7602,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional bool success = 3 [deprecated = true];</code>
      * @deprecated android_studio.SmlChatBotEvent.ParseResult.success is deprecated.
-     *     See studio_stats.proto;l=16147
+     *     See studio_stats.proto;l=16212
      * @return Whether the success field is set.
      */
     @java.lang.Override
@@ -7608,7 +7617,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional bool success = 3 [deprecated = true];</code>
      * @deprecated android_studio.SmlChatBotEvent.ParseResult.success is deprecated.
-     *     See studio_stats.proto;l=16147
+     *     See studio_stats.proto;l=16212
      * @return The success.
      */
     @java.lang.Override
@@ -8272,7 +8281,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional bool success = 3 [deprecated = true];</code>
        * @deprecated android_studio.SmlChatBotEvent.ParseResult.success is deprecated.
-       *     See studio_stats.proto;l=16147
+       *     See studio_stats.proto;l=16212
        * @return Whether the success field is set.
        */
       @java.lang.Override
@@ -8287,7 +8296,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional bool success = 3 [deprecated = true];</code>
        * @deprecated android_studio.SmlChatBotEvent.ParseResult.success is deprecated.
-       *     See studio_stats.proto;l=16147
+       *     See studio_stats.proto;l=16212
        * @return The success.
        */
       @java.lang.Override
@@ -8302,7 +8311,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional bool success = 3 [deprecated = true];</code>
        * @deprecated android_studio.SmlChatBotEvent.ParseResult.success is deprecated.
-       *     See studio_stats.proto;l=16147
+       *     See studio_stats.proto;l=16212
        * @param value The success to set.
        * @return This builder for chaining.
        */
@@ -8321,7 +8330,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional bool success = 3 [deprecated = true];</code>
        * @deprecated android_studio.SmlChatBotEvent.ParseResult.success is deprecated.
-       *     See studio_stats.proto;l=16147
+       *     See studio_stats.proto;l=16212
        * @return This builder for chaining.
        */
       @java.lang.Deprecated public Builder clearSuccess() {

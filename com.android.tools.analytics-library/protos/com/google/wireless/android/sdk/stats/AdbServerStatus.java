@@ -62,6 +62,14 @@ private static final long serialVersionUID = 0L;
      * <code>TYPE_OPENSCREEN = 3;</code>
      */
     TYPE_OPENSCREEN(3),
+    /**
+     * <code>TYPE_LIBADBMDNS = 4;</code>
+     */
+    TYPE_LIBADBMDNS(4),
+    /**
+     * <code>TYPE_MDNS_DISABLED = 5;</code>
+     */
+    TYPE_MDNS_DISABLED(5),
     ;
 
     /**
@@ -80,6 +88,14 @@ private static final long serialVersionUID = 0L;
      * <code>TYPE_OPENSCREEN = 3;</code>
      */
     public static final int TYPE_OPENSCREEN_VALUE = 3;
+    /**
+     * <code>TYPE_LIBADBMDNS = 4;</code>
+     */
+    public static final int TYPE_LIBADBMDNS_VALUE = 4;
+    /**
+     * <code>TYPE_MDNS_DISABLED = 5;</code>
+     */
+    public static final int TYPE_MDNS_DISABLED_VALUE = 5;
 
 
     public final int getNumber() {
@@ -106,6 +122,8 @@ private static final long serialVersionUID = 0L;
         case 1: return TYPE_MDNS_DEFAULT;
         case 2: return TYPE_BONJOUR;
         case 3: return TYPE_OPENSCREEN;
+        case 4: return TYPE_LIBADBMDNS;
+        case 5: return TYPE_MDNS_DISABLED;
         default: return null;
       }
     }
@@ -176,6 +194,10 @@ private static final long serialVersionUID = 0L;
      * <code>TYPE_NATIVE = 3;</code>
      */
     TYPE_NATIVE(3),
+    /**
+     * <code>TYPE_USB_DISABLED = 4;</code>
+     */
+    TYPE_USB_DISABLED(4),
     ;
 
     /**
@@ -194,6 +216,10 @@ private static final long serialVersionUID = 0L;
      * <code>TYPE_NATIVE = 3;</code>
      */
     public static final int TYPE_NATIVE_VALUE = 3;
+    /**
+     * <code>TYPE_USB_DISABLED = 4;</code>
+     */
+    public static final int TYPE_USB_DISABLED_VALUE = 4;
 
 
     public final int getNumber() {
@@ -220,6 +246,7 @@ private static final long serialVersionUID = 0L;
         case 1: return TYPE_USB_DEFAULT;
         case 2: return TYPE_LIBUSB;
         case 3: return TYPE_NATIVE;
+        case 4: return TYPE_USB_DISABLED;
         default: return null;
       }
     }

@@ -6835,4 +6835,102 @@ public interface AndroidStudioEventOrBuilder extends
    * <code>optional .android_studio.UserTierUpgradeEvent user_tier_upgrade_event = 245 [lazy = true];</code>
    */
   com.google.wireless.android.sdk.stats.UserTierUpgradeEventOrBuilder getUserTierUpgradeEventOrBuilder();
+
+  /**
+   * <pre>
+   * set when kind = RENDER_TOOL_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.RenderToolEvent render_tool_event = 246 [lazy = true];</code>
+   * @return Whether the renderToolEvent field is set.
+   */
+  boolean hasRenderToolEvent();
+  /**
+   * <pre>
+   * set when kind = RENDER_TOOL_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.RenderToolEvent render_tool_event = 246 [lazy = true];</code>
+   * @return The renderToolEvent.
+   */
+  com.google.wireless.android.sdk.stats.RenderToolEvent getRenderToolEvent();
+  /**
+   * <pre>
+   * set when kind = RENDER_TOOL_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.RenderToolEvent render_tool_event = 246 [lazy = true];</code>
+   */
+  com.google.wireless.android.sdk.stats.RenderToolEventOrBuilder getRenderToolEventOrBuilder();
+
+  /**
+   * <pre>
+   * set when kind = EMULATOR_CONSOLE_EVENTS
+   * </pre>
+   *
+   * <code>repeated .android_studio.EmulatorConsoleEvent emulator_console_events = 247;</code>
+   */
+  java.util.List<com.google.wireless.android.sdk.stats.EmulatorConsoleEvent> 
+      getEmulatorConsoleEventsList();
+  /**
+   * <pre>
+   * set when kind = EMULATOR_CONSOLE_EVENTS
+   * </pre>
+   *
+   * <code>repeated .android_studio.EmulatorConsoleEvent emulator_console_events = 247;</code>
+   */
+  com.google.wireless.android.sdk.stats.EmulatorConsoleEvent getEmulatorConsoleEvents(int index);
+  /**
+   * <pre>
+   * set when kind = EMULATOR_CONSOLE_EVENTS
+   * </pre>
+   *
+   * <code>repeated .android_studio.EmulatorConsoleEvent emulator_console_events = 247;</code>
+   */
+  int getEmulatorConsoleEventsCount();
+  /**
+   * <pre>
+   * set when kind = EMULATOR_CONSOLE_EVENTS
+   * </pre>
+   *
+   * <code>repeated .android_studio.EmulatorConsoleEvent emulator_console_events = 247;</code>
+   */
+  java.util.List<? extends com.google.wireless.android.sdk.stats.EmulatorConsoleEventOrBuilder> 
+      getEmulatorConsoleEventsOrBuilderList();
+  /**
+   * <pre>
+   * set when kind = EMULATOR_CONSOLE_EVENTS
+   * </pre>
+   *
+   * <code>repeated .android_studio.EmulatorConsoleEvent emulator_console_events = 247;</code>
+   */
+  com.google.wireless.android.sdk.stats.EmulatorConsoleEventOrBuilder getEmulatorConsoleEventsOrBuilder(
+      int index);
+
+  /**
+   * <pre>
+   * set when kind = STUDIO_BOT_TOOL_WINDOW_AUTO_OPEN_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.StudioBotToolWindowAutoOpenEvent studio_bot_tool_window_auto_open_event = 248 [lazy = true];</code>
+   * @return Whether the studioBotToolWindowAutoOpenEvent field is set.
+   */
+  boolean hasStudioBotToolWindowAutoOpenEvent();
+  /**
+   * <pre>
+   * set when kind = STUDIO_BOT_TOOL_WINDOW_AUTO_OPEN_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.StudioBotToolWindowAutoOpenEvent studio_bot_tool_window_auto_open_event = 248 [lazy = true];</code>
+   * @return The studioBotToolWindowAutoOpenEvent.
+   */
+  com.google.wireless.android.sdk.stats.StudioBotToolWindowAutoOpenEvent getStudioBotToolWindowAutoOpenEvent();
+  /**
+   * <pre>
+   * set when kind = STUDIO_BOT_TOOL_WINDOW_AUTO_OPEN_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.StudioBotToolWindowAutoOpenEvent studio_bot_tool_window_auto_open_event = 248 [lazy = true];</code>
+   */
+  com.google.wireless.android.sdk.stats.StudioBotToolWindowAutoOpenEventOrBuilder getStudioBotToolWindowAutoOpenEventOrBuilder();
 }
