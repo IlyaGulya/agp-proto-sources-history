@@ -168,6 +168,10 @@ public enum VariantMethodType
    * <code>TEST_SUITE_INCLUDE_ANDROID_RESOURCES = 38;</code>
    */
   TEST_SUITE_INCLUDE_ANDROID_RESOURCES(38),
+  /**
+   * <code>ENABLE_LINT = 39;</code>
+   */
+  ENABLE_LINT(39),
   UNRECOGNIZED(-1),
   ;
 
@@ -331,6 +335,10 @@ public enum VariantMethodType
    * <code>TEST_SUITE_INCLUDE_ANDROID_RESOURCES = 38;</code>
    */
   public static final int TEST_SUITE_INCLUDE_ANDROID_RESOURCES_VALUE = 38;
+  /**
+   * <code>ENABLE_LINT = 39;</code>
+   */
+  public static final int ENABLE_LINT_VALUE = 39;
 
 
   public final int getNumber() {
@@ -396,6 +404,7 @@ public enum VariantMethodType
       case 36: return TEST_SUITE_TARGET_BUILDER_TARGET_DEVICES;
       case 37: return TEST_SUITE_BUILDER;
       case 38: return TEST_SUITE_INCLUDE_ANDROID_RESOURCES;
+      case 39: return ENABLE_LINT;
       default: return null;
     }
   }
