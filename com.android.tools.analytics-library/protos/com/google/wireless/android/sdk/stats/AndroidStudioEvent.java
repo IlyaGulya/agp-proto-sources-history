@@ -3212,6 +3212,14 @@ private static final long serialVersionUID = 0L;
      * <code>ALIGN16KB_EVENT = 337;</code>
      */
     ALIGN16KB_EVENT(337),
+    /**
+     * <pre>
+     * Event describing an individual long GC pause
+     * </pre>
+     *
+     * <code>GC_PAUSE_EVENT = 338;</code>
+     */
+    GC_PAUSE_EVENT(338),
     ;
 
     /**
@@ -5733,6 +5741,14 @@ private static final long serialVersionUID = 0L;
      * <code>ALIGN16KB_EVENT = 337;</code>
      */
     public static final int ALIGN16KB_EVENT_VALUE = 337;
+    /**
+     * <pre>
+     * Event describing an individual long GC pause
+     * </pre>
+     *
+     * <code>GC_PAUSE_EVENT = 338;</code>
+     */
+    public static final int GC_PAUSE_EVENT_VALUE = 338;
 
 
     public final int getNumber() {
@@ -6088,6 +6104,7 @@ private static final long serialVersionUID = 0L;
         case 335: return BROWSER_SURVEY_EVENT;
         case 336: return GRADLE_DAEMON_JVM_CRITERIA_ERROR_EVENT;
         case 337: return ALIGN16KB_EVENT;
+        case 338: return GC_PAUSE_EVENT;
         default: return null;
       }
     }
@@ -11811,7 +11828,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional uint32 min_sdk = 2 [deprecated = true];</code>
        * @deprecated android_studio.AndroidStudioEvent.TemplatesUsage.TemplateModule.min_sdk is deprecated.
-       *     See studio_stats.proto;l=1958
+       *     See studio_stats.proto;l=1964
        * @return Whether the minSdk field is set.
        */
       @java.lang.Deprecated boolean hasMinSdk();
@@ -11822,7 +11839,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional uint32 min_sdk = 2 [deprecated = true];</code>
        * @deprecated android_studio.AndroidStudioEvent.TemplatesUsage.TemplateModule.min_sdk is deprecated.
-       *     See studio_stats.proto;l=1958
+       *     See studio_stats.proto;l=1964
        * @return The minSdk.
        */
       @java.lang.Deprecated int getMinSdk();
@@ -12353,7 +12370,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional uint32 min_sdk = 2 [deprecated = true];</code>
        * @deprecated android_studio.AndroidStudioEvent.TemplatesUsage.TemplateModule.min_sdk is deprecated.
-       *     See studio_stats.proto;l=1958
+       *     See studio_stats.proto;l=1964
        * @return Whether the minSdk field is set.
        */
       @java.lang.Override
@@ -12367,7 +12384,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional uint32 min_sdk = 2 [deprecated = true];</code>
        * @deprecated android_studio.AndroidStudioEvent.TemplatesUsage.TemplateModule.min_sdk is deprecated.
-       *     See studio_stats.proto;l=1958
+       *     See studio_stats.proto;l=1964
        * @return The minSdk.
        */
       @java.lang.Override
@@ -13005,7 +13022,7 @@ private static final long serialVersionUID = 0L;
          *
          * <code>optional uint32 min_sdk = 2 [deprecated = true];</code>
          * @deprecated android_studio.AndroidStudioEvent.TemplatesUsage.TemplateModule.min_sdk is deprecated.
-         *     See studio_stats.proto;l=1958
+         *     See studio_stats.proto;l=1964
          * @return Whether the minSdk field is set.
          */
         @java.lang.Override
@@ -13019,7 +13036,7 @@ private static final long serialVersionUID = 0L;
          *
          * <code>optional uint32 min_sdk = 2 [deprecated = true];</code>
          * @deprecated android_studio.AndroidStudioEvent.TemplatesUsage.TemplateModule.min_sdk is deprecated.
-         *     See studio_stats.proto;l=1958
+         *     See studio_stats.proto;l=1964
          * @return The minSdk.
          */
         @java.lang.Override
@@ -13033,7 +13050,7 @@ private static final long serialVersionUID = 0L;
          *
          * <code>optional uint32 min_sdk = 2 [deprecated = true];</code>
          * @deprecated android_studio.AndroidStudioEvent.TemplatesUsage.TemplateModule.min_sdk is deprecated.
-         *     See studio_stats.proto;l=1958
+         *     See studio_stats.proto;l=1964
          * @param value The minSdk to set.
          * @return This builder for chaining.
          */
@@ -13051,7 +13068,7 @@ private static final long serialVersionUID = 0L;
          *
          * <code>optional uint32 min_sdk = 2 [deprecated = true];</code>
          * @deprecated android_studio.AndroidStudioEvent.TemplatesUsage.TemplateModule.min_sdk is deprecated.
-         *     See studio_stats.proto;l=1958
+         *     See studio_stats.proto;l=1964
          * @return This builder for chaining.
          */
         @java.lang.Deprecated public Builder clearMinSdk() {
@@ -24038,6 +24055,44 @@ private static final long serialVersionUID = 0L;
     return align16KbEvent_ == null ? com.google.wireless.android.sdk.stats.Align16kbEvent.getDefaultInstance() : align16KbEvent_;
   }
 
+  public static final int GC_PAUSE_EVENT_FIELD_NUMBER = 219;
+  private com.google.wireless.android.sdk.stats.GcPauseEvent gcPauseEvent_;
+  /**
+   * <pre>
+   * set when kind = GC_PAUSE_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.GcPauseEvent gc_pause_event = 219 [lazy = true];</code>
+   * @return Whether the gcPauseEvent field is set.
+   */
+  @java.lang.Override
+  public boolean hasGcPauseEvent() {
+    return ((bitField6_ & 0x00100000) != 0);
+  }
+  /**
+   * <pre>
+   * set when kind = GC_PAUSE_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.GcPauseEvent gc_pause_event = 219 [lazy = true];</code>
+   * @return The gcPauseEvent.
+   */
+  @java.lang.Override
+  public com.google.wireless.android.sdk.stats.GcPauseEvent getGcPauseEvent() {
+    return gcPauseEvent_ == null ? com.google.wireless.android.sdk.stats.GcPauseEvent.getDefaultInstance() : gcPauseEvent_;
+  }
+  /**
+   * <pre>
+   * set when kind = GC_PAUSE_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.GcPauseEvent gc_pause_event = 219 [lazy = true];</code>
+   */
+  @java.lang.Override
+  public com.google.wireless.android.sdk.stats.GcPauseEventOrBuilder getGcPauseEventOrBuilder() {
+    return gcPauseEvent_ == null ? com.google.wireless.android.sdk.stats.GcPauseEvent.getDefaultInstance() : gcPauseEvent_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -24705,6 +24760,9 @@ private static final long serialVersionUID = 0L;
     }
     if (((bitField6_ & 0x00080000) != 0)) {
       output.writeMessage(218, getAlign16KbEvent());
+    }
+    if (((bitField6_ & 0x00100000) != 0)) {
+      output.writeMessage(219, getGcPauseEvent());
     }
     getUnknownFields().writeTo(output);
   }
@@ -25592,6 +25650,10 @@ private static final long serialVersionUID = 0L;
     if (((bitField6_ & 0x00080000) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(218, getAlign16KbEvent());
+    }
+    if (((bitField6_ & 0x00100000) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(219, getGcPauseEvent());
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -26669,6 +26731,11 @@ private static final long serialVersionUID = 0L;
       if (!getAlign16KbEvent()
           .equals(other.getAlign16KbEvent())) return false;
     }
+    if (hasGcPauseEvent() != other.hasGcPauseEvent()) return false;
+    if (hasGcPauseEvent()) {
+      if (!getGcPauseEvent()
+          .equals(other.getGcPauseEvent())) return false;
+    }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -27554,6 +27621,10 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + ALIGN16KB_EVENT_FIELD_NUMBER;
       hash = (53 * hash) + getAlign16KbEvent().hashCode();
     }
+    if (hasGcPauseEvent()) {
+      hash = (37 * hash) + GC_PAUSE_EVENT_FIELD_NUMBER;
+      hash = (53 * hash) + getGcPauseEvent().hashCode();
+    }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -27877,6 +27948,7 @@ private static final long serialVersionUID = 0L;
         getBrowserSurveyEventFieldBuilder();
         getGradleDaemonJvmCriteriaErrorEventFieldBuilder();
         getAlign16KbEventFieldBuilder();
+        getGcPauseEventFieldBuilder();
       }
     }
     @java.lang.Override
@@ -28895,6 +28967,11 @@ private static final long serialVersionUID = 0L;
       if (align16KbEventBuilder_ != null) {
         align16KbEventBuilder_.dispose();
         align16KbEventBuilder_ = null;
+      }
+      gcPauseEvent_ = null;
+      if (gcPauseEventBuilder_ != null) {
+        gcPauseEventBuilder_.dispose();
+        gcPauseEventBuilder_ = null;
       }
       return this;
     }
@@ -30255,6 +30332,12 @@ private static final long serialVersionUID = 0L;
             : align16KbEventBuilder_.build();
         to_bitField6_ |= 0x00080000;
       }
+      if (((from_bitField6_ & 0x04000000) != 0)) {
+        result.gcPauseEvent_ = gcPauseEventBuilder_ == null
+            ? gcPauseEvent_
+            : gcPauseEventBuilder_.build();
+        to_bitField6_ |= 0x00100000;
+      }
       result.bitField5_ |= to_bitField5_;
       result.bitField6_ |= to_bitField6_;
     }
@@ -31028,6 +31111,9 @@ private static final long serialVersionUID = 0L;
       }
       if (other.hasAlign16KbEvent()) {
         mergeAlign16KbEvent(other.getAlign16KbEvent());
+      }
+      if (other.hasGcPauseEvent()) {
+        mergeGcPauseEvent(other.getGcPauseEvent());
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -32649,6 +32735,13 @@ private static final long serialVersionUID = 0L;
               bitField6_ |= 0x02000000;
               break;
             } // case 1746
+            case 1754: {
+              input.readMessage(
+                  getGcPauseEventFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField6_ |= 0x04000000;
+              break;
+            } // case 1754
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -65798,6 +65891,161 @@ private static final long serialVersionUID = 0L;
         align16KbEvent_ = null;
       }
       return align16KbEventBuilder_;
+    }
+
+    private com.google.wireless.android.sdk.stats.GcPauseEvent gcPauseEvent_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.GcPauseEvent, com.google.wireless.android.sdk.stats.GcPauseEvent.Builder, com.google.wireless.android.sdk.stats.GcPauseEventOrBuilder> gcPauseEventBuilder_;
+    /**
+     * <pre>
+     * set when kind = GC_PAUSE_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.GcPauseEvent gc_pause_event = 219 [lazy = true];</code>
+     * @return Whether the gcPauseEvent field is set.
+     */
+    public boolean hasGcPauseEvent() {
+      return ((bitField6_ & 0x04000000) != 0);
+    }
+    /**
+     * <pre>
+     * set when kind = GC_PAUSE_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.GcPauseEvent gc_pause_event = 219 [lazy = true];</code>
+     * @return The gcPauseEvent.
+     */
+    public com.google.wireless.android.sdk.stats.GcPauseEvent getGcPauseEvent() {
+      if (gcPauseEventBuilder_ == null) {
+        return gcPauseEvent_ == null ? com.google.wireless.android.sdk.stats.GcPauseEvent.getDefaultInstance() : gcPauseEvent_;
+      } else {
+        return gcPauseEventBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * set when kind = GC_PAUSE_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.GcPauseEvent gc_pause_event = 219 [lazy = true];</code>
+     */
+    public Builder setGcPauseEvent(com.google.wireless.android.sdk.stats.GcPauseEvent value) {
+      if (gcPauseEventBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        gcPauseEvent_ = value;
+      } else {
+        gcPauseEventBuilder_.setMessage(value);
+      }
+      bitField6_ |= 0x04000000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = GC_PAUSE_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.GcPauseEvent gc_pause_event = 219 [lazy = true];</code>
+     */
+    public Builder setGcPauseEvent(
+        com.google.wireless.android.sdk.stats.GcPauseEvent.Builder builderForValue) {
+      if (gcPauseEventBuilder_ == null) {
+        gcPauseEvent_ = builderForValue.build();
+      } else {
+        gcPauseEventBuilder_.setMessage(builderForValue.build());
+      }
+      bitField6_ |= 0x04000000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = GC_PAUSE_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.GcPauseEvent gc_pause_event = 219 [lazy = true];</code>
+     */
+    public Builder mergeGcPauseEvent(com.google.wireless.android.sdk.stats.GcPauseEvent value) {
+      if (gcPauseEventBuilder_ == null) {
+        if (((bitField6_ & 0x04000000) != 0) &&
+          gcPauseEvent_ != null &&
+          gcPauseEvent_ != com.google.wireless.android.sdk.stats.GcPauseEvent.getDefaultInstance()) {
+          getGcPauseEventBuilder().mergeFrom(value);
+        } else {
+          gcPauseEvent_ = value;
+        }
+      } else {
+        gcPauseEventBuilder_.mergeFrom(value);
+      }
+      bitField6_ |= 0x04000000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = GC_PAUSE_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.GcPauseEvent gc_pause_event = 219 [lazy = true];</code>
+     */
+    public Builder clearGcPauseEvent() {
+      bitField6_ = (bitField6_ & ~0x04000000);
+      gcPauseEvent_ = null;
+      if (gcPauseEventBuilder_ != null) {
+        gcPauseEventBuilder_.dispose();
+        gcPauseEventBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = GC_PAUSE_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.GcPauseEvent gc_pause_event = 219 [lazy = true];</code>
+     */
+    public com.google.wireless.android.sdk.stats.GcPauseEvent.Builder getGcPauseEventBuilder() {
+      bitField6_ |= 0x04000000;
+      onChanged();
+      return getGcPauseEventFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * set when kind = GC_PAUSE_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.GcPauseEvent gc_pause_event = 219 [lazy = true];</code>
+     */
+    public com.google.wireless.android.sdk.stats.GcPauseEventOrBuilder getGcPauseEventOrBuilder() {
+      if (gcPauseEventBuilder_ != null) {
+        return gcPauseEventBuilder_.getMessageOrBuilder();
+      } else {
+        return gcPauseEvent_ == null ?
+            com.google.wireless.android.sdk.stats.GcPauseEvent.getDefaultInstance() : gcPauseEvent_;
+      }
+    }
+    /**
+     * <pre>
+     * set when kind = GC_PAUSE_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.GcPauseEvent gc_pause_event = 219 [lazy = true];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.GcPauseEvent, com.google.wireless.android.sdk.stats.GcPauseEvent.Builder, com.google.wireless.android.sdk.stats.GcPauseEventOrBuilder> 
+        getGcPauseEventFieldBuilder() {
+      if (gcPauseEventBuilder_ == null) {
+        gcPauseEventBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.wireless.android.sdk.stats.GcPauseEvent, com.google.wireless.android.sdk.stats.GcPauseEvent.Builder, com.google.wireless.android.sdk.stats.GcPauseEventOrBuilder>(
+                getGcPauseEvent(),
+                getParentForChildren(),
+                isClean());
+        gcPauseEvent_ = null;
+      }
+      return gcPauseEventBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(
