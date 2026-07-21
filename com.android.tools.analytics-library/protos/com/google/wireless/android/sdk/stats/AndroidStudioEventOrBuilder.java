@@ -3758,4 +3758,31 @@ public interface AndroidStudioEventOrBuilder extends
    * <code>optional .android_studio.GradleVersionCatalogDetectorEvent gradle_version_catalog_detector_event = 135;</code>
    */
   com.google.wireless.android.sdk.stats.GradleVersionCatalogDetectorEventOrBuilder getGradleVersionCatalogDetectorEventOrBuilder();
+
+  /**
+   * <pre>
+   * set when kind = COROUTINE_DEBUGGER
+   * </pre>
+   *
+   * <code>optional .android_studio.CoroutineDebuggerEvent coroutine_debugger_event = 136;</code>
+   * @return Whether the coroutineDebuggerEvent field is set.
+   */
+  boolean hasCoroutineDebuggerEvent();
+  /**
+   * <pre>
+   * set when kind = COROUTINE_DEBUGGER
+   * </pre>
+   *
+   * <code>optional .android_studio.CoroutineDebuggerEvent coroutine_debugger_event = 136;</code>
+   * @return The coroutineDebuggerEvent.
+   */
+  com.google.wireless.android.sdk.stats.CoroutineDebuggerEvent getCoroutineDebuggerEvent();
+  /**
+   * <pre>
+   * set when kind = COROUTINE_DEBUGGER
+   * </pre>
+   *
+   * <code>optional .android_studio.CoroutineDebuggerEvent coroutine_debugger_event = 136;</code>
+   */
+  com.google.wireless.android.sdk.stats.CoroutineDebuggerEventOrBuilder getCoroutineDebuggerEventOrBuilder();
 }

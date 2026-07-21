@@ -1756,6 +1756,19 @@ private static final long serialVersionUID = 0L;
             bitField4_ |= 0x00000004;
             break;
           }
+          case 1090: {
+            com.google.wireless.android.sdk.stats.CoroutineDebuggerEvent.Builder subBuilder = null;
+            if (((bitField4_ & 0x00000008) != 0)) {
+              subBuilder = coroutineDebuggerEvent_.toBuilder();
+            }
+            coroutineDebuggerEvent_ = input.readMessage(com.google.wireless.android.sdk.stats.CoroutineDebuggerEvent.PARSER, extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(coroutineDebuggerEvent_);
+              coroutineDebuggerEvent_ = subBuilder.buildPartial();
+            }
+            bitField4_ |= 0x00000008;
+            break;
+          }
           default: {
             if (!parseUnknownField(
                 input, unknownFields, extensionRegistry, tag)) {
@@ -4156,6 +4169,14 @@ private static final long serialVersionUID = 0L;
      * <code>GRADLE_VERSION_CATALOG_DETECTOR = 243;</code>
      */
     GRADLE_VERSION_CATALOG_DETECTOR(243),
+    /**
+     * <pre>
+     * Event related to coroutine debugger
+     * </pre>
+     *
+     * <code>COROUTINE_DEBUGGER = 244;</code>
+     */
+    COROUTINE_DEBUGGER(244),
     ;
 
     /**
@@ -5935,6 +5956,14 @@ private static final long serialVersionUID = 0L;
      * <code>GRADLE_VERSION_CATALOG_DETECTOR = 243;</code>
      */
     public static final int GRADLE_VERSION_CATALOG_DETECTOR_VALUE = 243;
+    /**
+     * <pre>
+     * Event related to coroutine debugger
+     * </pre>
+     *
+     * <code>COROUTINE_DEBUGGER = 244;</code>
+     */
+    public static final int COROUTINE_DEBUGGER_VALUE = 244;
 
 
     public final int getNumber() {
@@ -6196,6 +6225,7 @@ private static final long serialVersionUID = 0L;
         case 241: return OPTIN_METRICS;
         case 242: return OPTOUT_METRICS;
         case 243: return GRADLE_VERSION_CATALOG_DETECTOR;
+        case 244: return COROUTINE_DEBUGGER;
         default: return null;
       }
     }
@@ -19553,6 +19583,41 @@ private static final long serialVersionUID = 0L;
     return gradleVersionCatalogDetectorEvent_ == null ? com.google.wireless.android.sdk.stats.GradleVersionCatalogDetectorEvent.getDefaultInstance() : gradleVersionCatalogDetectorEvent_;
   }
 
+  public static final int COROUTINE_DEBUGGER_EVENT_FIELD_NUMBER = 136;
+  private com.google.wireless.android.sdk.stats.CoroutineDebuggerEvent coroutineDebuggerEvent_;
+  /**
+   * <pre>
+   * set when kind = COROUTINE_DEBUGGER
+   * </pre>
+   *
+   * <code>optional .android_studio.CoroutineDebuggerEvent coroutine_debugger_event = 136;</code>
+   * @return Whether the coroutineDebuggerEvent field is set.
+   */
+  public boolean hasCoroutineDebuggerEvent() {
+    return ((bitField4_ & 0x00000008) != 0);
+  }
+  /**
+   * <pre>
+   * set when kind = COROUTINE_DEBUGGER
+   * </pre>
+   *
+   * <code>optional .android_studio.CoroutineDebuggerEvent coroutine_debugger_event = 136;</code>
+   * @return The coroutineDebuggerEvent.
+   */
+  public com.google.wireless.android.sdk.stats.CoroutineDebuggerEvent getCoroutineDebuggerEvent() {
+    return coroutineDebuggerEvent_ == null ? com.google.wireless.android.sdk.stats.CoroutineDebuggerEvent.getDefaultInstance() : coroutineDebuggerEvent_;
+  }
+  /**
+   * <pre>
+   * set when kind = COROUTINE_DEBUGGER
+   * </pre>
+   *
+   * <code>optional .android_studio.CoroutineDebuggerEvent coroutine_debugger_event = 136;</code>
+   */
+  public com.google.wireless.android.sdk.stats.CoroutineDebuggerEventOrBuilder getCoroutineDebuggerEventOrBuilder() {
+    return coroutineDebuggerEvent_ == null ? com.google.wireless.android.sdk.stats.CoroutineDebuggerEvent.getDefaultInstance() : coroutineDebuggerEvent_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -19971,6 +20036,9 @@ private static final long serialVersionUID = 0L;
     }
     if (((bitField4_ & 0x00000004) != 0)) {
       output.writeMessage(135, getGradleVersionCatalogDetectorEvent());
+    }
+    if (((bitField4_ & 0x00000008) != 0)) {
+      output.writeMessage(136, getCoroutineDebuggerEvent());
     }
     unknownFields.writeTo(output);
   }
@@ -20518,6 +20586,10 @@ private static final long serialVersionUID = 0L;
     if (((bitField4_ & 0x00000004) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(135, getGradleVersionCatalogDetectorEvent());
+    }
+    if (((bitField4_ & 0x00000008) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(136, getCoroutineDebuggerEvent());
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -21186,6 +21258,11 @@ private static final long serialVersionUID = 0L;
       if (!getGradleVersionCatalogDetectorEvent()
           .equals(other.getGradleVersionCatalogDetectorEvent())) return false;
     }
+    if (hasCoroutineDebuggerEvent() != other.hasCoroutineDebuggerEvent()) return false;
+    if (hasCoroutineDebuggerEvent()) {
+      if (!getCoroutineDebuggerEvent()
+          .equals(other.getCoroutineDebuggerEvent())) return false;
+    }
     if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
@@ -21739,6 +21816,10 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + GRADLE_VERSION_CATALOG_DETECTOR_EVENT_FIELD_NUMBER;
       hash = (53 * hash) + getGradleVersionCatalogDetectorEvent().hashCode();
     }
+    if (hasCoroutineDebuggerEvent()) {
+      hash = (37 * hash) + COROUTINE_DEBUGGER_EVENT_FIELD_NUMBER;
+      hash = (53 * hash) + getCoroutineDebuggerEvent().hashCode();
+    }
     hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -21981,6 +22062,7 @@ private static final long serialVersionUID = 0L;
         getOptInToMetricsFieldBuilder();
         getOptOutOfMetricsFieldBuilder();
         getGradleVersionCatalogDetectorEventFieldBuilder();
+        getCoroutineDebuggerEventFieldBuilder();
       }
     }
     @java.lang.Override
@@ -22712,6 +22794,12 @@ private static final long serialVersionUID = 0L;
         gradleVersionCatalogDetectorEventBuilder_.clear();
       }
       bitField4_ = (bitField4_ & ~0x00000040);
+      if (coroutineDebuggerEventBuilder_ == null) {
+        coroutineDebuggerEvent_ = null;
+      } else {
+        coroutineDebuggerEventBuilder_.clear();
+      }
+      bitField4_ = (bitField4_ & ~0x00000080);
       return this;
     }
 
@@ -23748,6 +23836,14 @@ private static final long serialVersionUID = 0L;
         }
         to_bitField4_ |= 0x00000004;
       }
+      if (((from_bitField4_ & 0x00000080) != 0)) {
+        if (coroutineDebuggerEventBuilder_ == null) {
+          result.coroutineDebuggerEvent_ = coroutineDebuggerEvent_;
+        } else {
+          result.coroutineDebuggerEvent_ = coroutineDebuggerEventBuilder_.build();
+        }
+        to_bitField4_ |= 0x00000008;
+      }
       result.bitField0_ = to_bitField0_;
       result.bitField1_ = to_bitField1_;
       result.bitField2_ = to_bitField2_;
@@ -24295,6 +24391,9 @@ private static final long serialVersionUID = 0L;
       }
       if (other.hasGradleVersionCatalogDetectorEvent()) {
         mergeGradleVersionCatalogDetectorEvent(other.getGradleVersionCatalogDetectorEvent());
+      }
+      if (other.hasCoroutineDebuggerEvent()) {
+        mergeCoroutineDebuggerEvent(other.getCoroutineDebuggerEvent());
       }
       this.mergeUnknownFields(other.unknownFields);
       onChanged();
@@ -44572,6 +44671,162 @@ private static final long serialVersionUID = 0L;
         gradleVersionCatalogDetectorEvent_ = null;
       }
       return gradleVersionCatalogDetectorEventBuilder_;
+    }
+
+    private com.google.wireless.android.sdk.stats.CoroutineDebuggerEvent coroutineDebuggerEvent_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.CoroutineDebuggerEvent, com.google.wireless.android.sdk.stats.CoroutineDebuggerEvent.Builder, com.google.wireless.android.sdk.stats.CoroutineDebuggerEventOrBuilder> coroutineDebuggerEventBuilder_;
+    /**
+     * <pre>
+     * set when kind = COROUTINE_DEBUGGER
+     * </pre>
+     *
+     * <code>optional .android_studio.CoroutineDebuggerEvent coroutine_debugger_event = 136;</code>
+     * @return Whether the coroutineDebuggerEvent field is set.
+     */
+    public boolean hasCoroutineDebuggerEvent() {
+      return ((bitField4_ & 0x00000080) != 0);
+    }
+    /**
+     * <pre>
+     * set when kind = COROUTINE_DEBUGGER
+     * </pre>
+     *
+     * <code>optional .android_studio.CoroutineDebuggerEvent coroutine_debugger_event = 136;</code>
+     * @return The coroutineDebuggerEvent.
+     */
+    public com.google.wireless.android.sdk.stats.CoroutineDebuggerEvent getCoroutineDebuggerEvent() {
+      if (coroutineDebuggerEventBuilder_ == null) {
+        return coroutineDebuggerEvent_ == null ? com.google.wireless.android.sdk.stats.CoroutineDebuggerEvent.getDefaultInstance() : coroutineDebuggerEvent_;
+      } else {
+        return coroutineDebuggerEventBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * set when kind = COROUTINE_DEBUGGER
+     * </pre>
+     *
+     * <code>optional .android_studio.CoroutineDebuggerEvent coroutine_debugger_event = 136;</code>
+     */
+    public Builder setCoroutineDebuggerEvent(com.google.wireless.android.sdk.stats.CoroutineDebuggerEvent value) {
+      if (coroutineDebuggerEventBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        coroutineDebuggerEvent_ = value;
+        onChanged();
+      } else {
+        coroutineDebuggerEventBuilder_.setMessage(value);
+      }
+      bitField4_ |= 0x00000080;
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = COROUTINE_DEBUGGER
+     * </pre>
+     *
+     * <code>optional .android_studio.CoroutineDebuggerEvent coroutine_debugger_event = 136;</code>
+     */
+    public Builder setCoroutineDebuggerEvent(
+        com.google.wireless.android.sdk.stats.CoroutineDebuggerEvent.Builder builderForValue) {
+      if (coroutineDebuggerEventBuilder_ == null) {
+        coroutineDebuggerEvent_ = builderForValue.build();
+        onChanged();
+      } else {
+        coroutineDebuggerEventBuilder_.setMessage(builderForValue.build());
+      }
+      bitField4_ |= 0x00000080;
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = COROUTINE_DEBUGGER
+     * </pre>
+     *
+     * <code>optional .android_studio.CoroutineDebuggerEvent coroutine_debugger_event = 136;</code>
+     */
+    public Builder mergeCoroutineDebuggerEvent(com.google.wireless.android.sdk.stats.CoroutineDebuggerEvent value) {
+      if (coroutineDebuggerEventBuilder_ == null) {
+        if (((bitField4_ & 0x00000080) != 0) &&
+            coroutineDebuggerEvent_ != null &&
+            coroutineDebuggerEvent_ != com.google.wireless.android.sdk.stats.CoroutineDebuggerEvent.getDefaultInstance()) {
+          coroutineDebuggerEvent_ =
+            com.google.wireless.android.sdk.stats.CoroutineDebuggerEvent.newBuilder(coroutineDebuggerEvent_).mergeFrom(value).buildPartial();
+        } else {
+          coroutineDebuggerEvent_ = value;
+        }
+        onChanged();
+      } else {
+        coroutineDebuggerEventBuilder_.mergeFrom(value);
+      }
+      bitField4_ |= 0x00000080;
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = COROUTINE_DEBUGGER
+     * </pre>
+     *
+     * <code>optional .android_studio.CoroutineDebuggerEvent coroutine_debugger_event = 136;</code>
+     */
+    public Builder clearCoroutineDebuggerEvent() {
+      if (coroutineDebuggerEventBuilder_ == null) {
+        coroutineDebuggerEvent_ = null;
+        onChanged();
+      } else {
+        coroutineDebuggerEventBuilder_.clear();
+      }
+      bitField4_ = (bitField4_ & ~0x00000080);
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = COROUTINE_DEBUGGER
+     * </pre>
+     *
+     * <code>optional .android_studio.CoroutineDebuggerEvent coroutine_debugger_event = 136;</code>
+     */
+    public com.google.wireless.android.sdk.stats.CoroutineDebuggerEvent.Builder getCoroutineDebuggerEventBuilder() {
+      bitField4_ |= 0x00000080;
+      onChanged();
+      return getCoroutineDebuggerEventFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * set when kind = COROUTINE_DEBUGGER
+     * </pre>
+     *
+     * <code>optional .android_studio.CoroutineDebuggerEvent coroutine_debugger_event = 136;</code>
+     */
+    public com.google.wireless.android.sdk.stats.CoroutineDebuggerEventOrBuilder getCoroutineDebuggerEventOrBuilder() {
+      if (coroutineDebuggerEventBuilder_ != null) {
+        return coroutineDebuggerEventBuilder_.getMessageOrBuilder();
+      } else {
+        return coroutineDebuggerEvent_ == null ?
+            com.google.wireless.android.sdk.stats.CoroutineDebuggerEvent.getDefaultInstance() : coroutineDebuggerEvent_;
+      }
+    }
+    /**
+     * <pre>
+     * set when kind = COROUTINE_DEBUGGER
+     * </pre>
+     *
+     * <code>optional .android_studio.CoroutineDebuggerEvent coroutine_debugger_event = 136;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.CoroutineDebuggerEvent, com.google.wireless.android.sdk.stats.CoroutineDebuggerEvent.Builder, com.google.wireless.android.sdk.stats.CoroutineDebuggerEventOrBuilder> 
+        getCoroutineDebuggerEventFieldBuilder() {
+      if (coroutineDebuggerEventBuilder_ == null) {
+        coroutineDebuggerEventBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.wireless.android.sdk.stats.CoroutineDebuggerEvent, com.google.wireless.android.sdk.stats.CoroutineDebuggerEvent.Builder, com.google.wireless.android.sdk.stats.CoroutineDebuggerEventOrBuilder>(
+                getCoroutineDebuggerEvent(),
+                getParentForChildren(),
+                isClean());
+        coroutineDebuggerEvent_ = null;
+      }
+      return coroutineDebuggerEventBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(
