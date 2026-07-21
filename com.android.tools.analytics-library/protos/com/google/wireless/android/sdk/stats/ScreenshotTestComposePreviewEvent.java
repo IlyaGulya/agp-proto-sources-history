@@ -64,6 +64,18 @@ private static final long serialVersionUID = 0L;
      * <code>UPDATE_CLICKED = 4;</code>
      */
     UPDATE_CLICKED(4),
+    /**
+     * <code>SCREENSHOT_DIALOG_OPEN = 5;</code>
+     */
+    SCREENSHOT_DIALOG_OPEN(5),
+    /**
+     * <code>SCREENSHOT_DIALOG_CLOSE = 6;</code>
+     */
+    SCREENSHOT_DIALOG_CLOSE(6),
+    /**
+     * <code>SCREENSHOT_DIALOG_ALREADY_OPEN = 7;</code>
+     */
+    SCREENSHOT_DIALOG_ALREADY_OPEN(7),
     ;
 
     /**
@@ -86,6 +98,18 @@ private static final long serialVersionUID = 0L;
      * <code>UPDATE_CLICKED = 4;</code>
      */
     public static final int UPDATE_CLICKED_VALUE = 4;
+    /**
+     * <code>SCREENSHOT_DIALOG_OPEN = 5;</code>
+     */
+    public static final int SCREENSHOT_DIALOG_OPEN_VALUE = 5;
+    /**
+     * <code>SCREENSHOT_DIALOG_CLOSE = 6;</code>
+     */
+    public static final int SCREENSHOT_DIALOG_CLOSE_VALUE = 6;
+    /**
+     * <code>SCREENSHOT_DIALOG_ALREADY_OPEN = 7;</code>
+     */
+    public static final int SCREENSHOT_DIALOG_ALREADY_OPEN_VALUE = 7;
 
 
     public final int getNumber() {
@@ -113,6 +137,9 @@ private static final long serialVersionUID = 0L;
         case 2: return PREVIEW_RENDERING;
         case 3: return VALIDATE_CLICKED;
         case 4: return UPDATE_CLICKED;
+        case 5: return SCREENSHOT_DIALOG_OPEN;
+        case 6: return SCREENSHOT_DIALOG_CLOSE;
+        case 7: return SCREENSHOT_DIALOG_ALREADY_OPEN;
         default: return null;
       }
     }

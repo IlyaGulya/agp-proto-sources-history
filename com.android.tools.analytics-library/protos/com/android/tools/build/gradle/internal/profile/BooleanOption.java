@@ -944,6 +944,10 @@ public enum BooleanOption
    * <code>TREAT_MANIFEST_MERGER_WARNINGS_AS_ERRORS = 230;</code>
    */
   TREAT_MANIFEST_MERGER_WARNINGS_AS_ERRORS(230),
+  /**
+   * <code>LINT_REPORT_AGGREGATION = 231;</code>
+   */
+  LINT_REPORT_AGGREGATION(231),
   UNRECOGNIZED(-1),
   ;
 
@@ -1871,6 +1875,10 @@ public enum BooleanOption
    * <code>TREAT_MANIFEST_MERGER_WARNINGS_AS_ERRORS = 230;</code>
    */
   public static final int TREAT_MANIFEST_MERGER_WARNINGS_AS_ERRORS_VALUE = 230;
+  /**
+   * <code>LINT_REPORT_AGGREGATION = 231;</code>
+   */
+  public static final int LINT_REPORT_AGGREGATION_VALUE = 231;
 
 
   public final int getNumber() {
@@ -2128,6 +2136,7 @@ public enum BooleanOption
       case 228: return KMP_USE_JVM_PLATFORM_TYPE;
       case 229: return DISALLOW_KOTLIN_SOURCE_SETS;
       case 230: return TREAT_MANIFEST_MERGER_WARNINGS_AS_ERRORS;
+      case 231: return LINT_REPORT_AGGREGATION;
       default: return null;
     }
   }
