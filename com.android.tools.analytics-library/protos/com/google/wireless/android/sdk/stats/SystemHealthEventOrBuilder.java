@@ -125,4 +125,23 @@ public interface SystemHealthEventOrBuilder extends
    * <code>optional .android_studio.SystemHealthEvent.Exception exception = 5;</code>
    */
   com.google.wireless.android.sdk.stats.SystemHealthEvent.ExceptionOrBuilder getExceptionOrBuilder();
+
+  /**
+   * <pre>
+   * Whether the IDE is in Essentials Mode
+   * </pre>
+   *
+   * <code>optional bool essentials_mode = 6;</code>
+   * @return Whether the essentialsMode field is set.
+   */
+  boolean hasEssentialsMode();
+  /**
+   * <pre>
+   * Whether the IDE is in Essentials Mode
+   * </pre>
+   *
+   * <code>optional bool essentials_mode = 6;</code>
+   * @return The essentialsMode.
+   */
+  boolean getEssentialsMode();
 }

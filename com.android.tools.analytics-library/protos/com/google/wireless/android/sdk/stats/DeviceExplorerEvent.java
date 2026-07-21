@@ -258,6 +258,22 @@ private static final long serialVersionUID = 0L;
      * <code>PROCESS_TAB_CLICKED = 17;</code>
      */
     PROCESS_TAB_CLICKED(17),
+    /**
+     * <pre>
+     * The user toggled on application ID filtering
+     * </pre>
+     *
+     * <code>APPLICATION_ID_FILTER_TOGGLED_ON = 18;</code>
+     */
+    APPLICATION_ID_FILTER_TOGGLED_ON(18),
+    /**
+     * <pre>
+     * The user toggled off application ID filtering
+     * </pre>
+     *
+     * <code>APPLICATION_ID_FILTER_TOGGLED_OFF = 19;</code>
+     */
+    APPLICATION_ID_FILTER_TOGGLED_OFF(19),
     ;
 
     /**
@@ -404,6 +420,22 @@ private static final long serialVersionUID = 0L;
      * <code>PROCESS_TAB_CLICKED = 17;</code>
      */
     public static final int PROCESS_TAB_CLICKED_VALUE = 17;
+    /**
+     * <pre>
+     * The user toggled on application ID filtering
+     * </pre>
+     *
+     * <code>APPLICATION_ID_FILTER_TOGGLED_ON = 18;</code>
+     */
+    public static final int APPLICATION_ID_FILTER_TOGGLED_ON_VALUE = 18;
+    /**
+     * <pre>
+     * The user toggled off application ID filtering
+     * </pre>
+     *
+     * <code>APPLICATION_ID_FILTER_TOGGLED_OFF = 19;</code>
+     */
+    public static final int APPLICATION_ID_FILTER_TOGGLED_OFF_VALUE = 19;
 
 
     public final int getNumber() {
@@ -444,6 +476,8 @@ private static final long serialVersionUID = 0L;
         case 15: return APPLICATION_ID_FILTER_TOGGLED;
         case 16: return FILES_TAB_CLICKED;
         case 17: return PROCESS_TAB_CLICKED;
+        case 18: return APPLICATION_ID_FILTER_TOGGLED_ON;
+        case 19: return APPLICATION_ID_FILTER_TOGGLED_OFF;
         default: return null;
       }
     }

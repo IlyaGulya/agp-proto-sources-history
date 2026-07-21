@@ -4969,4 +4969,58 @@ public interface AndroidStudioEventOrBuilder extends
    * <code>optional .android_studio.SoongSyncStats soong_sync_stats = 177;</code>
    */
   com.google.wireless.android.sdk.stats.SoongSyncStatsOrBuilder getSoongSyncStatsOrBuilder();
+
+  /**
+   * <pre>
+   * set when kind = INTELLIJ_NEW_UI_SWITCH
+   * </pre>
+   *
+   * <code>optional .android_studio.IntelliJNewUISwitch intellij_new_ui_switch = 178;</code>
+   * @return Whether the intellijNewUiSwitch field is set.
+   */
+  boolean hasIntellijNewUiSwitch();
+  /**
+   * <pre>
+   * set when kind = INTELLIJ_NEW_UI_SWITCH
+   * </pre>
+   *
+   * <code>optional .android_studio.IntelliJNewUISwitch intellij_new_ui_switch = 178;</code>
+   * @return The intellijNewUiSwitch.
+   */
+  com.google.wireless.android.sdk.stats.IntelliJNewUISwitch getIntellijNewUiSwitch();
+  /**
+   * <pre>
+   * set when kind = INTELLIJ_NEW_UI_SWITCH
+   * </pre>
+   *
+   * <code>optional .android_studio.IntelliJNewUISwitch intellij_new_ui_switch = 178;</code>
+   */
+  com.google.wireless.android.sdk.stats.IntelliJNewUISwitchOrBuilder getIntellijNewUiSwitchOrBuilder();
+
+  /**
+   * <pre>
+   * set when kind = ESSENTIALS_MODE_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.EssentialsModeEvent essentials_mode_event = 179;</code>
+   * @return Whether the essentialsModeEvent field is set.
+   */
+  boolean hasEssentialsModeEvent();
+  /**
+   * <pre>
+   * set when kind = ESSENTIALS_MODE_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.EssentialsModeEvent essentials_mode_event = 179;</code>
+   * @return The essentialsModeEvent.
+   */
+  com.google.wireless.android.sdk.stats.EssentialsModeEvent getEssentialsModeEvent();
+  /**
+   * <pre>
+   * set when kind = ESSENTIALS_MODE_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.EssentialsModeEvent essentials_mode_event = 179;</code>
+   */
+  com.google.wireless.android.sdk.stats.EssentialsModeEventOrBuilder getEssentialsModeEventOrBuilder();
 }
