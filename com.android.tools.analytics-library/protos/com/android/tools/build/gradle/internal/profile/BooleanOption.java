@@ -828,6 +828,10 @@ public enum BooleanOption
    * <code>ENABLE_PROBLEMS_API = 201;</code>
    */
   ENABLE_PROBLEMS_API(201),
+  /**
+   * <code>FAIL_ON_MISSING_PROGUARD_FILES = 202;</code>
+   */
+  FAIL_ON_MISSING_PROGUARD_FILES(202),
   UNRECOGNIZED(-1),
   ;
 
@@ -1639,6 +1643,10 @@ public enum BooleanOption
    * <code>ENABLE_PROBLEMS_API = 201;</code>
    */
   public static final int ENABLE_PROBLEMS_API_VALUE = 201;
+  /**
+   * <code>FAIL_ON_MISSING_PROGUARD_FILES = 202;</code>
+   */
+  public static final int FAIL_ON_MISSING_PROGUARD_FILES_VALUE = 202;
 
 
   public final int getNumber() {
@@ -1867,6 +1875,7 @@ public enum BooleanOption
       case 199: return GENERATE_SYNC_ISSUE_WHEN_LIBRARY_CONSTRAINTS_ARE_ENABLED;
       case 200: return GRADUAL_R8_SHRINKING;
       case 201: return ENABLE_PROBLEMS_API;
+      case 202: return FAIL_ON_MISSING_PROGUARD_FILES;
       default: return null;
     }
   }
