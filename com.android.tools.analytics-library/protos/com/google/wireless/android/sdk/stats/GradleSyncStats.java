@@ -430,6 +430,14 @@ private static final long serialVersionUID = 0L;
     TRIGGER_QF_SIGNING_CONFIG_SELECTED(428),
     /**
      * <pre>
+     * Remove unsupported modules from a quickfix
+     * </pre>
+     *
+     * <code>TRIGGER_QF_REMOVE_UNSUPPORTED_MODULES = 429;</code>
+     */
+    TRIGGER_QF_REMOVE_UNSUPPORTED_MODULES(429),
+    /**
+     * <pre>
      * Last marker for syncs caused by quickfixes
      * </pre>
      *
@@ -1355,6 +1363,14 @@ private static final long serialVersionUID = 0L;
     public static final int TRIGGER_QF_SIGNING_CONFIG_SELECTED_VALUE = 428;
     /**
      * <pre>
+     * Remove unsupported modules from a quickfix
+     * </pre>
+     *
+     * <code>TRIGGER_QF_REMOVE_UNSUPPORTED_MODULES = 429;</code>
+     */
+    public static final int TRIGGER_QF_REMOVE_UNSUPPORTED_MODULES_VALUE = 429;
+    /**
+     * <pre>
      * Last marker for syncs caused by quickfixes
      * </pre>
      *
@@ -1980,6 +1996,7 @@ private static final long serialVersionUID = 0L;
         case 426: return TRIGGER_QF_GRADLEJVM_TO_USE_PROJECT_JDK;
         case 427: return TRIGGER_QF_REMOVE_JCENTER_FROM_REPOSITORIES;
         case 428: return TRIGGER_QF_SIGNING_CONFIG_SELECTED;
+        case 429: return TRIGGER_QF_REMOVE_UNSUPPORTED_MODULES;
         case 999: return TRIGGER_QF_LAST_MARKER;
         case 1200: return TRIGGER_REFACTOR_FIRST_MARKER;
         case 1201: return TRIGGER_REFACTOR_MIGRATE_TO_ANDROIDX;

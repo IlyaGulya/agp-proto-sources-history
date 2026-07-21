@@ -2930,6 +2930,22 @@ private static final long serialVersionUID = 0L;
      * <code>GRADLE_JDK_CONFIGURATION = 300;</code>
      */
     GRADLE_JDK_CONFIGURATION(300),
+    /**
+     * <pre>
+     * Render Security manager event
+     * </pre>
+     *
+     * <code>RENDER_SECURITY_MANAGER_EVENT = 301;</code>
+     */
+    RENDER_SECURITY_MANAGER_EVENT(301),
+    /**
+     * <pre>
+     * Event related to the refresh process of a preview tool
+     * </pre>
+     *
+     * <code>PREVIEW_REFRESH_EVENT = 302;</code>
+     */
+    PREVIEW_REFRESH_EVENT(302),
     ;
 
     /**
@@ -5166,6 +5182,22 @@ private static final long serialVersionUID = 0L;
      * <code>GRADLE_JDK_CONFIGURATION = 300;</code>
      */
     public static final int GRADLE_JDK_CONFIGURATION_VALUE = 300;
+    /**
+     * <pre>
+     * Render Security manager event
+     * </pre>
+     *
+     * <code>RENDER_SECURITY_MANAGER_EVENT = 301;</code>
+     */
+    public static final int RENDER_SECURITY_MANAGER_EVENT_VALUE = 301;
+    /**
+     * <pre>
+     * Event related to the refresh process of a preview tool
+     * </pre>
+     *
+     * <code>PREVIEW_REFRESH_EVENT = 302;</code>
+     */
+    public static final int PREVIEW_REFRESH_EVENT_VALUE = 302;
 
 
     public final int getNumber() {
@@ -5484,6 +5516,8 @@ private static final long serialVersionUID = 0L;
         case 298: return I_DEVICE_USAGE_EVENT;
         case 299: return MANIFEST_PANEL_EVENT;
         case 300: return GRADLE_JDK_CONFIGURATION;
+        case 301: return RENDER_SECURITY_MANAGER_EVENT;
+        case 302: return PREVIEW_REFRESH_EVENT;
         default: return null;
       }
     }
@@ -21399,6 +21433,82 @@ private static final long serialVersionUID = 0L;
     return gradleJdkConfigurationEvent_ == null ? com.google.wireless.android.sdk.stats.GradleJdkConfigurationEvent.getDefaultInstance() : gradleJdkConfigurationEvent_;
   }
 
+  public static final int RENDER_SECURITY_MANAGER_EVENT_FIELD_NUMBER = 184;
+  private com.google.wireless.android.sdk.stats.RenderSecurityManagerEvent renderSecurityManagerEvent_;
+  /**
+   * <pre>
+   * set when kind = RENDER_SECURITY_MANAGER_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.RenderSecurityManagerEvent render_security_manager_event = 184;</code>
+   * @return Whether the renderSecurityManagerEvent field is set.
+   */
+  @java.lang.Override
+  public boolean hasRenderSecurityManagerEvent() {
+    return ((bitField5_ & 0x00020000) != 0);
+  }
+  /**
+   * <pre>
+   * set when kind = RENDER_SECURITY_MANAGER_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.RenderSecurityManagerEvent render_security_manager_event = 184;</code>
+   * @return The renderSecurityManagerEvent.
+   */
+  @java.lang.Override
+  public com.google.wireless.android.sdk.stats.RenderSecurityManagerEvent getRenderSecurityManagerEvent() {
+    return renderSecurityManagerEvent_ == null ? com.google.wireless.android.sdk.stats.RenderSecurityManagerEvent.getDefaultInstance() : renderSecurityManagerEvent_;
+  }
+  /**
+   * <pre>
+   * set when kind = RENDER_SECURITY_MANAGER_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.RenderSecurityManagerEvent render_security_manager_event = 184;</code>
+   */
+  @java.lang.Override
+  public com.google.wireless.android.sdk.stats.RenderSecurityManagerEventOrBuilder getRenderSecurityManagerEventOrBuilder() {
+    return renderSecurityManagerEvent_ == null ? com.google.wireless.android.sdk.stats.RenderSecurityManagerEvent.getDefaultInstance() : renderSecurityManagerEvent_;
+  }
+
+  public static final int PREVIEW_REFRESH_EVENT_FIELD_NUMBER = 185;
+  private com.google.wireless.android.sdk.stats.PreviewRefreshEvent previewRefreshEvent_;
+  /**
+   * <pre>
+   * set when kind = PREVIEW_REFRESH_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.PreviewRefreshEvent preview_refresh_event = 185;</code>
+   * @return Whether the previewRefreshEvent field is set.
+   */
+  @java.lang.Override
+  public boolean hasPreviewRefreshEvent() {
+    return ((bitField5_ & 0x00040000) != 0);
+  }
+  /**
+   * <pre>
+   * set when kind = PREVIEW_REFRESH_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.PreviewRefreshEvent preview_refresh_event = 185;</code>
+   * @return The previewRefreshEvent.
+   */
+  @java.lang.Override
+  public com.google.wireless.android.sdk.stats.PreviewRefreshEvent getPreviewRefreshEvent() {
+    return previewRefreshEvent_ == null ? com.google.wireless.android.sdk.stats.PreviewRefreshEvent.getDefaultInstance() : previewRefreshEvent_;
+  }
+  /**
+   * <pre>
+   * set when kind = PREVIEW_REFRESH_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.PreviewRefreshEvent preview_refresh_event = 185;</code>
+   */
+  @java.lang.Override
+  public com.google.wireless.android.sdk.stats.PreviewRefreshEventOrBuilder getPreviewRefreshEventOrBuilder() {
+    return previewRefreshEvent_ == null ? com.google.wireless.android.sdk.stats.PreviewRefreshEvent.getDefaultInstance() : previewRefreshEvent_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -21961,6 +22071,12 @@ private static final long serialVersionUID = 0L;
     }
     if (((bitField5_ & 0x00010000) != 0)) {
       output.writeMessage(183, getGradleJdkConfigurationEvent());
+    }
+    if (((bitField5_ & 0x00020000) != 0)) {
+      output.writeMessage(184, getRenderSecurityManagerEvent());
+    }
+    if (((bitField5_ & 0x00040000) != 0)) {
+      output.writeMessage(185, getPreviewRefreshEvent());
     }
     getUnknownFields().writeTo(output);
   }
@@ -22708,6 +22824,14 @@ private static final long serialVersionUID = 0L;
     if (((bitField5_ & 0x00010000) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(183, getGradleJdkConfigurationEvent());
+    }
+    if (((bitField5_ & 0x00020000) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(184, getRenderSecurityManagerEvent());
+    }
+    if (((bitField5_ & 0x00040000) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(185, getPreviewRefreshEvent());
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -23610,6 +23734,16 @@ private static final long serialVersionUID = 0L;
       if (!getGradleJdkConfigurationEvent()
           .equals(other.getGradleJdkConfigurationEvent())) return false;
     }
+    if (hasRenderSecurityManagerEvent() != other.hasRenderSecurityManagerEvent()) return false;
+    if (hasRenderSecurityManagerEvent()) {
+      if (!getRenderSecurityManagerEvent()
+          .equals(other.getRenderSecurityManagerEvent())) return false;
+    }
+    if (hasPreviewRefreshEvent() != other.hasPreviewRefreshEvent()) return false;
+    if (hasPreviewRefreshEvent()) {
+      if (!getPreviewRefreshEvent()
+          .equals(other.getPreviewRefreshEvent())) return false;
+    }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -24355,6 +24489,14 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + GRADLE_JDK_CONFIGURATION_EVENT_FIELD_NUMBER;
       hash = (53 * hash) + getGradleJdkConfigurationEvent().hashCode();
     }
+    if (hasRenderSecurityManagerEvent()) {
+      hash = (37 * hash) + RENDER_SECURITY_MANAGER_EVENT_FIELD_NUMBER;
+      hash = (53 * hash) + getRenderSecurityManagerEvent().hashCode();
+    }
+    if (hasPreviewRefreshEvent()) {
+      hash = (37 * hash) + PREVIEW_REFRESH_EVENT_FIELD_NUMBER;
+      hash = (53 * hash) + getPreviewRefreshEvent().hashCode();
+    }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -24643,6 +24785,8 @@ private static final long serialVersionUID = 0L;
         getSmlAiExcludeEventFieldBuilder();
         getIDeviceUsageEventFieldBuilder();
         getGradleJdkConfigurationEventFieldBuilder();
+        getRenderSecurityManagerEventFieldBuilder();
+        getPreviewRefreshEventFieldBuilder();
       }
     }
     @java.lang.Override
@@ -25657,6 +25801,18 @@ private static final long serialVersionUID = 0L;
         gradleJdkConfigurationEventBuilder_.clear();
       }
       bitField5_ = (bitField5_ & ~0x00400000);
+      if (renderSecurityManagerEventBuilder_ == null) {
+        renderSecurityManagerEvent_ = null;
+      } else {
+        renderSecurityManagerEventBuilder_.clear();
+      }
+      bitField5_ = (bitField5_ & ~0x00800000);
+      if (previewRefreshEventBuilder_ == null) {
+        previewRefreshEvent_ = null;
+      } else {
+        previewRefreshEventBuilder_.clear();
+      }
+      bitField5_ = (bitField5_ & ~0x01000000);
       return this;
     }
 
@@ -27073,6 +27229,22 @@ private static final long serialVersionUID = 0L;
         }
         to_bitField5_ |= 0x00010000;
       }
+      if (((from_bitField5_ & 0x00800000) != 0)) {
+        if (renderSecurityManagerEventBuilder_ == null) {
+          result.renderSecurityManagerEvent_ = renderSecurityManagerEvent_;
+        } else {
+          result.renderSecurityManagerEvent_ = renderSecurityManagerEventBuilder_.build();
+        }
+        to_bitField5_ |= 0x00020000;
+      }
+      if (((from_bitField5_ & 0x01000000) != 0)) {
+        if (previewRefreshEventBuilder_ == null) {
+          result.previewRefreshEvent_ = previewRefreshEvent_;
+        } else {
+          result.previewRefreshEvent_ = previewRefreshEventBuilder_.build();
+        }
+        to_bitField5_ |= 0x00040000;
+      }
       result.bitField0_ = to_bitField0_;
       result.bitField1_ = to_bitField1_;
       result.bitField2_ = to_bitField2_;
@@ -27779,6 +27951,12 @@ private static final long serialVersionUID = 0L;
       }
       if (other.hasGradleJdkConfigurationEvent()) {
         mergeGradleJdkConfigurationEvent(other.getGradleJdkConfigurationEvent());
+      }
+      if (other.hasRenderSecurityManagerEvent()) {
+        mergeRenderSecurityManagerEvent(other.getRenderSecurityManagerEvent());
+      }
+      if (other.hasPreviewRefreshEvent()) {
+        mergePreviewRefreshEvent(other.getPreviewRefreshEvent());
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -29155,6 +29333,20 @@ private static final long serialVersionUID = 0L;
               bitField5_ |= 0x00400000;
               break;
             } // case 1466
+            case 1474: {
+              input.readMessage(
+                  getRenderSecurityManagerEventFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField5_ |= 0x00800000;
+              break;
+            } // case 1474
+            case 1482: {
+              input.readMessage(
+                  getPreviewRefreshEventFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField5_ |= 0x01000000;
+              break;
+            } // case 1482
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -57004,6 +57196,318 @@ private static final long serialVersionUID = 0L;
         gradleJdkConfigurationEvent_ = null;
       }
       return gradleJdkConfigurationEventBuilder_;
+    }
+
+    private com.google.wireless.android.sdk.stats.RenderSecurityManagerEvent renderSecurityManagerEvent_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.RenderSecurityManagerEvent, com.google.wireless.android.sdk.stats.RenderSecurityManagerEvent.Builder, com.google.wireless.android.sdk.stats.RenderSecurityManagerEventOrBuilder> renderSecurityManagerEventBuilder_;
+    /**
+     * <pre>
+     * set when kind = RENDER_SECURITY_MANAGER_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.RenderSecurityManagerEvent render_security_manager_event = 184;</code>
+     * @return Whether the renderSecurityManagerEvent field is set.
+     */
+    public boolean hasRenderSecurityManagerEvent() {
+      return ((bitField5_ & 0x00800000) != 0);
+    }
+    /**
+     * <pre>
+     * set when kind = RENDER_SECURITY_MANAGER_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.RenderSecurityManagerEvent render_security_manager_event = 184;</code>
+     * @return The renderSecurityManagerEvent.
+     */
+    public com.google.wireless.android.sdk.stats.RenderSecurityManagerEvent getRenderSecurityManagerEvent() {
+      if (renderSecurityManagerEventBuilder_ == null) {
+        return renderSecurityManagerEvent_ == null ? com.google.wireless.android.sdk.stats.RenderSecurityManagerEvent.getDefaultInstance() : renderSecurityManagerEvent_;
+      } else {
+        return renderSecurityManagerEventBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * set when kind = RENDER_SECURITY_MANAGER_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.RenderSecurityManagerEvent render_security_manager_event = 184;</code>
+     */
+    public Builder setRenderSecurityManagerEvent(com.google.wireless.android.sdk.stats.RenderSecurityManagerEvent value) {
+      if (renderSecurityManagerEventBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        renderSecurityManagerEvent_ = value;
+        onChanged();
+      } else {
+        renderSecurityManagerEventBuilder_.setMessage(value);
+      }
+      bitField5_ |= 0x00800000;
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = RENDER_SECURITY_MANAGER_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.RenderSecurityManagerEvent render_security_manager_event = 184;</code>
+     */
+    public Builder setRenderSecurityManagerEvent(
+        com.google.wireless.android.sdk.stats.RenderSecurityManagerEvent.Builder builderForValue) {
+      if (renderSecurityManagerEventBuilder_ == null) {
+        renderSecurityManagerEvent_ = builderForValue.build();
+        onChanged();
+      } else {
+        renderSecurityManagerEventBuilder_.setMessage(builderForValue.build());
+      }
+      bitField5_ |= 0x00800000;
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = RENDER_SECURITY_MANAGER_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.RenderSecurityManagerEvent render_security_manager_event = 184;</code>
+     */
+    public Builder mergeRenderSecurityManagerEvent(com.google.wireless.android.sdk.stats.RenderSecurityManagerEvent value) {
+      if (renderSecurityManagerEventBuilder_ == null) {
+        if (((bitField5_ & 0x00800000) != 0) &&
+            renderSecurityManagerEvent_ != null &&
+            renderSecurityManagerEvent_ != com.google.wireless.android.sdk.stats.RenderSecurityManagerEvent.getDefaultInstance()) {
+          renderSecurityManagerEvent_ =
+            com.google.wireless.android.sdk.stats.RenderSecurityManagerEvent.newBuilder(renderSecurityManagerEvent_).mergeFrom(value).buildPartial();
+        } else {
+          renderSecurityManagerEvent_ = value;
+        }
+        onChanged();
+      } else {
+        renderSecurityManagerEventBuilder_.mergeFrom(value);
+      }
+      bitField5_ |= 0x00800000;
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = RENDER_SECURITY_MANAGER_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.RenderSecurityManagerEvent render_security_manager_event = 184;</code>
+     */
+    public Builder clearRenderSecurityManagerEvent() {
+      if (renderSecurityManagerEventBuilder_ == null) {
+        renderSecurityManagerEvent_ = null;
+        onChanged();
+      } else {
+        renderSecurityManagerEventBuilder_.clear();
+      }
+      bitField5_ = (bitField5_ & ~0x00800000);
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = RENDER_SECURITY_MANAGER_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.RenderSecurityManagerEvent render_security_manager_event = 184;</code>
+     */
+    public com.google.wireless.android.sdk.stats.RenderSecurityManagerEvent.Builder getRenderSecurityManagerEventBuilder() {
+      bitField5_ |= 0x00800000;
+      onChanged();
+      return getRenderSecurityManagerEventFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * set when kind = RENDER_SECURITY_MANAGER_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.RenderSecurityManagerEvent render_security_manager_event = 184;</code>
+     */
+    public com.google.wireless.android.sdk.stats.RenderSecurityManagerEventOrBuilder getRenderSecurityManagerEventOrBuilder() {
+      if (renderSecurityManagerEventBuilder_ != null) {
+        return renderSecurityManagerEventBuilder_.getMessageOrBuilder();
+      } else {
+        return renderSecurityManagerEvent_ == null ?
+            com.google.wireless.android.sdk.stats.RenderSecurityManagerEvent.getDefaultInstance() : renderSecurityManagerEvent_;
+      }
+    }
+    /**
+     * <pre>
+     * set when kind = RENDER_SECURITY_MANAGER_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.RenderSecurityManagerEvent render_security_manager_event = 184;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.RenderSecurityManagerEvent, com.google.wireless.android.sdk.stats.RenderSecurityManagerEvent.Builder, com.google.wireless.android.sdk.stats.RenderSecurityManagerEventOrBuilder> 
+        getRenderSecurityManagerEventFieldBuilder() {
+      if (renderSecurityManagerEventBuilder_ == null) {
+        renderSecurityManagerEventBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.wireless.android.sdk.stats.RenderSecurityManagerEvent, com.google.wireless.android.sdk.stats.RenderSecurityManagerEvent.Builder, com.google.wireless.android.sdk.stats.RenderSecurityManagerEventOrBuilder>(
+                getRenderSecurityManagerEvent(),
+                getParentForChildren(),
+                isClean());
+        renderSecurityManagerEvent_ = null;
+      }
+      return renderSecurityManagerEventBuilder_;
+    }
+
+    private com.google.wireless.android.sdk.stats.PreviewRefreshEvent previewRefreshEvent_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.PreviewRefreshEvent, com.google.wireless.android.sdk.stats.PreviewRefreshEvent.Builder, com.google.wireless.android.sdk.stats.PreviewRefreshEventOrBuilder> previewRefreshEventBuilder_;
+    /**
+     * <pre>
+     * set when kind = PREVIEW_REFRESH_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.PreviewRefreshEvent preview_refresh_event = 185;</code>
+     * @return Whether the previewRefreshEvent field is set.
+     */
+    public boolean hasPreviewRefreshEvent() {
+      return ((bitField5_ & 0x01000000) != 0);
+    }
+    /**
+     * <pre>
+     * set when kind = PREVIEW_REFRESH_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.PreviewRefreshEvent preview_refresh_event = 185;</code>
+     * @return The previewRefreshEvent.
+     */
+    public com.google.wireless.android.sdk.stats.PreviewRefreshEvent getPreviewRefreshEvent() {
+      if (previewRefreshEventBuilder_ == null) {
+        return previewRefreshEvent_ == null ? com.google.wireless.android.sdk.stats.PreviewRefreshEvent.getDefaultInstance() : previewRefreshEvent_;
+      } else {
+        return previewRefreshEventBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * set when kind = PREVIEW_REFRESH_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.PreviewRefreshEvent preview_refresh_event = 185;</code>
+     */
+    public Builder setPreviewRefreshEvent(com.google.wireless.android.sdk.stats.PreviewRefreshEvent value) {
+      if (previewRefreshEventBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        previewRefreshEvent_ = value;
+        onChanged();
+      } else {
+        previewRefreshEventBuilder_.setMessage(value);
+      }
+      bitField5_ |= 0x01000000;
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = PREVIEW_REFRESH_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.PreviewRefreshEvent preview_refresh_event = 185;</code>
+     */
+    public Builder setPreviewRefreshEvent(
+        com.google.wireless.android.sdk.stats.PreviewRefreshEvent.Builder builderForValue) {
+      if (previewRefreshEventBuilder_ == null) {
+        previewRefreshEvent_ = builderForValue.build();
+        onChanged();
+      } else {
+        previewRefreshEventBuilder_.setMessage(builderForValue.build());
+      }
+      bitField5_ |= 0x01000000;
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = PREVIEW_REFRESH_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.PreviewRefreshEvent preview_refresh_event = 185;</code>
+     */
+    public Builder mergePreviewRefreshEvent(com.google.wireless.android.sdk.stats.PreviewRefreshEvent value) {
+      if (previewRefreshEventBuilder_ == null) {
+        if (((bitField5_ & 0x01000000) != 0) &&
+            previewRefreshEvent_ != null &&
+            previewRefreshEvent_ != com.google.wireless.android.sdk.stats.PreviewRefreshEvent.getDefaultInstance()) {
+          previewRefreshEvent_ =
+            com.google.wireless.android.sdk.stats.PreviewRefreshEvent.newBuilder(previewRefreshEvent_).mergeFrom(value).buildPartial();
+        } else {
+          previewRefreshEvent_ = value;
+        }
+        onChanged();
+      } else {
+        previewRefreshEventBuilder_.mergeFrom(value);
+      }
+      bitField5_ |= 0x01000000;
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = PREVIEW_REFRESH_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.PreviewRefreshEvent preview_refresh_event = 185;</code>
+     */
+    public Builder clearPreviewRefreshEvent() {
+      if (previewRefreshEventBuilder_ == null) {
+        previewRefreshEvent_ = null;
+        onChanged();
+      } else {
+        previewRefreshEventBuilder_.clear();
+      }
+      bitField5_ = (bitField5_ & ~0x01000000);
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = PREVIEW_REFRESH_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.PreviewRefreshEvent preview_refresh_event = 185;</code>
+     */
+    public com.google.wireless.android.sdk.stats.PreviewRefreshEvent.Builder getPreviewRefreshEventBuilder() {
+      bitField5_ |= 0x01000000;
+      onChanged();
+      return getPreviewRefreshEventFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * set when kind = PREVIEW_REFRESH_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.PreviewRefreshEvent preview_refresh_event = 185;</code>
+     */
+    public com.google.wireless.android.sdk.stats.PreviewRefreshEventOrBuilder getPreviewRefreshEventOrBuilder() {
+      if (previewRefreshEventBuilder_ != null) {
+        return previewRefreshEventBuilder_.getMessageOrBuilder();
+      } else {
+        return previewRefreshEvent_ == null ?
+            com.google.wireless.android.sdk.stats.PreviewRefreshEvent.getDefaultInstance() : previewRefreshEvent_;
+      }
+    }
+    /**
+     * <pre>
+     * set when kind = PREVIEW_REFRESH_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.PreviewRefreshEvent preview_refresh_event = 185;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.PreviewRefreshEvent, com.google.wireless.android.sdk.stats.PreviewRefreshEvent.Builder, com.google.wireless.android.sdk.stats.PreviewRefreshEventOrBuilder> 
+        getPreviewRefreshEventFieldBuilder() {
+      if (previewRefreshEventBuilder_ == null) {
+        previewRefreshEventBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.wireless.android.sdk.stats.PreviewRefreshEvent, com.google.wireless.android.sdk.stats.PreviewRefreshEvent.Builder, com.google.wireless.android.sdk.stats.PreviewRefreshEventOrBuilder>(
+                getPreviewRefreshEvent(),
+                getParentForChildren(),
+                isClean());
+        previewRefreshEvent_ = null;
+      }
+      return previewRefreshEventBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

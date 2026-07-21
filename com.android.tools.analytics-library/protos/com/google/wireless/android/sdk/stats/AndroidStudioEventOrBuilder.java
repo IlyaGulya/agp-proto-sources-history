@@ -5131,4 +5131,58 @@ public interface AndroidStudioEventOrBuilder extends
    * <code>optional .android_studio.GradleJdkConfigurationEvent gradle_jdk_configuration_event = 183;</code>
    */
   com.google.wireless.android.sdk.stats.GradleJdkConfigurationEventOrBuilder getGradleJdkConfigurationEventOrBuilder();
+
+  /**
+   * <pre>
+   * set when kind = RENDER_SECURITY_MANAGER_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.RenderSecurityManagerEvent render_security_manager_event = 184;</code>
+   * @return Whether the renderSecurityManagerEvent field is set.
+   */
+  boolean hasRenderSecurityManagerEvent();
+  /**
+   * <pre>
+   * set when kind = RENDER_SECURITY_MANAGER_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.RenderSecurityManagerEvent render_security_manager_event = 184;</code>
+   * @return The renderSecurityManagerEvent.
+   */
+  com.google.wireless.android.sdk.stats.RenderSecurityManagerEvent getRenderSecurityManagerEvent();
+  /**
+   * <pre>
+   * set when kind = RENDER_SECURITY_MANAGER_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.RenderSecurityManagerEvent render_security_manager_event = 184;</code>
+   */
+  com.google.wireless.android.sdk.stats.RenderSecurityManagerEventOrBuilder getRenderSecurityManagerEventOrBuilder();
+
+  /**
+   * <pre>
+   * set when kind = PREVIEW_REFRESH_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.PreviewRefreshEvent preview_refresh_event = 185;</code>
+   * @return Whether the previewRefreshEvent field is set.
+   */
+  boolean hasPreviewRefreshEvent();
+  /**
+   * <pre>
+   * set when kind = PREVIEW_REFRESH_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.PreviewRefreshEvent preview_refresh_event = 185;</code>
+   * @return The previewRefreshEvent.
+   */
+  com.google.wireless.android.sdk.stats.PreviewRefreshEvent getPreviewRefreshEvent();
+  /**
+   * <pre>
+   * set when kind = PREVIEW_REFRESH_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.PreviewRefreshEvent preview_refresh_event = 185;</code>
+   */
+  com.google.wireless.android.sdk.stats.PreviewRefreshEventOrBuilder getPreviewRefreshEventOrBuilder();
 }
