@@ -3615,6 +3615,30 @@ private static final long serialVersionUID = 0L;
      * <code>PARALLEL_GRADLE_SYNC_MODAL_DIALOG_CANCEL = 386;</code>
      */
     PARALLEL_GRADLE_SYNC_MODAL_DIALOG_CANCEL(386),
+    /**
+     * <pre>
+     * Marketing metrics event.
+     * </pre>
+     *
+     * <code>MARKETING_METRICS_EVENT = 387;</code>
+     */
+    MARKETING_METRICS_EVENT(387),
+    /**
+     * <pre>
+     * Lightbuild sync requested event
+     * </pre>
+     *
+     * <code>LIGHTBUILD_SYNC_REQUESTED_EVENT = 388;</code>
+     */
+    LIGHTBUILD_SYNC_REQUESTED_EVENT(388),
+    /**
+     * <pre>
+     * Lightbuild sync finished event.
+     * </pre>
+     *
+     * <code>LIGHTBUILD_SYNC_FINISHED_EVENT = 389;</code>
+     */
+    LIGHTBUILD_SYNC_FINISHED_EVENT(389),
     ;
 
     /**
@@ -6502,6 +6526,30 @@ private static final long serialVersionUID = 0L;
      * <code>PARALLEL_GRADLE_SYNC_MODAL_DIALOG_CANCEL = 386;</code>
      */
     public static final int PARALLEL_GRADLE_SYNC_MODAL_DIALOG_CANCEL_VALUE = 386;
+    /**
+     * <pre>
+     * Marketing metrics event.
+     * </pre>
+     *
+     * <code>MARKETING_METRICS_EVENT = 387;</code>
+     */
+    public static final int MARKETING_METRICS_EVENT_VALUE = 387;
+    /**
+     * <pre>
+     * Lightbuild sync requested event
+     * </pre>
+     *
+     * <code>LIGHTBUILD_SYNC_REQUESTED_EVENT = 388;</code>
+     */
+    public static final int LIGHTBUILD_SYNC_REQUESTED_EVENT_VALUE = 388;
+    /**
+     * <pre>
+     * Lightbuild sync finished event.
+     * </pre>
+     *
+     * <code>LIGHTBUILD_SYNC_FINISHED_EVENT = 389;</code>
+     */
+    public static final int LIGHTBUILD_SYNC_FINISHED_EVENT_VALUE = 389;
 
 
     public final int getNumber() {
@@ -6906,6 +6954,9 @@ private static final long serialVersionUID = 0L;
         case 384: return PARALLEL_GRADLE_SYNC_MODAL_DIALOG_IGNORE_SETTING;
         case 385: return PARALLEL_GRADLE_SYNC_MODAL_DIALOG_ALWAYS_APPLY_SETTING;
         case 386: return PARALLEL_GRADLE_SYNC_MODAL_DIALOG_CANCEL;
+        case 387: return MARKETING_METRICS_EVENT;
+        case 388: return LIGHTBUILD_SYNC_REQUESTED_EVENT;
+        case 389: return LIGHTBUILD_SYNC_FINISHED_EVENT;
         default: return null;
       }
     }
@@ -13871,7 +13922,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional uint32 min_sdk = 2 [deprecated = true];</code>
        * @deprecated android_studio.AndroidStudioEvent.TemplatesUsage.TemplateModule.min_sdk is deprecated.
-       *     See studio_stats.proto;l=2236
+       *     See studio_stats.proto;l=2259
        * @return Whether the minSdk field is set.
        */
       @java.lang.Deprecated boolean hasMinSdk();
@@ -13882,7 +13933,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional uint32 min_sdk = 2 [deprecated = true];</code>
        * @deprecated android_studio.AndroidStudioEvent.TemplatesUsage.TemplateModule.min_sdk is deprecated.
-       *     See studio_stats.proto;l=2236
+       *     See studio_stats.proto;l=2259
        * @return The minSdk.
        */
       @java.lang.Deprecated int getMinSdk();
@@ -14413,7 +14464,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional uint32 min_sdk = 2 [deprecated = true];</code>
        * @deprecated android_studio.AndroidStudioEvent.TemplatesUsage.TemplateModule.min_sdk is deprecated.
-       *     See studio_stats.proto;l=2236
+       *     See studio_stats.proto;l=2259
        * @return Whether the minSdk field is set.
        */
       @java.lang.Override
@@ -14427,7 +14478,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional uint32 min_sdk = 2 [deprecated = true];</code>
        * @deprecated android_studio.AndroidStudioEvent.TemplatesUsage.TemplateModule.min_sdk is deprecated.
-       *     See studio_stats.proto;l=2236
+       *     See studio_stats.proto;l=2259
        * @return The minSdk.
        */
       @java.lang.Override
@@ -15065,7 +15116,7 @@ private static final long serialVersionUID = 0L;
          *
          * <code>optional uint32 min_sdk = 2 [deprecated = true];</code>
          * @deprecated android_studio.AndroidStudioEvent.TemplatesUsage.TemplateModule.min_sdk is deprecated.
-         *     See studio_stats.proto;l=2236
+         *     See studio_stats.proto;l=2259
          * @return Whether the minSdk field is set.
          */
         @java.lang.Override
@@ -15079,7 +15130,7 @@ private static final long serialVersionUID = 0L;
          *
          * <code>optional uint32 min_sdk = 2 [deprecated = true];</code>
          * @deprecated android_studio.AndroidStudioEvent.TemplatesUsage.TemplateModule.min_sdk is deprecated.
-         *     See studio_stats.proto;l=2236
+         *     See studio_stats.proto;l=2259
          * @return The minSdk.
          */
         @java.lang.Override
@@ -15093,7 +15144,7 @@ private static final long serialVersionUID = 0L;
          *
          * <code>optional uint32 min_sdk = 2 [deprecated = true];</code>
          * @deprecated android_studio.AndroidStudioEvent.TemplatesUsage.TemplateModule.min_sdk is deprecated.
-         *     See studio_stats.proto;l=2236
+         *     See studio_stats.proto;l=2259
          * @param value The minSdk to set.
          * @return This builder for chaining.
          */
@@ -15111,7 +15162,7 @@ private static final long serialVersionUID = 0L;
          *
          * <code>optional uint32 min_sdk = 2 [deprecated = true];</code>
          * @deprecated android_studio.AndroidStudioEvent.TemplatesUsage.TemplateModule.min_sdk is deprecated.
-         *     See studio_stats.proto;l=2236
+         *     See studio_stats.proto;l=2259
          * @return This builder for chaining.
          */
         @java.lang.Deprecated public Builder clearMinSdk() {
@@ -27645,6 +27696,158 @@ private static final long serialVersionUID = 0L;
     return changeReviewEvent_ == null ? com.google.wireless.android.sdk.stats.ChangeReviewEvent.getDefaultInstance() : changeReviewEvent_;
   }
 
+  public static final int MARKETING_METRICS_EVENT_FIELD_NUMBER = 259;
+  private com.google.wireless.android.sdk.stats.MarketingMetricsEvent marketingMetricsEvent_;
+  /**
+   * <pre>
+   * set when kind = MARKETING_METRICS_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.MarketingMetricsEvent marketing_metrics_event = 259 [lazy = true];</code>
+   * @return Whether the marketingMetricsEvent field is set.
+   */
+  @java.lang.Override
+  public boolean hasMarketingMetricsEvent() {
+    return ((bitField7_ & 0x08000000) != 0);
+  }
+  /**
+   * <pre>
+   * set when kind = MARKETING_METRICS_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.MarketingMetricsEvent marketing_metrics_event = 259 [lazy = true];</code>
+   * @return The marketingMetricsEvent.
+   */
+  @java.lang.Override
+  public com.google.wireless.android.sdk.stats.MarketingMetricsEvent getMarketingMetricsEvent() {
+    return marketingMetricsEvent_ == null ? com.google.wireless.android.sdk.stats.MarketingMetricsEvent.getDefaultInstance() : marketingMetricsEvent_;
+  }
+  /**
+   * <pre>
+   * set when kind = MARKETING_METRICS_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.MarketingMetricsEvent marketing_metrics_event = 259 [lazy = true];</code>
+   */
+  @java.lang.Override
+  public com.google.wireless.android.sdk.stats.MarketingMetricsEventOrBuilder getMarketingMetricsEventOrBuilder() {
+    return marketingMetricsEvent_ == null ? com.google.wireless.android.sdk.stats.MarketingMetricsEvent.getDefaultInstance() : marketingMetricsEvent_;
+  }
+
+  public static final int RENDER_DIFF_VIEWER_EVENT_FIELD_NUMBER = 260;
+  private com.google.wireless.android.sdk.stats.RenderDiffViewerEvent renderDiffViewerEvent_;
+  /**
+   * <pre>
+   * Logged when a user interacts with the diff viewer UI (Engagement Track)
+   * </pre>
+   *
+   * <code>optional .android_studio.RenderDiffViewerEvent render_diff_viewer_event = 260 [lazy = true];</code>
+   * @return Whether the renderDiffViewerEvent field is set.
+   */
+  @java.lang.Override
+  public boolean hasRenderDiffViewerEvent() {
+    return ((bitField7_ & 0x10000000) != 0);
+  }
+  /**
+   * <pre>
+   * Logged when a user interacts with the diff viewer UI (Engagement Track)
+   * </pre>
+   *
+   * <code>optional .android_studio.RenderDiffViewerEvent render_diff_viewer_event = 260 [lazy = true];</code>
+   * @return The renderDiffViewerEvent.
+   */
+  @java.lang.Override
+  public com.google.wireless.android.sdk.stats.RenderDiffViewerEvent getRenderDiffViewerEvent() {
+    return renderDiffViewerEvent_ == null ? com.google.wireless.android.sdk.stats.RenderDiffViewerEvent.getDefaultInstance() : renderDiffViewerEvent_;
+  }
+  /**
+   * <pre>
+   * Logged when a user interacts with the diff viewer UI (Engagement Track)
+   * </pre>
+   *
+   * <code>optional .android_studio.RenderDiffViewerEvent render_diff_viewer_event = 260 [lazy = true];</code>
+   */
+  @java.lang.Override
+  public com.google.wireless.android.sdk.stats.RenderDiffViewerEventOrBuilder getRenderDiffViewerEventOrBuilder() {
+    return renderDiffViewerEvent_ == null ? com.google.wireless.android.sdk.stats.RenderDiffViewerEvent.getDefaultInstance() : renderDiffViewerEvent_;
+  }
+
+  public static final int LIGHTBUILD_SYNC_REQUESTED_EVENT_FIELD_NUMBER = 261;
+  private com.google.wireless.android.sdk.stats.LightbuildSyncRequestedEvent lightbuildSyncRequestedEvent_;
+  /**
+   * <pre>
+   * set when kind = LIGHTBUILD_SYNC_REQUESTED_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.LightbuildSyncRequestedEvent lightbuild_sync_requested_event = 261 [lazy = true];</code>
+   * @return Whether the lightbuildSyncRequestedEvent field is set.
+   */
+  @java.lang.Override
+  public boolean hasLightbuildSyncRequestedEvent() {
+    return ((bitField7_ & 0x20000000) != 0);
+  }
+  /**
+   * <pre>
+   * set when kind = LIGHTBUILD_SYNC_REQUESTED_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.LightbuildSyncRequestedEvent lightbuild_sync_requested_event = 261 [lazy = true];</code>
+   * @return The lightbuildSyncRequestedEvent.
+   */
+  @java.lang.Override
+  public com.google.wireless.android.sdk.stats.LightbuildSyncRequestedEvent getLightbuildSyncRequestedEvent() {
+    return lightbuildSyncRequestedEvent_ == null ? com.google.wireless.android.sdk.stats.LightbuildSyncRequestedEvent.getDefaultInstance() : lightbuildSyncRequestedEvent_;
+  }
+  /**
+   * <pre>
+   * set when kind = LIGHTBUILD_SYNC_REQUESTED_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.LightbuildSyncRequestedEvent lightbuild_sync_requested_event = 261 [lazy = true];</code>
+   */
+  @java.lang.Override
+  public com.google.wireless.android.sdk.stats.LightbuildSyncRequestedEventOrBuilder getLightbuildSyncRequestedEventOrBuilder() {
+    return lightbuildSyncRequestedEvent_ == null ? com.google.wireless.android.sdk.stats.LightbuildSyncRequestedEvent.getDefaultInstance() : lightbuildSyncRequestedEvent_;
+  }
+
+  public static final int LIGHTBUILD_SYNC_FINISHED_EVENT_FIELD_NUMBER = 262;
+  private com.google.wireless.android.sdk.stats.LightbuildSyncFinishedEvent lightbuildSyncFinishedEvent_;
+  /**
+   * <pre>
+   * set when kind = LIGHTBUILD_SYNC_FINISHED_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.LightbuildSyncFinishedEvent lightbuild_sync_finished_event = 262 [lazy = true];</code>
+   * @return Whether the lightbuildSyncFinishedEvent field is set.
+   */
+  @java.lang.Override
+  public boolean hasLightbuildSyncFinishedEvent() {
+    return ((bitField7_ & 0x40000000) != 0);
+  }
+  /**
+   * <pre>
+   * set when kind = LIGHTBUILD_SYNC_FINISHED_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.LightbuildSyncFinishedEvent lightbuild_sync_finished_event = 262 [lazy = true];</code>
+   * @return The lightbuildSyncFinishedEvent.
+   */
+  @java.lang.Override
+  public com.google.wireless.android.sdk.stats.LightbuildSyncFinishedEvent getLightbuildSyncFinishedEvent() {
+    return lightbuildSyncFinishedEvent_ == null ? com.google.wireless.android.sdk.stats.LightbuildSyncFinishedEvent.getDefaultInstance() : lightbuildSyncFinishedEvent_;
+  }
+  /**
+   * <pre>
+   * set when kind = LIGHTBUILD_SYNC_FINISHED_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.LightbuildSyncFinishedEvent lightbuild_sync_finished_event = 262 [lazy = true];</code>
+   */
+  @java.lang.Override
+  public com.google.wireless.android.sdk.stats.LightbuildSyncFinishedEventOrBuilder getLightbuildSyncFinishedEventOrBuilder() {
+    return lightbuildSyncFinishedEvent_ == null ? com.google.wireless.android.sdk.stats.LightbuildSyncFinishedEvent.getDefaultInstance() : lightbuildSyncFinishedEvent_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -28432,6 +28635,18 @@ private static final long serialVersionUID = 0L;
     }
     if (((bitField7_ & 0x04000000) != 0)) {
       output.writeMessage(258, getChangeReviewEvent());
+    }
+    if (((bitField7_ & 0x08000000) != 0)) {
+      output.writeMessage(259, getMarketingMetricsEvent());
+    }
+    if (((bitField7_ & 0x10000000) != 0)) {
+      output.writeMessage(260, getRenderDiffViewerEvent());
+    }
+    if (((bitField7_ & 0x20000000) != 0)) {
+      output.writeMessage(261, getLightbuildSyncRequestedEvent());
+    }
+    if (((bitField7_ & 0x40000000) != 0)) {
+      output.writeMessage(262, getLightbuildSyncFinishedEvent());
     }
     getUnknownFields().writeTo(output);
   }
@@ -29479,6 +29694,22 @@ private static final long serialVersionUID = 0L;
     if (((bitField7_ & 0x04000000) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(258, getChangeReviewEvent());
+    }
+    if (((bitField7_ & 0x08000000) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(259, getMarketingMetricsEvent());
+    }
+    if (((bitField7_ & 0x10000000) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(260, getRenderDiffViewerEvent());
+    }
+    if (((bitField7_ & 0x20000000) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(261, getLightbuildSyncRequestedEvent());
+    }
+    if (((bitField7_ & 0x40000000) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(262, getLightbuildSyncFinishedEvent());
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -30753,6 +30984,26 @@ private static final long serialVersionUID = 0L;
       if (!getChangeReviewEvent()
           .equals(other.getChangeReviewEvent())) return false;
     }
+    if (hasMarketingMetricsEvent() != other.hasMarketingMetricsEvent()) return false;
+    if (hasMarketingMetricsEvent()) {
+      if (!getMarketingMetricsEvent()
+          .equals(other.getMarketingMetricsEvent())) return false;
+    }
+    if (hasRenderDiffViewerEvent() != other.hasRenderDiffViewerEvent()) return false;
+    if (hasRenderDiffViewerEvent()) {
+      if (!getRenderDiffViewerEvent()
+          .equals(other.getRenderDiffViewerEvent())) return false;
+    }
+    if (hasLightbuildSyncRequestedEvent() != other.hasLightbuildSyncRequestedEvent()) return false;
+    if (hasLightbuildSyncRequestedEvent()) {
+      if (!getLightbuildSyncRequestedEvent()
+          .equals(other.getLightbuildSyncRequestedEvent())) return false;
+    }
+    if (hasLightbuildSyncFinishedEvent() != other.hasLightbuildSyncFinishedEvent()) return false;
+    if (hasLightbuildSyncFinishedEvent()) {
+      if (!getLightbuildSyncFinishedEvent()
+          .equals(other.getLightbuildSyncFinishedEvent())) return false;
+    }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -31798,6 +32049,22 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + CHANGE_REVIEW_EVENT_FIELD_NUMBER;
       hash = (53 * hash) + getChangeReviewEvent().hashCode();
     }
+    if (hasMarketingMetricsEvent()) {
+      hash = (37 * hash) + MARKETING_METRICS_EVENT_FIELD_NUMBER;
+      hash = (53 * hash) + getMarketingMetricsEvent().hashCode();
+    }
+    if (hasRenderDiffViewerEvent()) {
+      hash = (37 * hash) + RENDER_DIFF_VIEWER_EVENT_FIELD_NUMBER;
+      hash = (53 * hash) + getRenderDiffViewerEvent().hashCode();
+    }
+    if (hasLightbuildSyncRequestedEvent()) {
+      hash = (37 * hash) + LIGHTBUILD_SYNC_REQUESTED_EVENT_FIELD_NUMBER;
+      hash = (53 * hash) + getLightbuildSyncRequestedEvent().hashCode();
+    }
+    if (hasLightbuildSyncFinishedEvent()) {
+      hash = (37 * hash) + LIGHTBUILD_SYNC_FINISHED_EVENT_FIELD_NUMBER;
+      hash = (53 * hash) + getLightbuildSyncFinishedEvent().hashCode();
+    }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -32161,6 +32428,10 @@ private static final long serialVersionUID = 0L;
         getGeminiTelemetryEventFieldBuilder();
         getPlayPublishingEventFieldBuilder();
         getChangeReviewEventFieldBuilder();
+        getMarketingMetricsEventFieldBuilder();
+        getRenderDiffViewerEventFieldBuilder();
+        getLightbuildSyncRequestedEventFieldBuilder();
+        getLightbuildSyncFinishedEventFieldBuilder();
       }
     }
     @java.lang.Override
@@ -33383,6 +33654,26 @@ private static final long serialVersionUID = 0L;
       if (changeReviewEventBuilder_ != null) {
         changeReviewEventBuilder_.dispose();
         changeReviewEventBuilder_ = null;
+      }
+      marketingMetricsEvent_ = null;
+      if (marketingMetricsEventBuilder_ != null) {
+        marketingMetricsEventBuilder_.dispose();
+        marketingMetricsEventBuilder_ = null;
+      }
+      renderDiffViewerEvent_ = null;
+      if (renderDiffViewerEventBuilder_ != null) {
+        renderDiffViewerEventBuilder_.dispose();
+        renderDiffViewerEventBuilder_ = null;
+      }
+      lightbuildSyncRequestedEvent_ = null;
+      if (lightbuildSyncRequestedEventBuilder_ != null) {
+        lightbuildSyncRequestedEventBuilder_.dispose();
+        lightbuildSyncRequestedEventBuilder_ = null;
+      }
+      lightbuildSyncFinishedEvent_ = null;
+      if (lightbuildSyncFinishedEventBuilder_ != null) {
+        lightbuildSyncFinishedEventBuilder_.dispose();
+        lightbuildSyncFinishedEventBuilder_ = null;
       }
       return this;
     }
@@ -35003,6 +35294,30 @@ private static final long serialVersionUID = 0L;
             : changeReviewEventBuilder_.build();
         to_bitField7_ |= 0x04000000;
       }
+      if (((from_bitField8_ & 0x00000004) != 0)) {
+        result.marketingMetricsEvent_ = marketingMetricsEventBuilder_ == null
+            ? marketingMetricsEvent_
+            : marketingMetricsEventBuilder_.build();
+        to_bitField7_ |= 0x08000000;
+      }
+      if (((from_bitField8_ & 0x00000008) != 0)) {
+        result.renderDiffViewerEvent_ = renderDiffViewerEventBuilder_ == null
+            ? renderDiffViewerEvent_
+            : renderDiffViewerEventBuilder_.build();
+        to_bitField7_ |= 0x10000000;
+      }
+      if (((from_bitField8_ & 0x00000010) != 0)) {
+        result.lightbuildSyncRequestedEvent_ = lightbuildSyncRequestedEventBuilder_ == null
+            ? lightbuildSyncRequestedEvent_
+            : lightbuildSyncRequestedEventBuilder_.build();
+        to_bitField7_ |= 0x20000000;
+      }
+      if (((from_bitField8_ & 0x00000020) != 0)) {
+        result.lightbuildSyncFinishedEvent_ = lightbuildSyncFinishedEventBuilder_ == null
+            ? lightbuildSyncFinishedEvent_
+            : lightbuildSyncFinishedEventBuilder_.build();
+        to_bitField7_ |= 0x40000000;
+      }
       result.bitField7_ |= to_bitField7_;
     }
 
@@ -35918,6 +36233,18 @@ private static final long serialVersionUID = 0L;
       }
       if (other.hasChangeReviewEvent()) {
         mergeChangeReviewEvent(other.getChangeReviewEvent());
+      }
+      if (other.hasMarketingMetricsEvent()) {
+        mergeMarketingMetricsEvent(other.getMarketingMetricsEvent());
+      }
+      if (other.hasRenderDiffViewerEvent()) {
+        mergeRenderDiffViewerEvent(other.getRenderDiffViewerEvent());
+      }
+      if (other.hasLightbuildSyncRequestedEvent()) {
+        mergeLightbuildSyncRequestedEvent(other.getLightbuildSyncRequestedEvent());
+      }
+      if (other.hasLightbuildSyncFinishedEvent()) {
+        mergeLightbuildSyncFinishedEvent(other.getLightbuildSyncFinishedEvent());
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -37825,6 +38152,34 @@ private static final long serialVersionUID = 0L;
               bitField8_ |= 0x00000002;
               break;
             } // case 2066
+            case 2074: {
+              input.readMessage(
+                  getMarketingMetricsEventFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField8_ |= 0x00000004;
+              break;
+            } // case 2074
+            case 2082: {
+              input.readMessage(
+                  getRenderDiffViewerEventFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField8_ |= 0x00000008;
+              break;
+            } // case 2082
+            case 2090: {
+              input.readMessage(
+                  getLightbuildSyncRequestedEventFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField8_ |= 0x00000010;
+              break;
+            } // case 2090
+            case 2098: {
+              input.readMessage(
+                  getLightbuildSyncFinishedEventFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField8_ |= 0x00000020;
+              break;
+            } // case 2098
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -77342,6 +77697,626 @@ private static final long serialVersionUID = 0L;
         changeReviewEvent_ = null;
       }
       return changeReviewEventBuilder_;
+    }
+
+    private com.google.wireless.android.sdk.stats.MarketingMetricsEvent marketingMetricsEvent_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.MarketingMetricsEvent, com.google.wireless.android.sdk.stats.MarketingMetricsEvent.Builder, com.google.wireless.android.sdk.stats.MarketingMetricsEventOrBuilder> marketingMetricsEventBuilder_;
+    /**
+     * <pre>
+     * set when kind = MARKETING_METRICS_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.MarketingMetricsEvent marketing_metrics_event = 259 [lazy = true];</code>
+     * @return Whether the marketingMetricsEvent field is set.
+     */
+    public boolean hasMarketingMetricsEvent() {
+      return ((bitField8_ & 0x00000004) != 0);
+    }
+    /**
+     * <pre>
+     * set when kind = MARKETING_METRICS_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.MarketingMetricsEvent marketing_metrics_event = 259 [lazy = true];</code>
+     * @return The marketingMetricsEvent.
+     */
+    public com.google.wireless.android.sdk.stats.MarketingMetricsEvent getMarketingMetricsEvent() {
+      if (marketingMetricsEventBuilder_ == null) {
+        return marketingMetricsEvent_ == null ? com.google.wireless.android.sdk.stats.MarketingMetricsEvent.getDefaultInstance() : marketingMetricsEvent_;
+      } else {
+        return marketingMetricsEventBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * set when kind = MARKETING_METRICS_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.MarketingMetricsEvent marketing_metrics_event = 259 [lazy = true];</code>
+     */
+    public Builder setMarketingMetricsEvent(com.google.wireless.android.sdk.stats.MarketingMetricsEvent value) {
+      if (marketingMetricsEventBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        marketingMetricsEvent_ = value;
+      } else {
+        marketingMetricsEventBuilder_.setMessage(value);
+      }
+      bitField8_ |= 0x00000004;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = MARKETING_METRICS_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.MarketingMetricsEvent marketing_metrics_event = 259 [lazy = true];</code>
+     */
+    public Builder setMarketingMetricsEvent(
+        com.google.wireless.android.sdk.stats.MarketingMetricsEvent.Builder builderForValue) {
+      if (marketingMetricsEventBuilder_ == null) {
+        marketingMetricsEvent_ = builderForValue.build();
+      } else {
+        marketingMetricsEventBuilder_.setMessage(builderForValue.build());
+      }
+      bitField8_ |= 0x00000004;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = MARKETING_METRICS_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.MarketingMetricsEvent marketing_metrics_event = 259 [lazy = true];</code>
+     */
+    public Builder mergeMarketingMetricsEvent(com.google.wireless.android.sdk.stats.MarketingMetricsEvent value) {
+      if (marketingMetricsEventBuilder_ == null) {
+        if (((bitField8_ & 0x00000004) != 0) &&
+          marketingMetricsEvent_ != null &&
+          marketingMetricsEvent_ != com.google.wireless.android.sdk.stats.MarketingMetricsEvent.getDefaultInstance()) {
+          getMarketingMetricsEventBuilder().mergeFrom(value);
+        } else {
+          marketingMetricsEvent_ = value;
+        }
+      } else {
+        marketingMetricsEventBuilder_.mergeFrom(value);
+      }
+      bitField8_ |= 0x00000004;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = MARKETING_METRICS_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.MarketingMetricsEvent marketing_metrics_event = 259 [lazy = true];</code>
+     */
+    public Builder clearMarketingMetricsEvent() {
+      bitField8_ = (bitField8_ & ~0x00000004);
+      marketingMetricsEvent_ = null;
+      if (marketingMetricsEventBuilder_ != null) {
+        marketingMetricsEventBuilder_.dispose();
+        marketingMetricsEventBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = MARKETING_METRICS_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.MarketingMetricsEvent marketing_metrics_event = 259 [lazy = true];</code>
+     */
+    public com.google.wireless.android.sdk.stats.MarketingMetricsEvent.Builder getMarketingMetricsEventBuilder() {
+      bitField8_ |= 0x00000004;
+      onChanged();
+      return getMarketingMetricsEventFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * set when kind = MARKETING_METRICS_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.MarketingMetricsEvent marketing_metrics_event = 259 [lazy = true];</code>
+     */
+    public com.google.wireless.android.sdk.stats.MarketingMetricsEventOrBuilder getMarketingMetricsEventOrBuilder() {
+      if (marketingMetricsEventBuilder_ != null) {
+        return marketingMetricsEventBuilder_.getMessageOrBuilder();
+      } else {
+        return marketingMetricsEvent_ == null ?
+            com.google.wireless.android.sdk.stats.MarketingMetricsEvent.getDefaultInstance() : marketingMetricsEvent_;
+      }
+    }
+    /**
+     * <pre>
+     * set when kind = MARKETING_METRICS_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.MarketingMetricsEvent marketing_metrics_event = 259 [lazy = true];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.MarketingMetricsEvent, com.google.wireless.android.sdk.stats.MarketingMetricsEvent.Builder, com.google.wireless.android.sdk.stats.MarketingMetricsEventOrBuilder> 
+        getMarketingMetricsEventFieldBuilder() {
+      if (marketingMetricsEventBuilder_ == null) {
+        marketingMetricsEventBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.wireless.android.sdk.stats.MarketingMetricsEvent, com.google.wireless.android.sdk.stats.MarketingMetricsEvent.Builder, com.google.wireless.android.sdk.stats.MarketingMetricsEventOrBuilder>(
+                getMarketingMetricsEvent(),
+                getParentForChildren(),
+                isClean());
+        marketingMetricsEvent_ = null;
+      }
+      return marketingMetricsEventBuilder_;
+    }
+
+    private com.google.wireless.android.sdk.stats.RenderDiffViewerEvent renderDiffViewerEvent_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.RenderDiffViewerEvent, com.google.wireless.android.sdk.stats.RenderDiffViewerEvent.Builder, com.google.wireless.android.sdk.stats.RenderDiffViewerEventOrBuilder> renderDiffViewerEventBuilder_;
+    /**
+     * <pre>
+     * Logged when a user interacts with the diff viewer UI (Engagement Track)
+     * </pre>
+     *
+     * <code>optional .android_studio.RenderDiffViewerEvent render_diff_viewer_event = 260 [lazy = true];</code>
+     * @return Whether the renderDiffViewerEvent field is set.
+     */
+    public boolean hasRenderDiffViewerEvent() {
+      return ((bitField8_ & 0x00000008) != 0);
+    }
+    /**
+     * <pre>
+     * Logged when a user interacts with the diff viewer UI (Engagement Track)
+     * </pre>
+     *
+     * <code>optional .android_studio.RenderDiffViewerEvent render_diff_viewer_event = 260 [lazy = true];</code>
+     * @return The renderDiffViewerEvent.
+     */
+    public com.google.wireless.android.sdk.stats.RenderDiffViewerEvent getRenderDiffViewerEvent() {
+      if (renderDiffViewerEventBuilder_ == null) {
+        return renderDiffViewerEvent_ == null ? com.google.wireless.android.sdk.stats.RenderDiffViewerEvent.getDefaultInstance() : renderDiffViewerEvent_;
+      } else {
+        return renderDiffViewerEventBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * Logged when a user interacts with the diff viewer UI (Engagement Track)
+     * </pre>
+     *
+     * <code>optional .android_studio.RenderDiffViewerEvent render_diff_viewer_event = 260 [lazy = true];</code>
+     */
+    public Builder setRenderDiffViewerEvent(com.google.wireless.android.sdk.stats.RenderDiffViewerEvent value) {
+      if (renderDiffViewerEventBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        renderDiffViewerEvent_ = value;
+      } else {
+        renderDiffViewerEventBuilder_.setMessage(value);
+      }
+      bitField8_ |= 0x00000008;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Logged when a user interacts with the diff viewer UI (Engagement Track)
+     * </pre>
+     *
+     * <code>optional .android_studio.RenderDiffViewerEvent render_diff_viewer_event = 260 [lazy = true];</code>
+     */
+    public Builder setRenderDiffViewerEvent(
+        com.google.wireless.android.sdk.stats.RenderDiffViewerEvent.Builder builderForValue) {
+      if (renderDiffViewerEventBuilder_ == null) {
+        renderDiffViewerEvent_ = builderForValue.build();
+      } else {
+        renderDiffViewerEventBuilder_.setMessage(builderForValue.build());
+      }
+      bitField8_ |= 0x00000008;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Logged when a user interacts with the diff viewer UI (Engagement Track)
+     * </pre>
+     *
+     * <code>optional .android_studio.RenderDiffViewerEvent render_diff_viewer_event = 260 [lazy = true];</code>
+     */
+    public Builder mergeRenderDiffViewerEvent(com.google.wireless.android.sdk.stats.RenderDiffViewerEvent value) {
+      if (renderDiffViewerEventBuilder_ == null) {
+        if (((bitField8_ & 0x00000008) != 0) &&
+          renderDiffViewerEvent_ != null &&
+          renderDiffViewerEvent_ != com.google.wireless.android.sdk.stats.RenderDiffViewerEvent.getDefaultInstance()) {
+          getRenderDiffViewerEventBuilder().mergeFrom(value);
+        } else {
+          renderDiffViewerEvent_ = value;
+        }
+      } else {
+        renderDiffViewerEventBuilder_.mergeFrom(value);
+      }
+      bitField8_ |= 0x00000008;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Logged when a user interacts with the diff viewer UI (Engagement Track)
+     * </pre>
+     *
+     * <code>optional .android_studio.RenderDiffViewerEvent render_diff_viewer_event = 260 [lazy = true];</code>
+     */
+    public Builder clearRenderDiffViewerEvent() {
+      bitField8_ = (bitField8_ & ~0x00000008);
+      renderDiffViewerEvent_ = null;
+      if (renderDiffViewerEventBuilder_ != null) {
+        renderDiffViewerEventBuilder_.dispose();
+        renderDiffViewerEventBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Logged when a user interacts with the diff viewer UI (Engagement Track)
+     * </pre>
+     *
+     * <code>optional .android_studio.RenderDiffViewerEvent render_diff_viewer_event = 260 [lazy = true];</code>
+     */
+    public com.google.wireless.android.sdk.stats.RenderDiffViewerEvent.Builder getRenderDiffViewerEventBuilder() {
+      bitField8_ |= 0x00000008;
+      onChanged();
+      return getRenderDiffViewerEventFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * Logged when a user interacts with the diff viewer UI (Engagement Track)
+     * </pre>
+     *
+     * <code>optional .android_studio.RenderDiffViewerEvent render_diff_viewer_event = 260 [lazy = true];</code>
+     */
+    public com.google.wireless.android.sdk.stats.RenderDiffViewerEventOrBuilder getRenderDiffViewerEventOrBuilder() {
+      if (renderDiffViewerEventBuilder_ != null) {
+        return renderDiffViewerEventBuilder_.getMessageOrBuilder();
+      } else {
+        return renderDiffViewerEvent_ == null ?
+            com.google.wireless.android.sdk.stats.RenderDiffViewerEvent.getDefaultInstance() : renderDiffViewerEvent_;
+      }
+    }
+    /**
+     * <pre>
+     * Logged when a user interacts with the diff viewer UI (Engagement Track)
+     * </pre>
+     *
+     * <code>optional .android_studio.RenderDiffViewerEvent render_diff_viewer_event = 260 [lazy = true];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.RenderDiffViewerEvent, com.google.wireless.android.sdk.stats.RenderDiffViewerEvent.Builder, com.google.wireless.android.sdk.stats.RenderDiffViewerEventOrBuilder> 
+        getRenderDiffViewerEventFieldBuilder() {
+      if (renderDiffViewerEventBuilder_ == null) {
+        renderDiffViewerEventBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.wireless.android.sdk.stats.RenderDiffViewerEvent, com.google.wireless.android.sdk.stats.RenderDiffViewerEvent.Builder, com.google.wireless.android.sdk.stats.RenderDiffViewerEventOrBuilder>(
+                getRenderDiffViewerEvent(),
+                getParentForChildren(),
+                isClean());
+        renderDiffViewerEvent_ = null;
+      }
+      return renderDiffViewerEventBuilder_;
+    }
+
+    private com.google.wireless.android.sdk.stats.LightbuildSyncRequestedEvent lightbuildSyncRequestedEvent_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.LightbuildSyncRequestedEvent, com.google.wireless.android.sdk.stats.LightbuildSyncRequestedEvent.Builder, com.google.wireless.android.sdk.stats.LightbuildSyncRequestedEventOrBuilder> lightbuildSyncRequestedEventBuilder_;
+    /**
+     * <pre>
+     * set when kind = LIGHTBUILD_SYNC_REQUESTED_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.LightbuildSyncRequestedEvent lightbuild_sync_requested_event = 261 [lazy = true];</code>
+     * @return Whether the lightbuildSyncRequestedEvent field is set.
+     */
+    public boolean hasLightbuildSyncRequestedEvent() {
+      return ((bitField8_ & 0x00000010) != 0);
+    }
+    /**
+     * <pre>
+     * set when kind = LIGHTBUILD_SYNC_REQUESTED_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.LightbuildSyncRequestedEvent lightbuild_sync_requested_event = 261 [lazy = true];</code>
+     * @return The lightbuildSyncRequestedEvent.
+     */
+    public com.google.wireless.android.sdk.stats.LightbuildSyncRequestedEvent getLightbuildSyncRequestedEvent() {
+      if (lightbuildSyncRequestedEventBuilder_ == null) {
+        return lightbuildSyncRequestedEvent_ == null ? com.google.wireless.android.sdk.stats.LightbuildSyncRequestedEvent.getDefaultInstance() : lightbuildSyncRequestedEvent_;
+      } else {
+        return lightbuildSyncRequestedEventBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * set when kind = LIGHTBUILD_SYNC_REQUESTED_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.LightbuildSyncRequestedEvent lightbuild_sync_requested_event = 261 [lazy = true];</code>
+     */
+    public Builder setLightbuildSyncRequestedEvent(com.google.wireless.android.sdk.stats.LightbuildSyncRequestedEvent value) {
+      if (lightbuildSyncRequestedEventBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        lightbuildSyncRequestedEvent_ = value;
+      } else {
+        lightbuildSyncRequestedEventBuilder_.setMessage(value);
+      }
+      bitField8_ |= 0x00000010;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = LIGHTBUILD_SYNC_REQUESTED_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.LightbuildSyncRequestedEvent lightbuild_sync_requested_event = 261 [lazy = true];</code>
+     */
+    public Builder setLightbuildSyncRequestedEvent(
+        com.google.wireless.android.sdk.stats.LightbuildSyncRequestedEvent.Builder builderForValue) {
+      if (lightbuildSyncRequestedEventBuilder_ == null) {
+        lightbuildSyncRequestedEvent_ = builderForValue.build();
+      } else {
+        lightbuildSyncRequestedEventBuilder_.setMessage(builderForValue.build());
+      }
+      bitField8_ |= 0x00000010;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = LIGHTBUILD_SYNC_REQUESTED_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.LightbuildSyncRequestedEvent lightbuild_sync_requested_event = 261 [lazy = true];</code>
+     */
+    public Builder mergeLightbuildSyncRequestedEvent(com.google.wireless.android.sdk.stats.LightbuildSyncRequestedEvent value) {
+      if (lightbuildSyncRequestedEventBuilder_ == null) {
+        if (((bitField8_ & 0x00000010) != 0) &&
+          lightbuildSyncRequestedEvent_ != null &&
+          lightbuildSyncRequestedEvent_ != com.google.wireless.android.sdk.stats.LightbuildSyncRequestedEvent.getDefaultInstance()) {
+          getLightbuildSyncRequestedEventBuilder().mergeFrom(value);
+        } else {
+          lightbuildSyncRequestedEvent_ = value;
+        }
+      } else {
+        lightbuildSyncRequestedEventBuilder_.mergeFrom(value);
+      }
+      bitField8_ |= 0x00000010;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = LIGHTBUILD_SYNC_REQUESTED_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.LightbuildSyncRequestedEvent lightbuild_sync_requested_event = 261 [lazy = true];</code>
+     */
+    public Builder clearLightbuildSyncRequestedEvent() {
+      bitField8_ = (bitField8_ & ~0x00000010);
+      lightbuildSyncRequestedEvent_ = null;
+      if (lightbuildSyncRequestedEventBuilder_ != null) {
+        lightbuildSyncRequestedEventBuilder_.dispose();
+        lightbuildSyncRequestedEventBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = LIGHTBUILD_SYNC_REQUESTED_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.LightbuildSyncRequestedEvent lightbuild_sync_requested_event = 261 [lazy = true];</code>
+     */
+    public com.google.wireless.android.sdk.stats.LightbuildSyncRequestedEvent.Builder getLightbuildSyncRequestedEventBuilder() {
+      bitField8_ |= 0x00000010;
+      onChanged();
+      return getLightbuildSyncRequestedEventFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * set when kind = LIGHTBUILD_SYNC_REQUESTED_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.LightbuildSyncRequestedEvent lightbuild_sync_requested_event = 261 [lazy = true];</code>
+     */
+    public com.google.wireless.android.sdk.stats.LightbuildSyncRequestedEventOrBuilder getLightbuildSyncRequestedEventOrBuilder() {
+      if (lightbuildSyncRequestedEventBuilder_ != null) {
+        return lightbuildSyncRequestedEventBuilder_.getMessageOrBuilder();
+      } else {
+        return lightbuildSyncRequestedEvent_ == null ?
+            com.google.wireless.android.sdk.stats.LightbuildSyncRequestedEvent.getDefaultInstance() : lightbuildSyncRequestedEvent_;
+      }
+    }
+    /**
+     * <pre>
+     * set when kind = LIGHTBUILD_SYNC_REQUESTED_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.LightbuildSyncRequestedEvent lightbuild_sync_requested_event = 261 [lazy = true];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.LightbuildSyncRequestedEvent, com.google.wireless.android.sdk.stats.LightbuildSyncRequestedEvent.Builder, com.google.wireless.android.sdk.stats.LightbuildSyncRequestedEventOrBuilder> 
+        getLightbuildSyncRequestedEventFieldBuilder() {
+      if (lightbuildSyncRequestedEventBuilder_ == null) {
+        lightbuildSyncRequestedEventBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.wireless.android.sdk.stats.LightbuildSyncRequestedEvent, com.google.wireless.android.sdk.stats.LightbuildSyncRequestedEvent.Builder, com.google.wireless.android.sdk.stats.LightbuildSyncRequestedEventOrBuilder>(
+                getLightbuildSyncRequestedEvent(),
+                getParentForChildren(),
+                isClean());
+        lightbuildSyncRequestedEvent_ = null;
+      }
+      return lightbuildSyncRequestedEventBuilder_;
+    }
+
+    private com.google.wireless.android.sdk.stats.LightbuildSyncFinishedEvent lightbuildSyncFinishedEvent_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.LightbuildSyncFinishedEvent, com.google.wireless.android.sdk.stats.LightbuildSyncFinishedEvent.Builder, com.google.wireless.android.sdk.stats.LightbuildSyncFinishedEventOrBuilder> lightbuildSyncFinishedEventBuilder_;
+    /**
+     * <pre>
+     * set when kind = LIGHTBUILD_SYNC_FINISHED_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.LightbuildSyncFinishedEvent lightbuild_sync_finished_event = 262 [lazy = true];</code>
+     * @return Whether the lightbuildSyncFinishedEvent field is set.
+     */
+    public boolean hasLightbuildSyncFinishedEvent() {
+      return ((bitField8_ & 0x00000020) != 0);
+    }
+    /**
+     * <pre>
+     * set when kind = LIGHTBUILD_SYNC_FINISHED_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.LightbuildSyncFinishedEvent lightbuild_sync_finished_event = 262 [lazy = true];</code>
+     * @return The lightbuildSyncFinishedEvent.
+     */
+    public com.google.wireless.android.sdk.stats.LightbuildSyncFinishedEvent getLightbuildSyncFinishedEvent() {
+      if (lightbuildSyncFinishedEventBuilder_ == null) {
+        return lightbuildSyncFinishedEvent_ == null ? com.google.wireless.android.sdk.stats.LightbuildSyncFinishedEvent.getDefaultInstance() : lightbuildSyncFinishedEvent_;
+      } else {
+        return lightbuildSyncFinishedEventBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * set when kind = LIGHTBUILD_SYNC_FINISHED_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.LightbuildSyncFinishedEvent lightbuild_sync_finished_event = 262 [lazy = true];</code>
+     */
+    public Builder setLightbuildSyncFinishedEvent(com.google.wireless.android.sdk.stats.LightbuildSyncFinishedEvent value) {
+      if (lightbuildSyncFinishedEventBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        lightbuildSyncFinishedEvent_ = value;
+      } else {
+        lightbuildSyncFinishedEventBuilder_.setMessage(value);
+      }
+      bitField8_ |= 0x00000020;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = LIGHTBUILD_SYNC_FINISHED_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.LightbuildSyncFinishedEvent lightbuild_sync_finished_event = 262 [lazy = true];</code>
+     */
+    public Builder setLightbuildSyncFinishedEvent(
+        com.google.wireless.android.sdk.stats.LightbuildSyncFinishedEvent.Builder builderForValue) {
+      if (lightbuildSyncFinishedEventBuilder_ == null) {
+        lightbuildSyncFinishedEvent_ = builderForValue.build();
+      } else {
+        lightbuildSyncFinishedEventBuilder_.setMessage(builderForValue.build());
+      }
+      bitField8_ |= 0x00000020;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = LIGHTBUILD_SYNC_FINISHED_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.LightbuildSyncFinishedEvent lightbuild_sync_finished_event = 262 [lazy = true];</code>
+     */
+    public Builder mergeLightbuildSyncFinishedEvent(com.google.wireless.android.sdk.stats.LightbuildSyncFinishedEvent value) {
+      if (lightbuildSyncFinishedEventBuilder_ == null) {
+        if (((bitField8_ & 0x00000020) != 0) &&
+          lightbuildSyncFinishedEvent_ != null &&
+          lightbuildSyncFinishedEvent_ != com.google.wireless.android.sdk.stats.LightbuildSyncFinishedEvent.getDefaultInstance()) {
+          getLightbuildSyncFinishedEventBuilder().mergeFrom(value);
+        } else {
+          lightbuildSyncFinishedEvent_ = value;
+        }
+      } else {
+        lightbuildSyncFinishedEventBuilder_.mergeFrom(value);
+      }
+      bitField8_ |= 0x00000020;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = LIGHTBUILD_SYNC_FINISHED_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.LightbuildSyncFinishedEvent lightbuild_sync_finished_event = 262 [lazy = true];</code>
+     */
+    public Builder clearLightbuildSyncFinishedEvent() {
+      bitField8_ = (bitField8_ & ~0x00000020);
+      lightbuildSyncFinishedEvent_ = null;
+      if (lightbuildSyncFinishedEventBuilder_ != null) {
+        lightbuildSyncFinishedEventBuilder_.dispose();
+        lightbuildSyncFinishedEventBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = LIGHTBUILD_SYNC_FINISHED_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.LightbuildSyncFinishedEvent lightbuild_sync_finished_event = 262 [lazy = true];</code>
+     */
+    public com.google.wireless.android.sdk.stats.LightbuildSyncFinishedEvent.Builder getLightbuildSyncFinishedEventBuilder() {
+      bitField8_ |= 0x00000020;
+      onChanged();
+      return getLightbuildSyncFinishedEventFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * set when kind = LIGHTBUILD_SYNC_FINISHED_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.LightbuildSyncFinishedEvent lightbuild_sync_finished_event = 262 [lazy = true];</code>
+     */
+    public com.google.wireless.android.sdk.stats.LightbuildSyncFinishedEventOrBuilder getLightbuildSyncFinishedEventOrBuilder() {
+      if (lightbuildSyncFinishedEventBuilder_ != null) {
+        return lightbuildSyncFinishedEventBuilder_.getMessageOrBuilder();
+      } else {
+        return lightbuildSyncFinishedEvent_ == null ?
+            com.google.wireless.android.sdk.stats.LightbuildSyncFinishedEvent.getDefaultInstance() : lightbuildSyncFinishedEvent_;
+      }
+    }
+    /**
+     * <pre>
+     * set when kind = LIGHTBUILD_SYNC_FINISHED_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.LightbuildSyncFinishedEvent lightbuild_sync_finished_event = 262 [lazy = true];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.LightbuildSyncFinishedEvent, com.google.wireless.android.sdk.stats.LightbuildSyncFinishedEvent.Builder, com.google.wireless.android.sdk.stats.LightbuildSyncFinishedEventOrBuilder> 
+        getLightbuildSyncFinishedEventFieldBuilder() {
+      if (lightbuildSyncFinishedEventBuilder_ == null) {
+        lightbuildSyncFinishedEventBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.wireless.android.sdk.stats.LightbuildSyncFinishedEvent, com.google.wireless.android.sdk.stats.LightbuildSyncFinishedEvent.Builder, com.google.wireless.android.sdk.stats.LightbuildSyncFinishedEventOrBuilder>(
+                getLightbuildSyncFinishedEvent(),
+                getParentForChildren(),
+                isClean());
+        lightbuildSyncFinishedEvent_ = null;
+      }
+      return lightbuildSyncFinishedEventBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(
