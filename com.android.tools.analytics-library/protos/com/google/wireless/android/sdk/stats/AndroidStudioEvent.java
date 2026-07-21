@@ -7056,6 +7056,10 @@ private static final long serialVersionUID = 0L;
      * <code>MACROBENCHMARK_LIBRARY_MODULE = 64;</code>
      */
     MACROBENCHMARK_LIBRARY_MODULE(64),
+    /**
+     * <code>GOOGLE_PAY_ACTIVITY = 65;</code>
+     */
+    GOOGLE_PAY_ACTIVITY(65),
     ;
 
     /**
@@ -7322,6 +7326,10 @@ private static final long serialVersionUID = 0L;
      * <code>MACROBENCHMARK_LIBRARY_MODULE = 64;</code>
      */
     public static final int MACROBENCHMARK_LIBRARY_MODULE_VALUE = 64;
+    /**
+     * <code>GOOGLE_PAY_ACTIVITY = 65;</code>
+     */
+    public static final int GOOGLE_PAY_ACTIVITY_VALUE = 65;
 
 
     public final int getNumber() {
@@ -7409,6 +7417,7 @@ private static final long serialVersionUID = 0L;
         case 62: return ANDROID_NATIVE_MODULE;
         case 63: return RESPONSIVE_ACTIVITY;
         case 64: return MACROBENCHMARK_LIBRARY_MODULE;
+        case 65: return GOOGLE_PAY_ACTIVITY;
         default: return null;
       }
     }
@@ -9876,7 +9885,7 @@ private static final long serialVersionUID = 0L;
        * <pre>
        * The different template components (eg Activities, Fragments, Services,
        * etc) the template engine could be asked to render
-       * Next ID: 58
+       * Next ID: 59
        * </pre>
        *
        * Protobuf enum {@code android_studio.AndroidStudioEvent.TemplatesUsage.TemplateComponent.TemplateType}
@@ -9980,6 +9989,10 @@ private static final long serialVersionUID = 0L;
          * <code>RESPONSIVE_ACTIVITY = 57;</code>
          */
         RESPONSIVE_ACTIVITY(57),
+        /**
+         * <code>GOOGLE_PAY_ACTIVITY = 58;</code>
+         */
+        GOOGLE_PAY_ACTIVITY(58),
         /**
          * <code>FRAGMENT_LIST = 23;</code>
          */
@@ -10215,6 +10228,10 @@ private static final long serialVersionUID = 0L;
          */
         public static final int RESPONSIVE_ACTIVITY_VALUE = 57;
         /**
+         * <code>GOOGLE_PAY_ACTIVITY = 58;</code>
+         */
+        public static final int GOOGLE_PAY_ACTIVITY_VALUE = 58;
+        /**
          * <code>FRAGMENT_LIST = 23;</code>
          */
         public static final int FRAGMENT_LIST_VALUE = 23;
@@ -10396,6 +10413,7 @@ private static final long serialVersionUID = 0L;
             case 21: return BOTTOM_NAVIGATION_ACTIVITY;
             case 22: return CPP_EMPTY_ACTIVITY;
             case 57: return RESPONSIVE_ACTIVITY;
+            case 58: return GOOGLE_PAY_ACTIVITY;
             case 23: return FRAGMENT_LIST;
             case 24: return FRAGMENT_BLANK;
             case 25: return FRAGMENT_FULLSCREEN;
