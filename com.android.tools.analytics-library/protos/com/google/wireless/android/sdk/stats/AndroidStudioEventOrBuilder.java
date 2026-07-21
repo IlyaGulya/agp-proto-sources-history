@@ -6646,4 +6646,31 @@ public interface AndroidStudioEventOrBuilder extends
    * <code>optional .android_studio.MarketingEmailEvent marketing_email_event = 238 [lazy = true];</code>
    */
   com.google.wireless.android.sdk.stats.MarketingEmailEventOrBuilder getMarketingEmailEventOrBuilder();
+
+  /**
+   * <pre>
+   * set when kind = ADVERTISER_NOTIFICATION_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.AdvertiserNotificationEvent advertiser_notification_event = 239 [lazy = true];</code>
+   * @return Whether the advertiserNotificationEvent field is set.
+   */
+  boolean hasAdvertiserNotificationEvent();
+  /**
+   * <pre>
+   * set when kind = ADVERTISER_NOTIFICATION_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.AdvertiserNotificationEvent advertiser_notification_event = 239 [lazy = true];</code>
+   * @return The advertiserNotificationEvent.
+   */
+  com.google.wireless.android.sdk.stats.AdvertiserNotificationEvent getAdvertiserNotificationEvent();
+  /**
+   * <pre>
+   * set when kind = ADVERTISER_NOTIFICATION_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.AdvertiserNotificationEvent advertiser_notification_event = 239 [lazy = true];</code>
+   */
+  com.google.wireless.android.sdk.stats.AdvertiserNotificationEventOrBuilder getAdvertiserNotificationEventOrBuilder();
 }

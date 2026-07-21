@@ -3370,6 +3370,14 @@ private static final long serialVersionUID = 0L;
      * <code>MARKETING_EMAIL_EVENT = 357;</code>
      */
     MARKETING_EMAIL_EVENT(357),
+    /**
+     * <pre>
+     * Event related to Gemini Advertiser notifications
+     * </pre>
+     *
+     * <code>ADVERTISER_NOTIFICATION_EVENT = 358;</code>
+     */
+    ADVERTISER_NOTIFICATION_EVENT(358),
     ;
 
     /**
@@ -6049,6 +6057,14 @@ private static final long serialVersionUID = 0L;
      * <code>MARKETING_EMAIL_EVENT = 357;</code>
      */
     public static final int MARKETING_EMAIL_EVENT_VALUE = 357;
+    /**
+     * <pre>
+     * Event related to Gemini Advertiser notifications
+     * </pre>
+     *
+     * <code>ADVERTISER_NOTIFICATION_EVENT = 358;</code>
+     */
+    public static final int ADVERTISER_NOTIFICATION_EVENT_VALUE = 358;
 
 
     public final int getNumber() {
@@ -6424,6 +6440,7 @@ private static final long serialVersionUID = 0L;
         case 355: return PLAY_POLICY_INSIGHTS_USAGE_EVENT;
         case 356: return MODEL_PROVIDER_EVENT;
         case 357: return MARKETING_EMAIL_EVENT;
+        case 358: return ADVERTISER_NOTIFICATION_EVENT;
         default: return null;
       }
     }
@@ -12193,7 +12210,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional uint32 min_sdk = 2 [deprecated = true];</code>
        * @deprecated android_studio.AndroidStudioEvent.TemplatesUsage.TemplateModule.min_sdk is deprecated.
-       *     See studio_stats.proto;l=2088
+       *     See studio_stats.proto;l=2095
        * @return Whether the minSdk field is set.
        */
       @java.lang.Deprecated boolean hasMinSdk();
@@ -12204,7 +12221,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional uint32 min_sdk = 2 [deprecated = true];</code>
        * @deprecated android_studio.AndroidStudioEvent.TemplatesUsage.TemplateModule.min_sdk is deprecated.
-       *     See studio_stats.proto;l=2088
+       *     See studio_stats.proto;l=2095
        * @return The minSdk.
        */
       @java.lang.Deprecated int getMinSdk();
@@ -12735,7 +12752,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional uint32 min_sdk = 2 [deprecated = true];</code>
        * @deprecated android_studio.AndroidStudioEvent.TemplatesUsage.TemplateModule.min_sdk is deprecated.
-       *     See studio_stats.proto;l=2088
+       *     See studio_stats.proto;l=2095
        * @return Whether the minSdk field is set.
        */
       @java.lang.Override
@@ -12749,7 +12766,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional uint32 min_sdk = 2 [deprecated = true];</code>
        * @deprecated android_studio.AndroidStudioEvent.TemplatesUsage.TemplateModule.min_sdk is deprecated.
-       *     See studio_stats.proto;l=2088
+       *     See studio_stats.proto;l=2095
        * @return The minSdk.
        */
       @java.lang.Override
@@ -13387,7 +13404,7 @@ private static final long serialVersionUID = 0L;
          *
          * <code>optional uint32 min_sdk = 2 [deprecated = true];</code>
          * @deprecated android_studio.AndroidStudioEvent.TemplatesUsage.TemplateModule.min_sdk is deprecated.
-         *     See studio_stats.proto;l=2088
+         *     See studio_stats.proto;l=2095
          * @return Whether the minSdk field is set.
          */
         @java.lang.Override
@@ -13401,7 +13418,7 @@ private static final long serialVersionUID = 0L;
          *
          * <code>optional uint32 min_sdk = 2 [deprecated = true];</code>
          * @deprecated android_studio.AndroidStudioEvent.TemplatesUsage.TemplateModule.min_sdk is deprecated.
-         *     See studio_stats.proto;l=2088
+         *     See studio_stats.proto;l=2095
          * @return The minSdk.
          */
         @java.lang.Override
@@ -13415,7 +13432,7 @@ private static final long serialVersionUID = 0L;
          *
          * <code>optional uint32 min_sdk = 2 [deprecated = true];</code>
          * @deprecated android_studio.AndroidStudioEvent.TemplatesUsage.TemplateModule.min_sdk is deprecated.
-         *     See studio_stats.proto;l=2088
+         *     See studio_stats.proto;l=2095
          * @param value The minSdk to set.
          * @return This builder for chaining.
          */
@@ -13433,7 +13450,7 @@ private static final long serialVersionUID = 0L;
          *
          * <code>optional uint32 min_sdk = 2 [deprecated = true];</code>
          * @deprecated android_studio.AndroidStudioEvent.TemplatesUsage.TemplateModule.min_sdk is deprecated.
-         *     See studio_stats.proto;l=2088
+         *     See studio_stats.proto;l=2095
          * @return This builder for chaining.
          */
         @java.lang.Deprecated public Builder clearMinSdk() {
@@ -25181,6 +25198,44 @@ private static final long serialVersionUID = 0L;
     return marketingEmailEvent_ == null ? com.google.wireless.android.sdk.stats.MarketingEmailEvent.getDefaultInstance() : marketingEmailEvent_;
   }
 
+  public static final int ADVERTISER_NOTIFICATION_EVENT_FIELD_NUMBER = 239;
+  private com.google.wireless.android.sdk.stats.AdvertiserNotificationEvent advertiserNotificationEvent_;
+  /**
+   * <pre>
+   * set when kind = ADVERTISER_NOTIFICATION_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.AdvertiserNotificationEvent advertiser_notification_event = 239 [lazy = true];</code>
+   * @return Whether the advertiserNotificationEvent field is set.
+   */
+  @java.lang.Override
+  public boolean hasAdvertiserNotificationEvent() {
+    return ((bitField7_ & 0x00000100) != 0);
+  }
+  /**
+   * <pre>
+   * set when kind = ADVERTISER_NOTIFICATION_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.AdvertiserNotificationEvent advertiser_notification_event = 239 [lazy = true];</code>
+   * @return The advertiserNotificationEvent.
+   */
+  @java.lang.Override
+  public com.google.wireless.android.sdk.stats.AdvertiserNotificationEvent getAdvertiserNotificationEvent() {
+    return advertiserNotificationEvent_ == null ? com.google.wireless.android.sdk.stats.AdvertiserNotificationEvent.getDefaultInstance() : advertiserNotificationEvent_;
+  }
+  /**
+   * <pre>
+   * set when kind = ADVERTISER_NOTIFICATION_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.AdvertiserNotificationEvent advertiser_notification_event = 239 [lazy = true];</code>
+   */
+  @java.lang.Override
+  public com.google.wireless.android.sdk.stats.AdvertiserNotificationEventOrBuilder getAdvertiserNotificationEventOrBuilder() {
+    return advertiserNotificationEvent_ == null ? com.google.wireless.android.sdk.stats.AdvertiserNotificationEvent.getDefaultInstance() : advertiserNotificationEvent_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -25908,6 +25963,9 @@ private static final long serialVersionUID = 0L;
     }
     if (((bitField7_ & 0x00000080) != 0)) {
       output.writeMessage(238, getMarketingEmailEvent());
+    }
+    if (((bitField7_ & 0x00000100) != 0)) {
+      output.writeMessage(239, getAdvertiserNotificationEvent());
     }
     getUnknownFields().writeTo(output);
   }
@@ -26875,6 +26933,10 @@ private static final long serialVersionUID = 0L;
     if (((bitField7_ & 0x00000080) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(238, getMarketingEmailEvent());
+    }
+    if (((bitField7_ & 0x00000100) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(239, getAdvertiserNotificationEvent());
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -28052,6 +28114,11 @@ private static final long serialVersionUID = 0L;
       if (!getMarketingEmailEvent()
           .equals(other.getMarketingEmailEvent())) return false;
     }
+    if (hasAdvertiserNotificationEvent() != other.hasAdvertiserNotificationEvent()) return false;
+    if (hasAdvertiserNotificationEvent()) {
+      if (!getAdvertiserNotificationEvent()
+          .equals(other.getAdvertiserNotificationEvent())) return false;
+    }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -29017,6 +29084,10 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + MARKETING_EMAIL_EVENT_FIELD_NUMBER;
       hash = (53 * hash) + getMarketingEmailEvent().hashCode();
     }
+    if (hasAdvertiserNotificationEvent()) {
+      hash = (37 * hash) + ADVERTISER_NOTIFICATION_EVENT_FIELD_NUMBER;
+      hash = (53 * hash) + getAdvertiserNotificationEvent().hashCode();
+    }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -29360,6 +29431,7 @@ private static final long serialVersionUID = 0L;
         getPlayPolicyInsightsUsageEventFieldBuilder();
         getModelProviderEventFieldBuilder();
         getMarketingEmailEventFieldBuilder();
+        getAdvertiserNotificationEventFieldBuilder();
       }
     }
     @java.lang.Override
@@ -30479,6 +30551,11 @@ private static final long serialVersionUID = 0L;
       if (marketingEmailEventBuilder_ != null) {
         marketingEmailEventBuilder_.dispose();
         marketingEmailEventBuilder_ = null;
+      }
+      advertiserNotificationEvent_ = null;
+      if (advertiserNotificationEventBuilder_ != null) {
+        advertiserNotificationEventBuilder_.dispose();
+        advertiserNotificationEventBuilder_ = null;
       }
       return this;
     }
@@ -31968,6 +32045,12 @@ private static final long serialVersionUID = 0L;
             : marketingEmailEventBuilder_.build();
         to_bitField7_ |= 0x00000080;
       }
+      if (((from_bitField7_ & 0x00004000) != 0)) {
+        result.advertiserNotificationEvent_ = advertiserNotificationEventBuilder_ == null
+            ? advertiserNotificationEvent_
+            : advertiserNotificationEventBuilder_.build();
+        to_bitField7_ |= 0x00000100;
+      }
       result.bitField6_ |= to_bitField6_;
       result.bitField7_ |= to_bitField7_;
     }
@@ -32801,6 +32884,9 @@ private static final long serialVersionUID = 0L;
       }
       if (other.hasMarketingEmailEvent()) {
         mergeMarketingEmailEvent(other.getMarketingEmailEvent());
+      }
+      if (other.hasAdvertiserNotificationEvent()) {
+        mergeAdvertiserNotificationEvent(other.getAdvertiserNotificationEvent());
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -34562,6 +34648,13 @@ private static final long serialVersionUID = 0L;
               bitField7_ |= 0x00002000;
               break;
             } // case 1906
+            case 1914: {
+              input.readMessage(
+                  getAdvertiserNotificationEventFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField7_ |= 0x00004000;
+              break;
+            } // case 1914
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -70812,6 +70905,161 @@ private static final long serialVersionUID = 0L;
         marketingEmailEvent_ = null;
       }
       return marketingEmailEventBuilder_;
+    }
+
+    private com.google.wireless.android.sdk.stats.AdvertiserNotificationEvent advertiserNotificationEvent_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.AdvertiserNotificationEvent, com.google.wireless.android.sdk.stats.AdvertiserNotificationEvent.Builder, com.google.wireless.android.sdk.stats.AdvertiserNotificationEventOrBuilder> advertiserNotificationEventBuilder_;
+    /**
+     * <pre>
+     * set when kind = ADVERTISER_NOTIFICATION_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.AdvertiserNotificationEvent advertiser_notification_event = 239 [lazy = true];</code>
+     * @return Whether the advertiserNotificationEvent field is set.
+     */
+    public boolean hasAdvertiserNotificationEvent() {
+      return ((bitField7_ & 0x00004000) != 0);
+    }
+    /**
+     * <pre>
+     * set when kind = ADVERTISER_NOTIFICATION_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.AdvertiserNotificationEvent advertiser_notification_event = 239 [lazy = true];</code>
+     * @return The advertiserNotificationEvent.
+     */
+    public com.google.wireless.android.sdk.stats.AdvertiserNotificationEvent getAdvertiserNotificationEvent() {
+      if (advertiserNotificationEventBuilder_ == null) {
+        return advertiserNotificationEvent_ == null ? com.google.wireless.android.sdk.stats.AdvertiserNotificationEvent.getDefaultInstance() : advertiserNotificationEvent_;
+      } else {
+        return advertiserNotificationEventBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * set when kind = ADVERTISER_NOTIFICATION_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.AdvertiserNotificationEvent advertiser_notification_event = 239 [lazy = true];</code>
+     */
+    public Builder setAdvertiserNotificationEvent(com.google.wireless.android.sdk.stats.AdvertiserNotificationEvent value) {
+      if (advertiserNotificationEventBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        advertiserNotificationEvent_ = value;
+      } else {
+        advertiserNotificationEventBuilder_.setMessage(value);
+      }
+      bitField7_ |= 0x00004000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = ADVERTISER_NOTIFICATION_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.AdvertiserNotificationEvent advertiser_notification_event = 239 [lazy = true];</code>
+     */
+    public Builder setAdvertiserNotificationEvent(
+        com.google.wireless.android.sdk.stats.AdvertiserNotificationEvent.Builder builderForValue) {
+      if (advertiserNotificationEventBuilder_ == null) {
+        advertiserNotificationEvent_ = builderForValue.build();
+      } else {
+        advertiserNotificationEventBuilder_.setMessage(builderForValue.build());
+      }
+      bitField7_ |= 0x00004000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = ADVERTISER_NOTIFICATION_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.AdvertiserNotificationEvent advertiser_notification_event = 239 [lazy = true];</code>
+     */
+    public Builder mergeAdvertiserNotificationEvent(com.google.wireless.android.sdk.stats.AdvertiserNotificationEvent value) {
+      if (advertiserNotificationEventBuilder_ == null) {
+        if (((bitField7_ & 0x00004000) != 0) &&
+          advertiserNotificationEvent_ != null &&
+          advertiserNotificationEvent_ != com.google.wireless.android.sdk.stats.AdvertiserNotificationEvent.getDefaultInstance()) {
+          getAdvertiserNotificationEventBuilder().mergeFrom(value);
+        } else {
+          advertiserNotificationEvent_ = value;
+        }
+      } else {
+        advertiserNotificationEventBuilder_.mergeFrom(value);
+      }
+      bitField7_ |= 0x00004000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = ADVERTISER_NOTIFICATION_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.AdvertiserNotificationEvent advertiser_notification_event = 239 [lazy = true];</code>
+     */
+    public Builder clearAdvertiserNotificationEvent() {
+      bitField7_ = (bitField7_ & ~0x00004000);
+      advertiserNotificationEvent_ = null;
+      if (advertiserNotificationEventBuilder_ != null) {
+        advertiserNotificationEventBuilder_.dispose();
+        advertiserNotificationEventBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = ADVERTISER_NOTIFICATION_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.AdvertiserNotificationEvent advertiser_notification_event = 239 [lazy = true];</code>
+     */
+    public com.google.wireless.android.sdk.stats.AdvertiserNotificationEvent.Builder getAdvertiserNotificationEventBuilder() {
+      bitField7_ |= 0x00004000;
+      onChanged();
+      return getAdvertiserNotificationEventFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * set when kind = ADVERTISER_NOTIFICATION_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.AdvertiserNotificationEvent advertiser_notification_event = 239 [lazy = true];</code>
+     */
+    public com.google.wireless.android.sdk.stats.AdvertiserNotificationEventOrBuilder getAdvertiserNotificationEventOrBuilder() {
+      if (advertiserNotificationEventBuilder_ != null) {
+        return advertiserNotificationEventBuilder_.getMessageOrBuilder();
+      } else {
+        return advertiserNotificationEvent_ == null ?
+            com.google.wireless.android.sdk.stats.AdvertiserNotificationEvent.getDefaultInstance() : advertiserNotificationEvent_;
+      }
+    }
+    /**
+     * <pre>
+     * set when kind = ADVERTISER_NOTIFICATION_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.AdvertiserNotificationEvent advertiser_notification_event = 239 [lazy = true];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.AdvertiserNotificationEvent, com.google.wireless.android.sdk.stats.AdvertiserNotificationEvent.Builder, com.google.wireless.android.sdk.stats.AdvertiserNotificationEventOrBuilder> 
+        getAdvertiserNotificationEventFieldBuilder() {
+      if (advertiserNotificationEventBuilder_ == null) {
+        advertiserNotificationEventBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.wireless.android.sdk.stats.AdvertiserNotificationEvent, com.google.wireless.android.sdk.stats.AdvertiserNotificationEvent.Builder, com.google.wireless.android.sdk.stats.AdvertiserNotificationEventOrBuilder>(
+                getAdvertiserNotificationEvent(),
+                getParentForChildren(),
+                isClean());
+        advertiserNotificationEvent_ = null;
+      }
+      return advertiserNotificationEventBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

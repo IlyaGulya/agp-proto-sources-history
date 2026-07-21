@@ -951,6 +951,14 @@ private static final long serialVersionUID = 0L;
      * <code>LAVAPIPE_VK = 4;</code>
      */
     LAVAPIPE_VK(4),
+    /**
+     * <pre>
+     * Mac only, mesa based vulkan driver
+     * </pre>
+     *
+     * <code>KOSMICKRISP_VK = 5;</code>
+     */
+    KOSMICKRISP_VK(5),
     ;
 
     /**
@@ -985,6 +993,14 @@ private static final long serialVersionUID = 0L;
      * <code>LAVAPIPE_VK = 4;</code>
      */
     public static final int LAVAPIPE_VK_VALUE = 4;
+    /**
+     * <pre>
+     * Mac only, mesa based vulkan driver
+     * </pre>
+     *
+     * <code>KOSMICKRISP_VK = 5;</code>
+     */
+    public static final int KOSMICKRISP_VK_VALUE = 5;
 
 
     public final int getNumber() {
@@ -1012,6 +1028,7 @@ private static final long serialVersionUID = 0L;
         case 2: return SWIFTSHADER_VK;
         case 3: return MOLTEN_VK;
         case 4: return LAVAPIPE_VK;
+        case 5: return KOSMICKRISP_VK;
         default: return null;
       }
     }

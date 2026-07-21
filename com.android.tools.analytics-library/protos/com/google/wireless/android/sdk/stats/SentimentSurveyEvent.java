@@ -18,6 +18,7 @@ private static final long serialVersionUID = 0L;
   private SentimentSurveyEvent() {
     id_ = "";
     type_ = 0;
+    surveyType_ = 0;
   }
 
   @java.lang.Override
@@ -195,6 +196,127 @@ private static final long serialVersionUID = 0L;
     // @@protoc_insertion_point(enum_scope:android_studio.SentimentSurveyEvent.Type)
   }
 
+  /**
+   * Protobuf enum {@code android_studio.SentimentSurveyEvent.SurveyType}
+   */
+  public enum SurveyType
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <code>SURVEY_TYPE_UNKNOWN = 0;</code>
+     */
+    SURVEY_TYPE_UNKNOWN(0),
+    /**
+     * <pre>
+     * This indicates the legacy in-product survey
+     * </pre>
+     *
+     * <code>SURVEY_TYPE_IN_PRODUCT = 1;</code>
+     */
+    SURVEY_TYPE_IN_PRODUCT(1),
+    /**
+     * <pre>
+     * This indicates the browser-based survey
+     * </pre>
+     *
+     * <code>SURVEY_TYPE_BROWSER = 2;</code>
+     */
+    SURVEY_TYPE_BROWSER(2),
+    ;
+
+    /**
+     * <code>SURVEY_TYPE_UNKNOWN = 0;</code>
+     */
+    public static final int SURVEY_TYPE_UNKNOWN_VALUE = 0;
+    /**
+     * <pre>
+     * This indicates the legacy in-product survey
+     * </pre>
+     *
+     * <code>SURVEY_TYPE_IN_PRODUCT = 1;</code>
+     */
+    public static final int SURVEY_TYPE_IN_PRODUCT_VALUE = 1;
+    /**
+     * <pre>
+     * This indicates the browser-based survey
+     * </pre>
+     *
+     * <code>SURVEY_TYPE_BROWSER = 2;</code>
+     */
+    public static final int SURVEY_TYPE_BROWSER_VALUE = 2;
+
+
+    public final int getNumber() {
+      return value;
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     * @deprecated Use {@link #forNumber(int)} instead.
+     */
+    @java.lang.Deprecated
+    public static SurveyType valueOf(int value) {
+      return forNumber(value);
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     */
+    public static SurveyType forNumber(int value) {
+      switch (value) {
+        case 0: return SURVEY_TYPE_UNKNOWN;
+        case 1: return SURVEY_TYPE_IN_PRODUCT;
+        case 2: return SURVEY_TYPE_BROWSER;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<SurveyType>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static final com.google.protobuf.Internal.EnumLiteMap<
+        SurveyType> internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<SurveyType>() {
+            public SurveyType findValueByNumber(int number) {
+              return SurveyType.forNumber(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      return getDescriptor().getValues().get(ordinal());
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return com.google.wireless.android.sdk.stats.SentimentSurveyEvent.getDescriptor().getEnumTypes().get(1);
+    }
+
+    private static final SurveyType[] VALUES = values();
+
+    public static SurveyType valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int value;
+
+    private SurveyType(int value) {
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:android_studio.SentimentSurveyEvent.SurveyType)
+  }
+
   private int bitField0_;
   public static final int ID_FIELD_NUMBER = 1;
   @SuppressWarnings("serial")
@@ -275,6 +397,24 @@ private static final long serialVersionUID = 0L;
     return result == null ? com.google.wireless.android.sdk.stats.SentimentSurveyEvent.Type.TYPE_UNKNOWN : result;
   }
 
+  public static final int SURVEY_TYPE_FIELD_NUMBER = 3;
+  private int surveyType_ = 0;
+  /**
+   * <code>optional .android_studio.SentimentSurveyEvent.SurveyType survey_type = 3;</code>
+   * @return Whether the surveyType field is set.
+   */
+  @java.lang.Override public boolean hasSurveyType() {
+    return ((bitField0_ & 0x00000004) != 0);
+  }
+  /**
+   * <code>optional .android_studio.SentimentSurveyEvent.SurveyType survey_type = 3;</code>
+   * @return The surveyType.
+   */
+  @java.lang.Override public com.google.wireless.android.sdk.stats.SentimentSurveyEvent.SurveyType getSurveyType() {
+    com.google.wireless.android.sdk.stats.SentimentSurveyEvent.SurveyType result = com.google.wireless.android.sdk.stats.SentimentSurveyEvent.SurveyType.forNumber(surveyType_);
+    return result == null ? com.google.wireless.android.sdk.stats.SentimentSurveyEvent.SurveyType.SURVEY_TYPE_UNKNOWN : result;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -295,6 +435,9 @@ private static final long serialVersionUID = 0L;
     if (((bitField0_ & 0x00000002) != 0)) {
       output.writeEnum(2, type_);
     }
+    if (((bitField0_ & 0x00000004) != 0)) {
+      output.writeEnum(3, surveyType_);
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -310,6 +453,10 @@ private static final long serialVersionUID = 0L;
     if (((bitField0_ & 0x00000002) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(2, type_);
+    }
+    if (((bitField0_ & 0x00000004) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeEnumSize(3, surveyType_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -335,6 +482,10 @@ private static final long serialVersionUID = 0L;
     if (hasType()) {
       if (type_ != other.type_) return false;
     }
+    if (hasSurveyType() != other.hasSurveyType()) return false;
+    if (hasSurveyType()) {
+      if (surveyType_ != other.surveyType_) return false;
+    }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -353,6 +504,10 @@ private static final long serialVersionUID = 0L;
     if (hasType()) {
       hash = (37 * hash) + TYPE_FIELD_NUMBER;
       hash = (53 * hash) + type_;
+    }
+    if (hasSurveyType()) {
+      hash = (37 * hash) + SURVEY_TYPE_FIELD_NUMBER;
+      hash = (53 * hash) + surveyType_;
     }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
@@ -485,6 +640,7 @@ private static final long serialVersionUID = 0L;
       bitField0_ = 0;
       id_ = "";
       type_ = 0;
+      surveyType_ = 0;
       return this;
     }
 
@@ -527,6 +683,10 @@ private static final long serialVersionUID = 0L;
         result.type_ = type_;
         to_bitField0_ |= 0x00000002;
       }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.surveyType_ = surveyType_;
+        to_bitField0_ |= 0x00000004;
+      }
       result.bitField0_ |= to_bitField0_;
     }
 
@@ -549,6 +709,9 @@ private static final long serialVersionUID = 0L;
       }
       if (other.hasType()) {
         setType(other.getType());
+      }
+      if (other.hasSurveyType()) {
+        setSurveyType(other.getSurveyType());
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -593,6 +756,18 @@ private static final long serialVersionUID = 0L;
               }
               break;
             } // case 16
+            case 24: {
+              int tmpRaw = input.readEnum();
+              com.google.wireless.android.sdk.stats.SentimentSurveyEvent.SurveyType tmpValue =
+                  com.google.wireless.android.sdk.stats.SentimentSurveyEvent.SurveyType.forNumber(tmpRaw);
+              if (tmpValue == null) {
+                mergeUnknownVarintField(3, tmpRaw);
+              } else {
+                surveyType_ = tmpRaw;
+                bitField0_ |= 0x00000004;
+              }
+              break;
+            } // case 24
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -752,6 +927,48 @@ private static final long serialVersionUID = 0L;
     public Builder clearType() {
       bitField0_ = (bitField0_ & ~0x00000002);
       type_ = 0;
+      onChanged();
+      return this;
+    }
+
+    private int surveyType_ = 0;
+    /**
+     * <code>optional .android_studio.SentimentSurveyEvent.SurveyType survey_type = 3;</code>
+     * @return Whether the surveyType field is set.
+     */
+    @java.lang.Override public boolean hasSurveyType() {
+      return ((bitField0_ & 0x00000004) != 0);
+    }
+    /**
+     * <code>optional .android_studio.SentimentSurveyEvent.SurveyType survey_type = 3;</code>
+     * @return The surveyType.
+     */
+    @java.lang.Override
+    public com.google.wireless.android.sdk.stats.SentimentSurveyEvent.SurveyType getSurveyType() {
+      com.google.wireless.android.sdk.stats.SentimentSurveyEvent.SurveyType result = com.google.wireless.android.sdk.stats.SentimentSurveyEvent.SurveyType.forNumber(surveyType_);
+      return result == null ? com.google.wireless.android.sdk.stats.SentimentSurveyEvent.SurveyType.SURVEY_TYPE_UNKNOWN : result;
+    }
+    /**
+     * <code>optional .android_studio.SentimentSurveyEvent.SurveyType survey_type = 3;</code>
+     * @param value The surveyType to set.
+     * @return This builder for chaining.
+     */
+    public Builder setSurveyType(com.google.wireless.android.sdk.stats.SentimentSurveyEvent.SurveyType value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      bitField0_ |= 0x00000004;
+      surveyType_ = value.getNumber();
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>optional .android_studio.SentimentSurveyEvent.SurveyType survey_type = 3;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearSurveyType() {
+      bitField0_ = (bitField0_ & ~0x00000004);
+      surveyType_ = 0;
       onChanged();
       return this;
     }
