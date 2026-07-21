@@ -613,6 +613,10 @@ public enum BooleanOption
    * <code>FORCE_DETERMINISTIC_APK = 148;</code>
    */
   FORCE_DETERMINISTIC_APK(148),
+  /**
+   * <code>DISABLE_MINSDKLIBRARY_CHECK = 149;</code>
+   */
+  DISABLE_MINSDKLIBRARY_CHECK(149),
   UNRECOGNIZED(-1),
   ;
 
@@ -1212,6 +1216,10 @@ public enum BooleanOption
    * <code>FORCE_DETERMINISTIC_APK = 148;</code>
    */
   public static final int FORCE_DETERMINISTIC_APK_VALUE = 148;
+  /**
+   * <code>DISABLE_MINSDKLIBRARY_CHECK = 149;</code>
+   */
+  public static final int DISABLE_MINSDKLIBRARY_CHECK_VALUE = 149;
 
 
   public final int getNumber() {
@@ -1387,6 +1395,7 @@ public enum BooleanOption
       case 146: return ENABLE_ART_PROFILES;
       case 147: return ENABLE_JACOCO_TRANSFORM_INSTRUMENTATION;
       case 148: return FORCE_DETERMINISTIC_APK;
+      case 149: return DISABLE_MINSDKLIBRARY_CHECK;
       default: return null;
     }
   }
