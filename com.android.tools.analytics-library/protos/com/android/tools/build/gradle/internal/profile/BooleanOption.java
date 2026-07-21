@@ -956,6 +956,10 @@ public enum BooleanOption
    * <code>AUTO_ENCODE_MINIMUM_AGP_VERSION_IN_AAR_METADATA = 233;</code>
    */
   AUTO_ENCODE_MINIMUM_AGP_VERSION_IN_AAR_METADATA(233),
+  /**
+   * <code>LINT_DEFAULT_BASELINE_CONVENTION = 234;</code>
+   */
+  LINT_DEFAULT_BASELINE_CONVENTION(234),
   UNRECOGNIZED(-1),
   ;
 
@@ -1895,6 +1899,10 @@ public enum BooleanOption
    * <code>AUTO_ENCODE_MINIMUM_AGP_VERSION_IN_AAR_METADATA = 233;</code>
    */
   public static final int AUTO_ENCODE_MINIMUM_AGP_VERSION_IN_AAR_METADATA_VALUE = 233;
+  /**
+   * <code>LINT_DEFAULT_BASELINE_CONVENTION = 234;</code>
+   */
+  public static final int LINT_DEFAULT_BASELINE_CONVENTION_VALUE = 234;
 
 
   public final int getNumber() {
@@ -2155,6 +2163,7 @@ public enum BooleanOption
       case 231: return LINT_REPORT_AGGREGATION;
       case 232: return ENABLE_JAVA_RESOURCE_OPTIMIZATIONS;
       case 233: return AUTO_ENCODE_MINIMUM_AGP_VERSION_IN_AAR_METADATA;
+      case 234: return LINT_DEFAULT_BASELINE_CONVENTION;
       default: return null;
     }
   }

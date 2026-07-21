@@ -1456,6 +1456,14 @@ public enum GradleTaskExecutionType
    * <code>TEST_RESULTS_COLLECTION = 359;</code>
    */
   TEST_RESULTS_COLLECTION(359),
+  /**
+   * <code>COMPRESS_JAVA_RES = 360;</code>
+   */
+  COMPRESS_JAVA_RES(360),
+  /**
+   * <code>LEGACY_REPORTING_TEST_SUITE_TEST = 361;</code>
+   */
+  LEGACY_REPORTING_TEST_SUITE_TEST(361),
   UNRECOGNIZED(-1),
   ;
 
@@ -2899,6 +2907,14 @@ public enum GradleTaskExecutionType
    * <code>TEST_RESULTS_COLLECTION = 359;</code>
    */
   public static final int TEST_RESULTS_COLLECTION_VALUE = 359;
+  /**
+   * <code>COMPRESS_JAVA_RES = 360;</code>
+   */
+  public static final int COMPRESS_JAVA_RES_VALUE = 360;
+  /**
+   * <code>LEGACY_REPORTING_TEST_SUITE_TEST = 361;</code>
+   */
+  public static final int LEGACY_REPORTING_TEST_SUITE_TEST_VALUE = 361;
 
 
   public final int getNumber() {
@@ -3285,6 +3301,8 @@ public enum GradleTaskExecutionType
       case 357: return CODE_COVERAGE_REPORT;
       case 358: return TEST_REPORT;
       case 359: return TEST_RESULTS_COLLECTION;
+      case 360: return COMPRESS_JAVA_RES;
+      case 361: return LEGACY_REPORTING_TEST_SUITE_TEST;
       default: return null;
     }
   }
