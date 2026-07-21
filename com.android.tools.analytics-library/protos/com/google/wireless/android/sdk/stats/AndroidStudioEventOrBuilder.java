@@ -91,7 +91,8 @@ public interface AndroidStudioEventOrBuilder extends
    * or kind = EMULATOR_PING
    * or kind = TEST_RUN
    * or kind = GAME_TOOLS_PING
-   * or kind = AGDE_PING.
+   * or kind = AGDE_PING
+   * or kind = SHERLOCK_PING
    * The version field is set for most messages.
    * </pre>
    *
@@ -107,7 +108,8 @@ public interface AndroidStudioEventOrBuilder extends
    * or kind = EMULATOR_PING
    * or kind = TEST_RUN
    * or kind = GAME_TOOLS_PING
-   * or kind = AGDE_PING.
+   * or kind = AGDE_PING
+   * or kind = SHERLOCK_PING
    * The version field is set for most messages.
    * </pre>
    *
@@ -123,7 +125,8 @@ public interface AndroidStudioEventOrBuilder extends
    * or kind = EMULATOR_PING
    * or kind = TEST_RUN
    * or kind = GAME_TOOLS_PING
-   * or kind = AGDE_PING.
+   * or kind = AGDE_PING
+   * or kind = SHERLOCK_PING
    * The version field is set for most messages.
    * </pre>
    *
@@ -139,7 +142,7 @@ public interface AndroidStudioEventOrBuilder extends
    *
    * <code>optional .android_studio.AndroidStudioEvent.MonitorType monitor_type = 5 [deprecated = true];</code>
    * @deprecated android_studio.AndroidStudioEvent.monitor_type is deprecated.
-   *     See studio_stats.proto;l=38
+   *     See studio_stats.proto;l=39
    * @return Whether the monitorType field is set.
    */
   @java.lang.Deprecated boolean hasMonitorType();
@@ -151,7 +154,7 @@ public interface AndroidStudioEventOrBuilder extends
    *
    * <code>optional .android_studio.AndroidStudioEvent.MonitorType monitor_type = 5 [deprecated = true];</code>
    * @deprecated android_studio.AndroidStudioEvent.monitor_type is deprecated.
-   *     See studio_stats.proto;l=38
+   *     See studio_stats.proto;l=39
    * @return The monitorType.
    */
   @java.lang.Deprecated com.google.wireless.android.sdk.stats.AndroidStudioEvent.MonitorType getMonitorType();
@@ -164,7 +167,7 @@ public interface AndroidStudioEventOrBuilder extends
    *
    * <code>optional bool monitor_paused = 6 [deprecated = true];</code>
    * @deprecated android_studio.AndroidStudioEvent.monitor_paused is deprecated.
-   *     See studio_stats.proto;l=42
+   *     See studio_stats.proto;l=43
    * @return Whether the monitorPaused field is set.
    */
   @java.lang.Deprecated boolean hasMonitorPaused();
@@ -176,7 +179,7 @@ public interface AndroidStudioEventOrBuilder extends
    *
    * <code>optional bool monitor_paused = 6 [deprecated = true];</code>
    * @deprecated android_studio.AndroidStudioEvent.monitor_paused is deprecated.
-   *     See studio_stats.proto;l=42
+   *     See studio_stats.proto;l=43
    * @return The monitorPaused.
    */
   @java.lang.Deprecated boolean getMonitorPaused();
@@ -189,7 +192,7 @@ public interface AndroidStudioEventOrBuilder extends
    *
    * <code>optional .android_studio.AndroidStudioEvent.ProfilerCaptureType profiler_capture_type = 7 [deprecated = true];</code>
    * @deprecated android_studio.AndroidStudioEvent.profiler_capture_type is deprecated.
-   *     See studio_stats.proto;l=46
+   *     See studio_stats.proto;l=47
    * @return Whether the profilerCaptureType field is set.
    */
   @java.lang.Deprecated boolean hasProfilerCaptureType();
@@ -201,7 +204,7 @@ public interface AndroidStudioEventOrBuilder extends
    *
    * <code>optional .android_studio.AndroidStudioEvent.ProfilerCaptureType profiler_capture_type = 7 [deprecated = true];</code>
    * @deprecated android_studio.AndroidStudioEvent.profiler_capture_type is deprecated.
-   *     See studio_stats.proto;l=46
+   *     See studio_stats.proto;l=47
    * @return The profilerCaptureType.
    */
   @java.lang.Deprecated com.google.wireless.android.sdk.stats.AndroidStudioEvent.ProfilerCaptureType getProfilerCaptureType();
@@ -262,7 +265,7 @@ public interface AndroidStudioEventOrBuilder extends
    *
    * <code>optional .android_studio.AndroidStudioEvent.RunConfigurationType run_configuration_type = 10 [deprecated = true];</code>
    * @deprecated android_studio.AndroidStudioEvent.run_configuration_type is deprecated.
-   *     See studio_stats.proto;l=56
+   *     See studio_stats.proto;l=57
    * @return Whether the runConfigurationType field is set.
    */
   @java.lang.Deprecated boolean hasRunConfigurationType();
@@ -274,7 +277,7 @@ public interface AndroidStudioEventOrBuilder extends
    *
    * <code>optional .android_studio.AndroidStudioEvent.RunConfigurationType run_configuration_type = 10 [deprecated = true];</code>
    * @deprecated android_studio.AndroidStudioEvent.run_configuration_type is deprecated.
-   *     See studio_stats.proto;l=56
+   *     See studio_stats.proto;l=57
    * @return The runConfigurationType.
    */
   @java.lang.Deprecated com.google.wireless.android.sdk.stats.AndroidStudioEvent.RunConfigurationType getRunConfigurationType();
@@ -287,7 +290,7 @@ public interface AndroidStudioEventOrBuilder extends
    *
    * <code>optional .android_studio.AndroidStudioEvent.DebuggerType debugger_type = 11 [deprecated = true];</code>
    * @deprecated android_studio.AndroidStudioEvent.debugger_type is deprecated.
-   *     See studio_stats.proto;l=60
+   *     See studio_stats.proto;l=61
    * @return Whether the debuggerType field is set.
    */
   @java.lang.Deprecated boolean hasDebuggerType();
@@ -299,7 +302,7 @@ public interface AndroidStudioEventOrBuilder extends
    *
    * <code>optional .android_studio.AndroidStudioEvent.DebuggerType debugger_type = 11 [deprecated = true];</code>
    * @deprecated android_studio.AndroidStudioEvent.debugger_type is deprecated.
-   *     See studio_stats.proto;l=60
+   *     See studio_stats.proto;l=61
    * @return The debuggerType.
    */
   @java.lang.Deprecated com.google.wireless.android.sdk.stats.AndroidStudioEvent.DebuggerType getDebuggerType();
@@ -688,7 +691,7 @@ public interface AndroidStudioEventOrBuilder extends
    *
    * <code>optional .android_studio.EmulatorUiEvent emulator_ui_event = 25 [deprecated = true, lazy = true];</code>
    * @deprecated android_studio.AndroidStudioEvent.emulator_ui_event is deprecated.
-   *     See studio_stats.proto;l=118
+   *     See studio_stats.proto;l=119
    * @return Whether the emulatorUiEvent field is set.
    */
   @java.lang.Deprecated boolean hasEmulatorUiEvent();
@@ -700,7 +703,7 @@ public interface AndroidStudioEventOrBuilder extends
    *
    * <code>optional .android_studio.EmulatorUiEvent emulator_ui_event = 25 [deprecated = true, lazy = true];</code>
    * @deprecated android_studio.AndroidStudioEvent.emulator_ui_event is deprecated.
-   *     See studio_stats.proto;l=118
+   *     See studio_stats.proto;l=119
    * @return The emulatorUiEvent.
    */
   @java.lang.Deprecated com.google.wireless.android.sdk.stats.EmulatorUiEvent getEmulatorUiEvent();
@@ -973,7 +976,7 @@ public interface AndroidStudioEventOrBuilder extends
 
   /**
    * <pre>
-   * set when kind = STUDIO_PING
+   * set when kind = STUDIO_PING or SHERLOCK_PING.
    * </pre>
    *
    * <code>optional .android_studio.MachineDetails machine_details = 35 [lazy = true];</code>
@@ -982,7 +985,7 @@ public interface AndroidStudioEventOrBuilder extends
   boolean hasMachineDetails();
   /**
    * <pre>
-   * set when kind = STUDIO_PING
+   * set when kind = STUDIO_PING or SHERLOCK_PING.
    * </pre>
    *
    * <code>optional .android_studio.MachineDetails machine_details = 35 [lazy = true];</code>
@@ -991,7 +994,7 @@ public interface AndroidStudioEventOrBuilder extends
   com.google.wireless.android.sdk.stats.MachineDetails getMachineDetails();
   /**
    * <pre>
-   * set when kind = STUDIO_PING
+   * set when kind = STUDIO_PING or SHERLOCK_PING.
    * </pre>
    *
    * <code>optional .android_studio.MachineDetails machine_details = 35 [lazy = true];</code>
@@ -1000,7 +1003,7 @@ public interface AndroidStudioEventOrBuilder extends
 
   /**
    * <pre>
-   * set when kind = STUDIO_PING
+   * set when kind = STUDIO_PING or SHERLOCK_PING.
    * </pre>
    *
    * <code>optional .android_studio.JvmDetails jvm_details = 36 [lazy = true];</code>
@@ -1009,7 +1012,7 @@ public interface AndroidStudioEventOrBuilder extends
   boolean hasJvmDetails();
   /**
    * <pre>
-   * set when kind = STUDIO_PING
+   * set when kind = STUDIO_PING or SHERLOCK_PING.
    * </pre>
    *
    * <code>optional .android_studio.JvmDetails jvm_details = 36 [lazy = true];</code>
@@ -1018,7 +1021,7 @@ public interface AndroidStudioEventOrBuilder extends
   com.google.wireless.android.sdk.stats.JvmDetails getJvmDetails();
   /**
    * <pre>
-   * set when kind = STUDIO_PING
+   * set when kind = STUDIO_PING or SHERLOCK_PING.
    * </pre>
    *
    * <code>optional .android_studio.JvmDetails jvm_details = 36 [lazy = true];</code>
@@ -1691,7 +1694,7 @@ public interface AndroidStudioEventOrBuilder extends
    *
    * <code>optional .android_studio.WhatsNewAssistantEvent whats_new_assistant_event = 60 [deprecated = true, lazy = true];</code>
    * @deprecated android_studio.AndroidStudioEvent.whats_new_assistant_event is deprecated.
-   *     See studio_stats.proto;l=241
+   *     See studio_stats.proto;l=242
    * @return Whether the whatsNewAssistantEvent field is set.
    */
   @java.lang.Deprecated boolean hasWhatsNewAssistantEvent();
@@ -1703,7 +1706,7 @@ public interface AndroidStudioEventOrBuilder extends
    *
    * <code>optional .android_studio.WhatsNewAssistantEvent whats_new_assistant_event = 60 [deprecated = true, lazy = true];</code>
    * @deprecated android_studio.AndroidStudioEvent.whats_new_assistant_event is deprecated.
-   *     See studio_stats.proto;l=241
+   *     See studio_stats.proto;l=242
    * @return The whatsNewAssistantEvent.
    */
   @java.lang.Deprecated com.google.wireless.android.sdk.stats.WhatsNewAssistantEvent getWhatsNewAssistantEvent();
@@ -1843,7 +1846,7 @@ public interface AndroidStudioEventOrBuilder extends
    *
    * <code>optional .android_studio.StudioRunEvent studio_run_event = 65 [deprecated = true, lazy = true];</code>
    * @deprecated android_studio.AndroidStudioEvent.studio_run_event is deprecated.
-   *     See studio_stats.proto;l=260
+   *     See studio_stats.proto;l=261
    * @return Whether the studioRunEvent field is set.
    */
   @java.lang.Deprecated boolean hasStudioRunEvent();
@@ -1854,7 +1857,7 @@ public interface AndroidStudioEventOrBuilder extends
    *
    * <code>optional .android_studio.StudioRunEvent studio_run_event = 65 [deprecated = true, lazy = true];</code>
    * @deprecated android_studio.AndroidStudioEvent.studio_run_event is deprecated.
-   *     See studio_stats.proto;l=260
+   *     See studio_stats.proto;l=261
    * @return The studioRunEvent.
    */
   @java.lang.Deprecated com.google.wireless.android.sdk.stats.StudioRunEvent getStudioRunEvent();
@@ -3292,7 +3295,7 @@ public interface AndroidStudioEventOrBuilder extends
    *
    * <code>optional .android_studio.AutoImportEvent auto_import_event = 117 [deprecated = true, lazy = true];</code>
    * @deprecated android_studio.AndroidStudioEvent.auto_import_event is deprecated.
-   *     See studio_stats.proto;l=441
+   *     See studio_stats.proto;l=442
    * @return Whether the autoImportEvent field is set.
    */
   @java.lang.Deprecated boolean hasAutoImportEvent();
@@ -3304,7 +3307,7 @@ public interface AndroidStudioEventOrBuilder extends
    *
    * <code>optional .android_studio.AutoImportEvent auto_import_event = 117 [deprecated = true, lazy = true];</code>
    * @deprecated android_studio.AndroidStudioEvent.auto_import_event is deprecated.
-   *     See studio_stats.proto;l=441
+   *     See studio_stats.proto;l=442
    * @return The autoImportEvent.
    */
   @java.lang.Deprecated com.google.wireless.android.sdk.stats.AutoImportEvent getAutoImportEvent();
@@ -7014,4 +7017,31 @@ public interface AndroidStudioEventOrBuilder extends
    * <code>optional .android_studio.AndroidCliInvocation android_cli_invocation = 251 [lazy = true];</code>
    */
   com.google.wireless.android.sdk.stats.AndroidCliInvocationOrBuilder getAndroidCliInvocationOrBuilder();
+
+  /**
+   * <pre>
+   * set when kind = UNIT_TEST_GENERATION_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.UnitTestGenerationEvent unit_test_generation_event = 252 [lazy = true];</code>
+   * @return Whether the unitTestGenerationEvent field is set.
+   */
+  boolean hasUnitTestGenerationEvent();
+  /**
+   * <pre>
+   * set when kind = UNIT_TEST_GENERATION_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.UnitTestGenerationEvent unit_test_generation_event = 252 [lazy = true];</code>
+   * @return The unitTestGenerationEvent.
+   */
+  com.google.wireless.android.sdk.stats.UnitTestGenerationEvent getUnitTestGenerationEvent();
+  /**
+   * <pre>
+   * set when kind = UNIT_TEST_GENERATION_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.UnitTestGenerationEvent unit_test_generation_event = 252 [lazy = true];</code>
+   */
+  com.google.wireless.android.sdk.stats.UnitTestGenerationEventOrBuilder getUnitTestGenerationEventOrBuilder();
 }
