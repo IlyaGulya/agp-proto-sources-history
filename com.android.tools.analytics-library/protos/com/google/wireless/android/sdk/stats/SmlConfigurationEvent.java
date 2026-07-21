@@ -56,6 +56,10 @@ private static final long serialVersionUID = 0L;
      * <code>PRODUCT_VARIANT_BUSINESS = 2;</code>
      */
     PRODUCT_VARIANT_BUSINESS(2),
+    /**
+     * <code>PRODUCT_VARIANT_DASHER_USER_CHOICE = 3;</code>
+     */
+    PRODUCT_VARIANT_DASHER_USER_CHOICE(3),
     ;
 
     /**
@@ -70,6 +74,10 @@ private static final long serialVersionUID = 0L;
      * <code>PRODUCT_VARIANT_BUSINESS = 2;</code>
      */
     public static final int PRODUCT_VARIANT_BUSINESS_VALUE = 2;
+    /**
+     * <code>PRODUCT_VARIANT_DASHER_USER_CHOICE = 3;</code>
+     */
+    public static final int PRODUCT_VARIANT_DASHER_USER_CHOICE_VALUE = 3;
 
 
     public final int getNumber() {
@@ -95,6 +103,7 @@ private static final long serialVersionUID = 0L;
         case 0: return PRODUCT_VARIANT_UNKNOWN;
         case 1: return PRODUCT_VARIANT_FREE;
         case 2: return PRODUCT_VARIANT_BUSINESS;
+        case 3: return PRODUCT_VARIANT_DASHER_USER_CHOICE;
         default: return null;
       }
     }

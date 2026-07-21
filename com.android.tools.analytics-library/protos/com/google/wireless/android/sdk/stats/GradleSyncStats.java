@@ -129,6 +129,14 @@ private static final long serialVersionUID = 0L;
     TRIGGER_TEST_REQUESTED(7),
     /**
      * <pre>
+     * Sync was requested by an Agent.
+     * </pre>
+     *
+     * <code>TRIGGER_AGENT_REQUESTED = 8;</code>
+     */
+    TRIGGER_AGENT_REQUESTED(8),
+    /**
+     * <pre>
      * First marker for user initiated syncs
      * </pre>
      *
@@ -1086,6 +1094,14 @@ private static final long serialVersionUID = 0L;
     public static final int TRIGGER_TEST_REQUESTED_VALUE = 7;
     /**
      * <pre>
+     * Sync was requested by an Agent.
+     * </pre>
+     *
+     * <code>TRIGGER_AGENT_REQUESTED = 8;</code>
+     */
+    public static final int TRIGGER_AGENT_REQUESTED_VALUE = 8;
+    /**
+     * <pre>
      * First marker for user initiated syncs
      * </pre>
      *
@@ -2003,6 +2019,7 @@ private static final long serialVersionUID = 0L;
         case 5: return TRIGGER_VARIANT_SELECTION_CHANGED_BY_USER;
         case 6: return TRIGGER_PSD_CHANGES;
         case 7: return TRIGGER_TEST_REQUESTED;
+        case 8: return TRIGGER_AGENT_REQUESTED;
         case 100: return TRIGGER_USER_FIRST_MARKER;
         case 101: return TRIGGER_USER_STALE_CHANGES;
         case 102: return TRIGGER_USER_TRY_AGAIN;

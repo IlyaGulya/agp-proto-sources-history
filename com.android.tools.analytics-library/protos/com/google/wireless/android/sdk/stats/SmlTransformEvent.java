@@ -58,6 +58,22 @@ private static final long serialVersionUID = 0L;
      * <code>DOCUMENT = 2;</code>
      */
     DOCUMENT(2),
+    /**
+     * <pre>
+     * For Compose preview transform that includes both image and code.
+     * </pre>
+     *
+     * <code>MULTIMODAL_COMPOSE_PREVIEW = 3;</code>
+     */
+    MULTIMODAL_COMPOSE_PREVIEW(3),
+    /**
+     * <pre>
+     * For Compose Preview generation action.
+     * </pre>
+     *
+     * <code>GENERATE_COMPOSE_PREVIEW = 4;</code>
+     */
+    GENERATE_COMPOSE_PREVIEW(4),
     ;
 
     /**
@@ -72,6 +88,22 @@ private static final long serialVersionUID = 0L;
      * <code>DOCUMENT = 2;</code>
      */
     public static final int DOCUMENT_VALUE = 2;
+    /**
+     * <pre>
+     * For Compose preview transform that includes both image and code.
+     * </pre>
+     *
+     * <code>MULTIMODAL_COMPOSE_PREVIEW = 3;</code>
+     */
+    public static final int MULTIMODAL_COMPOSE_PREVIEW_VALUE = 3;
+    /**
+     * <pre>
+     * For Compose Preview generation action.
+     * </pre>
+     *
+     * <code>GENERATE_COMPOSE_PREVIEW = 4;</code>
+     */
+    public static final int GENERATE_COMPOSE_PREVIEW_VALUE = 4;
 
 
     public final int getNumber() {
@@ -97,6 +129,8 @@ private static final long serialVersionUID = 0L;
         case 0: return UNKNOWN;
         case 1: return CUSTOM;
         case 2: return DOCUMENT;
+        case 3: return MULTIMODAL_COMPOSE_PREVIEW;
+        case 4: return GENERATE_COMPOSE_PREVIEW;
         default: return null;
       }
     }
@@ -3290,7 +3324,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.android_studio.SmlTransformEvent.TransformError backend_error = 2 [deprecated = true, lazy = true];</code>
      * @deprecated android_studio.SmlTransformEvent.TransformResponse.backend_error is deprecated.
-     *     See studio_stats.proto;l=15454
+     *     See studio_stats.proto;l=15456
      * @return Whether the backendError field is set.
      */
     @java.lang.Deprecated boolean hasBackendError();
@@ -3301,7 +3335,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.android_studio.SmlTransformEvent.TransformError backend_error = 2 [deprecated = true, lazy = true];</code>
      * @deprecated android_studio.SmlTransformEvent.TransformResponse.backend_error is deprecated.
-     *     See studio_stats.proto;l=15454
+     *     See studio_stats.proto;l=15456
      * @return The backendError.
      */
     @java.lang.Deprecated com.google.wireless.android.sdk.stats.SmlTransformEvent.TransformError getBackendError();
@@ -3450,7 +3484,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.android_studio.SmlTransformEvent.TransformError backend_error = 2 [deprecated = true, lazy = true];</code>
      * @deprecated android_studio.SmlTransformEvent.TransformResponse.backend_error is deprecated.
-     *     See studio_stats.proto;l=15454
+     *     See studio_stats.proto;l=15456
      * @return Whether the backendError field is set.
      */
     @java.lang.Override
@@ -3464,7 +3498,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.android_studio.SmlTransformEvent.TransformError backend_error = 2 [deprecated = true, lazy = true];</code>
      * @deprecated android_studio.SmlTransformEvent.TransformResponse.backend_error is deprecated.
-     *     See studio_stats.proto;l=15454
+     *     See studio_stats.proto;l=15456
      * @return The backendError.
      */
     @java.lang.Override
@@ -4075,7 +4109,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>.android_studio.SmlTransformEvent.TransformError backend_error = 2 [deprecated = true, lazy = true];</code>
        * @deprecated android_studio.SmlTransformEvent.TransformResponse.backend_error is deprecated.
-       *     See studio_stats.proto;l=15454
+       *     See studio_stats.proto;l=15456
        * @return Whether the backendError field is set.
        */
       @java.lang.Override
@@ -4089,7 +4123,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>.android_studio.SmlTransformEvent.TransformError backend_error = 2 [deprecated = true, lazy = true];</code>
        * @deprecated android_studio.SmlTransformEvent.TransformResponse.backend_error is deprecated.
-       *     See studio_stats.proto;l=15454
+       *     See studio_stats.proto;l=15456
        * @return The backendError.
        */
       @java.lang.Override
