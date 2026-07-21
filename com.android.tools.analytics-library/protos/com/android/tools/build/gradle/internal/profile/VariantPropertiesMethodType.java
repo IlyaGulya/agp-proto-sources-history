@@ -801,6 +801,10 @@ public enum VariantPropertiesMethodType
    * <code>SOURCES_KEEP_RULES_ACCESS = 185;</code>
    */
   SOURCES_KEEP_RULES_ACCESS(185),
+  /**
+   * <code>COMPILE_SDK = 186;</code>
+   */
+  COMPILE_SDK(186),
   UNRECOGNIZED(-1),
   ;
 
@@ -1596,6 +1600,10 @@ public enum VariantPropertiesMethodType
    * <code>SOURCES_KEEP_RULES_ACCESS = 185;</code>
    */
   public static final int SOURCES_KEEP_RULES_ACCESS_VALUE = 185;
+  /**
+   * <code>COMPILE_SDK = 186;</code>
+   */
+  public static final int COMPILE_SDK_VALUE = 186;
 
 
   public final int getNumber() {
@@ -1808,6 +1816,7 @@ public enum VariantPropertiesMethodType
       case 183: return TEST_SUITE_SOURCE_ASSETS;
       case 184: return TEST_SUITE_SOURCE_MANIFEST_FILE;
       case 185: return SOURCES_KEEP_RULES_ACCESS;
+      case 186: return COMPILE_SDK;
       default: return null;
     }
   }

@@ -135,6 +135,41 @@ private static final long serialVersionUID = 0L;
      * <code>SCREENSHOT_DIALOG_BUILD_FAILURE = 11;</code>
      */
     SCREENSHOT_DIALOG_BUILD_FAILURE(11),
+    /**
+     * <pre>
+     * Number of times the user switched the view type.
+     * </pre>
+     *
+     * <code>SCREENSHOT_VIEW_TYPE_CHANGED = 12;</code>
+     */
+    SCREENSHOT_VIEW_TYPE_CHANGED(12),
+    /**
+     * <pre>
+     * Number of times the user viewed the attributes
+     * panel in the test panel.
+     * </pre>
+     *
+     * <code>SCREENSHOT_ATTRIBUTES_VIEWED = 13;</code>
+     */
+    SCREENSHOT_ATTRIBUTES_VIEWED(13),
+    /**
+     * <pre>
+     * Number of times the user opened the dialog from
+     * the test results.
+     * </pre>
+     *
+     * <code>SCREENSHOT_DIALOG_SOURCE_TEST_RESULTS = 14;</code>
+     */
+    SCREENSHOT_DIALOG_SOURCE_TEST_RESULTS(14),
+    /**
+     * <pre>
+     * Number of times the user clicked the toolbar
+     * action in the test panel.
+     * </pre>
+     *
+     * <code>SCREENSHOT_TOOLBAR_ACTION = 15;</code>
+     */
+    SCREENSHOT_TOOLBAR_ACTION(15),
     ;
 
     /**
@@ -228,6 +263,41 @@ private static final long serialVersionUID = 0L;
      * <code>SCREENSHOT_DIALOG_BUILD_FAILURE = 11;</code>
      */
     public static final int SCREENSHOT_DIALOG_BUILD_FAILURE_VALUE = 11;
+    /**
+     * <pre>
+     * Number of times the user switched the view type.
+     * </pre>
+     *
+     * <code>SCREENSHOT_VIEW_TYPE_CHANGED = 12;</code>
+     */
+    public static final int SCREENSHOT_VIEW_TYPE_CHANGED_VALUE = 12;
+    /**
+     * <pre>
+     * Number of times the user viewed the attributes
+     * panel in the test panel.
+     * </pre>
+     *
+     * <code>SCREENSHOT_ATTRIBUTES_VIEWED = 13;</code>
+     */
+    public static final int SCREENSHOT_ATTRIBUTES_VIEWED_VALUE = 13;
+    /**
+     * <pre>
+     * Number of times the user opened the dialog from
+     * the test results.
+     * </pre>
+     *
+     * <code>SCREENSHOT_DIALOG_SOURCE_TEST_RESULTS = 14;</code>
+     */
+    public static final int SCREENSHOT_DIALOG_SOURCE_TEST_RESULTS_VALUE = 14;
+    /**
+     * <pre>
+     * Number of times the user clicked the toolbar
+     * action in the test panel.
+     * </pre>
+     *
+     * <code>SCREENSHOT_TOOLBAR_ACTION = 15;</code>
+     */
+    public static final int SCREENSHOT_TOOLBAR_ACTION_VALUE = 15;
 
 
     public final int getNumber() {
@@ -262,6 +332,10 @@ private static final long serialVersionUID = 0L;
         case 9: return SCREENSHOT_DIALOG_RENDER_FAILURE;
         case 10: return SCREENSHOT_DIALOG_TEST_RESULTS_EMPTY;
         case 11: return SCREENSHOT_DIALOG_BUILD_FAILURE;
+        case 12: return SCREENSHOT_VIEW_TYPE_CHANGED;
+        case 13: return SCREENSHOT_ATTRIBUTES_VIEWED;
+        case 14: return SCREENSHOT_DIALOG_SOURCE_TEST_RESULTS;
+        case 15: return SCREENSHOT_TOOLBAR_ACTION;
         default: return null;
       }
     }
