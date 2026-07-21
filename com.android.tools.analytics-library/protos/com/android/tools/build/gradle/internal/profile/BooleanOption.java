@@ -780,6 +780,10 @@ public enum BooleanOption
    * <code>ENABLE_COMPILE_RUNTIME_CLASSPATH_ALIGNMENT = 189;</code>
    */
   ENABLE_COMPILE_RUNTIME_CLASSPATH_ALIGNMENT(189),
+  /**
+   * <code>R8_INTEGRATED_RESOURCE_SHRINKING = 190;</code>
+   */
+  R8_INTEGRATED_RESOURCE_SHRINKING(190),
   UNRECOGNIZED(-1),
   ;
 
@@ -1543,6 +1547,10 @@ public enum BooleanOption
    * <code>ENABLE_COMPILE_RUNTIME_CLASSPATH_ALIGNMENT = 189;</code>
    */
   public static final int ENABLE_COMPILE_RUNTIME_CLASSPATH_ALIGNMENT_VALUE = 189;
+  /**
+   * <code>R8_INTEGRATED_RESOURCE_SHRINKING = 190;</code>
+   */
+  public static final int R8_INTEGRATED_RESOURCE_SHRINKING_VALUE = 190;
 
 
   public final int getNumber() {
@@ -1759,6 +1767,7 @@ public enum BooleanOption
       case 187: return SUPPRESS_MANIFEST_PACKAGE_WARNING;
       case 188: return USE_DECLARATIVE_INTERFACES;
       case 189: return ENABLE_COMPILE_RUNTIME_CLASSPATH_ALIGNMENT;
+      case 190: return R8_INTEGRATED_RESOURCE_SHRINKING;
       default: return null;
     }
   }
