@@ -3995,8 +3995,8 @@ public interface AndroidStudioEventOrBuilder extends
   /**
    * <pre>
    * set when kind is SDK_INDEX_LIBRARY_HAS_CRITICAL_ISSUES,
-   * SDK_INDEX_LIBRARY_IS_OUTDATED, SDK_INDEX_LIBRARY_IS_NON_COMPLIANT
-   * or SDK_INDEX_LIBRARY_HAS_VULNERABILITIES
+   * SDK_INDEX_LIBRARY_IS_OUTDATED, SDK_INDEX_LIBRARY_IS_NON_COMPLIANT,
+   * SDK_INDEX_LIBRARY_HAS_VULNERABILITIES, SDK_INDEX_LIBRARY_UPDATED
    * </pre>
    *
    * <code>optional .android_studio.SdkIndexLibraryDetails sdk_index_library_details = 142 [lazy = true];</code>
@@ -4006,8 +4006,8 @@ public interface AndroidStudioEventOrBuilder extends
   /**
    * <pre>
    * set when kind is SDK_INDEX_LIBRARY_HAS_CRITICAL_ISSUES,
-   * SDK_INDEX_LIBRARY_IS_OUTDATED, SDK_INDEX_LIBRARY_IS_NON_COMPLIANT
-   * or SDK_INDEX_LIBRARY_HAS_VULNERABILITIES
+   * SDK_INDEX_LIBRARY_IS_OUTDATED, SDK_INDEX_LIBRARY_IS_NON_COMPLIANT,
+   * SDK_INDEX_LIBRARY_HAS_VULNERABILITIES, SDK_INDEX_LIBRARY_UPDATED
    * </pre>
    *
    * <code>optional .android_studio.SdkIndexLibraryDetails sdk_index_library_details = 142 [lazy = true];</code>
@@ -4017,8 +4017,8 @@ public interface AndroidStudioEventOrBuilder extends
   /**
    * <pre>
    * set when kind is SDK_INDEX_LIBRARY_HAS_CRITICAL_ISSUES,
-   * SDK_INDEX_LIBRARY_IS_OUTDATED, SDK_INDEX_LIBRARY_IS_NON_COMPLIANT
-   * or SDK_INDEX_LIBRARY_HAS_VULNERABILITIES
+   * SDK_INDEX_LIBRARY_IS_OUTDATED, SDK_INDEX_LIBRARY_IS_NON_COMPLIANT,
+   * SDK_INDEX_LIBRARY_HAS_VULNERABILITIES, SDK_INDEX_LIBRARY_UPDATED
    * </pre>
    *
    * <code>optional .android_studio.SdkIndexLibraryDetails sdk_index_library_details = 142 [lazy = true];</code>
@@ -5842,4 +5842,31 @@ public interface AndroidStudioEventOrBuilder extends
    * <code>optional .android_studio.DaemonCodeAnalyzerFinishedEvent daemon_code_analyzer_finished_event = 209 [lazy = true];</code>
    */
   com.google.wireless.android.sdk.stats.DaemonCodeAnalyzerFinishedEventOrBuilder getDaemonCodeAnalyzerFinishedEventOrBuilder();
+
+  /**
+   * <pre>
+   * set when kind = EDITING_METRICS_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.EditingMetricsEvent editing_metrics_event = 210 [lazy = true];</code>
+   * @return Whether the editingMetricsEvent field is set.
+   */
+  boolean hasEditingMetricsEvent();
+  /**
+   * <pre>
+   * set when kind = EDITING_METRICS_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.EditingMetricsEvent editing_metrics_event = 210 [lazy = true];</code>
+   * @return The editingMetricsEvent.
+   */
+  com.google.wireless.android.sdk.stats.EditingMetricsEvent getEditingMetricsEvent();
+  /**
+   * <pre>
+   * set when kind = EDITING_METRICS_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.EditingMetricsEvent editing_metrics_event = 210 [lazy = true];</code>
+   */
+  com.google.wireless.android.sdk.stats.EditingMetricsEventOrBuilder getEditingMetricsEventOrBuilder();
 }

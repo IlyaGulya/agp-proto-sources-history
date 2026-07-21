@@ -3138,6 +3138,22 @@ private static final long serialVersionUID = 0L;
      * <code>DAEMON_CODE_ANALYZER_FINISHED_EVENT = 327;</code>
      */
     DAEMON_CODE_ANALYZER_FINISHED_EVENT(327),
+    /**
+     * <pre>
+     * Event related to general editing metrics
+     * </pre>
+     *
+     * <code>EDITING_METRICS_EVENT = 328;</code>
+     */
+    EDITING_METRICS_EVENT(328),
+    /**
+     * <pre>
+     * Library was updated with a SDK Index quick fix
+     * </pre>
+     *
+     * <code>SDK_INDEX_LIBRARY_UPDATED = 329;</code>
+     */
+    SDK_INDEX_LIBRARY_UPDATED(329),
     ;
 
     /**
@@ -5582,6 +5598,22 @@ private static final long serialVersionUID = 0L;
      * <code>DAEMON_CODE_ANALYZER_FINISHED_EVENT = 327;</code>
      */
     public static final int DAEMON_CODE_ANALYZER_FINISHED_EVENT_VALUE = 327;
+    /**
+     * <pre>
+     * Event related to general editing metrics
+     * </pre>
+     *
+     * <code>EDITING_METRICS_EVENT = 328;</code>
+     */
+    public static final int EDITING_METRICS_EVENT_VALUE = 328;
+    /**
+     * <pre>
+     * Library was updated with a SDK Index quick fix
+     * </pre>
+     *
+     * <code>SDK_INDEX_LIBRARY_UPDATED = 329;</code>
+     */
+    public static final int SDK_INDEX_LIBRARY_UPDATED_VALUE = 329;
 
 
     public final int getNumber() {
@@ -5927,6 +5959,8 @@ private static final long serialVersionUID = 0L;
         case 325: return STUDIO_CORE_GEMINI_ACTIONS;
         case 326: return VIRTUALIZATION_EVENT;
         case 327: return DAEMON_CODE_ANALYZER_FINISHED_EVENT;
+        case 328: return EDITING_METRICS_EVENT;
+        case 329: return SDK_INDEX_LIBRARY_UPDATED;
         default: return null;
       }
     }
@@ -20480,8 +20514,8 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * set when kind is SDK_INDEX_LIBRARY_HAS_CRITICAL_ISSUES,
-   * SDK_INDEX_LIBRARY_IS_OUTDATED, SDK_INDEX_LIBRARY_IS_NON_COMPLIANT
-   * or SDK_INDEX_LIBRARY_HAS_VULNERABILITIES
+   * SDK_INDEX_LIBRARY_IS_OUTDATED, SDK_INDEX_LIBRARY_IS_NON_COMPLIANT,
+   * SDK_INDEX_LIBRARY_HAS_VULNERABILITIES, SDK_INDEX_LIBRARY_UPDATED
    * </pre>
    *
    * <code>optional .android_studio.SdkIndexLibraryDetails sdk_index_library_details = 142 [lazy = true];</code>
@@ -20494,8 +20528,8 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * set when kind is SDK_INDEX_LIBRARY_HAS_CRITICAL_ISSUES,
-   * SDK_INDEX_LIBRARY_IS_OUTDATED, SDK_INDEX_LIBRARY_IS_NON_COMPLIANT
-   * or SDK_INDEX_LIBRARY_HAS_VULNERABILITIES
+   * SDK_INDEX_LIBRARY_IS_OUTDATED, SDK_INDEX_LIBRARY_IS_NON_COMPLIANT,
+   * SDK_INDEX_LIBRARY_HAS_VULNERABILITIES, SDK_INDEX_LIBRARY_UPDATED
    * </pre>
    *
    * <code>optional .android_studio.SdkIndexLibraryDetails sdk_index_library_details = 142 [lazy = true];</code>
@@ -20508,8 +20542,8 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * set when kind is SDK_INDEX_LIBRARY_HAS_CRITICAL_ISSUES,
-   * SDK_INDEX_LIBRARY_IS_OUTDATED, SDK_INDEX_LIBRARY_IS_NON_COMPLIANT
-   * or SDK_INDEX_LIBRARY_HAS_VULNERABILITIES
+   * SDK_INDEX_LIBRARY_IS_OUTDATED, SDK_INDEX_LIBRARY_IS_NON_COMPLIANT,
+   * SDK_INDEX_LIBRARY_HAS_VULNERABILITIES, SDK_INDEX_LIBRARY_UPDATED
    * </pre>
    *
    * <code>optional .android_studio.SdkIndexLibraryDetails sdk_index_library_details = 142 [lazy = true];</code>
@@ -23074,6 +23108,44 @@ private static final long serialVersionUID = 0L;
     return daemonCodeAnalyzerFinishedEvent_ == null ? com.google.wireless.android.sdk.stats.DaemonCodeAnalyzerFinishedEvent.getDefaultInstance() : daemonCodeAnalyzerFinishedEvent_;
   }
 
+  public static final int EDITING_METRICS_EVENT_FIELD_NUMBER = 210;
+  private com.google.wireless.android.sdk.stats.EditingMetricsEvent editingMetricsEvent_;
+  /**
+   * <pre>
+   * set when kind = EDITING_METRICS_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.EditingMetricsEvent editing_metrics_event = 210 [lazy = true];</code>
+   * @return Whether the editingMetricsEvent field is set.
+   */
+  @java.lang.Override
+  public boolean hasEditingMetricsEvent() {
+    return ((bitField6_ & 0x00000800) != 0);
+  }
+  /**
+   * <pre>
+   * set when kind = EDITING_METRICS_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.EditingMetricsEvent editing_metrics_event = 210 [lazy = true];</code>
+   * @return The editingMetricsEvent.
+   */
+  @java.lang.Override
+  public com.google.wireless.android.sdk.stats.EditingMetricsEvent getEditingMetricsEvent() {
+    return editingMetricsEvent_ == null ? com.google.wireless.android.sdk.stats.EditingMetricsEvent.getDefaultInstance() : editingMetricsEvent_;
+  }
+  /**
+   * <pre>
+   * set when kind = EDITING_METRICS_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.EditingMetricsEvent editing_metrics_event = 210 [lazy = true];</code>
+   */
+  @java.lang.Override
+  public com.google.wireless.android.sdk.stats.EditingMetricsEventOrBuilder getEditingMetricsEventOrBuilder() {
+    return editingMetricsEvent_ == null ? com.google.wireless.android.sdk.stats.EditingMetricsEvent.getDefaultInstance() : editingMetricsEvent_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -23714,6 +23786,9 @@ private static final long serialVersionUID = 0L;
     }
     if (((bitField6_ & 0x00000400) != 0)) {
       output.writeMessage(209, getDaemonCodeAnalyzerFinishedEvent());
+    }
+    if (((bitField6_ & 0x00000800) != 0)) {
+      output.writeMessage(210, getEditingMetricsEvent());
     }
     getUnknownFields().writeTo(output);
   }
@@ -24565,6 +24640,10 @@ private static final long serialVersionUID = 0L;
     if (((bitField6_ & 0x00000400) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(209, getDaemonCodeAnalyzerFinishedEvent());
+    }
+    if (((bitField6_ & 0x00000800) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(210, getEditingMetricsEvent());
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -25597,6 +25676,11 @@ private static final long serialVersionUID = 0L;
       if (!getDaemonCodeAnalyzerFinishedEvent()
           .equals(other.getDaemonCodeAnalyzerFinishedEvent())) return false;
     }
+    if (hasEditingMetricsEvent() != other.hasEditingMetricsEvent()) return false;
+    if (hasEditingMetricsEvent()) {
+      if (!getEditingMetricsEvent()
+          .equals(other.getEditingMetricsEvent())) return false;
+    }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -26446,6 +26530,10 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + DAEMON_CODE_ANALYZER_FINISHED_EVENT_FIELD_NUMBER;
       hash = (53 * hash) + getDaemonCodeAnalyzerFinishedEvent().hashCode();
     }
+    if (hasEditingMetricsEvent()) {
+      hash = (37 * hash) + EDITING_METRICS_EVENT_FIELD_NUMBER;
+      hash = (53 * hash) + getEditingMetricsEvent().hashCode();
+    }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -26760,6 +26848,7 @@ private static final long serialVersionUID = 0L;
         getAndroidStudioCoreGeminiActionsEventFieldBuilder();
         getVirtualizationEventFieldBuilder();
         getDaemonCodeAnalyzerFinishedEventFieldBuilder();
+        getEditingMetricsEventFieldBuilder();
       }
     }
     @java.lang.Override
@@ -27930,6 +28019,12 @@ private static final long serialVersionUID = 0L;
         daemonCodeAnalyzerFinishedEventBuilder_.clear();
       }
       bitField6_ = (bitField6_ & ~0x00010000);
+      if (editingMetricsEventBuilder_ == null) {
+        editingMetricsEvent_ = null;
+      } else {
+        editingMetricsEventBuilder_.clear();
+      }
+      bitField6_ = (bitField6_ & ~0x00020000);
       return this;
     }
 
@@ -29556,6 +29651,14 @@ private static final long serialVersionUID = 0L;
         }
         to_bitField6_ |= 0x00000400;
       }
+      if (((from_bitField6_ & 0x00020000) != 0)) {
+        if (editingMetricsEventBuilder_ == null) {
+          result.editingMetricsEvent_ = editingMetricsEvent_;
+        } else {
+          result.editingMetricsEvent_ = editingMetricsEventBuilder_.build();
+        }
+        to_bitField6_ |= 0x00000800;
+      }
       result.bitField0_ = to_bitField0_;
       result.bitField1_ = to_bitField1_;
       result.bitField2_ = to_bitField2_;
@@ -30341,6 +30444,9 @@ private static final long serialVersionUID = 0L;
       }
       if (other.hasDaemonCodeAnalyzerFinishedEvent()) {
         mergeDaemonCodeAnalyzerFinishedEvent(other.getDaemonCodeAnalyzerFinishedEvent());
+      }
+      if (other.hasEditingMetricsEvent()) {
+        mergeEditingMetricsEvent(other.getEditingMetricsEvent());
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -31899,6 +32005,13 @@ private static final long serialVersionUID = 0L;
               bitField6_ |= 0x00010000;
               break;
             } // case 1674
+            case 1682: {
+              input.readMessage(
+                  getEditingMetricsEventFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField6_ |= 0x00020000;
+              break;
+            } // case 1682
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -53187,8 +53300,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * set when kind is SDK_INDEX_LIBRARY_HAS_CRITICAL_ISSUES,
-     * SDK_INDEX_LIBRARY_IS_OUTDATED, SDK_INDEX_LIBRARY_IS_NON_COMPLIANT
-     * or SDK_INDEX_LIBRARY_HAS_VULNERABILITIES
+     * SDK_INDEX_LIBRARY_IS_OUTDATED, SDK_INDEX_LIBRARY_IS_NON_COMPLIANT,
+     * SDK_INDEX_LIBRARY_HAS_VULNERABILITIES, SDK_INDEX_LIBRARY_UPDATED
      * </pre>
      *
      * <code>optional .android_studio.SdkIndexLibraryDetails sdk_index_library_details = 142 [lazy = true];</code>
@@ -53200,8 +53313,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * set when kind is SDK_INDEX_LIBRARY_HAS_CRITICAL_ISSUES,
-     * SDK_INDEX_LIBRARY_IS_OUTDATED, SDK_INDEX_LIBRARY_IS_NON_COMPLIANT
-     * or SDK_INDEX_LIBRARY_HAS_VULNERABILITIES
+     * SDK_INDEX_LIBRARY_IS_OUTDATED, SDK_INDEX_LIBRARY_IS_NON_COMPLIANT,
+     * SDK_INDEX_LIBRARY_HAS_VULNERABILITIES, SDK_INDEX_LIBRARY_UPDATED
      * </pre>
      *
      * <code>optional .android_studio.SdkIndexLibraryDetails sdk_index_library_details = 142 [lazy = true];</code>
@@ -53217,8 +53330,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * set when kind is SDK_INDEX_LIBRARY_HAS_CRITICAL_ISSUES,
-     * SDK_INDEX_LIBRARY_IS_OUTDATED, SDK_INDEX_LIBRARY_IS_NON_COMPLIANT
-     * or SDK_INDEX_LIBRARY_HAS_VULNERABILITIES
+     * SDK_INDEX_LIBRARY_IS_OUTDATED, SDK_INDEX_LIBRARY_IS_NON_COMPLIANT,
+     * SDK_INDEX_LIBRARY_HAS_VULNERABILITIES, SDK_INDEX_LIBRARY_UPDATED
      * </pre>
      *
      * <code>optional .android_studio.SdkIndexLibraryDetails sdk_index_library_details = 142 [lazy = true];</code>
@@ -53239,8 +53352,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * set when kind is SDK_INDEX_LIBRARY_HAS_CRITICAL_ISSUES,
-     * SDK_INDEX_LIBRARY_IS_OUTDATED, SDK_INDEX_LIBRARY_IS_NON_COMPLIANT
-     * or SDK_INDEX_LIBRARY_HAS_VULNERABILITIES
+     * SDK_INDEX_LIBRARY_IS_OUTDATED, SDK_INDEX_LIBRARY_IS_NON_COMPLIANT,
+     * SDK_INDEX_LIBRARY_HAS_VULNERABILITIES, SDK_INDEX_LIBRARY_UPDATED
      * </pre>
      *
      * <code>optional .android_studio.SdkIndexLibraryDetails sdk_index_library_details = 142 [lazy = true];</code>
@@ -53259,8 +53372,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * set when kind is SDK_INDEX_LIBRARY_HAS_CRITICAL_ISSUES,
-     * SDK_INDEX_LIBRARY_IS_OUTDATED, SDK_INDEX_LIBRARY_IS_NON_COMPLIANT
-     * or SDK_INDEX_LIBRARY_HAS_VULNERABILITIES
+     * SDK_INDEX_LIBRARY_IS_OUTDATED, SDK_INDEX_LIBRARY_IS_NON_COMPLIANT,
+     * SDK_INDEX_LIBRARY_HAS_VULNERABILITIES, SDK_INDEX_LIBRARY_UPDATED
      * </pre>
      *
      * <code>optional .android_studio.SdkIndexLibraryDetails sdk_index_library_details = 142 [lazy = true];</code>
@@ -53285,8 +53398,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * set when kind is SDK_INDEX_LIBRARY_HAS_CRITICAL_ISSUES,
-     * SDK_INDEX_LIBRARY_IS_OUTDATED, SDK_INDEX_LIBRARY_IS_NON_COMPLIANT
-     * or SDK_INDEX_LIBRARY_HAS_VULNERABILITIES
+     * SDK_INDEX_LIBRARY_IS_OUTDATED, SDK_INDEX_LIBRARY_IS_NON_COMPLIANT,
+     * SDK_INDEX_LIBRARY_HAS_VULNERABILITIES, SDK_INDEX_LIBRARY_UPDATED
      * </pre>
      *
      * <code>optional .android_studio.SdkIndexLibraryDetails sdk_index_library_details = 142 [lazy = true];</code>
@@ -53304,8 +53417,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * set when kind is SDK_INDEX_LIBRARY_HAS_CRITICAL_ISSUES,
-     * SDK_INDEX_LIBRARY_IS_OUTDATED, SDK_INDEX_LIBRARY_IS_NON_COMPLIANT
-     * or SDK_INDEX_LIBRARY_HAS_VULNERABILITIES
+     * SDK_INDEX_LIBRARY_IS_OUTDATED, SDK_INDEX_LIBRARY_IS_NON_COMPLIANT,
+     * SDK_INDEX_LIBRARY_HAS_VULNERABILITIES, SDK_INDEX_LIBRARY_UPDATED
      * </pre>
      *
      * <code>optional .android_studio.SdkIndexLibraryDetails sdk_index_library_details = 142 [lazy = true];</code>
@@ -53318,8 +53431,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * set when kind is SDK_INDEX_LIBRARY_HAS_CRITICAL_ISSUES,
-     * SDK_INDEX_LIBRARY_IS_OUTDATED, SDK_INDEX_LIBRARY_IS_NON_COMPLIANT
-     * or SDK_INDEX_LIBRARY_HAS_VULNERABILITIES
+     * SDK_INDEX_LIBRARY_IS_OUTDATED, SDK_INDEX_LIBRARY_IS_NON_COMPLIANT,
+     * SDK_INDEX_LIBRARY_HAS_VULNERABILITIES, SDK_INDEX_LIBRARY_UPDATED
      * </pre>
      *
      * <code>optional .android_studio.SdkIndexLibraryDetails sdk_index_library_details = 142 [lazy = true];</code>
@@ -53335,8 +53448,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * set when kind is SDK_INDEX_LIBRARY_HAS_CRITICAL_ISSUES,
-     * SDK_INDEX_LIBRARY_IS_OUTDATED, SDK_INDEX_LIBRARY_IS_NON_COMPLIANT
-     * or SDK_INDEX_LIBRARY_HAS_VULNERABILITIES
+     * SDK_INDEX_LIBRARY_IS_OUTDATED, SDK_INDEX_LIBRARY_IS_NON_COMPLIANT,
+     * SDK_INDEX_LIBRARY_HAS_VULNERABILITIES, SDK_INDEX_LIBRARY_UPDATED
      * </pre>
      *
      * <code>optional .android_studio.SdkIndexLibraryDetails sdk_index_library_details = 142 [lazy = true];</code>
@@ -63832,6 +63945,162 @@ private static final long serialVersionUID = 0L;
         daemonCodeAnalyzerFinishedEvent_ = null;
       }
       return daemonCodeAnalyzerFinishedEventBuilder_;
+    }
+
+    private com.google.wireless.android.sdk.stats.EditingMetricsEvent editingMetricsEvent_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.EditingMetricsEvent, com.google.wireless.android.sdk.stats.EditingMetricsEvent.Builder, com.google.wireless.android.sdk.stats.EditingMetricsEventOrBuilder> editingMetricsEventBuilder_;
+    /**
+     * <pre>
+     * set when kind = EDITING_METRICS_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.EditingMetricsEvent editing_metrics_event = 210 [lazy = true];</code>
+     * @return Whether the editingMetricsEvent field is set.
+     */
+    public boolean hasEditingMetricsEvent() {
+      return ((bitField6_ & 0x00020000) != 0);
+    }
+    /**
+     * <pre>
+     * set when kind = EDITING_METRICS_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.EditingMetricsEvent editing_metrics_event = 210 [lazy = true];</code>
+     * @return The editingMetricsEvent.
+     */
+    public com.google.wireless.android.sdk.stats.EditingMetricsEvent getEditingMetricsEvent() {
+      if (editingMetricsEventBuilder_ == null) {
+        return editingMetricsEvent_ == null ? com.google.wireless.android.sdk.stats.EditingMetricsEvent.getDefaultInstance() : editingMetricsEvent_;
+      } else {
+        return editingMetricsEventBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * set when kind = EDITING_METRICS_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.EditingMetricsEvent editing_metrics_event = 210 [lazy = true];</code>
+     */
+    public Builder setEditingMetricsEvent(com.google.wireless.android.sdk.stats.EditingMetricsEvent value) {
+      if (editingMetricsEventBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        editingMetricsEvent_ = value;
+        onChanged();
+      } else {
+        editingMetricsEventBuilder_.setMessage(value);
+      }
+      bitField6_ |= 0x00020000;
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = EDITING_METRICS_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.EditingMetricsEvent editing_metrics_event = 210 [lazy = true];</code>
+     */
+    public Builder setEditingMetricsEvent(
+        com.google.wireless.android.sdk.stats.EditingMetricsEvent.Builder builderForValue) {
+      if (editingMetricsEventBuilder_ == null) {
+        editingMetricsEvent_ = builderForValue.build();
+        onChanged();
+      } else {
+        editingMetricsEventBuilder_.setMessage(builderForValue.build());
+      }
+      bitField6_ |= 0x00020000;
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = EDITING_METRICS_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.EditingMetricsEvent editing_metrics_event = 210 [lazy = true];</code>
+     */
+    public Builder mergeEditingMetricsEvent(com.google.wireless.android.sdk.stats.EditingMetricsEvent value) {
+      if (editingMetricsEventBuilder_ == null) {
+        if (((bitField6_ & 0x00020000) != 0) &&
+            editingMetricsEvent_ != null &&
+            editingMetricsEvent_ != com.google.wireless.android.sdk.stats.EditingMetricsEvent.getDefaultInstance()) {
+          editingMetricsEvent_ =
+            com.google.wireless.android.sdk.stats.EditingMetricsEvent.newBuilder(editingMetricsEvent_).mergeFrom(value).buildPartial();
+        } else {
+          editingMetricsEvent_ = value;
+        }
+        onChanged();
+      } else {
+        editingMetricsEventBuilder_.mergeFrom(value);
+      }
+      bitField6_ |= 0x00020000;
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = EDITING_METRICS_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.EditingMetricsEvent editing_metrics_event = 210 [lazy = true];</code>
+     */
+    public Builder clearEditingMetricsEvent() {
+      if (editingMetricsEventBuilder_ == null) {
+        editingMetricsEvent_ = null;
+        onChanged();
+      } else {
+        editingMetricsEventBuilder_.clear();
+      }
+      bitField6_ = (bitField6_ & ~0x00020000);
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = EDITING_METRICS_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.EditingMetricsEvent editing_metrics_event = 210 [lazy = true];</code>
+     */
+    public com.google.wireless.android.sdk.stats.EditingMetricsEvent.Builder getEditingMetricsEventBuilder() {
+      bitField6_ |= 0x00020000;
+      onChanged();
+      return getEditingMetricsEventFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * set when kind = EDITING_METRICS_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.EditingMetricsEvent editing_metrics_event = 210 [lazy = true];</code>
+     */
+    public com.google.wireless.android.sdk.stats.EditingMetricsEventOrBuilder getEditingMetricsEventOrBuilder() {
+      if (editingMetricsEventBuilder_ != null) {
+        return editingMetricsEventBuilder_.getMessageOrBuilder();
+      } else {
+        return editingMetricsEvent_ == null ?
+            com.google.wireless.android.sdk.stats.EditingMetricsEvent.getDefaultInstance() : editingMetricsEvent_;
+      }
+    }
+    /**
+     * <pre>
+     * set when kind = EDITING_METRICS_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.EditingMetricsEvent editing_metrics_event = 210 [lazy = true];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.EditingMetricsEvent, com.google.wireless.android.sdk.stats.EditingMetricsEvent.Builder, com.google.wireless.android.sdk.stats.EditingMetricsEventOrBuilder> 
+        getEditingMetricsEventFieldBuilder() {
+      if (editingMetricsEventBuilder_ == null) {
+        editingMetricsEventBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.wireless.android.sdk.stats.EditingMetricsEvent, com.google.wireless.android.sdk.stats.EditingMetricsEvent.Builder, com.google.wireless.android.sdk.stats.EditingMetricsEventOrBuilder>(
+                getEditingMetricsEvent(),
+                getParentForChildren(),
+                isClean());
+        editingMetricsEvent_ = null;
+      }
+      return editingMetricsEventBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(
