@@ -776,6 +776,10 @@ public enum BooleanOption
    * <code>USE_DECLARATIVE_INTERFACES = 188;</code>
    */
   USE_DECLARATIVE_INTERFACES(188),
+  /**
+   * <code>ENABLE_COMPILE_RUNTIME_CLASSPATH_ALIGNMENT = 189;</code>
+   */
+  ENABLE_COMPILE_RUNTIME_CLASSPATH_ALIGNMENT(189),
   UNRECOGNIZED(-1),
   ;
 
@@ -1535,6 +1539,10 @@ public enum BooleanOption
    * <code>USE_DECLARATIVE_INTERFACES = 188;</code>
    */
   public static final int USE_DECLARATIVE_INTERFACES_VALUE = 188;
+  /**
+   * <code>ENABLE_COMPILE_RUNTIME_CLASSPATH_ALIGNMENT = 189;</code>
+   */
+  public static final int ENABLE_COMPILE_RUNTIME_CLASSPATH_ALIGNMENT_VALUE = 189;
 
 
   public final int getNumber() {
@@ -1750,6 +1758,7 @@ public enum BooleanOption
       case 186: return ENABLE_TEST_FIXTURES_KOTLIN_SUPPORT;
       case 187: return SUPPRESS_MANIFEST_PACKAGE_WARNING;
       case 188: return USE_DECLARATIVE_INTERFACES;
+      case 189: return ENABLE_COMPILE_RUNTIME_CLASSPATH_ALIGNMENT;
       default: return null;
     }
   }
