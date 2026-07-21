@@ -557,6 +557,35 @@ private static final long serialVersionUID = 0L;
      * @return The latencyMs.
      */
     long getLatencyMs();
+
+    /**
+     * <pre>
+     * Currently, fact retrieval is a different API from the chat API. But
+     * retrieval's only use is for the chat API, so here we model it as part
+     * of the chat event since we'll very likely want to associate it with
+     * the corresponding chat event. (Note that retrieval by itself doesn't
+     * have a trace id, so including it here allows us to associate it with the
+     * chat event).
+     * </pre>
+     *
+     * <code>optional uint64 retrieval_latency_ms = 3;</code>
+     * @return Whether the retrievalLatencyMs field is set.
+     */
+    boolean hasRetrievalLatencyMs();
+    /**
+     * <pre>
+     * Currently, fact retrieval is a different API from the chat API. But
+     * retrieval's only use is for the chat API, so here we model it as part
+     * of the chat event since we'll very likely want to associate it with
+     * the corresponding chat event. (Note that retrieval by itself doesn't
+     * have a trace id, so including it here allows us to associate it with the
+     * chat event).
+     * </pre>
+     *
+     * <code>optional uint64 retrieval_latency_ms = 3;</code>
+     * @return The retrievalLatencyMs.
+     */
+    long getRetrievalLatencyMs();
   }
   /**
    * Protobuf type {@code android_studio.SmlChatBotEvent.BotResponse}
@@ -620,6 +649,11 @@ private static final long serialVersionUID = 0L;
             case 16: {
               bitField0_ |= 0x00000002;
               latencyMs_ = input.readUInt64();
+              break;
+            }
+            case 24: {
+              bitField0_ |= 0x00000004;
+              retrievalLatencyMs_ = input.readUInt64();
               break;
             }
             default: {
@@ -700,6 +734,43 @@ private static final long serialVersionUID = 0L;
       return latencyMs_;
     }
 
+    public static final int RETRIEVAL_LATENCY_MS_FIELD_NUMBER = 3;
+    private long retrievalLatencyMs_;
+    /**
+     * <pre>
+     * Currently, fact retrieval is a different API from the chat API. But
+     * retrieval's only use is for the chat API, so here we model it as part
+     * of the chat event since we'll very likely want to associate it with
+     * the corresponding chat event. (Note that retrieval by itself doesn't
+     * have a trace id, so including it here allows us to associate it with the
+     * chat event).
+     * </pre>
+     *
+     * <code>optional uint64 retrieval_latency_ms = 3;</code>
+     * @return Whether the retrievalLatencyMs field is set.
+     */
+    @java.lang.Override
+    public boolean hasRetrievalLatencyMs() {
+      return ((bitField0_ & 0x00000004) != 0);
+    }
+    /**
+     * <pre>
+     * Currently, fact retrieval is a different API from the chat API. But
+     * retrieval's only use is for the chat API, so here we model it as part
+     * of the chat event since we'll very likely want to associate it with
+     * the corresponding chat event. (Note that retrieval by itself doesn't
+     * have a trace id, so including it here allows us to associate it with the
+     * chat event).
+     * </pre>
+     *
+     * <code>optional uint64 retrieval_latency_ms = 3;</code>
+     * @return The retrievalLatencyMs.
+     */
+    @java.lang.Override
+    public long getRetrievalLatencyMs() {
+      return retrievalLatencyMs_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -720,6 +791,9 @@ private static final long serialVersionUID = 0L;
       if (((bitField0_ & 0x00000002) != 0)) {
         output.writeUInt64(2, latencyMs_);
       }
+      if (((bitField0_ & 0x00000004) != 0)) {
+        output.writeUInt64(3, retrievalLatencyMs_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -736,6 +810,10 @@ private static final long serialVersionUID = 0L;
       if (((bitField0_ & 0x00000002) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt64Size(2, latencyMs_);
+      }
+      if (((bitField0_ & 0x00000004) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(3, retrievalLatencyMs_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -762,6 +840,11 @@ private static final long serialVersionUID = 0L;
         if (getLatencyMs()
             != other.getLatencyMs()) return false;
       }
+      if (hasRetrievalLatencyMs() != other.hasRetrievalLatencyMs()) return false;
+      if (hasRetrievalLatencyMs()) {
+        if (getRetrievalLatencyMs()
+            != other.getRetrievalLatencyMs()) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -781,6 +864,11 @@ private static final long serialVersionUID = 0L;
         hash = (37 * hash) + LATENCY_MS_FIELD_NUMBER;
         hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
             getLatencyMs());
+      }
+      if (hasRetrievalLatencyMs()) {
+        hash = (37 * hash) + RETRIEVAL_LATENCY_MS_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            getRetrievalLatencyMs());
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -924,6 +1012,8 @@ private static final long serialVersionUID = 0L;
         bitField0_ = (bitField0_ & ~0x00000001);
         latencyMs_ = 0L;
         bitField0_ = (bitField0_ & ~0x00000002);
+        retrievalLatencyMs_ = 0L;
+        bitField0_ = (bitField0_ & ~0x00000004);
         return this;
       }
 
@@ -963,6 +1053,10 @@ private static final long serialVersionUID = 0L;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.latencyMs_ = latencyMs_;
           to_bitField0_ |= 0x00000002;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.retrievalLatencyMs_ = retrievalLatencyMs_;
+          to_bitField0_ |= 0x00000004;
         }
         result.bitField0_ = to_bitField0_;
         onBuilt();
@@ -1018,6 +1112,9 @@ private static final long serialVersionUID = 0L;
         }
         if (other.hasLatencyMs()) {
           setLatencyMs(other.getLatencyMs());
+        }
+        if (other.hasRetrievalLatencyMs()) {
+          setRetrievalLatencyMs(other.getRetrievalLatencyMs());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -1204,6 +1301,81 @@ private static final long serialVersionUID = 0L;
       public Builder clearLatencyMs() {
         bitField0_ = (bitField0_ & ~0x00000002);
         latencyMs_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long retrievalLatencyMs_ ;
+      /**
+       * <pre>
+       * Currently, fact retrieval is a different API from the chat API. But
+       * retrieval's only use is for the chat API, so here we model it as part
+       * of the chat event since we'll very likely want to associate it with
+       * the corresponding chat event. (Note that retrieval by itself doesn't
+       * have a trace id, so including it here allows us to associate it with the
+       * chat event).
+       * </pre>
+       *
+       * <code>optional uint64 retrieval_latency_ms = 3;</code>
+       * @return Whether the retrievalLatencyMs field is set.
+       */
+      @java.lang.Override
+      public boolean hasRetrievalLatencyMs() {
+        return ((bitField0_ & 0x00000004) != 0);
+      }
+      /**
+       * <pre>
+       * Currently, fact retrieval is a different API from the chat API. But
+       * retrieval's only use is for the chat API, so here we model it as part
+       * of the chat event since we'll very likely want to associate it with
+       * the corresponding chat event. (Note that retrieval by itself doesn't
+       * have a trace id, so including it here allows us to associate it with the
+       * chat event).
+       * </pre>
+       *
+       * <code>optional uint64 retrieval_latency_ms = 3;</code>
+       * @return The retrievalLatencyMs.
+       */
+      @java.lang.Override
+      public long getRetrievalLatencyMs() {
+        return retrievalLatencyMs_;
+      }
+      /**
+       * <pre>
+       * Currently, fact retrieval is a different API from the chat API. But
+       * retrieval's only use is for the chat API, so here we model it as part
+       * of the chat event since we'll very likely want to associate it with
+       * the corresponding chat event. (Note that retrieval by itself doesn't
+       * have a trace id, so including it here allows us to associate it with the
+       * chat event).
+       * </pre>
+       *
+       * <code>optional uint64 retrieval_latency_ms = 3;</code>
+       * @param value The retrievalLatencyMs to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRetrievalLatencyMs(long value) {
+        bitField0_ |= 0x00000004;
+        retrievalLatencyMs_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Currently, fact retrieval is a different API from the chat API. But
+       * retrieval's only use is for the chat API, so here we model it as part
+       * of the chat event since we'll very likely want to associate it with
+       * the corresponding chat event. (Note that retrieval by itself doesn't
+       * have a trace id, so including it here allows us to associate it with the
+       * chat event).
+       * </pre>
+       *
+       * <code>optional uint64 retrieval_latency_ms = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRetrievalLatencyMs() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        retrievalLatencyMs_ = 0L;
         onChanged();
         return this;
       }
