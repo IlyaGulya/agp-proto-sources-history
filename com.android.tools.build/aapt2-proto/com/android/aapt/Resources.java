@@ -2012,10 +2012,10 @@ public final class Resources {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getToolBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(tool_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, tool_);
       }
-      if (!getVersionBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(version_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, version_);
       }
       unknownFields.writeTo(output);
@@ -2027,10 +2027,10 @@ public final class Resources {
       if (size != -1) return size;
 
       size = 0;
-      if (!getToolBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(tool_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, tool_);
       }
-      if (!getVersionBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(version_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, version_);
       }
       size += unknownFields.getSerializedSize();
@@ -5587,7 +5587,7 @@ public final class Resources {
       if (packageId_ != null) {
         output.writeMessage(1, getPackageId());
       }
-      if (!getPackageNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(packageName_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, packageName_);
       }
       for (int i = 0; i < type_.size(); i++) {
@@ -5606,7 +5606,7 @@ public final class Resources {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getPackageId());
       }
-      if (!getPackageNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(packageName_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, packageName_);
       }
       for (int i = 0; i < type_.size(); i++) {
@@ -7504,7 +7504,7 @@ public final class Resources {
       if (typeId_ != null) {
         output.writeMessage(1, getTypeId());
       }
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, name_);
       }
       for (int i = 0; i < entry_.size(); i++) {
@@ -7523,7 +7523,7 @@ public final class Resources {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getTypeId());
       }
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, name_);
       }
       for (int i = 0; i < entry_.size(); i++) {
@@ -8987,7 +8987,7 @@ public final class Resources {
       if (source_ != null) {
         output.writeMessage(2, getSource());
       }
-      if (!getCommentBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(comment_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, comment_);
       }
       if (stagedApi_ != false) {
@@ -9010,7 +9010,7 @@ public final class Resources {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getSource());
       }
-      if (!getCommentBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(comment_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, comment_);
       }
       if (stagedApi_ != false) {
@@ -9997,7 +9997,7 @@ public final class Resources {
       if (source_ != null) {
         output.writeMessage(1, getSource());
       }
-      if (!getCommentBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(comment_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, comment_);
       }
       unknownFields.writeTo(output);
@@ -10013,7 +10013,7 @@ public final class Resources {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getSource());
       }
-      if (!getCommentBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(comment_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, comment_);
       }
       size += unknownFields.getSerializedSize();
@@ -10943,13 +10943,13 @@ public final class Resources {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, name_);
       }
       if (source_ != null) {
         output.writeMessage(2, getSource());
       }
-      if (!getActorBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(actor_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, actor_);
       }
       unknownFields.writeTo(output);
@@ -10961,14 +10961,14 @@ public final class Resources {
       if (size != -1) return size;
 
       size = 0;
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, name_);
       }
       if (source_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getSource());
       }
-      if (!getActorBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(actor_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, actor_);
       }
       size += unknownFields.getSerializedSize();
@@ -12302,7 +12302,7 @@ public final class Resources {
       if (source_ != null) {
         output.writeMessage(1, getSource());
       }
-      if (!getCommentBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(comment_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, comment_);
       }
       if (getPolicyList().size() > 0) {
@@ -12328,7 +12328,7 @@ public final class Resources {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getSource());
       }
-      if (!getCommentBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(comment_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, comment_);
       }
       {
@@ -15136,7 +15136,7 @@ public final class Resources {
       if (entryId_ != null) {
         output.writeMessage(1, getEntryId());
       }
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, name_);
       }
       if (visibility_ != null) {
@@ -15167,7 +15167,7 @@ public final class Resources {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getEntryId());
       }
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, name_);
       }
       if (visibility_ != null) {
@@ -18206,7 +18206,7 @@ public final class Resources {
       if (source_ != null) {
         output.writeMessage(1, getSource());
       }
-      if (!getCommentBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(comment_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, comment_);
       }
       if (weak_ != false) {
@@ -18231,7 +18231,7 @@ public final class Resources {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getSource());
       }
-      if (!getCommentBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(comment_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, comment_);
       }
       if (weak_ != false) {
@@ -24270,7 +24270,7 @@ public final class Resources {
       if (id_ != 0) {
         output.writeUInt32(2, id_);
       }
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, name_);
       }
       if (private_ != false) {
@@ -24302,7 +24302,7 @@ public final class Resources {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt32Size(2, id_);
       }
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, name_);
       }
       if (private_ != false) {
@@ -25788,7 +25788,7 @@ public final class Resources {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getValueBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(value_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, value_);
       }
       unknownFields.writeTo(output);
@@ -25800,7 +25800,7 @@ public final class Resources {
       if (size != -1) return size;
 
       size = 0;
-      if (!getValueBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(value_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, value_);
       }
       size += unknownFields.getSerializedSize();
@@ -26366,7 +26366,7 @@ public final class Resources {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getValueBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(value_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, value_);
       }
       unknownFields.writeTo(output);
@@ -26378,7 +26378,7 @@ public final class Resources {
       if (size != -1) return size;
 
       size = 0;
-      if (!getValueBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(value_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, value_);
       }
       size += unknownFields.getSerializedSize();
@@ -27174,7 +27174,7 @@ public final class Resources {
       @java.lang.Override
       public void writeTo(com.google.protobuf.CodedOutputStream output)
                           throws java.io.IOException {
-        if (!getTagBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(tag_)) {
           com.google.protobuf.GeneratedMessageV3.writeString(output, 1, tag_);
         }
         if (firstChar_ != 0) {
@@ -27192,7 +27192,7 @@ public final class Resources {
         if (size != -1) return size;
 
         size = 0;
-        if (!getTagBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(tag_)) {
           size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, tag_);
         }
         if (firstChar_ != 0) {
@@ -27839,7 +27839,7 @@ public final class Resources {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getValueBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(value_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, value_);
       }
       for (int i = 0; i < span_.size(); i++) {
@@ -27854,7 +27854,7 @@ public final class Resources {
       if (size != -1) return size;
 
       size = 0;
-      if (!getValueBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(value_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, value_);
       }
       for (int i = 0; i < span_.size(); i++) {
@@ -28931,7 +28931,7 @@ public final class Resources {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getPathBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(path_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, path_);
       }
       if (type_ != com.android.aapt.Resources.FileReference.Type.UNKNOWN.getNumber()) {
@@ -28946,7 +28946,7 @@ public final class Resources {
       if (size != -1) return size;
 
       size = 0;
-      if (!getPathBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(path_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, path_);
       }
       if (type_ != com.android.aapt.Resources.FileReference.Type.UNKNOWN.getNumber()) {
@@ -29612,22 +29612,26 @@ public final class Resources {
 
     /**
      * <code>float dimension_value_deprecated = 4 [deprecated = true];</code>
+     * @deprecated
      * @return Whether the dimensionValueDeprecated field is set.
      */
     @java.lang.Deprecated boolean hasDimensionValueDeprecated();
     /**
      * <code>float dimension_value_deprecated = 4 [deprecated = true];</code>
+     * @deprecated
      * @return The dimensionValueDeprecated.
      */
     @java.lang.Deprecated float getDimensionValueDeprecated();
 
     /**
      * <code>float fraction_value_deprecated = 5 [deprecated = true];</code>
+     * @deprecated
      * @return Whether the fractionValueDeprecated field is set.
      */
     @java.lang.Deprecated boolean hasFractionValueDeprecated();
     /**
      * <code>float fraction_value_deprecated = 5 [deprecated = true];</code>
+     * @deprecated
      * @return The fractionValueDeprecated.
      */
     @java.lang.Deprecated float getFractionValueDeprecated();
@@ -29713,63 +29717,63 @@ public final class Resources {
               break;
             }
             case 29: {
-              oneofValueCase_ = 3;
               oneofValue_ = input.readFloat();
+              oneofValueCase_ = 3;
               break;
             }
             case 37: {
-              oneofValueCase_ = 4;
               oneofValue_ = input.readFloat();
+              oneofValueCase_ = 4;
               break;
             }
             case 45: {
-              oneofValueCase_ = 5;
               oneofValue_ = input.readFloat();
+              oneofValueCase_ = 5;
               break;
             }
             case 48: {
-              oneofValueCase_ = 6;
               oneofValue_ = input.readInt32();
+              oneofValueCase_ = 6;
               break;
             }
             case 56: {
-              oneofValueCase_ = 7;
               oneofValue_ = input.readUInt32();
+              oneofValueCase_ = 7;
               break;
             }
             case 64: {
-              oneofValueCase_ = 8;
               oneofValue_ = input.readBool();
+              oneofValueCase_ = 8;
               break;
             }
             case 72: {
-              oneofValueCase_ = 9;
               oneofValue_ = input.readUInt32();
+              oneofValueCase_ = 9;
               break;
             }
             case 80: {
-              oneofValueCase_ = 10;
               oneofValue_ = input.readUInt32();
+              oneofValueCase_ = 10;
               break;
             }
             case 88: {
-              oneofValueCase_ = 11;
               oneofValue_ = input.readUInt32();
+              oneofValueCase_ = 11;
               break;
             }
             case 96: {
-              oneofValueCase_ = 12;
               oneofValue_ = input.readUInt32();
+              oneofValueCase_ = 12;
               break;
             }
             case 104: {
-              oneofValueCase_ = 13;
               oneofValue_ = input.readUInt32();
+              oneofValueCase_ = 13;
               break;
             }
             case 112: {
-              oneofValueCase_ = 14;
               oneofValue_ = input.readUInt32();
+              oneofValueCase_ = 14;
               break;
             }
             default: {
@@ -30980,6 +30984,7 @@ public final class Resources {
     public static final int DIMENSION_VALUE_DEPRECATED_FIELD_NUMBER = 4;
     /**
      * <code>float dimension_value_deprecated = 4 [deprecated = true];</code>
+     * @deprecated
      * @return Whether the dimensionValueDeprecated field is set.
      */
     @java.lang.Override
@@ -30988,6 +30993,7 @@ public final class Resources {
     }
     /**
      * <code>float dimension_value_deprecated = 4 [deprecated = true];</code>
+     * @deprecated
      * @return The dimensionValueDeprecated.
      */
     @java.lang.Override
@@ -31001,6 +31007,7 @@ public final class Resources {
     public static final int FRACTION_VALUE_DEPRECATED_FIELD_NUMBER = 5;
     /**
      * <code>float fraction_value_deprecated = 5 [deprecated = true];</code>
+     * @deprecated
      * @return Whether the fractionValueDeprecated field is set.
      */
     @java.lang.Override
@@ -31009,6 +31016,7 @@ public final class Resources {
     }
     /**
      * <code>float fraction_value_deprecated = 5 [deprecated = true];</code>
+     * @deprecated
      * @return The fractionValueDeprecated.
      */
     @java.lang.Override
@@ -32382,6 +32390,7 @@ public final class Resources {
 
       /**
        * <code>float dimension_value_deprecated = 4 [deprecated = true];</code>
+       * @deprecated
        * @return Whether the dimensionValueDeprecated field is set.
        */
       @java.lang.Deprecated public boolean hasDimensionValueDeprecated() {
@@ -32389,6 +32398,7 @@ public final class Resources {
       }
       /**
        * <code>float dimension_value_deprecated = 4 [deprecated = true];</code>
+       * @deprecated
        * @return The dimensionValueDeprecated.
        */
       @java.lang.Deprecated public float getDimensionValueDeprecated() {
@@ -32399,6 +32409,7 @@ public final class Resources {
       }
       /**
        * <code>float dimension_value_deprecated = 4 [deprecated = true];</code>
+       * @deprecated
        * @param value The dimensionValueDeprecated to set.
        * @return This builder for chaining.
        */
@@ -32410,6 +32421,7 @@ public final class Resources {
       }
       /**
        * <code>float dimension_value_deprecated = 4 [deprecated = true];</code>
+       * @deprecated
        * @return This builder for chaining.
        */
       @java.lang.Deprecated public Builder clearDimensionValueDeprecated() {
@@ -32423,6 +32435,7 @@ public final class Resources {
 
       /**
        * <code>float fraction_value_deprecated = 5 [deprecated = true];</code>
+       * @deprecated
        * @return Whether the fractionValueDeprecated field is set.
        */
       @java.lang.Deprecated public boolean hasFractionValueDeprecated() {
@@ -32430,6 +32443,7 @@ public final class Resources {
       }
       /**
        * <code>float fraction_value_deprecated = 5 [deprecated = true];</code>
+       * @deprecated
        * @return The fractionValueDeprecated.
        */
       @java.lang.Deprecated public float getFractionValueDeprecated() {
@@ -32440,6 +32454,7 @@ public final class Resources {
       }
       /**
        * <code>float fraction_value_deprecated = 5 [deprecated = true];</code>
+       * @deprecated
        * @param value The fractionValueDeprecated to set.
        * @return This builder for chaining.
        */
@@ -32451,6 +32466,7 @@ public final class Resources {
       }
       /**
        * <code>float fraction_value_deprecated = 5 [deprecated = true];</code>
+       * @deprecated
        * @return This builder for chaining.
        */
       @java.lang.Deprecated public Builder clearFractionValueDeprecated() {
@@ -33405,7 +33421,7 @@ public final class Resources {
         if (source_ != null) {
           output.writeMessage(1, getSource());
         }
-        if (!getCommentBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(comment_)) {
           com.google.protobuf.GeneratedMessageV3.writeString(output, 2, comment_);
         }
         if (name_ != null) {
@@ -33430,7 +33446,7 @@ public final class Resources {
           size += com.google.protobuf.CodedOutputStream
             .computeMessageSize(1, getSource());
         }
-        if (!getCommentBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(comment_)) {
           size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, comment_);
         }
         if (name_ != null) {
@@ -36003,7 +36019,7 @@ public final class Resources {
         if (source_ != null) {
           output.writeMessage(1, getSource());
         }
-        if (!getCommentBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(comment_)) {
           com.google.protobuf.GeneratedMessageV3.writeString(output, 2, comment_);
         }
         if (key_ != null) {
@@ -36025,7 +36041,7 @@ public final class Resources {
           size += com.google.protobuf.CodedOutputStream
             .computeMessageSize(1, getSource());
         }
-        if (!getCommentBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(comment_)) {
           size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, comment_);
         }
         if (key_ != null) {
@@ -38686,7 +38702,7 @@ public final class Resources {
         if (source_ != null) {
           output.writeMessage(1, getSource());
         }
-        if (!getCommentBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(comment_)) {
           com.google.protobuf.GeneratedMessageV3.writeString(output, 2, comment_);
         }
         if (attr_ != null) {
@@ -38705,7 +38721,7 @@ public final class Resources {
           size += com.google.protobuf.CodedOutputStream
             .computeMessageSize(1, getSource());
         }
-        if (!getCommentBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(comment_)) {
           size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, comment_);
         }
         if (attr_ != null) {
@@ -40738,7 +40754,7 @@ public final class Resources {
         if (source_ != null) {
           output.writeMessage(1, getSource());
         }
-        if (!getCommentBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(comment_)) {
           com.google.protobuf.GeneratedMessageV3.writeString(output, 2, comment_);
         }
         if (item_ != null) {
@@ -40757,7 +40773,7 @@ public final class Resources {
           size += com.google.protobuf.CodedOutputStream
             .computeMessageSize(1, getSource());
         }
-        if (!getCommentBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(comment_)) {
           size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, comment_);
         }
         if (item_ != null) {
@@ -42990,7 +43006,7 @@ public final class Resources {
         if (source_ != null) {
           output.writeMessage(1, getSource());
         }
-        if (!getCommentBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(comment_)) {
           com.google.protobuf.GeneratedMessageV3.writeString(output, 2, comment_);
         }
         if (arity_ != com.android.aapt.Resources.Plural.Arity.ZERO.getNumber()) {
@@ -43012,7 +43028,7 @@ public final class Resources {
           size += com.google.protobuf.CodedOutputStream
             .computeMessageSize(1, getSource());
         }
-        if (!getCommentBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(comment_)) {
           size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, comment_);
         }
         if (arity_ != com.android.aapt.Resources.Plural.Arity.ZERO.getNumber()) {
@@ -46445,10 +46461,10 @@ public final class Resources {
       for (int i = 0; i < namespaceDeclaration_.size(); i++) {
         output.writeMessage(1, namespaceDeclaration_.get(i));
       }
-      if (!getNamespaceUriBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(namespaceUri_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, namespaceUri_);
       }
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, name_);
       }
       for (int i = 0; i < attribute_.size(); i++) {
@@ -46470,10 +46486,10 @@ public final class Resources {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, namespaceDeclaration_.get(i));
       }
-      if (!getNamespaceUriBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(namespaceUri_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, namespaceUri_);
       }
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, name_);
       }
       for (int i = 0; i < attribute_.size(); i++) {
@@ -48389,10 +48405,10 @@ public final class Resources {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getPrefixBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(prefix_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, prefix_);
       }
-      if (!getUriBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(uri_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, uri_);
       }
       if (source_ != null) {
@@ -48407,10 +48423,10 @@ public final class Resources {
       if (size != -1) return size;
 
       size = 0;
-      if (!getPrefixBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(prefix_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, prefix_);
       }
-      if (!getUriBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(uri_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, uri_);
       }
       if (source_ != null) {
@@ -49543,13 +49559,13 @@ public final class Resources {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getNamespaceUriBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(namespaceUri_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, namespaceUri_);
       }
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, name_);
       }
-      if (!getValueBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(value_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, value_);
       }
       if (source_ != null) {
@@ -49570,13 +49586,13 @@ public final class Resources {
       if (size != -1) return size;
 
       size = 0;
-      if (!getNamespaceUriBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(namespaceUri_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, namespaceUri_);
       }
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, name_);
       }
-      if (!getValueBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(value_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, value_);
       }
       if (source_ != null) {
@@ -50994,7 +51010,7 @@ public final class Resources {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getRawStringBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(rawString_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, rawString_);
       }
       if (styleString_ != null) {
@@ -51018,7 +51034,7 @@ public final class Resources {
       if (size != -1) return size;
 
       size = 0;
-      if (!getRawStringBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(rawString_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, rawString_);
       }
       if (styleString_ != null) {
@@ -52531,10 +52547,10 @@ public final class Resources {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getPrefixBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(prefix_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, prefix_);
       }
-      if (!getPackageNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(packageName_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, packageName_);
       }
       if (isPrivate_ != false) {
@@ -52549,10 +52565,10 @@ public final class Resources {
       if (size != -1) return size;
 
       size = 0;
-      if (!getPrefixBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(prefix_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, prefix_);
       }
-      if (!getPackageNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(packageName_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, packageName_);
       }
       if (isPrivate_ != false) {
@@ -53423,7 +53439,7 @@ public final class Resources {
       @java.lang.Override
       public void writeTo(com.google.protobuf.CodedOutputStream output)
                           throws java.io.IOException {
-        if (!getNameBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
           com.google.protobuf.GeneratedMessageV3.writeString(output, 1, name_);
         }
         if (startIndex_ != 0) {
@@ -53441,7 +53457,7 @@ public final class Resources {
         if (size != -1) return size;
 
         size = 0;
-        if (!getNameBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
           size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, name_);
         }
         if (startIndex_ != 0) {
@@ -54027,7 +54043,7 @@ public final class Resources {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getStrBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(str_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, str_);
       }
       for (int i = 0; i < spans_.size(); i++) {
@@ -54042,7 +54058,7 @@ public final class Resources {
       if (size != -1) return size;
 
       size = 0;
-      if (!getStrBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(str_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, str_);
       }
       for (int i = 0; i < spans_.size(); i++) {

@@ -370,6 +370,19 @@ private static final long serialVersionUID = 0L;
             bitField0_ |= 0x01000000;
             break;
           }
+          case 210: {
+            com.google.wireless.android.sdk.stats.ResolveComposeTracingCodeLocationMetadata.Builder subBuilder = null;
+            if (((bitField0_ & 0x02000000) != 0)) {
+              subBuilder = resolveComposeTracingCodeLocationMetadata_.toBuilder();
+            }
+            resolveComposeTracingCodeLocationMetadata_ = input.readMessage(com.google.wireless.android.sdk.stats.ResolveComposeTracingCodeLocationMetadata.PARSER, extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(resolveComposeTracingCodeLocationMetadata_);
+              resolveComposeTracingCodeLocationMetadata_ = subBuilder.buildPartial();
+            }
+            bitField0_ |= 0x02000000;
+            break;
+          }
           default: {
             if (!parseUnknownField(
                 input, unknownFields, extensionRegistry, tag)) {
@@ -920,6 +933,15 @@ private static final long serialVersionUID = 0L;
     LOADING(117),
     /**
      * <pre>
+     * Triggered when a Compose Tracing slice is engaged in an to attempt to
+     * navigate to code
+     * </pre>
+     *
+     * <code>RESOLVE_COMPOSE_TRACING_CODE_LOCATION = 118;</code>
+     */
+    RESOLVE_COMPOSE_TRACING_CODE_LOCATION(118),
+    /**
+     * <pre>
      * Deprecated since 3.0.0.5. Use TRACE_CPU.
      * </pre>
      *
@@ -1364,6 +1386,15 @@ private static final long serialVersionUID = 0L;
     public static final int LOADING_VALUE = 117;
     /**
      * <pre>
+     * Triggered when a Compose Tracing slice is engaged in an to attempt to
+     * navigate to code
+     * </pre>
+     *
+     * <code>RESOLVE_COMPOSE_TRACING_CODE_LOCATION = 118;</code>
+     */
+    public static final int RESOLVE_COMPOSE_TRACING_CODE_LOCATION_VALUE = 118;
+    /**
+     * <pre>
      * Deprecated since 3.0.0.5. Use TRACE_CPU.
      * </pre>
      *
@@ -1677,6 +1708,7 @@ private static final long serialVersionUID = 0L;
         case 115: return SELECT_BOX;
         case 116: return TRACK_GROUP_ACTION;
         case 117: return LOADING;
+        case 118: return RESOLVE_COMPOSE_TRACING_CODE_LOCATION;
         case 201: return TRACE_SAMPLED;
         case 202: return TRACE_INSTRUMENTED;
         case 204: return SELECT_THREAD;
@@ -3630,6 +3662,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>optional .android_studio.CpuProfilingConfig cpu_config = 3 [deprecated = true];</code>
+   * @deprecated
    * @return Whether the cpuConfig field is set.
    */
   @java.lang.Override
@@ -3643,6 +3676,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>optional .android_studio.CpuProfilingConfig cpu_config = 3 [deprecated = true];</code>
+   * @deprecated
    * @return The cpuConfig.
    */
   @java.lang.Override
@@ -4476,6 +4510,44 @@ private static final long serialVersionUID = 0L;
     return perfettoSdkHandshakeMetadata_ == null ? com.google.wireless.android.sdk.stats.PerfettoSdkHandshakeMetadata.getDefaultInstance() : perfettoSdkHandshakeMetadata_;
   }
 
+  public static final int RESOLVE_COMPOSE_TRACING_CODE_LOCATION_METADATA_FIELD_NUMBER = 26;
+  private com.google.wireless.android.sdk.stats.ResolveComposeTracingCodeLocationMetadata resolveComposeTracingCodeLocationMetadata_;
+  /**
+   * <pre>
+   * Set if |type| is |RESOLVE_COMPOSE_TRACING_CODE_LOCATION|
+   * </pre>
+   *
+   * <code>optional .android_studio.ResolveComposeTracingCodeLocationMetadata resolve_compose_tracing_code_location_metadata = 26;</code>
+   * @return Whether the resolveComposeTracingCodeLocationMetadata field is set.
+   */
+  @java.lang.Override
+  public boolean hasResolveComposeTracingCodeLocationMetadata() {
+    return ((bitField0_ & 0x02000000) != 0);
+  }
+  /**
+   * <pre>
+   * Set if |type| is |RESOLVE_COMPOSE_TRACING_CODE_LOCATION|
+   * </pre>
+   *
+   * <code>optional .android_studio.ResolveComposeTracingCodeLocationMetadata resolve_compose_tracing_code_location_metadata = 26;</code>
+   * @return The resolveComposeTracingCodeLocationMetadata.
+   */
+  @java.lang.Override
+  public com.google.wireless.android.sdk.stats.ResolveComposeTracingCodeLocationMetadata getResolveComposeTracingCodeLocationMetadata() {
+    return resolveComposeTracingCodeLocationMetadata_ == null ? com.google.wireless.android.sdk.stats.ResolveComposeTracingCodeLocationMetadata.getDefaultInstance() : resolveComposeTracingCodeLocationMetadata_;
+  }
+  /**
+   * <pre>
+   * Set if |type| is |RESOLVE_COMPOSE_TRACING_CODE_LOCATION|
+   * </pre>
+   *
+   * <code>optional .android_studio.ResolveComposeTracingCodeLocationMetadata resolve_compose_tracing_code_location_metadata = 26;</code>
+   */
+  @java.lang.Override
+  public com.google.wireless.android.sdk.stats.ResolveComposeTracingCodeLocationMetadataOrBuilder getResolveComposeTracingCodeLocationMetadataOrBuilder() {
+    return resolveComposeTracingCodeLocationMetadata_ == null ? com.google.wireless.android.sdk.stats.ResolveComposeTracingCodeLocationMetadata.getDefaultInstance() : resolveComposeTracingCodeLocationMetadata_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -4564,6 +4636,9 @@ private static final long serialVersionUID = 0L;
     }
     if (((bitField0_ & 0x01000000) != 0)) {
       output.writeMessage(25, getPerfettoSdkHandshakeMetadata());
+    }
+    if (((bitField0_ & 0x02000000) != 0)) {
+      output.writeMessage(26, getResolveComposeTracingCodeLocationMetadata());
     }
     unknownFields.writeTo(output);
   }
@@ -4673,6 +4748,10 @@ private static final long serialVersionUID = 0L;
     if (((bitField0_ & 0x01000000) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(25, getPerfettoSdkHandshakeMetadata());
+    }
+    if (((bitField0_ & 0x02000000) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(26, getResolveComposeTracingCodeLocationMetadata());
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -4811,6 +4890,11 @@ private static final long serialVersionUID = 0L;
       if (!getPerfettoSdkHandshakeMetadata()
           .equals(other.getPerfettoSdkHandshakeMetadata())) return false;
     }
+    if (hasResolveComposeTracingCodeLocationMetadata() != other.hasResolveComposeTracingCodeLocationMetadata()) return false;
+    if (hasResolveComposeTracingCodeLocationMetadata()) {
+      if (!getResolveComposeTracingCodeLocationMetadata()
+          .equals(other.getResolveComposeTracingCodeLocationMetadata())) return false;
+    }
     if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
@@ -4921,6 +5005,10 @@ private static final long serialVersionUID = 0L;
     if (hasPerfettoSdkHandshakeMetadata()) {
       hash = (37 * hash) + PERFETTO_SDK_HANDSHAKE_METADATA_FIELD_NUMBER;
       hash = (53 * hash) + getPerfettoSdkHandshakeMetadata().hashCode();
+    }
+    if (hasResolveComposeTracingCodeLocationMetadata()) {
+      hash = (37 * hash) + RESOLVE_COMPOSE_TRACING_CODE_LOCATION_METADATA_FIELD_NUMBER;
+      hash = (53 * hash) + getResolveComposeTracingCodeLocationMetadata().hashCode();
     }
     hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
@@ -5075,6 +5163,7 @@ private static final long serialVersionUID = 0L;
         getLoadingFieldBuilder();
         getRunWithProfilingMetadataFieldBuilder();
         getPerfettoSdkHandshakeMetadataFieldBuilder();
+        getResolveComposeTracingCodeLocationMetadataFieldBuilder();
       }
     }
     @java.lang.Override
@@ -5214,6 +5303,12 @@ private static final long serialVersionUID = 0L;
         perfettoSdkHandshakeMetadataBuilder_.clear();
       }
       bitField0_ = (bitField0_ & ~0x01000000);
+      if (resolveComposeTracingCodeLocationMetadataBuilder_ == null) {
+        resolveComposeTracingCodeLocationMetadata_ = null;
+      } else {
+        resolveComposeTracingCodeLocationMetadataBuilder_.clear();
+      }
+      bitField0_ = (bitField0_ & ~0x02000000);
       return this;
     }
 
@@ -5426,6 +5521,14 @@ private static final long serialVersionUID = 0L;
         }
         to_bitField0_ |= 0x01000000;
       }
+      if (((from_bitField0_ & 0x02000000) != 0)) {
+        if (resolveComposeTracingCodeLocationMetadataBuilder_ == null) {
+          result.resolveComposeTracingCodeLocationMetadata_ = resolveComposeTracingCodeLocationMetadata_;
+        } else {
+          result.resolveComposeTracingCodeLocationMetadata_ = resolveComposeTracingCodeLocationMetadataBuilder_.build();
+        }
+        to_bitField0_ |= 0x02000000;
+      }
       result.bitField0_ = to_bitField0_;
       onBuilt();
       return result;
@@ -5549,6 +5652,9 @@ private static final long serialVersionUID = 0L;
       }
       if (other.hasPerfettoSdkHandshakeMetadata()) {
         mergePerfettoSdkHandshakeMetadata(other.getPerfettoSdkHandshakeMetadata());
+      }
+      if (other.hasResolveComposeTracingCodeLocationMetadata()) {
+        mergeResolveComposeTracingCodeLocationMetadata(other.getResolveComposeTracingCodeLocationMetadata());
       }
       this.mergeUnknownFields(other.unknownFields);
       onChanged();
@@ -5708,6 +5814,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>optional .android_studio.CpuProfilingConfig cpu_config = 3 [deprecated = true];</code>
+     * @deprecated
      * @return Whether the cpuConfig field is set.
      */
     @java.lang.Deprecated public boolean hasCpuConfig() {
@@ -5720,6 +5827,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>optional .android_studio.CpuProfilingConfig cpu_config = 3 [deprecated = true];</code>
+     * @deprecated
      * @return The cpuConfig.
      */
     @java.lang.Deprecated public com.google.wireless.android.sdk.stats.CpuProfilingConfig getCpuConfig() {
@@ -9095,6 +9203,162 @@ private static final long serialVersionUID = 0L;
         perfettoSdkHandshakeMetadata_ = null;
       }
       return perfettoSdkHandshakeMetadataBuilder_;
+    }
+
+    private com.google.wireless.android.sdk.stats.ResolveComposeTracingCodeLocationMetadata resolveComposeTracingCodeLocationMetadata_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.ResolveComposeTracingCodeLocationMetadata, com.google.wireless.android.sdk.stats.ResolveComposeTracingCodeLocationMetadata.Builder, com.google.wireless.android.sdk.stats.ResolveComposeTracingCodeLocationMetadataOrBuilder> resolveComposeTracingCodeLocationMetadataBuilder_;
+    /**
+     * <pre>
+     * Set if |type| is |RESOLVE_COMPOSE_TRACING_CODE_LOCATION|
+     * </pre>
+     *
+     * <code>optional .android_studio.ResolveComposeTracingCodeLocationMetadata resolve_compose_tracing_code_location_metadata = 26;</code>
+     * @return Whether the resolveComposeTracingCodeLocationMetadata field is set.
+     */
+    public boolean hasResolveComposeTracingCodeLocationMetadata() {
+      return ((bitField0_ & 0x02000000) != 0);
+    }
+    /**
+     * <pre>
+     * Set if |type| is |RESOLVE_COMPOSE_TRACING_CODE_LOCATION|
+     * </pre>
+     *
+     * <code>optional .android_studio.ResolveComposeTracingCodeLocationMetadata resolve_compose_tracing_code_location_metadata = 26;</code>
+     * @return The resolveComposeTracingCodeLocationMetadata.
+     */
+    public com.google.wireless.android.sdk.stats.ResolveComposeTracingCodeLocationMetadata getResolveComposeTracingCodeLocationMetadata() {
+      if (resolveComposeTracingCodeLocationMetadataBuilder_ == null) {
+        return resolveComposeTracingCodeLocationMetadata_ == null ? com.google.wireless.android.sdk.stats.ResolveComposeTracingCodeLocationMetadata.getDefaultInstance() : resolveComposeTracingCodeLocationMetadata_;
+      } else {
+        return resolveComposeTracingCodeLocationMetadataBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * Set if |type| is |RESOLVE_COMPOSE_TRACING_CODE_LOCATION|
+     * </pre>
+     *
+     * <code>optional .android_studio.ResolveComposeTracingCodeLocationMetadata resolve_compose_tracing_code_location_metadata = 26;</code>
+     */
+    public Builder setResolveComposeTracingCodeLocationMetadata(com.google.wireless.android.sdk.stats.ResolveComposeTracingCodeLocationMetadata value) {
+      if (resolveComposeTracingCodeLocationMetadataBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        resolveComposeTracingCodeLocationMetadata_ = value;
+        onChanged();
+      } else {
+        resolveComposeTracingCodeLocationMetadataBuilder_.setMessage(value);
+      }
+      bitField0_ |= 0x02000000;
+      return this;
+    }
+    /**
+     * <pre>
+     * Set if |type| is |RESOLVE_COMPOSE_TRACING_CODE_LOCATION|
+     * </pre>
+     *
+     * <code>optional .android_studio.ResolveComposeTracingCodeLocationMetadata resolve_compose_tracing_code_location_metadata = 26;</code>
+     */
+    public Builder setResolveComposeTracingCodeLocationMetadata(
+        com.google.wireless.android.sdk.stats.ResolveComposeTracingCodeLocationMetadata.Builder builderForValue) {
+      if (resolveComposeTracingCodeLocationMetadataBuilder_ == null) {
+        resolveComposeTracingCodeLocationMetadata_ = builderForValue.build();
+        onChanged();
+      } else {
+        resolveComposeTracingCodeLocationMetadataBuilder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x02000000;
+      return this;
+    }
+    /**
+     * <pre>
+     * Set if |type| is |RESOLVE_COMPOSE_TRACING_CODE_LOCATION|
+     * </pre>
+     *
+     * <code>optional .android_studio.ResolveComposeTracingCodeLocationMetadata resolve_compose_tracing_code_location_metadata = 26;</code>
+     */
+    public Builder mergeResolveComposeTracingCodeLocationMetadata(com.google.wireless.android.sdk.stats.ResolveComposeTracingCodeLocationMetadata value) {
+      if (resolveComposeTracingCodeLocationMetadataBuilder_ == null) {
+        if (((bitField0_ & 0x02000000) != 0) &&
+            resolveComposeTracingCodeLocationMetadata_ != null &&
+            resolveComposeTracingCodeLocationMetadata_ != com.google.wireless.android.sdk.stats.ResolveComposeTracingCodeLocationMetadata.getDefaultInstance()) {
+          resolveComposeTracingCodeLocationMetadata_ =
+            com.google.wireless.android.sdk.stats.ResolveComposeTracingCodeLocationMetadata.newBuilder(resolveComposeTracingCodeLocationMetadata_).mergeFrom(value).buildPartial();
+        } else {
+          resolveComposeTracingCodeLocationMetadata_ = value;
+        }
+        onChanged();
+      } else {
+        resolveComposeTracingCodeLocationMetadataBuilder_.mergeFrom(value);
+      }
+      bitField0_ |= 0x02000000;
+      return this;
+    }
+    /**
+     * <pre>
+     * Set if |type| is |RESOLVE_COMPOSE_TRACING_CODE_LOCATION|
+     * </pre>
+     *
+     * <code>optional .android_studio.ResolveComposeTracingCodeLocationMetadata resolve_compose_tracing_code_location_metadata = 26;</code>
+     */
+    public Builder clearResolveComposeTracingCodeLocationMetadata() {
+      if (resolveComposeTracingCodeLocationMetadataBuilder_ == null) {
+        resolveComposeTracingCodeLocationMetadata_ = null;
+        onChanged();
+      } else {
+        resolveComposeTracingCodeLocationMetadataBuilder_.clear();
+      }
+      bitField0_ = (bitField0_ & ~0x02000000);
+      return this;
+    }
+    /**
+     * <pre>
+     * Set if |type| is |RESOLVE_COMPOSE_TRACING_CODE_LOCATION|
+     * </pre>
+     *
+     * <code>optional .android_studio.ResolveComposeTracingCodeLocationMetadata resolve_compose_tracing_code_location_metadata = 26;</code>
+     */
+    public com.google.wireless.android.sdk.stats.ResolveComposeTracingCodeLocationMetadata.Builder getResolveComposeTracingCodeLocationMetadataBuilder() {
+      bitField0_ |= 0x02000000;
+      onChanged();
+      return getResolveComposeTracingCodeLocationMetadataFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * Set if |type| is |RESOLVE_COMPOSE_TRACING_CODE_LOCATION|
+     * </pre>
+     *
+     * <code>optional .android_studio.ResolveComposeTracingCodeLocationMetadata resolve_compose_tracing_code_location_metadata = 26;</code>
+     */
+    public com.google.wireless.android.sdk.stats.ResolveComposeTracingCodeLocationMetadataOrBuilder getResolveComposeTracingCodeLocationMetadataOrBuilder() {
+      if (resolveComposeTracingCodeLocationMetadataBuilder_ != null) {
+        return resolveComposeTracingCodeLocationMetadataBuilder_.getMessageOrBuilder();
+      } else {
+        return resolveComposeTracingCodeLocationMetadata_ == null ?
+            com.google.wireless.android.sdk.stats.ResolveComposeTracingCodeLocationMetadata.getDefaultInstance() : resolveComposeTracingCodeLocationMetadata_;
+      }
+    }
+    /**
+     * <pre>
+     * Set if |type| is |RESOLVE_COMPOSE_TRACING_CODE_LOCATION|
+     * </pre>
+     *
+     * <code>optional .android_studio.ResolveComposeTracingCodeLocationMetadata resolve_compose_tracing_code_location_metadata = 26;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.ResolveComposeTracingCodeLocationMetadata, com.google.wireless.android.sdk.stats.ResolveComposeTracingCodeLocationMetadata.Builder, com.google.wireless.android.sdk.stats.ResolveComposeTracingCodeLocationMetadataOrBuilder> 
+        getResolveComposeTracingCodeLocationMetadataFieldBuilder() {
+      if (resolveComposeTracingCodeLocationMetadataBuilder_ == null) {
+        resolveComposeTracingCodeLocationMetadataBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.wireless.android.sdk.stats.ResolveComposeTracingCodeLocationMetadata, com.google.wireless.android.sdk.stats.ResolveComposeTracingCodeLocationMetadata.Builder, com.google.wireless.android.sdk.stats.ResolveComposeTracingCodeLocationMetadataOrBuilder>(
+                getResolveComposeTracingCodeLocationMetadata(),
+                getParentForChildren(),
+                isClean());
+        resolveComposeTracingCodeLocationMetadata_ = null;
+      }
+      return resolveComposeTracingCodeLocationMetadataBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

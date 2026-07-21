@@ -15561,6 +15561,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>optional .android_studio.AndroidStudioEvent.MonitorType monitor_type = 5 [deprecated = true];</code>
+   * @deprecated
    * @return Whether the monitorType field is set.
    */
   @java.lang.Override @java.lang.Deprecated public boolean hasMonitorType() {
@@ -15573,6 +15574,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>optional .android_studio.AndroidStudioEvent.MonitorType monitor_type = 5 [deprecated = true];</code>
+   * @deprecated
    * @return The monitorType.
    */
   @java.lang.Override @java.lang.Deprecated public com.google.wireless.android.sdk.stats.AndroidStudioEvent.MonitorType getMonitorType() {
@@ -15590,6 +15592,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>optional bool monitor_paused = 6 [deprecated = true];</code>
+   * @deprecated
    * @return Whether the monitorPaused field is set.
    */
   @java.lang.Override
@@ -15603,6 +15606,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>optional bool monitor_paused = 6 [deprecated = true];</code>
+   * @deprecated
    * @return The monitorPaused.
    */
   @java.lang.Override
@@ -15619,6 +15623,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>optional .android_studio.AndroidStudioEvent.ProfilerCaptureType profiler_capture_type = 7 [deprecated = true];</code>
+   * @deprecated
    * @return Whether the profilerCaptureType field is set.
    */
   @java.lang.Override @java.lang.Deprecated public boolean hasProfilerCaptureType() {
@@ -15631,6 +15636,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>optional .android_studio.AndroidStudioEvent.ProfilerCaptureType profiler_capture_type = 7 [deprecated = true];</code>
+   * @deprecated
    * @return The profilerCaptureType.
    */
   @java.lang.Override @java.lang.Deprecated public com.google.wireless.android.sdk.stats.AndroidStudioEvent.ProfilerCaptureType getProfilerCaptureType() {
@@ -15735,6 +15741,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>optional .android_studio.AndroidStudioEvent.RunConfigurationType run_configuration_type = 10 [deprecated = true];</code>
+   * @deprecated
    * @return Whether the runConfigurationType field is set.
    */
   @java.lang.Override @java.lang.Deprecated public boolean hasRunConfigurationType() {
@@ -15747,6 +15754,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>optional .android_studio.AndroidStudioEvent.RunConfigurationType run_configuration_type = 10 [deprecated = true];</code>
+   * @deprecated
    * @return The runConfigurationType.
    */
   @java.lang.Override @java.lang.Deprecated public com.google.wireless.android.sdk.stats.AndroidStudioEvent.RunConfigurationType getRunConfigurationType() {
@@ -15764,6 +15772,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>optional .android_studio.AndroidStudioEvent.DebuggerType debugger_type = 11 [deprecated = true];</code>
+   * @deprecated
    * @return Whether the debuggerType field is set.
    */
   @java.lang.Override @java.lang.Deprecated public boolean hasDebuggerType() {
@@ -15776,6 +15785,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>optional .android_studio.AndroidStudioEvent.DebuggerType debugger_type = 11 [deprecated = true];</code>
+   * @deprecated
    * @return The debuggerType.
    */
   @java.lang.Override @java.lang.Deprecated public com.google.wireless.android.sdk.stats.AndroidStudioEvent.DebuggerType getDebuggerType() {
@@ -16363,6 +16373,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>optional .android_studio.EmulatorUiEvent emulator_ui_event = 25 [deprecated = true];</code>
+   * @deprecated
    * @return Whether the emulatorUiEvent field is set.
    */
   @java.lang.Override
@@ -16376,6 +16387,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>optional .android_studio.EmulatorUiEvent emulator_ui_event = 25 [deprecated = true];</code>
+   * @deprecated
    * @return The emulatorUiEvent.
    */
   @java.lang.Override
@@ -17766,6 +17778,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>optional .android_studio.WhatsNewAssistantEvent whats_new_assistant_event = 60 [deprecated = true];</code>
+   * @deprecated
    * @return Whether the whatsNewAssistantEvent field is set.
    */
   @java.lang.Override
@@ -17779,6 +17792,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>optional .android_studio.WhatsNewAssistantEvent whats_new_assistant_event = 60 [deprecated = true];</code>
+   * @deprecated
    * @return The whatsNewAssistantEvent.
    */
   @java.lang.Override
@@ -17989,6 +18003,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>optional .android_studio.StudioRunEvent studio_run_event = 65 [deprecated = true];</code>
+   * @deprecated
    * @return Whether the studioRunEvent field is set.
    */
   @java.lang.Override
@@ -18001,6 +18016,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>optional .android_studio.StudioRunEvent studio_run_event = 65 [deprecated = true];</code>
+   * @deprecated
    * @return The studioRunEvent.
    */
   @java.lang.Override
@@ -20018,6 +20034,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>optional .android_studio.AutoImportEvent auto_import_event = 117 [deprecated = true];</code>
+   * @deprecated
    * @return Whether the autoImportEvent field is set.
    */
   @java.lang.Override
@@ -20031,6 +20048,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>optional .android_studio.AutoImportEvent auto_import_event = 117 [deprecated = true];</code>
+   * @deprecated
    * @return The autoImportEvent.
    */
   @java.lang.Override
@@ -27257,6 +27275,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>optional .android_studio.AndroidStudioEvent.MonitorType monitor_type = 5 [deprecated = true];</code>
+     * @deprecated
      * @return Whether the monitorType field is set.
      */
     @java.lang.Override @java.lang.Deprecated public boolean hasMonitorType() {
@@ -27269,6 +27288,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>optional .android_studio.AndroidStudioEvent.MonitorType monitor_type = 5 [deprecated = true];</code>
+     * @deprecated
      * @return The monitorType.
      */
     @java.lang.Override
@@ -27284,6 +27304,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>optional .android_studio.AndroidStudioEvent.MonitorType monitor_type = 5 [deprecated = true];</code>
+     * @deprecated
      * @param value The monitorType to set.
      * @return This builder for chaining.
      */
@@ -27303,6 +27324,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>optional .android_studio.AndroidStudioEvent.MonitorType monitor_type = 5 [deprecated = true];</code>
+     * @deprecated
      * @return This builder for chaining.
      */
     @java.lang.Deprecated public Builder clearMonitorType() {
@@ -27320,6 +27342,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>optional bool monitor_paused = 6 [deprecated = true];</code>
+     * @deprecated
      * @return Whether the monitorPaused field is set.
      */
     @java.lang.Override
@@ -27333,6 +27356,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>optional bool monitor_paused = 6 [deprecated = true];</code>
+     * @deprecated
      * @return The monitorPaused.
      */
     @java.lang.Override
@@ -27346,6 +27370,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>optional bool monitor_paused = 6 [deprecated = true];</code>
+     * @deprecated
      * @param value The monitorPaused to set.
      * @return This builder for chaining.
      */
@@ -27362,6 +27387,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>optional bool monitor_paused = 6 [deprecated = true];</code>
+     * @deprecated
      * @return This builder for chaining.
      */
     @java.lang.Deprecated public Builder clearMonitorPaused() {
@@ -27379,6 +27405,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>optional .android_studio.AndroidStudioEvent.ProfilerCaptureType profiler_capture_type = 7 [deprecated = true];</code>
+     * @deprecated
      * @return Whether the profilerCaptureType field is set.
      */
     @java.lang.Override @java.lang.Deprecated public boolean hasProfilerCaptureType() {
@@ -27391,6 +27418,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>optional .android_studio.AndroidStudioEvent.ProfilerCaptureType profiler_capture_type = 7 [deprecated = true];</code>
+     * @deprecated
      * @return The profilerCaptureType.
      */
     @java.lang.Override
@@ -27406,6 +27434,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>optional .android_studio.AndroidStudioEvent.ProfilerCaptureType profiler_capture_type = 7 [deprecated = true];</code>
+     * @deprecated
      * @param value The profilerCaptureType to set.
      * @return This builder for chaining.
      */
@@ -27425,6 +27454,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>optional .android_studio.AndroidStudioEvent.ProfilerCaptureType profiler_capture_type = 7 [deprecated = true];</code>
+     * @deprecated
      * @return This builder for chaining.
      */
     @java.lang.Deprecated public Builder clearProfilerCaptureType() {
@@ -27605,6 +27635,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>optional .android_studio.AndroidStudioEvent.RunConfigurationType run_configuration_type = 10 [deprecated = true];</code>
+     * @deprecated
      * @return Whether the runConfigurationType field is set.
      */
     @java.lang.Override @java.lang.Deprecated public boolean hasRunConfigurationType() {
@@ -27617,6 +27648,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>optional .android_studio.AndroidStudioEvent.RunConfigurationType run_configuration_type = 10 [deprecated = true];</code>
+     * @deprecated
      * @return The runConfigurationType.
      */
     @java.lang.Override
@@ -27632,6 +27664,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>optional .android_studio.AndroidStudioEvent.RunConfigurationType run_configuration_type = 10 [deprecated = true];</code>
+     * @deprecated
      * @param value The runConfigurationType to set.
      * @return This builder for chaining.
      */
@@ -27651,6 +27684,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>optional .android_studio.AndroidStudioEvent.RunConfigurationType run_configuration_type = 10 [deprecated = true];</code>
+     * @deprecated
      * @return This builder for chaining.
      */
     @java.lang.Deprecated public Builder clearRunConfigurationType() {
@@ -27668,6 +27702,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>optional .android_studio.AndroidStudioEvent.DebuggerType debugger_type = 11 [deprecated = true];</code>
+     * @deprecated
      * @return Whether the debuggerType field is set.
      */
     @java.lang.Override @java.lang.Deprecated public boolean hasDebuggerType() {
@@ -27680,6 +27715,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>optional .android_studio.AndroidStudioEvent.DebuggerType debugger_type = 11 [deprecated = true];</code>
+     * @deprecated
      * @return The debuggerType.
      */
     @java.lang.Override
@@ -27695,6 +27731,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>optional .android_studio.AndroidStudioEvent.DebuggerType debugger_type = 11 [deprecated = true];</code>
+     * @deprecated
      * @param value The debuggerType to set.
      * @return This builder for chaining.
      */
@@ -27714,6 +27751,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>optional .android_studio.AndroidStudioEvent.DebuggerType debugger_type = 11 [deprecated = true];</code>
+     * @deprecated
      * @return This builder for chaining.
      */
     @java.lang.Deprecated public Builder clearDebuggerType() {
@@ -29445,6 +29483,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>optional .android_studio.EmulatorUiEvent emulator_ui_event = 25 [deprecated = true];</code>
+     * @deprecated
      * @return Whether the emulatorUiEvent field is set.
      */
     @java.lang.Deprecated public boolean hasEmulatorUiEvent() {
@@ -29457,6 +29496,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>optional .android_studio.EmulatorUiEvent emulator_ui_event = 25 [deprecated = true];</code>
+     * @deprecated
      * @return The emulatorUiEvent.
      */
     @java.lang.Deprecated public com.google.wireless.android.sdk.stats.EmulatorUiEvent getEmulatorUiEvent() {
@@ -34985,6 +35025,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>optional .android_studio.WhatsNewAssistantEvent whats_new_assistant_event = 60 [deprecated = true];</code>
+     * @deprecated
      * @return Whether the whatsNewAssistantEvent field is set.
      */
     @java.lang.Deprecated public boolean hasWhatsNewAssistantEvent() {
@@ -34997,6 +35038,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>optional .android_studio.WhatsNewAssistantEvent whats_new_assistant_event = 60 [deprecated = true];</code>
+     * @deprecated
      * @return The whatsNewAssistantEvent.
      */
     @java.lang.Deprecated public com.google.wireless.android.sdk.stats.WhatsNewAssistantEvent getWhatsNewAssistantEvent() {
@@ -35743,6 +35785,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>optional .android_studio.StudioRunEvent studio_run_event = 65 [deprecated = true];</code>
+     * @deprecated
      * @return Whether the studioRunEvent field is set.
      */
     @java.lang.Deprecated public boolean hasStudioRunEvent() {
@@ -35754,6 +35797,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>optional .android_studio.StudioRunEvent studio_run_event = 65 [deprecated = true];</code>
+     * @deprecated
      * @return The studioRunEvent.
      */
     @java.lang.Deprecated public com.google.wireless.android.sdk.stats.StudioRunEvent getStudioRunEvent() {
@@ -44083,6 +44127,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>optional .android_studio.AutoImportEvent auto_import_event = 117 [deprecated = true];</code>
+     * @deprecated
      * @return Whether the autoImportEvent field is set.
      */
     @java.lang.Deprecated public boolean hasAutoImportEvent() {
@@ -44095,6 +44140,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>optional .android_studio.AutoImportEvent auto_import_event = 117 [deprecated = true];</code>
+     * @deprecated
      * @return The autoImportEvent.
      */
     @java.lang.Deprecated public com.google.wireless.android.sdk.stats.AutoImportEvent getAutoImportEvent() {
