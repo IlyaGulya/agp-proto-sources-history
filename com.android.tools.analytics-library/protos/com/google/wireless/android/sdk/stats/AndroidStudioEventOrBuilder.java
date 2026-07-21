@@ -3461,4 +3461,112 @@ public interface AndroidStudioEventOrBuilder extends
    * <code>optional .android_studio.SigningWizardEvent signing_wizard_event = 124;</code>
    */
   com.google.wireless.android.sdk.stats.SigningWizardEventOrBuilder getSigningWizardEventOrBuilder();
+
+  /**
+   * <pre>
+   * set when kind = FILE_TYPE
+   * </pre>
+   *
+   * <code>optional .android_studio.FileType file_type = 125;</code>
+   * @return Whether the fileType field is set.
+   */
+  boolean hasFileType();
+  /**
+   * <pre>
+   * set when kind = FILE_TYPE
+   * </pre>
+   *
+   * <code>optional .android_studio.FileType file_type = 125;</code>
+   * @return The fileType.
+   */
+  com.google.wireless.android.sdk.stats.FileType getFileType();
+  /**
+   * <pre>
+   * set when kind = FILE_TYPE
+   * </pre>
+   *
+   * <code>optional .android_studio.FileType file_type = 125;</code>
+   */
+  com.google.wireless.android.sdk.stats.FileTypeOrBuilder getFileTypeOrBuilder();
+
+  /**
+   * <pre>
+   * set when kind is KOTLIN_PROJECT_CONFIGURATION
+   * </pre>
+   *
+   * <code>optional .android_studio.KotlinProjectConfiguration kotlin_project_configuration = 126;</code>
+   * @return Whether the kotlinProjectConfiguration field is set.
+   */
+  boolean hasKotlinProjectConfiguration();
+  /**
+   * <pre>
+   * set when kind is KOTLIN_PROJECT_CONFIGURATION
+   * </pre>
+   *
+   * <code>optional .android_studio.KotlinProjectConfiguration kotlin_project_configuration = 126;</code>
+   * @return The kotlinProjectConfiguration.
+   */
+  com.google.wireless.android.sdk.stats.KotlinProjectConfiguration getKotlinProjectConfiguration();
+  /**
+   * <pre>
+   * set when kind is KOTLIN_PROJECT_CONFIGURATION
+   * </pre>
+   *
+   * <code>optional .android_studio.KotlinProjectConfiguration kotlin_project_configuration = 126;</code>
+   */
+  com.google.wireless.android.sdk.stats.KotlinProjectConfigurationOrBuilder getKotlinProjectConfigurationOrBuilder();
+
+  /**
+   * <pre>
+   * set when kind = RUN_START_DATA
+   * </pre>
+   *
+   * <code>optional .android_studio.RunStartData run_start_data = 127;</code>
+   * @return Whether the runStartData field is set.
+   */
+  boolean hasRunStartData();
+  /**
+   * <pre>
+   * set when kind = RUN_START_DATA
+   * </pre>
+   *
+   * <code>optional .android_studio.RunStartData run_start_data = 127;</code>
+   * @return The runStartData.
+   */
+  com.google.wireless.android.sdk.stats.RunStartData getRunStartData();
+  /**
+   * <pre>
+   * set when kind = RUN_START_DATA
+   * </pre>
+   *
+   * <code>optional .android_studio.RunStartData run_start_data = 127;</code>
+   */
+  com.google.wireless.android.sdk.stats.RunStartDataOrBuilder getRunStartDataOrBuilder();
+
+  /**
+   * <pre>
+   * set when kind = RUN_FINISH_DATA
+   * </pre>
+   *
+   * <code>optional .android_studio.RunFinishData run_finish_data = 128;</code>
+   * @return Whether the runFinishData field is set.
+   */
+  boolean hasRunFinishData();
+  /**
+   * <pre>
+   * set when kind = RUN_FINISH_DATA
+   * </pre>
+   *
+   * <code>optional .android_studio.RunFinishData run_finish_data = 128;</code>
+   * @return The runFinishData.
+   */
+  com.google.wireless.android.sdk.stats.RunFinishData getRunFinishData();
+  /**
+   * <pre>
+   * set when kind = RUN_FINISH_DATA
+   * </pre>
+   *
+   * <code>optional .android_studio.RunFinishData run_finish_data = 128;</code>
+   */
+  com.google.wireless.android.sdk.stats.RunFinishDataOrBuilder getRunFinishDataOrBuilder();
 }

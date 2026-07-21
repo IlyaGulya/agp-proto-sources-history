@@ -1612,6 +1612,58 @@ private static final long serialVersionUID = 0L;
             bitField3_ |= 0x00800000;
             break;
           }
+          case 1002: {
+            com.google.wireless.android.sdk.stats.FileType.Builder subBuilder = null;
+            if (((bitField3_ & 0x01000000) != 0)) {
+              subBuilder = fileType_.toBuilder();
+            }
+            fileType_ = input.readMessage(com.google.wireless.android.sdk.stats.FileType.PARSER, extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(fileType_);
+              fileType_ = subBuilder.buildPartial();
+            }
+            bitField3_ |= 0x01000000;
+            break;
+          }
+          case 1010: {
+            com.google.wireless.android.sdk.stats.KotlinProjectConfiguration.Builder subBuilder = null;
+            if (((bitField3_ & 0x02000000) != 0)) {
+              subBuilder = kotlinProjectConfiguration_.toBuilder();
+            }
+            kotlinProjectConfiguration_ = input.readMessage(com.google.wireless.android.sdk.stats.KotlinProjectConfiguration.PARSER, extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(kotlinProjectConfiguration_);
+              kotlinProjectConfiguration_ = subBuilder.buildPartial();
+            }
+            bitField3_ |= 0x02000000;
+            break;
+          }
+          case 1018: {
+            com.google.wireless.android.sdk.stats.RunStartData.Builder subBuilder = null;
+            if (((bitField3_ & 0x04000000) != 0)) {
+              subBuilder = runStartData_.toBuilder();
+            }
+            runStartData_ = input.readMessage(com.google.wireless.android.sdk.stats.RunStartData.PARSER, extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(runStartData_);
+              runStartData_ = subBuilder.buildPartial();
+            }
+            bitField3_ |= 0x04000000;
+            break;
+          }
+          case 1026: {
+            com.google.wireless.android.sdk.stats.RunFinishData.Builder subBuilder = null;
+            if (((bitField3_ & 0x08000000) != 0)) {
+              subBuilder = runFinishData_.toBuilder();
+            }
+            runFinishData_ = input.readMessage(com.google.wireless.android.sdk.stats.RunFinishData.PARSER, extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(runFinishData_);
+              runFinishData_ = subBuilder.buildPartial();
+            }
+            bitField3_ |= 0x08000000;
+            break;
+          }
           default: {
             if (!parseUnknownField(
                 input, unknownFields, extensionRegistry, tag)) {
@@ -3923,6 +3975,38 @@ private static final long serialVersionUID = 0L;
      * <code>SIGNING_WIZARD_INTELLIJ_SIGNING_SUCCEEDED = 232;</code>
      */
     SIGNING_WIZARD_INTELLIJ_SIGNING_SUCCEEDED(232),
+    /**
+     * <pre>
+     * File type information for a project
+     * </pre>
+     *
+     * <code>FILE_TYPE = 233;</code>
+     */
+    FILE_TYPE(233),
+    /**
+     * <pre>
+     * Kotlin project information logged by IntelliJ
+     * </pre>
+     *
+     * <code>KOTLIN_PROJECT_CONFIGURATION = 234;</code>
+     */
+    KOTLIN_PROJECT_CONFIGURATION(234),
+    /**
+     * <pre>
+     * Event related to IntelliJ Run Start data being logged
+     * </pre>
+     *
+     * <code>RUN_START_DATA = 235;</code>
+     */
+    RUN_START_DATA(235),
+    /**
+     * <pre>
+     * Event related to IntelliJ Run Finish data being logged
+     * </pre>
+     *
+     * <code>RUN_FINISH_DATA = 236;</code>
+     */
+    RUN_FINISH_DATA(236),
     ;
 
     /**
@@ -5613,6 +5697,38 @@ private static final long serialVersionUID = 0L;
      * <code>SIGNING_WIZARD_INTELLIJ_SIGNING_SUCCEEDED = 232;</code>
      */
     public static final int SIGNING_WIZARD_INTELLIJ_SIGNING_SUCCEEDED_VALUE = 232;
+    /**
+     * <pre>
+     * File type information for a project
+     * </pre>
+     *
+     * <code>FILE_TYPE = 233;</code>
+     */
+    public static final int FILE_TYPE_VALUE = 233;
+    /**
+     * <pre>
+     * Kotlin project information logged by IntelliJ
+     * </pre>
+     *
+     * <code>KOTLIN_PROJECT_CONFIGURATION = 234;</code>
+     */
+    public static final int KOTLIN_PROJECT_CONFIGURATION_VALUE = 234;
+    /**
+     * <pre>
+     * Event related to IntelliJ Run Start data being logged
+     * </pre>
+     *
+     * <code>RUN_START_DATA = 235;</code>
+     */
+    public static final int RUN_START_DATA_VALUE = 235;
+    /**
+     * <pre>
+     * Event related to IntelliJ Run Finish data being logged
+     * </pre>
+     *
+     * <code>RUN_FINISH_DATA = 236;</code>
+     */
+    public static final int RUN_FINISH_DATA_VALUE = 236;
 
 
     public final int getNumber() {
@@ -5863,6 +5979,10 @@ private static final long serialVersionUID = 0L;
         case 230: return SIGNING_WIZARD_GRADLE_SIGNING_SUCCEEDED;
         case 231: return SIGNING_WIZARD_INTELLIJ_SIGNING_FAILED;
         case 232: return SIGNING_WIZARD_INTELLIJ_SIGNING_SUCCEEDED;
+        case 233: return FILE_TYPE;
+        case 234: return KOTLIN_PROJECT_CONFIGURATION;
+        case 235: return RUN_START_DATA;
+        case 236: return RUN_FINISH_DATA;
         default: return null;
       }
     }
@@ -18806,6 +18926,146 @@ private static final long serialVersionUID = 0L;
     return signingWizardEvent_ == null ? com.google.wireless.android.sdk.stats.SigningWizardEvent.getDefaultInstance() : signingWizardEvent_;
   }
 
+  public static final int FILE_TYPE_FIELD_NUMBER = 125;
+  private com.google.wireless.android.sdk.stats.FileType fileType_;
+  /**
+   * <pre>
+   * set when kind = FILE_TYPE
+   * </pre>
+   *
+   * <code>optional .android_studio.FileType file_type = 125;</code>
+   * @return Whether the fileType field is set.
+   */
+  public boolean hasFileType() {
+    return ((bitField3_ & 0x01000000) != 0);
+  }
+  /**
+   * <pre>
+   * set when kind = FILE_TYPE
+   * </pre>
+   *
+   * <code>optional .android_studio.FileType file_type = 125;</code>
+   * @return The fileType.
+   */
+  public com.google.wireless.android.sdk.stats.FileType getFileType() {
+    return fileType_ == null ? com.google.wireless.android.sdk.stats.FileType.getDefaultInstance() : fileType_;
+  }
+  /**
+   * <pre>
+   * set when kind = FILE_TYPE
+   * </pre>
+   *
+   * <code>optional .android_studio.FileType file_type = 125;</code>
+   */
+  public com.google.wireless.android.sdk.stats.FileTypeOrBuilder getFileTypeOrBuilder() {
+    return fileType_ == null ? com.google.wireless.android.sdk.stats.FileType.getDefaultInstance() : fileType_;
+  }
+
+  public static final int KOTLIN_PROJECT_CONFIGURATION_FIELD_NUMBER = 126;
+  private com.google.wireless.android.sdk.stats.KotlinProjectConfiguration kotlinProjectConfiguration_;
+  /**
+   * <pre>
+   * set when kind is KOTLIN_PROJECT_CONFIGURATION
+   * </pre>
+   *
+   * <code>optional .android_studio.KotlinProjectConfiguration kotlin_project_configuration = 126;</code>
+   * @return Whether the kotlinProjectConfiguration field is set.
+   */
+  public boolean hasKotlinProjectConfiguration() {
+    return ((bitField3_ & 0x02000000) != 0);
+  }
+  /**
+   * <pre>
+   * set when kind is KOTLIN_PROJECT_CONFIGURATION
+   * </pre>
+   *
+   * <code>optional .android_studio.KotlinProjectConfiguration kotlin_project_configuration = 126;</code>
+   * @return The kotlinProjectConfiguration.
+   */
+  public com.google.wireless.android.sdk.stats.KotlinProjectConfiguration getKotlinProjectConfiguration() {
+    return kotlinProjectConfiguration_ == null ? com.google.wireless.android.sdk.stats.KotlinProjectConfiguration.getDefaultInstance() : kotlinProjectConfiguration_;
+  }
+  /**
+   * <pre>
+   * set when kind is KOTLIN_PROJECT_CONFIGURATION
+   * </pre>
+   *
+   * <code>optional .android_studio.KotlinProjectConfiguration kotlin_project_configuration = 126;</code>
+   */
+  public com.google.wireless.android.sdk.stats.KotlinProjectConfigurationOrBuilder getKotlinProjectConfigurationOrBuilder() {
+    return kotlinProjectConfiguration_ == null ? com.google.wireless.android.sdk.stats.KotlinProjectConfiguration.getDefaultInstance() : kotlinProjectConfiguration_;
+  }
+
+  public static final int RUN_START_DATA_FIELD_NUMBER = 127;
+  private com.google.wireless.android.sdk.stats.RunStartData runStartData_;
+  /**
+   * <pre>
+   * set when kind = RUN_START_DATA
+   * </pre>
+   *
+   * <code>optional .android_studio.RunStartData run_start_data = 127;</code>
+   * @return Whether the runStartData field is set.
+   */
+  public boolean hasRunStartData() {
+    return ((bitField3_ & 0x04000000) != 0);
+  }
+  /**
+   * <pre>
+   * set when kind = RUN_START_DATA
+   * </pre>
+   *
+   * <code>optional .android_studio.RunStartData run_start_data = 127;</code>
+   * @return The runStartData.
+   */
+  public com.google.wireless.android.sdk.stats.RunStartData getRunStartData() {
+    return runStartData_ == null ? com.google.wireless.android.sdk.stats.RunStartData.getDefaultInstance() : runStartData_;
+  }
+  /**
+   * <pre>
+   * set when kind = RUN_START_DATA
+   * </pre>
+   *
+   * <code>optional .android_studio.RunStartData run_start_data = 127;</code>
+   */
+  public com.google.wireless.android.sdk.stats.RunStartDataOrBuilder getRunStartDataOrBuilder() {
+    return runStartData_ == null ? com.google.wireless.android.sdk.stats.RunStartData.getDefaultInstance() : runStartData_;
+  }
+
+  public static final int RUN_FINISH_DATA_FIELD_NUMBER = 128;
+  private com.google.wireless.android.sdk.stats.RunFinishData runFinishData_;
+  /**
+   * <pre>
+   * set when kind = RUN_FINISH_DATA
+   * </pre>
+   *
+   * <code>optional .android_studio.RunFinishData run_finish_data = 128;</code>
+   * @return Whether the runFinishData field is set.
+   */
+  public boolean hasRunFinishData() {
+    return ((bitField3_ & 0x08000000) != 0);
+  }
+  /**
+   * <pre>
+   * set when kind = RUN_FINISH_DATA
+   * </pre>
+   *
+   * <code>optional .android_studio.RunFinishData run_finish_data = 128;</code>
+   * @return The runFinishData.
+   */
+  public com.google.wireless.android.sdk.stats.RunFinishData getRunFinishData() {
+    return runFinishData_ == null ? com.google.wireless.android.sdk.stats.RunFinishData.getDefaultInstance() : runFinishData_;
+  }
+  /**
+   * <pre>
+   * set when kind = RUN_FINISH_DATA
+   * </pre>
+   *
+   * <code>optional .android_studio.RunFinishData run_finish_data = 128;</code>
+   */
+  public com.google.wireless.android.sdk.stats.RunFinishDataOrBuilder getRunFinishDataOrBuilder() {
+    return runFinishData_ == null ? com.google.wireless.android.sdk.stats.RunFinishData.getDefaultInstance() : runFinishData_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -19191,6 +19451,18 @@ private static final long serialVersionUID = 0L;
     }
     if (((bitField3_ & 0x00800000) != 0)) {
       output.writeMessage(124, getSigningWizardEvent());
+    }
+    if (((bitField3_ & 0x01000000) != 0)) {
+      output.writeMessage(125, getFileType());
+    }
+    if (((bitField3_ & 0x02000000) != 0)) {
+      output.writeMessage(126, getKotlinProjectConfiguration());
+    }
+    if (((bitField3_ & 0x04000000) != 0)) {
+      output.writeMessage(127, getRunStartData());
+    }
+    if (((bitField3_ & 0x08000000) != 0)) {
+      output.writeMessage(128, getRunFinishData());
     }
     unknownFields.writeTo(output);
   }
@@ -19694,6 +19966,22 @@ private static final long serialVersionUID = 0L;
     if (((bitField3_ & 0x00800000) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(124, getSigningWizardEvent());
+    }
+    if (((bitField3_ & 0x01000000) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(125, getFileType());
+    }
+    if (((bitField3_ & 0x02000000) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(126, getKotlinProjectConfiguration());
+    }
+    if (((bitField3_ & 0x04000000) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(127, getRunStartData());
+    }
+    if (((bitField3_ & 0x08000000) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(128, getRunFinishData());
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -20307,6 +20595,26 @@ private static final long serialVersionUID = 0L;
       if (!getSigningWizardEvent()
           .equals(other.getSigningWizardEvent())) return false;
     }
+    if (hasFileType() != other.hasFileType()) return false;
+    if (hasFileType()) {
+      if (!getFileType()
+          .equals(other.getFileType())) return false;
+    }
+    if (hasKotlinProjectConfiguration() != other.hasKotlinProjectConfiguration()) return false;
+    if (hasKotlinProjectConfiguration()) {
+      if (!getKotlinProjectConfiguration()
+          .equals(other.getKotlinProjectConfiguration())) return false;
+    }
+    if (hasRunStartData() != other.hasRunStartData()) return false;
+    if (hasRunStartData()) {
+      if (!getRunStartData()
+          .equals(other.getRunStartData())) return false;
+    }
+    if (hasRunFinishData() != other.hasRunFinishData()) return false;
+    if (hasRunFinishData()) {
+      if (!getRunFinishData()
+          .equals(other.getRunFinishData())) return false;
+    }
     if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
@@ -20816,6 +21124,22 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + SIGNING_WIZARD_EVENT_FIELD_NUMBER;
       hash = (53 * hash) + getSigningWizardEvent().hashCode();
     }
+    if (hasFileType()) {
+      hash = (37 * hash) + FILE_TYPE_FIELD_NUMBER;
+      hash = (53 * hash) + getFileType().hashCode();
+    }
+    if (hasKotlinProjectConfiguration()) {
+      hash = (37 * hash) + KOTLIN_PROJECT_CONFIGURATION_FIELD_NUMBER;
+      hash = (53 * hash) + getKotlinProjectConfiguration().hashCode();
+    }
+    if (hasRunStartData()) {
+      hash = (37 * hash) + RUN_START_DATA_FIELD_NUMBER;
+      hash = (53 * hash) + getRunStartData().hashCode();
+    }
+    if (hasRunFinishData()) {
+      hash = (37 * hash) + RUN_FINISH_DATA_FIELD_NUMBER;
+      hash = (53 * hash) + getRunFinishData().hashCode();
+    }
     hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -21047,6 +21371,10 @@ private static final long serialVersionUID = 0L;
         getSuggestedImportEventFieldBuilder();
         getVfsRefreshFieldBuilder();
         getSigningWizardEventFieldBuilder();
+        getFileTypeFieldBuilder();
+        getKotlinProjectConfigurationFieldBuilder();
+        getRunStartDataFieldBuilder();
+        getRunFinishDataFieldBuilder();
       }
     }
     @java.lang.Override
@@ -21712,6 +22040,30 @@ private static final long serialVersionUID = 0L;
         signingWizardEventBuilder_.clear();
       }
       bitField3_ = (bitField3_ & ~0x08000000);
+      if (fileTypeBuilder_ == null) {
+        fileType_ = null;
+      } else {
+        fileTypeBuilder_.clear();
+      }
+      bitField3_ = (bitField3_ & ~0x10000000);
+      if (kotlinProjectConfigurationBuilder_ == null) {
+        kotlinProjectConfiguration_ = null;
+      } else {
+        kotlinProjectConfigurationBuilder_.clear();
+      }
+      bitField3_ = (bitField3_ & ~0x20000000);
+      if (runStartDataBuilder_ == null) {
+        runStartData_ = null;
+      } else {
+        runStartDataBuilder_.clear();
+      }
+      bitField3_ = (bitField3_ & ~0x40000000);
+      if (runFinishDataBuilder_ == null) {
+        runFinishData_ = null;
+      } else {
+        runFinishDataBuilder_.clear();
+      }
+      bitField3_ = (bitField3_ & ~0x80000000);
       return this;
     }
 
@@ -22658,6 +23010,38 @@ private static final long serialVersionUID = 0L;
         }
         to_bitField3_ |= 0x00800000;
       }
+      if (((from_bitField3_ & 0x10000000) != 0)) {
+        if (fileTypeBuilder_ == null) {
+          result.fileType_ = fileType_;
+        } else {
+          result.fileType_ = fileTypeBuilder_.build();
+        }
+        to_bitField3_ |= 0x01000000;
+      }
+      if (((from_bitField3_ & 0x20000000) != 0)) {
+        if (kotlinProjectConfigurationBuilder_ == null) {
+          result.kotlinProjectConfiguration_ = kotlinProjectConfiguration_;
+        } else {
+          result.kotlinProjectConfiguration_ = kotlinProjectConfigurationBuilder_.build();
+        }
+        to_bitField3_ |= 0x02000000;
+      }
+      if (((from_bitField3_ & 0x40000000) != 0)) {
+        if (runStartDataBuilder_ == null) {
+          result.runStartData_ = runStartData_;
+        } else {
+          result.runStartData_ = runStartDataBuilder_.build();
+        }
+        to_bitField3_ |= 0x04000000;
+      }
+      if (((from_bitField3_ & 0x80000000) != 0)) {
+        if (runFinishDataBuilder_ == null) {
+          result.runFinishData_ = runFinishData_;
+        } else {
+          result.runFinishData_ = runFinishDataBuilder_.build();
+        }
+        to_bitField3_ |= 0x08000000;
+      }
       result.bitField0_ = to_bitField0_;
       result.bitField1_ = to_bitField1_;
       result.bitField2_ = to_bitField2_;
@@ -23171,6 +23555,18 @@ private static final long serialVersionUID = 0L;
       }
       if (other.hasSigningWizardEvent()) {
         mergeSigningWizardEvent(other.getSigningWizardEvent());
+      }
+      if (other.hasFileType()) {
+        mergeFileType(other.getFileType());
+      }
+      if (other.hasKotlinProjectConfiguration()) {
+        mergeKotlinProjectConfiguration(other.getKotlinProjectConfiguration());
+      }
+      if (other.hasRunStartData()) {
+        mergeRunStartData(other.getRunStartData());
+      }
+      if (other.hasRunFinishData()) {
+        mergeRunFinishData(other.getRunFinishData());
       }
       this.mergeUnknownFields(other.unknownFields);
       onChanged();
@@ -41731,6 +42127,630 @@ private static final long serialVersionUID = 0L;
         signingWizardEvent_ = null;
       }
       return signingWizardEventBuilder_;
+    }
+
+    private com.google.wireless.android.sdk.stats.FileType fileType_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.FileType, com.google.wireless.android.sdk.stats.FileType.Builder, com.google.wireless.android.sdk.stats.FileTypeOrBuilder> fileTypeBuilder_;
+    /**
+     * <pre>
+     * set when kind = FILE_TYPE
+     * </pre>
+     *
+     * <code>optional .android_studio.FileType file_type = 125;</code>
+     * @return Whether the fileType field is set.
+     */
+    public boolean hasFileType() {
+      return ((bitField3_ & 0x10000000) != 0);
+    }
+    /**
+     * <pre>
+     * set when kind = FILE_TYPE
+     * </pre>
+     *
+     * <code>optional .android_studio.FileType file_type = 125;</code>
+     * @return The fileType.
+     */
+    public com.google.wireless.android.sdk.stats.FileType getFileType() {
+      if (fileTypeBuilder_ == null) {
+        return fileType_ == null ? com.google.wireless.android.sdk.stats.FileType.getDefaultInstance() : fileType_;
+      } else {
+        return fileTypeBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * set when kind = FILE_TYPE
+     * </pre>
+     *
+     * <code>optional .android_studio.FileType file_type = 125;</code>
+     */
+    public Builder setFileType(com.google.wireless.android.sdk.stats.FileType value) {
+      if (fileTypeBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        fileType_ = value;
+        onChanged();
+      } else {
+        fileTypeBuilder_.setMessage(value);
+      }
+      bitField3_ |= 0x10000000;
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = FILE_TYPE
+     * </pre>
+     *
+     * <code>optional .android_studio.FileType file_type = 125;</code>
+     */
+    public Builder setFileType(
+        com.google.wireless.android.sdk.stats.FileType.Builder builderForValue) {
+      if (fileTypeBuilder_ == null) {
+        fileType_ = builderForValue.build();
+        onChanged();
+      } else {
+        fileTypeBuilder_.setMessage(builderForValue.build());
+      }
+      bitField3_ |= 0x10000000;
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = FILE_TYPE
+     * </pre>
+     *
+     * <code>optional .android_studio.FileType file_type = 125;</code>
+     */
+    public Builder mergeFileType(com.google.wireless.android.sdk.stats.FileType value) {
+      if (fileTypeBuilder_ == null) {
+        if (((bitField3_ & 0x10000000) != 0) &&
+            fileType_ != null &&
+            fileType_ != com.google.wireless.android.sdk.stats.FileType.getDefaultInstance()) {
+          fileType_ =
+            com.google.wireless.android.sdk.stats.FileType.newBuilder(fileType_).mergeFrom(value).buildPartial();
+        } else {
+          fileType_ = value;
+        }
+        onChanged();
+      } else {
+        fileTypeBuilder_.mergeFrom(value);
+      }
+      bitField3_ |= 0x10000000;
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = FILE_TYPE
+     * </pre>
+     *
+     * <code>optional .android_studio.FileType file_type = 125;</code>
+     */
+    public Builder clearFileType() {
+      if (fileTypeBuilder_ == null) {
+        fileType_ = null;
+        onChanged();
+      } else {
+        fileTypeBuilder_.clear();
+      }
+      bitField3_ = (bitField3_ & ~0x10000000);
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = FILE_TYPE
+     * </pre>
+     *
+     * <code>optional .android_studio.FileType file_type = 125;</code>
+     */
+    public com.google.wireless.android.sdk.stats.FileType.Builder getFileTypeBuilder() {
+      bitField3_ |= 0x10000000;
+      onChanged();
+      return getFileTypeFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * set when kind = FILE_TYPE
+     * </pre>
+     *
+     * <code>optional .android_studio.FileType file_type = 125;</code>
+     */
+    public com.google.wireless.android.sdk.stats.FileTypeOrBuilder getFileTypeOrBuilder() {
+      if (fileTypeBuilder_ != null) {
+        return fileTypeBuilder_.getMessageOrBuilder();
+      } else {
+        return fileType_ == null ?
+            com.google.wireless.android.sdk.stats.FileType.getDefaultInstance() : fileType_;
+      }
+    }
+    /**
+     * <pre>
+     * set when kind = FILE_TYPE
+     * </pre>
+     *
+     * <code>optional .android_studio.FileType file_type = 125;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.FileType, com.google.wireless.android.sdk.stats.FileType.Builder, com.google.wireless.android.sdk.stats.FileTypeOrBuilder> 
+        getFileTypeFieldBuilder() {
+      if (fileTypeBuilder_ == null) {
+        fileTypeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.wireless.android.sdk.stats.FileType, com.google.wireless.android.sdk.stats.FileType.Builder, com.google.wireless.android.sdk.stats.FileTypeOrBuilder>(
+                getFileType(),
+                getParentForChildren(),
+                isClean());
+        fileType_ = null;
+      }
+      return fileTypeBuilder_;
+    }
+
+    private com.google.wireless.android.sdk.stats.KotlinProjectConfiguration kotlinProjectConfiguration_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.KotlinProjectConfiguration, com.google.wireless.android.sdk.stats.KotlinProjectConfiguration.Builder, com.google.wireless.android.sdk.stats.KotlinProjectConfigurationOrBuilder> kotlinProjectConfigurationBuilder_;
+    /**
+     * <pre>
+     * set when kind is KOTLIN_PROJECT_CONFIGURATION
+     * </pre>
+     *
+     * <code>optional .android_studio.KotlinProjectConfiguration kotlin_project_configuration = 126;</code>
+     * @return Whether the kotlinProjectConfiguration field is set.
+     */
+    public boolean hasKotlinProjectConfiguration() {
+      return ((bitField3_ & 0x20000000) != 0);
+    }
+    /**
+     * <pre>
+     * set when kind is KOTLIN_PROJECT_CONFIGURATION
+     * </pre>
+     *
+     * <code>optional .android_studio.KotlinProjectConfiguration kotlin_project_configuration = 126;</code>
+     * @return The kotlinProjectConfiguration.
+     */
+    public com.google.wireless.android.sdk.stats.KotlinProjectConfiguration getKotlinProjectConfiguration() {
+      if (kotlinProjectConfigurationBuilder_ == null) {
+        return kotlinProjectConfiguration_ == null ? com.google.wireless.android.sdk.stats.KotlinProjectConfiguration.getDefaultInstance() : kotlinProjectConfiguration_;
+      } else {
+        return kotlinProjectConfigurationBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * set when kind is KOTLIN_PROJECT_CONFIGURATION
+     * </pre>
+     *
+     * <code>optional .android_studio.KotlinProjectConfiguration kotlin_project_configuration = 126;</code>
+     */
+    public Builder setKotlinProjectConfiguration(com.google.wireless.android.sdk.stats.KotlinProjectConfiguration value) {
+      if (kotlinProjectConfigurationBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        kotlinProjectConfiguration_ = value;
+        onChanged();
+      } else {
+        kotlinProjectConfigurationBuilder_.setMessage(value);
+      }
+      bitField3_ |= 0x20000000;
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind is KOTLIN_PROJECT_CONFIGURATION
+     * </pre>
+     *
+     * <code>optional .android_studio.KotlinProjectConfiguration kotlin_project_configuration = 126;</code>
+     */
+    public Builder setKotlinProjectConfiguration(
+        com.google.wireless.android.sdk.stats.KotlinProjectConfiguration.Builder builderForValue) {
+      if (kotlinProjectConfigurationBuilder_ == null) {
+        kotlinProjectConfiguration_ = builderForValue.build();
+        onChanged();
+      } else {
+        kotlinProjectConfigurationBuilder_.setMessage(builderForValue.build());
+      }
+      bitField3_ |= 0x20000000;
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind is KOTLIN_PROJECT_CONFIGURATION
+     * </pre>
+     *
+     * <code>optional .android_studio.KotlinProjectConfiguration kotlin_project_configuration = 126;</code>
+     */
+    public Builder mergeKotlinProjectConfiguration(com.google.wireless.android.sdk.stats.KotlinProjectConfiguration value) {
+      if (kotlinProjectConfigurationBuilder_ == null) {
+        if (((bitField3_ & 0x20000000) != 0) &&
+            kotlinProjectConfiguration_ != null &&
+            kotlinProjectConfiguration_ != com.google.wireless.android.sdk.stats.KotlinProjectConfiguration.getDefaultInstance()) {
+          kotlinProjectConfiguration_ =
+            com.google.wireless.android.sdk.stats.KotlinProjectConfiguration.newBuilder(kotlinProjectConfiguration_).mergeFrom(value).buildPartial();
+        } else {
+          kotlinProjectConfiguration_ = value;
+        }
+        onChanged();
+      } else {
+        kotlinProjectConfigurationBuilder_.mergeFrom(value);
+      }
+      bitField3_ |= 0x20000000;
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind is KOTLIN_PROJECT_CONFIGURATION
+     * </pre>
+     *
+     * <code>optional .android_studio.KotlinProjectConfiguration kotlin_project_configuration = 126;</code>
+     */
+    public Builder clearKotlinProjectConfiguration() {
+      if (kotlinProjectConfigurationBuilder_ == null) {
+        kotlinProjectConfiguration_ = null;
+        onChanged();
+      } else {
+        kotlinProjectConfigurationBuilder_.clear();
+      }
+      bitField3_ = (bitField3_ & ~0x20000000);
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind is KOTLIN_PROJECT_CONFIGURATION
+     * </pre>
+     *
+     * <code>optional .android_studio.KotlinProjectConfiguration kotlin_project_configuration = 126;</code>
+     */
+    public com.google.wireless.android.sdk.stats.KotlinProjectConfiguration.Builder getKotlinProjectConfigurationBuilder() {
+      bitField3_ |= 0x20000000;
+      onChanged();
+      return getKotlinProjectConfigurationFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * set when kind is KOTLIN_PROJECT_CONFIGURATION
+     * </pre>
+     *
+     * <code>optional .android_studio.KotlinProjectConfiguration kotlin_project_configuration = 126;</code>
+     */
+    public com.google.wireless.android.sdk.stats.KotlinProjectConfigurationOrBuilder getKotlinProjectConfigurationOrBuilder() {
+      if (kotlinProjectConfigurationBuilder_ != null) {
+        return kotlinProjectConfigurationBuilder_.getMessageOrBuilder();
+      } else {
+        return kotlinProjectConfiguration_ == null ?
+            com.google.wireless.android.sdk.stats.KotlinProjectConfiguration.getDefaultInstance() : kotlinProjectConfiguration_;
+      }
+    }
+    /**
+     * <pre>
+     * set when kind is KOTLIN_PROJECT_CONFIGURATION
+     * </pre>
+     *
+     * <code>optional .android_studio.KotlinProjectConfiguration kotlin_project_configuration = 126;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.KotlinProjectConfiguration, com.google.wireless.android.sdk.stats.KotlinProjectConfiguration.Builder, com.google.wireless.android.sdk.stats.KotlinProjectConfigurationOrBuilder> 
+        getKotlinProjectConfigurationFieldBuilder() {
+      if (kotlinProjectConfigurationBuilder_ == null) {
+        kotlinProjectConfigurationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.wireless.android.sdk.stats.KotlinProjectConfiguration, com.google.wireless.android.sdk.stats.KotlinProjectConfiguration.Builder, com.google.wireless.android.sdk.stats.KotlinProjectConfigurationOrBuilder>(
+                getKotlinProjectConfiguration(),
+                getParentForChildren(),
+                isClean());
+        kotlinProjectConfiguration_ = null;
+      }
+      return kotlinProjectConfigurationBuilder_;
+    }
+
+    private com.google.wireless.android.sdk.stats.RunStartData runStartData_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.RunStartData, com.google.wireless.android.sdk.stats.RunStartData.Builder, com.google.wireless.android.sdk.stats.RunStartDataOrBuilder> runStartDataBuilder_;
+    /**
+     * <pre>
+     * set when kind = RUN_START_DATA
+     * </pre>
+     *
+     * <code>optional .android_studio.RunStartData run_start_data = 127;</code>
+     * @return Whether the runStartData field is set.
+     */
+    public boolean hasRunStartData() {
+      return ((bitField3_ & 0x40000000) != 0);
+    }
+    /**
+     * <pre>
+     * set when kind = RUN_START_DATA
+     * </pre>
+     *
+     * <code>optional .android_studio.RunStartData run_start_data = 127;</code>
+     * @return The runStartData.
+     */
+    public com.google.wireless.android.sdk.stats.RunStartData getRunStartData() {
+      if (runStartDataBuilder_ == null) {
+        return runStartData_ == null ? com.google.wireless.android.sdk.stats.RunStartData.getDefaultInstance() : runStartData_;
+      } else {
+        return runStartDataBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * set when kind = RUN_START_DATA
+     * </pre>
+     *
+     * <code>optional .android_studio.RunStartData run_start_data = 127;</code>
+     */
+    public Builder setRunStartData(com.google.wireless.android.sdk.stats.RunStartData value) {
+      if (runStartDataBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        runStartData_ = value;
+        onChanged();
+      } else {
+        runStartDataBuilder_.setMessage(value);
+      }
+      bitField3_ |= 0x40000000;
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = RUN_START_DATA
+     * </pre>
+     *
+     * <code>optional .android_studio.RunStartData run_start_data = 127;</code>
+     */
+    public Builder setRunStartData(
+        com.google.wireless.android.sdk.stats.RunStartData.Builder builderForValue) {
+      if (runStartDataBuilder_ == null) {
+        runStartData_ = builderForValue.build();
+        onChanged();
+      } else {
+        runStartDataBuilder_.setMessage(builderForValue.build());
+      }
+      bitField3_ |= 0x40000000;
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = RUN_START_DATA
+     * </pre>
+     *
+     * <code>optional .android_studio.RunStartData run_start_data = 127;</code>
+     */
+    public Builder mergeRunStartData(com.google.wireless.android.sdk.stats.RunStartData value) {
+      if (runStartDataBuilder_ == null) {
+        if (((bitField3_ & 0x40000000) != 0) &&
+            runStartData_ != null &&
+            runStartData_ != com.google.wireless.android.sdk.stats.RunStartData.getDefaultInstance()) {
+          runStartData_ =
+            com.google.wireless.android.sdk.stats.RunStartData.newBuilder(runStartData_).mergeFrom(value).buildPartial();
+        } else {
+          runStartData_ = value;
+        }
+        onChanged();
+      } else {
+        runStartDataBuilder_.mergeFrom(value);
+      }
+      bitField3_ |= 0x40000000;
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = RUN_START_DATA
+     * </pre>
+     *
+     * <code>optional .android_studio.RunStartData run_start_data = 127;</code>
+     */
+    public Builder clearRunStartData() {
+      if (runStartDataBuilder_ == null) {
+        runStartData_ = null;
+        onChanged();
+      } else {
+        runStartDataBuilder_.clear();
+      }
+      bitField3_ = (bitField3_ & ~0x40000000);
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = RUN_START_DATA
+     * </pre>
+     *
+     * <code>optional .android_studio.RunStartData run_start_data = 127;</code>
+     */
+    public com.google.wireless.android.sdk.stats.RunStartData.Builder getRunStartDataBuilder() {
+      bitField3_ |= 0x40000000;
+      onChanged();
+      return getRunStartDataFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * set when kind = RUN_START_DATA
+     * </pre>
+     *
+     * <code>optional .android_studio.RunStartData run_start_data = 127;</code>
+     */
+    public com.google.wireless.android.sdk.stats.RunStartDataOrBuilder getRunStartDataOrBuilder() {
+      if (runStartDataBuilder_ != null) {
+        return runStartDataBuilder_.getMessageOrBuilder();
+      } else {
+        return runStartData_ == null ?
+            com.google.wireless.android.sdk.stats.RunStartData.getDefaultInstance() : runStartData_;
+      }
+    }
+    /**
+     * <pre>
+     * set when kind = RUN_START_DATA
+     * </pre>
+     *
+     * <code>optional .android_studio.RunStartData run_start_data = 127;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.RunStartData, com.google.wireless.android.sdk.stats.RunStartData.Builder, com.google.wireless.android.sdk.stats.RunStartDataOrBuilder> 
+        getRunStartDataFieldBuilder() {
+      if (runStartDataBuilder_ == null) {
+        runStartDataBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.wireless.android.sdk.stats.RunStartData, com.google.wireless.android.sdk.stats.RunStartData.Builder, com.google.wireless.android.sdk.stats.RunStartDataOrBuilder>(
+                getRunStartData(),
+                getParentForChildren(),
+                isClean());
+        runStartData_ = null;
+      }
+      return runStartDataBuilder_;
+    }
+
+    private com.google.wireless.android.sdk.stats.RunFinishData runFinishData_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.RunFinishData, com.google.wireless.android.sdk.stats.RunFinishData.Builder, com.google.wireless.android.sdk.stats.RunFinishDataOrBuilder> runFinishDataBuilder_;
+    /**
+     * <pre>
+     * set when kind = RUN_FINISH_DATA
+     * </pre>
+     *
+     * <code>optional .android_studio.RunFinishData run_finish_data = 128;</code>
+     * @return Whether the runFinishData field is set.
+     */
+    public boolean hasRunFinishData() {
+      return ((bitField3_ & 0x80000000) != 0);
+    }
+    /**
+     * <pre>
+     * set when kind = RUN_FINISH_DATA
+     * </pre>
+     *
+     * <code>optional .android_studio.RunFinishData run_finish_data = 128;</code>
+     * @return The runFinishData.
+     */
+    public com.google.wireless.android.sdk.stats.RunFinishData getRunFinishData() {
+      if (runFinishDataBuilder_ == null) {
+        return runFinishData_ == null ? com.google.wireless.android.sdk.stats.RunFinishData.getDefaultInstance() : runFinishData_;
+      } else {
+        return runFinishDataBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * set when kind = RUN_FINISH_DATA
+     * </pre>
+     *
+     * <code>optional .android_studio.RunFinishData run_finish_data = 128;</code>
+     */
+    public Builder setRunFinishData(com.google.wireless.android.sdk.stats.RunFinishData value) {
+      if (runFinishDataBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        runFinishData_ = value;
+        onChanged();
+      } else {
+        runFinishDataBuilder_.setMessage(value);
+      }
+      bitField3_ |= 0x80000000;
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = RUN_FINISH_DATA
+     * </pre>
+     *
+     * <code>optional .android_studio.RunFinishData run_finish_data = 128;</code>
+     */
+    public Builder setRunFinishData(
+        com.google.wireless.android.sdk.stats.RunFinishData.Builder builderForValue) {
+      if (runFinishDataBuilder_ == null) {
+        runFinishData_ = builderForValue.build();
+        onChanged();
+      } else {
+        runFinishDataBuilder_.setMessage(builderForValue.build());
+      }
+      bitField3_ |= 0x80000000;
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = RUN_FINISH_DATA
+     * </pre>
+     *
+     * <code>optional .android_studio.RunFinishData run_finish_data = 128;</code>
+     */
+    public Builder mergeRunFinishData(com.google.wireless.android.sdk.stats.RunFinishData value) {
+      if (runFinishDataBuilder_ == null) {
+        if (((bitField3_ & 0x80000000) != 0) &&
+            runFinishData_ != null &&
+            runFinishData_ != com.google.wireless.android.sdk.stats.RunFinishData.getDefaultInstance()) {
+          runFinishData_ =
+            com.google.wireless.android.sdk.stats.RunFinishData.newBuilder(runFinishData_).mergeFrom(value).buildPartial();
+        } else {
+          runFinishData_ = value;
+        }
+        onChanged();
+      } else {
+        runFinishDataBuilder_.mergeFrom(value);
+      }
+      bitField3_ |= 0x80000000;
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = RUN_FINISH_DATA
+     * </pre>
+     *
+     * <code>optional .android_studio.RunFinishData run_finish_data = 128;</code>
+     */
+    public Builder clearRunFinishData() {
+      if (runFinishDataBuilder_ == null) {
+        runFinishData_ = null;
+        onChanged();
+      } else {
+        runFinishDataBuilder_.clear();
+      }
+      bitField3_ = (bitField3_ & ~0x80000000);
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = RUN_FINISH_DATA
+     * </pre>
+     *
+     * <code>optional .android_studio.RunFinishData run_finish_data = 128;</code>
+     */
+    public com.google.wireless.android.sdk.stats.RunFinishData.Builder getRunFinishDataBuilder() {
+      bitField3_ |= 0x80000000;
+      onChanged();
+      return getRunFinishDataFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * set when kind = RUN_FINISH_DATA
+     * </pre>
+     *
+     * <code>optional .android_studio.RunFinishData run_finish_data = 128;</code>
+     */
+    public com.google.wireless.android.sdk.stats.RunFinishDataOrBuilder getRunFinishDataOrBuilder() {
+      if (runFinishDataBuilder_ != null) {
+        return runFinishDataBuilder_.getMessageOrBuilder();
+      } else {
+        return runFinishData_ == null ?
+            com.google.wireless.android.sdk.stats.RunFinishData.getDefaultInstance() : runFinishData_;
+      }
+    }
+    /**
+     * <pre>
+     * set when kind = RUN_FINISH_DATA
+     * </pre>
+     *
+     * <code>optional .android_studio.RunFinishData run_finish_data = 128;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.RunFinishData, com.google.wireless.android.sdk.stats.RunFinishData.Builder, com.google.wireless.android.sdk.stats.RunFinishDataOrBuilder> 
+        getRunFinishDataFieldBuilder() {
+      if (runFinishDataBuilder_ == null) {
+        runFinishDataBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.wireless.android.sdk.stats.RunFinishData, com.google.wireless.android.sdk.stats.RunFinishData.Builder, com.google.wireless.android.sdk.stats.RunFinishDataOrBuilder>(
+                getRunFinishData(),
+                getParentForChildren(),
+                isClean());
+        runFinishData_ = null;
+      }
+      return runFinishDataBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(
