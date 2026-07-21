@@ -18,6 +18,7 @@ private static final long serialVersionUID = 0L;
   private BackupAndSyncEvent() {
     providerInUse_ = 0;
     enablementFlow_ = 0;
+    type_ = 0;
   }
 
   @java.lang.Override
@@ -38,6 +39,182 @@ private static final long serialVersionUID = 0L;
     return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_BackupAndSyncEvent_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
             com.google.wireless.android.sdk.stats.BackupAndSyncEvent.class, com.google.wireless.android.sdk.stats.BackupAndSyncEvent.Builder.class);
+  }
+
+  /**
+   * Protobuf enum {@code android_studio.BackupAndSyncEvent.Type}
+   */
+  public enum Type
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <code>TYPE_UNKNOWN = 0;</code>
+     */
+    TYPE_UNKNOWN(0),
+    /**
+     * <pre>
+     * Settings were synced (logged once per session)
+     * </pre>
+     *
+     * <code>TYPE_SYNC = 1;</code>
+     */
+    TYPE_SYNC(1),
+    /**
+     * <pre>
+     * Sync was enabled (through any mechanism). This will always be logged on
+     * enablement.
+     * </pre>
+     *
+     * <code>TYPE_ENABLED = 2;</code>
+     */
+    TYPE_ENABLED(2),
+    /**
+     * <pre>
+     * Sync was disabled
+     * </pre>
+     *
+     * <code>TYPE_DISABLED = 3;</code>
+     */
+    TYPE_DISABLED(3),
+    /**
+     * <pre>
+     * Sync was enabled through the Studio-specific flows, where the onboarding
+     * wizard is shown. Note an event with TYPE_ENABLED will also be logged.
+     * </pre>
+     *
+     * <code>TYPE_ENABLED_THROUGH_WIZARD = 4;</code>
+     */
+    TYPE_ENABLED_THROUGH_WIZARD(4),
+    /**
+     * <pre>
+     * The user changed the synced categories
+     * </pre>
+     *
+     * <code>TYPE_CHANGE_CATEGORIES = 5;</code>
+     */
+    TYPE_CHANGE_CATEGORIES(5),
+    ;
+
+    /**
+     * <code>TYPE_UNKNOWN = 0;</code>
+     */
+    public static final int TYPE_UNKNOWN_VALUE = 0;
+    /**
+     * <pre>
+     * Settings were synced (logged once per session)
+     * </pre>
+     *
+     * <code>TYPE_SYNC = 1;</code>
+     */
+    public static final int TYPE_SYNC_VALUE = 1;
+    /**
+     * <pre>
+     * Sync was enabled (through any mechanism). This will always be logged on
+     * enablement.
+     * </pre>
+     *
+     * <code>TYPE_ENABLED = 2;</code>
+     */
+    public static final int TYPE_ENABLED_VALUE = 2;
+    /**
+     * <pre>
+     * Sync was disabled
+     * </pre>
+     *
+     * <code>TYPE_DISABLED = 3;</code>
+     */
+    public static final int TYPE_DISABLED_VALUE = 3;
+    /**
+     * <pre>
+     * Sync was enabled through the Studio-specific flows, where the onboarding
+     * wizard is shown. Note an event with TYPE_ENABLED will also be logged.
+     * </pre>
+     *
+     * <code>TYPE_ENABLED_THROUGH_WIZARD = 4;</code>
+     */
+    public static final int TYPE_ENABLED_THROUGH_WIZARD_VALUE = 4;
+    /**
+     * <pre>
+     * The user changed the synced categories
+     * </pre>
+     *
+     * <code>TYPE_CHANGE_CATEGORIES = 5;</code>
+     */
+    public static final int TYPE_CHANGE_CATEGORIES_VALUE = 5;
+
+
+    public final int getNumber() {
+      return value;
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     * @deprecated Use {@link #forNumber(int)} instead.
+     */
+    @java.lang.Deprecated
+    public static Type valueOf(int value) {
+      return forNumber(value);
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     */
+    public static Type forNumber(int value) {
+      switch (value) {
+        case 0: return TYPE_UNKNOWN;
+        case 1: return TYPE_SYNC;
+        case 2: return TYPE_ENABLED;
+        case 3: return TYPE_DISABLED;
+        case 4: return TYPE_ENABLED_THROUGH_WIZARD;
+        case 5: return TYPE_CHANGE_CATEGORIES;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<Type>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static final com.google.protobuf.Internal.EnumLiteMap<
+        Type> internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<Type>() {
+            public Type findValueByNumber(int number) {
+              return Type.forNumber(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      return getDescriptor().getValues().get(ordinal());
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return com.google.wireless.android.sdk.stats.BackupAndSyncEvent.getDescriptor().getEnumTypes().get(0);
+    }
+
+    private static final Type[] VALUES = values();
+
+    public static Type valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int value;
+
+    private Type(int value) {
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:android_studio.BackupAndSyncEvent.Type)
   }
 
   /**
@@ -138,7 +315,7 @@ private static final long serialVersionUID = 0L;
     }
     public static final com.google.protobuf.Descriptors.EnumDescriptor
         getDescriptor() {
-      return com.google.wireless.android.sdk.stats.BackupAndSyncEvent.getDescriptor().getEnumTypes().get(0);
+      return com.google.wireless.android.sdk.stats.BackupAndSyncEvent.getDescriptor().getEnumTypes().get(1);
     }
 
     private static final Provider[] VALUES = values();
@@ -188,7 +365,8 @@ private static final long serialVersionUID = 0L;
     ACCOUNT_SETTINGS_PAGE(2),
     /**
      * <pre>
-     * Enable via the Backup and Sync settings page
+     * Enable via the Backup and Sync settings page. Currently unused since
+     * there's no appropriate hook in JB code to log in this situation.
      * </pre>
      *
      * <code>FEATURE_SETTINGS_PAGE = 3;</code>
@@ -218,7 +396,8 @@ private static final long serialVersionUID = 0L;
     public static final int ACCOUNT_SETTINGS_PAGE_VALUE = 2;
     /**
      * <pre>
-     * Enable via the Backup and Sync settings page
+     * Enable via the Backup and Sync settings page. Currently unused since
+     * there's no appropriate hook in JB code to log in this situation.
      * </pre>
      *
      * <code>FEATURE_SETTINGS_PAGE = 3;</code>
@@ -276,7 +455,7 @@ private static final long serialVersionUID = 0L;
     }
     public static final com.google.protobuf.Descriptors.EnumDescriptor
         getDescriptor() {
-      return com.google.wireless.android.sdk.stats.BackupAndSyncEvent.getDescriptor().getEnumTypes().get(1);
+      return com.google.wireless.android.sdk.stats.BackupAndSyncEvent.getDescriptor().getEnumTypes().get(2);
     }
 
     private static final EnablementFlow[] VALUES = values();
@@ -336,6 +515,24 @@ private static final long serialVersionUID = 0L;
     return result == null ? com.google.wireless.android.sdk.stats.BackupAndSyncEvent.EnablementFlow.UNKNOWN_FLOW : result;
   }
 
+  public static final int TYPE_FIELD_NUMBER = 3;
+  private int type_ = 0;
+  /**
+   * <code>optional .android_studio.BackupAndSyncEvent.Type type = 3;</code>
+   * @return Whether the type field is set.
+   */
+  @java.lang.Override public boolean hasType() {
+    return ((bitField0_ & 0x00000004) != 0);
+  }
+  /**
+   * <code>optional .android_studio.BackupAndSyncEvent.Type type = 3;</code>
+   * @return The type.
+   */
+  @java.lang.Override public com.google.wireless.android.sdk.stats.BackupAndSyncEvent.Type getType() {
+    com.google.wireless.android.sdk.stats.BackupAndSyncEvent.Type result = com.google.wireless.android.sdk.stats.BackupAndSyncEvent.Type.forNumber(type_);
+    return result == null ? com.google.wireless.android.sdk.stats.BackupAndSyncEvent.Type.TYPE_UNKNOWN : result;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -356,6 +553,9 @@ private static final long serialVersionUID = 0L;
     if (((bitField0_ & 0x00000002) != 0)) {
       output.writeEnum(2, enablementFlow_);
     }
+    if (((bitField0_ & 0x00000004) != 0)) {
+      output.writeEnum(3, type_);
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -372,6 +572,10 @@ private static final long serialVersionUID = 0L;
     if (((bitField0_ & 0x00000002) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(2, enablementFlow_);
+    }
+    if (((bitField0_ & 0x00000004) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeEnumSize(3, type_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -396,6 +600,10 @@ private static final long serialVersionUID = 0L;
     if (hasEnablementFlow()) {
       if (enablementFlow_ != other.enablementFlow_) return false;
     }
+    if (hasType() != other.hasType()) return false;
+    if (hasType()) {
+      if (type_ != other.type_) return false;
+    }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -414,6 +622,10 @@ private static final long serialVersionUID = 0L;
     if (hasEnablementFlow()) {
       hash = (37 * hash) + ENABLEMENT_FLOW_FIELD_NUMBER;
       hash = (53 * hash) + enablementFlow_;
+    }
+    if (hasType()) {
+      hash = (37 * hash) + TYPE_FIELD_NUMBER;
+      hash = (53 * hash) + type_;
     }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
@@ -546,6 +758,7 @@ private static final long serialVersionUID = 0L;
       bitField0_ = 0;
       providerInUse_ = 0;
       enablementFlow_ = 0;
+      type_ = 0;
       return this;
     }
 
@@ -588,6 +801,10 @@ private static final long serialVersionUID = 0L;
         result.enablementFlow_ = enablementFlow_;
         to_bitField0_ |= 0x00000002;
       }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.type_ = type_;
+        to_bitField0_ |= 0x00000004;
+      }
       result.bitField0_ |= to_bitField0_;
     }
 
@@ -608,6 +825,9 @@ private static final long serialVersionUID = 0L;
       }
       if (other.hasEnablementFlow()) {
         setEnablementFlow(other.getEnablementFlow());
+      }
+      if (other.hasType()) {
+        setType(other.getType());
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -659,6 +879,18 @@ private static final long serialVersionUID = 0L;
               }
               break;
             } // case 16
+            case 24: {
+              int tmpRaw = input.readEnum();
+              com.google.wireless.android.sdk.stats.BackupAndSyncEvent.Type tmpValue =
+                  com.google.wireless.android.sdk.stats.BackupAndSyncEvent.Type.forNumber(tmpRaw);
+              if (tmpValue == null) {
+                mergeUnknownVarintField(3, tmpRaw);
+              } else {
+                type_ = tmpRaw;
+                bitField0_ |= 0x00000004;
+              }
+              break;
+            } // case 24
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -756,6 +988,48 @@ private static final long serialVersionUID = 0L;
     public Builder clearEnablementFlow() {
       bitField0_ = (bitField0_ & ~0x00000002);
       enablementFlow_ = 0;
+      onChanged();
+      return this;
+    }
+
+    private int type_ = 0;
+    /**
+     * <code>optional .android_studio.BackupAndSyncEvent.Type type = 3;</code>
+     * @return Whether the type field is set.
+     */
+    @java.lang.Override public boolean hasType() {
+      return ((bitField0_ & 0x00000004) != 0);
+    }
+    /**
+     * <code>optional .android_studio.BackupAndSyncEvent.Type type = 3;</code>
+     * @return The type.
+     */
+    @java.lang.Override
+    public com.google.wireless.android.sdk.stats.BackupAndSyncEvent.Type getType() {
+      com.google.wireless.android.sdk.stats.BackupAndSyncEvent.Type result = com.google.wireless.android.sdk.stats.BackupAndSyncEvent.Type.forNumber(type_);
+      return result == null ? com.google.wireless.android.sdk.stats.BackupAndSyncEvent.Type.TYPE_UNKNOWN : result;
+    }
+    /**
+     * <code>optional .android_studio.BackupAndSyncEvent.Type type = 3;</code>
+     * @param value The type to set.
+     * @return This builder for chaining.
+     */
+    public Builder setType(com.google.wireless.android.sdk.stats.BackupAndSyncEvent.Type value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      bitField0_ |= 0x00000004;
+      type_ = value.getNumber();
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>optional .android_studio.BackupAndSyncEvent.Type type = 3;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearType() {
+      bitField0_ = (bitField0_ & ~0x00000004);
+      type_ = 0;
       onChanged();
       return this;
     }

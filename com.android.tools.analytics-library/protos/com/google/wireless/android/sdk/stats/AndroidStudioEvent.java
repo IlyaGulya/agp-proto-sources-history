@@ -3378,6 +3378,22 @@ private static final long serialVersionUID = 0L;
      * <code>ADVERTISER_NOTIFICATION_EVENT = 358;</code>
      */
     ADVERTISER_NOTIFICATION_EVENT(358),
+    /**
+     * <pre>
+     * Event related to Asset Studio Wizard
+     * </pre>
+     *
+     * <code>ASSET_STUDIO_WIZARD_EVENT = 359;</code>
+     */
+    ASSET_STUDIO_WIZARD_EVENT(359),
+    /**
+     * <pre>
+     * Event related to Next Edit Prediction
+     * </pre>
+     *
+     * <code>NEXT_EDIT_PREDICTION_EVENT = 360;</code>
+     */
+    NEXT_EDIT_PREDICTION_EVENT(360),
     ;
 
     /**
@@ -6065,6 +6081,22 @@ private static final long serialVersionUID = 0L;
      * <code>ADVERTISER_NOTIFICATION_EVENT = 358;</code>
      */
     public static final int ADVERTISER_NOTIFICATION_EVENT_VALUE = 358;
+    /**
+     * <pre>
+     * Event related to Asset Studio Wizard
+     * </pre>
+     *
+     * <code>ASSET_STUDIO_WIZARD_EVENT = 359;</code>
+     */
+    public static final int ASSET_STUDIO_WIZARD_EVENT_VALUE = 359;
+    /**
+     * <pre>
+     * Event related to Next Edit Prediction
+     * </pre>
+     *
+     * <code>NEXT_EDIT_PREDICTION_EVENT = 360;</code>
+     */
+    public static final int NEXT_EDIT_PREDICTION_EVENT_VALUE = 360;
 
 
     public final int getNumber() {
@@ -6441,6 +6473,8 @@ private static final long serialVersionUID = 0L;
         case 356: return MODEL_PROVIDER_EVENT;
         case 357: return MARKETING_EMAIL_EVENT;
         case 358: return ADVERTISER_NOTIFICATION_EVENT;
+        case 359: return ASSET_STUDIO_WIZARD_EVENT;
+        case 360: return NEXT_EDIT_PREDICTION_EVENT;
         default: return null;
       }
     }
@@ -12210,7 +12244,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional uint32 min_sdk = 2 [deprecated = true];</code>
        * @deprecated android_studio.AndroidStudioEvent.TemplatesUsage.TemplateModule.min_sdk is deprecated.
-       *     See studio_stats.proto;l=2095
+       *     See studio_stats.proto;l=2108
        * @return Whether the minSdk field is set.
        */
       @java.lang.Deprecated boolean hasMinSdk();
@@ -12221,7 +12255,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional uint32 min_sdk = 2 [deprecated = true];</code>
        * @deprecated android_studio.AndroidStudioEvent.TemplatesUsage.TemplateModule.min_sdk is deprecated.
-       *     See studio_stats.proto;l=2095
+       *     See studio_stats.proto;l=2108
        * @return The minSdk.
        */
       @java.lang.Deprecated int getMinSdk();
@@ -12752,7 +12786,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional uint32 min_sdk = 2 [deprecated = true];</code>
        * @deprecated android_studio.AndroidStudioEvent.TemplatesUsage.TemplateModule.min_sdk is deprecated.
-       *     See studio_stats.proto;l=2095
+       *     See studio_stats.proto;l=2108
        * @return Whether the minSdk field is set.
        */
       @java.lang.Override
@@ -12766,7 +12800,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional uint32 min_sdk = 2 [deprecated = true];</code>
        * @deprecated android_studio.AndroidStudioEvent.TemplatesUsage.TemplateModule.min_sdk is deprecated.
-       *     See studio_stats.proto;l=2095
+       *     See studio_stats.proto;l=2108
        * @return The minSdk.
        */
       @java.lang.Override
@@ -13404,7 +13438,7 @@ private static final long serialVersionUID = 0L;
          *
          * <code>optional uint32 min_sdk = 2 [deprecated = true];</code>
          * @deprecated android_studio.AndroidStudioEvent.TemplatesUsage.TemplateModule.min_sdk is deprecated.
-         *     See studio_stats.proto;l=2095
+         *     See studio_stats.proto;l=2108
          * @return Whether the minSdk field is set.
          */
         @java.lang.Override
@@ -13418,7 +13452,7 @@ private static final long serialVersionUID = 0L;
          *
          * <code>optional uint32 min_sdk = 2 [deprecated = true];</code>
          * @deprecated android_studio.AndroidStudioEvent.TemplatesUsage.TemplateModule.min_sdk is deprecated.
-         *     See studio_stats.proto;l=2095
+         *     See studio_stats.proto;l=2108
          * @return The minSdk.
          */
         @java.lang.Override
@@ -13432,7 +13466,7 @@ private static final long serialVersionUID = 0L;
          *
          * <code>optional uint32 min_sdk = 2 [deprecated = true];</code>
          * @deprecated android_studio.AndroidStudioEvent.TemplatesUsage.TemplateModule.min_sdk is deprecated.
-         *     See studio_stats.proto;l=2095
+         *     See studio_stats.proto;l=2108
          * @param value The minSdk to set.
          * @return This builder for chaining.
          */
@@ -13450,7 +13484,7 @@ private static final long serialVersionUID = 0L;
          *
          * <code>optional uint32 min_sdk = 2 [deprecated = true];</code>
          * @deprecated android_studio.AndroidStudioEvent.TemplatesUsage.TemplateModule.min_sdk is deprecated.
-         *     See studio_stats.proto;l=2095
+         *     See studio_stats.proto;l=2108
          * @return This builder for chaining.
          */
         @java.lang.Deprecated public Builder clearMinSdk() {
@@ -25236,6 +25270,82 @@ private static final long serialVersionUID = 0L;
     return advertiserNotificationEvent_ == null ? com.google.wireless.android.sdk.stats.AdvertiserNotificationEvent.getDefaultInstance() : advertiserNotificationEvent_;
   }
 
+  public static final int ASSET_STUDIO_WIZARD_EVENT_FIELD_NUMBER = 240;
+  private com.google.wireless.android.sdk.stats.AssetStudioWizardEvent assetStudioWizardEvent_;
+  /**
+   * <pre>
+   * set when kind = ASSET_STUDIO_WIZARD_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.AssetStudioWizardEvent asset_studio_wizard_event = 240 [lazy = true];</code>
+   * @return Whether the assetStudioWizardEvent field is set.
+   */
+  @java.lang.Override
+  public boolean hasAssetStudioWizardEvent() {
+    return ((bitField7_ & 0x00000200) != 0);
+  }
+  /**
+   * <pre>
+   * set when kind = ASSET_STUDIO_WIZARD_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.AssetStudioWizardEvent asset_studio_wizard_event = 240 [lazy = true];</code>
+   * @return The assetStudioWizardEvent.
+   */
+  @java.lang.Override
+  public com.google.wireless.android.sdk.stats.AssetStudioWizardEvent getAssetStudioWizardEvent() {
+    return assetStudioWizardEvent_ == null ? com.google.wireless.android.sdk.stats.AssetStudioWizardEvent.getDefaultInstance() : assetStudioWizardEvent_;
+  }
+  /**
+   * <pre>
+   * set when kind = ASSET_STUDIO_WIZARD_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.AssetStudioWizardEvent asset_studio_wizard_event = 240 [lazy = true];</code>
+   */
+  @java.lang.Override
+  public com.google.wireless.android.sdk.stats.AssetStudioWizardEventOrBuilder getAssetStudioWizardEventOrBuilder() {
+    return assetStudioWizardEvent_ == null ? com.google.wireless.android.sdk.stats.AssetStudioWizardEvent.getDefaultInstance() : assetStudioWizardEvent_;
+  }
+
+  public static final int NEXT_EDIT_PREDICTION_EVENT_FIELD_NUMBER = 241;
+  private com.google.wireless.android.sdk.stats.NextEditPredictionEvent nextEditPredictionEvent_;
+  /**
+   * <pre>
+   * set when kind = NEXT_EDIT_PREDICTION_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.NextEditPredictionEvent next_edit_prediction_event = 241 [lazy = true];</code>
+   * @return Whether the nextEditPredictionEvent field is set.
+   */
+  @java.lang.Override
+  public boolean hasNextEditPredictionEvent() {
+    return ((bitField7_ & 0x00000400) != 0);
+  }
+  /**
+   * <pre>
+   * set when kind = NEXT_EDIT_PREDICTION_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.NextEditPredictionEvent next_edit_prediction_event = 241 [lazy = true];</code>
+   * @return The nextEditPredictionEvent.
+   */
+  @java.lang.Override
+  public com.google.wireless.android.sdk.stats.NextEditPredictionEvent getNextEditPredictionEvent() {
+    return nextEditPredictionEvent_ == null ? com.google.wireless.android.sdk.stats.NextEditPredictionEvent.getDefaultInstance() : nextEditPredictionEvent_;
+  }
+  /**
+   * <pre>
+   * set when kind = NEXT_EDIT_PREDICTION_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.NextEditPredictionEvent next_edit_prediction_event = 241 [lazy = true];</code>
+   */
+  @java.lang.Override
+  public com.google.wireless.android.sdk.stats.NextEditPredictionEventOrBuilder getNextEditPredictionEventOrBuilder() {
+    return nextEditPredictionEvent_ == null ? com.google.wireless.android.sdk.stats.NextEditPredictionEvent.getDefaultInstance() : nextEditPredictionEvent_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -25966,6 +26076,12 @@ private static final long serialVersionUID = 0L;
     }
     if (((bitField7_ & 0x00000100) != 0)) {
       output.writeMessage(239, getAdvertiserNotificationEvent());
+    }
+    if (((bitField7_ & 0x00000200) != 0)) {
+      output.writeMessage(240, getAssetStudioWizardEvent());
+    }
+    if (((bitField7_ & 0x00000400) != 0)) {
+      output.writeMessage(241, getNextEditPredictionEvent());
     }
     getUnknownFields().writeTo(output);
   }
@@ -26937,6 +27053,14 @@ private static final long serialVersionUID = 0L;
     if (((bitField7_ & 0x00000100) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(239, getAdvertiserNotificationEvent());
+    }
+    if (((bitField7_ & 0x00000200) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(240, getAssetStudioWizardEvent());
+    }
+    if (((bitField7_ & 0x00000400) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(241, getNextEditPredictionEvent());
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -28119,6 +28243,16 @@ private static final long serialVersionUID = 0L;
       if (!getAdvertiserNotificationEvent()
           .equals(other.getAdvertiserNotificationEvent())) return false;
     }
+    if (hasAssetStudioWizardEvent() != other.hasAssetStudioWizardEvent()) return false;
+    if (hasAssetStudioWizardEvent()) {
+      if (!getAssetStudioWizardEvent()
+          .equals(other.getAssetStudioWizardEvent())) return false;
+    }
+    if (hasNextEditPredictionEvent() != other.hasNextEditPredictionEvent()) return false;
+    if (hasNextEditPredictionEvent()) {
+      if (!getNextEditPredictionEvent()
+          .equals(other.getNextEditPredictionEvent())) return false;
+    }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -29088,6 +29222,14 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + ADVERTISER_NOTIFICATION_EVENT_FIELD_NUMBER;
       hash = (53 * hash) + getAdvertiserNotificationEvent().hashCode();
     }
+    if (hasAssetStudioWizardEvent()) {
+      hash = (37 * hash) + ASSET_STUDIO_WIZARD_EVENT_FIELD_NUMBER;
+      hash = (53 * hash) + getAssetStudioWizardEvent().hashCode();
+    }
+    if (hasNextEditPredictionEvent()) {
+      hash = (37 * hash) + NEXT_EDIT_PREDICTION_EVENT_FIELD_NUMBER;
+      hash = (53 * hash) + getNextEditPredictionEvent().hashCode();
+    }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -29432,6 +29574,8 @@ private static final long serialVersionUID = 0L;
         getModelProviderEventFieldBuilder();
         getMarketingEmailEventFieldBuilder();
         getAdvertiserNotificationEventFieldBuilder();
+        getAssetStudioWizardEventFieldBuilder();
+        getNextEditPredictionEventFieldBuilder();
       }
     }
     @java.lang.Override
@@ -30556,6 +30700,16 @@ private static final long serialVersionUID = 0L;
       if (advertiserNotificationEventBuilder_ != null) {
         advertiserNotificationEventBuilder_.dispose();
         advertiserNotificationEventBuilder_ = null;
+      }
+      assetStudioWizardEvent_ = null;
+      if (assetStudioWizardEventBuilder_ != null) {
+        assetStudioWizardEventBuilder_.dispose();
+        assetStudioWizardEventBuilder_ = null;
+      }
+      nextEditPredictionEvent_ = null;
+      if (nextEditPredictionEventBuilder_ != null) {
+        nextEditPredictionEventBuilder_.dispose();
+        nextEditPredictionEventBuilder_ = null;
       }
       return this;
     }
@@ -32051,6 +32205,18 @@ private static final long serialVersionUID = 0L;
             : advertiserNotificationEventBuilder_.build();
         to_bitField7_ |= 0x00000100;
       }
+      if (((from_bitField7_ & 0x00008000) != 0)) {
+        result.assetStudioWizardEvent_ = assetStudioWizardEventBuilder_ == null
+            ? assetStudioWizardEvent_
+            : assetStudioWizardEventBuilder_.build();
+        to_bitField7_ |= 0x00000200;
+      }
+      if (((from_bitField7_ & 0x00010000) != 0)) {
+        result.nextEditPredictionEvent_ = nextEditPredictionEventBuilder_ == null
+            ? nextEditPredictionEvent_
+            : nextEditPredictionEventBuilder_.build();
+        to_bitField7_ |= 0x00000400;
+      }
       result.bitField6_ |= to_bitField6_;
       result.bitField7_ |= to_bitField7_;
     }
@@ -32887,6 +33053,12 @@ private static final long serialVersionUID = 0L;
       }
       if (other.hasAdvertiserNotificationEvent()) {
         mergeAdvertiserNotificationEvent(other.getAdvertiserNotificationEvent());
+      }
+      if (other.hasAssetStudioWizardEvent()) {
+        mergeAssetStudioWizardEvent(other.getAssetStudioWizardEvent());
+      }
+      if (other.hasNextEditPredictionEvent()) {
+        mergeNextEditPredictionEvent(other.getNextEditPredictionEvent());
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -34655,6 +34827,20 @@ private static final long serialVersionUID = 0L;
               bitField7_ |= 0x00004000;
               break;
             } // case 1914
+            case 1922: {
+              input.readMessage(
+                  getAssetStudioWizardEventFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField7_ |= 0x00008000;
+              break;
+            } // case 1922
+            case 1930: {
+              input.readMessage(
+                  getNextEditPredictionEventFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField7_ |= 0x00010000;
+              break;
+            } // case 1930
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -71060,6 +71246,316 @@ private static final long serialVersionUID = 0L;
         advertiserNotificationEvent_ = null;
       }
       return advertiserNotificationEventBuilder_;
+    }
+
+    private com.google.wireless.android.sdk.stats.AssetStudioWizardEvent assetStudioWizardEvent_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.AssetStudioWizardEvent, com.google.wireless.android.sdk.stats.AssetStudioWizardEvent.Builder, com.google.wireless.android.sdk.stats.AssetStudioWizardEventOrBuilder> assetStudioWizardEventBuilder_;
+    /**
+     * <pre>
+     * set when kind = ASSET_STUDIO_WIZARD_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.AssetStudioWizardEvent asset_studio_wizard_event = 240 [lazy = true];</code>
+     * @return Whether the assetStudioWizardEvent field is set.
+     */
+    public boolean hasAssetStudioWizardEvent() {
+      return ((bitField7_ & 0x00008000) != 0);
+    }
+    /**
+     * <pre>
+     * set when kind = ASSET_STUDIO_WIZARD_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.AssetStudioWizardEvent asset_studio_wizard_event = 240 [lazy = true];</code>
+     * @return The assetStudioWizardEvent.
+     */
+    public com.google.wireless.android.sdk.stats.AssetStudioWizardEvent getAssetStudioWizardEvent() {
+      if (assetStudioWizardEventBuilder_ == null) {
+        return assetStudioWizardEvent_ == null ? com.google.wireless.android.sdk.stats.AssetStudioWizardEvent.getDefaultInstance() : assetStudioWizardEvent_;
+      } else {
+        return assetStudioWizardEventBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * set when kind = ASSET_STUDIO_WIZARD_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.AssetStudioWizardEvent asset_studio_wizard_event = 240 [lazy = true];</code>
+     */
+    public Builder setAssetStudioWizardEvent(com.google.wireless.android.sdk.stats.AssetStudioWizardEvent value) {
+      if (assetStudioWizardEventBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        assetStudioWizardEvent_ = value;
+      } else {
+        assetStudioWizardEventBuilder_.setMessage(value);
+      }
+      bitField7_ |= 0x00008000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = ASSET_STUDIO_WIZARD_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.AssetStudioWizardEvent asset_studio_wizard_event = 240 [lazy = true];</code>
+     */
+    public Builder setAssetStudioWizardEvent(
+        com.google.wireless.android.sdk.stats.AssetStudioWizardEvent.Builder builderForValue) {
+      if (assetStudioWizardEventBuilder_ == null) {
+        assetStudioWizardEvent_ = builderForValue.build();
+      } else {
+        assetStudioWizardEventBuilder_.setMessage(builderForValue.build());
+      }
+      bitField7_ |= 0x00008000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = ASSET_STUDIO_WIZARD_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.AssetStudioWizardEvent asset_studio_wizard_event = 240 [lazy = true];</code>
+     */
+    public Builder mergeAssetStudioWizardEvent(com.google.wireless.android.sdk.stats.AssetStudioWizardEvent value) {
+      if (assetStudioWizardEventBuilder_ == null) {
+        if (((bitField7_ & 0x00008000) != 0) &&
+          assetStudioWizardEvent_ != null &&
+          assetStudioWizardEvent_ != com.google.wireless.android.sdk.stats.AssetStudioWizardEvent.getDefaultInstance()) {
+          getAssetStudioWizardEventBuilder().mergeFrom(value);
+        } else {
+          assetStudioWizardEvent_ = value;
+        }
+      } else {
+        assetStudioWizardEventBuilder_.mergeFrom(value);
+      }
+      bitField7_ |= 0x00008000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = ASSET_STUDIO_WIZARD_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.AssetStudioWizardEvent asset_studio_wizard_event = 240 [lazy = true];</code>
+     */
+    public Builder clearAssetStudioWizardEvent() {
+      bitField7_ = (bitField7_ & ~0x00008000);
+      assetStudioWizardEvent_ = null;
+      if (assetStudioWizardEventBuilder_ != null) {
+        assetStudioWizardEventBuilder_.dispose();
+        assetStudioWizardEventBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = ASSET_STUDIO_WIZARD_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.AssetStudioWizardEvent asset_studio_wizard_event = 240 [lazy = true];</code>
+     */
+    public com.google.wireless.android.sdk.stats.AssetStudioWizardEvent.Builder getAssetStudioWizardEventBuilder() {
+      bitField7_ |= 0x00008000;
+      onChanged();
+      return getAssetStudioWizardEventFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * set when kind = ASSET_STUDIO_WIZARD_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.AssetStudioWizardEvent asset_studio_wizard_event = 240 [lazy = true];</code>
+     */
+    public com.google.wireless.android.sdk.stats.AssetStudioWizardEventOrBuilder getAssetStudioWizardEventOrBuilder() {
+      if (assetStudioWizardEventBuilder_ != null) {
+        return assetStudioWizardEventBuilder_.getMessageOrBuilder();
+      } else {
+        return assetStudioWizardEvent_ == null ?
+            com.google.wireless.android.sdk.stats.AssetStudioWizardEvent.getDefaultInstance() : assetStudioWizardEvent_;
+      }
+    }
+    /**
+     * <pre>
+     * set when kind = ASSET_STUDIO_WIZARD_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.AssetStudioWizardEvent asset_studio_wizard_event = 240 [lazy = true];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.AssetStudioWizardEvent, com.google.wireless.android.sdk.stats.AssetStudioWizardEvent.Builder, com.google.wireless.android.sdk.stats.AssetStudioWizardEventOrBuilder> 
+        getAssetStudioWizardEventFieldBuilder() {
+      if (assetStudioWizardEventBuilder_ == null) {
+        assetStudioWizardEventBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.wireless.android.sdk.stats.AssetStudioWizardEvent, com.google.wireless.android.sdk.stats.AssetStudioWizardEvent.Builder, com.google.wireless.android.sdk.stats.AssetStudioWizardEventOrBuilder>(
+                getAssetStudioWizardEvent(),
+                getParentForChildren(),
+                isClean());
+        assetStudioWizardEvent_ = null;
+      }
+      return assetStudioWizardEventBuilder_;
+    }
+
+    private com.google.wireless.android.sdk.stats.NextEditPredictionEvent nextEditPredictionEvent_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.NextEditPredictionEvent, com.google.wireless.android.sdk.stats.NextEditPredictionEvent.Builder, com.google.wireless.android.sdk.stats.NextEditPredictionEventOrBuilder> nextEditPredictionEventBuilder_;
+    /**
+     * <pre>
+     * set when kind = NEXT_EDIT_PREDICTION_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.NextEditPredictionEvent next_edit_prediction_event = 241 [lazy = true];</code>
+     * @return Whether the nextEditPredictionEvent field is set.
+     */
+    public boolean hasNextEditPredictionEvent() {
+      return ((bitField7_ & 0x00010000) != 0);
+    }
+    /**
+     * <pre>
+     * set when kind = NEXT_EDIT_PREDICTION_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.NextEditPredictionEvent next_edit_prediction_event = 241 [lazy = true];</code>
+     * @return The nextEditPredictionEvent.
+     */
+    public com.google.wireless.android.sdk.stats.NextEditPredictionEvent getNextEditPredictionEvent() {
+      if (nextEditPredictionEventBuilder_ == null) {
+        return nextEditPredictionEvent_ == null ? com.google.wireless.android.sdk.stats.NextEditPredictionEvent.getDefaultInstance() : nextEditPredictionEvent_;
+      } else {
+        return nextEditPredictionEventBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * set when kind = NEXT_EDIT_PREDICTION_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.NextEditPredictionEvent next_edit_prediction_event = 241 [lazy = true];</code>
+     */
+    public Builder setNextEditPredictionEvent(com.google.wireless.android.sdk.stats.NextEditPredictionEvent value) {
+      if (nextEditPredictionEventBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        nextEditPredictionEvent_ = value;
+      } else {
+        nextEditPredictionEventBuilder_.setMessage(value);
+      }
+      bitField7_ |= 0x00010000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = NEXT_EDIT_PREDICTION_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.NextEditPredictionEvent next_edit_prediction_event = 241 [lazy = true];</code>
+     */
+    public Builder setNextEditPredictionEvent(
+        com.google.wireless.android.sdk.stats.NextEditPredictionEvent.Builder builderForValue) {
+      if (nextEditPredictionEventBuilder_ == null) {
+        nextEditPredictionEvent_ = builderForValue.build();
+      } else {
+        nextEditPredictionEventBuilder_.setMessage(builderForValue.build());
+      }
+      bitField7_ |= 0x00010000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = NEXT_EDIT_PREDICTION_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.NextEditPredictionEvent next_edit_prediction_event = 241 [lazy = true];</code>
+     */
+    public Builder mergeNextEditPredictionEvent(com.google.wireless.android.sdk.stats.NextEditPredictionEvent value) {
+      if (nextEditPredictionEventBuilder_ == null) {
+        if (((bitField7_ & 0x00010000) != 0) &&
+          nextEditPredictionEvent_ != null &&
+          nextEditPredictionEvent_ != com.google.wireless.android.sdk.stats.NextEditPredictionEvent.getDefaultInstance()) {
+          getNextEditPredictionEventBuilder().mergeFrom(value);
+        } else {
+          nextEditPredictionEvent_ = value;
+        }
+      } else {
+        nextEditPredictionEventBuilder_.mergeFrom(value);
+      }
+      bitField7_ |= 0x00010000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = NEXT_EDIT_PREDICTION_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.NextEditPredictionEvent next_edit_prediction_event = 241 [lazy = true];</code>
+     */
+    public Builder clearNextEditPredictionEvent() {
+      bitField7_ = (bitField7_ & ~0x00010000);
+      nextEditPredictionEvent_ = null;
+      if (nextEditPredictionEventBuilder_ != null) {
+        nextEditPredictionEventBuilder_.dispose();
+        nextEditPredictionEventBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = NEXT_EDIT_PREDICTION_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.NextEditPredictionEvent next_edit_prediction_event = 241 [lazy = true];</code>
+     */
+    public com.google.wireless.android.sdk.stats.NextEditPredictionEvent.Builder getNextEditPredictionEventBuilder() {
+      bitField7_ |= 0x00010000;
+      onChanged();
+      return getNextEditPredictionEventFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * set when kind = NEXT_EDIT_PREDICTION_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.NextEditPredictionEvent next_edit_prediction_event = 241 [lazy = true];</code>
+     */
+    public com.google.wireless.android.sdk.stats.NextEditPredictionEventOrBuilder getNextEditPredictionEventOrBuilder() {
+      if (nextEditPredictionEventBuilder_ != null) {
+        return nextEditPredictionEventBuilder_.getMessageOrBuilder();
+      } else {
+        return nextEditPredictionEvent_ == null ?
+            com.google.wireless.android.sdk.stats.NextEditPredictionEvent.getDefaultInstance() : nextEditPredictionEvent_;
+      }
+    }
+    /**
+     * <pre>
+     * set when kind = NEXT_EDIT_PREDICTION_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.NextEditPredictionEvent next_edit_prediction_event = 241 [lazy = true];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.NextEditPredictionEvent, com.google.wireless.android.sdk.stats.NextEditPredictionEvent.Builder, com.google.wireless.android.sdk.stats.NextEditPredictionEventOrBuilder> 
+        getNextEditPredictionEventFieldBuilder() {
+      if (nextEditPredictionEventBuilder_ == null) {
+        nextEditPredictionEventBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.wireless.android.sdk.stats.NextEditPredictionEvent, com.google.wireless.android.sdk.stats.NextEditPredictionEvent.Builder, com.google.wireless.android.sdk.stats.NextEditPredictionEventOrBuilder>(
+                getNextEditPredictionEvent(),
+                getParentForChildren(),
+                isClean());
+        nextEditPredictionEvent_ = null;
+      }
+      return nextEditPredictionEventBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

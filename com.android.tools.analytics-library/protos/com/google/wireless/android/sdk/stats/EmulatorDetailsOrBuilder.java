@@ -969,4 +969,31 @@ public interface EmulatorDetailsOrBuilder extends
    * <code>optional .android_studio.EmulatorCompatibilityInfo emu_compat_info = 40;</code>
    */
   com.google.wireless.android.sdk.stats.EmulatorCompatibilityInfoOrBuilder getEmuCompatInfoOrBuilder();
+
+  /**
+   * <pre>
+   * In-use Vulkan GPU
+   * </pre>
+   *
+   * <code>optional .android_studio.EmulatorGpuVkInfo active_vulkan_host_gpu = 41;</code>
+   * @return Whether the activeVulkanHostGpu field is set.
+   */
+  boolean hasActiveVulkanHostGpu();
+  /**
+   * <pre>
+   * In-use Vulkan GPU
+   * </pre>
+   *
+   * <code>optional .android_studio.EmulatorGpuVkInfo active_vulkan_host_gpu = 41;</code>
+   * @return The activeVulkanHostGpu.
+   */
+  com.google.wireless.android.sdk.stats.EmulatorGpuVkInfo getActiveVulkanHostGpu();
+  /**
+   * <pre>
+   * In-use Vulkan GPU
+   * </pre>
+   *
+   * <code>optional .android_studio.EmulatorGpuVkInfo active_vulkan_host_gpu = 41;</code>
+   */
+  com.google.wireless.android.sdk.stats.EmulatorGpuVkInfoOrBuilder getActiveVulkanHostGpuOrBuilder();
 }
