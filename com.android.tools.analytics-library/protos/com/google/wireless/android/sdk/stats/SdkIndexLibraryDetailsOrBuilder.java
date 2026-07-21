@@ -96,7 +96,7 @@ public interface SdkIndexLibraryDetailsOrBuilder extends
 
   /**
    * <pre>
-   * Is this library reported as blocking publising on Google Play?
+   * Is this library reported as blocking publishing on Google Play?
    * </pre>
    *
    * <code>optional bool is_blocking = 4;</code>
@@ -105,7 +105,7 @@ public interface SdkIndexLibraryDetailsOrBuilder extends
   boolean hasIsBlocking();
   /**
    * <pre>
-   * Is this library reported as blocking publising on Google Play?
+   * Is this library reported as blocking publishing on Google Play?
    * </pre>
    *
    * <code>optional bool is_blocking = 4;</code>
