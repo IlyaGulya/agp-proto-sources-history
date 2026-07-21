@@ -889,6 +889,10 @@ private static final long serialVersionUID = 0L;
      * <code>TASK_SETTINGS_OPENED = 810;</code>
      */
     TASK_SETTINGS_OPENED(810),
+    /**
+     * <code>LEAK_CANARY_EVENT = 820;</code>
+     */
+    LEAK_CANARY_EVENT(820),
     ;
 
     /**
@@ -1378,6 +1382,10 @@ private static final long serialVersionUID = 0L;
      * <code>TASK_SETTINGS_OPENED = 810;</code>
      */
     public static final int TASK_SETTINGS_OPENED_VALUE = 810;
+    /**
+     * <code>LEAK_CANARY_EVENT = 820;</code>
+     */
+    public static final int LEAK_CANARY_EVENT_VALUE = 820;
 
 
     public final int getNumber() {
@@ -1492,6 +1500,7 @@ private static final long serialVersionUID = 0L;
         case 801: return TASK_FINISHED;
         case 802: return TASK_FAILED;
         case 810: return TASK_SETTINGS_OPENED;
+        case 820: return LEAK_CANARY_EVENT;
         default: return null;
       }
     }
@@ -3333,7 +3342,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>optional .android_studio.CpuProfilingConfig cpu_config = 3 [deprecated = true, lazy = true];</code>
    * @deprecated android_studio.AndroidProfilerEvent.cpu_config is deprecated.
-   *     See studio_stats.proto;l=8748
+   *     See studio_stats.proto;l=8841
    * @return Whether the cpuConfig field is set.
    */
   @java.lang.Override
@@ -3348,7 +3357,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>optional .android_studio.CpuProfilingConfig cpu_config = 3 [deprecated = true, lazy = true];</code>
    * @deprecated android_studio.AndroidProfilerEvent.cpu_config is deprecated.
-   *     See studio_stats.proto;l=8748
+   *     See studio_stats.proto;l=8841
    * @return The cpuConfig.
    */
   @java.lang.Override
@@ -4398,6 +4407,44 @@ private static final long serialVersionUID = 0L;
     return isTaskSettingsChanged_;
   }
 
+  public static final int LEAKCANARY_METADATA_FIELD_NUMBER = 32;
+  private com.google.wireless.android.sdk.stats.LeakCanaryTaskMetadata leakcanaryMetadata_;
+  /**
+   * <pre>
+   * Set if |type| is related to LeakCanary tasks
+   * </pre>
+   *
+   * <code>optional .android_studio.LeakCanaryTaskMetadata leakcanary_metadata = 32 [lazy = true];</code>
+   * @return Whether the leakcanaryMetadata field is set.
+   */
+  @java.lang.Override
+  public boolean hasLeakcanaryMetadata() {
+    return ((bitField0_ & 0x80000000) != 0);
+  }
+  /**
+   * <pre>
+   * Set if |type| is related to LeakCanary tasks
+   * </pre>
+   *
+   * <code>optional .android_studio.LeakCanaryTaskMetadata leakcanary_metadata = 32 [lazy = true];</code>
+   * @return The leakcanaryMetadata.
+   */
+  @java.lang.Override
+  public com.google.wireless.android.sdk.stats.LeakCanaryTaskMetadata getLeakcanaryMetadata() {
+    return leakcanaryMetadata_ == null ? com.google.wireless.android.sdk.stats.LeakCanaryTaskMetadata.getDefaultInstance() : leakcanaryMetadata_;
+  }
+  /**
+   * <pre>
+   * Set if |type| is related to LeakCanary tasks
+   * </pre>
+   *
+   * <code>optional .android_studio.LeakCanaryTaskMetadata leakcanary_metadata = 32 [lazy = true];</code>
+   */
+  @java.lang.Override
+  public com.google.wireless.android.sdk.stats.LeakCanaryTaskMetadataOrBuilder getLeakcanaryMetadataOrBuilder() {
+    return leakcanaryMetadata_ == null ? com.google.wireless.android.sdk.stats.LeakCanaryTaskMetadata.getDefaultInstance() : leakcanaryMetadata_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -4504,6 +4551,9 @@ private static final long serialVersionUID = 0L;
     }
     if (((bitField0_ & 0x40000000) != 0)) {
       output.writeBool(31, isTaskSettingsChanged_);
+    }
+    if (((bitField0_ & 0x80000000) != 0)) {
+      output.writeMessage(32, getLeakcanaryMetadata());
     }
     getUnknownFields().writeTo(output);
   }
@@ -4637,6 +4687,10 @@ private static final long serialVersionUID = 0L;
     if (((bitField0_ & 0x40000000) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeBoolSize(31, isTaskSettingsChanged_);
+    }
+    if (((bitField0_ & 0x80000000) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(32, getLeakcanaryMetadata());
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -4805,6 +4859,11 @@ private static final long serialVersionUID = 0L;
       if (getIsTaskSettingsChanged()
           != other.getIsTaskSettingsChanged()) return false;
     }
+    if (hasLeakcanaryMetadata() != other.hasLeakcanaryMetadata()) return false;
+    if (hasLeakcanaryMetadata()) {
+      if (!getLeakcanaryMetadata()
+          .equals(other.getLeakcanaryMetadata())) return false;
+    }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -4940,6 +4999,10 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + IS_TASK_SETTINGS_CHANGED_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
           getIsTaskSettingsChanged());
+    }
+    if (hasLeakcanaryMetadata()) {
+      hash = (37 * hash) + LEAKCANARY_METADATA_FIELD_NUMBER;
+      hash = (53 * hash) + getLeakcanaryMetadata().hashCode();
     }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
@@ -5099,6 +5162,7 @@ private static final long serialVersionUID = 0L;
         getTaskEnteredMetadataFieldBuilder();
         getTaskFinishedMetadataFieldBuilder();
         getTaskFailedMetadataFieldBuilder();
+        getLeakcanaryMetadataFieldBuilder();
       }
     }
     @java.lang.Override
@@ -5240,6 +5304,11 @@ private static final long serialVersionUID = 0L;
         taskFailedMetadataBuilder_ = null;
       }
       isTaskSettingsChanged_ = false;
+      leakcanaryMetadata_ = null;
+      if (leakcanaryMetadataBuilder_ != null) {
+        leakcanaryMetadataBuilder_.dispose();
+        leakcanaryMetadataBuilder_ = null;
+      }
       return this;
     }
 
@@ -5450,6 +5519,12 @@ private static final long serialVersionUID = 0L;
         result.isTaskSettingsChanged_ = isTaskSettingsChanged_;
         to_bitField0_ |= 0x40000000;
       }
+      if (((from_bitField0_ & 0x80000000) != 0)) {
+        result.leakcanaryMetadata_ = leakcanaryMetadataBuilder_ == null
+            ? leakcanaryMetadata_
+            : leakcanaryMetadataBuilder_.build();
+        to_bitField0_ |= 0x80000000;
+      }
       result.bitField0_ |= to_bitField0_;
     }
 
@@ -5557,6 +5632,9 @@ private static final long serialVersionUID = 0L;
       }
       if (other.hasIsTaskSettingsChanged()) {
         setIsTaskSettingsChanged(other.getIsTaskSettingsChanged());
+      }
+      if (other.hasLeakcanaryMetadata()) {
+        mergeLeakcanaryMetadata(other.getLeakcanaryMetadata());
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -5812,6 +5890,13 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x40000000;
               break;
             } // case 248
+            case 258: {
+              input.readMessage(
+                  getLeakcanaryMetadataFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x80000000;
+              break;
+            } // case 258
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -5956,7 +6041,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional .android_studio.CpuProfilingConfig cpu_config = 3 [deprecated = true, lazy = true];</code>
      * @deprecated android_studio.AndroidProfilerEvent.cpu_config is deprecated.
-     *     See studio_stats.proto;l=8748
+     *     See studio_stats.proto;l=8841
      * @return Whether the cpuConfig field is set.
      */
     @java.lang.Deprecated public boolean hasCpuConfig() {
@@ -5970,7 +6055,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional .android_studio.CpuProfilingConfig cpu_config = 3 [deprecated = true, lazy = true];</code>
      * @deprecated android_studio.AndroidProfilerEvent.cpu_config is deprecated.
-     *     See studio_stats.proto;l=8748
+     *     See studio_stats.proto;l=8841
      * @return The cpuConfig.
      */
     @java.lang.Deprecated public com.google.wireless.android.sdk.stats.CpuProfilingConfig getCpuConfig() {
@@ -10156,6 +10241,161 @@ private static final long serialVersionUID = 0L;
       isTaskSettingsChanged_ = false;
       onChanged();
       return this;
+    }
+
+    private com.google.wireless.android.sdk.stats.LeakCanaryTaskMetadata leakcanaryMetadata_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.LeakCanaryTaskMetadata, com.google.wireless.android.sdk.stats.LeakCanaryTaskMetadata.Builder, com.google.wireless.android.sdk.stats.LeakCanaryTaskMetadataOrBuilder> leakcanaryMetadataBuilder_;
+    /**
+     * <pre>
+     * Set if |type| is related to LeakCanary tasks
+     * </pre>
+     *
+     * <code>optional .android_studio.LeakCanaryTaskMetadata leakcanary_metadata = 32 [lazy = true];</code>
+     * @return Whether the leakcanaryMetadata field is set.
+     */
+    public boolean hasLeakcanaryMetadata() {
+      return ((bitField0_ & 0x80000000) != 0);
+    }
+    /**
+     * <pre>
+     * Set if |type| is related to LeakCanary tasks
+     * </pre>
+     *
+     * <code>optional .android_studio.LeakCanaryTaskMetadata leakcanary_metadata = 32 [lazy = true];</code>
+     * @return The leakcanaryMetadata.
+     */
+    public com.google.wireless.android.sdk.stats.LeakCanaryTaskMetadata getLeakcanaryMetadata() {
+      if (leakcanaryMetadataBuilder_ == null) {
+        return leakcanaryMetadata_ == null ? com.google.wireless.android.sdk.stats.LeakCanaryTaskMetadata.getDefaultInstance() : leakcanaryMetadata_;
+      } else {
+        return leakcanaryMetadataBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * Set if |type| is related to LeakCanary tasks
+     * </pre>
+     *
+     * <code>optional .android_studio.LeakCanaryTaskMetadata leakcanary_metadata = 32 [lazy = true];</code>
+     */
+    public Builder setLeakcanaryMetadata(com.google.wireless.android.sdk.stats.LeakCanaryTaskMetadata value) {
+      if (leakcanaryMetadataBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        leakcanaryMetadata_ = value;
+      } else {
+        leakcanaryMetadataBuilder_.setMessage(value);
+      }
+      bitField0_ |= 0x80000000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Set if |type| is related to LeakCanary tasks
+     * </pre>
+     *
+     * <code>optional .android_studio.LeakCanaryTaskMetadata leakcanary_metadata = 32 [lazy = true];</code>
+     */
+    public Builder setLeakcanaryMetadata(
+        com.google.wireless.android.sdk.stats.LeakCanaryTaskMetadata.Builder builderForValue) {
+      if (leakcanaryMetadataBuilder_ == null) {
+        leakcanaryMetadata_ = builderForValue.build();
+      } else {
+        leakcanaryMetadataBuilder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x80000000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Set if |type| is related to LeakCanary tasks
+     * </pre>
+     *
+     * <code>optional .android_studio.LeakCanaryTaskMetadata leakcanary_metadata = 32 [lazy = true];</code>
+     */
+    public Builder mergeLeakcanaryMetadata(com.google.wireless.android.sdk.stats.LeakCanaryTaskMetadata value) {
+      if (leakcanaryMetadataBuilder_ == null) {
+        if (((bitField0_ & 0x80000000) != 0) &&
+          leakcanaryMetadata_ != null &&
+          leakcanaryMetadata_ != com.google.wireless.android.sdk.stats.LeakCanaryTaskMetadata.getDefaultInstance()) {
+          getLeakcanaryMetadataBuilder().mergeFrom(value);
+        } else {
+          leakcanaryMetadata_ = value;
+        }
+      } else {
+        leakcanaryMetadataBuilder_.mergeFrom(value);
+      }
+      bitField0_ |= 0x80000000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Set if |type| is related to LeakCanary tasks
+     * </pre>
+     *
+     * <code>optional .android_studio.LeakCanaryTaskMetadata leakcanary_metadata = 32 [lazy = true];</code>
+     */
+    public Builder clearLeakcanaryMetadata() {
+      bitField0_ = (bitField0_ & ~0x80000000);
+      leakcanaryMetadata_ = null;
+      if (leakcanaryMetadataBuilder_ != null) {
+        leakcanaryMetadataBuilder_.dispose();
+        leakcanaryMetadataBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Set if |type| is related to LeakCanary tasks
+     * </pre>
+     *
+     * <code>optional .android_studio.LeakCanaryTaskMetadata leakcanary_metadata = 32 [lazy = true];</code>
+     */
+    public com.google.wireless.android.sdk.stats.LeakCanaryTaskMetadata.Builder getLeakcanaryMetadataBuilder() {
+      bitField0_ |= 0x80000000;
+      onChanged();
+      return getLeakcanaryMetadataFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * Set if |type| is related to LeakCanary tasks
+     * </pre>
+     *
+     * <code>optional .android_studio.LeakCanaryTaskMetadata leakcanary_metadata = 32 [lazy = true];</code>
+     */
+    public com.google.wireless.android.sdk.stats.LeakCanaryTaskMetadataOrBuilder getLeakcanaryMetadataOrBuilder() {
+      if (leakcanaryMetadataBuilder_ != null) {
+        return leakcanaryMetadataBuilder_.getMessageOrBuilder();
+      } else {
+        return leakcanaryMetadata_ == null ?
+            com.google.wireless.android.sdk.stats.LeakCanaryTaskMetadata.getDefaultInstance() : leakcanaryMetadata_;
+      }
+    }
+    /**
+     * <pre>
+     * Set if |type| is related to LeakCanary tasks
+     * </pre>
+     *
+     * <code>optional .android_studio.LeakCanaryTaskMetadata leakcanary_metadata = 32 [lazy = true];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.LeakCanaryTaskMetadata, com.google.wireless.android.sdk.stats.LeakCanaryTaskMetadata.Builder, com.google.wireless.android.sdk.stats.LeakCanaryTaskMetadataOrBuilder> 
+        getLeakcanaryMetadataFieldBuilder() {
+      if (leakcanaryMetadataBuilder_ == null) {
+        leakcanaryMetadataBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.wireless.android.sdk.stats.LeakCanaryTaskMetadata, com.google.wireless.android.sdk.stats.LeakCanaryTaskMetadata.Builder, com.google.wireless.android.sdk.stats.LeakCanaryTaskMetadataOrBuilder>(
+                getLeakcanaryMetadata(),
+                getParentForChildren(),
+                isClean());
+        leakcanaryMetadata_ = null;
+      }
+      return leakcanaryMetadataBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

@@ -53,7 +53,7 @@ public interface AndroidProfilerEventOrBuilder extends
    *
    * <code>optional .android_studio.CpuProfilingConfig cpu_config = 3 [deprecated = true, lazy = true];</code>
    * @deprecated android_studio.AndroidProfilerEvent.cpu_config is deprecated.
-   *     See studio_stats.proto;l=8748
+   *     See studio_stats.proto;l=8841
    * @return Whether the cpuConfig field is set.
    */
   @java.lang.Deprecated boolean hasCpuConfig();
@@ -65,7 +65,7 @@ public interface AndroidProfilerEventOrBuilder extends
    *
    * <code>optional .android_studio.CpuProfilingConfig cpu_config = 3 [deprecated = true, lazy = true];</code>
    * @deprecated android_studio.AndroidProfilerEvent.cpu_config is deprecated.
-   *     See studio_stats.proto;l=8748
+   *     See studio_stats.proto;l=8841
    * @return The cpuConfig.
    */
   @java.lang.Deprecated com.google.wireless.android.sdk.stats.CpuProfilingConfig getCpuConfig();
@@ -810,4 +810,31 @@ public interface AndroidProfilerEventOrBuilder extends
    * @return The isTaskSettingsChanged.
    */
   boolean getIsTaskSettingsChanged();
+
+  /**
+   * <pre>
+   * Set if |type| is related to LeakCanary tasks
+   * </pre>
+   *
+   * <code>optional .android_studio.LeakCanaryTaskMetadata leakcanary_metadata = 32 [lazy = true];</code>
+   * @return Whether the leakcanaryMetadata field is set.
+   */
+  boolean hasLeakcanaryMetadata();
+  /**
+   * <pre>
+   * Set if |type| is related to LeakCanary tasks
+   * </pre>
+   *
+   * <code>optional .android_studio.LeakCanaryTaskMetadata leakcanary_metadata = 32 [lazy = true];</code>
+   * @return The leakcanaryMetadata.
+   */
+  com.google.wireless.android.sdk.stats.LeakCanaryTaskMetadata getLeakcanaryMetadata();
+  /**
+   * <pre>
+   * Set if |type| is related to LeakCanary tasks
+   * </pre>
+   *
+   * <code>optional .android_studio.LeakCanaryTaskMetadata leakcanary_metadata = 32 [lazy = true];</code>
+   */
+  com.google.wireless.android.sdk.stats.LeakCanaryTaskMetadataOrBuilder getLeakcanaryMetadataOrBuilder();
 }

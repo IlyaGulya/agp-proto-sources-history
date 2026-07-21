@@ -549,4 +549,31 @@ public interface AppQualityInsightsUsageEventOrBuilder extends
    * <code>optional .android_studio.AppQualityInsightsUsageEvent.AgentActionDetails agent_action_details = 21 [lazy = true];</code>
    */
   com.google.wireless.android.sdk.stats.AppQualityInsightsUsageEvent.AgentActionDetailsOrBuilder getAgentActionDetailsOrBuilder();
+
+  /**
+   * <pre>
+   * set when type = GENERATE_INSIGHTS_ACTION
+   * </pre>
+   *
+   * <code>optional .android_studio.AppQualityInsightsUsageEvent.GenerateInsightsAction generate_insights_action = 22 [lazy = true];</code>
+   * @return Whether the generateInsightsAction field is set.
+   */
+  boolean hasGenerateInsightsAction();
+  /**
+   * <pre>
+   * set when type = GENERATE_INSIGHTS_ACTION
+   * </pre>
+   *
+   * <code>optional .android_studio.AppQualityInsightsUsageEvent.GenerateInsightsAction generate_insights_action = 22 [lazy = true];</code>
+   * @return The generateInsightsAction.
+   */
+  com.google.wireless.android.sdk.stats.AppQualityInsightsUsageEvent.GenerateInsightsAction getGenerateInsightsAction();
+  /**
+   * <pre>
+   * set when type = GENERATE_INSIGHTS_ACTION
+   * </pre>
+   *
+   * <code>optional .android_studio.AppQualityInsightsUsageEvent.GenerateInsightsAction generate_insights_action = 22 [lazy = true];</code>
+   */
+  com.google.wireless.android.sdk.stats.AppQualityInsightsUsageEvent.GenerateInsightsActionOrBuilder getGenerateInsightsActionOrBuilder();
 }

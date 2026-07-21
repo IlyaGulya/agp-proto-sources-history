@@ -219,6 +219,10 @@ private static final long serialVersionUID = 0L;
      * <code>GAME_TOOLS = 7;</code>
      */
     GAME_TOOLS(7),
+    /**
+     * <code>SHERLOCK = 8;</code>
+     */
+    SHERLOCK(8),
     ;
 
     /**
@@ -253,6 +257,10 @@ private static final long serialVersionUID = 0L;
      * <code>GAME_TOOLS = 7;</code>
      */
     public static final int GAME_TOOLS_VALUE = 7;
+    /**
+     * <code>SHERLOCK = 8;</code>
+     */
+    public static final int SHERLOCK_VALUE = 8;
 
 
     public final int getNumber() {
@@ -283,6 +291,7 @@ private static final long serialVersionUID = 0L;
         case 5: return STUDIO_PATCH_UPDATER;
         case 6: return VS_PLUGIN;
         case 7: return GAME_TOOLS;
+        case 8: return SHERLOCK;
         default: return null;
       }
     }
@@ -1449,7 +1458,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>optional bool preview = 4 [deprecated = true];</code>
    * @deprecated android_studio.ProductDetails.preview is deprecated.
-   *     See studio_stats.proto;l=2811
+   *     See studio_stats.proto;l=2822
    * @return Whether the preview field is set.
    */
   @java.lang.Override
@@ -1464,7 +1473,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>optional bool preview = 4 [deprecated = true];</code>
    * @deprecated android_studio.ProductDetails.preview is deprecated.
-   *     See studio_stats.proto;l=2811
+   *     See studio_stats.proto;l=2822
    * @return The preview.
    */
   @java.lang.Override
@@ -2693,7 +2702,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional bool preview = 4 [deprecated = true];</code>
      * @deprecated android_studio.ProductDetails.preview is deprecated.
-     *     See studio_stats.proto;l=2811
+     *     See studio_stats.proto;l=2822
      * @return Whether the preview field is set.
      */
     @java.lang.Override
@@ -2708,7 +2717,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional bool preview = 4 [deprecated = true];</code>
      * @deprecated android_studio.ProductDetails.preview is deprecated.
-     *     See studio_stats.proto;l=2811
+     *     See studio_stats.proto;l=2822
      * @return The preview.
      */
     @java.lang.Override
@@ -2723,7 +2732,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional bool preview = 4 [deprecated = true];</code>
      * @deprecated android_studio.ProductDetails.preview is deprecated.
-     *     See studio_stats.proto;l=2811
+     *     See studio_stats.proto;l=2822
      * @param value The preview to set.
      * @return This builder for chaining.
      */
@@ -2742,7 +2751,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional bool preview = 4 [deprecated = true];</code>
      * @deprecated android_studio.ProductDetails.preview is deprecated.
-     *     See studio_stats.proto;l=2811
+     *     See studio_stats.proto;l=2822
      * @return This builder for chaining.
      */
     @java.lang.Deprecated public Builder clearPreview() {

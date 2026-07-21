@@ -3512,6 +3512,22 @@ private static final long serialVersionUID = 0L;
      * <code>ANDROID_CLI_INVOCATION = 374;</code>
      */
     ANDROID_CLI_INVOCATION(374),
+    /**
+     * <pre>
+     * Event related to unit test generation.
+     * </pre>
+     *
+     * <code>UNIT_TEST_GENERATION_EVENT = 375;</code>
+     */
+    UNIT_TEST_GENERATION_EVENT(375),
+    /**
+     * <pre>
+     * Start time and daily Sherlock ping with version &amp; os details.
+     * </pre>
+     *
+     * <code>SHERLOCK_PING = 376;</code>
+     */
+    SHERLOCK_PING(376),
     ;
 
     /**
@@ -6315,6 +6331,22 @@ private static final long serialVersionUID = 0L;
      * <code>ANDROID_CLI_INVOCATION = 374;</code>
      */
     public static final int ANDROID_CLI_INVOCATION_VALUE = 374;
+    /**
+     * <pre>
+     * Event related to unit test generation.
+     * </pre>
+     *
+     * <code>UNIT_TEST_GENERATION_EVENT = 375;</code>
+     */
+    public static final int UNIT_TEST_GENERATION_EVENT_VALUE = 375;
+    /**
+     * <pre>
+     * Start time and daily Sherlock ping with version &amp; os details.
+     * </pre>
+     *
+     * <code>SHERLOCK_PING = 376;</code>
+     */
+    public static final int SHERLOCK_PING_VALUE = 376;
 
 
     public final int getNumber() {
@@ -6707,6 +6739,8 @@ private static final long serialVersionUID = 0L;
         case 372: return GRADLE_JVM_INCOMPATIBLE_DIALOG_OPEN_SETTINGS;
         case 373: return GRADLE_JVM_INCOMPATIBLE_DIALOG_CANCEL;
         case 374: return ANDROID_CLI_INVOCATION;
+        case 375: return UNIT_TEST_GENERATION_EVENT;
+        case 376: return SHERLOCK_PING;
         default: return null;
       }
     }
@@ -13672,7 +13706,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional uint32 min_sdk = 2 [deprecated = true];</code>
        * @deprecated android_studio.AndroidStudioEvent.TemplatesUsage.TemplateModule.min_sdk is deprecated.
-       *     See studio_stats.proto;l=2180
+       *     See studio_stats.proto;l=2191
        * @return Whether the minSdk field is set.
        */
       @java.lang.Deprecated boolean hasMinSdk();
@@ -13683,7 +13717,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional uint32 min_sdk = 2 [deprecated = true];</code>
        * @deprecated android_studio.AndroidStudioEvent.TemplatesUsage.TemplateModule.min_sdk is deprecated.
-       *     See studio_stats.proto;l=2180
+       *     See studio_stats.proto;l=2191
        * @return The minSdk.
        */
       @java.lang.Deprecated int getMinSdk();
@@ -14214,7 +14248,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional uint32 min_sdk = 2 [deprecated = true];</code>
        * @deprecated android_studio.AndroidStudioEvent.TemplatesUsage.TemplateModule.min_sdk is deprecated.
-       *     See studio_stats.proto;l=2180
+       *     See studio_stats.proto;l=2191
        * @return Whether the minSdk field is set.
        */
       @java.lang.Override
@@ -14228,7 +14262,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional uint32 min_sdk = 2 [deprecated = true];</code>
        * @deprecated android_studio.AndroidStudioEvent.TemplatesUsage.TemplateModule.min_sdk is deprecated.
-       *     See studio_stats.proto;l=2180
+       *     See studio_stats.proto;l=2191
        * @return The minSdk.
        */
       @java.lang.Override
@@ -14866,7 +14900,7 @@ private static final long serialVersionUID = 0L;
          *
          * <code>optional uint32 min_sdk = 2 [deprecated = true];</code>
          * @deprecated android_studio.AndroidStudioEvent.TemplatesUsage.TemplateModule.min_sdk is deprecated.
-         *     See studio_stats.proto;l=2180
+         *     See studio_stats.proto;l=2191
          * @return Whether the minSdk field is set.
          */
         @java.lang.Override
@@ -14880,7 +14914,7 @@ private static final long serialVersionUID = 0L;
          *
          * <code>optional uint32 min_sdk = 2 [deprecated = true];</code>
          * @deprecated android_studio.AndroidStudioEvent.TemplatesUsage.TemplateModule.min_sdk is deprecated.
-         *     See studio_stats.proto;l=2180
+         *     See studio_stats.proto;l=2191
          * @return The minSdk.
          */
         @java.lang.Override
@@ -14894,7 +14928,7 @@ private static final long serialVersionUID = 0L;
          *
          * <code>optional uint32 min_sdk = 2 [deprecated = true];</code>
          * @deprecated android_studio.AndroidStudioEvent.TemplatesUsage.TemplateModule.min_sdk is deprecated.
-         *     See studio_stats.proto;l=2180
+         *     See studio_stats.proto;l=2191
          * @param value The minSdk to set.
          * @return This builder for chaining.
          */
@@ -14912,7 +14946,7 @@ private static final long serialVersionUID = 0L;
          *
          * <code>optional uint32 min_sdk = 2 [deprecated = true];</code>
          * @deprecated android_studio.AndroidStudioEvent.TemplatesUsage.TemplateModule.min_sdk is deprecated.
-         *     See studio_stats.proto;l=2180
+         *     See studio_stats.proto;l=2191
          * @return This builder for chaining.
          */
         @java.lang.Deprecated public Builder clearMinSdk() {
@@ -17405,7 +17439,8 @@ private static final long serialVersionUID = 0L;
    * or kind = EMULATOR_PING
    * or kind = TEST_RUN
    * or kind = GAME_TOOLS_PING
-   * or kind = AGDE_PING.
+   * or kind = AGDE_PING
+   * or kind = SHERLOCK_PING
    * The version field is set for most messages.
    * </pre>
    *
@@ -17424,7 +17459,8 @@ private static final long serialVersionUID = 0L;
    * or kind = EMULATOR_PING
    * or kind = TEST_RUN
    * or kind = GAME_TOOLS_PING
-   * or kind = AGDE_PING.
+   * or kind = AGDE_PING
+   * or kind = SHERLOCK_PING
    * The version field is set for most messages.
    * </pre>
    *
@@ -17443,7 +17479,8 @@ private static final long serialVersionUID = 0L;
    * or kind = EMULATOR_PING
    * or kind = TEST_RUN
    * or kind = GAME_TOOLS_PING
-   * or kind = AGDE_PING.
+   * or kind = AGDE_PING
+   * or kind = SHERLOCK_PING
    * The version field is set for most messages.
    * </pre>
    *
@@ -17464,7 +17501,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>optional .android_studio.AndroidStudioEvent.MonitorType monitor_type = 5 [deprecated = true];</code>
    * @deprecated android_studio.AndroidStudioEvent.monitor_type is deprecated.
-   *     See studio_stats.proto;l=38
+   *     See studio_stats.proto;l=39
    * @return Whether the monitorType field is set.
    */
   @java.lang.Override @java.lang.Deprecated public boolean hasMonitorType() {
@@ -17478,7 +17515,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>optional .android_studio.AndroidStudioEvent.MonitorType monitor_type = 5 [deprecated = true];</code>
    * @deprecated android_studio.AndroidStudioEvent.monitor_type is deprecated.
-   *     See studio_stats.proto;l=38
+   *     See studio_stats.proto;l=39
    * @return The monitorType.
    */
   @java.lang.Override @java.lang.Deprecated public com.google.wireless.android.sdk.stats.AndroidStudioEvent.MonitorType getMonitorType() {
@@ -17496,7 +17533,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>optional bool monitor_paused = 6 [deprecated = true];</code>
    * @deprecated android_studio.AndroidStudioEvent.monitor_paused is deprecated.
-   *     See studio_stats.proto;l=42
+   *     See studio_stats.proto;l=43
    * @return Whether the monitorPaused field is set.
    */
   @java.lang.Override
@@ -17511,7 +17548,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>optional bool monitor_paused = 6 [deprecated = true];</code>
    * @deprecated android_studio.AndroidStudioEvent.monitor_paused is deprecated.
-   *     See studio_stats.proto;l=42
+   *     See studio_stats.proto;l=43
    * @return The monitorPaused.
    */
   @java.lang.Override
@@ -17529,7 +17566,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>optional .android_studio.AndroidStudioEvent.ProfilerCaptureType profiler_capture_type = 7 [deprecated = true];</code>
    * @deprecated android_studio.AndroidStudioEvent.profiler_capture_type is deprecated.
-   *     See studio_stats.proto;l=46
+   *     See studio_stats.proto;l=47
    * @return Whether the profilerCaptureType field is set.
    */
   @java.lang.Override @java.lang.Deprecated public boolean hasProfilerCaptureType() {
@@ -17543,7 +17580,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>optional .android_studio.AndroidStudioEvent.ProfilerCaptureType profiler_capture_type = 7 [deprecated = true];</code>
    * @deprecated android_studio.AndroidStudioEvent.profiler_capture_type is deprecated.
-   *     See studio_stats.proto;l=46
+   *     See studio_stats.proto;l=47
    * @return The profilerCaptureType.
    */
   @java.lang.Override @java.lang.Deprecated public com.google.wireless.android.sdk.stats.AndroidStudioEvent.ProfilerCaptureType getProfilerCaptureType() {
@@ -17649,7 +17686,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>optional .android_studio.AndroidStudioEvent.RunConfigurationType run_configuration_type = 10 [deprecated = true];</code>
    * @deprecated android_studio.AndroidStudioEvent.run_configuration_type is deprecated.
-   *     See studio_stats.proto;l=56
+   *     See studio_stats.proto;l=57
    * @return Whether the runConfigurationType field is set.
    */
   @java.lang.Override @java.lang.Deprecated public boolean hasRunConfigurationType() {
@@ -17663,7 +17700,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>optional .android_studio.AndroidStudioEvent.RunConfigurationType run_configuration_type = 10 [deprecated = true];</code>
    * @deprecated android_studio.AndroidStudioEvent.run_configuration_type is deprecated.
-   *     See studio_stats.proto;l=56
+   *     See studio_stats.proto;l=57
    * @return The runConfigurationType.
    */
   @java.lang.Override @java.lang.Deprecated public com.google.wireless.android.sdk.stats.AndroidStudioEvent.RunConfigurationType getRunConfigurationType() {
@@ -17681,7 +17718,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>optional .android_studio.AndroidStudioEvent.DebuggerType debugger_type = 11 [deprecated = true];</code>
    * @deprecated android_studio.AndroidStudioEvent.debugger_type is deprecated.
-   *     See studio_stats.proto;l=60
+   *     See studio_stats.proto;l=61
    * @return Whether the debuggerType field is set.
    */
   @java.lang.Override @java.lang.Deprecated public boolean hasDebuggerType() {
@@ -17695,7 +17732,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>optional .android_studio.AndroidStudioEvent.DebuggerType debugger_type = 11 [deprecated = true];</code>
    * @deprecated android_studio.AndroidStudioEvent.debugger_type is deprecated.
-   *     See studio_stats.proto;l=60
+   *     See studio_stats.proto;l=61
    * @return The debuggerType.
    */
   @java.lang.Override @java.lang.Deprecated public com.google.wireless.android.sdk.stats.AndroidStudioEvent.DebuggerType getDebuggerType() {
@@ -18283,7 +18320,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>optional .android_studio.EmulatorUiEvent emulator_ui_event = 25 [deprecated = true, lazy = true];</code>
    * @deprecated android_studio.AndroidStudioEvent.emulator_ui_event is deprecated.
-   *     See studio_stats.proto;l=118
+   *     See studio_stats.proto;l=119
    * @return Whether the emulatorUiEvent field is set.
    */
   @java.lang.Override
@@ -18298,7 +18335,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>optional .android_studio.EmulatorUiEvent emulator_ui_event = 25 [deprecated = true, lazy = true];</code>
    * @deprecated android_studio.AndroidStudioEvent.emulator_ui_event is deprecated.
-   *     See studio_stats.proto;l=118
+   *     See studio_stats.proto;l=119
    * @return The emulatorUiEvent.
    */
   @java.lang.Override
@@ -18699,7 +18736,7 @@ private static final long serialVersionUID = 0L;
   private com.google.wireless.android.sdk.stats.MachineDetails machineDetails_;
   /**
    * <pre>
-   * set when kind = STUDIO_PING
+   * set when kind = STUDIO_PING or SHERLOCK_PING.
    * </pre>
    *
    * <code>optional .android_studio.MachineDetails machine_details = 35 [lazy = true];</code>
@@ -18711,7 +18748,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * set when kind = STUDIO_PING
+   * set when kind = STUDIO_PING or SHERLOCK_PING.
    * </pre>
    *
    * <code>optional .android_studio.MachineDetails machine_details = 35 [lazy = true];</code>
@@ -18723,7 +18760,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * set when kind = STUDIO_PING
+   * set when kind = STUDIO_PING or SHERLOCK_PING.
    * </pre>
    *
    * <code>optional .android_studio.MachineDetails machine_details = 35 [lazy = true];</code>
@@ -18737,7 +18774,7 @@ private static final long serialVersionUID = 0L;
   private com.google.wireless.android.sdk.stats.JvmDetails jvmDetails_;
   /**
    * <pre>
-   * set when kind = STUDIO_PING
+   * set when kind = STUDIO_PING or SHERLOCK_PING.
    * </pre>
    *
    * <code>optional .android_studio.JvmDetails jvm_details = 36 [lazy = true];</code>
@@ -18749,7 +18786,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * set when kind = STUDIO_PING
+   * set when kind = STUDIO_PING or SHERLOCK_PING.
    * </pre>
    *
    * <code>optional .android_studio.JvmDetails jvm_details = 36 [lazy = true];</code>
@@ -18761,7 +18798,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * set when kind = STUDIO_PING
+   * set when kind = STUDIO_PING or SHERLOCK_PING.
    * </pre>
    *
    * <code>optional .android_studio.JvmDetails jvm_details = 36 [lazy = true];</code>
@@ -19699,7 +19736,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>optional .android_studio.WhatsNewAssistantEvent whats_new_assistant_event = 60 [deprecated = true, lazy = true];</code>
    * @deprecated android_studio.AndroidStudioEvent.whats_new_assistant_event is deprecated.
-   *     See studio_stats.proto;l=241
+   *     See studio_stats.proto;l=242
    * @return Whether the whatsNewAssistantEvent field is set.
    */
   @java.lang.Override
@@ -19714,7 +19751,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>optional .android_studio.WhatsNewAssistantEvent whats_new_assistant_event = 60 [deprecated = true, lazy = true];</code>
    * @deprecated android_studio.AndroidStudioEvent.whats_new_assistant_event is deprecated.
-   *     See studio_stats.proto;l=241
+   *     See studio_stats.proto;l=242
    * @return The whatsNewAssistantEvent.
    */
   @java.lang.Override
@@ -19927,7 +19964,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>optional .android_studio.StudioRunEvent studio_run_event = 65 [deprecated = true, lazy = true];</code>
    * @deprecated android_studio.AndroidStudioEvent.studio_run_event is deprecated.
-   *     See studio_stats.proto;l=260
+   *     See studio_stats.proto;l=261
    * @return Whether the studioRunEvent field is set.
    */
   @java.lang.Override
@@ -19941,7 +19978,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>optional .android_studio.StudioRunEvent studio_run_event = 65 [deprecated = true, lazy = true];</code>
    * @deprecated android_studio.AndroidStudioEvent.studio_run_event is deprecated.
-   *     See studio_stats.proto;l=260
+   *     See studio_stats.proto;l=261
    * @return The studioRunEvent.
    */
   @java.lang.Override
@@ -21963,7 +22000,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>optional .android_studio.AutoImportEvent auto_import_event = 117 [deprecated = true, lazy = true];</code>
    * @deprecated android_studio.AndroidStudioEvent.auto_import_event is deprecated.
-   *     See studio_stats.proto;l=441
+   *     See studio_stats.proto;l=442
    * @return Whether the autoImportEvent field is set.
    */
   @java.lang.Override
@@ -21978,7 +22015,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>optional .android_studio.AutoImportEvent auto_import_event = 117 [deprecated = true, lazy = true];</code>
    * @deprecated android_studio.AndroidStudioEvent.auto_import_event is deprecated.
-   *     See studio_stats.proto;l=441
+   *     See studio_stats.proto;l=442
    * @return The autoImportEvent.
    */
   @java.lang.Override
@@ -27177,6 +27214,44 @@ private static final long serialVersionUID = 0L;
     return androidCliInvocation_ == null ? com.google.wireless.android.sdk.stats.AndroidCliInvocation.getDefaultInstance() : androidCliInvocation_;
   }
 
+  public static final int UNIT_TEST_GENERATION_EVENT_FIELD_NUMBER = 252;
+  private com.google.wireless.android.sdk.stats.UnitTestGenerationEvent unitTestGenerationEvent_;
+  /**
+   * <pre>
+   * set when kind = UNIT_TEST_GENERATION_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.UnitTestGenerationEvent unit_test_generation_event = 252 [lazy = true];</code>
+   * @return Whether the unitTestGenerationEvent field is set.
+   */
+  @java.lang.Override
+  public boolean hasUnitTestGenerationEvent() {
+    return ((bitField7_ & 0x00100000) != 0);
+  }
+  /**
+   * <pre>
+   * set when kind = UNIT_TEST_GENERATION_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.UnitTestGenerationEvent unit_test_generation_event = 252 [lazy = true];</code>
+   * @return The unitTestGenerationEvent.
+   */
+  @java.lang.Override
+  public com.google.wireless.android.sdk.stats.UnitTestGenerationEvent getUnitTestGenerationEvent() {
+    return unitTestGenerationEvent_ == null ? com.google.wireless.android.sdk.stats.UnitTestGenerationEvent.getDefaultInstance() : unitTestGenerationEvent_;
+  }
+  /**
+   * <pre>
+   * set when kind = UNIT_TEST_GENERATION_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.UnitTestGenerationEvent unit_test_generation_event = 252 [lazy = true];</code>
+   */
+  @java.lang.Override
+  public com.google.wireless.android.sdk.stats.UnitTestGenerationEventOrBuilder getUnitTestGenerationEventOrBuilder() {
+    return unitTestGenerationEvent_ == null ? com.google.wireless.android.sdk.stats.UnitTestGenerationEvent.getDefaultInstance() : unitTestGenerationEvent_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -27943,6 +28018,9 @@ private static final long serialVersionUID = 0L;
     }
     if (((bitField7_ & 0x00080000) != 0)) {
       output.writeMessage(251, getAndroidCliInvocation());
+    }
+    if (((bitField7_ & 0x00100000) != 0)) {
+      output.writeMessage(252, getUnitTestGenerationEvent());
     }
     getUnknownFields().writeTo(output);
   }
@@ -28962,6 +29040,10 @@ private static final long serialVersionUID = 0L;
     if (((bitField7_ & 0x00080000) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(251, getAndroidCliInvocation());
+    }
+    if (((bitField7_ & 0x00100000) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(252, getUnitTestGenerationEvent());
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -30201,6 +30283,11 @@ private static final long serialVersionUID = 0L;
       if (!getAndroidCliInvocation()
           .equals(other.getAndroidCliInvocation())) return false;
     }
+    if (hasUnitTestGenerationEvent() != other.hasUnitTestGenerationEvent()) return false;
+    if (hasUnitTestGenerationEvent()) {
+      if (!getUnitTestGenerationEvent()
+          .equals(other.getUnitTestGenerationEvent())) return false;
+    }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -31218,6 +31305,10 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + ANDROID_CLI_INVOCATION_FIELD_NUMBER;
       hash = (53 * hash) + getAndroidCliInvocation().hashCode();
     }
+    if (hasUnitTestGenerationEvent()) {
+      hash = (37 * hash) + UNIT_TEST_GENERATION_EVENT_FIELD_NUMBER;
+      hash = (53 * hash) + getUnitTestGenerationEvent().hashCode();
+    }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -31574,6 +31665,7 @@ private static final long serialVersionUID = 0L;
         getSkillsEventFieldBuilder();
         getEmulatorWindowsHypervisorMigrationEventFieldBuilder();
         getAndroidCliInvocationFieldBuilder();
+        getUnitTestGenerationEventFieldBuilder();
       }
     }
     @java.lang.Override
@@ -32760,6 +32852,11 @@ private static final long serialVersionUID = 0L;
       if (androidCliInvocationBuilder_ != null) {
         androidCliInvocationBuilder_.dispose();
         androidCliInvocationBuilder_ = null;
+      }
+      unitTestGenerationEvent_ = null;
+      if (unitTestGenerationEventBuilder_ != null) {
+        unitTestGenerationEventBuilder_.dispose();
+        unitTestGenerationEventBuilder_ = null;
       }
       return this;
     }
@@ -34330,6 +34427,12 @@ private static final long serialVersionUID = 0L;
             : androidCliInvocationBuilder_.build();
         to_bitField7_ |= 0x00080000;
       }
+      if (((from_bitField7_ & 0x08000000) != 0)) {
+        result.unitTestGenerationEvent_ = unitTestGenerationEventBuilder_ == null
+            ? unitTestGenerationEvent_
+            : unitTestGenerationEventBuilder_.build();
+        to_bitField7_ |= 0x00100000;
+      }
       result.bitField6_ |= to_bitField6_;
       result.bitField7_ |= to_bitField7_;
     }
@@ -35225,6 +35328,9 @@ private static final long serialVersionUID = 0L;
       }
       if (other.hasAndroidCliInvocation()) {
         mergeAndroidCliInvocation(other.getAndroidCliInvocation());
+      }
+      if (other.hasUnitTestGenerationEvent()) {
+        mergeUnitTestGenerationEvent(other.getUnitTestGenerationEvent());
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -37083,6 +37189,13 @@ private static final long serialVersionUID = 0L;
               bitField7_ |= 0x04000000;
               break;
             } // case 2010
+            case 2018: {
+              input.readMessage(
+                  getUnitTestGenerationEventFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField7_ |= 0x08000000;
+              break;
+            } // case 2018
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -37356,7 +37469,8 @@ private static final long serialVersionUID = 0L;
      * or kind = EMULATOR_PING
      * or kind = TEST_RUN
      * or kind = GAME_TOOLS_PING
-     * or kind = AGDE_PING.
+     * or kind = AGDE_PING
+     * or kind = SHERLOCK_PING
      * The version field is set for most messages.
      * </pre>
      *
@@ -37374,7 +37488,8 @@ private static final long serialVersionUID = 0L;
      * or kind = EMULATOR_PING
      * or kind = TEST_RUN
      * or kind = GAME_TOOLS_PING
-     * or kind = AGDE_PING.
+     * or kind = AGDE_PING
+     * or kind = SHERLOCK_PING
      * The version field is set for most messages.
      * </pre>
      *
@@ -37396,7 +37511,8 @@ private static final long serialVersionUID = 0L;
      * or kind = EMULATOR_PING
      * or kind = TEST_RUN
      * or kind = GAME_TOOLS_PING
-     * or kind = AGDE_PING.
+     * or kind = AGDE_PING
+     * or kind = SHERLOCK_PING
      * The version field is set for most messages.
      * </pre>
      *
@@ -37423,7 +37539,8 @@ private static final long serialVersionUID = 0L;
      * or kind = EMULATOR_PING
      * or kind = TEST_RUN
      * or kind = GAME_TOOLS_PING
-     * or kind = AGDE_PING.
+     * or kind = AGDE_PING
+     * or kind = SHERLOCK_PING
      * The version field is set for most messages.
      * </pre>
      *
@@ -37448,7 +37565,8 @@ private static final long serialVersionUID = 0L;
      * or kind = EMULATOR_PING
      * or kind = TEST_RUN
      * or kind = GAME_TOOLS_PING
-     * or kind = AGDE_PING.
+     * or kind = AGDE_PING
+     * or kind = SHERLOCK_PING
      * The version field is set for most messages.
      * </pre>
      *
@@ -37478,7 +37596,8 @@ private static final long serialVersionUID = 0L;
      * or kind = EMULATOR_PING
      * or kind = TEST_RUN
      * or kind = GAME_TOOLS_PING
-     * or kind = AGDE_PING.
+     * or kind = AGDE_PING
+     * or kind = SHERLOCK_PING
      * The version field is set for most messages.
      * </pre>
      *
@@ -37502,7 +37621,8 @@ private static final long serialVersionUID = 0L;
      * or kind = EMULATOR_PING
      * or kind = TEST_RUN
      * or kind = GAME_TOOLS_PING
-     * or kind = AGDE_PING.
+     * or kind = AGDE_PING
+     * or kind = SHERLOCK_PING
      * The version field is set for most messages.
      * </pre>
      *
@@ -37521,7 +37641,8 @@ private static final long serialVersionUID = 0L;
      * or kind = EMULATOR_PING
      * or kind = TEST_RUN
      * or kind = GAME_TOOLS_PING
-     * or kind = AGDE_PING.
+     * or kind = AGDE_PING
+     * or kind = SHERLOCK_PING
      * The version field is set for most messages.
      * </pre>
      *
@@ -37543,7 +37664,8 @@ private static final long serialVersionUID = 0L;
      * or kind = EMULATOR_PING
      * or kind = TEST_RUN
      * or kind = GAME_TOOLS_PING
-     * or kind = AGDE_PING.
+     * or kind = AGDE_PING
+     * or kind = SHERLOCK_PING
      * The version field is set for most messages.
      * </pre>
      *
@@ -37572,7 +37694,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional .android_studio.AndroidStudioEvent.MonitorType monitor_type = 5 [deprecated = true];</code>
      * @deprecated android_studio.AndroidStudioEvent.monitor_type is deprecated.
-     *     See studio_stats.proto;l=38
+     *     See studio_stats.proto;l=39
      * @return Whether the monitorType field is set.
      */
     @java.lang.Override @java.lang.Deprecated public boolean hasMonitorType() {
@@ -37586,7 +37708,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional .android_studio.AndroidStudioEvent.MonitorType monitor_type = 5 [deprecated = true];</code>
      * @deprecated android_studio.AndroidStudioEvent.monitor_type is deprecated.
-     *     See studio_stats.proto;l=38
+     *     See studio_stats.proto;l=39
      * @return The monitorType.
      */
     @java.lang.Override
@@ -37602,7 +37724,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional .android_studio.AndroidStudioEvent.MonitorType monitor_type = 5 [deprecated = true];</code>
      * @deprecated android_studio.AndroidStudioEvent.monitor_type is deprecated.
-     *     See studio_stats.proto;l=38
+     *     See studio_stats.proto;l=39
      * @param value The monitorType to set.
      * @return This builder for chaining.
      */
@@ -37623,7 +37745,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional .android_studio.AndroidStudioEvent.MonitorType monitor_type = 5 [deprecated = true];</code>
      * @deprecated android_studio.AndroidStudioEvent.monitor_type is deprecated.
-     *     See studio_stats.proto;l=38
+     *     See studio_stats.proto;l=39
      * @return This builder for chaining.
      */
     @java.lang.Deprecated public Builder clearMonitorType() {
@@ -37642,7 +37764,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional bool monitor_paused = 6 [deprecated = true];</code>
      * @deprecated android_studio.AndroidStudioEvent.monitor_paused is deprecated.
-     *     See studio_stats.proto;l=42
+     *     See studio_stats.proto;l=43
      * @return Whether the monitorPaused field is set.
      */
     @java.lang.Override
@@ -37657,7 +37779,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional bool monitor_paused = 6 [deprecated = true];</code>
      * @deprecated android_studio.AndroidStudioEvent.monitor_paused is deprecated.
-     *     See studio_stats.proto;l=42
+     *     See studio_stats.proto;l=43
      * @return The monitorPaused.
      */
     @java.lang.Override
@@ -37672,7 +37794,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional bool monitor_paused = 6 [deprecated = true];</code>
      * @deprecated android_studio.AndroidStudioEvent.monitor_paused is deprecated.
-     *     See studio_stats.proto;l=42
+     *     See studio_stats.proto;l=43
      * @param value The monitorPaused to set.
      * @return This builder for chaining.
      */
@@ -37691,7 +37813,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional bool monitor_paused = 6 [deprecated = true];</code>
      * @deprecated android_studio.AndroidStudioEvent.monitor_paused is deprecated.
-     *     See studio_stats.proto;l=42
+     *     See studio_stats.proto;l=43
      * @return This builder for chaining.
      */
     @java.lang.Deprecated public Builder clearMonitorPaused() {
@@ -37710,7 +37832,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional .android_studio.AndroidStudioEvent.ProfilerCaptureType profiler_capture_type = 7 [deprecated = true];</code>
      * @deprecated android_studio.AndroidStudioEvent.profiler_capture_type is deprecated.
-     *     See studio_stats.proto;l=46
+     *     See studio_stats.proto;l=47
      * @return Whether the profilerCaptureType field is set.
      */
     @java.lang.Override @java.lang.Deprecated public boolean hasProfilerCaptureType() {
@@ -37724,7 +37846,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional .android_studio.AndroidStudioEvent.ProfilerCaptureType profiler_capture_type = 7 [deprecated = true];</code>
      * @deprecated android_studio.AndroidStudioEvent.profiler_capture_type is deprecated.
-     *     See studio_stats.proto;l=46
+     *     See studio_stats.proto;l=47
      * @return The profilerCaptureType.
      */
     @java.lang.Override
@@ -37740,7 +37862,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional .android_studio.AndroidStudioEvent.ProfilerCaptureType profiler_capture_type = 7 [deprecated = true];</code>
      * @deprecated android_studio.AndroidStudioEvent.profiler_capture_type is deprecated.
-     *     See studio_stats.proto;l=46
+     *     See studio_stats.proto;l=47
      * @param value The profilerCaptureType to set.
      * @return This builder for chaining.
      */
@@ -37761,7 +37883,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional .android_studio.AndroidStudioEvent.ProfilerCaptureType profiler_capture_type = 7 [deprecated = true];</code>
      * @deprecated android_studio.AndroidStudioEvent.profiler_capture_type is deprecated.
-     *     See studio_stats.proto;l=46
+     *     See studio_stats.proto;l=47
      * @return This builder for chaining.
      */
     @java.lang.Deprecated public Builder clearProfilerCaptureType() {
@@ -37940,7 +38062,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional .android_studio.AndroidStudioEvent.RunConfigurationType run_configuration_type = 10 [deprecated = true];</code>
      * @deprecated android_studio.AndroidStudioEvent.run_configuration_type is deprecated.
-     *     See studio_stats.proto;l=56
+     *     See studio_stats.proto;l=57
      * @return Whether the runConfigurationType field is set.
      */
     @java.lang.Override @java.lang.Deprecated public boolean hasRunConfigurationType() {
@@ -37954,7 +38076,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional .android_studio.AndroidStudioEvent.RunConfigurationType run_configuration_type = 10 [deprecated = true];</code>
      * @deprecated android_studio.AndroidStudioEvent.run_configuration_type is deprecated.
-     *     See studio_stats.proto;l=56
+     *     See studio_stats.proto;l=57
      * @return The runConfigurationType.
      */
     @java.lang.Override
@@ -37970,7 +38092,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional .android_studio.AndroidStudioEvent.RunConfigurationType run_configuration_type = 10 [deprecated = true];</code>
      * @deprecated android_studio.AndroidStudioEvent.run_configuration_type is deprecated.
-     *     See studio_stats.proto;l=56
+     *     See studio_stats.proto;l=57
      * @param value The runConfigurationType to set.
      * @return This builder for chaining.
      */
@@ -37991,7 +38113,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional .android_studio.AndroidStudioEvent.RunConfigurationType run_configuration_type = 10 [deprecated = true];</code>
      * @deprecated android_studio.AndroidStudioEvent.run_configuration_type is deprecated.
-     *     See studio_stats.proto;l=56
+     *     See studio_stats.proto;l=57
      * @return This builder for chaining.
      */
     @java.lang.Deprecated public Builder clearRunConfigurationType() {
@@ -38010,7 +38132,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional .android_studio.AndroidStudioEvent.DebuggerType debugger_type = 11 [deprecated = true];</code>
      * @deprecated android_studio.AndroidStudioEvent.debugger_type is deprecated.
-     *     See studio_stats.proto;l=60
+     *     See studio_stats.proto;l=61
      * @return Whether the debuggerType field is set.
      */
     @java.lang.Override @java.lang.Deprecated public boolean hasDebuggerType() {
@@ -38024,7 +38146,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional .android_studio.AndroidStudioEvent.DebuggerType debugger_type = 11 [deprecated = true];</code>
      * @deprecated android_studio.AndroidStudioEvent.debugger_type is deprecated.
-     *     See studio_stats.proto;l=60
+     *     See studio_stats.proto;l=61
      * @return The debuggerType.
      */
     @java.lang.Override
@@ -38040,7 +38162,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional .android_studio.AndroidStudioEvent.DebuggerType debugger_type = 11 [deprecated = true];</code>
      * @deprecated android_studio.AndroidStudioEvent.debugger_type is deprecated.
-     *     See studio_stats.proto;l=60
+     *     See studio_stats.proto;l=61
      * @param value The debuggerType to set.
      * @return This builder for chaining.
      */
@@ -38061,7 +38183,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional .android_studio.AndroidStudioEvent.DebuggerType debugger_type = 11 [deprecated = true];</code>
      * @deprecated android_studio.AndroidStudioEvent.debugger_type is deprecated.
-     *     See studio_stats.proto;l=60
+     *     See studio_stats.proto;l=61
      * @return This builder for chaining.
      */
     @java.lang.Deprecated public Builder clearDebuggerType() {
@@ -39772,7 +39894,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional .android_studio.EmulatorUiEvent emulator_ui_event = 25 [deprecated = true, lazy = true];</code>
      * @deprecated android_studio.AndroidStudioEvent.emulator_ui_event is deprecated.
-     *     See studio_stats.proto;l=118
+     *     See studio_stats.proto;l=119
      * @return Whether the emulatorUiEvent field is set.
      */
     @java.lang.Deprecated public boolean hasEmulatorUiEvent() {
@@ -39786,7 +39908,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional .android_studio.EmulatorUiEvent emulator_ui_event = 25 [deprecated = true, lazy = true];</code>
      * @deprecated android_studio.AndroidStudioEvent.emulator_ui_event is deprecated.
-     *     See studio_stats.proto;l=118
+     *     See studio_stats.proto;l=119
      * @return The emulatorUiEvent.
      */
     @java.lang.Deprecated public com.google.wireless.android.sdk.stats.EmulatorUiEvent getEmulatorUiEvent() {
@@ -41305,7 +41427,7 @@ private static final long serialVersionUID = 0L;
         com.google.wireless.android.sdk.stats.MachineDetails, com.google.wireless.android.sdk.stats.MachineDetails.Builder, com.google.wireless.android.sdk.stats.MachineDetailsOrBuilder> machineDetailsBuilder_;
     /**
      * <pre>
-     * set when kind = STUDIO_PING
+     * set when kind = STUDIO_PING or SHERLOCK_PING.
      * </pre>
      *
      * <code>optional .android_studio.MachineDetails machine_details = 35 [lazy = true];</code>
@@ -41316,7 +41438,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * set when kind = STUDIO_PING
+     * set when kind = STUDIO_PING or SHERLOCK_PING.
      * </pre>
      *
      * <code>optional .android_studio.MachineDetails machine_details = 35 [lazy = true];</code>
@@ -41331,7 +41453,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * set when kind = STUDIO_PING
+     * set when kind = STUDIO_PING or SHERLOCK_PING.
      * </pre>
      *
      * <code>optional .android_studio.MachineDetails machine_details = 35 [lazy = true];</code>
@@ -41351,7 +41473,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * set when kind = STUDIO_PING
+     * set when kind = STUDIO_PING or SHERLOCK_PING.
      * </pre>
      *
      * <code>optional .android_studio.MachineDetails machine_details = 35 [lazy = true];</code>
@@ -41369,7 +41491,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * set when kind = STUDIO_PING
+     * set when kind = STUDIO_PING or SHERLOCK_PING.
      * </pre>
      *
      * <code>optional .android_studio.MachineDetails machine_details = 35 [lazy = true];</code>
@@ -41392,7 +41514,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * set when kind = STUDIO_PING
+     * set when kind = STUDIO_PING or SHERLOCK_PING.
      * </pre>
      *
      * <code>optional .android_studio.MachineDetails machine_details = 35 [lazy = true];</code>
@@ -41409,7 +41531,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * set when kind = STUDIO_PING
+     * set when kind = STUDIO_PING or SHERLOCK_PING.
      * </pre>
      *
      * <code>optional .android_studio.MachineDetails machine_details = 35 [lazy = true];</code>
@@ -41421,7 +41543,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * set when kind = STUDIO_PING
+     * set when kind = STUDIO_PING or SHERLOCK_PING.
      * </pre>
      *
      * <code>optional .android_studio.MachineDetails machine_details = 35 [lazy = true];</code>
@@ -41436,7 +41558,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * set when kind = STUDIO_PING
+     * set when kind = STUDIO_PING or SHERLOCK_PING.
      * </pre>
      *
      * <code>optional .android_studio.MachineDetails machine_details = 35 [lazy = true];</code>
@@ -41460,7 +41582,7 @@ private static final long serialVersionUID = 0L;
         com.google.wireless.android.sdk.stats.JvmDetails, com.google.wireless.android.sdk.stats.JvmDetails.Builder, com.google.wireless.android.sdk.stats.JvmDetailsOrBuilder> jvmDetailsBuilder_;
     /**
      * <pre>
-     * set when kind = STUDIO_PING
+     * set when kind = STUDIO_PING or SHERLOCK_PING.
      * </pre>
      *
      * <code>optional .android_studio.JvmDetails jvm_details = 36 [lazy = true];</code>
@@ -41471,7 +41593,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * set when kind = STUDIO_PING
+     * set when kind = STUDIO_PING or SHERLOCK_PING.
      * </pre>
      *
      * <code>optional .android_studio.JvmDetails jvm_details = 36 [lazy = true];</code>
@@ -41486,7 +41608,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * set when kind = STUDIO_PING
+     * set when kind = STUDIO_PING or SHERLOCK_PING.
      * </pre>
      *
      * <code>optional .android_studio.JvmDetails jvm_details = 36 [lazy = true];</code>
@@ -41506,7 +41628,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * set when kind = STUDIO_PING
+     * set when kind = STUDIO_PING or SHERLOCK_PING.
      * </pre>
      *
      * <code>optional .android_studio.JvmDetails jvm_details = 36 [lazy = true];</code>
@@ -41524,7 +41646,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * set when kind = STUDIO_PING
+     * set when kind = STUDIO_PING or SHERLOCK_PING.
      * </pre>
      *
      * <code>optional .android_studio.JvmDetails jvm_details = 36 [lazy = true];</code>
@@ -41547,7 +41669,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * set when kind = STUDIO_PING
+     * set when kind = STUDIO_PING or SHERLOCK_PING.
      * </pre>
      *
      * <code>optional .android_studio.JvmDetails jvm_details = 36 [lazy = true];</code>
@@ -41564,7 +41686,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * set when kind = STUDIO_PING
+     * set when kind = STUDIO_PING or SHERLOCK_PING.
      * </pre>
      *
      * <code>optional .android_studio.JvmDetails jvm_details = 36 [lazy = true];</code>
@@ -41576,7 +41698,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * set when kind = STUDIO_PING
+     * set when kind = STUDIO_PING or SHERLOCK_PING.
      * </pre>
      *
      * <code>optional .android_studio.JvmDetails jvm_details = 36 [lazy = true];</code>
@@ -41591,7 +41713,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * set when kind = STUDIO_PING
+     * set when kind = STUDIO_PING or SHERLOCK_PING.
      * </pre>
      *
      * <code>optional .android_studio.JvmDetails jvm_details = 36 [lazy = true];</code>
@@ -45298,7 +45420,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional .android_studio.WhatsNewAssistantEvent whats_new_assistant_event = 60 [deprecated = true, lazy = true];</code>
      * @deprecated android_studio.AndroidStudioEvent.whats_new_assistant_event is deprecated.
-     *     See studio_stats.proto;l=241
+     *     See studio_stats.proto;l=242
      * @return Whether the whatsNewAssistantEvent field is set.
      */
     @java.lang.Deprecated public boolean hasWhatsNewAssistantEvent() {
@@ -45312,7 +45434,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional .android_studio.WhatsNewAssistantEvent whats_new_assistant_event = 60 [deprecated = true, lazy = true];</code>
      * @deprecated android_studio.AndroidStudioEvent.whats_new_assistant_event is deprecated.
-     *     See studio_stats.proto;l=241
+     *     See studio_stats.proto;l=242
      * @return The whatsNewAssistantEvent.
      */
     @java.lang.Deprecated public com.google.wireless.android.sdk.stats.WhatsNewAssistantEvent getWhatsNewAssistantEvent() {
@@ -46052,7 +46174,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional .android_studio.StudioRunEvent studio_run_event = 65 [deprecated = true, lazy = true];</code>
      * @deprecated android_studio.AndroidStudioEvent.studio_run_event is deprecated.
-     *     See studio_stats.proto;l=260
+     *     See studio_stats.proto;l=261
      * @return Whether the studioRunEvent field is set.
      */
     @java.lang.Deprecated public boolean hasStudioRunEvent() {
@@ -46065,7 +46187,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional .android_studio.StudioRunEvent studio_run_event = 65 [deprecated = true, lazy = true];</code>
      * @deprecated android_studio.AndroidStudioEvent.studio_run_event is deprecated.
-     *     See studio_stats.proto;l=260
+     *     See studio_stats.proto;l=261
      * @return The studioRunEvent.
      */
     @java.lang.Deprecated public com.google.wireless.android.sdk.stats.StudioRunEvent getStudioRunEvent() {
@@ -54351,7 +54473,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional .android_studio.AutoImportEvent auto_import_event = 117 [deprecated = true, lazy = true];</code>
      * @deprecated android_studio.AndroidStudioEvent.auto_import_event is deprecated.
-     *     See studio_stats.proto;l=441
+     *     See studio_stats.proto;l=442
      * @return Whether the autoImportEvent field is set.
      */
     @java.lang.Deprecated public boolean hasAutoImportEvent() {
@@ -54365,7 +54487,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional .android_studio.AutoImportEvent auto_import_event = 117 [deprecated = true, lazy = true];</code>
      * @deprecated android_studio.AndroidStudioEvent.auto_import_event is deprecated.
-     *     See studio_stats.proto;l=441
+     *     See studio_stats.proto;l=442
      * @return The autoImportEvent.
      */
     @java.lang.Deprecated public com.google.wireless.android.sdk.stats.AutoImportEvent getAutoImportEvent() {
@@ -75505,6 +75627,161 @@ private static final long serialVersionUID = 0L;
         androidCliInvocation_ = null;
       }
       return androidCliInvocationBuilder_;
+    }
+
+    private com.google.wireless.android.sdk.stats.UnitTestGenerationEvent unitTestGenerationEvent_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.UnitTestGenerationEvent, com.google.wireless.android.sdk.stats.UnitTestGenerationEvent.Builder, com.google.wireless.android.sdk.stats.UnitTestGenerationEventOrBuilder> unitTestGenerationEventBuilder_;
+    /**
+     * <pre>
+     * set when kind = UNIT_TEST_GENERATION_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.UnitTestGenerationEvent unit_test_generation_event = 252 [lazy = true];</code>
+     * @return Whether the unitTestGenerationEvent field is set.
+     */
+    public boolean hasUnitTestGenerationEvent() {
+      return ((bitField7_ & 0x08000000) != 0);
+    }
+    /**
+     * <pre>
+     * set when kind = UNIT_TEST_GENERATION_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.UnitTestGenerationEvent unit_test_generation_event = 252 [lazy = true];</code>
+     * @return The unitTestGenerationEvent.
+     */
+    public com.google.wireless.android.sdk.stats.UnitTestGenerationEvent getUnitTestGenerationEvent() {
+      if (unitTestGenerationEventBuilder_ == null) {
+        return unitTestGenerationEvent_ == null ? com.google.wireless.android.sdk.stats.UnitTestGenerationEvent.getDefaultInstance() : unitTestGenerationEvent_;
+      } else {
+        return unitTestGenerationEventBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * set when kind = UNIT_TEST_GENERATION_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.UnitTestGenerationEvent unit_test_generation_event = 252 [lazy = true];</code>
+     */
+    public Builder setUnitTestGenerationEvent(com.google.wireless.android.sdk.stats.UnitTestGenerationEvent value) {
+      if (unitTestGenerationEventBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        unitTestGenerationEvent_ = value;
+      } else {
+        unitTestGenerationEventBuilder_.setMessage(value);
+      }
+      bitField7_ |= 0x08000000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = UNIT_TEST_GENERATION_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.UnitTestGenerationEvent unit_test_generation_event = 252 [lazy = true];</code>
+     */
+    public Builder setUnitTestGenerationEvent(
+        com.google.wireless.android.sdk.stats.UnitTestGenerationEvent.Builder builderForValue) {
+      if (unitTestGenerationEventBuilder_ == null) {
+        unitTestGenerationEvent_ = builderForValue.build();
+      } else {
+        unitTestGenerationEventBuilder_.setMessage(builderForValue.build());
+      }
+      bitField7_ |= 0x08000000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = UNIT_TEST_GENERATION_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.UnitTestGenerationEvent unit_test_generation_event = 252 [lazy = true];</code>
+     */
+    public Builder mergeUnitTestGenerationEvent(com.google.wireless.android.sdk.stats.UnitTestGenerationEvent value) {
+      if (unitTestGenerationEventBuilder_ == null) {
+        if (((bitField7_ & 0x08000000) != 0) &&
+          unitTestGenerationEvent_ != null &&
+          unitTestGenerationEvent_ != com.google.wireless.android.sdk.stats.UnitTestGenerationEvent.getDefaultInstance()) {
+          getUnitTestGenerationEventBuilder().mergeFrom(value);
+        } else {
+          unitTestGenerationEvent_ = value;
+        }
+      } else {
+        unitTestGenerationEventBuilder_.mergeFrom(value);
+      }
+      bitField7_ |= 0x08000000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = UNIT_TEST_GENERATION_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.UnitTestGenerationEvent unit_test_generation_event = 252 [lazy = true];</code>
+     */
+    public Builder clearUnitTestGenerationEvent() {
+      bitField7_ = (bitField7_ & ~0x08000000);
+      unitTestGenerationEvent_ = null;
+      if (unitTestGenerationEventBuilder_ != null) {
+        unitTestGenerationEventBuilder_.dispose();
+        unitTestGenerationEventBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = UNIT_TEST_GENERATION_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.UnitTestGenerationEvent unit_test_generation_event = 252 [lazy = true];</code>
+     */
+    public com.google.wireless.android.sdk.stats.UnitTestGenerationEvent.Builder getUnitTestGenerationEventBuilder() {
+      bitField7_ |= 0x08000000;
+      onChanged();
+      return getUnitTestGenerationEventFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * set when kind = UNIT_TEST_GENERATION_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.UnitTestGenerationEvent unit_test_generation_event = 252 [lazy = true];</code>
+     */
+    public com.google.wireless.android.sdk.stats.UnitTestGenerationEventOrBuilder getUnitTestGenerationEventOrBuilder() {
+      if (unitTestGenerationEventBuilder_ != null) {
+        return unitTestGenerationEventBuilder_.getMessageOrBuilder();
+      } else {
+        return unitTestGenerationEvent_ == null ?
+            com.google.wireless.android.sdk.stats.UnitTestGenerationEvent.getDefaultInstance() : unitTestGenerationEvent_;
+      }
+    }
+    /**
+     * <pre>
+     * set when kind = UNIT_TEST_GENERATION_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.UnitTestGenerationEvent unit_test_generation_event = 252 [lazy = true];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.UnitTestGenerationEvent, com.google.wireless.android.sdk.stats.UnitTestGenerationEvent.Builder, com.google.wireless.android.sdk.stats.UnitTestGenerationEventOrBuilder> 
+        getUnitTestGenerationEventFieldBuilder() {
+      if (unitTestGenerationEventBuilder_ == null) {
+        unitTestGenerationEventBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.wireless.android.sdk.stats.UnitTestGenerationEvent, com.google.wireless.android.sdk.stats.UnitTestGenerationEvent.Builder, com.google.wireless.android.sdk.stats.UnitTestGenerationEventOrBuilder>(
+                getUnitTestGenerationEvent(),
+                getParentForChildren(),
+                isClean());
+        unitTestGenerationEvent_ = null;
+      }
+      return unitTestGenerationEventBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

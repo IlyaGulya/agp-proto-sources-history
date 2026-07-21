@@ -650,6 +650,21 @@ private static final long serialVersionUID = 0L;
      */
     com.google.wireless.android.sdk.stats.TaskMetadata.NativeAllocationsTaskConfigOrBuilder getNativeAllocationsTaskConfigOrBuilder();
 
+    /**
+     * <code>.android_studio.TaskMetadata.LeakCanaryTaskConfig leakcanary_task_config = 5 [lazy = true];</code>
+     * @return Whether the leakcanaryTaskConfig field is set.
+     */
+    boolean hasLeakcanaryTaskConfig();
+    /**
+     * <code>.android_studio.TaskMetadata.LeakCanaryTaskConfig leakcanary_task_config = 5 [lazy = true];</code>
+     * @return The leakcanaryTaskConfig.
+     */
+    com.google.wireless.android.sdk.stats.TaskMetadata.LeakCanaryTaskConfig getLeakcanaryTaskConfig();
+    /**
+     * <code>.android_studio.TaskMetadata.LeakCanaryTaskConfig leakcanary_task_config = 5 [lazy = true];</code>
+     */
+    com.google.wireless.android.sdk.stats.TaskMetadata.LeakCanaryTaskConfigOrBuilder getLeakcanaryTaskConfigOrBuilder();
+
     com.google.wireless.android.sdk.stats.TaskMetadata.TaskConfig.UnionCase getUnionCase();
   }
   /**
@@ -698,6 +713,7 @@ private static final long serialVersionUID = 0L;
       JAVA_KOTLIN_METHOD_TRACE_TASK_CONFIG(2),
       JAVA_KOTLIN_METHOD_SAMPLE_TASK_CONFIG(3),
       NATIVE_ALLOCATIONS_TASK_CONFIG(4),
+      LEAKCANARY_TASK_CONFIG(5),
       UNION_NOT_SET(0);
       private final int value;
       private UnionCase(int value) {
@@ -719,6 +735,7 @@ private static final long serialVersionUID = 0L;
           case 2: return JAVA_KOTLIN_METHOD_TRACE_TASK_CONFIG;
           case 3: return JAVA_KOTLIN_METHOD_SAMPLE_TASK_CONFIG;
           case 4: return NATIVE_ALLOCATIONS_TASK_CONFIG;
+          case 5: return LEAKCANARY_TASK_CONFIG;
           case 0: return UNION_NOT_SET;
           default: return null;
         }
@@ -858,6 +875,37 @@ private static final long serialVersionUID = 0L;
       return com.google.wireless.android.sdk.stats.TaskMetadata.NativeAllocationsTaskConfig.getDefaultInstance();
     }
 
+    public static final int LEAKCANARY_TASK_CONFIG_FIELD_NUMBER = 5;
+    /**
+     * <code>.android_studio.TaskMetadata.LeakCanaryTaskConfig leakcanary_task_config = 5 [lazy = true];</code>
+     * @return Whether the leakcanaryTaskConfig field is set.
+     */
+    @java.lang.Override
+    public boolean hasLeakcanaryTaskConfig() {
+      return unionCase_ == 5;
+    }
+    /**
+     * <code>.android_studio.TaskMetadata.LeakCanaryTaskConfig leakcanary_task_config = 5 [lazy = true];</code>
+     * @return The leakcanaryTaskConfig.
+     */
+    @java.lang.Override
+    public com.google.wireless.android.sdk.stats.TaskMetadata.LeakCanaryTaskConfig getLeakcanaryTaskConfig() {
+      if (unionCase_ == 5) {
+         return (com.google.wireless.android.sdk.stats.TaskMetadata.LeakCanaryTaskConfig) union_;
+      }
+      return com.google.wireless.android.sdk.stats.TaskMetadata.LeakCanaryTaskConfig.getDefaultInstance();
+    }
+    /**
+     * <code>.android_studio.TaskMetadata.LeakCanaryTaskConfig leakcanary_task_config = 5 [lazy = true];</code>
+     */
+    @java.lang.Override
+    public com.google.wireless.android.sdk.stats.TaskMetadata.LeakCanaryTaskConfigOrBuilder getLeakcanaryTaskConfigOrBuilder() {
+      if (unionCase_ == 5) {
+         return (com.google.wireless.android.sdk.stats.TaskMetadata.LeakCanaryTaskConfig) union_;
+      }
+      return com.google.wireless.android.sdk.stats.TaskMetadata.LeakCanaryTaskConfig.getDefaultInstance();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -884,6 +932,9 @@ private static final long serialVersionUID = 0L;
       if (unionCase_ == 4) {
         output.writeMessage(4, (com.google.wireless.android.sdk.stats.TaskMetadata.NativeAllocationsTaskConfig) union_);
       }
+      if (unionCase_ == 5) {
+        output.writeMessage(5, (com.google.wireless.android.sdk.stats.TaskMetadata.LeakCanaryTaskConfig) union_);
+      }
       getUnknownFields().writeTo(output);
     }
 
@@ -908,6 +959,10 @@ private static final long serialVersionUID = 0L;
       if (unionCase_ == 4) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, (com.google.wireless.android.sdk.stats.TaskMetadata.NativeAllocationsTaskConfig) union_);
+      }
+      if (unionCase_ == 5) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(5, (com.google.wireless.android.sdk.stats.TaskMetadata.LeakCanaryTaskConfig) union_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -942,6 +997,10 @@ private static final long serialVersionUID = 0L;
           if (!getNativeAllocationsTaskConfig()
               .equals(other.getNativeAllocationsTaskConfig())) return false;
           break;
+        case 5:
+          if (!getLeakcanaryTaskConfig()
+              .equals(other.getLeakcanaryTaskConfig())) return false;
+          break;
         case 0:
         default:
       }
@@ -972,6 +1031,10 @@ private static final long serialVersionUID = 0L;
         case 4:
           hash = (37 * hash) + NATIVE_ALLOCATIONS_TASK_CONFIG_FIELD_NUMBER;
           hash = (53 * hash) + getNativeAllocationsTaskConfig().hashCode();
+          break;
+        case 5:
+          hash = (37 * hash) + LEAKCANARY_TASK_CONFIG_FIELD_NUMBER;
+          hash = (53 * hash) + getLeakcanaryTaskConfig().hashCode();
           break;
         case 0:
         default:
@@ -1117,6 +1180,9 @@ private static final long serialVersionUID = 0L;
         if (nativeAllocationsTaskConfigBuilder_ != null) {
           nativeAllocationsTaskConfigBuilder_.clear();
         }
+        if (leakcanaryTaskConfigBuilder_ != null) {
+          leakcanaryTaskConfigBuilder_.clear();
+        }
         unionCase_ = 0;
         union_ = null;
         return this;
@@ -1174,6 +1240,10 @@ private static final long serialVersionUID = 0L;
             nativeAllocationsTaskConfigBuilder_ != null) {
           result.union_ = nativeAllocationsTaskConfigBuilder_.build();
         }
+        if (unionCase_ == 5 &&
+            leakcanaryTaskConfigBuilder_ != null) {
+          result.union_ = leakcanaryTaskConfigBuilder_.build();
+        }
       }
 
       @java.lang.Override
@@ -1203,6 +1273,10 @@ private static final long serialVersionUID = 0L;
           }
           case NATIVE_ALLOCATIONS_TASK_CONFIG: {
             mergeNativeAllocationsTaskConfig(other.getNativeAllocationsTaskConfig());
+            break;
+          }
+          case LEAKCANARY_TASK_CONFIG: {
+            mergeLeakcanaryTaskConfig(other.getLeakcanaryTaskConfig());
             break;
           }
           case UNION_NOT_SET: {
@@ -1263,6 +1337,13 @@ private static final long serialVersionUID = 0L;
                 unionCase_ = 4;
                 break;
               } // case 34
+              case 42: {
+                input.readMessage(
+                    getLeakcanaryTaskConfigFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                unionCase_ = 5;
+                break;
+              } // case 42
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -1861,6 +1942,148 @@ private static final long serialVersionUID = 0L;
         unionCase_ = 4;
         onChanged();
         return nativeAllocationsTaskConfigBuilder_;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.wireless.android.sdk.stats.TaskMetadata.LeakCanaryTaskConfig, com.google.wireless.android.sdk.stats.TaskMetadata.LeakCanaryTaskConfig.Builder, com.google.wireless.android.sdk.stats.TaskMetadata.LeakCanaryTaskConfigOrBuilder> leakcanaryTaskConfigBuilder_;
+      /**
+       * <code>.android_studio.TaskMetadata.LeakCanaryTaskConfig leakcanary_task_config = 5 [lazy = true];</code>
+       * @return Whether the leakcanaryTaskConfig field is set.
+       */
+      @java.lang.Override
+      public boolean hasLeakcanaryTaskConfig() {
+        return unionCase_ == 5;
+      }
+      /**
+       * <code>.android_studio.TaskMetadata.LeakCanaryTaskConfig leakcanary_task_config = 5 [lazy = true];</code>
+       * @return The leakcanaryTaskConfig.
+       */
+      @java.lang.Override
+      public com.google.wireless.android.sdk.stats.TaskMetadata.LeakCanaryTaskConfig getLeakcanaryTaskConfig() {
+        if (leakcanaryTaskConfigBuilder_ == null) {
+          if (unionCase_ == 5) {
+            return (com.google.wireless.android.sdk.stats.TaskMetadata.LeakCanaryTaskConfig) union_;
+          }
+          return com.google.wireless.android.sdk.stats.TaskMetadata.LeakCanaryTaskConfig.getDefaultInstance();
+        } else {
+          if (unionCase_ == 5) {
+            return leakcanaryTaskConfigBuilder_.getMessage();
+          }
+          return com.google.wireless.android.sdk.stats.TaskMetadata.LeakCanaryTaskConfig.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.android_studio.TaskMetadata.LeakCanaryTaskConfig leakcanary_task_config = 5 [lazy = true];</code>
+       */
+      public Builder setLeakcanaryTaskConfig(com.google.wireless.android.sdk.stats.TaskMetadata.LeakCanaryTaskConfig value) {
+        if (leakcanaryTaskConfigBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          union_ = value;
+          onChanged();
+        } else {
+          leakcanaryTaskConfigBuilder_.setMessage(value);
+        }
+        unionCase_ = 5;
+        return this;
+      }
+      /**
+       * <code>.android_studio.TaskMetadata.LeakCanaryTaskConfig leakcanary_task_config = 5 [lazy = true];</code>
+       */
+      public Builder setLeakcanaryTaskConfig(
+          com.google.wireless.android.sdk.stats.TaskMetadata.LeakCanaryTaskConfig.Builder builderForValue) {
+        if (leakcanaryTaskConfigBuilder_ == null) {
+          union_ = builderForValue.build();
+          onChanged();
+        } else {
+          leakcanaryTaskConfigBuilder_.setMessage(builderForValue.build());
+        }
+        unionCase_ = 5;
+        return this;
+      }
+      /**
+       * <code>.android_studio.TaskMetadata.LeakCanaryTaskConfig leakcanary_task_config = 5 [lazy = true];</code>
+       */
+      public Builder mergeLeakcanaryTaskConfig(com.google.wireless.android.sdk.stats.TaskMetadata.LeakCanaryTaskConfig value) {
+        if (leakcanaryTaskConfigBuilder_ == null) {
+          if (unionCase_ == 5 &&
+              union_ != com.google.wireless.android.sdk.stats.TaskMetadata.LeakCanaryTaskConfig.getDefaultInstance()) {
+            union_ = com.google.wireless.android.sdk.stats.TaskMetadata.LeakCanaryTaskConfig.newBuilder((com.google.wireless.android.sdk.stats.TaskMetadata.LeakCanaryTaskConfig) union_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            union_ = value;
+          }
+          onChanged();
+        } else {
+          if (unionCase_ == 5) {
+            leakcanaryTaskConfigBuilder_.mergeFrom(value);
+          } else {
+            leakcanaryTaskConfigBuilder_.setMessage(value);
+          }
+        }
+        unionCase_ = 5;
+        return this;
+      }
+      /**
+       * <code>.android_studio.TaskMetadata.LeakCanaryTaskConfig leakcanary_task_config = 5 [lazy = true];</code>
+       */
+      public Builder clearLeakcanaryTaskConfig() {
+        if (leakcanaryTaskConfigBuilder_ == null) {
+          if (unionCase_ == 5) {
+            unionCase_ = 0;
+            union_ = null;
+            onChanged();
+          }
+        } else {
+          if (unionCase_ == 5) {
+            unionCase_ = 0;
+            union_ = null;
+          }
+          leakcanaryTaskConfigBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>.android_studio.TaskMetadata.LeakCanaryTaskConfig leakcanary_task_config = 5 [lazy = true];</code>
+       */
+      public com.google.wireless.android.sdk.stats.TaskMetadata.LeakCanaryTaskConfig.Builder getLeakcanaryTaskConfigBuilder() {
+        return getLeakcanaryTaskConfigFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.android_studio.TaskMetadata.LeakCanaryTaskConfig leakcanary_task_config = 5 [lazy = true];</code>
+       */
+      @java.lang.Override
+      public com.google.wireless.android.sdk.stats.TaskMetadata.LeakCanaryTaskConfigOrBuilder getLeakcanaryTaskConfigOrBuilder() {
+        if ((unionCase_ == 5) && (leakcanaryTaskConfigBuilder_ != null)) {
+          return leakcanaryTaskConfigBuilder_.getMessageOrBuilder();
+        } else {
+          if (unionCase_ == 5) {
+            return (com.google.wireless.android.sdk.stats.TaskMetadata.LeakCanaryTaskConfig) union_;
+          }
+          return com.google.wireless.android.sdk.stats.TaskMetadata.LeakCanaryTaskConfig.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.android_studio.TaskMetadata.LeakCanaryTaskConfig leakcanary_task_config = 5 [lazy = true];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.wireless.android.sdk.stats.TaskMetadata.LeakCanaryTaskConfig, com.google.wireless.android.sdk.stats.TaskMetadata.LeakCanaryTaskConfig.Builder, com.google.wireless.android.sdk.stats.TaskMetadata.LeakCanaryTaskConfigOrBuilder> 
+          getLeakcanaryTaskConfigFieldBuilder() {
+        if (leakcanaryTaskConfigBuilder_ == null) {
+          if (!(unionCase_ == 5)) {
+            union_ = com.google.wireless.android.sdk.stats.TaskMetadata.LeakCanaryTaskConfig.getDefaultInstance();
+          }
+          leakcanaryTaskConfigBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.wireless.android.sdk.stats.TaskMetadata.LeakCanaryTaskConfig, com.google.wireless.android.sdk.stats.TaskMetadata.LeakCanaryTaskConfig.Builder, com.google.wireless.android.sdk.stats.TaskMetadata.LeakCanaryTaskConfigOrBuilder>(
+                  (com.google.wireless.android.sdk.stats.TaskMetadata.LeakCanaryTaskConfig) union_,
+                  getParentForChildren(),
+                  isClean());
+          union_ = null;
+        }
+        unionCase_ = 5;
+        onChanged();
+        return leakcanaryTaskConfigBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -3908,6 +4131,690 @@ private static final long serialVersionUID = 0L;
 
     @java.lang.Override
     public com.google.wireless.android.sdk.stats.TaskMetadata.NativeAllocationsTaskConfig getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface LeakCanaryTaskConfigOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:android_studio.TaskMetadata.LeakCanaryTaskConfig)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>optional .android_studio.TaskMetadata.LeakCanaryTaskConfig.ExecutionMode execution_mode = 1;</code>
+     * @return Whether the executionMode field is set.
+     */
+    boolean hasExecutionMode();
+    /**
+     * <code>optional .android_studio.TaskMetadata.LeakCanaryTaskConfig.ExecutionMode execution_mode = 1;</code>
+     * @return The executionMode.
+     */
+    com.google.wireless.android.sdk.stats.TaskMetadata.LeakCanaryTaskConfig.ExecutionMode getExecutionMode();
+
+    /**
+     * <code>optional int32 selected_threshold = 2;</code>
+     * @return Whether the selectedThreshold field is set.
+     */
+    boolean hasSelectedThreshold();
+    /**
+     * <code>optional int32 selected_threshold = 2;</code>
+     * @return The selectedThreshold.
+     */
+    int getSelectedThreshold();
+  }
+  /**
+   * Protobuf type {@code android_studio.TaskMetadata.LeakCanaryTaskConfig}
+   */
+  public static final class LeakCanaryTaskConfig extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:android_studio.TaskMetadata.LeakCanaryTaskConfig)
+      LeakCanaryTaskConfigOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use LeakCanaryTaskConfig.newBuilder() to construct.
+    private LeakCanaryTaskConfig(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private LeakCanaryTaskConfig() {
+      executionMode_ = 0;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new LeakCanaryTaskConfig();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_TaskMetadata_LeakCanaryTaskConfig_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_TaskMetadata_LeakCanaryTaskConfig_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.google.wireless.android.sdk.stats.TaskMetadata.LeakCanaryTaskConfig.class, com.google.wireless.android.sdk.stats.TaskMetadata.LeakCanaryTaskConfig.Builder.class);
+    }
+
+    /**
+     * Protobuf enum {@code android_studio.TaskMetadata.LeakCanaryTaskConfig.ExecutionMode}
+     */
+    public enum ExecutionMode
+        implements com.google.protobuf.ProtocolMessageEnum {
+      /**
+       * <code>UNKNOWN_MODE = 0;</code>
+       */
+      UNKNOWN_MODE(0),
+      /**
+       * <code>ON_HOST = 1;</code>
+       */
+      ON_HOST(1),
+      /**
+       * <code>ON_DEVICE = 2;</code>
+       */
+      ON_DEVICE(2),
+      ;
+
+      /**
+       * <code>UNKNOWN_MODE = 0;</code>
+       */
+      public static final int UNKNOWN_MODE_VALUE = 0;
+      /**
+       * <code>ON_HOST = 1;</code>
+       */
+      public static final int ON_HOST_VALUE = 1;
+      /**
+       * <code>ON_DEVICE = 2;</code>
+       */
+      public static final int ON_DEVICE_VALUE = 2;
+
+
+      public final int getNumber() {
+        return value;
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static ExecutionMode valueOf(int value) {
+        return forNumber(value);
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       */
+      public static ExecutionMode forNumber(int value) {
+        switch (value) {
+          case 0: return UNKNOWN_MODE;
+          case 1: return ON_HOST;
+          case 2: return ON_DEVICE;
+          default: return null;
+        }
+      }
+
+      public static com.google.protobuf.Internal.EnumLiteMap<ExecutionMode>
+          internalGetValueMap() {
+        return internalValueMap;
+      }
+      private static final com.google.protobuf.Internal.EnumLiteMap<
+          ExecutionMode> internalValueMap =
+            new com.google.protobuf.Internal.EnumLiteMap<ExecutionMode>() {
+              public ExecutionMode findValueByNumber(int number) {
+                return ExecutionMode.forNumber(number);
+              }
+            };
+
+      public final com.google.protobuf.Descriptors.EnumValueDescriptor
+          getValueDescriptor() {
+        return getDescriptor().getValues().get(ordinal());
+      }
+      public final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptorForType() {
+        return getDescriptor();
+      }
+      public static final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptor() {
+        return com.google.wireless.android.sdk.stats.TaskMetadata.LeakCanaryTaskConfig.getDescriptor().getEnumTypes().get(0);
+      }
+
+      private static final ExecutionMode[] VALUES = values();
+
+      public static ExecutionMode valueOf(
+          com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+        if (desc.getType() != getDescriptor()) {
+          throw new java.lang.IllegalArgumentException(
+            "EnumValueDescriptor is not for this type.");
+        }
+        return VALUES[desc.getIndex()];
+      }
+
+      private final int value;
+
+      private ExecutionMode(int value) {
+        this.value = value;
+      }
+
+      // @@protoc_insertion_point(enum_scope:android_studio.TaskMetadata.LeakCanaryTaskConfig.ExecutionMode)
+    }
+
+    private int bitField0_;
+    public static final int EXECUTION_MODE_FIELD_NUMBER = 1;
+    private int executionMode_ = 0;
+    /**
+     * <code>optional .android_studio.TaskMetadata.LeakCanaryTaskConfig.ExecutionMode execution_mode = 1;</code>
+     * @return Whether the executionMode field is set.
+     */
+    @java.lang.Override public boolean hasExecutionMode() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <code>optional .android_studio.TaskMetadata.LeakCanaryTaskConfig.ExecutionMode execution_mode = 1;</code>
+     * @return The executionMode.
+     */
+    @java.lang.Override public com.google.wireless.android.sdk.stats.TaskMetadata.LeakCanaryTaskConfig.ExecutionMode getExecutionMode() {
+      com.google.wireless.android.sdk.stats.TaskMetadata.LeakCanaryTaskConfig.ExecutionMode result = com.google.wireless.android.sdk.stats.TaskMetadata.LeakCanaryTaskConfig.ExecutionMode.forNumber(executionMode_);
+      return result == null ? com.google.wireless.android.sdk.stats.TaskMetadata.LeakCanaryTaskConfig.ExecutionMode.UNKNOWN_MODE : result;
+    }
+
+    public static final int SELECTED_THRESHOLD_FIELD_NUMBER = 2;
+    private int selectedThreshold_ = 0;
+    /**
+     * <code>optional int32 selected_threshold = 2;</code>
+     * @return Whether the selectedThreshold field is set.
+     */
+    @java.lang.Override
+    public boolean hasSelectedThreshold() {
+      return ((bitField0_ & 0x00000002) != 0);
+    }
+    /**
+     * <code>optional int32 selected_threshold = 2;</code>
+     * @return The selectedThreshold.
+     */
+    @java.lang.Override
+    public int getSelectedThreshold() {
+      return selectedThreshold_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (((bitField0_ & 0x00000001) != 0)) {
+        output.writeEnum(1, executionMode_);
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        output.writeInt32(2, selectedThreshold_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(1, executionMode_);
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(2, selectedThreshold_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.google.wireless.android.sdk.stats.TaskMetadata.LeakCanaryTaskConfig)) {
+        return super.equals(obj);
+      }
+      com.google.wireless.android.sdk.stats.TaskMetadata.LeakCanaryTaskConfig other = (com.google.wireless.android.sdk.stats.TaskMetadata.LeakCanaryTaskConfig) obj;
+
+      if (hasExecutionMode() != other.hasExecutionMode()) return false;
+      if (hasExecutionMode()) {
+        if (executionMode_ != other.executionMode_) return false;
+      }
+      if (hasSelectedThreshold() != other.hasSelectedThreshold()) return false;
+      if (hasSelectedThreshold()) {
+        if (getSelectedThreshold()
+            != other.getSelectedThreshold()) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasExecutionMode()) {
+        hash = (37 * hash) + EXECUTION_MODE_FIELD_NUMBER;
+        hash = (53 * hash) + executionMode_;
+      }
+      if (hasSelectedThreshold()) {
+        hash = (37 * hash) + SELECTED_THRESHOLD_FIELD_NUMBER;
+        hash = (53 * hash) + getSelectedThreshold();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.google.wireless.android.sdk.stats.TaskMetadata.LeakCanaryTaskConfig parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.google.wireless.android.sdk.stats.TaskMetadata.LeakCanaryTaskConfig parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.google.wireless.android.sdk.stats.TaskMetadata.LeakCanaryTaskConfig parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.google.wireless.android.sdk.stats.TaskMetadata.LeakCanaryTaskConfig parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.google.wireless.android.sdk.stats.TaskMetadata.LeakCanaryTaskConfig parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.google.wireless.android.sdk.stats.TaskMetadata.LeakCanaryTaskConfig parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.google.wireless.android.sdk.stats.TaskMetadata.LeakCanaryTaskConfig parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.google.wireless.android.sdk.stats.TaskMetadata.LeakCanaryTaskConfig parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.google.wireless.android.sdk.stats.TaskMetadata.LeakCanaryTaskConfig parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.google.wireless.android.sdk.stats.TaskMetadata.LeakCanaryTaskConfig parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.google.wireless.android.sdk.stats.TaskMetadata.LeakCanaryTaskConfig parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.google.wireless.android.sdk.stats.TaskMetadata.LeakCanaryTaskConfig parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.google.wireless.android.sdk.stats.TaskMetadata.LeakCanaryTaskConfig prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code android_studio.TaskMetadata.LeakCanaryTaskConfig}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:android_studio.TaskMetadata.LeakCanaryTaskConfig)
+        com.google.wireless.android.sdk.stats.TaskMetadata.LeakCanaryTaskConfigOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_TaskMetadata_LeakCanaryTaskConfig_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_TaskMetadata_LeakCanaryTaskConfig_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.google.wireless.android.sdk.stats.TaskMetadata.LeakCanaryTaskConfig.class, com.google.wireless.android.sdk.stats.TaskMetadata.LeakCanaryTaskConfig.Builder.class);
+      }
+
+      // Construct using com.google.wireless.android.sdk.stats.TaskMetadata.LeakCanaryTaskConfig.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        executionMode_ = 0;
+        selectedThreshold_ = 0;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_TaskMetadata_LeakCanaryTaskConfig_descriptor;
+      }
+
+      @java.lang.Override
+      public com.google.wireless.android.sdk.stats.TaskMetadata.LeakCanaryTaskConfig getDefaultInstanceForType() {
+        return com.google.wireless.android.sdk.stats.TaskMetadata.LeakCanaryTaskConfig.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.google.wireless.android.sdk.stats.TaskMetadata.LeakCanaryTaskConfig build() {
+        com.google.wireless.android.sdk.stats.TaskMetadata.LeakCanaryTaskConfig result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.google.wireless.android.sdk.stats.TaskMetadata.LeakCanaryTaskConfig buildPartial() {
+        com.google.wireless.android.sdk.stats.TaskMetadata.LeakCanaryTaskConfig result = new com.google.wireless.android.sdk.stats.TaskMetadata.LeakCanaryTaskConfig(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.google.wireless.android.sdk.stats.TaskMetadata.LeakCanaryTaskConfig result) {
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.executionMode_ = executionMode_;
+          to_bitField0_ |= 0x00000001;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.selectedThreshold_ = selectedThreshold_;
+          to_bitField0_ |= 0x00000002;
+        }
+        result.bitField0_ |= to_bitField0_;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.google.wireless.android.sdk.stats.TaskMetadata.LeakCanaryTaskConfig) {
+          return mergeFrom((com.google.wireless.android.sdk.stats.TaskMetadata.LeakCanaryTaskConfig)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.google.wireless.android.sdk.stats.TaskMetadata.LeakCanaryTaskConfig other) {
+        if (other == com.google.wireless.android.sdk.stats.TaskMetadata.LeakCanaryTaskConfig.getDefaultInstance()) return this;
+        if (other.hasExecutionMode()) {
+          setExecutionMode(other.getExecutionMode());
+        }
+        if (other.hasSelectedThreshold()) {
+          setSelectedThreshold(other.getSelectedThreshold());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                int tmpRaw = input.readEnum();
+                com.google.wireless.android.sdk.stats.TaskMetadata.LeakCanaryTaskConfig.ExecutionMode tmpValue =
+                    com.google.wireless.android.sdk.stats.TaskMetadata.LeakCanaryTaskConfig.ExecutionMode.forNumber(tmpRaw);
+                if (tmpValue == null) {
+                  mergeUnknownVarintField(1, tmpRaw);
+                } else {
+                  executionMode_ = tmpRaw;
+                  bitField0_ |= 0x00000001;
+                }
+                break;
+              } // case 8
+              case 16: {
+                selectedThreshold_ = input.readInt32();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 16
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private int executionMode_ = 0;
+      /**
+       * <code>optional .android_studio.TaskMetadata.LeakCanaryTaskConfig.ExecutionMode execution_mode = 1;</code>
+       * @return Whether the executionMode field is set.
+       */
+      @java.lang.Override public boolean hasExecutionMode() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>optional .android_studio.TaskMetadata.LeakCanaryTaskConfig.ExecutionMode execution_mode = 1;</code>
+       * @return The executionMode.
+       */
+      @java.lang.Override
+      public com.google.wireless.android.sdk.stats.TaskMetadata.LeakCanaryTaskConfig.ExecutionMode getExecutionMode() {
+        com.google.wireless.android.sdk.stats.TaskMetadata.LeakCanaryTaskConfig.ExecutionMode result = com.google.wireless.android.sdk.stats.TaskMetadata.LeakCanaryTaskConfig.ExecutionMode.forNumber(executionMode_);
+        return result == null ? com.google.wireless.android.sdk.stats.TaskMetadata.LeakCanaryTaskConfig.ExecutionMode.UNKNOWN_MODE : result;
+      }
+      /**
+       * <code>optional .android_studio.TaskMetadata.LeakCanaryTaskConfig.ExecutionMode execution_mode = 1;</code>
+       * @param value The executionMode to set.
+       * @return This builder for chaining.
+       */
+      public Builder setExecutionMode(com.google.wireless.android.sdk.stats.TaskMetadata.LeakCanaryTaskConfig.ExecutionMode value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x00000001;
+        executionMode_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional .android_studio.TaskMetadata.LeakCanaryTaskConfig.ExecutionMode execution_mode = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearExecutionMode() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        executionMode_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int selectedThreshold_ ;
+      /**
+       * <code>optional int32 selected_threshold = 2;</code>
+       * @return Whether the selectedThreshold field is set.
+       */
+      @java.lang.Override
+      public boolean hasSelectedThreshold() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <code>optional int32 selected_threshold = 2;</code>
+       * @return The selectedThreshold.
+       */
+      @java.lang.Override
+      public int getSelectedThreshold() {
+        return selectedThreshold_;
+      }
+      /**
+       * <code>optional int32 selected_threshold = 2;</code>
+       * @param value The selectedThreshold to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSelectedThreshold(int value) {
+
+        selectedThreshold_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int32 selected_threshold = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSelectedThreshold() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        selectedThreshold_ = 0;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:android_studio.TaskMetadata.LeakCanaryTaskConfig)
+    }
+
+    // @@protoc_insertion_point(class_scope:android_studio.TaskMetadata.LeakCanaryTaskConfig)
+    private static final com.google.wireless.android.sdk.stats.TaskMetadata.LeakCanaryTaskConfig DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.google.wireless.android.sdk.stats.TaskMetadata.LeakCanaryTaskConfig();
+    }
+
+    public static com.google.wireless.android.sdk.stats.TaskMetadata.LeakCanaryTaskConfig getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<LeakCanaryTaskConfig>
+        PARSER = new com.google.protobuf.AbstractParser<LeakCanaryTaskConfig>() {
+      @java.lang.Override
+      public LeakCanaryTaskConfig parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<LeakCanaryTaskConfig> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<LeakCanaryTaskConfig> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.wireless.android.sdk.stats.TaskMetadata.LeakCanaryTaskConfig getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
