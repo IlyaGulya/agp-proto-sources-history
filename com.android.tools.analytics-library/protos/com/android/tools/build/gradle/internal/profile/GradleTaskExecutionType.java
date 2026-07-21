@@ -1122,6 +1122,10 @@ public enum GradleTaskExecutionType
    * <code>JAVA_DOC_JAR = 276;</code>
    */
   JAVA_DOC_JAR(276),
+  /**
+   * <code>LISTING_FILE_REDIRECT = 277;</code>
+   */
+  LISTING_FILE_REDIRECT(277),
   UNRECOGNIZED(-1),
   ;
 
@@ -2233,6 +2237,10 @@ public enum GradleTaskExecutionType
    * <code>JAVA_DOC_JAR = 276;</code>
    */
   public static final int JAVA_DOC_JAR_VALUE = 276;
+  /**
+   * <code>LISTING_FILE_REDIRECT = 277;</code>
+   */
+  public static final int LISTING_FILE_REDIRECT_VALUE = 277;
 
 
   public final int getNumber() {
@@ -2536,6 +2544,7 @@ public enum GradleTaskExecutionType
       case 274: return CHECK_JETIFIER;
       case 275: return JAVA_DOC_GENERATION;
       case 276: return JAVA_DOC_JAR;
+      case 277: return LISTING_FILE_REDIRECT;
       default: return null;
     }
   }
