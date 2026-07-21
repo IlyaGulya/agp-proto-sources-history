@@ -601,6 +601,10 @@ public enum VariantPropertiesMethodType
    * <code>MISSING_DIMENSION_STRATEGY = 136;</code>
    */
   MISSING_DIMENSION_STRATEGY(136),
+  /**
+   * <code>DEBUGGABLE = 137;</code>
+   */
+  DEBUGGABLE(137),
   UNRECOGNIZED(-1),
   ;
 
@@ -1196,6 +1200,10 @@ public enum VariantPropertiesMethodType
    * <code>MISSING_DIMENSION_STRATEGY = 136;</code>
    */
   public static final int MISSING_DIMENSION_STRATEGY_VALUE = 136;
+  /**
+   * <code>DEBUGGABLE = 137;</code>
+   */
+  public static final int DEBUGGABLE_VALUE = 137;
 
 
   public final int getNumber() {
@@ -1359,6 +1367,7 @@ public enum VariantPropertiesMethodType
       case 134: return SOURCES_BASELINE_PROFILES_ACCESS;
       case 135: return INSTRUMENTATION_RUNNER_ARGUMENTS;
       case 136: return MISSING_DIMENSION_STRATEGY;
+      case 137: return DEBUGGABLE;
       default: return null;
     }
   }
