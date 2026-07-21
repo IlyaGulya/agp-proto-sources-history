@@ -721,6 +721,10 @@ public enum VariantPropertiesMethodType
    * <code>JUNIT_ENGINE_SPEC = 165;</code>
    */
   JUNIT_ENGINE_SPEC(165),
+  /**
+   * <code>TEST_SUITE_TARGETS = 166;</code>
+   */
+  TEST_SUITE_TARGETS(166),
   UNRECOGNIZED(-1),
   ;
 
@@ -1436,6 +1440,10 @@ public enum VariantPropertiesMethodType
    * <code>JUNIT_ENGINE_SPEC = 165;</code>
    */
   public static final int JUNIT_ENGINE_SPEC_VALUE = 165;
+  /**
+   * <code>TEST_SUITE_TARGETS = 166;</code>
+   */
+  public static final int TEST_SUITE_TARGETS_VALUE = 166;
 
 
   public final int getNumber() {
@@ -1628,6 +1636,7 @@ public enum VariantPropertiesMethodType
       case 163: return GET_RESOLVABLE_CONFIGURATION;
       case 164: return REGISTER_APK_INSTALLATION;
       case 165: return JUNIT_ENGINE_SPEC;
+      case 166: return TEST_SUITE_TARGETS;
       default: return null;
     }
   }

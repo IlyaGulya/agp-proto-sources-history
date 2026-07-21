@@ -202,5 +202,20 @@ public interface SmlChatBotEventOrBuilder extends
    */
   com.google.wireless.android.sdk.stats.SmlChatBotEvent.ToolCallFollowUpEventOrBuilder getToolCallFollowUpEventOrBuilder();
 
+  /**
+   * <code>.android_studio.SmlChatBotEvent.ToolCallResponse tool_call_response = 14 [lazy = true];</code>
+   * @return Whether the toolCallResponse field is set.
+   */
+  boolean hasToolCallResponse();
+  /**
+   * <code>.android_studio.SmlChatBotEvent.ToolCallResponse tool_call_response = 14 [lazy = true];</code>
+   * @return The toolCallResponse.
+   */
+  com.google.wireless.android.sdk.stats.SmlChatBotEvent.ToolCallResponse getToolCallResponse();
+  /**
+   * <code>.android_studio.SmlChatBotEvent.ToolCallResponse tool_call_response = 14 [lazy = true];</code>
+   */
+  com.google.wireless.android.sdk.stats.SmlChatBotEvent.ToolCallResponseOrBuilder getToolCallResponseOrBuilder();
+
   com.google.wireless.android.sdk.stats.SmlChatBotEvent.ContentCase getContentCase();
 }

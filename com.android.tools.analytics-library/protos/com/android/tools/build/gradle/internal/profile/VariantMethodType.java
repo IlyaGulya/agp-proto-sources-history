@@ -132,6 +132,10 @@ public enum VariantMethodType
    * <code>TEST_SUITE_DEPENDENCIES = 29;</code>
    */
   TEST_SUITE_DEPENDENCIES(29),
+  /**
+   * <code>TEST_SUITE_BUILDER_TARGETS = 30;</code>
+   */
+  TEST_SUITE_BUILDER_TARGETS(30),
   UNRECOGNIZED(-1),
   ;
 
@@ -259,6 +263,10 @@ public enum VariantMethodType
    * <code>TEST_SUITE_DEPENDENCIES = 29;</code>
    */
   public static final int TEST_SUITE_DEPENDENCIES_VALUE = 29;
+  /**
+   * <code>TEST_SUITE_BUILDER_TARGETS = 30;</code>
+   */
+  public static final int TEST_SUITE_BUILDER_TARGETS_VALUE = 30;
 
 
   public final int getNumber() {
@@ -315,6 +323,7 @@ public enum VariantMethodType
       case 27: return VARIANT_BUILDER_DEBUGGABLE;
       case 28: return JUNIT_ENGINE_SPEC_BUILDER;
       case 29: return TEST_SUITE_DEPENDENCIES;
+      case 30: return TEST_SUITE_BUILDER_TARGETS;
       default: return null;
     }
   }
