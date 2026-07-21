@@ -495,4 +495,31 @@ public interface AppQualityInsightsUsageEventOrBuilder extends
    * <code>optional .android_studio.AppQualityInsightsUsageEvent.EventsFetched events_fetched = 19 [lazy = true];</code>
    */
   com.google.wireless.android.sdk.stats.AppQualityInsightsUsageEvent.EventsFetchedOrBuilder getEventsFetchedOrBuilder();
+
+  /**
+   * <pre>
+   * set when type = SERVICE_DEPRECATION
+   * </pre>
+   *
+   * <code>optional .android_studio.DevServiceDeprecationInfo dev_service_deprecation_info = 20 [lazy = true];</code>
+   * @return Whether the devServiceDeprecationInfo field is set.
+   */
+  boolean hasDevServiceDeprecationInfo();
+  /**
+   * <pre>
+   * set when type = SERVICE_DEPRECATION
+   * </pre>
+   *
+   * <code>optional .android_studio.DevServiceDeprecationInfo dev_service_deprecation_info = 20 [lazy = true];</code>
+   * @return The devServiceDeprecationInfo.
+   */
+  com.google.wireless.android.sdk.stats.DevServiceDeprecationInfo getDevServiceDeprecationInfo();
+  /**
+   * <pre>
+   * set when type = SERVICE_DEPRECATION
+   * </pre>
+   *
+   * <code>optional .android_studio.DevServiceDeprecationInfo dev_service_deprecation_info = 20 [lazy = true];</code>
+   */
+  com.google.wireless.android.sdk.stats.DevServiceDeprecationInfoOrBuilder getDevServiceDeprecationInfoOrBuilder();
 }
