@@ -36,11 +36,6 @@ private static final long serialVersionUID = 0L;
     return new AppLinksAssistantEvent();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
-    return this.unknownFields;
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_AppLinksAssistantEvent_descriptor;
@@ -1306,11 +1301,6 @@ private static final long serialVersionUID = 0L;
       return new ValidationSummary();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_AppLinksAssistantEvent_ValidationSummary_descriptor;
@@ -1326,7 +1316,7 @@ private static final long serialVersionUID = 0L;
 
     private int bitField0_;
     public static final int TOTAL_CS_LINKS_FIELD_NUMBER = 1;
-    private long totalCsLinks_;
+    private long totalCsLinks_ = 0L;
     /**
      * <pre>
      * Stats of custom scheme links
@@ -1353,7 +1343,7 @@ private static final long serialVersionUID = 0L;
     }
 
     public static final int TOTAL_VALID_CS_LINKS_FIELD_NUMBER = 2;
-    private long totalValidCsLinks_;
+    private long totalValidCsLinks_ = 0L;
     /**
      * <pre>
      * cs_links_app_check_failed = total_cs_links - total_valid_cs_links
@@ -1380,7 +1370,7 @@ private static final long serialVersionUID = 0L;
     }
 
     public static final int TOTAL_APP_LINKS_FIELD_NUMBER = 3;
-    private long totalAppLinks_;
+    private long totalAppLinks_ = 0L;
     /**
      * <pre>
      * Stats of app links
@@ -1407,7 +1397,7 @@ private static final long serialVersionUID = 0L;
     }
 
     public static final int TOTAL_VALID_APP_LINKS_FIELD_NUMBER = 4;
-    private long totalValidAppLinks_;
+    private long totalValidAppLinks_ = 0L;
     /**
      * <code>optional int64 total_valid_app_links = 4;</code>
      * @return Whether the totalValidAppLinks field is set.
@@ -1426,7 +1416,7 @@ private static final long serialVersionUID = 0L;
     }
 
     public static final int APP_LINKS_APP_CHECK_FAILED_FIELD_NUMBER = 5;
-    private long appLinksAppCheckFailed_;
+    private long appLinksAppCheckFailed_ = 0L;
     /**
      * <pre>
      * Number of links with app checks issues
@@ -1453,7 +1443,7 @@ private static final long serialVersionUID = 0L;
     }
 
     public static final int APP_LINKS_WEB_CHECK_FAILED_FIELD_NUMBER = 6;
-    private long appLinksWebCheckFailed_;
+    private long appLinksWebCheckFailed_ = 0L;
     /**
      * <pre>
      * Number of links with web checks issues
@@ -1480,7 +1470,7 @@ private static final long serialVersionUID = 0L;
     }
 
     public static final int APP_LINKS_GOOGLE_ADS_POLICY_FAILED_FIELD_NUMBER = 7;
-    private long appLinksGoogleAdsPolicyFailed_;
+    private long appLinksGoogleAdsPolicyFailed_ = 0L;
     /**
      * <pre>
      * Number of links with Google Ads policy notifications
@@ -1507,7 +1497,7 @@ private static final long serialVersionUID = 0L;
     }
 
     public static final int TOTAL_DOMAINS_FIELD_NUMBER = 8;
-    private long totalDomains_;
+    private long totalDomains_ = 0L;
     /**
      * <pre>
      * Stats of domains
@@ -1534,7 +1524,7 @@ private static final long serialVersionUID = 0L;
     }
 
     public static final int DOMAINS_WEB_CHECK_FAILED_FIELD_NUMBER = 9;
-    private long domainsWebCheckFailed_;
+    private long domainsWebCheckFailed_ = 0L;
     /**
      * <pre>
      * Number of domains with issues
@@ -1561,7 +1551,7 @@ private static final long serialVersionUID = 0L;
     }
 
     public static final int VALIDATION_RUNTIME_MILLIS_FIELD_NUMBER = 10;
-    private long validationRuntimeMillis_;
+    private long validationRuntimeMillis_ = 0L;
     /**
      * <pre>
      * Time taken to perform validation
@@ -1588,7 +1578,7 @@ private static final long serialVersionUID = 0L;
     }
 
     public static final int DAL_APIS_CONSENTED_FIELD_NUMBER = 11;
-    private boolean dalApisConsented_;
+    private boolean dalApisConsented_ = false;
     /**
      * <pre>
      * Whether user is consented to performing web check validations.
@@ -1982,28 +1972,18 @@ private static final long serialVersionUID = 0L;
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         totalCsLinks_ = 0L;
-        bitField0_ = (bitField0_ & ~0x00000001);
         totalValidCsLinks_ = 0L;
-        bitField0_ = (bitField0_ & ~0x00000002);
         totalAppLinks_ = 0L;
-        bitField0_ = (bitField0_ & ~0x00000004);
         totalValidAppLinks_ = 0L;
-        bitField0_ = (bitField0_ & ~0x00000008);
         appLinksAppCheckFailed_ = 0L;
-        bitField0_ = (bitField0_ & ~0x00000010);
         appLinksWebCheckFailed_ = 0L;
-        bitField0_ = (bitField0_ & ~0x00000020);
         appLinksGoogleAdsPolicyFailed_ = 0L;
-        bitField0_ = (bitField0_ & ~0x00000040);
         totalDomains_ = 0L;
-        bitField0_ = (bitField0_ & ~0x00000080);
         domainsWebCheckFailed_ = 0L;
-        bitField0_ = (bitField0_ & ~0x00000100);
         validationRuntimeMillis_ = 0L;
-        bitField0_ = (bitField0_ & ~0x00000200);
         dalApisConsented_ = false;
-        bitField0_ = (bitField0_ & ~0x00000400);
         return this;
       }
 
@@ -2030,6 +2010,12 @@ private static final long serialVersionUID = 0L;
       @java.lang.Override
       public com.google.wireless.android.sdk.stats.AppLinksAssistantEvent.ValidationSummary buildPartial() {
         com.google.wireless.android.sdk.stats.AppLinksAssistantEvent.ValidationSummary result = new com.google.wireless.android.sdk.stats.AppLinksAssistantEvent.ValidationSummary(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.google.wireless.android.sdk.stats.AppLinksAssistantEvent.ValidationSummary result) {
         int from_bitField0_ = bitField0_;
         int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
@@ -2076,43 +2062,9 @@ private static final long serialVersionUID = 0L;
           result.dalApisConsented_ = dalApisConsented_;
           to_bitField0_ |= 0x00000400;
         }
-        result.bitField0_ = to_bitField0_;
-        onBuilt();
-        return result;
+        result.bitField0_ |= to_bitField0_;
       }
 
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof com.google.wireless.android.sdk.stats.AppLinksAssistantEvent.ValidationSummary) {
@@ -2291,8 +2243,9 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder setTotalCsLinks(long value) {
-        bitField0_ |= 0x00000001;
+
         totalCsLinks_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -2346,8 +2299,9 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder setTotalValidCsLinks(long value) {
-        bitField0_ |= 0x00000002;
+
         totalValidCsLinks_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -2401,8 +2355,9 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder setTotalAppLinks(long value) {
-        bitField0_ |= 0x00000004;
+
         totalAppLinks_ = value;
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -2444,8 +2399,9 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder setTotalValidAppLinks(long value) {
-        bitField0_ |= 0x00000008;
+
         totalValidAppLinks_ = value;
+        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
@@ -2495,8 +2451,9 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder setAppLinksAppCheckFailed(long value) {
-        bitField0_ |= 0x00000010;
+
         appLinksAppCheckFailed_ = value;
+        bitField0_ |= 0x00000010;
         onChanged();
         return this;
       }
@@ -2550,8 +2507,9 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder setAppLinksWebCheckFailed(long value) {
-        bitField0_ |= 0x00000020;
+
         appLinksWebCheckFailed_ = value;
+        bitField0_ |= 0x00000020;
         onChanged();
         return this;
       }
@@ -2605,8 +2563,9 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder setAppLinksGoogleAdsPolicyFailed(long value) {
-        bitField0_ |= 0x00000040;
+
         appLinksGoogleAdsPolicyFailed_ = value;
+        bitField0_ |= 0x00000040;
         onChanged();
         return this;
       }
@@ -2660,8 +2619,9 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder setTotalDomains(long value) {
-        bitField0_ |= 0x00000080;
+
         totalDomains_ = value;
+        bitField0_ |= 0x00000080;
         onChanged();
         return this;
       }
@@ -2715,8 +2675,9 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder setDomainsWebCheckFailed(long value) {
-        bitField0_ |= 0x00000100;
+
         domainsWebCheckFailed_ = value;
+        bitField0_ |= 0x00000100;
         onChanged();
         return this;
       }
@@ -2770,8 +2731,9 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder setValidationRuntimeMillis(long value) {
-        bitField0_ |= 0x00000200;
+
         validationRuntimeMillis_ = value;
+        bitField0_ |= 0x00000200;
         onChanged();
         return this;
       }
@@ -2825,8 +2787,9 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder setDalApisConsented(boolean value) {
-        bitField0_ |= 0x00000400;
+
         dalApisConsented_ = value;
+        bitField0_ |= 0x00000400;
         onChanged();
         return this;
       }
@@ -2991,11 +2954,6 @@ private static final long serialVersionUID = 0L;
       return new IntentFilterFix();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_AppLinksAssistantEvent_IntentFilterFix_descriptor;
@@ -3011,7 +2969,7 @@ private static final long serialVersionUID = 0L;
 
     private int bitField0_;
     public static final int TOTAL_LINKS_FIELD_NUMBER = 1;
-    private long totalLinks_;
+    private long totalLinks_ = 0L;
     /**
      * <pre>
      * Total number of links that we are trying to fix in this operation
@@ -3038,7 +2996,7 @@ private static final long serialVersionUID = 0L;
     }
 
     public static final int NUM_BROKEN_LINKS_BEFORE_FIELD_NUMBER = 2;
-    private long numBrokenLinksBefore_;
+    private long numBrokenLinksBefore_ = 0L;
     /**
      * <pre>
      * Initial number of invalid links
@@ -3065,7 +3023,7 @@ private static final long serialVersionUID = 0L;
     }
 
     public static final int NUM_BROKEN_LINKS_AFTER_FIELD_NUMBER = 3;
-    private long numBrokenLinksAfter_;
+    private long numBrokenLinksAfter_ = 0L;
     /**
      * <pre>
      * Number of invalid links after fixing (i.e. links that need manual fixes)
@@ -3319,12 +3277,10 @@ private static final long serialVersionUID = 0L;
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         totalLinks_ = 0L;
-        bitField0_ = (bitField0_ & ~0x00000001);
         numBrokenLinksBefore_ = 0L;
-        bitField0_ = (bitField0_ & ~0x00000002);
         numBrokenLinksAfter_ = 0L;
-        bitField0_ = (bitField0_ & ~0x00000004);
         return this;
       }
 
@@ -3351,6 +3307,12 @@ private static final long serialVersionUID = 0L;
       @java.lang.Override
       public com.google.wireless.android.sdk.stats.AppLinksAssistantEvent.IntentFilterFix buildPartial() {
         com.google.wireless.android.sdk.stats.AppLinksAssistantEvent.IntentFilterFix result = new com.google.wireless.android.sdk.stats.AppLinksAssistantEvent.IntentFilterFix(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.google.wireless.android.sdk.stats.AppLinksAssistantEvent.IntentFilterFix result) {
         int from_bitField0_ = bitField0_;
         int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
@@ -3365,43 +3327,9 @@ private static final long serialVersionUID = 0L;
           result.numBrokenLinksAfter_ = numBrokenLinksAfter_;
           to_bitField0_ |= 0x00000004;
         }
-        result.bitField0_ = to_bitField0_;
-        onBuilt();
-        return result;
+        result.bitField0_ |= to_bitField0_;
       }
 
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof com.google.wireless.android.sdk.stats.AppLinksAssistantEvent.IntentFilterFix) {
@@ -3516,8 +3444,9 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder setTotalLinks(long value) {
-        bitField0_ |= 0x00000001;
+
         totalLinks_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -3571,8 +3500,9 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder setNumBrokenLinksBefore(long value) {
-        bitField0_ |= 0x00000002;
+
         numBrokenLinksBefore_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -3626,8 +3556,9 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder setNumBrokenLinksAfter(long value) {
-        bitField0_ |= 0x00000004;
+
         numBrokenLinksAfter_ = value;
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -4083,12 +4014,18 @@ private static final long serialVersionUID = 0L;
       super(builder);
     }
     private LinksRecord() {
-      anonymizedSchemes_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      rawSchemes_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      anonymizedHosts_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      rawHosts_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      anonymizedPaths_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      rawPaths_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      anonymizedSchemes_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+      rawSchemes_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+      anonymizedHosts_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+      rawHosts_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+      anonymizedPaths_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+      rawPaths_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
       pathTypes_ = java.util.Collections.emptyList();
       interactionType_ = 0;
     }
@@ -4100,11 +4037,6 @@ private static final long serialVersionUID = 0L;
       return new LinksRecord();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_AppLinksAssistantEvent_LinksRecord_descriptor;
@@ -4468,7 +4400,9 @@ private static final long serialVersionUID = 0L;
 
     private int bitField0_;
     public static final int ANONYMIZED_SCHEMES_FIELD_NUMBER = 1;
-    private com.google.protobuf.LazyStringList anonymizedSchemes_;
+    @SuppressWarnings("serial")
+    private com.google.protobuf.LazyStringArrayList anonymizedSchemes_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
     /**
      * <pre>
      * Salted (rotating every 540 days) and SHA256 hashed value of raw_schemes.
@@ -4519,7 +4453,9 @@ private static final long serialVersionUID = 0L;
     }
 
     public static final int RAW_SCHEMES_FIELD_NUMBER = 2;
-    private com.google.protobuf.LazyStringList rawSchemes_;
+    @SuppressWarnings("serial")
+    private com.google.protobuf.LazyStringArrayList rawSchemes_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
     /**
      * <pre>
      * the scheme values defined by the &lt;data android:scheme&gt; tag in
@@ -4586,7 +4522,9 @@ private static final long serialVersionUID = 0L;
     }
 
     public static final int ANONYMIZED_HOSTS_FIELD_NUMBER = 3;
-    private com.google.protobuf.LazyStringList anonymizedHosts_;
+    @SuppressWarnings("serial")
+    private com.google.protobuf.LazyStringArrayList anonymizedHosts_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
     /**
      * <pre>
      * Salted (rotating every 540 days) and SHA256 hashed value of raw_hosts.
@@ -4637,7 +4575,9 @@ private static final long serialVersionUID = 0L;
     }
 
     public static final int RAW_HOSTS_FIELD_NUMBER = 4;
-    private com.google.protobuf.LazyStringList rawHosts_;
+    @SuppressWarnings("serial")
+    private com.google.protobuf.LazyStringArrayList rawHosts_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
     /**
      * <pre>
      * the host values defined by the &lt;data android:host&gt; tag in
@@ -4704,7 +4644,9 @@ private static final long serialVersionUID = 0L;
     }
 
     public static final int ANONYMIZED_PATHS_FIELD_NUMBER = 5;
-    private com.google.protobuf.LazyStringList anonymizedPaths_;
+    @SuppressWarnings("serial")
+    private com.google.protobuf.LazyStringArrayList anonymizedPaths_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
     /**
      * <pre>
      * Salted (rotating every 540 days) and SHA256 hashed value of raw_paths.
@@ -4755,7 +4697,9 @@ private static final long serialVersionUID = 0L;
     }
 
     public static final int RAW_PATHS_FIELD_NUMBER = 6;
-    private com.google.protobuf.LazyStringList rawPaths_;
+    @SuppressWarnings("serial")
+    private com.google.protobuf.LazyStringArrayList rawPaths_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
     /**
      * <pre>
      * the path patterns defined by the &lt;data android:path&gt; or &lt;data
@@ -4822,14 +4766,14 @@ private static final long serialVersionUID = 0L;
     }
 
     public static final int PATH_TYPES_FIELD_NUMBER = 7;
+    @SuppressWarnings("serial")
     private java.util.List<java.lang.Integer> pathTypes_;
     private static final com.google.protobuf.Internal.ListAdapter.Converter<
         java.lang.Integer, com.google.wireless.android.sdk.stats.AppLinksAssistantEvent.LinksRecord.PathType> pathTypes_converter_ =
             new com.google.protobuf.Internal.ListAdapter.Converter<
                 java.lang.Integer, com.google.wireless.android.sdk.stats.AppLinksAssistantEvent.LinksRecord.PathType>() {
               public com.google.wireless.android.sdk.stats.AppLinksAssistantEvent.LinksRecord.PathType convert(java.lang.Integer from) {
-                @SuppressWarnings("deprecation")
-                com.google.wireless.android.sdk.stats.AppLinksAssistantEvent.LinksRecord.PathType result = com.google.wireless.android.sdk.stats.AppLinksAssistantEvent.LinksRecord.PathType.valueOf(from);
+                com.google.wireless.android.sdk.stats.AppLinksAssistantEvent.LinksRecord.PathType result = com.google.wireless.android.sdk.stats.AppLinksAssistantEvent.LinksRecord.PathType.forNumber(from);
                 return result == null ? com.google.wireless.android.sdk.stats.AppLinksAssistantEvent.LinksRecord.PathType.PATH_TYPE_UNSPECIFIED : result;
               }
             };
@@ -4889,7 +4833,7 @@ private static final long serialVersionUID = 0L;
     private int pathTypesMemoizedSerializedSize;
 
     public static final int INTERACTION_TYPE_FIELD_NUMBER = 8;
-    private int interactionType_;
+    private int interactionType_ = 0;
     /**
      * <pre>
      * The user's interaction on the link, used as the reason we log this link.
@@ -4910,8 +4854,7 @@ private static final long serialVersionUID = 0L;
      * @return The interactionType.
      */
     @java.lang.Override public com.google.wireless.android.sdk.stats.AppLinksAssistantEvent.LinksRecord.InteractionType getInteractionType() {
-      @SuppressWarnings("deprecation")
-      com.google.wireless.android.sdk.stats.AppLinksAssistantEvent.LinksRecord.InteractionType result = com.google.wireless.android.sdk.stats.AppLinksAssistantEvent.LinksRecord.InteractionType.valueOf(interactionType_);
+      com.google.wireless.android.sdk.stats.AppLinksAssistantEvent.LinksRecord.InteractionType result = com.google.wireless.android.sdk.stats.AppLinksAssistantEvent.LinksRecord.InteractionType.forNumber(interactionType_);
       return result == null ? com.google.wireless.android.sdk.stats.AppLinksAssistantEvent.LinksRecord.InteractionType.INTERACTION_TYPE_UNSPECIFIED : result;
     }
 
@@ -5234,22 +5177,22 @@ private static final long serialVersionUID = 0L;
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        anonymizedSchemes_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000001);
-        rawSchemes_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000002);
-        anonymizedHosts_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000004);
-        rawHosts_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000008);
-        anonymizedPaths_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000010);
-        rawPaths_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000020);
+        bitField0_ = 0;
+        anonymizedSchemes_ =
+            com.google.protobuf.LazyStringArrayList.emptyList();
+        rawSchemes_ =
+            com.google.protobuf.LazyStringArrayList.emptyList();
+        anonymizedHosts_ =
+            com.google.protobuf.LazyStringArrayList.emptyList();
+        rawHosts_ =
+            com.google.protobuf.LazyStringArrayList.emptyList();
+        anonymizedPaths_ =
+            com.google.protobuf.LazyStringArrayList.emptyList();
+        rawPaths_ =
+            com.google.protobuf.LazyStringArrayList.emptyList();
         pathTypes_ = java.util.Collections.emptyList();
         bitField0_ = (bitField0_ & ~0x00000040);
         interactionType_ = 0;
-        bitField0_ = (bitField0_ & ~0x00000080);
         return this;
       }
 
@@ -5276,84 +5219,54 @@ private static final long serialVersionUID = 0L;
       @java.lang.Override
       public com.google.wireless.android.sdk.stats.AppLinksAssistantEvent.LinksRecord buildPartial() {
         com.google.wireless.android.sdk.stats.AppLinksAssistantEvent.LinksRecord result = new com.google.wireless.android.sdk.stats.AppLinksAssistantEvent.LinksRecord(this);
-        int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
-        if (((bitField0_ & 0x00000001) != 0)) {
-          anonymizedSchemes_ = anonymizedSchemes_.getUnmodifiableView();
-          bitField0_ = (bitField0_ & ~0x00000001);
-        }
-        result.anonymizedSchemes_ = anonymizedSchemes_;
-        if (((bitField0_ & 0x00000002) != 0)) {
-          rawSchemes_ = rawSchemes_.getUnmodifiableView();
-          bitField0_ = (bitField0_ & ~0x00000002);
-        }
-        result.rawSchemes_ = rawSchemes_;
-        if (((bitField0_ & 0x00000004) != 0)) {
-          anonymizedHosts_ = anonymizedHosts_.getUnmodifiableView();
-          bitField0_ = (bitField0_ & ~0x00000004);
-        }
-        result.anonymizedHosts_ = anonymizedHosts_;
-        if (((bitField0_ & 0x00000008) != 0)) {
-          rawHosts_ = rawHosts_.getUnmodifiableView();
-          bitField0_ = (bitField0_ & ~0x00000008);
-        }
-        result.rawHosts_ = rawHosts_;
-        if (((bitField0_ & 0x00000010) != 0)) {
-          anonymizedPaths_ = anonymizedPaths_.getUnmodifiableView();
-          bitField0_ = (bitField0_ & ~0x00000010);
-        }
-        result.anonymizedPaths_ = anonymizedPaths_;
-        if (((bitField0_ & 0x00000020) != 0)) {
-          rawPaths_ = rawPaths_.getUnmodifiableView();
-          bitField0_ = (bitField0_ & ~0x00000020);
-        }
-        result.rawPaths_ = rawPaths_;
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.google.wireless.android.sdk.stats.AppLinksAssistantEvent.LinksRecord result) {
         if (((bitField0_ & 0x00000040) != 0)) {
           pathTypes_ = java.util.Collections.unmodifiableList(pathTypes_);
           bitField0_ = (bitField0_ & ~0x00000040);
         }
         result.pathTypes_ = pathTypes_;
-        if (((from_bitField0_ & 0x00000080) != 0)) {
-          to_bitField0_ |= 0x00000001;
-        }
-        result.interactionType_ = interactionType_;
-        result.bitField0_ = to_bitField0_;
-        onBuilt();
-        return result;
       }
 
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
+      private void buildPartial0(com.google.wireless.android.sdk.stats.AppLinksAssistantEvent.LinksRecord result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          anonymizedSchemes_.makeImmutable();
+          result.anonymizedSchemes_ = anonymizedSchemes_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          rawSchemes_.makeImmutable();
+          result.rawSchemes_ = rawSchemes_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          anonymizedHosts_.makeImmutable();
+          result.anonymizedHosts_ = anonymizedHosts_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          rawHosts_.makeImmutable();
+          result.rawHosts_ = rawHosts_;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          anonymizedPaths_.makeImmutable();
+          result.anonymizedPaths_ = anonymizedPaths_;
+        }
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          rawPaths_.makeImmutable();
+          result.rawPaths_ = rawPaths_;
+        }
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000080) != 0)) {
+          result.interactionType_ = interactionType_;
+          to_bitField0_ |= 0x00000001;
+        }
+        result.bitField0_ |= to_bitField0_;
       }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
+
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof com.google.wireless.android.sdk.stats.AppLinksAssistantEvent.LinksRecord) {
@@ -5369,7 +5282,7 @@ private static final long serialVersionUID = 0L;
         if (!other.anonymizedSchemes_.isEmpty()) {
           if (anonymizedSchemes_.isEmpty()) {
             anonymizedSchemes_ = other.anonymizedSchemes_;
-            bitField0_ = (bitField0_ & ~0x00000001);
+            bitField0_ |= 0x00000001;
           } else {
             ensureAnonymizedSchemesIsMutable();
             anonymizedSchemes_.addAll(other.anonymizedSchemes_);
@@ -5379,7 +5292,7 @@ private static final long serialVersionUID = 0L;
         if (!other.rawSchemes_.isEmpty()) {
           if (rawSchemes_.isEmpty()) {
             rawSchemes_ = other.rawSchemes_;
-            bitField0_ = (bitField0_ & ~0x00000002);
+            bitField0_ |= 0x00000002;
           } else {
             ensureRawSchemesIsMutable();
             rawSchemes_.addAll(other.rawSchemes_);
@@ -5389,7 +5302,7 @@ private static final long serialVersionUID = 0L;
         if (!other.anonymizedHosts_.isEmpty()) {
           if (anonymizedHosts_.isEmpty()) {
             anonymizedHosts_ = other.anonymizedHosts_;
-            bitField0_ = (bitField0_ & ~0x00000004);
+            bitField0_ |= 0x00000004;
           } else {
             ensureAnonymizedHostsIsMutable();
             anonymizedHosts_.addAll(other.anonymizedHosts_);
@@ -5399,7 +5312,7 @@ private static final long serialVersionUID = 0L;
         if (!other.rawHosts_.isEmpty()) {
           if (rawHosts_.isEmpty()) {
             rawHosts_ = other.rawHosts_;
-            bitField0_ = (bitField0_ & ~0x00000008);
+            bitField0_ |= 0x00000008;
           } else {
             ensureRawHostsIsMutable();
             rawHosts_.addAll(other.rawHosts_);
@@ -5409,7 +5322,7 @@ private static final long serialVersionUID = 0L;
         if (!other.anonymizedPaths_.isEmpty()) {
           if (anonymizedPaths_.isEmpty()) {
             anonymizedPaths_ = other.anonymizedPaths_;
-            bitField0_ = (bitField0_ & ~0x00000010);
+            bitField0_ |= 0x00000010;
           } else {
             ensureAnonymizedPathsIsMutable();
             anonymizedPaths_.addAll(other.anonymizedPaths_);
@@ -5419,7 +5332,7 @@ private static final long serialVersionUID = 0L;
         if (!other.rawPaths_.isEmpty()) {
           if (rawPaths_.isEmpty()) {
             rawPaths_ = other.rawPaths_;
-            bitField0_ = (bitField0_ & ~0x00000020);
+            bitField0_ |= 0x00000020;
           } else {
             ensureRawPathsIsMutable();
             rawPaths_.addAll(other.rawPaths_);
@@ -5559,12 +5472,13 @@ private static final long serialVersionUID = 0L;
       }
       private int bitField0_;
 
-      private com.google.protobuf.LazyStringList anonymizedSchemes_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      private com.google.protobuf.LazyStringArrayList anonymizedSchemes_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
       private void ensureAnonymizedSchemesIsMutable() {
-        if (!((bitField0_ & 0x00000001) != 0)) {
+        if (!anonymizedSchemes_.isModifiable()) {
           anonymizedSchemes_ = new com.google.protobuf.LazyStringArrayList(anonymizedSchemes_);
-          bitField0_ |= 0x00000001;
-         }
+        }
+        bitField0_ |= 0x00000001;
       }
       /**
        * <pre>
@@ -5576,7 +5490,8 @@ private static final long serialVersionUID = 0L;
        */
       public com.google.protobuf.ProtocolStringList
           getAnonymizedSchemesList() {
-        return anonymizedSchemes_.getUnmodifiableView();
+        anonymizedSchemes_.makeImmutable();
+        return anonymizedSchemes_;
       }
       /**
        * <pre>
@@ -5626,11 +5541,10 @@ private static final long serialVersionUID = 0L;
        */
       public Builder setAnonymizedSchemes(
           int index, java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureAnonymizedSchemesIsMutable();
+        if (value == null) { throw new NullPointerException(); }
+        ensureAnonymizedSchemesIsMutable();
         anonymizedSchemes_.set(index, value);
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -5645,11 +5559,10 @@ private static final long serialVersionUID = 0L;
        */
       public Builder addAnonymizedSchemes(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureAnonymizedSchemesIsMutable();
+        if (value == null) { throw new NullPointerException(); }
+        ensureAnonymizedSchemesIsMutable();
         anonymizedSchemes_.add(value);
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -5667,6 +5580,7 @@ private static final long serialVersionUID = 0L;
         ensureAnonymizedSchemesIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
             values, anonymizedSchemes_);
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -5679,8 +5593,9 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder clearAnonymizedSchemes() {
-        anonymizedSchemes_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000001);
+        anonymizedSchemes_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000001);;
         onChanged();
         return this;
       }
@@ -5695,21 +5610,21 @@ private static final long serialVersionUID = 0L;
        */
       public Builder addAnonymizedSchemesBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureAnonymizedSchemesIsMutable();
+        if (value == null) { throw new NullPointerException(); }
+        ensureAnonymizedSchemesIsMutable();
         anonymizedSchemes_.add(value);
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
 
-      private com.google.protobuf.LazyStringList rawSchemes_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      private com.google.protobuf.LazyStringArrayList rawSchemes_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
       private void ensureRawSchemesIsMutable() {
-        if (!((bitField0_ & 0x00000002) != 0)) {
+        if (!rawSchemes_.isModifiable()) {
           rawSchemes_ = new com.google.protobuf.LazyStringArrayList(rawSchemes_);
-          bitField0_ |= 0x00000002;
-         }
+        }
+        bitField0_ |= 0x00000002;
       }
       /**
        * <pre>
@@ -5725,7 +5640,8 @@ private static final long serialVersionUID = 0L;
        */
       public com.google.protobuf.ProtocolStringList
           getRawSchemesList() {
-        return rawSchemes_.getUnmodifiableView();
+        rawSchemes_.makeImmutable();
+        return rawSchemes_;
       }
       /**
        * <pre>
@@ -5791,11 +5707,10 @@ private static final long serialVersionUID = 0L;
        */
       public Builder setRawSchemes(
           int index, java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureRawSchemesIsMutable();
+        if (value == null) { throw new NullPointerException(); }
+        ensureRawSchemesIsMutable();
         rawSchemes_.set(index, value);
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -5814,11 +5729,10 @@ private static final long serialVersionUID = 0L;
        */
       public Builder addRawSchemes(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureRawSchemesIsMutable();
+        if (value == null) { throw new NullPointerException(); }
+        ensureRawSchemesIsMutable();
         rawSchemes_.add(value);
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -5840,6 +5754,7 @@ private static final long serialVersionUID = 0L;
         ensureRawSchemesIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
             values, rawSchemes_);
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -5856,8 +5771,9 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder clearRawSchemes() {
-        rawSchemes_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000002);
+        rawSchemes_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000002);;
         onChanged();
         return this;
       }
@@ -5876,21 +5792,21 @@ private static final long serialVersionUID = 0L;
        */
       public Builder addRawSchemesBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureRawSchemesIsMutable();
+        if (value == null) { throw new NullPointerException(); }
+        ensureRawSchemesIsMutable();
         rawSchemes_.add(value);
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
 
-      private com.google.protobuf.LazyStringList anonymizedHosts_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      private com.google.protobuf.LazyStringArrayList anonymizedHosts_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
       private void ensureAnonymizedHostsIsMutable() {
-        if (!((bitField0_ & 0x00000004) != 0)) {
+        if (!anonymizedHosts_.isModifiable()) {
           anonymizedHosts_ = new com.google.protobuf.LazyStringArrayList(anonymizedHosts_);
-          bitField0_ |= 0x00000004;
-         }
+        }
+        bitField0_ |= 0x00000004;
       }
       /**
        * <pre>
@@ -5902,7 +5818,8 @@ private static final long serialVersionUID = 0L;
        */
       public com.google.protobuf.ProtocolStringList
           getAnonymizedHostsList() {
-        return anonymizedHosts_.getUnmodifiableView();
+        anonymizedHosts_.makeImmutable();
+        return anonymizedHosts_;
       }
       /**
        * <pre>
@@ -5952,11 +5869,10 @@ private static final long serialVersionUID = 0L;
        */
       public Builder setAnonymizedHosts(
           int index, java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureAnonymizedHostsIsMutable();
+        if (value == null) { throw new NullPointerException(); }
+        ensureAnonymizedHostsIsMutable();
         anonymizedHosts_.set(index, value);
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -5971,11 +5887,10 @@ private static final long serialVersionUID = 0L;
        */
       public Builder addAnonymizedHosts(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureAnonymizedHostsIsMutable();
+        if (value == null) { throw new NullPointerException(); }
+        ensureAnonymizedHostsIsMutable();
         anonymizedHosts_.add(value);
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -5993,6 +5908,7 @@ private static final long serialVersionUID = 0L;
         ensureAnonymizedHostsIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
             values, anonymizedHosts_);
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -6005,8 +5921,9 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder clearAnonymizedHosts() {
-        anonymizedHosts_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000004);
+        anonymizedHosts_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000004);;
         onChanged();
         return this;
       }
@@ -6021,21 +5938,21 @@ private static final long serialVersionUID = 0L;
        */
       public Builder addAnonymizedHostsBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureAnonymizedHostsIsMutable();
+        if (value == null) { throw new NullPointerException(); }
+        ensureAnonymizedHostsIsMutable();
         anonymizedHosts_.add(value);
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
 
-      private com.google.protobuf.LazyStringList rawHosts_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      private com.google.protobuf.LazyStringArrayList rawHosts_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
       private void ensureRawHostsIsMutable() {
-        if (!((bitField0_ & 0x00000008) != 0)) {
+        if (!rawHosts_.isModifiable()) {
           rawHosts_ = new com.google.protobuf.LazyStringArrayList(rawHosts_);
-          bitField0_ |= 0x00000008;
-         }
+        }
+        bitField0_ |= 0x00000008;
       }
       /**
        * <pre>
@@ -6051,7 +5968,8 @@ private static final long serialVersionUID = 0L;
        */
       public com.google.protobuf.ProtocolStringList
           getRawHostsList() {
-        return rawHosts_.getUnmodifiableView();
+        rawHosts_.makeImmutable();
+        return rawHosts_;
       }
       /**
        * <pre>
@@ -6117,11 +6035,10 @@ private static final long serialVersionUID = 0L;
        */
       public Builder setRawHosts(
           int index, java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureRawHostsIsMutable();
+        if (value == null) { throw new NullPointerException(); }
+        ensureRawHostsIsMutable();
         rawHosts_.set(index, value);
+        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
@@ -6140,11 +6057,10 @@ private static final long serialVersionUID = 0L;
        */
       public Builder addRawHosts(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureRawHostsIsMutable();
+        if (value == null) { throw new NullPointerException(); }
+        ensureRawHostsIsMutable();
         rawHosts_.add(value);
+        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
@@ -6166,6 +6082,7 @@ private static final long serialVersionUID = 0L;
         ensureRawHostsIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
             values, rawHosts_);
+        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
@@ -6182,8 +6099,9 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder clearRawHosts() {
-        rawHosts_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000008);
+        rawHosts_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000008);;
         onChanged();
         return this;
       }
@@ -6202,21 +6120,21 @@ private static final long serialVersionUID = 0L;
        */
       public Builder addRawHostsBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureRawHostsIsMutable();
+        if (value == null) { throw new NullPointerException(); }
+        ensureRawHostsIsMutable();
         rawHosts_.add(value);
+        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
 
-      private com.google.protobuf.LazyStringList anonymizedPaths_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      private com.google.protobuf.LazyStringArrayList anonymizedPaths_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
       private void ensureAnonymizedPathsIsMutable() {
-        if (!((bitField0_ & 0x00000010) != 0)) {
+        if (!anonymizedPaths_.isModifiable()) {
           anonymizedPaths_ = new com.google.protobuf.LazyStringArrayList(anonymizedPaths_);
-          bitField0_ |= 0x00000010;
-         }
+        }
+        bitField0_ |= 0x00000010;
       }
       /**
        * <pre>
@@ -6228,7 +6146,8 @@ private static final long serialVersionUID = 0L;
        */
       public com.google.protobuf.ProtocolStringList
           getAnonymizedPathsList() {
-        return anonymizedPaths_.getUnmodifiableView();
+        anonymizedPaths_.makeImmutable();
+        return anonymizedPaths_;
       }
       /**
        * <pre>
@@ -6278,11 +6197,10 @@ private static final long serialVersionUID = 0L;
        */
       public Builder setAnonymizedPaths(
           int index, java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureAnonymizedPathsIsMutable();
+        if (value == null) { throw new NullPointerException(); }
+        ensureAnonymizedPathsIsMutable();
         anonymizedPaths_.set(index, value);
+        bitField0_ |= 0x00000010;
         onChanged();
         return this;
       }
@@ -6297,11 +6215,10 @@ private static final long serialVersionUID = 0L;
        */
       public Builder addAnonymizedPaths(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureAnonymizedPathsIsMutable();
+        if (value == null) { throw new NullPointerException(); }
+        ensureAnonymizedPathsIsMutable();
         anonymizedPaths_.add(value);
+        bitField0_ |= 0x00000010;
         onChanged();
         return this;
       }
@@ -6319,6 +6236,7 @@ private static final long serialVersionUID = 0L;
         ensureAnonymizedPathsIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
             values, anonymizedPaths_);
+        bitField0_ |= 0x00000010;
         onChanged();
         return this;
       }
@@ -6331,8 +6249,9 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder clearAnonymizedPaths() {
-        anonymizedPaths_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000010);
+        anonymizedPaths_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000010);;
         onChanged();
         return this;
       }
@@ -6347,21 +6266,21 @@ private static final long serialVersionUID = 0L;
        */
       public Builder addAnonymizedPathsBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureAnonymizedPathsIsMutable();
+        if (value == null) { throw new NullPointerException(); }
+        ensureAnonymizedPathsIsMutable();
         anonymizedPaths_.add(value);
+        bitField0_ |= 0x00000010;
         onChanged();
         return this;
       }
 
-      private com.google.protobuf.LazyStringList rawPaths_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      private com.google.protobuf.LazyStringArrayList rawPaths_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
       private void ensureRawPathsIsMutable() {
-        if (!((bitField0_ & 0x00000020) != 0)) {
+        if (!rawPaths_.isModifiable()) {
           rawPaths_ = new com.google.protobuf.LazyStringArrayList(rawPaths_);
-          bitField0_ |= 0x00000020;
-         }
+        }
+        bitField0_ |= 0x00000020;
       }
       /**
        * <pre>
@@ -6377,7 +6296,8 @@ private static final long serialVersionUID = 0L;
        */
       public com.google.protobuf.ProtocolStringList
           getRawPathsList() {
-        return rawPaths_.getUnmodifiableView();
+        rawPaths_.makeImmutable();
+        return rawPaths_;
       }
       /**
        * <pre>
@@ -6443,11 +6363,10 @@ private static final long serialVersionUID = 0L;
        */
       public Builder setRawPaths(
           int index, java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureRawPathsIsMutable();
+        if (value == null) { throw new NullPointerException(); }
+        ensureRawPathsIsMutable();
         rawPaths_.set(index, value);
+        bitField0_ |= 0x00000020;
         onChanged();
         return this;
       }
@@ -6466,11 +6385,10 @@ private static final long serialVersionUID = 0L;
        */
       public Builder addRawPaths(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureRawPathsIsMutable();
+        if (value == null) { throw new NullPointerException(); }
+        ensureRawPathsIsMutable();
         rawPaths_.add(value);
+        bitField0_ |= 0x00000020;
         onChanged();
         return this;
       }
@@ -6492,6 +6410,7 @@ private static final long serialVersionUID = 0L;
         ensureRawPathsIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
             values, rawPaths_);
+        bitField0_ |= 0x00000020;
         onChanged();
         return this;
       }
@@ -6508,8 +6427,9 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder clearRawPaths() {
-        rawPaths_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000020);
+        rawPaths_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000020);;
         onChanged();
         return this;
       }
@@ -6528,11 +6448,10 @@ private static final long serialVersionUID = 0L;
        */
       public Builder addRawPathsBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureRawPathsIsMutable();
+        if (value == null) { throw new NullPointerException(); }
+        ensureRawPathsIsMutable();
         rawPaths_.add(value);
+        bitField0_ |= 0x00000020;
         onChanged();
         return this;
       }
@@ -6708,8 +6627,7 @@ private static final long serialVersionUID = 0L;
        */
       @java.lang.Override
       public com.google.wireless.android.sdk.stats.AppLinksAssistantEvent.LinksRecord.InteractionType getInteractionType() {
-        @SuppressWarnings("deprecation")
-        com.google.wireless.android.sdk.stats.AppLinksAssistantEvent.LinksRecord.InteractionType result = com.google.wireless.android.sdk.stats.AppLinksAssistantEvent.LinksRecord.InteractionType.valueOf(interactionType_);
+        com.google.wireless.android.sdk.stats.AppLinksAssistantEvent.LinksRecord.InteractionType result = com.google.wireless.android.sdk.stats.AppLinksAssistantEvent.LinksRecord.InteractionType.forNumber(interactionType_);
         return result == null ? com.google.wireless.android.sdk.stats.AppLinksAssistantEvent.LinksRecord.InteractionType.INTERACTION_TYPE_UNSPECIFIED : result;
       }
       /**
@@ -6810,7 +6728,8 @@ private static final long serialVersionUID = 0L;
 
   private int bitField0_;
   public static final int PROJECT_ID_FIELD_NUMBER = 1;
-  private volatile java.lang.Object projectId_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object projectId_ = "";
   /**
    * <pre>
    * Client-side salted (rotating every 28 days), sha256 of the project id for
@@ -6873,7 +6792,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int APP_ID_FIELD_NUMBER = 2;
-  private volatile java.lang.Object appId_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object appId_ = "";
   /**
    * <pre>
    * The app_id is the id for the user's android app
@@ -6942,7 +6862,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int EVENT_SOURCE_FIELD_NUMBER = 3;
-  private int eventSource_;
+  private int eventSource_ = 1;
   /**
    * <pre>
    * The UI element source of event.
@@ -6963,13 +6883,12 @@ private static final long serialVersionUID = 0L;
    * @return The eventSource.
    */
   @java.lang.Override public com.google.wireless.android.sdk.stats.AppLinksAssistantEvent.EventSource getEventSource() {
-    @SuppressWarnings("deprecation")
-    com.google.wireless.android.sdk.stats.AppLinksAssistantEvent.EventSource result = com.google.wireless.android.sdk.stats.AppLinksAssistantEvent.EventSource.valueOf(eventSource_);
+    com.google.wireless.android.sdk.stats.AppLinksAssistantEvent.EventSource result = com.google.wireless.android.sdk.stats.AppLinksAssistantEvent.EventSource.forNumber(eventSource_);
     return result == null ? com.google.wireless.android.sdk.stats.AppLinksAssistantEvent.EventSource.ASSISTANT_SIDE_PANEL : result;
   }
 
   public static final int EVENT_STATE_FIELD_NUMBER = 4;
-  private int eventState_;
+  private int eventState_ = 1;
   /**
    * <pre>
    * The state of the event.
@@ -6990,13 +6909,12 @@ private static final long serialVersionUID = 0L;
    * @return The eventState.
    */
   @java.lang.Override public com.google.wireless.android.sdk.stats.AppLinksAssistantEvent.EventState getEventState() {
-    @SuppressWarnings("deprecation")
-    com.google.wireless.android.sdk.stats.AppLinksAssistantEvent.EventState result = com.google.wireless.android.sdk.stats.AppLinksAssistantEvent.EventState.valueOf(eventState_);
+    com.google.wireless.android.sdk.stats.AppLinksAssistantEvent.EventState result = com.google.wireless.android.sdk.stats.AppLinksAssistantEvent.EventState.forNumber(eventState_);
     return result == null ? com.google.wireless.android.sdk.stats.AppLinksAssistantEvent.EventState.OPENED : result;
   }
 
   public static final int EXISTING_APP_LINKS_FIELD_NUMBER = 5;
-  private boolean existingAppLinks_;
+  private boolean existingAppLinks_ = false;
   /**
    * <pre>
    * To check if there exists app links in the project
@@ -7025,7 +6943,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int ASSISTANT_PANEL_OPEN_DURATION_FIELD_NUMBER = 6;
-  private long assistantPanelOpenDuration_;
+  private long assistantPanelOpenDuration_ = 0L;
   /**
    * <pre>
    * Duration time that app links assistant panel opens. Unit is nanoseconds.
@@ -7052,7 +6970,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int APP_LINK_PATH_TYPE_FIELD_NUMBER = 7;
-  private int appLinkPathType_;
+  private int appLinkPathType_ = 1;
   /**
    * <pre>
    * Following three fields is for the new added app link.
@@ -7079,13 +6997,12 @@ private static final long serialVersionUID = 0L;
    * @return The appLinkPathType.
    */
   @java.lang.Override public com.google.wireless.android.sdk.stats.AppLinksAssistantEvent.PathType getAppLinkPathType() {
-    @SuppressWarnings("deprecation")
-    com.google.wireless.android.sdk.stats.AppLinksAssistantEvent.PathType result = com.google.wireless.android.sdk.stats.AppLinksAssistantEvent.PathType.valueOf(appLinkPathType_);
+    com.google.wireless.android.sdk.stats.AppLinksAssistantEvent.PathType result = com.google.wireless.android.sdk.stats.AppLinksAssistantEvent.PathType.forNumber(appLinkPathType_);
     return result == null ? com.google.wireless.android.sdk.stats.AppLinksAssistantEvent.PathType.PATH : result;
   }
 
   public static final int NEW_ACTIVITY_LINKED_FIELD_NUMBER = 8;
-  private boolean newActivityLinked_;
+  private boolean newActivityLinked_ = false;
   /**
    * <pre>
    * Whether a new activity is linked by app link.
@@ -7112,7 +7029,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int NEW_HOST_LINKED_FIELD_NUMBER = 9;
-  private boolean newHostLinked_;
+  private boolean newHostLinked_ = false;
   /**
    * <pre>
    * Whether a new host is linked by app link.
@@ -7139,7 +7056,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int RAW_PROJECT_ID_FIELD_NUMBER = 10;
-  private volatile java.lang.Object rawProjectId_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object rawProjectId_ = "";
   /**
    * <pre>
    * the project id as used in the playstore, e.g.
@@ -7260,7 +7178,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int LINK_FILTER_OPTION_FIELD_NUMBER = 13;
-  private int linkFilterOption_;
+  private int linkFilterOption_ = 0;
   /**
    * <code>optional .android_studio.AppLinksAssistantEvent.LinkFilterOption link_filter_option = 13;</code>
    * @return Whether the linkFilterOption field is set.
@@ -7273,8 +7191,7 @@ private static final long serialVersionUID = 0L;
    * @return The linkFilterOption.
    */
   @java.lang.Override public com.google.wireless.android.sdk.stats.AppLinksAssistantEvent.LinkFilterOption getLinkFilterOption() {
-    @SuppressWarnings("deprecation")
-    com.google.wireless.android.sdk.stats.AppLinksAssistantEvent.LinkFilterOption result = com.google.wireless.android.sdk.stats.AppLinksAssistantEvent.LinkFilterOption.valueOf(linkFilterOption_);
+    com.google.wireless.android.sdk.stats.AppLinksAssistantEvent.LinkFilterOption result = com.google.wireless.android.sdk.stats.AppLinksAssistantEvent.LinkFilterOption.forNumber(linkFilterOption_);
     return result == null ? com.google.wireless.android.sdk.stats.AppLinksAssistantEvent.LinkFilterOption.UNKNOWN : result;
   }
 
@@ -7726,46 +7643,33 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       projectId_ = "";
-      bitField0_ = (bitField0_ & ~0x00000001);
       appId_ = "";
-      bitField0_ = (bitField0_ & ~0x00000002);
       eventSource_ = 1;
-      bitField0_ = (bitField0_ & ~0x00000004);
       eventState_ = 1;
-      bitField0_ = (bitField0_ & ~0x00000008);
       existingAppLinks_ = false;
-      bitField0_ = (bitField0_ & ~0x00000010);
       assistantPanelOpenDuration_ = 0L;
-      bitField0_ = (bitField0_ & ~0x00000020);
       appLinkPathType_ = 1;
-      bitField0_ = (bitField0_ & ~0x00000040);
       newActivityLinked_ = false;
-      bitField0_ = (bitField0_ & ~0x00000080);
       newHostLinked_ = false;
-      bitField0_ = (bitField0_ & ~0x00000100);
       rawProjectId_ = "";
-      bitField0_ = (bitField0_ & ~0x00000200);
-      if (validationSummaryBuilder_ == null) {
-        validationSummary_ = null;
-      } else {
-        validationSummaryBuilder_.clear();
+      validationSummary_ = null;
+      if (validationSummaryBuilder_ != null) {
+        validationSummaryBuilder_.dispose();
+        validationSummaryBuilder_ = null;
       }
-      bitField0_ = (bitField0_ & ~0x00000400);
-      if (intentFilterFixBuilder_ == null) {
-        intentFilterFix_ = null;
-      } else {
-        intentFilterFixBuilder_.clear();
+      intentFilterFix_ = null;
+      if (intentFilterFixBuilder_ != null) {
+        intentFilterFixBuilder_.dispose();
+        intentFilterFixBuilder_ = null;
       }
-      bitField0_ = (bitField0_ & ~0x00000800);
       linkFilterOption_ = 0;
-      bitField0_ = (bitField0_ & ~0x00001000);
-      if (linksRecordBuilder_ == null) {
-        linksRecord_ = null;
-      } else {
-        linksRecordBuilder_.clear();
+      linksRecord_ = null;
+      if (linksRecordBuilder_ != null) {
+        linksRecordBuilder_.dispose();
+        linksRecordBuilder_ = null;
       }
-      bitField0_ = (bitField0_ & ~0x00002000);
       return this;
     }
 
@@ -7792,24 +7696,30 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.wireless.android.sdk.stats.AppLinksAssistantEvent buildPartial() {
       com.google.wireless.android.sdk.stats.AppLinksAssistantEvent result = new com.google.wireless.android.sdk.stats.AppLinksAssistantEvent(this);
+      if (bitField0_ != 0) { buildPartial0(result); }
+      onBuilt();
+      return result;
+    }
+
+    private void buildPartial0(com.google.wireless.android.sdk.stats.AppLinksAssistantEvent result) {
       int from_bitField0_ = bitField0_;
       int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.projectId_ = projectId_;
         to_bitField0_ |= 0x00000001;
       }
-      result.projectId_ = projectId_;
       if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.appId_ = appId_;
         to_bitField0_ |= 0x00000002;
       }
-      result.appId_ = appId_;
       if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.eventSource_ = eventSource_;
         to_bitField0_ |= 0x00000004;
       }
-      result.eventSource_ = eventSource_;
       if (((from_bitField0_ & 0x00000008) != 0)) {
+        result.eventState_ = eventState_;
         to_bitField0_ |= 0x00000008;
       }
-      result.eventState_ = eventState_;
       if (((from_bitField0_ & 0x00000010) != 0)) {
         result.existingAppLinks_ = existingAppLinks_;
         to_bitField0_ |= 0x00000010;
@@ -7819,9 +7729,9 @@ private static final long serialVersionUID = 0L;
         to_bitField0_ |= 0x00000020;
       }
       if (((from_bitField0_ & 0x00000040) != 0)) {
+        result.appLinkPathType_ = appLinkPathType_;
         to_bitField0_ |= 0x00000040;
       }
-      result.appLinkPathType_ = appLinkPathType_;
       if (((from_bitField0_ & 0x00000080) != 0)) {
         result.newActivityLinked_ = newActivityLinked_;
         to_bitField0_ |= 0x00000080;
@@ -7831,74 +7741,34 @@ private static final long serialVersionUID = 0L;
         to_bitField0_ |= 0x00000100;
       }
       if (((from_bitField0_ & 0x00000200) != 0)) {
+        result.rawProjectId_ = rawProjectId_;
         to_bitField0_ |= 0x00000200;
       }
-      result.rawProjectId_ = rawProjectId_;
       if (((from_bitField0_ & 0x00000400) != 0)) {
-        if (validationSummaryBuilder_ == null) {
-          result.validationSummary_ = validationSummary_;
-        } else {
-          result.validationSummary_ = validationSummaryBuilder_.build();
-        }
+        result.validationSummary_ = validationSummaryBuilder_ == null
+            ? validationSummary_
+            : validationSummaryBuilder_.build();
         to_bitField0_ |= 0x00000400;
       }
       if (((from_bitField0_ & 0x00000800) != 0)) {
-        if (intentFilterFixBuilder_ == null) {
-          result.intentFilterFix_ = intentFilterFix_;
-        } else {
-          result.intentFilterFix_ = intentFilterFixBuilder_.build();
-        }
+        result.intentFilterFix_ = intentFilterFixBuilder_ == null
+            ? intentFilterFix_
+            : intentFilterFixBuilder_.build();
         to_bitField0_ |= 0x00000800;
       }
       if (((from_bitField0_ & 0x00001000) != 0)) {
+        result.linkFilterOption_ = linkFilterOption_;
         to_bitField0_ |= 0x00001000;
       }
-      result.linkFilterOption_ = linkFilterOption_;
       if (((from_bitField0_ & 0x00002000) != 0)) {
-        if (linksRecordBuilder_ == null) {
-          result.linksRecord_ = linksRecord_;
-        } else {
-          result.linksRecord_ = linksRecordBuilder_.build();
-        }
+        result.linksRecord_ = linksRecordBuilder_ == null
+            ? linksRecord_
+            : linksRecordBuilder_.build();
         to_bitField0_ |= 0x00002000;
       }
-      result.bitField0_ = to_bitField0_;
-      onBuilt();
-      return result;
+      result.bitField0_ |= to_bitField0_;
     }
 
-    @java.lang.Override
-    public Builder clone() {
-      return super.clone();
-    }
-    @java.lang.Override
-    public Builder setField(
-        com.google.protobuf.Descriptors.FieldDescriptor field,
-        java.lang.Object value) {
-      return super.setField(field, value);
-    }
-    @java.lang.Override
-    public Builder clearField(
-        com.google.protobuf.Descriptors.FieldDescriptor field) {
-      return super.clearField(field);
-    }
-    @java.lang.Override
-    public Builder clearOneof(
-        com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-      return super.clearOneof(oneof);
-    }
-    @java.lang.Override
-    public Builder setRepeatedField(
-        com.google.protobuf.Descriptors.FieldDescriptor field,
-        int index, java.lang.Object value) {
-      return super.setRepeatedField(field, index, value);
-    }
-    @java.lang.Override
-    public Builder addRepeatedField(
-        com.google.protobuf.Descriptors.FieldDescriptor field,
-        java.lang.Object value) {
-      return super.addRepeatedField(field, value);
-    }
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
       if (other instanceof com.google.wireless.android.sdk.stats.AppLinksAssistantEvent) {
@@ -7912,13 +7782,13 @@ private static final long serialVersionUID = 0L;
     public Builder mergeFrom(com.google.wireless.android.sdk.stats.AppLinksAssistantEvent other) {
       if (other == com.google.wireless.android.sdk.stats.AppLinksAssistantEvent.getDefaultInstance()) return this;
       if (other.hasProjectId()) {
-        bitField0_ |= 0x00000001;
         projectId_ = other.projectId_;
+        bitField0_ |= 0x00000001;
         onChanged();
       }
       if (other.hasAppId()) {
-        bitField0_ |= 0x00000002;
         appId_ = other.appId_;
+        bitField0_ |= 0x00000002;
         onChanged();
       }
       if (other.hasEventSource()) {
@@ -7943,8 +7813,8 @@ private static final long serialVersionUID = 0L;
         setNewHostLinked(other.getNewHostLinked());
       }
       if (other.hasRawProjectId()) {
-        bitField0_ |= 0x00000200;
         rawProjectId_ = other.rawProjectId_;
+        bitField0_ |= 0x00000200;
         onChanged();
       }
       if (other.hasValidationSummary()) {
@@ -8176,11 +8046,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setProjectId(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000001;
+      if (value == null) { throw new NullPointerException(); }
       projectId_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -8194,8 +8062,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearProjectId() {
-      bitField0_ = (bitField0_ & ~0x00000001);
       projectId_ = getDefaultInstance().getProjectId();
+      bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
@@ -8211,11 +8079,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setProjectIdBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000001;
+      if (value == null) { throw new NullPointerException(); }
       projectId_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -8298,11 +8164,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setAppId(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000002;
+      if (value == null) { throw new NullPointerException(); }
       appId_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -8318,8 +8182,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearAppId() {
-      bitField0_ = (bitField0_ & ~0x00000002);
       appId_ = getDefaultInstance().getAppId();
+      bitField0_ = (bitField0_ & ~0x00000002);
       onChanged();
       return this;
     }
@@ -8337,11 +8201,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setAppIdBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000002;
+      if (value == null) { throw new NullPointerException(); }
       appId_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -8368,8 +8230,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public com.google.wireless.android.sdk.stats.AppLinksAssistantEvent.EventSource getEventSource() {
-      @SuppressWarnings("deprecation")
-      com.google.wireless.android.sdk.stats.AppLinksAssistantEvent.EventSource result = com.google.wireless.android.sdk.stats.AppLinksAssistantEvent.EventSource.valueOf(eventSource_);
+      com.google.wireless.android.sdk.stats.AppLinksAssistantEvent.EventSource result = com.google.wireless.android.sdk.stats.AppLinksAssistantEvent.EventSource.forNumber(eventSource_);
       return result == null ? com.google.wireless.android.sdk.stats.AppLinksAssistantEvent.EventSource.ASSISTANT_SIDE_PANEL : result;
     }
     /**
@@ -8427,8 +8288,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public com.google.wireless.android.sdk.stats.AppLinksAssistantEvent.EventState getEventState() {
-      @SuppressWarnings("deprecation")
-      com.google.wireless.android.sdk.stats.AppLinksAssistantEvent.EventState result = com.google.wireless.android.sdk.stats.AppLinksAssistantEvent.EventState.valueOf(eventState_);
+      com.google.wireless.android.sdk.stats.AppLinksAssistantEvent.EventState result = com.google.wireless.android.sdk.stats.AppLinksAssistantEvent.EventState.forNumber(eventState_);
       return result == null ? com.google.wireless.android.sdk.stats.AppLinksAssistantEvent.EventState.OPENED : result;
     }
     /**
@@ -8502,8 +8362,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setExistingAppLinks(boolean value) {
-      bitField0_ |= 0x00000010;
+
       existingAppLinks_ = value;
+      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -8558,8 +8419,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setAssistantPanelOpenDuration(long value) {
-      bitField0_ |= 0x00000020;
+
       assistantPanelOpenDuration_ = value;
+      bitField0_ |= 0x00000020;
       onChanged();
       return this;
     }
@@ -8606,8 +8468,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public com.google.wireless.android.sdk.stats.AppLinksAssistantEvent.PathType getAppLinkPathType() {
-      @SuppressWarnings("deprecation")
-      com.google.wireless.android.sdk.stats.AppLinksAssistantEvent.PathType result = com.google.wireless.android.sdk.stats.AppLinksAssistantEvent.PathType.valueOf(appLinkPathType_);
+      com.google.wireless.android.sdk.stats.AppLinksAssistantEvent.PathType result = com.google.wireless.android.sdk.stats.AppLinksAssistantEvent.PathType.forNumber(appLinkPathType_);
       return result == null ? com.google.wireless.android.sdk.stats.AppLinksAssistantEvent.PathType.PATH : result;
     }
     /**
@@ -8684,8 +8545,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setNewActivityLinked(boolean value) {
-      bitField0_ |= 0x00000080;
+
       newActivityLinked_ = value;
+      bitField0_ |= 0x00000080;
       onChanged();
       return this;
     }
@@ -8739,8 +8601,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setNewHostLinked(boolean value) {
-      bitField0_ |= 0x00000100;
+
       newHostLinked_ = value;
+      bitField0_ |= 0x00000100;
       onChanged();
       return this;
     }
@@ -8837,11 +8700,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setRawProjectId(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000200;
+      if (value == null) { throw new NullPointerException(); }
       rawProjectId_ = value;
+      bitField0_ |= 0x00000200;
       onChanged();
       return this;
     }
@@ -8857,8 +8718,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearRawProjectId() {
-      bitField0_ = (bitField0_ & ~0x00000200);
       rawProjectId_ = getDefaultInstance().getRawProjectId();
+      bitField0_ = (bitField0_ & ~0x00000200);
       onChanged();
       return this;
     }
@@ -8876,11 +8737,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setRawProjectIdBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000200;
+      if (value == null) { throw new NullPointerException(); }
       rawProjectId_ = value;
+      bitField0_ |= 0x00000200;
       onChanged();
       return this;
     }
@@ -8915,11 +8774,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         validationSummary_ = value;
-        onChanged();
       } else {
         validationSummaryBuilder_.setMessage(value);
       }
       bitField0_ |= 0x00000400;
+      onChanged();
       return this;
     }
     /**
@@ -8929,11 +8788,11 @@ private static final long serialVersionUID = 0L;
         com.google.wireless.android.sdk.stats.AppLinksAssistantEvent.ValidationSummary.Builder builderForValue) {
       if (validationSummaryBuilder_ == null) {
         validationSummary_ = builderForValue.build();
-        onChanged();
       } else {
         validationSummaryBuilder_.setMessage(builderForValue.build());
       }
       bitField0_ |= 0x00000400;
+      onChanged();
       return this;
     }
     /**
@@ -8942,31 +8801,30 @@ private static final long serialVersionUID = 0L;
     public Builder mergeValidationSummary(com.google.wireless.android.sdk.stats.AppLinksAssistantEvent.ValidationSummary value) {
       if (validationSummaryBuilder_ == null) {
         if (((bitField0_ & 0x00000400) != 0) &&
-            validationSummary_ != null &&
-            validationSummary_ != com.google.wireless.android.sdk.stats.AppLinksAssistantEvent.ValidationSummary.getDefaultInstance()) {
-          validationSummary_ =
-            com.google.wireless.android.sdk.stats.AppLinksAssistantEvent.ValidationSummary.newBuilder(validationSummary_).mergeFrom(value).buildPartial();
+          validationSummary_ != null &&
+          validationSummary_ != com.google.wireless.android.sdk.stats.AppLinksAssistantEvent.ValidationSummary.getDefaultInstance()) {
+          getValidationSummaryBuilder().mergeFrom(value);
         } else {
           validationSummary_ = value;
         }
-        onChanged();
       } else {
         validationSummaryBuilder_.mergeFrom(value);
       }
       bitField0_ |= 0x00000400;
+      onChanged();
       return this;
     }
     /**
      * <code>optional .android_studio.AppLinksAssistantEvent.ValidationSummary validation_summary = 11 [lazy = true];</code>
      */
     public Builder clearValidationSummary() {
-      if (validationSummaryBuilder_ == null) {
-        validationSummary_ = null;
-        onChanged();
-      } else {
-        validationSummaryBuilder_.clear();
-      }
       bitField0_ = (bitField0_ & ~0x00000400);
+      validationSummary_ = null;
+      if (validationSummaryBuilder_ != null) {
+        validationSummaryBuilder_.dispose();
+        validationSummaryBuilder_ = null;
+      }
+      onChanged();
       return this;
     }
     /**
@@ -9035,11 +8893,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         intentFilterFix_ = value;
-        onChanged();
       } else {
         intentFilterFixBuilder_.setMessage(value);
       }
       bitField0_ |= 0x00000800;
+      onChanged();
       return this;
     }
     /**
@@ -9049,11 +8907,11 @@ private static final long serialVersionUID = 0L;
         com.google.wireless.android.sdk.stats.AppLinksAssistantEvent.IntentFilterFix.Builder builderForValue) {
       if (intentFilterFixBuilder_ == null) {
         intentFilterFix_ = builderForValue.build();
-        onChanged();
       } else {
         intentFilterFixBuilder_.setMessage(builderForValue.build());
       }
       bitField0_ |= 0x00000800;
+      onChanged();
       return this;
     }
     /**
@@ -9062,31 +8920,30 @@ private static final long serialVersionUID = 0L;
     public Builder mergeIntentFilterFix(com.google.wireless.android.sdk.stats.AppLinksAssistantEvent.IntentFilterFix value) {
       if (intentFilterFixBuilder_ == null) {
         if (((bitField0_ & 0x00000800) != 0) &&
-            intentFilterFix_ != null &&
-            intentFilterFix_ != com.google.wireless.android.sdk.stats.AppLinksAssistantEvent.IntentFilterFix.getDefaultInstance()) {
-          intentFilterFix_ =
-            com.google.wireless.android.sdk.stats.AppLinksAssistantEvent.IntentFilterFix.newBuilder(intentFilterFix_).mergeFrom(value).buildPartial();
+          intentFilterFix_ != null &&
+          intentFilterFix_ != com.google.wireless.android.sdk.stats.AppLinksAssistantEvent.IntentFilterFix.getDefaultInstance()) {
+          getIntentFilterFixBuilder().mergeFrom(value);
         } else {
           intentFilterFix_ = value;
         }
-        onChanged();
       } else {
         intentFilterFixBuilder_.mergeFrom(value);
       }
       bitField0_ |= 0x00000800;
+      onChanged();
       return this;
     }
     /**
      * <code>optional .android_studio.AppLinksAssistantEvent.IntentFilterFix intent_filter_fix = 12 [lazy = true];</code>
      */
     public Builder clearIntentFilterFix() {
-      if (intentFilterFixBuilder_ == null) {
-        intentFilterFix_ = null;
-        onChanged();
-      } else {
-        intentFilterFixBuilder_.clear();
-      }
       bitField0_ = (bitField0_ & ~0x00000800);
+      intentFilterFix_ = null;
+      if (intentFilterFixBuilder_ != null) {
+        intentFilterFixBuilder_.dispose();
+        intentFilterFixBuilder_ = null;
+      }
+      onChanged();
       return this;
     }
     /**
@@ -9139,8 +8996,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public com.google.wireless.android.sdk.stats.AppLinksAssistantEvent.LinkFilterOption getLinkFilterOption() {
-      @SuppressWarnings("deprecation")
-      com.google.wireless.android.sdk.stats.AppLinksAssistantEvent.LinkFilterOption result = com.google.wireless.android.sdk.stats.AppLinksAssistantEvent.LinkFilterOption.valueOf(linkFilterOption_);
+      com.google.wireless.android.sdk.stats.AppLinksAssistantEvent.LinkFilterOption result = com.google.wireless.android.sdk.stats.AppLinksAssistantEvent.LinkFilterOption.forNumber(linkFilterOption_);
       return result == null ? com.google.wireless.android.sdk.stats.AppLinksAssistantEvent.LinkFilterOption.UNKNOWN : result;
     }
     /**
@@ -9210,11 +9066,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         linksRecord_ = value;
-        onChanged();
       } else {
         linksRecordBuilder_.setMessage(value);
       }
       bitField0_ |= 0x00002000;
+      onChanged();
       return this;
     }
     /**
@@ -9228,11 +9084,11 @@ private static final long serialVersionUID = 0L;
         com.google.wireless.android.sdk.stats.AppLinksAssistantEvent.LinksRecord.Builder builderForValue) {
       if (linksRecordBuilder_ == null) {
         linksRecord_ = builderForValue.build();
-        onChanged();
       } else {
         linksRecordBuilder_.setMessage(builderForValue.build());
       }
       bitField0_ |= 0x00002000;
+      onChanged();
       return this;
     }
     /**
@@ -9245,18 +9101,17 @@ private static final long serialVersionUID = 0L;
     public Builder mergeLinksRecord(com.google.wireless.android.sdk.stats.AppLinksAssistantEvent.LinksRecord value) {
       if (linksRecordBuilder_ == null) {
         if (((bitField0_ & 0x00002000) != 0) &&
-            linksRecord_ != null &&
-            linksRecord_ != com.google.wireless.android.sdk.stats.AppLinksAssistantEvent.LinksRecord.getDefaultInstance()) {
-          linksRecord_ =
-            com.google.wireless.android.sdk.stats.AppLinksAssistantEvent.LinksRecord.newBuilder(linksRecord_).mergeFrom(value).buildPartial();
+          linksRecord_ != null &&
+          linksRecord_ != com.google.wireless.android.sdk.stats.AppLinksAssistantEvent.LinksRecord.getDefaultInstance()) {
+          getLinksRecordBuilder().mergeFrom(value);
         } else {
           linksRecord_ = value;
         }
-        onChanged();
       } else {
         linksRecordBuilder_.mergeFrom(value);
       }
       bitField0_ |= 0x00002000;
+      onChanged();
       return this;
     }
     /**
@@ -9267,13 +9122,13 @@ private static final long serialVersionUID = 0L;
      * <code>optional .android_studio.AppLinksAssistantEvent.LinksRecord links_record = 14 [lazy = true];</code>
      */
     public Builder clearLinksRecord() {
-      if (linksRecordBuilder_ == null) {
-        linksRecord_ = null;
-        onChanged();
-      } else {
-        linksRecordBuilder_.clear();
-      }
       bitField0_ = (bitField0_ & ~0x00002000);
+      linksRecord_ = null;
+      if (linksRecordBuilder_ != null) {
+        linksRecordBuilder_.dispose();
+        linksRecordBuilder_ = null;
+      }
+      onChanged();
       return this;
     }
     /**

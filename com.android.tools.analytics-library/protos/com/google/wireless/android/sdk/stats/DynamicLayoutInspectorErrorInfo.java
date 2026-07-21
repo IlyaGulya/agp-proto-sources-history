@@ -31,11 +31,6 @@ private static final long serialVersionUID = 0L;
     return new DynamicLayoutInspectorErrorInfo();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
-    return this.unknownFields;
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_DynamicLayoutInspectorErrorInfo_descriptor;
@@ -897,7 +892,7 @@ private static final long serialVersionUID = 0L;
 
   private int bitField0_;
   public static final int ATTACH_ERROR_STATE_FIELD_NUMBER = 1;
-  private int attachErrorState_;
+  private int attachErrorState_ = 0;
   /**
    * <pre>
    * How far we got on initial connect before an error happened, when sending
@@ -920,13 +915,12 @@ private static final long serialVersionUID = 0L;
    * @return The attachErrorState.
    */
   @java.lang.Override public com.google.wireless.android.sdk.stats.DynamicLayoutInspectorErrorInfo.AttachErrorState getAttachErrorState() {
-    @SuppressWarnings("deprecation")
-    com.google.wireless.android.sdk.stats.DynamicLayoutInspectorErrorInfo.AttachErrorState result = com.google.wireless.android.sdk.stats.DynamicLayoutInspectorErrorInfo.AttachErrorState.valueOf(attachErrorState_);
+    com.google.wireless.android.sdk.stats.DynamicLayoutInspectorErrorInfo.AttachErrorState result = com.google.wireless.android.sdk.stats.DynamicLayoutInspectorErrorInfo.AttachErrorState.forNumber(attachErrorState_);
     return result == null ? com.google.wireless.android.sdk.stats.DynamicLayoutInspectorErrorInfo.AttachErrorState.UNKNOWN_ATTACH_ERROR_STATE : result;
   }
 
   public static final int ATTACH_ERROR_CODE_FIELD_NUMBER = 2;
-  private int attachErrorCode_;
+  private int attachErrorCode_ = 0;
   /**
    * <pre>
    * The error encountered to abort the attach attempt
@@ -947,8 +941,7 @@ private static final long serialVersionUID = 0L;
    * @return The attachErrorCode.
    */
   @java.lang.Override public com.google.wireless.android.sdk.stats.DynamicLayoutInspectorErrorInfo.AttachErrorCode getAttachErrorCode() {
-    @SuppressWarnings("deprecation")
-    com.google.wireless.android.sdk.stats.DynamicLayoutInspectorErrorInfo.AttachErrorCode result = com.google.wireless.android.sdk.stats.DynamicLayoutInspectorErrorInfo.AttachErrorCode.valueOf(attachErrorCode_);
+    com.google.wireless.android.sdk.stats.DynamicLayoutInspectorErrorInfo.AttachErrorCode result = com.google.wireless.android.sdk.stats.DynamicLayoutInspectorErrorInfo.AttachErrorCode.forNumber(attachErrorCode_);
     return result == null ? com.google.wireless.android.sdk.stats.DynamicLayoutInspectorErrorInfo.AttachErrorCode.UNKNOWN_ERROR_CODE : result;
   }
 
@@ -1163,10 +1156,9 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       attachErrorState_ = 0;
-      bitField0_ = (bitField0_ & ~0x00000001);
       attachErrorCode_ = 0;
-      bitField0_ = (bitField0_ & ~0x00000002);
       return this;
     }
 
@@ -1193,53 +1185,25 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.wireless.android.sdk.stats.DynamicLayoutInspectorErrorInfo buildPartial() {
       com.google.wireless.android.sdk.stats.DynamicLayoutInspectorErrorInfo result = new com.google.wireless.android.sdk.stats.DynamicLayoutInspectorErrorInfo(this);
-      int from_bitField0_ = bitField0_;
-      int to_bitField0_ = 0;
-      if (((from_bitField0_ & 0x00000001) != 0)) {
-        to_bitField0_ |= 0x00000001;
-      }
-      result.attachErrorState_ = attachErrorState_;
-      if (((from_bitField0_ & 0x00000002) != 0)) {
-        to_bitField0_ |= 0x00000002;
-      }
-      result.attachErrorCode_ = attachErrorCode_;
-      result.bitField0_ = to_bitField0_;
+      if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
     }
 
-    @java.lang.Override
-    public Builder clone() {
-      return super.clone();
+    private void buildPartial0(com.google.wireless.android.sdk.stats.DynamicLayoutInspectorErrorInfo result) {
+      int from_bitField0_ = bitField0_;
+      int to_bitField0_ = 0;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.attachErrorState_ = attachErrorState_;
+        to_bitField0_ |= 0x00000001;
+      }
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.attachErrorCode_ = attachErrorCode_;
+        to_bitField0_ |= 0x00000002;
+      }
+      result.bitField0_ |= to_bitField0_;
     }
-    @java.lang.Override
-    public Builder setField(
-        com.google.protobuf.Descriptors.FieldDescriptor field,
-        java.lang.Object value) {
-      return super.setField(field, value);
-    }
-    @java.lang.Override
-    public Builder clearField(
-        com.google.protobuf.Descriptors.FieldDescriptor field) {
-      return super.clearField(field);
-    }
-    @java.lang.Override
-    public Builder clearOneof(
-        com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-      return super.clearOneof(oneof);
-    }
-    @java.lang.Override
-    public Builder setRepeatedField(
-        com.google.protobuf.Descriptors.FieldDescriptor field,
-        int index, java.lang.Object value) {
-      return super.setRepeatedField(field, index, value);
-    }
-    @java.lang.Override
-    public Builder addRepeatedField(
-        com.google.protobuf.Descriptors.FieldDescriptor field,
-        java.lang.Object value) {
-      return super.addRepeatedField(field, value);
-    }
+
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
       if (other instanceof com.google.wireless.android.sdk.stats.DynamicLayoutInspectorErrorInfo) {
@@ -1349,8 +1313,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public com.google.wireless.android.sdk.stats.DynamicLayoutInspectorErrorInfo.AttachErrorState getAttachErrorState() {
-      @SuppressWarnings("deprecation")
-      com.google.wireless.android.sdk.stats.DynamicLayoutInspectorErrorInfo.AttachErrorState result = com.google.wireless.android.sdk.stats.DynamicLayoutInspectorErrorInfo.AttachErrorState.valueOf(attachErrorState_);
+      com.google.wireless.android.sdk.stats.DynamicLayoutInspectorErrorInfo.AttachErrorState result = com.google.wireless.android.sdk.stats.DynamicLayoutInspectorErrorInfo.AttachErrorState.forNumber(attachErrorState_);
       return result == null ? com.google.wireless.android.sdk.stats.DynamicLayoutInspectorErrorInfo.AttachErrorState.UNKNOWN_ATTACH_ERROR_STATE : result;
     }
     /**
@@ -1410,8 +1373,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public com.google.wireless.android.sdk.stats.DynamicLayoutInspectorErrorInfo.AttachErrorCode getAttachErrorCode() {
-      @SuppressWarnings("deprecation")
-      com.google.wireless.android.sdk.stats.DynamicLayoutInspectorErrorInfo.AttachErrorCode result = com.google.wireless.android.sdk.stats.DynamicLayoutInspectorErrorInfo.AttachErrorCode.valueOf(attachErrorCode_);
+      com.google.wireless.android.sdk.stats.DynamicLayoutInspectorErrorInfo.AttachErrorCode result = com.google.wireless.android.sdk.stats.DynamicLayoutInspectorErrorInfo.AttachErrorCode.forNumber(attachErrorCode_);
       return result == null ? com.google.wireless.android.sdk.stats.DynamicLayoutInspectorErrorInfo.AttachErrorCode.UNKNOWN_ERROR_CODE : result;
     }
     /**

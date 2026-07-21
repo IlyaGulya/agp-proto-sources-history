@@ -91,7 +91,8 @@ public interface ProductDetailsOrBuilder extends
    * </pre>
    *
    * <code>optional bool preview = 4 [deprecated = true];</code>
-   * @deprecated
+   * @deprecated android_studio.ProductDetails.preview is deprecated.
+   *     See studio_stats.proto;l=2342
    * @return Whether the preview field is set.
    */
   @java.lang.Deprecated boolean hasPreview();
@@ -102,7 +103,8 @@ public interface ProductDetailsOrBuilder extends
    * </pre>
    *
    * <code>optional bool preview = 4 [deprecated = true];</code>
-   * @deprecated
+   * @deprecated android_studio.ProductDetails.preview is deprecated.
+   *     See studio_stats.proto;l=2342
    * @return The preview.
    */
   @java.lang.Deprecated boolean getPreview();

@@ -26,11 +26,6 @@ private static final long serialVersionUID = 0L;
     return new UpgradeAssistantComponentInfo();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
-    return this.unknownFields;
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_UpgradeAssistantComponentInfo_descriptor;
@@ -493,11 +488,6 @@ private static final long serialVersionUID = 0L;
       return new Java8DefaultProcessorSettings();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_UpgradeAssistantComponentInfo_Java8DefaultProcessorSettings_descriptor;
@@ -618,7 +608,7 @@ private static final long serialVersionUID = 0L;
 
     private int bitField0_;
     public static final int NO_LANGUAGE_LEVEL_ACTION_FIELD_NUMBER = 1;
-    private int noLanguageLevelAction_;
+    private int noLanguageLevelAction_ = 0;
     /**
      * <code>optional .android_studio.UpgradeAssistantComponentInfo.Java8DefaultProcessorSettings.NoLanguageLevelAction no_language_level_action = 1;</code>
      * @return Whether the noLanguageLevelAction field is set.
@@ -631,8 +621,7 @@ private static final long serialVersionUID = 0L;
      * @return The noLanguageLevelAction.
      */
     @java.lang.Override public com.google.wireless.android.sdk.stats.UpgradeAssistantComponentInfo.Java8DefaultProcessorSettings.NoLanguageLevelAction getNoLanguageLevelAction() {
-      @SuppressWarnings("deprecation")
-      com.google.wireless.android.sdk.stats.UpgradeAssistantComponentInfo.Java8DefaultProcessorSettings.NoLanguageLevelAction result = com.google.wireless.android.sdk.stats.UpgradeAssistantComponentInfo.Java8DefaultProcessorSettings.NoLanguageLevelAction.valueOf(noLanguageLevelAction_);
+      com.google.wireless.android.sdk.stats.UpgradeAssistantComponentInfo.Java8DefaultProcessorSettings.NoLanguageLevelAction result = com.google.wireless.android.sdk.stats.UpgradeAssistantComponentInfo.Java8DefaultProcessorSettings.NoLanguageLevelAction.forNumber(noLanguageLevelAction_);
       return result == null ? com.google.wireless.android.sdk.stats.UpgradeAssistantComponentInfo.Java8DefaultProcessorSettings.NoLanguageLevelAction.UNKNOWN_NO_LANGUAGE_LEVEL_ACTION : result;
     }
 
@@ -828,8 +817,8 @@ private static final long serialVersionUID = 0L;
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         noLanguageLevelAction_ = 0;
-        bitField0_ = (bitField0_ & ~0x00000001);
         return this;
       }
 
@@ -856,49 +845,21 @@ private static final long serialVersionUID = 0L;
       @java.lang.Override
       public com.google.wireless.android.sdk.stats.UpgradeAssistantComponentInfo.Java8DefaultProcessorSettings buildPartial() {
         com.google.wireless.android.sdk.stats.UpgradeAssistantComponentInfo.Java8DefaultProcessorSettings result = new com.google.wireless.android.sdk.stats.UpgradeAssistantComponentInfo.Java8DefaultProcessorSettings(this);
-        int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          to_bitField0_ |= 0x00000001;
-        }
-        result.noLanguageLevelAction_ = noLanguageLevelAction_;
-        result.bitField0_ = to_bitField0_;
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
+      private void buildPartial0(com.google.wireless.android.sdk.stats.UpgradeAssistantComponentInfo.Java8DefaultProcessorSettings result) {
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.noLanguageLevelAction_ = noLanguageLevelAction_;
+          to_bitField0_ |= 0x00000001;
+        }
+        result.bitField0_ |= to_bitField0_;
       }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
+
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof com.google.wireless.android.sdk.stats.UpgradeAssistantComponentInfo.Java8DefaultProcessorSettings) {
@@ -983,8 +944,7 @@ private static final long serialVersionUID = 0L;
        */
       @java.lang.Override
       public com.google.wireless.android.sdk.stats.UpgradeAssistantComponentInfo.Java8DefaultProcessorSettings.NoLanguageLevelAction getNoLanguageLevelAction() {
-        @SuppressWarnings("deprecation")
-        com.google.wireless.android.sdk.stats.UpgradeAssistantComponentInfo.Java8DefaultProcessorSettings.NoLanguageLevelAction result = com.google.wireless.android.sdk.stats.UpgradeAssistantComponentInfo.Java8DefaultProcessorSettings.NoLanguageLevelAction.valueOf(noLanguageLevelAction_);
+        com.google.wireless.android.sdk.stats.UpgradeAssistantComponentInfo.Java8DefaultProcessorSettings.NoLanguageLevelAction result = com.google.wireless.android.sdk.stats.UpgradeAssistantComponentInfo.Java8DefaultProcessorSettings.NoLanguageLevelAction.forNumber(noLanguageLevelAction_);
         return result == null ? com.google.wireless.android.sdk.stats.UpgradeAssistantComponentInfo.Java8DefaultProcessorSettings.NoLanguageLevelAction.UNKNOWN_NO_LANGUAGE_LEVEL_ACTION : result;
       }
       /**
@@ -1113,11 +1073,6 @@ private static final long serialVersionUID = 0L;
       return new R8FullModeDefaultProcessorSettings();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_UpgradeAssistantComponentInfo_R8FullModeDefaultProcessorSettings_descriptor;
@@ -1238,7 +1193,7 @@ private static final long serialVersionUID = 0L;
 
     private int bitField0_;
     public static final int NO_PROPERTY_PRESENT_ACTION_FIELD_NUMBER = 1;
-    private int noPropertyPresentAction_;
+    private int noPropertyPresentAction_ = 0;
     /**
      * <code>optional .android_studio.UpgradeAssistantComponentInfo.R8FullModeDefaultProcessorSettings.NoPropertyPresentAction no_property_present_action = 1;</code>
      * @return Whether the noPropertyPresentAction field is set.
@@ -1251,8 +1206,7 @@ private static final long serialVersionUID = 0L;
      * @return The noPropertyPresentAction.
      */
     @java.lang.Override public com.google.wireless.android.sdk.stats.UpgradeAssistantComponentInfo.R8FullModeDefaultProcessorSettings.NoPropertyPresentAction getNoPropertyPresentAction() {
-      @SuppressWarnings("deprecation")
-      com.google.wireless.android.sdk.stats.UpgradeAssistantComponentInfo.R8FullModeDefaultProcessorSettings.NoPropertyPresentAction result = com.google.wireless.android.sdk.stats.UpgradeAssistantComponentInfo.R8FullModeDefaultProcessorSettings.NoPropertyPresentAction.valueOf(noPropertyPresentAction_);
+      com.google.wireless.android.sdk.stats.UpgradeAssistantComponentInfo.R8FullModeDefaultProcessorSettings.NoPropertyPresentAction result = com.google.wireless.android.sdk.stats.UpgradeAssistantComponentInfo.R8FullModeDefaultProcessorSettings.NoPropertyPresentAction.forNumber(noPropertyPresentAction_);
       return result == null ? com.google.wireless.android.sdk.stats.UpgradeAssistantComponentInfo.R8FullModeDefaultProcessorSettings.NoPropertyPresentAction.UNKNOWN_NO_PROPERTY_PRESENT_ACTION : result;
     }
 
@@ -1448,8 +1402,8 @@ private static final long serialVersionUID = 0L;
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         noPropertyPresentAction_ = 0;
-        bitField0_ = (bitField0_ & ~0x00000001);
         return this;
       }
 
@@ -1476,49 +1430,21 @@ private static final long serialVersionUID = 0L;
       @java.lang.Override
       public com.google.wireless.android.sdk.stats.UpgradeAssistantComponentInfo.R8FullModeDefaultProcessorSettings buildPartial() {
         com.google.wireless.android.sdk.stats.UpgradeAssistantComponentInfo.R8FullModeDefaultProcessorSettings result = new com.google.wireless.android.sdk.stats.UpgradeAssistantComponentInfo.R8FullModeDefaultProcessorSettings(this);
-        int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          to_bitField0_ |= 0x00000001;
-        }
-        result.noPropertyPresentAction_ = noPropertyPresentAction_;
-        result.bitField0_ = to_bitField0_;
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
+      private void buildPartial0(com.google.wireless.android.sdk.stats.UpgradeAssistantComponentInfo.R8FullModeDefaultProcessorSettings result) {
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.noPropertyPresentAction_ = noPropertyPresentAction_;
+          to_bitField0_ |= 0x00000001;
+        }
+        result.bitField0_ |= to_bitField0_;
       }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
+
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof com.google.wireless.android.sdk.stats.UpgradeAssistantComponentInfo.R8FullModeDefaultProcessorSettings) {
@@ -1603,8 +1529,7 @@ private static final long serialVersionUID = 0L;
        */
       @java.lang.Override
       public com.google.wireless.android.sdk.stats.UpgradeAssistantComponentInfo.R8FullModeDefaultProcessorSettings.NoPropertyPresentAction getNoPropertyPresentAction() {
-        @SuppressWarnings("deprecation")
-        com.google.wireless.android.sdk.stats.UpgradeAssistantComponentInfo.R8FullModeDefaultProcessorSettings.NoPropertyPresentAction result = com.google.wireless.android.sdk.stats.UpgradeAssistantComponentInfo.R8FullModeDefaultProcessorSettings.NoPropertyPresentAction.valueOf(noPropertyPresentAction_);
+        com.google.wireless.android.sdk.stats.UpgradeAssistantComponentInfo.R8FullModeDefaultProcessorSettings.NoPropertyPresentAction result = com.google.wireless.android.sdk.stats.UpgradeAssistantComponentInfo.R8FullModeDefaultProcessorSettings.NoPropertyPresentAction.forNumber(noPropertyPresentAction_);
         return result == null ? com.google.wireless.android.sdk.stats.UpgradeAssistantComponentInfo.R8FullModeDefaultProcessorSettings.NoPropertyPresentAction.UNKNOWN_NO_PROPERTY_PRESENT_ACTION : result;
       }
       /**
@@ -1697,7 +1622,7 @@ private static final long serialVersionUID = 0L;
 
   private int bitField0_;
   public static final int KIND_FIELD_NUMBER = 1;
-  private int kind_;
+  private int kind_ = 0;
   /**
    * <pre>
    * The kind of processor.
@@ -1718,13 +1643,12 @@ private static final long serialVersionUID = 0L;
    * @return The kind.
    */
   @java.lang.Override public com.google.wireless.android.sdk.stats.UpgradeAssistantComponentInfo.UpgradeAssistantComponentKind getKind() {
-    @SuppressWarnings("deprecation")
-    com.google.wireless.android.sdk.stats.UpgradeAssistantComponentInfo.UpgradeAssistantComponentKind result = com.google.wireless.android.sdk.stats.UpgradeAssistantComponentInfo.UpgradeAssistantComponentKind.valueOf(kind_);
+    com.google.wireless.android.sdk.stats.UpgradeAssistantComponentInfo.UpgradeAssistantComponentKind result = com.google.wireless.android.sdk.stats.UpgradeAssistantComponentInfo.UpgradeAssistantComponentKind.forNumber(kind_);
     return result == null ? com.google.wireless.android.sdk.stats.UpgradeAssistantComponentInfo.UpgradeAssistantComponentKind.UNKNOWN_ASSISTANT_COMPONENT_KIND : result;
   }
 
   public static final int IS_ENABLED_FIELD_NUMBER = 2;
-  private boolean isEnabled_;
+  private boolean isEnabled_ = false;
   /**
    * <pre>
    * Whether the processor is enabled.
@@ -2080,22 +2004,19 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       kind_ = 0;
-      bitField0_ = (bitField0_ & ~0x00000001);
       isEnabled_ = false;
-      bitField0_ = (bitField0_ & ~0x00000002);
-      if (java8DefaultSettingsBuilder_ == null) {
-        java8DefaultSettings_ = null;
-      } else {
-        java8DefaultSettingsBuilder_.clear();
+      java8DefaultSettings_ = null;
+      if (java8DefaultSettingsBuilder_ != null) {
+        java8DefaultSettingsBuilder_.dispose();
+        java8DefaultSettingsBuilder_ = null;
       }
-      bitField0_ = (bitField0_ & ~0x00000004);
-      if (r8FullModeDefaultSettingsBuilder_ == null) {
-        r8FullModeDefaultSettings_ = null;
-      } else {
-        r8FullModeDefaultSettingsBuilder_.clear();
+      r8FullModeDefaultSettings_ = null;
+      if (r8FullModeDefaultSettingsBuilder_ != null) {
+        r8FullModeDefaultSettingsBuilder_.dispose();
+        r8FullModeDefaultSettingsBuilder_ = null;
       }
-      bitField0_ = (bitField0_ & ~0x00000008);
       return this;
     }
 
@@ -2122,69 +2043,37 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.wireless.android.sdk.stats.UpgradeAssistantComponentInfo buildPartial() {
       com.google.wireless.android.sdk.stats.UpgradeAssistantComponentInfo result = new com.google.wireless.android.sdk.stats.UpgradeAssistantComponentInfo(this);
+      if (bitField0_ != 0) { buildPartial0(result); }
+      onBuilt();
+      return result;
+    }
+
+    private void buildPartial0(com.google.wireless.android.sdk.stats.UpgradeAssistantComponentInfo result) {
       int from_bitField0_ = bitField0_;
       int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.kind_ = kind_;
         to_bitField0_ |= 0x00000001;
       }
-      result.kind_ = kind_;
       if (((from_bitField0_ & 0x00000002) != 0)) {
         result.isEnabled_ = isEnabled_;
         to_bitField0_ |= 0x00000002;
       }
       if (((from_bitField0_ & 0x00000004) != 0)) {
-        if (java8DefaultSettingsBuilder_ == null) {
-          result.java8DefaultSettings_ = java8DefaultSettings_;
-        } else {
-          result.java8DefaultSettings_ = java8DefaultSettingsBuilder_.build();
-        }
+        result.java8DefaultSettings_ = java8DefaultSettingsBuilder_ == null
+            ? java8DefaultSettings_
+            : java8DefaultSettingsBuilder_.build();
         to_bitField0_ |= 0x00000004;
       }
       if (((from_bitField0_ & 0x00000008) != 0)) {
-        if (r8FullModeDefaultSettingsBuilder_ == null) {
-          result.r8FullModeDefaultSettings_ = r8FullModeDefaultSettings_;
-        } else {
-          result.r8FullModeDefaultSettings_ = r8FullModeDefaultSettingsBuilder_.build();
-        }
+        result.r8FullModeDefaultSettings_ = r8FullModeDefaultSettingsBuilder_ == null
+            ? r8FullModeDefaultSettings_
+            : r8FullModeDefaultSettingsBuilder_.build();
         to_bitField0_ |= 0x00000008;
       }
-      result.bitField0_ = to_bitField0_;
-      onBuilt();
-      return result;
+      result.bitField0_ |= to_bitField0_;
     }
 
-    @java.lang.Override
-    public Builder clone() {
-      return super.clone();
-    }
-    @java.lang.Override
-    public Builder setField(
-        com.google.protobuf.Descriptors.FieldDescriptor field,
-        java.lang.Object value) {
-      return super.setField(field, value);
-    }
-    @java.lang.Override
-    public Builder clearField(
-        com.google.protobuf.Descriptors.FieldDescriptor field) {
-      return super.clearField(field);
-    }
-    @java.lang.Override
-    public Builder clearOneof(
-        com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-      return super.clearOneof(oneof);
-    }
-    @java.lang.Override
-    public Builder setRepeatedField(
-        com.google.protobuf.Descriptors.FieldDescriptor field,
-        int index, java.lang.Object value) {
-      return super.setRepeatedField(field, index, value);
-    }
-    @java.lang.Override
-    public Builder addRepeatedField(
-        com.google.protobuf.Descriptors.FieldDescriptor field,
-        java.lang.Object value) {
-      return super.addRepeatedField(field, value);
-    }
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
       if (other instanceof com.google.wireless.android.sdk.stats.UpgradeAssistantComponentInfo) {
@@ -2305,8 +2194,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public com.google.wireless.android.sdk.stats.UpgradeAssistantComponentInfo.UpgradeAssistantComponentKind getKind() {
-      @SuppressWarnings("deprecation")
-      com.google.wireless.android.sdk.stats.UpgradeAssistantComponentInfo.UpgradeAssistantComponentKind result = com.google.wireless.android.sdk.stats.UpgradeAssistantComponentInfo.UpgradeAssistantComponentKind.valueOf(kind_);
+      com.google.wireless.android.sdk.stats.UpgradeAssistantComponentInfo.UpgradeAssistantComponentKind result = com.google.wireless.android.sdk.stats.UpgradeAssistantComponentInfo.UpgradeAssistantComponentKind.forNumber(kind_);
       return result == null ? com.google.wireless.android.sdk.stats.UpgradeAssistantComponentInfo.UpgradeAssistantComponentKind.UNKNOWN_ASSISTANT_COMPONENT_KIND : result;
     }
     /**
@@ -2377,8 +2265,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setIsEnabled(boolean value) {
-      bitField0_ |= 0x00000002;
+
       isEnabled_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -2442,11 +2331,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         java8DefaultSettings_ = value;
-        onChanged();
       } else {
         java8DefaultSettingsBuilder_.setMessage(value);
       }
       bitField0_ |= 0x00000004;
+      onChanged();
       return this;
     }
     /**
@@ -2461,11 +2350,11 @@ private static final long serialVersionUID = 0L;
         com.google.wireless.android.sdk.stats.UpgradeAssistantComponentInfo.Java8DefaultProcessorSettings.Builder builderForValue) {
       if (java8DefaultSettingsBuilder_ == null) {
         java8DefaultSettings_ = builderForValue.build();
-        onChanged();
       } else {
         java8DefaultSettingsBuilder_.setMessage(builderForValue.build());
       }
       bitField0_ |= 0x00000004;
+      onChanged();
       return this;
     }
     /**
@@ -2479,18 +2368,17 @@ private static final long serialVersionUID = 0L;
     public Builder mergeJava8DefaultSettings(com.google.wireless.android.sdk.stats.UpgradeAssistantComponentInfo.Java8DefaultProcessorSettings value) {
       if (java8DefaultSettingsBuilder_ == null) {
         if (((bitField0_ & 0x00000004) != 0) &&
-            java8DefaultSettings_ != null &&
-            java8DefaultSettings_ != com.google.wireless.android.sdk.stats.UpgradeAssistantComponentInfo.Java8DefaultProcessorSettings.getDefaultInstance()) {
-          java8DefaultSettings_ =
-            com.google.wireless.android.sdk.stats.UpgradeAssistantComponentInfo.Java8DefaultProcessorSettings.newBuilder(java8DefaultSettings_).mergeFrom(value).buildPartial();
+          java8DefaultSettings_ != null &&
+          java8DefaultSettings_ != com.google.wireless.android.sdk.stats.UpgradeAssistantComponentInfo.Java8DefaultProcessorSettings.getDefaultInstance()) {
+          getJava8DefaultSettingsBuilder().mergeFrom(value);
         } else {
           java8DefaultSettings_ = value;
         }
-        onChanged();
       } else {
         java8DefaultSettingsBuilder_.mergeFrom(value);
       }
       bitField0_ |= 0x00000004;
+      onChanged();
       return this;
     }
     /**
@@ -2502,13 +2390,13 @@ private static final long serialVersionUID = 0L;
      * <code>optional .android_studio.UpgradeAssistantComponentInfo.Java8DefaultProcessorSettings java8_default_settings = 3 [lazy = true];</code>
      */
     public Builder clearJava8DefaultSettings() {
-      if (java8DefaultSettingsBuilder_ == null) {
-        java8DefaultSettings_ = null;
-        onChanged();
-      } else {
-        java8DefaultSettingsBuilder_.clear();
-      }
       bitField0_ = (bitField0_ & ~0x00000004);
+      java8DefaultSettings_ = null;
+      if (java8DefaultSettingsBuilder_ != null) {
+        java8DefaultSettingsBuilder_.dispose();
+        java8DefaultSettingsBuilder_ = null;
+      }
+      onChanged();
       return this;
     }
     /**
@@ -2607,11 +2495,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         r8FullModeDefaultSettings_ = value;
-        onChanged();
       } else {
         r8FullModeDefaultSettingsBuilder_.setMessage(value);
       }
       bitField0_ |= 0x00000008;
+      onChanged();
       return this;
     }
     /**
@@ -2626,11 +2514,11 @@ private static final long serialVersionUID = 0L;
         com.google.wireless.android.sdk.stats.UpgradeAssistantComponentInfo.R8FullModeDefaultProcessorSettings.Builder builderForValue) {
       if (r8FullModeDefaultSettingsBuilder_ == null) {
         r8FullModeDefaultSettings_ = builderForValue.build();
-        onChanged();
       } else {
         r8FullModeDefaultSettingsBuilder_.setMessage(builderForValue.build());
       }
       bitField0_ |= 0x00000008;
+      onChanged();
       return this;
     }
     /**
@@ -2644,18 +2532,17 @@ private static final long serialVersionUID = 0L;
     public Builder mergeR8FullModeDefaultSettings(com.google.wireless.android.sdk.stats.UpgradeAssistantComponentInfo.R8FullModeDefaultProcessorSettings value) {
       if (r8FullModeDefaultSettingsBuilder_ == null) {
         if (((bitField0_ & 0x00000008) != 0) &&
-            r8FullModeDefaultSettings_ != null &&
-            r8FullModeDefaultSettings_ != com.google.wireless.android.sdk.stats.UpgradeAssistantComponentInfo.R8FullModeDefaultProcessorSettings.getDefaultInstance()) {
-          r8FullModeDefaultSettings_ =
-            com.google.wireless.android.sdk.stats.UpgradeAssistantComponentInfo.R8FullModeDefaultProcessorSettings.newBuilder(r8FullModeDefaultSettings_).mergeFrom(value).buildPartial();
+          r8FullModeDefaultSettings_ != null &&
+          r8FullModeDefaultSettings_ != com.google.wireless.android.sdk.stats.UpgradeAssistantComponentInfo.R8FullModeDefaultProcessorSettings.getDefaultInstance()) {
+          getR8FullModeDefaultSettingsBuilder().mergeFrom(value);
         } else {
           r8FullModeDefaultSettings_ = value;
         }
-        onChanged();
       } else {
         r8FullModeDefaultSettingsBuilder_.mergeFrom(value);
       }
       bitField0_ |= 0x00000008;
+      onChanged();
       return this;
     }
     /**
@@ -2667,13 +2554,13 @@ private static final long serialVersionUID = 0L;
      * <code>optional .android_studio.UpgradeAssistantComponentInfo.R8FullModeDefaultProcessorSettings r8_full_mode_default_settings = 4 [lazy = true];</code>
      */
     public Builder clearR8FullModeDefaultSettings() {
-      if (r8FullModeDefaultSettingsBuilder_ == null) {
-        r8FullModeDefaultSettings_ = null;
-        onChanged();
-      } else {
-        r8FullModeDefaultSettingsBuilder_.clear();
-      }
       bitField0_ = (bitField0_ & ~0x00000008);
+      r8FullModeDefaultSettings_ = null;
+      if (r8FullModeDefaultSettingsBuilder_ != null) {
+        r8FullModeDefaultSettingsBuilder_.dispose();
+        r8FullModeDefaultSettingsBuilder_ = null;
+      }
+      onChanged();
       return this;
     }
     /**
