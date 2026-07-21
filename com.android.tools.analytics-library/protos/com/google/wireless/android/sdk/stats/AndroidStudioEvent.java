@@ -2049,6 +2049,19 @@ private static final long serialVersionUID = 0L;
             bitField4_ |= 0x00800000;
             break;
           }
+          case 1274: {
+            com.google.wireless.android.sdk.stats.SafeModeStatsEvent.Builder subBuilder = null;
+            if (((bitField4_ & 0x01000000) != 0)) {
+              subBuilder = safeModeStatsEvent_.toBuilder();
+            }
+            safeModeStatsEvent_ = input.readMessage(com.google.wireless.android.sdk.stats.SafeModeStatsEvent.PARSER, extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(safeModeStatsEvent_);
+              safeModeStatsEvent_ = subBuilder.buildPartial();
+            }
+            bitField4_ |= 0x01000000;
+            break;
+          }
           default: {
             if (!parseUnknownField(
                 input, unknownFields, extensionRegistry, tag)) {
@@ -4739,6 +4752,14 @@ private static final long serialVersionUID = 0L;
      * <code>DIRECT_ACCESS_USAGE_EVENT = 272;</code>
      */
     DIRECT_ACCESS_USAGE_EVENT(272),
+    /**
+     * <pre>
+     * Event related to the usage of safe mode in Android Studio.
+     * </pre>
+     *
+     * <code>SAFE_MODE_STATS_EVENT = 273;</code>
+     */
+    SAFE_MODE_STATS_EVENT(273),
     ;
 
     /**
@@ -6751,6 +6772,14 @@ private static final long serialVersionUID = 0L;
      * <code>DIRECT_ACCESS_USAGE_EVENT = 272;</code>
      */
     public static final int DIRECT_ACCESS_USAGE_EVENT_VALUE = 272;
+    /**
+     * <pre>
+     * Event related to the usage of safe mode in Android Studio.
+     * </pre>
+     *
+     * <code>SAFE_MODE_STATS_EVENT = 273;</code>
+     */
+    public static final int SAFE_MODE_STATS_EVENT_VALUE = 273;
 
 
     public final int getNumber() {
@@ -7041,6 +7070,7 @@ private static final long serialVersionUID = 0L;
         case 270: return CREATE_DIAGNOSTIC_REPORT_ACTION;
         case 271: return UPGRADE_ASSISTANT_CTA_OLD_AGP_DISMISSED;
         case 272: return DIRECT_ACCESS_USAGE_EVENT;
+        case 273: return SAFE_MODE_STATS_EVENT;
         default: return null;
       }
     }
@@ -8692,6 +8722,10 @@ private static final long serialVersionUID = 0L;
      * <code>DISTRIBUTIONSHA256SUM_FOUND_IN_WRAPPER = 34;</code>
      */
     DISTRIBUTIONSHA256SUM_FOUND_IN_WRAPPER(34),
+    /**
+     * <code>GRADLE_JVM_NOT_COMPATIBLE_WITH_AGP = 35;</code>
+     */
+    GRADLE_JVM_NOT_COMPATIBLE_WITH_AGP(35),
     ;
 
     /**
@@ -8834,6 +8868,10 @@ private static final long serialVersionUID = 0L;
      * <code>DISTRIBUTIONSHA256SUM_FOUND_IN_WRAPPER = 34;</code>
      */
     public static final int DISTRIBUTIONSHA256SUM_FOUND_IN_WRAPPER_VALUE = 34;
+    /**
+     * <code>GRADLE_JVM_NOT_COMPATIBLE_WITH_AGP = 35;</code>
+     */
+    public static final int GRADLE_JVM_NOT_COMPATIBLE_WITH_AGP_VALUE = 35;
 
 
     public final int getNumber() {
@@ -8891,6 +8929,7 @@ private static final long serialVersionUID = 0L;
         case 32: return JDK8_REQUIRED;
         case 33: return GRADLE_DISTRIBUTION_INSTALL_ERROR;
         case 34: return DISTRIBUTIONSHA256SUM_FOUND_IN_WRAPPER;
+        case 35: return GRADLE_JVM_NOT_COMPATIBLE_WITH_AGP;
         default: return null;
       }
     }
@@ -21874,6 +21913,44 @@ private static final long serialVersionUID = 0L;
     return directAccessUsageEvent_ == null ? com.google.wireless.android.sdk.stats.DirectAccessUsageEvent.getDefaultInstance() : directAccessUsageEvent_;
   }
 
+  public static final int SAFE_MODE_STATS_EVENT_FIELD_NUMBER = 159;
+  private com.google.wireless.android.sdk.stats.SafeModeStatsEvent safeModeStatsEvent_;
+  /**
+   * <pre>
+   * set when kind = SAFE_MODE_STATS_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.SafeModeStatsEvent safe_mode_stats_event = 159;</code>
+   * @return Whether the safeModeStatsEvent field is set.
+   */
+  @java.lang.Override
+  public boolean hasSafeModeStatsEvent() {
+    return ((bitField4_ & 0x01000000) != 0);
+  }
+  /**
+   * <pre>
+   * set when kind = SAFE_MODE_STATS_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.SafeModeStatsEvent safe_mode_stats_event = 159;</code>
+   * @return The safeModeStatsEvent.
+   */
+  @java.lang.Override
+  public com.google.wireless.android.sdk.stats.SafeModeStatsEvent getSafeModeStatsEvent() {
+    return safeModeStatsEvent_ == null ? com.google.wireless.android.sdk.stats.SafeModeStatsEvent.getDefaultInstance() : safeModeStatsEvent_;
+  }
+  /**
+   * <pre>
+   * set when kind = SAFE_MODE_STATS_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.SafeModeStatsEvent safe_mode_stats_event = 159;</code>
+   */
+  @java.lang.Override
+  public com.google.wireless.android.sdk.stats.SafeModeStatsEventOrBuilder getSafeModeStatsEventOrBuilder() {
+    return safeModeStatsEvent_ == null ? com.google.wireless.android.sdk.stats.SafeModeStatsEvent.getDefaultInstance() : safeModeStatsEvent_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -22361,6 +22438,9 @@ private static final long serialVersionUID = 0L;
     }
     if (((bitField4_ & 0x00800000) != 0)) {
       output.writeMessage(158, getDirectAccessUsageEvent());
+    }
+    if (((bitField4_ & 0x01000000) != 0)) {
+      output.writeMessage(159, getSafeModeStatsEvent());
     }
     unknownFields.writeTo(output);
   }
@@ -23008,6 +23088,10 @@ private static final long serialVersionUID = 0L;
     if (((bitField4_ & 0x00800000) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(158, getDirectAccessUsageEvent());
+    }
+    if (((bitField4_ & 0x01000000) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(159, getSafeModeStatsEvent());
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -23785,6 +23869,11 @@ private static final long serialVersionUID = 0L;
       if (!getDirectAccessUsageEvent()
           .equals(other.getDirectAccessUsageEvent())) return false;
     }
+    if (hasSafeModeStatsEvent() != other.hasSafeModeStatsEvent()) return false;
+    if (hasSafeModeStatsEvent()) {
+      if (!getSafeModeStatsEvent()
+          .equals(other.getSafeModeStatsEvent())) return false;
+    }
     if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
@@ -24430,6 +24519,10 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + DIRECT_ACCESS_USAGE_EVENT_FIELD_NUMBER;
       hash = (53 * hash) + getDirectAccessUsageEvent().hashCode();
     }
+    if (hasSafeModeStatsEvent()) {
+      hash = (37 * hash) + SAFE_MODE_STATS_EVENT_FIELD_NUMBER;
+      hash = (53 * hash) + getSafeModeStatsEvent().hashCode();
+    }
     hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -24693,6 +24786,7 @@ private static final long serialVersionUID = 0L;
         getHeapReportEventFieldBuilder();
         getCreateDiagnosticReportActionEventFieldBuilder();
         getDirectAccessUsageEventFieldBuilder();
+        getSafeModeStatsEventFieldBuilder();
       }
     }
     @java.lang.Override
@@ -25554,6 +25648,12 @@ private static final long serialVersionUID = 0L;
         directAccessUsageEventBuilder_.clear();
       }
       bitField4_ = (bitField4_ & ~0x20000000);
+      if (safeModeStatsEventBuilder_ == null) {
+        safeModeStatsEvent_ = null;
+      } else {
+        safeModeStatsEventBuilder_.clear();
+      }
+      bitField4_ = (bitField4_ & ~0x40000000);
       return this;
     }
 
@@ -26768,6 +26868,14 @@ private static final long serialVersionUID = 0L;
         }
         to_bitField4_ |= 0x00800000;
       }
+      if (((from_bitField4_ & 0x40000000) != 0)) {
+        if (safeModeStatsEventBuilder_ == null) {
+          result.safeModeStatsEvent_ = safeModeStatsEvent_;
+        } else {
+          result.safeModeStatsEvent_ = safeModeStatsEventBuilder_.build();
+        }
+        to_bitField4_ |= 0x01000000;
+      }
       result.bitField0_ = to_bitField0_;
       result.bitField1_ = to_bitField1_;
       result.bitField2_ = to_bitField2_;
@@ -27398,6 +27506,9 @@ private static final long serialVersionUID = 0L;
       }
       if (other.hasDirectAccessUsageEvent()) {
         mergeDirectAccessUsageEvent(other.getDirectAccessUsageEvent());
+      }
+      if (other.hasSafeModeStatsEvent()) {
+        mergeSafeModeStatsEvent(other.getSafeModeStatsEvent());
       }
       this.mergeUnknownFields(other.unknownFields);
       onChanged();
@@ -51348,6 +51459,162 @@ private static final long serialVersionUID = 0L;
         directAccessUsageEvent_ = null;
       }
       return directAccessUsageEventBuilder_;
+    }
+
+    private com.google.wireless.android.sdk.stats.SafeModeStatsEvent safeModeStatsEvent_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.SafeModeStatsEvent, com.google.wireless.android.sdk.stats.SafeModeStatsEvent.Builder, com.google.wireless.android.sdk.stats.SafeModeStatsEventOrBuilder> safeModeStatsEventBuilder_;
+    /**
+     * <pre>
+     * set when kind = SAFE_MODE_STATS_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.SafeModeStatsEvent safe_mode_stats_event = 159;</code>
+     * @return Whether the safeModeStatsEvent field is set.
+     */
+    public boolean hasSafeModeStatsEvent() {
+      return ((bitField4_ & 0x40000000) != 0);
+    }
+    /**
+     * <pre>
+     * set when kind = SAFE_MODE_STATS_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.SafeModeStatsEvent safe_mode_stats_event = 159;</code>
+     * @return The safeModeStatsEvent.
+     */
+    public com.google.wireless.android.sdk.stats.SafeModeStatsEvent getSafeModeStatsEvent() {
+      if (safeModeStatsEventBuilder_ == null) {
+        return safeModeStatsEvent_ == null ? com.google.wireless.android.sdk.stats.SafeModeStatsEvent.getDefaultInstance() : safeModeStatsEvent_;
+      } else {
+        return safeModeStatsEventBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * set when kind = SAFE_MODE_STATS_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.SafeModeStatsEvent safe_mode_stats_event = 159;</code>
+     */
+    public Builder setSafeModeStatsEvent(com.google.wireless.android.sdk.stats.SafeModeStatsEvent value) {
+      if (safeModeStatsEventBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        safeModeStatsEvent_ = value;
+        onChanged();
+      } else {
+        safeModeStatsEventBuilder_.setMessage(value);
+      }
+      bitField4_ |= 0x40000000;
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = SAFE_MODE_STATS_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.SafeModeStatsEvent safe_mode_stats_event = 159;</code>
+     */
+    public Builder setSafeModeStatsEvent(
+        com.google.wireless.android.sdk.stats.SafeModeStatsEvent.Builder builderForValue) {
+      if (safeModeStatsEventBuilder_ == null) {
+        safeModeStatsEvent_ = builderForValue.build();
+        onChanged();
+      } else {
+        safeModeStatsEventBuilder_.setMessage(builderForValue.build());
+      }
+      bitField4_ |= 0x40000000;
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = SAFE_MODE_STATS_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.SafeModeStatsEvent safe_mode_stats_event = 159;</code>
+     */
+    public Builder mergeSafeModeStatsEvent(com.google.wireless.android.sdk.stats.SafeModeStatsEvent value) {
+      if (safeModeStatsEventBuilder_ == null) {
+        if (((bitField4_ & 0x40000000) != 0) &&
+            safeModeStatsEvent_ != null &&
+            safeModeStatsEvent_ != com.google.wireless.android.sdk.stats.SafeModeStatsEvent.getDefaultInstance()) {
+          safeModeStatsEvent_ =
+            com.google.wireless.android.sdk.stats.SafeModeStatsEvent.newBuilder(safeModeStatsEvent_).mergeFrom(value).buildPartial();
+        } else {
+          safeModeStatsEvent_ = value;
+        }
+        onChanged();
+      } else {
+        safeModeStatsEventBuilder_.mergeFrom(value);
+      }
+      bitField4_ |= 0x40000000;
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = SAFE_MODE_STATS_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.SafeModeStatsEvent safe_mode_stats_event = 159;</code>
+     */
+    public Builder clearSafeModeStatsEvent() {
+      if (safeModeStatsEventBuilder_ == null) {
+        safeModeStatsEvent_ = null;
+        onChanged();
+      } else {
+        safeModeStatsEventBuilder_.clear();
+      }
+      bitField4_ = (bitField4_ & ~0x40000000);
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = SAFE_MODE_STATS_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.SafeModeStatsEvent safe_mode_stats_event = 159;</code>
+     */
+    public com.google.wireless.android.sdk.stats.SafeModeStatsEvent.Builder getSafeModeStatsEventBuilder() {
+      bitField4_ |= 0x40000000;
+      onChanged();
+      return getSafeModeStatsEventFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * set when kind = SAFE_MODE_STATS_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.SafeModeStatsEvent safe_mode_stats_event = 159;</code>
+     */
+    public com.google.wireless.android.sdk.stats.SafeModeStatsEventOrBuilder getSafeModeStatsEventOrBuilder() {
+      if (safeModeStatsEventBuilder_ != null) {
+        return safeModeStatsEventBuilder_.getMessageOrBuilder();
+      } else {
+        return safeModeStatsEvent_ == null ?
+            com.google.wireless.android.sdk.stats.SafeModeStatsEvent.getDefaultInstance() : safeModeStatsEvent_;
+      }
+    }
+    /**
+     * <pre>
+     * set when kind = SAFE_MODE_STATS_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.SafeModeStatsEvent safe_mode_stats_event = 159;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.SafeModeStatsEvent, com.google.wireless.android.sdk.stats.SafeModeStatsEvent.Builder, com.google.wireless.android.sdk.stats.SafeModeStatsEventOrBuilder> 
+        getSafeModeStatsEventFieldBuilder() {
+      if (safeModeStatsEventBuilder_ == null) {
+        safeModeStatsEventBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.wireless.android.sdk.stats.SafeModeStatsEvent, com.google.wireless.android.sdk.stats.SafeModeStatsEvent.Builder, com.google.wireless.android.sdk.stats.SafeModeStatsEventOrBuilder>(
+                getSafeModeStatsEvent(),
+                getParentForChildren(),
+                isClean());
+        safeModeStatsEvent_ = null;
+      }
+      return safeModeStatsEventBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(
