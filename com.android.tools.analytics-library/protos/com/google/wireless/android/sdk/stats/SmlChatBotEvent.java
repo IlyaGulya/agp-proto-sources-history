@@ -7288,7 +7288,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional bool success = 3 [deprecated = true];</code>
      * @deprecated android_studio.SmlChatBotEvent.ParseResult.success is deprecated.
-     *     See studio_stats.proto;l=15862
+     *     See studio_stats.proto;l=15864
      * @return Whether the success field is set.
      */
     @java.lang.Deprecated boolean hasSuccess();
@@ -7300,7 +7300,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional bool success = 3 [deprecated = true];</code>
      * @deprecated android_studio.SmlChatBotEvent.ParseResult.success is deprecated.
-     *     See studio_stats.proto;l=15862
+     *     See studio_stats.proto;l=15864
      * @return The success.
      */
     @java.lang.Deprecated boolean getSuccess();
@@ -7428,7 +7428,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional bool success = 3 [deprecated = true];</code>
      * @deprecated android_studio.SmlChatBotEvent.ParseResult.success is deprecated.
-     *     See studio_stats.proto;l=15862
+     *     See studio_stats.proto;l=15864
      * @return Whether the success field is set.
      */
     @java.lang.Override
@@ -7443,7 +7443,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional bool success = 3 [deprecated = true];</code>
      * @deprecated android_studio.SmlChatBotEvent.ParseResult.success is deprecated.
-     *     See studio_stats.proto;l=15862
+     *     See studio_stats.proto;l=15864
      * @return The success.
      */
     @java.lang.Override
@@ -8107,7 +8107,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional bool success = 3 [deprecated = true];</code>
        * @deprecated android_studio.SmlChatBotEvent.ParseResult.success is deprecated.
-       *     See studio_stats.proto;l=15862
+       *     See studio_stats.proto;l=15864
        * @return Whether the success field is set.
        */
       @java.lang.Override
@@ -8122,7 +8122,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional bool success = 3 [deprecated = true];</code>
        * @deprecated android_studio.SmlChatBotEvent.ParseResult.success is deprecated.
-       *     See studio_stats.proto;l=15862
+       *     See studio_stats.proto;l=15864
        * @return The success.
        */
       @java.lang.Override
@@ -8137,7 +8137,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional bool success = 3 [deprecated = true];</code>
        * @deprecated android_studio.SmlChatBotEvent.ParseResult.success is deprecated.
-       *     See studio_stats.proto;l=15862
+       *     See studio_stats.proto;l=15864
        * @param value The success to set.
        * @return This builder for chaining.
        */
@@ -8156,7 +8156,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional bool success = 3 [deprecated = true];</code>
        * @deprecated android_studio.SmlChatBotEvent.ParseResult.success is deprecated.
-       *     See studio_stats.proto;l=15862
+       *     See studio_stats.proto;l=15864
        * @return This builder for chaining.
        */
       @java.lang.Deprecated public Builder clearSuccess() {
@@ -12995,6 +12995,38 @@ private static final long serialVersionUID = 0L;
      * <code>optional .android_studio.SmlResponseMetadata metadata = 2 [lazy = true];</code>
      */
     com.google.wireless.android.sdk.stats.SmlResponseMetadataOrBuilder getMetadataOrBuilder();
+
+    /**
+     * <pre>
+     * This id should uniquely identify a tool call and be shared with all
+     * of its subsequent events (response, follow-up, etc.)
+     * </pre>
+     *
+     * <code>optional string tool_call_id = 3;</code>
+     * @return Whether the toolCallId field is set.
+     */
+    boolean hasToolCallId();
+    /**
+     * <pre>
+     * This id should uniquely identify a tool call and be shared with all
+     * of its subsequent events (response, follow-up, etc.)
+     * </pre>
+     *
+     * <code>optional string tool_call_id = 3;</code>
+     * @return The toolCallId.
+     */
+    java.lang.String getToolCallId();
+    /**
+     * <pre>
+     * This id should uniquely identify a tool call and be shared with all
+     * of its subsequent events (response, follow-up, etc.)
+     * </pre>
+     *
+     * <code>optional string tool_call_id = 3;</code>
+     * @return The bytes for toolCallId.
+     */
+    com.google.protobuf.ByteString
+        getToolCallIdBytes();
   }
   /**
    * Protobuf type {@code android_studio.SmlChatBotEvent.ToolCall}
@@ -13010,6 +13042,7 @@ private static final long serialVersionUID = 0L;
     }
     private ToolCall() {
       toolName_ = "";
+      toolCallId_ = "";
     }
 
     @java.lang.Override
@@ -13108,6 +13141,70 @@ private static final long serialVersionUID = 0L;
       return metadata_ == null ? com.google.wireless.android.sdk.stats.SmlResponseMetadata.getDefaultInstance() : metadata_;
     }
 
+    public static final int TOOL_CALL_ID_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object toolCallId_ = "";
+    /**
+     * <pre>
+     * This id should uniquely identify a tool call and be shared with all
+     * of its subsequent events (response, follow-up, etc.)
+     * </pre>
+     *
+     * <code>optional string tool_call_id = 3;</code>
+     * @return Whether the toolCallId field is set.
+     */
+    @java.lang.Override
+    public boolean hasToolCallId() {
+      return ((bitField0_ & 0x00000004) != 0);
+    }
+    /**
+     * <pre>
+     * This id should uniquely identify a tool call and be shared with all
+     * of its subsequent events (response, follow-up, etc.)
+     * </pre>
+     *
+     * <code>optional string tool_call_id = 3;</code>
+     * @return The toolCallId.
+     */
+    @java.lang.Override
+    public java.lang.String getToolCallId() {
+      java.lang.Object ref = toolCallId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          toolCallId_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * This id should uniquely identify a tool call and be shared with all
+     * of its subsequent events (response, follow-up, etc.)
+     * </pre>
+     *
+     * <code>optional string tool_call_id = 3;</code>
+     * @return The bytes for toolCallId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getToolCallIdBytes() {
+      java.lang.Object ref = toolCallId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        toolCallId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -13128,6 +13225,9 @@ private static final long serialVersionUID = 0L;
       if (((bitField0_ & 0x00000002) != 0)) {
         output.writeMessage(2, getMetadata());
       }
+      if (((bitField0_ & 0x00000004) != 0)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, toolCallId_);
+      }
       getUnknownFields().writeTo(output);
     }
 
@@ -13143,6 +13243,9 @@ private static final long serialVersionUID = 0L;
       if (((bitField0_ & 0x00000002) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getMetadata());
+      }
+      if (((bitField0_ & 0x00000004) != 0)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, toolCallId_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -13169,6 +13272,11 @@ private static final long serialVersionUID = 0L;
         if (!getMetadata()
             .equals(other.getMetadata())) return false;
       }
+      if (hasToolCallId() != other.hasToolCallId()) return false;
+      if (hasToolCallId()) {
+        if (!getToolCallId()
+            .equals(other.getToolCallId())) return false;
+      }
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -13187,6 +13295,10 @@ private static final long serialVersionUID = 0L;
       if (hasMetadata()) {
         hash = (37 * hash) + METADATA_FIELD_NUMBER;
         hash = (53 * hash) + getMetadata().hashCode();
+      }
+      if (hasToolCallId()) {
+        hash = (37 * hash) + TOOL_CALL_ID_FIELD_NUMBER;
+        hash = (53 * hash) + getToolCallId().hashCode();
       }
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
@@ -13329,6 +13441,7 @@ private static final long serialVersionUID = 0L;
           metadataBuilder_.dispose();
           metadataBuilder_ = null;
         }
+        toolCallId_ = "";
         return this;
       }
 
@@ -13373,6 +13486,10 @@ private static final long serialVersionUID = 0L;
               : metadataBuilder_.build();
           to_bitField0_ |= 0x00000002;
         }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.toolCallId_ = toolCallId_;
+          to_bitField0_ |= 0x00000004;
+        }
         result.bitField0_ |= to_bitField0_;
       }
 
@@ -13395,6 +13512,11 @@ private static final long serialVersionUID = 0L;
         }
         if (other.hasMetadata()) {
           mergeMetadata(other.getMetadata());
+        }
+        if (other.hasToolCallId()) {
+          toolCallId_ = other.toolCallId_;
+          bitField0_ |= 0x00000004;
+          onChanged();
         }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
@@ -13434,6 +13556,11 @@ private static final long serialVersionUID = 0L;
                 bitField0_ |= 0x00000002;
                 break;
               } // case 18
+              case 26: {
+                toolCallId_ = input.readBytes();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -13649,6 +13776,116 @@ private static final long serialVersionUID = 0L;
         }
         return metadataBuilder_;
       }
+
+      private java.lang.Object toolCallId_ = "";
+      /**
+       * <pre>
+       * This id should uniquely identify a tool call and be shared with all
+       * of its subsequent events (response, follow-up, etc.)
+       * </pre>
+       *
+       * <code>optional string tool_call_id = 3;</code>
+       * @return Whether the toolCallId field is set.
+       */
+      public boolean hasToolCallId() {
+        return ((bitField0_ & 0x00000004) != 0);
+      }
+      /**
+       * <pre>
+       * This id should uniquely identify a tool call and be shared with all
+       * of its subsequent events (response, follow-up, etc.)
+       * </pre>
+       *
+       * <code>optional string tool_call_id = 3;</code>
+       * @return The toolCallId.
+       */
+      public java.lang.String getToolCallId() {
+        java.lang.Object ref = toolCallId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            toolCallId_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * This id should uniquely identify a tool call and be shared with all
+       * of its subsequent events (response, follow-up, etc.)
+       * </pre>
+       *
+       * <code>optional string tool_call_id = 3;</code>
+       * @return The bytes for toolCallId.
+       */
+      public com.google.protobuf.ByteString
+          getToolCallIdBytes() {
+        java.lang.Object ref = toolCallId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          toolCallId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * This id should uniquely identify a tool call and be shared with all
+       * of its subsequent events (response, follow-up, etc.)
+       * </pre>
+       *
+       * <code>optional string tool_call_id = 3;</code>
+       * @param value The toolCallId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setToolCallId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        toolCallId_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * This id should uniquely identify a tool call and be shared with all
+       * of its subsequent events (response, follow-up, etc.)
+       * </pre>
+       *
+       * <code>optional string tool_call_id = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearToolCallId() {
+        toolCallId_ = getDefaultInstance().getToolCallId();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * This id should uniquely identify a tool call and be shared with all
+       * of its subsequent events (response, follow-up, etc.)
+       * </pre>
+       *
+       * <code>optional string tool_call_id = 3;</code>
+       * @param value The bytes for toolCallId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setToolCallIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        toolCallId_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -13759,6 +13996,23 @@ private static final long serialVersionUID = 0L;
      * <code>optional .android_studio.SmlResponseMetadata metadata = 3 [lazy = true];</code>
      */
     com.google.wireless.android.sdk.stats.SmlResponseMetadataOrBuilder getMetadataOrBuilder();
+
+    /**
+     * <code>optional string tool_call_id = 4;</code>
+     * @return Whether the toolCallId field is set.
+     */
+    boolean hasToolCallId();
+    /**
+     * <code>optional string tool_call_id = 4;</code>
+     * @return The toolCallId.
+     */
+    java.lang.String getToolCallId();
+    /**
+     * <code>optional string tool_call_id = 4;</code>
+     * @return The bytes for toolCallId.
+     */
+    com.google.protobuf.ByteString
+        getToolCallIdBytes();
   }
   /**
    * Protobuf type {@code android_studio.SmlChatBotEvent.ToolCallFollowUpEvent}
@@ -13775,6 +14029,7 @@ private static final long serialVersionUID = 0L;
     private ToolCallFollowUpEvent() {
       toolName_ = "";
       status_ = 0;
+      toolCallId_ = "";
     }
 
     @java.lang.Override
@@ -13891,6 +14146,55 @@ private static final long serialVersionUID = 0L;
       return metadata_ == null ? com.google.wireless.android.sdk.stats.SmlResponseMetadata.getDefaultInstance() : metadata_;
     }
 
+    public static final int TOOL_CALL_ID_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object toolCallId_ = "";
+    /**
+     * <code>optional string tool_call_id = 4;</code>
+     * @return Whether the toolCallId field is set.
+     */
+    @java.lang.Override
+    public boolean hasToolCallId() {
+      return ((bitField0_ & 0x00000008) != 0);
+    }
+    /**
+     * <code>optional string tool_call_id = 4;</code>
+     * @return The toolCallId.
+     */
+    @java.lang.Override
+    public java.lang.String getToolCallId() {
+      java.lang.Object ref = toolCallId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          toolCallId_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string tool_call_id = 4;</code>
+     * @return The bytes for toolCallId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getToolCallIdBytes() {
+      java.lang.Object ref = toolCallId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        toolCallId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -13914,6 +14218,9 @@ private static final long serialVersionUID = 0L;
       if (((bitField0_ & 0x00000004) != 0)) {
         output.writeMessage(3, getMetadata());
       }
+      if (((bitField0_ & 0x00000008) != 0)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, toolCallId_);
+      }
       getUnknownFields().writeTo(output);
     }
 
@@ -13933,6 +14240,9 @@ private static final long serialVersionUID = 0L;
       if (((bitField0_ & 0x00000004) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getMetadata());
+      }
+      if (((bitField0_ & 0x00000008) != 0)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, toolCallId_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -13963,6 +14273,11 @@ private static final long serialVersionUID = 0L;
         if (!getMetadata()
             .equals(other.getMetadata())) return false;
       }
+      if (hasToolCallId() != other.hasToolCallId()) return false;
+      if (hasToolCallId()) {
+        if (!getToolCallId()
+            .equals(other.getToolCallId())) return false;
+      }
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -13985,6 +14300,10 @@ private static final long serialVersionUID = 0L;
       if (hasMetadata()) {
         hash = (37 * hash) + METADATA_FIELD_NUMBER;
         hash = (53 * hash) + getMetadata().hashCode();
+      }
+      if (hasToolCallId()) {
+        hash = (37 * hash) + TOOL_CALL_ID_FIELD_NUMBER;
+        hash = (53 * hash) + getToolCallId().hashCode();
       }
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
@@ -14128,6 +14447,7 @@ private static final long serialVersionUID = 0L;
           metadataBuilder_.dispose();
           metadataBuilder_ = null;
         }
+        toolCallId_ = "";
         return this;
       }
 
@@ -14176,6 +14496,10 @@ private static final long serialVersionUID = 0L;
               : metadataBuilder_.build();
           to_bitField0_ |= 0x00000004;
         }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.toolCallId_ = toolCallId_;
+          to_bitField0_ |= 0x00000008;
+        }
         result.bitField0_ |= to_bitField0_;
       }
 
@@ -14201,6 +14525,11 @@ private static final long serialVersionUID = 0L;
         }
         if (other.hasMetadata()) {
           mergeMetadata(other.getMetadata());
+        }
+        if (other.hasToolCallId()) {
+          toolCallId_ = other.toolCallId_;
+          bitField0_ |= 0x00000008;
+          onChanged();
         }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
@@ -14252,6 +14581,11 @@ private static final long serialVersionUID = 0L;
                 bitField0_ |= 0x00000004;
                 break;
               } // case 26
+              case 34: {
+                toolCallId_ = input.readBytes();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -14509,6 +14843,86 @@ private static final long serialVersionUID = 0L;
         }
         return metadataBuilder_;
       }
+
+      private java.lang.Object toolCallId_ = "";
+      /**
+       * <code>optional string tool_call_id = 4;</code>
+       * @return Whether the toolCallId field is set.
+       */
+      public boolean hasToolCallId() {
+        return ((bitField0_ & 0x00000008) != 0);
+      }
+      /**
+       * <code>optional string tool_call_id = 4;</code>
+       * @return The toolCallId.
+       */
+      public java.lang.String getToolCallId() {
+        java.lang.Object ref = toolCallId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            toolCallId_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string tool_call_id = 4;</code>
+       * @return The bytes for toolCallId.
+       */
+      public com.google.protobuf.ByteString
+          getToolCallIdBytes() {
+        java.lang.Object ref = toolCallId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          toolCallId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string tool_call_id = 4;</code>
+       * @param value The toolCallId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setToolCallId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        toolCallId_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string tool_call_id = 4;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearToolCallId() {
+        toolCallId_ = getDefaultInstance().getToolCallId();
+        bitField0_ = (bitField0_ & ~0x00000008);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string tool_call_id = 4;</code>
+       * @param value The bytes for toolCallId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setToolCallIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        toolCallId_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -14627,6 +15041,23 @@ private static final long serialVersionUID = 0L;
      * <code>optional .android_studio.SmlResponseMetadata metadata = 3 [lazy = true];</code>
      */
     com.google.wireless.android.sdk.stats.SmlResponseMetadataOrBuilder getMetadataOrBuilder();
+
+    /**
+     * <code>optional string tool_call_id = 4;</code>
+     * @return Whether the toolCallId field is set.
+     */
+    boolean hasToolCallId();
+    /**
+     * <code>optional string tool_call_id = 4;</code>
+     * @return The toolCallId.
+     */
+    java.lang.String getToolCallId();
+    /**
+     * <code>optional string tool_call_id = 4;</code>
+     * @return The bytes for toolCallId.
+     */
+    com.google.protobuf.ByteString
+        getToolCallIdBytes();
   }
   /**
    * Protobuf type {@code android_studio.SmlChatBotEvent.ToolCallResponse}
@@ -14643,6 +15074,7 @@ private static final long serialVersionUID = 0L;
     private ToolCallResponse() {
       toolName_ = "";
       responseStatus_ = 0;
+      toolCallId_ = "";
     }
 
     @java.lang.Override
@@ -14767,6 +15199,55 @@ private static final long serialVersionUID = 0L;
       return metadata_ == null ? com.google.wireless.android.sdk.stats.SmlResponseMetadata.getDefaultInstance() : metadata_;
     }
 
+    public static final int TOOL_CALL_ID_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object toolCallId_ = "";
+    /**
+     * <code>optional string tool_call_id = 4;</code>
+     * @return Whether the toolCallId field is set.
+     */
+    @java.lang.Override
+    public boolean hasToolCallId() {
+      return ((bitField0_ & 0x00000008) != 0);
+    }
+    /**
+     * <code>optional string tool_call_id = 4;</code>
+     * @return The toolCallId.
+     */
+    @java.lang.Override
+    public java.lang.String getToolCallId() {
+      java.lang.Object ref = toolCallId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          toolCallId_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string tool_call_id = 4;</code>
+     * @return The bytes for toolCallId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getToolCallIdBytes() {
+      java.lang.Object ref = toolCallId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        toolCallId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -14790,6 +15271,9 @@ private static final long serialVersionUID = 0L;
       if (((bitField0_ & 0x00000004) != 0)) {
         output.writeMessage(3, getMetadata());
       }
+      if (((bitField0_ & 0x00000008) != 0)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, toolCallId_);
+      }
       getUnknownFields().writeTo(output);
     }
 
@@ -14809,6 +15293,9 @@ private static final long serialVersionUID = 0L;
       if (((bitField0_ & 0x00000004) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getMetadata());
+      }
+      if (((bitField0_ & 0x00000008) != 0)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, toolCallId_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -14839,6 +15326,11 @@ private static final long serialVersionUID = 0L;
         if (!getMetadata()
             .equals(other.getMetadata())) return false;
       }
+      if (hasToolCallId() != other.hasToolCallId()) return false;
+      if (hasToolCallId()) {
+        if (!getToolCallId()
+            .equals(other.getToolCallId())) return false;
+      }
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -14861,6 +15353,10 @@ private static final long serialVersionUID = 0L;
       if (hasMetadata()) {
         hash = (37 * hash) + METADATA_FIELD_NUMBER;
         hash = (53 * hash) + getMetadata().hashCode();
+      }
+      if (hasToolCallId()) {
+        hash = (37 * hash) + TOOL_CALL_ID_FIELD_NUMBER;
+        hash = (53 * hash) + getToolCallId().hashCode();
       }
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
@@ -15004,6 +15500,7 @@ private static final long serialVersionUID = 0L;
           metadataBuilder_.dispose();
           metadataBuilder_ = null;
         }
+        toolCallId_ = "";
         return this;
       }
 
@@ -15052,6 +15549,10 @@ private static final long serialVersionUID = 0L;
               : metadataBuilder_.build();
           to_bitField0_ |= 0x00000004;
         }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.toolCallId_ = toolCallId_;
+          to_bitField0_ |= 0x00000008;
+        }
         result.bitField0_ |= to_bitField0_;
       }
 
@@ -15077,6 +15578,11 @@ private static final long serialVersionUID = 0L;
         }
         if (other.hasMetadata()) {
           mergeMetadata(other.getMetadata());
+        }
+        if (other.hasToolCallId()) {
+          toolCallId_ = other.toolCallId_;
+          bitField0_ |= 0x00000008;
+          onChanged();
         }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
@@ -15128,6 +15634,11 @@ private static final long serialVersionUID = 0L;
                 bitField0_ |= 0x00000004;
                 break;
               } // case 26
+              case 34: {
+                toolCallId_ = input.readBytes();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -15400,6 +15911,86 @@ private static final long serialVersionUID = 0L;
           metadata_ = null;
         }
         return metadataBuilder_;
+      }
+
+      private java.lang.Object toolCallId_ = "";
+      /**
+       * <code>optional string tool_call_id = 4;</code>
+       * @return Whether the toolCallId field is set.
+       */
+      public boolean hasToolCallId() {
+        return ((bitField0_ & 0x00000008) != 0);
+      }
+      /**
+       * <code>optional string tool_call_id = 4;</code>
+       * @return The toolCallId.
+       */
+      public java.lang.String getToolCallId() {
+        java.lang.Object ref = toolCallId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            toolCallId_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string tool_call_id = 4;</code>
+       * @return The bytes for toolCallId.
+       */
+      public com.google.protobuf.ByteString
+          getToolCallIdBytes() {
+        java.lang.Object ref = toolCallId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          toolCallId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string tool_call_id = 4;</code>
+       * @param value The toolCallId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setToolCallId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        toolCallId_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string tool_call_id = 4;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearToolCallId() {
+        toolCallId_ = getDefaultInstance().getToolCallId();
+        bitField0_ = (bitField0_ & ~0x00000008);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string tool_call_id = 4;</code>
+       * @param value The bytes for toolCallId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setToolCallIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        toolCallId_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
