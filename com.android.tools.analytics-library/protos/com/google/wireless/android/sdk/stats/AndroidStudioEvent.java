@@ -2986,6 +2986,14 @@ private static final long serialVersionUID = 0L;
      * <code>SML_COMPLETION_REQUEST_ERROR = 307;</code>
      */
     SML_COMPLETION_REQUEST_ERROR(307),
+    /**
+     * <pre>
+     * Event fired every time a device is connects to Studio
+     * </pre>
+     *
+     * <code>ADB_DEVICE_CONNECTED = 308;</code>
+     */
+    ADB_DEVICE_CONNECTED(308),
     ;
 
     /**
@@ -5278,6 +5286,14 @@ private static final long serialVersionUID = 0L;
      * <code>SML_COMPLETION_REQUEST_ERROR = 307;</code>
      */
     public static final int SML_COMPLETION_REQUEST_ERROR_VALUE = 307;
+    /**
+     * <pre>
+     * Event fired every time a device is connects to Studio
+     * </pre>
+     *
+     * <code>ADB_DEVICE_CONNECTED = 308;</code>
+     */
+    public static final int ADB_DEVICE_CONNECTED_VALUE = 308;
 
 
     public final int getNumber() {
@@ -5603,6 +5619,7 @@ private static final long serialVersionUID = 0L;
         case 305: return ADB_USAGE_EVENT;
         case 306: return SML_GEOLOCATION_EVENT;
         case 307: return SML_COMPLETION_REQUEST_ERROR;
+        case 308: return ADB_DEVICE_CONNECTED;
         default: return null;
       }
     }
@@ -21872,6 +21889,44 @@ private static final long serialVersionUID = 0L;
     return smlCompletionRequestError_ == null ? com.google.wireless.android.sdk.stats.SmlCompletionRequestErrorEvent.getDefaultInstance() : smlCompletionRequestError_;
   }
 
+  public static final int DEVICE_CONNECTED_FIELD_NUMBER = 191;
+  private com.google.wireless.android.sdk.stats.DeviceConnectedNotificationEvent deviceConnected_;
+  /**
+   * <pre>
+   * set when kind = ADB_DEVICE_CONNECTED
+   * </pre>
+   *
+   * <code>optional .android_studio.DeviceConnectedNotificationEvent device_connected = 191;</code>
+   * @return Whether the deviceConnected field is set.
+   */
+  @java.lang.Override
+  public boolean hasDeviceConnected() {
+    return ((bitField5_ & 0x01000000) != 0);
+  }
+  /**
+   * <pre>
+   * set when kind = ADB_DEVICE_CONNECTED
+   * </pre>
+   *
+   * <code>optional .android_studio.DeviceConnectedNotificationEvent device_connected = 191;</code>
+   * @return The deviceConnected.
+   */
+  @java.lang.Override
+  public com.google.wireless.android.sdk.stats.DeviceConnectedNotificationEvent getDeviceConnected() {
+    return deviceConnected_ == null ? com.google.wireless.android.sdk.stats.DeviceConnectedNotificationEvent.getDefaultInstance() : deviceConnected_;
+  }
+  /**
+   * <pre>
+   * set when kind = ADB_DEVICE_CONNECTED
+   * </pre>
+   *
+   * <code>optional .android_studio.DeviceConnectedNotificationEvent device_connected = 191;</code>
+   */
+  @java.lang.Override
+  public com.google.wireless.android.sdk.stats.DeviceConnectedNotificationEventOrBuilder getDeviceConnectedOrBuilder() {
+    return deviceConnected_ == null ? com.google.wireless.android.sdk.stats.DeviceConnectedNotificationEvent.getDefaultInstance() : deviceConnected_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -22455,6 +22510,9 @@ private static final long serialVersionUID = 0L;
     }
     if (((bitField5_ & 0x00800000) != 0)) {
       output.writeMessage(190, getSmlCompletionRequestError());
+    }
+    if (((bitField5_ & 0x01000000) != 0)) {
+      output.writeMessage(191, getDeviceConnected());
     }
     getUnknownFields().writeTo(output);
   }
@@ -23230,6 +23288,10 @@ private static final long serialVersionUID = 0L;
     if (((bitField5_ & 0x00800000) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(190, getSmlCompletionRequestError());
+    }
+    if (((bitField5_ & 0x01000000) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(191, getDeviceConnected());
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -24167,6 +24229,11 @@ private static final long serialVersionUID = 0L;
       if (!getSmlCompletionRequestError()
           .equals(other.getSmlCompletionRequestError())) return false;
     }
+    if (hasDeviceConnected() != other.hasDeviceConnected()) return false;
+    if (hasDeviceConnected()) {
+      if (!getDeviceConnected()
+          .equals(other.getDeviceConnected())) return false;
+    }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -24940,6 +25007,10 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + SML_COMPLETION_REQUEST_ERROR_FIELD_NUMBER;
       hash = (53 * hash) + getSmlCompletionRequestError().hashCode();
     }
+    if (hasDeviceConnected()) {
+      hash = (37 * hash) + DEVICE_CONNECTED_FIELD_NUMBER;
+      hash = (53 * hash) + getDeviceConnected().hashCode();
+    }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -25235,6 +25306,7 @@ private static final long serialVersionUID = 0L;
         getAdbUsageEventFieldBuilder();
         getSmlGeolocationEventFieldBuilder();
         getSmlCompletionRequestErrorFieldBuilder();
+        getDeviceConnectedFieldBuilder();
       }
     }
     @java.lang.Override
@@ -26291,6 +26363,12 @@ private static final long serialVersionUID = 0L;
         smlCompletionRequestErrorBuilder_.clear();
       }
       bitField5_ = (bitField5_ & ~0x20000000);
+      if (deviceConnectedBuilder_ == null) {
+        deviceConnected_ = null;
+      } else {
+        deviceConnectedBuilder_.clear();
+      }
+      bitField5_ = (bitField5_ & ~0x40000000);
       return this;
     }
 
@@ -27763,6 +27841,14 @@ private static final long serialVersionUID = 0L;
         }
         to_bitField5_ |= 0x00800000;
       }
+      if (((from_bitField5_ & 0x40000000) != 0)) {
+        if (deviceConnectedBuilder_ == null) {
+          result.deviceConnected_ = deviceConnected_;
+        } else {
+          result.deviceConnected_ = deviceConnectedBuilder_.build();
+        }
+        to_bitField5_ |= 0x01000000;
+      }
       result.bitField0_ = to_bitField0_;
       result.bitField1_ = to_bitField1_;
       result.bitField2_ = to_bitField2_;
@@ -28490,6 +28576,9 @@ private static final long serialVersionUID = 0L;
       }
       if (other.hasSmlCompletionRequestError()) {
         mergeSmlCompletionRequestError(other.getSmlCompletionRequestError());
+      }
+      if (other.hasDeviceConnected()) {
+        mergeDeviceConnected(other.getDeviceConnected());
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -29915,6 +30004,13 @@ private static final long serialVersionUID = 0L;
               bitField5_ |= 0x20000000;
               break;
             } // case 1522
+            case 1530: {
+              input.readMessage(
+                  getDeviceConnectedFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField5_ |= 0x40000000;
+              break;
+            } // case 1530
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -58856,6 +58952,162 @@ private static final long serialVersionUID = 0L;
         smlCompletionRequestError_ = null;
       }
       return smlCompletionRequestErrorBuilder_;
+    }
+
+    private com.google.wireless.android.sdk.stats.DeviceConnectedNotificationEvent deviceConnected_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.DeviceConnectedNotificationEvent, com.google.wireless.android.sdk.stats.DeviceConnectedNotificationEvent.Builder, com.google.wireless.android.sdk.stats.DeviceConnectedNotificationEventOrBuilder> deviceConnectedBuilder_;
+    /**
+     * <pre>
+     * set when kind = ADB_DEVICE_CONNECTED
+     * </pre>
+     *
+     * <code>optional .android_studio.DeviceConnectedNotificationEvent device_connected = 191;</code>
+     * @return Whether the deviceConnected field is set.
+     */
+    public boolean hasDeviceConnected() {
+      return ((bitField5_ & 0x40000000) != 0);
+    }
+    /**
+     * <pre>
+     * set when kind = ADB_DEVICE_CONNECTED
+     * </pre>
+     *
+     * <code>optional .android_studio.DeviceConnectedNotificationEvent device_connected = 191;</code>
+     * @return The deviceConnected.
+     */
+    public com.google.wireless.android.sdk.stats.DeviceConnectedNotificationEvent getDeviceConnected() {
+      if (deviceConnectedBuilder_ == null) {
+        return deviceConnected_ == null ? com.google.wireless.android.sdk.stats.DeviceConnectedNotificationEvent.getDefaultInstance() : deviceConnected_;
+      } else {
+        return deviceConnectedBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * set when kind = ADB_DEVICE_CONNECTED
+     * </pre>
+     *
+     * <code>optional .android_studio.DeviceConnectedNotificationEvent device_connected = 191;</code>
+     */
+    public Builder setDeviceConnected(com.google.wireless.android.sdk.stats.DeviceConnectedNotificationEvent value) {
+      if (deviceConnectedBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        deviceConnected_ = value;
+        onChanged();
+      } else {
+        deviceConnectedBuilder_.setMessage(value);
+      }
+      bitField5_ |= 0x40000000;
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = ADB_DEVICE_CONNECTED
+     * </pre>
+     *
+     * <code>optional .android_studio.DeviceConnectedNotificationEvent device_connected = 191;</code>
+     */
+    public Builder setDeviceConnected(
+        com.google.wireless.android.sdk.stats.DeviceConnectedNotificationEvent.Builder builderForValue) {
+      if (deviceConnectedBuilder_ == null) {
+        deviceConnected_ = builderForValue.build();
+        onChanged();
+      } else {
+        deviceConnectedBuilder_.setMessage(builderForValue.build());
+      }
+      bitField5_ |= 0x40000000;
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = ADB_DEVICE_CONNECTED
+     * </pre>
+     *
+     * <code>optional .android_studio.DeviceConnectedNotificationEvent device_connected = 191;</code>
+     */
+    public Builder mergeDeviceConnected(com.google.wireless.android.sdk.stats.DeviceConnectedNotificationEvent value) {
+      if (deviceConnectedBuilder_ == null) {
+        if (((bitField5_ & 0x40000000) != 0) &&
+            deviceConnected_ != null &&
+            deviceConnected_ != com.google.wireless.android.sdk.stats.DeviceConnectedNotificationEvent.getDefaultInstance()) {
+          deviceConnected_ =
+            com.google.wireless.android.sdk.stats.DeviceConnectedNotificationEvent.newBuilder(deviceConnected_).mergeFrom(value).buildPartial();
+        } else {
+          deviceConnected_ = value;
+        }
+        onChanged();
+      } else {
+        deviceConnectedBuilder_.mergeFrom(value);
+      }
+      bitField5_ |= 0x40000000;
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = ADB_DEVICE_CONNECTED
+     * </pre>
+     *
+     * <code>optional .android_studio.DeviceConnectedNotificationEvent device_connected = 191;</code>
+     */
+    public Builder clearDeviceConnected() {
+      if (deviceConnectedBuilder_ == null) {
+        deviceConnected_ = null;
+        onChanged();
+      } else {
+        deviceConnectedBuilder_.clear();
+      }
+      bitField5_ = (bitField5_ & ~0x40000000);
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = ADB_DEVICE_CONNECTED
+     * </pre>
+     *
+     * <code>optional .android_studio.DeviceConnectedNotificationEvent device_connected = 191;</code>
+     */
+    public com.google.wireless.android.sdk.stats.DeviceConnectedNotificationEvent.Builder getDeviceConnectedBuilder() {
+      bitField5_ |= 0x40000000;
+      onChanged();
+      return getDeviceConnectedFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * set when kind = ADB_DEVICE_CONNECTED
+     * </pre>
+     *
+     * <code>optional .android_studio.DeviceConnectedNotificationEvent device_connected = 191;</code>
+     */
+    public com.google.wireless.android.sdk.stats.DeviceConnectedNotificationEventOrBuilder getDeviceConnectedOrBuilder() {
+      if (deviceConnectedBuilder_ != null) {
+        return deviceConnectedBuilder_.getMessageOrBuilder();
+      } else {
+        return deviceConnected_ == null ?
+            com.google.wireless.android.sdk.stats.DeviceConnectedNotificationEvent.getDefaultInstance() : deviceConnected_;
+      }
+    }
+    /**
+     * <pre>
+     * set when kind = ADB_DEVICE_CONNECTED
+     * </pre>
+     *
+     * <code>optional .android_studio.DeviceConnectedNotificationEvent device_connected = 191;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.DeviceConnectedNotificationEvent, com.google.wireless.android.sdk.stats.DeviceConnectedNotificationEvent.Builder, com.google.wireless.android.sdk.stats.DeviceConnectedNotificationEventOrBuilder> 
+        getDeviceConnectedFieldBuilder() {
+      if (deviceConnectedBuilder_ == null) {
+        deviceConnectedBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.wireless.android.sdk.stats.DeviceConnectedNotificationEvent, com.google.wireless.android.sdk.stats.DeviceConnectedNotificationEvent.Builder, com.google.wireless.android.sdk.stats.DeviceConnectedNotificationEventOrBuilder>(
+                getDeviceConnected(),
+                getParentForChildren(),
+                isClean());
+        deviceConnected_ = null;
+      }
+      return deviceConnectedBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

@@ -5320,4 +5320,31 @@ public interface AndroidStudioEventOrBuilder extends
    * <code>optional .android_studio.SmlCompletionRequestErrorEvent sml_completion_request_error = 190;</code>
    */
   com.google.wireless.android.sdk.stats.SmlCompletionRequestErrorEventOrBuilder getSmlCompletionRequestErrorOrBuilder();
+
+  /**
+   * <pre>
+   * set when kind = ADB_DEVICE_CONNECTED
+   * </pre>
+   *
+   * <code>optional .android_studio.DeviceConnectedNotificationEvent device_connected = 191;</code>
+   * @return Whether the deviceConnected field is set.
+   */
+  boolean hasDeviceConnected();
+  /**
+   * <pre>
+   * set when kind = ADB_DEVICE_CONNECTED
+   * </pre>
+   *
+   * <code>optional .android_studio.DeviceConnectedNotificationEvent device_connected = 191;</code>
+   * @return The deviceConnected.
+   */
+  com.google.wireless.android.sdk.stats.DeviceConnectedNotificationEvent getDeviceConnected();
+  /**
+   * <pre>
+   * set when kind = ADB_DEVICE_CONNECTED
+   * </pre>
+   *
+   * <code>optional .android_studio.DeviceConnectedNotificationEvent device_connected = 191;</code>
+   */
+  com.google.wireless.android.sdk.stats.DeviceConnectedNotificationEventOrBuilder getDeviceConnectedOrBuilder();
 }
