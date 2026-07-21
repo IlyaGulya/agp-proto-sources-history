@@ -637,6 +637,18 @@ public enum VariantPropertiesMethodType
    * <code>SOURCES_AND_OVERLAY_DIRECTORIES_GET_STATIC = 145;</code>
    */
   SOURCES_AND_OVERLAY_DIRECTORIES_GET_STATIC(145),
+  /**
+   * <code>COMPUTE_TASK_NAME = 146;</code>
+   */
+  COMPUTE_TASK_NAME(146),
+  /**
+   * <code>ADD_STATIC_DIRECTORY = 147;</code>
+   */
+  ADD_STATIC_DIRECTORY(147),
+  /**
+   * <code>TRANSFORM_WITH_NAME = 148;</code>
+   */
+  TRANSFORM_WITH_NAME(148),
   UNRECOGNIZED(-1),
   ;
 
@@ -1268,6 +1280,18 @@ public enum VariantPropertiesMethodType
    * <code>SOURCES_AND_OVERLAY_DIRECTORIES_GET_STATIC = 145;</code>
    */
   public static final int SOURCES_AND_OVERLAY_DIRECTORIES_GET_STATIC_VALUE = 145;
+  /**
+   * <code>COMPUTE_TASK_NAME = 146;</code>
+   */
+  public static final int COMPUTE_TASK_NAME_VALUE = 146;
+  /**
+   * <code>ADD_STATIC_DIRECTORY = 147;</code>
+   */
+  public static final int ADD_STATIC_DIRECTORY_VALUE = 147;
+  /**
+   * <code>TRANSFORM_WITH_NAME = 148;</code>
+   */
+  public static final int TRANSFORM_WITH_NAME_VALUE = 148;
 
 
   public final int getNumber() {
@@ -1440,6 +1464,9 @@ public enum VariantPropertiesMethodType
       case 143: return REGISTER_PRE_BUILD;
       case 144: return SOURCES_DIRECTORIES_GET_STATIC;
       case 145: return SOURCES_AND_OVERLAY_DIRECTORIES_GET_STATIC;
+      case 146: return COMPUTE_TASK_NAME;
+      case 147: return ADD_STATIC_DIRECTORY;
+      case 148: return TRANSFORM_WITH_NAME;
       default: return null;
     }
   }

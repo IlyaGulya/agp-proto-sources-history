@@ -72,6 +72,10 @@ public enum ModulePropertyKeys
    * <code>MODULE_LINT_USE_K2_UAST = 15;</code>
    */
   MODULE_LINT_USE_K2_UAST(15),
+  /**
+   * <code>MODULE_SCREENSHOT_TEST = 16;</code>
+   */
+  MODULE_SCREENSHOT_TEST(16),
   UNRECOGNIZED(-1),
   ;
 
@@ -139,6 +143,10 @@ public enum ModulePropertyKeys
    * <code>MODULE_LINT_USE_K2_UAST = 15;</code>
    */
   public static final int MODULE_LINT_USE_K2_UAST_VALUE = 15;
+  /**
+   * <code>MODULE_SCREENSHOT_TEST = 16;</code>
+   */
+  public static final int MODULE_SCREENSHOT_TEST_VALUE = 16;
 
 
   public final int getNumber() {
@@ -181,6 +189,7 @@ public enum ModulePropertyKeys
       case 13: return MODULE_ANDROID_PRIVACY_SANDBOX_SDK_API_PACKAGER;
       case 14: return MODULE_VERIFY_AAR_CLASSES;
       case 15: return MODULE_LINT_USE_K2_UAST;
+      case 16: return MODULE_SCREENSHOT_TEST;
       default: return null;
     }
   }
