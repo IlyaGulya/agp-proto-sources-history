@@ -549,6 +549,10 @@ public enum VariantPropertiesMethodType
    * <code>COMPONENTS = 123;</code>
    */
   COMPONENTS(123),
+  /**
+   * <code>VARIANT_AAR_METADATA_MIN_COMPILE_SDK_EXTENSION = 124;</code>
+   */
+  VARIANT_AAR_METADATA_MIN_COMPILE_SDK_EXTENSION(124),
   UNRECOGNIZED(-1),
   ;
 
@@ -1092,6 +1096,10 @@ public enum VariantPropertiesMethodType
    * <code>COMPONENTS = 123;</code>
    */
   public static final int COMPONENTS_VALUE = 123;
+  /**
+   * <code>VARIANT_AAR_METADATA_MIN_COMPILE_SDK_EXTENSION = 124;</code>
+   */
+  public static final int VARIANT_AAR_METADATA_MIN_COMPILE_SDK_EXTENSION_VALUE = 124;
 
 
   public final int getNumber() {
@@ -1242,6 +1250,7 @@ public enum VariantPropertiesMethodType
       case 121: return SOURCES_KOTLIN_ACCESS;
       case 122: return CONFIGURATIONS;
       case 123: return COMPONENTS;
+      case 124: return VARIANT_AAR_METADATA_MIN_COMPILE_SDK_EXTENSION;
       default: return null;
     }
   }

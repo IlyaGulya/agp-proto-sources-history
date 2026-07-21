@@ -468,7 +468,7 @@ public final class AnalyticsEnums {
       "NDROID_TEST_ENABLED\020\t\022\023\n\017MIN_SDK_PREVIEW" +
       "\020\n\022\026\n\022TARGET_SDK_PREVIEW\020\013\022%\n!VARIANT_BU" +
       "ILDER_DEPENDENCIES_INFO\020\014\022\031\n\025TEST_FIXTUR" +
-      "ES_ENABLED\020\r*\227\032\n\033VariantPropertiesMethod" +
+      "ES_ENABLED\020\r*\313\032\n\033VariantPropertiesMethod" +
       "Type\022\"\n\036UNKNOWN_PROPERTIES_METHOD_TYPE\020\000" +
       "\022\r\n\tARTIFACTS\020\001\022\031\n\025ASM_TRANSFORM_CLASSES" +
       "\020\002\022\037\n\033ASM_FRAMES_COMPUTATION_NODE\020\003\022\016\n\nB" +
@@ -552,8 +552,9 @@ public final class AnalyticsEnums {
       "ESS\020v\022\027\n\023SOURCES_AIDL_ACCESS\020w\022\037\n\033SOURCE" +
       "S_RENDERSCRIPT_ACCESS\020x\022\031\n\025SOURCES_KOTLI" +
       "N_ACCESS\020y\022\022\n\016CONFIGURATIONS\020z\022\016\n\nCOMPON" +
-      "ENTS\020{B3\n/com.android.tools.build.gradle" +
-      ".internal.profileP\001b\006proto3"
+      "ENTS\020{\0222\n.VARIANT_AAR_METADATA_MIN_COMPI" +
+      "LE_SDK_EXTENSION\020|B3\n/com.android.tools." +
+      "build.gradle.internal.profileP\001b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

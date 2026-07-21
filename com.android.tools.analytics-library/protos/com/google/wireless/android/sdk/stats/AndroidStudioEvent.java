@@ -1919,6 +1919,19 @@ private static final long serialVersionUID = 0L;
             bitField4_ |= 0x00002000;
             break;
           }
+          case 1194: {
+            com.google.wireless.android.sdk.stats.DeviceMirroringSession.Builder subBuilder = null;
+            if (((bitField4_ & 0x00004000) != 0)) {
+              subBuilder = deviceMirroringSession_.toBuilder();
+            }
+            deviceMirroringSession_ = input.readMessage(com.google.wireless.android.sdk.stats.DeviceMirroringSession.PARSER, extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(deviceMirroringSession_);
+              deviceMirroringSession_ = subBuilder.buildPartial();
+            }
+            bitField4_ |= 0x00004000;
+            break;
+          }
           default: {
             if (!parseUnknownField(
                 input, unknownFields, extensionRegistry, tag)) {
@@ -4521,6 +4534,14 @@ private static final long serialVersionUID = 0L;
      * <code>GOOGLE_LOGIN_EVENT = 261;</code>
      */
     GOOGLE_LOGIN_EVENT(261),
+    /**
+     * <pre>
+     * Event recording mirroring of a device in the Running Devices tool window
+     * </pre>
+     *
+     * <code>DEVICE_MIRRORING_SESSION = 262;</code>
+     */
+    DEVICE_MIRRORING_SESSION(262),
     ;
 
     /**
@@ -6445,6 +6466,14 @@ private static final long serialVersionUID = 0L;
      * <code>GOOGLE_LOGIN_EVENT = 261;</code>
      */
     public static final int GOOGLE_LOGIN_EVENT_VALUE = 261;
+    /**
+     * <pre>
+     * Event recording mirroring of a device in the Running Devices tool window
+     * </pre>
+     *
+     * <code>DEVICE_MIRRORING_SESSION = 262;</code>
+     */
+    public static final int DEVICE_MIRRORING_SESSION_VALUE = 262;
 
 
     public final int getNumber() {
@@ -6724,6 +6753,7 @@ private static final long serialVersionUID = 0L;
         case 259: return STOP_EVENT;
         case 260: return APP_QUALITY_INSIGHTS_USAGE;
         case 261: return GOOGLE_LOGIN_EVENT;
+        case 262: return DEVICE_MIRRORING_SESSION;
         default: return null;
       }
     }
@@ -9180,6 +9210,15 @@ private static final long serialVersionUID = 0L;
      * <code>TYPE_COMPILE_SDK_VERSION_TOO_LOW = 57;</code>
      */
     TYPE_COMPILE_SDK_VERSION_TOO_LOW(57),
+    /**
+     * <pre>
+     * Trying to read/write to a variant api property that will not be used as
+     * the feature using it is disabled.
+     * </pre>
+     *
+     * <code>TYPE_ACCESSING_DISABLED_FEATURE_VARIANT_API = 58;</code>
+     */
+    TYPE_ACCESSING_DISABLED_FEATURE_VARIANT_API(58),
     ;
 
     /**
@@ -9584,6 +9623,15 @@ private static final long serialVersionUID = 0L;
      * <code>TYPE_COMPILE_SDK_VERSION_TOO_LOW = 57;</code>
      */
     public static final int TYPE_COMPILE_SDK_VERSION_TOO_LOW_VALUE = 57;
+    /**
+     * <pre>
+     * Trying to read/write to a variant api property that will not be used as
+     * the feature using it is disabled.
+     * </pre>
+     *
+     * <code>TYPE_ACCESSING_DISABLED_FEATURE_VARIANT_API = 58;</code>
+     */
+    public static final int TYPE_ACCESSING_DISABLED_FEATURE_VARIANT_API_VALUE = 58;
 
 
     public final int getNumber() {
@@ -9664,6 +9712,7 @@ private static final long serialVersionUID = 0L;
         case 55: return TYPE_AGP_USED_JAVA_VERSION_TOO_LOW;
         case 56: return TYPE_COMPILE_SDK_VERSION_TOO_HIGH;
         case 57: return TYPE_COMPILE_SDK_VERSION_TOO_LOW;
+        case 58: return TYPE_ACCESSING_DISABLED_FEATURE_VARIANT_API;
         default: return null;
       }
     }
@@ -21061,6 +21110,44 @@ private static final long serialVersionUID = 0L;
     return googleLoginEvent_ == null ? com.google.wireless.android.sdk.stats.GoogleLoginPluginEvent.getDefaultInstance() : googleLoginEvent_;
   }
 
+  public static final int DEVICE_MIRRORING_SESSION_FIELD_NUMBER = 149;
+  private com.google.wireless.android.sdk.stats.DeviceMirroringSession deviceMirroringSession_;
+  /**
+   * <pre>
+   * set when kind = DEVICE_MIRRORING_SESSION
+   * </pre>
+   *
+   * <code>optional .android_studio.DeviceMirroringSession device_mirroring_session = 149;</code>
+   * @return Whether the deviceMirroringSession field is set.
+   */
+  @java.lang.Override
+  public boolean hasDeviceMirroringSession() {
+    return ((bitField4_ & 0x00004000) != 0);
+  }
+  /**
+   * <pre>
+   * set when kind = DEVICE_MIRRORING_SESSION
+   * </pre>
+   *
+   * <code>optional .android_studio.DeviceMirroringSession device_mirroring_session = 149;</code>
+   * @return The deviceMirroringSession.
+   */
+  @java.lang.Override
+  public com.google.wireless.android.sdk.stats.DeviceMirroringSession getDeviceMirroringSession() {
+    return deviceMirroringSession_ == null ? com.google.wireless.android.sdk.stats.DeviceMirroringSession.getDefaultInstance() : deviceMirroringSession_;
+  }
+  /**
+   * <pre>
+   * set when kind = DEVICE_MIRRORING_SESSION
+   * </pre>
+   *
+   * <code>optional .android_studio.DeviceMirroringSession device_mirroring_session = 149;</code>
+   */
+  @java.lang.Override
+  public com.google.wireless.android.sdk.stats.DeviceMirroringSessionOrBuilder getDeviceMirroringSessionOrBuilder() {
+    return deviceMirroringSession_ == null ? com.google.wireless.android.sdk.stats.DeviceMirroringSession.getDefaultInstance() : deviceMirroringSession_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -21518,6 +21605,9 @@ private static final long serialVersionUID = 0L;
     }
     if (((bitField4_ & 0x00002000) != 0)) {
       output.writeMessage(148, getGoogleLoginEvent());
+    }
+    if (((bitField4_ & 0x00004000) != 0)) {
+      output.writeMessage(149, getDeviceMirroringSession());
     }
     unknownFields.writeTo(output);
   }
@@ -22125,6 +22215,10 @@ private static final long serialVersionUID = 0L;
     if (((bitField4_ & 0x00002000) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(148, getGoogleLoginEvent());
+    }
+    if (((bitField4_ & 0x00004000) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(149, getDeviceMirroringSession());
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -22852,6 +22946,11 @@ private static final long serialVersionUID = 0L;
       if (!getGoogleLoginEvent()
           .equals(other.getGoogleLoginEvent())) return false;
     }
+    if (hasDeviceMirroringSession() != other.hasDeviceMirroringSession()) return false;
+    if (hasDeviceMirroringSession()) {
+      if (!getDeviceMirroringSession()
+          .equals(other.getDeviceMirroringSession())) return false;
+    }
     if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
@@ -23457,6 +23556,10 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + GOOGLE_LOGIN_EVENT_FIELD_NUMBER;
       hash = (53 * hash) + getGoogleLoginEvent().hashCode();
     }
+    if (hasDeviceMirroringSession()) {
+      hash = (37 * hash) + DEVICE_MIRRORING_SESSION_FIELD_NUMBER;
+      hash = (53 * hash) + getDeviceMirroringSession().hashCode();
+    }
     hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -23710,6 +23813,7 @@ private static final long serialVersionUID = 0L;
         getStopEventFieldBuilder();
         getAppQualityInsightsUsageEventFieldBuilder();
         getGoogleLoginEventFieldBuilder();
+        getDeviceMirroringSessionFieldBuilder();
       }
     }
     @java.lang.Override
@@ -24511,6 +24615,12 @@ private static final long serialVersionUID = 0L;
         googleLoginEventBuilder_.clear();
       }
       bitField4_ = (bitField4_ & ~0x00080000);
+      if (deviceMirroringSessionBuilder_ == null) {
+        deviceMirroringSession_ = null;
+      } else {
+        deviceMirroringSessionBuilder_.clear();
+      }
+      bitField4_ = (bitField4_ & ~0x00100000);
       return this;
     }
 
@@ -25645,6 +25755,14 @@ private static final long serialVersionUID = 0L;
         }
         to_bitField4_ |= 0x00002000;
       }
+      if (((from_bitField4_ & 0x00100000) != 0)) {
+        if (deviceMirroringSessionBuilder_ == null) {
+          result.deviceMirroringSession_ = deviceMirroringSession_;
+        } else {
+          result.deviceMirroringSession_ = deviceMirroringSessionBuilder_.build();
+        }
+        to_bitField4_ |= 0x00004000;
+      }
       result.bitField0_ = to_bitField0_;
       result.bitField1_ = to_bitField1_;
       result.bitField2_ = to_bitField2_;
@@ -26245,6 +26363,9 @@ private static final long serialVersionUID = 0L;
       }
       if (other.hasGoogleLoginEvent()) {
         mergeGoogleLoginEvent(other.getGoogleLoginEvent());
+      }
+      if (other.hasDeviceMirroringSession()) {
+        mergeDeviceMirroringSession(other.getDeviceMirroringSession());
       }
       this.mergeUnknownFields(other.unknownFields);
       onChanged();
@@ -48589,6 +48710,162 @@ private static final long serialVersionUID = 0L;
         googleLoginEvent_ = null;
       }
       return googleLoginEventBuilder_;
+    }
+
+    private com.google.wireless.android.sdk.stats.DeviceMirroringSession deviceMirroringSession_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.DeviceMirroringSession, com.google.wireless.android.sdk.stats.DeviceMirroringSession.Builder, com.google.wireless.android.sdk.stats.DeviceMirroringSessionOrBuilder> deviceMirroringSessionBuilder_;
+    /**
+     * <pre>
+     * set when kind = DEVICE_MIRRORING_SESSION
+     * </pre>
+     *
+     * <code>optional .android_studio.DeviceMirroringSession device_mirroring_session = 149;</code>
+     * @return Whether the deviceMirroringSession field is set.
+     */
+    public boolean hasDeviceMirroringSession() {
+      return ((bitField4_ & 0x00100000) != 0);
+    }
+    /**
+     * <pre>
+     * set when kind = DEVICE_MIRRORING_SESSION
+     * </pre>
+     *
+     * <code>optional .android_studio.DeviceMirroringSession device_mirroring_session = 149;</code>
+     * @return The deviceMirroringSession.
+     */
+    public com.google.wireless.android.sdk.stats.DeviceMirroringSession getDeviceMirroringSession() {
+      if (deviceMirroringSessionBuilder_ == null) {
+        return deviceMirroringSession_ == null ? com.google.wireless.android.sdk.stats.DeviceMirroringSession.getDefaultInstance() : deviceMirroringSession_;
+      } else {
+        return deviceMirroringSessionBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * set when kind = DEVICE_MIRRORING_SESSION
+     * </pre>
+     *
+     * <code>optional .android_studio.DeviceMirroringSession device_mirroring_session = 149;</code>
+     */
+    public Builder setDeviceMirroringSession(com.google.wireless.android.sdk.stats.DeviceMirroringSession value) {
+      if (deviceMirroringSessionBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        deviceMirroringSession_ = value;
+        onChanged();
+      } else {
+        deviceMirroringSessionBuilder_.setMessage(value);
+      }
+      bitField4_ |= 0x00100000;
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = DEVICE_MIRRORING_SESSION
+     * </pre>
+     *
+     * <code>optional .android_studio.DeviceMirroringSession device_mirroring_session = 149;</code>
+     */
+    public Builder setDeviceMirroringSession(
+        com.google.wireless.android.sdk.stats.DeviceMirroringSession.Builder builderForValue) {
+      if (deviceMirroringSessionBuilder_ == null) {
+        deviceMirroringSession_ = builderForValue.build();
+        onChanged();
+      } else {
+        deviceMirroringSessionBuilder_.setMessage(builderForValue.build());
+      }
+      bitField4_ |= 0x00100000;
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = DEVICE_MIRRORING_SESSION
+     * </pre>
+     *
+     * <code>optional .android_studio.DeviceMirroringSession device_mirroring_session = 149;</code>
+     */
+    public Builder mergeDeviceMirroringSession(com.google.wireless.android.sdk.stats.DeviceMirroringSession value) {
+      if (deviceMirroringSessionBuilder_ == null) {
+        if (((bitField4_ & 0x00100000) != 0) &&
+            deviceMirroringSession_ != null &&
+            deviceMirroringSession_ != com.google.wireless.android.sdk.stats.DeviceMirroringSession.getDefaultInstance()) {
+          deviceMirroringSession_ =
+            com.google.wireless.android.sdk.stats.DeviceMirroringSession.newBuilder(deviceMirroringSession_).mergeFrom(value).buildPartial();
+        } else {
+          deviceMirroringSession_ = value;
+        }
+        onChanged();
+      } else {
+        deviceMirroringSessionBuilder_.mergeFrom(value);
+      }
+      bitField4_ |= 0x00100000;
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = DEVICE_MIRRORING_SESSION
+     * </pre>
+     *
+     * <code>optional .android_studio.DeviceMirroringSession device_mirroring_session = 149;</code>
+     */
+    public Builder clearDeviceMirroringSession() {
+      if (deviceMirroringSessionBuilder_ == null) {
+        deviceMirroringSession_ = null;
+        onChanged();
+      } else {
+        deviceMirroringSessionBuilder_.clear();
+      }
+      bitField4_ = (bitField4_ & ~0x00100000);
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = DEVICE_MIRRORING_SESSION
+     * </pre>
+     *
+     * <code>optional .android_studio.DeviceMirroringSession device_mirroring_session = 149;</code>
+     */
+    public com.google.wireless.android.sdk.stats.DeviceMirroringSession.Builder getDeviceMirroringSessionBuilder() {
+      bitField4_ |= 0x00100000;
+      onChanged();
+      return getDeviceMirroringSessionFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * set when kind = DEVICE_MIRRORING_SESSION
+     * </pre>
+     *
+     * <code>optional .android_studio.DeviceMirroringSession device_mirroring_session = 149;</code>
+     */
+    public com.google.wireless.android.sdk.stats.DeviceMirroringSessionOrBuilder getDeviceMirroringSessionOrBuilder() {
+      if (deviceMirroringSessionBuilder_ != null) {
+        return deviceMirroringSessionBuilder_.getMessageOrBuilder();
+      } else {
+        return deviceMirroringSession_ == null ?
+            com.google.wireless.android.sdk.stats.DeviceMirroringSession.getDefaultInstance() : deviceMirroringSession_;
+      }
+    }
+    /**
+     * <pre>
+     * set when kind = DEVICE_MIRRORING_SESSION
+     * </pre>
+     *
+     * <code>optional .android_studio.DeviceMirroringSession device_mirroring_session = 149;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.DeviceMirroringSession, com.google.wireless.android.sdk.stats.DeviceMirroringSession.Builder, com.google.wireless.android.sdk.stats.DeviceMirroringSessionOrBuilder> 
+        getDeviceMirroringSessionFieldBuilder() {
+      if (deviceMirroringSessionBuilder_ == null) {
+        deviceMirroringSessionBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.wireless.android.sdk.stats.DeviceMirroringSession, com.google.wireless.android.sdk.stats.DeviceMirroringSession.Builder, com.google.wireless.android.sdk.stats.DeviceMirroringSessionOrBuilder>(
+                getDeviceMirroringSession(),
+                getParentForChildren(),
+                isClean());
+        deviceMirroringSession_ = null;
+      }
+      return deviceMirroringSessionBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

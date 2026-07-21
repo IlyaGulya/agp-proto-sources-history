@@ -4156,4 +4156,31 @@ public interface AndroidStudioEventOrBuilder extends
    * <code>optional .android_studio.GoogleLoginPluginEvent google_login_event = 148;</code>
    */
   com.google.wireless.android.sdk.stats.GoogleLoginPluginEventOrBuilder getGoogleLoginEventOrBuilder();
+
+  /**
+   * <pre>
+   * set when kind = DEVICE_MIRRORING_SESSION
+   * </pre>
+   *
+   * <code>optional .android_studio.DeviceMirroringSession device_mirroring_session = 149;</code>
+   * @return Whether the deviceMirroringSession field is set.
+   */
+  boolean hasDeviceMirroringSession();
+  /**
+   * <pre>
+   * set when kind = DEVICE_MIRRORING_SESSION
+   * </pre>
+   *
+   * <code>optional .android_studio.DeviceMirroringSession device_mirroring_session = 149;</code>
+   * @return The deviceMirroringSession.
+   */
+  com.google.wireless.android.sdk.stats.DeviceMirroringSession getDeviceMirroringSession();
+  /**
+   * <pre>
+   * set when kind = DEVICE_MIRRORING_SESSION
+   * </pre>
+   *
+   * <code>optional .android_studio.DeviceMirroringSession device_mirroring_session = 149;</code>
+   */
+  com.google.wireless.android.sdk.stats.DeviceMirroringSessionOrBuilder getDeviceMirroringSessionOrBuilder();
 }
