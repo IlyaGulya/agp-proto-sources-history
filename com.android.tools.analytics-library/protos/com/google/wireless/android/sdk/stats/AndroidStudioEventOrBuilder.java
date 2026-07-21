@@ -4183,4 +4183,31 @@ public interface AndroidStudioEventOrBuilder extends
    * <code>optional .android_studio.DeviceMirroringSession device_mirroring_session = 149;</code>
    */
   com.google.wireless.android.sdk.stats.DeviceMirroringSessionOrBuilder getDeviceMirroringSessionOrBuilder();
+
+  /**
+   * <pre>
+   * set when kind = FAST_PREVIEW_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.FastPreviewEvent fast_preview_event = 150;</code>
+   * @return Whether the fastPreviewEvent field is set.
+   */
+  boolean hasFastPreviewEvent();
+  /**
+   * <pre>
+   * set when kind = FAST_PREVIEW_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.FastPreviewEvent fast_preview_event = 150;</code>
+   * @return The fastPreviewEvent.
+   */
+  com.google.wireless.android.sdk.stats.FastPreviewEvent getFastPreviewEvent();
+  /**
+   * <pre>
+   * set when kind = FAST_PREVIEW_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.FastPreviewEvent fast_preview_event = 150;</code>
+   */
+  com.google.wireless.android.sdk.stats.FastPreviewEventOrBuilder getFastPreviewEventOrBuilder();
 }

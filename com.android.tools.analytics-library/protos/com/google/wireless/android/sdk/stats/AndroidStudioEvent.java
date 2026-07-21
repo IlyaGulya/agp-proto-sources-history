@@ -1932,6 +1932,19 @@ private static final long serialVersionUID = 0L;
             bitField4_ |= 0x00004000;
             break;
           }
+          case 1202: {
+            com.google.wireless.android.sdk.stats.FastPreviewEvent.Builder subBuilder = null;
+            if (((bitField4_ & 0x00008000) != 0)) {
+              subBuilder = fastPreviewEvent_.toBuilder();
+            }
+            fastPreviewEvent_ = input.readMessage(com.google.wireless.android.sdk.stats.FastPreviewEvent.PARSER, extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(fastPreviewEvent_);
+              fastPreviewEvent_ = subBuilder.buildPartial();
+            }
+            bitField4_ |= 0x00008000;
+            break;
+          }
           default: {
             if (!parseUnknownField(
                 input, unknownFields, extensionRegistry, tag)) {
@@ -4542,6 +4555,14 @@ private static final long serialVersionUID = 0L;
      * <code>DEVICE_MIRRORING_SESSION = 262;</code>
      */
     DEVICE_MIRRORING_SESSION(262),
+    /**
+     * <pre>
+     * Event related to a Fast Preview action
+     * </pre>
+     *
+     * <code>FAST_PREVIEW_EVENT = 263;</code>
+     */
+    FAST_PREVIEW_EVENT(263),
     ;
 
     /**
@@ -6474,6 +6495,14 @@ private static final long serialVersionUID = 0L;
      * <code>DEVICE_MIRRORING_SESSION = 262;</code>
      */
     public static final int DEVICE_MIRRORING_SESSION_VALUE = 262;
+    /**
+     * <pre>
+     * Event related to a Fast Preview action
+     * </pre>
+     *
+     * <code>FAST_PREVIEW_EVENT = 263;</code>
+     */
+    public static final int FAST_PREVIEW_EVENT_VALUE = 263;
 
 
     public final int getNumber() {
@@ -6754,6 +6783,7 @@ private static final long serialVersionUID = 0L;
         case 260: return APP_QUALITY_INSIGHTS_USAGE;
         case 261: return GOOGLE_LOGIN_EVENT;
         case 262: return DEVICE_MIRRORING_SESSION;
+        case 263: return FAST_PREVIEW_EVENT;
         default: return null;
       }
     }
@@ -9219,6 +9249,14 @@ private static final long serialVersionUID = 0L;
      * <code>TYPE_ACCESSING_DISABLED_FEATURE_VARIANT_API = 58;</code>
      */
     TYPE_ACCESSING_DISABLED_FEATURE_VARIANT_API(58),
+    /**
+     * <pre>
+     * Using the variant API to set the application ID to a dynamic value
+     * </pre>
+     *
+     * <code>TYPE_APPLICATION_ID_MUST_NOT_BE_DYNAMIC = 59;</code>
+     */
+    TYPE_APPLICATION_ID_MUST_NOT_BE_DYNAMIC(59),
     ;
 
     /**
@@ -9632,6 +9670,14 @@ private static final long serialVersionUID = 0L;
      * <code>TYPE_ACCESSING_DISABLED_FEATURE_VARIANT_API = 58;</code>
      */
     public static final int TYPE_ACCESSING_DISABLED_FEATURE_VARIANT_API_VALUE = 58;
+    /**
+     * <pre>
+     * Using the variant API to set the application ID to a dynamic value
+     * </pre>
+     *
+     * <code>TYPE_APPLICATION_ID_MUST_NOT_BE_DYNAMIC = 59;</code>
+     */
+    public static final int TYPE_APPLICATION_ID_MUST_NOT_BE_DYNAMIC_VALUE = 59;
 
 
     public final int getNumber() {
@@ -9713,6 +9759,7 @@ private static final long serialVersionUID = 0L;
         case 56: return TYPE_COMPILE_SDK_VERSION_TOO_HIGH;
         case 57: return TYPE_COMPILE_SDK_VERSION_TOO_LOW;
         case 58: return TYPE_ACCESSING_DISABLED_FEATURE_VARIANT_API;
+        case 59: return TYPE_APPLICATION_ID_MUST_NOT_BE_DYNAMIC;
         default: return null;
       }
     }
@@ -21148,6 +21195,44 @@ private static final long serialVersionUID = 0L;
     return deviceMirroringSession_ == null ? com.google.wireless.android.sdk.stats.DeviceMirroringSession.getDefaultInstance() : deviceMirroringSession_;
   }
 
+  public static final int FAST_PREVIEW_EVENT_FIELD_NUMBER = 150;
+  private com.google.wireless.android.sdk.stats.FastPreviewEvent fastPreviewEvent_;
+  /**
+   * <pre>
+   * set when kind = FAST_PREVIEW_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.FastPreviewEvent fast_preview_event = 150;</code>
+   * @return Whether the fastPreviewEvent field is set.
+   */
+  @java.lang.Override
+  public boolean hasFastPreviewEvent() {
+    return ((bitField4_ & 0x00008000) != 0);
+  }
+  /**
+   * <pre>
+   * set when kind = FAST_PREVIEW_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.FastPreviewEvent fast_preview_event = 150;</code>
+   * @return The fastPreviewEvent.
+   */
+  @java.lang.Override
+  public com.google.wireless.android.sdk.stats.FastPreviewEvent getFastPreviewEvent() {
+    return fastPreviewEvent_ == null ? com.google.wireless.android.sdk.stats.FastPreviewEvent.getDefaultInstance() : fastPreviewEvent_;
+  }
+  /**
+   * <pre>
+   * set when kind = FAST_PREVIEW_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.FastPreviewEvent fast_preview_event = 150;</code>
+   */
+  @java.lang.Override
+  public com.google.wireless.android.sdk.stats.FastPreviewEventOrBuilder getFastPreviewEventOrBuilder() {
+    return fastPreviewEvent_ == null ? com.google.wireless.android.sdk.stats.FastPreviewEvent.getDefaultInstance() : fastPreviewEvent_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -21608,6 +21693,9 @@ private static final long serialVersionUID = 0L;
     }
     if (((bitField4_ & 0x00004000) != 0)) {
       output.writeMessage(149, getDeviceMirroringSession());
+    }
+    if (((bitField4_ & 0x00008000) != 0)) {
+      output.writeMessage(150, getFastPreviewEvent());
     }
     unknownFields.writeTo(output);
   }
@@ -22219,6 +22307,10 @@ private static final long serialVersionUID = 0L;
     if (((bitField4_ & 0x00004000) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(149, getDeviceMirroringSession());
+    }
+    if (((bitField4_ & 0x00008000) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(150, getFastPreviewEvent());
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -22951,6 +23043,11 @@ private static final long serialVersionUID = 0L;
       if (!getDeviceMirroringSession()
           .equals(other.getDeviceMirroringSession())) return false;
     }
+    if (hasFastPreviewEvent() != other.hasFastPreviewEvent()) return false;
+    if (hasFastPreviewEvent()) {
+      if (!getFastPreviewEvent()
+          .equals(other.getFastPreviewEvent())) return false;
+    }
     if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
@@ -23560,6 +23657,10 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + DEVICE_MIRRORING_SESSION_FIELD_NUMBER;
       hash = (53 * hash) + getDeviceMirroringSession().hashCode();
     }
+    if (hasFastPreviewEvent()) {
+      hash = (37 * hash) + FAST_PREVIEW_EVENT_FIELD_NUMBER;
+      hash = (53 * hash) + getFastPreviewEvent().hashCode();
+    }
     hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -23814,6 +23915,7 @@ private static final long serialVersionUID = 0L;
         getAppQualityInsightsUsageEventFieldBuilder();
         getGoogleLoginEventFieldBuilder();
         getDeviceMirroringSessionFieldBuilder();
+        getFastPreviewEventFieldBuilder();
       }
     }
     @java.lang.Override
@@ -24621,6 +24723,12 @@ private static final long serialVersionUID = 0L;
         deviceMirroringSessionBuilder_.clear();
       }
       bitField4_ = (bitField4_ & ~0x00100000);
+      if (fastPreviewEventBuilder_ == null) {
+        fastPreviewEvent_ = null;
+      } else {
+        fastPreviewEventBuilder_.clear();
+      }
+      bitField4_ = (bitField4_ & ~0x00200000);
       return this;
     }
 
@@ -25763,6 +25871,14 @@ private static final long serialVersionUID = 0L;
         }
         to_bitField4_ |= 0x00004000;
       }
+      if (((from_bitField4_ & 0x00200000) != 0)) {
+        if (fastPreviewEventBuilder_ == null) {
+          result.fastPreviewEvent_ = fastPreviewEvent_;
+        } else {
+          result.fastPreviewEvent_ = fastPreviewEventBuilder_.build();
+        }
+        to_bitField4_ |= 0x00008000;
+      }
       result.bitField0_ = to_bitField0_;
       result.bitField1_ = to_bitField1_;
       result.bitField2_ = to_bitField2_;
@@ -26366,6 +26482,9 @@ private static final long serialVersionUID = 0L;
       }
       if (other.hasDeviceMirroringSession()) {
         mergeDeviceMirroringSession(other.getDeviceMirroringSession());
+      }
+      if (other.hasFastPreviewEvent()) {
+        mergeFastPreviewEvent(other.getFastPreviewEvent());
       }
       this.mergeUnknownFields(other.unknownFields);
       onChanged();
@@ -48866,6 +48985,162 @@ private static final long serialVersionUID = 0L;
         deviceMirroringSession_ = null;
       }
       return deviceMirroringSessionBuilder_;
+    }
+
+    private com.google.wireless.android.sdk.stats.FastPreviewEvent fastPreviewEvent_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.FastPreviewEvent, com.google.wireless.android.sdk.stats.FastPreviewEvent.Builder, com.google.wireless.android.sdk.stats.FastPreviewEventOrBuilder> fastPreviewEventBuilder_;
+    /**
+     * <pre>
+     * set when kind = FAST_PREVIEW_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.FastPreviewEvent fast_preview_event = 150;</code>
+     * @return Whether the fastPreviewEvent field is set.
+     */
+    public boolean hasFastPreviewEvent() {
+      return ((bitField4_ & 0x00200000) != 0);
+    }
+    /**
+     * <pre>
+     * set when kind = FAST_PREVIEW_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.FastPreviewEvent fast_preview_event = 150;</code>
+     * @return The fastPreviewEvent.
+     */
+    public com.google.wireless.android.sdk.stats.FastPreviewEvent getFastPreviewEvent() {
+      if (fastPreviewEventBuilder_ == null) {
+        return fastPreviewEvent_ == null ? com.google.wireless.android.sdk.stats.FastPreviewEvent.getDefaultInstance() : fastPreviewEvent_;
+      } else {
+        return fastPreviewEventBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * set when kind = FAST_PREVIEW_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.FastPreviewEvent fast_preview_event = 150;</code>
+     */
+    public Builder setFastPreviewEvent(com.google.wireless.android.sdk.stats.FastPreviewEvent value) {
+      if (fastPreviewEventBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        fastPreviewEvent_ = value;
+        onChanged();
+      } else {
+        fastPreviewEventBuilder_.setMessage(value);
+      }
+      bitField4_ |= 0x00200000;
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = FAST_PREVIEW_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.FastPreviewEvent fast_preview_event = 150;</code>
+     */
+    public Builder setFastPreviewEvent(
+        com.google.wireless.android.sdk.stats.FastPreviewEvent.Builder builderForValue) {
+      if (fastPreviewEventBuilder_ == null) {
+        fastPreviewEvent_ = builderForValue.build();
+        onChanged();
+      } else {
+        fastPreviewEventBuilder_.setMessage(builderForValue.build());
+      }
+      bitField4_ |= 0x00200000;
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = FAST_PREVIEW_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.FastPreviewEvent fast_preview_event = 150;</code>
+     */
+    public Builder mergeFastPreviewEvent(com.google.wireless.android.sdk.stats.FastPreviewEvent value) {
+      if (fastPreviewEventBuilder_ == null) {
+        if (((bitField4_ & 0x00200000) != 0) &&
+            fastPreviewEvent_ != null &&
+            fastPreviewEvent_ != com.google.wireless.android.sdk.stats.FastPreviewEvent.getDefaultInstance()) {
+          fastPreviewEvent_ =
+            com.google.wireless.android.sdk.stats.FastPreviewEvent.newBuilder(fastPreviewEvent_).mergeFrom(value).buildPartial();
+        } else {
+          fastPreviewEvent_ = value;
+        }
+        onChanged();
+      } else {
+        fastPreviewEventBuilder_.mergeFrom(value);
+      }
+      bitField4_ |= 0x00200000;
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = FAST_PREVIEW_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.FastPreviewEvent fast_preview_event = 150;</code>
+     */
+    public Builder clearFastPreviewEvent() {
+      if (fastPreviewEventBuilder_ == null) {
+        fastPreviewEvent_ = null;
+        onChanged();
+      } else {
+        fastPreviewEventBuilder_.clear();
+      }
+      bitField4_ = (bitField4_ & ~0x00200000);
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = FAST_PREVIEW_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.FastPreviewEvent fast_preview_event = 150;</code>
+     */
+    public com.google.wireless.android.sdk.stats.FastPreviewEvent.Builder getFastPreviewEventBuilder() {
+      bitField4_ |= 0x00200000;
+      onChanged();
+      return getFastPreviewEventFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * set when kind = FAST_PREVIEW_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.FastPreviewEvent fast_preview_event = 150;</code>
+     */
+    public com.google.wireless.android.sdk.stats.FastPreviewEventOrBuilder getFastPreviewEventOrBuilder() {
+      if (fastPreviewEventBuilder_ != null) {
+        return fastPreviewEventBuilder_.getMessageOrBuilder();
+      } else {
+        return fastPreviewEvent_ == null ?
+            com.google.wireless.android.sdk.stats.FastPreviewEvent.getDefaultInstance() : fastPreviewEvent_;
+      }
+    }
+    /**
+     * <pre>
+     * set when kind = FAST_PREVIEW_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.FastPreviewEvent fast_preview_event = 150;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.FastPreviewEvent, com.google.wireless.android.sdk.stats.FastPreviewEvent.Builder, com.google.wireless.android.sdk.stats.FastPreviewEventOrBuilder> 
+        getFastPreviewEventFieldBuilder() {
+      if (fastPreviewEventBuilder_ == null) {
+        fastPreviewEventBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.wireless.android.sdk.stats.FastPreviewEvent, com.google.wireless.android.sdk.stats.FastPreviewEvent.Builder, com.google.wireless.android.sdk.stats.FastPreviewEventOrBuilder>(
+                getFastPreviewEvent(),
+                getParentForChildren(),
+                isClean());
+        fastPreviewEvent_ = null;
+      }
+      return fastPreviewEventBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(
