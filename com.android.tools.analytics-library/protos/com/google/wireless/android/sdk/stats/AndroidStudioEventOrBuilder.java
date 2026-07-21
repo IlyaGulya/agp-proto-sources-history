@@ -4315,4 +4315,58 @@ public interface AndroidStudioEventOrBuilder extends
    * <code>optional .android_studio.ManifestMergerStats manifest_merger_stats = 153;</code>
    */
   com.google.wireless.android.sdk.stats.ManifestMergerStatsOrBuilder getManifestMergerStatsOrBuilder();
+
+  /**
+   * <pre>
+   * set when kind = THREADING_AGENT_STATS
+   * </pre>
+   *
+   * <code>optional .android_studio.ThreadingAgentUsageEvent threading_agent_usage_event = 154;</code>
+   * @return Whether the threadingAgentUsageEvent field is set.
+   */
+  boolean hasThreadingAgentUsageEvent();
+  /**
+   * <pre>
+   * set when kind = THREADING_AGENT_STATS
+   * </pre>
+   *
+   * <code>optional .android_studio.ThreadingAgentUsageEvent threading_agent_usage_event = 154;</code>
+   * @return The threadingAgentUsageEvent.
+   */
+  com.google.wireless.android.sdk.stats.ThreadingAgentUsageEvent getThreadingAgentUsageEvent();
+  /**
+   * <pre>
+   * set when kind = THREADING_AGENT_STATS
+   * </pre>
+   *
+   * <code>optional .android_studio.ThreadingAgentUsageEvent threading_agent_usage_event = 154;</code>
+   */
+  com.google.wireless.android.sdk.stats.ThreadingAgentUsageEventOrBuilder getThreadingAgentUsageEventOrBuilder();
+
+  /**
+   * <pre>
+   * set when kind = PROJECT_VIEW_SELECTION_CHANGE_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.ProjectViewSelectionChangeEvent project_view_selection_change_event = 155;</code>
+   * @return Whether the projectViewSelectionChangeEvent field is set.
+   */
+  boolean hasProjectViewSelectionChangeEvent();
+  /**
+   * <pre>
+   * set when kind = PROJECT_VIEW_SELECTION_CHANGE_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.ProjectViewSelectionChangeEvent project_view_selection_change_event = 155;</code>
+   * @return The projectViewSelectionChangeEvent.
+   */
+  com.google.wireless.android.sdk.stats.ProjectViewSelectionChangeEvent getProjectViewSelectionChangeEvent();
+  /**
+   * <pre>
+   * set when kind = PROJECT_VIEW_SELECTION_CHANGE_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.ProjectViewSelectionChangeEvent project_view_selection_change_event = 155;</code>
+   */
+  com.google.wireless.android.sdk.stats.ProjectViewSelectionChangeEventOrBuilder getProjectViewSelectionChangeEventOrBuilder();
 }

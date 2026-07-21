@@ -18,7 +18,6 @@ private static final long serialVersionUID = 0L;
   private AppQualityInsightsUsageEvent() {
     appId_ = "";
     type_ = 0;
-    modeTransitionDetails_ = 0;
   }
 
   @java.lang.Override
@@ -192,18 +191,6 @@ private static final long serialVersionUID = 0L;
             isOffline_ = input.readBool();
             break;
           }
-          case 104: {
-            int rawValue = input.readEnum();
-              @SuppressWarnings("deprecation")
-            com.google.wireless.android.sdk.stats.AppQualityInsightsUsageEvent.AppQualityInsightsModeTransitionDetails value = com.google.wireless.android.sdk.stats.AppQualityInsightsUsageEvent.AppQualityInsightsModeTransitionDetails.valueOf(rawValue);
-            if (value == null) {
-              unknownFields.mergeVarintField(13, rawValue);
-            } else {
-              bitField0_ |= 0x00001000;
-              modeTransitionDetails_ = rawValue;
-            }
-            break;
-          }
           default: {
             if (!parseUnknownField(
                 input, unknownFields, extensionRegistry, tag)) {
@@ -317,14 +304,6 @@ private static final long serialVersionUID = 0L;
      * <code>NOTE = 9;</code>
      */
     NOTE(9),
-    /**
-     * <pre>
-     * AQI transitioned to offline or online mode
-     * </pre>
-     *
-     * <code>MODE_TRANSITION = 10;</code>
-     */
-    MODE_TRANSITION(10),
     ;
 
     /**
@@ -403,14 +382,6 @@ private static final long serialVersionUID = 0L;
      * <code>NOTE = 9;</code>
      */
     public static final int NOTE_VALUE = 9;
-    /**
-     * <pre>
-     * AQI transitioned to offline or online mode
-     * </pre>
-     *
-     * <code>MODE_TRANSITION = 10;</code>
-     */
-    public static final int MODE_TRANSITION_VALUE = 10;
 
 
     public final int getNumber() {
@@ -443,7 +414,6 @@ private static final long serialVersionUID = 0L;
         case 7: return ERROR;
         case 8: return ISSUE_STATUS_CHANGED;
         case 9: return NOTE;
-        case 10: return MODE_TRANSITION;
         default: return null;
       }
     }
@@ -833,111 +803,6 @@ private static final long serialVersionUID = 0L;
     }
 
     // @@protoc_insertion_point(enum_scope:android_studio.AppQualityInsightsUsageEvent.Resolution)
-  }
-
-  /**
-   * Protobuf enum {@code android_studio.AppQualityInsightsUsageEvent.AppQualityInsightsModeTransitionDetails}
-   */
-  public enum AppQualityInsightsModeTransitionDetails
-      implements com.google.protobuf.ProtocolMessageEnum {
-    /**
-     * <code>UNKNOWN_TRANSITION = 0;</code>
-     */
-    UNKNOWN_TRANSITION(0),
-    /**
-     * <code>ONLINE_TO_OFFLINE = 1;</code>
-     */
-    ONLINE_TO_OFFLINE(1),
-    /**
-     * <code>OFFLINE_TO_ONLINE = 2;</code>
-     */
-    OFFLINE_TO_ONLINE(2),
-    ;
-
-    /**
-     * <code>UNKNOWN_TRANSITION = 0;</code>
-     */
-    public static final int UNKNOWN_TRANSITION_VALUE = 0;
-    /**
-     * <code>ONLINE_TO_OFFLINE = 1;</code>
-     */
-    public static final int ONLINE_TO_OFFLINE_VALUE = 1;
-    /**
-     * <code>OFFLINE_TO_ONLINE = 2;</code>
-     */
-    public static final int OFFLINE_TO_ONLINE_VALUE = 2;
-
-
-    public final int getNumber() {
-      return value;
-    }
-
-    /**
-     * @param value The numeric wire value of the corresponding enum entry.
-     * @return The enum associated with the given numeric wire value.
-     * @deprecated Use {@link #forNumber(int)} instead.
-     */
-    @java.lang.Deprecated
-    public static AppQualityInsightsModeTransitionDetails valueOf(int value) {
-      return forNumber(value);
-    }
-
-    /**
-     * @param value The numeric wire value of the corresponding enum entry.
-     * @return The enum associated with the given numeric wire value.
-     */
-    public static AppQualityInsightsModeTransitionDetails forNumber(int value) {
-      switch (value) {
-        case 0: return UNKNOWN_TRANSITION;
-        case 1: return ONLINE_TO_OFFLINE;
-        case 2: return OFFLINE_TO_ONLINE;
-        default: return null;
-      }
-    }
-
-    public static com.google.protobuf.Internal.EnumLiteMap<AppQualityInsightsModeTransitionDetails>
-        internalGetValueMap() {
-      return internalValueMap;
-    }
-    private static final com.google.protobuf.Internal.EnumLiteMap<
-        AppQualityInsightsModeTransitionDetails> internalValueMap =
-          new com.google.protobuf.Internal.EnumLiteMap<AppQualityInsightsModeTransitionDetails>() {
-            public AppQualityInsightsModeTransitionDetails findValueByNumber(int number) {
-              return AppQualityInsightsModeTransitionDetails.forNumber(number);
-            }
-          };
-
-    public final com.google.protobuf.Descriptors.EnumValueDescriptor
-        getValueDescriptor() {
-      return getDescriptor().getValues().get(ordinal());
-    }
-    public final com.google.protobuf.Descriptors.EnumDescriptor
-        getDescriptorForType() {
-      return getDescriptor();
-    }
-    public static final com.google.protobuf.Descriptors.EnumDescriptor
-        getDescriptor() {
-      return com.google.wireless.android.sdk.stats.AppQualityInsightsUsageEvent.getDescriptor().getEnumTypes().get(4);
-    }
-
-    private static final AppQualityInsightsModeTransitionDetails[] VALUES = values();
-
-    public static AppQualityInsightsModeTransitionDetails valueOf(
-        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
-      if (desc.getType() != getDescriptor()) {
-        throw new java.lang.IllegalArgumentException(
-          "EnumValueDescriptor is not for this type.");
-      }
-      return VALUES[desc.getIndex()];
-    }
-
-    private final int value;
-
-    private AppQualityInsightsModeTransitionDetails(int value) {
-      this.value = value;
-    }
-
-    // @@protoc_insertion_point(enum_scope:android_studio.AppQualityInsightsUsageEvent.AppQualityInsightsModeTransitionDetails)
   }
 
   public interface AppQualityInsightsZeroStateDetailsOrBuilder extends
@@ -10093,33 +9958,6 @@ private static final long serialVersionUID = 0L;
     return isOffline_;
   }
 
-  public static final int MODE_TRANSITION_DETAILS_FIELD_NUMBER = 13;
-  private int modeTransitionDetails_;
-  /**
-   * <pre>
-   * set when type = MODE_TRANSITION
-   * </pre>
-   *
-   * <code>optional .android_studio.AppQualityInsightsUsageEvent.AppQualityInsightsModeTransitionDetails mode_transition_details = 13;</code>
-   * @return Whether the modeTransitionDetails field is set.
-   */
-  @java.lang.Override public boolean hasModeTransitionDetails() {
-    return ((bitField0_ & 0x00001000) != 0);
-  }
-  /**
-   * <pre>
-   * set when type = MODE_TRANSITION
-   * </pre>
-   *
-   * <code>optional .android_studio.AppQualityInsightsUsageEvent.AppQualityInsightsModeTransitionDetails mode_transition_details = 13;</code>
-   * @return The modeTransitionDetails.
-   */
-  @java.lang.Override public com.google.wireless.android.sdk.stats.AppQualityInsightsUsageEvent.AppQualityInsightsModeTransitionDetails getModeTransitionDetails() {
-    @SuppressWarnings("deprecation")
-    com.google.wireless.android.sdk.stats.AppQualityInsightsUsageEvent.AppQualityInsightsModeTransitionDetails result = com.google.wireless.android.sdk.stats.AppQualityInsightsUsageEvent.AppQualityInsightsModeTransitionDetails.valueOf(modeTransitionDetails_);
-    return result == null ? com.google.wireless.android.sdk.stats.AppQualityInsightsUsageEvent.AppQualityInsightsModeTransitionDetails.UNKNOWN_TRANSITION : result;
-  }
-
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -10169,9 +10007,6 @@ private static final long serialVersionUID = 0L;
     }
     if (((bitField0_ & 0x00000800) != 0)) {
       output.writeBool(12, isOffline_);
-    }
-    if (((bitField0_ & 0x00001000) != 0)) {
-      output.writeEnum(13, modeTransitionDetails_);
     }
     unknownFields.writeTo(output);
   }
@@ -10228,10 +10063,6 @@ private static final long serialVersionUID = 0L;
     if (((bitField0_ & 0x00000800) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeBoolSize(12, isOffline_);
-    }
-    if (((bitField0_ & 0x00001000) != 0)) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeEnumSize(13, modeTransitionDetails_);
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -10307,10 +10138,6 @@ private static final long serialVersionUID = 0L;
       if (getIsOffline()
           != other.getIsOffline()) return false;
     }
-    if (hasModeTransitionDetails() != other.hasModeTransitionDetails()) return false;
-    if (hasModeTransitionDetails()) {
-      if (modeTransitionDetails_ != other.modeTransitionDetails_) return false;
-    }
     if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
@@ -10370,10 +10197,6 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + IS_OFFLINE_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
           getIsOffline());
-    }
-    if (hasModeTransitionDetails()) {
-      hash = (37 * hash) + MODE_TRANSITION_DETAILS_FIELD_NUMBER;
-      hash = (53 * hash) + modeTransitionDetails_;
     }
     hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
@@ -10577,8 +10400,6 @@ private static final long serialVersionUID = 0L;
       bitField0_ = (bitField0_ & ~0x00000400);
       isOffline_ = false;
       bitField0_ = (bitField0_ & ~0x00000800);
-      modeTransitionDetails_ = 0;
-      bitField0_ = (bitField0_ & ~0x00001000);
       return this;
     }
 
@@ -10691,10 +10512,6 @@ private static final long serialVersionUID = 0L;
         result.isOffline_ = isOffline_;
         to_bitField0_ |= 0x00000800;
       }
-      if (((from_bitField0_ & 0x00001000) != 0)) {
-        to_bitField0_ |= 0x00001000;
-      }
-      result.modeTransitionDetails_ = modeTransitionDetails_;
       result.bitField0_ = to_bitField0_;
       onBuilt();
       return result;
@@ -10781,9 +10598,6 @@ private static final long serialVersionUID = 0L;
       }
       if (other.hasIsOffline()) {
         setIsOffline(other.getIsOffline());
-      }
-      if (other.hasModeTransitionDetails()) {
-        setModeTransitionDetails(other.getModeTransitionDetails());
       }
       this.mergeUnknownFields(other.unknownFields);
       onChanged();
@@ -12449,65 +12263,6 @@ private static final long serialVersionUID = 0L;
     public Builder clearIsOffline() {
       bitField0_ = (bitField0_ & ~0x00000800);
       isOffline_ = false;
-      onChanged();
-      return this;
-    }
-
-    private int modeTransitionDetails_ = 0;
-    /**
-     * <pre>
-     * set when type = MODE_TRANSITION
-     * </pre>
-     *
-     * <code>optional .android_studio.AppQualityInsightsUsageEvent.AppQualityInsightsModeTransitionDetails mode_transition_details = 13;</code>
-     * @return Whether the modeTransitionDetails field is set.
-     */
-    @java.lang.Override public boolean hasModeTransitionDetails() {
-      return ((bitField0_ & 0x00001000) != 0);
-    }
-    /**
-     * <pre>
-     * set when type = MODE_TRANSITION
-     * </pre>
-     *
-     * <code>optional .android_studio.AppQualityInsightsUsageEvent.AppQualityInsightsModeTransitionDetails mode_transition_details = 13;</code>
-     * @return The modeTransitionDetails.
-     */
-    @java.lang.Override
-    public com.google.wireless.android.sdk.stats.AppQualityInsightsUsageEvent.AppQualityInsightsModeTransitionDetails getModeTransitionDetails() {
-      @SuppressWarnings("deprecation")
-      com.google.wireless.android.sdk.stats.AppQualityInsightsUsageEvent.AppQualityInsightsModeTransitionDetails result = com.google.wireless.android.sdk.stats.AppQualityInsightsUsageEvent.AppQualityInsightsModeTransitionDetails.valueOf(modeTransitionDetails_);
-      return result == null ? com.google.wireless.android.sdk.stats.AppQualityInsightsUsageEvent.AppQualityInsightsModeTransitionDetails.UNKNOWN_TRANSITION : result;
-    }
-    /**
-     * <pre>
-     * set when type = MODE_TRANSITION
-     * </pre>
-     *
-     * <code>optional .android_studio.AppQualityInsightsUsageEvent.AppQualityInsightsModeTransitionDetails mode_transition_details = 13;</code>
-     * @param value The modeTransitionDetails to set.
-     * @return This builder for chaining.
-     */
-    public Builder setModeTransitionDetails(com.google.wireless.android.sdk.stats.AppQualityInsightsUsageEvent.AppQualityInsightsModeTransitionDetails value) {
-      if (value == null) {
-        throw new NullPointerException();
-      }
-      bitField0_ |= 0x00001000;
-      modeTransitionDetails_ = value.getNumber();
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * set when type = MODE_TRANSITION
-     * </pre>
-     *
-     * <code>optional .android_studio.AppQualityInsightsUsageEvent.AppQualityInsightsModeTransitionDetails mode_transition_details = 13;</code>
-     * @return This builder for chaining.
-     */
-    public Builder clearModeTransitionDetails() {
-      bitField0_ = (bitField0_ & ~0x00001000);
-      modeTransitionDetails_ = 0;
       onChanged();
       return this;
     }
