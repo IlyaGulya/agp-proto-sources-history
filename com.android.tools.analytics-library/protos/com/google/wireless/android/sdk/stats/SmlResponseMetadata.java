@@ -21,6 +21,7 @@ private static final long serialVersionUID = 0L;
     modelProviderId_ = "";
     modelId_ = "";
     threadId_ = "";
+    agentType_ = 0;
   }
 
   @java.lang.Override
@@ -358,6 +359,32 @@ private static final long serialVersionUID = 0L;
     }
   }
 
+  public static final int AGENT_TYPE_FIELD_NUMBER = 7;
+  private int agentType_ = 0;
+  /**
+   * <pre>
+   * The type of the agent that generated the response.
+   * </pre>
+   *
+   * <code>optional .android_studio.SmlAgentType agent_type = 7;</code>
+   * @return Whether the agentType field is set.
+   */
+  @java.lang.Override public boolean hasAgentType() {
+    return ((bitField0_ & 0x00000020) != 0);
+  }
+  /**
+   * <pre>
+   * The type of the agent that generated the response.
+   * </pre>
+   *
+   * <code>optional .android_studio.SmlAgentType agent_type = 7;</code>
+   * @return The agentType.
+   */
+  @java.lang.Override public com.google.wireless.android.sdk.stats.SmlAgentType getAgentType() {
+    com.google.wireless.android.sdk.stats.SmlAgentType result = com.google.wireless.android.sdk.stats.SmlAgentType.forNumber(agentType_);
+    return result == null ? com.google.wireless.android.sdk.stats.SmlAgentType.AGENT_TYPE_UNSPECIFIED : result;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -389,6 +416,9 @@ private static final long serialVersionUID = 0L;
     }
     if (((bitField0_ & 0x00000010) != 0)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 6, threadId_);
+    }
+    if (((bitField0_ & 0x00000020) != 0)) {
+      output.writeEnum(7, agentType_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -423,6 +453,10 @@ private static final long serialVersionUID = 0L;
     }
     if (((bitField0_ & 0x00000010) != 0)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, threadId_);
+    }
+    if (((bitField0_ & 0x00000020) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeEnumSize(7, agentType_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -466,6 +500,10 @@ private static final long serialVersionUID = 0L;
       if (!getThreadId()
           .equals(other.getThreadId())) return false;
     }
+    if (hasAgentType() != other.hasAgentType()) return false;
+    if (hasAgentType()) {
+      if (agentType_ != other.agentType_) return false;
+    }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -501,6 +539,10 @@ private static final long serialVersionUID = 0L;
     if (hasThreadId()) {
       hash = (37 * hash) + THREAD_ID_FIELD_NUMBER;
       hash = (53 * hash) + getThreadId().hashCode();
+    }
+    if (hasAgentType()) {
+      hash = (37 * hash) + AGENT_TYPE_FIELD_NUMBER;
+      hash = (53 * hash) + agentType_;
     }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
@@ -637,6 +679,7 @@ private static final long serialVersionUID = 0L;
       modelProviderId_ = "";
       modelId_ = "";
       threadId_ = "";
+      agentType_ = 0;
       return this;
     }
 
@@ -700,6 +743,10 @@ private static final long serialVersionUID = 0L;
         result.threadId_ = threadId_;
         to_bitField0_ |= 0x00000010;
       }
+      if (((from_bitField0_ & 0x00000040) != 0)) {
+        result.agentType_ = agentType_;
+        to_bitField0_ |= 0x00000020;
+      }
       result.bitField0_ |= to_bitField0_;
     }
 
@@ -747,6 +794,9 @@ private static final long serialVersionUID = 0L;
         threadId_ = other.threadId_;
         bitField0_ |= 0x00000020;
         onChanged();
+      }
+      if (other.hasAgentType()) {
+        setAgentType(other.getAgentType());
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -815,6 +865,18 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000020;
               break;
             } // case 50
+            case 56: {
+              int tmpRaw = input.readEnum();
+              com.google.wireless.android.sdk.stats.SmlAgentType tmpValue =
+                  com.google.wireless.android.sdk.stats.SmlAgentType.forNumber(tmpRaw);
+              if (tmpValue == null) {
+                mergeUnknownVarintField(7, tmpRaw);
+              } else {
+                agentType_ = tmpRaw;
+                bitField0_ |= 0x00000040;
+              }
+              break;
+            } // case 56
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -1415,6 +1477,64 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       threadId_ = value;
       bitField0_ |= 0x00000020;
+      onChanged();
+      return this;
+    }
+
+    private int agentType_ = 0;
+    /**
+     * <pre>
+     * The type of the agent that generated the response.
+     * </pre>
+     *
+     * <code>optional .android_studio.SmlAgentType agent_type = 7;</code>
+     * @return Whether the agentType field is set.
+     */
+    @java.lang.Override public boolean hasAgentType() {
+      return ((bitField0_ & 0x00000040) != 0);
+    }
+    /**
+     * <pre>
+     * The type of the agent that generated the response.
+     * </pre>
+     *
+     * <code>optional .android_studio.SmlAgentType agent_type = 7;</code>
+     * @return The agentType.
+     */
+    @java.lang.Override
+    public com.google.wireless.android.sdk.stats.SmlAgentType getAgentType() {
+      com.google.wireless.android.sdk.stats.SmlAgentType result = com.google.wireless.android.sdk.stats.SmlAgentType.forNumber(agentType_);
+      return result == null ? com.google.wireless.android.sdk.stats.SmlAgentType.AGENT_TYPE_UNSPECIFIED : result;
+    }
+    /**
+     * <pre>
+     * The type of the agent that generated the response.
+     * </pre>
+     *
+     * <code>optional .android_studio.SmlAgentType agent_type = 7;</code>
+     * @param value The agentType to set.
+     * @return This builder for chaining.
+     */
+    public Builder setAgentType(com.google.wireless.android.sdk.stats.SmlAgentType value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      bitField0_ |= 0x00000040;
+      agentType_ = value.getNumber();
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The type of the agent that generated the response.
+     * </pre>
+     *
+     * <code>optional .android_studio.SmlAgentType agent_type = 7;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearAgentType() {
+      bitField0_ = (bitField0_ & ~0x00000040);
+      agentType_ = 0;
       onChanged();
       return this;
     }

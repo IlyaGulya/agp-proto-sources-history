@@ -84,6 +84,102 @@ private static final long serialVersionUID = 0L;
      * <code>SHOW_SUCCESSFUL_PAIRING = 3;</code>
      */
     SHOW_SUCCESSFUL_PAIRING(3),
+    /**
+     * <pre>
+     * User selected a device to pair
+     * </pre>
+     *
+     * <code>PAIRING_DEVICE_SELECTED = 4;</code>
+     */
+    PAIRING_DEVICE_SELECTED(4),
+    /**
+     * <pre>
+     * User clicked "Next" to initiate pairing
+     * </pre>
+     *
+     * <code>PAIRING_INITIATED = 5;</code>
+     */
+    PAIRING_INITIATED(5),
+    /**
+     * <pre>
+     * Wizard started launching emulators
+     * </pre>
+     *
+     * <code>PAIRING_LAUNCH_STARTED = 6;</code>
+     */
+    PAIRING_LAUNCH_STARTED(6),
+    /**
+     * <pre>
+     * Wizard is awaiting user authorization on the phone
+     * </pre>
+     *
+     * <code>PAIRING_AWAITING_AUTHORIZATION = 7;</code>
+     */
+    PAIRING_AWAITING_AUTHORIZATION(7),
+    /**
+     * <pre>
+     * Error: Timeout waiting for devices to start
+     * </pre>
+     *
+     * <code>PAIRING_ERROR_TIMEOUT = 8;</code>
+     */
+    PAIRING_ERROR_TIMEOUT(8),
+    /**
+     * <pre>
+     * Error: Device launch failed
+     * </pre>
+     *
+     * <code>PAIRING_ERROR_LAUNCH_FAILED = 9;</code>
+     */
+    PAIRING_ERROR_LAUNCH_FAILED(9),
+    /**
+     * <pre>
+     * Error: Glasses are already paired
+     * </pre>
+     *
+     * <code>PAIRING_ERROR_ALREADY_PAIRED = 10;</code>
+     */
+    PAIRING_ERROR_ALREADY_PAIRED(10),
+    /**
+     * <pre>
+     * Error: Companion app is missing on the phone
+     * </pre>
+     *
+     * <code>PAIRING_ERROR_NO_COMPANION_APP = 11;</code>
+     */
+    PAIRING_ERROR_NO_COMPANION_APP(11),
+    /**
+     * <pre>
+     * Error: Bluetooth address conflict or failure
+     * </pre>
+     *
+     * <code>PAIRING_ERROR_BLUETOOTH_ADDRESS = 12;</code>
+     */
+    PAIRING_ERROR_BLUETOOTH_ADDRESS(12),
+    /**
+     * <pre>
+     * Error: Pairing bond failed
+     * </pre>
+     *
+     * <code>PAIRING_ERROR_BOND_FAILED = 13;</code>
+     */
+    PAIRING_ERROR_BOND_FAILED(13),
+    /**
+     * <pre>
+     * Error: Pairing connection failed
+     * </pre>
+     *
+     * <code>PAIRING_ERROR_CONNECTION_FAILED = 14;</code>
+     */
+    PAIRING_ERROR_CONNECTION_FAILED(14),
+    /**
+     * <pre>
+     * Warning: Phone already has paired devices, pairing might fail
+     * </pre>
+     *
+     * <code>PAIRING_WARNING_PHONE_ALREADY_PAIRED = 15;</code>
+     */
+    PAIRING_WARNING_PHONE_ALREADY_PAIRED(15),
     ;
 
     /**
@@ -118,6 +214,102 @@ private static final long serialVersionUID = 0L;
      * <code>SHOW_SUCCESSFUL_PAIRING = 3;</code>
      */
     public static final int SHOW_SUCCESSFUL_PAIRING_VALUE = 3;
+    /**
+     * <pre>
+     * User selected a device to pair
+     * </pre>
+     *
+     * <code>PAIRING_DEVICE_SELECTED = 4;</code>
+     */
+    public static final int PAIRING_DEVICE_SELECTED_VALUE = 4;
+    /**
+     * <pre>
+     * User clicked "Next" to initiate pairing
+     * </pre>
+     *
+     * <code>PAIRING_INITIATED = 5;</code>
+     */
+    public static final int PAIRING_INITIATED_VALUE = 5;
+    /**
+     * <pre>
+     * Wizard started launching emulators
+     * </pre>
+     *
+     * <code>PAIRING_LAUNCH_STARTED = 6;</code>
+     */
+    public static final int PAIRING_LAUNCH_STARTED_VALUE = 6;
+    /**
+     * <pre>
+     * Wizard is awaiting user authorization on the phone
+     * </pre>
+     *
+     * <code>PAIRING_AWAITING_AUTHORIZATION = 7;</code>
+     */
+    public static final int PAIRING_AWAITING_AUTHORIZATION_VALUE = 7;
+    /**
+     * <pre>
+     * Error: Timeout waiting for devices to start
+     * </pre>
+     *
+     * <code>PAIRING_ERROR_TIMEOUT = 8;</code>
+     */
+    public static final int PAIRING_ERROR_TIMEOUT_VALUE = 8;
+    /**
+     * <pre>
+     * Error: Device launch failed
+     * </pre>
+     *
+     * <code>PAIRING_ERROR_LAUNCH_FAILED = 9;</code>
+     */
+    public static final int PAIRING_ERROR_LAUNCH_FAILED_VALUE = 9;
+    /**
+     * <pre>
+     * Error: Glasses are already paired
+     * </pre>
+     *
+     * <code>PAIRING_ERROR_ALREADY_PAIRED = 10;</code>
+     */
+    public static final int PAIRING_ERROR_ALREADY_PAIRED_VALUE = 10;
+    /**
+     * <pre>
+     * Error: Companion app is missing on the phone
+     * </pre>
+     *
+     * <code>PAIRING_ERROR_NO_COMPANION_APP = 11;</code>
+     */
+    public static final int PAIRING_ERROR_NO_COMPANION_APP_VALUE = 11;
+    /**
+     * <pre>
+     * Error: Bluetooth address conflict or failure
+     * </pre>
+     *
+     * <code>PAIRING_ERROR_BLUETOOTH_ADDRESS = 12;</code>
+     */
+    public static final int PAIRING_ERROR_BLUETOOTH_ADDRESS_VALUE = 12;
+    /**
+     * <pre>
+     * Error: Pairing bond failed
+     * </pre>
+     *
+     * <code>PAIRING_ERROR_BOND_FAILED = 13;</code>
+     */
+    public static final int PAIRING_ERROR_BOND_FAILED_VALUE = 13;
+    /**
+     * <pre>
+     * Error: Pairing connection failed
+     * </pre>
+     *
+     * <code>PAIRING_ERROR_CONNECTION_FAILED = 14;</code>
+     */
+    public static final int PAIRING_ERROR_CONNECTION_FAILED_VALUE = 14;
+    /**
+     * <pre>
+     * Warning: Phone already has paired devices, pairing might fail
+     * </pre>
+     *
+     * <code>PAIRING_WARNING_PHONE_ALREADY_PAIRED = 15;</code>
+     */
+    public static final int PAIRING_WARNING_PHONE_ALREADY_PAIRED_VALUE = 15;
 
 
     public final int getNumber() {
@@ -144,6 +336,18 @@ private static final long serialVersionUID = 0L;
         case 1: return PAIRING_ASSISTANT_LAUNCHED;
         case 2: return SHOW_FAILED_PAIRING;
         case 3: return SHOW_SUCCESSFUL_PAIRING;
+        case 4: return PAIRING_DEVICE_SELECTED;
+        case 5: return PAIRING_INITIATED;
+        case 6: return PAIRING_LAUNCH_STARTED;
+        case 7: return PAIRING_AWAITING_AUTHORIZATION;
+        case 8: return PAIRING_ERROR_TIMEOUT;
+        case 9: return PAIRING_ERROR_LAUNCH_FAILED;
+        case 10: return PAIRING_ERROR_ALREADY_PAIRED;
+        case 11: return PAIRING_ERROR_NO_COMPANION_APP;
+        case 12: return PAIRING_ERROR_BLUETOOTH_ADDRESS;
+        case 13: return PAIRING_ERROR_BOND_FAILED;
+        case 14: return PAIRING_ERROR_CONNECTION_FAILED;
+        case 15: return PAIRING_WARNING_PHONE_ALREADY_PAIRED;
         default: return null;
       }
     }

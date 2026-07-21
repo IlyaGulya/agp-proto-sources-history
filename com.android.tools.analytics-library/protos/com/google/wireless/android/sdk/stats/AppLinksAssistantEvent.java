@@ -52,7 +52,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * UI event source.
-   * Next ID: 60
+   * Next ID: 61
    * Note: Not a properly sequentially incrementing ID (200 &amp; 201 are used)
    * </pre>
    *
@@ -120,10 +120,6 @@ private static final long serialVersionUID = 0L;
      * <code>CODE_INSERT_DIALOG_LIST_SELECTION = 11;</code>
      */
     CODE_INSERT_DIALOG_LIST_SELECTION(11),
-    /**
-     * <code>CODE_INSERT_DIALOG_GEMINI_BUTTON = 59;</code>
-     */
-    CODE_INSERT_DIALOG_GEMINI_BUTTON(59),
     /**
      * <pre>
      * UI elements of DAL generation panel.
@@ -368,6 +364,18 @@ private static final long serialVersionUID = 0L;
      * <code>SERVICES_COMPATIBILITY_WARNING_MORE_INFO_BUTTON = 58;</code>
      */
     SERVICES_COMPATIBILITY_WARNING_MORE_INFO_BUTTON(58),
+    /**
+     * <pre>
+     * Deep Link AI
+     * </pre>
+     *
+     * <code>CODE_INSERT_DIALOG_GEMINI_BUTTON = 59;</code>
+     */
+    CODE_INSERT_DIALOG_GEMINI_BUTTON(59),
+    /**
+     * <code>DLLA_APP_SCREEN_OPEN_CONFIRMATION = 60;</code>
+     */
+    DLLA_APP_SCREEN_OPEN_CONFIRMATION(60),
     ;
 
     /**
@@ -430,10 +438,6 @@ private static final long serialVersionUID = 0L;
      * <code>CODE_INSERT_DIALOG_LIST_SELECTION = 11;</code>
      */
     public static final int CODE_INSERT_DIALOG_LIST_SELECTION_VALUE = 11;
-    /**
-     * <code>CODE_INSERT_DIALOG_GEMINI_BUTTON = 59;</code>
-     */
-    public static final int CODE_INSERT_DIALOG_GEMINI_BUTTON_VALUE = 59;
     /**
      * <pre>
      * UI elements of DAL generation panel.
@@ -678,6 +682,18 @@ private static final long serialVersionUID = 0L;
      * <code>SERVICES_COMPATIBILITY_WARNING_MORE_INFO_BUTTON = 58;</code>
      */
     public static final int SERVICES_COMPATIBILITY_WARNING_MORE_INFO_BUTTON_VALUE = 58;
+    /**
+     * <pre>
+     * Deep Link AI
+     * </pre>
+     *
+     * <code>CODE_INSERT_DIALOG_GEMINI_BUTTON = 59;</code>
+     */
+    public static final int CODE_INSERT_DIALOG_GEMINI_BUTTON_VALUE = 59;
+    /**
+     * <code>DLLA_APP_SCREEN_OPEN_CONFIRMATION = 60;</code>
+     */
+    public static final int DLLA_APP_SCREEN_OPEN_CONFIRMATION_VALUE = 60;
 
 
     public final int getNumber() {
@@ -712,7 +728,6 @@ private static final long serialVersionUID = 0L;
         case 9: return CODE_INSERT_DIALOG;
         case 10: return CODE_INSERT_DIALOG_INSERT_BUTTON;
         case 11: return CODE_INSERT_DIALOG_LIST_SELECTION;
-        case 59: return CODE_INSERT_DIALOG_GEMINI_BUTTON;
         case 12: return DAL_PANEL;
         case 13: return DAL_PANEL_BROWSE_KEYSTORE_BUTTON;
         case 14: return DAL_PANEL_GENERATE_BUTTON;
@@ -761,6 +776,8 @@ private static final long serialVersionUID = 0L;
         case 56: return SERVICES_COMPATIBILITY_WARNING;
         case 57: return SERVICES_COMPATIBILITY_WARNING_UPDATE_BUTTON;
         case 58: return SERVICES_COMPATIBILITY_WARNING_MORE_INFO_BUTTON;
+        case 59: return CODE_INSERT_DIALOG_GEMINI_BUTTON;
+        case 60: return DLLA_APP_SCREEN_OPEN_CONFIRMATION;
         default: return null;
       }
     }

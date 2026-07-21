@@ -205,6 +205,14 @@ private static final long serialVersionUID = 0L;
      * <code>LOGCAT = 11;</code>
      */
     LOGCAT(11),
+    /**
+     * <code>REFACTORING_MENU = 12;</code>
+     */
+    REFACTORING_MENU(12),
+    /**
+     * <code>UPDATE_DEPENDENCY_ACTION = 13;</code>
+     */
+    UPDATE_DEPENDENCY_ACTION(13),
     ;
 
     /**
@@ -255,6 +263,14 @@ private static final long serialVersionUID = 0L;
      * <code>LOGCAT = 11;</code>
      */
     public static final int LOGCAT_VALUE = 11;
+    /**
+     * <code>REFACTORING_MENU = 12;</code>
+     */
+    public static final int REFACTORING_MENU_VALUE = 12;
+    /**
+     * <code>UPDATE_DEPENDENCY_ACTION = 13;</code>
+     */
+    public static final int UPDATE_DEPENDENCY_ACTION_VALUE = 13;
 
 
     public final int getNumber() {
@@ -289,6 +305,8 @@ private static final long serialVersionUID = 0L;
         case 9: return CRASHLYTICS;
         case 10: return PLAY_VITALS;
         case 11: return LOGCAT;
+        case 12: return REFACTORING_MENU;
+        case 13: return UPDATE_DEPENDENCY_ACTION;
         default: return null;
       }
     }
@@ -7288,7 +7306,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional bool success = 3 [deprecated = true];</code>
      * @deprecated android_studio.SmlChatBotEvent.ParseResult.success is deprecated.
-     *     See studio_stats.proto;l=16059
+     *     See studio_stats.proto;l=16101
      * @return Whether the success field is set.
      */
     @java.lang.Deprecated boolean hasSuccess();
@@ -7300,7 +7318,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional bool success = 3 [deprecated = true];</code>
      * @deprecated android_studio.SmlChatBotEvent.ParseResult.success is deprecated.
-     *     See studio_stats.proto;l=16059
+     *     See studio_stats.proto;l=16101
      * @return The success.
      */
     @java.lang.Deprecated boolean getSuccess();
@@ -7428,7 +7446,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional bool success = 3 [deprecated = true];</code>
      * @deprecated android_studio.SmlChatBotEvent.ParseResult.success is deprecated.
-     *     See studio_stats.proto;l=16059
+     *     See studio_stats.proto;l=16101
      * @return Whether the success field is set.
      */
     @java.lang.Override
@@ -7443,7 +7461,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional bool success = 3 [deprecated = true];</code>
      * @deprecated android_studio.SmlChatBotEvent.ParseResult.success is deprecated.
-     *     See studio_stats.proto;l=16059
+     *     See studio_stats.proto;l=16101
      * @return The success.
      */
     @java.lang.Override
@@ -8107,7 +8125,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional bool success = 3 [deprecated = true];</code>
        * @deprecated android_studio.SmlChatBotEvent.ParseResult.success is deprecated.
-       *     See studio_stats.proto;l=16059
+       *     See studio_stats.proto;l=16101
        * @return Whether the success field is set.
        */
       @java.lang.Override
@@ -8122,7 +8140,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional bool success = 3 [deprecated = true];</code>
        * @deprecated android_studio.SmlChatBotEvent.ParseResult.success is deprecated.
-       *     See studio_stats.proto;l=16059
+       *     See studio_stats.proto;l=16101
        * @return The success.
        */
       @java.lang.Override
@@ -8137,7 +8155,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional bool success = 3 [deprecated = true];</code>
        * @deprecated android_studio.SmlChatBotEvent.ParseResult.success is deprecated.
-       *     See studio_stats.proto;l=16059
+       *     See studio_stats.proto;l=16101
        * @param value The success to set.
        * @return This builder for chaining.
        */
@@ -8156,7 +8174,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional bool success = 3 [deprecated = true];</code>
        * @deprecated android_studio.SmlChatBotEvent.ParseResult.success is deprecated.
-       *     See studio_stats.proto;l=16059
+       *     See studio_stats.proto;l=16101
        * @return This builder for chaining.
        */
       @java.lang.Deprecated public Builder clearSuccess() {
