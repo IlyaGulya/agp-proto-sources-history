@@ -5239,4 +5239,31 @@ public interface AndroidStudioEventOrBuilder extends
    * <code>optional .android_studio.UiDeviceSettingsEvent ui_device_settings_event = 187;</code>
    */
   com.google.wireless.android.sdk.stats.UiDeviceSettingsEventOrBuilder getUiDeviceSettingsEventOrBuilder();
+
+  /**
+   * <pre>
+   * set when kind = ADB_USAGE_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.AdbUsageEvent adb_usage_event = 188;</code>
+   * @return Whether the adbUsageEvent field is set.
+   */
+  boolean hasAdbUsageEvent();
+  /**
+   * <pre>
+   * set when kind = ADB_USAGE_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.AdbUsageEvent adb_usage_event = 188;</code>
+   * @return The adbUsageEvent.
+   */
+  com.google.wireless.android.sdk.stats.AdbUsageEvent getAdbUsageEvent();
+  /**
+   * <pre>
+   * set when kind = ADB_USAGE_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.AdbUsageEvent adb_usage_event = 188;</code>
+   */
+  com.google.wireless.android.sdk.stats.AdbUsageEventOrBuilder getAdbUsageEventOrBuilder();
 }

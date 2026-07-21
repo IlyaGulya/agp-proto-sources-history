@@ -682,6 +682,10 @@ public enum VariantPropertiesMethodType
    */
   DEVICE_TESTS(156),
   /**
+   * <pre>
+   * removed
+   * </pre>
+   *
    * <code>DEFAULT_DEVICE_TEST = 157;</code>
    */
   DEFAULT_DEVICE_TEST(157),
@@ -1361,6 +1365,10 @@ public enum VariantPropertiesMethodType
    */
   public static final int DEVICE_TESTS_VALUE = 156;
   /**
+   * <pre>
+   * removed
+   * </pre>
+   *
    * <code>DEFAULT_DEVICE_TEST = 157;</code>
    */
   public static final int DEFAULT_DEVICE_TEST_VALUE = 157;

@@ -2962,6 +2962,14 @@ private static final long serialVersionUID = 0L;
      * <code>UI_DEVICE_SETTINGS_EVENT = 304;</code>
      */
     UI_DEVICE_SETTINGS_EVENT(304),
+    /**
+     * <pre>
+     * Event related to Adblib
+     * </pre>
+     *
+     * <code>ADB_USAGE_EVENT = 305;</code>
+     */
+    ADB_USAGE_EVENT(305),
     ;
 
     /**
@@ -5230,6 +5238,14 @@ private static final long serialVersionUID = 0L;
      * <code>UI_DEVICE_SETTINGS_EVENT = 304;</code>
      */
     public static final int UI_DEVICE_SETTINGS_EVENT_VALUE = 304;
+    /**
+     * <pre>
+     * Event related to Adblib
+     * </pre>
+     *
+     * <code>ADB_USAGE_EVENT = 305;</code>
+     */
+    public static final int ADB_USAGE_EVENT_VALUE = 305;
 
 
     public final int getNumber() {
@@ -5552,6 +5568,7 @@ private static final long serialVersionUID = 0L;
         case 302: return PREVIEW_REFRESH_EVENT;
         case 303: return WEAR_HEALTH_SERVICES_TOOL_WINDOW_EVENT;
         case 304: return UI_DEVICE_SETTINGS_EVENT;
+        case 305: return ADB_USAGE_EVENT;
         default: return null;
       }
     }
@@ -21707,6 +21724,44 @@ private static final long serialVersionUID = 0L;
     return uiDeviceSettingsEvent_ == null ? com.google.wireless.android.sdk.stats.UiDeviceSettingsEvent.getDefaultInstance() : uiDeviceSettingsEvent_;
   }
 
+  public static final int ADB_USAGE_EVENT_FIELD_NUMBER = 188;
+  private com.google.wireless.android.sdk.stats.AdbUsageEvent adbUsageEvent_;
+  /**
+   * <pre>
+   * set when kind = ADB_USAGE_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.AdbUsageEvent adb_usage_event = 188;</code>
+   * @return Whether the adbUsageEvent field is set.
+   */
+  @java.lang.Override
+  public boolean hasAdbUsageEvent() {
+    return ((bitField5_ & 0x00200000) != 0);
+  }
+  /**
+   * <pre>
+   * set when kind = ADB_USAGE_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.AdbUsageEvent adb_usage_event = 188;</code>
+   * @return The adbUsageEvent.
+   */
+  @java.lang.Override
+  public com.google.wireless.android.sdk.stats.AdbUsageEvent getAdbUsageEvent() {
+    return adbUsageEvent_ == null ? com.google.wireless.android.sdk.stats.AdbUsageEvent.getDefaultInstance() : adbUsageEvent_;
+  }
+  /**
+   * <pre>
+   * set when kind = ADB_USAGE_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.AdbUsageEvent adb_usage_event = 188;</code>
+   */
+  @java.lang.Override
+  public com.google.wireless.android.sdk.stats.AdbUsageEventOrBuilder getAdbUsageEventOrBuilder() {
+    return adbUsageEvent_ == null ? com.google.wireless.android.sdk.stats.AdbUsageEvent.getDefaultInstance() : adbUsageEvent_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -22281,6 +22336,9 @@ private static final long serialVersionUID = 0L;
     }
     if (((bitField5_ & 0x00100000) != 0)) {
       output.writeMessage(187, getUiDeviceSettingsEvent());
+    }
+    if (((bitField5_ & 0x00200000) != 0)) {
+      output.writeMessage(188, getAdbUsageEvent());
     }
     getUnknownFields().writeTo(output);
   }
@@ -23044,6 +23102,10 @@ private static final long serialVersionUID = 0L;
     if (((bitField5_ & 0x00100000) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(187, getUiDeviceSettingsEvent());
+    }
+    if (((bitField5_ & 0x00200000) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(188, getAdbUsageEvent());
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -23966,6 +24028,11 @@ private static final long serialVersionUID = 0L;
       if (!getUiDeviceSettingsEvent()
           .equals(other.getUiDeviceSettingsEvent())) return false;
     }
+    if (hasAdbUsageEvent() != other.hasAdbUsageEvent()) return false;
+    if (hasAdbUsageEvent()) {
+      if (!getAdbUsageEvent()
+          .equals(other.getAdbUsageEvent())) return false;
+    }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -24727,6 +24794,10 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + UI_DEVICE_SETTINGS_EVENT_FIELD_NUMBER;
       hash = (53 * hash) + getUiDeviceSettingsEvent().hashCode();
     }
+    if (hasAdbUsageEvent()) {
+      hash = (37 * hash) + ADB_USAGE_EVENT_FIELD_NUMBER;
+      hash = (53 * hash) + getAdbUsageEvent().hashCode();
+    }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -25019,6 +25090,7 @@ private static final long serialVersionUID = 0L;
         getPreviewRefreshEventFieldBuilder();
         getWearHealthServicesEventFieldBuilder();
         getUiDeviceSettingsEventFieldBuilder();
+        getAdbUsageEventFieldBuilder();
       }
     }
     @java.lang.Override
@@ -26057,6 +26129,12 @@ private static final long serialVersionUID = 0L;
         uiDeviceSettingsEventBuilder_.clear();
       }
       bitField5_ = (bitField5_ & ~0x04000000);
+      if (adbUsageEventBuilder_ == null) {
+        adbUsageEvent_ = null;
+      } else {
+        adbUsageEventBuilder_.clear();
+      }
+      bitField5_ = (bitField5_ & ~0x08000000);
       return this;
     }
 
@@ -27505,6 +27583,14 @@ private static final long serialVersionUID = 0L;
         }
         to_bitField5_ |= 0x00100000;
       }
+      if (((from_bitField5_ & 0x08000000) != 0)) {
+        if (adbUsageEventBuilder_ == null) {
+          result.adbUsageEvent_ = adbUsageEvent_;
+        } else {
+          result.adbUsageEvent_ = adbUsageEventBuilder_.build();
+        }
+        to_bitField5_ |= 0x00200000;
+      }
       result.bitField0_ = to_bitField0_;
       result.bitField1_ = to_bitField1_;
       result.bitField2_ = to_bitField2_;
@@ -28223,6 +28309,9 @@ private static final long serialVersionUID = 0L;
       }
       if (other.hasUiDeviceSettingsEvent()) {
         mergeUiDeviceSettingsEvent(other.getUiDeviceSettingsEvent());
+      }
+      if (other.hasAdbUsageEvent()) {
+        mergeAdbUsageEvent(other.getAdbUsageEvent());
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -29627,6 +29716,13 @@ private static final long serialVersionUID = 0L;
               bitField5_ |= 0x04000000;
               break;
             } // case 1498
+            case 1506: {
+              input.readMessage(
+                  getAdbUsageEventFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField5_ |= 0x08000000;
+              break;
+            } // case 1506
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -58100,6 +58196,162 @@ private static final long serialVersionUID = 0L;
         uiDeviceSettingsEvent_ = null;
       }
       return uiDeviceSettingsEventBuilder_;
+    }
+
+    private com.google.wireless.android.sdk.stats.AdbUsageEvent adbUsageEvent_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.AdbUsageEvent, com.google.wireless.android.sdk.stats.AdbUsageEvent.Builder, com.google.wireless.android.sdk.stats.AdbUsageEventOrBuilder> adbUsageEventBuilder_;
+    /**
+     * <pre>
+     * set when kind = ADB_USAGE_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.AdbUsageEvent adb_usage_event = 188;</code>
+     * @return Whether the adbUsageEvent field is set.
+     */
+    public boolean hasAdbUsageEvent() {
+      return ((bitField5_ & 0x08000000) != 0);
+    }
+    /**
+     * <pre>
+     * set when kind = ADB_USAGE_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.AdbUsageEvent adb_usage_event = 188;</code>
+     * @return The adbUsageEvent.
+     */
+    public com.google.wireless.android.sdk.stats.AdbUsageEvent getAdbUsageEvent() {
+      if (adbUsageEventBuilder_ == null) {
+        return adbUsageEvent_ == null ? com.google.wireless.android.sdk.stats.AdbUsageEvent.getDefaultInstance() : adbUsageEvent_;
+      } else {
+        return adbUsageEventBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * set when kind = ADB_USAGE_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.AdbUsageEvent adb_usage_event = 188;</code>
+     */
+    public Builder setAdbUsageEvent(com.google.wireless.android.sdk.stats.AdbUsageEvent value) {
+      if (adbUsageEventBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        adbUsageEvent_ = value;
+        onChanged();
+      } else {
+        adbUsageEventBuilder_.setMessage(value);
+      }
+      bitField5_ |= 0x08000000;
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = ADB_USAGE_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.AdbUsageEvent adb_usage_event = 188;</code>
+     */
+    public Builder setAdbUsageEvent(
+        com.google.wireless.android.sdk.stats.AdbUsageEvent.Builder builderForValue) {
+      if (adbUsageEventBuilder_ == null) {
+        adbUsageEvent_ = builderForValue.build();
+        onChanged();
+      } else {
+        adbUsageEventBuilder_.setMessage(builderForValue.build());
+      }
+      bitField5_ |= 0x08000000;
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = ADB_USAGE_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.AdbUsageEvent adb_usage_event = 188;</code>
+     */
+    public Builder mergeAdbUsageEvent(com.google.wireless.android.sdk.stats.AdbUsageEvent value) {
+      if (adbUsageEventBuilder_ == null) {
+        if (((bitField5_ & 0x08000000) != 0) &&
+            adbUsageEvent_ != null &&
+            adbUsageEvent_ != com.google.wireless.android.sdk.stats.AdbUsageEvent.getDefaultInstance()) {
+          adbUsageEvent_ =
+            com.google.wireless.android.sdk.stats.AdbUsageEvent.newBuilder(adbUsageEvent_).mergeFrom(value).buildPartial();
+        } else {
+          adbUsageEvent_ = value;
+        }
+        onChanged();
+      } else {
+        adbUsageEventBuilder_.mergeFrom(value);
+      }
+      bitField5_ |= 0x08000000;
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = ADB_USAGE_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.AdbUsageEvent adb_usage_event = 188;</code>
+     */
+    public Builder clearAdbUsageEvent() {
+      if (adbUsageEventBuilder_ == null) {
+        adbUsageEvent_ = null;
+        onChanged();
+      } else {
+        adbUsageEventBuilder_.clear();
+      }
+      bitField5_ = (bitField5_ & ~0x08000000);
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = ADB_USAGE_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.AdbUsageEvent adb_usage_event = 188;</code>
+     */
+    public com.google.wireless.android.sdk.stats.AdbUsageEvent.Builder getAdbUsageEventBuilder() {
+      bitField5_ |= 0x08000000;
+      onChanged();
+      return getAdbUsageEventFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * set when kind = ADB_USAGE_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.AdbUsageEvent adb_usage_event = 188;</code>
+     */
+    public com.google.wireless.android.sdk.stats.AdbUsageEventOrBuilder getAdbUsageEventOrBuilder() {
+      if (adbUsageEventBuilder_ != null) {
+        return adbUsageEventBuilder_.getMessageOrBuilder();
+      } else {
+        return adbUsageEvent_ == null ?
+            com.google.wireless.android.sdk.stats.AdbUsageEvent.getDefaultInstance() : adbUsageEvent_;
+      }
+    }
+    /**
+     * <pre>
+     * set when kind = ADB_USAGE_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.AdbUsageEvent adb_usage_event = 188;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.AdbUsageEvent, com.google.wireless.android.sdk.stats.AdbUsageEvent.Builder, com.google.wireless.android.sdk.stats.AdbUsageEventOrBuilder> 
+        getAdbUsageEventFieldBuilder() {
+      if (adbUsageEventBuilder_ == null) {
+        adbUsageEventBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.wireless.android.sdk.stats.AdbUsageEvent, com.google.wireless.android.sdk.stats.AdbUsageEvent.Builder, com.google.wireless.android.sdk.stats.AdbUsageEventOrBuilder>(
+                getAdbUsageEvent(),
+                getParentForChildren(),
+                isClean());
+        adbUsageEvent_ = null;
+      }
+      return adbUsageEventBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(
