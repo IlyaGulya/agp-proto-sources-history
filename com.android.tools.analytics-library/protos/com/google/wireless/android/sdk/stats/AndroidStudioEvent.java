@@ -10068,7 +10068,7 @@ private static final long serialVersionUID = 0L;
        * <pre>
        * The different template components (eg Activities, Fragments, Services,
        * etc) the template engine could be asked to render
-       * Next ID: 59
+       * Next ID: 60
        * </pre>
        *
        * Protobuf enum {@code android_studio.AndroidStudioEvent.TemplatesUsage.TemplateComponent.TemplateType}
@@ -10273,8 +10273,9 @@ private static final long serialVersionUID = 0L;
          */
         ANDROID_MANIFEST_FILE(46),
         /**
-         * <code>APP_ACTIONS_XML_FILE = 47;</code>
+         * <code>APP_ACTIONS_XML_FILE = 47 [deprecated = true];</code>
          */
+        @java.lang.Deprecated
         APP_ACTIONS_XML_FILE(47),
         /**
          * <code>LAYOUT_XML_FILE = 48;</code>
@@ -10284,6 +10285,10 @@ private static final long serialVersionUID = 0L;
          * <code>VALUES_XML_FILE = 49;</code>
          */
         VALUES_XML_FILE(49),
+        /**
+         * <code>SHORTCUTS_XML_FILE = 59;</code>
+         */
+        SHORTCUTS_XML_FILE(59),
         /**
          * <code>CUSTOM_VIEW = 50;</code>
          */
@@ -10511,7 +10516,7 @@ private static final long serialVersionUID = 0L;
          */
         public static final int ANDROID_MANIFEST_FILE_VALUE = 46;
         /**
-         * <code>APP_ACTIONS_XML_FILE = 47;</code>
+         * <code>APP_ACTIONS_XML_FILE = 47 [deprecated = true];</code>
          */
         public static final int APP_ACTIONS_XML_FILE_VALUE = 47;
         /**
@@ -10522,6 +10527,10 @@ private static final long serialVersionUID = 0L;
          * <code>VALUES_XML_FILE = 49;</code>
          */
         public static final int VALUES_XML_FILE_VALUE = 49;
+        /**
+         * <code>SHORTCUTS_XML_FILE = 59;</code>
+         */
+        public static final int SHORTCUTS_XML_FILE_VALUE = 59;
         /**
          * <code>CUSTOM_VIEW = 50;</code>
          */
@@ -10624,6 +10633,7 @@ private static final long serialVersionUID = 0L;
             case 47: return APP_ACTIONS_XML_FILE;
             case 48: return LAYOUT_XML_FILE;
             case 49: return VALUES_XML_FILE;
+            case 59: return SHORTCUTS_XML_FILE;
             case 50: return CUSTOM_VIEW;
             case 51: return BROADCAST_RECEIVER;
             case 52: return INTENT_SERVICE;
