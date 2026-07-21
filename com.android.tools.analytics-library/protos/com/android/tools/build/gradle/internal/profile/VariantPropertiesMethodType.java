@@ -573,6 +573,14 @@ public enum VariantPropertiesMethodType
    * <code>SCOPED_ARTIFACTS_APPEND = 129;</code>
    */
   SCOPED_ARTIFACTS_APPEND(129),
+  /**
+   * <code>CODE_MINIFICATION = 130;</code>
+   */
+  CODE_MINIFICATION(130),
+  /**
+   * <code>SHRINK_RESOURCES = 131;</code>
+   */
+  SHRINK_RESOURCES(131),
   UNRECOGNIZED(-1),
   ;
 
@@ -1140,6 +1148,14 @@ public enum VariantPropertiesMethodType
    * <code>SCOPED_ARTIFACTS_APPEND = 129;</code>
    */
   public static final int SCOPED_ARTIFACTS_APPEND_VALUE = 129;
+  /**
+   * <code>CODE_MINIFICATION = 130;</code>
+   */
+  public static final int CODE_MINIFICATION_VALUE = 130;
+  /**
+   * <code>SHRINK_RESOURCES = 131;</code>
+   */
+  public static final int SHRINK_RESOURCES_VALUE = 131;
 
 
   public final int getNumber() {
@@ -1296,6 +1312,8 @@ public enum VariantPropertiesMethodType
       case 127: return SCOPED_ARTIFACTS_TO_TRANSFORM;
       case 128: return SCOPED_ARTIFACTS_TO_REPLACE;
       case 129: return SCOPED_ARTIFACTS_APPEND;
+      case 130: return CODE_MINIFICATION;
+      case 131: return SHRINK_RESOURCES;
       default: return null;
     }
   }
