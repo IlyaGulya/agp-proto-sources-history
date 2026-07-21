@@ -5185,4 +5185,31 @@ public interface AndroidStudioEventOrBuilder extends
    * <code>optional .android_studio.PreviewRefreshEvent preview_refresh_event = 185;</code>
    */
   com.google.wireless.android.sdk.stats.PreviewRefreshEventOrBuilder getPreviewRefreshEventOrBuilder();
+
+  /**
+   * <pre>
+   * set when kind = WEAR_HEALTH_SERVICES_TOOL_WINDOW_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.WearHealthServicesEvent wear_health_services_event = 186;</code>
+   * @return Whether the wearHealthServicesEvent field is set.
+   */
+  boolean hasWearHealthServicesEvent();
+  /**
+   * <pre>
+   * set when kind = WEAR_HEALTH_SERVICES_TOOL_WINDOW_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.WearHealthServicesEvent wear_health_services_event = 186;</code>
+   * @return The wearHealthServicesEvent.
+   */
+  com.google.wireless.android.sdk.stats.WearHealthServicesEvent getWearHealthServicesEvent();
+  /**
+   * <pre>
+   * set when kind = WEAR_HEALTH_SERVICES_TOOL_WINDOW_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.WearHealthServicesEvent wear_health_services_event = 186;</code>
+   */
+  com.google.wireless.android.sdk.stats.WearHealthServicesEventOrBuilder getWearHealthServicesEventOrBuilder();
 }
