@@ -98,6 +98,10 @@ private static final long serialVersionUID = 0L;
      * <code>JAVA_KOTLIN_METHOD_RECORDING = 9;</code>
      */
     JAVA_KOTLIN_METHOD_RECORDING(9),
+    /**
+     * <code>LEAKCANARY = 10;</code>
+     */
+    LEAKCANARY(10),
     ;
 
     /**
@@ -140,6 +144,10 @@ private static final long serialVersionUID = 0L;
      * <code>JAVA_KOTLIN_METHOD_RECORDING = 9;</code>
      */
     public static final int JAVA_KOTLIN_METHOD_RECORDING_VALUE = 9;
+    /**
+     * <code>LEAKCANARY = 10;</code>
+     */
+    public static final int LEAKCANARY_VALUE = 10;
 
 
     public final int getNumber() {
@@ -172,6 +180,7 @@ private static final long serialVersionUID = 0L;
         case 7: return JAVA_KOTLIN_ALLOCATIONS;
         case 8: return LIVE_VIEW;
         case 9: return JAVA_KOTLIN_METHOD_RECORDING;
+        case 10: return LEAKCANARY;
         default: return null;
       }
     }

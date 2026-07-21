@@ -3995,7 +3995,8 @@ public interface AndroidStudioEventOrBuilder extends
   /**
    * <pre>
    * set when kind is SDK_INDEX_LIBRARY_HAS_CRITICAL_ISSUES,
-   * SDK_INDEX_LIBRARY_IS_OUTDATED or SDK_INDEX_LIBRARY_IS_NON_COMPLIANT
+   * SDK_INDEX_LIBRARY_IS_OUTDATED, SDK_INDEX_LIBRARY_IS_NON_COMPLIANT
+   * or SDK_INDEX_LIBRARY_HAS_VULNERABILITIES
    * </pre>
    *
    * <code>optional .android_studio.SdkIndexLibraryDetails sdk_index_library_details = 142 [lazy = true];</code>
@@ -4005,7 +4006,8 @@ public interface AndroidStudioEventOrBuilder extends
   /**
    * <pre>
    * set when kind is SDK_INDEX_LIBRARY_HAS_CRITICAL_ISSUES,
-   * SDK_INDEX_LIBRARY_IS_OUTDATED or SDK_INDEX_LIBRARY_IS_NON_COMPLIANT
+   * SDK_INDEX_LIBRARY_IS_OUTDATED, SDK_INDEX_LIBRARY_IS_NON_COMPLIANT
+   * or SDK_INDEX_LIBRARY_HAS_VULNERABILITIES
    * </pre>
    *
    * <code>optional .android_studio.SdkIndexLibraryDetails sdk_index_library_details = 142 [lazy = true];</code>
@@ -4015,7 +4017,8 @@ public interface AndroidStudioEventOrBuilder extends
   /**
    * <pre>
    * set when kind is SDK_INDEX_LIBRARY_HAS_CRITICAL_ISSUES,
-   * SDK_INDEX_LIBRARY_IS_OUTDATED or SDK_INDEX_LIBRARY_IS_NON_COMPLIANT
+   * SDK_INDEX_LIBRARY_IS_OUTDATED, SDK_INDEX_LIBRARY_IS_NON_COMPLIANT
+   * or SDK_INDEX_LIBRARY_HAS_VULNERABILITIES
    * </pre>
    *
    * <code>optional .android_studio.SdkIndexLibraryDetails sdk_index_library_details = 142 [lazy = true];</code>
@@ -5569,4 +5572,193 @@ public interface AndroidStudioEventOrBuilder extends
    * <code>optional .android_studio.StartupEvent startup_event = 199 [lazy = true];</code>
    */
   com.google.wireless.android.sdk.stats.StartupEventOrBuilder getStartupEventOrBuilder();
+
+  /**
+   * <pre>
+   * set when kind = STARTUP_PERFORMANCE_FIRST_UI_SHOWN
+   * </pre>
+   *
+   * <code>optional .android_studio.StartupPerformanceFirstUiShownEvent startup_performance_first_ui_shown_event = 200 [lazy = true];</code>
+   * @return Whether the startupPerformanceFirstUiShownEvent field is set.
+   */
+  boolean hasStartupPerformanceFirstUiShownEvent();
+  /**
+   * <pre>
+   * set when kind = STARTUP_PERFORMANCE_FIRST_UI_SHOWN
+   * </pre>
+   *
+   * <code>optional .android_studio.StartupPerformanceFirstUiShownEvent startup_performance_first_ui_shown_event = 200 [lazy = true];</code>
+   * @return The startupPerformanceFirstUiShownEvent.
+   */
+  com.google.wireless.android.sdk.stats.StartupPerformanceFirstUiShownEvent getStartupPerformanceFirstUiShownEvent();
+  /**
+   * <pre>
+   * set when kind = STARTUP_PERFORMANCE_FIRST_UI_SHOWN
+   * </pre>
+   *
+   * <code>optional .android_studio.StartupPerformanceFirstUiShownEvent startup_performance_first_ui_shown_event = 200 [lazy = true];</code>
+   */
+  com.google.wireless.android.sdk.stats.StartupPerformanceFirstUiShownEventOrBuilder getStartupPerformanceFirstUiShownEventOrBuilder();
+
+  /**
+   * <pre>
+   * set when kind = STARTUP_PERFORMANCE_FRAME_BECAME_VISIBLE
+   * </pre>
+   *
+   * <code>optional .android_studio.StartupPerformanceFrameBecameVisibleEvent startup_performance_frame_became_visible_event = 201 [lazy = true];</code>
+   * @return Whether the startupPerformanceFrameBecameVisibleEvent field is set.
+   */
+  boolean hasStartupPerformanceFrameBecameVisibleEvent();
+  /**
+   * <pre>
+   * set when kind = STARTUP_PERFORMANCE_FRAME_BECAME_VISIBLE
+   * </pre>
+   *
+   * <code>optional .android_studio.StartupPerformanceFrameBecameVisibleEvent startup_performance_frame_became_visible_event = 201 [lazy = true];</code>
+   * @return The startupPerformanceFrameBecameVisibleEvent.
+   */
+  com.google.wireless.android.sdk.stats.StartupPerformanceFrameBecameVisibleEvent getStartupPerformanceFrameBecameVisibleEvent();
+  /**
+   * <pre>
+   * set when kind = STARTUP_PERFORMANCE_FRAME_BECAME_VISIBLE
+   * </pre>
+   *
+   * <code>optional .android_studio.StartupPerformanceFrameBecameVisibleEvent startup_performance_frame_became_visible_event = 201 [lazy = true];</code>
+   */
+  com.google.wireless.android.sdk.stats.StartupPerformanceFrameBecameVisibleEventOrBuilder getStartupPerformanceFrameBecameVisibleEventOrBuilder();
+
+  /**
+   * <pre>
+   * set when kind = STARTUP_PERFORMANCE_FRAME_BECAME_INTERACTIVE
+   * </pre>
+   *
+   * <code>optional .android_studio.StartupPerformanceFrameBecameInteractiveEvent startup_performance_frame_became_interactive_event = 202 [lazy = true];</code>
+   * @return Whether the startupPerformanceFrameBecameInteractiveEvent field is set.
+   */
+  boolean hasStartupPerformanceFrameBecameInteractiveEvent();
+  /**
+   * <pre>
+   * set when kind = STARTUP_PERFORMANCE_FRAME_BECAME_INTERACTIVE
+   * </pre>
+   *
+   * <code>optional .android_studio.StartupPerformanceFrameBecameInteractiveEvent startup_performance_frame_became_interactive_event = 202 [lazy = true];</code>
+   * @return The startupPerformanceFrameBecameInteractiveEvent.
+   */
+  com.google.wireless.android.sdk.stats.StartupPerformanceFrameBecameInteractiveEvent getStartupPerformanceFrameBecameInteractiveEvent();
+  /**
+   * <pre>
+   * set when kind = STARTUP_PERFORMANCE_FRAME_BECAME_INTERACTIVE
+   * </pre>
+   *
+   * <code>optional .android_studio.StartupPerformanceFrameBecameInteractiveEvent startup_performance_frame_became_interactive_event = 202 [lazy = true];</code>
+   */
+  com.google.wireless.android.sdk.stats.StartupPerformanceFrameBecameInteractiveEventOrBuilder getStartupPerformanceFrameBecameInteractiveEventOrBuilder();
+
+  /**
+   * <pre>
+   * set when kind = STARTUP_PERFORMANCE_CODE_LOADED_AND_VISIBLE_IN_EDITOR
+   * </pre>
+   *
+   * <code>optional .android_studio.StartupPerformanceCodeLoadedAndVisibleInEditor startup_performance_code_loaded_and_visible_in_editor = 203 [lazy = true];</code>
+   * @return Whether the startupPerformanceCodeLoadedAndVisibleInEditor field is set.
+   */
+  boolean hasStartupPerformanceCodeLoadedAndVisibleInEditor();
+  /**
+   * <pre>
+   * set when kind = STARTUP_PERFORMANCE_CODE_LOADED_AND_VISIBLE_IN_EDITOR
+   * </pre>
+   *
+   * <code>optional .android_studio.StartupPerformanceCodeLoadedAndVisibleInEditor startup_performance_code_loaded_and_visible_in_editor = 203 [lazy = true];</code>
+   * @return The startupPerformanceCodeLoadedAndVisibleInEditor.
+   */
+  com.google.wireless.android.sdk.stats.StartupPerformanceCodeLoadedAndVisibleInEditor getStartupPerformanceCodeLoadedAndVisibleInEditor();
+  /**
+   * <pre>
+   * set when kind = STARTUP_PERFORMANCE_CODE_LOADED_AND_VISIBLE_IN_EDITOR
+   * </pre>
+   *
+   * <code>optional .android_studio.StartupPerformanceCodeLoadedAndVisibleInEditor startup_performance_code_loaded_and_visible_in_editor = 203 [lazy = true];</code>
+   */
+  com.google.wireless.android.sdk.stats.StartupPerformanceCodeLoadedAndVisibleInEditorOrBuilder getStartupPerformanceCodeLoadedAndVisibleInEditorOrBuilder();
+
+  /**
+   * <pre>
+   * set when kind = UI_TOOLS_PREFERENCES
+   * </pre>
+   *
+   * <code>optional .android_studio.UiToolsPreferencesEvent ui_tools_preferences_event = 204 [lazy = true];</code>
+   * @return Whether the uiToolsPreferencesEvent field is set.
+   */
+  boolean hasUiToolsPreferencesEvent();
+  /**
+   * <pre>
+   * set when kind = UI_TOOLS_PREFERENCES
+   * </pre>
+   *
+   * <code>optional .android_studio.UiToolsPreferencesEvent ui_tools_preferences_event = 204 [lazy = true];</code>
+   * @return The uiToolsPreferencesEvent.
+   */
+  com.google.wireless.android.sdk.stats.UiToolsPreferencesEvent getUiToolsPreferencesEvent();
+  /**
+   * <pre>
+   * set when kind = UI_TOOLS_PREFERENCES
+   * </pre>
+   *
+   * <code>optional .android_studio.UiToolsPreferencesEvent ui_tools_preferences_event = 204 [lazy = true];</code>
+   */
+  com.google.wireless.android.sdk.stats.UiToolsPreferencesEventOrBuilder getUiToolsPreferencesEventOrBuilder();
+
+  /**
+   * <pre>
+   * set when kind = SDK_INDEX_PROJECT_STATS
+   * </pre>
+   *
+   * <code>optional .android_studio.SdkIndexProjectStats sdk_index_project_stats = 205 [lazy = true];</code>
+   * @return Whether the sdkIndexProjectStats field is set.
+   */
+  boolean hasSdkIndexProjectStats();
+  /**
+   * <pre>
+   * set when kind = SDK_INDEX_PROJECT_STATS
+   * </pre>
+   *
+   * <code>optional .android_studio.SdkIndexProjectStats sdk_index_project_stats = 205 [lazy = true];</code>
+   * @return The sdkIndexProjectStats.
+   */
+  com.google.wireless.android.sdk.stats.SdkIndexProjectStats getSdkIndexProjectStats();
+  /**
+   * <pre>
+   * set when kind = SDK_INDEX_PROJECT_STATS
+   * </pre>
+   *
+   * <code>optional .android_studio.SdkIndexProjectStats sdk_index_project_stats = 205 [lazy = true];</code>
+   */
+  com.google.wireless.android.sdk.stats.SdkIndexProjectStatsOrBuilder getSdkIndexProjectStatsOrBuilder();
+
+  /**
+   * <pre>
+   * set when kind = SOONG_RUN_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.SoongRunEvent soong_run_event = 206 [lazy = true];</code>
+   * @return Whether the soongRunEvent field is set.
+   */
+  boolean hasSoongRunEvent();
+  /**
+   * <pre>
+   * set when kind = SOONG_RUN_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.SoongRunEvent soong_run_event = 206 [lazy = true];</code>
+   * @return The soongRunEvent.
+   */
+  com.google.wireless.android.sdk.stats.SoongRunEvent getSoongRunEvent();
+  /**
+   * <pre>
+   * set when kind = SOONG_RUN_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.SoongRunEvent soong_run_event = 206 [lazy = true];</code>
+   */
+  com.google.wireless.android.sdk.stats.SoongRunEventOrBuilder getSoongRunEventOrBuilder();
 }
