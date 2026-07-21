@@ -20,6 +20,7 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private EmulatorFeatures() {
+    launchType_ = 0;
   }
 
   @java.lang.Override
@@ -73,6 +74,18 @@ private static final long serialVersionUID = 0L;
             containerLaunch_ = input.readBool();
             break;
           }
+          case 40: {
+            int rawValue = input.readEnum();
+              @SuppressWarnings("deprecation")
+            com.google.wireless.android.sdk.stats.EmulatorFeatures.EmulatorLaunchType value = com.google.wireless.android.sdk.stats.EmulatorFeatures.EmulatorLaunchType.valueOf(rawValue);
+            if (value == null) {
+              unknownFields.mergeVarintField(5, rawValue);
+            } else {
+              bitField0_ |= 0x00000010;
+              launchType_ = rawValue;
+            }
+            break;
+          }
           default: {
             if (!parseUnknownField(
                 input, unknownFields, extensionRegistry, tag)) {
@@ -103,6 +116,111 @@ private static final long serialVersionUID = 0L;
     return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_EmulatorFeatures_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
             com.google.wireless.android.sdk.stats.EmulatorFeatures.class, com.google.wireless.android.sdk.stats.EmulatorFeatures.Builder.class);
+  }
+
+  /**
+   * Protobuf enum {@code android_studio.EmulatorFeatures.EmulatorLaunchType}
+   */
+  public enum EmulatorLaunchType
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <code>UNKNOWN_EMULATOR_LAUNCH_TYPE = 0;</code>
+     */
+    UNKNOWN_EMULATOR_LAUNCH_TYPE(0),
+    /**
+     * <code>CONTAINER = 1;</code>
+     */
+    CONTAINER(1),
+    /**
+     * <code>FUCHSIA = 2;</code>
+     */
+    FUCHSIA(2),
+    ;
+
+    /**
+     * <code>UNKNOWN_EMULATOR_LAUNCH_TYPE = 0;</code>
+     */
+    public static final int UNKNOWN_EMULATOR_LAUNCH_TYPE_VALUE = 0;
+    /**
+     * <code>CONTAINER = 1;</code>
+     */
+    public static final int CONTAINER_VALUE = 1;
+    /**
+     * <code>FUCHSIA = 2;</code>
+     */
+    public static final int FUCHSIA_VALUE = 2;
+
+
+    public final int getNumber() {
+      return value;
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     * @deprecated Use {@link #forNumber(int)} instead.
+     */
+    @java.lang.Deprecated
+    public static EmulatorLaunchType valueOf(int value) {
+      return forNumber(value);
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     */
+    public static EmulatorLaunchType forNumber(int value) {
+      switch (value) {
+        case 0: return UNKNOWN_EMULATOR_LAUNCH_TYPE;
+        case 1: return CONTAINER;
+        case 2: return FUCHSIA;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<EmulatorLaunchType>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static final com.google.protobuf.Internal.EnumLiteMap<
+        EmulatorLaunchType> internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<EmulatorLaunchType>() {
+            public EmulatorLaunchType findValueByNumber(int number) {
+              return EmulatorLaunchType.forNumber(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      return getDescriptor().getValues().get(ordinal());
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return com.google.wireless.android.sdk.stats.EmulatorFeatures.getDescriptor().getEnumTypes().get(0);
+    }
+
+    private static final EmulatorLaunchType[] VALUES = values();
+
+    public static EmulatorLaunchType valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int value;
+
+    private EmulatorLaunchType(int value) {
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:android_studio.EmulatorFeatures.EmulatorLaunchType)
   }
 
   private int bitField0_;
@@ -161,25 +279,44 @@ private static final long serialVersionUID = 0L;
   private boolean containerLaunch_;
   /**
    * <pre>
-   * True if the emulator is running standalone.
+   * Use launch_type with "CONTAINER" instead.
    * </pre>
    *
-   * <code>optional bool container_launch = 4;</code>
+   * <code>optional bool container_launch = 4 [deprecated = true];</code>
    * @return Whether the containerLaunch field is set.
    */
-  public boolean hasContainerLaunch() {
+  @java.lang.Deprecated public boolean hasContainerLaunch() {
     return ((bitField0_ & 0x00000008) != 0);
   }
   /**
    * <pre>
-   * True if the emulator is running standalone.
+   * Use launch_type with "CONTAINER" instead.
    * </pre>
    *
-   * <code>optional bool container_launch = 4;</code>
+   * <code>optional bool container_launch = 4 [deprecated = true];</code>
    * @return The containerLaunch.
    */
-  public boolean getContainerLaunch() {
+  @java.lang.Deprecated public boolean getContainerLaunch() {
     return containerLaunch_;
+  }
+
+  public static final int LAUNCH_TYPE_FIELD_NUMBER = 5;
+  private int launchType_;
+  /**
+   * <code>optional .android_studio.EmulatorFeatures.EmulatorLaunchType launch_type = 5;</code>
+   * @return Whether the launchType field is set.
+   */
+  public boolean hasLaunchType() {
+    return ((bitField0_ & 0x00000010) != 0);
+  }
+  /**
+   * <code>optional .android_studio.EmulatorFeatures.EmulatorLaunchType launch_type = 5;</code>
+   * @return The launchType.
+   */
+  public com.google.wireless.android.sdk.stats.EmulatorFeatures.EmulatorLaunchType getLaunchType() {
+    @SuppressWarnings("deprecation")
+    com.google.wireless.android.sdk.stats.EmulatorFeatures.EmulatorLaunchType result = com.google.wireless.android.sdk.stats.EmulatorFeatures.EmulatorLaunchType.valueOf(launchType_);
+    return result == null ? com.google.wireless.android.sdk.stats.EmulatorFeatures.EmulatorLaunchType.UNKNOWN_EMULATOR_LAUNCH_TYPE : result;
   }
 
   private byte memoizedIsInitialized = -1;
@@ -208,6 +345,9 @@ private static final long serialVersionUID = 0L;
     if (((bitField0_ & 0x00000008) != 0)) {
       output.writeBool(4, containerLaunch_);
     }
+    if (((bitField0_ & 0x00000010) != 0)) {
+      output.writeEnum(5, launchType_);
+    }
     unknownFields.writeTo(output);
   }
 
@@ -232,6 +372,10 @@ private static final long serialVersionUID = 0L;
     if (((bitField0_ & 0x00000008) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeBoolSize(4, containerLaunch_);
+    }
+    if (((bitField0_ & 0x00000010) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeEnumSize(5, launchType_);
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -268,6 +412,10 @@ private static final long serialVersionUID = 0L;
       if (getContainerLaunch()
           != other.getContainerLaunch()) return false;
     }
+    if (hasLaunchType() != other.hasLaunchType()) return false;
+    if (hasLaunchType()) {
+      if (launchType_ != other.launchType_) return false;
+    }
     if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
@@ -298,6 +446,10 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + CONTAINER_LAUNCH_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
           getContainerLaunch());
+    }
+    if (hasLaunchType()) {
+      hash = (37 * hash) + LAUNCH_TYPE_FIELD_NUMBER;
+      hash = (53 * hash) + launchType_;
     }
     hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
@@ -444,6 +596,8 @@ private static final long serialVersionUID = 0L;
       bitField0_ = (bitField0_ & ~0x00000004);
       containerLaunch_ = false;
       bitField0_ = (bitField0_ & ~0x00000008);
+      launchType_ = 0;
+      bitField0_ = (bitField0_ & ~0x00000010);
       return this;
     }
 
@@ -488,6 +642,10 @@ private static final long serialVersionUID = 0L;
         result.containerLaunch_ = containerLaunch_;
         to_bitField0_ |= 0x00000008;
       }
+      if (((from_bitField0_ & 0x00000010) != 0)) {
+        to_bitField0_ |= 0x00000010;
+      }
+      result.launchType_ = launchType_;
       result.bitField0_ = to_bitField0_;
       onBuilt();
       return result;
@@ -548,6 +706,9 @@ private static final long serialVersionUID = 0L;
       }
       if (other.hasContainerLaunch()) {
         setContainerLaunch(other.getContainerLaunch());
+      }
+      if (other.hasLaunchType()) {
+        setLaunchType(other.getLaunchType());
       }
       this.mergeUnknownFields(other.unknownFields);
       onChanged();
@@ -693,36 +854,36 @@ private static final long serialVersionUID = 0L;
     private boolean containerLaunch_ ;
     /**
      * <pre>
-     * True if the emulator is running standalone.
+     * Use launch_type with "CONTAINER" instead.
      * </pre>
      *
-     * <code>optional bool container_launch = 4;</code>
+     * <code>optional bool container_launch = 4 [deprecated = true];</code>
      * @return Whether the containerLaunch field is set.
      */
-    public boolean hasContainerLaunch() {
+    @java.lang.Deprecated public boolean hasContainerLaunch() {
       return ((bitField0_ & 0x00000008) != 0);
     }
     /**
      * <pre>
-     * True if the emulator is running standalone.
+     * Use launch_type with "CONTAINER" instead.
      * </pre>
      *
-     * <code>optional bool container_launch = 4;</code>
+     * <code>optional bool container_launch = 4 [deprecated = true];</code>
      * @return The containerLaunch.
      */
-    public boolean getContainerLaunch() {
+    @java.lang.Deprecated public boolean getContainerLaunch() {
       return containerLaunch_;
     }
     /**
      * <pre>
-     * True if the emulator is running standalone.
+     * Use launch_type with "CONTAINER" instead.
      * </pre>
      *
-     * <code>optional bool container_launch = 4;</code>
+     * <code>optional bool container_launch = 4 [deprecated = true];</code>
      * @param value The containerLaunch to set.
      * @return This builder for chaining.
      */
-    public Builder setContainerLaunch(boolean value) {
+    @java.lang.Deprecated public Builder setContainerLaunch(boolean value) {
       bitField0_ |= 0x00000008;
       containerLaunch_ = value;
       onChanged();
@@ -730,15 +891,57 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * True if the emulator is running standalone.
+     * Use launch_type with "CONTAINER" instead.
      * </pre>
      *
-     * <code>optional bool container_launch = 4;</code>
+     * <code>optional bool container_launch = 4 [deprecated = true];</code>
      * @return This builder for chaining.
      */
-    public Builder clearContainerLaunch() {
+    @java.lang.Deprecated public Builder clearContainerLaunch() {
       bitField0_ = (bitField0_ & ~0x00000008);
       containerLaunch_ = false;
+      onChanged();
+      return this;
+    }
+
+    private int launchType_ = 0;
+    /**
+     * <code>optional .android_studio.EmulatorFeatures.EmulatorLaunchType launch_type = 5;</code>
+     * @return Whether the launchType field is set.
+     */
+    public boolean hasLaunchType() {
+      return ((bitField0_ & 0x00000010) != 0);
+    }
+    /**
+     * <code>optional .android_studio.EmulatorFeatures.EmulatorLaunchType launch_type = 5;</code>
+     * @return The launchType.
+     */
+    public com.google.wireless.android.sdk.stats.EmulatorFeatures.EmulatorLaunchType getLaunchType() {
+      @SuppressWarnings("deprecation")
+      com.google.wireless.android.sdk.stats.EmulatorFeatures.EmulatorLaunchType result = com.google.wireless.android.sdk.stats.EmulatorFeatures.EmulatorLaunchType.valueOf(launchType_);
+      return result == null ? com.google.wireless.android.sdk.stats.EmulatorFeatures.EmulatorLaunchType.UNKNOWN_EMULATOR_LAUNCH_TYPE : result;
+    }
+    /**
+     * <code>optional .android_studio.EmulatorFeatures.EmulatorLaunchType launch_type = 5;</code>
+     * @param value The launchType to set.
+     * @return This builder for chaining.
+     */
+    public Builder setLaunchType(com.google.wireless.android.sdk.stats.EmulatorFeatures.EmulatorLaunchType value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      bitField0_ |= 0x00000010;
+      launchType_ = value.getNumber();
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>optional .android_studio.EmulatorFeatures.EmulatorLaunchType launch_type = 5;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearLaunchType() {
+      bitField0_ = (bitField0_ & ~0x00000010);
+      launchType_ = 0;
       onChanged();
       return this;
     }
