@@ -473,11 +473,6 @@ public final class ConfigurationOuterClass {
       return new Configuration();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.android.aapt.ConfigurationOuterClass.internal_static_aapt_pb_Configuration_descriptor;
@@ -2373,7 +2368,7 @@ public final class ConfigurationOuterClass {
     }
 
     public static final int MCC_FIELD_NUMBER = 1;
-    private int mcc_;
+    private int mcc_ = 0;
     /**
      * <pre>
      * Mobile country code.
@@ -2388,7 +2383,7 @@ public final class ConfigurationOuterClass {
     }
 
     public static final int MNC_FIELD_NUMBER = 2;
-    private int mnc_;
+    private int mnc_ = 0;
     /**
      * <pre>
      * Mobile network code.
@@ -2403,7 +2398,8 @@ public final class ConfigurationOuterClass {
     }
 
     public static final int LOCALE_FIELD_NUMBER = 3;
-    private volatile java.lang.Object locale_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object locale_ = "";
     /**
      * <pre>
      * BCP-47 locale tag.
@@ -2449,7 +2445,7 @@ public final class ConfigurationOuterClass {
     }
 
     public static final int LAYOUT_DIRECTION_FIELD_NUMBER = 4;
-    private int layoutDirection_;
+    private int layoutDirection_ = 0;
     /**
      * <pre>
      * Left-to-right, right-to-left...
@@ -2470,13 +2466,12 @@ public final class ConfigurationOuterClass {
      * @return The layoutDirection.
      */
     @java.lang.Override public com.android.aapt.ConfigurationOuterClass.Configuration.LayoutDirection getLayoutDirection() {
-      @SuppressWarnings("deprecation")
-      com.android.aapt.ConfigurationOuterClass.Configuration.LayoutDirection result = com.android.aapt.ConfigurationOuterClass.Configuration.LayoutDirection.valueOf(layoutDirection_);
+      com.android.aapt.ConfigurationOuterClass.Configuration.LayoutDirection result = com.android.aapt.ConfigurationOuterClass.Configuration.LayoutDirection.forNumber(layoutDirection_);
       return result == null ? com.android.aapt.ConfigurationOuterClass.Configuration.LayoutDirection.UNRECOGNIZED : result;
     }
 
     public static final int SCREEN_WIDTH_FIELD_NUMBER = 5;
-    private int screenWidth_;
+    private int screenWidth_ = 0;
     /**
      * <pre>
      * Screen width in pixels. Prefer screen_width_dp.
@@ -2491,7 +2486,7 @@ public final class ConfigurationOuterClass {
     }
 
     public static final int SCREEN_HEIGHT_FIELD_NUMBER = 6;
-    private int screenHeight_;
+    private int screenHeight_ = 0;
     /**
      * <pre>
      * Screen height in pixels. Prefer screen_height_dp.
@@ -2506,7 +2501,7 @@ public final class ConfigurationOuterClass {
     }
 
     public static final int SCREEN_WIDTH_DP_FIELD_NUMBER = 7;
-    private int screenWidthDp_;
+    private int screenWidthDp_ = 0;
     /**
      * <pre>
      * Screen width in density independent pixels (dp).
@@ -2521,7 +2516,7 @@ public final class ConfigurationOuterClass {
     }
 
     public static final int SCREEN_HEIGHT_DP_FIELD_NUMBER = 8;
-    private int screenHeightDp_;
+    private int screenHeightDp_ = 0;
     /**
      * <pre>
      * Screen height in density independent pixels (dp).
@@ -2536,7 +2531,7 @@ public final class ConfigurationOuterClass {
     }
 
     public static final int SMALLEST_SCREEN_WIDTH_DP_FIELD_NUMBER = 9;
-    private int smallestScreenWidthDp_;
+    private int smallestScreenWidthDp_ = 0;
     /**
      * <pre>
      * The smallest screen dimension, regardless of orientation, in dp.
@@ -2551,7 +2546,7 @@ public final class ConfigurationOuterClass {
     }
 
     public static final int SCREEN_LAYOUT_SIZE_FIELD_NUMBER = 10;
-    private int screenLayoutSize_;
+    private int screenLayoutSize_ = 0;
     /**
      * <pre>
      * Whether the device screen is classified as small, normal, large, xlarge.
@@ -2572,13 +2567,12 @@ public final class ConfigurationOuterClass {
      * @return The screenLayoutSize.
      */
     @java.lang.Override public com.android.aapt.ConfigurationOuterClass.Configuration.ScreenLayoutSize getScreenLayoutSize() {
-      @SuppressWarnings("deprecation")
-      com.android.aapt.ConfigurationOuterClass.Configuration.ScreenLayoutSize result = com.android.aapt.ConfigurationOuterClass.Configuration.ScreenLayoutSize.valueOf(screenLayoutSize_);
+      com.android.aapt.ConfigurationOuterClass.Configuration.ScreenLayoutSize result = com.android.aapt.ConfigurationOuterClass.Configuration.ScreenLayoutSize.forNumber(screenLayoutSize_);
       return result == null ? com.android.aapt.ConfigurationOuterClass.Configuration.ScreenLayoutSize.UNRECOGNIZED : result;
     }
 
     public static final int SCREEN_LAYOUT_LONG_FIELD_NUMBER = 11;
-    private int screenLayoutLong_;
+    private int screenLayoutLong_ = 0;
     /**
      * <pre>
      * Whether the device screen is long.
@@ -2599,13 +2593,12 @@ public final class ConfigurationOuterClass {
      * @return The screenLayoutLong.
      */
     @java.lang.Override public com.android.aapt.ConfigurationOuterClass.Configuration.ScreenLayoutLong getScreenLayoutLong() {
-      @SuppressWarnings("deprecation")
-      com.android.aapt.ConfigurationOuterClass.Configuration.ScreenLayoutLong result = com.android.aapt.ConfigurationOuterClass.Configuration.ScreenLayoutLong.valueOf(screenLayoutLong_);
+      com.android.aapt.ConfigurationOuterClass.Configuration.ScreenLayoutLong result = com.android.aapt.ConfigurationOuterClass.Configuration.ScreenLayoutLong.forNumber(screenLayoutLong_);
       return result == null ? com.android.aapt.ConfigurationOuterClass.Configuration.ScreenLayoutLong.UNRECOGNIZED : result;
     }
 
     public static final int SCREEN_ROUND_FIELD_NUMBER = 12;
-    private int screenRound_;
+    private int screenRound_ = 0;
     /**
      * <pre>
      * Whether the screen is round (Android Wear).
@@ -2626,13 +2619,12 @@ public final class ConfigurationOuterClass {
      * @return The screenRound.
      */
     @java.lang.Override public com.android.aapt.ConfigurationOuterClass.Configuration.ScreenRound getScreenRound() {
-      @SuppressWarnings("deprecation")
-      com.android.aapt.ConfigurationOuterClass.Configuration.ScreenRound result = com.android.aapt.ConfigurationOuterClass.Configuration.ScreenRound.valueOf(screenRound_);
+      com.android.aapt.ConfigurationOuterClass.Configuration.ScreenRound result = com.android.aapt.ConfigurationOuterClass.Configuration.ScreenRound.forNumber(screenRound_);
       return result == null ? com.android.aapt.ConfigurationOuterClass.Configuration.ScreenRound.UNRECOGNIZED : result;
     }
 
     public static final int WIDE_COLOR_GAMUT_FIELD_NUMBER = 13;
-    private int wideColorGamut_;
+    private int wideColorGamut_ = 0;
     /**
      * <pre>
      * Whether the screen supports wide color gamut.
@@ -2653,13 +2645,12 @@ public final class ConfigurationOuterClass {
      * @return The wideColorGamut.
      */
     @java.lang.Override public com.android.aapt.ConfigurationOuterClass.Configuration.WideColorGamut getWideColorGamut() {
-      @SuppressWarnings("deprecation")
-      com.android.aapt.ConfigurationOuterClass.Configuration.WideColorGamut result = com.android.aapt.ConfigurationOuterClass.Configuration.WideColorGamut.valueOf(wideColorGamut_);
+      com.android.aapt.ConfigurationOuterClass.Configuration.WideColorGamut result = com.android.aapt.ConfigurationOuterClass.Configuration.WideColorGamut.forNumber(wideColorGamut_);
       return result == null ? com.android.aapt.ConfigurationOuterClass.Configuration.WideColorGamut.UNRECOGNIZED : result;
     }
 
     public static final int HDR_FIELD_NUMBER = 14;
-    private int hdr_;
+    private int hdr_ = 0;
     /**
      * <pre>
      * Whether the screen has high dynamic range.
@@ -2680,13 +2671,12 @@ public final class ConfigurationOuterClass {
      * @return The hdr.
      */
     @java.lang.Override public com.android.aapt.ConfigurationOuterClass.Configuration.Hdr getHdr() {
-      @SuppressWarnings("deprecation")
-      com.android.aapt.ConfigurationOuterClass.Configuration.Hdr result = com.android.aapt.ConfigurationOuterClass.Configuration.Hdr.valueOf(hdr_);
+      com.android.aapt.ConfigurationOuterClass.Configuration.Hdr result = com.android.aapt.ConfigurationOuterClass.Configuration.Hdr.forNumber(hdr_);
       return result == null ? com.android.aapt.ConfigurationOuterClass.Configuration.Hdr.UNRECOGNIZED : result;
     }
 
     public static final int ORIENTATION_FIELD_NUMBER = 15;
-    private int orientation_;
+    private int orientation_ = 0;
     /**
      * <pre>
      * Which orientation the device is in (portrait, landscape).
@@ -2707,13 +2697,12 @@ public final class ConfigurationOuterClass {
      * @return The orientation.
      */
     @java.lang.Override public com.android.aapt.ConfigurationOuterClass.Configuration.Orientation getOrientation() {
-      @SuppressWarnings("deprecation")
-      com.android.aapt.ConfigurationOuterClass.Configuration.Orientation result = com.android.aapt.ConfigurationOuterClass.Configuration.Orientation.valueOf(orientation_);
+      com.android.aapt.ConfigurationOuterClass.Configuration.Orientation result = com.android.aapt.ConfigurationOuterClass.Configuration.Orientation.forNumber(orientation_);
       return result == null ? com.android.aapt.ConfigurationOuterClass.Configuration.Orientation.UNRECOGNIZED : result;
     }
 
     public static final int UI_MODE_TYPE_FIELD_NUMBER = 16;
-    private int uiModeType_;
+    private int uiModeType_ = 0;
     /**
      * <pre>
      * Which type of UI mode the device is in (television, car, etc.).
@@ -2734,13 +2723,12 @@ public final class ConfigurationOuterClass {
      * @return The uiModeType.
      */
     @java.lang.Override public com.android.aapt.ConfigurationOuterClass.Configuration.UiModeType getUiModeType() {
-      @SuppressWarnings("deprecation")
-      com.android.aapt.ConfigurationOuterClass.Configuration.UiModeType result = com.android.aapt.ConfigurationOuterClass.Configuration.UiModeType.valueOf(uiModeType_);
+      com.android.aapt.ConfigurationOuterClass.Configuration.UiModeType result = com.android.aapt.ConfigurationOuterClass.Configuration.UiModeType.forNumber(uiModeType_);
       return result == null ? com.android.aapt.ConfigurationOuterClass.Configuration.UiModeType.UNRECOGNIZED : result;
     }
 
     public static final int UI_MODE_NIGHT_FIELD_NUMBER = 17;
-    private int uiModeNight_;
+    private int uiModeNight_ = 0;
     /**
      * <pre>
      * Whether the device is in night mode.
@@ -2761,13 +2749,12 @@ public final class ConfigurationOuterClass {
      * @return The uiModeNight.
      */
     @java.lang.Override public com.android.aapt.ConfigurationOuterClass.Configuration.UiModeNight getUiModeNight() {
-      @SuppressWarnings("deprecation")
-      com.android.aapt.ConfigurationOuterClass.Configuration.UiModeNight result = com.android.aapt.ConfigurationOuterClass.Configuration.UiModeNight.valueOf(uiModeNight_);
+      com.android.aapt.ConfigurationOuterClass.Configuration.UiModeNight result = com.android.aapt.ConfigurationOuterClass.Configuration.UiModeNight.forNumber(uiModeNight_);
       return result == null ? com.android.aapt.ConfigurationOuterClass.Configuration.UiModeNight.UNRECOGNIZED : result;
     }
 
     public static final int DENSITY_FIELD_NUMBER = 18;
-    private int density_;
+    private int density_ = 0;
     /**
      * <pre>
      * The device's screen density in dots-per-inch (dpi).
@@ -2782,7 +2769,7 @@ public final class ConfigurationOuterClass {
     }
 
     public static final int TOUCHSCREEN_FIELD_NUMBER = 19;
-    private int touchscreen_;
+    private int touchscreen_ = 0;
     /**
      * <pre>
      * Whether a touchscreen exists, supports a stylus, or finger.
@@ -2803,13 +2790,12 @@ public final class ConfigurationOuterClass {
      * @return The touchscreen.
      */
     @java.lang.Override public com.android.aapt.ConfigurationOuterClass.Configuration.Touchscreen getTouchscreen() {
-      @SuppressWarnings("deprecation")
-      com.android.aapt.ConfigurationOuterClass.Configuration.Touchscreen result = com.android.aapt.ConfigurationOuterClass.Configuration.Touchscreen.valueOf(touchscreen_);
+      com.android.aapt.ConfigurationOuterClass.Configuration.Touchscreen result = com.android.aapt.ConfigurationOuterClass.Configuration.Touchscreen.forNumber(touchscreen_);
       return result == null ? com.android.aapt.ConfigurationOuterClass.Configuration.Touchscreen.UNRECOGNIZED : result;
     }
 
     public static final int KEYS_HIDDEN_FIELD_NUMBER = 20;
-    private int keysHidden_;
+    private int keysHidden_ = 0;
     /**
      * <pre>
      * Whether the keyboard hardware keys are currently hidden, exposed, or
@@ -2832,13 +2818,12 @@ public final class ConfigurationOuterClass {
      * @return The keysHidden.
      */
     @java.lang.Override public com.android.aapt.ConfigurationOuterClass.Configuration.KeysHidden getKeysHidden() {
-      @SuppressWarnings("deprecation")
-      com.android.aapt.ConfigurationOuterClass.Configuration.KeysHidden result = com.android.aapt.ConfigurationOuterClass.Configuration.KeysHidden.valueOf(keysHidden_);
+      com.android.aapt.ConfigurationOuterClass.Configuration.KeysHidden result = com.android.aapt.ConfigurationOuterClass.Configuration.KeysHidden.forNumber(keysHidden_);
       return result == null ? com.android.aapt.ConfigurationOuterClass.Configuration.KeysHidden.UNRECOGNIZED : result;
     }
 
     public static final int KEYBOARD_FIELD_NUMBER = 21;
-    private int keyboard_;
+    private int keyboard_ = 0;
     /**
      * <pre>
      * The type of keyboard present (none, QWERTY, 12-key).
@@ -2859,13 +2844,12 @@ public final class ConfigurationOuterClass {
      * @return The keyboard.
      */
     @java.lang.Override public com.android.aapt.ConfigurationOuterClass.Configuration.Keyboard getKeyboard() {
-      @SuppressWarnings("deprecation")
-      com.android.aapt.ConfigurationOuterClass.Configuration.Keyboard result = com.android.aapt.ConfigurationOuterClass.Configuration.Keyboard.valueOf(keyboard_);
+      com.android.aapt.ConfigurationOuterClass.Configuration.Keyboard result = com.android.aapt.ConfigurationOuterClass.Configuration.Keyboard.forNumber(keyboard_);
       return result == null ? com.android.aapt.ConfigurationOuterClass.Configuration.Keyboard.UNRECOGNIZED : result;
     }
 
     public static final int NAV_HIDDEN_FIELD_NUMBER = 22;
-    private int navHidden_;
+    private int navHidden_ = 0;
     /**
      * <pre>
      * Whether the navigation is exposed or hidden.
@@ -2886,13 +2870,12 @@ public final class ConfigurationOuterClass {
      * @return The navHidden.
      */
     @java.lang.Override public com.android.aapt.ConfigurationOuterClass.Configuration.NavHidden getNavHidden() {
-      @SuppressWarnings("deprecation")
-      com.android.aapt.ConfigurationOuterClass.Configuration.NavHidden result = com.android.aapt.ConfigurationOuterClass.Configuration.NavHidden.valueOf(navHidden_);
+      com.android.aapt.ConfigurationOuterClass.Configuration.NavHidden result = com.android.aapt.ConfigurationOuterClass.Configuration.NavHidden.forNumber(navHidden_);
       return result == null ? com.android.aapt.ConfigurationOuterClass.Configuration.NavHidden.UNRECOGNIZED : result;
     }
 
     public static final int NAVIGATION_FIELD_NUMBER = 23;
-    private int navigation_;
+    private int navigation_ = 0;
     /**
      * <pre>
      * The type of navigation present on the device
@@ -2915,13 +2898,12 @@ public final class ConfigurationOuterClass {
      * @return The navigation.
      */
     @java.lang.Override public com.android.aapt.ConfigurationOuterClass.Configuration.Navigation getNavigation() {
-      @SuppressWarnings("deprecation")
-      com.android.aapt.ConfigurationOuterClass.Configuration.Navigation result = com.android.aapt.ConfigurationOuterClass.Configuration.Navigation.valueOf(navigation_);
+      com.android.aapt.ConfigurationOuterClass.Configuration.Navigation result = com.android.aapt.ConfigurationOuterClass.Configuration.Navigation.forNumber(navigation_);
       return result == null ? com.android.aapt.ConfigurationOuterClass.Configuration.Navigation.UNRECOGNIZED : result;
     }
 
     public static final int SDK_VERSION_FIELD_NUMBER = 24;
-    private int sdkVersion_;
+    private int sdkVersion_ = 0;
     /**
      * <pre>
      * The minimum SDK version of the device.
@@ -2936,7 +2918,7 @@ public final class ConfigurationOuterClass {
     }
 
     public static final int GRAMMATICAL_GENDER_FIELD_NUMBER = 26;
-    private int grammaticalGender_;
+    private int grammaticalGender_ = 0;
     /**
      * <pre>
      * Grammatical gender.
@@ -2957,13 +2939,13 @@ public final class ConfigurationOuterClass {
      * @return The grammaticalGender.
      */
     @java.lang.Override public com.android.aapt.ConfigurationOuterClass.Configuration.GrammaticalGender getGrammaticalGender() {
-      @SuppressWarnings("deprecation")
-      com.android.aapt.ConfigurationOuterClass.Configuration.GrammaticalGender result = com.android.aapt.ConfigurationOuterClass.Configuration.GrammaticalGender.valueOf(grammaticalGender_);
+      com.android.aapt.ConfigurationOuterClass.Configuration.GrammaticalGender result = com.android.aapt.ConfigurationOuterClass.Configuration.GrammaticalGender.forNumber(grammaticalGender_);
       return result == null ? com.android.aapt.ConfigurationOuterClass.Configuration.GrammaticalGender.UNRECOGNIZED : result;
     }
 
     public static final int PRODUCT_FIELD_NUMBER = 25;
-    private volatile java.lang.Object product_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object product_ = "";
     /**
      * <code>string product = 25;</code>
      * @return The product.
@@ -3451,58 +3433,33 @@ public final class ConfigurationOuterClass {
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         mcc_ = 0;
-
         mnc_ = 0;
-
         locale_ = "";
-
         layoutDirection_ = 0;
-
         screenWidth_ = 0;
-
         screenHeight_ = 0;
-
         screenWidthDp_ = 0;
-
         screenHeightDp_ = 0;
-
         smallestScreenWidthDp_ = 0;
-
         screenLayoutSize_ = 0;
-
         screenLayoutLong_ = 0;
-
         screenRound_ = 0;
-
         wideColorGamut_ = 0;
-
         hdr_ = 0;
-
         orientation_ = 0;
-
         uiModeType_ = 0;
-
         uiModeNight_ = 0;
-
         density_ = 0;
-
         touchscreen_ = 0;
-
         keysHidden_ = 0;
-
         keyboard_ = 0;
-
         navHidden_ = 0;
-
         navigation_ = 0;
-
         sdkVersion_ = 0;
-
         grammaticalGender_ = 0;
-
         product_ = "";
-
         return this;
       }
 
@@ -3529,68 +3486,93 @@ public final class ConfigurationOuterClass {
       @java.lang.Override
       public com.android.aapt.ConfigurationOuterClass.Configuration buildPartial() {
         com.android.aapt.ConfigurationOuterClass.Configuration result = new com.android.aapt.ConfigurationOuterClass.Configuration(this);
-        result.mcc_ = mcc_;
-        result.mnc_ = mnc_;
-        result.locale_ = locale_;
-        result.layoutDirection_ = layoutDirection_;
-        result.screenWidth_ = screenWidth_;
-        result.screenHeight_ = screenHeight_;
-        result.screenWidthDp_ = screenWidthDp_;
-        result.screenHeightDp_ = screenHeightDp_;
-        result.smallestScreenWidthDp_ = smallestScreenWidthDp_;
-        result.screenLayoutSize_ = screenLayoutSize_;
-        result.screenLayoutLong_ = screenLayoutLong_;
-        result.screenRound_ = screenRound_;
-        result.wideColorGamut_ = wideColorGamut_;
-        result.hdr_ = hdr_;
-        result.orientation_ = orientation_;
-        result.uiModeType_ = uiModeType_;
-        result.uiModeNight_ = uiModeNight_;
-        result.density_ = density_;
-        result.touchscreen_ = touchscreen_;
-        result.keysHidden_ = keysHidden_;
-        result.keyboard_ = keyboard_;
-        result.navHidden_ = navHidden_;
-        result.navigation_ = navigation_;
-        result.sdkVersion_ = sdkVersion_;
-        result.grammaticalGender_ = grammaticalGender_;
-        result.product_ = product_;
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
+      private void buildPartial0(com.android.aapt.ConfigurationOuterClass.Configuration result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.mcc_ = mcc_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.mnc_ = mnc_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.locale_ = locale_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.layoutDirection_ = layoutDirection_;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.screenWidth_ = screenWidth_;
+        }
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          result.screenHeight_ = screenHeight_;
+        }
+        if (((from_bitField0_ & 0x00000040) != 0)) {
+          result.screenWidthDp_ = screenWidthDp_;
+        }
+        if (((from_bitField0_ & 0x00000080) != 0)) {
+          result.screenHeightDp_ = screenHeightDp_;
+        }
+        if (((from_bitField0_ & 0x00000100) != 0)) {
+          result.smallestScreenWidthDp_ = smallestScreenWidthDp_;
+        }
+        if (((from_bitField0_ & 0x00000200) != 0)) {
+          result.screenLayoutSize_ = screenLayoutSize_;
+        }
+        if (((from_bitField0_ & 0x00000400) != 0)) {
+          result.screenLayoutLong_ = screenLayoutLong_;
+        }
+        if (((from_bitField0_ & 0x00000800) != 0)) {
+          result.screenRound_ = screenRound_;
+        }
+        if (((from_bitField0_ & 0x00001000) != 0)) {
+          result.wideColorGamut_ = wideColorGamut_;
+        }
+        if (((from_bitField0_ & 0x00002000) != 0)) {
+          result.hdr_ = hdr_;
+        }
+        if (((from_bitField0_ & 0x00004000) != 0)) {
+          result.orientation_ = orientation_;
+        }
+        if (((from_bitField0_ & 0x00008000) != 0)) {
+          result.uiModeType_ = uiModeType_;
+        }
+        if (((from_bitField0_ & 0x00010000) != 0)) {
+          result.uiModeNight_ = uiModeNight_;
+        }
+        if (((from_bitField0_ & 0x00020000) != 0)) {
+          result.density_ = density_;
+        }
+        if (((from_bitField0_ & 0x00040000) != 0)) {
+          result.touchscreen_ = touchscreen_;
+        }
+        if (((from_bitField0_ & 0x00080000) != 0)) {
+          result.keysHidden_ = keysHidden_;
+        }
+        if (((from_bitField0_ & 0x00100000) != 0)) {
+          result.keyboard_ = keyboard_;
+        }
+        if (((from_bitField0_ & 0x00200000) != 0)) {
+          result.navHidden_ = navHidden_;
+        }
+        if (((from_bitField0_ & 0x00400000) != 0)) {
+          result.navigation_ = navigation_;
+        }
+        if (((from_bitField0_ & 0x00800000) != 0)) {
+          result.sdkVersion_ = sdkVersion_;
+        }
+        if (((from_bitField0_ & 0x01000000) != 0)) {
+          result.grammaticalGender_ = grammaticalGender_;
+        }
+        if (((from_bitField0_ & 0x02000000) != 0)) {
+          result.product_ = product_;
+        }
       }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
+
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof com.android.aapt.ConfigurationOuterClass.Configuration) {
@@ -3611,6 +3593,7 @@ public final class ConfigurationOuterClass {
         }
         if (!other.getLocale().isEmpty()) {
           locale_ = other.locale_;
+          bitField0_ |= 0x00000004;
           onChanged();
         }
         if (other.layoutDirection_ != 0) {
@@ -3681,6 +3664,7 @@ public final class ConfigurationOuterClass {
         }
         if (!other.getProduct().isEmpty()) {
           product_ = other.product_;
+          bitField0_ |= 0x02000000;
           onChanged();
         }
         this.mergeUnknownFields(other.getUnknownFields());
@@ -3711,132 +3695,132 @@ public final class ConfigurationOuterClass {
                 break;
               case 8: {
                 mcc_ = input.readUInt32();
-
+                bitField0_ |= 0x00000001;
                 break;
               } // case 8
               case 16: {
                 mnc_ = input.readUInt32();
-
+                bitField0_ |= 0x00000002;
                 break;
               } // case 16
               case 26: {
                 locale_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000004;
                 break;
               } // case 26
               case 32: {
                 layoutDirection_ = input.readEnum();
-
+                bitField0_ |= 0x00000008;
                 break;
               } // case 32
               case 40: {
                 screenWidth_ = input.readUInt32();
-
+                bitField0_ |= 0x00000010;
                 break;
               } // case 40
               case 48: {
                 screenHeight_ = input.readUInt32();
-
+                bitField0_ |= 0x00000020;
                 break;
               } // case 48
               case 56: {
                 screenWidthDp_ = input.readUInt32();
-
+                bitField0_ |= 0x00000040;
                 break;
               } // case 56
               case 64: {
                 screenHeightDp_ = input.readUInt32();
-
+                bitField0_ |= 0x00000080;
                 break;
               } // case 64
               case 72: {
                 smallestScreenWidthDp_ = input.readUInt32();
-
+                bitField0_ |= 0x00000100;
                 break;
               } // case 72
               case 80: {
                 screenLayoutSize_ = input.readEnum();
-
+                bitField0_ |= 0x00000200;
                 break;
               } // case 80
               case 88: {
                 screenLayoutLong_ = input.readEnum();
-
+                bitField0_ |= 0x00000400;
                 break;
               } // case 88
               case 96: {
                 screenRound_ = input.readEnum();
-
+                bitField0_ |= 0x00000800;
                 break;
               } // case 96
               case 104: {
                 wideColorGamut_ = input.readEnum();
-
+                bitField0_ |= 0x00001000;
                 break;
               } // case 104
               case 112: {
                 hdr_ = input.readEnum();
-
+                bitField0_ |= 0x00002000;
                 break;
               } // case 112
               case 120: {
                 orientation_ = input.readEnum();
-
+                bitField0_ |= 0x00004000;
                 break;
               } // case 120
               case 128: {
                 uiModeType_ = input.readEnum();
-
+                bitField0_ |= 0x00008000;
                 break;
               } // case 128
               case 136: {
                 uiModeNight_ = input.readEnum();
-
+                bitField0_ |= 0x00010000;
                 break;
               } // case 136
               case 144: {
                 density_ = input.readUInt32();
-
+                bitField0_ |= 0x00020000;
                 break;
               } // case 144
               case 152: {
                 touchscreen_ = input.readEnum();
-
+                bitField0_ |= 0x00040000;
                 break;
               } // case 152
               case 160: {
                 keysHidden_ = input.readEnum();
-
+                bitField0_ |= 0x00080000;
                 break;
               } // case 160
               case 168: {
                 keyboard_ = input.readEnum();
-
+                bitField0_ |= 0x00100000;
                 break;
               } // case 168
               case 176: {
                 navHidden_ = input.readEnum();
-
+                bitField0_ |= 0x00200000;
                 break;
               } // case 176
               case 184: {
                 navigation_ = input.readEnum();
-
+                bitField0_ |= 0x00400000;
                 break;
               } // case 184
               case 192: {
                 sdkVersion_ = input.readUInt32();
-
+                bitField0_ |= 0x00800000;
                 break;
               } // case 192
               case 202: {
                 product_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x02000000;
                 break;
               } // case 202
               case 208: {
                 grammaticalGender_ = input.readEnum();
-
+                bitField0_ |= 0x01000000;
                 break;
               } // case 208
               default: {
@@ -3854,6 +3838,7 @@ public final class ConfigurationOuterClass {
         } // finally
         return this;
       }
+      private int bitField0_;
 
       private int mcc_ ;
       /**
@@ -3878,8 +3863,9 @@ public final class ConfigurationOuterClass {
        * @return This builder for chaining.
        */
       public Builder setMcc(int value) {
-        
+
         mcc_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -3892,7 +3878,7 @@ public final class ConfigurationOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearMcc() {
-        
+        bitField0_ = (bitField0_ & ~0x00000001);
         mcc_ = 0;
         onChanged();
         return this;
@@ -3921,8 +3907,9 @@ public final class ConfigurationOuterClass {
        * @return This builder for chaining.
        */
       public Builder setMnc(int value) {
-        
+
         mnc_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -3935,7 +3922,7 @@ public final class ConfigurationOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearMnc() {
-        
+        bitField0_ = (bitField0_ & ~0x00000002);
         mnc_ = 0;
         onChanged();
         return this;
@@ -3994,11 +3981,9 @@ public final class ConfigurationOuterClass {
        */
       public Builder setLocale(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         locale_ = value;
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -4011,8 +3996,8 @@ public final class ConfigurationOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearLocale() {
-        
         locale_ = getDefaultInstance().getLocale();
+        bitField0_ = (bitField0_ & ~0x00000004);
         onChanged();
         return this;
       }
@@ -4027,12 +4012,10 @@ public final class ConfigurationOuterClass {
        */
       public Builder setLocaleBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         locale_ = value;
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -4059,8 +4042,8 @@ public final class ConfigurationOuterClass {
        * @return This builder for chaining.
        */
       public Builder setLayoutDirectionValue(int value) {
-        
         layoutDirection_ = value;
+        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
@@ -4074,8 +4057,7 @@ public final class ConfigurationOuterClass {
        */
       @java.lang.Override
       public com.android.aapt.ConfigurationOuterClass.Configuration.LayoutDirection getLayoutDirection() {
-        @SuppressWarnings("deprecation")
-        com.android.aapt.ConfigurationOuterClass.Configuration.LayoutDirection result = com.android.aapt.ConfigurationOuterClass.Configuration.LayoutDirection.valueOf(layoutDirection_);
+        com.android.aapt.ConfigurationOuterClass.Configuration.LayoutDirection result = com.android.aapt.ConfigurationOuterClass.Configuration.LayoutDirection.forNumber(layoutDirection_);
         return result == null ? com.android.aapt.ConfigurationOuterClass.Configuration.LayoutDirection.UNRECOGNIZED : result;
       }
       /**
@@ -4091,7 +4073,7 @@ public final class ConfigurationOuterClass {
         if (value == null) {
           throw new NullPointerException();
         }
-        
+        bitField0_ |= 0x00000008;
         layoutDirection_ = value.getNumber();
         onChanged();
         return this;
@@ -4105,7 +4087,7 @@ public final class ConfigurationOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearLayoutDirection() {
-        
+        bitField0_ = (bitField0_ & ~0x00000008);
         layoutDirection_ = 0;
         onChanged();
         return this;
@@ -4134,8 +4116,9 @@ public final class ConfigurationOuterClass {
        * @return This builder for chaining.
        */
       public Builder setScreenWidth(int value) {
-        
+
         screenWidth_ = value;
+        bitField0_ |= 0x00000010;
         onChanged();
         return this;
       }
@@ -4148,7 +4131,7 @@ public final class ConfigurationOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearScreenWidth() {
-        
+        bitField0_ = (bitField0_ & ~0x00000010);
         screenWidth_ = 0;
         onChanged();
         return this;
@@ -4177,8 +4160,9 @@ public final class ConfigurationOuterClass {
        * @return This builder for chaining.
        */
       public Builder setScreenHeight(int value) {
-        
+
         screenHeight_ = value;
+        bitField0_ |= 0x00000020;
         onChanged();
         return this;
       }
@@ -4191,7 +4175,7 @@ public final class ConfigurationOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearScreenHeight() {
-        
+        bitField0_ = (bitField0_ & ~0x00000020);
         screenHeight_ = 0;
         onChanged();
         return this;
@@ -4220,8 +4204,9 @@ public final class ConfigurationOuterClass {
        * @return This builder for chaining.
        */
       public Builder setScreenWidthDp(int value) {
-        
+
         screenWidthDp_ = value;
+        bitField0_ |= 0x00000040;
         onChanged();
         return this;
       }
@@ -4234,7 +4219,7 @@ public final class ConfigurationOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearScreenWidthDp() {
-        
+        bitField0_ = (bitField0_ & ~0x00000040);
         screenWidthDp_ = 0;
         onChanged();
         return this;
@@ -4263,8 +4248,9 @@ public final class ConfigurationOuterClass {
        * @return This builder for chaining.
        */
       public Builder setScreenHeightDp(int value) {
-        
+
         screenHeightDp_ = value;
+        bitField0_ |= 0x00000080;
         onChanged();
         return this;
       }
@@ -4277,7 +4263,7 @@ public final class ConfigurationOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearScreenHeightDp() {
-        
+        bitField0_ = (bitField0_ & ~0x00000080);
         screenHeightDp_ = 0;
         onChanged();
         return this;
@@ -4306,8 +4292,9 @@ public final class ConfigurationOuterClass {
        * @return This builder for chaining.
        */
       public Builder setSmallestScreenWidthDp(int value) {
-        
+
         smallestScreenWidthDp_ = value;
+        bitField0_ |= 0x00000100;
         onChanged();
         return this;
       }
@@ -4320,7 +4307,7 @@ public final class ConfigurationOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearSmallestScreenWidthDp() {
-        
+        bitField0_ = (bitField0_ & ~0x00000100);
         smallestScreenWidthDp_ = 0;
         onChanged();
         return this;
@@ -4348,8 +4335,8 @@ public final class ConfigurationOuterClass {
        * @return This builder for chaining.
        */
       public Builder setScreenLayoutSizeValue(int value) {
-        
         screenLayoutSize_ = value;
+        bitField0_ |= 0x00000200;
         onChanged();
         return this;
       }
@@ -4363,8 +4350,7 @@ public final class ConfigurationOuterClass {
        */
       @java.lang.Override
       public com.android.aapt.ConfigurationOuterClass.Configuration.ScreenLayoutSize getScreenLayoutSize() {
-        @SuppressWarnings("deprecation")
-        com.android.aapt.ConfigurationOuterClass.Configuration.ScreenLayoutSize result = com.android.aapt.ConfigurationOuterClass.Configuration.ScreenLayoutSize.valueOf(screenLayoutSize_);
+        com.android.aapt.ConfigurationOuterClass.Configuration.ScreenLayoutSize result = com.android.aapt.ConfigurationOuterClass.Configuration.ScreenLayoutSize.forNumber(screenLayoutSize_);
         return result == null ? com.android.aapt.ConfigurationOuterClass.Configuration.ScreenLayoutSize.UNRECOGNIZED : result;
       }
       /**
@@ -4380,7 +4366,7 @@ public final class ConfigurationOuterClass {
         if (value == null) {
           throw new NullPointerException();
         }
-        
+        bitField0_ |= 0x00000200;
         screenLayoutSize_ = value.getNumber();
         onChanged();
         return this;
@@ -4394,7 +4380,7 @@ public final class ConfigurationOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearScreenLayoutSize() {
-        
+        bitField0_ = (bitField0_ & ~0x00000200);
         screenLayoutSize_ = 0;
         onChanged();
         return this;
@@ -4422,8 +4408,8 @@ public final class ConfigurationOuterClass {
        * @return This builder for chaining.
        */
       public Builder setScreenLayoutLongValue(int value) {
-        
         screenLayoutLong_ = value;
+        bitField0_ |= 0x00000400;
         onChanged();
         return this;
       }
@@ -4437,8 +4423,7 @@ public final class ConfigurationOuterClass {
        */
       @java.lang.Override
       public com.android.aapt.ConfigurationOuterClass.Configuration.ScreenLayoutLong getScreenLayoutLong() {
-        @SuppressWarnings("deprecation")
-        com.android.aapt.ConfigurationOuterClass.Configuration.ScreenLayoutLong result = com.android.aapt.ConfigurationOuterClass.Configuration.ScreenLayoutLong.valueOf(screenLayoutLong_);
+        com.android.aapt.ConfigurationOuterClass.Configuration.ScreenLayoutLong result = com.android.aapt.ConfigurationOuterClass.Configuration.ScreenLayoutLong.forNumber(screenLayoutLong_);
         return result == null ? com.android.aapt.ConfigurationOuterClass.Configuration.ScreenLayoutLong.UNRECOGNIZED : result;
       }
       /**
@@ -4454,7 +4439,7 @@ public final class ConfigurationOuterClass {
         if (value == null) {
           throw new NullPointerException();
         }
-        
+        bitField0_ |= 0x00000400;
         screenLayoutLong_ = value.getNumber();
         onChanged();
         return this;
@@ -4468,7 +4453,7 @@ public final class ConfigurationOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearScreenLayoutLong() {
-        
+        bitField0_ = (bitField0_ & ~0x00000400);
         screenLayoutLong_ = 0;
         onChanged();
         return this;
@@ -4496,8 +4481,8 @@ public final class ConfigurationOuterClass {
        * @return This builder for chaining.
        */
       public Builder setScreenRoundValue(int value) {
-        
         screenRound_ = value;
+        bitField0_ |= 0x00000800;
         onChanged();
         return this;
       }
@@ -4511,8 +4496,7 @@ public final class ConfigurationOuterClass {
        */
       @java.lang.Override
       public com.android.aapt.ConfigurationOuterClass.Configuration.ScreenRound getScreenRound() {
-        @SuppressWarnings("deprecation")
-        com.android.aapt.ConfigurationOuterClass.Configuration.ScreenRound result = com.android.aapt.ConfigurationOuterClass.Configuration.ScreenRound.valueOf(screenRound_);
+        com.android.aapt.ConfigurationOuterClass.Configuration.ScreenRound result = com.android.aapt.ConfigurationOuterClass.Configuration.ScreenRound.forNumber(screenRound_);
         return result == null ? com.android.aapt.ConfigurationOuterClass.Configuration.ScreenRound.UNRECOGNIZED : result;
       }
       /**
@@ -4528,7 +4512,7 @@ public final class ConfigurationOuterClass {
         if (value == null) {
           throw new NullPointerException();
         }
-        
+        bitField0_ |= 0x00000800;
         screenRound_ = value.getNumber();
         onChanged();
         return this;
@@ -4542,7 +4526,7 @@ public final class ConfigurationOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearScreenRound() {
-        
+        bitField0_ = (bitField0_ & ~0x00000800);
         screenRound_ = 0;
         onChanged();
         return this;
@@ -4570,8 +4554,8 @@ public final class ConfigurationOuterClass {
        * @return This builder for chaining.
        */
       public Builder setWideColorGamutValue(int value) {
-        
         wideColorGamut_ = value;
+        bitField0_ |= 0x00001000;
         onChanged();
         return this;
       }
@@ -4585,8 +4569,7 @@ public final class ConfigurationOuterClass {
        */
       @java.lang.Override
       public com.android.aapt.ConfigurationOuterClass.Configuration.WideColorGamut getWideColorGamut() {
-        @SuppressWarnings("deprecation")
-        com.android.aapt.ConfigurationOuterClass.Configuration.WideColorGamut result = com.android.aapt.ConfigurationOuterClass.Configuration.WideColorGamut.valueOf(wideColorGamut_);
+        com.android.aapt.ConfigurationOuterClass.Configuration.WideColorGamut result = com.android.aapt.ConfigurationOuterClass.Configuration.WideColorGamut.forNumber(wideColorGamut_);
         return result == null ? com.android.aapt.ConfigurationOuterClass.Configuration.WideColorGamut.UNRECOGNIZED : result;
       }
       /**
@@ -4602,7 +4585,7 @@ public final class ConfigurationOuterClass {
         if (value == null) {
           throw new NullPointerException();
         }
-        
+        bitField0_ |= 0x00001000;
         wideColorGamut_ = value.getNumber();
         onChanged();
         return this;
@@ -4616,7 +4599,7 @@ public final class ConfigurationOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearWideColorGamut() {
-        
+        bitField0_ = (bitField0_ & ~0x00001000);
         wideColorGamut_ = 0;
         onChanged();
         return this;
@@ -4644,8 +4627,8 @@ public final class ConfigurationOuterClass {
        * @return This builder for chaining.
        */
       public Builder setHdrValue(int value) {
-        
         hdr_ = value;
+        bitField0_ |= 0x00002000;
         onChanged();
         return this;
       }
@@ -4659,8 +4642,7 @@ public final class ConfigurationOuterClass {
        */
       @java.lang.Override
       public com.android.aapt.ConfigurationOuterClass.Configuration.Hdr getHdr() {
-        @SuppressWarnings("deprecation")
-        com.android.aapt.ConfigurationOuterClass.Configuration.Hdr result = com.android.aapt.ConfigurationOuterClass.Configuration.Hdr.valueOf(hdr_);
+        com.android.aapt.ConfigurationOuterClass.Configuration.Hdr result = com.android.aapt.ConfigurationOuterClass.Configuration.Hdr.forNumber(hdr_);
         return result == null ? com.android.aapt.ConfigurationOuterClass.Configuration.Hdr.UNRECOGNIZED : result;
       }
       /**
@@ -4676,7 +4658,7 @@ public final class ConfigurationOuterClass {
         if (value == null) {
           throw new NullPointerException();
         }
-        
+        bitField0_ |= 0x00002000;
         hdr_ = value.getNumber();
         onChanged();
         return this;
@@ -4690,7 +4672,7 @@ public final class ConfigurationOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearHdr() {
-        
+        bitField0_ = (bitField0_ & ~0x00002000);
         hdr_ = 0;
         onChanged();
         return this;
@@ -4718,8 +4700,8 @@ public final class ConfigurationOuterClass {
        * @return This builder for chaining.
        */
       public Builder setOrientationValue(int value) {
-        
         orientation_ = value;
+        bitField0_ |= 0x00004000;
         onChanged();
         return this;
       }
@@ -4733,8 +4715,7 @@ public final class ConfigurationOuterClass {
        */
       @java.lang.Override
       public com.android.aapt.ConfigurationOuterClass.Configuration.Orientation getOrientation() {
-        @SuppressWarnings("deprecation")
-        com.android.aapt.ConfigurationOuterClass.Configuration.Orientation result = com.android.aapt.ConfigurationOuterClass.Configuration.Orientation.valueOf(orientation_);
+        com.android.aapt.ConfigurationOuterClass.Configuration.Orientation result = com.android.aapt.ConfigurationOuterClass.Configuration.Orientation.forNumber(orientation_);
         return result == null ? com.android.aapt.ConfigurationOuterClass.Configuration.Orientation.UNRECOGNIZED : result;
       }
       /**
@@ -4750,7 +4731,7 @@ public final class ConfigurationOuterClass {
         if (value == null) {
           throw new NullPointerException();
         }
-        
+        bitField0_ |= 0x00004000;
         orientation_ = value.getNumber();
         onChanged();
         return this;
@@ -4764,7 +4745,7 @@ public final class ConfigurationOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearOrientation() {
-        
+        bitField0_ = (bitField0_ & ~0x00004000);
         orientation_ = 0;
         onChanged();
         return this;
@@ -4792,8 +4773,8 @@ public final class ConfigurationOuterClass {
        * @return This builder for chaining.
        */
       public Builder setUiModeTypeValue(int value) {
-        
         uiModeType_ = value;
+        bitField0_ |= 0x00008000;
         onChanged();
         return this;
       }
@@ -4807,8 +4788,7 @@ public final class ConfigurationOuterClass {
        */
       @java.lang.Override
       public com.android.aapt.ConfigurationOuterClass.Configuration.UiModeType getUiModeType() {
-        @SuppressWarnings("deprecation")
-        com.android.aapt.ConfigurationOuterClass.Configuration.UiModeType result = com.android.aapt.ConfigurationOuterClass.Configuration.UiModeType.valueOf(uiModeType_);
+        com.android.aapt.ConfigurationOuterClass.Configuration.UiModeType result = com.android.aapt.ConfigurationOuterClass.Configuration.UiModeType.forNumber(uiModeType_);
         return result == null ? com.android.aapt.ConfigurationOuterClass.Configuration.UiModeType.UNRECOGNIZED : result;
       }
       /**
@@ -4824,7 +4804,7 @@ public final class ConfigurationOuterClass {
         if (value == null) {
           throw new NullPointerException();
         }
-        
+        bitField0_ |= 0x00008000;
         uiModeType_ = value.getNumber();
         onChanged();
         return this;
@@ -4838,7 +4818,7 @@ public final class ConfigurationOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearUiModeType() {
-        
+        bitField0_ = (bitField0_ & ~0x00008000);
         uiModeType_ = 0;
         onChanged();
         return this;
@@ -4866,8 +4846,8 @@ public final class ConfigurationOuterClass {
        * @return This builder for chaining.
        */
       public Builder setUiModeNightValue(int value) {
-        
         uiModeNight_ = value;
+        bitField0_ |= 0x00010000;
         onChanged();
         return this;
       }
@@ -4881,8 +4861,7 @@ public final class ConfigurationOuterClass {
        */
       @java.lang.Override
       public com.android.aapt.ConfigurationOuterClass.Configuration.UiModeNight getUiModeNight() {
-        @SuppressWarnings("deprecation")
-        com.android.aapt.ConfigurationOuterClass.Configuration.UiModeNight result = com.android.aapt.ConfigurationOuterClass.Configuration.UiModeNight.valueOf(uiModeNight_);
+        com.android.aapt.ConfigurationOuterClass.Configuration.UiModeNight result = com.android.aapt.ConfigurationOuterClass.Configuration.UiModeNight.forNumber(uiModeNight_);
         return result == null ? com.android.aapt.ConfigurationOuterClass.Configuration.UiModeNight.UNRECOGNIZED : result;
       }
       /**
@@ -4898,7 +4877,7 @@ public final class ConfigurationOuterClass {
         if (value == null) {
           throw new NullPointerException();
         }
-        
+        bitField0_ |= 0x00010000;
         uiModeNight_ = value.getNumber();
         onChanged();
         return this;
@@ -4912,7 +4891,7 @@ public final class ConfigurationOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearUiModeNight() {
-        
+        bitField0_ = (bitField0_ & ~0x00010000);
         uiModeNight_ = 0;
         onChanged();
         return this;
@@ -4941,8 +4920,9 @@ public final class ConfigurationOuterClass {
        * @return This builder for chaining.
        */
       public Builder setDensity(int value) {
-        
+
         density_ = value;
+        bitField0_ |= 0x00020000;
         onChanged();
         return this;
       }
@@ -4955,7 +4935,7 @@ public final class ConfigurationOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearDensity() {
-        
+        bitField0_ = (bitField0_ & ~0x00020000);
         density_ = 0;
         onChanged();
         return this;
@@ -4983,8 +4963,8 @@ public final class ConfigurationOuterClass {
        * @return This builder for chaining.
        */
       public Builder setTouchscreenValue(int value) {
-        
         touchscreen_ = value;
+        bitField0_ |= 0x00040000;
         onChanged();
         return this;
       }
@@ -4998,8 +4978,7 @@ public final class ConfigurationOuterClass {
        */
       @java.lang.Override
       public com.android.aapt.ConfigurationOuterClass.Configuration.Touchscreen getTouchscreen() {
-        @SuppressWarnings("deprecation")
-        com.android.aapt.ConfigurationOuterClass.Configuration.Touchscreen result = com.android.aapt.ConfigurationOuterClass.Configuration.Touchscreen.valueOf(touchscreen_);
+        com.android.aapt.ConfigurationOuterClass.Configuration.Touchscreen result = com.android.aapt.ConfigurationOuterClass.Configuration.Touchscreen.forNumber(touchscreen_);
         return result == null ? com.android.aapt.ConfigurationOuterClass.Configuration.Touchscreen.UNRECOGNIZED : result;
       }
       /**
@@ -5015,7 +4994,7 @@ public final class ConfigurationOuterClass {
         if (value == null) {
           throw new NullPointerException();
         }
-        
+        bitField0_ |= 0x00040000;
         touchscreen_ = value.getNumber();
         onChanged();
         return this;
@@ -5029,7 +5008,7 @@ public final class ConfigurationOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearTouchscreen() {
-        
+        bitField0_ = (bitField0_ & ~0x00040000);
         touchscreen_ = 0;
         onChanged();
         return this;
@@ -5059,8 +5038,8 @@ public final class ConfigurationOuterClass {
        * @return This builder for chaining.
        */
       public Builder setKeysHiddenValue(int value) {
-        
         keysHidden_ = value;
+        bitField0_ |= 0x00080000;
         onChanged();
         return this;
       }
@@ -5075,8 +5054,7 @@ public final class ConfigurationOuterClass {
        */
       @java.lang.Override
       public com.android.aapt.ConfigurationOuterClass.Configuration.KeysHidden getKeysHidden() {
-        @SuppressWarnings("deprecation")
-        com.android.aapt.ConfigurationOuterClass.Configuration.KeysHidden result = com.android.aapt.ConfigurationOuterClass.Configuration.KeysHidden.valueOf(keysHidden_);
+        com.android.aapt.ConfigurationOuterClass.Configuration.KeysHidden result = com.android.aapt.ConfigurationOuterClass.Configuration.KeysHidden.forNumber(keysHidden_);
         return result == null ? com.android.aapt.ConfigurationOuterClass.Configuration.KeysHidden.UNRECOGNIZED : result;
       }
       /**
@@ -5093,7 +5071,7 @@ public final class ConfigurationOuterClass {
         if (value == null) {
           throw new NullPointerException();
         }
-        
+        bitField0_ |= 0x00080000;
         keysHidden_ = value.getNumber();
         onChanged();
         return this;
@@ -5108,7 +5086,7 @@ public final class ConfigurationOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearKeysHidden() {
-        
+        bitField0_ = (bitField0_ & ~0x00080000);
         keysHidden_ = 0;
         onChanged();
         return this;
@@ -5136,8 +5114,8 @@ public final class ConfigurationOuterClass {
        * @return This builder for chaining.
        */
       public Builder setKeyboardValue(int value) {
-        
         keyboard_ = value;
+        bitField0_ |= 0x00100000;
         onChanged();
         return this;
       }
@@ -5151,8 +5129,7 @@ public final class ConfigurationOuterClass {
        */
       @java.lang.Override
       public com.android.aapt.ConfigurationOuterClass.Configuration.Keyboard getKeyboard() {
-        @SuppressWarnings("deprecation")
-        com.android.aapt.ConfigurationOuterClass.Configuration.Keyboard result = com.android.aapt.ConfigurationOuterClass.Configuration.Keyboard.valueOf(keyboard_);
+        com.android.aapt.ConfigurationOuterClass.Configuration.Keyboard result = com.android.aapt.ConfigurationOuterClass.Configuration.Keyboard.forNumber(keyboard_);
         return result == null ? com.android.aapt.ConfigurationOuterClass.Configuration.Keyboard.UNRECOGNIZED : result;
       }
       /**
@@ -5168,7 +5145,7 @@ public final class ConfigurationOuterClass {
         if (value == null) {
           throw new NullPointerException();
         }
-        
+        bitField0_ |= 0x00100000;
         keyboard_ = value.getNumber();
         onChanged();
         return this;
@@ -5182,7 +5159,7 @@ public final class ConfigurationOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearKeyboard() {
-        
+        bitField0_ = (bitField0_ & ~0x00100000);
         keyboard_ = 0;
         onChanged();
         return this;
@@ -5210,8 +5187,8 @@ public final class ConfigurationOuterClass {
        * @return This builder for chaining.
        */
       public Builder setNavHiddenValue(int value) {
-        
         navHidden_ = value;
+        bitField0_ |= 0x00200000;
         onChanged();
         return this;
       }
@@ -5225,8 +5202,7 @@ public final class ConfigurationOuterClass {
        */
       @java.lang.Override
       public com.android.aapt.ConfigurationOuterClass.Configuration.NavHidden getNavHidden() {
-        @SuppressWarnings("deprecation")
-        com.android.aapt.ConfigurationOuterClass.Configuration.NavHidden result = com.android.aapt.ConfigurationOuterClass.Configuration.NavHidden.valueOf(navHidden_);
+        com.android.aapt.ConfigurationOuterClass.Configuration.NavHidden result = com.android.aapt.ConfigurationOuterClass.Configuration.NavHidden.forNumber(navHidden_);
         return result == null ? com.android.aapt.ConfigurationOuterClass.Configuration.NavHidden.UNRECOGNIZED : result;
       }
       /**
@@ -5242,7 +5218,7 @@ public final class ConfigurationOuterClass {
         if (value == null) {
           throw new NullPointerException();
         }
-        
+        bitField0_ |= 0x00200000;
         navHidden_ = value.getNumber();
         onChanged();
         return this;
@@ -5256,7 +5232,7 @@ public final class ConfigurationOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearNavHidden() {
-        
+        bitField0_ = (bitField0_ & ~0x00200000);
         navHidden_ = 0;
         onChanged();
         return this;
@@ -5286,8 +5262,8 @@ public final class ConfigurationOuterClass {
        * @return This builder for chaining.
        */
       public Builder setNavigationValue(int value) {
-        
         navigation_ = value;
+        bitField0_ |= 0x00400000;
         onChanged();
         return this;
       }
@@ -5302,8 +5278,7 @@ public final class ConfigurationOuterClass {
        */
       @java.lang.Override
       public com.android.aapt.ConfigurationOuterClass.Configuration.Navigation getNavigation() {
-        @SuppressWarnings("deprecation")
-        com.android.aapt.ConfigurationOuterClass.Configuration.Navigation result = com.android.aapt.ConfigurationOuterClass.Configuration.Navigation.valueOf(navigation_);
+        com.android.aapt.ConfigurationOuterClass.Configuration.Navigation result = com.android.aapt.ConfigurationOuterClass.Configuration.Navigation.forNumber(navigation_);
         return result == null ? com.android.aapt.ConfigurationOuterClass.Configuration.Navigation.UNRECOGNIZED : result;
       }
       /**
@@ -5320,7 +5295,7 @@ public final class ConfigurationOuterClass {
         if (value == null) {
           throw new NullPointerException();
         }
-        
+        bitField0_ |= 0x00400000;
         navigation_ = value.getNumber();
         onChanged();
         return this;
@@ -5335,7 +5310,7 @@ public final class ConfigurationOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearNavigation() {
-        
+        bitField0_ = (bitField0_ & ~0x00400000);
         navigation_ = 0;
         onChanged();
         return this;
@@ -5364,8 +5339,9 @@ public final class ConfigurationOuterClass {
        * @return This builder for chaining.
        */
       public Builder setSdkVersion(int value) {
-        
+
         sdkVersion_ = value;
+        bitField0_ |= 0x00800000;
         onChanged();
         return this;
       }
@@ -5378,7 +5354,7 @@ public final class ConfigurationOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearSdkVersion() {
-        
+        bitField0_ = (bitField0_ & ~0x00800000);
         sdkVersion_ = 0;
         onChanged();
         return this;
@@ -5406,8 +5382,8 @@ public final class ConfigurationOuterClass {
        * @return This builder for chaining.
        */
       public Builder setGrammaticalGenderValue(int value) {
-        
         grammaticalGender_ = value;
+        bitField0_ |= 0x01000000;
         onChanged();
         return this;
       }
@@ -5421,8 +5397,7 @@ public final class ConfigurationOuterClass {
        */
       @java.lang.Override
       public com.android.aapt.ConfigurationOuterClass.Configuration.GrammaticalGender getGrammaticalGender() {
-        @SuppressWarnings("deprecation")
-        com.android.aapt.ConfigurationOuterClass.Configuration.GrammaticalGender result = com.android.aapt.ConfigurationOuterClass.Configuration.GrammaticalGender.valueOf(grammaticalGender_);
+        com.android.aapt.ConfigurationOuterClass.Configuration.GrammaticalGender result = com.android.aapt.ConfigurationOuterClass.Configuration.GrammaticalGender.forNumber(grammaticalGender_);
         return result == null ? com.android.aapt.ConfigurationOuterClass.Configuration.GrammaticalGender.UNRECOGNIZED : result;
       }
       /**
@@ -5438,7 +5413,7 @@ public final class ConfigurationOuterClass {
         if (value == null) {
           throw new NullPointerException();
         }
-        
+        bitField0_ |= 0x01000000;
         grammaticalGender_ = value.getNumber();
         onChanged();
         return this;
@@ -5452,7 +5427,7 @@ public final class ConfigurationOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearGrammaticalGender() {
-        
+        bitField0_ = (bitField0_ & ~0x01000000);
         grammaticalGender_ = 0;
         onChanged();
         return this;
@@ -5499,11 +5474,9 @@ public final class ConfigurationOuterClass {
        */
       public Builder setProduct(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         product_ = value;
+        bitField0_ |= 0x02000000;
         onChanged();
         return this;
       }
@@ -5512,8 +5485,8 @@ public final class ConfigurationOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearProduct() {
-        
         product_ = getDefaultInstance().getProduct();
+        bitField0_ = (bitField0_ & ~0x02000000);
         onChanged();
         return this;
       }
@@ -5524,12 +5497,10 @@ public final class ConfigurationOuterClass {
        */
       public Builder setProductBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         product_ = value;
+        bitField0_ |= 0x02000000;
         onChanged();
         return this;
       }

@@ -731,6 +731,10 @@ public enum BooleanOption
    * <code>ANDROID_TEST_LEAVE_APKS_INSTALLED_AFTER_RUN = 177;</code>
    */
   ANDROID_TEST_LEAVE_APKS_INSTALLED_AFTER_RUN(177),
+  /**
+   * <code>IDE_AVOID_TASK_REGISTRATION = 178;</code>
+   */
+  IDE_AVOID_TASK_REGISTRATION(178),
   UNRECOGNIZED(-1),
   ;
 
@@ -1446,6 +1450,10 @@ public enum BooleanOption
    * <code>ANDROID_TEST_LEAVE_APKS_INSTALLED_AFTER_RUN = 177;</code>
    */
   public static final int ANDROID_TEST_LEAVE_APKS_INSTALLED_AFTER_RUN_VALUE = 177;
+  /**
+   * <code>IDE_AVOID_TASK_REGISTRATION = 178;</code>
+   */
+  public static final int IDE_AVOID_TASK_REGISTRATION_VALUE = 178;
 
 
   public final int getNumber() {
@@ -1650,6 +1658,7 @@ public enum BooleanOption
       case 175: return LINT_USE_K2_UAST;
       case 176: return USE_FULL_CLASSPATH_FOR_DEXING_TRANSFORM;
       case 177: return ANDROID_TEST_LEAVE_APKS_INSTALLED_AFTER_RUN;
+      case 178: return IDE_AVOID_TASK_REGISTRATION;
       default: return null;
     }
   }

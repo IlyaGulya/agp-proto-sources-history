@@ -528,6 +528,18 @@ private static final long serialVersionUID = 0L;
      * <code>WEAROS_SQUARE = 36;</code>
      */
     WEAROS_SQUARE(36),
+    /**
+     * <code>PIXEL_7A = 37;</code>
+     */
+    PIXEL_7A(37),
+    /**
+     * <code>PIXEL_8 = 38;</code>
+     */
+    PIXEL_8(38),
+    /**
+     * <code>PIXEL_8_PRO = 39;</code>
+     */
+    PIXEL_8_PRO(39),
     ;
 
     /**
@@ -678,6 +690,18 @@ private static final long serialVersionUID = 0L;
      * <code>WEAROS_SQUARE = 36;</code>
      */
     public static final int WEAROS_SQUARE_VALUE = 36;
+    /**
+     * <code>PIXEL_7A = 37;</code>
+     */
+    public static final int PIXEL_7A_VALUE = 37;
+    /**
+     * <code>PIXEL_8 = 38;</code>
+     */
+    public static final int PIXEL_8_VALUE = 38;
+    /**
+     * <code>PIXEL_8_PRO = 39;</code>
+     */
+    public static final int PIXEL_8_PRO_VALUE = 39;
 
 
     public final int getNumber() {
@@ -737,6 +761,9 @@ private static final long serialVersionUID = 0L;
         case 34: return WEAROS_SMALL_ROUND;
         case 35: return WEAROS_RECT;
         case 36: return WEAROS_SQUARE;
+        case 37: return PIXEL_7A;
+        case 38: return PIXEL_8;
+        case 39: return PIXEL_8_PRO;
         default: return null;
       }
     }
