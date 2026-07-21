@@ -10,7 +10,7 @@ package com.google.wireless.android.sdk.stats;
  *
  * Protobuf type {@code android_studio.CpuCaptureMetadata}
  */
-public  final class CpuCaptureMetadata extends
+public final class CpuCaptureMetadata extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:android_studio.CpuCaptureMetadata)
     CpuCaptureMetadataOrBuilder {
@@ -368,7 +368,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>STOP_CAPTURING_FAILURE = 2 [deprecated = true];</code>
      */
-    public static final int STOP_CAPTURING_FAILURE_VALUE = 2;
+    @java.lang.Deprecated public static final int STOP_CAPTURING_FAILURE_VALUE = 2;
     /**
      * <pre>
      * Deprecated by PARSING_FAILED_* enum constants.
@@ -376,7 +376,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>PARSING_FAILURE = 3 [deprecated = true];</code>
      */
-    public static final int PARSING_FAILURE_VALUE = 3;
+    @java.lang.Deprecated public static final int PARSING_FAILURE_VALUE = 3;
     /**
      * <pre>
      * User aborted parsing the trace after being notified it was too large
@@ -653,7 +653,7 @@ private static final long serialVersionUID = 0L;
    * <code>optional .android_studio.CpuCaptureMetadata.CaptureStatus capture_status = 1;</code>
    * @return Whether the captureStatus field is set.
    */
-  public boolean hasCaptureStatus() {
+  @java.lang.Override public boolean hasCaptureStatus() {
     return ((bitField0_ & 0x00000001) != 0);
   }
   /**
@@ -664,7 +664,7 @@ private static final long serialVersionUID = 0L;
    * <code>optional .android_studio.CpuCaptureMetadata.CaptureStatus capture_status = 1;</code>
    * @return The captureStatus.
    */
-  public com.google.wireless.android.sdk.stats.CpuCaptureMetadata.CaptureStatus getCaptureStatus() {
+  @java.lang.Override public com.google.wireless.android.sdk.stats.CpuCaptureMetadata.CaptureStatus getCaptureStatus() {
     @SuppressWarnings("deprecation")
     com.google.wireless.android.sdk.stats.CpuCaptureMetadata.CaptureStatus result = com.google.wireless.android.sdk.stats.CpuCaptureMetadata.CaptureStatus.valueOf(captureStatus_);
     return result == null ? com.google.wireless.android.sdk.stats.CpuCaptureMetadata.CaptureStatus.UNKNOWN_STATUS : result;
@@ -681,6 +681,7 @@ private static final long serialVersionUID = 0L;
    * <code>optional uint64 capture_duration_ms = 2;</code>
    * @return Whether the captureDurationMs field is set.
    */
+  @java.lang.Override
   public boolean hasCaptureDurationMs() {
     return ((bitField0_ & 0x00000002) != 0);
   }
@@ -693,6 +694,7 @@ private static final long serialVersionUID = 0L;
    * <code>optional uint64 capture_duration_ms = 2;</code>
    * @return The captureDurationMs.
    */
+  @java.lang.Override
   public long getCaptureDurationMs() {
     return captureDurationMs_;
   }
@@ -708,6 +710,7 @@ private static final long serialVersionUID = 0L;
    * <code>optional uint64 record_duration_ms = 3;</code>
    * @return Whether the recordDurationMs field is set.
    */
+  @java.lang.Override
   public boolean hasRecordDurationMs() {
     return ((bitField0_ & 0x00000004) != 0);
   }
@@ -720,6 +723,7 @@ private static final long serialVersionUID = 0L;
    * <code>optional uint64 record_duration_ms = 3;</code>
    * @return The recordDurationMs.
    */
+  @java.lang.Override
   public long getRecordDurationMs() {
     return recordDurationMs_;
   }
@@ -735,6 +739,7 @@ private static final long serialVersionUID = 0L;
    * <code>optional uint32 trace_file_size_bytes = 4;</code>
    * @return Whether the traceFileSizeBytes field is set.
    */
+  @java.lang.Override
   public boolean hasTraceFileSizeBytes() {
     return ((bitField0_ & 0x00000008) != 0);
   }
@@ -747,6 +752,7 @@ private static final long serialVersionUID = 0L;
    * <code>optional uint32 trace_file_size_bytes = 4;</code>
    * @return The traceFileSizeBytes.
    */
+  @java.lang.Override
   public int getTraceFileSizeBytes() {
     return traceFileSizeBytes_;
   }
@@ -762,6 +768,7 @@ private static final long serialVersionUID = 0L;
    * <code>optional uint64 parsing_time_ms = 5;</code>
    * @return Whether the parsingTimeMs field is set.
    */
+  @java.lang.Override
   public boolean hasParsingTimeMs() {
     return ((bitField0_ & 0x00000010) != 0);
   }
@@ -774,6 +781,7 @@ private static final long serialVersionUID = 0L;
    * <code>optional uint64 parsing_time_ms = 5;</code>
    * @return The parsingTimeMs.
    */
+  @java.lang.Override
   public long getParsingTimeMs() {
     return parsingTimeMs_;
   }
@@ -788,6 +796,7 @@ private static final long serialVersionUID = 0L;
    * <code>optional .android_studio.CpuProfilingConfig profiling_config = 6;</code>
    * @return Whether the profilingConfig field is set.
    */
+  @java.lang.Override
   public boolean hasProfilingConfig() {
     return ((bitField0_ & 0x00000020) != 0);
   }
@@ -799,6 +808,7 @@ private static final long serialVersionUID = 0L;
    * <code>optional .android_studio.CpuProfilingConfig profiling_config = 6;</code>
    * @return The profilingConfig.
    */
+  @java.lang.Override
   public com.google.wireless.android.sdk.stats.CpuProfilingConfig getProfilingConfig() {
     return profilingConfig_ == null ? com.google.wireless.android.sdk.stats.CpuProfilingConfig.getDefaultInstance() : profilingConfig_;
   }
@@ -809,6 +819,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>optional .android_studio.CpuProfilingConfig profiling_config = 6;</code>
    */
+  @java.lang.Override
   public com.google.wireless.android.sdk.stats.CpuProfilingConfigOrBuilder getProfilingConfigOrBuilder() {
     return profilingConfig_ == null ? com.google.wireless.android.sdk.stats.CpuProfilingConfig.getDefaultInstance() : profilingConfig_;
   }
@@ -824,6 +835,7 @@ private static final long serialVersionUID = 0L;
    * <code>optional int32 art_stop_timeout_sec = 7;</code>
    * @return Whether the artStopTimeoutSec field is set.
    */
+  @java.lang.Override
   public boolean hasArtStopTimeoutSec() {
     return ((bitField0_ & 0x00000040) != 0);
   }
@@ -836,6 +848,7 @@ private static final long serialVersionUID = 0L;
    * <code>optional int32 art_stop_timeout_sec = 7;</code>
    * @return The artStopTimeoutSec.
    */
+  @java.lang.Override
   public int getArtStopTimeoutSec() {
     return artStopTimeoutSec_;
   }
@@ -850,6 +863,7 @@ private static final long serialVersionUID = 0L;
    * <code>optional int32 stopping_time_ms = 8;</code>
    * @return Whether the stoppingTimeMs field is set.
    */
+  @java.lang.Override
   public boolean hasStoppingTimeMs() {
     return ((bitField0_ & 0x00000080) != 0);
   }
@@ -861,6 +875,7 @@ private static final long serialVersionUID = 0L;
    * <code>optional int32 stopping_time_ms = 8;</code>
    * @return The stoppingTimeMs.
    */
+  @java.lang.Override
   public int getStoppingTimeMs() {
     return stoppingTimeMs_;
   }
@@ -1378,7 +1393,7 @@ private static final long serialVersionUID = 0L;
      * <code>optional .android_studio.CpuCaptureMetadata.CaptureStatus capture_status = 1;</code>
      * @return Whether the captureStatus field is set.
      */
-    public boolean hasCaptureStatus() {
+    @java.lang.Override public boolean hasCaptureStatus() {
       return ((bitField0_ & 0x00000001) != 0);
     }
     /**
@@ -1389,6 +1404,7 @@ private static final long serialVersionUID = 0L;
      * <code>optional .android_studio.CpuCaptureMetadata.CaptureStatus capture_status = 1;</code>
      * @return The captureStatus.
      */
+    @java.lang.Override
     public com.google.wireless.android.sdk.stats.CpuCaptureMetadata.CaptureStatus getCaptureStatus() {
       @SuppressWarnings("deprecation")
       com.google.wireless.android.sdk.stats.CpuCaptureMetadata.CaptureStatus result = com.google.wireless.android.sdk.stats.CpuCaptureMetadata.CaptureStatus.valueOf(captureStatus_);
@@ -1437,6 +1453,7 @@ private static final long serialVersionUID = 0L;
      * <code>optional uint64 capture_duration_ms = 2;</code>
      * @return Whether the captureDurationMs field is set.
      */
+    @java.lang.Override
     public boolean hasCaptureDurationMs() {
       return ((bitField0_ & 0x00000002) != 0);
     }
@@ -1449,6 +1466,7 @@ private static final long serialVersionUID = 0L;
      * <code>optional uint64 capture_duration_ms = 2;</code>
      * @return The captureDurationMs.
      */
+    @java.lang.Override
     public long getCaptureDurationMs() {
       return captureDurationMs_;
     }
@@ -1494,6 +1512,7 @@ private static final long serialVersionUID = 0L;
      * <code>optional uint64 record_duration_ms = 3;</code>
      * @return Whether the recordDurationMs field is set.
      */
+    @java.lang.Override
     public boolean hasRecordDurationMs() {
       return ((bitField0_ & 0x00000004) != 0);
     }
@@ -1506,6 +1525,7 @@ private static final long serialVersionUID = 0L;
      * <code>optional uint64 record_duration_ms = 3;</code>
      * @return The recordDurationMs.
      */
+    @java.lang.Override
     public long getRecordDurationMs() {
       return recordDurationMs_;
     }
@@ -1551,6 +1571,7 @@ private static final long serialVersionUID = 0L;
      * <code>optional uint32 trace_file_size_bytes = 4;</code>
      * @return Whether the traceFileSizeBytes field is set.
      */
+    @java.lang.Override
     public boolean hasTraceFileSizeBytes() {
       return ((bitField0_ & 0x00000008) != 0);
     }
@@ -1563,6 +1584,7 @@ private static final long serialVersionUID = 0L;
      * <code>optional uint32 trace_file_size_bytes = 4;</code>
      * @return The traceFileSizeBytes.
      */
+    @java.lang.Override
     public int getTraceFileSizeBytes() {
       return traceFileSizeBytes_;
     }
@@ -1608,6 +1630,7 @@ private static final long serialVersionUID = 0L;
      * <code>optional uint64 parsing_time_ms = 5;</code>
      * @return Whether the parsingTimeMs field is set.
      */
+    @java.lang.Override
     public boolean hasParsingTimeMs() {
       return ((bitField0_ & 0x00000010) != 0);
     }
@@ -1620,6 +1643,7 @@ private static final long serialVersionUID = 0L;
      * <code>optional uint64 parsing_time_ms = 5;</code>
      * @return The parsingTimeMs.
      */
+    @java.lang.Override
     public long getParsingTimeMs() {
       return parsingTimeMs_;
     }
@@ -1821,6 +1845,7 @@ private static final long serialVersionUID = 0L;
      * <code>optional int32 art_stop_timeout_sec = 7;</code>
      * @return Whether the artStopTimeoutSec field is set.
      */
+    @java.lang.Override
     public boolean hasArtStopTimeoutSec() {
       return ((bitField0_ & 0x00000040) != 0);
     }
@@ -1833,6 +1858,7 @@ private static final long serialVersionUID = 0L;
      * <code>optional int32 art_stop_timeout_sec = 7;</code>
      * @return The artStopTimeoutSec.
      */
+    @java.lang.Override
     public int getArtStopTimeoutSec() {
       return artStopTimeoutSec_;
     }
@@ -1877,6 +1903,7 @@ private static final long serialVersionUID = 0L;
      * <code>optional int32 stopping_time_ms = 8;</code>
      * @return Whether the stoppingTimeMs field is set.
      */
+    @java.lang.Override
     public boolean hasStoppingTimeMs() {
       return ((bitField0_ & 0x00000080) != 0);
     }
@@ -1888,6 +1915,7 @@ private static final long serialVersionUID = 0L;
      * <code>optional int32 stopping_time_ms = 8;</code>
      * @return The stoppingTimeMs.
      */
+    @java.lang.Override
     public int getStoppingTimeMs() {
       return stoppingTimeMs_;
     }

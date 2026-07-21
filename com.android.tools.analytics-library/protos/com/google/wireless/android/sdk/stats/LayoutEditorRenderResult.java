@@ -10,7 +10,7 @@ package com.google.wireless.android.sdk.stats;
  *
  * Protobuf type {@code android_studio.LayoutEditorRenderResult}
  */
-public  final class LayoutEditorRenderResult extends
+public final class LayoutEditorRenderResult extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:android_studio.LayoutEditorRenderResult)
     LayoutEditorRenderResultOrBuilder {
@@ -301,7 +301,7 @@ private static final long serialVersionUID = 0L;
    * <code>optional .android_studio.LayoutEditorRenderResult.Trigger trigger = 1;</code>
    * @return Whether the trigger field is set.
    */
-  public boolean hasTrigger() {
+  @java.lang.Override public boolean hasTrigger() {
     return ((bitField0_ & 0x00000001) != 0);
   }
   /**
@@ -312,7 +312,7 @@ private static final long serialVersionUID = 0L;
    * <code>optional .android_studio.LayoutEditorRenderResult.Trigger trigger = 1;</code>
    * @return The trigger.
    */
-  public com.google.wireless.android.sdk.stats.LayoutEditorRenderResult.Trigger getTrigger() {
+  @java.lang.Override public com.google.wireless.android.sdk.stats.LayoutEditorRenderResult.Trigger getTrigger() {
     @SuppressWarnings("deprecation")
     com.google.wireless.android.sdk.stats.LayoutEditorRenderResult.Trigger result = com.google.wireless.android.sdk.stats.LayoutEditorRenderResult.Trigger.valueOf(trigger_);
     return result == null ? com.google.wireless.android.sdk.stats.LayoutEditorRenderResult.Trigger.UNKNOWN_TRIGGER : result;
@@ -328,6 +328,7 @@ private static final long serialVersionUID = 0L;
    * <code>optional int32 result_code = 2;</code>
    * @return Whether the resultCode field is set.
    */
+  @java.lang.Override
   public boolean hasResultCode() {
     return ((bitField0_ & 0x00000002) != 0);
   }
@@ -339,6 +340,7 @@ private static final long serialVersionUID = 0L;
    * <code>optional int32 result_code = 2;</code>
    * @return The resultCode.
    */
+  @java.lang.Override
   public int getResultCode() {
     return resultCode_;
   }
@@ -353,6 +355,7 @@ private static final long serialVersionUID = 0L;
    * <code>optional int64 total_render_time_ms = 4;</code>
    * @return Whether the totalRenderTimeMs field is set.
    */
+  @java.lang.Override
   public boolean hasTotalRenderTimeMs() {
     return ((bitField0_ & 0x00000004) != 0);
   }
@@ -364,6 +367,7 @@ private static final long serialVersionUID = 0L;
    * <code>optional int64 total_render_time_ms = 4;</code>
    * @return The totalRenderTimeMs.
    */
+  @java.lang.Override
   public long getTotalRenderTimeMs() {
     return totalRenderTimeMs_;
   }
@@ -378,6 +382,7 @@ private static final long serialVersionUID = 0L;
    * <code>optional int32 component_count = 5;</code>
    * @return Whether the componentCount field is set.
    */
+  @java.lang.Override
   public boolean hasComponentCount() {
     return ((bitField0_ & 0x00000008) != 0);
   }
@@ -389,6 +394,7 @@ private static final long serialVersionUID = 0L;
    * <code>optional int32 component_count = 5;</code>
    * @return The componentCount.
    */
+  @java.lang.Override
   public int getComponentCount() {
     return componentCount_;
   }
@@ -403,6 +409,7 @@ private static final long serialVersionUID = 0L;
    * <code>optional int32 total_issue_count = 6;</code>
    * @return Whether the totalIssueCount field is set.
    */
+  @java.lang.Override
   public boolean hasTotalIssueCount() {
     return ((bitField0_ & 0x00000010) != 0);
   }
@@ -414,6 +421,7 @@ private static final long serialVersionUID = 0L;
    * <code>optional int32 total_issue_count = 6;</code>
    * @return The totalIssueCount.
    */
+  @java.lang.Override
   public int getTotalIssueCount() {
     return totalIssueCount_;
   }
@@ -428,6 +436,7 @@ private static final long serialVersionUID = 0L;
    * <code>optional int32 error_count = 7;</code>
    * @return Whether the errorCount field is set.
    */
+  @java.lang.Override
   public boolean hasErrorCount() {
     return ((bitField0_ & 0x00000020) != 0);
   }
@@ -439,6 +448,7 @@ private static final long serialVersionUID = 0L;
    * <code>optional int32 error_count = 7;</code>
    * @return The errorCount.
    */
+  @java.lang.Override
   public int getErrorCount() {
     return errorCount_;
   }
@@ -453,6 +463,7 @@ private static final long serialVersionUID = 0L;
    * <code>optional int32 fidelity_warning_count = 8;</code>
    * @return Whether the fidelityWarningCount field is set.
    */
+  @java.lang.Override
   public boolean hasFidelityWarningCount() {
     return ((bitField0_ & 0x00000040) != 0);
   }
@@ -464,6 +475,7 @@ private static final long serialVersionUID = 0L;
    * <code>optional int32 fidelity_warning_count = 8;</code>
    * @return The fidelityWarningCount.
    */
+  @java.lang.Override
   public int getFidelityWarningCount() {
     return fidelityWarningCount_;
   }
@@ -482,6 +494,7 @@ private static final long serialVersionUID = 0L;
    * <code>optional string device_id = 9;</code>
    * @return Whether the deviceId field is set.
    */
+  @java.lang.Override
   public boolean hasDeviceId() {
     return ((bitField0_ & 0x00000080) != 0);
   }
@@ -497,6 +510,7 @@ private static final long serialVersionUID = 0L;
    * <code>optional string device_id = 9;</code>
    * @return The deviceId.
    */
+  @java.lang.Override
   public java.lang.String getDeviceId() {
     java.lang.Object ref = deviceId_;
     if (ref instanceof java.lang.String) {
@@ -523,6 +537,7 @@ private static final long serialVersionUID = 0L;
    * <code>optional string device_id = 9;</code>
    * @return The bytes for deviceId.
    */
+  @java.lang.Override
   public com.google.protobuf.ByteString
       getDeviceIdBytes() {
     java.lang.Object ref = deviceId_;
@@ -1040,7 +1055,7 @@ private static final long serialVersionUID = 0L;
      * <code>optional .android_studio.LayoutEditorRenderResult.Trigger trigger = 1;</code>
      * @return Whether the trigger field is set.
      */
-    public boolean hasTrigger() {
+    @java.lang.Override public boolean hasTrigger() {
       return ((bitField0_ & 0x00000001) != 0);
     }
     /**
@@ -1051,6 +1066,7 @@ private static final long serialVersionUID = 0L;
      * <code>optional .android_studio.LayoutEditorRenderResult.Trigger trigger = 1;</code>
      * @return The trigger.
      */
+    @java.lang.Override
     public com.google.wireless.android.sdk.stats.LayoutEditorRenderResult.Trigger getTrigger() {
       @SuppressWarnings("deprecation")
       com.google.wireless.android.sdk.stats.LayoutEditorRenderResult.Trigger result = com.google.wireless.android.sdk.stats.LayoutEditorRenderResult.Trigger.valueOf(trigger_);
@@ -1098,6 +1114,7 @@ private static final long serialVersionUID = 0L;
      * <code>optional int32 result_code = 2;</code>
      * @return Whether the resultCode field is set.
      */
+    @java.lang.Override
     public boolean hasResultCode() {
       return ((bitField0_ & 0x00000002) != 0);
     }
@@ -1109,6 +1126,7 @@ private static final long serialVersionUID = 0L;
      * <code>optional int32 result_code = 2;</code>
      * @return The resultCode.
      */
+    @java.lang.Override
     public int getResultCode() {
       return resultCode_;
     }
@@ -1151,6 +1169,7 @@ private static final long serialVersionUID = 0L;
      * <code>optional int64 total_render_time_ms = 4;</code>
      * @return Whether the totalRenderTimeMs field is set.
      */
+    @java.lang.Override
     public boolean hasTotalRenderTimeMs() {
       return ((bitField0_ & 0x00000004) != 0);
     }
@@ -1162,6 +1181,7 @@ private static final long serialVersionUID = 0L;
      * <code>optional int64 total_render_time_ms = 4;</code>
      * @return The totalRenderTimeMs.
      */
+    @java.lang.Override
     public long getTotalRenderTimeMs() {
       return totalRenderTimeMs_;
     }
@@ -1204,6 +1224,7 @@ private static final long serialVersionUID = 0L;
      * <code>optional int32 component_count = 5;</code>
      * @return Whether the componentCount field is set.
      */
+    @java.lang.Override
     public boolean hasComponentCount() {
       return ((bitField0_ & 0x00000008) != 0);
     }
@@ -1215,6 +1236,7 @@ private static final long serialVersionUID = 0L;
      * <code>optional int32 component_count = 5;</code>
      * @return The componentCount.
      */
+    @java.lang.Override
     public int getComponentCount() {
       return componentCount_;
     }
@@ -1257,6 +1279,7 @@ private static final long serialVersionUID = 0L;
      * <code>optional int32 total_issue_count = 6;</code>
      * @return Whether the totalIssueCount field is set.
      */
+    @java.lang.Override
     public boolean hasTotalIssueCount() {
       return ((bitField0_ & 0x00000010) != 0);
     }
@@ -1268,6 +1291,7 @@ private static final long serialVersionUID = 0L;
      * <code>optional int32 total_issue_count = 6;</code>
      * @return The totalIssueCount.
      */
+    @java.lang.Override
     public int getTotalIssueCount() {
       return totalIssueCount_;
     }
@@ -1310,6 +1334,7 @@ private static final long serialVersionUID = 0L;
      * <code>optional int32 error_count = 7;</code>
      * @return Whether the errorCount field is set.
      */
+    @java.lang.Override
     public boolean hasErrorCount() {
       return ((bitField0_ & 0x00000020) != 0);
     }
@@ -1321,6 +1346,7 @@ private static final long serialVersionUID = 0L;
      * <code>optional int32 error_count = 7;</code>
      * @return The errorCount.
      */
+    @java.lang.Override
     public int getErrorCount() {
       return errorCount_;
     }
@@ -1363,6 +1389,7 @@ private static final long serialVersionUID = 0L;
      * <code>optional int32 fidelity_warning_count = 8;</code>
      * @return Whether the fidelityWarningCount field is set.
      */
+    @java.lang.Override
     public boolean hasFidelityWarningCount() {
       return ((bitField0_ & 0x00000040) != 0);
     }
@@ -1374,6 +1401,7 @@ private static final long serialVersionUID = 0L;
      * <code>optional int32 fidelity_warning_count = 8;</code>
      * @return The fidelityWarningCount.
      */
+    @java.lang.Override
     public int getFidelityWarningCount() {
       return fidelityWarningCount_;
     }

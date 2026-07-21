@@ -10,7 +10,7 @@ package com.google.wireless.android.sdk.stats;
  *
  * Protobuf type {@code android_studio.GradleAndroidModule}
  */
-public  final class GradleAndroidModule extends
+public final class GradleAndroidModule extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:android_studio.GradleAndroidModule)
     GradleAndroidModuleOrBuilder {
@@ -138,6 +138,7 @@ private static final long serialVersionUID = 0L;
    * <code>optional string app_id = 1;</code>
    * @return Whether the appId field is set.
    */
+  @java.lang.Override
   public boolean hasAppId() {
     return ((bitField0_ & 0x00000001) != 0);
   }
@@ -152,6 +153,7 @@ private static final long serialVersionUID = 0L;
    * <code>optional string app_id = 1;</code>
    * @return The appId.
    */
+  @java.lang.Override
   public java.lang.String getAppId() {
     java.lang.Object ref = appId_;
     if (ref instanceof java.lang.String) {
@@ -177,6 +179,7 @@ private static final long serialVersionUID = 0L;
    * <code>optional string app_id = 1;</code>
    * @return The bytes for appId.
    */
+  @java.lang.Override
   public com.google.protobuf.ByteString
       getAppIdBytes() {
     java.lang.Object ref = appId_;
@@ -201,6 +204,7 @@ private static final long serialVersionUID = 0L;
    * <code>optional string module_name = 2;</code>
    * @return Whether the moduleName field is set.
    */
+  @java.lang.Override
   public boolean hasModuleName() {
     return ((bitField0_ & 0x00000002) != 0);
   }
@@ -212,6 +216,7 @@ private static final long serialVersionUID = 0L;
    * <code>optional string module_name = 2;</code>
    * @return The moduleName.
    */
+  @java.lang.Override
   public java.lang.String getModuleName() {
     java.lang.Object ref = moduleName_;
     if (ref instanceof java.lang.String) {
@@ -234,6 +239,7 @@ private static final long serialVersionUID = 0L;
    * <code>optional string module_name = 2;</code>
    * @return The bytes for moduleName.
    */
+  @java.lang.Override
   public com.google.protobuf.ByteString
       getModuleNameBytes() {
     java.lang.Object ref = moduleName_;
@@ -258,6 +264,7 @@ private static final long serialVersionUID = 0L;
    * <code>optional bool is_library = 3;</code>
    * @return Whether the isLibrary field is set.
    */
+  @java.lang.Override
   public boolean hasIsLibrary() {
     return ((bitField0_ & 0x00000004) != 0);
   }
@@ -269,6 +276,7 @@ private static final long serialVersionUID = 0L;
    * <code>optional bool is_library = 3;</code>
    * @return The isLibrary.
    */
+  @java.lang.Override
   public boolean getIsLibrary() {
     return isLibrary_;
   }
@@ -283,6 +291,7 @@ private static final long serialVersionUID = 0L;
    * <code>optional int64 build_type_count = 4;</code>
    * @return Whether the buildTypeCount field is set.
    */
+  @java.lang.Override
   public boolean hasBuildTypeCount() {
     return ((bitField0_ & 0x00000008) != 0);
   }
@@ -294,6 +303,7 @@ private static final long serialVersionUID = 0L;
    * <code>optional int64 build_type_count = 4;</code>
    * @return The buildTypeCount.
    */
+  @java.lang.Override
   public long getBuildTypeCount() {
     return buildTypeCount_;
   }
@@ -308,6 +318,7 @@ private static final long serialVersionUID = 0L;
    * <code>optional int64 flavor_count = 5;</code>
    * @return Whether the flavorCount field is set.
    */
+  @java.lang.Override
   public boolean hasFlavorCount() {
     return ((bitField0_ & 0x00000010) != 0);
   }
@@ -319,6 +330,7 @@ private static final long serialVersionUID = 0L;
    * <code>optional int64 flavor_count = 5;</code>
    * @return The flavorCount.
    */
+  @java.lang.Override
   public long getFlavorCount() {
     return flavorCount_;
   }
@@ -333,6 +345,7 @@ private static final long serialVersionUID = 0L;
    * <code>optional int64 flavor_dimension = 6;</code>
    * @return Whether the flavorDimension field is set.
    */
+  @java.lang.Override
   public boolean hasFlavorDimension() {
     return ((bitField0_ & 0x00000020) != 0);
   }
@@ -344,6 +357,7 @@ private static final long serialVersionUID = 0L;
    * <code>optional int64 flavor_dimension = 6;</code>
    * @return The flavorDimension.
    */
+  @java.lang.Override
   public long getFlavorDimension() {
     return flavorDimension_;
   }
@@ -358,6 +372,7 @@ private static final long serialVersionUID = 0L;
    * <code>optional int64 signing_config_count = 7;</code>
    * @return Whether the signingConfigCount field is set.
    */
+  @java.lang.Override
   public boolean hasSigningConfigCount() {
     return ((bitField0_ & 0x00000040) != 0);
   }
@@ -369,6 +384,7 @@ private static final long serialVersionUID = 0L;
    * <code>optional int64 signing_config_count = 7;</code>
    * @return The signingConfigCount.
    */
+  @java.lang.Override
   public long getSigningConfigCount() {
     return signingConfigCount_;
   }
@@ -1091,6 +1107,7 @@ private static final long serialVersionUID = 0L;
      * <code>optional bool is_library = 3;</code>
      * @return Whether the isLibrary field is set.
      */
+    @java.lang.Override
     public boolean hasIsLibrary() {
       return ((bitField0_ & 0x00000004) != 0);
     }
@@ -1102,6 +1119,7 @@ private static final long serialVersionUID = 0L;
      * <code>optional bool is_library = 3;</code>
      * @return The isLibrary.
      */
+    @java.lang.Override
     public boolean getIsLibrary() {
       return isLibrary_;
     }
@@ -1144,6 +1162,7 @@ private static final long serialVersionUID = 0L;
      * <code>optional int64 build_type_count = 4;</code>
      * @return Whether the buildTypeCount field is set.
      */
+    @java.lang.Override
     public boolean hasBuildTypeCount() {
       return ((bitField0_ & 0x00000008) != 0);
     }
@@ -1155,6 +1174,7 @@ private static final long serialVersionUID = 0L;
      * <code>optional int64 build_type_count = 4;</code>
      * @return The buildTypeCount.
      */
+    @java.lang.Override
     public long getBuildTypeCount() {
       return buildTypeCount_;
     }
@@ -1197,6 +1217,7 @@ private static final long serialVersionUID = 0L;
      * <code>optional int64 flavor_count = 5;</code>
      * @return Whether the flavorCount field is set.
      */
+    @java.lang.Override
     public boolean hasFlavorCount() {
       return ((bitField0_ & 0x00000010) != 0);
     }
@@ -1208,6 +1229,7 @@ private static final long serialVersionUID = 0L;
      * <code>optional int64 flavor_count = 5;</code>
      * @return The flavorCount.
      */
+    @java.lang.Override
     public long getFlavorCount() {
       return flavorCount_;
     }
@@ -1250,6 +1272,7 @@ private static final long serialVersionUID = 0L;
      * <code>optional int64 flavor_dimension = 6;</code>
      * @return Whether the flavorDimension field is set.
      */
+    @java.lang.Override
     public boolean hasFlavorDimension() {
       return ((bitField0_ & 0x00000020) != 0);
     }
@@ -1261,6 +1284,7 @@ private static final long serialVersionUID = 0L;
      * <code>optional int64 flavor_dimension = 6;</code>
      * @return The flavorDimension.
      */
+    @java.lang.Override
     public long getFlavorDimension() {
       return flavorDimension_;
     }
@@ -1303,6 +1327,7 @@ private static final long serialVersionUID = 0L;
      * <code>optional int64 signing_config_count = 7;</code>
      * @return Whether the signingConfigCount field is set.
      */
+    @java.lang.Override
     public boolean hasSigningConfigCount() {
       return ((bitField0_ & 0x00000040) != 0);
     }
@@ -1314,6 +1339,7 @@ private static final long serialVersionUID = 0L;
      * <code>optional int64 signing_config_count = 7;</code>
      * @return The signingConfigCount.
      */
+    @java.lang.Override
     public long getSigningConfigCount() {
       return signingConfigCount_;
     }

@@ -545,6 +545,10 @@ public enum VariantPropertiesMethodType
    * <code>CONFIGURATIONS = 122;</code>
    */
   CONFIGURATIONS(122),
+  /**
+   * <code>COMPONENTS = 123;</code>
+   */
+  COMPONENTS(123),
   UNRECOGNIZED(-1),
   ;
 
@@ -591,7 +595,7 @@ public enum VariantPropertiesMethodType
   /**
    * <code>PACKAGE_NAME = 8 [deprecated = true];</code>
    */
-  public static final int PACKAGE_NAME_VALUE = 8;
+  @java.lang.Deprecated public static final int PACKAGE_NAME_VALUE = 8;
   /**
    * <code>BUILD_CONFIG_FIELDS = 9;</code>
    */
@@ -1084,6 +1088,10 @@ public enum VariantPropertiesMethodType
    * <code>CONFIGURATIONS = 122;</code>
    */
   public static final int CONFIGURATIONS_VALUE = 122;
+  /**
+   * <code>COMPONENTS = 123;</code>
+   */
+  public static final int COMPONENTS_VALUE = 123;
 
 
   public final int getNumber() {
@@ -1233,6 +1241,7 @@ public enum VariantPropertiesMethodType
       case 120: return SOURCES_RENDERSCRIPT_ACCESS;
       case 121: return SOURCES_KOTLIN_ACCESS;
       case 122: return CONFIGURATIONS;
+      case 123: return COMPONENTS;
       default: return null;
     }
   }
@@ -1251,6 +1260,10 @@ public enum VariantPropertiesMethodType
 
   public final com.google.protobuf.Descriptors.EnumValueDescriptor
       getValueDescriptor() {
+    if (this == UNRECOGNIZED) {
+      throw new java.lang.IllegalStateException(
+          "Can't get the descriptor of an unrecognized enum value.");
+    }
     return getDescriptor().getValues().get(ordinal());
   }
   public final com.google.protobuf.Descriptors.EnumDescriptor

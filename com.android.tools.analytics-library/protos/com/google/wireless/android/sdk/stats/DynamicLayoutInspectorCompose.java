@@ -6,7 +6,7 @@ package com.google.wireless.android.sdk.stats;
 /**
  * Protobuf type {@code android_studio.DynamicLayoutInspectorCompose}
  */
-public  final class DynamicLayoutInspectorCompose extends
+public final class DynamicLayoutInspectorCompose extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:android_studio.DynamicLayoutInspectorCompose)
     DynamicLayoutInspectorComposeOrBuilder {
@@ -112,6 +112,7 @@ private static final long serialVersionUID = 0L;
    * <code>optional bool kotlin_reflection_available = 1;</code>
    * @return Whether the kotlinReflectionAvailable field is set.
    */
+  @java.lang.Override
   public boolean hasKotlinReflectionAvailable() {
     return ((bitField0_ & 0x00000001) != 0);
   }
@@ -123,6 +124,7 @@ private static final long serialVersionUID = 0L;
    * <code>optional bool kotlin_reflection_available = 1;</code>
    * @return The kotlinReflectionAvailable.
    */
+  @java.lang.Override
   public boolean getKotlinReflectionAvailable() {
     return kotlinReflectionAvailable_;
   }
@@ -137,6 +139,7 @@ private static final long serialVersionUID = 0L;
    * <code>optional uint32 image_clicks = 2;</code>
    * @return Whether the imageClicks field is set.
    */
+  @java.lang.Override
   public boolean hasImageClicks() {
     return ((bitField0_ & 0x00000002) != 0);
   }
@@ -148,6 +151,7 @@ private static final long serialVersionUID = 0L;
    * <code>optional uint32 image_clicks = 2;</code>
    * @return The imageClicks.
    */
+  @java.lang.Override
   public int getImageClicks() {
     return imageClicks_;
   }
@@ -162,6 +166,7 @@ private static final long serialVersionUID = 0L;
    * <code>optional uint32 component_tree_clicks = 3;</code>
    * @return Whether the componentTreeClicks field is set.
    */
+  @java.lang.Override
   public boolean hasComponentTreeClicks() {
     return ((bitField0_ & 0x00000004) != 0);
   }
@@ -173,6 +178,7 @@ private static final long serialVersionUID = 0L;
    * <code>optional uint32 component_tree_clicks = 3;</code>
    * @return The componentTreeClicks.
    */
+  @java.lang.Override
   public int getComponentTreeClicks() {
     return componentTreeClicks_;
   }
@@ -187,6 +193,7 @@ private static final long serialVersionUID = 0L;
    * <code>optional uint32 go_to_source_from_property_value_clicks = 4;</code>
    * @return Whether the goToSourceFromPropertyValueClicks field is set.
    */
+  @java.lang.Override
   public boolean hasGoToSourceFromPropertyValueClicks() {
     return ((bitField0_ & 0x00000008) != 0);
   }
@@ -198,6 +205,7 @@ private static final long serialVersionUID = 0L;
    * <code>optional uint32 go_to_source_from_property_value_clicks = 4;</code>
    * @return The goToSourceFromPropertyValueClicks.
    */
+  @java.lang.Override
   public int getGoToSourceFromPropertyValueClicks() {
     return goToSourceFromPropertyValueClicks_;
   }
@@ -601,6 +609,7 @@ private static final long serialVersionUID = 0L;
      * <code>optional bool kotlin_reflection_available = 1;</code>
      * @return Whether the kotlinReflectionAvailable field is set.
      */
+    @java.lang.Override
     public boolean hasKotlinReflectionAvailable() {
       return ((bitField0_ & 0x00000001) != 0);
     }
@@ -612,6 +621,7 @@ private static final long serialVersionUID = 0L;
      * <code>optional bool kotlin_reflection_available = 1;</code>
      * @return The kotlinReflectionAvailable.
      */
+    @java.lang.Override
     public boolean getKotlinReflectionAvailable() {
       return kotlinReflectionAvailable_;
     }
@@ -654,6 +664,7 @@ private static final long serialVersionUID = 0L;
      * <code>optional uint32 image_clicks = 2;</code>
      * @return Whether the imageClicks field is set.
      */
+    @java.lang.Override
     public boolean hasImageClicks() {
       return ((bitField0_ & 0x00000002) != 0);
     }
@@ -665,6 +676,7 @@ private static final long serialVersionUID = 0L;
      * <code>optional uint32 image_clicks = 2;</code>
      * @return The imageClicks.
      */
+    @java.lang.Override
     public int getImageClicks() {
       return imageClicks_;
     }
@@ -707,6 +719,7 @@ private static final long serialVersionUID = 0L;
      * <code>optional uint32 component_tree_clicks = 3;</code>
      * @return Whether the componentTreeClicks field is set.
      */
+    @java.lang.Override
     public boolean hasComponentTreeClicks() {
       return ((bitField0_ & 0x00000004) != 0);
     }
@@ -718,6 +731,7 @@ private static final long serialVersionUID = 0L;
      * <code>optional uint32 component_tree_clicks = 3;</code>
      * @return The componentTreeClicks.
      */
+    @java.lang.Override
     public int getComponentTreeClicks() {
       return componentTreeClicks_;
     }
@@ -760,6 +774,7 @@ private static final long serialVersionUID = 0L;
      * <code>optional uint32 go_to_source_from_property_value_clicks = 4;</code>
      * @return Whether the goToSourceFromPropertyValueClicks field is set.
      */
+    @java.lang.Override
     public boolean hasGoToSourceFromPropertyValueClicks() {
       return ((bitField0_ & 0x00000008) != 0);
     }
@@ -771,6 +786,7 @@ private static final long serialVersionUID = 0L;
      * <code>optional uint32 go_to_source_from_property_value_clicks = 4;</code>
      * @return The goToSourceFromPropertyValueClicks.
      */
+    @java.lang.Override
     public int getGoToSourceFromPropertyValueClicks() {
       return goToSourceFromPropertyValueClicks_;
     }

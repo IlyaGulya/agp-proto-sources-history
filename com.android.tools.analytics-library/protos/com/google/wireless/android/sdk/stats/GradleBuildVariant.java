@@ -6,7 +6,7 @@ package com.google.wireless.android.sdk.stats;
 /**
  * Protobuf type {@code android_studio.GradleBuildVariant}
  */
-public  final class GradleBuildVariant extends
+public final class GradleBuildVariant extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:android_studio.GradleBuildVariant)
     GradleBuildVariantOrBuilder {
@@ -1361,7 +1361,7 @@ private static final long serialVersionUID = 0L;
    *
    * Protobuf type {@code android_studio.GradleBuildVariant.NativeBuildConfigInfo}
    */
-  public  static final class NativeBuildConfigInfo extends
+  public static final class NativeBuildConfigInfo extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:android_studio.GradleBuildVariant.NativeBuildConfigInfo)
       NativeBuildConfigInfoOrBuilder {
@@ -1620,7 +1620,7 @@ private static final long serialVersionUID = 0L;
      * <code>optional .android_studio.GradleBuildVariant.NativeBuildConfigInfo.GenerationOutcome outcome = 1;</code>
      * @return Whether the outcome field is set.
      */
-    public boolean hasOutcome() {
+    @java.lang.Override public boolean hasOutcome() {
       return ((bitField0_ & 0x00000001) != 0);
     }
     /**
@@ -1631,7 +1631,7 @@ private static final long serialVersionUID = 0L;
      * <code>optional .android_studio.GradleBuildVariant.NativeBuildConfigInfo.GenerationOutcome outcome = 1;</code>
      * @return The outcome.
      */
-    public com.google.wireless.android.sdk.stats.GradleBuildVariant.NativeBuildConfigInfo.GenerationOutcome getOutcome() {
+    @java.lang.Override public com.google.wireless.android.sdk.stats.GradleBuildVariant.NativeBuildConfigInfo.GenerationOutcome getOutcome() {
       @SuppressWarnings("deprecation")
       com.google.wireless.android.sdk.stats.GradleBuildVariant.NativeBuildConfigInfo.GenerationOutcome result = com.google.wireless.android.sdk.stats.GradleBuildVariant.NativeBuildConfigInfo.GenerationOutcome.valueOf(outcome_);
       return result == null ? com.google.wireless.android.sdk.stats.GradleBuildVariant.NativeBuildConfigInfo.GenerationOutcome.UNKNOWN_GENERATION_OUTCOME : result;
@@ -1647,7 +1647,7 @@ private static final long serialVersionUID = 0L;
      * <code>optional .android_studio.DeviceInfo.ApplicationBinaryInterface abi = 2;</code>
      * @return Whether the abi field is set.
      */
-    public boolean hasAbi() {
+    @java.lang.Override public boolean hasAbi() {
       return ((bitField0_ & 0x00000002) != 0);
     }
     /**
@@ -1658,7 +1658,7 @@ private static final long serialVersionUID = 0L;
      * <code>optional .android_studio.DeviceInfo.ApplicationBinaryInterface abi = 2;</code>
      * @return The abi.
      */
-    public com.google.wireless.android.sdk.stats.DeviceInfo.ApplicationBinaryInterface getAbi() {
+    @java.lang.Override public com.google.wireless.android.sdk.stats.DeviceInfo.ApplicationBinaryInterface getAbi() {
       @SuppressWarnings("deprecation")
       com.google.wireless.android.sdk.stats.DeviceInfo.ApplicationBinaryInterface result = com.google.wireless.android.sdk.stats.DeviceInfo.ApplicationBinaryInterface.valueOf(abi_);
       return result == null ? com.google.wireless.android.sdk.stats.DeviceInfo.ApplicationBinaryInterface.UNKNOWN_ABI : result;
@@ -1674,6 +1674,7 @@ private static final long serialVersionUID = 0L;
      * <code>optional int32 platform_api_version = 3;</code>
      * @return Whether the platformApiVersion field is set.
      */
+    @java.lang.Override
     public boolean hasPlatformApiVersion() {
       return ((bitField0_ & 0x00000004) != 0);
     }
@@ -1685,6 +1686,7 @@ private static final long serialVersionUID = 0L;
      * <code>optional int32 platform_api_version = 3;</code>
      * @return The platformApiVersion.
      */
+    @java.lang.Override
     public int getPlatformApiVersion() {
       return platformApiVersion_;
     }
@@ -1699,6 +1701,7 @@ private static final long serialVersionUID = 0L;
      * <code>optional bool debuggable = 4;</code>
      * @return Whether the debuggable field is set.
      */
+    @java.lang.Override
     public boolean hasDebuggable() {
       return ((bitField0_ & 0x00000008) != 0);
     }
@@ -1710,6 +1713,7 @@ private static final long serialVersionUID = 0L;
      * <code>optional bool debuggable = 4;</code>
      * @return The debuggable.
      */
+    @java.lang.Override
     public boolean getDebuggable() {
       return debuggable_;
     }
@@ -1724,6 +1728,7 @@ private static final long serialVersionUID = 0L;
      * <code>optional int64 generation_start_ms = 5;</code>
      * @return Whether the generationStartMs field is set.
      */
+    @java.lang.Override
     public boolean hasGenerationStartMs() {
       return ((bitField0_ & 0x00000010) != 0);
     }
@@ -1735,6 +1740,7 @@ private static final long serialVersionUID = 0L;
      * <code>optional int64 generation_start_ms = 5;</code>
      * @return The generationStartMs.
      */
+    @java.lang.Override
     public long getGenerationStartMs() {
       return generationStartMs_;
     }
@@ -1749,6 +1755,7 @@ private static final long serialVersionUID = 0L;
      * <code>optional int64 generation_duration_ms = 6;</code>
      * @return Whether the generationDurationMs field is set.
      */
+    @java.lang.Override
     public boolean hasGenerationDurationMs() {
       return ((bitField0_ & 0x00000020) != 0);
     }
@@ -1760,6 +1767,7 @@ private static final long serialVersionUID = 0L;
      * <code>optional int64 generation_duration_ms = 6;</code>
      * @return The generationDurationMs.
      */
+    @java.lang.Override
     public long getGenerationDurationMs() {
       return generationDurationMs_;
     }
@@ -1773,6 +1781,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>repeated .android_studio.GradleBuildVariant.NativeLibraryInfo libraries = 7;</code>
      */
+    @java.lang.Override
     public java.util.List<com.google.wireless.android.sdk.stats.GradleBuildVariant.NativeLibraryInfo> getLibrariesList() {
       return libraries_;
     }
@@ -1783,6 +1792,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>repeated .android_studio.GradleBuildVariant.NativeLibraryInfo libraries = 7;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends com.google.wireless.android.sdk.stats.GradleBuildVariant.NativeLibraryInfoOrBuilder> 
         getLibrariesOrBuilderList() {
       return libraries_;
@@ -1794,6 +1804,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>repeated .android_studio.GradleBuildVariant.NativeLibraryInfo libraries = 7;</code>
      */
+    @java.lang.Override
     public int getLibrariesCount() {
       return libraries_.size();
     }
@@ -1804,6 +1815,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>repeated .android_studio.GradleBuildVariant.NativeLibraryInfo libraries = 7;</code>
      */
+    @java.lang.Override
     public com.google.wireless.android.sdk.stats.GradleBuildVariant.NativeLibraryInfo getLibraries(int index) {
       return libraries_.get(index);
     }
@@ -1814,6 +1826,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>repeated .android_studio.GradleBuildVariant.NativeLibraryInfo libraries = 7;</code>
      */
+    @java.lang.Override
     public com.google.wireless.android.sdk.stats.GradleBuildVariant.NativeLibraryInfoOrBuilder getLibrariesOrBuilder(
         int index) {
       return libraries_.get(index);
@@ -2327,7 +2340,7 @@ private static final long serialVersionUID = 0L;
        * <code>optional .android_studio.GradleBuildVariant.NativeBuildConfigInfo.GenerationOutcome outcome = 1;</code>
        * @return Whether the outcome field is set.
        */
-      public boolean hasOutcome() {
+      @java.lang.Override public boolean hasOutcome() {
         return ((bitField0_ & 0x00000001) != 0);
       }
       /**
@@ -2338,6 +2351,7 @@ private static final long serialVersionUID = 0L;
        * <code>optional .android_studio.GradleBuildVariant.NativeBuildConfigInfo.GenerationOutcome outcome = 1;</code>
        * @return The outcome.
        */
+      @java.lang.Override
       public com.google.wireless.android.sdk.stats.GradleBuildVariant.NativeBuildConfigInfo.GenerationOutcome getOutcome() {
         @SuppressWarnings("deprecation")
         com.google.wireless.android.sdk.stats.GradleBuildVariant.NativeBuildConfigInfo.GenerationOutcome result = com.google.wireless.android.sdk.stats.GradleBuildVariant.NativeBuildConfigInfo.GenerationOutcome.valueOf(outcome_);
@@ -2385,7 +2399,7 @@ private static final long serialVersionUID = 0L;
        * <code>optional .android_studio.DeviceInfo.ApplicationBinaryInterface abi = 2;</code>
        * @return Whether the abi field is set.
        */
-      public boolean hasAbi() {
+      @java.lang.Override public boolean hasAbi() {
         return ((bitField0_ & 0x00000002) != 0);
       }
       /**
@@ -2396,6 +2410,7 @@ private static final long serialVersionUID = 0L;
        * <code>optional .android_studio.DeviceInfo.ApplicationBinaryInterface abi = 2;</code>
        * @return The abi.
        */
+      @java.lang.Override
       public com.google.wireless.android.sdk.stats.DeviceInfo.ApplicationBinaryInterface getAbi() {
         @SuppressWarnings("deprecation")
         com.google.wireless.android.sdk.stats.DeviceInfo.ApplicationBinaryInterface result = com.google.wireless.android.sdk.stats.DeviceInfo.ApplicationBinaryInterface.valueOf(abi_);
@@ -2443,6 +2458,7 @@ private static final long serialVersionUID = 0L;
        * <code>optional int32 platform_api_version = 3;</code>
        * @return Whether the platformApiVersion field is set.
        */
+      @java.lang.Override
       public boolean hasPlatformApiVersion() {
         return ((bitField0_ & 0x00000004) != 0);
       }
@@ -2454,6 +2470,7 @@ private static final long serialVersionUID = 0L;
        * <code>optional int32 platform_api_version = 3;</code>
        * @return The platformApiVersion.
        */
+      @java.lang.Override
       public int getPlatformApiVersion() {
         return platformApiVersion_;
       }
@@ -2496,6 +2513,7 @@ private static final long serialVersionUID = 0L;
        * <code>optional bool debuggable = 4;</code>
        * @return Whether the debuggable field is set.
        */
+      @java.lang.Override
       public boolean hasDebuggable() {
         return ((bitField0_ & 0x00000008) != 0);
       }
@@ -2507,6 +2525,7 @@ private static final long serialVersionUID = 0L;
        * <code>optional bool debuggable = 4;</code>
        * @return The debuggable.
        */
+      @java.lang.Override
       public boolean getDebuggable() {
         return debuggable_;
       }
@@ -2549,6 +2568,7 @@ private static final long serialVersionUID = 0L;
        * <code>optional int64 generation_start_ms = 5;</code>
        * @return Whether the generationStartMs field is set.
        */
+      @java.lang.Override
       public boolean hasGenerationStartMs() {
         return ((bitField0_ & 0x00000010) != 0);
       }
@@ -2560,6 +2580,7 @@ private static final long serialVersionUID = 0L;
        * <code>optional int64 generation_start_ms = 5;</code>
        * @return The generationStartMs.
        */
+      @java.lang.Override
       public long getGenerationStartMs() {
         return generationStartMs_;
       }
@@ -2602,6 +2623,7 @@ private static final long serialVersionUID = 0L;
        * <code>optional int64 generation_duration_ms = 6;</code>
        * @return Whether the generationDurationMs field is set.
        */
+      @java.lang.Override
       public boolean hasGenerationDurationMs() {
         return ((bitField0_ & 0x00000020) != 0);
       }
@@ -2613,6 +2635,7 @@ private static final long serialVersionUID = 0L;
        * <code>optional int64 generation_duration_ms = 6;</code>
        * @return The generationDurationMs.
        */
+      @java.lang.Override
       public long getGenerationDurationMs() {
         return generationDurationMs_;
       }
@@ -3051,7 +3074,7 @@ private static final long serialVersionUID = 0L;
    *
    * Protobuf type {@code android_studio.GradleBuildVariant.NativeLibraryInfo}
    */
-  public  static final class NativeLibraryInfo extends
+  public static final class NativeLibraryInfo extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:android_studio.GradleBuildVariant.NativeLibraryInfo)
       NativeLibraryInfoOrBuilder {
@@ -3143,6 +3166,7 @@ private static final long serialVersionUID = 0L;
      * <code>optional int32 source_file_count = 1;</code>
      * @return Whether the sourceFileCount field is set.
      */
+    @java.lang.Override
     public boolean hasSourceFileCount() {
       return ((bitField0_ & 0x00000001) != 0);
     }
@@ -3150,6 +3174,7 @@ private static final long serialVersionUID = 0L;
      * <code>optional int32 source_file_count = 1;</code>
      * @return The sourceFileCount.
      */
+    @java.lang.Override
     public int getSourceFileCount() {
       return sourceFileCount_;
     }
@@ -3164,6 +3189,7 @@ private static final long serialVersionUID = 0L;
      * <code>optional bool has_glldb_flag = 2;</code>
      * @return Whether the hasGlldbFlag field is set.
      */
+    @java.lang.Override
     public boolean hasHasGlldbFlag() {
       return ((bitField0_ & 0x00000002) != 0);
     }
@@ -3175,6 +3201,7 @@ private static final long serialVersionUID = 0L;
      * <code>optional bool has_glldb_flag = 2;</code>
      * @return The hasGlldbFlag.
      */
+    @java.lang.Override
     public boolean getHasGlldbFlag() {
       return hasGlldbFlag_;
     }
@@ -3528,6 +3555,7 @@ private static final long serialVersionUID = 0L;
        * <code>optional int32 source_file_count = 1;</code>
        * @return Whether the sourceFileCount field is set.
        */
+      @java.lang.Override
       public boolean hasSourceFileCount() {
         return ((bitField0_ & 0x00000001) != 0);
       }
@@ -3535,6 +3563,7 @@ private static final long serialVersionUID = 0L;
        * <code>optional int32 source_file_count = 1;</code>
        * @return The sourceFileCount.
        */
+      @java.lang.Override
       public int getSourceFileCount() {
         return sourceFileCount_;
       }
@@ -3569,6 +3598,7 @@ private static final long serialVersionUID = 0L;
        * <code>optional bool has_glldb_flag = 2;</code>
        * @return Whether the hasGlldbFlag field is set.
        */
+      @java.lang.Override
       public boolean hasHasGlldbFlag() {
         return ((bitField0_ & 0x00000002) != 0);
       }
@@ -3580,6 +3610,7 @@ private static final long serialVersionUID = 0L;
        * <code>optional bool has_glldb_flag = 2;</code>
        * @return The hasGlldbFlag.
        */
+      @java.lang.Override
       public boolean getHasGlldbFlag() {
         return hasGlldbFlag_;
       }
@@ -3691,7 +3722,7 @@ private static final long serialVersionUID = 0L;
   /**
    * Protobuf type {@code android_studio.GradleBuildVariant.KotlinOptions}
    */
-  public  static final class KotlinOptions extends
+  public static final class KotlinOptions extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:android_studio.GradleBuildVariant.KotlinOptions)
       KotlinOptionsOrBuilder {
@@ -3782,6 +3813,7 @@ private static final long serialVersionUID = 0L;
      * <code>optional bool use_ir = 1;</code>
      * @return Whether the useIr field is set.
      */
+    @java.lang.Override
     public boolean hasUseIr() {
       return ((bitField0_ & 0x00000001) != 0);
     }
@@ -3793,6 +3825,7 @@ private static final long serialVersionUID = 0L;
      * <code>optional bool use_ir = 1;</code>
      * @return The useIr.
      */
+    @java.lang.Override
     public boolean getUseIr() {
       return useIr_;
     }
@@ -4121,6 +4154,7 @@ private static final long serialVersionUID = 0L;
        * <code>optional bool use_ir = 1;</code>
        * @return Whether the useIr field is set.
        */
+      @java.lang.Override
       public boolean hasUseIr() {
         return ((bitField0_ & 0x00000001) != 0);
       }
@@ -4132,6 +4166,7 @@ private static final long serialVersionUID = 0L;
        * <code>optional bool use_ir = 1;</code>
        * @return The useIr.
        */
+      @java.lang.Override
       public boolean getUseIr() {
         return useIr_;
       }
@@ -4232,6 +4267,7 @@ private static final long serialVersionUID = 0L;
    * <code>optional int64 id = 1;</code>
    * @return Whether the id field is set.
    */
+  @java.lang.Override
   public boolean hasId() {
     return ((bitField0_ & 0x00000001) != 0);
   }
@@ -4247,6 +4283,7 @@ private static final long serialVersionUID = 0L;
    * <code>optional int64 id = 1;</code>
    * @return The id.
    */
+  @java.lang.Override
   public long getId() {
     return id_;
   }
@@ -4261,6 +4298,7 @@ private static final long serialVersionUID = 0L;
    * <code>optional bool is_debug = 2;</code>
    * @return Whether the isDebug field is set.
    */
+  @java.lang.Override
   public boolean hasIsDebug() {
     return ((bitField0_ & 0x00000002) != 0);
   }
@@ -4272,6 +4310,7 @@ private static final long serialVersionUID = 0L;
    * <code>optional bool is_debug = 2;</code>
    * @return The isDebug.
    */
+  @java.lang.Override
   public boolean getIsDebug() {
     return isDebug_;
   }
@@ -4286,6 +4325,7 @@ private static final long serialVersionUID = 0L;
    * <code>optional bool use_jack = 3;</code>
    * @return Whether the useJack field is set.
    */
+  @java.lang.Override
   public boolean hasUseJack() {
     return ((bitField0_ & 0x00000004) != 0);
   }
@@ -4297,6 +4337,7 @@ private static final long serialVersionUID = 0L;
    * <code>optional bool use_jack = 3;</code>
    * @return The useJack.
    */
+  @java.lang.Override
   public boolean getUseJack() {
     return useJack_;
   }
@@ -4311,6 +4352,7 @@ private static final long serialVersionUID = 0L;
    * <code>optional bool minify_enabled = 4;</code>
    * @return Whether the minifyEnabled field is set.
    */
+  @java.lang.Override
   public boolean hasMinifyEnabled() {
     return ((bitField0_ & 0x00000008) != 0);
   }
@@ -4322,6 +4364,7 @@ private static final long serialVersionUID = 0L;
    * <code>optional bool minify_enabled = 4;</code>
    * @return The minifyEnabled.
    */
+  @java.lang.Override
   public boolean getMinifyEnabled() {
     return minifyEnabled_;
   }
@@ -4336,6 +4379,7 @@ private static final long serialVersionUID = 0L;
    * <code>optional bool use_multidex = 5;</code>
    * @return Whether the useMultidex field is set.
    */
+  @java.lang.Override
   public boolean hasUseMultidex() {
     return ((bitField0_ & 0x00000010) != 0);
   }
@@ -4347,6 +4391,7 @@ private static final long serialVersionUID = 0L;
    * <code>optional bool use_multidex = 5;</code>
    * @return The useMultidex.
    */
+  @java.lang.Override
   public boolean getUseMultidex() {
     return useMultidex_;
   }
@@ -4362,6 +4407,7 @@ private static final long serialVersionUID = 0L;
    * <code>optional bool use_legacy_multidex = 6;</code>
    * @return Whether the useLegacyMultidex field is set.
    */
+  @java.lang.Override
   public boolean hasUseLegacyMultidex() {
     return ((bitField0_ & 0x00000020) != 0);
   }
@@ -4374,6 +4420,7 @@ private static final long serialVersionUID = 0L;
    * <code>optional bool use_legacy_multidex = 6;</code>
    * @return The useLegacyMultidex.
    */
+  @java.lang.Override
   public boolean getUseLegacyMultidex() {
     return useLegacyMultidex_;
   }
@@ -4388,7 +4435,7 @@ private static final long serialVersionUID = 0L;
    * <code>optional .android_studio.GradleBuildVariant.VariantType variant_type = 7;</code>
    * @return Whether the variantType field is set.
    */
-  public boolean hasVariantType() {
+  @java.lang.Override public boolean hasVariantType() {
     return ((bitField0_ & 0x00000040) != 0);
   }
   /**
@@ -4399,7 +4446,7 @@ private static final long serialVersionUID = 0L;
    * <code>optional .android_studio.GradleBuildVariant.VariantType variant_type = 7;</code>
    * @return The variantType.
    */
-  public com.google.wireless.android.sdk.stats.GradleBuildVariant.VariantType getVariantType() {
+  @java.lang.Override public com.google.wireless.android.sdk.stats.GradleBuildVariant.VariantType getVariantType() {
     @SuppressWarnings("deprecation")
     com.google.wireless.android.sdk.stats.GradleBuildVariant.VariantType result = com.google.wireless.android.sdk.stats.GradleBuildVariant.VariantType.valueOf(variantType_);
     return result == null ? com.google.wireless.android.sdk.stats.GradleBuildVariant.VariantType.APPLICATION : result;
@@ -4415,6 +4462,7 @@ private static final long serialVersionUID = 0L;
    * <code>optional int64 tested_id = 8;</code>
    * @return Whether the testedId field is set.
    */
+  @java.lang.Override
   public boolean hasTestedId() {
     return ((bitField0_ & 0x00000080) != 0);
   }
@@ -4426,6 +4474,7 @@ private static final long serialVersionUID = 0L;
    * <code>optional int64 tested_id = 8;</code>
    * @return The testedId.
    */
+  @java.lang.Override
   public long getTestedId() {
     return testedId_;
   }
@@ -4511,6 +4560,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .android_studio.AnnotationProcessorInfo annotation_processors = 10;</code>
    */
+  @java.lang.Override
   public java.util.List<com.google.wireless.android.sdk.stats.AnnotationProcessorInfo> getAnnotationProcessorsList() {
     return annotationProcessors_;
   }
@@ -4522,6 +4572,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .android_studio.AnnotationProcessorInfo annotation_processors = 10;</code>
    */
+  @java.lang.Override
   public java.util.List<? extends com.google.wireless.android.sdk.stats.AnnotationProcessorInfoOrBuilder> 
       getAnnotationProcessorsOrBuilderList() {
     return annotationProcessors_;
@@ -4534,6 +4585,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .android_studio.AnnotationProcessorInfo annotation_processors = 10;</code>
    */
+  @java.lang.Override
   public int getAnnotationProcessorsCount() {
     return annotationProcessors_.size();
   }
@@ -4545,6 +4597,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .android_studio.AnnotationProcessorInfo annotation_processors = 10;</code>
    */
+  @java.lang.Override
   public com.google.wireless.android.sdk.stats.AnnotationProcessorInfo getAnnotationProcessors(int index) {
     return annotationProcessors_.get(index);
   }
@@ -4556,6 +4609,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .android_studio.AnnotationProcessorInfo annotation_processors = 10;</code>
    */
+  @java.lang.Override
   public com.google.wireless.android.sdk.stats.AnnotationProcessorInfoOrBuilder getAnnotationProcessorsOrBuilder(
       int index) {
     return annotationProcessors_.get(index);
@@ -4571,7 +4625,7 @@ private static final long serialVersionUID = 0L;
    * <code>optional .android_studio.GradleBuildVariant.Java8LangSupport java8_lang_support = 11;</code>
    * @return Whether the java8LangSupport field is set.
    */
-  public boolean hasJava8LangSupport() {
+  @java.lang.Override public boolean hasJava8LangSupport() {
     return ((bitField0_ & 0x00000100) != 0);
   }
   /**
@@ -4582,7 +4636,7 @@ private static final long serialVersionUID = 0L;
    * <code>optional .android_studio.GradleBuildVariant.Java8LangSupport java8_lang_support = 11;</code>
    * @return The java8LangSupport.
    */
-  public com.google.wireless.android.sdk.stats.GradleBuildVariant.Java8LangSupport getJava8LangSupport() {
+  @java.lang.Override public com.google.wireless.android.sdk.stats.GradleBuildVariant.Java8LangSupport getJava8LangSupport() {
     @SuppressWarnings("deprecation")
     com.google.wireless.android.sdk.stats.GradleBuildVariant.Java8LangSupport result = com.google.wireless.android.sdk.stats.GradleBuildVariant.Java8LangSupport.valueOf(java8LangSupport_);
     return result == null ? com.google.wireless.android.sdk.stats.GradleBuildVariant.Java8LangSupport.INTERNAL : result;
@@ -4599,6 +4653,7 @@ private static final long serialVersionUID = 0L;
    * <code>optional .android_studio.ApiVersion min_sdk_version = 12;</code>
    * @return Whether the minSdkVersion field is set.
    */
+  @java.lang.Override
   public boolean hasMinSdkVersion() {
     return ((bitField0_ & 0x00000200) != 0);
   }
@@ -4611,6 +4666,7 @@ private static final long serialVersionUID = 0L;
    * <code>optional .android_studio.ApiVersion min_sdk_version = 12;</code>
    * @return The minSdkVersion.
    */
+  @java.lang.Override
   public com.google.wireless.android.sdk.stats.ApiVersion getMinSdkVersion() {
     return minSdkVersion_ == null ? com.google.wireless.android.sdk.stats.ApiVersion.getDefaultInstance() : minSdkVersion_;
   }
@@ -4622,6 +4678,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>optional .android_studio.ApiVersion min_sdk_version = 12;</code>
    */
+  @java.lang.Override
   public com.google.wireless.android.sdk.stats.ApiVersionOrBuilder getMinSdkVersionOrBuilder() {
     return minSdkVersion_ == null ? com.google.wireless.android.sdk.stats.ApiVersion.getDefaultInstance() : minSdkVersion_;
   }
@@ -4636,6 +4693,7 @@ private static final long serialVersionUID = 0L;
    * <code>optional .android_studio.ApiVersion target_sdk_version = 13;</code>
    * @return Whether the targetSdkVersion field is set.
    */
+  @java.lang.Override
   public boolean hasTargetSdkVersion() {
     return ((bitField0_ & 0x00000400) != 0);
   }
@@ -4647,6 +4705,7 @@ private static final long serialVersionUID = 0L;
    * <code>optional .android_studio.ApiVersion target_sdk_version = 13;</code>
    * @return The targetSdkVersion.
    */
+  @java.lang.Override
   public com.google.wireless.android.sdk.stats.ApiVersion getTargetSdkVersion() {
     return targetSdkVersion_ == null ? com.google.wireless.android.sdk.stats.ApiVersion.getDefaultInstance() : targetSdkVersion_;
   }
@@ -4657,6 +4716,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>optional .android_studio.ApiVersion target_sdk_version = 13;</code>
    */
+  @java.lang.Override
   public com.google.wireless.android.sdk.stats.ApiVersionOrBuilder getTargetSdkVersionOrBuilder() {
     return targetSdkVersion_ == null ? com.google.wireless.android.sdk.stats.ApiVersion.getDefaultInstance() : targetSdkVersion_;
   }
@@ -4671,6 +4731,7 @@ private static final long serialVersionUID = 0L;
    * <code>optional .android_studio.ApiVersion max_sdk_version = 14;</code>
    * @return Whether the maxSdkVersion field is set.
    */
+  @java.lang.Override
   public boolean hasMaxSdkVersion() {
     return ((bitField0_ & 0x00000800) != 0);
   }
@@ -4682,6 +4743,7 @@ private static final long serialVersionUID = 0L;
    * <code>optional .android_studio.ApiVersion max_sdk_version = 14;</code>
    * @return The maxSdkVersion.
    */
+  @java.lang.Override
   public com.google.wireless.android.sdk.stats.ApiVersion getMaxSdkVersion() {
     return maxSdkVersion_ == null ? com.google.wireless.android.sdk.stats.ApiVersion.getDefaultInstance() : maxSdkVersion_;
   }
@@ -4692,6 +4754,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>optional .android_studio.ApiVersion max_sdk_version = 14;</code>
    */
+  @java.lang.Override
   public com.google.wireless.android.sdk.stats.ApiVersionOrBuilder getMaxSdkVersionOrBuilder() {
     return maxSdkVersion_ == null ? com.google.wireless.android.sdk.stats.ApiVersion.getDefaultInstance() : maxSdkVersion_;
   }
@@ -4702,14 +4765,14 @@ private static final long serialVersionUID = 0L;
    * <code>optional .android_studio.GradleBuildVariant.DexBuilderTool dex_builder = 15;</code>
    * @return Whether the dexBuilder field is set.
    */
-  public boolean hasDexBuilder() {
+  @java.lang.Override public boolean hasDexBuilder() {
     return ((bitField0_ & 0x00001000) != 0);
   }
   /**
    * <code>optional .android_studio.GradleBuildVariant.DexBuilderTool dex_builder = 15;</code>
    * @return The dexBuilder.
    */
-  public com.google.wireless.android.sdk.stats.GradleBuildVariant.DexBuilderTool getDexBuilder() {
+  @java.lang.Override public com.google.wireless.android.sdk.stats.GradleBuildVariant.DexBuilderTool getDexBuilder() {
     @SuppressWarnings("deprecation")
     com.google.wireless.android.sdk.stats.GradleBuildVariant.DexBuilderTool result = com.google.wireless.android.sdk.stats.GradleBuildVariant.DexBuilderTool.valueOf(dexBuilder_);
     return result == null ? com.google.wireless.android.sdk.stats.GradleBuildVariant.DexBuilderTool.UNKNOWN_DEX_BUILDER_TOOL : result;
@@ -4721,14 +4784,14 @@ private static final long serialVersionUID = 0L;
    * <code>optional .android_studio.GradleBuildVariant.DexMergerTool dex_merger = 16;</code>
    * @return Whether the dexMerger field is set.
    */
-  public boolean hasDexMerger() {
+  @java.lang.Override public boolean hasDexMerger() {
     return ((bitField0_ & 0x00002000) != 0);
   }
   /**
    * <code>optional .android_studio.GradleBuildVariant.DexMergerTool dex_merger = 16;</code>
    * @return The dexMerger.
    */
-  public com.google.wireless.android.sdk.stats.GradleBuildVariant.DexMergerTool getDexMerger() {
+  @java.lang.Override public com.google.wireless.android.sdk.stats.GradleBuildVariant.DexMergerTool getDexMerger() {
     @SuppressWarnings("deprecation")
     com.google.wireless.android.sdk.stats.GradleBuildVariant.DexMergerTool result = com.google.wireless.android.sdk.stats.GradleBuildVariant.DexMergerTool.valueOf(dexMerger_);
     return result == null ? com.google.wireless.android.sdk.stats.GradleBuildVariant.DexMergerTool.UNKNOWN_DEX_MERGER_TOOL : result;
@@ -4740,14 +4803,14 @@ private static final long serialVersionUID = 0L;
    * <code>optional .android_studio.GradleBuildVariant.CodeShrinkerTool code_shrinker = 17;</code>
    * @return Whether the codeShrinker field is set.
    */
-  public boolean hasCodeShrinker() {
+  @java.lang.Override public boolean hasCodeShrinker() {
     return ((bitField0_ & 0x00004000) != 0);
   }
   /**
    * <code>optional .android_studio.GradleBuildVariant.CodeShrinkerTool code_shrinker = 17;</code>
    * @return The codeShrinker.
    */
-  public com.google.wireless.android.sdk.stats.GradleBuildVariant.CodeShrinkerTool getCodeShrinker() {
+  @java.lang.Override public com.google.wireless.android.sdk.stats.GradleBuildVariant.CodeShrinkerTool getCodeShrinker() {
     @SuppressWarnings("deprecation")
     com.google.wireless.android.sdk.stats.GradleBuildVariant.CodeShrinkerTool result = com.google.wireless.android.sdk.stats.GradleBuildVariant.CodeShrinkerTool.valueOf(codeShrinker_);
     return result == null ? com.google.wireless.android.sdk.stats.GradleBuildVariant.CodeShrinkerTool.UNKNOWN_CODE_SHRINKER : result;
@@ -4763,7 +4826,7 @@ private static final long serialVersionUID = 0L;
    * <code>optional .android_studio.TestRun.TestExecution test_execution = 18;</code>
    * @return Whether the testExecution field is set.
    */
-  public boolean hasTestExecution() {
+  @java.lang.Override public boolean hasTestExecution() {
     return ((bitField0_ & 0x00008000) != 0);
   }
   /**
@@ -4774,7 +4837,7 @@ private static final long serialVersionUID = 0L;
    * <code>optional .android_studio.TestRun.TestExecution test_execution = 18;</code>
    * @return The testExecution.
    */
-  public com.google.wireless.android.sdk.stats.TestRun.TestExecution getTestExecution() {
+  @java.lang.Override public com.google.wireless.android.sdk.stats.TestRun.TestExecution getTestExecution() {
     @SuppressWarnings("deprecation")
     com.google.wireless.android.sdk.stats.TestRun.TestExecution result = com.google.wireless.android.sdk.stats.TestRun.TestExecution.valueOf(testExecution_);
     return result == null ? com.google.wireless.android.sdk.stats.TestRun.TestExecution.UNKNOWN_TEST_EXECUTION : result;
@@ -4790,7 +4853,7 @@ private static final long serialVersionUID = 0L;
    * <code>optional .android_studio.GradleNativeAndroidModule.NativeBuildSystemType native_build_system_type = 19;</code>
    * @return Whether the nativeBuildSystemType field is set.
    */
-  public boolean hasNativeBuildSystemType() {
+  @java.lang.Override public boolean hasNativeBuildSystemType() {
     return ((bitField0_ & 0x00010000) != 0);
   }
   /**
@@ -4801,7 +4864,7 @@ private static final long serialVersionUID = 0L;
    * <code>optional .android_studio.GradleNativeAndroidModule.NativeBuildSystemType native_build_system_type = 19;</code>
    * @return The nativeBuildSystemType.
    */
-  public com.google.wireless.android.sdk.stats.GradleNativeAndroidModule.NativeBuildSystemType getNativeBuildSystemType() {
+  @java.lang.Override public com.google.wireless.android.sdk.stats.GradleNativeAndroidModule.NativeBuildSystemType getNativeBuildSystemType() {
     @SuppressWarnings("deprecation")
     com.google.wireless.android.sdk.stats.GradleNativeAndroidModule.NativeBuildSystemType result = com.google.wireless.android.sdk.stats.GradleNativeAndroidModule.NativeBuildSystemType.valueOf(nativeBuildSystemType_);
     return result == null ? com.google.wireless.android.sdk.stats.GradleNativeAndroidModule.NativeBuildSystemType.UNKNOWN_NATIVE_BUILD_SYSTEM_TYPE : result;
@@ -4817,6 +4880,7 @@ private static final long serialVersionUID = 0L;
    * <code>optional string native_cmake_version = 20;</code>
    * @return Whether the nativeCmakeVersion field is set.
    */
+  @java.lang.Override
   public boolean hasNativeCmakeVersion() {
     return ((bitField0_ & 0x00020000) != 0);
   }
@@ -4828,6 +4892,7 @@ private static final long serialVersionUID = 0L;
    * <code>optional string native_cmake_version = 20;</code>
    * @return The nativeCmakeVersion.
    */
+  @java.lang.Override
   public java.lang.String getNativeCmakeVersion() {
     java.lang.Object ref = nativeCmakeVersion_;
     if (ref instanceof java.lang.String) {
@@ -4850,6 +4915,7 @@ private static final long serialVersionUID = 0L;
    * <code>optional string native_cmake_version = 20;</code>
    * @return The bytes for nativeCmakeVersion.
    */
+  @java.lang.Override
   public com.google.protobuf.ByteString
       getNativeCmakeVersionBytes() {
     java.lang.Object ref = nativeCmakeVersion_;
@@ -4873,6 +4939,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .android_studio.GradleBuildVariant.NativeBuildConfigInfo native_build_config = 21;</code>
    */
+  @java.lang.Override
   public java.util.List<com.google.wireless.android.sdk.stats.GradleBuildVariant.NativeBuildConfigInfo> getNativeBuildConfigList() {
     return nativeBuildConfig_;
   }
@@ -4883,6 +4950,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .android_studio.GradleBuildVariant.NativeBuildConfigInfo native_build_config = 21;</code>
    */
+  @java.lang.Override
   public java.util.List<? extends com.google.wireless.android.sdk.stats.GradleBuildVariant.NativeBuildConfigInfoOrBuilder> 
       getNativeBuildConfigOrBuilderList() {
     return nativeBuildConfig_;
@@ -4894,6 +4962,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .android_studio.GradleBuildVariant.NativeBuildConfigInfo native_build_config = 21;</code>
    */
+  @java.lang.Override
   public int getNativeBuildConfigCount() {
     return nativeBuildConfig_.size();
   }
@@ -4904,6 +4973,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .android_studio.GradleBuildVariant.NativeBuildConfigInfo native_build_config = 21;</code>
    */
+  @java.lang.Override
   public com.google.wireless.android.sdk.stats.GradleBuildVariant.NativeBuildConfigInfo getNativeBuildConfig(int index) {
     return nativeBuildConfig_.get(index);
   }
@@ -4914,6 +4984,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .android_studio.GradleBuildVariant.NativeBuildConfigInfo native_build_config = 21;</code>
    */
+  @java.lang.Override
   public com.google.wireless.android.sdk.stats.GradleBuildVariant.NativeBuildConfigInfoOrBuilder getNativeBuildConfigOrBuilder(
       int index) {
     return nativeBuildConfig_.get(index);
@@ -4929,6 +5000,7 @@ private static final long serialVersionUID = 0L;
    * <code>optional bool is_annotation_processing_incremental = 22;</code>
    * @return Whether the isAnnotationProcessingIncremental field is set.
    */
+  @java.lang.Override
   public boolean hasIsAnnotationProcessingIncremental() {
     return ((bitField0_ & 0x00040000) != 0);
   }
@@ -4940,6 +5012,7 @@ private static final long serialVersionUID = 0L;
    * <code>optional bool is_annotation_processing_incremental = 22;</code>
    * @return The isAnnotationProcessingIncremental.
    */
+  @java.lang.Override
   public boolean getIsAnnotationProcessingIncremental() {
     return isAnnotationProcessingIncremental_;
   }
@@ -4955,6 +5028,7 @@ private static final long serialVersionUID = 0L;
    * <code>optional bool is_instant_enabled = 23;</code>
    * @return Whether the isInstantEnabled field is set.
    */
+  @java.lang.Override
   public boolean hasIsInstantEnabled() {
     return ((bitField0_ & 0x00080000) != 0);
   }
@@ -4967,6 +5041,7 @@ private static final long serialVersionUID = 0L;
    * <code>optional bool is_instant_enabled = 23;</code>
    * @return The isInstantEnabled.
    */
+  @java.lang.Override
   public boolean getIsInstantEnabled() {
     return isInstantEnabled_;
   }
@@ -4981,6 +5056,7 @@ private static final long serialVersionUID = 0L;
    * <code>optional bool core_library_desugaring_enabled = 24;</code>
    * @return Whether the coreLibraryDesugaringEnabled field is set.
    */
+  @java.lang.Override
   public boolean hasCoreLibraryDesugaringEnabled() {
     return ((bitField0_ & 0x00100000) != 0);
   }
@@ -4992,6 +5068,7 @@ private static final long serialVersionUID = 0L;
    * <code>optional bool core_library_desugaring_enabled = 24;</code>
    * @return The coreLibraryDesugaringEnabled.
    */
+  @java.lang.Override
   public boolean getCoreLibraryDesugaringEnabled() {
     return coreLibraryDesugaringEnabled_;
   }
@@ -5006,6 +5083,7 @@ private static final long serialVersionUID = 0L;
    * <code>optional .android_studio.VariantApiUsage variant_api_access = 25;</code>
    * @return Whether the variantApiAccess field is set.
    */
+  @java.lang.Override
   public boolean hasVariantApiAccess() {
     return ((bitField0_ & 0x00200000) != 0);
   }
@@ -5017,6 +5095,7 @@ private static final long serialVersionUID = 0L;
    * <code>optional .android_studio.VariantApiUsage variant_api_access = 25;</code>
    * @return The variantApiAccess.
    */
+  @java.lang.Override
   public com.google.wireless.android.sdk.stats.VariantApiUsage getVariantApiAccess() {
     return variantApiAccess_ == null ? com.google.wireless.android.sdk.stats.VariantApiUsage.getDefaultInstance() : variantApiAccess_;
   }
@@ -5027,6 +5106,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>optional .android_studio.VariantApiUsage variant_api_access = 25;</code>
    */
+  @java.lang.Override
   public com.google.wireless.android.sdk.stats.VariantApiUsageOrBuilder getVariantApiAccessOrBuilder() {
     return variantApiAccess_ == null ? com.google.wireless.android.sdk.stats.VariantApiUsage.getDefaultInstance() : variantApiAccess_;
   }
@@ -5041,6 +5121,7 @@ private static final long serialVersionUID = 0L;
    * <code>optional .android_studio.GradleBuildVariant.KotlinOptions kotlin_options = 26;</code>
    * @return Whether the kotlinOptions field is set.
    */
+  @java.lang.Override
   public boolean hasKotlinOptions() {
     return ((bitField0_ & 0x00400000) != 0);
   }
@@ -5052,6 +5133,7 @@ private static final long serialVersionUID = 0L;
    * <code>optional .android_studio.GradleBuildVariant.KotlinOptions kotlin_options = 26;</code>
    * @return The kotlinOptions.
    */
+  @java.lang.Override
   public com.google.wireless.android.sdk.stats.GradleBuildVariant.KotlinOptions getKotlinOptions() {
     return kotlinOptions_ == null ? com.google.wireless.android.sdk.stats.GradleBuildVariant.KotlinOptions.getDefaultInstance() : kotlinOptions_;
   }
@@ -5062,6 +5144,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>optional .android_studio.GradleBuildVariant.KotlinOptions kotlin_options = 26;</code>
    */
+  @java.lang.Override
   public com.google.wireless.android.sdk.stats.GradleBuildVariant.KotlinOptionsOrBuilder getKotlinOptionsOrBuilder() {
     return kotlinOptions_ == null ? com.google.wireless.android.sdk.stats.GradleBuildVariant.KotlinOptions.getDefaultInstance() : kotlinOptions_;
   }
@@ -5075,6 +5158,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .android_studio.AsmClassesTransformRegistration asm_classes_transforms = 27;</code>
    */
+  @java.lang.Override
   public java.util.List<com.google.wireless.android.sdk.stats.AsmClassesTransformRegistration> getAsmClassesTransformsList() {
     return asmClassesTransforms_;
   }
@@ -5085,6 +5169,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .android_studio.AsmClassesTransformRegistration asm_classes_transforms = 27;</code>
    */
+  @java.lang.Override
   public java.util.List<? extends com.google.wireless.android.sdk.stats.AsmClassesTransformRegistrationOrBuilder> 
       getAsmClassesTransformsOrBuilderList() {
     return asmClassesTransforms_;
@@ -5096,6 +5181,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .android_studio.AsmClassesTransformRegistration asm_classes_transforms = 27;</code>
    */
+  @java.lang.Override
   public int getAsmClassesTransformsCount() {
     return asmClassesTransforms_.size();
   }
@@ -5106,6 +5192,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .android_studio.AsmClassesTransformRegistration asm_classes_transforms = 27;</code>
    */
+  @java.lang.Override
   public com.google.wireless.android.sdk.stats.AsmClassesTransformRegistration getAsmClassesTransforms(int index) {
     return asmClassesTransforms_.get(index);
   }
@@ -5116,6 +5203,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .android_studio.AsmClassesTransformRegistration asm_classes_transforms = 27;</code>
    */
+  @java.lang.Override
   public com.google.wireless.android.sdk.stats.AsmClassesTransformRegistrationOrBuilder getAsmClassesTransformsOrBuilder(
       int index) {
     return asmClassesTransforms_.get(index);
@@ -5130,6 +5218,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .android_studio.AsmFramesComputationModeUpdate frames_computation_mode_updates = 28;</code>
    */
+  @java.lang.Override
   public java.util.List<com.google.wireless.android.sdk.stats.AsmFramesComputationModeUpdate> getFramesComputationModeUpdatesList() {
     return framesComputationModeUpdates_;
   }
@@ -5140,6 +5229,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .android_studio.AsmFramesComputationModeUpdate frames_computation_mode_updates = 28;</code>
    */
+  @java.lang.Override
   public java.util.List<? extends com.google.wireless.android.sdk.stats.AsmFramesComputationModeUpdateOrBuilder> 
       getFramesComputationModeUpdatesOrBuilderList() {
     return framesComputationModeUpdates_;
@@ -5151,6 +5241,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .android_studio.AsmFramesComputationModeUpdate frames_computation_mode_updates = 28;</code>
    */
+  @java.lang.Override
   public int getFramesComputationModeUpdatesCount() {
     return framesComputationModeUpdates_.size();
   }
@@ -5161,6 +5252,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .android_studio.AsmFramesComputationModeUpdate frames_computation_mode_updates = 28;</code>
    */
+  @java.lang.Override
   public com.google.wireless.android.sdk.stats.AsmFramesComputationModeUpdate getFramesComputationModeUpdates(int index) {
     return framesComputationModeUpdates_.get(index);
   }
@@ -5171,6 +5263,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .android_studio.AsmFramesComputationModeUpdate frames_computation_mode_updates = 28;</code>
    */
+  @java.lang.Override
   public com.google.wireless.android.sdk.stats.AsmFramesComputationModeUpdateOrBuilder getFramesComputationModeUpdatesOrBuilder(
       int index) {
     return framesComputationModeUpdates_.get(index);
@@ -5188,6 +5281,7 @@ private static final long serialVersionUID = 0L;
    * <code>repeated int32 cxx_diagnostic_codes = 29 [packed = true];</code>
    * @return A list containing the cxxDiagnosticCodes.
    */
+  @java.lang.Override
   public java.util.List<java.lang.Integer>
       getCxxDiagnosticCodesList() {
     return cxxDiagnosticCodes_;
@@ -5231,6 +5325,7 @@ private static final long serialVersionUID = 0L;
    * <code>optional bool has_unit_test = 30;</code>
    * @return Whether the hasUnitTest field is set.
    */
+  @java.lang.Override
   public boolean hasHasUnitTest() {
     return ((bitField0_ & 0x00800000) != 0);
   }
@@ -5242,6 +5337,7 @@ private static final long serialVersionUID = 0L;
    * <code>optional bool has_unit_test = 30;</code>
    * @return The hasUnitTest.
    */
+  @java.lang.Override
   public boolean getHasUnitTest() {
     return hasUnitTest_;
   }
@@ -5256,6 +5352,7 @@ private static final long serialVersionUID = 0L;
    * <code>optional bool has_android_test = 31;</code>
    * @return Whether the hasAndroidTest field is set.
    */
+  @java.lang.Override
   public boolean hasHasAndroidTest() {
     return ((bitField0_ & 0x01000000) != 0);
   }
@@ -5267,6 +5364,7 @@ private static final long serialVersionUID = 0L;
    * <code>optional bool has_android_test = 31;</code>
    * @return The hasAndroidTest.
    */
+  @java.lang.Override
   public boolean getHasAndroidTest() {
     return hasAndroidTest_;
   }
@@ -5281,6 +5379,7 @@ private static final long serialVersionUID = 0L;
    * <code>optional bool has_test_fixtures = 32;</code>
    * @return Whether the hasTestFixtures field is set.
    */
+  @java.lang.Override
   public boolean hasHasTestFixtures() {
     return ((bitField0_ & 0x02000000) != 0);
   }
@@ -5292,6 +5391,7 @@ private static final long serialVersionUID = 0L;
    * <code>optional bool has_test_fixtures = 32;</code>
    * @return The hasTestFixtures.
    */
+  @java.lang.Override
   public boolean getHasTestFixtures() {
     return hasTestFixtures_;
   }
@@ -6599,6 +6699,7 @@ private static final long serialVersionUID = 0L;
      * <code>optional int64 id = 1;</code>
      * @return Whether the id field is set.
      */
+    @java.lang.Override
     public boolean hasId() {
       return ((bitField0_ & 0x00000001) != 0);
     }
@@ -6614,6 +6715,7 @@ private static final long serialVersionUID = 0L;
      * <code>optional int64 id = 1;</code>
      * @return The id.
      */
+    @java.lang.Override
     public long getId() {
       return id_;
     }
@@ -6664,6 +6766,7 @@ private static final long serialVersionUID = 0L;
      * <code>optional bool is_debug = 2;</code>
      * @return Whether the isDebug field is set.
      */
+    @java.lang.Override
     public boolean hasIsDebug() {
       return ((bitField0_ & 0x00000002) != 0);
     }
@@ -6675,6 +6778,7 @@ private static final long serialVersionUID = 0L;
      * <code>optional bool is_debug = 2;</code>
      * @return The isDebug.
      */
+    @java.lang.Override
     public boolean getIsDebug() {
       return isDebug_;
     }
@@ -6717,6 +6821,7 @@ private static final long serialVersionUID = 0L;
      * <code>optional bool use_jack = 3;</code>
      * @return Whether the useJack field is set.
      */
+    @java.lang.Override
     public boolean hasUseJack() {
       return ((bitField0_ & 0x00000004) != 0);
     }
@@ -6728,6 +6833,7 @@ private static final long serialVersionUID = 0L;
      * <code>optional bool use_jack = 3;</code>
      * @return The useJack.
      */
+    @java.lang.Override
     public boolean getUseJack() {
       return useJack_;
     }
@@ -6770,6 +6876,7 @@ private static final long serialVersionUID = 0L;
      * <code>optional bool minify_enabled = 4;</code>
      * @return Whether the minifyEnabled field is set.
      */
+    @java.lang.Override
     public boolean hasMinifyEnabled() {
       return ((bitField0_ & 0x00000008) != 0);
     }
@@ -6781,6 +6888,7 @@ private static final long serialVersionUID = 0L;
      * <code>optional bool minify_enabled = 4;</code>
      * @return The minifyEnabled.
      */
+    @java.lang.Override
     public boolean getMinifyEnabled() {
       return minifyEnabled_;
     }
@@ -6823,6 +6931,7 @@ private static final long serialVersionUID = 0L;
      * <code>optional bool use_multidex = 5;</code>
      * @return Whether the useMultidex field is set.
      */
+    @java.lang.Override
     public boolean hasUseMultidex() {
       return ((bitField0_ & 0x00000010) != 0);
     }
@@ -6834,6 +6943,7 @@ private static final long serialVersionUID = 0L;
      * <code>optional bool use_multidex = 5;</code>
      * @return The useMultidex.
      */
+    @java.lang.Override
     public boolean getUseMultidex() {
       return useMultidex_;
     }
@@ -6877,6 +6987,7 @@ private static final long serialVersionUID = 0L;
      * <code>optional bool use_legacy_multidex = 6;</code>
      * @return Whether the useLegacyMultidex field is set.
      */
+    @java.lang.Override
     public boolean hasUseLegacyMultidex() {
       return ((bitField0_ & 0x00000020) != 0);
     }
@@ -6889,6 +7000,7 @@ private static final long serialVersionUID = 0L;
      * <code>optional bool use_legacy_multidex = 6;</code>
      * @return The useLegacyMultidex.
      */
+    @java.lang.Override
     public boolean getUseLegacyMultidex() {
       return useLegacyMultidex_;
     }
@@ -6933,7 +7045,7 @@ private static final long serialVersionUID = 0L;
      * <code>optional .android_studio.GradleBuildVariant.VariantType variant_type = 7;</code>
      * @return Whether the variantType field is set.
      */
-    public boolean hasVariantType() {
+    @java.lang.Override public boolean hasVariantType() {
       return ((bitField0_ & 0x00000040) != 0);
     }
     /**
@@ -6944,6 +7056,7 @@ private static final long serialVersionUID = 0L;
      * <code>optional .android_studio.GradleBuildVariant.VariantType variant_type = 7;</code>
      * @return The variantType.
      */
+    @java.lang.Override
     public com.google.wireless.android.sdk.stats.GradleBuildVariant.VariantType getVariantType() {
       @SuppressWarnings("deprecation")
       com.google.wireless.android.sdk.stats.GradleBuildVariant.VariantType result = com.google.wireless.android.sdk.stats.GradleBuildVariant.VariantType.valueOf(variantType_);
@@ -6991,6 +7104,7 @@ private static final long serialVersionUID = 0L;
      * <code>optional int64 tested_id = 8;</code>
      * @return Whether the testedId field is set.
      */
+    @java.lang.Override
     public boolean hasTestedId() {
       return ((bitField0_ & 0x00000080) != 0);
     }
@@ -7002,6 +7116,7 @@ private static final long serialVersionUID = 0L;
      * <code>optional int64 tested_id = 8;</code>
      * @return The testedId.
      */
+    @java.lang.Override
     public long getTestedId() {
       return testedId_;
     }
@@ -7564,7 +7679,7 @@ private static final long serialVersionUID = 0L;
      * <code>optional .android_studio.GradleBuildVariant.Java8LangSupport java8_lang_support = 11;</code>
      * @return Whether the java8LangSupport field is set.
      */
-    public boolean hasJava8LangSupport() {
+    @java.lang.Override public boolean hasJava8LangSupport() {
       return ((bitField0_ & 0x00000400) != 0);
     }
     /**
@@ -7575,6 +7690,7 @@ private static final long serialVersionUID = 0L;
      * <code>optional .android_studio.GradleBuildVariant.Java8LangSupport java8_lang_support = 11;</code>
      * @return The java8LangSupport.
      */
+    @java.lang.Override
     public com.google.wireless.android.sdk.stats.GradleBuildVariant.Java8LangSupport getJava8LangSupport() {
       @SuppressWarnings("deprecation")
       com.google.wireless.android.sdk.stats.GradleBuildVariant.Java8LangSupport result = com.google.wireless.android.sdk.stats.GradleBuildVariant.Java8LangSupport.valueOf(java8LangSupport_);
@@ -8095,13 +8211,14 @@ private static final long serialVersionUID = 0L;
      * <code>optional .android_studio.GradleBuildVariant.DexBuilderTool dex_builder = 15;</code>
      * @return Whether the dexBuilder field is set.
      */
-    public boolean hasDexBuilder() {
+    @java.lang.Override public boolean hasDexBuilder() {
       return ((bitField0_ & 0x00004000) != 0);
     }
     /**
      * <code>optional .android_studio.GradleBuildVariant.DexBuilderTool dex_builder = 15;</code>
      * @return The dexBuilder.
      */
+    @java.lang.Override
     public com.google.wireless.android.sdk.stats.GradleBuildVariant.DexBuilderTool getDexBuilder() {
       @SuppressWarnings("deprecation")
       com.google.wireless.android.sdk.stats.GradleBuildVariant.DexBuilderTool result = com.google.wireless.android.sdk.stats.GradleBuildVariant.DexBuilderTool.valueOf(dexBuilder_);
@@ -8137,13 +8254,14 @@ private static final long serialVersionUID = 0L;
      * <code>optional .android_studio.GradleBuildVariant.DexMergerTool dex_merger = 16;</code>
      * @return Whether the dexMerger field is set.
      */
-    public boolean hasDexMerger() {
+    @java.lang.Override public boolean hasDexMerger() {
       return ((bitField0_ & 0x00008000) != 0);
     }
     /**
      * <code>optional .android_studio.GradleBuildVariant.DexMergerTool dex_merger = 16;</code>
      * @return The dexMerger.
      */
+    @java.lang.Override
     public com.google.wireless.android.sdk.stats.GradleBuildVariant.DexMergerTool getDexMerger() {
       @SuppressWarnings("deprecation")
       com.google.wireless.android.sdk.stats.GradleBuildVariant.DexMergerTool result = com.google.wireless.android.sdk.stats.GradleBuildVariant.DexMergerTool.valueOf(dexMerger_);
@@ -8179,13 +8297,14 @@ private static final long serialVersionUID = 0L;
      * <code>optional .android_studio.GradleBuildVariant.CodeShrinkerTool code_shrinker = 17;</code>
      * @return Whether the codeShrinker field is set.
      */
-    public boolean hasCodeShrinker() {
+    @java.lang.Override public boolean hasCodeShrinker() {
       return ((bitField0_ & 0x00010000) != 0);
     }
     /**
      * <code>optional .android_studio.GradleBuildVariant.CodeShrinkerTool code_shrinker = 17;</code>
      * @return The codeShrinker.
      */
+    @java.lang.Override
     public com.google.wireless.android.sdk.stats.GradleBuildVariant.CodeShrinkerTool getCodeShrinker() {
       @SuppressWarnings("deprecation")
       com.google.wireless.android.sdk.stats.GradleBuildVariant.CodeShrinkerTool result = com.google.wireless.android.sdk.stats.GradleBuildVariant.CodeShrinkerTool.valueOf(codeShrinker_);
@@ -8225,7 +8344,7 @@ private static final long serialVersionUID = 0L;
      * <code>optional .android_studio.TestRun.TestExecution test_execution = 18;</code>
      * @return Whether the testExecution field is set.
      */
-    public boolean hasTestExecution() {
+    @java.lang.Override public boolean hasTestExecution() {
       return ((bitField0_ & 0x00020000) != 0);
     }
     /**
@@ -8236,6 +8355,7 @@ private static final long serialVersionUID = 0L;
      * <code>optional .android_studio.TestRun.TestExecution test_execution = 18;</code>
      * @return The testExecution.
      */
+    @java.lang.Override
     public com.google.wireless.android.sdk.stats.TestRun.TestExecution getTestExecution() {
       @SuppressWarnings("deprecation")
       com.google.wireless.android.sdk.stats.TestRun.TestExecution result = com.google.wireless.android.sdk.stats.TestRun.TestExecution.valueOf(testExecution_);
@@ -8283,7 +8403,7 @@ private static final long serialVersionUID = 0L;
      * <code>optional .android_studio.GradleNativeAndroidModule.NativeBuildSystemType native_build_system_type = 19;</code>
      * @return Whether the nativeBuildSystemType field is set.
      */
-    public boolean hasNativeBuildSystemType() {
+    @java.lang.Override public boolean hasNativeBuildSystemType() {
       return ((bitField0_ & 0x00040000) != 0);
     }
     /**
@@ -8294,6 +8414,7 @@ private static final long serialVersionUID = 0L;
      * <code>optional .android_studio.GradleNativeAndroidModule.NativeBuildSystemType native_build_system_type = 19;</code>
      * @return The nativeBuildSystemType.
      */
+    @java.lang.Override
     public com.google.wireless.android.sdk.stats.GradleNativeAndroidModule.NativeBuildSystemType getNativeBuildSystemType() {
       @SuppressWarnings("deprecation")
       com.google.wireless.android.sdk.stats.GradleNativeAndroidModule.NativeBuildSystemType result = com.google.wireless.android.sdk.stats.GradleNativeAndroidModule.NativeBuildSystemType.valueOf(nativeBuildSystemType_);
@@ -8761,6 +8882,7 @@ private static final long serialVersionUID = 0L;
      * <code>optional bool is_annotation_processing_incremental = 22;</code>
      * @return Whether the isAnnotationProcessingIncremental field is set.
      */
+    @java.lang.Override
     public boolean hasIsAnnotationProcessingIncremental() {
       return ((bitField0_ & 0x00200000) != 0);
     }
@@ -8772,6 +8894,7 @@ private static final long serialVersionUID = 0L;
      * <code>optional bool is_annotation_processing_incremental = 22;</code>
      * @return The isAnnotationProcessingIncremental.
      */
+    @java.lang.Override
     public boolean getIsAnnotationProcessingIncremental() {
       return isAnnotationProcessingIncremental_;
     }
@@ -8815,6 +8938,7 @@ private static final long serialVersionUID = 0L;
      * <code>optional bool is_instant_enabled = 23;</code>
      * @return Whether the isInstantEnabled field is set.
      */
+    @java.lang.Override
     public boolean hasIsInstantEnabled() {
       return ((bitField0_ & 0x00400000) != 0);
     }
@@ -8827,6 +8951,7 @@ private static final long serialVersionUID = 0L;
      * <code>optional bool is_instant_enabled = 23;</code>
      * @return The isInstantEnabled.
      */
+    @java.lang.Override
     public boolean getIsInstantEnabled() {
       return isInstantEnabled_;
     }
@@ -8871,6 +8996,7 @@ private static final long serialVersionUID = 0L;
      * <code>optional bool core_library_desugaring_enabled = 24;</code>
      * @return Whether the coreLibraryDesugaringEnabled field is set.
      */
+    @java.lang.Override
     public boolean hasCoreLibraryDesugaringEnabled() {
       return ((bitField0_ & 0x00800000) != 0);
     }
@@ -8882,6 +9008,7 @@ private static final long serialVersionUID = 0L;
      * <code>optional bool core_library_desugaring_enabled = 24;</code>
      * @return The coreLibraryDesugaringEnabled.
      */
+    @java.lang.Override
     public boolean getCoreLibraryDesugaringEnabled() {
       return coreLibraryDesugaringEnabled_;
     }
@@ -9981,6 +10108,7 @@ private static final long serialVersionUID = 0L;
      * <code>optional bool has_unit_test = 30;</code>
      * @return Whether the hasUnitTest field is set.
      */
+    @java.lang.Override
     public boolean hasHasUnitTest() {
       return ((bitField0_ & 0x20000000) != 0);
     }
@@ -9992,6 +10120,7 @@ private static final long serialVersionUID = 0L;
      * <code>optional bool has_unit_test = 30;</code>
      * @return The hasUnitTest.
      */
+    @java.lang.Override
     public boolean getHasUnitTest() {
       return hasUnitTest_;
     }
@@ -10034,6 +10163,7 @@ private static final long serialVersionUID = 0L;
      * <code>optional bool has_android_test = 31;</code>
      * @return Whether the hasAndroidTest field is set.
      */
+    @java.lang.Override
     public boolean hasHasAndroidTest() {
       return ((bitField0_ & 0x40000000) != 0);
     }
@@ -10045,6 +10175,7 @@ private static final long serialVersionUID = 0L;
      * <code>optional bool has_android_test = 31;</code>
      * @return The hasAndroidTest.
      */
+    @java.lang.Override
     public boolean getHasAndroidTest() {
       return hasAndroidTest_;
     }
@@ -10087,6 +10218,7 @@ private static final long serialVersionUID = 0L;
      * <code>optional bool has_test_fixtures = 32;</code>
      * @return Whether the hasTestFixtures field is set.
      */
+    @java.lang.Override
     public boolean hasHasTestFixtures() {
       return ((bitField0_ & 0x80000000) != 0);
     }
@@ -10098,6 +10230,7 @@ private static final long serialVersionUID = 0L;
      * <code>optional bool has_test_fixtures = 32;</code>
      * @return The hasTestFixtures.
      */
+    @java.lang.Override
     public boolean getHasTestFixtures() {
       return hasTestFixtures_;
     }

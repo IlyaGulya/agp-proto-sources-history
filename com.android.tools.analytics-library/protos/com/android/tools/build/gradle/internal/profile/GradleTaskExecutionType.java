@@ -696,8 +696,9 @@ public enum GradleTaskExecutionType
    */
   LIBRARY_DEXING(170),
   /**
-   * <code>DATA_BINDING_MERGE_BASE_CLASS_LOG = 171;</code>
+   * <code>DATA_BINDING_MERGE_BASE_CLASS_LOG = 171 [deprecated = true];</code>
    */
+  @java.lang.Deprecated
   DATA_BINDING_MERGE_BASE_CLASS_LOG(171),
   /**
    * <code>BUNDLE_LIBRARY_CLASSES = 172 [deprecated = true];</code>
@@ -1179,21 +1180,25 @@ public enum GradleTaskExecutionType
    */
   KOTLIN_COMPILE_WITH_WORKERS(290),
   /**
-   * <code>FUSED_LIBS_MERGE_CLASSES = 291;</code>
+   * <code>FUSED_LIBRARY_MERGE_CLASSES = 291;</code>
    */
-  FUSED_LIBS_MERGE_CLASSES(291),
+  FUSED_LIBRARY_MERGE_CLASSES(291),
   /**
-   * <code>FUSED_LIBS_BUNDLE_AAR = 292;</code>
+   * <code>FUSED_LIBRARY_BUNDLE_AAR = 292;</code>
    */
-  FUSED_LIBS_BUNDLE_AAR(292),
+  FUSED_LIBRARY_BUNDLE_AAR(292),
   /**
-   * <code>FUSED_LIBS_BUNDLE_CLASSES = 293;</code>
+   * <code>FUSED_LIBRARY_BUNDLE_CLASSES = 293;</code>
    */
-  FUSED_LIBS_BUNDLE_CLASSES(293),
+  FUSED_LIBRARY_BUNDLE_CLASSES(293),
   /**
-   * <code>FUSED_LIBS_BUNDLE = 294;</code>
+   * <code>FUSED_LIBRARY_BUNDLE = 294;</code>
    */
-  FUSED_LIBS_BUNDLE(294),
+  FUSED_LIBRARY_BUNDLE(294),
+  /**
+   * <code>FUSED_LIBRARY_CLASSES_REWRITE = 295;</code>
+   */
+  FUSED_LIBRARY_CLASSES_REWRITE(295),
   UNRECOGNIZED(-1),
   ;
 
@@ -1404,7 +1409,7 @@ public enum GradleTaskExecutionType
   /**
    * <code>PROCESS_ANDROID_RESOURCES = 51 [deprecated = true];</code>
    */
-  public static final int PROCESS_ANDROID_RESOURCES_VALUE = 51;
+  @java.lang.Deprecated public static final int PROCESS_ANDROID_RESOURCES_VALUE = 51;
   /**
    * <code>PROCESS_LIBRARY_MANIFEST = 52;</code>
    */
@@ -1528,7 +1533,7 @@ public enum GradleTaskExecutionType
   /**
    * <code>CLEAN_BUILD_CACHE = 82 [deprecated = true];</code>
    */
-  public static final int CLEAN_BUILD_CACHE_VALUE = 82;
+  @java.lang.Deprecated public static final int CLEAN_BUILD_CACHE_VALUE = 82;
   /**
    * <code>RESOLVE_DEPENDENCIES = 83;</code>
    */
@@ -1716,7 +1721,7 @@ public enum GradleTaskExecutionType
   /**
    * <code>CHECK_INSTANT_APP_LIBRARIES = 129 [deprecated = true];</code>
    */
-  public static final int CHECK_INSTANT_APP_LIBRARIES_VALUE = 129;
+  @java.lang.Deprecated public static final int CHECK_INSTANT_APP_LIBRARIES_VALUE = 129;
   /**
    * <code>STATIC_LIBRARY_MANIFEST = 130;</code>
    */
@@ -1882,13 +1887,13 @@ public enum GradleTaskExecutionType
    */
   public static final int LIBRARY_DEXING_VALUE = 170;
   /**
-   * <code>DATA_BINDING_MERGE_BASE_CLASS_LOG = 171;</code>
+   * <code>DATA_BINDING_MERGE_BASE_CLASS_LOG = 171 [deprecated = true];</code>
    */
-  public static final int DATA_BINDING_MERGE_BASE_CLASS_LOG_VALUE = 171;
+  @java.lang.Deprecated public static final int DATA_BINDING_MERGE_BASE_CLASS_LOG_VALUE = 171;
   /**
    * <code>BUNDLE_LIBRARY_CLASSES = 172 [deprecated = true];</code>
    */
-  public static final int BUNDLE_LIBRARY_CLASSES_VALUE = 172;
+  @java.lang.Deprecated public static final int BUNDLE_LIBRARY_CLASSES_VALUE = 172;
   /**
    * <code>BUNDLE_LIBRARY_JAVA_RES = 173;</code>
    */
@@ -2136,7 +2141,7 @@ public enum GradleTaskExecutionType
   /**
    * <code>ENUMERATE_CLASSES = 234 [deprecated = true];</code>
    */
-  public static final int ENUMERATE_CLASSES_VALUE = 234;
+  @java.lang.Deprecated public static final int ENUMERATE_CLASSES_VALUE = 234;
   /**
    * <code>COMPRESS_ASSETS = 235;</code>
    */
@@ -2172,7 +2177,7 @@ public enum GradleTaskExecutionType
   /**
    * <code>LINT_MODEL_DEPENDENCIES_WRITER = 243 [deprecated = true];</code>
    */
-  public static final int LINT_MODEL_DEPENDENCIES_WRITER_VALUE = 243;
+  @java.lang.Deprecated public static final int LINT_MODEL_DEPENDENCIES_WRITER_VALUE = 243;
   /**
    * <code>LINT_MODEL_WRITER = 244;</code>
    */
@@ -2362,21 +2367,25 @@ public enum GradleTaskExecutionType
    */
   public static final int KOTLIN_COMPILE_WITH_WORKERS_VALUE = 290;
   /**
-   * <code>FUSED_LIBS_MERGE_CLASSES = 291;</code>
+   * <code>FUSED_LIBRARY_MERGE_CLASSES = 291;</code>
    */
-  public static final int FUSED_LIBS_MERGE_CLASSES_VALUE = 291;
+  public static final int FUSED_LIBRARY_MERGE_CLASSES_VALUE = 291;
   /**
-   * <code>FUSED_LIBS_BUNDLE_AAR = 292;</code>
+   * <code>FUSED_LIBRARY_BUNDLE_AAR = 292;</code>
    */
-  public static final int FUSED_LIBS_BUNDLE_AAR_VALUE = 292;
+  public static final int FUSED_LIBRARY_BUNDLE_AAR_VALUE = 292;
   /**
-   * <code>FUSED_LIBS_BUNDLE_CLASSES = 293;</code>
+   * <code>FUSED_LIBRARY_BUNDLE_CLASSES = 293;</code>
    */
-  public static final int FUSED_LIBS_BUNDLE_CLASSES_VALUE = 293;
+  public static final int FUSED_LIBRARY_BUNDLE_CLASSES_VALUE = 293;
   /**
-   * <code>FUSED_LIBS_BUNDLE = 294;</code>
+   * <code>FUSED_LIBRARY_BUNDLE = 294;</code>
    */
-  public static final int FUSED_LIBS_BUNDLE_VALUE = 294;
+  public static final int FUSED_LIBRARY_BUNDLE_VALUE = 294;
+  /**
+   * <code>FUSED_LIBRARY_CLASSES_REWRITE = 295;</code>
+   */
+  public static final int FUSED_LIBRARY_CLASSES_REWRITE_VALUE = 295;
 
 
   public final int getNumber() {
@@ -2694,10 +2703,11 @@ public enum GradleTaskExecutionType
       case 288: return MANAGED_DEVICE_INSTRUMENTATION_TEST_RESULT_AGGREGATION;
       case 289: return APP_ID_LIST;
       case 290: return KOTLIN_COMPILE_WITH_WORKERS;
-      case 291: return FUSED_LIBS_MERGE_CLASSES;
-      case 292: return FUSED_LIBS_BUNDLE_AAR;
-      case 293: return FUSED_LIBS_BUNDLE_CLASSES;
-      case 294: return FUSED_LIBS_BUNDLE;
+      case 291: return FUSED_LIBRARY_MERGE_CLASSES;
+      case 292: return FUSED_LIBRARY_BUNDLE_AAR;
+      case 293: return FUSED_LIBRARY_BUNDLE_CLASSES;
+      case 294: return FUSED_LIBRARY_BUNDLE;
+      case 295: return FUSED_LIBRARY_CLASSES_REWRITE;
       default: return null;
     }
   }
@@ -2716,6 +2726,10 @@ public enum GradleTaskExecutionType
 
   public final com.google.protobuf.Descriptors.EnumValueDescriptor
       getValueDescriptor() {
+    if (this == UNRECOGNIZED) {
+      throw new java.lang.IllegalStateException(
+          "Can't get the descriptor of an unrecognized enum value.");
+    }
     return getDescriptor().getValues().get(ordinal());
   }
   public final com.google.protobuf.Descriptors.EnumDescriptor

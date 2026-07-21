@@ -10,7 +10,7 @@ package com.google.wireless.android.sdk.stats;
  *
  * Protobuf type {@code android_studio.DynamicLayoutInspectorEvent}
  */
-public  final class DynamicLayoutInspectorEvent extends
+public final class DynamicLayoutInspectorEvent extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:android_studio.DynamicLayoutInspectorEvent)
     DynamicLayoutInspectorEventOrBuilder {
@@ -524,7 +524,7 @@ private static final long serialVersionUID = 0L;
    * <code>optional .android_studio.DynamicLayoutInspectorEvent.DynamicLayoutInspectorEventType type = 1;</code>
    * @return Whether the type field is set.
    */
-  public boolean hasType() {
+  @java.lang.Override public boolean hasType() {
     return ((bitField0_ & 0x00000001) != 0);
   }
   /**
@@ -535,7 +535,7 @@ private static final long serialVersionUID = 0L;
    * <code>optional .android_studio.DynamicLayoutInspectorEvent.DynamicLayoutInspectorEventType type = 1;</code>
    * @return The type.
    */
-  public com.google.wireless.android.sdk.stats.DynamicLayoutInspectorEvent.DynamicLayoutInspectorEventType getType() {
+  @java.lang.Override public com.google.wireless.android.sdk.stats.DynamicLayoutInspectorEvent.DynamicLayoutInspectorEventType getType() {
     @SuppressWarnings("deprecation")
     com.google.wireless.android.sdk.stats.DynamicLayoutInspectorEvent.DynamicLayoutInspectorEventType result = com.google.wireless.android.sdk.stats.DynamicLayoutInspectorEvent.DynamicLayoutInspectorEventType.valueOf(type_);
     return result == null ? com.google.wireless.android.sdk.stats.DynamicLayoutInspectorEvent.DynamicLayoutInspectorEventType.UNKNOWN_EVENT_TYPE : result;
@@ -551,6 +551,7 @@ private static final long serialVersionUID = 0L;
    * <code>optional .android_studio.DynamicLayoutInspectorSession session = 2;</code>
    * @return Whether the session field is set.
    */
+  @java.lang.Override
   public boolean hasSession() {
     return ((bitField0_ & 0x00000002) != 0);
   }
@@ -562,6 +563,7 @@ private static final long serialVersionUID = 0L;
    * <code>optional .android_studio.DynamicLayoutInspectorSession session = 2;</code>
    * @return The session.
    */
+  @java.lang.Override
   public com.google.wireless.android.sdk.stats.DynamicLayoutInspectorSession getSession() {
     return session_ == null ? com.google.wireless.android.sdk.stats.DynamicLayoutInspectorSession.getDefaultInstance() : session_;
   }
@@ -572,6 +574,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>optional .android_studio.DynamicLayoutInspectorSession session = 2;</code>
    */
+  @java.lang.Override
   public com.google.wireless.android.sdk.stats.DynamicLayoutInspectorSessionOrBuilder getSessionOrBuilder() {
     return session_ == null ? com.google.wireless.android.sdk.stats.DynamicLayoutInspectorSession.getDefaultInstance() : session_;
   }
@@ -586,6 +589,7 @@ private static final long serialVersionUID = 0L;
    * <code>optional .android_studio.DynamicLayoutInspectorSnapshotInfo snapshot_info = 3;</code>
    * @return Whether the snapshotInfo field is set.
    */
+  @java.lang.Override
   public boolean hasSnapshotInfo() {
     return ((bitField0_ & 0x00000004) != 0);
   }
@@ -597,6 +601,7 @@ private static final long serialVersionUID = 0L;
    * <code>optional .android_studio.DynamicLayoutInspectorSnapshotInfo snapshot_info = 3;</code>
    * @return The snapshotInfo.
    */
+  @java.lang.Override
   public com.google.wireless.android.sdk.stats.DynamicLayoutInspectorSnapshotInfo getSnapshotInfo() {
     return snapshotInfo_ == null ? com.google.wireless.android.sdk.stats.DynamicLayoutInspectorSnapshotInfo.getDefaultInstance() : snapshotInfo_;
   }
@@ -607,6 +612,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>optional .android_studio.DynamicLayoutInspectorSnapshotInfo snapshot_info = 3;</code>
    */
+  @java.lang.Override
   public com.google.wireless.android.sdk.stats.DynamicLayoutInspectorSnapshotInfoOrBuilder getSnapshotInfoOrBuilder() {
     return snapshotInfo_ == null ? com.google.wireless.android.sdk.stats.DynamicLayoutInspectorSnapshotInfo.getDefaultInstance() : snapshotInfo_;
   }
@@ -621,6 +627,7 @@ private static final long serialVersionUID = 0L;
    * <code>optional .android_studio.DynamicLayoutInspectorErrorInfo error_info = 4;</code>
    * @return Whether the errorInfo field is set.
    */
+  @java.lang.Override
   public boolean hasErrorInfo() {
     return ((bitField0_ & 0x00000008) != 0);
   }
@@ -632,6 +639,7 @@ private static final long serialVersionUID = 0L;
    * <code>optional .android_studio.DynamicLayoutInspectorErrorInfo error_info = 4;</code>
    * @return The errorInfo.
    */
+  @java.lang.Override
   public com.google.wireless.android.sdk.stats.DynamicLayoutInspectorErrorInfo getErrorInfo() {
     return errorInfo_ == null ? com.google.wireless.android.sdk.stats.DynamicLayoutInspectorErrorInfo.getDefaultInstance() : errorInfo_;
   }
@@ -642,6 +650,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>optional .android_studio.DynamicLayoutInspectorErrorInfo error_info = 4;</code>
    */
+  @java.lang.Override
   public com.google.wireless.android.sdk.stats.DynamicLayoutInspectorErrorInfoOrBuilder getErrorInfoOrBuilder() {
     return errorInfo_ == null ? com.google.wireless.android.sdk.stats.DynamicLayoutInspectorErrorInfo.getDefaultInstance() : errorInfo_;
   }
@@ -1074,7 +1083,7 @@ private static final long serialVersionUID = 0L;
      * <code>optional .android_studio.DynamicLayoutInspectorEvent.DynamicLayoutInspectorEventType type = 1;</code>
      * @return Whether the type field is set.
      */
-    public boolean hasType() {
+    @java.lang.Override public boolean hasType() {
       return ((bitField0_ & 0x00000001) != 0);
     }
     /**
@@ -1085,6 +1094,7 @@ private static final long serialVersionUID = 0L;
      * <code>optional .android_studio.DynamicLayoutInspectorEvent.DynamicLayoutInspectorEventType type = 1;</code>
      * @return The type.
      */
+    @java.lang.Override
     public com.google.wireless.android.sdk.stats.DynamicLayoutInspectorEvent.DynamicLayoutInspectorEventType getType() {
       @SuppressWarnings("deprecation")
       com.google.wireless.android.sdk.stats.DynamicLayoutInspectorEvent.DynamicLayoutInspectorEventType result = com.google.wireless.android.sdk.stats.DynamicLayoutInspectorEvent.DynamicLayoutInspectorEventType.valueOf(type_);

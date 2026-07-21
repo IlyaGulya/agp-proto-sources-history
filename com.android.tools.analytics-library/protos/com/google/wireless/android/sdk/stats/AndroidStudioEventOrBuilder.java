@@ -3994,4 +3994,31 @@ public interface AndroidStudioEventOrBuilder extends
    * <code>optional .android_studio.SdkIndexLibraryDetails sdk_index_library_details = 142;</code>
    */
   com.google.wireless.android.sdk.stats.SdkIndexLibraryDetailsOrBuilder getSdkIndexLibraryDetailsOrBuilder();
+
+  /**
+   * <pre>
+   * set when kind = EDITOR_PICKER
+   * </pre>
+   *
+   * <code>optional .android_studio.EditorPickerEvent editor_picker_event = 143;</code>
+   * @return Whether the editorPickerEvent field is set.
+   */
+  boolean hasEditorPickerEvent();
+  /**
+   * <pre>
+   * set when kind = EDITOR_PICKER
+   * </pre>
+   *
+   * <code>optional .android_studio.EditorPickerEvent editor_picker_event = 143;</code>
+   * @return The editorPickerEvent.
+   */
+  com.google.wireless.android.sdk.stats.EditorPickerEvent getEditorPickerEvent();
+  /**
+   * <pre>
+   * set when kind = EDITOR_PICKER
+   * </pre>
+   *
+   * <code>optional .android_studio.EditorPickerEvent editor_picker_event = 143;</code>
+   */
+  com.google.wireless.android.sdk.stats.EditorPickerEventOrBuilder getEditorPickerEventOrBuilder();
 }

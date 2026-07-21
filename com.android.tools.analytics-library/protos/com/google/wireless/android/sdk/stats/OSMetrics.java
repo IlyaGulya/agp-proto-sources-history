@@ -10,7 +10,7 @@ package com.google.wireless.android.sdk.stats;
  *
  * Protobuf type {@code android_studio.OSMetrics}
  */
-public  final class OSMetrics extends
+public final class OSMetrics extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:android_studio.OSMetrics)
     OSMetricsOrBuilder {
@@ -487,7 +487,7 @@ private static final long serialVersionUID = 0L;
    *
    * Protobuf type {@code android_studio.OSMetrics.Process}
    */
-  public  static final class Process extends
+  public static final class Process extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:android_studio.OSMetrics.Process)
       ProcessOrBuilder {
@@ -634,6 +634,7 @@ private static final long serialVersionUID = 0L;
      * <code>optional int32 pid = 1;</code>
      * @return Whether the pid field is set.
      */
+    @java.lang.Override
     public boolean hasPid() {
       return ((bitField0_ & 0x00000001) != 0);
     }
@@ -645,6 +646,7 @@ private static final long serialVersionUID = 0L;
      * <code>optional int32 pid = 1;</code>
      * @return The pid.
      */
+    @java.lang.Override
     public int getPid() {
       return pid_;
     }
@@ -659,6 +661,7 @@ private static final long serialVersionUID = 0L;
      * <code>optional int32 parent_pid = 2;</code>
      * @return Whether the parentPid field is set.
      */
+    @java.lang.Override
     public boolean hasParentPid() {
       return ((bitField0_ & 0x00000002) != 0);
     }
@@ -670,6 +673,7 @@ private static final long serialVersionUID = 0L;
      * <code>optional int32 parent_pid = 2;</code>
      * @return The parentPid.
      */
+    @java.lang.Override
     public int getParentPid() {
       return parentPid_;
     }
@@ -684,6 +688,7 @@ private static final long serialVersionUID = 0L;
      * <code>optional int64 start_timestamp_ms = 3;</code>
      * @return Whether the startTimestampMs field is set.
      */
+    @java.lang.Override
     public boolean hasStartTimestampMs() {
       return ((bitField0_ & 0x00000004) != 0);
     }
@@ -695,6 +700,7 @@ private static final long serialVersionUID = 0L;
      * <code>optional int64 start_timestamp_ms = 3;</code>
      * @return The startTimestampMs.
      */
+    @java.lang.Override
     public long getStartTimestampMs() {
       return startTimestampMs_;
     }
@@ -709,6 +715,7 @@ private static final long serialVersionUID = 0L;
      * <code>optional int64 total_cpu_use_milliseconds = 4;</code>
      * @return Whether the totalCpuUseMilliseconds field is set.
      */
+    @java.lang.Override
     public boolean hasTotalCpuUseMilliseconds() {
       return ((bitField0_ & 0x00000008) != 0);
     }
@@ -720,6 +727,7 @@ private static final long serialVersionUID = 0L;
      * <code>optional int64 total_cpu_use_milliseconds = 4;</code>
      * @return The totalCpuUseMilliseconds.
      */
+    @java.lang.Override
     public long getTotalCpuUseMilliseconds() {
       return totalCpuUseMilliseconds_;
     }
@@ -734,7 +742,7 @@ private static final long serialVersionUID = 0L;
      * <code>optional .android_studio.OSMetrics.ProcessType type = 5;</code>
      * @return Whether the type field is set.
      */
-    public boolean hasType() {
+    @java.lang.Override public boolean hasType() {
       return ((bitField0_ & 0x00000010) != 0);
     }
     /**
@@ -745,7 +753,7 @@ private static final long serialVersionUID = 0L;
      * <code>optional .android_studio.OSMetrics.ProcessType type = 5;</code>
      * @return The type.
      */
-    public com.google.wireless.android.sdk.stats.OSMetrics.ProcessType getType() {
+    @java.lang.Override public com.google.wireless.android.sdk.stats.OSMetrics.ProcessType getType() {
       @SuppressWarnings("deprecation")
       com.google.wireless.android.sdk.stats.OSMetrics.ProcessType result = com.google.wireless.android.sdk.stats.OSMetrics.ProcessType.valueOf(type_);
       return result == null ? com.google.wireless.android.sdk.stats.OSMetrics.ProcessType.UNKNOWN_PROCESS_TYPE : result;
@@ -761,7 +769,7 @@ private static final long serialVersionUID = 0L;
      * <code>optional .android_studio.OSMetrics.ProcessType last_known_parent_type = 6;</code>
      * @return Whether the lastKnownParentType field is set.
      */
-    public boolean hasLastKnownParentType() {
+    @java.lang.Override public boolean hasLastKnownParentType() {
       return ((bitField0_ & 0x00000020) != 0);
     }
     /**
@@ -772,7 +780,7 @@ private static final long serialVersionUID = 0L;
      * <code>optional .android_studio.OSMetrics.ProcessType last_known_parent_type = 6;</code>
      * @return The lastKnownParentType.
      */
-    public com.google.wireless.android.sdk.stats.OSMetrics.ProcessType getLastKnownParentType() {
+    @java.lang.Override public com.google.wireless.android.sdk.stats.OSMetrics.ProcessType getLastKnownParentType() {
       @SuppressWarnings("deprecation")
       com.google.wireless.android.sdk.stats.OSMetrics.ProcessType result = com.google.wireless.android.sdk.stats.OSMetrics.ProcessType.valueOf(lastKnownParentType_);
       return result == null ? com.google.wireless.android.sdk.stats.OSMetrics.ProcessType.UNKNOWN_PROCESS_TYPE : result;
@@ -789,6 +797,7 @@ private static final long serialVersionUID = 0L;
      * <code>optional int64 rss = 7;</code>
      * @return Whether the rss field is set.
      */
+    @java.lang.Override
     public boolean hasRss() {
       return ((bitField0_ & 0x00000040) != 0);
     }
@@ -801,6 +810,7 @@ private static final long serialVersionUID = 0L;
      * <code>optional int64 rss = 7;</code>
      * @return The rss.
      */
+    @java.lang.Override
     public long getRss() {
       return rss_;
     }
@@ -816,6 +826,7 @@ private static final long serialVersionUID = 0L;
      * <code>optional int64 working_set_size = 8;</code>
      * @return Whether the workingSetSize field is set.
      */
+    @java.lang.Override
     public boolean hasWorkingSetSize() {
       return ((bitField0_ & 0x00000080) != 0);
     }
@@ -828,6 +839,7 @@ private static final long serialVersionUID = 0L;
      * <code>optional int64 working_set_size = 8;</code>
      * @return The workingSetSize.
      */
+    @java.lang.Override
     public long getWorkingSetSize() {
       return workingSetSize_;
     }
@@ -843,6 +855,7 @@ private static final long serialVersionUID = 0L;
      * <code>optional int64 private_page_count = 9;</code>
      * @return Whether the privatePageCount field is set.
      */
+    @java.lang.Override
     public boolean hasPrivatePageCount() {
       return ((bitField0_ & 0x00000100) != 0);
     }
@@ -855,6 +868,7 @@ private static final long serialVersionUID = 0L;
      * <code>optional int64 private_page_count = 9;</code>
      * @return The privatePageCount.
      */
+    @java.lang.Override
     public long getPrivatePageCount() {
       return privatePageCount_;
     }
@@ -1389,6 +1403,7 @@ private static final long serialVersionUID = 0L;
        * <code>optional int32 pid = 1;</code>
        * @return Whether the pid field is set.
        */
+      @java.lang.Override
       public boolean hasPid() {
         return ((bitField0_ & 0x00000001) != 0);
       }
@@ -1400,6 +1415,7 @@ private static final long serialVersionUID = 0L;
        * <code>optional int32 pid = 1;</code>
        * @return The pid.
        */
+      @java.lang.Override
       public int getPid() {
         return pid_;
       }
@@ -1442,6 +1458,7 @@ private static final long serialVersionUID = 0L;
        * <code>optional int32 parent_pid = 2;</code>
        * @return Whether the parentPid field is set.
        */
+      @java.lang.Override
       public boolean hasParentPid() {
         return ((bitField0_ & 0x00000002) != 0);
       }
@@ -1453,6 +1470,7 @@ private static final long serialVersionUID = 0L;
        * <code>optional int32 parent_pid = 2;</code>
        * @return The parentPid.
        */
+      @java.lang.Override
       public int getParentPid() {
         return parentPid_;
       }
@@ -1495,6 +1513,7 @@ private static final long serialVersionUID = 0L;
        * <code>optional int64 start_timestamp_ms = 3;</code>
        * @return Whether the startTimestampMs field is set.
        */
+      @java.lang.Override
       public boolean hasStartTimestampMs() {
         return ((bitField0_ & 0x00000004) != 0);
       }
@@ -1506,6 +1525,7 @@ private static final long serialVersionUID = 0L;
        * <code>optional int64 start_timestamp_ms = 3;</code>
        * @return The startTimestampMs.
        */
+      @java.lang.Override
       public long getStartTimestampMs() {
         return startTimestampMs_;
       }
@@ -1548,6 +1568,7 @@ private static final long serialVersionUID = 0L;
        * <code>optional int64 total_cpu_use_milliseconds = 4;</code>
        * @return Whether the totalCpuUseMilliseconds field is set.
        */
+      @java.lang.Override
       public boolean hasTotalCpuUseMilliseconds() {
         return ((bitField0_ & 0x00000008) != 0);
       }
@@ -1559,6 +1580,7 @@ private static final long serialVersionUID = 0L;
        * <code>optional int64 total_cpu_use_milliseconds = 4;</code>
        * @return The totalCpuUseMilliseconds.
        */
+      @java.lang.Override
       public long getTotalCpuUseMilliseconds() {
         return totalCpuUseMilliseconds_;
       }
@@ -1601,7 +1623,7 @@ private static final long serialVersionUID = 0L;
        * <code>optional .android_studio.OSMetrics.ProcessType type = 5;</code>
        * @return Whether the type field is set.
        */
-      public boolean hasType() {
+      @java.lang.Override public boolean hasType() {
         return ((bitField0_ & 0x00000010) != 0);
       }
       /**
@@ -1612,6 +1634,7 @@ private static final long serialVersionUID = 0L;
        * <code>optional .android_studio.OSMetrics.ProcessType type = 5;</code>
        * @return The type.
        */
+      @java.lang.Override
       public com.google.wireless.android.sdk.stats.OSMetrics.ProcessType getType() {
         @SuppressWarnings("deprecation")
         com.google.wireless.android.sdk.stats.OSMetrics.ProcessType result = com.google.wireless.android.sdk.stats.OSMetrics.ProcessType.valueOf(type_);
@@ -1659,7 +1682,7 @@ private static final long serialVersionUID = 0L;
        * <code>optional .android_studio.OSMetrics.ProcessType last_known_parent_type = 6;</code>
        * @return Whether the lastKnownParentType field is set.
        */
-      public boolean hasLastKnownParentType() {
+      @java.lang.Override public boolean hasLastKnownParentType() {
         return ((bitField0_ & 0x00000020) != 0);
       }
       /**
@@ -1670,6 +1693,7 @@ private static final long serialVersionUID = 0L;
        * <code>optional .android_studio.OSMetrics.ProcessType last_known_parent_type = 6;</code>
        * @return The lastKnownParentType.
        */
+      @java.lang.Override
       public com.google.wireless.android.sdk.stats.OSMetrics.ProcessType getLastKnownParentType() {
         @SuppressWarnings("deprecation")
         com.google.wireless.android.sdk.stats.OSMetrics.ProcessType result = com.google.wireless.android.sdk.stats.OSMetrics.ProcessType.valueOf(lastKnownParentType_);
@@ -1718,6 +1742,7 @@ private static final long serialVersionUID = 0L;
        * <code>optional int64 rss = 7;</code>
        * @return Whether the rss field is set.
        */
+      @java.lang.Override
       public boolean hasRss() {
         return ((bitField0_ & 0x00000040) != 0);
       }
@@ -1730,6 +1755,7 @@ private static final long serialVersionUID = 0L;
        * <code>optional int64 rss = 7;</code>
        * @return The rss.
        */
+      @java.lang.Override
       public long getRss() {
         return rss_;
       }
@@ -1775,6 +1801,7 @@ private static final long serialVersionUID = 0L;
        * <code>optional int64 working_set_size = 8;</code>
        * @return Whether the workingSetSize field is set.
        */
+      @java.lang.Override
       public boolean hasWorkingSetSize() {
         return ((bitField0_ & 0x00000080) != 0);
       }
@@ -1787,6 +1814,7 @@ private static final long serialVersionUID = 0L;
        * <code>optional int64 working_set_size = 8;</code>
        * @return The workingSetSize.
        */
+      @java.lang.Override
       public long getWorkingSetSize() {
         return workingSetSize_;
       }
@@ -1832,6 +1860,7 @@ private static final long serialVersionUID = 0L;
        * <code>optional int64 private_page_count = 9;</code>
        * @return Whether the privatePageCount field is set.
        */
+      @java.lang.Override
       public boolean hasPrivatePageCount() {
         return ((bitField0_ & 0x00000100) != 0);
       }
@@ -1844,6 +1873,7 @@ private static final long serialVersionUID = 0L;
        * <code>optional int64 private_page_count = 9;</code>
        * @return The privatePageCount.
        */
+      @java.lang.Override
       public long getPrivatePageCount() {
         return privatePageCount_;
       }
@@ -1941,6 +1971,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .android_studio.OSMetrics.Process processes = 1;</code>
    */
+  @java.lang.Override
   public java.util.List<com.google.wireless.android.sdk.stats.OSMetrics.Process> getProcessesList() {
     return processes_;
   }
@@ -1952,6 +1983,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .android_studio.OSMetrics.Process processes = 1;</code>
    */
+  @java.lang.Override
   public java.util.List<? extends com.google.wireless.android.sdk.stats.OSMetrics.ProcessOrBuilder> 
       getProcessesOrBuilderList() {
     return processes_;
@@ -1964,6 +1996,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .android_studio.OSMetrics.Process processes = 1;</code>
    */
+  @java.lang.Override
   public int getProcessesCount() {
     return processes_.size();
   }
@@ -1975,6 +2008,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .android_studio.OSMetrics.Process processes = 1;</code>
    */
+  @java.lang.Override
   public com.google.wireless.android.sdk.stats.OSMetrics.Process getProcesses(int index) {
     return processes_.get(index);
   }
@@ -1986,6 +2020,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .android_studio.OSMetrics.Process processes = 1;</code>
    */
+  @java.lang.Override
   public com.google.wireless.android.sdk.stats.OSMetrics.ProcessOrBuilder getProcessesOrBuilder(
       int index) {
     return processes_.get(index);

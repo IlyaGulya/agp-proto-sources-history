@@ -10,7 +10,7 @@ package com.google.wireless.android.sdk.stats;
  *
  * Protobuf type {@code android_studio.BuildAttributionStats}
  */
-public  final class BuildAttributionStats extends
+public final class BuildAttributionStats extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:android_studio.BuildAttributionStats)
     BuildAttributionStatsOrBuilder {
@@ -129,6 +129,7 @@ private static final long serialVersionUID = 0L;
    * <code>optional .android_studio.BuildAttributionAnalyzersData build_attribution_analyzers_data = 1;</code>
    * @return Whether the buildAttributionAnalyzersData field is set.
    */
+  @java.lang.Override
   public boolean hasBuildAttributionAnalyzersData() {
     return ((bitField0_ & 0x00000001) != 0);
   }
@@ -140,6 +141,7 @@ private static final long serialVersionUID = 0L;
    * <code>optional .android_studio.BuildAttributionAnalyzersData build_attribution_analyzers_data = 1;</code>
    * @return The buildAttributionAnalyzersData.
    */
+  @java.lang.Override
   public com.google.wireless.android.sdk.stats.BuildAttributionAnalyzersData getBuildAttributionAnalyzersData() {
     return buildAttributionAnalyzersData_ == null ? com.google.wireless.android.sdk.stats.BuildAttributionAnalyzersData.getDefaultInstance() : buildAttributionAnalyzersData_;
   }
@@ -150,6 +152,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>optional .android_studio.BuildAttributionAnalyzersData build_attribution_analyzers_data = 1;</code>
    */
+  @java.lang.Override
   public com.google.wireless.android.sdk.stats.BuildAttributionAnalyzersDataOrBuilder getBuildAttributionAnalyzersDataOrBuilder() {
     return buildAttributionAnalyzersData_ == null ? com.google.wireless.android.sdk.stats.BuildAttributionAnalyzersData.getDefaultInstance() : buildAttributionAnalyzersData_;
   }
@@ -164,6 +167,7 @@ private static final long serialVersionUID = 0L;
    * <code>optional .android_studio.BuildAttributionPerformanceStats build_attribution_performance_stats = 2;</code>
    * @return Whether the buildAttributionPerformanceStats field is set.
    */
+  @java.lang.Override
   public boolean hasBuildAttributionPerformanceStats() {
     return ((bitField0_ & 0x00000002) != 0);
   }
@@ -175,6 +179,7 @@ private static final long serialVersionUID = 0L;
    * <code>optional .android_studio.BuildAttributionPerformanceStats build_attribution_performance_stats = 2;</code>
    * @return The buildAttributionPerformanceStats.
    */
+  @java.lang.Override
   public com.google.wireless.android.sdk.stats.BuildAttributionPerformanceStats getBuildAttributionPerformanceStats() {
     return buildAttributionPerformanceStats_ == null ? com.google.wireless.android.sdk.stats.BuildAttributionPerformanceStats.getDefaultInstance() : buildAttributionPerformanceStats_;
   }
@@ -185,6 +190,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>optional .android_studio.BuildAttributionPerformanceStats build_attribution_performance_stats = 2;</code>
    */
+  @java.lang.Override
   public com.google.wireless.android.sdk.stats.BuildAttributionPerformanceStatsOrBuilder getBuildAttributionPerformanceStatsOrBuilder() {
     return buildAttributionPerformanceStats_ == null ? com.google.wireless.android.sdk.stats.BuildAttributionPerformanceStats.getDefaultInstance() : buildAttributionPerformanceStats_;
   }
@@ -200,6 +206,7 @@ private static final long serialVersionUID = 0L;
    * <code>optional string build_attribution_report_session_id = 3;</code>
    * @return Whether the buildAttributionReportSessionId field is set.
    */
+  @java.lang.Override
   public boolean hasBuildAttributionReportSessionId() {
     return ((bitField0_ & 0x00000004) != 0);
   }
@@ -212,6 +219,7 @@ private static final long serialVersionUID = 0L;
    * <code>optional string build_attribution_report_session_id = 3;</code>
    * @return The buildAttributionReportSessionId.
    */
+  @java.lang.Override
   public java.lang.String getBuildAttributionReportSessionId() {
     java.lang.Object ref = buildAttributionReportSessionId_;
     if (ref instanceof java.lang.String) {
@@ -235,6 +243,7 @@ private static final long serialVersionUID = 0L;
    * <code>optional string build_attribution_report_session_id = 3;</code>
    * @return The bytes for buildAttributionReportSessionId.
    */
+  @java.lang.Override
   public com.google.protobuf.ByteString
       getBuildAttributionReportSessionIdBytes() {
     java.lang.Object ref = buildAttributionReportSessionId_;

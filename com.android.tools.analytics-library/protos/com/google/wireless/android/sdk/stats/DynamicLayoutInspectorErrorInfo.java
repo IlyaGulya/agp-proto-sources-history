@@ -10,7 +10,7 @@ package com.google.wireless.android.sdk.stats;
  *
  * Protobuf type {@code android_studio.DynamicLayoutInspectorErrorInfo}
  */
-public  final class DynamicLayoutInspectorErrorInfo extends
+public final class DynamicLayoutInspectorErrorInfo extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:android_studio.DynamicLayoutInspectorErrorInfo)
     DynamicLayoutInspectorErrorInfoOrBuilder {
@@ -557,7 +557,7 @@ private static final long serialVersionUID = 0L;
    * <code>optional .android_studio.DynamicLayoutInspectorErrorInfo.AttachErrorState attach_error_state = 1;</code>
    * @return Whether the attachErrorState field is set.
    */
-  public boolean hasAttachErrorState() {
+  @java.lang.Override public boolean hasAttachErrorState() {
     return ((bitField0_ & 0x00000001) != 0);
   }
   /**
@@ -569,7 +569,7 @@ private static final long serialVersionUID = 0L;
    * <code>optional .android_studio.DynamicLayoutInspectorErrorInfo.AttachErrorState attach_error_state = 1;</code>
    * @return The attachErrorState.
    */
-  public com.google.wireless.android.sdk.stats.DynamicLayoutInspectorErrorInfo.AttachErrorState getAttachErrorState() {
+  @java.lang.Override public com.google.wireless.android.sdk.stats.DynamicLayoutInspectorErrorInfo.AttachErrorState getAttachErrorState() {
     @SuppressWarnings("deprecation")
     com.google.wireless.android.sdk.stats.DynamicLayoutInspectorErrorInfo.AttachErrorState result = com.google.wireless.android.sdk.stats.DynamicLayoutInspectorErrorInfo.AttachErrorState.valueOf(attachErrorState_);
     return result == null ? com.google.wireless.android.sdk.stats.DynamicLayoutInspectorErrorInfo.AttachErrorState.UNKNOWN_ATTACH_ERROR_STATE : result;
@@ -902,7 +902,7 @@ private static final long serialVersionUID = 0L;
      * <code>optional .android_studio.DynamicLayoutInspectorErrorInfo.AttachErrorState attach_error_state = 1;</code>
      * @return Whether the attachErrorState field is set.
      */
-    public boolean hasAttachErrorState() {
+    @java.lang.Override public boolean hasAttachErrorState() {
       return ((bitField0_ & 0x00000001) != 0);
     }
     /**
@@ -914,6 +914,7 @@ private static final long serialVersionUID = 0L;
      * <code>optional .android_studio.DynamicLayoutInspectorErrorInfo.AttachErrorState attach_error_state = 1;</code>
      * @return The attachErrorState.
      */
+    @java.lang.Override
     public com.google.wireless.android.sdk.stats.DynamicLayoutInspectorErrorInfo.AttachErrorState getAttachErrorState() {
       @SuppressWarnings("deprecation")
       com.google.wireless.android.sdk.stats.DynamicLayoutInspectorErrorInfo.AttachErrorState result = com.google.wireless.android.sdk.stats.DynamicLayoutInspectorErrorInfo.AttachErrorState.valueOf(attachErrorState_);

@@ -6,7 +6,7 @@ package com.google.wireless.android.sdk.stats;
 /**
  * Protobuf type {@code android_studio.SdkIndexLibraryDetails}
  */
-public  final class SdkIndexLibraryDetails extends
+public final class SdkIndexLibraryDetails extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:android_studio.SdkIndexLibraryDetails)
     SdkIndexLibraryDetailsOrBuilder {
@@ -113,6 +113,7 @@ private static final long serialVersionUID = 0L;
    * <code>optional string group_id = 1;</code>
    * @return Whether the groupId field is set.
    */
+  @java.lang.Override
   public boolean hasGroupId() {
     return ((bitField0_ & 0x00000001) != 0);
   }
@@ -124,6 +125,7 @@ private static final long serialVersionUID = 0L;
    * <code>optional string group_id = 1;</code>
    * @return The groupId.
    */
+  @java.lang.Override
   public java.lang.String getGroupId() {
     java.lang.Object ref = groupId_;
     if (ref instanceof java.lang.String) {
@@ -146,6 +148,7 @@ private static final long serialVersionUID = 0L;
    * <code>optional string group_id = 1;</code>
    * @return The bytes for groupId.
    */
+  @java.lang.Override
   public com.google.protobuf.ByteString
       getGroupIdBytes() {
     java.lang.Object ref = groupId_;
@@ -170,6 +173,7 @@ private static final long serialVersionUID = 0L;
    * <code>optional string artifact_id = 2;</code>
    * @return Whether the artifactId field is set.
    */
+  @java.lang.Override
   public boolean hasArtifactId() {
     return ((bitField0_ & 0x00000002) != 0);
   }
@@ -181,6 +185,7 @@ private static final long serialVersionUID = 0L;
    * <code>optional string artifact_id = 2;</code>
    * @return The artifactId.
    */
+  @java.lang.Override
   public java.lang.String getArtifactId() {
     java.lang.Object ref = artifactId_;
     if (ref instanceof java.lang.String) {
@@ -203,6 +208,7 @@ private static final long serialVersionUID = 0L;
    * <code>optional string artifact_id = 2;</code>
    * @return The bytes for artifactId.
    */
+  @java.lang.Override
   public com.google.protobuf.ByteString
       getArtifactIdBytes() {
     java.lang.Object ref = artifactId_;
@@ -227,6 +233,7 @@ private static final long serialVersionUID = 0L;
    * <code>optional string version_string = 3;</code>
    * @return Whether the versionString field is set.
    */
+  @java.lang.Override
   public boolean hasVersionString() {
     return ((bitField0_ & 0x00000004) != 0);
   }
@@ -238,6 +245,7 @@ private static final long serialVersionUID = 0L;
    * <code>optional string version_string = 3;</code>
    * @return The versionString.
    */
+  @java.lang.Override
   public java.lang.String getVersionString() {
     java.lang.Object ref = versionString_;
     if (ref instanceof java.lang.String) {
@@ -260,6 +268,7 @@ private static final long serialVersionUID = 0L;
    * <code>optional string version_string = 3;</code>
    * @return The bytes for versionString.
    */
+  @java.lang.Override
   public com.google.protobuf.ByteString
       getVersionStringBytes() {
     java.lang.Object ref = versionString_;

@@ -10,7 +10,7 @@ package com.google.wireless.android.sdk.stats;
  *
  * Protobuf type {@code android_studio.ComposeAnimationToolingEvent}
  */
-public  final class ComposeAnimationToolingEvent extends
+public final class ComposeAnimationToolingEvent extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:android_studio.ComposeAnimationToolingEvent)
     ComposeAnimationToolingEventOrBuilder {
@@ -416,7 +416,7 @@ private static final long serialVersionUID = 0L;
    * <code>optional .android_studio.ComposeAnimationToolingEvent.ComposeAnimationToolingEventType type = 1;</code>
    * @return Whether the type field is set.
    */
-  public boolean hasType() {
+  @java.lang.Override public boolean hasType() {
     return ((bitField0_ & 0x00000001) != 0);
   }
   /**
@@ -427,7 +427,7 @@ private static final long serialVersionUID = 0L;
    * <code>optional .android_studio.ComposeAnimationToolingEvent.ComposeAnimationToolingEventType type = 1;</code>
    * @return The type.
    */
-  public com.google.wireless.android.sdk.stats.ComposeAnimationToolingEvent.ComposeAnimationToolingEventType getType() {
+  @java.lang.Override public com.google.wireless.android.sdk.stats.ComposeAnimationToolingEvent.ComposeAnimationToolingEventType getType() {
     @SuppressWarnings("deprecation")
     com.google.wireless.android.sdk.stats.ComposeAnimationToolingEvent.ComposeAnimationToolingEventType result = com.google.wireless.android.sdk.stats.ComposeAnimationToolingEvent.ComposeAnimationToolingEventType.valueOf(type_);
     return result == null ? com.google.wireless.android.sdk.stats.ComposeAnimationToolingEvent.ComposeAnimationToolingEventType.UNKNOWN_EVENT_TYPE : result;
@@ -444,6 +444,7 @@ private static final long serialVersionUID = 0L;
    * <code>optional float animation_speed_multiplier = 2;</code>
    * @return Whether the animationSpeedMultiplier field is set.
    */
+  @java.lang.Override
   public boolean hasAnimationSpeedMultiplier() {
     return ((bitField0_ & 0x00000002) != 0);
   }
@@ -456,6 +457,7 @@ private static final long serialVersionUID = 0L;
    * <code>optional float animation_speed_multiplier = 2;</code>
    * @return The animationSpeedMultiplier.
    */
+  @java.lang.Override
   public float getAnimationSpeedMultiplier() {
     return animationSpeedMultiplier_;
   }
@@ -813,7 +815,7 @@ private static final long serialVersionUID = 0L;
      * <code>optional .android_studio.ComposeAnimationToolingEvent.ComposeAnimationToolingEventType type = 1;</code>
      * @return Whether the type field is set.
      */
-    public boolean hasType() {
+    @java.lang.Override public boolean hasType() {
       return ((bitField0_ & 0x00000001) != 0);
     }
     /**
@@ -824,6 +826,7 @@ private static final long serialVersionUID = 0L;
      * <code>optional .android_studio.ComposeAnimationToolingEvent.ComposeAnimationToolingEventType type = 1;</code>
      * @return The type.
      */
+    @java.lang.Override
     public com.google.wireless.android.sdk.stats.ComposeAnimationToolingEvent.ComposeAnimationToolingEventType getType() {
       @SuppressWarnings("deprecation")
       com.google.wireless.android.sdk.stats.ComposeAnimationToolingEvent.ComposeAnimationToolingEventType result = com.google.wireless.android.sdk.stats.ComposeAnimationToolingEvent.ComposeAnimationToolingEventType.valueOf(type_);
@@ -872,6 +875,7 @@ private static final long serialVersionUID = 0L;
      * <code>optional float animation_speed_multiplier = 2;</code>
      * @return Whether the animationSpeedMultiplier field is set.
      */
+    @java.lang.Override
     public boolean hasAnimationSpeedMultiplier() {
       return ((bitField0_ & 0x00000002) != 0);
     }
@@ -884,6 +888,7 @@ private static final long serialVersionUID = 0L;
      * <code>optional float animation_speed_multiplier = 2;</code>
      * @return The animationSpeedMultiplier.
      */
+    @java.lang.Override
     public float getAnimationSpeedMultiplier() {
       return animationSpeedMultiplier_;
     }

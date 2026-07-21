@@ -10,7 +10,7 @@ package com.google.wireless.android.sdk.stats;
  *
  * Protobuf type {@code android_studio.FileUsage}
  */
-public  final class FileUsage extends
+public final class FileUsage extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:android_studio.FileUsage)
     FileUsageOrBuilder {
@@ -260,6 +260,7 @@ private static final long serialVersionUID = 0L;
    * <code>optional string file_path = 1;</code>
    * @return Whether the filePath field is set.
    */
+  @java.lang.Override
   public boolean hasFilePath() {
     return ((bitField0_ & 0x00000001) != 0);
   }
@@ -271,6 +272,7 @@ private static final long serialVersionUID = 0L;
    * <code>optional string file_path = 1;</code>
    * @return The filePath.
    */
+  @java.lang.Override
   public java.lang.String getFilePath() {
     java.lang.Object ref = filePath_;
     if (ref instanceof java.lang.String) {
@@ -293,6 +295,7 @@ private static final long serialVersionUID = 0L;
    * <code>optional string file_path = 1;</code>
    * @return The bytes for filePath.
    */
+  @java.lang.Override
   public com.google.protobuf.ByteString
       getFilePathBytes() {
     java.lang.Object ref = filePath_;
@@ -317,6 +320,7 @@ private static final long serialVersionUID = 0L;
    * <code>optional string file_type = 2;</code>
    * @return Whether the fileType field is set.
    */
+  @java.lang.Override
   public boolean hasFileType() {
     return ((bitField0_ & 0x00000002) != 0);
   }
@@ -328,6 +332,7 @@ private static final long serialVersionUID = 0L;
    * <code>optional string file_type = 2;</code>
    * @return The fileType.
    */
+  @java.lang.Override
   public java.lang.String getFileType() {
     java.lang.Object ref = fileType_;
     if (ref instanceof java.lang.String) {
@@ -350,6 +355,7 @@ private static final long serialVersionUID = 0L;
    * <code>optional string file_type = 2;</code>
    * @return The bytes for fileType.
    */
+  @java.lang.Override
   public com.google.protobuf.ByteString
       getFileTypeBytes() {
     java.lang.Object ref = fileType_;
@@ -374,6 +380,7 @@ private static final long serialVersionUID = 0L;
    * <code>optional string plugin_type = 3;</code>
    * @return Whether the pluginType field is set.
    */
+  @java.lang.Override
   public boolean hasPluginType() {
     return ((bitField0_ & 0x00000004) != 0);
   }
@@ -385,6 +392,7 @@ private static final long serialVersionUID = 0L;
    * <code>optional string plugin_type = 3;</code>
    * @return The pluginType.
    */
+  @java.lang.Override
   public java.lang.String getPluginType() {
     java.lang.Object ref = pluginType_;
     if (ref instanceof java.lang.String) {
@@ -407,6 +415,7 @@ private static final long serialVersionUID = 0L;
    * <code>optional string plugin_type = 3;</code>
    * @return The bytes for pluginType.
    */
+  @java.lang.Override
   public com.google.protobuf.ByteString
       getPluginTypeBytes() {
     java.lang.Object ref = pluginType_;
@@ -431,6 +440,7 @@ private static final long serialVersionUID = 0L;
    * <code>optional string plugin_version = 4;</code>
    * @return Whether the pluginVersion field is set.
    */
+  @java.lang.Override
   public boolean hasPluginVersion() {
     return ((bitField0_ & 0x00000008) != 0);
   }
@@ -442,6 +452,7 @@ private static final long serialVersionUID = 0L;
    * <code>optional string plugin_version = 4;</code>
    * @return The pluginVersion.
    */
+  @java.lang.Override
   public java.lang.String getPluginVersion() {
     java.lang.Object ref = pluginVersion_;
     if (ref instanceof java.lang.String) {
@@ -464,6 +475,7 @@ private static final long serialVersionUID = 0L;
    * <code>optional string plugin_version = 4;</code>
    * @return The bytes for pluginVersion.
    */
+  @java.lang.Override
   public com.google.protobuf.ByteString
       getPluginVersionBytes() {
     java.lang.Object ref = pluginVersion_;
@@ -488,7 +500,7 @@ private static final long serialVersionUID = 0L;
    * <code>optional .android_studio.FileUsage.EventType event_type = 5;</code>
    * @return Whether the eventType field is set.
    */
-  public boolean hasEventType() {
+  @java.lang.Override public boolean hasEventType() {
     return ((bitField0_ & 0x00000010) != 0);
   }
   /**
@@ -499,7 +511,7 @@ private static final long serialVersionUID = 0L;
    * <code>optional .android_studio.FileUsage.EventType event_type = 5;</code>
    * @return The eventType.
    */
-  public com.google.wireless.android.sdk.stats.FileUsage.EventType getEventType() {
+  @java.lang.Override public com.google.wireless.android.sdk.stats.FileUsage.EventType getEventType() {
     @SuppressWarnings("deprecation")
     com.google.wireless.android.sdk.stats.FileUsage.EventType result = com.google.wireless.android.sdk.stats.FileUsage.EventType.valueOf(eventType_);
     return result == null ? com.google.wireless.android.sdk.stats.FileUsage.EventType.UNKNOWN_TYPE : result;
@@ -1367,7 +1379,7 @@ private static final long serialVersionUID = 0L;
      * <code>optional .android_studio.FileUsage.EventType event_type = 5;</code>
      * @return Whether the eventType field is set.
      */
-    public boolean hasEventType() {
+    @java.lang.Override public boolean hasEventType() {
       return ((bitField0_ & 0x00000010) != 0);
     }
     /**
@@ -1378,6 +1390,7 @@ private static final long serialVersionUID = 0L;
      * <code>optional .android_studio.FileUsage.EventType event_type = 5;</code>
      * @return The eventType.
      */
+    @java.lang.Override
     public com.google.wireless.android.sdk.stats.FileUsage.EventType getEventType() {
       @SuppressWarnings("deprecation")
       com.google.wireless.android.sdk.stats.FileUsage.EventType result = com.google.wireless.android.sdk.stats.FileUsage.EventType.valueOf(eventType_);

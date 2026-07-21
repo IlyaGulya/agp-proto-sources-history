@@ -179,7 +179,7 @@ public enum StringOption
   /**
    * <code>BUILD_CACHE_DIR = 1 [deprecated = true];</code>
    */
-  public static final int BUILD_CACHE_DIR_VALUE = 1;
+  @java.lang.Deprecated public static final int BUILD_CACHE_DIR_VALUE = 1;
   /**
    * <code>IDE_BUILD_TARGET_DENSITY = 2;</code>
    */
@@ -416,6 +416,10 @@ public enum StringOption
 
   public final com.google.protobuf.Descriptors.EnumValueDescriptor
       getValueDescriptor() {
+    if (this == UNRECOGNIZED) {
+      throw new java.lang.IllegalStateException(
+          "Can't get the descriptor of an unrecognized enum value.");
+    }
     return getDescriptor().getValues().get(ordinal());
   }
   public final com.google.protobuf.Descriptors.EnumDescriptor
