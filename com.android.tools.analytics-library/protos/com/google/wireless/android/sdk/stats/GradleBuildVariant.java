@@ -515,6 +515,14 @@ private static final long serialVersionUID = 0L;
      * <code>KOTLIN_MULTIPLATFORM_ANDROID_LIBRARY = 12;</code>
      */
     KOTLIN_MULTIPLATFORM_ANDROID_LIBRARY(12),
+    /**
+     * <pre>
+     * Test component for host side screenshot testing
+     * </pre>
+     *
+     * <code>SCREENSHOT_TEST = 13;</code>
+     */
+    SCREENSHOT_TEST(13),
     ;
 
     /**
@@ -622,6 +630,14 @@ private static final long serialVersionUID = 0L;
      * <code>KOTLIN_MULTIPLATFORM_ANDROID_LIBRARY = 12;</code>
      */
     public static final int KOTLIN_MULTIPLATFORM_ANDROID_LIBRARY_VALUE = 12;
+    /**
+     * <pre>
+     * Test component for host side screenshot testing
+     * </pre>
+     *
+     * <code>SCREENSHOT_TEST = 13;</code>
+     */
+    public static final int SCREENSHOT_TEST_VALUE = 13;
 
 
     public final int getNumber() {
@@ -657,6 +673,7 @@ private static final long serialVersionUID = 0L;
         case 10: return TEST_FIXTURES;
         case 11: return PRIVACY_SANDBOX_SDK;
         case 12: return KOTLIN_MULTIPLATFORM_ANDROID_LIBRARY;
+        case 13: return SCREENSHOT_TEST;
         default: return null;
       }
     }
