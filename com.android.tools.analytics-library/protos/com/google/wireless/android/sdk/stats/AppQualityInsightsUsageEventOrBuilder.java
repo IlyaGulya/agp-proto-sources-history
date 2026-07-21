@@ -441,4 +441,31 @@ public interface AppQualityInsightsUsageEventOrBuilder extends
    * <code>optional .android_studio.AppQualityInsightsUsageEvent.InsightSentiment insight_sentiment = 17 [lazy = true];</code>
    */
   com.google.wireless.android.sdk.stats.AppQualityInsightsUsageEvent.InsightSentimentOrBuilder getInsightSentimentOrBuilder();
+
+  /**
+   * <pre>
+   * set when type = INSIGHT_FETCH
+   * </pre>
+   *
+   * <code>optional .android_studio.AppQualityInsightsUsageEvent.InsightFetchDetails insight_fetch_details = 18 [lazy = true];</code>
+   * @return Whether the insightFetchDetails field is set.
+   */
+  boolean hasInsightFetchDetails();
+  /**
+   * <pre>
+   * set when type = INSIGHT_FETCH
+   * </pre>
+   *
+   * <code>optional .android_studio.AppQualityInsightsUsageEvent.InsightFetchDetails insight_fetch_details = 18 [lazy = true];</code>
+   * @return The insightFetchDetails.
+   */
+  com.google.wireless.android.sdk.stats.AppQualityInsightsUsageEvent.InsightFetchDetails getInsightFetchDetails();
+  /**
+   * <pre>
+   * set when type = INSIGHT_FETCH
+   * </pre>
+   *
+   * <code>optional .android_studio.AppQualityInsightsUsageEvent.InsightFetchDetails insight_fetch_details = 18 [lazy = true];</code>
+   */
+  com.google.wireless.android.sdk.stats.AppQualityInsightsUsageEvent.InsightFetchDetailsOrBuilder getInsightFetchDetailsOrBuilder();
 }

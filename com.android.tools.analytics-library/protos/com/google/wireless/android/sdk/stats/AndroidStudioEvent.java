@@ -3112,6 +3112,22 @@ private static final long serialVersionUID = 0L;
      * <code>SOONG_RUN_EVENT = 324;</code>
      */
     SOONG_RUN_EVENT(324),
+    /**
+     * <pre>
+     * Event related to Gemini actions in Studio Core
+     * </pre>
+     *
+     * <code>STUDIO_CORE_GEMINI_ACTIONS = 325;</code>
+     */
+    STUDIO_CORE_GEMINI_ACTIONS(325),
+    /**
+     * <pre>
+     * Event related to VM and container virtualization
+     * </pre>
+     *
+     * <code>VIRTUALIZATION_EVENT = 326;</code>
+     */
+    VIRTUALIZATION_EVENT(326),
     ;
 
     /**
@@ -5530,6 +5546,22 @@ private static final long serialVersionUID = 0L;
      * <code>SOONG_RUN_EVENT = 324;</code>
      */
     public static final int SOONG_RUN_EVENT_VALUE = 324;
+    /**
+     * <pre>
+     * Event related to Gemini actions in Studio Core
+     * </pre>
+     *
+     * <code>STUDIO_CORE_GEMINI_ACTIONS = 325;</code>
+     */
+    public static final int STUDIO_CORE_GEMINI_ACTIONS_VALUE = 325;
+    /**
+     * <pre>
+     * Event related to VM and container virtualization
+     * </pre>
+     *
+     * <code>VIRTUALIZATION_EVENT = 326;</code>
+     */
+    public static final int VIRTUALIZATION_EVENT_VALUE = 326;
 
 
     public final int getNumber() {
@@ -5872,6 +5904,8 @@ private static final long serialVersionUID = 0L;
         case 322: return SDK_INDEX_LIBRARY_HAS_VULNERABILITY_ISSUES;
         case 323: return SDK_INDEX_PROJECT_STATS;
         case 324: return SOONG_RUN_EVENT;
+        case 325: return STUDIO_CORE_GEMINI_ACTIONS;
+        case 326: return VIRTUALIZATION_EVENT;
         default: return null;
       }
     }
@@ -22905,6 +22939,82 @@ private static final long serialVersionUID = 0L;
     return soongRunEvent_ == null ? com.google.wireless.android.sdk.stats.SoongRunEvent.getDefaultInstance() : soongRunEvent_;
   }
 
+  public static final int ANDROID_STUDIO_CORE_GEMINI_ACTIONS_EVENT_FIELD_NUMBER = 207;
+  private com.google.wireless.android.sdk.stats.StudioCoreGeminiActionsEvent androidStudioCoreGeminiActionsEvent_;
+  /**
+   * <pre>
+   * set when kind = STUDIO_CORE_GEMINI_ACTIONS
+   * </pre>
+   *
+   * <code>optional .android_studio.StudioCoreGeminiActionsEvent android_studio_core_gemini_actions_event = 207 [lazy = true];</code>
+   * @return Whether the androidStudioCoreGeminiActionsEvent field is set.
+   */
+  @java.lang.Override
+  public boolean hasAndroidStudioCoreGeminiActionsEvent() {
+    return ((bitField6_ & 0x00000100) != 0);
+  }
+  /**
+   * <pre>
+   * set when kind = STUDIO_CORE_GEMINI_ACTIONS
+   * </pre>
+   *
+   * <code>optional .android_studio.StudioCoreGeminiActionsEvent android_studio_core_gemini_actions_event = 207 [lazy = true];</code>
+   * @return The androidStudioCoreGeminiActionsEvent.
+   */
+  @java.lang.Override
+  public com.google.wireless.android.sdk.stats.StudioCoreGeminiActionsEvent getAndroidStudioCoreGeminiActionsEvent() {
+    return androidStudioCoreGeminiActionsEvent_ == null ? com.google.wireless.android.sdk.stats.StudioCoreGeminiActionsEvent.getDefaultInstance() : androidStudioCoreGeminiActionsEvent_;
+  }
+  /**
+   * <pre>
+   * set when kind = STUDIO_CORE_GEMINI_ACTIONS
+   * </pre>
+   *
+   * <code>optional .android_studio.StudioCoreGeminiActionsEvent android_studio_core_gemini_actions_event = 207 [lazy = true];</code>
+   */
+  @java.lang.Override
+  public com.google.wireless.android.sdk.stats.StudioCoreGeminiActionsEventOrBuilder getAndroidStudioCoreGeminiActionsEventOrBuilder() {
+    return androidStudioCoreGeminiActionsEvent_ == null ? com.google.wireless.android.sdk.stats.StudioCoreGeminiActionsEvent.getDefaultInstance() : androidStudioCoreGeminiActionsEvent_;
+  }
+
+  public static final int VIRTUALIZATION_EVENT_FIELD_NUMBER = 208;
+  private com.google.wireless.android.sdk.stats.VirtualizationEvent virtualizationEvent_;
+  /**
+   * <pre>
+   * set when kind = VIRTUALIZATION_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.VirtualizationEvent virtualization_event = 208 [lazy = true];</code>
+   * @return Whether the virtualizationEvent field is set.
+   */
+  @java.lang.Override
+  public boolean hasVirtualizationEvent() {
+    return ((bitField6_ & 0x00000200) != 0);
+  }
+  /**
+   * <pre>
+   * set when kind = VIRTUALIZATION_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.VirtualizationEvent virtualization_event = 208 [lazy = true];</code>
+   * @return The virtualizationEvent.
+   */
+  @java.lang.Override
+  public com.google.wireless.android.sdk.stats.VirtualizationEvent getVirtualizationEvent() {
+    return virtualizationEvent_ == null ? com.google.wireless.android.sdk.stats.VirtualizationEvent.getDefaultInstance() : virtualizationEvent_;
+  }
+  /**
+   * <pre>
+   * set when kind = VIRTUALIZATION_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.VirtualizationEvent virtualization_event = 208 [lazy = true];</code>
+   */
+  @java.lang.Override
+  public com.google.wireless.android.sdk.stats.VirtualizationEventOrBuilder getVirtualizationEventOrBuilder() {
+    return virtualizationEvent_ == null ? com.google.wireless.android.sdk.stats.VirtualizationEvent.getDefaultInstance() : virtualizationEvent_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -23536,6 +23646,12 @@ private static final long serialVersionUID = 0L;
     }
     if (((bitField6_ & 0x00000080) != 0)) {
       output.writeMessage(206, getSoongRunEvent());
+    }
+    if (((bitField6_ & 0x00000100) != 0)) {
+      output.writeMessage(207, getAndroidStudioCoreGeminiActionsEvent());
+    }
+    if (((bitField6_ & 0x00000200) != 0)) {
+      output.writeMessage(208, getVirtualizationEvent());
     }
     getUnknownFields().writeTo(output);
   }
@@ -24375,6 +24491,14 @@ private static final long serialVersionUID = 0L;
     if (((bitField6_ & 0x00000080) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(206, getSoongRunEvent());
+    }
+    if (((bitField6_ & 0x00000100) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(207, getAndroidStudioCoreGeminiActionsEvent());
+    }
+    if (((bitField6_ & 0x00000200) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(208, getVirtualizationEvent());
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -25392,6 +25516,16 @@ private static final long serialVersionUID = 0L;
       if (!getSoongRunEvent()
           .equals(other.getSoongRunEvent())) return false;
     }
+    if (hasAndroidStudioCoreGeminiActionsEvent() != other.hasAndroidStudioCoreGeminiActionsEvent()) return false;
+    if (hasAndroidStudioCoreGeminiActionsEvent()) {
+      if (!getAndroidStudioCoreGeminiActionsEvent()
+          .equals(other.getAndroidStudioCoreGeminiActionsEvent())) return false;
+    }
+    if (hasVirtualizationEvent() != other.hasVirtualizationEvent()) return false;
+    if (hasVirtualizationEvent()) {
+      if (!getVirtualizationEvent()
+          .equals(other.getVirtualizationEvent())) return false;
+    }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -26229,6 +26363,14 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + SOONG_RUN_EVENT_FIELD_NUMBER;
       hash = (53 * hash) + getSoongRunEvent().hashCode();
     }
+    if (hasAndroidStudioCoreGeminiActionsEvent()) {
+      hash = (37 * hash) + ANDROID_STUDIO_CORE_GEMINI_ACTIONS_EVENT_FIELD_NUMBER;
+      hash = (53 * hash) + getAndroidStudioCoreGeminiActionsEvent().hashCode();
+    }
+    if (hasVirtualizationEvent()) {
+      hash = (37 * hash) + VIRTUALIZATION_EVENT_FIELD_NUMBER;
+      hash = (53 * hash) + getVirtualizationEvent().hashCode();
+    }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -26540,6 +26682,8 @@ private static final long serialVersionUID = 0L;
         getUiToolsPreferencesEventFieldBuilder();
         getSdkIndexProjectStatsFieldBuilder();
         getSoongRunEventFieldBuilder();
+        getAndroidStudioCoreGeminiActionsEventFieldBuilder();
+        getVirtualizationEventFieldBuilder();
       }
     }
     @java.lang.Override
@@ -27692,6 +27836,18 @@ private static final long serialVersionUID = 0L;
         soongRunEventBuilder_.clear();
       }
       bitField6_ = (bitField6_ & ~0x00002000);
+      if (androidStudioCoreGeminiActionsEventBuilder_ == null) {
+        androidStudioCoreGeminiActionsEvent_ = null;
+      } else {
+        androidStudioCoreGeminiActionsEventBuilder_.clear();
+      }
+      bitField6_ = (bitField6_ & ~0x00004000);
+      if (virtualizationEventBuilder_ == null) {
+        virtualizationEvent_ = null;
+      } else {
+        virtualizationEventBuilder_.clear();
+      }
+      bitField6_ = (bitField6_ & ~0x00008000);
       return this;
     }
 
@@ -29294,6 +29450,22 @@ private static final long serialVersionUID = 0L;
         }
         to_bitField6_ |= 0x00000080;
       }
+      if (((from_bitField6_ & 0x00004000) != 0)) {
+        if (androidStudioCoreGeminiActionsEventBuilder_ == null) {
+          result.androidStudioCoreGeminiActionsEvent_ = androidStudioCoreGeminiActionsEvent_;
+        } else {
+          result.androidStudioCoreGeminiActionsEvent_ = androidStudioCoreGeminiActionsEventBuilder_.build();
+        }
+        to_bitField6_ |= 0x00000100;
+      }
+      if (((from_bitField6_ & 0x00008000) != 0)) {
+        if (virtualizationEventBuilder_ == null) {
+          result.virtualizationEvent_ = virtualizationEvent_;
+        } else {
+          result.virtualizationEvent_ = virtualizationEventBuilder_.build();
+        }
+        to_bitField6_ |= 0x00000200;
+      }
       result.bitField0_ = to_bitField0_;
       result.bitField1_ = to_bitField1_;
       result.bitField2_ = to_bitField2_;
@@ -30070,6 +30242,12 @@ private static final long serialVersionUID = 0L;
       }
       if (other.hasSoongRunEvent()) {
         mergeSoongRunEvent(other.getSoongRunEvent());
+      }
+      if (other.hasAndroidStudioCoreGeminiActionsEvent()) {
+        mergeAndroidStudioCoreGeminiActionsEvent(other.getAndroidStudioCoreGeminiActionsEvent());
+      }
+      if (other.hasVirtualizationEvent()) {
+        mergeVirtualizationEvent(other.getVirtualizationEvent());
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -31607,6 +31785,20 @@ private static final long serialVersionUID = 0L;
               bitField6_ |= 0x00002000;
               break;
             } // case 1650
+            case 1658: {
+              input.readMessage(
+                  getAndroidStudioCoreGeminiActionsEventFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField6_ |= 0x00004000;
+              break;
+            } // case 1658
+            case 1666: {
+              input.readMessage(
+                  getVirtualizationEventFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField6_ |= 0x00008000;
+              break;
+            } // case 1666
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -63072,6 +63264,318 @@ private static final long serialVersionUID = 0L;
         soongRunEvent_ = null;
       }
       return soongRunEventBuilder_;
+    }
+
+    private com.google.wireless.android.sdk.stats.StudioCoreGeminiActionsEvent androidStudioCoreGeminiActionsEvent_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.StudioCoreGeminiActionsEvent, com.google.wireless.android.sdk.stats.StudioCoreGeminiActionsEvent.Builder, com.google.wireless.android.sdk.stats.StudioCoreGeminiActionsEventOrBuilder> androidStudioCoreGeminiActionsEventBuilder_;
+    /**
+     * <pre>
+     * set when kind = STUDIO_CORE_GEMINI_ACTIONS
+     * </pre>
+     *
+     * <code>optional .android_studio.StudioCoreGeminiActionsEvent android_studio_core_gemini_actions_event = 207 [lazy = true];</code>
+     * @return Whether the androidStudioCoreGeminiActionsEvent field is set.
+     */
+    public boolean hasAndroidStudioCoreGeminiActionsEvent() {
+      return ((bitField6_ & 0x00004000) != 0);
+    }
+    /**
+     * <pre>
+     * set when kind = STUDIO_CORE_GEMINI_ACTIONS
+     * </pre>
+     *
+     * <code>optional .android_studio.StudioCoreGeminiActionsEvent android_studio_core_gemini_actions_event = 207 [lazy = true];</code>
+     * @return The androidStudioCoreGeminiActionsEvent.
+     */
+    public com.google.wireless.android.sdk.stats.StudioCoreGeminiActionsEvent getAndroidStudioCoreGeminiActionsEvent() {
+      if (androidStudioCoreGeminiActionsEventBuilder_ == null) {
+        return androidStudioCoreGeminiActionsEvent_ == null ? com.google.wireless.android.sdk.stats.StudioCoreGeminiActionsEvent.getDefaultInstance() : androidStudioCoreGeminiActionsEvent_;
+      } else {
+        return androidStudioCoreGeminiActionsEventBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * set when kind = STUDIO_CORE_GEMINI_ACTIONS
+     * </pre>
+     *
+     * <code>optional .android_studio.StudioCoreGeminiActionsEvent android_studio_core_gemini_actions_event = 207 [lazy = true];</code>
+     */
+    public Builder setAndroidStudioCoreGeminiActionsEvent(com.google.wireless.android.sdk.stats.StudioCoreGeminiActionsEvent value) {
+      if (androidStudioCoreGeminiActionsEventBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        androidStudioCoreGeminiActionsEvent_ = value;
+        onChanged();
+      } else {
+        androidStudioCoreGeminiActionsEventBuilder_.setMessage(value);
+      }
+      bitField6_ |= 0x00004000;
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = STUDIO_CORE_GEMINI_ACTIONS
+     * </pre>
+     *
+     * <code>optional .android_studio.StudioCoreGeminiActionsEvent android_studio_core_gemini_actions_event = 207 [lazy = true];</code>
+     */
+    public Builder setAndroidStudioCoreGeminiActionsEvent(
+        com.google.wireless.android.sdk.stats.StudioCoreGeminiActionsEvent.Builder builderForValue) {
+      if (androidStudioCoreGeminiActionsEventBuilder_ == null) {
+        androidStudioCoreGeminiActionsEvent_ = builderForValue.build();
+        onChanged();
+      } else {
+        androidStudioCoreGeminiActionsEventBuilder_.setMessage(builderForValue.build());
+      }
+      bitField6_ |= 0x00004000;
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = STUDIO_CORE_GEMINI_ACTIONS
+     * </pre>
+     *
+     * <code>optional .android_studio.StudioCoreGeminiActionsEvent android_studio_core_gemini_actions_event = 207 [lazy = true];</code>
+     */
+    public Builder mergeAndroidStudioCoreGeminiActionsEvent(com.google.wireless.android.sdk.stats.StudioCoreGeminiActionsEvent value) {
+      if (androidStudioCoreGeminiActionsEventBuilder_ == null) {
+        if (((bitField6_ & 0x00004000) != 0) &&
+            androidStudioCoreGeminiActionsEvent_ != null &&
+            androidStudioCoreGeminiActionsEvent_ != com.google.wireless.android.sdk.stats.StudioCoreGeminiActionsEvent.getDefaultInstance()) {
+          androidStudioCoreGeminiActionsEvent_ =
+            com.google.wireless.android.sdk.stats.StudioCoreGeminiActionsEvent.newBuilder(androidStudioCoreGeminiActionsEvent_).mergeFrom(value).buildPartial();
+        } else {
+          androidStudioCoreGeminiActionsEvent_ = value;
+        }
+        onChanged();
+      } else {
+        androidStudioCoreGeminiActionsEventBuilder_.mergeFrom(value);
+      }
+      bitField6_ |= 0x00004000;
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = STUDIO_CORE_GEMINI_ACTIONS
+     * </pre>
+     *
+     * <code>optional .android_studio.StudioCoreGeminiActionsEvent android_studio_core_gemini_actions_event = 207 [lazy = true];</code>
+     */
+    public Builder clearAndroidStudioCoreGeminiActionsEvent() {
+      if (androidStudioCoreGeminiActionsEventBuilder_ == null) {
+        androidStudioCoreGeminiActionsEvent_ = null;
+        onChanged();
+      } else {
+        androidStudioCoreGeminiActionsEventBuilder_.clear();
+      }
+      bitField6_ = (bitField6_ & ~0x00004000);
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = STUDIO_CORE_GEMINI_ACTIONS
+     * </pre>
+     *
+     * <code>optional .android_studio.StudioCoreGeminiActionsEvent android_studio_core_gemini_actions_event = 207 [lazy = true];</code>
+     */
+    public com.google.wireless.android.sdk.stats.StudioCoreGeminiActionsEvent.Builder getAndroidStudioCoreGeminiActionsEventBuilder() {
+      bitField6_ |= 0x00004000;
+      onChanged();
+      return getAndroidStudioCoreGeminiActionsEventFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * set when kind = STUDIO_CORE_GEMINI_ACTIONS
+     * </pre>
+     *
+     * <code>optional .android_studio.StudioCoreGeminiActionsEvent android_studio_core_gemini_actions_event = 207 [lazy = true];</code>
+     */
+    public com.google.wireless.android.sdk.stats.StudioCoreGeminiActionsEventOrBuilder getAndroidStudioCoreGeminiActionsEventOrBuilder() {
+      if (androidStudioCoreGeminiActionsEventBuilder_ != null) {
+        return androidStudioCoreGeminiActionsEventBuilder_.getMessageOrBuilder();
+      } else {
+        return androidStudioCoreGeminiActionsEvent_ == null ?
+            com.google.wireless.android.sdk.stats.StudioCoreGeminiActionsEvent.getDefaultInstance() : androidStudioCoreGeminiActionsEvent_;
+      }
+    }
+    /**
+     * <pre>
+     * set when kind = STUDIO_CORE_GEMINI_ACTIONS
+     * </pre>
+     *
+     * <code>optional .android_studio.StudioCoreGeminiActionsEvent android_studio_core_gemini_actions_event = 207 [lazy = true];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.StudioCoreGeminiActionsEvent, com.google.wireless.android.sdk.stats.StudioCoreGeminiActionsEvent.Builder, com.google.wireless.android.sdk.stats.StudioCoreGeminiActionsEventOrBuilder> 
+        getAndroidStudioCoreGeminiActionsEventFieldBuilder() {
+      if (androidStudioCoreGeminiActionsEventBuilder_ == null) {
+        androidStudioCoreGeminiActionsEventBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.wireless.android.sdk.stats.StudioCoreGeminiActionsEvent, com.google.wireless.android.sdk.stats.StudioCoreGeminiActionsEvent.Builder, com.google.wireless.android.sdk.stats.StudioCoreGeminiActionsEventOrBuilder>(
+                getAndroidStudioCoreGeminiActionsEvent(),
+                getParentForChildren(),
+                isClean());
+        androidStudioCoreGeminiActionsEvent_ = null;
+      }
+      return androidStudioCoreGeminiActionsEventBuilder_;
+    }
+
+    private com.google.wireless.android.sdk.stats.VirtualizationEvent virtualizationEvent_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.VirtualizationEvent, com.google.wireless.android.sdk.stats.VirtualizationEvent.Builder, com.google.wireless.android.sdk.stats.VirtualizationEventOrBuilder> virtualizationEventBuilder_;
+    /**
+     * <pre>
+     * set when kind = VIRTUALIZATION_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.VirtualizationEvent virtualization_event = 208 [lazy = true];</code>
+     * @return Whether the virtualizationEvent field is set.
+     */
+    public boolean hasVirtualizationEvent() {
+      return ((bitField6_ & 0x00008000) != 0);
+    }
+    /**
+     * <pre>
+     * set when kind = VIRTUALIZATION_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.VirtualizationEvent virtualization_event = 208 [lazy = true];</code>
+     * @return The virtualizationEvent.
+     */
+    public com.google.wireless.android.sdk.stats.VirtualizationEvent getVirtualizationEvent() {
+      if (virtualizationEventBuilder_ == null) {
+        return virtualizationEvent_ == null ? com.google.wireless.android.sdk.stats.VirtualizationEvent.getDefaultInstance() : virtualizationEvent_;
+      } else {
+        return virtualizationEventBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * set when kind = VIRTUALIZATION_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.VirtualizationEvent virtualization_event = 208 [lazy = true];</code>
+     */
+    public Builder setVirtualizationEvent(com.google.wireless.android.sdk.stats.VirtualizationEvent value) {
+      if (virtualizationEventBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        virtualizationEvent_ = value;
+        onChanged();
+      } else {
+        virtualizationEventBuilder_.setMessage(value);
+      }
+      bitField6_ |= 0x00008000;
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = VIRTUALIZATION_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.VirtualizationEvent virtualization_event = 208 [lazy = true];</code>
+     */
+    public Builder setVirtualizationEvent(
+        com.google.wireless.android.sdk.stats.VirtualizationEvent.Builder builderForValue) {
+      if (virtualizationEventBuilder_ == null) {
+        virtualizationEvent_ = builderForValue.build();
+        onChanged();
+      } else {
+        virtualizationEventBuilder_.setMessage(builderForValue.build());
+      }
+      bitField6_ |= 0x00008000;
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = VIRTUALIZATION_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.VirtualizationEvent virtualization_event = 208 [lazy = true];</code>
+     */
+    public Builder mergeVirtualizationEvent(com.google.wireless.android.sdk.stats.VirtualizationEvent value) {
+      if (virtualizationEventBuilder_ == null) {
+        if (((bitField6_ & 0x00008000) != 0) &&
+            virtualizationEvent_ != null &&
+            virtualizationEvent_ != com.google.wireless.android.sdk.stats.VirtualizationEvent.getDefaultInstance()) {
+          virtualizationEvent_ =
+            com.google.wireless.android.sdk.stats.VirtualizationEvent.newBuilder(virtualizationEvent_).mergeFrom(value).buildPartial();
+        } else {
+          virtualizationEvent_ = value;
+        }
+        onChanged();
+      } else {
+        virtualizationEventBuilder_.mergeFrom(value);
+      }
+      bitField6_ |= 0x00008000;
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = VIRTUALIZATION_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.VirtualizationEvent virtualization_event = 208 [lazy = true];</code>
+     */
+    public Builder clearVirtualizationEvent() {
+      if (virtualizationEventBuilder_ == null) {
+        virtualizationEvent_ = null;
+        onChanged();
+      } else {
+        virtualizationEventBuilder_.clear();
+      }
+      bitField6_ = (bitField6_ & ~0x00008000);
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = VIRTUALIZATION_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.VirtualizationEvent virtualization_event = 208 [lazy = true];</code>
+     */
+    public com.google.wireless.android.sdk.stats.VirtualizationEvent.Builder getVirtualizationEventBuilder() {
+      bitField6_ |= 0x00008000;
+      onChanged();
+      return getVirtualizationEventFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * set when kind = VIRTUALIZATION_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.VirtualizationEvent virtualization_event = 208 [lazy = true];</code>
+     */
+    public com.google.wireless.android.sdk.stats.VirtualizationEventOrBuilder getVirtualizationEventOrBuilder() {
+      if (virtualizationEventBuilder_ != null) {
+        return virtualizationEventBuilder_.getMessageOrBuilder();
+      } else {
+        return virtualizationEvent_ == null ?
+            com.google.wireless.android.sdk.stats.VirtualizationEvent.getDefaultInstance() : virtualizationEvent_;
+      }
+    }
+    /**
+     * <pre>
+     * set when kind = VIRTUALIZATION_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.VirtualizationEvent virtualization_event = 208 [lazy = true];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.VirtualizationEvent, com.google.wireless.android.sdk.stats.VirtualizationEvent.Builder, com.google.wireless.android.sdk.stats.VirtualizationEventOrBuilder> 
+        getVirtualizationEventFieldBuilder() {
+      if (virtualizationEventBuilder_ == null) {
+        virtualizationEventBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.wireless.android.sdk.stats.VirtualizationEvent, com.google.wireless.android.sdk.stats.VirtualizationEvent.Builder, com.google.wireless.android.sdk.stats.VirtualizationEventOrBuilder>(
+                getVirtualizationEvent(),
+                getParentForChildren(),
+                isClean());
+        virtualizationEvent_ = null;
+      }
+      return virtualizationEventBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(
