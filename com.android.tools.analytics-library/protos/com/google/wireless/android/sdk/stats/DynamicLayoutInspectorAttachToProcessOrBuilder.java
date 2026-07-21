@@ -93,7 +93,7 @@ public interface DynamicLayoutInspectorAttachToProcessOrBuilder extends
 
   /**
    * <pre>
-   * When we attached to a process, were the multiple projects open?
+   * When we attached to a process, were there multiple projects open?
    * </pre>
    *
    * <code>optional bool multiple_projects_open = 5;</code>
@@ -102,11 +102,49 @@ public interface DynamicLayoutInspectorAttachToProcessOrBuilder extends
   boolean hasMultipleProjectsOpen();
   /**
    * <pre>
-   * When we attached to a process, were the multiple projects open?
+   * When we attached to a process, were there multiple projects open?
    * </pre>
    *
    * <code>optional bool multiple_projects_open = 5;</code>
    * @return The multipleProjectsOpen.
    */
   boolean getMultipleProjectsOpen();
+
+  /**
+   * <pre>
+   * Was the debugger running for this session
+   * </pre>
+   *
+   * <code>optional bool debugger_attached = 6;</code>
+   * @return Whether the debuggerAttached field is set.
+   */
+  boolean hasDebuggerAttached();
+  /**
+   * <pre>
+   * Was the debugger running for this session
+   * </pre>
+   *
+   * <code>optional bool debugger_attached = 6;</code>
+   * @return The debuggerAttached.
+   */
+  boolean getDebuggerAttached();
+
+  /**
+   * <pre>
+   * Was the debugger paused during the attach
+   * </pre>
+   *
+   * <code>optional bool debugger_paused_during_attach = 7;</code>
+   * @return Whether the debuggerPausedDuringAttach field is set.
+   */
+  boolean hasDebuggerPausedDuringAttach();
+  /**
+   * <pre>
+   * Was the debugger paused during the attach
+   * </pre>
+   *
+   * <code>optional bool debugger_paused_during_attach = 7;</code>
+   * @return The debuggerPausedDuringAttach.
+   */
+  boolean getDebuggerPausedDuringAttach();
 }
