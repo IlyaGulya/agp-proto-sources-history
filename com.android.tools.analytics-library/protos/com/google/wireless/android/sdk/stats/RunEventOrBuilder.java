@@ -520,4 +520,48 @@ public interface RunEventOrBuilder extends
    * @return The appComponentType.
    */
   com.google.wireless.android.sdk.stats.RunEvent.AppComponent getAppComponentType();
+
+  /**
+   * <pre>
+   * List of devices on which the command was called
+   * </pre>
+   *
+   * <code>repeated .android_studio.RunDeviceInfo devices = 26;</code>
+   */
+  java.util.List<com.google.wireless.android.sdk.stats.RunDeviceInfo> 
+      getDevicesList();
+  /**
+   * <pre>
+   * List of devices on which the command was called
+   * </pre>
+   *
+   * <code>repeated .android_studio.RunDeviceInfo devices = 26;</code>
+   */
+  com.google.wireless.android.sdk.stats.RunDeviceInfo getDevices(int index);
+  /**
+   * <pre>
+   * List of devices on which the command was called
+   * </pre>
+   *
+   * <code>repeated .android_studio.RunDeviceInfo devices = 26;</code>
+   */
+  int getDevicesCount();
+  /**
+   * <pre>
+   * List of devices on which the command was called
+   * </pre>
+   *
+   * <code>repeated .android_studio.RunDeviceInfo devices = 26;</code>
+   */
+  java.util.List<? extends com.google.wireless.android.sdk.stats.RunDeviceInfoOrBuilder> 
+      getDevicesOrBuilderList();
+  /**
+   * <pre>
+   * List of devices on which the command was called
+   * </pre>
+   *
+   * <code>repeated .android_studio.RunDeviceInfo devices = 26;</code>
+   */
+  com.google.wireless.android.sdk.stats.RunDeviceInfoOrBuilder getDevicesOrBuilder(
+      int index);
 }

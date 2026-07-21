@@ -141,6 +141,10 @@ private static final long serialVersionUID = 0L;
      * <code>SYNC_SUCCEEDED = 7;</code>
      */
     SYNC_SUCCEEDED(7),
+    /**
+     * <code>INTERNAL_ERROR = 8;</code>
+     */
+    INTERNAL_ERROR(8),
     ;
 
     /**
@@ -175,6 +179,10 @@ private static final long serialVersionUID = 0L;
      * <code>SYNC_SUCCEEDED = 7;</code>
      */
     public static final int SYNC_SUCCEEDED_VALUE = 7;
+    /**
+     * <code>INTERNAL_ERROR = 8;</code>
+     */
+    public static final int INTERNAL_ERROR_VALUE = 8;
 
 
     public final int getNumber() {
@@ -205,6 +213,7 @@ private static final long serialVersionUID = 0L;
         case 5: return SYNC_SKIPPED;
         case 6: return SYNC_FAILED;
         case 7: return SYNC_SUCCEEDED;
+        case 8: return INTERNAL_ERROR;
         default: return null;
       }
     }
