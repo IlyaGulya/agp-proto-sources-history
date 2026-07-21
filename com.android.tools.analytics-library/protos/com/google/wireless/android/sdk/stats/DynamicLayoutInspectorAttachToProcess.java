@@ -102,6 +102,21 @@ private static final long serialVersionUID = 0L;
             multipleProjectsOpen_ = input.readBool();
             break;
           }
+          case 48: {
+            bitField0_ |= 0x00000020;
+            debuggerAttached_ = input.readBool();
+            break;
+          }
+          case 56: {
+            bitField0_ |= 0x00000040;
+            debuggerPausedDuringAttach_ = input.readBool();
+            break;
+          }
+          case 64: {
+            bitField0_ |= 0x00000080;
+            autoConnectEnabled_ = input.readBool();
+            break;
+          }
           default: {
             if (!parseUnknownField(
                 input, unknownFields, extensionRegistry, tag)) {
@@ -431,6 +446,87 @@ private static final long serialVersionUID = 0L;
     return multipleProjectsOpen_;
   }
 
+  public static final int DEBUGGER_ATTACHED_FIELD_NUMBER = 6;
+  private boolean debuggerAttached_;
+  /**
+   * <pre>
+   * Was the debugger running for this session
+   * </pre>
+   *
+   * <code>optional bool debugger_attached = 6;</code>
+   * @return Whether the debuggerAttached field is set.
+   */
+  @java.lang.Override
+  public boolean hasDebuggerAttached() {
+    return ((bitField0_ & 0x00000020) != 0);
+  }
+  /**
+   * <pre>
+   * Was the debugger running for this session
+   * </pre>
+   *
+   * <code>optional bool debugger_attached = 6;</code>
+   * @return The debuggerAttached.
+   */
+  @java.lang.Override
+  public boolean getDebuggerAttached() {
+    return debuggerAttached_;
+  }
+
+  public static final int DEBUGGER_PAUSED_DURING_ATTACH_FIELD_NUMBER = 7;
+  private boolean debuggerPausedDuringAttach_;
+  /**
+   * <pre>
+   * Was the debugger paused during the attach
+   * </pre>
+   *
+   * <code>optional bool debugger_paused_during_attach = 7;</code>
+   * @return Whether the debuggerPausedDuringAttach field is set.
+   */
+  @java.lang.Override
+  public boolean hasDebuggerPausedDuringAttach() {
+    return ((bitField0_ & 0x00000040) != 0);
+  }
+  /**
+   * <pre>
+   * Was the debugger paused during the attach
+   * </pre>
+   *
+   * <code>optional bool debugger_paused_during_attach = 7;</code>
+   * @return The debuggerPausedDuringAttach.
+   */
+  @java.lang.Override
+  public boolean getDebuggerPausedDuringAttach() {
+    return debuggerPausedDuringAttach_;
+  }
+
+  public static final int AUTO_CONNECT_ENABLED_FIELD_NUMBER = 8;
+  private boolean autoConnectEnabled_;
+  /**
+   * <pre>
+   * Was auto connect enabled for this session
+   * </pre>
+   *
+   * <code>optional bool auto_connect_enabled = 8;</code>
+   * @return Whether the autoConnectEnabled field is set.
+   */
+  @java.lang.Override
+  public boolean hasAutoConnectEnabled() {
+    return ((bitField0_ & 0x00000080) != 0);
+  }
+  /**
+   * <pre>
+   * Was auto connect enabled for this session
+   * </pre>
+   *
+   * <code>optional bool auto_connect_enabled = 8;</code>
+   * @return The autoConnectEnabled.
+   */
+  @java.lang.Override
+  public boolean getAutoConnectEnabled() {
+    return autoConnectEnabled_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -460,6 +556,15 @@ private static final long serialVersionUID = 0L;
     if (((bitField0_ & 0x00000010) != 0)) {
       output.writeBool(5, multipleProjectsOpen_);
     }
+    if (((bitField0_ & 0x00000020) != 0)) {
+      output.writeBool(6, debuggerAttached_);
+    }
+    if (((bitField0_ & 0x00000040) != 0)) {
+      output.writeBool(7, debuggerPausedDuringAttach_);
+    }
+    if (((bitField0_ & 0x00000080) != 0)) {
+      output.writeBool(8, autoConnectEnabled_);
+    }
     unknownFields.writeTo(output);
   }
 
@@ -488,6 +593,18 @@ private static final long serialVersionUID = 0L;
     if (((bitField0_ & 0x00000010) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeBoolSize(5, multipleProjectsOpen_);
+    }
+    if (((bitField0_ & 0x00000020) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeBoolSize(6, debuggerAttached_);
+    }
+    if (((bitField0_ & 0x00000040) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeBoolSize(7, debuggerPausedDuringAttach_);
+    }
+    if (((bitField0_ & 0x00000080) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeBoolSize(8, autoConnectEnabled_);
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -527,6 +644,21 @@ private static final long serialVersionUID = 0L;
       if (getMultipleProjectsOpen()
           != other.getMultipleProjectsOpen()) return false;
     }
+    if (hasDebuggerAttached() != other.hasDebuggerAttached()) return false;
+    if (hasDebuggerAttached()) {
+      if (getDebuggerAttached()
+          != other.getDebuggerAttached()) return false;
+    }
+    if (hasDebuggerPausedDuringAttach() != other.hasDebuggerPausedDuringAttach()) return false;
+    if (hasDebuggerPausedDuringAttach()) {
+      if (getDebuggerPausedDuringAttach()
+          != other.getDebuggerPausedDuringAttach()) return false;
+    }
+    if (hasAutoConnectEnabled() != other.hasAutoConnectEnabled()) return false;
+    if (hasAutoConnectEnabled()) {
+      if (getAutoConnectEnabled()
+          != other.getAutoConnectEnabled()) return false;
+    }
     if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
@@ -559,6 +691,21 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + MULTIPLE_PROJECTS_OPEN_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
           getMultipleProjectsOpen());
+    }
+    if (hasDebuggerAttached()) {
+      hash = (37 * hash) + DEBUGGER_ATTACHED_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getDebuggerAttached());
+    }
+    if (hasDebuggerPausedDuringAttach()) {
+      hash = (37 * hash) + DEBUGGER_PAUSED_DURING_ATTACH_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getDebuggerPausedDuringAttach());
+    }
+    if (hasAutoConnectEnabled()) {
+      hash = (37 * hash) + AUTO_CONNECT_ENABLED_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getAutoConnectEnabled());
     }
     hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
@@ -712,6 +859,12 @@ private static final long serialVersionUID = 0L;
       bitField0_ = (bitField0_ & ~0x00000008);
       multipleProjectsOpen_ = false;
       bitField0_ = (bitField0_ & ~0x00000010);
+      debuggerAttached_ = false;
+      bitField0_ = (bitField0_ & ~0x00000020);
+      debuggerPausedDuringAttach_ = false;
+      bitField0_ = (bitField0_ & ~0x00000040);
+      autoConnectEnabled_ = false;
+      bitField0_ = (bitField0_ & ~0x00000080);
       return this;
     }
 
@@ -763,6 +916,18 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000010) != 0)) {
         result.multipleProjectsOpen_ = multipleProjectsOpen_;
         to_bitField0_ |= 0x00000010;
+      }
+      if (((from_bitField0_ & 0x00000020) != 0)) {
+        result.debuggerAttached_ = debuggerAttached_;
+        to_bitField0_ |= 0x00000020;
+      }
+      if (((from_bitField0_ & 0x00000040) != 0)) {
+        result.debuggerPausedDuringAttach_ = debuggerPausedDuringAttach_;
+        to_bitField0_ |= 0x00000040;
+      }
+      if (((from_bitField0_ & 0x00000080) != 0)) {
+        result.autoConnectEnabled_ = autoConnectEnabled_;
+        to_bitField0_ |= 0x00000080;
       }
       result.bitField0_ = to_bitField0_;
       onBuilt();
@@ -827,6 +992,15 @@ private static final long serialVersionUID = 0L;
       }
       if (other.hasMultipleProjectsOpen()) {
         setMultipleProjectsOpen(other.getMultipleProjectsOpen());
+      }
+      if (other.hasDebuggerAttached()) {
+        setDebuggerAttached(other.getDebuggerAttached());
+      }
+      if (other.hasDebuggerPausedDuringAttach()) {
+        setDebuggerPausedDuringAttach(other.getDebuggerPausedDuringAttach());
+      }
+      if (other.hasAutoConnectEnabled()) {
+        setAutoConnectEnabled(other.getAutoConnectEnabled());
       }
       this.mergeUnknownFields(other.unknownFields);
       onChanged();
@@ -1238,6 +1412,171 @@ private static final long serialVersionUID = 0L;
     public Builder clearMultipleProjectsOpen() {
       bitField0_ = (bitField0_ & ~0x00000010);
       multipleProjectsOpen_ = false;
+      onChanged();
+      return this;
+    }
+
+    private boolean debuggerAttached_ ;
+    /**
+     * <pre>
+     * Was the debugger running for this session
+     * </pre>
+     *
+     * <code>optional bool debugger_attached = 6;</code>
+     * @return Whether the debuggerAttached field is set.
+     */
+    @java.lang.Override
+    public boolean hasDebuggerAttached() {
+      return ((bitField0_ & 0x00000020) != 0);
+    }
+    /**
+     * <pre>
+     * Was the debugger running for this session
+     * </pre>
+     *
+     * <code>optional bool debugger_attached = 6;</code>
+     * @return The debuggerAttached.
+     */
+    @java.lang.Override
+    public boolean getDebuggerAttached() {
+      return debuggerAttached_;
+    }
+    /**
+     * <pre>
+     * Was the debugger running for this session
+     * </pre>
+     *
+     * <code>optional bool debugger_attached = 6;</code>
+     * @param value The debuggerAttached to set.
+     * @return This builder for chaining.
+     */
+    public Builder setDebuggerAttached(boolean value) {
+      bitField0_ |= 0x00000020;
+      debuggerAttached_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Was the debugger running for this session
+     * </pre>
+     *
+     * <code>optional bool debugger_attached = 6;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearDebuggerAttached() {
+      bitField0_ = (bitField0_ & ~0x00000020);
+      debuggerAttached_ = false;
+      onChanged();
+      return this;
+    }
+
+    private boolean debuggerPausedDuringAttach_ ;
+    /**
+     * <pre>
+     * Was the debugger paused during the attach
+     * </pre>
+     *
+     * <code>optional bool debugger_paused_during_attach = 7;</code>
+     * @return Whether the debuggerPausedDuringAttach field is set.
+     */
+    @java.lang.Override
+    public boolean hasDebuggerPausedDuringAttach() {
+      return ((bitField0_ & 0x00000040) != 0);
+    }
+    /**
+     * <pre>
+     * Was the debugger paused during the attach
+     * </pre>
+     *
+     * <code>optional bool debugger_paused_during_attach = 7;</code>
+     * @return The debuggerPausedDuringAttach.
+     */
+    @java.lang.Override
+    public boolean getDebuggerPausedDuringAttach() {
+      return debuggerPausedDuringAttach_;
+    }
+    /**
+     * <pre>
+     * Was the debugger paused during the attach
+     * </pre>
+     *
+     * <code>optional bool debugger_paused_during_attach = 7;</code>
+     * @param value The debuggerPausedDuringAttach to set.
+     * @return This builder for chaining.
+     */
+    public Builder setDebuggerPausedDuringAttach(boolean value) {
+      bitField0_ |= 0x00000040;
+      debuggerPausedDuringAttach_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Was the debugger paused during the attach
+     * </pre>
+     *
+     * <code>optional bool debugger_paused_during_attach = 7;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearDebuggerPausedDuringAttach() {
+      bitField0_ = (bitField0_ & ~0x00000040);
+      debuggerPausedDuringAttach_ = false;
+      onChanged();
+      return this;
+    }
+
+    private boolean autoConnectEnabled_ ;
+    /**
+     * <pre>
+     * Was auto connect enabled for this session
+     * </pre>
+     *
+     * <code>optional bool auto_connect_enabled = 8;</code>
+     * @return Whether the autoConnectEnabled field is set.
+     */
+    @java.lang.Override
+    public boolean hasAutoConnectEnabled() {
+      return ((bitField0_ & 0x00000080) != 0);
+    }
+    /**
+     * <pre>
+     * Was auto connect enabled for this session
+     * </pre>
+     *
+     * <code>optional bool auto_connect_enabled = 8;</code>
+     * @return The autoConnectEnabled.
+     */
+    @java.lang.Override
+    public boolean getAutoConnectEnabled() {
+      return autoConnectEnabled_;
+    }
+    /**
+     * <pre>
+     * Was auto connect enabled for this session
+     * </pre>
+     *
+     * <code>optional bool auto_connect_enabled = 8;</code>
+     * @param value The autoConnectEnabled to set.
+     * @return This builder for chaining.
+     */
+    public Builder setAutoConnectEnabled(boolean value) {
+      bitField0_ |= 0x00000080;
+      autoConnectEnabled_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Was auto connect enabled for this session
+     * </pre>
+     *
+     * <code>optional bool auto_connect_enabled = 8;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearAutoConnectEnabled() {
+      bitField0_ = (bitField0_ & ~0x00000080);
+      autoConnectEnabled_ = false;
       onChanged();
       return this;
     }
