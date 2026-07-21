@@ -109,4 +109,61 @@ public interface DynamicLayoutInspectorAttachToProcessOrBuilder extends
    * @return The multipleProjectsOpen.
    */
   boolean getMultipleProjectsOpen();
+
+  /**
+   * <pre>
+   * Was the debugger running for this session
+   * </pre>
+   *
+   * <code>optional bool debugger_attached = 6;</code>
+   * @return Whether the debuggerAttached field is set.
+   */
+  boolean hasDebuggerAttached();
+  /**
+   * <pre>
+   * Was the debugger running for this session
+   * </pre>
+   *
+   * <code>optional bool debugger_attached = 6;</code>
+   * @return The debuggerAttached.
+   */
+  boolean getDebuggerAttached();
+
+  /**
+   * <pre>
+   * Was the debugger paused during the attach
+   * </pre>
+   *
+   * <code>optional bool debugger_paused_during_attach = 7;</code>
+   * @return Whether the debuggerPausedDuringAttach field is set.
+   */
+  boolean hasDebuggerPausedDuringAttach();
+  /**
+   * <pre>
+   * Was the debugger paused during the attach
+   * </pre>
+   *
+   * <code>optional bool debugger_paused_during_attach = 7;</code>
+   * @return The debuggerPausedDuringAttach.
+   */
+  boolean getDebuggerPausedDuringAttach();
+
+  /**
+   * <pre>
+   * Was auto connect enabled for this session
+   * </pre>
+   *
+   * <code>optional bool auto_connect_enabled = 8;</code>
+   * @return Whether the autoConnectEnabled field is set.
+   */
+  boolean hasAutoConnectEnabled();
+  /**
+   * <pre>
+   * Was auto connect enabled for this session
+   * </pre>
+   *
+   * <code>optional bool auto_connect_enabled = 8;</code>
+   * @return The autoConnectEnabled.
+   */
+  boolean getAutoConnectEnabled();
 }
