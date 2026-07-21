@@ -95,6 +95,25 @@ private static final long serialVersionUID = 0L;
      * @return The activeSteps.
      */
     com.google.protobuf.ByteString getActiveSteps();
+
+    /**
+     * <pre>
+     * The type of state update this entry is
+     * </pre>
+     *
+     * <code>optional .android_studio.TSdkUAEvent.StateUpdate.Type type = 4;</code>
+     * @return Whether the type field is set.
+     */
+    boolean hasType();
+    /**
+     * <pre>
+     * The type of state update this entry is
+     * </pre>
+     *
+     * <code>optional .android_studio.TSdkUAEvent.StateUpdate.Type type = 4;</code>
+     * @return The type.
+     */
+    com.google.wireless.android.sdk.stats.TSdkUAEvent.StateUpdate.Type getType();
   }
   /**
    * Protobuf type {@code android_studio.TSdkUAEvent.StateUpdate}
@@ -110,6 +129,7 @@ private static final long serialVersionUID = 0L;
     }
     private StateUpdate() {
       activeSteps_ = com.google.protobuf.ByteString.EMPTY;
+      type_ = 0;
     }
 
     @java.lang.Override
@@ -135,6 +155,131 @@ private static final long serialVersionUID = 0L;
       return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_TSdkUAEvent_StateUpdate_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               com.google.wireless.android.sdk.stats.TSdkUAEvent.StateUpdate.class, com.google.wireless.android.sdk.stats.TSdkUAEvent.StateUpdate.Builder.class);
+    }
+
+    /**
+     * <pre>
+     * What does this state update describe?
+     * </pre>
+     *
+     * Protobuf enum {@code android_studio.TSdkUAEvent.StateUpdate.Type}
+     */
+    public enum Type
+        implements com.google.protobuf.ProtocolMessageEnum {
+      /**
+       * <code>UNSPECIFIED_TYPE = 0;</code>
+       */
+      UNSPECIFIED_TYPE(0),
+      /**
+       * <pre>
+       * The finalized initial state
+       * </pre>
+       *
+       * <code>INIT = 1;</code>
+       */
+      INIT(1),
+      /**
+       * <pre>
+       * A post-init step completion change
+       * </pre>
+       *
+       * <code>DELTA = 2;</code>
+       */
+      DELTA(2),
+      ;
+
+      /**
+       * <code>UNSPECIFIED_TYPE = 0;</code>
+       */
+      public static final int UNSPECIFIED_TYPE_VALUE = 0;
+      /**
+       * <pre>
+       * The finalized initial state
+       * </pre>
+       *
+       * <code>INIT = 1;</code>
+       */
+      public static final int INIT_VALUE = 1;
+      /**
+       * <pre>
+       * A post-init step completion change
+       * </pre>
+       *
+       * <code>DELTA = 2;</code>
+       */
+      public static final int DELTA_VALUE = 2;
+
+
+      public final int getNumber() {
+        return value;
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static Type valueOf(int value) {
+        return forNumber(value);
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       */
+      public static Type forNumber(int value) {
+        switch (value) {
+          case 0: return UNSPECIFIED_TYPE;
+          case 1: return INIT;
+          case 2: return DELTA;
+          default: return null;
+        }
+      }
+
+      public static com.google.protobuf.Internal.EnumLiteMap<Type>
+          internalGetValueMap() {
+        return internalValueMap;
+      }
+      private static final com.google.protobuf.Internal.EnumLiteMap<
+          Type> internalValueMap =
+            new com.google.protobuf.Internal.EnumLiteMap<Type>() {
+              public Type findValueByNumber(int number) {
+                return Type.forNumber(number);
+              }
+            };
+
+      public final com.google.protobuf.Descriptors.EnumValueDescriptor
+          getValueDescriptor() {
+        return getDescriptor().getValues().get(ordinal());
+      }
+      public final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptorForType() {
+        return getDescriptor();
+      }
+      public static final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptor() {
+        return com.google.wireless.android.sdk.stats.TSdkUAEvent.StateUpdate.getDescriptor().getEnumTypes().get(0);
+      }
+
+      private static final Type[] VALUES = values();
+
+      public static Type valueOf(
+          com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+        if (desc.getType() != getDescriptor()) {
+          throw new java.lang.IllegalArgumentException(
+            "EnumValueDescriptor is not for this type.");
+        }
+        return VALUES[desc.getIndex()];
+      }
+
+      private final int value;
+
+      private Type(int value) {
+        this.value = value;
+      }
+
+      // @@protoc_insertion_point(enum_scope:android_studio.TSdkUAEvent.StateUpdate.Type)
     }
 
     private int bitField0_;
@@ -211,6 +356,33 @@ private static final long serialVersionUID = 0L;
       return activeSteps_;
     }
 
+    public static final int TYPE_FIELD_NUMBER = 4;
+    private int type_;
+    /**
+     * <pre>
+     * The type of state update this entry is
+     * </pre>
+     *
+     * <code>optional .android_studio.TSdkUAEvent.StateUpdate.Type type = 4;</code>
+     * @return Whether the type field is set.
+     */
+    @java.lang.Override public boolean hasType() {
+      return ((bitField0_ & 0x00000008) != 0);
+    }
+    /**
+     * <pre>
+     * The type of state update this entry is
+     * </pre>
+     *
+     * <code>optional .android_studio.TSdkUAEvent.StateUpdate.Type type = 4;</code>
+     * @return The type.
+     */
+    @java.lang.Override public com.google.wireless.android.sdk.stats.TSdkUAEvent.StateUpdate.Type getType() {
+      @SuppressWarnings("deprecation")
+      com.google.wireless.android.sdk.stats.TSdkUAEvent.StateUpdate.Type result = com.google.wireless.android.sdk.stats.TSdkUAEvent.StateUpdate.Type.valueOf(type_);
+      return result == null ? com.google.wireless.android.sdk.stats.TSdkUAEvent.StateUpdate.Type.UNSPECIFIED_TYPE : result;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -234,6 +406,9 @@ private static final long serialVersionUID = 0L;
       if (((bitField0_ & 0x00000004) != 0)) {
         output.writeBytes(3, activeSteps_);
       }
+      if (((bitField0_ & 0x00000008) != 0)) {
+        output.writeEnum(4, type_);
+      }
       getUnknownFields().writeTo(output);
     }
 
@@ -254,6 +429,10 @@ private static final long serialVersionUID = 0L;
       if (((bitField0_ & 0x00000004) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeBytesSize(3, activeSteps_);
+      }
+      if (((bitField0_ & 0x00000008) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(4, type_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -285,6 +464,10 @@ private static final long serialVersionUID = 0L;
         if (!getActiveSteps()
             .equals(other.getActiveSteps())) return false;
       }
+      if (hasType() != other.hasType()) return false;
+      if (hasType()) {
+        if (type_ != other.type_) return false;
+      }
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -308,6 +491,10 @@ private static final long serialVersionUID = 0L;
       if (hasActiveSteps()) {
         hash = (37 * hash) + ACTIVE_STEPS_FIELD_NUMBER;
         hash = (53 * hash) + getActiveSteps().hashCode();
+      }
+      if (hasType()) {
+        hash = (37 * hash) + TYPE_FIELD_NUMBER;
+        hash = (53 * hash) + type_;
       }
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
@@ -443,6 +630,8 @@ private static final long serialVersionUID = 0L;
         bitField0_ = (bitField0_ & ~0x00000002);
         activeSteps_ = com.google.protobuf.ByteString.EMPTY;
         bitField0_ = (bitField0_ & ~0x00000004);
+        type_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000008);
         return this;
       }
 
@@ -483,6 +672,10 @@ private static final long serialVersionUID = 0L;
           to_bitField0_ |= 0x00000004;
         }
         result.activeSteps_ = activeSteps_;
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          to_bitField0_ |= 0x00000008;
+        }
+        result.type_ = type_;
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -541,6 +734,9 @@ private static final long serialVersionUID = 0L;
         if (other.hasActiveSteps()) {
           setActiveSteps(other.getActiveSteps());
         }
+        if (other.hasType()) {
+          setType(other.getType());
+        }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
@@ -582,6 +778,18 @@ private static final long serialVersionUID = 0L;
                 bitField0_ |= 0x00000004;
                 break;
               } // case 26
+              case 32: {
+                int tmpRaw = input.readEnum();
+                com.google.wireless.android.sdk.stats.TSdkUAEvent.StateUpdate.Type tmpValue =
+                    com.google.wireless.android.sdk.stats.TSdkUAEvent.StateUpdate.Type.forNumber(tmpRaw);
+                if (tmpValue == null) {
+                  mergeUnknownVarintField(4, tmpRaw);
+                } else {
+                  type_ = tmpRaw;
+                  bitField0_ |= 0x00000008;
+                }
+                break;
+              } // case 32
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -747,6 +955,65 @@ private static final long serialVersionUID = 0L;
       public Builder clearActiveSteps() {
         bitField0_ = (bitField0_ & ~0x00000004);
         activeSteps_ = getDefaultInstance().getActiveSteps();
+        onChanged();
+        return this;
+      }
+
+      private int type_ = 0;
+      /**
+       * <pre>
+       * The type of state update this entry is
+       * </pre>
+       *
+       * <code>optional .android_studio.TSdkUAEvent.StateUpdate.Type type = 4;</code>
+       * @return Whether the type field is set.
+       */
+      @java.lang.Override public boolean hasType() {
+        return ((bitField0_ & 0x00000008) != 0);
+      }
+      /**
+       * <pre>
+       * The type of state update this entry is
+       * </pre>
+       *
+       * <code>optional .android_studio.TSdkUAEvent.StateUpdate.Type type = 4;</code>
+       * @return The type.
+       */
+      @java.lang.Override
+      public com.google.wireless.android.sdk.stats.TSdkUAEvent.StateUpdate.Type getType() {
+        @SuppressWarnings("deprecation")
+        com.google.wireless.android.sdk.stats.TSdkUAEvent.StateUpdate.Type result = com.google.wireless.android.sdk.stats.TSdkUAEvent.StateUpdate.Type.valueOf(type_);
+        return result == null ? com.google.wireless.android.sdk.stats.TSdkUAEvent.StateUpdate.Type.UNSPECIFIED_TYPE : result;
+      }
+      /**
+       * <pre>
+       * The type of state update this entry is
+       * </pre>
+       *
+       * <code>optional .android_studio.TSdkUAEvent.StateUpdate.Type type = 4;</code>
+       * @param value The type to set.
+       * @return This builder for chaining.
+       */
+      public Builder setType(com.google.wireless.android.sdk.stats.TSdkUAEvent.StateUpdate.Type value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x00000008;
+        type_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The type of state update this entry is
+       * </pre>
+       *
+       * <code>optional .android_studio.TSdkUAEvent.StateUpdate.Type type = 4;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearType() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        type_ = 0;
         onChanged();
         return this;
       }

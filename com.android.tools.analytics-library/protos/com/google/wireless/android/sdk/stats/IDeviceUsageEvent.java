@@ -286,6 +286,14 @@ private static final long serialVersionUID = 0L;
      * <code>RAW_EXEC2 = 57;</code>
      */
     RAW_EXEC2(57),
+    /**
+     * <code>STAT_FILE = 58;</code>
+     */
+    STAT_FILE(58),
+    /**
+     * <code>UNSUPPORTED_METHOD = 59;</code>
+     */
+    UNSUPPORTED_METHOD(59),
     ;
 
     /**
@@ -520,6 +528,14 @@ private static final long serialVersionUID = 0L;
      * <code>RAW_EXEC2 = 57;</code>
      */
     public static final int RAW_EXEC2_VALUE = 57;
+    /**
+     * <code>STAT_FILE = 58;</code>
+     */
+    public static final int STAT_FILE_VALUE = 58;
+    /**
+     * <code>UNSUPPORTED_METHOD = 59;</code>
+     */
+    public static final int UNSUPPORTED_METHOD_VALUE = 59;
 
 
     public final int getNumber() {
@@ -600,6 +616,8 @@ private static final long serialVersionUID = 0L;
         case 55: return EXECUTE_REMOTE_COMMAND_3;
         case 56: return EXECUTE_REMOTE_COMMAND_4;
         case 57: return RAW_EXEC2;
+        case 58: return STAT_FILE;
+        case 59: return UNSUPPORTED_METHOD;
         default: return null;
       }
     }
