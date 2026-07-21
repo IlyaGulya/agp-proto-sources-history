@@ -621,6 +621,10 @@ public enum BooleanOption
    * <code>UNINSTALL_INCOMPATIBLE_APKS = 150;</code>
    */
   UNINSTALL_INCOMPATIBLE_APKS(150),
+  /**
+   * <code>GRADLE_MANAGED_DEVICE_EMULATOR_SHOW_KERNEL_LOGGING = 151;</code>
+   */
+  GRADLE_MANAGED_DEVICE_EMULATOR_SHOW_KERNEL_LOGGING(151),
   UNRECOGNIZED(-1),
   ;
 
@@ -1228,6 +1232,10 @@ public enum BooleanOption
    * <code>UNINSTALL_INCOMPATIBLE_APKS = 150;</code>
    */
   public static final int UNINSTALL_INCOMPATIBLE_APKS_VALUE = 150;
+  /**
+   * <code>GRADLE_MANAGED_DEVICE_EMULATOR_SHOW_KERNEL_LOGGING = 151;</code>
+   */
+  public static final int GRADLE_MANAGED_DEVICE_EMULATOR_SHOW_KERNEL_LOGGING_VALUE = 151;
 
 
   public final int getNumber() {
@@ -1405,6 +1413,7 @@ public enum BooleanOption
       case 148: return FORCE_DETERMINISTIC_APK;
       case 149: return DISABLE_MINSDKLIBRARY_CHECK;
       case 150: return UNINSTALL_INCOMPATIBLE_APKS;
+      case 151: return GRADLE_MANAGED_DEVICE_EMULATOR_SHOW_KERNEL_LOGGING;
       default: return null;
     }
   }

@@ -365,6 +365,14 @@ private static final long serialVersionUID = 0L;
      * <code>DYNAMIC_FEATURE = 7;</code>
      */
     DYNAMIC_FEATURE(7),
+    /**
+     * <pre>
+     * The 'com.android.fused-libraries' plugin
+     * </pre>
+     *
+     * <code>FUSED_LIBRARIES = 8;</code>
+     */
+    FUSED_LIBRARIES(8),
     ;
 
     /**
@@ -427,6 +435,14 @@ private static final long serialVersionUID = 0L;
      * <code>DYNAMIC_FEATURE = 7;</code>
      */
     public static final int DYNAMIC_FEATURE_VALUE = 7;
+    /**
+     * <pre>
+     * The 'com.android.fused-libraries' plugin
+     * </pre>
+     *
+     * <code>FUSED_LIBRARIES = 8;</code>
+     */
+    public static final int FUSED_LIBRARIES_VALUE = 8;
 
 
     public final int getNumber() {
@@ -457,6 +473,7 @@ private static final long serialVersionUID = 0L;
         case 5: return INSTANTAPP;
         case 6: return FEATURE;
         case 7: return DYNAMIC_FEATURE;
+        case 8: return FUSED_LIBRARIES;
         default: return null;
       }
     }

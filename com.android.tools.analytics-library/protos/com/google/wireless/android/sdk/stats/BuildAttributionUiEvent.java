@@ -389,6 +389,22 @@ private static final long serialVersionUID = 0L;
      * <code>FIND_LIBRARY_DECLARATION_CLICKED = 27;</code>
      */
     FIND_LIBRARY_DECLARATION_CLICKED(27),
+    /**
+     * <pre>
+     * Sent when tool window balloon is shown notifying about warnings.
+     * </pre>
+     *
+     * <code>TOOL_WINDOW_BALLOON_SHOWN = 28;</code>
+     */
+    TOOL_WINDOW_BALLOON_SHOWN(28),
+    /**
+     * <code>TOOL_WINDOW_BALLOON_DETAILS_LINK_CLICKED = 29;</code>
+     */
+    TOOL_WINDOW_BALLOON_DETAILS_LINK_CLICKED(29),
+    /**
+     * <code>TOOL_WINDOW_BALLOON_DONT_SHOW_AGAIN_LINK_CLICKED = 30;</code>
+     */
+    TOOL_WINDOW_BALLOON_DONT_SHOW_AGAIN_LINK_CLICKED(30),
     ;
 
     /**
@@ -577,6 +593,22 @@ private static final long serialVersionUID = 0L;
      * <code>FIND_LIBRARY_DECLARATION_CLICKED = 27;</code>
      */
     public static final int FIND_LIBRARY_DECLARATION_CLICKED_VALUE = 27;
+    /**
+     * <pre>
+     * Sent when tool window balloon is shown notifying about warnings.
+     * </pre>
+     *
+     * <code>TOOL_WINDOW_BALLOON_SHOWN = 28;</code>
+     */
+    public static final int TOOL_WINDOW_BALLOON_SHOWN_VALUE = 28;
+    /**
+     * <code>TOOL_WINDOW_BALLOON_DETAILS_LINK_CLICKED = 29;</code>
+     */
+    public static final int TOOL_WINDOW_BALLOON_DETAILS_LINK_CLICKED_VALUE = 29;
+    /**
+     * <code>TOOL_WINDOW_BALLOON_DONT_SHOW_AGAIN_LINK_CLICKED = 30;</code>
+     */
+    public static final int TOOL_WINDOW_BALLOON_DONT_SHOW_AGAIN_LINK_CLICKED_VALUE = 30;
 
 
     public final int getNumber() {
@@ -627,6 +659,9 @@ private static final long serialVersionUID = 0L;
         case 25: return RUN_CHECK_JETIFIER_TASK_CLICKED;
         case 26: return REMOVE_JETIFIER_PROPERTY_CLICKED;
         case 27: return FIND_LIBRARY_DECLARATION_CLICKED;
+        case 28: return TOOL_WINDOW_BALLOON_SHOWN;
+        case 29: return TOOL_WINDOW_BALLOON_DETAILS_LINK_CLICKED;
+        case 30: return TOOL_WINDOW_BALLOON_DONT_SHOW_AGAIN_LINK_CLICKED;
         default: return null;
       }
     }

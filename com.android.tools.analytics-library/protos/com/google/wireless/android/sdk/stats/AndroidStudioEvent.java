@@ -1815,6 +1815,19 @@ private static final long serialVersionUID = 0L;
             projectIds_.add(bs);
             break;
           }
+          case 1130: {
+            com.google.wireless.android.sdk.stats.OSMetrics.Builder subBuilder = null;
+            if (((bitField4_ & 0x00000040) != 0)) {
+              subBuilder = osMetrics_.toBuilder();
+            }
+            osMetrics_ = input.readMessage(com.google.wireless.android.sdk.stats.OSMetrics.PARSER, extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(osMetrics_);
+              osMetrics_ = subBuilder.buildPartial();
+            }
+            bitField4_ |= 0x00000040;
+            break;
+          }
           default: {
             if (!parseUnknownField(
                 input, unknownFields, extensionRegistry, tag)) {
@@ -4279,6 +4292,14 @@ private static final long serialVersionUID = 0L;
      * <code>LOGCAT_USAGE = 246;</code>
      */
     LOGCAT_USAGE(246),
+    /**
+     * <pre>
+     * OS-level metrics
+     * </pre>
+     *
+     * <code>OS_METRICS = 247;</code>
+     */
+    OS_METRICS(247),
     ;
 
     /**
@@ -6082,6 +6103,14 @@ private static final long serialVersionUID = 0L;
      * <code>LOGCAT_USAGE = 246;</code>
      */
     public static final int LOGCAT_USAGE_VALUE = 246;
+    /**
+     * <pre>
+     * OS-level metrics
+     * </pre>
+     *
+     * <code>OS_METRICS = 247;</code>
+     */
+    public static final int OS_METRICS_VALUE = 247;
 
 
     public final int getNumber() {
@@ -6346,6 +6375,7 @@ private static final long serialVersionUID = 0L;
         case 244: return COROUTINE_DEBUGGER;
         case 245: return SPLITTING_TABS_USAGE;
         case 246: return LOGCAT_USAGE;
+        case 247: return OS_METRICS;
         default: return null;
       }
     }
@@ -19961,6 +19991,41 @@ private static final long serialVersionUID = 0L;
     return projectIds_.getByteString(index);
   }
 
+  public static final int OS_METRICS_FIELD_NUMBER = 141;
+  private com.google.wireless.android.sdk.stats.OSMetrics osMetrics_;
+  /**
+   * <pre>
+   * set when kind = OS_METRICS
+   * </pre>
+   *
+   * <code>optional .android_studio.OSMetrics os_metrics = 141;</code>
+   * @return Whether the osMetrics field is set.
+   */
+  public boolean hasOsMetrics() {
+    return ((bitField4_ & 0x00000040) != 0);
+  }
+  /**
+   * <pre>
+   * set when kind = OS_METRICS
+   * </pre>
+   *
+   * <code>optional .android_studio.OSMetrics os_metrics = 141;</code>
+   * @return The osMetrics.
+   */
+  public com.google.wireless.android.sdk.stats.OSMetrics getOsMetrics() {
+    return osMetrics_ == null ? com.google.wireless.android.sdk.stats.OSMetrics.getDefaultInstance() : osMetrics_;
+  }
+  /**
+   * <pre>
+   * set when kind = OS_METRICS
+   * </pre>
+   *
+   * <code>optional .android_studio.OSMetrics os_metrics = 141;</code>
+   */
+  public com.google.wireless.android.sdk.stats.OSMetricsOrBuilder getOsMetricsOrBuilder() {
+    return osMetrics_ == null ? com.google.wireless.android.sdk.stats.OSMetrics.getDefaultInstance() : osMetrics_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -20394,6 +20459,9 @@ private static final long serialVersionUID = 0L;
     }
     for (int i = 0; i < projectIds_.size(); i++) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 140, projectIds_.getRaw(i));
+    }
+    if (((bitField4_ & 0x00000040) != 0)) {
+      output.writeMessage(141, getOsMetrics());
     }
     unknownFields.writeTo(output);
   }
@@ -20969,6 +21037,10 @@ private static final long serialVersionUID = 0L;
       }
       size += dataSize;
       size += 2 * getProjectIdsList().size();
+    }
+    if (((bitField4_ & 0x00000040) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(141, getOsMetrics());
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -21656,6 +21728,11 @@ private static final long serialVersionUID = 0L;
         .equals(other.getRawProjectIdsList())) return false;
     if (!getProjectIdsList()
         .equals(other.getProjectIdsList())) return false;
+    if (hasOsMetrics() != other.hasOsMetrics()) return false;
+    if (hasOsMetrics()) {
+      if (!getOsMetrics()
+          .equals(other.getOsMetrics())) return false;
+    }
     if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
@@ -22229,6 +22306,10 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + PROJECT_IDS_FIELD_NUMBER;
       hash = (53 * hash) + getProjectIdsList().hashCode();
     }
+    if (hasOsMetrics()) {
+      hash = (37 * hash) + OS_METRICS_FIELD_NUMBER;
+      hash = (53 * hash) + getOsMetrics().hashCode();
+    }
     hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -22474,6 +22555,7 @@ private static final long serialVersionUID = 0L;
         getCoroutineDebuggerEventFieldBuilder();
         getSplittingTabsUsageEventFieldBuilder();
         getLogcatUsageEventFieldBuilder();
+        getOsMetricsFieldBuilder();
       }
     }
     @java.lang.Override
@@ -23227,6 +23309,12 @@ private static final long serialVersionUID = 0L;
       bitField4_ = (bitField4_ & ~0x00000400);
       projectIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       bitField4_ = (bitField4_ & ~0x00000800);
+      if (osMetricsBuilder_ == null) {
+        osMetrics_ = null;
+      } else {
+        osMetricsBuilder_.clear();
+      }
+      bitField4_ = (bitField4_ & ~0x00001000);
       return this;
     }
 
@@ -24297,6 +24385,14 @@ private static final long serialVersionUID = 0L;
         bitField4_ = (bitField4_ & ~0x00000800);
       }
       result.projectIds_ = projectIds_;
+      if (((from_bitField4_ & 0x00001000) != 0)) {
+        if (osMetricsBuilder_ == null) {
+          result.osMetrics_ = osMetrics_;
+        } else {
+          result.osMetrics_ = osMetricsBuilder_.build();
+        }
+        to_bitField4_ |= 0x00000040;
+      }
       result.bitField0_ = to_bitField0_;
       result.bitField1_ = to_bitField1_;
       result.bitField2_ = to_bitField2_;
@@ -24873,6 +24969,9 @@ private static final long serialVersionUID = 0L;
           projectIds_.addAll(other.projectIds_);
         }
         onChanged();
+      }
+      if (other.hasOsMetrics()) {
+        mergeOsMetrics(other.getOsMetrics());
       }
       this.mergeUnknownFields(other.unknownFields);
       onChanged();
@@ -45944,6 +46043,162 @@ private static final long serialVersionUID = 0L;
       projectIds_.add(value);
       onChanged();
       return this;
+    }
+
+    private com.google.wireless.android.sdk.stats.OSMetrics osMetrics_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.OSMetrics, com.google.wireless.android.sdk.stats.OSMetrics.Builder, com.google.wireless.android.sdk.stats.OSMetricsOrBuilder> osMetricsBuilder_;
+    /**
+     * <pre>
+     * set when kind = OS_METRICS
+     * </pre>
+     *
+     * <code>optional .android_studio.OSMetrics os_metrics = 141;</code>
+     * @return Whether the osMetrics field is set.
+     */
+    public boolean hasOsMetrics() {
+      return ((bitField4_ & 0x00001000) != 0);
+    }
+    /**
+     * <pre>
+     * set when kind = OS_METRICS
+     * </pre>
+     *
+     * <code>optional .android_studio.OSMetrics os_metrics = 141;</code>
+     * @return The osMetrics.
+     */
+    public com.google.wireless.android.sdk.stats.OSMetrics getOsMetrics() {
+      if (osMetricsBuilder_ == null) {
+        return osMetrics_ == null ? com.google.wireless.android.sdk.stats.OSMetrics.getDefaultInstance() : osMetrics_;
+      } else {
+        return osMetricsBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * set when kind = OS_METRICS
+     * </pre>
+     *
+     * <code>optional .android_studio.OSMetrics os_metrics = 141;</code>
+     */
+    public Builder setOsMetrics(com.google.wireless.android.sdk.stats.OSMetrics value) {
+      if (osMetricsBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        osMetrics_ = value;
+        onChanged();
+      } else {
+        osMetricsBuilder_.setMessage(value);
+      }
+      bitField4_ |= 0x00001000;
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = OS_METRICS
+     * </pre>
+     *
+     * <code>optional .android_studio.OSMetrics os_metrics = 141;</code>
+     */
+    public Builder setOsMetrics(
+        com.google.wireless.android.sdk.stats.OSMetrics.Builder builderForValue) {
+      if (osMetricsBuilder_ == null) {
+        osMetrics_ = builderForValue.build();
+        onChanged();
+      } else {
+        osMetricsBuilder_.setMessage(builderForValue.build());
+      }
+      bitField4_ |= 0x00001000;
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = OS_METRICS
+     * </pre>
+     *
+     * <code>optional .android_studio.OSMetrics os_metrics = 141;</code>
+     */
+    public Builder mergeOsMetrics(com.google.wireless.android.sdk.stats.OSMetrics value) {
+      if (osMetricsBuilder_ == null) {
+        if (((bitField4_ & 0x00001000) != 0) &&
+            osMetrics_ != null &&
+            osMetrics_ != com.google.wireless.android.sdk.stats.OSMetrics.getDefaultInstance()) {
+          osMetrics_ =
+            com.google.wireless.android.sdk.stats.OSMetrics.newBuilder(osMetrics_).mergeFrom(value).buildPartial();
+        } else {
+          osMetrics_ = value;
+        }
+        onChanged();
+      } else {
+        osMetricsBuilder_.mergeFrom(value);
+      }
+      bitField4_ |= 0x00001000;
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = OS_METRICS
+     * </pre>
+     *
+     * <code>optional .android_studio.OSMetrics os_metrics = 141;</code>
+     */
+    public Builder clearOsMetrics() {
+      if (osMetricsBuilder_ == null) {
+        osMetrics_ = null;
+        onChanged();
+      } else {
+        osMetricsBuilder_.clear();
+      }
+      bitField4_ = (bitField4_ & ~0x00001000);
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = OS_METRICS
+     * </pre>
+     *
+     * <code>optional .android_studio.OSMetrics os_metrics = 141;</code>
+     */
+    public com.google.wireless.android.sdk.stats.OSMetrics.Builder getOsMetricsBuilder() {
+      bitField4_ |= 0x00001000;
+      onChanged();
+      return getOsMetricsFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * set when kind = OS_METRICS
+     * </pre>
+     *
+     * <code>optional .android_studio.OSMetrics os_metrics = 141;</code>
+     */
+    public com.google.wireless.android.sdk.stats.OSMetricsOrBuilder getOsMetricsOrBuilder() {
+      if (osMetricsBuilder_ != null) {
+        return osMetricsBuilder_.getMessageOrBuilder();
+      } else {
+        return osMetrics_ == null ?
+            com.google.wireless.android.sdk.stats.OSMetrics.getDefaultInstance() : osMetrics_;
+      }
+    }
+    /**
+     * <pre>
+     * set when kind = OS_METRICS
+     * </pre>
+     *
+     * <code>optional .android_studio.OSMetrics os_metrics = 141;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.OSMetrics, com.google.wireless.android.sdk.stats.OSMetrics.Builder, com.google.wireless.android.sdk.stats.OSMetricsOrBuilder> 
+        getOsMetricsFieldBuilder() {
+      if (osMetricsBuilder_ == null) {
+        osMetricsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.wireless.android.sdk.stats.OSMetrics, com.google.wireless.android.sdk.stats.OSMetrics.Builder, com.google.wireless.android.sdk.stats.OSMetricsOrBuilder>(
+                getOsMetrics(),
+                getParentForChildren(),
+                isClean());
+        osMetrics_ = null;
+      }
+      return osMetricsBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(
