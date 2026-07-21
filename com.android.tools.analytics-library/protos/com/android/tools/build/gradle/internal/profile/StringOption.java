@@ -153,6 +153,10 @@ public enum StringOption
    * <code>IDE_CHECK_JETIFIER_RESULT_FILE = 35;</code>
    */
   IDE_CHECK_JETIFIER_RESULT_FILE(35),
+  /**
+   * <code>AAPT2_FROM_MAVEN_PLATFORM_OVERRIDE = 36;</code>
+   */
+  AAPT2_FROM_MAVEN_PLATFORM_OVERRIDE(36),
   UNRECOGNIZED(-1),
   ;
 
@@ -300,6 +304,10 @@ public enum StringOption
    * <code>IDE_CHECK_JETIFIER_RESULT_FILE = 35;</code>
    */
   public static final int IDE_CHECK_JETIFIER_RESULT_FILE_VALUE = 35;
+  /**
+   * <code>AAPT2_FROM_MAVEN_PLATFORM_OVERRIDE = 36;</code>
+   */
+  public static final int AAPT2_FROM_MAVEN_PLATFORM_OVERRIDE_VALUE = 36;
 
 
   public final int getNumber() {
@@ -362,6 +370,7 @@ public enum StringOption
       case 33: return SUPPRESS_UNSUPPORTED_COMPILE_SDK;
       case 34: return LINT_VERSION_OVERRIDE;
       case 35: return IDE_CHECK_JETIFIER_RESULT_FILE;
+      case 36: return AAPT2_FROM_MAVEN_PLATFORM_OVERRIDE;
       default: return null;
     }
   }

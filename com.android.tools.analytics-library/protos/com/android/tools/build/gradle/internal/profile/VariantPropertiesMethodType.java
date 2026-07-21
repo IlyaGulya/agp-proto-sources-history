@@ -429,6 +429,10 @@ public enum VariantPropertiesMethodType
    * <code>ANNOTATION_PROCESSOR_ARGUMENT_PROVIDERS = 95;</code>
    */
   ANNOTATION_PROCESSOR_ARGUMENT_PROVIDERS(95),
+  /**
+   * <code>NESTED_COMPONENTS = 96;</code>
+   */
+  NESTED_COMPONENTS(96),
   UNRECOGNIZED(-1),
   ;
 
@@ -852,6 +856,10 @@ public enum VariantPropertiesMethodType
    * <code>ANNOTATION_PROCESSOR_ARGUMENT_PROVIDERS = 95;</code>
    */
   public static final int ANNOTATION_PROCESSOR_ARGUMENT_PROVIDERS_VALUE = 95;
+  /**
+   * <code>NESTED_COMPONENTS = 96;</code>
+   */
+  public static final int NESTED_COMPONENTS_VALUE = 96;
 
 
   public final int getNumber() {
@@ -974,6 +982,7 @@ public enum VariantPropertiesMethodType
       case 93: return ANNOTATION_PROCESSOR_CLASS_NAMES;
       case 94: return ANNOTATION_PROCESSOR_ARGUMENTS;
       case 95: return ANNOTATION_PROCESSOR_ARGUMENT_PROVIDERS;
+      case 96: return NESTED_COMPONENTS;
       default: return null;
     }
   }
