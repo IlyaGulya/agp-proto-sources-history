@@ -331,6 +331,15 @@ private static final long serialVersionUID = 0L;
      * <code>GRADLE_JVM_INCOMPATIBLE_DIALOG = 31;</code>
      */
     GRADLE_JVM_INCOMPATIBLE_DIALOG(31),
+    /**
+     * <pre>
+     * The event is related to the modal Dialog to enable parallel Gradle sync
+     * for Gradle 9.4+.
+     * </pre>
+     *
+     * <code>PARALLEL_GRADLE_SYNC_MODAL_DIALOG = 32;</code>
+     */
+    PARALLEL_GRADLE_SYNC_MODAL_DIALOG(32),
     ;
 
     /**
@@ -590,6 +599,15 @@ private static final long serialVersionUID = 0L;
      * <code>GRADLE_JVM_INCOMPATIBLE_DIALOG = 31;</code>
      */
     public static final int GRADLE_JVM_INCOMPATIBLE_DIALOG_VALUE = 31;
+    /**
+     * <pre>
+     * The event is related to the modal Dialog to enable parallel Gradle sync
+     * for Gradle 9.4+.
+     * </pre>
+     *
+     * <code>PARALLEL_GRADLE_SYNC_MODAL_DIALOG = 32;</code>
+     */
+    public static final int PARALLEL_GRADLE_SYNC_MODAL_DIALOG_VALUE = 32;
 
 
     public final int getNumber() {
@@ -644,6 +662,7 @@ private static final long serialVersionUID = 0L;
         case 29: return LOGCAT;
         case 30: return GOOGLE_PLAY_SDK_INDEX;
         case 31: return GRADLE_JVM_INCOMPATIBLE_DIALOG;
+        case 32: return PARALLEL_GRADLE_SYNC_MODAL_DIALOG;
         default: return null;
       }
     }
@@ -3576,6 +3595,26 @@ private static final long serialVersionUID = 0L;
      * <code>CHANGE_REVIEW_EVENT = 382;</code>
      */
     CHANGE_REVIEW_EVENT(382),
+    /**
+     * <pre>
+     * Events related to parallel sync activation's modal dialog.
+     * </pre>
+     *
+     * <code>PARALLEL_GRADLE_SYNC_MODAL_DIALOG_APPLY_SETTING = 383;</code>
+     */
+    PARALLEL_GRADLE_SYNC_MODAL_DIALOG_APPLY_SETTING(383),
+    /**
+     * <code>PARALLEL_GRADLE_SYNC_MODAL_DIALOG_IGNORE_SETTING = 384;</code>
+     */
+    PARALLEL_GRADLE_SYNC_MODAL_DIALOG_IGNORE_SETTING(384),
+    /**
+     * <code>PARALLEL_GRADLE_SYNC_MODAL_DIALOG_ALWAYS_APPLY_SETTING = 385;</code>
+     */
+    PARALLEL_GRADLE_SYNC_MODAL_DIALOG_ALWAYS_APPLY_SETTING(385),
+    /**
+     * <code>PARALLEL_GRADLE_SYNC_MODAL_DIALOG_CANCEL = 386;</code>
+     */
+    PARALLEL_GRADLE_SYNC_MODAL_DIALOG_CANCEL(386),
     ;
 
     /**
@@ -6443,6 +6482,26 @@ private static final long serialVersionUID = 0L;
      * <code>CHANGE_REVIEW_EVENT = 382;</code>
      */
     public static final int CHANGE_REVIEW_EVENT_VALUE = 382;
+    /**
+     * <pre>
+     * Events related to parallel sync activation's modal dialog.
+     * </pre>
+     *
+     * <code>PARALLEL_GRADLE_SYNC_MODAL_DIALOG_APPLY_SETTING = 383;</code>
+     */
+    public static final int PARALLEL_GRADLE_SYNC_MODAL_DIALOG_APPLY_SETTING_VALUE = 383;
+    /**
+     * <code>PARALLEL_GRADLE_SYNC_MODAL_DIALOG_IGNORE_SETTING = 384;</code>
+     */
+    public static final int PARALLEL_GRADLE_SYNC_MODAL_DIALOG_IGNORE_SETTING_VALUE = 384;
+    /**
+     * <code>PARALLEL_GRADLE_SYNC_MODAL_DIALOG_ALWAYS_APPLY_SETTING = 385;</code>
+     */
+    public static final int PARALLEL_GRADLE_SYNC_MODAL_DIALOG_ALWAYS_APPLY_SETTING_VALUE = 385;
+    /**
+     * <code>PARALLEL_GRADLE_SYNC_MODAL_DIALOG_CANCEL = 386;</code>
+     */
+    public static final int PARALLEL_GRADLE_SYNC_MODAL_DIALOG_CANCEL_VALUE = 386;
 
 
     public final int getNumber() {
@@ -6843,6 +6902,10 @@ private static final long serialVersionUID = 0L;
         case 380: return PLAY_PUBLISHING_EVENT;
         case 381: return ROLLBACK_TOOL_CALL_EVENT;
         case 382: return CHANGE_REVIEW_EVENT;
+        case 383: return PARALLEL_GRADLE_SYNC_MODAL_DIALOG_APPLY_SETTING;
+        case 384: return PARALLEL_GRADLE_SYNC_MODAL_DIALOG_IGNORE_SETTING;
+        case 385: return PARALLEL_GRADLE_SYNC_MODAL_DIALOG_ALWAYS_APPLY_SETTING;
+        case 386: return PARALLEL_GRADLE_SYNC_MODAL_DIALOG_CANCEL;
         default: return null;
       }
     }
@@ -13808,7 +13871,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional uint32 min_sdk = 2 [deprecated = true];</code>
        * @deprecated android_studio.AndroidStudioEvent.TemplatesUsage.TemplateModule.min_sdk is deprecated.
-       *     See studio_stats.proto;l=2227
+       *     See studio_stats.proto;l=2236
        * @return Whether the minSdk field is set.
        */
       @java.lang.Deprecated boolean hasMinSdk();
@@ -13819,7 +13882,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional uint32 min_sdk = 2 [deprecated = true];</code>
        * @deprecated android_studio.AndroidStudioEvent.TemplatesUsage.TemplateModule.min_sdk is deprecated.
-       *     See studio_stats.proto;l=2227
+       *     See studio_stats.proto;l=2236
        * @return The minSdk.
        */
       @java.lang.Deprecated int getMinSdk();
@@ -14350,7 +14413,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional uint32 min_sdk = 2 [deprecated = true];</code>
        * @deprecated android_studio.AndroidStudioEvent.TemplatesUsage.TemplateModule.min_sdk is deprecated.
-       *     See studio_stats.proto;l=2227
+       *     See studio_stats.proto;l=2236
        * @return Whether the minSdk field is set.
        */
       @java.lang.Override
@@ -14364,7 +14427,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional uint32 min_sdk = 2 [deprecated = true];</code>
        * @deprecated android_studio.AndroidStudioEvent.TemplatesUsage.TemplateModule.min_sdk is deprecated.
-       *     See studio_stats.proto;l=2227
+       *     See studio_stats.proto;l=2236
        * @return The minSdk.
        */
       @java.lang.Override
@@ -15002,7 +15065,7 @@ private static final long serialVersionUID = 0L;
          *
          * <code>optional uint32 min_sdk = 2 [deprecated = true];</code>
          * @deprecated android_studio.AndroidStudioEvent.TemplatesUsage.TemplateModule.min_sdk is deprecated.
-         *     See studio_stats.proto;l=2227
+         *     See studio_stats.proto;l=2236
          * @return Whether the minSdk field is set.
          */
         @java.lang.Override
@@ -15016,7 +15079,7 @@ private static final long serialVersionUID = 0L;
          *
          * <code>optional uint32 min_sdk = 2 [deprecated = true];</code>
          * @deprecated android_studio.AndroidStudioEvent.TemplatesUsage.TemplateModule.min_sdk is deprecated.
-         *     See studio_stats.proto;l=2227
+         *     See studio_stats.proto;l=2236
          * @return The minSdk.
          */
         @java.lang.Override
@@ -15030,7 +15093,7 @@ private static final long serialVersionUID = 0L;
          *
          * <code>optional uint32 min_sdk = 2 [deprecated = true];</code>
          * @deprecated android_studio.AndroidStudioEvent.TemplatesUsage.TemplateModule.min_sdk is deprecated.
-         *     See studio_stats.proto;l=2227
+         *     See studio_stats.proto;l=2236
          * @param value The minSdk to set.
          * @return This builder for chaining.
          */
@@ -15048,7 +15111,7 @@ private static final long serialVersionUID = 0L;
          *
          * <code>optional uint32 min_sdk = 2 [deprecated = true];</code>
          * @deprecated android_studio.AndroidStudioEvent.TemplatesUsage.TemplateModule.min_sdk is deprecated.
-         *     See studio_stats.proto;l=2227
+         *     See studio_stats.proto;l=2236
          * @return This builder for chaining.
          */
         @java.lang.Deprecated public Builder clearMinSdk() {
