@@ -96,6 +96,15 @@ private static final long serialVersionUID = 0L;
     PERFETTO_TRACE_RECORDED(204),
     /**
      * <pre>
+     * Fired when something happens during a capture (trace recording, replay,
+     * benchmarking).
+     * </pre>
+     *
+     * <code>CAPTURE_EVENT = 205;</code>
+     */
+    CAPTURE_EVENT(205),
+    /**
+     * <pre>
      * Fired when the user clicks to enable/disable custom perfetto config.
      * </pre>
      *
@@ -147,6 +156,31 @@ private static final long serialVersionUID = 0L;
      * <code>PERFETTO_TRACE_LOADED = 303;</code>
      */
     PERFETTO_TRACE_LOADED(303),
+    /**
+     * <pre>
+     * Fired when a track item (e.g., a slice, a counter value) is selected in
+     * the viewer.
+     * </pre>
+     *
+     * <code>TRACK_ITEM_SELECTED = 304;</code>
+     */
+    TRACK_ITEM_SELECTED(304),
+    /**
+     * <pre>
+     * Fired when a user pins or unpins a track in the viewer.
+     * </pre>
+     *
+     * <code>TRACK_PIN_TOGGLED = 305;</code>
+     */
+    TRACK_PIN_TOGGLED(305),
+    /**
+     * <pre>
+     * Fired when a user expands or collapses a track group in the viewer.
+     * </pre>
+     *
+     * <code>TRACK_GROUP_TOGGLED = 306;</code>
+     */
+    TRACK_GROUP_TOGGLED(306),
     ;
 
     /**
@@ -193,6 +227,15 @@ private static final long serialVersionUID = 0L;
      * <code>PERFETTO_TRACE_RECORDED = 204;</code>
      */
     public static final int PERFETTO_TRACE_RECORDED_VALUE = 204;
+    /**
+     * <pre>
+     * Fired when something happens during a capture (trace recording, replay,
+     * benchmarking).
+     * </pre>
+     *
+     * <code>CAPTURE_EVENT = 205;</code>
+     */
+    public static final int CAPTURE_EVENT_VALUE = 205;
     /**
      * <pre>
      * Fired when the user clicks to enable/disable custom perfetto config.
@@ -246,6 +289,31 @@ private static final long serialVersionUID = 0L;
      * <code>PERFETTO_TRACE_LOADED = 303;</code>
      */
     public static final int PERFETTO_TRACE_LOADED_VALUE = 303;
+    /**
+     * <pre>
+     * Fired when a track item (e.g., a slice, a counter value) is selected in
+     * the viewer.
+     * </pre>
+     *
+     * <code>TRACK_ITEM_SELECTED = 304;</code>
+     */
+    public static final int TRACK_ITEM_SELECTED_VALUE = 304;
+    /**
+     * <pre>
+     * Fired when a user pins or unpins a track in the viewer.
+     * </pre>
+     *
+     * <code>TRACK_PIN_TOGGLED = 305;</code>
+     */
+    public static final int TRACK_PIN_TOGGLED_VALUE = 305;
+    /**
+     * <pre>
+     * Fired when a user expands or collapses a track group in the viewer.
+     * </pre>
+     *
+     * <code>TRACK_GROUP_TOGGLED = 306;</code>
+     */
+    public static final int TRACK_GROUP_TOGGLED_VALUE = 306;
 
 
     public final int getNumber() {
@@ -276,6 +344,7 @@ private static final long serialVersionUID = 0L;
         case 202: return NEW_CAPTURE_DIALOG_CANCELLED;
         case 203: return NEW_CAPTURE_DIALOG_PROCEED;
         case 204: return PERFETTO_TRACE_RECORDED;
+        case 205: return CAPTURE_EVENT;
         case 211: return NEW_CAPTURE_DIALOG_CUSTOM_PERFETTO_CONFIG_ENABLED;
         case 212: return NEW_CAPTURE_DIALOG_CUSTOM_PERFETTO_CONFIG_DISABLED;
         case 221: return GPU_COUNTER_SELECTION_DIALOG_OPENED;
@@ -284,6 +353,9 @@ private static final long serialVersionUID = 0L;
         case 301: return PERFETTO_TRACE_OPENED;
         case 302: return PERFETTO_SQL_QUERY_EXECUTED;
         case 303: return PERFETTO_TRACE_LOADED;
+        case 304: return TRACK_ITEM_SELECTED;
+        case 305: return TRACK_PIN_TOGGLED;
+        case 306: return TRACK_GROUP_TOGGLED;
         default: return null;
       }
     }
@@ -331,6 +403,273 @@ private static final long serialVersionUID = 0L;
     }
 
     // @@protoc_insertion_point(enum_scope:android_studio.SherlockEvent.Type)
+  }
+
+  /**
+   * <pre>
+   * The type of track or track group.
+   * </pre>
+   *
+   * Protobuf enum {@code android_studio.SherlockEvent.TrackKind}
+   */
+  public enum TrackKind
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <code>TRACK_KIND_UNKNOWN = 0;</code>
+     */
+    TRACK_KIND_UNKNOWN(0),
+    /**
+     * <pre>
+     * CPU Kinds
+     * </pre>
+     *
+     * <code>TRACK_KIND_CPU_SCHED = 1;</code>
+     */
+    TRACK_KIND_CPU_SCHED(1),
+    /**
+     * <code>TRACK_KIND_CPU_FREQ = 2;</code>
+     */
+    TRACK_KIND_CPU_FREQ(2),
+    /**
+     * <code>TRACK_KIND_CPU_UTIL = 3;</code>
+     */
+    TRACK_KIND_CPU_UTIL(3),
+    /**
+     * <code>TRACK_KIND_CPU_UTIL_SUMMARY = 4;</code>
+     */
+    TRACK_KIND_CPU_UTIL_SUMMARY(4),
+    /**
+     * <pre>
+     * GPU Kinds
+     * </pre>
+     *
+     * <code>TRACK_KIND_GPU_MEMORY = 5;</code>
+     */
+    TRACK_KIND_GPU_MEMORY(5),
+    /**
+     * <code>TRACK_KIND_GPU_QUEUE = 6;</code>
+     */
+    TRACK_KIND_GPU_QUEUE(6),
+    /**
+     * <code>TRACK_KIND_GPU_COUNTER = 7;</code>
+     */
+    TRACK_KIND_GPU_COUNTER(7),
+    /**
+     * <code>TRACK_KIND_VULKAN_EVENT = 8;</code>
+     */
+    TRACK_KIND_VULKAN_EVENT(8),
+    /**
+     * <pre>
+     * Process &amp; Thread Kinds
+     * </pre>
+     *
+     * <code>TRACK_KIND_PROCESS_SUMMARY = 9;</code>
+     */
+    TRACK_KIND_PROCESS_SUMMARY(9),
+    /**
+     * <code>TRACK_KIND_PROCESS_MEMORY = 10;</code>
+     */
+    TRACK_KIND_PROCESS_MEMORY(10),
+    /**
+     * <code>TRACK_KIND_PROCESS_COUNTER = 11;</code>
+     */
+    TRACK_KIND_PROCESS_COUNTER(11),
+    /**
+     * <code>TRACK_KIND_ASYNC_EVENT = 12;</code>
+     */
+    TRACK_KIND_ASYNC_EVENT(12),
+    /**
+     * <code>TRACK_KIND_THREAD = 13;</code>
+     */
+    TRACK_KIND_THREAD(13),
+    /**
+     * <code>TRACK_KIND_TIMELINE = 14;</code>
+     */
+    TRACK_KIND_TIMELINE(14),
+    /**
+     * <pre>
+     * Generic/Other Kinds
+     * </pre>
+     *
+     * <code>TRACK_KIND_BATTERY = 15;</code>
+     */
+    TRACK_KIND_BATTERY(15),
+    /**
+     * <code>TRACK_KIND_POWER = 16;</code>
+     */
+    TRACK_KIND_POWER(16),
+    ;
+
+    /**
+     * <code>TRACK_KIND_UNKNOWN = 0;</code>
+     */
+    public static final int TRACK_KIND_UNKNOWN_VALUE = 0;
+    /**
+     * <pre>
+     * CPU Kinds
+     * </pre>
+     *
+     * <code>TRACK_KIND_CPU_SCHED = 1;</code>
+     */
+    public static final int TRACK_KIND_CPU_SCHED_VALUE = 1;
+    /**
+     * <code>TRACK_KIND_CPU_FREQ = 2;</code>
+     */
+    public static final int TRACK_KIND_CPU_FREQ_VALUE = 2;
+    /**
+     * <code>TRACK_KIND_CPU_UTIL = 3;</code>
+     */
+    public static final int TRACK_KIND_CPU_UTIL_VALUE = 3;
+    /**
+     * <code>TRACK_KIND_CPU_UTIL_SUMMARY = 4;</code>
+     */
+    public static final int TRACK_KIND_CPU_UTIL_SUMMARY_VALUE = 4;
+    /**
+     * <pre>
+     * GPU Kinds
+     * </pre>
+     *
+     * <code>TRACK_KIND_GPU_MEMORY = 5;</code>
+     */
+    public static final int TRACK_KIND_GPU_MEMORY_VALUE = 5;
+    /**
+     * <code>TRACK_KIND_GPU_QUEUE = 6;</code>
+     */
+    public static final int TRACK_KIND_GPU_QUEUE_VALUE = 6;
+    /**
+     * <code>TRACK_KIND_GPU_COUNTER = 7;</code>
+     */
+    public static final int TRACK_KIND_GPU_COUNTER_VALUE = 7;
+    /**
+     * <code>TRACK_KIND_VULKAN_EVENT = 8;</code>
+     */
+    public static final int TRACK_KIND_VULKAN_EVENT_VALUE = 8;
+    /**
+     * <pre>
+     * Process &amp; Thread Kinds
+     * </pre>
+     *
+     * <code>TRACK_KIND_PROCESS_SUMMARY = 9;</code>
+     */
+    public static final int TRACK_KIND_PROCESS_SUMMARY_VALUE = 9;
+    /**
+     * <code>TRACK_KIND_PROCESS_MEMORY = 10;</code>
+     */
+    public static final int TRACK_KIND_PROCESS_MEMORY_VALUE = 10;
+    /**
+     * <code>TRACK_KIND_PROCESS_COUNTER = 11;</code>
+     */
+    public static final int TRACK_KIND_PROCESS_COUNTER_VALUE = 11;
+    /**
+     * <code>TRACK_KIND_ASYNC_EVENT = 12;</code>
+     */
+    public static final int TRACK_KIND_ASYNC_EVENT_VALUE = 12;
+    /**
+     * <code>TRACK_KIND_THREAD = 13;</code>
+     */
+    public static final int TRACK_KIND_THREAD_VALUE = 13;
+    /**
+     * <code>TRACK_KIND_TIMELINE = 14;</code>
+     */
+    public static final int TRACK_KIND_TIMELINE_VALUE = 14;
+    /**
+     * <pre>
+     * Generic/Other Kinds
+     * </pre>
+     *
+     * <code>TRACK_KIND_BATTERY = 15;</code>
+     */
+    public static final int TRACK_KIND_BATTERY_VALUE = 15;
+    /**
+     * <code>TRACK_KIND_POWER = 16;</code>
+     */
+    public static final int TRACK_KIND_POWER_VALUE = 16;
+
+
+    public final int getNumber() {
+      return value;
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     * @deprecated Use {@link #forNumber(int)} instead.
+     */
+    @java.lang.Deprecated
+    public static TrackKind valueOf(int value) {
+      return forNumber(value);
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     */
+    public static TrackKind forNumber(int value) {
+      switch (value) {
+        case 0: return TRACK_KIND_UNKNOWN;
+        case 1: return TRACK_KIND_CPU_SCHED;
+        case 2: return TRACK_KIND_CPU_FREQ;
+        case 3: return TRACK_KIND_CPU_UTIL;
+        case 4: return TRACK_KIND_CPU_UTIL_SUMMARY;
+        case 5: return TRACK_KIND_GPU_MEMORY;
+        case 6: return TRACK_KIND_GPU_QUEUE;
+        case 7: return TRACK_KIND_GPU_COUNTER;
+        case 8: return TRACK_KIND_VULKAN_EVENT;
+        case 9: return TRACK_KIND_PROCESS_SUMMARY;
+        case 10: return TRACK_KIND_PROCESS_MEMORY;
+        case 11: return TRACK_KIND_PROCESS_COUNTER;
+        case 12: return TRACK_KIND_ASYNC_EVENT;
+        case 13: return TRACK_KIND_THREAD;
+        case 14: return TRACK_KIND_TIMELINE;
+        case 15: return TRACK_KIND_BATTERY;
+        case 16: return TRACK_KIND_POWER;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<TrackKind>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static final com.google.protobuf.Internal.EnumLiteMap<
+        TrackKind> internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<TrackKind>() {
+            public TrackKind findValueByNumber(int number) {
+              return TrackKind.forNumber(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      return getDescriptor().getValues().get(ordinal());
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return com.google.wireless.android.sdk.stats.SherlockEvent.getDescriptor().getEnumTypes().get(1);
+    }
+
+    private static final TrackKind[] VALUES = values();
+
+    public static TrackKind valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int value;
+
+    private TrackKind(int value) {
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:android_studio.SherlockEvent.TrackKind)
   }
 
   public interface SherlockProjectChangeOrBuilder extends
@@ -13104,6 +13443,6132 @@ private static final long serialVersionUID = 0L;
 
   }
 
+  public interface TrackItemSelectedMetadataOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:android_studio.SherlockEvent.TrackItemSelectedMetadata)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated .android_studio.SherlockEvent.TrackItemSelectedMetadata.Selection selections = 1;</code>
+     */
+    java.util.List<com.google.wireless.android.sdk.stats.SherlockEvent.TrackItemSelectedMetadata.Selection> 
+        getSelectionsList();
+    /**
+     * <code>repeated .android_studio.SherlockEvent.TrackItemSelectedMetadata.Selection selections = 1;</code>
+     */
+    com.google.wireless.android.sdk.stats.SherlockEvent.TrackItemSelectedMetadata.Selection getSelections(int index);
+    /**
+     * <code>repeated .android_studio.SherlockEvent.TrackItemSelectedMetadata.Selection selections = 1;</code>
+     */
+    int getSelectionsCount();
+    /**
+     * <code>repeated .android_studio.SherlockEvent.TrackItemSelectedMetadata.Selection selections = 1;</code>
+     */
+    java.util.List<? extends com.google.wireless.android.sdk.stats.SherlockEvent.TrackItemSelectedMetadata.SelectionOrBuilder> 
+        getSelectionsOrBuilderList();
+    /**
+     * <code>repeated .android_studio.SherlockEvent.TrackItemSelectedMetadata.Selection selections = 1;</code>
+     */
+    com.google.wireless.android.sdk.stats.SherlockEvent.TrackItemSelectedMetadata.SelectionOrBuilder getSelectionsOrBuilder(
+        int index);
+  }
+  /**
+   * <pre>
+   * Metadata for the |TRACK_ITEM_SELECTED| event.
+   * </pre>
+   *
+   * Protobuf type {@code android_studio.SherlockEvent.TrackItemSelectedMetadata}
+   */
+  public static final class TrackItemSelectedMetadata extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:android_studio.SherlockEvent.TrackItemSelectedMetadata)
+      TrackItemSelectedMetadataOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use TrackItemSelectedMetadata.newBuilder() to construct.
+    private TrackItemSelectedMetadata(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private TrackItemSelectedMetadata() {
+      selections_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new TrackItemSelectedMetadata();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_SherlockEvent_TrackItemSelectedMetadata_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_SherlockEvent_TrackItemSelectedMetadata_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.google.wireless.android.sdk.stats.SherlockEvent.TrackItemSelectedMetadata.class, com.google.wireless.android.sdk.stats.SherlockEvent.TrackItemSelectedMetadata.Builder.class);
+    }
+
+    /**
+     * Protobuf enum {@code android_studio.SherlockEvent.TrackItemSelectedMetadata.SelectionKind}
+     */
+    public enum SelectionKind
+        implements com.google.protobuf.ProtocolMessageEnum {
+      /**
+       * <code>SELECTION_KIND_UNKNOWN = 0;</code>
+       */
+      SELECTION_KIND_UNKNOWN(0),
+      /**
+       * <code>SELECTION_KIND_THREAD = 1;</code>
+       */
+      SELECTION_KIND_THREAD(1),
+      /**
+       * <code>SELECTION_KIND_THREAD_STATE = 2;</code>
+       */
+      SELECTION_KIND_THREAD_STATE(2),
+      /**
+       * <code>SELECTION_KIND_CPU = 3;</code>
+       */
+      SELECTION_KIND_CPU(3),
+      /**
+       * <code>SELECTION_KIND_ASYNC = 4;</code>
+       */
+      SELECTION_KIND_ASYNC(4),
+      /**
+       * <code>SELECTION_KIND_GPU = 5;</code>
+       */
+      SELECTION_KIND_GPU(5),
+      /**
+       * <code>SELECTION_KIND_VULKAN_EVENT = 6;</code>
+       */
+      SELECTION_KIND_VULKAN_EVENT(6),
+      /**
+       * <code>SELECTION_KIND_COUNTER = 7;</code>
+       */
+      SELECTION_KIND_COUNTER(7),
+      /**
+       * <code>SELECTION_KIND_FRAME_EVENTS = 8;</code>
+       */
+      SELECTION_KIND_FRAME_EVENTS(8),
+      /**
+       * <code>SELECTION_KIND_MEMORY = 9;</code>
+       */
+      SELECTION_KIND_MEMORY(9),
+      /**
+       * <code>SELECTION_KIND_BATTERY = 10;</code>
+       */
+      SELECTION_KIND_BATTERY(10),
+      /**
+       * <code>SELECTION_KIND_PROCESS_MEMORY = 11;</code>
+       */
+      SELECTION_KIND_PROCESS_MEMORY(11),
+      ;
+
+      /**
+       * <code>SELECTION_KIND_UNKNOWN = 0;</code>
+       */
+      public static final int SELECTION_KIND_UNKNOWN_VALUE = 0;
+      /**
+       * <code>SELECTION_KIND_THREAD = 1;</code>
+       */
+      public static final int SELECTION_KIND_THREAD_VALUE = 1;
+      /**
+       * <code>SELECTION_KIND_THREAD_STATE = 2;</code>
+       */
+      public static final int SELECTION_KIND_THREAD_STATE_VALUE = 2;
+      /**
+       * <code>SELECTION_KIND_CPU = 3;</code>
+       */
+      public static final int SELECTION_KIND_CPU_VALUE = 3;
+      /**
+       * <code>SELECTION_KIND_ASYNC = 4;</code>
+       */
+      public static final int SELECTION_KIND_ASYNC_VALUE = 4;
+      /**
+       * <code>SELECTION_KIND_GPU = 5;</code>
+       */
+      public static final int SELECTION_KIND_GPU_VALUE = 5;
+      /**
+       * <code>SELECTION_KIND_VULKAN_EVENT = 6;</code>
+       */
+      public static final int SELECTION_KIND_VULKAN_EVENT_VALUE = 6;
+      /**
+       * <code>SELECTION_KIND_COUNTER = 7;</code>
+       */
+      public static final int SELECTION_KIND_COUNTER_VALUE = 7;
+      /**
+       * <code>SELECTION_KIND_FRAME_EVENTS = 8;</code>
+       */
+      public static final int SELECTION_KIND_FRAME_EVENTS_VALUE = 8;
+      /**
+       * <code>SELECTION_KIND_MEMORY = 9;</code>
+       */
+      public static final int SELECTION_KIND_MEMORY_VALUE = 9;
+      /**
+       * <code>SELECTION_KIND_BATTERY = 10;</code>
+       */
+      public static final int SELECTION_KIND_BATTERY_VALUE = 10;
+      /**
+       * <code>SELECTION_KIND_PROCESS_MEMORY = 11;</code>
+       */
+      public static final int SELECTION_KIND_PROCESS_MEMORY_VALUE = 11;
+
+
+      public final int getNumber() {
+        return value;
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static SelectionKind valueOf(int value) {
+        return forNumber(value);
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       */
+      public static SelectionKind forNumber(int value) {
+        switch (value) {
+          case 0: return SELECTION_KIND_UNKNOWN;
+          case 1: return SELECTION_KIND_THREAD;
+          case 2: return SELECTION_KIND_THREAD_STATE;
+          case 3: return SELECTION_KIND_CPU;
+          case 4: return SELECTION_KIND_ASYNC;
+          case 5: return SELECTION_KIND_GPU;
+          case 6: return SELECTION_KIND_VULKAN_EVENT;
+          case 7: return SELECTION_KIND_COUNTER;
+          case 8: return SELECTION_KIND_FRAME_EVENTS;
+          case 9: return SELECTION_KIND_MEMORY;
+          case 10: return SELECTION_KIND_BATTERY;
+          case 11: return SELECTION_KIND_PROCESS_MEMORY;
+          default: return null;
+        }
+      }
+
+      public static com.google.protobuf.Internal.EnumLiteMap<SelectionKind>
+          internalGetValueMap() {
+        return internalValueMap;
+      }
+      private static final com.google.protobuf.Internal.EnumLiteMap<
+          SelectionKind> internalValueMap =
+            new com.google.protobuf.Internal.EnumLiteMap<SelectionKind>() {
+              public SelectionKind findValueByNumber(int number) {
+                return SelectionKind.forNumber(number);
+              }
+            };
+
+      public final com.google.protobuf.Descriptors.EnumValueDescriptor
+          getValueDescriptor() {
+        return getDescriptor().getValues().get(ordinal());
+      }
+      public final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptorForType() {
+        return getDescriptor();
+      }
+      public static final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptor() {
+        return com.google.wireless.android.sdk.stats.SherlockEvent.TrackItemSelectedMetadata.getDescriptor().getEnumTypes().get(0);
+      }
+
+      private static final SelectionKind[] VALUES = values();
+
+      public static SelectionKind valueOf(
+          com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+        if (desc.getType() != getDescriptor()) {
+          throw new java.lang.IllegalArgumentException(
+            "EnumValueDescriptor is not for this type.");
+        }
+        return VALUES[desc.getIndex()];
+      }
+
+      private final int value;
+
+      private SelectionKind(int value) {
+        this.value = value;
+      }
+
+      // @@protoc_insertion_point(enum_scope:android_studio.SherlockEvent.TrackItemSelectedMetadata.SelectionKind)
+    }
+
+    public interface SelectionOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:android_studio.SherlockEvent.TrackItemSelectedMetadata.Selection)
+        com.google.protobuf.MessageOrBuilder {
+
+      /**
+       * <code>optional int32 num_items = 1;</code>
+       * @return Whether the numItems field is set.
+       */
+      boolean hasNumItems();
+      /**
+       * <code>optional int32 num_items = 1;</code>
+       * @return The numItems.
+       */
+      int getNumItems();
+
+      /**
+       * <code>optional .android_studio.SherlockEvent.TrackItemSelectedMetadata.SelectionKind selection_kind = 2;</code>
+       * @return Whether the selectionKind field is set.
+       */
+      boolean hasSelectionKind();
+      /**
+       * <code>optional .android_studio.SherlockEvent.TrackItemSelectedMetadata.SelectionKind selection_kind = 2;</code>
+       * @return The selectionKind.
+       */
+      com.google.wireless.android.sdk.stats.SherlockEvent.TrackItemSelectedMetadata.SelectionKind getSelectionKind();
+    }
+    /**
+     * Protobuf type {@code android_studio.SherlockEvent.TrackItemSelectedMetadata.Selection}
+     */
+    public static final class Selection extends
+        com.google.protobuf.GeneratedMessageV3 implements
+        // @@protoc_insertion_point(message_implements:android_studio.SherlockEvent.TrackItemSelectedMetadata.Selection)
+        SelectionOrBuilder {
+    private static final long serialVersionUID = 0L;
+      // Use Selection.newBuilder() to construct.
+      private Selection(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+        super(builder);
+      }
+      private Selection() {
+        selectionKind_ = 0;
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new Selection();
+      }
+
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_SherlockEvent_TrackItemSelectedMetadata_Selection_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_SherlockEvent_TrackItemSelectedMetadata_Selection_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.google.wireless.android.sdk.stats.SherlockEvent.TrackItemSelectedMetadata.Selection.class, com.google.wireless.android.sdk.stats.SherlockEvent.TrackItemSelectedMetadata.Selection.Builder.class);
+      }
+
+      private int bitField0_;
+      public static final int NUM_ITEMS_FIELD_NUMBER = 1;
+      private int numItems_ = 0;
+      /**
+       * <code>optional int32 num_items = 1;</code>
+       * @return Whether the numItems field is set.
+       */
+      @java.lang.Override
+      public boolean hasNumItems() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>optional int32 num_items = 1;</code>
+       * @return The numItems.
+       */
+      @java.lang.Override
+      public int getNumItems() {
+        return numItems_;
+      }
+
+      public static final int SELECTION_KIND_FIELD_NUMBER = 2;
+      private int selectionKind_ = 0;
+      /**
+       * <code>optional .android_studio.SherlockEvent.TrackItemSelectedMetadata.SelectionKind selection_kind = 2;</code>
+       * @return Whether the selectionKind field is set.
+       */
+      @java.lang.Override public boolean hasSelectionKind() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <code>optional .android_studio.SherlockEvent.TrackItemSelectedMetadata.SelectionKind selection_kind = 2;</code>
+       * @return The selectionKind.
+       */
+      @java.lang.Override public com.google.wireless.android.sdk.stats.SherlockEvent.TrackItemSelectedMetadata.SelectionKind getSelectionKind() {
+        com.google.wireless.android.sdk.stats.SherlockEvent.TrackItemSelectedMetadata.SelectionKind result = com.google.wireless.android.sdk.stats.SherlockEvent.TrackItemSelectedMetadata.SelectionKind.forNumber(selectionKind_);
+        return result == null ? com.google.wireless.android.sdk.stats.SherlockEvent.TrackItemSelectedMetadata.SelectionKind.SELECTION_KIND_UNKNOWN : result;
+      }
+
+      private byte memoizedIsInitialized = -1;
+      @java.lang.Override
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      @java.lang.Override
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        if (((bitField0_ & 0x00000001) != 0)) {
+          output.writeInt32(1, numItems_);
+        }
+        if (((bitField0_ & 0x00000002) != 0)) {
+          output.writeEnum(2, selectionKind_);
+        }
+        getUnknownFields().writeTo(output);
+      }
+
+      @java.lang.Override
+      public int getSerializedSize() {
+        int size = memoizedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        if (((bitField0_ & 0x00000001) != 0)) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeInt32Size(1, numItems_);
+        }
+        if (((bitField0_ & 0x00000002) != 0)) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeEnumSize(2, selectionKind_);
+        }
+        size += getUnknownFields().getSerializedSize();
+        memoizedSize = size;
+        return size;
+      }
+
+      @java.lang.Override
+      public boolean equals(final java.lang.Object obj) {
+        if (obj == this) {
+         return true;
+        }
+        if (!(obj instanceof com.google.wireless.android.sdk.stats.SherlockEvent.TrackItemSelectedMetadata.Selection)) {
+          return super.equals(obj);
+        }
+        com.google.wireless.android.sdk.stats.SherlockEvent.TrackItemSelectedMetadata.Selection other = (com.google.wireless.android.sdk.stats.SherlockEvent.TrackItemSelectedMetadata.Selection) obj;
+
+        if (hasNumItems() != other.hasNumItems()) return false;
+        if (hasNumItems()) {
+          if (getNumItems()
+              != other.getNumItems()) return false;
+        }
+        if (hasSelectionKind() != other.hasSelectionKind()) return false;
+        if (hasSelectionKind()) {
+          if (selectionKind_ != other.selectionKind_) return false;
+        }
+        if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+        return true;
+      }
+
+      @java.lang.Override
+      public int hashCode() {
+        if (memoizedHashCode != 0) {
+          return memoizedHashCode;
+        }
+        int hash = 41;
+        hash = (19 * hash) + getDescriptor().hashCode();
+        if (hasNumItems()) {
+          hash = (37 * hash) + NUM_ITEMS_FIELD_NUMBER;
+          hash = (53 * hash) + getNumItems();
+        }
+        if (hasSelectionKind()) {
+          hash = (37 * hash) + SELECTION_KIND_FIELD_NUMBER;
+          hash = (53 * hash) + selectionKind_;
+        }
+        hash = (29 * hash) + getUnknownFields().hashCode();
+        memoizedHashCode = hash;
+        return hash;
+      }
+
+      public static com.google.wireless.android.sdk.stats.SherlockEvent.TrackItemSelectedMetadata.Selection parseFrom(
+          java.nio.ByteBuffer data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static com.google.wireless.android.sdk.stats.SherlockEvent.TrackItemSelectedMetadata.Selection parseFrom(
+          java.nio.ByteBuffer data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static com.google.wireless.android.sdk.stats.SherlockEvent.TrackItemSelectedMetadata.Selection parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static com.google.wireless.android.sdk.stats.SherlockEvent.TrackItemSelectedMetadata.Selection parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static com.google.wireless.android.sdk.stats.SherlockEvent.TrackItemSelectedMetadata.Selection parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static com.google.wireless.android.sdk.stats.SherlockEvent.TrackItemSelectedMetadata.Selection parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static com.google.wireless.android.sdk.stats.SherlockEvent.TrackItemSelectedMetadata.Selection parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static com.google.wireless.android.sdk.stats.SherlockEvent.TrackItemSelectedMetadata.Selection parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static com.google.wireless.android.sdk.stats.SherlockEvent.TrackItemSelectedMetadata.Selection parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input);
+      }
+      public static com.google.wireless.android.sdk.stats.SherlockEvent.TrackItemSelectedMetadata.Selection parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static com.google.wireless.android.sdk.stats.SherlockEvent.TrackItemSelectedMetadata.Selection parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static com.google.wireless.android.sdk.stats.SherlockEvent.TrackItemSelectedMetadata.Selection parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      @java.lang.Override
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder() {
+        return DEFAULT_INSTANCE.toBuilder();
+      }
+      public static Builder newBuilder(com.google.wireless.android.sdk.stats.SherlockEvent.TrackItemSelectedMetadata.Selection prototype) {
+        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+      }
+      @java.lang.Override
+      public Builder toBuilder() {
+        return this == DEFAULT_INSTANCE
+            ? new Builder() : new Builder().mergeFrom(this);
+      }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * Protobuf type {@code android_studio.SherlockEvent.TrackItemSelectedMetadata.Selection}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:android_studio.SherlockEvent.TrackItemSelectedMetadata.Selection)
+          com.google.wireless.android.sdk.stats.SherlockEvent.TrackItemSelectedMetadata.SelectionOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_SherlockEvent_TrackItemSelectedMetadata_Selection_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_SherlockEvent_TrackItemSelectedMetadata_Selection_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  com.google.wireless.android.sdk.stats.SherlockEvent.TrackItemSelectedMetadata.Selection.class, com.google.wireless.android.sdk.stats.SherlockEvent.TrackItemSelectedMetadata.Selection.Builder.class);
+        }
+
+        // Construct using com.google.wireless.android.sdk.stats.SherlockEvent.TrackItemSelectedMetadata.Selection.newBuilder()
+        private Builder() {
+
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          super(parent);
+
+        }
+        @java.lang.Override
+        public Builder clear() {
+          super.clear();
+          bitField0_ = 0;
+          numItems_ = 0;
+          selectionKind_ = 0;
+          return this;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_SherlockEvent_TrackItemSelectedMetadata_Selection_descriptor;
+        }
+
+        @java.lang.Override
+        public com.google.wireless.android.sdk.stats.SherlockEvent.TrackItemSelectedMetadata.Selection getDefaultInstanceForType() {
+          return com.google.wireless.android.sdk.stats.SherlockEvent.TrackItemSelectedMetadata.Selection.getDefaultInstance();
+        }
+
+        @java.lang.Override
+        public com.google.wireless.android.sdk.stats.SherlockEvent.TrackItemSelectedMetadata.Selection build() {
+          com.google.wireless.android.sdk.stats.SherlockEvent.TrackItemSelectedMetadata.Selection result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        @java.lang.Override
+        public com.google.wireless.android.sdk.stats.SherlockEvent.TrackItemSelectedMetadata.Selection buildPartial() {
+          com.google.wireless.android.sdk.stats.SherlockEvent.TrackItemSelectedMetadata.Selection result = new com.google.wireless.android.sdk.stats.SherlockEvent.TrackItemSelectedMetadata.Selection(this);
+          if (bitField0_ != 0) { buildPartial0(result); }
+          onBuilt();
+          return result;
+        }
+
+        private void buildPartial0(com.google.wireless.android.sdk.stats.SherlockEvent.TrackItemSelectedMetadata.Selection result) {
+          int from_bitField0_ = bitField0_;
+          int to_bitField0_ = 0;
+          if (((from_bitField0_ & 0x00000001) != 0)) {
+            result.numItems_ = numItems_;
+            to_bitField0_ |= 0x00000001;
+          }
+          if (((from_bitField0_ & 0x00000002) != 0)) {
+            result.selectionKind_ = selectionKind_;
+            to_bitField0_ |= 0x00000002;
+          }
+          result.bitField0_ |= to_bitField0_;
+        }
+
+        @java.lang.Override
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof com.google.wireless.android.sdk.stats.SherlockEvent.TrackItemSelectedMetadata.Selection) {
+            return mergeFrom((com.google.wireless.android.sdk.stats.SherlockEvent.TrackItemSelectedMetadata.Selection)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(com.google.wireless.android.sdk.stats.SherlockEvent.TrackItemSelectedMetadata.Selection other) {
+          if (other == com.google.wireless.android.sdk.stats.SherlockEvent.TrackItemSelectedMetadata.Selection.getDefaultInstance()) return this;
+          if (other.hasNumItems()) {
+            setNumItems(other.getNumItems());
+          }
+          if (other.hasSelectionKind()) {
+            setSelectionKind(other.getSelectionKind());
+          }
+          this.mergeUnknownFields(other.getUnknownFields());
+          onChanged();
+          return this;
+        }
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        @java.lang.Override
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          if (extensionRegistry == null) {
+            throw new java.lang.NullPointerException();
+          }
+          try {
+            boolean done = false;
+            while (!done) {
+              int tag = input.readTag();
+              switch (tag) {
+                case 0:
+                  done = true;
+                  break;
+                case 8: {
+                  numItems_ = input.readInt32();
+                  bitField0_ |= 0x00000001;
+                  break;
+                } // case 8
+                case 16: {
+                  int tmpRaw = input.readEnum();
+                  com.google.wireless.android.sdk.stats.SherlockEvent.TrackItemSelectedMetadata.SelectionKind tmpValue =
+                      com.google.wireless.android.sdk.stats.SherlockEvent.TrackItemSelectedMetadata.SelectionKind.forNumber(tmpRaw);
+                  if (tmpValue == null) {
+                    mergeUnknownVarintField(2, tmpRaw);
+                  } else {
+                    selectionKind_ = tmpRaw;
+                    bitField0_ |= 0x00000002;
+                  }
+                  break;
+                } // case 16
+                default: {
+                  if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                    done = true; // was an endgroup tag
+                  }
+                  break;
+                } // default:
+              } // switch (tag)
+            } // while (!done)
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            throw e.unwrapIOException();
+          } finally {
+            onChanged();
+          } // finally
+          return this;
+        }
+        private int bitField0_;
+
+        private int numItems_ ;
+        /**
+         * <code>optional int32 num_items = 1;</code>
+         * @return Whether the numItems field is set.
+         */
+        @java.lang.Override
+        public boolean hasNumItems() {
+          return ((bitField0_ & 0x00000001) != 0);
+        }
+        /**
+         * <code>optional int32 num_items = 1;</code>
+         * @return The numItems.
+         */
+        @java.lang.Override
+        public int getNumItems() {
+          return numItems_;
+        }
+        /**
+         * <code>optional int32 num_items = 1;</code>
+         * @param value The numItems to set.
+         * @return This builder for chaining.
+         */
+        public Builder setNumItems(int value) {
+
+          numItems_ = value;
+          bitField0_ |= 0x00000001;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>optional int32 num_items = 1;</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearNumItems() {
+          bitField0_ = (bitField0_ & ~0x00000001);
+          numItems_ = 0;
+          onChanged();
+          return this;
+        }
+
+        private int selectionKind_ = 0;
+        /**
+         * <code>optional .android_studio.SherlockEvent.TrackItemSelectedMetadata.SelectionKind selection_kind = 2;</code>
+         * @return Whether the selectionKind field is set.
+         */
+        @java.lang.Override public boolean hasSelectionKind() {
+          return ((bitField0_ & 0x00000002) != 0);
+        }
+        /**
+         * <code>optional .android_studio.SherlockEvent.TrackItemSelectedMetadata.SelectionKind selection_kind = 2;</code>
+         * @return The selectionKind.
+         */
+        @java.lang.Override
+        public com.google.wireless.android.sdk.stats.SherlockEvent.TrackItemSelectedMetadata.SelectionKind getSelectionKind() {
+          com.google.wireless.android.sdk.stats.SherlockEvent.TrackItemSelectedMetadata.SelectionKind result = com.google.wireless.android.sdk.stats.SherlockEvent.TrackItemSelectedMetadata.SelectionKind.forNumber(selectionKind_);
+          return result == null ? com.google.wireless.android.sdk.stats.SherlockEvent.TrackItemSelectedMetadata.SelectionKind.SELECTION_KIND_UNKNOWN : result;
+        }
+        /**
+         * <code>optional .android_studio.SherlockEvent.TrackItemSelectedMetadata.SelectionKind selection_kind = 2;</code>
+         * @param value The selectionKind to set.
+         * @return This builder for chaining.
+         */
+        public Builder setSelectionKind(com.google.wireless.android.sdk.stats.SherlockEvent.TrackItemSelectedMetadata.SelectionKind value) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          bitField0_ |= 0x00000002;
+          selectionKind_ = value.getNumber();
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>optional .android_studio.SherlockEvent.TrackItemSelectedMetadata.SelectionKind selection_kind = 2;</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearSelectionKind() {
+          bitField0_ = (bitField0_ & ~0x00000002);
+          selectionKind_ = 0;
+          onChanged();
+          return this;
+        }
+        @java.lang.Override
+        public final Builder setUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.setUnknownFields(unknownFields);
+        }
+
+        @java.lang.Override
+        public final Builder mergeUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.mergeUnknownFields(unknownFields);
+        }
+
+
+        // @@protoc_insertion_point(builder_scope:android_studio.SherlockEvent.TrackItemSelectedMetadata.Selection)
+      }
+
+      // @@protoc_insertion_point(class_scope:android_studio.SherlockEvent.TrackItemSelectedMetadata.Selection)
+      private static final com.google.wireless.android.sdk.stats.SherlockEvent.TrackItemSelectedMetadata.Selection DEFAULT_INSTANCE;
+      static {
+        DEFAULT_INSTANCE = new com.google.wireless.android.sdk.stats.SherlockEvent.TrackItemSelectedMetadata.Selection();
+      }
+
+      public static com.google.wireless.android.sdk.stats.SherlockEvent.TrackItemSelectedMetadata.Selection getDefaultInstance() {
+        return DEFAULT_INSTANCE;
+      }
+
+      @java.lang.Deprecated public static final com.google.protobuf.Parser<Selection>
+          PARSER = new com.google.protobuf.AbstractParser<Selection>() {
+        @java.lang.Override
+        public Selection parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          Builder builder = newBuilder();
+          try {
+            builder.mergeFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            throw e.setUnfinishedMessage(builder.buildPartial());
+          } catch (com.google.protobuf.UninitializedMessageException e) {
+            throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+          } catch (java.io.IOException e) {
+            throw new com.google.protobuf.InvalidProtocolBufferException(e)
+                .setUnfinishedMessage(builder.buildPartial());
+          }
+          return builder.buildPartial();
+        }
+      };
+
+      public static com.google.protobuf.Parser<Selection> parser() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<Selection> getParserForType() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.wireless.android.sdk.stats.SherlockEvent.TrackItemSelectedMetadata.Selection getDefaultInstanceForType() {
+        return DEFAULT_INSTANCE;
+      }
+
+    }
+
+    public static final int SELECTIONS_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private java.util.List<com.google.wireless.android.sdk.stats.SherlockEvent.TrackItemSelectedMetadata.Selection> selections_;
+    /**
+     * <code>repeated .android_studio.SherlockEvent.TrackItemSelectedMetadata.Selection selections = 1;</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.google.wireless.android.sdk.stats.SherlockEvent.TrackItemSelectedMetadata.Selection> getSelectionsList() {
+      return selections_;
+    }
+    /**
+     * <code>repeated .android_studio.SherlockEvent.TrackItemSelectedMetadata.Selection selections = 1;</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.google.wireless.android.sdk.stats.SherlockEvent.TrackItemSelectedMetadata.SelectionOrBuilder> 
+        getSelectionsOrBuilderList() {
+      return selections_;
+    }
+    /**
+     * <code>repeated .android_studio.SherlockEvent.TrackItemSelectedMetadata.Selection selections = 1;</code>
+     */
+    @java.lang.Override
+    public int getSelectionsCount() {
+      return selections_.size();
+    }
+    /**
+     * <code>repeated .android_studio.SherlockEvent.TrackItemSelectedMetadata.Selection selections = 1;</code>
+     */
+    @java.lang.Override
+    public com.google.wireless.android.sdk.stats.SherlockEvent.TrackItemSelectedMetadata.Selection getSelections(int index) {
+      return selections_.get(index);
+    }
+    /**
+     * <code>repeated .android_studio.SherlockEvent.TrackItemSelectedMetadata.Selection selections = 1;</code>
+     */
+    @java.lang.Override
+    public com.google.wireless.android.sdk.stats.SherlockEvent.TrackItemSelectedMetadata.SelectionOrBuilder getSelectionsOrBuilder(
+        int index) {
+      return selections_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < selections_.size(); i++) {
+        output.writeMessage(1, selections_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < selections_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, selections_.get(i));
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.google.wireless.android.sdk.stats.SherlockEvent.TrackItemSelectedMetadata)) {
+        return super.equals(obj);
+      }
+      com.google.wireless.android.sdk.stats.SherlockEvent.TrackItemSelectedMetadata other = (com.google.wireless.android.sdk.stats.SherlockEvent.TrackItemSelectedMetadata) obj;
+
+      if (!getSelectionsList()
+          .equals(other.getSelectionsList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getSelectionsCount() > 0) {
+        hash = (37 * hash) + SELECTIONS_FIELD_NUMBER;
+        hash = (53 * hash) + getSelectionsList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.google.wireless.android.sdk.stats.SherlockEvent.TrackItemSelectedMetadata parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.google.wireless.android.sdk.stats.SherlockEvent.TrackItemSelectedMetadata parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.google.wireless.android.sdk.stats.SherlockEvent.TrackItemSelectedMetadata parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.google.wireless.android.sdk.stats.SherlockEvent.TrackItemSelectedMetadata parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.google.wireless.android.sdk.stats.SherlockEvent.TrackItemSelectedMetadata parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.google.wireless.android.sdk.stats.SherlockEvent.TrackItemSelectedMetadata parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.google.wireless.android.sdk.stats.SherlockEvent.TrackItemSelectedMetadata parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.google.wireless.android.sdk.stats.SherlockEvent.TrackItemSelectedMetadata parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.google.wireless.android.sdk.stats.SherlockEvent.TrackItemSelectedMetadata parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.google.wireless.android.sdk.stats.SherlockEvent.TrackItemSelectedMetadata parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.google.wireless.android.sdk.stats.SherlockEvent.TrackItemSelectedMetadata parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.google.wireless.android.sdk.stats.SherlockEvent.TrackItemSelectedMetadata parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.google.wireless.android.sdk.stats.SherlockEvent.TrackItemSelectedMetadata prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Metadata for the |TRACK_ITEM_SELECTED| event.
+     * </pre>
+     *
+     * Protobuf type {@code android_studio.SherlockEvent.TrackItemSelectedMetadata}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:android_studio.SherlockEvent.TrackItemSelectedMetadata)
+        com.google.wireless.android.sdk.stats.SherlockEvent.TrackItemSelectedMetadataOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_SherlockEvent_TrackItemSelectedMetadata_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_SherlockEvent_TrackItemSelectedMetadata_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.google.wireless.android.sdk.stats.SherlockEvent.TrackItemSelectedMetadata.class, com.google.wireless.android.sdk.stats.SherlockEvent.TrackItemSelectedMetadata.Builder.class);
+      }
+
+      // Construct using com.google.wireless.android.sdk.stats.SherlockEvent.TrackItemSelectedMetadata.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        if (selectionsBuilder_ == null) {
+          selections_ = java.util.Collections.emptyList();
+        } else {
+          selections_ = null;
+          selectionsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_SherlockEvent_TrackItemSelectedMetadata_descriptor;
+      }
+
+      @java.lang.Override
+      public com.google.wireless.android.sdk.stats.SherlockEvent.TrackItemSelectedMetadata getDefaultInstanceForType() {
+        return com.google.wireless.android.sdk.stats.SherlockEvent.TrackItemSelectedMetadata.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.google.wireless.android.sdk.stats.SherlockEvent.TrackItemSelectedMetadata build() {
+        com.google.wireless.android.sdk.stats.SherlockEvent.TrackItemSelectedMetadata result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.google.wireless.android.sdk.stats.SherlockEvent.TrackItemSelectedMetadata buildPartial() {
+        com.google.wireless.android.sdk.stats.SherlockEvent.TrackItemSelectedMetadata result = new com.google.wireless.android.sdk.stats.SherlockEvent.TrackItemSelectedMetadata(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.google.wireless.android.sdk.stats.SherlockEvent.TrackItemSelectedMetadata result) {
+        if (selectionsBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            selections_ = java.util.Collections.unmodifiableList(selections_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.selections_ = selections_;
+        } else {
+          result.selections_ = selectionsBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.google.wireless.android.sdk.stats.SherlockEvent.TrackItemSelectedMetadata result) {
+        int from_bitField0_ = bitField0_;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.google.wireless.android.sdk.stats.SherlockEvent.TrackItemSelectedMetadata) {
+          return mergeFrom((com.google.wireless.android.sdk.stats.SherlockEvent.TrackItemSelectedMetadata)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.google.wireless.android.sdk.stats.SherlockEvent.TrackItemSelectedMetadata other) {
+        if (other == com.google.wireless.android.sdk.stats.SherlockEvent.TrackItemSelectedMetadata.getDefaultInstance()) return this;
+        if (selectionsBuilder_ == null) {
+          if (!other.selections_.isEmpty()) {
+            if (selections_.isEmpty()) {
+              selections_ = other.selections_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureSelectionsIsMutable();
+              selections_.addAll(other.selections_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.selections_.isEmpty()) {
+            if (selectionsBuilder_.isEmpty()) {
+              selectionsBuilder_.dispose();
+              selectionsBuilder_ = null;
+              selections_ = other.selections_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              selectionsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getSelectionsFieldBuilder() : null;
+            } else {
+              selectionsBuilder_.addAllMessages(other.selections_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                com.google.wireless.android.sdk.stats.SherlockEvent.TrackItemSelectedMetadata.Selection m =
+                    input.readMessage(
+                        com.google.wireless.android.sdk.stats.SherlockEvent.TrackItemSelectedMetadata.Selection.PARSER,
+                        extensionRegistry);
+                if (selectionsBuilder_ == null) {
+                  ensureSelectionsIsMutable();
+                  selections_.add(m);
+                } else {
+                  selectionsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<com.google.wireless.android.sdk.stats.SherlockEvent.TrackItemSelectedMetadata.Selection> selections_ =
+        java.util.Collections.emptyList();
+      private void ensureSelectionsIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          selections_ = new java.util.ArrayList<com.google.wireless.android.sdk.stats.SherlockEvent.TrackItemSelectedMetadata.Selection>(selections_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.google.wireless.android.sdk.stats.SherlockEvent.TrackItemSelectedMetadata.Selection, com.google.wireless.android.sdk.stats.SherlockEvent.TrackItemSelectedMetadata.Selection.Builder, com.google.wireless.android.sdk.stats.SherlockEvent.TrackItemSelectedMetadata.SelectionOrBuilder> selectionsBuilder_;
+
+      /**
+       * <code>repeated .android_studio.SherlockEvent.TrackItemSelectedMetadata.Selection selections = 1;</code>
+       */
+      public java.util.List<com.google.wireless.android.sdk.stats.SherlockEvent.TrackItemSelectedMetadata.Selection> getSelectionsList() {
+        if (selectionsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(selections_);
+        } else {
+          return selectionsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .android_studio.SherlockEvent.TrackItemSelectedMetadata.Selection selections = 1;</code>
+       */
+      public int getSelectionsCount() {
+        if (selectionsBuilder_ == null) {
+          return selections_.size();
+        } else {
+          return selectionsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .android_studio.SherlockEvent.TrackItemSelectedMetadata.Selection selections = 1;</code>
+       */
+      public com.google.wireless.android.sdk.stats.SherlockEvent.TrackItemSelectedMetadata.Selection getSelections(int index) {
+        if (selectionsBuilder_ == null) {
+          return selections_.get(index);
+        } else {
+          return selectionsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .android_studio.SherlockEvent.TrackItemSelectedMetadata.Selection selections = 1;</code>
+       */
+      public Builder setSelections(
+          int index, com.google.wireless.android.sdk.stats.SherlockEvent.TrackItemSelectedMetadata.Selection value) {
+        if (selectionsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureSelectionsIsMutable();
+          selections_.set(index, value);
+          onChanged();
+        } else {
+          selectionsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .android_studio.SherlockEvent.TrackItemSelectedMetadata.Selection selections = 1;</code>
+       */
+      public Builder setSelections(
+          int index, com.google.wireless.android.sdk.stats.SherlockEvent.TrackItemSelectedMetadata.Selection.Builder builderForValue) {
+        if (selectionsBuilder_ == null) {
+          ensureSelectionsIsMutable();
+          selections_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          selectionsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .android_studio.SherlockEvent.TrackItemSelectedMetadata.Selection selections = 1;</code>
+       */
+      public Builder addSelections(com.google.wireless.android.sdk.stats.SherlockEvent.TrackItemSelectedMetadata.Selection value) {
+        if (selectionsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureSelectionsIsMutable();
+          selections_.add(value);
+          onChanged();
+        } else {
+          selectionsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .android_studio.SherlockEvent.TrackItemSelectedMetadata.Selection selections = 1;</code>
+       */
+      public Builder addSelections(
+          int index, com.google.wireless.android.sdk.stats.SherlockEvent.TrackItemSelectedMetadata.Selection value) {
+        if (selectionsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureSelectionsIsMutable();
+          selections_.add(index, value);
+          onChanged();
+        } else {
+          selectionsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .android_studio.SherlockEvent.TrackItemSelectedMetadata.Selection selections = 1;</code>
+       */
+      public Builder addSelections(
+          com.google.wireless.android.sdk.stats.SherlockEvent.TrackItemSelectedMetadata.Selection.Builder builderForValue) {
+        if (selectionsBuilder_ == null) {
+          ensureSelectionsIsMutable();
+          selections_.add(builderForValue.build());
+          onChanged();
+        } else {
+          selectionsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .android_studio.SherlockEvent.TrackItemSelectedMetadata.Selection selections = 1;</code>
+       */
+      public Builder addSelections(
+          int index, com.google.wireless.android.sdk.stats.SherlockEvent.TrackItemSelectedMetadata.Selection.Builder builderForValue) {
+        if (selectionsBuilder_ == null) {
+          ensureSelectionsIsMutable();
+          selections_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          selectionsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .android_studio.SherlockEvent.TrackItemSelectedMetadata.Selection selections = 1;</code>
+       */
+      public Builder addAllSelections(
+          java.lang.Iterable<? extends com.google.wireless.android.sdk.stats.SherlockEvent.TrackItemSelectedMetadata.Selection> values) {
+        if (selectionsBuilder_ == null) {
+          ensureSelectionsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, selections_);
+          onChanged();
+        } else {
+          selectionsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .android_studio.SherlockEvent.TrackItemSelectedMetadata.Selection selections = 1;</code>
+       */
+      public Builder clearSelections() {
+        if (selectionsBuilder_ == null) {
+          selections_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          selectionsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .android_studio.SherlockEvent.TrackItemSelectedMetadata.Selection selections = 1;</code>
+       */
+      public Builder removeSelections(int index) {
+        if (selectionsBuilder_ == null) {
+          ensureSelectionsIsMutable();
+          selections_.remove(index);
+          onChanged();
+        } else {
+          selectionsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .android_studio.SherlockEvent.TrackItemSelectedMetadata.Selection selections = 1;</code>
+       */
+      public com.google.wireless.android.sdk.stats.SherlockEvent.TrackItemSelectedMetadata.Selection.Builder getSelectionsBuilder(
+          int index) {
+        return getSelectionsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .android_studio.SherlockEvent.TrackItemSelectedMetadata.Selection selections = 1;</code>
+       */
+      public com.google.wireless.android.sdk.stats.SherlockEvent.TrackItemSelectedMetadata.SelectionOrBuilder getSelectionsOrBuilder(
+          int index) {
+        if (selectionsBuilder_ == null) {
+          return selections_.get(index);  } else {
+          return selectionsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .android_studio.SherlockEvent.TrackItemSelectedMetadata.Selection selections = 1;</code>
+       */
+      public java.util.List<? extends com.google.wireless.android.sdk.stats.SherlockEvent.TrackItemSelectedMetadata.SelectionOrBuilder> 
+           getSelectionsOrBuilderList() {
+        if (selectionsBuilder_ != null) {
+          return selectionsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(selections_);
+        }
+      }
+      /**
+       * <code>repeated .android_studio.SherlockEvent.TrackItemSelectedMetadata.Selection selections = 1;</code>
+       */
+      public com.google.wireless.android.sdk.stats.SherlockEvent.TrackItemSelectedMetadata.Selection.Builder addSelectionsBuilder() {
+        return getSelectionsFieldBuilder().addBuilder(
+            com.google.wireless.android.sdk.stats.SherlockEvent.TrackItemSelectedMetadata.Selection.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .android_studio.SherlockEvent.TrackItemSelectedMetadata.Selection selections = 1;</code>
+       */
+      public com.google.wireless.android.sdk.stats.SherlockEvent.TrackItemSelectedMetadata.Selection.Builder addSelectionsBuilder(
+          int index) {
+        return getSelectionsFieldBuilder().addBuilder(
+            index, com.google.wireless.android.sdk.stats.SherlockEvent.TrackItemSelectedMetadata.Selection.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .android_studio.SherlockEvent.TrackItemSelectedMetadata.Selection selections = 1;</code>
+       */
+      public java.util.List<com.google.wireless.android.sdk.stats.SherlockEvent.TrackItemSelectedMetadata.Selection.Builder> 
+           getSelectionsBuilderList() {
+        return getSelectionsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.google.wireless.android.sdk.stats.SherlockEvent.TrackItemSelectedMetadata.Selection, com.google.wireless.android.sdk.stats.SherlockEvent.TrackItemSelectedMetadata.Selection.Builder, com.google.wireless.android.sdk.stats.SherlockEvent.TrackItemSelectedMetadata.SelectionOrBuilder> 
+          getSelectionsFieldBuilder() {
+        if (selectionsBuilder_ == null) {
+          selectionsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.google.wireless.android.sdk.stats.SherlockEvent.TrackItemSelectedMetadata.Selection, com.google.wireless.android.sdk.stats.SherlockEvent.TrackItemSelectedMetadata.Selection.Builder, com.google.wireless.android.sdk.stats.SherlockEvent.TrackItemSelectedMetadata.SelectionOrBuilder>(
+                  selections_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          selections_ = null;
+        }
+        return selectionsBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:android_studio.SherlockEvent.TrackItemSelectedMetadata)
+    }
+
+    // @@protoc_insertion_point(class_scope:android_studio.SherlockEvent.TrackItemSelectedMetadata)
+    private static final com.google.wireless.android.sdk.stats.SherlockEvent.TrackItemSelectedMetadata DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.google.wireless.android.sdk.stats.SherlockEvent.TrackItemSelectedMetadata();
+    }
+
+    public static com.google.wireless.android.sdk.stats.SherlockEvent.TrackItemSelectedMetadata getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<TrackItemSelectedMetadata>
+        PARSER = new com.google.protobuf.AbstractParser<TrackItemSelectedMetadata>() {
+      @java.lang.Override
+      public TrackItemSelectedMetadata parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<TrackItemSelectedMetadata> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<TrackItemSelectedMetadata> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.wireless.android.sdk.stats.SherlockEvent.TrackItemSelectedMetadata getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface TrackPinToggledMetadataOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:android_studio.SherlockEvent.TrackPinToggledMetadata)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * True if the track was pinned, false if it was unpinned.
+     * </pre>
+     *
+     * <code>optional bool is_pinned = 1;</code>
+     * @return Whether the isPinned field is set.
+     */
+    boolean hasIsPinned();
+    /**
+     * <pre>
+     * True if the track was pinned, false if it was unpinned.
+     * </pre>
+     *
+     * <code>optional bool is_pinned = 1;</code>
+     * @return The isPinned.
+     */
+    boolean getIsPinned();
+
+    /**
+     * <pre>
+     * The type of the track or track group that was pinned or unpinned.
+     * </pre>
+     *
+     * <code>optional .android_studio.SherlockEvent.TrackKind track_kind = 2;</code>
+     * @return Whether the trackKind field is set.
+     */
+    boolean hasTrackKind();
+    /**
+     * <pre>
+     * The type of the track or track group that was pinned or unpinned.
+     * </pre>
+     *
+     * <code>optional .android_studio.SherlockEvent.TrackKind track_kind = 2;</code>
+     * @return The trackKind.
+     */
+    com.google.wireless.android.sdk.stats.SherlockEvent.TrackKind getTrackKind();
+
+    /**
+     * <pre>
+     * True if the pinned item was a group, false if it was a track.
+     * </pre>
+     *
+     * <code>optional bool is_group = 3;</code>
+     * @return Whether the isGroup field is set.
+     */
+    boolean hasIsGroup();
+    /**
+     * <pre>
+     * True if the pinned item was a group, false if it was a track.
+     * </pre>
+     *
+     * <code>optional bool is_group = 3;</code>
+     * @return The isGroup.
+     */
+    boolean getIsGroup();
+  }
+  /**
+   * <pre>
+   * Metadata for the |TRACK_PIN_TOGGLED| event.
+   * </pre>
+   *
+   * Protobuf type {@code android_studio.SherlockEvent.TrackPinToggledMetadata}
+   */
+  public static final class TrackPinToggledMetadata extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:android_studio.SherlockEvent.TrackPinToggledMetadata)
+      TrackPinToggledMetadataOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use TrackPinToggledMetadata.newBuilder() to construct.
+    private TrackPinToggledMetadata(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private TrackPinToggledMetadata() {
+      trackKind_ = 0;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new TrackPinToggledMetadata();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_SherlockEvent_TrackPinToggledMetadata_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_SherlockEvent_TrackPinToggledMetadata_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.google.wireless.android.sdk.stats.SherlockEvent.TrackPinToggledMetadata.class, com.google.wireless.android.sdk.stats.SherlockEvent.TrackPinToggledMetadata.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int IS_PINNED_FIELD_NUMBER = 1;
+    private boolean isPinned_ = false;
+    /**
+     * <pre>
+     * True if the track was pinned, false if it was unpinned.
+     * </pre>
+     *
+     * <code>optional bool is_pinned = 1;</code>
+     * @return Whether the isPinned field is set.
+     */
+    @java.lang.Override
+    public boolean hasIsPinned() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <pre>
+     * True if the track was pinned, false if it was unpinned.
+     * </pre>
+     *
+     * <code>optional bool is_pinned = 1;</code>
+     * @return The isPinned.
+     */
+    @java.lang.Override
+    public boolean getIsPinned() {
+      return isPinned_;
+    }
+
+    public static final int TRACK_KIND_FIELD_NUMBER = 2;
+    private int trackKind_ = 0;
+    /**
+     * <pre>
+     * The type of the track or track group that was pinned or unpinned.
+     * </pre>
+     *
+     * <code>optional .android_studio.SherlockEvent.TrackKind track_kind = 2;</code>
+     * @return Whether the trackKind field is set.
+     */
+    @java.lang.Override public boolean hasTrackKind() {
+      return ((bitField0_ & 0x00000002) != 0);
+    }
+    /**
+     * <pre>
+     * The type of the track or track group that was pinned or unpinned.
+     * </pre>
+     *
+     * <code>optional .android_studio.SherlockEvent.TrackKind track_kind = 2;</code>
+     * @return The trackKind.
+     */
+    @java.lang.Override public com.google.wireless.android.sdk.stats.SherlockEvent.TrackKind getTrackKind() {
+      com.google.wireless.android.sdk.stats.SherlockEvent.TrackKind result = com.google.wireless.android.sdk.stats.SherlockEvent.TrackKind.forNumber(trackKind_);
+      return result == null ? com.google.wireless.android.sdk.stats.SherlockEvent.TrackKind.TRACK_KIND_UNKNOWN : result;
+    }
+
+    public static final int IS_GROUP_FIELD_NUMBER = 3;
+    private boolean isGroup_ = false;
+    /**
+     * <pre>
+     * True if the pinned item was a group, false if it was a track.
+     * </pre>
+     *
+     * <code>optional bool is_group = 3;</code>
+     * @return Whether the isGroup field is set.
+     */
+    @java.lang.Override
+    public boolean hasIsGroup() {
+      return ((bitField0_ & 0x00000004) != 0);
+    }
+    /**
+     * <pre>
+     * True if the pinned item was a group, false if it was a track.
+     * </pre>
+     *
+     * <code>optional bool is_group = 3;</code>
+     * @return The isGroup.
+     */
+    @java.lang.Override
+    public boolean getIsGroup() {
+      return isGroup_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (((bitField0_ & 0x00000001) != 0)) {
+        output.writeBool(1, isPinned_);
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        output.writeEnum(2, trackKind_);
+      }
+      if (((bitField0_ & 0x00000004) != 0)) {
+        output.writeBool(3, isGroup_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(1, isPinned_);
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(2, trackKind_);
+      }
+      if (((bitField0_ & 0x00000004) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(3, isGroup_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.google.wireless.android.sdk.stats.SherlockEvent.TrackPinToggledMetadata)) {
+        return super.equals(obj);
+      }
+      com.google.wireless.android.sdk.stats.SherlockEvent.TrackPinToggledMetadata other = (com.google.wireless.android.sdk.stats.SherlockEvent.TrackPinToggledMetadata) obj;
+
+      if (hasIsPinned() != other.hasIsPinned()) return false;
+      if (hasIsPinned()) {
+        if (getIsPinned()
+            != other.getIsPinned()) return false;
+      }
+      if (hasTrackKind() != other.hasTrackKind()) return false;
+      if (hasTrackKind()) {
+        if (trackKind_ != other.trackKind_) return false;
+      }
+      if (hasIsGroup() != other.hasIsGroup()) return false;
+      if (hasIsGroup()) {
+        if (getIsGroup()
+            != other.getIsGroup()) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasIsPinned()) {
+        hash = (37 * hash) + IS_PINNED_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+            getIsPinned());
+      }
+      if (hasTrackKind()) {
+        hash = (37 * hash) + TRACK_KIND_FIELD_NUMBER;
+        hash = (53 * hash) + trackKind_;
+      }
+      if (hasIsGroup()) {
+        hash = (37 * hash) + IS_GROUP_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+            getIsGroup());
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.google.wireless.android.sdk.stats.SherlockEvent.TrackPinToggledMetadata parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.google.wireless.android.sdk.stats.SherlockEvent.TrackPinToggledMetadata parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.google.wireless.android.sdk.stats.SherlockEvent.TrackPinToggledMetadata parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.google.wireless.android.sdk.stats.SherlockEvent.TrackPinToggledMetadata parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.google.wireless.android.sdk.stats.SherlockEvent.TrackPinToggledMetadata parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.google.wireless.android.sdk.stats.SherlockEvent.TrackPinToggledMetadata parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.google.wireless.android.sdk.stats.SherlockEvent.TrackPinToggledMetadata parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.google.wireless.android.sdk.stats.SherlockEvent.TrackPinToggledMetadata parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.google.wireless.android.sdk.stats.SherlockEvent.TrackPinToggledMetadata parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.google.wireless.android.sdk.stats.SherlockEvent.TrackPinToggledMetadata parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.google.wireless.android.sdk.stats.SherlockEvent.TrackPinToggledMetadata parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.google.wireless.android.sdk.stats.SherlockEvent.TrackPinToggledMetadata parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.google.wireless.android.sdk.stats.SherlockEvent.TrackPinToggledMetadata prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Metadata for the |TRACK_PIN_TOGGLED| event.
+     * </pre>
+     *
+     * Protobuf type {@code android_studio.SherlockEvent.TrackPinToggledMetadata}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:android_studio.SherlockEvent.TrackPinToggledMetadata)
+        com.google.wireless.android.sdk.stats.SherlockEvent.TrackPinToggledMetadataOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_SherlockEvent_TrackPinToggledMetadata_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_SherlockEvent_TrackPinToggledMetadata_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.google.wireless.android.sdk.stats.SherlockEvent.TrackPinToggledMetadata.class, com.google.wireless.android.sdk.stats.SherlockEvent.TrackPinToggledMetadata.Builder.class);
+      }
+
+      // Construct using com.google.wireless.android.sdk.stats.SherlockEvent.TrackPinToggledMetadata.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        isPinned_ = false;
+        trackKind_ = 0;
+        isGroup_ = false;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_SherlockEvent_TrackPinToggledMetadata_descriptor;
+      }
+
+      @java.lang.Override
+      public com.google.wireless.android.sdk.stats.SherlockEvent.TrackPinToggledMetadata getDefaultInstanceForType() {
+        return com.google.wireless.android.sdk.stats.SherlockEvent.TrackPinToggledMetadata.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.google.wireless.android.sdk.stats.SherlockEvent.TrackPinToggledMetadata build() {
+        com.google.wireless.android.sdk.stats.SherlockEvent.TrackPinToggledMetadata result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.google.wireless.android.sdk.stats.SherlockEvent.TrackPinToggledMetadata buildPartial() {
+        com.google.wireless.android.sdk.stats.SherlockEvent.TrackPinToggledMetadata result = new com.google.wireless.android.sdk.stats.SherlockEvent.TrackPinToggledMetadata(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.google.wireless.android.sdk.stats.SherlockEvent.TrackPinToggledMetadata result) {
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.isPinned_ = isPinned_;
+          to_bitField0_ |= 0x00000001;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.trackKind_ = trackKind_;
+          to_bitField0_ |= 0x00000002;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.isGroup_ = isGroup_;
+          to_bitField0_ |= 0x00000004;
+        }
+        result.bitField0_ |= to_bitField0_;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.google.wireless.android.sdk.stats.SherlockEvent.TrackPinToggledMetadata) {
+          return mergeFrom((com.google.wireless.android.sdk.stats.SherlockEvent.TrackPinToggledMetadata)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.google.wireless.android.sdk.stats.SherlockEvent.TrackPinToggledMetadata other) {
+        if (other == com.google.wireless.android.sdk.stats.SherlockEvent.TrackPinToggledMetadata.getDefaultInstance()) return this;
+        if (other.hasIsPinned()) {
+          setIsPinned(other.getIsPinned());
+        }
+        if (other.hasTrackKind()) {
+          setTrackKind(other.getTrackKind());
+        }
+        if (other.hasIsGroup()) {
+          setIsGroup(other.getIsGroup());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                isPinned_ = input.readBool();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              case 16: {
+                int tmpRaw = input.readEnum();
+                com.google.wireless.android.sdk.stats.SherlockEvent.TrackKind tmpValue =
+                    com.google.wireless.android.sdk.stats.SherlockEvent.TrackKind.forNumber(tmpRaw);
+                if (tmpValue == null) {
+                  mergeUnknownVarintField(2, tmpRaw);
+                } else {
+                  trackKind_ = tmpRaw;
+                  bitField0_ |= 0x00000002;
+                }
+                break;
+              } // case 16
+              case 24: {
+                isGroup_ = input.readBool();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 24
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private boolean isPinned_ ;
+      /**
+       * <pre>
+       * True if the track was pinned, false if it was unpinned.
+       * </pre>
+       *
+       * <code>optional bool is_pinned = 1;</code>
+       * @return Whether the isPinned field is set.
+       */
+      @java.lang.Override
+      public boolean hasIsPinned() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <pre>
+       * True if the track was pinned, false if it was unpinned.
+       * </pre>
+       *
+       * <code>optional bool is_pinned = 1;</code>
+       * @return The isPinned.
+       */
+      @java.lang.Override
+      public boolean getIsPinned() {
+        return isPinned_;
+      }
+      /**
+       * <pre>
+       * True if the track was pinned, false if it was unpinned.
+       * </pre>
+       *
+       * <code>optional bool is_pinned = 1;</code>
+       * @param value The isPinned to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIsPinned(boolean value) {
+
+        isPinned_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * True if the track was pinned, false if it was unpinned.
+       * </pre>
+       *
+       * <code>optional bool is_pinned = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearIsPinned() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        isPinned_ = false;
+        onChanged();
+        return this;
+      }
+
+      private int trackKind_ = 0;
+      /**
+       * <pre>
+       * The type of the track or track group that was pinned or unpinned.
+       * </pre>
+       *
+       * <code>optional .android_studio.SherlockEvent.TrackKind track_kind = 2;</code>
+       * @return Whether the trackKind field is set.
+       */
+      @java.lang.Override public boolean hasTrackKind() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <pre>
+       * The type of the track or track group that was pinned or unpinned.
+       * </pre>
+       *
+       * <code>optional .android_studio.SherlockEvent.TrackKind track_kind = 2;</code>
+       * @return The trackKind.
+       */
+      @java.lang.Override
+      public com.google.wireless.android.sdk.stats.SherlockEvent.TrackKind getTrackKind() {
+        com.google.wireless.android.sdk.stats.SherlockEvent.TrackKind result = com.google.wireless.android.sdk.stats.SherlockEvent.TrackKind.forNumber(trackKind_);
+        return result == null ? com.google.wireless.android.sdk.stats.SherlockEvent.TrackKind.TRACK_KIND_UNKNOWN : result;
+      }
+      /**
+       * <pre>
+       * The type of the track or track group that was pinned or unpinned.
+       * </pre>
+       *
+       * <code>optional .android_studio.SherlockEvent.TrackKind track_kind = 2;</code>
+       * @param value The trackKind to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTrackKind(com.google.wireless.android.sdk.stats.SherlockEvent.TrackKind value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x00000002;
+        trackKind_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The type of the track or track group that was pinned or unpinned.
+       * </pre>
+       *
+       * <code>optional .android_studio.SherlockEvent.TrackKind track_kind = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTrackKind() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        trackKind_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private boolean isGroup_ ;
+      /**
+       * <pre>
+       * True if the pinned item was a group, false if it was a track.
+       * </pre>
+       *
+       * <code>optional bool is_group = 3;</code>
+       * @return Whether the isGroup field is set.
+       */
+      @java.lang.Override
+      public boolean hasIsGroup() {
+        return ((bitField0_ & 0x00000004) != 0);
+      }
+      /**
+       * <pre>
+       * True if the pinned item was a group, false if it was a track.
+       * </pre>
+       *
+       * <code>optional bool is_group = 3;</code>
+       * @return The isGroup.
+       */
+      @java.lang.Override
+      public boolean getIsGroup() {
+        return isGroup_;
+      }
+      /**
+       * <pre>
+       * True if the pinned item was a group, false if it was a track.
+       * </pre>
+       *
+       * <code>optional bool is_group = 3;</code>
+       * @param value The isGroup to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIsGroup(boolean value) {
+
+        isGroup_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * True if the pinned item was a group, false if it was a track.
+       * </pre>
+       *
+       * <code>optional bool is_group = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearIsGroup() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        isGroup_ = false;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:android_studio.SherlockEvent.TrackPinToggledMetadata)
+    }
+
+    // @@protoc_insertion_point(class_scope:android_studio.SherlockEvent.TrackPinToggledMetadata)
+    private static final com.google.wireless.android.sdk.stats.SherlockEvent.TrackPinToggledMetadata DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.google.wireless.android.sdk.stats.SherlockEvent.TrackPinToggledMetadata();
+    }
+
+    public static com.google.wireless.android.sdk.stats.SherlockEvent.TrackPinToggledMetadata getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<TrackPinToggledMetadata>
+        PARSER = new com.google.protobuf.AbstractParser<TrackPinToggledMetadata>() {
+      @java.lang.Override
+      public TrackPinToggledMetadata parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<TrackPinToggledMetadata> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<TrackPinToggledMetadata> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.wireless.android.sdk.stats.SherlockEvent.TrackPinToggledMetadata getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface TrackGroupToggledMetadataOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:android_studio.SherlockEvent.TrackGroupToggledMetadata)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * True if the group was expanded, false if it was collapsed.
+     * </pre>
+     *
+     * <code>optional bool is_expanded = 1;</code>
+     * @return Whether the isExpanded field is set.
+     */
+    boolean hasIsExpanded();
+    /**
+     * <pre>
+     * True if the group was expanded, false if it was collapsed.
+     * </pre>
+     *
+     * <code>optional bool is_expanded = 1;</code>
+     * @return The isExpanded.
+     */
+    boolean getIsExpanded();
+
+    /**
+     * <pre>
+     * The type of the track group that was expanded or collapsed.
+     * </pre>
+     *
+     * <code>optional .android_studio.SherlockEvent.TrackKind group_kind = 2;</code>
+     * @return Whether the groupKind field is set.
+     */
+    boolean hasGroupKind();
+    /**
+     * <pre>
+     * The type of the track group that was expanded or collapsed.
+     * </pre>
+     *
+     * <code>optional .android_studio.SherlockEvent.TrackKind group_kind = 2;</code>
+     * @return The groupKind.
+     */
+    com.google.wireless.android.sdk.stats.SherlockEvent.TrackKind getGroupKind();
+  }
+  /**
+   * <pre>
+   * Metadata for the |TRACK_GROUP_TOGGLED| event.
+   * </pre>
+   *
+   * Protobuf type {@code android_studio.SherlockEvent.TrackGroupToggledMetadata}
+   */
+  public static final class TrackGroupToggledMetadata extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:android_studio.SherlockEvent.TrackGroupToggledMetadata)
+      TrackGroupToggledMetadataOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use TrackGroupToggledMetadata.newBuilder() to construct.
+    private TrackGroupToggledMetadata(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private TrackGroupToggledMetadata() {
+      groupKind_ = 0;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new TrackGroupToggledMetadata();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_SherlockEvent_TrackGroupToggledMetadata_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_SherlockEvent_TrackGroupToggledMetadata_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.google.wireless.android.sdk.stats.SherlockEvent.TrackGroupToggledMetadata.class, com.google.wireless.android.sdk.stats.SherlockEvent.TrackGroupToggledMetadata.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int IS_EXPANDED_FIELD_NUMBER = 1;
+    private boolean isExpanded_ = false;
+    /**
+     * <pre>
+     * True if the group was expanded, false if it was collapsed.
+     * </pre>
+     *
+     * <code>optional bool is_expanded = 1;</code>
+     * @return Whether the isExpanded field is set.
+     */
+    @java.lang.Override
+    public boolean hasIsExpanded() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <pre>
+     * True if the group was expanded, false if it was collapsed.
+     * </pre>
+     *
+     * <code>optional bool is_expanded = 1;</code>
+     * @return The isExpanded.
+     */
+    @java.lang.Override
+    public boolean getIsExpanded() {
+      return isExpanded_;
+    }
+
+    public static final int GROUP_KIND_FIELD_NUMBER = 2;
+    private int groupKind_ = 0;
+    /**
+     * <pre>
+     * The type of the track group that was expanded or collapsed.
+     * </pre>
+     *
+     * <code>optional .android_studio.SherlockEvent.TrackKind group_kind = 2;</code>
+     * @return Whether the groupKind field is set.
+     */
+    @java.lang.Override public boolean hasGroupKind() {
+      return ((bitField0_ & 0x00000002) != 0);
+    }
+    /**
+     * <pre>
+     * The type of the track group that was expanded or collapsed.
+     * </pre>
+     *
+     * <code>optional .android_studio.SherlockEvent.TrackKind group_kind = 2;</code>
+     * @return The groupKind.
+     */
+    @java.lang.Override public com.google.wireless.android.sdk.stats.SherlockEvent.TrackKind getGroupKind() {
+      com.google.wireless.android.sdk.stats.SherlockEvent.TrackKind result = com.google.wireless.android.sdk.stats.SherlockEvent.TrackKind.forNumber(groupKind_);
+      return result == null ? com.google.wireless.android.sdk.stats.SherlockEvent.TrackKind.TRACK_KIND_UNKNOWN : result;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (((bitField0_ & 0x00000001) != 0)) {
+        output.writeBool(1, isExpanded_);
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        output.writeEnum(2, groupKind_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(1, isExpanded_);
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(2, groupKind_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.google.wireless.android.sdk.stats.SherlockEvent.TrackGroupToggledMetadata)) {
+        return super.equals(obj);
+      }
+      com.google.wireless.android.sdk.stats.SherlockEvent.TrackGroupToggledMetadata other = (com.google.wireless.android.sdk.stats.SherlockEvent.TrackGroupToggledMetadata) obj;
+
+      if (hasIsExpanded() != other.hasIsExpanded()) return false;
+      if (hasIsExpanded()) {
+        if (getIsExpanded()
+            != other.getIsExpanded()) return false;
+      }
+      if (hasGroupKind() != other.hasGroupKind()) return false;
+      if (hasGroupKind()) {
+        if (groupKind_ != other.groupKind_) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasIsExpanded()) {
+        hash = (37 * hash) + IS_EXPANDED_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+            getIsExpanded());
+      }
+      if (hasGroupKind()) {
+        hash = (37 * hash) + GROUP_KIND_FIELD_NUMBER;
+        hash = (53 * hash) + groupKind_;
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.google.wireless.android.sdk.stats.SherlockEvent.TrackGroupToggledMetadata parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.google.wireless.android.sdk.stats.SherlockEvent.TrackGroupToggledMetadata parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.google.wireless.android.sdk.stats.SherlockEvent.TrackGroupToggledMetadata parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.google.wireless.android.sdk.stats.SherlockEvent.TrackGroupToggledMetadata parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.google.wireless.android.sdk.stats.SherlockEvent.TrackGroupToggledMetadata parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.google.wireless.android.sdk.stats.SherlockEvent.TrackGroupToggledMetadata parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.google.wireless.android.sdk.stats.SherlockEvent.TrackGroupToggledMetadata parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.google.wireless.android.sdk.stats.SherlockEvent.TrackGroupToggledMetadata parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.google.wireless.android.sdk.stats.SherlockEvent.TrackGroupToggledMetadata parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.google.wireless.android.sdk.stats.SherlockEvent.TrackGroupToggledMetadata parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.google.wireless.android.sdk.stats.SherlockEvent.TrackGroupToggledMetadata parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.google.wireless.android.sdk.stats.SherlockEvent.TrackGroupToggledMetadata parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.google.wireless.android.sdk.stats.SherlockEvent.TrackGroupToggledMetadata prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Metadata for the |TRACK_GROUP_TOGGLED| event.
+     * </pre>
+     *
+     * Protobuf type {@code android_studio.SherlockEvent.TrackGroupToggledMetadata}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:android_studio.SherlockEvent.TrackGroupToggledMetadata)
+        com.google.wireless.android.sdk.stats.SherlockEvent.TrackGroupToggledMetadataOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_SherlockEvent_TrackGroupToggledMetadata_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_SherlockEvent_TrackGroupToggledMetadata_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.google.wireless.android.sdk.stats.SherlockEvent.TrackGroupToggledMetadata.class, com.google.wireless.android.sdk.stats.SherlockEvent.TrackGroupToggledMetadata.Builder.class);
+      }
+
+      // Construct using com.google.wireless.android.sdk.stats.SherlockEvent.TrackGroupToggledMetadata.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        isExpanded_ = false;
+        groupKind_ = 0;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_SherlockEvent_TrackGroupToggledMetadata_descriptor;
+      }
+
+      @java.lang.Override
+      public com.google.wireless.android.sdk.stats.SherlockEvent.TrackGroupToggledMetadata getDefaultInstanceForType() {
+        return com.google.wireless.android.sdk.stats.SherlockEvent.TrackGroupToggledMetadata.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.google.wireless.android.sdk.stats.SherlockEvent.TrackGroupToggledMetadata build() {
+        com.google.wireless.android.sdk.stats.SherlockEvent.TrackGroupToggledMetadata result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.google.wireless.android.sdk.stats.SherlockEvent.TrackGroupToggledMetadata buildPartial() {
+        com.google.wireless.android.sdk.stats.SherlockEvent.TrackGroupToggledMetadata result = new com.google.wireless.android.sdk.stats.SherlockEvent.TrackGroupToggledMetadata(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.google.wireless.android.sdk.stats.SherlockEvent.TrackGroupToggledMetadata result) {
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.isExpanded_ = isExpanded_;
+          to_bitField0_ |= 0x00000001;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.groupKind_ = groupKind_;
+          to_bitField0_ |= 0x00000002;
+        }
+        result.bitField0_ |= to_bitField0_;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.google.wireless.android.sdk.stats.SherlockEvent.TrackGroupToggledMetadata) {
+          return mergeFrom((com.google.wireless.android.sdk.stats.SherlockEvent.TrackGroupToggledMetadata)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.google.wireless.android.sdk.stats.SherlockEvent.TrackGroupToggledMetadata other) {
+        if (other == com.google.wireless.android.sdk.stats.SherlockEvent.TrackGroupToggledMetadata.getDefaultInstance()) return this;
+        if (other.hasIsExpanded()) {
+          setIsExpanded(other.getIsExpanded());
+        }
+        if (other.hasGroupKind()) {
+          setGroupKind(other.getGroupKind());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                isExpanded_ = input.readBool();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              case 16: {
+                int tmpRaw = input.readEnum();
+                com.google.wireless.android.sdk.stats.SherlockEvent.TrackKind tmpValue =
+                    com.google.wireless.android.sdk.stats.SherlockEvent.TrackKind.forNumber(tmpRaw);
+                if (tmpValue == null) {
+                  mergeUnknownVarintField(2, tmpRaw);
+                } else {
+                  groupKind_ = tmpRaw;
+                  bitField0_ |= 0x00000002;
+                }
+                break;
+              } // case 16
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private boolean isExpanded_ ;
+      /**
+       * <pre>
+       * True if the group was expanded, false if it was collapsed.
+       * </pre>
+       *
+       * <code>optional bool is_expanded = 1;</code>
+       * @return Whether the isExpanded field is set.
+       */
+      @java.lang.Override
+      public boolean hasIsExpanded() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <pre>
+       * True if the group was expanded, false if it was collapsed.
+       * </pre>
+       *
+       * <code>optional bool is_expanded = 1;</code>
+       * @return The isExpanded.
+       */
+      @java.lang.Override
+      public boolean getIsExpanded() {
+        return isExpanded_;
+      }
+      /**
+       * <pre>
+       * True if the group was expanded, false if it was collapsed.
+       * </pre>
+       *
+       * <code>optional bool is_expanded = 1;</code>
+       * @param value The isExpanded to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIsExpanded(boolean value) {
+
+        isExpanded_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * True if the group was expanded, false if it was collapsed.
+       * </pre>
+       *
+       * <code>optional bool is_expanded = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearIsExpanded() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        isExpanded_ = false;
+        onChanged();
+        return this;
+      }
+
+      private int groupKind_ = 0;
+      /**
+       * <pre>
+       * The type of the track group that was expanded or collapsed.
+       * </pre>
+       *
+       * <code>optional .android_studio.SherlockEvent.TrackKind group_kind = 2;</code>
+       * @return Whether the groupKind field is set.
+       */
+      @java.lang.Override public boolean hasGroupKind() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <pre>
+       * The type of the track group that was expanded or collapsed.
+       * </pre>
+       *
+       * <code>optional .android_studio.SherlockEvent.TrackKind group_kind = 2;</code>
+       * @return The groupKind.
+       */
+      @java.lang.Override
+      public com.google.wireless.android.sdk.stats.SherlockEvent.TrackKind getGroupKind() {
+        com.google.wireless.android.sdk.stats.SherlockEvent.TrackKind result = com.google.wireless.android.sdk.stats.SherlockEvent.TrackKind.forNumber(groupKind_);
+        return result == null ? com.google.wireless.android.sdk.stats.SherlockEvent.TrackKind.TRACK_KIND_UNKNOWN : result;
+      }
+      /**
+       * <pre>
+       * The type of the track group that was expanded or collapsed.
+       * </pre>
+       *
+       * <code>optional .android_studio.SherlockEvent.TrackKind group_kind = 2;</code>
+       * @param value The groupKind to set.
+       * @return This builder for chaining.
+       */
+      public Builder setGroupKind(com.google.wireless.android.sdk.stats.SherlockEvent.TrackKind value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x00000002;
+        groupKind_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The type of the track group that was expanded or collapsed.
+       * </pre>
+       *
+       * <code>optional .android_studio.SherlockEvent.TrackKind group_kind = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearGroupKind() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        groupKind_ = 0;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:android_studio.SherlockEvent.TrackGroupToggledMetadata)
+    }
+
+    // @@protoc_insertion_point(class_scope:android_studio.SherlockEvent.TrackGroupToggledMetadata)
+    private static final com.google.wireless.android.sdk.stats.SherlockEvent.TrackGroupToggledMetadata DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.google.wireless.android.sdk.stats.SherlockEvent.TrackGroupToggledMetadata();
+    }
+
+    public static com.google.wireless.android.sdk.stats.SherlockEvent.TrackGroupToggledMetadata getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<TrackGroupToggledMetadata>
+        PARSER = new com.google.protobuf.AbstractParser<TrackGroupToggledMetadata>() {
+      @java.lang.Override
+      public TrackGroupToggledMetadata parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<TrackGroupToggledMetadata> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<TrackGroupToggledMetadata> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.wireless.android.sdk.stats.SherlockEvent.TrackGroupToggledMetadata getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface CaptureEventMetadataOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:android_studio.SherlockEvent.CaptureEventMetadata)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * The type of capture event.
+     * </pre>
+     *
+     * <code>optional .android_studio.SherlockEvent.CaptureEventMetadata.CaptureType capture_type = 1;</code>
+     * @return Whether the captureType field is set.
+     */
+    boolean hasCaptureType();
+    /**
+     * <pre>
+     * The type of capture event.
+     * </pre>
+     *
+     * <code>optional .android_studio.SherlockEvent.CaptureEventMetadata.CaptureType capture_type = 1;</code>
+     * @return The captureType.
+     */
+    com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata.CaptureType getCaptureType();
+
+    /**
+     * <pre>
+     * The capture was attempted.
+     * </pre>
+     *
+     * <code>.android_studio.SherlockEvent.CaptureEventMetadata.Attempt attempt = 2;</code>
+     * @return Whether the attempt field is set.
+     */
+    boolean hasAttempt();
+    /**
+     * <pre>
+     * The capture was attempted.
+     * </pre>
+     *
+     * <code>.android_studio.SherlockEvent.CaptureEventMetadata.Attempt attempt = 2;</code>
+     * @return The attempt.
+     */
+    com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata.Attempt getAttempt();
+    /**
+     * <pre>
+     * The capture was attempted.
+     * </pre>
+     *
+     * <code>.android_studio.SherlockEvent.CaptureEventMetadata.Attempt attempt = 2;</code>
+     */
+    com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata.AttemptOrBuilder getAttemptOrBuilder();
+
+    /**
+     * <pre>
+     * The capture was successful.
+     * </pre>
+     *
+     * <code>.android_studio.SherlockEvent.CaptureEventMetadata.Success success = 3;</code>
+     * @return Whether the success field is set.
+     */
+    boolean hasSuccess();
+    /**
+     * <pre>
+     * The capture was successful.
+     * </pre>
+     *
+     * <code>.android_studio.SherlockEvent.CaptureEventMetadata.Success success = 3;</code>
+     * @return The success.
+     */
+    com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata.Success getSuccess();
+    /**
+     * <pre>
+     * The capture was successful.
+     * </pre>
+     *
+     * <code>.android_studio.SherlockEvent.CaptureEventMetadata.Success success = 3;</code>
+     */
+    com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata.SuccessOrBuilder getSuccessOrBuilder();
+
+    /**
+     * <pre>
+     * The capture failed.
+     * </pre>
+     *
+     * <code>.android_studio.SherlockEvent.CaptureEventMetadata.Failure failure = 4;</code>
+     * @return Whether the failure field is set.
+     */
+    boolean hasFailure();
+    /**
+     * <pre>
+     * The capture failed.
+     * </pre>
+     *
+     * <code>.android_studio.SherlockEvent.CaptureEventMetadata.Failure failure = 4;</code>
+     * @return The failure.
+     */
+    com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata.Failure getFailure();
+    /**
+     * <pre>
+     * The capture failed.
+     * </pre>
+     *
+     * <code>.android_studio.SherlockEvent.CaptureEventMetadata.Failure failure = 4;</code>
+     */
+    com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata.FailureOrBuilder getFailureOrBuilder();
+
+    com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata.ResultCase getResultCase();
+  }
+  /**
+   * <pre>
+   * Metadata for the |CAPTURE_EVENT| event.
+   * </pre>
+   *
+   * Protobuf type {@code android_studio.SherlockEvent.CaptureEventMetadata}
+   */
+  public static final class CaptureEventMetadata extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:android_studio.SherlockEvent.CaptureEventMetadata)
+      CaptureEventMetadataOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use CaptureEventMetadata.newBuilder() to construct.
+    private CaptureEventMetadata(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private CaptureEventMetadata() {
+      captureType_ = 0;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new CaptureEventMetadata();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_SherlockEvent_CaptureEventMetadata_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_SherlockEvent_CaptureEventMetadata_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata.class, com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata.Builder.class);
+    }
+
+    /**
+     * Protobuf enum {@code android_studio.SherlockEvent.CaptureEventMetadata.CaptureType}
+     */
+    public enum CaptureType
+        implements com.google.protobuf.ProtocolMessageEnum {
+      /**
+       * <code>CAPTURE_TYPE_UNKNOWN = 0;</code>
+       */
+      CAPTURE_TYPE_UNKNOWN(0),
+      /**
+       * <code>CAPTURE_TYPE_PERFETTO = 1;</code>
+       */
+      CAPTURE_TYPE_PERFETTO(1),
+      /**
+       * <code>CAPTURE_TYPE_GFXR = 2;</code>
+       */
+      CAPTURE_TYPE_GFXR(2),
+      ;
+
+      /**
+       * <code>CAPTURE_TYPE_UNKNOWN = 0;</code>
+       */
+      public static final int CAPTURE_TYPE_UNKNOWN_VALUE = 0;
+      /**
+       * <code>CAPTURE_TYPE_PERFETTO = 1;</code>
+       */
+      public static final int CAPTURE_TYPE_PERFETTO_VALUE = 1;
+      /**
+       * <code>CAPTURE_TYPE_GFXR = 2;</code>
+       */
+      public static final int CAPTURE_TYPE_GFXR_VALUE = 2;
+
+
+      public final int getNumber() {
+        return value;
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static CaptureType valueOf(int value) {
+        return forNumber(value);
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       */
+      public static CaptureType forNumber(int value) {
+        switch (value) {
+          case 0: return CAPTURE_TYPE_UNKNOWN;
+          case 1: return CAPTURE_TYPE_PERFETTO;
+          case 2: return CAPTURE_TYPE_GFXR;
+          default: return null;
+        }
+      }
+
+      public static com.google.protobuf.Internal.EnumLiteMap<CaptureType>
+          internalGetValueMap() {
+        return internalValueMap;
+      }
+      private static final com.google.protobuf.Internal.EnumLiteMap<
+          CaptureType> internalValueMap =
+            new com.google.protobuf.Internal.EnumLiteMap<CaptureType>() {
+              public CaptureType findValueByNumber(int number) {
+                return CaptureType.forNumber(number);
+              }
+            };
+
+      public final com.google.protobuf.Descriptors.EnumValueDescriptor
+          getValueDescriptor() {
+        return getDescriptor().getValues().get(ordinal());
+      }
+      public final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptorForType() {
+        return getDescriptor();
+      }
+      public static final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptor() {
+        return com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata.getDescriptor().getEnumTypes().get(0);
+      }
+
+      private static final CaptureType[] VALUES = values();
+
+      public static CaptureType valueOf(
+          com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+        if (desc.getType() != getDescriptor()) {
+          throw new java.lang.IllegalArgumentException(
+            "EnumValueDescriptor is not for this type.");
+        }
+        return VALUES[desc.getIndex()];
+      }
+
+      private final int value;
+
+      private CaptureType(int value) {
+        this.value = value;
+      }
+
+      // @@protoc_insertion_point(enum_scope:android_studio.SherlockEvent.CaptureEventMetadata.CaptureType)
+    }
+
+    /**
+     * Protobuf enum {@code android_studio.SherlockEvent.CaptureEventMetadata.CaptureStage}
+     */
+    public enum CaptureStage
+        implements com.google.protobuf.ProtocolMessageEnum {
+      /**
+       * <code>CAPTURE_STAGE_UNKNOWN = 0;</code>
+       */
+      CAPTURE_STAGE_UNKNOWN(0),
+      /**
+       * <code>CAPTURE_STAGE_PREPARE = 1;</code>
+       */
+      CAPTURE_STAGE_PREPARE(1),
+      /**
+       * <code>CAPTURE_STAGE_CAPTURE_IN_PROGRESS = 2;</code>
+       */
+      CAPTURE_STAGE_CAPTURE_IN_PROGRESS(2),
+      /**
+       * <code>CAPTURE_STAGE_PULL = 3;</code>
+       */
+      CAPTURE_STAGE_PULL(3),
+      /**
+       * <code>CAPTURE_STAGE_CLEANUP = 4;</code>
+       */
+      CAPTURE_STAGE_CLEANUP(4),
+      ;
+
+      /**
+       * <code>CAPTURE_STAGE_UNKNOWN = 0;</code>
+       */
+      public static final int CAPTURE_STAGE_UNKNOWN_VALUE = 0;
+      /**
+       * <code>CAPTURE_STAGE_PREPARE = 1;</code>
+       */
+      public static final int CAPTURE_STAGE_PREPARE_VALUE = 1;
+      /**
+       * <code>CAPTURE_STAGE_CAPTURE_IN_PROGRESS = 2;</code>
+       */
+      public static final int CAPTURE_STAGE_CAPTURE_IN_PROGRESS_VALUE = 2;
+      /**
+       * <code>CAPTURE_STAGE_PULL = 3;</code>
+       */
+      public static final int CAPTURE_STAGE_PULL_VALUE = 3;
+      /**
+       * <code>CAPTURE_STAGE_CLEANUP = 4;</code>
+       */
+      public static final int CAPTURE_STAGE_CLEANUP_VALUE = 4;
+
+
+      public final int getNumber() {
+        return value;
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static CaptureStage valueOf(int value) {
+        return forNumber(value);
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       */
+      public static CaptureStage forNumber(int value) {
+        switch (value) {
+          case 0: return CAPTURE_STAGE_UNKNOWN;
+          case 1: return CAPTURE_STAGE_PREPARE;
+          case 2: return CAPTURE_STAGE_CAPTURE_IN_PROGRESS;
+          case 3: return CAPTURE_STAGE_PULL;
+          case 4: return CAPTURE_STAGE_CLEANUP;
+          default: return null;
+        }
+      }
+
+      public static com.google.protobuf.Internal.EnumLiteMap<CaptureStage>
+          internalGetValueMap() {
+        return internalValueMap;
+      }
+      private static final com.google.protobuf.Internal.EnumLiteMap<
+          CaptureStage> internalValueMap =
+            new com.google.protobuf.Internal.EnumLiteMap<CaptureStage>() {
+              public CaptureStage findValueByNumber(int number) {
+                return CaptureStage.forNumber(number);
+              }
+            };
+
+      public final com.google.protobuf.Descriptors.EnumValueDescriptor
+          getValueDescriptor() {
+        return getDescriptor().getValues().get(ordinal());
+      }
+      public final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptorForType() {
+        return getDescriptor();
+      }
+      public static final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptor() {
+        return com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata.getDescriptor().getEnumTypes().get(1);
+      }
+
+      private static final CaptureStage[] VALUES = values();
+
+      public static CaptureStage valueOf(
+          com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+        if (desc.getType() != getDescriptor()) {
+          throw new java.lang.IllegalArgumentException(
+            "EnumValueDescriptor is not for this type.");
+        }
+        return VALUES[desc.getIndex()];
+      }
+
+      private final int value;
+
+      private CaptureStage(int value) {
+        this.value = value;
+      }
+
+      // @@protoc_insertion_point(enum_scope:android_studio.SherlockEvent.CaptureEventMetadata.CaptureStage)
+    }
+
+    public interface AttemptOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:android_studio.SherlockEvent.CaptureEventMetadata.Attempt)
+        com.google.protobuf.MessageOrBuilder {
+    }
+    /**
+     * Protobuf type {@code android_studio.SherlockEvent.CaptureEventMetadata.Attempt}
+     */
+    public static final class Attempt extends
+        com.google.protobuf.GeneratedMessageV3 implements
+        // @@protoc_insertion_point(message_implements:android_studio.SherlockEvent.CaptureEventMetadata.Attempt)
+        AttemptOrBuilder {
+    private static final long serialVersionUID = 0L;
+      // Use Attempt.newBuilder() to construct.
+      private Attempt(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+        super(builder);
+      }
+      private Attempt() {
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new Attempt();
+      }
+
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_SherlockEvent_CaptureEventMetadata_Attempt_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_SherlockEvent_CaptureEventMetadata_Attempt_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata.Attempt.class, com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata.Attempt.Builder.class);
+      }
+
+      private byte memoizedIsInitialized = -1;
+      @java.lang.Override
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      @java.lang.Override
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        getUnknownFields().writeTo(output);
+      }
+
+      @java.lang.Override
+      public int getSerializedSize() {
+        int size = memoizedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        size += getUnknownFields().getSerializedSize();
+        memoizedSize = size;
+        return size;
+      }
+
+      @java.lang.Override
+      public boolean equals(final java.lang.Object obj) {
+        if (obj == this) {
+         return true;
+        }
+        if (!(obj instanceof com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata.Attempt)) {
+          return super.equals(obj);
+        }
+        com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata.Attempt other = (com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata.Attempt) obj;
+
+        if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+        return true;
+      }
+
+      @java.lang.Override
+      public int hashCode() {
+        if (memoizedHashCode != 0) {
+          return memoizedHashCode;
+        }
+        int hash = 41;
+        hash = (19 * hash) + getDescriptor().hashCode();
+        hash = (29 * hash) + getUnknownFields().hashCode();
+        memoizedHashCode = hash;
+        return hash;
+      }
+
+      public static com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata.Attempt parseFrom(
+          java.nio.ByteBuffer data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata.Attempt parseFrom(
+          java.nio.ByteBuffer data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata.Attempt parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata.Attempt parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata.Attempt parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata.Attempt parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata.Attempt parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata.Attempt parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata.Attempt parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input);
+      }
+      public static com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata.Attempt parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata.Attempt parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata.Attempt parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      @java.lang.Override
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder() {
+        return DEFAULT_INSTANCE.toBuilder();
+      }
+      public static Builder newBuilder(com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata.Attempt prototype) {
+        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+      }
+      @java.lang.Override
+      public Builder toBuilder() {
+        return this == DEFAULT_INSTANCE
+            ? new Builder() : new Builder().mergeFrom(this);
+      }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * Protobuf type {@code android_studio.SherlockEvent.CaptureEventMetadata.Attempt}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:android_studio.SherlockEvent.CaptureEventMetadata.Attempt)
+          com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata.AttemptOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_SherlockEvent_CaptureEventMetadata_Attempt_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_SherlockEvent_CaptureEventMetadata_Attempt_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata.Attempt.class, com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata.Attempt.Builder.class);
+        }
+
+        // Construct using com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata.Attempt.newBuilder()
+        private Builder() {
+
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          super(parent);
+
+        }
+        @java.lang.Override
+        public Builder clear() {
+          super.clear();
+          return this;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_SherlockEvent_CaptureEventMetadata_Attempt_descriptor;
+        }
+
+        @java.lang.Override
+        public com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata.Attempt getDefaultInstanceForType() {
+          return com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata.Attempt.getDefaultInstance();
+        }
+
+        @java.lang.Override
+        public com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata.Attempt build() {
+          com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata.Attempt result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        @java.lang.Override
+        public com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata.Attempt buildPartial() {
+          com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata.Attempt result = new com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata.Attempt(this);
+          onBuilt();
+          return result;
+        }
+
+        @java.lang.Override
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata.Attempt) {
+            return mergeFrom((com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata.Attempt)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata.Attempt other) {
+          if (other == com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata.Attempt.getDefaultInstance()) return this;
+          this.mergeUnknownFields(other.getUnknownFields());
+          onChanged();
+          return this;
+        }
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        @java.lang.Override
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          if (extensionRegistry == null) {
+            throw new java.lang.NullPointerException();
+          }
+          try {
+            boolean done = false;
+            while (!done) {
+              int tag = input.readTag();
+              switch (tag) {
+                case 0:
+                  done = true;
+                  break;
+                default: {
+                  if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                    done = true; // was an endgroup tag
+                  }
+                  break;
+                } // default:
+              } // switch (tag)
+            } // while (!done)
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            throw e.unwrapIOException();
+          } finally {
+            onChanged();
+          } // finally
+          return this;
+        }
+        @java.lang.Override
+        public final Builder setUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.setUnknownFields(unknownFields);
+        }
+
+        @java.lang.Override
+        public final Builder mergeUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.mergeUnknownFields(unknownFields);
+        }
+
+
+        // @@protoc_insertion_point(builder_scope:android_studio.SherlockEvent.CaptureEventMetadata.Attempt)
+      }
+
+      // @@protoc_insertion_point(class_scope:android_studio.SherlockEvent.CaptureEventMetadata.Attempt)
+      private static final com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata.Attempt DEFAULT_INSTANCE;
+      static {
+        DEFAULT_INSTANCE = new com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata.Attempt();
+      }
+
+      public static com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata.Attempt getDefaultInstance() {
+        return DEFAULT_INSTANCE;
+      }
+
+      @java.lang.Deprecated public static final com.google.protobuf.Parser<Attempt>
+          PARSER = new com.google.protobuf.AbstractParser<Attempt>() {
+        @java.lang.Override
+        public Attempt parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          Builder builder = newBuilder();
+          try {
+            builder.mergeFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            throw e.setUnfinishedMessage(builder.buildPartial());
+          } catch (com.google.protobuf.UninitializedMessageException e) {
+            throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+          } catch (java.io.IOException e) {
+            throw new com.google.protobuf.InvalidProtocolBufferException(e)
+                .setUnfinishedMessage(builder.buildPartial());
+          }
+          return builder.buildPartial();
+        }
+      };
+
+      public static com.google.protobuf.Parser<Attempt> parser() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<Attempt> getParserForType() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata.Attempt getDefaultInstanceForType() {
+        return DEFAULT_INSTANCE;
+      }
+
+    }
+
+    public interface SuccessOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:android_studio.SherlockEvent.CaptureEventMetadata.Success)
+        com.google.protobuf.MessageOrBuilder {
+    }
+    /**
+     * Protobuf type {@code android_studio.SherlockEvent.CaptureEventMetadata.Success}
+     */
+    public static final class Success extends
+        com.google.protobuf.GeneratedMessageV3 implements
+        // @@protoc_insertion_point(message_implements:android_studio.SherlockEvent.CaptureEventMetadata.Success)
+        SuccessOrBuilder {
+    private static final long serialVersionUID = 0L;
+      // Use Success.newBuilder() to construct.
+      private Success(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+        super(builder);
+      }
+      private Success() {
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new Success();
+      }
+
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_SherlockEvent_CaptureEventMetadata_Success_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_SherlockEvent_CaptureEventMetadata_Success_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata.Success.class, com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata.Success.Builder.class);
+      }
+
+      private byte memoizedIsInitialized = -1;
+      @java.lang.Override
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      @java.lang.Override
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        getUnknownFields().writeTo(output);
+      }
+
+      @java.lang.Override
+      public int getSerializedSize() {
+        int size = memoizedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        size += getUnknownFields().getSerializedSize();
+        memoizedSize = size;
+        return size;
+      }
+
+      @java.lang.Override
+      public boolean equals(final java.lang.Object obj) {
+        if (obj == this) {
+         return true;
+        }
+        if (!(obj instanceof com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata.Success)) {
+          return super.equals(obj);
+        }
+        com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata.Success other = (com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata.Success) obj;
+
+        if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+        return true;
+      }
+
+      @java.lang.Override
+      public int hashCode() {
+        if (memoizedHashCode != 0) {
+          return memoizedHashCode;
+        }
+        int hash = 41;
+        hash = (19 * hash) + getDescriptor().hashCode();
+        hash = (29 * hash) + getUnknownFields().hashCode();
+        memoizedHashCode = hash;
+        return hash;
+      }
+
+      public static com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata.Success parseFrom(
+          java.nio.ByteBuffer data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata.Success parseFrom(
+          java.nio.ByteBuffer data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata.Success parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata.Success parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata.Success parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata.Success parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata.Success parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata.Success parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata.Success parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input);
+      }
+      public static com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata.Success parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata.Success parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata.Success parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      @java.lang.Override
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder() {
+        return DEFAULT_INSTANCE.toBuilder();
+      }
+      public static Builder newBuilder(com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata.Success prototype) {
+        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+      }
+      @java.lang.Override
+      public Builder toBuilder() {
+        return this == DEFAULT_INSTANCE
+            ? new Builder() : new Builder().mergeFrom(this);
+      }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * Protobuf type {@code android_studio.SherlockEvent.CaptureEventMetadata.Success}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:android_studio.SherlockEvent.CaptureEventMetadata.Success)
+          com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata.SuccessOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_SherlockEvent_CaptureEventMetadata_Success_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_SherlockEvent_CaptureEventMetadata_Success_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata.Success.class, com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata.Success.Builder.class);
+        }
+
+        // Construct using com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata.Success.newBuilder()
+        private Builder() {
+
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          super(parent);
+
+        }
+        @java.lang.Override
+        public Builder clear() {
+          super.clear();
+          return this;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_SherlockEvent_CaptureEventMetadata_Success_descriptor;
+        }
+
+        @java.lang.Override
+        public com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata.Success getDefaultInstanceForType() {
+          return com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata.Success.getDefaultInstance();
+        }
+
+        @java.lang.Override
+        public com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata.Success build() {
+          com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata.Success result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        @java.lang.Override
+        public com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata.Success buildPartial() {
+          com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata.Success result = new com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata.Success(this);
+          onBuilt();
+          return result;
+        }
+
+        @java.lang.Override
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata.Success) {
+            return mergeFrom((com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata.Success)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata.Success other) {
+          if (other == com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata.Success.getDefaultInstance()) return this;
+          this.mergeUnknownFields(other.getUnknownFields());
+          onChanged();
+          return this;
+        }
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        @java.lang.Override
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          if (extensionRegistry == null) {
+            throw new java.lang.NullPointerException();
+          }
+          try {
+            boolean done = false;
+            while (!done) {
+              int tag = input.readTag();
+              switch (tag) {
+                case 0:
+                  done = true;
+                  break;
+                default: {
+                  if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                    done = true; // was an endgroup tag
+                  }
+                  break;
+                } // default:
+              } // switch (tag)
+            } // while (!done)
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            throw e.unwrapIOException();
+          } finally {
+            onChanged();
+          } // finally
+          return this;
+        }
+        @java.lang.Override
+        public final Builder setUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.setUnknownFields(unknownFields);
+        }
+
+        @java.lang.Override
+        public final Builder mergeUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.mergeUnknownFields(unknownFields);
+        }
+
+
+        // @@protoc_insertion_point(builder_scope:android_studio.SherlockEvent.CaptureEventMetadata.Success)
+      }
+
+      // @@protoc_insertion_point(class_scope:android_studio.SherlockEvent.CaptureEventMetadata.Success)
+      private static final com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata.Success DEFAULT_INSTANCE;
+      static {
+        DEFAULT_INSTANCE = new com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata.Success();
+      }
+
+      public static com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata.Success getDefaultInstance() {
+        return DEFAULT_INSTANCE;
+      }
+
+      @java.lang.Deprecated public static final com.google.protobuf.Parser<Success>
+          PARSER = new com.google.protobuf.AbstractParser<Success>() {
+        @java.lang.Override
+        public Success parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          Builder builder = newBuilder();
+          try {
+            builder.mergeFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            throw e.setUnfinishedMessage(builder.buildPartial());
+          } catch (com.google.protobuf.UninitializedMessageException e) {
+            throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+          } catch (java.io.IOException e) {
+            throw new com.google.protobuf.InvalidProtocolBufferException(e)
+                .setUnfinishedMessage(builder.buildPartial());
+          }
+          return builder.buildPartial();
+        }
+      };
+
+      public static com.google.protobuf.Parser<Success> parser() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<Success> getParserForType() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata.Success getDefaultInstanceForType() {
+        return DEFAULT_INSTANCE;
+      }
+
+    }
+
+    public interface FailureOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:android_studio.SherlockEvent.CaptureEventMetadata.Failure)
+        com.google.protobuf.MessageOrBuilder {
+
+      /**
+       * <pre>
+       * The stage of the capture that the event failed at.
+       * </pre>
+       *
+       * <code>optional .android_studio.SherlockEvent.CaptureEventMetadata.CaptureStage capture_stage = 1;</code>
+       * @return Whether the captureStage field is set.
+       */
+      boolean hasCaptureStage();
+      /**
+       * <pre>
+       * The stage of the capture that the event failed at.
+       * </pre>
+       *
+       * <code>optional .android_studio.SherlockEvent.CaptureEventMetadata.CaptureStage capture_stage = 1;</code>
+       * @return The captureStage.
+       */
+      com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata.CaptureStage getCaptureStage();
+
+      /**
+       * <pre>
+       * The reason for the capture stage failure.
+       * </pre>
+       *
+       * <code>optional .android_studio.SherlockEvent.CaptureEventMetadata.Failure.FailureReason failure_reason = 2;</code>
+       * @return Whether the failureReason field is set.
+       */
+      boolean hasFailureReason();
+      /**
+       * <pre>
+       * The reason for the capture stage failure.
+       * </pre>
+       *
+       * <code>optional .android_studio.SherlockEvent.CaptureEventMetadata.Failure.FailureReason failure_reason = 2;</code>
+       * @return The failureReason.
+       */
+      com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata.Failure.FailureReason getFailureReason();
+    }
+    /**
+     * Protobuf type {@code android_studio.SherlockEvent.CaptureEventMetadata.Failure}
+     */
+    public static final class Failure extends
+        com.google.protobuf.GeneratedMessageV3 implements
+        // @@protoc_insertion_point(message_implements:android_studio.SherlockEvent.CaptureEventMetadata.Failure)
+        FailureOrBuilder {
+    private static final long serialVersionUID = 0L;
+      // Use Failure.newBuilder() to construct.
+      private Failure(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+        super(builder);
+      }
+      private Failure() {
+        captureStage_ = 0;
+        failureReason_ = 0;
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new Failure();
+      }
+
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_SherlockEvent_CaptureEventMetadata_Failure_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_SherlockEvent_CaptureEventMetadata_Failure_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata.Failure.class, com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata.Failure.Builder.class);
+      }
+
+      /**
+       * <pre>
+       * TODO: Add more failure reasons.
+       * </pre>
+       *
+       * Protobuf enum {@code android_studio.SherlockEvent.CaptureEventMetadata.Failure.FailureReason}
+       */
+      public enum FailureReason
+          implements com.google.protobuf.ProtocolMessageEnum {
+        /**
+         * <code>CAPTURE_FAILURE_REASON_UNKNOWN = 0;</code>
+         */
+        CAPTURE_FAILURE_REASON_UNKNOWN(0),
+        /**
+         * <code>CAPTURE_FAILURE_REASON_CANCELLATION = 1;</code>
+         */
+        CAPTURE_FAILURE_REASON_CANCELLATION(1),
+        /**
+         * <code>CAPTURE_FAILURE_REASON_DEVICE_DISCONNECTED = 2;</code>
+         */
+        CAPTURE_FAILURE_REASON_DEVICE_DISCONNECTED(2),
+        /**
+         * <code>CAPTURE_FAILURE_REASON_NO_RESULT_FOUND = 3;</code>
+         */
+        CAPTURE_FAILURE_REASON_NO_RESULT_FOUND(3),
+        ;
+
+        /**
+         * <code>CAPTURE_FAILURE_REASON_UNKNOWN = 0;</code>
+         */
+        public static final int CAPTURE_FAILURE_REASON_UNKNOWN_VALUE = 0;
+        /**
+         * <code>CAPTURE_FAILURE_REASON_CANCELLATION = 1;</code>
+         */
+        public static final int CAPTURE_FAILURE_REASON_CANCELLATION_VALUE = 1;
+        /**
+         * <code>CAPTURE_FAILURE_REASON_DEVICE_DISCONNECTED = 2;</code>
+         */
+        public static final int CAPTURE_FAILURE_REASON_DEVICE_DISCONNECTED_VALUE = 2;
+        /**
+         * <code>CAPTURE_FAILURE_REASON_NO_RESULT_FOUND = 3;</code>
+         */
+        public static final int CAPTURE_FAILURE_REASON_NO_RESULT_FOUND_VALUE = 3;
+
+
+        public final int getNumber() {
+          return value;
+        }
+
+        /**
+         * @param value The numeric wire value of the corresponding enum entry.
+         * @return The enum associated with the given numeric wire value.
+         * @deprecated Use {@link #forNumber(int)} instead.
+         */
+        @java.lang.Deprecated
+        public static FailureReason valueOf(int value) {
+          return forNumber(value);
+        }
+
+        /**
+         * @param value The numeric wire value of the corresponding enum entry.
+         * @return The enum associated with the given numeric wire value.
+         */
+        public static FailureReason forNumber(int value) {
+          switch (value) {
+            case 0: return CAPTURE_FAILURE_REASON_UNKNOWN;
+            case 1: return CAPTURE_FAILURE_REASON_CANCELLATION;
+            case 2: return CAPTURE_FAILURE_REASON_DEVICE_DISCONNECTED;
+            case 3: return CAPTURE_FAILURE_REASON_NO_RESULT_FOUND;
+            default: return null;
+          }
+        }
+
+        public static com.google.protobuf.Internal.EnumLiteMap<FailureReason>
+            internalGetValueMap() {
+          return internalValueMap;
+        }
+        private static final com.google.protobuf.Internal.EnumLiteMap<
+            FailureReason> internalValueMap =
+              new com.google.protobuf.Internal.EnumLiteMap<FailureReason>() {
+                public FailureReason findValueByNumber(int number) {
+                  return FailureReason.forNumber(number);
+                }
+              };
+
+        public final com.google.protobuf.Descriptors.EnumValueDescriptor
+            getValueDescriptor() {
+          return getDescriptor().getValues().get(ordinal());
+        }
+        public final com.google.protobuf.Descriptors.EnumDescriptor
+            getDescriptorForType() {
+          return getDescriptor();
+        }
+        public static final com.google.protobuf.Descriptors.EnumDescriptor
+            getDescriptor() {
+          return com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata.Failure.getDescriptor().getEnumTypes().get(0);
+        }
+
+        private static final FailureReason[] VALUES = values();
+
+        public static FailureReason valueOf(
+            com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+          if (desc.getType() != getDescriptor()) {
+            throw new java.lang.IllegalArgumentException(
+              "EnumValueDescriptor is not for this type.");
+          }
+          return VALUES[desc.getIndex()];
+        }
+
+        private final int value;
+
+        private FailureReason(int value) {
+          this.value = value;
+        }
+
+        // @@protoc_insertion_point(enum_scope:android_studio.SherlockEvent.CaptureEventMetadata.Failure.FailureReason)
+      }
+
+      private int bitField0_;
+      public static final int CAPTURE_STAGE_FIELD_NUMBER = 1;
+      private int captureStage_ = 0;
+      /**
+       * <pre>
+       * The stage of the capture that the event failed at.
+       * </pre>
+       *
+       * <code>optional .android_studio.SherlockEvent.CaptureEventMetadata.CaptureStage capture_stage = 1;</code>
+       * @return Whether the captureStage field is set.
+       */
+      @java.lang.Override public boolean hasCaptureStage() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <pre>
+       * The stage of the capture that the event failed at.
+       * </pre>
+       *
+       * <code>optional .android_studio.SherlockEvent.CaptureEventMetadata.CaptureStage capture_stage = 1;</code>
+       * @return The captureStage.
+       */
+      @java.lang.Override public com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata.CaptureStage getCaptureStage() {
+        com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata.CaptureStage result = com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata.CaptureStage.forNumber(captureStage_);
+        return result == null ? com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata.CaptureStage.CAPTURE_STAGE_UNKNOWN : result;
+      }
+
+      public static final int FAILURE_REASON_FIELD_NUMBER = 2;
+      private int failureReason_ = 0;
+      /**
+       * <pre>
+       * The reason for the capture stage failure.
+       * </pre>
+       *
+       * <code>optional .android_studio.SherlockEvent.CaptureEventMetadata.Failure.FailureReason failure_reason = 2;</code>
+       * @return Whether the failureReason field is set.
+       */
+      @java.lang.Override public boolean hasFailureReason() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <pre>
+       * The reason for the capture stage failure.
+       * </pre>
+       *
+       * <code>optional .android_studio.SherlockEvent.CaptureEventMetadata.Failure.FailureReason failure_reason = 2;</code>
+       * @return The failureReason.
+       */
+      @java.lang.Override public com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata.Failure.FailureReason getFailureReason() {
+        com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata.Failure.FailureReason result = com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata.Failure.FailureReason.forNumber(failureReason_);
+        return result == null ? com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata.Failure.FailureReason.CAPTURE_FAILURE_REASON_UNKNOWN : result;
+      }
+
+      private byte memoizedIsInitialized = -1;
+      @java.lang.Override
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      @java.lang.Override
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        if (((bitField0_ & 0x00000001) != 0)) {
+          output.writeEnum(1, captureStage_);
+        }
+        if (((bitField0_ & 0x00000002) != 0)) {
+          output.writeEnum(2, failureReason_);
+        }
+        getUnknownFields().writeTo(output);
+      }
+
+      @java.lang.Override
+      public int getSerializedSize() {
+        int size = memoizedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        if (((bitField0_ & 0x00000001) != 0)) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeEnumSize(1, captureStage_);
+        }
+        if (((bitField0_ & 0x00000002) != 0)) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeEnumSize(2, failureReason_);
+        }
+        size += getUnknownFields().getSerializedSize();
+        memoizedSize = size;
+        return size;
+      }
+
+      @java.lang.Override
+      public boolean equals(final java.lang.Object obj) {
+        if (obj == this) {
+         return true;
+        }
+        if (!(obj instanceof com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata.Failure)) {
+          return super.equals(obj);
+        }
+        com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata.Failure other = (com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata.Failure) obj;
+
+        if (hasCaptureStage() != other.hasCaptureStage()) return false;
+        if (hasCaptureStage()) {
+          if (captureStage_ != other.captureStage_) return false;
+        }
+        if (hasFailureReason() != other.hasFailureReason()) return false;
+        if (hasFailureReason()) {
+          if (failureReason_ != other.failureReason_) return false;
+        }
+        if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+        return true;
+      }
+
+      @java.lang.Override
+      public int hashCode() {
+        if (memoizedHashCode != 0) {
+          return memoizedHashCode;
+        }
+        int hash = 41;
+        hash = (19 * hash) + getDescriptor().hashCode();
+        if (hasCaptureStage()) {
+          hash = (37 * hash) + CAPTURE_STAGE_FIELD_NUMBER;
+          hash = (53 * hash) + captureStage_;
+        }
+        if (hasFailureReason()) {
+          hash = (37 * hash) + FAILURE_REASON_FIELD_NUMBER;
+          hash = (53 * hash) + failureReason_;
+        }
+        hash = (29 * hash) + getUnknownFields().hashCode();
+        memoizedHashCode = hash;
+        return hash;
+      }
+
+      public static com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata.Failure parseFrom(
+          java.nio.ByteBuffer data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata.Failure parseFrom(
+          java.nio.ByteBuffer data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata.Failure parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata.Failure parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata.Failure parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata.Failure parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata.Failure parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata.Failure parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata.Failure parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input);
+      }
+      public static com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata.Failure parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata.Failure parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata.Failure parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      @java.lang.Override
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder() {
+        return DEFAULT_INSTANCE.toBuilder();
+      }
+      public static Builder newBuilder(com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata.Failure prototype) {
+        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+      }
+      @java.lang.Override
+      public Builder toBuilder() {
+        return this == DEFAULT_INSTANCE
+            ? new Builder() : new Builder().mergeFrom(this);
+      }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * Protobuf type {@code android_studio.SherlockEvent.CaptureEventMetadata.Failure}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:android_studio.SherlockEvent.CaptureEventMetadata.Failure)
+          com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata.FailureOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_SherlockEvent_CaptureEventMetadata_Failure_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_SherlockEvent_CaptureEventMetadata_Failure_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata.Failure.class, com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata.Failure.Builder.class);
+        }
+
+        // Construct using com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata.Failure.newBuilder()
+        private Builder() {
+
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          super(parent);
+
+        }
+        @java.lang.Override
+        public Builder clear() {
+          super.clear();
+          bitField0_ = 0;
+          captureStage_ = 0;
+          failureReason_ = 0;
+          return this;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_SherlockEvent_CaptureEventMetadata_Failure_descriptor;
+        }
+
+        @java.lang.Override
+        public com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata.Failure getDefaultInstanceForType() {
+          return com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata.Failure.getDefaultInstance();
+        }
+
+        @java.lang.Override
+        public com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata.Failure build() {
+          com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata.Failure result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        @java.lang.Override
+        public com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata.Failure buildPartial() {
+          com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata.Failure result = new com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata.Failure(this);
+          if (bitField0_ != 0) { buildPartial0(result); }
+          onBuilt();
+          return result;
+        }
+
+        private void buildPartial0(com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata.Failure result) {
+          int from_bitField0_ = bitField0_;
+          int to_bitField0_ = 0;
+          if (((from_bitField0_ & 0x00000001) != 0)) {
+            result.captureStage_ = captureStage_;
+            to_bitField0_ |= 0x00000001;
+          }
+          if (((from_bitField0_ & 0x00000002) != 0)) {
+            result.failureReason_ = failureReason_;
+            to_bitField0_ |= 0x00000002;
+          }
+          result.bitField0_ |= to_bitField0_;
+        }
+
+        @java.lang.Override
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata.Failure) {
+            return mergeFrom((com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata.Failure)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata.Failure other) {
+          if (other == com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata.Failure.getDefaultInstance()) return this;
+          if (other.hasCaptureStage()) {
+            setCaptureStage(other.getCaptureStage());
+          }
+          if (other.hasFailureReason()) {
+            setFailureReason(other.getFailureReason());
+          }
+          this.mergeUnknownFields(other.getUnknownFields());
+          onChanged();
+          return this;
+        }
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        @java.lang.Override
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          if (extensionRegistry == null) {
+            throw new java.lang.NullPointerException();
+          }
+          try {
+            boolean done = false;
+            while (!done) {
+              int tag = input.readTag();
+              switch (tag) {
+                case 0:
+                  done = true;
+                  break;
+                case 8: {
+                  int tmpRaw = input.readEnum();
+                  com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata.CaptureStage tmpValue =
+                      com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata.CaptureStage.forNumber(tmpRaw);
+                  if (tmpValue == null) {
+                    mergeUnknownVarintField(1, tmpRaw);
+                  } else {
+                    captureStage_ = tmpRaw;
+                    bitField0_ |= 0x00000001;
+                  }
+                  break;
+                } // case 8
+                case 16: {
+                  int tmpRaw = input.readEnum();
+                  com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata.Failure.FailureReason tmpValue =
+                      com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata.Failure.FailureReason.forNumber(tmpRaw);
+                  if (tmpValue == null) {
+                    mergeUnknownVarintField(2, tmpRaw);
+                  } else {
+                    failureReason_ = tmpRaw;
+                    bitField0_ |= 0x00000002;
+                  }
+                  break;
+                } // case 16
+                default: {
+                  if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                    done = true; // was an endgroup tag
+                  }
+                  break;
+                } // default:
+              } // switch (tag)
+            } // while (!done)
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            throw e.unwrapIOException();
+          } finally {
+            onChanged();
+          } // finally
+          return this;
+        }
+        private int bitField0_;
+
+        private int captureStage_ = 0;
+        /**
+         * <pre>
+         * The stage of the capture that the event failed at.
+         * </pre>
+         *
+         * <code>optional .android_studio.SherlockEvent.CaptureEventMetadata.CaptureStage capture_stage = 1;</code>
+         * @return Whether the captureStage field is set.
+         */
+        @java.lang.Override public boolean hasCaptureStage() {
+          return ((bitField0_ & 0x00000001) != 0);
+        }
+        /**
+         * <pre>
+         * The stage of the capture that the event failed at.
+         * </pre>
+         *
+         * <code>optional .android_studio.SherlockEvent.CaptureEventMetadata.CaptureStage capture_stage = 1;</code>
+         * @return The captureStage.
+         */
+        @java.lang.Override
+        public com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata.CaptureStage getCaptureStage() {
+          com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata.CaptureStage result = com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata.CaptureStage.forNumber(captureStage_);
+          return result == null ? com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata.CaptureStage.CAPTURE_STAGE_UNKNOWN : result;
+        }
+        /**
+         * <pre>
+         * The stage of the capture that the event failed at.
+         * </pre>
+         *
+         * <code>optional .android_studio.SherlockEvent.CaptureEventMetadata.CaptureStage capture_stage = 1;</code>
+         * @param value The captureStage to set.
+         * @return This builder for chaining.
+         */
+        public Builder setCaptureStage(com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata.CaptureStage value) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          bitField0_ |= 0x00000001;
+          captureStage_ = value.getNumber();
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * The stage of the capture that the event failed at.
+         * </pre>
+         *
+         * <code>optional .android_studio.SherlockEvent.CaptureEventMetadata.CaptureStage capture_stage = 1;</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearCaptureStage() {
+          bitField0_ = (bitField0_ & ~0x00000001);
+          captureStage_ = 0;
+          onChanged();
+          return this;
+        }
+
+        private int failureReason_ = 0;
+        /**
+         * <pre>
+         * The reason for the capture stage failure.
+         * </pre>
+         *
+         * <code>optional .android_studio.SherlockEvent.CaptureEventMetadata.Failure.FailureReason failure_reason = 2;</code>
+         * @return Whether the failureReason field is set.
+         */
+        @java.lang.Override public boolean hasFailureReason() {
+          return ((bitField0_ & 0x00000002) != 0);
+        }
+        /**
+         * <pre>
+         * The reason for the capture stage failure.
+         * </pre>
+         *
+         * <code>optional .android_studio.SherlockEvent.CaptureEventMetadata.Failure.FailureReason failure_reason = 2;</code>
+         * @return The failureReason.
+         */
+        @java.lang.Override
+        public com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata.Failure.FailureReason getFailureReason() {
+          com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata.Failure.FailureReason result = com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata.Failure.FailureReason.forNumber(failureReason_);
+          return result == null ? com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata.Failure.FailureReason.CAPTURE_FAILURE_REASON_UNKNOWN : result;
+        }
+        /**
+         * <pre>
+         * The reason for the capture stage failure.
+         * </pre>
+         *
+         * <code>optional .android_studio.SherlockEvent.CaptureEventMetadata.Failure.FailureReason failure_reason = 2;</code>
+         * @param value The failureReason to set.
+         * @return This builder for chaining.
+         */
+        public Builder setFailureReason(com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata.Failure.FailureReason value) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          bitField0_ |= 0x00000002;
+          failureReason_ = value.getNumber();
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * The reason for the capture stage failure.
+         * </pre>
+         *
+         * <code>optional .android_studio.SherlockEvent.CaptureEventMetadata.Failure.FailureReason failure_reason = 2;</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearFailureReason() {
+          bitField0_ = (bitField0_ & ~0x00000002);
+          failureReason_ = 0;
+          onChanged();
+          return this;
+        }
+        @java.lang.Override
+        public final Builder setUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.setUnknownFields(unknownFields);
+        }
+
+        @java.lang.Override
+        public final Builder mergeUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.mergeUnknownFields(unknownFields);
+        }
+
+
+        // @@protoc_insertion_point(builder_scope:android_studio.SherlockEvent.CaptureEventMetadata.Failure)
+      }
+
+      // @@protoc_insertion_point(class_scope:android_studio.SherlockEvent.CaptureEventMetadata.Failure)
+      private static final com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata.Failure DEFAULT_INSTANCE;
+      static {
+        DEFAULT_INSTANCE = new com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata.Failure();
+      }
+
+      public static com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata.Failure getDefaultInstance() {
+        return DEFAULT_INSTANCE;
+      }
+
+      @java.lang.Deprecated public static final com.google.protobuf.Parser<Failure>
+          PARSER = new com.google.protobuf.AbstractParser<Failure>() {
+        @java.lang.Override
+        public Failure parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          Builder builder = newBuilder();
+          try {
+            builder.mergeFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            throw e.setUnfinishedMessage(builder.buildPartial());
+          } catch (com.google.protobuf.UninitializedMessageException e) {
+            throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+          } catch (java.io.IOException e) {
+            throw new com.google.protobuf.InvalidProtocolBufferException(e)
+                .setUnfinishedMessage(builder.buildPartial());
+          }
+          return builder.buildPartial();
+        }
+      };
+
+      public static com.google.protobuf.Parser<Failure> parser() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<Failure> getParserForType() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata.Failure getDefaultInstanceForType() {
+        return DEFAULT_INSTANCE;
+      }
+
+    }
+
+    private int bitField0_;
+    private int resultCase_ = 0;
+    @SuppressWarnings("serial")
+    private java.lang.Object result_;
+    public enum ResultCase
+        implements com.google.protobuf.Internal.EnumLite,
+            com.google.protobuf.AbstractMessage.InternalOneOfEnum {
+      ATTEMPT(2),
+      SUCCESS(3),
+      FAILURE(4),
+      RESULT_NOT_SET(0);
+      private final int value;
+      private ResultCase(int value) {
+        this.value = value;
+      }
+      /**
+       * @param value The number of the enum to look for.
+       * @return The enum associated with the given number.
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static ResultCase valueOf(int value) {
+        return forNumber(value);
+      }
+
+      public static ResultCase forNumber(int value) {
+        switch (value) {
+          case 2: return ATTEMPT;
+          case 3: return SUCCESS;
+          case 4: return FAILURE;
+          case 0: return RESULT_NOT_SET;
+          default: return null;
+        }
+      }
+      public int getNumber() {
+        return this.value;
+      }
+    };
+
+    public ResultCase
+    getResultCase() {
+      return ResultCase.forNumber(
+          resultCase_);
+    }
+
+    public static final int CAPTURE_TYPE_FIELD_NUMBER = 1;
+    private int captureType_ = 0;
+    /**
+     * <pre>
+     * The type of capture event.
+     * </pre>
+     *
+     * <code>optional .android_studio.SherlockEvent.CaptureEventMetadata.CaptureType capture_type = 1;</code>
+     * @return Whether the captureType field is set.
+     */
+    @java.lang.Override public boolean hasCaptureType() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <pre>
+     * The type of capture event.
+     * </pre>
+     *
+     * <code>optional .android_studio.SherlockEvent.CaptureEventMetadata.CaptureType capture_type = 1;</code>
+     * @return The captureType.
+     */
+    @java.lang.Override public com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata.CaptureType getCaptureType() {
+      com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata.CaptureType result = com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata.CaptureType.forNumber(captureType_);
+      return result == null ? com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata.CaptureType.CAPTURE_TYPE_UNKNOWN : result;
+    }
+
+    public static final int ATTEMPT_FIELD_NUMBER = 2;
+    /**
+     * <pre>
+     * The capture was attempted.
+     * </pre>
+     *
+     * <code>.android_studio.SherlockEvent.CaptureEventMetadata.Attempt attempt = 2;</code>
+     * @return Whether the attempt field is set.
+     */
+    @java.lang.Override
+    public boolean hasAttempt() {
+      return resultCase_ == 2;
+    }
+    /**
+     * <pre>
+     * The capture was attempted.
+     * </pre>
+     *
+     * <code>.android_studio.SherlockEvent.CaptureEventMetadata.Attempt attempt = 2;</code>
+     * @return The attempt.
+     */
+    @java.lang.Override
+    public com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata.Attempt getAttempt() {
+      if (resultCase_ == 2) {
+         return (com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata.Attempt) result_;
+      }
+      return com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata.Attempt.getDefaultInstance();
+    }
+    /**
+     * <pre>
+     * The capture was attempted.
+     * </pre>
+     *
+     * <code>.android_studio.SherlockEvent.CaptureEventMetadata.Attempt attempt = 2;</code>
+     */
+    @java.lang.Override
+    public com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata.AttemptOrBuilder getAttemptOrBuilder() {
+      if (resultCase_ == 2) {
+         return (com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata.Attempt) result_;
+      }
+      return com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata.Attempt.getDefaultInstance();
+    }
+
+    public static final int SUCCESS_FIELD_NUMBER = 3;
+    /**
+     * <pre>
+     * The capture was successful.
+     * </pre>
+     *
+     * <code>.android_studio.SherlockEvent.CaptureEventMetadata.Success success = 3;</code>
+     * @return Whether the success field is set.
+     */
+    @java.lang.Override
+    public boolean hasSuccess() {
+      return resultCase_ == 3;
+    }
+    /**
+     * <pre>
+     * The capture was successful.
+     * </pre>
+     *
+     * <code>.android_studio.SherlockEvent.CaptureEventMetadata.Success success = 3;</code>
+     * @return The success.
+     */
+    @java.lang.Override
+    public com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata.Success getSuccess() {
+      if (resultCase_ == 3) {
+         return (com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata.Success) result_;
+      }
+      return com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata.Success.getDefaultInstance();
+    }
+    /**
+     * <pre>
+     * The capture was successful.
+     * </pre>
+     *
+     * <code>.android_studio.SherlockEvent.CaptureEventMetadata.Success success = 3;</code>
+     */
+    @java.lang.Override
+    public com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata.SuccessOrBuilder getSuccessOrBuilder() {
+      if (resultCase_ == 3) {
+         return (com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata.Success) result_;
+      }
+      return com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata.Success.getDefaultInstance();
+    }
+
+    public static final int FAILURE_FIELD_NUMBER = 4;
+    /**
+     * <pre>
+     * The capture failed.
+     * </pre>
+     *
+     * <code>.android_studio.SherlockEvent.CaptureEventMetadata.Failure failure = 4;</code>
+     * @return Whether the failure field is set.
+     */
+    @java.lang.Override
+    public boolean hasFailure() {
+      return resultCase_ == 4;
+    }
+    /**
+     * <pre>
+     * The capture failed.
+     * </pre>
+     *
+     * <code>.android_studio.SherlockEvent.CaptureEventMetadata.Failure failure = 4;</code>
+     * @return The failure.
+     */
+    @java.lang.Override
+    public com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata.Failure getFailure() {
+      if (resultCase_ == 4) {
+         return (com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata.Failure) result_;
+      }
+      return com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata.Failure.getDefaultInstance();
+    }
+    /**
+     * <pre>
+     * The capture failed.
+     * </pre>
+     *
+     * <code>.android_studio.SherlockEvent.CaptureEventMetadata.Failure failure = 4;</code>
+     */
+    @java.lang.Override
+    public com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata.FailureOrBuilder getFailureOrBuilder() {
+      if (resultCase_ == 4) {
+         return (com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata.Failure) result_;
+      }
+      return com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata.Failure.getDefaultInstance();
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (((bitField0_ & 0x00000001) != 0)) {
+        output.writeEnum(1, captureType_);
+      }
+      if (resultCase_ == 2) {
+        output.writeMessage(2, (com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata.Attempt) result_);
+      }
+      if (resultCase_ == 3) {
+        output.writeMessage(3, (com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata.Success) result_);
+      }
+      if (resultCase_ == 4) {
+        output.writeMessage(4, (com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata.Failure) result_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(1, captureType_);
+      }
+      if (resultCase_ == 2) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, (com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata.Attempt) result_);
+      }
+      if (resultCase_ == 3) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, (com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata.Success) result_);
+      }
+      if (resultCase_ == 4) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, (com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata.Failure) result_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata)) {
+        return super.equals(obj);
+      }
+      com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata other = (com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata) obj;
+
+      if (hasCaptureType() != other.hasCaptureType()) return false;
+      if (hasCaptureType()) {
+        if (captureType_ != other.captureType_) return false;
+      }
+      if (!getResultCase().equals(other.getResultCase())) return false;
+      switch (resultCase_) {
+        case 2:
+          if (!getAttempt()
+              .equals(other.getAttempt())) return false;
+          break;
+        case 3:
+          if (!getSuccess()
+              .equals(other.getSuccess())) return false;
+          break;
+        case 4:
+          if (!getFailure()
+              .equals(other.getFailure())) return false;
+          break;
+        case 0:
+        default:
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasCaptureType()) {
+        hash = (37 * hash) + CAPTURE_TYPE_FIELD_NUMBER;
+        hash = (53 * hash) + captureType_;
+      }
+      switch (resultCase_) {
+        case 2:
+          hash = (37 * hash) + ATTEMPT_FIELD_NUMBER;
+          hash = (53 * hash) + getAttempt().hashCode();
+          break;
+        case 3:
+          hash = (37 * hash) + SUCCESS_FIELD_NUMBER;
+          hash = (53 * hash) + getSuccess().hashCode();
+          break;
+        case 4:
+          hash = (37 * hash) + FAILURE_FIELD_NUMBER;
+          hash = (53 * hash) + getFailure().hashCode();
+          break;
+        case 0:
+        default:
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Metadata for the |CAPTURE_EVENT| event.
+     * </pre>
+     *
+     * Protobuf type {@code android_studio.SherlockEvent.CaptureEventMetadata}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:android_studio.SherlockEvent.CaptureEventMetadata)
+        com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadataOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_SherlockEvent_CaptureEventMetadata_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_SherlockEvent_CaptureEventMetadata_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata.class, com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata.Builder.class);
+      }
+
+      // Construct using com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        captureType_ = 0;
+        if (attemptBuilder_ != null) {
+          attemptBuilder_.clear();
+        }
+        if (successBuilder_ != null) {
+          successBuilder_.clear();
+        }
+        if (failureBuilder_ != null) {
+          failureBuilder_.clear();
+        }
+        resultCase_ = 0;
+        result_ = null;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_SherlockEvent_CaptureEventMetadata_descriptor;
+      }
+
+      @java.lang.Override
+      public com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata getDefaultInstanceForType() {
+        return com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata build() {
+        com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata buildPartial() {
+        com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata result = new com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        buildPartialOneofs(result);
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata result) {
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.captureType_ = captureType_;
+          to_bitField0_ |= 0x00000001;
+        }
+        result.bitField0_ |= to_bitField0_;
+      }
+
+      private void buildPartialOneofs(com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata result) {
+        result.resultCase_ = resultCase_;
+        result.result_ = this.result_;
+        if (resultCase_ == 2 &&
+            attemptBuilder_ != null) {
+          result.result_ = attemptBuilder_.build();
+        }
+        if (resultCase_ == 3 &&
+            successBuilder_ != null) {
+          result.result_ = successBuilder_.build();
+        }
+        if (resultCase_ == 4 &&
+            failureBuilder_ != null) {
+          result.result_ = failureBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata) {
+          return mergeFrom((com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata other) {
+        if (other == com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata.getDefaultInstance()) return this;
+        if (other.hasCaptureType()) {
+          setCaptureType(other.getCaptureType());
+        }
+        switch (other.getResultCase()) {
+          case ATTEMPT: {
+            mergeAttempt(other.getAttempt());
+            break;
+          }
+          case SUCCESS: {
+            mergeSuccess(other.getSuccess());
+            break;
+          }
+          case FAILURE: {
+            mergeFailure(other.getFailure());
+            break;
+          }
+          case RESULT_NOT_SET: {
+            break;
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                int tmpRaw = input.readEnum();
+                com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata.CaptureType tmpValue =
+                    com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata.CaptureType.forNumber(tmpRaw);
+                if (tmpValue == null) {
+                  mergeUnknownVarintField(1, tmpRaw);
+                } else {
+                  captureType_ = tmpRaw;
+                  bitField0_ |= 0x00000001;
+                }
+                break;
+              } // case 8
+              case 18: {
+                input.readMessage(
+                    getAttemptFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                resultCase_ = 2;
+                break;
+              } // case 18
+              case 26: {
+                input.readMessage(
+                    getSuccessFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                resultCase_ = 3;
+                break;
+              } // case 26
+              case 34: {
+                input.readMessage(
+                    getFailureFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                resultCase_ = 4;
+                break;
+              } // case 34
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int resultCase_ = 0;
+      private java.lang.Object result_;
+      public ResultCase
+          getResultCase() {
+        return ResultCase.forNumber(
+            resultCase_);
+      }
+
+      public Builder clearResult() {
+        resultCase_ = 0;
+        result_ = null;
+        onChanged();
+        return this;
+      }
+
+      private int bitField0_;
+
+      private int captureType_ = 0;
+      /**
+       * <pre>
+       * The type of capture event.
+       * </pre>
+       *
+       * <code>optional .android_studio.SherlockEvent.CaptureEventMetadata.CaptureType capture_type = 1;</code>
+       * @return Whether the captureType field is set.
+       */
+      @java.lang.Override public boolean hasCaptureType() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <pre>
+       * The type of capture event.
+       * </pre>
+       *
+       * <code>optional .android_studio.SherlockEvent.CaptureEventMetadata.CaptureType capture_type = 1;</code>
+       * @return The captureType.
+       */
+      @java.lang.Override
+      public com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata.CaptureType getCaptureType() {
+        com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata.CaptureType result = com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata.CaptureType.forNumber(captureType_);
+        return result == null ? com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata.CaptureType.CAPTURE_TYPE_UNKNOWN : result;
+      }
+      /**
+       * <pre>
+       * The type of capture event.
+       * </pre>
+       *
+       * <code>optional .android_studio.SherlockEvent.CaptureEventMetadata.CaptureType capture_type = 1;</code>
+       * @param value The captureType to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCaptureType(com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata.CaptureType value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x00000001;
+        captureType_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The type of capture event.
+       * </pre>
+       *
+       * <code>optional .android_studio.SherlockEvent.CaptureEventMetadata.CaptureType capture_type = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCaptureType() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        captureType_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata.Attempt, com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata.Attempt.Builder, com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata.AttemptOrBuilder> attemptBuilder_;
+      /**
+       * <pre>
+       * The capture was attempted.
+       * </pre>
+       *
+       * <code>.android_studio.SherlockEvent.CaptureEventMetadata.Attempt attempt = 2;</code>
+       * @return Whether the attempt field is set.
+       */
+      @java.lang.Override
+      public boolean hasAttempt() {
+        return resultCase_ == 2;
+      }
+      /**
+       * <pre>
+       * The capture was attempted.
+       * </pre>
+       *
+       * <code>.android_studio.SherlockEvent.CaptureEventMetadata.Attempt attempt = 2;</code>
+       * @return The attempt.
+       */
+      @java.lang.Override
+      public com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata.Attempt getAttempt() {
+        if (attemptBuilder_ == null) {
+          if (resultCase_ == 2) {
+            return (com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata.Attempt) result_;
+          }
+          return com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata.Attempt.getDefaultInstance();
+        } else {
+          if (resultCase_ == 2) {
+            return attemptBuilder_.getMessage();
+          }
+          return com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata.Attempt.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       * The capture was attempted.
+       * </pre>
+       *
+       * <code>.android_studio.SherlockEvent.CaptureEventMetadata.Attempt attempt = 2;</code>
+       */
+      public Builder setAttempt(com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata.Attempt value) {
+        if (attemptBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          result_ = value;
+          onChanged();
+        } else {
+          attemptBuilder_.setMessage(value);
+        }
+        resultCase_ = 2;
+        return this;
+      }
+      /**
+       * <pre>
+       * The capture was attempted.
+       * </pre>
+       *
+       * <code>.android_studio.SherlockEvent.CaptureEventMetadata.Attempt attempt = 2;</code>
+       */
+      public Builder setAttempt(
+          com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata.Attempt.Builder builderForValue) {
+        if (attemptBuilder_ == null) {
+          result_ = builderForValue.build();
+          onChanged();
+        } else {
+          attemptBuilder_.setMessage(builderForValue.build());
+        }
+        resultCase_ = 2;
+        return this;
+      }
+      /**
+       * <pre>
+       * The capture was attempted.
+       * </pre>
+       *
+       * <code>.android_studio.SherlockEvent.CaptureEventMetadata.Attempt attempt = 2;</code>
+       */
+      public Builder mergeAttempt(com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata.Attempt value) {
+        if (attemptBuilder_ == null) {
+          if (resultCase_ == 2 &&
+              result_ != com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata.Attempt.getDefaultInstance()) {
+            result_ = com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata.Attempt.newBuilder((com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata.Attempt) result_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            result_ = value;
+          }
+          onChanged();
+        } else {
+          if (resultCase_ == 2) {
+            attemptBuilder_.mergeFrom(value);
+          } else {
+            attemptBuilder_.setMessage(value);
+          }
+        }
+        resultCase_ = 2;
+        return this;
+      }
+      /**
+       * <pre>
+       * The capture was attempted.
+       * </pre>
+       *
+       * <code>.android_studio.SherlockEvent.CaptureEventMetadata.Attempt attempt = 2;</code>
+       */
+      public Builder clearAttempt() {
+        if (attemptBuilder_ == null) {
+          if (resultCase_ == 2) {
+            resultCase_ = 0;
+            result_ = null;
+            onChanged();
+          }
+        } else {
+          if (resultCase_ == 2) {
+            resultCase_ = 0;
+            result_ = null;
+          }
+          attemptBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * The capture was attempted.
+       * </pre>
+       *
+       * <code>.android_studio.SherlockEvent.CaptureEventMetadata.Attempt attempt = 2;</code>
+       */
+      public com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata.Attempt.Builder getAttemptBuilder() {
+        return getAttemptFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * The capture was attempted.
+       * </pre>
+       *
+       * <code>.android_studio.SherlockEvent.CaptureEventMetadata.Attempt attempt = 2;</code>
+       */
+      @java.lang.Override
+      public com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata.AttemptOrBuilder getAttemptOrBuilder() {
+        if ((resultCase_ == 2) && (attemptBuilder_ != null)) {
+          return attemptBuilder_.getMessageOrBuilder();
+        } else {
+          if (resultCase_ == 2) {
+            return (com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata.Attempt) result_;
+          }
+          return com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata.Attempt.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       * The capture was attempted.
+       * </pre>
+       *
+       * <code>.android_studio.SherlockEvent.CaptureEventMetadata.Attempt attempt = 2;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata.Attempt, com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata.Attempt.Builder, com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata.AttemptOrBuilder> 
+          getAttemptFieldBuilder() {
+        if (attemptBuilder_ == null) {
+          if (!(resultCase_ == 2)) {
+            result_ = com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata.Attempt.getDefaultInstance();
+          }
+          attemptBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata.Attempt, com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata.Attempt.Builder, com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata.AttemptOrBuilder>(
+                  (com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata.Attempt) result_,
+                  getParentForChildren(),
+                  isClean());
+          result_ = null;
+        }
+        resultCase_ = 2;
+        onChanged();
+        return attemptBuilder_;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata.Success, com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata.Success.Builder, com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata.SuccessOrBuilder> successBuilder_;
+      /**
+       * <pre>
+       * The capture was successful.
+       * </pre>
+       *
+       * <code>.android_studio.SherlockEvent.CaptureEventMetadata.Success success = 3;</code>
+       * @return Whether the success field is set.
+       */
+      @java.lang.Override
+      public boolean hasSuccess() {
+        return resultCase_ == 3;
+      }
+      /**
+       * <pre>
+       * The capture was successful.
+       * </pre>
+       *
+       * <code>.android_studio.SherlockEvent.CaptureEventMetadata.Success success = 3;</code>
+       * @return The success.
+       */
+      @java.lang.Override
+      public com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata.Success getSuccess() {
+        if (successBuilder_ == null) {
+          if (resultCase_ == 3) {
+            return (com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata.Success) result_;
+          }
+          return com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata.Success.getDefaultInstance();
+        } else {
+          if (resultCase_ == 3) {
+            return successBuilder_.getMessage();
+          }
+          return com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata.Success.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       * The capture was successful.
+       * </pre>
+       *
+       * <code>.android_studio.SherlockEvent.CaptureEventMetadata.Success success = 3;</code>
+       */
+      public Builder setSuccess(com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata.Success value) {
+        if (successBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          result_ = value;
+          onChanged();
+        } else {
+          successBuilder_.setMessage(value);
+        }
+        resultCase_ = 3;
+        return this;
+      }
+      /**
+       * <pre>
+       * The capture was successful.
+       * </pre>
+       *
+       * <code>.android_studio.SherlockEvent.CaptureEventMetadata.Success success = 3;</code>
+       */
+      public Builder setSuccess(
+          com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata.Success.Builder builderForValue) {
+        if (successBuilder_ == null) {
+          result_ = builderForValue.build();
+          onChanged();
+        } else {
+          successBuilder_.setMessage(builderForValue.build());
+        }
+        resultCase_ = 3;
+        return this;
+      }
+      /**
+       * <pre>
+       * The capture was successful.
+       * </pre>
+       *
+       * <code>.android_studio.SherlockEvent.CaptureEventMetadata.Success success = 3;</code>
+       */
+      public Builder mergeSuccess(com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata.Success value) {
+        if (successBuilder_ == null) {
+          if (resultCase_ == 3 &&
+              result_ != com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata.Success.getDefaultInstance()) {
+            result_ = com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata.Success.newBuilder((com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata.Success) result_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            result_ = value;
+          }
+          onChanged();
+        } else {
+          if (resultCase_ == 3) {
+            successBuilder_.mergeFrom(value);
+          } else {
+            successBuilder_.setMessage(value);
+          }
+        }
+        resultCase_ = 3;
+        return this;
+      }
+      /**
+       * <pre>
+       * The capture was successful.
+       * </pre>
+       *
+       * <code>.android_studio.SherlockEvent.CaptureEventMetadata.Success success = 3;</code>
+       */
+      public Builder clearSuccess() {
+        if (successBuilder_ == null) {
+          if (resultCase_ == 3) {
+            resultCase_ = 0;
+            result_ = null;
+            onChanged();
+          }
+        } else {
+          if (resultCase_ == 3) {
+            resultCase_ = 0;
+            result_ = null;
+          }
+          successBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * The capture was successful.
+       * </pre>
+       *
+       * <code>.android_studio.SherlockEvent.CaptureEventMetadata.Success success = 3;</code>
+       */
+      public com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata.Success.Builder getSuccessBuilder() {
+        return getSuccessFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * The capture was successful.
+       * </pre>
+       *
+       * <code>.android_studio.SherlockEvent.CaptureEventMetadata.Success success = 3;</code>
+       */
+      @java.lang.Override
+      public com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata.SuccessOrBuilder getSuccessOrBuilder() {
+        if ((resultCase_ == 3) && (successBuilder_ != null)) {
+          return successBuilder_.getMessageOrBuilder();
+        } else {
+          if (resultCase_ == 3) {
+            return (com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata.Success) result_;
+          }
+          return com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata.Success.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       * The capture was successful.
+       * </pre>
+       *
+       * <code>.android_studio.SherlockEvent.CaptureEventMetadata.Success success = 3;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata.Success, com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata.Success.Builder, com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata.SuccessOrBuilder> 
+          getSuccessFieldBuilder() {
+        if (successBuilder_ == null) {
+          if (!(resultCase_ == 3)) {
+            result_ = com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata.Success.getDefaultInstance();
+          }
+          successBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata.Success, com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata.Success.Builder, com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata.SuccessOrBuilder>(
+                  (com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata.Success) result_,
+                  getParentForChildren(),
+                  isClean());
+          result_ = null;
+        }
+        resultCase_ = 3;
+        onChanged();
+        return successBuilder_;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata.Failure, com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata.Failure.Builder, com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata.FailureOrBuilder> failureBuilder_;
+      /**
+       * <pre>
+       * The capture failed.
+       * </pre>
+       *
+       * <code>.android_studio.SherlockEvent.CaptureEventMetadata.Failure failure = 4;</code>
+       * @return Whether the failure field is set.
+       */
+      @java.lang.Override
+      public boolean hasFailure() {
+        return resultCase_ == 4;
+      }
+      /**
+       * <pre>
+       * The capture failed.
+       * </pre>
+       *
+       * <code>.android_studio.SherlockEvent.CaptureEventMetadata.Failure failure = 4;</code>
+       * @return The failure.
+       */
+      @java.lang.Override
+      public com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata.Failure getFailure() {
+        if (failureBuilder_ == null) {
+          if (resultCase_ == 4) {
+            return (com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata.Failure) result_;
+          }
+          return com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata.Failure.getDefaultInstance();
+        } else {
+          if (resultCase_ == 4) {
+            return failureBuilder_.getMessage();
+          }
+          return com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata.Failure.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       * The capture failed.
+       * </pre>
+       *
+       * <code>.android_studio.SherlockEvent.CaptureEventMetadata.Failure failure = 4;</code>
+       */
+      public Builder setFailure(com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata.Failure value) {
+        if (failureBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          result_ = value;
+          onChanged();
+        } else {
+          failureBuilder_.setMessage(value);
+        }
+        resultCase_ = 4;
+        return this;
+      }
+      /**
+       * <pre>
+       * The capture failed.
+       * </pre>
+       *
+       * <code>.android_studio.SherlockEvent.CaptureEventMetadata.Failure failure = 4;</code>
+       */
+      public Builder setFailure(
+          com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata.Failure.Builder builderForValue) {
+        if (failureBuilder_ == null) {
+          result_ = builderForValue.build();
+          onChanged();
+        } else {
+          failureBuilder_.setMessage(builderForValue.build());
+        }
+        resultCase_ = 4;
+        return this;
+      }
+      /**
+       * <pre>
+       * The capture failed.
+       * </pre>
+       *
+       * <code>.android_studio.SherlockEvent.CaptureEventMetadata.Failure failure = 4;</code>
+       */
+      public Builder mergeFailure(com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata.Failure value) {
+        if (failureBuilder_ == null) {
+          if (resultCase_ == 4 &&
+              result_ != com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata.Failure.getDefaultInstance()) {
+            result_ = com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata.Failure.newBuilder((com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata.Failure) result_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            result_ = value;
+          }
+          onChanged();
+        } else {
+          if (resultCase_ == 4) {
+            failureBuilder_.mergeFrom(value);
+          } else {
+            failureBuilder_.setMessage(value);
+          }
+        }
+        resultCase_ = 4;
+        return this;
+      }
+      /**
+       * <pre>
+       * The capture failed.
+       * </pre>
+       *
+       * <code>.android_studio.SherlockEvent.CaptureEventMetadata.Failure failure = 4;</code>
+       */
+      public Builder clearFailure() {
+        if (failureBuilder_ == null) {
+          if (resultCase_ == 4) {
+            resultCase_ = 0;
+            result_ = null;
+            onChanged();
+          }
+        } else {
+          if (resultCase_ == 4) {
+            resultCase_ = 0;
+            result_ = null;
+          }
+          failureBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * The capture failed.
+       * </pre>
+       *
+       * <code>.android_studio.SherlockEvent.CaptureEventMetadata.Failure failure = 4;</code>
+       */
+      public com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata.Failure.Builder getFailureBuilder() {
+        return getFailureFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * The capture failed.
+       * </pre>
+       *
+       * <code>.android_studio.SherlockEvent.CaptureEventMetadata.Failure failure = 4;</code>
+       */
+      @java.lang.Override
+      public com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata.FailureOrBuilder getFailureOrBuilder() {
+        if ((resultCase_ == 4) && (failureBuilder_ != null)) {
+          return failureBuilder_.getMessageOrBuilder();
+        } else {
+          if (resultCase_ == 4) {
+            return (com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata.Failure) result_;
+          }
+          return com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata.Failure.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       * The capture failed.
+       * </pre>
+       *
+       * <code>.android_studio.SherlockEvent.CaptureEventMetadata.Failure failure = 4;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata.Failure, com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata.Failure.Builder, com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata.FailureOrBuilder> 
+          getFailureFieldBuilder() {
+        if (failureBuilder_ == null) {
+          if (!(resultCase_ == 4)) {
+            result_ = com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata.Failure.getDefaultInstance();
+          }
+          failureBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata.Failure, com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata.Failure.Builder, com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata.FailureOrBuilder>(
+                  (com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata.Failure) result_,
+                  getParentForChildren(),
+                  isClean());
+          result_ = null;
+        }
+        resultCase_ = 4;
+        onChanged();
+        return failureBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:android_studio.SherlockEvent.CaptureEventMetadata)
+    }
+
+    // @@protoc_insertion_point(class_scope:android_studio.SherlockEvent.CaptureEventMetadata)
+    private static final com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata();
+    }
+
+    public static com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<CaptureEventMetadata>
+        PARSER = new com.google.protobuf.AbstractParser<CaptureEventMetadata>() {
+      @java.lang.Override
+      public CaptureEventMetadata parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<CaptureEventMetadata> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<CaptureEventMetadata> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private int bitField0_;
   public static final int TYPE_FIELD_NUMBER = 1;
   private int type_ = 0;
@@ -13359,6 +19824,158 @@ private static final long serialVersionUID = 0L;
     return perfettoTraceLoadedMetadata_ == null ? com.google.wireless.android.sdk.stats.SherlockEvent.PerfettoTraceLoadedMetadata.getDefaultInstance() : perfettoTraceLoadedMetadata_;
   }
 
+  public static final int TRACK_ITEM_SELECTED_METADATA_FIELD_NUMBER = 8;
+  private com.google.wireless.android.sdk.stats.SherlockEvent.TrackItemSelectedMetadata trackItemSelectedMetadata_;
+  /**
+   * <pre>
+   * Set if |type| is |TRACK_ITEM_SELECTED|
+   * </pre>
+   *
+   * <code>optional .android_studio.SherlockEvent.TrackItemSelectedMetadata track_item_selected_metadata = 8 [lazy = true];</code>
+   * @return Whether the trackItemSelectedMetadata field is set.
+   */
+  @java.lang.Override
+  public boolean hasTrackItemSelectedMetadata() {
+    return ((bitField0_ & 0x00000080) != 0);
+  }
+  /**
+   * <pre>
+   * Set if |type| is |TRACK_ITEM_SELECTED|
+   * </pre>
+   *
+   * <code>optional .android_studio.SherlockEvent.TrackItemSelectedMetadata track_item_selected_metadata = 8 [lazy = true];</code>
+   * @return The trackItemSelectedMetadata.
+   */
+  @java.lang.Override
+  public com.google.wireless.android.sdk.stats.SherlockEvent.TrackItemSelectedMetadata getTrackItemSelectedMetadata() {
+    return trackItemSelectedMetadata_ == null ? com.google.wireless.android.sdk.stats.SherlockEvent.TrackItemSelectedMetadata.getDefaultInstance() : trackItemSelectedMetadata_;
+  }
+  /**
+   * <pre>
+   * Set if |type| is |TRACK_ITEM_SELECTED|
+   * </pre>
+   *
+   * <code>optional .android_studio.SherlockEvent.TrackItemSelectedMetadata track_item_selected_metadata = 8 [lazy = true];</code>
+   */
+  @java.lang.Override
+  public com.google.wireless.android.sdk.stats.SherlockEvent.TrackItemSelectedMetadataOrBuilder getTrackItemSelectedMetadataOrBuilder() {
+    return trackItemSelectedMetadata_ == null ? com.google.wireless.android.sdk.stats.SherlockEvent.TrackItemSelectedMetadata.getDefaultInstance() : trackItemSelectedMetadata_;
+  }
+
+  public static final int TRACK_PIN_TOGGLED_METADATA_FIELD_NUMBER = 9;
+  private com.google.wireless.android.sdk.stats.SherlockEvent.TrackPinToggledMetadata trackPinToggledMetadata_;
+  /**
+   * <pre>
+   * Set if |type| is |TRACK_PIN_TOGGLED|
+   * </pre>
+   *
+   * <code>optional .android_studio.SherlockEvent.TrackPinToggledMetadata track_pin_toggled_metadata = 9 [lazy = true];</code>
+   * @return Whether the trackPinToggledMetadata field is set.
+   */
+  @java.lang.Override
+  public boolean hasTrackPinToggledMetadata() {
+    return ((bitField0_ & 0x00000100) != 0);
+  }
+  /**
+   * <pre>
+   * Set if |type| is |TRACK_PIN_TOGGLED|
+   * </pre>
+   *
+   * <code>optional .android_studio.SherlockEvent.TrackPinToggledMetadata track_pin_toggled_metadata = 9 [lazy = true];</code>
+   * @return The trackPinToggledMetadata.
+   */
+  @java.lang.Override
+  public com.google.wireless.android.sdk.stats.SherlockEvent.TrackPinToggledMetadata getTrackPinToggledMetadata() {
+    return trackPinToggledMetadata_ == null ? com.google.wireless.android.sdk.stats.SherlockEvent.TrackPinToggledMetadata.getDefaultInstance() : trackPinToggledMetadata_;
+  }
+  /**
+   * <pre>
+   * Set if |type| is |TRACK_PIN_TOGGLED|
+   * </pre>
+   *
+   * <code>optional .android_studio.SherlockEvent.TrackPinToggledMetadata track_pin_toggled_metadata = 9 [lazy = true];</code>
+   */
+  @java.lang.Override
+  public com.google.wireless.android.sdk.stats.SherlockEvent.TrackPinToggledMetadataOrBuilder getTrackPinToggledMetadataOrBuilder() {
+    return trackPinToggledMetadata_ == null ? com.google.wireless.android.sdk.stats.SherlockEvent.TrackPinToggledMetadata.getDefaultInstance() : trackPinToggledMetadata_;
+  }
+
+  public static final int TRACK_GROUP_TOGGLED_METADATA_FIELD_NUMBER = 10;
+  private com.google.wireless.android.sdk.stats.SherlockEvent.TrackGroupToggledMetadata trackGroupToggledMetadata_;
+  /**
+   * <pre>
+   * Set if |type| is |TRACK_GROUP_TOGGLED|
+   * </pre>
+   *
+   * <code>optional .android_studio.SherlockEvent.TrackGroupToggledMetadata track_group_toggled_metadata = 10 [lazy = true];</code>
+   * @return Whether the trackGroupToggledMetadata field is set.
+   */
+  @java.lang.Override
+  public boolean hasTrackGroupToggledMetadata() {
+    return ((bitField0_ & 0x00000200) != 0);
+  }
+  /**
+   * <pre>
+   * Set if |type| is |TRACK_GROUP_TOGGLED|
+   * </pre>
+   *
+   * <code>optional .android_studio.SherlockEvent.TrackGroupToggledMetadata track_group_toggled_metadata = 10 [lazy = true];</code>
+   * @return The trackGroupToggledMetadata.
+   */
+  @java.lang.Override
+  public com.google.wireless.android.sdk.stats.SherlockEvent.TrackGroupToggledMetadata getTrackGroupToggledMetadata() {
+    return trackGroupToggledMetadata_ == null ? com.google.wireless.android.sdk.stats.SherlockEvent.TrackGroupToggledMetadata.getDefaultInstance() : trackGroupToggledMetadata_;
+  }
+  /**
+   * <pre>
+   * Set if |type| is |TRACK_GROUP_TOGGLED|
+   * </pre>
+   *
+   * <code>optional .android_studio.SherlockEvent.TrackGroupToggledMetadata track_group_toggled_metadata = 10 [lazy = true];</code>
+   */
+  @java.lang.Override
+  public com.google.wireless.android.sdk.stats.SherlockEvent.TrackGroupToggledMetadataOrBuilder getTrackGroupToggledMetadataOrBuilder() {
+    return trackGroupToggledMetadata_ == null ? com.google.wireless.android.sdk.stats.SherlockEvent.TrackGroupToggledMetadata.getDefaultInstance() : trackGroupToggledMetadata_;
+  }
+
+  public static final int CAPTURE_EVENT_METADATA_FIELD_NUMBER = 11;
+  private com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata captureEventMetadata_;
+  /**
+   * <pre>
+   * Set if |type| is |CAPTURE_EVENT|
+   * </pre>
+   *
+   * <code>optional .android_studio.SherlockEvent.CaptureEventMetadata capture_event_metadata = 11 [lazy = true];</code>
+   * @return Whether the captureEventMetadata field is set.
+   */
+  @java.lang.Override
+  public boolean hasCaptureEventMetadata() {
+    return ((bitField0_ & 0x00000400) != 0);
+  }
+  /**
+   * <pre>
+   * Set if |type| is |CAPTURE_EVENT|
+   * </pre>
+   *
+   * <code>optional .android_studio.SherlockEvent.CaptureEventMetadata capture_event_metadata = 11 [lazy = true];</code>
+   * @return The captureEventMetadata.
+   */
+  @java.lang.Override
+  public com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata getCaptureEventMetadata() {
+    return captureEventMetadata_ == null ? com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata.getDefaultInstance() : captureEventMetadata_;
+  }
+  /**
+   * <pre>
+   * Set if |type| is |CAPTURE_EVENT|
+   * </pre>
+   *
+   * <code>optional .android_studio.SherlockEvent.CaptureEventMetadata capture_event_metadata = 11 [lazy = true];</code>
+   */
+  @java.lang.Override
+  public com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadataOrBuilder getCaptureEventMetadataOrBuilder() {
+    return captureEventMetadata_ == null ? com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata.getDefaultInstance() : captureEventMetadata_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -13393,6 +20010,18 @@ private static final long serialVersionUID = 0L;
     }
     if (((bitField0_ & 0x00000040) != 0)) {
       output.writeMessage(7, getPerfettoTraceLoadedMetadata());
+    }
+    if (((bitField0_ & 0x00000080) != 0)) {
+      output.writeMessage(8, getTrackItemSelectedMetadata());
+    }
+    if (((bitField0_ & 0x00000100) != 0)) {
+      output.writeMessage(9, getTrackPinToggledMetadata());
+    }
+    if (((bitField0_ & 0x00000200) != 0)) {
+      output.writeMessage(10, getTrackGroupToggledMetadata());
+    }
+    if (((bitField0_ & 0x00000400) != 0)) {
+      output.writeMessage(11, getCaptureEventMetadata());
     }
     getUnknownFields().writeTo(output);
   }
@@ -13430,6 +20059,22 @@ private static final long serialVersionUID = 0L;
     if (((bitField0_ & 0x00000040) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(7, getPerfettoTraceLoadedMetadata());
+    }
+    if (((bitField0_ & 0x00000080) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(8, getTrackItemSelectedMetadata());
+    }
+    if (((bitField0_ & 0x00000100) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(9, getTrackPinToggledMetadata());
+    }
+    if (((bitField0_ & 0x00000200) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(10, getTrackGroupToggledMetadata());
+    }
+    if (((bitField0_ & 0x00000400) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(11, getCaptureEventMetadata());
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -13480,6 +20125,26 @@ private static final long serialVersionUID = 0L;
       if (!getPerfettoTraceLoadedMetadata()
           .equals(other.getPerfettoTraceLoadedMetadata())) return false;
     }
+    if (hasTrackItemSelectedMetadata() != other.hasTrackItemSelectedMetadata()) return false;
+    if (hasTrackItemSelectedMetadata()) {
+      if (!getTrackItemSelectedMetadata()
+          .equals(other.getTrackItemSelectedMetadata())) return false;
+    }
+    if (hasTrackPinToggledMetadata() != other.hasTrackPinToggledMetadata()) return false;
+    if (hasTrackPinToggledMetadata()) {
+      if (!getTrackPinToggledMetadata()
+          .equals(other.getTrackPinToggledMetadata())) return false;
+    }
+    if (hasTrackGroupToggledMetadata() != other.hasTrackGroupToggledMetadata()) return false;
+    if (hasTrackGroupToggledMetadata()) {
+      if (!getTrackGroupToggledMetadata()
+          .equals(other.getTrackGroupToggledMetadata())) return false;
+    }
+    if (hasCaptureEventMetadata() != other.hasCaptureEventMetadata()) return false;
+    if (hasCaptureEventMetadata()) {
+      if (!getCaptureEventMetadata()
+          .equals(other.getCaptureEventMetadata())) return false;
+    }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -13518,6 +20183,22 @@ private static final long serialVersionUID = 0L;
     if (hasPerfettoTraceLoadedMetadata()) {
       hash = (37 * hash) + PERFETTO_TRACE_LOADED_METADATA_FIELD_NUMBER;
       hash = (53 * hash) + getPerfettoTraceLoadedMetadata().hashCode();
+    }
+    if (hasTrackItemSelectedMetadata()) {
+      hash = (37 * hash) + TRACK_ITEM_SELECTED_METADATA_FIELD_NUMBER;
+      hash = (53 * hash) + getTrackItemSelectedMetadata().hashCode();
+    }
+    if (hasTrackPinToggledMetadata()) {
+      hash = (37 * hash) + TRACK_PIN_TOGGLED_METADATA_FIELD_NUMBER;
+      hash = (53 * hash) + getTrackPinToggledMetadata().hashCode();
+    }
+    if (hasTrackGroupToggledMetadata()) {
+      hash = (37 * hash) + TRACK_GROUP_TOGGLED_METADATA_FIELD_NUMBER;
+      hash = (53 * hash) + getTrackGroupToggledMetadata().hashCode();
+    }
+    if (hasCaptureEventMetadata()) {
+      hash = (37 * hash) + CAPTURE_EVENT_METADATA_FIELD_NUMBER;
+      hash = (53 * hash) + getCaptureEventMetadata().hashCode();
     }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
@@ -13659,6 +20340,10 @@ private static final long serialVersionUID = 0L;
         getPerfettoTraceOpenedMetadataFieldBuilder();
         getPerfettoSqlQueryMetadataFieldBuilder();
         getPerfettoTraceLoadedMetadataFieldBuilder();
+        getTrackItemSelectedMetadataFieldBuilder();
+        getTrackPinToggledMetadataFieldBuilder();
+        getTrackGroupToggledMetadataFieldBuilder();
+        getCaptureEventMetadataFieldBuilder();
       }
     }
     @java.lang.Override
@@ -13695,6 +20380,26 @@ private static final long serialVersionUID = 0L;
       if (perfettoTraceLoadedMetadataBuilder_ != null) {
         perfettoTraceLoadedMetadataBuilder_.dispose();
         perfettoTraceLoadedMetadataBuilder_ = null;
+      }
+      trackItemSelectedMetadata_ = null;
+      if (trackItemSelectedMetadataBuilder_ != null) {
+        trackItemSelectedMetadataBuilder_.dispose();
+        trackItemSelectedMetadataBuilder_ = null;
+      }
+      trackPinToggledMetadata_ = null;
+      if (trackPinToggledMetadataBuilder_ != null) {
+        trackPinToggledMetadataBuilder_.dispose();
+        trackPinToggledMetadataBuilder_ = null;
+      }
+      trackGroupToggledMetadata_ = null;
+      if (trackGroupToggledMetadataBuilder_ != null) {
+        trackGroupToggledMetadataBuilder_.dispose();
+        trackGroupToggledMetadataBuilder_ = null;
+      }
+      captureEventMetadata_ = null;
+      if (captureEventMetadataBuilder_ != null) {
+        captureEventMetadataBuilder_.dispose();
+        captureEventMetadataBuilder_ = null;
       }
       return this;
     }
@@ -13770,6 +20475,30 @@ private static final long serialVersionUID = 0L;
             : perfettoTraceLoadedMetadataBuilder_.build();
         to_bitField0_ |= 0x00000040;
       }
+      if (((from_bitField0_ & 0x00000080) != 0)) {
+        result.trackItemSelectedMetadata_ = trackItemSelectedMetadataBuilder_ == null
+            ? trackItemSelectedMetadata_
+            : trackItemSelectedMetadataBuilder_.build();
+        to_bitField0_ |= 0x00000080;
+      }
+      if (((from_bitField0_ & 0x00000100) != 0)) {
+        result.trackPinToggledMetadata_ = trackPinToggledMetadataBuilder_ == null
+            ? trackPinToggledMetadata_
+            : trackPinToggledMetadataBuilder_.build();
+        to_bitField0_ |= 0x00000100;
+      }
+      if (((from_bitField0_ & 0x00000200) != 0)) {
+        result.trackGroupToggledMetadata_ = trackGroupToggledMetadataBuilder_ == null
+            ? trackGroupToggledMetadata_
+            : trackGroupToggledMetadataBuilder_.build();
+        to_bitField0_ |= 0x00000200;
+      }
+      if (((from_bitField0_ & 0x00000400) != 0)) {
+        result.captureEventMetadata_ = captureEventMetadataBuilder_ == null
+            ? captureEventMetadata_
+            : captureEventMetadataBuilder_.build();
+        to_bitField0_ |= 0x00000400;
+      }
       result.bitField0_ |= to_bitField0_;
     }
 
@@ -13805,6 +20534,18 @@ private static final long serialVersionUID = 0L;
       }
       if (other.hasPerfettoTraceLoadedMetadata()) {
         mergePerfettoTraceLoadedMetadata(other.getPerfettoTraceLoadedMetadata());
+      }
+      if (other.hasTrackItemSelectedMetadata()) {
+        mergeTrackItemSelectedMetadata(other.getTrackItemSelectedMetadata());
+      }
+      if (other.hasTrackPinToggledMetadata()) {
+        mergeTrackPinToggledMetadata(other.getTrackPinToggledMetadata());
+      }
+      if (other.hasTrackGroupToggledMetadata()) {
+        mergeTrackGroupToggledMetadata(other.getTrackGroupToggledMetadata());
+      }
+      if (other.hasCaptureEventMetadata()) {
+        mergeCaptureEventMetadata(other.getCaptureEventMetadata());
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -13886,6 +20627,34 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000040;
               break;
             } // case 58
+            case 66: {
+              input.readMessage(
+                  getTrackItemSelectedMetadataFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000080;
+              break;
+            } // case 66
+            case 74: {
+              input.readMessage(
+                  getTrackPinToggledMetadataFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000100;
+              break;
+            } // case 74
+            case 82: {
+              input.readMessage(
+                  getTrackGroupToggledMetadataFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000200;
+              break;
+            } // case 82
+            case 90: {
+              input.readMessage(
+                  getCaptureEventMetadataFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000400;
+              break;
+            } // case 90
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -14889,6 +21658,626 @@ private static final long serialVersionUID = 0L;
         perfettoTraceLoadedMetadata_ = null;
       }
       return perfettoTraceLoadedMetadataBuilder_;
+    }
+
+    private com.google.wireless.android.sdk.stats.SherlockEvent.TrackItemSelectedMetadata trackItemSelectedMetadata_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.SherlockEvent.TrackItemSelectedMetadata, com.google.wireless.android.sdk.stats.SherlockEvent.TrackItemSelectedMetadata.Builder, com.google.wireless.android.sdk.stats.SherlockEvent.TrackItemSelectedMetadataOrBuilder> trackItemSelectedMetadataBuilder_;
+    /**
+     * <pre>
+     * Set if |type| is |TRACK_ITEM_SELECTED|
+     * </pre>
+     *
+     * <code>optional .android_studio.SherlockEvent.TrackItemSelectedMetadata track_item_selected_metadata = 8 [lazy = true];</code>
+     * @return Whether the trackItemSelectedMetadata field is set.
+     */
+    public boolean hasTrackItemSelectedMetadata() {
+      return ((bitField0_ & 0x00000080) != 0);
+    }
+    /**
+     * <pre>
+     * Set if |type| is |TRACK_ITEM_SELECTED|
+     * </pre>
+     *
+     * <code>optional .android_studio.SherlockEvent.TrackItemSelectedMetadata track_item_selected_metadata = 8 [lazy = true];</code>
+     * @return The trackItemSelectedMetadata.
+     */
+    public com.google.wireless.android.sdk.stats.SherlockEvent.TrackItemSelectedMetadata getTrackItemSelectedMetadata() {
+      if (trackItemSelectedMetadataBuilder_ == null) {
+        return trackItemSelectedMetadata_ == null ? com.google.wireless.android.sdk.stats.SherlockEvent.TrackItemSelectedMetadata.getDefaultInstance() : trackItemSelectedMetadata_;
+      } else {
+        return trackItemSelectedMetadataBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * Set if |type| is |TRACK_ITEM_SELECTED|
+     * </pre>
+     *
+     * <code>optional .android_studio.SherlockEvent.TrackItemSelectedMetadata track_item_selected_metadata = 8 [lazy = true];</code>
+     */
+    public Builder setTrackItemSelectedMetadata(com.google.wireless.android.sdk.stats.SherlockEvent.TrackItemSelectedMetadata value) {
+      if (trackItemSelectedMetadataBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        trackItemSelectedMetadata_ = value;
+      } else {
+        trackItemSelectedMetadataBuilder_.setMessage(value);
+      }
+      bitField0_ |= 0x00000080;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Set if |type| is |TRACK_ITEM_SELECTED|
+     * </pre>
+     *
+     * <code>optional .android_studio.SherlockEvent.TrackItemSelectedMetadata track_item_selected_metadata = 8 [lazy = true];</code>
+     */
+    public Builder setTrackItemSelectedMetadata(
+        com.google.wireless.android.sdk.stats.SherlockEvent.TrackItemSelectedMetadata.Builder builderForValue) {
+      if (trackItemSelectedMetadataBuilder_ == null) {
+        trackItemSelectedMetadata_ = builderForValue.build();
+      } else {
+        trackItemSelectedMetadataBuilder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x00000080;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Set if |type| is |TRACK_ITEM_SELECTED|
+     * </pre>
+     *
+     * <code>optional .android_studio.SherlockEvent.TrackItemSelectedMetadata track_item_selected_metadata = 8 [lazy = true];</code>
+     */
+    public Builder mergeTrackItemSelectedMetadata(com.google.wireless.android.sdk.stats.SherlockEvent.TrackItemSelectedMetadata value) {
+      if (trackItemSelectedMetadataBuilder_ == null) {
+        if (((bitField0_ & 0x00000080) != 0) &&
+          trackItemSelectedMetadata_ != null &&
+          trackItemSelectedMetadata_ != com.google.wireless.android.sdk.stats.SherlockEvent.TrackItemSelectedMetadata.getDefaultInstance()) {
+          getTrackItemSelectedMetadataBuilder().mergeFrom(value);
+        } else {
+          trackItemSelectedMetadata_ = value;
+        }
+      } else {
+        trackItemSelectedMetadataBuilder_.mergeFrom(value);
+      }
+      bitField0_ |= 0x00000080;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Set if |type| is |TRACK_ITEM_SELECTED|
+     * </pre>
+     *
+     * <code>optional .android_studio.SherlockEvent.TrackItemSelectedMetadata track_item_selected_metadata = 8 [lazy = true];</code>
+     */
+    public Builder clearTrackItemSelectedMetadata() {
+      bitField0_ = (bitField0_ & ~0x00000080);
+      trackItemSelectedMetadata_ = null;
+      if (trackItemSelectedMetadataBuilder_ != null) {
+        trackItemSelectedMetadataBuilder_.dispose();
+        trackItemSelectedMetadataBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Set if |type| is |TRACK_ITEM_SELECTED|
+     * </pre>
+     *
+     * <code>optional .android_studio.SherlockEvent.TrackItemSelectedMetadata track_item_selected_metadata = 8 [lazy = true];</code>
+     */
+    public com.google.wireless.android.sdk.stats.SherlockEvent.TrackItemSelectedMetadata.Builder getTrackItemSelectedMetadataBuilder() {
+      bitField0_ |= 0x00000080;
+      onChanged();
+      return getTrackItemSelectedMetadataFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * Set if |type| is |TRACK_ITEM_SELECTED|
+     * </pre>
+     *
+     * <code>optional .android_studio.SherlockEvent.TrackItemSelectedMetadata track_item_selected_metadata = 8 [lazy = true];</code>
+     */
+    public com.google.wireless.android.sdk.stats.SherlockEvent.TrackItemSelectedMetadataOrBuilder getTrackItemSelectedMetadataOrBuilder() {
+      if (trackItemSelectedMetadataBuilder_ != null) {
+        return trackItemSelectedMetadataBuilder_.getMessageOrBuilder();
+      } else {
+        return trackItemSelectedMetadata_ == null ?
+            com.google.wireless.android.sdk.stats.SherlockEvent.TrackItemSelectedMetadata.getDefaultInstance() : trackItemSelectedMetadata_;
+      }
+    }
+    /**
+     * <pre>
+     * Set if |type| is |TRACK_ITEM_SELECTED|
+     * </pre>
+     *
+     * <code>optional .android_studio.SherlockEvent.TrackItemSelectedMetadata track_item_selected_metadata = 8 [lazy = true];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.SherlockEvent.TrackItemSelectedMetadata, com.google.wireless.android.sdk.stats.SherlockEvent.TrackItemSelectedMetadata.Builder, com.google.wireless.android.sdk.stats.SherlockEvent.TrackItemSelectedMetadataOrBuilder> 
+        getTrackItemSelectedMetadataFieldBuilder() {
+      if (trackItemSelectedMetadataBuilder_ == null) {
+        trackItemSelectedMetadataBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.wireless.android.sdk.stats.SherlockEvent.TrackItemSelectedMetadata, com.google.wireless.android.sdk.stats.SherlockEvent.TrackItemSelectedMetadata.Builder, com.google.wireless.android.sdk.stats.SherlockEvent.TrackItemSelectedMetadataOrBuilder>(
+                getTrackItemSelectedMetadata(),
+                getParentForChildren(),
+                isClean());
+        trackItemSelectedMetadata_ = null;
+      }
+      return trackItemSelectedMetadataBuilder_;
+    }
+
+    private com.google.wireless.android.sdk.stats.SherlockEvent.TrackPinToggledMetadata trackPinToggledMetadata_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.SherlockEvent.TrackPinToggledMetadata, com.google.wireless.android.sdk.stats.SherlockEvent.TrackPinToggledMetadata.Builder, com.google.wireless.android.sdk.stats.SherlockEvent.TrackPinToggledMetadataOrBuilder> trackPinToggledMetadataBuilder_;
+    /**
+     * <pre>
+     * Set if |type| is |TRACK_PIN_TOGGLED|
+     * </pre>
+     *
+     * <code>optional .android_studio.SherlockEvent.TrackPinToggledMetadata track_pin_toggled_metadata = 9 [lazy = true];</code>
+     * @return Whether the trackPinToggledMetadata field is set.
+     */
+    public boolean hasTrackPinToggledMetadata() {
+      return ((bitField0_ & 0x00000100) != 0);
+    }
+    /**
+     * <pre>
+     * Set if |type| is |TRACK_PIN_TOGGLED|
+     * </pre>
+     *
+     * <code>optional .android_studio.SherlockEvent.TrackPinToggledMetadata track_pin_toggled_metadata = 9 [lazy = true];</code>
+     * @return The trackPinToggledMetadata.
+     */
+    public com.google.wireless.android.sdk.stats.SherlockEvent.TrackPinToggledMetadata getTrackPinToggledMetadata() {
+      if (trackPinToggledMetadataBuilder_ == null) {
+        return trackPinToggledMetadata_ == null ? com.google.wireless.android.sdk.stats.SherlockEvent.TrackPinToggledMetadata.getDefaultInstance() : trackPinToggledMetadata_;
+      } else {
+        return trackPinToggledMetadataBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * Set if |type| is |TRACK_PIN_TOGGLED|
+     * </pre>
+     *
+     * <code>optional .android_studio.SherlockEvent.TrackPinToggledMetadata track_pin_toggled_metadata = 9 [lazy = true];</code>
+     */
+    public Builder setTrackPinToggledMetadata(com.google.wireless.android.sdk.stats.SherlockEvent.TrackPinToggledMetadata value) {
+      if (trackPinToggledMetadataBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        trackPinToggledMetadata_ = value;
+      } else {
+        trackPinToggledMetadataBuilder_.setMessage(value);
+      }
+      bitField0_ |= 0x00000100;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Set if |type| is |TRACK_PIN_TOGGLED|
+     * </pre>
+     *
+     * <code>optional .android_studio.SherlockEvent.TrackPinToggledMetadata track_pin_toggled_metadata = 9 [lazy = true];</code>
+     */
+    public Builder setTrackPinToggledMetadata(
+        com.google.wireless.android.sdk.stats.SherlockEvent.TrackPinToggledMetadata.Builder builderForValue) {
+      if (trackPinToggledMetadataBuilder_ == null) {
+        trackPinToggledMetadata_ = builderForValue.build();
+      } else {
+        trackPinToggledMetadataBuilder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x00000100;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Set if |type| is |TRACK_PIN_TOGGLED|
+     * </pre>
+     *
+     * <code>optional .android_studio.SherlockEvent.TrackPinToggledMetadata track_pin_toggled_metadata = 9 [lazy = true];</code>
+     */
+    public Builder mergeTrackPinToggledMetadata(com.google.wireless.android.sdk.stats.SherlockEvent.TrackPinToggledMetadata value) {
+      if (trackPinToggledMetadataBuilder_ == null) {
+        if (((bitField0_ & 0x00000100) != 0) &&
+          trackPinToggledMetadata_ != null &&
+          trackPinToggledMetadata_ != com.google.wireless.android.sdk.stats.SherlockEvent.TrackPinToggledMetadata.getDefaultInstance()) {
+          getTrackPinToggledMetadataBuilder().mergeFrom(value);
+        } else {
+          trackPinToggledMetadata_ = value;
+        }
+      } else {
+        trackPinToggledMetadataBuilder_.mergeFrom(value);
+      }
+      bitField0_ |= 0x00000100;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Set if |type| is |TRACK_PIN_TOGGLED|
+     * </pre>
+     *
+     * <code>optional .android_studio.SherlockEvent.TrackPinToggledMetadata track_pin_toggled_metadata = 9 [lazy = true];</code>
+     */
+    public Builder clearTrackPinToggledMetadata() {
+      bitField0_ = (bitField0_ & ~0x00000100);
+      trackPinToggledMetadata_ = null;
+      if (trackPinToggledMetadataBuilder_ != null) {
+        trackPinToggledMetadataBuilder_.dispose();
+        trackPinToggledMetadataBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Set if |type| is |TRACK_PIN_TOGGLED|
+     * </pre>
+     *
+     * <code>optional .android_studio.SherlockEvent.TrackPinToggledMetadata track_pin_toggled_metadata = 9 [lazy = true];</code>
+     */
+    public com.google.wireless.android.sdk.stats.SherlockEvent.TrackPinToggledMetadata.Builder getTrackPinToggledMetadataBuilder() {
+      bitField0_ |= 0x00000100;
+      onChanged();
+      return getTrackPinToggledMetadataFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * Set if |type| is |TRACK_PIN_TOGGLED|
+     * </pre>
+     *
+     * <code>optional .android_studio.SherlockEvent.TrackPinToggledMetadata track_pin_toggled_metadata = 9 [lazy = true];</code>
+     */
+    public com.google.wireless.android.sdk.stats.SherlockEvent.TrackPinToggledMetadataOrBuilder getTrackPinToggledMetadataOrBuilder() {
+      if (trackPinToggledMetadataBuilder_ != null) {
+        return trackPinToggledMetadataBuilder_.getMessageOrBuilder();
+      } else {
+        return trackPinToggledMetadata_ == null ?
+            com.google.wireless.android.sdk.stats.SherlockEvent.TrackPinToggledMetadata.getDefaultInstance() : trackPinToggledMetadata_;
+      }
+    }
+    /**
+     * <pre>
+     * Set if |type| is |TRACK_PIN_TOGGLED|
+     * </pre>
+     *
+     * <code>optional .android_studio.SherlockEvent.TrackPinToggledMetadata track_pin_toggled_metadata = 9 [lazy = true];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.SherlockEvent.TrackPinToggledMetadata, com.google.wireless.android.sdk.stats.SherlockEvent.TrackPinToggledMetadata.Builder, com.google.wireless.android.sdk.stats.SherlockEvent.TrackPinToggledMetadataOrBuilder> 
+        getTrackPinToggledMetadataFieldBuilder() {
+      if (trackPinToggledMetadataBuilder_ == null) {
+        trackPinToggledMetadataBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.wireless.android.sdk.stats.SherlockEvent.TrackPinToggledMetadata, com.google.wireless.android.sdk.stats.SherlockEvent.TrackPinToggledMetadata.Builder, com.google.wireless.android.sdk.stats.SherlockEvent.TrackPinToggledMetadataOrBuilder>(
+                getTrackPinToggledMetadata(),
+                getParentForChildren(),
+                isClean());
+        trackPinToggledMetadata_ = null;
+      }
+      return trackPinToggledMetadataBuilder_;
+    }
+
+    private com.google.wireless.android.sdk.stats.SherlockEvent.TrackGroupToggledMetadata trackGroupToggledMetadata_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.SherlockEvent.TrackGroupToggledMetadata, com.google.wireless.android.sdk.stats.SherlockEvent.TrackGroupToggledMetadata.Builder, com.google.wireless.android.sdk.stats.SherlockEvent.TrackGroupToggledMetadataOrBuilder> trackGroupToggledMetadataBuilder_;
+    /**
+     * <pre>
+     * Set if |type| is |TRACK_GROUP_TOGGLED|
+     * </pre>
+     *
+     * <code>optional .android_studio.SherlockEvent.TrackGroupToggledMetadata track_group_toggled_metadata = 10 [lazy = true];</code>
+     * @return Whether the trackGroupToggledMetadata field is set.
+     */
+    public boolean hasTrackGroupToggledMetadata() {
+      return ((bitField0_ & 0x00000200) != 0);
+    }
+    /**
+     * <pre>
+     * Set if |type| is |TRACK_GROUP_TOGGLED|
+     * </pre>
+     *
+     * <code>optional .android_studio.SherlockEvent.TrackGroupToggledMetadata track_group_toggled_metadata = 10 [lazy = true];</code>
+     * @return The trackGroupToggledMetadata.
+     */
+    public com.google.wireless.android.sdk.stats.SherlockEvent.TrackGroupToggledMetadata getTrackGroupToggledMetadata() {
+      if (trackGroupToggledMetadataBuilder_ == null) {
+        return trackGroupToggledMetadata_ == null ? com.google.wireless.android.sdk.stats.SherlockEvent.TrackGroupToggledMetadata.getDefaultInstance() : trackGroupToggledMetadata_;
+      } else {
+        return trackGroupToggledMetadataBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * Set if |type| is |TRACK_GROUP_TOGGLED|
+     * </pre>
+     *
+     * <code>optional .android_studio.SherlockEvent.TrackGroupToggledMetadata track_group_toggled_metadata = 10 [lazy = true];</code>
+     */
+    public Builder setTrackGroupToggledMetadata(com.google.wireless.android.sdk.stats.SherlockEvent.TrackGroupToggledMetadata value) {
+      if (trackGroupToggledMetadataBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        trackGroupToggledMetadata_ = value;
+      } else {
+        trackGroupToggledMetadataBuilder_.setMessage(value);
+      }
+      bitField0_ |= 0x00000200;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Set if |type| is |TRACK_GROUP_TOGGLED|
+     * </pre>
+     *
+     * <code>optional .android_studio.SherlockEvent.TrackGroupToggledMetadata track_group_toggled_metadata = 10 [lazy = true];</code>
+     */
+    public Builder setTrackGroupToggledMetadata(
+        com.google.wireless.android.sdk.stats.SherlockEvent.TrackGroupToggledMetadata.Builder builderForValue) {
+      if (trackGroupToggledMetadataBuilder_ == null) {
+        trackGroupToggledMetadata_ = builderForValue.build();
+      } else {
+        trackGroupToggledMetadataBuilder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x00000200;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Set if |type| is |TRACK_GROUP_TOGGLED|
+     * </pre>
+     *
+     * <code>optional .android_studio.SherlockEvent.TrackGroupToggledMetadata track_group_toggled_metadata = 10 [lazy = true];</code>
+     */
+    public Builder mergeTrackGroupToggledMetadata(com.google.wireless.android.sdk.stats.SherlockEvent.TrackGroupToggledMetadata value) {
+      if (trackGroupToggledMetadataBuilder_ == null) {
+        if (((bitField0_ & 0x00000200) != 0) &&
+          trackGroupToggledMetadata_ != null &&
+          trackGroupToggledMetadata_ != com.google.wireless.android.sdk.stats.SherlockEvent.TrackGroupToggledMetadata.getDefaultInstance()) {
+          getTrackGroupToggledMetadataBuilder().mergeFrom(value);
+        } else {
+          trackGroupToggledMetadata_ = value;
+        }
+      } else {
+        trackGroupToggledMetadataBuilder_.mergeFrom(value);
+      }
+      bitField0_ |= 0x00000200;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Set if |type| is |TRACK_GROUP_TOGGLED|
+     * </pre>
+     *
+     * <code>optional .android_studio.SherlockEvent.TrackGroupToggledMetadata track_group_toggled_metadata = 10 [lazy = true];</code>
+     */
+    public Builder clearTrackGroupToggledMetadata() {
+      bitField0_ = (bitField0_ & ~0x00000200);
+      trackGroupToggledMetadata_ = null;
+      if (trackGroupToggledMetadataBuilder_ != null) {
+        trackGroupToggledMetadataBuilder_.dispose();
+        trackGroupToggledMetadataBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Set if |type| is |TRACK_GROUP_TOGGLED|
+     * </pre>
+     *
+     * <code>optional .android_studio.SherlockEvent.TrackGroupToggledMetadata track_group_toggled_metadata = 10 [lazy = true];</code>
+     */
+    public com.google.wireless.android.sdk.stats.SherlockEvent.TrackGroupToggledMetadata.Builder getTrackGroupToggledMetadataBuilder() {
+      bitField0_ |= 0x00000200;
+      onChanged();
+      return getTrackGroupToggledMetadataFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * Set if |type| is |TRACK_GROUP_TOGGLED|
+     * </pre>
+     *
+     * <code>optional .android_studio.SherlockEvent.TrackGroupToggledMetadata track_group_toggled_metadata = 10 [lazy = true];</code>
+     */
+    public com.google.wireless.android.sdk.stats.SherlockEvent.TrackGroupToggledMetadataOrBuilder getTrackGroupToggledMetadataOrBuilder() {
+      if (trackGroupToggledMetadataBuilder_ != null) {
+        return trackGroupToggledMetadataBuilder_.getMessageOrBuilder();
+      } else {
+        return trackGroupToggledMetadata_ == null ?
+            com.google.wireless.android.sdk.stats.SherlockEvent.TrackGroupToggledMetadata.getDefaultInstance() : trackGroupToggledMetadata_;
+      }
+    }
+    /**
+     * <pre>
+     * Set if |type| is |TRACK_GROUP_TOGGLED|
+     * </pre>
+     *
+     * <code>optional .android_studio.SherlockEvent.TrackGroupToggledMetadata track_group_toggled_metadata = 10 [lazy = true];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.SherlockEvent.TrackGroupToggledMetadata, com.google.wireless.android.sdk.stats.SherlockEvent.TrackGroupToggledMetadata.Builder, com.google.wireless.android.sdk.stats.SherlockEvent.TrackGroupToggledMetadataOrBuilder> 
+        getTrackGroupToggledMetadataFieldBuilder() {
+      if (trackGroupToggledMetadataBuilder_ == null) {
+        trackGroupToggledMetadataBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.wireless.android.sdk.stats.SherlockEvent.TrackGroupToggledMetadata, com.google.wireless.android.sdk.stats.SherlockEvent.TrackGroupToggledMetadata.Builder, com.google.wireless.android.sdk.stats.SherlockEvent.TrackGroupToggledMetadataOrBuilder>(
+                getTrackGroupToggledMetadata(),
+                getParentForChildren(),
+                isClean());
+        trackGroupToggledMetadata_ = null;
+      }
+      return trackGroupToggledMetadataBuilder_;
+    }
+
+    private com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata captureEventMetadata_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata, com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata.Builder, com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadataOrBuilder> captureEventMetadataBuilder_;
+    /**
+     * <pre>
+     * Set if |type| is |CAPTURE_EVENT|
+     * </pre>
+     *
+     * <code>optional .android_studio.SherlockEvent.CaptureEventMetadata capture_event_metadata = 11 [lazy = true];</code>
+     * @return Whether the captureEventMetadata field is set.
+     */
+    public boolean hasCaptureEventMetadata() {
+      return ((bitField0_ & 0x00000400) != 0);
+    }
+    /**
+     * <pre>
+     * Set if |type| is |CAPTURE_EVENT|
+     * </pre>
+     *
+     * <code>optional .android_studio.SherlockEvent.CaptureEventMetadata capture_event_metadata = 11 [lazy = true];</code>
+     * @return The captureEventMetadata.
+     */
+    public com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata getCaptureEventMetadata() {
+      if (captureEventMetadataBuilder_ == null) {
+        return captureEventMetadata_ == null ? com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata.getDefaultInstance() : captureEventMetadata_;
+      } else {
+        return captureEventMetadataBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * Set if |type| is |CAPTURE_EVENT|
+     * </pre>
+     *
+     * <code>optional .android_studio.SherlockEvent.CaptureEventMetadata capture_event_metadata = 11 [lazy = true];</code>
+     */
+    public Builder setCaptureEventMetadata(com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata value) {
+      if (captureEventMetadataBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        captureEventMetadata_ = value;
+      } else {
+        captureEventMetadataBuilder_.setMessage(value);
+      }
+      bitField0_ |= 0x00000400;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Set if |type| is |CAPTURE_EVENT|
+     * </pre>
+     *
+     * <code>optional .android_studio.SherlockEvent.CaptureEventMetadata capture_event_metadata = 11 [lazy = true];</code>
+     */
+    public Builder setCaptureEventMetadata(
+        com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata.Builder builderForValue) {
+      if (captureEventMetadataBuilder_ == null) {
+        captureEventMetadata_ = builderForValue.build();
+      } else {
+        captureEventMetadataBuilder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x00000400;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Set if |type| is |CAPTURE_EVENT|
+     * </pre>
+     *
+     * <code>optional .android_studio.SherlockEvent.CaptureEventMetadata capture_event_metadata = 11 [lazy = true];</code>
+     */
+    public Builder mergeCaptureEventMetadata(com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata value) {
+      if (captureEventMetadataBuilder_ == null) {
+        if (((bitField0_ & 0x00000400) != 0) &&
+          captureEventMetadata_ != null &&
+          captureEventMetadata_ != com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata.getDefaultInstance()) {
+          getCaptureEventMetadataBuilder().mergeFrom(value);
+        } else {
+          captureEventMetadata_ = value;
+        }
+      } else {
+        captureEventMetadataBuilder_.mergeFrom(value);
+      }
+      bitField0_ |= 0x00000400;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Set if |type| is |CAPTURE_EVENT|
+     * </pre>
+     *
+     * <code>optional .android_studio.SherlockEvent.CaptureEventMetadata capture_event_metadata = 11 [lazy = true];</code>
+     */
+    public Builder clearCaptureEventMetadata() {
+      bitField0_ = (bitField0_ & ~0x00000400);
+      captureEventMetadata_ = null;
+      if (captureEventMetadataBuilder_ != null) {
+        captureEventMetadataBuilder_.dispose();
+        captureEventMetadataBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Set if |type| is |CAPTURE_EVENT|
+     * </pre>
+     *
+     * <code>optional .android_studio.SherlockEvent.CaptureEventMetadata capture_event_metadata = 11 [lazy = true];</code>
+     */
+    public com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata.Builder getCaptureEventMetadataBuilder() {
+      bitField0_ |= 0x00000400;
+      onChanged();
+      return getCaptureEventMetadataFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * Set if |type| is |CAPTURE_EVENT|
+     * </pre>
+     *
+     * <code>optional .android_studio.SherlockEvent.CaptureEventMetadata capture_event_metadata = 11 [lazy = true];</code>
+     */
+    public com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadataOrBuilder getCaptureEventMetadataOrBuilder() {
+      if (captureEventMetadataBuilder_ != null) {
+        return captureEventMetadataBuilder_.getMessageOrBuilder();
+      } else {
+        return captureEventMetadata_ == null ?
+            com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata.getDefaultInstance() : captureEventMetadata_;
+      }
+    }
+    /**
+     * <pre>
+     * Set if |type| is |CAPTURE_EVENT|
+     * </pre>
+     *
+     * <code>optional .android_studio.SherlockEvent.CaptureEventMetadata capture_event_metadata = 11 [lazy = true];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata, com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata.Builder, com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadataOrBuilder> 
+        getCaptureEventMetadataFieldBuilder() {
+      if (captureEventMetadataBuilder_ == null) {
+        captureEventMetadataBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata, com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadata.Builder, com.google.wireless.android.sdk.stats.SherlockEvent.CaptureEventMetadataOrBuilder>(
+                getCaptureEventMetadata(),
+                getParentForChildren(),
+                isClean());
+        captureEventMetadata_ = null;
+      }
+      return captureEventMetadataBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(
