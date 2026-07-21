@@ -210,6 +210,77 @@ private static final long serialVersionUID = 0L;
      * <code>UNSUPPORTED_MODIFY_INHERITANCE = 9;</code>
      */
     UNSUPPORTED_MODIFY_INHERITANCE(9),
+    /**
+     * <pre>
+     * The following are from LiveEditUpdateException.Error
+     * We DO NOT log this. If this shows up in metrics, we know we have a bug at
+     * hand.
+     * </pre>
+     *
+     * <code>ANALYSIS_ERROR = 10;</code>
+     */
+    ANALYSIS_ERROR(10),
+    /**
+     * <pre>
+     * We DO NOT log this. If this shows up in metrics, we know we have a bug at
+     * hand.
+     * </pre>
+     *
+     * <code>COMPILATION_ERROR = 11;</code>
+     */
+    COMPILATION_ERROR(11),
+    /**
+     * <code>NON_KOTLIN = 12;</code>
+     */
+    NON_KOTLIN(12),
+    /**
+     * <code>NON_PRIVATE_INLINE_FUNCTION = 13;</code>
+     */
+    NON_PRIVATE_INLINE_FUNCTION(13),
+    /**
+     * <code>UNABLE_TO_INLINE = 14;</code>
+     */
+    UNABLE_TO_INLINE(14),
+    /**
+     * <code>UNABLE_TO_LOCATE_COMPOSE_GROUP = 15;</code>
+     */
+    UNABLE_TO_LOCATE_COMPOSE_GROUP(15),
+    /**
+     * <code>UNSUPPORTED_BUILD_SRC_CHANGE = 16;</code>
+     */
+    UNSUPPORTED_BUILD_SRC_CHANGE(16),
+    /**
+     * <code>UNSUPPORTED_SRC_CHANGE_RECOVERABLE = 17;</code>
+     */
+    UNSUPPORTED_SRC_CHANGE_RECOVERABLE(17),
+    /**
+     * <code>UNSUPPORTED_SRC_CHANGE_UNRECOVERABLE = 18;</code>
+     */
+    UNSUPPORTED_SRC_CHANGE_UNRECOVERABLE(18),
+    /**
+     * <code>UNSUPPORTED_TEST_SRC_CHANGE = 19;</code>
+     */
+    UNSUPPORTED_TEST_SRC_CHANGE(19),
+    /**
+     * <code>UNABLE_TO_DESUGAR = 20;</code>
+     */
+    UNABLE_TO_DESUGAR(20),
+    /**
+     * <code>INTERNAL_ERROR = 21;</code>
+     */
+    INTERNAL_ERROR(21),
+    /**
+     * <code>KNOWN_ISSUE = 22;</code>
+     */
+    KNOWN_ISSUE(22),
+    /**
+     * <pre>
+     * Semantic unsafe operations
+     * </pre>
+     *
+     * <code>PENDING_ERROR_IN_ANOTHER_FILE_AUTO_MODE = 23;</code>
+     */
+    PENDING_ERROR_IN_ANOTHER_FILE_AUTO_MODE(23),
     ;
 
     /**
@@ -288,6 +359,77 @@ private static final long serialVersionUID = 0L;
      * <code>UNSUPPORTED_MODIFY_INHERITANCE = 9;</code>
      */
     public static final int UNSUPPORTED_MODIFY_INHERITANCE_VALUE = 9;
+    /**
+     * <pre>
+     * The following are from LiveEditUpdateException.Error
+     * We DO NOT log this. If this shows up in metrics, we know we have a bug at
+     * hand.
+     * </pre>
+     *
+     * <code>ANALYSIS_ERROR = 10;</code>
+     */
+    public static final int ANALYSIS_ERROR_VALUE = 10;
+    /**
+     * <pre>
+     * We DO NOT log this. If this shows up in metrics, we know we have a bug at
+     * hand.
+     * </pre>
+     *
+     * <code>COMPILATION_ERROR = 11;</code>
+     */
+    public static final int COMPILATION_ERROR_VALUE = 11;
+    /**
+     * <code>NON_KOTLIN = 12;</code>
+     */
+    public static final int NON_KOTLIN_VALUE = 12;
+    /**
+     * <code>NON_PRIVATE_INLINE_FUNCTION = 13;</code>
+     */
+    public static final int NON_PRIVATE_INLINE_FUNCTION_VALUE = 13;
+    /**
+     * <code>UNABLE_TO_INLINE = 14;</code>
+     */
+    public static final int UNABLE_TO_INLINE_VALUE = 14;
+    /**
+     * <code>UNABLE_TO_LOCATE_COMPOSE_GROUP = 15;</code>
+     */
+    public static final int UNABLE_TO_LOCATE_COMPOSE_GROUP_VALUE = 15;
+    /**
+     * <code>UNSUPPORTED_BUILD_SRC_CHANGE = 16;</code>
+     */
+    public static final int UNSUPPORTED_BUILD_SRC_CHANGE_VALUE = 16;
+    /**
+     * <code>UNSUPPORTED_SRC_CHANGE_RECOVERABLE = 17;</code>
+     */
+    public static final int UNSUPPORTED_SRC_CHANGE_RECOVERABLE_VALUE = 17;
+    /**
+     * <code>UNSUPPORTED_SRC_CHANGE_UNRECOVERABLE = 18;</code>
+     */
+    public static final int UNSUPPORTED_SRC_CHANGE_UNRECOVERABLE_VALUE = 18;
+    /**
+     * <code>UNSUPPORTED_TEST_SRC_CHANGE = 19;</code>
+     */
+    public static final int UNSUPPORTED_TEST_SRC_CHANGE_VALUE = 19;
+    /**
+     * <code>UNABLE_TO_DESUGAR = 20;</code>
+     */
+    public static final int UNABLE_TO_DESUGAR_VALUE = 20;
+    /**
+     * <code>INTERNAL_ERROR = 21;</code>
+     */
+    public static final int INTERNAL_ERROR_VALUE = 21;
+    /**
+     * <code>KNOWN_ISSUE = 22;</code>
+     */
+    public static final int KNOWN_ISSUE_VALUE = 22;
+    /**
+     * <pre>
+     * Semantic unsafe operations
+     * </pre>
+     *
+     * <code>PENDING_ERROR_IN_ANOTHER_FILE_AUTO_MODE = 23;</code>
+     */
+    public static final int PENDING_ERROR_IN_ANOTHER_FILE_AUTO_MODE_VALUE = 23;
 
 
     public final int getNumber() {
@@ -320,6 +462,20 @@ private static final long serialVersionUID = 0L;
         case 7: return UNSUPPORTED_REMOVED_FIELD;
         case 8: return UNSUPPORTED_MODIFY_INLINE;
         case 9: return UNSUPPORTED_MODIFY_INHERITANCE;
+        case 10: return ANALYSIS_ERROR;
+        case 11: return COMPILATION_ERROR;
+        case 12: return NON_KOTLIN;
+        case 13: return NON_PRIVATE_INLINE_FUNCTION;
+        case 14: return UNABLE_TO_INLINE;
+        case 15: return UNABLE_TO_LOCATE_COMPOSE_GROUP;
+        case 16: return UNSUPPORTED_BUILD_SRC_CHANGE;
+        case 17: return UNSUPPORTED_SRC_CHANGE_RECOVERABLE;
+        case 18: return UNSUPPORTED_SRC_CHANGE_UNRECOVERABLE;
+        case 19: return UNSUPPORTED_TEST_SRC_CHANGE;
+        case 20: return UNABLE_TO_DESUGAR;
+        case 21: return INTERNAL_ERROR;
+        case 22: return KNOWN_ISSUE;
+        case 23: return PENDING_ERROR_IN_ANOTHER_FILE_AUTO_MODE;
         default: return null;
       }
     }
