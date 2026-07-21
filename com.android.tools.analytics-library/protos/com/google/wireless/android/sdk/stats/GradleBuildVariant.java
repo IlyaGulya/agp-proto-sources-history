@@ -3752,6 +3752,35 @@ private static final long serialVersionUID = 0L;
      * @return The useIr.
      */
     boolean getUseIr();
+
+    /**
+     * <pre>
+     * Language version (e.g., "2.0")
+     * </pre>
+     *
+     * <code>optional string language_version = 2;</code>
+     * @return Whether the languageVersion field is set.
+     */
+    boolean hasLanguageVersion();
+    /**
+     * <pre>
+     * Language version (e.g., "2.0")
+     * </pre>
+     *
+     * <code>optional string language_version = 2;</code>
+     * @return The languageVersion.
+     */
+    java.lang.String getLanguageVersion();
+    /**
+     * <pre>
+     * Language version (e.g., "2.0")
+     * </pre>
+     *
+     * <code>optional string language_version = 2;</code>
+     * @return The bytes for languageVersion.
+     */
+    com.google.protobuf.ByteString
+        getLanguageVersionBytes();
   }
   /**
    * Protobuf type {@code android_studio.GradleBuildVariant.KotlinOptions}
@@ -3766,6 +3795,7 @@ private static final long serialVersionUID = 0L;
       super(builder);
     }
     private KotlinOptions() {
+      languageVersion_ = "";
     }
 
     @java.lang.Override
@@ -3802,6 +3832,12 @@ private static final long serialVersionUID = 0L;
             case 8: {
               bitField0_ |= 0x00000001;
               useIr_ = input.readBool();
+              break;
+            }
+            case 18: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000002;
+              languageVersion_ = bs;
               break;
             }
             default: {
@@ -3864,6 +3900,66 @@ private static final long serialVersionUID = 0L;
       return useIr_;
     }
 
+    public static final int LANGUAGE_VERSION_FIELD_NUMBER = 2;
+    private volatile java.lang.Object languageVersion_;
+    /**
+     * <pre>
+     * Language version (e.g., "2.0")
+     * </pre>
+     *
+     * <code>optional string language_version = 2;</code>
+     * @return Whether the languageVersion field is set.
+     */
+    @java.lang.Override
+    public boolean hasLanguageVersion() {
+      return ((bitField0_ & 0x00000002) != 0);
+    }
+    /**
+     * <pre>
+     * Language version (e.g., "2.0")
+     * </pre>
+     *
+     * <code>optional string language_version = 2;</code>
+     * @return The languageVersion.
+     */
+    @java.lang.Override
+    public java.lang.String getLanguageVersion() {
+      java.lang.Object ref = languageVersion_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          languageVersion_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Language version (e.g., "2.0")
+     * </pre>
+     *
+     * <code>optional string language_version = 2;</code>
+     * @return The bytes for languageVersion.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getLanguageVersionBytes() {
+      java.lang.Object ref = languageVersion_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        languageVersion_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -3881,6 +3977,9 @@ private static final long serialVersionUID = 0L;
       if (((bitField0_ & 0x00000001) != 0)) {
         output.writeBool(1, useIr_);
       }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, languageVersion_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -3893,6 +3992,9 @@ private static final long serialVersionUID = 0L;
       if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(1, useIr_);
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, languageVersion_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -3914,6 +4016,11 @@ private static final long serialVersionUID = 0L;
         if (getUseIr()
             != other.getUseIr()) return false;
       }
+      if (hasLanguageVersion() != other.hasLanguageVersion()) return false;
+      if (hasLanguageVersion()) {
+        if (!getLanguageVersion()
+            .equals(other.getLanguageVersion())) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -3929,6 +4036,10 @@ private static final long serialVersionUID = 0L;
         hash = (37 * hash) + USE_IR_FIELD_NUMBER;
         hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
             getUseIr());
+      }
+      if (hasLanguageVersion()) {
+        hash = (37 * hash) + LANGUAGE_VERSION_FIELD_NUMBER;
+        hash = (53 * hash) + getLanguageVersion().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -4065,6 +4176,8 @@ private static final long serialVersionUID = 0L;
         super.clear();
         useIr_ = false;
         bitField0_ = (bitField0_ & ~0x00000001);
+        languageVersion_ = "";
+        bitField0_ = (bitField0_ & ~0x00000002);
         return this;
       }
 
@@ -4097,6 +4210,10 @@ private static final long serialVersionUID = 0L;
           result.useIr_ = useIr_;
           to_bitField0_ |= 0x00000001;
         }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          to_bitField0_ |= 0x00000002;
+        }
+        result.languageVersion_ = languageVersion_;
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -4148,6 +4265,11 @@ private static final long serialVersionUID = 0L;
         if (other == com.google.wireless.android.sdk.stats.GradleBuildVariant.KotlinOptions.getDefaultInstance()) return this;
         if (other.hasUseIr()) {
           setUseIr(other.getUseIr());
+        }
+        if (other.hasLanguageVersion()) {
+          bitField0_ |= 0x00000002;
+          languageVersion_ = other.languageVersion_;
+          onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -4230,6 +4352,114 @@ private static final long serialVersionUID = 0L;
       public Builder clearUseIr() {
         bitField0_ = (bitField0_ & ~0x00000001);
         useIr_ = false;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object languageVersion_ = "";
+      /**
+       * <pre>
+       * Language version (e.g., "2.0")
+       * </pre>
+       *
+       * <code>optional string language_version = 2;</code>
+       * @return Whether the languageVersion field is set.
+       */
+      public boolean hasLanguageVersion() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <pre>
+       * Language version (e.g., "2.0")
+       * </pre>
+       *
+       * <code>optional string language_version = 2;</code>
+       * @return The languageVersion.
+       */
+      public java.lang.String getLanguageVersion() {
+        java.lang.Object ref = languageVersion_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            languageVersion_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Language version (e.g., "2.0")
+       * </pre>
+       *
+       * <code>optional string language_version = 2;</code>
+       * @return The bytes for languageVersion.
+       */
+      public com.google.protobuf.ByteString
+          getLanguageVersionBytes() {
+        java.lang.Object ref = languageVersion_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          languageVersion_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Language version (e.g., "2.0")
+       * </pre>
+       *
+       * <code>optional string language_version = 2;</code>
+       * @param value The languageVersion to set.
+       * @return This builder for chaining.
+       */
+      public Builder setLanguageVersion(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000002;
+        languageVersion_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Language version (e.g., "2.0")
+       * </pre>
+       *
+       * <code>optional string language_version = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearLanguageVersion() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        languageVersion_ = getDefaultInstance().getLanguageVersion();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Language version (e.g., "2.0")
+       * </pre>
+       *
+       * <code>optional string language_version = 2;</code>
+       * @param value The bytes for languageVersion to set.
+       * @return This builder for chaining.
+       */
+      public Builder setLanguageVersionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000002;
+        languageVersion_ = value;
         onChanged();
         return this;
       }

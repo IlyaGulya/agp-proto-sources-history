@@ -31,6 +31,7 @@ private static final long serialVersionUID = 0L;
     buildApiLevelFull_ = "";
     mdnsConnectionType_ = 0;
     characteristics_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    deviceProvisionerId_ = "";
   }
 
   @java.lang.Override
@@ -154,6 +155,12 @@ private static final long serialVersionUID = 0L;
               mutable_bitField0_ |= 0x00000800;
             }
             characteristics_.add(bs);
+            break;
+          }
+          case 106: {
+            com.google.protobuf.ByteString bs = input.readBytes();
+            bitField0_ |= 0x00000800;
+            deviceProvisionerId_ = bs;
             break;
           }
           default: {
@@ -1236,6 +1243,66 @@ private static final long serialVersionUID = 0L;
     return characteristics_.getByteString(index);
   }
 
+  public static final int DEVICE_PROVISIONER_ID_FIELD_NUMBER = 13;
+  private volatile java.lang.Object deviceProvisionerId_;
+  /**
+   * <pre>
+   * ID of device provisioner plugin that created the device
+   * </pre>
+   *
+   * <code>optional string device_provisioner_id = 13;</code>
+   * @return Whether the deviceProvisionerId field is set.
+   */
+  @java.lang.Override
+  public boolean hasDeviceProvisionerId() {
+    return ((bitField0_ & 0x00000800) != 0);
+  }
+  /**
+   * <pre>
+   * ID of device provisioner plugin that created the device
+   * </pre>
+   *
+   * <code>optional string device_provisioner_id = 13;</code>
+   * @return The deviceProvisionerId.
+   */
+  @java.lang.Override
+  public java.lang.String getDeviceProvisionerId() {
+    java.lang.Object ref = deviceProvisionerId_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      if (bs.isValidUtf8()) {
+        deviceProvisionerId_ = s;
+      }
+      return s;
+    }
+  }
+  /**
+   * <pre>
+   * ID of device provisioner plugin that created the device
+   * </pre>
+   *
+   * <code>optional string device_provisioner_id = 13;</code>
+   * @return The bytes for deviceProvisionerId.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getDeviceProvisionerIdBytes() {
+    java.lang.Object ref = deviceProvisionerId_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      deviceProvisionerId_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -1285,6 +1352,9 @@ private static final long serialVersionUID = 0L;
     }
     for (int i = 0; i < characteristics_.size(); i++) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 12, characteristics_.getRaw(i));
+    }
+    if (((bitField0_ & 0x00000800) != 0)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 13, deviceProvisionerId_);
     }
     unknownFields.writeTo(output);
   }
@@ -1339,6 +1409,9 @@ private static final long serialVersionUID = 0L;
       }
       size += dataSize;
       size += 1 * getCharacteristicsList().size();
+    }
+    if (((bitField0_ & 0x00000800) != 0)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(13, deviceProvisionerId_);
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -1409,6 +1482,11 @@ private static final long serialVersionUID = 0L;
     }
     if (!getCharacteristicsList()
         .equals(other.getCharacteristicsList())) return false;
+    if (hasDeviceProvisionerId() != other.hasDeviceProvisionerId()) return false;
+    if (hasDeviceProvisionerId()) {
+      if (!getDeviceProvisionerId()
+          .equals(other.getDeviceProvisionerId())) return false;
+    }
     if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
@@ -1467,6 +1545,10 @@ private static final long serialVersionUID = 0L;
     if (getCharacteristicsCount() > 0) {
       hash = (37 * hash) + CHARACTERISTICS_FIELD_NUMBER;
       hash = (53 * hash) + getCharacteristicsList().hashCode();
+    }
+    if (hasDeviceProvisionerId()) {
+      hash = (37 * hash) + DEVICE_PROVISIONER_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getDeviceProvisionerId().hashCode();
     }
     hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
@@ -1629,6 +1711,8 @@ private static final long serialVersionUID = 0L;
       bitField0_ = (bitField0_ & ~0x00000400);
       characteristics_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       bitField0_ = (bitField0_ & ~0x00000800);
+      deviceProvisionerId_ = "";
+      bitField0_ = (bitField0_ & ~0x00001000);
       return this;
     }
 
@@ -1706,6 +1790,10 @@ private static final long serialVersionUID = 0L;
         bitField0_ = (bitField0_ & ~0x00000800);
       }
       result.characteristics_ = characteristics_;
+      if (((from_bitField0_ & 0x00001000) != 0)) {
+        to_bitField0_ |= 0x00000800;
+      }
+      result.deviceProvisionerId_ = deviceProvisionerId_;
       result.bitField0_ = to_bitField0_;
       onBuilt();
       return result;
@@ -1810,6 +1898,11 @@ private static final long serialVersionUID = 0L;
           ensureCharacteristicsIsMutable();
           characteristics_.addAll(other.characteristics_);
         }
+        onChanged();
+      }
+      if (other.hasDeviceProvisionerId()) {
+        bitField0_ |= 0x00001000;
+        deviceProvisionerId_ = other.deviceProvisionerId_;
         onChanged();
       }
       this.mergeUnknownFields(other.unknownFields);
@@ -2987,6 +3080,114 @@ private static final long serialVersionUID = 0L;
   }
   ensureCharacteristicsIsMutable();
       characteristics_.add(value);
+      onChanged();
+      return this;
+    }
+
+    private java.lang.Object deviceProvisionerId_ = "";
+    /**
+     * <pre>
+     * ID of device provisioner plugin that created the device
+     * </pre>
+     *
+     * <code>optional string device_provisioner_id = 13;</code>
+     * @return Whether the deviceProvisionerId field is set.
+     */
+    public boolean hasDeviceProvisionerId() {
+      return ((bitField0_ & 0x00001000) != 0);
+    }
+    /**
+     * <pre>
+     * ID of device provisioner plugin that created the device
+     * </pre>
+     *
+     * <code>optional string device_provisioner_id = 13;</code>
+     * @return The deviceProvisionerId.
+     */
+    public java.lang.String getDeviceProvisionerId() {
+      java.lang.Object ref = deviceProvisionerId_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          deviceProvisionerId_ = s;
+        }
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <pre>
+     * ID of device provisioner plugin that created the device
+     * </pre>
+     *
+     * <code>optional string device_provisioner_id = 13;</code>
+     * @return The bytes for deviceProvisionerId.
+     */
+    public com.google.protobuf.ByteString
+        getDeviceProvisionerIdBytes() {
+      java.lang.Object ref = deviceProvisionerId_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        deviceProvisionerId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <pre>
+     * ID of device provisioner plugin that created the device
+     * </pre>
+     *
+     * <code>optional string device_provisioner_id = 13;</code>
+     * @param value The deviceProvisionerId to set.
+     * @return This builder for chaining.
+     */
+    public Builder setDeviceProvisionerId(
+        java.lang.String value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00001000;
+      deviceProvisionerId_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * ID of device provisioner plugin that created the device
+     * </pre>
+     *
+     * <code>optional string device_provisioner_id = 13;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearDeviceProvisionerId() {
+      bitField0_ = (bitField0_ & ~0x00001000);
+      deviceProvisionerId_ = getDefaultInstance().getDeviceProvisionerId();
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * ID of device provisioner plugin that created the device
+     * </pre>
+     *
+     * <code>optional string device_provisioner_id = 13;</code>
+     * @param value The bytes for deviceProvisionerId to set.
+     * @return This builder for chaining.
+     */
+    public Builder setDeviceProvisionerIdBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00001000;
+      deviceProvisionerId_ = value;
       onChanged();
       return this;
     }
