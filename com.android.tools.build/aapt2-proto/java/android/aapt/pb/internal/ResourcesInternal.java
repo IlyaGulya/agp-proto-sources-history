@@ -186,87 +186,6 @@ public final class ResourcesInternal {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private CompiledFile(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              resourceName_ = s;
-              break;
-            }
-            case 18: {
-              com.android.aapt.ConfigurationOuterClass.Configuration.Builder subBuilder = null;
-              if (config_ != null) {
-                subBuilder = config_.toBuilder();
-              }
-              config_ = input.readMessage(com.android.aapt.ConfigurationOuterClass.Configuration.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(config_);
-                config_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            case 24: {
-              int rawValue = input.readEnum();
-
-              type_ = rawValue;
-              break;
-            }
-            case 34: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              sourcePath_ = s;
-              break;
-            }
-            case 42: {
-              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-                exportedSymbol_ = new java.util.ArrayList<android.aapt.pb.internal.ResourcesInternal.CompiledFile.Symbol>();
-                mutable_bitField0_ |= 0x00000001;
-              }
-              exportedSymbol_.add(
-                  input.readMessage(android.aapt.pb.internal.ResourcesInternal.CompiledFile.Symbol.parser(), extensionRegistry));
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        if (((mutable_bitField0_ & 0x00000001) != 0)) {
-          exportedSymbol_ = java.util.Collections.unmodifiableList(exportedSymbol_);
-        }
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return android.aapt.pb.internal.ResourcesInternal.internal_static_aapt_pb_internal_CompiledFile_descriptor;
@@ -358,62 +277,6 @@ public final class ResourcesInternal {
       public final com.google.protobuf.UnknownFieldSet
       getUnknownFields() {
         return this.unknownFields;
-      }
-      private Symbol(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        this();
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-            com.google.protobuf.UnknownFieldSet.newBuilder();
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 10: {
-                java.lang.String s = input.readStringRequireUtf8();
-
-                resourceName_ = s;
-                break;
-              }
-              case 18: {
-                com.android.aapt.Resources.SourcePosition.Builder subBuilder = null;
-                if (source_ != null) {
-                  subBuilder = source_.toBuilder();
-                }
-                source_ = input.readMessage(com.android.aapt.Resources.SourcePosition.parser(), extensionRegistry);
-                if (subBuilder != null) {
-                  subBuilder.mergeFrom(source_);
-                  source_ = subBuilder.buildPartial();
-                }
-
-                break;
-              }
-              default: {
-                if (!parseUnknownField(
-                    input, unknownFields, extensionRegistry, tag)) {
-                  done = true;
-                }
-                break;
-              }
-            }
-          }
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(this);
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(
-              e).setUnfinishedMessage(this);
-        } finally {
-          this.unknownFields = unknownFields.build();
-          makeExtensionsImmutable();
-        }
       }
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
@@ -532,7 +395,7 @@ public final class ResourcesInternal {
         if (source_ != null) {
           output.writeMessage(2, getSource());
         }
-        unknownFields.writeTo(output);
+        getUnknownFields().writeTo(output);
       }
 
       @java.lang.Override
@@ -548,7 +411,7 @@ public final class ResourcesInternal {
           size += com.google.protobuf.CodedOutputStream
             .computeMessageSize(2, getSource());
         }
-        size += unknownFields.getSerializedSize();
+        size += getUnknownFields().getSerializedSize();
         memoizedSize = size;
         return size;
       }
@@ -570,7 +433,7 @@ public final class ResourcesInternal {
           if (!getSource()
               .equals(other.getSource())) return false;
         }
-        if (!unknownFields.equals(other.unknownFields)) return false;
+        if (!getUnknownFields().equals(other.getUnknownFields())) return false;
         return true;
       }
 
@@ -587,7 +450,7 @@ public final class ResourcesInternal {
           hash = (37 * hash) + SOURCE_FIELD_NUMBER;
           hash = (53 * hash) + getSource().hashCode();
         }
-        hash = (29 * hash) + unknownFields.hashCode();
+        hash = (29 * hash) + getUnknownFields().hashCode();
         memoizedHashCode = hash;
         return hash;
       }
@@ -704,18 +567,13 @@ public final class ResourcesInternal {
 
         // Construct using android.aapt.pb.internal.ResourcesInternal.CompiledFile.Symbol.newBuilder()
         private Builder() {
-          maybeForceBuilderInitialization();
+
         }
 
         private Builder(
             com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
           super(parent);
-          maybeForceBuilderInitialization();
-        }
-        private void maybeForceBuilderInitialization() {
-          if (com.google.protobuf.GeneratedMessageV3
-                  .alwaysUseFieldBuilders) {
-          }
+
         }
         @java.lang.Override
         public Builder clear() {
@@ -815,7 +673,7 @@ public final class ResourcesInternal {
           if (other.hasSource()) {
             mergeSource(other.getSource());
           }
-          this.mergeUnknownFields(other.unknownFields);
+          this.mergeUnknownFields(other.getUnknownFields());
           onChanged();
           return this;
         }
@@ -830,17 +688,42 @@ public final class ResourcesInternal {
             com.google.protobuf.CodedInputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws java.io.IOException {
-          android.aapt.pb.internal.ResourcesInternal.CompiledFile.Symbol parsedMessage = null;
+          if (extensionRegistry == null) {
+            throw new java.lang.NullPointerException();
+          }
           try {
-            parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+            boolean done = false;
+            while (!done) {
+              int tag = input.readTag();
+              switch (tag) {
+                case 0:
+                  done = true;
+                  break;
+                case 10: {
+                  resourceName_ = input.readStringRequireUtf8();
+
+                  break;
+                } // case 10
+                case 18: {
+                  input.readMessage(
+                      getSourceFieldBuilder().getBuilder(),
+                      extensionRegistry);
+
+                  break;
+                } // case 18
+                default: {
+                  if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                    done = true; // was an endgroup tag
+                  }
+                  break;
+                } // default:
+              } // switch (tag)
+            } // while (!done)
           } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-            parsedMessage = (android.aapt.pb.internal.ResourcesInternal.CompiledFile.Symbol) e.getUnfinishedMessage();
             throw e.unwrapIOException();
           } finally {
-            if (parsedMessage != null) {
-              mergeFrom(parsedMessage);
-            }
-          }
+            onChanged();
+          } // finally
           return this;
         }
 
@@ -1127,7 +1010,18 @@ public final class ResourcesInternal {
             com.google.protobuf.CodedInputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws com.google.protobuf.InvalidProtocolBufferException {
-          return new Symbol(input, extensionRegistry);
+          Builder builder = newBuilder();
+          try {
+            builder.mergeFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            throw e.setUnfinishedMessage(builder.buildPartial());
+          } catch (com.google.protobuf.UninitializedMessageException e) {
+            throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+          } catch (java.io.IOException e) {
+            throw new com.google.protobuf.InvalidProtocolBufferException(e)
+                .setUnfinishedMessage(builder.buildPartial());
+          }
+          return builder.buildPartial();
         }
       };
 
@@ -1395,7 +1289,7 @@ public final class ResourcesInternal {
       for (int i = 0; i < exportedSymbol_.size(); i++) {
         output.writeMessage(5, exportedSymbol_.get(i));
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -1422,7 +1316,7 @@ public final class ResourcesInternal {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(5, exportedSymbol_.get(i));
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -1449,7 +1343,7 @@ public final class ResourcesInternal {
           .equals(other.getSourcePath())) return false;
       if (!getExportedSymbolList()
           .equals(other.getExportedSymbolList())) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -1474,7 +1368,7 @@ public final class ResourcesInternal {
         hash = (37 * hash) + EXPORTED_SYMBOL_FIELD_NUMBER;
         hash = (53 * hash) + getExportedSymbolList().hashCode();
       }
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -1596,19 +1490,13 @@ public final class ResourcesInternal {
 
       // Construct using android.aapt.pb.internal.ResourcesInternal.CompiledFile.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getExportedSymbolFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -1627,10 +1515,11 @@ public final class ResourcesInternal {
 
         if (exportedSymbolBuilder_ == null) {
           exportedSymbol_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000001);
         } else {
+          exportedSymbol_ = null;
           exportedSymbolBuilder_.clear();
         }
+        bitField0_ = (bitField0_ & ~0x00000001);
         return this;
       }
 
@@ -1763,7 +1652,7 @@ public final class ResourcesInternal {
             }
           }
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -1778,17 +1667,65 @@ public final class ResourcesInternal {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        android.aapt.pb.internal.ResourcesInternal.CompiledFile parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                resourceName_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 10
+              case 18: {
+                input.readMessage(
+                    getConfigFieldBuilder().getBuilder(),
+                    extensionRegistry);
+
+                break;
+              } // case 18
+              case 24: {
+                type_ = input.readEnum();
+
+                break;
+              } // case 24
+              case 34: {
+                sourcePath_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 34
+              case 42: {
+                android.aapt.pb.internal.ResourcesInternal.CompiledFile.Symbol m =
+                    input.readMessage(
+                        android.aapt.pb.internal.ResourcesInternal.CompiledFile.Symbol.parser(),
+                        extensionRegistry);
+                if (exportedSymbolBuilder_ == null) {
+                  ensureExportedSymbolIsMutable();
+                  exportedSymbol_.add(m);
+                } else {
+                  exportedSymbolBuilder_.addMessage(m);
+                }
+                break;
+              } // case 42
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (android.aapt.pb.internal.ResourcesInternal.CompiledFile) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
       private int bitField0_;
@@ -2563,7 +2500,18 @@ public final class ResourcesInternal {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new CompiledFile(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 

@@ -4,25 +4,25 @@
 package com.google.wireless.android.sdk.stats;
 
 /**
- * Protobuf type {@code android_studio.NavSchemaInfo}
+ * Protobuf type {@code android_studio.SmlAiExcludeEvent}
  */
-public final class NavSchemaInfo extends
+public final class SmlAiExcludeEvent extends
     com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:android_studio.NavSchemaInfo)
-    NavSchemaInfoOrBuilder {
+    // @@protoc_insertion_point(message_implements:android_studio.SmlAiExcludeEvent)
+    SmlAiExcludeEventOrBuilder {
 private static final long serialVersionUID = 0L;
-  // Use NavSchemaInfo.newBuilder() to construct.
-  private NavSchemaInfo(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+  // Use SmlAiExcludeEvent.newBuilder() to construct.
+  private SmlAiExcludeEvent(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
     super(builder);
   }
-  private NavSchemaInfo() {
+  private SmlAiExcludeEvent() {
   }
 
   @java.lang.Override
   @SuppressWarnings({"unused"})
   protected java.lang.Object newInstance(
       UnusedPrivateParameter unused) {
-    return new NavSchemaInfo();
+    return new SmlAiExcludeEvent();
   }
 
   @java.lang.Override
@@ -32,124 +32,124 @@ private static final long serialVersionUID = 0L;
   }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_NavSchemaInfo_descriptor;
+    return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_SmlAiExcludeEvent_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_NavSchemaInfo_fieldAccessorTable
+    return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_SmlAiExcludeEvent_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            com.google.wireless.android.sdk.stats.NavSchemaInfo.class, com.google.wireless.android.sdk.stats.NavSchemaInfo.Builder.class);
+            com.google.wireless.android.sdk.stats.SmlAiExcludeEvent.class, com.google.wireless.android.sdk.stats.SmlAiExcludeEvent.Builder.class);
   }
 
   private int bitField0_;
-  public static final int CUSTOM_NAVIGATORS_FIELD_NUMBER = 1;
-  private int customNavigators_;
+  public static final int PASTE_BLOCKED_FIELD_NUMBER = 1;
+  private boolean pasteBlocked_;
   /**
    * <pre>
-   * The number of custom navigators in the current schema
+   * Paste into chat
    * </pre>
    *
-   * <code>optional uint32 custom_navigators = 1;</code>
-   * @return Whether the customNavigators field is set.
+   * <code>optional bool paste_blocked = 1;</code>
+   * @return Whether the pasteBlocked field is set.
    */
   @java.lang.Override
-  public boolean hasCustomNavigators() {
+  public boolean hasPasteBlocked() {
     return ((bitField0_ & 0x00000001) != 0);
   }
   /**
    * <pre>
-   * The number of custom navigators in the current schema
+   * Paste into chat
    * </pre>
    *
-   * <code>optional uint32 custom_navigators = 1;</code>
-   * @return The customNavigators.
+   * <code>optional bool paste_blocked = 1;</code>
+   * @return The pasteBlocked.
    */
   @java.lang.Override
-  public int getCustomNavigators() {
-    return customNavigators_;
+  public boolean getPasteBlocked() {
+    return pasteBlocked_;
   }
 
-  public static final int CUSTOM_TAGS_FIELD_NUMBER = 2;
-  private int customTags_;
+  public static final int INTENTION_ACTION_BLOCKED_FIELD_NUMBER = 2;
+  private boolean intentionActionBlocked_;
   /**
    * <pre>
-   * The number of custom tags in the current schema
+   * Editor actions (e.g. document, simplify)
    * </pre>
    *
-   * <code>optional uint32 custom_tags = 2;</code>
-   * @return Whether the customTags field is set.
+   * <code>optional bool intention_action_blocked = 2;</code>
+   * @return Whether the intentionActionBlocked field is set.
    */
   @java.lang.Override
-  public boolean hasCustomTags() {
+  public boolean hasIntentionActionBlocked() {
     return ((bitField0_ & 0x00000002) != 0);
   }
   /**
    * <pre>
-   * The number of custom tags in the current schema
+   * Editor actions (e.g. document, simplify)
    * </pre>
    *
-   * <code>optional uint32 custom_tags = 2;</code>
-   * @return The customTags.
+   * <code>optional bool intention_action_blocked = 2;</code>
+   * @return The intentionActionBlocked.
    */
   @java.lang.Override
-  public int getCustomTags() {
-    return customTags_;
+  public boolean getIntentionActionBlocked() {
+    return intentionActionBlocked_;
   }
 
-  public static final int CUSTOM_DESTINATIONS_FIELD_NUMBER = 3;
-  private int customDestinations_;
+  public static final int PASSIVE_ACTION_BLOCKED_FIELD_NUMBER = 3;
+  private boolean passiveActionBlocked_;
   /**
    * <pre>
-   * The number of custom destination classes in the current schema
+   * Passive editor effects/actions (e.g. transform)
    * </pre>
    *
-   * <code>optional uint32 custom_destinations = 3;</code>
-   * @return Whether the customDestinations field is set.
+   * <code>optional bool passive_action_blocked = 3;</code>
+   * @return Whether the passiveActionBlocked field is set.
    */
   @java.lang.Override
-  public boolean hasCustomDestinations() {
+  public boolean hasPassiveActionBlocked() {
     return ((bitField0_ & 0x00000004) != 0);
   }
   /**
    * <pre>
-   * The number of custom destination classes in the current schema
+   * Passive editor effects/actions (e.g. transform)
    * </pre>
    *
-   * <code>optional uint32 custom_destinations = 3;</code>
-   * @return The customDestinations.
+   * <code>optional bool passive_action_blocked = 3;</code>
+   * @return The passiveActionBlocked.
    */
   @java.lang.Override
-  public int getCustomDestinations() {
-    return customDestinations_;
+  public boolean getPassiveActionBlocked() {
+    return passiveActionBlocked_;
   }
 
-  public static final int CUSTOM_ATTRIBUTES_FIELD_NUMBER = 4;
-  private int customAttributes_;
+  public static final int CONTEXT_BLOCKED_FIELD_NUMBER = 4;
+  private boolean contextBlocked_;
   /**
    * <pre>
-   * The number of custom attributes in the current schema
+   * Code included as context for a query
    * </pre>
    *
-   * <code>optional uint32 custom_attributes = 4;</code>
-   * @return Whether the customAttributes field is set.
+   * <code>optional bool context_blocked = 4;</code>
+   * @return Whether the contextBlocked field is set.
    */
   @java.lang.Override
-  public boolean hasCustomAttributes() {
+  public boolean hasContextBlocked() {
     return ((bitField0_ & 0x00000008) != 0);
   }
   /**
    * <pre>
-   * The number of custom attributes in the current schema
+   * Code included as context for a query
    * </pre>
    *
-   * <code>optional uint32 custom_attributes = 4;</code>
-   * @return The customAttributes.
+   * <code>optional bool context_blocked = 4;</code>
+   * @return The contextBlocked.
    */
   @java.lang.Override
-  public int getCustomAttributes() {
-    return customAttributes_;
+  public boolean getContextBlocked() {
+    return contextBlocked_;
   }
 
   private byte memoizedIsInitialized = -1;
@@ -167,16 +167,16 @@ private static final long serialVersionUID = 0L;
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
     if (((bitField0_ & 0x00000001) != 0)) {
-      output.writeUInt32(1, customNavigators_);
+      output.writeBool(1, pasteBlocked_);
     }
     if (((bitField0_ & 0x00000002) != 0)) {
-      output.writeUInt32(2, customTags_);
+      output.writeBool(2, intentionActionBlocked_);
     }
     if (((bitField0_ & 0x00000004) != 0)) {
-      output.writeUInt32(3, customDestinations_);
+      output.writeBool(3, passiveActionBlocked_);
     }
     if (((bitField0_ & 0x00000008) != 0)) {
-      output.writeUInt32(4, customAttributes_);
+      output.writeBool(4, contextBlocked_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -189,19 +189,19 @@ private static final long serialVersionUID = 0L;
     size = 0;
     if (((bitField0_ & 0x00000001) != 0)) {
       size += com.google.protobuf.CodedOutputStream
-        .computeUInt32Size(1, customNavigators_);
+        .computeBoolSize(1, pasteBlocked_);
     }
     if (((bitField0_ & 0x00000002) != 0)) {
       size += com.google.protobuf.CodedOutputStream
-        .computeUInt32Size(2, customTags_);
+        .computeBoolSize(2, intentionActionBlocked_);
     }
     if (((bitField0_ & 0x00000004) != 0)) {
       size += com.google.protobuf.CodedOutputStream
-        .computeUInt32Size(3, customDestinations_);
+        .computeBoolSize(3, passiveActionBlocked_);
     }
     if (((bitField0_ & 0x00000008) != 0)) {
       size += com.google.protobuf.CodedOutputStream
-        .computeUInt32Size(4, customAttributes_);
+        .computeBoolSize(4, contextBlocked_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -213,30 +213,30 @@ private static final long serialVersionUID = 0L;
     if (obj == this) {
      return true;
     }
-    if (!(obj instanceof com.google.wireless.android.sdk.stats.NavSchemaInfo)) {
+    if (!(obj instanceof com.google.wireless.android.sdk.stats.SmlAiExcludeEvent)) {
       return super.equals(obj);
     }
-    com.google.wireless.android.sdk.stats.NavSchemaInfo other = (com.google.wireless.android.sdk.stats.NavSchemaInfo) obj;
+    com.google.wireless.android.sdk.stats.SmlAiExcludeEvent other = (com.google.wireless.android.sdk.stats.SmlAiExcludeEvent) obj;
 
-    if (hasCustomNavigators() != other.hasCustomNavigators()) return false;
-    if (hasCustomNavigators()) {
-      if (getCustomNavigators()
-          != other.getCustomNavigators()) return false;
+    if (hasPasteBlocked() != other.hasPasteBlocked()) return false;
+    if (hasPasteBlocked()) {
+      if (getPasteBlocked()
+          != other.getPasteBlocked()) return false;
     }
-    if (hasCustomTags() != other.hasCustomTags()) return false;
-    if (hasCustomTags()) {
-      if (getCustomTags()
-          != other.getCustomTags()) return false;
+    if (hasIntentionActionBlocked() != other.hasIntentionActionBlocked()) return false;
+    if (hasIntentionActionBlocked()) {
+      if (getIntentionActionBlocked()
+          != other.getIntentionActionBlocked()) return false;
     }
-    if (hasCustomDestinations() != other.hasCustomDestinations()) return false;
-    if (hasCustomDestinations()) {
-      if (getCustomDestinations()
-          != other.getCustomDestinations()) return false;
+    if (hasPassiveActionBlocked() != other.hasPassiveActionBlocked()) return false;
+    if (hasPassiveActionBlocked()) {
+      if (getPassiveActionBlocked()
+          != other.getPassiveActionBlocked()) return false;
     }
-    if (hasCustomAttributes() != other.hasCustomAttributes()) return false;
-    if (hasCustomAttributes()) {
-      if (getCustomAttributes()
-          != other.getCustomAttributes()) return false;
+    if (hasContextBlocked() != other.hasContextBlocked()) return false;
+    if (hasContextBlocked()) {
+      if (getContextBlocked()
+          != other.getContextBlocked()) return false;
     }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
@@ -249,90 +249,94 @@ private static final long serialVersionUID = 0L;
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
-    if (hasCustomNavigators()) {
-      hash = (37 * hash) + CUSTOM_NAVIGATORS_FIELD_NUMBER;
-      hash = (53 * hash) + getCustomNavigators();
+    if (hasPasteBlocked()) {
+      hash = (37 * hash) + PASTE_BLOCKED_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getPasteBlocked());
     }
-    if (hasCustomTags()) {
-      hash = (37 * hash) + CUSTOM_TAGS_FIELD_NUMBER;
-      hash = (53 * hash) + getCustomTags();
+    if (hasIntentionActionBlocked()) {
+      hash = (37 * hash) + INTENTION_ACTION_BLOCKED_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getIntentionActionBlocked());
     }
-    if (hasCustomDestinations()) {
-      hash = (37 * hash) + CUSTOM_DESTINATIONS_FIELD_NUMBER;
-      hash = (53 * hash) + getCustomDestinations();
+    if (hasPassiveActionBlocked()) {
+      hash = (37 * hash) + PASSIVE_ACTION_BLOCKED_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getPassiveActionBlocked());
     }
-    if (hasCustomAttributes()) {
-      hash = (37 * hash) + CUSTOM_ATTRIBUTES_FIELD_NUMBER;
-      hash = (53 * hash) + getCustomAttributes();
+    if (hasContextBlocked()) {
+      hash = (37 * hash) + CONTEXT_BLOCKED_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getContextBlocked());
     }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
   }
 
-  public static com.google.wireless.android.sdk.stats.NavSchemaInfo parseFrom(
+  public static com.google.wireless.android.sdk.stats.SmlAiExcludeEvent parseFrom(
       java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.google.wireless.android.sdk.stats.NavSchemaInfo parseFrom(
+  public static com.google.wireless.android.sdk.stats.SmlAiExcludeEvent parseFrom(
       java.nio.ByteBuffer data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.google.wireless.android.sdk.stats.NavSchemaInfo parseFrom(
+  public static com.google.wireless.android.sdk.stats.SmlAiExcludeEvent parseFrom(
       com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.google.wireless.android.sdk.stats.NavSchemaInfo parseFrom(
+  public static com.google.wireless.android.sdk.stats.SmlAiExcludeEvent parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.google.wireless.android.sdk.stats.NavSchemaInfo parseFrom(byte[] data)
+  public static com.google.wireless.android.sdk.stats.SmlAiExcludeEvent parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.google.wireless.android.sdk.stats.NavSchemaInfo parseFrom(
+  public static com.google.wireless.android.sdk.stats.SmlAiExcludeEvent parseFrom(
       byte[] data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.google.wireless.android.sdk.stats.NavSchemaInfo parseFrom(java.io.InputStream input)
+  public static com.google.wireless.android.sdk.stats.SmlAiExcludeEvent parseFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.google.wireless.android.sdk.stats.NavSchemaInfo parseFrom(
+  public static com.google.wireless.android.sdk.stats.SmlAiExcludeEvent parseFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
-  public static com.google.wireless.android.sdk.stats.NavSchemaInfo parseDelimitedFrom(java.io.InputStream input)
+  public static com.google.wireless.android.sdk.stats.SmlAiExcludeEvent parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
-  public static com.google.wireless.android.sdk.stats.NavSchemaInfo parseDelimitedFrom(
+  public static com.google.wireless.android.sdk.stats.SmlAiExcludeEvent parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
   }
-  public static com.google.wireless.android.sdk.stats.NavSchemaInfo parseFrom(
+  public static com.google.wireless.android.sdk.stats.SmlAiExcludeEvent parseFrom(
       com.google.protobuf.CodedInputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.google.wireless.android.sdk.stats.NavSchemaInfo parseFrom(
+  public static com.google.wireless.android.sdk.stats.SmlAiExcludeEvent parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -345,7 +349,7 @@ private static final long serialVersionUID = 0L;
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
-  public static Builder newBuilder(com.google.wireless.android.sdk.stats.NavSchemaInfo prototype) {
+  public static Builder newBuilder(com.google.wireless.android.sdk.stats.SmlAiExcludeEvent prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
   @java.lang.Override
@@ -361,26 +365,26 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
-   * Protobuf type {@code android_studio.NavSchemaInfo}
+   * Protobuf type {@code android_studio.SmlAiExcludeEvent}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:android_studio.NavSchemaInfo)
-      com.google.wireless.android.sdk.stats.NavSchemaInfoOrBuilder {
+      // @@protoc_insertion_point(builder_implements:android_studio.SmlAiExcludeEvent)
+      com.google.wireless.android.sdk.stats.SmlAiExcludeEventOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_NavSchemaInfo_descriptor;
+      return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_SmlAiExcludeEvent_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_NavSchemaInfo_fieldAccessorTable
+      return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_SmlAiExcludeEvent_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.google.wireless.android.sdk.stats.NavSchemaInfo.class, com.google.wireless.android.sdk.stats.NavSchemaInfo.Builder.class);
+              com.google.wireless.android.sdk.stats.SmlAiExcludeEvent.class, com.google.wireless.android.sdk.stats.SmlAiExcludeEvent.Builder.class);
     }
 
-    // Construct using com.google.wireless.android.sdk.stats.NavSchemaInfo.newBuilder()
+    // Construct using com.google.wireless.android.sdk.stats.SmlAiExcludeEvent.newBuilder()
     private Builder() {
 
     }
@@ -393,13 +397,13 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
-      customNavigators_ = 0;
+      pasteBlocked_ = false;
       bitField0_ = (bitField0_ & ~0x00000001);
-      customTags_ = 0;
+      intentionActionBlocked_ = false;
       bitField0_ = (bitField0_ & ~0x00000002);
-      customDestinations_ = 0;
+      passiveActionBlocked_ = false;
       bitField0_ = (bitField0_ & ~0x00000004);
-      customAttributes_ = 0;
+      contextBlocked_ = false;
       bitField0_ = (bitField0_ & ~0x00000008);
       return this;
     }
@@ -407,17 +411,17 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_NavSchemaInfo_descriptor;
+      return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_SmlAiExcludeEvent_descriptor;
     }
 
     @java.lang.Override
-    public com.google.wireless.android.sdk.stats.NavSchemaInfo getDefaultInstanceForType() {
-      return com.google.wireless.android.sdk.stats.NavSchemaInfo.getDefaultInstance();
+    public com.google.wireless.android.sdk.stats.SmlAiExcludeEvent getDefaultInstanceForType() {
+      return com.google.wireless.android.sdk.stats.SmlAiExcludeEvent.getDefaultInstance();
     }
 
     @java.lang.Override
-    public com.google.wireless.android.sdk.stats.NavSchemaInfo build() {
-      com.google.wireless.android.sdk.stats.NavSchemaInfo result = buildPartial();
+    public com.google.wireless.android.sdk.stats.SmlAiExcludeEvent build() {
+      com.google.wireless.android.sdk.stats.SmlAiExcludeEvent result = buildPartial();
       if (!result.isInitialized()) {
         throw newUninitializedMessageException(result);
       }
@@ -425,24 +429,24 @@ private static final long serialVersionUID = 0L;
     }
 
     @java.lang.Override
-    public com.google.wireless.android.sdk.stats.NavSchemaInfo buildPartial() {
-      com.google.wireless.android.sdk.stats.NavSchemaInfo result = new com.google.wireless.android.sdk.stats.NavSchemaInfo(this);
+    public com.google.wireless.android.sdk.stats.SmlAiExcludeEvent buildPartial() {
+      com.google.wireless.android.sdk.stats.SmlAiExcludeEvent result = new com.google.wireless.android.sdk.stats.SmlAiExcludeEvent(this);
       int from_bitField0_ = bitField0_;
       int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000001) != 0)) {
-        result.customNavigators_ = customNavigators_;
+        result.pasteBlocked_ = pasteBlocked_;
         to_bitField0_ |= 0x00000001;
       }
       if (((from_bitField0_ & 0x00000002) != 0)) {
-        result.customTags_ = customTags_;
+        result.intentionActionBlocked_ = intentionActionBlocked_;
         to_bitField0_ |= 0x00000002;
       }
       if (((from_bitField0_ & 0x00000004) != 0)) {
-        result.customDestinations_ = customDestinations_;
+        result.passiveActionBlocked_ = passiveActionBlocked_;
         to_bitField0_ |= 0x00000004;
       }
       if (((from_bitField0_ & 0x00000008) != 0)) {
-        result.customAttributes_ = customAttributes_;
+        result.contextBlocked_ = contextBlocked_;
         to_bitField0_ |= 0x00000008;
       }
       result.bitField0_ = to_bitField0_;
@@ -484,27 +488,27 @@ private static final long serialVersionUID = 0L;
     }
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
-      if (other instanceof com.google.wireless.android.sdk.stats.NavSchemaInfo) {
-        return mergeFrom((com.google.wireless.android.sdk.stats.NavSchemaInfo)other);
+      if (other instanceof com.google.wireless.android.sdk.stats.SmlAiExcludeEvent) {
+        return mergeFrom((com.google.wireless.android.sdk.stats.SmlAiExcludeEvent)other);
       } else {
         super.mergeFrom(other);
         return this;
       }
     }
 
-    public Builder mergeFrom(com.google.wireless.android.sdk.stats.NavSchemaInfo other) {
-      if (other == com.google.wireless.android.sdk.stats.NavSchemaInfo.getDefaultInstance()) return this;
-      if (other.hasCustomNavigators()) {
-        setCustomNavigators(other.getCustomNavigators());
+    public Builder mergeFrom(com.google.wireless.android.sdk.stats.SmlAiExcludeEvent other) {
+      if (other == com.google.wireless.android.sdk.stats.SmlAiExcludeEvent.getDefaultInstance()) return this;
+      if (other.hasPasteBlocked()) {
+        setPasteBlocked(other.getPasteBlocked());
       }
-      if (other.hasCustomTags()) {
-        setCustomTags(other.getCustomTags());
+      if (other.hasIntentionActionBlocked()) {
+        setIntentionActionBlocked(other.getIntentionActionBlocked());
       }
-      if (other.hasCustomDestinations()) {
-        setCustomDestinations(other.getCustomDestinations());
+      if (other.hasPassiveActionBlocked()) {
+        setPassiveActionBlocked(other.getPassiveActionBlocked());
       }
-      if (other.hasCustomAttributes()) {
-        setCustomAttributes(other.getCustomAttributes());
+      if (other.hasContextBlocked()) {
+        setContextBlocked(other.getContextBlocked());
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -533,22 +537,22 @@ private static final long serialVersionUID = 0L;
               done = true;
               break;
             case 8: {
-              customNavigators_ = input.readUInt32();
+              pasteBlocked_ = input.readBool();
               bitField0_ |= 0x00000001;
               break;
             } // case 8
             case 16: {
-              customTags_ = input.readUInt32();
+              intentionActionBlocked_ = input.readBool();
               bitField0_ |= 0x00000002;
               break;
             } // case 16
             case 24: {
-              customDestinations_ = input.readUInt32();
+              passiveActionBlocked_ = input.readBool();
               bitField0_ |= 0x00000004;
               break;
             } // case 24
             case 32: {
-              customAttributes_ = input.readUInt32();
+              contextBlocked_ = input.readBool();
               bitField0_ |= 0x00000008;
               break;
             } // case 32
@@ -569,222 +573,222 @@ private static final long serialVersionUID = 0L;
     }
     private int bitField0_;
 
-    private int customNavigators_ ;
+    private boolean pasteBlocked_ ;
     /**
      * <pre>
-     * The number of custom navigators in the current schema
+     * Paste into chat
      * </pre>
      *
-     * <code>optional uint32 custom_navigators = 1;</code>
-     * @return Whether the customNavigators field is set.
+     * <code>optional bool paste_blocked = 1;</code>
+     * @return Whether the pasteBlocked field is set.
      */
     @java.lang.Override
-    public boolean hasCustomNavigators() {
+    public boolean hasPasteBlocked() {
       return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
-     * The number of custom navigators in the current schema
+     * Paste into chat
      * </pre>
      *
-     * <code>optional uint32 custom_navigators = 1;</code>
-     * @return The customNavigators.
+     * <code>optional bool paste_blocked = 1;</code>
+     * @return The pasteBlocked.
      */
     @java.lang.Override
-    public int getCustomNavigators() {
-      return customNavigators_;
+    public boolean getPasteBlocked() {
+      return pasteBlocked_;
     }
     /**
      * <pre>
-     * The number of custom navigators in the current schema
+     * Paste into chat
      * </pre>
      *
-     * <code>optional uint32 custom_navigators = 1;</code>
-     * @param value The customNavigators to set.
+     * <code>optional bool paste_blocked = 1;</code>
+     * @param value The pasteBlocked to set.
      * @return This builder for chaining.
      */
-    public Builder setCustomNavigators(int value) {
+    public Builder setPasteBlocked(boolean value) {
       bitField0_ |= 0x00000001;
-      customNavigators_ = value;
+      pasteBlocked_ = value;
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * The number of custom navigators in the current schema
+     * Paste into chat
      * </pre>
      *
-     * <code>optional uint32 custom_navigators = 1;</code>
+     * <code>optional bool paste_blocked = 1;</code>
      * @return This builder for chaining.
      */
-    public Builder clearCustomNavigators() {
+    public Builder clearPasteBlocked() {
       bitField0_ = (bitField0_ & ~0x00000001);
-      customNavigators_ = 0;
+      pasteBlocked_ = false;
       onChanged();
       return this;
     }
 
-    private int customTags_ ;
+    private boolean intentionActionBlocked_ ;
     /**
      * <pre>
-     * The number of custom tags in the current schema
+     * Editor actions (e.g. document, simplify)
      * </pre>
      *
-     * <code>optional uint32 custom_tags = 2;</code>
-     * @return Whether the customTags field is set.
+     * <code>optional bool intention_action_blocked = 2;</code>
+     * @return Whether the intentionActionBlocked field is set.
      */
     @java.lang.Override
-    public boolean hasCustomTags() {
+    public boolean hasIntentionActionBlocked() {
       return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <pre>
-     * The number of custom tags in the current schema
+     * Editor actions (e.g. document, simplify)
      * </pre>
      *
-     * <code>optional uint32 custom_tags = 2;</code>
-     * @return The customTags.
+     * <code>optional bool intention_action_blocked = 2;</code>
+     * @return The intentionActionBlocked.
      */
     @java.lang.Override
-    public int getCustomTags() {
-      return customTags_;
+    public boolean getIntentionActionBlocked() {
+      return intentionActionBlocked_;
     }
     /**
      * <pre>
-     * The number of custom tags in the current schema
+     * Editor actions (e.g. document, simplify)
      * </pre>
      *
-     * <code>optional uint32 custom_tags = 2;</code>
-     * @param value The customTags to set.
+     * <code>optional bool intention_action_blocked = 2;</code>
+     * @param value The intentionActionBlocked to set.
      * @return This builder for chaining.
      */
-    public Builder setCustomTags(int value) {
+    public Builder setIntentionActionBlocked(boolean value) {
       bitField0_ |= 0x00000002;
-      customTags_ = value;
+      intentionActionBlocked_ = value;
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * The number of custom tags in the current schema
+     * Editor actions (e.g. document, simplify)
      * </pre>
      *
-     * <code>optional uint32 custom_tags = 2;</code>
+     * <code>optional bool intention_action_blocked = 2;</code>
      * @return This builder for chaining.
      */
-    public Builder clearCustomTags() {
+    public Builder clearIntentionActionBlocked() {
       bitField0_ = (bitField0_ & ~0x00000002);
-      customTags_ = 0;
+      intentionActionBlocked_ = false;
       onChanged();
       return this;
     }
 
-    private int customDestinations_ ;
+    private boolean passiveActionBlocked_ ;
     /**
      * <pre>
-     * The number of custom destination classes in the current schema
+     * Passive editor effects/actions (e.g. transform)
      * </pre>
      *
-     * <code>optional uint32 custom_destinations = 3;</code>
-     * @return Whether the customDestinations field is set.
+     * <code>optional bool passive_action_blocked = 3;</code>
+     * @return Whether the passiveActionBlocked field is set.
      */
     @java.lang.Override
-    public boolean hasCustomDestinations() {
+    public boolean hasPassiveActionBlocked() {
       return ((bitField0_ & 0x00000004) != 0);
     }
     /**
      * <pre>
-     * The number of custom destination classes in the current schema
+     * Passive editor effects/actions (e.g. transform)
      * </pre>
      *
-     * <code>optional uint32 custom_destinations = 3;</code>
-     * @return The customDestinations.
+     * <code>optional bool passive_action_blocked = 3;</code>
+     * @return The passiveActionBlocked.
      */
     @java.lang.Override
-    public int getCustomDestinations() {
-      return customDestinations_;
+    public boolean getPassiveActionBlocked() {
+      return passiveActionBlocked_;
     }
     /**
      * <pre>
-     * The number of custom destination classes in the current schema
+     * Passive editor effects/actions (e.g. transform)
      * </pre>
      *
-     * <code>optional uint32 custom_destinations = 3;</code>
-     * @param value The customDestinations to set.
+     * <code>optional bool passive_action_blocked = 3;</code>
+     * @param value The passiveActionBlocked to set.
      * @return This builder for chaining.
      */
-    public Builder setCustomDestinations(int value) {
+    public Builder setPassiveActionBlocked(boolean value) {
       bitField0_ |= 0x00000004;
-      customDestinations_ = value;
+      passiveActionBlocked_ = value;
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * The number of custom destination classes in the current schema
+     * Passive editor effects/actions (e.g. transform)
      * </pre>
      *
-     * <code>optional uint32 custom_destinations = 3;</code>
+     * <code>optional bool passive_action_blocked = 3;</code>
      * @return This builder for chaining.
      */
-    public Builder clearCustomDestinations() {
+    public Builder clearPassiveActionBlocked() {
       bitField0_ = (bitField0_ & ~0x00000004);
-      customDestinations_ = 0;
+      passiveActionBlocked_ = false;
       onChanged();
       return this;
     }
 
-    private int customAttributes_ ;
+    private boolean contextBlocked_ ;
     /**
      * <pre>
-     * The number of custom attributes in the current schema
+     * Code included as context for a query
      * </pre>
      *
-     * <code>optional uint32 custom_attributes = 4;</code>
-     * @return Whether the customAttributes field is set.
+     * <code>optional bool context_blocked = 4;</code>
+     * @return Whether the contextBlocked field is set.
      */
     @java.lang.Override
-    public boolean hasCustomAttributes() {
+    public boolean hasContextBlocked() {
       return ((bitField0_ & 0x00000008) != 0);
     }
     /**
      * <pre>
-     * The number of custom attributes in the current schema
+     * Code included as context for a query
      * </pre>
      *
-     * <code>optional uint32 custom_attributes = 4;</code>
-     * @return The customAttributes.
+     * <code>optional bool context_blocked = 4;</code>
+     * @return The contextBlocked.
      */
     @java.lang.Override
-    public int getCustomAttributes() {
-      return customAttributes_;
+    public boolean getContextBlocked() {
+      return contextBlocked_;
     }
     /**
      * <pre>
-     * The number of custom attributes in the current schema
+     * Code included as context for a query
      * </pre>
      *
-     * <code>optional uint32 custom_attributes = 4;</code>
-     * @param value The customAttributes to set.
+     * <code>optional bool context_blocked = 4;</code>
+     * @param value The contextBlocked to set.
      * @return This builder for chaining.
      */
-    public Builder setCustomAttributes(int value) {
+    public Builder setContextBlocked(boolean value) {
       bitField0_ |= 0x00000008;
-      customAttributes_ = value;
+      contextBlocked_ = value;
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * The number of custom attributes in the current schema
+     * Code included as context for a query
      * </pre>
      *
-     * <code>optional uint32 custom_attributes = 4;</code>
+     * <code>optional bool context_blocked = 4;</code>
      * @return This builder for chaining.
      */
-    public Builder clearCustomAttributes() {
+    public Builder clearContextBlocked() {
       bitField0_ = (bitField0_ & ~0x00000008);
-      customAttributes_ = 0;
+      contextBlocked_ = false;
       onChanged();
       return this;
     }
@@ -801,23 +805,23 @@ private static final long serialVersionUID = 0L;
     }
 
 
-    // @@protoc_insertion_point(builder_scope:android_studio.NavSchemaInfo)
+    // @@protoc_insertion_point(builder_scope:android_studio.SmlAiExcludeEvent)
   }
 
-  // @@protoc_insertion_point(class_scope:android_studio.NavSchemaInfo)
-  private static final com.google.wireless.android.sdk.stats.NavSchemaInfo DEFAULT_INSTANCE;
+  // @@protoc_insertion_point(class_scope:android_studio.SmlAiExcludeEvent)
+  private static final com.google.wireless.android.sdk.stats.SmlAiExcludeEvent DEFAULT_INSTANCE;
   static {
-    DEFAULT_INSTANCE = new com.google.wireless.android.sdk.stats.NavSchemaInfo();
+    DEFAULT_INSTANCE = new com.google.wireless.android.sdk.stats.SmlAiExcludeEvent();
   }
 
-  public static com.google.wireless.android.sdk.stats.NavSchemaInfo getDefaultInstance() {
+  public static com.google.wireless.android.sdk.stats.SmlAiExcludeEvent getDefaultInstance() {
     return DEFAULT_INSTANCE;
   }
 
-  @java.lang.Deprecated public static final com.google.protobuf.Parser<NavSchemaInfo>
-      PARSER = new com.google.protobuf.AbstractParser<NavSchemaInfo>() {
+  @java.lang.Deprecated public static final com.google.protobuf.Parser<SmlAiExcludeEvent>
+      PARSER = new com.google.protobuf.AbstractParser<SmlAiExcludeEvent>() {
     @java.lang.Override
-    public NavSchemaInfo parsePartialFrom(
+    public SmlAiExcludeEvent parsePartialFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -836,17 +840,17 @@ private static final long serialVersionUID = 0L;
     }
   };
 
-  public static com.google.protobuf.Parser<NavSchemaInfo> parser() {
+  public static com.google.protobuf.Parser<SmlAiExcludeEvent> parser() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.google.protobuf.Parser<NavSchemaInfo> getParserForType() {
+  public com.google.protobuf.Parser<SmlAiExcludeEvent> getParserForType() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.google.wireless.android.sdk.stats.NavSchemaInfo getDefaultInstanceForType() {
+  public com.google.wireless.android.sdk.stats.SmlAiExcludeEvent getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
 

@@ -5050,4 +5050,31 @@ public interface AndroidStudioEventOrBuilder extends
    * <code>optional .android_studio.LintTooltipLinkEvent lint_tooltip_link_event = 180;</code>
    */
   com.google.wireless.android.sdk.stats.LintTooltipLinkEventOrBuilder getLintTooltipLinkEventOrBuilder();
+
+  /**
+   * <pre>
+   * set when kind = SML_AI_EXCLUDE_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.SmlAiExcludeEvent sml_ai_exclude_event = 181;</code>
+   * @return Whether the smlAiExcludeEvent field is set.
+   */
+  boolean hasSmlAiExcludeEvent();
+  /**
+   * <pre>
+   * set when kind = SML_AI_EXCLUDE_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.SmlAiExcludeEvent sml_ai_exclude_event = 181;</code>
+   * @return The smlAiExcludeEvent.
+   */
+  com.google.wireless.android.sdk.stats.SmlAiExcludeEvent getSmlAiExcludeEvent();
+  /**
+   * <pre>
+   * set when kind = SML_AI_EXCLUDE_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.SmlAiExcludeEvent sml_ai_exclude_event = 181;</code>
+   */
+  com.google.wireless.android.sdk.stats.SmlAiExcludeEventOrBuilder getSmlAiExcludeEventOrBuilder();
 }
