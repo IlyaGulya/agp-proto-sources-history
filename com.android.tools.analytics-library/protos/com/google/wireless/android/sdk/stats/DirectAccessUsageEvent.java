@@ -301,6 +301,15 @@ private static final long serialVersionUID = 0L;
      * <code>DISCONNECT_BEFORE_CONNECTED = 15;</code>
      */
     DISCONNECT_BEFORE_CONNECTED(15),
+    /**
+     * <pre>
+     * End Reservation Reasons
+     * Server side failed to allocate a device or the request expired in queue
+     * </pre>
+     *
+     * <code>FAILED_TO_ALLOCATE_DEVICE = 21;</code>
+     */
+    FAILED_TO_ALLOCATE_DEVICE(21),
     ;
 
     /**
@@ -364,6 +373,15 @@ private static final long serialVersionUID = 0L;
      * <code>DISCONNECT_BEFORE_CONNECTED = 15;</code>
      */
     public static final int DISCONNECT_BEFORE_CONNECTED_VALUE = 15;
+    /**
+     * <pre>
+     * End Reservation Reasons
+     * Server side failed to allocate a device or the request expired in queue
+     * </pre>
+     *
+     * <code>FAILED_TO_ALLOCATE_DEVICE = 21;</code>
+     */
+    public static final int FAILED_TO_ALLOCATE_DEVICE_VALUE = 21;
 
 
     public final int getNumber() {
@@ -394,6 +412,7 @@ private static final long serialVersionUID = 0L;
         case 13: return LATENCY_DISCONNECT;
         case 14: return SESSION_ENDED;
         case 15: return DISCONNECT_BEFORE_CONNECTED;
+        case 21: return FAILED_TO_ALLOCATE_DEVICE;
         default: return null;
       }
     }
