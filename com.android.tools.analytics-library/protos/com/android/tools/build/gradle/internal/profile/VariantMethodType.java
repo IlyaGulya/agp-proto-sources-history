@@ -172,6 +172,14 @@ public enum VariantMethodType
    * <code>ENABLE_LINT = 39;</code>
    */
   ENABLE_LINT(39),
+  /**
+   * <code>LINT_REPORTS_ENABLE_REPORT_WITHOUT_DEPENDENCIES = 40;</code>
+   */
+  LINT_REPORTS_ENABLE_REPORT_WITHOUT_DEPENDENCIES(40),
+  /**
+   * <code>LINT_REPORTS_ENABLE_REPORT_WITH_DEPENDENCIES = 41;</code>
+   */
+  LINT_REPORTS_ENABLE_REPORT_WITH_DEPENDENCIES(41),
   UNRECOGNIZED(-1),
   ;
 
@@ -339,6 +347,14 @@ public enum VariantMethodType
    * <code>ENABLE_LINT = 39;</code>
    */
   public static final int ENABLE_LINT_VALUE = 39;
+  /**
+   * <code>LINT_REPORTS_ENABLE_REPORT_WITHOUT_DEPENDENCIES = 40;</code>
+   */
+  public static final int LINT_REPORTS_ENABLE_REPORT_WITHOUT_DEPENDENCIES_VALUE = 40;
+  /**
+   * <code>LINT_REPORTS_ENABLE_REPORT_WITH_DEPENDENCIES = 41;</code>
+   */
+  public static final int LINT_REPORTS_ENABLE_REPORT_WITH_DEPENDENCIES_VALUE = 41;
 
 
   public final int getNumber() {
@@ -405,6 +421,8 @@ public enum VariantMethodType
       case 37: return TEST_SUITE_BUILDER;
       case 38: return TEST_SUITE_INCLUDE_ANDROID_RESOURCES;
       case 39: return ENABLE_LINT;
+      case 40: return LINT_REPORTS_ENABLE_REPORT_WITHOUT_DEPENDENCIES;
+      case 41: return LINT_REPORTS_ENABLE_REPORT_WITH_DEPENDENCIES;
       default: return null;
     }
   }

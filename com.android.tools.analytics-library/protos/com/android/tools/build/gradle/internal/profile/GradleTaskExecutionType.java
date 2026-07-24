@@ -1484,6 +1484,18 @@ public enum GradleTaskExecutionType
    * <code>R8_ANALYSIS = 366;</code>
    */
   R8_ANALYSIS(366),
+  /**
+   * <code>CHECK_DYNAMIC_FEATURE_VARIANTS = 367;</code>
+   */
+  CHECK_DYNAMIC_FEATURE_VARIANTS(367),
+  /**
+   * <code>REDIRECT_IDE_APK_OUTPUTS = 368;</code>
+   */
+  REDIRECT_IDE_APK_OUTPUTS(368),
+  /**
+   * <code>REDIRECT_IDE_BUNDLE_OUTPUTS = 369;</code>
+   */
+  REDIRECT_IDE_BUNDLE_OUTPUTS(369),
   UNRECOGNIZED(-1),
   ;
 
@@ -2955,6 +2967,18 @@ public enum GradleTaskExecutionType
    * <code>R8_ANALYSIS = 366;</code>
    */
   public static final int R8_ANALYSIS_VALUE = 366;
+  /**
+   * <code>CHECK_DYNAMIC_FEATURE_VARIANTS = 367;</code>
+   */
+  public static final int CHECK_DYNAMIC_FEATURE_VARIANTS_VALUE = 367;
+  /**
+   * <code>REDIRECT_IDE_APK_OUTPUTS = 368;</code>
+   */
+  public static final int REDIRECT_IDE_APK_OUTPUTS_VALUE = 368;
+  /**
+   * <code>REDIRECT_IDE_BUNDLE_OUTPUTS = 369;</code>
+   */
+  public static final int REDIRECT_IDE_BUNDLE_OUTPUTS_VALUE = 369;
 
 
   public final int getNumber() {
@@ -3348,6 +3372,9 @@ public enum GradleTaskExecutionType
       case 364: return PROCESS_TEST_MANIFEST_PACKAGING;
       case 365: return MERGE_COMPRESSED_JAVA_RES;
       case 366: return R8_ANALYSIS;
+      case 367: return CHECK_DYNAMIC_FEATURE_VARIANTS;
+      case 368: return REDIRECT_IDE_APK_OUTPUTS;
+      case 369: return REDIRECT_IDE_BUNDLE_OUTPUTS;
       default: return null;
     }
   }

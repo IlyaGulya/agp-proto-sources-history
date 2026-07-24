@@ -841,6 +841,10 @@ public enum VariantPropertiesMethodType
    * <code>SIGNING_CONFIG_FROM_CONFIG_PROVIDER = 195;</code>
    */
   SIGNING_CONFIG_FROM_CONFIG_PROVIDER(195),
+  /**
+   * <code>TEST_SUITE_REQUIRES_UPDATE_TASK = 196;</code>
+   */
+  TEST_SUITE_REQUIRES_UPDATE_TASK(196),
   UNRECOGNIZED(-1),
   ;
 
@@ -1676,6 +1680,10 @@ public enum VariantPropertiesMethodType
    * <code>SIGNING_CONFIG_FROM_CONFIG_PROVIDER = 195;</code>
    */
   public static final int SIGNING_CONFIG_FROM_CONFIG_PROVIDER_VALUE = 195;
+  /**
+   * <code>TEST_SUITE_REQUIRES_UPDATE_TASK = 196;</code>
+   */
+  public static final int TEST_SUITE_REQUIRES_UPDATE_TASK_VALUE = 196;
 
 
   public final int getNumber() {
@@ -1898,6 +1906,7 @@ public enum VariantPropertiesMethodType
       case 193: return GET_ALL_WITH_ATTRIBUTES;
       case 194: return SIGNING_CONFIG_FROM_CONFIG;
       case 195: return SIGNING_CONFIG_FROM_CONFIG_PROVIDER;
+      case 196: return TEST_SUITE_REQUIRES_UPDATE_TASK;
       default: return null;
     }
   }
