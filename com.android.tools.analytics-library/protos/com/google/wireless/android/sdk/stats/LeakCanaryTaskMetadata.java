@@ -80,6 +80,58 @@ private static final long serialVersionUID = 0L;
      * <code>CANCELLED_DURING_ANALYSIS = 8;</code>
      */
     CANCELLED_DURING_ANALYSIS(8),
+    /**
+     * <code>INSIGHT_PANEL_OPENED = 9;</code>
+     */
+    INSIGHT_PANEL_OPENED(9),
+    /**
+     * <code>INSIGHT_PANEL_CLOSED = 10;</code>
+     */
+    INSIGHT_PANEL_CLOSED(10),
+    /**
+     * <code>INSIGHT_AUTO_GENERATE_ENABLED = 11;</code>
+     */
+    INSIGHT_AUTO_GENERATE_ENABLED(11),
+    /**
+     * <code>INSIGHT_AUTO_GENERATE_DISABLED = 12;</code>
+     */
+    INSIGHT_AUTO_GENERATE_DISABLED(12),
+    /**
+     * <code>INSIGHT_FETCH_TRIGGERED = 13;</code>
+     */
+    INSIGHT_FETCH_TRIGGERED(13),
+    /**
+     * <code>INSIGHT_FETCH_SUCCEEDED = 14;</code>
+     */
+    INSIGHT_FETCH_SUCCEEDED(14),
+    /**
+     * <code>INSIGHT_FETCH_FAILED = 15;</code>
+     */
+    INSIGHT_FETCH_FAILED(15),
+    /**
+     * <code>INSIGHT_FETCH_CANCELLED = 16;</code>
+     */
+    INSIGHT_FETCH_CANCELLED(16),
+    /**
+     * <code>INSIGHT_SENTIMENT_UP = 17;</code>
+     */
+    INSIGHT_SENTIMENT_UP(17),
+    /**
+     * <code>INSIGHT_SENTIMENT_DOWN = 18;</code>
+     */
+    INSIGHT_SENTIMENT_DOWN(18),
+    /**
+     * <code>INSIGHT_SENTIMENT_CLEARED = 19;</code>
+     */
+    INSIGHT_SENTIMENT_CLEARED(19),
+    /**
+     * <code>INSIGHT_GENERATE_FIX_CLICKED = 20;</code>
+     */
+    INSIGHT_GENERATE_FIX_CLICKED(20),
+    /**
+     * <code>INSIGHT_COPY_CLICKED = 21;</code>
+     */
+    INSIGHT_COPY_CLICKED(21),
     ;
 
     /**
@@ -118,6 +170,58 @@ private static final long serialVersionUID = 0L;
      * <code>CANCELLED_DURING_ANALYSIS = 8;</code>
      */
     public static final int CANCELLED_DURING_ANALYSIS_VALUE = 8;
+    /**
+     * <code>INSIGHT_PANEL_OPENED = 9;</code>
+     */
+    public static final int INSIGHT_PANEL_OPENED_VALUE = 9;
+    /**
+     * <code>INSIGHT_PANEL_CLOSED = 10;</code>
+     */
+    public static final int INSIGHT_PANEL_CLOSED_VALUE = 10;
+    /**
+     * <code>INSIGHT_AUTO_GENERATE_ENABLED = 11;</code>
+     */
+    public static final int INSIGHT_AUTO_GENERATE_ENABLED_VALUE = 11;
+    /**
+     * <code>INSIGHT_AUTO_GENERATE_DISABLED = 12;</code>
+     */
+    public static final int INSIGHT_AUTO_GENERATE_DISABLED_VALUE = 12;
+    /**
+     * <code>INSIGHT_FETCH_TRIGGERED = 13;</code>
+     */
+    public static final int INSIGHT_FETCH_TRIGGERED_VALUE = 13;
+    /**
+     * <code>INSIGHT_FETCH_SUCCEEDED = 14;</code>
+     */
+    public static final int INSIGHT_FETCH_SUCCEEDED_VALUE = 14;
+    /**
+     * <code>INSIGHT_FETCH_FAILED = 15;</code>
+     */
+    public static final int INSIGHT_FETCH_FAILED_VALUE = 15;
+    /**
+     * <code>INSIGHT_FETCH_CANCELLED = 16;</code>
+     */
+    public static final int INSIGHT_FETCH_CANCELLED_VALUE = 16;
+    /**
+     * <code>INSIGHT_SENTIMENT_UP = 17;</code>
+     */
+    public static final int INSIGHT_SENTIMENT_UP_VALUE = 17;
+    /**
+     * <code>INSIGHT_SENTIMENT_DOWN = 18;</code>
+     */
+    public static final int INSIGHT_SENTIMENT_DOWN_VALUE = 18;
+    /**
+     * <code>INSIGHT_SENTIMENT_CLEARED = 19;</code>
+     */
+    public static final int INSIGHT_SENTIMENT_CLEARED_VALUE = 19;
+    /**
+     * <code>INSIGHT_GENERATE_FIX_CLICKED = 20;</code>
+     */
+    public static final int INSIGHT_GENERATE_FIX_CLICKED_VALUE = 20;
+    /**
+     * <code>INSIGHT_COPY_CLICKED = 21;</code>
+     */
+    public static final int INSIGHT_COPY_CLICKED_VALUE = 21;
 
 
     public final int getNumber() {
@@ -149,6 +253,19 @@ private static final long serialVersionUID = 0L;
         case 6: return COLLAPSE_ALL_NODES_CLICKED;
         case 7: return NEW_LEAK_SELECTED;
         case 8: return CANCELLED_DURING_ANALYSIS;
+        case 9: return INSIGHT_PANEL_OPENED;
+        case 10: return INSIGHT_PANEL_CLOSED;
+        case 11: return INSIGHT_AUTO_GENERATE_ENABLED;
+        case 12: return INSIGHT_AUTO_GENERATE_DISABLED;
+        case 13: return INSIGHT_FETCH_TRIGGERED;
+        case 14: return INSIGHT_FETCH_SUCCEEDED;
+        case 15: return INSIGHT_FETCH_FAILED;
+        case 16: return INSIGHT_FETCH_CANCELLED;
+        case 17: return INSIGHT_SENTIMENT_UP;
+        case 18: return INSIGHT_SENTIMENT_DOWN;
+        case 19: return INSIGHT_SENTIMENT_CLEARED;
+        case 20: return INSIGHT_GENERATE_FIX_CLICKED;
+        case 21: return INSIGHT_COPY_CLICKED;
         default: return null;
       }
     }

@@ -52,7 +52,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * UI event source.
-   * Next ID: 71
+   * Next ID: 83
    * Note: Not a properly sequentially incrementing ID (200 &amp; 201 are used)
    * </pre>
    *
@@ -420,6 +420,54 @@ private static final long serialVersionUID = 0L;
      * <code>MISSING_URL_OVERVIEW_TABLE_FILTERS = 66;</code>
      */
     MISSING_URL_OVERVIEW_TABLE_FILTERS(66),
+    /**
+     * <code>MISSING_URLS_TAB = 71;</code>
+     */
+    MISSING_URLS_TAB(71),
+    /**
+     * <code>MISSING_URLS_CSV_SOURCE_SELECTED = 72;</code>
+     */
+    MISSING_URLS_CSV_SOURCE_SELECTED(72),
+    /**
+     * <code>MISSING_URLS_CSV_IMPORT_BUTTON = 73;</code>
+     */
+    MISSING_URLS_CSV_IMPORT_BUTTON(73),
+    /**
+     * <code>MISSING_URLS_CSV_RECENT_FILE_SELECTOR = 74;</code>
+     */
+    MISSING_URLS_CSV_RECENT_FILE_SELECTOR(74),
+    /**
+     * <code>MISSING_URLS_CSV_FIX_ALL_APP_CHECKS_BUTTON = 75;</code>
+     */
+    MISSING_URLS_CSV_FIX_ALL_APP_CHECKS_BUTTON(75),
+    /**
+     * <code>MISSING_URLS_CSV_FIX_ALL_WEB_CHECKS_BUTTON = 76;</code>
+     */
+    MISSING_URLS_CSV_FIX_ALL_WEB_CHECKS_BUTTON(76),
+    /**
+     * <code>MISSING_URLS_CSV_URL_DETAILS_CLICKED = 77;</code>
+     */
+    MISSING_URLS_CSV_URL_DETAILS_CLICKED(77),
+    /**
+     * <code>MISSING_URLS_MANUAL_SOURCE_SELECTED = 78;</code>
+     */
+    MISSING_URLS_MANUAL_SOURCE_SELECTED(78),
+    /**
+     * <code>MISSING_URLS_MANUAL_URLS_ADDED = 79;</code>
+     */
+    MISSING_URLS_MANUAL_URLS_ADDED(79),
+    /**
+     * <code>MISSING_URLS_MANUAL_FIX_ALL_APP_CHECKS_BUTTON = 80;</code>
+     */
+    MISSING_URLS_MANUAL_FIX_ALL_APP_CHECKS_BUTTON(80),
+    /**
+     * <code>MISSING_URLS_MANUAL_FIX_ALL_WEB_CHECKS_BUTTON = 81;</code>
+     */
+    MISSING_URLS_MANUAL_FIX_ALL_WEB_CHECKS_BUTTON(81),
+    /**
+     * <code>MISSING_URLS_MANUAL_URL_DETAILS_CLICKED = 82;</code>
+     */
+    MISSING_URLS_MANUAL_URL_DETAILS_CLICKED(82),
     ;
 
     /**
@@ -782,6 +830,54 @@ private static final long serialVersionUID = 0L;
      * <code>MISSING_URL_OVERVIEW_TABLE_FILTERS = 66;</code>
      */
     public static final int MISSING_URL_OVERVIEW_TABLE_FILTERS_VALUE = 66;
+    /**
+     * <code>MISSING_URLS_TAB = 71;</code>
+     */
+    public static final int MISSING_URLS_TAB_VALUE = 71;
+    /**
+     * <code>MISSING_URLS_CSV_SOURCE_SELECTED = 72;</code>
+     */
+    public static final int MISSING_URLS_CSV_SOURCE_SELECTED_VALUE = 72;
+    /**
+     * <code>MISSING_URLS_CSV_IMPORT_BUTTON = 73;</code>
+     */
+    public static final int MISSING_URLS_CSV_IMPORT_BUTTON_VALUE = 73;
+    /**
+     * <code>MISSING_URLS_CSV_RECENT_FILE_SELECTOR = 74;</code>
+     */
+    public static final int MISSING_URLS_CSV_RECENT_FILE_SELECTOR_VALUE = 74;
+    /**
+     * <code>MISSING_URLS_CSV_FIX_ALL_APP_CHECKS_BUTTON = 75;</code>
+     */
+    public static final int MISSING_URLS_CSV_FIX_ALL_APP_CHECKS_BUTTON_VALUE = 75;
+    /**
+     * <code>MISSING_URLS_CSV_FIX_ALL_WEB_CHECKS_BUTTON = 76;</code>
+     */
+    public static final int MISSING_URLS_CSV_FIX_ALL_WEB_CHECKS_BUTTON_VALUE = 76;
+    /**
+     * <code>MISSING_URLS_CSV_URL_DETAILS_CLICKED = 77;</code>
+     */
+    public static final int MISSING_URLS_CSV_URL_DETAILS_CLICKED_VALUE = 77;
+    /**
+     * <code>MISSING_URLS_MANUAL_SOURCE_SELECTED = 78;</code>
+     */
+    public static final int MISSING_URLS_MANUAL_SOURCE_SELECTED_VALUE = 78;
+    /**
+     * <code>MISSING_URLS_MANUAL_URLS_ADDED = 79;</code>
+     */
+    public static final int MISSING_URLS_MANUAL_URLS_ADDED_VALUE = 79;
+    /**
+     * <code>MISSING_URLS_MANUAL_FIX_ALL_APP_CHECKS_BUTTON = 80;</code>
+     */
+    public static final int MISSING_URLS_MANUAL_FIX_ALL_APP_CHECKS_BUTTON_VALUE = 80;
+    /**
+     * <code>MISSING_URLS_MANUAL_FIX_ALL_WEB_CHECKS_BUTTON = 81;</code>
+     */
+    public static final int MISSING_URLS_MANUAL_FIX_ALL_WEB_CHECKS_BUTTON_VALUE = 81;
+    /**
+     * <code>MISSING_URLS_MANUAL_URL_DETAILS_CLICKED = 82;</code>
+     */
+    public static final int MISSING_URLS_MANUAL_URL_DETAILS_CLICKED_VALUE = 82;
 
 
     public final int getNumber() {
@@ -876,6 +972,18 @@ private static final long serialVersionUID = 0L;
         case 64: return MISSING_URL_OVERVIEW_TABLE_FIX_ALL_WEB_CHECKS_BUTTON;
         case 65: return MISSING_URL_OVERVIEW_TABLE_SEARCH_BOX;
         case 66: return MISSING_URL_OVERVIEW_TABLE_FILTERS;
+        case 71: return MISSING_URLS_TAB;
+        case 72: return MISSING_URLS_CSV_SOURCE_SELECTED;
+        case 73: return MISSING_URLS_CSV_IMPORT_BUTTON;
+        case 74: return MISSING_URLS_CSV_RECENT_FILE_SELECTOR;
+        case 75: return MISSING_URLS_CSV_FIX_ALL_APP_CHECKS_BUTTON;
+        case 76: return MISSING_URLS_CSV_FIX_ALL_WEB_CHECKS_BUTTON;
+        case 77: return MISSING_URLS_CSV_URL_DETAILS_CLICKED;
+        case 78: return MISSING_URLS_MANUAL_SOURCE_SELECTED;
+        case 79: return MISSING_URLS_MANUAL_URLS_ADDED;
+        case 80: return MISSING_URLS_MANUAL_FIX_ALL_APP_CHECKS_BUTTON;
+        case 81: return MISSING_URLS_MANUAL_FIX_ALL_WEB_CHECKS_BUTTON;
+        case 82: return MISSING_URLS_MANUAL_URL_DETAILS_CLICKED;
         default: return null;
       }
     }
