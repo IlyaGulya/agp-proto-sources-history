@@ -988,6 +988,10 @@ public enum BooleanOption
    * <code>ENFORCE_DYNAMIC_FEATURE_VARIANT_MATCHING = 241;</code>
    */
   ENFORCE_DYNAMIC_FEATURE_VARIANT_MATCHING(241),
+  /**
+   * <code>R8_PLUGIN_SUPPORT = 242;</code>
+   */
+  R8_PLUGIN_SUPPORT(242),
   UNRECOGNIZED(-1),
   ;
 
@@ -1959,6 +1963,10 @@ public enum BooleanOption
    * <code>ENFORCE_DYNAMIC_FEATURE_VARIANT_MATCHING = 241;</code>
    */
   public static final int ENFORCE_DYNAMIC_FEATURE_VARIANT_MATCHING_VALUE = 241;
+  /**
+   * <code>R8_PLUGIN_SUPPORT = 242;</code>
+   */
+  public static final int R8_PLUGIN_SUPPORT_VALUE = 242;
 
 
   public final int getNumber() {
@@ -2227,6 +2235,7 @@ public enum BooleanOption
       case 239: return USE_NEW_DSL_INTERFACES_FOR_KTS;
       case 240: return TEST_SUITE_NEW_REPORT_FORMAT;
       case 241: return ENFORCE_DYNAMIC_FEATURE_VARIANT_MATCHING;
+      case 242: return R8_PLUGIN_SUPPORT;
       default: return null;
     }
   }

@@ -4544,6 +4544,35 @@ private static final long serialVersionUID = 0L;
      * <code>optional .android_studio.SherlockEvent.ExtendedDeviceInfo extended_device_info = 2;</code>
      */
     com.google.wireless.android.sdk.stats.SherlockEvent.ExtendedDeviceInfoOrBuilder getExtendedDeviceInfoOrBuilder();
+
+    /**
+     * <pre>
+     * Stages that failed during device initialization.
+     * </pre>
+     *
+     * <code>repeated .android_studio.SherlockEvent.DeviceInitializedMetadata.DeviceInitializationStage failed_stages = 3 [packed = true];</code>
+     * @return A list containing the failedStages.
+     */
+    java.util.List<com.google.wireless.android.sdk.stats.SherlockEvent.DeviceInitializedMetadata.DeviceInitializationStage> getFailedStagesList();
+    /**
+     * <pre>
+     * Stages that failed during device initialization.
+     * </pre>
+     *
+     * <code>repeated .android_studio.SherlockEvent.DeviceInitializedMetadata.DeviceInitializationStage failed_stages = 3 [packed = true];</code>
+     * @return The count of failedStages.
+     */
+    int getFailedStagesCount();
+    /**
+     * <pre>
+     * Stages that failed during device initialization.
+     * </pre>
+     *
+     * <code>repeated .android_studio.SherlockEvent.DeviceInitializedMetadata.DeviceInitializationStage failed_stages = 3 [packed = true];</code>
+     * @param index The index of the element to return.
+     * @return The failedStages at the given index.
+     */
+    com.google.wireless.android.sdk.stats.SherlockEvent.DeviceInitializedMetadata.DeviceInitializationStage getFailedStages(int index);
   }
   /**
    * <pre>
@@ -4563,6 +4592,7 @@ private static final long serialVersionUID = 0L;
     }
     private DeviceInitializedMetadata() {
       status_ = 0;
+      failedStages_ = java.util.Collections.emptyList();
     }
 
     @java.lang.Override
@@ -4703,6 +4733,147 @@ private static final long serialVersionUID = 0L;
       // @@protoc_insertion_point(enum_scope:android_studio.SherlockEvent.DeviceInitializedMetadata.DeviceInitializationStatus)
     }
 
+    /**
+     * Protobuf enum {@code android_studio.SherlockEvent.DeviceInitializedMetadata.DeviceInitializationStage}
+     */
+    public enum DeviceInitializationStage
+        implements com.google.protobuf.ProtocolMessageEnum {
+      /**
+       * <code>DEVICE_INITIALIZATION_STAGE_UNKNOWN = 0;</code>
+       */
+      DEVICE_INITIALIZATION_STAGE_UNKNOWN(0),
+      /**
+       * <code>DEVICE_INITIALIZATION_STAGE_SDK_CHECK = 1;</code>
+       */
+      DEVICE_INITIALIZATION_STAGE_SDK_CHECK(1),
+      /**
+       * <code>DEVICE_INITIALIZATION_STAGE_APKS = 2;</code>
+       */
+      DEVICE_INITIALIZATION_STAGE_APKS(2),
+      /**
+       * <code>DEVICE_INITIALIZATION_STAGE_PACKAGES = 3;</code>
+       */
+      DEVICE_INITIALIZATION_STAGE_PACKAGES(3),
+      /**
+       * <code>DEVICE_INITIALIZATION_STAGE_DEVICE_DETAILS = 4;</code>
+       */
+      DEVICE_INITIALIZATION_STAGE_DEVICE_DETAILS(4),
+      /**
+       * <code>DEVICE_INITIALIZATION_STAGE_PERFETTO_CAPABILITIES = 5;</code>
+       */
+      DEVICE_INITIALIZATION_STAGE_PERFETTO_CAPABILITIES(5),
+      /**
+       * <code>DEVICE_INITIALIZATION_STAGE_GPU_COUNTERS = 6;</code>
+       */
+      DEVICE_INITIALIZATION_STAGE_GPU_COUNTERS(6),
+      ;
+
+      /**
+       * <code>DEVICE_INITIALIZATION_STAGE_UNKNOWN = 0;</code>
+       */
+      public static final int DEVICE_INITIALIZATION_STAGE_UNKNOWN_VALUE = 0;
+      /**
+       * <code>DEVICE_INITIALIZATION_STAGE_SDK_CHECK = 1;</code>
+       */
+      public static final int DEVICE_INITIALIZATION_STAGE_SDK_CHECK_VALUE = 1;
+      /**
+       * <code>DEVICE_INITIALIZATION_STAGE_APKS = 2;</code>
+       */
+      public static final int DEVICE_INITIALIZATION_STAGE_APKS_VALUE = 2;
+      /**
+       * <code>DEVICE_INITIALIZATION_STAGE_PACKAGES = 3;</code>
+       */
+      public static final int DEVICE_INITIALIZATION_STAGE_PACKAGES_VALUE = 3;
+      /**
+       * <code>DEVICE_INITIALIZATION_STAGE_DEVICE_DETAILS = 4;</code>
+       */
+      public static final int DEVICE_INITIALIZATION_STAGE_DEVICE_DETAILS_VALUE = 4;
+      /**
+       * <code>DEVICE_INITIALIZATION_STAGE_PERFETTO_CAPABILITIES = 5;</code>
+       */
+      public static final int DEVICE_INITIALIZATION_STAGE_PERFETTO_CAPABILITIES_VALUE = 5;
+      /**
+       * <code>DEVICE_INITIALIZATION_STAGE_GPU_COUNTERS = 6;</code>
+       */
+      public static final int DEVICE_INITIALIZATION_STAGE_GPU_COUNTERS_VALUE = 6;
+
+
+      public final int getNumber() {
+        return value;
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static DeviceInitializationStage valueOf(int value) {
+        return forNumber(value);
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       */
+      public static DeviceInitializationStage forNumber(int value) {
+        switch (value) {
+          case 0: return DEVICE_INITIALIZATION_STAGE_UNKNOWN;
+          case 1: return DEVICE_INITIALIZATION_STAGE_SDK_CHECK;
+          case 2: return DEVICE_INITIALIZATION_STAGE_APKS;
+          case 3: return DEVICE_INITIALIZATION_STAGE_PACKAGES;
+          case 4: return DEVICE_INITIALIZATION_STAGE_DEVICE_DETAILS;
+          case 5: return DEVICE_INITIALIZATION_STAGE_PERFETTO_CAPABILITIES;
+          case 6: return DEVICE_INITIALIZATION_STAGE_GPU_COUNTERS;
+          default: return null;
+        }
+      }
+
+      public static com.google.protobuf.Internal.EnumLiteMap<DeviceInitializationStage>
+          internalGetValueMap() {
+        return internalValueMap;
+      }
+      private static final com.google.protobuf.Internal.EnumLiteMap<
+          DeviceInitializationStage> internalValueMap =
+            new com.google.protobuf.Internal.EnumLiteMap<DeviceInitializationStage>() {
+              public DeviceInitializationStage findValueByNumber(int number) {
+                return DeviceInitializationStage.forNumber(number);
+              }
+            };
+
+      public final com.google.protobuf.Descriptors.EnumValueDescriptor
+          getValueDescriptor() {
+        return getDescriptor().getValues().get(ordinal());
+      }
+      public final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptorForType() {
+        return getDescriptor();
+      }
+      public static final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptor() {
+        return com.google.wireless.android.sdk.stats.SherlockEvent.DeviceInitializedMetadata.getDescriptor().getEnumTypes().get(1);
+      }
+
+      private static final DeviceInitializationStage[] VALUES = values();
+
+      public static DeviceInitializationStage valueOf(
+          com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+        if (desc.getType() != getDescriptor()) {
+          throw new java.lang.IllegalArgumentException(
+            "EnumValueDescriptor is not for this type.");
+        }
+        return VALUES[desc.getIndex()];
+      }
+
+      private final int value;
+
+      private DeviceInitializationStage(int value) {
+        this.value = value;
+      }
+
+      // @@protoc_insertion_point(enum_scope:android_studio.SherlockEvent.DeviceInitializedMetadata.DeviceInitializationStage)
+    }
+
     private int bitField0_;
     public static final int STATUS_FIELD_NUMBER = 1;
     private int status_ = 0;
@@ -4760,6 +4931,58 @@ private static final long serialVersionUID = 0L;
       return extendedDeviceInfo_ == null ? com.google.wireless.android.sdk.stats.SherlockEvent.ExtendedDeviceInfo.getDefaultInstance() : extendedDeviceInfo_;
     }
 
+    public static final int FAILED_STAGES_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private java.util.List<java.lang.Integer> failedStages_;
+    private static final com.google.protobuf.Internal.ListAdapter.Converter<
+        java.lang.Integer, com.google.wireless.android.sdk.stats.SherlockEvent.DeviceInitializedMetadata.DeviceInitializationStage> failedStages_converter_ =
+            new com.google.protobuf.Internal.ListAdapter.Converter<
+                java.lang.Integer, com.google.wireless.android.sdk.stats.SherlockEvent.DeviceInitializedMetadata.DeviceInitializationStage>() {
+              public com.google.wireless.android.sdk.stats.SherlockEvent.DeviceInitializedMetadata.DeviceInitializationStage convert(java.lang.Integer from) {
+                com.google.wireless.android.sdk.stats.SherlockEvent.DeviceInitializedMetadata.DeviceInitializationStage result = com.google.wireless.android.sdk.stats.SherlockEvent.DeviceInitializedMetadata.DeviceInitializationStage.forNumber(from);
+                return result == null ? com.google.wireless.android.sdk.stats.SherlockEvent.DeviceInitializedMetadata.DeviceInitializationStage.DEVICE_INITIALIZATION_STAGE_UNKNOWN : result;
+              }
+            };
+    /**
+     * <pre>
+     * Stages that failed during device initialization.
+     * </pre>
+     *
+     * <code>repeated .android_studio.SherlockEvent.DeviceInitializedMetadata.DeviceInitializationStage failed_stages = 3 [packed = true];</code>
+     * @return A list containing the failedStages.
+     */
+    @java.lang.Override
+    public java.util.List<com.google.wireless.android.sdk.stats.SherlockEvent.DeviceInitializedMetadata.DeviceInitializationStage> getFailedStagesList() {
+      return new com.google.protobuf.Internal.ListAdapter<
+          java.lang.Integer, com.google.wireless.android.sdk.stats.SherlockEvent.DeviceInitializedMetadata.DeviceInitializationStage>(failedStages_, failedStages_converter_);
+    }
+    /**
+     * <pre>
+     * Stages that failed during device initialization.
+     * </pre>
+     *
+     * <code>repeated .android_studio.SherlockEvent.DeviceInitializedMetadata.DeviceInitializationStage failed_stages = 3 [packed = true];</code>
+     * @return The count of failedStages.
+     */
+    @java.lang.Override
+    public int getFailedStagesCount() {
+      return failedStages_.size();
+    }
+    /**
+     * <pre>
+     * Stages that failed during device initialization.
+     * </pre>
+     *
+     * <code>repeated .android_studio.SherlockEvent.DeviceInitializedMetadata.DeviceInitializationStage failed_stages = 3 [packed = true];</code>
+     * @param index The index of the element to return.
+     * @return The failedStages at the given index.
+     */
+    @java.lang.Override
+    public com.google.wireless.android.sdk.stats.SherlockEvent.DeviceInitializedMetadata.DeviceInitializationStage getFailedStages(int index) {
+      return failedStages_converter_.convert(failedStages_.get(index));
+    }
+    private int failedStagesMemoizedSerializedSize;
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -4774,11 +4997,19 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
+      getSerializedSize();
       if (((bitField0_ & 0x00000001) != 0)) {
         output.writeEnum(1, status_);
       }
       if (((bitField0_ & 0x00000002) != 0)) {
         output.writeMessage(2, getExtendedDeviceInfo());
+      }
+      if (getFailedStagesList().size() > 0) {
+        output.writeUInt32NoTag(26);
+        output.writeUInt32NoTag(failedStagesMemoizedSerializedSize);
+      }
+      for (int i = 0; i < failedStages_.size(); i++) {
+        output.writeEnumNoTag(failedStages_.get(i));
       }
       getUnknownFields().writeTo(output);
     }
@@ -4796,6 +5027,18 @@ private static final long serialVersionUID = 0L;
       if (((bitField0_ & 0x00000002) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getExtendedDeviceInfo());
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < failedStages_.size(); i++) {
+          dataSize += com.google.protobuf.CodedOutputStream
+            .computeEnumSizeNoTag(failedStages_.get(i));
+        }
+        size += dataSize;
+        if (!getFailedStagesList().isEmpty()) {  size += 1;
+          size += com.google.protobuf.CodedOutputStream
+            .computeUInt32SizeNoTag(dataSize);
+        }failedStagesMemoizedSerializedSize = dataSize;
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -4821,6 +5064,7 @@ private static final long serialVersionUID = 0L;
         if (!getExtendedDeviceInfo()
             .equals(other.getExtendedDeviceInfo())) return false;
       }
+      if (!failedStages_.equals(other.failedStages_)) return false;
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -4839,6 +5083,10 @@ private static final long serialVersionUID = 0L;
       if (hasExtendedDeviceInfo()) {
         hash = (37 * hash) + EXTENDED_DEVICE_INFO_FIELD_NUMBER;
         hash = (53 * hash) + getExtendedDeviceInfo().hashCode();
+      }
+      if (getFailedStagesCount() > 0) {
+        hash = (37 * hash) + FAILED_STAGES_FIELD_NUMBER;
+        hash = (53 * hash) + failedStages_.hashCode();
       }
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
@@ -4985,6 +5233,8 @@ private static final long serialVersionUID = 0L;
           extendedDeviceInfoBuilder_.dispose();
           extendedDeviceInfoBuilder_ = null;
         }
+        failedStages_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000004);
         return this;
       }
 
@@ -5011,9 +5261,18 @@ private static final long serialVersionUID = 0L;
       @java.lang.Override
       public com.google.wireless.android.sdk.stats.SherlockEvent.DeviceInitializedMetadata buildPartial() {
         com.google.wireless.android.sdk.stats.SherlockEvent.DeviceInitializedMetadata result = new com.google.wireless.android.sdk.stats.SherlockEvent.DeviceInitializedMetadata(this);
+        buildPartialRepeatedFields(result);
         if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
+      }
+
+      private void buildPartialRepeatedFields(com.google.wireless.android.sdk.stats.SherlockEvent.DeviceInitializedMetadata result) {
+        if (((bitField0_ & 0x00000004) != 0)) {
+          failedStages_ = java.util.Collections.unmodifiableList(failedStages_);
+          bitField0_ = (bitField0_ & ~0x00000004);
+        }
+        result.failedStages_ = failedStages_;
       }
 
       private void buildPartial0(com.google.wireless.android.sdk.stats.SherlockEvent.DeviceInitializedMetadata result) {
@@ -5049,6 +5308,16 @@ private static final long serialVersionUID = 0L;
         }
         if (other.hasExtendedDeviceInfo()) {
           mergeExtendedDeviceInfo(other.getExtendedDeviceInfo());
+        }
+        if (!other.failedStages_.isEmpty()) {
+          if (failedStages_.isEmpty()) {
+            failedStages_ = other.failedStages_;
+            bitField0_ = (bitField0_ & ~0x00000004);
+          } else {
+            ensureFailedStagesIsMutable();
+            failedStages_.addAll(other.failedStages_);
+          }
+          onChanged();
         }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
@@ -5095,6 +5364,35 @@ private static final long serialVersionUID = 0L;
                 bitField0_ |= 0x00000002;
                 break;
               } // case 18
+              case 24: {
+                int tmpRaw = input.readEnum();
+                com.google.wireless.android.sdk.stats.SherlockEvent.DeviceInitializedMetadata.DeviceInitializationStage tmpValue =
+                    com.google.wireless.android.sdk.stats.SherlockEvent.DeviceInitializedMetadata.DeviceInitializationStage.forNumber(tmpRaw);
+                if (tmpValue == null) {
+                  mergeUnknownVarintField(3, tmpRaw);
+                } else {
+                  ensureFailedStagesIsMutable();
+                  failedStages_.add(tmpRaw);
+                }
+                break;
+              } // case 24
+              case 26: {
+                int length = input.readRawVarint32();
+                int oldLimit = input.pushLimit(length);
+                while(input.getBytesUntilLimit() > 0) {
+                  int tmpRaw = input.readEnum();
+                  com.google.wireless.android.sdk.stats.SherlockEvent.DeviceInitializedMetadata.DeviceInitializationStage tmpValue =
+                      com.google.wireless.android.sdk.stats.SherlockEvent.DeviceInitializedMetadata.DeviceInitializationStage.forNumber(tmpRaw);
+                  if (tmpValue == null) {
+                    mergeUnknownVarintField(3, tmpRaw);
+                  } else {
+                    ensureFailedStagesIsMutable();
+                    failedStages_.add(tmpRaw);
+                  }
+                }
+                input.popLimit(oldLimit);
+                break;
+              } // case 26
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -5307,6 +5605,120 @@ private static final long serialVersionUID = 0L;
           extendedDeviceInfo_ = null;
         }
         return extendedDeviceInfoBuilder_;
+      }
+
+      private java.util.List<java.lang.Integer> failedStages_ =
+        java.util.Collections.emptyList();
+      private void ensureFailedStagesIsMutable() {
+        if (!((bitField0_ & 0x00000004) != 0)) {
+          failedStages_ = new java.util.ArrayList<java.lang.Integer>(failedStages_);
+          bitField0_ |= 0x00000004;
+        }
+      }
+      /**
+       * <pre>
+       * Stages that failed during device initialization.
+       * </pre>
+       *
+       * <code>repeated .android_studio.SherlockEvent.DeviceInitializedMetadata.DeviceInitializationStage failed_stages = 3 [packed = true];</code>
+       * @return A list containing the failedStages.
+       */
+      public java.util.List<com.google.wireless.android.sdk.stats.SherlockEvent.DeviceInitializedMetadata.DeviceInitializationStage> getFailedStagesList() {
+        return new com.google.protobuf.Internal.ListAdapter<
+            java.lang.Integer, com.google.wireless.android.sdk.stats.SherlockEvent.DeviceInitializedMetadata.DeviceInitializationStage>(failedStages_, failedStages_converter_);
+      }
+      /**
+       * <pre>
+       * Stages that failed during device initialization.
+       * </pre>
+       *
+       * <code>repeated .android_studio.SherlockEvent.DeviceInitializedMetadata.DeviceInitializationStage failed_stages = 3 [packed = true];</code>
+       * @return The count of failedStages.
+       */
+      public int getFailedStagesCount() {
+        return failedStages_.size();
+      }
+      /**
+       * <pre>
+       * Stages that failed during device initialization.
+       * </pre>
+       *
+       * <code>repeated .android_studio.SherlockEvent.DeviceInitializedMetadata.DeviceInitializationStage failed_stages = 3 [packed = true];</code>
+       * @param index The index of the element to return.
+       * @return The failedStages at the given index.
+       */
+      public com.google.wireless.android.sdk.stats.SherlockEvent.DeviceInitializedMetadata.DeviceInitializationStage getFailedStages(int index) {
+        return failedStages_converter_.convert(failedStages_.get(index));
+      }
+      /**
+       * <pre>
+       * Stages that failed during device initialization.
+       * </pre>
+       *
+       * <code>repeated .android_studio.SherlockEvent.DeviceInitializedMetadata.DeviceInitializationStage failed_stages = 3 [packed = true];</code>
+       * @param index The index to set the value at.
+       * @param value The failedStages to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFailedStages(
+          int index, com.google.wireless.android.sdk.stats.SherlockEvent.DeviceInitializedMetadata.DeviceInitializationStage value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureFailedStagesIsMutable();
+        failedStages_.set(index, value.getNumber());
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Stages that failed during device initialization.
+       * </pre>
+       *
+       * <code>repeated .android_studio.SherlockEvent.DeviceInitializedMetadata.DeviceInitializationStage failed_stages = 3 [packed = true];</code>
+       * @param value The failedStages to add.
+       * @return This builder for chaining.
+       */
+      public Builder addFailedStages(com.google.wireless.android.sdk.stats.SherlockEvent.DeviceInitializedMetadata.DeviceInitializationStage value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureFailedStagesIsMutable();
+        failedStages_.add(value.getNumber());
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Stages that failed during device initialization.
+       * </pre>
+       *
+       * <code>repeated .android_studio.SherlockEvent.DeviceInitializedMetadata.DeviceInitializationStage failed_stages = 3 [packed = true];</code>
+       * @param values The failedStages to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllFailedStages(
+          java.lang.Iterable<? extends com.google.wireless.android.sdk.stats.SherlockEvent.DeviceInitializedMetadata.DeviceInitializationStage> values) {
+        ensureFailedStagesIsMutable();
+        for (com.google.wireless.android.sdk.stats.SherlockEvent.DeviceInitializedMetadata.DeviceInitializationStage value : values) {
+          failedStages_.add(value.getNumber());
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Stages that failed during device initialization.
+       * </pre>
+       *
+       * <code>repeated .android_studio.SherlockEvent.DeviceInitializedMetadata.DeviceInitializationStage failed_stages = 3 [packed = true];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearFailedStages() {
+        failedStages_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
