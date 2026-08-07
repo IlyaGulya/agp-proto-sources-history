@@ -298,6 +298,10 @@ private static final long serialVersionUID = 0L;
      * <code>LICENSE_TYPE_BUSINESS = 2;</code>
      */
     LICENSE_TYPE_BUSINESS(2),
+    /**
+     * <code>LICENSE_TYPE_ENTERPRISE = 3;</code>
+     */
+    LICENSE_TYPE_ENTERPRISE(3),
     ;
 
     /**
@@ -312,6 +316,10 @@ private static final long serialVersionUID = 0L;
      * <code>LICENSE_TYPE_BUSINESS = 2;</code>
      */
     public static final int LICENSE_TYPE_BUSINESS_VALUE = 2;
+    /**
+     * <code>LICENSE_TYPE_ENTERPRISE = 3;</code>
+     */
+    public static final int LICENSE_TYPE_ENTERPRISE_VALUE = 3;
 
 
     public final int getNumber() {
@@ -337,6 +345,7 @@ private static final long serialVersionUID = 0L;
         case 0: return LICENSE_TYPE_UNKNOWN;
         case 1: return LICENSE_TYPE_CONSUMER;
         case 2: return LICENSE_TYPE_BUSINESS;
+        case 3: return LICENSE_TYPE_ENTERPRISE;
         default: return null;
       }
     }
@@ -425,7 +434,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>optional bool bot_onboarding_started = 4 [deprecated = true];</code>
    * @deprecated android_studio.SmlConfigurationEvent.bot_onboarding_started is deprecated.
-   *     See studio_stats.proto;l=18410
+   *     See studio_stats.proto;l=18483
    * @return Whether the botOnboardingStarted field is set.
    */
   @java.lang.Override
@@ -441,7 +450,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>optional bool bot_onboarding_started = 4 [deprecated = true];</code>
    * @deprecated android_studio.SmlConfigurationEvent.bot_onboarding_started is deprecated.
-   *     See studio_stats.proto;l=18410
+   *     See studio_stats.proto;l=18483
    * @return The botOnboardingStarted.
    */
   @java.lang.Override
@@ -460,7 +469,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>optional bool bot_onboarding_completed = 5 [deprecated = true];</code>
    * @deprecated android_studio.SmlConfigurationEvent.bot_onboarding_completed is deprecated.
-   *     See studio_stats.proto;l=18415
+   *     See studio_stats.proto;l=18488
    * @return Whether the botOnboardingCompleted field is set.
    */
   @java.lang.Override
@@ -476,7 +485,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>optional bool bot_onboarding_completed = 5 [deprecated = true];</code>
    * @deprecated android_studio.SmlConfigurationEvent.bot_onboarding_completed is deprecated.
-   *     See studio_stats.proto;l=18415
+   *     See studio_stats.proto;l=18488
    * @return The botOnboardingCompleted.
    */
   @java.lang.Override
@@ -577,7 +586,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>optional .android_studio.SmlConfigurationEvent.SmlProductVariant product_variant = 7 [deprecated = true];</code>
    * @deprecated android_studio.SmlConfigurationEvent.product_variant is deprecated.
-   *     See studio_stats.proto;l=18430
+   *     See studio_stats.proto;l=18503
    * @return Whether the productVariant field is set.
    */
   @java.lang.Override @java.lang.Deprecated public boolean hasProductVariant() {
@@ -593,7 +602,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>optional .android_studio.SmlConfigurationEvent.SmlProductVariant product_variant = 7 [deprecated = true];</code>
    * @deprecated android_studio.SmlConfigurationEvent.product_variant is deprecated.
-   *     See studio_stats.proto;l=18430
+   *     See studio_stats.proto;l=18503
    * @return The productVariant.
    */
   @java.lang.Override @java.lang.Deprecated public com.google.wireless.android.sdk.stats.SmlConfigurationEvent.SmlProductVariant getProductVariant() {
@@ -1572,7 +1581,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional bool bot_onboarding_started = 4 [deprecated = true];</code>
      * @deprecated android_studio.SmlConfigurationEvent.bot_onboarding_started is deprecated.
-     *     See studio_stats.proto;l=18410
+     *     See studio_stats.proto;l=18483
      * @return Whether the botOnboardingStarted field is set.
      */
     @java.lang.Override
@@ -1588,7 +1597,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional bool bot_onboarding_started = 4 [deprecated = true];</code>
      * @deprecated android_studio.SmlConfigurationEvent.bot_onboarding_started is deprecated.
-     *     See studio_stats.proto;l=18410
+     *     See studio_stats.proto;l=18483
      * @return The botOnboardingStarted.
      */
     @java.lang.Override
@@ -1604,7 +1613,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional bool bot_onboarding_started = 4 [deprecated = true];</code>
      * @deprecated android_studio.SmlConfigurationEvent.bot_onboarding_started is deprecated.
-     *     See studio_stats.proto;l=18410
+     *     See studio_stats.proto;l=18483
      * @param value The botOnboardingStarted to set.
      * @return This builder for chaining.
      */
@@ -1624,7 +1633,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional bool bot_onboarding_started = 4 [deprecated = true];</code>
      * @deprecated android_studio.SmlConfigurationEvent.bot_onboarding_started is deprecated.
-     *     See studio_stats.proto;l=18410
+     *     See studio_stats.proto;l=18483
      * @return This builder for chaining.
      */
     @java.lang.Deprecated public Builder clearBotOnboardingStarted() {
@@ -1644,7 +1653,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional bool bot_onboarding_completed = 5 [deprecated = true];</code>
      * @deprecated android_studio.SmlConfigurationEvent.bot_onboarding_completed is deprecated.
-     *     See studio_stats.proto;l=18415
+     *     See studio_stats.proto;l=18488
      * @return Whether the botOnboardingCompleted field is set.
      */
     @java.lang.Override
@@ -1660,7 +1669,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional bool bot_onboarding_completed = 5 [deprecated = true];</code>
      * @deprecated android_studio.SmlConfigurationEvent.bot_onboarding_completed is deprecated.
-     *     See studio_stats.proto;l=18415
+     *     See studio_stats.proto;l=18488
      * @return The botOnboardingCompleted.
      */
     @java.lang.Override
@@ -1676,7 +1685,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional bool bot_onboarding_completed = 5 [deprecated = true];</code>
      * @deprecated android_studio.SmlConfigurationEvent.bot_onboarding_completed is deprecated.
-     *     See studio_stats.proto;l=18415
+     *     See studio_stats.proto;l=18488
      * @param value The botOnboardingCompleted to set.
      * @return This builder for chaining.
      */
@@ -1696,7 +1705,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional bool bot_onboarding_completed = 5 [deprecated = true];</code>
      * @deprecated android_studio.SmlConfigurationEvent.bot_onboarding_completed is deprecated.
-     *     See studio_stats.proto;l=18415
+     *     See studio_stats.proto;l=18488
      * @return This builder for chaining.
      */
     @java.lang.Deprecated public Builder clearBotOnboardingCompleted() {
@@ -1885,7 +1894,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional .android_studio.SmlConfigurationEvent.SmlProductVariant product_variant = 7 [deprecated = true];</code>
      * @deprecated android_studio.SmlConfigurationEvent.product_variant is deprecated.
-     *     See studio_stats.proto;l=18430
+     *     See studio_stats.proto;l=18503
      * @return Whether the productVariant field is set.
      */
     @java.lang.Override @java.lang.Deprecated public boolean hasProductVariant() {
@@ -1901,7 +1910,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional .android_studio.SmlConfigurationEvent.SmlProductVariant product_variant = 7 [deprecated = true];</code>
      * @deprecated android_studio.SmlConfigurationEvent.product_variant is deprecated.
-     *     See studio_stats.proto;l=18430
+     *     See studio_stats.proto;l=18503
      * @return The productVariant.
      */
     @java.lang.Override
@@ -1919,7 +1928,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional .android_studio.SmlConfigurationEvent.SmlProductVariant product_variant = 7 [deprecated = true];</code>
      * @deprecated android_studio.SmlConfigurationEvent.product_variant is deprecated.
-     *     See studio_stats.proto;l=18430
+     *     See studio_stats.proto;l=18503
      * @param value The productVariant to set.
      * @return This builder for chaining.
      */
@@ -1942,7 +1951,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional .android_studio.SmlConfigurationEvent.SmlProductVariant product_variant = 7 [deprecated = true];</code>
      * @deprecated android_studio.SmlConfigurationEvent.product_variant is deprecated.
-     *     See studio_stats.proto;l=18430
+     *     See studio_stats.proto;l=18503
      * @return This builder for chaining.
      */
     @java.lang.Deprecated public Builder clearProductVariant() {

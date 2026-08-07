@@ -3647,6 +3647,14 @@ private static final long serialVersionUID = 0L;
      * <code>STUDIO_BOT_CONFIGURATION_EVENT = 390;</code>
      */
     STUDIO_BOT_CONFIGURATION_EVENT(390),
+    /**
+     * <pre>
+     * Event related to Local Inference Engine (llama-server) subprocess
+     * </pre>
+     *
+     * <code>LOCAL_INFERENCE_ENGINE_EVENT = 391;</code>
+     */
+    LOCAL_INFERENCE_ENGINE_EVENT(391),
     ;
 
     /**
@@ -6566,6 +6574,14 @@ private static final long serialVersionUID = 0L;
      * <code>STUDIO_BOT_CONFIGURATION_EVENT = 390;</code>
      */
     public static final int STUDIO_BOT_CONFIGURATION_EVENT_VALUE = 390;
+    /**
+     * <pre>
+     * Event related to Local Inference Engine (llama-server) subprocess
+     * </pre>
+     *
+     * <code>LOCAL_INFERENCE_ENGINE_EVENT = 391;</code>
+     */
+    public static final int LOCAL_INFERENCE_ENGINE_EVENT_VALUE = 391;
 
 
     public final int getNumber() {
@@ -6974,6 +6990,7 @@ private static final long serialVersionUID = 0L;
         case 388: return LIGHTBUILD_SYNC_REQUESTED_EVENT;
         case 389: return LIGHTBUILD_SYNC_FINISHED_EVENT;
         case 390: return STUDIO_BOT_CONFIGURATION_EVENT;
+        case 391: return LOCAL_INFERENCE_ENGINE_EVENT;
         default: return null;
       }
     }
@@ -13939,7 +13956,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional uint32 min_sdk = 2 [deprecated = true];</code>
        * @deprecated android_studio.AndroidStudioEvent.TemplatesUsage.TemplateModule.min_sdk is deprecated.
-       *     See studio_stats.proto;l=2266
+       *     See studio_stats.proto;l=2273
        * @return Whether the minSdk field is set.
        */
       @java.lang.Deprecated boolean hasMinSdk();
@@ -13950,7 +13967,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional uint32 min_sdk = 2 [deprecated = true];</code>
        * @deprecated android_studio.AndroidStudioEvent.TemplatesUsage.TemplateModule.min_sdk is deprecated.
-       *     See studio_stats.proto;l=2266
+       *     See studio_stats.proto;l=2273
        * @return The minSdk.
        */
       @java.lang.Deprecated int getMinSdk();
@@ -14481,7 +14498,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional uint32 min_sdk = 2 [deprecated = true];</code>
        * @deprecated android_studio.AndroidStudioEvent.TemplatesUsage.TemplateModule.min_sdk is deprecated.
-       *     See studio_stats.proto;l=2266
+       *     See studio_stats.proto;l=2273
        * @return Whether the minSdk field is set.
        */
       @java.lang.Override
@@ -14495,7 +14512,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional uint32 min_sdk = 2 [deprecated = true];</code>
        * @deprecated android_studio.AndroidStudioEvent.TemplatesUsage.TemplateModule.min_sdk is deprecated.
-       *     See studio_stats.proto;l=2266
+       *     See studio_stats.proto;l=2273
        * @return The minSdk.
        */
       @java.lang.Override
@@ -15133,7 +15150,7 @@ private static final long serialVersionUID = 0L;
          *
          * <code>optional uint32 min_sdk = 2 [deprecated = true];</code>
          * @deprecated android_studio.AndroidStudioEvent.TemplatesUsage.TemplateModule.min_sdk is deprecated.
-         *     See studio_stats.proto;l=2266
+         *     See studio_stats.proto;l=2273
          * @return Whether the minSdk field is set.
          */
         @java.lang.Override
@@ -15147,7 +15164,7 @@ private static final long serialVersionUID = 0L;
          *
          * <code>optional uint32 min_sdk = 2 [deprecated = true];</code>
          * @deprecated android_studio.AndroidStudioEvent.TemplatesUsage.TemplateModule.min_sdk is deprecated.
-         *     See studio_stats.proto;l=2266
+         *     See studio_stats.proto;l=2273
          * @return The minSdk.
          */
         @java.lang.Override
@@ -15161,7 +15178,7 @@ private static final long serialVersionUID = 0L;
          *
          * <code>optional uint32 min_sdk = 2 [deprecated = true];</code>
          * @deprecated android_studio.AndroidStudioEvent.TemplatesUsage.TemplateModule.min_sdk is deprecated.
-         *     See studio_stats.proto;l=2266
+         *     See studio_stats.proto;l=2273
          * @param value The minSdk to set.
          * @return This builder for chaining.
          */
@@ -15179,7 +15196,7 @@ private static final long serialVersionUID = 0L;
          *
          * <code>optional uint32 min_sdk = 2 [deprecated = true];</code>
          * @deprecated android_studio.AndroidStudioEvent.TemplatesUsage.TemplateModule.min_sdk is deprecated.
-         *     See studio_stats.proto;l=2266
+         *     See studio_stats.proto;l=2273
          * @return This builder for chaining.
          */
         @java.lang.Deprecated public Builder clearMinSdk() {
@@ -17812,6 +17829,7 @@ private static final long serialVersionUID = 0L;
   private int bitField5_;
   private int bitField6_;
   private int bitField7_;
+  private int bitField8_;
   public static final int CATEGORY_FIELD_NUMBER = 1;
   private int category_ = 0;
   /**
@@ -28175,6 +28193,44 @@ private static final long serialVersionUID = 0L;
     return studioBotConfigurationEvent_ == null ? com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.getDefaultInstance() : studioBotConfigurationEvent_;
   }
 
+  public static final int LOCAL_INFERENCE_ENGINE_EVENT_FIELD_NUMBER = 264;
+  private com.google.wireless.android.sdk.stats.LocalInferenceEngineEvent localInferenceEngineEvent_;
+  /**
+   * <pre>
+   * set when kind = LOCAL_INFERENCE_ENGINE_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.LocalInferenceEngineEvent local_inference_engine_event = 264 [lazy = true];</code>
+   * @return Whether the localInferenceEngineEvent field is set.
+   */
+  @java.lang.Override
+  public boolean hasLocalInferenceEngineEvent() {
+    return ((bitField8_ & 0x00000001) != 0);
+  }
+  /**
+   * <pre>
+   * set when kind = LOCAL_INFERENCE_ENGINE_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.LocalInferenceEngineEvent local_inference_engine_event = 264 [lazy = true];</code>
+   * @return The localInferenceEngineEvent.
+   */
+  @java.lang.Override
+  public com.google.wireless.android.sdk.stats.LocalInferenceEngineEvent getLocalInferenceEngineEvent() {
+    return localInferenceEngineEvent_ == null ? com.google.wireless.android.sdk.stats.LocalInferenceEngineEvent.getDefaultInstance() : localInferenceEngineEvent_;
+  }
+  /**
+   * <pre>
+   * set when kind = LOCAL_INFERENCE_ENGINE_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.LocalInferenceEngineEvent local_inference_engine_event = 264 [lazy = true];</code>
+   */
+  @java.lang.Override
+  public com.google.wireless.android.sdk.stats.LocalInferenceEngineEventOrBuilder getLocalInferenceEngineEventOrBuilder() {
+    return localInferenceEngineEvent_ == null ? com.google.wireless.android.sdk.stats.LocalInferenceEngineEvent.getDefaultInstance() : localInferenceEngineEvent_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -28977,6 +29033,9 @@ private static final long serialVersionUID = 0L;
     }
     if (((bitField7_ & 0x80000000) != 0)) {
       output.writeMessage(263, getStudioBotConfigurationEvent());
+    }
+    if (((bitField8_ & 0x00000001) != 0)) {
+      output.writeMessage(264, getLocalInferenceEngineEvent());
     }
     getUnknownFields().writeTo(output);
   }
@@ -30044,6 +30103,10 @@ private static final long serialVersionUID = 0L;
     if (((bitField7_ & 0x80000000) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(263, getStudioBotConfigurationEvent());
+    }
+    if (((bitField8_ & 0x00000001) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(264, getLocalInferenceEngineEvent());
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -31343,6 +31406,11 @@ private static final long serialVersionUID = 0L;
       if (!getStudioBotConfigurationEvent()
           .equals(other.getStudioBotConfigurationEvent())) return false;
     }
+    if (hasLocalInferenceEngineEvent() != other.hasLocalInferenceEngineEvent()) return false;
+    if (hasLocalInferenceEngineEvent()) {
+      if (!getLocalInferenceEngineEvent()
+          .equals(other.getLocalInferenceEngineEvent())) return false;
+    }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -32408,6 +32476,10 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + STUDIO_BOT_CONFIGURATION_EVENT_FIELD_NUMBER;
       hash = (53 * hash) + getStudioBotConfigurationEvent().hashCode();
     }
+    if (hasLocalInferenceEngineEvent()) {
+      hash = (37 * hash) + LOCAL_INFERENCE_ENGINE_EVENT_FIELD_NUMBER;
+      hash = (53 * hash) + getLocalInferenceEngineEvent().hashCode();
+    }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -32776,6 +32848,7 @@ private static final long serialVersionUID = 0L;
         getLightbuildSyncRequestedEventFieldBuilder();
         getLightbuildSyncFinishedEventFieldBuilder();
         getStudioBotConfigurationEventFieldBuilder();
+        getLocalInferenceEngineEventFieldBuilder();
       }
     }
     @java.lang.Override
@@ -34023,6 +34096,11 @@ private static final long serialVersionUID = 0L;
       if (studioBotConfigurationEventBuilder_ != null) {
         studioBotConfigurationEventBuilder_.dispose();
         studioBotConfigurationEventBuilder_ = null;
+      }
+      localInferenceEngineEvent_ = null;
+      if (localInferenceEngineEventBuilder_ != null) {
+        localInferenceEngineEventBuilder_.dispose();
+        localInferenceEngineEventBuilder_ = null;
       }
       return this;
     }
@@ -35673,7 +35751,15 @@ private static final long serialVersionUID = 0L;
             : studioBotConfigurationEventBuilder_.build();
         to_bitField7_ |= 0x80000000;
       }
+      int to_bitField8_ = 0;
+      if (((from_bitField8_ & 0x00000080) != 0)) {
+        result.localInferenceEngineEvent_ = localInferenceEngineEventBuilder_ == null
+            ? localInferenceEngineEvent_
+            : localInferenceEngineEventBuilder_.build();
+        to_bitField8_ |= 0x00000001;
+      }
       result.bitField7_ |= to_bitField7_;
+      result.bitField8_ |= to_bitField8_;
     }
 
     @java.lang.Override
@@ -36603,6 +36689,9 @@ private static final long serialVersionUID = 0L;
       }
       if (other.hasStudioBotConfigurationEvent()) {
         mergeStudioBotConfigurationEvent(other.getStudioBotConfigurationEvent());
+      }
+      if (other.hasLocalInferenceEngineEvent()) {
+        mergeLocalInferenceEngineEvent(other.getLocalInferenceEngineEvent());
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -38545,6 +38634,13 @@ private static final long serialVersionUID = 0L;
               bitField8_ |= 0x00000040;
               break;
             } // case 2106
+            case 2114: {
+              input.readMessage(
+                  getLocalInferenceEngineEventFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField8_ |= 0x00000080;
+              break;
+            } // case 2114
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -78837,6 +78933,161 @@ private static final long serialVersionUID = 0L;
         studioBotConfigurationEvent_ = null;
       }
       return studioBotConfigurationEventBuilder_;
+    }
+
+    private com.google.wireless.android.sdk.stats.LocalInferenceEngineEvent localInferenceEngineEvent_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.LocalInferenceEngineEvent, com.google.wireless.android.sdk.stats.LocalInferenceEngineEvent.Builder, com.google.wireless.android.sdk.stats.LocalInferenceEngineEventOrBuilder> localInferenceEngineEventBuilder_;
+    /**
+     * <pre>
+     * set when kind = LOCAL_INFERENCE_ENGINE_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.LocalInferenceEngineEvent local_inference_engine_event = 264 [lazy = true];</code>
+     * @return Whether the localInferenceEngineEvent field is set.
+     */
+    public boolean hasLocalInferenceEngineEvent() {
+      return ((bitField8_ & 0x00000080) != 0);
+    }
+    /**
+     * <pre>
+     * set when kind = LOCAL_INFERENCE_ENGINE_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.LocalInferenceEngineEvent local_inference_engine_event = 264 [lazy = true];</code>
+     * @return The localInferenceEngineEvent.
+     */
+    public com.google.wireless.android.sdk.stats.LocalInferenceEngineEvent getLocalInferenceEngineEvent() {
+      if (localInferenceEngineEventBuilder_ == null) {
+        return localInferenceEngineEvent_ == null ? com.google.wireless.android.sdk.stats.LocalInferenceEngineEvent.getDefaultInstance() : localInferenceEngineEvent_;
+      } else {
+        return localInferenceEngineEventBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * set when kind = LOCAL_INFERENCE_ENGINE_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.LocalInferenceEngineEvent local_inference_engine_event = 264 [lazy = true];</code>
+     */
+    public Builder setLocalInferenceEngineEvent(com.google.wireless.android.sdk.stats.LocalInferenceEngineEvent value) {
+      if (localInferenceEngineEventBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        localInferenceEngineEvent_ = value;
+      } else {
+        localInferenceEngineEventBuilder_.setMessage(value);
+      }
+      bitField8_ |= 0x00000080;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = LOCAL_INFERENCE_ENGINE_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.LocalInferenceEngineEvent local_inference_engine_event = 264 [lazy = true];</code>
+     */
+    public Builder setLocalInferenceEngineEvent(
+        com.google.wireless.android.sdk.stats.LocalInferenceEngineEvent.Builder builderForValue) {
+      if (localInferenceEngineEventBuilder_ == null) {
+        localInferenceEngineEvent_ = builderForValue.build();
+      } else {
+        localInferenceEngineEventBuilder_.setMessage(builderForValue.build());
+      }
+      bitField8_ |= 0x00000080;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = LOCAL_INFERENCE_ENGINE_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.LocalInferenceEngineEvent local_inference_engine_event = 264 [lazy = true];</code>
+     */
+    public Builder mergeLocalInferenceEngineEvent(com.google.wireless.android.sdk.stats.LocalInferenceEngineEvent value) {
+      if (localInferenceEngineEventBuilder_ == null) {
+        if (((bitField8_ & 0x00000080) != 0) &&
+          localInferenceEngineEvent_ != null &&
+          localInferenceEngineEvent_ != com.google.wireless.android.sdk.stats.LocalInferenceEngineEvent.getDefaultInstance()) {
+          getLocalInferenceEngineEventBuilder().mergeFrom(value);
+        } else {
+          localInferenceEngineEvent_ = value;
+        }
+      } else {
+        localInferenceEngineEventBuilder_.mergeFrom(value);
+      }
+      bitField8_ |= 0x00000080;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = LOCAL_INFERENCE_ENGINE_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.LocalInferenceEngineEvent local_inference_engine_event = 264 [lazy = true];</code>
+     */
+    public Builder clearLocalInferenceEngineEvent() {
+      bitField8_ = (bitField8_ & ~0x00000080);
+      localInferenceEngineEvent_ = null;
+      if (localInferenceEngineEventBuilder_ != null) {
+        localInferenceEngineEventBuilder_.dispose();
+        localInferenceEngineEventBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = LOCAL_INFERENCE_ENGINE_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.LocalInferenceEngineEvent local_inference_engine_event = 264 [lazy = true];</code>
+     */
+    public com.google.wireless.android.sdk.stats.LocalInferenceEngineEvent.Builder getLocalInferenceEngineEventBuilder() {
+      bitField8_ |= 0x00000080;
+      onChanged();
+      return getLocalInferenceEngineEventFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * set when kind = LOCAL_INFERENCE_ENGINE_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.LocalInferenceEngineEvent local_inference_engine_event = 264 [lazy = true];</code>
+     */
+    public com.google.wireless.android.sdk.stats.LocalInferenceEngineEventOrBuilder getLocalInferenceEngineEventOrBuilder() {
+      if (localInferenceEngineEventBuilder_ != null) {
+        return localInferenceEngineEventBuilder_.getMessageOrBuilder();
+      } else {
+        return localInferenceEngineEvent_ == null ?
+            com.google.wireless.android.sdk.stats.LocalInferenceEngineEvent.getDefaultInstance() : localInferenceEngineEvent_;
+      }
+    }
+    /**
+     * <pre>
+     * set when kind = LOCAL_INFERENCE_ENGINE_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.LocalInferenceEngineEvent local_inference_engine_event = 264 [lazy = true];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.LocalInferenceEngineEvent, com.google.wireless.android.sdk.stats.LocalInferenceEngineEvent.Builder, com.google.wireless.android.sdk.stats.LocalInferenceEngineEventOrBuilder> 
+        getLocalInferenceEngineEventFieldBuilder() {
+      if (localInferenceEngineEventBuilder_ == null) {
+        localInferenceEngineEventBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.wireless.android.sdk.stats.LocalInferenceEngineEvent, com.google.wireless.android.sdk.stats.LocalInferenceEngineEvent.Builder, com.google.wireless.android.sdk.stats.LocalInferenceEngineEventOrBuilder>(
+                getLocalInferenceEngineEvent(),
+                getParentForChildren(),
+                isClean());
+        localInferenceEngineEvent_ = null;
+      }
+      return localInferenceEngineEventBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

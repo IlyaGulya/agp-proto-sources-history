@@ -75,6 +75,14 @@ private static final long serialVersionUID = 0L;
      * <code>RESTORED = 4;</code>
      */
     RESTORED(4),
+    /**
+     * <code>AGENT_CHAT_PENDING_CHANGES = 5;</code>
+     */
+    AGENT_CHAT_PENDING_CHANGES(5),
+    /**
+     * <code>AGENT_CHAT_COMMIT_HISTORY = 6;</code>
+     */
+    AGENT_CHAT_COMMIT_HISTORY(6),
     ;
 
     /**
@@ -101,6 +109,14 @@ private static final long serialVersionUID = 0L;
      * <code>RESTORED = 4;</code>
      */
     public static final int RESTORED_VALUE = 4;
+    /**
+     * <code>AGENT_CHAT_PENDING_CHANGES = 5;</code>
+     */
+    public static final int AGENT_CHAT_PENDING_CHANGES_VALUE = 5;
+    /**
+     * <code>AGENT_CHAT_COMMIT_HISTORY = 6;</code>
+     */
+    public static final int AGENT_CHAT_COMMIT_HISTORY_VALUE = 6;
 
 
     public final int getNumber() {
@@ -128,6 +144,8 @@ private static final long serialVersionUID = 0L;
         case 2: return COMMIT_HISTORY;
         case 3: return AGENT_DRAWER;
         case 4: return RESTORED;
+        case 5: return AGENT_CHAT_PENDING_CHANGES;
+        case 6: return AGENT_CHAT_COMMIT_HISTORY;
         default: return null;
       }
     }
