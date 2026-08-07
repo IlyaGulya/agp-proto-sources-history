@@ -7341,4 +7341,31 @@ public interface AndroidStudioEventOrBuilder extends
    * <code>optional .android_studio.StudioBotConfigurationEvent studio_bot_configuration_event = 263 [lazy = true];</code>
    */
   com.google.wireless.android.sdk.stats.StudioBotConfigurationEventOrBuilder getStudioBotConfigurationEventOrBuilder();
+
+  /**
+   * <pre>
+   * set when kind = LOCAL_INFERENCE_ENGINE_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.LocalInferenceEngineEvent local_inference_engine_event = 264 [lazy = true];</code>
+   * @return Whether the localInferenceEngineEvent field is set.
+   */
+  boolean hasLocalInferenceEngineEvent();
+  /**
+   * <pre>
+   * set when kind = LOCAL_INFERENCE_ENGINE_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.LocalInferenceEngineEvent local_inference_engine_event = 264 [lazy = true];</code>
+   * @return The localInferenceEngineEvent.
+   */
+  com.google.wireless.android.sdk.stats.LocalInferenceEngineEvent getLocalInferenceEngineEvent();
+  /**
+   * <pre>
+   * set when kind = LOCAL_INFERENCE_ENGINE_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.LocalInferenceEngineEvent local_inference_engine_event = 264 [lazy = true];</code>
+   */
+  com.google.wireless.android.sdk.stats.LocalInferenceEngineEventOrBuilder getLocalInferenceEngineEventOrBuilder();
 }

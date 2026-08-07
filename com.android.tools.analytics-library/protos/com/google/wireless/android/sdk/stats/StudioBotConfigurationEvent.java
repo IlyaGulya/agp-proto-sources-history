@@ -149,6 +149,10 @@ private static final long serialVersionUID = 0L;
        * <code>LICENSE_TYPE_BUSINESS = 2;</code>
        */
       LICENSE_TYPE_BUSINESS(2),
+      /**
+       * <code>LICENSE_TYPE_ENTERPRISE = 3;</code>
+       */
+      LICENSE_TYPE_ENTERPRISE(3),
       ;
 
       /**
@@ -163,6 +167,10 @@ private static final long serialVersionUID = 0L;
        * <code>LICENSE_TYPE_BUSINESS = 2;</code>
        */
       public static final int LICENSE_TYPE_BUSINESS_VALUE = 2;
+      /**
+       * <code>LICENSE_TYPE_ENTERPRISE = 3;</code>
+       */
+      public static final int LICENSE_TYPE_ENTERPRISE_VALUE = 3;
 
 
       public final int getNumber() {
@@ -188,6 +196,7 @@ private static final long serialVersionUID = 0L;
           case 0: return LICENSE_TYPE_UNKNOWN;
           case 1: return LICENSE_TYPE_CONSUMER;
           case 2: return LICENSE_TYPE_BUSINESS;
+          case 3: return LICENSE_TYPE_ENTERPRISE;
           default: return null;
         }
       }
