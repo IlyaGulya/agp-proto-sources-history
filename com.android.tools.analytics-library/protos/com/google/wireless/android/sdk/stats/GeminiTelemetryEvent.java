@@ -282,6 +282,38 @@ private static final long serialVersionUID = 0L;
      * @return The isDefaultModel.
      */
     boolean getIsDefaultModel();
+
+    /**
+     * <pre>
+     * Ties together events belonging to the same user query turn.
+     * Synthetically generated in metrics for log analysis.
+     * </pre>
+     *
+     * <code>optional string user_query_id = 10;</code>
+     * @return Whether the userQueryId field is set.
+     */
+    boolean hasUserQueryId();
+    /**
+     * <pre>
+     * Ties together events belonging to the same user query turn.
+     * Synthetically generated in metrics for log analysis.
+     * </pre>
+     *
+     * <code>optional string user_query_id = 10;</code>
+     * @return The userQueryId.
+     */
+    java.lang.String getUserQueryId();
+    /**
+     * <pre>
+     * Ties together events belonging to the same user query turn.
+     * Synthetically generated in metrics for log analysis.
+     * </pre>
+     *
+     * <code>optional string user_query_id = 10;</code>
+     * @return The bytes for userQueryId.
+     */
+    com.google.protobuf.ByteString
+        getUserQueryIdBytes();
   }
   /**
    * <pre>
@@ -314,6 +346,7 @@ private static final long serialVersionUID = 0L;
       serverTraceId_ = "";
       modelProviderId_ = "";
       modelId_ = "";
+      userQueryId_ = "";
     }
 
     @java.lang.Override
@@ -818,6 +851,70 @@ private static final long serialVersionUID = 0L;
       return isDefaultModel_;
     }
 
+    public static final int USER_QUERY_ID_FIELD_NUMBER = 10;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object userQueryId_ = "";
+    /**
+     * <pre>
+     * Ties together events belonging to the same user query turn.
+     * Synthetically generated in metrics for log analysis.
+     * </pre>
+     *
+     * <code>optional string user_query_id = 10;</code>
+     * @return Whether the userQueryId field is set.
+     */
+    @java.lang.Override
+    public boolean hasUserQueryId() {
+      return ((bitField0_ & 0x00000200) != 0);
+    }
+    /**
+     * <pre>
+     * Ties together events belonging to the same user query turn.
+     * Synthetically generated in metrics for log analysis.
+     * </pre>
+     *
+     * <code>optional string user_query_id = 10;</code>
+     * @return The userQueryId.
+     */
+    @java.lang.Override
+    public java.lang.String getUserQueryId() {
+      java.lang.Object ref = userQueryId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          userQueryId_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Ties together events belonging to the same user query turn.
+     * Synthetically generated in metrics for log analysis.
+     * </pre>
+     *
+     * <code>optional string user_query_id = 10;</code>
+     * @return The bytes for userQueryId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getUserQueryIdBytes() {
+      java.lang.Object ref = userQueryId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        userQueryId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -859,6 +956,9 @@ private static final long serialVersionUID = 0L;
       if (((bitField0_ & 0x00000100) != 0)) {
         output.writeBool(9, isDefaultModel_);
       }
+      if (((bitField0_ & 0x00000200) != 0)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 10, userQueryId_);
+      }
       getUnknownFields().writeTo(output);
     }
 
@@ -896,6 +996,9 @@ private static final long serialVersionUID = 0L;
       if (((bitField0_ & 0x00000100) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(9, isDefaultModel_);
+      }
+      if (((bitField0_ & 0x00000200) != 0)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(10, userQueryId_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -957,6 +1060,11 @@ private static final long serialVersionUID = 0L;
         if (getIsDefaultModel()
             != other.getIsDefaultModel()) return false;
       }
+      if (hasUserQueryId() != other.hasUserQueryId()) return false;
+      if (hasUserQueryId()) {
+        if (!getUserQueryId()
+            .equals(other.getUserQueryId())) return false;
+      }
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -1005,6 +1113,10 @@ private static final long serialVersionUID = 0L;
         hash = (37 * hash) + IS_DEFAULT_MODEL_FIELD_NUMBER;
         hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
             getIsDefaultModel());
+      }
+      if (hasUserQueryId()) {
+        hash = (37 * hash) + USER_QUERY_ID_FIELD_NUMBER;
+        hash = (53 * hash) + getUserQueryId().hashCode();
       }
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
@@ -1155,6 +1267,7 @@ private static final long serialVersionUID = 0L;
         modelProviderId_ = "";
         modelId_ = "";
         isDefaultModel_ = false;
+        userQueryId_ = "";
         return this;
       }
 
@@ -1225,6 +1338,10 @@ private static final long serialVersionUID = 0L;
           result.isDefaultModel_ = isDefaultModel_;
           to_bitField0_ |= 0x00000100;
         }
+        if (((from_bitField0_ & 0x00000200) != 0)) {
+          result.userQueryId_ = userQueryId_;
+          to_bitField0_ |= 0x00000200;
+        }
         result.bitField0_ |= to_bitField0_;
       }
 
@@ -1280,6 +1397,11 @@ private static final long serialVersionUID = 0L;
         }
         if (other.hasIsDefaultModel()) {
           setIsDefaultModel(other.getIsDefaultModel());
+        }
+        if (other.hasUserQueryId()) {
+          userQueryId_ = other.userQueryId_;
+          bitField0_ |= 0x00000200;
+          onChanged();
         }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
@@ -1352,6 +1474,11 @@ private static final long serialVersionUID = 0L;
                 bitField0_ |= 0x00000100;
                 break;
               } // case 72
+              case 82: {
+                userQueryId_ = input.readBytes();
+                bitField0_ |= 0x00000200;
+                break;
+              } // case 82
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -2205,6 +2332,116 @@ private static final long serialVersionUID = 0L;
       public Builder clearIsDefaultModel() {
         bitField0_ = (bitField0_ & ~0x00000100);
         isDefaultModel_ = false;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object userQueryId_ = "";
+      /**
+       * <pre>
+       * Ties together events belonging to the same user query turn.
+       * Synthetically generated in metrics for log analysis.
+       * </pre>
+       *
+       * <code>optional string user_query_id = 10;</code>
+       * @return Whether the userQueryId field is set.
+       */
+      public boolean hasUserQueryId() {
+        return ((bitField0_ & 0x00000200) != 0);
+      }
+      /**
+       * <pre>
+       * Ties together events belonging to the same user query turn.
+       * Synthetically generated in metrics for log analysis.
+       * </pre>
+       *
+       * <code>optional string user_query_id = 10;</code>
+       * @return The userQueryId.
+       */
+      public java.lang.String getUserQueryId() {
+        java.lang.Object ref = userQueryId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            userQueryId_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Ties together events belonging to the same user query turn.
+       * Synthetically generated in metrics for log analysis.
+       * </pre>
+       *
+       * <code>optional string user_query_id = 10;</code>
+       * @return The bytes for userQueryId.
+       */
+      public com.google.protobuf.ByteString
+          getUserQueryIdBytes() {
+        java.lang.Object ref = userQueryId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          userQueryId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Ties together events belonging to the same user query turn.
+       * Synthetically generated in metrics for log analysis.
+       * </pre>
+       *
+       * <code>optional string user_query_id = 10;</code>
+       * @param value The userQueryId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setUserQueryId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        userQueryId_ = value;
+        bitField0_ |= 0x00000200;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Ties together events belonging to the same user query turn.
+       * Synthetically generated in metrics for log analysis.
+       * </pre>
+       *
+       * <code>optional string user_query_id = 10;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearUserQueryId() {
+        userQueryId_ = getDefaultInstance().getUserQueryId();
+        bitField0_ = (bitField0_ & ~0x00000200);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Ties together events belonging to the same user query turn.
+       * Synthetically generated in metrics for log analysis.
+       * </pre>
+       *
+       * <code>optional string user_query_id = 10;</code>
+       * @param value The bytes for userQueryId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setUserQueryIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        userQueryId_ = value;
+        bitField0_ |= 0x00000200;
         onChanged();
         return this;
       }
@@ -8888,6 +9125,38 @@ private static final long serialVersionUID = 0L;
        * @return The userQueryType.
        */
       com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.UserQueryStarted.UserQueryType getUserQueryType();
+
+      /**
+       * <pre>
+       * Ties together events belonging to the same user query turn.
+       * Synthetically generated in metrics for log analysis.
+       * </pre>
+       *
+       * <code>optional string user_query_id = 3;</code>
+       * @return Whether the userQueryId field is set.
+       */
+      boolean hasUserQueryId();
+      /**
+       * <pre>
+       * Ties together events belonging to the same user query turn.
+       * Synthetically generated in metrics for log analysis.
+       * </pre>
+       *
+       * <code>optional string user_query_id = 3;</code>
+       * @return The userQueryId.
+       */
+      java.lang.String getUserQueryId();
+      /**
+       * <pre>
+       * Ties together events belonging to the same user query turn.
+       * Synthetically generated in metrics for log analysis.
+       * </pre>
+       *
+       * <code>optional string user_query_id = 3;</code>
+       * @return The bytes for userQueryId.
+       */
+      com.google.protobuf.ByteString
+          getUserQueryIdBytes();
     }
     /**
      * Protobuf type {@code android_studio.GeminiTelemetryEvent.UiEvent.UserQueryStarted}
@@ -8903,6 +9172,7 @@ private static final long serialVersionUID = 0L;
       }
       private UserQueryStarted() {
         userQueryType_ = 0;
+        userQueryId_ = "";
       }
 
       @java.lang.Override
@@ -9163,6 +9433,70 @@ private static final long serialVersionUID = 0L;
         return result == null ? com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.UserQueryStarted.UserQueryType.USER_QUERY_TYPE_UNSPECIFIED : result;
       }
 
+      public static final int USER_QUERY_ID_FIELD_NUMBER = 3;
+      @SuppressWarnings("serial")
+      private volatile java.lang.Object userQueryId_ = "";
+      /**
+       * <pre>
+       * Ties together events belonging to the same user query turn.
+       * Synthetically generated in metrics for log analysis.
+       * </pre>
+       *
+       * <code>optional string user_query_id = 3;</code>
+       * @return Whether the userQueryId field is set.
+       */
+      @java.lang.Override
+      public boolean hasUserQueryId() {
+        return ((bitField0_ & 0x00000004) != 0);
+      }
+      /**
+       * <pre>
+       * Ties together events belonging to the same user query turn.
+       * Synthetically generated in metrics for log analysis.
+       * </pre>
+       *
+       * <code>optional string user_query_id = 3;</code>
+       * @return The userQueryId.
+       */
+      @java.lang.Override
+      public java.lang.String getUserQueryId() {
+        java.lang.Object ref = userQueryId_;
+        if (ref instanceof java.lang.String) {
+          return (java.lang.String) ref;
+        } else {
+          com.google.protobuf.ByteString bs = 
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            userQueryId_ = s;
+          }
+          return s;
+        }
+      }
+      /**
+       * <pre>
+       * Ties together events belonging to the same user query turn.
+       * Synthetically generated in metrics for log analysis.
+       * </pre>
+       *
+       * <code>optional string user_query_id = 3;</code>
+       * @return The bytes for userQueryId.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getUserQueryIdBytes() {
+        java.lang.Object ref = userQueryId_;
+        if (ref instanceof java.lang.String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          userQueryId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+
       private byte memoizedIsInitialized = -1;
       @java.lang.Override
       public final boolean isInitialized() {
@@ -9183,6 +9517,9 @@ private static final long serialVersionUID = 0L;
         if (((bitField0_ & 0x00000002) != 0)) {
           output.writeEnum(2, userQueryType_);
         }
+        if (((bitField0_ & 0x00000004) != 0)) {
+          com.google.protobuf.GeneratedMessageV3.writeString(output, 3, userQueryId_);
+        }
         getUnknownFields().writeTo(output);
       }
 
@@ -9199,6 +9536,9 @@ private static final long serialVersionUID = 0L;
         if (((bitField0_ & 0x00000002) != 0)) {
           size += com.google.protobuf.CodedOutputStream
             .computeEnumSize(2, userQueryType_);
+        }
+        if (((bitField0_ & 0x00000004) != 0)) {
+          size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, userQueryId_);
         }
         size += getUnknownFields().getSerializedSize();
         memoizedSize = size;
@@ -9224,6 +9564,11 @@ private static final long serialVersionUID = 0L;
         if (hasUserQueryType()) {
           if (userQueryType_ != other.userQueryType_) return false;
         }
+        if (hasUserQueryId() != other.hasUserQueryId()) return false;
+        if (hasUserQueryId()) {
+          if (!getUserQueryId()
+              .equals(other.getUserQueryId())) return false;
+        }
         if (!getUnknownFields().equals(other.getUnknownFields())) return false;
         return true;
       }
@@ -9243,6 +9588,10 @@ private static final long serialVersionUID = 0L;
         if (hasUserQueryType()) {
           hash = (37 * hash) + USER_QUERY_TYPE_FIELD_NUMBER;
           hash = (53 * hash) + userQueryType_;
+        }
+        if (hasUserQueryId()) {
+          hash = (37 * hash) + USER_QUERY_ID_FIELD_NUMBER;
+          hash = (53 * hash) + getUserQueryId().hashCode();
         }
         hash = (29 * hash) + getUnknownFields().hashCode();
         memoizedHashCode = hash;
@@ -9375,6 +9724,7 @@ private static final long serialVersionUID = 0L;
           bitField0_ = 0;
           fromSlashCommand_ = false;
           userQueryType_ = 0;
+          userQueryId_ = "";
           return this;
         }
 
@@ -9417,6 +9767,10 @@ private static final long serialVersionUID = 0L;
             result.userQueryType_ = userQueryType_;
             to_bitField0_ |= 0x00000002;
           }
+          if (((from_bitField0_ & 0x00000004) != 0)) {
+            result.userQueryId_ = userQueryId_;
+            to_bitField0_ |= 0x00000004;
+          }
           result.bitField0_ |= to_bitField0_;
         }
 
@@ -9437,6 +9791,11 @@ private static final long serialVersionUID = 0L;
           }
           if (other.hasUserQueryType()) {
             setUserQueryType(other.getUserQueryType());
+          }
+          if (other.hasUserQueryId()) {
+            userQueryId_ = other.userQueryId_;
+            bitField0_ |= 0x00000004;
+            onChanged();
           }
           this.mergeUnknownFields(other.getUnknownFields());
           onChanged();
@@ -9481,6 +9840,11 @@ private static final long serialVersionUID = 0L;
                   }
                   break;
                 } // case 16
+                case 26: {
+                  userQueryId_ = input.readBytes();
+                  bitField0_ |= 0x00000004;
+                  break;
+                } // case 26
                 default: {
                   if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                     done = true; // was an endgroup tag
@@ -9612,6 +9976,116 @@ private static final long serialVersionUID = 0L;
         public Builder clearUserQueryType() {
           bitField0_ = (bitField0_ & ~0x00000002);
           userQueryType_ = 0;
+          onChanged();
+          return this;
+        }
+
+        private java.lang.Object userQueryId_ = "";
+        /**
+         * <pre>
+         * Ties together events belonging to the same user query turn.
+         * Synthetically generated in metrics for log analysis.
+         * </pre>
+         *
+         * <code>optional string user_query_id = 3;</code>
+         * @return Whether the userQueryId field is set.
+         */
+        public boolean hasUserQueryId() {
+          return ((bitField0_ & 0x00000004) != 0);
+        }
+        /**
+         * <pre>
+         * Ties together events belonging to the same user query turn.
+         * Synthetically generated in metrics for log analysis.
+         * </pre>
+         *
+         * <code>optional string user_query_id = 3;</code>
+         * @return The userQueryId.
+         */
+        public java.lang.String getUserQueryId() {
+          java.lang.Object ref = userQueryId_;
+          if (!(ref instanceof java.lang.String)) {
+            com.google.protobuf.ByteString bs =
+                (com.google.protobuf.ByteString) ref;
+            java.lang.String s = bs.toStringUtf8();
+            if (bs.isValidUtf8()) {
+              userQueryId_ = s;
+            }
+            return s;
+          } else {
+            return (java.lang.String) ref;
+          }
+        }
+        /**
+         * <pre>
+         * Ties together events belonging to the same user query turn.
+         * Synthetically generated in metrics for log analysis.
+         * </pre>
+         *
+         * <code>optional string user_query_id = 3;</code>
+         * @return The bytes for userQueryId.
+         */
+        public com.google.protobuf.ByteString
+            getUserQueryIdBytes() {
+          java.lang.Object ref = userQueryId_;
+          if (ref instanceof String) {
+            com.google.protobuf.ByteString b = 
+                com.google.protobuf.ByteString.copyFromUtf8(
+                    (java.lang.String) ref);
+            userQueryId_ = b;
+            return b;
+          } else {
+            return (com.google.protobuf.ByteString) ref;
+          }
+        }
+        /**
+         * <pre>
+         * Ties together events belonging to the same user query turn.
+         * Synthetically generated in metrics for log analysis.
+         * </pre>
+         *
+         * <code>optional string user_query_id = 3;</code>
+         * @param value The userQueryId to set.
+         * @return This builder for chaining.
+         */
+        public Builder setUserQueryId(
+            java.lang.String value) {
+          if (value == null) { throw new NullPointerException(); }
+          userQueryId_ = value;
+          bitField0_ |= 0x00000004;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Ties together events belonging to the same user query turn.
+         * Synthetically generated in metrics for log analysis.
+         * </pre>
+         *
+         * <code>optional string user_query_id = 3;</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearUserQueryId() {
+          userQueryId_ = getDefaultInstance().getUserQueryId();
+          bitField0_ = (bitField0_ & ~0x00000004);
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Ties together events belonging to the same user query turn.
+         * Synthetically generated in metrics for log analysis.
+         * </pre>
+         *
+         * <code>optional string user_query_id = 3;</code>
+         * @param value The bytes for userQueryId to set.
+         * @return This builder for chaining.
+         */
+        public Builder setUserQueryIdBytes(
+            com.google.protobuf.ByteString value) {
+          if (value == null) { throw new NullPointerException(); }
+          userQueryId_ = value;
+          bitField0_ |= 0x00000004;
           onChanged();
           return this;
         }
@@ -9760,6 +10234,38 @@ private static final long serialVersionUID = 0L;
        * @return The latencyMs.
        */
       long getLatencyMs();
+
+      /**
+       * <pre>
+       * Ties together events belonging to the same user query turn.
+       * Synthetically generated in metrics for log analysis.
+       * </pre>
+       *
+       * <code>optional string user_query_id = 4;</code>
+       * @return Whether the userQueryId field is set.
+       */
+      boolean hasUserQueryId();
+      /**
+       * <pre>
+       * Ties together events belonging to the same user query turn.
+       * Synthetically generated in metrics for log analysis.
+       * </pre>
+       *
+       * <code>optional string user_query_id = 4;</code>
+       * @return The userQueryId.
+       */
+      java.lang.String getUserQueryId();
+      /**
+       * <pre>
+       * Ties together events belonging to the same user query turn.
+       * Synthetically generated in metrics for log analysis.
+       * </pre>
+       *
+       * <code>optional string user_query_id = 4;</code>
+       * @return The bytes for userQueryId.
+       */
+      com.google.protobuf.ByteString
+          getUserQueryIdBytes();
     }
     /**
      * Protobuf type {@code android_studio.GeminiTelemetryEvent.UiEvent.UserQueryFinished}
@@ -9775,6 +10281,7 @@ private static final long serialVersionUID = 0L;
       }
       private UserQueryFinished() {
         exceptionClassName_ = "";
+        userQueryId_ = "";
       }
 
       @java.lang.Override
@@ -9924,6 +10431,70 @@ private static final long serialVersionUID = 0L;
         return latencyMs_;
       }
 
+      public static final int USER_QUERY_ID_FIELD_NUMBER = 4;
+      @SuppressWarnings("serial")
+      private volatile java.lang.Object userQueryId_ = "";
+      /**
+       * <pre>
+       * Ties together events belonging to the same user query turn.
+       * Synthetically generated in metrics for log analysis.
+       * </pre>
+       *
+       * <code>optional string user_query_id = 4;</code>
+       * @return Whether the userQueryId field is set.
+       */
+      @java.lang.Override
+      public boolean hasUserQueryId() {
+        return ((bitField0_ & 0x00000008) != 0);
+      }
+      /**
+       * <pre>
+       * Ties together events belonging to the same user query turn.
+       * Synthetically generated in metrics for log analysis.
+       * </pre>
+       *
+       * <code>optional string user_query_id = 4;</code>
+       * @return The userQueryId.
+       */
+      @java.lang.Override
+      public java.lang.String getUserQueryId() {
+        java.lang.Object ref = userQueryId_;
+        if (ref instanceof java.lang.String) {
+          return (java.lang.String) ref;
+        } else {
+          com.google.protobuf.ByteString bs = 
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            userQueryId_ = s;
+          }
+          return s;
+        }
+      }
+      /**
+       * <pre>
+       * Ties together events belonging to the same user query turn.
+       * Synthetically generated in metrics for log analysis.
+       * </pre>
+       *
+       * <code>optional string user_query_id = 4;</code>
+       * @return The bytes for userQueryId.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getUserQueryIdBytes() {
+        java.lang.Object ref = userQueryId_;
+        if (ref instanceof java.lang.String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          userQueryId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+
       private byte memoizedIsInitialized = -1;
       @java.lang.Override
       public final boolean isInitialized() {
@@ -9947,6 +10518,9 @@ private static final long serialVersionUID = 0L;
         if (((bitField0_ & 0x00000004) != 0)) {
           output.writeInt64(3, latencyMs_);
         }
+        if (((bitField0_ & 0x00000008) != 0)) {
+          com.google.protobuf.GeneratedMessageV3.writeString(output, 4, userQueryId_);
+        }
         getUnknownFields().writeTo(output);
       }
 
@@ -9966,6 +10540,9 @@ private static final long serialVersionUID = 0L;
         if (((bitField0_ & 0x00000004) != 0)) {
           size += com.google.protobuf.CodedOutputStream
             .computeInt64Size(3, latencyMs_);
+        }
+        if (((bitField0_ & 0x00000008) != 0)) {
+          size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, userQueryId_);
         }
         size += getUnknownFields().getSerializedSize();
         memoizedSize = size;
@@ -9997,6 +10574,11 @@ private static final long serialVersionUID = 0L;
           if (getLatencyMs()
               != other.getLatencyMs()) return false;
         }
+        if (hasUserQueryId() != other.hasUserQueryId()) return false;
+        if (hasUserQueryId()) {
+          if (!getUserQueryId()
+              .equals(other.getUserQueryId())) return false;
+        }
         if (!getUnknownFields().equals(other.getUnknownFields())) return false;
         return true;
       }
@@ -10021,6 +10603,10 @@ private static final long serialVersionUID = 0L;
           hash = (37 * hash) + LATENCY_MS_FIELD_NUMBER;
           hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
               getLatencyMs());
+        }
+        if (hasUserQueryId()) {
+          hash = (37 * hash) + USER_QUERY_ID_FIELD_NUMBER;
+          hash = (53 * hash) + getUserQueryId().hashCode();
         }
         hash = (29 * hash) + getUnknownFields().hashCode();
         memoizedHashCode = hash;
@@ -10154,6 +10740,7 @@ private static final long serialVersionUID = 0L;
           fromSlashCommand_ = false;
           exceptionClassName_ = "";
           latencyMs_ = 0L;
+          userQueryId_ = "";
           return this;
         }
 
@@ -10200,6 +10787,10 @@ private static final long serialVersionUID = 0L;
             result.latencyMs_ = latencyMs_;
             to_bitField0_ |= 0x00000004;
           }
+          if (((from_bitField0_ & 0x00000008) != 0)) {
+            result.userQueryId_ = userQueryId_;
+            to_bitField0_ |= 0x00000008;
+          }
           result.bitField0_ |= to_bitField0_;
         }
 
@@ -10225,6 +10816,11 @@ private static final long serialVersionUID = 0L;
           }
           if (other.hasLatencyMs()) {
             setLatencyMs(other.getLatencyMs());
+          }
+          if (other.hasUserQueryId()) {
+            userQueryId_ = other.userQueryId_;
+            bitField0_ |= 0x00000008;
+            onChanged();
           }
           this.mergeUnknownFields(other.getUnknownFields());
           onChanged();
@@ -10267,6 +10863,11 @@ private static final long serialVersionUID = 0L;
                   bitField0_ |= 0x00000004;
                   break;
                 } // case 24
+                case 34: {
+                  userQueryId_ = input.readBytes();
+                  bitField0_ |= 0x00000008;
+                  break;
+                } // case 34
                 default: {
                   if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                     done = true; // was an endgroup tag
@@ -10518,6 +11119,116 @@ private static final long serialVersionUID = 0L;
         public Builder clearLatencyMs() {
           bitField0_ = (bitField0_ & ~0x00000004);
           latencyMs_ = 0L;
+          onChanged();
+          return this;
+        }
+
+        private java.lang.Object userQueryId_ = "";
+        /**
+         * <pre>
+         * Ties together events belonging to the same user query turn.
+         * Synthetically generated in metrics for log analysis.
+         * </pre>
+         *
+         * <code>optional string user_query_id = 4;</code>
+         * @return Whether the userQueryId field is set.
+         */
+        public boolean hasUserQueryId() {
+          return ((bitField0_ & 0x00000008) != 0);
+        }
+        /**
+         * <pre>
+         * Ties together events belonging to the same user query turn.
+         * Synthetically generated in metrics for log analysis.
+         * </pre>
+         *
+         * <code>optional string user_query_id = 4;</code>
+         * @return The userQueryId.
+         */
+        public java.lang.String getUserQueryId() {
+          java.lang.Object ref = userQueryId_;
+          if (!(ref instanceof java.lang.String)) {
+            com.google.protobuf.ByteString bs =
+                (com.google.protobuf.ByteString) ref;
+            java.lang.String s = bs.toStringUtf8();
+            if (bs.isValidUtf8()) {
+              userQueryId_ = s;
+            }
+            return s;
+          } else {
+            return (java.lang.String) ref;
+          }
+        }
+        /**
+         * <pre>
+         * Ties together events belonging to the same user query turn.
+         * Synthetically generated in metrics for log analysis.
+         * </pre>
+         *
+         * <code>optional string user_query_id = 4;</code>
+         * @return The bytes for userQueryId.
+         */
+        public com.google.protobuf.ByteString
+            getUserQueryIdBytes() {
+          java.lang.Object ref = userQueryId_;
+          if (ref instanceof String) {
+            com.google.protobuf.ByteString b = 
+                com.google.protobuf.ByteString.copyFromUtf8(
+                    (java.lang.String) ref);
+            userQueryId_ = b;
+            return b;
+          } else {
+            return (com.google.protobuf.ByteString) ref;
+          }
+        }
+        /**
+         * <pre>
+         * Ties together events belonging to the same user query turn.
+         * Synthetically generated in metrics for log analysis.
+         * </pre>
+         *
+         * <code>optional string user_query_id = 4;</code>
+         * @param value The userQueryId to set.
+         * @return This builder for chaining.
+         */
+        public Builder setUserQueryId(
+            java.lang.String value) {
+          if (value == null) { throw new NullPointerException(); }
+          userQueryId_ = value;
+          bitField0_ |= 0x00000008;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Ties together events belonging to the same user query turn.
+         * Synthetically generated in metrics for log analysis.
+         * </pre>
+         *
+         * <code>optional string user_query_id = 4;</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearUserQueryId() {
+          userQueryId_ = getDefaultInstance().getUserQueryId();
+          bitField0_ = (bitField0_ & ~0x00000008);
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Ties together events belonging to the same user query turn.
+         * Synthetically generated in metrics for log analysis.
+         * </pre>
+         *
+         * <code>optional string user_query_id = 4;</code>
+         * @param value The bytes for userQueryId to set.
+         * @return This builder for chaining.
+         */
+        public Builder setUserQueryIdBytes(
+            com.google.protobuf.ByteString value) {
+          if (value == null) { throw new NullPointerException(); }
+          userQueryId_ = value;
+          bitField0_ |= 0x00000008;
           onChanged();
           return this;
         }
@@ -25736,44 +26447,44 @@ private static final long serialVersionUID = 0L;
 
         /**
          * <pre>
-         * Arguments used for the command.
+         * Option names used for the command.
          * </pre>
          *
-         * <code>repeated string arguments = 3;</code>
-         * @return A list containing the arguments.
+         * <code>repeated string option_names = 3;</code>
+         * @return A list containing the optionNames.
          */
         java.util.List<java.lang.String>
-            getArgumentsList();
+            getOptionNamesList();
         /**
          * <pre>
-         * Arguments used for the command.
+         * Option names used for the command.
          * </pre>
          *
-         * <code>repeated string arguments = 3;</code>
-         * @return The count of arguments.
+         * <code>repeated string option_names = 3;</code>
+         * @return The count of optionNames.
          */
-        int getArgumentsCount();
+        int getOptionNamesCount();
         /**
          * <pre>
-         * Arguments used for the command.
+         * Option names used for the command.
          * </pre>
          *
-         * <code>repeated string arguments = 3;</code>
+         * <code>repeated string option_names = 3;</code>
          * @param index The index of the element to return.
-         * @return The arguments at the given index.
+         * @return The optionNames at the given index.
          */
-        java.lang.String getArguments(int index);
+        java.lang.String getOptionNames(int index);
         /**
          * <pre>
-         * Arguments used for the command.
+         * Option names used for the command.
          * </pre>
          *
-         * <code>repeated string arguments = 3;</code>
+         * <code>repeated string option_names = 3;</code>
          * @param index The index of the value to return.
-         * @return The bytes of the arguments at the given index.
+         * @return The bytes of the optionNames at the given index.
          */
         com.google.protobuf.ByteString
-            getArgumentsBytes(int index);
+            getOptionNamesBytes(int index);
       }
       /**
        * Protobuf type {@code android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.RunShellCommandToolCallData}
@@ -25789,7 +26500,7 @@ private static final long serialVersionUID = 0L;
         }
         private RunShellCommandToolCallData() {
           command_ = 0;
-          arguments_ =
+          optionNames_ =
               com.google.protobuf.LazyStringArrayList.emptyList();
         }
 
@@ -25867,57 +26578,57 @@ private static final long serialVersionUID = 0L;
           return delegatedToNativeTool_;
         }
 
-        public static final int ARGUMENTS_FIELD_NUMBER = 3;
+        public static final int OPTION_NAMES_FIELD_NUMBER = 3;
         @SuppressWarnings("serial")
-        private com.google.protobuf.LazyStringArrayList arguments_ =
+        private com.google.protobuf.LazyStringArrayList optionNames_ =
             com.google.protobuf.LazyStringArrayList.emptyList();
         /**
          * <pre>
-         * Arguments used for the command.
+         * Option names used for the command.
          * </pre>
          *
-         * <code>repeated string arguments = 3;</code>
-         * @return A list containing the arguments.
+         * <code>repeated string option_names = 3;</code>
+         * @return A list containing the optionNames.
          */
         public com.google.protobuf.ProtocolStringList
-            getArgumentsList() {
-          return arguments_;
+            getOptionNamesList() {
+          return optionNames_;
         }
         /**
          * <pre>
-         * Arguments used for the command.
+         * Option names used for the command.
          * </pre>
          *
-         * <code>repeated string arguments = 3;</code>
-         * @return The count of arguments.
+         * <code>repeated string option_names = 3;</code>
+         * @return The count of optionNames.
          */
-        public int getArgumentsCount() {
-          return arguments_.size();
+        public int getOptionNamesCount() {
+          return optionNames_.size();
         }
         /**
          * <pre>
-         * Arguments used for the command.
+         * Option names used for the command.
          * </pre>
          *
-         * <code>repeated string arguments = 3;</code>
+         * <code>repeated string option_names = 3;</code>
          * @param index The index of the element to return.
-         * @return The arguments at the given index.
+         * @return The optionNames at the given index.
          */
-        public java.lang.String getArguments(int index) {
-          return arguments_.get(index);
+        public java.lang.String getOptionNames(int index) {
+          return optionNames_.get(index);
         }
         /**
          * <pre>
-         * Arguments used for the command.
+         * Option names used for the command.
          * </pre>
          *
-         * <code>repeated string arguments = 3;</code>
+         * <code>repeated string option_names = 3;</code>
          * @param index The index of the value to return.
-         * @return The bytes of the arguments at the given index.
+         * @return The bytes of the optionNames at the given index.
          */
         public com.google.protobuf.ByteString
-            getArgumentsBytes(int index) {
-          return arguments_.getByteString(index);
+            getOptionNamesBytes(int index) {
+          return optionNames_.getByteString(index);
         }
 
         private byte memoizedIsInitialized = -1;
@@ -25940,8 +26651,8 @@ private static final long serialVersionUID = 0L;
           if (((bitField0_ & 0x00000002) != 0)) {
             output.writeBool(2, delegatedToNativeTool_);
           }
-          for (int i = 0; i < arguments_.size(); i++) {
-            com.google.protobuf.GeneratedMessageV3.writeString(output, 3, arguments_.getRaw(i));
+          for (int i = 0; i < optionNames_.size(); i++) {
+            com.google.protobuf.GeneratedMessageV3.writeString(output, 3, optionNames_.getRaw(i));
           }
           getUnknownFields().writeTo(output);
         }
@@ -25962,11 +26673,11 @@ private static final long serialVersionUID = 0L;
           }
           {
             int dataSize = 0;
-            for (int i = 0; i < arguments_.size(); i++) {
-              dataSize += computeStringSizeNoTag(arguments_.getRaw(i));
+            for (int i = 0; i < optionNames_.size(); i++) {
+              dataSize += computeStringSizeNoTag(optionNames_.getRaw(i));
             }
             size += dataSize;
-            size += 1 * getArgumentsList().size();
+            size += 1 * getOptionNamesList().size();
           }
           size += getUnknownFields().getSerializedSize();
           memoizedSize = size;
@@ -25992,8 +26703,8 @@ private static final long serialVersionUID = 0L;
             if (getDelegatedToNativeTool()
                 != other.getDelegatedToNativeTool()) return false;
           }
-          if (!getArgumentsList()
-              .equals(other.getArgumentsList())) return false;
+          if (!getOptionNamesList()
+              .equals(other.getOptionNamesList())) return false;
           if (!getUnknownFields().equals(other.getUnknownFields())) return false;
           return true;
         }
@@ -26014,9 +26725,9 @@ private static final long serialVersionUID = 0L;
             hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
                 getDelegatedToNativeTool());
           }
-          if (getArgumentsCount() > 0) {
-            hash = (37 * hash) + ARGUMENTS_FIELD_NUMBER;
-            hash = (53 * hash) + getArgumentsList().hashCode();
+          if (getOptionNamesCount() > 0) {
+            hash = (37 * hash) + OPTION_NAMES_FIELD_NUMBER;
+            hash = (53 * hash) + getOptionNamesList().hashCode();
           }
           hash = (29 * hash) + getUnknownFields().hashCode();
           memoizedHashCode = hash;
@@ -26149,7 +26860,7 @@ private static final long serialVersionUID = 0L;
             bitField0_ = 0;
             command_ = 0;
             delegatedToNativeTool_ = false;
-            arguments_ =
+            optionNames_ =
                 com.google.protobuf.LazyStringArrayList.emptyList();
             return this;
           }
@@ -26194,8 +26905,8 @@ private static final long serialVersionUID = 0L;
               to_bitField0_ |= 0x00000002;
             }
             if (((from_bitField0_ & 0x00000004) != 0)) {
-              arguments_.makeImmutable();
-              result.arguments_ = arguments_;
+              optionNames_.makeImmutable();
+              result.optionNames_ = optionNames_;
             }
             result.bitField0_ |= to_bitField0_;
           }
@@ -26218,13 +26929,13 @@ private static final long serialVersionUID = 0L;
             if (other.hasDelegatedToNativeTool()) {
               setDelegatedToNativeTool(other.getDelegatedToNativeTool());
             }
-            if (!other.arguments_.isEmpty()) {
-              if (arguments_.isEmpty()) {
-                arguments_ = other.arguments_;
+            if (!other.optionNames_.isEmpty()) {
+              if (optionNames_.isEmpty()) {
+                optionNames_ = other.optionNames_;
                 bitField0_ |= 0x00000004;
               } else {
-                ensureArgumentsIsMutable();
-                arguments_.addAll(other.arguments_);
+                ensureOptionNamesIsMutable();
+                optionNames_.addAll(other.optionNames_);
               }
               onChanged();
             }
@@ -26273,8 +26984,8 @@ private static final long serialVersionUID = 0L;
                   } // case 16
                   case 26: {
                     com.google.protobuf.ByteString bs = input.readBytes();
-                    ensureArgumentsIsMutable();
-                    arguments_.add(bs);
+                    ensureOptionNamesIsMutable();
+                    optionNames_.add(bs);
                     break;
                   } // case 26
                   default: {
@@ -26408,128 +27119,128 @@ private static final long serialVersionUID = 0L;
             return this;
           }
 
-          private com.google.protobuf.LazyStringArrayList arguments_ =
+          private com.google.protobuf.LazyStringArrayList optionNames_ =
               com.google.protobuf.LazyStringArrayList.emptyList();
-          private void ensureArgumentsIsMutable() {
-            if (!arguments_.isModifiable()) {
-              arguments_ = new com.google.protobuf.LazyStringArrayList(arguments_);
+          private void ensureOptionNamesIsMutable() {
+            if (!optionNames_.isModifiable()) {
+              optionNames_ = new com.google.protobuf.LazyStringArrayList(optionNames_);
             }
             bitField0_ |= 0x00000004;
           }
           /**
            * <pre>
-           * Arguments used for the command.
+           * Option names used for the command.
            * </pre>
            *
-           * <code>repeated string arguments = 3;</code>
-           * @return A list containing the arguments.
+           * <code>repeated string option_names = 3;</code>
+           * @return A list containing the optionNames.
            */
           public com.google.protobuf.ProtocolStringList
-              getArgumentsList() {
-            arguments_.makeImmutable();
-            return arguments_;
+              getOptionNamesList() {
+            optionNames_.makeImmutable();
+            return optionNames_;
           }
           /**
            * <pre>
-           * Arguments used for the command.
+           * Option names used for the command.
            * </pre>
            *
-           * <code>repeated string arguments = 3;</code>
-           * @return The count of arguments.
+           * <code>repeated string option_names = 3;</code>
+           * @return The count of optionNames.
            */
-          public int getArgumentsCount() {
-            return arguments_.size();
+          public int getOptionNamesCount() {
+            return optionNames_.size();
           }
           /**
            * <pre>
-           * Arguments used for the command.
+           * Option names used for the command.
            * </pre>
            *
-           * <code>repeated string arguments = 3;</code>
+           * <code>repeated string option_names = 3;</code>
            * @param index The index of the element to return.
-           * @return The arguments at the given index.
+           * @return The optionNames at the given index.
            */
-          public java.lang.String getArguments(int index) {
-            return arguments_.get(index);
+          public java.lang.String getOptionNames(int index) {
+            return optionNames_.get(index);
           }
           /**
            * <pre>
-           * Arguments used for the command.
+           * Option names used for the command.
            * </pre>
            *
-           * <code>repeated string arguments = 3;</code>
+           * <code>repeated string option_names = 3;</code>
            * @param index The index of the value to return.
-           * @return The bytes of the arguments at the given index.
+           * @return The bytes of the optionNames at the given index.
            */
           public com.google.protobuf.ByteString
-              getArgumentsBytes(int index) {
-            return arguments_.getByteString(index);
+              getOptionNamesBytes(int index) {
+            return optionNames_.getByteString(index);
           }
           /**
            * <pre>
-           * Arguments used for the command.
+           * Option names used for the command.
            * </pre>
            *
-           * <code>repeated string arguments = 3;</code>
+           * <code>repeated string option_names = 3;</code>
            * @param index The index to set the value at.
-           * @param value The arguments to set.
+           * @param value The optionNames to set.
            * @return This builder for chaining.
            */
-          public Builder setArguments(
+          public Builder setOptionNames(
               int index, java.lang.String value) {
             if (value == null) { throw new NullPointerException(); }
-            ensureArgumentsIsMutable();
-            arguments_.set(index, value);
+            ensureOptionNamesIsMutable();
+            optionNames_.set(index, value);
             bitField0_ |= 0x00000004;
             onChanged();
             return this;
           }
           /**
            * <pre>
-           * Arguments used for the command.
+           * Option names used for the command.
            * </pre>
            *
-           * <code>repeated string arguments = 3;</code>
-           * @param value The arguments to add.
+           * <code>repeated string option_names = 3;</code>
+           * @param value The optionNames to add.
            * @return This builder for chaining.
            */
-          public Builder addArguments(
+          public Builder addOptionNames(
               java.lang.String value) {
             if (value == null) { throw new NullPointerException(); }
-            ensureArgumentsIsMutable();
-            arguments_.add(value);
+            ensureOptionNamesIsMutable();
+            optionNames_.add(value);
             bitField0_ |= 0x00000004;
             onChanged();
             return this;
           }
           /**
            * <pre>
-           * Arguments used for the command.
+           * Option names used for the command.
            * </pre>
            *
-           * <code>repeated string arguments = 3;</code>
-           * @param values The arguments to add.
+           * <code>repeated string option_names = 3;</code>
+           * @param values The optionNames to add.
            * @return This builder for chaining.
            */
-          public Builder addAllArguments(
+          public Builder addAllOptionNames(
               java.lang.Iterable<java.lang.String> values) {
-            ensureArgumentsIsMutable();
+            ensureOptionNamesIsMutable();
             com.google.protobuf.AbstractMessageLite.Builder.addAll(
-                values, arguments_);
+                values, optionNames_);
             bitField0_ |= 0x00000004;
             onChanged();
             return this;
           }
           /**
            * <pre>
-           * Arguments used for the command.
+           * Option names used for the command.
            * </pre>
            *
-           * <code>repeated string arguments = 3;</code>
+           * <code>repeated string option_names = 3;</code>
            * @return This builder for chaining.
            */
-          public Builder clearArguments() {
-            arguments_ =
+          public Builder clearOptionNames() {
+            optionNames_ =
               com.google.protobuf.LazyStringArrayList.emptyList();
             bitField0_ = (bitField0_ & ~0x00000004);;
             onChanged();
@@ -26537,18 +27248,18 @@ private static final long serialVersionUID = 0L;
           }
           /**
            * <pre>
-           * Arguments used for the command.
+           * Option names used for the command.
            * </pre>
            *
-           * <code>repeated string arguments = 3;</code>
-           * @param value The bytes of the arguments to add.
+           * <code>repeated string option_names = 3;</code>
+           * @param value The bytes of the optionNames to add.
            * @return This builder for chaining.
            */
-          public Builder addArgumentsBytes(
+          public Builder addOptionNamesBytes(
               com.google.protobuf.ByteString value) {
             if (value == null) { throw new NullPointerException(); }
-            ensureArgumentsIsMutable();
-            arguments_.add(value);
+            ensureOptionNamesIsMutable();
+            optionNames_.add(value);
             bitField0_ |= 0x00000004;
             onChanged();
             return this;

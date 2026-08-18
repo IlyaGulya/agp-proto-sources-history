@@ -19346,6 +19346,10 @@ private static final long serialVersionUID = 0L;
          * <code>CAPTURE_FAILURE_REASON_NO_RESULT_FOUND = 3;</code>
          */
         CAPTURE_FAILURE_REASON_NO_RESULT_FOUND(3),
+        /**
+         * <code>CAPTURE_FAILURE_REASON_GFXR_START_NOT_DETECTED = 4;</code>
+         */
+        CAPTURE_FAILURE_REASON_GFXR_START_NOT_DETECTED(4),
         ;
 
         /**
@@ -19364,6 +19368,10 @@ private static final long serialVersionUID = 0L;
          * <code>CAPTURE_FAILURE_REASON_NO_RESULT_FOUND = 3;</code>
          */
         public static final int CAPTURE_FAILURE_REASON_NO_RESULT_FOUND_VALUE = 3;
+        /**
+         * <code>CAPTURE_FAILURE_REASON_GFXR_START_NOT_DETECTED = 4;</code>
+         */
+        public static final int CAPTURE_FAILURE_REASON_GFXR_START_NOT_DETECTED_VALUE = 4;
 
 
         public final int getNumber() {
@@ -19390,6 +19398,7 @@ private static final long serialVersionUID = 0L;
             case 1: return CAPTURE_FAILURE_REASON_CANCELLATION;
             case 2: return CAPTURE_FAILURE_REASON_DEVICE_DISCONNECTED;
             case 3: return CAPTURE_FAILURE_REASON_NO_RESULT_FOUND;
+            case 4: return CAPTURE_FAILURE_REASON_GFXR_START_NOT_DETECTED;
             default: return null;
           }
         }

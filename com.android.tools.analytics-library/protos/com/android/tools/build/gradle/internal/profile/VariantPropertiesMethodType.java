@@ -845,6 +845,10 @@ public enum VariantPropertiesMethodType
    * <code>TEST_SUITE_REQUIRES_UPDATE_TASK = 196;</code>
    */
   TEST_SUITE_REQUIRES_UPDATE_TASK(196),
+  /**
+   * <code>WITH_TEST_TASK_PROVIDER = 197;</code>
+   */
+  WITH_TEST_TASK_PROVIDER(197),
   UNRECOGNIZED(-1),
   ;
 
@@ -1684,6 +1688,10 @@ public enum VariantPropertiesMethodType
    * <code>TEST_SUITE_REQUIRES_UPDATE_TASK = 196;</code>
    */
   public static final int TEST_SUITE_REQUIRES_UPDATE_TASK_VALUE = 196;
+  /**
+   * <code>WITH_TEST_TASK_PROVIDER = 197;</code>
+   */
+  public static final int WITH_TEST_TASK_PROVIDER_VALUE = 197;
 
 
   public final int getNumber() {
@@ -1907,6 +1915,7 @@ public enum VariantPropertiesMethodType
       case 194: return SIGNING_CONFIG_FROM_CONFIG;
       case 195: return SIGNING_CONFIG_FROM_CONFIG_PROVIDER;
       case 196: return TEST_SUITE_REQUIRES_UPDATE_TASK;
+      case 197: return WITH_TEST_TASK_PROVIDER;
       default: return null;
     }
   }
