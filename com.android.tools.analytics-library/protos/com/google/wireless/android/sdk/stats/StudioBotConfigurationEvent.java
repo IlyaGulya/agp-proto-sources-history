@@ -1214,6 +1214,10 @@ private static final long serialVersionUID = 0L;
          */
         PAGE_UNKNOWN(0),
         /**
+         * <pre>
+         * Business GCP Project setup
+         * </pre>
+         *
          * <code>PAGE_GCP_PROJECT_SELECTION = 1;</code>
          */
         PAGE_GCP_PROJECT_SELECTION(1),
@@ -1222,9 +1226,38 @@ private static final long serialVersionUID = 0L;
          */
         PAGE_SIGN_IN(2),
         /**
-         * <code>PAGE_LICENSE_SELECTION = 3;</code>
+         * <pre>
+         * Deprecated. Use PAGE_PRODUCT_TIER_SELECTION.
+         * </pre>
+         *
+         * <code>PAGE_LICENSE_SELECTION = 3 [deprecated = true];</code>
          */
+        @java.lang.Deprecated
         PAGE_LICENSE_SELECTION(3),
+        /**
+         * <pre>
+         * Free vs Business/Enterprise tier selection
+         * </pre>
+         *
+         * <code>PAGE_PRODUCT_TIER_SELECTION = 4;</code>
+         */
+        PAGE_PRODUCT_TIER_SELECTION(4),
+        /**
+         * <pre>
+         * Enterprise license seat picker
+         * </pre>
+         *
+         * <code>PAGE_ENTERPRISE_LICENSE_SELECTION = 5;</code>
+         */
+        PAGE_ENTERPRISE_LICENSE_SELECTION(5),
+        /**
+         * <pre>
+         * Enterprise self-assign
+         * </pre>
+         *
+         * <code>PAGE_ENTERPRISE_SELF_ASSIGN_LICENSE = 6;</code>
+         */
+        PAGE_ENTERPRISE_SELF_ASSIGN_LICENSE(6),
         ;
 
         /**
@@ -1232,6 +1265,10 @@ private static final long serialVersionUID = 0L;
          */
         public static final int PAGE_UNKNOWN_VALUE = 0;
         /**
+         * <pre>
+         * Business GCP Project setup
+         * </pre>
+         *
          * <code>PAGE_GCP_PROJECT_SELECTION = 1;</code>
          */
         public static final int PAGE_GCP_PROJECT_SELECTION_VALUE = 1;
@@ -1240,9 +1277,37 @@ private static final long serialVersionUID = 0L;
          */
         public static final int PAGE_SIGN_IN_VALUE = 2;
         /**
-         * <code>PAGE_LICENSE_SELECTION = 3;</code>
+         * <pre>
+         * Deprecated. Use PAGE_PRODUCT_TIER_SELECTION.
+         * </pre>
+         *
+         * <code>PAGE_LICENSE_SELECTION = 3 [deprecated = true];</code>
          */
-        public static final int PAGE_LICENSE_SELECTION_VALUE = 3;
+        @java.lang.Deprecated public static final int PAGE_LICENSE_SELECTION_VALUE = 3;
+        /**
+         * <pre>
+         * Free vs Business/Enterprise tier selection
+         * </pre>
+         *
+         * <code>PAGE_PRODUCT_TIER_SELECTION = 4;</code>
+         */
+        public static final int PAGE_PRODUCT_TIER_SELECTION_VALUE = 4;
+        /**
+         * <pre>
+         * Enterprise license seat picker
+         * </pre>
+         *
+         * <code>PAGE_ENTERPRISE_LICENSE_SELECTION = 5;</code>
+         */
+        public static final int PAGE_ENTERPRISE_LICENSE_SELECTION_VALUE = 5;
+        /**
+         * <pre>
+         * Enterprise self-assign
+         * </pre>
+         *
+         * <code>PAGE_ENTERPRISE_SELF_ASSIGN_LICENSE = 6;</code>
+         */
+        public static final int PAGE_ENTERPRISE_SELF_ASSIGN_LICENSE_VALUE = 6;
 
 
         public final int getNumber() {
@@ -1269,6 +1334,9 @@ private static final long serialVersionUID = 0L;
             case 1: return PAGE_GCP_PROJECT_SELECTION;
             case 2: return PAGE_SIGN_IN;
             case 3: return PAGE_LICENSE_SELECTION;
+            case 4: return PAGE_PRODUCT_TIER_SELECTION;
+            case 5: return PAGE_ENTERPRISE_LICENSE_SELECTION;
+            case 6: return PAGE_ENTERPRISE_SELF_ASSIGN_LICENSE;
             default: return null;
           }
         }
