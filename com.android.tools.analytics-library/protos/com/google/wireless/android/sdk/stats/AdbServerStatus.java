@@ -198,6 +198,10 @@ private static final long serialVersionUID = 0L;
      * <code>TYPE_USB_DISABLED = 4;</code>
      */
     TYPE_USB_DISABLED(4),
+    /**
+     * <code>TYPE_LIBADBUSB = 5;</code>
+     */
+    TYPE_LIBADBUSB(5),
     ;
 
     /**
@@ -220,6 +224,10 @@ private static final long serialVersionUID = 0L;
      * <code>TYPE_USB_DISABLED = 4;</code>
      */
     public static final int TYPE_USB_DISABLED_VALUE = 4;
+    /**
+     * <code>TYPE_LIBADBUSB = 5;</code>
+     */
+    public static final int TYPE_LIBADBUSB_VALUE = 5;
 
 
     public final int getNumber() {
@@ -247,6 +255,7 @@ private static final long serialVersionUID = 0L;
         case 2: return TYPE_LIBUSB;
         case 3: return TYPE_NATIVE;
         case 4: return TYPE_USB_DISABLED;
+        case 5: return TYPE_LIBADBUSB;
         default: return null;
       }
     }

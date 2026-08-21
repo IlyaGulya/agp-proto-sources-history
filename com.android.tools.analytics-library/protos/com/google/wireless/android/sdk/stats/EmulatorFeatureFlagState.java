@@ -598,13 +598,17 @@ private static final long serialVersionUID = 0L;
      */
     XR_HAND_AND_EYE_POINTERS(141),
     /**
-     * <pre>
-     * Next tag: 143
-     * </pre>
-     *
      * <code>XR_STATUS_LED = 142;</code>
      */
     XR_STATUS_LED(142),
+    /**
+     * <pre>
+     * Next tag: 144
+     * </pre>
+     *
+     * <code>VULKAN_USE_DEDICATED_AHB_MEMORY_TYPE = 143;</code>
+     */
+    VULKAN_USE_DEDICATED_AHB_MEMORY_TYPE(143),
     ;
 
     /**
@@ -1148,13 +1152,17 @@ private static final long serialVersionUID = 0L;
      */
     public static final int XR_HAND_AND_EYE_POINTERS_VALUE = 141;
     /**
-     * <pre>
-     * Next tag: 143
-     * </pre>
-     *
      * <code>XR_STATUS_LED = 142;</code>
      */
     public static final int XR_STATUS_LED_VALUE = 142;
+    /**
+     * <pre>
+     * Next tag: 144
+     * </pre>
+     *
+     * <code>VULKAN_USE_DEDICATED_AHB_MEMORY_TYPE = 143;</code>
+     */
+    public static final int VULKAN_USE_DEDICATED_AHB_MEMORY_TYPE_VALUE = 143;
 
 
     public final int getNumber() {
@@ -1310,6 +1318,7 @@ private static final long serialVersionUID = 0L;
         case 140: return XR_DIMMING;
         case 141: return XR_HAND_AND_EYE_POINTERS;
         case 142: return XR_STATUS_LED;
+        case 143: return VULKAN_USE_DEDICATED_AHB_MEMORY_TYPE;
         default: return null;
       }
     }
