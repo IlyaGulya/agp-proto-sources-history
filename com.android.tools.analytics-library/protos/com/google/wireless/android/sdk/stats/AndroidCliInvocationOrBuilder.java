@@ -14,7 +14,7 @@ public interface AndroidCliInvocationOrBuilder extends
    *
    * <code>optional string command_name = 1 [deprecated = true];</code>
    * @deprecated android_studio.AndroidCliInvocation.command_name is deprecated.
-   *     See studio_stats.proto;l=19463
+   *     See studio_stats.proto;l=19470
    * @return Whether the commandName field is set.
    */
   @java.lang.Deprecated boolean hasCommandName();
@@ -25,7 +25,7 @@ public interface AndroidCliInvocationOrBuilder extends
    *
    * <code>optional string command_name = 1 [deprecated = true];</code>
    * @deprecated android_studio.AndroidCliInvocation.command_name is deprecated.
-   *     See studio_stats.proto;l=19463
+   *     See studio_stats.proto;l=19470
    * @return The commandName.
    */
   @java.lang.Deprecated java.lang.String getCommandName();
@@ -36,7 +36,7 @@ public interface AndroidCliInvocationOrBuilder extends
    *
    * <code>optional string command_name = 1 [deprecated = true];</code>
    * @deprecated android_studio.AndroidCliInvocation.command_name is deprecated.
-   *     See studio_stats.proto;l=19463
+   *     See studio_stats.proto;l=19470
    * @return The bytes for commandName.
    */
   @java.lang.Deprecated com.google.protobuf.ByteString
@@ -49,7 +49,7 @@ public interface AndroidCliInvocationOrBuilder extends
    *
    * <code>optional string sub_command_name = 2 [deprecated = true];</code>
    * @deprecated android_studio.AndroidCliInvocation.sub_command_name is deprecated.
-   *     See studio_stats.proto;l=19465
+   *     See studio_stats.proto;l=19472
    * @return Whether the subCommandName field is set.
    */
   @java.lang.Deprecated boolean hasSubCommandName();
@@ -60,7 +60,7 @@ public interface AndroidCliInvocationOrBuilder extends
    *
    * <code>optional string sub_command_name = 2 [deprecated = true];</code>
    * @deprecated android_studio.AndroidCliInvocation.sub_command_name is deprecated.
-   *     See studio_stats.proto;l=19465
+   *     See studio_stats.proto;l=19472
    * @return The subCommandName.
    */
   @java.lang.Deprecated java.lang.String getSubCommandName();
@@ -71,7 +71,7 @@ public interface AndroidCliInvocationOrBuilder extends
    *
    * <code>optional string sub_command_name = 2 [deprecated = true];</code>
    * @deprecated android_studio.AndroidCliInvocation.sub_command_name is deprecated.
-   *     See studio_stats.proto;l=19465
+   *     See studio_stats.proto;l=19472
    * @return The bytes for subCommandName.
    */
   @java.lang.Deprecated com.google.protobuf.ByteString
@@ -84,7 +84,7 @@ public interface AndroidCliInvocationOrBuilder extends
    *
    * <code>repeated string global_flags = 3 [deprecated = true];</code>
    * @deprecated android_studio.AndroidCliInvocation.global_flags is deprecated.
-   *     See studio_stats.proto;l=19467
+   *     See studio_stats.proto;l=19474
    * @return A list containing the globalFlags.
    */
   @java.lang.Deprecated java.util.List<java.lang.String>
@@ -96,7 +96,7 @@ public interface AndroidCliInvocationOrBuilder extends
    *
    * <code>repeated string global_flags = 3 [deprecated = true];</code>
    * @deprecated android_studio.AndroidCliInvocation.global_flags is deprecated.
-   *     See studio_stats.proto;l=19467
+   *     See studio_stats.proto;l=19474
    * @return The count of globalFlags.
    */
   @java.lang.Deprecated int getGlobalFlagsCount();
@@ -107,7 +107,7 @@ public interface AndroidCliInvocationOrBuilder extends
    *
    * <code>repeated string global_flags = 3 [deprecated = true];</code>
    * @deprecated android_studio.AndroidCliInvocation.global_flags is deprecated.
-   *     See studio_stats.proto;l=19467
+   *     See studio_stats.proto;l=19474
    * @param index The index of the element to return.
    * @return The globalFlags at the given index.
    */
@@ -119,7 +119,7 @@ public interface AndroidCliInvocationOrBuilder extends
    *
    * <code>repeated string global_flags = 3 [deprecated = true];</code>
    * @deprecated android_studio.AndroidCliInvocation.global_flags is deprecated.
-   *     See studio_stats.proto;l=19467
+   *     See studio_stats.proto;l=19474
    * @param index The index of the value to return.
    * @return The bytes of the globalFlags at the given index.
    */
@@ -133,7 +133,7 @@ public interface AndroidCliInvocationOrBuilder extends
    *
    * <code>repeated string flags = 4 [deprecated = true];</code>
    * @deprecated android_studio.AndroidCliInvocation.flags is deprecated.
-   *     See studio_stats.proto;l=19469
+   *     See studio_stats.proto;l=19476
    * @return A list containing the flags.
    */
   @java.lang.Deprecated java.util.List<java.lang.String>
@@ -145,7 +145,7 @@ public interface AndroidCliInvocationOrBuilder extends
    *
    * <code>repeated string flags = 4 [deprecated = true];</code>
    * @deprecated android_studio.AndroidCliInvocation.flags is deprecated.
-   *     See studio_stats.proto;l=19469
+   *     See studio_stats.proto;l=19476
    * @return The count of flags.
    */
   @java.lang.Deprecated int getFlagsCount();
@@ -156,7 +156,7 @@ public interface AndroidCliInvocationOrBuilder extends
    *
    * <code>repeated string flags = 4 [deprecated = true];</code>
    * @deprecated android_studio.AndroidCliInvocation.flags is deprecated.
-   *     See studio_stats.proto;l=19469
+   *     See studio_stats.proto;l=19476
    * @param index The index of the element to return.
    * @return The flags at the given index.
    */
@@ -168,7 +168,7 @@ public interface AndroidCliInvocationOrBuilder extends
    *
    * <code>repeated string flags = 4 [deprecated = true];</code>
    * @deprecated android_studio.AndroidCliInvocation.flags is deprecated.
-   *     See studio_stats.proto;l=19469
+   *     See studio_stats.proto;l=19476
    * @param index The index of the value to return.
    * @return The bytes of the flags at the given index.
    */
@@ -247,4 +247,49 @@ public interface AndroidCliInvocationOrBuilder extends
    */
   com.google.wireless.android.sdk.stats.AndroidCliInvocation.ArgOrBuilder getArgsOrBuilder(
       int index);
+
+  /**
+   * <pre>
+   * Names of system environment variables of interest present during
+   * android-cli invocation.
+   * </pre>
+   *
+   * <code>repeated string env_var_names = 7;</code>
+   * @return A list containing the envVarNames.
+   */
+  java.util.List<java.lang.String>
+      getEnvVarNamesList();
+  /**
+   * <pre>
+   * Names of system environment variables of interest present during
+   * android-cli invocation.
+   * </pre>
+   *
+   * <code>repeated string env_var_names = 7;</code>
+   * @return The count of envVarNames.
+   */
+  int getEnvVarNamesCount();
+  /**
+   * <pre>
+   * Names of system environment variables of interest present during
+   * android-cli invocation.
+   * </pre>
+   *
+   * <code>repeated string env_var_names = 7;</code>
+   * @param index The index of the element to return.
+   * @return The envVarNames at the given index.
+   */
+  java.lang.String getEnvVarNames(int index);
+  /**
+   * <pre>
+   * Names of system environment variables of interest present during
+   * android-cli invocation.
+   * </pre>
+   *
+   * <code>repeated string env_var_names = 7;</code>
+   * @param index The index of the value to return.
+   * @return The bytes of the envVarNames at the given index.
+   */
+  com.google.protobuf.ByteString
+      getEnvVarNamesBytes(int index);
 }

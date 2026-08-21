@@ -2402,7 +2402,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional string language = 3 [deprecated = true];</code>
      * @deprecated android_studio.NextEditPredictionEvent.Session.language is deprecated.
-     *     See studio_stats.proto;l=20787
+     *     See studio_stats.proto;l=20798
      * @return Whether the language field is set.
      */
     @java.lang.Deprecated boolean hasLanguage();
@@ -2413,7 +2413,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional string language = 3 [deprecated = true];</code>
      * @deprecated android_studio.NextEditPredictionEvent.Session.language is deprecated.
-     *     See studio_stats.proto;l=20787
+     *     See studio_stats.proto;l=20798
      * @return The language.
      */
     @java.lang.Deprecated java.lang.String getLanguage();
@@ -2424,7 +2424,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional string language = 3 [deprecated = true];</code>
      * @deprecated android_studio.NextEditPredictionEvent.Session.language is deprecated.
-     *     See studio_stats.proto;l=20787
+     *     See studio_stats.proto;l=20798
      * @return The bytes for language.
      */
     @java.lang.Deprecated com.google.protobuf.ByteString
@@ -2571,7 +2571,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional int32 offset = 3 [deprecated = true];</code>
        * @deprecated android_studio.NextEditPredictionEvent.Session.SessionEvent.offset is deprecated.
-       *     See studio_stats.proto;l=20856
+       *     See studio_stats.proto;l=20868
        * @return Whether the offset field is set.
        */
       @java.lang.Deprecated boolean hasOffset();
@@ -2582,7 +2582,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional int32 offset = 3 [deprecated = true];</code>
        * @deprecated android_studio.NextEditPredictionEvent.Session.SessionEvent.offset is deprecated.
-       *     See studio_stats.proto;l=20856
+       *     See studio_stats.proto;l=20868
        * @return The offset.
        */
       @java.lang.Deprecated int getOffset();
@@ -2590,14 +2590,14 @@ private static final long serialVersionUID = 0L;
       /**
        * <code>optional int32 original_length = 4 [deprecated = true];</code>
        * @deprecated android_studio.NextEditPredictionEvent.Session.SessionEvent.original_length is deprecated.
-       *     See studio_stats.proto;l=20857
+       *     See studio_stats.proto;l=20869
        * @return Whether the originalLength field is set.
        */
       @java.lang.Deprecated boolean hasOriginalLength();
       /**
        * <code>optional int32 original_length = 4 [deprecated = true];</code>
        * @deprecated android_studio.NextEditPredictionEvent.Session.SessionEvent.original_length is deprecated.
-       *     See studio_stats.proto;l=20857
+       *     See studio_stats.proto;l=20869
        * @return The originalLength.
        */
       @java.lang.Deprecated int getOriginalLength();
@@ -2605,14 +2605,14 @@ private static final long serialVersionUID = 0L;
       /**
        * <code>optional int32 new_length = 5 [deprecated = true];</code>
        * @deprecated android_studio.NextEditPredictionEvent.Session.SessionEvent.new_length is deprecated.
-       *     See studio_stats.proto;l=20858
+       *     See studio_stats.proto;l=20870
        * @return Whether the newLength field is set.
        */
       @java.lang.Deprecated boolean hasNewLength();
       /**
        * <code>optional int32 new_length = 5 [deprecated = true];</code>
        * @deprecated android_studio.NextEditPredictionEvent.Session.SessionEvent.new_length is deprecated.
-       *     See studio_stats.proto;l=20858
+       *     See studio_stats.proto;l=20870
        * @return The newLength.
        */
       @java.lang.Deprecated int getNewLength();
@@ -3993,6 +3993,10 @@ private static final long serialVersionUID = 0L;
            * <code>NO_MODEL = 10;</code>
            */
           NO_MODEL(10),
+          /**
+           * <code>MODEL_TIMEOUT = 11;</code>
+           */
+          MODEL_TIMEOUT(11),
           ;
 
           /**
@@ -4039,6 +4043,10 @@ private static final long serialVersionUID = 0L;
            * <code>NO_MODEL = 10;</code>
            */
           public static final int NO_MODEL_VALUE = 10;
+          /**
+           * <code>MODEL_TIMEOUT = 11;</code>
+           */
+          public static final int MODEL_TIMEOUT_VALUE = 11;
 
 
           public final int getNumber() {
@@ -4072,6 +4080,7 @@ private static final long serialVersionUID = 0L;
               case 8: return EXPECTED_LINE_NOT_FOUND;
               case 9: return OUTDATED_PREDICTION;
               case 10: return NO_MODEL;
+              case 11: return MODEL_TIMEOUT;
               default: return null;
             }
           }
@@ -5630,7 +5639,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional int32 offset = 3 [deprecated = true];</code>
        * @deprecated android_studio.NextEditPredictionEvent.Session.SessionEvent.offset is deprecated.
-       *     See studio_stats.proto;l=20856
+       *     See studio_stats.proto;l=20868
        * @return Whether the offset field is set.
        */
       @java.lang.Override
@@ -5644,7 +5653,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional int32 offset = 3 [deprecated = true];</code>
        * @deprecated android_studio.NextEditPredictionEvent.Session.SessionEvent.offset is deprecated.
-       *     See studio_stats.proto;l=20856
+       *     See studio_stats.proto;l=20868
        * @return The offset.
        */
       @java.lang.Override
@@ -5657,7 +5666,7 @@ private static final long serialVersionUID = 0L;
       /**
        * <code>optional int32 original_length = 4 [deprecated = true];</code>
        * @deprecated android_studio.NextEditPredictionEvent.Session.SessionEvent.original_length is deprecated.
-       *     See studio_stats.proto;l=20857
+       *     See studio_stats.proto;l=20869
        * @return Whether the originalLength field is set.
        */
       @java.lang.Override
@@ -5667,7 +5676,7 @@ private static final long serialVersionUID = 0L;
       /**
        * <code>optional int32 original_length = 4 [deprecated = true];</code>
        * @deprecated android_studio.NextEditPredictionEvent.Session.SessionEvent.original_length is deprecated.
-       *     See studio_stats.proto;l=20857
+       *     See studio_stats.proto;l=20869
        * @return The originalLength.
        */
       @java.lang.Override
@@ -5680,7 +5689,7 @@ private static final long serialVersionUID = 0L;
       /**
        * <code>optional int32 new_length = 5 [deprecated = true];</code>
        * @deprecated android_studio.NextEditPredictionEvent.Session.SessionEvent.new_length is deprecated.
-       *     See studio_stats.proto;l=20858
+       *     See studio_stats.proto;l=20870
        * @return Whether the newLength field is set.
        */
       @java.lang.Override
@@ -5690,7 +5699,7 @@ private static final long serialVersionUID = 0L;
       /**
        * <code>optional int32 new_length = 5 [deprecated = true];</code>
        * @deprecated android_studio.NextEditPredictionEvent.Session.SessionEvent.new_length is deprecated.
-       *     See studio_stats.proto;l=20858
+       *     See studio_stats.proto;l=20870
        * @return The newLength.
        */
       @java.lang.Override
@@ -6493,7 +6502,7 @@ private static final long serialVersionUID = 0L;
          *
          * <code>optional int32 offset = 3 [deprecated = true];</code>
          * @deprecated android_studio.NextEditPredictionEvent.Session.SessionEvent.offset is deprecated.
-         *     See studio_stats.proto;l=20856
+         *     See studio_stats.proto;l=20868
          * @return Whether the offset field is set.
          */
         @java.lang.Override
@@ -6507,7 +6516,7 @@ private static final long serialVersionUID = 0L;
          *
          * <code>optional int32 offset = 3 [deprecated = true];</code>
          * @deprecated android_studio.NextEditPredictionEvent.Session.SessionEvent.offset is deprecated.
-         *     See studio_stats.proto;l=20856
+         *     See studio_stats.proto;l=20868
          * @return The offset.
          */
         @java.lang.Override
@@ -6521,7 +6530,7 @@ private static final long serialVersionUID = 0L;
          *
          * <code>optional int32 offset = 3 [deprecated = true];</code>
          * @deprecated android_studio.NextEditPredictionEvent.Session.SessionEvent.offset is deprecated.
-         *     See studio_stats.proto;l=20856
+         *     See studio_stats.proto;l=20868
          * @param value The offset to set.
          * @return This builder for chaining.
          */
@@ -6539,7 +6548,7 @@ private static final long serialVersionUID = 0L;
          *
          * <code>optional int32 offset = 3 [deprecated = true];</code>
          * @deprecated android_studio.NextEditPredictionEvent.Session.SessionEvent.offset is deprecated.
-         *     See studio_stats.proto;l=20856
+         *     See studio_stats.proto;l=20868
          * @return This builder for chaining.
          */
         @java.lang.Deprecated public Builder clearOffset() {
@@ -6553,7 +6562,7 @@ private static final long serialVersionUID = 0L;
         /**
          * <code>optional int32 original_length = 4 [deprecated = true];</code>
          * @deprecated android_studio.NextEditPredictionEvent.Session.SessionEvent.original_length is deprecated.
-         *     See studio_stats.proto;l=20857
+         *     See studio_stats.proto;l=20869
          * @return Whether the originalLength field is set.
          */
         @java.lang.Override
@@ -6563,7 +6572,7 @@ private static final long serialVersionUID = 0L;
         /**
          * <code>optional int32 original_length = 4 [deprecated = true];</code>
          * @deprecated android_studio.NextEditPredictionEvent.Session.SessionEvent.original_length is deprecated.
-         *     See studio_stats.proto;l=20857
+         *     See studio_stats.proto;l=20869
          * @return The originalLength.
          */
         @java.lang.Override
@@ -6573,7 +6582,7 @@ private static final long serialVersionUID = 0L;
         /**
          * <code>optional int32 original_length = 4 [deprecated = true];</code>
          * @deprecated android_studio.NextEditPredictionEvent.Session.SessionEvent.original_length is deprecated.
-         *     See studio_stats.proto;l=20857
+         *     See studio_stats.proto;l=20869
          * @param value The originalLength to set.
          * @return This builder for chaining.
          */
@@ -6587,7 +6596,7 @@ private static final long serialVersionUID = 0L;
         /**
          * <code>optional int32 original_length = 4 [deprecated = true];</code>
          * @deprecated android_studio.NextEditPredictionEvent.Session.SessionEvent.original_length is deprecated.
-         *     See studio_stats.proto;l=20857
+         *     See studio_stats.proto;l=20869
          * @return This builder for chaining.
          */
         @java.lang.Deprecated public Builder clearOriginalLength() {
@@ -6601,7 +6610,7 @@ private static final long serialVersionUID = 0L;
         /**
          * <code>optional int32 new_length = 5 [deprecated = true];</code>
          * @deprecated android_studio.NextEditPredictionEvent.Session.SessionEvent.new_length is deprecated.
-         *     See studio_stats.proto;l=20858
+         *     See studio_stats.proto;l=20870
          * @return Whether the newLength field is set.
          */
         @java.lang.Override
@@ -6611,7 +6620,7 @@ private static final long serialVersionUID = 0L;
         /**
          * <code>optional int32 new_length = 5 [deprecated = true];</code>
          * @deprecated android_studio.NextEditPredictionEvent.Session.SessionEvent.new_length is deprecated.
-         *     See studio_stats.proto;l=20858
+         *     See studio_stats.proto;l=20870
          * @return The newLength.
          */
         @java.lang.Override
@@ -6621,7 +6630,7 @@ private static final long serialVersionUID = 0L;
         /**
          * <code>optional int32 new_length = 5 [deprecated = true];</code>
          * @deprecated android_studio.NextEditPredictionEvent.Session.SessionEvent.new_length is deprecated.
-         *     See studio_stats.proto;l=20858
+         *     See studio_stats.proto;l=20870
          * @param value The newLength to set.
          * @return This builder for chaining.
          */
@@ -6635,7 +6644,7 @@ private static final long serialVersionUID = 0L;
         /**
          * <code>optional int32 new_length = 5 [deprecated = true];</code>
          * @deprecated android_studio.NextEditPredictionEvent.Session.SessionEvent.new_length is deprecated.
-         *     See studio_stats.proto;l=20858
+         *     See studio_stats.proto;l=20870
          * @return This builder for chaining.
          */
         @java.lang.Deprecated public Builder clearNewLength() {
@@ -7337,7 +7346,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional string language = 3 [deprecated = true];</code>
      * @deprecated android_studio.NextEditPredictionEvent.Session.language is deprecated.
-     *     See studio_stats.proto;l=20787
+     *     See studio_stats.proto;l=20798
      * @return Whether the language field is set.
      */
     @java.lang.Override
@@ -7351,7 +7360,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional string language = 3 [deprecated = true];</code>
      * @deprecated android_studio.NextEditPredictionEvent.Session.language is deprecated.
-     *     See studio_stats.proto;l=20787
+     *     See studio_stats.proto;l=20798
      * @return The language.
      */
     @java.lang.Override
@@ -7376,7 +7385,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional string language = 3 [deprecated = true];</code>
      * @deprecated android_studio.NextEditPredictionEvent.Session.language is deprecated.
-     *     See studio_stats.proto;l=20787
+     *     See studio_stats.proto;l=20798
      * @return The bytes for language.
      */
     @java.lang.Override
@@ -8112,7 +8121,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional string language = 3 [deprecated = true];</code>
        * @deprecated android_studio.NextEditPredictionEvent.Session.language is deprecated.
-       *     See studio_stats.proto;l=20787
+       *     See studio_stats.proto;l=20798
        * @return Whether the language field is set.
        */
       @java.lang.Deprecated public boolean hasLanguage() {
@@ -8125,7 +8134,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional string language = 3 [deprecated = true];</code>
        * @deprecated android_studio.NextEditPredictionEvent.Session.language is deprecated.
-       *     See studio_stats.proto;l=20787
+       *     See studio_stats.proto;l=20798
        * @return The language.
        */
       @java.lang.Deprecated public java.lang.String getLanguage() {
@@ -8149,7 +8158,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional string language = 3 [deprecated = true];</code>
        * @deprecated android_studio.NextEditPredictionEvent.Session.language is deprecated.
-       *     See studio_stats.proto;l=20787
+       *     See studio_stats.proto;l=20798
        * @return The bytes for language.
        */
       @java.lang.Deprecated public com.google.protobuf.ByteString
@@ -8172,7 +8181,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional string language = 3 [deprecated = true];</code>
        * @deprecated android_studio.NextEditPredictionEvent.Session.language is deprecated.
-       *     See studio_stats.proto;l=20787
+       *     See studio_stats.proto;l=20798
        * @param value The language to set.
        * @return This builder for chaining.
        */
@@ -8191,7 +8200,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional string language = 3 [deprecated = true];</code>
        * @deprecated android_studio.NextEditPredictionEvent.Session.language is deprecated.
-       *     See studio_stats.proto;l=20787
+       *     See studio_stats.proto;l=20798
        * @return This builder for chaining.
        */
       @java.lang.Deprecated public Builder clearLanguage() {
@@ -8207,7 +8216,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional string language = 3 [deprecated = true];</code>
        * @deprecated android_studio.NextEditPredictionEvent.Session.language is deprecated.
-       *     See studio_stats.proto;l=20787
+       *     See studio_stats.proto;l=20798
        * @param value The bytes for language to set.
        * @return This builder for chaining.
        */

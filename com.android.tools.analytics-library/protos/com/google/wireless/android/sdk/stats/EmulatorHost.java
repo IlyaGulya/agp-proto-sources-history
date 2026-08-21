@@ -483,6 +483,60 @@ private static final long serialVersionUID = 0L;
     }
   }
 
+  public static final int RUNNING_IN_CI_FIELD_NUMBER = 13;
+  private boolean runningInCi_ = false;
+  /**
+   * <pre>
+   * True if the emulator host is running in a CI environment.
+   * </pre>
+   *
+   * <code>optional bool running_in_ci = 13;</code>
+   * @return Whether the runningInCi field is set.
+   */
+  @java.lang.Override
+  public boolean hasRunningInCi() {
+    return ((bitField0_ & 0x00001000) != 0);
+  }
+  /**
+   * <pre>
+   * True if the emulator host is running in a CI environment.
+   * </pre>
+   *
+   * <code>optional bool running_in_ci = 13;</code>
+   * @return The runningInCi.
+   */
+  @java.lang.Override
+  public boolean getRunningInCi() {
+    return runningInCi_;
+  }
+
+  public static final int ANDROID_CLI_DEFINED_FIELD_NUMBER = 14;
+  private boolean androidCliDefined_ = false;
+  /**
+   * <pre>
+   * True if the ANDROID_CLI environment variable was defined.
+   * </pre>
+   *
+   * <code>optional bool android_cli_defined = 14;</code>
+   * @return Whether the androidCliDefined field is set.
+   */
+  @java.lang.Override
+  public boolean hasAndroidCliDefined() {
+    return ((bitField0_ & 0x00002000) != 0);
+  }
+  /**
+   * <pre>
+   * True if the ANDROID_CLI environment variable was defined.
+   * </pre>
+   *
+   * <code>optional bool android_cli_defined = 14;</code>
+   * @return The androidCliDefined.
+   */
+  @java.lang.Override
+  public boolean getAndroidCliDefined() {
+    return androidCliDefined_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -532,6 +586,12 @@ private static final long serialVersionUID = 0L;
     }
     if (((bitField0_ & 0x00000800) != 0)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 12, cpuArchitecture_);
+    }
+    if (((bitField0_ & 0x00001000) != 0)) {
+      output.writeBool(13, runningInCi_);
+    }
+    if (((bitField0_ & 0x00002000) != 0)) {
+      output.writeBool(14, androidCliDefined_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -586,6 +646,14 @@ private static final long serialVersionUID = 0L;
     }
     if (((bitField0_ & 0x00000800) != 0)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(12, cpuArchitecture_);
+    }
+    if (((bitField0_ & 0x00001000) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeBoolSize(13, runningInCi_);
+    }
+    if (((bitField0_ & 0x00002000) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeBoolSize(14, androidCliDefined_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -662,6 +730,16 @@ private static final long serialVersionUID = 0L;
       if (!getCpuArchitecture()
           .equals(other.getCpuArchitecture())) return false;
     }
+    if (hasRunningInCi() != other.hasRunningInCi()) return false;
+    if (hasRunningInCi()) {
+      if (getRunningInCi()
+          != other.getRunningInCi()) return false;
+    }
+    if (hasAndroidCliDefined() != other.hasAndroidCliDefined()) return false;
+    if (hasAndroidCliDefined()) {
+      if (getAndroidCliDefined()
+          != other.getAndroidCliDefined()) return false;
+    }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -723,6 +801,16 @@ private static final long serialVersionUID = 0L;
     if (hasCpuArchitecture()) {
       hash = (37 * hash) + CPU_ARCHITECTURE_FIELD_NUMBER;
       hash = (53 * hash) + getCpuArchitecture().hashCode();
+    }
+    if (hasRunningInCi()) {
+      hash = (37 * hash) + RUNNING_IN_CI_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getRunningInCi());
+    }
+    if (hasAndroidCliDefined()) {
+      hash = (37 * hash) + ANDROID_CLI_DEFINED_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getAndroidCliDefined());
     }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
@@ -869,6 +957,8 @@ private static final long serialVersionUID = 0L;
       cpuidExtfamily_ = 0;
       cpuBrandname_ = "";
       cpuArchitecture_ = "";
+      runningInCi_ = false;
+      androidCliDefined_ = false;
       return this;
     }
 
@@ -951,6 +1041,14 @@ private static final long serialVersionUID = 0L;
         result.cpuArchitecture_ = cpuArchitecture_;
         to_bitField0_ |= 0x00000800;
       }
+      if (((from_bitField0_ & 0x00001000) != 0)) {
+        result.runningInCi_ = runningInCi_;
+        to_bitField0_ |= 0x00001000;
+      }
+      if (((from_bitField0_ & 0x00002000) != 0)) {
+        result.androidCliDefined_ = androidCliDefined_;
+        to_bitField0_ |= 0x00002000;
+      }
       result.bitField0_ |= to_bitField0_;
     }
 
@@ -1007,6 +1105,12 @@ private static final long serialVersionUID = 0L;
         cpuArchitecture_ = other.cpuArchitecture_;
         bitField0_ |= 0x00000800;
         onChanged();
+      }
+      if (other.hasRunningInCi()) {
+        setRunningInCi(other.getRunningInCi());
+      }
+      if (other.hasAndroidCliDefined()) {
+        setAndroidCliDefined(other.getAndroidCliDefined());
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -1094,6 +1198,16 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000800;
               break;
             } // case 98
+            case 104: {
+              runningInCi_ = input.readBool();
+              bitField0_ |= 0x00001000;
+              break;
+            } // case 104
+            case 112: {
+              androidCliDefined_ = input.readBool();
+              bitField0_ |= 0x00002000;
+              break;
+            } // case 112
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -1945,6 +2059,118 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       cpuArchitecture_ = value;
       bitField0_ |= 0x00000800;
+      onChanged();
+      return this;
+    }
+
+    private boolean runningInCi_ ;
+    /**
+     * <pre>
+     * True if the emulator host is running in a CI environment.
+     * </pre>
+     *
+     * <code>optional bool running_in_ci = 13;</code>
+     * @return Whether the runningInCi field is set.
+     */
+    @java.lang.Override
+    public boolean hasRunningInCi() {
+      return ((bitField0_ & 0x00001000) != 0);
+    }
+    /**
+     * <pre>
+     * True if the emulator host is running in a CI environment.
+     * </pre>
+     *
+     * <code>optional bool running_in_ci = 13;</code>
+     * @return The runningInCi.
+     */
+    @java.lang.Override
+    public boolean getRunningInCi() {
+      return runningInCi_;
+    }
+    /**
+     * <pre>
+     * True if the emulator host is running in a CI environment.
+     * </pre>
+     *
+     * <code>optional bool running_in_ci = 13;</code>
+     * @param value The runningInCi to set.
+     * @return This builder for chaining.
+     */
+    public Builder setRunningInCi(boolean value) {
+
+      runningInCi_ = value;
+      bitField0_ |= 0x00001000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * True if the emulator host is running in a CI environment.
+     * </pre>
+     *
+     * <code>optional bool running_in_ci = 13;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearRunningInCi() {
+      bitField0_ = (bitField0_ & ~0x00001000);
+      runningInCi_ = false;
+      onChanged();
+      return this;
+    }
+
+    private boolean androidCliDefined_ ;
+    /**
+     * <pre>
+     * True if the ANDROID_CLI environment variable was defined.
+     * </pre>
+     *
+     * <code>optional bool android_cli_defined = 14;</code>
+     * @return Whether the androidCliDefined field is set.
+     */
+    @java.lang.Override
+    public boolean hasAndroidCliDefined() {
+      return ((bitField0_ & 0x00002000) != 0);
+    }
+    /**
+     * <pre>
+     * True if the ANDROID_CLI environment variable was defined.
+     * </pre>
+     *
+     * <code>optional bool android_cli_defined = 14;</code>
+     * @return The androidCliDefined.
+     */
+    @java.lang.Override
+    public boolean getAndroidCliDefined() {
+      return androidCliDefined_;
+    }
+    /**
+     * <pre>
+     * True if the ANDROID_CLI environment variable was defined.
+     * </pre>
+     *
+     * <code>optional bool android_cli_defined = 14;</code>
+     * @param value The androidCliDefined to set.
+     * @return This builder for chaining.
+     */
+    public Builder setAndroidCliDefined(boolean value) {
+
+      androidCliDefined_ = value;
+      bitField0_ |= 0x00002000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * True if the ANDROID_CLI environment variable was defined.
+     * </pre>
+     *
+     * <code>optional bool android_cli_defined = 14;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearAndroidCliDefined() {
+      bitField0_ = (bitField0_ & ~0x00002000);
+      androidCliDefined_ = false;
       onChanged();
       return this;
     }

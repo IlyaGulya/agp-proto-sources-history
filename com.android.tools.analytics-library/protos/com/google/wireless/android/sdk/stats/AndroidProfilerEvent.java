@@ -866,6 +866,10 @@ private static final long serialVersionUID = 0L;
      */
     TPD_QUERY_LOAD_MEMORY_DATA(713),
     /**
+     * <code>TPD_QUERY_LOAD_HEAP_DUMP_DATA = 714;</code>
+     */
+    TPD_QUERY_LOAD_HEAP_DUMP_DATA(714),
+    /**
      * <pre>
      * Task Stats
      * </pre>
@@ -1359,6 +1363,10 @@ private static final long serialVersionUID = 0L;
      */
     public static final int TPD_QUERY_LOAD_MEMORY_DATA_VALUE = 713;
     /**
+     * <code>TPD_QUERY_LOAD_HEAP_DUMP_DATA = 714;</code>
+     */
+    public static final int TPD_QUERY_LOAD_HEAP_DUMP_DATA_VALUE = 714;
+    /**
      * <pre>
      * Task Stats
      * </pre>
@@ -1496,6 +1504,7 @@ private static final long serialVersionUID = 0L;
         case 711: return TPD_QUERY_PROCESS_METADATA;
         case 712: return TPD_QUERY_LOAD_CPU_DATA;
         case 713: return TPD_QUERY_LOAD_MEMORY_DATA;
+        case 714: return TPD_QUERY_LOAD_HEAP_DUMP_DATA;
         case 800: return TASK_ENTERED;
         case 801: return TASK_FINISHED;
         case 802: return TASK_FAILED;
@@ -3342,7 +3351,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>optional .android_studio.CpuProfilingConfig cpu_config = 3 [deprecated = true, lazy = true];</code>
    * @deprecated android_studio.AndroidProfilerEvent.cpu_config is deprecated.
-   *     See studio_stats.proto;l=8955
+   *     See studio_stats.proto;l=8960
    * @return Whether the cpuConfig field is set.
    */
   @java.lang.Override
@@ -3357,7 +3366,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>optional .android_studio.CpuProfilingConfig cpu_config = 3 [deprecated = true, lazy = true];</code>
    * @deprecated android_studio.AndroidProfilerEvent.cpu_config is deprecated.
-   *     See studio_stats.proto;l=8955
+   *     See studio_stats.proto;l=8960
    * @return The cpuConfig.
    */
   @java.lang.Override
@@ -6041,7 +6050,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional .android_studio.CpuProfilingConfig cpu_config = 3 [deprecated = true, lazy = true];</code>
      * @deprecated android_studio.AndroidProfilerEvent.cpu_config is deprecated.
-     *     See studio_stats.proto;l=8955
+     *     See studio_stats.proto;l=8960
      * @return Whether the cpuConfig field is set.
      */
     @java.lang.Deprecated public boolean hasCpuConfig() {
@@ -6055,7 +6064,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional .android_studio.CpuProfilingConfig cpu_config = 3 [deprecated = true, lazy = true];</code>
      * @deprecated android_studio.AndroidProfilerEvent.cpu_config is deprecated.
-     *     See studio_stats.proto;l=8955
+     *     See studio_stats.proto;l=8960
      * @return The cpuConfig.
      */
     @java.lang.Deprecated public com.google.wireless.android.sdk.stats.CpuProfilingConfig getCpuConfig() {

@@ -24,6 +24,8 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.LazyStringArrayList.emptyList();
     agentName_ = 0;
     args_ = java.util.Collections.emptyList();
+    envVarNames_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
   }
 
   @java.lang.Override
@@ -982,7 +984,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>optional string command_name = 1 [deprecated = true];</code>
    * @deprecated android_studio.AndroidCliInvocation.command_name is deprecated.
-   *     See studio_stats.proto;l=19463
+   *     See studio_stats.proto;l=19470
    * @return Whether the commandName field is set.
    */
   @java.lang.Override
@@ -996,7 +998,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>optional string command_name = 1 [deprecated = true];</code>
    * @deprecated android_studio.AndroidCliInvocation.command_name is deprecated.
-   *     See studio_stats.proto;l=19463
+   *     See studio_stats.proto;l=19470
    * @return The commandName.
    */
   @java.lang.Override
@@ -1021,7 +1023,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>optional string command_name = 1 [deprecated = true];</code>
    * @deprecated android_studio.AndroidCliInvocation.command_name is deprecated.
-   *     See studio_stats.proto;l=19463
+   *     See studio_stats.proto;l=19470
    * @return The bytes for commandName.
    */
   @java.lang.Override
@@ -1049,7 +1051,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>optional string sub_command_name = 2 [deprecated = true];</code>
    * @deprecated android_studio.AndroidCliInvocation.sub_command_name is deprecated.
-   *     See studio_stats.proto;l=19465
+   *     See studio_stats.proto;l=19472
    * @return Whether the subCommandName field is set.
    */
   @java.lang.Override
@@ -1063,7 +1065,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>optional string sub_command_name = 2 [deprecated = true];</code>
    * @deprecated android_studio.AndroidCliInvocation.sub_command_name is deprecated.
-   *     See studio_stats.proto;l=19465
+   *     See studio_stats.proto;l=19472
    * @return The subCommandName.
    */
   @java.lang.Override
@@ -1088,7 +1090,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>optional string sub_command_name = 2 [deprecated = true];</code>
    * @deprecated android_studio.AndroidCliInvocation.sub_command_name is deprecated.
-   *     See studio_stats.proto;l=19465
+   *     See studio_stats.proto;l=19472
    * @return The bytes for subCommandName.
    */
   @java.lang.Override
@@ -1117,7 +1119,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated string global_flags = 3 [deprecated = true];</code>
    * @deprecated android_studio.AndroidCliInvocation.global_flags is deprecated.
-   *     See studio_stats.proto;l=19467
+   *     See studio_stats.proto;l=19474
    * @return A list containing the globalFlags.
    */
   @java.lang.Deprecated public com.google.protobuf.ProtocolStringList
@@ -1131,7 +1133,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated string global_flags = 3 [deprecated = true];</code>
    * @deprecated android_studio.AndroidCliInvocation.global_flags is deprecated.
-   *     See studio_stats.proto;l=19467
+   *     See studio_stats.proto;l=19474
    * @return The count of globalFlags.
    */
   @java.lang.Deprecated public int getGlobalFlagsCount() {
@@ -1144,7 +1146,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated string global_flags = 3 [deprecated = true];</code>
    * @deprecated android_studio.AndroidCliInvocation.global_flags is deprecated.
-   *     See studio_stats.proto;l=19467
+   *     See studio_stats.proto;l=19474
    * @param index The index of the element to return.
    * @return The globalFlags at the given index.
    */
@@ -1158,7 +1160,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated string global_flags = 3 [deprecated = true];</code>
    * @deprecated android_studio.AndroidCliInvocation.global_flags is deprecated.
-   *     See studio_stats.proto;l=19467
+   *     See studio_stats.proto;l=19474
    * @param index The index of the value to return.
    * @return The bytes of the globalFlags at the given index.
    */
@@ -1178,7 +1180,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated string flags = 4 [deprecated = true];</code>
    * @deprecated android_studio.AndroidCliInvocation.flags is deprecated.
-   *     See studio_stats.proto;l=19469
+   *     See studio_stats.proto;l=19476
    * @return A list containing the flags.
    */
   @java.lang.Deprecated public com.google.protobuf.ProtocolStringList
@@ -1192,7 +1194,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated string flags = 4 [deprecated = true];</code>
    * @deprecated android_studio.AndroidCliInvocation.flags is deprecated.
-   *     See studio_stats.proto;l=19469
+   *     See studio_stats.proto;l=19476
    * @return The count of flags.
    */
   @java.lang.Deprecated public int getFlagsCount() {
@@ -1205,7 +1207,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated string flags = 4 [deprecated = true];</code>
    * @deprecated android_studio.AndroidCliInvocation.flags is deprecated.
-   *     See studio_stats.proto;l=19469
+   *     See studio_stats.proto;l=19476
    * @param index The index of the element to return.
    * @return The flags at the given index.
    */
@@ -1219,7 +1221,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated string flags = 4 [deprecated = true];</code>
    * @deprecated android_studio.AndroidCliInvocation.flags is deprecated.
-   *     See studio_stats.proto;l=19469
+   *     See studio_stats.proto;l=19476
    * @param index The index of the value to return.
    * @return The bytes of the flags at the given index.
    */
@@ -1325,6 +1327,63 @@ private static final long serialVersionUID = 0L;
     return args_.get(index);
   }
 
+  public static final int ENV_VAR_NAMES_FIELD_NUMBER = 7;
+  @SuppressWarnings("serial")
+  private com.google.protobuf.LazyStringArrayList envVarNames_ =
+      com.google.protobuf.LazyStringArrayList.emptyList();
+  /**
+   * <pre>
+   * Names of system environment variables of interest present during
+   * android-cli invocation.
+   * </pre>
+   *
+   * <code>repeated string env_var_names = 7;</code>
+   * @return A list containing the envVarNames.
+   */
+  public com.google.protobuf.ProtocolStringList
+      getEnvVarNamesList() {
+    return envVarNames_;
+  }
+  /**
+   * <pre>
+   * Names of system environment variables of interest present during
+   * android-cli invocation.
+   * </pre>
+   *
+   * <code>repeated string env_var_names = 7;</code>
+   * @return The count of envVarNames.
+   */
+  public int getEnvVarNamesCount() {
+    return envVarNames_.size();
+  }
+  /**
+   * <pre>
+   * Names of system environment variables of interest present during
+   * android-cli invocation.
+   * </pre>
+   *
+   * <code>repeated string env_var_names = 7;</code>
+   * @param index The index of the element to return.
+   * @return The envVarNames at the given index.
+   */
+  public java.lang.String getEnvVarNames(int index) {
+    return envVarNames_.get(index);
+  }
+  /**
+   * <pre>
+   * Names of system environment variables of interest present during
+   * android-cli invocation.
+   * </pre>
+   *
+   * <code>repeated string env_var_names = 7;</code>
+   * @param index The index of the value to return.
+   * @return The bytes of the envVarNames at the given index.
+   */
+  public com.google.protobuf.ByteString
+      getEnvVarNamesBytes(int index) {
+    return envVarNames_.getByteString(index);
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -1356,6 +1415,9 @@ private static final long serialVersionUID = 0L;
     }
     for (int i = 0; i < args_.size(); i++) {
       output.writeMessage(6, args_.get(i));
+    }
+    for (int i = 0; i < envVarNames_.size(); i++) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 7, envVarNames_.getRaw(i));
     }
     getUnknownFields().writeTo(output);
   }
@@ -1396,6 +1458,14 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(6, args_.get(i));
     }
+    {
+      int dataSize = 0;
+      for (int i = 0; i < envVarNames_.size(); i++) {
+        dataSize += computeStringSizeNoTag(envVarNames_.getRaw(i));
+      }
+      size += dataSize;
+      size += 1 * getEnvVarNamesList().size();
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -1431,6 +1501,8 @@ private static final long serialVersionUID = 0L;
     }
     if (!getArgsList()
         .equals(other.getArgsList())) return false;
+    if (!getEnvVarNamesList()
+        .equals(other.getEnvVarNamesList())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -1465,6 +1537,10 @@ private static final long serialVersionUID = 0L;
     if (getArgsCount() > 0) {
       hash = (37 * hash) + ARGS_FIELD_NUMBER;
       hash = (53 * hash) + getArgsList().hashCode();
+    }
+    if (getEnvVarNamesCount() > 0) {
+      hash = (37 * hash) + ENV_VAR_NAMES_FIELD_NUMBER;
+      hash = (53 * hash) + getEnvVarNamesList().hashCode();
     }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
@@ -1609,6 +1685,8 @@ private static final long serialVersionUID = 0L;
         argsBuilder_.clear();
       }
       bitField0_ = (bitField0_ & ~0x00000020);
+      envVarNames_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
       return this;
     }
 
@@ -1675,6 +1753,10 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000010) != 0)) {
         result.agentName_ = agentName_;
         to_bitField0_ |= 0x00000004;
+      }
+      if (((from_bitField0_ & 0x00000040) != 0)) {
+        envVarNames_.makeImmutable();
+        result.envVarNames_ = envVarNames_;
       }
       result.bitField0_ |= to_bitField0_;
     }
@@ -1750,6 +1832,16 @@ private static final long serialVersionUID = 0L;
           }
         }
       }
+      if (!other.envVarNames_.isEmpty()) {
+        if (envVarNames_.isEmpty()) {
+          envVarNames_ = other.envVarNames_;
+          bitField0_ |= 0x00000040;
+        } else {
+          ensureEnvVarNamesIsMutable();
+          envVarNames_.addAll(other.envVarNames_);
+        }
+        onChanged();
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -1823,6 +1915,12 @@ private static final long serialVersionUID = 0L;
               }
               break;
             } // case 50
+            case 58: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              ensureEnvVarNamesIsMutable();
+              envVarNames_.add(bs);
+              break;
+            } // case 58
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -1848,7 +1946,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional string command_name = 1 [deprecated = true];</code>
      * @deprecated android_studio.AndroidCliInvocation.command_name is deprecated.
-     *     See studio_stats.proto;l=19463
+     *     See studio_stats.proto;l=19470
      * @return Whether the commandName field is set.
      */
     @java.lang.Deprecated public boolean hasCommandName() {
@@ -1861,7 +1959,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional string command_name = 1 [deprecated = true];</code>
      * @deprecated android_studio.AndroidCliInvocation.command_name is deprecated.
-     *     See studio_stats.proto;l=19463
+     *     See studio_stats.proto;l=19470
      * @return The commandName.
      */
     @java.lang.Deprecated public java.lang.String getCommandName() {
@@ -1885,7 +1983,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional string command_name = 1 [deprecated = true];</code>
      * @deprecated android_studio.AndroidCliInvocation.command_name is deprecated.
-     *     See studio_stats.proto;l=19463
+     *     See studio_stats.proto;l=19470
      * @return The bytes for commandName.
      */
     @java.lang.Deprecated public com.google.protobuf.ByteString
@@ -1908,7 +2006,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional string command_name = 1 [deprecated = true];</code>
      * @deprecated android_studio.AndroidCliInvocation.command_name is deprecated.
-     *     See studio_stats.proto;l=19463
+     *     See studio_stats.proto;l=19470
      * @param value The commandName to set.
      * @return This builder for chaining.
      */
@@ -1927,7 +2025,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional string command_name = 1 [deprecated = true];</code>
      * @deprecated android_studio.AndroidCliInvocation.command_name is deprecated.
-     *     See studio_stats.proto;l=19463
+     *     See studio_stats.proto;l=19470
      * @return This builder for chaining.
      */
     @java.lang.Deprecated public Builder clearCommandName() {
@@ -1943,7 +2041,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional string command_name = 1 [deprecated = true];</code>
      * @deprecated android_studio.AndroidCliInvocation.command_name is deprecated.
-     *     See studio_stats.proto;l=19463
+     *     See studio_stats.proto;l=19470
      * @param value The bytes for commandName to set.
      * @return This builder for chaining.
      */
@@ -1964,7 +2062,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional string sub_command_name = 2 [deprecated = true];</code>
      * @deprecated android_studio.AndroidCliInvocation.sub_command_name is deprecated.
-     *     See studio_stats.proto;l=19465
+     *     See studio_stats.proto;l=19472
      * @return Whether the subCommandName field is set.
      */
     @java.lang.Deprecated public boolean hasSubCommandName() {
@@ -1977,7 +2075,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional string sub_command_name = 2 [deprecated = true];</code>
      * @deprecated android_studio.AndroidCliInvocation.sub_command_name is deprecated.
-     *     See studio_stats.proto;l=19465
+     *     See studio_stats.proto;l=19472
      * @return The subCommandName.
      */
     @java.lang.Deprecated public java.lang.String getSubCommandName() {
@@ -2001,7 +2099,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional string sub_command_name = 2 [deprecated = true];</code>
      * @deprecated android_studio.AndroidCliInvocation.sub_command_name is deprecated.
-     *     See studio_stats.proto;l=19465
+     *     See studio_stats.proto;l=19472
      * @return The bytes for subCommandName.
      */
     @java.lang.Deprecated public com.google.protobuf.ByteString
@@ -2024,7 +2122,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional string sub_command_name = 2 [deprecated = true];</code>
      * @deprecated android_studio.AndroidCliInvocation.sub_command_name is deprecated.
-     *     See studio_stats.proto;l=19465
+     *     See studio_stats.proto;l=19472
      * @param value The subCommandName to set.
      * @return This builder for chaining.
      */
@@ -2043,7 +2141,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional string sub_command_name = 2 [deprecated = true];</code>
      * @deprecated android_studio.AndroidCliInvocation.sub_command_name is deprecated.
-     *     See studio_stats.proto;l=19465
+     *     See studio_stats.proto;l=19472
      * @return This builder for chaining.
      */
     @java.lang.Deprecated public Builder clearSubCommandName() {
@@ -2059,7 +2157,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional string sub_command_name = 2 [deprecated = true];</code>
      * @deprecated android_studio.AndroidCliInvocation.sub_command_name is deprecated.
-     *     See studio_stats.proto;l=19465
+     *     See studio_stats.proto;l=19472
      * @param value The bytes for subCommandName to set.
      * @return This builder for chaining.
      */
@@ -2087,7 +2185,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>repeated string global_flags = 3 [deprecated = true];</code>
      * @deprecated android_studio.AndroidCliInvocation.global_flags is deprecated.
-     *     See studio_stats.proto;l=19467
+     *     See studio_stats.proto;l=19474
      * @return A list containing the globalFlags.
      */
     @java.lang.Deprecated public com.google.protobuf.ProtocolStringList
@@ -2102,7 +2200,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>repeated string global_flags = 3 [deprecated = true];</code>
      * @deprecated android_studio.AndroidCliInvocation.global_flags is deprecated.
-     *     See studio_stats.proto;l=19467
+     *     See studio_stats.proto;l=19474
      * @return The count of globalFlags.
      */
     @java.lang.Deprecated public int getGlobalFlagsCount() {
@@ -2115,7 +2213,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>repeated string global_flags = 3 [deprecated = true];</code>
      * @deprecated android_studio.AndroidCliInvocation.global_flags is deprecated.
-     *     See studio_stats.proto;l=19467
+     *     See studio_stats.proto;l=19474
      * @param index The index of the element to return.
      * @return The globalFlags at the given index.
      */
@@ -2129,7 +2227,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>repeated string global_flags = 3 [deprecated = true];</code>
      * @deprecated android_studio.AndroidCliInvocation.global_flags is deprecated.
-     *     See studio_stats.proto;l=19467
+     *     See studio_stats.proto;l=19474
      * @param index The index of the value to return.
      * @return The bytes of the globalFlags at the given index.
      */
@@ -2144,7 +2242,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>repeated string global_flags = 3 [deprecated = true];</code>
      * @deprecated android_studio.AndroidCliInvocation.global_flags is deprecated.
-     *     See studio_stats.proto;l=19467
+     *     See studio_stats.proto;l=19474
      * @param index The index to set the value at.
      * @param value The globalFlags to set.
      * @return This builder for chaining.
@@ -2165,7 +2263,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>repeated string global_flags = 3 [deprecated = true];</code>
      * @deprecated android_studio.AndroidCliInvocation.global_flags is deprecated.
-     *     See studio_stats.proto;l=19467
+     *     See studio_stats.proto;l=19474
      * @param value The globalFlags to add.
      * @return This builder for chaining.
      */
@@ -2185,7 +2283,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>repeated string global_flags = 3 [deprecated = true];</code>
      * @deprecated android_studio.AndroidCliInvocation.global_flags is deprecated.
-     *     See studio_stats.proto;l=19467
+     *     See studio_stats.proto;l=19474
      * @param values The globalFlags to add.
      * @return This builder for chaining.
      */
@@ -2205,7 +2303,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>repeated string global_flags = 3 [deprecated = true];</code>
      * @deprecated android_studio.AndroidCliInvocation.global_flags is deprecated.
-     *     See studio_stats.proto;l=19467
+     *     See studio_stats.proto;l=19474
      * @return This builder for chaining.
      */
     @java.lang.Deprecated public Builder clearGlobalFlags() {
@@ -2222,7 +2320,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>repeated string global_flags = 3 [deprecated = true];</code>
      * @deprecated android_studio.AndroidCliInvocation.global_flags is deprecated.
-     *     See studio_stats.proto;l=19467
+     *     See studio_stats.proto;l=19474
      * @param value The bytes of the globalFlags to add.
      * @return This builder for chaining.
      */
@@ -2251,7 +2349,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>repeated string flags = 4 [deprecated = true];</code>
      * @deprecated android_studio.AndroidCliInvocation.flags is deprecated.
-     *     See studio_stats.proto;l=19469
+     *     See studio_stats.proto;l=19476
      * @return A list containing the flags.
      */
     @java.lang.Deprecated public com.google.protobuf.ProtocolStringList
@@ -2266,7 +2364,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>repeated string flags = 4 [deprecated = true];</code>
      * @deprecated android_studio.AndroidCliInvocation.flags is deprecated.
-     *     See studio_stats.proto;l=19469
+     *     See studio_stats.proto;l=19476
      * @return The count of flags.
      */
     @java.lang.Deprecated public int getFlagsCount() {
@@ -2279,7 +2377,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>repeated string flags = 4 [deprecated = true];</code>
      * @deprecated android_studio.AndroidCliInvocation.flags is deprecated.
-     *     See studio_stats.proto;l=19469
+     *     See studio_stats.proto;l=19476
      * @param index The index of the element to return.
      * @return The flags at the given index.
      */
@@ -2293,7 +2391,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>repeated string flags = 4 [deprecated = true];</code>
      * @deprecated android_studio.AndroidCliInvocation.flags is deprecated.
-     *     See studio_stats.proto;l=19469
+     *     See studio_stats.proto;l=19476
      * @param index The index of the value to return.
      * @return The bytes of the flags at the given index.
      */
@@ -2308,7 +2406,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>repeated string flags = 4 [deprecated = true];</code>
      * @deprecated android_studio.AndroidCliInvocation.flags is deprecated.
-     *     See studio_stats.proto;l=19469
+     *     See studio_stats.proto;l=19476
      * @param index The index to set the value at.
      * @param value The flags to set.
      * @return This builder for chaining.
@@ -2329,7 +2427,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>repeated string flags = 4 [deprecated = true];</code>
      * @deprecated android_studio.AndroidCliInvocation.flags is deprecated.
-     *     See studio_stats.proto;l=19469
+     *     See studio_stats.proto;l=19476
      * @param value The flags to add.
      * @return This builder for chaining.
      */
@@ -2349,7 +2447,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>repeated string flags = 4 [deprecated = true];</code>
      * @deprecated android_studio.AndroidCliInvocation.flags is deprecated.
-     *     See studio_stats.proto;l=19469
+     *     See studio_stats.proto;l=19476
      * @param values The flags to add.
      * @return This builder for chaining.
      */
@@ -2369,7 +2467,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>repeated string flags = 4 [deprecated = true];</code>
      * @deprecated android_studio.AndroidCliInvocation.flags is deprecated.
-     *     See studio_stats.proto;l=19469
+     *     See studio_stats.proto;l=19476
      * @return This builder for chaining.
      */
     @java.lang.Deprecated public Builder clearFlags() {
@@ -2386,7 +2484,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>repeated string flags = 4 [deprecated = true];</code>
      * @deprecated android_studio.AndroidCliInvocation.flags is deprecated.
-     *     See studio_stats.proto;l=19469
+     *     See studio_stats.proto;l=19476
      * @param value The bytes of the flags to add.
      * @return This builder for chaining.
      */
@@ -2804,6 +2902,161 @@ private static final long serialVersionUID = 0L;
         args_ = null;
       }
       return argsBuilder_;
+    }
+
+    private com.google.protobuf.LazyStringArrayList envVarNames_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+    private void ensureEnvVarNamesIsMutable() {
+      if (!envVarNames_.isModifiable()) {
+        envVarNames_ = new com.google.protobuf.LazyStringArrayList(envVarNames_);
+      }
+      bitField0_ |= 0x00000040;
+    }
+    /**
+     * <pre>
+     * Names of system environment variables of interest present during
+     * android-cli invocation.
+     * </pre>
+     *
+     * <code>repeated string env_var_names = 7;</code>
+     * @return A list containing the envVarNames.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getEnvVarNamesList() {
+      envVarNames_.makeImmutable();
+      return envVarNames_;
+    }
+    /**
+     * <pre>
+     * Names of system environment variables of interest present during
+     * android-cli invocation.
+     * </pre>
+     *
+     * <code>repeated string env_var_names = 7;</code>
+     * @return The count of envVarNames.
+     */
+    public int getEnvVarNamesCount() {
+      return envVarNames_.size();
+    }
+    /**
+     * <pre>
+     * Names of system environment variables of interest present during
+     * android-cli invocation.
+     * </pre>
+     *
+     * <code>repeated string env_var_names = 7;</code>
+     * @param index The index of the element to return.
+     * @return The envVarNames at the given index.
+     */
+    public java.lang.String getEnvVarNames(int index) {
+      return envVarNames_.get(index);
+    }
+    /**
+     * <pre>
+     * Names of system environment variables of interest present during
+     * android-cli invocation.
+     * </pre>
+     *
+     * <code>repeated string env_var_names = 7;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the envVarNames at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getEnvVarNamesBytes(int index) {
+      return envVarNames_.getByteString(index);
+    }
+    /**
+     * <pre>
+     * Names of system environment variables of interest present during
+     * android-cli invocation.
+     * </pre>
+     *
+     * <code>repeated string env_var_names = 7;</code>
+     * @param index The index to set the value at.
+     * @param value The envVarNames to set.
+     * @return This builder for chaining.
+     */
+    public Builder setEnvVarNames(
+        int index, java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      ensureEnvVarNamesIsMutable();
+      envVarNames_.set(index, value);
+      bitField0_ |= 0x00000040;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Names of system environment variables of interest present during
+     * android-cli invocation.
+     * </pre>
+     *
+     * <code>repeated string env_var_names = 7;</code>
+     * @param value The envVarNames to add.
+     * @return This builder for chaining.
+     */
+    public Builder addEnvVarNames(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      ensureEnvVarNamesIsMutable();
+      envVarNames_.add(value);
+      bitField0_ |= 0x00000040;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Names of system environment variables of interest present during
+     * android-cli invocation.
+     * </pre>
+     *
+     * <code>repeated string env_var_names = 7;</code>
+     * @param values The envVarNames to add.
+     * @return This builder for chaining.
+     */
+    public Builder addAllEnvVarNames(
+        java.lang.Iterable<java.lang.String> values) {
+      ensureEnvVarNamesIsMutable();
+      com.google.protobuf.AbstractMessageLite.Builder.addAll(
+          values, envVarNames_);
+      bitField0_ |= 0x00000040;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Names of system environment variables of interest present during
+     * android-cli invocation.
+     * </pre>
+     *
+     * <code>repeated string env_var_names = 7;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearEnvVarNames() {
+      envVarNames_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+      bitField0_ = (bitField0_ & ~0x00000040);;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Names of system environment variables of interest present during
+     * android-cli invocation.
+     * </pre>
+     *
+     * <code>repeated string env_var_names = 7;</code>
+     * @param value The bytes of the envVarNames to add.
+     * @return This builder for chaining.
+     */
+    public Builder addEnvVarNamesBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      ensureEnvVarNamesIsMutable();
+      envVarNames_.add(value);
+      bitField0_ |= 0x00000040;
+      onChanged();
+      return this;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

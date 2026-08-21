@@ -275,4 +275,42 @@ public interface EmulatorHostOrBuilder extends
    */
   com.google.protobuf.ByteString
       getCpuArchitectureBytes();
+
+  /**
+   * <pre>
+   * True if the emulator host is running in a CI environment.
+   * </pre>
+   *
+   * <code>optional bool running_in_ci = 13;</code>
+   * @return Whether the runningInCi field is set.
+   */
+  boolean hasRunningInCi();
+  /**
+   * <pre>
+   * True if the emulator host is running in a CI environment.
+   * </pre>
+   *
+   * <code>optional bool running_in_ci = 13;</code>
+   * @return The runningInCi.
+   */
+  boolean getRunningInCi();
+
+  /**
+   * <pre>
+   * True if the ANDROID_CLI environment variable was defined.
+   * </pre>
+   *
+   * <code>optional bool android_cli_defined = 14;</code>
+   * @return Whether the androidCliDefined field is set.
+   */
+  boolean hasAndroidCliDefined();
+  /**
+   * <pre>
+   * True if the ANDROID_CLI environment variable was defined.
+   * </pre>
+   *
+   * <code>optional bool android_cli_defined = 14;</code>
+   * @return The androidCliDefined.
+   */
+  boolean getAndroidCliDefined();
 }
