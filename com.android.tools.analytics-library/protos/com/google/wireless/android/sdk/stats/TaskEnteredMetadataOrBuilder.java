@@ -33,4 +33,23 @@ public interface TaskEnteredMetadataOrBuilder extends
    * <code>optional .android_studio.TaskMetadata task_data = 1 [lazy = true];</code>
    */
   com.google.wireless.android.sdk.stats.TaskMetadataOrBuilder getTaskDataOrBuilder();
+
+  /**
+   * <pre>
+   * The number of profiler tabs open across the project when this task started.
+   * </pre>
+   *
+   * <code>optional int32 profiler_tabs_count = 2;</code>
+   * @return Whether the profilerTabsCount field is set.
+   */
+  boolean hasProfilerTabsCount();
+  /**
+   * <pre>
+   * The number of profiler tabs open across the project when this task started.
+   * </pre>
+   *
+   * <code>optional int32 profiler_tabs_count = 2;</code>
+   * @return The profilerTabsCount.
+   */
+  int getProfilerTabsCount();
 }

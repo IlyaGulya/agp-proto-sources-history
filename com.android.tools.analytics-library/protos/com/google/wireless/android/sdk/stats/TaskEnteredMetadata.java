@@ -81,6 +81,33 @@ private static final long serialVersionUID = 0L;
     return taskData_ == null ? com.google.wireless.android.sdk.stats.TaskMetadata.getDefaultInstance() : taskData_;
   }
 
+  public static final int PROFILER_TABS_COUNT_FIELD_NUMBER = 2;
+  private int profilerTabsCount_ = 0;
+  /**
+   * <pre>
+   * The number of profiler tabs open across the project when this task started.
+   * </pre>
+   *
+   * <code>optional int32 profiler_tabs_count = 2;</code>
+   * @return Whether the profilerTabsCount field is set.
+   */
+  @java.lang.Override
+  public boolean hasProfilerTabsCount() {
+    return ((bitField0_ & 0x00000002) != 0);
+  }
+  /**
+   * <pre>
+   * The number of profiler tabs open across the project when this task started.
+   * </pre>
+   *
+   * <code>optional int32 profiler_tabs_count = 2;</code>
+   * @return The profilerTabsCount.
+   */
+  @java.lang.Override
+  public int getProfilerTabsCount() {
+    return profilerTabsCount_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -98,6 +125,9 @@ private static final long serialVersionUID = 0L;
     if (((bitField0_ & 0x00000001) != 0)) {
       output.writeMessage(1, getTaskData());
     }
+    if (((bitField0_ & 0x00000002) != 0)) {
+      output.writeInt32(2, profilerTabsCount_);
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -110,6 +140,10 @@ private static final long serialVersionUID = 0L;
     if (((bitField0_ & 0x00000001) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(1, getTaskData());
+    }
+    if (((bitField0_ & 0x00000002) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeInt32Size(2, profilerTabsCount_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -131,6 +165,11 @@ private static final long serialVersionUID = 0L;
       if (!getTaskData()
           .equals(other.getTaskData())) return false;
     }
+    if (hasProfilerTabsCount() != other.hasProfilerTabsCount()) return false;
+    if (hasProfilerTabsCount()) {
+      if (getProfilerTabsCount()
+          != other.getProfilerTabsCount()) return false;
+    }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -145,6 +184,10 @@ private static final long serialVersionUID = 0L;
     if (hasTaskData()) {
       hash = (37 * hash) + TASK_DATA_FIELD_NUMBER;
       hash = (53 * hash) + getTaskData().hashCode();
+    }
+    if (hasProfilerTabsCount()) {
+      hash = (37 * hash) + PROFILER_TABS_COUNT_FIELD_NUMBER;
+      hash = (53 * hash) + getProfilerTabsCount();
     }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
@@ -290,6 +333,7 @@ private static final long serialVersionUID = 0L;
         taskDataBuilder_.dispose();
         taskDataBuilder_ = null;
       }
+      profilerTabsCount_ = 0;
       return this;
     }
 
@@ -330,6 +374,10 @@ private static final long serialVersionUID = 0L;
             : taskDataBuilder_.build();
         to_bitField0_ |= 0x00000001;
       }
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.profilerTabsCount_ = profilerTabsCount_;
+        to_bitField0_ |= 0x00000002;
+      }
       result.bitField0_ |= to_bitField0_;
     }
 
@@ -347,6 +395,9 @@ private static final long serialVersionUID = 0L;
       if (other == com.google.wireless.android.sdk.stats.TaskEnteredMetadata.getDefaultInstance()) return this;
       if (other.hasTaskData()) {
         mergeTaskData(other.getTaskData());
+      }
+      if (other.hasProfilerTabsCount()) {
+        setProfilerTabsCount(other.getProfilerTabsCount());
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -381,6 +432,11 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000001;
               break;
             } // case 10
+            case 16: {
+              profilerTabsCount_ = input.readInt32();
+              bitField0_ |= 0x00000002;
+              break;
+            } // case 16
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -551,6 +607,62 @@ private static final long serialVersionUID = 0L;
         taskData_ = null;
       }
       return taskDataBuilder_;
+    }
+
+    private int profilerTabsCount_ ;
+    /**
+     * <pre>
+     * The number of profiler tabs open across the project when this task started.
+     * </pre>
+     *
+     * <code>optional int32 profiler_tabs_count = 2;</code>
+     * @return Whether the profilerTabsCount field is set.
+     */
+    @java.lang.Override
+    public boolean hasProfilerTabsCount() {
+      return ((bitField0_ & 0x00000002) != 0);
+    }
+    /**
+     * <pre>
+     * The number of profiler tabs open across the project when this task started.
+     * </pre>
+     *
+     * <code>optional int32 profiler_tabs_count = 2;</code>
+     * @return The profilerTabsCount.
+     */
+    @java.lang.Override
+    public int getProfilerTabsCount() {
+      return profilerTabsCount_;
+    }
+    /**
+     * <pre>
+     * The number of profiler tabs open across the project when this task started.
+     * </pre>
+     *
+     * <code>optional int32 profiler_tabs_count = 2;</code>
+     * @param value The profilerTabsCount to set.
+     * @return This builder for chaining.
+     */
+    public Builder setProfilerTabsCount(int value) {
+
+      profilerTabsCount_ = value;
+      bitField0_ |= 0x00000002;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The number of profiler tabs open across the project when this task started.
+     * </pre>
+     *
+     * <code>optional int32 profiler_tabs_count = 2;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearProfilerTabsCount() {
+      bitField0_ = (bitField0_ & ~0x00000002);
+      profilerTabsCount_ = 0;
+      onChanged();
+      return this;
     }
     @java.lang.Override
     public final Builder setUnknownFields(
