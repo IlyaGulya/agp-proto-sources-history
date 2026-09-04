@@ -992,6 +992,10 @@ public enum BooleanOption
    * <code>R8_PLUGIN_SUPPORT = 242;</code>
    */
   R8_PLUGIN_SUPPORT(242),
+  /**
+   * <code>ENABLE_BACKUP_TEST = 243;</code>
+   */
+  ENABLE_BACKUP_TEST(243),
   UNRECOGNIZED(-1),
   ;
 
@@ -1967,6 +1971,10 @@ public enum BooleanOption
    * <code>R8_PLUGIN_SUPPORT = 242;</code>
    */
   public static final int R8_PLUGIN_SUPPORT_VALUE = 242;
+  /**
+   * <code>ENABLE_BACKUP_TEST = 243;</code>
+   */
+  public static final int ENABLE_BACKUP_TEST_VALUE = 243;
 
 
   public final int getNumber() {
@@ -2236,6 +2244,7 @@ public enum BooleanOption
       case 240: return TEST_SUITE_NEW_REPORT_FORMAT;
       case 241: return ENFORCE_DYNAMIC_FEATURE_VARIANT_MATCHING;
       case 242: return R8_PLUGIN_SUPPORT;
+      case 243: return ENABLE_BACKUP_TEST;
       default: return null;
     }
   }

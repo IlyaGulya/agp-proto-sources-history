@@ -7368,4 +7368,31 @@ public interface AndroidStudioEventOrBuilder extends
    * <code>optional .android_studio.LocalInferenceEngineEvent local_inference_engine_event = 264 [lazy = true];</code>
    */
   com.google.wireless.android.sdk.stats.LocalInferenceEngineEventOrBuilder getLocalInferenceEngineEventOrBuilder();
+
+  /**
+   * <pre>
+   * set when kind = IMPORT_PROJECT_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.ImportProjectEvent import_project_event = 265 [lazy = true];</code>
+   * @return Whether the importProjectEvent field is set.
+   */
+  boolean hasImportProjectEvent();
+  /**
+   * <pre>
+   * set when kind = IMPORT_PROJECT_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.ImportProjectEvent import_project_event = 265 [lazy = true];</code>
+   * @return The importProjectEvent.
+   */
+  com.google.wireless.android.sdk.stats.ImportProjectEvent getImportProjectEvent();
+  /**
+   * <pre>
+   * set when kind = IMPORT_PROJECT_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.ImportProjectEvent import_project_event = 265 [lazy = true];</code>
+   */
+  com.google.wireless.android.sdk.stats.ImportProjectEventOrBuilder getImportProjectEventOrBuilder();
 }

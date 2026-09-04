@@ -3655,6 +3655,15 @@ private static final long serialVersionUID = 0L;
      * <code>LOCAL_INFERENCE_ENGINE_EVENT = 391;</code>
      */
     LOCAL_INFERENCE_ENGINE_EVENT(391),
+    /**
+     * <pre>
+     * Event related to Import Project Agent (e.g. from iOS, React Native,
+     * Flutter to Android / KMP)
+     * </pre>
+     *
+     * <code>IMPORT_PROJECT_EVENT = 392;</code>
+     */
+    IMPORT_PROJECT_EVENT(392),
     ;
 
     /**
@@ -6582,6 +6591,15 @@ private static final long serialVersionUID = 0L;
      * <code>LOCAL_INFERENCE_ENGINE_EVENT = 391;</code>
      */
     public static final int LOCAL_INFERENCE_ENGINE_EVENT_VALUE = 391;
+    /**
+     * <pre>
+     * Event related to Import Project Agent (e.g. from iOS, React Native,
+     * Flutter to Android / KMP)
+     * </pre>
+     *
+     * <code>IMPORT_PROJECT_EVENT = 392;</code>
+     */
+    public static final int IMPORT_PROJECT_EVENT_VALUE = 392;
 
 
     public final int getNumber() {
@@ -6991,6 +7009,7 @@ private static final long serialVersionUID = 0L;
         case 389: return LIGHTBUILD_SYNC_FINISHED_EVENT;
         case 390: return STUDIO_BOT_CONFIGURATION_EVENT;
         case 391: return LOCAL_INFERENCE_ENGINE_EVENT;
+        case 392: return IMPORT_PROJECT_EVENT;
         default: return null;
       }
     }
@@ -13956,7 +13975,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional uint32 min_sdk = 2 [deprecated = true];</code>
        * @deprecated android_studio.AndroidStudioEvent.TemplatesUsage.TemplateModule.min_sdk is deprecated.
-       *     See studio_stats.proto;l=2273
+       *     See studio_stats.proto;l=2280
        * @return Whether the minSdk field is set.
        */
       @java.lang.Deprecated boolean hasMinSdk();
@@ -13967,7 +13986,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional uint32 min_sdk = 2 [deprecated = true];</code>
        * @deprecated android_studio.AndroidStudioEvent.TemplatesUsage.TemplateModule.min_sdk is deprecated.
-       *     See studio_stats.proto;l=2273
+       *     See studio_stats.proto;l=2280
        * @return The minSdk.
        */
       @java.lang.Deprecated int getMinSdk();
@@ -14498,7 +14517,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional uint32 min_sdk = 2 [deprecated = true];</code>
        * @deprecated android_studio.AndroidStudioEvent.TemplatesUsage.TemplateModule.min_sdk is deprecated.
-       *     See studio_stats.proto;l=2273
+       *     See studio_stats.proto;l=2280
        * @return Whether the minSdk field is set.
        */
       @java.lang.Override
@@ -14512,7 +14531,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional uint32 min_sdk = 2 [deprecated = true];</code>
        * @deprecated android_studio.AndroidStudioEvent.TemplatesUsage.TemplateModule.min_sdk is deprecated.
-       *     See studio_stats.proto;l=2273
+       *     See studio_stats.proto;l=2280
        * @return The minSdk.
        */
       @java.lang.Override
@@ -15150,7 +15169,7 @@ private static final long serialVersionUID = 0L;
          *
          * <code>optional uint32 min_sdk = 2 [deprecated = true];</code>
          * @deprecated android_studio.AndroidStudioEvent.TemplatesUsage.TemplateModule.min_sdk is deprecated.
-         *     See studio_stats.proto;l=2273
+         *     See studio_stats.proto;l=2280
          * @return Whether the minSdk field is set.
          */
         @java.lang.Override
@@ -15164,7 +15183,7 @@ private static final long serialVersionUID = 0L;
          *
          * <code>optional uint32 min_sdk = 2 [deprecated = true];</code>
          * @deprecated android_studio.AndroidStudioEvent.TemplatesUsage.TemplateModule.min_sdk is deprecated.
-         *     See studio_stats.proto;l=2273
+         *     See studio_stats.proto;l=2280
          * @return The minSdk.
          */
         @java.lang.Override
@@ -15178,7 +15197,7 @@ private static final long serialVersionUID = 0L;
          *
          * <code>optional uint32 min_sdk = 2 [deprecated = true];</code>
          * @deprecated android_studio.AndroidStudioEvent.TemplatesUsage.TemplateModule.min_sdk is deprecated.
-         *     See studio_stats.proto;l=2273
+         *     See studio_stats.proto;l=2280
          * @param value The minSdk to set.
          * @return This builder for chaining.
          */
@@ -15196,7 +15215,7 @@ private static final long serialVersionUID = 0L;
          *
          * <code>optional uint32 min_sdk = 2 [deprecated = true];</code>
          * @deprecated android_studio.AndroidStudioEvent.TemplatesUsage.TemplateModule.min_sdk is deprecated.
-         *     See studio_stats.proto;l=2273
+         *     See studio_stats.proto;l=2280
          * @return This builder for chaining.
          */
         @java.lang.Deprecated public Builder clearMinSdk() {
@@ -28231,6 +28250,44 @@ private static final long serialVersionUID = 0L;
     return localInferenceEngineEvent_ == null ? com.google.wireless.android.sdk.stats.LocalInferenceEngineEvent.getDefaultInstance() : localInferenceEngineEvent_;
   }
 
+  public static final int IMPORT_PROJECT_EVENT_FIELD_NUMBER = 265;
+  private com.google.wireless.android.sdk.stats.ImportProjectEvent importProjectEvent_;
+  /**
+   * <pre>
+   * set when kind = IMPORT_PROJECT_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.ImportProjectEvent import_project_event = 265 [lazy = true];</code>
+   * @return Whether the importProjectEvent field is set.
+   */
+  @java.lang.Override
+  public boolean hasImportProjectEvent() {
+    return ((bitField8_ & 0x00000002) != 0);
+  }
+  /**
+   * <pre>
+   * set when kind = IMPORT_PROJECT_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.ImportProjectEvent import_project_event = 265 [lazy = true];</code>
+   * @return The importProjectEvent.
+   */
+  @java.lang.Override
+  public com.google.wireless.android.sdk.stats.ImportProjectEvent getImportProjectEvent() {
+    return importProjectEvent_ == null ? com.google.wireless.android.sdk.stats.ImportProjectEvent.getDefaultInstance() : importProjectEvent_;
+  }
+  /**
+   * <pre>
+   * set when kind = IMPORT_PROJECT_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.ImportProjectEvent import_project_event = 265 [lazy = true];</code>
+   */
+  @java.lang.Override
+  public com.google.wireless.android.sdk.stats.ImportProjectEventOrBuilder getImportProjectEventOrBuilder() {
+    return importProjectEvent_ == null ? com.google.wireless.android.sdk.stats.ImportProjectEvent.getDefaultInstance() : importProjectEvent_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -29036,6 +29093,9 @@ private static final long serialVersionUID = 0L;
     }
     if (((bitField8_ & 0x00000001) != 0)) {
       output.writeMessage(264, getLocalInferenceEngineEvent());
+    }
+    if (((bitField8_ & 0x00000002) != 0)) {
+      output.writeMessage(265, getImportProjectEvent());
     }
     getUnknownFields().writeTo(output);
   }
@@ -30107,6 +30167,10 @@ private static final long serialVersionUID = 0L;
     if (((bitField8_ & 0x00000001) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(264, getLocalInferenceEngineEvent());
+    }
+    if (((bitField8_ & 0x00000002) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(265, getImportProjectEvent());
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -31411,6 +31475,11 @@ private static final long serialVersionUID = 0L;
       if (!getLocalInferenceEngineEvent()
           .equals(other.getLocalInferenceEngineEvent())) return false;
     }
+    if (hasImportProjectEvent() != other.hasImportProjectEvent()) return false;
+    if (hasImportProjectEvent()) {
+      if (!getImportProjectEvent()
+          .equals(other.getImportProjectEvent())) return false;
+    }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -32480,6 +32549,10 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + LOCAL_INFERENCE_ENGINE_EVENT_FIELD_NUMBER;
       hash = (53 * hash) + getLocalInferenceEngineEvent().hashCode();
     }
+    if (hasImportProjectEvent()) {
+      hash = (37 * hash) + IMPORT_PROJECT_EVENT_FIELD_NUMBER;
+      hash = (53 * hash) + getImportProjectEvent().hashCode();
+    }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -32849,6 +32922,7 @@ private static final long serialVersionUID = 0L;
         getLightbuildSyncFinishedEventFieldBuilder();
         getStudioBotConfigurationEventFieldBuilder();
         getLocalInferenceEngineEventFieldBuilder();
+        getImportProjectEventFieldBuilder();
       }
     }
     @java.lang.Override
@@ -34101,6 +34175,11 @@ private static final long serialVersionUID = 0L;
       if (localInferenceEngineEventBuilder_ != null) {
         localInferenceEngineEventBuilder_.dispose();
         localInferenceEngineEventBuilder_ = null;
+      }
+      importProjectEvent_ = null;
+      if (importProjectEventBuilder_ != null) {
+        importProjectEventBuilder_.dispose();
+        importProjectEventBuilder_ = null;
       }
       return this;
     }
@@ -35758,6 +35837,12 @@ private static final long serialVersionUID = 0L;
             : localInferenceEngineEventBuilder_.build();
         to_bitField8_ |= 0x00000001;
       }
+      if (((from_bitField8_ & 0x00000100) != 0)) {
+        result.importProjectEvent_ = importProjectEventBuilder_ == null
+            ? importProjectEvent_
+            : importProjectEventBuilder_.build();
+        to_bitField8_ |= 0x00000002;
+      }
       result.bitField7_ |= to_bitField7_;
       result.bitField8_ |= to_bitField8_;
     }
@@ -36692,6 +36777,9 @@ private static final long serialVersionUID = 0L;
       }
       if (other.hasLocalInferenceEngineEvent()) {
         mergeLocalInferenceEngineEvent(other.getLocalInferenceEngineEvent());
+      }
+      if (other.hasImportProjectEvent()) {
+        mergeImportProjectEvent(other.getImportProjectEvent());
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -38641,6 +38729,13 @@ private static final long serialVersionUID = 0L;
               bitField8_ |= 0x00000080;
               break;
             } // case 2114
+            case 2122: {
+              input.readMessage(
+                  getImportProjectEventFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField8_ |= 0x00000100;
+              break;
+            } // case 2122
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -79088,6 +79183,161 @@ private static final long serialVersionUID = 0L;
         localInferenceEngineEvent_ = null;
       }
       return localInferenceEngineEventBuilder_;
+    }
+
+    private com.google.wireless.android.sdk.stats.ImportProjectEvent importProjectEvent_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.ImportProjectEvent, com.google.wireless.android.sdk.stats.ImportProjectEvent.Builder, com.google.wireless.android.sdk.stats.ImportProjectEventOrBuilder> importProjectEventBuilder_;
+    /**
+     * <pre>
+     * set when kind = IMPORT_PROJECT_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.ImportProjectEvent import_project_event = 265 [lazy = true];</code>
+     * @return Whether the importProjectEvent field is set.
+     */
+    public boolean hasImportProjectEvent() {
+      return ((bitField8_ & 0x00000100) != 0);
+    }
+    /**
+     * <pre>
+     * set when kind = IMPORT_PROJECT_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.ImportProjectEvent import_project_event = 265 [lazy = true];</code>
+     * @return The importProjectEvent.
+     */
+    public com.google.wireless.android.sdk.stats.ImportProjectEvent getImportProjectEvent() {
+      if (importProjectEventBuilder_ == null) {
+        return importProjectEvent_ == null ? com.google.wireless.android.sdk.stats.ImportProjectEvent.getDefaultInstance() : importProjectEvent_;
+      } else {
+        return importProjectEventBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * set when kind = IMPORT_PROJECT_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.ImportProjectEvent import_project_event = 265 [lazy = true];</code>
+     */
+    public Builder setImportProjectEvent(com.google.wireless.android.sdk.stats.ImportProjectEvent value) {
+      if (importProjectEventBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        importProjectEvent_ = value;
+      } else {
+        importProjectEventBuilder_.setMessage(value);
+      }
+      bitField8_ |= 0x00000100;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = IMPORT_PROJECT_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.ImportProjectEvent import_project_event = 265 [lazy = true];</code>
+     */
+    public Builder setImportProjectEvent(
+        com.google.wireless.android.sdk.stats.ImportProjectEvent.Builder builderForValue) {
+      if (importProjectEventBuilder_ == null) {
+        importProjectEvent_ = builderForValue.build();
+      } else {
+        importProjectEventBuilder_.setMessage(builderForValue.build());
+      }
+      bitField8_ |= 0x00000100;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = IMPORT_PROJECT_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.ImportProjectEvent import_project_event = 265 [lazy = true];</code>
+     */
+    public Builder mergeImportProjectEvent(com.google.wireless.android.sdk.stats.ImportProjectEvent value) {
+      if (importProjectEventBuilder_ == null) {
+        if (((bitField8_ & 0x00000100) != 0) &&
+          importProjectEvent_ != null &&
+          importProjectEvent_ != com.google.wireless.android.sdk.stats.ImportProjectEvent.getDefaultInstance()) {
+          getImportProjectEventBuilder().mergeFrom(value);
+        } else {
+          importProjectEvent_ = value;
+        }
+      } else {
+        importProjectEventBuilder_.mergeFrom(value);
+      }
+      bitField8_ |= 0x00000100;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = IMPORT_PROJECT_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.ImportProjectEvent import_project_event = 265 [lazy = true];</code>
+     */
+    public Builder clearImportProjectEvent() {
+      bitField8_ = (bitField8_ & ~0x00000100);
+      importProjectEvent_ = null;
+      if (importProjectEventBuilder_ != null) {
+        importProjectEventBuilder_.dispose();
+        importProjectEventBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = IMPORT_PROJECT_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.ImportProjectEvent import_project_event = 265 [lazy = true];</code>
+     */
+    public com.google.wireless.android.sdk.stats.ImportProjectEvent.Builder getImportProjectEventBuilder() {
+      bitField8_ |= 0x00000100;
+      onChanged();
+      return getImportProjectEventFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * set when kind = IMPORT_PROJECT_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.ImportProjectEvent import_project_event = 265 [lazy = true];</code>
+     */
+    public com.google.wireless.android.sdk.stats.ImportProjectEventOrBuilder getImportProjectEventOrBuilder() {
+      if (importProjectEventBuilder_ != null) {
+        return importProjectEventBuilder_.getMessageOrBuilder();
+      } else {
+        return importProjectEvent_ == null ?
+            com.google.wireless.android.sdk.stats.ImportProjectEvent.getDefaultInstance() : importProjectEvent_;
+      }
+    }
+    /**
+     * <pre>
+     * set when kind = IMPORT_PROJECT_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.ImportProjectEvent import_project_event = 265 [lazy = true];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.ImportProjectEvent, com.google.wireless.android.sdk.stats.ImportProjectEvent.Builder, com.google.wireless.android.sdk.stats.ImportProjectEventOrBuilder> 
+        getImportProjectEventFieldBuilder() {
+      if (importProjectEventBuilder_ == null) {
+        importProjectEventBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.wireless.android.sdk.stats.ImportProjectEvent, com.google.wireless.android.sdk.stats.ImportProjectEvent.Builder, com.google.wireless.android.sdk.stats.ImportProjectEventOrBuilder>(
+                getImportProjectEvent(),
+                getParentForChildren(),
+                isClean());
+        importProjectEvent_ = null;
+      }
+      return importProjectEventBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

@@ -128,6 +128,10 @@ public enum ModulePropertyKeys
    * <code>MODULE_BUILD_ALL_ABIS_IGNORING_IDE_OPTIMIZATIONS = 29;</code>
    */
   MODULE_BUILD_ALL_ABIS_IGNORING_IDE_OPTIMIZATIONS(29),
+  /**
+   * <code>MODULE_R8_VERSION_OVERRIDE = 30;</code>
+   */
+  MODULE_R8_VERSION_OVERRIDE(30),
   UNRECOGNIZED(-1),
   ;
 
@@ -251,6 +255,10 @@ public enum ModulePropertyKeys
    * <code>MODULE_BUILD_ALL_ABIS_IGNORING_IDE_OPTIMIZATIONS = 29;</code>
    */
   public static final int MODULE_BUILD_ALL_ABIS_IGNORING_IDE_OPTIMIZATIONS_VALUE = 29;
+  /**
+   * <code>MODULE_R8_VERSION_OVERRIDE = 30;</code>
+   */
+  public static final int MODULE_R8_VERSION_OVERRIDE_VALUE = 30;
 
 
   public final int getNumber() {
@@ -307,6 +315,7 @@ public enum ModulePropertyKeys
       case 27: return MODULE_R8_EXPERIMENTAL_PARTIAL_SHRINKING_EXCLUDE_PATTERNS;
       case 28: return MODULE_FUSED_LIBRARY_VALIDATE_DEPENDENCIES;
       case 29: return MODULE_BUILD_ALL_ABIS_IGNORING_IDE_OPTIMIZATIONS;
+      case 30: return MODULE_R8_VERSION_OVERRIDE;
       default: return null;
     }
   }

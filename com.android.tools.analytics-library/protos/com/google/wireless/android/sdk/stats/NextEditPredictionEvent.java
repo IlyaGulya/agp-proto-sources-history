@@ -1783,6 +1783,34 @@ private static final long serialVersionUID = 0L;
      * @return The status.
      */
     com.google.wireless.android.sdk.stats.NextEditPredictionEvent.EnabledStatus.Status getStatus();
+
+    /**
+     * <code>optional string model_id = 2;</code>
+     * @return Whether the modelId field is set.
+     */
+    boolean hasModelId();
+    /**
+     * <code>optional string model_id = 2;</code>
+     * @return The modelId.
+     */
+    java.lang.String getModelId();
+    /**
+     * <code>optional string model_id = 2;</code>
+     * @return The bytes for modelId.
+     */
+    com.google.protobuf.ByteString
+        getModelIdBytes();
+
+    /**
+     * <code>optional bool is_nep_lite = 3;</code>
+     * @return Whether the isNepLite field is set.
+     */
+    boolean hasIsNepLite();
+    /**
+     * <code>optional bool is_nep_lite = 3;</code>
+     * @return The isNepLite.
+     */
+    boolean getIsNepLite();
   }
   /**
    * Protobuf type {@code android_studio.NextEditPredictionEvent.EnabledStatus}
@@ -1798,6 +1826,7 @@ private static final long serialVersionUID = 0L;
     }
     private EnabledStatus() {
       status_ = 0;
+      modelId_ = "";
     }
 
     @java.lang.Override
@@ -1953,6 +1982,74 @@ private static final long serialVersionUID = 0L;
       return result == null ? com.google.wireless.android.sdk.stats.NextEditPredictionEvent.EnabledStatus.Status.UNKNOWN_STATUS : result;
     }
 
+    public static final int MODEL_ID_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object modelId_ = "";
+    /**
+     * <code>optional string model_id = 2;</code>
+     * @return Whether the modelId field is set.
+     */
+    @java.lang.Override
+    public boolean hasModelId() {
+      return ((bitField0_ & 0x00000002) != 0);
+    }
+    /**
+     * <code>optional string model_id = 2;</code>
+     * @return The modelId.
+     */
+    @java.lang.Override
+    public java.lang.String getModelId() {
+      java.lang.Object ref = modelId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          modelId_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string model_id = 2;</code>
+     * @return The bytes for modelId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getModelIdBytes() {
+      java.lang.Object ref = modelId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        modelId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int IS_NEP_LITE_FIELD_NUMBER = 3;
+    private boolean isNepLite_ = false;
+    /**
+     * <code>optional bool is_nep_lite = 3;</code>
+     * @return Whether the isNepLite field is set.
+     */
+    @java.lang.Override
+    public boolean hasIsNepLite() {
+      return ((bitField0_ & 0x00000004) != 0);
+    }
+    /**
+     * <code>optional bool is_nep_lite = 3;</code>
+     * @return The isNepLite.
+     */
+    @java.lang.Override
+    public boolean getIsNepLite() {
+      return isNepLite_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -1970,6 +2067,12 @@ private static final long serialVersionUID = 0L;
       if (((bitField0_ & 0x00000001) != 0)) {
         output.writeEnum(1, status_);
       }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, modelId_);
+      }
+      if (((bitField0_ & 0x00000004) != 0)) {
+        output.writeBool(3, isNepLite_);
+      }
       getUnknownFields().writeTo(output);
     }
 
@@ -1982,6 +2085,13 @@ private static final long serialVersionUID = 0L;
       if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(1, status_);
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, modelId_);
+      }
+      if (((bitField0_ & 0x00000004) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(3, isNepLite_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -2002,6 +2112,16 @@ private static final long serialVersionUID = 0L;
       if (hasStatus()) {
         if (status_ != other.status_) return false;
       }
+      if (hasModelId() != other.hasModelId()) return false;
+      if (hasModelId()) {
+        if (!getModelId()
+            .equals(other.getModelId())) return false;
+      }
+      if (hasIsNepLite() != other.hasIsNepLite()) return false;
+      if (hasIsNepLite()) {
+        if (getIsNepLite()
+            != other.getIsNepLite()) return false;
+      }
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -2016,6 +2136,15 @@ private static final long serialVersionUID = 0L;
       if (hasStatus()) {
         hash = (37 * hash) + STATUS_FIELD_NUMBER;
         hash = (53 * hash) + status_;
+      }
+      if (hasModelId()) {
+        hash = (37 * hash) + MODEL_ID_FIELD_NUMBER;
+        hash = (53 * hash) + getModelId().hashCode();
+      }
+      if (hasIsNepLite()) {
+        hash = (37 * hash) + IS_NEP_LITE_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+            getIsNepLite());
       }
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
@@ -2147,6 +2276,8 @@ private static final long serialVersionUID = 0L;
         super.clear();
         bitField0_ = 0;
         status_ = 0;
+        modelId_ = "";
+        isNepLite_ = false;
         return this;
       }
 
@@ -2185,6 +2316,14 @@ private static final long serialVersionUID = 0L;
           result.status_ = status_;
           to_bitField0_ |= 0x00000001;
         }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.modelId_ = modelId_;
+          to_bitField0_ |= 0x00000002;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.isNepLite_ = isNepLite_;
+          to_bitField0_ |= 0x00000004;
+        }
         result.bitField0_ |= to_bitField0_;
       }
 
@@ -2202,6 +2341,14 @@ private static final long serialVersionUID = 0L;
         if (other == com.google.wireless.android.sdk.stats.NextEditPredictionEvent.EnabledStatus.getDefaultInstance()) return this;
         if (other.hasStatus()) {
           setStatus(other.getStatus());
+        }
+        if (other.hasModelId()) {
+          modelId_ = other.modelId_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (other.hasIsNepLite()) {
+          setIsNepLite(other.getIsNepLite());
         }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
@@ -2241,6 +2388,16 @@ private static final long serialVersionUID = 0L;
                 }
                 break;
               } // case 8
+              case 18: {
+                modelId_ = input.readBytes();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 24: {
+                isNepLite_ = input.readBool();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 24
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -2296,6 +2453,126 @@ private static final long serialVersionUID = 0L;
       public Builder clearStatus() {
         bitField0_ = (bitField0_ & ~0x00000001);
         status_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object modelId_ = "";
+      /**
+       * <code>optional string model_id = 2;</code>
+       * @return Whether the modelId field is set.
+       */
+      public boolean hasModelId() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <code>optional string model_id = 2;</code>
+       * @return The modelId.
+       */
+      public java.lang.String getModelId() {
+        java.lang.Object ref = modelId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            modelId_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string model_id = 2;</code>
+       * @return The bytes for modelId.
+       */
+      public com.google.protobuf.ByteString
+          getModelIdBytes() {
+        java.lang.Object ref = modelId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          modelId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string model_id = 2;</code>
+       * @param value The modelId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setModelId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        modelId_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string model_id = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearModelId() {
+        modelId_ = getDefaultInstance().getModelId();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string model_id = 2;</code>
+       * @param value The bytes for modelId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setModelIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        modelId_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private boolean isNepLite_ ;
+      /**
+       * <code>optional bool is_nep_lite = 3;</code>
+       * @return Whether the isNepLite field is set.
+       */
+      @java.lang.Override
+      public boolean hasIsNepLite() {
+        return ((bitField0_ & 0x00000004) != 0);
+      }
+      /**
+       * <code>optional bool is_nep_lite = 3;</code>
+       * @return The isNepLite.
+       */
+      @java.lang.Override
+      public boolean getIsNepLite() {
+        return isNepLite_;
+      }
+      /**
+       * <code>optional bool is_nep_lite = 3;</code>
+       * @param value The isNepLite to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIsNepLite(boolean value) {
+
+        isNepLite_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional bool is_nep_lite = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearIsNepLite() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        isNepLite_ = false;
         onChanged();
         return this;
       }
@@ -2402,7 +2679,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional string language = 3 [deprecated = true];</code>
      * @deprecated android_studio.NextEditPredictionEvent.Session.language is deprecated.
-     *     See studio_stats.proto;l=20798
+     *     See studio_stats.proto;l=20811
      * @return Whether the language field is set.
      */
     @java.lang.Deprecated boolean hasLanguage();
@@ -2413,7 +2690,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional string language = 3 [deprecated = true];</code>
      * @deprecated android_studio.NextEditPredictionEvent.Session.language is deprecated.
-     *     See studio_stats.proto;l=20798
+     *     See studio_stats.proto;l=20811
      * @return The language.
      */
     @java.lang.Deprecated java.lang.String getLanguage();
@@ -2424,7 +2701,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional string language = 3 [deprecated = true];</code>
      * @deprecated android_studio.NextEditPredictionEvent.Session.language is deprecated.
-     *     See studio_stats.proto;l=20798
+     *     See studio_stats.proto;l=20811
      * @return The bytes for language.
      */
     @java.lang.Deprecated com.google.protobuf.ByteString
@@ -2485,6 +2762,17 @@ private static final long serialVersionUID = 0L;
      * @return The editorFileType.
      */
     com.google.wireless.android.sdk.stats.EditorFileType getEditorFileType();
+
+    /**
+     * <code>optional bool is_nep_lite = 7;</code>
+     * @return Whether the isNepLite field is set.
+     */
+    boolean hasIsNepLite();
+    /**
+     * <code>optional bool is_nep_lite = 7;</code>
+     * @return The isNepLite.
+     */
+    boolean getIsNepLite();
   }
   /**
    * <pre>
@@ -2571,7 +2859,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional int32 offset = 3 [deprecated = true];</code>
        * @deprecated android_studio.NextEditPredictionEvent.Session.SessionEvent.offset is deprecated.
-       *     See studio_stats.proto;l=20868
+       *     See studio_stats.proto;l=20882
        * @return Whether the offset field is set.
        */
       @java.lang.Deprecated boolean hasOffset();
@@ -2582,7 +2870,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional int32 offset = 3 [deprecated = true];</code>
        * @deprecated android_studio.NextEditPredictionEvent.Session.SessionEvent.offset is deprecated.
-       *     See studio_stats.proto;l=20868
+       *     See studio_stats.proto;l=20882
        * @return The offset.
        */
       @java.lang.Deprecated int getOffset();
@@ -2590,14 +2878,14 @@ private static final long serialVersionUID = 0L;
       /**
        * <code>optional int32 original_length = 4 [deprecated = true];</code>
        * @deprecated android_studio.NextEditPredictionEvent.Session.SessionEvent.original_length is deprecated.
-       *     See studio_stats.proto;l=20869
+       *     See studio_stats.proto;l=20883
        * @return Whether the originalLength field is set.
        */
       @java.lang.Deprecated boolean hasOriginalLength();
       /**
        * <code>optional int32 original_length = 4 [deprecated = true];</code>
        * @deprecated android_studio.NextEditPredictionEvent.Session.SessionEvent.original_length is deprecated.
-       *     See studio_stats.proto;l=20869
+       *     See studio_stats.proto;l=20883
        * @return The originalLength.
        */
       @java.lang.Deprecated int getOriginalLength();
@@ -2605,14 +2893,14 @@ private static final long serialVersionUID = 0L;
       /**
        * <code>optional int32 new_length = 5 [deprecated = true];</code>
        * @deprecated android_studio.NextEditPredictionEvent.Session.SessionEvent.new_length is deprecated.
-       *     See studio_stats.proto;l=20870
+       *     See studio_stats.proto;l=20884
        * @return Whether the newLength field is set.
        */
       @java.lang.Deprecated boolean hasNewLength();
       /**
        * <code>optional int32 new_length = 5 [deprecated = true];</code>
        * @deprecated android_studio.NextEditPredictionEvent.Session.SessionEvent.new_length is deprecated.
-       *     See studio_stats.proto;l=20870
+       *     See studio_stats.proto;l=20884
        * @return The newLength.
        */
       @java.lang.Deprecated int getNewLength();
@@ -5639,7 +5927,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional int32 offset = 3 [deprecated = true];</code>
        * @deprecated android_studio.NextEditPredictionEvent.Session.SessionEvent.offset is deprecated.
-       *     See studio_stats.proto;l=20868
+       *     See studio_stats.proto;l=20882
        * @return Whether the offset field is set.
        */
       @java.lang.Override
@@ -5653,7 +5941,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional int32 offset = 3 [deprecated = true];</code>
        * @deprecated android_studio.NextEditPredictionEvent.Session.SessionEvent.offset is deprecated.
-       *     See studio_stats.proto;l=20868
+       *     See studio_stats.proto;l=20882
        * @return The offset.
        */
       @java.lang.Override
@@ -5666,7 +5954,7 @@ private static final long serialVersionUID = 0L;
       /**
        * <code>optional int32 original_length = 4 [deprecated = true];</code>
        * @deprecated android_studio.NextEditPredictionEvent.Session.SessionEvent.original_length is deprecated.
-       *     See studio_stats.proto;l=20869
+       *     See studio_stats.proto;l=20883
        * @return Whether the originalLength field is set.
        */
       @java.lang.Override
@@ -5676,7 +5964,7 @@ private static final long serialVersionUID = 0L;
       /**
        * <code>optional int32 original_length = 4 [deprecated = true];</code>
        * @deprecated android_studio.NextEditPredictionEvent.Session.SessionEvent.original_length is deprecated.
-       *     See studio_stats.proto;l=20869
+       *     See studio_stats.proto;l=20883
        * @return The originalLength.
        */
       @java.lang.Override
@@ -5689,7 +5977,7 @@ private static final long serialVersionUID = 0L;
       /**
        * <code>optional int32 new_length = 5 [deprecated = true];</code>
        * @deprecated android_studio.NextEditPredictionEvent.Session.SessionEvent.new_length is deprecated.
-       *     See studio_stats.proto;l=20870
+       *     See studio_stats.proto;l=20884
        * @return Whether the newLength field is set.
        */
       @java.lang.Override
@@ -5699,7 +5987,7 @@ private static final long serialVersionUID = 0L;
       /**
        * <code>optional int32 new_length = 5 [deprecated = true];</code>
        * @deprecated android_studio.NextEditPredictionEvent.Session.SessionEvent.new_length is deprecated.
-       *     See studio_stats.proto;l=20870
+       *     See studio_stats.proto;l=20884
        * @return The newLength.
        */
       @java.lang.Override
@@ -6502,7 +6790,7 @@ private static final long serialVersionUID = 0L;
          *
          * <code>optional int32 offset = 3 [deprecated = true];</code>
          * @deprecated android_studio.NextEditPredictionEvent.Session.SessionEvent.offset is deprecated.
-         *     See studio_stats.proto;l=20868
+         *     See studio_stats.proto;l=20882
          * @return Whether the offset field is set.
          */
         @java.lang.Override
@@ -6516,7 +6804,7 @@ private static final long serialVersionUID = 0L;
          *
          * <code>optional int32 offset = 3 [deprecated = true];</code>
          * @deprecated android_studio.NextEditPredictionEvent.Session.SessionEvent.offset is deprecated.
-         *     See studio_stats.proto;l=20868
+         *     See studio_stats.proto;l=20882
          * @return The offset.
          */
         @java.lang.Override
@@ -6530,7 +6818,7 @@ private static final long serialVersionUID = 0L;
          *
          * <code>optional int32 offset = 3 [deprecated = true];</code>
          * @deprecated android_studio.NextEditPredictionEvent.Session.SessionEvent.offset is deprecated.
-         *     See studio_stats.proto;l=20868
+         *     See studio_stats.proto;l=20882
          * @param value The offset to set.
          * @return This builder for chaining.
          */
@@ -6548,7 +6836,7 @@ private static final long serialVersionUID = 0L;
          *
          * <code>optional int32 offset = 3 [deprecated = true];</code>
          * @deprecated android_studio.NextEditPredictionEvent.Session.SessionEvent.offset is deprecated.
-         *     See studio_stats.proto;l=20868
+         *     See studio_stats.proto;l=20882
          * @return This builder for chaining.
          */
         @java.lang.Deprecated public Builder clearOffset() {
@@ -6562,7 +6850,7 @@ private static final long serialVersionUID = 0L;
         /**
          * <code>optional int32 original_length = 4 [deprecated = true];</code>
          * @deprecated android_studio.NextEditPredictionEvent.Session.SessionEvent.original_length is deprecated.
-         *     See studio_stats.proto;l=20869
+         *     See studio_stats.proto;l=20883
          * @return Whether the originalLength field is set.
          */
         @java.lang.Override
@@ -6572,7 +6860,7 @@ private static final long serialVersionUID = 0L;
         /**
          * <code>optional int32 original_length = 4 [deprecated = true];</code>
          * @deprecated android_studio.NextEditPredictionEvent.Session.SessionEvent.original_length is deprecated.
-         *     See studio_stats.proto;l=20869
+         *     See studio_stats.proto;l=20883
          * @return The originalLength.
          */
         @java.lang.Override
@@ -6582,7 +6870,7 @@ private static final long serialVersionUID = 0L;
         /**
          * <code>optional int32 original_length = 4 [deprecated = true];</code>
          * @deprecated android_studio.NextEditPredictionEvent.Session.SessionEvent.original_length is deprecated.
-         *     See studio_stats.proto;l=20869
+         *     See studio_stats.proto;l=20883
          * @param value The originalLength to set.
          * @return This builder for chaining.
          */
@@ -6596,7 +6884,7 @@ private static final long serialVersionUID = 0L;
         /**
          * <code>optional int32 original_length = 4 [deprecated = true];</code>
          * @deprecated android_studio.NextEditPredictionEvent.Session.SessionEvent.original_length is deprecated.
-         *     See studio_stats.proto;l=20869
+         *     See studio_stats.proto;l=20883
          * @return This builder for chaining.
          */
         @java.lang.Deprecated public Builder clearOriginalLength() {
@@ -6610,7 +6898,7 @@ private static final long serialVersionUID = 0L;
         /**
          * <code>optional int32 new_length = 5 [deprecated = true];</code>
          * @deprecated android_studio.NextEditPredictionEvent.Session.SessionEvent.new_length is deprecated.
-         *     See studio_stats.proto;l=20870
+         *     See studio_stats.proto;l=20884
          * @return Whether the newLength field is set.
          */
         @java.lang.Override
@@ -6620,7 +6908,7 @@ private static final long serialVersionUID = 0L;
         /**
          * <code>optional int32 new_length = 5 [deprecated = true];</code>
          * @deprecated android_studio.NextEditPredictionEvent.Session.SessionEvent.new_length is deprecated.
-         *     See studio_stats.proto;l=20870
+         *     See studio_stats.proto;l=20884
          * @return The newLength.
          */
         @java.lang.Override
@@ -6630,7 +6918,7 @@ private static final long serialVersionUID = 0L;
         /**
          * <code>optional int32 new_length = 5 [deprecated = true];</code>
          * @deprecated android_studio.NextEditPredictionEvent.Session.SessionEvent.new_length is deprecated.
-         *     See studio_stats.proto;l=20870
+         *     See studio_stats.proto;l=20884
          * @param value The newLength to set.
          * @return This builder for chaining.
          */
@@ -6644,7 +6932,7 @@ private static final long serialVersionUID = 0L;
         /**
          * <code>optional int32 new_length = 5 [deprecated = true];</code>
          * @deprecated android_studio.NextEditPredictionEvent.Session.SessionEvent.new_length is deprecated.
-         *     See studio_stats.proto;l=20870
+         *     See studio_stats.proto;l=20884
          * @return This builder for chaining.
          */
         @java.lang.Deprecated public Builder clearNewLength() {
@@ -7346,7 +7634,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional string language = 3 [deprecated = true];</code>
      * @deprecated android_studio.NextEditPredictionEvent.Session.language is deprecated.
-     *     See studio_stats.proto;l=20798
+     *     See studio_stats.proto;l=20811
      * @return Whether the language field is set.
      */
     @java.lang.Override
@@ -7360,7 +7648,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional string language = 3 [deprecated = true];</code>
      * @deprecated android_studio.NextEditPredictionEvent.Session.language is deprecated.
-     *     See studio_stats.proto;l=20798
+     *     See studio_stats.proto;l=20811
      * @return The language.
      */
     @java.lang.Override
@@ -7385,7 +7673,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional string language = 3 [deprecated = true];</code>
      * @deprecated android_studio.NextEditPredictionEvent.Session.language is deprecated.
-     *     See studio_stats.proto;l=20798
+     *     See studio_stats.proto;l=20811
      * @return The bytes for language.
      */
     @java.lang.Override
@@ -7491,6 +7779,25 @@ private static final long serialVersionUID = 0L;
       return result == null ? com.google.wireless.android.sdk.stats.EditorFileType.UNKNOWN : result;
     }
 
+    public static final int IS_NEP_LITE_FIELD_NUMBER = 7;
+    private boolean isNepLite_ = false;
+    /**
+     * <code>optional bool is_nep_lite = 7;</code>
+     * @return Whether the isNepLite field is set.
+     */
+    @java.lang.Override
+    public boolean hasIsNepLite() {
+      return ((bitField0_ & 0x00000020) != 0);
+    }
+    /**
+     * <code>optional bool is_nep_lite = 7;</code>
+     * @return The isNepLite.
+     */
+    @java.lang.Override
+    public boolean getIsNepLite() {
+      return isNepLite_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -7523,6 +7830,9 @@ private static final long serialVersionUID = 0L;
       if (((bitField0_ & 0x00000010) != 0)) {
         output.writeEnum(6, editorFileType_);
       }
+      if (((bitField0_ & 0x00000020) != 0)) {
+        output.writeBool(7, isNepLite_);
+      }
       getUnknownFields().writeTo(output);
     }
 
@@ -7553,6 +7863,10 @@ private static final long serialVersionUID = 0L;
       if (((bitField0_ & 0x00000010) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(6, editorFileType_);
+      }
+      if (((bitField0_ & 0x00000020) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(7, isNepLite_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -7595,6 +7909,11 @@ private static final long serialVersionUID = 0L;
       if (hasEditorFileType()) {
         if (editorFileType_ != other.editorFileType_) return false;
       }
+      if (hasIsNepLite() != other.hasIsNepLite()) return false;
+      if (hasIsNepLite()) {
+        if (getIsNepLite()
+            != other.getIsNepLite()) return false;
+      }
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -7631,6 +7950,11 @@ private static final long serialVersionUID = 0L;
       if (hasEditorFileType()) {
         hash = (37 * hash) + EDITOR_FILE_TYPE_FIELD_NUMBER;
         hash = (53 * hash) + editorFileType_;
+      }
+      if (hasIsNepLite()) {
+        hash = (37 * hash) + IS_NEP_LITE_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+            getIsNepLite());
       }
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
@@ -7778,6 +8102,7 @@ private static final long serialVersionUID = 0L;
         }
         bitField0_ = (bitField0_ & ~0x00000010);
         editorFileType_ = 0;
+        isNepLite_ = false;
         return this;
       }
 
@@ -7845,6 +8170,10 @@ private static final long serialVersionUID = 0L;
           result.editorFileType_ = editorFileType_;
           to_bitField0_ |= 0x00000010;
         }
+        if (((from_bitField0_ & 0x00000040) != 0)) {
+          result.isNepLite_ = isNepLite_;
+          to_bitField0_ |= 0x00000020;
+        }
         result.bitField0_ |= to_bitField0_;
       }
 
@@ -7904,6 +8233,9 @@ private static final long serialVersionUID = 0L;
         }
         if (other.hasEditorFileType()) {
           setEditorFileType(other.getEditorFileType());
+        }
+        if (other.hasIsNepLite()) {
+          setIsNepLite(other.getIsNepLite());
         }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
@@ -7976,6 +8308,11 @@ private static final long serialVersionUID = 0L;
                 }
                 break;
               } // case 48
+              case 56: {
+                isNepLite_ = input.readBool();
+                bitField0_ |= 0x00000040;
+                break;
+              } // case 56
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -8121,7 +8458,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional string language = 3 [deprecated = true];</code>
        * @deprecated android_studio.NextEditPredictionEvent.Session.language is deprecated.
-       *     See studio_stats.proto;l=20798
+       *     See studio_stats.proto;l=20811
        * @return Whether the language field is set.
        */
       @java.lang.Deprecated public boolean hasLanguage() {
@@ -8134,7 +8471,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional string language = 3 [deprecated = true];</code>
        * @deprecated android_studio.NextEditPredictionEvent.Session.language is deprecated.
-       *     See studio_stats.proto;l=20798
+       *     See studio_stats.proto;l=20811
        * @return The language.
        */
       @java.lang.Deprecated public java.lang.String getLanguage() {
@@ -8158,7 +8495,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional string language = 3 [deprecated = true];</code>
        * @deprecated android_studio.NextEditPredictionEvent.Session.language is deprecated.
-       *     See studio_stats.proto;l=20798
+       *     See studio_stats.proto;l=20811
        * @return The bytes for language.
        */
       @java.lang.Deprecated public com.google.protobuf.ByteString
@@ -8181,7 +8518,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional string language = 3 [deprecated = true];</code>
        * @deprecated android_studio.NextEditPredictionEvent.Session.language is deprecated.
-       *     See studio_stats.proto;l=20798
+       *     See studio_stats.proto;l=20811
        * @param value The language to set.
        * @return This builder for chaining.
        */
@@ -8200,7 +8537,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional string language = 3 [deprecated = true];</code>
        * @deprecated android_studio.NextEditPredictionEvent.Session.language is deprecated.
-       *     See studio_stats.proto;l=20798
+       *     See studio_stats.proto;l=20811
        * @return This builder for chaining.
        */
       @java.lang.Deprecated public Builder clearLanguage() {
@@ -8216,7 +8553,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional string language = 3 [deprecated = true];</code>
        * @deprecated android_studio.NextEditPredictionEvent.Session.language is deprecated.
-       *     See studio_stats.proto;l=20798
+       *     See studio_stats.proto;l=20811
        * @param value The bytes for language to set.
        * @return This builder for chaining.
        */
@@ -8570,6 +8907,46 @@ private static final long serialVersionUID = 0L;
         onChanged();
         return this;
       }
+
+      private boolean isNepLite_ ;
+      /**
+       * <code>optional bool is_nep_lite = 7;</code>
+       * @return Whether the isNepLite field is set.
+       */
+      @java.lang.Override
+      public boolean hasIsNepLite() {
+        return ((bitField0_ & 0x00000040) != 0);
+      }
+      /**
+       * <code>optional bool is_nep_lite = 7;</code>
+       * @return The isNepLite.
+       */
+      @java.lang.Override
+      public boolean getIsNepLite() {
+        return isNepLite_;
+      }
+      /**
+       * <code>optional bool is_nep_lite = 7;</code>
+       * @param value The isNepLite to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIsNepLite(boolean value) {
+
+        isNepLite_ = value;
+        bitField0_ |= 0x00000040;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional bool is_nep_lite = 7;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearIsNepLite() {
+        bitField0_ = (bitField0_ & ~0x00000040);
+        isNepLite_ = false;
+        onChanged();
+        return this;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -8665,6 +9042,17 @@ private static final long serialVersionUID = 0L;
      * @return The modelType.
      */
     com.google.wireless.android.sdk.stats.NextEditPredictionEvent.RequestSent.ModelType getModelType();
+
+    /**
+     * <code>optional bool is_nep_lite = 3;</code>
+     * @return Whether the isNepLite field is set.
+     */
+    boolean hasIsNepLite();
+    /**
+     * <code>optional bool is_nep_lite = 3;</code>
+     * @return The isNepLite.
+     */
+    boolean getIsNepLite();
   }
   /**
    * Protobuf type {@code android_studio.NextEditPredictionEvent.RequestSent}
@@ -8885,6 +9273,25 @@ private static final long serialVersionUID = 0L;
       return result == null ? com.google.wireless.android.sdk.stats.NextEditPredictionEvent.RequestSent.ModelType.UNKNOWN : result;
     }
 
+    public static final int IS_NEP_LITE_FIELD_NUMBER = 3;
+    private boolean isNepLite_ = false;
+    /**
+     * <code>optional bool is_nep_lite = 3;</code>
+     * @return Whether the isNepLite field is set.
+     */
+    @java.lang.Override
+    public boolean hasIsNepLite() {
+      return ((bitField0_ & 0x00000004) != 0);
+    }
+    /**
+     * <code>optional bool is_nep_lite = 3;</code>
+     * @return The isNepLite.
+     */
+    @java.lang.Override
+    public boolean getIsNepLite() {
+      return isNepLite_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -8905,6 +9312,9 @@ private static final long serialVersionUID = 0L;
       if (((bitField0_ & 0x00000002) != 0)) {
         output.writeEnum(2, modelType_);
       }
+      if (((bitField0_ & 0x00000004) != 0)) {
+        output.writeBool(3, isNepLite_);
+      }
       getUnknownFields().writeTo(output);
     }
 
@@ -8920,6 +9330,10 @@ private static final long serialVersionUID = 0L;
       if (((bitField0_ & 0x00000002) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(2, modelType_);
+      }
+      if (((bitField0_ & 0x00000004) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(3, isNepLite_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -8945,6 +9359,11 @@ private static final long serialVersionUID = 0L;
       if (hasModelType()) {
         if (modelType_ != other.modelType_) return false;
       }
+      if (hasIsNepLite() != other.hasIsNepLite()) return false;
+      if (hasIsNepLite()) {
+        if (getIsNepLite()
+            != other.getIsNepLite()) return false;
+      }
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -8963,6 +9382,11 @@ private static final long serialVersionUID = 0L;
       if (hasModelType()) {
         hash = (37 * hash) + MODEL_TYPE_FIELD_NUMBER;
         hash = (53 * hash) + modelType_;
+      }
+      if (hasIsNepLite()) {
+        hash = (37 * hash) + IS_NEP_LITE_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+            getIsNepLite());
       }
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
@@ -9095,6 +9519,7 @@ private static final long serialVersionUID = 0L;
         bitField0_ = 0;
         modelId_ = "";
         modelType_ = 0;
+        isNepLite_ = false;
         return this;
       }
 
@@ -9137,6 +9562,10 @@ private static final long serialVersionUID = 0L;
           result.modelType_ = modelType_;
           to_bitField0_ |= 0x00000002;
         }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.isNepLite_ = isNepLite_;
+          to_bitField0_ |= 0x00000004;
+        }
         result.bitField0_ |= to_bitField0_;
       }
 
@@ -9159,6 +9588,9 @@ private static final long serialVersionUID = 0L;
         }
         if (other.hasModelType()) {
           setModelType(other.getModelType());
+        }
+        if (other.hasIsNepLite()) {
+          setIsNepLite(other.getIsNepLite());
         }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
@@ -9203,6 +9635,11 @@ private static final long serialVersionUID = 0L;
                 }
                 break;
               } // case 16
+              case 24: {
+                isNepLite_ = input.readBool();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 24
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -9338,6 +9775,46 @@ private static final long serialVersionUID = 0L;
       public Builder clearModelType() {
         bitField0_ = (bitField0_ & ~0x00000002);
         modelType_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private boolean isNepLite_ ;
+      /**
+       * <code>optional bool is_nep_lite = 3;</code>
+       * @return Whether the isNepLite field is set.
+       */
+      @java.lang.Override
+      public boolean hasIsNepLite() {
+        return ((bitField0_ & 0x00000004) != 0);
+      }
+      /**
+       * <code>optional bool is_nep_lite = 3;</code>
+       * @return The isNepLite.
+       */
+      @java.lang.Override
+      public boolean getIsNepLite() {
+        return isNepLite_;
+      }
+      /**
+       * <code>optional bool is_nep_lite = 3;</code>
+       * @param value The isNepLite to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIsNepLite(boolean value) {
+
+        isNepLite_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional bool is_nep_lite = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearIsNepLite() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        isNepLite_ = false;
         onChanged();
         return this;
       }

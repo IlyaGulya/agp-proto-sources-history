@@ -23645,6 +23645,33 @@ private static final long serialVersionUID = 0L;
          * <code>optional .android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchResponse response = 6;</code>
          */
         com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchResponseOrBuilder getResponseOrBuilder();
+
+        /**
+         * <pre>
+         * The search arguments used for code_search.
+         * </pre>
+         *
+         * <code>optional .android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchArguments search_arguments = 7;</code>
+         * @return Whether the searchArguments field is set.
+         */
+        boolean hasSearchArguments();
+        /**
+         * <pre>
+         * The search arguments used for code_search.
+         * </pre>
+         *
+         * <code>optional .android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchArguments search_arguments = 7;</code>
+         * @return The searchArguments.
+         */
+        com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchArguments getSearchArguments();
+        /**
+         * <pre>
+         * The search arguments used for code_search.
+         * </pre>
+         *
+         * <code>optional .android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchArguments search_arguments = 7;</code>
+         */
+        com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchArgumentsOrBuilder getSearchArgumentsOrBuilder();
       }
       /**
        * Protobuf type {@code android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.RagToolCallData}
@@ -23895,6 +23922,44 @@ private static final long serialVersionUID = 0L;
           return response_ == null ? com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchResponse.getDefaultInstance() : response_;
         }
 
+        public static final int SEARCH_ARGUMENTS_FIELD_NUMBER = 7;
+        private com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchArguments searchArguments_;
+        /**
+         * <pre>
+         * The search arguments used for code_search.
+         * </pre>
+         *
+         * <code>optional .android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchArguments search_arguments = 7;</code>
+         * @return Whether the searchArguments field is set.
+         */
+        @java.lang.Override
+        public boolean hasSearchArguments() {
+          return ((bitField0_ & 0x00000040) != 0);
+        }
+        /**
+         * <pre>
+         * The search arguments used for code_search.
+         * </pre>
+         *
+         * <code>optional .android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchArguments search_arguments = 7;</code>
+         * @return The searchArguments.
+         */
+        @java.lang.Override
+        public com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchArguments getSearchArguments() {
+          return searchArguments_ == null ? com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchArguments.getDefaultInstance() : searchArguments_;
+        }
+        /**
+         * <pre>
+         * The search arguments used for code_search.
+         * </pre>
+         *
+         * <code>optional .android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchArguments search_arguments = 7;</code>
+         */
+        @java.lang.Override
+        public com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchArgumentsOrBuilder getSearchArgumentsOrBuilder() {
+          return searchArguments_ == null ? com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchArguments.getDefaultInstance() : searchArguments_;
+        }
+
         private byte memoizedIsInitialized = -1;
         @java.lang.Override
         public final boolean isInitialized() {
@@ -23927,6 +23992,9 @@ private static final long serialVersionUID = 0L;
           if (((bitField0_ & 0x00000020) != 0)) {
             output.writeMessage(6, getResponse());
           }
+          if (((bitField0_ & 0x00000040) != 0)) {
+            output.writeMessage(7, getSearchArguments());
+          }
           getUnknownFields().writeTo(output);
         }
 
@@ -23958,6 +24026,10 @@ private static final long serialVersionUID = 0L;
           if (((bitField0_ & 0x00000020) != 0)) {
             size += com.google.protobuf.CodedOutputStream
               .computeMessageSize(6, getResponse());
+          }
+          if (((bitField0_ & 0x00000040) != 0)) {
+            size += com.google.protobuf.CodedOutputStream
+              .computeMessageSize(7, getSearchArguments());
           }
           size += getUnknownFields().getSerializedSize();
           memoizedSize = size;
@@ -24004,6 +24076,11 @@ private static final long serialVersionUID = 0L;
             if (!getResponse()
                 .equals(other.getResponse())) return false;
           }
+          if (hasSearchArguments() != other.hasSearchArguments()) return false;
+          if (hasSearchArguments()) {
+            if (!getSearchArguments()
+                .equals(other.getSearchArguments())) return false;
+          }
           if (!getUnknownFields().equals(other.getUnknownFields())) return false;
           return true;
         }
@@ -24038,6 +24115,10 @@ private static final long serialVersionUID = 0L;
           if (hasResponse()) {
             hash = (37 * hash) + RESPONSE_FIELD_NUMBER;
             hash = (53 * hash) + getResponse().hashCode();
+          }
+          if (hasSearchArguments()) {
+            hash = (37 * hash) + SEARCH_ARGUMENTS_FIELD_NUMBER;
+            hash = (53 * hash) + getSearchArguments().hashCode();
           }
           hash = (29 * hash) + getUnknownFields().hashCode();
           memoizedHashCode = hash;
@@ -24168,6 +24249,7 @@ private static final long serialVersionUID = 0L;
             if (com.google.protobuf.GeneratedMessageV3
                     .alwaysUseFieldBuilders) {
               getResponseFieldBuilder();
+              getSearchArgumentsFieldBuilder();
             }
           }
           @java.lang.Override
@@ -24183,6 +24265,11 @@ private static final long serialVersionUID = 0L;
             if (responseBuilder_ != null) {
               responseBuilder_.dispose();
               responseBuilder_ = null;
+            }
+            searchArguments_ = null;
+            if (searchArgumentsBuilder_ != null) {
+              searchArgumentsBuilder_.dispose();
+              searchArgumentsBuilder_ = null;
             }
             return this;
           }
@@ -24244,6 +24331,12 @@ private static final long serialVersionUID = 0L;
                   : responseBuilder_.build();
               to_bitField0_ |= 0x00000020;
             }
+            if (((from_bitField0_ & 0x00000040) != 0)) {
+              result.searchArguments_ = searchArgumentsBuilder_ == null
+                  ? searchArguments_
+                  : searchArgumentsBuilder_.build();
+              to_bitField0_ |= 0x00000040;
+            }
             result.bitField0_ |= to_bitField0_;
           }
 
@@ -24278,6 +24371,9 @@ private static final long serialVersionUID = 0L;
             }
             if (other.hasResponse()) {
               mergeResponse(other.getResponse());
+            }
+            if (other.hasSearchArguments()) {
+              mergeSearchArguments(other.getSearchArguments());
             }
             this.mergeUnknownFields(other.getUnknownFields());
             onChanged();
@@ -24337,6 +24433,13 @@ private static final long serialVersionUID = 0L;
                     bitField0_ |= 0x00000020;
                     break;
                   } // case 50
+                  case 58: {
+                    input.readMessage(
+                        getSearchArgumentsFieldBuilder().getBuilder(),
+                        extensionRegistry);
+                    bitField0_ |= 0x00000040;
+                    break;
+                  } // case 58
                   default: {
                     if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                       done = true; // was an endgroup tag
@@ -24845,6 +24948,161 @@ private static final long serialVersionUID = 0L;
               response_ = null;
             }
             return responseBuilder_;
+          }
+
+          private com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchArguments searchArguments_;
+          private com.google.protobuf.SingleFieldBuilderV3<
+              com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchArguments, com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchArguments.Builder, com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchArgumentsOrBuilder> searchArgumentsBuilder_;
+          /**
+           * <pre>
+           * The search arguments used for code_search.
+           * </pre>
+           *
+           * <code>optional .android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchArguments search_arguments = 7;</code>
+           * @return Whether the searchArguments field is set.
+           */
+          public boolean hasSearchArguments() {
+            return ((bitField0_ & 0x00000040) != 0);
+          }
+          /**
+           * <pre>
+           * The search arguments used for code_search.
+           * </pre>
+           *
+           * <code>optional .android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchArguments search_arguments = 7;</code>
+           * @return The searchArguments.
+           */
+          public com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchArguments getSearchArguments() {
+            if (searchArgumentsBuilder_ == null) {
+              return searchArguments_ == null ? com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchArguments.getDefaultInstance() : searchArguments_;
+            } else {
+              return searchArgumentsBuilder_.getMessage();
+            }
+          }
+          /**
+           * <pre>
+           * The search arguments used for code_search.
+           * </pre>
+           *
+           * <code>optional .android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchArguments search_arguments = 7;</code>
+           */
+          public Builder setSearchArguments(com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchArguments value) {
+            if (searchArgumentsBuilder_ == null) {
+              if (value == null) {
+                throw new NullPointerException();
+              }
+              searchArguments_ = value;
+            } else {
+              searchArgumentsBuilder_.setMessage(value);
+            }
+            bitField0_ |= 0x00000040;
+            onChanged();
+            return this;
+          }
+          /**
+           * <pre>
+           * The search arguments used for code_search.
+           * </pre>
+           *
+           * <code>optional .android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchArguments search_arguments = 7;</code>
+           */
+          public Builder setSearchArguments(
+              com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchArguments.Builder builderForValue) {
+            if (searchArgumentsBuilder_ == null) {
+              searchArguments_ = builderForValue.build();
+            } else {
+              searchArgumentsBuilder_.setMessage(builderForValue.build());
+            }
+            bitField0_ |= 0x00000040;
+            onChanged();
+            return this;
+          }
+          /**
+           * <pre>
+           * The search arguments used for code_search.
+           * </pre>
+           *
+           * <code>optional .android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchArguments search_arguments = 7;</code>
+           */
+          public Builder mergeSearchArguments(com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchArguments value) {
+            if (searchArgumentsBuilder_ == null) {
+              if (((bitField0_ & 0x00000040) != 0) &&
+                searchArguments_ != null &&
+                searchArguments_ != com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchArguments.getDefaultInstance()) {
+                getSearchArgumentsBuilder().mergeFrom(value);
+              } else {
+                searchArguments_ = value;
+              }
+            } else {
+              searchArgumentsBuilder_.mergeFrom(value);
+            }
+            bitField0_ |= 0x00000040;
+            onChanged();
+            return this;
+          }
+          /**
+           * <pre>
+           * The search arguments used for code_search.
+           * </pre>
+           *
+           * <code>optional .android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchArguments search_arguments = 7;</code>
+           */
+          public Builder clearSearchArguments() {
+            bitField0_ = (bitField0_ & ~0x00000040);
+            searchArguments_ = null;
+            if (searchArgumentsBuilder_ != null) {
+              searchArgumentsBuilder_.dispose();
+              searchArgumentsBuilder_ = null;
+            }
+            onChanged();
+            return this;
+          }
+          /**
+           * <pre>
+           * The search arguments used for code_search.
+           * </pre>
+           *
+           * <code>optional .android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchArguments search_arguments = 7;</code>
+           */
+          public com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchArguments.Builder getSearchArgumentsBuilder() {
+            bitField0_ |= 0x00000040;
+            onChanged();
+            return getSearchArgumentsFieldBuilder().getBuilder();
+          }
+          /**
+           * <pre>
+           * The search arguments used for code_search.
+           * </pre>
+           *
+           * <code>optional .android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchArguments search_arguments = 7;</code>
+           */
+          public com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchArgumentsOrBuilder getSearchArgumentsOrBuilder() {
+            if (searchArgumentsBuilder_ != null) {
+              return searchArgumentsBuilder_.getMessageOrBuilder();
+            } else {
+              return searchArguments_ == null ?
+                  com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchArguments.getDefaultInstance() : searchArguments_;
+            }
+          }
+          /**
+           * <pre>
+           * The search arguments used for code_search.
+           * </pre>
+           *
+           * <code>optional .android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchArguments search_arguments = 7;</code>
+           */
+          private com.google.protobuf.SingleFieldBuilderV3<
+              com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchArguments, com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchArguments.Builder, com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchArgumentsOrBuilder> 
+              getSearchArgumentsFieldBuilder() {
+            if (searchArgumentsBuilder_ == null) {
+              searchArgumentsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                  com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchArguments, com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchArguments.Builder, com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.SearchArgumentsOrBuilder>(
+                      getSearchArguments(),
+                      getParentForChildren(),
+                      isClean());
+              searchArguments_ = null;
+            }
+            return searchArgumentsBuilder_;
           }
           @java.lang.Override
           public final Builder setUnknownFields(

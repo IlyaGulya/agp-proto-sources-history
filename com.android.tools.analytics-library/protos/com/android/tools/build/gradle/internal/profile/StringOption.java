@@ -230,6 +230,10 @@ public enum StringOption
    * <code>PROJECT_CREATOR_TOOL = 54;</code>
    */
   PROJECT_CREATOR_TOOL(54),
+  /**
+   * <code>R8_VERSION_OVERRIDE = 55;</code>
+   */
+  R8_VERSION_OVERRIDE(55),
   UNRECOGNIZED(-1),
   ;
 
@@ -453,6 +457,10 @@ public enum StringOption
    * <code>PROJECT_CREATOR_TOOL = 54;</code>
    */
   public static final int PROJECT_CREATOR_TOOL_VALUE = 54;
+  /**
+   * <code>R8_VERSION_OVERRIDE = 55;</code>
+   */
+  public static final int R8_VERSION_OVERRIDE_VALUE = 55;
 
 
   public final int getNumber() {
@@ -534,6 +542,7 @@ public enum StringOption
       case 52: return SUPPRESS_AGP_SYNC_WARNINGS;
       case 53: return NEW_DSL_OPT_OUT;
       case 54: return PROJECT_CREATOR_TOOL;
+      case 55: return R8_VERSION_OVERRIDE;
       default: return null;
     }
   }
