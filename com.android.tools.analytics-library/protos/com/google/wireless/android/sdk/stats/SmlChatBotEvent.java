@@ -1114,6 +1114,10 @@ private static final long serialVersionUID = 0L;
   }
 
   /**
+   * <pre>
+   * Indicates the type of user interaction with the query box.
+   * </pre>
+   *
    * Protobuf enum {@code android_studio.SmlChatBotEvent.QueryBoxEventType}
    */
   public enum QueryBoxEventType
@@ -7567,7 +7571,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional bool success = 3 [deprecated = true];</code>
      * @deprecated android_studio.SmlChatBotEvent.ParseResult.success is deprecated.
-     *     See studio_stats.proto;l=17283
+     *     See studio_stats.proto;l=17404
      * @return Whether the success field is set.
      */
     @java.lang.Deprecated boolean hasSuccess();
@@ -7579,7 +7583,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional bool success = 3 [deprecated = true];</code>
      * @deprecated android_studio.SmlChatBotEvent.ParseResult.success is deprecated.
-     *     See studio_stats.proto;l=17283
+     *     See studio_stats.proto;l=17404
      * @return The success.
      */
     @java.lang.Deprecated boolean getSuccess();
@@ -7707,7 +7711,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional bool success = 3 [deprecated = true];</code>
      * @deprecated android_studio.SmlChatBotEvent.ParseResult.success is deprecated.
-     *     See studio_stats.proto;l=17283
+     *     See studio_stats.proto;l=17404
      * @return Whether the success field is set.
      */
     @java.lang.Override
@@ -7722,7 +7726,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional bool success = 3 [deprecated = true];</code>
      * @deprecated android_studio.SmlChatBotEvent.ParseResult.success is deprecated.
-     *     See studio_stats.proto;l=17283
+     *     See studio_stats.proto;l=17404
      * @return The success.
      */
     @java.lang.Override
@@ -8386,7 +8390,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional bool success = 3 [deprecated = true];</code>
        * @deprecated android_studio.SmlChatBotEvent.ParseResult.success is deprecated.
-       *     See studio_stats.proto;l=17283
+       *     See studio_stats.proto;l=17404
        * @return Whether the success field is set.
        */
       @java.lang.Override
@@ -8401,7 +8405,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional bool success = 3 [deprecated = true];</code>
        * @deprecated android_studio.SmlChatBotEvent.ParseResult.success is deprecated.
-       *     See studio_stats.proto;l=17283
+       *     See studio_stats.proto;l=17404
        * @return The success.
        */
       @java.lang.Override
@@ -8416,7 +8420,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional bool success = 3 [deprecated = true];</code>
        * @deprecated android_studio.SmlChatBotEvent.ParseResult.success is deprecated.
-       *     See studio_stats.proto;l=17283
+       *     See studio_stats.proto;l=17404
        * @param value The success to set.
        * @return This builder for chaining.
        */
@@ -8435,7 +8439,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional bool success = 3 [deprecated = true];</code>
        * @deprecated android_studio.SmlChatBotEvent.ParseResult.success is deprecated.
-       *     See studio_stats.proto;l=17283
+       *     See studio_stats.proto;l=17404
        * @return This builder for chaining.
        */
       @java.lang.Deprecated public Builder clearSuccess() {
@@ -12116,6 +12120,10 @@ private static final long serialVersionUID = 0L;
     com.google.wireless.android.sdk.stats.SmlChatBotEvent.QueryBoxEventMetadataOrBuilder getEventMetadataOrBuilder();
   }
   /**
+   * <pre>
+   * Contains metrics data for a user's interaction with the chatbot query box.
+   * </pre>
+   *
    * Protobuf type {@code android_studio.SmlChatBotEvent.QueryBoxEvent}
    */
   public static final class QueryBoxEvent extends
@@ -12372,6 +12380,10 @@ private static final long serialVersionUID = 0L;
       return builder;
     }
     /**
+     * <pre>
+     * Contains metrics data for a user's interaction with the chatbot query box.
+     * </pre>
+     *
      * Protobuf type {@code android_studio.SmlChatBotEvent.QueryBoxEvent}
      */
     public static final class Builder extends
@@ -12784,6 +12796,11 @@ private static final long serialVersionUID = 0L;
     com.google.wireless.android.sdk.stats.SmlChatBotEvent.ContextDrawerEventType getEventType();
   }
   /**
+   * <pre>
+   * Contains metrics data for a user's interaction with the chatbot context
+   * drawer.
+   * </pre>
+   *
    * Protobuf type {@code android_studio.SmlChatBotEvent.ContextDrawerEvent}
    */
   public static final class ContextDrawerEvent extends
@@ -12998,6 +13015,11 @@ private static final long serialVersionUID = 0L;
       return builder;
     }
     /**
+     * <pre>
+     * Contains metrics data for a user's interaction with the chatbot context
+     * drawer.
+     * </pre>
+     *
      * Protobuf type {@code android_studio.SmlChatBotEvent.ContextDrawerEvent}
      */
     public static final class Builder extends

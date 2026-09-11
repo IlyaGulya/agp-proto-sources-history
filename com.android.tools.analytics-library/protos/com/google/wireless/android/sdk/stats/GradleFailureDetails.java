@@ -23,6 +23,7 @@ private static final long serialVersionUID = 0L;
   }
   private GradleFailureDetails() {
     errors_ = java.util.Collections.emptyList();
+    detectedGradleSyncFailures_ = java.util.Collections.emptyList();
   }
 
   @java.lang.Override
@@ -2871,6 +2872,64 @@ private static final long serialVersionUID = 0L;
     return errors_.get(index);
   }
 
+  public static final int DETECTED_GRADLE_SYNC_FAILURES_FIELD_NUMBER = 2;
+  @SuppressWarnings("serial")
+  private java.util.List<java.lang.Integer> detectedGradleSyncFailures_;
+  private static final com.google.protobuf.Internal.ListAdapter.Converter<
+      java.lang.Integer, com.google.wireless.android.sdk.stats.AndroidStudioEvent.GradleSyncFailure> detectedGradleSyncFailures_converter_ =
+          new com.google.protobuf.Internal.ListAdapter.Converter<
+              java.lang.Integer, com.google.wireless.android.sdk.stats.AndroidStudioEvent.GradleSyncFailure>() {
+            public com.google.wireless.android.sdk.stats.AndroidStudioEvent.GradleSyncFailure convert(java.lang.Integer from) {
+              com.google.wireless.android.sdk.stats.AndroidStudioEvent.GradleSyncFailure result = com.google.wireless.android.sdk.stats.AndroidStudioEvent.GradleSyncFailure.forNumber(from);
+              return result == null ? com.google.wireless.android.sdk.stats.AndroidStudioEvent.GradleSyncFailure.UNKNOWN_GRADLE_FAILURE : result;
+            }
+          };
+  /**
+   * <pre>
+   * List of failure categories detected by issue checkers. Previously we only
+   * reported a first detected failure, but with recent changes (IJ262 merge)
+   * all issue checkers have chance to detect and report this value.
+   * </pre>
+   *
+   * <code>repeated .android_studio.AndroidStudioEvent.GradleSyncFailure detected_gradle_sync_failures = 2 [packed = true];</code>
+   * @return A list containing the detectedGradleSyncFailures.
+   */
+  @java.lang.Override
+  public java.util.List<com.google.wireless.android.sdk.stats.AndroidStudioEvent.GradleSyncFailure> getDetectedGradleSyncFailuresList() {
+    return new com.google.protobuf.Internal.ListAdapter<
+        java.lang.Integer, com.google.wireless.android.sdk.stats.AndroidStudioEvent.GradleSyncFailure>(detectedGradleSyncFailures_, detectedGradleSyncFailures_converter_);
+  }
+  /**
+   * <pre>
+   * List of failure categories detected by issue checkers. Previously we only
+   * reported a first detected failure, but with recent changes (IJ262 merge)
+   * all issue checkers have chance to detect and report this value.
+   * </pre>
+   *
+   * <code>repeated .android_studio.AndroidStudioEvent.GradleSyncFailure detected_gradle_sync_failures = 2 [packed = true];</code>
+   * @return The count of detectedGradleSyncFailures.
+   */
+  @java.lang.Override
+  public int getDetectedGradleSyncFailuresCount() {
+    return detectedGradleSyncFailures_.size();
+  }
+  /**
+   * <pre>
+   * List of failure categories detected by issue checkers. Previously we only
+   * reported a first detected failure, but with recent changes (IJ262 merge)
+   * all issue checkers have chance to detect and report this value.
+   * </pre>
+   *
+   * <code>repeated .android_studio.AndroidStudioEvent.GradleSyncFailure detected_gradle_sync_failures = 2 [packed = true];</code>
+   * @param index The index of the element to return.
+   * @return The detectedGradleSyncFailures at the given index.
+   */
+  @java.lang.Override
+  public com.google.wireless.android.sdk.stats.AndroidStudioEvent.GradleSyncFailure getDetectedGradleSyncFailures(int index) {
+    return detectedGradleSyncFailures_converter_.convert(detectedGradleSyncFailures_.get(index));
+  }
+  private int detectedGradleSyncFailuresMemoizedSerializedSize;
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -2885,8 +2944,16 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
+    getSerializedSize();
     for (int i = 0; i < errors_.size(); i++) {
       output.writeMessage(1, errors_.get(i));
+    }
+    if (getDetectedGradleSyncFailuresList().size() > 0) {
+      output.writeUInt32NoTag(18);
+      output.writeUInt32NoTag(detectedGradleSyncFailuresMemoizedSerializedSize);
+    }
+    for (int i = 0; i < detectedGradleSyncFailures_.size(); i++) {
+      output.writeEnumNoTag(detectedGradleSyncFailures_.get(i));
     }
     getUnknownFields().writeTo(output);
   }
@@ -2900,6 +2967,18 @@ private static final long serialVersionUID = 0L;
     for (int i = 0; i < errors_.size(); i++) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(1, errors_.get(i));
+    }
+    {
+      int dataSize = 0;
+      for (int i = 0; i < detectedGradleSyncFailures_.size(); i++) {
+        dataSize += com.google.protobuf.CodedOutputStream
+          .computeEnumSizeNoTag(detectedGradleSyncFailures_.get(i));
+      }
+      size += dataSize;
+      if (!getDetectedGradleSyncFailuresList().isEmpty()) {  size += 1;
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32SizeNoTag(dataSize);
+      }detectedGradleSyncFailuresMemoizedSerializedSize = dataSize;
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -2918,6 +2997,7 @@ private static final long serialVersionUID = 0L;
 
     if (!getErrorsList()
         .equals(other.getErrorsList())) return false;
+    if (!detectedGradleSyncFailures_.equals(other.detectedGradleSyncFailures_)) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -2932,6 +3012,10 @@ private static final long serialVersionUID = 0L;
     if (getErrorsCount() > 0) {
       hash = (37 * hash) + ERRORS_FIELD_NUMBER;
       hash = (53 * hash) + getErrorsList().hashCode();
+    }
+    if (getDetectedGradleSyncFailuresCount() > 0) {
+      hash = (37 * hash) + DETECTED_GRADLE_SYNC_FAILURES_FIELD_NUMBER;
+      hash = (53 * hash) + detectedGradleSyncFailures_.hashCode();
     }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
@@ -3075,6 +3159,8 @@ private static final long serialVersionUID = 0L;
         errorsBuilder_.clear();
       }
       bitField0_ = (bitField0_ & ~0x00000001);
+      detectedGradleSyncFailures_ = java.util.Collections.emptyList();
+      bitField0_ = (bitField0_ & ~0x00000002);
       return this;
     }
 
@@ -3117,6 +3203,11 @@ private static final long serialVersionUID = 0L;
       } else {
         result.errors_ = errorsBuilder_.build();
       }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        detectedGradleSyncFailures_ = java.util.Collections.unmodifiableList(detectedGradleSyncFailures_);
+        bitField0_ = (bitField0_ & ~0x00000002);
+      }
+      result.detectedGradleSyncFailures_ = detectedGradleSyncFailures_;
     }
 
     private void buildPartial0(com.google.wireless.android.sdk.stats.GradleFailureDetails result) {
@@ -3161,6 +3252,16 @@ private static final long serialVersionUID = 0L;
           }
         }
       }
+      if (!other.detectedGradleSyncFailures_.isEmpty()) {
+        if (detectedGradleSyncFailures_.isEmpty()) {
+          detectedGradleSyncFailures_ = other.detectedGradleSyncFailures_;
+          bitField0_ = (bitField0_ & ~0x00000002);
+        } else {
+          ensureDetectedGradleSyncFailuresIsMutable();
+          detectedGradleSyncFailures_.addAll(other.detectedGradleSyncFailures_);
+        }
+        onChanged();
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -3200,6 +3301,35 @@ private static final long serialVersionUID = 0L;
               }
               break;
             } // case 10
+            case 16: {
+              int tmpRaw = input.readEnum();
+              com.google.wireless.android.sdk.stats.AndroidStudioEvent.GradleSyncFailure tmpValue =
+                  com.google.wireless.android.sdk.stats.AndroidStudioEvent.GradleSyncFailure.forNumber(tmpRaw);
+              if (tmpValue == null) {
+                mergeUnknownVarintField(2, tmpRaw);
+              } else {
+                ensureDetectedGradleSyncFailuresIsMutable();
+                detectedGradleSyncFailures_.add(tmpRaw);
+              }
+              break;
+            } // case 16
+            case 18: {
+              int length = input.readRawVarint32();
+              int oldLimit = input.pushLimit(length);
+              while(input.getBytesUntilLimit() > 0) {
+                int tmpRaw = input.readEnum();
+                com.google.wireless.android.sdk.stats.AndroidStudioEvent.GradleSyncFailure tmpValue =
+                    com.google.wireless.android.sdk.stats.AndroidStudioEvent.GradleSyncFailure.forNumber(tmpRaw);
+                if (tmpValue == null) {
+                  mergeUnknownVarintField(2, tmpRaw);
+                } else {
+                  ensureDetectedGradleSyncFailuresIsMutable();
+                  detectedGradleSyncFailures_.add(tmpRaw);
+                }
+              }
+              input.popLimit(oldLimit);
+              break;
+            } // case 18
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -3455,6 +3585,134 @@ private static final long serialVersionUID = 0L;
         errors_ = null;
       }
       return errorsBuilder_;
+    }
+
+    private java.util.List<java.lang.Integer> detectedGradleSyncFailures_ =
+      java.util.Collections.emptyList();
+    private void ensureDetectedGradleSyncFailuresIsMutable() {
+      if (!((bitField0_ & 0x00000002) != 0)) {
+        detectedGradleSyncFailures_ = new java.util.ArrayList<java.lang.Integer>(detectedGradleSyncFailures_);
+        bitField0_ |= 0x00000002;
+      }
+    }
+    /**
+     * <pre>
+     * List of failure categories detected by issue checkers. Previously we only
+     * reported a first detected failure, but with recent changes (IJ262 merge)
+     * all issue checkers have chance to detect and report this value.
+     * </pre>
+     *
+     * <code>repeated .android_studio.AndroidStudioEvent.GradleSyncFailure detected_gradle_sync_failures = 2 [packed = true];</code>
+     * @return A list containing the detectedGradleSyncFailures.
+     */
+    public java.util.List<com.google.wireless.android.sdk.stats.AndroidStudioEvent.GradleSyncFailure> getDetectedGradleSyncFailuresList() {
+      return new com.google.protobuf.Internal.ListAdapter<
+          java.lang.Integer, com.google.wireless.android.sdk.stats.AndroidStudioEvent.GradleSyncFailure>(detectedGradleSyncFailures_, detectedGradleSyncFailures_converter_);
+    }
+    /**
+     * <pre>
+     * List of failure categories detected by issue checkers. Previously we only
+     * reported a first detected failure, but with recent changes (IJ262 merge)
+     * all issue checkers have chance to detect and report this value.
+     * </pre>
+     *
+     * <code>repeated .android_studio.AndroidStudioEvent.GradleSyncFailure detected_gradle_sync_failures = 2 [packed = true];</code>
+     * @return The count of detectedGradleSyncFailures.
+     */
+    public int getDetectedGradleSyncFailuresCount() {
+      return detectedGradleSyncFailures_.size();
+    }
+    /**
+     * <pre>
+     * List of failure categories detected by issue checkers. Previously we only
+     * reported a first detected failure, but with recent changes (IJ262 merge)
+     * all issue checkers have chance to detect and report this value.
+     * </pre>
+     *
+     * <code>repeated .android_studio.AndroidStudioEvent.GradleSyncFailure detected_gradle_sync_failures = 2 [packed = true];</code>
+     * @param index The index of the element to return.
+     * @return The detectedGradleSyncFailures at the given index.
+     */
+    public com.google.wireless.android.sdk.stats.AndroidStudioEvent.GradleSyncFailure getDetectedGradleSyncFailures(int index) {
+      return detectedGradleSyncFailures_converter_.convert(detectedGradleSyncFailures_.get(index));
+    }
+    /**
+     * <pre>
+     * List of failure categories detected by issue checkers. Previously we only
+     * reported a first detected failure, but with recent changes (IJ262 merge)
+     * all issue checkers have chance to detect and report this value.
+     * </pre>
+     *
+     * <code>repeated .android_studio.AndroidStudioEvent.GradleSyncFailure detected_gradle_sync_failures = 2 [packed = true];</code>
+     * @param index The index to set the value at.
+     * @param value The detectedGradleSyncFailures to set.
+     * @return This builder for chaining.
+     */
+    public Builder setDetectedGradleSyncFailures(
+        int index, com.google.wireless.android.sdk.stats.AndroidStudioEvent.GradleSyncFailure value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      ensureDetectedGradleSyncFailuresIsMutable();
+      detectedGradleSyncFailures_.set(index, value.getNumber());
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * List of failure categories detected by issue checkers. Previously we only
+     * reported a first detected failure, but with recent changes (IJ262 merge)
+     * all issue checkers have chance to detect and report this value.
+     * </pre>
+     *
+     * <code>repeated .android_studio.AndroidStudioEvent.GradleSyncFailure detected_gradle_sync_failures = 2 [packed = true];</code>
+     * @param value The detectedGradleSyncFailures to add.
+     * @return This builder for chaining.
+     */
+    public Builder addDetectedGradleSyncFailures(com.google.wireless.android.sdk.stats.AndroidStudioEvent.GradleSyncFailure value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      ensureDetectedGradleSyncFailuresIsMutable();
+      detectedGradleSyncFailures_.add(value.getNumber());
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * List of failure categories detected by issue checkers. Previously we only
+     * reported a first detected failure, but with recent changes (IJ262 merge)
+     * all issue checkers have chance to detect and report this value.
+     * </pre>
+     *
+     * <code>repeated .android_studio.AndroidStudioEvent.GradleSyncFailure detected_gradle_sync_failures = 2 [packed = true];</code>
+     * @param values The detectedGradleSyncFailures to add.
+     * @return This builder for chaining.
+     */
+    public Builder addAllDetectedGradleSyncFailures(
+        java.lang.Iterable<? extends com.google.wireless.android.sdk.stats.AndroidStudioEvent.GradleSyncFailure> values) {
+      ensureDetectedGradleSyncFailuresIsMutable();
+      for (com.google.wireless.android.sdk.stats.AndroidStudioEvent.GradleSyncFailure value : values) {
+        detectedGradleSyncFailures_.add(value.getNumber());
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * List of failure categories detected by issue checkers. Previously we only
+     * reported a first detected failure, but with recent changes (IJ262 merge)
+     * all issue checkers have chance to detect and report this value.
+     * </pre>
+     *
+     * <code>repeated .android_studio.AndroidStudioEvent.GradleSyncFailure detected_gradle_sync_failures = 2 [packed = true];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearDetectedGradleSyncFailures() {
+      detectedGradleSyncFailures_ = java.util.Collections.emptyList();
+      bitField0_ = (bitField0_ & ~0x00000002);
+      onChanged();
+      return this;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

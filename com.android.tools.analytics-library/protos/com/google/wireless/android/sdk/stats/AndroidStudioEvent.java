@@ -13975,7 +13975,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional uint32 min_sdk = 2 [deprecated = true];</code>
        * @deprecated android_studio.AndroidStudioEvent.TemplatesUsage.TemplateModule.min_sdk is deprecated.
-       *     See studio_stats.proto;l=2280
+       *     See studio_stats.proto;l=2281
        * @return Whether the minSdk field is set.
        */
       @java.lang.Deprecated boolean hasMinSdk();
@@ -13986,7 +13986,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional uint32 min_sdk = 2 [deprecated = true];</code>
        * @deprecated android_studio.AndroidStudioEvent.TemplatesUsage.TemplateModule.min_sdk is deprecated.
-       *     See studio_stats.proto;l=2280
+       *     See studio_stats.proto;l=2281
        * @return The minSdk.
        */
       @java.lang.Deprecated int getMinSdk();
@@ -14517,7 +14517,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional uint32 min_sdk = 2 [deprecated = true];</code>
        * @deprecated android_studio.AndroidStudioEvent.TemplatesUsage.TemplateModule.min_sdk is deprecated.
-       *     See studio_stats.proto;l=2280
+       *     See studio_stats.proto;l=2281
        * @return Whether the minSdk field is set.
        */
       @java.lang.Override
@@ -14531,7 +14531,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional uint32 min_sdk = 2 [deprecated = true];</code>
        * @deprecated android_studio.AndroidStudioEvent.TemplatesUsage.TemplateModule.min_sdk is deprecated.
-       *     See studio_stats.proto;l=2280
+       *     See studio_stats.proto;l=2281
        * @return The minSdk.
        */
       @java.lang.Override
@@ -15169,7 +15169,7 @@ private static final long serialVersionUID = 0L;
          *
          * <code>optional uint32 min_sdk = 2 [deprecated = true];</code>
          * @deprecated android_studio.AndroidStudioEvent.TemplatesUsage.TemplateModule.min_sdk is deprecated.
-         *     See studio_stats.proto;l=2280
+         *     See studio_stats.proto;l=2281
          * @return Whether the minSdk field is set.
          */
         @java.lang.Override
@@ -15183,7 +15183,7 @@ private static final long serialVersionUID = 0L;
          *
          * <code>optional uint32 min_sdk = 2 [deprecated = true];</code>
          * @deprecated android_studio.AndroidStudioEvent.TemplatesUsage.TemplateModule.min_sdk is deprecated.
-         *     See studio_stats.proto;l=2280
+         *     See studio_stats.proto;l=2281
          * @return The minSdk.
          */
         @java.lang.Override
@@ -15197,7 +15197,7 @@ private static final long serialVersionUID = 0L;
          *
          * <code>optional uint32 min_sdk = 2 [deprecated = true];</code>
          * @deprecated android_studio.AndroidStudioEvent.TemplatesUsage.TemplateModule.min_sdk is deprecated.
-         *     See studio_stats.proto;l=2280
+         *     See studio_stats.proto;l=2281
          * @param value The minSdk to set.
          * @return This builder for chaining.
          */
@@ -15215,7 +15215,7 @@ private static final long serialVersionUID = 0L;
          *
          * <code>optional uint32 min_sdk = 2 [deprecated = true];</code>
          * @deprecated android_studio.AndroidStudioEvent.TemplatesUsage.TemplateModule.min_sdk is deprecated.
-         *     See studio_stats.proto;l=2280
+         *     See studio_stats.proto;l=2281
          * @return This builder for chaining.
          */
         @java.lang.Deprecated public Builder clearMinSdk() {
@@ -18507,26 +18507,32 @@ private static final long serialVersionUID = 0L;
   private int gradleSyncFailure_ = 0;
   /**
    * <pre>
-   * set when kind = GRADLE_SYNC_FAILURE_DETAILS (previously set when kind =
-   * GRADLE_SYNC_FAILURE)
+   * As of IJ262 merge, this field makes no sense, multiple values can be
+   * detected for each sync. Deprecating this field in favor of new repeated
+   * field in GradleFailureDetails.
    * </pre>
    *
-   * <code>optional .android_studio.AndroidStudioEvent.GradleSyncFailure gradle_sync_failure = 16;</code>
+   * <code>optional .android_studio.AndroidStudioEvent.GradleSyncFailure gradle_sync_failure = 16 [deprecated = true];</code>
+   * @deprecated android_studio.AndroidStudioEvent.gradle_sync_failure is deprecated.
+   *     See studio_stats.proto;l=90
    * @return Whether the gradleSyncFailure field is set.
    */
-  @java.lang.Override public boolean hasGradleSyncFailure() {
+  @java.lang.Override @java.lang.Deprecated public boolean hasGradleSyncFailure() {
     return ((bitField0_ & 0x00008000) != 0);
   }
   /**
    * <pre>
-   * set when kind = GRADLE_SYNC_FAILURE_DETAILS (previously set when kind =
-   * GRADLE_SYNC_FAILURE)
+   * As of IJ262 merge, this field makes no sense, multiple values can be
+   * detected for each sync. Deprecating this field in favor of new repeated
+   * field in GradleFailureDetails.
    * </pre>
    *
-   * <code>optional .android_studio.AndroidStudioEvent.GradleSyncFailure gradle_sync_failure = 16;</code>
+   * <code>optional .android_studio.AndroidStudioEvent.GradleSyncFailure gradle_sync_failure = 16 [deprecated = true];</code>
+   * @deprecated android_studio.AndroidStudioEvent.gradle_sync_failure is deprecated.
+   *     See studio_stats.proto;l=90
    * @return The gradleSyncFailure.
    */
-  @java.lang.Override public com.google.wireless.android.sdk.stats.AndroidStudioEvent.GradleSyncFailure getGradleSyncFailure() {
+  @java.lang.Override @java.lang.Deprecated public com.google.wireless.android.sdk.stats.AndroidStudioEvent.GradleSyncFailure getGradleSyncFailure() {
     com.google.wireless.android.sdk.stats.AndroidStudioEvent.GradleSyncFailure result = com.google.wireless.android.sdk.stats.AndroidStudioEvent.GradleSyncFailure.forNumber(gradleSyncFailure_);
     return result == null ? com.google.wireless.android.sdk.stats.AndroidStudioEvent.GradleSyncFailure.UNKNOWN_GRADLE_FAILURE : result;
   }
@@ -18862,7 +18868,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>optional .android_studio.EmulatorUiEvent emulator_ui_event = 25 [deprecated = true, lazy = true];</code>
    * @deprecated android_studio.AndroidStudioEvent.emulator_ui_event is deprecated.
-   *     See studio_stats.proto;l=119
+   *     See studio_stats.proto;l=120
    * @return Whether the emulatorUiEvent field is set.
    */
   @java.lang.Override
@@ -18877,7 +18883,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>optional .android_studio.EmulatorUiEvent emulator_ui_event = 25 [deprecated = true, lazy = true];</code>
    * @deprecated android_studio.AndroidStudioEvent.emulator_ui_event is deprecated.
-   *     See studio_stats.proto;l=119
+   *     See studio_stats.proto;l=120
    * @return The emulatorUiEvent.
    */
   @java.lang.Override
@@ -20278,7 +20284,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>optional .android_studio.WhatsNewAssistantEvent whats_new_assistant_event = 60 [deprecated = true, lazy = true];</code>
    * @deprecated android_studio.AndroidStudioEvent.whats_new_assistant_event is deprecated.
-   *     See studio_stats.proto;l=242
+   *     See studio_stats.proto;l=243
    * @return Whether the whatsNewAssistantEvent field is set.
    */
   @java.lang.Override
@@ -20293,7 +20299,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>optional .android_studio.WhatsNewAssistantEvent whats_new_assistant_event = 60 [deprecated = true, lazy = true];</code>
    * @deprecated android_studio.AndroidStudioEvent.whats_new_assistant_event is deprecated.
-   *     See studio_stats.proto;l=242
+   *     See studio_stats.proto;l=243
    * @return The whatsNewAssistantEvent.
    */
   @java.lang.Override
@@ -20544,7 +20550,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>optional .android_studio.StudioRunEvent studio_run_event = 65 [deprecated = true, lazy = true];</code>
    * @deprecated android_studio.AndroidStudioEvent.studio_run_event is deprecated.
-   *     See studio_stats.proto;l=264
+   *     See studio_stats.proto;l=265
    * @return Whether the studioRunEvent field is set.
    */
   @java.lang.Override
@@ -20558,7 +20564,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>optional .android_studio.StudioRunEvent studio_run_event = 65 [deprecated = true, lazy = true];</code>
    * @deprecated android_studio.AndroidStudioEvent.studio_run_event is deprecated.
-   *     See studio_stats.proto;l=264
+   *     See studio_stats.proto;l=265
    * @return The studioRunEvent.
    */
   @java.lang.Override
@@ -22580,7 +22586,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>optional .android_studio.AutoImportEvent auto_import_event = 117 [deprecated = true, lazy = true];</code>
    * @deprecated android_studio.AndroidStudioEvent.auto_import_event is deprecated.
-   *     See studio_stats.proto;l=445
+   *     See studio_stats.proto;l=446
    * @return Whether the autoImportEvent field is set.
    */
   @java.lang.Override
@@ -22595,7 +22601,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>optional .android_studio.AutoImportEvent auto_import_event = 117 [deprecated = true, lazy = true];</code>
    * @deprecated android_studio.AndroidStudioEvent.auto_import_event is deprecated.
-   *     See studio_stats.proto;l=445
+   *     See studio_stats.proto;l=446
    * @return The autoImportEvent.
    */
   @java.lang.Override
@@ -40258,41 +40264,50 @@ private static final long serialVersionUID = 0L;
     private int gradleSyncFailure_ = 0;
     /**
      * <pre>
-     * set when kind = GRADLE_SYNC_FAILURE_DETAILS (previously set when kind =
-     * GRADLE_SYNC_FAILURE)
+     * As of IJ262 merge, this field makes no sense, multiple values can be
+     * detected for each sync. Deprecating this field in favor of new repeated
+     * field in GradleFailureDetails.
      * </pre>
      *
-     * <code>optional .android_studio.AndroidStudioEvent.GradleSyncFailure gradle_sync_failure = 16;</code>
+     * <code>optional .android_studio.AndroidStudioEvent.GradleSyncFailure gradle_sync_failure = 16 [deprecated = true];</code>
+     * @deprecated android_studio.AndroidStudioEvent.gradle_sync_failure is deprecated.
+     *     See studio_stats.proto;l=90
      * @return Whether the gradleSyncFailure field is set.
      */
-    @java.lang.Override public boolean hasGradleSyncFailure() {
+    @java.lang.Override @java.lang.Deprecated public boolean hasGradleSyncFailure() {
       return ((bitField0_ & 0x00008000) != 0);
     }
     /**
      * <pre>
-     * set when kind = GRADLE_SYNC_FAILURE_DETAILS (previously set when kind =
-     * GRADLE_SYNC_FAILURE)
+     * As of IJ262 merge, this field makes no sense, multiple values can be
+     * detected for each sync. Deprecating this field in favor of new repeated
+     * field in GradleFailureDetails.
      * </pre>
      *
-     * <code>optional .android_studio.AndroidStudioEvent.GradleSyncFailure gradle_sync_failure = 16;</code>
+     * <code>optional .android_studio.AndroidStudioEvent.GradleSyncFailure gradle_sync_failure = 16 [deprecated = true];</code>
+     * @deprecated android_studio.AndroidStudioEvent.gradle_sync_failure is deprecated.
+     *     See studio_stats.proto;l=90
      * @return The gradleSyncFailure.
      */
     @java.lang.Override
-    public com.google.wireless.android.sdk.stats.AndroidStudioEvent.GradleSyncFailure getGradleSyncFailure() {
+    @java.lang.Deprecated public com.google.wireless.android.sdk.stats.AndroidStudioEvent.GradleSyncFailure getGradleSyncFailure() {
       com.google.wireless.android.sdk.stats.AndroidStudioEvent.GradleSyncFailure result = com.google.wireless.android.sdk.stats.AndroidStudioEvent.GradleSyncFailure.forNumber(gradleSyncFailure_);
       return result == null ? com.google.wireless.android.sdk.stats.AndroidStudioEvent.GradleSyncFailure.UNKNOWN_GRADLE_FAILURE : result;
     }
     /**
      * <pre>
-     * set when kind = GRADLE_SYNC_FAILURE_DETAILS (previously set when kind =
-     * GRADLE_SYNC_FAILURE)
+     * As of IJ262 merge, this field makes no sense, multiple values can be
+     * detected for each sync. Deprecating this field in favor of new repeated
+     * field in GradleFailureDetails.
      * </pre>
      *
-     * <code>optional .android_studio.AndroidStudioEvent.GradleSyncFailure gradle_sync_failure = 16;</code>
+     * <code>optional .android_studio.AndroidStudioEvent.GradleSyncFailure gradle_sync_failure = 16 [deprecated = true];</code>
+     * @deprecated android_studio.AndroidStudioEvent.gradle_sync_failure is deprecated.
+     *     See studio_stats.proto;l=90
      * @param value The gradleSyncFailure to set.
      * @return This builder for chaining.
      */
-    public Builder setGradleSyncFailure(com.google.wireless.android.sdk.stats.AndroidStudioEvent.GradleSyncFailure value) {
+    @java.lang.Deprecated public Builder setGradleSyncFailure(com.google.wireless.android.sdk.stats.AndroidStudioEvent.GradleSyncFailure value) {
       if (value == null) {
         throw new NullPointerException();
       }
@@ -40303,14 +40318,17 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * set when kind = GRADLE_SYNC_FAILURE_DETAILS (previously set when kind =
-     * GRADLE_SYNC_FAILURE)
+     * As of IJ262 merge, this field makes no sense, multiple values can be
+     * detected for each sync. Deprecating this field in favor of new repeated
+     * field in GradleFailureDetails.
      * </pre>
      *
-     * <code>optional .android_studio.AndroidStudioEvent.GradleSyncFailure gradle_sync_failure = 16;</code>
+     * <code>optional .android_studio.AndroidStudioEvent.GradleSyncFailure gradle_sync_failure = 16 [deprecated = true];</code>
+     * @deprecated android_studio.AndroidStudioEvent.gradle_sync_failure is deprecated.
+     *     See studio_stats.proto;l=90
      * @return This builder for chaining.
      */
-    public Builder clearGradleSyncFailure() {
+    @java.lang.Deprecated public Builder clearGradleSyncFailure() {
       bitField0_ = (bitField0_ & ~0x00008000);
       gradleSyncFailure_ = 0;
       onChanged();
@@ -41435,7 +41453,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional .android_studio.EmulatorUiEvent emulator_ui_event = 25 [deprecated = true, lazy = true];</code>
      * @deprecated android_studio.AndroidStudioEvent.emulator_ui_event is deprecated.
-     *     See studio_stats.proto;l=119
+     *     See studio_stats.proto;l=120
      * @return Whether the emulatorUiEvent field is set.
      */
     @java.lang.Deprecated public boolean hasEmulatorUiEvent() {
@@ -41449,7 +41467,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional .android_studio.EmulatorUiEvent emulator_ui_event = 25 [deprecated = true, lazy = true];</code>
      * @deprecated android_studio.AndroidStudioEvent.emulator_ui_event is deprecated.
-     *     See studio_stats.proto;l=119
+     *     See studio_stats.proto;l=120
      * @return The emulatorUiEvent.
      */
     @java.lang.Deprecated public com.google.wireless.android.sdk.stats.EmulatorUiEvent getEmulatorUiEvent() {
@@ -46961,7 +46979,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional .android_studio.WhatsNewAssistantEvent whats_new_assistant_event = 60 [deprecated = true, lazy = true];</code>
      * @deprecated android_studio.AndroidStudioEvent.whats_new_assistant_event is deprecated.
-     *     See studio_stats.proto;l=242
+     *     See studio_stats.proto;l=243
      * @return Whether the whatsNewAssistantEvent field is set.
      */
     @java.lang.Deprecated public boolean hasWhatsNewAssistantEvent() {
@@ -46975,7 +46993,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional .android_studio.WhatsNewAssistantEvent whats_new_assistant_event = 60 [deprecated = true, lazy = true];</code>
      * @deprecated android_studio.AndroidStudioEvent.whats_new_assistant_event is deprecated.
-     *     See studio_stats.proto;l=242
+     *     See studio_stats.proto;l=243
      * @return The whatsNewAssistantEvent.
      */
     @java.lang.Deprecated public com.google.wireless.android.sdk.stats.WhatsNewAssistantEvent getWhatsNewAssistantEvent() {
@@ -47870,7 +47888,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional .android_studio.StudioRunEvent studio_run_event = 65 [deprecated = true, lazy = true];</code>
      * @deprecated android_studio.AndroidStudioEvent.studio_run_event is deprecated.
-     *     See studio_stats.proto;l=264
+     *     See studio_stats.proto;l=265
      * @return Whether the studioRunEvent field is set.
      */
     @java.lang.Deprecated public boolean hasStudioRunEvent() {
@@ -47883,7 +47901,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional .android_studio.StudioRunEvent studio_run_event = 65 [deprecated = true, lazy = true];</code>
      * @deprecated android_studio.AndroidStudioEvent.studio_run_event is deprecated.
-     *     See studio_stats.proto;l=264
+     *     See studio_stats.proto;l=265
      * @return The studioRunEvent.
      */
     @java.lang.Deprecated public com.google.wireless.android.sdk.stats.StudioRunEvent getStudioRunEvent() {
@@ -56169,7 +56187,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional .android_studio.AutoImportEvent auto_import_event = 117 [deprecated = true, lazy = true];</code>
      * @deprecated android_studio.AndroidStudioEvent.auto_import_event is deprecated.
-     *     See studio_stats.proto;l=445
+     *     See studio_stats.proto;l=446
      * @return Whether the autoImportEvent field is set.
      */
     @java.lang.Deprecated public boolean hasAutoImportEvent() {
@@ -56183,7 +56201,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional .android_studio.AutoImportEvent auto_import_event = 117 [deprecated = true, lazy = true];</code>
      * @deprecated android_studio.AndroidStudioEvent.auto_import_event is deprecated.
-     *     See studio_stats.proto;l=445
+     *     See studio_stats.proto;l=446
      * @return The autoImportEvent.
      */
     @java.lang.Deprecated public com.google.wireless.android.sdk.stats.AutoImportEvent getAutoImportEvent() {

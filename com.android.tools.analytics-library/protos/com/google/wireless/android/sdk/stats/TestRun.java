@@ -214,6 +214,10 @@ private static final long serialVersionUID = 0L;
      * <code>PREVIEW_SCREENSHOT_TEST = 3;</code>
      */
     PREVIEW_SCREENSHOT_TEST(3),
+    /**
+     * <code>BACKUP_TEST = 4;</code>
+     */
+    BACKUP_TEST(4),
     ;
 
     /**
@@ -232,6 +236,10 @@ private static final long serialVersionUID = 0L;
      * <code>PREVIEW_SCREENSHOT_TEST = 3;</code>
      */
     public static final int PREVIEW_SCREENSHOT_TEST_VALUE = 3;
+    /**
+     * <code>BACKUP_TEST = 4;</code>
+     */
+    public static final int BACKUP_TEST_VALUE = 4;
 
 
     public final int getNumber() {
@@ -258,6 +266,7 @@ private static final long serialVersionUID = 0L;
         case 1: return UNIT_TEST;
         case 2: return INSTRUMENTATION_TEST;
         case 3: return PREVIEW_SCREENSHOT_TEST;
+        case 4: return BACKUP_TEST;
         default: return null;
       }
     }
@@ -1066,7 +1075,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional int32 screenshot_count = 1 [deprecated = true];</code>
      * @deprecated android_studio.TestRun.PreviewScreenshotRun.screenshot_count is deprecated.
-     *     See studio_stats.proto;l=4127
+     *     See studio_stats.proto;l=4886
      * @return Whether the screenshotCount field is set.
      */
     @java.lang.Deprecated boolean hasScreenshotCount();
@@ -1077,7 +1086,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional int32 screenshot_count = 1 [deprecated = true];</code>
      * @deprecated android_studio.TestRun.PreviewScreenshotRun.screenshot_count is deprecated.
-     *     See studio_stats.proto;l=4127
+     *     See studio_stats.proto;l=4886
      * @return The screenshotCount.
      */
     @java.lang.Deprecated int getScreenshotCount();
@@ -1089,7 +1098,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional int64 total_run_time_ms = 2 [deprecated = true];</code>
      * @deprecated android_studio.TestRun.PreviewScreenshotRun.total_run_time_ms is deprecated.
-     *     See studio_stats.proto;l=4130
+     *     See studio_stats.proto;l=4889
      * @return Whether the totalRunTimeMs field is set.
      */
     @java.lang.Deprecated boolean hasTotalRunTimeMs();
@@ -1100,7 +1109,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional int64 total_run_time_ms = 2 [deprecated = true];</code>
      * @deprecated android_studio.TestRun.PreviewScreenshotRun.total_run_time_ms is deprecated.
-     *     See studio_stats.proto;l=4130
+     *     See studio_stats.proto;l=4889
      * @return The totalRunTimeMs.
      */
     @java.lang.Deprecated long getTotalRunTimeMs();
@@ -1112,7 +1121,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional int64 discovery_run_time_ms = 3 [deprecated = true];</code>
      * @deprecated android_studio.TestRun.PreviewScreenshotRun.discovery_run_time_ms is deprecated.
-     *     See studio_stats.proto;l=4133
+     *     See studio_stats.proto;l=4892
      * @return Whether the discoveryRunTimeMs field is set.
      */
     @java.lang.Deprecated boolean hasDiscoveryRunTimeMs();
@@ -1123,7 +1132,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional int64 discovery_run_time_ms = 3 [deprecated = true];</code>
      * @deprecated android_studio.TestRun.PreviewScreenshotRun.discovery_run_time_ms is deprecated.
-     *     See studio_stats.proto;l=4133
+     *     See studio_stats.proto;l=4892
      * @return The discoveryRunTimeMs.
      */
     @java.lang.Deprecated long getDiscoveryRunTimeMs();
@@ -1135,7 +1144,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional int64 rendering_run_time_ms = 4 [deprecated = true];</code>
      * @deprecated android_studio.TestRun.PreviewScreenshotRun.rendering_run_time_ms is deprecated.
-     *     See studio_stats.proto;l=4136
+     *     See studio_stats.proto;l=4895
      * @return Whether the renderingRunTimeMs field is set.
      */
     @java.lang.Deprecated boolean hasRenderingRunTimeMs();
@@ -1146,7 +1155,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional int64 rendering_run_time_ms = 4 [deprecated = true];</code>
      * @deprecated android_studio.TestRun.PreviewScreenshotRun.rendering_run_time_ms is deprecated.
-     *     See studio_stats.proto;l=4136
+     *     See studio_stats.proto;l=4895
      * @return The renderingRunTimeMs.
      */
     @java.lang.Deprecated long getRenderingRunTimeMs();
@@ -1196,7 +1205,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional int32 screenshot_count = 1 [deprecated = true];</code>
      * @deprecated android_studio.TestRun.PreviewScreenshotRun.screenshot_count is deprecated.
-     *     See studio_stats.proto;l=4127
+     *     See studio_stats.proto;l=4886
      * @return Whether the screenshotCount field is set.
      */
     @java.lang.Override
@@ -1210,7 +1219,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional int32 screenshot_count = 1 [deprecated = true];</code>
      * @deprecated android_studio.TestRun.PreviewScreenshotRun.screenshot_count is deprecated.
-     *     See studio_stats.proto;l=4127
+     *     See studio_stats.proto;l=4886
      * @return The screenshotCount.
      */
     @java.lang.Override
@@ -1227,7 +1236,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional int64 total_run_time_ms = 2 [deprecated = true];</code>
      * @deprecated android_studio.TestRun.PreviewScreenshotRun.total_run_time_ms is deprecated.
-     *     See studio_stats.proto;l=4130
+     *     See studio_stats.proto;l=4889
      * @return Whether the totalRunTimeMs field is set.
      */
     @java.lang.Override
@@ -1241,7 +1250,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional int64 total_run_time_ms = 2 [deprecated = true];</code>
      * @deprecated android_studio.TestRun.PreviewScreenshotRun.total_run_time_ms is deprecated.
-     *     See studio_stats.proto;l=4130
+     *     See studio_stats.proto;l=4889
      * @return The totalRunTimeMs.
      */
     @java.lang.Override
@@ -1258,7 +1267,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional int64 discovery_run_time_ms = 3 [deprecated = true];</code>
      * @deprecated android_studio.TestRun.PreviewScreenshotRun.discovery_run_time_ms is deprecated.
-     *     See studio_stats.proto;l=4133
+     *     See studio_stats.proto;l=4892
      * @return Whether the discoveryRunTimeMs field is set.
      */
     @java.lang.Override
@@ -1272,7 +1281,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional int64 discovery_run_time_ms = 3 [deprecated = true];</code>
      * @deprecated android_studio.TestRun.PreviewScreenshotRun.discovery_run_time_ms is deprecated.
-     *     See studio_stats.proto;l=4133
+     *     See studio_stats.proto;l=4892
      * @return The discoveryRunTimeMs.
      */
     @java.lang.Override
@@ -1289,7 +1298,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional int64 rendering_run_time_ms = 4 [deprecated = true];</code>
      * @deprecated android_studio.TestRun.PreviewScreenshotRun.rendering_run_time_ms is deprecated.
-     *     See studio_stats.proto;l=4136
+     *     See studio_stats.proto;l=4895
      * @return Whether the renderingRunTimeMs field is set.
      */
     @java.lang.Override
@@ -1303,7 +1312,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional int64 rendering_run_time_ms = 4 [deprecated = true];</code>
      * @deprecated android_studio.TestRun.PreviewScreenshotRun.rendering_run_time_ms is deprecated.
-     *     See studio_stats.proto;l=4136
+     *     See studio_stats.proto;l=4895
      * @return The renderingRunTimeMs.
      */
     @java.lang.Override
@@ -1708,7 +1717,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional int32 screenshot_count = 1 [deprecated = true];</code>
        * @deprecated android_studio.TestRun.PreviewScreenshotRun.screenshot_count is deprecated.
-       *     See studio_stats.proto;l=4127
+       *     See studio_stats.proto;l=4886
        * @return Whether the screenshotCount field is set.
        */
       @java.lang.Override
@@ -1722,7 +1731,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional int32 screenshot_count = 1 [deprecated = true];</code>
        * @deprecated android_studio.TestRun.PreviewScreenshotRun.screenshot_count is deprecated.
-       *     See studio_stats.proto;l=4127
+       *     See studio_stats.proto;l=4886
        * @return The screenshotCount.
        */
       @java.lang.Override
@@ -1736,7 +1745,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional int32 screenshot_count = 1 [deprecated = true];</code>
        * @deprecated android_studio.TestRun.PreviewScreenshotRun.screenshot_count is deprecated.
-       *     See studio_stats.proto;l=4127
+       *     See studio_stats.proto;l=4886
        * @param value The screenshotCount to set.
        * @return This builder for chaining.
        */
@@ -1754,7 +1763,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional int32 screenshot_count = 1 [deprecated = true];</code>
        * @deprecated android_studio.TestRun.PreviewScreenshotRun.screenshot_count is deprecated.
-       *     See studio_stats.proto;l=4127
+       *     See studio_stats.proto;l=4886
        * @return This builder for chaining.
        */
       @java.lang.Deprecated public Builder clearScreenshotCount() {
@@ -1772,7 +1781,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional int64 total_run_time_ms = 2 [deprecated = true];</code>
        * @deprecated android_studio.TestRun.PreviewScreenshotRun.total_run_time_ms is deprecated.
-       *     See studio_stats.proto;l=4130
+       *     See studio_stats.proto;l=4889
        * @return Whether the totalRunTimeMs field is set.
        */
       @java.lang.Override
@@ -1786,7 +1795,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional int64 total_run_time_ms = 2 [deprecated = true];</code>
        * @deprecated android_studio.TestRun.PreviewScreenshotRun.total_run_time_ms is deprecated.
-       *     See studio_stats.proto;l=4130
+       *     See studio_stats.proto;l=4889
        * @return The totalRunTimeMs.
        */
       @java.lang.Override
@@ -1800,7 +1809,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional int64 total_run_time_ms = 2 [deprecated = true];</code>
        * @deprecated android_studio.TestRun.PreviewScreenshotRun.total_run_time_ms is deprecated.
-       *     See studio_stats.proto;l=4130
+       *     See studio_stats.proto;l=4889
        * @param value The totalRunTimeMs to set.
        * @return This builder for chaining.
        */
@@ -1818,7 +1827,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional int64 total_run_time_ms = 2 [deprecated = true];</code>
        * @deprecated android_studio.TestRun.PreviewScreenshotRun.total_run_time_ms is deprecated.
-       *     See studio_stats.proto;l=4130
+       *     See studio_stats.proto;l=4889
        * @return This builder for chaining.
        */
       @java.lang.Deprecated public Builder clearTotalRunTimeMs() {
@@ -1836,7 +1845,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional int64 discovery_run_time_ms = 3 [deprecated = true];</code>
        * @deprecated android_studio.TestRun.PreviewScreenshotRun.discovery_run_time_ms is deprecated.
-       *     See studio_stats.proto;l=4133
+       *     See studio_stats.proto;l=4892
        * @return Whether the discoveryRunTimeMs field is set.
        */
       @java.lang.Override
@@ -1850,7 +1859,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional int64 discovery_run_time_ms = 3 [deprecated = true];</code>
        * @deprecated android_studio.TestRun.PreviewScreenshotRun.discovery_run_time_ms is deprecated.
-       *     See studio_stats.proto;l=4133
+       *     See studio_stats.proto;l=4892
        * @return The discoveryRunTimeMs.
        */
       @java.lang.Override
@@ -1864,7 +1873,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional int64 discovery_run_time_ms = 3 [deprecated = true];</code>
        * @deprecated android_studio.TestRun.PreviewScreenshotRun.discovery_run_time_ms is deprecated.
-       *     See studio_stats.proto;l=4133
+       *     See studio_stats.proto;l=4892
        * @param value The discoveryRunTimeMs to set.
        * @return This builder for chaining.
        */
@@ -1882,7 +1891,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional int64 discovery_run_time_ms = 3 [deprecated = true];</code>
        * @deprecated android_studio.TestRun.PreviewScreenshotRun.discovery_run_time_ms is deprecated.
-       *     See studio_stats.proto;l=4133
+       *     See studio_stats.proto;l=4892
        * @return This builder for chaining.
        */
       @java.lang.Deprecated public Builder clearDiscoveryRunTimeMs() {
@@ -1900,7 +1909,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional int64 rendering_run_time_ms = 4 [deprecated = true];</code>
        * @deprecated android_studio.TestRun.PreviewScreenshotRun.rendering_run_time_ms is deprecated.
-       *     See studio_stats.proto;l=4136
+       *     See studio_stats.proto;l=4895
        * @return Whether the renderingRunTimeMs field is set.
        */
       @java.lang.Override
@@ -1914,7 +1923,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional int64 rendering_run_time_ms = 4 [deprecated = true];</code>
        * @deprecated android_studio.TestRun.PreviewScreenshotRun.rendering_run_time_ms is deprecated.
-       *     See studio_stats.proto;l=4136
+       *     See studio_stats.proto;l=4895
        * @return The renderingRunTimeMs.
        */
       @java.lang.Override
@@ -1928,7 +1937,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional int64 rendering_run_time_ms = 4 [deprecated = true];</code>
        * @deprecated android_studio.TestRun.PreviewScreenshotRun.rendering_run_time_ms is deprecated.
-       *     See studio_stats.proto;l=4136
+       *     See studio_stats.proto;l=4895
        * @param value The renderingRunTimeMs to set.
        * @return This builder for chaining.
        */
@@ -1946,7 +1955,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional int64 rendering_run_time_ms = 4 [deprecated = true];</code>
        * @deprecated android_studio.TestRun.PreviewScreenshotRun.rendering_run_time_ms is deprecated.
-       *     See studio_stats.proto;l=4136
+       *     See studio_stats.proto;l=4895
        * @return This builder for chaining.
        */
       @java.lang.Deprecated public Builder clearRenderingRunTimeMs() {
@@ -2014,6 +2023,1828 @@ private static final long serialVersionUID = 0L;
 
     @java.lang.Override
     public com.google.wireless.android.sdk.stats.TestRun.PreviewScreenshotRun getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface BackupTestRunOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:android_studio.TestRun.BackupTestRun)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Number of passed test cases
+     * </pre>
+     *
+     * <code>optional int32 passed_test_count = 1;</code>
+     * @return Whether the passedTestCount field is set.
+     */
+    boolean hasPassedTestCount();
+    /**
+     * <pre>
+     * Number of passed test cases
+     * </pre>
+     *
+     * <code>optional int32 passed_test_count = 1;</code>
+     * @return The passedTestCount.
+     */
+    int getPassedTestCount();
+
+    /**
+     * <pre>
+     * Number of failed test cases
+     * </pre>
+     *
+     * <code>optional int32 failed_test_count = 2;</code>
+     * @return Whether the failedTestCount field is set.
+     */
+    boolean hasFailedTestCount();
+    /**
+     * <pre>
+     * Number of failed test cases
+     * </pre>
+     *
+     * <code>optional int32 failed_test_count = 2;</code>
+     * @return The failedTestCount.
+     */
+    int getFailedTestCount();
+
+    /**
+     * <pre>
+     * Library version of androidx.test.backup (e.g., "1.0.0-alpha01")
+     * </pre>
+     *
+     * <code>optional string backup_test_library_version = 3;</code>
+     * @return Whether the backupTestLibraryVersion field is set.
+     */
+    boolean hasBackupTestLibraryVersion();
+    /**
+     * <pre>
+     * Library version of androidx.test.backup (e.g., "1.0.0-alpha01")
+     * </pre>
+     *
+     * <code>optional string backup_test_library_version = 3;</code>
+     * @return The backupTestLibraryVersion.
+     */
+    java.lang.String getBackupTestLibraryVersion();
+    /**
+     * <pre>
+     * Library version of androidx.test.backup (e.g., "1.0.0-alpha01")
+     * </pre>
+     *
+     * <code>optional string backup_test_library_version = 3;</code>
+     * @return The bytes for backupTestLibraryVersion.
+     */
+    com.google.protobuf.ByteString
+        getBackupTestLibraryVersionBytes();
+
+    /**
+     * <pre>
+     * Primary transport mode used during test execution
+     * </pre>
+     *
+     * <code>optional .android_studio.TestRun.BackupTestRun.BackupTransportMode transport_mode = 4;</code>
+     * @return Whether the transportMode field is set.
+     */
+    boolean hasTransportMode();
+    /**
+     * <pre>
+     * Primary transport mode used during test execution
+     * </pre>
+     *
+     * <code>optional .android_studio.TestRun.BackupTestRun.BackupTransportMode transport_mode = 4;</code>
+     * @return The transportMode.
+     */
+    com.google.wireless.android.sdk.stats.TestRun.BackupTestRun.BackupTransportMode getTransportMode();
+
+    /**
+     * <pre>
+     * Failure reason if the suite or test execution failed
+     * </pre>
+     *
+     * <code>optional .android_studio.TestRun.BackupTestRun.BackupFailureReason failure_reason = 5;</code>
+     * @return Whether the failureReason field is set.
+     */
+    boolean hasFailureReason();
+    /**
+     * <pre>
+     * Failure reason if the suite or test execution failed
+     * </pre>
+     *
+     * <code>optional .android_studio.TestRun.BackupTestRun.BackupFailureReason failure_reason = 5;</code>
+     * @return The failureReason.
+     */
+    com.google.wireless.android.sdk.stats.TestRun.BackupTestRun.BackupFailureReason getFailureReason();
+
+    /**
+     * <pre>
+     * Total test execution duration in milliseconds
+     * </pre>
+     *
+     * <code>optional int64 total_run_time_ms = 6;</code>
+     * @return Whether the totalRunTimeMs field is set.
+     */
+    boolean hasTotalRunTimeMs();
+    /**
+     * <pre>
+     * Total test execution duration in milliseconds
+     * </pre>
+     *
+     * <code>optional int64 total_run_time_ms = 6;</code>
+     * @return The totalRunTimeMs.
+     */
+    long getTotalRunTimeMs();
+
+    /**
+     * <pre>
+     * Execution environment: true for CI, false for local workstation
+     * </pre>
+     *
+     * <code>optional bool is_ci = 7;</code>
+     * @return Whether the isCi field is set.
+     */
+    boolean hasIsCi();
+    /**
+     * <pre>
+     * Execution environment: true for CI, false for local workstation
+     * </pre>
+     *
+     * <code>optional bool is_ci = 7;</code>
+     * @return The isCi.
+     */
+    boolean getIsCi();
+
+    /**
+     * <pre>
+     * Number of storage domains tested (e.g. SharedPreferences,
+     * SQLite/Room, files)
+     * </pre>
+     *
+     * <code>optional int32 storage_domain_count = 8;</code>
+     * @return Whether the storageDomainCount field is set.
+     */
+    boolean hasStorageDomainCount();
+    /**
+     * <pre>
+     * Number of storage domains tested (e.g. SharedPreferences,
+     * SQLite/Room, files)
+     * </pre>
+     *
+     * <code>optional int32 storage_domain_count = 8;</code>
+     * @return The storageDomainCount.
+     */
+    int getStorageDomainCount();
+  }
+  /**
+   * <pre>
+   * Provides details of an automated backup and restore test suite run.
+   * </pre>
+   *
+   * Protobuf type {@code android_studio.TestRun.BackupTestRun}
+   */
+  public static final class BackupTestRun extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:android_studio.TestRun.BackupTestRun)
+      BackupTestRunOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use BackupTestRun.newBuilder() to construct.
+    private BackupTestRun(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private BackupTestRun() {
+      backupTestLibraryVersion_ = "";
+      transportMode_ = 0;
+      failureReason_ = 0;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new BackupTestRun();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_TestRun_BackupTestRun_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_TestRun_BackupTestRun_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.google.wireless.android.sdk.stats.TestRun.BackupTestRun.class, com.google.wireless.android.sdk.stats.TestRun.BackupTestRun.Builder.class);
+    }
+
+    /**
+     * Protobuf enum {@code android_studio.TestRun.BackupTestRun.BackupTransportMode}
+     */
+    public enum BackupTransportMode
+        implements com.google.protobuf.ProtocolMessageEnum {
+      /**
+       * <code>UNKNOWN_TRANSPORT_MODE = 0;</code>
+       */
+      UNKNOWN_TRANSPORT_MODE(0),
+      /**
+       * <code>LOCAL_TRANSPORT = 1;</code>
+       */
+      LOCAL_TRANSPORT(1),
+      /**
+       * <code>GMS_TRANSPORT = 2;</code>
+       */
+      GMS_TRANSPORT(2),
+      /**
+       * <code>D2D_TRANSPORT = 3;</code>
+       */
+      D2D_TRANSPORT(3),
+      ;
+
+      /**
+       * <code>UNKNOWN_TRANSPORT_MODE = 0;</code>
+       */
+      public static final int UNKNOWN_TRANSPORT_MODE_VALUE = 0;
+      /**
+       * <code>LOCAL_TRANSPORT = 1;</code>
+       */
+      public static final int LOCAL_TRANSPORT_VALUE = 1;
+      /**
+       * <code>GMS_TRANSPORT = 2;</code>
+       */
+      public static final int GMS_TRANSPORT_VALUE = 2;
+      /**
+       * <code>D2D_TRANSPORT = 3;</code>
+       */
+      public static final int D2D_TRANSPORT_VALUE = 3;
+
+
+      public final int getNumber() {
+        return value;
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static BackupTransportMode valueOf(int value) {
+        return forNumber(value);
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       */
+      public static BackupTransportMode forNumber(int value) {
+        switch (value) {
+          case 0: return UNKNOWN_TRANSPORT_MODE;
+          case 1: return LOCAL_TRANSPORT;
+          case 2: return GMS_TRANSPORT;
+          case 3: return D2D_TRANSPORT;
+          default: return null;
+        }
+      }
+
+      public static com.google.protobuf.Internal.EnumLiteMap<BackupTransportMode>
+          internalGetValueMap() {
+        return internalValueMap;
+      }
+      private static final com.google.protobuf.Internal.EnumLiteMap<
+          BackupTransportMode> internalValueMap =
+            new com.google.protobuf.Internal.EnumLiteMap<BackupTransportMode>() {
+              public BackupTransportMode findValueByNumber(int number) {
+                return BackupTransportMode.forNumber(number);
+              }
+            };
+
+      public final com.google.protobuf.Descriptors.EnumValueDescriptor
+          getValueDescriptor() {
+        return getDescriptor().getValues().get(ordinal());
+      }
+      public final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptorForType() {
+        return getDescriptor();
+      }
+      public static final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptor() {
+        return com.google.wireless.android.sdk.stats.TestRun.BackupTestRun.getDescriptor().getEnumTypes().get(0);
+      }
+
+      private static final BackupTransportMode[] VALUES = values();
+
+      public static BackupTransportMode valueOf(
+          com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+        if (desc.getType() != getDescriptor()) {
+          throw new java.lang.IllegalArgumentException(
+            "EnumValueDescriptor is not for this type.");
+        }
+        return VALUES[desc.getIndex()];
+      }
+
+      private final int value;
+
+      private BackupTransportMode(int value) {
+        this.value = value;
+      }
+
+      // @@protoc_insertion_point(enum_scope:android_studio.TestRun.BackupTestRun.BackupTransportMode)
+    }
+
+    /**
+     * Protobuf enum {@code android_studio.TestRun.BackupTestRun.BackupFailureReason}
+     */
+    public enum BackupFailureReason
+        implements com.google.protobuf.ProtocolMessageEnum {
+      /**
+       * <code>UNKNOWN_FAILURE_REASON = 0;</code>
+       */
+      UNKNOWN_FAILURE_REASON(0),
+      /**
+       * <code>NO_FAILURE = 1;</code>
+       */
+      NO_FAILURE(1),
+      /**
+       * <code>NO_DEVICE_AVAILABLE = 2;</code>
+       */
+      NO_DEVICE_AVAILABLE(2),
+      /**
+       * <code>API_LEVEL_UNSUPPORTED = 3;</code>
+       */
+      API_LEVEL_UNSUPPORTED(3),
+      /**
+       * <code>GMS_CORE_OUTDATED = 4;</code>
+       */
+      GMS_CORE_OUTDATED(4),
+      /**
+       * <code>BMGR_FAILURE = 5;</code>
+       */
+      BMGR_FAILURE(5),
+      /**
+       * <code>SETUP_PRECONDITION_FAILURE = 6;</code>
+       */
+      SETUP_PRECONDITION_FAILURE(6),
+      /**
+       * <code>ASSERTION_FAILURE = 7;</code>
+       */
+      ASSERTION_FAILURE(7),
+      /**
+       * <code>TIMEOUT = 8;</code>
+       */
+      TIMEOUT(8),
+      ;
+
+      /**
+       * <code>UNKNOWN_FAILURE_REASON = 0;</code>
+       */
+      public static final int UNKNOWN_FAILURE_REASON_VALUE = 0;
+      /**
+       * <code>NO_FAILURE = 1;</code>
+       */
+      public static final int NO_FAILURE_VALUE = 1;
+      /**
+       * <code>NO_DEVICE_AVAILABLE = 2;</code>
+       */
+      public static final int NO_DEVICE_AVAILABLE_VALUE = 2;
+      /**
+       * <code>API_LEVEL_UNSUPPORTED = 3;</code>
+       */
+      public static final int API_LEVEL_UNSUPPORTED_VALUE = 3;
+      /**
+       * <code>GMS_CORE_OUTDATED = 4;</code>
+       */
+      public static final int GMS_CORE_OUTDATED_VALUE = 4;
+      /**
+       * <code>BMGR_FAILURE = 5;</code>
+       */
+      public static final int BMGR_FAILURE_VALUE = 5;
+      /**
+       * <code>SETUP_PRECONDITION_FAILURE = 6;</code>
+       */
+      public static final int SETUP_PRECONDITION_FAILURE_VALUE = 6;
+      /**
+       * <code>ASSERTION_FAILURE = 7;</code>
+       */
+      public static final int ASSERTION_FAILURE_VALUE = 7;
+      /**
+       * <code>TIMEOUT = 8;</code>
+       */
+      public static final int TIMEOUT_VALUE = 8;
+
+
+      public final int getNumber() {
+        return value;
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static BackupFailureReason valueOf(int value) {
+        return forNumber(value);
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       */
+      public static BackupFailureReason forNumber(int value) {
+        switch (value) {
+          case 0: return UNKNOWN_FAILURE_REASON;
+          case 1: return NO_FAILURE;
+          case 2: return NO_DEVICE_AVAILABLE;
+          case 3: return API_LEVEL_UNSUPPORTED;
+          case 4: return GMS_CORE_OUTDATED;
+          case 5: return BMGR_FAILURE;
+          case 6: return SETUP_PRECONDITION_FAILURE;
+          case 7: return ASSERTION_FAILURE;
+          case 8: return TIMEOUT;
+          default: return null;
+        }
+      }
+
+      public static com.google.protobuf.Internal.EnumLiteMap<BackupFailureReason>
+          internalGetValueMap() {
+        return internalValueMap;
+      }
+      private static final com.google.protobuf.Internal.EnumLiteMap<
+          BackupFailureReason> internalValueMap =
+            new com.google.protobuf.Internal.EnumLiteMap<BackupFailureReason>() {
+              public BackupFailureReason findValueByNumber(int number) {
+                return BackupFailureReason.forNumber(number);
+              }
+            };
+
+      public final com.google.protobuf.Descriptors.EnumValueDescriptor
+          getValueDescriptor() {
+        return getDescriptor().getValues().get(ordinal());
+      }
+      public final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptorForType() {
+        return getDescriptor();
+      }
+      public static final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptor() {
+        return com.google.wireless.android.sdk.stats.TestRun.BackupTestRun.getDescriptor().getEnumTypes().get(1);
+      }
+
+      private static final BackupFailureReason[] VALUES = values();
+
+      public static BackupFailureReason valueOf(
+          com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+        if (desc.getType() != getDescriptor()) {
+          throw new java.lang.IllegalArgumentException(
+            "EnumValueDescriptor is not for this type.");
+        }
+        return VALUES[desc.getIndex()];
+      }
+
+      private final int value;
+
+      private BackupFailureReason(int value) {
+        this.value = value;
+      }
+
+      // @@protoc_insertion_point(enum_scope:android_studio.TestRun.BackupTestRun.BackupFailureReason)
+    }
+
+    private int bitField0_;
+    public static final int PASSED_TEST_COUNT_FIELD_NUMBER = 1;
+    private int passedTestCount_ = 0;
+    /**
+     * <pre>
+     * Number of passed test cases
+     * </pre>
+     *
+     * <code>optional int32 passed_test_count = 1;</code>
+     * @return Whether the passedTestCount field is set.
+     */
+    @java.lang.Override
+    public boolean hasPassedTestCount() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <pre>
+     * Number of passed test cases
+     * </pre>
+     *
+     * <code>optional int32 passed_test_count = 1;</code>
+     * @return The passedTestCount.
+     */
+    @java.lang.Override
+    public int getPassedTestCount() {
+      return passedTestCount_;
+    }
+
+    public static final int FAILED_TEST_COUNT_FIELD_NUMBER = 2;
+    private int failedTestCount_ = 0;
+    /**
+     * <pre>
+     * Number of failed test cases
+     * </pre>
+     *
+     * <code>optional int32 failed_test_count = 2;</code>
+     * @return Whether the failedTestCount field is set.
+     */
+    @java.lang.Override
+    public boolean hasFailedTestCount() {
+      return ((bitField0_ & 0x00000002) != 0);
+    }
+    /**
+     * <pre>
+     * Number of failed test cases
+     * </pre>
+     *
+     * <code>optional int32 failed_test_count = 2;</code>
+     * @return The failedTestCount.
+     */
+    @java.lang.Override
+    public int getFailedTestCount() {
+      return failedTestCount_;
+    }
+
+    public static final int BACKUP_TEST_LIBRARY_VERSION_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object backupTestLibraryVersion_ = "";
+    /**
+     * <pre>
+     * Library version of androidx.test.backup (e.g., "1.0.0-alpha01")
+     * </pre>
+     *
+     * <code>optional string backup_test_library_version = 3;</code>
+     * @return Whether the backupTestLibraryVersion field is set.
+     */
+    @java.lang.Override
+    public boolean hasBackupTestLibraryVersion() {
+      return ((bitField0_ & 0x00000004) != 0);
+    }
+    /**
+     * <pre>
+     * Library version of androidx.test.backup (e.g., "1.0.0-alpha01")
+     * </pre>
+     *
+     * <code>optional string backup_test_library_version = 3;</code>
+     * @return The backupTestLibraryVersion.
+     */
+    @java.lang.Override
+    public java.lang.String getBackupTestLibraryVersion() {
+      java.lang.Object ref = backupTestLibraryVersion_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          backupTestLibraryVersion_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Library version of androidx.test.backup (e.g., "1.0.0-alpha01")
+     * </pre>
+     *
+     * <code>optional string backup_test_library_version = 3;</code>
+     * @return The bytes for backupTestLibraryVersion.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getBackupTestLibraryVersionBytes() {
+      java.lang.Object ref = backupTestLibraryVersion_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        backupTestLibraryVersion_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int TRANSPORT_MODE_FIELD_NUMBER = 4;
+    private int transportMode_ = 0;
+    /**
+     * <pre>
+     * Primary transport mode used during test execution
+     * </pre>
+     *
+     * <code>optional .android_studio.TestRun.BackupTestRun.BackupTransportMode transport_mode = 4;</code>
+     * @return Whether the transportMode field is set.
+     */
+    @java.lang.Override public boolean hasTransportMode() {
+      return ((bitField0_ & 0x00000008) != 0);
+    }
+    /**
+     * <pre>
+     * Primary transport mode used during test execution
+     * </pre>
+     *
+     * <code>optional .android_studio.TestRun.BackupTestRun.BackupTransportMode transport_mode = 4;</code>
+     * @return The transportMode.
+     */
+    @java.lang.Override public com.google.wireless.android.sdk.stats.TestRun.BackupTestRun.BackupTransportMode getTransportMode() {
+      com.google.wireless.android.sdk.stats.TestRun.BackupTestRun.BackupTransportMode result = com.google.wireless.android.sdk.stats.TestRun.BackupTestRun.BackupTransportMode.forNumber(transportMode_);
+      return result == null ? com.google.wireless.android.sdk.stats.TestRun.BackupTestRun.BackupTransportMode.UNKNOWN_TRANSPORT_MODE : result;
+    }
+
+    public static final int FAILURE_REASON_FIELD_NUMBER = 5;
+    private int failureReason_ = 0;
+    /**
+     * <pre>
+     * Failure reason if the suite or test execution failed
+     * </pre>
+     *
+     * <code>optional .android_studio.TestRun.BackupTestRun.BackupFailureReason failure_reason = 5;</code>
+     * @return Whether the failureReason field is set.
+     */
+    @java.lang.Override public boolean hasFailureReason() {
+      return ((bitField0_ & 0x00000010) != 0);
+    }
+    /**
+     * <pre>
+     * Failure reason if the suite or test execution failed
+     * </pre>
+     *
+     * <code>optional .android_studio.TestRun.BackupTestRun.BackupFailureReason failure_reason = 5;</code>
+     * @return The failureReason.
+     */
+    @java.lang.Override public com.google.wireless.android.sdk.stats.TestRun.BackupTestRun.BackupFailureReason getFailureReason() {
+      com.google.wireless.android.sdk.stats.TestRun.BackupTestRun.BackupFailureReason result = com.google.wireless.android.sdk.stats.TestRun.BackupTestRun.BackupFailureReason.forNumber(failureReason_);
+      return result == null ? com.google.wireless.android.sdk.stats.TestRun.BackupTestRun.BackupFailureReason.UNKNOWN_FAILURE_REASON : result;
+    }
+
+    public static final int TOTAL_RUN_TIME_MS_FIELD_NUMBER = 6;
+    private long totalRunTimeMs_ = 0L;
+    /**
+     * <pre>
+     * Total test execution duration in milliseconds
+     * </pre>
+     *
+     * <code>optional int64 total_run_time_ms = 6;</code>
+     * @return Whether the totalRunTimeMs field is set.
+     */
+    @java.lang.Override
+    public boolean hasTotalRunTimeMs() {
+      return ((bitField0_ & 0x00000020) != 0);
+    }
+    /**
+     * <pre>
+     * Total test execution duration in milliseconds
+     * </pre>
+     *
+     * <code>optional int64 total_run_time_ms = 6;</code>
+     * @return The totalRunTimeMs.
+     */
+    @java.lang.Override
+    public long getTotalRunTimeMs() {
+      return totalRunTimeMs_;
+    }
+
+    public static final int IS_CI_FIELD_NUMBER = 7;
+    private boolean isCi_ = false;
+    /**
+     * <pre>
+     * Execution environment: true for CI, false for local workstation
+     * </pre>
+     *
+     * <code>optional bool is_ci = 7;</code>
+     * @return Whether the isCi field is set.
+     */
+    @java.lang.Override
+    public boolean hasIsCi() {
+      return ((bitField0_ & 0x00000040) != 0);
+    }
+    /**
+     * <pre>
+     * Execution environment: true for CI, false for local workstation
+     * </pre>
+     *
+     * <code>optional bool is_ci = 7;</code>
+     * @return The isCi.
+     */
+    @java.lang.Override
+    public boolean getIsCi() {
+      return isCi_;
+    }
+
+    public static final int STORAGE_DOMAIN_COUNT_FIELD_NUMBER = 8;
+    private int storageDomainCount_ = 0;
+    /**
+     * <pre>
+     * Number of storage domains tested (e.g. SharedPreferences,
+     * SQLite/Room, files)
+     * </pre>
+     *
+     * <code>optional int32 storage_domain_count = 8;</code>
+     * @return Whether the storageDomainCount field is set.
+     */
+    @java.lang.Override
+    public boolean hasStorageDomainCount() {
+      return ((bitField0_ & 0x00000080) != 0);
+    }
+    /**
+     * <pre>
+     * Number of storage domains tested (e.g. SharedPreferences,
+     * SQLite/Room, files)
+     * </pre>
+     *
+     * <code>optional int32 storage_domain_count = 8;</code>
+     * @return The storageDomainCount.
+     */
+    @java.lang.Override
+    public int getStorageDomainCount() {
+      return storageDomainCount_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (((bitField0_ & 0x00000001) != 0)) {
+        output.writeInt32(1, passedTestCount_);
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        output.writeInt32(2, failedTestCount_);
+      }
+      if (((bitField0_ & 0x00000004) != 0)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, backupTestLibraryVersion_);
+      }
+      if (((bitField0_ & 0x00000008) != 0)) {
+        output.writeEnum(4, transportMode_);
+      }
+      if (((bitField0_ & 0x00000010) != 0)) {
+        output.writeEnum(5, failureReason_);
+      }
+      if (((bitField0_ & 0x00000020) != 0)) {
+        output.writeInt64(6, totalRunTimeMs_);
+      }
+      if (((bitField0_ & 0x00000040) != 0)) {
+        output.writeBool(7, isCi_);
+      }
+      if (((bitField0_ & 0x00000080) != 0)) {
+        output.writeInt32(8, storageDomainCount_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(1, passedTestCount_);
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(2, failedTestCount_);
+      }
+      if (((bitField0_ & 0x00000004) != 0)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, backupTestLibraryVersion_);
+      }
+      if (((bitField0_ & 0x00000008) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(4, transportMode_);
+      }
+      if (((bitField0_ & 0x00000010) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(5, failureReason_);
+      }
+      if (((bitField0_ & 0x00000020) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(6, totalRunTimeMs_);
+      }
+      if (((bitField0_ & 0x00000040) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(7, isCi_);
+      }
+      if (((bitField0_ & 0x00000080) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(8, storageDomainCount_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.google.wireless.android.sdk.stats.TestRun.BackupTestRun)) {
+        return super.equals(obj);
+      }
+      com.google.wireless.android.sdk.stats.TestRun.BackupTestRun other = (com.google.wireless.android.sdk.stats.TestRun.BackupTestRun) obj;
+
+      if (hasPassedTestCount() != other.hasPassedTestCount()) return false;
+      if (hasPassedTestCount()) {
+        if (getPassedTestCount()
+            != other.getPassedTestCount()) return false;
+      }
+      if (hasFailedTestCount() != other.hasFailedTestCount()) return false;
+      if (hasFailedTestCount()) {
+        if (getFailedTestCount()
+            != other.getFailedTestCount()) return false;
+      }
+      if (hasBackupTestLibraryVersion() != other.hasBackupTestLibraryVersion()) return false;
+      if (hasBackupTestLibraryVersion()) {
+        if (!getBackupTestLibraryVersion()
+            .equals(other.getBackupTestLibraryVersion())) return false;
+      }
+      if (hasTransportMode() != other.hasTransportMode()) return false;
+      if (hasTransportMode()) {
+        if (transportMode_ != other.transportMode_) return false;
+      }
+      if (hasFailureReason() != other.hasFailureReason()) return false;
+      if (hasFailureReason()) {
+        if (failureReason_ != other.failureReason_) return false;
+      }
+      if (hasTotalRunTimeMs() != other.hasTotalRunTimeMs()) return false;
+      if (hasTotalRunTimeMs()) {
+        if (getTotalRunTimeMs()
+            != other.getTotalRunTimeMs()) return false;
+      }
+      if (hasIsCi() != other.hasIsCi()) return false;
+      if (hasIsCi()) {
+        if (getIsCi()
+            != other.getIsCi()) return false;
+      }
+      if (hasStorageDomainCount() != other.hasStorageDomainCount()) return false;
+      if (hasStorageDomainCount()) {
+        if (getStorageDomainCount()
+            != other.getStorageDomainCount()) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasPassedTestCount()) {
+        hash = (37 * hash) + PASSED_TEST_COUNT_FIELD_NUMBER;
+        hash = (53 * hash) + getPassedTestCount();
+      }
+      if (hasFailedTestCount()) {
+        hash = (37 * hash) + FAILED_TEST_COUNT_FIELD_NUMBER;
+        hash = (53 * hash) + getFailedTestCount();
+      }
+      if (hasBackupTestLibraryVersion()) {
+        hash = (37 * hash) + BACKUP_TEST_LIBRARY_VERSION_FIELD_NUMBER;
+        hash = (53 * hash) + getBackupTestLibraryVersion().hashCode();
+      }
+      if (hasTransportMode()) {
+        hash = (37 * hash) + TRANSPORT_MODE_FIELD_NUMBER;
+        hash = (53 * hash) + transportMode_;
+      }
+      if (hasFailureReason()) {
+        hash = (37 * hash) + FAILURE_REASON_FIELD_NUMBER;
+        hash = (53 * hash) + failureReason_;
+      }
+      if (hasTotalRunTimeMs()) {
+        hash = (37 * hash) + TOTAL_RUN_TIME_MS_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            getTotalRunTimeMs());
+      }
+      if (hasIsCi()) {
+        hash = (37 * hash) + IS_CI_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+            getIsCi());
+      }
+      if (hasStorageDomainCount()) {
+        hash = (37 * hash) + STORAGE_DOMAIN_COUNT_FIELD_NUMBER;
+        hash = (53 * hash) + getStorageDomainCount();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.google.wireless.android.sdk.stats.TestRun.BackupTestRun parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.google.wireless.android.sdk.stats.TestRun.BackupTestRun parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.google.wireless.android.sdk.stats.TestRun.BackupTestRun parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.google.wireless.android.sdk.stats.TestRun.BackupTestRun parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.google.wireless.android.sdk.stats.TestRun.BackupTestRun parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.google.wireless.android.sdk.stats.TestRun.BackupTestRun parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.google.wireless.android.sdk.stats.TestRun.BackupTestRun parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.google.wireless.android.sdk.stats.TestRun.BackupTestRun parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.google.wireless.android.sdk.stats.TestRun.BackupTestRun parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.google.wireless.android.sdk.stats.TestRun.BackupTestRun parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.google.wireless.android.sdk.stats.TestRun.BackupTestRun parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.google.wireless.android.sdk.stats.TestRun.BackupTestRun parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.google.wireless.android.sdk.stats.TestRun.BackupTestRun prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Provides details of an automated backup and restore test suite run.
+     * </pre>
+     *
+     * Protobuf type {@code android_studio.TestRun.BackupTestRun}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:android_studio.TestRun.BackupTestRun)
+        com.google.wireless.android.sdk.stats.TestRun.BackupTestRunOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_TestRun_BackupTestRun_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_TestRun_BackupTestRun_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.google.wireless.android.sdk.stats.TestRun.BackupTestRun.class, com.google.wireless.android.sdk.stats.TestRun.BackupTestRun.Builder.class);
+      }
+
+      // Construct using com.google.wireless.android.sdk.stats.TestRun.BackupTestRun.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        passedTestCount_ = 0;
+        failedTestCount_ = 0;
+        backupTestLibraryVersion_ = "";
+        transportMode_ = 0;
+        failureReason_ = 0;
+        totalRunTimeMs_ = 0L;
+        isCi_ = false;
+        storageDomainCount_ = 0;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_TestRun_BackupTestRun_descriptor;
+      }
+
+      @java.lang.Override
+      public com.google.wireless.android.sdk.stats.TestRun.BackupTestRun getDefaultInstanceForType() {
+        return com.google.wireless.android.sdk.stats.TestRun.BackupTestRun.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.google.wireless.android.sdk.stats.TestRun.BackupTestRun build() {
+        com.google.wireless.android.sdk.stats.TestRun.BackupTestRun result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.google.wireless.android.sdk.stats.TestRun.BackupTestRun buildPartial() {
+        com.google.wireless.android.sdk.stats.TestRun.BackupTestRun result = new com.google.wireless.android.sdk.stats.TestRun.BackupTestRun(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.google.wireless.android.sdk.stats.TestRun.BackupTestRun result) {
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.passedTestCount_ = passedTestCount_;
+          to_bitField0_ |= 0x00000001;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.failedTestCount_ = failedTestCount_;
+          to_bitField0_ |= 0x00000002;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.backupTestLibraryVersion_ = backupTestLibraryVersion_;
+          to_bitField0_ |= 0x00000004;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.transportMode_ = transportMode_;
+          to_bitField0_ |= 0x00000008;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.failureReason_ = failureReason_;
+          to_bitField0_ |= 0x00000010;
+        }
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          result.totalRunTimeMs_ = totalRunTimeMs_;
+          to_bitField0_ |= 0x00000020;
+        }
+        if (((from_bitField0_ & 0x00000040) != 0)) {
+          result.isCi_ = isCi_;
+          to_bitField0_ |= 0x00000040;
+        }
+        if (((from_bitField0_ & 0x00000080) != 0)) {
+          result.storageDomainCount_ = storageDomainCount_;
+          to_bitField0_ |= 0x00000080;
+        }
+        result.bitField0_ |= to_bitField0_;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.google.wireless.android.sdk.stats.TestRun.BackupTestRun) {
+          return mergeFrom((com.google.wireless.android.sdk.stats.TestRun.BackupTestRun)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.google.wireless.android.sdk.stats.TestRun.BackupTestRun other) {
+        if (other == com.google.wireless.android.sdk.stats.TestRun.BackupTestRun.getDefaultInstance()) return this;
+        if (other.hasPassedTestCount()) {
+          setPassedTestCount(other.getPassedTestCount());
+        }
+        if (other.hasFailedTestCount()) {
+          setFailedTestCount(other.getFailedTestCount());
+        }
+        if (other.hasBackupTestLibraryVersion()) {
+          backupTestLibraryVersion_ = other.backupTestLibraryVersion_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        if (other.hasTransportMode()) {
+          setTransportMode(other.getTransportMode());
+        }
+        if (other.hasFailureReason()) {
+          setFailureReason(other.getFailureReason());
+        }
+        if (other.hasTotalRunTimeMs()) {
+          setTotalRunTimeMs(other.getTotalRunTimeMs());
+        }
+        if (other.hasIsCi()) {
+          setIsCi(other.getIsCi());
+        }
+        if (other.hasStorageDomainCount()) {
+          setStorageDomainCount(other.getStorageDomainCount());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                passedTestCount_ = input.readInt32();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              case 16: {
+                failedTestCount_ = input.readInt32();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 16
+              case 26: {
+                backupTestLibraryVersion_ = input.readBytes();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 32: {
+                int tmpRaw = input.readEnum();
+                com.google.wireless.android.sdk.stats.TestRun.BackupTestRun.BackupTransportMode tmpValue =
+                    com.google.wireless.android.sdk.stats.TestRun.BackupTestRun.BackupTransportMode.forNumber(tmpRaw);
+                if (tmpValue == null) {
+                  mergeUnknownVarintField(4, tmpRaw);
+                } else {
+                  transportMode_ = tmpRaw;
+                  bitField0_ |= 0x00000008;
+                }
+                break;
+              } // case 32
+              case 40: {
+                int tmpRaw = input.readEnum();
+                com.google.wireless.android.sdk.stats.TestRun.BackupTestRun.BackupFailureReason tmpValue =
+                    com.google.wireless.android.sdk.stats.TestRun.BackupTestRun.BackupFailureReason.forNumber(tmpRaw);
+                if (tmpValue == null) {
+                  mergeUnknownVarintField(5, tmpRaw);
+                } else {
+                  failureReason_ = tmpRaw;
+                  bitField0_ |= 0x00000010;
+                }
+                break;
+              } // case 40
+              case 48: {
+                totalRunTimeMs_ = input.readInt64();
+                bitField0_ |= 0x00000020;
+                break;
+              } // case 48
+              case 56: {
+                isCi_ = input.readBool();
+                bitField0_ |= 0x00000040;
+                break;
+              } // case 56
+              case 64: {
+                storageDomainCount_ = input.readInt32();
+                bitField0_ |= 0x00000080;
+                break;
+              } // case 64
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private int passedTestCount_ ;
+      /**
+       * <pre>
+       * Number of passed test cases
+       * </pre>
+       *
+       * <code>optional int32 passed_test_count = 1;</code>
+       * @return Whether the passedTestCount field is set.
+       */
+      @java.lang.Override
+      public boolean hasPassedTestCount() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <pre>
+       * Number of passed test cases
+       * </pre>
+       *
+       * <code>optional int32 passed_test_count = 1;</code>
+       * @return The passedTestCount.
+       */
+      @java.lang.Override
+      public int getPassedTestCount() {
+        return passedTestCount_;
+      }
+      /**
+       * <pre>
+       * Number of passed test cases
+       * </pre>
+       *
+       * <code>optional int32 passed_test_count = 1;</code>
+       * @param value The passedTestCount to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPassedTestCount(int value) {
+
+        passedTestCount_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Number of passed test cases
+       * </pre>
+       *
+       * <code>optional int32 passed_test_count = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPassedTestCount() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        passedTestCount_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int failedTestCount_ ;
+      /**
+       * <pre>
+       * Number of failed test cases
+       * </pre>
+       *
+       * <code>optional int32 failed_test_count = 2;</code>
+       * @return Whether the failedTestCount field is set.
+       */
+      @java.lang.Override
+      public boolean hasFailedTestCount() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <pre>
+       * Number of failed test cases
+       * </pre>
+       *
+       * <code>optional int32 failed_test_count = 2;</code>
+       * @return The failedTestCount.
+       */
+      @java.lang.Override
+      public int getFailedTestCount() {
+        return failedTestCount_;
+      }
+      /**
+       * <pre>
+       * Number of failed test cases
+       * </pre>
+       *
+       * <code>optional int32 failed_test_count = 2;</code>
+       * @param value The failedTestCount to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFailedTestCount(int value) {
+
+        failedTestCount_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Number of failed test cases
+       * </pre>
+       *
+       * <code>optional int32 failed_test_count = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearFailedTestCount() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        failedTestCount_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object backupTestLibraryVersion_ = "";
+      /**
+       * <pre>
+       * Library version of androidx.test.backup (e.g., "1.0.0-alpha01")
+       * </pre>
+       *
+       * <code>optional string backup_test_library_version = 3;</code>
+       * @return Whether the backupTestLibraryVersion field is set.
+       */
+      public boolean hasBackupTestLibraryVersion() {
+        return ((bitField0_ & 0x00000004) != 0);
+      }
+      /**
+       * <pre>
+       * Library version of androidx.test.backup (e.g., "1.0.0-alpha01")
+       * </pre>
+       *
+       * <code>optional string backup_test_library_version = 3;</code>
+       * @return The backupTestLibraryVersion.
+       */
+      public java.lang.String getBackupTestLibraryVersion() {
+        java.lang.Object ref = backupTestLibraryVersion_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            backupTestLibraryVersion_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Library version of androidx.test.backup (e.g., "1.0.0-alpha01")
+       * </pre>
+       *
+       * <code>optional string backup_test_library_version = 3;</code>
+       * @return The bytes for backupTestLibraryVersion.
+       */
+      public com.google.protobuf.ByteString
+          getBackupTestLibraryVersionBytes() {
+        java.lang.Object ref = backupTestLibraryVersion_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          backupTestLibraryVersion_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Library version of androidx.test.backup (e.g., "1.0.0-alpha01")
+       * </pre>
+       *
+       * <code>optional string backup_test_library_version = 3;</code>
+       * @param value The backupTestLibraryVersion to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBackupTestLibraryVersion(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        backupTestLibraryVersion_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Library version of androidx.test.backup (e.g., "1.0.0-alpha01")
+       * </pre>
+       *
+       * <code>optional string backup_test_library_version = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearBackupTestLibraryVersion() {
+        backupTestLibraryVersion_ = getDefaultInstance().getBackupTestLibraryVersion();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Library version of androidx.test.backup (e.g., "1.0.0-alpha01")
+       * </pre>
+       *
+       * <code>optional string backup_test_library_version = 3;</code>
+       * @param value The bytes for backupTestLibraryVersion to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBackupTestLibraryVersionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        backupTestLibraryVersion_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+
+      private int transportMode_ = 0;
+      /**
+       * <pre>
+       * Primary transport mode used during test execution
+       * </pre>
+       *
+       * <code>optional .android_studio.TestRun.BackupTestRun.BackupTransportMode transport_mode = 4;</code>
+       * @return Whether the transportMode field is set.
+       */
+      @java.lang.Override public boolean hasTransportMode() {
+        return ((bitField0_ & 0x00000008) != 0);
+      }
+      /**
+       * <pre>
+       * Primary transport mode used during test execution
+       * </pre>
+       *
+       * <code>optional .android_studio.TestRun.BackupTestRun.BackupTransportMode transport_mode = 4;</code>
+       * @return The transportMode.
+       */
+      @java.lang.Override
+      public com.google.wireless.android.sdk.stats.TestRun.BackupTestRun.BackupTransportMode getTransportMode() {
+        com.google.wireless.android.sdk.stats.TestRun.BackupTestRun.BackupTransportMode result = com.google.wireless.android.sdk.stats.TestRun.BackupTestRun.BackupTransportMode.forNumber(transportMode_);
+        return result == null ? com.google.wireless.android.sdk.stats.TestRun.BackupTestRun.BackupTransportMode.UNKNOWN_TRANSPORT_MODE : result;
+      }
+      /**
+       * <pre>
+       * Primary transport mode used during test execution
+       * </pre>
+       *
+       * <code>optional .android_studio.TestRun.BackupTestRun.BackupTransportMode transport_mode = 4;</code>
+       * @param value The transportMode to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTransportMode(com.google.wireless.android.sdk.stats.TestRun.BackupTestRun.BackupTransportMode value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x00000008;
+        transportMode_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Primary transport mode used during test execution
+       * </pre>
+       *
+       * <code>optional .android_studio.TestRun.BackupTestRun.BackupTransportMode transport_mode = 4;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTransportMode() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        transportMode_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int failureReason_ = 0;
+      /**
+       * <pre>
+       * Failure reason if the suite or test execution failed
+       * </pre>
+       *
+       * <code>optional .android_studio.TestRun.BackupTestRun.BackupFailureReason failure_reason = 5;</code>
+       * @return Whether the failureReason field is set.
+       */
+      @java.lang.Override public boolean hasFailureReason() {
+        return ((bitField0_ & 0x00000010) != 0);
+      }
+      /**
+       * <pre>
+       * Failure reason if the suite or test execution failed
+       * </pre>
+       *
+       * <code>optional .android_studio.TestRun.BackupTestRun.BackupFailureReason failure_reason = 5;</code>
+       * @return The failureReason.
+       */
+      @java.lang.Override
+      public com.google.wireless.android.sdk.stats.TestRun.BackupTestRun.BackupFailureReason getFailureReason() {
+        com.google.wireless.android.sdk.stats.TestRun.BackupTestRun.BackupFailureReason result = com.google.wireless.android.sdk.stats.TestRun.BackupTestRun.BackupFailureReason.forNumber(failureReason_);
+        return result == null ? com.google.wireless.android.sdk.stats.TestRun.BackupTestRun.BackupFailureReason.UNKNOWN_FAILURE_REASON : result;
+      }
+      /**
+       * <pre>
+       * Failure reason if the suite or test execution failed
+       * </pre>
+       *
+       * <code>optional .android_studio.TestRun.BackupTestRun.BackupFailureReason failure_reason = 5;</code>
+       * @param value The failureReason to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFailureReason(com.google.wireless.android.sdk.stats.TestRun.BackupTestRun.BackupFailureReason value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x00000010;
+        failureReason_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Failure reason if the suite or test execution failed
+       * </pre>
+       *
+       * <code>optional .android_studio.TestRun.BackupTestRun.BackupFailureReason failure_reason = 5;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearFailureReason() {
+        bitField0_ = (bitField0_ & ~0x00000010);
+        failureReason_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private long totalRunTimeMs_ ;
+      /**
+       * <pre>
+       * Total test execution duration in milliseconds
+       * </pre>
+       *
+       * <code>optional int64 total_run_time_ms = 6;</code>
+       * @return Whether the totalRunTimeMs field is set.
+       */
+      @java.lang.Override
+      public boolean hasTotalRunTimeMs() {
+        return ((bitField0_ & 0x00000020) != 0);
+      }
+      /**
+       * <pre>
+       * Total test execution duration in milliseconds
+       * </pre>
+       *
+       * <code>optional int64 total_run_time_ms = 6;</code>
+       * @return The totalRunTimeMs.
+       */
+      @java.lang.Override
+      public long getTotalRunTimeMs() {
+        return totalRunTimeMs_;
+      }
+      /**
+       * <pre>
+       * Total test execution duration in milliseconds
+       * </pre>
+       *
+       * <code>optional int64 total_run_time_ms = 6;</code>
+       * @param value The totalRunTimeMs to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTotalRunTimeMs(long value) {
+
+        totalRunTimeMs_ = value;
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Total test execution duration in milliseconds
+       * </pre>
+       *
+       * <code>optional int64 total_run_time_ms = 6;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTotalRunTimeMs() {
+        bitField0_ = (bitField0_ & ~0x00000020);
+        totalRunTimeMs_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private boolean isCi_ ;
+      /**
+       * <pre>
+       * Execution environment: true for CI, false for local workstation
+       * </pre>
+       *
+       * <code>optional bool is_ci = 7;</code>
+       * @return Whether the isCi field is set.
+       */
+      @java.lang.Override
+      public boolean hasIsCi() {
+        return ((bitField0_ & 0x00000040) != 0);
+      }
+      /**
+       * <pre>
+       * Execution environment: true for CI, false for local workstation
+       * </pre>
+       *
+       * <code>optional bool is_ci = 7;</code>
+       * @return The isCi.
+       */
+      @java.lang.Override
+      public boolean getIsCi() {
+        return isCi_;
+      }
+      /**
+       * <pre>
+       * Execution environment: true for CI, false for local workstation
+       * </pre>
+       *
+       * <code>optional bool is_ci = 7;</code>
+       * @param value The isCi to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIsCi(boolean value) {
+
+        isCi_ = value;
+        bitField0_ |= 0x00000040;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Execution environment: true for CI, false for local workstation
+       * </pre>
+       *
+       * <code>optional bool is_ci = 7;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearIsCi() {
+        bitField0_ = (bitField0_ & ~0x00000040);
+        isCi_ = false;
+        onChanged();
+        return this;
+      }
+
+      private int storageDomainCount_ ;
+      /**
+       * <pre>
+       * Number of storage domains tested (e.g. SharedPreferences,
+       * SQLite/Room, files)
+       * </pre>
+       *
+       * <code>optional int32 storage_domain_count = 8;</code>
+       * @return Whether the storageDomainCount field is set.
+       */
+      @java.lang.Override
+      public boolean hasStorageDomainCount() {
+        return ((bitField0_ & 0x00000080) != 0);
+      }
+      /**
+       * <pre>
+       * Number of storage domains tested (e.g. SharedPreferences,
+       * SQLite/Room, files)
+       * </pre>
+       *
+       * <code>optional int32 storage_domain_count = 8;</code>
+       * @return The storageDomainCount.
+       */
+      @java.lang.Override
+      public int getStorageDomainCount() {
+        return storageDomainCount_;
+      }
+      /**
+       * <pre>
+       * Number of storage domains tested (e.g. SharedPreferences,
+       * SQLite/Room, files)
+       * </pre>
+       *
+       * <code>optional int32 storage_domain_count = 8;</code>
+       * @param value The storageDomainCount to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStorageDomainCount(int value) {
+
+        storageDomainCount_ = value;
+        bitField0_ |= 0x00000080;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Number of storage domains tested (e.g. SharedPreferences,
+       * SQLite/Room, files)
+       * </pre>
+       *
+       * <code>optional int32 storage_domain_count = 8;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearStorageDomainCount() {
+        bitField0_ = (bitField0_ & ~0x00000080);
+        storageDomainCount_ = 0;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:android_studio.TestRun.BackupTestRun)
+    }
+
+    // @@protoc_insertion_point(class_scope:android_studio.TestRun.BackupTestRun)
+    private static final com.google.wireless.android.sdk.stats.TestRun.BackupTestRun DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.google.wireless.android.sdk.stats.TestRun.BackupTestRun();
+    }
+
+    public static com.google.wireless.android.sdk.stats.TestRun.BackupTestRun getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<BackupTestRun>
+        PARSER = new com.google.protobuf.AbstractParser<BackupTestRun>() {
+      @java.lang.Override
+      public BackupTestRun parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<BackupTestRun> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<BackupTestRun> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.wireless.android.sdk.stats.TestRun.BackupTestRun getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -2423,6 +4254,44 @@ private static final long serialVersionUID = 0L;
     return deviceTestSpanProfiles_.get(index);
   }
 
+  public static final int BACKUP_TEST_RUN_FIELD_NUMBER = 12;
+  private com.google.wireless.android.sdk.stats.TestRun.BackupTestRun backupTestRun_;
+  /**
+   * <pre>
+   * Only set when test_kind=BACKUP_TEST
+   * </pre>
+   *
+   * <code>optional .android_studio.TestRun.BackupTestRun backup_test_run = 12 [lazy = true];</code>
+   * @return Whether the backupTestRun field is set.
+   */
+  @java.lang.Override
+  public boolean hasBackupTestRun() {
+    return ((bitField0_ & 0x00000400) != 0);
+  }
+  /**
+   * <pre>
+   * Only set when test_kind=BACKUP_TEST
+   * </pre>
+   *
+   * <code>optional .android_studio.TestRun.BackupTestRun backup_test_run = 12 [lazy = true];</code>
+   * @return The backupTestRun.
+   */
+  @java.lang.Override
+  public com.google.wireless.android.sdk.stats.TestRun.BackupTestRun getBackupTestRun() {
+    return backupTestRun_ == null ? com.google.wireless.android.sdk.stats.TestRun.BackupTestRun.getDefaultInstance() : backupTestRun_;
+  }
+  /**
+   * <pre>
+   * Only set when test_kind=BACKUP_TEST
+   * </pre>
+   *
+   * <code>optional .android_studio.TestRun.BackupTestRun backup_test_run = 12 [lazy = true];</code>
+   */
+  @java.lang.Override
+  public com.google.wireless.android.sdk.stats.TestRun.BackupTestRunOrBuilder getBackupTestRunOrBuilder() {
+    return backupTestRun_ == null ? com.google.wireless.android.sdk.stats.TestRun.BackupTestRun.getDefaultInstance() : backupTestRun_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -2469,6 +4338,9 @@ private static final long serialVersionUID = 0L;
     }
     for (int i = 0; i < deviceTestSpanProfiles_.size(); i++) {
       output.writeMessage(11, deviceTestSpanProfiles_.get(i));
+    }
+    if (((bitField0_ & 0x00000400) != 0)) {
+      output.writeMessage(12, getBackupTestRun());
     }
     getUnknownFields().writeTo(output);
   }
@@ -2521,6 +4393,10 @@ private static final long serialVersionUID = 0L;
     for (int i = 0; i < deviceTestSpanProfiles_.size(); i++) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(11, deviceTestSpanProfiles_.get(i));
+    }
+    if (((bitField0_ & 0x00000400) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(12, getBackupTestRun());
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -2586,6 +4462,11 @@ private static final long serialVersionUID = 0L;
     }
     if (!getDeviceTestSpanProfilesList()
         .equals(other.getDeviceTestSpanProfilesList())) return false;
+    if (hasBackupTestRun() != other.hasBackupTestRun()) return false;
+    if (hasBackupTestRun()) {
+      if (!getBackupTestRun()
+          .equals(other.getBackupTestRun())) return false;
+    }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -2642,6 +4523,10 @@ private static final long serialVersionUID = 0L;
     if (getDeviceTestSpanProfilesCount() > 0) {
       hash = (37 * hash) + DEVICE_TEST_SPAN_PROFILES_FIELD_NUMBER;
       hash = (53 * hash) + getDeviceTestSpanProfilesList().hashCode();
+    }
+    if (hasBackupTestRun()) {
+      hash = (37 * hash) + BACKUP_TEST_RUN_FIELD_NUMBER;
+      hash = (53 * hash) + getBackupTestRun().hashCode();
     }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
@@ -2779,6 +4664,7 @@ private static final long serialVersionUID = 0L;
         getAutomaticSnapshotOnFailureFieldBuilder();
         getPreviewScreenshotRunFieldBuilder();
         getDeviceTestSpanProfilesFieldBuilder();
+        getBackupTestRunFieldBuilder();
       }
     }
     @java.lang.Override
@@ -2814,6 +4700,11 @@ private static final long serialVersionUID = 0L;
         deviceTestSpanProfilesBuilder_.clear();
       }
       bitField0_ = (bitField0_ & ~0x00000400);
+      backupTestRun_ = null;
+      if (backupTestRunBuilder_ != null) {
+        backupTestRunBuilder_.dispose();
+        backupTestRunBuilder_ = null;
+      }
       return this;
     }
 
@@ -2907,6 +4798,12 @@ private static final long serialVersionUID = 0L;
             : previewScreenshotRunBuilder_.build();
         to_bitField0_ |= 0x00000200;
       }
+      if (((from_bitField0_ & 0x00000800) != 0)) {
+        result.backupTestRun_ = backupTestRunBuilder_ == null
+            ? backupTestRun_
+            : backupTestRunBuilder_.build();
+        to_bitField0_ |= 0x00000400;
+      }
       result.bitField0_ |= to_bitField0_;
     }
 
@@ -2979,6 +4876,9 @@ private static final long serialVersionUID = 0L;
             deviceTestSpanProfilesBuilder_.addAllMessages(other.deviceTestSpanProfiles_);
           }
         }
+      }
+      if (other.hasBackupTestRun()) {
+        mergeBackupTestRun(other.getBackupTestRun());
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -3096,6 +4996,13 @@ private static final long serialVersionUID = 0L;
               }
               break;
             } // case 90
+            case 98: {
+              input.readMessage(
+                  getBackupTestRunFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000800;
+              break;
+            } // case 98
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -4356,6 +6263,161 @@ private static final long serialVersionUID = 0L;
         deviceTestSpanProfiles_ = null;
       }
       return deviceTestSpanProfilesBuilder_;
+    }
+
+    private com.google.wireless.android.sdk.stats.TestRun.BackupTestRun backupTestRun_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.TestRun.BackupTestRun, com.google.wireless.android.sdk.stats.TestRun.BackupTestRun.Builder, com.google.wireless.android.sdk.stats.TestRun.BackupTestRunOrBuilder> backupTestRunBuilder_;
+    /**
+     * <pre>
+     * Only set when test_kind=BACKUP_TEST
+     * </pre>
+     *
+     * <code>optional .android_studio.TestRun.BackupTestRun backup_test_run = 12 [lazy = true];</code>
+     * @return Whether the backupTestRun field is set.
+     */
+    public boolean hasBackupTestRun() {
+      return ((bitField0_ & 0x00000800) != 0);
+    }
+    /**
+     * <pre>
+     * Only set when test_kind=BACKUP_TEST
+     * </pre>
+     *
+     * <code>optional .android_studio.TestRun.BackupTestRun backup_test_run = 12 [lazy = true];</code>
+     * @return The backupTestRun.
+     */
+    public com.google.wireless.android.sdk.stats.TestRun.BackupTestRun getBackupTestRun() {
+      if (backupTestRunBuilder_ == null) {
+        return backupTestRun_ == null ? com.google.wireless.android.sdk.stats.TestRun.BackupTestRun.getDefaultInstance() : backupTestRun_;
+      } else {
+        return backupTestRunBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * Only set when test_kind=BACKUP_TEST
+     * </pre>
+     *
+     * <code>optional .android_studio.TestRun.BackupTestRun backup_test_run = 12 [lazy = true];</code>
+     */
+    public Builder setBackupTestRun(com.google.wireless.android.sdk.stats.TestRun.BackupTestRun value) {
+      if (backupTestRunBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        backupTestRun_ = value;
+      } else {
+        backupTestRunBuilder_.setMessage(value);
+      }
+      bitField0_ |= 0x00000800;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Only set when test_kind=BACKUP_TEST
+     * </pre>
+     *
+     * <code>optional .android_studio.TestRun.BackupTestRun backup_test_run = 12 [lazy = true];</code>
+     */
+    public Builder setBackupTestRun(
+        com.google.wireless.android.sdk.stats.TestRun.BackupTestRun.Builder builderForValue) {
+      if (backupTestRunBuilder_ == null) {
+        backupTestRun_ = builderForValue.build();
+      } else {
+        backupTestRunBuilder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x00000800;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Only set when test_kind=BACKUP_TEST
+     * </pre>
+     *
+     * <code>optional .android_studio.TestRun.BackupTestRun backup_test_run = 12 [lazy = true];</code>
+     */
+    public Builder mergeBackupTestRun(com.google.wireless.android.sdk.stats.TestRun.BackupTestRun value) {
+      if (backupTestRunBuilder_ == null) {
+        if (((bitField0_ & 0x00000800) != 0) &&
+          backupTestRun_ != null &&
+          backupTestRun_ != com.google.wireless.android.sdk.stats.TestRun.BackupTestRun.getDefaultInstance()) {
+          getBackupTestRunBuilder().mergeFrom(value);
+        } else {
+          backupTestRun_ = value;
+        }
+      } else {
+        backupTestRunBuilder_.mergeFrom(value);
+      }
+      bitField0_ |= 0x00000800;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Only set when test_kind=BACKUP_TEST
+     * </pre>
+     *
+     * <code>optional .android_studio.TestRun.BackupTestRun backup_test_run = 12 [lazy = true];</code>
+     */
+    public Builder clearBackupTestRun() {
+      bitField0_ = (bitField0_ & ~0x00000800);
+      backupTestRun_ = null;
+      if (backupTestRunBuilder_ != null) {
+        backupTestRunBuilder_.dispose();
+        backupTestRunBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Only set when test_kind=BACKUP_TEST
+     * </pre>
+     *
+     * <code>optional .android_studio.TestRun.BackupTestRun backup_test_run = 12 [lazy = true];</code>
+     */
+    public com.google.wireless.android.sdk.stats.TestRun.BackupTestRun.Builder getBackupTestRunBuilder() {
+      bitField0_ |= 0x00000800;
+      onChanged();
+      return getBackupTestRunFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * Only set when test_kind=BACKUP_TEST
+     * </pre>
+     *
+     * <code>optional .android_studio.TestRun.BackupTestRun backup_test_run = 12 [lazy = true];</code>
+     */
+    public com.google.wireless.android.sdk.stats.TestRun.BackupTestRunOrBuilder getBackupTestRunOrBuilder() {
+      if (backupTestRunBuilder_ != null) {
+        return backupTestRunBuilder_.getMessageOrBuilder();
+      } else {
+        return backupTestRun_ == null ?
+            com.google.wireless.android.sdk.stats.TestRun.BackupTestRun.getDefaultInstance() : backupTestRun_;
+      }
+    }
+    /**
+     * <pre>
+     * Only set when test_kind=BACKUP_TEST
+     * </pre>
+     *
+     * <code>optional .android_studio.TestRun.BackupTestRun backup_test_run = 12 [lazy = true];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.TestRun.BackupTestRun, com.google.wireless.android.sdk.stats.TestRun.BackupTestRun.Builder, com.google.wireless.android.sdk.stats.TestRun.BackupTestRunOrBuilder> 
+        getBackupTestRunFieldBuilder() {
+      if (backupTestRunBuilder_ == null) {
+        backupTestRunBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.wireless.android.sdk.stats.TestRun.BackupTestRun, com.google.wireless.android.sdk.stats.TestRun.BackupTestRun.Builder, com.google.wireless.android.sdk.stats.TestRun.BackupTestRunOrBuilder>(
+                getBackupTestRun(),
+                getParentForChildren(),
+                isClean());
+        backupTestRun_ = null;
+      }
+      return backupTestRunBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

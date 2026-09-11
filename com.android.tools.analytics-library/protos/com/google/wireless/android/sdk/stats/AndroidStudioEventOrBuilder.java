@@ -448,24 +448,30 @@ public interface AndroidStudioEventOrBuilder extends
 
   /**
    * <pre>
-   * set when kind = GRADLE_SYNC_FAILURE_DETAILS (previously set when kind =
-   * GRADLE_SYNC_FAILURE)
+   * As of IJ262 merge, this field makes no sense, multiple values can be
+   * detected for each sync. Deprecating this field in favor of new repeated
+   * field in GradleFailureDetails.
    * </pre>
    *
-   * <code>optional .android_studio.AndroidStudioEvent.GradleSyncFailure gradle_sync_failure = 16;</code>
+   * <code>optional .android_studio.AndroidStudioEvent.GradleSyncFailure gradle_sync_failure = 16 [deprecated = true];</code>
+   * @deprecated android_studio.AndroidStudioEvent.gradle_sync_failure is deprecated.
+   *     See studio_stats.proto;l=90
    * @return Whether the gradleSyncFailure field is set.
    */
-  boolean hasGradleSyncFailure();
+  @java.lang.Deprecated boolean hasGradleSyncFailure();
   /**
    * <pre>
-   * set when kind = GRADLE_SYNC_FAILURE_DETAILS (previously set when kind =
-   * GRADLE_SYNC_FAILURE)
+   * As of IJ262 merge, this field makes no sense, multiple values can be
+   * detected for each sync. Deprecating this field in favor of new repeated
+   * field in GradleFailureDetails.
    * </pre>
    *
-   * <code>optional .android_studio.AndroidStudioEvent.GradleSyncFailure gradle_sync_failure = 16;</code>
+   * <code>optional .android_studio.AndroidStudioEvent.GradleSyncFailure gradle_sync_failure = 16 [deprecated = true];</code>
+   * @deprecated android_studio.AndroidStudioEvent.gradle_sync_failure is deprecated.
+   *     See studio_stats.proto;l=90
    * @return The gradleSyncFailure.
    */
-  com.google.wireless.android.sdk.stats.AndroidStudioEvent.GradleSyncFailure getGradleSyncFailure();
+  @java.lang.Deprecated com.google.wireless.android.sdk.stats.AndroidStudioEvent.GradleSyncFailure getGradleSyncFailure();
 
   /**
    * <pre>
@@ -691,7 +697,7 @@ public interface AndroidStudioEventOrBuilder extends
    *
    * <code>optional .android_studio.EmulatorUiEvent emulator_ui_event = 25 [deprecated = true, lazy = true];</code>
    * @deprecated android_studio.AndroidStudioEvent.emulator_ui_event is deprecated.
-   *     See studio_stats.proto;l=119
+   *     See studio_stats.proto;l=120
    * @return Whether the emulatorUiEvent field is set.
    */
   @java.lang.Deprecated boolean hasEmulatorUiEvent();
@@ -703,7 +709,7 @@ public interface AndroidStudioEventOrBuilder extends
    *
    * <code>optional .android_studio.EmulatorUiEvent emulator_ui_event = 25 [deprecated = true, lazy = true];</code>
    * @deprecated android_studio.AndroidStudioEvent.emulator_ui_event is deprecated.
-   *     See studio_stats.proto;l=119
+   *     See studio_stats.proto;l=120
    * @return The emulatorUiEvent.
    */
   @java.lang.Deprecated com.google.wireless.android.sdk.stats.EmulatorUiEvent getEmulatorUiEvent();
@@ -1694,7 +1700,7 @@ public interface AndroidStudioEventOrBuilder extends
    *
    * <code>optional .android_studio.WhatsNewAssistantEvent whats_new_assistant_event = 60 [deprecated = true, lazy = true];</code>
    * @deprecated android_studio.AndroidStudioEvent.whats_new_assistant_event is deprecated.
-   *     See studio_stats.proto;l=242
+   *     See studio_stats.proto;l=243
    * @return Whether the whatsNewAssistantEvent field is set.
    */
   @java.lang.Deprecated boolean hasWhatsNewAssistantEvent();
@@ -1706,7 +1712,7 @@ public interface AndroidStudioEventOrBuilder extends
    *
    * <code>optional .android_studio.WhatsNewAssistantEvent whats_new_assistant_event = 60 [deprecated = true, lazy = true];</code>
    * @deprecated android_studio.AndroidStudioEvent.whats_new_assistant_event is deprecated.
-   *     See studio_stats.proto;l=242
+   *     See studio_stats.proto;l=243
    * @return The whatsNewAssistantEvent.
    */
   @java.lang.Deprecated com.google.wireless.android.sdk.stats.WhatsNewAssistantEvent getWhatsNewAssistantEvent();
@@ -1873,7 +1879,7 @@ public interface AndroidStudioEventOrBuilder extends
    *
    * <code>optional .android_studio.StudioRunEvent studio_run_event = 65 [deprecated = true, lazy = true];</code>
    * @deprecated android_studio.AndroidStudioEvent.studio_run_event is deprecated.
-   *     See studio_stats.proto;l=264
+   *     See studio_stats.proto;l=265
    * @return Whether the studioRunEvent field is set.
    */
   @java.lang.Deprecated boolean hasStudioRunEvent();
@@ -1884,7 +1890,7 @@ public interface AndroidStudioEventOrBuilder extends
    *
    * <code>optional .android_studio.StudioRunEvent studio_run_event = 65 [deprecated = true, lazy = true];</code>
    * @deprecated android_studio.AndroidStudioEvent.studio_run_event is deprecated.
-   *     See studio_stats.proto;l=264
+   *     See studio_stats.proto;l=265
    * @return The studioRunEvent.
    */
   @java.lang.Deprecated com.google.wireless.android.sdk.stats.StudioRunEvent getStudioRunEvent();
@@ -3322,7 +3328,7 @@ public interface AndroidStudioEventOrBuilder extends
    *
    * <code>optional .android_studio.AutoImportEvent auto_import_event = 117 [deprecated = true, lazy = true];</code>
    * @deprecated android_studio.AndroidStudioEvent.auto_import_event is deprecated.
-   *     See studio_stats.proto;l=445
+   *     See studio_stats.proto;l=446
    * @return Whether the autoImportEvent field is set.
    */
   @java.lang.Deprecated boolean hasAutoImportEvent();
@@ -3334,7 +3340,7 @@ public interface AndroidStudioEventOrBuilder extends
    *
    * <code>optional .android_studio.AutoImportEvent auto_import_event = 117 [deprecated = true, lazy = true];</code>
    * @deprecated android_studio.AndroidStudioEvent.auto_import_event is deprecated.
-   *     See studio_stats.proto;l=445
+   *     See studio_stats.proto;l=446
    * @return The autoImportEvent.
    */
   @java.lang.Deprecated com.google.wireless.android.sdk.stats.AutoImportEvent getAutoImportEvent();

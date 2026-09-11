@@ -282,4 +282,31 @@ public interface TestRunOrBuilder extends
    */
   com.google.wireless.android.sdk.stats.DeviceTestSpanProfileOrBuilder getDeviceTestSpanProfilesOrBuilder(
       int index);
+
+  /**
+   * <pre>
+   * Only set when test_kind=BACKUP_TEST
+   * </pre>
+   *
+   * <code>optional .android_studio.TestRun.BackupTestRun backup_test_run = 12 [lazy = true];</code>
+   * @return Whether the backupTestRun field is set.
+   */
+  boolean hasBackupTestRun();
+  /**
+   * <pre>
+   * Only set when test_kind=BACKUP_TEST
+   * </pre>
+   *
+   * <code>optional .android_studio.TestRun.BackupTestRun backup_test_run = 12 [lazy = true];</code>
+   * @return The backupTestRun.
+   */
+  com.google.wireless.android.sdk.stats.TestRun.BackupTestRun getBackupTestRun();
+  /**
+   * <pre>
+   * Only set when test_kind=BACKUP_TEST
+   * </pre>
+   *
+   * <code>optional .android_studio.TestRun.BackupTestRun backup_test_run = 12 [lazy = true];</code>
+   */
+  com.google.wireless.android.sdk.stats.TestRun.BackupTestRunOrBuilder getBackupTestRunOrBuilder();
 }

@@ -37,5 +37,35 @@ public interface SmlChatBotEventLoggedInOrBuilder extends
    */
   com.google.wireless.android.sdk.stats.SmlChatBotEventLoggedIn.ActionInvokedOrBuilder getActionInvokedOrBuilder();
 
+  /**
+   * <code>.android_studio.SmlChatBotEventLoggedIn.QueryBoxEvent query_box_event = 10 [lazy = true];</code>
+   * @return Whether the queryBoxEvent field is set.
+   */
+  boolean hasQueryBoxEvent();
+  /**
+   * <code>.android_studio.SmlChatBotEventLoggedIn.QueryBoxEvent query_box_event = 10 [lazy = true];</code>
+   * @return The queryBoxEvent.
+   */
+  com.google.wireless.android.sdk.stats.SmlChatBotEventLoggedIn.QueryBoxEvent getQueryBoxEvent();
+  /**
+   * <code>.android_studio.SmlChatBotEventLoggedIn.QueryBoxEvent query_box_event = 10 [lazy = true];</code>
+   */
+  com.google.wireless.android.sdk.stats.SmlChatBotEventLoggedIn.QueryBoxEventOrBuilder getQueryBoxEventOrBuilder();
+
+  /**
+   * <code>.android_studio.SmlChatBotEventLoggedIn.ContextDrawerEvent context_drawer_event = 11 [lazy = true];</code>
+   * @return Whether the contextDrawerEvent field is set.
+   */
+  boolean hasContextDrawerEvent();
+  /**
+   * <code>.android_studio.SmlChatBotEventLoggedIn.ContextDrawerEvent context_drawer_event = 11 [lazy = true];</code>
+   * @return The contextDrawerEvent.
+   */
+  com.google.wireless.android.sdk.stats.SmlChatBotEventLoggedIn.ContextDrawerEvent getContextDrawerEvent();
+  /**
+   * <code>.android_studio.SmlChatBotEventLoggedIn.ContextDrawerEvent context_drawer_event = 11 [lazy = true];</code>
+   */
+  com.google.wireless.android.sdk.stats.SmlChatBotEventLoggedIn.ContextDrawerEventOrBuilder getContextDrawerEventOrBuilder();
+
   com.google.wireless.android.sdk.stats.SmlChatBotEventLoggedIn.ContentCase getContentCase();
 }

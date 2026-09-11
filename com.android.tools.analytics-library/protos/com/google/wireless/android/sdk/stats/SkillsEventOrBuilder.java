@@ -64,5 +64,20 @@ public interface SkillsEventOrBuilder extends
    */
   com.google.wireless.android.sdk.stats.SkillsEvent.DiscoveryOrBuilder getDiscoveryOrBuilder();
 
+  /**
+   * <code>.android_studio.SkillsEvent.UserAction user_action = 4 [lazy = true];</code>
+   * @return Whether the userAction field is set.
+   */
+  boolean hasUserAction();
+  /**
+   * <code>.android_studio.SkillsEvent.UserAction user_action = 4 [lazy = true];</code>
+   * @return The userAction.
+   */
+  com.google.wireless.android.sdk.stats.SkillsEvent.UserAction getUserAction();
+  /**
+   * <code>.android_studio.SkillsEvent.UserAction user_action = 4 [lazy = true];</code>
+   */
+  com.google.wireless.android.sdk.stats.SkillsEvent.UserActionOrBuilder getUserActionOrBuilder();
+
   com.google.wireless.android.sdk.stats.SkillsEvent.EventCase getEventCase();
 }

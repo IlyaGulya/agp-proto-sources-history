@@ -30,4 +30,39 @@ public interface GradleFailureDetailsOrBuilder extends
    */
   com.google.wireless.android.sdk.stats.GradleFailureDetails.GradleErrorInfoOrBuilder getErrorsOrBuilder(
       int index);
+
+  /**
+   * <pre>
+   * List of failure categories detected by issue checkers. Previously we only
+   * reported a first detected failure, but with recent changes (IJ262 merge)
+   * all issue checkers have chance to detect and report this value.
+   * </pre>
+   *
+   * <code>repeated .android_studio.AndroidStudioEvent.GradleSyncFailure detected_gradle_sync_failures = 2 [packed = true];</code>
+   * @return A list containing the detectedGradleSyncFailures.
+   */
+  java.util.List<com.google.wireless.android.sdk.stats.AndroidStudioEvent.GradleSyncFailure> getDetectedGradleSyncFailuresList();
+  /**
+   * <pre>
+   * List of failure categories detected by issue checkers. Previously we only
+   * reported a first detected failure, but with recent changes (IJ262 merge)
+   * all issue checkers have chance to detect and report this value.
+   * </pre>
+   *
+   * <code>repeated .android_studio.AndroidStudioEvent.GradleSyncFailure detected_gradle_sync_failures = 2 [packed = true];</code>
+   * @return The count of detectedGradleSyncFailures.
+   */
+  int getDetectedGradleSyncFailuresCount();
+  /**
+   * <pre>
+   * List of failure categories detected by issue checkers. Previously we only
+   * reported a first detected failure, but with recent changes (IJ262 merge)
+   * all issue checkers have chance to detect and report this value.
+   * </pre>
+   *
+   * <code>repeated .android_studio.AndroidStudioEvent.GradleSyncFailure detected_gradle_sync_failures = 2 [packed = true];</code>
+   * @param index The index of the element to return.
+   * @return The detectedGradleSyncFailures at the given index.
+   */
+  com.google.wireless.android.sdk.stats.AndroidStudioEvent.GradleSyncFailure getDetectedGradleSyncFailures(int index);
 }
