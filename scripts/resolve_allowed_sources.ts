@@ -2,6 +2,7 @@
 
 import { mkdir, rm } from "node:fs/promises";
 import { dirname, join } from "node:path";
+import { XMLParser, XMLValidator } from "fast-xml-parser";
 
 type Coordinate = { group: string; module: string; version: string };
 
@@ -59,29 +60,25 @@ function moduleDependencies(metadata: any): Coordinate[] {
   });
 }
 
-function xmlValue(xml: string, name: string): string | null {
-  return xml.match(new RegExp(`<${name}>([^<]+)</${name}>`))?.[1]?.trim() ?? null;
-}
-
 function pomDependencies(xml: string): Coordinate[] {
-  const properties = new Map<string, string>();
-  const propertiesBlock = xml.match(/<properties>([\s\S]*?)<\/properties>/)?.[1] ?? "";
-  for (const match of propertiesBlock.matchAll(/<([^/>]+)>([^<]+)<\/\1>/g)) {
-    properties.set(match[1], match[2].trim());
-  }
-  const withoutManagement = xml.replace(/<dependencyManagement>[\s\S]*?<\/dependencyManagement>/g, "");
+  const validation = XMLValidator.validate(xml);
+  if (validation !== true) throw new Error(`invalid POM XML: ${validation.err.msg}`);
+  const project = new XMLParser({ parseTagValue: false, trimValues: true }).parse(xml)?.project;
+  if (!project) throw new Error("invalid POM: missing project element");
+  const properties: Record<string, string> = project.properties ?? {};
+  const nodes = project.dependencies?.dependency ?? [];
+  const dependencyNodes = Array.isArray(nodes) ? nodes : [nodes];
   const result: Coordinate[] = [];
-  for (const match of withoutManagement.matchAll(/<dependency>([\s\S]*?)<\/dependency>/g)) {
-    const block = match[1];
-    const group = xmlValue(block, "groupId") ?? "";
-    const module = xmlValue(block, "artifactId");
-    let dependencyVersion = xmlValue(block, "version");
-    const scope = xmlValue(block, "scope") ?? "compile";
+  for (const dependency of dependencyNodes) {
+    const group = dependency.groupId ?? "";
+    const module = dependency.artifactId;
+    let dependencyVersion = dependency.version ?? null;
+    const scope = dependency.scope ?? "compile";
     if (dependencyVersion?.startsWith("${") && dependencyVersion.endsWith("}")) {
-      dependencyVersion = properties.get(dependencyVersion.slice(2, -1)) ?? null;
+      dependencyVersion = properties[dependencyVersion.slice(2, -1)] ?? null;
     }
     if (allowed(group) && module && dependencyVersion && scope !== "test" && scope !== "provided" &&
-        xmlValue(block, "optional") !== "true") {
+        dependency.optional !== "true") {
       result.push({ group, module, version: dependencyVersion });
     }
   }

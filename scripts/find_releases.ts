@@ -1,6 +1,7 @@
 #!/usr/bin/env bun
 
 import { existsSync, readFileSync } from "node:fs";
+import { XMLParser, XMLValidator } from "fast-xml-parser";
 
 const metadataUrl = "https://dl.google.com/dl/android/maven2/com/android/tools/build/gradle/maven-metadata.xml";
 const versionPattern = /^(\d+)\.(\d+)\.(\d+)(?:-(alpha|beta|rc)(\d+))?$/;
@@ -32,7 +33,12 @@ const lowerBound = current ?? baseline;
 const response = await fetch(metadataUrl);
 if (!response.ok) throw new Error(`${response.status} ${metadataUrl}`);
 const xml = await response.text();
-const versions = [...new Set([...xml.matchAll(/<version>([^<]+)<\/version>/g)].map((match) => match[1]))]
+const validation = XMLValidator.validate(xml);
+if (validation !== true) throw new Error(`Invalid Google Maven metadata XML: ${validation.err.msg}`);
+const parsed = new XMLParser({ parseTagValue: false, trimValues: true }).parse(xml);
+const versionNodes = parsed?.metadata?.versioning?.versions?.version;
+if (!versionNodes) throw new Error("Google Maven metadata contains no versions");
+const versions = [...new Set<string>(Array.isArray(versionNodes) ? versionNodes : [versionNodes])]
   .filter((version) => versionPattern.test(version))
   .filter((version) => compareVersions(version, lowerBound) > 0 || (!current && compareVersions(version, lowerBound) === 0))
   .sort(compareVersions);
