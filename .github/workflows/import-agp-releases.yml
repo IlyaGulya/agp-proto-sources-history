@@ -23,22 +23,16 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Set up Java
-        uses: actions/setup-java@v5
+      - name: Set up Bun
+        uses: oven-sh/setup-bun@v2
         with:
-          distribution: temurin
-          java-version: "17"
-
-      - name: Set up Gradle
-        uses: gradle/actions/setup-gradle@v4
-        with:
-          gradle-version: "9.2.1"
+          bun-version: "1.4.0"
 
       - name: Find new AGP releases
         id: releases
         shell: bash
         run: |
-          versions="$(python3 scripts/find_releases.py)"
+          versions="$(bun scripts/find_releases.ts)"
           echo "versions=$versions" >> "$GITHUB_OUTPUT"
 
       - name: Import each release as a commit
@@ -54,8 +48,18 @@ jobs:
 
           for ((start = 0; start < ${#versions[@]}; start += batch_size)); do
             batch=("${versions[@]:start:batch_size}")
-            version_csv="$(IFS=,; echo "${batch[*]}")"
-            gradle --parallel dumpSources -PagpVersions="$version_csv"
+            pids=()
+            for version in "${batch[@]}"; do
+              AGP_SOURCE_WORKERS=8 bun scripts/resolve_allowed_sources.ts "$version" \
+                "build/agp-sources/$version" "build/source-cache" \
+                "build/source-manifests/$version.json" &
+              pids+=("$!")
+              if (( ${#pids[@]} == 4 )); then
+                wait "${pids[0]}"
+                pids=("${pids[@]:1}")
+              fi
+            done
+            for pid in "${pids[@]}"; do wait "$pid"; done
 
             for version in "${batch[@]}"; do
               scripts/import_release.sh "$version" "build/agp-sources/$version"
