@@ -7893,6 +7893,36 @@ private static final long serialVersionUID = 0L;
      */
     com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.UserQueryFinishedOrBuilder getUserQueryFinishedOrBuilder();
 
+    /**
+     * <code>.android_studio.GeminiTelemetryEvent.UiEvent.ModelPickerEvent model_picker_event = 5;</code>
+     * @return Whether the modelPickerEvent field is set.
+     */
+    boolean hasModelPickerEvent();
+    /**
+     * <code>.android_studio.GeminiTelemetryEvent.UiEvent.ModelPickerEvent model_picker_event = 5;</code>
+     * @return The modelPickerEvent.
+     */
+    com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.ModelPickerEvent getModelPickerEvent();
+    /**
+     * <code>.android_studio.GeminiTelemetryEvent.UiEvent.ModelPickerEvent model_picker_event = 5;</code>
+     */
+    com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.ModelPickerEventOrBuilder getModelPickerEventOrBuilder();
+
+    /**
+     * <code>.android_studio.GeminiTelemetryEvent.UiEvent.ThinkingLevelPickerEvent thinking_level_picker_event = 6;</code>
+     * @return Whether the thinkingLevelPickerEvent field is set.
+     */
+    boolean hasThinkingLevelPickerEvent();
+    /**
+     * <code>.android_studio.GeminiTelemetryEvent.UiEvent.ThinkingLevelPickerEvent thinking_level_picker_event = 6;</code>
+     * @return The thinkingLevelPickerEvent.
+     */
+    com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.ThinkingLevelPickerEvent getThinkingLevelPickerEvent();
+    /**
+     * <code>.android_studio.GeminiTelemetryEvent.UiEvent.ThinkingLevelPickerEvent thinking_level_picker_event = 6;</code>
+     */
+    com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.ThinkingLevelPickerEventOrBuilder getThinkingLevelPickerEventOrBuilder();
+
     com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.EventCase getEventCase();
   }
   /**
@@ -7928,6 +7958,115 @@ private static final long serialVersionUID = 0L;
       return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_GeminiTelemetryEvent_UiEvent_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.class, com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.Builder.class);
+    }
+
+    /**
+     * <pre>
+     * Tracks inference configuration changes within the chat tool window.
+     * </pre>
+     *
+     * Protobuf enum {@code android_studio.GeminiTelemetryEvent.UiEvent.ModelProfileType}
+     */
+    public enum ModelProfileType
+        implements com.google.protobuf.ProtocolMessageEnum {
+      /**
+       * <code>MODEL_PROFILE_TYPE_UNKNOWN = 0;</code>
+       */
+      MODEL_PROFILE_TYPE_UNKNOWN(0),
+      /**
+       * <code>MODEL_PROFILE_TYPE_DIRECT = 1;</code>
+       */
+      MODEL_PROFILE_TYPE_DIRECT(1),
+      /**
+       * <code>MODEL_PROFILE_TYPE_ACP_AGENT = 2;</code>
+       */
+      MODEL_PROFILE_TYPE_ACP_AGENT(2),
+      ;
+
+      /**
+       * <code>MODEL_PROFILE_TYPE_UNKNOWN = 0;</code>
+       */
+      public static final int MODEL_PROFILE_TYPE_UNKNOWN_VALUE = 0;
+      /**
+       * <code>MODEL_PROFILE_TYPE_DIRECT = 1;</code>
+       */
+      public static final int MODEL_PROFILE_TYPE_DIRECT_VALUE = 1;
+      /**
+       * <code>MODEL_PROFILE_TYPE_ACP_AGENT = 2;</code>
+       */
+      public static final int MODEL_PROFILE_TYPE_ACP_AGENT_VALUE = 2;
+
+
+      public final int getNumber() {
+        return value;
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static ModelProfileType valueOf(int value) {
+        return forNumber(value);
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       */
+      public static ModelProfileType forNumber(int value) {
+        switch (value) {
+          case 0: return MODEL_PROFILE_TYPE_UNKNOWN;
+          case 1: return MODEL_PROFILE_TYPE_DIRECT;
+          case 2: return MODEL_PROFILE_TYPE_ACP_AGENT;
+          default: return null;
+        }
+      }
+
+      public static com.google.protobuf.Internal.EnumLiteMap<ModelProfileType>
+          internalGetValueMap() {
+        return internalValueMap;
+      }
+      private static final com.google.protobuf.Internal.EnumLiteMap<
+          ModelProfileType> internalValueMap =
+            new com.google.protobuf.Internal.EnumLiteMap<ModelProfileType>() {
+              public ModelProfileType findValueByNumber(int number) {
+                return ModelProfileType.forNumber(number);
+              }
+            };
+
+      public final com.google.protobuf.Descriptors.EnumValueDescriptor
+          getValueDescriptor() {
+        return getDescriptor().getValues().get(ordinal());
+      }
+      public final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptorForType() {
+        return getDescriptor();
+      }
+      public static final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptor() {
+        return com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.getDescriptor().getEnumTypes().get(0);
+      }
+
+      private static final ModelProfileType[] VALUES = values();
+
+      public static ModelProfileType valueOf(
+          com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+        if (desc.getType() != getDescriptor()) {
+          throw new java.lang.IllegalArgumentException(
+            "EnumValueDescriptor is not for this type.");
+        }
+        return VALUES[desc.getIndex()];
+      }
+
+      private final int value;
+
+      private ModelProfileType(int value) {
+        this.value = value;
+      }
+
+      // @@protoc_insertion_point(enum_scope:android_studio.GeminiTelemetryEvent.UiEvent.ModelProfileType)
     }
 
     public interface ChangesDrawerEventOrBuilder extends
@@ -11296,6 +11435,2143 @@ private static final long serialVersionUID = 0L;
 
     }
 
+    public interface ModelPickerEventOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:android_studio.GeminiTelemetryEvent.UiEvent.ModelPickerEvent)
+        com.google.protobuf.MessageOrBuilder {
+
+      /**
+       * <pre>
+       * The selected model from the known model registry.
+       * </pre>
+       *
+       * <code>optional .android_studio.Model selected_model = 1;</code>
+       * @return Whether the selectedModel field is set.
+       */
+      boolean hasSelectedModel();
+      /**
+       * <pre>
+       * The selected model from the known model registry.
+       * </pre>
+       *
+       * <code>optional .android_studio.Model selected_model = 1;</code>
+       * @return The selectedModel.
+       */
+      com.google.wireless.android.sdk.stats.Model getSelectedModel();
+
+      /**
+       * <pre>
+       * The identifier of the model provider.
+       * </pre>
+       *
+       * <code>optional string selected_model_provider_id = 2;</code>
+       * @return Whether the selectedModelProviderId field is set.
+       */
+      boolean hasSelectedModelProviderId();
+      /**
+       * <pre>
+       * The identifier of the model provider.
+       * </pre>
+       *
+       * <code>optional string selected_model_provider_id = 2;</code>
+       * @return The selectedModelProviderId.
+       */
+      java.lang.String getSelectedModelProviderId();
+      /**
+       * <pre>
+       * The identifier of the model provider.
+       * </pre>
+       *
+       * <code>optional string selected_model_provider_id = 2;</code>
+       * @return The bytes for selectedModelProviderId.
+       */
+      com.google.protobuf.ByteString
+          getSelectedModelProviderIdBytes();
+
+      /**
+       * <pre>
+       * The model profile type.
+       * </pre>
+       *
+       * <code>optional .android_studio.GeminiTelemetryEvent.UiEvent.ModelProfileType model_profile_type = 3;</code>
+       * @return Whether the modelProfileType field is set.
+       */
+      boolean hasModelProfileType();
+      /**
+       * <pre>
+       * The model profile type.
+       * </pre>
+       *
+       * <code>optional .android_studio.GeminiTelemetryEvent.UiEvent.ModelProfileType model_profile_type = 3;</code>
+       * @return The modelProfileType.
+       */
+      com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.ModelProfileType getModelProfileType();
+    }
+    /**
+     * <pre>
+     * Captures when a user selects a model or agent profile.
+     * </pre>
+     *
+     * Protobuf type {@code android_studio.GeminiTelemetryEvent.UiEvent.ModelPickerEvent}
+     */
+    public static final class ModelPickerEvent extends
+        com.google.protobuf.GeneratedMessageV3 implements
+        // @@protoc_insertion_point(message_implements:android_studio.GeminiTelemetryEvent.UiEvent.ModelPickerEvent)
+        ModelPickerEventOrBuilder {
+    private static final long serialVersionUID = 0L;
+      // Use ModelPickerEvent.newBuilder() to construct.
+      private ModelPickerEvent(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+        super(builder);
+      }
+      private ModelPickerEvent() {
+        selectedModel_ = 0;
+        selectedModelProviderId_ = "";
+        modelProfileType_ = 0;
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new ModelPickerEvent();
+      }
+
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_GeminiTelemetryEvent_UiEvent_ModelPickerEvent_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_GeminiTelemetryEvent_UiEvent_ModelPickerEvent_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.ModelPickerEvent.class, com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.ModelPickerEvent.Builder.class);
+      }
+
+      private int bitField0_;
+      public static final int SELECTED_MODEL_FIELD_NUMBER = 1;
+      private int selectedModel_ = 0;
+      /**
+       * <pre>
+       * The selected model from the known model registry.
+       * </pre>
+       *
+       * <code>optional .android_studio.Model selected_model = 1;</code>
+       * @return Whether the selectedModel field is set.
+       */
+      @java.lang.Override public boolean hasSelectedModel() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <pre>
+       * The selected model from the known model registry.
+       * </pre>
+       *
+       * <code>optional .android_studio.Model selected_model = 1;</code>
+       * @return The selectedModel.
+       */
+      @java.lang.Override public com.google.wireless.android.sdk.stats.Model getSelectedModel() {
+        com.google.wireless.android.sdk.stats.Model result = com.google.wireless.android.sdk.stats.Model.forNumber(selectedModel_);
+        return result == null ? com.google.wireless.android.sdk.stats.Model.MODEL_UNKNOWN : result;
+      }
+
+      public static final int SELECTED_MODEL_PROVIDER_ID_FIELD_NUMBER = 2;
+      @SuppressWarnings("serial")
+      private volatile java.lang.Object selectedModelProviderId_ = "";
+      /**
+       * <pre>
+       * The identifier of the model provider.
+       * </pre>
+       *
+       * <code>optional string selected_model_provider_id = 2;</code>
+       * @return Whether the selectedModelProviderId field is set.
+       */
+      @java.lang.Override
+      public boolean hasSelectedModelProviderId() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <pre>
+       * The identifier of the model provider.
+       * </pre>
+       *
+       * <code>optional string selected_model_provider_id = 2;</code>
+       * @return The selectedModelProviderId.
+       */
+      @java.lang.Override
+      public java.lang.String getSelectedModelProviderId() {
+        java.lang.Object ref = selectedModelProviderId_;
+        if (ref instanceof java.lang.String) {
+          return (java.lang.String) ref;
+        } else {
+          com.google.protobuf.ByteString bs = 
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            selectedModelProviderId_ = s;
+          }
+          return s;
+        }
+      }
+      /**
+       * <pre>
+       * The identifier of the model provider.
+       * </pre>
+       *
+       * <code>optional string selected_model_provider_id = 2;</code>
+       * @return The bytes for selectedModelProviderId.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getSelectedModelProviderIdBytes() {
+        java.lang.Object ref = selectedModelProviderId_;
+        if (ref instanceof java.lang.String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          selectedModelProviderId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+
+      public static final int MODEL_PROFILE_TYPE_FIELD_NUMBER = 3;
+      private int modelProfileType_ = 0;
+      /**
+       * <pre>
+       * The model profile type.
+       * </pre>
+       *
+       * <code>optional .android_studio.GeminiTelemetryEvent.UiEvent.ModelProfileType model_profile_type = 3;</code>
+       * @return Whether the modelProfileType field is set.
+       */
+      @java.lang.Override public boolean hasModelProfileType() {
+        return ((bitField0_ & 0x00000004) != 0);
+      }
+      /**
+       * <pre>
+       * The model profile type.
+       * </pre>
+       *
+       * <code>optional .android_studio.GeminiTelemetryEvent.UiEvent.ModelProfileType model_profile_type = 3;</code>
+       * @return The modelProfileType.
+       */
+      @java.lang.Override public com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.ModelProfileType getModelProfileType() {
+        com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.ModelProfileType result = com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.ModelProfileType.forNumber(modelProfileType_);
+        return result == null ? com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.ModelProfileType.MODEL_PROFILE_TYPE_UNKNOWN : result;
+      }
+
+      private byte memoizedIsInitialized = -1;
+      @java.lang.Override
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      @java.lang.Override
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        if (((bitField0_ & 0x00000001) != 0)) {
+          output.writeEnum(1, selectedModel_);
+        }
+        if (((bitField0_ & 0x00000002) != 0)) {
+          com.google.protobuf.GeneratedMessageV3.writeString(output, 2, selectedModelProviderId_);
+        }
+        if (((bitField0_ & 0x00000004) != 0)) {
+          output.writeEnum(3, modelProfileType_);
+        }
+        getUnknownFields().writeTo(output);
+      }
+
+      @java.lang.Override
+      public int getSerializedSize() {
+        int size = memoizedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        if (((bitField0_ & 0x00000001) != 0)) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeEnumSize(1, selectedModel_);
+        }
+        if (((bitField0_ & 0x00000002) != 0)) {
+          size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, selectedModelProviderId_);
+        }
+        if (((bitField0_ & 0x00000004) != 0)) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeEnumSize(3, modelProfileType_);
+        }
+        size += getUnknownFields().getSerializedSize();
+        memoizedSize = size;
+        return size;
+      }
+
+      @java.lang.Override
+      public boolean equals(final java.lang.Object obj) {
+        if (obj == this) {
+         return true;
+        }
+        if (!(obj instanceof com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.ModelPickerEvent)) {
+          return super.equals(obj);
+        }
+        com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.ModelPickerEvent other = (com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.ModelPickerEvent) obj;
+
+        if (hasSelectedModel() != other.hasSelectedModel()) return false;
+        if (hasSelectedModel()) {
+          if (selectedModel_ != other.selectedModel_) return false;
+        }
+        if (hasSelectedModelProviderId() != other.hasSelectedModelProviderId()) return false;
+        if (hasSelectedModelProviderId()) {
+          if (!getSelectedModelProviderId()
+              .equals(other.getSelectedModelProviderId())) return false;
+        }
+        if (hasModelProfileType() != other.hasModelProfileType()) return false;
+        if (hasModelProfileType()) {
+          if (modelProfileType_ != other.modelProfileType_) return false;
+        }
+        if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+        return true;
+      }
+
+      @java.lang.Override
+      public int hashCode() {
+        if (memoizedHashCode != 0) {
+          return memoizedHashCode;
+        }
+        int hash = 41;
+        hash = (19 * hash) + getDescriptor().hashCode();
+        if (hasSelectedModel()) {
+          hash = (37 * hash) + SELECTED_MODEL_FIELD_NUMBER;
+          hash = (53 * hash) + selectedModel_;
+        }
+        if (hasSelectedModelProviderId()) {
+          hash = (37 * hash) + SELECTED_MODEL_PROVIDER_ID_FIELD_NUMBER;
+          hash = (53 * hash) + getSelectedModelProviderId().hashCode();
+        }
+        if (hasModelProfileType()) {
+          hash = (37 * hash) + MODEL_PROFILE_TYPE_FIELD_NUMBER;
+          hash = (53 * hash) + modelProfileType_;
+        }
+        hash = (29 * hash) + getUnknownFields().hashCode();
+        memoizedHashCode = hash;
+        return hash;
+      }
+
+      public static com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.ModelPickerEvent parseFrom(
+          java.nio.ByteBuffer data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.ModelPickerEvent parseFrom(
+          java.nio.ByteBuffer data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.ModelPickerEvent parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.ModelPickerEvent parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.ModelPickerEvent parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.ModelPickerEvent parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.ModelPickerEvent parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.ModelPickerEvent parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.ModelPickerEvent parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input);
+      }
+      public static com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.ModelPickerEvent parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.ModelPickerEvent parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.ModelPickerEvent parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      @java.lang.Override
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder() {
+        return DEFAULT_INSTANCE.toBuilder();
+      }
+      public static Builder newBuilder(com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.ModelPickerEvent prototype) {
+        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+      }
+      @java.lang.Override
+      public Builder toBuilder() {
+        return this == DEFAULT_INSTANCE
+            ? new Builder() : new Builder().mergeFrom(this);
+      }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * <pre>
+       * Captures when a user selects a model or agent profile.
+       * </pre>
+       *
+       * Protobuf type {@code android_studio.GeminiTelemetryEvent.UiEvent.ModelPickerEvent}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:android_studio.GeminiTelemetryEvent.UiEvent.ModelPickerEvent)
+          com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.ModelPickerEventOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_GeminiTelemetryEvent_UiEvent_ModelPickerEvent_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_GeminiTelemetryEvent_UiEvent_ModelPickerEvent_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.ModelPickerEvent.class, com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.ModelPickerEvent.Builder.class);
+        }
+
+        // Construct using com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.ModelPickerEvent.newBuilder()
+        private Builder() {
+
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          super(parent);
+
+        }
+        @java.lang.Override
+        public Builder clear() {
+          super.clear();
+          bitField0_ = 0;
+          selectedModel_ = 0;
+          selectedModelProviderId_ = "";
+          modelProfileType_ = 0;
+          return this;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_GeminiTelemetryEvent_UiEvent_ModelPickerEvent_descriptor;
+        }
+
+        @java.lang.Override
+        public com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.ModelPickerEvent getDefaultInstanceForType() {
+          return com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.ModelPickerEvent.getDefaultInstance();
+        }
+
+        @java.lang.Override
+        public com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.ModelPickerEvent build() {
+          com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.ModelPickerEvent result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        @java.lang.Override
+        public com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.ModelPickerEvent buildPartial() {
+          com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.ModelPickerEvent result = new com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.ModelPickerEvent(this);
+          if (bitField0_ != 0) { buildPartial0(result); }
+          onBuilt();
+          return result;
+        }
+
+        private void buildPartial0(com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.ModelPickerEvent result) {
+          int from_bitField0_ = bitField0_;
+          int to_bitField0_ = 0;
+          if (((from_bitField0_ & 0x00000001) != 0)) {
+            result.selectedModel_ = selectedModel_;
+            to_bitField0_ |= 0x00000001;
+          }
+          if (((from_bitField0_ & 0x00000002) != 0)) {
+            result.selectedModelProviderId_ = selectedModelProviderId_;
+            to_bitField0_ |= 0x00000002;
+          }
+          if (((from_bitField0_ & 0x00000004) != 0)) {
+            result.modelProfileType_ = modelProfileType_;
+            to_bitField0_ |= 0x00000004;
+          }
+          result.bitField0_ |= to_bitField0_;
+        }
+
+        @java.lang.Override
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.ModelPickerEvent) {
+            return mergeFrom((com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.ModelPickerEvent)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.ModelPickerEvent other) {
+          if (other == com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.ModelPickerEvent.getDefaultInstance()) return this;
+          if (other.hasSelectedModel()) {
+            setSelectedModel(other.getSelectedModel());
+          }
+          if (other.hasSelectedModelProviderId()) {
+            selectedModelProviderId_ = other.selectedModelProviderId_;
+            bitField0_ |= 0x00000002;
+            onChanged();
+          }
+          if (other.hasModelProfileType()) {
+            setModelProfileType(other.getModelProfileType());
+          }
+          this.mergeUnknownFields(other.getUnknownFields());
+          onChanged();
+          return this;
+        }
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        @java.lang.Override
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          if (extensionRegistry == null) {
+            throw new java.lang.NullPointerException();
+          }
+          try {
+            boolean done = false;
+            while (!done) {
+              int tag = input.readTag();
+              switch (tag) {
+                case 0:
+                  done = true;
+                  break;
+                case 8: {
+                  int tmpRaw = input.readEnum();
+                  com.google.wireless.android.sdk.stats.Model tmpValue =
+                      com.google.wireless.android.sdk.stats.Model.forNumber(tmpRaw);
+                  if (tmpValue == null) {
+                    mergeUnknownVarintField(1, tmpRaw);
+                  } else {
+                    selectedModel_ = tmpRaw;
+                    bitField0_ |= 0x00000001;
+                  }
+                  break;
+                } // case 8
+                case 18: {
+                  selectedModelProviderId_ = input.readBytes();
+                  bitField0_ |= 0x00000002;
+                  break;
+                } // case 18
+                case 24: {
+                  int tmpRaw = input.readEnum();
+                  com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.ModelProfileType tmpValue =
+                      com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.ModelProfileType.forNumber(tmpRaw);
+                  if (tmpValue == null) {
+                    mergeUnknownVarintField(3, tmpRaw);
+                  } else {
+                    modelProfileType_ = tmpRaw;
+                    bitField0_ |= 0x00000004;
+                  }
+                  break;
+                } // case 24
+                default: {
+                  if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                    done = true; // was an endgroup tag
+                  }
+                  break;
+                } // default:
+              } // switch (tag)
+            } // while (!done)
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            throw e.unwrapIOException();
+          } finally {
+            onChanged();
+          } // finally
+          return this;
+        }
+        private int bitField0_;
+
+        private int selectedModel_ = 0;
+        /**
+         * <pre>
+         * The selected model from the known model registry.
+         * </pre>
+         *
+         * <code>optional .android_studio.Model selected_model = 1;</code>
+         * @return Whether the selectedModel field is set.
+         */
+        @java.lang.Override public boolean hasSelectedModel() {
+          return ((bitField0_ & 0x00000001) != 0);
+        }
+        /**
+         * <pre>
+         * The selected model from the known model registry.
+         * </pre>
+         *
+         * <code>optional .android_studio.Model selected_model = 1;</code>
+         * @return The selectedModel.
+         */
+        @java.lang.Override
+        public com.google.wireless.android.sdk.stats.Model getSelectedModel() {
+          com.google.wireless.android.sdk.stats.Model result = com.google.wireless.android.sdk.stats.Model.forNumber(selectedModel_);
+          return result == null ? com.google.wireless.android.sdk.stats.Model.MODEL_UNKNOWN : result;
+        }
+        /**
+         * <pre>
+         * The selected model from the known model registry.
+         * </pre>
+         *
+         * <code>optional .android_studio.Model selected_model = 1;</code>
+         * @param value The selectedModel to set.
+         * @return This builder for chaining.
+         */
+        public Builder setSelectedModel(com.google.wireless.android.sdk.stats.Model value) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          bitField0_ |= 0x00000001;
+          selectedModel_ = value.getNumber();
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * The selected model from the known model registry.
+         * </pre>
+         *
+         * <code>optional .android_studio.Model selected_model = 1;</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearSelectedModel() {
+          bitField0_ = (bitField0_ & ~0x00000001);
+          selectedModel_ = 0;
+          onChanged();
+          return this;
+        }
+
+        private java.lang.Object selectedModelProviderId_ = "";
+        /**
+         * <pre>
+         * The identifier of the model provider.
+         * </pre>
+         *
+         * <code>optional string selected_model_provider_id = 2;</code>
+         * @return Whether the selectedModelProviderId field is set.
+         */
+        public boolean hasSelectedModelProviderId() {
+          return ((bitField0_ & 0x00000002) != 0);
+        }
+        /**
+         * <pre>
+         * The identifier of the model provider.
+         * </pre>
+         *
+         * <code>optional string selected_model_provider_id = 2;</code>
+         * @return The selectedModelProviderId.
+         */
+        public java.lang.String getSelectedModelProviderId() {
+          java.lang.Object ref = selectedModelProviderId_;
+          if (!(ref instanceof java.lang.String)) {
+            com.google.protobuf.ByteString bs =
+                (com.google.protobuf.ByteString) ref;
+            java.lang.String s = bs.toStringUtf8();
+            if (bs.isValidUtf8()) {
+              selectedModelProviderId_ = s;
+            }
+            return s;
+          } else {
+            return (java.lang.String) ref;
+          }
+        }
+        /**
+         * <pre>
+         * The identifier of the model provider.
+         * </pre>
+         *
+         * <code>optional string selected_model_provider_id = 2;</code>
+         * @return The bytes for selectedModelProviderId.
+         */
+        public com.google.protobuf.ByteString
+            getSelectedModelProviderIdBytes() {
+          java.lang.Object ref = selectedModelProviderId_;
+          if (ref instanceof String) {
+            com.google.protobuf.ByteString b = 
+                com.google.protobuf.ByteString.copyFromUtf8(
+                    (java.lang.String) ref);
+            selectedModelProviderId_ = b;
+            return b;
+          } else {
+            return (com.google.protobuf.ByteString) ref;
+          }
+        }
+        /**
+         * <pre>
+         * The identifier of the model provider.
+         * </pre>
+         *
+         * <code>optional string selected_model_provider_id = 2;</code>
+         * @param value The selectedModelProviderId to set.
+         * @return This builder for chaining.
+         */
+        public Builder setSelectedModelProviderId(
+            java.lang.String value) {
+          if (value == null) { throw new NullPointerException(); }
+          selectedModelProviderId_ = value;
+          bitField0_ |= 0x00000002;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * The identifier of the model provider.
+         * </pre>
+         *
+         * <code>optional string selected_model_provider_id = 2;</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearSelectedModelProviderId() {
+          selectedModelProviderId_ = getDefaultInstance().getSelectedModelProviderId();
+          bitField0_ = (bitField0_ & ~0x00000002);
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * The identifier of the model provider.
+         * </pre>
+         *
+         * <code>optional string selected_model_provider_id = 2;</code>
+         * @param value The bytes for selectedModelProviderId to set.
+         * @return This builder for chaining.
+         */
+        public Builder setSelectedModelProviderIdBytes(
+            com.google.protobuf.ByteString value) {
+          if (value == null) { throw new NullPointerException(); }
+          selectedModelProviderId_ = value;
+          bitField0_ |= 0x00000002;
+          onChanged();
+          return this;
+        }
+
+        private int modelProfileType_ = 0;
+        /**
+         * <pre>
+         * The model profile type.
+         * </pre>
+         *
+         * <code>optional .android_studio.GeminiTelemetryEvent.UiEvent.ModelProfileType model_profile_type = 3;</code>
+         * @return Whether the modelProfileType field is set.
+         */
+        @java.lang.Override public boolean hasModelProfileType() {
+          return ((bitField0_ & 0x00000004) != 0);
+        }
+        /**
+         * <pre>
+         * The model profile type.
+         * </pre>
+         *
+         * <code>optional .android_studio.GeminiTelemetryEvent.UiEvent.ModelProfileType model_profile_type = 3;</code>
+         * @return The modelProfileType.
+         */
+        @java.lang.Override
+        public com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.ModelProfileType getModelProfileType() {
+          com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.ModelProfileType result = com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.ModelProfileType.forNumber(modelProfileType_);
+          return result == null ? com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.ModelProfileType.MODEL_PROFILE_TYPE_UNKNOWN : result;
+        }
+        /**
+         * <pre>
+         * The model profile type.
+         * </pre>
+         *
+         * <code>optional .android_studio.GeminiTelemetryEvent.UiEvent.ModelProfileType model_profile_type = 3;</code>
+         * @param value The modelProfileType to set.
+         * @return This builder for chaining.
+         */
+        public Builder setModelProfileType(com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.ModelProfileType value) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          bitField0_ |= 0x00000004;
+          modelProfileType_ = value.getNumber();
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * The model profile type.
+         * </pre>
+         *
+         * <code>optional .android_studio.GeminiTelemetryEvent.UiEvent.ModelProfileType model_profile_type = 3;</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearModelProfileType() {
+          bitField0_ = (bitField0_ & ~0x00000004);
+          modelProfileType_ = 0;
+          onChanged();
+          return this;
+        }
+        @java.lang.Override
+        public final Builder setUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.setUnknownFields(unknownFields);
+        }
+
+        @java.lang.Override
+        public final Builder mergeUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.mergeUnknownFields(unknownFields);
+        }
+
+
+        // @@protoc_insertion_point(builder_scope:android_studio.GeminiTelemetryEvent.UiEvent.ModelPickerEvent)
+      }
+
+      // @@protoc_insertion_point(class_scope:android_studio.GeminiTelemetryEvent.UiEvent.ModelPickerEvent)
+      private static final com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.ModelPickerEvent DEFAULT_INSTANCE;
+      static {
+        DEFAULT_INSTANCE = new com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.ModelPickerEvent();
+      }
+
+      public static com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.ModelPickerEvent getDefaultInstance() {
+        return DEFAULT_INSTANCE;
+      }
+
+      @java.lang.Deprecated public static final com.google.protobuf.Parser<ModelPickerEvent>
+          PARSER = new com.google.protobuf.AbstractParser<ModelPickerEvent>() {
+        @java.lang.Override
+        public ModelPickerEvent parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          Builder builder = newBuilder();
+          try {
+            builder.mergeFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            throw e.setUnfinishedMessage(builder.buildPartial());
+          } catch (com.google.protobuf.UninitializedMessageException e) {
+            throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+          } catch (java.io.IOException e) {
+            throw new com.google.protobuf.InvalidProtocolBufferException(e)
+                .setUnfinishedMessage(builder.buildPartial());
+          }
+          return builder.buildPartial();
+        }
+      };
+
+      public static com.google.protobuf.Parser<ModelPickerEvent> parser() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<ModelPickerEvent> getParserForType() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.ModelPickerEvent getDefaultInstanceForType() {
+        return DEFAULT_INSTANCE;
+      }
+
+    }
+
+    public interface ThinkingLevelPickerEventOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:android_studio.GeminiTelemetryEvent.UiEvent.ThinkingLevelPickerEvent)
+        com.google.protobuf.MessageOrBuilder {
+
+      /**
+       * <pre>
+       * The raw string identifier of the selected thinking level (e.g. "low",
+       * "high", "max", etc.).
+       * </pre>
+       *
+       * <code>optional string selected_thinking_level_id = 1;</code>
+       * @return Whether the selectedThinkingLevelId field is set.
+       */
+      boolean hasSelectedThinkingLevelId();
+      /**
+       * <pre>
+       * The raw string identifier of the selected thinking level (e.g. "low",
+       * "high", "max", etc.).
+       * </pre>
+       *
+       * <code>optional string selected_thinking_level_id = 1;</code>
+       * @return The selectedThinkingLevelId.
+       */
+      java.lang.String getSelectedThinkingLevelId();
+      /**
+       * <pre>
+       * The raw string identifier of the selected thinking level (e.g. "low",
+       * "high", "max", etc.).
+       * </pre>
+       *
+       * <code>optional string selected_thinking_level_id = 1;</code>
+       * @return The bytes for selectedThinkingLevelId.
+       */
+      com.google.protobuf.ByteString
+          getSelectedThinkingLevelIdBytes();
+
+      /**
+       * <pre>
+       * True if the user selected the default option.
+       * </pre>
+       *
+       * <code>optional bool is_default = 2;</code>
+       * @return Whether the isDefault field is set.
+       */
+      boolean hasIsDefault();
+      /**
+       * <pre>
+       * True if the user selected the default option.
+       * </pre>
+       *
+       * <code>optional bool is_default = 2;</code>
+       * @return The isDefault.
+       */
+      boolean getIsDefault();
+
+      /**
+       * <pre>
+       * The selected model for which this thinking level is being configured.
+       * </pre>
+       *
+       * <code>optional .android_studio.Model selected_model = 3;</code>
+       * @return Whether the selectedModel field is set.
+       */
+      boolean hasSelectedModel();
+      /**
+       * <pre>
+       * The selected model for which this thinking level is being configured.
+       * </pre>
+       *
+       * <code>optional .android_studio.Model selected_model = 3;</code>
+       * @return The selectedModel.
+       */
+      com.google.wireless.android.sdk.stats.Model getSelectedModel();
+
+      /**
+       * <pre>
+       * The identifier of the model provider for the selected model.
+       * </pre>
+       *
+       * <code>optional string selected_model_provider_id = 4;</code>
+       * @return Whether the selectedModelProviderId field is set.
+       */
+      boolean hasSelectedModelProviderId();
+      /**
+       * <pre>
+       * The identifier of the model provider for the selected model.
+       * </pre>
+       *
+       * <code>optional string selected_model_provider_id = 4;</code>
+       * @return The selectedModelProviderId.
+       */
+      java.lang.String getSelectedModelProviderId();
+      /**
+       * <pre>
+       * The identifier of the model provider for the selected model.
+       * </pre>
+       *
+       * <code>optional string selected_model_provider_id = 4;</code>
+       * @return The bytes for selectedModelProviderId.
+       */
+      com.google.protobuf.ByteString
+          getSelectedModelProviderIdBytes();
+
+      /**
+       * <pre>
+       * The model profile type of the active model/agent.
+       * </pre>
+       *
+       * <code>optional .android_studio.GeminiTelemetryEvent.UiEvent.ModelProfileType model_profile_type = 5;</code>
+       * @return Whether the modelProfileType field is set.
+       */
+      boolean hasModelProfileType();
+      /**
+       * <pre>
+       * The model profile type of the active model/agent.
+       * </pre>
+       *
+       * <code>optional .android_studio.GeminiTelemetryEvent.UiEvent.ModelProfileType model_profile_type = 5;</code>
+       * @return The modelProfileType.
+       */
+      com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.ModelProfileType getModelProfileType();
+    }
+    /**
+     * <pre>
+     * Captures when a user selects a thinking level for a model or agent.
+     * </pre>
+     *
+     * Protobuf type {@code android_studio.GeminiTelemetryEvent.UiEvent.ThinkingLevelPickerEvent}
+     */
+    public static final class ThinkingLevelPickerEvent extends
+        com.google.protobuf.GeneratedMessageV3 implements
+        // @@protoc_insertion_point(message_implements:android_studio.GeminiTelemetryEvent.UiEvent.ThinkingLevelPickerEvent)
+        ThinkingLevelPickerEventOrBuilder {
+    private static final long serialVersionUID = 0L;
+      // Use ThinkingLevelPickerEvent.newBuilder() to construct.
+      private ThinkingLevelPickerEvent(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+        super(builder);
+      }
+      private ThinkingLevelPickerEvent() {
+        selectedThinkingLevelId_ = "";
+        selectedModel_ = 0;
+        selectedModelProviderId_ = "";
+        modelProfileType_ = 0;
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new ThinkingLevelPickerEvent();
+      }
+
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_GeminiTelemetryEvent_UiEvent_ThinkingLevelPickerEvent_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_GeminiTelemetryEvent_UiEvent_ThinkingLevelPickerEvent_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.ThinkingLevelPickerEvent.class, com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.ThinkingLevelPickerEvent.Builder.class);
+      }
+
+      private int bitField0_;
+      public static final int SELECTED_THINKING_LEVEL_ID_FIELD_NUMBER = 1;
+      @SuppressWarnings("serial")
+      private volatile java.lang.Object selectedThinkingLevelId_ = "";
+      /**
+       * <pre>
+       * The raw string identifier of the selected thinking level (e.g. "low",
+       * "high", "max", etc.).
+       * </pre>
+       *
+       * <code>optional string selected_thinking_level_id = 1;</code>
+       * @return Whether the selectedThinkingLevelId field is set.
+       */
+      @java.lang.Override
+      public boolean hasSelectedThinkingLevelId() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <pre>
+       * The raw string identifier of the selected thinking level (e.g. "low",
+       * "high", "max", etc.).
+       * </pre>
+       *
+       * <code>optional string selected_thinking_level_id = 1;</code>
+       * @return The selectedThinkingLevelId.
+       */
+      @java.lang.Override
+      public java.lang.String getSelectedThinkingLevelId() {
+        java.lang.Object ref = selectedThinkingLevelId_;
+        if (ref instanceof java.lang.String) {
+          return (java.lang.String) ref;
+        } else {
+          com.google.protobuf.ByteString bs = 
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            selectedThinkingLevelId_ = s;
+          }
+          return s;
+        }
+      }
+      /**
+       * <pre>
+       * The raw string identifier of the selected thinking level (e.g. "low",
+       * "high", "max", etc.).
+       * </pre>
+       *
+       * <code>optional string selected_thinking_level_id = 1;</code>
+       * @return The bytes for selectedThinkingLevelId.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getSelectedThinkingLevelIdBytes() {
+        java.lang.Object ref = selectedThinkingLevelId_;
+        if (ref instanceof java.lang.String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          selectedThinkingLevelId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+
+      public static final int IS_DEFAULT_FIELD_NUMBER = 2;
+      private boolean isDefault_ = false;
+      /**
+       * <pre>
+       * True if the user selected the default option.
+       * </pre>
+       *
+       * <code>optional bool is_default = 2;</code>
+       * @return Whether the isDefault field is set.
+       */
+      @java.lang.Override
+      public boolean hasIsDefault() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <pre>
+       * True if the user selected the default option.
+       * </pre>
+       *
+       * <code>optional bool is_default = 2;</code>
+       * @return The isDefault.
+       */
+      @java.lang.Override
+      public boolean getIsDefault() {
+        return isDefault_;
+      }
+
+      public static final int SELECTED_MODEL_FIELD_NUMBER = 3;
+      private int selectedModel_ = 0;
+      /**
+       * <pre>
+       * The selected model for which this thinking level is being configured.
+       * </pre>
+       *
+       * <code>optional .android_studio.Model selected_model = 3;</code>
+       * @return Whether the selectedModel field is set.
+       */
+      @java.lang.Override public boolean hasSelectedModel() {
+        return ((bitField0_ & 0x00000004) != 0);
+      }
+      /**
+       * <pre>
+       * The selected model for which this thinking level is being configured.
+       * </pre>
+       *
+       * <code>optional .android_studio.Model selected_model = 3;</code>
+       * @return The selectedModel.
+       */
+      @java.lang.Override public com.google.wireless.android.sdk.stats.Model getSelectedModel() {
+        com.google.wireless.android.sdk.stats.Model result = com.google.wireless.android.sdk.stats.Model.forNumber(selectedModel_);
+        return result == null ? com.google.wireless.android.sdk.stats.Model.MODEL_UNKNOWN : result;
+      }
+
+      public static final int SELECTED_MODEL_PROVIDER_ID_FIELD_NUMBER = 4;
+      @SuppressWarnings("serial")
+      private volatile java.lang.Object selectedModelProviderId_ = "";
+      /**
+       * <pre>
+       * The identifier of the model provider for the selected model.
+       * </pre>
+       *
+       * <code>optional string selected_model_provider_id = 4;</code>
+       * @return Whether the selectedModelProviderId field is set.
+       */
+      @java.lang.Override
+      public boolean hasSelectedModelProviderId() {
+        return ((bitField0_ & 0x00000008) != 0);
+      }
+      /**
+       * <pre>
+       * The identifier of the model provider for the selected model.
+       * </pre>
+       *
+       * <code>optional string selected_model_provider_id = 4;</code>
+       * @return The selectedModelProviderId.
+       */
+      @java.lang.Override
+      public java.lang.String getSelectedModelProviderId() {
+        java.lang.Object ref = selectedModelProviderId_;
+        if (ref instanceof java.lang.String) {
+          return (java.lang.String) ref;
+        } else {
+          com.google.protobuf.ByteString bs = 
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            selectedModelProviderId_ = s;
+          }
+          return s;
+        }
+      }
+      /**
+       * <pre>
+       * The identifier of the model provider for the selected model.
+       * </pre>
+       *
+       * <code>optional string selected_model_provider_id = 4;</code>
+       * @return The bytes for selectedModelProviderId.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getSelectedModelProviderIdBytes() {
+        java.lang.Object ref = selectedModelProviderId_;
+        if (ref instanceof java.lang.String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          selectedModelProviderId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+
+      public static final int MODEL_PROFILE_TYPE_FIELD_NUMBER = 5;
+      private int modelProfileType_ = 0;
+      /**
+       * <pre>
+       * The model profile type of the active model/agent.
+       * </pre>
+       *
+       * <code>optional .android_studio.GeminiTelemetryEvent.UiEvent.ModelProfileType model_profile_type = 5;</code>
+       * @return Whether the modelProfileType field is set.
+       */
+      @java.lang.Override public boolean hasModelProfileType() {
+        return ((bitField0_ & 0x00000010) != 0);
+      }
+      /**
+       * <pre>
+       * The model profile type of the active model/agent.
+       * </pre>
+       *
+       * <code>optional .android_studio.GeminiTelemetryEvent.UiEvent.ModelProfileType model_profile_type = 5;</code>
+       * @return The modelProfileType.
+       */
+      @java.lang.Override public com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.ModelProfileType getModelProfileType() {
+        com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.ModelProfileType result = com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.ModelProfileType.forNumber(modelProfileType_);
+        return result == null ? com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.ModelProfileType.MODEL_PROFILE_TYPE_UNKNOWN : result;
+      }
+
+      private byte memoizedIsInitialized = -1;
+      @java.lang.Override
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      @java.lang.Override
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        if (((bitField0_ & 0x00000001) != 0)) {
+          com.google.protobuf.GeneratedMessageV3.writeString(output, 1, selectedThinkingLevelId_);
+        }
+        if (((bitField0_ & 0x00000002) != 0)) {
+          output.writeBool(2, isDefault_);
+        }
+        if (((bitField0_ & 0x00000004) != 0)) {
+          output.writeEnum(3, selectedModel_);
+        }
+        if (((bitField0_ & 0x00000008) != 0)) {
+          com.google.protobuf.GeneratedMessageV3.writeString(output, 4, selectedModelProviderId_);
+        }
+        if (((bitField0_ & 0x00000010) != 0)) {
+          output.writeEnum(5, modelProfileType_);
+        }
+        getUnknownFields().writeTo(output);
+      }
+
+      @java.lang.Override
+      public int getSerializedSize() {
+        int size = memoizedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        if (((bitField0_ & 0x00000001) != 0)) {
+          size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, selectedThinkingLevelId_);
+        }
+        if (((bitField0_ & 0x00000002) != 0)) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeBoolSize(2, isDefault_);
+        }
+        if (((bitField0_ & 0x00000004) != 0)) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeEnumSize(3, selectedModel_);
+        }
+        if (((bitField0_ & 0x00000008) != 0)) {
+          size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, selectedModelProviderId_);
+        }
+        if (((bitField0_ & 0x00000010) != 0)) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeEnumSize(5, modelProfileType_);
+        }
+        size += getUnknownFields().getSerializedSize();
+        memoizedSize = size;
+        return size;
+      }
+
+      @java.lang.Override
+      public boolean equals(final java.lang.Object obj) {
+        if (obj == this) {
+         return true;
+        }
+        if (!(obj instanceof com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.ThinkingLevelPickerEvent)) {
+          return super.equals(obj);
+        }
+        com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.ThinkingLevelPickerEvent other = (com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.ThinkingLevelPickerEvent) obj;
+
+        if (hasSelectedThinkingLevelId() != other.hasSelectedThinkingLevelId()) return false;
+        if (hasSelectedThinkingLevelId()) {
+          if (!getSelectedThinkingLevelId()
+              .equals(other.getSelectedThinkingLevelId())) return false;
+        }
+        if (hasIsDefault() != other.hasIsDefault()) return false;
+        if (hasIsDefault()) {
+          if (getIsDefault()
+              != other.getIsDefault()) return false;
+        }
+        if (hasSelectedModel() != other.hasSelectedModel()) return false;
+        if (hasSelectedModel()) {
+          if (selectedModel_ != other.selectedModel_) return false;
+        }
+        if (hasSelectedModelProviderId() != other.hasSelectedModelProviderId()) return false;
+        if (hasSelectedModelProviderId()) {
+          if (!getSelectedModelProviderId()
+              .equals(other.getSelectedModelProviderId())) return false;
+        }
+        if (hasModelProfileType() != other.hasModelProfileType()) return false;
+        if (hasModelProfileType()) {
+          if (modelProfileType_ != other.modelProfileType_) return false;
+        }
+        if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+        return true;
+      }
+
+      @java.lang.Override
+      public int hashCode() {
+        if (memoizedHashCode != 0) {
+          return memoizedHashCode;
+        }
+        int hash = 41;
+        hash = (19 * hash) + getDescriptor().hashCode();
+        if (hasSelectedThinkingLevelId()) {
+          hash = (37 * hash) + SELECTED_THINKING_LEVEL_ID_FIELD_NUMBER;
+          hash = (53 * hash) + getSelectedThinkingLevelId().hashCode();
+        }
+        if (hasIsDefault()) {
+          hash = (37 * hash) + IS_DEFAULT_FIELD_NUMBER;
+          hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+              getIsDefault());
+        }
+        if (hasSelectedModel()) {
+          hash = (37 * hash) + SELECTED_MODEL_FIELD_NUMBER;
+          hash = (53 * hash) + selectedModel_;
+        }
+        if (hasSelectedModelProviderId()) {
+          hash = (37 * hash) + SELECTED_MODEL_PROVIDER_ID_FIELD_NUMBER;
+          hash = (53 * hash) + getSelectedModelProviderId().hashCode();
+        }
+        if (hasModelProfileType()) {
+          hash = (37 * hash) + MODEL_PROFILE_TYPE_FIELD_NUMBER;
+          hash = (53 * hash) + modelProfileType_;
+        }
+        hash = (29 * hash) + getUnknownFields().hashCode();
+        memoizedHashCode = hash;
+        return hash;
+      }
+
+      public static com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.ThinkingLevelPickerEvent parseFrom(
+          java.nio.ByteBuffer data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.ThinkingLevelPickerEvent parseFrom(
+          java.nio.ByteBuffer data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.ThinkingLevelPickerEvent parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.ThinkingLevelPickerEvent parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.ThinkingLevelPickerEvent parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.ThinkingLevelPickerEvent parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.ThinkingLevelPickerEvent parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.ThinkingLevelPickerEvent parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.ThinkingLevelPickerEvent parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input);
+      }
+      public static com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.ThinkingLevelPickerEvent parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.ThinkingLevelPickerEvent parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.ThinkingLevelPickerEvent parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      @java.lang.Override
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder() {
+        return DEFAULT_INSTANCE.toBuilder();
+      }
+      public static Builder newBuilder(com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.ThinkingLevelPickerEvent prototype) {
+        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+      }
+      @java.lang.Override
+      public Builder toBuilder() {
+        return this == DEFAULT_INSTANCE
+            ? new Builder() : new Builder().mergeFrom(this);
+      }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * <pre>
+       * Captures when a user selects a thinking level for a model or agent.
+       * </pre>
+       *
+       * Protobuf type {@code android_studio.GeminiTelemetryEvent.UiEvent.ThinkingLevelPickerEvent}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:android_studio.GeminiTelemetryEvent.UiEvent.ThinkingLevelPickerEvent)
+          com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.ThinkingLevelPickerEventOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_GeminiTelemetryEvent_UiEvent_ThinkingLevelPickerEvent_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_GeminiTelemetryEvent_UiEvent_ThinkingLevelPickerEvent_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.ThinkingLevelPickerEvent.class, com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.ThinkingLevelPickerEvent.Builder.class);
+        }
+
+        // Construct using com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.ThinkingLevelPickerEvent.newBuilder()
+        private Builder() {
+
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          super(parent);
+
+        }
+        @java.lang.Override
+        public Builder clear() {
+          super.clear();
+          bitField0_ = 0;
+          selectedThinkingLevelId_ = "";
+          isDefault_ = false;
+          selectedModel_ = 0;
+          selectedModelProviderId_ = "";
+          modelProfileType_ = 0;
+          return this;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_GeminiTelemetryEvent_UiEvent_ThinkingLevelPickerEvent_descriptor;
+        }
+
+        @java.lang.Override
+        public com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.ThinkingLevelPickerEvent getDefaultInstanceForType() {
+          return com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.ThinkingLevelPickerEvent.getDefaultInstance();
+        }
+
+        @java.lang.Override
+        public com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.ThinkingLevelPickerEvent build() {
+          com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.ThinkingLevelPickerEvent result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        @java.lang.Override
+        public com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.ThinkingLevelPickerEvent buildPartial() {
+          com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.ThinkingLevelPickerEvent result = new com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.ThinkingLevelPickerEvent(this);
+          if (bitField0_ != 0) { buildPartial0(result); }
+          onBuilt();
+          return result;
+        }
+
+        private void buildPartial0(com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.ThinkingLevelPickerEvent result) {
+          int from_bitField0_ = bitField0_;
+          int to_bitField0_ = 0;
+          if (((from_bitField0_ & 0x00000001) != 0)) {
+            result.selectedThinkingLevelId_ = selectedThinkingLevelId_;
+            to_bitField0_ |= 0x00000001;
+          }
+          if (((from_bitField0_ & 0x00000002) != 0)) {
+            result.isDefault_ = isDefault_;
+            to_bitField0_ |= 0x00000002;
+          }
+          if (((from_bitField0_ & 0x00000004) != 0)) {
+            result.selectedModel_ = selectedModel_;
+            to_bitField0_ |= 0x00000004;
+          }
+          if (((from_bitField0_ & 0x00000008) != 0)) {
+            result.selectedModelProviderId_ = selectedModelProviderId_;
+            to_bitField0_ |= 0x00000008;
+          }
+          if (((from_bitField0_ & 0x00000010) != 0)) {
+            result.modelProfileType_ = modelProfileType_;
+            to_bitField0_ |= 0x00000010;
+          }
+          result.bitField0_ |= to_bitField0_;
+        }
+
+        @java.lang.Override
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.ThinkingLevelPickerEvent) {
+            return mergeFrom((com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.ThinkingLevelPickerEvent)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.ThinkingLevelPickerEvent other) {
+          if (other == com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.ThinkingLevelPickerEvent.getDefaultInstance()) return this;
+          if (other.hasSelectedThinkingLevelId()) {
+            selectedThinkingLevelId_ = other.selectedThinkingLevelId_;
+            bitField0_ |= 0x00000001;
+            onChanged();
+          }
+          if (other.hasIsDefault()) {
+            setIsDefault(other.getIsDefault());
+          }
+          if (other.hasSelectedModel()) {
+            setSelectedModel(other.getSelectedModel());
+          }
+          if (other.hasSelectedModelProviderId()) {
+            selectedModelProviderId_ = other.selectedModelProviderId_;
+            bitField0_ |= 0x00000008;
+            onChanged();
+          }
+          if (other.hasModelProfileType()) {
+            setModelProfileType(other.getModelProfileType());
+          }
+          this.mergeUnknownFields(other.getUnknownFields());
+          onChanged();
+          return this;
+        }
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        @java.lang.Override
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          if (extensionRegistry == null) {
+            throw new java.lang.NullPointerException();
+          }
+          try {
+            boolean done = false;
+            while (!done) {
+              int tag = input.readTag();
+              switch (tag) {
+                case 0:
+                  done = true;
+                  break;
+                case 10: {
+                  selectedThinkingLevelId_ = input.readBytes();
+                  bitField0_ |= 0x00000001;
+                  break;
+                } // case 10
+                case 16: {
+                  isDefault_ = input.readBool();
+                  bitField0_ |= 0x00000002;
+                  break;
+                } // case 16
+                case 24: {
+                  int tmpRaw = input.readEnum();
+                  com.google.wireless.android.sdk.stats.Model tmpValue =
+                      com.google.wireless.android.sdk.stats.Model.forNumber(tmpRaw);
+                  if (tmpValue == null) {
+                    mergeUnknownVarintField(3, tmpRaw);
+                  } else {
+                    selectedModel_ = tmpRaw;
+                    bitField0_ |= 0x00000004;
+                  }
+                  break;
+                } // case 24
+                case 34: {
+                  selectedModelProviderId_ = input.readBytes();
+                  bitField0_ |= 0x00000008;
+                  break;
+                } // case 34
+                case 40: {
+                  int tmpRaw = input.readEnum();
+                  com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.ModelProfileType tmpValue =
+                      com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.ModelProfileType.forNumber(tmpRaw);
+                  if (tmpValue == null) {
+                    mergeUnknownVarintField(5, tmpRaw);
+                  } else {
+                    modelProfileType_ = tmpRaw;
+                    bitField0_ |= 0x00000010;
+                  }
+                  break;
+                } // case 40
+                default: {
+                  if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                    done = true; // was an endgroup tag
+                  }
+                  break;
+                } // default:
+              } // switch (tag)
+            } // while (!done)
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            throw e.unwrapIOException();
+          } finally {
+            onChanged();
+          } // finally
+          return this;
+        }
+        private int bitField0_;
+
+        private java.lang.Object selectedThinkingLevelId_ = "";
+        /**
+         * <pre>
+         * The raw string identifier of the selected thinking level (e.g. "low",
+         * "high", "max", etc.).
+         * </pre>
+         *
+         * <code>optional string selected_thinking_level_id = 1;</code>
+         * @return Whether the selectedThinkingLevelId field is set.
+         */
+        public boolean hasSelectedThinkingLevelId() {
+          return ((bitField0_ & 0x00000001) != 0);
+        }
+        /**
+         * <pre>
+         * The raw string identifier of the selected thinking level (e.g. "low",
+         * "high", "max", etc.).
+         * </pre>
+         *
+         * <code>optional string selected_thinking_level_id = 1;</code>
+         * @return The selectedThinkingLevelId.
+         */
+        public java.lang.String getSelectedThinkingLevelId() {
+          java.lang.Object ref = selectedThinkingLevelId_;
+          if (!(ref instanceof java.lang.String)) {
+            com.google.protobuf.ByteString bs =
+                (com.google.protobuf.ByteString) ref;
+            java.lang.String s = bs.toStringUtf8();
+            if (bs.isValidUtf8()) {
+              selectedThinkingLevelId_ = s;
+            }
+            return s;
+          } else {
+            return (java.lang.String) ref;
+          }
+        }
+        /**
+         * <pre>
+         * The raw string identifier of the selected thinking level (e.g. "low",
+         * "high", "max", etc.).
+         * </pre>
+         *
+         * <code>optional string selected_thinking_level_id = 1;</code>
+         * @return The bytes for selectedThinkingLevelId.
+         */
+        public com.google.protobuf.ByteString
+            getSelectedThinkingLevelIdBytes() {
+          java.lang.Object ref = selectedThinkingLevelId_;
+          if (ref instanceof String) {
+            com.google.protobuf.ByteString b = 
+                com.google.protobuf.ByteString.copyFromUtf8(
+                    (java.lang.String) ref);
+            selectedThinkingLevelId_ = b;
+            return b;
+          } else {
+            return (com.google.protobuf.ByteString) ref;
+          }
+        }
+        /**
+         * <pre>
+         * The raw string identifier of the selected thinking level (e.g. "low",
+         * "high", "max", etc.).
+         * </pre>
+         *
+         * <code>optional string selected_thinking_level_id = 1;</code>
+         * @param value The selectedThinkingLevelId to set.
+         * @return This builder for chaining.
+         */
+        public Builder setSelectedThinkingLevelId(
+            java.lang.String value) {
+          if (value == null) { throw new NullPointerException(); }
+          selectedThinkingLevelId_ = value;
+          bitField0_ |= 0x00000001;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * The raw string identifier of the selected thinking level (e.g. "low",
+         * "high", "max", etc.).
+         * </pre>
+         *
+         * <code>optional string selected_thinking_level_id = 1;</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearSelectedThinkingLevelId() {
+          selectedThinkingLevelId_ = getDefaultInstance().getSelectedThinkingLevelId();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * The raw string identifier of the selected thinking level (e.g. "low",
+         * "high", "max", etc.).
+         * </pre>
+         *
+         * <code>optional string selected_thinking_level_id = 1;</code>
+         * @param value The bytes for selectedThinkingLevelId to set.
+         * @return This builder for chaining.
+         */
+        public Builder setSelectedThinkingLevelIdBytes(
+            com.google.protobuf.ByteString value) {
+          if (value == null) { throw new NullPointerException(); }
+          selectedThinkingLevelId_ = value;
+          bitField0_ |= 0x00000001;
+          onChanged();
+          return this;
+        }
+
+        private boolean isDefault_ ;
+        /**
+         * <pre>
+         * True if the user selected the default option.
+         * </pre>
+         *
+         * <code>optional bool is_default = 2;</code>
+         * @return Whether the isDefault field is set.
+         */
+        @java.lang.Override
+        public boolean hasIsDefault() {
+          return ((bitField0_ & 0x00000002) != 0);
+        }
+        /**
+         * <pre>
+         * True if the user selected the default option.
+         * </pre>
+         *
+         * <code>optional bool is_default = 2;</code>
+         * @return The isDefault.
+         */
+        @java.lang.Override
+        public boolean getIsDefault() {
+          return isDefault_;
+        }
+        /**
+         * <pre>
+         * True if the user selected the default option.
+         * </pre>
+         *
+         * <code>optional bool is_default = 2;</code>
+         * @param value The isDefault to set.
+         * @return This builder for chaining.
+         */
+        public Builder setIsDefault(boolean value) {
+
+          isDefault_ = value;
+          bitField0_ |= 0x00000002;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * True if the user selected the default option.
+         * </pre>
+         *
+         * <code>optional bool is_default = 2;</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearIsDefault() {
+          bitField0_ = (bitField0_ & ~0x00000002);
+          isDefault_ = false;
+          onChanged();
+          return this;
+        }
+
+        private int selectedModel_ = 0;
+        /**
+         * <pre>
+         * The selected model for which this thinking level is being configured.
+         * </pre>
+         *
+         * <code>optional .android_studio.Model selected_model = 3;</code>
+         * @return Whether the selectedModel field is set.
+         */
+        @java.lang.Override public boolean hasSelectedModel() {
+          return ((bitField0_ & 0x00000004) != 0);
+        }
+        /**
+         * <pre>
+         * The selected model for which this thinking level is being configured.
+         * </pre>
+         *
+         * <code>optional .android_studio.Model selected_model = 3;</code>
+         * @return The selectedModel.
+         */
+        @java.lang.Override
+        public com.google.wireless.android.sdk.stats.Model getSelectedModel() {
+          com.google.wireless.android.sdk.stats.Model result = com.google.wireless.android.sdk.stats.Model.forNumber(selectedModel_);
+          return result == null ? com.google.wireless.android.sdk.stats.Model.MODEL_UNKNOWN : result;
+        }
+        /**
+         * <pre>
+         * The selected model for which this thinking level is being configured.
+         * </pre>
+         *
+         * <code>optional .android_studio.Model selected_model = 3;</code>
+         * @param value The selectedModel to set.
+         * @return This builder for chaining.
+         */
+        public Builder setSelectedModel(com.google.wireless.android.sdk.stats.Model value) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          bitField0_ |= 0x00000004;
+          selectedModel_ = value.getNumber();
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * The selected model for which this thinking level is being configured.
+         * </pre>
+         *
+         * <code>optional .android_studio.Model selected_model = 3;</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearSelectedModel() {
+          bitField0_ = (bitField0_ & ~0x00000004);
+          selectedModel_ = 0;
+          onChanged();
+          return this;
+        }
+
+        private java.lang.Object selectedModelProviderId_ = "";
+        /**
+         * <pre>
+         * The identifier of the model provider for the selected model.
+         * </pre>
+         *
+         * <code>optional string selected_model_provider_id = 4;</code>
+         * @return Whether the selectedModelProviderId field is set.
+         */
+        public boolean hasSelectedModelProviderId() {
+          return ((bitField0_ & 0x00000008) != 0);
+        }
+        /**
+         * <pre>
+         * The identifier of the model provider for the selected model.
+         * </pre>
+         *
+         * <code>optional string selected_model_provider_id = 4;</code>
+         * @return The selectedModelProviderId.
+         */
+        public java.lang.String getSelectedModelProviderId() {
+          java.lang.Object ref = selectedModelProviderId_;
+          if (!(ref instanceof java.lang.String)) {
+            com.google.protobuf.ByteString bs =
+                (com.google.protobuf.ByteString) ref;
+            java.lang.String s = bs.toStringUtf8();
+            if (bs.isValidUtf8()) {
+              selectedModelProviderId_ = s;
+            }
+            return s;
+          } else {
+            return (java.lang.String) ref;
+          }
+        }
+        /**
+         * <pre>
+         * The identifier of the model provider for the selected model.
+         * </pre>
+         *
+         * <code>optional string selected_model_provider_id = 4;</code>
+         * @return The bytes for selectedModelProviderId.
+         */
+        public com.google.protobuf.ByteString
+            getSelectedModelProviderIdBytes() {
+          java.lang.Object ref = selectedModelProviderId_;
+          if (ref instanceof String) {
+            com.google.protobuf.ByteString b = 
+                com.google.protobuf.ByteString.copyFromUtf8(
+                    (java.lang.String) ref);
+            selectedModelProviderId_ = b;
+            return b;
+          } else {
+            return (com.google.protobuf.ByteString) ref;
+          }
+        }
+        /**
+         * <pre>
+         * The identifier of the model provider for the selected model.
+         * </pre>
+         *
+         * <code>optional string selected_model_provider_id = 4;</code>
+         * @param value The selectedModelProviderId to set.
+         * @return This builder for chaining.
+         */
+        public Builder setSelectedModelProviderId(
+            java.lang.String value) {
+          if (value == null) { throw new NullPointerException(); }
+          selectedModelProviderId_ = value;
+          bitField0_ |= 0x00000008;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * The identifier of the model provider for the selected model.
+         * </pre>
+         *
+         * <code>optional string selected_model_provider_id = 4;</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearSelectedModelProviderId() {
+          selectedModelProviderId_ = getDefaultInstance().getSelectedModelProviderId();
+          bitField0_ = (bitField0_ & ~0x00000008);
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * The identifier of the model provider for the selected model.
+         * </pre>
+         *
+         * <code>optional string selected_model_provider_id = 4;</code>
+         * @param value The bytes for selectedModelProviderId to set.
+         * @return This builder for chaining.
+         */
+        public Builder setSelectedModelProviderIdBytes(
+            com.google.protobuf.ByteString value) {
+          if (value == null) { throw new NullPointerException(); }
+          selectedModelProviderId_ = value;
+          bitField0_ |= 0x00000008;
+          onChanged();
+          return this;
+        }
+
+        private int modelProfileType_ = 0;
+        /**
+         * <pre>
+         * The model profile type of the active model/agent.
+         * </pre>
+         *
+         * <code>optional .android_studio.GeminiTelemetryEvent.UiEvent.ModelProfileType model_profile_type = 5;</code>
+         * @return Whether the modelProfileType field is set.
+         */
+        @java.lang.Override public boolean hasModelProfileType() {
+          return ((bitField0_ & 0x00000010) != 0);
+        }
+        /**
+         * <pre>
+         * The model profile type of the active model/agent.
+         * </pre>
+         *
+         * <code>optional .android_studio.GeminiTelemetryEvent.UiEvent.ModelProfileType model_profile_type = 5;</code>
+         * @return The modelProfileType.
+         */
+        @java.lang.Override
+        public com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.ModelProfileType getModelProfileType() {
+          com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.ModelProfileType result = com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.ModelProfileType.forNumber(modelProfileType_);
+          return result == null ? com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.ModelProfileType.MODEL_PROFILE_TYPE_UNKNOWN : result;
+        }
+        /**
+         * <pre>
+         * The model profile type of the active model/agent.
+         * </pre>
+         *
+         * <code>optional .android_studio.GeminiTelemetryEvent.UiEvent.ModelProfileType model_profile_type = 5;</code>
+         * @param value The modelProfileType to set.
+         * @return This builder for chaining.
+         */
+        public Builder setModelProfileType(com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.ModelProfileType value) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          bitField0_ |= 0x00000010;
+          modelProfileType_ = value.getNumber();
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * The model profile type of the active model/agent.
+         * </pre>
+         *
+         * <code>optional .android_studio.GeminiTelemetryEvent.UiEvent.ModelProfileType model_profile_type = 5;</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearModelProfileType() {
+          bitField0_ = (bitField0_ & ~0x00000010);
+          modelProfileType_ = 0;
+          onChanged();
+          return this;
+        }
+        @java.lang.Override
+        public final Builder setUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.setUnknownFields(unknownFields);
+        }
+
+        @java.lang.Override
+        public final Builder mergeUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.mergeUnknownFields(unknownFields);
+        }
+
+
+        // @@protoc_insertion_point(builder_scope:android_studio.GeminiTelemetryEvent.UiEvent.ThinkingLevelPickerEvent)
+      }
+
+      // @@protoc_insertion_point(class_scope:android_studio.GeminiTelemetryEvent.UiEvent.ThinkingLevelPickerEvent)
+      private static final com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.ThinkingLevelPickerEvent DEFAULT_INSTANCE;
+      static {
+        DEFAULT_INSTANCE = new com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.ThinkingLevelPickerEvent();
+      }
+
+      public static com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.ThinkingLevelPickerEvent getDefaultInstance() {
+        return DEFAULT_INSTANCE;
+      }
+
+      @java.lang.Deprecated public static final com.google.protobuf.Parser<ThinkingLevelPickerEvent>
+          PARSER = new com.google.protobuf.AbstractParser<ThinkingLevelPickerEvent>() {
+        @java.lang.Override
+        public ThinkingLevelPickerEvent parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          Builder builder = newBuilder();
+          try {
+            builder.mergeFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            throw e.setUnfinishedMessage(builder.buildPartial());
+          } catch (com.google.protobuf.UninitializedMessageException e) {
+            throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+          } catch (java.io.IOException e) {
+            throw new com.google.protobuf.InvalidProtocolBufferException(e)
+                .setUnfinishedMessage(builder.buildPartial());
+          }
+          return builder.buildPartial();
+        }
+      };
+
+      public static com.google.protobuf.Parser<ThinkingLevelPickerEvent> parser() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<ThinkingLevelPickerEvent> getParserForType() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.ThinkingLevelPickerEvent getDefaultInstanceForType() {
+        return DEFAULT_INSTANCE;
+      }
+
+    }
+
     private int bitField0_;
     private int eventCase_ = 0;
     @SuppressWarnings("serial")
@@ -11307,6 +13583,8 @@ private static final long serialVersionUID = 0L;
       GUIDED_MODE_EVENT(2),
       USER_QUERY_STARTED(3),
       USER_QUERY_FINISHED(4),
+      MODEL_PICKER_EVENT(5),
+      THINKING_LEVEL_PICKER_EVENT(6),
       EVENT_NOT_SET(0);
       private final int value;
       private EventCase(int value) {
@@ -11328,6 +13606,8 @@ private static final long serialVersionUID = 0L;
           case 2: return GUIDED_MODE_EVENT;
           case 3: return USER_QUERY_STARTED;
           case 4: return USER_QUERY_FINISHED;
+          case 5: return MODEL_PICKER_EVENT;
+          case 6: return THINKING_LEVEL_PICKER_EVENT;
           case 0: return EVENT_NOT_SET;
           default: return null;
         }
@@ -11467,6 +13747,68 @@ private static final long serialVersionUID = 0L;
       return com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.UserQueryFinished.getDefaultInstance();
     }
 
+    public static final int MODEL_PICKER_EVENT_FIELD_NUMBER = 5;
+    /**
+     * <code>.android_studio.GeminiTelemetryEvent.UiEvent.ModelPickerEvent model_picker_event = 5;</code>
+     * @return Whether the modelPickerEvent field is set.
+     */
+    @java.lang.Override
+    public boolean hasModelPickerEvent() {
+      return eventCase_ == 5;
+    }
+    /**
+     * <code>.android_studio.GeminiTelemetryEvent.UiEvent.ModelPickerEvent model_picker_event = 5;</code>
+     * @return The modelPickerEvent.
+     */
+    @java.lang.Override
+    public com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.ModelPickerEvent getModelPickerEvent() {
+      if (eventCase_ == 5) {
+         return (com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.ModelPickerEvent) event_;
+      }
+      return com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.ModelPickerEvent.getDefaultInstance();
+    }
+    /**
+     * <code>.android_studio.GeminiTelemetryEvent.UiEvent.ModelPickerEvent model_picker_event = 5;</code>
+     */
+    @java.lang.Override
+    public com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.ModelPickerEventOrBuilder getModelPickerEventOrBuilder() {
+      if (eventCase_ == 5) {
+         return (com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.ModelPickerEvent) event_;
+      }
+      return com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.ModelPickerEvent.getDefaultInstance();
+    }
+
+    public static final int THINKING_LEVEL_PICKER_EVENT_FIELD_NUMBER = 6;
+    /**
+     * <code>.android_studio.GeminiTelemetryEvent.UiEvent.ThinkingLevelPickerEvent thinking_level_picker_event = 6;</code>
+     * @return Whether the thinkingLevelPickerEvent field is set.
+     */
+    @java.lang.Override
+    public boolean hasThinkingLevelPickerEvent() {
+      return eventCase_ == 6;
+    }
+    /**
+     * <code>.android_studio.GeminiTelemetryEvent.UiEvent.ThinkingLevelPickerEvent thinking_level_picker_event = 6;</code>
+     * @return The thinkingLevelPickerEvent.
+     */
+    @java.lang.Override
+    public com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.ThinkingLevelPickerEvent getThinkingLevelPickerEvent() {
+      if (eventCase_ == 6) {
+         return (com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.ThinkingLevelPickerEvent) event_;
+      }
+      return com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.ThinkingLevelPickerEvent.getDefaultInstance();
+    }
+    /**
+     * <code>.android_studio.GeminiTelemetryEvent.UiEvent.ThinkingLevelPickerEvent thinking_level_picker_event = 6;</code>
+     */
+    @java.lang.Override
+    public com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.ThinkingLevelPickerEventOrBuilder getThinkingLevelPickerEventOrBuilder() {
+      if (eventCase_ == 6) {
+         return (com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.ThinkingLevelPickerEvent) event_;
+      }
+      return com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.ThinkingLevelPickerEvent.getDefaultInstance();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -11493,6 +13835,12 @@ private static final long serialVersionUID = 0L;
       if (eventCase_ == 4) {
         output.writeMessage(4, (com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.UserQueryFinished) event_);
       }
+      if (eventCase_ == 5) {
+        output.writeMessage(5, (com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.ModelPickerEvent) event_);
+      }
+      if (eventCase_ == 6) {
+        output.writeMessage(6, (com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.ThinkingLevelPickerEvent) event_);
+      }
       getUnknownFields().writeTo(output);
     }
 
@@ -11517,6 +13865,14 @@ private static final long serialVersionUID = 0L;
       if (eventCase_ == 4) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, (com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.UserQueryFinished) event_);
+      }
+      if (eventCase_ == 5) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(5, (com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.ModelPickerEvent) event_);
+      }
+      if (eventCase_ == 6) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(6, (com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.ThinkingLevelPickerEvent) event_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -11551,6 +13907,14 @@ private static final long serialVersionUID = 0L;
           if (!getUserQueryFinished()
               .equals(other.getUserQueryFinished())) return false;
           break;
+        case 5:
+          if (!getModelPickerEvent()
+              .equals(other.getModelPickerEvent())) return false;
+          break;
+        case 6:
+          if (!getThinkingLevelPickerEvent()
+              .equals(other.getThinkingLevelPickerEvent())) return false;
+          break;
         case 0:
         default:
       }
@@ -11581,6 +13945,14 @@ private static final long serialVersionUID = 0L;
         case 4:
           hash = (37 * hash) + USER_QUERY_FINISHED_FIELD_NUMBER;
           hash = (53 * hash) + getUserQueryFinished().hashCode();
+          break;
+        case 5:
+          hash = (37 * hash) + MODEL_PICKER_EVENT_FIELD_NUMBER;
+          hash = (53 * hash) + getModelPickerEvent().hashCode();
+          break;
+        case 6:
+          hash = (37 * hash) + THINKING_LEVEL_PICKER_EVENT_FIELD_NUMBER;
+          hash = (53 * hash) + getThinkingLevelPickerEvent().hashCode();
           break;
         case 0:
         default:
@@ -11726,6 +14098,12 @@ private static final long serialVersionUID = 0L;
         if (userQueryFinishedBuilder_ != null) {
           userQueryFinishedBuilder_.clear();
         }
+        if (modelPickerEventBuilder_ != null) {
+          modelPickerEventBuilder_.clear();
+        }
+        if (thinkingLevelPickerEventBuilder_ != null) {
+          thinkingLevelPickerEventBuilder_.clear();
+        }
         eventCase_ = 0;
         event_ = null;
         return this;
@@ -11783,6 +14161,14 @@ private static final long serialVersionUID = 0L;
             userQueryFinishedBuilder_ != null) {
           result.event_ = userQueryFinishedBuilder_.build();
         }
+        if (eventCase_ == 5 &&
+            modelPickerEventBuilder_ != null) {
+          result.event_ = modelPickerEventBuilder_.build();
+        }
+        if (eventCase_ == 6 &&
+            thinkingLevelPickerEventBuilder_ != null) {
+          result.event_ = thinkingLevelPickerEventBuilder_.build();
+        }
       }
 
       @java.lang.Override
@@ -11812,6 +14198,14 @@ private static final long serialVersionUID = 0L;
           }
           case USER_QUERY_FINISHED: {
             mergeUserQueryFinished(other.getUserQueryFinished());
+            break;
+          }
+          case MODEL_PICKER_EVENT: {
+            mergeModelPickerEvent(other.getModelPickerEvent());
+            break;
+          }
+          case THINKING_LEVEL_PICKER_EVENT: {
+            mergeThinkingLevelPickerEvent(other.getThinkingLevelPickerEvent());
             break;
           }
           case EVENT_NOT_SET: {
@@ -11872,6 +14266,20 @@ private static final long serialVersionUID = 0L;
                 eventCase_ = 4;
                 break;
               } // case 34
+              case 42: {
+                input.readMessage(
+                    getModelPickerEventFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                eventCase_ = 5;
+                break;
+              } // case 42
+              case 50: {
+                input.readMessage(
+                    getThinkingLevelPickerEventFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                eventCase_ = 6;
+                break;
+              } // case 50
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -12470,6 +14878,290 @@ private static final long serialVersionUID = 0L;
         eventCase_ = 4;
         onChanged();
         return userQueryFinishedBuilder_;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.ModelPickerEvent, com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.ModelPickerEvent.Builder, com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.ModelPickerEventOrBuilder> modelPickerEventBuilder_;
+      /**
+       * <code>.android_studio.GeminiTelemetryEvent.UiEvent.ModelPickerEvent model_picker_event = 5;</code>
+       * @return Whether the modelPickerEvent field is set.
+       */
+      @java.lang.Override
+      public boolean hasModelPickerEvent() {
+        return eventCase_ == 5;
+      }
+      /**
+       * <code>.android_studio.GeminiTelemetryEvent.UiEvent.ModelPickerEvent model_picker_event = 5;</code>
+       * @return The modelPickerEvent.
+       */
+      @java.lang.Override
+      public com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.ModelPickerEvent getModelPickerEvent() {
+        if (modelPickerEventBuilder_ == null) {
+          if (eventCase_ == 5) {
+            return (com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.ModelPickerEvent) event_;
+          }
+          return com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.ModelPickerEvent.getDefaultInstance();
+        } else {
+          if (eventCase_ == 5) {
+            return modelPickerEventBuilder_.getMessage();
+          }
+          return com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.ModelPickerEvent.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.android_studio.GeminiTelemetryEvent.UiEvent.ModelPickerEvent model_picker_event = 5;</code>
+       */
+      public Builder setModelPickerEvent(com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.ModelPickerEvent value) {
+        if (modelPickerEventBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          event_ = value;
+          onChanged();
+        } else {
+          modelPickerEventBuilder_.setMessage(value);
+        }
+        eventCase_ = 5;
+        return this;
+      }
+      /**
+       * <code>.android_studio.GeminiTelemetryEvent.UiEvent.ModelPickerEvent model_picker_event = 5;</code>
+       */
+      public Builder setModelPickerEvent(
+          com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.ModelPickerEvent.Builder builderForValue) {
+        if (modelPickerEventBuilder_ == null) {
+          event_ = builderForValue.build();
+          onChanged();
+        } else {
+          modelPickerEventBuilder_.setMessage(builderForValue.build());
+        }
+        eventCase_ = 5;
+        return this;
+      }
+      /**
+       * <code>.android_studio.GeminiTelemetryEvent.UiEvent.ModelPickerEvent model_picker_event = 5;</code>
+       */
+      public Builder mergeModelPickerEvent(com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.ModelPickerEvent value) {
+        if (modelPickerEventBuilder_ == null) {
+          if (eventCase_ == 5 &&
+              event_ != com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.ModelPickerEvent.getDefaultInstance()) {
+            event_ = com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.ModelPickerEvent.newBuilder((com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.ModelPickerEvent) event_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            event_ = value;
+          }
+          onChanged();
+        } else {
+          if (eventCase_ == 5) {
+            modelPickerEventBuilder_.mergeFrom(value);
+          } else {
+            modelPickerEventBuilder_.setMessage(value);
+          }
+        }
+        eventCase_ = 5;
+        return this;
+      }
+      /**
+       * <code>.android_studio.GeminiTelemetryEvent.UiEvent.ModelPickerEvent model_picker_event = 5;</code>
+       */
+      public Builder clearModelPickerEvent() {
+        if (modelPickerEventBuilder_ == null) {
+          if (eventCase_ == 5) {
+            eventCase_ = 0;
+            event_ = null;
+            onChanged();
+          }
+        } else {
+          if (eventCase_ == 5) {
+            eventCase_ = 0;
+            event_ = null;
+          }
+          modelPickerEventBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>.android_studio.GeminiTelemetryEvent.UiEvent.ModelPickerEvent model_picker_event = 5;</code>
+       */
+      public com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.ModelPickerEvent.Builder getModelPickerEventBuilder() {
+        return getModelPickerEventFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.android_studio.GeminiTelemetryEvent.UiEvent.ModelPickerEvent model_picker_event = 5;</code>
+       */
+      @java.lang.Override
+      public com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.ModelPickerEventOrBuilder getModelPickerEventOrBuilder() {
+        if ((eventCase_ == 5) && (modelPickerEventBuilder_ != null)) {
+          return modelPickerEventBuilder_.getMessageOrBuilder();
+        } else {
+          if (eventCase_ == 5) {
+            return (com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.ModelPickerEvent) event_;
+          }
+          return com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.ModelPickerEvent.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.android_studio.GeminiTelemetryEvent.UiEvent.ModelPickerEvent model_picker_event = 5;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.ModelPickerEvent, com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.ModelPickerEvent.Builder, com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.ModelPickerEventOrBuilder> 
+          getModelPickerEventFieldBuilder() {
+        if (modelPickerEventBuilder_ == null) {
+          if (!(eventCase_ == 5)) {
+            event_ = com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.ModelPickerEvent.getDefaultInstance();
+          }
+          modelPickerEventBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.ModelPickerEvent, com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.ModelPickerEvent.Builder, com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.ModelPickerEventOrBuilder>(
+                  (com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.ModelPickerEvent) event_,
+                  getParentForChildren(),
+                  isClean());
+          event_ = null;
+        }
+        eventCase_ = 5;
+        onChanged();
+        return modelPickerEventBuilder_;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.ThinkingLevelPickerEvent, com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.ThinkingLevelPickerEvent.Builder, com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.ThinkingLevelPickerEventOrBuilder> thinkingLevelPickerEventBuilder_;
+      /**
+       * <code>.android_studio.GeminiTelemetryEvent.UiEvent.ThinkingLevelPickerEvent thinking_level_picker_event = 6;</code>
+       * @return Whether the thinkingLevelPickerEvent field is set.
+       */
+      @java.lang.Override
+      public boolean hasThinkingLevelPickerEvent() {
+        return eventCase_ == 6;
+      }
+      /**
+       * <code>.android_studio.GeminiTelemetryEvent.UiEvent.ThinkingLevelPickerEvent thinking_level_picker_event = 6;</code>
+       * @return The thinkingLevelPickerEvent.
+       */
+      @java.lang.Override
+      public com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.ThinkingLevelPickerEvent getThinkingLevelPickerEvent() {
+        if (thinkingLevelPickerEventBuilder_ == null) {
+          if (eventCase_ == 6) {
+            return (com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.ThinkingLevelPickerEvent) event_;
+          }
+          return com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.ThinkingLevelPickerEvent.getDefaultInstance();
+        } else {
+          if (eventCase_ == 6) {
+            return thinkingLevelPickerEventBuilder_.getMessage();
+          }
+          return com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.ThinkingLevelPickerEvent.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.android_studio.GeminiTelemetryEvent.UiEvent.ThinkingLevelPickerEvent thinking_level_picker_event = 6;</code>
+       */
+      public Builder setThinkingLevelPickerEvent(com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.ThinkingLevelPickerEvent value) {
+        if (thinkingLevelPickerEventBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          event_ = value;
+          onChanged();
+        } else {
+          thinkingLevelPickerEventBuilder_.setMessage(value);
+        }
+        eventCase_ = 6;
+        return this;
+      }
+      /**
+       * <code>.android_studio.GeminiTelemetryEvent.UiEvent.ThinkingLevelPickerEvent thinking_level_picker_event = 6;</code>
+       */
+      public Builder setThinkingLevelPickerEvent(
+          com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.ThinkingLevelPickerEvent.Builder builderForValue) {
+        if (thinkingLevelPickerEventBuilder_ == null) {
+          event_ = builderForValue.build();
+          onChanged();
+        } else {
+          thinkingLevelPickerEventBuilder_.setMessage(builderForValue.build());
+        }
+        eventCase_ = 6;
+        return this;
+      }
+      /**
+       * <code>.android_studio.GeminiTelemetryEvent.UiEvent.ThinkingLevelPickerEvent thinking_level_picker_event = 6;</code>
+       */
+      public Builder mergeThinkingLevelPickerEvent(com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.ThinkingLevelPickerEvent value) {
+        if (thinkingLevelPickerEventBuilder_ == null) {
+          if (eventCase_ == 6 &&
+              event_ != com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.ThinkingLevelPickerEvent.getDefaultInstance()) {
+            event_ = com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.ThinkingLevelPickerEvent.newBuilder((com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.ThinkingLevelPickerEvent) event_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            event_ = value;
+          }
+          onChanged();
+        } else {
+          if (eventCase_ == 6) {
+            thinkingLevelPickerEventBuilder_.mergeFrom(value);
+          } else {
+            thinkingLevelPickerEventBuilder_.setMessage(value);
+          }
+        }
+        eventCase_ = 6;
+        return this;
+      }
+      /**
+       * <code>.android_studio.GeminiTelemetryEvent.UiEvent.ThinkingLevelPickerEvent thinking_level_picker_event = 6;</code>
+       */
+      public Builder clearThinkingLevelPickerEvent() {
+        if (thinkingLevelPickerEventBuilder_ == null) {
+          if (eventCase_ == 6) {
+            eventCase_ = 0;
+            event_ = null;
+            onChanged();
+          }
+        } else {
+          if (eventCase_ == 6) {
+            eventCase_ = 0;
+            event_ = null;
+          }
+          thinkingLevelPickerEventBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>.android_studio.GeminiTelemetryEvent.UiEvent.ThinkingLevelPickerEvent thinking_level_picker_event = 6;</code>
+       */
+      public com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.ThinkingLevelPickerEvent.Builder getThinkingLevelPickerEventBuilder() {
+        return getThinkingLevelPickerEventFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.android_studio.GeminiTelemetryEvent.UiEvent.ThinkingLevelPickerEvent thinking_level_picker_event = 6;</code>
+       */
+      @java.lang.Override
+      public com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.ThinkingLevelPickerEventOrBuilder getThinkingLevelPickerEventOrBuilder() {
+        if ((eventCase_ == 6) && (thinkingLevelPickerEventBuilder_ != null)) {
+          return thinkingLevelPickerEventBuilder_.getMessageOrBuilder();
+        } else {
+          if (eventCase_ == 6) {
+            return (com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.ThinkingLevelPickerEvent) event_;
+          }
+          return com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.ThinkingLevelPickerEvent.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.android_studio.GeminiTelemetryEvent.UiEvent.ThinkingLevelPickerEvent thinking_level_picker_event = 6;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.ThinkingLevelPickerEvent, com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.ThinkingLevelPickerEvent.Builder, com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.ThinkingLevelPickerEventOrBuilder> 
+          getThinkingLevelPickerEventFieldBuilder() {
+        if (thinkingLevelPickerEventBuilder_ == null) {
+          if (!(eventCase_ == 6)) {
+            event_ = com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.ThinkingLevelPickerEvent.getDefaultInstance();
+          }
+          thinkingLevelPickerEventBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.ThinkingLevelPickerEvent, com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.ThinkingLevelPickerEvent.Builder, com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.ThinkingLevelPickerEventOrBuilder>(
+                  (com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.UiEvent.ThinkingLevelPickerEvent) event_,
+                  getParentForChildren(),
+                  isClean());
+          event_ = null;
+        }
+        eventCase_ = 6;
+        onChanged();
+        return thinkingLevelPickerEventBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -14552,6 +17244,33 @@ private static final long serialVersionUID = 0L;
        * <code>.android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.RunShellCommandToolCallData run_shell_command_tool_call_data = 15;</code>
        */
       com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.RunShellCommandToolCallDataOrBuilder getRunShellCommandToolCallDataOrBuilder();
+
+      /**
+       * <pre>
+       * Data for an akb tool call.
+       * </pre>
+       *
+       * <code>.android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.KbToolCallData kb_tool_call_data = 16;</code>
+       * @return Whether the kbToolCallData field is set.
+       */
+      boolean hasKbToolCallData();
+      /**
+       * <pre>
+       * Data for an akb tool call.
+       * </pre>
+       *
+       * <code>.android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.KbToolCallData kb_tool_call_data = 16;</code>
+       * @return The kbToolCallData.
+       */
+      com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.KbToolCallData getKbToolCallData();
+      /**
+       * <pre>
+       * Data for an akb tool call.
+       * </pre>
+       *
+       * <code>.android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.KbToolCallData kb_tool_call_data = 16;</code>
+       */
+      com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.KbToolCallDataOrBuilder getKbToolCallDataOrBuilder();
 
       com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.ToolSpecificMetadataCase getToolSpecificMetadataCase();
     }
@@ -27586,6 +30305,922 @@ private static final long serialVersionUID = 0L;
 
       }
 
+      public interface KbToolCallDataOrBuilder extends
+          // @@protoc_insertion_point(interface_extends:android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.KbToolCallData)
+          com.google.protobuf.MessageOrBuilder {
+
+        /**
+         * <pre>
+         * The number of akb_search_tool results
+         * </pre>
+         *
+         * <code>optional int32 search_result_count = 1;</code>
+         * @return Whether the searchResultCount field is set.
+         */
+        boolean hasSearchResultCount();
+        /**
+         * <pre>
+         * The number of akb_search_tool results
+         * </pre>
+         *
+         * <code>optional int32 search_result_count = 1;</code>
+         * @return The searchResultCount.
+         */
+        int getSearchResultCount();
+
+        /**
+         * <pre>
+         * The number of docs returned by akb_fetch_tool
+         * </pre>
+         *
+         * <code>optional int32 fetched_doc_count = 2;</code>
+         * @return Whether the fetchedDocCount field is set.
+         */
+        boolean hasFetchedDocCount();
+        /**
+         * <pre>
+         * The number of docs returned by akb_fetch_tool
+         * </pre>
+         *
+         * <code>optional int32 fetched_doc_count = 2;</code>
+         * @return The fetchedDocCount.
+         */
+        int getFetchedDocCount();
+
+        /**
+         * <pre>
+         * The fetched docs
+         * </pre>
+         *
+         * <code>repeated string fetched_docs = 3;</code>
+         * @return A list containing the fetchedDocs.
+         */
+        java.util.List<java.lang.String>
+            getFetchedDocsList();
+        /**
+         * <pre>
+         * The fetched docs
+         * </pre>
+         *
+         * <code>repeated string fetched_docs = 3;</code>
+         * @return The count of fetchedDocs.
+         */
+        int getFetchedDocsCount();
+        /**
+         * <pre>
+         * The fetched docs
+         * </pre>
+         *
+         * <code>repeated string fetched_docs = 3;</code>
+         * @param index The index of the element to return.
+         * @return The fetchedDocs at the given index.
+         */
+        java.lang.String getFetchedDocs(int index);
+        /**
+         * <pre>
+         * The fetched docs
+         * </pre>
+         *
+         * <code>repeated string fetched_docs = 3;</code>
+         * @param index The index of the value to return.
+         * @return The bytes of the fetchedDocs at the given index.
+         */
+        com.google.protobuf.ByteString
+            getFetchedDocsBytes(int index);
+      }
+      /**
+       * Protobuf type {@code android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.KbToolCallData}
+       */
+      public static final class KbToolCallData extends
+          com.google.protobuf.GeneratedMessageV3 implements
+          // @@protoc_insertion_point(message_implements:android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.KbToolCallData)
+          KbToolCallDataOrBuilder {
+      private static final long serialVersionUID = 0L;
+        // Use KbToolCallData.newBuilder() to construct.
+        private KbToolCallData(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+          super(builder);
+        }
+        private KbToolCallData() {
+          fetchedDocs_ =
+              com.google.protobuf.LazyStringArrayList.emptyList();
+        }
+
+        @java.lang.Override
+        @SuppressWarnings({"unused"})
+        protected java.lang.Object newInstance(
+            UnusedPrivateParameter unused) {
+          return new KbToolCallData();
+        }
+
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_GeminiTelemetryEvent_AgentEvent_ToolExecutionSpan_KbToolCallData_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_GeminiTelemetryEvent_AgentEvent_ToolExecutionSpan_KbToolCallData_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.KbToolCallData.class, com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.KbToolCallData.Builder.class);
+        }
+
+        private int bitField0_;
+        public static final int SEARCH_RESULT_COUNT_FIELD_NUMBER = 1;
+        private int searchResultCount_ = 0;
+        /**
+         * <pre>
+         * The number of akb_search_tool results
+         * </pre>
+         *
+         * <code>optional int32 search_result_count = 1;</code>
+         * @return Whether the searchResultCount field is set.
+         */
+        @java.lang.Override
+        public boolean hasSearchResultCount() {
+          return ((bitField0_ & 0x00000001) != 0);
+        }
+        /**
+         * <pre>
+         * The number of akb_search_tool results
+         * </pre>
+         *
+         * <code>optional int32 search_result_count = 1;</code>
+         * @return The searchResultCount.
+         */
+        @java.lang.Override
+        public int getSearchResultCount() {
+          return searchResultCount_;
+        }
+
+        public static final int FETCHED_DOC_COUNT_FIELD_NUMBER = 2;
+        private int fetchedDocCount_ = 0;
+        /**
+         * <pre>
+         * The number of docs returned by akb_fetch_tool
+         * </pre>
+         *
+         * <code>optional int32 fetched_doc_count = 2;</code>
+         * @return Whether the fetchedDocCount field is set.
+         */
+        @java.lang.Override
+        public boolean hasFetchedDocCount() {
+          return ((bitField0_ & 0x00000002) != 0);
+        }
+        /**
+         * <pre>
+         * The number of docs returned by akb_fetch_tool
+         * </pre>
+         *
+         * <code>optional int32 fetched_doc_count = 2;</code>
+         * @return The fetchedDocCount.
+         */
+        @java.lang.Override
+        public int getFetchedDocCount() {
+          return fetchedDocCount_;
+        }
+
+        public static final int FETCHED_DOCS_FIELD_NUMBER = 3;
+        @SuppressWarnings("serial")
+        private com.google.protobuf.LazyStringArrayList fetchedDocs_ =
+            com.google.protobuf.LazyStringArrayList.emptyList();
+        /**
+         * <pre>
+         * The fetched docs
+         * </pre>
+         *
+         * <code>repeated string fetched_docs = 3;</code>
+         * @return A list containing the fetchedDocs.
+         */
+        public com.google.protobuf.ProtocolStringList
+            getFetchedDocsList() {
+          return fetchedDocs_;
+        }
+        /**
+         * <pre>
+         * The fetched docs
+         * </pre>
+         *
+         * <code>repeated string fetched_docs = 3;</code>
+         * @return The count of fetchedDocs.
+         */
+        public int getFetchedDocsCount() {
+          return fetchedDocs_.size();
+        }
+        /**
+         * <pre>
+         * The fetched docs
+         * </pre>
+         *
+         * <code>repeated string fetched_docs = 3;</code>
+         * @param index The index of the element to return.
+         * @return The fetchedDocs at the given index.
+         */
+        public java.lang.String getFetchedDocs(int index) {
+          return fetchedDocs_.get(index);
+        }
+        /**
+         * <pre>
+         * The fetched docs
+         * </pre>
+         *
+         * <code>repeated string fetched_docs = 3;</code>
+         * @param index The index of the value to return.
+         * @return The bytes of the fetchedDocs at the given index.
+         */
+        public com.google.protobuf.ByteString
+            getFetchedDocsBytes(int index) {
+          return fetchedDocs_.getByteString(index);
+        }
+
+        private byte memoizedIsInitialized = -1;
+        @java.lang.Override
+        public final boolean isInitialized() {
+          byte isInitialized = memoizedIsInitialized;
+          if (isInitialized == 1) return true;
+          if (isInitialized == 0) return false;
+
+          memoizedIsInitialized = 1;
+          return true;
+        }
+
+        @java.lang.Override
+        public void writeTo(com.google.protobuf.CodedOutputStream output)
+                            throws java.io.IOException {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            output.writeInt32(1, searchResultCount_);
+          }
+          if (((bitField0_ & 0x00000002) != 0)) {
+            output.writeInt32(2, fetchedDocCount_);
+          }
+          for (int i = 0; i < fetchedDocs_.size(); i++) {
+            com.google.protobuf.GeneratedMessageV3.writeString(output, 3, fetchedDocs_.getRaw(i));
+          }
+          getUnknownFields().writeTo(output);
+        }
+
+        @java.lang.Override
+        public int getSerializedSize() {
+          int size = memoizedSize;
+          if (size != -1) return size;
+
+          size = 0;
+          if (((bitField0_ & 0x00000001) != 0)) {
+            size += com.google.protobuf.CodedOutputStream
+              .computeInt32Size(1, searchResultCount_);
+          }
+          if (((bitField0_ & 0x00000002) != 0)) {
+            size += com.google.protobuf.CodedOutputStream
+              .computeInt32Size(2, fetchedDocCount_);
+          }
+          {
+            int dataSize = 0;
+            for (int i = 0; i < fetchedDocs_.size(); i++) {
+              dataSize += computeStringSizeNoTag(fetchedDocs_.getRaw(i));
+            }
+            size += dataSize;
+            size += 1 * getFetchedDocsList().size();
+          }
+          size += getUnknownFields().getSerializedSize();
+          memoizedSize = size;
+          return size;
+        }
+
+        @java.lang.Override
+        public boolean equals(final java.lang.Object obj) {
+          if (obj == this) {
+           return true;
+          }
+          if (!(obj instanceof com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.KbToolCallData)) {
+            return super.equals(obj);
+          }
+          com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.KbToolCallData other = (com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.KbToolCallData) obj;
+
+          if (hasSearchResultCount() != other.hasSearchResultCount()) return false;
+          if (hasSearchResultCount()) {
+            if (getSearchResultCount()
+                != other.getSearchResultCount()) return false;
+          }
+          if (hasFetchedDocCount() != other.hasFetchedDocCount()) return false;
+          if (hasFetchedDocCount()) {
+            if (getFetchedDocCount()
+                != other.getFetchedDocCount()) return false;
+          }
+          if (!getFetchedDocsList()
+              .equals(other.getFetchedDocsList())) return false;
+          if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+          return true;
+        }
+
+        @java.lang.Override
+        public int hashCode() {
+          if (memoizedHashCode != 0) {
+            return memoizedHashCode;
+          }
+          int hash = 41;
+          hash = (19 * hash) + getDescriptor().hashCode();
+          if (hasSearchResultCount()) {
+            hash = (37 * hash) + SEARCH_RESULT_COUNT_FIELD_NUMBER;
+            hash = (53 * hash) + getSearchResultCount();
+          }
+          if (hasFetchedDocCount()) {
+            hash = (37 * hash) + FETCHED_DOC_COUNT_FIELD_NUMBER;
+            hash = (53 * hash) + getFetchedDocCount();
+          }
+          if (getFetchedDocsCount() > 0) {
+            hash = (37 * hash) + FETCHED_DOCS_FIELD_NUMBER;
+            hash = (53 * hash) + getFetchedDocsList().hashCode();
+          }
+          hash = (29 * hash) + getUnknownFields().hashCode();
+          memoizedHashCode = hash;
+          return hash;
+        }
+
+        public static com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.KbToolCallData parseFrom(
+            java.nio.ByteBuffer data)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return PARSER.parseFrom(data);
+        }
+        public static com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.KbToolCallData parseFrom(
+            java.nio.ByteBuffer data,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return PARSER.parseFrom(data, extensionRegistry);
+        }
+        public static com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.KbToolCallData parseFrom(
+            com.google.protobuf.ByteString data)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return PARSER.parseFrom(data);
+        }
+        public static com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.KbToolCallData parseFrom(
+            com.google.protobuf.ByteString data,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return PARSER.parseFrom(data, extensionRegistry);
+        }
+        public static com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.KbToolCallData parseFrom(byte[] data)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return PARSER.parseFrom(data);
+        }
+        public static com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.KbToolCallData parseFrom(
+            byte[] data,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return PARSER.parseFrom(data, extensionRegistry);
+        }
+        public static com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.KbToolCallData parseFrom(java.io.InputStream input)
+            throws java.io.IOException {
+          return com.google.protobuf.GeneratedMessageV3
+              .parseWithIOException(PARSER, input);
+        }
+        public static com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.KbToolCallData parseFrom(
+            java.io.InputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          return com.google.protobuf.GeneratedMessageV3
+              .parseWithIOException(PARSER, input, extensionRegistry);
+        }
+        public static com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.KbToolCallData parseDelimitedFrom(java.io.InputStream input)
+            throws java.io.IOException {
+          return com.google.protobuf.GeneratedMessageV3
+              .parseDelimitedWithIOException(PARSER, input);
+        }
+        public static com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.KbToolCallData parseDelimitedFrom(
+            java.io.InputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          return com.google.protobuf.GeneratedMessageV3
+              .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+        }
+        public static com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.KbToolCallData parseFrom(
+            com.google.protobuf.CodedInputStream input)
+            throws java.io.IOException {
+          return com.google.protobuf.GeneratedMessageV3
+              .parseWithIOException(PARSER, input);
+        }
+        public static com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.KbToolCallData parseFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          return com.google.protobuf.GeneratedMessageV3
+              .parseWithIOException(PARSER, input, extensionRegistry);
+        }
+
+        @java.lang.Override
+        public Builder newBuilderForType() { return newBuilder(); }
+        public static Builder newBuilder() {
+          return DEFAULT_INSTANCE.toBuilder();
+        }
+        public static Builder newBuilder(com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.KbToolCallData prototype) {
+          return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+        }
+        @java.lang.Override
+        public Builder toBuilder() {
+          return this == DEFAULT_INSTANCE
+              ? new Builder() : new Builder().mergeFrom(this);
+        }
+
+        @java.lang.Override
+        protected Builder newBuilderForType(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          Builder builder = new Builder(parent);
+          return builder;
+        }
+        /**
+         * Protobuf type {@code android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.KbToolCallData}
+         */
+        public static final class Builder extends
+            com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+            // @@protoc_insertion_point(builder_implements:android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.KbToolCallData)
+            com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.KbToolCallDataOrBuilder {
+          public static final com.google.protobuf.Descriptors.Descriptor
+              getDescriptor() {
+            return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_GeminiTelemetryEvent_AgentEvent_ToolExecutionSpan_KbToolCallData_descriptor;
+          }
+
+          @java.lang.Override
+          protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+              internalGetFieldAccessorTable() {
+            return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_GeminiTelemetryEvent_AgentEvent_ToolExecutionSpan_KbToolCallData_fieldAccessorTable
+                .ensureFieldAccessorsInitialized(
+                    com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.KbToolCallData.class, com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.KbToolCallData.Builder.class);
+          }
+
+          // Construct using com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.KbToolCallData.newBuilder()
+          private Builder() {
+
+          }
+
+          private Builder(
+              com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+            super(parent);
+
+          }
+          @java.lang.Override
+          public Builder clear() {
+            super.clear();
+            bitField0_ = 0;
+            searchResultCount_ = 0;
+            fetchedDocCount_ = 0;
+            fetchedDocs_ =
+                com.google.protobuf.LazyStringArrayList.emptyList();
+            return this;
+          }
+
+          @java.lang.Override
+          public com.google.protobuf.Descriptors.Descriptor
+              getDescriptorForType() {
+            return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_GeminiTelemetryEvent_AgentEvent_ToolExecutionSpan_KbToolCallData_descriptor;
+          }
+
+          @java.lang.Override
+          public com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.KbToolCallData getDefaultInstanceForType() {
+            return com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.KbToolCallData.getDefaultInstance();
+          }
+
+          @java.lang.Override
+          public com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.KbToolCallData build() {
+            com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.KbToolCallData result = buildPartial();
+            if (!result.isInitialized()) {
+              throw newUninitializedMessageException(result);
+            }
+            return result;
+          }
+
+          @java.lang.Override
+          public com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.KbToolCallData buildPartial() {
+            com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.KbToolCallData result = new com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.KbToolCallData(this);
+            if (bitField0_ != 0) { buildPartial0(result); }
+            onBuilt();
+            return result;
+          }
+
+          private void buildPartial0(com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.KbToolCallData result) {
+            int from_bitField0_ = bitField0_;
+            int to_bitField0_ = 0;
+            if (((from_bitField0_ & 0x00000001) != 0)) {
+              result.searchResultCount_ = searchResultCount_;
+              to_bitField0_ |= 0x00000001;
+            }
+            if (((from_bitField0_ & 0x00000002) != 0)) {
+              result.fetchedDocCount_ = fetchedDocCount_;
+              to_bitField0_ |= 0x00000002;
+            }
+            if (((from_bitField0_ & 0x00000004) != 0)) {
+              fetchedDocs_.makeImmutable();
+              result.fetchedDocs_ = fetchedDocs_;
+            }
+            result.bitField0_ |= to_bitField0_;
+          }
+
+          @java.lang.Override
+          public Builder mergeFrom(com.google.protobuf.Message other) {
+            if (other instanceof com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.KbToolCallData) {
+              return mergeFrom((com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.KbToolCallData)other);
+            } else {
+              super.mergeFrom(other);
+              return this;
+            }
+          }
+
+          public Builder mergeFrom(com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.KbToolCallData other) {
+            if (other == com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.KbToolCallData.getDefaultInstance()) return this;
+            if (other.hasSearchResultCount()) {
+              setSearchResultCount(other.getSearchResultCount());
+            }
+            if (other.hasFetchedDocCount()) {
+              setFetchedDocCount(other.getFetchedDocCount());
+            }
+            if (!other.fetchedDocs_.isEmpty()) {
+              if (fetchedDocs_.isEmpty()) {
+                fetchedDocs_ = other.fetchedDocs_;
+                bitField0_ |= 0x00000004;
+              } else {
+                ensureFetchedDocsIsMutable();
+                fetchedDocs_.addAll(other.fetchedDocs_);
+              }
+              onChanged();
+            }
+            this.mergeUnknownFields(other.getUnknownFields());
+            onChanged();
+            return this;
+          }
+
+          @java.lang.Override
+          public final boolean isInitialized() {
+            return true;
+          }
+
+          @java.lang.Override
+          public Builder mergeFrom(
+              com.google.protobuf.CodedInputStream input,
+              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+              throws java.io.IOException {
+            if (extensionRegistry == null) {
+              throw new java.lang.NullPointerException();
+            }
+            try {
+              boolean done = false;
+              while (!done) {
+                int tag = input.readTag();
+                switch (tag) {
+                  case 0:
+                    done = true;
+                    break;
+                  case 8: {
+                    searchResultCount_ = input.readInt32();
+                    bitField0_ |= 0x00000001;
+                    break;
+                  } // case 8
+                  case 16: {
+                    fetchedDocCount_ = input.readInt32();
+                    bitField0_ |= 0x00000002;
+                    break;
+                  } // case 16
+                  case 26: {
+                    com.google.protobuf.ByteString bs = input.readBytes();
+                    ensureFetchedDocsIsMutable();
+                    fetchedDocs_.add(bs);
+                    break;
+                  } // case 26
+                  default: {
+                    if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                      done = true; // was an endgroup tag
+                    }
+                    break;
+                  } // default:
+                } // switch (tag)
+              } // while (!done)
+            } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+              throw e.unwrapIOException();
+            } finally {
+              onChanged();
+            } // finally
+            return this;
+          }
+          private int bitField0_;
+
+          private int searchResultCount_ ;
+          /**
+           * <pre>
+           * The number of akb_search_tool results
+           * </pre>
+           *
+           * <code>optional int32 search_result_count = 1;</code>
+           * @return Whether the searchResultCount field is set.
+           */
+          @java.lang.Override
+          public boolean hasSearchResultCount() {
+            return ((bitField0_ & 0x00000001) != 0);
+          }
+          /**
+           * <pre>
+           * The number of akb_search_tool results
+           * </pre>
+           *
+           * <code>optional int32 search_result_count = 1;</code>
+           * @return The searchResultCount.
+           */
+          @java.lang.Override
+          public int getSearchResultCount() {
+            return searchResultCount_;
+          }
+          /**
+           * <pre>
+           * The number of akb_search_tool results
+           * </pre>
+           *
+           * <code>optional int32 search_result_count = 1;</code>
+           * @param value The searchResultCount to set.
+           * @return This builder for chaining.
+           */
+          public Builder setSearchResultCount(int value) {
+
+            searchResultCount_ = value;
+            bitField0_ |= 0x00000001;
+            onChanged();
+            return this;
+          }
+          /**
+           * <pre>
+           * The number of akb_search_tool results
+           * </pre>
+           *
+           * <code>optional int32 search_result_count = 1;</code>
+           * @return This builder for chaining.
+           */
+          public Builder clearSearchResultCount() {
+            bitField0_ = (bitField0_ & ~0x00000001);
+            searchResultCount_ = 0;
+            onChanged();
+            return this;
+          }
+
+          private int fetchedDocCount_ ;
+          /**
+           * <pre>
+           * The number of docs returned by akb_fetch_tool
+           * </pre>
+           *
+           * <code>optional int32 fetched_doc_count = 2;</code>
+           * @return Whether the fetchedDocCount field is set.
+           */
+          @java.lang.Override
+          public boolean hasFetchedDocCount() {
+            return ((bitField0_ & 0x00000002) != 0);
+          }
+          /**
+           * <pre>
+           * The number of docs returned by akb_fetch_tool
+           * </pre>
+           *
+           * <code>optional int32 fetched_doc_count = 2;</code>
+           * @return The fetchedDocCount.
+           */
+          @java.lang.Override
+          public int getFetchedDocCount() {
+            return fetchedDocCount_;
+          }
+          /**
+           * <pre>
+           * The number of docs returned by akb_fetch_tool
+           * </pre>
+           *
+           * <code>optional int32 fetched_doc_count = 2;</code>
+           * @param value The fetchedDocCount to set.
+           * @return This builder for chaining.
+           */
+          public Builder setFetchedDocCount(int value) {
+
+            fetchedDocCount_ = value;
+            bitField0_ |= 0x00000002;
+            onChanged();
+            return this;
+          }
+          /**
+           * <pre>
+           * The number of docs returned by akb_fetch_tool
+           * </pre>
+           *
+           * <code>optional int32 fetched_doc_count = 2;</code>
+           * @return This builder for chaining.
+           */
+          public Builder clearFetchedDocCount() {
+            bitField0_ = (bitField0_ & ~0x00000002);
+            fetchedDocCount_ = 0;
+            onChanged();
+            return this;
+          }
+
+          private com.google.protobuf.LazyStringArrayList fetchedDocs_ =
+              com.google.protobuf.LazyStringArrayList.emptyList();
+          private void ensureFetchedDocsIsMutable() {
+            if (!fetchedDocs_.isModifiable()) {
+              fetchedDocs_ = new com.google.protobuf.LazyStringArrayList(fetchedDocs_);
+            }
+            bitField0_ |= 0x00000004;
+          }
+          /**
+           * <pre>
+           * The fetched docs
+           * </pre>
+           *
+           * <code>repeated string fetched_docs = 3;</code>
+           * @return A list containing the fetchedDocs.
+           */
+          public com.google.protobuf.ProtocolStringList
+              getFetchedDocsList() {
+            fetchedDocs_.makeImmutable();
+            return fetchedDocs_;
+          }
+          /**
+           * <pre>
+           * The fetched docs
+           * </pre>
+           *
+           * <code>repeated string fetched_docs = 3;</code>
+           * @return The count of fetchedDocs.
+           */
+          public int getFetchedDocsCount() {
+            return fetchedDocs_.size();
+          }
+          /**
+           * <pre>
+           * The fetched docs
+           * </pre>
+           *
+           * <code>repeated string fetched_docs = 3;</code>
+           * @param index The index of the element to return.
+           * @return The fetchedDocs at the given index.
+           */
+          public java.lang.String getFetchedDocs(int index) {
+            return fetchedDocs_.get(index);
+          }
+          /**
+           * <pre>
+           * The fetched docs
+           * </pre>
+           *
+           * <code>repeated string fetched_docs = 3;</code>
+           * @param index The index of the value to return.
+           * @return The bytes of the fetchedDocs at the given index.
+           */
+          public com.google.protobuf.ByteString
+              getFetchedDocsBytes(int index) {
+            return fetchedDocs_.getByteString(index);
+          }
+          /**
+           * <pre>
+           * The fetched docs
+           * </pre>
+           *
+           * <code>repeated string fetched_docs = 3;</code>
+           * @param index The index to set the value at.
+           * @param value The fetchedDocs to set.
+           * @return This builder for chaining.
+           */
+          public Builder setFetchedDocs(
+              int index, java.lang.String value) {
+            if (value == null) { throw new NullPointerException(); }
+            ensureFetchedDocsIsMutable();
+            fetchedDocs_.set(index, value);
+            bitField0_ |= 0x00000004;
+            onChanged();
+            return this;
+          }
+          /**
+           * <pre>
+           * The fetched docs
+           * </pre>
+           *
+           * <code>repeated string fetched_docs = 3;</code>
+           * @param value The fetchedDocs to add.
+           * @return This builder for chaining.
+           */
+          public Builder addFetchedDocs(
+              java.lang.String value) {
+            if (value == null) { throw new NullPointerException(); }
+            ensureFetchedDocsIsMutable();
+            fetchedDocs_.add(value);
+            bitField0_ |= 0x00000004;
+            onChanged();
+            return this;
+          }
+          /**
+           * <pre>
+           * The fetched docs
+           * </pre>
+           *
+           * <code>repeated string fetched_docs = 3;</code>
+           * @param values The fetchedDocs to add.
+           * @return This builder for chaining.
+           */
+          public Builder addAllFetchedDocs(
+              java.lang.Iterable<java.lang.String> values) {
+            ensureFetchedDocsIsMutable();
+            com.google.protobuf.AbstractMessageLite.Builder.addAll(
+                values, fetchedDocs_);
+            bitField0_ |= 0x00000004;
+            onChanged();
+            return this;
+          }
+          /**
+           * <pre>
+           * The fetched docs
+           * </pre>
+           *
+           * <code>repeated string fetched_docs = 3;</code>
+           * @return This builder for chaining.
+           */
+          public Builder clearFetchedDocs() {
+            fetchedDocs_ =
+              com.google.protobuf.LazyStringArrayList.emptyList();
+            bitField0_ = (bitField0_ & ~0x00000004);;
+            onChanged();
+            return this;
+          }
+          /**
+           * <pre>
+           * The fetched docs
+           * </pre>
+           *
+           * <code>repeated string fetched_docs = 3;</code>
+           * @param value The bytes of the fetchedDocs to add.
+           * @return This builder for chaining.
+           */
+          public Builder addFetchedDocsBytes(
+              com.google.protobuf.ByteString value) {
+            if (value == null) { throw new NullPointerException(); }
+            ensureFetchedDocsIsMutable();
+            fetchedDocs_.add(value);
+            bitField0_ |= 0x00000004;
+            onChanged();
+            return this;
+          }
+          @java.lang.Override
+          public final Builder setUnknownFields(
+              final com.google.protobuf.UnknownFieldSet unknownFields) {
+            return super.setUnknownFields(unknownFields);
+          }
+
+          @java.lang.Override
+          public final Builder mergeUnknownFields(
+              final com.google.protobuf.UnknownFieldSet unknownFields) {
+            return super.mergeUnknownFields(unknownFields);
+          }
+
+
+          // @@protoc_insertion_point(builder_scope:android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.KbToolCallData)
+        }
+
+        // @@protoc_insertion_point(class_scope:android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.KbToolCallData)
+        private static final com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.KbToolCallData DEFAULT_INSTANCE;
+        static {
+          DEFAULT_INSTANCE = new com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.KbToolCallData();
+        }
+
+        public static com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.KbToolCallData getDefaultInstance() {
+          return DEFAULT_INSTANCE;
+        }
+
+        @java.lang.Deprecated public static final com.google.protobuf.Parser<KbToolCallData>
+            PARSER = new com.google.protobuf.AbstractParser<KbToolCallData>() {
+          @java.lang.Override
+          public KbToolCallData parsePartialFrom(
+              com.google.protobuf.CodedInputStream input,
+              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+              throws com.google.protobuf.InvalidProtocolBufferException {
+            Builder builder = newBuilder();
+            try {
+              builder.mergeFrom(input, extensionRegistry);
+            } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+              throw e.setUnfinishedMessage(builder.buildPartial());
+            } catch (com.google.protobuf.UninitializedMessageException e) {
+              throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+            } catch (java.io.IOException e) {
+              throw new com.google.protobuf.InvalidProtocolBufferException(e)
+                  .setUnfinishedMessage(builder.buildPartial());
+            }
+            return builder.buildPartial();
+          }
+        };
+
+        public static com.google.protobuf.Parser<KbToolCallData> parser() {
+          return PARSER;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Parser<KbToolCallData> getParserForType() {
+          return PARSER;
+        }
+
+        @java.lang.Override
+        public com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.KbToolCallData getDefaultInstanceForType() {
+          return DEFAULT_INSTANCE;
+        }
+
+      }
+
       private int bitField0_;
       private int toolSpecificMetadataCase_ = 0;
       @SuppressWarnings("serial")
@@ -27601,6 +31236,7 @@ private static final long serialVersionUID = 0L;
         READ_FILE_TOOL_CALL_DATA(13),
         SET_PLAN_STATE_CALL_DATA(14),
         RUN_SHELL_COMMAND_TOOL_CALL_DATA(15),
+        KB_TOOL_CALL_DATA(16),
         TOOLSPECIFICMETADATA_NOT_SET(0);
         private final int value;
         private ToolSpecificMetadataCase(int value) {
@@ -27626,6 +31262,7 @@ private static final long serialVersionUID = 0L;
             case 13: return READ_FILE_TOOL_CALL_DATA;
             case 14: return SET_PLAN_STATE_CALL_DATA;
             case 15: return RUN_SHELL_COMMAND_TOOL_CALL_DATA;
+            case 16: return KB_TOOL_CALL_DATA;
             case 0: return TOOLSPECIFICMETADATA_NOT_SET;
             default: return null;
           }
@@ -28240,6 +31877,49 @@ private static final long serialVersionUID = 0L;
         return com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.RunShellCommandToolCallData.getDefaultInstance();
       }
 
+      public static final int KB_TOOL_CALL_DATA_FIELD_NUMBER = 16;
+      /**
+       * <pre>
+       * Data for an akb tool call.
+       * </pre>
+       *
+       * <code>.android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.KbToolCallData kb_tool_call_data = 16;</code>
+       * @return Whether the kbToolCallData field is set.
+       */
+      @java.lang.Override
+      public boolean hasKbToolCallData() {
+        return toolSpecificMetadataCase_ == 16;
+      }
+      /**
+       * <pre>
+       * Data for an akb tool call.
+       * </pre>
+       *
+       * <code>.android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.KbToolCallData kb_tool_call_data = 16;</code>
+       * @return The kbToolCallData.
+       */
+      @java.lang.Override
+      public com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.KbToolCallData getKbToolCallData() {
+        if (toolSpecificMetadataCase_ == 16) {
+           return (com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.KbToolCallData) toolSpecificMetadata_;
+        }
+        return com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.KbToolCallData.getDefaultInstance();
+      }
+      /**
+       * <pre>
+       * Data for an akb tool call.
+       * </pre>
+       *
+       * <code>.android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.KbToolCallData kb_tool_call_data = 16;</code>
+       */
+      @java.lang.Override
+      public com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.KbToolCallDataOrBuilder getKbToolCallDataOrBuilder() {
+        if (toolSpecificMetadataCase_ == 16) {
+           return (com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.KbToolCallData) toolSpecificMetadata_;
+        }
+        return com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.KbToolCallData.getDefaultInstance();
+      }
+
       private byte memoizedIsInitialized = -1;
       @java.lang.Override
       public final boolean isInitialized() {
@@ -28298,6 +31978,9 @@ private static final long serialVersionUID = 0L;
         }
         if (toolSpecificMetadataCase_ == 15) {
           output.writeMessage(15, (com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.RunShellCommandToolCallData) toolSpecificMetadata_);
+        }
+        if (toolSpecificMetadataCase_ == 16) {
+          output.writeMessage(16, (com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.KbToolCallData) toolSpecificMetadata_);
         }
         getUnknownFields().writeTo(output);
       }
@@ -28365,6 +32048,10 @@ private static final long serialVersionUID = 0L;
         if (toolSpecificMetadataCase_ == 15) {
           size += com.google.protobuf.CodedOutputStream
             .computeMessageSize(15, (com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.RunShellCommandToolCallData) toolSpecificMetadata_);
+        }
+        if (toolSpecificMetadataCase_ == 16) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(16, (com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.KbToolCallData) toolSpecificMetadata_);
         }
         size += getUnknownFields().getSerializedSize();
         memoizedSize = size;
@@ -28448,6 +32135,10 @@ private static final long serialVersionUID = 0L;
             if (!getRunShellCommandToolCallData()
                 .equals(other.getRunShellCommandToolCallData())) return false;
             break;
+          case 16:
+            if (!getKbToolCallData()
+                .equals(other.getKbToolCallData())) return false;
+            break;
           case 0:
           default:
         }
@@ -28525,6 +32216,10 @@ private static final long serialVersionUID = 0L;
           case 15:
             hash = (37 * hash) + RUN_SHELL_COMMAND_TOOL_CALL_DATA_FIELD_NUMBER;
             hash = (53 * hash) + getRunShellCommandToolCallData().hashCode();
+            break;
+          case 16:
+            hash = (37 * hash) + KB_TOOL_CALL_DATA_FIELD_NUMBER;
+            hash = (53 * hash) + getKbToolCallData().hashCode();
             break;
           case 0:
           default:
@@ -28689,6 +32384,9 @@ private static final long serialVersionUID = 0L;
           if (runShellCommandToolCallDataBuilder_ != null) {
             runShellCommandToolCallDataBuilder_.clear();
           }
+          if (kbToolCallDataBuilder_ != null) {
+            kbToolCallDataBuilder_.clear();
+          }
           toolSpecificMetadataCase_ = 0;
           toolSpecificMetadata_ = null;
           return this;
@@ -28792,6 +32490,10 @@ private static final long serialVersionUID = 0L;
               runShellCommandToolCallDataBuilder_ != null) {
             result.toolSpecificMetadata_ = runShellCommandToolCallDataBuilder_.build();
           }
+          if (toolSpecificMetadataCase_ == 16 &&
+              kbToolCallDataBuilder_ != null) {
+            result.toolSpecificMetadata_ = kbToolCallDataBuilder_.build();
+          }
         }
 
         @java.lang.Override
@@ -28862,6 +32564,10 @@ private static final long serialVersionUID = 0L;
             }
             case RUN_SHELL_COMMAND_TOOL_CALL_DATA: {
               mergeRunShellCommandToolCallData(other.getRunShellCommandToolCallData());
+              break;
+            }
+            case KB_TOOL_CALL_DATA: {
+              mergeKbToolCallData(other.getKbToolCallData());
               break;
             }
             case TOOLSPECIFICMETADATA_NOT_SET: {
@@ -28999,6 +32705,13 @@ private static final long serialVersionUID = 0L;
                   toolSpecificMetadataCase_ = 15;
                   break;
                 } // case 122
+                case 130: {
+                  input.readMessage(
+                      getKbToolCallDataFieldBuilder().getBuilder(),
+                      extensionRegistry);
+                  toolSpecificMetadataCase_ = 16;
+                  break;
+                } // case 130
                 default: {
                   if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                     done = true; // was an endgroup tag
@@ -30945,6 +34658,184 @@ private static final long serialVersionUID = 0L;
           toolSpecificMetadataCase_ = 15;
           onChanged();
           return runShellCommandToolCallDataBuilder_;
+        }
+
+        private com.google.protobuf.SingleFieldBuilderV3<
+            com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.KbToolCallData, com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.KbToolCallData.Builder, com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.KbToolCallDataOrBuilder> kbToolCallDataBuilder_;
+        /**
+         * <pre>
+         * Data for an akb tool call.
+         * </pre>
+         *
+         * <code>.android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.KbToolCallData kb_tool_call_data = 16;</code>
+         * @return Whether the kbToolCallData field is set.
+         */
+        @java.lang.Override
+        public boolean hasKbToolCallData() {
+          return toolSpecificMetadataCase_ == 16;
+        }
+        /**
+         * <pre>
+         * Data for an akb tool call.
+         * </pre>
+         *
+         * <code>.android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.KbToolCallData kb_tool_call_data = 16;</code>
+         * @return The kbToolCallData.
+         */
+        @java.lang.Override
+        public com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.KbToolCallData getKbToolCallData() {
+          if (kbToolCallDataBuilder_ == null) {
+            if (toolSpecificMetadataCase_ == 16) {
+              return (com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.KbToolCallData) toolSpecificMetadata_;
+            }
+            return com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.KbToolCallData.getDefaultInstance();
+          } else {
+            if (toolSpecificMetadataCase_ == 16) {
+              return kbToolCallDataBuilder_.getMessage();
+            }
+            return com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.KbToolCallData.getDefaultInstance();
+          }
+        }
+        /**
+         * <pre>
+         * Data for an akb tool call.
+         * </pre>
+         *
+         * <code>.android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.KbToolCallData kb_tool_call_data = 16;</code>
+         */
+        public Builder setKbToolCallData(com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.KbToolCallData value) {
+          if (kbToolCallDataBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            toolSpecificMetadata_ = value;
+            onChanged();
+          } else {
+            kbToolCallDataBuilder_.setMessage(value);
+          }
+          toolSpecificMetadataCase_ = 16;
+          return this;
+        }
+        /**
+         * <pre>
+         * Data for an akb tool call.
+         * </pre>
+         *
+         * <code>.android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.KbToolCallData kb_tool_call_data = 16;</code>
+         */
+        public Builder setKbToolCallData(
+            com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.KbToolCallData.Builder builderForValue) {
+          if (kbToolCallDataBuilder_ == null) {
+            toolSpecificMetadata_ = builderForValue.build();
+            onChanged();
+          } else {
+            kbToolCallDataBuilder_.setMessage(builderForValue.build());
+          }
+          toolSpecificMetadataCase_ = 16;
+          return this;
+        }
+        /**
+         * <pre>
+         * Data for an akb tool call.
+         * </pre>
+         *
+         * <code>.android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.KbToolCallData kb_tool_call_data = 16;</code>
+         */
+        public Builder mergeKbToolCallData(com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.KbToolCallData value) {
+          if (kbToolCallDataBuilder_ == null) {
+            if (toolSpecificMetadataCase_ == 16 &&
+                toolSpecificMetadata_ != com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.KbToolCallData.getDefaultInstance()) {
+              toolSpecificMetadata_ = com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.KbToolCallData.newBuilder((com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.KbToolCallData) toolSpecificMetadata_)
+                  .mergeFrom(value).buildPartial();
+            } else {
+              toolSpecificMetadata_ = value;
+            }
+            onChanged();
+          } else {
+            if (toolSpecificMetadataCase_ == 16) {
+              kbToolCallDataBuilder_.mergeFrom(value);
+            } else {
+              kbToolCallDataBuilder_.setMessage(value);
+            }
+          }
+          toolSpecificMetadataCase_ = 16;
+          return this;
+        }
+        /**
+         * <pre>
+         * Data for an akb tool call.
+         * </pre>
+         *
+         * <code>.android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.KbToolCallData kb_tool_call_data = 16;</code>
+         */
+        public Builder clearKbToolCallData() {
+          if (kbToolCallDataBuilder_ == null) {
+            if (toolSpecificMetadataCase_ == 16) {
+              toolSpecificMetadataCase_ = 0;
+              toolSpecificMetadata_ = null;
+              onChanged();
+            }
+          } else {
+            if (toolSpecificMetadataCase_ == 16) {
+              toolSpecificMetadataCase_ = 0;
+              toolSpecificMetadata_ = null;
+            }
+            kbToolCallDataBuilder_.clear();
+          }
+          return this;
+        }
+        /**
+         * <pre>
+         * Data for an akb tool call.
+         * </pre>
+         *
+         * <code>.android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.KbToolCallData kb_tool_call_data = 16;</code>
+         */
+        public com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.KbToolCallData.Builder getKbToolCallDataBuilder() {
+          return getKbToolCallDataFieldBuilder().getBuilder();
+        }
+        /**
+         * <pre>
+         * Data for an akb tool call.
+         * </pre>
+         *
+         * <code>.android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.KbToolCallData kb_tool_call_data = 16;</code>
+         */
+        @java.lang.Override
+        public com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.KbToolCallDataOrBuilder getKbToolCallDataOrBuilder() {
+          if ((toolSpecificMetadataCase_ == 16) && (kbToolCallDataBuilder_ != null)) {
+            return kbToolCallDataBuilder_.getMessageOrBuilder();
+          } else {
+            if (toolSpecificMetadataCase_ == 16) {
+              return (com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.KbToolCallData) toolSpecificMetadata_;
+            }
+            return com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.KbToolCallData.getDefaultInstance();
+          }
+        }
+        /**
+         * <pre>
+         * Data for an akb tool call.
+         * </pre>
+         *
+         * <code>.android_studio.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.KbToolCallData kb_tool_call_data = 16;</code>
+         */
+        private com.google.protobuf.SingleFieldBuilderV3<
+            com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.KbToolCallData, com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.KbToolCallData.Builder, com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.KbToolCallDataOrBuilder> 
+            getKbToolCallDataFieldBuilder() {
+          if (kbToolCallDataBuilder_ == null) {
+            if (!(toolSpecificMetadataCase_ == 16)) {
+              toolSpecificMetadata_ = com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.KbToolCallData.getDefaultInstance();
+            }
+            kbToolCallDataBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.KbToolCallData, com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.KbToolCallData.Builder, com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.KbToolCallDataOrBuilder>(
+                    (com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentEvent.ToolExecutionSpan.KbToolCallData) toolSpecificMetadata_,
+                    getParentForChildren(),
+                    isClean());
+            toolSpecificMetadata_ = null;
+          }
+          toolSpecificMetadataCase_ = 16;
+          onChanged();
+          return kbToolCallDataBuilder_;
         }
         @java.lang.Override
         public final Builder setUnknownFields(

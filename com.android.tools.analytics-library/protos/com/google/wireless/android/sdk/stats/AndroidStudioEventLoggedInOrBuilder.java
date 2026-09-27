@@ -53,6 +53,21 @@ public interface AndroidStudioEventLoggedInOrBuilder extends
   com.google.wireless.android.sdk.stats.AppQualityInsightsUsageEventLoggedInOrBuilder getAppQualityInsightsUsageEventOrBuilder();
 
   /**
+   * <code>optional .android_studio.GoogleLoginPluginEventLoggedIn google_login_event = 148 [lazy = true];</code>
+   * @return Whether the googleLoginEvent field is set.
+   */
+  boolean hasGoogleLoginEvent();
+  /**
+   * <code>optional .android_studio.GoogleLoginPluginEventLoggedIn google_login_event = 148 [lazy = true];</code>
+   * @return The googleLoginEvent.
+   */
+  com.google.wireless.android.sdk.stats.GoogleLoginPluginEventLoggedIn getGoogleLoginEvent();
+  /**
+   * <code>optional .android_studio.GoogleLoginPluginEventLoggedIn google_login_event = 148 [lazy = true];</code>
+   */
+  com.google.wireless.android.sdk.stats.GoogleLoginPluginEventLoggedInOrBuilder getGoogleLoginEventOrBuilder();
+
+  /**
    * <code>optional .android_studio.DirectAccessUsageEventLoggedIn direct_access_usage_event = 158 [lazy = true];</code>
    * @return Whether the directAccessUsageEvent field is set.
    */

@@ -659,6 +659,10 @@ private static final long serialVersionUID = 0L;
      * <code>PIXEL_10A = 61;</code>
      */
     PIXEL_10A(61),
+    /**
+     * <code>PIXEL_11_PRO_FOLD = 62;</code>
+     */
+    PIXEL_11_PRO_FOLD(62),
     ;
 
     /**
@@ -909,6 +913,10 @@ private static final long serialVersionUID = 0L;
      * <code>PIXEL_10A = 61;</code>
      */
     public static final int PIXEL_10A_VALUE = 61;
+    /**
+     * <code>PIXEL_11_PRO_FOLD = 62;</code>
+     */
+    public static final int PIXEL_11_PRO_FOLD_VALUE = 62;
 
 
     public final int getNumber() {
@@ -993,6 +1001,7 @@ private static final long serialVersionUID = 0L;
         case 59: return XR_GLASSES_DEVICE;
         case 60: return AI_GLASSES_DEVICE;
         case 61: return PIXEL_10A;
+        case 62: return PIXEL_11_PRO_FOLD;
         default: return null;
       }
     }
@@ -1053,7 +1062,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>optional string name = 1 [deprecated = true];</code>
    * @deprecated android_studio.EmulatorAvdInfo.name is deprecated.
-   *     See studio_stats.proto;l=3341
+   *     See studio_stats.proto;l=3403
    * @return Whether the name field is set.
    */
   @java.lang.Override
@@ -1067,7 +1076,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>optional string name = 1 [deprecated = true];</code>
    * @deprecated android_studio.EmulatorAvdInfo.name is deprecated.
-   *     See studio_stats.proto;l=3341
+   *     See studio_stats.proto;l=3403
    * @return The name.
    */
   @java.lang.Override
@@ -1092,7 +1101,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>optional string name = 1 [deprecated = true];</code>
    * @deprecated android_studio.EmulatorAvdInfo.name is deprecated.
-   *     See studio_stats.proto;l=3341
+   *     See studio_stats.proto;l=3403
    * @return The bytes for name.
    */
   @java.lang.Override
@@ -2125,7 +2134,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional string name = 1 [deprecated = true];</code>
      * @deprecated android_studio.EmulatorAvdInfo.name is deprecated.
-     *     See studio_stats.proto;l=3341
+     *     See studio_stats.proto;l=3403
      * @return Whether the name field is set.
      */
     @java.lang.Deprecated public boolean hasName() {
@@ -2138,7 +2147,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional string name = 1 [deprecated = true];</code>
      * @deprecated android_studio.EmulatorAvdInfo.name is deprecated.
-     *     See studio_stats.proto;l=3341
+     *     See studio_stats.proto;l=3403
      * @return The name.
      */
     @java.lang.Deprecated public java.lang.String getName() {
@@ -2162,7 +2171,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional string name = 1 [deprecated = true];</code>
      * @deprecated android_studio.EmulatorAvdInfo.name is deprecated.
-     *     See studio_stats.proto;l=3341
+     *     See studio_stats.proto;l=3403
      * @return The bytes for name.
      */
     @java.lang.Deprecated public com.google.protobuf.ByteString
@@ -2185,7 +2194,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional string name = 1 [deprecated = true];</code>
      * @deprecated android_studio.EmulatorAvdInfo.name is deprecated.
-     *     See studio_stats.proto;l=3341
+     *     See studio_stats.proto;l=3403
      * @param value The name to set.
      * @return This builder for chaining.
      */
@@ -2204,7 +2213,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional string name = 1 [deprecated = true];</code>
      * @deprecated android_studio.EmulatorAvdInfo.name is deprecated.
-     *     See studio_stats.proto;l=3341
+     *     See studio_stats.proto;l=3403
      * @return This builder for chaining.
      */
     @java.lang.Deprecated public Builder clearName() {
@@ -2220,7 +2229,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional string name = 1 [deprecated = true];</code>
      * @deprecated android_studio.EmulatorAvdInfo.name is deprecated.
-     *     See studio_stats.proto;l=3341
+     *     See studio_stats.proto;l=3403
      * @param value The bytes for name to set.
      * @return This builder for chaining.
      */

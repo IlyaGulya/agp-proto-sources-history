@@ -38,31 +38,46 @@ public interface AdbUsageEventOrBuilder extends
   com.google.wireless.android.sdk.stats.AdbUsageEvent.AdbDeviceStateChangeEventOrBuilder getDeviceStateChangeEventOrBuilder();
 
   /**
-   * <pre>
-   * Add other types of events, e.g. attaching debugger, etc
-   * </pre>
-   *
    * <code>.android_studio.AdbUsageEvent.AppInfoProcessPropertiesCollectorEvent app_info_process_properties_event = 3 [lazy = true];</code>
    * @return Whether the appInfoProcessPropertiesEvent field is set.
    */
   boolean hasAppInfoProcessPropertiesEvent();
   /**
-   * <pre>
-   * Add other types of events, e.g. attaching debugger, etc
-   * </pre>
-   *
    * <code>.android_studio.AdbUsageEvent.AppInfoProcessPropertiesCollectorEvent app_info_process_properties_event = 3 [lazy = true];</code>
    * @return The appInfoProcessPropertiesEvent.
    */
   com.google.wireless.android.sdk.stats.AdbUsageEvent.AppInfoProcessPropertiesCollectorEvent getAppInfoProcessPropertiesEvent();
   /**
+   * <code>.android_studio.AdbUsageEvent.AppInfoProcessPropertiesCollectorEvent app_info_process_properties_event = 3 [lazy = true];</code>
+   */
+  com.google.wireless.android.sdk.stats.AdbUsageEvent.AppInfoProcessPropertiesCollectorEventOrBuilder getAppInfoProcessPropertiesEventOrBuilder();
+
+  /**
    * <pre>
    * Add other types of events, e.g. attaching debugger, etc
    * </pre>
    *
-   * <code>.android_studio.AdbUsageEvent.AppInfoProcessPropertiesCollectorEvent app_info_process_properties_event = 3 [lazy = true];</code>
+   * <code>.android_studio.AdbUsageEvent.AppInfoSupportEvent app_info_support_event = 4 [lazy = true];</code>
+   * @return Whether the appInfoSupportEvent field is set.
    */
-  com.google.wireless.android.sdk.stats.AdbUsageEvent.AppInfoProcessPropertiesCollectorEventOrBuilder getAppInfoProcessPropertiesEventOrBuilder();
+  boolean hasAppInfoSupportEvent();
+  /**
+   * <pre>
+   * Add other types of events, e.g. attaching debugger, etc
+   * </pre>
+   *
+   * <code>.android_studio.AdbUsageEvent.AppInfoSupportEvent app_info_support_event = 4 [lazy = true];</code>
+   * @return The appInfoSupportEvent.
+   */
+  com.google.wireless.android.sdk.stats.AdbUsageEvent.AppInfoSupportEvent getAppInfoSupportEvent();
+  /**
+   * <pre>
+   * Add other types of events, e.g. attaching debugger, etc
+   * </pre>
+   *
+   * <code>.android_studio.AdbUsageEvent.AppInfoSupportEvent app_info_support_event = 4 [lazy = true];</code>
+   */
+  com.google.wireless.android.sdk.stats.AdbUsageEvent.AppInfoSupportEventOrBuilder getAppInfoSupportEventOrBuilder();
 
   com.google.wireless.android.sdk.stats.AdbUsageEvent.EventCase getEventCase();
 }

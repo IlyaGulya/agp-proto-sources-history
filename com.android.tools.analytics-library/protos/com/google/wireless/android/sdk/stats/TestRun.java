@@ -1075,7 +1075,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional int32 screenshot_count = 1 [deprecated = true];</code>
      * @deprecated android_studio.TestRun.PreviewScreenshotRun.screenshot_count is deprecated.
-     *     See studio_stats.proto;l=4886
+     *     See studio_stats.proto;l=4889
      * @return Whether the screenshotCount field is set.
      */
     @java.lang.Deprecated boolean hasScreenshotCount();
@@ -1086,7 +1086,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional int32 screenshot_count = 1 [deprecated = true];</code>
      * @deprecated android_studio.TestRun.PreviewScreenshotRun.screenshot_count is deprecated.
-     *     See studio_stats.proto;l=4886
+     *     See studio_stats.proto;l=4889
      * @return The screenshotCount.
      */
     @java.lang.Deprecated int getScreenshotCount();
@@ -1098,7 +1098,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional int64 total_run_time_ms = 2 [deprecated = true];</code>
      * @deprecated android_studio.TestRun.PreviewScreenshotRun.total_run_time_ms is deprecated.
-     *     See studio_stats.proto;l=4889
+     *     See studio_stats.proto;l=4892
      * @return Whether the totalRunTimeMs field is set.
      */
     @java.lang.Deprecated boolean hasTotalRunTimeMs();
@@ -1109,7 +1109,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional int64 total_run_time_ms = 2 [deprecated = true];</code>
      * @deprecated android_studio.TestRun.PreviewScreenshotRun.total_run_time_ms is deprecated.
-     *     See studio_stats.proto;l=4889
+     *     See studio_stats.proto;l=4892
      * @return The totalRunTimeMs.
      */
     @java.lang.Deprecated long getTotalRunTimeMs();
@@ -1121,7 +1121,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional int64 discovery_run_time_ms = 3 [deprecated = true];</code>
      * @deprecated android_studio.TestRun.PreviewScreenshotRun.discovery_run_time_ms is deprecated.
-     *     See studio_stats.proto;l=4892
+     *     See studio_stats.proto;l=4895
      * @return Whether the discoveryRunTimeMs field is set.
      */
     @java.lang.Deprecated boolean hasDiscoveryRunTimeMs();
@@ -1132,7 +1132,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional int64 discovery_run_time_ms = 3 [deprecated = true];</code>
      * @deprecated android_studio.TestRun.PreviewScreenshotRun.discovery_run_time_ms is deprecated.
-     *     See studio_stats.proto;l=4892
+     *     See studio_stats.proto;l=4895
      * @return The discoveryRunTimeMs.
      */
     @java.lang.Deprecated long getDiscoveryRunTimeMs();
@@ -1144,7 +1144,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional int64 rendering_run_time_ms = 4 [deprecated = true];</code>
      * @deprecated android_studio.TestRun.PreviewScreenshotRun.rendering_run_time_ms is deprecated.
-     *     See studio_stats.proto;l=4895
+     *     See studio_stats.proto;l=4898
      * @return Whether the renderingRunTimeMs field is set.
      */
     @java.lang.Deprecated boolean hasRenderingRunTimeMs();
@@ -1155,7 +1155,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional int64 rendering_run_time_ms = 4 [deprecated = true];</code>
      * @deprecated android_studio.TestRun.PreviewScreenshotRun.rendering_run_time_ms is deprecated.
-     *     See studio_stats.proto;l=4895
+     *     See studio_stats.proto;l=4898
      * @return The renderingRunTimeMs.
      */
     @java.lang.Deprecated long getRenderingRunTimeMs();
@@ -1205,7 +1205,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional int32 screenshot_count = 1 [deprecated = true];</code>
      * @deprecated android_studio.TestRun.PreviewScreenshotRun.screenshot_count is deprecated.
-     *     See studio_stats.proto;l=4886
+     *     See studio_stats.proto;l=4889
      * @return Whether the screenshotCount field is set.
      */
     @java.lang.Override
@@ -1219,7 +1219,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional int32 screenshot_count = 1 [deprecated = true];</code>
      * @deprecated android_studio.TestRun.PreviewScreenshotRun.screenshot_count is deprecated.
-     *     See studio_stats.proto;l=4886
+     *     See studio_stats.proto;l=4889
      * @return The screenshotCount.
      */
     @java.lang.Override
@@ -1236,7 +1236,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional int64 total_run_time_ms = 2 [deprecated = true];</code>
      * @deprecated android_studio.TestRun.PreviewScreenshotRun.total_run_time_ms is deprecated.
-     *     See studio_stats.proto;l=4889
+     *     See studio_stats.proto;l=4892
      * @return Whether the totalRunTimeMs field is set.
      */
     @java.lang.Override
@@ -1250,7 +1250,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional int64 total_run_time_ms = 2 [deprecated = true];</code>
      * @deprecated android_studio.TestRun.PreviewScreenshotRun.total_run_time_ms is deprecated.
-     *     See studio_stats.proto;l=4889
+     *     See studio_stats.proto;l=4892
      * @return The totalRunTimeMs.
      */
     @java.lang.Override
@@ -1267,7 +1267,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional int64 discovery_run_time_ms = 3 [deprecated = true];</code>
      * @deprecated android_studio.TestRun.PreviewScreenshotRun.discovery_run_time_ms is deprecated.
-     *     See studio_stats.proto;l=4892
+     *     See studio_stats.proto;l=4895
      * @return Whether the discoveryRunTimeMs field is set.
      */
     @java.lang.Override
@@ -1281,7 +1281,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional int64 discovery_run_time_ms = 3 [deprecated = true];</code>
      * @deprecated android_studio.TestRun.PreviewScreenshotRun.discovery_run_time_ms is deprecated.
-     *     See studio_stats.proto;l=4892
+     *     See studio_stats.proto;l=4895
      * @return The discoveryRunTimeMs.
      */
     @java.lang.Override
@@ -1298,7 +1298,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional int64 rendering_run_time_ms = 4 [deprecated = true];</code>
      * @deprecated android_studio.TestRun.PreviewScreenshotRun.rendering_run_time_ms is deprecated.
-     *     See studio_stats.proto;l=4895
+     *     See studio_stats.proto;l=4898
      * @return Whether the renderingRunTimeMs field is set.
      */
     @java.lang.Override
@@ -1312,7 +1312,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional int64 rendering_run_time_ms = 4 [deprecated = true];</code>
      * @deprecated android_studio.TestRun.PreviewScreenshotRun.rendering_run_time_ms is deprecated.
-     *     See studio_stats.proto;l=4895
+     *     See studio_stats.proto;l=4898
      * @return The renderingRunTimeMs.
      */
     @java.lang.Override
@@ -1717,7 +1717,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional int32 screenshot_count = 1 [deprecated = true];</code>
        * @deprecated android_studio.TestRun.PreviewScreenshotRun.screenshot_count is deprecated.
-       *     See studio_stats.proto;l=4886
+       *     See studio_stats.proto;l=4889
        * @return Whether the screenshotCount field is set.
        */
       @java.lang.Override
@@ -1731,7 +1731,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional int32 screenshot_count = 1 [deprecated = true];</code>
        * @deprecated android_studio.TestRun.PreviewScreenshotRun.screenshot_count is deprecated.
-       *     See studio_stats.proto;l=4886
+       *     See studio_stats.proto;l=4889
        * @return The screenshotCount.
        */
       @java.lang.Override
@@ -1745,7 +1745,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional int32 screenshot_count = 1 [deprecated = true];</code>
        * @deprecated android_studio.TestRun.PreviewScreenshotRun.screenshot_count is deprecated.
-       *     See studio_stats.proto;l=4886
+       *     See studio_stats.proto;l=4889
        * @param value The screenshotCount to set.
        * @return This builder for chaining.
        */
@@ -1763,7 +1763,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional int32 screenshot_count = 1 [deprecated = true];</code>
        * @deprecated android_studio.TestRun.PreviewScreenshotRun.screenshot_count is deprecated.
-       *     See studio_stats.proto;l=4886
+       *     See studio_stats.proto;l=4889
        * @return This builder for chaining.
        */
       @java.lang.Deprecated public Builder clearScreenshotCount() {
@@ -1781,7 +1781,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional int64 total_run_time_ms = 2 [deprecated = true];</code>
        * @deprecated android_studio.TestRun.PreviewScreenshotRun.total_run_time_ms is deprecated.
-       *     See studio_stats.proto;l=4889
+       *     See studio_stats.proto;l=4892
        * @return Whether the totalRunTimeMs field is set.
        */
       @java.lang.Override
@@ -1795,7 +1795,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional int64 total_run_time_ms = 2 [deprecated = true];</code>
        * @deprecated android_studio.TestRun.PreviewScreenshotRun.total_run_time_ms is deprecated.
-       *     See studio_stats.proto;l=4889
+       *     See studio_stats.proto;l=4892
        * @return The totalRunTimeMs.
        */
       @java.lang.Override
@@ -1809,7 +1809,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional int64 total_run_time_ms = 2 [deprecated = true];</code>
        * @deprecated android_studio.TestRun.PreviewScreenshotRun.total_run_time_ms is deprecated.
-       *     See studio_stats.proto;l=4889
+       *     See studio_stats.proto;l=4892
        * @param value The totalRunTimeMs to set.
        * @return This builder for chaining.
        */
@@ -1827,7 +1827,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional int64 total_run_time_ms = 2 [deprecated = true];</code>
        * @deprecated android_studio.TestRun.PreviewScreenshotRun.total_run_time_ms is deprecated.
-       *     See studio_stats.proto;l=4889
+       *     See studio_stats.proto;l=4892
        * @return This builder for chaining.
        */
       @java.lang.Deprecated public Builder clearTotalRunTimeMs() {
@@ -1845,7 +1845,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional int64 discovery_run_time_ms = 3 [deprecated = true];</code>
        * @deprecated android_studio.TestRun.PreviewScreenshotRun.discovery_run_time_ms is deprecated.
-       *     See studio_stats.proto;l=4892
+       *     See studio_stats.proto;l=4895
        * @return Whether the discoveryRunTimeMs field is set.
        */
       @java.lang.Override
@@ -1859,7 +1859,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional int64 discovery_run_time_ms = 3 [deprecated = true];</code>
        * @deprecated android_studio.TestRun.PreviewScreenshotRun.discovery_run_time_ms is deprecated.
-       *     See studio_stats.proto;l=4892
+       *     See studio_stats.proto;l=4895
        * @return The discoveryRunTimeMs.
        */
       @java.lang.Override
@@ -1873,7 +1873,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional int64 discovery_run_time_ms = 3 [deprecated = true];</code>
        * @deprecated android_studio.TestRun.PreviewScreenshotRun.discovery_run_time_ms is deprecated.
-       *     See studio_stats.proto;l=4892
+       *     See studio_stats.proto;l=4895
        * @param value The discoveryRunTimeMs to set.
        * @return This builder for chaining.
        */
@@ -1891,7 +1891,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional int64 discovery_run_time_ms = 3 [deprecated = true];</code>
        * @deprecated android_studio.TestRun.PreviewScreenshotRun.discovery_run_time_ms is deprecated.
-       *     See studio_stats.proto;l=4892
+       *     See studio_stats.proto;l=4895
        * @return This builder for chaining.
        */
       @java.lang.Deprecated public Builder clearDiscoveryRunTimeMs() {
@@ -1909,7 +1909,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional int64 rendering_run_time_ms = 4 [deprecated = true];</code>
        * @deprecated android_studio.TestRun.PreviewScreenshotRun.rendering_run_time_ms is deprecated.
-       *     See studio_stats.proto;l=4895
+       *     See studio_stats.proto;l=4898
        * @return Whether the renderingRunTimeMs field is set.
        */
       @java.lang.Override
@@ -1923,7 +1923,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional int64 rendering_run_time_ms = 4 [deprecated = true];</code>
        * @deprecated android_studio.TestRun.PreviewScreenshotRun.rendering_run_time_ms is deprecated.
-       *     See studio_stats.proto;l=4895
+       *     See studio_stats.proto;l=4898
        * @return The renderingRunTimeMs.
        */
       @java.lang.Override
@@ -1937,7 +1937,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional int64 rendering_run_time_ms = 4 [deprecated = true];</code>
        * @deprecated android_studio.TestRun.PreviewScreenshotRun.rendering_run_time_ms is deprecated.
-       *     See studio_stats.proto;l=4895
+       *     See studio_stats.proto;l=4898
        * @param value The renderingRunTimeMs to set.
        * @return This builder for chaining.
        */
@@ -1955,7 +1955,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional int64 rendering_run_time_ms = 4 [deprecated = true];</code>
        * @deprecated android_studio.TestRun.PreviewScreenshotRun.rendering_run_time_ms is deprecated.
-       *     See studio_stats.proto;l=4895
+       *     See studio_stats.proto;l=4898
        * @return This builder for chaining.
        */
       @java.lang.Deprecated public Builder clearRenderingRunTimeMs() {

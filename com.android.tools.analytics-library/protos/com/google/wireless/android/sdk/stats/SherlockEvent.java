@@ -619,6 +619,46 @@ private static final long serialVersionUID = 0L;
      * <code>TRACK_KIND_MEMORY_SUMMARY = 28;</code>
      */
     TRACK_KIND_MEMORY_SUMMARY(28),
+    /**
+     * <code>TRACK_KIND_WAKELOCKS = 29;</code>
+     */
+    TRACK_KIND_WAKELOCKS(29),
+    /**
+     * <pre>
+     * Thermal &amp; Hardware Kinds
+     * </pre>
+     *
+     * <code>TRACK_KIND_THERMAL = 30;</code>
+     */
+    TRACK_KIND_THERMAL(30),
+    /**
+     * <code>TRACK_KIND_HARDWARE = 31;</code>
+     */
+    TRACK_KIND_HARDWARE(31),
+    /**
+     * <pre>
+     * Network &amp; IO Kinds
+     * </pre>
+     *
+     * <code>TRACK_KIND_NETWORK = 32;</code>
+     */
+    TRACK_KIND_NETWORK(32),
+    /**
+     * <code>TRACK_KIND_IO = 33;</code>
+     */
+    TRACK_KIND_IO(33),
+    /**
+     * <pre>
+     * System &amp; Generic Kinds
+     * </pre>
+     *
+     * <code>TRACK_KIND_SYSTEM = 34;</code>
+     */
+    TRACK_KIND_SYSTEM(34),
+    /**
+     * <code>TRACK_KIND_GENERIC_COUNTER = 35;</code>
+     */
+    TRACK_KIND_GENERIC_COUNTER(35),
     ;
 
     /**
@@ -757,6 +797,46 @@ private static final long serialVersionUID = 0L;
      * <code>TRACK_KIND_MEMORY_SUMMARY = 28;</code>
      */
     public static final int TRACK_KIND_MEMORY_SUMMARY_VALUE = 28;
+    /**
+     * <code>TRACK_KIND_WAKELOCKS = 29;</code>
+     */
+    public static final int TRACK_KIND_WAKELOCKS_VALUE = 29;
+    /**
+     * <pre>
+     * Thermal &amp; Hardware Kinds
+     * </pre>
+     *
+     * <code>TRACK_KIND_THERMAL = 30;</code>
+     */
+    public static final int TRACK_KIND_THERMAL_VALUE = 30;
+    /**
+     * <code>TRACK_KIND_HARDWARE = 31;</code>
+     */
+    public static final int TRACK_KIND_HARDWARE_VALUE = 31;
+    /**
+     * <pre>
+     * Network &amp; IO Kinds
+     * </pre>
+     *
+     * <code>TRACK_KIND_NETWORK = 32;</code>
+     */
+    public static final int TRACK_KIND_NETWORK_VALUE = 32;
+    /**
+     * <code>TRACK_KIND_IO = 33;</code>
+     */
+    public static final int TRACK_KIND_IO_VALUE = 33;
+    /**
+     * <pre>
+     * System &amp; Generic Kinds
+     * </pre>
+     *
+     * <code>TRACK_KIND_SYSTEM = 34;</code>
+     */
+    public static final int TRACK_KIND_SYSTEM_VALUE = 34;
+    /**
+     * <code>TRACK_KIND_GENERIC_COUNTER = 35;</code>
+     */
+    public static final int TRACK_KIND_GENERIC_COUNTER_VALUE = 35;
 
 
     public final int getNumber() {
@@ -808,6 +888,13 @@ private static final long serialVersionUID = 0L;
         case 26: return TRACK_KIND_APP_STARTUP;
         case 27: return TRACK_KIND_ENERGY;
         case 28: return TRACK_KIND_MEMORY_SUMMARY;
+        case 29: return TRACK_KIND_WAKELOCKS;
+        case 30: return TRACK_KIND_THERMAL;
+        case 31: return TRACK_KIND_HARDWARE;
+        case 32: return TRACK_KIND_NETWORK;
+        case 33: return TRACK_KIND_IO;
+        case 34: return TRACK_KIND_SYSTEM;
+        case 35: return TRACK_KIND_GENERIC_COUNTER;
         default: return null;
       }
     }
@@ -15139,6 +15226,14 @@ private static final long serialVersionUID = 0L;
        * <code>SELECTION_KIND_APP_STARTUP = 13;</code>
        */
       SELECTION_KIND_APP_STARTUP(13),
+      /**
+       * <code>SELECTION_KIND_WAKELOCK = 14;</code>
+       */
+      SELECTION_KIND_WAKELOCK(14),
+      /**
+       * <code>SELECTION_KIND_STACKED_COUNTER = 15;</code>
+       */
+      SELECTION_KIND_STACKED_COUNTER(15),
       ;
 
       /**
@@ -15197,6 +15292,14 @@ private static final long serialVersionUID = 0L;
        * <code>SELECTION_KIND_APP_STARTUP = 13;</code>
        */
       public static final int SELECTION_KIND_APP_STARTUP_VALUE = 13;
+      /**
+       * <code>SELECTION_KIND_WAKELOCK = 14;</code>
+       */
+      public static final int SELECTION_KIND_WAKELOCK_VALUE = 14;
+      /**
+       * <code>SELECTION_KIND_STACKED_COUNTER = 15;</code>
+       */
+      public static final int SELECTION_KIND_STACKED_COUNTER_VALUE = 15;
 
 
       public final int getNumber() {
@@ -15233,6 +15336,8 @@ private static final long serialVersionUID = 0L;
           case 11: return SELECTION_KIND_PROCESS_MEMORY;
           case 12: return SELECTION_KIND_JANK_CUJ;
           case 13: return SELECTION_KIND_APP_STARTUP;
+          case 14: return SELECTION_KIND_WAKELOCK;
+          case 15: return SELECTION_KIND_STACKED_COUNTER;
           default: return null;
         }
       }

@@ -2760,6 +2760,713 @@ private static final long serialVersionUID = 0L;
 
   }
 
+  public interface AppInfoSupportEventOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:android_studio.AdbUsageEvent.AppInfoSupportEvent)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>optional .android_studio.AdbUsageEvent.AppInfoSupportEvent.Reason reason = 1;</code>
+     * @return Whether the reason field is set.
+     */
+    boolean hasReason();
+    /**
+     * <code>optional .android_studio.AdbUsageEvent.AppInfoSupportEvent.Reason reason = 1;</code>
+     * @return The reason.
+     */
+    com.google.wireless.android.sdk.stats.AdbUsageEvent.AppInfoSupportEvent.Reason getReason();
+  }
+  /**
+   * Protobuf type {@code android_studio.AdbUsageEvent.AppInfoSupportEvent}
+   */
+  public static final class AppInfoSupportEvent extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:android_studio.AdbUsageEvent.AppInfoSupportEvent)
+      AppInfoSupportEventOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use AppInfoSupportEvent.newBuilder() to construct.
+    private AppInfoSupportEvent(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private AppInfoSupportEvent() {
+      reason_ = 0;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new AppInfoSupportEvent();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_AdbUsageEvent_AppInfoSupportEvent_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_AdbUsageEvent_AppInfoSupportEvent_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.google.wireless.android.sdk.stats.AdbUsageEvent.AppInfoSupportEvent.class, com.google.wireless.android.sdk.stats.AdbUsageEvent.AppInfoSupportEvent.Builder.class);
+    }
+
+    /**
+     * <pre>
+     * Reason why isAppInfoSupported() returns true or false
+     * </pre>
+     *
+     * Protobuf enum {@code android_studio.AdbUsageEvent.AppInfoSupportEvent.Reason}
+     */
+    public enum Reason
+        implements com.google.protobuf.ProtocolMessageEnum {
+      /**
+       * <code>REASON_UNSPECIFIED = 0;</code>
+       */
+      REASON_UNSPECIFIED(0),
+      /**
+       * <pre>
+       * App info is supported
+       * </pre>
+       *
+       * <code>SUPPORTED = 1;</code>
+       */
+      SUPPORTED(1),
+      /**
+       * <pre>
+       * "track-app" feature is not supported
+       * </pre>
+       *
+       * <code>TRACK_APP_NOT_SUPPORTED = 2;</code>
+       */
+      TRACK_APP_NOT_SUPPORTED(2),
+      /**
+       * <pre>
+       * "app_info" adb feature is not supported by ADB server or device adbd
+       * </pre>
+       *
+       * <code>APP_INFO_NOT_SUPPORTED = 3;</code>
+       */
+      APP_INFO_NOT_SUPPORTED(3),
+      /**
+       * <pre>
+       * Activity manager capabilities (i.e. `am capabilities`) not supported
+       * </pre>
+       *
+       * <code>ACTIVITY_MANAGER_CAPABILITIES_NOT_SUPPORTED = 4;</code>
+       */
+      ACTIVITY_MANAGER_CAPABILITIES_NOT_SUPPORTED(4),
+      /**
+       * <pre>
+       * VM capabilities do not contain "app_info"
+       * </pre>
+       *
+       * <code>VM_CAPABILITIES_NOT_SUPPORTED = 5;</code>
+       */
+      VM_CAPABILITIES_NOT_SUPPORTED(5),
+      /**
+       * <pre>
+       * Framework capabilities do not contain "app_info"
+       * </pre>
+       *
+       * <code>FRAMEWORK_CAPABILITIES_NOT_SUPPORTED = 6;</code>
+       */
+      FRAMEWORK_CAPABILITIES_NOT_SUPPORTED(6),
+      /**
+       * <pre>
+       * Device API level returned default value (1) or could not be determined
+       * </pre>
+       *
+       * <code>API_LEVEL_IS_DEFAULT = 7;</code>
+       */
+      API_LEVEL_IS_DEFAULT(7),
+      /**
+       * <pre>
+       * Disabled by a config property
+       * </pre>
+       *
+       * <code>DISABLED_BY_CONFIG_PROPERTY = 8;</code>
+       */
+      DISABLED_BY_CONFIG_PROPERTY(8),
+      ;
+
+      /**
+       * <code>REASON_UNSPECIFIED = 0;</code>
+       */
+      public static final int REASON_UNSPECIFIED_VALUE = 0;
+      /**
+       * <pre>
+       * App info is supported
+       * </pre>
+       *
+       * <code>SUPPORTED = 1;</code>
+       */
+      public static final int SUPPORTED_VALUE = 1;
+      /**
+       * <pre>
+       * "track-app" feature is not supported
+       * </pre>
+       *
+       * <code>TRACK_APP_NOT_SUPPORTED = 2;</code>
+       */
+      public static final int TRACK_APP_NOT_SUPPORTED_VALUE = 2;
+      /**
+       * <pre>
+       * "app_info" adb feature is not supported by ADB server or device adbd
+       * </pre>
+       *
+       * <code>APP_INFO_NOT_SUPPORTED = 3;</code>
+       */
+      public static final int APP_INFO_NOT_SUPPORTED_VALUE = 3;
+      /**
+       * <pre>
+       * Activity manager capabilities (i.e. `am capabilities`) not supported
+       * </pre>
+       *
+       * <code>ACTIVITY_MANAGER_CAPABILITIES_NOT_SUPPORTED = 4;</code>
+       */
+      public static final int ACTIVITY_MANAGER_CAPABILITIES_NOT_SUPPORTED_VALUE = 4;
+      /**
+       * <pre>
+       * VM capabilities do not contain "app_info"
+       * </pre>
+       *
+       * <code>VM_CAPABILITIES_NOT_SUPPORTED = 5;</code>
+       */
+      public static final int VM_CAPABILITIES_NOT_SUPPORTED_VALUE = 5;
+      /**
+       * <pre>
+       * Framework capabilities do not contain "app_info"
+       * </pre>
+       *
+       * <code>FRAMEWORK_CAPABILITIES_NOT_SUPPORTED = 6;</code>
+       */
+      public static final int FRAMEWORK_CAPABILITIES_NOT_SUPPORTED_VALUE = 6;
+      /**
+       * <pre>
+       * Device API level returned default value (1) or could not be determined
+       * </pre>
+       *
+       * <code>API_LEVEL_IS_DEFAULT = 7;</code>
+       */
+      public static final int API_LEVEL_IS_DEFAULT_VALUE = 7;
+      /**
+       * <pre>
+       * Disabled by a config property
+       * </pre>
+       *
+       * <code>DISABLED_BY_CONFIG_PROPERTY = 8;</code>
+       */
+      public static final int DISABLED_BY_CONFIG_PROPERTY_VALUE = 8;
+
+
+      public final int getNumber() {
+        return value;
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static Reason valueOf(int value) {
+        return forNumber(value);
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       */
+      public static Reason forNumber(int value) {
+        switch (value) {
+          case 0: return REASON_UNSPECIFIED;
+          case 1: return SUPPORTED;
+          case 2: return TRACK_APP_NOT_SUPPORTED;
+          case 3: return APP_INFO_NOT_SUPPORTED;
+          case 4: return ACTIVITY_MANAGER_CAPABILITIES_NOT_SUPPORTED;
+          case 5: return VM_CAPABILITIES_NOT_SUPPORTED;
+          case 6: return FRAMEWORK_CAPABILITIES_NOT_SUPPORTED;
+          case 7: return API_LEVEL_IS_DEFAULT;
+          case 8: return DISABLED_BY_CONFIG_PROPERTY;
+          default: return null;
+        }
+      }
+
+      public static com.google.protobuf.Internal.EnumLiteMap<Reason>
+          internalGetValueMap() {
+        return internalValueMap;
+      }
+      private static final com.google.protobuf.Internal.EnumLiteMap<
+          Reason> internalValueMap =
+            new com.google.protobuf.Internal.EnumLiteMap<Reason>() {
+              public Reason findValueByNumber(int number) {
+                return Reason.forNumber(number);
+              }
+            };
+
+      public final com.google.protobuf.Descriptors.EnumValueDescriptor
+          getValueDescriptor() {
+        return getDescriptor().getValues().get(ordinal());
+      }
+      public final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptorForType() {
+        return getDescriptor();
+      }
+      public static final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptor() {
+        return com.google.wireless.android.sdk.stats.AdbUsageEvent.AppInfoSupportEvent.getDescriptor().getEnumTypes().get(0);
+      }
+
+      private static final Reason[] VALUES = values();
+
+      public static Reason valueOf(
+          com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+        if (desc.getType() != getDescriptor()) {
+          throw new java.lang.IllegalArgumentException(
+            "EnumValueDescriptor is not for this type.");
+        }
+        return VALUES[desc.getIndex()];
+      }
+
+      private final int value;
+
+      private Reason(int value) {
+        this.value = value;
+      }
+
+      // @@protoc_insertion_point(enum_scope:android_studio.AdbUsageEvent.AppInfoSupportEvent.Reason)
+    }
+
+    private int bitField0_;
+    public static final int REASON_FIELD_NUMBER = 1;
+    private int reason_ = 0;
+    /**
+     * <code>optional .android_studio.AdbUsageEvent.AppInfoSupportEvent.Reason reason = 1;</code>
+     * @return Whether the reason field is set.
+     */
+    @java.lang.Override public boolean hasReason() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <code>optional .android_studio.AdbUsageEvent.AppInfoSupportEvent.Reason reason = 1;</code>
+     * @return The reason.
+     */
+    @java.lang.Override public com.google.wireless.android.sdk.stats.AdbUsageEvent.AppInfoSupportEvent.Reason getReason() {
+      com.google.wireless.android.sdk.stats.AdbUsageEvent.AppInfoSupportEvent.Reason result = com.google.wireless.android.sdk.stats.AdbUsageEvent.AppInfoSupportEvent.Reason.forNumber(reason_);
+      return result == null ? com.google.wireless.android.sdk.stats.AdbUsageEvent.AppInfoSupportEvent.Reason.REASON_UNSPECIFIED : result;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (((bitField0_ & 0x00000001) != 0)) {
+        output.writeEnum(1, reason_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(1, reason_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.google.wireless.android.sdk.stats.AdbUsageEvent.AppInfoSupportEvent)) {
+        return super.equals(obj);
+      }
+      com.google.wireless.android.sdk.stats.AdbUsageEvent.AppInfoSupportEvent other = (com.google.wireless.android.sdk.stats.AdbUsageEvent.AppInfoSupportEvent) obj;
+
+      if (hasReason() != other.hasReason()) return false;
+      if (hasReason()) {
+        if (reason_ != other.reason_) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasReason()) {
+        hash = (37 * hash) + REASON_FIELD_NUMBER;
+        hash = (53 * hash) + reason_;
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.google.wireless.android.sdk.stats.AdbUsageEvent.AppInfoSupportEvent parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.google.wireless.android.sdk.stats.AdbUsageEvent.AppInfoSupportEvent parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.google.wireless.android.sdk.stats.AdbUsageEvent.AppInfoSupportEvent parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.google.wireless.android.sdk.stats.AdbUsageEvent.AppInfoSupportEvent parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.google.wireless.android.sdk.stats.AdbUsageEvent.AppInfoSupportEvent parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.google.wireless.android.sdk.stats.AdbUsageEvent.AppInfoSupportEvent parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.google.wireless.android.sdk.stats.AdbUsageEvent.AppInfoSupportEvent parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.google.wireless.android.sdk.stats.AdbUsageEvent.AppInfoSupportEvent parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.google.wireless.android.sdk.stats.AdbUsageEvent.AppInfoSupportEvent parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.google.wireless.android.sdk.stats.AdbUsageEvent.AppInfoSupportEvent parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.google.wireless.android.sdk.stats.AdbUsageEvent.AppInfoSupportEvent parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.google.wireless.android.sdk.stats.AdbUsageEvent.AppInfoSupportEvent parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.google.wireless.android.sdk.stats.AdbUsageEvent.AppInfoSupportEvent prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code android_studio.AdbUsageEvent.AppInfoSupportEvent}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:android_studio.AdbUsageEvent.AppInfoSupportEvent)
+        com.google.wireless.android.sdk.stats.AdbUsageEvent.AppInfoSupportEventOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_AdbUsageEvent_AppInfoSupportEvent_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_AdbUsageEvent_AppInfoSupportEvent_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.google.wireless.android.sdk.stats.AdbUsageEvent.AppInfoSupportEvent.class, com.google.wireless.android.sdk.stats.AdbUsageEvent.AppInfoSupportEvent.Builder.class);
+      }
+
+      // Construct using com.google.wireless.android.sdk.stats.AdbUsageEvent.AppInfoSupportEvent.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        reason_ = 0;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_AdbUsageEvent_AppInfoSupportEvent_descriptor;
+      }
+
+      @java.lang.Override
+      public com.google.wireless.android.sdk.stats.AdbUsageEvent.AppInfoSupportEvent getDefaultInstanceForType() {
+        return com.google.wireless.android.sdk.stats.AdbUsageEvent.AppInfoSupportEvent.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.google.wireless.android.sdk.stats.AdbUsageEvent.AppInfoSupportEvent build() {
+        com.google.wireless.android.sdk.stats.AdbUsageEvent.AppInfoSupportEvent result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.google.wireless.android.sdk.stats.AdbUsageEvent.AppInfoSupportEvent buildPartial() {
+        com.google.wireless.android.sdk.stats.AdbUsageEvent.AppInfoSupportEvent result = new com.google.wireless.android.sdk.stats.AdbUsageEvent.AppInfoSupportEvent(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.google.wireless.android.sdk.stats.AdbUsageEvent.AppInfoSupportEvent result) {
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.reason_ = reason_;
+          to_bitField0_ |= 0x00000001;
+        }
+        result.bitField0_ |= to_bitField0_;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.google.wireless.android.sdk.stats.AdbUsageEvent.AppInfoSupportEvent) {
+          return mergeFrom((com.google.wireless.android.sdk.stats.AdbUsageEvent.AppInfoSupportEvent)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.google.wireless.android.sdk.stats.AdbUsageEvent.AppInfoSupportEvent other) {
+        if (other == com.google.wireless.android.sdk.stats.AdbUsageEvent.AppInfoSupportEvent.getDefaultInstance()) return this;
+        if (other.hasReason()) {
+          setReason(other.getReason());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                int tmpRaw = input.readEnum();
+                com.google.wireless.android.sdk.stats.AdbUsageEvent.AppInfoSupportEvent.Reason tmpValue =
+                    com.google.wireless.android.sdk.stats.AdbUsageEvent.AppInfoSupportEvent.Reason.forNumber(tmpRaw);
+                if (tmpValue == null) {
+                  mergeUnknownVarintField(1, tmpRaw);
+                } else {
+                  reason_ = tmpRaw;
+                  bitField0_ |= 0x00000001;
+                }
+                break;
+              } // case 8
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private int reason_ = 0;
+      /**
+       * <code>optional .android_studio.AdbUsageEvent.AppInfoSupportEvent.Reason reason = 1;</code>
+       * @return Whether the reason field is set.
+       */
+      @java.lang.Override public boolean hasReason() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>optional .android_studio.AdbUsageEvent.AppInfoSupportEvent.Reason reason = 1;</code>
+       * @return The reason.
+       */
+      @java.lang.Override
+      public com.google.wireless.android.sdk.stats.AdbUsageEvent.AppInfoSupportEvent.Reason getReason() {
+        com.google.wireless.android.sdk.stats.AdbUsageEvent.AppInfoSupportEvent.Reason result = com.google.wireless.android.sdk.stats.AdbUsageEvent.AppInfoSupportEvent.Reason.forNumber(reason_);
+        return result == null ? com.google.wireless.android.sdk.stats.AdbUsageEvent.AppInfoSupportEvent.Reason.REASON_UNSPECIFIED : result;
+      }
+      /**
+       * <code>optional .android_studio.AdbUsageEvent.AppInfoSupportEvent.Reason reason = 1;</code>
+       * @param value The reason to set.
+       * @return This builder for chaining.
+       */
+      public Builder setReason(com.google.wireless.android.sdk.stats.AdbUsageEvent.AppInfoSupportEvent.Reason value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x00000001;
+        reason_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional .android_studio.AdbUsageEvent.AppInfoSupportEvent.Reason reason = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearReason() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        reason_ = 0;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:android_studio.AdbUsageEvent.AppInfoSupportEvent)
+    }
+
+    // @@protoc_insertion_point(class_scope:android_studio.AdbUsageEvent.AppInfoSupportEvent)
+    private static final com.google.wireless.android.sdk.stats.AdbUsageEvent.AppInfoSupportEvent DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.google.wireless.android.sdk.stats.AdbUsageEvent.AppInfoSupportEvent();
+    }
+
+    public static com.google.wireless.android.sdk.stats.AdbUsageEvent.AppInfoSupportEvent getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<AppInfoSupportEvent>
+        PARSER = new com.google.protobuf.AbstractParser<AppInfoSupportEvent>() {
+      @java.lang.Override
+      public AppInfoSupportEvent parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<AppInfoSupportEvent> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<AppInfoSupportEvent> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.wireless.android.sdk.stats.AdbUsageEvent.AppInfoSupportEvent getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private int bitField0_;
   private int eventCase_ = 0;
   @SuppressWarnings("serial")
@@ -2770,6 +3477,7 @@ private static final long serialVersionUID = 0L;
     PROCESS_PROPERTIES_EVENT(1),
     DEVICE_STATE_CHANGE_EVENT(2),
     APP_INFO_PROCESS_PROPERTIES_EVENT(3),
+    APP_INFO_SUPPORT_EVENT(4),
     EVENT_NOT_SET(0);
     private final int value;
     private EventCase(int value) {
@@ -2790,6 +3498,7 @@ private static final long serialVersionUID = 0L;
         case 1: return PROCESS_PROPERTIES_EVENT;
         case 2: return DEVICE_STATE_CHANGE_EVENT;
         case 3: return APP_INFO_PROCESS_PROPERTIES_EVENT;
+        case 4: return APP_INFO_SUPPORT_EVENT;
         case 0: return EVENT_NOT_SET;
         default: return null;
       }
@@ -2869,10 +3578,6 @@ private static final long serialVersionUID = 0L;
 
   public static final int APP_INFO_PROCESS_PROPERTIES_EVENT_FIELD_NUMBER = 3;
   /**
-   * <pre>
-   * Add other types of events, e.g. attaching debugger, etc
-   * </pre>
-   *
    * <code>.android_studio.AdbUsageEvent.AppInfoProcessPropertiesCollectorEvent app_info_process_properties_event = 3 [lazy = true];</code>
    * @return Whether the appInfoProcessPropertiesEvent field is set.
    */
@@ -2881,10 +3586,6 @@ private static final long serialVersionUID = 0L;
     return eventCase_ == 3;
   }
   /**
-   * <pre>
-   * Add other types of events, e.g. attaching debugger, etc
-   * </pre>
-   *
    * <code>.android_studio.AdbUsageEvent.AppInfoProcessPropertiesCollectorEvent app_info_process_properties_event = 3 [lazy = true];</code>
    * @return The appInfoProcessPropertiesEvent.
    */
@@ -2896,10 +3597,6 @@ private static final long serialVersionUID = 0L;
     return com.google.wireless.android.sdk.stats.AdbUsageEvent.AppInfoProcessPropertiesCollectorEvent.getDefaultInstance();
   }
   /**
-   * <pre>
-   * Add other types of events, e.g. attaching debugger, etc
-   * </pre>
-   *
    * <code>.android_studio.AdbUsageEvent.AppInfoProcessPropertiesCollectorEvent app_info_process_properties_event = 3 [lazy = true];</code>
    */
   @java.lang.Override
@@ -2908,6 +3605,49 @@ private static final long serialVersionUID = 0L;
        return (com.google.wireless.android.sdk.stats.AdbUsageEvent.AppInfoProcessPropertiesCollectorEvent) event_;
     }
     return com.google.wireless.android.sdk.stats.AdbUsageEvent.AppInfoProcessPropertiesCollectorEvent.getDefaultInstance();
+  }
+
+  public static final int APP_INFO_SUPPORT_EVENT_FIELD_NUMBER = 4;
+  /**
+   * <pre>
+   * Add other types of events, e.g. attaching debugger, etc
+   * </pre>
+   *
+   * <code>.android_studio.AdbUsageEvent.AppInfoSupportEvent app_info_support_event = 4 [lazy = true];</code>
+   * @return Whether the appInfoSupportEvent field is set.
+   */
+  @java.lang.Override
+  public boolean hasAppInfoSupportEvent() {
+    return eventCase_ == 4;
+  }
+  /**
+   * <pre>
+   * Add other types of events, e.g. attaching debugger, etc
+   * </pre>
+   *
+   * <code>.android_studio.AdbUsageEvent.AppInfoSupportEvent app_info_support_event = 4 [lazy = true];</code>
+   * @return The appInfoSupportEvent.
+   */
+  @java.lang.Override
+  public com.google.wireless.android.sdk.stats.AdbUsageEvent.AppInfoSupportEvent getAppInfoSupportEvent() {
+    if (eventCase_ == 4) {
+       return (com.google.wireless.android.sdk.stats.AdbUsageEvent.AppInfoSupportEvent) event_;
+    }
+    return com.google.wireless.android.sdk.stats.AdbUsageEvent.AppInfoSupportEvent.getDefaultInstance();
+  }
+  /**
+   * <pre>
+   * Add other types of events, e.g. attaching debugger, etc
+   * </pre>
+   *
+   * <code>.android_studio.AdbUsageEvent.AppInfoSupportEvent app_info_support_event = 4 [lazy = true];</code>
+   */
+  @java.lang.Override
+  public com.google.wireless.android.sdk.stats.AdbUsageEvent.AppInfoSupportEventOrBuilder getAppInfoSupportEventOrBuilder() {
+    if (eventCase_ == 4) {
+       return (com.google.wireless.android.sdk.stats.AdbUsageEvent.AppInfoSupportEvent) event_;
+    }
+    return com.google.wireless.android.sdk.stats.AdbUsageEvent.AppInfoSupportEvent.getDefaultInstance();
   }
 
   private byte memoizedIsInitialized = -1;
@@ -2933,6 +3673,9 @@ private static final long serialVersionUID = 0L;
     if (eventCase_ == 3) {
       output.writeMessage(3, (com.google.wireless.android.sdk.stats.AdbUsageEvent.AppInfoProcessPropertiesCollectorEvent) event_);
     }
+    if (eventCase_ == 4) {
+      output.writeMessage(4, (com.google.wireless.android.sdk.stats.AdbUsageEvent.AppInfoSupportEvent) event_);
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -2953,6 +3696,10 @@ private static final long serialVersionUID = 0L;
     if (eventCase_ == 3) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(3, (com.google.wireless.android.sdk.stats.AdbUsageEvent.AppInfoProcessPropertiesCollectorEvent) event_);
+    }
+    if (eventCase_ == 4) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(4, (com.google.wireless.android.sdk.stats.AdbUsageEvent.AppInfoSupportEvent) event_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -2983,6 +3730,10 @@ private static final long serialVersionUID = 0L;
         if (!getAppInfoProcessPropertiesEvent()
             .equals(other.getAppInfoProcessPropertiesEvent())) return false;
         break;
+      case 4:
+        if (!getAppInfoSupportEvent()
+            .equals(other.getAppInfoSupportEvent())) return false;
+        break;
       case 0:
       default:
     }
@@ -3009,6 +3760,10 @@ private static final long serialVersionUID = 0L;
       case 3:
         hash = (37 * hash) + APP_INFO_PROCESS_PROPERTIES_EVENT_FIELD_NUMBER;
         hash = (53 * hash) + getAppInfoProcessPropertiesEvent().hashCode();
+        break;
+      case 4:
+        hash = (37 * hash) + APP_INFO_SUPPORT_EVENT_FIELD_NUMBER;
+        hash = (53 * hash) + getAppInfoSupportEvent().hashCode();
         break;
       case 0:
       default:
@@ -3151,6 +3906,9 @@ private static final long serialVersionUID = 0L;
       if (appInfoProcessPropertiesEventBuilder_ != null) {
         appInfoProcessPropertiesEventBuilder_.clear();
       }
+      if (appInfoSupportEventBuilder_ != null) {
+        appInfoSupportEventBuilder_.clear();
+      }
       eventCase_ = 0;
       event_ = null;
       return this;
@@ -3204,6 +3962,10 @@ private static final long serialVersionUID = 0L;
           appInfoProcessPropertiesEventBuilder_ != null) {
         result.event_ = appInfoProcessPropertiesEventBuilder_.build();
       }
+      if (eventCase_ == 4 &&
+          appInfoSupportEventBuilder_ != null) {
+        result.event_ = appInfoSupportEventBuilder_.build();
+      }
     }
 
     @java.lang.Override
@@ -3229,6 +3991,10 @@ private static final long serialVersionUID = 0L;
         }
         case APP_INFO_PROCESS_PROPERTIES_EVENT: {
           mergeAppInfoProcessPropertiesEvent(other.getAppInfoProcessPropertiesEvent());
+          break;
+        }
+        case APP_INFO_SUPPORT_EVENT: {
+          mergeAppInfoSupportEvent(other.getAppInfoSupportEvent());
           break;
         }
         case EVENT_NOT_SET: {
@@ -3282,6 +4048,13 @@ private static final long serialVersionUID = 0L;
               eventCase_ = 3;
               break;
             } // case 26
+            case 34: {
+              input.readMessage(
+                  getAppInfoSupportEventFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              eventCase_ = 4;
+              break;
+            } // case 34
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -3601,10 +4374,6 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.wireless.android.sdk.stats.AdbUsageEvent.AppInfoProcessPropertiesCollectorEvent, com.google.wireless.android.sdk.stats.AdbUsageEvent.AppInfoProcessPropertiesCollectorEvent.Builder, com.google.wireless.android.sdk.stats.AdbUsageEvent.AppInfoProcessPropertiesCollectorEventOrBuilder> appInfoProcessPropertiesEventBuilder_;
     /**
-     * <pre>
-     * Add other types of events, e.g. attaching debugger, etc
-     * </pre>
-     *
      * <code>.android_studio.AdbUsageEvent.AppInfoProcessPropertiesCollectorEvent app_info_process_properties_event = 3 [lazy = true];</code>
      * @return Whether the appInfoProcessPropertiesEvent field is set.
      */
@@ -3613,10 +4382,6 @@ private static final long serialVersionUID = 0L;
       return eventCase_ == 3;
     }
     /**
-     * <pre>
-     * Add other types of events, e.g. attaching debugger, etc
-     * </pre>
-     *
      * <code>.android_studio.AdbUsageEvent.AppInfoProcessPropertiesCollectorEvent app_info_process_properties_event = 3 [lazy = true];</code>
      * @return The appInfoProcessPropertiesEvent.
      */
@@ -3635,10 +4400,6 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <pre>
-     * Add other types of events, e.g. attaching debugger, etc
-     * </pre>
-     *
      * <code>.android_studio.AdbUsageEvent.AppInfoProcessPropertiesCollectorEvent app_info_process_properties_event = 3 [lazy = true];</code>
      */
     public Builder setAppInfoProcessPropertiesEvent(com.google.wireless.android.sdk.stats.AdbUsageEvent.AppInfoProcessPropertiesCollectorEvent value) {
@@ -3655,10 +4416,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * Add other types of events, e.g. attaching debugger, etc
-     * </pre>
-     *
      * <code>.android_studio.AdbUsageEvent.AppInfoProcessPropertiesCollectorEvent app_info_process_properties_event = 3 [lazy = true];</code>
      */
     public Builder setAppInfoProcessPropertiesEvent(
@@ -3673,10 +4430,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * Add other types of events, e.g. attaching debugger, etc
-     * </pre>
-     *
      * <code>.android_studio.AdbUsageEvent.AppInfoProcessPropertiesCollectorEvent app_info_process_properties_event = 3 [lazy = true];</code>
      */
     public Builder mergeAppInfoProcessPropertiesEvent(com.google.wireless.android.sdk.stats.AdbUsageEvent.AppInfoProcessPropertiesCollectorEvent value) {
@@ -3700,10 +4453,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * Add other types of events, e.g. attaching debugger, etc
-     * </pre>
-     *
      * <code>.android_studio.AdbUsageEvent.AppInfoProcessPropertiesCollectorEvent app_info_process_properties_event = 3 [lazy = true];</code>
      */
     public Builder clearAppInfoProcessPropertiesEvent() {
@@ -3723,20 +4472,12 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * Add other types of events, e.g. attaching debugger, etc
-     * </pre>
-     *
      * <code>.android_studio.AdbUsageEvent.AppInfoProcessPropertiesCollectorEvent app_info_process_properties_event = 3 [lazy = true];</code>
      */
     public com.google.wireless.android.sdk.stats.AdbUsageEvent.AppInfoProcessPropertiesCollectorEvent.Builder getAppInfoProcessPropertiesEventBuilder() {
       return getAppInfoProcessPropertiesEventFieldBuilder().getBuilder();
     }
     /**
-     * <pre>
-     * Add other types of events, e.g. attaching debugger, etc
-     * </pre>
-     *
      * <code>.android_studio.AdbUsageEvent.AppInfoProcessPropertiesCollectorEvent app_info_process_properties_event = 3 [lazy = true];</code>
      */
     @java.lang.Override
@@ -3751,10 +4492,6 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <pre>
-     * Add other types of events, e.g. attaching debugger, etc
-     * </pre>
-     *
      * <code>.android_studio.AdbUsageEvent.AppInfoProcessPropertiesCollectorEvent app_info_process_properties_event = 3 [lazy = true];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
@@ -3774,6 +4511,184 @@ private static final long serialVersionUID = 0L;
       eventCase_ = 3;
       onChanged();
       return appInfoProcessPropertiesEventBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.AdbUsageEvent.AppInfoSupportEvent, com.google.wireless.android.sdk.stats.AdbUsageEvent.AppInfoSupportEvent.Builder, com.google.wireless.android.sdk.stats.AdbUsageEvent.AppInfoSupportEventOrBuilder> appInfoSupportEventBuilder_;
+    /**
+     * <pre>
+     * Add other types of events, e.g. attaching debugger, etc
+     * </pre>
+     *
+     * <code>.android_studio.AdbUsageEvent.AppInfoSupportEvent app_info_support_event = 4 [lazy = true];</code>
+     * @return Whether the appInfoSupportEvent field is set.
+     */
+    @java.lang.Override
+    public boolean hasAppInfoSupportEvent() {
+      return eventCase_ == 4;
+    }
+    /**
+     * <pre>
+     * Add other types of events, e.g. attaching debugger, etc
+     * </pre>
+     *
+     * <code>.android_studio.AdbUsageEvent.AppInfoSupportEvent app_info_support_event = 4 [lazy = true];</code>
+     * @return The appInfoSupportEvent.
+     */
+    @java.lang.Override
+    public com.google.wireless.android.sdk.stats.AdbUsageEvent.AppInfoSupportEvent getAppInfoSupportEvent() {
+      if (appInfoSupportEventBuilder_ == null) {
+        if (eventCase_ == 4) {
+          return (com.google.wireless.android.sdk.stats.AdbUsageEvent.AppInfoSupportEvent) event_;
+        }
+        return com.google.wireless.android.sdk.stats.AdbUsageEvent.AppInfoSupportEvent.getDefaultInstance();
+      } else {
+        if (eventCase_ == 4) {
+          return appInfoSupportEventBuilder_.getMessage();
+        }
+        return com.google.wireless.android.sdk.stats.AdbUsageEvent.AppInfoSupportEvent.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * Add other types of events, e.g. attaching debugger, etc
+     * </pre>
+     *
+     * <code>.android_studio.AdbUsageEvent.AppInfoSupportEvent app_info_support_event = 4 [lazy = true];</code>
+     */
+    public Builder setAppInfoSupportEvent(com.google.wireless.android.sdk.stats.AdbUsageEvent.AppInfoSupportEvent value) {
+      if (appInfoSupportEventBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        event_ = value;
+        onChanged();
+      } else {
+        appInfoSupportEventBuilder_.setMessage(value);
+      }
+      eventCase_ = 4;
+      return this;
+    }
+    /**
+     * <pre>
+     * Add other types of events, e.g. attaching debugger, etc
+     * </pre>
+     *
+     * <code>.android_studio.AdbUsageEvent.AppInfoSupportEvent app_info_support_event = 4 [lazy = true];</code>
+     */
+    public Builder setAppInfoSupportEvent(
+        com.google.wireless.android.sdk.stats.AdbUsageEvent.AppInfoSupportEvent.Builder builderForValue) {
+      if (appInfoSupportEventBuilder_ == null) {
+        event_ = builderForValue.build();
+        onChanged();
+      } else {
+        appInfoSupportEventBuilder_.setMessage(builderForValue.build());
+      }
+      eventCase_ = 4;
+      return this;
+    }
+    /**
+     * <pre>
+     * Add other types of events, e.g. attaching debugger, etc
+     * </pre>
+     *
+     * <code>.android_studio.AdbUsageEvent.AppInfoSupportEvent app_info_support_event = 4 [lazy = true];</code>
+     */
+    public Builder mergeAppInfoSupportEvent(com.google.wireless.android.sdk.stats.AdbUsageEvent.AppInfoSupportEvent value) {
+      if (appInfoSupportEventBuilder_ == null) {
+        if (eventCase_ == 4 &&
+            event_ != com.google.wireless.android.sdk.stats.AdbUsageEvent.AppInfoSupportEvent.getDefaultInstance()) {
+          event_ = com.google.wireless.android.sdk.stats.AdbUsageEvent.AppInfoSupportEvent.newBuilder((com.google.wireless.android.sdk.stats.AdbUsageEvent.AppInfoSupportEvent) event_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          event_ = value;
+        }
+        onChanged();
+      } else {
+        if (eventCase_ == 4) {
+          appInfoSupportEventBuilder_.mergeFrom(value);
+        } else {
+          appInfoSupportEventBuilder_.setMessage(value);
+        }
+      }
+      eventCase_ = 4;
+      return this;
+    }
+    /**
+     * <pre>
+     * Add other types of events, e.g. attaching debugger, etc
+     * </pre>
+     *
+     * <code>.android_studio.AdbUsageEvent.AppInfoSupportEvent app_info_support_event = 4 [lazy = true];</code>
+     */
+    public Builder clearAppInfoSupportEvent() {
+      if (appInfoSupportEventBuilder_ == null) {
+        if (eventCase_ == 4) {
+          eventCase_ = 0;
+          event_ = null;
+          onChanged();
+        }
+      } else {
+        if (eventCase_ == 4) {
+          eventCase_ = 0;
+          event_ = null;
+        }
+        appInfoSupportEventBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Add other types of events, e.g. attaching debugger, etc
+     * </pre>
+     *
+     * <code>.android_studio.AdbUsageEvent.AppInfoSupportEvent app_info_support_event = 4 [lazy = true];</code>
+     */
+    public com.google.wireless.android.sdk.stats.AdbUsageEvent.AppInfoSupportEvent.Builder getAppInfoSupportEventBuilder() {
+      return getAppInfoSupportEventFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * Add other types of events, e.g. attaching debugger, etc
+     * </pre>
+     *
+     * <code>.android_studio.AdbUsageEvent.AppInfoSupportEvent app_info_support_event = 4 [lazy = true];</code>
+     */
+    @java.lang.Override
+    public com.google.wireless.android.sdk.stats.AdbUsageEvent.AppInfoSupportEventOrBuilder getAppInfoSupportEventOrBuilder() {
+      if ((eventCase_ == 4) && (appInfoSupportEventBuilder_ != null)) {
+        return appInfoSupportEventBuilder_.getMessageOrBuilder();
+      } else {
+        if (eventCase_ == 4) {
+          return (com.google.wireless.android.sdk.stats.AdbUsageEvent.AppInfoSupportEvent) event_;
+        }
+        return com.google.wireless.android.sdk.stats.AdbUsageEvent.AppInfoSupportEvent.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * Add other types of events, e.g. attaching debugger, etc
+     * </pre>
+     *
+     * <code>.android_studio.AdbUsageEvent.AppInfoSupportEvent app_info_support_event = 4 [lazy = true];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.AdbUsageEvent.AppInfoSupportEvent, com.google.wireless.android.sdk.stats.AdbUsageEvent.AppInfoSupportEvent.Builder, com.google.wireless.android.sdk.stats.AdbUsageEvent.AppInfoSupportEventOrBuilder> 
+        getAppInfoSupportEventFieldBuilder() {
+      if (appInfoSupportEventBuilder_ == null) {
+        if (!(eventCase_ == 4)) {
+          event_ = com.google.wireless.android.sdk.stats.AdbUsageEvent.AppInfoSupportEvent.getDefaultInstance();
+        }
+        appInfoSupportEventBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.wireless.android.sdk.stats.AdbUsageEvent.AppInfoSupportEvent, com.google.wireless.android.sdk.stats.AdbUsageEvent.AppInfoSupportEvent.Builder, com.google.wireless.android.sdk.stats.AdbUsageEvent.AppInfoSupportEventOrBuilder>(
+                (com.google.wireless.android.sdk.stats.AdbUsageEvent.AppInfoSupportEvent) event_,
+                getParentForChildren(),
+                isClean());
+        event_ = null;
+      }
+      eventCase_ = 4;
+      onChanged();
+      return appInfoSupportEventBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

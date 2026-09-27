@@ -1496,6 +1496,10 @@ public enum GradleTaskExecutionType
    * <code>REDIRECT_IDE_BUNDLE_OUTPUTS = 369;</code>
    */
   REDIRECT_IDE_BUNDLE_OUTPUTS(369),
+  /**
+   * <code>GENERATE_COMPOSE_PREVIEW_RUNFILES = 370;</code>
+   */
+  GENERATE_COMPOSE_PREVIEW_RUNFILES(370),
   UNRECOGNIZED(-1),
   ;
 
@@ -2979,6 +2983,10 @@ public enum GradleTaskExecutionType
    * <code>REDIRECT_IDE_BUNDLE_OUTPUTS = 369;</code>
    */
   public static final int REDIRECT_IDE_BUNDLE_OUTPUTS_VALUE = 369;
+  /**
+   * <code>GENERATE_COMPOSE_PREVIEW_RUNFILES = 370;</code>
+   */
+  public static final int GENERATE_COMPOSE_PREVIEW_RUNFILES_VALUE = 370;
 
 
   public final int getNumber() {
@@ -3375,6 +3383,7 @@ public enum GradleTaskExecutionType
       case 367: return CHECK_DYNAMIC_FEATURE_VARIANTS;
       case 368: return REDIRECT_IDE_APK_OUTPUTS;
       case 369: return REDIRECT_IDE_BUNDLE_OUTPUTS;
+      case 370: return GENERATE_COMPOSE_PREVIEW_RUNFILES;
       default: return null;
     }
   }

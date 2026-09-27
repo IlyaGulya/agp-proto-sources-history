@@ -80,6 +80,10 @@ private static final long serialVersionUID = 0L;
      * <code>NAVIGATION_PANEL_EDGE_DROPDOWN_PRESS = 6;</code>
      */
     NAVIGATION_PANEL_EDGE_DROPDOWN_PRESS(6),
+    /**
+     * <code>NAVIGATION_PANEL_NAVIGATE_PRESS = 7;</code>
+     */
+    NAVIGATION_PANEL_NAVIGATE_PRESS(7),
     ;
 
     /**
@@ -110,6 +114,10 @@ private static final long serialVersionUID = 0L;
      * <code>NAVIGATION_PANEL_EDGE_DROPDOWN_PRESS = 6;</code>
      */
     public static final int NAVIGATION_PANEL_EDGE_DROPDOWN_PRESS_VALUE = 6;
+    /**
+     * <code>NAVIGATION_PANEL_NAVIGATE_PRESS = 7;</code>
+     */
+    public static final int NAVIGATION_PANEL_NAVIGATE_PRESS_VALUE = 7;
 
 
     public final int getNumber() {
@@ -139,6 +147,7 @@ private static final long serialVersionUID = 0L;
         case 4: return NAVIGATION_PANEL_PROGRESS_PRESS;
         case 5: return NAVIGATION_PANEL_VISIBILITY_CHANGE;
         case 6: return NAVIGATION_PANEL_EDGE_DROPDOWN_PRESS;
+        case 7: return NAVIGATION_PANEL_NAVIGATE_PRESS;
         default: return null;
       }
     }
