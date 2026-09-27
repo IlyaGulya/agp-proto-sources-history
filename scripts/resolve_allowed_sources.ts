@@ -3,6 +3,7 @@
 import { mkdir, rm } from "node:fs/promises";
 import { dirname, join } from "node:path";
 import { XMLParser, XMLValidator } from "fast-xml-parser";
+import { unzipSync } from "fflate";
 
 type Coordinate = { group: string; module: string; version: string };
 
@@ -164,6 +165,23 @@ async function sourceJar(item: Coordinate): Promise<string | null> {
   return target;
 }
 
+async function extractSourceJar(jar: string, destination: string) {
+  const archive = unzipSync(new Uint8Array(await Bun.file(jar).arrayBuffer()));
+  for (const [name, contents] of Object.entries(archive)) {
+    const parts = name.split("/");
+    if (!name || name.startsWith("/") || name.includes("\\") || name.includes("\0") ||
+        parts.some((part) => part === "." || part === "..")) {
+      throw new Error(`unsafe ZIP entry in ${jar}: ${JSON.stringify(name)}`);
+    }
+    const target = join(destination, ...parts);
+    if (name.endsWith("/")) await mkdir(target, { recursive: true });
+    else {
+      await mkdir(dirname(target), { recursive: true });
+      await Bun.write(target, contents);
+    }
+  }
+}
+
 await rm(output, { recursive: true, force: true });
 await mkdir(output, { recursive: true });
 const coordinates = await resolve();
@@ -175,9 +193,7 @@ await mapLimit(coordinates, 8, async (item) => {
   present.push(key(item));
   const destination = join(output, item.group, item.module);
   await mkdir(destination, { recursive: true });
-  const process = Bun.spawn(["unzip", "-oq", jar, "-d", destination], { stdout: "ignore", stderr: "pipe" });
-  const exitCode = await process.exited;
-  if (exitCode !== 0) throw new Error(`unzip failed for ${key(item)}: ${await new Response(process.stderr).text()}`);
+  await extractSourceJar(jar, destination);
 });
 
 for (const pattern of ["*.RSA", "*.SF", "*.so", "*.dll", "*.dylib"]) {

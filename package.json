@@ -1,6 +1,7 @@
 {
   "private": true,
   "dependencies": {
-    "fast-xml-parser": "5.11.1"
+    "fast-xml-parser": "5.11.1",
+    "fflate": "0.8.3"
   }
 }
