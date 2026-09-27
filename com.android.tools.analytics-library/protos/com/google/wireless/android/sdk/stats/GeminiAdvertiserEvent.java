@@ -95,7 +95,8 @@ private static final long serialVersionUID = 0L;
     RETHINK_VARIABLES(5),
     /**
      * <pre>
-     * Generate scenarios for unit tests based on code.
+     * Deprecated. Generate scenarios for unit tests based on code. Superseded
+     * by GENERATE_UNIT_TESTS.
      * </pre>
      *
      * <code>GENERATE_UNIT_TEST_SCENARIOS = 6;</code>
@@ -174,6 +175,14 @@ private static final long serialVersionUID = 0L;
      * <code>APP_QUALITY_INSIGHTS = 15;</code>
      */
     APP_QUALITY_INSIGHTS(15),
+    /**
+     * <pre>
+     * Generate or update unit tests for a file.
+     * </pre>
+     *
+     * <code>GENERATE_UNIT_TESTS = 16;</code>
+     */
+    GENERATE_UNIT_TESTS(16),
     ;
 
     /**
@@ -226,7 +235,8 @@ private static final long serialVersionUID = 0L;
     public static final int RETHINK_VARIABLES_VALUE = 5;
     /**
      * <pre>
-     * Generate scenarios for unit tests based on code.
+     * Deprecated. Generate scenarios for unit tests based on code. Superseded
+     * by GENERATE_UNIT_TESTS.
      * </pre>
      *
      * <code>GENERATE_UNIT_TEST_SCENARIOS = 6;</code>
@@ -305,6 +315,14 @@ private static final long serialVersionUID = 0L;
      * <code>APP_QUALITY_INSIGHTS = 15;</code>
      */
     public static final int APP_QUALITY_INSIGHTS_VALUE = 15;
+    /**
+     * <pre>
+     * Generate or update unit tests for a file.
+     * </pre>
+     *
+     * <code>GENERATE_UNIT_TESTS = 16;</code>
+     */
+    public static final int GENERATE_UNIT_TESTS_VALUE = 16;
 
 
     public final int getNumber() {
@@ -343,6 +361,7 @@ private static final long serialVersionUID = 0L;
         case 13: return UI_TOOLS;
         case 14: return UPDATE_DEPENDENCIES;
         case 15: return APP_QUALITY_INSIGHTS;
+        case 16: return GENERATE_UNIT_TESTS;
         default: return null;
       }
     }

@@ -92,6 +92,40 @@ private static final long serialVersionUID = 0L;
      * <code>APPLY_CHANGES_FAILURE = 4;</code>
      */
     APPLY_CHANGES_FAILURE(4),
+    /**
+     * <pre>
+     * WHS tool successfully reset the capabilities and overrides to their
+     * default values
+     * </pre>
+     *
+     * <code>RESET_SUCCESS = 5;</code>
+     */
+    RESET_SUCCESS(5),
+    /**
+     * <pre>
+     * WHS tool failed to reset the capabilities and overrides to their default
+     * values
+     * </pre>
+     *
+     * <code>RESET_FAILURE = 6;</code>
+     */
+    RESET_FAILURE(6),
+    /**
+     * <pre>
+     * WHS tool successfully triggered an event on the emulator
+     * </pre>
+     *
+     * <code>TRIGGER_EVENT_SUCCESS = 7;</code>
+     */
+    TRIGGER_EVENT_SUCCESS(7),
+    /**
+     * <pre>
+     * WHS tool failed to trigger an event on the emulator
+     * </pre>
+     *
+     * <code>TRIGGER_EVENT_FAILURE = 8;</code>
+     */
+    TRIGGER_EVENT_FAILURE(8),
     ;
 
     /**
@@ -134,6 +168,40 @@ private static final long serialVersionUID = 0L;
      * <code>APPLY_CHANGES_FAILURE = 4;</code>
      */
     public static final int APPLY_CHANGES_FAILURE_VALUE = 4;
+    /**
+     * <pre>
+     * WHS tool successfully reset the capabilities and overrides to their
+     * default values
+     * </pre>
+     *
+     * <code>RESET_SUCCESS = 5;</code>
+     */
+    public static final int RESET_SUCCESS_VALUE = 5;
+    /**
+     * <pre>
+     * WHS tool failed to reset the capabilities and overrides to their default
+     * values
+     * </pre>
+     *
+     * <code>RESET_FAILURE = 6;</code>
+     */
+    public static final int RESET_FAILURE_VALUE = 6;
+    /**
+     * <pre>
+     * WHS tool successfully triggered an event on the emulator
+     * </pre>
+     *
+     * <code>TRIGGER_EVENT_SUCCESS = 7;</code>
+     */
+    public static final int TRIGGER_EVENT_SUCCESS_VALUE = 7;
+    /**
+     * <pre>
+     * WHS tool failed to trigger an event on the emulator
+     * </pre>
+     *
+     * <code>TRIGGER_EVENT_FAILURE = 8;</code>
+     */
+    public static final int TRIGGER_EVENT_FAILURE_VALUE = 8;
 
 
     public final int getNumber() {
@@ -161,6 +229,10 @@ private static final long serialVersionUID = 0L;
         case 2: return CONNECTION_ERROR;
         case 3: return APPLY_CHANGES_SUCCESS;
         case 4: return APPLY_CHANGES_FAILURE;
+        case 5: return RESET_SUCCESS;
+        case 6: return RESET_FAILURE;
+        case 7: return TRIGGER_EVENT_SUCCESS;
+        case 8: return TRIGGER_EVENT_FAILURE;
         default: return null;
       }
     }
