@@ -46466,6 +46466,36 @@ public final class Resources {
      */
     com.android.aapt.Resources.XmlNodeOrBuilder getChildOrBuilder(
         int index);
+
+    /**
+     * <pre>
+     * Whether the feature flag for this element is negated.
+     * </pre>
+     *
+     * <code>bool flag_negated = 6;</code>
+     * @return The flagNegated.
+     */
+    boolean getFlagNegated();
+
+    /**
+     * <pre>
+     * The name of the feature flag for this element.
+     * </pre>
+     *
+     * <code>string flag_name = 7;</code>
+     * @return The flagName.
+     */
+    java.lang.String getFlagName();
+    /**
+     * <pre>
+     * The name of the feature flag for this element.
+     * </pre>
+     *
+     * <code>string flag_name = 7;</code>
+     * @return The bytes for flagName.
+     */
+    com.google.protobuf.ByteString
+        getFlagNameBytes();
   }
   /**
    * <pre>
@@ -46489,6 +46519,7 @@ public final class Resources {
       name_ = "";
       attribute_ = java.util.Collections.emptyList();
       child_ = java.util.Collections.emptyList();
+      flagName_ = "";
     }
 
     @java.lang.Override
@@ -46788,6 +46819,68 @@ public final class Resources {
       return child_.get(index);
     }
 
+    public static final int FLAG_NEGATED_FIELD_NUMBER = 6;
+    private boolean flagNegated_ = false;
+    /**
+     * <pre>
+     * Whether the feature flag for this element is negated.
+     * </pre>
+     *
+     * <code>bool flag_negated = 6;</code>
+     * @return The flagNegated.
+     */
+    @java.lang.Override
+    public boolean getFlagNegated() {
+      return flagNegated_;
+    }
+
+    public static final int FLAG_NAME_FIELD_NUMBER = 7;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object flagName_ = "";
+    /**
+     * <pre>
+     * The name of the feature flag for this element.
+     * </pre>
+     *
+     * <code>string flag_name = 7;</code>
+     * @return The flagName.
+     */
+    @java.lang.Override
+    public java.lang.String getFlagName() {
+      java.lang.Object ref = flagName_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        flagName_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * The name of the feature flag for this element.
+     * </pre>
+     *
+     * <code>string flag_name = 7;</code>
+     * @return The bytes for flagName.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getFlagNameBytes() {
+      java.lang.Object ref = flagName_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        flagName_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -46817,6 +46910,12 @@ public final class Resources {
       for (int i = 0; i < child_.size(); i++) {
         output.writeMessage(5, child_.get(i));
       }
+      if (flagNegated_ != false) {
+        output.writeBool(6, flagNegated_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(flagName_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 7, flagName_);
+      }
       getUnknownFields().writeTo(output);
     }
 
@@ -46844,6 +46943,13 @@ public final class Resources {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(5, child_.get(i));
       }
+      if (flagNegated_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(6, flagNegated_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(flagName_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, flagName_);
+      }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
@@ -46869,6 +46975,10 @@ public final class Resources {
           .equals(other.getAttributeList())) return false;
       if (!getChildList()
           .equals(other.getChildList())) return false;
+      if (getFlagNegated()
+          != other.getFlagNegated()) return false;
+      if (!getFlagName()
+          .equals(other.getFlagName())) return false;
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -46896,6 +47006,11 @@ public final class Resources {
         hash = (37 * hash) + CHILD_FIELD_NUMBER;
         hash = (53 * hash) + getChildList().hashCode();
       }
+      hash = (37 * hash) + FLAG_NEGATED_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getFlagNegated());
+      hash = (37 * hash) + FLAG_NAME_FIELD_NUMBER;
+      hash = (53 * hash) + getFlagName().hashCode();
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -47052,6 +47167,8 @@ public final class Resources {
           childBuilder_.clear();
         }
         bitField0_ = (bitField0_ & ~0x00000010);
+        flagNegated_ = false;
+        flagName_ = "";
         return this;
       }
 
@@ -47121,6 +47238,12 @@ public final class Resources {
         }
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.name_ = name_;
+        }
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          result.flagNegated_ = flagNegated_;
+        }
+        if (((from_bitField0_ & 0x00000040) != 0)) {
+          result.flagName_ = flagName_;
         }
       }
 
@@ -47224,6 +47347,14 @@ public final class Resources {
             }
           }
         }
+        if (other.getFlagNegated() != false) {
+          setFlagNegated(other.getFlagNegated());
+        }
+        if (!other.getFlagName().isEmpty()) {
+          flagName_ = other.flagName_;
+          bitField0_ |= 0x00000040;
+          onChanged();
+        }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
@@ -47299,6 +47430,16 @@ public final class Resources {
                 }
                 break;
               } // case 42
+              case 48: {
+                flagNegated_ = input.readBool();
+                bitField0_ |= 0x00000020;
+                break;
+              } // case 48
+              case 58: {
+                flagName_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000040;
+                break;
+              } // case 58
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -48434,6 +48575,142 @@ public final class Resources {
           child_ = null;
         }
         return childBuilder_;
+      }
+
+      private boolean flagNegated_ ;
+      /**
+       * <pre>
+       * Whether the feature flag for this element is negated.
+       * </pre>
+       *
+       * <code>bool flag_negated = 6;</code>
+       * @return The flagNegated.
+       */
+      @java.lang.Override
+      public boolean getFlagNegated() {
+        return flagNegated_;
+      }
+      /**
+       * <pre>
+       * Whether the feature flag for this element is negated.
+       * </pre>
+       *
+       * <code>bool flag_negated = 6;</code>
+       * @param value The flagNegated to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFlagNegated(boolean value) {
+
+        flagNegated_ = value;
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Whether the feature flag for this element is negated.
+       * </pre>
+       *
+       * <code>bool flag_negated = 6;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearFlagNegated() {
+        bitField0_ = (bitField0_ & ~0x00000020);
+        flagNegated_ = false;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object flagName_ = "";
+      /**
+       * <pre>
+       * The name of the feature flag for this element.
+       * </pre>
+       *
+       * <code>string flag_name = 7;</code>
+       * @return The flagName.
+       */
+      public java.lang.String getFlagName() {
+        java.lang.Object ref = flagName_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          flagName_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The name of the feature flag for this element.
+       * </pre>
+       *
+       * <code>string flag_name = 7;</code>
+       * @return The bytes for flagName.
+       */
+      public com.google.protobuf.ByteString
+          getFlagNameBytes() {
+        java.lang.Object ref = flagName_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          flagName_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The name of the feature flag for this element.
+       * </pre>
+       *
+       * <code>string flag_name = 7;</code>
+       * @param value The flagName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFlagName(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        flagName_ = value;
+        bitField0_ |= 0x00000040;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The name of the feature flag for this element.
+       * </pre>
+       *
+       * <code>string flag_name = 7;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearFlagName() {
+        flagName_ = getDefaultInstance().getFlagName();
+        bitField0_ = (bitField0_ & ~0x00000040);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The name of the feature flag for this element.
+       * </pre>
+       *
+       * <code>string flag_name = 7;</code>
+       * @param value The bytes for flagName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFlagNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        flagName_ = value;
+        bitField0_ |= 0x00000040;
+        onChanged();
+        return this;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -55724,31 +56001,32 @@ public final class Resources {
       "R\020\005\"r\n\007XmlNode\022&\n\007element\030\001 \001(\0132\023.aapt.p" +
       "b.XmlElementH\000\022\016\n\004text\030\002 \001(\tH\000\022\'\n\006source" +
       "\030\003 \001(\0132\027.aapt.pb.SourcePositionB\006\n\004node\"" +
-      "\262\001\n\nXmlElement\0224\n\025namespace_declaration\030" +
+      "\333\001\n\nXmlElement\0224\n\025namespace_declaration\030" +
       "\001 \003(\0132\025.aapt.pb.XmlNamespace\022\025\n\rnamespac" +
       "e_uri\030\002 \001(\t\022\014\n\004name\030\003 \001(\t\022(\n\tattribute\030\004" +
       " \003(\0132\025.aapt.pb.XmlAttribute\022\037\n\005child\030\005 \003" +
-      "(\0132\020.aapt.pb.XmlNode\"T\n\014XmlNamespace\022\016\n\006" +
-      "prefix\030\001 \001(\t\022\013\n\003uri\030\002 \001(\t\022\'\n\006source\030\003 \001(" +
-      "\0132\027.aapt.pb.SourcePosition\"\246\001\n\014XmlAttrib" +
-      "ute\022\025\n\rnamespace_uri\030\001 \001(\t\022\014\n\004name\030\002 \001(\t" +
-      "\022\r\n\005value\030\003 \001(\t\022\'\n\006source\030\004 \001(\0132\027.aapt.p" +
-      "b.SourcePosition\022\023\n\013resource_id\030\005 \001(\r\022$\n" +
-      "\rcompiled_item\030\006 \001(\0132\r.aapt.pb.Item\"\347\001\n\t" +
-      "MacroBody\022\022\n\nraw_string\030\001 \001(\t\022*\n\014style_s" +
-      "tring\030\002 \001(\0132\024.aapt.pb.StyleString\022?\n\027unt" +
-      "ranslatable_sections\030\003 \003(\0132\036.aapt.pb.Unt" +
-      "ranslatableSection\0220\n\017namespace_stack\030\004 " +
-      "\003(\0132\027.aapt.pb.NamespaceAlias\022\'\n\006source\030\005" +
-      " \001(\0132\027.aapt.pb.SourcePosition\"J\n\016Namespa" +
-      "ceAlias\022\016\n\006prefix\030\001 \001(\t\022\024\n\014package_name\030" +
-      "\002 \001(\t\022\022\n\nis_private\030\003 \001(\010\"\202\001\n\013StyleStrin" +
-      "g\022\013\n\003str\030\001 \001(\t\022(\n\005spans\030\002 \003(\0132\031.aapt.pb." +
-      "StyleString.Span\032<\n\004Span\022\014\n\004name\030\001 \001(\t\022\023" +
-      "\n\013start_index\030\002 \001(\r\022\021\n\tend_index\030\003 \001(\r\"?" +
-      "\n\025UntranslatableSection\022\023\n\013start_index\030\001" +
-      " \001(\004\022\021\n\tend_index\030\002 \001(\004B\022\n\020com.android.a" +
-      "aptb\006proto3"
+      "(\0132\020.aapt.pb.XmlNode\022\024\n\014flag_negated\030\006 \001" +
+      "(\010\022\021\n\tflag_name\030\007 \001(\t\"T\n\014XmlNamespace\022\016\n" +
+      "\006prefix\030\001 \001(\t\022\013\n\003uri\030\002 \001(\t\022\'\n\006source\030\003 \001" +
+      "(\0132\027.aapt.pb.SourcePosition\"\246\001\n\014XmlAttri" +
+      "bute\022\025\n\rnamespace_uri\030\001 \001(\t\022\014\n\004name\030\002 \001(" +
+      "\t\022\r\n\005value\030\003 \001(\t\022\'\n\006source\030\004 \001(\0132\027.aapt." +
+      "pb.SourcePosition\022\023\n\013resource_id\030\005 \001(\r\022$" +
+      "\n\rcompiled_item\030\006 \001(\0132\r.aapt.pb.Item\"\347\001\n" +
+      "\tMacroBody\022\022\n\nraw_string\030\001 \001(\t\022*\n\014style_" +
+      "string\030\002 \001(\0132\024.aapt.pb.StyleString\022?\n\027un" +
+      "translatable_sections\030\003 \003(\0132\036.aapt.pb.Un" +
+      "translatableSection\0220\n\017namespace_stack\030\004" +
+      " \003(\0132\027.aapt.pb.NamespaceAlias\022\'\n\006source\030" +
+      "\005 \001(\0132\027.aapt.pb.SourcePosition\"J\n\016Namesp" +
+      "aceAlias\022\016\n\006prefix\030\001 \001(\t\022\024\n\014package_name" +
+      "\030\002 \001(\t\022\022\n\nis_private\030\003 \001(\010\"\202\001\n\013StyleStri" +
+      "ng\022\013\n\003str\030\001 \001(\t\022(\n\005spans\030\002 \003(\0132\031.aapt.pb" +
+      ".StyleString.Span\032<\n\004Span\022\014\n\004name\030\001 \001(\t\022" +
+      "\023\n\013start_index\030\002 \001(\r\022\021\n\tend_index\030\003 \001(\r\"" +
+      "?\n\025UntranslatableSection\022\023\n\013start_index\030" +
+      "\001 \001(\004\022\021\n\tend_index\030\002 \001(\004B\022\n\020com.android." +
+      "aaptb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -56018,7 +56296,7 @@ public final class Resources {
     internal_static_aapt_pb_XmlElement_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_aapt_pb_XmlElement_descriptor,
-        new java.lang.String[] { "NamespaceDeclaration", "NamespaceUri", "Name", "Attribute", "Child", });
+        new java.lang.String[] { "NamespaceDeclaration", "NamespaceUri", "Name", "Attribute", "Child", "FlagNegated", "FlagName", });
     internal_static_aapt_pb_XmlNamespace_descriptor =
       getDescriptor().getMessageTypes().get(36);
     internal_static_aapt_pb_XmlNamespace_fieldAccessorTable = new

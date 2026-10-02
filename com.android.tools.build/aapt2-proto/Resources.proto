@@ -609,6 +609,12 @@ message XmlElement {
 
   // The children of this element.
   repeated XmlNode child = 5;
+
+  // Whether the feature flag for this element is negated.
+  bool flag_negated = 6;
+
+  // The name of the feature flag for this element.
+  string flag_name = 7;
 }
 
 // A namespace declaration on an XmlElement (xmlns:android="http://...").
