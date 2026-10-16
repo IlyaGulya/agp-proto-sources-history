@@ -443,7 +443,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>optional int64 gc_count = 12 [deprecated = true];</code>
    * @deprecated android_studio.GradleBuildProfile.gc_count is deprecated.
-   *     See studio_stats.proto;l=5218
+   *     See studio_stats.proto;l=5219
    * @return Whether the gcCount field is set.
    */
   @java.lang.Override
@@ -458,7 +458,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>optional int64 gc_count = 12 [deprecated = true];</code>
    * @deprecated android_studio.GradleBuildProfile.gc_count is deprecated.
-   *     See studio_stats.proto;l=5218
+   *     See studio_stats.proto;l=5219
    * @return The gcCount.
    */
   @java.lang.Override
@@ -476,7 +476,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>optional int64 gc_time = 13 [deprecated = true];</code>
    * @deprecated android_studio.GradleBuildProfile.gc_time is deprecated.
-   *     See studio_stats.proto;l=5222
+   *     See studio_stats.proto;l=5223
    * @return Whether the gcTime field is set.
    */
   @java.lang.Override
@@ -491,7 +491,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>optional int64 gc_time = 13 [deprecated = true];</code>
    * @deprecated android_studio.GradleBuildProfile.gc_time is deprecated.
-   *     See studio_stats.proto;l=5222
+   *     See studio_stats.proto;l=5223
    * @return The gcTime.
    */
   @java.lang.Override
@@ -2623,7 +2623,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional int64 gc_count = 12 [deprecated = true];</code>
      * @deprecated android_studio.GradleBuildProfile.gc_count is deprecated.
-     *     See studio_stats.proto;l=5218
+     *     See studio_stats.proto;l=5219
      * @return Whether the gcCount field is set.
      */
     @java.lang.Override
@@ -2638,7 +2638,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional int64 gc_count = 12 [deprecated = true];</code>
      * @deprecated android_studio.GradleBuildProfile.gc_count is deprecated.
-     *     See studio_stats.proto;l=5218
+     *     See studio_stats.proto;l=5219
      * @return The gcCount.
      */
     @java.lang.Override
@@ -2653,7 +2653,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional int64 gc_count = 12 [deprecated = true];</code>
      * @deprecated android_studio.GradleBuildProfile.gc_count is deprecated.
-     *     See studio_stats.proto;l=5218
+     *     See studio_stats.proto;l=5219
      * @param value The gcCount to set.
      * @return This builder for chaining.
      */
@@ -2672,7 +2672,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional int64 gc_count = 12 [deprecated = true];</code>
      * @deprecated android_studio.GradleBuildProfile.gc_count is deprecated.
-     *     See studio_stats.proto;l=5218
+     *     See studio_stats.proto;l=5219
      * @return This builder for chaining.
      */
     @java.lang.Deprecated public Builder clearGcCount() {
@@ -2691,7 +2691,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional int64 gc_time = 13 [deprecated = true];</code>
      * @deprecated android_studio.GradleBuildProfile.gc_time is deprecated.
-     *     See studio_stats.proto;l=5222
+     *     See studio_stats.proto;l=5223
      * @return Whether the gcTime field is set.
      */
     @java.lang.Override
@@ -2706,7 +2706,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional int64 gc_time = 13 [deprecated = true];</code>
      * @deprecated android_studio.GradleBuildProfile.gc_time is deprecated.
-     *     See studio_stats.proto;l=5222
+     *     See studio_stats.proto;l=5223
      * @return The gcTime.
      */
     @java.lang.Override
@@ -2721,7 +2721,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional int64 gc_time = 13 [deprecated = true];</code>
      * @deprecated android_studio.GradleBuildProfile.gc_time is deprecated.
-     *     See studio_stats.proto;l=5222
+     *     See studio_stats.proto;l=5223
      * @param value The gcTime to set.
      * @return This builder for chaining.
      */
@@ -2740,7 +2740,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional int64 gc_time = 13 [deprecated = true];</code>
      * @deprecated android_studio.GradleBuildProfile.gc_time is deprecated.
-     *     See studio_stats.proto;l=5222
+     *     See studio_stats.proto;l=5223
      * @return This builder for chaining.
      */
     @java.lang.Deprecated public Builder clearGcTime() {

@@ -415,7 +415,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional int64 themes_duration_ms = 8 [deprecated = true];</code>
      * @deprecated android_studio.ChangeReviewEvent.Session.themes_duration_ms is deprecated.
-     *     See studio_stats.proto;l=21448
+     *     See studio_stats.proto;l=21655
      * @return Whether the themesDurationMs field is set.
      */
     @java.lang.Deprecated boolean hasThemesDurationMs();
@@ -427,7 +427,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional int64 themes_duration_ms = 8 [deprecated = true];</code>
      * @deprecated android_studio.ChangeReviewEvent.Session.themes_duration_ms is deprecated.
-     *     See studio_stats.proto;l=21448
+     *     See studio_stats.proto;l=21655
      * @return The themesDurationMs.
      */
     @java.lang.Deprecated long getThemesDurationMs();
@@ -440,7 +440,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional int64 theme_details_duration_ms = 9 [deprecated = true];</code>
      * @deprecated android_studio.ChangeReviewEvent.Session.theme_details_duration_ms is deprecated.
-     *     See studio_stats.proto;l=21451
+     *     See studio_stats.proto;l=21658
      * @return Whether the themeDetailsDurationMs field is set.
      */
     @java.lang.Deprecated boolean hasThemeDetailsDurationMs();
@@ -452,7 +452,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional int64 theme_details_duration_ms = 9 [deprecated = true];</code>
      * @deprecated android_studio.ChangeReviewEvent.Session.theme_details_duration_ms is deprecated.
-     *     See studio_stats.proto;l=21451
+     *     See studio_stats.proto;l=21658
      * @return The themeDetailsDurationMs.
      */
     @java.lang.Deprecated long getThemeDetailsDurationMs();
@@ -498,7 +498,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional string failure_reason = 13 [deprecated = true];</code>
      * @deprecated android_studio.ChangeReviewEvent.Session.failure_reason is deprecated.
-     *     See studio_stats.proto;l=21457
+     *     See studio_stats.proto;l=21664
      * @return Whether the failureReason field is set.
      */
     @java.lang.Deprecated boolean hasFailureReason();
@@ -510,7 +510,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional string failure_reason = 13 [deprecated = true];</code>
      * @deprecated android_studio.ChangeReviewEvent.Session.failure_reason is deprecated.
-     *     See studio_stats.proto;l=21457
+     *     See studio_stats.proto;l=21664
      * @return The failureReason.
      */
     @java.lang.Deprecated java.lang.String getFailureReason();
@@ -522,7 +522,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional string failure_reason = 13 [deprecated = true];</code>
      * @deprecated android_studio.ChangeReviewEvent.Session.failure_reason is deprecated.
-     *     See studio_stats.proto;l=21457
+     *     See studio_stats.proto;l=21664
      * @return The bytes for failureReason.
      */
     @java.lang.Deprecated com.google.protobuf.ByteString
@@ -820,7 +820,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional int64 themes_duration_ms = 8 [deprecated = true];</code>
      * @deprecated android_studio.ChangeReviewEvent.Session.themes_duration_ms is deprecated.
-     *     See studio_stats.proto;l=21448
+     *     See studio_stats.proto;l=21655
      * @return Whether the themesDurationMs field is set.
      */
     @java.lang.Override
@@ -835,7 +835,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional int64 themes_duration_ms = 8 [deprecated = true];</code>
      * @deprecated android_studio.ChangeReviewEvent.Session.themes_duration_ms is deprecated.
-     *     See studio_stats.proto;l=21448
+     *     See studio_stats.proto;l=21655
      * @return The themesDurationMs.
      */
     @java.lang.Override
@@ -853,7 +853,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional int64 theme_details_duration_ms = 9 [deprecated = true];</code>
      * @deprecated android_studio.ChangeReviewEvent.Session.theme_details_duration_ms is deprecated.
-     *     See studio_stats.proto;l=21451
+     *     See studio_stats.proto;l=21658
      * @return Whether the themeDetailsDurationMs field is set.
      */
     @java.lang.Override
@@ -868,7 +868,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional int64 theme_details_duration_ms = 9 [deprecated = true];</code>
      * @deprecated android_studio.ChangeReviewEvent.Session.theme_details_duration_ms is deprecated.
-     *     See studio_stats.proto;l=21451
+     *     See studio_stats.proto;l=21658
      * @return The themeDetailsDurationMs.
      */
     @java.lang.Override
@@ -944,7 +944,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional string failure_reason = 13 [deprecated = true];</code>
      * @deprecated android_studio.ChangeReviewEvent.Session.failure_reason is deprecated.
-     *     See studio_stats.proto;l=21457
+     *     See studio_stats.proto;l=21664
      * @return Whether the failureReason field is set.
      */
     @java.lang.Override
@@ -959,7 +959,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional string failure_reason = 13 [deprecated = true];</code>
      * @deprecated android_studio.ChangeReviewEvent.Session.failure_reason is deprecated.
-     *     See studio_stats.proto;l=21457
+     *     See studio_stats.proto;l=21664
      * @return The failureReason.
      */
     @java.lang.Override
@@ -985,7 +985,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional string failure_reason = 13 [deprecated = true];</code>
      * @deprecated android_studio.ChangeReviewEvent.Session.failure_reason is deprecated.
-     *     See studio_stats.proto;l=21457
+     *     See studio_stats.proto;l=21664
      * @return The bytes for failureReason.
      */
     @java.lang.Override
@@ -2219,7 +2219,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional int64 themes_duration_ms = 8 [deprecated = true];</code>
        * @deprecated android_studio.ChangeReviewEvent.Session.themes_duration_ms is deprecated.
-       *     See studio_stats.proto;l=21448
+       *     See studio_stats.proto;l=21655
        * @return Whether the themesDurationMs field is set.
        */
       @java.lang.Override
@@ -2234,7 +2234,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional int64 themes_duration_ms = 8 [deprecated = true];</code>
        * @deprecated android_studio.ChangeReviewEvent.Session.themes_duration_ms is deprecated.
-       *     See studio_stats.proto;l=21448
+       *     See studio_stats.proto;l=21655
        * @return The themesDurationMs.
        */
       @java.lang.Override
@@ -2249,7 +2249,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional int64 themes_duration_ms = 8 [deprecated = true];</code>
        * @deprecated android_studio.ChangeReviewEvent.Session.themes_duration_ms is deprecated.
-       *     See studio_stats.proto;l=21448
+       *     See studio_stats.proto;l=21655
        * @param value The themesDurationMs to set.
        * @return This builder for chaining.
        */
@@ -2268,7 +2268,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional int64 themes_duration_ms = 8 [deprecated = true];</code>
        * @deprecated android_studio.ChangeReviewEvent.Session.themes_duration_ms is deprecated.
-       *     See studio_stats.proto;l=21448
+       *     See studio_stats.proto;l=21655
        * @return This builder for chaining.
        */
       @java.lang.Deprecated public Builder clearThemesDurationMs() {
@@ -2287,7 +2287,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional int64 theme_details_duration_ms = 9 [deprecated = true];</code>
        * @deprecated android_studio.ChangeReviewEvent.Session.theme_details_duration_ms is deprecated.
-       *     See studio_stats.proto;l=21451
+       *     See studio_stats.proto;l=21658
        * @return Whether the themeDetailsDurationMs field is set.
        */
       @java.lang.Override
@@ -2302,7 +2302,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional int64 theme_details_duration_ms = 9 [deprecated = true];</code>
        * @deprecated android_studio.ChangeReviewEvent.Session.theme_details_duration_ms is deprecated.
-       *     See studio_stats.proto;l=21451
+       *     See studio_stats.proto;l=21658
        * @return The themeDetailsDurationMs.
        */
       @java.lang.Override
@@ -2317,7 +2317,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional int64 theme_details_duration_ms = 9 [deprecated = true];</code>
        * @deprecated android_studio.ChangeReviewEvent.Session.theme_details_duration_ms is deprecated.
-       *     See studio_stats.proto;l=21451
+       *     See studio_stats.proto;l=21658
        * @param value The themeDetailsDurationMs to set.
        * @return This builder for chaining.
        */
@@ -2336,7 +2336,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional int64 theme_details_duration_ms = 9 [deprecated = true];</code>
        * @deprecated android_studio.ChangeReviewEvent.Session.theme_details_duration_ms is deprecated.
-       *     See studio_stats.proto;l=21451
+       *     See studio_stats.proto;l=21658
        * @return This builder for chaining.
        */
       @java.lang.Deprecated public Builder clearThemeDetailsDurationMs() {
@@ -2475,7 +2475,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional string failure_reason = 13 [deprecated = true];</code>
        * @deprecated android_studio.ChangeReviewEvent.Session.failure_reason is deprecated.
-       *     See studio_stats.proto;l=21457
+       *     See studio_stats.proto;l=21664
        * @return Whether the failureReason field is set.
        */
       @java.lang.Deprecated public boolean hasFailureReason() {
@@ -2489,7 +2489,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional string failure_reason = 13 [deprecated = true];</code>
        * @deprecated android_studio.ChangeReviewEvent.Session.failure_reason is deprecated.
-       *     See studio_stats.proto;l=21457
+       *     See studio_stats.proto;l=21664
        * @return The failureReason.
        */
       @java.lang.Deprecated public java.lang.String getFailureReason() {
@@ -2514,7 +2514,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional string failure_reason = 13 [deprecated = true];</code>
        * @deprecated android_studio.ChangeReviewEvent.Session.failure_reason is deprecated.
-       *     See studio_stats.proto;l=21457
+       *     See studio_stats.proto;l=21664
        * @return The bytes for failureReason.
        */
       @java.lang.Deprecated public com.google.protobuf.ByteString
@@ -2538,7 +2538,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional string failure_reason = 13 [deprecated = true];</code>
        * @deprecated android_studio.ChangeReviewEvent.Session.failure_reason is deprecated.
-       *     See studio_stats.proto;l=21457
+       *     See studio_stats.proto;l=21664
        * @param value The failureReason to set.
        * @return This builder for chaining.
        */
@@ -2558,7 +2558,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional string failure_reason = 13 [deprecated = true];</code>
        * @deprecated android_studio.ChangeReviewEvent.Session.failure_reason is deprecated.
-       *     See studio_stats.proto;l=21457
+       *     See studio_stats.proto;l=21664
        * @return This builder for chaining.
        */
       @java.lang.Deprecated public Builder clearFailureReason() {
@@ -2575,7 +2575,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional string failure_reason = 13 [deprecated = true];</code>
        * @deprecated android_studio.ChangeReviewEvent.Session.failure_reason is deprecated.
-       *     See studio_stats.proto;l=21457
+       *     See studio_stats.proto;l=21664
        * @param value The bytes for failureReason to set.
        * @return This builder for chaining.
        */
@@ -2905,7 +2905,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional int32 num_suggestions_successful = 3 [deprecated = true];</code>
      * @deprecated android_studio.ChangeReviewEvent.FixBatch.num_suggestions_successful is deprecated.
-     *     See studio_stats.proto;l=21470
+     *     See studio_stats.proto;l=21677
      * @return Whether the numSuggestionsSuccessful field is set.
      */
     @java.lang.Deprecated boolean hasNumSuggestionsSuccessful();
@@ -2918,7 +2918,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional int32 num_suggestions_successful = 3 [deprecated = true];</code>
      * @deprecated android_studio.ChangeReviewEvent.FixBatch.num_suggestions_successful is deprecated.
-     *     See studio_stats.proto;l=21470
+     *     See studio_stats.proto;l=21677
      * @return The numSuggestionsSuccessful.
      */
     @java.lang.Deprecated int getNumSuggestionsSuccessful();
@@ -2930,7 +2930,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional int32 num_suggestions_failed = 4 [deprecated = true];</code>
      * @deprecated android_studio.ChangeReviewEvent.FixBatch.num_suggestions_failed is deprecated.
-     *     See studio_stats.proto;l=21472
+     *     See studio_stats.proto;l=21679
      * @return Whether the numSuggestionsFailed field is set.
      */
     @java.lang.Deprecated boolean hasNumSuggestionsFailed();
@@ -2941,7 +2941,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional int32 num_suggestions_failed = 4 [deprecated = true];</code>
      * @deprecated android_studio.ChangeReviewEvent.FixBatch.num_suggestions_failed is deprecated.
-     *     See studio_stats.proto;l=21472
+     *     See studio_stats.proto;l=21679
      * @return The numSuggestionsFailed.
      */
     @java.lang.Deprecated int getNumSuggestionsFailed();
@@ -3114,7 +3114,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional int32 num_suggestions_successful = 3 [deprecated = true];</code>
      * @deprecated android_studio.ChangeReviewEvent.FixBatch.num_suggestions_successful is deprecated.
-     *     See studio_stats.proto;l=21470
+     *     See studio_stats.proto;l=21677
      * @return Whether the numSuggestionsSuccessful field is set.
      */
     @java.lang.Override
@@ -3130,7 +3130,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional int32 num_suggestions_successful = 3 [deprecated = true];</code>
      * @deprecated android_studio.ChangeReviewEvent.FixBatch.num_suggestions_successful is deprecated.
-     *     See studio_stats.proto;l=21470
+     *     See studio_stats.proto;l=21677
      * @return The numSuggestionsSuccessful.
      */
     @java.lang.Override
@@ -3147,7 +3147,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional int32 num_suggestions_failed = 4 [deprecated = true];</code>
      * @deprecated android_studio.ChangeReviewEvent.FixBatch.num_suggestions_failed is deprecated.
-     *     See studio_stats.proto;l=21472
+     *     See studio_stats.proto;l=21679
      * @return Whether the numSuggestionsFailed field is set.
      */
     @java.lang.Override
@@ -3161,7 +3161,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional int32 num_suggestions_failed = 4 [deprecated = true];</code>
      * @deprecated android_studio.ChangeReviewEvent.FixBatch.num_suggestions_failed is deprecated.
-     *     See studio_stats.proto;l=21472
+     *     See studio_stats.proto;l=21679
      * @return The numSuggestionsFailed.
      */
     @java.lang.Override
@@ -3888,7 +3888,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional int32 num_suggestions_successful = 3 [deprecated = true];</code>
        * @deprecated android_studio.ChangeReviewEvent.FixBatch.num_suggestions_successful is deprecated.
-       *     See studio_stats.proto;l=21470
+       *     See studio_stats.proto;l=21677
        * @return Whether the numSuggestionsSuccessful field is set.
        */
       @java.lang.Override
@@ -3904,7 +3904,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional int32 num_suggestions_successful = 3 [deprecated = true];</code>
        * @deprecated android_studio.ChangeReviewEvent.FixBatch.num_suggestions_successful is deprecated.
-       *     See studio_stats.proto;l=21470
+       *     See studio_stats.proto;l=21677
        * @return The numSuggestionsSuccessful.
        */
       @java.lang.Override
@@ -3920,7 +3920,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional int32 num_suggestions_successful = 3 [deprecated = true];</code>
        * @deprecated android_studio.ChangeReviewEvent.FixBatch.num_suggestions_successful is deprecated.
-       *     See studio_stats.proto;l=21470
+       *     See studio_stats.proto;l=21677
        * @param value The numSuggestionsSuccessful to set.
        * @return This builder for chaining.
        */
@@ -3940,7 +3940,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional int32 num_suggestions_successful = 3 [deprecated = true];</code>
        * @deprecated android_studio.ChangeReviewEvent.FixBatch.num_suggestions_successful is deprecated.
-       *     See studio_stats.proto;l=21470
+       *     See studio_stats.proto;l=21677
        * @return This builder for chaining.
        */
       @java.lang.Deprecated public Builder clearNumSuggestionsSuccessful() {
@@ -3958,7 +3958,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional int32 num_suggestions_failed = 4 [deprecated = true];</code>
        * @deprecated android_studio.ChangeReviewEvent.FixBatch.num_suggestions_failed is deprecated.
-       *     See studio_stats.proto;l=21472
+       *     See studio_stats.proto;l=21679
        * @return Whether the numSuggestionsFailed field is set.
        */
       @java.lang.Override
@@ -3972,7 +3972,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional int32 num_suggestions_failed = 4 [deprecated = true];</code>
        * @deprecated android_studio.ChangeReviewEvent.FixBatch.num_suggestions_failed is deprecated.
-       *     See studio_stats.proto;l=21472
+       *     See studio_stats.proto;l=21679
        * @return The numSuggestionsFailed.
        */
       @java.lang.Override
@@ -3986,7 +3986,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional int32 num_suggestions_failed = 4 [deprecated = true];</code>
        * @deprecated android_studio.ChangeReviewEvent.FixBatch.num_suggestions_failed is deprecated.
-       *     See studio_stats.proto;l=21472
+       *     See studio_stats.proto;l=21679
        * @param value The numSuggestionsFailed to set.
        * @return This builder for chaining.
        */
@@ -4004,7 +4004,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional int32 num_suggestions_failed = 4 [deprecated = true];</code>
        * @deprecated android_studio.ChangeReviewEvent.FixBatch.num_suggestions_failed is deprecated.
-       *     See studio_stats.proto;l=21472
+       *     See studio_stats.proto;l=21679
        * @return This builder for chaining.
        */
       @java.lang.Deprecated public Builder clearNumSuggestionsFailed() {

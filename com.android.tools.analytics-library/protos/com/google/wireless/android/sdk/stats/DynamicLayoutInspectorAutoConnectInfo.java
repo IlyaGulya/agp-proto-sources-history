@@ -672,7 +672,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>optional .android_studio.DynamicLayoutInspectorAutoConnectInfo.HandshakeUnknownConversion handshake_conversion = 2 [deprecated = true];</code>
    * @deprecated android_studio.DynamicLayoutInspectorAutoConnectInfo.handshake_conversion is deprecated.
-   *     See studio_stats.proto;l=10616
+   *     See studio_stats.proto;l=10622
    * @return Whether the handshakeConversion field is set.
    */
   @java.lang.Override @java.lang.Deprecated public boolean hasHandshakeConversion() {
@@ -685,7 +685,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>optional .android_studio.DynamicLayoutInspectorAutoConnectInfo.HandshakeUnknownConversion handshake_conversion = 2 [deprecated = true];</code>
    * @deprecated android_studio.DynamicLayoutInspectorAutoConnectInfo.handshake_conversion is deprecated.
-   *     See studio_stats.proto;l=10616
+   *     See studio_stats.proto;l=10622
    * @return The handshakeConversion.
    */
   @java.lang.Override @java.lang.Deprecated public com.google.wireless.android.sdk.stats.DynamicLayoutInspectorAutoConnectInfo.HandshakeUnknownConversion getHandshakeConversion() {
@@ -1312,7 +1312,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional .android_studio.DynamicLayoutInspectorAutoConnectInfo.HandshakeUnknownConversion handshake_conversion = 2 [deprecated = true];</code>
      * @deprecated android_studio.DynamicLayoutInspectorAutoConnectInfo.handshake_conversion is deprecated.
-     *     See studio_stats.proto;l=10616
+     *     See studio_stats.proto;l=10622
      * @return Whether the handshakeConversion field is set.
      */
     @java.lang.Override @java.lang.Deprecated public boolean hasHandshakeConversion() {
@@ -1325,7 +1325,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional .android_studio.DynamicLayoutInspectorAutoConnectInfo.HandshakeUnknownConversion handshake_conversion = 2 [deprecated = true];</code>
      * @deprecated android_studio.DynamicLayoutInspectorAutoConnectInfo.handshake_conversion is deprecated.
-     *     See studio_stats.proto;l=10616
+     *     See studio_stats.proto;l=10622
      * @return The handshakeConversion.
      */
     @java.lang.Override
@@ -1340,7 +1340,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional .android_studio.DynamicLayoutInspectorAutoConnectInfo.HandshakeUnknownConversion handshake_conversion = 2 [deprecated = true];</code>
      * @deprecated android_studio.DynamicLayoutInspectorAutoConnectInfo.handshake_conversion is deprecated.
-     *     See studio_stats.proto;l=10616
+     *     See studio_stats.proto;l=10622
      * @param value The handshakeConversion to set.
      * @return This builder for chaining.
      */
@@ -1360,7 +1360,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional .android_studio.DynamicLayoutInspectorAutoConnectInfo.HandshakeUnknownConversion handshake_conversion = 2 [deprecated = true];</code>
      * @deprecated android_studio.DynamicLayoutInspectorAutoConnectInfo.handshake_conversion is deprecated.
-     *     See studio_stats.proto;l=10616
+     *     See studio_stats.proto;l=10622
      * @return This builder for chaining.
      */
     @java.lang.Deprecated public Builder clearHandshakeConversion() {

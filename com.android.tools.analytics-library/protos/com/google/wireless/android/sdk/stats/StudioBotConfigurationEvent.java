@@ -462,6 +462,14 @@ private static final long serialVersionUID = 0L;
          * <code>ENTRY_POINT_BACKGROUND = 2;</code>
          */
         ENTRY_POINT_BACKGROUND(2),
+        /**
+         * <pre>
+         * User started onboarding from the ACP promotional banner.
+         * </pre>
+         *
+         * <code>ENTRY_POINT_ACP_PROMOTION = 3;</code>
+         */
+        ENTRY_POINT_ACP_PROMOTION(3),
         ;
 
         /**
@@ -485,6 +493,14 @@ private static final long serialVersionUID = 0L;
          * <code>ENTRY_POINT_BACKGROUND = 2;</code>
          */
         public static final int ENTRY_POINT_BACKGROUND_VALUE = 2;
+        /**
+         * <pre>
+         * User started onboarding from the ACP promotional banner.
+         * </pre>
+         *
+         * <code>ENTRY_POINT_ACP_PROMOTION = 3;</code>
+         */
+        public static final int ENTRY_POINT_ACP_PROMOTION_VALUE = 3;
 
 
         public final int getNumber() {
@@ -510,6 +526,7 @@ private static final long serialVersionUID = 0L;
             case 0: return ENTRY_POINT_UNKNOWN;
             case 1: return ENTRY_POINT_MODEL_PICKER;
             case 2: return ENTRY_POINT_BACKGROUND;
+            case 3: return ENTRY_POINT_ACP_PROMOTION;
             default: return null;
           }
         }
@@ -1293,6 +1310,23 @@ private static final long serialVersionUID = 0L;
          * <code>PAGE_ENTERPRISE_SELF_ASSIGN_LICENSE = 6;</code>
          */
         PAGE_ENTERPRISE_SELF_ASSIGN_LICENSE(6),
+        /**
+         * <pre>
+         * Landing screen where user selects between built-in and external ACP
+         * agents.
+         * </pre>
+         *
+         * <code>PAGE_AGENT_SELECTION = 7;</code>
+         */
+        PAGE_AGENT_SELECTION(7),
+        /**
+         * <pre>
+         * Terms of service review before installing an external ACP agent.
+         * </pre>
+         *
+         * <code>PAGE_AGENT_TERMS = 8;</code>
+         */
+        PAGE_AGENT_TERMS(8),
         ;
 
         /**
@@ -1343,6 +1377,23 @@ private static final long serialVersionUID = 0L;
          * <code>PAGE_ENTERPRISE_SELF_ASSIGN_LICENSE = 6;</code>
          */
         public static final int PAGE_ENTERPRISE_SELF_ASSIGN_LICENSE_VALUE = 6;
+        /**
+         * <pre>
+         * Landing screen where user selects between built-in and external ACP
+         * agents.
+         * </pre>
+         *
+         * <code>PAGE_AGENT_SELECTION = 7;</code>
+         */
+        public static final int PAGE_AGENT_SELECTION_VALUE = 7;
+        /**
+         * <pre>
+         * Terms of service review before installing an external ACP agent.
+         * </pre>
+         *
+         * <code>PAGE_AGENT_TERMS = 8;</code>
+         */
+        public static final int PAGE_AGENT_TERMS_VALUE = 8;
 
 
         public final int getNumber() {
@@ -1372,6 +1423,8 @@ private static final long serialVersionUID = 0L;
             case 4: return PAGE_PRODUCT_TIER_SELECTION;
             case 5: return PAGE_ENTERPRISE_LICENSE_SELECTION;
             case 6: return PAGE_ENTERPRISE_SELF_ASSIGN_LICENSE;
+            case 7: return PAGE_AGENT_SELECTION;
+            case 8: return PAGE_AGENT_TERMS;
             default: return null;
           }
         }
@@ -5777,7 +5830,728 @@ private static final long serialVersionUID = 0L;
 
   }
 
+  public interface EventEnvelopeOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:android_studio.StudioBotConfigurationEvent.EventEnvelope)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Details of the agent (built-in or external ACP agent) for this event.
+     * Reuses the standardized GeminiTelemetryEvent.AgentInfo.
+     * </pre>
+     *
+     * <code>optional .android_studio.GeminiTelemetryEvent.AgentInfo agent_info = 1;</code>
+     * @return Whether the agentInfo field is set.
+     */
+    boolean hasAgentInfo();
+    /**
+     * <pre>
+     * Details of the agent (built-in or external ACP agent) for this event.
+     * Reuses the standardized GeminiTelemetryEvent.AgentInfo.
+     * </pre>
+     *
+     * <code>optional .android_studio.GeminiTelemetryEvent.AgentInfo agent_info = 1;</code>
+     * @return The agentInfo.
+     */
+    com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentInfo getAgentInfo();
+    /**
+     * <pre>
+     * Details of the agent (built-in or external ACP agent) for this event.
+     * Reuses the standardized GeminiTelemetryEvent.AgentInfo.
+     * </pre>
+     *
+     * <code>optional .android_studio.GeminiTelemetryEvent.AgentInfo agent_info = 1;</code>
+     */
+    com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentInfoOrBuilder getAgentInfoOrBuilder();
+  }
+  /**
+   * <pre>
+   * The envelope holds common metadata across Studio Bot configuration events.
+   * </pre>
+   *
+   * Protobuf type {@code android_studio.StudioBotConfigurationEvent.EventEnvelope}
+   */
+  public static final class EventEnvelope extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:android_studio.StudioBotConfigurationEvent.EventEnvelope)
+      EventEnvelopeOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use EventEnvelope.newBuilder() to construct.
+    private EventEnvelope(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private EventEnvelope() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new EventEnvelope();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_StudioBotConfigurationEvent_EventEnvelope_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_StudioBotConfigurationEvent_EventEnvelope_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.EventEnvelope.class, com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.EventEnvelope.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int AGENT_INFO_FIELD_NUMBER = 1;
+    private com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentInfo agentInfo_;
+    /**
+     * <pre>
+     * Details of the agent (built-in or external ACP agent) for this event.
+     * Reuses the standardized GeminiTelemetryEvent.AgentInfo.
+     * </pre>
+     *
+     * <code>optional .android_studio.GeminiTelemetryEvent.AgentInfo agent_info = 1;</code>
+     * @return Whether the agentInfo field is set.
+     */
+    @java.lang.Override
+    public boolean hasAgentInfo() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <pre>
+     * Details of the agent (built-in or external ACP agent) for this event.
+     * Reuses the standardized GeminiTelemetryEvent.AgentInfo.
+     * </pre>
+     *
+     * <code>optional .android_studio.GeminiTelemetryEvent.AgentInfo agent_info = 1;</code>
+     * @return The agentInfo.
+     */
+    @java.lang.Override
+    public com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentInfo getAgentInfo() {
+      return agentInfo_ == null ? com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentInfo.getDefaultInstance() : agentInfo_;
+    }
+    /**
+     * <pre>
+     * Details of the agent (built-in or external ACP agent) for this event.
+     * Reuses the standardized GeminiTelemetryEvent.AgentInfo.
+     * </pre>
+     *
+     * <code>optional .android_studio.GeminiTelemetryEvent.AgentInfo agent_info = 1;</code>
+     */
+    @java.lang.Override
+    public com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentInfoOrBuilder getAgentInfoOrBuilder() {
+      return agentInfo_ == null ? com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentInfo.getDefaultInstance() : agentInfo_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (((bitField0_ & 0x00000001) != 0)) {
+        output.writeMessage(1, getAgentInfo());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getAgentInfo());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.EventEnvelope)) {
+        return super.equals(obj);
+      }
+      com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.EventEnvelope other = (com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.EventEnvelope) obj;
+
+      if (hasAgentInfo() != other.hasAgentInfo()) return false;
+      if (hasAgentInfo()) {
+        if (!getAgentInfo()
+            .equals(other.getAgentInfo())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasAgentInfo()) {
+        hash = (37 * hash) + AGENT_INFO_FIELD_NUMBER;
+        hash = (53 * hash) + getAgentInfo().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.EventEnvelope parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.EventEnvelope parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.EventEnvelope parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.EventEnvelope parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.EventEnvelope parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.EventEnvelope parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.EventEnvelope parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.EventEnvelope parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.EventEnvelope parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.EventEnvelope parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.EventEnvelope parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.EventEnvelope parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.EventEnvelope prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * The envelope holds common metadata across Studio Bot configuration events.
+     * </pre>
+     *
+     * Protobuf type {@code android_studio.StudioBotConfigurationEvent.EventEnvelope}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:android_studio.StudioBotConfigurationEvent.EventEnvelope)
+        com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.EventEnvelopeOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_StudioBotConfigurationEvent_EventEnvelope_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_StudioBotConfigurationEvent_EventEnvelope_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.EventEnvelope.class, com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.EventEnvelope.Builder.class);
+      }
+
+      // Construct using com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.EventEnvelope.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getAgentInfoFieldBuilder();
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        agentInfo_ = null;
+        if (agentInfoBuilder_ != null) {
+          agentInfoBuilder_.dispose();
+          agentInfoBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_StudioBotConfigurationEvent_EventEnvelope_descriptor;
+      }
+
+      @java.lang.Override
+      public com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.EventEnvelope getDefaultInstanceForType() {
+        return com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.EventEnvelope.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.EventEnvelope build() {
+        com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.EventEnvelope result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.EventEnvelope buildPartial() {
+        com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.EventEnvelope result = new com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.EventEnvelope(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.EventEnvelope result) {
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.agentInfo_ = agentInfoBuilder_ == null
+              ? agentInfo_
+              : agentInfoBuilder_.build();
+          to_bitField0_ |= 0x00000001;
+        }
+        result.bitField0_ |= to_bitField0_;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.EventEnvelope) {
+          return mergeFrom((com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.EventEnvelope)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.EventEnvelope other) {
+        if (other == com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.EventEnvelope.getDefaultInstance()) return this;
+        if (other.hasAgentInfo()) {
+          mergeAgentInfo(other.getAgentInfo());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getAgentInfoFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentInfo agentInfo_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentInfo, com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentInfo.Builder, com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentInfoOrBuilder> agentInfoBuilder_;
+      /**
+       * <pre>
+       * Details of the agent (built-in or external ACP agent) for this event.
+       * Reuses the standardized GeminiTelemetryEvent.AgentInfo.
+       * </pre>
+       *
+       * <code>optional .android_studio.GeminiTelemetryEvent.AgentInfo agent_info = 1;</code>
+       * @return Whether the agentInfo field is set.
+       */
+      public boolean hasAgentInfo() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <pre>
+       * Details of the agent (built-in or external ACP agent) for this event.
+       * Reuses the standardized GeminiTelemetryEvent.AgentInfo.
+       * </pre>
+       *
+       * <code>optional .android_studio.GeminiTelemetryEvent.AgentInfo agent_info = 1;</code>
+       * @return The agentInfo.
+       */
+      public com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentInfo getAgentInfo() {
+        if (agentInfoBuilder_ == null) {
+          return agentInfo_ == null ? com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentInfo.getDefaultInstance() : agentInfo_;
+        } else {
+          return agentInfoBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Details of the agent (built-in or external ACP agent) for this event.
+       * Reuses the standardized GeminiTelemetryEvent.AgentInfo.
+       * </pre>
+       *
+       * <code>optional .android_studio.GeminiTelemetryEvent.AgentInfo agent_info = 1;</code>
+       */
+      public Builder setAgentInfo(com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentInfo value) {
+        if (agentInfoBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          agentInfo_ = value;
+        } else {
+          agentInfoBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Details of the agent (built-in or external ACP agent) for this event.
+       * Reuses the standardized GeminiTelemetryEvent.AgentInfo.
+       * </pre>
+       *
+       * <code>optional .android_studio.GeminiTelemetryEvent.AgentInfo agent_info = 1;</code>
+       */
+      public Builder setAgentInfo(
+          com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentInfo.Builder builderForValue) {
+        if (agentInfoBuilder_ == null) {
+          agentInfo_ = builderForValue.build();
+        } else {
+          agentInfoBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Details of the agent (built-in or external ACP agent) for this event.
+       * Reuses the standardized GeminiTelemetryEvent.AgentInfo.
+       * </pre>
+       *
+       * <code>optional .android_studio.GeminiTelemetryEvent.AgentInfo agent_info = 1;</code>
+       */
+      public Builder mergeAgentInfo(com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentInfo value) {
+        if (agentInfoBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            agentInfo_ != null &&
+            agentInfo_ != com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentInfo.getDefaultInstance()) {
+            getAgentInfoBuilder().mergeFrom(value);
+          } else {
+            agentInfo_ = value;
+          }
+        } else {
+          agentInfoBuilder_.mergeFrom(value);
+        }
+        if (agentInfo_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Details of the agent (built-in or external ACP agent) for this event.
+       * Reuses the standardized GeminiTelemetryEvent.AgentInfo.
+       * </pre>
+       *
+       * <code>optional .android_studio.GeminiTelemetryEvent.AgentInfo agent_info = 1;</code>
+       */
+      public Builder clearAgentInfo() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        agentInfo_ = null;
+        if (agentInfoBuilder_ != null) {
+          agentInfoBuilder_.dispose();
+          agentInfoBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Details of the agent (built-in or external ACP agent) for this event.
+       * Reuses the standardized GeminiTelemetryEvent.AgentInfo.
+       * </pre>
+       *
+       * <code>optional .android_studio.GeminiTelemetryEvent.AgentInfo agent_info = 1;</code>
+       */
+      public com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentInfo.Builder getAgentInfoBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getAgentInfoFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Details of the agent (built-in or external ACP agent) for this event.
+       * Reuses the standardized GeminiTelemetryEvent.AgentInfo.
+       * </pre>
+       *
+       * <code>optional .android_studio.GeminiTelemetryEvent.AgentInfo agent_info = 1;</code>
+       */
+      public com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentInfoOrBuilder getAgentInfoOrBuilder() {
+        if (agentInfoBuilder_ != null) {
+          return agentInfoBuilder_.getMessageOrBuilder();
+        } else {
+          return agentInfo_ == null ?
+              com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentInfo.getDefaultInstance() : agentInfo_;
+        }
+      }
+      /**
+       * <pre>
+       * Details of the agent (built-in or external ACP agent) for this event.
+       * Reuses the standardized GeminiTelemetryEvent.AgentInfo.
+       * </pre>
+       *
+       * <code>optional .android_studio.GeminiTelemetryEvent.AgentInfo agent_info = 1;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentInfo, com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentInfo.Builder, com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentInfoOrBuilder> 
+          getAgentInfoFieldBuilder() {
+        if (agentInfoBuilder_ == null) {
+          agentInfoBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentInfo, com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentInfo.Builder, com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.AgentInfoOrBuilder>(
+                  getAgentInfo(),
+                  getParentForChildren(),
+                  isClean());
+          agentInfo_ = null;
+        }
+        return agentInfoBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:android_studio.StudioBotConfigurationEvent.EventEnvelope)
+    }
+
+    // @@protoc_insertion_point(class_scope:android_studio.StudioBotConfigurationEvent.EventEnvelope)
+    private static final com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.EventEnvelope DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.EventEnvelope();
+    }
+
+    public static com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.EventEnvelope getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<EventEnvelope>
+        PARSER = new com.google.protobuf.AbstractParser<EventEnvelope>() {
+      @java.lang.Override
+      public EventEnvelope parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<EventEnvelope> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<EventEnvelope> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.EventEnvelope getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private int bitField0_;
+  public static final int ENVELOPE_FIELD_NUMBER = 2;
+  private com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.EventEnvelope envelope_;
+  /**
+   * <code>optional .android_studio.StudioBotConfigurationEvent.EventEnvelope envelope = 2;</code>
+   * @return Whether the envelope field is set.
+   */
+  @java.lang.Override
+  public boolean hasEnvelope() {
+    return ((bitField0_ & 0x00000001) != 0);
+  }
+  /**
+   * <code>optional .android_studio.StudioBotConfigurationEvent.EventEnvelope envelope = 2;</code>
+   * @return The envelope.
+   */
+  @java.lang.Override
+  public com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.EventEnvelope getEnvelope() {
+    return envelope_ == null ? com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.EventEnvelope.getDefaultInstance() : envelope_;
+  }
+  /**
+   * <code>optional .android_studio.StudioBotConfigurationEvent.EventEnvelope envelope = 2;</code>
+   */
+  @java.lang.Override
+  public com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.EventEnvelopeOrBuilder getEnvelopeOrBuilder() {
+    return envelope_ == null ? com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.EventEnvelope.getDefaultInstance() : envelope_;
+  }
+
   public static final int ONBOARDING_EVENT_FIELD_NUMBER = 1;
   private com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.OnboardingEvent onboardingEvent_;
   /**
@@ -5786,7 +6560,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasOnboardingEvent() {
-    return ((bitField0_ & 0x00000001) != 0);
+    return ((bitField0_ & 0x00000002) != 0);
   }
   /**
    * <code>optional .android_studio.StudioBotConfigurationEvent.OnboardingEvent onboarding_event = 1;</code>
@@ -5818,8 +6592,11 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (((bitField0_ & 0x00000001) != 0)) {
+    if (((bitField0_ & 0x00000002) != 0)) {
       output.writeMessage(1, getOnboardingEvent());
+    }
+    if (((bitField0_ & 0x00000001) != 0)) {
+      output.writeMessage(2, getEnvelope());
     }
     getUnknownFields().writeTo(output);
   }
@@ -5830,9 +6607,13 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (((bitField0_ & 0x00000001) != 0)) {
+    if (((bitField0_ & 0x00000002) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(1, getOnboardingEvent());
+    }
+    if (((bitField0_ & 0x00000001) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(2, getEnvelope());
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -5849,6 +6630,11 @@ private static final long serialVersionUID = 0L;
     }
     com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent other = (com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent) obj;
 
+    if (hasEnvelope() != other.hasEnvelope()) return false;
+    if (hasEnvelope()) {
+      if (!getEnvelope()
+          .equals(other.getEnvelope())) return false;
+    }
     if (hasOnboardingEvent() != other.hasOnboardingEvent()) return false;
     if (hasOnboardingEvent()) {
       if (!getOnboardingEvent()
@@ -5865,6 +6651,10 @@ private static final long serialVersionUID = 0L;
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
+    if (hasEnvelope()) {
+      hash = (37 * hash) + ENVELOPE_FIELD_NUMBER;
+      hash = (53 * hash) + getEnvelope().hashCode();
+    }
     if (hasOnboardingEvent()) {
       hash = (37 * hash) + ONBOARDING_EVENT_FIELD_NUMBER;
       hash = (53 * hash) + getOnboardingEvent().hashCode();
@@ -6003,6 +6793,7 @@ private static final long serialVersionUID = 0L;
     private void maybeForceBuilderInitialization() {
       if (com.google.protobuf.GeneratedMessageV3
               .alwaysUseFieldBuilders) {
+        getEnvelopeFieldBuilder();
         getOnboardingEventFieldBuilder();
       }
     }
@@ -6010,6 +6801,11 @@ private static final long serialVersionUID = 0L;
     public Builder clear() {
       super.clear();
       bitField0_ = 0;
+      envelope_ = null;
+      if (envelopeBuilder_ != null) {
+        envelopeBuilder_.dispose();
+        envelopeBuilder_ = null;
+      }
       onboardingEvent_ = null;
       if (onboardingEventBuilder_ != null) {
         onboardingEventBuilder_.dispose();
@@ -6050,10 +6846,16 @@ private static final long serialVersionUID = 0L;
       int from_bitField0_ = bitField0_;
       int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.envelope_ = envelopeBuilder_ == null
+            ? envelope_
+            : envelopeBuilder_.build();
+        to_bitField0_ |= 0x00000001;
+      }
+      if (((from_bitField0_ & 0x00000002) != 0)) {
         result.onboardingEvent_ = onboardingEventBuilder_ == null
             ? onboardingEvent_
             : onboardingEventBuilder_.build();
-        to_bitField0_ |= 0x00000001;
+        to_bitField0_ |= 0x00000002;
       }
       result.bitField0_ |= to_bitField0_;
     }
@@ -6102,6 +6904,9 @@ private static final long serialVersionUID = 0L;
 
     public Builder mergeFrom(com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent other) {
       if (other == com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.getDefaultInstance()) return this;
+      if (other.hasEnvelope()) {
+        mergeEnvelope(other.getEnvelope());
+      }
       if (other.hasOnboardingEvent()) {
         mergeOnboardingEvent(other.getOnboardingEvent());
       }
@@ -6135,9 +6940,16 @@ private static final long serialVersionUID = 0L;
               input.readMessage(
                   getOnboardingEventFieldBuilder().getBuilder(),
                   extensionRegistry);
-              bitField0_ |= 0x00000001;
+              bitField0_ |= 0x00000002;
               break;
             } // case 10
+            case 18: {
+              input.readMessage(
+                  getEnvelopeFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000001;
+              break;
+            } // case 18
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -6155,6 +6967,127 @@ private static final long serialVersionUID = 0L;
     }
     private int bitField0_;
 
+    private com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.EventEnvelope envelope_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.EventEnvelope, com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.EventEnvelope.Builder, com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.EventEnvelopeOrBuilder> envelopeBuilder_;
+    /**
+     * <code>optional .android_studio.StudioBotConfigurationEvent.EventEnvelope envelope = 2;</code>
+     * @return Whether the envelope field is set.
+     */
+    public boolean hasEnvelope() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <code>optional .android_studio.StudioBotConfigurationEvent.EventEnvelope envelope = 2;</code>
+     * @return The envelope.
+     */
+    public com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.EventEnvelope getEnvelope() {
+      if (envelopeBuilder_ == null) {
+        return envelope_ == null ? com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.EventEnvelope.getDefaultInstance() : envelope_;
+      } else {
+        return envelopeBuilder_.getMessage();
+      }
+    }
+    /**
+     * <code>optional .android_studio.StudioBotConfigurationEvent.EventEnvelope envelope = 2;</code>
+     */
+    public Builder setEnvelope(com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.EventEnvelope value) {
+      if (envelopeBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        envelope_ = value;
+      } else {
+        envelopeBuilder_.setMessage(value);
+      }
+      bitField0_ |= 0x00000001;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>optional .android_studio.StudioBotConfigurationEvent.EventEnvelope envelope = 2;</code>
+     */
+    public Builder setEnvelope(
+        com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.EventEnvelope.Builder builderForValue) {
+      if (envelopeBuilder_ == null) {
+        envelope_ = builderForValue.build();
+      } else {
+        envelopeBuilder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x00000001;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>optional .android_studio.StudioBotConfigurationEvent.EventEnvelope envelope = 2;</code>
+     */
+    public Builder mergeEnvelope(com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.EventEnvelope value) {
+      if (envelopeBuilder_ == null) {
+        if (((bitField0_ & 0x00000001) != 0) &&
+          envelope_ != null &&
+          envelope_ != com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.EventEnvelope.getDefaultInstance()) {
+          getEnvelopeBuilder().mergeFrom(value);
+        } else {
+          envelope_ = value;
+        }
+      } else {
+        envelopeBuilder_.mergeFrom(value);
+      }
+      if (envelope_ != null) {
+        bitField0_ |= 0x00000001;
+        onChanged();
+      }
+      return this;
+    }
+    /**
+     * <code>optional .android_studio.StudioBotConfigurationEvent.EventEnvelope envelope = 2;</code>
+     */
+    public Builder clearEnvelope() {
+      bitField0_ = (bitField0_ & ~0x00000001);
+      envelope_ = null;
+      if (envelopeBuilder_ != null) {
+        envelopeBuilder_.dispose();
+        envelopeBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>optional .android_studio.StudioBotConfigurationEvent.EventEnvelope envelope = 2;</code>
+     */
+    public com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.EventEnvelope.Builder getEnvelopeBuilder() {
+      bitField0_ |= 0x00000001;
+      onChanged();
+      return getEnvelopeFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>optional .android_studio.StudioBotConfigurationEvent.EventEnvelope envelope = 2;</code>
+     */
+    public com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.EventEnvelopeOrBuilder getEnvelopeOrBuilder() {
+      if (envelopeBuilder_ != null) {
+        return envelopeBuilder_.getMessageOrBuilder();
+      } else {
+        return envelope_ == null ?
+            com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.EventEnvelope.getDefaultInstance() : envelope_;
+      }
+    }
+    /**
+     * <code>optional .android_studio.StudioBotConfigurationEvent.EventEnvelope envelope = 2;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.EventEnvelope, com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.EventEnvelope.Builder, com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.EventEnvelopeOrBuilder> 
+        getEnvelopeFieldBuilder() {
+      if (envelopeBuilder_ == null) {
+        envelopeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.EventEnvelope, com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.EventEnvelope.Builder, com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.EventEnvelopeOrBuilder>(
+                getEnvelope(),
+                getParentForChildren(),
+                isClean());
+        envelope_ = null;
+      }
+      return envelopeBuilder_;
+    }
+
     private com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.OnboardingEvent onboardingEvent_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.OnboardingEvent, com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.OnboardingEvent.Builder, com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.OnboardingEventOrBuilder> onboardingEventBuilder_;
@@ -6163,7 +7096,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the onboardingEvent field is set.
      */
     public boolean hasOnboardingEvent() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <code>optional .android_studio.StudioBotConfigurationEvent.OnboardingEvent onboarding_event = 1;</code>
@@ -6188,7 +7121,7 @@ private static final long serialVersionUID = 0L;
       } else {
         onboardingEventBuilder_.setMessage(value);
       }
-      bitField0_ |= 0x00000001;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -6202,7 +7135,7 @@ private static final long serialVersionUID = 0L;
       } else {
         onboardingEventBuilder_.setMessage(builderForValue.build());
       }
-      bitField0_ |= 0x00000001;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -6211,7 +7144,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeOnboardingEvent(com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.OnboardingEvent value) {
       if (onboardingEventBuilder_ == null) {
-        if (((bitField0_ & 0x00000001) != 0) &&
+        if (((bitField0_ & 0x00000002) != 0) &&
           onboardingEvent_ != null &&
           onboardingEvent_ != com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.OnboardingEvent.getDefaultInstance()) {
           getOnboardingEventBuilder().mergeFrom(value);
@@ -6222,7 +7155,7 @@ private static final long serialVersionUID = 0L;
         onboardingEventBuilder_.mergeFrom(value);
       }
       if (onboardingEvent_ != null) {
-        bitField0_ |= 0x00000001;
+        bitField0_ |= 0x00000002;
         onChanged();
       }
       return this;
@@ -6231,7 +7164,7 @@ private static final long serialVersionUID = 0L;
      * <code>optional .android_studio.StudioBotConfigurationEvent.OnboardingEvent onboarding_event = 1;</code>
      */
     public Builder clearOnboardingEvent() {
-      bitField0_ = (bitField0_ & ~0x00000001);
+      bitField0_ = (bitField0_ & ~0x00000002);
       onboardingEvent_ = null;
       if (onboardingEventBuilder_ != null) {
         onboardingEventBuilder_.dispose();
@@ -6244,7 +7177,7 @@ private static final long serialVersionUID = 0L;
      * <code>optional .android_studio.StudioBotConfigurationEvent.OnboardingEvent onboarding_event = 1;</code>
      */
     public com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.OnboardingEvent.Builder getOnboardingEventBuilder() {
-      bitField0_ |= 0x00000001;
+      bitField0_ |= 0x00000002;
       onChanged();
       return getOnboardingEventFieldBuilder().getBuilder();
     }

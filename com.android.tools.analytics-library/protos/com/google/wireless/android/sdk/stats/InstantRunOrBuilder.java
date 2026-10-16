@@ -36,7 +36,7 @@ public interface InstantRunOrBuilder extends
    *
    * <code>optional .android_studio.InstantRun.InstantRunBuildCause instant_run_build_cause = 3 [deprecated = true];</code>
    * @deprecated android_studio.InstantRun.instant_run_build_cause is deprecated.
-   *     See studio_stats.proto;l=4706
+   *     See studio_stats.proto;l=4707
    * @return Whether the instantRunBuildCause field is set.
    */
   @java.lang.Deprecated boolean hasInstantRunBuildCause();
@@ -49,7 +49,7 @@ public interface InstantRunOrBuilder extends
    *
    * <code>optional .android_studio.InstantRun.InstantRunBuildCause instant_run_build_cause = 3 [deprecated = true];</code>
    * @deprecated android_studio.InstantRun.instant_run_build_cause is deprecated.
-   *     See studio_stats.proto;l=4706
+   *     See studio_stats.proto;l=4707
    * @return The instantRunBuildCause.
    */
   @java.lang.Deprecated com.google.wireless.android.sdk.stats.InstantRun.InstantRunBuildCause getInstantRunBuildCause();

@@ -15,7 +15,7 @@ public interface EmulatorAvdInfoOrBuilder extends
    *
    * <code>optional string name = 1 [deprecated = true];</code>
    * @deprecated android_studio.EmulatorAvdInfo.name is deprecated.
-   *     See studio_stats.proto;l=3403
+   *     See studio_stats.proto;l=3404
    * @return Whether the name field is set.
    */
   @java.lang.Deprecated boolean hasName();
@@ -26,7 +26,7 @@ public interface EmulatorAvdInfoOrBuilder extends
    *
    * <code>optional string name = 1 [deprecated = true];</code>
    * @deprecated android_studio.EmulatorAvdInfo.name is deprecated.
-   *     See studio_stats.proto;l=3403
+   *     See studio_stats.proto;l=3404
    * @return The name.
    */
   @java.lang.Deprecated java.lang.String getName();
@@ -37,7 +37,7 @@ public interface EmulatorAvdInfoOrBuilder extends
    *
    * <code>optional string name = 1 [deprecated = true];</code>
    * @deprecated android_studio.EmulatorAvdInfo.name is deprecated.
-   *     See studio_stats.proto;l=3403
+   *     See studio_stats.proto;l=3404
    * @return The bytes for name.
    */
   @java.lang.Deprecated com.google.protobuf.ByteString

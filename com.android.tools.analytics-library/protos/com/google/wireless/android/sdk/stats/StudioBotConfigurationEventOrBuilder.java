@@ -9,6 +9,21 @@ public interface StudioBotConfigurationEventOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
+   * <code>optional .android_studio.StudioBotConfigurationEvent.EventEnvelope envelope = 2;</code>
+   * @return Whether the envelope field is set.
+   */
+  boolean hasEnvelope();
+  /**
+   * <code>optional .android_studio.StudioBotConfigurationEvent.EventEnvelope envelope = 2;</code>
+   * @return The envelope.
+   */
+  com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.EventEnvelope getEnvelope();
+  /**
+   * <code>optional .android_studio.StudioBotConfigurationEvent.EventEnvelope envelope = 2;</code>
+   */
+  com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.EventEnvelopeOrBuilder getEnvelopeOrBuilder();
+
+  /**
    * <code>optional .android_studio.StudioBotConfigurationEvent.OnboardingEvent onboarding_event = 1;</code>
    * @return Whether the onboardingEvent field is set.
    */

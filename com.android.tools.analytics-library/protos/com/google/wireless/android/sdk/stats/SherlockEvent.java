@@ -4977,6 +4977,11 @@ private static final long serialVersionUID = 0L;
        */
       DEVICE_INITIALIZATION_STAGE_SDK_CHECK(1),
       /**
+       * <pre>
+       * Deprecated: superseded by the more specific DEVICE_PROPERTIES, APA_APK
+       * and GFXR_APK stages below. Still emitted by older Sherlock versions.
+       * </pre>
+       *
        * <code>DEVICE_INITIALIZATION_STAGE_APKS = 2;</code>
        */
       DEVICE_INITIALIZATION_STAGE_APKS(2),
@@ -4996,6 +5001,18 @@ private static final long serialVersionUID = 0L;
        * <code>DEVICE_INITIALIZATION_STAGE_GPU_COUNTERS = 6;</code>
        */
       DEVICE_INITIALIZATION_STAGE_GPU_COUNTERS(6),
+      /**
+       * <code>DEVICE_INITIALIZATION_STAGE_DEVICE_PROPERTIES = 7;</code>
+       */
+      DEVICE_INITIALIZATION_STAGE_DEVICE_PROPERTIES(7),
+      /**
+       * <code>DEVICE_INITIALIZATION_STAGE_APA_APK = 8;</code>
+       */
+      DEVICE_INITIALIZATION_STAGE_APA_APK(8),
+      /**
+       * <code>DEVICE_INITIALIZATION_STAGE_GFXR_APK = 9;</code>
+       */
+      DEVICE_INITIALIZATION_STAGE_GFXR_APK(9),
       ;
 
       /**
@@ -5007,6 +5024,11 @@ private static final long serialVersionUID = 0L;
        */
       public static final int DEVICE_INITIALIZATION_STAGE_SDK_CHECK_VALUE = 1;
       /**
+       * <pre>
+       * Deprecated: superseded by the more specific DEVICE_PROPERTIES, APA_APK
+       * and GFXR_APK stages below. Still emitted by older Sherlock versions.
+       * </pre>
+       *
        * <code>DEVICE_INITIALIZATION_STAGE_APKS = 2;</code>
        */
       public static final int DEVICE_INITIALIZATION_STAGE_APKS_VALUE = 2;
@@ -5026,6 +5048,18 @@ private static final long serialVersionUID = 0L;
        * <code>DEVICE_INITIALIZATION_STAGE_GPU_COUNTERS = 6;</code>
        */
       public static final int DEVICE_INITIALIZATION_STAGE_GPU_COUNTERS_VALUE = 6;
+      /**
+       * <code>DEVICE_INITIALIZATION_STAGE_DEVICE_PROPERTIES = 7;</code>
+       */
+      public static final int DEVICE_INITIALIZATION_STAGE_DEVICE_PROPERTIES_VALUE = 7;
+      /**
+       * <code>DEVICE_INITIALIZATION_STAGE_APA_APK = 8;</code>
+       */
+      public static final int DEVICE_INITIALIZATION_STAGE_APA_APK_VALUE = 8;
+      /**
+       * <code>DEVICE_INITIALIZATION_STAGE_GFXR_APK = 9;</code>
+       */
+      public static final int DEVICE_INITIALIZATION_STAGE_GFXR_APK_VALUE = 9;
 
 
       public final int getNumber() {
@@ -5055,6 +5089,9 @@ private static final long serialVersionUID = 0L;
           case 4: return DEVICE_INITIALIZATION_STAGE_DEVICE_DETAILS;
           case 5: return DEVICE_INITIALIZATION_STAGE_PERFETTO_CAPABILITIES;
           case 6: return DEVICE_INITIALIZATION_STAGE_GPU_COUNTERS;
+          case 7: return DEVICE_INITIALIZATION_STAGE_DEVICE_PROPERTIES;
+          case 8: return DEVICE_INITIALIZATION_STAGE_APA_APK;
+          case 9: return DEVICE_INITIALIZATION_STAGE_GFXR_APK;
           default: return null;
         }
       }

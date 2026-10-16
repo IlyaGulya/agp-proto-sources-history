@@ -232,7 +232,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>optional bool did_work = 2 [deprecated = true];</code>
    * @deprecated android_studio.GradleTaskExecution.did_work is deprecated.
-   *     See studio_stats.proto;l=6155
+   *     See studio_stats.proto;l=6156
    * @return Whether the didWork field is set.
    */
   @java.lang.Override
@@ -249,7 +249,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>optional bool did_work = 2 [deprecated = true];</code>
    * @deprecated android_studio.GradleTaskExecution.did_work is deprecated.
-   *     See studio_stats.proto;l=6155
+   *     See studio_stats.proto;l=6156
    * @return The didWork.
    */
   @java.lang.Override
@@ -267,7 +267,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>optional bool skipped = 3 [deprecated = true];</code>
    * @deprecated android_studio.GradleTaskExecution.skipped is deprecated.
-   *     See studio_stats.proto;l=6159
+   *     See studio_stats.proto;l=6160
    * @return Whether the skipped field is set.
    */
   @java.lang.Override
@@ -282,7 +282,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>optional bool skipped = 3 [deprecated = true];</code>
    * @deprecated android_studio.GradleTaskExecution.skipped is deprecated.
-   *     See studio_stats.proto;l=6159
+   *     See studio_stats.proto;l=6160
    * @return The skipped.
    */
   @java.lang.Override
@@ -300,7 +300,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>optional bool up_to_date = 4 [deprecated = true];</code>
    * @deprecated android_studio.GradleTaskExecution.up_to_date is deprecated.
-   *     See studio_stats.proto;l=6163
+   *     See studio_stats.proto;l=6164
    * @return Whether the upToDate field is set.
    */
   @java.lang.Override
@@ -315,7 +315,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>optional bool up_to_date = 4 [deprecated = true];</code>
    * @deprecated android_studio.GradleTaskExecution.up_to_date is deprecated.
-   *     See studio_stats.proto;l=6163
+   *     See studio_stats.proto;l=6164
    * @return The upToDate.
    */
   @java.lang.Override
@@ -333,7 +333,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>optional bool failed = 5 [deprecated = true];</code>
    * @deprecated android_studio.GradleTaskExecution.failed is deprecated.
-   *     See studio_stats.proto;l=6167
+   *     See studio_stats.proto;l=6168
    * @return Whether the failed field is set.
    */
   @java.lang.Override
@@ -348,7 +348,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>optional bool failed = 5 [deprecated = true];</code>
    * @deprecated android_studio.GradleTaskExecution.failed is deprecated.
-   *     See studio_stats.proto;l=6167
+   *     See studio_stats.proto;l=6168
    * @return The failed.
    */
   @java.lang.Override
@@ -949,7 +949,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional bool did_work = 2 [deprecated = true];</code>
      * @deprecated android_studio.GradleTaskExecution.did_work is deprecated.
-     *     See studio_stats.proto;l=6155
+     *     See studio_stats.proto;l=6156
      * @return Whether the didWork field is set.
      */
     @java.lang.Override
@@ -966,7 +966,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional bool did_work = 2 [deprecated = true];</code>
      * @deprecated android_studio.GradleTaskExecution.did_work is deprecated.
-     *     See studio_stats.proto;l=6155
+     *     See studio_stats.proto;l=6156
      * @return The didWork.
      */
     @java.lang.Override
@@ -983,7 +983,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional bool did_work = 2 [deprecated = true];</code>
      * @deprecated android_studio.GradleTaskExecution.did_work is deprecated.
-     *     See studio_stats.proto;l=6155
+     *     See studio_stats.proto;l=6156
      * @param value The didWork to set.
      * @return This builder for chaining.
      */
@@ -1004,7 +1004,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional bool did_work = 2 [deprecated = true];</code>
      * @deprecated android_studio.GradleTaskExecution.did_work is deprecated.
-     *     See studio_stats.proto;l=6155
+     *     See studio_stats.proto;l=6156
      * @return This builder for chaining.
      */
     @java.lang.Deprecated public Builder clearDidWork() {
@@ -1023,7 +1023,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional bool skipped = 3 [deprecated = true];</code>
      * @deprecated android_studio.GradleTaskExecution.skipped is deprecated.
-     *     See studio_stats.proto;l=6159
+     *     See studio_stats.proto;l=6160
      * @return Whether the skipped field is set.
      */
     @java.lang.Override
@@ -1038,7 +1038,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional bool skipped = 3 [deprecated = true];</code>
      * @deprecated android_studio.GradleTaskExecution.skipped is deprecated.
-     *     See studio_stats.proto;l=6159
+     *     See studio_stats.proto;l=6160
      * @return The skipped.
      */
     @java.lang.Override
@@ -1053,7 +1053,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional bool skipped = 3 [deprecated = true];</code>
      * @deprecated android_studio.GradleTaskExecution.skipped is deprecated.
-     *     See studio_stats.proto;l=6159
+     *     See studio_stats.proto;l=6160
      * @param value The skipped to set.
      * @return This builder for chaining.
      */
@@ -1072,7 +1072,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional bool skipped = 3 [deprecated = true];</code>
      * @deprecated android_studio.GradleTaskExecution.skipped is deprecated.
-     *     See studio_stats.proto;l=6159
+     *     See studio_stats.proto;l=6160
      * @return This builder for chaining.
      */
     @java.lang.Deprecated public Builder clearSkipped() {
@@ -1091,7 +1091,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional bool up_to_date = 4 [deprecated = true];</code>
      * @deprecated android_studio.GradleTaskExecution.up_to_date is deprecated.
-     *     See studio_stats.proto;l=6163
+     *     See studio_stats.proto;l=6164
      * @return Whether the upToDate field is set.
      */
     @java.lang.Override
@@ -1106,7 +1106,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional bool up_to_date = 4 [deprecated = true];</code>
      * @deprecated android_studio.GradleTaskExecution.up_to_date is deprecated.
-     *     See studio_stats.proto;l=6163
+     *     See studio_stats.proto;l=6164
      * @return The upToDate.
      */
     @java.lang.Override
@@ -1121,7 +1121,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional bool up_to_date = 4 [deprecated = true];</code>
      * @deprecated android_studio.GradleTaskExecution.up_to_date is deprecated.
-     *     See studio_stats.proto;l=6163
+     *     See studio_stats.proto;l=6164
      * @param value The upToDate to set.
      * @return This builder for chaining.
      */
@@ -1140,7 +1140,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional bool up_to_date = 4 [deprecated = true];</code>
      * @deprecated android_studio.GradleTaskExecution.up_to_date is deprecated.
-     *     See studio_stats.proto;l=6163
+     *     See studio_stats.proto;l=6164
      * @return This builder for chaining.
      */
     @java.lang.Deprecated public Builder clearUpToDate() {
@@ -1159,7 +1159,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional bool failed = 5 [deprecated = true];</code>
      * @deprecated android_studio.GradleTaskExecution.failed is deprecated.
-     *     See studio_stats.proto;l=6167
+     *     See studio_stats.proto;l=6168
      * @return Whether the failed field is set.
      */
     @java.lang.Override
@@ -1174,7 +1174,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional bool failed = 5 [deprecated = true];</code>
      * @deprecated android_studio.GradleTaskExecution.failed is deprecated.
-     *     See studio_stats.proto;l=6167
+     *     See studio_stats.proto;l=6168
      * @return The failed.
      */
     @java.lang.Override
@@ -1189,7 +1189,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional bool failed = 5 [deprecated = true];</code>
      * @deprecated android_studio.GradleTaskExecution.failed is deprecated.
-     *     See studio_stats.proto;l=6167
+     *     See studio_stats.proto;l=6168
      * @param value The failed to set.
      * @return This builder for chaining.
      */
@@ -1208,7 +1208,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional bool failed = 5 [deprecated = true];</code>
      * @deprecated android_studio.GradleTaskExecution.failed is deprecated.
-     *     See studio_stats.proto;l=6167
+     *     See studio_stats.proto;l=6168
      * @return This builder for chaining.
      */
     @java.lang.Deprecated public Builder clearFailed() {

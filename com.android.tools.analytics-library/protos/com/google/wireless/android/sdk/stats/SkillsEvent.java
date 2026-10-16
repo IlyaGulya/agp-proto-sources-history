@@ -643,6 +643,102 @@ private static final long serialVersionUID = 0L;
      * <code>DISPLAY_GLASSES_WITH_JETPACK_COMPOSE_GLIMMER = 18;</code>
      */
     DISPLAY_GLASSES_WITH_JETPACK_COMPOSE_GLIMMER(18),
+    /**
+     * <code>AGP9_UPGRADE = 19;</code>
+     */
+    AGP9_UPGRADE(19),
+    /**
+     * <code>CAMERAX = 20;</code>
+     */
+    CAMERAX(20),
+    /**
+     * <code>ML_KIT_GENAI_PROMPT_API = 21;</code>
+     */
+    ML_KIT_GENAI_PROMPT_API(21),
+    /**
+     * <code>RESTORE_CREDENTIALS = 22;</code>
+     */
+    RESTORE_CREDENTIALS(22),
+    /**
+     * <code>MEDIA3_CAST_INTEGRATION = 23;</code>
+     */
+    MEDIA3_CAST_INTEGRATION(23),
+    /**
+     * <code>NAVIGATION_EVENT = 24;</code>
+     */
+    NAVIGATION_EVENT(24),
+    /**
+     * <code>PLAY_POLICY_INSIGHTS = 25;</code>
+     */
+    PLAY_POLICY_INSIGHTS(25),
+    /**
+     * <code>ANDROID_PROFILER = 26;</code>
+     */
+    ANDROID_PROFILER(26),
+    /**
+     * <code>ANDROID_INTENT_SECURITY = 27;</code>
+     */
+    ANDROID_INTENT_SECURITY(27),
+    /**
+     * <code>ANDROID_PERMISSIONS_SECURITY = 28;</code>
+     */
+    ANDROID_PERMISSIONS_SECURITY(28),
+    /**
+     * <code>LEANBACK_TO_COMPOSE_TV_MIGRATION = 29;</code>
+     */
+    LEANBACK_TO_COMPOSE_TV_MIGRATION(29),
+    /**
+     * <code>WEAR_COMPOSE_M3 = 30;</code>
+     */
+    WEAR_COMPOSE_M3(30),
+    /**
+     * <code>EXTENSION_TO_FUNCTIONS_CODEBASE = 31;</code>
+     */
+    EXTENSION_TO_FUNCTIONS_CODEBASE(31),
+    /**
+     * <code>FIREBASE_AI_LOGIC_BASICS = 32;</code>
+     */
+    FIREBASE_AI_LOGIC_BASICS(32),
+    /**
+     * <code>FIREBASE_APP_HOSTING_BASICS = 33;</code>
+     */
+    FIREBASE_APP_HOSTING_BASICS(33),
+    /**
+     * <code>FIREBASE_CRASHLYTICS = 34;</code>
+     */
+    FIREBASE_CRASHLYTICS(34),
+    /**
+     * <code>FIREBASE_DATA_CONNECT = 35;</code>
+     */
+    FIREBASE_DATA_CONNECT(35),
+    /**
+     * <code>FIREBASE_FIRESTORE = 36;</code>
+     */
+    FIREBASE_FIRESTORE(36),
+    /**
+     * <code>FIREBASE_HOSTING_BASICS = 37;</code>
+     */
+    FIREBASE_HOSTING_BASICS(37),
+    /**
+     * <code>FIREBASE_REMOTE_CONFIG_BASICS = 38;</code>
+     */
+    FIREBASE_REMOTE_CONFIG_BASICS(38),
+    /**
+     * <code>FIREBASE_SECURITY_RULES_AUDITOR = 39;</code>
+     */
+    FIREBASE_SECURITY_RULES_AUDITOR(39),
+    /**
+     * <code>FIRESTORE_RULES_CREATION = 40;</code>
+     */
+    FIRESTORE_RULES_CREATION(40),
+    /**
+     * <code>XCODE_PROJECT_SETUP = 41;</code>
+     */
+    XCODE_PROJECT_SETUP(41),
+    /**
+     * <code>ANDROID_JOURNEYS = 42;</code>
+     */
+    ANDROID_JOURNEYS(42),
     ;
 
     /**
@@ -721,6 +817,102 @@ private static final long serialVersionUID = 0L;
      * <code>DISPLAY_GLASSES_WITH_JETPACK_COMPOSE_GLIMMER = 18;</code>
      */
     public static final int DISPLAY_GLASSES_WITH_JETPACK_COMPOSE_GLIMMER_VALUE = 18;
+    /**
+     * <code>AGP9_UPGRADE = 19;</code>
+     */
+    public static final int AGP9_UPGRADE_VALUE = 19;
+    /**
+     * <code>CAMERAX = 20;</code>
+     */
+    public static final int CAMERAX_VALUE = 20;
+    /**
+     * <code>ML_KIT_GENAI_PROMPT_API = 21;</code>
+     */
+    public static final int ML_KIT_GENAI_PROMPT_API_VALUE = 21;
+    /**
+     * <code>RESTORE_CREDENTIALS = 22;</code>
+     */
+    public static final int RESTORE_CREDENTIALS_VALUE = 22;
+    /**
+     * <code>MEDIA3_CAST_INTEGRATION = 23;</code>
+     */
+    public static final int MEDIA3_CAST_INTEGRATION_VALUE = 23;
+    /**
+     * <code>NAVIGATION_EVENT = 24;</code>
+     */
+    public static final int NAVIGATION_EVENT_VALUE = 24;
+    /**
+     * <code>PLAY_POLICY_INSIGHTS = 25;</code>
+     */
+    public static final int PLAY_POLICY_INSIGHTS_VALUE = 25;
+    /**
+     * <code>ANDROID_PROFILER = 26;</code>
+     */
+    public static final int ANDROID_PROFILER_VALUE = 26;
+    /**
+     * <code>ANDROID_INTENT_SECURITY = 27;</code>
+     */
+    public static final int ANDROID_INTENT_SECURITY_VALUE = 27;
+    /**
+     * <code>ANDROID_PERMISSIONS_SECURITY = 28;</code>
+     */
+    public static final int ANDROID_PERMISSIONS_SECURITY_VALUE = 28;
+    /**
+     * <code>LEANBACK_TO_COMPOSE_TV_MIGRATION = 29;</code>
+     */
+    public static final int LEANBACK_TO_COMPOSE_TV_MIGRATION_VALUE = 29;
+    /**
+     * <code>WEAR_COMPOSE_M3 = 30;</code>
+     */
+    public static final int WEAR_COMPOSE_M3_VALUE = 30;
+    /**
+     * <code>EXTENSION_TO_FUNCTIONS_CODEBASE = 31;</code>
+     */
+    public static final int EXTENSION_TO_FUNCTIONS_CODEBASE_VALUE = 31;
+    /**
+     * <code>FIREBASE_AI_LOGIC_BASICS = 32;</code>
+     */
+    public static final int FIREBASE_AI_LOGIC_BASICS_VALUE = 32;
+    /**
+     * <code>FIREBASE_APP_HOSTING_BASICS = 33;</code>
+     */
+    public static final int FIREBASE_APP_HOSTING_BASICS_VALUE = 33;
+    /**
+     * <code>FIREBASE_CRASHLYTICS = 34;</code>
+     */
+    public static final int FIREBASE_CRASHLYTICS_VALUE = 34;
+    /**
+     * <code>FIREBASE_DATA_CONNECT = 35;</code>
+     */
+    public static final int FIREBASE_DATA_CONNECT_VALUE = 35;
+    /**
+     * <code>FIREBASE_FIRESTORE = 36;</code>
+     */
+    public static final int FIREBASE_FIRESTORE_VALUE = 36;
+    /**
+     * <code>FIREBASE_HOSTING_BASICS = 37;</code>
+     */
+    public static final int FIREBASE_HOSTING_BASICS_VALUE = 37;
+    /**
+     * <code>FIREBASE_REMOTE_CONFIG_BASICS = 38;</code>
+     */
+    public static final int FIREBASE_REMOTE_CONFIG_BASICS_VALUE = 38;
+    /**
+     * <code>FIREBASE_SECURITY_RULES_AUDITOR = 39;</code>
+     */
+    public static final int FIREBASE_SECURITY_RULES_AUDITOR_VALUE = 39;
+    /**
+     * <code>FIRESTORE_RULES_CREATION = 40;</code>
+     */
+    public static final int FIRESTORE_RULES_CREATION_VALUE = 40;
+    /**
+     * <code>XCODE_PROJECT_SETUP = 41;</code>
+     */
+    public static final int XCODE_PROJECT_SETUP_VALUE = 41;
+    /**
+     * <code>ANDROID_JOURNEYS = 42;</code>
+     */
+    public static final int ANDROID_JOURNEYS_VALUE = 42;
 
 
     public final int getNumber() {
@@ -762,6 +954,30 @@ private static final long serialVersionUID = 0L;
         case 16: return EDGE_TO_EDGE;
         case 17: return TESTING_SETUP;
         case 18: return DISPLAY_GLASSES_WITH_JETPACK_COMPOSE_GLIMMER;
+        case 19: return AGP9_UPGRADE;
+        case 20: return CAMERAX;
+        case 21: return ML_KIT_GENAI_PROMPT_API;
+        case 22: return RESTORE_CREDENTIALS;
+        case 23: return MEDIA3_CAST_INTEGRATION;
+        case 24: return NAVIGATION_EVENT;
+        case 25: return PLAY_POLICY_INSIGHTS;
+        case 26: return ANDROID_PROFILER;
+        case 27: return ANDROID_INTENT_SECURITY;
+        case 28: return ANDROID_PERMISSIONS_SECURITY;
+        case 29: return LEANBACK_TO_COMPOSE_TV_MIGRATION;
+        case 30: return WEAR_COMPOSE_M3;
+        case 31: return EXTENSION_TO_FUNCTIONS_CODEBASE;
+        case 32: return FIREBASE_AI_LOGIC_BASICS;
+        case 33: return FIREBASE_APP_HOSTING_BASICS;
+        case 34: return FIREBASE_CRASHLYTICS;
+        case 35: return FIREBASE_DATA_CONNECT;
+        case 36: return FIREBASE_FIRESTORE;
+        case 37: return FIREBASE_HOSTING_BASICS;
+        case 38: return FIREBASE_REMOTE_CONFIG_BASICS;
+        case 39: return FIREBASE_SECURITY_RULES_AUDITOR;
+        case 40: return FIRESTORE_RULES_CREATION;
+        case 41: return XCODE_PROJECT_SETUP;
+        case 42: return ANDROID_JOURNEYS;
         default: return null;
       }
     }

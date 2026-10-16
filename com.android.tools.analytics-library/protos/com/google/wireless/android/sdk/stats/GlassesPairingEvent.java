@@ -7,7 +7,7 @@ package com.google.wireless.android.sdk.stats;
 /**
  * <pre>
  * Event related to Glasses emulator pairing assistant
- * Next ID: 32
+ * Next field ID: 9
  * </pre>
  *
  * Protobuf type {@code android_studio.GlassesPairingEvent}
@@ -23,6 +23,12 @@ private static final long serialVersionUID = 0L;
   }
   private GlassesPairingEvent() {
     kind_ = 0;
+    pairingAttemptId_ = "";
+    launchTrigger_ = 0;
+    selectionSource_ = 0;
+    failureSubReason_ = 0;
+    asymmetricResolutionReason_ = 0;
+    unpairSource_ = 0;
   }
 
   @java.lang.Override
@@ -48,6 +54,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * The kind of GlassesPairingEvent
+   * Next EventKind ID: 45
    * </pre>
    *
    * Protobuf enum {@code android_studio.GlassesPairingEvent.EventKind}
@@ -310,6 +317,111 @@ private static final long serialVersionUID = 0L;
      * <code>ORPHANED_PAIRING_PURGED = 31;</code>
      */
     ORPHANED_PAIRING_PURGED(31),
+    /**
+     * <pre>
+     * Both emulators finished booting and are ready for companion setup
+     * </pre>
+     *
+     * <code>PAIRING_EMULATORS_READY = 32;</code>
+     */
+    PAIRING_EMULATORS_READY(32),
+    /**
+     * <pre>
+     * Wizard is waiting for the Companion app to reach the foreground
+     * </pre>
+     *
+     * <code>PAIRING_AWAITING_COMPANION_FOREGROUND = 33;</code>
+     */
+    PAIRING_AWAITING_COMPANION_FOREGROUND(33),
+    /**
+     * <pre>
+     * Companion worker started Bluetooth bonding
+     * </pre>
+     *
+     * <code>PAIRING_BONDING_STARTED = 34;</code>
+     */
+    PAIRING_BONDING_STARTED(34),
+    /**
+     * <pre>
+     * Companion worker is waiting for the nearby-device streaming role grant
+     * </pre>
+     *
+     * <code>PAIRING_STREAMING_ROLE_REQUIRED = 35;</code>
+     */
+    PAIRING_STREAMING_ROLE_REQUIRED(35),
+    /**
+     * <pre>
+     * User closed or cancelled the pairing wizard before reaching a terminal
+     * state
+     * </pre>
+     *
+     * <code>PAIRING_WIZARD_CANCELLED_BY_USER = 36;</code>
+     */
+    PAIRING_WIZARD_CANCELLED_BY_USER(36),
+    /**
+     * <pre>
+     * No compatible phone or glasses AVD was available on the selection page
+     * </pre>
+     *
+     * <code>PAIRING_NO_COMPATIBLE_DEVICE_SHOWN = 37;</code>
+     */
+    PAIRING_NO_COMPATIBLE_DEVICE_SHOWN(37),
+    /**
+     * <pre>
+     * Automatic silent retry of the pairing flow was triggered
+     * </pre>
+     *
+     * <code>PAIRING_SILENT_RETRY_TRIGGERED = 38;</code>
+     */
+    PAIRING_SILENT_RETRY_TRIGGERED(38),
+    /**
+     * <pre>
+     * Error: Glasses Core connection failed on the phone
+     * </pre>
+     *
+     * <code>PAIRING_ERROR_GLASSES_CORE_CONNECTION_FAILED = 39;</code>
+     */
+    PAIRING_ERROR_GLASSES_CORE_CONNECTION_FAILED(39),
+    /**
+     * <pre>
+     * Error: Updating the AVD host configuration (.ini) failed after pairing
+     * </pre>
+     *
+     * <code>HOST_CONFIG_WRITE_FAILED = 40;</code>
+     */
+    HOST_CONFIG_WRITE_FAILED(40),
+    /**
+     * <pre>
+     * Reconciliation Bluetooth bond probe timed out
+     * </pre>
+     *
+     * <code>RECONCILIATION_PROBE_TIMEOUT = 41;</code>
+     */
+    RECONCILIATION_PROBE_TIMEOUT(41),
+    /**
+     * <pre>
+     * Reconciliation cycle encountered an unexpected error
+     * </pre>
+     *
+     * <code>RECONCILIATION_CYCLE_ERROR = 42;</code>
+     */
+    RECONCILIATION_CYCLE_ERROR(42),
+    /**
+     * <pre>
+     * Companion CDM association prompt was rejected or dismissed on the phone
+     * </pre>
+     *
+     * <code>PAIRING_CDM_PROMPT_DISMISSED = 43;</code>
+     */
+    PAIRING_CDM_PROMPT_DISMISSED(43),
+    /**
+     * <pre>
+     * User declined the re-pair warning dialog before or during wizard launch
+     * </pre>
+     *
+     * <code>PAIRING_REPAIR_WARNING_DECLINED = 44;</code>
+     */
+    PAIRING_REPAIR_WARNING_DECLINED(44),
     ;
 
     /**
@@ -568,6 +680,111 @@ private static final long serialVersionUID = 0L;
      * <code>ORPHANED_PAIRING_PURGED = 31;</code>
      */
     public static final int ORPHANED_PAIRING_PURGED_VALUE = 31;
+    /**
+     * <pre>
+     * Both emulators finished booting and are ready for companion setup
+     * </pre>
+     *
+     * <code>PAIRING_EMULATORS_READY = 32;</code>
+     */
+    public static final int PAIRING_EMULATORS_READY_VALUE = 32;
+    /**
+     * <pre>
+     * Wizard is waiting for the Companion app to reach the foreground
+     * </pre>
+     *
+     * <code>PAIRING_AWAITING_COMPANION_FOREGROUND = 33;</code>
+     */
+    public static final int PAIRING_AWAITING_COMPANION_FOREGROUND_VALUE = 33;
+    /**
+     * <pre>
+     * Companion worker started Bluetooth bonding
+     * </pre>
+     *
+     * <code>PAIRING_BONDING_STARTED = 34;</code>
+     */
+    public static final int PAIRING_BONDING_STARTED_VALUE = 34;
+    /**
+     * <pre>
+     * Companion worker is waiting for the nearby-device streaming role grant
+     * </pre>
+     *
+     * <code>PAIRING_STREAMING_ROLE_REQUIRED = 35;</code>
+     */
+    public static final int PAIRING_STREAMING_ROLE_REQUIRED_VALUE = 35;
+    /**
+     * <pre>
+     * User closed or cancelled the pairing wizard before reaching a terminal
+     * state
+     * </pre>
+     *
+     * <code>PAIRING_WIZARD_CANCELLED_BY_USER = 36;</code>
+     */
+    public static final int PAIRING_WIZARD_CANCELLED_BY_USER_VALUE = 36;
+    /**
+     * <pre>
+     * No compatible phone or glasses AVD was available on the selection page
+     * </pre>
+     *
+     * <code>PAIRING_NO_COMPATIBLE_DEVICE_SHOWN = 37;</code>
+     */
+    public static final int PAIRING_NO_COMPATIBLE_DEVICE_SHOWN_VALUE = 37;
+    /**
+     * <pre>
+     * Automatic silent retry of the pairing flow was triggered
+     * </pre>
+     *
+     * <code>PAIRING_SILENT_RETRY_TRIGGERED = 38;</code>
+     */
+    public static final int PAIRING_SILENT_RETRY_TRIGGERED_VALUE = 38;
+    /**
+     * <pre>
+     * Error: Glasses Core connection failed on the phone
+     * </pre>
+     *
+     * <code>PAIRING_ERROR_GLASSES_CORE_CONNECTION_FAILED = 39;</code>
+     */
+    public static final int PAIRING_ERROR_GLASSES_CORE_CONNECTION_FAILED_VALUE = 39;
+    /**
+     * <pre>
+     * Error: Updating the AVD host configuration (.ini) failed after pairing
+     * </pre>
+     *
+     * <code>HOST_CONFIG_WRITE_FAILED = 40;</code>
+     */
+    public static final int HOST_CONFIG_WRITE_FAILED_VALUE = 40;
+    /**
+     * <pre>
+     * Reconciliation Bluetooth bond probe timed out
+     * </pre>
+     *
+     * <code>RECONCILIATION_PROBE_TIMEOUT = 41;</code>
+     */
+    public static final int RECONCILIATION_PROBE_TIMEOUT_VALUE = 41;
+    /**
+     * <pre>
+     * Reconciliation cycle encountered an unexpected error
+     * </pre>
+     *
+     * <code>RECONCILIATION_CYCLE_ERROR = 42;</code>
+     */
+    public static final int RECONCILIATION_CYCLE_ERROR_VALUE = 42;
+    /**
+     * <pre>
+     * Companion CDM association prompt was rejected or dismissed on the phone
+     * </pre>
+     *
+     * <code>PAIRING_CDM_PROMPT_DISMISSED = 43;</code>
+     */
+    public static final int PAIRING_CDM_PROMPT_DISMISSED_VALUE = 43;
+    /**
+     * <pre>
+     * User declined the re-pair warning dialog before or during wizard launch
+     * </pre>
+     *
+     * <code>PAIRING_REPAIR_WARNING_DECLINED = 44;</code>
+     */
+    public static final int PAIRING_REPAIR_WARNING_DECLINED_VALUE = 44;
 
 
     public final int getNumber() {
@@ -622,6 +839,19 @@ private static final long serialVersionUID = 0L;
         case 29: return UNPAIR_FAILED;
         case 30: return CASCADING_WIPE_INITIATED;
         case 31: return ORPHANED_PAIRING_PURGED;
+        case 32: return PAIRING_EMULATORS_READY;
+        case 33: return PAIRING_AWAITING_COMPANION_FOREGROUND;
+        case 34: return PAIRING_BONDING_STARTED;
+        case 35: return PAIRING_STREAMING_ROLE_REQUIRED;
+        case 36: return PAIRING_WIZARD_CANCELLED_BY_USER;
+        case 37: return PAIRING_NO_COMPATIBLE_DEVICE_SHOWN;
+        case 38: return PAIRING_SILENT_RETRY_TRIGGERED;
+        case 39: return PAIRING_ERROR_GLASSES_CORE_CONNECTION_FAILED;
+        case 40: return HOST_CONFIG_WRITE_FAILED;
+        case 41: return RECONCILIATION_PROBE_TIMEOUT;
+        case 42: return RECONCILIATION_CYCLE_ERROR;
+        case 43: return PAIRING_CDM_PROMPT_DISMISSED;
+        case 44: return PAIRING_REPAIR_WARNING_DECLINED;
         default: return null;
       }
     }
@@ -671,6 +901,1279 @@ private static final long serialVersionUID = 0L;
     // @@protoc_insertion_point(enum_scope:android_studio.GlassesPairingEvent.EventKind)
   }
 
+  /**
+   * <pre>
+   * How the pairing wizard was launched.
+   * </pre>
+   *
+   * Protobuf enum {@code android_studio.GlassesPairingEvent.LaunchTrigger}
+   */
+  public enum LaunchTrigger
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <code>LAUNCH_TRIGGER_UNSPECIFIED = 0;</code>
+     */
+    LAUNCH_TRIGGER_UNSPECIFIED(0),
+    /**
+     * <pre>
+     * Auto-launched by the provisioner after booting an unpaired glasses AVD
+     * </pre>
+     *
+     * <code>LAUNCH_TRIGGER_AUTO_LAUNCH = 1;</code>
+     */
+    LAUNCH_TRIGGER_AUTO_LAUNCH(1),
+    /**
+     * <pre>
+     * Explicitly opened by the user from Device Manager or toolbar action
+     * </pre>
+     *
+     * <code>LAUNCH_TRIGGER_MANUAL = 2;</code>
+     */
+    LAUNCH_TRIGGER_MANUAL(2),
+    /**
+     * <pre>
+     * Launched via the re-pair warning flow
+     * </pre>
+     *
+     * <code>LAUNCH_TRIGGER_REPAIR = 3;</code>
+     */
+    LAUNCH_TRIGGER_REPAIR(3),
+    ;
+
+    /**
+     * <code>LAUNCH_TRIGGER_UNSPECIFIED = 0;</code>
+     */
+    public static final int LAUNCH_TRIGGER_UNSPECIFIED_VALUE = 0;
+    /**
+     * <pre>
+     * Auto-launched by the provisioner after booting an unpaired glasses AVD
+     * </pre>
+     *
+     * <code>LAUNCH_TRIGGER_AUTO_LAUNCH = 1;</code>
+     */
+    public static final int LAUNCH_TRIGGER_AUTO_LAUNCH_VALUE = 1;
+    /**
+     * <pre>
+     * Explicitly opened by the user from Device Manager or toolbar action
+     * </pre>
+     *
+     * <code>LAUNCH_TRIGGER_MANUAL = 2;</code>
+     */
+    public static final int LAUNCH_TRIGGER_MANUAL_VALUE = 2;
+    /**
+     * <pre>
+     * Launched via the re-pair warning flow
+     * </pre>
+     *
+     * <code>LAUNCH_TRIGGER_REPAIR = 3;</code>
+     */
+    public static final int LAUNCH_TRIGGER_REPAIR_VALUE = 3;
+
+
+    public final int getNumber() {
+      return value;
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     * @deprecated Use {@link #forNumber(int)} instead.
+     */
+    @java.lang.Deprecated
+    public static LaunchTrigger valueOf(int value) {
+      return forNumber(value);
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     */
+    public static LaunchTrigger forNumber(int value) {
+      switch (value) {
+        case 0: return LAUNCH_TRIGGER_UNSPECIFIED;
+        case 1: return LAUNCH_TRIGGER_AUTO_LAUNCH;
+        case 2: return LAUNCH_TRIGGER_MANUAL;
+        case 3: return LAUNCH_TRIGGER_REPAIR;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<LaunchTrigger>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static final com.google.protobuf.Internal.EnumLiteMap<
+        LaunchTrigger> internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<LaunchTrigger>() {
+            public LaunchTrigger findValueByNumber(int number) {
+              return LaunchTrigger.forNumber(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      return getDescriptor().getValues().get(ordinal());
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return com.google.wireless.android.sdk.stats.GlassesPairingEvent.getDescriptor().getEnumTypes().get(1);
+    }
+
+    private static final LaunchTrigger[] VALUES = values();
+
+    public static LaunchTrigger valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int value;
+
+    private LaunchTrigger(int value) {
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:android_studio.GlassesPairingEvent.LaunchTrigger)
+  }
+
+  /**
+   * <pre>
+   * How the target device was selected on the wizard selection page.
+   * </pre>
+   *
+   * Protobuf enum {@code android_studio.GlassesPairingEvent.SelectionSource}
+   */
+  public enum SelectionSource
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <code>SELECTION_SOURCE_UNSPECIFIED = 0;</code>
+     */
+    SELECTION_SOURCE_UNSPECIFIED(0),
+    /**
+     * <pre>
+     * User explicitly clicked a row in the device list
+     * </pre>
+     *
+     * <code>SELECTION_SOURCE_USER_PICKED = 1;</code>
+     */
+    SELECTION_SOURCE_USER_PICKED(1),
+    /**
+     * <pre>
+     * User kept the automatically selected default device
+     * </pre>
+     *
+     * <code>SELECTION_SOURCE_DEFAULT_ACCEPTED = 2;</code>
+     */
+    SELECTION_SOURCE_DEFAULT_ACCEPTED(2),
+    /**
+     * <pre>
+     * Target device was preselected when launching the wizard
+     * </pre>
+     *
+     * <code>SELECTION_SOURCE_PRESELECTED = 3;</code>
+     */
+    SELECTION_SOURCE_PRESELECTED(3),
+    ;
+
+    /**
+     * <code>SELECTION_SOURCE_UNSPECIFIED = 0;</code>
+     */
+    public static final int SELECTION_SOURCE_UNSPECIFIED_VALUE = 0;
+    /**
+     * <pre>
+     * User explicitly clicked a row in the device list
+     * </pre>
+     *
+     * <code>SELECTION_SOURCE_USER_PICKED = 1;</code>
+     */
+    public static final int SELECTION_SOURCE_USER_PICKED_VALUE = 1;
+    /**
+     * <pre>
+     * User kept the automatically selected default device
+     * </pre>
+     *
+     * <code>SELECTION_SOURCE_DEFAULT_ACCEPTED = 2;</code>
+     */
+    public static final int SELECTION_SOURCE_DEFAULT_ACCEPTED_VALUE = 2;
+    /**
+     * <pre>
+     * Target device was preselected when launching the wizard
+     * </pre>
+     *
+     * <code>SELECTION_SOURCE_PRESELECTED = 3;</code>
+     */
+    public static final int SELECTION_SOURCE_PRESELECTED_VALUE = 3;
+
+
+    public final int getNumber() {
+      return value;
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     * @deprecated Use {@link #forNumber(int)} instead.
+     */
+    @java.lang.Deprecated
+    public static SelectionSource valueOf(int value) {
+      return forNumber(value);
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     */
+    public static SelectionSource forNumber(int value) {
+      switch (value) {
+        case 0: return SELECTION_SOURCE_UNSPECIFIED;
+        case 1: return SELECTION_SOURCE_USER_PICKED;
+        case 2: return SELECTION_SOURCE_DEFAULT_ACCEPTED;
+        case 3: return SELECTION_SOURCE_PRESELECTED;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<SelectionSource>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static final com.google.protobuf.Internal.EnumLiteMap<
+        SelectionSource> internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<SelectionSource>() {
+            public SelectionSource findValueByNumber(int number) {
+              return SelectionSource.forNumber(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      return getDescriptor().getValues().get(ordinal());
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return com.google.wireless.android.sdk.stats.GlassesPairingEvent.getDescriptor().getEnumTypes().get(2);
+    }
+
+    private static final SelectionSource[] VALUES = values();
+
+    public static SelectionSource valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int value;
+
+    private SelectionSource(int value) {
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:android_studio.GlassesPairingEvent.SelectionSource)
+  }
+
+  /**
+   * <pre>
+   * Structured sub-reason for a pairing or unpair failure.
+   * </pre>
+   *
+   * Protobuf enum {@code android_studio.GlassesPairingEvent.FailureSubReason}
+   */
+  public enum FailureSubReason
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <code>FAILURE_SUB_REASON_UNSPECIFIED = 0;</code>
+     */
+    FAILURE_SUB_REASON_UNSPECIFIED(0),
+    /**
+     * <pre>
+     * Companion app did not reach the foreground within the polling cap
+     * </pre>
+     *
+     * <code>FAILURE_SUB_REASON_FOREGROUND_TIMEOUT = 1;</code>
+     */
+    FAILURE_SUB_REASON_FOREGROUND_TIMEOUT(1),
+    /**
+     * <pre>
+     * Companion broadcast returned an unreadable or missing pairing state
+     * </pre>
+     *
+     * <code>FAILURE_SUB_REASON_STATE_UNREADABLE = 2;</code>
+     */
+    FAILURE_SUB_REASON_STATE_UNREADABLE(2),
+    /**
+     * <pre>
+     * Companion remained in IDLE state across the polling cap
+     * </pre>
+     *
+     * <code>FAILURE_SUB_REASON_IDLE_TIMEOUT = 3;</code>
+     */
+    FAILURE_SUB_REASON_IDLE_TIMEOUT(3),
+    /**
+     * <pre>
+     * User rejected the Companion Device Manager prompt on the phone
+     * </pre>
+     *
+     * <code>FAILURE_SUB_REASON_CDM_USER_REJECTED = 4;</code>
+     */
+    FAILURE_SUB_REASON_CDM_USER_REJECTED(4),
+    /**
+     * <pre>
+     * Companion Device Manager prompt was dismissed or canceled
+     * </pre>
+     *
+     * <code>FAILURE_SUB_REASON_CDM_CANCELED = 5;</code>
+     */
+    FAILURE_SUB_REASON_CDM_CANCELED(5),
+    /**
+     * <pre>
+     * Studio reached its CDM association polling cap without a bond
+     * </pre>
+     *
+     * <code>FAILURE_SUB_REASON_CDM_POLL_CAP_REACHED = 6;</code>
+     */
+    FAILURE_SUB_REASON_CDM_POLL_CAP_REACHED(6),
+    /**
+     * <pre>
+     * Companion's internal pairing timeout expired while waiting for Glasses
+     * Core
+     * </pre>
+     *
+     * <code>FAILURE_SUB_REASON_COMPANION_TIMEOUT = 7;</code>
+     */
+    FAILURE_SUB_REASON_COMPANION_TIMEOUT(7),
+    /**
+     * <pre>
+     * Unexpected exception during the Companion Glasses Core connection step
+     * </pre>
+     *
+     * <code>FAILURE_SUB_REASON_UNEXPECTED_ERROR = 8;</code>
+     */
+    FAILURE_SUB_REASON_UNEXPECTED_ERROR(8),
+    /**
+     * <pre>
+     * Glasses Core PairingError.REMOTE_EXCEPTION
+     * </pre>
+     *
+     * <code>FAILURE_SUB_REASON_GC_REMOTE_EXCEPTION = 9;</code>
+     */
+    FAILURE_SUB_REASON_GC_REMOTE_EXCEPTION(9),
+    /**
+     * <pre>
+     * Glasses Core PairingError.MISSING_PERMISSIONS
+     * </pre>
+     *
+     * <code>FAILURE_SUB_REASON_GC_MISSING_PERMISSIONS = 10;</code>
+     */
+    FAILURE_SUB_REASON_GC_MISSING_PERMISSIONS(10),
+    /**
+     * <pre>
+     * Glasses Core PairingError.ALREADY_CONNECTED
+     * </pre>
+     *
+     * <code>FAILURE_SUB_REASON_GC_ALREADY_CONNECTED = 11;</code>
+     */
+    FAILURE_SUB_REASON_GC_ALREADY_CONNECTED(11),
+    /**
+     * <pre>
+     * Glasses Core PairingError.UNKNOWN_DEVICE
+     * </pre>
+     *
+     * <code>FAILURE_SUB_REASON_GC_UNKNOWN_DEVICE = 12;</code>
+     */
+    FAILURE_SUB_REASON_GC_UNKNOWN_DEVICE(12),
+    /**
+     * <pre>
+     * Glasses Core PairingError.TIMEOUT
+     * </pre>
+     *
+     * <code>FAILURE_SUB_REASON_GC_TIMEOUT = 13;</code>
+     */
+    FAILURE_SUB_REASON_GC_TIMEOUT(13),
+    /**
+     * <pre>
+     * Glasses Core PairingError.FAILED_TO_CREATE_CDM_ASSOCIATION
+     * </pre>
+     *
+     * <code>FAILURE_SUB_REASON_GC_FAILED_TO_CREATE_CDM_ASSOCIATION = 14;</code>
+     */
+    FAILURE_SUB_REASON_GC_FAILED_TO_CREATE_CDM_ASSOCIATION(14),
+    /**
+     * <pre>
+     * Glasses Core PairingError.PAIRING_REFUSED
+     * </pre>
+     *
+     * <code>FAILURE_SUB_REASON_GC_PAIRING_REFUSED = 15;</code>
+     */
+    FAILURE_SUB_REASON_GC_PAIRING_REFUSED(15),
+    /**
+     * <pre>
+     * Glasses Core PairingError.GLASSES_VERIFICATION_FAILED_BYPASS_ALLOWED
+     * </pre>
+     *
+     * <code>FAILURE_SUB_REASON_GC_GLASSES_VERIFICATION_FAILED_BYPASS_ALLOWED = 16;</code>
+     */
+    FAILURE_SUB_REASON_GC_GLASSES_VERIFICATION_FAILED_BYPASS_ALLOWED(16),
+    /**
+     * <pre>
+     * Glasses Core PairingError.GLASSES_VERIFICATION_FAILED_BYPASS_NOT_ALLOWED
+     * </pre>
+     *
+     * <code>FAILURE_SUB_REASON_GC_GLASSES_VERIFICATION_FAILED_BYPASS_NOT_ALLOWED = 17;</code>
+     */
+    FAILURE_SUB_REASON_GC_GLASSES_VERIFICATION_FAILED_BYPASS_NOT_ALLOWED(17),
+    /**
+     * <pre>
+     * Glasses Core PairingError.UPDATE_GLASSES_CORE
+     * </pre>
+     *
+     * <code>FAILURE_SUB_REASON_GC_UPDATE_GLASSES_CORE = 18;</code>
+     */
+    FAILURE_SUB_REASON_GC_UPDATE_GLASSES_CORE(18),
+    /**
+     * <pre>
+     * Glasses Core PairingError.CANCELLED_BY_USER
+     * </pre>
+     *
+     * <code>FAILURE_SUB_REASON_GC_CANCELLED_BY_USER = 19;</code>
+     */
+    FAILURE_SUB_REASON_GC_CANCELLED_BY_USER(19),
+    /**
+     * <pre>
+     * Glasses Core PairingError.INVALID_PAIRING_RESPONSE
+     * </pre>
+     *
+     * <code>FAILURE_SUB_REASON_GC_INVALID_PAIRING_RESPONSE = 20;</code>
+     */
+    FAILURE_SUB_REASON_GC_INVALID_PAIRING_RESPONSE(20),
+    /**
+     * <pre>
+     * Glasses Core PairingError.UNKNOWN (or unrecognized numeric code)
+     * </pre>
+     *
+     * <code>FAILURE_SUB_REASON_GC_UNKNOWN = 21;</code>
+     */
+    FAILURE_SUB_REASON_GC_UNKNOWN(21),
+    /**
+     * <pre>
+     * Glasses Core PairingError.BLUETOOTH_OFF
+     * </pre>
+     *
+     * <code>FAILURE_SUB_REASON_GC_BLUETOOTH_OFF = 22;</code>
+     */
+    FAILURE_SUB_REASON_GC_BLUETOOTH_OFF(22),
+    /**
+     * <pre>
+     * Glasses Core PairingError.ALREADY_CONNECTING_SAME_DEVICE
+     * </pre>
+     *
+     * <code>FAILURE_SUB_REASON_GC_ALREADY_CONNECTING_SAME_DEVICE = 23;</code>
+     */
+    FAILURE_SUB_REASON_GC_ALREADY_CONNECTING_SAME_DEVICE(23),
+    /**
+     * <pre>
+     * Glasses Core PairingError.ALREADY_CONNECTING_DIFFERENT_DEVICE
+     * </pre>
+     *
+     * <code>FAILURE_SUB_REASON_GC_ALREADY_CONNECTING_DIFFERENT_DEVICE = 24;</code>
+     */
+    FAILURE_SUB_REASON_GC_ALREADY_CONNECTING_DIFFERENT_DEVICE(24),
+    /**
+     * <pre>
+     * Glasses Core PairingError.GLASSES_HIBERNATED
+     * </pre>
+     *
+     * <code>FAILURE_SUB_REASON_GC_GLASSES_HIBERNATED = 25;</code>
+     */
+    FAILURE_SUB_REASON_GC_GLASSES_HIBERNATED(25),
+    /**
+     * <pre>
+     * Glasses Core PairingError.DISPLAYLESS_DEVICE_A2DP_DISABLED
+     * </pre>
+     *
+     * <code>FAILURE_SUB_REASON_GC_DISPLAYLESS_DEVICE_A2DP_DISABLED = 26;</code>
+     */
+    FAILURE_SUB_REASON_GC_DISPLAYLESS_DEVICE_A2DP_DISABLED(26),
+    /**
+     * <pre>
+     * Glasses Core PairingError.DISPLAYLESS_DEVICE_HFP_DISABLED
+     * </pre>
+     *
+     * <code>FAILURE_SUB_REASON_GC_DISPLAYLESS_DEVICE_HFP_DISABLED = 27;</code>
+     */
+    FAILURE_SUB_REASON_GC_DISPLAYLESS_DEVICE_HFP_DISABLED(27),
+    /**
+     * <pre>
+     * Glasses Core PairingError.CANCELLED_BY_NEW_PAIRING_REQUEST
+     * </pre>
+     *
+     * <code>FAILURE_SUB_REASON_GC_CANCELLED_BY_NEW_PAIRING_REQUEST = 28;</code>
+     */
+    FAILURE_SUB_REASON_GC_CANCELLED_BY_NEW_PAIRING_REQUEST(28),
+    /**
+     * <pre>
+     * Glasses Core PairingError.INTERNET_CONNECTION_REQUIRED
+     * </pre>
+     *
+     * <code>FAILURE_SUB_REASON_GC_INTERNET_CONNECTION_REQUIRED = 29;</code>
+     */
+    FAILURE_SUB_REASON_GC_INTERNET_CONNECTION_REQUIRED(29),
+    /**
+     * <pre>
+     * Glasses Core PairingError.DISCONNECTED_DURING_PAIRING
+     * </pre>
+     *
+     * <code>FAILURE_SUB_REASON_GC_DISCONNECTED_DURING_PAIRING = 30;</code>
+     */
+    FAILURE_SUB_REASON_GC_DISCONNECTED_DURING_PAIRING(30),
+    /**
+     * <pre>
+     * Unpair failed while stopping a running AVD
+     * </pre>
+     *
+     * <code>FAILURE_SUB_REASON_STOP_AVD_FAILED = 31;</code>
+     */
+    FAILURE_SUB_REASON_STOP_AVD_FAILED(31),
+    /**
+     * <pre>
+     * Unpair failed while wiping AVD data
+     * </pre>
+     *
+     * <code>FAILURE_SUB_REASON_WIPE_DATA_FAILED = 32;</code>
+     */
+    FAILURE_SUB_REASON_WIPE_DATA_FAILED(32),
+    /**
+     * <pre>
+     * Unpair failed while updating host configuration (.ini)
+     * </pre>
+     *
+     * <code>FAILURE_SUB_REASON_HOST_CONFIG_UPDATE_FAILED = 33;</code>
+     */
+    FAILURE_SUB_REASON_HOST_CONFIG_UPDATE_FAILED(33),
+    ;
+
+    /**
+     * <code>FAILURE_SUB_REASON_UNSPECIFIED = 0;</code>
+     */
+    public static final int FAILURE_SUB_REASON_UNSPECIFIED_VALUE = 0;
+    /**
+     * <pre>
+     * Companion app did not reach the foreground within the polling cap
+     * </pre>
+     *
+     * <code>FAILURE_SUB_REASON_FOREGROUND_TIMEOUT = 1;</code>
+     */
+    public static final int FAILURE_SUB_REASON_FOREGROUND_TIMEOUT_VALUE = 1;
+    /**
+     * <pre>
+     * Companion broadcast returned an unreadable or missing pairing state
+     * </pre>
+     *
+     * <code>FAILURE_SUB_REASON_STATE_UNREADABLE = 2;</code>
+     */
+    public static final int FAILURE_SUB_REASON_STATE_UNREADABLE_VALUE = 2;
+    /**
+     * <pre>
+     * Companion remained in IDLE state across the polling cap
+     * </pre>
+     *
+     * <code>FAILURE_SUB_REASON_IDLE_TIMEOUT = 3;</code>
+     */
+    public static final int FAILURE_SUB_REASON_IDLE_TIMEOUT_VALUE = 3;
+    /**
+     * <pre>
+     * User rejected the Companion Device Manager prompt on the phone
+     * </pre>
+     *
+     * <code>FAILURE_SUB_REASON_CDM_USER_REJECTED = 4;</code>
+     */
+    public static final int FAILURE_SUB_REASON_CDM_USER_REJECTED_VALUE = 4;
+    /**
+     * <pre>
+     * Companion Device Manager prompt was dismissed or canceled
+     * </pre>
+     *
+     * <code>FAILURE_SUB_REASON_CDM_CANCELED = 5;</code>
+     */
+    public static final int FAILURE_SUB_REASON_CDM_CANCELED_VALUE = 5;
+    /**
+     * <pre>
+     * Studio reached its CDM association polling cap without a bond
+     * </pre>
+     *
+     * <code>FAILURE_SUB_REASON_CDM_POLL_CAP_REACHED = 6;</code>
+     */
+    public static final int FAILURE_SUB_REASON_CDM_POLL_CAP_REACHED_VALUE = 6;
+    /**
+     * <pre>
+     * Companion's internal pairing timeout expired while waiting for Glasses
+     * Core
+     * </pre>
+     *
+     * <code>FAILURE_SUB_REASON_COMPANION_TIMEOUT = 7;</code>
+     */
+    public static final int FAILURE_SUB_REASON_COMPANION_TIMEOUT_VALUE = 7;
+    /**
+     * <pre>
+     * Unexpected exception during the Companion Glasses Core connection step
+     * </pre>
+     *
+     * <code>FAILURE_SUB_REASON_UNEXPECTED_ERROR = 8;</code>
+     */
+    public static final int FAILURE_SUB_REASON_UNEXPECTED_ERROR_VALUE = 8;
+    /**
+     * <pre>
+     * Glasses Core PairingError.REMOTE_EXCEPTION
+     * </pre>
+     *
+     * <code>FAILURE_SUB_REASON_GC_REMOTE_EXCEPTION = 9;</code>
+     */
+    public static final int FAILURE_SUB_REASON_GC_REMOTE_EXCEPTION_VALUE = 9;
+    /**
+     * <pre>
+     * Glasses Core PairingError.MISSING_PERMISSIONS
+     * </pre>
+     *
+     * <code>FAILURE_SUB_REASON_GC_MISSING_PERMISSIONS = 10;</code>
+     */
+    public static final int FAILURE_SUB_REASON_GC_MISSING_PERMISSIONS_VALUE = 10;
+    /**
+     * <pre>
+     * Glasses Core PairingError.ALREADY_CONNECTED
+     * </pre>
+     *
+     * <code>FAILURE_SUB_REASON_GC_ALREADY_CONNECTED = 11;</code>
+     */
+    public static final int FAILURE_SUB_REASON_GC_ALREADY_CONNECTED_VALUE = 11;
+    /**
+     * <pre>
+     * Glasses Core PairingError.UNKNOWN_DEVICE
+     * </pre>
+     *
+     * <code>FAILURE_SUB_REASON_GC_UNKNOWN_DEVICE = 12;</code>
+     */
+    public static final int FAILURE_SUB_REASON_GC_UNKNOWN_DEVICE_VALUE = 12;
+    /**
+     * <pre>
+     * Glasses Core PairingError.TIMEOUT
+     * </pre>
+     *
+     * <code>FAILURE_SUB_REASON_GC_TIMEOUT = 13;</code>
+     */
+    public static final int FAILURE_SUB_REASON_GC_TIMEOUT_VALUE = 13;
+    /**
+     * <pre>
+     * Glasses Core PairingError.FAILED_TO_CREATE_CDM_ASSOCIATION
+     * </pre>
+     *
+     * <code>FAILURE_SUB_REASON_GC_FAILED_TO_CREATE_CDM_ASSOCIATION = 14;</code>
+     */
+    public static final int FAILURE_SUB_REASON_GC_FAILED_TO_CREATE_CDM_ASSOCIATION_VALUE = 14;
+    /**
+     * <pre>
+     * Glasses Core PairingError.PAIRING_REFUSED
+     * </pre>
+     *
+     * <code>FAILURE_SUB_REASON_GC_PAIRING_REFUSED = 15;</code>
+     */
+    public static final int FAILURE_SUB_REASON_GC_PAIRING_REFUSED_VALUE = 15;
+    /**
+     * <pre>
+     * Glasses Core PairingError.GLASSES_VERIFICATION_FAILED_BYPASS_ALLOWED
+     * </pre>
+     *
+     * <code>FAILURE_SUB_REASON_GC_GLASSES_VERIFICATION_FAILED_BYPASS_ALLOWED = 16;</code>
+     */
+    public static final int FAILURE_SUB_REASON_GC_GLASSES_VERIFICATION_FAILED_BYPASS_ALLOWED_VALUE = 16;
+    /**
+     * <pre>
+     * Glasses Core PairingError.GLASSES_VERIFICATION_FAILED_BYPASS_NOT_ALLOWED
+     * </pre>
+     *
+     * <code>FAILURE_SUB_REASON_GC_GLASSES_VERIFICATION_FAILED_BYPASS_NOT_ALLOWED = 17;</code>
+     */
+    public static final int FAILURE_SUB_REASON_GC_GLASSES_VERIFICATION_FAILED_BYPASS_NOT_ALLOWED_VALUE = 17;
+    /**
+     * <pre>
+     * Glasses Core PairingError.UPDATE_GLASSES_CORE
+     * </pre>
+     *
+     * <code>FAILURE_SUB_REASON_GC_UPDATE_GLASSES_CORE = 18;</code>
+     */
+    public static final int FAILURE_SUB_REASON_GC_UPDATE_GLASSES_CORE_VALUE = 18;
+    /**
+     * <pre>
+     * Glasses Core PairingError.CANCELLED_BY_USER
+     * </pre>
+     *
+     * <code>FAILURE_SUB_REASON_GC_CANCELLED_BY_USER = 19;</code>
+     */
+    public static final int FAILURE_SUB_REASON_GC_CANCELLED_BY_USER_VALUE = 19;
+    /**
+     * <pre>
+     * Glasses Core PairingError.INVALID_PAIRING_RESPONSE
+     * </pre>
+     *
+     * <code>FAILURE_SUB_REASON_GC_INVALID_PAIRING_RESPONSE = 20;</code>
+     */
+    public static final int FAILURE_SUB_REASON_GC_INVALID_PAIRING_RESPONSE_VALUE = 20;
+    /**
+     * <pre>
+     * Glasses Core PairingError.UNKNOWN (or unrecognized numeric code)
+     * </pre>
+     *
+     * <code>FAILURE_SUB_REASON_GC_UNKNOWN = 21;</code>
+     */
+    public static final int FAILURE_SUB_REASON_GC_UNKNOWN_VALUE = 21;
+    /**
+     * <pre>
+     * Glasses Core PairingError.BLUETOOTH_OFF
+     * </pre>
+     *
+     * <code>FAILURE_SUB_REASON_GC_BLUETOOTH_OFF = 22;</code>
+     */
+    public static final int FAILURE_SUB_REASON_GC_BLUETOOTH_OFF_VALUE = 22;
+    /**
+     * <pre>
+     * Glasses Core PairingError.ALREADY_CONNECTING_SAME_DEVICE
+     * </pre>
+     *
+     * <code>FAILURE_SUB_REASON_GC_ALREADY_CONNECTING_SAME_DEVICE = 23;</code>
+     */
+    public static final int FAILURE_SUB_REASON_GC_ALREADY_CONNECTING_SAME_DEVICE_VALUE = 23;
+    /**
+     * <pre>
+     * Glasses Core PairingError.ALREADY_CONNECTING_DIFFERENT_DEVICE
+     * </pre>
+     *
+     * <code>FAILURE_SUB_REASON_GC_ALREADY_CONNECTING_DIFFERENT_DEVICE = 24;</code>
+     */
+    public static final int FAILURE_SUB_REASON_GC_ALREADY_CONNECTING_DIFFERENT_DEVICE_VALUE = 24;
+    /**
+     * <pre>
+     * Glasses Core PairingError.GLASSES_HIBERNATED
+     * </pre>
+     *
+     * <code>FAILURE_SUB_REASON_GC_GLASSES_HIBERNATED = 25;</code>
+     */
+    public static final int FAILURE_SUB_REASON_GC_GLASSES_HIBERNATED_VALUE = 25;
+    /**
+     * <pre>
+     * Glasses Core PairingError.DISPLAYLESS_DEVICE_A2DP_DISABLED
+     * </pre>
+     *
+     * <code>FAILURE_SUB_REASON_GC_DISPLAYLESS_DEVICE_A2DP_DISABLED = 26;</code>
+     */
+    public static final int FAILURE_SUB_REASON_GC_DISPLAYLESS_DEVICE_A2DP_DISABLED_VALUE = 26;
+    /**
+     * <pre>
+     * Glasses Core PairingError.DISPLAYLESS_DEVICE_HFP_DISABLED
+     * </pre>
+     *
+     * <code>FAILURE_SUB_REASON_GC_DISPLAYLESS_DEVICE_HFP_DISABLED = 27;</code>
+     */
+    public static final int FAILURE_SUB_REASON_GC_DISPLAYLESS_DEVICE_HFP_DISABLED_VALUE = 27;
+    /**
+     * <pre>
+     * Glasses Core PairingError.CANCELLED_BY_NEW_PAIRING_REQUEST
+     * </pre>
+     *
+     * <code>FAILURE_SUB_REASON_GC_CANCELLED_BY_NEW_PAIRING_REQUEST = 28;</code>
+     */
+    public static final int FAILURE_SUB_REASON_GC_CANCELLED_BY_NEW_PAIRING_REQUEST_VALUE = 28;
+    /**
+     * <pre>
+     * Glasses Core PairingError.INTERNET_CONNECTION_REQUIRED
+     * </pre>
+     *
+     * <code>FAILURE_SUB_REASON_GC_INTERNET_CONNECTION_REQUIRED = 29;</code>
+     */
+    public static final int FAILURE_SUB_REASON_GC_INTERNET_CONNECTION_REQUIRED_VALUE = 29;
+    /**
+     * <pre>
+     * Glasses Core PairingError.DISCONNECTED_DURING_PAIRING
+     * </pre>
+     *
+     * <code>FAILURE_SUB_REASON_GC_DISCONNECTED_DURING_PAIRING = 30;</code>
+     */
+    public static final int FAILURE_SUB_REASON_GC_DISCONNECTED_DURING_PAIRING_VALUE = 30;
+    /**
+     * <pre>
+     * Unpair failed while stopping a running AVD
+     * </pre>
+     *
+     * <code>FAILURE_SUB_REASON_STOP_AVD_FAILED = 31;</code>
+     */
+    public static final int FAILURE_SUB_REASON_STOP_AVD_FAILED_VALUE = 31;
+    /**
+     * <pre>
+     * Unpair failed while wiping AVD data
+     * </pre>
+     *
+     * <code>FAILURE_SUB_REASON_WIPE_DATA_FAILED = 32;</code>
+     */
+    public static final int FAILURE_SUB_REASON_WIPE_DATA_FAILED_VALUE = 32;
+    /**
+     * <pre>
+     * Unpair failed while updating host configuration (.ini)
+     * </pre>
+     *
+     * <code>FAILURE_SUB_REASON_HOST_CONFIG_UPDATE_FAILED = 33;</code>
+     */
+    public static final int FAILURE_SUB_REASON_HOST_CONFIG_UPDATE_FAILED_VALUE = 33;
+
+
+    public final int getNumber() {
+      return value;
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     * @deprecated Use {@link #forNumber(int)} instead.
+     */
+    @java.lang.Deprecated
+    public static FailureSubReason valueOf(int value) {
+      return forNumber(value);
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     */
+    public static FailureSubReason forNumber(int value) {
+      switch (value) {
+        case 0: return FAILURE_SUB_REASON_UNSPECIFIED;
+        case 1: return FAILURE_SUB_REASON_FOREGROUND_TIMEOUT;
+        case 2: return FAILURE_SUB_REASON_STATE_UNREADABLE;
+        case 3: return FAILURE_SUB_REASON_IDLE_TIMEOUT;
+        case 4: return FAILURE_SUB_REASON_CDM_USER_REJECTED;
+        case 5: return FAILURE_SUB_REASON_CDM_CANCELED;
+        case 6: return FAILURE_SUB_REASON_CDM_POLL_CAP_REACHED;
+        case 7: return FAILURE_SUB_REASON_COMPANION_TIMEOUT;
+        case 8: return FAILURE_SUB_REASON_UNEXPECTED_ERROR;
+        case 9: return FAILURE_SUB_REASON_GC_REMOTE_EXCEPTION;
+        case 10: return FAILURE_SUB_REASON_GC_MISSING_PERMISSIONS;
+        case 11: return FAILURE_SUB_REASON_GC_ALREADY_CONNECTED;
+        case 12: return FAILURE_SUB_REASON_GC_UNKNOWN_DEVICE;
+        case 13: return FAILURE_SUB_REASON_GC_TIMEOUT;
+        case 14: return FAILURE_SUB_REASON_GC_FAILED_TO_CREATE_CDM_ASSOCIATION;
+        case 15: return FAILURE_SUB_REASON_GC_PAIRING_REFUSED;
+        case 16: return FAILURE_SUB_REASON_GC_GLASSES_VERIFICATION_FAILED_BYPASS_ALLOWED;
+        case 17: return FAILURE_SUB_REASON_GC_GLASSES_VERIFICATION_FAILED_BYPASS_NOT_ALLOWED;
+        case 18: return FAILURE_SUB_REASON_GC_UPDATE_GLASSES_CORE;
+        case 19: return FAILURE_SUB_REASON_GC_CANCELLED_BY_USER;
+        case 20: return FAILURE_SUB_REASON_GC_INVALID_PAIRING_RESPONSE;
+        case 21: return FAILURE_SUB_REASON_GC_UNKNOWN;
+        case 22: return FAILURE_SUB_REASON_GC_BLUETOOTH_OFF;
+        case 23: return FAILURE_SUB_REASON_GC_ALREADY_CONNECTING_SAME_DEVICE;
+        case 24: return FAILURE_SUB_REASON_GC_ALREADY_CONNECTING_DIFFERENT_DEVICE;
+        case 25: return FAILURE_SUB_REASON_GC_GLASSES_HIBERNATED;
+        case 26: return FAILURE_SUB_REASON_GC_DISPLAYLESS_DEVICE_A2DP_DISABLED;
+        case 27: return FAILURE_SUB_REASON_GC_DISPLAYLESS_DEVICE_HFP_DISABLED;
+        case 28: return FAILURE_SUB_REASON_GC_CANCELLED_BY_NEW_PAIRING_REQUEST;
+        case 29: return FAILURE_SUB_REASON_GC_INTERNET_CONNECTION_REQUIRED;
+        case 30: return FAILURE_SUB_REASON_GC_DISCONNECTED_DURING_PAIRING;
+        case 31: return FAILURE_SUB_REASON_STOP_AVD_FAILED;
+        case 32: return FAILURE_SUB_REASON_WIPE_DATA_FAILED;
+        case 33: return FAILURE_SUB_REASON_HOST_CONFIG_UPDATE_FAILED;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<FailureSubReason>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static final com.google.protobuf.Internal.EnumLiteMap<
+        FailureSubReason> internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<FailureSubReason>() {
+            public FailureSubReason findValueByNumber(int number) {
+              return FailureSubReason.forNumber(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      return getDescriptor().getValues().get(ordinal());
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return com.google.wireless.android.sdk.stats.GlassesPairingEvent.getDescriptor().getEnumTypes().get(3);
+    }
+
+    private static final FailureSubReason[] VALUES = values();
+
+    public static FailureSubReason valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int value;
+
+    private FailureSubReason(int value) {
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:android_studio.GlassesPairingEvent.FailureSubReason)
+  }
+
+  /**
+   * <pre>
+   * Which silent reconciliation branch resolved an asymmetric pairing state.
+   * </pre>
+   *
+   * Protobuf enum {@code android_studio.GlassesPairingEvent.AsymmetricResolutionReason}
+   */
+  public enum AsymmetricResolutionReason
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <code>ASYMMETRIC_RESOLUTION_REASON_UNSPECIFIED = 0;</code>
+     */
+    ASYMMETRIC_RESOLUTION_REASON_UNSPECIFIED(0),
+    /**
+     * <pre>
+     * Glasses AVD reported zero Bluetooth bonds; pruned stale pairing linkage
+     * </pre>
+     *
+     * <code>ASYMMETRIC_RESOLUTION_REASON_GLASSES_ZERO_BONDS_PRUNED = 1;</code>
+     */
+    ASYMMETRIC_RESOLUTION_REASON_GLASSES_ZERO_BONDS_PRUNED(1),
+    /**
+     * <pre>
+     * Phone had zero bonds and glasses had no recorded MAC; pruned linkage
+     * </pre>
+     *
+     * <code>ASYMMETRIC_RESOLUTION_REASON_MISSING_MAC_PRUNED = 2;</code>
+     */
+    ASYMMETRIC_RESOLUTION_REASON_MISSING_MAC_PRUNED(2),
+    /**
+     * <pre>
+     * Backfilled missing Bluetooth MAC address on tracked pairing
+     * </pre>
+     *
+     * <code>ASYMMETRIC_RESOLUTION_REASON_MISSING_MAC_BACKFILLED = 3;</code>
+     */
+    ASYMMETRIC_RESOLUTION_REASON_MISSING_MAC_BACKFILLED(3),
+    /**
+     * <pre>
+     * Pruned stale phone reference after phone AVD was deleted or wiped
+     * </pre>
+     *
+     * <code>ASYMMETRIC_RESOLUTION_REASON_STALE_PHONE_REF_PRUNED = 4;</code>
+     */
+    ASYMMETRIC_RESOLUTION_REASON_STALE_PHONE_REF_PRUNED(4),
+    ;
+
+    /**
+     * <code>ASYMMETRIC_RESOLUTION_REASON_UNSPECIFIED = 0;</code>
+     */
+    public static final int ASYMMETRIC_RESOLUTION_REASON_UNSPECIFIED_VALUE = 0;
+    /**
+     * <pre>
+     * Glasses AVD reported zero Bluetooth bonds; pruned stale pairing linkage
+     * </pre>
+     *
+     * <code>ASYMMETRIC_RESOLUTION_REASON_GLASSES_ZERO_BONDS_PRUNED = 1;</code>
+     */
+    public static final int ASYMMETRIC_RESOLUTION_REASON_GLASSES_ZERO_BONDS_PRUNED_VALUE = 1;
+    /**
+     * <pre>
+     * Phone had zero bonds and glasses had no recorded MAC; pruned linkage
+     * </pre>
+     *
+     * <code>ASYMMETRIC_RESOLUTION_REASON_MISSING_MAC_PRUNED = 2;</code>
+     */
+    public static final int ASYMMETRIC_RESOLUTION_REASON_MISSING_MAC_PRUNED_VALUE = 2;
+    /**
+     * <pre>
+     * Backfilled missing Bluetooth MAC address on tracked pairing
+     * </pre>
+     *
+     * <code>ASYMMETRIC_RESOLUTION_REASON_MISSING_MAC_BACKFILLED = 3;</code>
+     */
+    public static final int ASYMMETRIC_RESOLUTION_REASON_MISSING_MAC_BACKFILLED_VALUE = 3;
+    /**
+     * <pre>
+     * Pruned stale phone reference after phone AVD was deleted or wiped
+     * </pre>
+     *
+     * <code>ASYMMETRIC_RESOLUTION_REASON_STALE_PHONE_REF_PRUNED = 4;</code>
+     */
+    public static final int ASYMMETRIC_RESOLUTION_REASON_STALE_PHONE_REF_PRUNED_VALUE = 4;
+
+
+    public final int getNumber() {
+      return value;
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     * @deprecated Use {@link #forNumber(int)} instead.
+     */
+    @java.lang.Deprecated
+    public static AsymmetricResolutionReason valueOf(int value) {
+      return forNumber(value);
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     */
+    public static AsymmetricResolutionReason forNumber(int value) {
+      switch (value) {
+        case 0: return ASYMMETRIC_RESOLUTION_REASON_UNSPECIFIED;
+        case 1: return ASYMMETRIC_RESOLUTION_REASON_GLASSES_ZERO_BONDS_PRUNED;
+        case 2: return ASYMMETRIC_RESOLUTION_REASON_MISSING_MAC_PRUNED;
+        case 3: return ASYMMETRIC_RESOLUTION_REASON_MISSING_MAC_BACKFILLED;
+        case 4: return ASYMMETRIC_RESOLUTION_REASON_STALE_PHONE_REF_PRUNED;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<AsymmetricResolutionReason>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static final com.google.protobuf.Internal.EnumLiteMap<
+        AsymmetricResolutionReason> internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<AsymmetricResolutionReason>() {
+            public AsymmetricResolutionReason findValueByNumber(int number) {
+              return AsymmetricResolutionReason.forNumber(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      return getDescriptor().getValues().get(ordinal());
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return com.google.wireless.android.sdk.stats.GlassesPairingEvent.getDescriptor().getEnumTypes().get(4);
+    }
+
+    private static final AsymmetricResolutionReason[] VALUES = values();
+
+    public static AsymmetricResolutionReason valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int value;
+
+    private AsymmetricResolutionReason(int value) {
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:android_studio.GlassesPairingEvent.AsymmetricResolutionReason)
+  }
+
+  /**
+   * <pre>
+   * Entry point that triggered an unpair operation.
+   * </pre>
+   *
+   * Protobuf enum {@code android_studio.GlassesPairingEvent.UnpairSource}
+   */
+  public enum UnpairSource
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <code>UNPAIR_SOURCE_UNSPECIFIED = 0;</code>
+     */
+    UNPAIR_SOURCE_UNSPECIFIED(0),
+    /**
+     * <pre>
+     * User clicked Unpair in Device Manager menu
+     * </pre>
+     *
+     * <code>UNPAIR_SOURCE_USER_MENU = 1;</code>
+     */
+    UNPAIR_SOURCE_USER_MENU(1),
+    /**
+     * <pre>
+     * Unpair triggered inside the pairing wizard to re-pair
+     * </pre>
+     *
+     * <code>UNPAIR_SOURCE_WIZARD_REPAIR = 2;</code>
+     */
+    UNPAIR_SOURCE_WIZARD_REPAIR(2),
+    /**
+     * <pre>
+     * Unpair triggered by wiping an AVD
+     * </pre>
+     *
+     * <code>UNPAIR_SOURCE_AVD_WIPE = 3;</code>
+     */
+    UNPAIR_SOURCE_AVD_WIPE(3),
+    /**
+     * <pre>
+     * Unpair triggered by deleting an AVD
+     * </pre>
+     *
+     * <code>UNPAIR_SOURCE_AVD_DELETE = 4;</code>
+     */
+    UNPAIR_SOURCE_AVD_DELETE(4),
+    /**
+     * <pre>
+     * Unpair triggered by a cascading wipe
+     * </pre>
+     *
+     * <code>UNPAIR_SOURCE_CASCADING_WIPE = 5;</code>
+     */
+    UNPAIR_SOURCE_CASCADING_WIPE(5),
+    ;
+
+    /**
+     * <code>UNPAIR_SOURCE_UNSPECIFIED = 0;</code>
+     */
+    public static final int UNPAIR_SOURCE_UNSPECIFIED_VALUE = 0;
+    /**
+     * <pre>
+     * User clicked Unpair in Device Manager menu
+     * </pre>
+     *
+     * <code>UNPAIR_SOURCE_USER_MENU = 1;</code>
+     */
+    public static final int UNPAIR_SOURCE_USER_MENU_VALUE = 1;
+    /**
+     * <pre>
+     * Unpair triggered inside the pairing wizard to re-pair
+     * </pre>
+     *
+     * <code>UNPAIR_SOURCE_WIZARD_REPAIR = 2;</code>
+     */
+    public static final int UNPAIR_SOURCE_WIZARD_REPAIR_VALUE = 2;
+    /**
+     * <pre>
+     * Unpair triggered by wiping an AVD
+     * </pre>
+     *
+     * <code>UNPAIR_SOURCE_AVD_WIPE = 3;</code>
+     */
+    public static final int UNPAIR_SOURCE_AVD_WIPE_VALUE = 3;
+    /**
+     * <pre>
+     * Unpair triggered by deleting an AVD
+     * </pre>
+     *
+     * <code>UNPAIR_SOURCE_AVD_DELETE = 4;</code>
+     */
+    public static final int UNPAIR_SOURCE_AVD_DELETE_VALUE = 4;
+    /**
+     * <pre>
+     * Unpair triggered by a cascading wipe
+     * </pre>
+     *
+     * <code>UNPAIR_SOURCE_CASCADING_WIPE = 5;</code>
+     */
+    public static final int UNPAIR_SOURCE_CASCADING_WIPE_VALUE = 5;
+
+
+    public final int getNumber() {
+      return value;
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     * @deprecated Use {@link #forNumber(int)} instead.
+     */
+    @java.lang.Deprecated
+    public static UnpairSource valueOf(int value) {
+      return forNumber(value);
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     */
+    public static UnpairSource forNumber(int value) {
+      switch (value) {
+        case 0: return UNPAIR_SOURCE_UNSPECIFIED;
+        case 1: return UNPAIR_SOURCE_USER_MENU;
+        case 2: return UNPAIR_SOURCE_WIZARD_REPAIR;
+        case 3: return UNPAIR_SOURCE_AVD_WIPE;
+        case 4: return UNPAIR_SOURCE_AVD_DELETE;
+        case 5: return UNPAIR_SOURCE_CASCADING_WIPE;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<UnpairSource>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static final com.google.protobuf.Internal.EnumLiteMap<
+        UnpairSource> internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<UnpairSource>() {
+            public UnpairSource findValueByNumber(int number) {
+              return UnpairSource.forNumber(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      return getDescriptor().getValues().get(ordinal());
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return com.google.wireless.android.sdk.stats.GlassesPairingEvent.getDescriptor().getEnumTypes().get(5);
+    }
+
+    private static final UnpairSource[] VALUES = values();
+
+    public static UnpairSource valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int value;
+
+    private UnpairSource(int value) {
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:android_studio.GlassesPairingEvent.UnpairSource)
+  }
+
   private int bitField0_;
   public static final int KIND_FIELD_NUMBER = 1;
   private int kind_ = 0;
@@ -698,6 +2201,229 @@ private static final long serialVersionUID = 0L;
     return result == null ? com.google.wireless.android.sdk.stats.GlassesPairingEvent.EventKind.UNSPECIFIED : result;
   }
 
+  public static final int PAIRING_ATTEMPT_ID_FIELD_NUMBER = 2;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object pairingAttemptId_ = "";
+  /**
+   * <pre>
+   * Random per-attempt UUID generated by the wizard; joins milestone events of
+   * one attempt.
+   * </pre>
+   *
+   * <code>optional string pairing_attempt_id = 2;</code>
+   * @return Whether the pairingAttemptId field is set.
+   */
+  @java.lang.Override
+  public boolean hasPairingAttemptId() {
+    return ((bitField0_ & 0x00000002) != 0);
+  }
+  /**
+   * <pre>
+   * Random per-attempt UUID generated by the wizard; joins milestone events of
+   * one attempt.
+   * </pre>
+   *
+   * <code>optional string pairing_attempt_id = 2;</code>
+   * @return The pairingAttemptId.
+   */
+  @java.lang.Override
+  public java.lang.String getPairingAttemptId() {
+    java.lang.Object ref = pairingAttemptId_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      if (bs.isValidUtf8()) {
+        pairingAttemptId_ = s;
+      }
+      return s;
+    }
+  }
+  /**
+   * <pre>
+   * Random per-attempt UUID generated by the wizard; joins milestone events of
+   * one attempt.
+   * </pre>
+   *
+   * <code>optional string pairing_attempt_id = 2;</code>
+   * @return The bytes for pairingAttemptId.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getPairingAttemptIdBytes() {
+    java.lang.Object ref = pairingAttemptId_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      pairingAttemptId_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
+  public static final int LAUNCH_TRIGGER_FIELD_NUMBER = 3;
+  private int launchTrigger_ = 0;
+  /**
+   * <pre>
+   * How the pairing wizard was launched.
+   * </pre>
+   *
+   * <code>optional .android_studio.GlassesPairingEvent.LaunchTrigger launch_trigger = 3;</code>
+   * @return Whether the launchTrigger field is set.
+   */
+  @java.lang.Override public boolean hasLaunchTrigger() {
+    return ((bitField0_ & 0x00000004) != 0);
+  }
+  /**
+   * <pre>
+   * How the pairing wizard was launched.
+   * </pre>
+   *
+   * <code>optional .android_studio.GlassesPairingEvent.LaunchTrigger launch_trigger = 3;</code>
+   * @return The launchTrigger.
+   */
+  @java.lang.Override public com.google.wireless.android.sdk.stats.GlassesPairingEvent.LaunchTrigger getLaunchTrigger() {
+    com.google.wireless.android.sdk.stats.GlassesPairingEvent.LaunchTrigger result = com.google.wireless.android.sdk.stats.GlassesPairingEvent.LaunchTrigger.forNumber(launchTrigger_);
+    return result == null ? com.google.wireless.android.sdk.stats.GlassesPairingEvent.LaunchTrigger.LAUNCH_TRIGGER_UNSPECIFIED : result;
+  }
+
+  public static final int SELECTION_SOURCE_FIELD_NUMBER = 4;
+  private int selectionSource_ = 0;
+  /**
+   * <pre>
+   * How the target device was selected on the wizard selection page.
+   * </pre>
+   *
+   * <code>optional .android_studio.GlassesPairingEvent.SelectionSource selection_source = 4;</code>
+   * @return Whether the selectionSource field is set.
+   */
+  @java.lang.Override public boolean hasSelectionSource() {
+    return ((bitField0_ & 0x00000008) != 0);
+  }
+  /**
+   * <pre>
+   * How the target device was selected on the wizard selection page.
+   * </pre>
+   *
+   * <code>optional .android_studio.GlassesPairingEvent.SelectionSource selection_source = 4;</code>
+   * @return The selectionSource.
+   */
+  @java.lang.Override public com.google.wireless.android.sdk.stats.GlassesPairingEvent.SelectionSource getSelectionSource() {
+    com.google.wireless.android.sdk.stats.GlassesPairingEvent.SelectionSource result = com.google.wireless.android.sdk.stats.GlassesPairingEvent.SelectionSource.forNumber(selectionSource_);
+    return result == null ? com.google.wireless.android.sdk.stats.GlassesPairingEvent.SelectionSource.SELECTION_SOURCE_UNSPECIFIED : result;
+  }
+
+  public static final int FAILURE_SUB_REASON_FIELD_NUMBER = 5;
+  private int failureSubReason_ = 0;
+  /**
+   * <pre>
+   * Structured sub-reason for a pairing or unpair failure.
+   * </pre>
+   *
+   * <code>optional .android_studio.GlassesPairingEvent.FailureSubReason failure_sub_reason = 5;</code>
+   * @return Whether the failureSubReason field is set.
+   */
+  @java.lang.Override public boolean hasFailureSubReason() {
+    return ((bitField0_ & 0x00000010) != 0);
+  }
+  /**
+   * <pre>
+   * Structured sub-reason for a pairing or unpair failure.
+   * </pre>
+   *
+   * <code>optional .android_studio.GlassesPairingEvent.FailureSubReason failure_sub_reason = 5;</code>
+   * @return The failureSubReason.
+   */
+  @java.lang.Override public com.google.wireless.android.sdk.stats.GlassesPairingEvent.FailureSubReason getFailureSubReason() {
+    com.google.wireless.android.sdk.stats.GlassesPairingEvent.FailureSubReason result = com.google.wireless.android.sdk.stats.GlassesPairingEvent.FailureSubReason.forNumber(failureSubReason_);
+    return result == null ? com.google.wireless.android.sdk.stats.GlassesPairingEvent.FailureSubReason.FAILURE_SUB_REASON_UNSPECIFIED : result;
+  }
+
+  public static final int ASYMMETRIC_RESOLUTION_REASON_FIELD_NUMBER = 6;
+  private int asymmetricResolutionReason_ = 0;
+  /**
+   * <pre>
+   * Which silent reconciliation branch resolved an asymmetric pairing state.
+   * </pre>
+   *
+   * <code>optional .android_studio.GlassesPairingEvent.AsymmetricResolutionReason asymmetric_resolution_reason = 6;</code>
+   * @return Whether the asymmetricResolutionReason field is set.
+   */
+  @java.lang.Override public boolean hasAsymmetricResolutionReason() {
+    return ((bitField0_ & 0x00000020) != 0);
+  }
+  /**
+   * <pre>
+   * Which silent reconciliation branch resolved an asymmetric pairing state.
+   * </pre>
+   *
+   * <code>optional .android_studio.GlassesPairingEvent.AsymmetricResolutionReason asymmetric_resolution_reason = 6;</code>
+   * @return The asymmetricResolutionReason.
+   */
+  @java.lang.Override public com.google.wireless.android.sdk.stats.GlassesPairingEvent.AsymmetricResolutionReason getAsymmetricResolutionReason() {
+    com.google.wireless.android.sdk.stats.GlassesPairingEvent.AsymmetricResolutionReason result = com.google.wireless.android.sdk.stats.GlassesPairingEvent.AsymmetricResolutionReason.forNumber(asymmetricResolutionReason_);
+    return result == null ? com.google.wireless.android.sdk.stats.GlassesPairingEvent.AsymmetricResolutionReason.ASYMMETRIC_RESOLUTION_REASON_UNSPECIFIED : result;
+  }
+
+  public static final int UNPAIR_SOURCE_FIELD_NUMBER = 7;
+  private int unpairSource_ = 0;
+  /**
+   * <pre>
+   * Entry point that triggered an unpair operation.
+   * </pre>
+   *
+   * <code>optional .android_studio.GlassesPairingEvent.UnpairSource unpair_source = 7;</code>
+   * @return Whether the unpairSource field is set.
+   */
+  @java.lang.Override public boolean hasUnpairSource() {
+    return ((bitField0_ & 0x00000040) != 0);
+  }
+  /**
+   * <pre>
+   * Entry point that triggered an unpair operation.
+   * </pre>
+   *
+   * <code>optional .android_studio.GlassesPairingEvent.UnpairSource unpair_source = 7;</code>
+   * @return The unpairSource.
+   */
+  @java.lang.Override public com.google.wireless.android.sdk.stats.GlassesPairingEvent.UnpairSource getUnpairSource() {
+    com.google.wireless.android.sdk.stats.GlassesPairingEvent.UnpairSource result = com.google.wireless.android.sdk.stats.GlassesPairingEvent.UnpairSource.forNumber(unpairSource_);
+    return result == null ? com.google.wireless.android.sdk.stats.GlassesPairingEvent.UnpairSource.UNPAIR_SOURCE_UNSPECIFIED : result;
+  }
+
+  public static final int FOCUS_TAP_WORKAROUND_USED_FIELD_NUMBER = 8;
+  private boolean focusTapWorkaroundUsed_ = false;
+  /**
+   * <pre>
+   * True when the wizard had to tap the Companion window to bring it to the
+   * foreground.
+   * </pre>
+   *
+   * <code>optional bool focus_tap_workaround_used = 8;</code>
+   * @return Whether the focusTapWorkaroundUsed field is set.
+   */
+  @java.lang.Override
+  public boolean hasFocusTapWorkaroundUsed() {
+    return ((bitField0_ & 0x00000080) != 0);
+  }
+  /**
+   * <pre>
+   * True when the wizard had to tap the Companion window to bring it to the
+   * foreground.
+   * </pre>
+   *
+   * <code>optional bool focus_tap_workaround_used = 8;</code>
+   * @return The focusTapWorkaroundUsed.
+   */
+  @java.lang.Override
+  public boolean getFocusTapWorkaroundUsed() {
+    return focusTapWorkaroundUsed_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -715,6 +2441,27 @@ private static final long serialVersionUID = 0L;
     if (((bitField0_ & 0x00000001) != 0)) {
       output.writeEnum(1, kind_);
     }
+    if (((bitField0_ & 0x00000002) != 0)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 2, pairingAttemptId_);
+    }
+    if (((bitField0_ & 0x00000004) != 0)) {
+      output.writeEnum(3, launchTrigger_);
+    }
+    if (((bitField0_ & 0x00000008) != 0)) {
+      output.writeEnum(4, selectionSource_);
+    }
+    if (((bitField0_ & 0x00000010) != 0)) {
+      output.writeEnum(5, failureSubReason_);
+    }
+    if (((bitField0_ & 0x00000020) != 0)) {
+      output.writeEnum(6, asymmetricResolutionReason_);
+    }
+    if (((bitField0_ & 0x00000040) != 0)) {
+      output.writeEnum(7, unpairSource_);
+    }
+    if (((bitField0_ & 0x00000080) != 0)) {
+      output.writeBool(8, focusTapWorkaroundUsed_);
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -727,6 +2474,33 @@ private static final long serialVersionUID = 0L;
     if (((bitField0_ & 0x00000001) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(1, kind_);
+    }
+    if (((bitField0_ & 0x00000002) != 0)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, pairingAttemptId_);
+    }
+    if (((bitField0_ & 0x00000004) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeEnumSize(3, launchTrigger_);
+    }
+    if (((bitField0_ & 0x00000008) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeEnumSize(4, selectionSource_);
+    }
+    if (((bitField0_ & 0x00000010) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeEnumSize(5, failureSubReason_);
+    }
+    if (((bitField0_ & 0x00000020) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeEnumSize(6, asymmetricResolutionReason_);
+    }
+    if (((bitField0_ & 0x00000040) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeEnumSize(7, unpairSource_);
+    }
+    if (((bitField0_ & 0x00000080) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeBoolSize(8, focusTapWorkaroundUsed_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -747,6 +2521,36 @@ private static final long serialVersionUID = 0L;
     if (hasKind()) {
       if (kind_ != other.kind_) return false;
     }
+    if (hasPairingAttemptId() != other.hasPairingAttemptId()) return false;
+    if (hasPairingAttemptId()) {
+      if (!getPairingAttemptId()
+          .equals(other.getPairingAttemptId())) return false;
+    }
+    if (hasLaunchTrigger() != other.hasLaunchTrigger()) return false;
+    if (hasLaunchTrigger()) {
+      if (launchTrigger_ != other.launchTrigger_) return false;
+    }
+    if (hasSelectionSource() != other.hasSelectionSource()) return false;
+    if (hasSelectionSource()) {
+      if (selectionSource_ != other.selectionSource_) return false;
+    }
+    if (hasFailureSubReason() != other.hasFailureSubReason()) return false;
+    if (hasFailureSubReason()) {
+      if (failureSubReason_ != other.failureSubReason_) return false;
+    }
+    if (hasAsymmetricResolutionReason() != other.hasAsymmetricResolutionReason()) return false;
+    if (hasAsymmetricResolutionReason()) {
+      if (asymmetricResolutionReason_ != other.asymmetricResolutionReason_) return false;
+    }
+    if (hasUnpairSource() != other.hasUnpairSource()) return false;
+    if (hasUnpairSource()) {
+      if (unpairSource_ != other.unpairSource_) return false;
+    }
+    if (hasFocusTapWorkaroundUsed() != other.hasFocusTapWorkaroundUsed()) return false;
+    if (hasFocusTapWorkaroundUsed()) {
+      if (getFocusTapWorkaroundUsed()
+          != other.getFocusTapWorkaroundUsed()) return false;
+    }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -761,6 +2565,35 @@ private static final long serialVersionUID = 0L;
     if (hasKind()) {
       hash = (37 * hash) + KIND_FIELD_NUMBER;
       hash = (53 * hash) + kind_;
+    }
+    if (hasPairingAttemptId()) {
+      hash = (37 * hash) + PAIRING_ATTEMPT_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getPairingAttemptId().hashCode();
+    }
+    if (hasLaunchTrigger()) {
+      hash = (37 * hash) + LAUNCH_TRIGGER_FIELD_NUMBER;
+      hash = (53 * hash) + launchTrigger_;
+    }
+    if (hasSelectionSource()) {
+      hash = (37 * hash) + SELECTION_SOURCE_FIELD_NUMBER;
+      hash = (53 * hash) + selectionSource_;
+    }
+    if (hasFailureSubReason()) {
+      hash = (37 * hash) + FAILURE_SUB_REASON_FIELD_NUMBER;
+      hash = (53 * hash) + failureSubReason_;
+    }
+    if (hasAsymmetricResolutionReason()) {
+      hash = (37 * hash) + ASYMMETRIC_RESOLUTION_REASON_FIELD_NUMBER;
+      hash = (53 * hash) + asymmetricResolutionReason_;
+    }
+    if (hasUnpairSource()) {
+      hash = (37 * hash) + UNPAIR_SOURCE_FIELD_NUMBER;
+      hash = (53 * hash) + unpairSource_;
+    }
+    if (hasFocusTapWorkaroundUsed()) {
+      hash = (37 * hash) + FOCUS_TAP_WORKAROUND_USED_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getFocusTapWorkaroundUsed());
     }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
@@ -862,7 +2695,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Event related to Glasses emulator pairing assistant
-   * Next ID: 32
+   * Next field ID: 9
    * </pre>
    *
    * Protobuf type {@code android_studio.GlassesPairingEvent}
@@ -899,6 +2732,13 @@ private static final long serialVersionUID = 0L;
       super.clear();
       bitField0_ = 0;
       kind_ = 0;
+      pairingAttemptId_ = "";
+      launchTrigger_ = 0;
+      selectionSource_ = 0;
+      failureSubReason_ = 0;
+      asymmetricResolutionReason_ = 0;
+      unpairSource_ = 0;
+      focusTapWorkaroundUsed_ = false;
       return this;
     }
 
@@ -936,6 +2776,34 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000001) != 0)) {
         result.kind_ = kind_;
         to_bitField0_ |= 0x00000001;
+      }
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.pairingAttemptId_ = pairingAttemptId_;
+        to_bitField0_ |= 0x00000002;
+      }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.launchTrigger_ = launchTrigger_;
+        to_bitField0_ |= 0x00000004;
+      }
+      if (((from_bitField0_ & 0x00000008) != 0)) {
+        result.selectionSource_ = selectionSource_;
+        to_bitField0_ |= 0x00000008;
+      }
+      if (((from_bitField0_ & 0x00000010) != 0)) {
+        result.failureSubReason_ = failureSubReason_;
+        to_bitField0_ |= 0x00000010;
+      }
+      if (((from_bitField0_ & 0x00000020) != 0)) {
+        result.asymmetricResolutionReason_ = asymmetricResolutionReason_;
+        to_bitField0_ |= 0x00000020;
+      }
+      if (((from_bitField0_ & 0x00000040) != 0)) {
+        result.unpairSource_ = unpairSource_;
+        to_bitField0_ |= 0x00000040;
+      }
+      if (((from_bitField0_ & 0x00000080) != 0)) {
+        result.focusTapWorkaroundUsed_ = focusTapWorkaroundUsed_;
+        to_bitField0_ |= 0x00000080;
       }
       result.bitField0_ |= to_bitField0_;
     }
@@ -987,6 +2855,29 @@ private static final long serialVersionUID = 0L;
       if (other.hasKind()) {
         setKind(other.getKind());
       }
+      if (other.hasPairingAttemptId()) {
+        pairingAttemptId_ = other.pairingAttemptId_;
+        bitField0_ |= 0x00000002;
+        onChanged();
+      }
+      if (other.hasLaunchTrigger()) {
+        setLaunchTrigger(other.getLaunchTrigger());
+      }
+      if (other.hasSelectionSource()) {
+        setSelectionSource(other.getSelectionSource());
+      }
+      if (other.hasFailureSubReason()) {
+        setFailureSubReason(other.getFailureSubReason());
+      }
+      if (other.hasAsymmetricResolutionReason()) {
+        setAsymmetricResolutionReason(other.getAsymmetricResolutionReason());
+      }
+      if (other.hasUnpairSource()) {
+        setUnpairSource(other.getUnpairSource());
+      }
+      if (other.hasFocusTapWorkaroundUsed()) {
+        setFocusTapWorkaroundUsed(other.getFocusTapWorkaroundUsed());
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -1025,6 +2916,76 @@ private static final long serialVersionUID = 0L;
               }
               break;
             } // case 8
+            case 18: {
+              pairingAttemptId_ = input.readBytes();
+              bitField0_ |= 0x00000002;
+              break;
+            } // case 18
+            case 24: {
+              int tmpRaw = input.readEnum();
+              com.google.wireless.android.sdk.stats.GlassesPairingEvent.LaunchTrigger tmpValue =
+                  com.google.wireless.android.sdk.stats.GlassesPairingEvent.LaunchTrigger.forNumber(tmpRaw);
+              if (tmpValue == null) {
+                mergeUnknownVarintField(3, tmpRaw);
+              } else {
+                launchTrigger_ = tmpRaw;
+                bitField0_ |= 0x00000004;
+              }
+              break;
+            } // case 24
+            case 32: {
+              int tmpRaw = input.readEnum();
+              com.google.wireless.android.sdk.stats.GlassesPairingEvent.SelectionSource tmpValue =
+                  com.google.wireless.android.sdk.stats.GlassesPairingEvent.SelectionSource.forNumber(tmpRaw);
+              if (tmpValue == null) {
+                mergeUnknownVarintField(4, tmpRaw);
+              } else {
+                selectionSource_ = tmpRaw;
+                bitField0_ |= 0x00000008;
+              }
+              break;
+            } // case 32
+            case 40: {
+              int tmpRaw = input.readEnum();
+              com.google.wireless.android.sdk.stats.GlassesPairingEvent.FailureSubReason tmpValue =
+                  com.google.wireless.android.sdk.stats.GlassesPairingEvent.FailureSubReason.forNumber(tmpRaw);
+              if (tmpValue == null) {
+                mergeUnknownVarintField(5, tmpRaw);
+              } else {
+                failureSubReason_ = tmpRaw;
+                bitField0_ |= 0x00000010;
+              }
+              break;
+            } // case 40
+            case 48: {
+              int tmpRaw = input.readEnum();
+              com.google.wireless.android.sdk.stats.GlassesPairingEvent.AsymmetricResolutionReason tmpValue =
+                  com.google.wireless.android.sdk.stats.GlassesPairingEvent.AsymmetricResolutionReason.forNumber(tmpRaw);
+              if (tmpValue == null) {
+                mergeUnknownVarintField(6, tmpRaw);
+              } else {
+                asymmetricResolutionReason_ = tmpRaw;
+                bitField0_ |= 0x00000020;
+              }
+              break;
+            } // case 48
+            case 56: {
+              int tmpRaw = input.readEnum();
+              com.google.wireless.android.sdk.stats.GlassesPairingEvent.UnpairSource tmpValue =
+                  com.google.wireless.android.sdk.stats.GlassesPairingEvent.UnpairSource.forNumber(tmpRaw);
+              if (tmpValue == null) {
+                mergeUnknownVarintField(7, tmpRaw);
+              } else {
+                unpairSource_ = tmpRaw;
+                bitField0_ |= 0x00000040;
+              }
+              break;
+            } // case 56
+            case 64: {
+              focusTapWorkaroundUsed_ = input.readBool();
+              bitField0_ |= 0x00000080;
+              break;
+            } // case 64
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -1096,6 +3057,466 @@ private static final long serialVersionUID = 0L;
     public Builder clearKind() {
       bitField0_ = (bitField0_ & ~0x00000001);
       kind_ = 0;
+      onChanged();
+      return this;
+    }
+
+    private java.lang.Object pairingAttemptId_ = "";
+    /**
+     * <pre>
+     * Random per-attempt UUID generated by the wizard; joins milestone events of
+     * one attempt.
+     * </pre>
+     *
+     * <code>optional string pairing_attempt_id = 2;</code>
+     * @return Whether the pairingAttemptId field is set.
+     */
+    public boolean hasPairingAttemptId() {
+      return ((bitField0_ & 0x00000002) != 0);
+    }
+    /**
+     * <pre>
+     * Random per-attempt UUID generated by the wizard; joins milestone events of
+     * one attempt.
+     * </pre>
+     *
+     * <code>optional string pairing_attempt_id = 2;</code>
+     * @return The pairingAttemptId.
+     */
+    public java.lang.String getPairingAttemptId() {
+      java.lang.Object ref = pairingAttemptId_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          pairingAttemptId_ = s;
+        }
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <pre>
+     * Random per-attempt UUID generated by the wizard; joins milestone events of
+     * one attempt.
+     * </pre>
+     *
+     * <code>optional string pairing_attempt_id = 2;</code>
+     * @return The bytes for pairingAttemptId.
+     */
+    public com.google.protobuf.ByteString
+        getPairingAttemptIdBytes() {
+      java.lang.Object ref = pairingAttemptId_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        pairingAttemptId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <pre>
+     * Random per-attempt UUID generated by the wizard; joins milestone events of
+     * one attempt.
+     * </pre>
+     *
+     * <code>optional string pairing_attempt_id = 2;</code>
+     * @param value The pairingAttemptId to set.
+     * @return This builder for chaining.
+     */
+    public Builder setPairingAttemptId(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      pairingAttemptId_ = value;
+      bitField0_ |= 0x00000002;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Random per-attempt UUID generated by the wizard; joins milestone events of
+     * one attempt.
+     * </pre>
+     *
+     * <code>optional string pairing_attempt_id = 2;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearPairingAttemptId() {
+      pairingAttemptId_ = getDefaultInstance().getPairingAttemptId();
+      bitField0_ = (bitField0_ & ~0x00000002);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Random per-attempt UUID generated by the wizard; joins milestone events of
+     * one attempt.
+     * </pre>
+     *
+     * <code>optional string pairing_attempt_id = 2;</code>
+     * @param value The bytes for pairingAttemptId to set.
+     * @return This builder for chaining.
+     */
+    public Builder setPairingAttemptIdBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      pairingAttemptId_ = value;
+      bitField0_ |= 0x00000002;
+      onChanged();
+      return this;
+    }
+
+    private int launchTrigger_ = 0;
+    /**
+     * <pre>
+     * How the pairing wizard was launched.
+     * </pre>
+     *
+     * <code>optional .android_studio.GlassesPairingEvent.LaunchTrigger launch_trigger = 3;</code>
+     * @return Whether the launchTrigger field is set.
+     */
+    @java.lang.Override public boolean hasLaunchTrigger() {
+      return ((bitField0_ & 0x00000004) != 0);
+    }
+    /**
+     * <pre>
+     * How the pairing wizard was launched.
+     * </pre>
+     *
+     * <code>optional .android_studio.GlassesPairingEvent.LaunchTrigger launch_trigger = 3;</code>
+     * @return The launchTrigger.
+     */
+    @java.lang.Override
+    public com.google.wireless.android.sdk.stats.GlassesPairingEvent.LaunchTrigger getLaunchTrigger() {
+      com.google.wireless.android.sdk.stats.GlassesPairingEvent.LaunchTrigger result = com.google.wireless.android.sdk.stats.GlassesPairingEvent.LaunchTrigger.forNumber(launchTrigger_);
+      return result == null ? com.google.wireless.android.sdk.stats.GlassesPairingEvent.LaunchTrigger.LAUNCH_TRIGGER_UNSPECIFIED : result;
+    }
+    /**
+     * <pre>
+     * How the pairing wizard was launched.
+     * </pre>
+     *
+     * <code>optional .android_studio.GlassesPairingEvent.LaunchTrigger launch_trigger = 3;</code>
+     * @param value The launchTrigger to set.
+     * @return This builder for chaining.
+     */
+    public Builder setLaunchTrigger(com.google.wireless.android.sdk.stats.GlassesPairingEvent.LaunchTrigger value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      bitField0_ |= 0x00000004;
+      launchTrigger_ = value.getNumber();
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * How the pairing wizard was launched.
+     * </pre>
+     *
+     * <code>optional .android_studio.GlassesPairingEvent.LaunchTrigger launch_trigger = 3;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearLaunchTrigger() {
+      bitField0_ = (bitField0_ & ~0x00000004);
+      launchTrigger_ = 0;
+      onChanged();
+      return this;
+    }
+
+    private int selectionSource_ = 0;
+    /**
+     * <pre>
+     * How the target device was selected on the wizard selection page.
+     * </pre>
+     *
+     * <code>optional .android_studio.GlassesPairingEvent.SelectionSource selection_source = 4;</code>
+     * @return Whether the selectionSource field is set.
+     */
+    @java.lang.Override public boolean hasSelectionSource() {
+      return ((bitField0_ & 0x00000008) != 0);
+    }
+    /**
+     * <pre>
+     * How the target device was selected on the wizard selection page.
+     * </pre>
+     *
+     * <code>optional .android_studio.GlassesPairingEvent.SelectionSource selection_source = 4;</code>
+     * @return The selectionSource.
+     */
+    @java.lang.Override
+    public com.google.wireless.android.sdk.stats.GlassesPairingEvent.SelectionSource getSelectionSource() {
+      com.google.wireless.android.sdk.stats.GlassesPairingEvent.SelectionSource result = com.google.wireless.android.sdk.stats.GlassesPairingEvent.SelectionSource.forNumber(selectionSource_);
+      return result == null ? com.google.wireless.android.sdk.stats.GlassesPairingEvent.SelectionSource.SELECTION_SOURCE_UNSPECIFIED : result;
+    }
+    /**
+     * <pre>
+     * How the target device was selected on the wizard selection page.
+     * </pre>
+     *
+     * <code>optional .android_studio.GlassesPairingEvent.SelectionSource selection_source = 4;</code>
+     * @param value The selectionSource to set.
+     * @return This builder for chaining.
+     */
+    public Builder setSelectionSource(com.google.wireless.android.sdk.stats.GlassesPairingEvent.SelectionSource value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      bitField0_ |= 0x00000008;
+      selectionSource_ = value.getNumber();
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * How the target device was selected on the wizard selection page.
+     * </pre>
+     *
+     * <code>optional .android_studio.GlassesPairingEvent.SelectionSource selection_source = 4;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearSelectionSource() {
+      bitField0_ = (bitField0_ & ~0x00000008);
+      selectionSource_ = 0;
+      onChanged();
+      return this;
+    }
+
+    private int failureSubReason_ = 0;
+    /**
+     * <pre>
+     * Structured sub-reason for a pairing or unpair failure.
+     * </pre>
+     *
+     * <code>optional .android_studio.GlassesPairingEvent.FailureSubReason failure_sub_reason = 5;</code>
+     * @return Whether the failureSubReason field is set.
+     */
+    @java.lang.Override public boolean hasFailureSubReason() {
+      return ((bitField0_ & 0x00000010) != 0);
+    }
+    /**
+     * <pre>
+     * Structured sub-reason for a pairing or unpair failure.
+     * </pre>
+     *
+     * <code>optional .android_studio.GlassesPairingEvent.FailureSubReason failure_sub_reason = 5;</code>
+     * @return The failureSubReason.
+     */
+    @java.lang.Override
+    public com.google.wireless.android.sdk.stats.GlassesPairingEvent.FailureSubReason getFailureSubReason() {
+      com.google.wireless.android.sdk.stats.GlassesPairingEvent.FailureSubReason result = com.google.wireless.android.sdk.stats.GlassesPairingEvent.FailureSubReason.forNumber(failureSubReason_);
+      return result == null ? com.google.wireless.android.sdk.stats.GlassesPairingEvent.FailureSubReason.FAILURE_SUB_REASON_UNSPECIFIED : result;
+    }
+    /**
+     * <pre>
+     * Structured sub-reason for a pairing or unpair failure.
+     * </pre>
+     *
+     * <code>optional .android_studio.GlassesPairingEvent.FailureSubReason failure_sub_reason = 5;</code>
+     * @param value The failureSubReason to set.
+     * @return This builder for chaining.
+     */
+    public Builder setFailureSubReason(com.google.wireless.android.sdk.stats.GlassesPairingEvent.FailureSubReason value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      bitField0_ |= 0x00000010;
+      failureSubReason_ = value.getNumber();
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Structured sub-reason for a pairing or unpair failure.
+     * </pre>
+     *
+     * <code>optional .android_studio.GlassesPairingEvent.FailureSubReason failure_sub_reason = 5;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearFailureSubReason() {
+      bitField0_ = (bitField0_ & ~0x00000010);
+      failureSubReason_ = 0;
+      onChanged();
+      return this;
+    }
+
+    private int asymmetricResolutionReason_ = 0;
+    /**
+     * <pre>
+     * Which silent reconciliation branch resolved an asymmetric pairing state.
+     * </pre>
+     *
+     * <code>optional .android_studio.GlassesPairingEvent.AsymmetricResolutionReason asymmetric_resolution_reason = 6;</code>
+     * @return Whether the asymmetricResolutionReason field is set.
+     */
+    @java.lang.Override public boolean hasAsymmetricResolutionReason() {
+      return ((bitField0_ & 0x00000020) != 0);
+    }
+    /**
+     * <pre>
+     * Which silent reconciliation branch resolved an asymmetric pairing state.
+     * </pre>
+     *
+     * <code>optional .android_studio.GlassesPairingEvent.AsymmetricResolutionReason asymmetric_resolution_reason = 6;</code>
+     * @return The asymmetricResolutionReason.
+     */
+    @java.lang.Override
+    public com.google.wireless.android.sdk.stats.GlassesPairingEvent.AsymmetricResolutionReason getAsymmetricResolutionReason() {
+      com.google.wireless.android.sdk.stats.GlassesPairingEvent.AsymmetricResolutionReason result = com.google.wireless.android.sdk.stats.GlassesPairingEvent.AsymmetricResolutionReason.forNumber(asymmetricResolutionReason_);
+      return result == null ? com.google.wireless.android.sdk.stats.GlassesPairingEvent.AsymmetricResolutionReason.ASYMMETRIC_RESOLUTION_REASON_UNSPECIFIED : result;
+    }
+    /**
+     * <pre>
+     * Which silent reconciliation branch resolved an asymmetric pairing state.
+     * </pre>
+     *
+     * <code>optional .android_studio.GlassesPairingEvent.AsymmetricResolutionReason asymmetric_resolution_reason = 6;</code>
+     * @param value The asymmetricResolutionReason to set.
+     * @return This builder for chaining.
+     */
+    public Builder setAsymmetricResolutionReason(com.google.wireless.android.sdk.stats.GlassesPairingEvent.AsymmetricResolutionReason value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      bitField0_ |= 0x00000020;
+      asymmetricResolutionReason_ = value.getNumber();
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Which silent reconciliation branch resolved an asymmetric pairing state.
+     * </pre>
+     *
+     * <code>optional .android_studio.GlassesPairingEvent.AsymmetricResolutionReason asymmetric_resolution_reason = 6;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearAsymmetricResolutionReason() {
+      bitField0_ = (bitField0_ & ~0x00000020);
+      asymmetricResolutionReason_ = 0;
+      onChanged();
+      return this;
+    }
+
+    private int unpairSource_ = 0;
+    /**
+     * <pre>
+     * Entry point that triggered an unpair operation.
+     * </pre>
+     *
+     * <code>optional .android_studio.GlassesPairingEvent.UnpairSource unpair_source = 7;</code>
+     * @return Whether the unpairSource field is set.
+     */
+    @java.lang.Override public boolean hasUnpairSource() {
+      return ((bitField0_ & 0x00000040) != 0);
+    }
+    /**
+     * <pre>
+     * Entry point that triggered an unpair operation.
+     * </pre>
+     *
+     * <code>optional .android_studio.GlassesPairingEvent.UnpairSource unpair_source = 7;</code>
+     * @return The unpairSource.
+     */
+    @java.lang.Override
+    public com.google.wireless.android.sdk.stats.GlassesPairingEvent.UnpairSource getUnpairSource() {
+      com.google.wireless.android.sdk.stats.GlassesPairingEvent.UnpairSource result = com.google.wireless.android.sdk.stats.GlassesPairingEvent.UnpairSource.forNumber(unpairSource_);
+      return result == null ? com.google.wireless.android.sdk.stats.GlassesPairingEvent.UnpairSource.UNPAIR_SOURCE_UNSPECIFIED : result;
+    }
+    /**
+     * <pre>
+     * Entry point that triggered an unpair operation.
+     * </pre>
+     *
+     * <code>optional .android_studio.GlassesPairingEvent.UnpairSource unpair_source = 7;</code>
+     * @param value The unpairSource to set.
+     * @return This builder for chaining.
+     */
+    public Builder setUnpairSource(com.google.wireless.android.sdk.stats.GlassesPairingEvent.UnpairSource value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      bitField0_ |= 0x00000040;
+      unpairSource_ = value.getNumber();
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Entry point that triggered an unpair operation.
+     * </pre>
+     *
+     * <code>optional .android_studio.GlassesPairingEvent.UnpairSource unpair_source = 7;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearUnpairSource() {
+      bitField0_ = (bitField0_ & ~0x00000040);
+      unpairSource_ = 0;
+      onChanged();
+      return this;
+    }
+
+    private boolean focusTapWorkaroundUsed_ ;
+    /**
+     * <pre>
+     * True when the wizard had to tap the Companion window to bring it to the
+     * foreground.
+     * </pre>
+     *
+     * <code>optional bool focus_tap_workaround_used = 8;</code>
+     * @return Whether the focusTapWorkaroundUsed field is set.
+     */
+    @java.lang.Override
+    public boolean hasFocusTapWorkaroundUsed() {
+      return ((bitField0_ & 0x00000080) != 0);
+    }
+    /**
+     * <pre>
+     * True when the wizard had to tap the Companion window to bring it to the
+     * foreground.
+     * </pre>
+     *
+     * <code>optional bool focus_tap_workaround_used = 8;</code>
+     * @return The focusTapWorkaroundUsed.
+     */
+    @java.lang.Override
+    public boolean getFocusTapWorkaroundUsed() {
+      return focusTapWorkaroundUsed_;
+    }
+    /**
+     * <pre>
+     * True when the wizard had to tap the Companion window to bring it to the
+     * foreground.
+     * </pre>
+     *
+     * <code>optional bool focus_tap_workaround_used = 8;</code>
+     * @param value The focusTapWorkaroundUsed to set.
+     * @return This builder for chaining.
+     */
+    public Builder setFocusTapWorkaroundUsed(boolean value) {
+
+      focusTapWorkaroundUsed_ = value;
+      bitField0_ |= 0x00000080;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * True when the wizard had to tap the Companion window to bring it to the
+     * foreground.
+     * </pre>
+     *
+     * <code>optional bool focus_tap_workaround_used = 8;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearFocusTapWorkaroundUsed() {
+      bitField0_ = (bitField0_ & ~0x00000080);
+      focusTapWorkaroundUsed_ = false;
       onChanged();
       return this;
     }

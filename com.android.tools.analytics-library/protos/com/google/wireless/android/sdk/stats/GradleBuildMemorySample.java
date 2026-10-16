@@ -51,7 +51,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>optional int64 gc_time_ms = 1 [deprecated = true];</code>
    * @deprecated android_studio.GradleBuildMemorySample.gc_time_ms is deprecated.
-   *     See studio_stats.proto;l=5887
+   *     See studio_stats.proto;l=5888
    * @return Whether the gcTimeMs field is set.
    */
   @java.lang.Override
@@ -67,7 +67,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>optional int64 gc_time_ms = 1 [deprecated = true];</code>
    * @deprecated android_studio.GradleBuildMemorySample.gc_time_ms is deprecated.
-   *     See studio_stats.proto;l=5887
+   *     See studio_stats.proto;l=5888
    * @return The gcTimeMs.
    */
   @java.lang.Override
@@ -86,7 +86,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>optional int64 gc_count = 2 [deprecated = true];</code>
    * @deprecated android_studio.GradleBuildMemorySample.gc_count is deprecated.
-   *     See studio_stats.proto;l=5892
+   *     See studio_stats.proto;l=5893
    * @return Whether the gcCount field is set.
    */
   @java.lang.Override
@@ -102,7 +102,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>optional int64 gc_count = 2 [deprecated = true];</code>
    * @deprecated android_studio.GradleBuildMemorySample.gc_count is deprecated.
-   *     See studio_stats.proto;l=5892
+   *     See studio_stats.proto;l=5893
    * @return The gcCount.
    */
   @java.lang.Override
@@ -622,7 +622,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional int64 gc_time_ms = 1 [deprecated = true];</code>
      * @deprecated android_studio.GradleBuildMemorySample.gc_time_ms is deprecated.
-     *     See studio_stats.proto;l=5887
+     *     See studio_stats.proto;l=5888
      * @return Whether the gcTimeMs field is set.
      */
     @java.lang.Override
@@ -638,7 +638,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional int64 gc_time_ms = 1 [deprecated = true];</code>
      * @deprecated android_studio.GradleBuildMemorySample.gc_time_ms is deprecated.
-     *     See studio_stats.proto;l=5887
+     *     See studio_stats.proto;l=5888
      * @return The gcTimeMs.
      */
     @java.lang.Override
@@ -654,7 +654,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional int64 gc_time_ms = 1 [deprecated = true];</code>
      * @deprecated android_studio.GradleBuildMemorySample.gc_time_ms is deprecated.
-     *     See studio_stats.proto;l=5887
+     *     See studio_stats.proto;l=5888
      * @param value The gcTimeMs to set.
      * @return This builder for chaining.
      */
@@ -674,7 +674,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional int64 gc_time_ms = 1 [deprecated = true];</code>
      * @deprecated android_studio.GradleBuildMemorySample.gc_time_ms is deprecated.
-     *     See studio_stats.proto;l=5887
+     *     See studio_stats.proto;l=5888
      * @return This builder for chaining.
      */
     @java.lang.Deprecated public Builder clearGcTimeMs() {
@@ -694,7 +694,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional int64 gc_count = 2 [deprecated = true];</code>
      * @deprecated android_studio.GradleBuildMemorySample.gc_count is deprecated.
-     *     See studio_stats.proto;l=5892
+     *     See studio_stats.proto;l=5893
      * @return Whether the gcCount field is set.
      */
     @java.lang.Override
@@ -710,7 +710,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional int64 gc_count = 2 [deprecated = true];</code>
      * @deprecated android_studio.GradleBuildMemorySample.gc_count is deprecated.
-     *     See studio_stats.proto;l=5892
+     *     See studio_stats.proto;l=5893
      * @return The gcCount.
      */
     @java.lang.Override
@@ -726,7 +726,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional int64 gc_count = 2 [deprecated = true];</code>
      * @deprecated android_studio.GradleBuildMemorySample.gc_count is deprecated.
-     *     See studio_stats.proto;l=5892
+     *     See studio_stats.proto;l=5893
      * @param value The gcCount to set.
      * @return This builder for chaining.
      */
@@ -746,7 +746,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional int64 gc_count = 2 [deprecated = true];</code>
      * @deprecated android_studio.GradleBuildMemorySample.gc_count is deprecated.
-     *     See studio_stats.proto;l=5892
+     *     See studio_stats.proto;l=5893
      * @return This builder for chaining.
      */
     @java.lang.Deprecated public Builder clearGcCount() {
